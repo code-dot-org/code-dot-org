@@ -14,16 +14,14 @@
       "lesson_extras_available": true,
       "version_year": "2021",
       "curriculum_umbrella": "CSF",
-      "has_lesson_plan": true,
       "teacher_resources": [
         [
           "teacherForum",
           "https://forum.code.org/c/csf"
         ]
       ],
-      "is_migrated": true,
-      "peer_reviews_to_complete": 0,
-      "is_course": true
+      "is_course": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": "express",
@@ -535,10 +533,17 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -559,6 +564,7 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -579,6 +585,7 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -599,6 +606,7 @@
     {
       "chapter": 4,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -619,6 +627,7 @@
     {
       "chapter": 5,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -639,6 +648,7 @@
     {
       "chapter": 6,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -659,6 +669,7 @@
     {
       "chapter": 7,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -679,6 +690,7 @@
     {
       "chapter": 8,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -699,6 +711,7 @@
     {
       "chapter": 9,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -719,6 +732,7 @@
     {
       "chapter": 10,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -739,6 +753,7 @@
     {
       "chapter": 11,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -759,6 +774,7 @@
     {
       "chapter": 12,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -779,6 +795,7 @@
     {
       "chapter": 13,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -799,6 +816,7 @@
     {
       "chapter": 14,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -819,6 +837,7 @@
     {
       "chapter": 15,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -839,6 +858,7 @@
     {
       "chapter": 16,
       "position": 16,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -859,6 +879,7 @@
     {
       "chapter": 17,
       "position": 17,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -879,6 +900,7 @@
     {
       "chapter": 18,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -899,6 +921,7 @@
     {
       "chapter": 19,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -919,6 +942,7 @@
     {
       "chapter": 20,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -939,6 +963,7 @@
     {
       "chapter": 21,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -959,6 +984,7 @@
     {
       "chapter": 22,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -979,6 +1005,7 @@
     {
       "chapter": 23,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -999,6 +1026,7 @@
     {
       "chapter": 24,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1019,6 +1047,7 @@
     {
       "chapter": 25,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -1040,6 +1069,7 @@
     {
       "chapter": 26,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1060,6 +1090,7 @@
     {
       "chapter": 27,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1080,6 +1111,7 @@
     {
       "chapter": 28,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1100,6 +1132,7 @@
     {
       "chapter": 29,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1120,6 +1153,7 @@
     {
       "chapter": 30,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1140,6 +1174,7 @@
     {
       "chapter": 31,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1160,6 +1195,7 @@
     {
       "chapter": 32,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1180,6 +1216,7 @@
     {
       "chapter": 33,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1200,6 +1237,7 @@
     {
       "chapter": 34,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1220,6 +1258,7 @@
     {
       "chapter": 35,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1240,6 +1279,7 @@
     {
       "chapter": 36,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1260,6 +1300,7 @@
     {
       "chapter": 37,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1280,6 +1321,7 @@
     {
       "chapter": 38,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -1301,6 +1343,7 @@
     {
       "chapter": 39,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1321,6 +1364,7 @@
     {
       "chapter": 40,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1341,6 +1385,7 @@
     {
       "chapter": 41,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1361,6 +1406,7 @@
     {
       "chapter": 42,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1381,6 +1427,7 @@
     {
       "chapter": 43,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1401,6 +1448,7 @@
     {
       "chapter": 44,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1421,6 +1469,7 @@
     {
       "chapter": 45,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1441,6 +1490,7 @@
     {
       "chapter": 46,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1461,6 +1511,7 @@
     {
       "chapter": 47,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1481,6 +1532,7 @@
     {
       "chapter": 48,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1501,6 +1553,7 @@
     {
       "chapter": 49,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1521,6 +1574,7 @@
     {
       "chapter": 50,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -1542,6 +1596,7 @@
     {
       "chapter": 51,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1562,6 +1617,7 @@
     {
       "chapter": 52,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1582,6 +1638,7 @@
     {
       "chapter": 53,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1602,6 +1659,7 @@
     {
       "chapter": 54,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1622,6 +1680,7 @@
     {
       "chapter": 55,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1642,6 +1701,7 @@
     {
       "chapter": 56,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1662,6 +1722,7 @@
     {
       "chapter": 57,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1682,6 +1743,7 @@
     {
       "chapter": 58,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1702,6 +1764,7 @@
     {
       "chapter": 59,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1722,6 +1785,7 @@
     {
       "chapter": 60,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1742,6 +1806,7 @@
     {
       "chapter": 61,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1762,6 +1827,7 @@
     {
       "chapter": 62,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1782,6 +1848,7 @@
     {
       "chapter": 63,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1802,6 +1869,7 @@
     {
       "chapter": 64,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1822,6 +1890,7 @@
     {
       "chapter": 65,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -1843,6 +1912,7 @@
     {
       "chapter": 66,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1863,6 +1933,7 @@
     {
       "chapter": 67,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1883,6 +1954,7 @@
     {
       "chapter": 68,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1903,6 +1975,7 @@
     {
       "chapter": 69,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1923,6 +1996,7 @@
     {
       "chapter": 70,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1943,6 +2017,7 @@
     {
       "chapter": 71,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1963,6 +2038,7 @@
     {
       "chapter": 72,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1983,6 +2059,7 @@
     {
       "chapter": 73,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2003,6 +2080,7 @@
     {
       "chapter": 74,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2023,6 +2101,7 @@
     {
       "chapter": 75,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2043,6 +2122,7 @@
     {
       "chapter": 76,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2063,6 +2143,7 @@
     {
       "chapter": 77,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2083,6 +2164,7 @@
     {
       "chapter": 78,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2103,6 +2185,7 @@
     {
       "chapter": 79,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -2124,6 +2207,7 @@
     {
       "chapter": 80,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2144,6 +2228,7 @@
     {
       "chapter": 81,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2164,6 +2249,7 @@
     {
       "chapter": 82,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2184,6 +2270,7 @@
     {
       "chapter": 83,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2204,6 +2291,7 @@
     {
       "chapter": 84,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2224,6 +2312,7 @@
     {
       "chapter": 85,
       "position": 16,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2244,6 +2333,7 @@
     {
       "chapter": 86,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2264,6 +2354,7 @@
     {
       "chapter": 87,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2284,6 +2375,7 @@
     {
       "chapter": 88,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2304,6 +2396,7 @@
     {
       "chapter": 89,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2324,6 +2417,7 @@
     {
       "chapter": 90,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2344,6 +2438,7 @@
     {
       "chapter": 91,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2364,6 +2459,7 @@
     {
       "chapter": 92,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2384,6 +2480,7 @@
     {
       "chapter": 93,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2404,6 +2501,7 @@
     {
       "chapter": 94,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2424,6 +2522,7 @@
     {
       "chapter": 95,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2444,6 +2543,7 @@
     {
       "chapter": 96,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2464,6 +2564,7 @@
     {
       "chapter": 97,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2484,6 +2585,7 @@
     {
       "chapter": 98,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2504,6 +2606,7 @@
     {
       "chapter": 99,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2524,6 +2627,7 @@
     {
       "chapter": 100,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2544,6 +2648,7 @@
     {
       "chapter": 101,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2564,6 +2669,7 @@
     {
       "chapter": 102,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2584,6 +2690,7 @@
     {
       "chapter": 103,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2604,6 +2711,7 @@
     {
       "chapter": 104,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2624,6 +2732,7 @@
     {
       "chapter": 105,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2644,6 +2753,7 @@
     {
       "chapter": 106,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2664,6 +2774,7 @@
     {
       "chapter": 107,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -2685,6 +2796,7 @@
     {
       "chapter": 108,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2705,6 +2817,7 @@
     {
       "chapter": 109,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2725,6 +2838,7 @@
     {
       "chapter": 110,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2745,6 +2859,7 @@
     {
       "chapter": 111,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2765,6 +2880,7 @@
     {
       "chapter": 112,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2785,6 +2901,7 @@
     {
       "chapter": 113,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2805,6 +2922,7 @@
     {
       "chapter": 114,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2825,6 +2943,7 @@
     {
       "chapter": 115,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2845,6 +2964,7 @@
     {
       "chapter": 116,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2865,6 +2985,7 @@
     {
       "chapter": 117,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2885,6 +3006,7 @@
     {
       "chapter": 118,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2905,6 +3027,7 @@
     {
       "chapter": 119,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2925,6 +3048,7 @@
     {
       "chapter": 120,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2945,6 +3069,7 @@
     {
       "chapter": 121,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2965,6 +3090,7 @@
     {
       "chapter": 122,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2985,6 +3111,7 @@
     {
       "chapter": 123,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3005,6 +3132,7 @@
     {
       "chapter": 124,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3025,6 +3153,7 @@
     {
       "chapter": 125,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3045,6 +3174,7 @@
     {
       "chapter": 126,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3065,6 +3195,7 @@
     {
       "chapter": 127,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3085,6 +3216,7 @@
     {
       "chapter": 128,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3105,6 +3237,7 @@
     {
       "chapter": 129,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3125,6 +3258,7 @@
     {
       "chapter": 130,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3145,6 +3279,7 @@
     {
       "chapter": 131,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3165,6 +3300,7 @@
     {
       "chapter": 132,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3185,6 +3321,7 @@
     {
       "chapter": 133,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3205,6 +3342,7 @@
     {
       "chapter": 134,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3225,6 +3363,7 @@
     {
       "chapter": 135,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3245,6 +3384,7 @@
     {
       "chapter": 136,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3265,6 +3405,7 @@
     {
       "chapter": 137,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3285,6 +3426,7 @@
     {
       "chapter": 138,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3305,6 +3447,7 @@
     {
       "chapter": 139,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3325,6 +3468,7 @@
     {
       "chapter": 140,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3345,6 +3489,7 @@
     {
       "chapter": 141,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3365,6 +3510,7 @@
     {
       "chapter": 142,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3385,6 +3531,7 @@
     {
       "chapter": 143,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -3406,6 +3553,7 @@
     {
       "chapter": 144,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3426,6 +3574,7 @@
     {
       "chapter": 145,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3446,6 +3595,7 @@
     {
       "chapter": 146,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3466,6 +3616,7 @@
     {
       "chapter": 147,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3486,6 +3637,7 @@
     {
       "chapter": 148,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3506,6 +3658,7 @@
     {
       "chapter": 149,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3526,6 +3679,7 @@
     {
       "chapter": 150,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3546,6 +3700,7 @@
     {
       "chapter": 151,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3566,6 +3721,7 @@
     {
       "chapter": 152,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3586,6 +3742,7 @@
     {
       "chapter": 153,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3606,6 +3763,7 @@
     {
       "chapter": 154,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3626,6 +3784,7 @@
     {
       "chapter": 155,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3646,6 +3805,7 @@
     {
       "chapter": 156,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3666,6 +3826,7 @@
     {
       "chapter": 157,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -3687,6 +3848,7 @@
     {
       "chapter": 158,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3707,6 +3869,7 @@
     {
       "chapter": 159,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3727,6 +3890,7 @@
     {
       "chapter": 160,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3747,6 +3911,7 @@
     {
       "chapter": 161,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3767,6 +3932,7 @@
     {
       "chapter": 162,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3787,6 +3953,7 @@
     {
       "chapter": 163,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3807,6 +3974,7 @@
     {
       "chapter": 164,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3827,6 +3995,7 @@
     {
       "chapter": 165,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3847,6 +4016,7 @@
     {
       "chapter": 166,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3867,6 +4037,7 @@
     {
       "chapter": 167,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3887,6 +4058,7 @@
     {
       "chapter": 168,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3907,6 +4079,7 @@
     {
       "chapter": 169,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3927,6 +4100,7 @@
     {
       "chapter": 170,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3947,6 +4121,7 @@
     {
       "chapter": 171,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3967,6 +4142,7 @@
     {
       "chapter": 172,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -3987,6 +4163,7 @@
     {
       "chapter": 173,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4007,6 +4184,7 @@
     {
       "chapter": 174,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4027,6 +4205,7 @@
     {
       "chapter": 175,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4047,6 +4226,7 @@
     {
       "chapter": 176,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4067,6 +4247,7 @@
     {
       "chapter": 177,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4087,6 +4268,7 @@
     {
       "chapter": 178,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4107,6 +4289,7 @@
     {
       "chapter": 179,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4127,6 +4310,7 @@
     {
       "chapter": 180,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4147,6 +4331,7 @@
     {
       "chapter": 181,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -4168,6 +4353,7 @@
     {
       "chapter": 182,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4188,6 +4374,7 @@
     {
       "chapter": 183,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4208,6 +4395,7 @@
     {
       "chapter": 184,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4228,6 +4416,7 @@
     {
       "chapter": 185,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4248,6 +4437,7 @@
     {
       "chapter": 186,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4268,6 +4458,7 @@
     {
       "chapter": 187,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4288,6 +4479,7 @@
     {
       "chapter": 188,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4308,6 +4500,7 @@
     {
       "chapter": 189,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4328,6 +4521,7 @@
     {
       "chapter": 190,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4348,6 +4542,7 @@
     {
       "chapter": 191,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -4369,6 +4564,7 @@
     {
       "chapter": 192,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4389,6 +4585,7 @@
     {
       "chapter": 193,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4409,6 +4606,7 @@
     {
       "chapter": 194,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4429,6 +4627,7 @@
     {
       "chapter": 195,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4449,6 +4648,7 @@
     {
       "chapter": 196,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4469,6 +4669,7 @@
     {
       "chapter": 197,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4489,6 +4690,7 @@
     {
       "chapter": 198,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4509,6 +4711,7 @@
     {
       "chapter": 199,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4529,6 +4732,7 @@
     {
       "chapter": 200,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4549,6 +4753,7 @@
     {
       "chapter": 201,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4569,6 +4774,7 @@
     {
       "chapter": 202,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4589,6 +4795,7 @@
     {
       "chapter": 203,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4609,6 +4816,7 @@
     {
       "chapter": 204,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4629,6 +4837,7 @@
     {
       "chapter": 205,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4649,6 +4858,7 @@
     {
       "chapter": 206,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4669,6 +4879,7 @@
     {
       "chapter": 207,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4689,6 +4900,7 @@
     {
       "chapter": 208,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4709,6 +4921,7 @@
     {
       "chapter": 209,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4729,6 +4942,7 @@
     {
       "chapter": 210,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4749,6 +4963,7 @@
     {
       "chapter": 211,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4769,6 +4984,7 @@
     {
       "chapter": 212,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4789,6 +5005,7 @@
     {
       "chapter": 213,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4809,6 +5026,7 @@
     {
       "chapter": 214,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4829,6 +5047,7 @@
     {
       "chapter": 215,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4849,6 +5068,7 @@
     {
       "chapter": 216,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4869,6 +5089,7 @@
     {
       "chapter": 217,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4889,6 +5110,7 @@
     {
       "chapter": 218,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4909,6 +5131,7 @@
     {
       "chapter": 219,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4929,6 +5152,7 @@
     {
       "chapter": 220,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -4950,6 +5174,7 @@
     {
       "chapter": 221,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4970,6 +5195,7 @@
     {
       "chapter": 222,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -4990,6 +5216,7 @@
     {
       "chapter": 223,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5010,6 +5237,7 @@
     {
       "chapter": 224,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5030,6 +5258,7 @@
     {
       "chapter": 225,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5050,6 +5279,7 @@
     {
       "chapter": 226,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5070,6 +5300,7 @@
     {
       "chapter": 227,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5090,6 +5321,7 @@
     {
       "chapter": 228,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5110,6 +5342,7 @@
     {
       "chapter": 229,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5130,6 +5363,7 @@
     {
       "chapter": 230,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5150,6 +5384,7 @@
     {
       "chapter": 231,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5170,6 +5405,7 @@
     {
       "chapter": 232,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -5191,6 +5427,7 @@
     {
       "chapter": 233,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5211,6 +5448,7 @@
     {
       "chapter": 234,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5231,6 +5469,7 @@
     {
       "chapter": 235,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5251,6 +5490,7 @@
     {
       "chapter": 236,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5271,6 +5511,7 @@
     {
       "chapter": 237,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5291,6 +5532,7 @@
     {
       "chapter": 238,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5311,6 +5553,7 @@
     {
       "chapter": 239,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5331,6 +5574,7 @@
     {
       "chapter": 240,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5351,6 +5595,7 @@
     {
       "chapter": 241,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5371,6 +5616,7 @@
     {
       "chapter": 242,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5391,6 +5637,7 @@
     {
       "chapter": 243,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5411,6 +5658,7 @@
     {
       "chapter": 244,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5431,6 +5679,7 @@
     {
       "chapter": 245,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5451,6 +5700,7 @@
     {
       "chapter": 246,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5471,6 +5721,7 @@
     {
       "chapter": 247,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5491,6 +5742,7 @@
     {
       "chapter": 248,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5511,6 +5763,7 @@
     {
       "chapter": 249,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5531,6 +5784,7 @@
     {
       "chapter": 250,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5551,6 +5805,7 @@
     {
       "chapter": 251,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5571,6 +5826,7 @@
     {
       "chapter": 252,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5591,6 +5847,7 @@
     {
       "chapter": 253,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5611,6 +5868,7 @@
     {
       "chapter": 254,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -5632,6 +5890,7 @@
     {
       "chapter": 255,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5652,6 +5911,7 @@
     {
       "chapter": 256,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5672,6 +5932,7 @@
     {
       "chapter": 257,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5692,6 +5953,7 @@
     {
       "chapter": 258,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5712,6 +5974,7 @@
     {
       "chapter": 259,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5732,6 +5995,7 @@
     {
       "chapter": 260,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5752,6 +6016,7 @@
     {
       "chapter": 261,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5772,6 +6037,7 @@
     {
       "chapter": 262,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5792,6 +6058,7 @@
     {
       "chapter": 263,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5812,6 +6079,7 @@
     {
       "chapter": 264,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5832,6 +6100,7 @@
     {
       "chapter": 265,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5852,6 +6121,7 @@
     {
       "chapter": 266,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5872,6 +6142,7 @@
     {
       "chapter": 267,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5892,6 +6163,7 @@
     {
       "chapter": 268,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5912,6 +6184,7 @@
     {
       "chapter": 269,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5932,6 +6205,7 @@
     {
       "chapter": 270,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5952,6 +6226,7 @@
     {
       "chapter": 271,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5972,6 +6247,7 @@
     {
       "chapter": 272,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -5992,6 +6268,7 @@
     {
       "chapter": 273,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6012,6 +6289,7 @@
     {
       "chapter": 274,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6032,6 +6310,7 @@
     {
       "chapter": 275,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6052,6 +6331,7 @@
     {
       "chapter": 276,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -6073,6 +6353,7 @@
     {
       "chapter": 277,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6093,6 +6374,7 @@
     {
       "chapter": 278,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6113,6 +6395,7 @@
     {
       "chapter": 279,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6133,6 +6416,7 @@
     {
       "chapter": 280,
       "position": 16,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6153,6 +6437,7 @@
     {
       "chapter": 281,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6173,6 +6458,7 @@
     {
       "chapter": 282,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6193,6 +6479,7 @@
     {
       "chapter": 283,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6213,6 +6500,7 @@
     {
       "chapter": 284,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6233,6 +6521,7 @@
     {
       "chapter": 285,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6253,6 +6542,7 @@
     {
       "chapter": 286,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6273,6 +6563,7 @@
     {
       "chapter": 287,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6293,6 +6584,7 @@
     {
       "chapter": 288,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6313,6 +6605,7 @@
     {
       "chapter": 289,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6333,6 +6626,7 @@
     {
       "chapter": 290,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6353,6 +6647,7 @@
     {
       "chapter": 291,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6373,6 +6668,7 @@
     {
       "chapter": 292,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6393,6 +6689,7 @@
     {
       "chapter": 293,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6413,6 +6710,7 @@
     {
       "chapter": 294,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6433,6 +6731,7 @@
     {
       "chapter": 295,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6453,6 +6752,7 @@
     {
       "chapter": 296,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6473,6 +6773,7 @@
     {
       "chapter": 297,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6493,6 +6794,7 @@
     {
       "chapter": 298,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6513,6 +6815,7 @@
     {
       "chapter": 299,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6533,6 +6836,7 @@
     {
       "chapter": 300,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6553,6 +6857,7 @@
     {
       "chapter": 301,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6573,6 +6878,7 @@
     {
       "chapter": 302,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6593,6 +6899,7 @@
     {
       "chapter": 303,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6613,6 +6920,7 @@
     {
       "chapter": 304,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6633,6 +6941,7 @@
     {
       "chapter": 305,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6653,6 +6962,7 @@
     {
       "chapter": 306,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6673,6 +6983,7 @@
     {
       "chapter": 307,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6693,6 +7004,7 @@
     {
       "chapter": 308,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6713,6 +7025,7 @@
     {
       "chapter": 309,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6733,6 +7046,7 @@
     {
       "chapter": 310,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6753,6 +7067,7 @@
     {
       "chapter": 311,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6773,6 +7088,7 @@
     {
       "chapter": 312,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6793,6 +7109,7 @@
     {
       "chapter": 313,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6813,6 +7130,7 @@
     {
       "chapter": 314,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6833,6 +7151,7 @@
     {
       "chapter": 315,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6853,6 +7172,7 @@
     {
       "chapter": 316,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6873,6 +7193,7 @@
     {
       "chapter": 317,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6893,6 +7214,7 @@
     {
       "chapter": 318,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6913,6 +7235,7 @@
     {
       "chapter": 319,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6933,6 +7256,7 @@
     {
       "chapter": 320,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6953,6 +7277,7 @@
     {
       "chapter": 321,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6973,6 +7298,7 @@
     {
       "chapter": 322,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -6993,6 +7319,7 @@
     {
       "chapter": 323,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -7013,6 +7340,7 @@
     {
       "chapter": 324,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -7033,6 +7361,7 @@
     {
       "chapter": 325,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -7053,6 +7382,7 @@
     {
       "chapter": 326,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -7073,6 +7403,7 @@
     {
       "chapter": 327,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -7093,6 +7424,7 @@
     {
       "chapter": 328,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -7113,6 +7445,7 @@
     {
       "chapter": 329,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -7133,6 +7466,7 @@
     {
       "chapter": 330,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -7153,6 +7487,7 @@
     {
       "chapter": 331,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Example Projects"
@@ -7174,6 +7509,7 @@
     {
       "chapter": 332,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Create your project"

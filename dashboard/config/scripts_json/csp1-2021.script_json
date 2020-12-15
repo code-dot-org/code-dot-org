@@ -7,12 +7,10 @@
     "properties": {
       "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit1/{LESSON}",
       "version_year": "2021",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "is_migrated": true
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -258,10 +256,17 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
       },
@@ -282,6 +287,7 @@
     {
       "chapter": 2,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -303,6 +309,7 @@
     {
       "chapter": 3,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Computer Science is Changing Everything"
@@ -324,6 +331,7 @@
     {
       "chapter": 4,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -345,6 +353,7 @@
     {
       "chapter": 5,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -366,6 +375,7 @@
     {
       "chapter": 6,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -387,6 +397,7 @@
     {
       "chapter": 7,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -408,6 +419,7 @@
     {
       "chapter": 8,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -429,6 +441,7 @@
     {
       "chapter": 9,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -450,6 +463,7 @@
     {
       "chapter": 10,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -471,6 +485,7 @@
     {
       "chapter": 11,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -492,6 +507,7 @@
     {
       "chapter": 12,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -513,6 +529,7 @@
     {
       "chapter": 13,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -534,6 +551,7 @@
     {
       "chapter": 14,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Widget: Binary Odometer"
@@ -555,6 +573,7 @@
     {
       "chapter": 15,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -576,6 +595,7 @@
     {
       "chapter": 16,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -597,6 +617,7 @@
     {
       "chapter": 17,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -618,6 +639,7 @@
     {
       "chapter": 18,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -639,6 +661,7 @@
     {
       "chapter": 19,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -660,6 +683,7 @@
     {
       "chapter": 20,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Video: Intro to Pixelation Encoding B&W"
@@ -681,6 +705,7 @@
     {
       "chapter": 21,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: B&W"
@@ -702,6 +727,7 @@
     {
       "chapter": 22,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: B&W"
@@ -723,6 +749,7 @@
     {
       "chapter": 23,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: B&W"
@@ -744,6 +771,7 @@
     {
       "chapter": 24,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: B&W"
@@ -765,6 +793,7 @@
     {
       "chapter": 25,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: B&W"
@@ -786,6 +815,7 @@
     {
       "chapter": 26,
       "position": 8,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -807,6 +837,7 @@
     {
       "chapter": 27,
       "position": 9,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -828,6 +859,7 @@
     {
       "chapter": 28,
       "position": 10,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -849,6 +881,7 @@
     {
       "chapter": 29,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -870,6 +903,7 @@
     {
       "chapter": 30,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "RGB Color"
@@ -891,6 +925,7 @@
     {
       "chapter": 31,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color"
@@ -912,6 +947,7 @@
     {
       "chapter": 32,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "More Shades of Color"
@@ -933,6 +969,7 @@
     {
       "chapter": 33,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color"
@@ -954,6 +991,7 @@
     {
       "chapter": 34,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color"
@@ -975,6 +1013,7 @@
     {
       "chapter": 35,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Color Sampling"
@@ -996,6 +1035,7 @@
     {
       "chapter": 36,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color"
@@ -1017,6 +1057,7 @@
     {
       "chapter": 37,
       "position": 9,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -1038,6 +1079,7 @@
     {
       "chapter": 38,
       "position": 10,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -1059,6 +1101,7 @@
     {
       "chapter": 39,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -1080,6 +1123,7 @@
     {
       "chapter": 40,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Widget: Text Compression"
@@ -1101,6 +1145,7 @@
     {
       "chapter": 41,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Video: Text Compression Widget with Aloe Blacc"
@@ -1122,6 +1167,7 @@
     {
       "chapter": 42,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -1143,6 +1189,7 @@
     {
       "chapter": 43,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -1164,6 +1211,7 @@
     {
       "chapter": 44,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -1185,6 +1233,7 @@
     {
       "chapter": 45,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lossy Compression Widget"
@@ -1206,6 +1255,7 @@
     {
       "chapter": 46,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lossy Compression Widget"
@@ -1227,6 +1277,7 @@
     {
       "chapter": 47,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -1248,6 +1299,7 @@
     {
       "chapter": 48,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -1269,6 +1321,7 @@
     {
       "chapter": 49,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -1290,6 +1343,7 @@
     {
       "chapter": 50,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -1311,6 +1365,7 @@
     {
       "chapter": 51,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -1332,6 +1387,7 @@
     {
       "chapter": 52,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -1353,6 +1409,7 @@
     {
       "chapter": 53,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -1374,6 +1431,7 @@
     {
       "chapter": 54,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -1395,6 +1453,7 @@
     {
       "chapter": 55,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Unit 1 Exam"
