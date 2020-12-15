@@ -13,7 +13,7 @@ class LessonActivityTest < ActiveSupport::TestCase
     script = lesson_group.script
     lesson = create :lesson, lesson_group: lesson_group, script: script
     lesson_activity = create :lesson_activity, lesson: lesson
-    seed_context = ScriptSeed::SeedContext.new(
+    seed_context = Services::ScriptSeed::SeedContext.new(
       script: script,
       lesson_groups: script.lesson_groups.to_a,
       lessons: script.lessons.to_a

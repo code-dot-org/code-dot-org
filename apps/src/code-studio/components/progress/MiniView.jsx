@@ -29,7 +29,7 @@ class MiniView extends React.Component {
     hasGroups: PropTypes.bool.isRequired,
     scriptName: PropTypes.string.isRequired,
     hasFullProgress: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.number
+    selectedSectionId: PropTypes.string
   };
 
   render() {
@@ -89,5 +89,5 @@ export default connect(state => ({
   scriptName: state.progress.scriptName,
   hasFullProgress: state.progress.hasFullProgress,
   hasGroups: hasGroups(state.progress),
-  selectedSectionId: state.teacherSections.selectedSectionId
+  selectedSectionId: state.teacherSections.selectedSectionId.toString()
 }))(MiniView);

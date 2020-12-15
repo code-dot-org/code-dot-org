@@ -965,6 +965,7 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Bloky)"
   hoc-encryption_name: Jednoduché šifrovanie
+  text-compression_name: Kompresia textu
   applab_name: "App Lab"
   gamelab_name: "Game Lab"
   basketball_name: "Vytvor basketbalový zápas"
@@ -1578,3 +1579,4 @@
   hoc2018_mc_with_microsoft: "V spolupráci s"
   page_not_available_button: "Späť na domovskú stránku"
   footer_powered_by_aws: "Poháňaný službami Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Len v anglickom jazyku"

@@ -1973,7 +1973,7 @@ pl:
               name: Ankieta po odbyciu kursu
         csp3-2017:
           title: Jednostka 3 CSP - Wprowadzenie do programowania ('17-'18)
-          description: "Ten rozdział wprowadza koncepcje fundamentalne programowania komputerowego, co odblokowuje możliwość tworzenia bogatych, interaktywnych aplikacji. W tym kursie używa się JavaScript jako języka oprogramowania oraz App Lab jako środowiska programowania do budowania aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie języki i narzędzia programowania. .\\r\n\\r\nTen rozdział zaktualizowano po raz ostatni 30 października 2017 roku. Czytaj więcej o aktualizacjach curriculum na stronie forum.code.org/c/csp/updates."
+          description: "Ta jednostka wprowadza podstawowe pojęcia programowania komputerów, co umożliwia tworzenie bogatych, interaktywnych aplikacji. W tym kursie używa się JavaScript jako języka oprogramowania oraz App Lab jako środowiska programowania do budowania aplikacji, ale pojęcia poznane w ramach tych lekcji łączą wszystkie języki i narzędzia programowania. .\\r\n\\r\nTa jednostka została zaktualizowana po raz ostatni 30 października 2017 roku. Czytaj więcej o aktualizacjach curriculum na stronie forum.code.org/c/csp/updates."
           description_short: "Naucz się podstaw programowania w JavaScript, korzystając z podejścia top-down do projektowania przy użyciu klasycznej grafiki żółwia.\n"
           lesson_groups:
             csp3_1:
@@ -2025,7 +2025,7 @@ pl:
               name: Ankieta po odbyciu kursu
         csp4-2017:
           title: CSP Jednostka 4 - Giga dane i prywatność ('17- '18)
-          description: "Bogaty w dane świat, w którym żyjemy, niesię ze sobą wiele złożonych pytań dotyczących polityki publicznej, prawa, etyki oraz oddziaływania społecznego. Do celów niniejszego rozdziału można zaliczyć wypracowanie dopracowanego i zrównoważonego poglądu na temat danych na świecie, z uwzględnieniem pozytywnych i negatywnych skutków tego działania oraz zrozumienia postaw sposobu i przyczyny działania nowoczesnego szyfrowania.\\r\n\\r\nTen rozdział zaktualizowano ostatnio w listopadzie 2017 roku. Czytaj więcej na temat aktualizacji curriculum na stronie forum.code.org/c/csp/updates."
+          description: "Bogaty w dane świat, w którym żyjemy, niesie ze sobą wiele złożonych pytań dotyczących polityki publicznej, prawa, etyki oraz oddziaływania społecznego. Do celów niniejszej jednostki można zaliczyć wypracowanie uzgodnionego i zrównoważonego poglądu na temat danych na świecie, z uwzględnieniem pozytywnych i negatywnych skutków tego działania oraz zrozumienia podstaw sposobu i przyczyny działania nowoczesnego szyfrowania.\\r\n\\r\nTa jednostka została zaktualizowana ostatnio w listopadzie 2017 roku. Czytaj więcej na temat aktualizacji curriculum na stronie forum.code.org/c/csp/updates."
           description_short: Eksploruj bogaty w dane świat, w którym żyjemy oraz sposób, w jaki dane wpływają na strategię publiczną, prywatność osób, bezpieczeństwo, prawo i etykę.
           lesson_groups:
             csp4_1:
@@ -2962,8 +2962,8 @@ pl:
               name: Rysuj pętlę i losowość
             Drawing in Game Lab:
               name: Rysowanie w Game Lab
-              description_student: Klasę wprowadza się w Game Lab, środowisko programowania na potrzeby tej części. Zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online, które zaprojektowano na poprzedniej lekcji.
-              description_teacher: Klasę wprowadza się w Game Lab, środowisko programowania na potrzeby tej części. Zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online, które zaprojektowano na poprzedniej lekcji.
+              description_student: Klasa zostaje wprowadzona do Game Lab, środowiska programowania na potrzeby tej jednostki i zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online obrazu, zaprojektowanego na poprzedniej lekcji.
+              description_teacher: Uczniowie zostają wprowadzeni do Game Lab, środowiska programowania na potrzeby tej jednostki i zaczynają go używać do ustawiania kształtów na ekranie. Poznają podstawy sekwencjonowania i debugowania, jak również kilku prostych komend. Pod koniec lekcji będą potrafili zaprogramować obraz podobny do tego, który utworzyli posługując się narzędziami do rysowania na poprzedniej lekcji. 
             'Project: Interactive Card':
               name: 'Projekt: Interaktywna karta'
             Sprites and Images:
@@ -5156,11 +5156,11 @@ pl:
                 Uczniowie będą również zgłębiać czym jest zachowanie odpowiedzialne i pełne poszanowania względem społeczności offline i online w ramach działań zmierzających do nauczenia się jak być dobrymi obywatelami cyfrowymi.
             Build a Play Lab Game:
               name: Zbuduj grę Play Lab
-              description_student: Ta lekcja przeprowadzi Cię przez tworzenie Twojej własnej gry wideo.
+              description_student: Ta lekcja przeprowadzi Cię przez tworzenie swojej własnej gry wideo.
               description_teacher: W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie gry w Play Lab!
             'Unplugged: Binary':
-              name: 'Poza granicami programowania: Obrazki binarne'
-              description_student: 'Ucz się, jak komputery przechowują obrazki z użyciem prostych koncepcji takich jak włączenie i wyłączenie.'
+              name: 'Poza programowaniem: Binarne obrazki'
+              description_student: 'Ucz się, jak komputery przechowują obrazy z użyciem prostych pomysłów, takich jak włączenie i wyłączenie.'
               description_teacher: Chociaż wiele osób sądzi, że binarne są tylko zera i jedynki, uczniom zostanie wprowadzona koncepcja, że informacje mogą być reprezentowane na różne binarne sposoby.  Na tej lekcji to pojęcie jest rozwijane jeszcze dalej i ilustruje, jak komputer może również przechowywać bardziej złożone informacje (takie jak obrazy i kolory) w postaci binarnej.
             Artist Binary:
               name: System binarny z Artistą
@@ -5275,7 +5275,7 @@ pl:
               description_teacher: Ta lekcja łączy koncepcje z poprzednich lekcji oraz daje uczniom szansę krytycznego przemyślenia sposobu, w jaki chcieliby rozwiązać każdy problem, ale nie mówiąc im, jaką koncepcję zastosować. Uczniowie będą powtarzać podstawowe algorytmy, debugowanie, pętle "powtórz", wyrażenia warunkowe, pętle "dopóki" i funkcje.
             Build a Play Lab Game:
               name: Zbuduj grę Play Lab
-              description_student: Ćwicz tworzenie gier do udostępnienia znajomym i rodzinie.
+              description_student: Ćwicz tworzenie gier, aby udostępniać je znajomym i rodzinie.
               description_teacher: Na tej lekcji wykorzystuje się interfejs Play Lab, platformy, na której uczniowie mogą tworzyć swoje własne gry i wywoływać interakcje pomiędzy postaciami a danymi wejściowymi użytkownika. Uczniowie będą pracować ze zdarzeniami, aby tworzyć sterowniki klawiatury. Ten zestaw łamigłówek będzie również przeprowadzać uczniów, w sposób dość swobodny, przez tworzenie gry, ale korzystając ze swobody dodawania własnych pomysłów. 
             Present Your Project:
               name: Zaprezentuj swój projekt
@@ -5286,8 +5286,8 @@ pl:
               description_student: Czy kiedykolwiek zastanawiałeś się nad tym, jak informacje podróżują po internecie? To nie magia. Na tej lekcji będziesz się uczyć podstaw zasad funkcjonowania internetu.
               description_teacher: Mimo tego, że wiele osób korzysta codziennie z Internetu, niewiele spośród nich wie, jak on działa. Na tej lekcji uczniowie będą udawać, że płyną przez Internet, cały czas ucząc się o połączeniach, URL, adresach sieciowych IP i DNS.
             Crowdsourcing:
-              name: 'Poza granicami programowania: Crowdsourcing'
-              description_student: Na tej lekcji będziesz się uczył o crowdsourcingu, procesie budowania projektu przy pomocy zespołu.
+              name: 'Poza programowaniem: Crowdsourcing'
+              description_student: Na tej lekcji będziesz się uczył o crowdsourcingu, procesie budowania projektu z zespołem.
               description_teacher: W informatyce, stajemy w obliczu znaczących, zniechęcających problemów. Wyzwania takiej, jak znajdowanie wielkich liczb pierwszych lub tworzenia sekwencji DNA są prawie niemożliwe do zrealizowania w pojedynkę. Dzięki dodawaniu mocy innych sprawia, że można kierować tymi zadaniami. Ta lekcja pokazuje Twoim uczniom, jak bardzo pomocna może być praca zespołowa w branży informatyki.
             'Programming: My Robotic Friends':
               name: 'Programowanie: Moi robotyczni przyjaciele'
@@ -5306,7 +5306,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Functions in Harvester:
@@ -5338,7 +5338,7 @@ pl:
               description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma Cię nauczyć, co jest w porządku, a co nie, jeśli chodzi o rzeczy, które mówi się w Internecie.
               description_teacher: "Uczniowie uważają, że w czasie, gdy miło spędzają czas na ulubionych stronach, mogą napotkać na wiadomości od innych dzieci, a te wiadomości mogą wzbudzać w nich uczucie irytacji, zranienia, smutku lub strachu. Badają sposoby radzenia sobie z cybernękaniem oraz reagowania w konfrontacji z językiem online wywołującym przykre emocje.Uczniowie omawiają sposoby używania technologii do komunikacji i badają podobieństwa i różnice pomiędzy komunikacją osobistą a komunikacją online. Uczniowie prowadzą następnie burzę mózgów na temat sposobów reagowania na cybernękanie. "
             Ice Age Play Lab:
-              name: Zdarzenia w "Epoce lodowcowej"
+              name: Zdarzenia w Epoce lodowcowej
               description_student: Pomyśl o swojej ulubionej grze wideo? Czy zastanawiałeś się kiedyś, jak została utworzona? W ramach tych łamigłówek będziecie tworzyć swoją własną grę wideo z przyjaciółmi z "Epoki lodowcowej".
               description_teacher: Na tej lekcji uczniowie otrzymają instrukcje, jak przechodzić przez opowieść, w której główne role odgrywają bohaterowie z "Epoki lodowcowej". Uczniowie będą pracować posługując się zdarzeniami i pętlami, aby sprawiać, by postaci poruszały się po ekranie, jak również będą mieli okazję utworzyć własną grę lub opowieść po przeprowadzeniu ich po poziomach.
             Envelope Variables:
@@ -5426,7 +5426,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
         csdnovice:
           title: Przemyślenia prowadzącego - nowicjusza TeacherCon "Odkrycia informatyki" 
           description_audience: ' CSD Prowadzący-nowicjusze'
@@ -6024,7 +6024,7 @@ pl:
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Intro to Conditionals with Farmer:
               name: Wprowadzenie do wyrażeń warunkowych z Rolnikiem
             'Algorithms: Dice Race':
@@ -6248,7 +6248,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Dice Race':
               name: 'Algorytmy: Wyścig kości'
             Course E Introduction:
@@ -6310,7 +6310,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Tangrams':
               name: 'Algorytmy: Tangramy'
             Course E Introduction:
@@ -6724,7 +6724,7 @@ pl:
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Dice Race':
               name: 'Algorytmy: Wyścig kości'
             Introduction:
@@ -6790,7 +6790,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Tangrams':
               name: 'Algorytmy: Tangramy'
             Introduction:
@@ -6971,8 +6971,8 @@ pl:
               description_teacher: Uczniowie badają wyzwania komunikacyjne związane ze sposobem rysowania kształtów oraz używania narzędzia wprowadzającego metodę rozwiązywania tego problemu w Game Lab. Ćwiczenie na rozgrzewkę szybko ujawnia problemy związane z podaniem pozycji, gdy nie ma wspólnego punktu odniesienia. W głównej części ćwiczenia uczniowie badają narzędzie Game Lab pozwalające uczniom na interaktywne umieszczanie kształtów na siatce Game Lab w rozmiarze 400 x 400. Mogą po kolei instruować partnera, jak narysować ukryty obrazek z wykorzystaniem tego narzędzia, biorąc pod uwagę liczne wyzwania, które staną na ich drodze w trakcie programowania w Game Lab. Uczniowie mają opcję tworzenia własnego obrazu służącego do przekazania informacji zanim przejdą do dyskusji podsumowującej.
             Drawing in Game Lab:
               name: Rysowanie w Game Lab
-              description_student: Klasę wprowadza się w Game Lab, środowisko programowania na potrzeby tej części. Zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online, które zaprojektowano na poprzedniej lekcji.
-              description_teacher: Klasę wprowadza się w Game Lab, środowisko programowania na potrzeby tej części. Zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online, które zaprojektowano na poprzedniej lekcji.
+              description_student: Klasa zostaje wprowadzona do Game Lab, środowiska programowania na potrzeby tej jednostki i zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online obrazu, zaprojektowanego na poprzedniej lekcji.
+              description_teacher: Uczniowie zostają wprowadzeni do Game Lab, środowiska programowania na potrzeby tej jednostki i zaczynają go używać do ustawiania kształtów na ekranie. Poznają podstawy sekwencjonowania i debugowania, jak również kilku prostych komend. Pod koniec lekcji będą potrafili zaprogramować obraz podobny do tego, który utworzyli posługując się narzędziami do rysowania na poprzedniej lekcji. 
             Shapes and Randomization:
               name: Kształty oraz losowość
             Variables:
@@ -7496,35 +7496,35 @@ pl:
             Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
               name: Dział 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrahowanie
             Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
-              name: Dział 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrahowanie
+              name: Jednostka 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrakcja
             'Unit 1 Assessment 1 - Binary and Ascii ':
-              name: 'Dział 1 Ocena 1: System binarny i Ascii'
+              name: 'Jednostka 1 SPrawdzian 1: System binarny i ASCII'
             Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc:
-              name: Dział 1 Ocena 2 - Protokoły internetowe, TCP/IP, DNS, HTTP, itp
+              name: Jednostka 1 Sprawdzian 2 - Protokoły internetowe, TCP/IP, DNS, HTTP, itp
             Unit 2-1 - Bits, Bytes, Hexadecimal and Compression:
-              name: Dział 2 - 1. Bity, bajty, szesnastkowy system liczbowy i kompresja
+              name: Jednostka  2 - 1. Bity, bajty, szesnastkowy system liczbowy i kompresja
             Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts:
               name: Jednostka 2 - 2. Interpretowanie danych i wykresów, giga dane, globalne czynniki oddziaływania
             Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction:
-              name: Dział 3 - 1. Programowanie żółwia,  pętle, funkcje, abstrahowanie
+              name: Jednostka 3 Quiz 1. Programowanie żółwia,  pętle, funkcje, abstrakcja
             Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression:
-              name: Dział 2 Ocena 1 - Bity, bajty, szesnastkowy system liczbowy i kompresja
+              name: Jednostka 2 Sprawdzian 1 - Bity, bajty, szesnastkowy system liczbowy i kompresja
             Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts:
               name: Jednostka 2 - 2 - Interpretowanie danych i wykresów, giga dane, globalne czynniki oddziaływania
             Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction:
-              name: Dział 3 Ocena 1 - Programowanie żółwia,  pętle, funkcje, abstrahowanie
+              name: Jednostka 3 Sprawdzian 1 - Programowanie żółwia,  pętle, funkcje, abstrakcja
             Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption:
-              name: Część 4 Ocena 1 - Prywatność, cyberbezpieczeństwo, szyfrowanie
+              name: Jednostka 4 Sprawdzian 1 - Prywatność, cyberbezpieczeństwo, szyfrowanie
             Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review:
-              name: Dział 5 Ocena 1 - Zdarzenia, zmienne, debugowanie, arytmetyka, weryfikacja żółwia
+              name: Jednostka 5 Sprawdzian 1 - Zdarzenia, zmienne, debugowanie, arytmetyka, weryfikacja żółwia
             Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings:
-              name: Dział 5 Ocena 2 - Instrukcje "jeśli", wyrażenia boolowskie, ciągi Statements, Boolean Expressions, Strings
+              name: Jednostka 5 Sprawdzian 2 - Instrukcje "jeśli", wyrażenia boolowskie, łańcuchy
             Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists:
-              name: Dział 5 Ocena 3 - Instrukcje "jeśli", wyrażenia boolowskie, tablice i listy
+              name: Jednostka 5 Sprawdzian 3 - Instrukcje "dopóki", wyrażenia boolowskie, tablice i listy
             Unit 5 Assessment 4 - List Algorithms, Functions with Return Values:
-              name: Dział 5 Ocena 4 - Sporządź listę algorytmów, funkcje z wartościami zwrotnymi
+              name: Jednostka 5 Sprawdzian 4 - Algorytmy na listach, funkcje ze zwracaniem wartości
             Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
-              name: Dział 5 Ocena 5 - Praktyka pytań pseudokodu AP (zmienne, procedury, węzły, zastrzeżenia warunkowe)
+              name: Jednostka 5 Sprawdzian 5 - Praktyka pytań o pseudokododzie w ramach AP (zmienne, procedury, pętle, wyrażenia warunkowe)
         coursec-2018:
           title: Kurs C (2018)
           assignment_family_title: Kurs C
@@ -7673,7 +7673,7 @@ pl:
             Nested Loops:
               name: Zagnieżdżone pętle w labiryncie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Dice Race':
               name: 'Algorytmy: Wyścig kości'
               description_student: Dowiedz jak opisać grę z punktu widzenia za tej lekcji o algorytmach.
@@ -7715,7 +7715,7 @@ pl:
               description_teacher: Ta lekcja łączy koncepcje z poprzednich lekcji oraz daje uczniom szansę krytycznego przemyślenia sposobu, w jaki chcieliby rozwiązać każdy problem, ale nie mówiąc im, jaką koncepcję zastosować. Uczniowie będą powtarzać podstawowe algorytmy, debugowanie, pętle "powtórz", wyrażenia warunkowe, pętle "dopóki" i funkcje.
             Build a Play Lab Game:
               name: Zbuduj grę Play Lab
-              description_student: Ćwicz tworzenie gier do udostępnienia znajomym i rodzinie.
+              description_student: Ćwicz tworzenie gier, aby udostępniać je znajomym i rodzinie.
               description_teacher: Na tej lekcji wykorzystuje się interfejs Play Lab, platformy, na której uczniowie mogą tworzyć swoje własne gry i wywoływać interakcje pomiędzy postaciami a danymi wejściowymi użytkownika. Uczniowie będą pracować ze zdarzeniami, aby tworzyć sterowniki klawiatury. Ten zestaw łamigłówek będzie również przeprowadzać uczniów, w sposób dość swobodny, przez tworzenie gry, ale korzystając ze swobody dodawania własnych pomysłów. 
             Explore Project Ideas:
               name: Zbadaj pomysły na projekt
@@ -7739,7 +7739,7 @@ pl:
               description_teacher: Mimo tego, że wiele osób korzysta codziennie z Internetu, niewiele spośród nich wie, jak on działa. Na tej lekcji uczniowie będą udawać, że płyną przez Internet, cały czas ucząc się o połączeniach, URL, adresach sieciowych IP i DNS.
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
-              description_student: Na tej lekcji będziesz się uczył o crowdsourcingu, procesie budowania projektu przy pomocy zespołu.
+              description_student: Na tej lekcji będziesz się uczył o crowdsourcingu, procesie budowania projektu z zespołem.
               description_teacher: W informatyce, stajemy w obliczu znaczących, zniechęcających problemów. Wyzwania takiej, jak znajdowanie wielkich liczb pierwszych lub tworzenia sekwencji DNA są prawie niemożliwe do zrealizowania w pojedynkę. Dzięki dodawaniu mocy innych sprawia, że można kierować tymi zadaniami. Ta lekcja pokazuje Twoim uczniom, jak bardzo pomocna może być praca zespołowa w branży informatyki.
             Conditionals with Cards:
               name: Warunkowe z kartami
@@ -7786,7 +7786,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w labiryncie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Tangrams':
               name: 'Algorytmy: Tangramy'
               description_student: "Teraz będziesz się uczyć o algorytmach używając łamigłówek zwanych tangramami!\n\n"
@@ -8999,7 +8999,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Student Survey (Variables):
@@ -9063,7 +9063,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals in Farmer:
@@ -9174,7 +9174,7 @@ pl:
               description_teacher: Mimo tego, że wiele osób korzysta codziennie z Internetu, niewiele spośród nich wie, jak on działa. Na tej lekcji uczniowie będą udawać, że płyną przez Internet, cały czas ucząc się o połączeniach, URL, adresach sieciowych IP i DNS.
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
-              description_student: Na tej lekcji będziesz się uczył o crowdsourcingu, procesie budowania projektu przy pomocy zespołu.
+              description_student: Na tej lekcji będziesz się uczył o crowdsourcingu, procesie budowania projektu z zespołem.
               description_teacher: W informatyce, stajemy w obliczu znaczących, zniechęcających problemów. Wyzwania takiej, jak znajdowanie wielkich liczb pierwszych lub tworzenia sekwencji DNA są prawie niemożliwe do zrealizowania w pojedynkę. Dzięki dodawaniu mocy innych sprawia, że można kierować tymi zadaniami. Ta lekcja pokazuje Twoim uczniom, jak bardzo pomocna może być praca zespołowa w branży informatyki.
             Digital Sharing:
               name: Udostępnianie cyfrowe
@@ -9327,7 +9327,7 @@ pl:
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals:
@@ -9396,7 +9396,7 @@ pl:
               description_teacher: Mimo tego, że wiele osób korzysta codziennie z Internetu, niewiele spośród nich wie, jak on działa. Na tej lekcji uczniowie będą udawać, że płyną przez Internet, cały czas ucząc się o połączeniach, URL, adresach sieciowych IP i DNS.
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
-              description_student: Na tej lekcji będziesz się uczył o crowdsourcingu, procesie budowania projektu przy pomocy zespołu.
+              description_student: Na tej lekcji będziesz się uczył o crowdsourcingu, procesie budowania projektu z zespołem.
               description_teacher: W informatyce, stajemy w obliczu znaczących, zniechęcających problemów. Wyzwania takiej, jak znajdowanie wielkich liczb pierwszych lub tworzenia sekwencji DNA są prawie niemożliwe do zrealizowania w pojedynkę. Dzięki dodawaniu mocy innych sprawia, że można kierować tymi zadaniami. Ta lekcja pokazuje Twoim uczniom, jak bardzo pomocna może być praca zespołowa w branży informatyki.
             Nested Loops in Bee:
               name: Zagnieżdżone pętle w labiryncie
@@ -9407,7 +9407,7 @@ pl:
               description_student: Więcej pętli zagnieżdżonych! Tym razem będziesz tworzyć pewien NIESAMOWITY obrazek przy pomocy pętli zagnieżdżonych.
               description_teacher: Uczniowie będą tworzyć skomplikowane układy używając Artist w dzisiejszym zestawie łamigłówek. Kontynuując ćwiczenie pętli zagnieżdżonych mając na uwadze nowe cele, uczniowie przekonają się, że pętle zasadniczo mają szerszy zakres zastosowań. Ten zestaw łamigłówek daje również dużo więcej możliwości pracy twórczej oraz okazję do tego, by uczniowie zaprojektowali swój własnych projekt pod koniec tego etapu.
             Nested Loops in Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
               description_student: 'Anna i Elsa umieją świetnie jeździć na łyżwach, ale potrzebują Twojej pomocy w utworzeniu układów na lodzie. Użyj pętli zagnieżdżonych do utworzenia czegoś niewiarygodnie FAJNEGO.'
               description_teacher: Teraz uczniowie uczą się, jak układać pętle warstwowo, mogą tworzyć tyle pięknych rzeczy. Na tej lekcji uczniowie wykonają serie ćwiczeń, które pomogą im utworzyć obrazki do ich własnego portfolio korzystając ze wspaniałych umiejętności łyżwiarskich Anny i Elsy!
             Sequencing in the Maze:
@@ -10115,8 +10115,8 @@ pl:
               description_teacher: Uczniowie badają wyzwania komunikacyjne związane ze sposobem rysowania kształtów oraz używania narzędzia wprowadzającego metodę rozwiązywania tego problemu w Game Lab. Ćwiczenie na rozgrzewkę szybko ujawnia problemy związane z podaniem pozycji, gdy nie ma wspólnego punktu odniesienia. W głównej części ćwiczenia uczniowie badają narzędzie Game Lab pozwalające uczniom na interaktywne umieszczanie kształtów na siatce Game Lab w rozmiarze 400 x 400. Mogą po kolei instruować partnera, jak narysować ukryty obrazek z wykorzystaniem tego narzędzia, biorąc pod uwagę liczne wyzwania, które staną na ich drodze w trakcie programowania w Game Lab. Uczniowie mają opcję tworzenia własnego obrazu służącego do przekazania informacji zanim przejdą do dyskusji podsumowującej.
             Drawing in Game Lab:
               name: Rysowanie w Game Lab
-              description_student: Klasę wprowadza się w Game Lab, środowisko programowania na potrzeby tej części. Zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online, które zaprojektowano na poprzedniej lekcji.
-              description_teacher: Klasę wprowadza się w Game Lab, środowisko programowania na potrzeby tej części. Zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online, które zaprojektowano na poprzedniej lekcji.
+              description_student: Klasa zostaje wprowadzona do Game Lab, środowiska programowania na potrzeby tej jednostki i zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online obrazu, zaprojektowanego na poprzedniej lekcji.
+              description_teacher: Uczniowie zostają wprowadzeni do Game Lab, środowiska programowania na potrzeby tej jednostki i zaczynają go używać do ustawiania kształtów na ekranie. Poznają podstawy sekwencjonowania i debugowania, jak również kilku prostych komend. Pod koniec lekcji będą potrafili zaprogramować obraz podobny do tego, który utworzyli posługując się narzędziami do rysowania na poprzedniej lekcji. 
             Shapes and Randomization:
               name: Kształty oraz losowość
             Variables:
@@ -10457,7 +10457,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -10957,7 +10957,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Learning Sprites with Sprite Lab:
               name: Uczące się duszki w Sprite Lab
             Alien Dance Party with Sprite Lab:
@@ -11043,7 +11043,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -11093,7 +11093,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -11134,7 +11134,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -11214,7 +11214,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -11266,7 +11266,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -11362,7 +11362,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -11410,7 +11410,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -11486,7 +11486,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -11536,7 +11536,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -11586,7 +11586,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -11981,8 +11981,8 @@ pl:
               description_teacher: Uczniowie badają wyzwania komunikacyjne związane ze sposobem rysowania kształtów oraz używania narzędzia wprowadzającego metodę rozwiązywania tego problemu w Game Lab. Ćwiczenie na rozgrzewkę szybko ujawnia problemy związane z podaniem pozycji, gdy nie ma wspólnego punktu odniesienia. W głównej części ćwiczenia uczniowie badają narzędzie Game Lab pozwalające uczniom na interaktywne umieszczanie kształtów na siatce Game Lab w rozmiarze 400 x 400. Mogą po kolei instruować partnera, jak narysować ukryty obrazek z wykorzystaniem tego narzędzia, biorąc pod uwagę liczne wyzwania, które staną na ich drodze w trakcie programowania w Game Lab. Uczniowie mają opcję tworzenia własnego obrazu służącego do przekazania informacji zanim przejdą do dyskusji podsumowującej.
             Drawing in Game Lab:
               name: Rysowanie w Game Lab
-              description_student: Klasę wprowadza się w Game Lab, środowisko programowania na potrzeby tej części. Zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online, które zaprojektowano na poprzedniej lekcji.
-              description_teacher: Klasę wprowadza się w Game Lab, środowisko programowania na potrzeby tej części. Zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online, które zaprojektowano na poprzedniej lekcji.
+              description_student: Klasa zostaje wprowadzona do Game Lab, środowiska programowania na potrzeby tej jednostki i zaczyna go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania, jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy wersję online obrazu, zaprojektowanego na poprzedniej lekcji.
+              description_teacher: Uczniowie zostają wprowadzeni do Game Lab, środowiska programowania na potrzeby tej jednostki i zaczynają go używać do ustawiania kształtów na ekranie. Poznają podstawy sekwencjonowania i debugowania, jak również kilku prostych komend. Pod koniec lekcji będą potrafili zaprogramować obraz podobny do tego, który utworzyli posługując się narzędziami do rysowania na poprzedniej lekcji. 
             Shapes and Randomization:
               name: Kształty oraz losowość
             Variables:
@@ -12702,7 +12702,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -12825,7 +12825,7 @@ pl:
             Fancy Shapes using Nested Loops:
               name: Wymyślne kształty z użyciem pętli zagnieżdżonych
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Fishy Business:
               name: Podejrzany interes
             Songwriting (Integrated Lesson):
@@ -13040,7 +13040,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Project - Decision Maker App Part 1:
@@ -13140,6 +13140,7 @@ pl:
               name: Pokaz tworzenia zmiennych
             'Lesson 11: Assessment Day':
               name: 'Lekcja 11: Dzień sprawdzianu'
+          name: csp7-2020
         csd2-projects-temp:
           title: CSD Projekty internetowe - TYMCZASOWE
           description: Tymczasowe miejsce na przechowywanie nowych mini-projektów na potrzeby Rozwoju sieci CSD
@@ -14210,7 +14211,7 @@ pl:
               description_student: Więcej pętli zagnieżdżonych! Tym razem będziesz tworzyć pewien NIESAMOWITY obrazek przy pomocy pętli zagnieżdżonych.
               description_teacher: Uczniowie będą tworzyć skomplikowane układy używając Artist w dzisiejszym zestawie łamigłówek. Kontynuując ćwiczenie pętli zagnieżdżonych mając na uwadze nowe cele, uczniowie przekonają się, że pętle zasadniczo mają szerszy zakres zastosowań. Ten zestaw łamigłówek daje również dużo więcej możliwości pracy twórczej oraz okazję do tego, by uczniowie zaprojektowali swój własnych projekt pod koniec tego etapu.
             Nested Loops in Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
               description_student: 'Anna i Elsa umieją świetnie jeździć na łyżwach, ale potrzebują Twojej pomocy w utworzeniu układów na lodzie. Użyj pętli zagnieżdżonych do utworzenia czegoś niewiarygodnie FAJNEGO.'
               description_teacher: Teraz uczniowie uczą się, jak układać pętle warstwowo, mogą tworzyć tyle pięknych rzeczy. Na tej lekcji uczniowie wykonają serie ćwiczeń, które pomogą im utworzyć obrazki do ich własnego portfolio korzystając ze wspaniałych umiejętności łyżwiarskich Anny i Elsy!
             'Functions: Songwriting':
@@ -14333,7 +14334,7 @@ pl:
                 Zupełnie naturalne jest to, że w miarę dorastania, dzieci zaczynają w większym stopniu korzystać z komunikacji online. Niemniej część rzeczy, które widzą, może sprawić, że czują się dotknięte, jest im smuto, są zdenerwowane lub przestraszone. Pomóż swoim uczniom budować empatię dla innych oraz uczyć się strategii, które należy stosować w konfrontacji z cybernękaniem.
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
-              description_student: Na tej lekcji będziesz się uczył o crowdsourcingu, procesie budowania projektu przy pomocy zespołu.
+              description_student: Na tej lekcji będziesz się uczył o crowdsourcingu, procesie budowania projektu z zespołem.
               description_teacher: W informatyce, stajemy w obliczu znaczących, zniechęcających problemów. Wyzwania takiej, jak znajdowanie wielkich liczb pierwszych lub tworzenia sekwencji DNA są prawie niemożliwe do zrealizowania w pojedynkę. Dzięki dodawaniu mocy innych sprawia, że można kierować tymi zadaniami. Ta lekcja pokazuje Twoim uczniom, jak bardzo pomocna może być praca zespołowa w branży informatyki.
             Digital Sharing:
               name: Udostępnianie cyfrowe
@@ -15469,10 +15470,11 @@ pl:
             Module 6:
               name: 'Moduł 6: Wprowadzenie do Zadania Create Performance'
             Module 7:
-              name: Moduł 7
+              name: 'Moduł 7'
             Module 8:
-              name: Moduł 8
+              name: 'Moduł 8'
           title: Wirtualne Profesjonalne Kształcenie w zakresie Zasad Informatyki
+          name: vpl-csp-2020
         curriculum-sandbox-levels:
           lessons:
             Course A:

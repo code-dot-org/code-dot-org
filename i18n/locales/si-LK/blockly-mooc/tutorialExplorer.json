@@ -1,6 +1,7 @@
 {
   "startButton": "ආරම්භ කරන්න",
   "filterOrgNamesAll": "සියල්ල",
+  "filterSortByDisplayWeight": "නිර්දේශිත",
   "filterGrades": "ශ්‍රේණි",
   "filterGrades25": "2 සිට 5 ශ්‍රේණිය දක්වා",
   "filterGrades68": "6 සිට 8 ශ්‍රේණිය දක්වා",
@@ -33,6 +34,7 @@
   "filterProgrammingLanguageOther": "වෙනත්",
   "filterActivityTypeRobotics": "රොබෝ විද්‍යාව",
   "backButtonBack": "නැවතත් සියලු ක්‍රියාකාරකම් වෙත",
+  "filterHeaderShowFilters": "පෙරහන්",
   "filterHeaderHideFilters": "යොදන්න",
   "filterHeaderTutorialCountSingle": "ප්‍රතිඑලය",
   "filterHeaderTutorialCountPlural": "{tutorial_count} ප්‍රතිඑල",

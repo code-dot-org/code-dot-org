@@ -361,7 +361,7 @@ es:
         text: crear un nuevo {COSTUME} en {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': alien
+            '"ALIEN"': alienígena
             '"BEAR"': oso
             '"CAT"': gato
             '"DOG"': perro

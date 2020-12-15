@@ -1,101 +1,101 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Hour of Code របៀបណែនាំសម្រាប់ក្រុមហ៊ុន
 ---
 
 {{ signup_button }}
 
-# How your company can engage with the Hour of Code
+# របៀបដែលក្រុមហ៊ុនរបស់អ្នកអាចភ្ជាប់ជាមួយ Hour of Code
 
-### Find out how you and your employees can inspire students to try computer science!
+### ស្វែងយល់ពីវិធីដែលអ្នកនិងបុគ្គលិករបស់អ្នកអាចជម្រុញសិស្សឱ្យសាកល្បងវិទ្យាសាស្ត្រកុំព្យូទ័រ!
 
 * * *
 
 Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
+ក្នុងអំឡុងពេលយុទ្ធនាការ Hour of Code ក្រុមហ៊ុនរបស់អ្នកអាចជួយលើកកម្ពស់ការយល់ដឹងអំពីវិទ្យាសាស្ត្រកុំព្យូទ័រ។ មិនថាអ្នកស្ម័គ្រចិត្តជាបុគ្គលឬជាអ្នករៀបចំគម្រោងសម្រាប់ក្រុមហ៊ុនរបស់អ្នកទេ រាល់ការខិតខំប្រឹងប្រែងរបស់អ្នកអាចមានឥទ្ធិពលយ៉ាងខ្លាំងទៅលើទស្សនៈរបស់យុវតីវ័យក្មេងនិងសិស្សមកពីក្រុមជនជាតិភាគតិចដែលឃើញមើលឃើញពីវិទ្យាសាស្ត្រកុំព្យូទ័រនិងសក្តានុពលរបស់ពួកគេ។
 
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
-- [Connect your company with a school](#connect-with-a-school)
-- [Host your own Hour of Code event](#host-hour-of-code)
+- [លើកទឹកចិត្តបុគ្គលិកឱ្យស្ម័គ្រចិត្តនៅក្នុងថ្នាក់រៀន](#encourage-employees)
+- [ភ្ជាប់ក្រុមហ៊ុនរបស់អ្នកជាមួយសាលារៀន](#connect-with-a-school)
+- [រៀបចំកម្មវិធី Hour of Code ផ្ទាល់ខ្លួនរបស់អ្នក](#host-hour-of-code)
 - [Promote the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [វិធីជាច្រើនទៀតដើម្បីគាំទ្រដល់ Hour of Code](#support-hour-of-code)
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## លើកទឹកចិត្តបុគ្គលិកឱ្យស្ម័គ្រចិត្តនៅក្នុងថ្នាក់រៀន
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
+វិធីមួយក្នុងចំណោមវិធីដើម្បីចូលរួមក្នុង Hour of Code ដើម្បីការស្ម័គ្រចិត្តជាមួយថ្នាក់រៀនក្នុងស្រុកទាំងដោយផ្ទាល់ឬតាមរយ:វីដេអូ។ ប៉ុណ្តែ អ្វីដែលពិសេសបំផុតអ្នកមិនចាំបាច់ធ្វើជាវិស្វករដើម្បីស្ម័គ្រចិត្តទេ។ អ្នកនៅតែអាចផ្តល់នូវបទពិសោធន៍ប្រកបដោយអត្ថន័យដល់សិស្សដោយការចែករំលែកបទពិសោធន៍អាជីពផ្ទាល់ខ្លួនរបស់អ្នកនិងរបៀបដែលស៊ីអេសអេឬបច្ចេកវិទ្យាជះឥទ្ធិពលដល់តួនាទីរបស់អ្នក។
 
 [<button>Sign up to volunteer</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+នៅពេលដែលអ្នកស្ម័គ្រចិត្តចុះឈ្មោះ គ្រូអាចពិនិត្យមើលប្រវត្តិរូបរបស់ពួកគេនៅលើ[ផែនទីអ្នកស្ម័គ្រចិត្តរបស់យើង](https://code.org/volunteer/local) - ដូច្នេះប្រវត្តិរូប គួរតែបំពេញអោយបានពេញលេញរួចសឹមបញ្ជូនទៅ។ ប្រសិនបើអ្នកសក្កិសមនឹងថ្នាក់រៀន នោះគ្រូនឹងទាក់ទងអ្នកតាមរយៈ platform(យើងនឹងមិនចែករំលែកអាសយដ្ឋានអ៊ីមែលរបស់អ្នកជាមួយគ្រូទេ) ។ You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+សម្រាប់ការណែនាំបន្ថែមអំពីការស្ម័គ្រចិត្តនិងការផ្ញើសារគំរូដើម្បីធ្វើឱ្យក្រុមហ៊ុនរបស់អ្នករំភើបរីករាយអំពី Hour of Code សូមពិនិត្យមើល [ការណែនាំសម្រាប់ដៃគូក្រុមហ៊ុន]({{ localized_files/hoc_corporate_toolkit }}) របស់យើងខ្ញុំ។ 
 
 * * *
 
 <a id="connect-with-a-school"></a>
 
-## Connect your company with a school
+## ភ្ជាប់ក្រុមហ៊ុនរបស់អ្នកជាមួយសាលារៀន
 
-You don’t have to use our volunteer map in order to connect with a classroom or school. Oftentimes, we recommend starting locally. Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+អ្នកមិនចាំបាច់ប្រើផែនទីស្ម័គ្រចិត្តរបស់យើងដើម្បីភ្ជាប់ទៅនឹងថ្នាក់រៀនឬសាលារៀនទេ។ ជាញឹកញាប់យើងណែនាំឱ្យចាប់ផ្តើមពីក្នុងតំបន់របស់អ្នក។ Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to such as administrators like a Principal or Vice Principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+ពីទីនោះអ្នកអាចចូលមើលគេហទំព័ររបស់សាលាដើម្បីស្វែងរកទំនាក់ទំនងសមស្របដើម្បីទាក់ទងទៅដូចជាអ្នកគ្រប់គ្រង នាយកសាលា នាយករងសាលា គ្រូបង្រៀនបច្ចេកវិទ្យា ឬ វិទ្យាសាស្ត្រកុំព្យូទ័រឬសូម្បីតែសាលា PTSA។ អ្នកក៏អាចធ្វើជាដៃគូជាមួយអង្គការដូចជា ក្លឹបក្មេងប្រុស & ក្មេងស្រី អាមេរិចសាខា YMCA និងអ្នកជាច្រើនទៀតដើម្បីសហការណ៍រៀបចំកម្មវិធីមួយ។ 
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+ប្រសិនបើអ្នកមិនអាចភ្ជាប់ទំនាក់ទំនងជាមួយសាលារៀនបានទេសូម [ ទាក់ទង​យើងខ្ញុំ](https://support.code.org/hc/en-us/requests/new)យើងខ្ញុំនឹងភ្ជាប់អ្នកជាមួយដៃគូក្នុងស្រុករបស់យើងប្រសិនបើអាច។
 
 * * *
 
-<h4><font color="00adbc"><i>“I LOVED seeing how excited the kids were. One amazing thing was the teachers noticed some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”</i></font></h4>
+<h4><font color="00adbc"><i>“ ខ្ញុំសប្បាយចិត្តណាស់ដែលឃើញក្មេងៗរំភើបរីករាយ។ អ្វីដែលអស្ចារ្យមួយនោះគឺគ្រូបានគេកត់សម្គាល់ឃើញថាសិស្សមួយចំនួនដែលរៀនមិនសូវពូកែ បែជាពូកែខាងគិតដូចជា developer និងជួយអ្នកដទៃដោយផ្តល់ទីកន្លែងដល់ពួកគេអោយមានអារម្មណ៍ជឿជាក់។</i></font></h4>
 
--Hour of Code volunteer
+អ្នកស្ម័គ្រចិត្ត Hour of Code
 
 * * *
 
 <a id="host-hour-of-code"></a>
 
-## Host your own Hour of Code event
+## រៀបចំកម្មវិធី Hour of Code ផ្ទាល់ខ្លួនរបស់អ្នក
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+ប្រសិនបើអ្នកចង់ទៅអោយបានឆ្ងាយលើលពីនេះទៀត ក្រុមហ៊ុនរបស់អ្នកក៏អាចធ្វើជាម្ចាស់កម្មវិធី Hour of Code ផងដែរ។ មិនមានរូបមន្តជាក់លាក់ណាមួយសម្រាប់ធ្វើជាម្ចាស់កម្មវិធីនោះទេ ដូច្នេះយើងលើកទឹកចិត្តឱ្យអ្នកចេះច្នៃប្រឌិត! ដោយសារទំហំបុគ្គលិករបស់យើងតូច (ប៉ុន្តែអស្ចារ្យ!) Code.org មិនមានក្រុមការងារដែលផ្តោតទៅលើការសម្របសម្រួលកម្មវិធី Hour of Code នោះទេ។ ទោះយ៉ាងណាមិញនេះគឺជាគន្លឹះមួយចំនួនដើម្បីចាប់ផ្តើម។
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. មើលវីឌីអូរបៀបរៀបចំនេះ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. កំណត់ថ្ងៃ បែបបទនិងទីតាំងសំរាប់កម្មវិធីរបស់អ្នក
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+យើងបានឃើញកម្មវិធីដែលមាន [ការចូលរួមតាមរយ: ប្រព័ន្ធអុីនធើណែត](https://hourofcode.com/us/how-to/virtual) ឬ ចូលរួមដោយផ្ទាល់ ធ្វើឡើងនៅការិយាល័យក្រុមហ៊ុន ឬ នៅតាមសហគមន៍និងសម្រាប់សិស្សគ្រប់វ័យ! អ្នកក៏អាចមើលអ្វីដែល [ដៃគូសហការ](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) និង [អ្នកឧបត្ថម្ភ](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) បានធ្វើកន្លងមក ដើម្បីបំផុសគំនិតមួយចំនួន។
 
 <br />
 
-#### Sample Agenda:
+#### របៀបវារៈគំរូ៖
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)|  
-|5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. |  
-|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|ម៉ោង | របៀបវារៈ | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 នាទី | បង្ហាញអំពី [វីដេអូបំផុសគំនិត](https://hourofcode.com/us/promote/resources#videos)|  
+|5-10 នាទី | ណែនាំខ្លួននិងស្វែងយល់បន្ថែមពីសិស្ស៖ តើអ្នកធ្វើការនៅទីណា? តើអ្នកធ្វើការងារអ្វី? តើអ្នកចូលចិត្តអ្វីជាងគេលើការងាររបស់អ្នក? នរណាឬអ្វីខ្លះដែលបំផុសគំនិតអ្នក? តើអ្នកចាប់អារម្មណ៍វិទ្យាសាស្ត្រកុំព្យូទ័រយ៉ាងដូចម្តេច? តើអ្នកមានអ្នកណែនាំទេ? សួរសំណួរសិស្សនិងទុកពេលវេលាសម្រាប់សំណួរ&ចម្លើយ |  
+|30-60 នាទី | កូដ! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 នាទី | អរគុណទាំងអស់គ្នា និង ចែករំលែកពាក្យដែលបំផុសគំនិត។ ប្រគល់នូវវត្ថុអនុស្សាវរីយផ្សេងៗរបស់ក្រុមហ៊ុន ([ស្ទីកឃ័រ](#celebrate) ល្អហ្មង)! | | <br />
 
-#### Other ideas to add to your event
+#### គំនិតផ្សេងៗទៀតដើម្បីបញ្ចូ។បន្ថែមលើកម្មវិធីរបស់អ្នក
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- ពន្យល់វិធីដែលបច្ចេកវិទ្យាជះឥទ្ធិពលដល់ជីវិតរបស់យើងជាមួយឧទាហរណ៍ដែលសិស្សគ្រប់មជ្ឈដ្ឋាននឹងយកចិត្តទុកដាក់ - និយាយអំពីបច្ចេកវិទ្យាដែលជួយសង្គ្រោះជីវិតជួយមនុស្សនិងការភ្ជាប់ទំនាក់ទំនងមនុស្ស។ 
+- ប្រសិនបើអ្នកជាក្រុមហ៊ុនបច្ចេកវិទ្យាការបង្ហាញផលិតផលច្នៃប្រឌិតថ្មីបែបសប្បាយៗដែលក្រុមហ៊ុនរបស់អ្នកកំពុងធ្វើការ។ ប្រសិនបើអ្នកមិនមែនជាក្រុមហ៊ុនបច្ចេកវិទ្យាទេចូរពិភាក្សាគ្នាអំពីវិធីដែលក្រុមហ៊ុនរបស់អ្នកប្រើបច្ចេកវិទ្យាដើម្បីដោះស្រាយបញ្ហានិងសម្រេចគោលដៅ។
+- អញ្ជើញ software engineers ពីក្រុមហ៊ុនរបស់អ្នកឱ្យនិយាយអំពីមូលហេតុដែលពួកគេសម្រេចចិត្តសិក្សាវិទ្យាសាស្ត្រកុំព្យូទ័រនិងគម្រោងដែលពួកគេធ្វើការ។
+- ប្រសិនបើអ្នកមានក្រុមបុគ្គលិកដែលនឹងជួយសម្រួលដល់កម្មវិធី ឬការស្ម័គ្រចិត្តរបស់អ្នកជាមួយសាលារៀនក្នុងតំបន់ សូមពិចារណាក្នុងការបញ្ជាទិញ [អាវយឺត](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) សំរាប់បុគ្គលិករបស់អ្នក។ 
 
-### 3. Plan your technology needs
+### 3. រៀបចំផែនការតម្រូវការបច្ចេកវិទ្យារបស់អ្នក 
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### ឧបករណ៍៖
 
-The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+បទពិសោធន៍ល្អបំផុតនៃ Hour of Code រួមមានកុំព្យូទ័រដែលមានភ្ជាប់អ៊ីនធឺណិត។ ប៉ុន្តែអ្នកមិនត្រូវការកុំព្យូទ័រសម្រាប់កុមារគ្រប់រូបទេហើយអ្នកក៏អាចធ្វើ Hour of Code ដោយមិនមានកុំព្យូទ័រទាល់តែសោះ! សម្រាប់សកម្មភាពដែលមិនមានភ្ជាប់ទាំងឡាយណា សូមត្រងតាមផ្នែកបច្ចេកវិជ្ជាក្នុងថ្នាក់ដើម្បីបង្ហាញជំរើសសំរាប់“ កុំព្យូរទ័ររឺឧបករណ៍” ។
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
+- **សកម្មភាពតេស្ត** នៅលើកុំព្យូទ័រឬឧបករណ៍។ ត្រូវប្រាកដថាពួកវាដំណើរការបានត្រឹមត្រូវលើកម្មវិធីរុករកដោយសម្លេងនិងវីដេអូ។ 
+- **មិនមានឧបករណ៍គ្រប់គ្រាន់ទេ?** សរសេកម្មវីធីជាលក្ខណ: គូរ នៅពេលសិស្សចាប់ដៃគូពួកគេជួយគ្នាហើយពឹងផ្អែកលើគ្រូតិចជាងមុន។ ពួកគេក៏នឹងមើលឃើញថាវិទ្យាសាស្រ្តកុំព្យួទ័រគឺជាទំនាក់ទំនងសង្គមនិងមានការសហការគ្នា។
+- **ផ្តល់ឪកាស** fសម្រាប់អ្នកចូលរួមរបស់អ្នកឬសុំឱ្យពួកគេនាំយកមកដោយខ្លួនឯងប្រសិនបើពួកគេកំពុងព្យាយាមបង្រៀនដែលមានប្រសិទ្ធភាពបំផុតជាមួយសម្លេង។
 - **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
 
 #### Virtual Events:
@@ -120,9 +120,9 @@ Once you have a solid roadmap for your event, you can then start inviting studen
 
 After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
+- [បោះពុម្ពវិញ្ញាបនបត្រ]({{ urls/certificates }})សម្រាប់សិស្សអ្នកចូលរួមទាំងអស់។
 - [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop). 
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- ចែករំលែករូបថតនិងវីដេអូនៃកម្មវិធី Hour of Code របស់អ្នកនៅលើប្រព័ន្ធផ្សព្វផ្សាយសង្គម។ ប្រើ #HourOfCode និង @codeorg ដើម្បីអោយយើងអាចបង្ហាញភាពជោគជ័យរបស់អ្នកផងដែរ!
 
 * * *
 
@@ -169,7 +169,7 @@ Help raise awareness of the computer science movement with this sample content t
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## វិធីជាច្រើនទៀតដើម្បីគាំទ្រដល់ Hour of Code
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 

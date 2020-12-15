@@ -1,14 +1,28 @@
 require 'digest/md5'
+require 'cdo/throttle'
 
 module ProfanityHelper
-  # Uses ProfanityFilter to find any profanities in the given text + locale. Caches the response.
+  PROFANITY_PREFIX = "profanity/".freeze
+
+  # If the given id is not throttled, cache the response from ProfanityFilter and yield the result to a block.
   # @param [String] text
   # @param [String] locale
-  # returns [Array<String>|nil] Array of profane words, if any are found.
-  def find_profanities(text, locale)
+  # @param [String] id - Unique identifier for throttling.
+  # @param [Integer] limit - Number of requests allowed over period.
+  # @param [Integer] period - Period of time in seconds.
+  def self.throttled_find_profanities(text, locale, id, limit, period)
     return nil if text.nil_or_empty?
+    key = cache_key(text, locale)
+    return yield(Rails.cache.read(key)) if Rails.cache.exist?(key)
+    return if Cdo::Throttle.throttle(PROFANITY_PREFIX + id.to_s, limit, period)
+
+    profanities = ProfanityFilter.find_potential_profanities(text, locale)
+    Rails.cache.write(key, profanities)
+    yield(profanities)
+  end
+
+  def self.cache_key(text, locale)
     # Hash text in cache_key to avoid long cache keys.
-    cache_key = "profanity/#{locale}/#{Digest::MD5.hexdigest(text)}"
-    Rails.cache.fetch(cache_key) {ProfanityFilter.find_potential_profanities(text, locale)}
+    PROFANITY_PREFIX + "#{locale}/#{Digest::MD5.hexdigest(text)}"
   end
 end
