@@ -1,0 +1,17 @@
+name 'CSD U6 setProperty predict multi_2021'
+editor_experiment ''
+title 'Make a Prediction'
+question 'Read the code and predict what this app will look like when run.'
+wrong '![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)'
+wrong '![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)'
+wrong '![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)'
+right '![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+For many of the programming activities in this unit, design mode elements have already been created.  One helpful tip for students is that they can hover over any of these elements to see the element's id.
+MARKDOWN

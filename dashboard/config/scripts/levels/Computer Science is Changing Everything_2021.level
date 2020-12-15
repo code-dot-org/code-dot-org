@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T21:59:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csp_cs_is_changing_everything",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 18967,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-12 15:17:49 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</StandaloneVideo>
