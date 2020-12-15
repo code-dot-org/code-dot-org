@@ -1,7 +1,6 @@
 hideable_lessons true
 teacher_resources [["teacherForum", "https://forum.code.org/c/csf"]]
 lesson_extras_available true
-has_lesson_plan true
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'pre-express'
