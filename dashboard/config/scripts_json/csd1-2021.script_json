@@ -7,18 +7,17 @@
     "properties": {
       "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "curriculum_path": "https://curriculum.code.org/csd-20/unit1/{LESSON}",
       "version_year": "2021",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "project_sharing": true,
       "teacher_resources": [
         [
           "teacherForum",
           "https://forum.code.org/c/csd"
         ]
-      ]
+      ],
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -288,10 +287,17 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
       },
@@ -312,6 +318,7 @@
     {
       "chapter": 2,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -333,6 +340,7 @@
     {
       "chapter": 3,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -354,6 +362,7 @@
     {
       "chapter": 4,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Video: Problem Solving Process"
@@ -375,6 +384,7 @@
     {
       "chapter": 5,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -396,6 +406,7 @@
     {
       "chapter": 6,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -417,6 +428,7 @@
     {
       "chapter": 7,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Video: What Makes a Computer, a Computer?"
@@ -438,6 +450,7 @@
     {
       "chapter": 8,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -459,6 +472,7 @@
     {
       "chapter": 9,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: Pet Chooser"
@@ -480,6 +494,7 @@
     {
       "chapter": 10,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: Story Creator"
@@ -501,6 +516,7 @@
     {
       "chapter": 11,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: Improved Pet Chooser"
@@ -522,6 +538,7 @@
     {
       "chapter": 12,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -543,6 +560,7 @@
     {
       "chapter": 13,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: Is It Your Birthday?"
@@ -564,6 +582,7 @@
     {
       "chapter": 14,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: National Park Quiz"
@@ -585,6 +604,7 @@
     {
       "chapter": 15,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: How Many Countries..."
@@ -606,6 +626,7 @@
     {
       "chapter": 16,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: My Famous Birthday"
@@ -627,6 +648,7 @@
     {
       "chapter": 17,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: Stamp Notebook"
@@ -648,6 +670,7 @@
     {
       "chapter": 18,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: The Fastest Finger"
@@ -669,6 +692,7 @@
     {
       "chapter": 19,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: Guess the Number"
@@ -690,6 +714,7 @@
     {
       "chapter": 20,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: Where Should I Live?"
@@ -711,6 +736,7 @@
     {
       "chapter": 21,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -732,6 +758,7 @@
     {
       "chapter": 22,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: Outfit Picker"
@@ -753,6 +780,7 @@
     {
       "chapter": 23,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: Friend Finder"
@@ -774,6 +802,7 @@
     {
       "chapter": 24,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "App: Kids Movie Recommender"
@@ -795,6 +824,7 @@
     {
       "chapter": 25,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Video: IOSP Model"
@@ -816,6 +846,7 @@
     {
       "chapter": 26,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -837,6 +868,7 @@
     {
       "chapter": 27,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Reflection"
@@ -858,6 +890,7 @@
     {
       "chapter": 28,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
       },
@@ -878,6 +911,7 @@
     {
       "chapter": 29,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -899,6 +933,7 @@
     {
       "chapter": 30,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -920,6 +955,7 @@
     {
       "chapter": 31,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -941,6 +977,7 @@
     {
       "chapter": 32,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -962,6 +999,7 @@
     {
       "chapter": 33,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
