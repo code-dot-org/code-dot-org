@@ -79,9 +79,8 @@ export function queryLockStatus(store, scriptId, pageType) {
       if (pageType !== 'script_overview') {
         store.dispatch(setSections(teacherSections));
         const query = queryString.parse(location.search);
-        const section_id = parseInt(query.section_id);
-        if (section_id) {
-          store.dispatch(selectSection(section_id));
+        if (query.section_id) {
+          store.dispatch(selectSection(query.section_id));
         }
       }
 
