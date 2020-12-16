@@ -7,19 +7,15 @@
       "0.62"
     ],
     "func": "beginCollectingData",
-    "blockText": "begin collecting data of the {BREAK} number of {COSTUME} {BREAK2} with label {LABEL}",
+    "blockText": "begin collecting data {BREAK} value {VALUE} with label {LABEL}",
     "args": [
       {
         "name": "BREAK",
         "empty": true
       },
       {
-        "name": "COSTUME",
-        "customInput": "costumePicker"
-      },
-      {
-        "name": "BREAK2",
-        "empty": true
+        "name": "VALUE",
+        "defer": true
       },
       {
         "name": "LABEL"
