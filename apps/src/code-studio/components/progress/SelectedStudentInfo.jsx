@@ -3,9 +3,7 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import Button from '@cdo/apps/templates/Button';
-import {
-  levelType
-} from '@cdo/apps/templates/progress/progressTypes';
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
