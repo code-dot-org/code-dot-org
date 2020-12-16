@@ -1,0 +1,23 @@
+name 'U5L3 CFU Lists Psuedocode 2_2021'
+title 'AP Pseudocode: Lists (continued) '
+description ''
+right '4'
+wrong '5'
+wrong '3'
+wrong '2'
+
+
+markdown <<MARKDOWN
+## AP Reference Sheet 
+
+The AP Reference Sheet shows how list questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below.
+
+**Reminder:** AP Pseudocode starts the index at **1** instead of 0.
+![](https://images.code.org/95fd4ade5ebb34ebde2a765d6eb05668-image-1570648254777.png)
+
+## Practice Question
+
+What will be displayed after this code segment is run?
+
+![](https://images.code.org/a3fc1f0c4654afdd69229e9d0d99acb5-image-1570648437741.png)
+MARKDOWN
