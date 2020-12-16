@@ -17,7 +17,11 @@ import Select from 'react-select/lib/Select';
 import {SelectStyleProps} from '../../constants';
 import 'react-select/dist/react-select.css';
 import HelpTipModal from '@cdo/apps/lib/ui/HelpTipModal';
-import {setFormMetadata} from './foormEditorRedux';
+import {
+  setFormData,
+  addAvilableForm,
+  setFormQuestions
+} from './foormEditorRedux';
 
 const styles = {
   saveButtonBackground: {
@@ -77,13 +81,16 @@ const publishedSaveWarning = (
 class FoormSaveBar extends Component {
   static propTypes = {
     formCategories: PropTypes.array,
+    resetCodeMirror: PropTypes.func,
 
     // Populated by Redux
     formQuestions: PropTypes.object,
     formHasError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
     formId: PropTypes.number,
-    updateFormMetadata: PropTypes.func
+    updateFormData: PropTypes.func,
+    addAvilableForm: PropTypes.func,
+    setFormQuestions: PropTypes.func
   };
 
   constructor(props) {
@@ -137,6 +144,10 @@ class FoormSaveBar extends Component {
           isSaving: false,
           lastSaved: Date.now()
         });
+        const updatedQuestions = JSON.parse(result.questions);
+        // reset code mirror with returned questions (may have fixed spacing/added published state)
+        this.props.setFormQuestions(updatedQuestions);
+        this.props.resetCodeMirror(updatedQuestions);
       })
       .fail(result => {
         this.setState({
@@ -168,13 +179,22 @@ class FoormSaveBar extends Component {
           isSaving: false,
           lastSaved: Date.now()
         });
-        this.props.updateFormMetadata({
+        const updatedQuestions = JSON.parse(result.questions);
+        this.props.updateFormData({
           published: result.published,
           name: result.name,
           version: result.version,
           id: result.id,
-          questions: result.questions
+          questions: updatedQuestions
         });
+        // adds new form to form dropdown
+        this.props.addAvilableForm({
+          name: result.name,
+          version: result.version,
+          id: result.id
+        });
+        // reset code mirror with returned questions (may have fixed spacing/added published state)
+        this.props.resetCodeMirror(updatedQuestions);
       })
       .fail(result => {
         this.setState({
@@ -303,6 +323,8 @@ export default connect(
     formId: state.foorm.formId
   }),
   dispatch => ({
-    updateFormMetadata: formMetadata => dispatch(setFormMetadata(formMetadata))
+    updateFormData: formData => dispatch(setFormData(formData)),
+    addAvilableForm: formMetadata => dispatch(addAvilableForm(formMetadata)),
+    setFormQuestions: formQuestions => dispatch(setFormQuestions(formQuestions))
   })
 )(FoormSaveBar);

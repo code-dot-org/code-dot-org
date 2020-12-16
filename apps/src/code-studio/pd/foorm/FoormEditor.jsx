@@ -42,6 +42,7 @@ const PREVIEW_OFF = 'preview-off';
 class FoormEditor extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func.isRequired,
+    resetCodeMirror: PropTypes.func.isRequired,
     formCategories: PropTypes.array,
     // populated by redux
     formQuestions: PropTypes.object,
@@ -307,7 +308,10 @@ class FoormEditor extends React.Component {
             </Tab>
           </Tabs>
         </div>
-        <FoormSaveBar formCategories={this.props.formCategories} />
+        <FoormSaveBar
+          formCategories={this.props.formCategories}
+          resetCodeMirror={this.props.resetCodeMirror}
+        />
       </div>
     );
   }
