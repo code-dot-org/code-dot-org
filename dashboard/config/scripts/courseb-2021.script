@@ -6,6 +6,7 @@ project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'courseb'
 version_year '2021'
 curriculum_umbrella 'CSF'
+is_course true
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 lesson 'Digital Trails', display_name: 'Digital Trails'
