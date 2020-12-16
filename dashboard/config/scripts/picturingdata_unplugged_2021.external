@@ -1,0 +1,11 @@
+name 'PicturingData-Unplugged_2021'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Picturing Data
+
+Use a Play Lab project to collect data and make predictions.
+
+![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+MARKDOWN

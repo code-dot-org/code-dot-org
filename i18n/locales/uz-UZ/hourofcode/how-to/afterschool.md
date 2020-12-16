@@ -38,7 +38,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+Agar siz tanlagan o‘quv qo‘llanma ovoz bilan yaxshi ishlasa, sinfingiz uchun naushnik bilan ta'minlang yoki talabalardan o‘zlari olib kelishini so‘rang.
 
 **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 
@@ -46,7 +46,7 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 Ishtirokchilarni ilhomlantirish va kompyuter fanlari hayotimizning har bir qismiga qanday ta'sir qilishini muhokama qilish orqali "Kod soati"ni boshlang.
 
-**Show an inspirational video:**
+**Ilhomlantiruvchi videoni ko‘rsating:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)

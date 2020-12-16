@@ -21,24 +21,21 @@ export default class SpecialAnnouncement extends Component {
     const {isEnglish, isTeacher} = this.props;
     const headingText = isEnglish
       ? isTeacher
-        ? 'The Hour of Code is here!'
+        ? i18n.teacherAnnouncementSpecialWinter2021Heading()
         : i18n.studentAnnouncementSpecial2020Heading()
       : i18n.intlAnnouncementSpecial2020Heading();
     const descriptionText = isEnglish
       ? isTeacher
-        ? "Whether you're in the classroom or at home, join us for the Hour of Code! Explore how AI impacts our world with our new AI resources, tune in to a CodeBytes mini-lesson, or try one of hundreds of other activities!"
+        ? i18n.teacherAnnouncementSpecialWinter2021Body()
         : i18n.studentAnnouncementSpecial2020Body()
       : i18n.intlAnnouncementSpecial2020Body();
     const buttonId = isTeacher
-      ? 'teacher_homepage_announcement_special2020'
+      ? 'teacher_homepage_announcement_special_winter2021'
       : 'student_homepage_announcement_special2020';
-    const url =
-      isTeacher && isEnglish
-        ? pegasus('/hourofcode/overview')
-        : pegasus('/athome');
+    const url = isTeacher && isEnglish ? pegasus('/ai') : pegasus('/athome');
     const buttonText =
       isTeacher && isEnglish
-        ? 'Join Us'
+        ? i18n.joinUs()
         : i18n.studentAnnouncementSpecial2020Button();
     const imageUrl =
       isTeacher && isEnglish
