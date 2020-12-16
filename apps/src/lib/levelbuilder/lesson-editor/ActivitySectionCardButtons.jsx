@@ -35,7 +35,8 @@ class ActivitySectionCardButtons extends Component {
     addLevel: PropTypes.func.isRequired,
     updateTip: PropTypes.func.isRequired,
     removeTip: PropTypes.func.isRequired,
-    appendResourceLink: PropTypes.func.isRequired
+    appendResourceLink: PropTypes.func.isRequired,
+    appendSlide: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -109,6 +110,10 @@ class ActivitySectionCardButtons extends Component {
     this.setState({addResourceOpen: true});
   };
 
+  handleAddSlide = () => {
+    this.props.appendSlide();
+  };
+
   handleCloseAddResource = resourceKey => {
     this.setState(
       {addResourceOpen: false},
@@ -155,6 +160,15 @@ class ActivitySectionCardButtons extends Component {
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
               Resource Link
+            </button>
+            <button
+              onMouseDown={this.handleAddSlide}
+              className="btn"
+              style={styles.addButton}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Slide
             </button>
           </span>
           {this.props.activitySection.tips.length > 0 && (
