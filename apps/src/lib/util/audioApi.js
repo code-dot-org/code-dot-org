@@ -2,6 +2,7 @@
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {apiValidateType, OPTIONAL, outputWarning} from './javascriptMode';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import i18n from '@cdo/locale';
 import Sounds from '@cdo/apps/Sounds';
 import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
@@ -160,7 +161,7 @@ export const commands = {
       authenticityToken,
       onFailure: message => outputWarning(message + '\n')
     });
-    azureTTS.enqueueAndPlay(promise);
+    azureTTS.enqueueAndPlay(promise, studioApp().isRunning);
   }
 };
 
