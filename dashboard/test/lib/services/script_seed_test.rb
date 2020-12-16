@@ -36,9 +36,13 @@ module Services
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
 
+      script.course_version.resources.destroy_all
+      script.course_version.destroy!
       script.destroy!
+
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
+      #   4 queries to set up course offering and course version
       #   19 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels and LevelsScriptLevels.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
@@ -47,6 +51,7 @@ module Services
       #   12 queries - ScriptLevel validations related to having an activity_section.
       #     These would be good candidates to eliminate in future optimization.
       #   8 queries, one for each LevelsScriptLevel.
+      #   4 queries, one to remove LessonsResources from each Lesson.
       #   9 queries, 1 to populate the Game.by_name cache, and 8 to look up Game objects by id.
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
@@ -54,7 +59,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(52) do
+      assert_queries(62) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -170,6 +175,33 @@ module Services
       assert_equal 'foo', script.script_levels.first.challenge
     end
 
+    test 'seed updates lesson resources' do
+      script = create_script_tree
+      CourseOffering.add_course_offering(script)
+      assert script.course_version
+
+      script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.resources.first.update!(name: 'Updated Resource Name')
+        lesson.resources.create(
+          name: 'New Resource Name',
+          key: "#{lesson.name}-resource-3",
+          url: "fake.url",
+          course_version: script.course_version
+        )
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script.reload
+
+      assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+      lesson = script.lessons.first
+      assert_equal(
+        ['Updated Resource Name', 'fake name', 'New Resource Name'],
+        lesson.resources.map(&:name)
+      )
+    end
+
     test 'seed deletes lesson_groups' do
       script = create_script_tree
       original_counts = get_counts
@@ -199,6 +231,7 @@ module Services
       expected_counts['ActivitySection'] -= 2
       expected_counts['ScriptLevel'] -= 4
       expected_counts['LevelsScriptLevel'] -= 4
+      expected_counts['LessonsResource'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -228,6 +261,7 @@ module Services
       expected_counts['ActivitySection'] -= 1
       expected_counts['ScriptLevel'] -= 2
       expected_counts['LevelsScriptLevel'] -= 2
+      expected_counts['LessonsResource'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -306,6 +340,30 @@ module Services
       assert_equal original_script_level_ids.slice(1, original_script_level_ids.length), script.script_levels.map(&:id)
     end
 
+    # Resources are owned by the course version. We need to make sure all the
+    # resources we need for this script are created, but we should never remove
+    # a resource because it might be in use by another script in this course
+    # version.
+    test 'seed deletes lessons_resources but not resources' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        assert_equal 2, lesson.resources.count
+        lesson.resources.delete(lesson.resources.first)
+        assert_equal 1, lesson.resources.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script.reload
+
+      assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
+      expected_counts = original_counts.clone
+      expected_counts['LessonsResource'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     def frozen_script_levels_with_levels(script)
       script_levels = script.script_levels.to_a
       script_levels.map(&:levels).map(&:length)
@@ -329,7 +387,10 @@ module Services
     end
 
     def get_counts
-      [Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
+      [
+        Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
+        LevelsScriptLevel, Resource, LessonsResource
+      ].map {|c| [c.name, c.count]}.to_h
     end
 
     def assert_script_trees_equal(s1, s2, script_levels1=nil, script_levels2=nil)
@@ -348,6 +409,10 @@ module Services
         s2.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten
       )
       assert_script_levels_equal script_levels1, script_levels2
+      assert_resources_equal(
+        s1.lessons.map(&:resources).flatten,
+        s2.lessons.map(&:resources).flatten
+      )
     end
 
     def assert_lesson_groups_equal(lesson_groups1, lesson_groups2)
@@ -384,15 +449,35 @@ module Services
       end
     end
 
+    def assert_resources_equal(resources1, resources2)
+      resources1.zip(resources2).each do |r1, r2|
+        assert_attributes_equal(r1, r2, ['course_version_id'])
+      end
+    end
+
     def assert_attributes_equal(a, b, additional_excludes=[])
       excludes = ['id', 'created_at', 'updated_at'] + additional_excludes
       assert_equal a.attributes.except(*excludes), b.attributes.except(*excludes)
     end
 
-    def create_script_tree(name_prefix=nil, num_lesson_groups=2, num_lessons_per_group=2, num_script_levels_per_lesson=2)
+    def create_script_tree(
+      name_prefix=nil,
+      num_lesson_groups=2,
+      num_lessons_per_group=2,
+      num_script_levels_per_lesson=2,
+      num_resources_per_lesson=2
+    )
       name_prefix ||= SecureRandom.uuid
       # TODO: how can this be simplified and/or moved into factories.rb?
-      script = create :script, name: "#{name_prefix}-script", curriculum_path: 'my_curriculum_path'
+      script = create(
+        :script,
+        name: "#{name_prefix}-script",
+        curriculum_path: 'my_curriculum_path',
+        is_course: true,
+        family_name: "#{name_prefix}-family",
+        version_year: "#{name_prefix}-version"
+      )
+      CourseOffering.add_course_offering(script)
 
       num_lesson_groups.times do |i|
         create :lesson_group, script: script, key: "#{name_prefix}-lesson-group-#{i + 1}", description: "description #{i + 1}"
@@ -424,6 +509,11 @@ module Services
           level = create :level, name: "#{name_prefix}_blockly_#{i}", level_num: "1_2_#{i}", game: game
           create :script_level, activity_section: section, activity_section_position: i, lesson: lesson, script: script, levels: [level], challenge: i.even?
           i += 1
+        end
+
+        (1..num_resources_per_lesson).each do |r|
+          resource = create :resource, key: "#{lesson.name}-resource-#{r}", course_version: script.course_version
+          LessonsResource.find_or_create_by!(resource: resource, lesson: lesson)
         end
       end
 
