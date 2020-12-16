@@ -160,8 +160,11 @@ class FoormSaveBar extends Component {
       });
   };
 
+  isFormNameValid = () => {
+    return this.state.formName && this.state.formName.match('^[a-z0-9_]+$');
+  };
+
   saveNewForm = () => {
-    // validate form name and category
     const newFormName = `${this.state.formCategory}/${this.state.formName}`;
     $.ajax({
       url: `/foorm/forms`,
@@ -209,6 +212,7 @@ class FoormSaveBar extends Component {
   };
 
   renderNewFormSaveModal = () => {
+    const showFormNameError = this.state.formName && !this.isFormNameValid();
     return (
       <Modal
         show={this.state.showNewFormSave}
@@ -241,8 +245,8 @@ class FoormSaveBar extends Component {
             <ControlLabel>
               Form Name
               <HelpTipModal>
-                Form names must be all lowercase with underscores to separate
-                words (such as example_form_name).
+                Form names must be all lowercase letters (numbers allowed) with
+                underscores to separate words (such as example_form_name).
               </HelpTipModal>
             </ControlLabel>
             <FormControl
@@ -252,9 +256,23 @@ class FoormSaveBar extends Component {
               onChange={e => this.setState({formName: e.target.value})}
             />
           </FormGroup>
+          {showFormNameError && (
+            <div>
+              <span style={styles.warning}>Error: </span> Form name is invalid.
+              Form names must be all lowercase letters (numbers allowed) with
+              underscores to separate words (such as example_form_name).
+            </div>
+          )}
         </Modal.Body>
         <Modal.Footer>
-          <Button bsStyle="primary" onClick={this.saveNewForm}>
+          <Button
+            bsStyle="primary"
+            onClick={this.saveNewForm}
+            disabled={
+              !(this.state.formName && this.state.formCategory) ||
+              showFormNameError
+            }
+          >
             Save Form
           </Button>
           <Button onClick={this.handleNewFormSaveCancel}>Cancel</Button>
