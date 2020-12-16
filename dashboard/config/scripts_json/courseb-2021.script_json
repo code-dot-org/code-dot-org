@@ -12,10 +12,8 @@
         "artist_k1"
       ],
       "lesson_extras_available": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/courseb/{LESSON}",
       "version_year": "2021",
       "curriculum_umbrella": "CSF",
-      "has_lesson_plan": true,
       "teacher_resources": [
         [
           "teacherForum",
@@ -26,8 +24,7 @@
           "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         ]
       ],
-      "peer_reviews_to_complete": 0,
-      "is_migrated": true
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": "courseb",
@@ -267,10 +264,17 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -291,6 +295,7 @@
     {
       "chapter": 2,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -311,6 +316,7 @@
     {
       "chapter": 3,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Maze Intro: Programming with Blocks"
@@ -332,6 +338,7 @@
     {
       "chapter": 4,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -353,6 +360,7 @@
     {
       "chapter": 5,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -374,6 +382,7 @@
     {
       "chapter": 6,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -395,6 +404,7 @@
     {
       "chapter": 7,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -416,6 +426,7 @@
     {
       "chapter": 8,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -437,6 +448,7 @@
     {
       "chapter": 9,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -458,6 +470,7 @@
     {
       "chapter": 10,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Pair Programming"
@@ -479,6 +492,7 @@
     {
       "chapter": 11,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -500,6 +514,7 @@
     {
       "chapter": 12,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -521,6 +536,7 @@
     {
       "chapter": 13,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -542,6 +558,7 @@
     {
       "chapter": 14,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -563,6 +580,7 @@
     {
       "chapter": 15,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -584,6 +602,7 @@
     {
       "chapter": 16,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Challenge",
@@ -606,6 +625,7 @@
     {
       "chapter": 17,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -627,6 +647,7 @@
     {
       "chapter": 18,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -648,6 +669,7 @@
     {
       "chapter": 19,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -669,6 +691,7 @@
     {
       "chapter": 20,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -689,6 +712,7 @@
     {
       "chapter": 21,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -709,6 +733,7 @@
     {
       "chapter": 22,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "The Harvester"
@@ -730,6 +755,7 @@
     {
       "chapter": 23,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -751,6 +777,7 @@
     {
       "chapter": 24,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -772,6 +799,7 @@
     {
       "chapter": 25,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -793,6 +821,7 @@
     {
       "chapter": 26,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Debugging with the Step Button"
@@ -814,6 +843,7 @@
     {
       "chapter": 27,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -835,6 +865,7 @@
     {
       "chapter": 28,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -856,6 +887,7 @@
     {
       "chapter": 29,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -877,6 +909,7 @@
     {
       "chapter": 30,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -898,6 +931,7 @@
     {
       "chapter": 31,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -919,6 +953,7 @@
     {
       "chapter": 32,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -940,6 +975,7 @@
     {
       "chapter": 33,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Challenge",
@@ -962,6 +998,7 @@
     {
       "chapter": 34,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -983,6 +1020,7 @@
     {
       "chapter": 35,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1004,6 +1042,7 @@
     {
       "chapter": 36,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1025,6 +1064,7 @@
     {
       "chapter": 37,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1045,6 +1085,7 @@
     {
       "chapter": 38,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1066,6 +1107,7 @@
     {
       "chapter": 39,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1087,6 +1129,7 @@
     {
       "chapter": 40,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Repeat Blocks"
@@ -1108,6 +1151,7 @@
     {
       "chapter": 41,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1129,6 +1173,7 @@
     {
       "chapter": 42,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1150,6 +1195,7 @@
     {
       "chapter": 43,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1171,6 +1217,7 @@
     {
       "chapter": 44,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1192,6 +1239,7 @@
     {
       "chapter": 45,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1213,6 +1261,7 @@
     {
       "chapter": 46,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1234,6 +1283,7 @@
     {
       "chapter": 47,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1255,6 +1305,7 @@
     {
       "chapter": 48,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Challenge",
@@ -1277,6 +1328,7 @@
     {
       "chapter": 49,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1298,6 +1350,7 @@
     {
       "chapter": 50,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1319,6 +1372,7 @@
     {
       "chapter": 51,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "The Collector"
@@ -1340,6 +1394,7 @@
     {
       "chapter": 52,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1361,6 +1416,7 @@
     {
       "chapter": 53,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1382,6 +1438,7 @@
     {
       "chapter": 54,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Using the Repeat Block"
@@ -1403,6 +1460,7 @@
     {
       "chapter": 55,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1424,6 +1482,7 @@
     {
       "chapter": 56,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1445,6 +1504,7 @@
     {
       "chapter": 57,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1466,6 +1526,7 @@
     {
       "chapter": 58,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1487,6 +1548,7 @@
     {
       "chapter": 59,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1508,6 +1570,7 @@
     {
       "chapter": 60,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Challenge",
@@ -1530,6 +1593,7 @@
     {
       "chapter": 61,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1551,6 +1615,7 @@
     {
       "chapter": 62,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1572,6 +1637,7 @@
     {
       "chapter": 63,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1593,6 +1659,7 @@
     {
       "chapter": 64,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1613,6 +1680,7 @@
     {
       "chapter": 65,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1633,6 +1701,7 @@
     {
       "chapter": 66,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "The Artist in Code Studio"
@@ -1654,6 +1723,7 @@
     {
       "chapter": 67,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1675,6 +1745,7 @@
     {
       "chapter": 68,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Repeat Blocks with the Artist"
@@ -1696,6 +1767,7 @@
     {
       "chapter": 69,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1717,6 +1789,7 @@
     {
       "chapter": 70,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1738,6 +1811,7 @@
     {
       "chapter": 71,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1759,6 +1833,7 @@
     {
       "chapter": 72,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1780,6 +1855,7 @@
     {
       "chapter": 73,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1801,6 +1877,7 @@
     {
       "chapter": 74,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Challenge",
@@ -1823,6 +1900,7 @@
     {
       "chapter": 75,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1844,6 +1922,7 @@
     {
       "chapter": 76,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Practice"
@@ -1865,6 +1944,7 @@
     {
       "chapter": 77,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Free Play"
@@ -1886,6 +1966,7 @@
     {
       "chapter": 78,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1906,6 +1987,7 @@
     {
       "chapter": 79,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1926,6 +2008,7 @@
     {
       "chapter": 80,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1946,6 +2029,7 @@
     {
       "chapter": 81,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1966,6 +2050,7 @@
     {
       "chapter": 82,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Create a Story"
@@ -1987,6 +2072,7 @@
     {
       "chapter": 83,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Free Play"
@@ -2008,6 +2094,7 @@
     {
       "chapter": 84,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle"
@@ -2029,6 +2116,7 @@
     {
       "chapter": 85,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle"
@@ -2050,6 +2138,7 @@
     {
       "chapter": 86,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle"
@@ -2071,6 +2160,7 @@
     {
       "chapter": 87,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle"
@@ -2092,6 +2182,7 @@
     {
       "chapter": 88,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle"
@@ -2113,6 +2204,7 @@
     {
       "chapter": 89,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle"
@@ -2134,6 +2226,7 @@
     {
       "chapter": 90,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Free Play"
@@ -2155,6 +2248,7 @@
     {
       "chapter": 91,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2175,6 +2269,7 @@
     {
       "chapter": 92,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
