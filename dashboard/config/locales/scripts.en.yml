@@ -11425,6 +11425,7 @@ en:
               name: Part 2
             part 3:
               name: part 3
+          name: andrea-test
         dance-extras-gallery:
           title: Keep On Dancing
           description_audience: ''
@@ -14345,9 +14346,14 @@ en:
             Deeper Learning Overview:
               name: Deeper Learning Overview
             Understanding the Curriculum:
-              name: Understanding the Curriculum
+              name: 'Understanding the Curriculum: Pre Work'
             Demonstrating Understanding:
               name: Demonstrating Understanding
+            Focus Area 1:
+              name: Curriculum
+            Focus Area 2:
+              name: Learning Platform
+          name: dlp19-csd-mod-fit
         dlp19-csp-mod-fit:
           title: CS Principles Deeper Learning 2019 FiT Workshop
           description_audience: CS Principles Facilitators in Training 2019
@@ -18839,12 +18845,12 @@ en:
               description_teacher: The primary purpose of developing paper prototypes is that they allow for quick testing and iteration before any code is written. This lesson is focused on giving teams a chance to test their prototypes before moving to App Lab. Teams develop a plan to test with users before running prototype tests with multiple other students in the class (and potentially outside the class). In order to test the prototype with the users, the students will have to assign roles in the testing (the “narrator”, the “computer” and the “observers”) as well as have some questions prepared for the user to answer after the test is complete.
             Digital Design:
               key: Digital Design
-              name: Digital Design
+              name: Design Mode in AppLab
               description_student: Having developed, tested, and gathered feedback on a paper prototype, teams now move to App Lab to build the next iteration of their apps. Using the drag-and-drop Design Mode, each team member builds out at least one page of their team's app, responding to feedback that was received in the previous round of testing.
               description_teacher: Having collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin work on an interactive digital version based on the paper prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital versions of a paper prototype. From there, each group member builds out at least one page of their app in App Lab, to be later combined into a single app.
             Linking Screens:
               key: Linking Screens
-              name: Linking Screens
+              name: Linking Prototype Screens
               description_student: Building on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.
               description_teacher: In this lesson teams combine the screens that they designed in the previous lesson into a single app, which they can then link together using code. Students learn basic event driven programming by building up the model app that they started in the previous lesson. In addition to the screen that students designed yesterday, they'll learn how to create additional screens and even import screens made by others.
             Testing the App:
@@ -18872,6 +18878,22 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+            User-Centered Design 1:
+              name: User-Centered Design - Define and Prepare
+            User-Centered Design 2:
+              name: User-Centered Design - Try and Reflect
+            Exploring UI Elements:
+              name: Exploring UI Elements
+            Build a Digital Prototype:
+              name: Build a Digital Prototype
+            Events In AppLab:
+              name: Events In AppLab
+            Bugs and Features:
+              name: Bugs and Features
+            Updating Your Prototype:
+              name: Updating Your Prototype
+            Build a Paper Prototype:
+              name: Build a Paper Prototype
           lesson_groups:
             csd4_1:
               display_name: 'Chapter 1: User Centered Design'
@@ -18973,6 +18995,8 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+            Data and Machine Learning:
+              name: Data and Machine Learning
           lesson_groups:
             csd5_1:
               display_name: 'Chapter 1: Representing Information'
