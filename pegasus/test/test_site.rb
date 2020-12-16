@@ -28,6 +28,7 @@ class SiteTest < Minitest::Test
       /
       /curriculum/6-8
       /curriculum/6-8/1
+      /curriculum/unplugged/css/jumbotron-banner.css
     ).each do |path|
       assert_equal 200, get(path).status
     end
