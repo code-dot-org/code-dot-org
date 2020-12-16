@@ -17,6 +17,7 @@ import Select from 'react-select/lib/Select';
 import {SelectStyleProps} from '../../constants';
 import 'react-select/dist/react-select.css';
 import HelpTipModal from '@cdo/apps/lib/ui/HelpTipModal';
+import {setFormMetadata} from './foormEditorRedux';
 
 const styles = {
   saveButtonBackground: {
@@ -81,7 +82,8 @@ class FoormSaveBar extends Component {
     formQuestions: PropTypes.object,
     formHasError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
-    formId: PropTypes.number
+    formId: PropTypes.number,
+    updateFormMetadata: PropTypes.func
   };
 
   constructor(props) {
@@ -149,15 +151,15 @@ class FoormSaveBar extends Component {
 
   saveNewForm = () => {
     // validate form name and category
+    const newFormName = `${this.state.formCategory}/${this.state.formName}`;
     $.ajax({
       url: `/foorm/forms`,
       type: 'post',
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        name: `${this.state.formCategory}/${this.state.formName}`,
-        questions: this.props.formQuestions,
-        published: false
+        name: newFormName,
+        questions: this.props.formQuestions
       })
     })
       .done(result => {
@@ -166,11 +168,19 @@ class FoormSaveBar extends Component {
           isSaving: false,
           lastSaved: Date.now()
         });
+        this.props.updateFormMetadata({
+          published: result.published,
+          name: result.name,
+          version: result.version,
+          id: result.id,
+          questions: result.questions
+        });
       })
       .fail(result => {
         this.setState({
           showNewFormSave: false,
           saveError:
+            result.responseText ||
             (result.responseJSON && result.responseJSON.questions) ||
             'Unknown error.',
           isSaving: false
@@ -285,9 +295,14 @@ class FoormSaveBar extends Component {
   }
 }
 
-export default connect(state => ({
-  formQuestions: state.foorm.formQuestions || {},
-  isFormPublished: state.foorm.isFormPublished,
-  formHasError: state.foorm.hasError,
-  formId: state.foorm.formId
-}))(FoormSaveBar);
+export default connect(
+  state => ({
+    formQuestions: state.foorm.formQuestions || {},
+    isFormPublished: state.foorm.isFormPublished,
+    formHasError: state.foorm.hasError,
+    formId: state.foorm.formId
+  }),
+  dispatch => ({
+    updateFormMetadata: formMetadata => dispatch(setFormMetadata(formMetadata))
+  })
+)(FoormSaveBar);

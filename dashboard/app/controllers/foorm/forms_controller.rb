@@ -65,7 +65,7 @@ module Foorm
 
     def save_form(form)
       if form.save
-        return render json: {id: form.id}
+        return render json: form
       else
         return render status: :bad_request, json: form.errors
       end
