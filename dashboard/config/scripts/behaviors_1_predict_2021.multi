@@ -1,0 +1,6 @@
+name 'behaviors 1 predict_2021'
+question 'Click the "edit" button to see how the `mystery behavior` works. Study the code inside, then make a prediction.'
+wrong 'The sprite will spin', feedback: 'Incorrect.'
+right 'The sprite will shrink.', feedback: 'Correct!'
+wrong 'The sprite will move.', feedback: 'Incorrect.'
+wrong 'The sprite will change colors.', feedback: 'Incorrect'

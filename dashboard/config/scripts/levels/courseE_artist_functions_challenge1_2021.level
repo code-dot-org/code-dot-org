@@ -1,0 +1,213 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-12-04T22:36:03.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist_zombie",
+    "x": "200",
+    "y": "200",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "free_play": "true",
+    "short_instructions": "Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!",
+    "ideal": "0",
+    "embed": "false",
+    "long_instructions": "Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "impressive": "false",
+    "never_autoplay_video": "false",
+    "permitted_errors": "0",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you call the function one more time, you can create the same design in the final corner.\",\"hint_id\":\"courseE_artist_functions_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1bc3a8a090a7721e92a6d881d421a4c5/courseE_artist_functions_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can also `jump to` other positions or change the whole design however you want!\",\"hint_id\":\"courseE_artist_functions_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/917540dcbf987cc516050478a820bf7e/courseE_artist_functions_challenge1.mp3\"}]",
+    "discard_background": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseE_artist_functions_challenge1_callout1\",\r\n  \"callout_text\": \"Keep this program going by adding more code to the bottom.\",\r\n  \"element_id\": \"#pink\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"courseE_artist_functions_challenge1_callout2\",\r\n  \"callout_text\": \"If you don't like this design, change it to anything you want!\",\r\n  \"element_id\": \"#function\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right bottom\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "disable_procedure_autopopulate": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/35c53559223f1e4b4f80aa31574cfbcb=levelbuilder/27791.png",
+    "name_suffix": "_2021",
+    "parent_level_id": 21580,
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 23:24:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"instructions\",\"markdown_instructions\",\"impressive\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:26:48 +0000\",\"changed\":[],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:27:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:29:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:29:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:29:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:30:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:32:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:32:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:34:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:34:49 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:35:16 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:38:47 +0000\",\"changed\":[\"toolbox_blocks\",\"x\",\"y\",\"ideal\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:40:51 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:44:57 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:45:49 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:47:18 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-01 18:14:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-02 21:16:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 20:07:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-24 20:07:31 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-24 20:07:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-25 18:28:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="jump_to">
+              <title name="VALUE">7</title>
+              <next>
+                <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#ff0000</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="my design"/>
+                      <next>
+                        <block type="jump_to">
+                          <title name="VALUE">9</title>
+                          <next>
+                            <block type="draw_colour" inline="true" id="draw-color">
+                              <value name="COLOUR">
+                                <block type="colour_picker">
+                                  <title name="COLOUR">#228b22</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="my design"/>
+                                  <next>
+                                    <block type="jump_to">
+                                      <title name="VALUE">19</title>
+                                      <next>
+                                        <block type="draw_colour" inline="true" id="draw-color">
+                                          <value name="COLOUR">
+                                            <block type="colour_picker">
+                                              <title name="COLOUR">#0000cd</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="procedures_callnoreturn">
+                                              <mutation name="my design"/>
+                                              <next>
+                                                <block type="jump_to">
+                                                  <title name="VALUE">17</title>
+                                                  <next>
+                                                    <block type="draw_colour" inline="true" id="draw-color">
+                                                      <value name="COLOUR">
+                                                        <block type="colour_picker" id="pink">
+                                                          <title name="COLOUR">#ff77ff</title>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" id="function">
+          <mutation/>
+          <title name="NAME">my design</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">10</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">150</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">36</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="jump_to">
+          <title name="VALUE">7</title>
+        </block>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+        </block>
+        <block type="sticker">
+          <title name="VALUE">Alien</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">do something</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Artist>

@@ -71,6 +71,9 @@ const styles = {
   },
   title: {
     marginRight: 5
+  },
+  titleInput: {
+    width: 275
   }
 };
 
@@ -414,6 +417,7 @@ class ActivitySectionCard extends Component {
           <label>
             <span style={styles.title}>Title:</span>
             <input
+              style={styles.titleInput}
               value={this.props.activitySection.displayName}
               onChange={this.handleChangeDisplayName}
             />
@@ -428,17 +432,15 @@ class ActivitySectionCard extends Component {
           </label>
           <div style={styles.checkboxesAndButtons}>
             <span style={styles.checkboxes}>
-              {this.props.activitySection.scriptLevels.length === 0 && (
-                <label style={styles.labelAndCheckbox}>
-                  Remarks
-                  <input
-                    checked={this.props.activitySection.remarks}
-                    onChange={this.toggleRemarks}
-                    type="checkbox"
-                    style={styles.checkbox}
-                  />
-                </label>
-              )}
+              <label style={styles.labelAndCheckbox}>
+                Remarks
+                <input
+                  checked={this.props.activitySection.remarks}
+                  onChange={this.toggleRemarks}
+                  type="checkbox"
+                  style={styles.checkbox}
+                />
+              </label>
               <label style={styles.labelAndCheckbox}>
                 Slides
                 <input

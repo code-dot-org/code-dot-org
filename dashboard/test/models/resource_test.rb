@@ -8,8 +8,10 @@ class ResourceTest < ActiveSupport::TestCase
 
   test "resource can be in multiple lessons" do
     resource = create :resource
-    lesson1 = create :lesson, resources: [resource]
-    lesson2 = create :lesson, resources: [resource]
+    lesson1 = create :lesson
+    lesson1.resources.push(resource)
+    lesson2 = create :lesson
+    lesson2.resources.push(resource)
     assert_equal [lesson1, lesson2], resource.lessons
   end
 
@@ -59,5 +61,18 @@ class ResourceTest < ActiveSupport::TestCase
       {key: 'my key', name: 'test resource', url: 'test.url', download_url: nil, audience: 'Teacher', type: 'Activity Guide'},
       resource.summarize_for_lesson_plan
     )
+  end
+
+  test 'seeding_key' do
+    resource = create :resource
+    seed_context = {}
+
+    # seeding_key should not make queries
+    assert_queries(0) do
+      expected = {
+        'resource.key' => resource.key,
+      }
+      assert_equal expected, resource.seeding_key(seed_context)
+    end
   end
 end

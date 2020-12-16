@@ -1,0 +1,191 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-12-04T22:23:42.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "Draw this diamond with 200 pixel sides.",
+    "x": "63",
+    "y": "209",
+    "start_direction": "135",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "images": "[{\"filename\":\"https://images.code.org/110671ec94b378e67f7099eac3a46bf0-image-1475794915315.png\",\"position\":[0,0]}]",
+    "scrollbars": "false",
+    "free_play": "false",
+    "slider_speed": "0.4",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false",
+    "long_instructions": "*\"Now a tag for Belle!\"*\r\n\r\nDraw this square with 200 pixel sides.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "never_autoplay_video": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The artist is already facing the correct way to draw his first line.\",\"hint_id\":\"courseC_artist_prog6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a1114876eff48d91e54ac32413f82472/courseC_artist_prog6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"This diamond is really just a square that's standing on its corner.\",\"hint_id\":\"courseC_artist_prog6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cc2d7b5bbcce7aa091c2b384b2b9b75d/courseC_artist_prog6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Since this diamond is also a square, be sure to turn 90 degrees at the corners.\",\"hint_id\":\"courseC_artist_prog6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6ca835be99945d8c5b260a743ebfc801/courseC_artist_prog6.mp3\"}]",
+    "discard_background": "false",
+    "ideal": "8",
+    "instructions_important": "false",
+    "name_suffix": "_2021",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "parent_level_id": 21191,
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-28 06:14:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-24 20:32:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml/>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">200</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">200</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE" config="45,60,90,120,180">90</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">200</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">200</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="alpha" inline="true" id="alpha">
+                  <value name="VALUE">
+                    <block type="math_number_dropdown">
+                      <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">60</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_width_inline">
+                      <title name="WIDTH">12</title>
+                      <next>
+                        <block type="controls_repeat_dropdown">
+                          <title name="TIMES" config="3-10">4</title>
+                          <statement name="DO">
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">200</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>
