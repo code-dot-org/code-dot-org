@@ -21,7 +21,7 @@ module LessonImportHelper
   # @param [Hash] cb_lesson_data - Lesson and activity data to import.
   def self.update_lesson(lesson, cb_lesson_data = {})
     raise unless [:development, :adhoc, :levelbuilder].include? rack_env
-    raise if lesson.script.is_stable
+    raise unless lesson.script.hidden
 
     # course version id should always be present for CSF/CSD/CSP 2020 courses.
     course_version_id = lesson.script&.get_course_version&.id

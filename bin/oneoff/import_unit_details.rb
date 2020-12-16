@@ -83,7 +83,7 @@ def main(options)
     script = Script.find_by_name!(unit_name)
     log "found code studio script name #{script.name} with id #{script.id}"
 
-    raise "Trying to import a script that is marked as stable" if script.is_stable
+    raise "Only hidden scripts can be imported" unless script.hidden
 
     # If a path is not found, curriculum builder returns a 302 redirect the same
     # path with the /en-us prefix, which then returns 404. to make error
