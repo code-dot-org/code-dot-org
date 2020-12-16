@@ -75,7 +75,6 @@ module LessonImportHelper
   end
 
   def self.create_activity_sections_v2(activity_markdown, lesson_activity_id, levels)
-    puts "hi I am in v2"
     activity_markdown.gsub!(/slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/, "[slide]")
     activity_markdown.gsub!(/\[\/?guide\]/, '')
     tip_matches = find_tips(activity_markdown).select {|m| m[1] != 'say'}.map {|m| {index: activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
@@ -468,7 +467,6 @@ module LessonImportHelper
     end
     tip = tip_match_map[tip_link_match[3]]&.detect {|t| !t[:paired]}
     description = (tip_link_match[1] || '') + tip_link_match[4]
-    puts tip_link_match[1] if tip_link_match[1]
     unless tip
       return ActivitySection.new(description: description)
     end
@@ -503,14 +501,14 @@ module LessonImportHelper
     while tip
       tip_index = stripped_markdown.index(tip[0])
       if tip_index != 0
-        sections.push(ActivitySection.new(description: stripped_markdown[0...tip_index]))
+        sections.push(ActivitySection.new(description: stripped_markdown[0...tip_index].strip))
       end
       sections.push(create_activity_section_with_tip(tip, tip_match_map))
       stripped_markdown = stripped_markdown[tip_index + tip[0].length...stripped_markdown.length]
       tip = find_first_tip_link(stripped_markdown)
     end
     description = stripped_markdown
-    sections.push(ActivitySection.new(description: description))
+    sections.push(ActivitySection.new(description: description.strip))
     sections
   end
 
