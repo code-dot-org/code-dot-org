@@ -388,7 +388,6 @@ module SharedConstants
       "drawSprites": null,
       "playSound": null,
       "stopSound": null,
-      "playSpeech": null,
       "keyDown": null,
       "keyWentDown": null,
       "keyWentUp": null,
