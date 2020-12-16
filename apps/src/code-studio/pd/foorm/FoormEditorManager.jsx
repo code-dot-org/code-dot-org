@@ -7,7 +7,11 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
 import FoormEditor from './FoormEditor';
-import {resetAvailableForms} from './editor/foormEditorRedux';
+import {
+  resetAvailableForms,
+  setLastSaved,
+  setSaveError
+} from './editor/foormEditorRedux';
 
 const styles = {
   loadError: {
@@ -28,7 +32,9 @@ class FoormEditorManager extends React.Component {
     // populated by redux
     formQuestions: PropTypes.object,
     availableForms: PropTypes.array,
-    resetAvailableForms: PropTypes.func
+    resetAvailableForms: PropTypes.func,
+    setLastSaved: PropTypes.func,
+    setSaveError: PropTypes.func
   };
 
   constructor(props) {
@@ -70,6 +76,8 @@ class FoormEditorManager extends React.Component {
   }
 
   loadConfiguration(formName, formVersion, formId) {
+    this.props.setLastSaved(null);
+    this.props.setSaveError(null);
     $.ajax({
       url: `/api/v1/pd/foorm/form/${formId}`,
       type: 'get'
@@ -99,6 +107,8 @@ class FoormEditorManager extends React.Component {
   }
 
   initializeEmptyCodeMirror = () => {
+    this.props.setLastSaved(null);
+    this.props.setSaveError(null);
     this.props.updateFormData({questions: {}, published: null});
     this.setState({
       showCodeMirror: true,
@@ -156,6 +166,8 @@ export default connect(
   }),
   dispatch => ({
     resetAvailableForms: formMetadata =>
-      dispatch(resetAvailableForms(formMetadata))
+      dispatch(resetAvailableForms(formMetadata)),
+    setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
+    setSaveError: saveError => dispatch(setSaveError(saveError))
   })
 )(FoormEditorManager);

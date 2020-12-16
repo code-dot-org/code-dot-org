@@ -20,7 +20,9 @@ import HelpTipModal from '@cdo/apps/lib/ui/HelpTipModal';
 import {
   setFormData,
   addAvilableForm,
-  setFormQuestions
+  setFormQuestions,
+  setLastSaved,
+  setSaveError
 } from './foormEditorRedux';
 
 const styles = {
@@ -88,9 +90,13 @@ class FoormSaveBar extends Component {
     formHasError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
     formId: PropTypes.number,
-    updateFormData: PropTypes.func,
+    lastSaved: PropTypes.object,
+    saveError: PropTypes.string,
+    setFormData: PropTypes.func,
     addAvilableForm: PropTypes.func,
-    setFormQuestions: PropTypes.func
+    setFormQuestions: PropTypes.func,
+    setLastSaved: PropTypes.func,
+    setSaveError: PropTypes.func
   };
 
   constructor(props) {
@@ -99,8 +105,6 @@ class FoormSaveBar extends Component {
     this.state = {
       showSaveConfirmation: false,
       isSaving: false,
-      saveError: null,
-      lastSaved: null,
       showNewFormSave: false,
       formName: null,
       formCategory: null
@@ -108,9 +112,10 @@ class FoormSaveBar extends Component {
   }
 
   handleSave = () => {
-    this.setState({isSaving: true, saveError: null});
-    // do warning if in published mode
+    this.setState({isSaving: true});
+    this.props.setSaveError(null);
     if (this.props.isFormPublished) {
+      // show a warning if in published mode
       this.setState({showSaveConfirmation: true});
     } else if (!this.props.formId) {
       // if this is not an existing form, show new form save modal
@@ -139,23 +144,15 @@ class FoormSaveBar extends Component {
       })
     })
       .done(result => {
+        this.handleSaveSuccess(result);
         this.setState({
-          showSaveConfirmation: false,
-          isSaving: false,
-          lastSaved: Date.now()
+          showSaveConfirmation: false
         });
-        const updatedQuestions = JSON.parse(result.questions);
-        // reset code mirror with returned questions (may have fixed spacing/added published state)
-        this.props.setFormQuestions(updatedQuestions);
-        this.props.resetCodeMirror(updatedQuestions);
       })
       .fail(result => {
+        this.handleSaveError(result);
         this.setState({
-          showSaveConfirmation: false,
-          saveError:
-            (result.responseJSON && result.responseJSON.questions) ||
-            'Unknown error.',
-          isSaving: false
+          showSaveConfirmation: false
         });
       });
   };
@@ -177,18 +174,9 @@ class FoormSaveBar extends Component {
       })
     })
       .done(result => {
+        this.handleSaveSuccess(result);
         this.setState({
-          showNewFormSave: false,
-          isSaving: false,
-          lastSaved: Date.now()
-        });
-        const updatedQuestions = JSON.parse(result.questions);
-        this.props.updateFormData({
-          published: result.published,
-          name: result.name,
-          version: result.version,
-          id: result.id,
-          questions: updatedQuestions
+          showNewFormSave: false
         });
         // adds new form to form dropdown
         this.props.addAvilableForm({
@@ -196,20 +184,41 @@ class FoormSaveBar extends Component {
           version: result.version,
           id: result.id
         });
-        // reset code mirror with returned questions (may have fixed spacing/added published state)
-        this.props.resetCodeMirror(updatedQuestions);
       })
       .fail(result => {
+        this.handleSaveError(result);
         this.setState({
-          showNewFormSave: false,
-          saveError:
-            result.responseText ||
-            (result.responseJSON && result.responseJSON.questions) ||
-            'Unknown error.',
-          isSaving: false
+          showNewFormSave: false
         });
       });
   };
+
+  handleSaveSuccess(result) {
+    this.setState({
+      isSaving: false
+    });
+    this.props.setLastSaved(Date.now());
+    const updatedQuestions = JSON.parse(result.questions);
+    // reset code mirror with returned questions (may have added published state)
+    this.props.resetCodeMirror(updatedQuestions);
+    // update store with form data.
+    this.props.setFormData({
+      published: result.published,
+      name: result.name,
+      version: result.version,
+      id: result.id,
+      questions: updatedQuestions
+    });
+  }
+
+  handleSaveError(result) {
+    this.setState({
+      isSaving: false
+    });
+    this.props.setSaveError(
+      (result.responseJSON && result.responseJSON.questions) || 'Unknown error.'
+    );
+  }
 
   renderNewFormSaveModal = () => {
     const showFormNameError = this.state.formName && !this.isFormNameValid();
@@ -285,12 +294,12 @@ class FoormSaveBar extends Component {
     return (
       <div>
         <div style={styles.saveButtonBackground} className="saveBar">
-          {this.state.lastSaved &&
-            !this.state.saveError &&
+          {this.props.lastSaved &&
+            !this.props.saveError &&
             !this.props.formHasError && (
               <div style={styles.lastSaved} className="lastSavedMessage">
                 {`Last saved at: ${new Date(
-                  this.state.lastSaved
+                  this.props.lastSaved
                 ).toLocaleString()}`}
               </div>
             )}
@@ -299,9 +308,9 @@ class FoormSaveBar extends Component {
               {`Please fix parsing error before saving. See the errors noted on the left side of the editor.`}
             </div>
           )}
-          {this.state.saveError && !this.props.formHasError && (
+          {this.props.saveError && !this.props.formHasError && (
             <div style={styles.error}>{`Error Saving: ${
-              this.state.saveError
+              this.props.saveError
             }`}</div>
           )}
           {this.state.isSaving && (
@@ -338,11 +347,16 @@ export default connect(
     formQuestions: state.foorm.formQuestions || {},
     isFormPublished: state.foorm.isFormPublished,
     formHasError: state.foorm.hasError,
-    formId: state.foorm.formId
+    formId: state.foorm.formId,
+    lastSaved: state.foorm.lastSaved,
+    saveError: state.foorm.saveError
   }),
   dispatch => ({
-    updateFormData: formData => dispatch(setFormData(formData)),
+    setFormData: formData => dispatch(setFormData(formData)),
     addAvilableForm: formMetadata => dispatch(addAvilableForm(formMetadata)),
-    setFormQuestions: formQuestions => dispatch(setFormQuestions(formQuestions))
+    setFormQuestions: formQuestions =>
+      dispatch(setFormQuestions(formQuestions)),
+    setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
+    setSaveError: saveError => dispatch(setSaveError(saveError))
   })
 )(FoormSaveBar);

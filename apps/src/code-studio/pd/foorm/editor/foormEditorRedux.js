@@ -3,6 +3,8 @@ const SET_HAS_ERROR = 'foormEditor/SET_HAS_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
 const RESET_AVAILABLE_FORMS = 'foormEditor/RESET_AVAILABLE_FORMS';
 const ADD_AVAILABLE_FORM = 'foormEditor/ADD_AVAILABLE_FORMS';
+const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
+const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
 
 // formQuestions is an object in surveyJS format that represents
 // a single survey
@@ -34,6 +36,16 @@ export const addAvilableForm = formMetadata => ({
   formMetadata
 });
 
+export const setLastSaved = lastSaved => ({
+  type: SET_LAST_SAVED,
+  lastSaved
+});
+
+export const setSaveError = saveError => ({
+  type: SET_SAVE_ERROR,
+  saveError
+});
+
 const initialState = {
   formQuestions: '',
   isFormPublished: null,
@@ -41,7 +53,9 @@ const initialState = {
   formName: null,
   formVersion: null,
   formId: null,
-  availableForms: []
+  availableForms: [],
+  saveError: null,
+  lastSaved: null
 };
 
 export default function foormEditorRedux(state = initialState, action) {
@@ -79,6 +93,18 @@ export default function foormEditorRedux(state = initialState, action) {
     return {
       ...state,
       availableForms: newFormList
+    };
+  }
+  if (action.type === SET_LAST_SAVED) {
+    return {
+      ...state,
+      lastSaved: action.lastSaved
+    };
+  }
+  if (action.type === SET_SAVE_ERROR) {
+    return {
+      ...state,
+      saveError: action.saveError
     };
   }
 
