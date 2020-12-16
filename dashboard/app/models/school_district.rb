@@ -92,6 +92,29 @@ class SchoolDistrict < ApplicationRecord
     end
   end
 
+  # Allows seeding of a single s3 object (must be CSV or other parsable text file) to the database.
+  # Useful especially for dry runs, in order to observe the changes that would be made by an import.
+  # Effectively a wrapper of merge_from_csv that allows your CSV to be stored on S3, and
+  # to pass a block describing how to parse a row of new data.
+  # @param bucket [String] S3 bucket where object is stored.
+  # @param filepath [String] Filepath for S3 object.
+  # @param import_options [Hash] The CSV file parsing options.
+  # @param is_dry_run [Boolean] Allows a "dry run" of seeding a CSV without making database writes.
+  # @param new_attributes  [Array] List of attributes included in a given import that are new to the model, and thus should not be used to determine whether a record is being "updated" or "unchanged"
+  # @param parse_row [Block] A block to parse a row of new data -- see School.seed_from_s3 for examples.
+  def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, new_attributes: [], &parse_row)
+    AWS::S3.seed_from_file(bucket, filepath, is_dry_run) do |filename|
+      merge_from_csv(
+        filename,
+        import_options,
+        true,
+        is_dry_run: is_dry_run,
+        new_attributes: new_attributes,
+        &parse_row
+      )
+    end
+  end
+
   # Loads/merges the data from a CSV into the schools table.
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
@@ -140,6 +163,7 @@ class SchoolDistrict < ApplicationRecord
     end
 
     CDO.log.info summary_message
+    CDO.log.info "This is a dry run. No data written to the database." if is_dry_run
 
     districts
   end
