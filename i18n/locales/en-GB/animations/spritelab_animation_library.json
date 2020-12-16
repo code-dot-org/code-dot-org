@@ -1,7 +1,23 @@
 {
+  "alien": "alien",
+  "black": "black",
   "block": "block",
+  "blue": "blue",
+  "cave": "cave",
+  "clay": "clay",
   "cow": "cow",
+  "desert": "desert",
+  "grass": "grass",
+  "green": "green",
+  "lava": "lava",
   "player": "player",
+  "rainbow": "rainbow",
   "red": "red",
-  "sad": "sad"
+  "sad": "sad",
+  "space": "space",
+  "stone": "stone",
+  "tree": "tree",
+  "underwater": "underwater",
+  "water": "water",
+  "winter": "winter"
 }

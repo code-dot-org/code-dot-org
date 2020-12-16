@@ -200,6 +200,9 @@
         "Find the Wizard": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "check guess": {
+            "name": "ឆែក ការទាយ "
           }
         },
         "FoodFight": {
@@ -1003,7 +1006,8 @@
           "checker": {
             "parameters": {
               "size": "ទំហំ"
-            }
+            },
+            "name": "អ្នកឆែក"
           },
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
@@ -1011,12 +1015,14 @@
           "Make gingham": {
             "parameters": {
               "size": "ទំហំ"
-            }
+            },
+            "name": "ធ្វេីសំពត់អំបោះក្រឡាចត្រង្គ "
           },
           "black outline": {
             "parameters": {
               "length": "ប្រវែង"
-            }
+            },
+            "name": "ទម្រង់ខាងក្រៅពណ័ខ្មៅ"
           }
         },
         "courseF_artist_fwp2": {
@@ -1024,12 +1030,14 @@
             "name": "គូរ​ការេ​មួយ",
             "parameters": {
               "length": "ប្រវែង"
-            }
+            },
+            "description": "គូរការ៉េជាមួយប្រវែងប៉ារ៉ាមែត្រ "
           },
           "checker": {
             "parameters": {
               "size": "ទំហំ"
-            }
+            },
+            "name": "អ្នកឆែក"
           },
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
@@ -1037,12 +1045,14 @@
           "Make gingham": {
             "parameters": {
               "size": "ទំហំ"
-            }
+            },
+            "name": "ធ្វេីសំពត់អំបោះក្រឡាចត្រង្គ "
           },
           "black outline": {
             "parameters": {
               "length": "ប្រវែង"
-            }
+            },
+            "name": "ទម្រង់ខាងក្រៅពណ័ខ្មៅ"
           }
         },
         "courseF_artist_fwp2_predict1": {
@@ -1050,7 +1060,8 @@
             "name": "គូរ​ការេ​មួយ",
             "parameters": {
               "length": "ប្រវែង"
-            }
+            },
+            "description": "គូរការ៉េជាមួយប្រវែងប៉ារ៉ាមែត្រ "
           }
         },
         "courseF_artist_fwp3": {
@@ -1063,17 +1074,20 @@
           "draw a square2": {
             "parameters": {
               "size": "ទំហំ"
-            }
+            },
+            "name": "គូរ​ការេ២ ​មួយ"
           },
           "filled square": {
             "parameters": {
               "size": "ទំហំ"
-            }
+            },
+            "name": "​បំពេញ​ការេ"
           },
           "black outline": {
             "parameters": {
               "length": "ប្រវែង"
-            }
+            },
+            "name": "ទម្រង់ខាងក្រៅពណ័ខ្មៅ"
           }
         },
         "courseF_artist_fwp4": {
@@ -1229,6 +1243,50 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "ប្រមូល"
+          }
+        },
+        "Choose Your Own Adventure": {
+          "witch ending": {
+            "name": "មេធ្មប់ ចុងបញ្ចប់ "
+          },
+          "story": {
+            "name": "រឿង "
+          },
+          "starting path": {
+            "name": "ផ្លូវចាប់ផ្តេីម "
+          }
+        },
+        "Guess The Number": {
+          "check guess": {
+            "name": "ឆែក ការទាយ ",
+            "parameters": {
+              "theGuess": "ទាយ "
+            }
+          }
+        },
+        "courseF_bee_functions2": {
+          "get only nectar": {
+            "name": "យកតែទឹកដមផ្កា "
+          }
+        },
+        "courseF_bee_functions3": {
+          "only make honey": {
+            "name": "ធ្វេីតែទឹកឃ្មុំ"
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney"
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney"
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney"
           }
         }
       }
