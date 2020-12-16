@@ -138,8 +138,11 @@ module LessonImportHelper
       next unless activity_section
       activity_section.position = position
       position += 1
-      activity_section.name = name
-      name = ''
+      # If an activity section only has a tip in it, we don't want to give it a name
+      unless match[:type] == 'tip'
+        activity_section.name = name
+        name = ''
+      end
       activity_section.key ||= SecureRandom.uuid
       activity_section.lesson_activity_id = lesson_activity_id
       activity_section.save!
@@ -161,7 +164,6 @@ module LessonImportHelper
       section.save!
       final_position += 1
     end
-
     sections
   end
 
