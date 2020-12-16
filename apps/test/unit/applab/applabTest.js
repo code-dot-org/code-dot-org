@@ -59,6 +59,8 @@ describe('applab', () => {
       var screenObj = children.eq(0);
       assert.equal(screenObj.hasClass('screen'), true);
       assert.equal(screenObj.children().length, 2);
+
+      throw new Error('artificial apps test failure');
     });
 
     it('changes nothing if we already have a screen', function() {
