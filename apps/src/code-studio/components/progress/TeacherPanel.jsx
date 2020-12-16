@@ -9,8 +9,7 @@ import {fullyLockedStageMapping} from '../../stageLockRedux';
 import {ViewType} from '../../viewAsRedux';
 import {hasLockableStages} from '../../progressRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {studentType} from '@cdo/apps/templates/progress/progressTypes';
-import StudentTable from './StudentTable';
+import StudentTable, {studentShape} from './StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {SelectedStudentInfo} from './SelectedStudentInfo';
 import Button from '@cdo/apps/templates/Button';
@@ -77,7 +76,7 @@ class TeacherPanel extends React.Component {
     }),
     scriptHasLockableStages: PropTypes.bool.isRequired,
     unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    students: PropTypes.arrayOf(studentType)
+    students: PropTypes.arrayOf(studentShape)
   };
 
   logToFirehose = (eventName, overrideData = {}) => {

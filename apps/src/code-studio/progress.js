@@ -353,7 +353,7 @@ function initializeStoreWithSections(store, scriptData) {
     };
   }
   store.dispatch(setSections(sections));
-  store.dispatch(selectSection(currentSection.id));
+  store.dispatch(selectSection(currentSection.id.toString()));
 }
 
 function initializeGooglePlatformApi(store) {
