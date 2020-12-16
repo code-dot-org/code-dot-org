@@ -602,11 +602,11 @@ es:
   hoc_faq_title: Preguntas más frecuentes
   hoc_faq_what_is_hoc_q: "¿Qué es la Hora del Código?"
   hoc_faq_what_is_hoc_a: 'La Hora del Código comenzó como una introducción de una
-    hora a las ciencias de la computación, diseñada para desmitificar el "código",
-    demostrar que todos pueden aprender los conceptos básicos y ampliar la participación
-    en el campo de las ciencias de la computación. Desde entonces, se ha convertido
-    en una iniciativa mundial que celebra las ciencias de la computación: comenzó
-    con actividades de programación de una hora y se amplió a todo tipo de iniciativas
+    hora al desarrollo computacional,diseñada para desmitificar el "código", demostrar
+    que todos pueden aprender los conceptos básicos y ampliar la participación en
+    el campo de las ciencias de la computación. Desde entonces, se ha convertido en
+    una iniciativa mundial que celebra las ciencias de la computación: comenzó con
+    actividades de programación de una hora y se amplió a todo tipo de iniciativas
     comunitarias. Conoce los <a href=''%{tutorials}''>tutoriales y actividades</a>.
     Esta campaña comunitaria es apoyada por más de <a href=''%{partners}''>400 socios</a>
     y 200,000 educadores de todo el mundo.'

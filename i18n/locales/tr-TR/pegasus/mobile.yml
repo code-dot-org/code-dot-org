@@ -1671,3 +1671,4 @@
   page_not_available_description: "Üzgünüz, açmak istediğiniz sayfa artık bu adreste bulunmuyor. Yine de erişim isterseniz, lütfen [support@code.org](%{support_email_link}) adresine e-posta gönderin."
   page_not_available_button: "Anasayfaya Dön"
   footer_powered_by_aws: "Amazon Web Services tarafından desteklenmektedir"
+  codebytes_skinny_banner_english_only: "Sadece İngilizce"

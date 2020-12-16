@@ -35,7 +35,7 @@ nl:
         TextMatch: Tekst overeenstemming
         StudioEC: Speel Lab
         Applab: App Lab
-        NetSim: Internet Simulator
+        NetSim: Internetsimulator
         Custom: Kunstenaar
         CustomStudio: Speel Lab
         Gamelab: Game Lab
@@ -459,6 +459,7 @@ nl:
         csd_pair_programming: Programmeren in Tweetallen
         csd_applab_parameters: Functies met Parameters
         csd_debugging: Foutopsporing
+        csp-pd-welcome: Welkom bij de Familie!
         hoc_dance_congrats_2019: Dance Party 2019 - Party On!
         hoc_dance_warmup_2019: Dance Party 2019 - Opwarmen
         hoc_dance_events_2019: Dance Party 2019 - Events
