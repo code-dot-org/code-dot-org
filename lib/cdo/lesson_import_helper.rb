@@ -74,7 +74,93 @@ module LessonImportHelper
     end
   end
 
+  def self.create_activity_sections_v2(activity_markdown, lesson_activity_id, levels)
+    puts "hi I am in v2"
+    activity_markdown.gsub!(/slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/, "[slide]")
+    activity_markdown.gsub!(/\[\/?guide\]/, '')
+    tip_matches = find_tips(activity_markdown).select {|m| m[1] != 'say'}.map {|m| {index: activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
+    name_matches = find_activity_section_names(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'name', match: m, substring: m[0]}}
+    pullthrough_matches = find_code_studio_pullthrough(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'pullthrough', match: m, substring: m[0]}}
+    remark_matches = find_remarks(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}
+    sorted_matches = (tip_matches + name_matches + remark_matches + pullthrough_matches).sort_by {|m| m[:index]}
+    sorted_matches = find_markdown_chunks(activity_markdown, sorted_matches)
+
+    # Create a map of tip key -> an array of tip matches
+    # Sometimes, a key is used multiple times in the same activity. To handle
+    # this we'll, just pair them with the tip links in order.
+    tip_match_map = {}
+    tip_matches.each do |match|
+      key = match[:match][3]&.strip || "#{match[:match][1]}-0"
+      tip_match_map[key] ||= []
+      tip_match_map[key].push(match)
+    end
+
+    sections = []
+    name = ''
+    sorted_matches.each do |match|
+      if match[:type] == 'tip'
+        activity_section = ActivitySection.new
+        key = match[:match][3]&.strip || "#{match[:match][1]}-0"
+        activity_section.tips = [create_tip(key, match[:match][1] || "tip", match[:match][4])]
+        activity_section.key ||= SecureRandom.uuid
+        activity_sections = [activity_section]
+        match[:activity_section_key] = activity_section.key
+      elsif match[:type] == 'name'
+        name = match[:match][1]
+        next
+      elsif match[:type] == 'pullthrough'
+        next if levels.empty?
+        pullthrough_match = match[:match]
+        # If the syntax takes the form of [code-studio], [code-studio 1-<length>], or [code-studio 2-<length>],
+        # add the level activity sections here.
+        if pullthrough_match[1].blank? || ([1, 2].include?(pullthrough_match[1]) && levels.length == pullthrough_match[2].to_i)
+          level_sections = create_activity_sections_by_progression(levels, lesson_activity_id)
+          sections += level_sections
+          levels.clear
+        end
+        next
+      elsif match[:type] == 'remark'
+        activity_sections = [create_activity_section_with_remark(match[:match], tip_match_map)]
+      else
+        activity_sections = create_basic_activity_section(match[:substring].strip, tip_match_map)
+      end
+      next unless activity_sections
+      activity_sections.each do |section|
+        section.position = 0
+        unless match[:type] == 'tip'
+          section.name = name
+          name = ''
+        end
+        section.key ||= SecureRandom.uuid
+        section.lesson_activity_id = lesson_activity_id
+        section.save!
+        sections.push(section)
+      end
+    end
+
+    # If there are any tips that didn't have a match, put them at the end
+    tip_match_map.each do |_, tip_list|
+      tip_list.each do |tip|
+        if tip[:paired]
+          sections.reject! {|s| s.key == tip[:activity_section_key]}
+        end
+      end
+    end
+
+    sections = sections.flatten
+    final_position = 1
+    sections.each do |section|
+      section.position = final_position
+      section.save!
+      final_position += 1
+    end
+
+    sections
+  end
+
   def self.create_activity_sections(activity_markdown, lesson_activity_id, levels)
+    activity_markdown.gsub!(/slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/, "[slide]")
+
     # Find any special syntax, such as tips or remarks, and gather them.
     # TODO tips and remarks both show up in tip_matches. We filter out remarks
     # but we should try to do something a bit smarter here.
@@ -202,7 +288,7 @@ module LessonImportHelper
         position += 1
         lesson_activity.save!
         lesson_activity.reload
-        lesson_activity.activity_sections = create_activity_sections(a['content'], lesson_activity.id, levels)
+        lesson_activity.activity_sections = create_activity_sections_v2(a['content'], lesson_activity.id, levels)
         lesson_activity
       end
     end.compact
@@ -225,7 +311,7 @@ module LessonImportHelper
   end
 
   def self.find_code_studio_pullthrough(markdown)
-    regex = /\[code-studio *(\d*)-?(\d*)\]/
+    regex = /^\[code-studio *(\d*)-?(\d*)\]/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
@@ -327,13 +413,23 @@ module LessonImportHelper
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
+  def self.find_first_tip_link(markdown)
+    # See https://github.com/code-dot-org/remark-plugins/blob/master/src/tiplink.js
+    # Looks for the location where tip icons should appear
+    # Example: tip!!!tip-0<!-- place where you'd like the icon --> some text
+    # <!-- place where you'd like the icon --> is optional but is written out
+    # in this regex in order to be able to correctly the text that should be displayed
+    regex = /^?(\S+ +)?([\w-]+)!!! ?([\w-]+)(?:<!-- place where you'd like the icon -->)?(.*\n?.*)$/
+    markdown.match(regex)
+  end
+
   def self.find_tip_links(markdown)
     # See https://github.com/code-dot-org/remark-plugins/blob/master/src/tiplink.js
     # Looks for the location where tip icons should appear
     # Example: tip!!!tip-0<!-- place where you'd like the icon --> some text
     # <!-- place where you'd like the icon --> is optional but is written out
     # in this regex in order to be able to correctly the text that should be displayed
-    regex = /^([\w-]+)!!! ?([\w-]+)(?:<!-- place where you'd like the icon -->)?(.*\n?.*)$/
+    regex = /^?(\S+ +)?([\w-]+)!!! ?([\w-]+)(?:<!-- place where you'd like the icon -->)?(.*\n?.*)$/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
@@ -366,23 +462,26 @@ module LessonImportHelper
   end
 
   def self.create_activity_section_with_tip(tip_link_match, tip_match_map)
-    if tip_link_match[1] == 'slide'
+    if tip_link_match[2] == 'slide'
+      puts "found a slide icon in a tip tsk"
       return create_slide_activity_section(tip_link_match[3], tip_match_map)
     end
-    tip = tip_match_map[tip_link_match[2]]&.detect {|t| !t[:paired]}
+    tip = tip_match_map[tip_link_match[3]]&.detect {|t| !t[:paired]}
+    description = (tip_link_match[1] || '') + tip_link_match[4]
+    puts tip_link_match[1] if tip_link_match[1]
     unless tip
-      return ActivitySection.new(description: tip_link_match[3].strip)
+      return ActivitySection.new(description: description)
     end
     tip[:paired] = true
     tip_match = tip[:match]
     activity_section = ActivitySection.new
 
     # Sometimes theres the the slide icon here as well. Check for that and apply if needed.
-    description = tip_link_match[3].strip
     slide_matches = find_slides(description)
     if slide_matches.empty? || description.index(slide_matches[0][0]) != 0
       activity_section.description = description.strip
     else
+      puts "tsk a slide icon"
       activity_section.description = description.delete_prefix(slide_matches[0][0])
       activity_section.slide = true
     end
@@ -397,10 +496,22 @@ module LessonImportHelper
   end
 
   # No levels, no tips, just markdown
-  def self.create_basic_activity_section(markdown)
+  def self.create_basic_activity_section(markdown, tip_match_map)
+    sections = []
     stripped_markdown = markdown.strip
+    tip = find_first_tip_link(stripped_markdown)
+    while tip
+      tip_index = stripped_markdown.index(tip[0])
+      if tip_index != 0
+        sections.push(ActivitySection.new(description: stripped_markdown[0...tip_index]))
+      end
+      sections.push(create_activity_section_with_tip(tip, tip_match_map))
+      stripped_markdown = stripped_markdown[tip_index + tip[0].length...stripped_markdown.length]
+      tip = find_first_tip_link(stripped_markdown)
+    end
     description = stripped_markdown
-    ActivitySection.new(description: description)
+    sections.push(ActivitySection.new(description: description))
+    sections
   end
 
   def self.find_markdown_chunks(markdown, existing_matches)
@@ -411,6 +522,7 @@ module LessonImportHelper
       matches.push({index: 0, type: 'markdown', substring: substring}) unless substring.empty?
     end
     (0...existing_matches.length).each do |i|
+      #next if !existing_matches[i][:substring].empty? && i > 0 && existing_matches[i-1][:substring].include?(existing_matches[i][:substring])
       matches.push(existing_matches[i])
       next unless i < existing_matches.length - 1 && existing_matches[i][:index] + existing_matches[i][:substring].length < existing_matches[i + 1][:index]
       start_index = existing_matches[i][:index] + existing_matches[i][:substring].length
