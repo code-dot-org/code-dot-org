@@ -121,7 +121,7 @@ module LessonImportHelper
       elsif match[:type] == 'remark'
         activity_sections = [create_activity_section_with_remark(match[:match], tip_match_map)]
       else
-        activity_sections = create_basic_activity_section(match[:substring].strip, tip_match_map)
+        activity_sections = create_activity_sections_from_markdown(match[:substring].strip, tip_match_map)
       end
       next unless activity_sections
       activity_sections.each do |section|
@@ -283,18 +283,18 @@ module LessonImportHelper
   end
 
   def self.create_activity_section_with_remark(match, tip_match_map)
-    tip_link_matches = find_tip_links(match[1].strip)
-    if tip_link_matches.empty?
+    tip_link_match = find_first_tip_link(match[1].strip)
+    if tip_link_match.nil?
       description = match[1].strip
       activity_section = ActivitySection.new
       activity_section.description = unindent_markdown(description).strip
     else
-      activity_section = create_activity_section_with_tip(tip_link_matches[0], tip_match_map)
+      activity_section = create_activity_section_with_tip(tip_link_match, tip_match_map)
       # Sometimes the activity section created won't contain everything it needs to.
       # Check if the tip link match equals the remark markdown. If not, we should add
       # the rest of the content.
-      if tip_link_matches[0][0].length < match[1].strip.length
-        activity_section.description += unindent_markdown(match[1].strip.delete_prefix(tip_link_matches[0][0]))
+      if tip_link_match[0].length < match[1].strip.length
+        activity_section.description += unindent_markdown(match[1].strip.delete_prefix(tip_link_match[0]))
       end
     end
     activity_section.remarks = true
@@ -318,16 +318,6 @@ module LessonImportHelper
     # in this regex in order to be able to correctly the text that should be displayed
     regex = /^?(\S+ +)?([\w-]+)!!! ?([\w-]+)(?:<!-- place where you'd like the icon -->)?(.*\n?.*)$/
     markdown.match(regex)
-  end
-
-  def self.find_tip_links(markdown)
-    # See https://github.com/code-dot-org/remark-plugins/blob/master/src/tiplink.js
-    # Looks for the location where tip icons should appear
-    # Example: tip!!!tip-0<!-- place where you'd like the icon --> some text
-    # <!-- place where you'd like the icon --> is optional but is written out
-    # in this regex in order to be able to correctly the text that should be displayed
-    regex = /^?(\S+ +)?([\w-]+)!!! ?([\w-]+)(?:<!-- place where you'd like the icon -->)?(.*\n?.*)$/
-    markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
   # Removes tabs (or 4 spaces) at the beginning of lines
@@ -367,8 +357,10 @@ module LessonImportHelper
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
-  # No levels, no tips, just markdown
-  def self.create_basic_activity_section(markdown, tip_match_map)
+  # We preprocess activity markdown to look for remarks, pullthrough, names, and tips
+  # but we need to look for tips (which may not be at the beginning of a line) and
+  # create pure markdown sections.
+  def self.create_activity_sections_from_markdown(markdown, tip_match_map)
     sections = []
     stripped_markdown = markdown.strip
     tip = find_first_tip_link(stripped_markdown)
