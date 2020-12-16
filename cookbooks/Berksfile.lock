@@ -105,7 +105,7 @@ GRAPH
     build-essential (>= 0.0.0)
   cdo-jemalloc (0.1.4)
     ark (>= 0.0.0)
-  cdo-mysql (0.1.33)
+  cdo-mysql (0.1.34)
     apt (~> 2.6.0)
   cdo-nginx (0.0.16)
     apt (>= 0.0.0)
