@@ -74,7 +74,7 @@ module LessonImportHelper
     end
   end
 
-  def self.create_activity_sections_v2(activity_markdown, lesson_activity_id, levels)
+  def self.create_activity_sections(activity_markdown, lesson_activity_id, levels)
     activity_markdown.gsub!(/slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/, "[slide]")
     activity_markdown.gsub!(/\[\/?guide\]/, '')
     tip_matches = find_tips(activity_markdown).select {|m| m[1] != 'say'}.map {|m| {index: activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
@@ -157,101 +157,6 @@ module LessonImportHelper
     sections
   end
 
-  def self.create_activity_sections(activity_markdown, lesson_activity_id, levels)
-    activity_markdown.gsub!(/slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/, "[slide]")
-
-    # Find any special syntax, such as tips or remarks, and gather them.
-    # TODO tips and remarks both show up in tip_matches. We filter out remarks
-    # but we should try to do something a bit smarter here.
-    tip_matches = find_tips(activity_markdown).select {|m| m[1] != 'say'}.map {|m| {index: activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
-    tip_link_matches = find_tip_links(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'tiplink', match: m, substring: m[0]}}
-    remark_matches = find_remarks(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}
-    skippable_matches = find_skippable_syntax(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'skippable', match: m, substring: m[0]}}
-    pullthrough_matches = find_code_studio_pullthrough(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'pullthrough', match: m, substring: m[0]}}
-    name_matches = find_activity_section_names(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'name', match: m, substring: m[0]}}
-    matches = tip_matches + remark_matches + tip_link_matches + skippable_matches + name_matches + pullthrough_matches
-    sorted_matches = matches.sort_by {|m| m[:index]}
-    return [ActivitySection.new(description: activity_markdown.strip, key: SecureRandom.uuid, position: 1)] if matches.empty?
-
-    sorted_matches = find_markdown_chunks(activity_markdown, sorted_matches)
-
-    # Create a map of tip key -> an array of tip matches
-    # Sometimes, a key is used multiple times in the same activity. To handle
-    # this we'll, just pair them with the tip links in order.
-    tip_match_map = {}
-    tip_matches.each do |match|
-      key = match[:match][3]&.strip || "#{match[:match][1]}-0"
-      tip_match_map[key] ||= []
-      tip_match_map[key].push(match)
-    end
-
-    sections = []
-    name = ''
-    position = 1
-    sorted_matches.each do |match|
-      activity_section = nil
-      if match[:type] == 'skippable'
-        next
-      elsif match[:type] == 'tip'
-        activity_section = ActivitySection.new
-        key = match[:match][3]&.strip || "#{match[:match][1]}-0"
-        activity_section.tips = [create_tip(key, match[:match][1] || "tip", match[:match][4])]
-        activity_section.key ||= SecureRandom.uuid
-        match[:activity_section_key] = activity_section.key
-      elsif match[:type] == 'name'
-        name = match[:match][1]
-        next
-      elsif match[:type] == 'tiplink'
-        activity_section = create_activity_section_with_tip(match[:match], tip_match_map)
-      elsif match[:type] == 'remark'
-        activity_section = create_activity_section_with_remark(match[:match], tip_match_map)
-      elsif match[:type] == 'pullthrough'
-        next if levels.empty?
-        pullthrough_match = match[:match]
-        # If the syntax takes the form of [code-studio], [code-studio 1-<length>], or [code-studio 2-<length>],
-        # add the level activity sections here.
-        if pullthrough_match[1].blank? || ([1, 2].include?(pullthrough_match[1]) && levels.length == pullthrough_match[2].to_i)
-          level_sections = create_activity_sections_by_progression(levels, lesson_activity_id, position)
-          sections += level_sections
-          levels.clear
-          position += level_sections.length
-        end
-        next
-      else
-        activity_section = create_basic_activity_section(match[:substring].strip)
-      end
-      next unless activity_section
-      activity_section.position = position
-      position += 1
-      # If an activity section only has a tip in it, we don't want to give it a name
-      unless match[:type] == 'tip'
-        activity_section.name = name
-        name = ''
-      end
-      activity_section.key ||= SecureRandom.uuid
-      activity_section.lesson_activity_id = lesson_activity_id
-      activity_section.save!
-      sections = sections.push(activity_section)
-    end
-
-    # If there are any tips that didn't have a match, put them at the end
-    tip_match_map.each do |_, tip_list|
-      tip_list.each do |tip|
-        if tip[:paired]
-          sections.reject! {|s| s.key == tip[:activity_section_key]}
-        end
-      end
-    end
-
-    final_position = 1
-    sections.each do |section|
-      section.position = final_position
-      section.save!
-      final_position += 1
-    end
-    sections
-  end
-
   # Adds an announcement for virtual lesson modifications to the lesson. Returns true if
   # an announcement was added, false otherwise.
   def self.convert_virtual_lesson_modification_activity_to_announcement(activity_data, lesson)
@@ -287,7 +192,7 @@ module LessonImportHelper
         position += 1
         lesson_activity.save!
         lesson_activity.reload
-        lesson_activity.activity_sections = create_activity_sections_v2(a['content'], lesson_activity.id, levels)
+        lesson_activity.activity_sections = create_activity_sections(a['content'], lesson_activity.id, levels)
         lesson_activity
       end
     end.compact
@@ -311,13 +216,6 @@ module LessonImportHelper
 
   def self.find_code_studio_pullthrough(markdown)
     regex = /^\[code-studio *(\d*)-?(\d*)\]/
-    markdown.to_enum(:scan, regex).map {Regexp.last_match}
-  end
-
-  def self.find_slides(markdown)
-    # Regex explanation: looks for slide!!!slide-<number>. It is possible that
-    # there is a placeholder comment, this is optional for the match.
-    regex = /^slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
@@ -448,23 +346,7 @@ module LessonImportHelper
     {key: key, type: tip_map[key], markdown: unindent_markdown(markdown)}
   end
 
-  def self.create_slide_activity_section(markdown, tip_match_map)
-    embedded_tip_links = find_tip_links(markdown.strip)
-    if embedded_tip_links.empty?
-      activity_section = create_basic_activity_section(markdown)
-    else
-      puts "found multiple tip links in a slide activity section" if embedded_tip_links.length > 1
-      activity_section = create_activity_section_with_tip(embedded_tip_links[0], tip_match_map)
-    end
-    activity_section.slide = true
-    activity_section
-  end
-
   def self.create_activity_section_with_tip(tip_link_match, tip_match_map)
-    if tip_link_match[2] == 'slide'
-      puts "found a slide icon in a tip tsk"
-      return create_slide_activity_section(tip_link_match[3], tip_match_map)
-    end
     tip = tip_match_map[tip_link_match[3]]&.detect {|t| !t[:paired]}
     description = (tip_link_match[1] || '') + tip_link_match[4]
     unless tip
@@ -474,15 +356,7 @@ module LessonImportHelper
     tip_match = tip[:match]
     activity_section = ActivitySection.new
 
-    # Sometimes theres the the slide icon here as well. Check for that and apply if needed.
-    slide_matches = find_slides(description)
-    if slide_matches.empty? || description.index(slide_matches[0][0]) != 0
-      activity_section.description = description.strip
-    else
-      puts "tsk a slide icon"
-      activity_section.description = description.delete_prefix(slide_matches[0][0])
-      activity_section.slide = true
-    end
+    activity_section.description = description.strip
 
     activity_section.tips = [create_tip(tip_match[3] || "#{tip_match[1]}-0", tip_match[1] || "tip", tip_match[4])]
     activity_section
