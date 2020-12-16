@@ -1,7 +1,8 @@
 const SET_FORM_QUESTIONS = 'foormEditor/SET_FORM_QUESTIONS';
 const SET_HAS_ERROR = 'foormEditor/SET_HAS_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
-const SET_FORM_METADATA = 'foormEditor/SET_FORM_METADATA';
+const RESET_AVAILABLE_FORMS = 'foormEditor/RESET_AVAILABLE_FORMS';
+const ADD_AVAILABLE_FORM = 'foormEditor/ADD_AVAILABLE_FORMS';
 
 // formQuestions is an object in surveyJS format that represents
 // a single survey
@@ -18,14 +19,19 @@ export const setFormData = formData => ({
   formData
 });
 
-export const setFormMetadata = formMetadata => ({
-  type: SET_FORM_METADATA,
-  formMetadata
-});
-
 export const setHasError = hasError => ({
   type: SET_HAS_ERROR,
   hasError
+});
+
+export const resetAvailableForms = formsMetadata => ({
+  type: RESET_AVAILABLE_FORMS,
+  formsMetadata
+});
+
+export const addAvilableForm = formMetadata => ({
+  type: ADD_AVAILABLE_FORM,
+  formMetadata
 });
 
 const initialState = {
@@ -34,7 +40,8 @@ const initialState = {
   hasError: false,
   formName: null,
   formVersion: null,
-  formId: null
+  formId: null,
+  availableForms: []
 };
 
 export default function foormEditorRedux(state = initialState, action) {
@@ -60,13 +67,18 @@ export default function foormEditorRedux(state = initialState, action) {
       formId: action.formData['id']
     };
   }
-  if (action.type === SET_FORM_METADATA) {
+  if (action.type === RESET_AVAILABLE_FORMS) {
     return {
       ...state,
-      isFormPublished: action.formMetadata['published'],
-      formName: action.formMetadata['name'],
-      formVersion: action.formMetadata['version'],
-      formId: action.formMetadata['id']
+      availableForms: action.formsMetadata
+    };
+  }
+  if (action.type === ADD_AVAILABLE_FORM) {
+    let newFormList = [...state.availableForms];
+    newFormList.push(action.formMetadata);
+    return {
+      ...state,
+      availableForms: newFormList
     };
   }
 
