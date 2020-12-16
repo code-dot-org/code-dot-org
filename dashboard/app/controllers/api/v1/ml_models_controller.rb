@@ -10,7 +10,7 @@ class Api::V1::MlModelsController < ApplicationController
   def save
     model_id = generate_id
     upload_to_s3(model_id, params["ml_model"].to_json)
-    render json: "hooray!"
+    render json: {id: model_id}
   end
 
   # GET api/v1/ml_models/:model_id

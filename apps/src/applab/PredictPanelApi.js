@@ -6,10 +6,12 @@
 /* global Promise */
 
 import elementLibrary from './designElements/library';
+import {predict} from '../MLTrainers';
 
 const PredictPanelApi = {};
 
 PredictPanelApi.predictCallback = null;
+PredictPanelApi.modelData = null;
 
 PredictPanelApi.init = function(predictPanelId, data) {
   try {
@@ -24,11 +26,13 @@ PredictPanelApi.init = function(predictPanelId, data) {
 
     return new Promise((resolve, reject) => {
       $.ajax({
-        url: '/home',
+        url: '/api/v1/ml_models/oQGoFIw32Nf8',
         method: 'GET'
       })
         .success(data => {
-          this.renderPanel(targetElement, {});
+          this.renderPanel(targetElement, data);
+
+          this.modelData = data;
 
           return resolve();
         })
@@ -42,7 +46,7 @@ PredictPanelApi.init = function(predictPanelId, data) {
 };
 
 PredictPanelApi.renderPanel = function(targetElement, data) {
-  data = {
+  /*data = {
     selectedTrainer: 'knnClassify',
     trainedModel: {},
     name: 'Titanic 5',
@@ -68,7 +72,7 @@ PredictPanelApi.renderPanel = function(targetElement, data) {
     },
     labelColumn: 'Survived',
     selectedFeatures: ['Pclass', 'Sex', 'Age']
-  };
+  };*/
 
   for (let selectedFeature of data.selectedFeatures) {
     if (data.featureNumberKey.hasOwnProperty(selectedFeature)) {
@@ -121,12 +125,21 @@ PredictPanelApi.setOnPredictCallback = function(callback) {
 };
 
 PredictPanelApi.onPredictClick = function() {
-  const age = document.querySelector('#predict_panel1 #Age').value;
-  const sex = document.querySelector('#predict_panel1 #Sex').value;
+  //const age = document.querySelector('#predict_panel1 #Age').value;
+  //const sex = document.querySelector('#predict_panel1 #Sex').value;
+  const nougat = document.querySelector('#predict_panel1 #nougat').value;
 
-  console.log(age, sex);
+  //console.log(age, sex);
 
-  this.predictCallback();
+  const fullModelData = {
+    ...this.modelData,
+    testData: {nougat: parseInt(nougat)}
+  };
+
+  const result = predict(fullModelData);
+  console.log('predict result: ', result);
+
+  this.predictCallback(result);
 };
 
 export default PredictPanelApi;
