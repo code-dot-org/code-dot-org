@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T21:49:34.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_weblab_css_1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20018,
+    "name_suffix": "_2021",
+    "display_name": "Video: Intro to CSS",
+    "long_instructions": "## Questions to Consider\r\n\r\n* How is the style of a web page different from structure?\r\n* Why might you want your web page to have a certain style?",
+    "teacher_markdown": "## Discussion Goals\r\n\r\n**Key Vocabulary**\r\n\r\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\r\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\r\n\r\nStudents should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it.  So, for example, the structure could include different headings and paragraphs, but would say nothing about the color of text or how big it is displayed.  The style of the page is the specifics of its appearance.  Without a particular style, each web browser would decide how to display different web page elements on their own.\r\n\r\nStyles are important to allow web developers to decide exactly how a web page looks on the screen.  Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page.  This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page.",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-01-10 20:29:48 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 04:34:12 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 04:35:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-08 06:47:35 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-08 06:48:09 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

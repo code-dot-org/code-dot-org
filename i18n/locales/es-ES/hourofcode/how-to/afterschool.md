@@ -8,7 +8,7 @@ title: Hour of Code How-to Guide for After-school
 
 ### Únete al movimiento e inicia a tu alumnado en el desarrollo del Pensamiento Computacional con estos pasos.
 
-El pensamiento computacional ayuda a desarrollar habilidades de resolución de problemas, lógica y creatividad. La tecnología está transformando todas las industrias del planeta. Los estudiantes deben aprender no solo como usar la tecnología sino también cómo crearla. Al comenzar pronto, adquirirán una base para el éxito de cualquier carrera del S.XXI.
+El pensamiento computacional ayuda a desarrollar habilidades de resolución de problemas, lógica y creatividad. La tecnología está transformando todas las industrias del planeta. Los estudiantes deben aprender no a usar la tecnología sino también a cómo crearla. Al comenzar tempranamente, adquirirán una base para el éxito de cualquier carrera del S.XXI.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
@@ -24,7 +24,8 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/fit-700/tutorials.png
+)]({{ urls/learn }})
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 

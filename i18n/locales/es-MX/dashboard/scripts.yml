@@ -15121,6 +15121,7 @@ es-MX:
           lesson_groups:
             outbreak:
               display_name: Simulación de brotes
-          title: Brote
+          title: Simulación de brotes
           description_short: 'Utiliza el Laboratorio de sprites para programar una simulación de un brote de virus.'
           description: 'Utiliza el Laboratorio de sprites para programar una simulación de un brote de virus.'
+          name: brote

@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: Tumanlar uchun qanday ishlash tartibi
 ---
 
 {{ signup_button }}
