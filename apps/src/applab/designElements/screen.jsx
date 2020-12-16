@@ -36,9 +36,7 @@ class ScreenProperties extends React.Component {
       iconColorPicker = (
         <ColorPickerPropertyRow
           desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(
-            element.getAttribute('data-icon-color') || '#000000'
-          )}
+          initialValue={element.getAttribute('data-icon-color') || '#000000'}
           handleChange={this.handleIconColorChange}
         />
       );
@@ -54,7 +52,7 @@ class ScreenProperties extends React.Component {
         />
         <ColorPickerPropertyRow
           desc={'background color'}
-          initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
+          initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
         <ImagePickerPropertyRow
