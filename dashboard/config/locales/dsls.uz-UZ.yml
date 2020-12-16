@@ -409,19 +409,19 @@ uz-UZ:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U1 Lesson 5 Overview:
@@ -532,45 +532,48 @@ uz-UZ:
         - {}
       CSD U3 Boolean MC:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
         questions:
         - {}
+        title: sarlavha
       CSD U3 Boolean MC_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
         questions:
         - {}
+        title: sarlavha
       CSD U3 Boolean MC_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
         questions:
         - {}
+        title: sarlavha
       CSD U3 Functions Prediction define first:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         answers:
@@ -603,7 +606,7 @@ uz-UZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -611,7 +614,7 @@ uz-UZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -619,7 +622,7 @@ uz-UZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -627,13 +630,13 @@ uz-UZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -641,7 +644,7 @@ uz-UZ:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -674,7 +677,7 @@ uz-UZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 array multi_2018:
@@ -682,7 +685,7 @@ uz-UZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 array multi_2018_2019:
@@ -690,7 +693,7 @@ uz-UZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi:
@@ -698,7 +701,7 @@ uz-UZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018:
@@ -706,7 +709,7 @@ uz-UZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018_2019:
@@ -714,7 +717,7 @@ uz-UZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       K-1 Artist 1 Multi 1:
@@ -910,68 +913,93 @@ uz-UZ:
         title: Turlicha tanlash
       behaviors 1 predict:
         answers:
-        - {}
-        - {}
-        - {}
+        - feedback: Noto'g'ri.
+        - correct: true
+          feedback: To‘g’ri!
+        - feedback: Noto'g'ri.
         - {}
         questions:
         - {}
       behaviors 1 predict_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - feedback: Noto'g'ri.
+        - correct: true
+          feedback: To‘g’ri!
+        - feedback: Noto'g'ri.
         - {}
         questions:
         - {}
       behaviors 4 predict:
         answers:
-        - {}
-        - {}
+        - feedback: Noto'g'ri.
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
         questions:
         - {}
       behaviors 4 predict_2020:
         answers:
-        - {}
-        - {}
+        - feedback: Noto'g'ri.
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rassom uchta teng tomonli uchburchak chizadi.
+          feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+        - text: Rassom bitta chiziq chizadi.
+          feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+        - text: Rassom kvadrat chizadi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: Rassom kvadrat chizadi.
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugamsini bosganingizda
+            nima bo‘ladi?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rassom uchta teng tomonli uchburchak chizadi.
+          feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+        - text: Rassom bitta chiziq chizadi.
+          feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: Rassom kvadrat chizadi.
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugamsini bosganingizda
+            nima bo‘ladi?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rassom uchta teng tomonli uchburchak chizadi.
+          feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+        - text: Rassom bitta chiziq chizadi.
+          feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: Rassom kvadrat chizadi.
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugamsini bosganingizda
+            nima bo‘ladi?
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Rassom uchta teng tomonli uchburchak chizadi.
+          feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+        - text: Rassom bitta chiziq chizadi.
+          feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: Rassom kvadrat chizadi.
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugamsini bosganingizda
+            nima bo‘ladi?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - {}
@@ -1006,34 +1034,61 @@ uz-UZ:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Dastur ishlamay qolmaydi. Scrat yong’oqqa yetadi.
+          feedback: Noto‘g’ri. Scrat o‘zining so‘nggi burilishidan keyin noto‘g’ri
+            yo‘l tutmoqda.
+        - text: Scrat o‘zining so‘nggi burilishidan keyin noto‘g’ri yo‘lga boradi
+          correct: true
+          feedback: To‘g’ri!
+        - text: Scrat juda kam qadam tashlaydi va oxirida yong’oqqa yetmay qoladi.
+          feedback: Noto‘g’ri. Juda kam qadam tashlash Scrat noto‘g’ri yo‘ldan qaytgandan
+            keyin sodir bo‘ladi.
+        - text: Men bilmayman
+          feedback: 'Birinchi xato shundaki, Scrat o‘zining so‘nggi burilishidan keyin
+            noto‘g’ri yo‘l tutadi. '
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. Ushbu dastur ishlamay qoladigan
+            birinchi xato nima?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Dastur ishlamay qolmaydi. Scrat yong’oqqa yetadi.
+          feedback: Noto‘g’ri. Scrat o‘zining so‘nggi burilishidan keyin noto‘g’ri
+            yo‘l tutmoqda.
+        - text: Scrat o‘zining so‘nggi burilishidan keyin noto‘g’ri yo‘lga boradi
+          correct: true
+          feedback: To‘g’ri!
+        - text: Scrat juda kam qadam tashlaydi va oxirida yong’oqqa yetmay qoladi.
+          feedback: Noto‘g’ri. Juda kam qadam tashlash Scrat noto‘g’ri yo‘ldan qaytgandan
+            keyin sodir bo‘ladi.
+        - text: Men bilmayman
+          feedback: 'Birinchi xato shundaki, Scrat o‘zining so‘nggi burilishidan keyin
+            noto‘g’ri yo‘l tutadi. '
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. Ushbu dastur ishlamay qoladigan
+            birinchi xato nima?
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Dastur ishlamay qolmaydi. Scrat yong’oqqa yetadi.
+          feedback: Noto‘g’ri. Scrat o‘zining so‘nggi burilishidan keyin noto‘g’ri
+            yo‘l tutmoqda.
+        - text: Scrat o‘zining so‘nggi burilishidan keyin noto‘g’ri yo‘lga boradi
+          correct: true
+          feedback: To‘g’ri!
+        - text: Scrat juda kam qadam tashlaydi va oxirida yong’oqqa yetmay qoladi.
+          feedback: Noto‘g’ri. Juda kam qadam tashlash Scrat noto‘g’ri yo‘ldan qaytgandan
+            keyin sodir bo‘ladi.
+        - text: Men bilmayman
+          feedback: 'Birinchi xato shundaki, Scrat o‘zining so‘nggi burilishidan keyin
+            noto‘g’ri yo‘l tutadi. '
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. Ushbu dastur ishlamay qoladigan
+            birinchi xato nima?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - text: Men bilmayman
         questions:
         - {}
       courseC_multi_maze_programming8_predict1:
@@ -1046,28 +1101,46 @@ uz-UZ:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Oxirida qush cho‘chqadan bir qadam ortda bo‘ladi.
+          feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+        - text: Qush cho‘chqaga yetib boradi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Qush TNT ga tushadi.
+          feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+        - text: Men bilmayman
+          feedback: Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan o‘qing. "Run"tugmasini bosganingizda nima
+            sodir bo‘ladi??
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Oxirida qush cho‘chqadan bir qadam ortda bo‘ladi.
+          feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+        - text: Qush cho‘chqaga yetib boradi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Qush TNT ga tushadi.
+          feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+        - text: Men bilmayman
+          feedback: Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan o‘qing. "Run"tugmasini bosganingizda nima
+            sodir bo‘ladi??
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Oxirida qush cho‘chqadan bir qadam ortda bo‘ladi.
+          feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+        - text: Qush cho‘chqaga yetib boradi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Qush TNT ga tushadi.
+          feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+        - text: Men bilmayman
+          feedback: Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan o‘qing. "Run"tugmasini bosganingizda nima
+            sodir bo‘ladi??
       courseC_multi_starWars_predict1:
         answers:
         - {}
@@ -1078,28 +1151,49 @@ uz-UZ:
         - {}
       courseC_multi_starWars_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 harakatlanmaydi.
+          feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+        - text: BB-8 faqat bitta maydonni harakatga keltiradi
+          feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+        - text: BB-8 5 marotaba harakatlanadi va barcha metallolomlarni oladi
+          correct: true
+          feedback: To‘g’ri!
+        - text: Bilmadim
+          feedback: Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur qiladi.
         questions:
-        - {}
+        - text: Sizningcha "Run" tugamsini bosganingizda nima bo‘ladi?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 harakatlanmaydi.
+          feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+        - text: BB-8 faqat bitta maydonni harakatga keltiradi
+          feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+        - text: BB-8 5 marotaba harakatlanadi va barcha metallolomlarni oladi
+          correct: true
+          feedback: To‘g’ri!
+        - text: Bilmadim
+          feedback: Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur qiladi.
         questions:
-        - {}
+        - text: Sizningcha "Run" tugamsini bosganingizda nima bo‘ladi?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 harakatlanmaydi.
+          feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+        - text: BB-8 faqat bitta maydonni harakatga keltiradi
+          feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+        - text: BB-8 5 marotaba harakatlanadi va barcha metallolomlarni oladi
+          correct: true
+          feedback: To‘g’ri!
+        - text: Bilmadim
+          feedback: Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur qiladi.
         questions:
-        - {}
+        - text: Sizningcha "Run" tugamsini bosganingizda nima bo‘ladi?
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -1110,28 +1204,58 @@ uz-UZ:
         - {}
       courseC_multi_starWars_predict2_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 birinchi siklda juda uzoqqa boradi.
+          feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+        - text: BB-8 barcha metallolomlarni olish uchun birinchi sikl bo‘yicha yetarlicha
+            uzoq yurmaydi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: BB-8 barcha metallolomlarni muammosiz yig’adi.
+          feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+        - text: Men bilmayman
+          feedback: Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish kerak bo‘lganda,
+            ikkita oraliq oldinga yurishga imkon beradi.
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bossangiz nima
+            bo‘ladi?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 birinchi siklda juda uzoqqa boradi.
+          feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+        - text: BB-8 barcha metallolomlarni olish uchun birinchi sikl bo‘yicha yetarlicha
+            uzoq yurmaydi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: BB-8 barcha metallolomlarni muammosiz yig’adi.
+          feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+        - text: Men bilmayman
+          feedback: Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish kerak bo‘lganda,
+            ikkita oraliq oldinga yurishga imkon beradi.
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bossangiz nima
+            bo‘ladi?
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8 birinchi siklda juda uzoqqa boradi.
+          feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+        - text: BB-8 barcha metallolomlarni olish uchun birinchi sikl bo‘yicha yetarlicha
+            uzoq yurmaydi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: BB-8 barcha metallolomlarni muammosiz yig’adi.
+          feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+        - text: Men bilmayman
+          feedback: Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish kerak bo‘lganda,
+            ikkita oraliq oldinga yurishga imkon beradi.
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bossangiz nima
+            bo‘ladi?
       courseD_multi_artist_binary8_predict1:
         answers:
         - {}
@@ -1142,12 +1266,18 @@ uz-UZ:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A
+          feedback: Noto'g'ri.
+        - text: B
+          feedback: Noto'g'ri.
+        - text: C
+          feedback: Noto'g'ri.
+        - text: D
+          correct: true
+          feedback: To‘g’ri!
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
+            bosgandan so'ng u qaysi rasmni yaratadi?
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - {}
@@ -1206,28 +1336,73 @@ uz-UZ:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'Asalari bulutga o''tib, nima bo''lishidan qat''i nazar, nektar olishga
+            harakat qiladi. '
+          feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+        - text: Asalari bulutga o'tadi va faqat ostida gul bo'lsa, nektar olishga
+            harakat qiladi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: 'Asalari bulutga o''tadi va keyin nima bo''lishidan qat''iy nazar
+            hech narsa qilmaydi. '
+          feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+        - text: Men bilmayman
+          feedback: '"If at flower" bloki asalari faqat bulut ostida gul bo''lsa,
+            nektar olishga harakat qilishini ta''minlaydi.'
         questions:
-        - {}
+        - text: Bulut ko'rinishni to'sib qo'ymoqda. Ushbu bulut ostida gul bo'lishi
+            mumkin edi. Agar gul bo'lsa, asalarilar bir marta nektar to'plashlari
+            kerak. Agar gul bo'lmasa, asalarilar hech narsa qilmasliklari kerak. Quyidagi
+            kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini bosgandan
+            so'ng nima bo'ladi deb o'ylaysiz?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'Asalari bulutga o''tib, nima bo''lishidan qat''i nazar, nektar olishga
+            harakat qiladi. '
+          feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+        - text: Asalari bulutga o'tadi va faqat ostida gul bo'lsa, nektar olishga
+            harakat qiladi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: 'Asalari bulutga o''tadi va keyin nima bo''lishidan qat''iy nazar
+            hech narsa qilmaydi. '
+          feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+        - text: Men bilmayman
+          feedback: '"If at flower" bloki asalari faqat bulut ostida gul bo''lsa,
+            nektar olishga harakat qilishini ta''minlaydi.'
         questions:
-        - {}
+        - text: Bulut ko'rinishni to'sib qo'ymoqda. Ushbu bulut ostida gul bo'lishi
+            mumkin edi. Agar gul bo'lsa, asalarilar bir marta nektar to'plashlari
+            kerak. Agar gul bo'lmasa, asalarilar hech narsa qilmasliklari kerak. Quyidagi
+            kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini bosgandan
+            so'ng nima bo'ladi deb o'ylaysiz?
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'Asalari bulutga o''tib, nima bo''lishidan qat''i nazar, nektar olishga
+            harakat qiladi. '
+          feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+        - text: Asalari bulutga o'tadi va faqat ostida gul bo'lsa, nektar olishga
+            harakat qiladi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: 'Asalari bulutga o''tadi va keyin nima bo''lishidan qat''iy nazar
+            hech narsa qilmaydi. '
+          feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+        - text: Men bilmayman
+          feedback: '"If at flower" bloki asalari faqat bulut ostida gul bo''lsa,
+            nektar olishga harakat qilishini ta''minlaydi.'
         questions:
-        - {}
+        - text: Bulut ko'rinishni to'sib qo'ymoqda. Ushbu bulut ostida gul bo'lishi
+            mumkin edi. Agar gul bo'lsa, asalarilar bir marta nektar to'plashlari
+            kerak. Agar gul bo'lmasa, asalarilar hech narsa qilmasliklari kerak. Quyidagi
+            kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini bosgandan
+            so'ng nima bo'ladi deb o'ylaysiz?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
@@ -1246,92 +1421,194 @@ uz-UZ:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Asalari har bir gulda nektar, har bir asalari inidan asal oladi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Asalarilar ham gullardan, ham asal uyasidan nektar olishga harakat
+            qiladi.
+          feedback: Noto'g'ri. "if at flower" bloki asalari har bir gulga nektar va
+            har bir chuqurchada asal olishiga imkon beradi.
+        - text: Asalarilar asalni ham gullardan, ham asal qoliplaridan olishga harakat
+            qiladi.
+          feedback: Noto'g'ri. "if at flower" bloki asalari har bir gulga nektar va
+            har bir chuqurchada asal olishiga imkon beradi..
+        - text: Men bilmayman
+          feedback: '"if at flower" bloki asalari har bir gulga nektar va har bir
+            chuqurchada asal olishiga imkon beradi.'
         questions:
-        - {}
+        - text: 'Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so''ng nima bo''ladi deb o''ylaysiz? Esingizda bo''lsin: har
+            bir bulut orqasida faqat * bitta * asal yoki * bitta * gul bo''ladi.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Asalarilar ham gullardan, ham asal uyasidan nektar olishga harakat
+            qiladi.
+        - text: Asalarilar asalni ham gullardan, ham asal qoliplaridan olishga harakat
+            qiladi.
+        - text: Men bilmayman
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Asalarilar ham gullardan, ham asal uyasidan nektar olishga harakat
+            qiladi.
+        - text: Asalarilar asalni ham gullardan, ham asal qoliplaridan olishga harakat
+            qiladi.
+        - text: Men bilmayman
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Asalarilar faqat bir marta oldinga siljiydi va nektar oladi.
+          feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+        - text: Ari faqat 2 dona nektar oladi.
+          feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+        - text: Asalari nektarning hammasini oladi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: Asalari jumboqni yechishga imkon beradigan oldinga siljish va
+            nektar yig'ish tsiklli harakatlarini bajaradi.
         questions:
-        - {}
+        - text: Quyidagi ichki tsikllarga diqqat bilan qarang. "Ishga tushirish "
+            tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Asalarilar faqat bir marta oldinga siljiydi va nektar oladi.
+          feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+        - text: Ari faqat 2 dona nektar oladi.
+          feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+        - text: Asalari nektarning hammasini oladi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: Asalari jumboqni yechishga imkon beradigan oldinga siljish va
+            nektar yig'ish tsiklli harakatlarini bajaradi.
         questions:
-        - {}
+        - text: Quyidagi ichki tsikllarga diqqat bilan qarang. "Ishga tushirish "
+            tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Asalarilar faqat bir marta oldinga siljiydi va nektar oladi.
+          feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+        - text: Ari faqat 2 dona nektar oladi.
+          feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+        - text: Asalari nektarning hammasini oladi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: Asalari jumboqni yechishga imkon beradigan oldinga siljish va
+            nektar yig'ish tsiklli harakatlarini bajaradi.
         questions:
-        - {}
+        - text: Quyidagi ichki tsikllarga diqqat bilan qarang. "Ishga tushirish "
+            tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Asalarilar faqat bir marta oldinga siljiydi va nektar oladi.
+          feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+        - text: Ari faqat 2 dona nektar oladi.
+          feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+        - text: Asalari nektarning hammasini oladi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: Asalari jumboqni yechishga imkon beradigan oldinga siljish va
+            nektar yig'ish tsiklli harakatlarini bajaradi.
         questions:
-        - {}
+        - text: Quyidagi ichki tsikllarga diqqat bilan qarang. "Ishga tushirish "
+            tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+        - text: '8'
+          correct: true
+          feedback: To‘g’ri!
+        - text: '12'
+          feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+        - text: Men bilmayman
+          feedback: Asalarilar oldinga siljiyotgan tsiklda 2 nektarni, so'ngra pastdagi
+            tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta sodir bo'ladigan
+            boshqa tsiklning ichida. 4 marta 2 - 8!
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Run " tugmachasini bosganingizda
+            asalari qancha asal hosil qiladi?
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+        - text: '8'
+          correct: true
+          feedback: To‘g’ri!
+        - text: '12'
+          feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+        - text: Men bilmayman
+          feedback: Asalarilar oldinga siljiyotgan tsiklda 2 nektarni, so'ngra pastdagi
+            tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta sodir bo'ladigan
+            boshqa tsiklning ichida. 4 marta 2 - 8!
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Run " tugmachasini bosganingizda
+            asalari qancha asal hosil qiladi?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+        - text: '8'
+          correct: true
+          feedback: To‘g’ri!
+        - text: '12'
+          feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+        - text: Men bilmayman
+          feedback: Asalarilar oldinga siljiyotgan tsiklda 2 nektarni, so'ngra pastdagi
+            tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta sodir bo'ladigan
+            boshqa tsiklning ichida. 4 marta 2 - 8!
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Run " tugmachasini bosganingizda
+            asalari qancha asal hosil qiladi?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+        - text: '8'
+          correct: true
+          feedback: To‘g’ri!
+        - text: '12'
+          feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+        - text: Men bilmayman
+          feedback: Asalarilar oldinga siljiyotgan tsiklda 2 nektarni, so'ngra pastdagi
+            tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta sodir bo'ladigan
+            boshqa tsiklning ichida. 4 marta 2 - 8!
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Run " tugmachasini bosganingizda
+            asalari qancha asal hosil qiladi?
       courseD_multi_collector_debugging10_predict1:
         answers:
         - {}
@@ -1342,36 +1619,52 @@ uz-UZ:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: O'rim-yig'imchi barcha hosilni yig'ib oladi.
+          feedback: Noto'g'ri. Bu yerda oshqovoqni yig'ish uchun kod yo'q.
+        - text: O'rim-yig'imchi o'zi olgan yo'l bilan biron hosilni yig'maydi.
+          feedback: Noto'g'ri. Kod yig'im-terimchiga zinapoyadan bir necha marotaba
+            namuna o'tkazib, u duch kelganicha makkajo'xori yoki karam yig'ib beradi.
+            U oshqovoqni tanlamaydi.
+        - text: O'rim-yig'imchi qovoqdan tashqari barcha hosilni yig'ib oladi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: Kod yig'im-terimchiga zinapoyadan bir necha marotaba namuna o'tkazib,
+            u duch kelganicha makkajo'xori yoki karam yig'ib beradi. U oshqovoqni
+            tanlamaydi.
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
+        - text: O'rim-yig'imchi barcha hosilni yig'ib oladi.
         - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
+        - text: O'rim-yig'imchi barcha hosilni yig'ib oladi.
         - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
+        - text: O'rim-yig'imchi barcha hosilni yig'ib oladi.
         - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1382,140 +1675,276 @@ uz-UZ:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Hech narsa yo'q. Ushbu kod faqat tekis zaminni qoldiradi.
+          feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
+        - text: Ushbu kod to'plamni shundayligicha qoldiradi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Ushbu kod chuqurni shundayligicha qoldiradi.
+          feedback: Noto'g'ri. "While" tsikli har qanday o'lchamdagi tsikl bilan ishlaydi,
+            lekin to'plamdagi tuproqni olib tashlash uchun kod yo'q.
+        - text: Men bilmayman
+          feedback: '"While" tsikli har qanday o''lchamdagi tsikl bilan ishlaydi,
+            lekin to''plamdagi tuproqni olib tashlash uchun kod yo''q.'
         questions:
-        - {}
+        - text: Quyidagi kodni yaxshilab ko'rib chiqing. Ushbu jumboqning oxirida
+            nima qoladi?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Hech narsa yo'q. Ushbu kod faqat tekis zaminni qoldiradi.
+          feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
+        - text: Ushbu kod to'plamni shundayligicha qoldiradi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Ushbu kod chuqurni shundayligicha qoldiradi.
+          feedback: Noto'g'ri. "While" tsikli har qanday o'lchamdagi tsikl bilan ishlaydi,
+            lekin to'plamdagi tuproqni olib tashlash uchun kod yo'q.
+        - text: Men bilmayman
+          feedback: '"While" tsikli har qanday o''lchamdagi tsikl bilan ishlaydi,
+            lekin to''plamdagi tuproqni olib tashlash uchun kod yo''q.'
         questions:
-        - {}
+        - text: Quyidagi kodni yaxshilab ko'rib chiqing. Ushbu jumboqning oxirida
+            nima qoladi?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Hech narsa yo'q. Ushbu kod faqat tekis zaminni qoldiradi.
+          feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
+        - text: Ushbu kod to'plamni shundayligicha qoldiradi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Ushbu kod chuqurni shundayligicha qoldiradi.
+          feedback: Noto'g'ri. "While" tsikli har qanday o'lchamdagi tsikl bilan ishlaydi,
+            lekin to'plamdagi tuproqni olib tashlash uchun kod yo'q.
+        - text: Men bilmayman
+          feedback: '"While" tsikli har qanday o''lchamdagi tsikl bilan ishlaydi,
+            lekin to''plamdagi tuproqni olib tashlash uchun kod yo''q.'
         questions:
-        - {}
+        - text: Quyidagi kodni yaxshilab ko'rib chiqing. Ushbu jumboqning oxirida
+            nima qoladi?
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Hech narsa yo'q. Ushbu kod faqat tekis zaminni qoldiradi.
+          feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
+        - text: Ushbu kod to'plamni shundayligicha qoldiradi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Ushbu kod chuqurni shundayligicha qoldiradi.
+          feedback: Noto'g'ri. "While" tsikli har qanday o'lchamdagi tsikl bilan ishlaydi,
+            lekin to'plamdagi tuproqni olib tashlash uchun kod yo'q.
+        - text: Men bilmayman
+          feedback: '"While" tsikli har qanday o''lchamdagi tsikl bilan ishlaydi,
+            lekin to''plamdagi tuproqni olib tashlash uchun kod yo''q.'
         questions:
-        - {}
+        - text: Quyidagi kodni yaxshilab ko'rib chiqing. Ushbu jumboqning oxirida
+            nima qoladi?
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Hech narsa bo'lmaydi.
+          feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+        - text: Dehqon tuproqni tozalashdan hech qachon to'xtamaydi.
+          feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+        - text: To'plam bor ekan, dehqon tuproqni olib tashlayveradi, keyin to'plam
+            yo'q bo'lganda to'xtaydi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: To'plam bor ekan, dehqon tuproqni olib tashlayveradi, keyin to'plam
+            yo'q bo'lganda to'xtaydi
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Hech narsa bo'lmaydi.
+          feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+        - text: Dehqon tuproqni tozalashdan hech qachon to'xtamaydi.
+          feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+        - text: To'plam bor ekan, dehqon tuproqni olib tashlayveradi, keyin to'plam
+            yo'q bo'lganda to'xtaydi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: To'plam bor ekan, dehqon tuproqni olib tashlayveradi, keyin to'plam
+            yo'q bo'lganda to'xtaydi
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Hech narsa bo'lmaydi.
+          feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+        - text: Dehqon tuproqni tozalashdan hech qachon to'xtamaydi.
+          feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+        - text: To'plam bor ekan, dehqon tuproqni olib tashlayveradi, keyin to'plam
+            yo'q bo'lganda to'xtaydi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: To'plam bor ekan, dehqon tuproqni olib tashlayveradi, keyin to'plam
+            yo'q bo'lganda to'xtaydi
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Hech narsa bo'lmaydi.
+          feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+        - text: Dehqon tuproqni tozalashdan hech qachon to'xtamaydi.
+          feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+        - text: To'plam bor ekan, dehqon tuproqni olib tashlayveradi, keyin to'plam
+            yo'q bo'lganda to'xtaydi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
+          feedback: To'plam bor ekan, dehqon tuproqni olib tashlayveradi, keyin to'plam
+            yo'q bo'lganda to'xtaydi
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_maze_until10_predict2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Zombi darhol o'ngga buriladi va tiqilib qoladi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Zombi kungaboqarga yetib boradi.
+          feedback: Noto'g'ri. Ushbu kodda u to'g'ri yurishni ko'rishdan* oldin *
+            o'ng burilishni qidiradi. Shu sababli, jumboq muvaffaqiyatsiz tugadi.
+        - text: Zombi birinchi yo‘lda o‘ng tomonga buriladi va abadiy aylana bo‘ylab
+            yuradi.
+          feedback: Noto'g'ri.Zombi faqat o'ngga burilish yoki to'g'ri yo'lni qidiradi.
+            Hech qachon chap tomonga burilmoqchi emas, shuning uchun u darhol tiqilib
+            qoladi.
+        - text: Men bilmayman
+          feedback: Ushbu kodda u to'g'ri yurishni ko'rishdan* oldin * o'ng burilishni
+            qidiradi. Shu sababli, jumboq muvaffaqiyatsiz tugadi.
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Zombi kungaboqarga yetib boradi.
+        - text: Zombi birinchi yo‘lda o‘ng tomonga buriladi va abadiy aylana bo‘ylab
+            yuradi.
+        - text: Men bilmayman
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Zombi kungaboqarga yetib boradi.
+        - text: Zombi birinchi yo‘lda o‘ng tomonga buriladi va abadiy aylana bo‘ylab
+            yuradi.
+        - text: Men bilmayman
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Zombi kungaboqarga yetib boradi.
+        - text: Zombi birinchi yo‘lda o‘ng tomonga buriladi va abadiy aylana bo‘ylab
+            yuradi.
+        - text: Men bilmayman
         questions:
-        - {}
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_maze_until2_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Qush umuman harakat qilmaydi.
+          feedback: Noto'g'ri. Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng
+            chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+        - text: Qush cho‘chqaga yetib boradi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Qush oldinga siljiydi va TNTga uriladi.
+          feedback: Noto'g'ri. Kod xavfsiz yo'l bo'lsa, qushni oldinga siljitadi,
+            so'ng chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+        - text: Men bilmayman
+          feedback: Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng chapga buriladi.
+            U buni cho'chqaga yetguncha davom ettiradi!.
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. Sizningcha, "Ishga tushirish
+            " tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_maze_until2_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Qush umuman harakat qilmaydi.
+          feedback: Noto'g'ri. Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng
+            chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+        - text: Qush cho‘chqaga yetib boradi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Qush oldinga siljiydi va TNTga uriladi.
+          feedback: Noto'g'ri. Kod xavfsiz yo'l bo'lsa, qushni oldinga siljitadi,
+            so'ng chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+        - text: Men bilmayman
+          feedback: Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng chapga buriladi.
+            U buni cho'chqaga yetguncha davom ettiradi!.
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. Sizningcha, "Ishga tushirish
+            " tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Qush umuman harakat qilmaydi.
+          feedback: Noto'g'ri. Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng
+            chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+        - text: Qush cho‘chqaga yetib boradi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Qush oldinga siljiydi va TNTga uriladi.
+          feedback: Noto'g'ri. Kod xavfsiz yo'l bo'lsa, qushni oldinga siljitadi,
+            so'ng chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+        - text: Men bilmayman
+          feedback: Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng chapga buriladi.
+            U buni cho'chqaga yetguncha davom ettiradi!.
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. Sizningcha, "Ishga tushirish
+            " tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Qush umuman harakat qilmaydi.
+          feedback: Noto'g'ri. Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng
+            chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+        - text: Qush cho‘chqaga yetib boradi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Qush oldinga siljiydi va TNTga uriladi.
+          feedback: Noto'g'ri. Kod xavfsiz yo'l bo'lsa, qushni oldinga siljitadi,
+            so'ng chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+        - text: Men bilmayman
+          feedback: Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng chapga buriladi.
+            U buni cho'chqaga yetguncha davom ettiradi!.
         questions:
-        - {}
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. Sizningcha, "Ishga tushirish
+            " tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_scrat_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Hech narsa sodir bo‘lmadi. Qahramonimiz Scrat umuman harakatlangani
+            yoq.
+        - text: Scrat 3 marta oldinga harakatlanadi, so‘ngra yana 3 marta oldinga
+            yuradi va nihoyat yong‘oqga yetib boradi!
+          correct: true
+          feedback: To‘g’ri!
+        - text: Scrat oldinga harakatlanadi va burilgandan so‘ng ishlamay qoladi.
+        - text: Men bilmayman
+          feedback: "`move forward` bo‘lagini `repeat` bo‘lagi ichiga joylashtirish,
+            Scratni 3 marta oldinga harakatlantiradi. U shundan so‘ng buriladi va
+            yana 3 marta oldinga harakatlanadi va nihoyat yong‘oqga yetib boradi!"
         questions:
-        - {}
+        - text: Ushbu kodimiz yangi bo‘lakni ishlatadi. "Run" tugmachasini bosganingizdan
+            son‘g nima sodir bo‘ladi deb oylasiz?
       courseE_multi_bee_functions_predict1:
         answers:
         - {}
@@ -1536,7 +1965,8 @@ uz-UZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         questions:
         - {}
@@ -1544,7 +1974,8 @@ uz-UZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         questions:
         - {}
@@ -1552,7 +1983,8 @@ uz-UZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         questions:
         - {}
@@ -1567,25 +1999,25 @@ uz-UZ:
       courseE_prediction_artistFunction1_2018:
         answers:
         - {}
+        - text: Rassom bitta kvadrat chizadi.
         - {}
-        - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
         answers:
         - {}
+        - text: Rassom bitta kvadrat chizadi.
         - {}
-        - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
         - {}
+        - text: Rassom bitta kvadrat chizadi.
         - {}
-        - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseE_prediction_artistFunction1_copy:
@@ -1599,119 +2031,146 @@ uz-UZ:
       courseF_bee_variables_8a_2018:
         answers:
         - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
-        - {}
-        - {}
+        - text: Men bilmayman
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
         answers:
         - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
-        - {}
-        - {}
+        - text: Men bilmayman
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
-        - {}
-        - {}
+        - text: Men bilmayman
         questions:
         - {}
       courseF_multi_artist_for10_predict1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
         questions:
-        - {}
+        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
       courseF_multi_artist_for10_predict1_2018:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
         questions:
-        - {}
+        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
         questions:
-        - {}
+        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Men bilmayman
         questions:
-        - {}
+        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
       courseF_multi_artist_fwp2_predict1:
         answers:
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Men bilmayman
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Men bilmayman
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Men bilmayman
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Men bilmayman
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Men bilmayman
         questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'Asalari bulutga o''tib, nima bo''lishidan qat''i nazar, nektar olishga
+            harakat qiladi. '
+          feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+        - text: Asalari bulutga o'tadi va faqat ostida gul bo'lsa, nektar olishga
+            harakat qiladi.
+          correct: true
+          feedback: To‘g’ri!
+        - text: 'Asalari bulutga o''tadi va keyin nima bo''lishidan qat''iy nazar
+            hech narsa qilmaydi. '
+          feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+        - text: Men bilmayman
+          feedback: '"If at flower" bloki asalari faqat bulut ostida gul bo''lsa,
+            nektar olishga harakat qilishini ta''minlaydi.'
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Asalarilar ham gullardan, ham asal uyasidan nektar olishga harakat
+            qiladi.
+        - text: Asalarilar asalni ham gullardan, ham asal qoliplaridan olishga harakat
+            qiladi.
+        - text: Men bilmayman
         questions:
         - {}
       courseF_multi_bee_for3_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
         questions:
@@ -1719,7 +2178,8 @@ uz-UZ:
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
         questions:
@@ -1727,7 +2187,8 @@ uz-UZ:
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
         questions:
@@ -1735,7 +2196,8 @@ uz-UZ:
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
         questions:
@@ -1743,17 +2205,17 @@ uz-UZ:
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-        - {}
+        - text: Men bilmayman
         questions:
-        - {}
+        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
       courseF_multi_playlab_variables4c_predictive1:
         answers:
+        - correct: true
         - {}
         - {}
-        - {}
-        - {}
+        - text: Men bilmayman
         questions:
         - {}
       coursee_prediction_artistfunction2:
@@ -1767,7 +2229,8 @@ uz-UZ:
       coursee_prediction_artistfunction2_2018:
         answers:
         - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
         questions:
@@ -1775,7 +2238,8 @@ uz-UZ:
       coursee_prediction_artistfunction2_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
         questions:
@@ -1783,7 +2247,8 @@ uz-UZ:
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
         - {}
-        - {}
+        - correct: true
+          feedback: To‘g’ri!
         - {}
         - {}
         questions:
@@ -1798,25 +2263,57 @@ uz-UZ:
         - {}
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Laurel ushbu kod yordamida 4 ta xazina yig’adi.
+          feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+        - text: Laurel will try to collect treasure where there is not any and it
+            causes an error.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Laurel barcha xazinalarni to‘playdi.
+          feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+        - text: Men bilmayman
+          feedback: Laurel xazina yo‘q joyda xazina to‘plashga harakat qiladi va bu
+            xatoga olib keladi.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Laurel ushbu kod yordamida 4 ta xazina yig’adi.
+          feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+        - text: Laurel will try to collect treasure where there is not any and it
+            causes an error.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Laurel barcha xazinalarni to‘playdi.
+          feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+        - text: Men bilmayman
+          feedback: Laurel xazina yo‘q joyda xazina to‘plashga harakat qiladi va bu
+            xatoga olib keladi.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Laurel ushbu kod yordamida 4 ta xazina yig’adi.
+          feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+        - text: Laurel will try to collect treasure where there is not any and it
+            causes an error.
+          correct: true
+          feedback: To‘g’ri!
+        - text: Laurel barcha xazinalarni to‘playdi.
+          feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+        - text: Men bilmayman
+          feedback: Laurel xazina yo‘q joyda xazina to‘plashga harakat qiladi va bu
+            xatoga olib keladi.
         questions:
         - {}
+      gradek1_activity_beNice:
+        markdown: "# Kompyuter laboratoriyasida xulq-atvor\n  \n<br/><br/>    \n    \n<a
+          href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nDars rejasiga o'tish\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Davom etish</a>\n"

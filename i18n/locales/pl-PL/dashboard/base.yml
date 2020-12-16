@@ -441,6 +441,7 @@ pl:
       worked_with: 'Pracował/a z'
       update_lock_settings: 'Zaktualizuj tutaj ustawienia blokady.'
       clear_response: 'Wyczyść odpowiedź'
+    student_code_view_diabled: 'Nie można wyświetlić kodu ucznia dla tego działania.'
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'

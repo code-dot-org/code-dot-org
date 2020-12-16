@@ -54,7 +54,7 @@ export default class MiniViewTopRow extends React.Component {
     scriptName: PropTypes.string.isRequired,
     // May not have this (i.e if not logged in)
     linesOfCodeText: PropTypes.string,
-    selectedSectionId: PropTypes.number
+    selectedSectionId: PropTypes.string
   };
 
   render() {

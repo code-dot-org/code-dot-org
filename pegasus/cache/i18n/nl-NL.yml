@@ -10,7 +10,7 @@ nl-NL:
   upgrade_ie_message_csedweek: CSEdWeek.org geeft binnenkort geen support meer voor
     Internet Explorer 8, 9 en 10. Neem een moderne browser a.u.b.
   upgrade_ie_link: Leer meer
-  en: informatica
+  en: informaticawetenschappen
   computer_science_edweek: Week van het Informaticaonderwijs
   csedweek_dates: 8-14 December 2014
   csedweek_banner_hoc: 'Het <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -25,7 +25,7 @@ nl-NL:
   n_have_learned_an_hoc: "<h1>Probeer een</h1><h2>'Hour of Code'</h2><h3># geholpen</h3>"
   anybody_can_learn: Iedereen kan het leren.
   learn_now: Nu leren
-  petition_message: Elke leerling in elke school moet de kans krijgen om informatica
+  petition_message: Elke leerling in elke school moet de kans krijgen om informaticawetenschappen
     te leren
   petition_sign_message: 'Ga je akkoord, onderteken dan met je naam. Sluit je aan
     bij # anderen.'
@@ -370,7 +370,7 @@ nl-NL:
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
   homepage_slot_text_link_about_hoc: Over Hour of Code
-  homepage_slot_text_link_host: Organiseer een 'Hour of Code'
+  homepage_slot_text_link_host: Organiseer een Uur Code
   homepage_slot_text_link_hocserved: "# bediend"
   homepage_solot_text_link_volunteer: Word vrijwilliger voor het Uur Code
   homepage_slot_text_title_students: Leerlingen
@@ -967,7 +967,7 @@ nl-NL:
   course1_name: Cursus 1
   course2_name: Cursus 2
   course3_name: Cursus 3
-  course4_name: Les 4
+  course4_name: Cursus 4
   accelerated_name: versnelde cursus
   20-hour_name: versnelde cursus
   gumball_name: Gumball
@@ -1658,6 +1658,7 @@ nl-NL:
   header_project_gallery: Projecten overzicht
   header_sections: Secties
   header_professional_learning: Professioneel Leren
+  header_educate_overview: Leerkracht Overzicht
   header_educate_elementary: Basisschool
   header_educate_middle: Middelbare school
   header_educate_high: Middelbare school
@@ -1672,6 +1673,7 @@ nl-NL:
   header_about_donors: Sponsors
   header_about_partners: Partners
   header_about_team: Volledig Team
+  header_about_news: Persinfo
   header_about_evaluation: Beoordeling
   header_about_jobs: Vacatures
   header_about_contact: Neem contact met ons op
@@ -1706,11 +1708,16 @@ nl-NL:
   reset_student_password: Studenten paswoorden aan het resetten
   syncing_students: Studenten aan het synchroniseren
   hero_name: 'Minecraft: Heldenreis'
+  applab_tile_subtitle: Maak je eigen app in JavaScript door blokgebaseerd programmeren.
+    Of breng je vaardigheden naar een hoger niveau met tekstgebaseerde programmering.
+    (Alleen in het Engels)
   applab_tile_start_tutorial: Start
   applab_tile_teacher_guide: Lerarenhandleiding bekijken
   aquatic_name: 'Minecraft: Aquatische reis'
   account_sign_up_email_opt_in: Mogen wij u e-mailen met updates over onze cursussen,
     lokale aanbiedingen of ander nieuws op het gebied van informatica?
+  account_sign_up_child_accept_terms: Ik bevestig dat ik toestemming heb van mijn
+    ouder of voogd om the Code.org diensten te gebruiken.
   hoc_overview_dance_title: Dansfeest
   hoc_overview_dance_subtitle: Codeer een Dance Party om te delen met je vrienden.
     Met Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara en nog 25 anderen!
@@ -1802,3 +1809,4 @@ nl-NL:
     visie en missie om ervoor te zorgen dat elk kind de kans krijgt om informatica
     te leren en de vaardigheden om te slagen in de 21e eeuw.  "
   footer_powered_by_aws: Aangedreven door Amazon webservices
+  codebytes_skinny_banner_english_only: Alleen Engels
