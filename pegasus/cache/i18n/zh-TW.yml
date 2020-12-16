@@ -1780,3 +1780,4 @@ zh-TW:
   page_not_available_description: 我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎mail 給我們[support@code.org](%{support_email_link})，告知您的需求
   page_not_available_button: 返回主頁
   footer_powered_by_aws: Powered by Amazon Web Services
+  codebytes_skinny_banner_english_only: 僅有英語版本

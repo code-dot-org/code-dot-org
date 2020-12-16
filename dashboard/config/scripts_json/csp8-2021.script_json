@@ -1,0 +1,254 @@
+{
+  "script": {
+    "name": "csp8-2021",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
+      "version_year": "2021",
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
+      "project_sharing": true,
+      "peer_reviews_to_complete": 0
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csp8-2021"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Create PT - Review the Task",
+      "name": "Create PT - Review the Task",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Review the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "key": "Create PT - Make a Plan",
+      "name": "Create PT - Make a Plan",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Make a Plan",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "key": "Create PT - Complete the Task",
+      "name": "Create PT - Complete the Task",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U8L1 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Create PT - Review the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      },
+      "level_keys": [
+        "CSP U8L1 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U8L2 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Create PT - Make a Plan",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      },
+      "level_keys": [
+        "CSP U8L2 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U8L3 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      },
+      "level_keys": [
+        "CSP U8L3 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Tech Setup and Tools for Create PT"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pt-tech-setup-and-tools_2021"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      },
+      "level_keys": [
+        "csp-pt-tech-setup-and-tools_2021"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Create PT Coding Workspace"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Create PT Workspace 2020_2021"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      },
+      "level_keys": [
+        "Create PT Workspace 2020_2021"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U8L1 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U8L1 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Create PT - Review the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U8L2 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U8L2 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Create PT - Make a Plan",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U8L3 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U8L3 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-pt-tech-setup-and-tools_2021",
+        "script_level.level_keys": [
+          "csp-pt-tech-setup-and-tools_2021"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Create PT Workspace 2020_2021",
+        "script_level.level_keys": [
+          "Create PT Workspace 2020_2021"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    }
+  ]
+}
