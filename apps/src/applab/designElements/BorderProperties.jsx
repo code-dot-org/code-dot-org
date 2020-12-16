@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
-import * as elementUtils from './elementUtils';
 
 export default class BorderProperties extends React.Component {
   static propTypes = {
@@ -30,7 +29,7 @@ export default class BorderProperties extends React.Component {
         />
         <ColorPickerPropertyRow
           desc={'border color'}
-          initialValue={elementUtils.rgb2hex(element.style.borderColor)}
+          initialValue={element.style.borderColor}
           handleChange={handleBorderColorChange}
         />
         <PropertyRow
