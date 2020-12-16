@@ -71,6 +71,9 @@ const styles = {
   },
   title: {
     marginRight: 5
+  },
+  titleInput: {
+    width: 275
   }
 };
 
@@ -291,11 +294,17 @@ class ActivitySectionCard extends Component {
   };
 
   handleMoveActivitySection = direction => {
-    if (
-      (this.props.activitySection.position !== 1 && direction === 'up') ||
-      (this.props.activitySection.position !==
+    const firstActivitySectionInLesson =
+      this.props.activitySection.position === 1 &&
+      this.props.activityPosition === 1;
+    const lastActivitySectionInLesson =
+      this.props.activitySection.position ===
         this.props.activitySectionsCount &&
-        direction === 'down')
+      this.props.activityPosition === this.props.activitiesCount;
+
+    if (
+      (!firstActivitySectionInLesson && direction === 'up') ||
+      (!lastActivitySectionInLesson && direction === 'down')
     ) {
       this.props.moveActivitySection(
         this.props.activityPosition,
@@ -408,13 +417,14 @@ class ActivitySectionCard extends Component {
           <label>
             <span style={styles.title}>Title:</span>
             <input
+              style={styles.titleInput}
               value={this.props.activitySection.displayName}
               onChange={this.handleChangeDisplayName}
             />
             <OrderControls
               name={
                 this.props.activitySection.displayName ||
-                this.props.activitySection.key
+                'Unnamed Activity Section'
               }
               move={this.handleMoveActivitySection}
               remove={this.handleRemoveActivitySection}
@@ -422,17 +432,15 @@ class ActivitySectionCard extends Component {
           </label>
           <div style={styles.checkboxesAndButtons}>
             <span style={styles.checkboxes}>
-              {this.props.activitySection.scriptLevels.length === 0 && (
-                <label style={styles.labelAndCheckbox}>
-                  Remarks
-                  <input
-                    checked={this.props.activitySection.remarks}
-                    onChange={this.toggleRemarks}
-                    type="checkbox"
-                    style={styles.checkbox}
-                  />
-                </label>
-              )}
+              <label style={styles.labelAndCheckbox}>
+                Remarks
+                <input
+                  checked={this.props.activitySection.remarks}
+                  onChange={this.toggleRemarks}
+                  type="checkbox"
+                  style={styles.checkbox}
+                />
+              </label>
               <label style={styles.labelAndCheckbox}>
                 Slides
                 <input

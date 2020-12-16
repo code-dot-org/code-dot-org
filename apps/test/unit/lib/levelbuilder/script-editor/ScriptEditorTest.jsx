@@ -25,7 +25,22 @@ describe('ScriptEditor', () => {
 
     registerReducers({...reducers, isRtl});
     store = getStore();
-    store.dispatch(init([], {}));
+    store.dispatch(
+      init(
+        [
+          {
+            bigQuestions: '* One↵* two',
+            description: 'laklkldkla"',
+            displayName: 'Content',
+            key: 'lesson group',
+            lessons: [],
+            position: 1,
+            userFacing: true
+          }
+        ],
+        {}
+      )
+    );
 
     defaultProps = {
       id: 1,
@@ -46,6 +61,7 @@ describe('ScriptEditor', () => {
       initialTeacherResources: [],
       initialProjectSharing: false,
       initialLocales: [],
+      isMigrated: false,
       initialLessonLevelData:
         "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name'\n"
     };
@@ -66,6 +82,34 @@ describe('ScriptEditor', () => {
   };
 
   describe('Script Editor', () => {
+    it('uses old script editor for non migrated script', () => {
+      const wrapper = createWrapper({initialHidden: false});
+
+      expect(wrapper.find('input').length).to.equal(24);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
+      expect(wrapper.find('textarea').length).to.equal(2);
+      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
+      expect(wrapper.find('SaveBar').length).to.equal(1);
+
+      expect(wrapper.find('UnitCard').length).to.equal(0);
+      expect(wrapper.find('#script_text').length).to.equal(1);
+    });
+
+    it('uses new script editor for migrated script', () => {
+      const wrapper = createWrapper({initialHidden: false, isMigrated: true});
+
+      expect(wrapper.find('input').length).to.equal(24);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
+      expect(wrapper.find('textarea').length).to.equal(3);
+      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
+      expect(wrapper.find('SaveBar').length).to.equal(1);
+
+      expect(wrapper.find('UnitCard').length).to.equal(1);
+      expect(wrapper.find('#script_text').length).to.equal(0);
+    });
+
     describe('Teacher Resources', () => {
       it('adds empty resources if passed none', () => {
         const wrapper = createWrapper({});
@@ -109,18 +153,6 @@ describe('ScriptEditor', () => {
           ]
         );
       });
-    });
-
-    it('has the correct number of each editor field type', () => {
-      const wrapper = createWrapper({
-        initialHidden: false
-      });
-      expect(wrapper.find('input').length).to.equal(23);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
-      expect(wrapper.find('textarea').length).to.equal(2);
-      expect(wrapper.find('select').length).to.equal(5);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
-      expect(wrapper.find('SaveBar').length).to.equal(1);
     });
 
     it('has correct markdown for preview of unit description', () => {

@@ -3,4 +3,5 @@ lesson 'Sprite Lab', display_name: 'Sprite Lab Blocks'
 level 'sprite lab - ask and answer', progression: 'Text Input'
 level 'anjali- Math Blocks', progression: 'Math Blocks'
 level '2020 new SL stuff', progression: 'New Sprite Animations'
+level 'symmetry', progression: 'Symmetry'
 

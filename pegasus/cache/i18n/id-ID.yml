@@ -2308,6 +2308,12 @@ id-ID:
     Code.org dan partners.
   hoc_overview_partner_activities_link: Lihat aktifitas
   hoc_overview_start_tutorial: Mulai
+  hoc_overview_more_resources: Untuk info selengkapnya tentang cara bergabung dalam
+    kelas jarak jauh Anda, lihat panduan kami tentang cara menyelenggarakan [Hour
+    of Code virtual](https://hourofcode.com/us/how-to/virtual). Untuk siswa dengan
+    teknologi atau konektivitas terbatas atau tanpa teknologi atau konektivitas, bagikan
+    paket [kegiatan Hour of Code tanpa komputer](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
+    ini.
   hoc_overview_view_teacher_guide: Lihat petunjuk guru
   hoc2018_creativity: kreatifitas
   hoc2018_creativity_create: Buat
@@ -2514,3 +2520,4 @@ id-ID:
     di alamat ini. Jika Anda masih membutuhkan akses, silakan kirim email ke [support@code.org](%{support_email_link}).
   page_not_available_button: Pulang ke rumah
   footer_powered_by_aws: Didukung oleh Amazon Web Services
+  codebytes_skinny_banner_english_only: Bahasa Inggris saja

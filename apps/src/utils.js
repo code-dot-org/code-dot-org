@@ -817,19 +817,25 @@ export function escapeRegExp(str) {
 }
 
 /**
- * Detects profanity in a string in a given language.
+ * Detects profanity in a string.
  * @param {string} text
- * @param {string} language
- * @param {bool} shouldCache Whether or not the server should cache the response. Optional.
+ * @param {string} locale Optional.
+ * @param {string} authenticityToken Rails authenticity token. Optional.
  * @returns {Array<string>|null} Array of profane words.
  */
-export const findProfanity = (text, language, shouldCache) => {
-  return $.ajax({
+export const findProfanity = (text, locale, authenticityToken = null) => {
+  let request = {
     url: '/profanity/find',
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify({text, language, should_cache: shouldCache})
-  });
+    data: JSON.stringify({text, locale})
+  };
+
+  if (authenticityToken) {
+    request.headers = {'X-CSRF-Token': authenticityToken};
+  }
+
+  return $.ajax(request);
 };
 
 /**

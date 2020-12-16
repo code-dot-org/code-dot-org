@@ -2350,6 +2350,10 @@ pt-BR:
     pela Code.org e parceiros.
   hoc_overview_partner_activities_link: Exibir atividades
   hoc_overview_start_tutorial: Começar
+  hoc_overview_more_resources: Para obter mais recursos sobre como interagir com sua
+    sala de aula remota, consulte nosso guia para hospedar uma [Hora do Codigo virtual](](https://hourofcode.com/us/how-to/virtual).
+    Para alunos com tecnologia ou conectividade limitada ou nenhuma, compartilhe este
+    pacote de [atividades desconectadas](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Exibir Guia do Professor
   hoc2018_creativity: criatividade
   hoc2018_creativity_create: Criar
@@ -2552,3 +2556,4 @@ pt-BR:
     Clique aqui para começar [Parte 1](%{dance_2018_link}) and [Parte 2](%{dance_extras_2018_link}) do último ano.
   page_not_available_button: Volte para a página inicial
   footer_powered_by_aws: Powered by Amazon Web Services
+  codebytes_skinny_banner_english_only: Somente inglês

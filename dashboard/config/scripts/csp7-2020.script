@@ -57,6 +57,7 @@ level 'U7 Libraries Practice 5', progression: 'Using Libraries'
 level 'U7 Libraries Practice 2', progression: 'Testing Libraries'
 level 'U7 Libraries Practice 1', progression: 'Testing Libraries'
 level 'U7 Libraries Practice 4', progression: 'Testing Libraries'
+level 'U77 CFU Libraries AP', progression: 'Check For Understanding', assessment: true
 
 lesson 'Project - Make a Library Part 1', display_name: 'Project - Make a Library Part 1'
 level 'CSP U7L8 SFLP 20-21', progression: 'Lesson Overview'

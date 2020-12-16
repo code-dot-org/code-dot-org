@@ -69,6 +69,7 @@ const styles = {
 class ActivityCard extends Component {
   static propTypes = {
     activity: activityShape.isRequired,
+    generateActivitySectionKey: PropTypes.func.isRequired,
     activitiesCount: PropTypes.number.isRequired,
     setActivitySectionRef: PropTypes.func.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
@@ -90,22 +91,8 @@ class ActivityCard extends Component {
   handleAddActivitySection = () => {
     this.props.addActivitySection(
       this.props.activity.position,
-      this.generateActivitySectionKey()
+      this.props.generateActivitySectionKey()
     );
-  };
-
-  generateActivitySectionKey = () => {
-    let activitySectionNumber = this.props.activity.activitySections.length + 1;
-    while (
-      this.props.activity.activitySections.some(
-        activitySection =>
-          activitySection.key === `activitySection-${activitySectionNumber}`
-      )
-    ) {
-      activitySectionNumber++;
-    }
-
-    return `activitySection-${activitySectionNumber}`;
   };
 
   handleMoveActivity = direction => {
@@ -183,7 +170,7 @@ class ActivityCard extends Component {
             </label>
           </div>
           <OrderControls
-            name={activity.key || '(none)'}
+            name={activity.displayName || 'Unnamed Activity'}
             move={this.handleMoveActivity}
             remove={this.handleRemoveActivity}
           />
