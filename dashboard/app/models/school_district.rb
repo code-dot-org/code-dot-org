@@ -52,7 +52,7 @@ class SchoolDistrict < ApplicationRecord
     SchoolDistrict.transaction do
       CDO.log.info "Seeding 2013-2014 school district data"
       AWS::S3.seed_from_file('cdo-nces', "2013-2014/ccd/ag131a_supp.txt") do |filename|
-        SchoolDistrict.merge_from_csv(filename, CSV_IMPORT_OPTIONS, false) do |row|
+        SchoolDistrict.merge_from_csv(filename) do |row|
           {
             id:    row['LEAID'].to_i,
             name:  row['NAME'].upcase,
@@ -65,7 +65,7 @@ class SchoolDistrict < ApplicationRecord
 
       CDO.log.info "Seeding 2014-2015 school district data"
       AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/ccd_lea_029_1415_w_0216161ar.txt") do |filename|
-        SchoolDistrict.merge_from_csv(filename, CSV_IMPORT_OPTIONS, false) do |row|
+        SchoolDistrict.merge_from_csv(filename) do |row|
           {
             id:    row['LEAID'].to_i,
             name:  row['LEA_NAME'].upcase,
@@ -76,6 +76,11 @@ class SchoolDistrict < ApplicationRecord
         end
       end
 
+      # Note this iteration was never run with write_updates set to true,
+      # meaning that school districts that had updates in this iteration
+      # (but were not new) were not completed.
+      # That said, (presumably) most relevant updates were
+      # completed in the subsequent upload for 2018-2019.
       CDO.log.info "Seeding 2017-2018 school district data"
       import_options_1718 = {col_sep: ",", headers: true, quote_char: "\x00"}
       AWS::S3.seed_from_file('cdo-nces', "2017-2018/ccd/ccd_lea_029_1718_w_0a_03302018.csv") do |filename|
