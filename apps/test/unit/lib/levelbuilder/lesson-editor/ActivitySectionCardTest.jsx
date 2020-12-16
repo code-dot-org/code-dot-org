@@ -117,19 +117,6 @@ describe('ActivitySectionCard', () => {
     );
   });
 
-  it('edit activity section slides', () => {
-    const wrapper = shallow(<ActivitySectionCard {...defaultProps} />);
-
-    const titleInput = wrapper.find('input').at(2);
-    titleInput.simulate('change', {target: {value: ''}});
-    expect(updateActivitySectionField).to.have.been.calledWith(
-      1,
-      1,
-      'slide',
-      true
-    );
-  });
-
   it('edit activity section remarks', () => {
     const wrapper = shallow(<ActivitySectionCard {...defaultProps} />);
 

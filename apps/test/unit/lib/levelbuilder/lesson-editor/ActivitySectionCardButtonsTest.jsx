@@ -6,13 +6,20 @@ import {sampleActivities} from './activitiesTestData';
 import sinon from 'sinon';
 
 describe('ActivitySectionCardButtons', () => {
-  let defaultProps, addTip, updateTip, addLevel, removeTip, appendResourceLink;
+  let defaultProps,
+    addTip,
+    updateTip,
+    addLevel,
+    removeTip,
+    appendResourceLink,
+    appendSlide;
   beforeEach(() => {
     addTip = sinon.spy();
     updateTip = sinon.spy();
     addLevel = sinon.spy();
     removeTip = sinon.spy();
     appendResourceLink = sinon.spy();
+    appendSlide = sinon.spy();
     defaultProps = {
       activitySection: sampleActivities[0].activitySections[1],
       activityPosition: 1,
@@ -20,7 +27,8 @@ describe('ActivitySectionCardButtons', () => {
       updateTip,
       addLevel,
       removeTip,
-      appendResourceLink
+      appendResourceLink,
+      appendSlide
     };
   });
 
@@ -68,5 +76,14 @@ describe('ActivitySectionCardButtons', () => {
     expect(button.text()).to.include('Resource Link');
     button.simulate('mouseDown');
     expect(wrapper.state().addResourceOpen).to.equal(true);
+  });
+
+  it('add resource link pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+
+    const button = wrapper.find('button').at(3);
+    expect(button.text()).to.include('Slide');
+    button.simulate('mouseDown');
+    expect(appendSlide).to.have.been.calledOnce();
   });
 });
