@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T21:55:49.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csd_concept_hardware_software",
+    "instructions_important": "false",
+    "display_name": "Hardware and Software",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20392,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "long_instructions": "## Questions to Consider\r\n\r\n* What's the difference between hardware and software?\r\n* What does the operating system of a computer do?",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nThe goal of this discussion is to highlight the difference between hardware and software.  Students should understand that hardware is the physical part of the computer, such as the chips and the wires, and the software is the programs that are running on the computer.  The operating system of the computer allows all the software on the computer to run at the same time, deciding how the different hardware resources will be shared."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-05-30 05:36:06 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

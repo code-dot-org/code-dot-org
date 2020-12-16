@@ -483,7 +483,9 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
-      useGoogleBlockly: params[:blocklyVersion] == "Google"
+      useGoogleBlockly: params[:blocklyVersion] == "Google",
+      azure_speech_service_voices: azure_speech_service_options[:voices],
+      authenticity_token: form_authenticity_token
     )
     readonly_view_options if @level.channel_backed? && params[:version]
 

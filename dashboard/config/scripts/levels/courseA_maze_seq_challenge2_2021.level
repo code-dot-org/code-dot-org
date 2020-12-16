@@ -1,0 +1,102 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:19:14.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,4,1,1,1,2,0],[0,0,0,1,4,0,0,0],[0,0,0,1,1,1,0,0],[0,0,0,4,0,3,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "short_instructions": "Trace the path to lead the bird to the pig. Avoid TNT or feathers will fly!",
+    "start_direction": "3",
+    "step_mode": "0",
+    "is_k1": "true",
+    "skip_instructions_popup": "true",
+    "ideal": "9",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try counting the spaces with your finger. Remember not to count the space where you start!\",\"hint_id\":\"courseA_maze_seq_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/19f2fad04613d5272c11142d8178e36c/courseA_maze_seq_challenge2.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 21070,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "long_instructions": "Trace the path to lead the bird to the pig. Avoid TNT or feathers will fly!",
+    "mini_rubric": "false",
+    "show_type_hints": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 19:37:33 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-01 14:13:05 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-01-31 18:16:22 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2019-08-08 23:53:53 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveNorth"/>
+        <block type="maze_moveSouth"/>
+        <block type="maze_moveEast"/>
+        <block type="maze_moveWest"/>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="maze_moveWest"/>
+        <block type="maze_moveSouth"/>
+        <block type="maze_moveEast"/>
+      </xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveWest">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                      <next>
+                        <block type="maze_moveSouth">
+                          <next>
+                            <block type="maze_moveSouth">
+                              <next>
+                                <block type="maze_moveEast">
+                                  <next>
+                                    <block type="maze_moveEast">
+                                      <next>
+                                        <block type="maze_moveSouth"/>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

@@ -34,7 +34,7 @@ class SectionSelector extends React.Component {
         id: PropTypes.number.isRequired
       })
     ).isRequired,
-    selectedSectionId: PropTypes.number,
+    selectedSectionId: PropTypes.string,
     selectSection: PropTypes.func.isRequired
   };
 
@@ -96,7 +96,7 @@ export const UnconnectedSectionSelector = SectionSelector;
 
 export default connect(
   state => ({
-    selectedSectionId: state.teacherSections.selectedSectionId,
+    selectedSectionId: state.teacherSections.selectedSectionId.toString(),
     sections: sectionsNameAndId(state.teacherSections)
   }),
   dispatch => ({
