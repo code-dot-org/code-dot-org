@@ -282,6 +282,8 @@ class OauthConnection extends React.Component {
 
 const GUTTER = 20;
 const BUTTON_WIDTH = 105;
+const BUTTON_PADDING = 8;
+const CELL_WIDTH = tableLayoutStyles.table.width / 3;
 const styles = {
   container: {
     paddingTop: GUTTER
@@ -298,7 +300,7 @@ const styles = {
     paddingLeft: GUTTER,
     paddingRight: GUTTER,
     fontWeight: 'normal',
-    width: tableLayoutStyles.table.width / 3
+    width: CELL_WIDTH
   },
   cell: {
     ...tableLayoutStyles.cell,
@@ -313,10 +315,12 @@ const styles = {
     width: BUTTON_WIDTH,
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.charcoal,
-    padding: 8
+    padding: BUTTON_PADDING
   },
   tooltipOffset: {
-    left: -(BUTTON_WIDTH / 2)
+    left:
+      CELL_WIDTH / 2 -
+      (tableLayoutStyles.cell.padding + BUTTON_PADDING + BUTTON_WIDTH / 2)
   },
   tooltip: {
     width: BUTTON_WIDTH * 2
