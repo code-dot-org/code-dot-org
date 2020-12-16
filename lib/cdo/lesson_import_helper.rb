@@ -367,14 +367,15 @@ module LessonImportHelper
     while tip
       tip_index = stripped_markdown.index(tip[0])
       if tip_index != 0
-        sections.push(ActivitySection.new(description: stripped_markdown[0...tip_index].strip))
+        description = stripped_markdown[0...tip_index].strip
+        sections.push(ActivitySection.new(description: description)) unless description.empty?
       end
       sections.push(create_activity_section_with_tip(tip, tip_match_map))
       stripped_markdown = stripped_markdown[tip_index + tip[0].length...stripped_markdown.length]
       tip = find_first_tip_link(stripped_markdown)
     end
-    description = stripped_markdown
-    sections.push(ActivitySection.new(description: description.strip))
+    description = stripped_markdown.strip
+    sections.push(ActivitySection.new(description: description)) unless description.empty?
     sections
   end
 
