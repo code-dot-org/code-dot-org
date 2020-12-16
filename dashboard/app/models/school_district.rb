@@ -94,6 +94,23 @@ class SchoolDistrict < ApplicationRecord
           }
         end
       end
+
+      CDO.log.info "Seeding 2018-2019 school district data"
+      import_options_1819 = {col_sep: ",", headers: true, quote_char: "\x00"}
+      # Used table generator here to get columns of interest:
+      # https://nces.ed.gov/ccd/elsi/tableGenerator.aspx
+      AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/ELSI_csv_export_637423414304008909966.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_1819, true, new_attributes: ['last_known_school_year_open']) do |row|
+          {
+            id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
+            name:                         row['Agency Name'].upcase,
+            city:                         row['Location City [District] 2018-19'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [District] 2018-19'].strip.to_s.upcase.presence,
+            zip:                          row['Location ZIP [District] 2018-19'].tr('"=', ''),
+            last_known_school_year_open:  '2018-2019'
+          }
+        end
+      end
     end
   end
 
@@ -120,7 +137,7 @@ class SchoolDistrict < ApplicationRecord
     end
   end
 
-  # Loads/merges the data from a CSV into the schools table.
+  # Loads/merges the data from a CSV into the school districts table.
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
