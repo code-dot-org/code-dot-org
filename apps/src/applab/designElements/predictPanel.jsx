@@ -2,6 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import PropertyRow from './PropertyRow';
+import MLModelPickerPropertyRow from './MLModelPickerPropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
@@ -32,7 +33,7 @@ class PredictPanelProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
-        <PropertyRow
+        <MLModelPickerPropertyRow
           desc={'model ID'}
           initialValue={'abc123'}
           handleChange={this.props.handleChange.bind(this, 'modelId')}

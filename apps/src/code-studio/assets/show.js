@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import loadable from '../../util/loadable';
 const ImagePicker = loadable(() => import('../components/ImagePicker'));
 const SoundPicker = loadable(() => import('../components/SoundPicker'));
+const MLModelPicker = loadable(() => import('../components/MLModelPicker'));
 import Dialog from '../LegacyDialog';
 
 module.exports = {
@@ -54,7 +55,12 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
     }
   });
 
-  let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
+  let pickerType =
+    typeFilter === 'audio'
+      ? SoundPicker
+      : typeFilter === 'mlmodel'
+      ? MLModelPicker
+      : ImagePicker;
 
   ReactDOM.render(
     React.createElement(pickerType, {
