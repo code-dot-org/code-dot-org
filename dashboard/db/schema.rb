@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_09_073557) do
+ActiveRecord::Schema.define(version: 2020_12_14_003529) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -657,6 +657,8 @@ ActiveRecord::Schema.define(version: 2020_12_09_073557) do
     t.integer "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "key"
+    t.index ["key"], name: "index_objectives_on_key", unique: true
     t.index ["lesson_id"], name: "index_objectives_on_lesson_id"
   end
 
