@@ -43,11 +43,11 @@ es:
     están disponibles en más de 45 idiomas para todas las edades.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: "¡La Hora del Código 2020 está llegando!"
+  hoc2020_ai_header: Explora la Inteligencia Artificial
+  hoc2020_ai_description: IA y el aprendizaje automático están afectando a nuestro
+    mundo entero. Únete para explorar la IA en una nueva serie de videos, entrenar
+    IA para océanos en más de 25 idiomas, discuter sobre ética e IA, y más...
   hoc2019_header: Aprende a programar. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
   hoc2019_header_line2_mobile: Cambia el mundo.
@@ -602,11 +602,11 @@ es:
   hoc_faq_title: Preguntas más frecuentes
   hoc_faq_what_is_hoc_q: "¿Qué es la Hora del Código?"
   hoc_faq_what_is_hoc_a: 'La Hora del Código comenzó como una introducción de una
-    hora a las ciencias de la computación, diseñada para desmitificar el "código",
-    demostrar que todos pueden aprender los conceptos básicos y ampliar la participación
-    en el campo de las ciencias de la computación. Desde entonces, se ha convertido
-    en una iniciativa mundial que celebra las ciencias de la computación: comenzó
-    con actividades de programación de una hora y se amplió a todo tipo de iniciativas
+    hora al desarrollo computacional,diseñada para desmitificar el "código", demostrar
+    que todos pueden aprender los conceptos básicos y ampliar la participación en
+    el campo de las ciencias de la computación. Desde entonces, se ha convertido en
+    una iniciativa mundial que celebra las ciencias de la computación: comenzó con
+    actividades de programación de una hora y se amplió a todo tipo de iniciativas
     comunitarias. Conoce los <a href=''%{tutorials}''>tutoriales y actividades</a>.
     Esta campaña comunitaria es apoyada por más de <a href=''%{partners}''>400 socios</a>
     y 200,000 educadores de todo el mundo.'

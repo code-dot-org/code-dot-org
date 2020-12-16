@@ -36,6 +36,7 @@ class XhrProxyController < ApplicationController
     api.foursquare.com
     api.fungenerators.com
     api.nasa.gov
+    api.opencagedata.com
     api.open-notify.org
     api.openweathermap.org
     api.pegelalarm.at
@@ -46,6 +47,7 @@ class XhrProxyController < ApplicationController
     api.themoviedb.org
     api.thingspeak.com
     api.uclassify.com
+    api.waqi.info
     api.zippopotam.us
     atlas.media.mit.edu
     bible-api.com

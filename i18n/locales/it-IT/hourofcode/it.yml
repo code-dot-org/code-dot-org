@@ -44,11 +44,13 @@ it:
     le età e in oltre 45 lingue.
   social_hoc2020_coming_dates: L'Ora del Codice si svolgerà dal 7 al 13 dicembre 2020.
     L'informatica è fondamentale per l'apprendimento di ogni studente.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: L'Ora del Codice sta arrivando!
+  hoc2020_ai_header: Esplora l'intelligenza artificiale
+  hoc2020_ai_description: L'intelligenza artificiale e l'apprendimento automatico
+    stanno influenzando il nostro mondo. Unisciti a noi per esplorare l'IA in una
+    nuova serie di video, addestra l'Intelligenza Artificiale per i Mari in oltre
+    25 lingue, partecipa al dibattito sull'etica e l'intelligenza artificiale e altro
+    ancora ...
   hoc2019_header: Impara l'informatica e cambia il mondo.
   hoc2019_header_line1_mobile: Impara l'informatica.
   hoc2019_header_line2_mobile: Cambia il mondo.
@@ -489,8 +491,8 @@ it:
     un'attività</a> o leggi la nostra <a href='%{howto_guide_url}'>Guida pratica </a>
     per pianificare un evento per la tua classe.
   signup_registration_not_required_markdown: Non è necessario registrarsi per partecipare!
-    Le attività dell'Ora del Codice sono disponibili tutto l'anno. [Try an activity](%{hoc_activities_url})
-    o leggi la nostra [How-to guide](%{howto_guide_url}) per pianificare un evento
+    Le attività dell'Ora del Codice sono disponibili tutto l'anno. [Prova un'attività](%{hoc_activities_url})
+    o leggi la nostra [Guida pratica](%{howto_guide_url}) per pianificare un evento
     per la tua classe.
   signup_registration_closed: E ogni anno a dicembre, la tua classe può unirsi a milioni
     di studenti in tutto il mondo per celebrare la Computer Science Education Week
@@ -499,7 +501,7 @@ it:
   signup_header: |-
     Organizza un'Ora del Codice nel periodo %{campaign_date} e registrati qui.
 
-    Se sei in Italia, crea il tuo profilo attraverso il sito italiano di [Programma il Futuro](https://programmailfuturo.it), sarà tutto più semplice!
+    Se sei in Italia, crea il tuo profilo attraverso il sito italiano di Programma il Futuro, sarà tutto più semplice! www.programmailfuturo.it
   signup_name_label: Il tuo nome
   signup_name_error: Il Nome è richiesto.
   signup_email_label: Il tuo indirizzo di posta elettronica
@@ -1772,7 +1774,7 @@ it:
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: Un racconto di due villaggi di Minecraft
   tutorial_danceparty_shortdescription: Crea un progetto in "Ballando col codice"
     da condividere con i tuoi amici. Con Katy Perry, Madonna, J. Balvin, Sia, Keith
     Urban, Ciara e altri 25!
@@ -6191,11 +6193,11 @@ it:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: Per secoli, Abitanti e Abitori hanno condiviso
+    lo stesso spazio, ma raramente hanno interagito tra loro. Ora puoi utilizzare
+    la potenza del codice per riunire i due villaggi. I giocatori proveranno empatia
+    e compassione per i vicini, impareranno la cooperazione e l'inclusione e accoglieranno
+    la diversità che rende tutti noi unicamente speciali.
   tutorial_dance2019_language: Arabo, Chinese, Ceco, Danese, Olandese, Italiano, Finlandese,
     Francese, Tedesco, Greco, Hindi, Ungherese, Indonesiano, Italiano, Giapponese,
     Coreano, Malese, Polacco, Portoghese, e altri 10!
@@ -7010,7 +7012,8 @@ it:
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Italiano
-  tutorial_meeempathy_language: Italiano
+  tutorial_meeempathy_language: Cinese, danese, olandese, inglese, francese, italiano,
+    giapponese, coreano, norvegese, portoghese, spagnolo, svedese, turco
   tutorial_dance2019_string_detail_grades: Da 7 anni in su
   tutorial_danceparty_string_detail_grades: Da 7 anni in su
   tutorial_chibitronics_string_detail_grades: Da pre-scolare a 11 anni

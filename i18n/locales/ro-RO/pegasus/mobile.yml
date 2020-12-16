@@ -1434,6 +1434,7 @@
   hoc_overview_dance_subtitle: "Codează o petrecere dansantă pentru a o partaja cu prietenii. Împreună cu Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara și încă 25!"
   hoc_overview_dance_2019_subtitle: "Codează o petrecere dansantă pentru a o partaja cu prietenii. Împreună cu Katy Perry, Shawn Mendes, Panic! La discotecă, Lil Nas X, Jonas Brothers, Nicki Minaj și încă 34!"
   hoc_overview_start_tutorial: "Începe"
+  hoc_overview_more_resources: "Pentru mai multe resurse despre modul în care să te implici în clasa ta la distanță, vezi ghidul nostru despre găzduirea unei [Hour of Code virtuală](https://hourofcode.com/us/how-to/virtual). Pentru elevii cu o tehnologie limitată sau fără tehnologie sau conectivitate, distribuie acest pachet de [Activități Hour of Code fără calculator](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc2018_creativity: "creativitate"
   hoc2018_creativity_create: "Crează"
   hoc2018_creativity_what_will_you_create: "Ce vei creea?"
@@ -1522,3 +1523,4 @@
   hoc2018_mc_thank_microsoft: "Mulțumim Microsoft pentru că ne susține viziunea și misiunea de a ne asigura că fiecare copil are oportunitatea să învețe informatică și aptitudinile să reușească în secolul 21."
   ! '': '[șir gol]'
   footer_powered_by_aws: "Susținut de Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Doar în engleză"

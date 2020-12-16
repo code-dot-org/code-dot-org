@@ -1354,97 +1354,100 @@ fi:
   tutorial_tynkerspace_name: Space Quest
   tutorial_gfbloons_name: Bloons Trigonometry Defense
   tutorial_raspipong_name: Sense HAT Pong
-  tutorial_codehsvr_name: Create Virtual Worlds with CodeHS
+  tutorial_codehsvr_name: Luo virtuaalisia maailmoja CodeHS kanssa
   tutorial_codesterstp_name: Transformation Palapelit
   tutorial_codestersbb_name: Koripallo
-  tutorial_gfcrossyroad_name: Learn to Code with Crossy Road
+  tutorial_gfcrossyroad_name: Opi koodaamaan Crossy Roadin kanssa
   tutorial_googleww_name: Wonder Woman
-  tutorial_codehsjsapp_name: Make a Real App with JavaScript
+  tutorial_codehsjsapp_name: Luo oikea sovellus JavaScriptillä
   tutorial_gfmihi_name: Mihi Maker
-  tutorial_hopdropphone_name: Make "Don't Drop the Phone" on iPad/iPhone
+  tutorial_hopdropphone_name: Valitse "Älä pudota puhelinta" iPadista/iPhonesta
   tutorial_techfaa_name: Flocking Autonomous Agents
-  tutorial_codehsjsgraph_name: JavaScript Graphics with CodeHS
-  tutorial_thunkable_name: Learn How to Build 10 Apps in 1 Hour!
-  tutorial_hopcrossyroad_name: Make Crossy Road on iPad/iPhone
+  tutorial_codehsjsgraph_name: JavaScript-grafiikka CodeHS:llä
+  tutorial_thunkable_name: Opi rakentamaan 10 sovellusta tunnissa!
+  tutorial_hopcrossyroad_name: Luo Crossy Road iPadilla/iPhonella
   tutorial_switchglitch_name: 'Switch & Glitch: Robot Adventure'
-  tutorial_codecar_name: Code Car Simulator
+  tutorial_codecar_name: Code Car Simulaattori
   tutorial_codesterscp_name: The Coordinate Plane
   tutorial_grokpetblock_name: Virtuaalilemmikki (mikro:bit Blocky)
-  tutorial_techbim_name: Basic Image Manipulation
-  tutorial_techfpp_name: Introduction to Functional Programming with Python
-  tutorial_codesterscr_name: Cheer Routines
-  tutorial_grokdisease_name: Disease Epidemic
-  tutorial_techec_name: Explaining Closures in JS
-  tutorial_rgbegin_name: RoboGarden Coding - Beginner
-  tutorial_myradream_name: 'Actimator: Myra''s Dream'
-  tutorial_thinkfun_name: 'Robot Repair: Can You Fix the Robot Brain?'
-  tutorial_hopfireworks_name: Make a Fireworks App on iPad/iPhone
+  tutorial_techbim_name: Perus Kuvanmanipulointia
+  tutorial_techfpp_name: Esittely Funktionaaliseen Phjelmointiin Pythonilla
+  tutorial_codesterscr_name: Cheer Rutiinit
+  tutorial_grokdisease_name: Tautiepidemia
+  tutorial_techec_name: JS Closures-termit selitetty
+  tutorial_rgbegin_name: RoboGarden Koodaus - Aloittelija
+  tutorial_myradream_name: 'Actimator: Myran Uni'
+  tutorial_thinkfun_name: 'Robot Repair: Voitko korjata robotin aivot?'
+  tutorial_hopfireworks_name: Luo ilotulitussovellus iPadille/iPhonelle
   tutorial_grokspace_name: Space (Blockly)
-  tutorial_codehspython_name: Code in Python with CodeHS
-  tutorial_codehsjava_name: Coding in Java with CodeHS
-  tutorial_techioda_name: Shortest Paths with Dijkstra's Algorithm
+  tutorial_codehspython_name: Koodaa Pythonilla - CodeHS
+  tutorial_codehsjava_name: Koodaa Javalla - CodeHS
+  tutorial_techioda_name: Lyhyin tie Dijkstran Algoritmillä
   tutorial_grokmonster_name: Monster Maker!
-  tutorial_techmjs_name: Embrace Modern JavaScript - ES6 and Beyond
-  tutorial_techga_name: Genetic Algorithms
-  tutorial_techioan_name: Avoiding Null Anti Patterns
-  tutorial_techiogsr_name: Getting Started With Rust
-  tutorial_groktunnel_name: The Dark Tunnel
-  tutorial_stemcod_name: The Physics of Video Games!
-  tutorial_techikb_name: Interactive Kotlin Basics
-  tutorial_kanostreet_name: Street Artist
-  tutorial_nyblebot_name: Boogie Bot
-  tutorial_codemojijs_name: Beginning JavaScript
-  tutorial_techapf_name: Advanced Python Features
-  tutorial_techfpjs_name: Practical Introduction to Functional Programming with JS
-  tutorial_techlinq_name: Using C# LINQ - A Practical Overview
-  tutorial_gpbcatapult_name: Build a Catapult
-  tutorial_quorumastro_name: Coding in Astronomy
-  tutorial_alicewonder_name: Alice in Wonderland
-  tutorial_rginter_name: RoboGarden Coding - Intermediate
+  tutorial_techmjs_name: 'Embrace Modern JavaScript - ES6 ja Uudemmat
+
+'
+  tutorial_techga_name: Geneettinen Algoritmi
+  tutorial_techioan_name: Tyhjien anti-kuvioiden välttäminen
+  tutorial_techiogsr_name: Aloita Rustin Käyttö
+  tutorial_groktunnel_name: Pimeä Tuuneli
+  tutorial_stemcod_name: Videopelien fysiikka!
+  tutorial_techikb_name: Interaktiiviset Kotlinin perusteet
+  tutorial_kanostreet_name: Katutaiteilija
+  tutorial_nyblebot_name: Boogie-lauta
+  tutorial_codemojijs_name: JavaScript Aloittelijoille
+  tutorial_techapf_name: Pythonin lisäominaisuudet
+  tutorial_techfpjs_name: 'Käytännön esittely toiminnallisesta ohjelmoinnista JS:
+    n kanssa'
+  tutorial_techlinq_name: 'C # LINQ:n käyttäminen - Käytännön yleiskatsaus'
+  tutorial_gpbcatapult_name: Rakenna katapultti
+  tutorial_quorumastro_name: Koodaus tähtitieteessä
+  tutorial_alicewonder_name: Liisa ihmemaassa
+  tutorial_rginter_name: RoboGarden-koodaus - keskitaso
   tutorial_cssgrid_name: Grid Garden
   tutorial_jshero_name: JS Hero
   tutorial_codemojipy_name: Python Lab
-  tutorial_nclabdrone_name: Let's Build a Drone!
-  tutorial_gpbcircle_name: Make an Interactive Color Circle
-  tutorial_gpbpaint_name: Make Your Own Paint Editor
+  tutorial_nclabdrone_name: Rakennetaan drone!
+  tutorial_gpbcircle_name: Tee interaktiivinen väriympyrä
+  tutorial_gpbpaint_name: Tee oma maalieditori
   tutorial_cocomarcade_name: 'CodeCombat: Bumuo ng isang Arcade Game!'
-  tutorial_techcpp_name: 7 Features of C++17 that will simplify your code
-  tutorial_beetik_name: Code the Music of Franz Liszt
-  tutorial_codedj_name: Compose Music with Code DJ
-  tutorial_rgadvan_name: RoboGarden Coding - Advanced
-  tutorial_codehsrn_name: Creating Apps with React Native
-  tutorial_codehswd_name: Web Design with CodeHS
+  tutorial_techcpp_name: 7 C ++ 17 -ominaisuutta, jotka yksinkertaistavat koodiasi
+  tutorial_beetik_name: Koodaa Franz Lisztin musiikkia
+  tutorial_codedj_name: Säveltää musiikkia Code DJ:n kanssa
+  tutorial_rgadvan_name: RoboGarden-koodaus - edistynyt
+  tutorial_codehsrn_name: React Native -sovellusten luominen
+  tutorial_codehswd_name: Web-suunnittelu CodeHS:llä
   tutorial_turtlerobot_name: Turtle Robot
   tutorial_ozoevo_name: 'Intro to Evo: Evo''s Force Field'
-  tutorial_ozoexped_name: Ozobot Expedition to Neptune
-  tutorial_ozojourney_name: Magellan's Journey
-  tutorial_ozocodes_name: Write your Name with OzoCodes
-  tutorial_ozoeclipse_name: Eclipses and Celestial Mechanics
-  tutorial_ozosimulator_name: Program Simulator
-  tutorial_ozoalgorithm_name: Make a Multiplication Algorithm
+  tutorial_ozoexped_name: Ozobot-retkikunta Neptunukseen
+  tutorial_ozojourney_name: Magellanin matka
+  tutorial_ozocodes_name: Kirjoita nimesi OzoCodes-koodilla
+  tutorial_ozoeclipse_name: Pimennykset ja Taivaanmekaniikka
+  tutorial_ozosimulator_name: Ohjelmasimulaattori
+  tutorial_ozoalgorithm_name: Luo Kertolaskualgoritmi
   tutorial_ozotimer_name: Ozobot Second Timer
-  tutorial_ozohabits_name: Modeling Animal Habits and Habitats
-  tutorial_ozoprogram_name: How to Program Robots
-  tutorial_ozopair_name: Pair Programming with Ozobot
+  tutorial_ozohabits_name: Eläintottumusten ja elinympäristöjen mallintaminen
+  tutorial_ozoprogram_name: Kuinka ohjelmoida robotteja
+  tutorial_ozopair_name: Ohjelmointia Ozobotin kanssa
   tutorial_codesnoopy_name: Snoopy Snow Brawl
-  tutorial_applabintro_name: Intro to App Lab
-  tutorial_cslartist_name: The Little Artist In Your Computer Activity Pack
-  tutorial_cslscratchjr_name: Let's Play with the ScratchJr Kitten! Activity Pack
-  tutorial_floevents_name: Writing and interpreting Events
-  tutorial_florobot_name: Design a Robot
+  tutorial_applabintro_name: Johdatus App Labiin
+  tutorial_cslartist_name: Pieni taiteilija tietokoneessasi -Tehtäväpaketti
+  tutorial_cslscratchjr_name: Pelataan ScratchJr-kissanpennun kanssa! -toimintopaketti
+  tutorial_floevents_name: Tapahtumien kirjoittaminen ja tulkitseminen
+  tutorial_florobot_name: Suunnittele robotti
   tutorial_isavesanta_name: iSave Santa!
   tutorial_iorder_name: iOrder
   tutorial_ianimate_name: iAnimate
   tutorial_iloveada_name: iLove Ada
   tutorial_kodflash_name: If Flash, Then Clap!
-  tutorial_kodchoose_name: Choose Your Own (Fuzzy) Adventure!
-  tutorial_kodpizzapre_name: Pizza Party! (pre-reader)
-  tutorial_kodpizza_name: Pizza Party!
-  tutorial_kodwomen_name: Women in Tech
-  tutorial_tfunplug_name: 'Robot Repair: Can You Fix the Robot Brain? (Unplugged)'
+  tutorial_kodchoose_name: Valitse oma (pehmeä) seikkailusi!
+  tutorial_kodpizzapre_name: Pizzajuhlat! (lukutaidottomille)
+  tutorial_kodpizza_name: Pizzajuhlat! (esilukija)
+  tutorial_kodwomen_name: Naiset tekniikka-alalla
+  tutorial_tfunplug_name: 'Robot Repair: Voitko korjata robotin aivot? (Offline)'
   tutorial_lbvariables_name: Variables with Littlebits
-  tutorial_lbfunctions_name: Fun with Functions & littleBits
-  tutorial_lblogic_name: Lessons in Logic with littleBits
+  tutorial_lbfunctions_name: Hauskaa Funktioiden ja littleBitsien kanssa
+  tutorial_lblogic_name: Oppitunnit logiikassa littleBits-toiminnolla
   tutorial_lbworld_name: 'littleBits: Change the world arcade challenge'
   tutorial_lbloops_name: Leap into loops with littleBits!
   tutorial_lbtug_name: 'littleBits: Tug of War'
@@ -2286,12 +2289,12 @@ fi:
   tutorial_codehsjsapp_shortdescription: Code your first real app with JavaScript!
   tutorial_gfmihi_shortdescription: Code your own mini-game and learn how to introduce
     yourself in Te Reo Maori (the indigenous language of New Zealand)
-  tutorial_hopdropphone_shortdescription: Make "Don't Drop the Phone" on iPad/iPhone
+  tutorial_hopdropphone_shortdescription: Valitse "Älä pudota puhelinta" iPadista/iPhonesta
   tutorial_techfaa_shortdescription: Simulate a visually impressive life-like behavior
     of group entities
   tutorial_codehsjsgraph_shortdescription: Make your own graphics and drawing programs!
   tutorial_thunkable_shortdescription: 1 hour, 10 apps
-  tutorial_hopcrossyroad_shortdescription: Make Crossy Road on iPad/iPhone
+  tutorial_hopcrossyroad_shortdescription: Luo Crossy Road iPadilla/iPhonella
   tutorial_switchglitch_shortdescription: Program cute robots and help them save the
     galaxy!
   tutorial_codecar_shortdescription: Use typed code to control the lights and buttons
@@ -2320,7 +2323,7 @@ fi:
     get her dream back.
   tutorial_thinkfun_shortdescription: Enjoy this fun CS activity that teaches Boolean
     logic concepts.
-  tutorial_hopfireworks_shortdescription: Make a Fireworks App on iPad/iPhone
+  tutorial_hopfireworks_shortdescription: Luo ilotulitussovellus iPadille/iPhonelle
   tutorial_grokspace_shortdescription: This activity is designed to give you your
     first experience programming, and has been specially designed for the Hour of
     Code. Use the visual programming language Blockly to investigate space and reach
@@ -4304,7 +4307,7 @@ fi:
     programming language by writing programs that you can interact with! This hour
     will cover printing, variables, math, and getting information from users. Write
     a program that takes in and stores data from a user and returns a unique response!
-  tutorial_codehsjava_longdescription: Coding in Java with CodeHS
+  tutorial_codehsjava_longdescription: Koodaa Javalla - CodeHS
   tutorial_techioda_longdescription: This useful tutorial will interactively teach
     you how to be able to calculate the shortest path between two nodes in a graph
     in advance, thanks to the Dijkstra's algorithm.

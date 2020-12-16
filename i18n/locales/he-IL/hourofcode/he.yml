@@ -43,11 +43,11 @@ he:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: בינה מלאכותית ולמידת מכונה משפיעות על כל עולמנו. הצטרפו
-    אלינו כדי לגלות בינה מלאכותית בסדרות וידאו חדשות, התאמנו בבינה מלאכותית בלמעלה
-    מ-25 שפות, דונו בסוגיות אתיקה ובינה מלאכותית ועוד...
+  hoc2020_ai_subheader: שעת הקוד 2020 מגיעה!
+  hoc2020_ai_header: חקרו את הבינה המלאכותית
+  hoc2020_ai_description: בינה מלאכותית (AI) ולמידת מכונה משפיעות על כל עולמנו. הצטרפו
+    אלינו כדי לגלות בינה מלאכותית בסדרות וידאו חדשות, התאמנו בבינה מלאכותית ביותר
+    מ-25 שפות, דונו בסוגיות של אתיקה ובינה מלאכותית ועוד...
   hoc2019_header: למדו מדעי המחשב ושנו את העולם
   hoc2019_header_line1_mobile: למדו מדעי המחשב
   hoc2019_header_line2_mobile: שנה את העולם
@@ -86,42 +86,42 @@ he:
   oceans_landing_cs_for_good_desc: עזרי למידה שיסייעו לתלמידים להבין את התפקיד שמדעי
     המחשב יכולים למלא ביצירת עולם צודק יותר.
   oceans_landing_videos: סרטונים על בינה מלאכותית ולמידת מכונה
-  oceans_behind_the_scenes: 'בינה מלאכותית למען האוקיינוסים והימים: מאחורי הקלעים'
-  oceans_behind_the_scenes_1: 'בשלבים 2–4 משתמשים במודל מאומן־מראש שסיפק פרויקט <a
+  oceans_behind_the_scenes: 'AI (בינה מלאכותית) למען האוקיינוסים והימים: מאחורי הקלעים'
+  oceans_behind_the_scenes_1: בשלבים 2–4 משתמשים במודל מאומן־מראש שסיפק פרויקט <a
     href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> . מודל MobileNet הוא <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">רשת
-    עצבית מתקפלת</a> שהדריכו באמצעות <a href="http://www.image-net.org/">ImageNet</a>,
+    MobileNet </a>. מודל MobileNet הוא <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">רשתות
+    קונבולוציה</a> שאימנו באמצעות <a href="http://www.image-net.org/">ImageNet</a>,
     מערך נתונים בעל יותר מ־14 מיליון תמונות הכוללות הסברים בצורת מילים כמו "בלון"
     או "תות". כדי להתאים את המודל לנתוני האימון המתויגים שמפיק התלמיד בפעילות זו,
     אנו משתמשים בטכניקה הנקראת <a href="https://en.wikipedia.org/wiki/Transfer_learning">"העברת
     למידה"</a>. כל תמונה במערך נתוני האימון מוזנת ל־MobileNet בצורת פיקסלים, כדי להשיג
     רשימה של ההסברים המתאימים לה ביותר. לאחר מכן, אנו מזינים זאת ל־MobileNet, בעבור
-    כל תמונה חדשה, ומשווים את רשימת ההסברים המתקבלת ממנה לאלו של נתוני ההדרכה. אנו
+    כל תמונה חדשה, ומשווים את רשימת ההסברים המתקבלת ממנה לאלו של נתוני האימון. אנו
     מסווגים את התמונה החדשה באותה התווית (למשל, "דג" או "לא דג") שיש לתמונות בעלות
-    התוצאות הדומות ביותר במערך ההדרכה. '
+    התוצאות הדומות ביותר במערך האימון.
   oceans_behind_the_scenes_1_markdown: בשלבים 2–4 משתמשים במודל מאומן־מראש שסיפק פרויקט
     TensorFlow (https://www.tensorflow.org/) MobileNet (https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     . מודל MobileNet הוא [רשת עצבית מתקפלת](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    שהדריכו באמצעות ImageNet (http://www.image-net.org/), מערך נתונים בעל יותר מ־14
+    שאימנו באמצעות ImageNet (http://www.image-net.org/), מערך נתונים בעל יותר מ־14
     מיליון תמונות הכוללות הסברים בצורת מילים כמו "בלון" או "תות". כדי להתאים את המודל
     לנתוני האימון המתויגים שמפיק התלמיד בפעילות זו, אנו משתמשים בטכניקה הנקראת [העברת
     למידה](https://en.wikipedia.org/wiki/Transfer_learning). כל תמונה במערך נתוני
     האימון מוזנת ל־MobileNet בצורת פיקסלים, כדי להשיג רשימה של ההסברים המתאימים לה
     ביותר. לאחר מכן, אנו מזינים זאת ל־MobileNet, בעבור כל תמונה חדשה, ומשווים את רשימת
-    ההסברים המתקבלת ממנה לאלו של נתוני ההדרכה. אנו מסווגים את התמונה החדשה באותה התווית
-    (למשל, "דג" או "לא דג") שיש לתמונות בעלות התוצאות הדומות ביותר במערך ההדרכה.
-  oceans_behind_the_scenes_2: בשלבים 6–8 נשתמש ב <a href="https://en.wikipedia.org/wiki/Support-vector_machine">מכונת
-    וקטורים תומכים</(</a> (SVM. אנו מביטים בכל מרכיב של הדג (למשל עיניים, פה, גוף)
-    ומקבצים את כל המטא־נתונים של המרכיבים (כמו מספר השיניים או צורת הגוף) לתוך וקטור
-    של מספרים בעבור כל דג. אנו משתמשים בווקטורים אלה כדי לאמן את ה־SVM. בהתבסס על
-    נתוני האימון, ה־SVM מחלק את ה"חלל" של כל הדגים האפשריים לשני חלקים המתאימים לסוג
-    שאנו מנסים ללמוד (למשל, "כחול" או "לא כחול").<a href="https://en.wikipedia.org/wiki/Support-vector_machine">
+    ההסברים המתקבלת ממנה לאלו של נתוני האימון. אנו מסווגים את התמונה החדשה באותה התווית
+    (למשל, "דג" או "לא דג") שיש לתמונות בעלות התוצאות הדומות ביותר במערך האימון.
+  oceans_behind_the_scenes_2: בשלבים 6–8 נשתמש ב<a href="https://en.wikipedia.org/wiki/Support-vector_machine">מכונת
+    וקטורים תומכים</a> (SVM). אנו מביטים בכל מרכיב של הדג (למשל עיניים, פה, גוף) ומקבצים
+    את כל המטא־נתונים של המרכיבים (כמו מספר השיניים או צורת הגוף) לתוך וקטור של מספרים
+    בעבור כל דג. אנו משתמשים בווקטורים אלה כדי לאמן את ה־SVM. בהתבסס על נתוני האימון,
+    ה־SVM מחלק את ה"חלל" של כל הדגים האפשריים לשני חלקים המתאימים לסוג שאנו מנסים
+    ללמוד (למשל, "כחולים" או "לא כחולים").
   oceans_behind_the_scenes_2_markdown: בשלבים 6–8 נשתמש ב[מכונת וקטורים תומכים](https://en.wikipedia.org/wiki/Support-vector_machine)
     (SVM). אנו מביטים בכל מרכיב של הדג (למשל עיניים, פה, גוף) ומקבצים את כל המטא־נתונים
     של המרכיבים (כמו מספר השיניים או צורת הגוף) לתוך וקטור של מספרים בעבור כל דג.
     אנו משתמשים בווקטורים אלה כדי לאמן את ה־SVM. בהתבסס על נתוני האימון, ה־SVM מחלק
     את ה"חלל" של כל הדגים האפשריים לשני חלקים המתאימים לסוג שאנו מנסים ללמוד (למשל,
-    "כחול" או "לא כחול").
+    "כחולים" או "לא כחולים").
   social_hoc2019_oceans_title: 'בינה מלאכותית למען האוקיינוסים והימים #CSforGood'
   social_hoc2019_oceans_desc: למדו על בינה מלאכותית (AI), למידת־מכונה, נתוני אימון
     והטייה, תוך בחינת דילמות מוסריות והאופן שבו ניתן לגייס בינה מלאכותית להתמודדות
@@ -142,8 +142,7 @@ he:
   ai_video_title_algorithm_bias: מאבק בהטיות באלגוריתמים
   ai_video_title_phone_knows_dog: איך הטלפון שלכם יודע שזה כלב?
   ai_video_title_what_is_ml: מהי למידת מכונה?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
+  ai_video_title_ml_big_small_prickly: 'למידת מכונה: פתרון בעיות גדולות, קטנות ועוקצניות'
   ai_video_title_ethics_of_ai: האתיקה של הבינה המלאכותית
   ai_video_title_ml_human_bias: למידת מכונה והטיה אנושית
   ai_video_title_seeing_ai: 'רואים בינה מלאכותית: הפיכת העולם החזותי לנגיש יותר'
@@ -152,7 +151,7 @@ he:
   description: Description
   audience: Audience
   ai_resource_header: ללמוד וללמד על בינה מלאכותית
-  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft: 'מיינקראפט: בינה מלאכותית לתמיד/לטובה'
   ai_resource_minecraft_desc: 'גישה למשאבים חינמיים הכוללים מערך שיעור, סרטונים, תוכנית
     לימודים של מדעי המחשב והדרכות למורים. (נדרשת גישה ל"מיינקראפט: מהדורת החינוך")'
   ai_resource_ml_for_kids: למידת מכונה לילדים
@@ -161,28 +160,28 @@ he:
   ai_resource_ibm_ml_for_kids: 'IBM: למידת מכונה לילדים'
   ai_resouce_ibm_ml_for_kids_desc: פעילויות מעשיות להצגת מודלים פשוטים של למידת מכונה
     בפני תלמידים, דרך משחקים ופרויקטים אינטראקטיביים.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+  ai_resource_ecs: 'ECS: בינה מלאכותית (AI)'
   ai_resource_ecs_desc: יחידת לימודים חדשה וחלופית לתוכנית הלימודים "חקר מדעי המחשב
     (ECS)".
   ai_resource_elements_ai: אלמנטים של בינה מלאכותית
   ai_resource_elements_ai_desc: סדרת קורסים מקוונים חינמיים שיצרו Reaktor ואוניברסיטת
     הלסינקי.
-  ai_resource_cognimates: Cognimates
+  ai_resource_cognimates: Cognimates / קוגנימייטים
   ai_resource_cognimates_desc: פלטפורמת חינוך המבוססת על בינה מלאכותית, ליצירת משחקים,
-    תכנות רובוטים והדרכות.
+    תכנות רובוטים ואימונים.
   ai_audience_k12: K-12 (נדרשת קריאה)
   ai_audience_hs: תיכון
-  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_header: פעילויות המופעלות באמצעות AI ו-ML
   ai_activity_seeing_ai: רואים בינה מלאכותית
   ai_activity_seeing_ai_desc: אפליקציה חינמית המספרת על העולם סביבנו במגוון של שפות.
   ai_activity_quick_draw: מהר, שלפו!
   ai_activity_quick_draw_desc: האם רשת עצבית יכולה לזהות שרבוטים?
   ai_activity_teachable: מכונה שניתנת ללימוד
-  ai_activity_teachable_desc: הדריכו מחשב לזהות את התמונות, הצלילים והתנוחות שלכם.
-  ai_activity_experiments: AI Experiments with Google
+  ai_activity_teachable_desc: אמנו מחשב לזהות את התמונות, הצלילים והתנוחות שלכם.
+  ai_activity_experiments: ניסויי AI עם גוגל
   ai_activity_experiments_desc: התחילו לחקור למידת מכונה דרך תמונות, ציורים, שפה,
     מוזיקה ועוד.
-  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse: זוּנִיבֶרְס - זברה הררית של סנאפצ'ט
   ai_activity_zooniverse_desc: עזרו להגן על "זברת הר־הכֵּף" באמצעות זיהוי החיות האחרות
     שבתמונות.
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
@@ -587,7 +586,7 @@ he:
     Code.org</a>."
   hoc_faq_why_cs_a_markdown: לכל תלמיד מגיעה ההזדמנות ללמוד מדעי המחשב. תחום זה תורם
     לפיתוח מיומנויות של פתרון בעיות, לוגיקה ויצירתיות. התחלה בגיל צעיר תסלול לתלמידים
-    את הדרך להצלחה בכל נתיב קריירה של המאה ה-21. ראו נתונים סטטיסטיים [here]%{stats_url}).
+    את הדרך להצלחה בכל נתיב קריירה של המאה ה-21. ראו נתונים סטטיסטיים [here](%{stats_url}).
   hoc_faq_how_participate_q: כיצד ניתן להשתתף ב-לHour of Code?
   hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing
     our how-to guide. You can organize an Hour of Code event at your school or in
@@ -595,8 +594,8 @@ he:
     Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_how_participate_a_markdown: "[התחילו לתכנן כאן](%{howto}) על ידי עיון במדריך
     שלנו. ניתן לארגן אירוע של שעת הקוד בבית הספר שלכם או בקהילתכם - למשל במוסד של
-    חינוך בלתי פורמלי, במוסד ללא כוונת רווח או בעבודה. או פשוט התנסו בו בעצמכם%{campaign_date}
-    בבוא המועד."
+    חינוך בלתי פורמלי, במוסד ללא כוונת רווח או בעבודה. או פשוט התנסו בו בעצמכם בבוא
+    המועד %{campaign_date}."
   hoc_faq_behind_hoc_q: מי עומד מאחורי Hour of Code?
   hoc_faq_behind_hoc_a: שעה של הקוד מאורגן על ידי <a href='http://code.org'> Code.org</a>,
     a חברה הציבורית 501C3 ללא כוונת רווח מוקדשת להרחבת השתתפות במדעי המחשב על-ידי
@@ -620,7 +619,7 @@ he:
     עצמית. כל מה שעליכם לעשות הוא [לנסות את עזרי הלמידה הנוכחיים שלנו](%{codeorg_url}/learn),
     לבחור את השיעור שאתם רוצים ללמוד, לבחור שעה - ואנו נדאג כבר לכל היתר. אנו מציעים
     אפשרויות המתאימות לכל גיל ולכל רמה, לילדים מגילאי גן ילדים ומעלה. התחילו לתכנן
-    את האירוע שלכם על ידי קריאת [המדריך]( %{howto}) שלנו.
+    את האירוע שלכם על ידי קריאת [המדריך](%{howto}) שלנו.
   hoc_faq_devices_q: What devices should I use for my students?
   hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
     see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
@@ -628,10 +627,10 @@ he:
     in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
     activities</a> if your school can't accommodate the tutorials!
   hoc_faq_devices_a_markdown: השיעורים באתר Code.or פועלים בכל המכשירים ובכל הדפדפנים.
-    ניתן למצוא מידע נוסף אודות הצרכים הטכנולוגיים של השיעורים באתר Code.org [כאן]
+    ניתן למצוא מידע נוסף אודות הצרכים הטכנולוגיים של השיעורים באתר Code.org [here]
     (%{codeorg_url}/educate/it). צרכים טכנולוגיים של השיעורים שלא במסגרת אתר Code.org
-    מופיעים ב[%{partner_url}/learn](%{codeorg_url}/learn) בתיאור הספציפי של השיעור.
-    אל תשכחו גם להציע [פעילויות ללא מחשב] (%{unplugged_url})אם בית הספר שלכם אינו
+    מופיעים ב-[%{partner_url}/learn](%{codeorg_url}/learn) בתיאור הספציפי של השיעור.
+    אל תשכחו גם להציע [פעילויות ללא מחשב] (%{unplugged_url}) אם בית הספר שלכם אינו
     יכול לרכוש את הלומדה!
   hoc_faq_need_computers_q: האם יש צורך מחשבים עבור כל משתתף?
   hoc_faq_need_computers_a: לא.  יש לנו הדרכות של Hour of Code העובדות על מחשבים אישיים,
@@ -680,10 +679,10 @@ he:
     ויכול אחר-כך לנסות מדריך מתקדם יותר בשפת JavaScript, כמו באתרים Khan Academy  או  CodeHS.
   hoc_faq_high_school_a_markdown: עזרי הלמידה שלנו "מלחמת הכוכבים" ו"מיינקראפט" אידיאליים
     לתלמידי תיכון, במיוחד גרסת ג'אווה סקריפט של "מלחמת הכוכבים" ושלב המשחק החופשי
-    בשני השיעורים הללו. לחלופין, אנו ממליצים לנסות את אחד מעזרי הלמידה למתחילים ב-
-    [%{partner_url}/learn](%{codeorg_url}/learn) בתור התחלה, כגון "אנגרי בירדס" או
-    "אנה ואלזה". תלמיד תיכון המסיים אחד מאלו בתוך חצי שעה, כפי שמצופה ממנו, יכול לנסות
-    לאחר מכן עזר למידה מתקדם יותר ב-JavaScript, כגון "אקדמיית קהאן" או CodeHS.
+    בשני השיעורים הללו. לחלופין, אנו ממליצים לנסות את אחד מעזרי הלמידה למתחילים ב-[%{partner_url}/learn](%{codeorg_url}/learn)
+    בתור התחלה, כגון "אנגרי בירדס" או "אנה ואלזה". תלמיד תיכון המסיים אחד מאלו בתוך
+    חצי שעה, כפי שמצופה ממנו, יכול לנסות לאחר מכן עזר למידה מתקדם יותר ב-JavaScript,
+    כגון "אקדמיית קהאן" או CodeHS.
   hoc_faq_scratch_q: אני עושה Scratch ל"שעה של קוד", אבל מה אם התלמידים שלי יש iPads
     ולא מחשבים ניידים?
   hoc_faq_scratch_a: Scratch לא עובד על טאבלטים. אם התלמידים שלך הם צעירים, הם יוכלו
@@ -705,7 +704,7 @@ he:
     to update. Check back in a few days!
   hoc_faq_map_a_markdown: לצערנו אינכם יכולים לראות את האירוע שלכם במפת Hour of Code.
     בשל עשרות אלפי המארגנים שנרשמו, המפה מקבצת את הנתונים ומציגה נקודה אחת לכמה אירועים.
-    לחיצה על הקישור של [דף האירועים]%({%{events_url}) תוביל אתכם לרשימה של כל האירועים
+    לחיצה על הקישור של [דף האירועים](%{events_url}) תוביל אתכם לרשימה של כל האירועים
     לפי מדינה, כך שתוכלו למצוא את האירוע שלכם שם. בנוסף, לנוכח רבבות האנשים הרשומים
     ל-Hour of Code, עדכון המפה ורשימת האירועים אורך 48 שעות. חזרו לבדוק בעוד ימים
     אחדים!
@@ -717,7 +716,7 @@ he:
   hoc_faq_count_hoc_a_markdown: העוקב של Hour of Code אינו כלי מדויק למדידת השימוש.
     איננו מונים בקפידה מזהים ייחודיים של תלמידים במהלך המעקב אחר השתתפות ב-Hour of
     Code, בעיקר מכיוון שאיננו דורשים מהתלמידים להתחבר או להירשם. משום כך, הספירות
-    שלנו מגדילות את מספר המשתתפים בפועל ובו-זמנית גורעות ממנו. לפרטים, קראו [כאן](%{codeorg_url}/loc).
+    שלנו מגדילות את מספר המשתתפים בפועל ובו-זמנית גורעות ממנו. לפרטים, קראו [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: כמה אפשר ללמוד בשעה?
   hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
     an expert computer scientist in one hour. One hour is only enough to learn that
@@ -1328,7 +1327,7 @@ he:
   tutorial_cacrazy_name: Code Crazy Creatures
   tutorial_cajump_name: Jumping Jam
   tutorial_carest_name: Robo-restaurant puzzler
-  tutorial_accai_name: Accenture Intelligent Space Exploration
+  tutorial_accai_name: חקר חלל אינטליגנטי של Accenture
   tutorial_vceclipse_name: Code the Eclipse
   tutorial_pmzero_name: Pac-Man ZERO
   tutorial_hsela_name: 'Telling stories: ELA + coding'

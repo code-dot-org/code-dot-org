@@ -361,9 +361,9 @@ class ScriptsControllerTest < ActionController::TestCase
     expected_contents = ''
     script_name = 'test-script-create'
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with("config/scripts/#{script_name}.script", expected_contents).once
+    File.stubs(:write).with("#{Rails.root}/config/scripts/#{script_name}.script", expected_contents).once
     File.stubs(:write).with do |filename, contents|
-      filename == "config/scripts_json/#{script_name}.script_json" && JSON.parse(contents)['script']['name'] == script_name
+      filename == "#{Rails.root}/config/scripts_json/#{script_name}.script_json" && JSON.parse(contents)['script']['name'] == script_name
     end
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
@@ -419,9 +419,9 @@ class ScriptsControllerTest < ActionController::TestCase
 
     script = create :script, hidden: true
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
-      filename == "config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
     end
     post :update, params: {
       id: script.id,
@@ -469,6 +469,50 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :forbidden
     script.reload
     assert script.hidden
+  end
+
+  test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    stub_file_writes(script.name)
+
+    error = assert_raises RuntimeError do
+      post :update, params: {
+        id: script.id,
+        script: {name: script.name},
+        script_text: '',
+        old_script_text: 'different'
+      }
+    end
+
+    assert_includes error.message, 'Could not update the script because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again.'
+  end
+
+  test 'can update if database matches starting content for current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    create(
+      :script_level,
+      script: script,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+    stub_file_writes(script.name)
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      old_script_text: ScriptDSL.serialize_lesson_groups(script)
+    }
+
+    assert_response :success
   end
 
   test 'updates teacher resources' do
@@ -797,38 +841,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/dogs2"
   end
 
-  test 'uses gui editor when script levels have variants without experiments' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    (1..2).map {|n| create(:level, name: "Level #{n}")}
-    script_file = File.join(self.class.fixture_path, "test-fixture-variants.script")
-    Script.setup([script_file])
-
-    get :edit, params: {id: 'test-fixture-variants', beta: true}
-    assert_response :success
-    assert_select "script[data-levelbuildereditscript]"
-    assert_select "script[data-levelbuildereditscript]" do |elements|
-      assert elements.first['data-levelbuildereditscript'].match?(/"beta":true/)
-    end
-  end
-
-  test 'uses dsl editor when script levels have variants with experiments' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    (1..8).map {|n| create(:level, name: "Level #{n}")}
-    script_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
-    Script.setup([script_file])
-
-    get :edit, params: {id: 'test-fixture-experiments'}
-    assert_response :success
-    assert_select "script[data-levelbuildereditscript]"
-    assert_select "script[data-levelbuildereditscript]" do |elements|
-      assert elements.first['data-levelbuildereditscript'].match?(/"beta":false/)
-    end
-  end
-
   test "levelbuilder does not see visible after warning if stage does not have visible_after property" do
     sign_in @levelbuilder
 
@@ -894,7 +906,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   def stub_file_writes(script_name)
-    filenames_to_stub = ["config/scripts/#{script_name}.script", "config/scripts_json/#{script_name}.script_json"]
+    filenames_to_stub = ["#{Rails.root}/config/scripts/#{script_name}.script", "#{Rails.root}/config/scripts_json/#{script_name}.script_json"]
     File.stubs(:write).with do |filename, _|
       filenames_to_stub.include?(filename) || filename.end_with?('scripts.en.yml')
     end

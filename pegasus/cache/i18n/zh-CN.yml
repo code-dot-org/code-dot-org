@@ -1590,6 +1590,7 @@ zh-CN:
   hoc_overview_partner_activities_body: 编程一小时由 code. org 和合作伙伴联合开发，网站提供 500 多项计算机科学活动，适合所有年龄与经验水平。
   hoc_overview_partner_activities_link: 查看活动
   hoc_overview_start_tutorial: 开始
+  hoc_overview_more_resources: 有关如何参与远程教室的更多资源，请参见[虚拟 [编程一小时》](https://hourofcode.com/us/how-to/virtual）举办指南。对于那些缺乏技术条件或网络连接的学生，请共享这个[线下《编程一小时》活动]包（https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf）。
   hoc_overview_view_teacher_guide: 查看教师指南
   hoc2018_creativity: 创造力
   hoc2018_creativity_create: 创建
@@ -1735,3 +1736,4 @@ zh-CN:
 '
   page_not_available_button: 返回主页
   footer_powered_by_aws: 由亚马逊网络服务
+  codebytes_skinny_banner_english_only: 仅英语

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_202751) do
+ActiveRecord::Schema.define(version: 2020_12_14_003529) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -557,7 +557,7 @@ ActiveRecord::Schema.define(version: 2020_12_01_202751) do
   create_table "lessons_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "lesson_id", null: false
     t.integer "resource_id", null: false
-    t.index ["lesson_id", "resource_id"], name: "index_lessons_resources_on_lesson_id_and_resource_id"
+    t.index ["lesson_id", "resource_id"], name: "index_lessons_resources_on_lesson_id_and_resource_id", unique: true
     t.index ["resource_id", "lesson_id"], name: "index_lessons_resources_on_resource_id_and_lesson_id"
   end
 
@@ -657,6 +657,8 @@ ActiveRecord::Schema.define(version: 2020_12_01_202751) do
     t.integer "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "key"
+    t.index ["key"], name: "index_objectives_on_key", unique: true
     t.index ["lesson_id"], name: "index_objectives_on_lesson_id"
   end
 
@@ -1291,7 +1293,7 @@ ActiveRecord::Schema.define(version: 2020_12_01_202751) do
     t.string "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "course_version_id"
+    t.integer "course_version_id", null: false
     t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
   end
@@ -1666,6 +1668,18 @@ ActiveRecord::Schema.define(version: 2020_12_01_202751) do
     t.datetime "unlocked_at"
     t.integer "time_spent"
     t.index ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true
+  end
+
+  create_table "user_ml_models", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "model_id"
+    t.string "name"
+    t.datetime "deleted_at"
+    t.datetime "purged_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["model_id"], name: "index_user_ml_models_on_model_id"
+    t.index ["user_id"], name: "index_user_ml_models_on_user_id"
   end
 
   create_table "user_module_task_assignments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

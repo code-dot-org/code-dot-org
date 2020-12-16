@@ -25,9 +25,9 @@ title: Kovid19 pandemiyasi sababli maktablar yopilganda kompyuter fanini o‘rga
 
 <div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
 
-<p style="border: 0; color: #4d575f">Join us December 7-11 for our CodeBytes live mini-lessons!</p>
-<p style="font-size: 14px; border: 0; color: #4d575f">Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!</p>
-<p style="font-size: 14px; border: 0; color: #4d575f">Learn more at <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+<p style="border: 0; color: #4d575f">7-11 dekabr kunlari CodeBytes-ning jonli mini-darslarida ishtirok eting!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">CodeBytes uchun CS Education Week - Kompyuter fanlari haftasining har kunida kompyuter fanidan 20 daqiqali interaktiv darslarga qo'shiling. Har kuni ikki marta jonli efirga uzatiladigan CodeBytes - bu talabalar uchun #HourOfCode-da virtual ishtirok etishning ajoyib usuli!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Qo'shimcha ma'lumotni <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a> sahifasidan olishingiz mumkin</p>
 </div>
 
 <div class="clearboth"></div></div>
@@ -93,9 +93,9 @@ Talabalar mustaqil ta'lim olishni boshlashi uchun ajoyib imkoniyat. Siz drag & d
 
 <div class="col-66">
 
-<p>App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, and share your creation with family and friends.</p>
-<p>Ages 13+, all modern browsers, English only</p>
-<a href="https://code.org/educate/applab"><button>Try it out</button></a>
+<p>App Lab - bu oddiy dasturlarni yaratish uchun dasturiy muhit. Dastur yarating, JavaScript-dagi kodni bloklar yoki matnlar bilan yarating va yaratgan narsalaringizni oila va do'stlaringizga ulashing.</p>
+<p>13+ yosh uchun, barcha zamonaviy brauzerlarda, faqat ingliz tilida</p>
+<a href="https://code.org/educate/applab"><button>Sinab ko'ring</button></a>
 
 </div>
 
@@ -108,13 +108,14 @@ Talabalar mustaqil ta'lim olishni boshlashi uchun ajoyib imkoniyat. Siz drag & d
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
+<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a> 
+Algoritmlar, patternlarni aniqlash, ketma-ketliklar, sikllar va shartli bayonotlar kabi kodlash asoslarini o'rgatishda, o'quvchilarni hayajonli sarguzashtlarga olib boradigan maftunkor mobil kodlash o'yini. <i>(barcha yoshdagilar uchun).</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
+<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>5-9 yoshdagi bolalar uchun mukofotlangan dasturlashni o‘rganish platformasi. Dasturlashni o'rganib, jumboqlarni yechib va Foo-lar bilan o'yinlar yarating. <strong>Eslatma: codeSpark 3 oylik bepul sinov muddatini taqdim etadi. Ro'yxatdan o'tishda ota-onaning elektron pochta manzili va kredit karta ma'lumotlari talab qilinadi.</strong><i>(5-sinfgacha bo'lgan o'quvchilar uchun)</i>
 
 </div>
 
@@ -151,17 +152,17 @@ Iltimos, virtual yoki ijtimoiy jihatdan ajratilgan sinf muhitida o'qituvchilar u
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
+<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Kompyuter Fanlari Tamoyillari</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
+<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Kompyuter Fanlari Kashfiyotlari</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Informatika asoslari</p></a></div>
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Kompyuter Fanlari Asoslari</p></a></div>
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 

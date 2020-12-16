@@ -1636,6 +1636,11 @@ hu-HU:
     korosztály és minden képzettségi szint képviselői számára.
   hoc_overview_partner_activities_link: Tevékenységek megtekintése
   hoc_overview_start_tutorial: Kezdés
+  hoc_overview_more_resources: A [virtuális Hour of Code](https://hourofcode.com/us/how-to/virtual)
+    útmutatóban további forrásokat talál a távoktatáshoz . Ossza meg ezt a csomagot
+    [offline Hour of Code tevékenységek](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
+    azokkal a diákjaival, akiknek nincs vagy nem áll rendelkezésükre megfelelő technológia
+    és internetes kapcsolat.
   hoc_overview_view_teacher_guide: Oktatói útmutató megtekintése
   hoc2018_creativity: kreativitás
   hoc2018_creativity_create: Létrehoz
@@ -1715,3 +1720,4 @@ hu-HU:
     és küldetésünk valóra váltásában, abban, hogy minden gyermeknek legyen lehetősége
     számítástechnikát tanulni és a 21. században szükséges készségeket elsajátítani.
   footer_powered_by_aws: Az Amazon Web Services működteti
+  codebytes_skinny_banner_english_only: Csak angol

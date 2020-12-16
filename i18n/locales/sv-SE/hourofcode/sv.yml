@@ -41,11 +41,11 @@ sv:
     miljoner elever. Entimmes-övningar finns tillgängliga på 45+ språk för alla åldrar.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: Tiden för Hour of Code 2020 närmar sig!
+  hoc2020_ai_header: Utforska artificiell intelligens
+  hoc2020_ai_description: AI och maskininlärning påverkar hela vår värld. Kom och
+    utforska  AI i en ny videoserie tillsammans med oss, öva dig på AI för oceaner
+    i över 25 språk, diskutera etik och AI, m.m...
   hoc2019_header: Lär dig datavetenskap. Förändra världen.
   hoc2019_header_line1_mobile: Lär dig datavetenskap.
   hoc2019_header_line2_mobile: Förändra världen.
@@ -1665,7 +1665,7 @@ sv:
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: En berättelse om två byar i Minecraft
   tutorial_danceparty_shortdescription: "  Koda ett dansparty att dela med dina vänner.
     Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara och ytterligare 25
     artister!  "
@@ -5735,11 +5735,11 @@ sv:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: I århundraden delade byborna och fyborna samma
+    utrymme men de interagerade sällan med varandra. Nu kan du använda kodens kraft
+    för att sammanföra de två byarna. Du kommer att få uppleva empati och medkänsla
+    för dina grannar, lära dig samarbete och inkludering, och omfamna den mångfald
+    som gör oss alla unikt speciella.
   tutorial_dance2019_language: Arabiska, kinesiska, tjeckiska, danska, nederländska,
     engelska, finska, franska, tyska, grekiska, hindi, ungerska, indonesiska, italienska,
     japanska, koreanska, malay, polska, portugisiska, och ytterligare 10!
@@ -6542,7 +6542,8 @@ sv:
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Svenska
-  tutorial_meeempathy_language: Svenska
+  tutorial_meeempathy_language: Kinesiska, danska, holländska, engelska, franska,
+    italienska, japanska, koreanska, norska, portugisiska, spanska, svenska, turkiska
   tutorial_dance2019_string_detail_grades: Årskurs 2 och uppåt
   tutorial_danceparty_string_detail_grades: Årskurs 2 och uppåt
   tutorial_chibitronics_string_detail_grades: Grades 2-5

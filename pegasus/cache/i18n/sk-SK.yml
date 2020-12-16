@@ -1250,6 +1250,7 @@ sk-SK:
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Bloky)
   hoc-encryption_name: Jednoduché šifrovanie
+  text-compression_name: Kompresia textu
   applab_name: App Lab
   gamelab_name: Game Lab
   basketball_name: Vytvor basketbalový zápas
@@ -1993,6 +1994,10 @@ sk-SK:
     partnermi.
   hoc_overview_partner_activities_link: Zobraziť aktivity
   hoc_overview_start_tutorial: Spustiť
+  hoc_overview_more_resources: Ďalšie zdroje informácií o tom, ako sa pripojiť ku
+    vzdialenej učebni nájdete v našej príručke zdieľania [virtuálnej Hodiny kódu](https://hourofcode.com/us/how-to/virtual).
+    Pre študentov s obmedzenými alebo žiadnymi technologickými možnosťami alebo pripojením
+    zdieľajte tento balík [aktivít nezapojenej Hodiny kódu](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Zobraziť príručku pre učiteľa
   hoc2018_creativity: kreativita
   hoc2018_creativity_create: Vytvoriť
@@ -2146,3 +2151,4 @@ sk-SK:
   hoc2018_mc_with_microsoft: V spolupráci s
   page_not_available_button: Späť na domovskú stránku
   footer_powered_by_aws: Poháňaný službami Amazon Web Services
+  codebytes_skinny_banner_english_only: Len v anglickom jazyku

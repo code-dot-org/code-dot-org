@@ -45,6 +45,9 @@ mysql_defaults: &mysql_defaults
   # There is a retry if necessary, so the total effective timeout value is two times the option value.
   write_timeout: 5
 
+  # `MYSQL_OPT_MAX_ALLOWED_PACKET`: This option sets the client-side maximum size of the buffer for client/server communication
+  max_allowed_packet: 268_435_456 # 256MB
+
   # Seamless Database Pool settings:
   # See: https://github.com/bdurand/seamless_database_pool#configuration
   master:

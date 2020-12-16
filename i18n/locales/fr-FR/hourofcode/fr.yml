@@ -30,25 +30,24 @@ fr:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
-  hoc2020_header: Learn today, build a brighter tomorrow.
-  hoc2020_header_with_line_break_markdown: |-
-    Learn today,
-
-    build a brighter tomorrow.
+  hoc2020_header: Apprenez aujourd'hui, construisez un avenir meilleur.
+  hoc2020_header_with_line_break_markdown: Apprenez aujourd'hui,      construisez
+    un avenir meilleur.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    today, build a brighter tomorrow.'
+  social_hoc2020_hoc_is_about_csforgood: 'L’#HourOfCode concerne le #CSforGood. Apprenez
+    aujourd''hui, construisez un avenir meilleur.'
   social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
     of millions of students. One-hour tutorials are available in 45+ languages for
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: L'Heure de Code 2020 sera bientôt disponible!
+  hoc2020_ai_header: Explorez l'intelligence artificielle
+  hoc2020_ai_description: L'IA et l'apprentissage automatique ont un impact sur notre
+    monde. Rejoignez-nous pour explorer l'IA dans une nouvelle série de vidéos, former
+    l'IA pour les océans dans plus de 25 langues, nous parlerons de l'éthique et de
+    l'IA, et de bien d'autres choses encore...
   hoc2019_header: Apprends l'informatique. Change le monde.
   hoc2019_header_line1_mobile: Apprends l'informatique.
   hoc2019_header_line2_mobile: Change le monde.
@@ -64,75 +63,88 @@ fr:
   social_hoc2019_dance: Avec Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
     X, Jonas Brothers, Nicki Minaj, et 34 autres artistes !
   oceans_landing_title: IA pour les Océans
-  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  oceans_landing_description: Découvrez l'apprentissage automatique et l'utilisation
+    éthique de l'IA.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Available in 25+ languages | Grades 3+
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_explanation_markdown: Computer science is about so much more than
-    coding! Learn about artificial intelligence (AI), machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
-    When you use the AI for Oceans activity you are training real machine learning
-    models. [Learn more](#behind-the-scenes).
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS for Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
-  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
-    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
-    all of the metadata for the components (such as number of teeth, body shape) into
-    a vector of numbers for each fish. We use these vectors to train the SVM. Based
-    on the training data, the SVM separates the "space" of all possible fish into
-    two parts, which correspond to the classes we are trying to learn (such as "blue"
-    or "not blue").
-  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
-  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Computer science is about so much more than coding! Enjoy Code.org's first step
-    in a new journey to teach more about AI throughout our curriculum.
+  oceans_landing_specs: Disponible en plus de 25 langues | À partir du CE2
+  oceans_landing_explanation: L'informatique, c'est bien plus que du codage ! Découvrez
+    l'intelligence artificielle (IA), l'apprentissage automatique, les données de
+    formation et le biais, tout en explorant des questions d’éthique et la manière
+    dont l'IA peut être utilisée pour résoudre les problèmes mondiaux. Cette première
+    étape de Code.org vous emmène dans un nouveau voyage où vous en enseignerez davantage
+    sur l'IA. Lorsque vous utilisez l'activité « IA pour les Océans », vous formez
+    de véritables modèles d'apprentissage automatique. <a href='#behind-the-scenes'>En
+    savoir plus</a>.
+  oceans_landing_explanation_markdown: L'informatique, c'est bien plus que du codage
+    ! Découvrez l'intelligence artificielle (IA), l'apprentissage automatique, les
+    données de formation et le biais, tout en explorant des questions d’éthique et
+    la manière dont l'IA peut être utilisée pour résoudre les problèmes mondiaux.
+    Cette première étape de Code.org vous emmène dans un nouveau voyage où vous en
+    enseignerez davantage sur l'IA. Lorsque vous utilisez l'activité IA pour les Océans,
+    vous formez de véritables modèles d'apprentissage automatique. [En savoir plus](#behind-the-scenes).
+  oceans_landing_teacher_resources: Ressources pour les enseignants
+  oceans_landing_teacher_resources_desc: 'Plans de cours et activités pour vous aider
+    à enseigner l''IA, l''apprentissage automatique, les données de formation et le
+    biais, tout en explorant des questions éthiques.  '
+  oceans_landing_resource_button: Consulter les ressources
+  oceans_landing_cs_for_good: L’informatique pour le bien
+  oceans_landing_cs_for_good_desc: Des ressources pour aider les élèves à comprendre
+    le rôle que l'informatique pourrait jouer dans la création d'un monde plus équitable.
+  oceans_landing_videos: Vidéos à propos de l'IA et de l'apprentissage automatique
+  oceans_behind_the_scenes: 'IA pour les Océans : dans les coulisses'
+  oceans_behind_the_scenes_1: '  Les niveaux 2 à 4 utilisent un modèle préformé fourni
+    par le projet <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">MobileNet
+    </a>. Un modèle MobileNet est un <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">réseau
+    neuronal convolutif</a> qui a été formé sur <a href="http://www.image-net.org/">ImageNet</a>,
+    un ensemble de données de plus de 14 millions d''images annotées à la main avec
+    des mots tels que « ballon » ou « fraise ». Afin de personnaliser ce modèle avec
+    les données de formation étiquetées que l''élève génère dans cette activité, nous
+    employons une technique appelée <a href="https://en.wikipedia.org/wiki/Transfer_learning">
+    apprentissage par transfert</a>. Chaque image de l''ensemble de données de formation
+    est transmise à MobileNet, sous forme de pixels, pour obtenir une liste d''annotations
+    qui sont les plus susceptibles de s''y appliquer. Ensuite, pour une nouvelle image,
+    nous la transmettons à MobileNet et comparons la liste d''annotations qui en résulte
+    à celles de l''ensemble de données de formation. Nous classons la nouvelle image
+    avec la même étiquette (telle que « poisson » ou « pas poisson ») que les images
+    de l''ensemble de formation ayant les résultats les plus similaires.  '
+  oceans_behind_the_scenes_1_markdown: "  Les niveaux 2 à 4 utilisent un modèle préformé
+    fourni par le projet [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
+    Un modèle MobileNet est un [réseau neuronal convolutif] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    qui a été formé sur [ImageNet] (http://www.image-net.org/), un ensemble de données
+    de plus de 14 millions d'images annotées à la main avec des mots tels que « ballon
+    » ou « fraise ». Afin de personnaliser ce modèle avec les données de formation
+    étiquetées que l'étudiant génère dans cette activité, nous employons une technique
+    appelée [apprentissage par transfert](https://en.wikipedia.org/wiki/Transfer_learning).
+    Chaque image de l'ensemble de données de formation est transmise à MobileNet,
+    sous forme de pixels, pour obtenir une liste d'annotations qui sont les plus susceptibles
+    de s'y appliquer. Ensuite, pour une nouvelle image, nous la transmettons à MobileNet
+    et comparons la liste d'annotations qui en résulte à celles de l'ensemble de données
+    de formation. Nous classons la nouvelle image avec la même étiquette (telle que
+    « poisson » ou « pas poisson ») que les images de l'ensemble de formation ayant
+    les résultats les plus similaires.  "
+  oceans_behind_the_scenes_2: Les niveaux 6 à 8 utilisent une <a href="https://en.wikipedia.org/wiki/Support-vector_machine">machine
+    à vecteur de support</a> (SVM). Nous examinons chaque composante du poisson (comme
+    les yeux, la bouche, le corps), et assemblons toutes les métadonnées des composantes
+    (comme le nombre de dents, la forme du corps) dans un vecteur de nombres, pour
+    chaque poisson. Nous employons ces vecteurs pour former la SVM. Sur la base des
+    données de formation, la SVM sépare « l'espace » de tous les poissons possibles
+    en deux parties qui correspondent aux classes que nous essayons d'apprendre (comme
+    « bleu » ou « non bleu »).
+  oceans_behind_the_scenes_2_markdown: Les niveaux 6 à 8 utilisent une [machine à
+    vecteur de support] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM).
+    Nous examinons chaque composante du poisson (comme les yeux, la bouche, le corps),
+    et assemblons toutes les métadonnées des composantes (comme le nombre de dents,
+    la forme du corps) dans un vecteur de nombres pour chaque poisson. Nous employons
+    ces vecteurs pour former la SVM. Sur la base des données de formation, la SVM
+    sépare « l'espace » de tous les poissons possibles en deux parties qui correspondent
+    aux classes que nous essayons d'apprendre (comme « bleu » ou « non bleu »).
+  social_hoc2019_oceans_title: 'IA pour les Océans #CSforGood  '
+  social_hoc2019_oceans_desc: "  Découvrez l'IA, l'apprentissage automatique, les
+    données de formation et le biais, tout en explorant les questions d’éthique et
+    la manière dont l'IA peut être utilisée pour résoudre les problèmes mondiaux.
+    L'informatique, c'est bien plus que du codage ! Cette première étape de Code.org
+    vous emmène dans un nouveau voyage où vous en enseignerez davantage sur l'IA,
+    tout au long de notre programme d'études.  "
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
@@ -141,9 +153,10 @@ fr:
     learning at home. See past episodes [here](%{episodes_url}).
   hoc_live_join_us: Rejoignez-nous
   hoc_overview_oceans_tutorial_header: IA pour les Océans
-  hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
-    learning, training data, and bias, while exploring ethical issues and how AI can
-    be used to address world problems.
+  hoc_overview_oceans_tutorial_desc: Découvrez l'intelligence artificielle (IA), l'apprentissage
+    automatique, les données de formation et le biais, tout en explorant les questions
+    d’éthique et la manière dont l'IA peut être utilisée pour résoudre les problèmes
+    mondiaux.
   ai_video_title_what_is_ai: What is AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
@@ -391,7 +404,7 @@ fr:
   how_to_nav_companies: Pour les entreprises
   how_to_nav_afterschool_educators: Pour les éducateurs qui officient après la classe
   how_to_nav_volunteers: Pour les bénévoles
-  how_to_nav_virtual: For virtual events
+  how_to_nav_virtual: Pour des événements virtuels
   whats_next_header: Et ensuite ?
   whats_next_description: Nous vous enverrons des outils et conseils utiles pour votre
     évènement. Les tutoriels 2015 seront bientôt à votre disposition pour tous les
@@ -560,7 +573,7 @@ fr:
     to express their creativity with computer science. Try your hand at the new tutorials.
     What will you create?
   social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
-  social_hoc2018_hoc_here: The Hour of Code is here!
+  social_hoc2018_hoc_here: L'Heure du Code est ici!
   social_hoc2018_join: Une Heure de Code va arriver
   social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.
@@ -617,12 +630,13 @@ fr:
     L'évènement doit-il avoir lieu à une <i>heure</i> spécifique ? Non. Vous pouvez
     le faire à tout moment au cours de cette semaine. (Et si vous ne pouvez pas le
     faire durant cette semaine, faites-le la semaine précédente ou suivante).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: "  L'heure de Code a lieu chaque année pendant la
+    [Semaine de l'enseignement de l'informatique] (%{csedweek_url}). La semaine de
+    l'enseignement de l'informatique %{campaign_date_year} se tiendra du 7 au 13 décembre
+    %{campaign_date_full}, mais vous pouvez organiser une Heure de Code tout au long
+    de l'année. La semaine de l'enseignement de l'informatique se tient chaque année
+    en l’honneur de l'anniversaire de la pionnière de l'informatique [l'amiral Grace
+    Murray Hopper](%{grace_hopper}) (9 décembre 1906).  "
   hoc_faq_why_cs_q: Pourquoi l'informatique ?
   hoc_faq_why_cs_a: "<i>Chaque</i> élève doit avoir la possibilité d'apprendre l'informatique.
     Sa pratique contribue à acquérir des compétences de résolution de problèmes, de
@@ -655,11 +669,11 @@ fr:
     Une <a href='%{codeorg_url}/about/partners'>coalition sans précédente de partenaires</a>
     nous a rejoint pour supporter Une Heure de Code, &mdash; dont Microsoft, Apple,
     Amazon, Boys and Girls Clubs of America et the College Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: L'Heure de code est animée par les [comités consultatifs
+    et d'examen] (%{partner_url}) de l'Heure de Code et de la Semaine de l'enseignement
+    de l'informatique ainsi que par une coalition, sans précédent, de partenaires
+    qui se sont rassemblés pour soutenir l'Heure de Code - notamment Microsoft, Apple,
+    Amazon, les Boys and Girls Clubs of America et le College Board.
   hoc_faq_host_q: Je ne connais rien en programmation. Puis-je tout de même organiser
     un évènement ?
   hoc_faq_host_a: Évidement, les activités d'Une Heure de code sont guidées. Tout
@@ -702,14 +716,19 @@ fr:
     vidéos ensemble et a tour de rôle résoudre les puzzles et répondre aux questions.
     <li><b>En déconnexion.</b> Nous offrons aussi des tutoriels qui ne nécessitent
     pas d’ordinateur du tout. </ul>
-  hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
-
-    _Here are a few options:_
-
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+  hoc_faq_need_computers_a_markdown: 'Non. Nous avons des tutoriels « Heure de Code
+    » qui fonctionnent sur les PC, les smartphones, les tablettes, et d’autres qui
+    ne nécessitent pas d''ordinateur du tout ! Vous pouvez vous inscrire où que vous
+    vous trouviez, sans matériel particulier.      _Voici quelques options :_      -
+    **travailler en paires.** [Des recherches montrent] (%{pair_programming_research})
+    que les étudiants apprennent mieux avec la [programmation par paires](%{pair_programming_video}),
+    en partageant un ordinateur et en travaillant ensemble. Encouragez vos élèves
+    à se mettre à deux.   - **Utilisez un écran de projection.** Si vous disposez
+    d''un projecteur et d''un écran pour un ordinateur connecté au Web, votre groupe
+    entier peut faire une Heure de Code ensemble. Regardez ensemble des extraits de
+    la vidéo, et résolvez des énigmes ou répondez à des questions, à tour de rôle.   -
+    **Débranchez-vous.** Nous proposons des [tutoriels qui ne nécessitent pas d''ordinateur](%{unplugged_url})
+    du tout.  '
   hoc_faq_international_q: 'Je suis au <country>. Comment puis-je participer internationalement
     ?  '
   hoc_faq_international_a: Tout le monde peut organiser un évènement Une Heure de
@@ -735,24 +754,25 @@ fr:
     nécessaire pour que des élèves essaient l'Heure de Code. La plupart des <a href='%{codeorg_url}/learn/beyond'>cours
     avancés</a> nécessitent en revanche la création d'un compte pour enregistrer les
     progrès de l'élève.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
+  hoc_faq_account_a_markdown: Non. Absolument aucune inscription ou connexion n'est
+    nécessaire pour que les étudiants puissent essayer l'Heure de Code. La plupart
+    des [cours de suivi](%{codeorg_url}/learn/beyond) requièrent la création d'un
+    compte pour enregistrer les progrès de l'étudiant. En outre, l'inscription à l'Heure
+    de Code ne crée PAS automatiquement un compte Code Studio. Si vous souhaitez vraiment
+    créer des comptes pour vos étudiants, veuillez suivre ces [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Quelle activité faire avec des élèves du secondaire ?
   hoc_faq_high_school_a: Pour tous les âges, nous vous recommandons d'essayer tout
     d'abord un des tutoriels pour débutants sur <a href='http://code.org/learn'> Code.org/learn</a>,
     par exemple le tutoriel avec Angry Birds ou Anna et Elsa. Un élève du secondaire
     doit être en mesure de terminer l'un d'entre eux en 30 minutes et peut alors essayer
     un tutoriel plus avancé en JavaScript, par exemple Khan Academy ou CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: Nos tutoriels Star Wars et Minecraft sont excellents
+    pour les lycéens, en particulier la version JavaScript de Star Wars et le niveau
+    de jeu gratuit sur les deux tutoriels. Nous recommandons également d'essayer l'un
+    des tutoriels pour débutants, sur [%{partner_url}/learn](%{codeorg_url}/learn),
+    pour commencer, tel que le tutoriel avec Angry Birds ou avec Anna et Elsa. Un
+    lycéen doit être capable de terminer l'un d'eux en 30 minutes et peut ensuite
+    essayer un tutoriel, plus avancé, en JavaScript, comme Khan Academy ou CodeHS.
   hoc_faq_scratch_q: J'utilise Scratch pour l'Heure de Code, mais que faire si mes
     élèves ont des iPads plutôt que des ordinateurs portables ?
   hoc_faq_scratch_a: 'Scratch ne fonctionne pas sur tablettes. Si vos élèves sont
@@ -813,12 +833,28 @@ fr:
     élèves ont envie et que leurs enseignants peuvent utiliser. <br/><br/> Et surtout,
     ce que tous les participants peuvent apprendre en une heure est que nous pouvons
     faire cela.
-  hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
-
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
-
-    Above all, what all participants can learn in an hour is that we can do this.
+  hoc_faq_one_hour_a_markdown: "  Le but de l'Heure de Code n'est pas d’enseigner
+    à quiconque à devenir un expert en informatique en une heure. Une heure suffit
+    juste pour apprendre que l'informatique est amusante et créative, qu'elle est
+    accessible à tous les âges, pour tous les étudiants, de tous milieux. Le succès
+    de cette campagne ne se mesure pas à la quantité de connaissances acquises par
+    les étudiants en informatique ; le succès s’exprime par la large participation,
+    quel que soit le genre, le groupe ethnique et socio-économique des étudiants,
+    et par l'augmentation que nous constatons au niveau des inscriptions et de la
+    participation aux cours d’informatique, à tous les niveaux. Suite à leur participation,
+    des millions d'enseignants et d'étudiants ont décidé d’aller au-delà d’une heure
+    – d’apprendre pendant une journée entière, une semaine entière ou plus, et de
+    nombreux étudiants ont, ultérieurement, décidé de s'inscrire à un cours complet
+    (ou même à une spécialisation universitaire).      Outre les étudiants, un autre
+    « apprenant » est l’enseignant qui, au bout d'une heure, se sent confiant de pouvoir
+    enseigner l'informatique, sans posséder pour autant de diplôme universitaire en
+    informatique. Des dizaines de milliers d'enseignants décident de poursuivre leurs
+    études en informatique, soit en suivant des cours de perfectionnement, soit en
+    proposant des cours de suivi en ligne, ou les deux. Et cela s'applique également
+    aux administrateurs des écoles, qui se rendent compte que l'informatique est quelque
+    chose que leurs élèves veulent et que leurs professeurs sont capables de faire.
+    \     Par-dessus tout, ce que tous les participants peuvent apprendre en une heure,
+    c'est que nous pouvons le faire.  "
   hoc_faq_more_questions_q: Avez-vous encore des questions ?
   hoc_faq_more_questions_a: Trouvez une réponse dans notre <a href='http://support.code.org'>forum
     de support</a>.
@@ -1009,8 +1045,8 @@ fr:
     de l'Heure](%{url})
   learn_banner_teachers: 'Educateurs : <a id=''teacher_banner_host''> Animez une heure
     de cours</a> ou <a id=''teacher_banner_howto''>consultez le Guide Pratique</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'Enseignants : [organisez une heure](%{host_url})
+    ou [lisez le guide pratique](%{howto_url})  '
   learn_robotics_banner_heading: LA ROBOTIQUE
   learn_robotics_banner_blurb: Vous avez des robots ? Utilisez-les grâce aux activités
     ci-dessous et mettez en pratique l’une de nos Heures de Code destinées aux élèves
@@ -1718,7 +1754,7 @@ fr:
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: Un histoire Minecraft à propos de deux villages
   tutorial_danceparty_shortdescription: Programme une Soirée Dansante à partager avec
     tes amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres
     !
@@ -5434,11 +5470,13 @@ fr:
     you'll find every puzzle has a solution to make the pets feel better than ever!
   tutorial_superhero_longdescription: Use HTML and CSS pixel art to create your favorite
     superhero masks. Publish and share your creations!
-  tutorial_vidcodeplastic_longdescription: The problem of plastic filling our oceans
-    continues to worsen. Luckily, you can make your voice heard with code through
-    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
-    you can make a second video about any subject you care about! Learn to use loops,
-    sine waves and customized emojis to make a unique project.
+  tutorial_vidcodeplastic_longdescription: "  Le problème du plastique qui remplit
+    nos océans ne cesse de s'aggraver. Heureusement, vous pouvez faire entendre votre
+    voix avec du code, grâce au message d'intérêt public relatif à la pollution par
+    le plastique. Après avoir codé un message d'intérêt public, portant sur la pollution
+    plastique, en utilisant JavaScript, vous pouvez réaliser une deuxième vidéo sur
+    tout autre sujet qui vous tient à cœur ! Apprenez à utiliser des boucles, des
+    ondes sinusoïdales et des émojis personnalisés pour concevoir un projet unique."
   tutorial_vidcodetypeface_longdescription: Create your own typeface using shapes
     and elements of typography. Type has more elements than you may have realized!
     So far we have talked about fonts and how they are different styles of text. Fonts
@@ -5627,11 +5665,13 @@ fr:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
-  tutorial_vidcodeplastiche_longdescription: The problem of plastic filling our oceans
-    continues to worsen. Luckily, you can make your voice heard with code through
-    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
-    you can make a second video about any subject you care about! Learn to use loops,
-    sine waves and customized emojis to make a unique project.
+  tutorial_vidcodeplastiche_longdescription: "  Le problème du plastique qui remplit
+    nos océans ne cesse de s'aggraver. Heureusement, vous pouvez faire entendre votre
+    voix avec du code, grâce au message d'intérêt public relatif à la pollution par
+    le plastique. Après avoir codé un message d'intérêt public, portant sur la pollution
+    plastique, en utilisant JavaScript, vous pouvez réaliser une deuxième vidéo sur
+    tout autre sujet qui vous tient à cœur ! Apprenez à utiliser des boucles, des
+    ondes sinusoïdales et des émojis personnalisés pour concevoir un projet unique."
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5889,11 +5929,12 @@ fr:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: Depuis des siècles, les villageois et les illageois
+    partagent le même espace, mais n’interagissent que très rarement. Nous pouvons
+    maintenant utiliser la puissance du code pour réunir ces deux villages. Les joueurs
+    ressentiront de l’empathie et de la compassion pour leurs voisins, apprendront
+    la coopération et l’inclusion, et découvriront la diversité qui nous rend tous
+    si uniques.
   tutorial_dance2019_language: Arabe, chinois, tchèque, danois, néerlandais, anglais,
     finnois, français, allemand, grec, hindi, hongrois, indonésien, italien, japonais,
     coréen, malais, polonais, portugais et 10 autres !
@@ -5916,19 +5957,20 @@ fr:
     norvégien, persan, polonais, portugais, roumain, russe, espagnol, suédois, turc,
     ukrainien et 19 autres langues
   tutorial_vidnews_language: English only
-  tutorial_kodable-pre_language: English, Arabic, Azerbaijani, German, Greek, Spanish,
-    Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish,
-    Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese
+  tutorial_kodable-pre_language: 'anglais, arabe, azerbaïdjanais, allemand, grec,
+    espagnol, persan, français, indonésien, islandais, italien, coréen, néerlandais,
+    norvégien, polonais, portugais, roumain, russe, serbe, suédois, turc, ukrainien,
+    chinois  '
   tutorial_highseas_language: English only
   tutorial_capython_language: English, Dutch, Spanish
   tutorial_frzn_language: Anglais, arabe, bulgare, chinois, croate, danois, néerlandais,
     finnois, français, allemand, grec, islandais, indonésien, italien, japonais, coréen,
     norvégien, persan, polonais, portugais, roumain, russe, espagnol, suédois, turc,
     ukrainien et 19 autres langues
-  tutorial_cocom_language: English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian,
-    Vietnamese and 9 more
+  tutorial_cocom_language: 'anglais, arabe, bulgare, chinois, tchèque, danois, néerlandais,
+    français, allemand, grec, hébreu, hongrois, indonésien, italien, japonais, coréen,
+    norvégien, persan, polonais, portugais, russe, espagnol, suédois, turc, ukrainien,
+    vietnamien et 9 autres  '
   tutorial_play-lab_language: Anglais, arabe, bulgare, chinois, croate, danois, néerlandais,
     finnois, français, allemand, grec, islandais, indonésien, italien, japonais, coréen,
     norvégien, persan, polonais, portugais, roumain, russe, espagnol, suédois, turc,
@@ -5966,19 +6008,19 @@ fr:
     finnois, français, allemand, grec, islandais, indonésien, italien, japonais, coréen,
     norvégien, persan, polonais, portugais, roumain, russe, espagnol, suédois, turc,
     ukrainien et 19 autres langues
-  tutorial_galaxy_language: English, Albanian, Arabic, Bosnian, Chinese, Croatian,
-    Czech, Danish, Dutch, French, German, Hebrew, Indonesian, Italian, Japanese, Korean,
-    Persian, Polish, Portuguese, Romanian, Russian, Slovenian, Spanish, Swedish, Turkish,
-    Vietnamese
+  tutorial_galaxy_language: anglais, albanais, arabe, bosniaque, chinois, croate,
+    tchèque, danois, néerlandais, français, allemand, hébreu, indonésien, italien,
+    japonais, coréen, persan, polonais, portugais, roumain, russe, slovène, espagnol,
+    suédois, turc, vietnamien
   tutorial_inf_language: Anglais, arabe, bulgare, chinois, croate, danois, néerlandais,
     finnois, français, allemand, grec, islandais, indonésien, italien, japonais, coréen,
     norvégien, persan, polonais, portugais, roumain, russe, espagnol, suédois, turc,
     ukrainien et 19 autres langues
   tutorial_tynkersol_language: English only
   tutorial_itchg_language: English only
-  tutorial_como_language: English, Arabic, Chinese, Czech, French, German, Greek,
-    Hebrew, Japanese, Kazkh, Lithuanian, Polish, Portuguese, Russian, Serbian, Spanish,
-    Turkish, Ukrainian
+  tutorial_como_language: anglais, arabe, chinois, tchèque, français, allemand, grec,
+    hébreu, japonais, kazakh, lituanien, polonais, portugais, russe, serbe, espagnol,
+    turc, ukrainien
   tutorial_processfound_language: English only
   tutorial_tynkerhomo_language: English only
   tutorial_art_language: Anglais, arabe, bulgare, chinois, croate, danois, néerlandais,
@@ -5996,10 +6038,10 @@ fr:
   tutorial_tynkerapp_language: English only
   tutorial_tynkerpup_language: English only
   tutorial_livecode_language: English only
-  tutorial_cocomgame_language: English, Arabic, Bulgarian, Chinese, Croatian, Czech,
-    Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian, Vietnamese and 8 more
+  tutorial_cocomgame_language: 'anglais, arabe, bulgare, chinois, croate, tchèque,
+    danois, néerlandais, finnois, français, allemand, grec, hébreu, italien, japonais,
+    coréen, norvégien, persan, polonais, portugais, roumain, russe, espagnol, suédois,
+    turc, ukrainien, vietnamien et 8 autres  '
   tutorial_tynkerspin_language: English only
   tutorial_code-avengers_language: Anglais, espagnol, néerlandais, russe, Portugais
   tutorial_tynkercq_language: English only
@@ -6223,9 +6265,9 @@ fr:
   tutorial_moveit_language: English only
   tutorial_bigevent_language: English only
   tutorial_gpp_language: English only
-  tutorial_foosgame_language: English, Arabic, German, Spanish, French, Japanese,
-    Korean, Dutch, Portuguese, Brazilian Portuguese, Romanian, Turkish, Traditional
-    Chinese, Simplified Chinese, Greek, Italian, Polish
+  tutorial_foosgame_language: 'anglais, arabe, allemand, espagnol, français, japonais,
+    coréen, néerlandais, portugais, portugais du Brésil, roumain, turc, chinois traditionnel,
+    chinois simplifié, grec, italien, polonais  '
   tutorial_solopython_language: English only
   tutorial_kodableint_language: English only
   tutorial_kodableadv_language: English only
@@ -6438,9 +6480,9 @@ fr:
   tutorial_cashield_language: Français
   tutorial_ccwslimer_language: Français
   tutorial_codinggalaxy_language: Chinese, English
-  tutorial_boatrace_language: Arabic, Chinese (Simplified), Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hindi, Italian, Japanese, Korean, Other, Polish,
-    Romanian, Serbian (Cyrillic), Spanish, Ukrainian
+  tutorial_boatrace_language: arabe, chinois (simplifié), tchèque, danois, néerlandais,
+    français, allemand, grec, hébreu, hindi, italien, japonais, coréen, autre, polonais,
+    roumain, serbe (cyrillique), espagnol, ukrainien
   tutorial_ccplay_language: Français
   tutorial_grinch_language: Français
   tutorial_codehsart_language: Français
@@ -6500,8 +6542,9 @@ fr:
   tutorial_ozorandom_language: Français
   tutorial_ozotroll_language: Français
   tutorial_peblioart_language: Français
-  tutorial_astropi_language: Arabic, Danish, Dutch, English, Finnish, French, German,
-    Greek, Hungarian, Italian, Norwegian (Nynorsk), Other, Polish, Spanish, Swedish
+  tutorial_astropi_language: arabe, danois, néerlandais, anglais, finnois, français,
+    allemand, grec, hongrois, italien, norvégien (Nynorsk), autre, polonais, espagnol,
+    suédois
   tutorial_rgart_language: Français
   tutorial_rgengineer_language: Français
   tutorial_rgmath_language: Français
@@ -6513,28 +6556,28 @@ fr:
   tutorial_scratchtalk_language: English, Spanish
   tutorial_scratchjrstory_language: Français
   tutorial_scratchjrtwinkle_language: Français
-  tutorial_spherocomm_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherocommunity_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherofunctions_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroinfrared_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherolightsensor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheromansion_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_roadblocks_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext2_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext3_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext4_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroraptor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
+  tutorial_spherocomm_language: arabe, chinois, anglais, français, allemand, hébreu,
+    italien, japonais, coréen, norvégien, espagnol, suédois
+  tutorial_spherocommunity_language: arabe, chinois, anglais, français, allemand,
+    hébreu, italien, japonais, coréen, norvégien, espagnol, suédois
+  tutorial_spherofunctions_language: arabe, chinois, anglais, français, allemand,
+    hébreu, italien, japonais, coréen, norvégien, espagnol, suédois
+  tutorial_spheroinfrared_language: arabe, chinois, anglais, français, allemand, hébreu,
+    italien, japonais, coréen, norvégien, espagnol, suédois
+  tutorial_spherolightsensor_language: arabe, chinois, anglais, français, allemand,
+    hébreu, italien, japonais, coréen, norvégien, espagnol, suédois
+  tutorial_spheromansion_language: arabe, chinois, anglais, français, allemand, hébreu,
+    italien, japonais, coréen, norvégien, espagnol, suédois
+  tutorial_roadblocks_language: arabe, chinois, anglais, français, allemand, hébreu,
+    italien, japonais, coréen, norvégien, espagnol, suédois
+  tutorial_spherotext2_language: arabe, chinois, anglais, français, allemand, hébreu,
+    italien, japonais, coréen, norvégien, espagnol, suédois
+  tutorial_spherotext3_language: arabe, chinois, anglais, français, allemand, hébreu,
+    italien, japonais, coréen, norvégien, espagnol, suédois
+  tutorial_spherotext4_language: arabe, chinois, anglais, français, allemand, hébreu,
+    italien, japonais, coréen, norvégien, espagnol, suédois
+  tutorial_spheroraptor_language: arabe, chinois, anglais, français, allemand, hébreu,
+    italien, japonais, coréen, norvégien, espagnol, suédois
   tutorial_stempiday_language: Français
   tutorial_stemplanetoids_language: Français
   tutorial_stempong_language: Français
@@ -6695,7 +6738,8 @@ fr:
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Français
-  tutorial_meeempathy_language: Français
+  tutorial_meeempathy_language: Chinois, danois, néerlandais, anglais, français, italien,
+    japonais, coréen, norvégien, portugais, espagnol, suédois, turc
   tutorial_dance2019_string_detail_grades: 2ème année scolaire et plus
   tutorial_danceparty_string_detail_grades: 2ème année scolaire et plus
   tutorial_chibitronics_string_detail_grades: Grades 2-5
@@ -10130,9 +10174,9 @@ fr:
   tutorial_rootcodebreak_longdescription: Use your Root Robot and the Root Coding
     app to power through printable puzzles and challenges to crack the code to where
     Root is hiding.
-  tutorial_microbit14_longdescription: Code your way to preserving the oceans using
-    micro:bit. Find out more about Global Goal 14, Life Below Water and learn to code
-    a sea turtle beach light.
+  tutorial_microbit14_longdescription: Codez votre façon de préserver les océans en
+    utilisant micro:bit. Découvrez ce qu’est Global Goal 14, la Vie sous l'eau, et
+    apprenez à coder une lampe de plage pour tortue de mer.
   tutorial_barobomoon_longdescription: You're one of the pioneer astronauts at the
     first permanent moon base, and while on an expedition away from base, a malfunction
     incapacitates your lunar rover and radio. But with a little ingenuity you can
@@ -10198,9 +10242,10 @@ fr:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
-  tutorial_ai-oceans_longdescription: Computer science is about so much more than
-    coding! Learn about AI, machine learning, training data, and bias, while exploring
-    ethical issues and how AI can be used to address world problems.
+  tutorial_ai-oceans_longdescription: L'informatique, c'est bien plus que du codage
+    ! Découvrez l'IA, l'apprentissage automatique, les données de formation et le
+    biais, tout en explorant les questions d’éthique et la manière dont l'IA peut
+    être utilisée pour résoudre les problèmes mondiaux.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Français
   tutorial_googlehero_language: English, Spanish
@@ -10402,7 +10447,7 @@ fr:
   tutorial_modtraits_string_detail_grades: 2ème année scolaire et plus
   tutorial_mee_string_detail_grades: 2ème année scolaire et plus
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
-  tutorial_ai-oceans_string_detail_grades: Grades 3+
+  tutorial_ai-oceans_string_detail_grades: À partir du CE2
   tutorial_scratchimagine_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
   tutorial_codesterspsa_string_platforms: Tous les navigateurs modernes, tablette
@@ -10529,8 +10574,8 @@ fr:
   tutorial_modtraits_string_platforms: Tous les navigateurs actuels
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Unplugged
-  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
-    iPads, modern Android phones, iPhones
+  tutorial_ai-oceans_string_platforms: 'Tous les navigateurs actuels, les tablettes
+    Android et iPads actuels, les téléphones Android et iPhones actuels '
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -10744,7 +10789,8 @@ fr:
   tutorial_mee_string_detail_programming_languages: Blocs
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
-  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
+  tutorial_ai-oceans_string_detail_programming_languages: L’IA et l'apprentissage
+    automatique
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

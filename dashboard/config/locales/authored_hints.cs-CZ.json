@@ -2713,7 +2713,7 @@
           "courseD_collector_debugging9_a": "Je několik cest, jak tuto úlohu vyřešit... ale všechny zahrnují otočky!"
         },
         "courseD_farmer_condLoops5_2019": {
-          "courseD_farmer_condLoops5_a": "Máme novou smyčku: `opakuj, dokud tam jsou dýně`. Chápeš, jak ji použít v této úloze?"
+          "courseD_farmer_condLoops5_a": "Máme novou smyčku: `opakuj, dokud nenastane - tam jsou dýně`. Chápeš, jak ji použít v této úloze?"
         },
         "courseD_farmer_condLoops6_2018": {
           "courseD_farmer_condLoops6_a": "Využij cyklus `pokud je cesta vpřed` nebo blok `když je cesta vpřed / jinak`, abys posunul(a) farmářku dále přes spirálu.",
@@ -3093,10 +3093,10 @@
           "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2018": {
-          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2019": {
-          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2020": {
           "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
@@ -3231,7 +3231,7 @@
           "courseD_bee_conditionals_challenge1_a": "Dokážeš najít cestu, kterou se dostaneš na všechny květiny a medové plástve bez naražení do stromu? Což takhle zkusit spirálu?\n\n**Tento úkol je možné vyřešit bez použití otoč se vlevo.**"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Podobně jako při použití bločku `Pokud na květině` se kód uvnitř bločku vykonává pouze, když je včelka na květině lze využít bloček `dokud nektar > 0` k vykonávání bločků uvnitř pouze dokud květina obsahuje nektar. Vyzkoušej toto:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Podobně jako při použití bločku `Pokud na květině` se kód uvnitř bločku vykonává pouze, když je včelka na květině lze využít bloček `dokud nektar > 0` k vykonávání bločků uvnitř pouze dokud květina obsahuje nektar. Vyzkoušej toto:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "Tento úkol lze vyřešit dvěma způsoby!",
@@ -3297,7 +3297,7 @@
           "4-5_Bee_Debugging_1_a": "Pokud máš potíže se zjištěnmí, co není v pořádku, zkus spustit program, aby bylo vidět, kde se něco pokazí."
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Začni tím, že se soustředíš na sbírání DVOU drahokamů z každé z prvních dvou hromádek.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n\nVyužij následující bloky.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          "courseD_collector_debugging_challenge2_a": "Začni tím, že se soustředíš na sbírání DVOU drahokamů z každé z prvních dvou hromádek.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n\nVyužij následující bloky.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         }
       }
     }

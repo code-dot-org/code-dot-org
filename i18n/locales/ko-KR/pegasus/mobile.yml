@@ -1523,7 +1523,7 @@
   hoc_overview_partner_activities_body: "코딩의 시간 웹사이트에는 모든 연령 및 모든 경험 수준에 맞도록 Code.org와 파트너들이 함께 개발한 100가지 이상의 컴퓨터 과학 활동이 준비되어 있습니다."
   hoc_overview_partner_activities_link: "활동 보기"
   hoc_overview_start_tutorial: "시작"
-  hoc_overview_more_resources: "원격 교실에 참여하는 방법에 관한 더 많은 자료는 [가상 아워오브코드]개최를 위한 가이드(https://hourofcode.com/us/how-to/virtual)를 참조하세요. 테크놀로지 및 인터넷 연결이 제한적 또는 없는 학생을 위해  [언플러그드 아워오브코드 활동]의 이 패킷(https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)을 공유하세요."
+  hoc_overview_more_resources: "원격 교실에 참여하는 방법에 관한 더 많은 자료는 [가상 아워오브코드]개최를 위한 가이드(https://hourofcode.com/us/how-to/virtual)를 참조하세요. 테크놀로지 및 인터넷 연결이 제한적이거나 또는 없는 학생을 위해 이  [언플러그드 아워오브코드 활동] 패킷(https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)을 공유하세요."
   hoc_overview_view_teacher_guide: "선생님 가이드 보기"
   hoc2018_creativity: "창의력"
   hoc2018_creativity_create: "만들기"
@@ -1673,3 +1673,4 @@
   hoc2020_mc_mee_description: '새 마인크래프트 아워오브코드 튜토리얼은 이제 Windows, Mac, iPad용 마인크래프트: 교육용 에디션으로 제공 가능합니다. 학생들과 함께 코딩의 기초를 배우고 다양성과 포용성을 탐구하세요! 레슨 플랜과 비디오, 컴퓨터 과학 커리큘럼, 공평 레슨, 교사 트레이닝을 포함한 무료 리소스에 액세스하세요.'
   footer_powered_by_aws: "Powered by Amazon Web Services"
   footer_built_on_github: "Microsoft의 GitHub 위에 구축"
+  codebytes_skinny_banner_english_only: "영문 만"

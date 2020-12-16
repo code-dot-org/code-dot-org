@@ -1527,6 +1527,7 @@
   hoc_overview_partner_activities_body: "Kodlama Saati internet sitesi Code.org ve iş ortakları tarafından geliştirilen her yaşa ve deneyim seviyesine uygun 100’den fazla bilgisayar bilimi faaliyeti içerir."
   hoc_overview_partner_activities_link: "Faaliyetleri Görüntüle"
   hoc_overview_start_tutorial: "Başlayın"
+  hoc_overview_more_resources: "Uzak sınıfınızla nasıl etkileşim kuracağınızla ilgili daha fazla kaynak için [sanal Hour of Code] (https://hourofcode.com/us/how-to/virtual) düzenleme kılavuzumuza bakın. Sınırlı teknoloji ve bağlantıya sahip veya hiç teknolojisi veya bağlantısı olmayan öğrenciler için, bu [bağımsız Hour of Code etkinlikleri](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)  paketini paylaşın ."
   hoc_overview_view_teacher_guide: "Öğretmen kılavuzunu görüntüle"
   hoc2018_creativity: "keşif ve Tasarlama"
   hoc2018_creativity_create: "Oluştur"
@@ -1670,3 +1671,4 @@
   page_not_available_description: "Üzgünüz, açmak istediğiniz sayfa artık bu adreste bulunmuyor. Yine de erişim isterseniz, lütfen [support@code.org](%{support_email_link}) adresine e-posta gönderin."
   page_not_available_button: "Anasayfaya Dön"
   footer_powered_by_aws: "Amazon Web Services tarafından desteklenmektedir"
+  codebytes_skinny_banner_english_only: "Sadece İngilizce"

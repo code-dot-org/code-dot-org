@@ -43,11 +43,12 @@ cs:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: "„Hodina programování 2020“ přichází!"
+  hoc2020_ai_header: Probádejte umělou inteligenci
+  hoc2020_ai_description: Umělá inteligence a strojové učení ovlivňují celý náš svět.
+    Přidejte se k nám a bádejte o umělé inteligenci v této nové řadě videí, trénujte
+    umělou inteligenci pro oceány ve více než 25 jazycích, diskutujte o etice a o
+    umělé inteligenci, a další...
   hoc2019_header: Naučte se informatiku. Změňte svět!
   hoc2019_header_line1_mobile: Naučte se informatiku.
   hoc2019_header_line2_mobile: Změňte svět!
@@ -86,7 +87,7 @@ cs:
     o umělé inteligenci, strojovém učení, trénovacích datech a zaujatosti, přičemž
     probádáte i etické otázky.
   oceans_landing_resource_button: Zobrazit prostředky
-  oceans_landing_cs_for_good: PV na dobro
+  oceans_landing_cs_for_good: Informatika pro dobrou věc
   oceans_landing_cs_for_good_desc: Prostředky, které studentům pomohou pochopit roli,
     kterou by mohly počítačové vědy sehrát při vytváření rovnostářštějšího světa.
   oceans_landing_videos: Videa o UI a o strojovém učení

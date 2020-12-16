@@ -2255,6 +2255,11 @@ de-DE:
     und Partnern entwickelt wurden.
   hoc_overview_partner_activities_link: Aktivitäten anzeigen
   hoc_overview_start_tutorial: Start
+  hoc_overview_more_resources: Weitere Informationen, wie Sie mit Ihrer Klasse aus
+    der Ferne zusammenarbeiten können, finden Sie in unserer Veranstaltungsanleitung
+    für eine [virtuelle Hour of Code](https://hourofcode.com/us/how-to/virtual). Teilen
+    Sie dieses Paket mit Schülern, die wenig Technik oder Konnektivität haben [Offline-Aktivitäten
+    für eine Hour of Code](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Lehrer-Leitfaden anzeigen
   hoc2018_creativity: Kreativität
   hoc2018_creativity_create: Erstellen
@@ -2470,3 +2475,4 @@ de-DE:
   page_not_available_button: Zurück zur Homepage
   ! '': "[empty string]"
   footer_powered_by_aws: Betrieben von Amazon Web Services
+  codebytes_skinny_banner_english_only: Nur Englisch

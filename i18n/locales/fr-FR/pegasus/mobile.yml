@@ -1492,6 +1492,7 @@
   hoc_overview_partner_activities_body: "Le site Web Hour of Code propose plus de 500 activités informatiques, pour tous les âges et tous les niveaux d'expérience, développées par Code.org et ses partenaires."
   hoc_overview_partner_activities_link: "Afficher les Activités"
   hoc_overview_start_tutorial: "Commencer"
+  hoc_overview_more_resources: "Pour obtenir plus de ressources sur la manière de communiquer avec votre classe à distance, consultez notre guide pour l'organisation d'une [virtual Hour of Code] (https://hourofcode.com/us/how-to/virtual). Nous invitons les étudiants qui n'ont pas de matériel ou qui n'ont pas accès à Internet à partager ce paquet d'[unplugged Hour of Code activities] (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).\n"
   hoc_overview_view_teacher_guide: "Voir le guide de l'enseignant"
   hoc2018_creativity: "créativité"
   hoc2018_creativity_create: "Créer"
@@ -1629,3 +1630,4 @@
   homepage_slot_text_title_at_home: "Apprendre à la maison"
   page_not_available_button: "Retourner à la page d’accueil"
   footer_powered_by_aws: "Fourni par Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Seulement en anglais"

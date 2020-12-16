@@ -14,11 +14,7 @@ import reducers, {
 import resourcesEditor, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import {
-  levelKeyList,
-  sampleActivities,
-  searchOptions
-} from './activitiesTestData';
+import {sampleActivities, searchOptions} from './activitiesTestData';
 import resourceTestData from './resourceTestData';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
@@ -32,22 +28,26 @@ describe('LessonEditor', () => {
     registerReducers({...reducers, resources: resourcesEditor});
 
     store = getStore();
-    store.dispatch(init(sampleActivities, levelKeyList, searchOptions));
+    store.dispatch(init(sampleActivities, searchOptions));
     store.dispatch(initResources(resourceTestData));
     defaultProps = {
-      id: 1,
-      initialDisplayName: 'Lesson Name',
-      initialOverview: 'Lesson Overview',
-      initialStudentOverview: 'Overview of the lesson for students',
-      initialUnplugged: false,
-      initialLockable: false,
-      initialAssessment: false,
-      initialCreativeCommonsLicense: 'Creative Commons BY-NC-SA',
-      initialPurpose: 'The purpose of the lesson is for people to learn',
-      initialPreparation: '- One',
-      initialAnnouncements: [],
       relatedLessons: [],
-      initialObjectives: []
+      initialObjectives: [],
+      initialLessonData: {
+        id: 1,
+        name: 'Lesson Name',
+        overview: 'Lesson Overview',
+        studentOverview: 'Overview of the lesson for students',
+        unplugged: false,
+        lockable: false,
+        assessment: false,
+        creativeCommonsLicense: 'Creative Commons BY-NC-SA',
+        purpose: 'The purpose of the lesson is for people to learn',
+        preparation: '- One',
+        announcements: [],
+        assessmentOpportunities: 'Assessment Opportunities',
+        courseVersionId: 1
+      }
     };
   });
 
@@ -78,11 +78,11 @@ describe('LessonEditor', () => {
       'purpose'
     ).to.be.true;
     expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
-    expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(4);
-    expect(wrapper.find('input').length).to.equal(19);
+    expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(5);
+    expect(wrapper.find('input').length).to.equal(20);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
-    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
     expect(wrapper.find('SaveBar').length).to.equal(1);
   });
@@ -120,7 +120,7 @@ describe('LessonEditor', () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
-    let returnData = {updated_at: '2020-11-06T21:33:32.000Z'};
+    let returnData = {updatedAt: '2020-11-06T21:33:32.000Z', activities: []};
     let server = sinon.fakeServer.create();
     server.respondWith('PUT', `/lessons/1`, [
       200,
@@ -189,7 +189,7 @@ describe('LessonEditor', () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
-    let returnData = {updated_at: '2020-11-06T21:33:32.000Z'};
+    let returnData = {updatedAt: '2020-11-06T21:33:32.000Z', activities: []};
     let server = sinon.fakeServer.create();
     server.respondWith('PUT', `/lessons/1`, [
       200,

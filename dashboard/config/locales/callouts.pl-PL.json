@@ -1480,6 +1480,9 @@
         "outbreak2": {
           "minitoolbox": "Kliknij tutaj, aby rozwinąć blok.",
           "pointerlocation": "Przeciągnij tutaj blok tematu."
+        },
+        "outbreak7": {
+          "costumes_callout": "Kliknij, aby utworzyć nowy kostium"
         }
       }
     }
