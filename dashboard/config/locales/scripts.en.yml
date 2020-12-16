@@ -18357,9 +18357,35 @@ en:
           lessons:
             Sprite Lab:
               name: Sprite Lab Blocks
+            Course F Introduction:
+              name: Introducing Sprite Lab
+            Learning Sprites with Sprite Lab:
+              name: Programming with Sprite Lab
+            lesson-1:
+              name: Envelope Variables
+            lesson-2:
+              name: Storing and Retrieving Text
+            lesson-3:
+              name: Create a Chat-Bot
+            lesson-4:
+              name: Counting with Variables
+            lesson-5:
+              name: Groups of Sprites
+            lesson-6:
+              name: Create a Collector Game
+            Virus Simulation for Code Bytes:
+              name: Coding a Simulation
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
+            introduction:
+              display_name: Introduction
+              description: Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!
+            lessonGroup-3:
+              display_name: Variables
+              description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
+            outbreak:
+              display_name: Outbreak Simulation
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
