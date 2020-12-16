@@ -105,15 +105,29 @@
       }
     },
     {
-      "key": "User-Centered Design Micro Activity",
-      "name": "User-Centered Design Micro Activity",
+      "key": "User-Centered Design 1",
+      "name": "User-Centered Design - Define and Prepare",
       "absolute_position": 3,
       "lockable": false,
       "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "User-Centered Design Micro Activity",
+        "lesson.key": "User-Centered Design 1",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "key": "User-Centered Design 2",
+      "name": "User-Centered Design - Try and Reflect",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "User-Centered Design 2",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2021"
       }
@@ -121,9 +135,9 @@
     {
       "key": "User Interfaces",
       "name": "User Interfaces",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -135,9 +149,9 @@
     {
       "key": "Feedback and Testing",
       "name": "Feedback and Testing",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -149,9 +163,9 @@
     {
       "key": "Identifying User Needs",
       "name": "Identifying User Needs",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -163,9 +177,9 @@
     {
       "key": "Project - Paper Prototype",
       "name": "Project - Paper Prototype",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -177,9 +191,9 @@
     {
       "key": "Designing Apps for Good",
       "name": "Designing Apps for Good",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -191,9 +205,9 @@
     {
       "key": "Market Research",
       "name": "Market Research",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -203,11 +217,39 @@
       }
     },
     {
+      "key": "Exploring UI Elements",
+      "name": "Exploring UI Elements",
+      "absolute_position": 11,
+      "lockable": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring UI Elements",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "key": "Build a Paper Prototype",
+      "name": "Build a Paper Prototype",
+      "absolute_position": 12,
+      "lockable": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Paper Prototype",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
       "key": "Paper Prototypes",
       "name": "Paper Prototypes",
-      "absolute_position": 10,
+      "absolute_position": 13,
       "lockable": false,
-      "relative_position": 10,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -219,9 +261,9 @@
     {
       "key": "Prototype Testing",
       "name": "Prototype Testing",
-      "absolute_position": 11,
+      "absolute_position": 14,
       "lockable": false,
-      "relative_position": 11,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -232,10 +274,10 @@
     },
     {
       "key": "Digital Design",
-      "name": "Digital Design",
-      "absolute_position": 12,
+      "name": "Design Mode in AppLab",
+      "absolute_position": 15,
       "lockable": false,
-      "relative_position": 12,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -245,11 +287,39 @@
       }
     },
     {
-      "key": "Linking Screens",
-      "name": "Linking Screens",
-      "absolute_position": 13,
+      "key": "Build a Digital Prototype",
+      "name": "Build a Digital Prototype",
+      "absolute_position": 16,
       "lockable": false,
-      "relative_position": 13,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Digital Prototype",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "key": "Events In AppLab",
+      "name": "Events In AppLab",
+      "absolute_position": 17,
+      "lockable": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "key": "Linking Screens",
+      "name": "Linking Prototype Screens",
+      "absolute_position": 18,
+      "lockable": false,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -261,9 +331,9 @@
     {
       "key": "Testing the App",
       "name": "Testing the App",
-      "absolute_position": 14,
+      "absolute_position": 19,
       "lockable": false,
-      "relative_position": 14,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -273,15 +343,29 @@
       }
     },
     {
-      "key": "Improving and Iterating",
-      "name": "Improving and Iterating",
-      "absolute_position": 15,
+      "key": "Bugs and Features",
+      "name": "Bugs and Features",
+      "absolute_position": 20,
       "lockable": false,
-      "relative_position": 15,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Improving and Iterating",
+        "lesson.key": "Bugs and Features",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "key": "Updating Your Prototype",
+      "name": "Updating Your Prototype",
+      "absolute_position": 21,
+      "lockable": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021"
       }
@@ -289,9 +373,9 @@
     {
       "key": "Project - App Presentation",
       "name": "Project - App Presentation",
-      "absolute_position": 16,
+      "absolute_position": 22,
       "lockable": false,
-      "relative_position": 16,
+      "relative_position": 22,
       "properties": {
       },
       "seeding_key": {
@@ -303,7 +387,7 @@
     {
       "key": "Post-Project Test",
       "name": "Post-Project Test",
-      "absolute_position": 17,
+      "absolute_position": 23,
       "lockable": true,
       "relative_position": 1,
       "properties": {
@@ -317,7 +401,7 @@
     {
       "key": "CS Discoveries Post Course survey",
       "name": "CS Discoveries Post Course survey",
-      "absolute_position": 18,
+      "absolute_position": 24,
       "lockable": true,
       "relative_position": 2,
       "properties": {
@@ -391,7 +475,7 @@
         "script_level.level_keys": [
           "CSD U4L03 autoSFLP_2021"
         ],
-        "lesson.key": "User-Centered Design Micro Activity",
+        "lesson.key": "User-Centered Design 1",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2021"
       },
@@ -1190,7 +1274,7 @@
         "script_level.level_keys": [
           "CSD U4L15 autoSFLP_2021"
         ],
-        "lesson.key": "Improving and Iterating",
+        "lesson.key": "Bugs and Features",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021"
       },
@@ -1211,7 +1295,7 @@
         "script_level.level_keys": [
           "CSDU4 Project Bug Feature_2021"
         ],
-        "lesson.key": "Improving and Iterating",
+        "lesson.key": "Bugs and Features",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021"
       },
@@ -1355,7 +1439,7 @@
         "script_level.level_keys": [
           "CSD U4L03 autoSFLP_2021"
         ],
-        "lesson.key": "User-Centered Design Micro Activity",
+        "lesson.key": "User-Centered Design 1",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2021"
       }
@@ -1762,7 +1846,7 @@
         "script_level.level_keys": [
           "CSD U4L15 autoSFLP_2021"
         ],
-        "lesson.key": "Improving and Iterating",
+        "lesson.key": "Bugs and Features",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021"
       }
@@ -1773,7 +1857,7 @@
         "script_level.level_keys": [
           "CSDU4 Project Bug Feature_2021"
         ],
-        "lesson.key": "Improving and Iterating",
+        "lesson.key": "Bugs and Features",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021"
       }
