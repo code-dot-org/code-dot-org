@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import i18n from '@cdo/locale';
 import {hashString, findProfanity} from '@cdo/apps/utils';
 import Sounds from '@cdo/apps/Sounds';
@@ -186,6 +187,12 @@ export default class AzureTextToSpeech {
    * @private
    */
   asyncPlayFromQueue_ = async play => {
+    if (!studioApp().isRunning()) {
+      this.playing = false;
+      this.queue_ = [];
+      return;
+    }
+
     if (this.playing) {
       return;
     }
@@ -197,7 +204,7 @@ export default class AzureTextToSpeech {
 
     this.playing = true;
     let response = await nextSoundPromise();
-    if (response.success()) {
+    if (studioApp().isRunning() && response.success()) {
       play(response.bytes.slice(0), response.playbackOptions);
     } else {
       response.playbackOptions.onEnded();
