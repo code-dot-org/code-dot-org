@@ -97,17 +97,51 @@ class SchoolDistrict < ApplicationRecord
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT school districts.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true)
-    CSV.read(filename, options).each do |row|
-      parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
-      loaded = find_by_id(parsed[:id])
-      if loaded.nil?
-        SchoolDistrict.new(parsed).save!
-      elsif write_updates
-        loaded.assign_attributes(parsed)
-        loaded.update!(parsed) if loaded.changed?
+  # @param is_dry_run [Boolean] Specify that this is a dry run, and no writes to the database should be conducted. Gives more detailed output of expected changes from importing the given CSV.
+  # @param new_attributes  [Array] List of attributes included in a given import that are new to the model, and thus should not be used to determine whether a record is being "updated" or "unchanged"
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, new_attributes: [])
+    districts = nil
+    new_districts = []
+    updated_districts = 0
+    unchanged_districts = 0
+
+    ActiveRecord::Base.transaction do
+      districts = CSV.read(filename, options).each do |row|
+        parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
+        loaded = find_by_id(parsed[:id])
+        if loaded.nil?
+          SchoolDistrict.new(parsed).save! unless is_dry_run
+          new_districts << parsed
+        elsif write_updates
+          loaded.assign_attributes(parsed)
+          if loaded.changed?
+            loaded.changed.sort == new_attributes.sort ?
+              unchanged_districts += 1 :
+              updated_districts += 1
+
+            loaded.update!(parsed) unless is_dry_run
+          else
+            unchanged_districts += 1
+          end
+        end
       end
     end
+
+    summary_message = "School District seeding: done processing #{filename}.\n"\
+      "#{new_districts.length} new districts added.\n"\
+      "#{updated_districts} districts updated.\n"\
+      "#{unchanged_districts} districts unchanged (district considered changed if only update was adding new columns included in this import).\n"
+
+    # More detailed logging in dry run mode
+    if !new_districts.empty? && is_dry_run
+      summary_message <<
+        "Districts added:\n"\
+        "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
+    end
+
+    CDO.log.info summary_message
+
+    districts
   end
 
   # Download the data in the table to a CSV file.
