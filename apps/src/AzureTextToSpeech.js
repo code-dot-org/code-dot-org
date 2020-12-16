@@ -215,7 +215,9 @@ export default class AzureTextToSpeech {
    * @returns {boolean}
    * @private
    */
-  isRunning_ = studioApp().isRunning;
+  isRunning_ = () => {
+    return studioApp().isRunning();
+  };
 
   /**
    * A wrapper for the Sounds.getSingleton().playBytes function to aid in testability.
