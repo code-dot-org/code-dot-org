@@ -7,9 +7,11 @@
 #  lesson_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  key        :string(255)
 #
 # Indexes
 #
+#  index_objectives_on_key        (key) UNIQUE
 #  index_objectives_on_lesson_id  (lesson_id)
 #
 

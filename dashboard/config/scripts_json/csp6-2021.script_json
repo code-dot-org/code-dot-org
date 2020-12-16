@@ -7,13 +7,11 @@
     "properties": {
       "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit6/{LESSON}",
       "version_year": "2021",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "project_sharing": true,
-      "is_migrated": true
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -121,10 +119,17 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -146,6 +151,7 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -167,6 +173,7 @@
     {
       "chapter": 3,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -188,6 +195,7 @@
     {
       "chapter": 4,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Widget: Ticket Generator"
@@ -209,6 +217,7 @@
     {
       "chapter": 5,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -230,6 +239,7 @@
     {
       "chapter": 6,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -251,6 +261,7 @@
     {
       "chapter": 7,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -272,6 +283,7 @@
     {
       "chapter": 8,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -293,6 +305,7 @@
     {
       "chapter": 9,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -314,6 +327,7 @@
     {
       "chapter": 10,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -335,6 +349,7 @@
     {
       "chapter": 11,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Widget: Traveling Salesman"
@@ -356,6 +371,7 @@
     {
       "chapter": 12,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Widget: Traveling Salesman - Random Nodes"
@@ -377,6 +393,7 @@
     {
       "chapter": 13,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -398,6 +415,7 @@
     {
       "chapter": 14,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -419,6 +437,7 @@
     {
       "chapter": 15,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -440,6 +459,7 @@
     {
       "chapter": 16,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -461,6 +481,7 @@
     {
       "chapter": 17,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -482,6 +503,7 @@
     {
       "chapter": 18,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -503,6 +525,7 @@
     {
       "chapter": 19,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Unit 6 Exam"
