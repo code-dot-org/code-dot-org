@@ -125,7 +125,8 @@ class App extends Component {
     panels: PropTypes.arrayOf(PropTypes.object),
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
-    validationMessages: PropTypes.object
+    validationMessages: PropTypes.object,
+    saveTrainedModel: PropTypes.func
   };
 
   render() {
@@ -133,7 +134,8 @@ class App extends Component {
       panels,
       currentPanel,
       setCurrentPanel,
-      validationMessages
+      validationMessages,
+      saveTrainedModel
     } = this.props;
 
     return (
@@ -144,7 +146,10 @@ class App extends Component {
           setCurrentPanel={setCurrentPanel}
         />
         <div style={styles.bodyContainer}>
-          <Panels currentPanel={currentPanel} />
+          <Panels
+            currentPanel={currentPanel}
+            saveTrainedModel={saveTrainedModel}
+          />
           <ValidationMessages
             currentPanel={currentPanel}
             validationMessages={validationMessages}
