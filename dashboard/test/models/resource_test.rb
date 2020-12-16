@@ -4,7 +4,6 @@ class ResourceTest < ActiveSupport::TestCase
   test "can create resource" do
     resource = create :resource, key: 'my key'
     assert_equal 'my key', resource.key
-    raise "artificial ruby unit test failure"
   end
 
   test "resource can be in multiple lessons" do
