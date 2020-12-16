@@ -124,21 +124,31 @@ sk:
         text: "Zabávaj sa používaním bloku \"ak\"!"
     if_else:
       1:
+        text: "Ahoj, volám sa Saloni. Využívam informatiku na riešenie problémov v zdravotníctve a medicíne. Naučme sa niečo o bloku „ak inak“. Vyzerá to ako blok „ak“, ale na konci má navyše časť, ktorá hovorí „inak“."
       2:
+        text: "Ak dám blok „posuň sa dopredu“ na miesto, kde je napísané „urob“, a blok „otoč sa doľava“, kde je napísané „inak“, znamená to, že zombie si vyberie medzi 2 možnosťami. Ak existuje cesta vpred, zombie sa bude pohybovať dopredu a na iných miestach (tam , kde nie je cesta vpred), odbočí vľavo."
       3:
+        text: "Rovnako ako blok „ak“, aj do bloku „opakovanie“ môžeš vložiť bloky „ak inak“, aby sa zombie stále hýbal a blok „ak inak“, aby neustále kontroloval, či sa je kam zabočiť."
       4:
         text: "Teraz pošli týchto zombie tam, kde patria!"
     if_else_scrat:
       1:
+        text: "Výrok if-else je rozhodnutie medzi dvoma vecami. Pozrime sa, ako môžeme použiť vyhlásenie ak-inak výrok s našim kamarátom Scratom. "
       2:
+        text: "Tento blok vyzerá rovnako ako blok „ak“, ale na spodku je ďalšia časť, ktorá hovorí „inak“. Ak umiestnim blok „posunúť sa dopredu“ tam, kde je napísané „urob“, a blok „otočiť sa doľava“, kde bude napísané „inak“, znamená to, že Scrat sa posunie vpred, ak je pred nim cesta. Ak pred nim nie je žiadna cesta, Scrat zabočí doľava."
       3:
+        text: "Na základe tohto sa rozhodne a urobí jednu z dvoch akcií. Rovnako ako bloky typu „ak“ môžeš do blokov typu „opakovať“ vložiť bloky typu „ak-inak“."
       4:
         text: "Teraz pomôž veveričke Scrat získať žaluď!"
     function:
       1:
+        text: "Ahoj, volám sa Brina,  a som inžinierka spoločnosti Instagram. Funkcia sú určité riadky kódu, ktoré chceš použiť znova a znova, takže namiesto toho, aby si za každým tento kód vypisoval, môžeš použiť iba jeden blok."
       2:
+        text: "Naučíme sa, ako definovať funkcie. Definície funkcií majú v rohu hviezdičku. Názov funkcie je napísaný v hornom riadku."
       3:
+        text: "Bloky, ktoré sa nachádzajú vo vnútri definície, nám hovoria, čo to robí. Táto definícia funkcie sa teda nazýva „vyplň 5“ a je tvorená blokom „opakovať“ a blokom „vyplň“."
       4:
+        text: "Definícia je uvedená v pracovnom priestore, ale naša farmárka túto funkciu nespustí, kým nevytiahneme náš funkčný blok „vyplň 5“ z kategórie funkcií."
       5:
         text: "Vráťme naspäť \"fun\" do \"FUNkcií!\" "
     loop_while:

@@ -3,8 +3,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["teacherForum", "https://forum.code.org/c/csd3"]]
 has_verified_resources true
-has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
 version_year '2021'
 project_sharing true
 curriculum_umbrella 'CSD'

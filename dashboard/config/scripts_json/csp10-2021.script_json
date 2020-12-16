@@ -7,13 +7,11 @@
     "properties": {
       "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit10/{LESSON}",
       "version_year": "2021",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "project_sharing": true,
-      "is_migrated": true
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -233,10 +231,17 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -258,6 +263,7 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -279,6 +285,7 @@
     {
       "chapter": 3,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -300,6 +307,7 @@
     {
       "chapter": 4,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -321,6 +329,7 @@
     {
       "chapter": 5,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -342,6 +351,7 @@
     {
       "chapter": 6,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -363,6 +373,7 @@
     {
       "chapter": 7,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -384,6 +395,7 @@
     {
       "chapter": 8,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -405,6 +417,7 @@
     {
       "chapter": 9,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -426,6 +439,7 @@
     {
       "chapter": 10,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Keylogging"
@@ -447,6 +461,7 @@
     {
       "chapter": 11,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Phishing"
@@ -468,6 +483,7 @@
     {
       "chapter": 12,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Malware"
@@ -489,6 +505,7 @@
     {
       "chapter": 13,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -510,6 +527,7 @@
     {
       "chapter": 14,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -531,6 +549,7 @@
     {
       "chapter": 15,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -552,6 +571,7 @@
     {
       "chapter": 16,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -573,6 +593,7 @@
     {
       "chapter": 17,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -594,6 +615,7 @@
     {
       "chapter": 18,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Encryption Widgets"
@@ -615,6 +637,7 @@
     {
       "chapter": 19,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Encryption Widgets"
@@ -636,6 +659,7 @@
     {
       "chapter": 20,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -657,6 +681,7 @@
     {
       "chapter": 21,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -678,6 +703,7 @@
     {
       "chapter": 22,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Check For Understanding"
@@ -699,6 +725,7 @@
     {
       "chapter": 23,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -720,6 +747,7 @@
     {
       "chapter": 24,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -741,6 +769,7 @@
     {
       "chapter": 25,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -762,6 +791,7 @@
     {
       "chapter": 26,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Lesson Overview"
@@ -783,6 +813,7 @@
     {
       "chapter": 27,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
         "progression": "Unit 10 Exam"

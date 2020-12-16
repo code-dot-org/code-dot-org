@@ -1599,3 +1599,4 @@
   hoc2019_dance_previous_versions: "Ser du etter ein tidlegare versjon av Dansefest? \nKlikk her for å starte [Del 1](%{dance_2018_link}) og [Del 2](%{dance_extras_2018_link}) frå i fjor."
   page_not_available_button: "Gå heim"
   footer_powered_by_aws: "Drive av Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Berre på engelsk"
