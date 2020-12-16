@@ -176,15 +176,16 @@ class SchoolDistrict < ApplicationRecord
       end
     end
 
+    future_tense_dry_run = is_dry_run ? ' to be' : ''
     summary_message = "School District seeding: done processing #{filename}.\n"\
-      "#{new_districts.length} new districts added.\n"\
-      "#{updated_districts} districts updated.\n"\
-      "#{unchanged_districts} districts unchanged (district considered changed if only update was adding new columns included in this import).\n"
+      "#{new_districts.length} new districts#{future_tense_dry_run} added.\n"\
+      "#{updated_districts} districts#{future_tense_dry_run} updated.\n"\
+      "#{unchanged_districts} districts#{future_tense_dry_run} unchanged (district considered changed if only update was adding new columns included in this import).\n"
 
     # More detailed logging in dry run mode
     if !new_districts.empty? && is_dry_run
       summary_message <<
-        "Districts added:\n"\
+        "Districts#{future_tense_dry_run} added:\n"\
         "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
     end
 
