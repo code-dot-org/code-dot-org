@@ -4,7 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import FontAwesome from '../../templates/FontAwesome';
 import _ from 'lodash';
 
-// Help Tip without the Portal feature, which breaks on Modals
+// Help Tip without the Portal feature, which doesn't work if used in a Modal.
 export default function HelpTipModal({children}) {
   const id = _.uniqueId();
 
