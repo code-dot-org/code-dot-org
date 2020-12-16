@@ -82,9 +82,9 @@ export default class AzureTextToSpeech {
    *
    * @param {function} soundPromise A thunk that returns a promise, which resolves to a SoundResponse.
    */
-  enqueueAndPlay = soundPromise => {
+  enqueueAndPlay = (soundPromise, isRunning) => {
     this.enqueue_(soundPromise);
-    this.asyncPlayFromQueue_(this.playBytes_);
+    this.asyncPlayFromQueue_(this.playBytes_, isRunning);
   };
 
   /**
@@ -185,7 +185,13 @@ export default class AzureTextToSpeech {
    * @param {function(ArrayBuffer, Object)} play Function that plays sound bytes.
    * @private
    */
-  asyncPlayFromQueue_ = async play => {
+  asyncPlayFromQueue_ = async (play, isRunning) => {
+    if (!isRunning()) {
+      this.playing = false;
+      this.queue_ = [];
+      return;
+    }
+
     if (this.playing) {
       return;
     }
@@ -197,7 +203,7 @@ export default class AzureTextToSpeech {
 
     this.playing = true;
     let response = await nextSoundPromise();
-    if (response.success()) {
+    if (isRunning() && response.success()) {
       play(response.bytes.slice(0), response.playbackOptions);
     } else {
       response.playbackOptions.onEnded();
