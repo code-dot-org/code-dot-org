@@ -137,6 +137,12 @@ module Services
         lessons_resources_data = data['lessons_resources']
         seed_context = SeedContext.new
 
+        # The order of the following import steps is important. If B belongs_to
+        # A, then B holds an id field referring to A, and therefore A must be
+        # imported before B. For example, LessonsResource belongs to both
+        # Lesson and Resource, so both Lesson and Resource must be imported
+        # before LessonsResource.
+
         seed_context.script = import_script(script_data)
 
         # course version must be set before resources are imported.

@@ -1,0 +1,8 @@
+name 'U1L9 Multiple Choice Digital Analog_2021'
+title 'Multiple Choice: Converting from Analog to Digital'
+description ''
+question 'Which of the following would result in a better digital approximation of an analog black and white image?'
+wrong 'Increasing the size of each sample square, thus decreasing the number of samples taken.'
+right 'Decreasing the size of each sample square, thus increasing the number of samples taken.'
+wrong 'Using fewer bits to represent the image.'
+wrong 'Using decimal numbers to represent each pixel.'
