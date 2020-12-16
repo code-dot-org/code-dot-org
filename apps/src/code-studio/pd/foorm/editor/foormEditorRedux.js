@@ -1,6 +1,7 @@
 const SET_FORM_QUESTIONS = 'foormEditor/SET_FORM_QUESTIONS';
 const SET_HAS_ERROR = 'foormEditor/SET_HAS_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
+const SET_FORM_METADATA = 'foormEditor/SET_FORM_METADATA';
 
 // formQuestions is an object in surveyJS format that represents
 // a single survey
@@ -15,6 +16,11 @@ export const setFormQuestions = formQuestions => ({
 export const setFormData = formData => ({
   type: SET_FORM_DATA,
   formData
+});
+
+export const setFormMetadata = formMetadata => ({
+  type: SET_FORM_METADATA,
+  formMetadata
 });
 
 export const setHasError = hasError => ({
@@ -52,6 +58,15 @@ export default function foormEditorRedux(state = initialState, action) {
       formName: action.formData['name'],
       formVersion: action.formData['version'],
       formId: action.formData['id']
+    };
+  }
+  if (action.type === SET_FORM_METADATA) {
+    return {
+      ...state,
+      isFormPublished: action.formMetadata['published'],
+      formName: action.formMetadata['name'],
+      formVersion: action.formMetadata['version'],
+      formId: action.formMetadata['id']
     };
   }
 
