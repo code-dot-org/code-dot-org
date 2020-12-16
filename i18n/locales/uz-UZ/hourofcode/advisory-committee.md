@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Kod soati va CSEdWeek maslahat qo‘mitasi
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Kod soati va CSEdWeek maslahat qo‘mitasi
 
 {{ advisory-committee/about_headshots }}
 

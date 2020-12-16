@@ -1675,16 +1675,16 @@ es:
             Gumball Play Lab:
               name: Laboratorio de juegos de Gumball
         starwars:
-          title: 'Star Wars: Contruyendo una Galaxia con Código'
-          description: Aprende a programar droides y crea tu propio juego de Star Wars en una galaxia muy, muy lejana.
-          description_short: Aprende a programar droides y crea tu propio juego de Star Wars en una galaxia muy, muy lejana.
+          title: 'La guerra de las galaxias: cómo construir una galaxia con código (JavaScript)'
+          description: Aprende a programar droides y crea tu propio juego de la Guerra de las galaxias en una galaxia muy, muy lejana.
+          description_short: Aprende a programar droides y crea tu propio juego de la Guerra de las galaxias en una galaxia muy, muy lejana.
           lessons:
             Hour of Code 2015:
               name: Hora de Code 2015
         starwarsblocks:
           title: 'Star Wars: Contruyendo una Galaxia con Código'
-          description: Aprende a programar droides y crea tu propio juego de Star Wars en una galaxia muy, muy lejana.
-          description_short: Aprende a programar droides y crea tu propio juego de Star Wars en una galaxia muy, muy lejana.
+          description: Aprende a programar droides y crea tu propio juego de la Guerra de las galaxias en una galaxia muy, muy lejana.
+          description_short: Aprende a programar droides y crea tu propio juego de la Guerra de las galaxias en una galaxia muy, muy lejana.
           lessons:
             Hour of Code 2015:
               name: Hora de Code 2015
@@ -3688,7 +3688,7 @@ es:
               name: Encuesta de fin de curso de CSP
         minecraft:
           title: Diseñador de Minecraft Hora de Código
-          description_short: Construye un juego de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más.
+          description_short: Construye tu propia versión de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más.
           description: Construye un juego de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más.
           lessons:
             Minecraft Hour of Code Designer:
@@ -6682,7 +6682,7 @@ es:
           description: '¡Minecraft está de vuelta para la Hora del Código con una actividad nueva! Viaja a través de Minecraft con códigos.'
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: Hora del Código para el Viaje del héroe'
+              name: 'Minecraft\: Hora del Código para el Viaje del Héroe'
             Minecraft Hour of Code:
               name: Hora de Code de Minecraft
         applab-intro-staging:
