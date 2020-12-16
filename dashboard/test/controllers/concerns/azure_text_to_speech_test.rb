@@ -49,34 +49,56 @@ class AzureTextToSpeechTest < ActionController::TestCase
     assert_nil AzureTextToSpeech.get_token
   end
 
-  test 'get_speech: returns text as speech on success' do
+  test 'throttled_get_speech: yields text as speech on success' do
     expected_speech = 'string-of-bytes'
-    AzureTextToSpeech.stubs(:get_token).returns(@mock_token)
-    AzureTextToSpeech.stubs(:ssml).returns('<speak>hi</speak>')
+    Cdo::Throttle.expects(:throttle).once.returns(false)
+    AzureTextToSpeech.expects(:get_token).once.returns(@mock_token)
+    AzureTextToSpeech.expects(:ssml).once.returns('<speak>hi</speak>')
     stub_request(:post, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/v1").
       with(headers: {'Authorization' => "Bearer #{@mock_token}"}).
       to_return(status: 200, body: expected_speech)
     Honeybadger.expects(:notify).never
 
-    assert_equal expected_speech, AzureTextToSpeech.get_speech('hi', 'female', 'en-US')
+    actual_speech = nil
+    AzureTextToSpeech.throttled_get_speech('hi', 'female', 'en-US', '123', 1, 1) {|speech| actual_speech = speech}
+    assert_equal expected_speech, actual_speech
   end
 
-  test 'get_speech: returns nil if token is nil' do
-    AzureTextToSpeech.stubs(:get_token).returns(nil)
+  test 'throttled_get_speech: does not yield if request is throttled' do
+    id = 'a1b2c3'
+    limit = 100
+    period = 60
+    Cdo::Throttle.expects(:throttle).once.with("azure_tts/" + id, limit, period).returns(true)
+    AzureTextToSpeech.expects(:get_token).never
+    AzureTextToSpeech.expects(:ssml).never
     Honeybadger.expects(:notify).never
 
-    assert_nil AzureTextToSpeech.get_speech('hi', 'female', 'en-US')
+    AzureTextToSpeech.throttled_get_speech('hi', 'female', 'en-US', id, limit, period) {raise 'Error: Block unexpectedly executed.'}
     assert_requested :post, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/v1", times: 0
   end
 
-  test 'get_speech: returns nil on error' do
-    AzureTextToSpeech.stubs(:get_token).returns(@mock_token)
-    AzureTextToSpeech.stubs(:ssml).returns('<speak>hi</speak>')
+  test 'throttled_get_speech: yields nil if token is nil' do
+    Cdo::Throttle.expects(:throttle).once.returns(false)
+    AzureTextToSpeech.expects(:get_token).once.returns(nil)
+    Honeybadger.expects(:notify).never
+
+    actual_speech = 'should-get-set-to-nil'
+    AzureTextToSpeech.throttled_get_speech('hi', 'female', 'en-US', '123', 1, 1) {|speech| actual_speech = speech}
+    assert_nil actual_speech
+    assert_requested :post, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/v1", times: 0
+  end
+
+  test 'throttled_get_speech: yields nil on error' do
+    Cdo::Throttle.expects(:throttle).once.returns(false)
+    AzureTextToSpeech.expects(:get_token).once.returns(@mock_token)
+    AzureTextToSpeech.expects(:ssml).once.returns('<speak>hi</speak>')
     stub_request(:post, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/v1").
       to_raise(ArgumentError)
     Honeybadger.expects(:notify).once
 
-    assert_nil AzureTextToSpeech.get_speech('hi', 'female', 'en-US')
+    actual_speech = 'should-get-set-to-nil'
+    AzureTextToSpeech.throttled_get_speech('hi', 'female', 'en-US', '123', 1, 1) {|speech| actual_speech = speech}
+    assert_nil actual_speech
   end
 
   test 'get_voices: caches and returns voices array on success' do

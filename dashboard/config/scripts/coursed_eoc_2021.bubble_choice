@@ -1,0 +1,9 @@
+name 'courseD_EOC_2021'
+display_name 'End of Course Project'
+description 'You have reached the last lesson of Course D! Choose a project to create.'
+
+sublevels
+level 'CourseD_EOC_bounce1_2021'
+level 'CourseD_EOC_starwars_2021'
+level 'CourseD_EOC_dance_2021'
+level 'CourseD_EOC_artist_2021'
