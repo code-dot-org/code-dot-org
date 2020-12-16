@@ -317,6 +317,8 @@ describe('AzureTextToSpeech', () => {
       await azureTTS.asyncPlayFromQueue_(playSpy);
       expect(onAppEndedStub).to.have.been.calledOnce;
       expect(playSpy).not.to.have.been.called;
+
+      onAppEndedStub.restore();
     });
 
     it('no-ops if sound is already playing', async () => {
