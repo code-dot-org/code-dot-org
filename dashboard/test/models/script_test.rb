@@ -245,7 +245,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_empty script.properties
   end
 
-  test 'can setup migrated script without script_json file' do
+  test 'can setup new migrated script' do
     Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     # the contents of test-migrated-new.script and test-migrated-new.script_json
@@ -256,6 +256,28 @@ class ScriptTest < ActiveSupport::TestCase
 
     script = Script.find_by_name('test-migrated-new')
     assert script.is_migrated
+  end
+
+  test 'can setup migrated script with new models' do
+    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+
+    # test that LessonActivity, ActivitySection and Objective can be seeded
+    # from .script_json when is_migrated is specified in the .script file.
+    create :maze, name: 'test_maze_level'
+    script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
+    Script.setup([script_file])
+
+    script = Script.find_by_name('test-migrated-models')
+    assert script.is_migrated
+    assert_equal 1, script.lesson_groups.count
+    assert_equal 1, script.lessons.count
+    lesson = script.lessons.first
+    assert_equal 1, lesson.lesson_activities.count
+    activity = lesson.lesson_activities.first
+    assert_equal 'My Activity', activity.name
+    assert_equal 1, activity.activity_sections.count
+    section = activity.activity_sections.first
+    assert_equal 'My Activity Section', section.name
   end
 
   test 'should not create two scripts with same name' do
