@@ -10,7 +10,6 @@ export const sampleActivities = [
         position: 1,
         displayName: 'Making programs',
         remarks: true,
-        slide: false,
         scriptLevels: [],
         text: 'Simple text',
         tips: []
@@ -20,7 +19,6 @@ export const sampleActivities = [
         position: 2,
         displayName: '',
         remarks: false,
-        slide: true,
         scriptLevels: [],
         text: 'Details about this section',
         tips: [
@@ -42,7 +40,6 @@ export const sampleActivities = [
         position: 3,
         displayName: 'Programming Progression',
         remarks: false,
-        slide: false,
         text: 'This progression teaches you programming!',
         scriptLevels: [
           {
