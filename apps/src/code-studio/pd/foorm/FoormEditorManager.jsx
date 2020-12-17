@@ -44,8 +44,6 @@ class FoormEditorManager extends React.Component {
       formKey: 0,
       formPreviewQuestions: null,
       showCodeMirror: false,
-      formName: null,
-      formVersion: null,
       hasLoadError: false
     };
 
@@ -67,7 +65,7 @@ class FoormEditorManager extends React.Component {
         <MenuItem
           key={i}
           eventKey={i}
-          onClick={() => this.loadConfiguration(formName, formVersion, formId)}
+          onClick={() => this.loadConfiguration(formId)}
         >
           {`${formName}, version ${formVersion}`}
         </MenuItem>
@@ -75,7 +73,7 @@ class FoormEditorManager extends React.Component {
     });
   }
 
-  loadConfiguration(formName, formVersion, formId) {
+  loadConfiguration(formId) {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     $.ajax({
@@ -86,20 +84,20 @@ class FoormEditorManager extends React.Component {
         this.props.updateFormData(result);
         this.setState({
           showCodeMirror: true,
-          formName: formName,
-          formVersion: formVersion,
-          formId: formId,
           hasLoadError: false
         });
         this.props.resetCodeMirror(result['questions']);
       })
       .fail(() => {
-        this.props.updateFormData({questions: {}, published: null});
-        this.setState({
-          showCodeMirror: true,
+        this.props.updateFormData({
+          questions: {},
+          published: null,
           formName: null,
           formVersion: null,
-          formId: null,
+          formId: null
+        });
+        this.setState({
+          showCodeMirror: true,
           hasLoadError: true
         });
         this.props.resetCodeMirror({});
@@ -109,12 +107,15 @@ class FoormEditorManager extends React.Component {
   initializeEmptyCodeMirror = () => {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
-    this.props.updateFormData({questions: {}, published: null});
-    this.setState({
-      showCodeMirror: true,
+    this.props.updateFormData({
+      questions: {},
+      published: null,
       formName: null,
       formVersion: null,
-      formId: null,
+      formId: null
+    });
+    this.setState({
+      showCodeMirror: true,
       hasLoadError: false
     });
     this.props.resetCodeMirror({});
