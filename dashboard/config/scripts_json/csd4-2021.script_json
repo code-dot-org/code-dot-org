@@ -231,25 +231,11 @@
       }
     },
     {
-      "key": "Build a Paper Prototype",
+      "key": "Paper Prototypes",
       "name": "Build a Paper Prototype",
       "absolute_position": 12,
       "lockable": false,
       "relative_position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Build a Paper Prototype",
-        "lesson_group.key": "csd4_2",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
-      "key": "Paper Prototypes",
-      "name": "Paper Prototypes",
-      "absolute_position": 13,
-      "lockable": false,
-      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -261,9 +247,9 @@
     {
       "key": "Prototype Testing",
       "name": "Prototype Testing",
-      "absolute_position": 14,
+      "absolute_position": 12,
       "lockable": false,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -275,9 +261,9 @@
     {
       "key": "Digital Design",
       "name": "Design Mode in AppLab",
-      "absolute_position": 15,
+      "absolute_position": 13,
       "lockable": false,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -289,9 +275,9 @@
     {
       "key": "Build a Digital Prototype",
       "name": "Build a Digital Prototype",
-      "absolute_position": 16,
+      "absolute_position": 14,
       "lockable": false,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -303,9 +289,9 @@
     {
       "key": "Events In AppLab",
       "name": "Events In AppLab",
-      "absolute_position": 17,
+      "absolute_position": 15,
       "lockable": false,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -317,9 +303,9 @@
     {
       "key": "Linking Screens",
       "name": "Linking Prototype Screens",
-      "absolute_position": 18,
+      "absolute_position": 16,
       "lockable": false,
-      "relative_position": 18,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -331,9 +317,9 @@
     {
       "key": "Testing the App",
       "name": "Testing the App",
-      "absolute_position": 19,
+      "absolute_position": 17,
       "lockable": false,
-      "relative_position": 19,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -345,9 +331,9 @@
     {
       "key": "Bugs and Features",
       "name": "Bugs and Features",
-      "absolute_position": 20,
+      "absolute_position": 18,
       "lockable": false,
-      "relative_position": 20,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -359,9 +345,9 @@
     {
       "key": "Updating Your Prototype",
       "name": "Updating Your Prototype",
-      "absolute_position": 21,
+      "absolute_position": 19,
       "lockable": false,
-      "relative_position": 21,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -373,9 +359,9 @@
     {
       "key": "Project - App Presentation",
       "name": "Project - App Presentation",
-      "absolute_position": 22,
+      "absolute_position": 20,
       "lockable": false,
-      "relative_position": 22,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -387,7 +373,7 @@
     {
       "key": "Post-Project Test",
       "name": "Post-Project Test",
-      "absolute_position": 23,
+      "absolute_position": 22,
       "lockable": true,
       "relative_position": 1,
       "properties": {
@@ -401,7 +387,7 @@
     {
       "key": "CS Discoveries Post Course survey",
       "name": "CS Discoveries Post Course survey",
-      "absolute_position": 24,
+      "absolute_position": 23,
       "lockable": true,
       "relative_position": 2,
       "properties": {
@@ -1917,5 +1903,11 @@
         "script.name": "csd4-2021"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
   ]
 }
