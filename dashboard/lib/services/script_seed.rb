@@ -18,7 +18,7 @@ module Services
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
       :script_levels, :levels_script_levels, :levels, :resources,
-      :lessons_resources, keyword_init: true
+      :lessons_resources, :objectives, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -32,7 +32,7 @@ module Services
     # @param [Script] script - the Script object to serialize
     # @return [String] the JSON representation
     def self.serialize_seeding_json(script)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       # We need to retrieve the Levels anyway, and doing it this way makes it fast to get the Level keys for each ScriptLevel.
       my_script_levels = ScriptLevel.includes(:levels).where(script_id: script.id)
@@ -42,6 +42,7 @@ module Services
       sections = activities.map(&:activity_sections).flatten
       resources = script.lessons.map(&:resources).flatten
       lessons_resources = script.lessons.map(&:lessons_resources).flatten
+      objectives = script.lessons.map(&:objectives).flatten
 
       seed_context = SeedContext.new(
         script: script,
@@ -53,7 +54,8 @@ module Services
         levels_script_levels: script.levels_script_levels,
         levels: my_levels,
         resources: resources,
-        lessons_resources: lessons_resources
+        lessons_resources: lessons_resources,
+        objectives: objectives
       )
       scope = {seed_context: seed_context}
 
@@ -66,7 +68,8 @@ module Services
         script_levels: script.script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl, scope: scope).as_json},
         levels_script_levels: script.levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json},
         resources: resources.map {|r| ScriptSeed::ResourceSerializer.new(r, scope: scope).as_json},
-        lessons_resources: lessons_resources.map {|lr| ScriptSeed::LessonsResourceSerializer.new(lr, scope: scope).as_json}
+        lessons_resources: lessons_resources.map {|lr| ScriptSeed::LessonsResourceSerializer.new(lr, scope: scope).as_json},
+        objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json}
       }
       JSON.pretty_generate(data)
     end
@@ -135,6 +138,7 @@ module Services
         levels_script_levels_data = data['levels_script_levels']
         resources_data = data['resources']
         lessons_resources_data = data['lessons_resources']
+        objectives_data = data['objectives']
         seed_context = SeedContext.new
 
         # The order of the following import steps is important. If B belongs_to
@@ -145,8 +149,12 @@ module Services
 
         seed_context.script = import_script(script_data)
 
-        # course version must be set before resources are imported.
-        CourseOffering.add_course_offering(seed_context.script)
+        # Course version must be set before resources are imported. If the
+        # script is in a unit group, we must wait and let the next seed step set
+        # the course version on the unit group before resources can be imported.
+        if seed_context.script.is_course
+          CourseOffering.add_course_offering(seed_context.script)
+        end
 
         seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
         seed_context.lessons = import_lessons(lessons_data, seed_context)
@@ -167,6 +175,7 @@ module Services
 
         seed_context.resources = import_resources(resources_data, seed_context)
         seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
+        seed_context.objectives = import_objectives(objectives_data, seed_context)
 
         seed_context.script
       end
@@ -312,6 +321,25 @@ module Services
 
     def self.import_resources(resources_data, seed_context)
       course_version_id = seed_context.script.get_course_version&.id
+
+      unless course_version_id
+        # We can't import any resources without a course version, because
+        # course_version_id is required for resources. Don't raise, because we
+        # may be in the scenario where this script does belong to a unit group,
+        # but that association is not present in the database yet because the
+        # seed process has not yet run on this machine since that relationship
+        # was added. In this scenario, the relationship to the unit group and
+        # its course version will be established in a later seed step. Then,
+        # this method will be able to import the resources the next time the
+        # seed process runs.
+        if resources_data.count > 0
+          puts "WARNING: unable to import resources into script #{seed_context.script.name} "\
+            "because course version is missing. This is only to be expected if "\
+            "the script is being seeded for the first time."
+        end
+        return []
+      end
+
       resources_to_import = resources_data.map do |resource_data|
         resource_attrs = resource_data.except('seeding_key')
         resource_attrs['course_version_id'] = course_version_id
@@ -326,6 +354,8 @@ module Services
     end
 
     def self.import_lessons_resources(lessons_resources_data, seed_context)
+      return [] unless seed_context.script.get_course_version
+
       lessons_resources_to_import = lessons_resources_data.map do |lr_data|
         lesson_id = seed_context.lessons.select {|l| l.key == lr_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
@@ -348,6 +378,22 @@ module Services
 
       LessonsResource.import! lessons_resources_to_import, on_duplicate_key_update: get_columns(LessonsResource)
       LessonsResource.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+    end
+
+    def self.import_objectives(objectives_data, seed_context)
+      objectives_to_import = objectives_data.map do |objective_data|
+        lesson_id = seed_context.lessons.select {|l| l.key == objective_data['seeding_key']['lesson.key']}.first&.id
+        raise 'No lesson found' if lesson_id.nil?
+
+        objective_attrs = objective_data.except('seeding_key')
+        objective_attrs['lesson_id'] = lesson_id
+        Objective.new(objective_attrs)
+      end
+
+      # Delete any existing Objectives that weren't in the imported list, and return those remaining.
+      existing_objectives = Objective.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+      Objective.import! objectives_to_import, on_duplicate_key_update: get_columns(Objective)
+      destroy_outdated_objects(Objective, existing_objectives, objectives_to_import, seed_context)
     end
 
     def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
@@ -480,6 +526,14 @@ module Services
 
     class LessonsResourceSerializer < ActiveModel::Serializer
       attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class ObjectiveSerializer < ActiveModel::Serializer
+      attributes :key, :properties, :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])

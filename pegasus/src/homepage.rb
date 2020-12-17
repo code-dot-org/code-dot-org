@@ -409,7 +409,7 @@ class Homepage
     elsif promote_code_bytes(request)
       "codebytes2020"
     else
-      "hoc2020"
+      "changeworld"
     end
   end
 
