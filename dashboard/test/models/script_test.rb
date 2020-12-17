@@ -278,6 +278,12 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, activity.activity_sections.count
     section = activity.activity_sections.first
     assert_equal 'My Activity Section', section.name
+    assert_equal 1, section.script_levels.count
+    script_level = section.script_levels.first
+    assert_equal 1, script_level.levels.count
+    assert_equal 'test_maze_level', script_level.levels.first.name
+    assert_equal 1, script.levels.count
+    assert_equal 'test_maze_level', script.levels.first.name
   end
 
   test 'script_json settings override take precedence for migrated script' do
