@@ -280,6 +280,28 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'My Activity Section', section.name
   end
 
+  test 'script_json settings override take precedence for migrated script' do
+    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+
+    script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-overrides.script')
+    Script.setup([script_file])
+
+    # If settings differ between .script and .script_json for a migrated script,
+    # the .script_json settings must take preference. This is somewhat of an
+    # implementation-agnostic test, because the implementation doesn't even look
+    # at anything inside the .script file besides the is_migrated property for
+    # migrated scripts.
+    script = Script.find_by_name('test-migrated-overrides')
+    assert script.is_migrated
+    assert script.tts
+    assert_equal 'my-pilot-experiment', script.pilot_experiment
+    refute script.editor_experiment
+    refute script.login_required
+    refute script.student_detail_progress_view
+    assert_equal ['my lesson group'], script.lesson_groups.map(&:key)
+    assert_equal ['my lesson'], script.lessons.map(&:key)
+  end
+
   test 'should not create two scripts with same name' do
     create(:script, name: 'script')
     raise = assert_raises ActiveRecord::RecordInvalid do
