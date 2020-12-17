@@ -309,14 +309,6 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal time, level.updated_at.to_i
   end
 
-  test 'artist levels are seeded with solutions' do
-    level = Artist.where(level_num: 'custom').first # custom levels have solutions
-    assert level.solution_blocks
-    assert level.ideal_level_source
-
-    assert_equal level.solution_blocks, level.ideal_level_source.data
-  end
-
   def update_contract_match
     name = 'contract match test'
     dsl_text = <<~DSL
