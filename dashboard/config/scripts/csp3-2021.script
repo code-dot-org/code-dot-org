@@ -35,7 +35,6 @@ level 'U3L2 CSP CFU ID names_2021', progression: 'Check For Understanding', asse
 
 lesson 'Project - Designing an App Part 1', display_name: 'Project - Designing an App Part 1'
 level 'CSP U3L3 SFLP 20-21_2021', progression: 'Lesson Overview'
-level 'CSP U3 L3 Check Your Understanding_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Project - Designing an App Part 2', display_name: 'Project - Designing an App Part 2'
 level 'CSP U3L4 SFLP 20-21_2021', progression: 'Lesson Overview'

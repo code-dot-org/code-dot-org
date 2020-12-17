@@ -41,9 +41,7 @@ level 'CSD U4L09 autoSFLP_2021', named: true
 
 lesson 'Exploring UI Elements', display_name: 'Exploring UI Elements'
 
-lesson 'Build a Paper Prototype', display_name: 'Build a Paper Prototype'
-
-lesson 'Paper Prototypes', display_name: 'Paper Prototypes'
+lesson 'Paper Prototypes', display_name: 'Build a Paper Prototype'
 level 'CSD U4L10 autoSFLP_2021', named: true
 level 'Example App Types_2021', named: true
 level 'CSDU4 Quiz App Demo_2021', progression: 'Demo Apps'
