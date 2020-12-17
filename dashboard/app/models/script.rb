@@ -68,6 +68,23 @@ class Script < ApplicationRecord
     )
   end
 
+  scope :with_seed_models, -> do
+    includes(
+      [
+        :course_version,
+        :lesson_groups,
+        {
+          lessons: [
+            {lesson_activities: :activity_sections},
+            :resources
+          ]
+        },
+        :script_levels,
+        :levels
+      ]
+    )
+  end
+
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
@@ -87,11 +104,19 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
+  validate :set_is_migrated_only_for_migrated_scripts
+
   include SerializedProperties
 
   after_save :generate_plc_objects
 
   SCRIPT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
+
+  def set_is_migrated_only_for_migrated_scripts
+    if !!is_migrated && !hidden
+      errors.add(:is_migrated, "Can't be set on a course that is visible")
+    end
+  end
 
   def self.script_directory
     SCRIPT_DIRECTORY

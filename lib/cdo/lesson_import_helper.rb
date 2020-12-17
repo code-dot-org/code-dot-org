@@ -20,12 +20,12 @@ module LessonImportHelper
   # @param [Lesson] lesson - Code Studio Lesson object to update.
   # @param [Hash] cb_lesson_data - Lesson and activity data to import.
   def self.update_lesson(lesson, cb_lesson_data = {})
-    # In the future, only levelbuilder should be added to this list.
-    raise unless [:development, :adhoc].include? rack_env
+    raise unless [:development, :adhoc, :levelbuilder].include? rack_env
+    raise unless lesson.script.hidden
 
     # course version id should always be present for CSF/CSD/CSP 2020 courses.
     course_version_id = lesson.script&.get_course_version&.id
-    raise unless course_version_id
+    raise "Script must have course version" unless course_version_id
 
     lesson_levels = lesson.script_levels.reject {|l| l.levels[0].type == 'CurriculumReference'}
     if cb_lesson_data.empty?
@@ -40,7 +40,7 @@ module LessonImportHelper
       lesson.creative_commons_license = cb_lesson_data['creative_commons_license']
       lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
       lesson.objectives = cb_lesson_data['objectives'].map do |o|
-        Objective.new(description: o["name"])
+        Objective.new(key: SecureRandom.uuid, description: o["name"])
       end
       lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson_levels, lesson)
       lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
