@@ -121,6 +121,12 @@ class Script < ApplicationRecord
     SCRIPT_DIRECTORY
   end
 
+  SCRIPT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+
+  def self.script_json_directory
+    SCRIPT_JSON_DIRECTORY
+  end
+
   def generate_plc_objects
     if professional_learning_course?
       unit_group = UnitGroup.find_by_name(professional_learning_course)
@@ -1769,6 +1775,6 @@ class Script < ApplicationRecord
   end
 
   def self.script_json_filepath(script_name)
-    "#{Rails.root}/config/scripts_json/#{script_name}.script_json"
+    "#{script_json_directory}/#{script_name}.script_json"
   end
 end
