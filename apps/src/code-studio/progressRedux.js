@@ -66,7 +66,8 @@ const initialState = {
   // possible that we can get the user progress back from the DB
   // prior to having information about the user login state.
   // TODO: Use sign in state to determine where to source user progress from
-  usingDbProgress: false
+  usingDbProgress: false,
+  currentPageNumber: 0
 };
 
 /**
@@ -95,7 +96,8 @@ export default function reducer(state = initialState, action) {
       courseId: action.courseId,
       currentStageId,
       hasFullProgress: action.isFullProgress,
-      isLessonExtras: action.isLessonExtras
+      isLessonExtras: action.isLessonExtras,
+      currentPageNumber: action.currentPageNumber
     };
   }
 
@@ -399,7 +401,8 @@ export const initProgress = ({
   betaTitle,
   courseId,
   isFullProgress,
-  isLessonExtras
+  isLessonExtras,
+  currentPageNumber
 }) => ({
   type: INIT_PROGRESS,
   currentLevelId,
@@ -415,7 +418,8 @@ export const initProgress = ({
   betaTitle,
   courseId,
   isFullProgress,
-  isLessonExtras
+  isLessonExtras,
+  currentPageNumber
 });
 
 export const clearProgress = () => ({
