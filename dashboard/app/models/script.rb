@@ -68,6 +68,23 @@ class Script < ApplicationRecord
     )
   end
 
+  scope :with_seed_models, -> do
+    includes(
+      [
+        :course_version,
+        :lesson_groups,
+        {
+          lessons: [
+            {lesson_activities: :activity_sections},
+            :resources
+          ]
+        },
+        :script_levels,
+        :levels
+      ]
+    )
+  end
+
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
