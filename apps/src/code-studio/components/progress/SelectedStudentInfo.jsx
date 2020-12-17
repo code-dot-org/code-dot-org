@@ -3,10 +3,10 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import Button from '@cdo/apps/templates/Button';
-import {studentType} from '@cdo/apps/templates/progress/progressTypes';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {studentShape} from './StudentTable';
 
 const RadiumFontAwesome = Radium(FontAwesome);
 
@@ -45,7 +45,7 @@ const styles = {
 
 export class SelectedStudentInfo extends React.Component {
   static propTypes = {
-    students: PropTypes.arrayOf(studentType).isRequired,
+    students: PropTypes.arrayOf(studentShape).isRequired,
     selectedStudent: PropTypes.object,
     level: PropTypes.object,
     onSelectUser: PropTypes.func.isRequired,
