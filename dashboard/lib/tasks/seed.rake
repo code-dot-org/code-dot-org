@@ -404,7 +404,7 @@ namespace :seed do
 
   FULL_SEED_TASKS = [:videos, :concepts, :scripts, :courses, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :standards].freeze
   UI_TEST_SEED_TASKS = [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :standards].freeze
-  DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
+  DEFAULT_SEED_TASKS = FULL_SEED_TASKS
 
   desc "seed the data needed for this type of environment by default"
   timed_task default: DEFAULT_SEED_TASKS
