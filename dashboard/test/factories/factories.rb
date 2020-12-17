@@ -797,11 +797,13 @@ FactoryGirl.define do
   end
 
   factory :resource do
+    association :course_version
     url 'fake.url'
     name 'fake name'
   end
 
   factory :objective do
+    sequence(:key) {|n| "objective-#{n}"}
     description 'fake description'
   end
 

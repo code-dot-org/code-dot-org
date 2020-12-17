@@ -426,13 +426,13 @@ es:
         alg_15_biggame_update_player: CS en álgebra - Big Game Actualización de jugador
         alg_16_biggame_collision_detection: CS en álgebra - Big Game detección de colisiones
         alg_17_sambat_compound_booleans: CS en álgebra - compuestos booleanos
-        starwars_intro: 'Star Wars: Construyendo una Galaxia con Código - Introducción'
-        starwars_typing: 'Star Wars: Construyendo una Galaxia con Código - JavaScript'
-        starwars_events: 'Star Wars: Construyendo una Galaxia con Código - Eventos'
-        starwars_congrats: 'Star Wars: Construyendo una Galaxia con Código - Enhorabuena'
-        starwars_blocks_intro: 'Star Wars: Construyendo una Galaxia con Código - Introducción'
-        starwars_blocks_events: 'Star Wars: Construyendo una Galaxia con Código - Eventos'
-        starwars_blocks_congrats: 'Star Wars: Construyendo una Galaxia con Código - Enhorabuena'
+        starwars_intro: 'La guerra de las galaxias: cómo construir una galaxia con código - Introducción'
+        starwars_typing: 'La guerra de las galaxias: cómo construir una galaxia con código - JavaScript'
+        starwars_events: 'La guerra de las galaxias: cómo construir una galaxia con código - Eventos'
+        starwars_congrats: 'La guerra de las galaxias: cómo construir una galaxia con código - Felicidades'
+        starwars_blocks_intro: 'La guerra de las galaxias: cómo construir una galaxia con código - Introducción'
+        starwars_blocks_events: 'La guerra de las galaxias: cómo construir una galaxia con código - Eventos'
+        starwars_blocks_congrats: 'La guerra de las galaxias: cómo construir una galaxia con código - Felicidades'
         mc_intro: Minecraft - Introducción
         mc_repeat: Minecraft - Repetir
         mc_if_statements: Minecraft - Cláusulas condicionales
@@ -501,7 +501,7 @@ es:
         CSF_Spritelab_MakeSprite_CDEF: Cómo crear un sprite en el Laboratorio de sprites
         CDEF_Video_SpritesInAction: Sprites en acción
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acción
-        CSF_StarWars_ProjectIntro: Introducción al proyecto de Star Wars
+        CSF_StarWars_ProjectIntro: Introducción al proyecto La guerra de las galaxias
         mc_2018_intro: 'Minecraft: introducción al viaje acuático'
         MC_2018_loops: 'Minecraft: bloque repetir hasta en viaje acuático'
         mc_2018_conditionals: 'Minecraft: condicionales en viaje acuático'

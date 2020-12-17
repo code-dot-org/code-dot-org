@@ -1,0 +1,19 @@
+name 'CSD U4 wireframe test multi_2021'
+type 'multi2'
+question 'Given the opportunity to test this wireframe with users, which TWO things would be most important to look for?'
+
+wrong 'The user likes the color scheme'
+wrong 'The user thinks the app is a good idea'
+right 'The user understands how to log in'
+wrong 'The user\’s phone brand'
+right 'The user can navigate to all of the screens'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/0f2f4d728bc3c3328b4ee3ea31caa562-image-1559246095187.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+<img src="https://images.code.org/f1334f18a893b084ad80be45231c818e-image-1559246106816.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+<img src="https://images.code.org/6df005697b26dca114fcfc7eec4a2556-image-1559246110092.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+<img src="https://images.code.org/67db4444236c97d345c69bf6decb3047-image-1559246113075.png" style="float:left; width:150px; margin:10px;border: solid;">
+MARKDOWN

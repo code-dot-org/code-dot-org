@@ -52,6 +52,7 @@ Dashboard::Application.routes.draw do
   post 'maker/override', to: 'maker#override'
   get 'maker/google_oauth_login_code', to: 'maker#login_code'
   get 'maker/display_google_oauth_code', to: 'maker#display_code'
+  get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
@@ -501,7 +502,7 @@ Dashboard::Application.routes.draw do
       end
 
       post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
-      get 'foorm/form_data', action: :get_form_data, controller: 'foorm'
+      get 'foorm/form/:id', action: :get_form_data, controller: 'foorm'
       get 'foorm/submissions_csv', action: :get_submissions_as_csv, controller: 'foorm'
       get 'foorm/form_names', action: :get_form_names_and_versions, controller: 'foorm'
       post 'foorm/validate_form', action: :validate_form, controller: 'foorm'
@@ -692,6 +693,8 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
       post 'ml_models/save', to: 'ml_models#save'
+      get 'ml_models/names', to: 'ml_models#user_ml_model_names'
+      get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
 
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
