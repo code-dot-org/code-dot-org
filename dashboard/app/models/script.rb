@@ -957,7 +957,10 @@ class Script < ApplicationRecord
 
     # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
     added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
-      added_script = add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      added_script =
+        options[:properties][:is_migrated] ?
+          seed_from_json_file(options[:name]) :
+          add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       progressbar.increment if show_progress
       added_script.name
     rescue => e
@@ -1758,8 +1761,10 @@ class Script < ApplicationRecord
     Services::ScriptSeed.serialize_seeding_json(self)
   end
 
-  # Wrapper for convenience
-  def self.seed_from_json_file(file_or_path)
-    Services::ScriptSeed.seed_from_json_file(file_or_path)
+  # @param [String] script_name - name of the script to seed from .script_json
+  # @returns [Script] - the newly seeded script object
+  def self.seed_from_json_file(script_name)
+    script_json_filepath = "#{Rails.root}/config/scripts_json/#{script_name}.script_json"
+    Services::ScriptSeed.seed_from_json_file(script_json_filepath)
   end
 end
