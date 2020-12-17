@@ -290,20 +290,132 @@ class School < ApplicationRecord
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT schools.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true)
-    CSV.read(filename, options).each do |row|
-      parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
-      loaded = find_by_id(parsed[:id])
-      if loaded.nil?
-        begin
-          School.new(parsed).save!
-        rescue ActiveRecord::RecordNotUnique
-          CDO.log.info "Record with NCES ID #{parsed[:id]} and state school ID #{parsed[:state_school_id]} not unique, not added"
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, new_attributes: [])
+    schools = nil
+    new_schools = []
+    updated_schools = 0
+    updated_schools_attribute_frequency = {}
+    unchanged_schools = 0
+    duplicate_schools = []
+
+    ActiveRecord::Base.transaction do
+      schools = CSV.read(filename, options).each do |row|
+        parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
+        loaded = find_by_id(parsed[:id])
+
+        if loaded.nil?
+          begin
+            School.new(parsed).save! unless is_dry_run
+            new_schools << parsed
+          rescue ActiveRecord::RecordNotUnique
+            # NCES ID and state school ID are required to be unique,
+            # so this error would occur if two rows with different NCES IDs
+            # had the same state school ID.
+            CDO.log.info "Record with NCES ID #{parsed[:id]} and state school ID #{parsed[:state_school_id]} not unique, not added"
+            duplicate_schools << parsed
+          end
+        elsif write_updates
+          loaded.assign_attributes(parsed)
+
+          if loaded.changed?
+            # Not counting schools as "updated" if the only change
+            # is adding a new column. Otherwise, all found rows will be updated.
+            loaded.changed.sort == new_attributes.sort ?
+              unchanged_schools += 1 :
+              updated_schools += 1
+
+            loaded.changed.each do |attribute|
+              updated_schools_attribute_frequency.key?(attribute) ?
+                updated_schools_attribute_frequency[attribute] += 1 :
+                updated_schools_attribute_frequency[attribute] = 1
+            end
+
+            # We need to delete and reload state_cs_offerings
+            # if we're going to update the state_school_id for a given school.
+            has_state_cs_offerings = loaded.state_school_id_was.nil? ?
+              false :
+              loaded.state_cs_offering.any?
+            state_cs_offerings_hashes = []
+            must_reload_state_cs_offerings = loaded.changed.include?('state_school_id') && has_state_cs_offerings
+            if must_reload_state_cs_offerings && !is_dry_run
+              state_cs_offerings_hashes = loaded.delete_state_cs_offerings(loaded.state_school_id_was)
+            end
+
+            # store before update
+            previous_state_school_id = loaded.state_school_id_was
+
+            loaded.update!(parsed) unless is_dry_run
+
+            if must_reload_state_cs_offerings && !is_dry_run
+              state_cs_offerings_hashes.each do |state_cs_offering|
+                new_offering = state_cs_offering.slice(:course, :school_year)
+                new_offering[:state_school_id] = loaded.state_school_id
+                Census::StateCsOffering.new(new_offering).save!
+              end
+
+              loaded.reload
+
+              reconstituted = loaded.state_cs_offering.pluck(:course, :school_year)
+              original = state_cs_offerings_hashes.map {|state_cs_offering| state_cs_offering.slice(:course, :school_year)}
+              failure = ((reconstituted - original) + (original - reconstituted)).any?
+              raise ActiveRecord::Rollback, "Mismatch between state CS offerings deleted and recreated for NCES ID #{loaded.id}, originally #{original.length} records, now #{reconstituted.length} records" if failure
+
+              puts "After reconstitution: Found #{loaded.state_cs_offering.count} state CS offerings for previous state school ID: #{previous_state_school_id}, new state school ID: #{loaded.state_school_id}, school ID: #{loaded.id}"
+            end
+          else
+            unchanged_schools += 1
+          end
         end
-      elsif write_updates == true
-        loaded.assign_attributes(parsed)
-        loaded.update!(parsed) if loaded.changed?
       end
+    end
+
+    summary_message =
+      "School seeding: done processing #{filename}.\n"\
+      "#{new_schools.length} new schools added.\n"\
+      "#{updated_schools} schools updated.\n"\
+      "#{unchanged_schools} schools unchanged (school considered changed if only update was adding new columns included in this import).\n"\
+      "#{duplicate_schools.length} duplicate schools skipped.\n"
+
+    if updated_schools_attribute_frequency.any?
+      summary_message <<
+        "Among updated schools, these attributes were updated:\n"\
+        "#{updated_schools_attribute_frequency.sort_by {|_, v| v}.
+          reverse.
+          map {|attribute, frequency| attribute + ': ' + frequency.to_s}.join("\n")}\n"
+    end
+
+    # More verbose logging in dry run
+    if is_dry_run
+      if new_schools.any?
+        summary_message <<
+          "Schools added:\n"\
+          "#{new_schools.map {|school| school[:name] + ' ' + school[:id].to_s}.join("\n")}\n"
+      end
+
+      if duplicate_schools.any?
+        summary_message <<
+          "Duplicate schools skipped:\n"\
+          "#{duplicate_schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")}"
+      end
+    end
+
+    CDO.log.info summary_message
+
+    schools
+  end
+
+  def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, new_attributes: [], &parse_row)
+    AWS::S3.seed_from_file(bucket, filepath) do |filename|
+      merge_from_csv(
+        filename,
+        import_options,
+        true,
+        is_dry_run: is_dry_run,
+        new_attributes: new_attributes,
+        &parse_row
+      )
+    ensure
+      CDO.log.info "This is a dry run. No data is written to the database." if is_dry_run
     end
   end
 
