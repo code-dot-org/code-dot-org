@@ -10,7 +10,7 @@ Scenario: View the script edit page
   Given I create a levelbuilder named "Levi"
   And I create a temp script and lesson
   And I view the temp script overview page
-  And I view the temp script legacy edit page
+  And I view the temp script edit page
   And I delete the temp script and lesson
 
 Scenario: View the script edit page in locale besides en-US
@@ -18,7 +18,7 @@ Scenario: View the script edit page in locale besides en-US
   And I create a levelbuilder named "Levi"
   And I create a temp script and lesson
   And I view the temp script overview page
-  And I try to view the temp script legacy edit page
+  And I try to view the temp script edit page
   And I get redirected to "/" via "dashboard"
   And I wait until element "#homepage-container" is visible
   And I wait until element "#homepage-container" contains text "Editing on levelbuilder is only supported in English (en-US locale)."
@@ -31,7 +31,7 @@ Scenario: Save changes to a script
   And element ".uitest-bubble" contains text "1"
   And element ".uitest-bubble" does not contain text "2"
 
-  When I view the temp script legacy edit page
+  When I view the temp script edit page
   And element "#script_text" contains text "lesson 'temp-lesson', display_name: 'Temp Lesson'"
   And element "#script_text" contains text "level 'Applab test'"
   And I scroll the "#script_text" element into view
@@ -45,11 +45,11 @@ Scenario: Save changes to a script
 
   And I delete the temp script and lesson
 
-Scenario: Navigate from script gui edit page to lesson edit page
+Scenario: Navigate from script edit page for migrated script to lesson edit page
   Given I create a levelbuilder named "Levi"
-  And I create a temp script and lesson
+  And I create a temp migrated script and lesson
   And I view the temp script overview page
-  And I view the temp script gui edit page
+  And I view the temp script edit page
 
   # Open the lesson edit page
   And I wait until element ".fa-pencil" is visible

@@ -16090,8 +16090,8 @@ en:
                 In this lesson students learn how to use variables to label a number. Students begin the lesson with a very basic description of the purpose of a variable within the context of the storage component of the input-output-storage-processing model. Students then complete a level progression that reinforces the model of a variable as a way to label or name a number.
             Random Numbers:
               name: Random Numbers
-              description_student: "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nThe class is introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program and use those skills to draw randomized images."
-              description_teacher: "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They them learn how to update variables during a program.  Combining all of these skills students draw randomized images."
+              description_student: "**Question of the Day: How can we make our programs behave differently each time they are run?** \r\n\r\nThe class is introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program and use those skills to draw randomized images."
+              description_teacher: "**Question of the Day: How can we make our programs behave differently each time they are run?** \r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program.  Combining all of these skills students draw randomized images."
             Sprites and Animations:
               name: Sprites and Animations
               description_student: "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\r\n\r\nIn order to create more interesting and detailed images, the class is introduced to the sprite object. The lesson starts with a discussion of the various information that programs must keep track of, then presents sprites as a way to keep track of that information.  The class then learns how to assign each sprite an image, which will greatly increase the complexity of what can be drawn on the screen. "
@@ -16212,6 +16212,7 @@ en:
               description_teacher: "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**\r\n\r\nStudents use what they have learned about simulating gravity and the different types of collisions to create simple flyer games.  After looking at a sample flyer game, students brainstorm what sort of flyer games they would like, then use a structured process to program the game in Code Studio."
             Sprites:
               name: Sprites
+          name: csd3-2020
         moneppo-1:
           lesson_groups: {}
           lessons: {}
@@ -18013,8 +18014,8 @@ en:
                 In this lesson students learn how to use variables to label a number. Students begin the lesson with a very basic description of the purpose of a variable within the context of the storage component of the input-output-storage-processing model. Students then complete a level progression that reinforces the model of a variable as a way to label or name a number.
             Random Numbers:
               name: Random Numbers
-              description_student: "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nThe class is introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program and use those skills to draw randomized images."
-              description_teacher: "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They them learn how to update variables during a program.  Combining all of these skills students draw randomized images."
+              description_student: "**Question of the Day: How can we make our programs behave differently each time they are run?** \r\n\r\nThe class is introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program and use those skills to draw randomized images."
+              description_teacher: "**Question of the Day: How can we make our programs behave differently each time they are run?** \r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program.  Combining all of these skills students draw randomized images."
             Sprites:
               name: Sprites
               description_student: ''
@@ -18274,7 +18275,7 @@ en:
             oceans:
               name: Machine Learning with AI for Oceans
             intro:
-              name: Introduction
+              name: Introduction to Machine Learning
             society:
               name: Machine Learning & Societal Impact
             decisions:
@@ -18302,7 +18303,7 @@ en:
             miseducation:
               name: Mis-education of the Machine
             ethics:
-              name: Ethics
+              name: Using ML Ethically
             ethics-hoc2020:
               name: AI & Ethics Hour of Code 2020
             hypothesis:
@@ -18314,11 +18315,11 @@ en:
             project:
               name: Final project
             KNN:
-              name: KNN
+              name: Feature Selection with Continuous Labels
             SVM:
-              name: SVM
+              name: Data Investigations with Categorical Labels
             App:
-              name: Making an app
+              name: Using Models in the Real-World
             Ethics:
               name: Ethics
             Project:
@@ -18330,6 +18331,7 @@ en:
           description_audience: ''
           description_short: ML/AI Unit
           description: Brainstorm / Playground area for ML/AI Unit Development for CSD. For future questions about this, ask Dan Schneider.
+          name: ml-playground
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -18355,9 +18357,1546 @@ en:
           lessons:
             Sprite Lab:
               name: Sprite Lab Blocks
+            Course F Introduction:
+              name: Introducing Sprite Lab
+            Learning Sprites with Sprite Lab:
+              name: Programming with Sprite Lab
+            lesson-1:
+              name: Envelope Variables
+            lesson-2:
+              name: Storing and Retrieving Text
+            lesson-3:
+              name: Create a Chat-Bot
+            lesson-4:
+              name: Counting with Variables
+            lesson-5:
+              name: Groups of Sprites
+            lesson-6:
+              name: Create a Collector Game
+            Virus Simulation for Code Bytes:
+              name: Coding a Simulation
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
+            introduction:
+              display_name: Introduction
+              description: Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!
+            lessonGroup-3:
+              display_name: Variables
+              description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
+            outbreak:
+              display_name: Outbreak Simulation
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
+          name: 2021drafting
+          description: ''
+        csd1-2021:
+          title: CSD Unit 1 - Problem Solving and Computing ('20-'21)
+          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
+          description_short: "  Learn how humans work with computers to solve problems."
+          description_audience: ''
+          lessons:
+            CS Discoveries Pre-survey:
+              key: CS Discoveries Pre-survey
+              name: CS Discoveries Pre-survey
+            Intro to Problem Solving:
+              key: Intro to Problem Solving
+              name: Intro to Problem Solving
+            The Problem Solving Process:
+              key: The Problem Solving Process
+              name: The Problem Solving Process
+            Exploring Problem Solving:
+              key: Exploring Problem Solving
+              name: Exploring Problem Solving
+            What is a Computer?:
+              key: What is a Computer?
+              name: What is a Computer?
+            Input and Output:
+              key: Input and Output
+              name: Input and Output
+            Processing:
+              key: Processing
+              name: Processing
+            Storage:
+              key: Storage
+              name: Storage
+            Project - Propose an App:
+              key: Project - Propose an App
+              name: Project - Propose an App
+            Post-Project Test:
+              key: Post-Project Test
+              name: Post-Project Test
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              key: Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)
+              name: Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              key: Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)
+              name: Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              key: Intro to Problem Solving - Paper Tower (Alternate Lesson 1)
+              name: Intro to Problem Solving - Paper Tower (Alternate Lesson 1)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              key: Exploring Problem Solving - Animals Theme (Alternate Lesson 3)
+              name: Exploring Problem Solving - Animals Theme (Alternate Lesson 3)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              key: Exploring Problem Solving - Games Theme (Alternate Lesson 3)
+              name: Exploring Problem Solving - Games Theme (Alternate Lesson 3)
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csd1_1:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            csd1_2:
+              display_name: 'Chapter 2: Computers and Problem Solving'
+            csd1_3:
+              display_name: Alternate Lessons
+          name: csd1-2021
+        csd2-2021:
+          title: CSD Unit 2 - Web Development ('20-'21)
+          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+          description_short: "  Learn to build your own web site in Web Lab."
+          description_audience: ''
+          lessons:
+            Exploring Web Pages:
+              key: Exploring Web Pages
+              name: Exploring Web Pages
+            Intro to HTML:
+              key: Intro to HTML
+              name: Intro to HTML
+            Headings:
+              key: Headings
+              name: Headings
+            'Mini-Project: HTML Web Page':
+              key: 'Mini-Project: HTML Web Page'
+              name: 'Mini-Project: HTML Web Page'
+            Digital Footprint:
+              key: Digital Footprint
+              name: Digital Footprint
+            Styling Text with CSS:
+              key: Styling Text with CSS
+              name: Styling Text with CSS
+            'Mini-Project: Your Personal Style':
+              key: 'Mini-Project: Your Personal Style'
+              name: 'Mini-Project: Your Personal Style'
+            Intellectual Property:
+              key: Intellectual Property
+              name: Intellectual Property
+            Using Images:
+              key: Using Images
+              name: Using Images
+            'Websites for Expression ':
+              key: 'Websites for Expression '
+              name: 'Websites for Expression '
+            Styling Elements with CSS:
+              key: Styling Elements with CSS
+              name: Styling Elements with CSS
+            Your Web Page - Prepare:
+              key: Your Web Page - Prepare
+              name: Your Web Page - Prepare
+            Project - Personal Web Page:
+              key: Project - Personal Web Page
+              name: Project - Personal Web Page
+            Websites for a Purpose:
+              key: Websites for a Purpose
+              name: Websites for a Purpose
+            Team Problem Solving:
+              key: Team Problem Solving
+              name: Team Problem Solving
+            Sources and Research:
+              key: Sources and Research
+              name: Sources and Research
+            CSS Classes:
+              key: CSS Classes
+              name: CSS Classes
+            Planning a Multi-page Website:
+              key: Planning a Multi-page Website
+              name: Planning a Multi-page Website
+            Linking Pages:
+              key: Linking Pages
+              name: Linking Pages
+            Project - Website for a Purpose:
+              key: Project - Website for a Purpose
+              name: Project - Website for a Purpose
+            Peer Review and Final Touches:
+              key: Peer Review and Final Touches
+              name: Peer Review and Final Touches
+            Post-Project Test:
+              key: Post-Project Test
+              name: Post-Project Test
+            CS Discoveries Post Course survey:
+              key: CS Discoveries Post Course survey
+              name: CS Discoveries Post Course survey
+          lesson_groups:
+            csd2_1v2:
+              display_name: 'Chapter 1: Creating Webpages'
+            csd2_2v2:
+              display_name: 'Chapter 2: Multi-page Websites'
+            cspSurvey:
+              display_name: Survey
+          name: csd2-2021
+        csd3-2021:
+          title: CSD Unit 3 - Interactive Animations and Games ('20-'21)
+          description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          description_short: " Learn to program animations, interactive art, and games in Game Lab."
+          description_audience: ''
+          lessons:
+            Programming for Entertainment:
+              key: Programming for Entertainment
+              name: Programming for Entertainment
+            Plotting Shapes:
+              key: Plotting Shapes
+              name: Plotting Shapes
+            Drawing in Game Lab:
+              key: Drawing in Game Lab
+              name: Drawing in Game Lab
+            Shapes and Parameters:
+              key: Shapes and Parameters
+              name: Shapes and Parameters
+            Variables:
+              key: Variables
+              name: Variables
+            Random Numbers:
+              key: Random Numbers
+              name: Random Numbers
+            Sprites:
+              key: Sprites
+              name: Sprites
+            Sprite Properties:
+              key: Sprite Properties
+              name: Sprite Properties
+            Text:
+              key: Text
+              name: Text
+            'Mini-Project: Captioned Scenes':
+              key: 'Mini-Project: Captioned Scenes'
+              name: 'Mini-Project: Captioned Scenes'
+            The Draw Loop:
+              key: The Draw Loop
+              name: The Draw Loop
+            Sprite Movement:
+              key: Sprite Movement
+              name: Sprite Movement
+            'Mini-Project: Animation':
+              key: 'Mini-Project: Animation'
+              name: 'Mini-Project: Animation'
+            Conditionals:
+              key: Conditionals
+              name: Conditionals
+            Keyboard Input:
+              key: Keyboard Input
+              name: Keyboard Input
+            Mouse Input:
+              key: Mouse Input
+              name: Mouse Input
+            Project - Interactive Card:
+              key: Project - Interactive Card
+              name: Project - Interactive Card
+            Velocity:
+              key: Velocity
+              name: Velocity
+            Collision Detection:
+              key: Collision Detection
+              name: Collision Detection
+            'Mini-Project: Side Scroller':
+              key: 'Mini-Project: Side Scroller'
+              name: 'Mini-Project: Side Scroller'
+            Complex Sprite Movement:
+              key: Complex Sprite Movement
+              name: Complex Sprite Movement
+            Collisions:
+              key: Collisions
+              name: Collisions
+            'Mini-Project: Flyer Game':
+              key: 'Mini-Project: Flyer Game'
+              name: 'Mini-Project: Flyer Game'
+            Functions:
+              key: Functions
+              name: Functions
+            The Game Design Process:
+              key: The Game Design Process
+              name: The Game Design Process
+            Using the Game Design Process:
+              key: Using the Game Design Process
+              name: Using the Game Design Process
+            Project - Design a Game:
+              key: Project - Design a Game
+              name: Project - Design a Game
+            Post-Project Test:
+              key: Post-Project Test
+              name: Post-Project Test
+            CS Discoveries Post Course survey:
+              key: CS Discoveries Post Course survey
+              name: CS Discoveries Post Course survey
+          lesson_groups:
+            csd3_1:
+              display_name: 'Chapter 1: Images and Animations'
+            csd3_2:
+              display_name: 'Chapter 2: Building Games'
+            cspSurvey:
+              display_name: Survey
+          name: csd3-2021
+        csd4-2021:
+          title: CSD Unit 4 - The Design Process ('20-'21)
+          description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+          description_short: "  Learn how to design a program that meets the needs of your users."
+          description_audience: ''
+          lessons:
+            Analysis of Design:
+              key: Analysis of Design
+              name: Analysis of Design
+            Understanding Your User:
+              key: Understanding Your User
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              key: User-Centered Design Micro Activity
+              name: User-Centered Design Micro Activity
+            User Interfaces:
+              key: User Interfaces
+              name: User Interfaces
+            Feedback and Testing:
+              key: Feedback and Testing
+              name: Feedback and Testing
+            Identifying User Needs:
+              key: Identifying User Needs
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              key: Project - Paper Prototype
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              key: Designing Apps for Good
+              name: Designing Apps for Good
+            Market Research:
+              key: Market Research
+              name: Market Research
+            Paper Prototypes:
+              key: Paper Prototypes
+              name: Paper Prototypes
+            Prototype Testing:
+              key: Prototype Testing
+              name: Prototype Testing
+            Digital Design:
+              key: Digital Design
+              name: Digital Design
+            Linking Screens:
+              key: Linking Screens
+              name: Linking Screens
+            Testing the App:
+              key: Testing the App
+              name: Testing the App
+            Improving and Iterating:
+              key: Improving and Iterating
+              name: Improving and Iterating
+            Project - App Presentation:
+              key: Project - App Presentation
+              name: Project - App Presentation
+            Post-Project Test:
+              key: Post-Project Test
+              name: Post-Project Test
+            CS Discoveries Post Course survey:
+              key: CS Discoveries Post Course survey
+              name: CS Discoveries Post Course survey
+          lesson_groups:
+            csd4_1:
+              display_name: 'Chapter 1: User Centered Design'
+            csd4_2:
+              display_name: 'Chapter 2: App Prototyping'
+            csd5_2:
+              display_name: 'Chapter 2: Solving Data Problems'
+            cspSurvey:
+              display_name: Survey
+          name: csd4-2021
+        csd5-2021:
+          title: CSD Unit 5 - Data and Society ('20-'21)
+          description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
+          description_short: Learn how people use computers to solve data problems.
+          description_audience: ''
+          lessons:
+            Representation Matters:
+              key: Representation Matters
+              name: Representation Matters
+            Patterns and Representation:
+              key: Patterns and Representation
+              name: Patterns and Representation
+            ASCII and Binary Representation:
+              key: ASCII and Binary Representation
+              name: ASCII and Binary Representation
+            Representing Images:
+              key: Representing Images
+              name: Representing Images
+            Representing Numbers:
+              key: Representing Numbers
+              name: Representing Numbers
+            Keeping Data Secret:
+              key: Keeping Data Secret
+              name: Keeping Data Secret
+            Combining Representations:
+              key: Combining Representations
+              name: Combining Representations
+            Project - Create a Representation:
+              key: Project - Create a Representation
+              name: Project - Create a Representation
+            Problem Solving and Data:
+              key: Problem Solving and Data
+              name: Problem Solving and Data
+            Problem Solving with Big Data:
+              key: Problem Solving with Big Data
+              name: Problem Solving with Big Data
+            Structuring Data:
+              key: Structuring Data
+              name: Structuring Data
+            Making Decisions with Data:
+              key: Making Decisions with Data
+              name: Making Decisions with Data
+            Interpreting Data:
+              key: Interpreting Data
+              name: Interpreting Data
+            Automating Data Decisions:
+              key: Automating Data Decisions
+              name: Automating Data Decisions
+            Project - Make a Recommendation:
+              key: Project - Make a Recommendation
+              name: Project - Make a Recommendation
+            Post-Project Test:
+              key: Post-Project Test
+              name: Post-Project Test
+            CS Discoveries Post Course survey:
+              key: CS Discoveries Post Course survey
+              name: CS Discoveries Post Course survey
+          lesson_groups:
+            csd5_1:
+              display_name: 'Chapter 1: Representing Information'
+            csd5_2:
+              display_name: 'Chapter 2: Solving Data Problems'
+            cspSurvey:
+              display_name: Survey
+          name: csd5-2021
+        csd6-2021:
+          title: CSD Unit 6 - Physical Computing ('20-'21)
+          description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+          description_short: Learn to program with physical devices.
+          description_audience: ''
+          lessons:
+            Innovations in Computing:
+              key: Innovations in Computing
+              name: Innovations in Computing
+            Designing Screens with Code:
+              key: Designing Screens with Code
+              name: Designing Screens with Code
+            The Circuit Playground:
+              key: The Circuit Playground
+              name: The Circuit Playground
+            Input Unplugged:
+              key: Input Unplugged
+              name: Input Unplugged
+            Board Events:
+              key: Board Events
+              name: Board Events
+            Getting Properties:
+              key: Getting Properties
+              name: Getting Properties
+            Analog Input:
+              key: Analog Input
+              name: Analog Input
+            The Program Design Process:
+              key: The Program Design Process
+              name: The Program Design Process
+            'Project: Make a Game':
+              key: 'Project: Make a Game'
+              name: 'Project: Make a Game'
+            Arrays and Color LEDs:
+              key: Arrays and Color LEDs
+              name: Arrays and Color LEDs
+            Making Music:
+              key: Making Music
+              name: Making Music
+            Arrays and For Loops:
+              key: Arrays and For Loops
+              name: Arrays and For Loops
+            Accelerometer:
+              key: Accelerometer
+              name: Accelerometer
+            Functions with Parameters:
+              key: Functions with Parameters
+              name: Functions with Parameters
+            Circuits and Physical Prototypes:
+              key: Circuits and Physical Prototypes
+              name: Circuits and Physical Prototypes
+            'Project: Prototype an Innovation':
+              key: 'Project: Prototype an Innovation'
+              name: 'Project: Prototype an Innovation'
+            Post-Project Test:
+              key: Post-Project Test
+              name: Post-Project Test
+            CS Discoveries Post Course survey:
+              key: CS Discoveries Post Course survey
+              name: CS Discoveries Post Course survey
+          lesson_groups:
+            csd6_1:
+              display_name: 'Chapter 1: Programming with Hardware'
+            csd6_2:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+            cspSurvey:
+              display_name: Survey
+          name: csd6-2021
+        csp1-2021:
+          title: CSP Unit 1 - Digital Information ('20-'21)
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
+          description_short: Explore the challenges and impacts of representing information about the world around you in bits.
+          description_audience: ''
+          lessons:
+            CS Principles Pre-survey:
+              key: CS Principles Pre-survey
+              name: CS Principles Pre-survey
+            Welcome to CSP:
+              key: Welcome to CSP
+              name: Welcome to CSP
+            Representing Information:
+              key: Representing Information
+              name: Representing Information
+            Circle Square Patterns:
+              key: Circle Square Patterns
+              name: Circle Square Patterns
+            Binary Numbers:
+              key: Binary Numbers
+              name: Binary Numbers
+            Overflow and Rounding:
+              key: Overflow and Rounding
+              name: Overflow and Rounding
+            Representing Text:
+              key: Representing Text
+              name: Representing Text
+            Black and White Images:
+              key: Black and White Images
+              name: Black and White Images
+            Color Images:
+              key: Color Images
+              name: Color Images
+            Lossless Compression:
+              key: Lossless Compression
+              name: Lossless Compression
+            Lossy Compression:
+              key: Lossy Compression
+              name: Lossy Compression
+            Intellectual Property:
+              key: Intellectual Property
+              name: Intellectual Property
+            Project - Digital Information Dilemmas Part 1:
+              key: Project - Digital Information Dilemmas Part 1
+              name: Project - Digital Information Dilemmas Part 1
+            Project - Digital Information Dilemmas Part 2:
+              key: Project - Digital Information Dilemmas Part 2
+              name: Project - Digital Information Dilemmas Part 2
+            'Lesson 14: Assessment Day':
+              key: 'Lesson 14: Assessment Day'
+              name: 'Lesson 14: Assessment Day'
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csp_unit1_2020:
+              display_name: 'Unit 1: Digital Information'
+          name: csp1-2021
+        csp2-2021:
+          title: CSP Unit 2 - The Internet ('20-'21)
+          description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
+          description_short: Build the internet from the ground up using the Internet Simulator.
+          description_audience: ''
+          lessons:
+            Welcome to the Internet:
+              key: Welcome to the Internet
+              name: Welcome to the Internet
+            Building a Network:
+              key: Building a Network
+              name: Building a Network
+            The Need for Addressing:
+              key: The Need for Addressing
+              name: The Need for Addressing
+            Routers and Redundancy:
+              key: Routers and Redundancy
+              name: Routers and Redundancy
+            Packets:
+              key: Packets
+              name: Packets
+            DNS and HTTP:
+              key: DNS and HTTP
+              name: DNS and HTTP
+            Project - Internet Dilemmas Part 1:
+              key: Project - Internet Dilemmas Part 1
+              name: Project - Internet Dilemmas Part 1
+            Project - Internet Dilemmas Part 2:
+              key: Project - Internet Dilemmas Part 2
+              name: Project - Internet Dilemmas Part 2
+            'Lesson 9: Assessment Day':
+              key: 'Lesson 9: Assessment Day'
+              name: 'Lesson 9: Assessment Day'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unit 2: The Internet'
+          name: csp2-2021
+        csp3-2021:
+          title: CSP Unit 3 - Intro to App Design ('20-'21)
+          description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
+          description_short: Design your first app and learn how programmers collaborate and interact with users to build the best possible solutions to problems.
+          description_audience: ''
+          lessons:
+            Introduction to Apps:
+              key: Introduction to Apps
+              name: Introduction to Apps
+            Introduction to Design Mode:
+              key: Introduction to Design Mode
+              name: Introduction to Design Mode
+            Project - Designing an App Part 1:
+              key: Project - Designing an App Part 1
+              name: Project - Designing an App Part 1
+            Project - Designing an App Part 2:
+              key: Project - Designing an App Part 2
+              name: Project - Designing an App Part 2
+            The Need for Programming Languages:
+              key: The Need for Programming Languages
+              name: The Need for Programming Languages
+            Intro to Programming:
+              key: Intro to Programming
+              name: Intro to Programming
+            Debugging:
+              key: Debugging
+              name: Debugging
+            Project - Designing an App Part 3:
+              key: Project - Designing an App Part 3
+              name: Project - Designing an App Part 3
+            Project - Designing an App Part 4:
+              key: Project - Designing an App Part 4
+              name: Project - Designing an App Part 4
+            Project - Designing an App Part 5:
+              key: Project - Designing an App Part 5
+              name: Project - Designing an App Part 5
+            'Lesson 11: Assessment Day':
+              key: 'Lesson 11: Assessment Day'
+              name: 'Lesson 11: Assessment Day'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unit 3: Intro to App Design'
+          name: csp3-2021
+        csp4-2021:
+          title: CSP Unit 4 - Variables, Conditionals, and Functions ('20-'21)
+          description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
+          description_short: Learn how to build apps that store information, make decisions, and keep code organized.
+          description_audience: ''
+          lessons:
+            Variables Explore:
+              key: Variables Explore
+              name: Variables Explore
+            Variables Investigate:
+              key: Variables Investigate
+              name: Variables Investigate
+            Variables Practice:
+              key: Variables Practice
+              name: Variables Practice
+            Variables Make:
+              key: Variables Make
+              name: Variables Make
+            Conditionals Explore:
+              key: Conditionals Explore
+              name: Conditionals Explore
+            Conditionals Investigate:
+              key: Conditionals Investigate
+              name: Conditionals Investigate
+            Conditionals Practice:
+              key: Conditionals Practice
+              name: Conditionals Practice
+            Conditional Make:
+              key: Conditional Make
+              name: Conditional Make
+            Functions Explore / Investigate:
+              key: Functions Explore / Investigate
+              name: Functions Explore / Investigate
+            Functions Practice:
+              key: Functions Practice
+              name: Functions Practice
+            Functions Make:
+              key: Functions Make
+              name: Functions Make
+            Project - Decision Maker App Part 1:
+              key: Project - Decision Maker App Part 1
+              name: Project - Decision Maker App Part 1
+            Project - Decision Maker App Part 2:
+              key: Project - Decision Maker App Part 2
+              name: Project - Decision Maker App Part 2
+            Project - Decision Maker App Part 3:
+              key: Project - Decision Maker App Part 3
+              name: Project - Decision Maker App Part 3
+            'Lesson 15: Assessment Day':
+              key: 'Lesson 15: Assessment Day'
+              name: 'Lesson 15: Assessment Day'
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
+          name: csp4-2021
+        csp5-2021:
+          title: CSP Unit 5 - Lists, Loops, and Traversals ('20-'21)
+          description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
+          description_short: Learn how to build apps that use lists, loops, and traversals to store and process large amounts of information.
+          description_audience: ''
+          lessons:
+            Lists Explore:
+              key: Lists Explore
+              name: Lists Explore
+            Lists Investigate:
+              key: Lists Investigate
+              name: Lists Investigate
+            Lists Practice:
+              key: Lists Practice
+              name: Lists Practice
+            Lists Make:
+              key: Lists Make
+              name: Lists Make
+            Loops Explore:
+              key: Loops Explore
+              name: Loops Explore
+            Loops Investigate:
+              key: Loops Investigate
+              name: Loops Investigate
+            Loops Practice:
+              key: Loops Practice
+              name: Loops Practice
+            Loops Make:
+              key: Loops Make
+              name: Loops Make
+            Traversals Explore:
+              key: Traversals Explore
+              name: Traversals Explore
+            Traversals Investigate:
+              key: Traversals Investigate
+              name: Traversals Investigate
+            Traversals Practice:
+              key: Traversals Practice
+              name: Traversals Practice
+            Traversals Make:
+              key: Traversals Make
+              name: Traversals Make
+            Semester Hackathon Part 1:
+              key: Semester Hackathon Part 1
+              name: Semester Hackathon Part 1
+            Semester Hackathon Part 2:
+              key: Semester Hackathon Part 2
+              name: Semester Hackathon Part 2
+            Semester Hackathon Part 3:
+              key: Semester Hackathon Part 3
+              name: Semester Hackathon Part 3
+            Semester Hackathon Part 4:
+              key: Semester Hackathon Part 4
+              name: Semester Hackathon Part 4
+            Semester Hackathon Part 5:
+              key: Semester Hackathon Part 5
+              name: Semester Hackathon Part 5
+            'Lesson 18: Assessment Day':
+              key: 'Lesson 18: Assessment Day'
+              name: 'Lesson 18: Assessment Day'
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+            csp_traversals:
+              display_name: Traversals
+            csp_project:
+              display_name: Project
+          name: csp5-2021
+        csp6-2021:
+          title: CSP Unit 6 - Algorithms ('20-'21)
+          description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
+          description_short: Design and analyze algorithms to understand how they work and why some are considered better than others.
+          description_audience: ''
+          lessons:
+            Algorithms Solve Problems:
+              key: Algorithms Solve Problems
+              name: Algorithms Solve Problems
+            Algorithm Efficiency:
+              key: Algorithm Efficiency
+              name: Algorithm Efficiency
+            Unreasonable Time:
+              key: Unreasonable Time
+              name: Unreasonable Time
+            The Limits of Algorithms:
+              key: The Limits of Algorithms
+              name: The Limits of Algorithms
+            Parallel and Distributed Algorithms:
+              key: Parallel and Distributed Algorithms
+              name: Parallel and Distributed Algorithms
+            'Lesson 6: Assessment Day':
+              key: 'Lesson 6: Assessment Day'
+              name: 'Lesson 6: Assessment Day'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Unit 6: Algorithms'
+          name: csp6-2021
+        csp7-2021:
+          title: CSP Unit 7 - Parameters, Return, and Libraries ('20-'21)
+          description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
+          description_audience: ''
+          lessons:
+            Parameters and Return Explore:
+              key: Parameters and Return Explore
+              name: Parameters and Return Explore
+            Parameters and Return Investigate:
+              key: Parameters and Return Investigate
+              name: Parameters and Return Investigate
+            Parameters and Return Practice:
+              key: Parameters and Return Practice
+              name: Parameters and Return Practice
+            Parameters and Return Make:
+              key: Parameters and Return Make
+              name: Parameters and Return Make
+            Libraries Explore:
+              key: Libraries Explore
+              name: Libraries Explore
+            Libraries Investigate:
+              key: Libraries Investigate
+              name: Libraries Investigate
+            Libraries Practice:
+              key: Libraries Practice
+              name: Libraries Practice
+            Project - Make a Library Part 1:
+              key: Project - Make a Library Part 1
+              name: Project - Make a Library Part 1
+            Project - Make a Library Part 2:
+              key: Project - Make a Library Part 2
+              name: Project - Make a Library Part 2
+            Project - Make a Library Part 3:
+              key: Project - Make a Library Part 3
+              name: Project - Make a Library Part 3
+            'Lesson 11: Assessment Day':
+              key: 'Lesson 11: Assessment Day'
+              name: 'Lesson 11: Assessment Day'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters and Return Values
+            csp_libraries:
+              display_name: Libraries
+          name: csp7-2021
+        csp8-2021:
+          title: CSP Unit 8 - Create PT Prep ('20-'21)
+          description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
+          description_short: Practice and complete the Create Performance Task (PT).
+          description_audience: ''
+          lessons:
+            Create PT - Review the Task:
+              key: Create PT - Review the Task
+              name: Create PT - Review the Task
+            Create PT - Make a Plan:
+              key: Create PT - Make a Plan
+              name: Create PT - Make a Plan
+            Create PT - Complete the Task:
+              key: Create PT - Complete the Task
+              name: Create PT - Complete the Task
+          lesson_groups: {}
+          name: csp8-2021
+        csp9-2021:
+          title: CSP Unit 9 - Data ('20-'21)
+          description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
+          description_short: Explore and visualize datasets from a wide variety of topics as you hunt for patterns and try to learn more about the world around you.
+          description_audience: ''
+          lessons:
+            Learning From Data:
+              key: Learning From Data
+              name: Learning From Data
+            Exploring One Column:
+              key: Exploring One Column
+              name: Exploring One Column
+            Filtering and Cleaning Data:
+              key: Filtering and Cleaning Data
+              name: Filtering and Cleaning Data
+            Exploring Two Columns:
+              key: Exploring Two Columns
+              name: Exploring Two Columns
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: Big Data, Crowdsourcing, and Machine Learning
+              name: Big Data, Crowdsourcing, and Machine Learning
+            Machine Learning and Bias:
+              key: Machine Learning and Bias
+              name: Machine Learning and Bias
+            Project - Tell a Data Story - Part 1:
+              key: Project - Tell a Data Story - Part 1
+              name: Project - Tell a Data Story - Part 1
+            Project - Tell a Data Story - Part 2:
+              key: Project - Tell a Data Story - Part 2
+              name: Project - Tell a Data Story - Part 2
+            'Lesson 9: Assessment Day':
+              key: 'Lesson 9: Assessment Day'
+              name: 'Lesson 9: Assessment Day'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unit 9: Data'
+          name: csp9-2021
+        csp10-2021:
+          title: CSP Unit 10 - Cybersecurity and Global Impacts ('20-'21)
+          description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
+          description_short: Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact.
+          description_audience: ''
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: Project - Innovation Simulation Part 1
+              name: Project - Innovation Simulation Part 1
+            Project - Innovation Simulation Part 2:
+              key: Project - Innovation Simulation Part 2
+              name: Project - Innovation Simulation Part 2
+            Data Policies and Privacy:
+              key: Data Policies and Privacy
+              name: Data Policies and Privacy
+            The Value of Privacy:
+              key: The Value of Privacy
+              name: The Value of Privacy
+            Project - Innovation Simulation Part 3:
+              key: Project - Innovation Simulation Part 3
+              name: Project - Innovation Simulation Part 3
+            Security Risks Part 1:
+              key: Security Risks Part 1
+              name: Security Risks Part 1
+            Security Risks Part 2:
+              key: Security Risks Part 2
+              name: Security Risks Part 2
+            'Project: Innovation Simulation Part 4':
+              key: 'Project: Innovation Simulation Part 4'
+              name: 'Project: Innovation Simulation Part 4'
+            Protecting Data Part 1:
+              key: Protecting Data Part 1
+              name: Protecting Data Part 1
+            Protecting Data Part 2:
+              key: Protecting Data Part 2
+              name: Protecting Data Part 2
+            'Project: Innovation Simulation Part 5':
+              key: 'Project: Innovation Simulation Part 5'
+              name: 'Project: Innovation Simulation Part 5'
+            'Project: Innovation Simulation Part 6':
+              key: 'Project: Innovation Simulation Part 6'
+              name: 'Project: Innovation Simulation Part 6'
+            'Project: Innovation Simulation Part 7':
+              key: 'Project: Innovation Simulation Part 7'
+              name: 'Project: Innovation Simulation Part 7'
+            'Lesson 14: Unit Assessment Day':
+              key: 'Lesson 14: Unit Assessment Day'
+              name: 'Lesson 14: Unit Assessment Day'
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unit 10: Cybersecurity and Global Impacts'
+          name: csp10-2021
+        coursea-2021:
+          title: Course A (2020)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+          description_audience: 'Ages: 4-7'
+          lessons:
+            Safety in My Online Neighborhood:
+              key: Safety in My Online Neighborhood
+              name: Safety in My Online Neighborhood
+            Learn to Drag and Drop:
+              key: Learn to Drag and Drop
+              name: Learn to Drag and Drop
+            'Programming: Happy Maps':
+              key: 'Programming: Happy Maps'
+              name: Happy Maps
+            Sequencing with Scrat:
+              key: Sequencing with Scrat
+              name: Sequencing with Scrat
+            Programming in Ice Age:
+              key: Programming in Ice Age
+              name: Programming with Scrat
+            Programming with Rey and BB-8:
+              key: Programming with Rey and BB-8
+              name: Programming with Rey and BB-8
+            'Loops: Happy Loops':
+              key: 'Loops: Happy Loops'
+              name: Happy Loops
+            Loops in Ice Age:
+              key: Loops in Ice Age
+              name: Loops with Scrat
+            Loops in Collector:
+              key: Loops in Collector
+              name: Loops with Laurel
+            Ocean Scene with Loops:
+              key: Ocean Scene with Loops
+              name: Ocean Scene with Loops
+            'Events: The Big Event':
+              key: 'Events: The Big Event'
+              name: The Big Event Jr.
+            Events in Play Lab:
+              key: Events in Play Lab
+              name: On the Move with Events
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+          name: coursea-2021
+        courseb-2021:
+          title: Course B (2020)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_audience: 'Ages: 5-8'
+          lessons:
+            Digital Trails:
+              key: Digital Trails
+              name: Digital Trails
+            Move It, Move It:
+              key: Move It, Move It
+              name: Move It, Move It
+            Sequencing in Maze:
+              key: Sequencing in Maze
+              name: Sequencing with Angry Birds
+            Programming in Maze:
+              key: Programming in Maze
+              name: Programming with Angry Birds
+            Programming in Harvester:
+              key: Programming in Harvester
+              name: Programming with Harvester
+            'Loops: Getting Loopy':
+              key: 'Loops: Getting Loopy'
+              name: Getting Loopy
+            Loops in Harvester:
+              key: Loops in Harvester
+              name: Loops with Harvester
+            Loops in Collector:
+              key: Loops in Collector
+              name: Loops with Laurel
+            Loops in Artist:
+              key: Loops in Artist
+              name: Drawing Gardens with Loops
+            The Right App:
+              key: The Right App
+              name: The Right App
+            'Events: The Big Event':
+              key: 'Events: The Big Event'
+              name: The Big Event Jr.
+            Events in Play Lab:
+              key: Events in Play Lab
+              name: A Royal Battle with Events
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_impacts:
+              display_name: Impacts of Computing
+            csf_events:
+              display_name: Events
+          name: courseb-2021
+        coursec-2021:
+          title: Course C (2020)
+          description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_audience: 'Ages: 6-10'
+          lessons:
+            Putting a STOP to Online Meanness:
+              key: Putting a STOP to Online Meanness
+              name: Putting a STOP to Online Meanness
+            Password Power-Up:
+              key: Password Power-Up
+              name: Password Power-Up
+            'Programming: My Robotic Friends':
+              key: 'Programming: My Robotic Friends'
+              name: My Robotic Friends Jr.
+            Programming in Maze:
+              key: Programming in Maze
+              name: Programming with Angry Birds
+            Debugging in Maze:
+              key: Debugging in Maze
+              name: Debugging in Maze
+            Programming in Collector:
+              key: Programming in Collector
+              name: Collecting Treasure with Laurel
+            Programming in Artist:
+              key: Programming in Artist
+              name: Creating Art with Code
+            Binary Bracelets:
+              key: Binary Bracelets
+              name: Binary Bracelets
+            'Loops: My Loopy Robotic Friends':
+              key: 'Loops: My Loopy Robotic Friends'
+              name: My Loopy Robotic Friends Jr.
+            Loops with Rey and BB-8:
+              key: Loops with Rey and BB-8
+              name: Loops with Rey and BB-8
+            Loops in Harvester:
+              key: Loops in Harvester
+              name: Harvesting Crops with Loops
+            Looking Ahead:
+              key: Looking Ahead
+              name: Looking Ahead with Minecraft
+            Sticker Art with Loops:
+              key: Sticker Art with Loops
+              name: Sticker Art with Loops
+            'Events: The Big Event':
+              key: 'Events: The Big Event'
+              name: The Big Event
+            Build a Flappy Game:
+              key: Build a Flappy Game
+              name: Build a Flappy Game
+            Events in Play Lab:
+              key: Events in Play Lab
+              name: Chase Game with Events
+            Picturing Data:
+              key: Picturing Data
+              name: Picturing Data
+            'End of Course Project: Create a Play Lab Game':
+              key: 'End of Course Project: Create a Play Lab Game'
+              name: End of Course Project
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_binary:
+              display_name: Binary
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+            csf_data:
+              display_name: Data
+            end_of_course_project:
+              display_name: End of Course Project
+          name: coursec-2021
+        coursed-2021:
+          title: Course D (2020)
+          description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_audience: 'Ages: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'Algorithms: Graph Paper Programming'
+              name: Graph Paper Programming
+            Introduction to Online Puzzles:
+              key: Introduction to Online Puzzles
+              name: Introduction to Online Puzzles
+            Relay Programming:
+              key: Relay Programming
+              name: Relay Programming
+            Debugging in Collector:
+              key: Debugging in Collector
+              name: Debugging with Laurel
+            Events in Bounce:
+              key: Events in Bounce
+              name: Events in Bounce
+            Build a Star Wars Game:
+              key: Build a Star Wars Game
+              name: Build a Star Wars Game
+            Dance Party:
+              key: Dance Party
+              name: Dance Party
+            Loops in Ice Age:
+              key: Loops in Ice Age
+              name: Loops in Ice Age
+            Loops in Artist:
+              key: Loops in Artist
+              name: Drawing Shapes with Loops
+            Nested Loops in Bee:
+              key: Nested Loops in Bee
+              name: Nested Loops in Maze
+            Conditionals with Cards:
+              key: Conditionals with Cards
+              name: Conditionals with Cards
+            Conditionals in Bee:
+              key: Conditionals in Bee
+              name: If/Else with Bee
+            While Loops in Farmer:
+              key: While Loops in Farmer
+              name: While Loops in Farmer
+            Until Loops in Maze:
+              key: Until Loops in Maze
+              name: Until Loops in Maze
+            Conditionals & Loops in Harvester:
+              key: Conditionals & Loops in Harvester
+              name: Harvesting with Conditionals
+            'Unplugged: Binary':
+              key: 'Unplugged: Binary'
+              name: Binary Images
+            Artist Binary:
+              key: Artist Binary
+              name: Binary Images with Artist
+            Be A Super Digital Citizen:
+              key: Be A Super Digital Citizen
+              name: Be A Super Digital Citizen
+            End of Course Project:
+              key: End of Course Project
+              name: End of Course Project
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Events
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital Citizenship
+            end_of_course_project:
+              display_name: End of Course Project
+          name: coursed-2021
+        coursee-2021:
+          title: Course E (2020)
+          description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          description_short: Review concepts in Courses C & D, then go further by learning functions.
+          description_audience: 'Ages: 8-12'
+          lessons:
+            Sequencing in the Maze:
+              key: Sequencing in the Maze
+              name: Sequencing in the Maze
+            Programming and Loops with the Artist:
+              key: Programming and Loops with the Artist
+              name: Drawing with Loops
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Conditionals in Minecraft: Voyage Aquatic'
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
+            Conditionals:
+              key: Conditionals
+              name: Conditionals with the Farmer
+            Simon Says:
+              key: Simon Says
+              name: Simon Says
+            Learning Sprites with Sprite Lab:
+              key: Learning Sprites with Sprite Lab
+              name: Swimming Fish with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              key: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party with Sprite Lab
+            Private and Personal Information:
+              key: Private and Personal Information
+              name: Private and Personal Information
+            About Me:
+              key: About Me
+              name: About Me with Sprite Lab
+            Digital Sharing:
+              key: Digital Sharing
+              name: Digital Sharing
+            Nested Loops in Bee:
+              key: Nested Loops in Bee
+              name: Nested Loops in Maze
+            Nested Loops in Artist:
+              key: Nested Loops in Artist
+              name: Fancy Shapes using Nested Loops
+            Nested Loops in Frozen:
+              key: Nested Loops in Frozen
+              name: Nested Loops with Frozen
+            'Functions: Songwriting':
+              key: 'Functions: Songwriting'
+              name: Songwriting
+            Functions in Minecraft:
+              key: Functions in Minecraft
+              name: Functions in Minecraft
+            Functions in Harvester:
+              key: Functions in Harvester
+              name: Functions with Harvester
+            Functions in Artist:
+              key: Functions in Artist
+              name: Functions with Artist
+            Designing for Accessibility:
+              key: Designing for Accessibility
+              name: Designing for Accessibility
+            End of Course Project:
+              key: End of Course Project
+              name: End of Course Project
+          lesson_groups:
+            ramp_up:
+              display_name: Ramp-Up
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_nested_loops:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
+            csf_impacts:
+              display_name: Impacts of Computing
+            end_of_course_project:
+              display_name: End of Course Project
+          name: coursee-2021
+        coursef-2021:
+          title: Course F (2020)
+          description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_audience: 'Ages: 9-13'
+          lessons:
+            Functions in Minecraft:
+              key: Functions in Minecraft
+              name: Functions in Minecraft
+            Learning Sprites with Sprite Lab:
+              key: Learning Sprites with Sprite Lab
+              name: Swimming Fish with Sprite Lab
+            Events with Sprite Lab:
+              key: Events with Sprite Lab
+              name: Alien Dance Party with Sprite Lab
+            Loops with the Artist:
+              key: Loops with the Artist
+              name: Drawing with Loops
+            Nested Loops in the Maze:
+              key: Nested Loops in the Maze
+              name: Nested Loops in Maze
+            The Power of Words:
+              key: The Power of Words
+              name: The Power of Words
+            Envelope Variables:
+              key: Envelope Variables
+              name: Envelope Variables
+            Variables as Constant in Artist:
+              key: Variables as Constant in Artist
+              name: Variables with Artist
+            Variables that Change in Bee:
+              key: Variables that Change in Bee
+              name: Changing Variables with Bee
+            Variables that Change in Artist:
+              key: Variables that Change in Artist
+              name: Changing Variables with Artist
+            Simulating Experiments:
+              key: Simulating Experiments
+              name: Simulating Experiments
+            AI for Oceans:
+              key: AI for Oceans
+              name: AI for Oceans
+            Internet:
+              key: Internet
+              name: The Internet
+            For Loop Fun:
+              key: For Loop Fun
+              name: For Loop Fun
+            For Loops in Bee:
+              key: For Loops in Bee
+              name: For Loops with Bee
+            For Loops in Artist:
+              key: For Loops in Artist
+              name: For Loops with Artist
+            Editing Behaviors:
+              key: Editing Behaviors
+              name: Behaviors in Sprite Lab
+            Virtual Pet:
+              key: Virtual Pet
+              name: Virtual Pet with Sprite Lab
+            End of Course Project:
+              key: End of Course Project
+              name: End of Course Project
+          lesson_groups:
+            ramp_up:
+              display_name: Ramp-Up
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_variables:
+              display_name: Variables
+            csf_data:
+              display_name: Data
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: End of Course Project
+          name: coursef-2021
+        express-2021:
+          title: Express Course (2020)
+          description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+          lessons:
+            Dance Party:
+              key: Dance Party
+              name: Dance Party
+            Programming with Angry Birds:
+              key: Programming with Angry Birds
+              name: Programming with Angry Birds
+            Debugging with Scrat:
+              key: Debugging with Scrat
+              name: Debugging with Scrat
+            Collecting Treasure with Laurel:
+              key: Collecting Treasure with Laurel
+              name: Collecting Treasure with Laurel
+            Creating Art with Code:
+              key: Creating Art with Code
+              name: Creating Art with Code
+            Loops with Rey and BB-8:
+              key: Loops with Rey and BB-8
+              name: Loops with Rey and BB-8
+            Sticker Art with Loops:
+              key: Sticker Art with Loops
+              name: Sticker Art with Loops
+            Nested Loops in Maze:
+              key: Nested Loops in Maze
+              name: Nested Loops in Maze
+            Snowflakes with Anna and Elsa:
+              key: Snowflakes with Anna and Elsa
+              name: Snowflakes with Anna and Elsa
+            'Looking Ahead with Minecraft ':
+              key: 'Looking Ahead with Minecraft '
+              name: 'Looking Ahead with Minecraft '
+            If/Else with Bee:
+              key: If/Else with Bee
+              name: If/Else with Bee
+            While Loops with the Farmer:
+              key: While Loops with the Farmer
+              name: While Loops with the Farmer
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Conditionals in Minecraft: Voyage Aquatic'
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
+            Until Loops in Maze:
+              key: Until Loops in Maze
+              name: Until Loops in Maze
+            Harvesting with Conditionals:
+              key: Harvesting with Conditionals
+              name: Harvesting with Conditionals
+            Functions in Minecraft:
+              key: Functions in Minecraft
+              name: Functions in Minecraft
+            Functions with Harvester:
+              key: Functions with Harvester
+              name: Functions with Harvester
+            Functions with Artist:
+              key: Functions with Artist
+              name: Functions with Artist
+            Variables with Artist:
+              key: Variables with Artist
+              name: Variables with Artist
+            Changing Variables with Bee:
+              key: Changing Variables with Bee
+              name: Changing Variables with Bee
+            Changing Variables with Artist:
+              key: Changing Variables with Artist
+              name: Changing Variables with Artist
+            For Loops with Bee:
+              key: For Loops with Bee
+              name: For Loops with Bee
+            For Loops with Artist:
+              key: For Loops with Artist
+              name: For Loops with Artist
+            Swimming Fish in Sprite Lab:
+              key: Swimming Fish in Sprite Lab
+              name: Swimming Fish in Sprite Lab
+            Alien Dance Party:
+              key: Alien Dance Party
+              name: Alien Dance Party
+            Behaviors in Sprite Lab:
+              key: Behaviors in Sprite Lab
+              name: Behaviors in Sprite Lab
+            Virtual Pet with Sprite Lab:
+              key: Virtual Pet with Sprite Lab
+              name: Virtual Pet with Sprite Lab
+            End of Course Project:
+              key: End of Course Project
+              name: End of Course Project
+          lesson_groups:
+            csf_warmup:
+              display_name: Warm-Up
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_functions:
+              display_name: Functions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: End of Course Project
+          name: express-2021
+        pre-express-2021:
+          title: Pre-reader Express (2020)
+          description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_audience: 'Ages: 4-8'
+          lessons:
+            Learn to Drag and Drop:
+              key: Learn to Drag and Drop
+              name: Learn to Drag and Drop
+            Sequencing with Scrat:
+              key: Sequencing with Scrat
+              name: Sequencing with Scrat
+            Programming in with Angry Birds:
+              key: Programming in with Angry Birds
+              name: Programming in with Angry Birds
+            Programming with Rey and BB-8:
+              key: Programming with Rey and BB-8
+              name: Programming with Rey and BB-8
+            Programming in Harvester:
+              key: Programming in Harvester
+              name: Programming in Harvester
+            Loops with Scrat:
+              key: Loops with Scrat
+              name: Loops with Scrat
+            Loops with Laurel:
+              key: Loops with Laurel
+              name: Loops with Laurel
+            Ocean Scene with Loops:
+              key: Ocean Scene with Loops
+              name: Ocean Scene with Loops
+            Drawing Gardens with Loops:
+              key: Drawing Gardens with Loops
+              name: Drawing Gardens with Loops
+            On the Move with Events:
+              key: On the Move with Events
+              name: On the Move with Events
+            A Royal Battle with Events:
+              key: A Royal Battle with Events
+              name: A Royal Battle with Events
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+          name: pre-express-2021
+        csf-2021-pilot:
+          lessons:
+            Introduction to Course F:
+              name: Introduction to Course F
+            Learning Sprites with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+            Virus Simulation for Code Bytes:
+              name: Coding a Simulation
+            Course F Introduction:
+              name: Introduction to Course F
+            lesson-1:
+              name: Envelope Variables
+            lesson-2:
+              name: Storing and Retrieving Text
+            lesson-3:
+              name: Create a Chat-Bot
+            lesson-4:
+              name: Counting with Variables
+            lesson-5:
+              name: Groups of Sprites
+            lesson-6:
+              name: Create a Collector Game
+          lesson_groups:
+            ramp_up:
+              display_name: Introduction
+            outbreak:
+              display_name: Outbreak Simulation
+            introduction:
+              display_name: Introduction to Sprite Lab
+              description: Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!
+            lessonGroup-3:
+              display_name: Variables
+              description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
+          name: csf-2021-pilot
+          title: CS Fundamentals 2021 Pilot
+          description_audience: Upper Elementary
+          description_short: Learn about events, variables, and conditionals, and create your own animations, games, and simulations.
+          description: "Learn to use events by programming in Sprite Lab. Investigate different design techniques and discuss societal impacts of computing. \n\n**Pilot 2021**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June, 2021 only."

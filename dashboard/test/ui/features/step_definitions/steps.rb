@@ -1017,6 +1017,17 @@ Given(/^I create a temp script and lesson$/) do
   puts "created temp script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
 end
 
+Given(/^I create a temp migrated script and lesson$/) do
+  response = browser_request(
+    url: '/api/test/create_migrated_script',
+    method: 'POST'
+  )
+  data = JSON.parse(response)
+  @temp_script_name = data['script_name']
+  @temp_lesson_id = data['lesson_id']
+  puts "created temp migrated script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
+end
+
 Given(/^I view the temp script overview page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}"
@@ -1024,15 +1035,14 @@ Given(/^I view the temp script overview page$/) do
   }
 end
 
-Given(/^I view the temp script (legacy|gui) edit page$/) do |type|
-  params = type == 'gui' ? '?beta=1' : ''
+Given(/^I view the temp script edit page$/) do
   steps %{
-    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit#{params}"
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
     And I wait until element ".edit_script" is visible
   }
 end
 
-Given(/^I try to view the temp script legacy edit page$/) do
+Given(/^I try to view the temp script edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
   }

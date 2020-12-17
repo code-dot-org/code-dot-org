@@ -11,11 +11,7 @@ import {
 } from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 import resourceTestData from './resourceTestData';
-import {
-  levelKeyList,
-  sampleActivities,
-  searchOptions
-} from './activitiesTestData';
+import {sampleActivities, searchOptions} from './activitiesTestData';
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
@@ -41,7 +37,7 @@ describe('ActivitySectionCard', () => {
     registerReducers({...reducers, resources: resourcesEditor});
 
     store = getStore();
-    store.dispatch(init(sampleActivities, levelKeyList, searchOptions));
+    store.dispatch(init(sampleActivities, searchOptions));
     store.dispatch(initResources(resourceTestData));
 
     setTargetActivitySection = sinon.spy();

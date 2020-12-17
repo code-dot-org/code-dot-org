@@ -9,12 +9,12 @@ module Foorm
       questions_json = get_questions
       published_state = questions_json['published']
 
-      if published_state.nil_or_empty?
+      if published_state.nil?
         questions_json['published'] = @form.published
-      elsif !published_state.to_bool && @form.published
+      elsif !published_state && @form.published
         return render(status: :bad_request, plain: "A previously published form cannot be changed to draft state.")
       else
-        @form.published = published_state.to_bool
+        @form.published = published_state
       end
 
       form_questions = JSON.pretty_generate(questions_json)
@@ -35,14 +35,14 @@ module Foorm
       published = questions_json['published']
       published_params = params[:published]
       # If questions do not contain a published state, either use published state provided by params or default to false.
-      if published.nil_or_empty?
+      if published.nil?
         published = published_params || false
         questions_json['published'] = published
-      # If questions does contain a published state and a published state was provided as a param, verify they match.
-      elsif !published_params.nil_or_empty? && published.to_bool != published_params
+        # If questions does contain a published state and a published state was provided as a param, verify they match.
+      elsif !published_params.nil? && published != published_params
         return render(status: :bad_request, plain: "Published state in questions did not match provided published parameter.")
       else
-        published = published.to_bool
+        published = published
       end
 
       form_questions = JSON.pretty_generate(questions_json)
