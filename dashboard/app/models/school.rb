@@ -99,6 +99,10 @@ class School < ApplicationRecord
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
 
+  # School statuses representing currently open schools in 2018-2019 import.
+  # Non-open statuses are 'Closed', 'Future', 'Inactive'
+  OPEN_SCHOOL_STATUSES = ['Open', 'New', 'Reopened', 'Changed Boundary/Agency', 'Added']
+
   # Gets the seeding file name.
   # @param stub_school_data [Boolean] True for stub file.
   def self.get_seed_filename(stub_school_data)
@@ -139,7 +143,7 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2014-2015 PRELIMINARY public and charter school data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/Sch14pre_txt.zip
       AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/Sch14pre.txt") do |filename|
-        merge_from_csv(filename, {col_sep: "\t", headers: true, quote_char: "\x00", encoding: 'ISO-8859-1:UTF-8'}) do |row|
+        merge_from_csv(filename, {col_sep: "\t", headers: true, quote_char: "\x00", encoding: 'ISO-8859-1:UTF-8'}, true) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
             name:               row['SCHNAM'].upcase,
@@ -181,7 +185,7 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2013-2014 private school data."
       # Originally from https://nces.ed.gov/surveys/pss/zip/pss1314_pu_csv.zip
       AWS::S3.seed_from_file('cdo-nces', "2013-2014/pss/pss1314_pu.csv") do |filename|
-        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true) do |row|
           {
             id:                 row['PPIN'],
             name:               row['PINST'].upcase,
@@ -225,7 +229,7 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2014-2015 public school geographic data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/EDGE_GEOIDS_201415_PUBLIC_SCHOOL_csv.zip
       AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/EDGE_GEOIDS_201415_PUBLIC_SCHOOL.csv") do |filename|
-        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
             latitude:           row['LATCODE'].to_f,
@@ -237,7 +241,7 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2015-2016 private school data."
       # Originally from https://nces.ed.gov/surveys/pss/zip/pss1516_pu_csv.zip
       AWS::S3.seed_from_file('cdo-nces', "2015-2016/pss/pss1516_pu.csv") do |filename|
-        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true) do |row|
           {
             id:                 row['ppin'],
             name:               row['pinst'].upcase,
@@ -259,7 +263,8 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2017-2018 PRELIMINARY public and charter school data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/ccd_sch_029_1718_w_0a_03302018_csv.zip
       AWS::S3.seed_from_file('cdo-nces', "2017-2018/ccd/ccd_sch_029_1718_w_0a_03302018.csv") do |filename|
-        # Set write_updates argument to false as a data import precaution.  We are only inserting new schools, initially, from this NCES dataset.
+        # Set write_updates argument to false as a data import precaution.  We are only inserting new schools from this NCES dataset.
+        # Note as of November 2020, we never did the updates from this NCES update iteration.
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, false) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
@@ -279,6 +284,48 @@ class School < ApplicationRecord
             # the construct_state_school_id method
             # they look like this: AL-101-0200
             state_school_id:    row['ST_SCHID'],
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2018-2019 public and charter school data."
+      # Download link found here: https://nces.ed.gov/ccd/files.asp#Fiscal:2,LevelId:7,SchoolYearId:33,Page:1
+      # Actual download link: https://nces.ed.gov/ccd/data/zip/ccd_sch_029_1819_w_1a_091019.zip
+      AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/ccd_sch_029_1819_w_1a_091019.csv") do |filename|
+        # should this quote char thing be removed? I think supposed to allow importing
+        # double quotes in columns, but I think double quotes are used correctly to
+        # surround a column containing a comma (at least in the geographic data file below)
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, true, true) do |row|
+          {
+            id:                           row['NCESSCH'].to_i.to_s,
+            name:                         row['SCH_NAME'].upcase,
+            # Four schools with addresses longer than 50 characters (DB column limit)
+            address_line1:                row['LSTREET1'].to_s.upcase.truncate(50).presence,
+            address_line2:                row['LSTREET2'].to_s.upcase.presence,
+            address_line3:                row['LSTREET3'].to_s.upcase.presence,
+            city:                         row['LCITY'].to_s.upcase.presence,
+            state:                        row['LSTATE'].to_s.upcase.presence,
+            zip:                          row['LZIP'],
+            school_type:                  row['CHARTER_TEXT'][0, 1] == 'Y' ? 'charter' : 'public',
+            school_district_id:           row['LEAID'].to_i,
+            state_school_id:              row['ST_SCHID'],
+            # New addition for this iteration -- a "school category",
+            # which is Regular, Special Education, Alternative, or Career and Technical
+            school_category:              row['SCH_TYPE_TEXT'],
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['UPDATED_STATUS_TEXT']) ? '2018-2019' : nil
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2018-2019 public and charter school geographic data."
+      # Download link found here: https://nces.ed.gov/programs/edge/Geographic/SchoolLocations
+      # Actual download link: https://nces.ed.gov/programs/edge/data/EDGE_GEOCODE_PUBLICSCH_1819.zip
+      AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/EDGE_GEOCODE_PUBLICSCH_1819.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
+          {
+            id:                 row['NCESSCH'].to_i.to_s,
+            latitude:           row['LAT'].to_f,
+            longitude:          row['LON'].to_f
           }
         end
       end
