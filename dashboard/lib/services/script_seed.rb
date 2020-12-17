@@ -18,7 +18,7 @@ module Services
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
       :script_levels, :levels_script_levels, :levels, :resources,
-      :lessons_resources, keyword_init: true
+      :lessons_resources, :objectives, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -42,6 +42,7 @@ module Services
       sections = activities.map(&:activity_sections).flatten
       resources = script.lessons.map(&:resources).flatten
       lessons_resources = script.lessons.map(&:lessons_resources).flatten
+      objectives = script.lessons.map(&:objectives).flatten
 
       seed_context = SeedContext.new(
         script: script,
@@ -53,7 +54,8 @@ module Services
         levels_script_levels: script.levels_script_levels,
         levels: my_levels,
         resources: resources,
-        lessons_resources: lessons_resources
+        lessons_resources: lessons_resources,
+        objectives: objectives
       )
       scope = {seed_context: seed_context}
 
@@ -66,7 +68,8 @@ module Services
         script_levels: script.script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl, scope: scope).as_json},
         levels_script_levels: script.levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json},
         resources: resources.map {|r| ScriptSeed::ResourceSerializer.new(r, scope: scope).as_json},
-        lessons_resources: lessons_resources.map {|lr| ScriptSeed::LessonsResourceSerializer.new(lr, scope: scope).as_json}
+        lessons_resources: lessons_resources.map {|lr| ScriptSeed::LessonsResourceSerializer.new(lr, scope: scope).as_json},
+        objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json}
       }
       JSON.pretty_generate(data)
     end
@@ -135,6 +138,7 @@ module Services
         levels_script_levels_data = data['levels_script_levels']
         resources_data = data['resources']
         lessons_resources_data = data['lessons_resources']
+        objectives_data = data['objectives']
         seed_context = SeedContext.new
 
         # The order of the following import steps is important. If B belongs_to
@@ -171,6 +175,7 @@ module Services
 
         seed_context.resources = import_resources(resources_data, seed_context)
         seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
+        seed_context.objectives = import_objectives(objectives_data, seed_context)
 
         seed_context.script
       end
@@ -375,6 +380,22 @@ module Services
       LessonsResource.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
+    def self.import_objectives(objectives_data, seed_context)
+      objectives_to_import = objectives_data.map do |objective_data|
+        lesson_id = seed_context.lessons.select {|l| l.key == objective_data['seeding_key']['lesson.key']}.first&.id
+        raise 'No lesson found' if lesson_id.nil?
+
+        objective_attrs = objective_data.except('seeding_key')
+        objective_attrs['lesson_id'] = lesson_id
+        Objective.new(objective_attrs)
+      end
+
+      # Delete any existing Objectives that weren't in the imported list, and return those remaining.
+      existing_objectives = Objective.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+      Objective.import! objectives_to_import, on_duplicate_key_update: get_columns(Objective)
+      destroy_outdated_objects(Objective, existing_objectives, objectives_to_import, seed_context)
+    end
+
     def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
       objects_to_keep_by_seeding_key = imported_objects.index_by {|o| o.seeding_key(seed_context)}
       should_keep = all_objects.group_by {|o| objects_to_keep_by_seeding_key.include?(o.seeding_key(seed_context))}
@@ -505,6 +526,14 @@ module Services
 
     class LessonsResourceSerializer < ActiveModel::Serializer
       attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class ObjectiveSerializer < ActiveModel::Serializer
+      attributes :key, :properties, :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
