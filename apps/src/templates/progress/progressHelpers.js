@@ -181,6 +181,7 @@ export const processedLevel = level => {
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus,
+    pageNumber: level.page_number,
     sublevels:
       level.sublevels && level.sublevels.map(level => processedLevel(level))
   };

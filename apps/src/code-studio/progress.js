@@ -90,7 +90,8 @@ progress.generateStageProgress = function(
   saveAnswersBeforeNavigation,
   signedIn,
   stageExtrasEnabled,
-  isLessonExtras
+  isLessonExtras,
+  currentPageNumber
 ) {
   const store = getStore();
 
@@ -111,7 +112,8 @@ progress.generateStageProgress = function(
     currentLevelId,
     false,
     saveAnswersBeforeNavigation,
-    isLessonExtras
+    isLessonExtras,
+    currentPageNumber
   );
 
   store.dispatch(
@@ -274,7 +276,8 @@ function initializeStoreWithProgress(
   currentLevelId,
   isFullProgress,
   saveAnswersBeforeNavigation = false,
-  isLessonExtras = false
+  isLessonExtras = false,
+  currentPageNumber
 ) {
   store.dispatch(
     initProgress({
@@ -291,7 +294,8 @@ function initializeStoreWithProgress(
       betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,
-      isLessonExtras: isLessonExtras
+      isLessonExtras: isLessonExtras,
+      currentPageNumber: currentPageNumber
     })
   );
 
