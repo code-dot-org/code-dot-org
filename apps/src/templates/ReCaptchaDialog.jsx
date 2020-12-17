@@ -14,6 +14,10 @@ const styles = {
   }
 };
 
+/*
+Note that the version of reCAPTCHA supported by this dialog (v2 - I am not a robot)
+can be difficult for young users to solve. Thus, it should be used sparingly across the site.
+*/
 export default class ReCaptchaDialog extends React.Component {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
