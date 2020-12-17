@@ -1173,8 +1173,8 @@ class Script < ApplicationRecord
   end
 
   def write_script_json
-    script_json_filepath = "#{Rails.root}/config/scripts_json/#{name}.script_json"
-    File.write(script_json_filepath, Services::ScriptSeed.serialize_seeding_json(self))
+    filepath = Script.script_json_filepath(name)
+    File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
 
   # @param types [Array<string>]
@@ -1764,7 +1764,11 @@ class Script < ApplicationRecord
   # @param [String] script_name - name of the script to seed from .script_json
   # @returns [Script] - the newly seeded script object
   def self.seed_from_json_file(script_name)
-    script_json_filepath = "#{Rails.root}/config/scripts_json/#{script_name}.script_json"
-    Services::ScriptSeed.seed_from_json_file(script_json_filepath)
+    filepath = script_json_filepath(script_name)
+    Services::ScriptSeed.seed_from_json_file(filepath) if File.exist?(filepath)
+  end
+
+  def self.script_json_filepath(script_name)
+    "#{Rails.root}/config/scripts_json/#{script_name}.script_json"
   end
 end
