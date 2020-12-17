@@ -3,6 +3,13 @@ require 'test_helper'
 class SchoolTest < ActiveSupport::TestCase
   include ActiveSupport::Testing::Stream
 
+  self.use_transactional_test_case = true
+
+  # merge_from_csv dry run tests require a clean schools table.
+  setup_all do
+    School.delete_all
+  end
+
   test "schools initialized from tsv" do
     # Populate school districts, since schools depends on them as a foreign key.
     SchoolDistrict.seed_all(stub_school_data: true, force: true)
@@ -20,6 +27,34 @@ class SchoolTest < ActiveSupport::TestCase
         school_type: 'public',
       }
     )
+  end
+
+  test 'merge_from_csv in dry run mode with blank table makes no database writes' do
+    # Populate school districts, since schools depends on them as a foreign key.
+    SchoolDistrict.seed_all(stub_school_data: true, force: true)
+
+    School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true)
+    assert_equal 0, School.count
+  end
+
+  test 'merge_from_csv in dry run mode with existing rows makes no database writes' do
+    # Populate school districts, since schools depends on them as a foreign key.
+    SchoolDistrict.seed_all(stub_school_data: true, force: true)
+    School.merge_from_csv(School.get_seed_filename(true))
+
+    # Arbitrary change that should result in an update to each row.
+    parse_row = proc do |row|
+      {
+        id: row['id'],
+        state_school_id: row['state_school_id'],
+        name: row['name'] + 'test'
+      }
+    end
+
+    School.any_instance.expects(:save!).never
+    School.any_instance.expects(:update!).never
+
+    School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true, &parse_row)
   end
 
   test 'null state_school_id is valid' do
