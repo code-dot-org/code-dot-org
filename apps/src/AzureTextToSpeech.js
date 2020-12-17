@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import i18n from '@cdo/locale';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {hashString, findProfanity} from '@cdo/apps/utils';
 import Sounds from '@cdo/apps/Sounds';
 
@@ -215,7 +214,9 @@ export default class AzureTextToSpeech {
    * @returns {boolean}
    * @private
    */
-  isRunning_ = studioApp().isRunning;
+  isRunning_ = () => {
+    return true;
+  };
 
   /**
    * A wrapper for the Sounds.getSingleton().playBytes function to aid in testability.
