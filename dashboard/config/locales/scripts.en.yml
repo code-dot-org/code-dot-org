@@ -15644,12 +15644,12 @@ en:
               description_teacher: "**Question of the Day:  How can we use feedback to make our websites better?**\r\n\r\nThis lesson focuses on the value of peer feedback.  Students first reflect on what they are proud of, and what they would like feedback on.  Teams then work with peers to get that feedback though a structured process that includes the project rubric criteria.  Afterwards, students decide how they would like to respond to the feedback and put the finishing touches on their sites.  After a final review of the rubric, they reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
             Post-Project Test:
               name: Post-Project Test
-              description_student:
-              description_teacher:
+              description_student: 
+              description_teacher: 
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
-              description_student:
-              description_teacher:
+              description_student: 
+              description_teacher: 
             'Mini-Project: HTML Web Page':
               name: 'Mini-Project: HTML Web Page'
               description_student: "**Question of the Day: How can I use HTML to express a personal value?**\r\n\r\nIn this lesson, the class creates personal web page on a topic of their choice.  The lesson starts with a review of HTML tags.  Next, the class designs web pages, identifying the tags needed to implement them, and creates the pages in Web Lab."
@@ -17166,6 +17166,7 @@ en:
               name: Project - Designing an App Part 5
             'Lesson 11: Assessment Day':
               name: 'Lesson 11: Assessment Day'
+          name: csp3-2020
         csp6-2020:
           title: CSP Unit 6 - Algorithms ('20-'21)
           description_audience: ''
@@ -18677,7 +18678,7 @@ en:
               name: Market Research
             Paper Prototypes:
               key: Paper Prototypes
-              name: Paper Prototypes
+              name: Build a Paper Prototype
             Prototype Testing:
               key: Prototype Testing
               name: Prototype Testing
