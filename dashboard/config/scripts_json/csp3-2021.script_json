@@ -704,28 +704,6 @@
     },
     {
       "chapter": 24,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": true,
-      "properties": {
-        "progression": "Check For Understanding"
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U3 L3 Check Your Understanding_2021"
-        ],
-        "lesson.key": "Project - Designing an App Part 1",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2021"
-      },
-      "level_keys": [
-        "CSP U3 L3 Check Your Understanding_2021"
-      ]
-    },
-    {
-      "chapter": 25,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -747,7 +725,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -769,7 +747,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -791,7 +769,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -813,7 +791,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": null,
       "assessment": true,
@@ -835,7 +813,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -857,7 +835,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -879,7 +857,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -901,7 +879,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -923,7 +901,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -945,7 +923,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -967,7 +945,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 7,
       "activity_section_position": null,
       "assessment": true,
@@ -989,7 +967,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1011,7 +989,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1033,7 +1011,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1055,7 +1033,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1077,7 +1055,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1099,7 +1077,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1121,7 +1099,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1143,7 +1121,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1165,7 +1143,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 9,
       "activity_section_position": null,
       "assessment": true,
@@ -1187,7 +1165,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1209,7 +1187,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1231,7 +1209,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1253,7 +1231,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1275,7 +1253,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1297,7 +1275,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1319,7 +1297,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": null,
       "assessment": true,
@@ -1341,7 +1319,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": null,
       "assessment": true,
@@ -1611,17 +1589,6 @@
         "level.key": "CSP U3L3 SFLP 20-21_2021",
         "script_level.level_keys": [
           "CSP U3L3 SFLP 20-21_2021"
-        ],
-        "lesson.key": "Project - Designing an App Part 1",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP U3 L3 Check Your Understanding_2021",
-        "script_level.level_keys": [
-          "CSP U3 L3 Check Your Understanding_2021"
         ],
         "lesson.key": "Project - Designing an App Part 1",
         "lesson_group.key": "csp_unit3_2020",
@@ -1947,5 +1914,11 @@
         "script.name": "csp3-2021"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
   ]
 }
