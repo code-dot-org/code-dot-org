@@ -75,9 +75,6 @@ export default class ActivitySection extends Component {
           }}
         >
           <div style={styles.tipIcons}>
-            {section.slide && (
-              <FontAwesome key={`tipIcon-slide`} icon="list-alt" />
-            )}
             {section.tips.map((tip, index) => {
               return (
                 <FontAwesome
