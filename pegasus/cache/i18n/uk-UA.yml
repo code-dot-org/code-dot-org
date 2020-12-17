@@ -450,6 +450,8 @@ uk-UA:
   homepage_slot_text_link_donate: Зробити пожертвування
   homepage_slot_text_link_shop: Футболки, капелюхи та інше
   homepage_slot_text_link_administrators: Привнесить Інформатику до вашої школи
+  homepage_gallery_header: Більше %{project_count} мільйонів проектів створено на
+    Code.org
   homepage_header_donors: Code.org дякує своїм помічникам
   homepage_donors_seall: Подивитися усіх
   homepage_donors_donate: Підтримати
@@ -523,6 +525,8 @@ uk-UA:
   minecraft_adventurer: Майнкрафт - Пригоди
   minecraft_tutorials: Підручники Години коду від Майнкрафт
   minecraft_specs: Багато мов | Сучасні браузери та планшети | Класи 2+
+  minecraft_agent_description: Майнкрафт повернувся до Години коду з новеньким підручником!
+    Подорожуйте Майнкрафтом з кодом.
   minecraft_agent_button: Початок
   minecraft_designer_description: Запрограмуй тварин та інших істот Майнкрафт у власній
     версії цієї гри.
@@ -1203,6 +1207,7 @@ uk-UA:
   minecraft_name: Майнкрафт
   starwarsblocks_name: Зоряні війни (блоки)
   hoc-encryption_name: Просте шифрування
+  text-compression_name: Стиснення тексту
   applab_name: App Lab
   gamelab_name: Ігрова лабораторія
   basketball_name: Зроби гру в баскетбол
@@ -1948,7 +1953,12 @@ uk-UA:
   user_header_minecraft: Майнкрафт
   user_header_flappy: Пурх
   sign_in_instruct_secret: Виберіть їх секрет %{secret}.
+  applab_tile_title: Вступ до App Lab (Вік13+)
+  applab_tile_subtitle: Створіть власну аплікацію на JavaScript використовуючи блокове
+    програмування. Або вдоскональте свої навики з текстовим програмуванням. (Лише
+    англійською)
   applab_tile_start_tutorial: Початок
+  applab_tile_teacher_guide: Переглянути рекомендації для вчителя
   aquatic_name: 'Minecraft: Водна подорож'
   account_sign_up_email_opt_in: Чи можемо ми сповіщати вас про оновлення курсів, локальних
     можливості та інші новини з області інформатики за допомогою електронної пошти?
@@ -1961,11 +1971,24 @@ uk-UA:
   hoc_overview_dance_2019_subtitle: Закодуйте танцювальну вечірку та покажіть її друзям.
     Під пісні Кеті Перрі, Шона Мендеса, Panic! At The Disco, Lil Nas X, Jonas Brothers,
     Нікі Мінаж та 34 інших виконавців та груп!
+  hoc_overview_title: Підручники Години коду від Code.org
+  hoc_overview_subtitle: <a href="https://hourofcode.com">Година коду</a> це глобальний
+    захід, який залучає десятки мільйонів учнів, у більш, ніж 180 країнах світу. Кожен
+    може організувати заходи в рамках Години коду і спробувати будь-який із більше
+    500 одно-годинних підручників, доступних більш, як 45 мовами.
+  hoc_overview_subtitle_markdown: "[Година коду](https://hourofcode.com) - це глобальний
+    захід, який залучає десятки мільйонів учнів, у більш, ніж 180 країнах світу. Кожен
+    може організувати заходи в рамках Години коду і спробувати будь-який із більше
+    500 одно-годинних підручників, доступних більш, як 45 мовами."
+  hoc_overview_partner_activities_title: Більше діяльностей від партнерів
+  hoc_overview_partner_activities_body: Сайт Години коду має більше 500 інформатичних
+    діяльностей для будь-якого віку та рівня досвіду, розроблених Code.org та партнерами.
   hoc_overview_start_tutorial: Початок
   hoc_overview_more_resources: Щоб отримати додаткові ресурси для навчання з класом
     дистанційно, див. наш посібник з розміщення [віртуального Hour of Code](https://hourofcode.com/us/how-to/virtual).
     Що стосується учнів, які мають технологічні обмеження або проблеми з підключенням,
     ви можете надіслати їм цей пакет для [роботи з Hour of Code без підключення](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+  hoc_overview_view_teacher_guide: Переглянути рекомендації для вчителя
   hoc2018_creativity: творчість
   hoc2018_creativity_create: Створити
   hoc2018_creativity_hoc_coming: Наближається Година коду…
@@ -1983,7 +2006,14 @@ uk-UA:
     Code.org</a>
   hoc2018_mc_page_title: Підручники Години коду від Майнкрафт
   hoc2018_mc_details: Багато мов | Сучасні браузери та планшети | Класи 2+
+  hoc2018_mc_aquatic_title: 'Minecraft: Підводна подорож'
+  hoc2018_mc_aquatic_description: Майнкрафт повернувся до Години коду з новеньким
+    підручником! Подорожуйте Майнкрафтом з кодом.
+  hoc2019_mc_aquatic_description: Досліджуйте та творіть підводні світи за допомогою
+    коду.
   hoc2018_mc_hero_title: 'Minecraft: Подорож героя'
+  hoc2018_mc_hero_description: Майнкрафт повернувся до Години коду з новеньким підручником!
+    Подорожуйте Майнкрафтом з кодом.
   hoc2018_mc_designer_title: Майнкрафт - Розробник
   hoc2018_mc_designer_description: Запрограмуй тварин та інших істот Майнкрафт у власній
     версії цієї гри.
@@ -1993,6 +2023,7 @@ uk-UA:
   hoc2018_mc_start: Початок
   hoc2018_mc_no_internet: Немає Інтернету?
   hoc2018_mc_download_adventurer: Завантажуйте оффлайнову версію Майнкрафт - Пригод.
+  hoc2018_mc_educators_box1_button: Розпочинайте
   hoc2018_mc_educators_box2_button: Завантажити
   hoc2018_mc_watch_videos: Перед початком роботи перегляньте ці відео для натхнення
   hoc2018_mc_videos_more: Більше <a href='%{inspiring_videos_playlist}'>надихаючих
@@ -2016,6 +2047,13 @@ uk-UA:
   hoc2018_mc_homepage_what_create: А що створите Ви?
   hoc2018_mc_homepage_join_us: Приєднуйтесь
   hoc2018_mc_homepage_try_it: Спробувати
+  hoc2018_mc_back_journey: Майнкрафт повернувся до Години коду з новеньким підручником!
+    Подорожуйте Майнкрафтом з кодом.
+  hoc2018_mc_teacher_guide: Переглянути рекомендації для вчителя
+  hoc2018_mc_short_description_shorter: Скористайтесь своєю креативністю та вміннями
+    розв'язання проблем для того, щоб дослідити та збудувати підводні світи за допомогою
+    коду.
+  hoc2018_mc_journey: Подорож Майнкрафтом з кодом.
   hoc2018_dance_party_main_heading: Танцювальна вечірка
   hoc2018_dance_party_subheading: Допоможіть перекласти Dance Party
   hoc2018_dance_create_your_own_dance_title: Створіть власну Dance Party
@@ -2044,6 +2082,10 @@ uk-UA:
   hoc2018_dance_amazon_try_coding_this_summer_button: Приєднатися до табору
   hoc2018_dance_measure: Крок
   hoc2018_dance_measure_colon: 'Крок:'
+  hoc2018_aquatic_video1: 'Minecraft: Підводна подорож - Вступ'
+  hoc2018_aquatic_video2: 'Minecraft: Підводна подорож - Цикли'
+  hoc2018_aquatic_video3: 'Minecraft: Підводна подорож - Умови'
+  hoc2018_aquatic_video4: 'Minecraft: Підводна подорож - Вітання'
   page_not_found_title: Сторінка не знайдена
   page_not_found_header: '404: Сторінка не знайдена'
   hoc2018_mc_thank_microsoft: Ми дякуємо Microsoft за підтримку нашого бачення та
@@ -2053,4 +2095,7 @@ uk-UA:
   hoc2019_dance_previous_versions: |-
     Шукаєте попередню версію Dance Party?
     Натисніть тут, щоб почати [Частина 1](%{dance_2018_link}) та [Частина 2](%{dance_extras_2018_link}) з останнього року.
+  homepage_slot_text_title_at_home: Навчайтеся вдома
+  homepage_slot_text_blurb_at_home: З нашими ресурсами це легко
+  homepage_slot_text_link_code_break: Зробіть перерву на код
   footer_powered_by_aws: На потужностях Amazon Web Services

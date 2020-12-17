@@ -36,6 +36,7 @@ class Lesson < ApplicationRecord
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
+  has_many :lessons_resources # join table. we need this association for seeding logic
   has_many :objectives, dependent: :destroy
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
@@ -469,13 +470,16 @@ class Lesson < ApplicationRecord
     # this update, so just set activity_section_position as the source of truth
     # and then fix chapter and position values after.
     script.fix_script_level_positions
+    # Reload the lesson to make sure the positions information we have is all up
+    # to date
+    reload
   end
 
   def update_objectives(objectives)
     return unless objectives
 
     self.objectives = objectives.map do |objective|
-      persisted_objective = objective['id'].blank? ? Objective.new : Objective.find(objective['id'])
+      persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
@@ -570,7 +574,7 @@ class Lesson < ApplicationRecord
     related_lessons.map do |lesson|
       {
         scriptTitle: lesson.script.localized_title,
-        versionYear: lesson.script.get_course_version.version_year,
+        versionYear: lesson.script.get_course_version&.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
         id: lesson.id,

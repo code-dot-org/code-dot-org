@@ -23,6 +23,13 @@ describe('RelatedLessons', () => {
           relativePosition: 2,
           id: 456,
           editUrl: '/lessons/456/edit'
+        },
+        {
+          scriptTitle: 'Course 1',
+          lockable: null,
+          relativePosition: 4,
+          id: 789,
+          editUrl: '/lessons/789/edit'
         }
       ]
     };
@@ -35,13 +42,18 @@ describe('RelatedLessons', () => {
       'The following lessons are similar to this one.'
     );
 
-    const link1 = wrapper.find('a').first();
+    const link1 = wrapper.find('a').at(0);
     expect(link1.props().href).to.equal('/lessons/123/edit');
     expect(link1.text()).to.equal('Course A - 2017 - Lesson 3');
 
-    const link2 = wrapper.find('a').last();
+    const link2 = wrapper.find('a').at(1);
     expect(link2.props().href).to.equal('/lessons/456/edit');
     // Redundant version year is omitted
     expect(link2.text()).to.equal('Express (2019) - Lesson 2');
+
+    const link3 = wrapper.find('a').at(2);
+    expect(link3.props().href).to.equal('/lessons/789/edit');
+    // Missing version year is omitted
+    expect(link3.text()).to.equal('Course 1 - Lesson 4');
   });
 });

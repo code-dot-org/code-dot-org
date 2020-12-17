@@ -56,7 +56,6 @@ export const activitySectionShape = PropTypes.shape({
   position: PropTypes.number.isRequired,
   displayName: PropTypes.string.isRequired,
   remarks: PropTypes.bool,
-  slide: PropTypes.bool,
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape).isRequired
@@ -122,7 +121,7 @@ export const lessonGroupShape = PropTypes.shape({
 
 export const relatedLessonShape = PropTypes.shape({
   scriptTitle: PropTypes.string.isRequired,
-  versionYear: PropTypes.string.isRequired,
+  versionYear: PropTypes.string,
   lockable: PropTypes.bool,
   relativePosition: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,

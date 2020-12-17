@@ -1,13 +1,12 @@
 hideable_lessons true
 teacher_resources [["teacherForum", "https://forum.code.org/c/csf"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 lesson_extras_available true
-has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/courseb/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'courseb'
 version_year '2021'
 curriculum_umbrella 'CSF'
+is_course true
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 lesson 'Digital Trails', display_name: 'Digital Trails'

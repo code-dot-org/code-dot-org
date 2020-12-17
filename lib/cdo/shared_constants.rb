@@ -142,6 +142,7 @@ module SharedConstants
       "setImageURL": null,
       "playSound": null,
       "stopSound": null,
+      "playSpeech": null,
       "showElement": null,
       "hideElement": null,
       "deleteElement": null,
