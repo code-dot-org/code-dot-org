@@ -7,6 +7,7 @@ family_name 'coursea'
 version_year '2021'
 curriculum_umbrella 'CSF'
 is_course true
+is_migrated true
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 lesson 'Safety in My Online Neighborhood', display_name: 'Safety in My Online Neighborhood'
