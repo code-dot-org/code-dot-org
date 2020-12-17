@@ -803,6 +803,7 @@ FactoryGirl.define do
   end
 
   factory :objective do
+    sequence(:key) {|n| "objective-#{n}"}
     description 'fake description'
   end
 
