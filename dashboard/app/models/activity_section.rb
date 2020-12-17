@@ -22,7 +22,6 @@
 #
 # @attr [String] name - The user-visible heading of this section of the activity
 # @attr [boolean] remarks - Whether to show the remarks icon
-# @attr [boolean] slide - Whether to show the slides icon
 # @attr [String] description - Text describing the activity
 # @attr [Array<Hash>] tips - An array of instructional tips to display
 class ActivitySection < ApplicationRecord
@@ -37,7 +36,6 @@ class ActivitySection < ApplicationRecord
   serialized_attrs %w(
     name
     remarks
-    slide
     description
     tips
   )
@@ -48,7 +46,6 @@ class ActivitySection < ApplicationRecord
       position: position,
       name: name,
       remarks: remarks,
-      slide: slide,
       description: description,
       tips: tips,
     }
