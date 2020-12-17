@@ -40,7 +40,7 @@ module LessonImportHelper
       lesson.creative_commons_license = cb_lesson_data['creative_commons_license']
       lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
       lesson.objectives = cb_lesson_data['objectives'].map do |o|
-        Objective.new(description: o["name"])
+        Objective.new(key: SecureRandom.uuid, description: o["name"])
       end
       lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson_levels, lesson)
       lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
