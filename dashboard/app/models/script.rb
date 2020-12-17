@@ -972,7 +972,7 @@ class Script < ApplicationRecord
     # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
     added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
       added_script =
-        options[:properties][:is_migrated] ?
+        options[:properties][:is_migrated] == true ?
           seed_from_json_file(options[:name]) :
           add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       progressbar.increment if show_progress
