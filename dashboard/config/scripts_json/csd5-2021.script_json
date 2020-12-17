@@ -135,29 +135,29 @@
       }
     },
     {
-      "key": "Keeping Data Secret",
-      "name": "Keeping Data Secret",
+      "key": "Combining Representations",
+      "name": "Combining Representations",
       "absolute_position": 6,
       "lockable": false,
       "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Keeping Data Secret",
+        "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-2021"
       }
     },
     {
-      "key": "Combining Representations",
-      "name": "Combining Representations",
+      "key": "Keeping Data Secret",
+      "name": "Keeping Data Secret",
       "absolute_position": 7,
       "lockable": false,
       "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Combining Representations",
+        "lesson.key": "Keeping Data Secret",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-2021"
       }
@@ -191,29 +191,29 @@
       }
     },
     {
-      "key": "Problem Solving with Big Data",
-      "name": "Problem Solving with Big Data",
+      "key": "Structuring Data",
+      "name": "Structuring Data",
       "absolute_position": 10,
       "lockable": false,
       "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Problem Solving with Big Data",
+        "lesson.key": "Structuring Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
       }
     },
     {
-      "key": "Structuring Data",
-      "name": "Structuring Data",
+      "key": "Interpreting Data",
+      "name": "Interpreting Data",
       "absolute_position": 11,
       "lockable": false,
       "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Structuring Data",
+        "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
       }
@@ -233,25 +233,11 @@
       }
     },
     {
-      "key": "Interpreting Data",
-      "name": "Interpreting Data",
+      "key": "Automating Data Decisions",
+      "name": "Automating Data Decisions",
       "absolute_position": 13,
       "lockable": false,
       "relative_position": 13,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Interpreting Data",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "key": "Automating Data Decisions",
-      "name": "Automating Data Decisions",
-      "absolute_position": 14,
-      "lockable": false,
-      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -261,11 +247,39 @@
       }
     },
     {
-      "key": "Project - Make a Recommendation",
-      "name": "Project - Make a Recommendation",
+      "key": "Problem Solving with Big Data",
+      "name": "Problem Solving with Big Data",
+      "absolute_position": 14,
+      "lockable": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      }
+    },
+    {
+      "key": "Data and Machine Learning",
+      "name": "Data and Machine Learning",
       "absolute_position": 15,
       "lockable": false,
       "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Data and Machine Learning",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      }
+    },
+    {
+      "key": "Project - Make a Recommendation",
+      "name": "Project - Make a Recommendation",
+      "absolute_position": 16,
+      "lockable": false,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -277,7 +291,7 @@
     {
       "key": "Post-Project Test",
       "name": "Post-Project Test",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": true,
       "relative_position": 1,
       "properties": {
@@ -291,7 +305,7 @@
     {
       "key": "CS Discoveries Post Course survey",
       "name": "CS Discoveries Post Course survey",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": true,
       "relative_position": 2,
       "properties": {
@@ -696,72 +710,6 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U5L06 autoSFLP_2021"
-        ],
-        "lesson.key": "Keeping Data Secret",
-        "lesson_group.key": "csd5_1",
-        "script.name": "csd5-2021"
-      },
-      "level_keys": [
-        "CSD U5L06 autoSFLP_2021"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Keeping Data Secret"
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U5 Encryption 2_2021"
-        ],
-        "lesson.key": "Keeping Data Secret",
-        "lesson_group.key": "csd5_1",
-        "script.name": "csd5-2021"
-      },
-      "level_keys": [
-        "CSD U5 Encryption 2_2021"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Keeping Data Secret"
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U5 Encryption 1_2021"
-        ],
-        "lesson.key": "Keeping Data Secret",
-        "lesson_group.key": "csd5_1",
-        "script.name": "csd5-2021"
-      },
-      "level_keys": [
-        "CSD U5 Encryption 1_2021"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Lesson Overview"
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
           "CSD U5L07 autoSFLP_2021"
         ],
         "lesson.key": "Combining Representations",
@@ -773,7 +721,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -795,7 +743,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -814,6 +762,72 @@
       },
       "level_keys": [
         "CSD U5 student record_2021"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L06 autoSFLP_2021"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2021"
+      },
+      "level_keys": [
+        "CSD U5L06 autoSFLP_2021"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Keeping Data Secret"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Encryption 2_2021"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2021"
+      },
+      "level_keys": [
+        "CSD U5 Encryption 2_2021"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Keeping Data Secret"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Encryption 1_2021"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2021"
+      },
+      "level_keys": [
+        "CSD U5 Encryption 1_2021"
       ]
     },
     {
@@ -894,94 +908,6 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U5L10 autoSFLP_2021"
-        ],
-        "lesson.key": "Problem Solving with Big Data",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      },
-      "level_keys": [
-        "CSD U5L10 autoSFLP_2021"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Problem Solving"
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U5 Netflix Data Video_2021"
-        ],
-        "lesson.key": "Problem Solving with Big Data",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      },
-      "level_keys": [
-        "CSD U5 Netflix Data Video_2021"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Problem Solving"
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U5 Waze Data Video_2021"
-        ],
-        "lesson.key": "Problem Solving with Big Data",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      },
-      "level_keys": [
-        "CSD U5 Waze Data Video_2021"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 4,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Problem Solving"
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U5 Amazon Data Video_2021"
-        ],
-        "lesson.key": "Problem Solving with Big Data",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      },
-      "level_keys": [
-        "CSD U5 Amazon Data Video_2021"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Lesson Overview"
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
           "CSD U5L11 autoSFLP_2021"
         ],
         "lesson.key": "Structuring Data",
@@ -993,7 +919,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1015,7 +941,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1037,7 +963,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1059,29 +985,7 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Lesson Overview"
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U5L12 autoSFLP_2021"
-        ],
-        "lesson.key": "Making Decisions with Data",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      },
-      "level_keys": [
-        "CSD U5L12 autoSFLP_2021"
-      ]
-    },
-    {
-      "chapter": 36,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1103,7 +1007,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1125,7 +1029,29 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L12 autoSFLP_2021"
+        ],
+        "lesson.key": "Making Decisions with Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      },
+      "level_keys": [
+        "CSD U5L12 autoSFLP_2021"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1144,6 +1070,94 @@
       },
       "level_keys": [
         "CSD U5L14 autoSFLP_2021"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5L10 autoSFLP_2021"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      },
+      "level_keys": [
+        "CSD U5L10 autoSFLP_2021"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Problem Solving"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Netflix Data Video_2021"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      },
+      "level_keys": [
+        "CSD U5 Netflix Data Video_2021"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Problem Solving"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Waze Data Video_2021"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      },
+      "level_keys": [
+        "CSD U5 Waze Data Video_2021"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Problem Solving"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Amazon Data Video_2021"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      },
+      "level_keys": [
+        "CSD U5 Amazon Data Video_2021"
       ]
     },
     {
@@ -1466,39 +1480,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U5L06 autoSFLP_2021",
-        "script_level.level_keys": [
-          "CSD U5L06 autoSFLP_2021"
-        ],
-        "lesson.key": "Keeping Data Secret",
-        "lesson_group.key": "csd5_1",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U5 Encryption 2_2021",
-        "script_level.level_keys": [
-          "CSD U5 Encryption 2_2021"
-        ],
-        "lesson.key": "Keeping Data Secret",
-        "lesson_group.key": "csd5_1",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U5 Encryption 1_2021",
-        "script_level.level_keys": [
-          "CSD U5 Encryption 1_2021"
-        ],
-        "lesson.key": "Keeping Data Secret",
-        "lesson_group.key": "csd5_1",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD U5L07 autoSFLP_2021",
         "script_level.level_keys": [
           "CSD U5L07 autoSFLP_2021"
@@ -1532,6 +1513,39 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U5L06 autoSFLP_2021",
+        "script_level.level_keys": [
+          "CSD U5L06 autoSFLP_2021"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Encryption 2_2021",
+        "script_level.level_keys": [
+          "CSD U5 Encryption 2_2021"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Encryption 1_2021",
+        "script_level.level_keys": [
+          "CSD U5 Encryption 1_2021"
+        ],
+        "lesson.key": "Keeping Data Secret",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U5L08 autoSFLP_2021",
         "script_level.level_keys": [
           "CSD U5L08 autoSFLP_2021"
@@ -1559,50 +1573,6 @@
           "CSD U5L09 autoSFLP_2021"
         ],
         "lesson.key": "Problem Solving and Data",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U5L10 autoSFLP_2021",
-        "script_level.level_keys": [
-          "CSD U5L10 autoSFLP_2021"
-        ],
-        "lesson.key": "Problem Solving with Big Data",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U5 Netflix Data Video_2021",
-        "script_level.level_keys": [
-          "CSD U5 Netflix Data Video_2021"
-        ],
-        "lesson.key": "Problem Solving with Big Data",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U5 Waze Data Video_2021",
-        "script_level.level_keys": [
-          "CSD U5 Waze Data Video_2021"
-        ],
-        "lesson.key": "Problem Solving with Big Data",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U5 Amazon Data Video_2021",
-        "script_level.level_keys": [
-          "CSD U5 Amazon Data Video_2021"
-        ],
-        "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
       }
@@ -1653,17 +1623,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U5L12 autoSFLP_2021",
-        "script_level.level_keys": [
-          "CSD U5L12 autoSFLP_2021"
-        ],
-        "lesson.key": "Making Decisions with Data",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD U5L13 autoSFLP_2021",
         "script_level.level_keys": [
           "CSD U5L13 autoSFLP_2021"
@@ -1686,11 +1645,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U5L12 autoSFLP_2021",
+        "script_level.level_keys": [
+          "CSD U5L12 autoSFLP_2021"
+        ],
+        "lesson.key": "Making Decisions with Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U5L14 autoSFLP_2021",
         "script_level.level_keys": [
           "CSD U5L14 autoSFLP_2021"
         ],
         "lesson.key": "Automating Data Decisions",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5L10 autoSFLP_2021",
+        "script_level.level_keys": [
+          "CSD U5L10 autoSFLP_2021"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Netflix Data Video_2021",
+        "script_level.level_keys": [
+          "CSD U5 Netflix Data Video_2021"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Waze Data Video_2021",
+        "script_level.level_keys": [
+          "CSD U5 Waze Data Video_2021"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "csd5_2",
+        "script.name": "csd5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Amazon Data Video_2021",
+        "script_level.level_keys": [
+          "CSD U5 Amazon Data Video_2021"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
       }
