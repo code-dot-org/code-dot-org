@@ -22,11 +22,13 @@ PredictPanelApi.init = function(predictPanelId, data) {
       );
     }
 
+    const modelId = targetElement.getAttribute('data-modelid');
+
     targetElement.innerHTML = '';
 
     return new Promise((resolve, reject) => {
       $.ajax({
-        url: '/api/v1/ml_models/oQGoFIw32Nf8',
+        url: '/api/v1/ml_models/' + modelId,
         method: 'GET'
       })
         .success(data => {

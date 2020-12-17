@@ -35,18 +35,18 @@ export default class MLModelPickerPropertyRow extends React.Component {
     lastEdit: 0
   };
 
-  changeUnlessEditing(filename) {
+  changeUnlessEditing(id) {
     if (Date.now() - this.state.lastEdit >= USER_INPUT_DELAY) {
-      this.changeImage(filename);
+      this.changeModel(id);
     }
   }
 
   handleChangeInternal = event => {
-    const filename = event.target.value;
-    this.changeUnlessEditing(filename);
+    const id = event.target.value;
+    this.changeUnlessEditing(id);
 
     this.setState({
-      value: filename,
+      value: id,
       lastEdit: Date.now()
     });
 
@@ -66,7 +66,7 @@ export default class MLModelPickerPropertyRow extends React.Component {
     //
     // However today the `createModalDialog` function and `Dialog` component
     // are intertwined with `StudioApp` which is why we have this direct call.
-    dashboard.assets.showAssetManager(this.changeImage, 'mlmodel', null, {
+    dashboard.assets.showAssetManager(this.changeModel, 'mlmodel', null, {
       showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
       elementId: this.props.elementId,
       currentValue: this.state.value,
@@ -74,13 +74,13 @@ export default class MLModelPickerPropertyRow extends React.Component {
     });
   };
 
-  changeImage = (filename, timestamp) => {
-    this.props.handleChange(filename, timestamp);
+  changeModel = (id, timestamp) => {
+    this.props.handleChange(id, timestamp);
     // Because we delay the call to this function via setTimeout, we must be sure not
     // to call setState after the component is unmounted, or React will warn and
     // tests will fail.
     if (this.isMounted_) {
-      this.setState({value: filename});
+      this.setState({value: id});
     }
   };
 

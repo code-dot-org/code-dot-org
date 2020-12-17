@@ -35,7 +35,7 @@ class PredictPanelProperties extends React.Component {
         />
         <MLModelPickerPropertyRow
           desc={'model ID'}
-          initialValue={'abc123'}
+          initialValue={element.getAttribute('data-modelid')}
           handleChange={this.props.handleChange.bind(this, 'modelId')}
           /*isMLRow*/
         />
