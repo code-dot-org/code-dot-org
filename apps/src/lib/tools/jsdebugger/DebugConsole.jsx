@@ -151,6 +151,9 @@ export default connect(
       const input = e.target.value;
       if (e.keyCode === KeyCodes.ENTER) {
         e.preventDefault();
+        if (this.props.debugConsoleDisabled) {
+          return;
+        }
         this.props.commandHistory.push(input);
         e.target.value = '';
         this.appendLog({input: input});
