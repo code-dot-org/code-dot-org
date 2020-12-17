@@ -56,7 +56,6 @@ export const activitySectionShape = PropTypes.shape({
   position: PropTypes.number.isRequired,
   displayName: PropTypes.string.isRequired,
   remarks: PropTypes.bool,
-  slide: PropTypes.bool,
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape).isRequired
