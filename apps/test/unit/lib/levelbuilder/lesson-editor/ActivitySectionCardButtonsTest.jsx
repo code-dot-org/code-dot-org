@@ -34,7 +34,7 @@ describe('ActivitySectionCardButtons', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(3);
+    expect(wrapper.find('button').length).to.equal(4);
     expect(wrapper.find('Connect(FindResourceDialog)').length).to.equal(1);
     expect(wrapper.find('AddLevelDialog').length).to.equal(1);
     expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(2);
@@ -78,12 +78,12 @@ describe('ActivitySectionCardButtons', () => {
     expect(wrapper.state().addResourceOpen).to.equal(true);
   });
 
-  it('add resource link pressed', () => {
+  it('add slide pressed', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
 
     const button = wrapper.find('button').at(3);
     expect(button.text()).to.include('Slide');
     button.simulate('mouseDown');
-    expect(appendSlide).to.have.been.calledOnce();
+    expect(appendSlide).to.have.been.calledOnce;
   });
 });
