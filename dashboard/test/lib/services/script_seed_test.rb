@@ -140,8 +140,8 @@ module Services
     # 2. get_script_and_json_with_change_and_rollback copies and modifies the
     # script and serializes it to json, and then restores the DB to its original
     # state via database transaction rollback. It then returns the modified json
-    # the modified script_with_changes, loading script associations into memory
-    # via with_seed_models.
+    # and the modified script_with_changes, loading script associations into
+    # memory via with_seed_models.
     #
     # 3. seed_from_json replays the modification represented in the modified
     # json, then reloads the script from the database using with_seed_models.

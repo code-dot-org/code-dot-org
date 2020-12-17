@@ -7,7 +7,7 @@
 #  lesson_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  key        :string(255)
+#  key        :string(255)      not null
 #
 # Indexes
 #
