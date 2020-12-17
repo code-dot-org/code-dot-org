@@ -470,6 +470,9 @@ class Lesson < ApplicationRecord
     # this update, so just set activity_section_position as the source of truth
     # and then fix chapter and position values after.
     script.fix_script_level_positions
+    # Reload the lesson to make sure the positions information we have is all up
+    # to date
+    reload
   end
 
   def update_objectives(objectives)
