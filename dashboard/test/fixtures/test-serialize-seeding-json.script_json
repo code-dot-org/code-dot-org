@@ -6,6 +6,7 @@
     "login_required": false,
     "properties": {
       "curriculum_path": "my_curriculum_path",
+      "is_migrated": true,
       "is_course": true,
       "version_year": "test-serialize-seeding-json-version"
     },
