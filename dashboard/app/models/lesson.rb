@@ -476,7 +476,7 @@ class Lesson < ApplicationRecord
     return unless objectives
 
     self.objectives = objectives.map do |objective|
-      persisted_objective = objective['id'].blank? ? Objective.new : Objective.find(objective['id'])
+      persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
