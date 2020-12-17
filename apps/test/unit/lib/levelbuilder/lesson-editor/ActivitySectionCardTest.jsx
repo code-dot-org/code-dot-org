@@ -84,7 +84,6 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('LevelToken').length).to.equal(0);
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('OrderControls').length).to.equal(1);
-    expect(wrapper.contains('Slides')).to.be.true;
     expect(wrapper.contains('Remarks')).to.be.true;
   });
 
@@ -101,7 +100,6 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('OrderControls').length).to.equal(1);
-    expect(wrapper.contains('Slides')).to.be.true;
   });
 
   it('edit activity section title', () => {
