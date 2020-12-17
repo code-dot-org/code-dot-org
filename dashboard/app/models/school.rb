@@ -385,6 +385,8 @@ class School < ApplicationRecord
             state_cs_offerings_hashes = []
             must_reload_state_cs_offerings = loaded.changed.include?('state_school_id') && has_state_cs_offerings
             if must_reload_state_cs_offerings && !is_dry_run
+              # Notes that this method should be deleted, and we can just use
+              # loaded.state_cs_offering.destroy_all.
               state_cs_offerings_hashes = loaded.delete_state_cs_offerings(loaded.state_school_id_was)
             end
 
