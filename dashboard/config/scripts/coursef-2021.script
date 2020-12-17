@@ -7,8 +7,9 @@ family_name 'coursef'
 version_year '2021'
 curriculum_umbrella 'CSF'
 is_course true
+is_migrated true
 
-lesson_group 'ramp_up', display_name: 'Ramp-Up'
+lesson_group 'ramp_up', display_name: 'Ramp Up'
 lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft'
 level 'MC_HOC_2017_01_RETRY_2021', progression: 'Practice'
 level 'MC_HOC_2017_02_Cole_2021', progression: 'Practice'
@@ -119,7 +120,7 @@ level 'simstarter_2021', progression: 'Run a simulation'
 level 'simconfig_2021', progression: 'Modify simulation variables'
 bonus 'courseF_extras_sim_2021'
 
-lesson 'AI for Oceans', display_name: 'AI for Oceans'
+lesson 'AI for Oceans', display_name: 'AI For Oceans'
 level 'CourseF_Oceans_Video_Machine_Learning_2021'
 level 'CourseF_Oceans_FishVTrash_2021'
 level 'CourseF_Oceans_CreaturesVTrashDemo_2021'
