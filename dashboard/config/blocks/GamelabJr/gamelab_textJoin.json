@@ -1,0 +1,19 @@
+{
+  "category": "Text",
+  "config": {
+    "func": "textJoin",
+    "blockText": "\"{TEXT1}\"{TEXT2}",
+    "returnType": "String",
+    "args": [
+      {
+        "name": "TEXT1",
+        "type": "String",
+        "field": true
+      },
+      {
+        "name": "TEXT2",
+        "type": "String"
+      }
+    ]
+  }
+}
