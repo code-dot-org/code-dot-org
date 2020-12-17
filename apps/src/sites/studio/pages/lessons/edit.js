@@ -20,11 +20,6 @@ $(document).ready(function() {
   const activities = mapActivityDataForEditor(lessonData.activities);
   const objectives = lessonData.objectives || [];
 
-  // Do the same thing for objective keys as for activity keys above.
-  // React needs unique keys for all objects, but objectives don't get
-  // a key until they're saved to the server, which happens after lesson save.
-  objectives.forEach(objective => (objective.key = objective.id + ''));
-
   registerReducers({...reducers, resources: resourcesEditor});
   const store = getStore();
 
