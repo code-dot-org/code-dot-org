@@ -77,9 +77,7 @@ Sound.prototype.play = function(options) {
       this.isPlayingCount--;
       if (this.isPlayingCount === 0) {
         this.isPlaying_ = false;
-        if (options.onEnded) {
-          options.onEnded();
-        }
+        options.onEnded && options.onEnded();
       }
     }.bind(this);
 
