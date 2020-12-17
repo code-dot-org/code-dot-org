@@ -11425,6 +11425,7 @@ en:
               name: Part 2
             part 3:
               name: part 3
+          name: andrea-test
         dance-extras-gallery:
           title: Keep On Dancing
           description_audience: ''
@@ -14345,9 +14346,14 @@ en:
             Deeper Learning Overview:
               name: Deeper Learning Overview
             Understanding the Curriculum:
-              name: Understanding the Curriculum
+              name: 'Understanding the Curriculum: Pre Work'
             Demonstrating Understanding:
               name: Demonstrating Understanding
+            Focus Area 1:
+              name: Curriculum
+            Focus Area 2:
+              name: Learning Platform
+          name: dlp19-csd-mod-fit
         dlp19-csp-mod-fit:
           title: CS Principles Deeper Learning 2019 FiT Workshop
           description_audience: CS Principles Facilitators in Training 2019
@@ -15638,12 +15644,12 @@ en:
               description_teacher: "**Question of the Day:  How can we use feedback to make our websites better?**\r\n\r\nThis lesson focuses on the value of peer feedback.  Students first reflect on what they are proud of, and what they would like feedback on.  Teams then work with peers to get that feedback though a structured process that includes the project rubric criteria.  Afterwards, students decide how they would like to respond to the feedback and put the finishing touches on their sites.  After a final review of the rubric, they reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
             Post-Project Test:
               name: Post-Project Test
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             'Mini-Project: HTML Web Page':
               name: 'Mini-Project: HTML Web Page'
               description_student: "**Question of the Day: How can I use HTML to express a personal value?**\r\n\r\nIn this lesson, the class creates personal web page on a topic of their choice.  The lesson starts with a review of HTML tags.  Next, the class designs web pages, identifying the tags needed to implement them, and creates the pages in Web Lab."
@@ -18357,9 +18363,35 @@ en:
           lessons:
             Sprite Lab:
               name: Sprite Lab Blocks
+            Course F Introduction:
+              name: Introducing Sprite Lab
+            Learning Sprites with Sprite Lab:
+              name: Programming with Sprite Lab
+            lesson-1:
+              name: Envelope Variables
+            lesson-2:
+              name: Storing and Retrieving Text
+            lesson-3:
+              name: Create a Chat-Bot
+            lesson-4:
+              name: Counting with Variables
+            lesson-5:
+              name: Groups of Sprites
+            lesson-6:
+              name: Create a Collector Game
+            Virus Simulation for Code Bytes:
+              name: Coding a Simulation
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
+            introduction:
+              display_name: Introduction
+              description: Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!
+            lessonGroup-3:
+              display_name: Variables
+              description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
+            outbreak:
+              display_name: Outbreak Simulation
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
@@ -18651,10 +18683,14 @@ en:
               name: Prototype Testing
             Digital Design:
               key: Digital Design
-              name: Digital Design
+              name: Design Mode in AppLab
+              description_student: Having developed, tested, and gathered feedback on a paper prototype, teams now move to App Lab to build the next iteration of their apps. Using the drag-and-drop Design Mode, each team member builds out at least one page of their team's app, responding to feedback that was received in the previous round of testing.
+              description_teacher: Having collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin work on an interactive digital version based on the paper prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital versions of a paper prototype. From there, each group member builds out at least one page of their app in App Lab, to be later combined into a single app.
             Linking Screens:
               key: Linking Screens
-              name: Linking Screens
+              name: Linking Prototype Screens
+              description_student: Building on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.
+              description_teacher: In this lesson teams combine the screens that they designed in the previous lesson into a single app, which they can then link together using code. Students learn basic event driven programming by building up the model app that they started in the previous lesson. In addition to the screen that students designed yesterday, they'll learn how to create additional screens and even import screens made by others.
             Testing the App:
               key: Testing the App
               name: Testing the App
@@ -18670,6 +18706,24 @@ en:
             CS Discoveries Post Course survey:
               key: CS Discoveries Post Course survey
               name: CS Discoveries Post Course survey
+              description_student: ''
+              description_teacher: ''
+            User-Centered Design 1:
+              name: User-Centered Design - Define and Prepare
+            User-Centered Design 2:
+              name: User-Centered Design - Try and Reflect
+            Exploring UI Elements:
+              name: Exploring UI Elements
+            Build a Digital Prototype:
+              name: Build a Digital Prototype
+            Events In AppLab:
+              name: Events In AppLab
+            Bugs and Features:
+              name: Bugs and Features
+            Updating Your Prototype:
+              name: Updating Your Prototype
+            Build a Paper Prototype:
+              name: Build a Paper Prototype
           lesson_groups:
             csd4_1:
               display_name: 'Chapter 1: User Centered Design'
@@ -18737,6 +18791,10 @@ en:
             CS Discoveries Post Course survey:
               key: CS Discoveries Post Course survey
               name: CS Discoveries Post Course survey
+              description_student: ''
+              description_teacher: ''
+            Data and Machine Learning:
+              name: Data and Machine Learning
           lesson_groups:
             csd5_1:
               display_name: 'Chapter 1: Representing Information'

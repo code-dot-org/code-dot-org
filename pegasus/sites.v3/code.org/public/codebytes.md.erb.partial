@@ -16,14 +16,14 @@ social:
 %>
 
 <center><div style="background-color: #FFFFFF; padding: 10px; margin-top:50px;"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 80%"/></div></center>
-<div style="background-color: #00adbc; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Daily mini-lessons brought to you live!</h1></div>
+<div style="background-color: #00adbc; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">CodeBytes: 20 minute, mini-lessons for all ages</h1></div>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
 <p>Planning for the Hour of Code with your classroom that’s gone virtual? Try a <b>CodeByte</b>! Designed to fit smoothly into a distance learning plan, CodeBytes are <font color="00adbc"><b>easy-to-digest, 20 minute interactive lessons</b></font> that will stream during Computer Science Education Week, <b>December 7-11</b>.</p>
 <p>We saw how many people loved taking a Code Break earlier this year. So, we’re packaging up that CS goodness into 5 different fun-sized CodeBytes during the week!</p>
 <p>Every episode features a new lesson that blends computer science with real-world topics. One day, students will use Dance Party to get creative and express themselves. Another day, they’ll explore environmental sustainability with Artificial Intelligence.</p>
-<center><a href="https://codebytes.live/now"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">Tune-in</button></a><br><em>(Join on Zoom or <a href="#activities">stream on YouTube</a>)</em></center><br>
-Plus, you have two chances to catch each lesson live! Episodes take place twice daily at 8:00am PST / 11:00am EST and 1:30pm PST / 4:30pm EST. <a href="#activities"><b>Check out our episode schedule</b></a> to find a time that works for you.
+<center><a href="https://codebytes.live/now"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">Watch</button></a><br></center><br>
+While our live episodes have already taken place, you can still<a href="#activities"><b> view the recordings and try the activities</b></a>.
 
 <h2>CodeBytes are great for:</h2>
 <li>Students with varying access to technology. Participants can tune-in and interact whether they have a laptop, tablet, or smartphone!</li>
@@ -55,8 +55,8 @@ Plus, you have two chances to catch each lesson live! Episodes take place twice 
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #00adbc; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Tune-in daily</h1></div>
-<h3><font color="00adbc"><b>Episodes will begin Monday, December 7th</b></font>. In the meantime, you can add these mini-lessons to your calendar.<br><br>Each episode takes place live at <b>8:00am PST and 1:30pm PST every day</b>. If you can't make a live episode, recordings can be found below or you can download them <a href="https://www.dropbox.com/sh/cwaoxzax7tjcg6h/AADzfdeN-SZzf9O-lXv8hebYa?dl=0">here</a>.</h3>
+<div style="background-color: #00adbc; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Activities & Episodes</h1></div>
+<h3>All of our live episodes have taken place. However, recordings can be found below or you can download them <a href="https://www.dropbox.com/sh/cwaoxzax7tjcg6h/AADzfdeN-SZzf9O-lXv8hebYa?dl=0">here</a>.</h3>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 1</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px;">
 <img src="/images/marketing/codebytes-1.png" style="max-width:100%">

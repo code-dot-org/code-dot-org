@@ -84,7 +84,6 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('LevelToken').length).to.equal(0);
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('OrderControls').length).to.equal(1);
-    expect(wrapper.contains('Slides')).to.be.true;
     expect(wrapper.contains('Remarks')).to.be.true;
   });
 
@@ -101,7 +100,6 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('OrderControls').length).to.equal(1);
-    expect(wrapper.contains('Slides')).to.be.true;
   });
 
   it('edit activity section title', () => {
@@ -114,19 +112,6 @@ describe('ActivitySectionCard', () => {
       1,
       'displayName',
       'New Title'
-    );
-  });
-
-  it('edit activity section slides', () => {
-    const wrapper = shallow(<ActivitySectionCard {...defaultProps} />);
-
-    const titleInput = wrapper.find('input').at(2);
-    titleInput.simulate('change', {target: {value: ''}});
-    expect(updateActivitySectionField).to.have.been.calledWith(
-      1,
-      1,
-      'slide',
-      true
     );
   });
 
