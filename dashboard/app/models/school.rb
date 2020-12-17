@@ -112,7 +112,7 @@ class School < ApplicationRecord
   # Seeds all the data from the source file.
   # @param options [Hash] Optional map of options.
   def self.seed_all(options = {})
-    options[:stub_school_data] ||= CDO.stub_school_data
+    options[:stub_school_data] = CDO.stub_school_data unless options.key?(:stub_school_data)
 
     if options[:stub_school_data]
       # use a much smaller dataset in environments that reseed data frequently.
