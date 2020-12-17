@@ -245,6 +245,19 @@ class ScriptTest < ActiveSupport::TestCase
     assert_empty script.properties
   end
 
+  test 'can setup migrated script without script_json file' do
+    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+
+    # the contents of test-migrated-new.script and test-migrated-new.script_json
+    # reflect that of a new script which has been modified only by adding
+    # `is_migrated true` to the .script file.
+    script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-new.script')
+    Script.setup([script_file])
+
+    script = Script.find_by_name('test-migrated-new')
+    assert script.is_migrated
+  end
+
   test 'should not create two scripts with same name' do
     create(:script, name: 'script')
     raise = assert_raises ActiveRecord::RecordInvalid do

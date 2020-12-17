@@ -602,7 +602,8 @@ module Services
       script = create(
         :script,
         name: "#{name_prefix}-script",
-        curriculum_path: 'my_curriculum_path'
+        curriculum_path: 'my_curriculum_path',
+        is_migrated: true
       )
 
       if with_unit_group
