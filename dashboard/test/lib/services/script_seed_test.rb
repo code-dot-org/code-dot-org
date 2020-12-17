@@ -603,6 +603,7 @@ module Services
         :script,
         name: "#{name_prefix}-script",
         curriculum_path: 'my_curriculum_path',
+        hidden: true,
         is_migrated: true
       )
 
