@@ -145,8 +145,12 @@ module Services
 
         seed_context.script = import_script(script_data)
 
-        # course version must be set before resources are imported.
-        CourseOffering.add_course_offering(seed_context.script)
+        # Course version must be set before resources are imported. If the
+        # script is in a unit group, we must wait and let the next seed step set
+        # the course version on the unit group before resources can be imported.
+        if seed_context.script.is_course
+          CourseOffering.add_course_offering(seed_context.script)
+        end
 
         seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
         seed_context.lessons = import_lessons(lessons_data, seed_context)
@@ -312,6 +316,25 @@ module Services
 
     def self.import_resources(resources_data, seed_context)
       course_version_id = seed_context.script.get_course_version&.id
+
+      unless course_version_id
+        # We can't import any resources without a course version, because
+        # course_version_id is required for resources. Don't raise, because we
+        # may be in the scenario where this script does belong to a unit group,
+        # but that association is not present in the database yet because the
+        # seed process has not yet run on this machine since that relationship
+        # was added. In this scenario, the relationship to the unit group and
+        # its course version will be established in a later seed step. Then,
+        # this method will be able to import the resources the next time the
+        # seed process runs.
+        if resources_data.count > 0
+          puts "WARNING: unable to import resources into script #{seed_context.script.name} "\
+            "because course version is missing. This is only to be expected if "\
+            "the script is being seeded for the first time."
+        end
+        return []
+      end
+
       resources_to_import = resources_data.map do |resource_data|
         resource_attrs = resource_data.except('seeding_key')
         resource_attrs['course_version_id'] = course_version_id
@@ -326,6 +349,8 @@ module Services
     end
 
     def self.import_lessons_resources(lessons_resources_data, seed_context)
+      return [] unless seed_context.script.get_course_version
+
       lessons_resources_to_import = lessons_resources_data.map do |lr_data|
         lesson_id = seed_context.lessons.select {|l| l.key == lr_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
