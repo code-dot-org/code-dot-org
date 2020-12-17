@@ -1,95 +1,36 @@
 import React from 'react';
-import * as Table from 'reactabular-table';
-import * as Sticky from 'reactabular-sticky';
-import * as Virtualized from 'reactabular-virtualized';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {scriptDataPropType, gutterHeader} from '../sectionProgressConstants';
-import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
-import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
+import i18n from '@cdo/locale';
+import {scriptDataPropType} from '../sectionProgressConstants';
+import {
+  getCurrentScriptData,
+  setLessonOfInterest
+} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
+import ProgressTableContainer from './ProgressTableContainer';
 import ProgressTableDetailCell from './ProgressTableDetailCell';
-import ProgressTableLessonNumber from './ProgressTableLessonNumber';
 import ProgressTableLevelIcon from './ProgressTableLevelIcon';
-import progressTableStyles from './progressTableStyles.scss';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 
-const styles = {
-  headerContainer: {
-    height: '100%'
-  }
-};
-
-export default class ProgressTableDetailView extends React.Component {
-  static widthForScript(scriptData) {
-    return scriptData.stages.reduce((stageSum, stage) => {
-      return stageSum + ProgressTableDetailCell.widthForLevels(stage.levels);
-    }, 0);
-  }
-
+class ProgressTableDetailView extends React.Component {
   static propTypes = {
+    // redux
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
-    lessonOfInterest: PropTypes.number.isRequired,
-    levelProgressByStudent: PropTypes.objectOf(
-      PropTypes.objectOf(studentLevelProgressType)
-    ).isRequired,
-    onScroll: PropTypes.func.isRequired,
     onClickLesson: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
-    this.lessonNumberFormatter = this.lessonNumberFormatter.bind(this);
     this.levelIconFormatter = this.levelIconFormatter.bind(this);
     this.detailCellFormatter = this.detailCellFormatter.bind(this);
   }
 
-  header = null;
-  body = null;
-  bodyComponent = null;
-  lessonRefs = {};
-
-  componentDidMount() {
-    this.scrollToSelectedLesson();
-  }
-
-  componentDidUpdate() {
-    this.scrollToSelectedLesson();
-  }
-
-  scrollToSelectedLesson() {
-    const lesson = this.lessonRefs[this.props.lessonOfInterest];
-    const scrollPosition = lesson.parentNode.offsetLeft;
-    this.header.scrollLeft = scrollPosition;
-    this.body.scrollLeft = scrollPosition;
-  }
-
-  needsGutter() {
-    return (
-      this.props.section.students.length *
-        parseInt(progressTableStyles.ROW_HEIGHT) >
-      parseInt(progressTableStyles.MAX_BODY_HEIGHT)
-    );
-  }
-
-  lessonNumberFormatter(_, {columnIndex}) {
-    const stageData = this.props.scriptData.stages[columnIndex];
-    const levels = stageData.levels;
-    return (
-      <div
-        style={styles.headerContainer}
-        ref={r => (this.lessonRefs[stageData.position] = r)}
-      >
-        <ProgressTableLessonNumber
-          name={stageData.name}
-          number={stageData.relative_position}
-          lockable={stageData.lockable}
-          highlighted={stageData.position === this.props.lessonOfInterest}
-          onClick={() => this.props.onClickLesson(stageData.position)}
-          includeArrow={levels.length > 1}
-          isAssessment={stageIsAllAssessment(levels)}
-        />
-      </div>
-    );
+  getTableWidth(lessons) {
+    return lessons.reduce((lessonSum, lesson) => {
+      return lessonSum + ProgressTableDetailCell.widthForLevels(lesson.levels);
+    }, 0);
   }
 
   levelIconFormatter(_, {columnIndex}) {
@@ -100,76 +41,45 @@ export default class ProgressTableDetailView extends React.Component {
     );
   }
 
-  detailCellFormatter(_, {rowData, columnIndex}) {
-    const {levelProgressByStudent, scriptData} = this.props;
-    const stageLevels = scriptData.stages[columnIndex].levels;
+  detailCellFormatter(lesson, student, studentProgress) {
     return (
       <ProgressTableDetailCell
-        studentId={rowData.id}
+        studentId={student.id}
         sectionId={this.props.section.id}
         stageExtrasEnabled={this.props.section.stageExtras}
-        levels={stageLevels}
-        studentProgress={levelProgressByStudent[rowData.id]}
+        levels={lesson.levels}
+        studentProgress={studentProgress}
       />
     );
   }
 
   render() {
-    const lessonHeaders = [];
-    const levelHeaders = [];
-    const columns = [];
-    this.props.scriptData.stages.forEach((stage, index) => {
-      const width = ProgressTableDetailCell.widthForLevels(stage.levels);
-      const widthProps = {style: {minWidth: width, maxWidth: width}};
-      columns.push({
-        props: widthProps,
-        cell: {formatters: [this.detailCellFormatter]}
-      });
-      lessonHeaders.push({
-        header: {props: widthProps, formatters: [this.lessonNumberFormatter]}
-      });
-      levelHeaders.push({
-        header: {props: widthProps, formatters: [this.levelIconFormatter]}
-      });
-    });
-
-    // Account for scrollbar in table body
-    if (this.needsGutter()) {
-      lessonHeaders.push(gutterHeader);
-      levelHeaders.push(gutterHeader);
-    }
-
+    const columnWidths = this.props.scriptData.stages.map(lesson =>
+      ProgressTableDetailCell.widthForLevels(lesson.levels)
+    );
     return (
-      <Table.Provider
-        renderers={{
-          body: {
-            wrapper: Virtualized.BodyWrapper,
-            row: Virtualized.BodyRow
-          }
-        }}
-        columns={columns}
+      <ProgressTableContainer
+        onClickLesson={this.props.onClickLesson}
+        getTableWidth={lessons => this.getTableWidth(lessons)}
+        columnWidths={columnWidths}
+        lessonCellFormatter={this.detailCellFormatter}
+        includeHeaderArrows={true}
+        extraHeaderFormatters={[this.levelIconFormatter]}
+        extraHeaderLabels={[i18n.levelType()]}
       >
-        <Sticky.Header
-          style={{overflow: 'hidden'}}
-          ref={r => (this.header = r && r.getRef())}
-          tableBody={this.body}
-          headerRows={[lessonHeaders, levelHeaders]}
-        />
-        <Virtualized.Body
-          rows={this.props.section.students}
-          rowKey={'id'}
-          onScroll={this.props.onScroll}
-          style={{
-            overflow: 'auto',
-            maxHeight: parseInt(progressTableStyles.MAX_BODY_HEIGHT)
-          }}
-          ref={r => {
-            this.body = r && r.getRef();
-            this.bodyComponent = r;
-          }}
-          tableHeader={this.header}
-        />
-      </Table.Provider>
+        <ProgressLegend excludeCsfColumn={!this.props.scriptData.csf} />
+      </ProgressTableContainer>
     );
   }
 }
+export default connect(
+  state => ({
+    section: state.sectionData.section,
+    scriptData: getCurrentScriptData(state)
+  }),
+  dispatch => ({
+    onClickLesson(lessonPosition) {
+      dispatch(setLessonOfInterest(lessonPosition));
+    }
+  })
+)(ProgressTableDetailView);

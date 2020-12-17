@@ -4,8 +4,8 @@ import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
-import SummaryView from '@cdo/apps/templates/sectionProgress/progressTables/SummaryView';
-import DetailView from '@cdo/apps/templates/sectionProgress/progressTables/DetailView';
+import ProgressTableSummaryView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryView';
+import ProgressTableDetailView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailView';
 import LessonSelector from './LessonSelector';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -198,12 +198,12 @@ class SectionProgress extends Component {
           )}
           {levelDataInitialized && currentView === ViewType.SUMMARY && (
             <div id="uitest-summary-view" style={summaryStyle}>
-              <SummaryView />
+              <ProgressTableSummaryView />
             </div>
           )}
           {levelDataInitialized && currentView === ViewType.DETAIL && (
             <div id="uitest-detail-view" style={detailStyle}>
-              <DetailView />
+              <ProgressTableDetailView />
             </div>
           )}
           {levelDataInitialized && currentView === ViewType.STANDARDS && (

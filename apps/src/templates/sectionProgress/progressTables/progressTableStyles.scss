@@ -20,6 +20,7 @@ $content-view-width: $content-width - $student-list-width;
   th,
   td {
     padding: 0px;
+    box-sizing: border-box;
   }
   tr:nth-child(even) {
     background-color: $background_gray;

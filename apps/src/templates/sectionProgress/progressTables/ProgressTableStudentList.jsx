@@ -54,12 +54,6 @@ export default class ProgressTableStudentList extends React.Component {
   }
 
   render() {
-    const rows = [...this.props.section.students];
-    if (this.props.needsGutter) {
-      // Account for scrollbar in content view
-      rows.push({id: -1, name: 'gutter'});
-    }
-
     return (
       <Table.Provider
         renderers={{
@@ -85,10 +79,11 @@ export default class ProgressTableStudentList extends React.Component {
           ])}
         />
         <Virtualized.Body
-          rows={rows}
+          rows={this.props.section.students}
           rowKey={'id'}
           style={{
-            overflow: 'hidden',
+            overflowX: this.props.needsGutter ? 'scroll' : 'hidden',
+            overflowY: 'hidden',
             maxHeight: parseInt(progressTableStyles.MAX_BODY_HEIGHT)
           }}
           ref={r => {

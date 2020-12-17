@@ -31,11 +31,6 @@ export const ViewType = {
 
 export const scrollbarWidth = getScrollbarWidth();
 
-// Extra header column to account for scrollbar in progress tables
-export const gutterHeader = {
-  header: {props: {style: {width: scrollbarWidth, minWidth: scrollbarWidth}}}
-};
-
 function getScrollbarWidth() {
   // Creating invisible container
   const outer = document.createElement('div');
