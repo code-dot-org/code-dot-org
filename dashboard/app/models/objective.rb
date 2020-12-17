@@ -7,7 +7,7 @@
 #  lesson_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  key        :string(255)
+#  key        :string(255)      not null
 #
 # Indexes
 #
@@ -28,7 +28,7 @@ class Objective < ApplicationRecord
   )
 
   def summarize_for_edit
-    {id: id, description: description}
+    {id: id, description: description, key: key}
   end
 
   def summarize_for_lesson_show
