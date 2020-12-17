@@ -329,10 +329,11 @@ Sounds.prototype.playURL = function(url, playbackOptions) {
 };
 
 /**
+ * @param {string} id of the sound.
  * @param {ArrayBuffer} bytes of the sound to play.
  * @param {object} playbackOptions config for the playing of the sound.
  */
-Sounds.prototype.playBytes = function(bytes, playbackOptions) {
+Sounds.prototype.playBytes = function(id, bytes, playbackOptions) {
   if (this.isMuted) {
     return;
   }
@@ -344,6 +345,7 @@ Sounds.prototype.playBytes = function(bytes, playbackOptions) {
   soundConfig.playAfterLoadOptions = playbackOptions;
   soundConfig.bytes = bytes;
   let sound = new Sound(soundConfig, this.audioContext);
+  this.soundsById[id] = sound;
   sound.preloadBytes();
   sound.play();
 };

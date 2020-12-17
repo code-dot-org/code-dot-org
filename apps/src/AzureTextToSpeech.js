@@ -12,7 +12,8 @@ import Sounds from '@cdo/apps/Sounds';
  * @param {Error} error Any error that occurs while requesting the sound or checking for profanity.
  */
 export class SoundResponse {
-  constructor(bytes, playbackOptions, profaneWords = [], error = null) {
+  constructor(id, bytes, playbackOptions, profaneWords = [], error = null) {
+    this.id = id;
     this.bytes = bytes;
     this.playbackOptions = playbackOptions;
     this.profaneWords = profaneWords;
@@ -103,6 +104,7 @@ export default class AzureTextToSpeech {
    */
   createSoundPromise = opts => () => {
     const {text, gender, languageCode, authenticityToken, onFailure} = opts;
+    const id = this.cacheKey_(languageCode, gender, text);
     const cachedSound = this.getCachedSound_(languageCode, gender, text);
     const wrappedSetCachedSound = soundResponse => {
       this.setCachedSound_(languageCode, gender, text, soundResponse);
@@ -119,7 +121,7 @@ export default class AzureTextToSpeech {
           onFailure(soundResponse.profanityMessage());
           resolve(soundResponse);
         } else {
-          resolve(wrappedCreateSoundResponse({bytes}));
+          resolve(wrappedCreateSoundResponse({id, bytes}));
         }
       });
     }
@@ -146,7 +148,7 @@ export default class AzureTextToSpeech {
           languageCode,
           authenticityToken
         );
-        const soundResponse = wrappedCreateSoundResponse({bytes});
+        const soundResponse = wrappedCreateSoundResponse({id, bytes});
         wrappedSetCachedSound(soundResponse);
         resolve(soundResponse);
       } catch (error) {
@@ -204,7 +206,7 @@ export default class AzureTextToSpeech {
     this.playing = true;
     let response = await nextSoundPromise();
     if (this.isRunning_() && response.success()) {
-      play(response.bytes.slice(0), response.playbackOptions);
+      play(response.id, response.bytes.slice(0), response.playbackOptions);
     } else {
       response.playbackOptions.onEnded();
     }
@@ -219,12 +221,13 @@ export default class AzureTextToSpeech {
 
   /**
    * A wrapper for the Sounds.getSingleton().playBytes function to aid in testability.
+   * @param {string} id
    * @param {ArrayBuffer} bytes
    * @param {Object} playbackOptions
    * @private
    */
-  playBytes_ = (bytes, playbackOptions) => {
-    Sounds.getSingleton().playBytes(bytes, playbackOptions);
+  playBytes_ = (id, bytes, playbackOptions) => {
+    Sounds.getSingleton().playBytes(id, bytes, playbackOptions);
   };
 
   /**
@@ -313,6 +316,7 @@ export default class AzureTextToSpeech {
   /**
    * Wrapper for creating a new SoundResponse.
    * @param {Object} opts
+   * @param {string} opts.id
    * @param {ArrayBuffer} opts.bytes Bytes representing the sound to be played.
    * @param {Array<string>} opts.profaneWords Profanity present in requested TTS text.
    * @param {Error} opts.error Any error during the TTS request.
@@ -321,6 +325,7 @@ export default class AzureTextToSpeech {
    */
   createSoundResponse_ = opts => {
     return new SoundResponse(
+      opts.id,
       opts.bytes,
       this.playbackOptions_,
       opts.profaneWords,
