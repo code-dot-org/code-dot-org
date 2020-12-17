@@ -257,6 +257,9 @@ Resources:
               Value: true
             # Store Drone Build logs in S3 instead of in a blob column in the logs table in the Drone Server relational database.
             -
+              Name: AWS_REGION
+              Value: !Ref AWS::Region
+            -
               Name: DRONE_S3_BUCKET
               Value: code-dot-org
             -
