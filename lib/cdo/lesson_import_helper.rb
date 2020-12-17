@@ -387,7 +387,6 @@ module LessonImportHelper
       matches.push({index: 0, type: 'markdown', substring: substring}) unless substring.empty?
     end
     (0...existing_matches.length).each do |i|
-      #next if !existing_matches[i][:substring].empty? && i > 0 && existing_matches[i-1][:substring].include?(existing_matches[i][:substring])
       matches.push(existing_matches[i])
       next unless i < existing_matches.length - 1 && existing_matches[i][:index] + existing_matches[i][:substring].length < existing_matches[i + 1][:index]
       start_index = existing_matches[i][:index] + existing_matches[i][:substring].length
