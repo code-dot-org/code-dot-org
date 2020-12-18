@@ -67,7 +67,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     if user
       sign_in_google_oauth2 user
-    elsif session[:user_return_to] == '/maker/display_google_oauth_code'
+    elsif session[:user_return_to] == maker_display_google_oauth_code_path
       redirect_to session[:user_return_to]
     else
       sign_up_google_oauth2

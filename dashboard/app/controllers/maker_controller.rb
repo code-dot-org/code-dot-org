@@ -139,7 +139,7 @@ class MakerController < ApplicationController
   def confirm_login
     session[:user_return_to] ||= params[:user_return_to]
     if current_user
-      redirect_to maker_display_google_oauth_code_path
+      redirect_to session[:user_return_to]
     end
   end
 
