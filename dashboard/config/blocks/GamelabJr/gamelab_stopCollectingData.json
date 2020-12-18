@@ -1,0 +1,12 @@
+{
+  "category": "Math",
+  "config": {
+    "color": [
+      258,
+      "0.35",
+      "0.62"
+    ],
+    "func": "stopCollectingData",
+    "blockText": "stop collecting data"
+  }
+}
