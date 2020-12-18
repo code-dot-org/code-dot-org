@@ -202,7 +202,8 @@ export default class AzureTextToSpeech {
     this.playing = true;
     let response = await nextSoundPromise();
     if (response.success()) {
-      play(response.id, response.bytes.slice(0), response.playbackOptions);
+      const {id, bytes, playbackOptions} = response;
+      play(id, bytes.slice(0), playbackOptions);
     } else {
       response.playbackOptions.onEnded();
     }
