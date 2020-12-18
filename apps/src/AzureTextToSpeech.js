@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import i18n from '@cdo/locale';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {hashString, findProfanity} from '@cdo/apps/utils';
 import Sounds from '@cdo/apps/Sounds';
 
@@ -78,6 +77,8 @@ export default class AzureTextToSpeech {
       allowHTML5Mobile: true,
       onEnded: this.onSoundComplete_
     };
+
+    Sounds.getSingleton().onStopAllAudio(this.onAudioEnded_);
   }
 
   /**
@@ -189,11 +190,6 @@ export default class AzureTextToSpeech {
    * @private
    */
   asyncPlayFromQueue_ = async play => {
-    if (!this.isRunning_()) {
-      this.onAppEnded_();
-      return;
-    }
-
     if (this.playing) {
       return;
     }
@@ -205,19 +201,12 @@ export default class AzureTextToSpeech {
 
     this.playing = true;
     let response = await nextSoundPromise();
-    if (this.isRunning_() && response.success()) {
+    if (response.success()) {
       play(response.id, response.bytes.slice(0), response.playbackOptions);
     } else {
       response.playbackOptions.onEnded();
     }
   };
-
-  /**
-   * A wrapper for the studioApp().isRunning function to aid in testability.
-   * @returns {boolean}
-   * @private
-   */
-  isRunning_ = studioApp().isRunning;
 
   /**
    * A wrapper for the Sounds.getSingleton().playBytes function to aid in testability.
@@ -240,10 +229,10 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Called when an app is no longer running.
+   * Called when audio has stopped.
    * @private
    */
-  onAppEnded_ = () => {
+  onAudioEnded_ = () => {
     this.playing = false;
     this.clearQueue_();
   };
