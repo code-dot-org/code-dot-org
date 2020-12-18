@@ -169,8 +169,11 @@ export function summarizeProgressInStage(levelsWithStatus) {
  * contains more data than we need. This filters to the parts our views care about.
  */
 export const processedLevel = level => {
+  // id and pageNumber should be strings since they get used in object keys
+  // and urls.
+  const id = level.activeId || level.id;
   return {
-    id: level.activeId || level.id,
+    id: id.toString(),
     url: level.url,
     name: level.name,
     progression: level.progression,
@@ -181,7 +184,7 @@ export const processedLevel = level => {
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus,
-    pageNumber: level.page_number,
+    pageNumber: level.page_number && level.page_number.toString(),
     sublevels:
       level.sublevels && level.sublevels.map(level => processedLevel(level))
   };

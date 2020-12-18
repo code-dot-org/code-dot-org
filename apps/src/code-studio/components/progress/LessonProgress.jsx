@@ -83,7 +83,9 @@ class LessonProgress extends Component {
     lessonTrophyEnabled: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
-    currentPageNumber: PropTypes.number
+    // currentPageNumber is intentionally a string since it gets used
+    // as a string in the URL
+    currentPageNumber: PropTypes.string
   };
 
   getFullWidth() {

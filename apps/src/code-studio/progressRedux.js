@@ -67,7 +67,7 @@ const initialState = {
   // prior to having information about the user login state.
   // TODO: Use sign in state to determine where to source user progress from
   usingDbProgress: false,
-  currentPageNumber: 0
+  currentPageNumber: '0'
 };
 
 /**
@@ -555,9 +555,7 @@ const peerReviewLevels = state =>
  */
 const isCurrentLevel = (currentLevelId, level) => {
   return (
-    !!currentLevelId &&
-    ((level.ids && level.ids.indexOf(currentLevelId) !== -1) ||
-      level.uid === currentLevelId)
+    !!currentLevelId && (level.id && level.id.indexOf(currentLevelId) !== -1)
   );
 };
 
@@ -578,10 +576,11 @@ const levelWithStatus = (
       );
     }
   }
+  const normalizedLevel = processedLevel(level);
   return {
-    ...processedLevel(level),
+    ...normalizedLevel,
     status: statusForLevel(level, levelProgress),
-    isCurrentLevel: isCurrentLevel(currentLevelId, level),
+    isCurrentLevel: isCurrentLevel(currentLevelId, normalizedLevel),
     paired: levelPairing[level.activeId],
     readonlyAnswers: level.readonly_answers
   };

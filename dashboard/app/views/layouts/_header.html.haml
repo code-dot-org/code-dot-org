@@ -102,8 +102,7 @@
       lesson_extras_enabled = view_as.lesson_extras_enabled?(script)
     end
 
-    # don't trust outside content in parameter :puzzle_page - should be integer, so immediately call to_i
-    puzzle_page = params[:puzzle_page] ? params[:puzzle_page].to_i : ApplicationHelper::PUZZLE_PAGE_NONE
+    puzzle_page = params[:puzzle_page] ? params[:puzzle_page] : ApplicationHelper::PUZZLE_PAGE_NONE
 
     script_data = script.summarize_header
     lesson_group_data = script.lesson_groups.map(&:summarize)
@@ -142,8 +141,8 @@
       #{lesson_group_data.to_json},
       #{stage_data.to_json},
       #{user_progress},
-      #{script_level&.level_id || -1},
-      #{puzzle_page},
+      "#{script_level&.level_id || -1}",
+      "#{puzzle_page}",
       #{signed_in},
       #{lesson_extras_enabled || 'null'},
       #{script_name_data.to_json},

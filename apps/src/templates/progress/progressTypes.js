@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 /**
  * @typedef {Object} Level
  *
- * @property {number} id
+ * @property {string} id The id of the level. It is intentionally
+ *   a string (despite always being numerical) because it gets
+ *   used as a key in JS objects and is used in the url.
  * @property {string} url
  * @property {string} name
  * @property {string} icon
@@ -12,9 +14,13 @@ import PropTypes from 'prop-types';
  * @property {bool} isCurrentLevel
  * @property {bool} isConceptLevel
  * @property {string} kind
+ * @property {string} pageNumber The page number of the level if
+ *   this is a multi-page level. It is intentionally a string
+ *   (despite always being numerical) because it gets used as a
+ *   key in JS objects and is used in the url.
  */
 const levelWithoutStatusShape = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   url: PropTypes.string,
   name: PropTypes.string,
   icon: PropTypes.string,
@@ -22,7 +28,8 @@ const levelWithoutStatusShape = {
   levelNumber: PropTypes.number,
   isCurrentLevel: PropTypes.bool,
   isConceptLevel: PropTypes.bool,
-  kind: PropTypes.string
+  kind: PropTypes.string,
+  pageNumber: PropTypes.string
 };
 
 // Avoid recursive definition

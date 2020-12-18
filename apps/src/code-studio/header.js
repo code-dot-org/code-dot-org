@@ -34,7 +34,7 @@ var header = {};
 /**
  * See ApplicationHelper::PUZZLE_PAGE_NONE.
  */
-const PUZZLE_PAGE_NONE = -1;
+const PUZZLE_PAGE_NONE = '-1';
 
 /**
  * @param {object} scriptData
@@ -49,16 +49,19 @@ const PUZZLE_PAGE_NONE = -1;
  *   finishLink: string,
  *   finishText: string,
  *   levels: Array.<{
- *     id: number,
+ *     id: string,
  *     position: number,
  *     title: string,
  *     kind: string
  *   }>
  * }}
  * @param {object} progressData
- * @param {number} currentLevelId
- * @param {number} currentPageNumber The page we are on if this is a multi-
- *   page level
+ * @param {string} currentLevelId The id of the level the user is currently
+ *   on. This gets used in the url and as a key in many objects. Therefore,
+ *   it is a string despite always being a numerical value
+ * @param {string} currentPageNumber The page we are on if this is a multi-
+ *   page level. This gets used in the URL and therefore is intentionally a
+ *   string despite always being a numerical value
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
