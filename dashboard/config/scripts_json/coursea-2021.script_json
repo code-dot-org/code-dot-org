@@ -2758,6 +2758,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_safety_in_my_online_neighborhood_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2780,7 +2783,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:1"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2803,7 +2809,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:2"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2826,7 +2835,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:3"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2849,7 +2861,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:4"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2872,7 +2887,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:5"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2895,7 +2913,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:6"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2918,7 +2939,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:7"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2941,7 +2965,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:8"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2964,7 +2991,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:9"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2987,7 +3017,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:10"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3010,7 +3043,10 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:11"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3033,7 +3069,10 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "blockly:Jigsaw:12"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3056,6 +3095,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HappyMaps-Unplugged_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3078,7 +3120,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Maze Intro: Programming with Blocks"
+        "progression": "Maze Intro: Programming with Blocks",
+        "level_keys": [
+          "courseAB_video_NewIntro_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3101,7 +3146,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_Scrat_ramp1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3124,7 +3172,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_Scrat_ramp2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3147,7 +3198,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_Scrat_ramp3a_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3170,7 +3224,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_Scrat_ramp3b_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3193,7 +3250,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_Scrat_ramp4a_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3216,7 +3276,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_Scrat_ramp5a_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3239,7 +3302,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pair Programming"
+        "progression": "Pair Programming",
+        "level_keys": [
+          "elementary_video_pairProgramming_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3262,7 +3328,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_maze_seq1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3285,7 +3354,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_maze_seq4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3308,7 +3380,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_maze_seq5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3331,7 +3406,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_maze_seq6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3354,7 +3432,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Debugging with the Step Button"
+        "progression": "Debugging with the Step Button",
+        "level_keys": [
+          "courseAB_video_debugging_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3377,7 +3458,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_maze_seq7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3400,7 +3484,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_maze_seq8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3424,7 +3511,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseB_maze_seq9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3447,7 +3537,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_maze_seq10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3470,7 +3563,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_maze_seq11_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3493,7 +3589,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_maze_seq12_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3516,6 +3615,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -3538,6 +3640,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq_challenge2_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -3560,7 +3665,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Programming with Rey and BB-8"
+        "progression": "Programming with Rey and BB-8",
+        "level_keys": [
+          "bb8_skinOverview_K-1_video_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3583,7 +3691,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_starWars_prog1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3606,7 +3717,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_starWars_prog2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3629,7 +3743,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_starWars_prog3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3652,7 +3769,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_starWars_prog4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3675,7 +3795,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_starWars_prog5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3698,7 +3821,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_starWars_prog6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3721,7 +3847,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_starWars_prog7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3745,7 +3874,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseB_starWars_prog8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3768,7 +3900,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_starWars_prog9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3791,7 +3926,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_starWars_prog10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3814,7 +3952,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_starWars_prog11_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3837,6 +3978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HappyLoops-Unplugged_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3859,7 +4003,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3882,7 +4029,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3905,7 +4055,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Ice Age Loops"
+        "progression": "Ice Age Loops",
+        "level_keys": [
+          "courseB_iceage_loops_video_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3928,7 +4081,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3951,7 +4107,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3974,7 +4133,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3997,7 +4159,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4020,7 +4185,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4043,7 +4211,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4067,7 +4238,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseB_iceage_loops10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4090,7 +4264,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops11_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4113,7 +4290,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops12_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4136,7 +4316,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The Collector"
+        "progression": "The Collector",
+        "level_keys": [
+          "courseAB_video_collector_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4159,7 +4342,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_collector_loops1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4182,7 +4368,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_collector_loops2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4205,7 +4394,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Using the Repeat Block"
+        "progression": "Using the Repeat Block",
+        "level_keys": [
+          "courseA_video_Loops_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4228,7 +4420,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_collector_loops3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4251,7 +4446,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_collector_loops4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4274,7 +4472,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_collector_loops5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4297,7 +4498,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_collector_loops6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4320,7 +4524,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_collector_loops7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4343,7 +4550,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_collector_loops8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4367,7 +4577,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseA_collector_loops9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4390,7 +4603,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_collector_loops10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4413,7 +4629,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_collector_loops11_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4436,7 +4655,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_collector_loops12_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4459,6 +4681,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops_challenge2kp_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4481,6 +4706,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4503,7 +4731,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The Artist in Code Studio"
+        "progression": "The Artist in Code Studio",
+        "level_keys": [
+          "courseB_video_ArtistIntro_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4526,7 +4757,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_artist_loops1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4549,7 +4783,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_artist_loops2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4572,7 +4809,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_artist_loops3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4595,7 +4835,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_video_loops1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4618,7 +4861,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_artist_loops4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4641,7 +4887,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Repeat Blocks with the Artist"
+        "progression": "Repeat Blocks with the Artist",
+        "level_keys": [
+          "courseA_artist_loops5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4664,7 +4913,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_artist_loops6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4687,7 +4939,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_artist_loops7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4710,7 +4965,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_artist_loops8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4734,7 +4992,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseA_artist_loops9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4757,7 +5018,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_artist_loops10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4780,7 +5044,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_artist_loops11_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4803,7 +5070,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play"
+        "progression": "Free Play",
+        "level_keys": [
+          "courseA_artist_loops12_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4826,6 +5096,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops_challenge2a_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4848,6 +5121,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4870,6 +5146,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BigEvent-Unplugged_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4892,7 +5171,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create a Story"
+        "progression": "Create a Story",
+        "level_keys": [
+          "courseA_video_events_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4915,7 +5197,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play"
+        "progression": "Free Play",
+        "level_keys": [
+          "courseA_playLab_events1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4938,7 +5223,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_playLab_events2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4961,7 +5249,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Jorge the Dog"
+        "progression": "Mini-project: Jorge the Dog",
+        "level_keys": [
+          "courseA_playLab_events3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4984,7 +5275,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Jorge the Dog"
+        "progression": "Mini-project: Jorge the Dog",
+        "level_keys": [
+          "courseA_playLab_events4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5007,7 +5301,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Jorge the Dog"
+        "progression": "Mini-project: Jorge the Dog",
+        "level_keys": [
+          "courseA_playLab_events5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5030,7 +5327,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Jorge the Dog"
+        "progression": "Mini-project: Jorge the Dog",
+        "level_keys": [
+          "courseA_playLab_events6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5053,7 +5353,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Jorge the Dog"
+        "progression": "Mini-project: Jorge the Dog",
+        "level_keys": [
+          "courseA_playLab_events7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5076,6 +5379,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playlab_events_challenge2_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -5098,6 +5404,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playlab_events_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,

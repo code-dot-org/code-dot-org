@@ -874,7 +874,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Tech Setup and Tools for Create PT"
+        "progression": "Tech Setup and Tools for Create PT",
+        "level_keys": [
+          "csp-pt-tech-setup-and-tools_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -897,7 +900,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create PT Coding Workspace"
+        "progression": "Create PT Coding Workspace",
+        "level_keys": [
+          "Create PT Workspace 2020_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
