@@ -1402,6 +1402,14 @@ And(/^I join the section$/) do
   end
 end
 
+And(/^I join the section I already own$/) do
+  page_load(true) do
+    steps %Q{
+      Given I am on "#{@section_url}"
+    }
+  end
+end
+
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end

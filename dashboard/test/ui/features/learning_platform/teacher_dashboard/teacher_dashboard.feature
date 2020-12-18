@@ -214,3 +214,18 @@ Feature: Using the teacher dashboard
 
     Then I see no difference for "projects list view"
     And I close my eyes
+
+  Scenario: Attempt to join a section you own redirects to dashboard with error message
+    Given I am a teacher
+    And I create a new section and go home
+    And I join the section I already own
+    Then I wait until element "#flashes" is visible
+    And element "div.alert" contains text matching "Sorry, you can't join your own section"
+
+  Scenario: Attempt to join an invalid section through the homepage
+    Given I am a teacher and go home
+    And I wait until element "div.ui-test-join-section" is visible
+    And I type "INVALID" into "input.ui-test-join-section"
+    And I click selector "div.ui-test-join-section"
+    Then I wait until element ".announcement-notification" is visible
+    And ".announcement-notification" contains text matching "Section INVALID doesn't exist"
