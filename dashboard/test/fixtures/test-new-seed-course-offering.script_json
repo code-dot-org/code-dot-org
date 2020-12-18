@@ -2,7 +2,7 @@
   "script": {
     "name": "test-new-seed-course-offering",
     "wrapup_video_id": null,
-    "hidden": false,
+    "hidden": true,
     "login_required": false,
     "properties": {
       "version_year": "1234",
@@ -20,10 +20,25 @@
   "lessons": [
 
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
 
   ],
   "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+   "objectives": [
 
   ]
 }

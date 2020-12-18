@@ -747,7 +747,9 @@ const STANDARD_INPUT_TYPES = {
         .appendTitle(new Blockly.FieldVariable(null), inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      return block.getTitleValue(inputConfig.name);
+      return Blockly.JavaScript.translateVarName(
+        block.getTitleValue(inputConfig.name)
+      );
     }
   },
   [FIELD_INPUT]: {
@@ -1199,7 +1201,10 @@ exports.createJsWrapperBlockCreator = function(
         }
       }
 
-      if (this.type === 'gamelab_setPrompt') {
+      if (
+        this.type === 'gamelab_setPrompt' ||
+        this.type === 'gamelab_setPromptWithChoices'
+      ) {
         const input = this.getInput('VAR');
         if (input) {
           const targetBlock = input.connection.targetBlock();

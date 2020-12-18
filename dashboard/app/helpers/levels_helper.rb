@@ -1,6 +1,5 @@
 require 'cdo/script_config'
 require 'cdo/redcarpet/inline'
-require 'cdo/honeybadger'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
@@ -15,6 +14,7 @@ module LevelsHelper
   include ApplicationHelper
   include UsersHelper
   include NotesHelper
+  include AzureTextToSpeech
 
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
@@ -460,76 +460,16 @@ module LevelsHelper
     if @level.game.use_firebase?
       fb_options[:firebaseName] = CDO.firebase_name
       fb_options[:firebaseAuthToken] = firebase_auth_token
-      fb_options[:firebaseSharedAuthToken] = CDO.firebase_shared_secret
+      fb_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
       fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
 
     fb_options
   end
 
-  def get_azure_speech_service_token(region, api_key, timeout)
-    token_uri = URI.parse("https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
-    token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
-    token_http_request.use_ssl = true
-    token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-    # TODO: Change read_timeout to write_timeout when we upgrade to Ruby 2.6+.
-    token_http_request.read_timeout = timeout
-    token_request = Net::HTTP::Post.new(token_uri.request_uri, {'Ocp-Apim-Subscription-Key': api_key})
-
-    token_http_request.request(token_request)&.body
-  rescue => e
-    Honeybadger.notify(e, error_message: 'Request for authentication token from Azure Speech Service failed')
-    nil
-  end
-
-  def get_azure_speech_service_voices(region, token, timeout)
-    Rails.cache.fetch("azure_speech_service/voices") do
-      voice_uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
-      voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
-      voice_http_request.use_ssl = true
-      voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      voice_http_request.read_timeout = timeout
-      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
-
-      response = voice_http_request.request(voice_request)&.body
-      response.length >= 2 ? JSON.parse(response) : []
-    end
-  rescue => e
-    Honeybadger.notify(e, error_message: 'Request for list of voices from Azure Speech Service failed')
-    nil
-  end
-
   def azure_speech_service_options
-    return {} unless Gatekeeper.allows('azure_speech_service', default: true) &&
-      @level.game.use_azure_speech_service? &&
-      CDO.azure_speech_service_region.present? &&
-      CDO.azure_speech_service_key.present?
-
-    # First, get the token and region
-    options = {}
-    timeout = DCDO.get('azure_speech_service_timeout', 5)
-    region = CDO.azure_speech_service_region
-    options[:token] = get_azure_speech_service_token(region, CDO.azure_speech_service_key, timeout)
-    return {} unless options[:token].present?
-    options[:url] = "https://#{region}.tts.speech.microsoft.com/cognitiveservices/v1"
-
-    # Then, get the list of voices
-    voices = get_azure_speech_service_voices(region, options[:token], timeout)
-    return {} unless (voices&.length || 0) > 0
-    voice_dictionary = {}
-    voices.each do |voice|
-      native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
-      next if native_locale_name.empty?
-      native_name_s = native_locale_name[0][:native_name_s]
-      voice_dictionary[native_name_s] ||= {}
-      voice_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
-      voice_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
-    end
-
-    # Only keep voices that contain 2+ genders and a languageCode
-    options[:voices] = voice_dictionary.reject {|_, opt| opt.length < 3}
-
-    options
+    return {} unless @level.game.use_azure_speech_service?
+    {voices: AzureTextToSpeech.get_voices || {}}
   end
 
   # Options hash for Blockly
@@ -814,13 +754,39 @@ module LevelsHelper
     Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
+  # Assign a firebase authentication token based on the firebase shared secret,
+  # plus either the dashboard user id or the rails session id. This is
+  # sufficient for rate limiting, since it uniquely identifies users.
+  #
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
+  def firebase_shared_auth_token
+    return nil unless CDO.firebase_shared_secret
+
+    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    payload = {
+      uid: user_or_session_id,
+      is_dashboard_user: !!current_user,
+      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
+    }
+    options = {}
+    # Provides additional debugging information to the browser when
+    # security rules are evaluated.
+    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
+
+    # TODO(dave): cache token generator across requests
+    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_shared_secret)
+    generator.create_token(payload, options)
+  end
+
   # Assign a firebase authentication token based on the firebase secret,
   # plus either the dashboard user id or the rails session id. This is
   # sufficient for rate limiting, since it uniquely identifies users.
   #
-  # TODO(dave): include the storage_id associated with the user id
-  # (if one exists), so auth can be used to assign appropriate privileges
-  # to channel owners.
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 

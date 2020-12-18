@@ -21,49 +21,11 @@ describe('AzureTextToSpeech', () => {
     playBytesStub.restore();
   });
 
-  describe('enqueueAndPlay', () => {
-    it('plays given soundPromise', async () => {
-      const response = azureTTS.createSoundResponse_({
-        bytes: new ArrayBuffer()
-      });
-
-      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
-
-      expect(playBytesStub).to.have.been.calledOnce;
-      expect(azureTTS.queue_.length).to.equal(0);
-    });
-
-    it('does not play if sound is already playing', async () => {
-      azureTTS.playing = true;
-      const response = azureTTS.createSoundResponse_({
-        bytes: new ArrayBuffer()
-      });
-      response.playbackOptions.onEnded = sinon.spy();
-
-      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
-
-      expect(playBytesStub).not.to.have.been.called;
-      expect(response.playbackOptions.onEnded).not.to.have.been.called;
-    });
-
-    it('does not play if sound response was unsuccessful', async () => {
-      const response = azureTTS.createSoundResponse_({
-        error: 'An error occurred'
-      });
-      response.playbackOptions.onEnded = sinon.spy();
-
-      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
-
-      expect(playBytesStub).not.to.have.been.called;
-      expect(response.playbackOptions.onEnded).to.have.been.calledOnce;
-    });
-  });
-
   describe('createSoundPromise', () => {
-    let onProfanityFoundSpy;
+    let onFailureSpy;
 
     beforeEach(() => {
-      onProfanityFoundSpy = sinon.spy();
+      onFailureSpy = sinon.spy();
     });
 
     describe('with a cached sound', () => {
@@ -85,18 +47,18 @@ describe('AzureTextToSpeech', () => {
             text: `hi ${badWord}`,
             gender: 'female',
             languageCode: 'en-US',
-            onProfanityFound: onProfanityFoundSpy
+            onFailure: onFailureSpy
           });
         });
 
         it('resolves to cached sound response', async () => {
-          const soundResponse = await soundPromise;
+          const soundResponse = await soundPromise();
           assertSoundResponsesEqual(cachedSoundResponse, soundResponse);
         });
 
-        it('calls onProfanityFound', async () => {
-          await soundPromise;
-          expect(onProfanityFoundSpy).to.have.been.calledOnce;
+        it('calls onFailure', async () => {
+          await soundPromise();
+          expect(onFailureSpy).to.have.been.calledOnce;
         });
       });
 
@@ -117,18 +79,18 @@ describe('AzureTextToSpeech', () => {
             text: 'hi',
             gender: 'female',
             languageCode: 'en-US',
-            onProfanityFound: onProfanityFoundSpy
+            onFailure: onFailureSpy
           });
         });
 
         it('resolves to cached sound response', async () => {
-          const soundResponse = await soundPromise;
+          const soundResponse = await soundPromise();
           assertSoundResponsesEqual(cachedSoundResponse, soundResponse);
         });
 
-        it('does not call onProfanityFound', async () => {
-          await soundPromise;
-          expect(onProfanityFoundSpy).not.to.have.been.called;
+        it('does not call onFailure', async () => {
+          await soundPromise();
+          expect(onFailureSpy).not.to.have.been.called;
         });
       });
     });
@@ -159,7 +121,7 @@ describe('AzureTextToSpeech', () => {
             text: badWord,
             gender: 'female',
             languageCode: 'en-US',
-            onProfanityFound: onProfanityFoundSpy
+            onFailure: onFailureSpy
           };
           soundPromise = azureTTS.createSoundPromise(options);
           expectedSoundResponse = azureTTS.createSoundResponse_({
@@ -168,13 +130,13 @@ describe('AzureTextToSpeech', () => {
           });
         });
 
-        it('calls onProfanityFound', async () => {
-          await soundPromise;
-          expect(onProfanityFoundSpy).to.have.been.calledOnce;
+        it('calls onFailure', async () => {
+          await soundPromise();
+          expect(onFailureSpy).to.have.been.calledOnce;
         });
 
         it('caches the response', async () => {
-          await soundPromise;
+          await soundPromise();
           const actualResponse = azureTTS.getCachedSound_(
             options.languageCode,
             options.gender,
@@ -184,7 +146,7 @@ describe('AzureTextToSpeech', () => {
         });
 
         it('resolves with profaneWords', async () => {
-          const actualResponse = await soundPromise;
+          const actualResponse = await soundPromise();
           assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
         });
       });
@@ -202,16 +164,14 @@ describe('AzureTextToSpeech', () => {
 
         describe('on success', () => {
           beforeEach(() => {
-            const url = 'https://fake.tts.url';
             const bytes = new ArrayBuffer();
-            server.respondWith('POST', url, [200, {}, bytes]);
+            sinon
+              .stub(azureTTS, 'convertTextToSpeech')
+              .returns(new Promise(resolve => resolve(bytes)));
             options = {
               text: 'hello',
               gender: 'male',
-              languageCode: 'es-MX',
-              url,
-              token: 'fake-token',
-              ssml: '<speak>hello</speak>'
+              languageCode: 'es-MX'
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
@@ -221,7 +181,7 @@ describe('AzureTextToSpeech', () => {
           });
 
           it('caches the response', async () => {
-            await soundPromise;
+            await soundPromise();
             const actualResponse = azureTTS.getCachedSound_(
               options.languageCode,
               options.gender,
@@ -231,32 +191,32 @@ describe('AzureTextToSpeech', () => {
           });
 
           it('resolves with sound bytes', async () => {
-            const actualResponse = await soundPromise;
+            const actualResponse = await soundPromise();
             assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
           });
         });
 
         describe('on failure', () => {
           beforeEach(() => {
-            const url = 'https://fake.tts.url';
-            server.respondWith('POST', url, [400, {}, '']);
+            const error = {status: 400};
+            sinon
+              .stub(azureTTS, 'convertTextToSpeech')
+              .returns(new Promise((_, reject) => reject(error)));
             options = {
               text: 'hello',
               gender: 'male',
               languageCode: 'es-MX',
-              url,
-              token: 'fake-token',
-              ssml: '<speak>hello</speak>'
+              onFailure: onFailureSpy
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
               ...options,
-              error: 'Bad Request'
+              error
             });
           });
 
           it('does not cache the response', async () => {
-            await soundPromise;
+            await soundPromise();
             expect(
               azureTTS.getCachedSound_(
                 options.languageCode,
@@ -266,12 +226,77 @@ describe('AzureTextToSpeech', () => {
             ).to.be.undefined;
           });
 
+          it('calls onFailure', async () => {
+            await soundPromise();
+            expect(onFailureSpy).to.have.been.calledOnce;
+          });
+
           it('resolves with error', async () => {
-            const actualResponse = await soundPromise;
+            const actualResponse = await soundPromise();
             assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
           });
         });
       });
+    });
+  });
+
+  describe('asyncPlayFromQueue_', () => {
+    let playSpy, successfulResponse;
+
+    beforeEach(() => {
+      playSpy = sinon.spy();
+      successfulResponse = azureTTS.createSoundResponse_({
+        bytes: new ArrayBuffer()
+      });
+    });
+
+    it('no-ops if sound is already playing', async () => {
+      const dequeueStub = sinon.stub(azureTTS, 'dequeue_');
+      azureTTS.playing = true;
+
+      await azureTTS.asyncPlayFromQueue_(playSpy);
+      expect(dequeueStub).not.to.have.been.called;
+      expect(playSpy).not.to.have.been.called;
+
+      dequeueStub.restore();
+    });
+
+    it('no-ops if queue is empty', async () => {
+      const dequeueStub = sinon.stub(azureTTS, 'dequeue_').returns(undefined);
+
+      await azureTTS.asyncPlayFromQueue_(playSpy);
+      expect(dequeueStub).to.have.been.calledOnce;
+      expect(playSpy).not.to.have.been.called;
+
+      dequeueStub.restore();
+    });
+
+    it('plays sound if response was successful', async () => {
+      const dequeueStub = sinon
+        .stub(azureTTS, 'dequeue_')
+        .returns(() => Promise.resolve(successfulResponse));
+
+      await azureTTS.asyncPlayFromQueue_(playSpy);
+      expect(playSpy).to.have.been.calledOnce;
+
+      dequeueStub.restore();
+    });
+
+    it('ends sound if response was unsuccessful', async () => {
+      const unsuccessfulResponse = azureTTS.createSoundResponse_({
+        error: new Error()
+      });
+      unsuccessfulResponse.playbackOptions.onEnded = sinon.spy();
+      const dequeueStub = sinon
+        .stub(azureTTS, 'dequeue_')
+        .returns(() => Promise.resolve(unsuccessfulResponse));
+
+      await azureTTS.asyncPlayFromQueue_(playSpy);
+      expect(unsuccessfulResponse.playbackOptions.onEnded).to.have.been
+        .calledOnce;
+      expect(playSpy).not.to.have.been.called;
+
+      dequeueStub.restore();
     });
   });
 });

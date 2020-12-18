@@ -1,19 +1,18 @@
+import $ from 'jquery';
+import i18n from '@cdo/locale';
 import {hashString, findProfanity} from '@cdo/apps/utils';
 import Sounds from '@cdo/apps/Sounds';
-
-// XMLHttpRequest readyState 4 means the request is done.
-// https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
-const READY_STATE_DONE = 4;
 
 /**
  * A packaged response for a requested sound. Used for caching and for playing sound bytes.
  * @param {ArrayBuffer} bytes Sound bytes from Azure Speech Service. For clarity, this should be null if the response contains profaneWords.
  * @param {Object} playbackOptions Configuration options for a playing sound.
  * @param {Array<string>} profaneWords Any profanity in the response. Used to determine whether the response should be cached and played.
- * @param {string} error Any error that occurs while requesting the sound or checking for profanity.
+ * @param {Error} error Any error that occurs while requesting the sound or checking for profanity.
  */
 export class SoundResponse {
-  constructor(bytes, playbackOptions, profaneWords = [], error = null) {
+  constructor(id, bytes, playbackOptions, profaneWords = [], error = null) {
+    this.id = id;
     this.bytes = bytes;
     this.playbackOptions = playbackOptions;
     this.profaneWords = profaneWords;
@@ -22,6 +21,30 @@ export class SoundResponse {
 
   success = () => {
     return this.bytes && this.profaneWords.length === 0 && !this.error;
+  };
+
+  profanityMessage = () => {
+    if (!this.profaneWords || this.profaneWords.length === 0) {
+      return null;
+    }
+
+    return i18n.textToSpeechProfanity({
+      profanityCount: this.profaneWords.length,
+      profaneWords: this.profaneWords.join(', ')
+    });
+  };
+
+  errorMessage = () => {
+    if (!this.error) {
+      return null;
+    }
+
+    switch (this.error.status) {
+      case 429:
+        return i18n.azureTtsTooManyRequests();
+      default:
+        return i18n.azureTtsDefaultError();
+    }
   };
 }
 
@@ -54,12 +77,13 @@ export default class AzureTextToSpeech {
       allowHTML5Mobile: true,
       onEnded: this.onSoundComplete_
     };
+
+    Sounds.getSingleton().onStopAllAudio(this.onAudioEnded_);
   }
 
   /**
    *
-   * @param {Promise<SoundResponse>} soundPromise A promise that returns a SoundResponse when resolved.
-   * playback configuration options.
+   * @param {function} soundPromise A thunk that returns a promise, which resolves to a SoundResponse.
    */
   enqueueAndPlay = soundPromise => {
     this.enqueue_(soundPromise);
@@ -67,28 +91,21 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Returns a promise representing a TTS sound that can be enqueued and played. Utilizes a sound cache --
+   * A thunk that returns a promise representing a TTS sound that can be enqueued and played. Utilizes a sound cache --
    * will check for a cache hit to avoid duplicate network requests, and caches network responses for re-use.
    * @param {Object} opts
    * @param {string} opts.text
    * @param {string} opts.gender
    * @param {string} opts.languageCode
-   * @param {string} opts.url URL to request sound from.
-   * @param {string} opts.ssml SSML in request body.
-   * @param {string} opts.token Authentication token from Azure.
-   * @param {function(Array<string>)} opts.onProfanityFound Called if the given text contains profanity.
-   * @returns {Promise<SoundResponse>} A promise that returns a SoundResponse when resolved.
+   * @param {string} opts.authenticityToken Rails authenticity token. Optional.
+   * @param {function(string)} opts.onFailure Called with an error message if the sound will not be played.
+   * @returns {function} A thunk that returns a promise, which resolves to a SoundResponse. Example usage:
+   * const soundPromise = createSoundPromise(options);
+   * const soundResponse = await soundPromise();
    */
-  createSoundPromise = opts => {
-    const {
-      text,
-      gender,
-      languageCode,
-      url,
-      ssml,
-      token,
-      onProfanityFound
-    } = opts;
+  createSoundPromise = opts => () => {
+    const {text, gender, languageCode, authenticityToken, onFailure} = opts;
+    const id = this.cacheKey_(languageCode, gender, text);
     const cachedSound = this.getCachedSound_(languageCode, gender, text);
     const wrappedSetCachedSound = soundResponse => {
       this.setCachedSound_(languageCode, gender, text, soundResponse);
@@ -101,53 +118,70 @@ export default class AzureTextToSpeech {
 
       return new Promise(resolve => {
         if (profaneWords && profaneWords.length > 0) {
-          onProfanityFound(profaneWords);
-          resolve(wrappedCreateSoundResponse({profaneWords}));
+          const soundResponse = wrappedCreateSoundResponse({profaneWords});
+          onFailure(soundResponse.profanityMessage());
+          resolve(soundResponse);
         } else {
-          resolve(wrappedCreateSoundResponse({bytes}));
+          resolve(wrappedCreateSoundResponse({id, bytes}));
         }
       });
     }
 
     // Otherwise, check the text for profanity and request the TTS sound.
     return new Promise(async resolve => {
-      const profaneWords = await findProfanity(text, languageCode);
-
-      if (profaneWords && profaneWords.length > 0) {
-        onProfanityFound(profaneWords);
-        const soundResponse = wrappedCreateSoundResponse({profaneWords});
-        wrappedSetCachedSound(soundResponse);
-        resolve(soundResponse);
-        return;
-      }
-
-      // As of 11/18/2020, jQuery does not support arraybuffer as a responseType; use XMLHttpRequest instead.
-      let request = new XMLHttpRequest();
-      request.open('POST', url, true);
-      request.setRequestHeader('Authorization', `Bearer ${token}`);
-      request.setRequestHeader('Content-Type', 'application/ssml+xml');
-      request.setRequestHeader(
-        'X-Microsoft-OutputFormat',
-        'audio-16khz-32kbitrate-mono-mp3'
-      );
-      request.responseType = 'arraybuffer';
-      request.onreadystatechange = () => {
-        if (request.readyState !== READY_STATE_DONE) {
+      try {
+        const profaneWords = await findProfanity(
+          text,
+          languageCode,
+          authenticityToken
+        );
+        if (profaneWords && profaneWords.length > 0) {
+          const soundResponse = wrappedCreateSoundResponse({profaneWords});
+          onFailure(soundResponse.profanityMessage());
+          wrappedSetCachedSound(soundResponse);
+          resolve(soundResponse);
           return;
         }
 
-        if (request.status >= 200 && request.status < 300) {
-          const soundResponse = wrappedCreateSoundResponse({
-            bytes: request.response
-          });
-          wrappedSetCachedSound(soundResponse);
-          resolve(soundResponse);
-        } else {
-          resolve(wrappedCreateSoundResponse({error: request.statusText}));
-        }
-      };
-      request.send(ssml);
+        const bytes = await this.convertTextToSpeech(
+          text,
+          gender,
+          languageCode,
+          authenticityToken
+        );
+        const soundResponse = wrappedCreateSoundResponse({id, bytes});
+        wrappedSetCachedSound(soundResponse);
+        resolve(soundResponse);
+      } catch (error) {
+        const soundResponse = wrappedCreateSoundResponse({error});
+        onFailure(soundResponse.errorMessage());
+        resolve(soundResponse);
+      }
     });
+  };
+
+  /**
+   *
+   * @param {string} text
+   * @param {string} gender
+   * @param {string} locale
+   * @param {string} authenticityToken Rails authenticity token. Optional.
+   * @returns {Promise<ArrayBuffer>} A promise that resolves to an ArrayBuffer.
+   */
+  convertTextToSpeech = (text, gender, locale, authenticityToken = null) => {
+    let request = {
+      url: '/dashboardapi/v1/text_to_speech/azure',
+      method: 'POST',
+      dataType: 'binary',
+      responseType: 'arraybuffer',
+      data: {text, gender, locale}
+    };
+
+    if (authenticityToken) {
+      request.headers = {'X-CSRF-Token': authenticityToken};
+    }
+
+    return $.ajax(request);
   };
 
   /**
@@ -166,9 +200,10 @@ export default class AzureTextToSpeech {
     }
 
     this.playing = true;
-    let response = await nextSoundPromise;
+    let response = await nextSoundPromise();
     if (response.success()) {
-      play(response.bytes.slice(0), response.playbackOptions);
+      const {id, bytes, playbackOptions} = response;
+      play(id, bytes.slice(0), playbackOptions);
     } else {
       response.playbackOptions.onEnded();
     }
@@ -176,12 +211,13 @@ export default class AzureTextToSpeech {
 
   /**
    * A wrapper for the Sounds.getSingleton().playBytes function to aid in testability.
+   * @param {string} id
    * @param {ArrayBuffer} bytes
    * @param {Object} playbackOptions
    * @private
    */
-  playBytes_ = (bytes, playbackOptions) => {
-    Sounds.getSingleton().playBytes(bytes, playbackOptions);
+  playBytes_ = (id, bytes, playbackOptions) => {
+    Sounds.getSingleton().playBytes(id, bytes, playbackOptions);
   };
 
   /**
@@ -191,6 +227,15 @@ export default class AzureTextToSpeech {
   onSoundComplete_ = () => {
     this.playing = false;
     this.asyncPlayFromQueue_(this.playBytes_);
+  };
+
+  /**
+   * Called when audio has stopped.
+   * @private
+   */
+  onAudioEnded_ = () => {
+    this.playing = false;
+    this.clearQueue_();
   };
 
   /**
@@ -233,8 +278,8 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Add a promise to the end of the queue.
-   * @param {Promise<SoundResponse>} promise A promise that returns a SoundResponse when resolved.
+   * Add to the end of the queue.
+   * @param {function} promise A thunk that returns a promise, which resolves to a SoundResponse.
    * @private
    */
   enqueue_ = promise => {
@@ -242,8 +287,8 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Get the next promise in the queue.
-   * @returns {Promise<SoundResponse>} A promise that returns a SoundResponse when resolved.
+   * Get the next item in the queue.
+   * @returns {function} A thunk that returns a promise, which resolves to a SoundResponse.
    * @private
    */
   dequeue_ = () => {
@@ -251,16 +296,26 @@ export default class AzureTextToSpeech {
   };
 
   /**
+   * Clears the queue.
+   * @private
+   */
+  clearQueue_ = () => {
+    this.queue_ = [];
+  };
+
+  /**
    * Wrapper for creating a new SoundResponse.
    * @param {Object} opts
+   * @param {string} opts.id
    * @param {ArrayBuffer} opts.bytes Bytes representing the sound to be played.
    * @param {Array<string>} opts.profaneWords Profanity present in requested TTS text.
-   * @param {string} opts.error Any error during the TTS request.
+   * @param {Error} opts.error Any error during the TTS request.
    * @returns {SoundResponse}
    * @private
    */
   createSoundResponse_ = opts => {
     return new SoundResponse(
+      opts.id,
       opts.bytes,
       this.playbackOptions_,
       opts.profaneWords,

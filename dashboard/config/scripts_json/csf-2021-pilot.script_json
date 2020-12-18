@@ -1,0 +1,171 @@
+{
+  "script": {
+    "name": "csf-2021-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
+        ]
+      ],
+      "announcements": [
+        {
+          "notice": "Attention pilot teachers!",
+          "details": "Lesson plans for this course are currently available in Google Doc format only. Click the button to access the lesson plans.",
+          "link": "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "peer_reviews_to_complete": 0
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csf-2021-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "introduction",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Introduction to Sprite Lab",
+        "description": "Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!"
+      },
+      "seeding_key": {
+        "lesson_group.key": "introduction",
+        "script.name": "csf-2021-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Course F Introduction",
+      "name": "Introduction to Course F",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "csf-2021-pilot"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Introducing Sprite Lab"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_IntroSpriteLab_2020"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "CourseEF_video_IntroSpriteLab_2020"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Exploration: Sample Apps"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_intro_apps"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_intro_apps"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Exploration: Code"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_intro_birds_puzzle"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_intro_birds_puzzle"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_IntroSpriteLab_2020",
+        "script_level.level_keys": [
+          "CourseEF_video_IntroSpriteLab_2020"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_intro_apps",
+        "script_level.level_keys": [
+          "courseF_intro_apps"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_intro_birds_puzzle",
+        "script_level.level_keys": [
+          "courseF_intro_birds_puzzle"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "csf-2021-pilot"
+      }
+    }
+  ]
+}

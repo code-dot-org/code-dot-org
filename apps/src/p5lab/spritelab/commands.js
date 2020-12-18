@@ -75,6 +75,10 @@ export const commands = {
     actionCommands.mirrorSprite(spriteArg, direction);
   },
 
+  moveBackward(spriteArg, distance) {
+    actionCommands.moveForward(spriteArg, -1 * distance);
+  },
+
   moveInDirection(spriteArg, distance, direction) {
     actionCommands.moveInDirection(spriteArg, distance, direction);
   },
@@ -97,6 +101,22 @@ export const commands = {
 
   setPrompt(promptText, variableName, callback) {
     worldCommands.setPrompt(promptText, variableName, callback);
+  },
+
+  setPromptWithChoices(
+    promptText,
+    variableName,
+    choice1,
+    choice2,
+    choice3,
+    callback
+  ) {
+    worldCommands.setPromptWithChoices(
+      promptText,
+      variableName,
+      [choice1, choice2, choice3],
+      callback
+    );
   },
 
   setTint(spriteArg, color) {
@@ -137,12 +157,20 @@ export const commands = {
     eventCommands.checkTouching(condition, sprite1, sprite2, callback);
   },
 
+  collectData(callback) {
+    eventCommands.collectData(callback);
+  },
+
   keyPressed(condition, key, callback) {
     eventCommands.keyPressed(condition, key, callback);
   },
 
   repeatForever(callback) {
     eventCommands.repeatForever(callback);
+  },
+
+  stopCollectingData() {
+    eventCommands.stopCollectingData();
   },
 
   spriteClicked(condition, spriteArg, callback) {

@@ -1526,10 +1526,10 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.5.31":
-  version "3.5.31"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.31.tgz#97fe2e63d2480b51fe9d6b5f0c0ed48344e8dc47"
-  integrity sha512-cs5iaYb9npNt048gmC5LJm10TxxQlcTg6++CB5N775l7hgOs8lhqpSOaVvdCfFRByiL2l/SPJypgFLkVXYriFA==
+"@code-dot-org/blockly@3.5.32":
+  version "3.5.32"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.32.tgz#6659198e5314c2c395068dcc23b2141bd2694f9e"
+  integrity sha512-bSA7PwEVOGs+k62evHYBSKJZZYMVMjEQQapm0IWxTbAzSBb/KTfZT/TH2k/4niqmsPwgh7uBgUvMiaKh6F12Jg==
 
 "@code-dot-org/craft@0.2.2":
   version "0.2.2"
@@ -10419,6 +10419,13 @@ ml-kernel@^2.2.0:
     ml-kernel-polynomial "^2.0.0"
     ml-kernel-sigmoid "^1.0.0"
     ml-matrix "^5.0.0"
+
+ml-knn@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ml-knn/-/ml-knn-3.0.0.tgz#98eb350919f15d4a719312cfdcf7b62693201ad5"
+  integrity sha512-w7Jig4vW09OYMurlIRRJj8yL2O/835QJpxup+yW7QVYXSjixmanPtPQL+weiTYbaB/wWX8JilB+Wllk4mxvP5w==
+  dependencies:
+    ml-distance-euclidean "^2.0.0"
 
 ml-matrix@^5.0.0:
   version "5.3.0"

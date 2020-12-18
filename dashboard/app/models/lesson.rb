@@ -36,6 +36,7 @@ class Lesson < ApplicationRecord
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
+  has_many :lessons_resources # join table. we need this association for seeding logic
   has_many :objectives, dependent: :destroy
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
@@ -53,6 +54,7 @@ class Lesson < ApplicationRecord
     preparation
     announcements
     visible_after
+    assessment_opportunities
   )
 
   # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
@@ -290,6 +292,7 @@ class Lesson < ApplicationRecord
       name: name,
       overview: overview,
       studentOverview: student_overview,
+      assessmentOpportunities: assessment_opportunities,
       assessment: assessment,
       unplugged: unplugged,
       lockable: lockable,
@@ -300,7 +303,8 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
-      courseVersionId: lesson_group.script.course_version&.id
+      courseVersionId: lesson_group.script.course_version&.id,
+      updatedAt: updated_at
     }
   end
 
@@ -318,7 +322,8 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_show),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       objectives: objectives.map(&:summarize_for_lesson_show),
-      is_teacher: user&.teacher?
+      is_teacher: user&.teacher?,
+      assessmentOpportunities: assessment_opportunities
     }
   end
 
@@ -355,6 +360,21 @@ class Lesson < ApplicationRecord
 
         level_json
       end
+    }
+  end
+
+  # Returns a hash representing i18n strings in scripts.en.yml which may need
+  # to be updated after this object was updated. Currently, this only updates
+  # the lesson name.
+  def i18n_hash
+    {
+      script.name => {
+        'lessons' => {
+          key => {
+            'name' => name
+          }
+        }
+      }
     }
   end
 
@@ -450,20 +470,24 @@ class Lesson < ApplicationRecord
     # this update, so just set activity_section_position as the source of truth
     # and then fix chapter and position values after.
     script.fix_script_level_positions
+    # Reload the lesson to make sure the positions information we have is all up
+    # to date
+    reload
   end
 
   def update_objectives(objectives)
     return unless objectives
 
     self.objectives = objectives.map do |objective|
-      persisted_objective = objective['id'].blank? ? Objective.new : Objective.find(objective['id'])
+      persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
     end
   end
 
-  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
@@ -550,7 +574,7 @@ class Lesson < ApplicationRecord
     related_lessons.map do |lesson|
       {
         scriptTitle: lesson.script.localized_title,
-        versionYear: lesson.script.get_course_version.version_year,
+        versionYear: lesson.script.get_course_version&.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
         id: lesson.id,

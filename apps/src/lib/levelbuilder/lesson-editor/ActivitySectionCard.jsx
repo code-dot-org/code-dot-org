@@ -71,6 +71,9 @@ const styles = {
   },
   title: {
     marginRight: 5
+  },
+  titleInput: {
+    width: 275
   }
 };
 
@@ -87,7 +90,7 @@ of text that explains to the teacher what to say or do to run the lesson or
 it could be a section of a lesson that shows a set of levels that are used
 at that point in the lesson (also known as a progression). ActivitySections
 can have tips attached to the beginning of their content and can be marked with
-slide or remarks as well.
+remarks as well.
  */
 
 class ActivitySectionCard extends Component {
@@ -272,15 +275,6 @@ class ActivitySectionCard extends Component {
     });
   };
 
-  toggleSlides = () => {
-    this.props.updateActivitySectionField(
-      this.props.activityPosition,
-      this.props.activitySection.position,
-      'slide',
-      !this.props.activitySection.slide
-    );
-  };
-
   toggleRemarks = () => {
     this.props.updateActivitySectionField(
       this.props.activityPosition,
@@ -291,11 +285,17 @@ class ActivitySectionCard extends Component {
   };
 
   handleMoveActivitySection = direction => {
-    if (
-      (this.props.activitySection.position !== 1 && direction === 'up') ||
-      (this.props.activitySection.position !==
+    const firstActivitySectionInLesson =
+      this.props.activitySection.position === 1 &&
+      this.props.activityPosition === 1;
+    const lastActivitySectionInLesson =
+      this.props.activitySection.position ===
         this.props.activitySectionsCount &&
-        direction === 'down')
+      this.props.activityPosition === this.props.activitiesCount;
+
+    if (
+      (!firstActivitySectionInLesson && direction === 'up') ||
+      (!lastActivitySectionInLesson && direction === 'down')
     ) {
       this.props.moveActivitySection(
         this.props.activityPosition,
@@ -337,6 +337,16 @@ class ActivitySectionCard extends Component {
       this.props.activitySection.position,
       'text',
       currentText + `\n[r ${resourceKey}]`
+    );
+  };
+
+  appendSlide = () => {
+    const currentText = this.props.activitySection.text;
+    this.props.updateActivitySectionField(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      'text',
+      currentText + ` [slide]`
     );
   };
 
@@ -408,13 +418,14 @@ class ActivitySectionCard extends Component {
           <label>
             <span style={styles.title}>Title:</span>
             <input
+              style={styles.titleInput}
               value={this.props.activitySection.displayName}
               onChange={this.handleChangeDisplayName}
             />
             <OrderControls
               name={
                 this.props.activitySection.displayName ||
-                this.props.activitySection.key
+                'Unnamed Activity Section'
               }
               move={this.handleMoveActivitySection}
               remove={this.handleRemoveActivitySection}
@@ -422,22 +433,11 @@ class ActivitySectionCard extends Component {
           </label>
           <div style={styles.checkboxesAndButtons}>
             <span style={styles.checkboxes}>
-              {this.props.activitySection.scriptLevels.length === 0 && (
-                <label style={styles.labelAndCheckbox}>
-                  Remarks
-                  <input
-                    checked={this.props.activitySection.remarks}
-                    onChange={this.toggleRemarks}
-                    type="checkbox"
-                    style={styles.checkbox}
-                  />
-                </label>
-              )}
               <label style={styles.labelAndCheckbox}>
-                Slides
+                Remarks
                 <input
-                  checked={this.props.activitySection.slide}
-                  onChange={this.toggleSlides}
+                  checked={this.props.activitySection.remarks}
+                  onChange={this.toggleRemarks}
                   type="checkbox"
                   style={styles.checkbox}
                 />
@@ -481,6 +481,7 @@ class ActivitySectionCard extends Component {
           addLevel={this.handleAddLevel}
           activityPosition={this.props.activityPosition}
           appendResourceLink={this.appendResourceLink}
+          appendSlide={this.appendSlide}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}

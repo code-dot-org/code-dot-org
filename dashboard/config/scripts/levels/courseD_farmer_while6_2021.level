@@ -1,0 +1,125 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:28:33.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "properties": {
+    "skin": "farmer",
+    "serialized_maze": "[[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":-3,\"range\":-3},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":-1,\"range\":-1},{\"tileType\":1,\"value\":-2,\"range\":-2},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":-5,\"range\":-5},{\"tileType\":1,\"value\":-4,\"range\":-4},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":-6,\"range\":-8},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}]]",
+    "short_instructions": "Use the `while` loop to easily fill all of the holes.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "1",
+    "step_mode": "1",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure you're using the `while` loop to figure out how many times to fill each hole.\",\"hint_id\":\"courseD_farmer_conditionals6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3c44e00dc533b0ae359d374e23dc345a/courseD_farmer_while6_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Notice that the farmer needs to move forward and down several times in a stair-step pattern.\",\"hint_id\":\"courseD_farmer_conditionals6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7d6430ae7dff887a4cb06283eb1707d8/courseD_farmer_while6_2018.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"The stair step pattern uses the following blocks\\n  - move forward\\n  - fill hole\\n  - turn right\\n  - move forward\\n  - fill hole\\n  - turn left\\n\\nHow many times do you need to use this stair step pattern?\\n\\nMake sure you are using the `while there is a hole` to fill the hole.\",\"hint_id\":\"courseD_farmer_conditionals6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ef2e591ce4573baa7e8e77a1aee223e0/courseD_farmer_while6_2018.mp3\"}]",
+    "instructions_important": "false",
+    "ideal": "10",
+    "long_instructions": "Look at all of those holes!  Each one needs a different amount of dirt.   \r\n\r\nYou can use the `while` loop to easily fill them all!",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "parent_level_id": 21391,
+    "name_suffix": "_2021",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "shape_shift": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 21:11:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-06-01 01:38:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_dig"/>
+        <block type="maze_fill"/>
+        <block type="controls_repeat" limit="1">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="maze_untilBlockedOrNotClear">
+          <title name="DIR">holePresent</title>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_untilBlockedOrNotClear">
+                      <title name="DIR">holePresent</title>
+                      <statement name="DO">
+                        <block type="maze_fill"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_untilBlockedOrNotClear">
+                                  <title name="DIR">holePresent</title>
+                                  <statement name="DO">
+                                    <block type="maze_fill"/>
+                                  </statement>
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

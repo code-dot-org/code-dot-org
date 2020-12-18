@@ -1,0 +1,14 @@
+name 'csp-9-exam1-open-data-1_2021'
+editor_experiment ''
+wrong 'Citizen science'
+wrong 'Crowdfunding'
+right 'Open data'
+wrong 'Machine Learning'
+
+
+
+markdown <<MARKDOWN
+A town decides to publicize data it has collected about electricity usage around the city. The data is freely available for all to use and analyze in the hopes that it is possible to identify more efficient energy usage strategies.
+
+Which of the following does this situation best demonstrate?
+MARKDOWN
