@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T21:49:31.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "video_key": "csd_pair_programming",
+    "instructions_important": "false",
+    "display_name": "Pair Programming",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20005,
+    "name_suffix": "_2021",
+    "long_instructions": "## Questions to consider:\r\n* Why do you think professional programmers use pair programming?\r\n* How do you think pair programming will help you to program better?\r\n",
+    "encrypted": "false",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nThe goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming.  As students discuss its potential benefits, make sure they understand that this is an industry standard practice, not just something done by learners in the classroom."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-14 21:44:17 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-29 06:22:02 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-29 18:38:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

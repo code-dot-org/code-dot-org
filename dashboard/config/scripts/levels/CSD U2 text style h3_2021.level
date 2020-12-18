@@ -1,0 +1,38 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-12-04T21:49:34.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n::: details [**What colors can I use in CSS?**]\r\nCSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools - CSS Legal Color Values</a>\r\n:::\r\n::: details [**How does the code work?**]\r\n\r\nHere is the code that is making the `h1` header red:\r\n\r\n\r\n```\r\nh1 {\r\n  color: red;\r\n}\r\n```\r\n\r\n* `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\r\n* `color: red;` is the rule that makes the text inside the `h1` tags red.\r\n  * `color` is the _property_.  It explains what the rule is about, in this case the text color.\r\n  * `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\r\n\r\n:::\r\n::: details [**How do I make a new rule-set?**]\r\n\r\nTo make a new rule set, you'll need a selector and a list of rules.  The selector is the name of the tag you want the rules to be applied to.  The rules are a list of property and value pairs.  You'll also need to pay careful attention to the punctuation in the rule set.  Look at the code below for an example of how the code should look.  You'll need to change the specifics for your page.\r\n\r\n```\r\nh1 {\r\n  color: red;\r\n}\r\n```\r\n\r\n* `h1` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces.\r\n* `color: red;` is the rule that makes the text inside the `h1` tags red.\r\n  * `color` is the _property_.  It explains what the rule is about, in this case the text color.\r\n  * `red` is the _value_.  It explains how the rule should be applied, in this case making the text red.\r\n\r\n:::\r\n::: details [**Why do I need all the punctuation?**]\r\n\r\nThe punctuation, such as the curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer to understand the rules in the style sheet.  The curly braces hold all the rules for a particular selector.  Each rule should end in a semicolon, and the properties and values are always separated by a colon.\r\n\r\n:::\r\n::: details [**What is a style sheet?**]\r\n\r\nA style sheet is a document that controls how a web page will appear.  External style sheets are separate files that are linked to the HTML page.\r\n\r\n:::\r\n::: details [**What is CSS?**]\r\n\r\nCSS is a language that controls the way content on a web site appears.  It uses rule-sets to change the look of a page.  Each rule set has a selector, which specifies which elements on the page will be affected, and the rules, which explain how to display the elements.   Each rule consists of a property and a value for that property.\r\n\r\n\r\nHere’s an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r\n\r\n```\r\nh2 {\r\n   color: blue;\r\n   font-family: cursive;\r\n}\r\n```\r\n\r\nIn this example, `h2` is the selector, `color` and `font-family` are properties, and `blue` and `cursive` are the values for those properties.\r\n\r\n\r\n:::\r\n</div>\r\n\r\n# Making a new CSS rule-set\r\n\r\nThe block of code that gives rules for a particular tag is called a _rule-set_.  You can make a new rule set by copying the pattern you see in the rule-set for the `h1` tag.\r\n\r\n# Do this\r\n\r\n* Find the CSS rule-set in the style sheet that determines the styles for the `h1` tag.\r\n* Using the same pattern, write a new CSS rule-set that will determine the style for the `h3` tag.\r\n* Add code to set a different color for the `h3` tags.",
+    "instructions_important": "false",
+    "project_template_level_name": "CSDU2 - text style template_2021",
+    "encrypted_examples": "mnkLYTfmNVzTHJibwxpm0wcCRY2QW5PxdbSyU06XHpPVa/1MXa5V+GFqKGm6\nvMT2lNEhSjyxMBi3MAp9O4cyFA==\n",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "parent_level_id": 20021,
+    "name_suffix": "_2021",
+    "reference_links": [
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
+    ],
+    "map_reference": "/docs/concepts/css/style-sheets/",
+    "video_key": "csd_weblab_css_1",
+    "encrypted": "false",
+    "rubric_key_concept": "Apply formatting in a web page using CSS",
+    "mini_rubric": "true",
+    "validation_enabled": "true",
+    "rubric_performance_level_1": "The `h3` headings are a new color (not black).  There is no extra code in the stylesheet, and there are no syntax errors in the code.",
+    "rubric_performance_level_2": "The `h3` headings are a new color (not black).",
+    "rubric_performance_level_3": "The `h3` headings have a special rule-set in the stylesheet, and the color property is used, but there are enough errors that the text does not change color.",
+    "rubric_performance_level_4": "There is no special rule-set for `h3` headings or the color property is not used in the rule-set."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:38:30 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-07-19 20:37:42 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-09 17:59:21 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-20 15:58:30 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-04-02 09:00:12 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-22 23:50:12 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-07-14 15:41:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-19 16:23:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2019-09-24 20:15:30 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-19 17:14:02 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-29 18:17:05 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+}]]></config>
+</Weblab>

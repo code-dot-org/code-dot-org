@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T21:49:43.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "csd_teamwork_and_disagreement",
+    "instructions_important": "false",
+    "long_instructions": "Question to consider:\r\n\r\n* What are three tips for dealing with disagreement?\r\n\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 23223,
+    "teacher_markdown": "**Discussion Goals**\r\n\r\nStudents should understand that disagreement is a normal part of teamwork and have strategies for constructively dealing with disagreement in their teams.\r\n\r\nTips in the video are:\r\n\r\n1. Appreciate that your team has lots of ideas, even if you don't agree with all of them.\r\n2. Be curious about the other ideas, and try to understand what is good about them.\r\n3. Compromise with your teammates, taking goo parts of lots of ideas and putting them together.",
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-27 22:03:11 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-20 22:00:03 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-20 22:02:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-29 18:34:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-29 18:35:04 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>
