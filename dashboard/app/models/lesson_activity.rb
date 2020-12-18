@@ -68,7 +68,6 @@ class LessonActivity < ApplicationRecord
         position: section['position'],
         name: section['name'],
         remarks: section['remarks'],
-        slide: section['slide'],
         description: section['description'],
         tips: section['tips']
       )
