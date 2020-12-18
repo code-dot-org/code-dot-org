@@ -51,9 +51,19 @@ export class MapboxLocationSearchField extends React.Component {
     });
     mapboxGeocoder.addTo(`#${this.searchContainerRef.id}`);
     mapboxGeocoder.setInput(this.props.value);
+    // Emitted when the user selects a location from the search.
     mapboxGeocoder.on('result', event => {
       const location = event && event.result && event.result.place_name;
       this.props.onChange({target: {value: location}});
+    });
+    // Emitted as the user types in a location.
+    mapboxGeocoder.on('loading', event => {
+      const location = event && event.query;
+      this.props.onChange({target: {value: location}});
+    });
+    // Emitted when the user clears their input.
+    mapboxGeocoder.on('clear', event => {
+      this.props.onChange({target: {value: ''}});
     });
   }
 
