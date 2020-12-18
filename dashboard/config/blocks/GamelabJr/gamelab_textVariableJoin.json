@@ -2,12 +2,17 @@
   "category": "Text",
   "config": {
     "func": "textVariableJoin",
-    "blockText": "{TEXT1} {TEXT2}",
+    "blockText": "{VAR}{TEXT2}",
     "returnType": "String",
+    "color": [
+      312,
+      0.32,
+      0.62
+    ],
     "args": [
       {
-        "name": "TEXT1",
-        "type": "String"
+        "name": "VAR",
+        "variableInput": true
       },
       {
         "name": "TEXT2",
