@@ -285,6 +285,14 @@ export const commands = {
     worldCommands.showTitleScreen(title, subtitle);
   },
 
+  textJoin(text1, text2) {
+    return worldCommands.textJoin(text1, text2);
+  },
+
+  textVariableJoin(text1, text2) {
+    return worldCommands.textJoin(text1, text2);
+  },
+
   // Validation commands
   getAnimationsInUse() {
     return validationCommands.getAnimationsInUse();
