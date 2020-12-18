@@ -786,7 +786,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
   end
 
-  test 'google_oauth2: redirects to maker/display_google_oauth_code when google login is successful if the session[:user_return_to] is set to /maker/display_google_oauth_code' do
+  test 'google_oauth2: redirects to maker display code if present as user_return_to on successful google login' do
     # Given I have a Google-Code.org account
     user = create :student, :google_sso_provider
 
@@ -809,7 +809,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_redirected_to 'http://test.host/maker/display_google_oauth_code'
   end
 
-  test 'google_oauth2: redirects to maker/display_google_oauth_code when google login is not successful if the session[:user_return_to] is set to /maker/display_google_oauth_code' do
+  test 'google_oauth2: redirects to maker/display_google_oauth_code if present as user_return_to on unsuccessful google login' do
     # Given I do not have a Code.org account
     uid = "nonexistent-google-oauth2"
 
