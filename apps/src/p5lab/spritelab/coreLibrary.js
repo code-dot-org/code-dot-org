@@ -357,8 +357,6 @@ function whenSpriteCreatedEvent(inputEvent, p5Inst) {
   sprites.forEach(sprite => {
     callbackArgList.push({newSprite: sprite.id});
   });
-  // Clear newSprites
-  newSprites = {};
   return callbackArgList;
 }
 
@@ -403,6 +401,9 @@ export function runEvents(p5Inst) {
       inputEvent.callback(args);
     });
   });
+
+  // Clear newSprites. Used for whenSpriteCreated events and should be reset every tick.
+  newSprites = {};
 }
 
 export function addBehavior(sprite, behavior) {
