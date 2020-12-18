@@ -75,6 +75,10 @@ export const commands = {
     actionCommands.mirrorSprite(spriteArg, direction);
   },
 
+  moveBackward(spriteArg, distance) {
+    actionCommands.moveForward(spriteArg, -1 * distance);
+  },
+
   moveInDirection(spriteArg, distance, direction) {
     actionCommands.moveInDirection(spriteArg, distance, direction);
   },
