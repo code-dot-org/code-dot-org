@@ -85,6 +85,7 @@ export const commands = {
         );
       sprite.scale *= sprite.baseScale;
     }
+    sprite.setScale(coreLibrary.defaultSpriteSize / 100);
     return spriteArg;
   },
 
