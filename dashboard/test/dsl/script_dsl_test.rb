@@ -776,7 +776,7 @@ level 'Level 3'
     assert_equal expected, output
   end
 
-  test 'serialize new_name, family_name, version_year, is_stable, tts, is_course, and is_migrated' do
+  test 'serialize new_name, family_name, version_year, is_stable, tts, is_course' do
     script = create :script,
       {
         new_name: 'new name',
@@ -784,8 +784,7 @@ level 'Level 3'
         version_year: '2001',
         is_stable: true,
         tts: true,
-        is_course: true,
-        is_migrated: true
+        is_course: true
       }
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
@@ -795,6 +794,27 @@ level 'Level 3'
       version_year '2001'
       is_stable true
       tts true
+      is_course true
+
+    SCRIPT
+    assert_equal expected, script_text
+  end
+
+  test 'serialize is_migrated on hidden course' do
+    script = create :script,
+      {
+        new_name: 'new name',
+        family_name: 'family name',
+        version_year: '2001',
+        is_course: true,
+        is_migrated: true,
+        hidden: true
+      }
+    script_text = ScriptDSL.serialize_to_string(script)
+    expected = <<~SCRIPT
+      new_name 'new name'
+      family_name 'family name'
+      version_year '2001'
       is_course true
       is_migrated true
 
