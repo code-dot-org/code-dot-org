@@ -20,7 +20,7 @@ module Services
     # When adding a new model that is serialized, update this test to include the model, generate new json,
     # save it to test-serialize-seeding-json.script_json, and eyeball the changes to see that they look right.
     test 'serialize_seeding_json' do
-      script = create_script_tree('test-serialize-seeding-json')
+      script = create_script_tree(name_prefix: 'test-serialize-seeding-json')
 
       filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
       # Uncomment the following line to update test-serialize-seeding-json.script_json
@@ -589,14 +589,14 @@ module Services
     end
 
     def create_script_tree(
-      name_prefix=nil,
-      num_lesson_groups=2,
-      num_lessons_per_group=2,
-      num_activities_per_lesson=1,
-      num_sections_per_activity=1,
-      num_script_levels_per_section=2,
-      num_resources_per_lesson=2,
-      num_objectives_per_lesson=2,
+      name_prefix: nil,
+      num_lesson_groups: 2,
+      num_lessons_per_group: 2,
+      num_activities_per_lesson: 1,
+      num_sections_per_activity: 1,
+      num_script_levels_per_section: 2,
+      num_resources_per_lesson: 2,
+      num_objectives_per_lesson: 2,
       with_unit_group: false
     )
       name_prefix ||= SecureRandom.uuid
