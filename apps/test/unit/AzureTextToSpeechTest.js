@@ -241,30 +241,13 @@ describe('AzureTextToSpeech', () => {
   });
 
   describe('asyncPlayFromQueue_', () => {
-    let isRunningStub, playSpy, successfulResponse;
+    let playSpy, successfulResponse;
 
     beforeEach(() => {
-      isRunningStub = sinon.stub(azureTTS, 'isRunning_').returns(true);
       playSpy = sinon.spy();
       successfulResponse = azureTTS.createSoundResponse_({
         bytes: new ArrayBuffer()
       });
-    });
-
-    afterEach(() => {
-      isRunningStub.restore();
-    });
-
-    it('calls onAppEnded_ if app is not running', async () => {
-      isRunningStub.restore();
-      isRunningStub = sinon.stub(azureTTS, 'isRunning_').returns(false);
-      const onAppEndedStub = sinon.stub(azureTTS, 'onAppEnded_');
-
-      await azureTTS.asyncPlayFromQueue_(playSpy);
-      expect(onAppEndedStub).to.have.been.calledOnce;
-      expect(playSpy).not.to.have.been.called;
-
-      onAppEndedStub.restore();
     });
 
     it('no-ops if sound is already playing', async () => {
@@ -288,29 +271,13 @@ describe('AzureTextToSpeech', () => {
       dequeueStub.restore();
     });
 
-    it('plays sound if app is running and response was successful', async () => {
+    it('plays sound if response was successful', async () => {
       const dequeueStub = sinon
         .stub(azureTTS, 'dequeue_')
         .returns(() => Promise.resolve(successfulResponse));
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
       expect(playSpy).to.have.been.calledOnce;
-
-      dequeueStub.restore();
-    });
-
-    it('ends sound if app is no longer running after resolving sound promise', async () => {
-      isRunningStub.onCall(0).returns(true);
-      isRunningStub.onCall(1).returns(false);
-      successfulResponse.playbackOptions.onEnded = sinon.spy();
-      const dequeueStub = sinon
-        .stub(azureTTS, 'dequeue_')
-        .returns(() => Promise.resolve(successfulResponse));
-
-      await azureTTS.asyncPlayFromQueue_(playSpy);
-      expect(successfulResponse.playbackOptions.onEnded).to.have.been
-        .calledOnce;
-      expect(playSpy).not.to.have.been.called;
 
       dequeueStub.restore();
     });
