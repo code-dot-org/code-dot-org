@@ -239,7 +239,7 @@ describe('FoormEditor', () => {
 
     const saveBar = wrapper.find('FoormSaveBar');
 
-    // click savve button
+    // click save button
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
