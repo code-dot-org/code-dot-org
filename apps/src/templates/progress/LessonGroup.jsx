@@ -13,6 +13,7 @@ import {
 import color from '@cdo/apps/util/color';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {lessonIsVisible} from './progressHelpers';
 
 const styles = {
   main: {
@@ -56,12 +57,15 @@ const styles = {
  */
 class LessonGroup extends React.Component {
   static propTypes = {
-    scriptId: PropTypes.number,
     lessonGroup: lessonGroupType,
     lessons: PropTypes.arrayOf(lessonType).isRequired,
     levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired,
     isPlc: PropTypes.bool.isRequired,
-    isSummaryView: PropTypes.bool.isRequired
+    isSummaryView: PropTypes.bool.isRequired,
+
+    // redux provided
+    scriptId: PropTypes.number,
+    lessonIsVisible: PropTypes.func.isRequired
   };
 
   state = {
@@ -107,13 +111,19 @@ class LessonGroup extends React.Component {
       lessons,
       levelsByLesson,
       isSummaryView,
-      isPlc
+      isPlc,
+      lessonIsVisible
     } = this.props;
 
     const TableType = isSummaryView
       ? SummaryProgressTable
       : DetailProgressTable;
-    const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
+
+    const hasVisibleLesson = lessons.some(lesson => lessonIsVisible(lesson));
+
+    if (!hasVisibleLesson) {
+      return null;
+    }
 
     return (
       <div style={styles.main}>
@@ -125,7 +135,9 @@ class LessonGroup extends React.Component {
           ]}
           onClick={this.toggleCollapsed}
         >
-          <FontAwesome icon={icon} />
+          <FontAwesome
+            icon={this.state.collapsed ? 'caret-right' : 'caret-down'}
+          />
           <span style={styles.headingText}>{lessonGroup.displayName}</span>
           {(lessonGroup.description || lessonGroup.bigQuestions) && (
             <FontAwesome
@@ -161,5 +173,6 @@ class LessonGroup extends React.Component {
 export const UnconnectedLessonGroup = LessonGroup;
 
 export default connect(state => ({
-  scriptId: state.progress.scriptId
+  scriptId: state.progress.scriptId,
+  lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs)
 }))(Radium(LessonGroup));
