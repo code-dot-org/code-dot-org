@@ -33,9 +33,19 @@ export const commands = {
     return spriteArg => {
       const sprite = coreLibrary.getSpriteArray(spriteArg)[0];
       const spritePosition = sprite.position;
+
+      if (!sprite.targetSet) {
+        return;
+      }
+
       const targets = sprite.targetSet
         .map(x => coreLibrary.getSpriteArray({costume: x}))
         .flat();
+
+      if (targets.length === 0) {
+        return;
+      }
+
       // Find closest target
       let closestTarget;
       let closestDistance = Infinity;
