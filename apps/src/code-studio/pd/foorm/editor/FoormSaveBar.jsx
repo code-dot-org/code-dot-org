@@ -22,7 +22,8 @@ import {
   addAvilableForm,
   setFormQuestions,
   setLastSaved,
-  setSaveError
+  setSaveError,
+  setLastSavedQuestions
 } from './foormEditorRedux';
 
 const styles = {
@@ -96,7 +97,8 @@ class FoormSaveBar extends Component {
     addAvilableForm: PropTypes.func,
     setFormQuestions: PropTypes.func,
     setLastSaved: PropTypes.func,
-    setSaveError: PropTypes.func
+    setSaveError: PropTypes.func,
+    setLastSavedQuestions: PropTypes.func
   };
 
   constructor(props) {
@@ -209,6 +211,7 @@ class FoormSaveBar extends Component {
       id: result.id,
       questions: updatedQuestions
     });
+    this.props.setLastSavedQuestions(updatedQuestions);
   }
 
   handleSaveError(result) {
@@ -360,6 +363,8 @@ export default connect(
     setFormQuestions: formQuestions =>
       dispatch(setFormQuestions(formQuestions)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
-    setSaveError: saveError => dispatch(setSaveError(saveError))
+    setSaveError: saveError => dispatch(setSaveError(saveError)),
+    setLastSavedQuestions: formQuestions =>
+      dispatch(setLastSavedQuestions(formQuestions))
   })
 )(FoormSaveBar);
