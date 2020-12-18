@@ -2905,7 +2905,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U10 L01 CFU innovations_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2928,7 +2931,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U10 L02 CFU innovations part 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2951,7 +2957,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U10L3 CFU Why Collect PII_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2974,7 +2983,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Keylogging"
+        "progression": "Keylogging",
+        "level_keys": [
+          "CSP 20-21 Keylogging_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2997,7 +3009,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Phishing"
+        "progression": "Phishing",
+        "level_keys": [
+          "CSP 20-21 Phishing_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3020,7 +3035,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Malware"
+        "progression": "Malware",
+        "level_keys": [
+          "CSP 20-21 Rogue Access Points_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3043,7 +3061,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U10 L07 CFU security risks_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3066,7 +3087,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U10 L08 CFU security risks_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3089,7 +3113,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Encryption Widgets"
+        "progression": "Encryption Widgets",
+        "level_keys": [
+          "Crack a Caesar Cipher_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3112,7 +3139,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Encryption Widgets"
+        "progression": "Encryption Widgets",
+        "level_keys": [
+          "Crack Random Substitution_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3135,7 +3165,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U10L9 CFU public key_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3158,7 +3191,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U10L10 CFU MFA_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3181,7 +3217,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 10 Exam"
+        "progression": "Unit 10 Exam",
+        "level_keys": [
+          "CSP 20-21 Unit 10 Assessment_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,

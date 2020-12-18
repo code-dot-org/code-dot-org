@@ -2597,7 +2597,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration"
+        "progression": "App Exploration",
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2620,7 +2623,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration"
+        "progression": "App Exploration",
+        "level_keys": [
+          "CSP U3 Bird Quiz App_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2643,7 +2649,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration"
+        "progression": "App Exploration",
+        "level_keys": [
+          "CSP U3 Hamilton Township App_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2666,7 +2675,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration"
+        "progression": "App Exploration",
+        "level_keys": [
+          "CSP U3 Four Square App_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2689,7 +2701,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration"
+        "progression": "App Exploration",
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2712,7 +2727,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "How Computers Work"
+        "progression": "How Computers Work",
+        "level_keys": [
+          "How Computers Work part 1 CSP_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2735,7 +2753,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App Investigate_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2758,7 +2779,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "CSP U3 Bird Quiz App Investigation_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2781,7 +2805,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "CSP U3 Hamilton Township App Investigation_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2804,7 +2831,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "CSP U3 Four Square App Investigation_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2827,7 +2857,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App Investigation_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2850,7 +2883,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "CSP U3 L1 Input Output Matching_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2873,7 +2909,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration"
+        "progression": "Design Mode Exploration",
+        "level_keys": [
+          "CSP U3 Hamilton Township Design Mode_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2896,7 +2935,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration"
+        "progression": "Design Mode Exploration",
+        "level_keys": [
+          "CSP U3 L2 Design Mode Themes_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2919,7 +2961,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration"
+        "progression": "Design Mode Exploration",
+        "level_keys": [
+          "CSP U3 L2 Design Mode Colors_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2942,7 +2987,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration"
+        "progression": "Design Mode Exploration",
+        "level_keys": [
+          "CSP U3 L2 Design Mode Images_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2965,7 +3013,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration"
+        "progression": "Design Mode Exploration",
+        "level_keys": [
+          "CSP U3 L2 Design Mode Icons_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2988,7 +3039,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration"
+        "progression": "Design Mode Exploration",
+        "level_keys": [
+          "CSP U3 L2 Design Mode ids_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3011,7 +3065,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Copy an App"
+        "progression": "Copy an App",
+        "level_keys": [
+          "CSP U3 L2 Copy an App_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3034,7 +3091,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U3L2 CSP CFU ID names_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3057,7 +3117,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sample Prototype"
+        "progression": "Sample Prototype",
+        "level_keys": [
+          "CSP U3 Bird Quiz Storyboard_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3080,7 +3143,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Build Your Screens"
+        "progression": "Build Your Screens",
+        "level_keys": [
+          "CSP U3 L4 Design Screens_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3103,7 +3169,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U3L5 CSP CFU natural language_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3126,7 +3195,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Code Investigation"
+        "progression": "Code Investigation",
+        "level_keys": [
+          "U3 Program Investigate Sequential 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3149,7 +3221,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Code Investigation"
+        "progression": "Code Investigation",
+        "level_keys": [
+          "U3 Program Investigate Sequential 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3172,7 +3247,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Code Investigation"
+        "progression": "Code Investigation",
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3195,7 +3273,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Code Investigation"
+        "progression": "Code Investigation",
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3218,7 +3299,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Code Investigation"
+        "progression": "Code Investigation",
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3241,7 +3325,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding"
+        "progression": "Check for Understanding",
+        "level_keys": [
+          "U3L6 CSP CFU Sequential vs Event Driven_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3264,7 +3351,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
+        "progression": "Debugging",
+        "level_keys": [
+          "U3 Program Practice Pt 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3287,7 +3377,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
+        "progression": "Debugging",
+        "level_keys": [
+          "U3 Program Practice Pt 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3310,7 +3403,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
+        "progression": "Debugging",
+        "level_keys": [
+          "U3 Program Practice Pt 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3333,7 +3429,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
+        "progression": "Debugging",
+        "level_keys": [
+          "U3 Program Practice Pt 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3356,7 +3455,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
+        "progression": "Debugging",
+        "level_keys": [
+          "U3 Program Practice Pt 5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3379,7 +3481,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
+        "progression": "Debugging",
+        "level_keys": [
+          "U3 Program Practice Pt 6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3402,7 +3507,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
+        "progression": "Debugging",
+        "level_keys": [
+          "U3 Program Practice Pt 8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3425,7 +3533,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding"
+        "progression": "Check for Understanding",
+        "level_keys": [
+          "U3L7 CSP CFU What was confusing_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3448,7 +3559,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pair Programming"
+        "progression": "Pair Programming",
+        "level_keys": [
+          "U3 L08 Pair Programming Video_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3471,7 +3585,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Add Code"
+        "progression": "Add Code",
+        "level_keys": [
+          "CSP U3 L4 Add Code_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3494,7 +3611,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Add More Code"
+        "progression": "Add More Code",
+        "level_keys": [
+          "CSP U3 L9 Add More Code_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3517,7 +3637,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Submit Your App"
+        "progression": "Submit Your App",
+        "level_keys": [
+          "CSP U3 L10 Submit App_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3540,7 +3663,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 3 Exam"
+        "progression": "Unit 3 Exam",
+        "level_keys": [
+          "CSP Unit 3 MC Assessment _2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
