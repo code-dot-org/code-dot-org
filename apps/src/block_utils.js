@@ -1112,6 +1112,14 @@ exports.createJsWrapperBlockCreator = function(
                 root.getConnections_()[1].targetBlock()
             );
             break;
+          case 'gamelab_newSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_whenSpriteCreated' &&
+                root.getConnections_()[1] &&
+                root.getConnections_()[1].targetBlock()
+            );
+            break;
           case 'gamelab_subjectSpritePointer':
             this.setBlockToShadow(
               root =>
