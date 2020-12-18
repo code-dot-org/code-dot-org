@@ -1978,6 +1978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:1"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2000,6 +2003,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:2"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2022,6 +2028,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:3"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2044,6 +2053,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:4"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2066,6 +2078,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:5"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2088,6 +2103,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:6"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2110,6 +2128,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:7"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2132,6 +2153,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:8"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2154,6 +2178,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:9"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2176,6 +2203,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:10"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2198,6 +2228,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:11"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2220,6 +2253,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:12"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2242,6 +2278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseAB_video_NewIntro_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2264,6 +2303,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2286,6 +2328,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2308,6 +2353,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3a_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2330,6 +2378,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3b_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2352,6 +2403,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp4a_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2374,6 +2428,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp5a_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2396,6 +2453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "elementary_video_pairProgramming_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2418,6 +2478,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2440,6 +2503,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2462,6 +2528,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq5a_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2484,6 +2553,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2506,6 +2578,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2528,7 +2603,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseA_maze_seq10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2551,6 +2629,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq11_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2573,6 +2654,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq12_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2595,6 +2679,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq13_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2617,6 +2704,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -2639,6 +2729,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq_challenge2_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -2661,6 +2754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bb8_skinOverview_K-1_video_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2683,6 +2779,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2705,6 +2804,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2727,6 +2829,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2749,6 +2854,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2771,6 +2879,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2793,6 +2904,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2815,6 +2929,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2837,7 +2954,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseB_starWars_prog8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2860,6 +2980,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2882,6 +3005,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2904,6 +3030,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog11_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2926,6 +3055,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_intro_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2948,6 +3080,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2970,6 +3105,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2992,6 +3130,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3014,6 +3155,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseAB_video_debugging_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3036,6 +3180,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3058,6 +3205,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3080,6 +3230,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3102,6 +3255,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3124,6 +3280,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3146,6 +3305,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3168,7 +3330,10 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseA_harvester_seq10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3191,6 +3356,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq12_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3213,6 +3381,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq11_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3235,6 +3406,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_harvester_seq13_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3257,6 +3431,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3279,6 +3456,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3301,6 +3481,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops_video_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3323,6 +3506,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3345,6 +3531,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3367,6 +3556,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3389,6 +3581,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3411,6 +3606,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3433,6 +3631,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3455,7 +3656,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseB_iceage_loops10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3478,6 +3682,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops11_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3500,6 +3707,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops12_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3522,6 +3732,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseAB_video_collector_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3544,6 +3757,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3566,6 +3782,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3588,6 +3807,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_video_Loops_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3610,6 +3832,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3632,6 +3857,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3654,6 +3882,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3676,6 +3907,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3698,6 +3932,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3720,7 +3957,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseB_collector_loops8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3743,6 +3983,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3765,6 +4008,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3787,6 +4033,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops11_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3809,6 +4058,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -3831,6 +4083,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops_challenge2a_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -3853,6 +4108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_video_ArtistIntro_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3875,6 +4133,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3897,6 +4158,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3919,6 +4183,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3941,6 +4208,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_video_loops1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3963,6 +4233,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3985,6 +4258,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4007,6 +4283,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4029,6 +4308,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4051,6 +4333,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4073,7 +4358,10 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseA_artist_loops9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4096,6 +4384,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4118,6 +4409,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops11_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4140,6 +4434,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops12_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4162,6 +4459,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops_challenge2a_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4184,6 +4484,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4206,6 +4509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_video_ArtistIntro_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4228,6 +4534,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4250,6 +4559,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_video_artistLoops_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4272,6 +4584,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4294,6 +4609,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4316,6 +4634,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4338,6 +4659,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4360,6 +4684,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4382,7 +4709,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseB_artist_loops7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4405,6 +4735,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4427,6 +4760,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4449,6 +4785,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops10_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4471,6 +4810,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4493,6 +4835,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops_challenge2_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4515,6 +4860,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_video_events_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4537,6 +4885,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4559,6 +4910,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4581,6 +4935,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4603,6 +4960,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4625,6 +4985,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4647,6 +5010,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4669,6 +5035,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4691,6 +5060,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playlab_events_challenge2_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4713,6 +5085,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playlab_events_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4735,6 +5110,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_playLab_events1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4757,6 +5135,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_playlab_events2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4779,6 +5160,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_playlab_events3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4801,6 +5185,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_playlab_events4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4823,6 +5210,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_playlab_events5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4845,6 +5235,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_playlab_events6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4867,6 +5260,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_playlab_events7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4889,6 +5285,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_playlab_eventsFP_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4911,6 +5310,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_playlab_events_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4933,6 +5335,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_playlab_events_challenge2_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
