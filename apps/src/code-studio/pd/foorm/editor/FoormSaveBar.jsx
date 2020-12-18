@@ -16,7 +16,7 @@ import {
 import Select from 'react-select/lib/Select';
 import {SelectStyleProps} from '../../constants';
 import 'react-select/dist/react-select.css';
-import HelpTipModal from '@cdo/apps/lib/ui/HelpTipModal';
+import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
   setFormData,
   addAvilableForm,
@@ -90,7 +90,7 @@ class FoormSaveBar extends Component {
     formHasError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
     formId: PropTypes.number,
-    lastSaved: PropTypes.object,
+    lastSaved: PropTypes.number,
     saveError: PropTypes.string,
     setFormData: PropTypes.func,
     addAvilableForm: PropTypes.func,
@@ -117,7 +117,7 @@ class FoormSaveBar extends Component {
     if (this.props.isFormPublished) {
       // show a warning if in published mode
       this.setState({showSaveConfirmation: true});
-    } else if (!this.props.formId) {
+    } else if (this.props.formId === null || this.props.formId === undefined) {
       // if this is not an existing form, show new form save modal
       this.setState({showNewFormSave: true});
     } else {
@@ -216,7 +216,9 @@ class FoormSaveBar extends Component {
       isSaving: false
     });
     this.props.setSaveError(
-      (result.responseJSON && result.responseJSON.questions) || 'Unknown error.'
+      (result.responseJSON && result.responseJSON.questions) ||
+        result.responseText ||
+        'Unknown error.'
     );
   }
 
@@ -234,10 +236,10 @@ class FoormSaveBar extends Component {
           <FormGroup>
             <ControlLabel>
               Choose a Category
-              <HelpTipModal>
+              <ModalHelpTip>
                 Select a category for the form. The form name will be prefixed
                 with the category name.
-              </HelpTipModal>
+              </ModalHelpTip>
             </ControlLabel>
             <Select
               id="folder"
@@ -253,10 +255,10 @@ class FoormSaveBar extends Component {
             />
             <ControlLabel>
               Form Name
-              <HelpTipModal>
+              <ModalHelpTip>
                 Form names must be all lowercase letters (numbers allowed) with
                 underscores to separate words (such as example_form_name).
-              </HelpTipModal>
+              </ModalHelpTip>
             </ControlLabel>
             <FormControl
               id="formName"
@@ -309,9 +311,10 @@ class FoormSaveBar extends Component {
             </div>
           )}
           {this.props.saveError && !this.props.formHasError && (
-            <div style={styles.error}>{`Error Saving: ${
-              this.props.saveError
-            }`}</div>
+            <div
+              style={styles.error}
+              className="saveErrorMessage"
+            >{`Error Saving: ${this.props.saveError}`}</div>
           )}
           {this.state.isSaving && (
             <div style={styles.spinner}>
