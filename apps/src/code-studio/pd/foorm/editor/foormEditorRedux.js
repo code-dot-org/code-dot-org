@@ -115,7 +115,6 @@ export default function foormEditorRedux(state = initialState, action) {
     };
   }
   if (action.type === SET_LAST_SAVED_QUESTIONS) {
-    console.log(action.formQuestions);
     return {
       ...state,
       lastSavedFormQuestions: action.formQuestions
