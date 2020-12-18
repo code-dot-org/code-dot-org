@@ -797,6 +797,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
     session[:user_return_to] = "/maker/display_google_oauth_code"
+    CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
     assert_does_not_create(User) do
       get :google_oauth2
     end
