@@ -72,7 +72,7 @@ export const commands = {
     sprite.getScale = function() {
       return sprite.scale / sprite.baseScale;
     };
-    let spriteArg = coreLibrary.addSprite(sprite, name);
+    let spriteArg = coreLibrary.addSprite(sprite, name, animation);
     if (animation) {
       sprite.setAnimation(animation);
       sprite.scale /= sprite.baseScale;

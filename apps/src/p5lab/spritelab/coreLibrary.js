@@ -3,6 +3,7 @@ var nativeSpriteMap = {};
 var inputEvents = [];
 var behaviors = [];
 var userInputEventCallbacks = {};
+var newSprites = {};
 
 export var background;
 export var title = '';
@@ -119,13 +120,19 @@ export function getSpriteIdsInUse() {
  * @param {Sprite} sprite
  * @returns {Number} A unique id to reference the sprite.
  */
-export function addSprite(sprite, name) {
+export function addSprite(sprite, name, animation) {
   nativeSpriteMap[spriteId] = sprite;
   sprite.id = spriteId;
   if (name) {
     enforceUniqueSpriteName(name);
     sprite.name = name;
   }
+  if (animation) {
+    // Add to new sprites map so we can fire a "when sprite created" event if needed
+    newSprites[animation] = newSprites[animation] || [];
+    newSprites[animation].push(sprite);
+  }
+
   spriteId++;
   return sprite.id;
 }
@@ -344,6 +351,17 @@ function whileClickEvent(inputEvent, p5Inst) {
   return callbackArgList;
 }
 
+function whenSpriteCreatedEvent(inputEvent, p5Inst) {
+  let callbackArgList = [];
+  let sprites = newSprites[inputEvent.args.costume] || [];
+  sprites.forEach(sprite => {
+    callbackArgList.push({newSprite: sprite.id});
+  });
+  // Clear newSprites
+  newSprites = {};
+  return callbackArgList;
+}
+
 /**
  * @param {Object} inputEvent
  * @param p5Inst - the running P5 instance
@@ -373,6 +391,8 @@ function getCallbackArgListForEvent(inputEvent, p5Inst) {
       return whenClickEvent(inputEvent, p5Inst);
     case 'whileclick':
       return whileClickEvent(inputEvent, p5Inst);
+    case 'whenSpriteCreated':
+      return whenSpriteCreatedEvent(inputEvent, p5Inst);
   }
 }
 
