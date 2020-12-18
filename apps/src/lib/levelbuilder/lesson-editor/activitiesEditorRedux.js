@@ -599,7 +599,6 @@ export const emptyActivitySection = {
   levels: [],
   tips: [],
   remarks: false,
-  slide: false,
   text: '',
   scriptLevels: [],
   position: 1
