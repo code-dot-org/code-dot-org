@@ -69,6 +69,10 @@ function draggable() {
   return {func: draggableFunc(), name: 'draggable'};
 }
 
+function followingTargets() {
+  return {func: followingTargetsFunc(), name: 'following targets'};
+}
+
 function tumbling(spriteId) {
   var behavior = function(spriteId) {
     changePropBy(spriteId, 'rotation', -6);
