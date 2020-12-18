@@ -2,11 +2,14 @@ require 'cdo/honeybadger'
 require 'cdo/languages'
 require 'net/http'
 require 'dynamic_config/gatekeeper'
+require 'cdo/throttle'
 
 module AzureTextToSpeech
   # Azure authentication token is valid for 10 minutes, so cache it for 9.
   # https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech#authentication
   TOKEN_CACHE_TTL = 9.minutes.freeze
+
+  AZURE_TTS_PREFIX = "azure_tts/".freeze
 
   # Requests an authentication token from Azure, or returns the cached token if still valid.
   def self.get_token
@@ -28,10 +31,19 @@ module AzureTextToSpeech
     nil
   end
 
-  def self.get_speech(text, gender, locale)
-    return nil unless allowed?
+  # Converts text to speech and yields the result to a block unless the request was throttled.
+  # This method is throttled because it makes a paid third-party request to Azure.
+  # @param [String] text
+  # @param [String] gender
+  # @param [String] locale - I18n locale.
+  # @param [String] id - Unique identifier for throttling.
+  # @param [Integer] limit - Number of requests allowed over period.
+  # @param [Integer] period - Period of time in seconds.
+  def self.throttled_get_speech(text, gender, locale, id, limit, period)
+    return if Cdo::Throttle.throttle(AZURE_TTS_PREFIX + id.to_s, limit, period)
+    return yield(nil) unless allowed?
     token = get_token
-    return nil if token.nil_or_empty?
+    return yield(nil) if token.nil_or_empty?
 
     uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/v1")
     http_request = Net::HTTP.new(uri.host, uri.port)
@@ -45,12 +57,12 @@ module AzureTextToSpeech
     }
     request = Net::HTTP::Post.new(uri.request_uri, headers)
     request.body = ssml(text, gender, locale)
-    return nil if request.body.nil_or_empty?
+    return yield(nil) if request.body.nil_or_empty?
 
-    http_request.request(request)&.body
+    yield(http_request.request(request)&.body)
   rescue => e
     Honeybadger.notify(e, error_message: 'Request for speech from Azure Speech Service failed')
-    nil
+    yield(nil)
   end
 
   # Requests the list of voices from Azure. Only returns voices that are available in 2+ genders.

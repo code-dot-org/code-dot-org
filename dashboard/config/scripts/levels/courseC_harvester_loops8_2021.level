@@ -1,0 +1,114 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:23:52.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "harvester",
+    "serialized_maze": "[[{\"tileType\":1,\"value\":6,\"range\":6,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"value\":4,\"range\":4,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":1,\"value\":6,\"range\":6,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":4,\"range\":4,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":1,\"value\":6,\"range\":6,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":4,\"range\":4,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":1,\"value\":6,\"range\":6,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":4,\"range\":4,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":1,\"value\":6,\"range\":6,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":4,\"range\":4,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":1,\"value\":6,\"range\":6,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":4,\"range\":4,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":1,\"value\":6,\"range\":6,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":4,\"range\":4,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":2,\"possibleFeatures\":[0],\"startsHidden\":false}]]",
+    "short_instructions": "**Challenge:** Collect all of the corn and all of the pumpkins.",
+    "long_instructions": "**Challenge:** Collect all of the corn and all of the pumpkins.\r\n\r\nYou can complete this challenge any way you want, but it will either take a lot of work or a lot of thinking!",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "3",
+    "step_mode": "1",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "step_speed": "1",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Does this stair step look familiar from the previous puzzle? The movements should be similar, just remember to collect crops along the way.\",\"hint_id\":\"courseC_harvester_loops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/169af1e5e6d00bd77714945461ebe4d1/courseC_harvester_loops8.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.\",\"hint_id\":\"courseC_harvester_loops8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6c428f9c713bab3d126b741b1119665e/courseC_harvester_loops8.mp3\"}]",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 21226,
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 16:21:33 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-01-05 23:57:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"video_key\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="harvester_pumpkin"/>
+        <block type="harvester_corn"/>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">7</title>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="harvester_corn"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="controls_repeat">
+                                  <title name="TIMES">6</title>
+                                  <statement name="DO">
+                                    <block type="harvester_pumpkin"/>
+                                  </statement>
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

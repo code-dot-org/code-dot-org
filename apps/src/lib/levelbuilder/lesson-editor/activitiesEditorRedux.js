@@ -509,8 +509,9 @@ export const getSerializedActivities = rawActivities => {
 };
 
 export const mapActivityDataForEditor = rawActivities => {
+  const activities = _.cloneDeep(rawActivities);
   // Rename any keys that are different on the backend.
-  rawActivities.forEach(activity => {
+  activities.forEach(activity => {
     // React key which must be unique for each object in the list. React
     // recommends against using the array index for this. We don't want to use
     // the id column directly, because when we create new objects, we want to
@@ -559,11 +560,11 @@ export const mapActivityDataForEditor = rawActivities => {
     });
   });
 
-  if (rawActivities.length === 0) {
-    rawActivities.push(emptyActivity);
+  if (activities.length === 0) {
+    activities.push(emptyActivity);
   }
 
-  return rawActivities;
+  return activities;
 };
 
 // Use PropTypes.checkPropTypes to enforce that each entry in the array of
@@ -598,7 +599,6 @@ export const emptyActivitySection = {
   levels: [],
   tips: [],
   remarks: false,
-  slide: false,
   text: '',
   scriptLevels: [],
   position: 1

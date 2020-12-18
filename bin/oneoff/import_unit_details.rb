@@ -83,6 +83,8 @@ def main(options)
     script = Script.find_by_name!(unit_name)
     log "found code studio script name #{script.name} with id #{script.id}"
 
+    raise "Only hidden scripts can be imported" unless script.hidden
+
     # If a path is not found, curriculum builder returns a 302 redirect the same
     # path with the /en-us prefix, which then returns 404. to make error
     # handling a bit easier, just include the /en-us prefix so that we get a 404
@@ -119,9 +121,11 @@ def main(options)
       cb_chapter['description'] = nil if cb_chapter['description'] == cb_chapter['title']
       lesson_group.update_from_curriculum_builder(cb_chapter)
     end
-    script.fix_script_level_positions
 
+    script.fix_script_level_positions
     script.update!(show_calendar: !!cb_unit['show_calendar'], is_migrated: true)
+    script.write_script_dsl
+    script.write_script_json
 
     puts "updated #{updated_lesson_group_count} lesson groups in unit #{script.name}"
   end

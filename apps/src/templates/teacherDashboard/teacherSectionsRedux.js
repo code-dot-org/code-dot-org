@@ -22,8 +22,8 @@ const USER_EDITABLE_SECTION_PROPS = [
 /** @const {number} ID for a new section that has not been saved */
 const PENDING_NEW_SECTION_ID = -1;
 
-/** @const {null} Null is used to indicate no section selected */
-export const NO_SECTION = null;
+/** @const {string} Empty string used to indicate no section selected */
+export const NO_SECTION = '';
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
@@ -690,7 +690,7 @@ export default function teacherSections(state = initialState, action) {
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
     if (Object.keys(action.sections).length === 1) {
-      selectedSectionId = action.sections[0].id;
+      selectedSectionId = action.sections[0].id.toString();
     }
 
     sections.forEach(section => {
@@ -727,7 +727,10 @@ export default function teacherSections(state = initialState, action) {
 
   if (action.type === SELECT_SECTION) {
     let sectionId = action.sectionId;
-    if (sectionId !== NO_SECTION && !state.sectionIds.includes(sectionId)) {
+    if (
+      sectionId !== NO_SECTION &&
+      !state.sectionIds.includes(parseInt(sectionId, 10))
+    ) {
       sectionId = NO_SECTION;
     }
     return {

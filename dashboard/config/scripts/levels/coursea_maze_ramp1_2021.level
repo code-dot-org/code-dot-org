@@ -1,0 +1,75 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:19:12.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,4,4,4,4,0,0],[0,0,4,4,4,4,0,0],[0,0,4,4,2,3,0,0],[0,0,4,4,4,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "short_instructions": "For this puzzle, snap the blocks together and click \"▶ Run\"!",
+    "start_direction": "1",
+    "step_mode": "1",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "ideal": "2",
+    "video_key": "CSF_maze_intro_k1_blocks",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If the bird isn't getting to the pig, make sure both of the blocks have been fully clicked together, then click \\\"Run\\\" again.\",\"hint_id\":\"courseC_maze_programming1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f5e49b3dc9c30247aa237534d4d4fef3/coursea_maze_ramp1_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!\",\"hint_id\":\"courseC_maze_programming1_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f9107970d452e3adacdbf74a4c1b9556/coursea_maze_ramp1_2018.mp3\"}]",
+    "long_instructions": "To get the bird to the pig, snap the <xml><block type=\"maze_moveEast\" block-text=\"move east\"/></xml> block to the bottom of the <xml><block type=\"when_run\" block-text=\"when run\"/></xml> block, then press \"▶ Run\"!",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade2_CaringForNewPet_0_1\",\r\n  \"callout_text\": \"After snapping all the blocks together, press \\\"Run\\\" to start your program.\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2021",
+    "parent_level_id": 21054,
+    "top_level_procedure_autopopulate": "false",
+    "tts_long_instructions_override": "To get the bird to the pig, snap the \"East\" block to the bottom of the \"when run\" block, then press run.",
+    "show_type_hints": "false",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 18:32:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-19 19:38:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-19 19:39:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-21 23:25:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-04 23:41:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 00:07:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"is_k1\",\"video_key\",\"use_modal_function_editor\",\"markdown_instructions\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 00:10:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 00:12:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 00:16:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 00:17:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 00:18:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 00:20:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 00:21:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 00:22:23 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 01:34:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-12 18:27:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-12 21:40:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-12 21:41:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-13 15:31:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-08-13 15:31:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-03-27 19:26:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="maze_moveEast"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+</xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveEast"/>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

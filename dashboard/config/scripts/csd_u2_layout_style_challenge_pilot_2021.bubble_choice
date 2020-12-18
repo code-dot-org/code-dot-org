@@ -1,0 +1,11 @@
+name 'CSD U2 layout style challenge_pilot_2021'
+display_name 'Styling Elements'
+description 'Try extra challenges or learn some new code.'
+
+sublevels
+level 'CSD U2 layout style border_2021'
+level 'CSD U2 layout style borderradius_2021'
+level 'CSD U2 layout style margin_2021'
+level 'CSD U2 layout style background-url_2021'
+level 'CSD U2 layout style animal challenge_2021'
+level 'CSD U2 layout style dessert challenge_2021'
