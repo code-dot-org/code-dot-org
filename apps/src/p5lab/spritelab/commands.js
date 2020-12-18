@@ -157,12 +157,20 @@ export const commands = {
     eventCommands.checkTouching(condition, sprite1, sprite2, callback);
   },
 
+  collectData(callback) {
+    eventCommands.collectData(callback);
+  },
+
   keyPressed(condition, key, callback) {
     eventCommands.keyPressed(condition, key, callback);
   },
 
   repeatForever(callback) {
     eventCommands.repeatForever(callback);
+  },
+
+  stopCollectingData() {
+    eventCommands.stopCollectingData();
   },
 
   spriteClicked(condition, spriteArg, callback) {
