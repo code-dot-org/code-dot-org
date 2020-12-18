@@ -475,6 +475,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "confirm_login redirects to maker_display_google_oauth_code_path when a google user is already signed in" do
     @student = create :student, :google_sso_provider
+    CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
     sign_in @student
 
     get :confirm_login, params: {user_return_to: '/maker/display_google_oauth_code'}
@@ -508,6 +509,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "display_code shows a code when a google user is signed in" do
     @student = create :student, :google_sso_provider
+    CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
     sign_in @student
     get :display_code
     assert_response :success
