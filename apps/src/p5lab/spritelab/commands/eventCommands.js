@@ -15,6 +15,10 @@ export const commands = {
     }
   },
 
+  collectData(callback) {
+    coreLibrary.addEvent('collectData', {}, callback);
+  },
+
   keyPressed(condition, key, callback) {
     if (condition === 'when' || condition === 'while') {
       coreLibrary.addEvent(condition + 'press', {key: key}, callback);
@@ -23,6 +27,10 @@ export const commands = {
 
   repeatForever(callback) {
     coreLibrary.addEvent('repeatForever', {}, callback);
+  },
+
+  stopCollectingData() {
+    coreLibrary.clearCollectDataEvents();
   },
 
   spriteClicked(condition, spriteArg, callback) {

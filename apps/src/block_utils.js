@@ -747,7 +747,9 @@ const STANDARD_INPUT_TYPES = {
         .appendTitle(new Blockly.FieldVariable(null), inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      return block.getTitleValue(inputConfig.name);
+      return Blockly.JavaScript.translateVarName(
+        block.getTitleValue(inputConfig.name)
+      );
     }
   },
   [FIELD_INPUT]: {

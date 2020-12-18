@@ -40,6 +40,10 @@ export const commands = {
   },
 
   // Action commands
+  addTarget(spriteArg, targetArg) {
+    actionCommands.addTarget(spriteArg, targetArg);
+  },
+
   bounceOff(spriteArg, targetArg) {
     actionCommands.bounceOff(spriteArg, targetArg);
   },
@@ -73,6 +77,10 @@ export const commands = {
 
   mirrorSprite(spriteArg, direction) {
     actionCommands.mirrorSprite(spriteArg, direction);
+  },
+
+  moveBackward(spriteArg, distance) {
+    actionCommands.moveForward(spriteArg, -1 * distance);
   },
 
   moveInDirection(spriteArg, distance, direction) {
@@ -136,6 +144,10 @@ export const commands = {
     return behaviorCommands.draggableFunc(this);
   },
 
+  followingTargetsFunc(spriteArg) {
+    return behaviorCommands.followingTargetsFunc(this);
+  },
+
   removeAllBehaviors(spriteArg) {
     behaviorCommands.removeAllBehaviors(spriteArg);
   },
@@ -153,12 +165,20 @@ export const commands = {
     eventCommands.checkTouching(condition, sprite1, sprite2, callback);
   },
 
+  collectData(callback) {
+    eventCommands.collectData(callback);
+  },
+
   keyPressed(condition, key, callback) {
     eventCommands.keyPressed(condition, key, callback);
   },
 
   repeatForever(callback) {
     eventCommands.repeatForever(callback);
+  },
+
+  stopCollectingData() {
+    eventCommands.stopCollectingData();
   },
 
   spriteClicked(condition, spriteArg, callback) {

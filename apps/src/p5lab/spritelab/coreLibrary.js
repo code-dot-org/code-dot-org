@@ -189,6 +189,10 @@ export function addEvent(type, args, callback) {
   inputEvents.push({type: type, args: args, callback: callback});
 }
 
+export function clearCollectDataEvents() {
+  inputEvents = inputEvents.filter(e => e.type !== 'collectData');
+}
+
 function atTimeEvent(inputEvent, p5Inst) {
   if (inputEvent.args.unit === 'seconds') {
     const previousTime = inputEvent.previousTime || 0;
@@ -210,6 +214,17 @@ function atTimeEvent(inputEvent, p5Inst) {
   }
   // Don't call callback
   return [];
+}
+
+function collectDataEvent(inputEvent, p5Inst) {
+  // Only log data once per second, approximate 30 frames per second
+  if (p5Inst.World.frameCount % 30 === 0) {
+    // Call callback with no extra args
+    return [{}];
+  } else {
+    // Don't call callback
+    return [];
+  }
 }
 
 function repeatForeverEvent(inputEvent, p5Inst) {
@@ -342,6 +357,8 @@ function getCallbackArgListForEvent(inputEvent, p5Inst) {
   switch (inputEvent.type) {
     case 'atTime':
       return atTimeEvent(inputEvent, p5Inst);
+    case 'collectData':
+      return collectDataEvent(inputEvent, p5Inst);
     case 'repeatForever':
       return repeatForeverEvent(inputEvent, p5Inst);
     case 'whenpress':
