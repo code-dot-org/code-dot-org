@@ -72,7 +72,9 @@ progress.showDisabledBubblesAlert = function() {
  *   we have in renderCourseProgress)
  * @param {object} stageData
  * @param {object} progressData
- * @param {string} currentLevelid
+ * @param {string} currentLevelid The id of the level the user is currently on.
+ *   This gets used in the url and as a key in many objects. Therefore, it is a
+ *   string despite always being a numerical value
  * @param {boolean} saveAnswersBeforeNavigation
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
@@ -80,8 +82,9 @@ progress.showDisabledBubblesAlert = function() {
  *   stageExtras enabled for this script
  * @param {boolean} isLessonExtras Boolean indicating we are not on a script
  *   level and therefore are on lesson extras
- * @param {number} currentPageNumber The page we are on if this is a multi-
- *   page level
+ * @param {string} currentPageNumber The page we are on if this is a multi-
+ *   page level. This is intentionally a string despite being a numerical
+ *   value since it gets used in the url
  */
 progress.generateStageProgress = function(
   scriptData,
@@ -265,14 +268,17 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {boolean} [scriptData.plc]
  * @param {object[]} [scriptData.stages]
  * @param {boolean} scriptData.age_13_required
- * @param {string} currentLevelId
+ * @param {string} currentLevelId The id of the level the user is currently on.
+ *   This gets used in the url and as a key in many objects. Therefore, it is a
+ *   string despite always being a numerical value
  * @param {boolean} isFullProgress - True if this contains progress for the entire
  *   script vs. a single stage.
  * @param {boolean} [saveAnswersBeforeNavigation]
  * @param {boolean} [isLessonExtras] Optional boolean indicating we are not on
  *   a script level and therefore are on lesson extras
- * @param {number} [currentPageNumber] Optional. The page we are on if this is
- *   a multi-page level
+ * @param {string} [currentPageNumber] Optional. The page we are on if this is
+ *   a multi-page level. This is intentionally a string despite being a
+ *   numerical value since it gets used in the url
  */
 function initializeStoreWithProgress(
   store,
