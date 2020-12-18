@@ -59,7 +59,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(62) do
+      assert_queries(64) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -312,6 +312,7 @@ module Services
       expected_counts['ScriptLevel'] -= 4
       expected_counts['LevelsScriptLevel'] -= 4
       expected_counts['LessonsResource'] -= 4
+      expected_counts['Objective'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -342,6 +343,7 @@ module Services
       expected_counts['ScriptLevel'] -= 2
       expected_counts['LevelsScriptLevel'] -= 2
       expected_counts['LessonsResource'] -= 2
+      expected_counts['Objective'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -444,6 +446,46 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    test 'seed deletes objectives' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        script.lessons.first.objectives.first.destroy!
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['Objective'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
+    test 'seed updates objectives' do
+      script = create_script_tree
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.objectives.first.update!(description: 'Updated Description')
+        lesson.objectives.create(
+          key: "#{lesson.name}-objective-3",
+          description: 'New Description'
+        )
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal(
+        ['Updated Description', 'fake description', 'New Description'],
+        lesson.objectives.map(&:description)
+      )
+    end
+
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
       script_with_change = json = nil
       Script.transaction do
@@ -461,7 +503,7 @@ module Services
     def get_counts
       [
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
-        LevelsScriptLevel, Resource, LessonsResource
+        LevelsScriptLevel, Resource, LessonsResource, Objective
       ].map {|c| [c.name, c.count]}.to_h
     end
 
@@ -487,6 +529,10 @@ module Services
         assert_resources_equal(
           s1.lessons.map(&:resources).flatten,
           s2.lessons.map(&:resources).flatten
+        )
+        assert_objectives_equal(
+          s1.lessons.map(&:objectives).flatten,
+          s2.lessons.map(&:objectives).flatten
         )
       end
     end
@@ -531,6 +577,12 @@ module Services
       end
     end
 
+    def assert_objectives_equal(objectives1, objectives2)
+      objectives1.zip(objectives2).each do |o1, o2|
+        assert_attributes_equal(o1, o2, ['lesson_id'])
+      end
+    end
+
     def assert_attributes_equal(a, b, additional_excludes=[])
       excludes = ['id', 'created_at', 'updated_at'] + additional_excludes
       assert_equal a.attributes.except(*excludes), b.attributes.except(*excludes)
@@ -542,6 +594,7 @@ module Services
       num_lessons_per_group=2,
       num_script_levels_per_lesson=2,
       num_resources_per_lesson=2,
+      num_objectives_per_lesson=2,
       with_unit_group: false
     )
       name_prefix ||= SecureRandom.uuid
@@ -604,6 +657,10 @@ module Services
         (1..num_resources_per_lesson).each do |r|
           resource = create :resource, key: "#{lesson.name}-resource-#{r}", course_version: course_version
           LessonsResource.find_or_create_by!(resource: resource, lesson: lesson)
+        end
+
+        (1..num_objectives_per_lesson).each do |o|
+          create :objective, key: "#{lesson.name}-objective-#{o}", lesson: lesson
         end
       end
 

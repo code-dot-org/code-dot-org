@@ -5,7 +5,7 @@ import FontAwesome from '../../templates/FontAwesome';
 import _ from 'lodash';
 
 // Help Tip without the Portal feature, which doesn't work if used in a Modal.
-export default function HelpTipModal({children}) {
+export default function ModalHelpTip({children}) {
   const id = _.uniqueId();
 
   return (
@@ -20,6 +20,6 @@ export default function HelpTipModal({children}) {
     </span>
   );
 }
-HelpTipModal.propTypes = {
+ModalHelpTip.propTypes = {
   children: PropTypes.node.isRequired
 };
