@@ -40,6 +40,10 @@ export const commands = {
   },
 
   // Action commands
+  addTarget(spriteArg, targetArg) {
+    actionCommands.addTarget(spriteArg, targetArg);
+  },
+
   bounceOff(spriteArg, targetArg) {
     actionCommands.bounceOff(spriteArg, targetArg);
   },
@@ -138,6 +142,10 @@ export const commands = {
 
   draggableFunc(spriteArg) {
     return behaviorCommands.draggableFunc(this);
+  },
+
+  followingTargetsFunc(spriteArg) {
+    return behaviorCommands.followingTargetsFunc(this);
   },
 
   removeAllBehaviors(spriteArg) {
