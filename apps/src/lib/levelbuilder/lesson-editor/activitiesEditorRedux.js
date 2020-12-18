@@ -8,6 +8,7 @@ import {
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const INIT = 'activitiesEditor/INIT';
+const INIT_ACTIVITIES = 'activitiesEditor/INIT_ACTIVITIES';
 const ADD_ACTIVITY = 'activitiesEditor/ADD_ACTIVITY';
 const MOVE_ACTIVITY = 'activitiesEditor/MOVE_ACTIVITY';
 const REMOVE_ACTIVITY = 'activitiesEditor/REMOVE_ACTIVITY';
@@ -38,10 +39,20 @@ export const init = (activities, searchOptions) => ({
   searchOptions
 });
 
-export const addActivity = (activityPosition, activityKey) => ({
+export const initActivities = activities => ({
+  type: INIT_ACTIVITIES,
+  activities
+});
+
+export const addActivity = (
+  activityPosition,
+  activityKey,
+  activitySectionKey
+) => ({
   type: ADD_ACTIVITY,
   activityPosition,
-  activityKey
+  activityKey,
+  activitySectionKey
 });
 
 export const updateActivityField = (
@@ -244,13 +255,20 @@ function activities(state = [], action) {
 
   switch (action.type) {
     case INIT:
+    case INIT_ACTIVITIES:
       validateActivities(action.activities, action.type);
       return action.activities;
     case ADD_ACTIVITY: {
       newState.push({
         ...emptyActivity,
         key: action.activityKey,
-        position: action.activityPosition
+        position: action.activityPosition,
+        activitySections: [
+          {
+            ...emptyActivitySection,
+            key: action.activitySectionKey
+          }
+        ]
       });
       updateActivityPositions(newState);
       break;
@@ -307,7 +325,6 @@ function activities(state = [], action) {
     }
     case MOVE_ACTIVITY_SECTION: {
       const activityIndex = action.activityPosition - 1;
-
       const activitySections = newState[activityIndex].activitySections;
 
       const activitySectionIndex = action.activitySectionPosition - 1;
@@ -315,7 +332,6 @@ function activities(state = [], action) {
         action.direction === 'up'
           ? activitySectionIndex - 1
           : activitySectionIndex + 1;
-
       if (
         activitySectionSwapIndex >= 0 &&
         activitySectionSwapIndex <= activitySections.length - 1
@@ -493,8 +509,9 @@ export const getSerializedActivities = rawActivities => {
 };
 
 export const mapActivityDataForEditor = rawActivities => {
+  const activities = _.cloneDeep(rawActivities);
   // Rename any keys that are different on the backend.
-  rawActivities.forEach(activity => {
+  activities.forEach(activity => {
     // React key which must be unique for each object in the list. React
     // recommends against using the array index for this. We don't want to use
     // the id column directly, because when we create new objects, we want to
@@ -543,11 +560,11 @@ export const mapActivityDataForEditor = rawActivities => {
     });
   });
 
-  if (rawActivities.length === 0) {
-    rawActivities.push(emptyActivity);
+  if (activities.length === 0) {
+    activities.push(emptyActivity);
   }
 
-  return rawActivities;
+  return activities;
 };
 
 // Use PropTypes.checkPropTypes to enforce that each entry in the array of
@@ -577,7 +594,7 @@ export default {
 };
 
 export const emptyActivitySection = {
-  key: 'activity-section-1',
+  key: 'activitySection-1',
   displayName: '',
   levels: [],
   tips: [],

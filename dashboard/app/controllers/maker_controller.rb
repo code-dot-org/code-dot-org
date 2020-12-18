@@ -1,7 +1,7 @@
 require 'cdo/script_constants'
 
 class MakerController < ApplicationController
-  authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code]
+  authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code, :confirm_login]
 
   # Maker Toolkit is currently used in CSD unit 6.
   # Retrieves the current CSD unit 6 level that the user is working on.
@@ -126,6 +126,13 @@ class MakerController < ApplicationController
     @secret_code = Encryption.encrypt_string_utf8(
       Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
     )
+  end
+
+  # GET /maker/confirm_login
+  # Renders a page to confirm uses want to login via Google OAuth
+  # This route is need to convert the GET request from the Maker App into
+  # a POST that can be used to login via Google OAuth
+  def confirm_login
   end
 
   # POST /maker/complete
