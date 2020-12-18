@@ -303,7 +303,7 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
-      courseVersionId: lesson_group.script.course_version&.id,
+      courseVersionId: lesson_group.script.get_course_version&.id,
       updatedAt: updated_at
     }
   end
