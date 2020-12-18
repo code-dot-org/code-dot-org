@@ -36,7 +36,8 @@ export class MapboxLocationSearchField extends React.Component {
     ]
   };
 
-  componentDidMount() {
+  // Uses the Mapbox SDK to create a location search box.
+  addMapboxInput() {
     // Don't render this mapbox component if this host doesn't have access to mapbox.
     if (!this.props.mapboxAccessToken || this.props.readOnly) {
       return;
@@ -56,24 +57,42 @@ export class MapboxLocationSearchField extends React.Component {
     });
   }
 
+  componentDidMount() {
+    this.addMapboxInput();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (
+      prevProps.readOnly !== this.props.readOnly ||
+      prevProps.mapboxAccessToken !== this.props.mapboxAccessToken
+    ) {
+      this.addMapboxInput();
+    }
+  }
+
   render() {
-    return (
+    // Container for the search input.
+    let searchBox = (
       <div
+        id={'mapbox-geocoder-container'}
         ref={el => (this.searchContainerRef = el)}
-        id="mapbox-location-search-container"
-      >
-        {(this.props.readOnly || !this.props.mapboxAccessToken) && (
-          <input
-            type={'text'}
-            style={this.props.style}
-            className={`${this.props.className} readOnly`}
-            value={this.props.value}
-            disabled={this.props.readOnly}
-            onChange={this.props.onChange}
-          />
-        )}
-      </div>
+      />
     );
+
+    // If the input is just readonly, render a disabled <input> instead of the Mapbox search box.
+    if (this.props.readOnly || !this.props.mapboxAccessToken) {
+      searchBox = (
+        <input
+          type={'text'}
+          style={this.props.style}
+          className={`${this.props.className} readOnly`}
+          value={this.props.value}
+          disabled={this.props.readOnly}
+          onChange={this.props.onChange}
+        />
+      );
+    }
+    return <div id="mapbox-location-search-container">{searchBox}</div>;
   }
 }
 

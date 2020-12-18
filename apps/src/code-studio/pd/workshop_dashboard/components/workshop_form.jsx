@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import Select from 'react-select';
-import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import moment from 'moment';
 import Spinner from '../../components/spinner';
@@ -962,9 +961,6 @@ export class WorkshopForm extends React.Component {
               <FormGroup>
                 <ControlLabel>Location Address (optional)</ControlLabel>
                 <MapboxLocationSearchField
-                  ref={ref =>
-                    (this.locationAddressControl = ReactDOM.findDOMNode(ref))
-                  }
                   placeholder="Enter a location"
                   onChange={this.handleLocationChange}
                   value={this.state.location_address || ''}
