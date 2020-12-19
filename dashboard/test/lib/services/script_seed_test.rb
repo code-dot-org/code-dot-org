@@ -50,16 +50,16 @@ module Services
       #     layer down in the hierarchy.
       #   12 queries - ScriptLevel validations related to having an activity_section.
       #     These would be good candidates to eliminate in future optimization.
-      #   8 queries, one for each LevelsScriptLevel.
+      #   16 queries, one for each LevelsScriptLevel.
       #   4 queries, one to remove LessonsResources from each Lesson.
-      #   9 queries, 1 to populate the Game.by_name cache, and 8 to look up Game objects by id.
+      #   17 queries, 1 to populate the Game.by_name cache, and 16 to look up Game objects by id.
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
       # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(64) do
+      assert_queries(80) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -160,7 +160,7 @@ module Services
     # is ensured by using assert_queries(0) inside assert_script_trees_equal.
 
     test 'seed updates lesson groups' do
-      script = create_script_tree
+      script = create_script_tree(num_lesson_groups: 2)
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.lesson_groups.first.update!(big_questions: 'updated big questions')
@@ -208,7 +208,7 @@ module Services
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
       assert_equal(
-        ['Updated Activity Name', 'New Activity Name'],
+        ['Updated Activity Name', 'My Activity', 'New Activity Name'],
         lesson.lesson_activities.map(&:name)
       )
     end
@@ -232,7 +232,7 @@ module Services
       assert_script_trees_equal script_with_changes, script
       activity = script.lessons.first.lesson_activities.first
       assert_equal(
-        ['Updated Section Name', 'New Section Name'],
+        ['Updated Section Name', 'My Activity Section', 'New Section Name'],
         activity.activity_sections.map(&:name)
       )
     end
@@ -283,7 +283,7 @@ module Services
     end
 
     test 'seed deletes lesson_groups' do
-      script = create_script_tree
+      script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
 
       script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
@@ -302,22 +302,22 @@ module Services
       assert_equal [1], script.lesson_groups.map(&:position)
       assert_equal [1, 2], script.lessons.map(&:absolute_position)
       assert_equal [1, 2], script.lessons.map(&:relative_position)
-      assert_equal (1..4).to_a, script.script_levels.map(&:chapter)
+      assert_equal (1..16).to_a, script.script_levels.map(&:chapter)
       # Deleting the LessonGroup should also delete its two Lessons, their two ScriptLevels each, and their LevelsScriptLevels.
       expected_counts = original_counts.clone
       expected_counts['LessonGroup'] -= 1
       expected_counts['Lesson'] -= 2
-      expected_counts['LessonActivity'] -= 2
-      expected_counts['ActivitySection'] -= 2
-      expected_counts['ScriptLevel'] -= 4
-      expected_counts['LevelsScriptLevel'] -= 4
+      expected_counts['LessonActivity'] -= 4
+      expected_counts['ActivitySection'] -= 8
+      expected_counts['ScriptLevel'] -= 16
+      expected_counts['LevelsScriptLevel'] -= 16
       expected_counts['LessonsResource'] -= 4
       expected_counts['Objective'] -= 4
       assert_equal expected_counts, get_counts
     end
 
     test 'seed deletes lessons' do
-      script = create_script_tree
+      script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
 
       script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
@@ -334,14 +334,14 @@ module Services
       assert_script_trees_equal script_with_deletion, script
       assert_equal (1..3).to_a, script.lessons.map(&:absolute_position)
       assert_equal (1..3).to_a, script.lessons.map(&:relative_position)
-      assert_equal (1..6).to_a, script.script_levels.map(&:chapter)
+      assert_equal (1..24).to_a, script.script_levels.map(&:chapter)
       # Deleting the lesson should also delete its two ScriptLevels, and their LevelsScriptLevels.
       expected_counts = original_counts.clone
       expected_counts['Lesson'] -= 1
-      expected_counts['LessonActivity'] -= 1
-      expected_counts['ActivitySection'] -= 1
-      expected_counts['ScriptLevel'] -= 2
-      expected_counts['LevelsScriptLevel'] -= 2
+      expected_counts['LessonActivity'] -= 2
+      expected_counts['ActivitySection'] -= 4
+      expected_counts['ScriptLevel'] -= 8
+      expected_counts['LevelsScriptLevel'] -= 8
       expected_counts['LessonsResource'] -= 2
       expected_counts['Objective'] -= 2
       assert_equal expected_counts, get_counts
@@ -360,15 +360,15 @@ module Services
       script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
-      assert_equal (1..4).to_a, script.lessons.map(&:absolute_position)
-      assert_equal (1..4).to_a, script.lessons.map(&:relative_position)
-      assert_equal (1..6).to_a, script.script_levels.map(&:chapter)
+      assert_equal (1..2).to_a, script.lessons.map(&:absolute_position)
+      assert_equal (1..2).to_a, script.lessons.map(&:relative_position)
+      assert_equal (1..12).to_a, script.script_levels.map(&:chapter)
       # Deleting the activity should also delete its two ScriptLevels, and their LevelsScriptLevels.
       expected_counts = original_counts.clone
       expected_counts['LessonActivity'] -= 1
-      expected_counts['ActivitySection'] -= 1
-      expected_counts['ScriptLevel'] -= 2
-      expected_counts['LevelsScriptLevel'] -= 2
+      expected_counts['ActivitySection'] -= 2
+      expected_counts['ScriptLevel'] -= 4
+      expected_counts['LevelsScriptLevel'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -385,9 +385,9 @@ module Services
       script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
-      assert_equal (1..4).to_a, script.lessons.map(&:absolute_position)
-      assert_equal (1..4).to_a, script.lessons.map(&:relative_position)
-      assert_equal (1..6).to_a, script.script_levels.map(&:chapter)
+      assert_equal (1..2).to_a, script.lessons.map(&:absolute_position)
+      assert_equal (1..2).to_a, script.lessons.map(&:relative_position)
+      assert_equal (1..14).to_a, script.script_levels.map(&:chapter)
       # Deleting the activity section should also delete its two ScriptLevels, and their LevelsScriptLevels.
       expected_counts = original_counts.clone
       expected_counts['ActivitySection'] -= 1
@@ -412,7 +412,7 @@ module Services
       script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
-      assert_equal (1..7).to_a, script.script_levels.map(&:chapter)
+      assert_equal (1..15).to_a, script.script_levels.map(&:chapter)
       # Deleting the ScriptLevel should also delete its LevelsScriptLevel.
       expected_counts = original_counts.clone
       expected_counts['ScriptLevel'] -= 1
@@ -590,10 +590,11 @@ module Services
 
     def create_script_tree(
       name_prefix: nil,
-      num_lesson_groups: 2,
+      # only use one lesson group by default, to make tests run faster.
+      num_lesson_groups: 1,
       num_lessons_per_group: 2,
-      num_activities_per_lesson: 1,
-      num_sections_per_activity: 1,
+      num_activities_per_lesson: 2,
+      num_sections_per_activity: 2,
       num_script_levels_per_section: 2,
       num_resources_per_lesson: 2,
       num_objectives_per_lesson: 2,
