@@ -3,10 +3,9 @@
 /**
  * JS to communicate between Bramble and Code Studio
  */
-
-const BRAMBLE_BASE_URL = document.querySelector('script[data-brambleurl]')
-  .dataset.brambleurl;
-
+const scriptData = document.querySelector('script[data-bramble]');
+const brambleConfig = JSON.parse(scriptData.dataset.bramble);
+const BRAMBLE_BASE_URL = brambleConfig.baseUrl;
 window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
 
 // This is needed to support jQuery binary downloads
@@ -822,7 +821,5 @@ function modalError(message, Bramble, showButtons = true) {
 }
 
 // Load bramble.js
-requirejs(['bramble'], function(Bramble) {
-  // DEVMODE: requirejs(["bramble/client/main"], function (Bramble) {
-  load(Bramble);
-});
+const brambleClient = brambleConfig.devMode ? 'bramble/client/main' : 'bramble';
+requirejs([brambleClient], load);

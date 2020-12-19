@@ -7,4 +7,5 @@
     %script{src: webpack_asset_path('js/webpack-runtime.js')}
     -# Bramble source files reference each other. We cannot use digested asset
     -# paths here without breaking these references.
-    %script{src: "#{@bramble_base_url}/thirdparty/require.min.js", 'data-main': webpack_asset_path('js/brambleHost.js'), data: {brambleurl: @bramble_base_url}}
+    - data = {bramble: {baseUrl: @bramble_base_url, devMode: @dev_mode}.to_json}
+    %script{src: "#{@bramble_base_url}/thirdparty/require.min.js", 'data-main': webpack_asset_path('js/brambleHost.js'), data: data}
