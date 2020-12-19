@@ -545,7 +545,7 @@ WebLab.prototype.loadFileEntries = function() {
     }
     if (this.brambleHost) {
       // Refresh the file tree after files have been synced with Bramble.
-      this.brambleHost.syncFiles(() => this.brambleHost.fileRefresh(() => {}));
+      this.brambleHost.syncFiles(this.brambleHost.fileRefresh);
     }
   };
 

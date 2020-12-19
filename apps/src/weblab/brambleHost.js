@@ -405,7 +405,7 @@ function uploadAllFilesFromBramble(callback) {
   });
 }
 
-function fileRefresh(callback) {
+function fileRefresh(callback = () => {}) {
   brambleProxy_.fileRefresh(callback);
 }
 
