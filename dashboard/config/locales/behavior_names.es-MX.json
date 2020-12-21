@@ -3,10 +3,12 @@
     "data": {
       "behavior_names": {
         "Virtual Pet 1_2019": {
-          "mystery": "misterio"
+          "mystery": "misterio",
+          "wandering": "deambulando"
         },
         "Virtual Pet 1_2020": {
-          "mystery": "misterio"
+          "mystery": "misterio",
+          "wandering": "deambulando"
         },
         "Virtual Pet 3_2019": {
           "wandering2": "errante2",
@@ -20,7 +22,8 @@
           "moving north2": "moviéndose al norte2",
           "jittering2": "poniéndose nervioso2",
           "moving west2": "moviéndose al oeste2",
-          "patrolling2": "patrullando2"
+          "patrolling2": "patrullando2",
+          "wandering": "deambulando"
         },
         "Virtual Pet 3_2020": {
           "wandering2": "errante2",
@@ -34,59 +37,74 @@
           "moving north2": "moviéndose al norte2",
           "jittering2": "poniéndose nervioso2",
           "moving west2": "moviéndose al oeste2",
-          "patrolling2": "patrullando2"
+          "patrolling2": "patrullando2",
+          "wandering": "deambulando"
         },
         "behaviors 1": {
           "mystery behavior": "comportamiento misterioso",
-          "running east": "corriendo hacia el este"
+          "running east": "corriendo hacia el este",
+          "wandering": "deambulando"
         },
         "behaviors 1_2020": {
           "mystery behavior": "comportamiento misterioso",
-          "running east": "corriendo hacia el este"
+          "running east": "corriendo hacia el este",
+          "wandering": "deambulando"
         },
         "behaviors 2": {
           "flying": "volar",
-          "running east": "corriendo hacia el este"
+          "running east": "corriendo hacia el este",
+          "wandering": "deambulando"
         },
         "behaviors 2_2020": {
           "flying": "volar",
-          "running east": "corriendo hacia el este"
+          "running east": "corriendo hacia el este",
+          "wandering": "deambulando"
         },
         "behaviors 3": {
           "zooming east": "acercándose al este",
-          "driving east": "conduciendo al este"
+          "driving east": "conduciendo al este",
+          "wandering": "deambulando"
         },
         "behaviors 3_2020": {
           "zooming east": "acercándose al este",
-          "driving east": "conduciendo al este"
+          "driving east": "conduciendo al este",
+          "wandering": "deambulando"
         },
         "behaviors 3a": {
           "zooming east": "acercándose al este",
-          "driving east": "conduciendo al este"
+          "driving east": "conduciendo al este",
+          "wandering": "deambulando"
         },
         "behaviors 3a_2020": {
           "zooming east": "acercándose al este",
-          "driving east": "conduciendo al este"
+          "driving east": "conduciendo al este",
+          "wandering": "deambulando"
         },
         "behaviors 4": {
           "move south and west": "moverse al sur y al oeste",
-          "running east": "corriendo hacia el este"
+          "running east": "corriendo hacia el este",
+          "wandering": "deambulando"
         },
         "behaviors 4_2020": {
           "move south and west": "moverse al sur y al oeste",
-          "running east": "corriendo hacia el este"
+          "running east": "corriendo hacia el este",
+          "wandering": "deambulando"
         },
         "behaviors 6": {
-          "running east": "corriendo hacia el este"
+          "running east": "corriendo hacia el este",
+          "wandering": "deambulando"
         },
         "behaviors 6_2020": {
-          "running east": "corriendo hacia el este"
+          "running east": "corriendo hacia el este",
+          "wandering": "deambulando"
         },
         "behaviors 7": {
-          "running east": "corriendo hacia el este"
+          "running east": "corriendo hacia el este",
+          "wandering": "deambulando"
         },
         "behaviors 7_2020": {
-          "running east": "corriendo hacia el este"
+          "running east": "corriendo hacia el este",
+          "wandering": "deambulando"
         },
         "behaviors free play": {
           "spinning and growing": "girando y creciendo"
@@ -95,38 +113,218 @@
           "spinning and growing": "girando y creciendo"
         },
         "outbreak1": {
-          "recovering": "recuperación"
+          "recovering": "recuperación",
+          "wandering": "deambulando"
         },
         "outbreak2": {
-          "recovering": "recuperación"
+          "recovering": "recuperación",
+          "wandering": "deambulando"
         },
         "outbreak3": {
-          "recovering": "recuperación"
+          "recovering": "recuperación",
+          "wandering": "deambulando"
         },
         "outbreak4": {
           "recovering": "recuperación",
-          "moving with arrow keys": "moverse con las teclas de flecha"
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "wandering": "deambulando"
         },
         "outbreak5": {
-          "recovering": "recuperación"
+          "recovering": "recuperación",
+          "wandering": "deambulando"
         },
         "outbreak6": {
-          "recovering": "recuperación"
+          "recovering": "recuperación",
+          "wandering": "deambulando"
         },
         "outbreak7": {
           "recovering": "recuperación",
           "moving left and right": "moverse de izquierda a derecha",
-          "moving with arrow keys": "moverse con las teclas de flecha"
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "wandering": "deambulando"
         },
         "outbreak8": {
           "recovering": "recuperación",
           "moving left and right": "moverse de izquierda a derecha",
-          "moving with arrow keys": "moverse con las teclas de flecha"
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "wandering": "deambulando"
         },
         "outbreak_freeplay": {
           "recovering": "recuperación",
           "moving left and right": "moverse de izquierda a derecha",
           "moving with arrow keys": "moverse con las teclas de flecha"
+        },
+        "CourseE_Project_SpriteLab": {
+          "wandering": "deambulando"
+        },
+        "CourseE_Project_SpriteLab_2019": {
+          "wandering": "deambulando"
+        },
+        "CourseE_hoops": {
+          "wandering": "deambulando"
+        },
+        "CourseF_Project_SpriteLab": {
+          "wandering": "deambulando"
+        },
+        "CourseF_Project_SpriteLab_2019": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 2": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 2_2019": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 2_2020": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 3_2019": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 3_2020": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 4_2019": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 4_2020": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 5_2019": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 5_2020": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 6": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 6_2019": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 6_2020": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 7_2019": {
+          "wandering": "deambulando"
+        },
+        "Dance Party 7_2020": {
+          "wandering": "deambulando"
+        },
+        "Dance Party Freeplay": {
+          "wandering": "deambulando"
+        },
+        "Fish Tank 2-validated_2019": {
+          "wandering": "deambulando"
+        },
+        "Fish Tank 2-validated_2020": {
+          "wandering": "deambulando"
+        },
+        "Fish Tank 3-validated_2019": {
+          "wandering": "deambulando"
+        },
+        "Fish Tank 3-validated_2020": {
+          "wandering": "deambulando"
+        },
+        "Fish Tank 4-validated_2019": {
+          "wandering": "deambulando"
+        },
+        "Fish Tank 4-validated_2020": {
+          "wandering": "deambulando"
+        },
+        "Fish Tank 5-validated_2019": {
+          "wandering": "deambulando"
+        },
+        "Fish Tank 5-validated_2020": {
+          "wandering": "deambulando"
+        },
+        "Fish Tank 6-validated_2019": {
+          "wandering": "deambulando"
+        },
+        "Fish Tank 6-validated_2020": {
+          "wandering": "deambulando"
+        },
+        "OPD-K5-spritelab-2": {
+          "wandering": "deambulando"
+        },
+        "OPD-K5-spritelab-3": {
+          "wandering": "deambulando"
+        },
+        "OPD-K5-spritelab-4": {
+          "wandering": "deambulando"
+        },
+        "OPD-K5-spritelab-6": {
+          "wandering": "deambulando"
+        },
+        "OPD-K5-spritelab-7": {
+          "wandering": "deambulando"
+        },
+        "Virtual Pet 2": {
+          "wandering": "deambulando"
+        },
+        "Virtual Pet 2_2019": {
+          "wandering": "deambulando"
+        },
+        "Virtual Pet 2_2020": {
+          "wandering": "deambulando"
+        },
+        "Virtual Pet 4": {
+          "wandering": "deambulando"
+        },
+        "Virtual Pet 4_2019": {
+          "wandering": "deambulando"
+        },
+        "Virtual Pet 4_2020": {
+          "wandering": "deambulando"
+        },
+        "Virtual Pet 5": {
+          "wandering": "deambulando"
+        },
+        "Virtual Pet 6": {
+          "wandering": "deambulando"
+        },
+        "Virtual Pet Freeplay": {
+          "wandering": "deambulando"
+        },
+        "courseE_Dogger_2": {
+          "wandering": "deambulando"
+        },
+        "courseE_aboutme_1": {
+          "wandering": "deambulando"
+        },
+        "courseE_aboutme_1_2020": {
+          "wandering": "deambulando"
+        },
+        "courseE_aboutme_2": {
+          "wandering": "deambulando"
+        },
+        "courseE_aboutme_2_2020": {
+          "wandering": "deambulando"
+        },
+        "courseE_aboutme_3": {
+          "wandering": "deambulando"
+        },
+        "courseE_aboutme_3_2020": {
+          "wandering": "deambulando"
+        },
+        "courseE_aboutme_4": {
+          "wandering": "deambulando"
+        },
+        "courseE_aboutme_4_2020": {
+          "wandering": "deambulando"
+        },
+        "courseE_aboutme_5": {
+          "wandering": "deambulando"
+        },
+        "courseE_aboutme_5_2020": {
+          "wandering": "deambulando"
+        },
+        "courseF_extras_sim": {
+          "wandering 2": "deambulando 2",
+          "wandering 1": "deambulando 1"
+        },
+        "courseF_project_1": {
+          "wandering": "deambulando"
         }
       }
     }
