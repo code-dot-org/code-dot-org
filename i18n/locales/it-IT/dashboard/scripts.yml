@@ -7472,9 +7472,684 @@ it:
               name: Corso B
             CS Discoveries:
               name: Alla scoperta dell'informatica
+        virustest:
+          title: Simulare un'epidemia
+          description_short: 'Usa Sprite Lab per creare una simulazione di un''epidemia di virus.'
         ml-playground:
           lessons:
             AI for Oceans:
               name: L'Intelligenza Artificiale per il mare
-            intro:
-              name: Introduzione
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Codifica di una simulazione
+          lesson_groups:
+            outbreak:
+              display_name: Simulazione dell'epidemia
+          title: Simulazione dell'epidemia
+          description_short: 'Usa Sprite Lab per programmare la simulazione di un''epidemia di virus.'
+          description: 'Usa Sprite Lab per programmare la simulazione di un''epidemia di virus.'
+          name: Epidemia
+        csd1-2021:
+          lessons:
+            The Problem Solving Process:
+              key: Il Processo di Risoluzione dei Problemi
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              key: Cos'è un Computer?
+              name: Cos'è un Computer?
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csd1_1:
+              display_name: 'Capitolo 1: il Problem Solving'
+            csd1_2:
+              display_name: 'Capitolo 2: Computers e Problem Solvig'
+        csd2-2021:
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
+          lessons:
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+        csd3-2021:
+          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
+          lessons:
+            Drawing in Game Lab:
+              key: Disegnare in Sviluppo Giochi
+              name: Disegnare in Sviluppo Giochi
+            Shapes and Parameters:
+              key: Forme e Parametri
+              name: Forme e Parametri
+            Variables:
+              key: Variabili
+              name: Variabili
+            Random Numbers:
+              key: Numeri Casuali
+              name: Numeri Casuali
+            Sprites:
+              key: Personaggi
+              name: Personaggi
+            Text:
+              key: Testo
+              name: Testo
+            Conditionals:
+              key: Istruzioni condizionali
+              name: Istruzioni condizionali
+            Velocity:
+              key: Velocità
+              name: Velocità
+            Collision Detection:
+              key: Rilevamento delle Collisioni
+              name: Rilevamento delle Collisioni
+            Functions:
+              key: Funzioni
+              name: Funzioni
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            csd3_2:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+            cspSurvey:
+              display_name: Sondaggio
+        csd4-2021:
+          lessons:
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            csd4_2:
+              display_name: 'Capitolo 2: Prototipazione di App'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
+        csd5-2021:
+          lessons:
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funzioni con parametri
+              name: Funzioni con parametri
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolo 1: Output Hardware'
+            csd6_2:
+              display_name: 'Capitolo 2: Input Hardware'
+            cspSurvey:
+              display_name: Sondaggio
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Numeri Binari
+              name: Numeri Binari
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csp_unit1_2020:
+              display_name: 'Princìpi dell''Informatica - Unità 1'
+        csp2-2021:
+          lessons:
+            The Need for Addressing:
+              key: La Necessità dell'Indirizzamento
+              name: La Necessità dell'Indirizzamento
+            Routers and Redundancy:
+              key: Router e Ridondanza
+              name: Router e Ridondanza
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Princìpi dell''Informatica - Unità 2'
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Correzione errori (debugging)
+              name: Correzione errori (debugging)
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Cicli
+            csp_traversals:
+              display_name: Traversali
+            csp_project:
+              display_name: Progetto
+        csp7-2021:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametri e Valori di Ritorno
+            csp_libraries:
+              display_name: Librerie
+        coursea-2021:
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description_short: Introduzione all'informatica per bambini che non leggono ancora.
+          description_audience: 'Da 4 a 7 anni'
+          lessons:
+            Learn to Drag and Drop:
+              key: Impara come Trascinare i Blocchi
+              name: Impara come Trascinare i Blocchi
+            'Programming: Happy Maps':
+              key: 'Programmazione: Mappe felici'
+              name: Mappe felici
+            Sequencing with Scrat:
+              key: Sequenze di istruzioni con Scrat
+              name: Sequenze di istruzioni con Scrat
+            Programming in Ice Age:
+              key: Programmazione con l'Era Glaciale
+              name: Programmare con Scrat
+            Programming with Rey and BB-8:
+              key: Programmare con Rey e BB-8
+              name: Programmare con Rey e BB-8
+            'Loops: Happy Loops':
+              key: 'Cicli felici'
+              name: Cicli felici
+            Loops in Ice Age:
+              key: Cicli con l'Era glaciale
+              name: Cicli con Scrat
+            Loops in Collector:
+              key: Cicli con la collezionista
+              name: Cicli con la collezionista
+            Ocean Scene with Loops:
+              key: Al mare con i cicli
+              name: Al mare con i cicli
+            'Events: The Big Event':
+              key: 'Il grande evento'
+              name: Il grande evento (per i più piccoli)
+            Events in Play Lab:
+              key: 'Laboratorio: Eventi'
+              name: In movimento con gli eventi
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_events:
+              display_name: Eventi
+        courseb-2021:
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
+          description_audience: 'Da 5 a 8 anni'
+          lessons:
+            Move It, Move It:
+              key: Muovilo, muovilo
+              name: Muovilo, muovilo
+            Sequencing in Maze:
+              name: Sequenze di istruzioni con Angry Birds
+            Programming in Maze:
+              key: Programmare con Angry Birds
+              name: Programmare con Angry Bird
+            Programming in Harvester:
+              key: Programmazione con la contadina
+              name: Programmare con la contadina
+            'Loops: Getting Loopy':
+              key: 'Cicli: diventare ripetitivi'
+              name: Diventare ripetitivi
+            Loops in Harvester:
+              key: Cicli con la contadina
+              name: Cicli con la contadina
+            Loops in Collector:
+              key: Cicli con la collezionista
+              name: Cicli con la collezionista
+            Loops in Artist:
+              key: Cicli con l'artista
+              name: Disegnare giardini con i cicli
+            The Right App:
+              key: L'App Giusta
+              name: L'App Giusta
+            'Events: The Big Event':
+              key: 'Il grande evento'
+              name: Il grande evento (per i più piccoli)
+            Events in Play Lab:
+              key: 'Laboratorio: Eventi'
+              name: Una battaglia con gli eventi
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_events:
+              display_name: Eventi
+        coursec-2021:
+          description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
+          description_audience: 'Da 6 a 10 anni'
+          lessons:
+            'Programming: My Robotic Friends':
+              key: 'I miei amici robotici'
+              name: I miei amici robotici (per i più piccoli)
+            Programming in Maze:
+              key: Programmare con Angry Birds
+              name: Programmare con Angry Bird
+            Debugging in Maze:
+              key: Correzione di errori nel labirinto
+              name: Correzione di errori nel labirinto
+            Programming in Collector:
+              key: Programmare la collezionista
+              name: Programmare con la collezionista
+            Programming in Artist:
+              key: Programmare l'artista
+              name: Programmare con l'artista
+            Binary Bracelets:
+              key: Braccialetti binari
+              name: Braccialetti binari
+            'Loops: My Loopy Robotic Friends':
+              key: 'I miei ciclici amici robotici'
+              name: I miei ciclici amici robotici (per i più piccoli)
+            Loops with Rey and BB-8:
+              key: Cicli con Rey e BB-8
+              name: Cicli con Rey e BB-8
+            Loops in Harvester:
+              key: Cicli con la contadina
+              name: Cicli con la contadina
+            Looking Ahead:
+              key: Uno sguardo in avanti
+              name: Uno sguardo avanti con Minecraft
+            Sticker Art with Loops:
+              key: Cicli con l'artista
+              name: Cicli con l'artista
+            'Events: The Big Event':
+              key: 'Il grande evento'
+              name: Il grande evento
+            Build a Flappy Game:
+              key: Realizzare un gioco Flappy
+              name: Realizzare un gioco Flappy
+            Events in Play Lab:
+              key: 'Laboratorio: Eventi'
+              name: Giocare con gli eventi
+            'End of Course Project: Create a Play Lab Game':
+              name: Progetto di fine corso
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: Cicli
+            csf_events:
+              display_name: Eventi
+            end_of_course_project:
+              display_name: Progetto di fine corso
+        coursed-2021:
+          description: 'Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description_short: Impara le istruzioni condizionali e sviluppa le tue capacità artistiche per cerare un disegno, una storia o un gioco.
+          description_audience: 'Da 7 a 11 anni'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'Algoritmi: Programmazione su carta a quadretti'
+              name: Programmazione su carta a quadretti
+            Introduction to Online Puzzles:
+              key: Introduzione agli esercizi online
+              name: Introduzione agli esercizi online
+            Relay Programming:
+              key: Programmazione a staffetta
+              name: Programmazione a staffetta
+            Debugging in Collector:
+              key: Debugging con la collezionista
+              name: Debugging con la collezionista
+            Events in Bounce:
+              key: Rimbalzando con gli eventi
+              name: Rimbalzando con gli eventi
+            Build a Star Wars Game:
+              key: Realizza un gioco con Star Wars
+              name: Realizza un gioco con Star Wars
+            Dance Party:
+              key: Ballando col codice
+              name: Ballando col codice
+            Loops in Ice Age:
+              key: Cicli con l'Era glaciale
+              name: Cicli con l'Era glaciale
+            Loops in Artist:
+              key: Cicli con l'artista
+              name: Cicli con l'artista
+            Nested Loops in Bee:
+              key: Cicli Annidati con l'Ape
+              name: Cicli annidati nel labirinto
+            Conditionals with Cards:
+              key: Istruzioni condizionali con le carte da gioco
+              name: Istruzioni condizionali con le carte da gioco
+            Conditionals in Bee:
+              key: Istruzioni condizionali con l'ape
+              name: Istruzioni condizionali con l'ape
+            While Loops in Farmer:
+              key: Cicli "mentre" con la contadina
+              name: Cicli "mentre" con la contadina
+            Until Loops in Maze:
+              key: Cicli "fino a che" nel labirinto
+              name: Cicli "fino a che" nel labirinto
+            Conditionals & Loops in Harvester:
+              key: Istruzioni condizionali & cicli con la contadina
+              name: Istruzioni condizionali & cicli con la contadina
+            'Unplugged: Binary':
+              key: 'Binario'
+              name: Immagini binarie
+            Artist Binary:
+              key: Artista binario
+              name: Artista binario
+            End of Course Project:
+              key: Progetto di fine corso
+              name: Progetto di fine corso
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_events:
+              display_name: Eventi
+            csf_loops:
+              display_name: Cicli
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            end_of_course_project:
+              display_name: Progetto di fine corso
+        coursee-2021:
+          description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description_short: Dopo aver ripassato i principi introdotti nei Corsi C & D, ci si spinge oltre, aggiungendo il concetto di funzione.
+          description_audience: 'Da 8 a 12 anni'
+          lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Istruzioni condizionali in Minecraft - Viaggio acquatico'
+              name: 'Istruzioni condizionali in Minecraft - Viaggio acquatico'
+            Conditionals:
+              key: Istruzioni condizionali
+              name: Istruzioni condizionali con la contadina
+            Simon Says:
+              key: Simone Dice
+              name: Simone Dice
+            Alien Dance Party with Sprite Lab:
+              key: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa degli alieni con il Laboratorio dei personaggi
+            Private and Personal Information:
+              key: Cittadinanza digitale - Dati personali e altri dati
+              name: Cittadinanza digitale - Dati personali e altri dati
+            Digital Sharing:
+              key: Condivisione digitale
+              name: Condivisione digitale
+            Nested Loops in Bee:
+              key: Cicli Annidati con l'Ape
+              name: Cicli annidati nel labirinto
+            Nested Loops in Artist:
+              key: Cicli annidati con l'artista
+              name: Cicli annidati con l'artista
+            Nested Loops in Frozen:
+              key: Cicli annidati con Frozen
+              name: Cicli annidati con Frozen
+            'Functions: Songwriting':
+              key: 'Funzioni: Composizione di Canzoni'
+              name: Composizione di canzoni
+            Functions in Minecraft:
+              key: Funzioni con Minecraft
+              name: Funzioni con Minecraft
+            Functions in Harvester:
+              key: Funzioni con la Contadina
+              name: Funzioni con la contadina
+            Functions in Artist:
+              key: Funzioni con l'artista
+              name: Funzioni con l'artista
+            End of Course Project:
+              key: Progetto di fine corso
+              name: Progetto di fine corso
+          lesson_groups:
+            ramp_up:
+              display_name: Introduzione
+            csf_sprites:
+              display_name: Personaggi
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_nested_loops:
+              display_name: Cicli annidati
+            csf_functions:
+              display_name: Funzioni
+            end_of_course_project:
+              display_name: Progetto di fine corso
+        coursef-2021:
+          description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
+          description_audience: 'Da 9 a 13 anni'
+          lessons:
+            Functions in Minecraft:
+              key: Funzioni con Minecraft
+              name: Funzioni con Minecraft
+            Events with Sprite Lab:
+              name: La festa degli alieni con il Laboratorio dei personaggi
+            Loops with the Artist:
+              key: Cicli con l'Artista
+            Nested Loops in the Maze:
+              name: Cicli annidati nel labirinto
+            The Power of Words:
+              key: Cittadinanza digitale - Il potere delle parole
+              name: Cittadinanza digitale - Il potere delle parole
+            Envelope Variables:
+              key: Variabili e buste
+              name: Variabili e buste
+            Variables as Constant in Artist:
+              name: Variabili con l'artista
+            Variables that Change in Bee:
+              name: Modifica delle variabili con l'ape
+            Variables that Change in Artist:
+              name: Modifica delle variabili con l'artista
+            AI for Oceans:
+              key: L'Intelligenza Artificiale per il mare
+              name: L'Intelligenza Artificiale per il mare
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: Divertiti usando i cicli con contatore
+              name: Divertiti usando i cicli con contatore
+            For Loops in Bee:
+              key: Cicli con contatore con l'ape
+              name: Cicli con contatore con l'ape
+            For Loops in Artist:
+              key: Cicli con contatore con l'artista
+              name: Cicli con contatore con l'artista
+            End of Course Project:
+              key: Progetto di fine corso
+              name: Progetto di fine corso
+          lesson_groups:
+            ramp_up:
+              display_name: Introduzione
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_variables:
+              display_name: Variabili
+            csf_for_loops:
+              display_name: Cicli con contatore
+            csf_sprites:
+              display_name: Personaggi
+            end_of_course_project:
+              display_name: Progetto di fine corso
+        express-2021:
+          title: Corso Rapido (2017)
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
+          lessons:
+            Dance Party:
+              key: Ballando col codice
+              name: Ballando col codice
+            Programming with Angry Birds:
+              key: Programmare con Angry Bird
+              name: Programmare con Angry Bird
+            Debugging with Scrat:
+              key: Debugging con Scrat
+              name: Debugging con Scrat
+            Collecting Treasure with Laurel:
+              key: Programmare con la collezionista
+              name: Programmare con la collezionista
+            Creating Art with Code:
+              key: Programmare con l'artista
+              name: Programmare con l'artista
+            Loops with Rey and BB-8:
+              key: Cicli con Rey e BB-8
+              name: Cicli con Rey e BB-8
+            Sticker Art with Loops:
+              key: Cicli con l'artista
+              name: Cicli con l'artista
+            Nested Loops in Maze:
+              key: Cicli annidati nel labirinto
+              name: Cicli annidati nel labirinto
+            Snowflakes with Anna and Elsa:
+              key: Cicli annidati con Frozen
+              name: Cicli annidati con Frozen
+            If/Else with Bee:
+              key: Istruzioni condizionali con l'ape
+              name: Istruzioni condizionali con l'ape
+            While Loops with the Farmer:
+              key: Cicli "mentre" con la contadina
+              name: Cicli "mentre" con la contadina
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Istruzioni condizionali in Minecraft - Viaggio acquatico'
+              name: 'Istruzioni condizionali in Minecraft - Viaggio acquatico'
+            Until Loops in Maze:
+              key: Cicli "fino a che" nel labirinto
+              name: Cicli "fino a che" nel labirinto
+            Harvesting with Conditionals:
+              key: Istruzioni condizionali & cicli con la contadina
+              name: Istruzioni condizionali & cicli con la contadina
+            Functions in Minecraft:
+              key: Funzioni con Minecraft
+              name: Funzioni con Minecraft
+            Functions with Harvester:
+              key: Funzioni con la contadina
+              name: Funzioni con la contadina
+            Functions with Artist:
+              key: Funzioni con l'artista
+              name: Funzioni con l'artista
+            Variables with Artist:
+              key: Variabili con l'artista
+              name: Variabili con l'artista
+            Changing Variables with Bee:
+              key: Modifica delle variabili con l'ape
+              name: Modifica delle variabili con l'ape
+            Changing Variables with Artist:
+              key: Modifica delle variabili con l'artista
+              name: Modifica delle variabili con l'artista
+            For Loops with Bee:
+              key: Cicli con contatore con l'ape
+              name: Cicli con contatore con l'ape
+            For Loops with Artist:
+              key: Cicli con contatore con l'artista
+              name: Cicli con contatore con l'artista
+            Swimming Fish in Sprite Lab:
+              key: Introduzione al laboratorio dei personaggi
+              name: Introduzione al laboratorio dei personaggi
+            Alien Dance Party:
+              key: La festa degli alieni
+              name: La festa degli alieni
+            End of Course Project:
+              key: Progetto di fine corso
+              name: Progetto di fine corso
+          lesson_groups:
+            csf_warmup:
+              display_name: Riscaldamento
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_functions:
+              display_name: Funzioni
+            csf_variables:
+              display_name: Variabili
+            csf_for_loops:
+              display_name: Cicli con contatore
+            csf_sprites:
+              display_name: Personaggi
+            end_of_course_project:
+              display_name: Progetto di fine corso
+        pre-express-2021:
+          title: Corso Rapido pre-scolare (2019)
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
+          lessons:
+            Learn to Drag and Drop:
+              key: Impara come Trascinare i Blocchi
+              name: Impara come Trascinare i Blocchi
+            Sequencing with Scrat:
+              key: Sequenze di istruzioni con Scrat
+              name: Sequenze di istruzioni con Scrat
+            Programming with Rey and BB-8:
+              key: Programmare con Rey e BB-8
+              name: Programmare con Rey e BB-8
+            Programming in Harvester:
+              key: Programmazione con la contadina
+              name: Programmazione con la contadina
+            Loops with Scrat:
+              key: Cicli con Scrat
+              name: Cicli con Scrat
+            Loops with Laurel:
+              key: Cicli con la collezionista
+              name: Cicli con la collezionista
+            Ocean Scene with Loops:
+              key: Al mare con i cicli
+              name: Al mare con i cicli
+            Drawing Gardens with Loops:
+              key: Disegnare giardini con i cicli
+              name: Disegnare giardini con i cicli
+            On the Move with Events:
+              key: In movimento con gli eventi
+              name: In movimento con gli eventi
+            A Royal Battle with Events:
+              key: Una battaglia con gli eventi
+              name: Una battaglia con gli eventi
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_events:
+              display_name: Eventi
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Codifica di una simulazione
+            lesson-1:
+              name: Variabili e buste
+          lesson_groups:
+            ramp_up:
+              display_name: Introduzione
+            outbreak:
+              display_name: Simulazione dell'epidemia
+            lessonGroup-3:
+              display_name: Variabili
