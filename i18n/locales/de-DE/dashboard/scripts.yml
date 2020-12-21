@@ -17263,8 +17263,6 @@ de:
           lessons:
             AI for Oceans:
               name: KI für Meere
-            intro:
-              name: Einführung
             visualizing:
               name: Datensätze anzeigen
           description_audience: '[empty string]'
@@ -17274,3 +17272,1409 @@ de:
           description_audience: '[empty string]'
           description_short: '[empty string]'
           description: '[empty string]'
+        2021drafting:
+          description: '[empty string]'
+        csd1-2021:
+          title: Erkenntnisse aus der Informatik - Lerneinheit 1 - Problemlösung und Datenverarbeitung
+          description: "Problemlösung und Datenverarbeitung ist eine in hohem Maße interaktive und kollaborative Einführung in das Gebiet der Informatik, die in das umfassendere Streben nach Problemlösungen eingebettet ist. Sie üben die Anwendung eines Problemlösungsprozesses, um eine Reihe von Aufgaben und Szenarien aus der Praxis zu lösen. Als Nächstes werden Sie lernen, wie Computer Informationen eingeben, ausgeben, speichern und verarbeiten, um Menschen bei der Problemlösung zu unterstützen. Die Lerneinheit schließt mit einem Projekt, bei dem Sie eine App entwerfen, die Ihnen bei der Lösung eines Problems Ihrer Wahl hilft.\\r"
+          description_short: "Erfahren Sie, wie Menschen mit Computern arbeiten, um Probleme zu lösen."
+          description_audience: '[empty string]'
+          lessons:
+            CS Discoveries Pre-survey:
+              key: Grundsätze der Informatik Befragung vor dem Kurs
+              name: Grundsätze der Informatik Befragung vor dem Kurs
+            Intro to Problem Solving:
+              key: Einführung in die Problemlösung
+              name: Einführung in die Problemlösung
+            The Problem Solving Process:
+              key: Der Problemlösungsprozess
+              name: Der Problemlösungsprozess
+            Exploring Problem Solving:
+              key: Problemlösung erforschen
+              name: Problemlösung erforschen
+            What is a Computer?:
+              key: Was ist ein Computer?
+              name: Was ist ein Computer?
+            Input and Output:
+              key: Input und Output
+              name: Input und Output
+            Processing:
+              key: Verarbeitung
+              name: Verarbeitung
+            Storage:
+              key: Speicher
+              name: Speicher
+            Project - Propose an App:
+              key: Projekt - Eine App vorschlagen
+              name: Projekt - Eine App vorschlagen
+            Post-Project Test:
+              key: Test nach dem Projekt
+              name: Test nach dem Projekt
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              key: Einführung in das Lösen von Problemen - Zeitungstisch (Alternative Lektion 1)
+              name: Einführung in das Lösen von Problemen - Zeitungstisch (Alternative Lektion 1)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              key: Einführung in das Lösen von Problemen - Spaghetti-Brücke (Alternative Lektion 1)
+              name: Einführung in das Lösen von Problemen - Spaghetti-Brücke (Alternative Lektion 1)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              key: Einführung in das Lösen von Problemen - Papierturm (Alternative Lektion 1)
+              name: Einführung in das Lösen von Problemen - Papierturm (Alternative Lektion 1)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              key: Erkunden des Problemlösens - Thema Tiere (Alternative Lektion 3)
+              name: Erkunden des Problemlösens - Thema Tiere (Alternative Lektion 3)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              key: Erkunden des Problemlösens - Thema Spiele (Alternative Lektion 3)
+              name: Erkunden des Problemlösens - Thema Spiele (Alternative Lektion 3)
+          lesson_groups:
+            cspSurvey:
+              display_name: Umfrage
+            csd1_1:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            csd1_2:
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+            csd1_3:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csd2-2021:
+          title: 'Erkenntnisse aus der Informatik Lerneinheit 2: Web-Entwicklung'
+          description: "In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit."
+          description_short: "Lernen Sie, Ihre eigene Website in Web Lab zu erstellen."
+          description_audience: '[empty string]'
+          lessons:
+            Exploring Web Pages:
+              key: Erkundung von Webseiten
+              name: Erkundung von Webseiten
+            Intro to HTML:
+              key: Einführung in HTML
+              name: Einführung in HTML
+            Headings:
+              key: Überschriften
+              name: Überschriften
+            'Mini-Project: HTML Web Page':
+              key: 'Mini-Projekt: HTML-Webseite'
+              name: 'Mini-Projekt: HTML-Webseite'
+            Digital Footprint:
+              key: Digitaler Fußabdruck
+              name: Digitaler Fußabdruck
+            Styling Text with CSS:
+              key: Text mit CSS formatieren
+              name: Text mit CSS formatieren
+            'Mini-Project: Your Personal Style':
+              key: 'Mini-Projekt: Ihr persönlicher Stil'
+              name: 'Mini-Projekt: Ihr persönlicher Stil'
+            Intellectual Property:
+              key: Geistiges Eigentum
+              name: Geistiges Eigentum
+            'Websites for Expression ':
+              key: 'Websites für den Ausdruck'
+              name: 'Websites für den Ausdruck'
+            Styling Elements with CSS:
+              key: Stilelemente mit CSS gestalten
+              name: Stilelemente mit CSS gestalten
+            Your Web Page - Prepare:
+              key: Ihre Webseite - Vorbereiten
+              name: Ihre Webseite - Vorbereiten
+            Team Problem Solving:
+              key: Problemlösung im Team
+              name: Problemlösung im Team
+            Sources and Research:
+              key: Quellen und Forschung
+              name: Quellen und Forschung
+            CSS Classes:
+              key: CSS-Klassen
+              name: CSS-Klassen
+            Planning a Multi-page Website:
+              key: Planen einer Website mit mehreren Seiten
+              name: Planen einer Website mit mehreren Seiten
+            Linking Pages:
+              key: Verknüpfe Seiten
+              name: Verknüpfe Seiten
+            Project - Website for a Purpose:
+              key: Projekt - Website für einen Zweck
+              name: Projekt - Website für einen Zweck
+            Peer Review and Final Touches:
+              key: Beurteilung durch SchulkollegInnen und letzter Schliff
+              name: Beurteilung durch SchulkollegInnen und letzter Schliff
+            Post-Project Test:
+              key: Test nach dem Projekt
+              name: Test nach dem Projekt
+            CS Discoveries Post Course survey:
+              key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+          lesson_groups:
+            cspSurvey:
+              display_name: Umfrage
+        csd3-2021:
+          title: CSD Unit 3 - Animations and Games
+          description: "In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm."
+          description_short: "Programmierung"
+          description_audience: '[empty string]'
+          lessons:
+            Programming for Entertainment:
+              key: Programmieren zur Unterhaltung
+              name: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              key: Formen plotten
+              name: Formen plotten
+            Drawing in Game Lab:
+              key: Zeichnen im Game Lab
+              name: Zeichnen im Game Lab
+            Variables:
+              key: Variablen
+              name: Variablen
+            Random Numbers:
+              key: Zufällige Zahlen
+              name: Zufällige Zahlen
+            Sprites:
+              key: Sprites
+              name: Sprites
+            Sprite Properties:
+              key: Sprite Eigenschaften
+              name: Sprite Eigenschaften
+            Text:
+              key: Text
+              name: Text
+            'Mini-Project: Captioned Scenes':
+              key: 'Mini-Projekt: Szenen mit Untertiteln'
+              name: 'Mini-Projekt: Szenen mit Untertiteln'
+            The Draw Loop:
+              key: Die Zieh-Schleife
+              name: Die Zieh-Schleife
+            Sprite Movement:
+              key: Sprite-Bewegung
+              name: Sprite-Bewegung
+            'Mini-Project: Animation':
+              key: 'Mini-Projekt: Animation'
+              name: 'Mini-Projekt: Animation'
+            Conditionals:
+              key: Bedingungen
+              name: Bedingungen
+            Keyboard Input:
+              key: Tastatureingabe
+              name: Tastatureingabe
+            Mouse Input:
+              key: Input mit der Maus
+              name: Input mit der Maus
+            Project - Interactive Card:
+              key: Projekt - Interaktive Karte
+              name: Projekt - Interaktive Karte
+            Velocity:
+              key: Geschwindigkeit
+              name: Geschwindigkeit
+            Collision Detection:
+              key: Kollisions-Entdeckung
+              name: Kollisions-Entdeckung
+            'Mini-Project: Side Scroller':
+              key: 'Mini-Projekt: Side-Scroller'
+              name: 'Mini-Projekt: Side-Scroller'
+            Complex Sprite Movement:
+              key: Komplexe Sprite-Bewegung
+              name: Komplexe Sprite-Bewegung
+            Collisions:
+              key: Kollisionen
+              name: Kollisionen
+            'Mini-Project: Flyer Game':
+              key: 'Mini-Projekt: Flyer-Spiel'
+              name: 'Mini-Projekt: Flyer-Spiel'
+            Functions:
+              key: Funktionen
+              name: Funktionen
+            The Game Design Process:
+              key: Der Prozess eines Spielentwurfs
+              name: Der Prozess eines Spielentwurfs
+            Using the Game Design Process:
+              key: Verwendung des Prozesses eines Spielentwurfs
+              name: Verwendung des Prozesses eines Spielentwurfs
+            Project - Design a Game:
+              key: Projekt Ein Spiel erstellen
+              name: Projekt Ein Spiel erstellen
+            Post-Project Test:
+              key: Test nach dem Projekt
+              name: Test nach dem Projekt
+            CS Discoveries Post Course survey:
+              key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            csd3_2:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+            cspSurvey:
+              display_name: Umfrage
+        csd4-2021:
+          title: CSD Unit 4 - The Design Process ('19-'20)
+          description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
+          description_short: "Lernen Sie, wie Sie ein Programm entwerfen, das den Bedürfnissen Ihrer Benutzer entspricht."
+          description_audience: '[empty string]'
+          lessons:
+            Analysis of Design:
+              key: Analyse der Planung
+              name: Analyse der Planung
+            Understanding Your User:
+              key: Den Benutzer verstehen
+              name: Den Benutzer verstehen
+            User-Centered Design Micro Activity:
+              key: Benutzerzentrierte Design-Mikroaktivität
+              name: Benutzerzentrierte Design-Mikroaktivität
+            User Interfaces:
+              key: Benutzeroberflächen
+              name: Benutzeroberflächen
+            Feedback and Testing:
+              key: Feedback und Tests
+              name: Feedback und Tests
+            Identifying User Needs:
+              key: Identifizieren von Benutzerbedürfnissen
+              name: Identifizieren von Benutzerbedürfnissen
+            Project - Paper Prototype:
+              key: Projekt - Papier-Prototyp
+              name: Projekt - Papier-Prototyp
+            Designing Apps for Good:
+              key: Apps für gute Zwecke entwickeln
+              name: Apps für gute Zwecke entwickeln
+            Market Research:
+              key: Marktforschung
+              name: Marktforschung
+            Paper Prototypes:
+              key: Papier-Prototypen
+              name: Papier-Prototypen
+            Prototype Testing:
+              key: Testen von Prototypen
+              name: Testen von Prototypen
+            Digital Design:
+              key: Digitaler Entwurf
+              name: Digitaler Entwurf
+            Linking Screens:
+              key: Verknüpfung der Bildschirme
+              name: Verknüpfung der Bildschirme
+            Testing the App:
+              key: Testen der App
+              name: Testen der App
+            Improving and Iterating:
+              key: Verbessern und Iterieren
+              name: Verbessern und Iterieren
+            Project - App Presentation:
+              key: Projekt - App-Präsentation
+              name: Projekt - App-Präsentation
+            Post-Project Test:
+              key: Test nach dem Projekt
+              name: Test nach dem Projekt
+            CS Discoveries Post Course survey:
+              key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            csd4_2:
+              display_name: 'Kapitel 2: App Prototyping'
+            csd5_2:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+            cspSurvey:
+              display_name: Umfrage
+        csd5-2021:
+          title: CSD Unit 5 - Data and Society ('19-'20)
+          description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          description_audience: '[empty string]'
+          lessons:
+            Representation Matters:
+              key: Darstellung ist wichtig
+              name: Darstellung ist wichtig
+            Patterns and Representation:
+              key: Muster und Darstellung
+              name: Muster und Darstellung
+            ASCII and Binary Representation:
+              key: ASCII- und Binärdarstellung
+              name: ASCII- und Binärdarstellung
+            Representing Images:
+              key: Darstellen von Bildern
+              name: Darstellen von Bildern
+            Representing Numbers:
+              key: Zahlendarstellung
+              name: Zahlendarstellung
+            Keeping Data Secret:
+              key: Daten geheim halten
+              name: Daten geheim halten
+            Combining Representations:
+              key: Kombinieren von Darstellungen
+              name: Kombinieren von Darstellungen
+            Project - Create a Representation:
+              key: Projekt - Erstellen einer Darstellung
+              name: Projekt - Erstellen einer Darstellung
+            Problem Solving and Data:
+              key: Problemlösung und Daten
+              name: Problemlösung und Daten
+            Problem Solving with Big Data:
+              key: Problemlösung mit Big Data
+              name: Problemlösung mit Big Data
+            Structuring Data:
+              key: Daten strukturieren
+              name: Daten strukturieren
+            Making Decisions with Data:
+              key: Entscheidungen mit Daten
+              name: Entscheidungen mit Daten
+            Interpreting Data:
+              key: Daten interpretieren
+              name: Daten interpretieren
+            Automating Data Decisions:
+              key: Automatisierung von Datenentscheidungen
+              name: Automatisierung von Datenentscheidungen
+            Post-Project Test:
+              key: Test nach dem Projekt
+              name: Test nach dem Projekt
+            CS Discoveries Post Course survey:
+              key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            csd5_2:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+            cspSurvey:
+              display_name: Umfrage
+        csd6-2021:
+          title: CSD Unit 6 - Physical Computing ('19-'20)
+          description: Lerneinheit 6 untersucht die Rolle von Hardware-Plattformen bei der Datenverarbeitung und wie verschiedene Sensoren einen effektiveren In- und Output als herkömmliche Tastaturen, Mäuse und Monitore ermöglichen können. Mit App Lab und Adafruits Circuit Playground werden Sie Programme entwickeln, die dieselben Hardware-In- und Outputs verwenden, die Sie bei Smart-Geräten sehen, und dabei untersuchen, wie der Weg von einem einfachen ungefährem Prototyp zu einem fertigen Produkt führen kann. Die Lerneinheit schließt mit einer Entwickler-Aufgabe, bei der Circuit Playground als Grundlage für eine Innovation Ihrer eigenen Entwicklung verwendet wird.
+          description_short: Programmieren mit Geräten lernen.
+          description_audience: '[empty string]'
+          lessons:
+            Innovations in Computing:
+              key: Innovationen in der Datenverarbeitung
+              name: Innovationen in der Datenverarbeitung
+            Designing Screens with Code:
+              key: Bildschirme mit Code gestalten
+              name: Bildschirme mit Code gestalten
+            The Circuit Playground:
+              key: Der Circuit Playground
+              name: Der Circuit Playground
+            Input Unplugged:
+              key: Input - ohne Computer
+              name: Input - ohne Computer
+            Board Events:
+              key: Platinen-Ereignisse
+              name: Platinen-Ereignisse
+            Getting Properties:
+              key: Eigenschaften abrufen
+              name: Eigenschaften abrufen
+            Analog Input:
+              key: Analoger Eingang
+              name: Analoger Eingang
+            The Program Design Process:
+              key: Der Prozess der Programmgestaltung
+              name: Der Prozess der Programmgestaltung
+            'Project: Make a Game':
+              key: 'Projekt: Ein Spiel erstellen'
+              name: 'Projekt: Ein Spiel erstellen'
+            Arrays and Color LEDs:
+              key: Arrays und farbige LEDs
+              name: Arrays und farbige LEDs
+            Making Music:
+              key: Musik machen
+              name: Musik machen
+            Arrays and For Loops:
+              key: Arrays und 'für'-Schleifen
+              name: Arrays und 'für'-Schleifen
+            Accelerometer:
+              key: Beschleunigungssensor
+              name: Beschleunigungssensor
+            Functions with Parameters:
+              key: Funktionen mit Parametern
+              name: Funktionen mit Parametern
+            Circuits and Physical Prototypes:
+              key: Schaltungen und physische Prototypen
+              name: Schaltungen und physische Prototypen
+            'Project: Prototype an Innovation':
+              key: 'Projekt: Prototyp einer Innovation'
+              name: 'Projekt: Prototyp einer Innovation'
+            Post-Project Test:
+              key: Test nach dem Projekt
+              name: Test nach dem Projekt
+            CS Discoveries Post Course survey:
+              key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kapitel 1: Programmierung mit Hardware'
+            csd6_2:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+            cspSurvey:
+              display_name: Umfrage
+        csp1-2021:
+          title: Grundsätze der Informatik Lerneinheit 1 - Digitale Informationen ('20-'21)
+          description_audience: '[empty string]'
+          lessons:
+            CS Principles Pre-survey:
+              key: Grundsätze der Informatik Befragung vor dem Kurs
+              name: Grundsätze der Informatik Befragung vor dem Kurs
+            Welcome to CSP:
+              key: Willkommen bei den Grundsätzen der Informatik
+              name: Willkommen bei den Grundsätzen der Informatik
+            Representing Information:
+              key: Darstellung von Informationen
+              name: Darstellung von Informationen
+            Circle Square Patterns:
+              key: Kreis-Quadrat-Muster
+              name: Kreis-Quadrat-Muster
+            Binary Numbers:
+              key: Binärzahlen
+              name: Binärzahlen
+            Overflow and Rounding:
+              key: Überlauf und Rundung
+              name: Überlauf und Rundung
+            Representing Text:
+              key: Darstellung von Text
+              name: Darstellung von Text
+            Black and White Images:
+              key: Schwarz/Weiß Bilder
+              name: Schwarz/Weiß Bilder
+            Color Images:
+              key: Farbbilder
+              name: Farbbilder
+            Lossless Compression:
+              key: Verlustlose Kompression
+              name: Verlustlose Kompression
+            Lossy Compression:
+              key: Verlustbehaftete Kompression
+              name: Verlustbehaftete Kompression
+            Intellectual Property:
+              key: Geistiges Eigentum
+              name: Geistiges Eigentum
+            Project - Digital Information Dilemmas Part 1:
+              key: Projekt - Dilemmas der digitalen Information Teil 1
+              name: Projekt - Dilemmas der digitalen Information Teil 1
+            Project - Digital Information Dilemmas Part 2:
+              key: Projekt - Dilemmas der digitalen Information Teil 2
+              name: Projekt - Dilemmas der digitalen Information Teil 2
+            'Lesson 14: Assessment Day':
+              key: 'Lektion 14: Bewertungstag'
+              name: 'Lektion 14: Bewertungstag'
+          lesson_groups:
+            cspSurvey:
+              display_name: Umfrage
+            csp_unit1_2020:
+              display_name: 'Einheit 2: Digitale Informationen'
+        csp2-2021:
+          title: Grundsätze der Informatik Lerneinheit 2 - Das Internet ('20-'21)
+          description_audience: '[empty string]'
+          lessons:
+            Welcome to the Internet:
+              key: Willkommen im Internet
+              name: Willkommen im Internet
+            Building a Network:
+              key: Aufbau eines Netzwerks
+              name: Aufbau eines Netzwerks
+            The Need for Addressing:
+              key: Die Notwendigkeit von Adressierung
+              name: Die Notwendigkeit von Adressierung
+            Routers and Redundancy:
+              key: Router und Redundanz
+              name: Router und Redundanz
+            Packets:
+              key: Pakete
+              name: Pakete
+            DNS and HTTP:
+              key: DNS und HTTP
+              name: DNS und HTTP
+            Project - Internet Dilemmas Part 1:
+              key: Projekt - Internetdilemmas Teil 1
+              name: Projekt - Internetdilemmas Teil 1
+            Project - Internet Dilemmas Part 2:
+              key: Projekt - Internetdilemmas Teil 2
+              name: Projekt - Internetdilemmas Teil 2
+            'Lesson 9: Assessment Day':
+              key: 'Lektion 9: Bewertungstag'
+              name: 'Lektion 9: Bewertungstag'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Lektion 2: Das Internet'
+        csp3-2021:
+          title: Grundsätze der Informatik Lerneinheit 3 - Einführung in das App-Design ('20-'21)
+          description_audience: '[empty string]'
+          lessons:
+            Introduction to Apps:
+              key: Einführung in Apps
+              name: Einführung in Apps
+            Project - Designing an App Part 1:
+              key: 'Projekt: Erstellen einer App (Teil 1)'
+              name: 'Projekt: Erstellen einer App (Teil 1)'
+            Project - Designing an App Part 2:
+              key: 'Projekt: Erstellen einer App (Teil 2)'
+              name: 'Projekt: Erstellen einer App (Teil 2)'
+            The Need for Programming Languages:
+              key: Die Notwendigkeit für Programmiersprachen
+              name: Die Notwendigkeit für Programmiersprachen
+            Intro to Programming:
+              key: Einführung in die Programmierung
+              name: Einführung in die Programmierung
+            Debugging:
+              key: Debugging/Fehlerbeseitigung
+              name: Debugging/Fehlerbeseitigung
+            Project - Designing an App Part 3:
+              key: 'Projekt: Erstellen einer App (Teil 3)'
+              name: 'Projekt: Erstellen einer App (Teil 3)'
+            Project - Designing an App Part 4:
+              key: 'Projekt: Erstellen einer App Teil 4'
+              name: 'Projekt: Erstellen einer App Teil 4'
+            Project - Designing an App Part 5:
+              key: 'Projekt: Erstellen einer App Teil 5'
+              name: 'Projekt: Erstellen einer App Teil 5'
+            'Lesson 11: Assessment Day':
+              key: 'Lektion 11: Bewertungstag'
+              name: 'Lektion 11: Bewertungstag'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Lerneinheit 3: Einführung in das App Design '
+        csp4-2021:
+          title: Grundsätze der Informatik Lerneinheit 4 Pilot - Variablen, Bedingungen und Funktionen ('20-'21)
+          description_audience: '[empty string]'
+          lessons:
+            Variables Explore:
+              key: Variablen Erforschen
+              name: Variablen Erforschen
+            Variables Investigate:
+              key: Variablen Untersuchen
+              name: Variablen Untersuchen
+            Variables Practice:
+              key: Variablen Übung
+              name: Variablen Übung
+            Variables Make:
+              key: Variablen erstellen
+              name: Variablen erstellen
+            Conditionals Explore:
+              key: Erforschung von Bedingungen
+              name: Erforschung von Bedingungen
+            Conditionals Investigate:
+              key: Untersuchung von Bedingungen
+              name: Untersuchung von Bedingungen
+            Conditionals Practice:
+              key: Übung zu Bedingungen
+              name: Übung zu Bedingungen
+            Conditional Make:
+              key: Bedingungen Erstellen
+              name: Bedingungen Erstellen
+            Functions Explore / Investigate:
+              key: Funktionen Untersuchen
+              name: Funktionen Untersuchen
+            Functions Practice:
+              key: Übung zu Funktionen
+              name: Übung zu Funktionen
+            Functions Make:
+              key: Funktionen Erstellen
+              name: Funktionen Erstellen
+            Project - Decision Maker App Part 1:
+              key: 'Projekt: App als Entscheidungshilfe - Teil 1'
+              name: 'Projekt: App als Entscheidungshilfe - Teil 1'
+            Project - Decision Maker App Part 2:
+              key: 'Projekt: App als Entscheidungshilfe - Teil 2'
+              name: 'Projekt: App als Entscheidungshilfe - Teil 2'
+            Project - Decision Maker App Part 3:
+              key: 'Projekt: App als Entscheidungshilfe - Teil 3'
+              name: 'Projekt: App als Entscheidungshilfe - Teil 3'
+            'Lesson 15: Assessment Day':
+              key: 'Lektion 15: Bewertungstag'
+              name: 'Lektion 15: Bewertungstag'
+          lesson_groups:
+            csp_variables:
+              display_name: Variablen
+            csp_conditionals:
+              display_name: Bedingungen
+            csp_functions:
+              display_name: Funktionen
+            csp_project:
+              display_name: Projekt
+        csp5-2021:
+          title: Grundsätze der Informatik Lerneinheit 5 Pilot - Listen, Schleifen, und Traversalen
+          description_audience: '[empty string]'
+          lessons:
+            Lists Explore:
+              key: Listen untersuchen
+              name: Listen untersuchen
+            Lists Investigate:
+              key: Listen Untersuchen
+              name: Listen Untersuchen
+            Lists Practice:
+              key: Listen Übung
+              name: Listen Übung
+            Lists Make:
+              key: Listen Erstellen
+              name: Listen Erstellen
+            Loops Explore:
+              key: Schleifen erforschen
+              name: Schleifen erforschen
+            Loops Investigate:
+              key: Schleifen untersuchen
+              name: Schleifen untersuchen
+            Loops Practice:
+              key: Schleifen Übung
+              name: Schleifen Übung
+            Loops Make:
+              key: Schleifen Erstellen
+              name: Schleifen Erstellen
+            Traversals Explore:
+              key: Traversalen erforschen
+              name: Traversalen erforschen
+            Traversals Investigate:
+              key: Traversalen untersuchen
+              name: Traversalen untersuchen
+            Traversals Practice:
+              key: Traversalen Übung
+              name: Traversalen Übung
+            Traversals Make:
+              key: Traversalen Erstellen
+              name: Traversalen Erstellen
+            Semester Hackathon Part 1:
+              key: Semester-Hackathon Teil 1
+              name: Semester-Hackathon Teil 1
+            Semester Hackathon Part 2:
+              key: Semester-Hackathon Teil 2
+              name: Semester-Hackathon Teil 2
+            Semester Hackathon Part 3:
+              key: Semester-Hackathon Teil 3
+              name: Semester-Hackathon Teil 3
+            Semester Hackathon Part 4:
+              key: Semester-Hackathon Teil 4
+              name: Semester-Hackathon Teil 4
+            Semester Hackathon Part 5:
+              key: Semester-Hackathon Teil 5
+              name: Semester-Hackathon Teil 5
+            'Lesson 18: Assessment Day':
+              key: 'Lektion 18: Bewertungstag'
+              name: 'Lektion 18: Bewertungstag'
+          lesson_groups:
+            csp_lists:
+              display_name: Listen
+            csp_loops:
+              display_name: Schleifen
+            csp_traversals:
+              display_name: Traversierungen
+            csp_project:
+              display_name: Projekt
+        csp6-2021:
+          title: Grundsätze der Informatik Lerneinheit 6 - Algorithmen ('20-'21)
+          description_audience: '[empty string]'
+          lessons:
+            Algorithms Solve Problems:
+              key: Algorithmen lösen Aufgaben
+              name: Algorithmen lösen Aufgaben
+            Algorithm Efficiency:
+              key: Effizienz von Algorithmen
+              name: Effizienz von Algorithmen
+            Unreasonable Time:
+              key: Unzumutbare Zeit
+              name: Unzumutbare Zeit
+            The Limits of Algorithms:
+              key: Die Grenzen von Algorithmen
+              name: Die Grenzen von Algorithmen
+            Parallel and Distributed Algorithms:
+              key: Parallele und verteilte Algorithmen
+              name: Parallele und verteilte Algorithmen
+            'Lesson 6: Assessment Day':
+              key: 'Lektion 6: Bewertungstag'
+              name: 'Lektion 6: Bewertungstag'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Lerneinheit 6: Algorithmen'
+        csp7-2021:
+          description_audience: '[empty string]'
+          lessons:
+            Parameters and Return Explore:
+              key: Parameter und Rückgaben Erforschen
+              name: Parameter und Rückgaben Erforschen
+            Parameters and Return Investigate:
+              key: Parameter und Rückgaben Untersuchen
+              name: Parameter und Rückgaben Untersuchen
+            Parameters and Return Practice:
+              key: Parameter und Rückgaben Übung
+              name: Parameter und Rückgaben Übung
+            Parameters and Return Make:
+              key: Parameter und Rückgaben Erstellen
+              name: Parameter und Rückgaben Erstellen
+            Libraries Explore:
+              key: Bibliotheken erforschen
+              name: Bibliotheken erforschen
+            Libraries Investigate:
+              key: Bibliotheken untersuchen
+              name: Bibliotheken untersuchen
+            Libraries Practice:
+              key: Bibliotheken Übung
+              name: Bibliotheken Übung
+            Project - Make a Library Part 1:
+              key: 'Projekt: Erstellen einer Bibliothek (Teil 1)'
+              name: 'Projekt: Erstellen einer Bibliothek (Teil 1)'
+            Project - Make a Library Part 2:
+              key: 'Projekt: Erstellen einer Bibliothek (Teil 2)'
+              name: 'Projekt: Erstellen einer Bibliothek (Teil 2)'
+            Project - Make a Library Part 3:
+              key: 'Projekt: Erstellen einer Bibliothek (Teil 3)'
+              name: 'Projekt: Erstellen einer Bibliothek (Teil 3)'
+            'Lesson 11: Assessment Day':
+              key: 'Lektion 11: Bewertungstag'
+              name: 'Lektion 11: Bewertungstag'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameter und Rückgabewerte
+            csp_libraries:
+              display_name: Bibliotheken
+        csp8-2021:
+          title: Grundsätze der Informatik Lerneinheit 8 - PT erstellen - Vorbereitung ('20-'21)
+          description_audience: '[empty string]'
+          lessons:
+            Create PT - Review the Task:
+              key: PT erstellen - Überprüfung der Aufgabe
+              name: PT erstellen - Überprüfung der Aufgabe
+            Create PT - Make a Plan:
+              key: PT erstellen - Einen Plan erstellen
+              name: PT erstellen - Einen Plan erstellen
+            Create PT - Complete the Task:
+              key: PT erstellen - Aufgabe abschließen
+              name: PT erstellen - Aufgabe abschließen
+        csp9-2021:
+          title: Grundsätze der Informatik Lerneinheit 9 - Daten ('20-'21)
+          description_audience: '[empty string]'
+          lessons:
+            Learning From Data:
+              key: Aus Daten lernen
+              name: Aus Daten lernen
+            Exploring One Column:
+              key: Eine Spalte erforschen
+              name: Eine Spalte erforschen
+            Filtering and Cleaning Data:
+              key: Filtern und Bereinigen von Daten
+              name: Filtern und Bereinigen von Daten
+            Exploring Two Columns:
+              key: Zwei Spalten erforschen
+              name: Zwei Spalten erforschen
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: Big Data, Crowdsourcing und maschinelles Lernen
+              name: Big Data, Crowdsourcing und maschinelles Lernen
+            Machine Learning and Bias:
+              key: Maschinelles Lernen und Voreingenommenheit
+              name: Maschinelles Lernen und Voreingenommenheit
+            Project - Tell a Data Story - Part 1:
+              key: Projekt - Erzählen Sie eine Datengeschichte - Teil 1
+              name: Projekt - Erzählen Sie eine Datengeschichte - Teil 1
+            Project - Tell a Data Story - Part 2:
+              key: Projekt - Erzählen Sie eine Datengeschichte - Teil 2
+              name: Projekt - Erzählen Sie eine Datengeschichte - Teil 2
+            'Lesson 9: Assessment Day':
+              key: 'Lektion 9: Bewertungstag'
+              name: 'Lektion 9: Bewertungstag'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Lektion 9: Daten'
+        csp10-2021:
+          title: Grundsätze der Informatik Lerneinheit 10 - Cybersicherheit und globale Auswirkungen ('20-'21)
+          description_audience: '[empty string]'
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: 'Projekt: Innovationssimulation Teil 1'
+              name: 'Projekt: Innovationssimulation Teil 1'
+            Project - Innovation Simulation Part 2:
+              key: 'Projekt: Innovationssimulation Teil 2'
+              name: 'Projekt: Innovationssimulation Teil 2'
+            Data Policies and Privacy:
+              key: Datenrichtlinien und Privatsphäre
+              name: Datenrichtlinien und Privatsphäre
+            The Value of Privacy:
+              key: Die Bedeutung der Privatsphäre
+              name: Die Bedeutung der Privatsphäre
+            Project - Innovation Simulation Part 3:
+              key: 'Projekt: Innovationssimulation Teil 3'
+              name: 'Projekt: Innovationssimulation Teil 3'
+            Security Risks Part 1:
+              key: Sicherheitsrisiken Teil 1
+              name: Sicherheitsrisiken Teil 1
+            Security Risks Part 2:
+              key: Sicherheitsrisiken Teil 2
+              name: Sicherheitsrisiken Teil 2
+            'Project: Innovation Simulation Part 4':
+              key: 'Projekt: Innovationssimulation Teil 4'
+              name: 'Projekt: Innovationssimulation Teil 4'
+            Protecting Data Part 1:
+              key: Datenschutz Teil 1
+              name: Datenschutz Teil 1
+            Protecting Data Part 2:
+              key: Datenschutz Teil 2
+              name: Datenschutz Teil 2
+            'Project: Innovation Simulation Part 5':
+              key: 'Projekt: Innovationssimulation Teil 5'
+              name: 'Projekt: Innovationssimulation Teil 5'
+            'Project: Innovation Simulation Part 6':
+              key: 'Projekt: Innovationssimulation Teil 6'
+              name: 'Projekt: Innovationssimulation Teil 6'
+            'Project: Innovation Simulation Part 7':
+              key: 'Projekt: Innovationssimulation Teil 7'
+              name: 'Projekt: Innovationssimulation Teil 7'
+            'Lesson 14: Unit Assessment Day':
+              key: 'Lektion 14: Tag der Bewertung der Lerneinheit'
+              name: 'Lektion 14: Tag der Bewertung der Lerneinheit'
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
+        coursea-2021:
+          title: Kurs A (2019)
+          description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
+          description_audience: 'Alter: 4-7'
+          lessons:
+            Safety in My Online Neighborhood:
+              key: Sicherheit in meiner Online-Nachbarschaft
+              name: Sicherheit in meiner Online-Nachbarschaft
+            Learn to Drag and Drop:
+              key: Erlerne Drag und Drop
+              name: Erlerne Drag und Drop
+            'Programming: Happy Maps':
+              key: 'Programmierung: Happy Maps'
+              name: Glücklich Karten
+            Sequencing with Scrat:
+              key: Sequenzen mit Scrat
+              name: Sequenzen mit Scrat
+            Programming in Ice Age:
+              key: Programmieren in Ice Age
+              name: Programmieren mit Scrat
+            Programming with Rey and BB-8:
+              key: Programmieren mit Rey und BB-8
+              name: Programmieren mit Rey und BB-8
+            'Loops: Happy Loops':
+              key: 'Schleifen: Fröhliche Schleifen'
+              name: Fröhliche Schleifen
+            Loops in Ice Age:
+              key: Schleifen in Ice Age
+              name: Schleifen mit Scrat
+            Loops in Collector:
+              key: Schleifen im Kollektor
+              name: Schleifen mit Laurel
+            Ocean Scene with Loops:
+              key: Meeresszene mit Schleifen
+              name: Meeresszene mit Schleifen
+            'Events: The Big Event':
+              key: 'Ereignisse: Das große Ereignis'
+              name: Das große Ereignis
+            Events in Play Lab:
+              key: Veranstaltungen im Play Lab
+              name: Aktionen mit Ereignissen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+        courseb-2021:
+          title: Kurs B (2019)
+          description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich wie Kurs A, aber mit mehr Konzepttiefe.)
+          description_audience: 'Alter: 5-8'
+          lessons:
+            Digital Trails:
+              key: Digitale Spuren
+              name: Digitale Spuren
+            Move It, Move It:
+              key: Bewegung, Bewegung
+              name: Bewegung, Bewegung
+            Sequencing in Maze:
+              key: Sequenzierung im Labyrinth
+              name: Sequenzieren mit Angry Birds
+            Programming in Maze:
+              key: Programmieren im Labyrinth
+              name: Programmieren mit Angry Birds
+            Programming in Harvester:
+              key: Programmieren mit der Erntearbeiterin
+              name: Programmieren mit der Erntearbeiterin
+            'Loops: Getting Loopy':
+              key: 'Schleifen: Überall Schleifen'
+              name: Schöne Schleifen
+            Loops in Harvester:
+              key: Schleifen mit der Erntearbeiterin
+              name: Schleifen mit der Erntearbeiterin
+            Loops in Collector:
+              key: Schleifen im Kollektor
+              name: Schleifen mit Laurel
+            Loops in Artist:
+              key: Schleifen beim Künstler
+              name: Gärten mit Schleifen zeichnen
+            The Right App:
+              key: Die richtige App
+              name: Die richtige App
+            'Events: The Big Event':
+              key: 'Ereignisse: Das große Ereignis'
+              name: Das große Ereignis
+            Events in Play Lab:
+              key: Veranstaltungen im Play Lab
+              name: Royal Battle mit Ereignissen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_impacts:
+              display_name: Auswirkungen der Datenverarbeitung
+            csf_events:
+              display_name: Ereignisse
+        coursec-2021:
+          title: Kurs C (2019)
+          description: Erstellen Sie Programme mit Sequenzen, Schleifen und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen können!
+          description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
+          description_audience: 'Alter: 6-10'
+          lessons:
+            Putting a STOP to Online Meanness:
+              key: Gemeinheiten im Internet STOPPEN
+              name: Gemeinheiten im Internet STOPPEN
+            Password Power-Up:
+              key: Passwort-Power
+              name: Passwort-Power
+            'Programming: My Robotic Friends':
+              key: 'Programmieren: Meine Roboterfreunde'
+              name: Meine Roboterfreunde Jr.
+            Programming in Maze:
+              key: Programmieren im Labyrinth
+              name: Programmieren mit Angry Birds
+            Debugging in Maze:
+              key: Fehlersuche im Labyrinth
+              name: Fehlersuche im Labyrinth
+            Programming in Collector:
+              key: Programmierung in Collector
+              name: Den Schatz mit Laurel sammeln
+            Programming in Artist:
+              key: Programmierung in Künstler
+              name: Kunst erschaffen mit Code
+            Binary Bracelets:
+              key: Binäre Armbänder
+              name: Binäre Armbänder
+            'Loops: My Loopy Robotic Friends':
+              key: 'Schleifen: Meine Schleifenroboter-Freunde'
+              name: Meine schleifenden Freunde von Loopy Robotic Jr.
+            Loops with Rey and BB-8:
+              key: Schleifen mit Rey und BB-8
+              name: Schleifen mit Rey und BB-8
+            Loops in Harvester:
+              key: Schleifen mit der Erntearbeiterin
+              name: Ernten mit Schleifen
+            Looking Ahead:
+              key: Nach vorne schauen
+              name: Ausblick auf Minecraft
+            Sticker Art with Loops:
+              key: Sticker-Kunst mit Schleifen
+              name: Sticker-Kunst mit Schleifen
+            'Events: The Big Event':
+              key: 'Ereignisse: Das große Ereignis'
+              name: Der große Event
+            Build a Flappy Game:
+              key: Erstelle ein Flappy-Spiel
+              name: Erstelle ein Flappy-Spiel
+            Events in Play Lab:
+              key: Veranstaltungen im Play Lab
+              name: Verfolgungsspiel mit Ereignissen
+            Picturing Data:
+              key: "Dartsellung von Daten\n"
+              name: "Dartsellung von Daten\n"
+            'End of Course Project: Create a Play Lab Game':
+              name: Projekt am Ende des Kurses
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_binary:
+              display_name: Binärdatei
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+            csf_data:
+              display_name: Daten
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+        coursed-2021:
+          title: Kurs D (2019)
+          description: Die SchülerInnen entwickeln ihr Verständnis für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen auch etwas über digitale Bürgerschaft.
+          description_short: Erfahren Sie mehr über bedingte Aussagen. Kreieren Sie Ihre eigene Kunst, Spiele und sogar eine Tanzparty.
+          description_audience: 'Alter: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'Algorithmen: Programmieren auf Millimeterpapier'
+              name: Programmieren auf Millimeterpapier
+            Introduction to Online Puzzles:
+              key: Einführung in Online-Aufgaben
+              name: Einführung in Online-Aufgaben
+            Relay Programming:
+              key: Relais-Programmierung
+              name: Relais-Programmierung
+            Debugging in Collector:
+              key: Fehlerbehebung in Collector
+              name: Debuggen mit Laurel
+            Events in Bounce:
+              key: Ereignisse in Bounce
+              name: Ereignisse in Bounce
+            Build a Star Wars Game:
+              key: Programmiere ein Star Wars Spiel!
+              name: Programmiere ein Star Wars Spiel!
+            Dance Party:
+              key: Tanzparty
+              name: Tanzparty
+            Loops in Ice Age:
+              key: Schleifen in Ice Age
+              name: Schleifen in Ice Age
+            Loops in Artist:
+              key: Schleifen beim Künstler
+              name: Formen mit Schleifen zeichnen
+            Nested Loops in Bee:
+              key: Eingebettete Schleifen bei der Biene
+              name: Eingebettete Schleifen im Labyrinth
+            Conditionals with Cards:
+              key: Bedingungen mit Karten
+              name: Bedingungen mit Karten
+            Conditionals in Bee:
+              key: Bedingungen mit Biene
+              name: Wenn/Sonst mit der Biene
+            While Loops in Farmer:
+              key: Während-Schleifen in Farmer
+              name: Während-Schleifen in Farmer
+            Until Loops in Maze:
+              key: '‚Bis‘-Schleifen im Labyrinth'
+              name: '‚Bis‘-Schleifen im Labyrinth'
+            Conditionals & Loops in Harvester:
+              key: Bedingungen & Schleifen mit der Erntearbeiterin
+              name: Ernten mit Bedingungen
+            'Unplugged: Binary':
+              key: 'Offline: Binär'
+              name: Binärbilder
+            Artist Binary:
+              key: Künstler Binär
+              name: Künstler Binär
+            Be A Super Digital Citizen:
+              key: Ein überragender digitaler Bürger sein
+              name: Ein überragender digitaler Bürger sein
+            End of Course Project:
+              key: Projekt am Ende des Kurses
+              name: Projekt am Ende des Kurses
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Ereignisse
+            csf_loops:
+              display_name: Schleifen
+            csf_conditionals:
+              display_name: Bedingungen
+            csf_binary:
+              display_name: Binärdatei
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+        coursee-2021:
+          title: Kurs E (2019)
+          description: Beginne mit der Programmierung von Algorithmen, Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen. Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt, das du mit deinen Freunden und deiner Familie teilen kannst.
+          description_short: Überprüfen Sie die Konzepte in den Kursen C und D und gehen Sie dann anhand der Lernfunktionen weiter.
+          description_audience: 'Alter: 8-12'
+          lessons:
+            Sequencing in the Maze:
+              key: Sequenzierung im Labyrinth
+              name: Sequenzierung im Labyrinth
+            Programming and Loops with the Artist:
+              key: Programmierung und Schleifen mit dem Künstler
+              name: Zeichen mit Schleifen
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Bedingungen in Minecraft: Voyage Aquatic'
+              name: 'Bedingungen in Minecraft: Voyage Aquatic'
+            Conditionals:
+              key: Bedingungen
+              name: Bedingungen mit dem Farmer
+            Simon Says:
+              key: Simon sagt
+              name: Simon sagt
+            Learning Sprites with Sprite Lab:
+              key: Sprites mit Sprite Lab lernen
+              name: Schwimmende Fische mit Sprite Lab.
+            Alien Dance Party with Sprite Lab:
+              key: Tanzparty für Aliens mit Sprite Lab
+              name: Tanzparty für Aliens mit Sprite Lab
+            Private and Personal Information:
+              key: Private und persönliche Informationen
+              name: Private und persönliche Informationen
+            About Me:
+              key: Über mich
+              name: Über mich mit Sprite Lab
+            Digital Sharing:
+              key: Digitale Teilhabe
+              name: Digitale Teilhabe
+            Nested Loops in Bee:
+              key: Eingebettete Schleifen bei der Biene
+              name: Eingebettete Schleifen im Labyrinth
+            Nested Loops in Artist:
+              key: Eingebettete Schleifen beim Künstler
+              name: Interessante Formen mit geschachtelten Schleifen
+            Nested Loops in Frozen:
+              key: Geschaltete Schleifen in Frozen
+              name: Eingebettete Schleifen mit Frozen
+            'Functions: Songwriting':
+              key: 'Funktionen: Songschreiben'
+              name: Songschreiben
+            Functions in Minecraft:
+              key: Funktionen in Minecraft
+              name: Funktionen in Minecraft
+            Functions in Harvester:
+              key: Funktionen mit der Erntearbeiterin
+              name: Funktionen mit der Erntearbeiterin
+            Functions in Artist:
+              key: Funktionen in Künstler
+              name: Funktionen mit dem Künstler
+            Designing for Accessibility:
+              key: Entwerfen für Barrierefreiheit
+              name: Entwerfen für Barrierefreiheit
+            End of Course Project:
+              key: Projekt am Ende des Kurses
+              name: Projekt am Ende des Kurses
+          lesson_groups:
+            ramp_up:
+              display_name: Hochfahren (Ramp-Up)
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_nested_loops:
+              display_name: Verschachtelte Schleifen
+            csf_functions:
+              display_name: Funktionen
+            csf_impacts:
+              display_name: Auswirkungen der Datenverarbeitung
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+        coursef-2021:
+          title: Kurs F (2019)
+          description: Lerne die Verwendung verschiedener Arten von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein Capstone Projekt, das du mit Freunden und Familie teilen kannst.
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+          description_audience: 'Alter: 9-13'
+          lessons:
+            Functions in Minecraft:
+              key: Funktionen in Minecraft
+              name: Funktionen in Minecraft
+            Learning Sprites with Sprite Lab:
+              key: Sprites mit Sprite Lab lernen
+              name: Schwimmende Fische mit Sprite Lab.
+            Events with Sprite Lab:
+              name: Tanzparty für Aliens mit Sprite Lab
+            Loops with the Artist:
+              name: Zeichen mit Schleifen
+            Nested Loops in the Maze:
+              key: Geschachtelte Schleifen im Labyrinth
+              name: Eingebettete Schleifen im Labyrinth
+            The Power of Words:
+              key: Die Macht der Worte
+              name: Die Macht der Worte
+            Envelope Variables:
+              key: Umschlag-Variablen
+              name: Umschlag-Variablen
+            Variables as Constant in Artist:
+              key: Variablen als Konstante mit dem Künstler
+              name: Variablen mit dem Künstler
+            Variables that Change in Bee:
+              key: Variablen, die sich verändern, mit der Biene
+              name: Verändern von Variablen mit der Biene
+            Variables that Change in Artist:
+              key: Variablen, die sich verändern, mit dem Künstler
+              name: Verändern von Variablen mit dem Künstler
+            Simulating Experiments:
+              key: Experimente simulieren
+              name: Experimente simulieren
+            AI for Oceans:
+              key: KI für Meere
+              name: KI für Meere
+            Internet:
+              key: Internet
+              name: das Internet
+            For Loop Fun:
+              key: '„Zähle mit“-Schleifenspaß'
+              name: '„Zähle mit“-Schleifenspaß'
+            For Loops in Bee:
+              key: Für-Schleifen mit der Biene
+              name: '`Für´-Schleifen mit der Biene'
+            For Loops in Artist:
+              key: Für-Schleifen mit dem Künstler
+              name: '`Für´-Schleifen mit dem Künstler'
+            Editing Behaviors:
+              key: Behaviors bearbeiten
+              name: Behaviors im Sprite-Labor
+            Virtual Pet:
+              name: Virtuelles Haustier mit Sprite-Labor
+            End of Course Project:
+              key: Projekt am Ende des Kurses
+              name: Projekt am Ende des Kurses
+          lesson_groups:
+            ramp_up:
+              display_name: Hochfahren (Ramp-Up)
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_variables:
+              display_name: Variablen
+            csf_data:
+              display_name: Daten
+            csf_for_loops:
+              display_name: '"Zähle mit"-Schleifen'
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+        express-2021:
+          title: Expresskurs (2019)
+          description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          description_short: 'Eine Einführung in die Informatik: kombiniert das Beste aus unserem Grundschullehrplan für ältere SchülerInnen.'
+          description_audience: 'Alter: 9-18'
+          lessons:
+            Dance Party:
+              key: Tanzparty
+              name: Tanzparty
+            Programming with Angry Birds:
+              key: Programmieren mit Angry Birds
+              name: Programmieren mit Angry Birds
+            Debugging with Scrat:
+              key: Fehlerbeseitigung (Debuggen) mit Scrat
+              name: Fehlerbeseitigung (Debuggen) mit Scrat
+            Collecting Treasure with Laurel:
+              key: Den Schatz mit Laurel sammeln
+              name: Den Schatz mit Laurel sammeln
+            Creating Art with Code:
+              key: Kunst erschaffen mit Code
+              name: Kunst erschaffen mit Code
+            Loops with Rey and BB-8:
+              key: Schleifen mit Rey und BB-8
+              name: Schleifen mit Rey und BB-8
+            Sticker Art with Loops:
+              key: Sticker-Kunst mit Schleifen
+              name: Sticker-Kunst mit Schleifen
+            Nested Loops in Maze:
+              key: Eingebettete Schleifen im Labyrinth
+              name: Eingebettete Schleifen im Labyrinth
+            Snowflakes with Anna and Elsa:
+              key: Schneeflocken mit Anna und Elsa
+              name: Schneeflocken mit Anna und Elsa
+            If/Else with Bee:
+              key: Wenn/Sonst mit der Biene
+              name: Wenn/Sonst mit der Biene
+            While Loops with the Farmer:
+              key: Während Schleifen mit dem Farmer
+              name: Während Schleifen mit dem Farmer
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Bedingungen in Minecraft: Voyage Aquatic'
+              name: 'Bedingungen in Minecraft: Voyage Aquatic'
+            Until Loops in Maze:
+              key: '‚Bis‘-Schleifen im Labyrinth'
+              name: '‚Bis‘-Schleifen im Labyrinth'
+            Harvesting with Conditionals:
+              key: Ernten mit Bedingungen
+              name: Ernten mit Bedingungen
+            Functions in Minecraft:
+              key: Funktionen in Minecraft
+              name: Funktionen in Minecraft
+            Functions with Harvester:
+              key: Funktionen mit der Erntearbeiterin
+              name: Funktionen mit der Erntearbeiterin
+            Functions with Artist:
+              key: Funktionen mit dem Künstler
+              name: Funktionen mit dem Künstler
+            Variables with Artist:
+              key: Variablen mit dem Künstler
+              name: Variablen mit dem Künstler
+            Changing Variables with Bee:
+              key: Verändern von Variablen mit der Biene
+              name: Verändern von Variablen mit der Biene
+            Changing Variables with Artist:
+              key: Verändern von Variablen mit dem Künstler
+              name: Verändern von Variablen mit dem Künstler
+            For Loops with Bee:
+              key: '`Für´-Schleifen mit der Biene'
+              name: '`Für´-Schleifen mit der Biene'
+            For Loops with Artist:
+              key: '`Für´-Schleifen mit dem Künstler'
+              name: '`Für´-Schleifen mit dem Künstler'
+            Swimming Fish in Sprite Lab:
+              key: Schwimmende Fische in Sprite Lab
+              name: Schwimmende Fische in Sprite Lab
+            Alien Dance Party:
+              key: Tanzparty für Aliens
+              name: Tanzparty für Aliens
+            Behaviors in Sprite Lab:
+              key: Behaviors im Sprite-Labor
+              name: Behaviors im Sprite-Labor
+            Virtual Pet with Sprite Lab:
+              key: Virtuelles Haustier mit Sprite-Labor
+              name: Virtuelles Haustier mit Sprite-Labor
+            End of Course Project:
+              key: Projekt am Ende des Kurses
+              name: Projekt am Ende des Kurses
+          lesson_groups:
+            csf_warmup:
+              display_name: Aufwärmübung
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_conditionals:
+              display_name: Bedingungen
+            csf_functions:
+              display_name: Funktionen
+            csf_variables:
+              display_name: Variablen
+            csf_for_loops:
+              display_name: '"Zähle mit"-Schleifen'
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+        pre-express-2021:
+          title: Schnellkurs für Leseanfänger (2020)
+          description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          description_short: 'Eine Einführung in die Informatik für Leseanfänger: Kombiniert das Beste aus unseren Kursen für die Vorschule und für Erstklässler.'
+          description_audience: 'Alter: 4-8'
+          lessons:
+            Learn to Drag and Drop:
+              key: Erlerne Drag und Drop
+              name: Erlerne Drag und Drop
+            Sequencing with Scrat:
+              key: Sequenzen mit Scrat
+              name: Sequenzen mit Scrat
+            Programming with Rey and BB-8:
+              key: Programmieren mit Rey und BB-8
+              name: Programmieren mit Rey und BB-8
+            Programming in Harvester:
+              key: Programmieren mit der Erntearbeiterin
+              name: Programmieren mit der Erntearbeiterin
+            Loops with Scrat:
+              key: Schleifen mit Scrat
+              name: Schleifen mit Scrat
+            Loops with Laurel:
+              key: Schleifen mit Laurel
+              name: Schleifen mit Laurel
+            Ocean Scene with Loops:
+              key: Meeresszene mit Schleifen
+              name: Meeresszene mit Schleifen
+            Drawing Gardens with Loops:
+              key: Gärten mit Schleifen zeichnen
+              name: Gärten mit Schleifen zeichnen
+            On the Move with Events:
+              key: Aktionen mit Ereignissen
+              name: Aktionen mit Ereignissen
+            A Royal Battle with Events:
+              key: Royal Battle mit Ereignissen
+              name: Royal Battle mit Ereignissen
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+        csf-2021-pilot:
+          lessons:
+            Learning Sprites with Sprite Lab:
+              name: Schwimmende Fische mit Sprite Lab.
+            lesson-1:
+              name: Umschlag-Variablen
+          lesson_groups:
+            ramp_up:
+              display_name: Einführung
+            lessonGroup-3:
+              display_name: Variablen
