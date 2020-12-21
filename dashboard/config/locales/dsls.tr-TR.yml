@@ -2367,7 +2367,6 @@ tr-TR:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: Kuş, domuza bir adım kala duracak.
-          correct: true
           feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
         - text: Kuş, domuza ulaşmayı başaracak.
           correct: true
