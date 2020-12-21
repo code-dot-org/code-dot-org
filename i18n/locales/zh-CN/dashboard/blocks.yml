@@ -1,9 +1,8 @@
----
 zh-CN:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "{GROUP} 每 {N} 小节交替动作 {MOVE1} 和 {MOVE2}"
+        text: "[GROUP][0] 每 [N][1] 小节交替动作 [MOVE1][2] 和 [MOVE2][3]"
         options:
           GROUP:
             sprites: 所有
@@ -44,20 +43,20 @@ zh-CN:
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
       Dancelab_atTimestamp:
-        text: 在 {TIMESTAMP} {UNIT} 后
+        text: 在 [TIMESTAMP][0] [UNIT][1] 后
         options:
           UNIT:
             '"measures"': 节拍
-            '"seconds"': " 秒"
+            '"seconds"': ' 秒'
       Dancelab_changeColorBy:
-        text: 将 {COLOR} {METHOD} 改动 {AMOUNT}
+        text: 将 [COLOR][0] [METHOD][1] 改动 [AMOUNT][2]
         options:
           METHOD:
             '"hue"': 色调
             '"saturation"': 饱和度
             '"brightness"': 亮度
       Dancelab_changeMoveEachLR:
-        text: 在 {GROUP} 中，进行 循环查找 {MOVE} {DIR}
+        text: "在 [GROUP][0] 中，进行 循环查找 [MOVE][1] [DIR][2]"
         options:
           GROUP:
             sprites: 所有
@@ -76,7 +75,7 @@ zh-CN:
           MOVE:
             '"next"': "（下一步）"
             '"prev"': "（前一步）"
-            '"rand"': 随机
+            '"rand"': "随机"
             MOVES.Roll: 身体转动
             MOVES.ClapHigh: 用力鼓掌
             MOVES.Dab: 轻拍
@@ -89,12 +88,12 @@ zh-CN:
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
       Dancelab_changeMoveLR:
-        text: "{SPRITE} 一直重复 {MOVE} {DIR}"
+        text: "[SPRITE][0] 一直重复 [MOVE][1] [DIR][2]"
         options:
           MOVE:
             '"next"': "（下一步）"
             '"prev"': "（前一步）"
-            '"rand"': 随机
+            '"rand"': "随机"
             MOVES.Roll: 身体转动
             MOVES.ClapHigh: 用力鼓掌
             MOVES.Dab: 轻拍
@@ -108,7 +107,7 @@ zh-CN:
             MOVES.Thriller: 僵尸
             MOVES.Rest: 没有
       Dancelab_changePropBy:
-        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
+        text: 将 [SPRITE][0] [PROPERTY][1] 改为 [VAL][2]
         options:
           PROPERTY:
             '"scale"': 大小
@@ -118,7 +117,7 @@ zh-CN:
             '"x"': 水平位置
             '"y"': 垂直位置
       Dancelab_changePropEachBy:
-        text: 将 {GROUP} {PROPERTY} 改为 {VAL}
+        text: 将 [GROUP][0] [PROPERTY][1] 改为 [VAL][2]
         options:
           GROUP:
             sprites: 所有
@@ -142,7 +141,7 @@ zh-CN:
             '"x"': 水平位置
             '"y"': 垂直位置
       Dancelab_doMoveEachLR:
-        text: 在 {GROUP} 中，进行 {MOVE} {DIR} 一次
+        text: "在 [GROUP][0] 中，进行 [MOVE][1] [DIR][2] 一次"
         options:
           GROUP:
             sprites: 所有
@@ -159,7 +158,7 @@ zh-CN:
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           MOVE:
-            '"rand"': 随机
+            '"rand"': "随机"
             MOVES.XBend: 弯曲
             MOVES.Roll: 身体转动
             MOVES.XClapSide: 拍手
@@ -184,10 +183,10 @@ zh-CN:
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
       Dancelab_doMoveLR:
-        text: "{SPRITE} 重复 {MOVE} {DIR} 一次"
+        text: "[SPRITE][0] 重复 [MOVE][1] [DIR][2] 一次"
         options:
           MOVE:
-            '"rand"': 随机
+            '"rand"': "随机"
             MOVES.XBend: 弯曲
             MOVES.Roll: 身体转动
             MOVES.XClapSide: 拍手
@@ -212,36 +211,36 @@ zh-CN:
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
       Dancelab_eval:
-        text: 执行 {CODE}
+        text: 执行 [CODE][0]
       Dancelab_everyMeasuresRange:
-        text: "{START} 后重复 {N} 小节"
+        text: '[START][1] 后重复 [N][0] 小节'
       Dancelab_everySeconds:
-        text: 每 {N} {UNIT} 重复一次
+        text: '每 [N][0] [UNIT][1] 重复一次'
         options:
           UNIT:
             '"measures"': 节拍
-            '"seconds"': " 秒"
+            '"seconds"': ' 秒'
       Dancelab_everySecondsRange:
-        text: 每个 {N} {UNIT} 从 {START} 到 {STOP}
+        text: '每个 [N][0] [UNIT][1] 从 [START][2] 到 [STOP][3]'
         options:
           UNIT:
             measures: 节拍
             seconds: 秒
       Dancelab_everyVerseChorus:
-        text: '每个 {UNIT} '
+        text: '每个 [UNIT][0] '
         options:
           UNIT:
             '"verse"': 诗歌
             '"chorus"': 合唱
       Dancelab_getEnergy:
-        text: 获得 {RANGE}
+        text: 获得 [RANGE][0]
         options:
           RANGE:
             '"low"': 低音
             '"mid"': 中音音量
             '"high"': 高音音量
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': 大小
@@ -252,15 +251,15 @@ zh-CN:
             '"y"': 垂直位置
             '"tint"': 色调
       Dancelab_getTime:
-        text: "{UNIT} 当前时间"
+        text: '[UNIT][0] 当前时间'
         options:
           UNIT:
             '"measures"': 节拍
-            '"seconds"': " 秒"
+            '"seconds"': ' 秒'
       Dancelab_ifDanceIs:
         text: |-
-          如果 {SPRITE} 正在 {DANCE}
-          {DO1} {DO2}
+          如果 [SPRITE][0] 正在 [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: 用力鼓掌
@@ -276,18 +275,18 @@ zh-CN:
             MOVES.Rest: 没有
       Dancelab_ifTime:
         text: |-
-          如果 {UNIT} 是 {OP} {N}
-          {DO1} {DO2}
+          如果 [UNIT][0] 是 [OP][1] [N][2]
+          [DO1][3] [DO2][4]
         options:
           UNIT:
             '"measures"': 节拍
-            '"seconds"': " 秒"
+            '"seconds"': ' 秒'
           OP:
             '">"': ">"
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} 跳到 {LOCATION}"
+        text: "[SPRITE][0] 跳到 [LOCATION][1]"
         options:
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -301,7 +300,7 @@ zh-CN:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Dancelab_jumpToEach:
-        text: 让 {GROUP} 跳到 {LOCATION}
+        text: 让 [GROUP][0] 跳到 [LOCATION][1]
         options:
           GROUP:
             sprites: 所有
@@ -329,7 +328,7 @@ zh-CN:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": 随机
       Dancelab_layoutSprites:
-        text: 布局 {GROUP} 作为 {FORMAT}
+        text: 布局 [GROUP][0] 作为 [FORMAT][1]
         options:
           GROUP:
             sprites: 所有
@@ -361,7 +360,7 @@ zh-CN:
             '"plus"': 添加
             '"random"': 随机
       Dancelab_makeAnonymousDanceSprite:
-        text: 在 {LOCATION} 创建一个新的 {COSTUME}
+        text: 在 [LOCATION][1] 创建一个新的 [COSTUME][0]
         options:
           COSTUME:
             '"ALIEN"': 外星人
@@ -389,8 +388,8 @@ zh-CN:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Dancelab_makeNewDanceSprite:
         text: |-
-          新建 {COSTUME}
-          命名为 {NAME}，位置位于 {LOCATION}
+          新建 [COSTUME][0]
+          命名为 [NAME][1]，位置位于 [LOCATION][2]
         options:
           COSTUME:
             '"ALIEN"': 外星人
@@ -417,7 +416,8 @@ zh-CN:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Dancelab_makeNewDanceSpriteGroup:
-        text: 在 {LAYOUT} 新建 {N} {COSTUME}
+        text: |-
+          在 [LAYOUT][2] 新建 [N][0] [COSTUME][1]
         options:
           'N':
             '2': '2'
@@ -468,9 +468,9 @@ zh-CN:
             '"plus"': 添加
             '"random"': 随机
       Dancelab_mixColors:
-        text: 混合 {COLOR1} 和 {COLOR2}
+        text: 混合 [COLOR1][0] 和 [COLOR2][1]
       Dancelab_nMeasures:
-        text: "{N} 个节拍"
+        text: "[N][0] 个节拍"
       Dancelab_onPointerDown:
         text: 当指针按下时
       Dancelab_onPointerDrag:
@@ -480,12 +480,14 @@ zh-CN:
       Dancelab_randomColor:
         text: 随机颜色
       Dancelab_setBackground:
-        text: 设置背景颜色为 {COLOR}
+        text: 设置背景颜色为 [COLOR][0]
       Dancelab_setBackgroundEffect:
-        text: 设置背景效果 {EFFECT}
+        text: |-
+          设置背景效果 [EFFECT][0]
         options:
           EFFECT:
             '"none"': 没有
+            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "随机"
             '"circles"': 隧道
             '"color_cycle"': 颜色
             '"diamonds"': 菱形
@@ -516,11 +518,11 @@ zh-CN:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           设置背景效果
-          {PALETTE} {EFFECT}
+          [PALETTE][0] [EFFECT][1]
         options:
           EFFECT:
             '"none"': 没有
-            '"rand"': 随机
+            '"rand"': "随机"
             '"circles"': 隧道
             '"quads"': 角度
             '"color_cycle"': 颜色
@@ -556,7 +558,7 @@ zh-CN:
             '"vintage"': 复古
             '"warm"': 红色
       Dancelab_setDanceSpeed:
-        text: 将 {SPRITE} 跳舞速度改为 {SPEED}
+        text: 将 [SPRITE][0] 跳舞速度改为 [SPEED][1]
         options:
           SPEED:
             '1': 正常
@@ -565,7 +567,7 @@ zh-CN:
             '0.5': 慢
             '0.25': 非常慢
       Dancelab_setDanceSpeedEach:
-        text: 将 {GROUP} 跳舞速度改为 {SPEED}
+        text: 将 [GROUP][0] 跳舞速度改为 [SPEED][1]
         options:
           GROUP:
             sprites: 所有
@@ -588,10 +590,11 @@ zh-CN:
             '0.5': 慢
             '0.25': 非常慢
       Dancelab_setForegroundEffect:
-        text: 设置前景效果为 {EFFECT}
+        text: 设置前景效果为 [EFFECT][0]
         options:
           EFFECT:
             '"none"': 没有
+            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "随机"
             '"bubbles"': 气泡
             '"confetti"': 彩纸屑
             '"hearts_red"': 心
@@ -606,11 +609,11 @@ zh-CN:
             '"color_lights"': 舞台灯光
             '"raining_tacos"': 玉米卷
       Dancelab_setForegroundEffectExtended:
-        text: 设置前景效果为 {EFFECT}
+        text: 设置前景效果为 [EFFECT][0]
         options:
           EFFECT:
             '"none"': 没有
-            '"rand"': 随机
+            '"rand"': "随机"
             '"bubbles"': 气泡
             '"hearts_colorful"': 五彩心
             '"confetti"': 彩纸屑
@@ -629,7 +632,7 @@ zh-CN:
             '"exploding_stars"': 星爆
             '"raining_tacos"': 玉米卷
       Dancelab_setProp:
-        text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
+        text: '设置 [SPRITE][0] [PROPERTY][1] 为 [VAL][2]'
         options:
           PROPERTY:
             '"scale"': 大小
@@ -639,7 +642,7 @@ zh-CN:
             '"x"': 水平位置
             '"y"': 垂直位置
       Dancelab_setPropEach:
-        text: 设置 {GROUP} {PROPERTY} 为 {VAL}
+        text: 设置 [GROUP][0] [PROPERTY][1] 为 [VAL][2]
         options:
           GROUP:
             sprites: 所有
@@ -664,7 +667,7 @@ zh-CN:
             '"y"': 垂直位置
             '"tint"': 色调
       Dancelab_setPropRandom:
-        text: 随机 {SPRITE} {PROPERTY}
+        text: 随机 [SPRITE][0] [PROPERTY][1]
         options:
           PROPERTY:
             '"scale"': 大小
@@ -675,7 +678,7 @@ zh-CN:
             '"y"': 垂直位置
             '"tint"': 色调
       Dancelab_setPropRandomEach:
-        text: 随机 {GROUP} {PROPERTY}
+        text: 随机 [GROUP][0] [PROPERTY][1]
         options:
           GROUP:
             sprites: 所有
@@ -700,9 +703,9 @@ zh-CN:
             '"y"': 垂直位置
             '"tint"': 色调
       Dancelab_setTint:
-        text: 设置 {SPRITE} 色调为 {VAL}
+        text: 设置 [SPRITE][0] 色调为 [VAL][1]
       Dancelab_setTintEach:
-        text: 设置 {THIS} 色调为 {VAL}
+        text: 设置 [THIS][0] 色调为 [VAL][1]
         options:
           THIS:
             sprites: 所有
@@ -719,7 +722,7 @@ zh-CN:
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
       Dancelab_setTintEachInline:
-        text: 设置 {THIS} 色调为 {VAL}
+        text: 设置 [THIS][0] 色调为 [VAL][1]
         options:
           THIS:
             sprites: 所有
@@ -736,15 +739,15 @@ zh-CN:
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
       Dancelab_setTintInline:
-        text: 设置 {SPRITE} 色调为 {VAL}
+        text: 设置 [SPRITE][0] 色调为 [VAL][1]
       Dancelab_setVisible:
-        text: 设置 {SPRITE} 可见度为 {VISIBILITY}
+        text: 设置 [SPRITE][0] 可见度为 [VISIBILITY][1]
         options:
           VISIBILITY:
             'true': 可见
             'false': 隐藏
       Dancelab_setVisibleEach:
-        text: 设置 {THIS} 可见度为 {VISIBILITY}
+        text: 设置 [THIS][0] 可见度为 [VISIBILITY][1]
         options:
           THIS:
             sprites: 所有
@@ -764,7 +767,7 @@ zh-CN:
             'true': 可见
             'false': 隐藏
       Dancelab_startMapping:
-        text: "{SPRITE} 开始 {PROPERTY} 为 {RANGE}"
+        text: "[SPRITE][0] 开始 [PROPERTY][1] 为 [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': 大小
@@ -779,7 +782,7 @@ zh-CN:
             '"mid"': 中音音量
             '"treble"': 高音音量
       Dancelab_startMappingEach:
-        text: "{GROUP} 开始 {PROPERTY} 跟随 {RANGE}"
+        text: "[GROUP][0] 开始 [PROPERTY][1] 跟随 [RANGE][2]"
         options:
           GROUP:
             sprites: 所有
@@ -808,7 +811,7 @@ zh-CN:
             '"mid"': 中音音量
             '"treble"': 高音音量
       Dancelab_stopMapping:
-        text: "{SPRITE} 停止 {PROPERTY} 为 {RANGE}"
+        text: "[SPRITE][0] 停止 [PROPERTY][1] 为 [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': 大小
@@ -824,7 +827,7 @@ zh-CN:
             '"mid"': 中音音量
             '"treble"': 高音音量
       Dancelab_stopMappingEach:
-        text: "{GROUP} 停止 {PROPERTY} 跟随 {RANGE}"
+        text: "[GROUP][0] 停止 [PROPERTY][1] 跟随 [RANGE][2]"
         options:
           GROUP:
             sprites: 所有
@@ -854,7 +857,7 @@ zh-CN:
             '"mid"': 中音音量
             '"treble"': 高音音量
       Dancelab_translateStrings:
-        text: 翻译 {STRING}
+        text: 翻译 [STRING][0]
         options:
           STRING:
             '"music_wave"': 波浪
@@ -900,7 +903,7 @@ zh-CN:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: 当 {KEY} 按下时
+        text: 当 [KEY][0] 按下时
         options:
           KEY:
             '"up"': 向上
@@ -946,7 +949,7 @@ zh-CN:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: 当 {RANGE} 达到最高
+        text: 当 [RANGE][0] 达到最高
         options:
           RANGE:
             '0': 低音
@@ -961,19 +964,19 @@ zh-CN:
           SONG:
             '"peas"': 黑眼豆豆合唱团 - 我有一种感觉
       gamelab_addBehaviorSimple:
-        text: 精灵图 {SPRITE} 开始 {BEHAVIOR}
+        text: 精灵图 [SPRITE][0] 开始 [BEHAVIOR][1]
       gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       gamelab_atTime:
-        text: 在 {N} {UNIT}
+        text: 在 [N][0] [UNIT][1]
         options:
           UNIT:
-            '"seconds"': " 秒"
+            '"seconds"': ' 秒'
             '"frames"': 帧
       gamelab_bounceOff:
-        text: "{SPRITE} 弹开 {TARGET}"
+        text: "[SPRITE][0] 弹开 [TARGET][1]"
       gamelab_changePropBy:
-        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
+        text: 将 [SPRITE][0] [PROPERTY][1] 改为 [VAL][2]
         options:
           PROPERTY:
             '"scale"': 大小
@@ -982,31 +985,31 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} 碰到 {SPRITE2}"
+        text: "[CONDITION][0] [SPRITE1][1] 碰到 [SPRITE2][2]"
         options:
           CONDITION:
             '"when"': 当
             '"while"': 当
       gamelab_clickedOn:
-        text: 当 {SPRITE} 被点击时
+        text: 当 [SPRITE][0] 被点击时
       gamelab_clickedSpritePointer:
-        text: 点击 {SPRITE}
+        text: "点击 [SPRITE][0]"
       gamelab_comment:
-        text: 注释： {COMMENT}
+        text: '注释： [COMMENT][0]'
       gamelab_countByAnimation:
-        text: "{SPRITE} 的数量"
+        text: '[SPRITE][0] 的数量'
       gamelab_createNewSprite:
-        text: "制作一个新的精灵图 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
+        text: "制作一个新的精灵图 \n 叫做 [NAME][0] \n 服装为 [COSTUME][1] \n 位于 [LOCATION][2]"
       gamelab_destroy:
-        text: 移除 {THIS}
+        text: 移除 [THIS][0]
       gamelab_draggable:
         text: 可拖拽
       gamelab_edgesDisplace:
-        text: 边缘模块阻止了 {SPRITE} 移动
+        text: 边缘模块阻止了 [SPRITE][0] 移动
       gamelab_getAllSprites:
         text: 所有精灵图
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': 大小
@@ -1016,27 +1019,27 @@ zh-CN:
             '"direction"': 移动方向
             '"tint"': 色调
       gamelab_getThisSprite:
-        text: "{CHOICE} 精灵图"
+        text: "[CHOICE][0] 精灵图"
         options:
           CHOICE:
             '"this"': 这
             '"other"': 其他
       gamelab_getTime:
-        text: 在{UNIT}中的时间
+        text: 在[UNIT][0]中的时间
         options:
           UNIT:
-            '"seconds"': " 秒"
+            '"seconds"': ' 秒'
             '"frames"': 帧
       gamelab_hideTitleScreen:
         text: 隐藏标题屏幕
       gamelab_ifVarEquals:
         text: |-
-          假如{NUM}={VAL}
-          {STATEMENT}
+          假如[NUM][0]=[VAL][1]
+          [STATEMENT][2]
       gamelab_isCostumeEqual:
-        text: "{SPRITE}图案是{COSTUME}"
+        text: "[SPRITE][0]图案是[COSTUME][1]"
       gamelab_isKeyPressed:
-        text: "{KEY} 是否被按下"
+        text: "[KEY][0] 是否被按下"
         options:
           KEY:
             '"up"': 向上
@@ -1071,13 +1074,13 @@ zh-CN:
             '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
-        text: "{SPRITE} 正在触碰边缘"
+        text: "[SPRITE][0] 正在触碰边缘"
       gamelab_isTouchingSprite:
-        text: "{SPRITE} 正在触碰 {TARGET}"
+        text: "[SPRITE][0] 正在触碰 [TARGET][1]"
       gamelab_jumpTo:
-        text: "{SPRITE} 跳到 {LOCATION}"
+        text: "[SPRITE][0] 跳到 [LOCATION][1]"
       gamelab_keyPressed:
-        text: "{CONDITION} {KEY} 被按下"
+        text: "[CONDITION][0] [KEY][1] 被按下"
         options:
           CONDITION:
             '"when"': 当
@@ -1115,9 +1118,9 @@ zh-CN:
             '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
-        text: '位置 x: {X} y: {Y}'
+        text: '位置 x: [X][0] y: [Y][1]'
       gamelab_locationModifier:
-        text: "{LOCATION} 的 {DIRECTION} {DISTANCE} 像素"
+        text: "[LOCATION][2] 的 [DIRECTION][1] [DISTANCE][0] 像素"
         options:
           DIRECTION:
             '"North"': 北
@@ -1127,15 +1130,15 @@ zh-CN:
       gamelab_locationMouse:
         text: 鼠标位置
       gamelab_locationOf:
-        text: "{SPRITE} 的位置"
+        text: '[SPRITE][0] 的位置'
       gamelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       gamelab_makeNewSpriteAnon:
-        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵图
+        text: 在 [LOCATION][1] 处, 创建一个新的 [ANIMATION_NAME][0] 精灵图
       gamelab_makeNumSprites:
-        text: 做{NUM}新{ANIMATION_NAME}精灵图
+        text: 做[NUM][0]新[ANIMATION_NAME][1]精灵图
       gamelab_mirrorSprite:
-        text: "{SPRITE} 面向 {DIRECTION}"
+        text: "[SPRITE][0] 面向 [DIRECTION][1]"
         options:
           DIRECTION:
             '"right"': 向右
@@ -1143,11 +1146,11 @@ zh-CN:
       gamelab_mouseLocation:
         text: 鼠标位置
       gamelab_moveBackward:
-        text: 向后移动 {SPRITE} {DISTANCE} 像素
+        text: 向后移动 [SPRITE][0] [DISTANCE][1] 像素
       gamelab_moveForward:
-        text: 向前移动 {SPRITE} {DISTANCE} 像素
+        text: 向前移动 [SPRITE][0] [DISTANCE][1] 像素
       gamelab_moveInDirection:
-        text: 移动 {SPRITE} {DISTANCE} 像素，方向 {DIRECTION}
+        text: 移动 [SPRITE][0] [DISTANCE][1] 像素，方向 [DIRECTION][2]
         options:
           DIRECTION:
             '"North"': 北
@@ -1155,15 +1158,15 @@ zh-CN:
             '"South"': 南
             '"West"': 西
       gamelab_moveToward:
-        text: 朝 {TARGET} 移动 {SPRITE} 距离 {DISTANCE}
+        text: 朝 [TARGET][2] 移动 [SPRITE][0] 距离 [DISTANCE][1]
       gamelab_objectSpritePointer:
-        text: 点击 {SPRITE}
+        text: "点击 [SPRITE][0]"
       gamelab_patrollingUpDown:
         text: 上移和下移
       gamelab_playSound:
-        text: 播放音效{SOUND}
+        text: 播放音效[SOUND][0]
       gamelab_pointInDirection:
-        text: 指向 {SPRITE} {DIRECTION}
+        text: 指向 [SPRITE][0] [DIRECTION][1]
         options:
           DIRECTION:
             '"North"': 北
@@ -1171,7 +1174,7 @@ zh-CN:
             '"South"': 南
             '"West"': 西
       gamelab_printText:
-        text: 打印 {TEXT}
+        text: 打印 [TEXT][0]
       gamelab_randColor:
         text: 随机颜色
       gamelab_randomColor:
@@ -1179,19 +1182,19 @@ zh-CN:
       gamelab_randomLocation:
         text: 随机位置
       gamelab_removeAllBehaviors:
-        text: "{SPRITE} 停止所有事情"
+        text: "[SPRITE][0] 停止所有事情"
       gamelab_removeBehaviorSimple:
-        text: 精灵图 {SPRITE} 停止 {BEHAVIOR}
+        text: 精灵图 [SPRITE][0] 停止 [BEHAVIOR][1]
       gamelab_removeTint:
-        text: 从 {THIS} 删除颜色
+        text: 从 [THIS][0] 删除颜色
       gamelab_repeatForever:
         text: 一直重复
       gamelab_setAnimation:
-        text: 将 {THIS} 的服装改为 {ANIMATION}
+        text: 将 [THIS][0] 的服装改为 [ANIMATION][1]
       gamelab_setBackground:
-        text: 设置背景颜色为 {COLOR}
+        text: 设置背景颜色为 [COLOR][0]
       gamelab_setBackgroundImage:
-        text: 设置背景为 {IMG}
+        text: 设置背景为 [IMG][0]
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': 洞穴
@@ -1209,9 +1212,9 @@ zh-CN:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 冬天
             undefined: 没有
       gamelab_setBackgroundImageAs:
-        text: 设置背景为 {IMG}
+        text: 设置背景为 [IMG][0]
       gamelab_setProp:
-        text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
+        text: 设置 [SPRITE][0] [PROPERTY][1] 为 [VAL][2]
         options:
           PROPERTY:
             '"scale"': 大小
@@ -1220,45 +1223,45 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       gamelab_setSizes:
-        text: 设置 {SPRITE} {PROPERTY} 为 {N}%
+        text: 设置 [SPRITE][0] [PROPERTY][1] 为 [N][2]%
         options:
           PROPERTY:
             '"scale"': 大小
             '"width"': 宽度
             '"height"': 高度
       gamelab_setTint:
-        text: 将 {THIS} 的颜色改为 {COLOR}
+        text: 将 [THIS][0] 的颜色改为 [COLOR][1]
       gamelab_setupSim:
         text: |-
           setup simulation with
-          {SPRITE1N}{SPRITE1COSTUME}速度{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}速度{SPRITE2SPEED}
+          [SPRITE1N][0][SPRITE1COSTUME][1]速度[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]速度[SPRITE2SPEED][5]
           收集
-          {SPRITE3N}{SPRITE3COSTUME}
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       gamelab_showTitleScreen:
-        text: 显示标题屏幕 {BREAK} 标题 {TITLE} 文本 {SUBTITLE}
+        text: 显示标题屏幕 [BREAK][0] 标题 [TITLE][1] 文本 [SUBTITLE][2]
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} 被点击"
+        text: "[CONDITION][0] [SPRITE][1] 被点击"
         options:
           CONDITION:
             '"when"': 当
             '"while"': 当
       gamelab_subjectSpritePointer:
-        text: 点击 {SPRITE}
+        text: "点击 [SPRITE][0]"
       gamelab_tumbling:
         text: 旋转
       gamelab_turn:
-        text: "{SPRITE} 转 {DIRECTION} {N} 度"
+        text: '[SPRITE][0] 转 [DIRECTION][1] [N][2] 度'
         options:
           DIRECTION:
             '"right"': 向右
             '"left"': 向左
       gamelab_updateTitleWithColor:
-        text: 显示标题屏幕 {BREAK} 标题 {TITLE} 颜色 {COLOR}
+        text: 显示标题屏幕 [BREAK][0] 标题 [TITLE][1] 颜色 [COLOR][2]
       gamelab_whenDownArrow:
         text: 当下方向键按下时
       gamelab_whenKey:
-        text: 当 {KEY} 按下时
+        text: 当 [KEY][0] 按下时
         options:
           KEY:
             '"up"': 向上
@@ -1275,13 +1278,13 @@ zh-CN:
       gamelab_whenRightArrow:
         text: 当按右方向键时
       gamelab_whenTouching:
-        text: 当 {SPRITE1} 碰到 {SPRITE2}
+        text: 当 [SPRITE1][0] 碰到 [SPRITE2][1]
       gamelab_whenUpArrow:
         text: 当上方向键按下时
       gamelab_whileDownArrow:
         text: 当下方向键按下时
       gamelab_whileKey:
-        text: 当 {KEY} 按下时
+        text: 当 [KEY][0] 按下时
         options:
           KEY:
             '"up"': 向上
@@ -1298,21 +1301,21 @@ zh-CN:
       gamelab_whileRightArrow:
         text: 当按右方向键时
       gamelab_whileTouching:
-        text: 当 {SPRITE1} 碰到 {SPRITE2}
+        text: 当 [SPRITE1][0] 碰到 [SPRITE2][1]
       gamelab_whileUpArrow:
         text: 当上方向键按下时
       gamelab_withPercentChance:
         text: |-
-          假如{NUM}%几率
-          {STATEMENT}
+          假如[NUM][0]%几率
+          [STATEMENT][1]
       gamelab_xLocationOf:
-        text: "{SPRITE} 的x轴坐标"
+        text: '[SPRITE][0] 的x轴坐标'
       gamelab_yLocationOf:
-        text: "{SPRITE} 的y坐标"
+        text: '[SPRITE][0] 的y坐标'
       Mikelab_addBehaviorSimple:
-        text: 精灵图 {SPRITE} 开始 {BEHAVIOR}
+        text: 精灵图 [SPRITE][0] 开始 [BEHAVIOR][1]
       Mikelab_addTrainingData:
-        text: 添加培训数据： {NAME},{LOCATION}
+        text: '添加培训数据： [NAME][0],[LOCATION][1]'
         options:
           NAME:
             "{x: 201, y: 100}": 对象
@@ -1322,8 +1325,10 @@ zh-CN:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 不是鱼
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 我的标签
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 不是我的标签
+      Mikelab_allSpritesWithAnimation:
+        text: "[ANIMATION][0]"
       Mikelab_changePropBy:
-        text: 将 {PROPERTY} {SPRITE} 改为 {VAL}
+        text: 将 [SPRITE][0] [PROPERTY][1] 改为 [VAL][2]
         options:
           PROPERTY:
             '"scale"': 大小
@@ -1332,7 +1337,7 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_createNewSprite:
-        text: "制作一个新的精灵图 \n 叫做 {COSTUME} \n 服装为 {NAME} \n 位于 {LOCATION}"
+        text: "制作一个新的精灵图 \n 叫做 [NAME][0] \n 服装为 [COSTUME][1] \n 位于 [LOCATION][2]"
         options:
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -1346,11 +1351,11 @@ zh-CN:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Mikelab_eval:
-        text: 执行 {CODE}
+        text: 执行 [CODE][0]
       Mikelab_getNext:
         text: 获取下一个对象
       Mikelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': 大小
@@ -1359,13 +1364,13 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupChangeAnim:
-        text: 将 {SELECT} {COSTUME} 改为 {COSTUME2}
+        text: 将 [SELECT][0] [COSTUME][1] 改为 [COSTUME2][2]
         options:
           SELECT:
             '"all"': 所有
             '"this"': 这
       Mikelab_groupChangePropBy:
-        text: 更改 {SELECT}{COSTUME} 的 {PROPERTY} 为{VAL}
+        text: 更改 [SELECT][1][COSTUME][2] 的 [PROPERTY][0] 为[VAL][3]
         options:
           SELECT:
             '"all"': 所有
@@ -1377,7 +1382,7 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupCreateNewSprite:
-        text: 在 {LOCATION} 创建一个新的 {COSTUME}
+        text: 在 [LOCATION][1] 创建一个新的 [COSTUME][0]
         options:
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -1391,17 +1396,17 @@ zh-CN:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Mikelab_groupDestroy:
-        text: 删除 {SELECT} {COSTUME}
+        text: 删除 [SELECT][0] [COSTUME][1]
         options:
           SELECT:
             '"all"': 所有
             '"this"': 这
       Mikelab_groupDisplace:
-        text: 所有 {COSTUME} 阻挡 {COSTUME2} 移动
+        text: 所有 [COSTUME][0] 阻挡 [COSTUME2][1] 移动
       Mikelab_groupEdgesDisplace:
-        text: 边缘模块阻止了 {COSTUME} 移动
+        text: 边缘模块阻止了 [COSTUME][0] 移动
       Mikelab_groupGetProp:
-        text: "{SELECT} {COSTUME} 的 {PROPERTY}"
+        text: "[SELECT][0] [COSTUME][1] 的 [PROPERTY][2]"
         options:
           SELECT:
             '"average"': 平均
@@ -1413,25 +1418,25 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupRemoveAllBehaviors:
-        text: 停止 {SELECT} {COSTUME} 行为
+        text: 停止 [SELECT][0] [COSTUME][1] 行为
         options:
           SELECT:
             '"all"': 所有
             '"this"': 这
       Mikelab_groupRemoveBehaviorSimple:
-        text: "{SELECT} {COSTUME} 停止 {BEHAVIOR}"
+        text: "[SELECT][0] [COSTUME][1] 停止 [ BEHAVIOR][2]"
         options:
           SELECT:
             '"all"': 所有
             '"this"': 这
       Mikelab_groupRemoveTint:
-        text: 从 {SELECT} {COSTUME} 去掉颜色
+        text: 从 [SELECT][0] [COSTUME][1] 去掉颜色
         options:
           SELECT:
             '"all"': 所有
             '"this"': 这
       Mikelab_groupSetProp:
-        text: 更改 {SELECT}{COSTUME} 的 {PROPERTY} 为{VAL}
+        text: 更改 [SELECT][1][COSTUME][2] 的 [PROPERTY][0] 为[VAL][3]
         options:
           SELECT:
             '"all"': 所有
@@ -1443,33 +1448,33 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupSetTint:
-        text: 更改 {SELECT} {COSTUME} 的颜色为 {COLOR}
+        text: 更改 [SELECT][0] [COSTUME][1] 的颜色为 [COLOR][2]
         options:
           SELECT:
             '"all"': 所有
             '"this"': 这
       Mikelab_groupWhenClickedOn:
-        text: 当点击 {COSTUME} 时
+        text: 当点击 [COSTUME][0] 时
       Mikelab_groupWhenXTouchesY:
-        text: 当{COSTUME} 碰到 {COSTUME2}
+        text: 当[COSTUME][0] 碰到 [COSTUME2][1]
       Mikelab_groupWhileClicked:
-        text: 点击 {COSTUME} 时
+        text: 点击 [COSTUME][0] 时
       Mikelab_groupWhileTouchingAny:
         text: |-
-          {COSTUME} 碰触到 {COSTUME2}
-          {STATEMENT}
+          [COSTUME][0] 碰触到 [COSTUME2][1]
+          [STATEMENT][2]
       Mikelab_hasBehavior:
-        text: "{SPRITE} 当前在 {BEHAVIOR}"
+        text: "[SPRITE][0] 当前在 [BEHAVIOR][1]"
       Mikelab_hideFish:
-        text: 删除 {TRASH}
+        text: 删除 [TRASH][0]
         options:
           TRASH:
             object: 对象
             fish: 鱼
       Mikelab_ifDanceIs:
         text: |-
-          如果 {SPRITE} 正在 {DANCE}
-          {DO1} {DO2}
+          如果 [SPRITE][0] 正在 [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: 用力鼓掌
@@ -1485,36 +1490,36 @@ zh-CN:
             MOVES.Rest: 没有
       Mikelab_ifLabel:
         text: |-
-          如果 {DANCE}
-          那么 {DO1} 否则 {DO2}
+          如果 [DANCE][0]
+          那么 [DO1][1] 否则 [DO2][2]
         options:
           DANCE:
             MOVES.ClapHigh: 鱼
             MOVES.Clown: 我的标签
       Mikelab_ifRecognizeLabel:
         text: |-
-          如果对象为 {DANCE}
-          那么 {DO1} 否则 {DO2}
+          如果对象为 [DANCE][0]
+          那么 [DO1][1] 否则 [DO2][2]
         options:
           DANCE:
             MOVES.ClapHigh: 鱼
             MOVES.Clown: 我的标签
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          如果对象为 {DANCE}
-          那么 {DO1}
+          如果对象为 [DANCE][0]
+          那么 [DO1][1]
         options:
           DANCE:
             MOVES.ClapHigh: 鱼
             MOVES.Clown: 不是我的标签
       Mikelab_locationAt:
-        text: '位置 x: {X} y: {Y}'
+        text: '位置 x: [X][0] y: [Y][1]'
       Mikelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       Mikelab_randomColor:
         text: 随机颜色
       Mikelab_removeBehaviorSimple:
-        text: 精灵图 {SPRITE} 停止 {BEHAVIOR}
+        text: 精灵图 [SPRITE][0] 停止 [BEHAVIOR][1]
       Mikelab_repeatUntilComplete:
         text: 一直重复
       Mikelab_sendBad:
@@ -1528,7 +1533,7 @@ zh-CN:
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': 公园风景
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': 松树
       Mikelab_setProp:
-        text: 设置 {PROPERTY} {SPRITE} 为 {VAL}
+        text: 设置 [SPRITE][0] [PROPERTY][1] 为 [VAL][2]
         options:
           PROPERTY:
             '"scale"': 大小
@@ -1537,7 +1542,7 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_setTint:
-        text: 将 {SPRITE} 的颜色改为 {COLOR}
+        text: 将 [THIS][0] 的颜色改为 [COLOR][1]
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1549,7 +1554,7 @@ zh-CN:
             '"above"': above
             '"below"': below
       Mikelab_sprite:
-        text: 在 {LOCATION} 创建一个新 {COSTUME} 精灵图
+        text: 在 [LOCATION][1] 创建一个新 [COSTUME][0] 精灵图
         options:
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -1563,9 +1568,9 @@ zh-CN:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Mikelab_whenClickedOn:
-        text: 当 {SPRITE} 被点击时
+        text: 当 [SPRITE][0] 被点击时
       Mikelab_whenKeyPressed:
-        text: 当 {KEY} 按下时
+        text: 当 [KEY][0] 按下时
         options:
           KEY:
             '"up"': 上方向键
@@ -1590,13 +1595,13 @@ zh-CN:
       Mikelab_whenMouseClicked:
         text: 当鼠标点击时
       Mikelab_whenTouchesAny:
-        text: 当{SPRITE} 触及任何精灵图时
+        text: 当[TARGET][0] 触及任何精灵图时
       Mikelab_whenYesNoClicked:
-        text: 当点击 {KEY} 时
+        text: 当点击 [KEY][0] 时
         options:
           KEY:
-            '"yes"': 是
-            '"no"': 不
+            '"yes"': '是'
+            '"no"': '不'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1606,12 +1611,12 @@ zh-CN:
             '"right"': 右方向键
       Mikelab_whileTouchingAny:
         text: |-
-          当{SPRITE} 碰到任何精灵图
-          {STATEMENT}
+          当[TARGET][0] 碰到任何精灵图
+          [STATEMENT][1]
       Mikelab_xLocationOf:
-        text: "{SPRITE} 的x轴坐标"
+        text: '[SPRITE][0] 的x轴坐标'
       Mikelab_yLocationOf:
-        text: "{SPRITE} 的y坐标"
+        text: '[SPRITE][0] 的y坐标'
       RyanLab_moveForward:
         text: 向前移动
       RyanLab_turnLeft:
@@ -1619,47 +1624,47 @@ zh-CN:
       RyanLab_turnRight:
         text: 向右转
       SpriteLab2Beta_spriteSay:
-        text: 精灵图 {SPRITE} 说{TEXT} 持续{SECONDS} 秒
+        text: 精灵图 [SPRITE][0] 说[TEXT][1] 持续[SECONDS][2] 秒
       Vector_createSpriteWith:
         text: |-
           创建精灵图
-          执行 {STATEMENT}
+          执行 [STATEMENT][0]
       Vector_log:
-        text: 日志消息 {MESSAGE}
+        text: 日志消息 [MESSAGE][0]
       Vector_positionCenter:
         text: 中央
       Vector_push:
-        text: 设置速度为 {VECTOR}
+        text: 设置速度为 [VECTOR][0]
       Vector_randomLocation:
         text: 随机位置
       Vector_setColor:
-        text: 设置颜色为 {COLOR}
+        text: 设置颜色为 [COLOR][0]
       Vector_setSize:
-        text: 设置宽度为 {WIDTH} 高度为 {HEIGHT}
+        text: 设置宽度为 [WIDTH][0] 高度为 [HEIGHT][1]
       Vector_teleportTo:
-        text: 设置位置为 {POSITION}
+        text: 设置位置为 [POSITION][0]
       Vector_vectorNorth:
         text: 北
       Vector_where:
-        text: 当每个的 {PROPERTY} 为 {VALUE} 时执行 {STATEMENT}
+        text: 当每个的 [PROPERTY][0] 为 [VALUE][1] 时执行 [STATEMENT][2]
         options:
           PROPERTY:
             "'shapeColor'": 颜色
       aalab_addBehaviorForDuration:
-        text: aalab 精灵图 {SPRITE} 开始 {BEHAVIOR} 经历 {SECONDS} 秒
+        text: aalab 精灵图 [SPRITE][0] 开始 [BEHAVIOR][1] 经历 [SECONDS][2] 秒
       aalab_addBehaviorUntilBoolean:
-        text: 精灵图{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
+        text: 精灵图[SPRITE][0] 开始[BEHAVIOR][1] 直到[CONDITION][2]
       aalab_createNewSpriteAnonReturn2:
-        text: 新精灵图在位置 {LOCATION}，名为 {SPRITE_NAME}，并穿着 {ANIMATION_NAME}
+        text: 新精灵图在位置 [LOCATION][2]，名为 [SPRITE_NAME][0]，并穿着 [ANIMATION_NAME][1]
       aalab_goToScene:
-        text: 前往场景 {SCENE}
+        text: 前往场景 [SCENE][0]
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
       aalab_moveInDirection:
-        text: 移动 {SPRITE} {DISTANCE} 像素，方向 {DIRECTION}
+        text: 移动 [SPRITE][0] [DISTANCE][1] 像素，方向 [DIRECTION][2]
         options:
           DIRECTION:
             '"North"': 北
@@ -1667,9 +1672,9 @@ zh-CN:
             '"South"': 南
             '"West"': 西
       aalab_prompt:
-        text: 提问 {MESSAGE}
+        text: 提问 [MESSAGE][0]
       aalab_scene:
-        text: 场景 {SCENE}
+        text: 场景 [SCENE][0]
         options:
           SCENE:
             '1': '1'
@@ -1678,48 +1683,48 @@ zh-CN:
       aalab_setupStory:
         text: 设置故事
       aalab_starwars_playSound:
-        text: 播放{OPTION}音轨
+        text: 播放[OPTION][0]音轨
         options:
           OPTION:
             '"random"': 随机
             '"R2-D2 random"': R2-D2随机
             '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 2"': "R2-D2 2\n"
             '"R2-D2 3"': R2-D2 3
             '"R2-D2 4"': R2-D2 4
             '"R2-D2 5"': R2-D2 5
       binary_drawBin:
-        text: 绘制二进制 {BIN}
+        text: 绘制二进制 [BIN][0]
       binary_drawBinScreen:
         text: |-
           绘制屏幕
-          {B1}
-          {B2}
-          {B3}
-          {B4}
-          {B5}
-          {B6}
-          {B7}
-          {B8}
+          [B1][0]
+          [B2][1]
+          [B3][2]
+          [B4][3]
+          [B5][4]
+          [B6][5]
+          [B7][6]
+          [B8][7]
       binary_drawDec:
-        text: 绘制十进制 {DEC}
+        text: 绘制十进制 [DEC][0]
       binary_drawPixelHere:
-        text: 设置像素 {VAL}
+        text: 设置像素 [VAL][0]
         options:
           VAL:
-            '0': 关闭
-            '1': 开启
+            '0': '关闭'
+            '1': '开启'
             '"toggle"': 切换
       binary_drawString:
-        text: 绘制字符串 {STR}
+        text: 绘制字符串 [STR][0]
       binary_goTo:
-        text: 跳到 {LOC}
+        text: 跳到 [LOC][0]
       binary_goToHome:
         text: 跳到左上角
       binary_gridSize:
-        text: 设置网格尺寸大小 {SIZE}
+        text: 设置网格尺寸大小 [SIZE][0]
       binary_move:
-        text: 移动 {DIR}
+        text: 移动 [DIR][0]
         options:
           DIR:
             '"up"': 向上
@@ -1727,7 +1732,7 @@ zh-CN:
             '"left"': 向左
             '"right"': 向右
       binary_whenKey:
-        text: 当 {KEY} 按下时
+        text: 当 [KEY][0] 按下时
         options:
           KEY:
             '"up"': 向上
@@ -1741,8 +1746,8 @@ zh-CN:
             '"d"': d
       craft_ifPath:
         text: |-
-          如果路径 {DIR}
-          {STATEMENT}
+          如果路径 [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": 前面
@@ -1750,8 +1755,8 @@ zh-CN:
             "'left'": 向左转
       craft_ifStandingOn:
         text: |-
-          站在{TYPE}
-          {STATEMENT}
+          站在[TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": 蓝色珊瑚
@@ -1762,19 +1767,19 @@ zh-CN:
             "'seaLantern'": 海晶灯
       craft_ifStandingOnLimit:
         text: |-
-          站在{TYPE}
-          {STATEMENT}
+          站在[TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": 沙子
             "'darkPrismarine'": 暗海晶石
             "'seaLantern'": 海晶灯
       craft_log:
-        text: 日志消息 {MESSAGE}
+        text: 日志消息 [MESSAGE][0]
       craft_moveForward:
         text: 向前移动
       craft_placeBlock:
-        text: 放下{blockType}
+        text: 放下[blockType][0]
         options:
           blockType:
             '"strippedOak"': 去皮橡木
@@ -1808,13 +1813,13 @@ zh-CN:
       craft_repeatUntilConduit:
         text: |-
           重复，直至潮涌核心完成
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           重复，直至目标达成
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: 生成{ENTITY}
+        text: 生成[ENTITY][0]
         options:
           ENTITY:
             '"cod"': 鳕鱼
@@ -1824,7 +1829,7 @@ zh-CN:
             '"squid"': 鱿鱼
             '"tropicalFish"': 热带鱼
       craft_turn:
-        text: 转向{DIR}
+        text: 转向[DIR][0]
         options:
           DIR:
             right: 右 ↻

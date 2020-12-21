@@ -15110,7 +15110,1373 @@ zh-CN:
           lessons:
             AI for Oceans:
               name: 海洋环保中的人工智能
-            intro:
-              name: 介绍
             visualizing:
               name: 可视化数据
+        csd1-2021:
+          title: CSD 第一单元——解决问题和计算('19-'20)
+          description: " \n单元1是计算机科学领域的高度交互和协作的介绍，在更广泛的范围寻找解决问题的方案。在其中将会练习使用解决问题的流程来解决一系列的难题、挑战和真实世界的场景。接下来，会学到计算机是如何进行输入、输出、存储处理信息，从而帮助人类解决问题。最后是设计一个应用程序的项目，来解决选择的问题。\n"
+          description_short: "  了解人类如何使用计算机来解决问题。"
+          lessons:
+            CS Discoveries Pre-survey:
+              key: 计算机科学发现预调查
+              name: 计算机科学发现预调查
+            Intro to Problem Solving:
+              key: 解决问题入门
+              name: 解决问题入门
+            The Problem Solving Process:
+              key: 解决问题的过程
+              name: 解决问题的过程
+            Exploring Problem Solving:
+              key: 探索解决问题
+              name: 探索解决问题
+            What is a Computer?:
+              key: 什么是计算机？
+              name: 什么是计算机？
+            Input and Output:
+              key: 输入和输出
+              name: 输入和输出
+            Processing:
+              key: 正在处理中
+              name: 正在处理中
+            Storage:
+              key: 存储
+              name: 存储
+            Project - Propose an App:
+              key: 项目- 提议一个应用程序
+              name: 项目- 提议一个应用程序
+            Post-Project Test:
+              key: 项目后测试
+              name: 项目后测试
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            csd1_1:
+              display_name: '第 1 章︰ 解决问题的流程'
+            csd1_2:
+              display_name: '第 2 章︰ 计算机和解决问题的能力'
+            csd1_3:
+              display_name: 替补课程
+        csd2-2021:
+          title: 计算机科学发现第 2 单元 - 网页开发
+          description: " 在第2单元中, 您将学习如何在自己的网页上创建和共享内容。在决定要与世界共享哪些内容之后, 您将学习如何使用 HTML 和 CSS 来构造和样式化页面。您还将练习有价值的编程技能, 如调试和注释。 在该单元的末尾, 您将有一个个人的网站可以发布到互联网上。"
+          description_short: "  了解如何在 Web 实验室中构建自己的网站。"
+          lessons:
+            Exploring Web Pages:
+              key: 探索网页
+              name: 探索网页
+            Intro to HTML:
+              key: HTML介绍
+              name: HTML介绍
+            Headings:
+              key: 标题
+              name: 标题
+            'Mini-Project: HTML Web Page':
+              key: '迷你项目：HTML网站'
+              name: '迷你项目：HTML网站'
+            Digital Footprint:
+              key: 数字足迹
+              name: 数字足迹
+            Styling Text with CSS:
+              key: 使用 CSS 设置文本样式
+              name: 使用 CSS 设置文本样式
+            'Mini-Project: Your Personal Style':
+              key: '迷你项目：你的风格'
+              name: '迷你项目：你的风格'
+            Intellectual Property:
+              key: 知识产权
+              name: 知识产权
+            Using Images:
+              key: 使用图画
+              name: 使用图画
+            'Websites for Expression ':
+              key: '网址表达式 '
+              name: '网址表达式 '
+            Styling Elements with CSS:
+              key: 使用 CSS 设置元素的样式
+              name: 使用 CSS 设置元素的样式
+            Your Web Page - Prepare:
+              key: 你的网站：准备
+              name: 你的网站：准备
+            Project - Personal Web Page:
+              key: 项目：个人网站
+              name: 项目：个人网站
+            Websites for a Purpose:
+              key: 有功能的网站
+              name: 有功能的网站
+            Team Problem Solving:
+              key: 团队解决问题
+              name: 团队解决问题
+            Sources and Research:
+              key: 来源和研究
+              name: 来源和研究
+            CSS Classes:
+              key: CSS 类
+              name: CSS 类
+            Planning a Multi-page Website:
+              key: 规划多个网页的网站
+              name: 规划多个网页的网站
+            Linking Pages:
+              key: 链接页面
+              name: 链接页面
+            Project - Website for a Purpose:
+              key: 项目 - 为某个目的的网站
+              name: 项目 - 为某个目的的网站
+            Peer Review and Final Touches:
+              key: 同伴评审和最后润色
+              name: 同伴评审和最后润色
+            Post-Project Test:
+              key: 项目后测试
+              name: 项目后测试
+            CS Discoveries Post Course survey:
+              key: 计算机科学发现课后问卷
+              name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd2_1v2:
+              display_name: '第一单元：创造网页'
+            csd2_2v2:
+              display_name: '第二章：多界面网站'
+            cspSurvey:
+              display_name: 调查
+        csd3-2021:
+          title: CSD单元 3 - 动画和游戏
+          description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵图的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
+          description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
+          lessons:
+            Programming for Entertainment:
+              key: 娱乐编程
+              name: 娱乐编程
+            Plotting Shapes:
+              key: 绘制形状
+              name: 绘制形状
+            Drawing in Game Lab:
+              key: 在游戏实验室绘画
+              name: 在游戏实验室绘画
+            Shapes and Parameters:
+              key: 形状和参数
+              name: 形状和参数
+            Variables:
+              key: 变量
+              name: 变量
+            Random Numbers:
+              key: 随机数
+              name: 随机数
+            Sprites:
+              key: 精灵图
+              name: 精灵图
+            Sprite Properties:
+              key: 精灵图属性
+              name: 精灵图属性
+            Text:
+              key: 文本
+              name: 文本
+            The Draw Loop:
+              key: 绘制循环
+              name: 绘制循环
+            Sprite Movement:
+              key: 精灵图移动
+              name: 精灵图移动
+            Conditionals:
+              key: 条件语句
+              name: 条件语句
+            Keyboard Input:
+              key: 键盘输入
+              name: 键盘输入
+            Mouse Input:
+              key: 鼠标输入
+              name: 鼠标输入
+            Project - Interactive Card:
+              key: 项目 - 互动卡
+              name: 项目 - 互动卡
+            Velocity:
+              key: 矢量
+              name: 矢量
+            Collision Detection:
+              key: 碰撞检测
+              name: 碰撞检测
+            Complex Sprite Movement:
+              key: 复杂的精灵图动作
+              name: 复杂的精灵图动作
+            Collisions:
+              key: 碰撞
+              name: 碰撞
+            Functions:
+              key: 函数
+              name: 函数
+            The Game Design Process:
+              key: 游戏设计过程
+              name: 游戏设计过程
+            Using the Game Design Process:
+              key: 使用游戏设计过程
+              name: 使用游戏设计过程
+            Project - Design a Game:
+              key: 项目 - 设计一个游戏
+              name: 项目 - 设计一个游戏
+            Post-Project Test:
+              key: 项目后测试
+              name: 项目后测试
+            CS Discoveries Post Course survey:
+              key: 计算机科学发现课后问卷
+              name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章︰图像和动画'
+            csd3_2:
+              display_name: '第 2 章︰ 创建游戏'
+            cspSurvey:
+              display_name: 调查
+        csd4-2021:
+          title: 计算机科学发现单元4 - 设计过程 ('18-'19)
+          description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成, 在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
+          description_short: "  学习如何设计一个能满足用户需要的程序。"
+          lessons:
+            Analysis of Design:
+              key: 设计分析
+              name: 设计分析
+            Understanding Your User:
+              key: 了解您的用户
+              name: 了解您的用户
+            User-Centered Design Micro Activity:
+              key: 以用户为中心的设计微活动
+              name: 以用户为中心的设计微活动
+            User Interfaces:
+              key: 用户界面
+              name: 用户界面
+            Feedback and Testing:
+              key: 反馈和测试
+              name: 反馈和测试
+            Identifying User Needs:
+              key: 识别用户需求
+              name: 识别用户需求
+            Project - Paper Prototype:
+              key: 项目 - 纸张原型
+              name: 项目 - 纸张原型
+            Designing Apps for Good:
+              key: 设计好的应用程序
+              name: 设计好的应用程序
+            Market Research:
+              key: 市场研究
+              name: 市场研究
+            Paper Prototypes:
+              key: 纸面原型
+              name: 纸面原型
+            Prototype Testing:
+              key: 原型测试
+              name: 原型测试
+            Digital Design:
+              key: 数字设计
+              name: 数字设计
+            Linking Screens:
+              key: 连接屏幕
+              name: 连接屏幕
+            Testing the App:
+              key: 测试应用程序
+              name: 测试应用程序
+            Improving and Iterating:
+              key: 改进和迭代
+              name: 改进和迭代
+            Project - App Presentation:
+              key: 项目 - 应用程序演示
+              name: 项目 - 应用程序演示
+            Post-Project Test:
+              key: 项目后测试
+              name: 项目后测试
+            CS Discoveries Post Course survey:
+              key: 计算机科学发现课后问卷
+              name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章︰ 用户为中心的设计'
+            csd4_2:
+              display_name: '第 2 章︰ 应用程序原型'
+            csd5_2:
+              display_name: '第 2 章︰ 解决数据问题'
+            cspSurvey:
+              display_name: 调查
+        csd5-2021:
+          title: CSD 单元5- 数据和社会
+          description: 单元5是关于数据在解决问题中的重要性, 它同时强调了计算机在这个过程中的作用。第一章探讨了在计算机中用来表示信息的不同系统以及使用它们所带来的挑战和折衷。在第二章中, 您将了解如何使用数据集合来解决问题, 以及计算机如何帮助自动化此过程的步骤。本章最后考虑如何将数据问题解决过程应用到您选择的区域。
+          description_short: 了解人们如何使用电脑来解决数据问题。
+          lessons:
+            Representation Matters:
+              key: 表示事项
+              name: 表示事项
+            Patterns and Representation:
+              key: 模式和表示法
+              name: 模式和表示法
+            ASCII and Binary Representation:
+              key: ASCII 和二进制表示形式
+              name: ASCII 和二进制表示形式
+            Representing Images:
+              key: 表示图像
+              name: 表示图像
+            Representing Numbers:
+              key: 表示数字
+              name: 表示数字
+            Keeping Data Secret:
+              key: 数据保密
+              name: 数据保密
+            Combining Representations:
+              key: 组合表示
+              name: 组合表示
+            Project - Create a Representation:
+              key: 项目-创建表示
+              name: 项目-创建表示
+            Problem Solving and Data:
+              key: 解决问题和数据
+              name: 解决问题和数据
+            Problem Solving with Big Data:
+              key: 用大数据解决问题
+              name: 用大数据解决问题
+            Structuring Data:
+              key: 构造数据
+              name: 构造数据
+            Making Decisions with Data:
+              key: 依靠数据做决定
+              name: 依靠数据做决定
+            Interpreting Data:
+              key: 表达数据
+              name: 表达数据
+            Automating Data Decisions:
+              key: 自动化数据决策
+              name: 自动化数据决策
+            Post-Project Test:
+              key: 项目后测试
+              name: 项目后测试
+            CS Discoveries Post Course survey:
+              key: 计算机科学发现课后问卷
+              name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章︰ 表达信息'
+            csd5_2:
+              display_name: '第 2 章︰ 解决数据问题'
+            cspSurvey:
+              display_name: 调查
+        csd6-2021:
+          title: CSD 6 单元- 物理计算 ('18-'19)
+          description: 单元6探讨了硬件平台在计算中的作用, 以及不同的传感器如何能够提供比传统键盘、鼠标和显示器更有效的输入和输出。使用应用程序实验室和 Adafruit 的电路面板, 您将开发一些利用您在智能设备中看到的相同的硬件输入和输出的程序, 并查看简单粗糙原型是如何变成成品的。该单位的最后是一个设计挑战, 你要以电路操场作为基础来制作自己设计的创新项目。
+          description_short: 学习使用物理设备编程。
+          lessons:
+            Innovations in Computing:
+              key: 计算中的创新
+              name: 计算中的创新
+            Designing Screens with Code:
+              key: 使用代码设计屏幕
+              name: 使用代码设计屏幕
+            The Circuit Playground:
+              key: 电路游乐场
+              name: 电路游乐场
+            Input Unplugged:
+              key: 线下输入
+              name: 线下输入
+            Board Events:
+              key: 主板事件
+              name: 主板事件
+            Getting Properties:
+              key: 取值器属性
+              name: 取值器属性
+            Analog Input:
+              key: 模拟输入
+              name: 模拟输入
+            The Program Design Process:
+              key: 程序设计过程
+              name: 程序设计过程
+            'Project: Make a Game':
+              key: '项目: 建立游戏'
+              name: '项目: 建立游戏'
+            Arrays and Color LEDs:
+              key: 数组和彩色LED灯
+              name: 数组和彩色LED灯
+            Making Music:
+              key: 制作音乐
+              name: 制作音乐
+            Arrays and For Loops:
+              key: 数组和计数循环
+              name: 数组和计数循环
+            Accelerometer:
+              key: 加速传感器
+              name: 加速传感器
+            Functions with Parameters:
+              key: 有参数的函数
+              name: 有参数的函数
+            Circuits and Physical Prototypes:
+              key: 电路和物理原型
+              name: 电路和物理原型
+            'Project: Prototype an Innovation':
+              key: '项目：创新原型'
+              name: '项目：创新原型'
+            Post-Project Test:
+              key: 项目后测试
+              name: 项目后测试
+            CS Discoveries Post Course survey:
+              key: 计算机科学发现课后问卷
+              name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章︰ 用硬件编程'
+            csd6_2:
+              display_name: '第 2 章︰ 创建物理原型'
+            cspSurvey:
+              display_name: 调查
+        csp1-2021:
+          title: 计算机科学原理单元1 - 数字信息('20-'21)
+          lessons:
+            CS Principles Pre-survey:
+              key: 计算机科学原理预调查
+              name: 计算机科学原理预调查
+            Welcome to CSP:
+              key: 欢迎来到计算机科学原理
+              name: 欢迎来到计算机科学原理
+            Representing Information:
+              key: 代表信息
+              name: 代表信息
+            Circle Square Patterns:
+              key: 圆形方形图案
+              name: 圆形方形图案
+            Binary Numbers:
+              key: 二进制数
+              name: 二进制数
+            Overflow and Rounding:
+              key: 溢出和舍入
+              name: 溢出和舍入
+            Representing Text:
+              key: 表达文本
+              name: 表达文本
+            Black and White Images:
+              key: 黑白图画
+              name: 黑白图画
+            Color Images:
+              key: 彩色图画
+              name: 彩色图画
+            Lossless Compression:
+              key: 无损压缩
+              name: 无损压缩
+            Lossy Compression:
+              key: 有损压缩
+              name: 有损压缩
+            Intellectual Property:
+              key: 知识产权
+              name: 知识产权
+            Project - Digital Information Dilemmas Part 1:
+              key: 项目 - 数字信息困境 第 1 部分
+              name: 项目 - 数字信息困境 第 1 部分
+            Project - Digital Information Dilemmas Part 2:
+              key: 项目 - 数字信息困境 第 2 部分
+              name: 项目 - 数字信息困境 第 2 部分
+            'Lesson 14: Assessment Day':
+              key: '单元 14：评估日'
+              name: '单元 14：评估日'
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            csp_unit1_2020:
+              display_name: '单元 1︰ 数字信息'
+        csp2-2021:
+          title: 计算机科学原理单元 2 ：互联网('20-'21)
+          lessons:
+            Welcome to the Internet:
+              key: 欢迎来到互联网
+              name: 欢迎来到互联网
+            Building a Network:
+              key: 构建网络
+              name: 构建网络
+            The Need for Addressing:
+              key: 寻址的需要
+              name: 寻址的需要
+            Routers and Redundancy:
+              key: 路由和冗余
+              name: 路由和冗余
+            Packets:
+              key: 数据包
+              name: 数据包
+            DNS and HTTP:
+              key: 域名解析服务（DNS）和超文本传输协议（HTTP）
+              name: 域名解析服务（DNS）和超文本传输协议（HTTP）
+            Project - Internet Dilemmas Part 1:
+              key: 项目 - 互联网困境 第 1 部分
+              name: 项目 - 互联网困境 第 1 部分
+            Project - Internet Dilemmas Part 2:
+              key: 项目 - 互联网困境 第 2 部分
+              name: 项目 - 互联网困境 第 2 部分
+            'Lesson 9: Assessment Day':
+              key: '第 9 单元：评估日'
+              name: '第 9 单元：评估日'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '单元 2︰ 互联网'
+        csp3-2021:
+          lessons:
+            Introduction to Apps:
+              key: 应用程序介绍
+              name: 应用程序介绍
+            Project - Designing an App Part 1:
+              key: 项目 - 设计一个应用，第 1 部分
+              name: 项目 - 设计一个应用，第 1 部分
+            Project - Designing an App Part 2:
+              key: 项目 - 设计一个应用，第 2 部分
+              name: 项目 - 设计一个应用，第 2 部分
+            The Need for Programming Languages:
+              key: 编程语言的需求
+              name: 编程语言的需求
+            Intro to Programming:
+              key: 编程介绍
+              name: 编程介绍
+            Debugging:
+              key: 调试
+              name: 调试
+            Project - Designing an App Part 3:
+              key: 项目 - 设计一个应用，第 3 部分
+              name: 项目 - 设计一个应用，第 3 部分
+            Project - Designing an App Part 4:
+              key: 项目 - 设计一个应用，第 4 部分
+              name: 项目 - 设计一个应用，第 4 部分
+            Project - Designing an App Part 5:
+              key: 项目 - 设计一个应用 第 5 部分
+              name: 项目 - 设计一个应用 第 5 部分
+            'Lesson 11: Assessment Day':
+              key: '第 11 单元：评估日'
+              name: '第 11 单元：评估日'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: '第3单元：应用设计简介'
+        csp4-2021:
+          title: 计算机科学原理第 4 单元 - 变量，条件和函数 ('20-'21)
+          lessons:
+            Variables Explore:
+              key: 变量探索
+              name: 变量探索
+            Variables Investigate:
+              key: 变量调查
+              name: 变量调查
+            Variables Practice:
+              key: 变量练习
+              name: 变量练习
+            Variables Make:
+              key: 使用变量
+              name: 使用变量
+            Conditionals Explore:
+              key: 条件探索
+              name: 条件探索
+            Conditionals Investigate:
+              key: 条件调查
+              name: 条件调查
+            Conditionals Practice:
+              key: 条件练习
+              name: 条件练习
+            Conditional Make:
+              key: 使用条件
+              name: 使用条件
+            Functions Explore / Investigate:
+              key: 函数探索/调查
+              name: 函数探索/调查
+            Functions Practice:
+              key: 函数练习
+              name: 函数练习
+            Functions Make:
+              key: 使用函数
+              name: 使用函数
+            Project - Decision Maker App Part 1:
+              key: 项目 - 决定制作者应用 第 1 部分
+              name: 项目 - 决定制作者应用 第 1 部分
+            Project - Decision Maker App Part 2:
+              key: 项目 - 决定制作者应用 第 2 部分
+              name: 项目 - 决定制作者应用 第 2 部分
+            Project - Decision Maker App Part 3:
+              key: 项目 - 决定制作者应用 第 3 部分
+              name: 项目 - 决定制作者应用 第 3 部分
+            'Lesson 15: Assessment Day':
+              key: '单元 15：评估日'
+              name: '单元 15：评估日'
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
+        csp5-2021:
+          title: 列表、循环和遍历
+          lessons:
+            Lists Explore:
+              key: 列表探索
+              name: 列表探索
+            Lists Investigate:
+              key: 列表调查
+              name: 列表调查
+            Lists Practice:
+              key: 列表实践
+              name: 列表实践
+            Lists Make:
+              key: 制作列表
+              name: 制作列表
+            Loops Explore:
+              key: 循环探索
+              name: 循环探索
+            Loops Investigate:
+              key: 循环调查
+              name: 循环调查
+            Loops Practice:
+              key: 循环实践
+              name: 循环实践
+            Loops Make:
+              key: 制作循环
+              name: 制作循环
+            Traversals Explore:
+              key: 遍历探索
+              name: 遍历探索
+            Traversals Investigate:
+              key: 遍历调研
+              name: 遍历调研
+            Traversals Practice:
+              key: 遍历练习
+              name: 遍历练习
+            Traversals Make:
+              key: 制作遍历
+              name: 制作遍历
+            Semester Hackathon Part 1:
+              key: 学期黑客马拉松第 1 部分
+              name: 学期黑客马拉松第 1 部分
+            Semester Hackathon Part 2:
+              key: 学期黑客马拉松第 2 部分
+              name: 学期黑客马拉松第 2 部分
+            Semester Hackathon Part 3:
+              key: 学期黑客马拉松第 3 部分
+              name: 学期黑客马拉松第 3 部分
+            Semester Hackathon Part 4:
+              key: 学期黑客马拉松第 4 部分
+              name: 学期黑客马拉松第 4 部分
+            Semester Hackathon Part 5:
+              key: 学期黑客马拉松第 5 部分
+              name: 学期黑客马拉松第 5 部分
+            'Lesson 18: Assessment Day':
+              key: '第 18 单元：评估日'
+              name: '第 18 单元：评估日'
+          lesson_groups:
+            csp_lists:
+              display_name: 列表
+            csp_loops:
+              display_name: 循环
+            csp_traversals:
+              display_name: 遍历
+            csp_project:
+              display_name: 项目
+        csp6-2021:
+          lessons:
+            Algorithms Solve Problems:
+              key: 算法解决问题
+              name: 算法解决问题
+            Algorithm Efficiency:
+              key: 算法效率
+              name: 算法效率
+            Unreasonable Time:
+              key: 不合理的时间
+              name: 不合理的时间
+            The Limits of Algorithms:
+              key: 算法的局限
+              name: 算法的局限
+            Parallel and Distributed Algorithms:
+              key: 并行和分布式算法
+              name: 并行和分布式算法
+            'Lesson 6: Assessment Day':
+              key: '第 6 单元：评估日'
+              name: '第 6 单元：评估日'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: '单元 6: 算法'
+        csp7-2021:
+          lessons:
+            Parameters and Return Explore:
+              key: 参数和返回值探索
+              name: 参数和返回值探索
+            Parameters and Return Investigate:
+              key: 参数和返回值调研
+              name: 参数和返回值调研
+            Parameters and Return Practice:
+              key: 参数和返回值实践
+              name: 参数和返回值实践
+            Parameters and Return Make:
+              key: 参数和返回值制作
+              name: 参数和返回值制作
+            Libraries Explore:
+              key: 探索 库
+              name: 探索 库
+            Libraries Investigate:
+              key: 库调研
+              name: 库调研
+            Libraries Practice:
+              key: 库实践
+              name: 库实践
+            Project - Make a Library Part 1:
+              key: 项目 - 制作库 第 1 部分
+              name: 项目 - 制作库 第 1 部分
+            Project - Make a Library Part 2:
+              key: 项目 - 制作库 第 2 部分
+              name: 项目 - 制作库 第 2 部分
+            Project - Make a Library Part 3:
+              key: 项目 - 制作库 第 3 部分
+              name: 项目 - 制作库 第 3 部分
+            'Lesson 11: Assessment Day':
+              key: '第 11 单元：评估日'
+              name: '第 11 单元：评估日'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 参数和返回值
+            csp_libraries:
+              display_name: 库
+        csp8-2021:
+          lessons:
+            Create PT - Review the Task:
+              key: 创建表演任务 - 评审任务
+              name: 创建表演任务 - 评审任务
+            Create PT - Make a Plan:
+              key: 创建表演任务 - 制定计划
+              name: 创建表演任务 - 制定计划
+            Create PT - Complete the Task:
+              key: 创建 表演任务- 完成任务
+              name: 创建 表演任务- 完成任务
+        csp9-2021:
+          lessons:
+            Learning From Data:
+              key: 从数据学习
+              name: 从数据学习
+            Exploring One Column:
+              key: 探索一列
+              name: 探索一列
+            Filtering and Cleaning Data:
+              key: 过滤和清除数据
+              name: 过滤和清除数据
+            Exploring Two Columns:
+              key: 探索两列
+              name: 探索两列
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: 大数据、众包和机器学习
+              name: 大数据、众包和机器学习
+            Machine Learning and Bias:
+              key: 机器学习和偏见
+              name: 机器学习和偏见
+            Project - Tell a Data Story - Part 1:
+              key: 项目 - 讲述数据的故事 - 第 1 部分
+              name: 项目 - 讲述数据的故事 - 第 1 部分
+            Project - Tell a Data Story - Part 2:
+              key: 项目 - 讲述数据的故事 - 第 2 部分
+              name: 项目 - 讲述数据的故事 - 第 2 部分
+            'Lesson 9: Assessment Day':
+              key: '第 9 单元：评估日'
+              name: '第 9 单元：评估日'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '单元 9: 数据'
+        csp10-2021:
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: 项目 - 创新模拟 第 1 部分
+              name: 项目 - 创新模拟 第 1 部分
+            Project - Innovation Simulation Part 2:
+              key: 项目 - 创新模拟 第 2 部分
+              name: 项目 - 创新模拟 第 2 部分
+            Data Policies and Privacy:
+              key: 数据政策和隐私
+              name: 数据政策和隐私
+            The Value of Privacy:
+              key: 隐私的价值
+              name: 隐私的价值
+            Project - Innovation Simulation Part 3:
+              key: 项目 - 创新模拟 第 3 部分
+              name: 项目 - 创新模拟 第 3 部分
+            Security Risks Part 1:
+              key: 安全风险 第 1 部分
+              name: 安全风险 第 1 部分
+            Security Risks Part 2:
+              key: 安全风险 第 2 部分
+              name: 安全风险 第 2 部分
+            'Project: Innovation Simulation Part 4':
+              key: '项目：创新模拟 第 4 部分'
+              name: '项目：创新模拟 第 4 部分'
+            Protecting Data Part 1:
+              key: 保护数据 第 1 部分
+              name: 保护数据 第 1 部分
+            Protecting Data Part 2:
+              key: 保护数据 第 2 部分
+              name: 保护数据 第 2 部分
+            'Project: Innovation Simulation Part 5':
+              key: '项目：创新模拟 第 5 部分'
+              name: '项目：创新模拟 第 5 部分'
+            'Project: Innovation Simulation Part 6':
+              key: '项目：创新模拟 第 6 部分'
+              name: '项目：创新模拟 第 6 部分'
+            'Project: Innovation Simulation Part 7':
+              key: '项目：创新模拟 第 7 部分'
+              name: '项目：创新模拟 第 7 部分'
+            'Lesson 14: Unit Assessment Day':
+              key: '第 14 课：单元评估日'
+              name: '第 14 课：单元评估日'
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: '第10单元：网络安全和全球影响'
+        coursea-2021:
+          title: 课程 A (2019)
+          description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          description_short: 为学前学生准备的计算机科学介绍
+          description_audience: '年龄：4-7'
+          lessons:
+            Learn to Drag and Drop:
+              key: 学习拖放
+              name: 学习拖放
+            'Programming: Happy Maps':
+              key: '编程: 快乐地图'
+              name: 快乐地图
+            Sequencing with Scrat:
+              key: 斯奎特和序列
+              name: 斯奎特和序列
+            Programming in Ice Age:
+              key: 在冰河时代里编程
+              name: 与斯奎特一起编程
+            Programming with Rey and BB-8:
+              key: 与雷伊，BB-8一起编程
+              name: 与雷伊，BB-8一起编程
+            'Loops: Happy Loops':
+              key: '循环: 快乐循环'
+              name: '循环: 快乐循环'
+            Loops in Ice Age:
+              key: 冰河时代里的循环
+              name: 斯奎特和循环
+            Loops in Collector:
+              key: 收集器中的循环
+              name: 收集器中的循环
+            Ocean Scene with Loops:
+              key: 艺术家里的循环
+              name: 艺术家里的循环
+            'Events: The Big Event':
+              key: '事件: 大事件'
+              name: 大事件少儿版。
+            Events in Play Lab:
+              key: 游戏实验室中的事件
+              name: 游戏实验室中的事件
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
+        courseb-2021:
+          title: 课程 B (2019)
+          description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          description_short: 为学前学生准备的计算机科学介绍。类似于课程A，但是增加了概念的深度。
+          description_audience: '年龄： 5-8'
+          lessons:
+            Digital Trails:
+              key: 数字小径
+              name: 数字小径
+            Move It, Move It:
+              key: 移动它，移动它！
+              name: 移动它，移动它！
+            Sequencing in Maze:
+              key: 迷宫中的序列
+              name: 愤怒的小鸟中的序列
+            Programming in Maze:
+              key: 迷宫编程
+              name: 迷宫编程
+            Programming in Harvester:
+              key: 与收割者编程
+              name: 与收割者编程
+            'Loops: Getting Loopy':
+              key: '循环: 变得糊涂'
+              name: 越来越糊涂
+            Loops in Harvester:
+              key: 收割者中的循环
+              name: 收割者中的循环
+            Loops in Collector:
+              key: 收集器中的循环
+              name: 收集器中的循环
+            Loops in Artist:
+              key: 艺术家里的循环
+              name: 用循环来画花园
+            The Right App:
+              key: 正确的应用程序
+              name: 正确的应用程序
+            'Events: The Big Event':
+              key: '事件: 大事件'
+              name: 大事件少儿版。
+            Events in Play Lab:
+              key: 游戏实验室中的事件
+              name: 游戏实验室中的事件
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_impacts:
+              display_name: 计算的影响
+            csf_events:
+              display_name: 事件
+        coursec-2021:
+          title: 课程 C (2019)
+          description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
+          description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
+          description_audience: '年龄：6-10'
+          lessons:
+            Password Power-Up:
+              key: 密码升级
+              name: 密码升级
+            'Programming: My Robotic Friends':
+              key: '编程: 我的机器人朋友'
+              name: '编程: 我的机器人朋友'
+            Programming in Maze:
+              key: 迷宫编程
+              name: 迷宫编程
+            Debugging in Maze:
+              key: 迷宫里的调试
+              name: 迷宫里的调试
+            Programming in Collector:
+              key: 在收集器中编程
+              name: 在收集器中编程
+            Programming in Artist:
+              key: 艺术家里的编程
+              name: 艺术家里的编程
+            Binary Bracelets:
+              key: 二进制的手镯
+              name: 二进制的手镯
+            'Loops: My Loopy Robotic Friends':
+              key: '循环: 我糊涂的机器人朋友'
+              name: '循环: 我糊涂的机器人朋友'
+            Loops with Rey and BB-8:
+              key: 与雷伊和BB-8一起循环
+              name: 与雷伊和BB-8一起循环
+            Loops in Harvester:
+              key: 收割者中的循环
+              name: 收割者中的循环
+            Looking Ahead:
+              key: 展望未来
+              name: 与《我的世界》往前看
+            Sticker Art with Loops:
+              key: 艺术家里的循环
+              name: 艺术家里的循环
+            'Events: The Big Event':
+              key: '事件: 大事件'
+              name: 大事件
+            Build a Flappy Game:
+              key: 创作像素鸟游戏
+              name: 创作像素鸟游戏
+            Events in Play Lab:
+              key: 游戏实验室中的事件
+              name: 游戏实验室中的事件
+            Picturing Data:
+              key: 图片数据
+              name: 图片数据
+            'End of Course Project: Create a Play Lab Game':
+              name: 结课项目
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_binary:
+              display_name: 二进制
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
+            end_of_course_project:
+              display_name: 结课项目
+        coursed-2021:
+          title: 课程 D (2019)
+          description: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
+          description_short: 学习条件语句，并创建自己的艺术，故事或游戏。
+          description_audience: '年龄：7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: '算法: 图纸编程'
+              name: 方格纸编程
+            Introduction to Online Puzzles:
+              key: 在线拼图简介
+              name: 在线拼图简介
+            Relay Programming:
+              key: 编程接力
+              name: 编程接力
+            Debugging in Collector:
+              key: 在收集器中调试
+              name: 在收集器中调试
+            Events in Bounce:
+              key: 反弹事件
+              name: 反弹事件
+            Build a Star Wars Game:
+              key: 建立一个星球大战游戏!
+              name: 建立一个星球大战游戏!
+            Dance Party:
+              key: 舞蹈派对
+              name: 舞蹈派对
+            Loops in Ice Age:
+              key: 冰河时代里的循环
+              name: 冰河时代里的循环
+            Loops in Artist:
+              key: 艺术家里的循环
+              name: 艺术家里的循环
+            Nested Loops in Bee:
+              key: 蜜蜂里的嵌套循环
+              name: 迷宫里的嵌套循环
+            Conditionals with Cards:
+              key: 用 扑克牌 的 条件子句
+              name: 用 扑克牌 的 条件子句
+            Conditionals in Bee:
+              key: 蜜蜂里的条件
+              name: 蜜蜂里的条件
+            While Loops in Farmer:
+              key: 当在农民循环中
+              name: 当在农民循环中
+            Until Loops in Maze:
+              key: 迷宫里的直到循环
+              name: 迷宫里的直到循环
+            Conditionals & Loops in Harvester:
+              key: 收割者里的条件和循环
+              name: 收割者里的条件和循环
+            'Unplugged: Binary':
+              key: '离线：二进制'
+              name: 二进制图像
+            Artist Binary:
+              key: 小艺术家：二进制
+              name: 小艺术家：二进制
+            Be A Super Digital Citizen:
+              key: 做一个超级数字公民
+              name: 做一个超级数字公民
+            End of Course Project:
+              key: 结课项目
+              name: 结课项目
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_events:
+              display_name: 事件
+            csf_loops:
+              display_name: 循环
+            csf_conditionals:
+              display_name: 条件语句
+            csf_binary:
+              display_name: 二进制
+            csf_digcit:
+              display_name: 数字公民
+            end_of_course_project:
+              display_name: 结课项目
+        coursee-2021:
+          title: 课程 E (2019)
+          description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+          description_short: 回顾课程 C 和 D 中的概念，然后继续学习函数。
+          description_audience: '年龄：8-12'
+          lessons:
+            Sequencing in the Maze:
+              key: 迷宫中的序列
+              name: 迷宫中的序列
+            Programming and Loops with the Artist:
+              key: 艺术家的编程和循环
+              name: 艺术家的编程和循环
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: '《我的世界：水上航行》的条件'
+              name: '《我的世界：水上航行》的条件'
+            Conditionals:
+              key: 条件语句
+              name: 农夫和条件
+            Simon Says:
+              key: Simon 说
+              name: Simon 说
+            Learning Sprites with Sprite Lab:
+              key: 在精灵图实验室学习精灵图
+              name: 在精灵图实验室学习精灵图
+            Alien Dance Party with Sprite Lab:
+              key: 精灵图实验室中的外星人舞蹈派对
+              name: 精灵图实验室中的外星人舞蹈派对
+            Private and Personal Information:
+              key: 私人和个人信息
+              name: 私人和个人信息
+            About Me:
+              key: 关于我
+              name: 关于我
+            Digital Sharing:
+              key: 数字共享
+              name: 数字共享
+            Nested Loops in Bee:
+              key: 蜜蜂里的嵌套循环
+              name: 迷宫里的嵌套循环
+            Nested Loops in Artist:
+              key: 艺术家中的嵌套循环
+              name: 艺术家中的嵌套循环
+            Nested Loops in Frozen:
+              key: 冰雪奇缘里的嵌套循环
+              name: 冰雪奇缘和嵌套循环
+            'Functions: Songwriting':
+              key: '功能: 作曲'
+              name: 写歌
+            Functions in Minecraft:
+              key: '《我的世界》中的函数'
+              name: '《我的世界》中的函数'
+            Functions in Harvester:
+              key: 收割者中的函数
+              name: 收割者中的函数
+            Functions in Artist:
+              key: 艺术家之间的功能
+              name: 艺术家之间的功能
+            Designing for Accessibility:
+              key: 辅助功能设计
+              name: 辅助功能设计
+            End of Course Project:
+              key: 结课项目
+              name: 结课项目
+          lesson_groups:
+            ramp_up:
+              display_name: 热身
+            csf_sprites:
+              display_name: 精灵图
+            csf_digcit:
+              display_name: 数字公民
+            csf_nested_loops:
+              display_name: 循环嵌套
+            csf_functions:
+              display_name: 函数
+            csf_impacts:
+              display_name: 计算的影响
+            end_of_course_project:
+              display_name: 结课项目
+        coursef-2021:
+          title: 课程 F （2019）
+          description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
+          description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
+          description_audience: '年龄：9-13'
+          lessons:
+            Functions in Minecraft:
+              key: '《我的世界》中的函数'
+              name: '《我的世界》中的函数'
+            Learning Sprites with Sprite Lab:
+              key: 在精灵图实验室学习精灵图
+              name: 在精灵图实验室学习精灵图
+            Events with Sprite Lab:
+              name: 精灵图实验室中的外星人舞蹈派对
+            Loops with the Artist:
+              name: 艺术家的编程和循环
+            Nested Loops in the Maze:
+              key: 迷宫里的嵌套循环
+              name: 迷宫里的嵌套循环
+            The Power of Words:
+              key: 语言的力量
+              name: 语言的力量
+            Envelope Variables:
+              key: 封装变量
+              name: 封装变量
+            Variables as Constant in Artist:
+              key: 艺术家里的变量作为常数
+              name: 艺术家和变量
+            Variables that Change in Bee:
+              key: 蜜蜂里的变化的变量
+              name: 蜜蜂与改变变量
+            Variables that Change in Artist:
+              key: 小艺术家里的变化的变量
+              name: 小艺术家与改变变量
+            Simulating Experiments:
+              key: 模拟实验
+              name: 模拟实验
+            AI for Oceans:
+              key: 海洋环保中的人工智能
+              name: 海洋环保中的人工智能
+            Internet:
+              key: 互联网
+              name: 互联网
+            For Loop Fun:
+              key: 计数循环的乐趣
+              name: 计数循环的乐趣
+            For Loops in Bee:
+              key: 蜜蜂式里的循环
+              name: 蜜蜂式里的循环
+            For Loops in Artist:
+              key: 对于艺术家里的循环
+              name: 对于艺术家里的循环
+            Editing Behaviors:
+              key: 编辑行为
+              name: 编辑行为
+            Virtual Pet:
+              name: 虚拟宠物
+            End of Course Project:
+              key: 结课项目
+              name: 结课项目
+          lesson_groups:
+            ramp_up:
+              display_name: 热身
+            csf_digcit:
+              display_name: 数字公民
+            csf_variables:
+              display_name: 变量
+            csf_for_loops:
+              display_name: 计数循环
+            csf_sprites:
+              display_name: 精灵图
+            end_of_course_project:
+              display_name: 结课项目
+        express-2021:
+          title: 速学课程 (2019)
+          description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          description_short: '计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。'
+          description_audience: '年龄：9-18'
+          lessons:
+            Dance Party:
+              key: 舞蹈派对
+              name: 舞蹈派对
+            Programming with Angry Birds:
+              key: 迷宫编程
+              name: 迷宫编程
+            Debugging with Scrat:
+              key: 斯奎特和调试
+              name: 斯奎特和调试
+            Collecting Treasure with Laurel:
+              key: 在收集器中编程
+              name: 在收集器中编程
+            Creating Art with Code:
+              key: 艺术家里的编程
+              name: 艺术家里的编程
+            Loops with Rey and BB-8:
+              key: 与雷伊和BB-8一起循环
+              name: 与雷伊和BB-8一起循环
+            Sticker Art with Loops:
+              key: 艺术家里的循环
+              name: 艺术家里的循环
+            Nested Loops in Maze:
+              key: 迷宫里的嵌套循环
+              name: 迷宫里的嵌套循环
+            Snowflakes with Anna and Elsa:
+              key: 冰雪奇缘里的嵌套循环
+              name: 冰雪奇缘里的嵌套循环
+            'Looking Ahead with Minecraft ':
+              key: '与《我的世界》往前看 '
+              name: '与《我的世界》往前看 '
+            If/Else with Bee:
+              key: 蜜蜂里的条件
+              name: 蜜蜂里的条件
+            While Loops with the Farmer:
+              key: 当在农民循环中
+              name: 当在农民循环中
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: '《我的世界：水上航行》的条件'
+              name: '《我的世界：水上航行》的条件'
+            Until Loops in Maze:
+              key: 迷宫里的直到循环
+              name: 迷宫里的直到循环
+            Harvesting with Conditionals:
+              key: 收割者里的条件和循环
+              name: 收割者里的条件和循环
+            Functions in Minecraft:
+              key: '《我的世界》中的函数'
+              name: '《我的世界》中的函数'
+            Functions with Harvester:
+              key: 收割者中的函数
+              name: 收割者中的函数
+            Functions with Artist:
+              key: 艺术家之间的功能
+              name: 艺术家之间的功能
+            Variables with Artist:
+              key: 艺术家和变量
+              name: 艺术家和变量
+            Changing Variables with Bee:
+              key: 蜜蜂与改变变量
+              name: 蜜蜂与改变变量
+            Changing Variables with Artist:
+              key: 小艺术家与改变变量
+              name: 小艺术家与改变变量
+            For Loops with Bee:
+              key: 蜜蜂式里的循环
+              name: 蜜蜂式里的循环
+            For Loops with Artist:
+              key: 对于艺术家里的循环
+              name: 对于艺术家里的循环
+            Swimming Fish in Sprite Lab:
+              key: 在精灵图实验室学习精灵图
+              name: 在精灵图实验室学习精灵图
+            Alien Dance Party:
+              key: 外星人舞蹈派对
+              name: 外星人舞蹈派对
+            Behaviors in Sprite Lab:
+              key: 编辑行为
+              name: 编辑行为
+            Virtual Pet with Sprite Lab:
+              key: 虚拟宠物
+              name: 虚拟宠物
+            End of Course Project:
+              key: 结课项目
+              name: 结课项目
+          lesson_groups:
+            csf_warmup:
+              display_name: 热身
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_conditionals:
+              display_name: 条件语句
+            csf_functions:
+              display_name: 函数
+            csf_variables:
+              display_name: 变量
+            csf_for_loops:
+              display_name: 计数循环
+            csf_sprites:
+              display_name: 精灵图
+            end_of_course_project:
+              display_name: 结课项目
+        pre-express-2021:
+          title: 学前儿童的速学课程 (2019)
+          description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          description_short: '学龄前读者的计算机科学介绍：结合了我们最好的幼儿园和一年级的课程。'
+          description_audience: '年龄： 4-8'
+          lessons:
+            Learn to Drag and Drop:
+              key: 学习拖放
+              name: 学习拖放
+            Sequencing with Scrat:
+              key: 斯奎特和序列
+              name: 斯奎特和序列
+            Programming in with Angry Birds:
+              key: 用愤怒的小鸟联系编程
+              name: 用愤怒的小鸟联系编程
+            Programming with Rey and BB-8:
+              key: 与雷伊，BB-8一起编程
+              name: 与雷伊，BB-8一起编程
+            Programming in Harvester:
+              key: 与收割者编程
+              name: 与收割者编程
+            Loops with Scrat:
+              key: 斯奎特和循环
+              name: 斯奎特和循环
+            Loops with Laurel:
+              key: 收集器中的循环
+              name: 收集器中的循环
+            Ocean Scene with Loops:
+              key: 艺术家里的循环
+              name: 艺术家里的循环
+            Drawing Gardens with Loops:
+              key: 用循环来画花园
+              name: 用循环来画花园
+            On the Move with Events:
+              key: 游戏实验室中的事件
+              name: 游戏实验室中的事件
+            A Royal Battle with Events:
+              key: 游戏实验室中的事件
+              name: 游戏实验室中的事件
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
+        csf-2021-pilot:
+          lessons:
+            Learning Sprites with Sprite Lab:
+              name: 在精灵图实验室学习精灵图
+            lesson-1:
+              name: 封装变量
+          lesson_groups:
+            ramp_up:
+              display_name: 介绍
+            lessonGroup-3:
+              display_name: 变量
