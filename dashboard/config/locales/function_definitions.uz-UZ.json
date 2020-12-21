@@ -10,6 +10,12 @@
         "2-3 Artist Debugging 10": {
           "draw a circle": {
             "name": "aylana chizish"
+          },
+          "draw square": {
+            "parameters": {
+              "width": "kenglik",
+              "height": "balandlik"
+            }
           }
         },
         "4-5 Artist 7": {
@@ -91,11 +97,17 @@
         "Geometric Sun": {
           "draw a house": {
             "name": "uy chizish"
+          },
+          "diamond": {
+            "name": "olmos"
           }
         },
         "Geometric Sun_2018": {
           "draw a house": {
             "name": "uy chizish"
+          },
+          "diamond": {
+            "name": "olmos"
           }
         },
         "NEW Course 4 Artist Params 10": {
@@ -295,6 +307,9 @@
         "courseE_artist_concept1": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "draw a hexagon": {
+            "name": "olti burchakni chizish"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -310,6 +325,12 @@
         "courseE_artist_functions10": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "draw hexagon": {
+            "name": "oltiburchakni chizish"
+          },
+          "draw line of hexagons": {
+            "name": "oltiburchak chizig'ini chizish"
           }
         },
         "courseE_artist_functions10_2018": {
@@ -348,6 +369,9 @@
         "courseE_artist_functions7": {
           "draw a house": {
             "name": "uy chizish"
+          },
+          "draw a window": {
+            "name": "oyna chizish"
           }
         },
         "courseE_artist_functions7_2018": {
@@ -461,6 +485,9 @@
         "courseE_artist_functions9": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "draw line of triangles": {
+            "name": "uchburchaklar chizig'ini chizish"
           }
         },
         "courseE_artist_functions9_2018": {
@@ -530,6 +557,12 @@
         "courseE_artist_functions_predict2": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "draw line of polygons": {
+            "name": "ko'pburchaklar chizig'ini chizish"
+          },
+          "draw polygon": {
+            "name": "ko'pburchak chizish"
           }
         },
         "courseE_artist_functions_predict2_2018": {
@@ -588,6 +621,9 @@
         "courseE_farmer_concept2": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "get pumpkin": {
+            "name": "oshqovoq"
           }
         },
         "courseE_farmer_concept3": {
@@ -836,7 +872,8 @@
             "parameters": {
               "sides": "tomonlar",
               "length": "uzunlik"
-            }
+            },
+            "name": "n-tomonli shakl"
           },
           "draw a loop": {
             "parameters": {
@@ -861,6 +898,9 @@
             "parameters": {
               "size": "kattalik"
             }
+          },
+          "n-sided shape": {
+            "name": "n-tomonli shakl"
           }
         },
         "MC_HOC_2017_FP20x20": {
@@ -1692,6 +1732,131 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "yig‘ish"
+          }
+        },
+        "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_functions2_copy": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "yulduz chizish"
+          }
+        },
+        "courseE_artist_functions4_copy": {
+          "draw a star": {
+            "name": "yulduz chizish"
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "yulduz chizish"
+          }
+        },
+        "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "yulduz chizish"
+          }
+        },
+        "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_functions_predict1_copy": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_concept4": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          },
+          "draw a plane of squares": {
+            "name": "kvadratlar tekisligini chizish"
+          }
+        },
+        "2-3 Artist 11": {
+          "x": {
+            "name": "x"
+          }
+        },
+        "2-3 Artist 7": {
+          "draw_rect": {
+            "parameters": {
+              "width": "kenglik",
+              "height": "balandlik"
+            }
+          }
+        },
+        "2-3 Artist Functions 11": {
+          "draw a hexagon": {
+            "name": "olti burchakni chizish"
+          }
+        },
+        "2-3 Artist Functions 11.5": {
+          "draw a hexagon": {
+            "name": "olti burchakni chizish"
+          }
+        },
+        "2-3 Artist Functions 12": {
+          "draw a flower": {
+            "name": "gul chizish"
+          }
+        },
+        "2-3 Artist Functions 2": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "2-3 Artist Functions 3": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "2-3 Artist Functions 4": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "2-3 Artist Functions 9": {
+          "draw a snowflake": {
+            "name": "qor parchasini chizish"
+          }
+        },
+        "4-5 Artist 3": {
+          "draw a flower": {
+            "name": "gul chizish"
+          }
+        },
+        "4-5 Artist 6": {
+          "draw a tree": {
+            "name": "daraxtni chizish"
+          }
+        },
+        "courseE_Dogger_2": {
+          "stop_everything": {
+            "name": "stop_everything"
+          },
+          "lose": {
+            "name": "Yutqazish"
+          }
+        },
+        "Choose Your Own Adventure": {
+          "witch ending": {
+            "name": "jodugarning oxiri"
+          },
+          "story": {
+            "name": "hikoya"
+          },
+          "starting path": {
+            "name": "boshlash yo'li"
           }
         }
       }

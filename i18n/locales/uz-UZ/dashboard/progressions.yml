@@ -9,6 +9,7 @@ uz:
       Artist Intro with JR Hildebrand: JR Hildebrand bilan Rassomga muqaddima
       Artist Intro with JR Hildebrande: R Hildebrand bilan Rassomga muqaddima
       Artist Project: Rassom loyihasi
+      'Artist: Variables': 'Rassom: O''zgaruvchilar'
       Attribution: Atributlar
       Basic Conditionals: Shartli bayonorlar asoslari
       Board Input and Output: Kirish va chiqish
@@ -61,6 +62,7 @@ uz:
       Functions: Funksiyalar
       Functions with Parameters: Funksiyalar (parameterlari bilan)
       How to Create a Simple Function: Oddiy funksiya qanday yasaladi
+      How to Make a Sprite: Sprite qanday qilinadi
       Ice Age Loops: Muzlik asri bilan sikllar
       Images and Sounds: Rasmlar va tovushlar
       Input Examples: Kiritishga misollar
@@ -68,6 +70,8 @@ uz:
       Intro to For Loops: For sikliga kirish
       Intro to Sprites: Spraytlarga kirish
       Intro to Variables: O'zgaruvchilarda kirish
+      Introducing Sprite Lab: Sprite laboratoriyasi bilan tanishish
+      Introduction to Arrays: Massivlar bilan tanishish
       Iteration and Parameters: Iteratsiya va Parametrlar
       LED Apps: LED ilovalar
       Layout with CSS: CSS bilan ko'rinishlar (layout)
@@ -153,12 +157,14 @@ uz:
       The Artist in Code Studio: '"Code Studio"da Rassom'
       The Buzzer: Buzzer
       The Collector: Kollektor
+      The Harvester: Hosil yig'uvchi (Harvester)
       UI Element Properties: UI element xususiyatlari
       User Interface: UI - Foydalanuvchi interfeysi
       Using Getters and Setters: Getters va Setterlardan foydalanish
       Using HTML Tags: HTML teglaridan foydalanish
       Using Random Numbers: Tasodifiy sonlardan foydalanish
       Using the LED: LED-dan foydalanish
+      Using the Repeat Block: Takrorlash blokidan foydalanish
       Using the Switch: Switch-dan foydalanish
       Vaccines: Vaksinalar
       Velocity: Tezlik
