@@ -1,2 +1,624 @@
 {
+  "uz-UZ": {
+    "data": {
+      "behavior_names": {
+        "CourseE_Project_SpriteLab": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "CourseE_Project_SpriteLab_2019": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "CourseE_hoops": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "CourseF_Project_SpriteLab": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "Dance Party 2": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish"
+        },
+        "Dance Party 2_2019": {
+          "spinning left": "chap tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 2_2020": {
+          "spinning left": "chap tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 3_2019": {
+          "spinning left": "chap tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 3_2020": {
+          "spinning left": "chap tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 4_2019": {
+          "spinning left": "chap tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 4_2020": {
+          "spinning left": "chap tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 5_2019": {
+          "spinning left": "chap tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 5_2020": {
+          "spinning left": "chap tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 6": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 6_2019": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 6_2020": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 7_2019": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party 7_2020": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Dance Party Freeplay": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Fish Tank 2-validated_2019": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Fish Tank 2-validated_2020": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Fish Tank 3-validated_2019": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Fish Tank 3-validated_2020": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Fish Tank 4-validated_2019": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Fish Tank 4-validated_2020": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Fish Tank 5-validated_2019": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Fish Tank 5-validated_2020": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Fish Tank 6-validated_2019": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Fish Tank 6-validated_2020": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Virtual Pet 2": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish"
+        },
+        "Virtual Pet 4": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Virtual Pet 5": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Virtual Pet 6": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "Virtual Pet Freeplay": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "courseE_Dogger_2": {
+          "drive left": "chapga haydash",
+          "drive right": "o‘ngga haydash",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "courseE_aboutme_1": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "courseE_aboutme_1_2020": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "courseE_aboutme_2": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "courseE_aboutme_2_2020": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "courseE_aboutme_3": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "courseE_aboutme_3_2020": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "courseE_aboutme_4": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "courseE_aboutme_4_2020": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "courseE_aboutme_5": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "courseE_aboutme_5_2020": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "courseF_project_1": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "CourseF_Project_SpriteLab_2019": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "Virtual Pet 1_2019": {
+          "spinning right": "o'ng tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "Virtual Pet 1_2020": {
+          "spinning right": "o'ng tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "Virtual Pet 2_2019": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "Virtual Pet 2_2020": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "Virtual Pet 3_2019": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "Virtual Pet 3_2020": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "Virtual Pet 4_2019": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "Virtual Pet 4_2020": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "behaviors 1": {
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "behaviors 1_2020": {
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "behaviors 2": {
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "behaviors 2_2020": {
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "behaviors 3": {
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "behaviors 3_2020": {
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "behaviors 3a": {
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "behaviors 3a_2020": {
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "behaviors 4": {
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "behaviors 4_2020": {
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "behaviors 6": {
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "behaviors 6_2020": {
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving east": "sharqqa yurish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish"
+        },
+        "behaviors 7": {
+          "moving north": "shimolga yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "behaviors 7_2020": {
+          "moving north": "shimolga yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving east": "sharqqa yurish"
+        },
+        "OPD-K5-spritelab-2": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "OPD-K5-spritelab-3": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "OPD-K5-spritelab-4": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "OPD-K5-spritelab-6": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "OPD-K5-spritelab-7": {
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "outbreak1": {
+          "recovering": "tiklanish"
+        },
+        "outbreak2": {
+          "recovering": "tiklanish"
+        },
+        "outbreak3": {
+          "recovering": "tiklanish"
+        },
+        "outbreak4": {
+          "recovering": "tiklanish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "outbreak5": {
+          "recovering": "tiklanish"
+        },
+        "outbreak6": {
+          "recovering": "tiklanish"
+        },
+        "outbreak7": {
+          "recovering": "tiklanish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving left and right": "chapga va o'ngga harakat qilish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "outbreak8": {
+          "recovering": "tiklanish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "moving south": "janubga yurish",
+          "moving left and right": "chapga va o'ngga harakat qilish",
+          "moving north": "shimolga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        }
+      }
+    }
+  }
 }

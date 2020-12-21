@@ -32,6 +32,16 @@ uz:
           description_short: Kichik yoshdagilarni kompyuter fanlari bilan tanishtirish
           description_audience: 'Yosh: 4-6'
           lessons:
+            'Artist: Loops':
+              name: 'Rassom: Sikllar'
+            'Artist: Sequence':
+              name: 'Rassom: Ketma-ketlik'
+            'Artist: Shapes':
+              name: 'Rassom: Shakllar'
+            'Bee: Loops':
+              name: 'Asalari: Sikllar'
+            'Bee: Sequence':
+              name: 'Asalari: Ketma-ketlik'
             Building a Foundation:
               name: Poydevor qurish
             Getting Loopy:
@@ -42,6 +52,8 @@ uz:
               name: Xursand Xaritalar
             'Maze: Debugging':
               name: 'Labirint: Tuzatish'
+            'Maze: Loops':
+              name: 'Labirint: Sikllar'
             'Maze: Sequence':
               name: 'Labirint: Ketma-ketlik'
             Move it, Move it:
@@ -57,6 +69,20 @@ uz:
           description_short: O‘qishni biladiganlar uchun kompyuter fanlariga kirish
           description_audience: Yosh 6+ (o‘qish talab etiladi)
           lessons:
+            'Artist: Debugging':
+              name: 'Rassom: Debugging'
+            'Artist: Loops':
+              name: 'Rassom: Sikllar'
+            'Artist: Nested Loops':
+              name: 'Rassom: Ichma-ich sikllar'
+            'Artist: Sequence':
+              name: 'Rassom: Ketma-ketlik'
+            'Bee: Conditionals':
+              name: 'Asalari: Shartli bayonotlar'
+            'Bee: Debugging':
+              name: 'Asalari: Debugging'
+            'Bee: Loops':
+              name: 'Asalari: Sikllar'
             Binary Bracelets:
               name: Ikkilik bilakuzuklar
             Conditionals:
@@ -67,6 +93,8 @@ uz:
               name: Sikllashtirish
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
+            'Maze: Loops':
+              name: 'Labirint: Sikllar'
             'Maze: Sequence':
               name: 'Labirint: Ketma-ketlik'
             'Real-life Algorithms: Paper Planes':
@@ -79,12 +107,32 @@ uz:
               name: Raqamli izlaringiz
         course3:
           title: Kurs 3
+          description: 3-kurs 2-kursni tugatgan talabalar uchun mo'ljallangan. Talabalar
+            avvalgi kurslarda kiritilgan dasturlash mavzulariga yanada chuqurroq kirib,
+            yanada murakkab muammolarga moslashuvchan yechimlar yaratadilar. Ushbu
+            kurs oxirida talabalar boshqalarga ulashish ko'rishlari mumkin bo'lgan
+            interaktiv hikoyalar va o'yinlar yaratadilar. 4-5 sinflar uchun tavsiya
+            etiladi.
           description_short: O'yinlar va interaktiv hikoyalar dasturlashga yanada
             chuqurroq kirish. Bu "Kurs 2"ning davomi.
           description_audience: 'Yosh: 8-18'
           lessons:
             Artist:
               name: Rassom
+            'Artist: Functions':
+              name: 'Rassom: Funksiyalar'
+            'Artist: Nested Loops':
+              name: 'Rassom: Ichma-ich sikllar'
+            'Artist: Patterns':
+              name: 'Rassom: Naqshlar (patternlar)'
+            'Bee: Conditionals':
+              name: 'Asalari: Shartli bayonotlar'
+            'Bee: Debugging':
+              name: 'Asalari: Debugging'
+            'Bee: Functions':
+              name: 'Asalari: Funksiyalar'
+            'Bee: Nested Loops':
+              name: 'Asalari: Ichma-ich sikllar'
             Bounce:
               name: Sakrash
             Computational Thinking:
@@ -99,6 +147,8 @@ uz:
               name: Funksional "quyosh ovchilari"
             Internet:
               name: Internet
+            'Maze: Conditionals':
+              name: 'Labirint: Shartli bayonotlar'
             Songwriting:
               name: Qo'shiq yozish
         playlab:
@@ -131,8 +181,34 @@ uz:
           lessons:
             Artist:
               name: Rassom
+            'Artist: For Loops':
+              name: 'Rassom: For sikllari'
+            'Artist: Functions':
+              name: 'Rassom: Funksiyalar'
+            'Artist: Functions with Parameters':
+              name: 'Rassom: Parametrli funksiyalar'
+            'Artist: Variables':
+              name: 'Rassom: O''zgaruvchilar'
+            'Bee: For Loops':
+              name: 'Asalari: For sikli'
+            'Bee: Functions with Parameters':
+              name: 'Asalari: Parametrli funksiyalar'
         Course4pre:
           lessons:
+            'Artist: Functions':
+              name: 'Rassom: Funksiyalar'
+            'Artist: Loops':
+              name: 'Rassom: Sikllar'
+            'Artist: Nested Loops':
+              name: 'Rassom: Ichma-ich sikllar'
+            'Artist: Sequence':
+              name: 'Rassom: Ketma-ketlik'
+            'Bee: Conditionals':
+              name: 'Asalari: Shartli bayonotlar'
+            'Bee: Debugging':
+              name: 'Asalari: Debugging'
+            'Bee: Nested Loops':
+              name: 'Asalari: Ichma-ich sikllar'
             'Maze: Sequence':
               name: 'Labirint: Ketma-ketlik'
         usability:
@@ -252,6 +328,8 @@ uz:
           lessons:
             Creating Functions:
               name: Funksiyalar yaratish
+            Introduction to Arrays:
+              name: Massivlar bilan tanishish
             While Loops:
               name: While sikllari
         algebraPD3:
@@ -364,6 +442,8 @@ uz:
               name: Xulosa
         cspunit3temp:
           lessons:
+            Introduction to Arrays:
+              name: Massivlar bilan tanishish
             While Loops:
               name: While sikllari
         starwars:
@@ -403,6 +483,8 @@ uz:
               name: Oddiy Shifrlash
         csp5-2017:
           lessons:
+            Introduction to Arrays:
+              name: Massivlar bilan tanishish
             While Loops:
               name: While sikllari
         CSDU3-Draft:
@@ -427,6 +509,10 @@ uz:
               name: Rassom. Funksiyalar
         artistExemplar:
           description_audience: 'Yosh: 8-18'
+        kinderTest:
+          lessons:
+            'Bee: Conditionals':
+              name: 'Asalari: Shartli bayonotlar'
         gradeKinder:
           lessons:
             Debugging:
@@ -441,8 +527,14 @@ uz:
               name: 'Hayotiy algoritmlar: Urug‘ ekish'
         grade4:
           lessons:
+            'Bee: Determine the Concept':
+              name: 'Asalari: Tushunchalarni aniqlash'
+            'Bee: Functions (Course 3)':
+              name: 'Asalari: Funksiyalar (Kurs 3)'
             Digital Citizenship:
               name: Raqamli Fuqarolik
+            'New Artist: Functions':
+              name: 'Yangi Rassom: Funksiyalar'
             Songwriting:
               name: Qo'shiq yozish
         grade1:
@@ -459,6 +551,16 @@ uz:
               name: Belgilanmagan baglar
         grade5:
           lessons:
+            'Artist: For Loops':
+              name: 'Rassom: For sikllari'
+            'Artist: Functions with Parameters':
+              name: 'Rassom: Parametrli funksiyalar'
+            'Artist: Variables':
+              name: 'Rassom: O''zgaruvchilar'
+            'Bee: For Loops':
+              name: 'Asalari: For sikli'
+            'Bee: Functions with Parameters':
+              name: 'Asalari: Parametrli funksiyalar'
             Digital Citizenship:
               name: Raqamli Fuqarolik
         ecs-unit1:
@@ -473,10 +575,18 @@ uz:
               name: Yakun
         grade3:
           lessons:
+            " Bee: Conditionals":
+              name: " Asalari: Shartli bayonotlar"
+            'Artist: Nested Loops':
+              name: 'Rassom: Ichma-ich sikllar'
             Bee Debugging:
               name: Asalari. Debugging
             Bounce:
               name: Sakrash
+            'Maze: Conditionals with Loops':
+              name: 'Labirint: Shartli bayonotlar sikllar bilan'
+            'Maze: Nested Loops':
+              name: 'Labirint: Ichma-ich sikllar'
         csd3-2017:
           lessons:
             Velocity:
@@ -525,6 +635,12 @@ uz:
           lessons:
             The Design Recipe:
               name: Yo'riqnoma tayyorlash
+        csd1-2017:
+          lessons:
+            The Problem Solving Process:
+              name: Muammoni yechish jarayoni
+            What is a Computer?:
+              name: Kompyuter nima?
         basketball:
           lessons:
             Bounce:
@@ -578,6 +694,8 @@ uz:
               name: Raqamli izlaringiz
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Harvester:
+              name: Harvester bilan sikllar
         coursed-draft:
           description_short: Informatika asoslarini o‘rganing va o‘z san'at asari,
             hikoya va o‘yinlaringizni yarating.
@@ -704,12 +822,24 @@ uz:
               name: Tezlik
             Functions:
               name: Funksiyalar
+        csd1-old:
+          lessons:
+            The Problem Solving Process:
+              name: Muammoni yechish jarayoni
+            What is a Computer?:
+              name: Kompyuter nima?
         csd2-draft:
           lessons:
             Images in HTML:
               name: HTMLda rasmlar
             Lists:
               name: Ro‘yxatlar
+        csd1-draft:
+          lessons:
+            The Problem Solving Process:
+              name: Muammoni yechish jarayoni
+            What is a Computer?:
+              name: Kompyuter nima?
         csd3-chapters:
           lessons:
             Variables:
@@ -736,6 +866,8 @@ uz:
               name: Talabalarning o'zaro taqrizi
         artist-and-bb8:
           lessons:
+            Loops with BB-8:
+              name: BB-8 bilan sikllar
             Bounce:
               name: Sakrash
         coursea-2017:
@@ -769,6 +901,8 @@ uz:
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Hayotiy Algoritmlar: Qog''oz samolyotlar'
+            Loops in Harvester:
+              name: Harvester bilan sikllar
             Loops in Artist:
               name: Rassom bilan sikllar
         coursed-2017:
@@ -794,6 +928,23 @@ uz:
               name: Zavqli For sikli
             Songwriting with Parameters:
               name: Parametrlar bilan qo'shiq yozish
+            The Design Process:
+              description_teacher: To‘rt dars davomida talabalar o'zlarining dizaynlashtirilgan
+                loyihalarini qurish uchun Play Lab yoki Rassom (Artist) dasturlash
+                muhiti sifatida foydalanadilar. Loyihaning ushbu qismida talabalar
+                dizayn jarayoni to‘g‘risida  va uni o‘z loyihalarida qanday amalga
+                oshirish kerakligi haqida bilib oladilar. Jarayonning to‘rtta bosqichini
+                ko‘rib chiqadigan darslik qo‘llanmasini loyiha jarayonining boshida
+                topish mumkin [bu yerda](https://curriculum.code.org/csf/coursee/12/).
+            Build Your Project:
+              description_teacher: To‘rt darsdan iborat kurs bo‘ylab, talabalar Play
+                Lab yoki San’atkor dasturlari yordamida dasturlash muhiti sifatida
+                o'z dizaynidagi loyihani dasturlash bilan shug'ullanadilar. Endi talabalarga
+                Rassom yoki Play Lab bilan o‘zlarining loyihalarini yaratishi uchun
+                o‘zlariga shaxsiy joy beriladi. Bu loyihaning eng uzoq davom etadigan
+                bosqichi bo‘ladiganga o‘xshaydi. Jarayonning to'rt bosqichi uchun
+                darslik qo'llanmasini ushbu loyiha jarayonining birinchi bosqichida
+                topish mumkin [bu yerda](https://curriculum.code.org/csf/coursee/12/).
             Building a Foundation:
               name: Poydevor qurish
             Loops in Artist:
@@ -806,7 +957,18 @@ uz:
           description_audience: 'Yosh: 9-13'
           description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing
             va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+          lesson_groups:
+            csf_f_2:
+              display_name: Kurs F Kontent
           lessons:
+            The Design Process:
+              description_teacher: Besh dars davomida talabalar o'zlarining dizaynlashtirilgan
+                loyihalarini qurish uchun Play Lab yoki Artistdan dasturlash muhiti
+                sifatida foydalanadilar. Loyihaning ushbu qismida talabalar dizayn
+                jarayoni to‘g‘risida  va uni o‘z loyihalarida qanday amalga oshirish
+                kerakligi haqida bilib oladilar. Jarayonning besh bosqichini ko‘rib
+                chiqadigan darslik qo‘llanmasini loyiha jarayonining boshida topish
+                mumkin, [bu yerda](https://curriculum.code.org/csf/coursef/15/).
             Building a Foundation:
               name: Poydevor qurish
             Loops in Artist:
@@ -863,6 +1025,8 @@ uz:
               name: Rassom bilan sikllar
             Nested Loops:
               name: Ichma-ich sikllar
+            Course E Introduction:
+              name: Kurs E Kirish
             Conditionals:
               name: Shartli bayonotlar
             Private and Personal Information:
@@ -883,6 +1047,8 @@ uz:
               name: Poydevor qurish
             Loops in Artist:
               name: Rassom bilan sikllar
+            Loops in Ice Age:
+              name: Muz davridagi sikllar
         new-express:
           lessons:
             Introduction:
@@ -903,6 +1069,8 @@ uz:
               name: Poydevor qurish
             Loops in Artist:
               name: Rassom bilan sikllar
+            Course E Introduction:
+              name: Kurs E Kirish
             Conditionals:
               name: Shartli bayonotlar
             Private and Personal Information:
@@ -912,11 +1080,16 @@ uz:
             Crowdsourcing:
               name: Kraudsorsing
         new-f:
+          lesson_groups:
+            csf_f_2:
+              display_name: Kurs F Kontent
           lessons:
             Building a Foundation:
               name: Poydevor qurish
             Loops in Artist:
               name: Rassom bilan sikllar
+            Course E Introduction:
+              name: Kurs E Kirish
             Envelope Variables:
               name: Konvertli o'zgaruvchilar
             For Loop Fun:
@@ -929,6 +1102,8 @@ uz:
               name: Funksiyalar yaratish
         pwc:
           lessons:
+            What is a Computer?:
+              name: Kompyuter nima?
             Simple Encryption:
               name: Oddiy Shifrlash
         hero:
@@ -956,6 +1131,9 @@ uz:
             Crowdsourcing:
               name: Kraudsorsing
         course-f-2018:
+          lesson_groups:
+            csf_f_2:
+              display_name: Kurs F Kontent
           lessons:
             Building a Foundation:
               name: Poydevor qurish
@@ -1004,6 +1182,7 @@ uz:
             Lists:
               name: Ro‘yxatlar
         coursea-2018:
+          title: Kurs A (2018)
           assignment_family_title: Kurs A
           description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
           description_audience: 'Yosh: 4-7'
@@ -1051,6 +1230,7 @@ uz:
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
         courseb-2018:
+          title: Kurs B (2018)
           assignment_family_title: Kurs B
           description_audience: 'Yosh: 5-8'
           lessons:
@@ -1076,6 +1256,8 @@ uz:
               name: Raqamli Fuqarolik
             'Unplugged: Binary':
               name: Ikkilik Rasmlar
+            Loops in Ice Age:
+              name: Muz davridagi sikllar
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
             Relay Programming:
@@ -1112,6 +1294,23 @@ uz:
               name: Maxfiy va Shaxsiy ma'lumotlar
             'Functions: Songwriting':
               name: Qo'shiq yozish
+            The Design Process:
+              description_teacher: To‘rt dars davomida talabalar o'zlarining dizaynlashtirilgan
+                loyihalarini qurish uchun Play Lab yoki Rassom (Artist) dasturlash
+                muhiti sifatida foydalanadilar. Loyihaning ushbu qismida talabalar
+                dizayn jarayoni to‘g‘risida  va uni o‘z loyihalarida qanday amalga
+                oshirish kerakligi haqida bilib oladilar. Jarayonning to‘rtta bosqichini
+                ko‘rib chiqadigan darslik qo‘llanmasini loyiha jarayonining boshida
+                topish mumkin [bu yerda](https://curriculum.code.org/csf/coursee/12/).
+            Build Your Project:
+              description_teacher: To‘rt darsdan iborat kurs bo‘ylab, talabalar Play
+                Lab yoki San’atkor dasturlari yordamida dasturlash muhiti sifatida
+                o'z dizaynidagi loyihani dasturlash bilan shug'ullanadilar. Endi talabalarga
+                Rassom yoki Play Lab bilan o‘zlarining loyihalarini yaratishi uchun
+                o‘zlariga shaxsiy joy beriladi. Bu loyihaning eng uzoq davom etadigan
+                bosqichi bo‘ladiganga o‘xshaydi. Jarayonning to'rt bosqichi uchun
+                darslik qo'llanmasini ushbu loyiha jarayonining birinchi bosqichida
+                topish mumkin [bu yerda](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1125,6 +1324,9 @@ uz:
           description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing
             va o'z san'at asari, hikoya yoki o'yiningizni yarating.
           description_audience: 'Yosh: 9-13'
+          lesson_groups:
+            csf_f_2:
+              display_name: Kurs F Kontent
           lessons:
             Building a Foundation:
               name: Poydevor qurish
@@ -1138,10 +1340,36 @@ uz:
               name: Zavqli For sikli
             Songwriting with Parameters:
               name: Parametrlar bilan qo'shiq yozish
+            The Design Process:
+              description_teacher: Besh dars davomida talabalar o'zlarining dizaynlashtirilgan
+                loyihalarini qurish uchun Play Lab yoki Artistdan dasturlash muhiti
+                sifatida foydalanadilar. Loyihaning ushbu qismida talabalar dizayn
+                jarayoni to‘g‘risida  va uni o‘z loyihalarida qanday amalga oshirish
+                kerakligi haqida bilib oladilar. Jarayonning besh bosqichini ko‘rib
+                chiqadigan darslik qo‘llanmasini loyiha jarayonining boshida topish
+                mumkin, [bu yerda](https://curriculum.code.org/csf/coursef/15/).
+            Present Your Project:
+              description_student: O‘z ishingizni namoyish etish vaqti keldi! Bu yerda
+                siz o‘zingizning ajoyib loyihangizni tengdoshlaringizga taqdim etasiz.
+              description_teacher: Besh dars davomida talabalar dasturlash muhiti
+                sifatida Sprite Lab yoki Artist dan foydalangan holda o‘z dizaynidagi
+                loyihani qurishadi. Va nihoyat, talabalar o‘zlarining tayyor ishlarini
+                maxsus havola orqali o‘z tengdoshlari yoki o‘zlarining yaqinlari bilan
+                baham ko'rishadi. Jarayonning beshta bosqichini ko‘rib chiqadigan
+                dars qo‘llanmasini loyiha jarayonining boshida,  [bu yerda](https://curriculum.code.org/csf/coursef/15/)
+                topishingiz mumkin.
+            Conditionals with Cards:
+              name: Kartalar bilan shartli bayonotlar
         csp1-2018:
           lessons:
             The Internet:
               name: Internet
+        csd1-2018:
+          lessons:
+            The Problem Solving Process:
+              name: Muammoni yechish jarayoni
+            What is a Computer?:
+              name: Kompyuter nima?
         csp2-2018:
           lessons:
             Text Compression:
@@ -1158,6 +1386,8 @@ uz:
           lessons:
             While Loops:
               name: While sikllari
+            Introduction to Arrays:
+              name: Massivlar bilan tanishish
         pre-express-2018:
           lessons:
             'Debugging: Unspotted Bugs':
@@ -1207,6 +1437,7 @@ uz:
           description: Kengaytirilgan loyiha g‘oyalari bilan Dasturlash soatidan keyin
             davom eting.
         coursef-2019:
+          title: Kurs F (2019)
           description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing
             va o'z san'at asari, hikoya yoki o'yiningizni yarating.
           description_audience: 'Yosh: 9-13'
@@ -1230,6 +1461,14 @@ uz:
               name: Konvertli o'zgaruvchilar
             For Loop Fun:
               name: Zavqli For sikli
+            The Design Process:
+              description_teacher: Besh dars davomida talabalar o'zlarining dizaynlashtirilgan
+                loyihalarini qurish uchun Play Lab yoki Artistdan dasturlash muhiti
+                sifatida foydalanadilar. Loyihaning ushbu qismida talabalar dizayn
+                jarayoni to‘g‘risida  va uni o‘z loyihalarida qanday amalga oshirish
+                kerakligi haqida bilib oladilar. Jarayonning besh bosqichini ko‘rib
+                chiqadigan darslik qo‘llanmasini loyiha jarayonining boshida topish
+                mumkin, [bu yerda](https://curriculum.code.org/csf/coursef/15/).
             The Artist:
               name: Rassom
             Internet:
@@ -1246,6 +1485,7 @@ uz:
                 San’atkorlarning huqularini hurmat qilishi uchun rag‘batlantirilishi
                 kerak.
         coursed-2019:
+          title: Kurs D (2019)
           description_audience: 'Yosh: 7-11'
           lesson_groups:
             csf_events:
@@ -1267,11 +1507,14 @@ uz:
                 bo'yicha qisqa dars bilan boshlanadi, so'ngra talabalar jamoalarga
                 bo'linib, birgalikda birma-bir ko'rsatma yozish uchun birgalikda harakat
                 qilishlari bilan tezda soat poygasiga o'tishadi.
+            Loops in Ice Age:
+              name: Muz davridagi sikllar
             Digital Citizenship:
               name: Raqamli Fuqarolik
             'Unplugged: Binary':
               name: Ikkilik Rasmlar
         coursee-2019:
+          title: Kurs E (2019)
           description_audience: 'Yosh: 8-12'
           lesson_groups:
             csf_sprites:
@@ -1293,6 +1536,23 @@ uz:
               name: Maxfiy va Shaxsiy ma'lumotlar
             'Functions: Songwriting':
               name: Qo'shiq yozish
+            The Design Process:
+              description_teacher: To‘rt dars davomida talabalar o'zlarining dizaynlashtirilgan
+                loyihalarini qurish uchun Play Lab yoki Rassom (Artist) dasturlash
+                muhiti sifatida foydalanadilar. Loyihaning ushbu qismida talabalar
+                dizayn jarayoni to‘g‘risida  va uni o‘z loyihalarida qanday amalga
+                oshirish kerakligi haqida bilib oladilar. Jarayonning to‘rtta bosqichini
+                ko‘rib chiqadigan darslik qo‘llanmasini loyiha jarayonining boshida
+                topish mumkin [bu yerda](https://curriculum.code.org/csf/coursee/12/).
+            Build Your Project:
+              description_teacher: To‘rt darsdan iborat kurs bo‘ylab, talabalar Play
+                Lab yoki San’atkor dasturlari yordamida dasturlash muhiti sifatida
+                o'z dizaynidagi loyihani dasturlash bilan shug'ullanadilar. Endi talabalarga
+                Rassom yoki Play Lab bilan o‘zlarining loyihalarini yaratishi uchun
+                o‘zlariga shaxsiy joy beriladi. Bu loyihaning eng uzoq davom etadigan
+                bosqichi bo‘ladiganga o‘xshaydi. Jarayonning to'rt bosqichi uchun
+                darslik qo'llanmasini ushbu loyiha jarayonining birinchi bosqichida
+                topish mumkin [bu yerda](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1304,6 +1564,7 @@ uz:
             Songwriting:
               name: Qo'shiq yozish
         express-2019:
+          title: Ekspress Kurs (2019)
           lesson_groups:
             csf_loops:
               display_name: Sikllar
@@ -1330,6 +1591,12 @@ uz:
               name: Internet
             Crowdsourcing:
               name: Kraudsorsing
+        csd1-2019:
+          lessons:
+            The Problem Solving Process:
+              name: Muammoni yechish jarayoni
+            What is a Computer?:
+              name: Kompyuter nima?
         andrea-test:
           lessons:
             'null':
@@ -1339,6 +1606,7 @@ uz:
           description: Kengaytirilgan loyiha g‘oyalari bilan Dasturlash soatidan keyin
             davom eting.
         coursec-2019:
+          title: Kurs C (2019)
           description_short: Informatika asoslarini o‘rganing va o‘z san'at asari,
             hikoya va o‘yinlaringizni yarating.
           description_audience: 'Yosh: 6-10'
@@ -1367,6 +1635,7 @@ uz:
         gamelab:
           title: O‘yin laboratoriyasi
         coursea-2019:
+          title: Kurs A (2019)
           description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
           description_audience: 'Yosh: 4-7'
           lesson_groups:
@@ -1383,7 +1652,12 @@ uz:
               name: Joylarga xavfsiz borish
             Loops in Artist:
               name: Rassom bilan sikllar
+            Programming with Rey and BB-8:
+              description_teacher: Ushbu darsda talabalar o'zlarining yangi dasturlash
+                qobiliyatlaridan yanada murakkab usullarda BB-8 bilan murakkab kursni
+                o'tish uchun foydalanadilar.
         courseb-2019:
+          title: Kurs B (2019)
           description_audience: 'Yosh: 5-8'
           lesson_groups:
             csf_digcit:
@@ -1395,8 +1669,15 @@ uz:
           lessons:
             Move It, Move It:
               name: Move It, Move It (Harakatlan)
+              description_teacher: Ushbu dars o'quvchilarni ushbu kurs davomida duch
+                keladigan kodlash mashqlariga ruhiy jihatdan tayyorlash uchun mo'ljallangan.
+                Kichik jamoalarda talabalar jismoniy mashqlar yordamida sinfdoshlarini
+                bir joydan boshqa joyga diqqat bilan qadam qo'yishni dasturlash uchun
+                foydalanadilar
             Your Digital Footprint:
               name: Raqamli izlaringiz
+            Loops in Ice Age:
+              name: Muz davridagi sikllar
             'Loops: Getting Loopy':
               name: Sikllashtirish
             The Right App:
@@ -1422,6 +1703,8 @@ uz:
           lessons:
             Lists:
               name: Ro‘yxatlar
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
         csd3-2019:
           lessons:
             Variables:
@@ -1434,10 +1717,22 @@ uz:
               name: Tezlik
             Functions:
               name: Funksiyalar
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+        csd4-2019:
+          lessons:
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+        csd5-2019:
+          lessons:
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
         csd6-2019:
           lessons:
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -1454,18 +1749,40 @@ uz:
           lessons:
             Text Compression:
               name: Matnni Zichlash
+            CS Principles Post Course survey:
+              name: Informatika tamoyillari kursidan keyingi so'rovnoma
         csp3-2019:
           lessons:
             Creating Functions:
               name: Funksiyalar yaratish
+            CS Principles Post Course survey:
+              name: Informatika tamoyillari kursidan keyingi so'rovnoma
         csp4-2019:
           lessons:
             Simple Encryption:
               name: Oddiy Shifrlash
+            CS Principles Post Course survey:
+              name: Informatika tamoyillari kursidan keyingi so'rovnoma
         csp5-2019:
           lessons:
             While Loops:
               name: While sikllari
+            Introduction to Arrays:
+              name: Massivlar bilan tanishish
+            CS Principles Post Course survey:
+              name: Informatika tamoyillari kursidan keyingi so'rovnoma
+        csp-explore-2019:
+          lessons:
+            CS Principles Post Course survey:
+              name: Informatika tamoyillari kursidan keyingi so'rovnoma
+        csp-create-2019:
+          lessons:
+            CS Principles Post Course survey:
+              name: Informatika tamoyillari kursidan keyingi so'rovnoma
+        csppostap-2019:
+          lessons:
+            CS Principles Post Course survey:
+              name: Informatika tamoyillari kursidan keyingi so'rovnoma
         time4csdemo:
           lesson_groups:
             csf_sprites:
@@ -1549,10 +1866,22 @@ uz:
               display_name: Ro‘yxatlar
             csp_loops:
               display_name: Sikllar
+        csd-test-saving-state:
+          lessons:
+            What is a Computer?:
+              name: Kompyuter nima?
+        csd1-pilot:
+          lessons:
+            The Problem Solving Process:
+              name: Muammoni yechish jarayoni
+            What is a Computer?:
+              name: Kompyuter nima?
         csd2-pilot:
           lessons:
             Lists:
               name: Ro‘yxatlar
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
         csd3-pilot:
           lessons:
             Variables:
@@ -1565,6 +1894,8 @@ uz:
               name: Tezlik
             Functions:
               name: Funksiyalar
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
             Sprite Properties:
               name: Sprait hususiyatlari
         csp3-pilot:
@@ -1577,6 +1908,13 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+          lessons:
+            Loops in Ice Age:
+              name: Muz davridagi sikllar
+        csd4-pilot:
+          lessons:
+            What is a Computer?:
+              name: Kompyuter nima?
         peru-2019:
           lessons:
             Introduction:
@@ -1691,10 +2029,30 @@ uz:
               display_name: Ro‘yxatlar
             csp_loops:
               display_name: Sikllar
+        csd2-2020:
+          lessons:
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+        csd1-2020:
+          lessons:
+            The Problem Solving Process:
+              name: Muammoni yechish jarayoni
+            What is a Computer?:
+              name: Kompyuter nima?
+        csd4-2020:
+          lessons:
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+        csd5-2020:
+          lessons:
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
         csd6-2020:
           lessons:
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
         csd3-2020:
           lessons:
             Variables:
@@ -1707,11 +2065,14 @@ uz:
               name: Tezlik
             Functions:
               name: Funksiyalar
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
             Text:
               name: Matn
             Sprites:
               name: Spraytlar
         coursea-2020:
+          title: Kurs A (2020)
           description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
           description_audience: 'Yosh: 4-7'
           lesson_groups:
@@ -1726,7 +2087,12 @@ uz:
               name: Joylarga xavfsiz borish
             'Programming: Happy Maps':
               name: Xursand Xaritalar
+            Programming with Rey and BB-8:
+              description_teacher: Ushbu darsda talabalar o'zlarining yangi dasturlash
+                qobiliyatlaridan yanada murakkab usullarda BB-8 bilan murakkab kursni
+                o'tish uchun foydalanadilar.
         courseb-2020:
+          title: Kurs B (2020)
           description_audience: 'Yosh: 5-8'
           lesson_groups:
             csf_digcit:
@@ -1740,11 +2106,17 @@ uz:
               name: Raqamli izlaringiz
             Move It, Move It:
               name: Move It, Move It (Harakatlan)
+              description_teacher: Ushbu dars o'quvchilarni ushbu kurs davomida duch
+                keladigan kodlash mashqlariga ruhiy jihatdan tayyorlash uchun mo'ljallangan.
+                Kichik jamoalarda talabalar jismoniy mashqlar yordamida sinfdoshlarini
+                bir joydan boshqa joyga diqqat bilan qadam qo'yishni dasturlash uchun
+                foydalanadilar
             'Loops: Getting Loopy':
               name: Sikllashtirish
             The Right App:
               name: To'g'ri ilova
         coursec-2020:
+          title: Kurs C (2020)
           description_short: Informatika asoslarini o‘rganing va o‘z san'at asari,
             hikoya va o‘yinlaringizni yarating.
           description_audience: 'Yosh: 6-10'
@@ -1767,6 +2139,7 @@ uz:
             Picturing Data:
               name: Ma'lumotlarni tasvirlash
         coursed-2020:
+          title: Kurs D (2020)
           description_audience: 'Yosh: 7-11'
           lesson_groups:
             csf_events:
@@ -1788,11 +2161,14 @@ uz:
                 bo'yicha qisqa dars bilan boshlanadi, so'ngra talabalar jamoalarga
                 bo'linib, birgalikda birma-bir ko'rsatma yozish uchun birgalikda harakat
                 qilishlari bilan tezda soat poygasiga o'tishadi.
+            Loops in Ice Age:
+              name: Muz davridagi sikllar
             'Unplugged: Binary':
               name: Ikkilik Rasmlar
             Digital Citizenship:
               name: Raqamli Fuqarolik
         coursee-2020:
+          title: Kurs E (2020)
           description_audience: 'Yosh: 8-12'
           lesson_groups:
             csf_sprites:
@@ -1820,6 +2196,7 @@ uz:
                 San’atkorlarning huqularini hurmat qilishi uchun rag‘batlantirilishi
                 kerak.
         coursef-2020:
+          title: Kurs F (2020)
           description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing
             va o'z san'at asari, hikoya yoki o'yiningizni yarating.
           description_audience: 'Yosh: 9-13'
@@ -1874,8 +2251,14 @@ uz:
             csf_events:
               display_name: Hodisalar
           lessons:
+            Programming with Rey and BB-8:
+              description_teacher: Ushbu darsda talabalar o'zlarining yangi dasturlash
+                qobiliyatlaridan yanada murakkab usullarda BB-8 bilan murakkab kursni
+                o'tish uchun foydalanadilar.
             Spelling Bee:
               name: Bilimdon Ari
+            Loops in Ice Age:
+              name: Muz davridagi sikllar
             Loops in Artist:
               name: Rassom bilan sikllar
         csp3-2020:
@@ -1886,16 +2269,42 @@ uz:
           lessons:
             Creating Functions:
               name: Funksiyalar yaratish
+            CS Principles Post Course survey:
+              name: Informatika tamoyillari kursidan keyingi so'rovnoma
         jess-test-script:
           lessons:
             Tools:
               name: Asboblar
+            Course Resources:
+              name: Kurs resurslari
             Debugging:
               name: Debugging
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+            Module 5:
+              name: Modul 5
+            Module 6:
+              name: Modul 6
+            Module 8:
+              name: Modul 8
+            Module 7:
+              name: Modul 7
+        csd2-virtual:
+          lessons:
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
         csp5-virtual:
           lessons:
             While Loops:
               name: While sikllari
+            Introduction to Arrays:
+              name: Massivlar bilan tanishish
+            CS Principles Post Course survey:
+              name: Informatika tamoyillari kursidan keyingi so'rovnoma
             Variables:
               name: O‘zgaruvchilar
         virtual-holding-place:
@@ -1914,6 +2323,8 @@ uz:
           lessons:
             While Loops:
               name: While sikllari
+            Introduction to Arrays:
+              name: Massivlar bilan tanishish
         k5-onlinepd-2020:
           lessons:
             Loops:
@@ -1944,6 +2355,8 @@ uz:
               name: Tezlik
             Functions:
               name: Funksiyalar
+            CS Discoveries Post Course survey:
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
         ui-test-script-in-course-2017:
           lessons:
             Lesson:
@@ -1960,12 +2373,46 @@ uz:
           lessons:
             Lesson:
               name: Dars
+        kaitie-test-script:
+          lessons:
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+            Module 5:
+              name: Modul 5
+            Module 6:
+              name: Modul 6
+            Module 7:
+              name: Modul 7
+            Module 8:
+              name: Modul 8
+        vpl-csd-2020:
+          lessons:
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+            Module 5:
+              name: Modul 5
+            Module 6:
+              name: Modul 6
+            Module 7:
+              name: Modul 7
+            Module 8:
+              name: Modul 8
         curriculum-sandbox-levels:
           lessons:
             Course A:
               name: Kurs A
             Course B:
               name: Kurs B
+            Course E/F:
+              name: Kurs E/F
             CS Discoveries:
               name: Kompyuter fanlari kashfiyotlari
         ml-playground:
@@ -1974,5 +2421,251 @@ uz:
               name: ML maydonchasi
             ML Playground 2:
               name: ML maydonchasi 2
-            intro:
-              name: Kirish
+        csd1-2021:
+          lessons:
+            The Problem Solving Process:
+              key: Muammoni yechish jarayoni
+              name: Muammoni yechish jarayoni
+            What is a Computer?:
+              key: Kompyuter nima?
+              name: Kompyuter nima?
+        csd2-2021:
+          lessons:
+            CS Discoveries Post Course survey:
+              key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+        csd3-2021:
+          lessons:
+            Variables:
+              key: O‘zgaruvchilar
+              name: O‘zgaruvchilar
+            Sprites:
+              key: Spraytlar
+              name: Spraytlar
+            Sprite Properties:
+              key: Sprait hususiyatlari
+              name: Sprait hususiyatlari
+            Text:
+              key: Matn
+              name: Matn
+            Conditionals:
+              key: Shartli bayonotlar
+              name: Shartli bayonotlar
+            Velocity:
+              key: Tezlik
+              name: Tezlik
+            Functions:
+              key: Funksiyalar
+              name: Funksiyalar
+            CS Discoveries Post Course survey:
+              key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+        csd4-2021:
+          lessons:
+            CS Discoveries Post Course survey:
+              key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+        csd5-2021:
+          lessons:
+            CS Discoveries Post Course survey:
+              key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funksiyalar (parameterlari bilan)
+              name: Funksiyalar (parameterlari bilan)
+            CS Discoveries Post Course survey:
+              key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+              name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Debugging
+              name: Debugging
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shartli bayonotlar
+            csp_functions:
+              display_name: Funksiyalar
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Ro‘yxatlar
+            csp_loops:
+              display_name: Sikllar
+        coursea-2021:
+          title: Kurs A (2020)
+          description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
+          description_audience: 'Yosh: 4-7'
+          lessons:
+            'Programming: Happy Maps':
+              name: Xursand Xaritalar
+            Loops in Ice Age:
+              key: Muz davridagi sikllar
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+        courseb-2021:
+          title: Kurs B (2020)
+          description_audience: 'Yosh: 5-8'
+          lessons:
+            Move It, Move It:
+              key: Move It, Move It (Harakatlan)
+              name: Move It, Move It (Harakatlan)
+            'Loops: Getting Loopy':
+              name: Sikllashtirish
+            Loops in Harvester:
+              key: Harvester bilan sikllar
+            Loops in Artist:
+              key: Rassom bilan sikllar
+            The Right App:
+              key: To'g'ri ilova
+              name: To'g'ri ilova
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+        coursec-2021:
+          title: Kurs C (2020)
+          description_short: Informatika asoslarini o‘rganing va o‘z san'at asari,
+            hikoya va o‘yinlaringizni yarating.
+          description_audience: 'Yosh: 6-10'
+          lessons:
+            Binary Bracelets:
+              key: Ikkilik bilakuzuklar
+              name: Ikkilik bilakuzuklar
+            Loops in Harvester:
+              key: Harvester bilan sikllar
+            'Events: The Big Event':
+              name: Katta hodisa
+            Picturing Data:
+              key: Ma'lumotlarni tasvirlash
+              name: Ma'lumotlarni tasvirlash
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_binary:
+              display_name: Binarli
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+        coursed-2021:
+          title: Kurs D (2020)
+          description_audience: 'Yosh: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Katakchali varaqda dasturlash
+            Relay Programming:
+              key: Estafetali dasturlash
+              name: Estafetali dasturlash
+            Loops in Ice Age:
+              key: Muz davridagi sikllar
+              name: Muz davridagi sikllar
+            Loops in Artist:
+              key: Rassom bilan sikllar
+            'Unplugged: Binary':
+              name: Ikkilik Rasmlar
+          lesson_groups:
+            csf_events:
+              display_name: Hodisalar
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shartli bayonotlar
+            csf_binary:
+              display_name: Binarli
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+        coursee-2021:
+          title: Kurs E (2020)
+          description_audience: 'Yosh: 8-12'
+          lessons:
+            Conditionals:
+              key: Shartli bayonotlar
+            Simon Says:
+              key: Simon so'zlaydi
+              name: Simon so'zlaydi
+            Private and Personal Information:
+              key: Maxfiy va Shaxsiy ma'lumotlar
+              name: Maxfiy va Shaxsiy ma'lumotlar
+            Digital Sharing:
+              key: Raqamli Ulashish
+              name: Raqamli Ulashish
+            'Functions: Songwriting':
+              name: Qo'shiq yozish
+          lesson_groups:
+            csf_sprites:
+              display_name: Spraytlar
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_nested_loops:
+              display_name: Ichma-ich sikllar
+            csf_functions:
+              display_name: Funksiyalar
+        coursef-2021:
+          title: Kurs F (2020)
+          description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing
+            va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+          description_audience: 'Yosh: 9-13'
+          lessons:
+            Loops with the Artist:
+              key: Rassom bilan sikllar
+            Envelope Variables:
+              key: Konvertli o'zgaruvchilar
+              name: Konvertli o'zgaruvchilar
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: Zavqli For sikli
+              name: Zavqli For sikli
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_variables:
+              display_name: O‘zgaruvchilar
+            csf_for_loops:
+              display_name: For sikllari
+            csf_sprites:
+              display_name: Spraytlar
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shartli bayonotlar
+            csf_functions:
+              display_name: Funksiyalar
+            csf_variables:
+              display_name: O‘zgaruvchilar
+            csf_for_loops:
+              display_name: For sikllari
+            csf_sprites:
+              display_name: Spraytlar
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Konvertli o'zgaruvchilar
+          lesson_groups:
+            ramp_up:
+              display_name: Kirish
+            lessonGroup-3:
+              display_name: O‘zgaruvchilar
