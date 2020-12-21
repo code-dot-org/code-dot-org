@@ -1237,6 +1237,8 @@ ga:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": ní iasc é
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mo-lipéad
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ní mo-lipéad é
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
