@@ -583,7 +583,7 @@ fr:
   compatibility:
     upgrade:
       unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue."
-      link: "Pour en savoir plus"
+      link: "En savoir plus"
       applab_unsupported_tablet: "Le Labo des Applis fonctionne idéalement sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil sur votre appareil actuel."
       gamelab_unsupported_tablet: "Le Labo des Jeux fonctionne idéalement sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil sur votre appareil actuel."
       oceans_unsupported_browser: "Ce navigateur n'est pas pris en charge pour ce didacticiel. Veuillez essayer de visiter cette page en utilisant Edge, Chrome, Firefox ou un autre navigateur moderne."
@@ -1060,7 +1060,7 @@ fr:
     accept: 'J''accepte'
   page_not_found_title: "Page Introuvable"
   page_not_found_header: '404 : Page Introuvable'
-  page_not_found_description: "La page recherchée n’existe pas à cette adresse. Vérifiez l’adresse Web et réessayez, ou retournez à notre page d’accueil."
+  page_not_found_description: "La page recherchée n'existe pas à cette adresse. Vérifie l'adresse du site internet et réessaie. Sinon, retourne sur la page d'accueil."
   page_not_found_button: "Retourner à la page d’accueil"
   copy: 'Copier'
   maker:
