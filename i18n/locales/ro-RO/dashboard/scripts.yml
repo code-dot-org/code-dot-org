@@ -6635,9 +6635,6 @@ ro:
           description_audience: '[șir gol]'
           description: '[șir gol]'
         ml-playground:
-          lessons:
-            intro:
-              name: Introducere
           description_audience: '[șir gol]'
         outbreak:
           description_audience: '[șir gol]'
@@ -6645,3 +6642,271 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+        2021drafting:
+          description: '[șir gol]'
+        csd1-2021:
+          description_audience: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csd1_1:
+              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            csd1_2:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+        csd2-2021:
+          description_audience: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+        csd3-2021:
+          description_short: "Programare"
+          description_audience: '[șir gol]'
+          lessons:
+            Variables:
+              key: Variabile
+              name: Variabile
+            Sprite Properties:
+              key: Proprietăți spiriduș
+              name: Proprietăți spiriduș
+            Text:
+              key: Text
+              name: Text
+            Conditionals:
+              key: Condiţionale
+              name: Condiţionale
+            Velocity:
+              key: Viteza
+              name: Viteza
+            Functions:
+              key: Funcţii
+              name: Funcţii
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            csd3_2:
+              display_name: 'Capitolul 2: Cum facem jocuri'
+            cspSurvey:
+              display_name: Sondaj
+        csd4-2021:
+          description_audience: '[șir gol]'
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            csd4_2:
+              display_name: 'Capitolul 2: Prototipare aplicații'
+            csd5_2:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+            cspSurvey:
+              display_name: Sondaj
+        csd5-2021:
+          description_audience: '[șir gol]'
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            csd5_2:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+            cspSurvey:
+              display_name: Sondaj
+        csd6-2021:
+          description_audience: '[șir gol]'
+          lessons:
+            Functions with Parameters:
+              key: Funcții cu Parametrii
+              name: Funcții cu Parametrii
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolul 1: Programare cu hardware'
+            cspSurvey:
+              display_name: Sondaj
+        csp1-2021:
+          description_audience: '[șir gol]'
+          lessons:
+            Binary Numbers:
+              key: Numerele binare
+              name: Numerele binare
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csp_unit1_2020:
+              display_name: '(vechi) Unitatea 1: Informaţii digitale'
+        csp2-2021:
+          description_audience: '[șir gol]'
+          lessons:
+            The Need for Addressing:
+              key: Nevoia de adresare
+              name: Nevoia de adresare
+            Routers and Redundancy:
+              key: Routere și redundanță
+              name: Routere și redundanță
+        csp3-2021:
+          description_audience: '[șir gol]'
+        csp4-2021:
+          description_audience: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
+        csp5-2021:
+          description_audience: '[șir gol]'
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Bucle
+        csp6-2021:
+          description_audience: '[șir gol]'
+        csp7-2021:
+          description_audience: '[șir gol]'
+        csp8-2021:
+          description_audience: '[șir gol]'
+        csp9-2021:
+          description_audience: '[șir gol]'
+        csp10-2021:
+          description_audience: '[șir gol]'
+        coursea-2021:
+          description_short: O introducere în informatică pentru preșcolari.
+          lessons:
+            'Programming: Happy Maps':
+              name: Hărţi Fericite
+            Loops in Ice Age:
+              key: Bucle în Ice Age
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Mutaţi-l, mutați-l
+              name: Mutaţi-l, mutați-l
+            'Loops: Getting Loopy':
+              name: Transformând în Buclă
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Brăţări Binare
+              name: Brăţări Binare
+            'Events: The Big Event':
+              name: Marele eveniment
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_binary:
+              display_name: Binar
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programare pe Hârtie Milimetrică
+            Relay Programming:
+              key: Programare de releu
+              name: Programare de releu
+            Dance Party:
+              key: Petrecere dansantă
+              name: Petrecere dansantă
+            Loops in Ice Age:
+              key: Bucle în Ice Age
+              name: Bucle în Ice Age
+            Conditionals with Cards:
+              key: Condiționale cu Carduri
+              name: Condiționale cu Carduri
+            'Unplugged: Binary':
+              key: 'Fără calculator: Binar'
+              name: Imagini binare
+            Artist Binary:
+              key: Binar cu artist
+              name: Binar cu artist
+          lesson_groups:
+            csf_events:
+              display_name: Evenimente
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            csf_binary:
+              display_name: Binar
+            csf_digcit:
+              display_name: Cetățenia Digitală
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Condiţionale
+            'Functions: Songwriting':
+              name: Compunând Cântece
+          lesson_groups:
+            ramp_up:
+              display_name: Avansare
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_nested_loops:
+              display_name: Repetiții imbricate
+            csf_functions:
+              display_name: Funcţii
+        coursef-2021:
+          description_short: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
+          lessons:
+            Envelope Variables:
+              key: Variabile de tip plic
+              name: Variabile de tip plic
+            Internet:
+              key: Internet
+              name: Internetul
+            For Loop Fun:
+              key: Pentru distracția cu bucle
+              name: Pentru distracția cu bucle
+          lesson_groups:
+            ramp_up:
+              display_name: Avansare
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_variables:
+              display_name: Variabile
+            csf_for_loops:
+              display_name: Bucle Pentru
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Petrecere dansantă
+              name: Petrecere dansantă
+          lesson_groups:
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            csf_functions:
+              display_name: Funcţii
+            csf_variables:
+              display_name: Variabile
+            csf_for_loops:
+              display_name: Bucle Pentru
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Variabile de tip plic
+          lesson_groups:
+            ramp_up:
+              display_name: Introducere
+            lessonGroup-3:
+              display_name: Variabile
