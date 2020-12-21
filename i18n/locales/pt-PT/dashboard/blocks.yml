@@ -1286,6 +1286,8 @@ pt:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": não peixe
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": meu rótulo
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": não o meu rótulo
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
