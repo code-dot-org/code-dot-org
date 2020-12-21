@@ -15414,7 +15414,1395 @@ id:
           lessons:
             AI for Oceans:
               name: AI for Oceans
-            intro:
-              name: Pendahuluan
             visualizing:
               name: Membayangkan data
+        csd1-2021:
+          title: CSD Unit 1 - Pemecahan Masalah dan Komputasi
+          description: " Pemecahan Masalah dan Komputasi merupakan pengenalan bidang ilmu komputer yang sangat interaktif dan kolaboratif, karena dibingkai dalam upaya lebih luas untuk memecahkan masalah. Anda akan berlatih menggunakan proses pemecahan masalah untuk menjawab serangkaian puzzle, tantangan, dan skenario dunia nyata. Berikutnya,  Anda akan mempelajari cara komputer melakukan input, output, menyimpan, dan memproses informasi untuk membantu manusia memecahkan masalah.  Unit ini diakhiri dengan sebuah proyek yang menugasi Anda merancang sebuah aplikasi yang membantu memecahkan masalah pilihan Anda.\\r\n"
+          description_short: "  Pelajari cara kerja manusia dengan komputer untuk memecahkan masalah."
+          lessons:
+            CS Discoveries Pre-survey:
+              key: Prasurvei CS Discoveries
+              name: Prasurvei CS Discoveries
+            Intro to Problem Solving:
+              key: Pengenalan Pemecahan Masalah
+              name: Pengenalan Pemecahan Masalah
+            The Problem Solving Process:
+              key: Proses Pemecahan Masalah
+              name: Proses Pemecahan Masalah
+            Exploring Problem Solving:
+              key: Eksplorasi Pemecahan Masalah
+              name: Eksplorasi Pemecahan Masalah
+            What is a Computer?:
+              key: Apa itu Komputer?
+              name: Apa itu Komputer?
+            Input and Output:
+              key: Input dan Output
+              name: Input dan Output
+            Processing:
+              key: Sedang memproses
+              name: Sedang memproses
+            Storage:
+              key: Penyimpanan
+              name: Penyimpanan
+            Project - Propose an App:
+              key: Proyek - Pengajuan Aplikasi
+              name: Proyek - Pengajuan Aplikasi
+            Post-Project Test:
+              key: Pengujian Pascaproyek
+              name: Pengujian Pascaproyek
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              key: Pengenalan Pemecahan Masalah - Meja Surat Kabar (Pelajaran 1 Alternatif)
+              name: Pengenalan Pemecahan Masalah - Meja Surat Kabar (Pelajaran 1 Alternatif)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              key: Pengenalan Pemecahan Masalah - Jembatan Spageti (Pelajaran 1 Alternatif)
+              name: Pengenalan Pemecahan Masalah - Jembatan Spageti (Pelajaran 1 Alternatif)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              key: Pengenalan Pemecahan Masalah - Menara Kertas (Pelajaran 1 Alternatif)
+              name: Pengenalan Pemecahan Masalah - Menara Kertas (Pelajaran 1 Alternatif)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              key: Mengeksplorasi Pemecahan Masalah - Tema Binatang (Pelajaran 3 Alternatif)
+              name: Mengeksplorasi Pemecahan Masalah - Tema Binatang (Pelajaran 3 Alternatif)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              key: Mengeksplorasi Pemecahan Masalah - Tema Permainan (Pelajaran 3 Alternatif)
+              name: Mengeksplorasi Pemecahan Masalah - Tema Permainan (Pelajaran 3 Alternatif)
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csd1_1:
+              display_name: 'Bab 1: Proses Pemecahan Masalah'
+            csd1_2:
+              display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            csd1_3:
+              display_name: Pelajaran Alternatif
+        csd2-2021:
+          title: CSD Unit 2 - Pengembangan Web
+          description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
+          description_short: "  Belajar membuat situs web sendiri di Web Lab."
+          lessons:
+            Exploring Web Pages:
+              key: Mengeksplorasi Halaman Web
+              name: Mengeksplorasi Halaman Web
+            Intro to HTML:
+              key: Pengenalan HTML
+              name: Pengenalan HTML
+            Headings:
+              key: Tajuk
+              name: Tajuk
+            'Mini-Project: HTML Web Page':
+              key: 'Proyek Mini: Halaman Web HTML'
+              name: 'Proyek Mini: Halaman Web HTML'
+            Digital Footprint:
+              key: Jejak Digital
+              name: Jejak Digital
+            Styling Text with CSS:
+              key: Membuat Gaya Teks dengan CSS
+              name: Membuat Gaya Teks dengan CSS
+            'Mini-Project: Your Personal Style':
+              key: 'Proyek Mini: Gaya Pribadi Anda'
+              name: 'Proyek Mini: Gaya Pribadi Anda'
+            Intellectual Property:
+              key: Hak milik intelektual
+              name: Hak milik intelektual
+            Using Images:
+              key: Menggunakan Gambar
+              name: Menggunakan Gambar
+            'Websites for Expression ':
+              key: 'Situs-situs untuk Ekspresi '
+              name: 'Situs-situs untuk Ekspresi '
+            Styling Elements with CSS:
+              key: Membuat Gaya Elemen dengan CSS
+              name: Membuat Gaya Elemen dengan CSS
+            Your Web Page - Prepare:
+              key: Halaman Web Anda - Persiapkan
+              name: Halaman Web Anda - Persiapkan
+            Project - Personal Web Page:
+              key: Proyek - Halaman Web Pribadi
+              name: Proyek - Halaman Web Pribadi
+            Websites for a Purpose:
+              key: Situs Web untuk suatu Tujuan
+              name: Situs Web untuk suatu Tujuan
+            Team Problem Solving:
+              key: Pemecahan Masalah Tim
+              name: Pemecahan Masalah Tim
+            Sources and Research:
+              key: Sumber dan Penelitian
+              name: Sumber dan Penelitian
+            CSS Classes:
+              key: Kelas CSS
+              name: Kelas CSS
+            Planning a Multi-page Website:
+              key: Merencanakan Situs Web Multihalaman
+              name: Merencanakan Situs Web Multihalaman
+            Linking Pages:
+              key: Menautkan Halaman
+              name: Menautkan Halaman
+            Project - Website for a Purpose:
+              key: Proyek - Situs Web untuk suatu Tujuan
+              name: Proyek - Situs Web untuk suatu Tujuan
+            Peer Review and Final Touches:
+              key: Ulasan Sejawat dan Sentuhan Akhir
+              name: Ulasan Sejawat dan Sentuhan Akhir
+            Post-Project Test:
+              key: Pengujian Pascaproyek
+              name: Pengujian Pascaproyek
+            CS Discoveries Post Course survey:
+              key: Survei Pascakursus CS Discoveries
+              name: Survei Pascakursus CS Discoveries
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+        csd3-2021:
+          title: CSD Unit 3 - Animasi dan Permainan
+          description: " Di Unit 3, Pengalaman coding Anda akan terbentuk sewaktu Anda memprogram animasi, seni interaktif, dan permainan di Game Lab. Unit ini dimulai dengan bentuk-bentuk sederhana dan berjenjang hingga ke permainan berbasis-sprite yang lebih canggih, menggunakan konsep pemrograman dan proses desain yang sama yang digunakan sehari-hari oleh ilmuwan komputer. Dalam proyek terakhir, Anda akan mengembangkan program interaktif yang sudah mendapat sentuhan pribadi."
+          description_short: "Pemrograman"
+          lessons:
+            Programming for Entertainment:
+              key: Pemrograman untuk Hiburan
+              name: Pemrograman untuk Hiburan
+            Plotting Shapes:
+              key: Merancang Bentuk
+              name: Merancang Bentuk
+            Drawing in Game Lab:
+              key: Menggambar dalam lab permaianan
+              name: Menggambar dalam lab permaianan
+            Variables:
+              key: variabel
+              name: variabel
+            Sprites:
+              key: Sprites
+              name: Sprites
+            Text:
+              key: Teks
+              name: Teks
+            'Mini-Project: Captioned Scenes':
+              key: 'Proyek Mini: Adegan Berteks'
+              name: 'Proyek Mini: Adegan Berteks'
+            The Draw Loop:
+              key: Draw Loop
+              name: Draw Loop
+            Sprite Movement:
+              key: Gerakan Sprite
+              name: Gerakan Sprite
+            'Mini-Project: Animation':
+              key: 'Proyek Mini: Animasi'
+              name: 'Proyek Mini: Animasi'
+            Conditionals:
+              key: Kondisi
+              name: Kondisi
+            Keyboard Input:
+              key: Input Keyboard
+              name: Input Keyboard
+            Mouse Input:
+              key: Input Mouse
+              name: Input Mouse
+            Project - Interactive Card:
+              key: Proyek - kartu interaktif
+              name: Proyek - kartu interaktif
+            Velocity:
+              key: Percepatan
+              name: Percepatan
+            Collision Detection:
+              key: Deteksi tumbukan
+              name: Deteksi tumbukan
+            'Mini-Project: Side Scroller':
+              key: 'Proyek-Mini: Side Scroller'
+              name: 'Proyek-Mini: Side Scroller'
+            Complex Sprite Movement:
+              key: Gerakan Sprite Kompleks
+              name: Gerakan Sprite Kompleks
+            Collisions:
+              key: Tumbukan
+              name: Tumbukan
+            'Mini-Project: Flyer Game':
+              key: 'Proyek Mini: Permainan Flyer'
+              name: 'Proyek Mini: Permainan Flyer'
+            Functions:
+              key: fungsi
+              name: fungsi
+            The Game Design Process:
+              key: Proses perancangan permainan
+              name: Proses perancangan permainan
+            Using the Game Design Process:
+              key: Proses menggunakan desain permainan
+              name: Proses menggunakan desain permainan
+            Project - Design a Game:
+              key: Proyek - merancang sebuah permainan
+              name: Proyek - merancang sebuah permainan
+            Post-Project Test:
+              key: Pengujian Pascaproyek
+              name: Pengujian Pascaproyek
+            CS Discoveries Post Course survey:
+              key: Survei Pascakursus CS Discoveries
+              name: Survei Pascakursus CS Discoveries
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            csd3_2:
+              display_name: 'Bab 2: Bangunan Permainan'
+            cspSurvey:
+              display_name: Survei
+        csd4-2021:
+          title: CSD Unit 4 - Proses Desain
+          description: Unit 4 memperkenalkan dampak sosial yang lebih luas dari komputasi.  Melalui serangkaian tantangan desain, Anda akan mempelajari cara memahami kebutuhan orang lain dengan lebih baik sambil mengembangkan solusi sebuah masalah. Bagian kedua unit ini berisi sebuah proyek tim berulang, yang di dalamnya tim berkesempatan mengidentifikasi suatu kebutuhan yang mereka pedulikan, solusi prototipe baik di kertas maupun di App Lab, dan mengujikan solusi kepada pengguna yang sebenarnya untuk mendapatkan masukan dan mendorong pengulangan lebih lanjut.
+          description_short: "  Pelajari cara merancang sebuah program yang memenuhi kebutuhan pengguna Anda."
+          lessons:
+            Analysis of Design:
+              key: Analisis desain
+              name: Analisis desain
+            Understanding Your User:
+              key: Memahami pengguna anda
+              name: Memahami pengguna anda
+            User-Centered Design Micro Activity:
+              key: Aktivitas Mikro Desain Berpusat-Pengguna
+              name: Aktivitas Mikro Desain Berpusat-Pengguna
+            User Interfaces:
+              key: Antarmuka Pengguna
+              name: Antarmuka Pengguna
+            Feedback and Testing:
+              key: Umpan balik dan Pengujian
+              name: Umpan balik dan Pengujian
+            Identifying User Needs:
+              key: Mengidentifikasi Kebutuhan Pengguna
+              name: Mengidentifikasi Kebutuhan Pengguna
+            Project - Paper Prototype:
+              key: Proyek - Prototipe Kertas
+              name: Proyek - Prototipe Kertas
+            Designing Apps for Good:
+              key: Merancang aplikasi untuk kebaikan
+              name: Merancang aplikasi untuk kebaikan
+            Market Research:
+              key: Meneliti pasar
+              name: Meneliti pasar
+            Paper Prototypes:
+              key: Prototipe Kertas
+              name: Prototipe Kertas
+            Prototype Testing:
+              key: Pengujian Prototipe
+              name: Pengujian Prototipe
+            Digital Design:
+              key: Desain Digital
+              name: Desain Digital
+            Linking Screens:
+              key: Menautkan Layar
+              name: Menautkan Layar
+            Testing the App:
+              key: Menguji Aplikasi
+              name: Menguji Aplikasi
+            Improving and Iterating:
+              key: Meningkatkan dan menguraikan
+              name: Meningkatkan dan menguraikan
+            Project - App Presentation:
+              key: Proyek - Presentasi Aplikasi
+              name: Proyek - Presentasi Aplikasi
+            Post-Project Test:
+              key: Pengujian Pascaproyek
+              name: Pengujian Pascaproyek
+            CS Discoveries Post Course survey:
+              key: Survei Pascakursus CS Discoveries
+              name: Survei Pascakursus CS Discoveries
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bab 1: User Centered Design'
+            csd4_2:
+              display_name: 'Bab 2: Aplikasi Prototyping'
+            csd5_2:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+            cspSurvey:
+              display_name: Survei
+        csd5-2021:
+          title: CSP Unit 5 - Data dan Masyarakat ('20-'21)
+          description: Unit 5 membahas pentingnya data dalam memecahkan masalah dan menyoroti cara komputer dapat membantu dalam proses ini. Bab pertama mengulas berbagai sistem yang digunakan untuk merepresentasikan informasi dalam komputer beserta tantangan dan imbalan yang diterima jika menggunakan sistem tersebut. Di bab kedua, Anda akan mempelajari cara menggunakan kumpulan data untuk memecahkan masalah, dan cara komputer membantu mengotomatiskan langkah-langkah dari proses ini. Bab ini diakhiri dengan mempertimbangkan cara menerapkan proses pemecahan masalah data dalam bidang yang Anda pilih.
+          description_short: Pelajari cara orang menggunakan komputer untuk memecahkan masalah data.
+          lessons:
+            Representation Matters:
+              key: Representasi Itu Penting
+              name: Representasi Itu Penting
+            Patterns and Representation:
+              key: Pola dan Representasi
+              name: Pola dan Representasi
+            ASCII and Binary Representation:
+              key: ASCII dan Representasi Binary
+              name: ASCII dan Representasi Binary
+            Representing Images:
+              key: Merepresentasikan Gambar
+              name: Merepresentasikan Gambar
+            Representing Numbers:
+              key: Merepresentasikan Angka
+              name: Merepresentasikan Angka
+            Keeping Data Secret:
+              key: Menjaga Kerahasiaan Data
+              name: Menjaga Kerahasiaan Data
+            Combining Representations:
+              key: Menggabungkan Representasi
+              name: Menggabungkan Representasi
+            Project - Create a Representation:
+              key: Proyek - Membuat Representasi
+              name: Proyek - Membuat Representasi
+            Problem Solving and Data:
+              key: Pemecahan masalah dan Data
+              name: Pemecahan masalah dan Data
+            Problem Solving with Big Data:
+              key: Pemecahan masalah dengan Data Besar
+              name: Pemecahan masalah dengan Data Besar
+            Structuring Data:
+              key: Penataan Data
+              name: Penataan Data
+            Making Decisions with Data:
+              key: Mengambil Keputusan dengan Data
+              name: Mengambil Keputusan dengan Data
+            Interpreting Data:
+              key: Menginterpretasikan Data
+              name: Menginterpretasikan Data
+            Automating Data Decisions:
+              key: Mengotomatisasi Data Keputusan
+              name: Mengotomatisasi Data Keputusan
+            Project - Make a Recommendation:
+              key: Proyek - Membuat Rekomendasi
+              name: Proyek - Membuat Rekomendasi
+            Post-Project Test:
+              key: Pengujian Pascaproyek
+              name: Pengujian Pascaproyek
+            CS Discoveries Post Course survey:
+              key: Survei Pascakursus CS Discoveries
+              name: Survei Pascakursus CS Discoveries
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            csd5_2:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+            cspSurvey:
+              display_name: Survei
+        csd6-2021:
+          title: CSD Unit 6 - Komputasi Fisik ('20-'21)
+          description: Unit 6 mengeksplorasi peran platform perangkat keras dalam komputasi dan cara berbagai sensor dapat memberikan input dan output yang lebih efektif daripada input keyboard, mouse, dan monitor. Dengan menggunakan App Lab dan Circuit Playground dari Adafruit, Anda akan mengembangkan program yang memanfaatkan input dan output perangkat keras yang sama yang Anda saksikan di perangkat pintar, dengan mencermati betapa prototipe yang sederhana dan kasar dapat menghasilkan produk jadi. Unit diakhiri dengan tantangan desain untuk menggunakan Circuit Playground sebagai landasan bagi desain inovasi Anda sendiri.
+          description_short: Belajar program dengan perangkat fisik.
+          lessons:
+            Innovations in Computing:
+              key: Inovasi dalam Komputasi
+              name: Inovasi dalam Komputasi
+            Designing Screens with Code:
+              key: Perancangan Layar dengan Kode
+              name: Perancangan Layar dengan Kode
+            The Circuit Playground:
+              key: Sirkuit Bermain Anak
+              name: Sirkuit Bermain Anak
+            Input Unplugged:
+              key: Input Unplugged
+              name: Input Unplugged
+            Board Events:
+              key: Event Papan
+              name: Event Papan
+            Getting Properties:
+              key: Mendapatkan Properti
+              name: Mendapatkan Properti
+            Analog Input:
+              key: Input Analog
+              name: Input Analog
+            The Program Design Process:
+              key: Proses Desain Program
+              name: Proses Desain Program
+            'Project: Make a Game':
+              key: 'Proyek: Buat Permainan'
+              name: 'Proyek: Buat Permainan'
+            Arrays and Color LEDs:
+              key: Array dan LED Warna
+              name: Array dan LED Warna
+            Making Music:
+              key: Membuat musik
+              name: Membuat musik
+            Arrays and For Loops:
+              key: Array dan For Loop
+              name: Array dan For Loop
+            Accelerometer:
+              key: Akselerometer
+              name: Akselerometer
+            Functions with Parameters:
+              key: Fungsi dengan parameter
+              name: Fungsi dengan parameter
+            Circuits and Physical Prototypes:
+              key: Sirkuit dan Prototipe Fisik
+              name: Sirkuit dan Prototipe Fisik
+            'Project: Prototype an Innovation':
+              key: 'Proyek: Buat Prototipe Inovasi'
+              name: 'Proyek: Buat Prototipe Inovasi'
+            Post-Project Test:
+              key: Pengujian Pascaproyek
+              name: Pengujian Pascaproyek
+            CS Discoveries Post Course survey:
+              key: Survei Pascakursus CS Discoveries
+              name: Survei Pascakursus CS Discoveries
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bab 1: Pemrograman dengan Hardware'
+            csd6_2:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
+            cspSurvey:
+              display_name: Survei
+        csp1-2021:
+          title: CSP Unit 1 - Informasi Digital ('20-'21)
+          lessons:
+            CS Principles Pre-survey:
+              key: Prasurvei CS Principles
+              name: Prasurvei CS Principles
+            Welcome to CSP:
+              key: Selamat datang di CSP
+              name: Selamat datang di CSP
+            Representing Information:
+              key: Menunjukkan informasi
+              name: Menunjukkan informasi
+            Circle Square Patterns:
+              key: Pola Lingkaran Persegi Empat
+              name: Pola Lingkaran Persegi Empat
+            Binary Numbers:
+              key: Bilangan Biner
+              name: Bilangan Biner
+            Overflow and Rounding:
+              key: Overflow dan Rounding (Pembulatan)
+              name: Overflow dan Rounding (Pembulatan)
+            Representing Text:
+              key: Merepresentasikan Teks
+              name: Merepresentasikan Teks
+            Black and White Images:
+              key: Gambar Hitam dan Putih
+              name: Gambar Hitam dan Putih
+            Color Images:
+              key: Gambar Warna
+              name: Gambar Warna
+            Lossless Compression:
+              key: Lossless Compression
+              name: Lossless Compression
+            Lossy Compression:
+              key: Lossy Compression
+              name: Lossy Compression
+            Intellectual Property:
+              key: Hak milik intelektual
+              name: Hak milik intelektual
+            Project - Digital Information Dilemmas Part 1:
+              key: Proyek - Dilema Informasi Digital Bagian 1
+              name: Proyek - Dilema Informasi Digital Bagian 1
+            Project - Digital Information Dilemmas Part 2:
+              key: Proyek - Dilema Informasi Digital Bagian 2
+              name: Proyek - Dilema Informasi Digital Bagian 2
+            'Lesson 14: Assessment Day':
+              key: 'Pelajaran 14: Hari Penilaian'
+              name: 'Pelajaran 14: Hari Penilaian'
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csp_unit1_2020:
+              display_name: '(Lama) Unit 1: Informasi Digital'
+        csp2-2021:
+          title: CSP Unit 2 - Internet ('20-'21)
+          lessons:
+            Welcome to the Internet:
+              key: Selamat datang di Internet!
+              name: Selamat datang di Internet!
+            Building a Network:
+              key: Membangun Jaringan
+              name: Membangun Jaringan
+            The Need for Addressing:
+              key: Dibutuhkan untuk Pengalamatan
+              name: Dibutuhkan untuk Pengalamatan
+            Routers and Redundancy:
+              key: Router dan Kualitas
+              name: Router dan Kualitas
+            Packets:
+              key: Paket
+              name: Paket
+            DNS and HTTP:
+              key: DNS dan HTTP
+              name: DNS dan HTTP
+            Project - Internet Dilemmas Part 1:
+              key: Proyek - Dilema Internet Bagian 1
+              name: Proyek - Dilema Internet Bagian 1
+            Project - Internet Dilemmas Part 2:
+              key: Proyek - Dilema Internet Bagian 2
+              name: Proyek - Dilema Internet Bagian 2
+            'Lesson 9: Assessment Day':
+              key: 'Pelajaran 9: Hari Penilaian'
+              name: 'Pelajaran 9: Hari Penilaian'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unit 2: Internet'
+        csp3-2021:
+          title: CSP Unit 3 - Pengenalan Desain Aplikasi ('20-'21)
+          lessons:
+            Introduction to Apps:
+              key: Pengenalan Aplikasi
+              name: Pengenalan Aplikasi
+            Project - Designing an App Part 1:
+              key: Proyek - Mendesain Aplikasi Bag 1
+              name: Proyek - Mendesain Aplikasi Bag 1
+            Project - Designing an App Part 2:
+              key: Proyek - Mendesain Aplikasi Bag 2
+              name: Proyek - Mendesain Aplikasi Bag 2
+            The Need for Programming Languages:
+              key: Kebutuhan akan Bahasa Pemrograman
+              name: Kebutuhan akan Bahasa Pemrograman
+            Intro to Programming:
+              key: Pengenalan Pemrograman
+              name: Pengenalan Pemrograman
+            Debugging:
+              key: Debugging
+              name: Debugging
+            Project - Designing an App Part 3:
+              key: Proyek - Mendesain Aplikasi Bag 3
+              name: Proyek - Mendesain Aplikasi Bag 3
+            Project - Designing an App Part 4:
+              key: Proyek - Mendesain Aplikasi Bag 4
+              name: Proyek - Mendesain Aplikasi Bag 4
+            Project - Designing an App Part 5:
+              key: Proyek - Mendesain Aplikasi Bag 5
+              name: Proyek - Mendesain Aplikasi Bag 5
+            'Lesson 11: Assessment Day':
+              key: 'Pelajaran 11: Hari Penilaian'
+              name: 'Pelajaran 11: Hari Penilaian'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unit 3: Pengenalan Desain Aplikasi'
+        csp4-2021:
+          title: CSP Unit 4 - Variable, Conditional, dan Function ('20-'21)
+          lessons:
+            Variables Explore:
+              key: Eksplorasi Variable
+              name: Eksplorasi Variable
+            Variables Investigate:
+              key: Selidiki Variable
+              name: Selidiki Variable
+            Variables Practice:
+              key: Latih Variable
+              name: Latih Variable
+            Variables Make:
+              key: Variable Membuat
+              name: Variable Membuat
+            Conditionals Explore:
+              key: Mengeksplorasi Conditional
+              name: Mengeksplorasi Conditional
+            Conditionals Investigate:
+              key: Menyelidiki Conditional
+              name: Menyelidiki Conditional
+            Conditionals Practice:
+              key: Praktik Conditional
+              name: Praktik Conditional
+            Conditional Make:
+              key: Conditional Membuat
+              name: Conditional Membuat
+            Functions Explore / Investigate:
+              key: Eksplorasi / Selidiki Function
+              name: Eksplorasi / Selidiki Function
+            Functions Practice:
+              key: Praktik Function
+              name: Praktik Function
+            Functions Make:
+              key: Function Membuat
+              name: Function Membuat
+            Project - Decision Maker App Part 1:
+              key: Proyek - Aplikasi Pembuat Keputusan Bagian 1
+              name: Proyek - Aplikasi Pembuat Keputusan Bagian 1
+            Project - Decision Maker App Part 2:
+              key: Proyek - Aplikasi Pembuat Keputusan Bagian 2
+              name: Proyek - Aplikasi Pembuat Keputusan Bagian 2
+            Project - Decision Maker App Part 3:
+              key: Proyek - Aplikasi Pembuat Keputusan Bagian 3
+              name: Proyek - Aplikasi Pembuat Keputusan Bagian 3
+            'Lesson 15: Assessment Day':
+              key: 'Pelajaran 15: Hari Penilaian'
+              name: 'Pelajaran 15: Hari Penilaian'
+          lesson_groups:
+            csp_variables:
+              display_name: variabel
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
+        csp5-2021:
+          title: CSP Unit 5 - Daftar, Loop, dan Traversal ('20-'21)
+          lessons:
+            Lists Explore:
+              key: Eksplorasi Daftar
+              name: Eksplorasi Daftar
+            Lists Investigate:
+              key: Selidiki Daftar
+              name: Selidiki Daftar
+            Lists Practice:
+              key: Latih Daftar
+              name: Latih Daftar
+            Lists Make:
+              key: Daftar Membuat
+              name: Daftar Membuat
+            Loops Explore:
+              key: Eksplorasi Loop
+              name: Eksplorasi Loop
+            Loops Investigate:
+              key: Selidiki Loop
+              name: Selidiki Loop
+            Loops Practice:
+              key: Latih Loop
+              name: Latih Loop
+            Loops Make:
+              key: Loop Membuat
+              name: Loop Membuat
+            Traversals Explore:
+              key: Mengeksplorasi Traversal
+              name: Mengeksplorasi Traversal
+            Traversals Investigate:
+              key: Selidiki Traversal
+              name: Selidiki Traversal
+            Traversals Practice:
+              key: Latihan Traversal
+              name: Latihan Traversal
+            Traversals Make:
+              key: Traversal Membuat
+              name: Traversal Membuat
+            Semester Hackathon Part 1:
+              key: Semester Hackathon Bagian 1
+              name: Semester Hackathon Bagian 1
+            Semester Hackathon Part 2:
+              key: Semester Hackathon Bagian 2
+              name: Semester Hackathon Bagian 2
+            Semester Hackathon Part 3:
+              key: Semester Hackathon Bagian 3
+              name: Semester Hackathon Bagian 3
+            Semester Hackathon Part 4:
+              key: Semester Hackathon Bagian 4
+              name: Semester Hackathon Bagian 4
+            Semester Hackathon Part 5:
+              key: Semester Hackathon Bagian 5
+              name: Semester Hackathon Bagian 5
+            'Lesson 18: Assessment Day':
+              key: 'Pelajaran 18: Hari Penilaian'
+              name: 'Pelajaran 18: Hari Penilaian'
+          lesson_groups:
+            csp_lists:
+              display_name: List
+            csp_loops:
+              display_name: Loop
+            csp_traversals:
+              display_name: Melintang
+            csp_project:
+              display_name: Proyek
+        csp6-2021:
+          title: CSP Unit 6 - Algorithm ('20-'21)
+          lessons:
+            Algorithms Solve Problems:
+              key: Algorithm Memecahkan Masalah
+              name: Algorithm Memecahkan Masalah
+            Algorithm Efficiency:
+              key: Efisiensi Algorithm
+              name: Efisiensi Algorithm
+            Unreasonable Time:
+              key: Waktu yang Tidak Masuk Akal
+              name: Waktu yang Tidak Masuk Akal
+            The Limits of Algorithms:
+              key: Batas-Batas Algorithm
+              name: Batas-Batas Algorithm
+            Parallel and Distributed Algorithms:
+              key: Algorithm Paralel dan Terdistribusi
+              name: Algorithm Paralel dan Terdistribusi
+            'Lesson 6: Assessment Day':
+              key: 'Pelajaran 6: Hari Penilaian'
+              name: 'Pelajaran 6: Hari Penilaian'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Unit 6: Algorithm'
+        csp7-2021:
+          lessons:
+            Parameters and Return Explore:
+              key: Parameter dan Return Explore
+              name: Parameter dan Return Explore
+            Parameters and Return Investigate:
+              key: Parameter dan Return Investigate
+              name: Parameter dan Return Investigate
+            Parameters and Return Practice:
+              key: Parameter dan Return Practice
+              name: Parameter dan Return Practice
+            Parameters and Return Make:
+              key: Parameter dan Return Make
+              name: Parameter dan Return Make
+            Libraries Explore:
+              key: Eksplorasi Perpustakaan
+              name: Eksplorasi Perpustakaan
+            Libraries Investigate:
+              key: Selidiki Perpustakaan
+              name: Selidiki Perpustakaan
+            Libraries Practice:
+              key: Praktik Perpustakaan
+              name: Praktik Perpustakaan
+            Project - Make a Library Part 1:
+              key: Proyek - Membuat Perpustakaan Bagian 1
+              name: Proyek - Membuat Perpustakaan Bagian 1
+            Project - Make a Library Part 2:
+              key: Proyek - Membuat Perpustakaan Bagian 2
+              name: Proyek - Membuat Perpustakaan Bagian 2
+            Project - Make a Library Part 3:
+              key: Proyek - Membuat Perpustakaan Bagian 3
+              name: Proyek - Membuat Perpustakaan Bagian 3
+            'Lesson 11: Assessment Day':
+              key: 'Pelajaran 11: Hari Penilaian'
+              name: 'Pelajaran 11: Hari Penilaian'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameter dan Nilai Balik
+            csp_libraries:
+              display_name: Perpustakaan
+        csp8-2021:
+          title: CSP Unit 8 - Buat PT Prep ('20-'21)
+          lessons:
+            Create PT - Review the Task:
+              key: Membuat PT - Meninjau Tugas
+              name: Membuat PT - Meninjau Tugas
+            Create PT - Make a Plan:
+              key: Membuat PT - Membuat Rencana
+              name: Membuat PT - Membuat Rencana
+            Create PT - Complete the Task:
+              key: Membuat PT - Menyelesaikan tugas
+              name: Membuat PT - Menyelesaikan tugas
+        csp9-2021:
+          title: CSP Unit 9 - Data ('20-'21)
+          lessons:
+            Learning From Data:
+              key: Belajar Dari Data
+              name: Belajar Dari Data
+            Exploring One Column:
+              key: Mengeksplorasi Satu Kolom
+              name: Mengeksplorasi Satu Kolom
+            Filtering and Cleaning Data:
+              key: Memfilter dan Membersihkan Data
+              name: Memfilter dan Membersihkan Data
+            Exploring Two Columns:
+              key: Mengeksplorasi Dua Kolom
+              name: Mengeksplorasi Dua Kolom
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: Mahadata, Crowdsourcing, dan Pembelajaran Mesin
+              name: Mahadata, Crowdsourcing, dan Pembelajaran Mesin
+            Machine Learning and Bias:
+              key: Pembelajaran Mesin dan Bias
+              name: Pembelajaran Mesin dan Bias
+            Project - Tell a Data Story - Part 1:
+              key: Proyek - Menuturkan Cerita Data - Bagian 1
+              name: Proyek - Menuturkan Cerita Data - Bagian 1
+            Project - Tell a Data Story - Part 2:
+              key: Proyek - Menuturkan Cerita Data - Bagian 2
+              name: Proyek - Menuturkan Cerita Data - Bagian 2
+            'Lesson 9: Assessment Day':
+              key: 'Pelajaran 9: Hari Penilaian'
+              name: 'Pelajaran 9: Hari Penilaian'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unit 9: Data'
+        csp10-2021:
+          title: CSP Unit 10 - Cybersecurity dan Dampak Global ('20-'21)
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: Proyek - Simulasi Inovasi Bagian 1
+              name: Proyek - Simulasi Inovasi Bagian 1
+            Project - Innovation Simulation Part 2:
+              key: Proyek - Simulasi Inovasi Bagian 2
+              name: Proyek - Simulasi Inovasi Bagian 2
+            Data Policies and Privacy:
+              key: Kebijakan dan Privasi Data
+              name: Kebijakan dan Privasi Data
+            The Value of Privacy:
+              key: Nilai Privasi
+              name: Nilai Privasi
+            Project - Innovation Simulation Part 3:
+              key: Proyek - Simulasi Inovasi Bagian 3
+              name: Proyek - Simulasi Inovasi Bagian 3
+            Security Risks Part 1:
+              key: Risiko Keamanan Bagian 1
+              name: Risiko Keamanan Bagian 1
+            Security Risks Part 2:
+              key: Risiko Keamanan Bagian 2
+              name: Risiko Keamanan Bagian 2
+            'Project: Innovation Simulation Part 4':
+              key: 'Proyek: Simulasi Inovasi Bagian 4'
+              name: 'Proyek: Simulasi Inovasi Bagian 4'
+            Protecting Data Part 1:
+              key: Melindungi Data Bagian 1
+              name: Melindungi Data Bagian 1
+            Protecting Data Part 2:
+              key: Melindungi Data Bagian 2
+              name: Melindungi Data Bagian 2
+            'Project: Innovation Simulation Part 5':
+              key: 'Proyek: Simulasi Inovasi Bagian 5'
+              name: 'Proyek: Simulasi Inovasi Bagian 5'
+            'Project: Innovation Simulation Part 6':
+              key: 'Proyek: Simulasi Inovasi Bagian 6'
+              name: 'Proyek: Simulasi Inovasi Bagian 6'
+            'Project: Innovation Simulation Part 7':
+              key: 'Proyek: Simulasi Inovasi Bagian 7'
+              name: 'Proyek: Simulasi Inovasi Bagian 7'
+            'Lesson 14: Unit Assessment Day':
+              key: 'Pelajaran 14: Hari Penilaian Unit'
+              name: 'Pelajaran 14: Hari Penilaian Unit'
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unit 10 - Cybersecurity dan Dampak Global'
+        coursea-2021:
+          title: Kursus A(2020)
+          description: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
+          description_audience: 'Usia: 4-7'
+          lessons:
+            Safety in My Online Neighborhood:
+              key: Keamanan di Lingkungan Sekitar Online Saya
+              name: Keamanan di Lingkungan Sekitar Online Saya
+            Learn to Drag and Drop:
+              key: Belajar Menarik dan Melepaskan
+              name: Belajar Menarik dan Melepaskan
+            'Programming: Happy Maps':
+              key: 'Pemrograman: Peta Bahagia'
+              name: Pemetaan bahagia
+            Sequencing with Scrat:
+              key: Pengurutan dengan Scrat
+              name: Pengurutan dengan Scrat
+            Programming in Ice Age:
+              key: Pemrograman dalam Zaman Es
+              name: Pemrograman dengan Scrat
+            Programming with Rey and BB-8:
+              key: Pemrograman dengan Rey dan BB-8
+              name: Pemrograman dengan Rey dan BB-8
+            'Loops: Happy Loops':
+              key: 'Loop: Loop Bahagia'
+              name: Happy Loop
+            Loops in Ice Age:
+              key: Loop dalam Ice Age
+              name: Loop dengan Scrat
+            Loops in Collector:
+              key: Loop dalam Kolektor
+              name: Loop dengan Laurel
+            Ocean Scene with Loops:
+              key: Adegan Laut dengan Loop
+              name: Adegan Laut dengan Loop
+            'Events: The Big Event':
+              key: 'Event: Event Besar'
+              name: The Big Event Jr.
+            Events in Play Lab:
+              key: Event dalam Play Lab
+              name: Aktif bergerak dengan Event
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+        courseb-2021:
+          title: Kursus B (2020)
+          description: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+          description_short: Pengenalan ilmu komputer untuk prabaca. Sama dengan Kursus A, tetapi dengan tambahan konsep 'pendalaman'.
+          description_audience: 'Usia: 5-8'
+          lessons:
+            Digital Trails:
+              key: Jejak Digital
+              name: Jejak Digital
+            Move It, Move It:
+              key: Gerakkan itu, Gerakkan itu
+              name: Gerakkan itu, Gerakkan itu
+            Sequencing in Maze:
+              key: Pengurutan dalam Labirin
+              name: Pengurutan dengan Angry Birds
+            Programming in Maze:
+              key: Pemrograman dalam Labirin
+              name: Pemrograman dengan Angry Birds
+            Programming in Harvester:
+              key: Pemrograman dalam Pemanen
+              name: Pemrograman dengan Pemanen
+            'Loops: Getting Loopy':
+              key: 'Loop: Menjadi Berbelit'
+              name: Dapat berulang-ulang
+            Loops in Harvester:
+              key: Loops in Harvester
+              name: Loop dengan Pemanen
+            Loops in Collector:
+              key: Loop dalam Kolektor
+              name: Loop dengan Laurel
+            Loops in Artist:
+              key: Loops in Artist
+              name: Menggambar Taman dengan Loop
+            The Right App:
+              key: Aplikasi yang Tepat
+              name: Aplikasi yang Tepat
+            'Events: The Big Event':
+              key: 'Event: Event Besar'
+              name: The Big Event Jr.
+            Events in Play Lab:
+              key: Event dalam Play Lab
+              name: Pertempuran Besar dengan Event
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_impacts:
+              display_name: Dampak dari Komputasi
+            csf_events:
+              display_name: kegiatan
+        coursec-2021:
+          title: Kursus C (2020)
+          description: Buat program dengan pengurutan, loop, dan event. Terjemahkan inisial Anda menjadi binary, selidiki berbagai teknik pemecahan masalah, dan pelajari cara menanggapi perundungan maya (cyberbullying). Pada akhir kursus, buat permainan atau cerita Anda sendiri yang dapat dibagikan!
+          description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
+          description_audience: 'Usia: 6-10'
+          lessons:
+            Putting a STOP to Online Meanness:
+              key: MENGHENTIKAN Kejahatan Online
+              name: MENGHENTIKAN Kejahatan Online
+            Password Power-Up:
+              key: Penguatan Kata Sandi
+              name: Penguatan Kata Sandi
+            'Programming: My Robotic Friends':
+              key: 'Pemrograman: Teman-Teman Robot Saya'
+              name: Teman Robot Saya Jr.
+            Programming in Maze:
+              key: Pemrograman dalam Labirin
+              name: Pemrograman dengan Angry Birds
+            Debugging in Maze:
+              key: Debugging dalam Labirin
+              name: Debugging dalam Labirin
+            Programming in Collector:
+              key: Pemrograman dalam Kolektor
+              name: Mengumpulkan Harta Karun bersama Laurel
+            Programming in Artist:
+              key: Pemrograman dalam Artis
+              name: Membuat Seni dengan Code
+            Binary Bracelets:
+              key: Gelang biner
+              name: Gelang biner
+            'Loops: My Loopy Robotic Friends':
+              key: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
+              name: Teman-teman Robot Saya yang Mengulang-ulang Jr.
+            Loops with Rey and BB-8:
+              key: Loop dengan Rey dan BB-8
+              name: Loop dengan Rey dan BB-8
+            Loops in Harvester:
+              key: Loops in Harvester
+              name: Memanen Hasil Panen dengan Loop
+            Looking Ahead:
+              key: Melihat ke depan
+              name: Melihat ke depan
+            Sticker Art with Loops:
+              key: Seni Stiker dengan Loop
+              name: Seni Stiker dengan Loop
+            'Events: The Big Event':
+              key: 'Event: Event Besar'
+              name: Acara besar
+            Build a Flappy Game:
+              key: Buat Permainan Kepakan
+              name: Buat Permainan Kepakan
+            Events in Play Lab:
+              key: Event dalam Play Lab
+              name: Permainan Kejar-kejaran dengan Event
+            Picturing Data:
+              key: Penggambaran Data
+              name: Penggambaran Data
+            'End of Course Project: Create a Play Lab Game':
+              name: Proyek Akhir Kursus
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_binary:
+              display_name: Binary
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+        coursed-2021:
+          title: Kursus D (2020)
+          description: Murid mengembangkan pemahaman tentang loop, conditional, dan event. Selain coding, murid belajar tentang kewarganegaraan digital.
+          description_short: Pelajari tentang pernyataan conditional. Buat karya seni, permainan, dan bahkan pesta dansa.
+          description_audience: 'Usia: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'Algoritma: Kertas Grafik Pemrograman'
+              name: Pemrograman grafis diatas kertas
+            Introduction to Online Puzzles:
+              key: Pengantar teka-Teki secara Online
+              name: Pengantar teka-Teki secara Online
+            Relay Programming:
+              key: Pemrograman bergiliran
+              name: Pemrograman bergiliran
+            Debugging in Collector:
+              key: Debugging dalam Kolektor
+              name: Debugging dengan Laurel
+            Events in Bounce:
+              key: Event dalam Pantulan
+              name: Event dalam Pantulan
+            Build a Star Wars Game:
+              key: Buat Permainan Star Wars
+              name: Buat Permainan Star Wars
+            Dance Party:
+              key: Pesta Tari
+              name: Pesta Tari
+            Loops in Ice Age:
+              key: Loop dalam Ice Age
+              name: Loop dalam Ice Age
+            Loops in Artist:
+              key: Loops in Artist
+              name: Menggambar Bentuk dengan Loop
+            Nested Loops in Bee:
+              key: Nested Loop dalam Lebah
+              name: Nested Loop dalam Labirin
+            Conditionals with Cards:
+              key: Bersyarat dengan kartu
+              name: Bersyarat dengan kartu
+            Conditionals in Bee:
+              key: Kondisional dengan Lebah
+              name: If/Else dengan Lebah
+            While Loops in Farmer:
+              key: While Loop dalam Petani
+              name: While Loop dalam Petani
+            Until Loops in Maze:
+              key: Until Loop dalam Labirin
+              name: Until Loop dalam Labirin
+            Conditionals & Loops in Harvester:
+              key: Kondisional & Loop dalam Pemanen
+              name: Memanen dengan Conditional
+            'Unplugged: Binary':
+              key: 'Dicabut: Biner'
+              name: gambar Biner
+            Artist Binary:
+              key: Artis Biner
+              name: Artis Biner
+            Be A Super Digital Citizen:
+              key: Menjadi Warga Digital Super
+              name: Menjadi Warga Digital Super
+            End of Course Project:
+              key: Proyek Akhir Kursus
+              name: Proyek Akhir Kursus
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_events:
+              display_name: kegiatan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+        coursee-2021:
+          title: Kursus E (2020)
+          description: Mulai coding dengan algorithm, loop, conditional, event, dan barulah Anda beralih ke function. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang dapat dibagikan kepada teman dan keluarga.
+          description_short: Tinjau kembali berbagai konsep dalam Kursus C & D, lalu lanjutkan dengan mempelajari function.
+          description_audience: 'Usia: 8-12'
+          lessons:
+            Sequencing in the Maze:
+              key: Pengurutan dalam Labirin
+              name: Pengurutan dalam Labirin
+            Programming and Loops with the Artist:
+              key: Pemrograman dan Loop dengan Artis
+              name: Loop dengan Artis
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Conditional dalam Minecraft: Perjalanan Air'
+              name: 'Conditional dalam Minecraft: Perjalanan Air'
+            Conditionals:
+              key: Kondisi
+              name: Conditional dengan Petani
+            Simon Says:
+              key: Simon Mengatakan
+              name: Simon Mengatakan
+            Learning Sprites with Sprite Lab:
+              key: Mempelajari Sprite dengan Sprite Lab
+              name: Iklan Berenang dengan Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              key: Event dengan Sprite Lab
+              name: Event dengan Sprite Lab
+            Private and Personal Information:
+              key: Informasi Privat dan Pribadi
+              name: Informasi Privat dan Pribadi
+            About Me:
+              key: Tentang Saya
+              name: Tentang Saya dengan Sprite Lab
+            Digital Sharing:
+              key: Berbagi Secara Digital
+              name: Berbagi Secara Digital
+            Nested Loops in Bee:
+              key: Nested Loop dalam Lebah
+              name: Nested Loop dalam Labirin
+            Nested Loops in Artist:
+              key: Nested Loop dalam Artis
+              name: Bentuk-Bentuk Menawan menggunakan Nested Loop
+            Nested Loops in Frozen:
+              key: Nested Loop dalam Frozen
+              name: Nested Loop dengan Frozen
+            'Functions: Songwriting':
+              key: 'Fungsi: Mencipta Lagu'
+              name: Menulis lagu
+            Functions in Minecraft:
+              key: Function dalam Minecraft
+              name: Function dalam Minecraft
+            Functions in Harvester:
+              key: Function dalam Pemanen
+              name: Function dengan Pemanen
+            Functions in Artist:
+              key: Fungsi dalam Artis
+              name: Function dengan Artis
+            Designing for Accessibility:
+              key: Mendesain untuk Aksesibilitas
+              name: Mendesain untuk Aksesibilitas
+            End of Course Project:
+              key: Proyek Akhir Kursus
+              name: Proyek Akhir Kursus
+          lesson_groups:
+            ramp_up:
+              display_name: Jalan-Naik
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_nested_loops:
+              display_name: Nested Loop
+            csf_functions:
+              display_name: fungsi
+            csf_impacts:
+              display_name: Dampak dari Komputasi
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+        coursef-2021:
+          title: Kursus F (2020)
+          description: Pelajari cara menggunakan berbagai jenis loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman dan keluarga.
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+          description_audience: 'Usia: 9-13'
+          lessons:
+            Functions in Minecraft:
+              key: Function dalam Minecraft
+              name: Function dalam Minecraft
+            Learning Sprites with Sprite Lab:
+              key: Mempelajari Sprite dengan Sprite Lab
+              name: Iklan Berenang dengan Sprite Lab
+            Events with Sprite Lab:
+              name: Event dengan Sprite Lab
+            Loops with the Artist:
+              name: Loop dengan Artis
+            Nested Loops in the Maze:
+              key: Nested Loop dalam Labirin
+              name: Nested Loop dalam Labirin
+            The Power of Words:
+              key: Kekuatan kata-Kata
+              name: Kekuatan kata-Kata
+            Envelope Variables:
+              key: Sampul Variabel
+              name: Sampul Variabel
+            Variables as Constant in Artist:
+              key: Variable sebagai Konstanta dalam Artis
+              name: Variabel dengan Artis
+            Variables that Change in Bee:
+              key: Variable yang Berubah dalam Lebah
+              name: Mengubah Variable dengan Lebah
+            Variables that Change in Artist:
+              key: Variable yang Berubah dalam Artis
+              name: Mengubah Variable dengan Artis
+            Simulating Experiments:
+              key: Melakukan Simulasi Eksperimen
+              name: Melakukan Simulasi Eksperimen
+            AI for Oceans:
+              key: AI for Oceans
+              name: AI for Oceans
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: Untuk Loop Fun
+              name: Untuk Loop Fun
+            For Loops in Bee:
+              key: For Loop dalam Lebah
+              name: For Loop dengan Lebah
+            For Loops in Artist:
+              key: For Loop dalam Artis
+              name: For Loop dengan Artis
+            Editing Behaviors:
+              key: Mengedit Perilaku
+              name: Perilaku dalam Sprite Lab
+            Virtual Pet:
+              name: Piaraan Virtual
+            End of Course Project:
+              key: Proyek Akhir Kursus
+              name: Proyek Akhir Kursus
+          lesson_groups:
+            ramp_up:
+              display_name: Jalan-Naik
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_variables:
+              display_name: variabel
+            csf_for_loops:
+              display_name: For Loop
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+        express-2021:
+          title: Kursus Kilat (2020)
+          description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan guru.
+          description_short: 'Pengenalan ilmu komputer: menggabungkan kurikulum terbaik sekolah dasar bagi murid yang lebih tua usianya.'
+          description_audience: 'Usia: 9-18'
+          lessons:
+            Dance Party:
+              key: Pesta Tari
+              name: Pesta Tari
+            Programming with Angry Birds:
+              key: Pemrograman dengan Angry Birds
+              name: Pemrograman dengan Angry Birds
+            Debugging with Scrat:
+              key: Debugging dengan Scrat
+              name: Debugging dengan Scrat
+            Collecting Treasure with Laurel:
+              key: Mengumpulkan Harta Karun bersama Laurel
+              name: Mengumpulkan Harta Karun bersama Laurel
+            Creating Art with Code:
+              key: Membuat Seni dengan Code
+              name: Membuat Seni dengan Code
+            Loops with Rey and BB-8:
+              key: Loop dengan Rey dan BB-8
+              name: Loop dengan Rey dan BB-8
+            Sticker Art with Loops:
+              key: Seni Stiker dengan Loop
+              name: Seni Stiker dengan Loop
+            Nested Loops in Maze:
+              key: Nested Loop dalam Labirin
+              name: Nested Loop dalam Labirin
+            Snowflakes with Anna and Elsa:
+              key: Keping Salju bersama Anna dan Elsa
+              name: Keping Salju bersama Anna dan Elsa
+            If/Else with Bee:
+              key: If/Else dengan Lebah
+              name: If/Else dengan Lebah
+            While Loops with the Farmer:
+              key: While Loop dengan Petani
+              name: While Loop dengan Petani
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Conditional dalam Minecraft: Perjalanan Air'
+              name: 'Conditional dalam Minecraft: Perjalanan Air'
+            Until Loops in Maze:
+              key: Until Loop dalam Labirin
+              name: Until Loop dalam Labirin
+            Harvesting with Conditionals:
+              key: Memanen dengan Conditional
+              name: Memanen dengan Conditional
+            Functions in Minecraft:
+              key: Function dalam Minecraft
+              name: Function dalam Minecraft
+            Functions with Harvester:
+              key: Function dengan Pemanen
+              name: Function dengan Pemanen
+            Functions with Artist:
+              key: Function dengan Artis
+              name: Function dengan Artis
+            Variables with Artist:
+              key: Variabel dengan Artis
+              name: Variabel dengan Artis
+            Changing Variables with Bee:
+              key: Mengubah Variable dengan Lebah
+              name: Mengubah Variable dengan Lebah
+            Changing Variables with Artist:
+              key: Mengubah Variable dengan Artis
+              name: Mengubah Variable dengan Artis
+            For Loops with Bee:
+              key: For Loop dengan Lebah
+              name: For Loop dengan Lebah
+            For Loops with Artist:
+              key: For Loop dengan Artis
+              name: For Loop dengan Artis
+            Swimming Fish in Sprite Lab:
+              key: Iklan Berenang di Sprite Lab
+              name: Iklan Berenang di Sprite Lab
+            Alien Dance Party:
+              key: Pesta Dansa Alien
+              name: Pesta Dansa Alien
+            Behaviors in Sprite Lab:
+              key: Perilaku dalam Sprite Lab
+              name: Perilaku dalam Sprite Lab
+            Virtual Pet with Sprite Lab:
+              key: Piaraan Virtual
+              name: Piaraan Virtual
+            End of Course Project:
+              key: Proyek Akhir Kursus
+              name: Proyek Akhir Kursus
+          lesson_groups:
+            csf_warmup:
+              display_name: Berlatih
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            csf_functions:
+              display_name: fungsi
+            csf_variables:
+              display_name: variabel
+            csf_for_loops:
+              display_name: For Loop
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+        pre-express-2021:
+          title: Kilat Pre-reader (2020)
+          description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan dan proyek-proyek kreatif untuk dibagikan kepada teman, keluarga, dan guru.
+          description_short: 'Pengenalan ilmu komputer bagi prabaca: menggabungkan kursus terbaik kami untuk taman kanak-kanak dan kelas satu SD.'
+          description_audience: 'Usia: 4-8'
+          lessons:
+            Learn to Drag and Drop:
+              key: Belajar Menarik dan Melepaskan
+              name: Belajar Menarik dan Melepaskan
+            Sequencing with Scrat:
+              key: Pengurutan dengan Scrat
+              name: Pengurutan dengan Scrat
+            Programming with Rey and BB-8:
+              key: Pemrograman dengan Rey dan BB-8
+              name: Pemrograman dengan Rey dan BB-8
+            Programming in Harvester:
+              key: Pemrograman dalam Pemanen
+              name: Pemrograman dalam Pemanen
+            Loops with Scrat:
+              key: Loop dengan Scrat
+              name: Loop dengan Scrat
+            Loops with Laurel:
+              key: Loop dengan Laurel
+              name: Loop dengan Laurel
+            Ocean Scene with Loops:
+              key: Adegan Laut dengan Loop
+              name: Adegan Laut dengan Loop
+            Drawing Gardens with Loops:
+              key: Menggambar Taman dengan Loop
+              name: Menggambar Taman dengan Loop
+            On the Move with Events:
+              key: Aktif bergerak dengan Event
+              name: Aktif bergerak dengan Event
+            A Royal Battle with Events:
+              key: Pertempuran Besar dengan Event
+              name: Pertempuran Besar dengan Event
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+        csf-2021-pilot:
+          lessons:
+            Learning Sprites with Sprite Lab:
+              name: Iklan Berenang dengan Sprite Lab
+            lesson-1:
+              name: Sampul Variabel
+          lesson_groups:
+            ramp_up:
+              display_name: Pendahuluan
+            lessonGroup-3:
+              display_name: variabel
