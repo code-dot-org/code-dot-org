@@ -15028,8 +15028,6 @@ ko:
               name: Code.org가 여러분의 개를 좋아해요?
             AI for Oceans:
               name: 바다를 위한 AI
-            intro:
-              name: 소개
             visualizing:
               name: 데이터 시각화
           title: Ml/AI 단원 - CSD
@@ -15055,3 +15053,1303 @@ ko:
           title: CI 및 CSF 2021 스크립트 계획
           description_audience: 내부
           description_short: 내부
+        csd1-2021:
+          title: CSD 단원 1 - 문제해결 및 컴퓨팅 ('20-'21)
+          description: "문제해결 및 컴퓨팅은 문제해결이라는 더 넓은 범위의 추구 안에서 틀이 잡혀 있기 때문에,  컴퓨터 과학 분야를 대한 매우 인터랙티브하고 협력적으로 소개합니다. 일련의 퍼즐과 도전, 실제 세상의 시나리오를 다루기 위해 문제해결 프로세스 사용법을 연습하게 될 것입니다. 다음, 컴퓨터의 인풋과 아웃풋 방법, 사람이 문제를 풀 수 있도록 도와 주기 위한 정보 저장 및 처리 방법을 배울 것입니다. 단원은 문제를 선택하여 그 문제를 푸는데 도움이 되는 애플리케이션을 설계하는 프로젝트로 끝납니다. "
+          description_short: "  문제를 풀기 위해 사람들이 컴퓨터로 어떻게 작업하는지 배우세요."
+          lessons:
+            CS Discoveries Pre-survey:
+              key: CS 발견 사전 설문조사
+              name: CS 발견 사전 설문조사
+            Intro to Problem Solving:
+              key: 문제해결 소개
+              name: 문제해결 소개
+            The Problem Solving Process:
+              key: 문제 해결 과정
+              name: 문제 해결 과정
+            Exploring Problem Solving:
+              key: 문제해결 탐구
+              name: 문제해결 탐구
+            What is a Computer?:
+              key: 컴퓨터란?
+              name: 컴퓨터란?
+            Input and Output:
+              key: 인풋 및 아웃풋
+              name: 인풋 및 아웃풋
+            Processing:
+              key: 프로세싱
+              name: 프로세싱
+            Storage:
+              key: 저장
+              name: 저장
+            Project - Propose an App:
+              key: 프로젝트 -앱 제안
+              name: 프로젝트 -앱 제안
+            Post-Project Test:
+              key: 프로젝트 후 테스트
+              name: 프로젝트 후 테스트
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              key: 문제해결 소개 - 신문지 탁자 (대체 레슨 1)
+              name: 문제해결 소개 - 신문지 탁자 (대체 레슨 1)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              key: 문제해결 소개 - 스파게티 다리 (대체 레슨 1)
+              name: 문제해결 소개 - 스파게티 다리 (대체 레슨 1)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              key: 문제해결 소개 - 종이 탑 (대체 레슨 1)
+              name: 문제해결 소개 - 종이 탑 (대체 레슨 1)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              key: 문제해결 탐구 - 동물 테마 (대체 레슨 3)
+              name: 문제해결 탐구 - 동물 테마 (대체 레슨 3)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              key: 문제해결 탐구- 게임 테마 (대체 레슨 3)
+              name: 문제해결 탐구- 게임 테마 (대체 레슨 3)
+          lesson_groups:
+            cspSurvey:
+              display_name: 설문조사
+            csd1_1:
+              display_name: '1 장: 문제 해결 과정'
+            csd1_2:
+              display_name: '2 장: 컴퓨터와 문제 해결'
+            csd1_3:
+              display_name: 대체 레슨
+        csd2-2021:
+          title: CSD 단원 2 - 웹 개발 ('20-'21)
+          description: " 단원 2에서는 자신의 웹페이지에 컨텐츠를 만들어 공유하는 방법을 배울 것입니다. 어떤 컨텐츠를 세상과 공유할지 결정한 후, HTML과 CSS를 사용해 페이지 구조와 스타일을 만드는 법을 배울 것입니다. 또한 리소스와 팀워크를 사용해, 디버깅과 같은 가치 있는 프로그래밍 기술을 연습할 것입니다. "
+          description_short: "웹 랩에서 웹사이트 만드는 법 배우기."
+          lessons:
+            Exploring Web Pages:
+              key: 웹 페이지 탐구
+              name: 웹 페이지 탐구
+            Intro to HTML:
+              key: HTML 소개
+              name: HTML 소개
+            Headings:
+              key: 제목
+              name: 제목
+            'Mini-Project: HTML Web Page':
+              key: '미니 프로젝트: HTML 웹 페이지'
+              name: '미니 프로젝트: HTML 웹 페이지'
+            Digital Footprint:
+              key: 디지털 발자국
+              name: 디지털 발자국
+            Styling Text with CSS:
+              key: CSS로 텍스트 스타일링
+              name: CSS로 텍스트 스타일링
+            'Mini-Project: Your Personal Style':
+              key: '미니 프로젝트: 개인 스타일'
+              name: '미니 프로젝트: 개인 스타일'
+            Intellectual Property:
+              key: 지적 재산
+              name: 지적 재산
+            Using Images:
+              key: 이미지 사용
+              name: 이미지 사용
+            'Websites for Expression ':
+              key: '표현을 위한 웹사이트 '
+              name: '표현을 위한 웹사이트 '
+            Styling Elements with CSS:
+              key: CSS로 구성요소 스타일링
+              name: CSS로 구성요소 스타일링
+            Your Web Page - Prepare:
+              key: 웹 페이지 - 준비
+              name: 웹 페이지 - 준비
+            Project - Personal Web Page:
+              key: 프로젝트 - 퍼스널 웹 페이지
+              name: 프로젝트 - 퍼스널 웹 페이지
+            Websites for a Purpose:
+              key: 목적을 위한 웹사이트
+              name: 목적을 위한 웹사이트
+            Team Problem Solving:
+              key: 팀 문제해결
+              name: 팀 문제해결
+            Sources and Research:
+              key: 소스 및 리서치
+              name: 소스 및 리서치
+            Planning a Multi-page Website:
+              key: 멀티 페이지 웹사이트 계획
+              name: 멀티 페이지 웹사이트 계획
+            Linking Pages:
+              key: 링크 페이지
+              name: 링크 페이지
+            Project - Website for a Purpose:
+              key: 프로젝트 -목적을 위한 웹사이트
+              name: 프로젝트 -목적을 위한 웹사이트
+            Peer Review and Final Touches:
+              key: 또래 검토 및 최종 터치
+              name: 또래 검토 및 최종 터치
+            Post-Project Test:
+              key: 프로젝트 후 테스트
+              name: 프로젝트 후 테스트
+            CS Discoveries Post Course survey:
+              key: CS 발견 과정 후 설문 조사
+              name: CS 발견 과정 후 설문 조사
+          lesson_groups:
+            csd2_1v2:
+              display_name: '챕터 1: 웹페이지 만들기'
+            csd2_2v2:
+              display_name: '챕터 2: 멀티 페이지 웹페이지 '
+            cspSurvey:
+              display_name: 설문조사
+        csd3-2021:
+          title: CSD 단원 3 - 인터랙티브 애니메이션 및 게임 ('20-'21)
+          description: " 단원 3에서는 게임 랩에서 애니메이션과 인터랙티브 아트, 게임을 프로그래밍하며 코딩 경험을 쌓을 것입니다. 단원은 간단한 모양으로 시작하여 여기에 컴퓨터 과학자들이 매일 사용하는 것과 동일한 프로그래밍 개념과 설계 프로세스를 사용하여 더 정교한 스프라이트 기반 게임을 쌓아 올립니다. 마지막 프로젝트에서는 개인화된 인터랙티브 프로그램을 개발할 것입니다."
+          description_short: "프로그래밍"
+          lessons:
+            Programming for Entertainment:
+              key: 엔터테인먼트를 위한 프로그래밍
+              name: 엔터테인먼트를 위한 프로그래밍
+            Plotting Shapes:
+              key: 모양 플롯팅
+              name: 모양 플롯팅
+            Drawing in Game Lab:
+              key: 게임 랩 내 그리기
+              name: 게임 랩 내 그리기
+            Variables:
+              key: 변수
+              name: 변수
+            Sprite Properties:
+              key: 스프라이트 속성
+              name: 스프라이트 속성
+            Text:
+              key: 문장
+              name: 문장
+            'Mini-Project: Captioned Scenes':
+              key: '미니 프로젝트: 자막이 있는 장면'
+              name: '미니 프로젝트: 자막이 있는 장면'
+            Sprite Movement:
+              key: 스프라이트 이동
+              name: 스프라이트 이동
+            'Mini-Project: Animation':
+              key: '미니 프로젝트: 애니메이션'
+              name: '미니 프로젝트: 애니메이션'
+            Conditionals:
+              key: 조건
+              name: 조건
+            Keyboard Input:
+              key: 키보드 인풋
+              name: 키보드 인풋
+            Mouse Input:
+              key: 마우스 인풋
+              name: 마우스 인풋
+            Project - Interactive Card:
+              key: 프로젝트 - 인터랙티브 카드
+              name: 프로젝트 - 인터랙티브 카드
+            Velocity:
+              key: 속도
+              name: 속도
+            Collision Detection:
+              key: 충돌 감지
+              name: 충돌 감지
+            'Mini-Project: Side Scroller':
+              key: '미니 프로젝트: 사이트 스크롤러'
+              name: '미니 프로젝트: 사이트 스크롤러'
+            Complex Sprite Movement:
+              key: 복잡한 스프라이트 이동
+              name: 복잡한 스프라이트 이동
+            Collisions:
+              key: 충돌
+              name: 충돌
+            'Mini-Project: Flyer Game':
+              key: '미니 프로젝트: 플라이어 게임'
+              name: '미니 프로젝트: 플라이어 게임'
+            Functions:
+              key: 함수
+              name: 함수
+            The Game Design Process:
+              key: 게임 설계 프로세스
+              name: 게임 설계 프로세스
+            Using the Game Design Process:
+              key: 게임 설계 프로세스 사용
+              name: 게임 설계 프로세스 사용
+            Project - Design a Game:
+              key: ' 프로젝트 - 게임 설계'
+              name: ' 프로젝트 - 게임 설계'
+            Post-Project Test:
+              key: 프로젝트 후 테스트
+              name: 프로젝트 후 테스트
+            CS Discoveries Post Course survey:
+              key: CS 발견 과정 후 설문 조사
+              name: CS 발견 과정 후 설문 조사
+          lesson_groups:
+            csd3_1:
+              display_name: '1 장: 이미지와 애니메이션'
+            csd3_2:
+              display_name: '2 장: 게임 만들기'
+            cspSurvey:
+              display_name: 설문조사
+        csd4-2021:
+          title: CSD 단원 4 - 설계 프로세스 ('20-'21)
+          description: 단원 4는 컴퓨팅의 더 넓은 사회적 영향을 소개합니다. 일련의 설계 도전을 통해, 문제의 해결책을 발전시키는 동안 다른 이의 필요를 더 잘 이해하는 방법을 배울 것입니다. 단원의 후반부는 반복되는 팀 프로젝트로 구성되며 이 기간 동안 팀은 그들이 관심을 둬야 하는 필요를 식별하고 종이와 앱 랩 모두에 솔루션 프로토타입을 만들고 실제 사용자와 함께 솔루션을 테스트하여 피드백을 얻고 더 반복을 추진할 기회를 갖습니다. 
+          description_short: "  사용자의 필요를 만족하는 프로그램의 설계 방법을 배웁니다."
+          lessons:
+            Analysis of Design:
+              key: 설계 분석
+              name: 설계 분석
+            Understanding Your User:
+              key: 사용자 이해
+              name: 사용자 이해
+            User-Centered Design Micro Activity:
+              key: 사용자 중심 설계 마이크로 활동
+              name: 사용자 중심 설계 마이크로 활동
+            User Interfaces:
+              key: 사용자 인터페이스
+              name: 사용자 인터페이스
+            Feedback and Testing:
+              key: 피드백 및 테스팅
+              name: 피드백 및 테스팅
+            Identifying User Needs:
+              key: 사용자의 필요 식별
+              name: 사용자의 필요 식별
+            Project - Paper Prototype:
+              key: 프로젝트 - 종이 프로토타입
+              name: 프로젝트 - 종이 프로토타입
+            Market Research:
+              key: 시장 조사
+              name: 시장 조사
+            Paper Prototypes:
+              key: 종이 프로토타입
+              name: 종이 프로토타입
+            Prototype Testing:
+              key: 프로토타입 테스팅 
+              name: 프로토타입 테스팅 
+            Digital Design:
+              key: 디지털 설계
+              name: 디지털 설계
+            Linking Screens:
+              key: 화면 링크
+              name: 화면 링크
+            Testing the App:
+              key: 앱 테스팅
+              name: 앱 테스팅
+            Improving and Iterating:
+              key: 개선 및 반복
+              name: 개선 및 반복
+            Project - App Presentation:
+              key: 프로젝트 - 앱 프레젠테이션
+              name: 프로젝트 - 앱 프레젠테이션
+            Post-Project Test:
+              key: 프로젝트 후 테스트
+              name: 프로젝트 후 테스트
+            CS Discoveries Post Course survey:
+              key: CS 발견 과정 후 설문 조사
+              name: CS 발견 과정 후 설문 조사
+          lesson_groups:
+            csd4_1:
+              display_name: '1 장: 사용자 중심 디자인'
+            csd4_2:
+              display_name: '2 장: 앱 프로토타입'
+            csd5_2:
+              display_name: '2 장: 데이터 문제 해결하기'
+            cspSurvey:
+              display_name: 설문조사
+        csd5-2021:
+          title: CSD 단원 5 - 데이터와 사회 ('20-'21)
+          description: 단원 5는 문제해결 시 데이터의 중요성에 관한 단원이고 컴퓨터가 이 프로세스를 어떻게 도울 수 있는지를 강조합니다. 첫 번째 챕터는 컴퓨터에서 정보를 나타내는데 사용하는 여러 시스템과 그것을 사용함에 따라 제기되는 도전과 대가를 강조합니다. 두 번째 챕터는 문제를 풀기 위한 데이터 사용 방법과 컴퓨터가 이 프로세스의 각 단곌르 자동화하는데 도움을 주는 방식을 배우게 됩니다. 챕터는 데이터 문제해결 프로세스를 특정 영역에 응용하는 방식을 고려하는 것으로서 마칩니다. 
+          description_short: 데이터 문제를 풀기 위해 사람들이 컴퓨터를 사용하는 방식에 대해 배우세요.
+          lessons:
+            Representation Matters:
+              key: 표현 문제
+              name: 표현 문제
+            Patterns and Representation:
+              key: 패턴과 표현
+              name: 패턴과 표현
+            ASCII and Binary Representation:
+              key: 아스키와 바이너리 표현
+              name: 아스키와 바이너리 표현
+            Representing Images:
+              key: 이미지 표현
+              name: 이미지 표현
+            Representing Numbers:
+              key: 숫자 표시
+              name: 숫자 표시
+            Keeping Data Secret:
+              key: 데이터 기밀 유지
+              name: 데이터 기밀 유지
+            Combining Representations:
+              key: 표현 결합
+              name: 표현 결합
+            Project - Create a Representation:
+              key: 프로젝트 - 표현 만들기
+              name: 프로젝트 - 표현 만들기
+            Problem Solving and Data:
+              key: 문제 해결 및 데이터
+              name: 문제 해결 및 데이터
+            Problem Solving with Big Data:
+              key: 빅 데이터로 문제 해결
+              name: 빅 데이터로 문제 해결
+            Structuring Data:
+              key: 데이터 구조
+              name: 데이터 구조
+            Making Decisions with Data:
+              key: 데이터로 의사 결정
+              name: 데이터로 의사 결정
+            Interpreting Data:
+              key: 데이터 해석
+              name: 데이터 해석
+            Automating Data Decisions:
+              key: 데이터 결정 자동화
+              name: 데이터 결정 자동화
+            Project - Make a Recommendation:
+              key: 프로젝트 - 추천 만들기
+              name: 프로젝트 - 추천 만들기
+            Post-Project Test:
+              key: 프로젝트 후 테스트
+              name: 프로젝트 후 테스트
+            CS Discoveries Post Course survey:
+              key: CS 발견 과정 후 설문 조사
+              name: CS 발견 과정 후 설문 조사
+          lesson_groups:
+            csd5_1:
+              display_name: '1 장: 정보를 표현하기'
+            csd5_2:
+              display_name: '2 장: 데이터 문제 해결하기'
+            cspSurvey:
+              display_name: 설문조사
+        csd6-2021:
+          title: CSD 단원 6 - 물리적 컴퓨팅 ('20-'21)
+          description: 단원 6은 컴퓨팅에서 하드웨어 플랫폼의 역할을 탐구하고 또한 여러 센서가 어떻게 전통적 키보드와 마우스, 모니터보다 더 효과적인 인풋과 아웃풋을 제공하는지 탐구합니다.앱 랩과 Adafruit의 써킷 플레이그라운드를 사용하여 스마트 기기에서 보는 것과 동일한 하드웨어 인풋과 아웃풋을 활용하는 프로그램을 개발할 것이며 간단한 개략적 프로토타입이 완제품으로 변하는 과정을 볼 것입니다. 단원은 써킷 플레이그라운드를 설계 혁신을 위한 기초로서 사용하는 설계 도전으로 마칩니다.
+          description_short: 물리적 기기로 프로그램 하는 법 배우기
+          lessons:
+            Innovations in Computing:
+              key: 컴퓨팅 내 혁신
+              name: 컴퓨팅 내 혁신
+            The Circuit Playground:
+              key: 써킷 플레이그라운드
+              name: 써킷 플레이그라운드
+            Input Unplugged:
+              key: 인풋 언플러그드
+              name: 인풋 언플러그드
+            Board Events:
+              key: 보드 이벤트
+              name: 보드 이벤트
+            Getting Properties:
+              key: 속성 얻기
+              name: 속성 얻기
+            Analog Input:
+              key: 아날로그 인풋
+              name: 아날로그 인풋
+            The Program Design Process:
+              key: 프로그램 설계 프로세스
+              name: 프로그램 설계 프로세스
+            'Project: Make a Game':
+              key: ' 프로젝트: 게임 만들기'
+              name: ' 프로젝트: 게임 만들기'
+            Arrays and Color LEDs:
+              key: 배열 및 컬러 LED
+              name: 배열 및 컬러 LED
+            Arrays and For Loops:
+              key: 배열 및 위한 루프
+              name: 배열 및 위한 루프
+            Accelerometer:
+              key: 가속도 센서
+              name: 가속도 센서
+            Functions with Parameters:
+              key: 함수(값 전달)
+              name: 함수(값 전달)
+            Circuits and Physical Prototypes:
+              key: 써킷 및 물리적 프로토타입
+              name: 써킷 및 물리적 프로토타입
+            'Project: Prototype an Innovation':
+              key: '프로젝트 - 혁신 프로토타입'
+              name: '프로젝트 - 혁신 프로토타입'
+            Post-Project Test:
+              key: 프로젝트 후 테스트
+              name: 프로젝트 후 테스트
+            CS Discoveries Post Course survey:
+              key: CS 발견 과정 후 설문 조사
+              name: CS 발견 과정 후 설문 조사
+          lesson_groups:
+            csd6_1:
+              display_name: '1 장: 하드웨어 출력'
+            csd6_2:
+              display_name: '2 장: 하드웨어 입력'
+            cspSurvey:
+              display_name: 설문조사
+        csp1-2021:
+          title: CSP 단원 1 - 디지털 정보 ('20-'21)
+          lessons:
+            CS Principles Pre-survey:
+              key: CS 원리 사전 설문조사
+              name: CS 원리 사전 설문조사
+            Welcome to CSP:
+              key: ' CSP에 오신 걸 환영합니다.'
+              name: ' CSP에 오신 걸 환영합니다.'
+            Representing Information:
+              key: 정보 표현
+              name: 정보 표현
+            Circle Square Patterns:
+              key: 원 사각형 패턴
+              name: 원 사각형 패턴
+            Binary Numbers:
+              key: 바이너리 수
+              name: 바이너리 수
+            Overflow and Rounding:
+              key: 오버플로우와 반올림
+              name: 오버플로우와 반올림
+            Representing Text:
+              key: 텍스트 표시
+              name: 텍스트 표시
+            Black and White Images:
+              key: 흑백 이미지
+              name: 흑백 이미지
+            Color Images:
+              key: 컬러 이미지
+              name: 컬러 이미지
+            Lossless Compression:
+              key: 무손실 압축
+              name: 무손실 압축
+            Lossy Compression:
+              key: 손실 압축
+              name: 손실 압축
+            Intellectual Property:
+              key: 지적 재산
+              name: 지적 재산
+            Project - Digital Information Dilemmas Part 1:
+              key: '프로젝트: 디지털 정보 딜레마 1부'
+              name: '프로젝트: 디지털 정보 딜레마 1부'
+            Project - Digital Information Dilemmas Part 2:
+              key: '프로젝트: 디지털 정보 딜레마 2부'
+              name: '프로젝트: 디지털 정보 딜레마 2부'
+            'Lesson 14: Assessment Day':
+              key: '레슨 14: 평가일'
+              name: '레슨 14: 평가일'
+          lesson_groups:
+            cspSurvey:
+              display_name: 설문조사
+            csp_unit1_2020:
+              display_name: '단원 1: 디지털 정보'
+        csp2-2021:
+          title: CSP 단원 2 - 인터넷 ('20-'21)
+          lessons:
+            Welcome to the Internet:
+              key: 인터넷에 오신 걸 환영합니다
+              name: 인터넷에 오신 걸 환영합니다
+            Building a Network:
+              key: 네트워크 구축
+              name: 네트워크 구축
+            The Need for Addressing:
+              key: 주소 필요성
+              name: 주소 필요성
+            Routers and Redundancy:
+              key: 라우터 및 반복
+              name: 라우터 및 반복
+            Packets:
+              key: 패킷
+              name: 패킷
+            DNS and HTTP:
+              key: DNS 및 HTTP
+              name: DNS 및 HTTP
+            Project - Internet Dilemmas Part 1:
+              key: 프로젝트 - 인터넷 딜레마 1부
+              name: 프로젝트 - 인터넷 딜레마 1부
+            Project - Internet Dilemmas Part 2:
+              key: 프로젝트 - 인터넷 딜레마 2부
+              name: 프로젝트 - 인터넷 딜레마 2부
+            'Lesson 9: Assessment Day':
+              key: '레슨 9: 평가일'
+              name: '레슨 9: 평가일'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '단원 2: 인터넷'
+        csp3-2021:
+          title: CSP 단원 3 - 앱 설계 소개 ('20-'21)
+          lessons:
+            Introduction to Apps:
+              key: 앱 소개
+              name: 앱 소개
+            Project - Designing an App Part 1:
+              key: ' 프로젝트: 앱 설계 1부'
+              name: ' 프로젝트: 앱 설계 1부'
+            Project - Designing an App Part 2:
+              key: ' 프로젝트: 앱 설계 2부'
+              name: ' 프로젝트: 앱 설계 2부'
+            The Need for Programming Languages:
+              key: 프로그래밍 언어의 필요성
+              name: 프로그래밍 언어의 필요성
+            Intro to Programming:
+              key: 프로그래밍 소개
+              name: 프로그래밍 소개
+            Debugging:
+              key: 디버깅
+              name: 디버깅
+            Project - Designing an App Part 3:
+              key: ' 프로젝트: 앱 설계 3부'
+              name: ' 프로젝트: 앱 설계 3부'
+            Project - Designing an App Part 4:
+              key: ' 프로젝트: 앱 설계 4부'
+              name: ' 프로젝트: 앱 설계 4부'
+            Project - Designing an App Part 5:
+              key: ' 프로젝트: 앱 설계 5부'
+              name: ' 프로젝트: 앱 설계 5부'
+            'Lesson 11: Assessment Day':
+              key: '레슨 11: 평가일'
+              name: '레슨 11: 평가일'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: '단원 1 - 앱 설계 소개'
+        csp4-2021:
+          title: CSP 단원 4 - 변수, 조건, 함수 ('20-'21)
+          lessons:
+            Variables Explore:
+              key: 변수 탐구
+              name: 변수 탐구
+            Variables Investigate:
+              key: 변수 조사
+              name: 변수 조사
+            Variables Practice:
+              key: 변수 연습
+              name: 변수 연습
+            Variables Make:
+              key: 변수 만들기
+              name: 변수 만들기
+            Conditionals Explore:
+              key: 조건 탐구
+              name: 조건 탐구
+            Conditionals Investigate:
+              key: 조건 조사
+              name: 조건 조사
+            Conditionals Practice:
+              key: 조건 연습
+              name: 조건 연습
+            Conditional Make:
+              key: 조건 만들기
+              name: 조건 만들기
+            Functions Explore / Investigate:
+              key: 함수 탐구 / 조사
+              name: 함수 탐구 / 조사
+            Functions Practice:
+              key: 함수 연습
+              name: 함수 연습
+            Functions Make:
+              key: 함수 만들기
+              name: 함수 만들기
+            Project - Decision Maker App Part 1:
+              key: 프로젝트 - 의사결정자 앱 1부
+              name: 프로젝트 - 의사결정자 앱 1부
+            Project - Decision Maker App Part 2:
+              key: 프로젝트 - 의사결정자 앱 2부
+              name: 프로젝트 - 의사결정자 앱 2부
+            Project - Decision Maker App Part 3:
+              key: 프로젝트 - 의사결정자 앱 3부
+              name: 프로젝트 - 의사결정자 앱 3부
+            'Lesson 15: Assessment Day':
+              key: '레슨 15: 평가일'
+              name: '레슨 15: 평가일'
+          lesson_groups:
+            csp_variables:
+              display_name: 변수
+            csp_conditionals:
+              display_name: 조건
+            csp_functions:
+              display_name: 함수
+            csp_project:
+              display_name: 프로젝트
+        csp5-2021:
+          title: CSP단원 5 - 목록, 루프, 트래버스 ('20-'21)
+          lessons:
+            Lists Explore:
+              key: 목록 탐구
+              name: 목록 탐구
+            Lists Investigate:
+              key: 목록 조사
+              name: 목록 조사
+            Lists Practice:
+              key: 목록 연습
+              name: 목록 연습
+            Lists Make:
+              key: 목록 만들기
+              name: 목록 만들기
+            Loops Explore:
+              key: 루프 탐구
+              name: 루프 탐구
+            Loops Investigate:
+              key: 루프 조사
+              name: 루프 조사
+            Loops Practice:
+              key: 루프 연습
+              name: 루프 연습
+            Loops Make:
+              key: 루프 만들기
+              name: 루프 만들기
+            Traversals Explore:
+              key: ' 트래버스 탐구'
+              name: ' 트래버스 탐구'
+            Traversals Investigate:
+              key: ' 트래버스 조사'
+              name: ' 트래버스 조사'
+            Traversals Practice:
+              key: ' 트래버스 연습'
+              name: ' 트래버스 연습'
+            Traversals Make:
+              key: ' 트래버스 만들기'
+              name: ' 트래버스 만들기'
+            Semester Hackathon Part 1:
+              key: 해커톤 학기 1부
+              name: 해커톤 학기 1부
+            Semester Hackathon Part 2:
+              key: 해커톤 학기 2부
+              name: 해커톤 학기 2부
+            Semester Hackathon Part 3:
+              key: 해커톤 학기 3부
+              name: 해커톤 학기 3부
+            Semester Hackathon Part 4:
+              key: 해커톤 학기 4부
+              name: 해커톤 학기 4부
+            Semester Hackathon Part 5:
+              key: 해커톤 학기 5부
+              name: 해커톤 학기 5부
+            'Lesson 18: Assessment Day':
+              key: '레슨 18: 평가일'
+              name: '레슨 18: 평가일'
+          lesson_groups:
+            csp_lists:
+              display_name: 리스트
+            csp_loops:
+              display_name: 반복
+            csp_traversals:
+              display_name: ' 트래버스'
+            csp_project:
+              display_name: 프로젝트
+        csp6-2021:
+          title: CSP 단원 6 - 알고리즘 ('20-'21)
+          lessons:
+            Algorithms Solve Problems:
+              key: 알고리즘 문제해결
+              name: 알고리즘 문제해결
+            Algorithm Efficiency:
+              key: 알고리즘 효율성
+              name: 알고리즘 효율성
+            Unreasonable Time:
+              key: 불합리한 시간
+              name: 불합리한 시간
+            The Limits of Algorithms:
+              key: 알고리즘의 한계
+              name: 알고리즘의 한계
+            Parallel and Distributed Algorithms:
+              key: 병렬 및 분산 알고리즘
+              name: 병렬 및 분산 알고리즘
+            'Lesson 6: Assessment Day':
+              key: '레슨 6: 평가일'
+              name: '레슨 6: 평가일'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: '단원 6: 알고리즘'
+        csp7-2021:
+          lessons:
+            Parameters and Return Explore:
+              key: 매개변수 및 반환 탐구
+              name: 매개변수 및 반환 탐구
+            Parameters and Return Investigate:
+              key: 매개변수 및 반환 조사
+              name: 매개변수 및 반환 조사
+            Parameters and Return Practice:
+              key: 매개변수 및 반환 연습
+              name: 매개변수 및 반환 연습
+            Parameters and Return Make:
+              key: 매개변수 및 반환 만들기
+              name: 매개변수 및 반환 만들기
+            Libraries Explore:
+              key: 라이브러리 내보내기
+              name: 라이브러리 내보내기
+            Libraries Investigate:
+              key: 라이브러리 조사
+              name: 라이브러리 조사
+            Libraries Practice:
+              key: 라이브러리 연습
+              name: 라이브러리 연습
+            Project - Make a Library Part 1:
+              key: 프로젝트 - 라이브러리 만들기 1부
+              name: 프로젝트 - 라이브러리 만들기 1부
+            Project - Make a Library Part 2:
+              key: 프로젝트 - 라이브러리 만들기 2부
+              name: 프로젝트 - 라이브러리 만들기 2부
+            Project - Make a Library Part 3:
+              key: 프로젝트 - 라이브러리 만들기 3부
+              name: 프로젝트 - 라이브러리 만들기 3부
+            'Lesson 11: Assessment Day':
+              key: '레슨 11: 평가일'
+              name: '레슨 11: 평가일'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 매개변수 및 반환값
+            csp_libraries:
+              display_name: 라이브러리
+        csp8-2021:
+          title: CSP 단원 8 - PT 만들기 준비 ('20-'21)
+          lessons:
+            Create PT - Review the Task:
+              key: PT 제작 - 과제 검토
+              name: PT 제작 - 과제 검토
+            Create PT - Make a Plan:
+              key: PT 제작 - 계획 수립 
+              name: PT 제작 - 계획 수립 
+            Create PT - Complete the Task:
+              key: PT 만들기 준비 -작업 완료
+              name: PT 만들기 준비 -작업 완료
+        csp9-2021:
+          title: CSP 단원 9 - 데이터 ('20-'21)
+          lessons:
+            Learning From Data:
+              key: 데이터에서 학습
+              name: 데이터에서 학습
+            Exploring One Column:
+              key: 한 개 열 탐구
+              name: 한 개 열 탐구
+            Filtering and Cleaning Data:
+              key: 데이터 필터링 및 지우기
+              name: 데이터 필터링 및 지우기
+            Exploring Two Columns:
+              key: 두 개 열 탐구 
+              name: 두 개 열 탐구 
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: 빅 데이터, 크라우드소싱, 머신러닝
+              name: 빅 데이터, 크라우드소싱, 머신러닝
+            Machine Learning and Bias:
+              key: 머신러닝 및 편견
+              name: 머신러닝 및 편견
+            Project - Tell a Data Story - Part 1:
+              key: 프로젝트 - 데이터 스토리 말하기 - 1부
+              name: 프로젝트 - 데이터 스토리 말하기 - 1부
+            Project - Tell a Data Story - Part 2:
+              key: 프로젝트 - 데이터 스토리 말하기 - 2부
+              name: 프로젝트 - 데이터 스토리 말하기 - 2부
+            'Lesson 9: Assessment Day':
+              key: '레슨 9: 평가일'
+              name: '레슨 9: 평가일'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '단원 9: 데이터'
+        csp10-2021:
+          title: CSP 단원 10 - 사이버보안 및 세계적 영향 ('20-'21)
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: '프로젝트: 혁신 시뮬레이션 1부'
+              name: '프로젝트: 혁신 시뮬레이션 1부'
+            Project - Innovation Simulation Part 2:
+              key: '프로젝트: 혁신 시뮬레이션 2부'
+              name: '프로젝트: 혁신 시뮬레이션 2부'
+            Data Policies and Privacy:
+              key: 데이터 방침 및 프라이버시
+              name: 데이터 방침 및 프라이버시
+            The Value of Privacy:
+              key: 사생활의 가치
+              name: 사생활의 가치
+            Project - Innovation Simulation Part 3:
+              key: '프로젝트: 혁신 시뮬레이션 3부'
+              name: '프로젝트: 혁신 시뮬레이션 3부'
+            Security Risks Part 1:
+              key: 보안 위험 1부
+              name: 보안 위험 1부
+            Security Risks Part 2:
+              key: 보안 위험 2부
+              name: 보안 위험 2부
+            'Project: Innovation Simulation Part 4':
+              key: '프로젝트: 혁신 시뮬레이션 4부'
+              name: '프로젝트: 혁신 시뮬레이션 4부'
+            Protecting Data Part 1:
+              key: 데이터 보호 1부
+              name: 데이터 보호 1부
+            Protecting Data Part 2:
+              key: 데이터 보호 2부
+              name: 데이터 보호 2부
+            'Project: Innovation Simulation Part 5':
+              key: '프로젝트: 혁신 시뮬레이션 5부'
+              name: '프로젝트: 혁신 시뮬레이션 5부'
+            'Project: Innovation Simulation Part 6':
+              key: '프로젝트: 혁신 시뮬레이션 6부'
+              name: '프로젝트: 혁신 시뮬레이션 6부'
+            'Project: Innovation Simulation Part 7':
+              key: '프로젝트: 혁신 시뮬레이션 7부'
+              name: '프로젝트: 혁신 시뮬레이션 7부'
+            'Lesson 14: Unit Assessment Day':
+              key: '레슨 14: 단원  평가일'
+              name: '레슨 14: 단원  평가일'
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: '단원 10: 사이버보안 및 세계적 영향'
+        coursea-2021:
+          title: 과정 A (2020)
+          description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
+          description_short: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
+          description_audience: '나이: 4-7'
+          lessons:
+            Safety in My Online Neighborhood:
+              key: 내 온라인 이웃에서 안전
+              name: 내 온라인 이웃에서 안전
+            Learn to Drag and Drop:
+              key: 드래그와 드롭 방법 배우기
+              name: 드래그와 드롭 방법 배우기
+            'Programming: Happy Maps':
+              key: '프로그래밍: 해피 맵'
+              name: 즐거운 맵
+            Sequencing with Scrat:
+              key: 스크랫으로 시퀸싱
+              name: 스크랫으로 시퀸싱
+            Programming in Ice Age:
+              key: 아이스 에이지 내 프로그래밍
+              name: 스크랫으로 프로그래밍
+            Programming with Rey and BB-8:
+              key: 레이와 BB-8로 프로그래밍
+              name: 레이와 BB-8로 프로그래밍
+            'Loops: Happy Loops':
+              key: '루프: 해피 루프'
+              name: 해피 루프
+            Loops in Ice Age:
+              key: 아이스 에이지 내 루프
+              name: 스크랫을 사용한 루프
+            Loops in Collector:
+              key: 수거인 내 루프
+              name: 라우렐을 사용한 루프
+            Ocean Scene with Loops:
+              key: 루프를 사용한 해양 장면
+              name: 루프를 사용한 해양 장면
+            'Events: The Big Event':
+              key: '이벤트: 빅 이벤트'
+              name: 빅 이벤트 쥬니어
+            Events in Play Lab:
+              key: 플레이 랩 내 이벤트 
+          lesson_groups:
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_events:
+              display_name: 이벤트
+        courseb-2021:
+          title: 과정 B (2020)
+          description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
+          description_short: 아직 읽지 못하는 이들을 위한 컴퓨터 과학 소개. 과정 A와 유사하지만 개념의 깊이가 추가되었습니다.
+          description_audience: '나이: 5-8'
+          lessons:
+            Digital Trails:
+              key: 디지털 트레일
+              name: 디지털 트레일
+            Move It, Move It:
+              key: 빨리 빨리 움직이자!
+              name: 빨리 빨리 움직이자!
+            Sequencing in Maze:
+              key: 미로 내 시퀸싱
+              name: 앵그리버드로 시퀸싱
+            Programming in Maze:
+              key: 미로 내 프로그래밍
+              name: 앵그리 버드로 프로그래밍
+            Programming in Harvester:
+              name: 수확인으로 프로그래밍
+            'Loops: Getting Loopy':
+              key: '루프: 게팅 루피 (Getting Loopy)'
+              name: 반복시키기
+            Loops in Harvester:
+              key: 수확인 내 루프
+            Loops in Collector:
+              key: 수거인 내 루프
+              name: 라우렐을 사용한 루프
+            Loops in Artist:
+              key: 아티스트 내 루프
+              name: 루프로 정원 그리기
+            The Right App:
+              key: 바른 앱
+              name: 바른 앱
+            'Events: The Big Event':
+              key: '이벤트: 빅 이벤트'
+              name: 빅 이벤트 쥬니어
+            Events in Play Lab:
+              key: 플레이 랩 내 이벤트 
+          lesson_groups:
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_impacts:
+              display_name: 컴퓨팅의 영향
+            csf_events:
+              display_name: 이벤트
+        coursec-2021:
+          title: 과정 C (2020)
+          description: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고 다른 문제해결기법을 조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
+          description_short: 컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요.
+          description_audience: '나이: 6-10'
+          lessons:
+            Putting a STOP to Online Meanness:
+              key: 온라인 상의 비열함을 멈추게 함
+              name: 온라인 상의 비열함을 멈추게 함
+            'Programming: My Robotic Friends':
+              key: '프로그래밍: 내 로봇 친구'
+              name: 내 로봇 친구 Jr.
+            Programming in Maze:
+              key: 미로 내 프로그래밍
+              name: 앵그리 버드로 프로그래밍
+            Debugging in Maze:
+              key: 미로 내 디버깅
+              name: 미로 내 디버깅
+            Programming in Collector:
+              key: 수거인 내 프로그래밍
+              name: 라우렐로 보물 모으기
+            Programming in Artist:
+              key: 아티스트 내 프로그래밍
+              name: 코드로 아트 창작
+            Binary Bracelets:
+              key: 2진 팔찌
+              name: 2진 팔찌
+            'Loops: My Loopy Robotic Friends':
+              key: '루프: 내 제정신이 아닌 로봇 친구'
+              name: 내 제정신이 아닌 로봇 친구 Jr.
+            Loops in Harvester:
+              key: 수확인 내 루프
+              name: 루프로 작물 수확
+            'Events: The Big Event':
+              key: '이벤트: 빅 이벤트'
+              name: 큰 이벤트
+            Build a Flappy Game:
+              key: 플래피 게임 만들기
+              name: 플래피 게임 만들기
+            Events in Play Lab:
+              key: 플레이 랩 내 이벤트 
+              name: 이벤트가 있는 추적 게임
+            Picturing Data:
+              key: 데이터 묘사
+              name: 데이터 묘사
+            'End of Course Project: Create a Play Lab Game':
+              name: 과정말 프로젝트
+          lesson_groups:
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_binary:
+              display_name: 2진
+            csf_loops:
+              display_name: 반복
+            csf_events:
+              display_name: 이벤트
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+        coursed-2021:
+          title: 과정 D (2020)
+          description: 학생들은 루프와 조건, 이벤트에 관한 그들의 이해를 더 심화합니다. 코딩을 넘어 학생들은 디지털 시민의식에 대해 배웁니다.
+          description_short: 조건문에 대해 배우세요. 자신의 아트와 게임, 심지어 댄스 파티를 만드세요.
+          description_audience: '나이: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: '알고리즘: 그래프 종이 프로그래밍'
+              name: 모눈 종이 프로그래밍
+            Introduction to Online Puzzles:
+              key: 온라인 퍼즐 소개
+              name: 온라인 퍼즐 소개
+            Relay Programming:
+              key: 릴레이 프로그래밍
+              name: 릴레이 프로그래밍
+            Debugging in Collector:
+              key: 수거인 내 디버깅
+              name: 라우렐로 디버깅
+            Events in Bounce:
+              key: 바운스 내 이벤트
+              name: 바운스 내 이벤트
+            Build a Star Wars Game:
+              key: 스타워즈 게임 만들기
+              name: 스타워즈 게임 만들기
+            Dance Party:
+              key: 댄스 파티
+              name: 댄스 파티
+            Loops in Ice Age:
+              key: 아이스 에이지 내 루프
+              name: 아이스 에이지 내 루프
+            Loops in Artist:
+              key: 아티스트 내 루프
+              name: 루프로 모양 그리기
+            Nested Loops in Bee:
+              key: 벌 내 중첩 루프
+              name: 미로 내 중첩 루프
+            Conditionals with Cards:
+              key: 조건선택 카드
+              name: 조건선택 카드
+            Conditionals in Bee:
+              key: 벌 내 조건
+            While Loops in Farmer:
+              key: 농부 내 동안 루프
+              name: 농부 내 동안 루프
+            Until Loops in Maze:
+              key: 미로 내 까지 루프
+              name: 미로 내 까지 루프
+            Conditionals & Loops in Harvester:
+              key: 수확인 내 조건 및 루프
+            'Unplugged: Binary':
+              key: '언플러그드: 2진'
+              name: 2진 이미지
+            Artist Binary:
+              key: 화가 2진
+              name: 화가 2진
+            End of Course Project:
+              key: 과정말 프로젝트
+              name: 과정말 프로젝트
+          lesson_groups:
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_events:
+              display_name: 이벤트
+            csf_loops:
+              display_name: 반복
+            csf_conditionals:
+              display_name: 조건
+            csf_binary:
+              display_name: 2진
+            csf_digcit:
+              display_name: 디지털 시민의식
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+        coursee-2021:
+          title: 과정 E (2020)
+          description: 알고리즘과 루프, 조건, 이벤트로 코딩을 시작하고 그 다음, 함수로 넘어갈 수 있습니다. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
+          description_short: 과정 C와 D의 개념을 다시 살펴보고 그 다음, 함수를 배워 더 나아가세요.
+          description_audience: '나이: 8-12'
+          lessons:
+            Sequencing in the Maze:
+              key: 미로 내 시퀸싱
+              name: 미로 내 시퀸싱
+            Programming and Loops with the Artist:
+              key: 아티스트로 프로그래밍 및 루프
+              name: 루프로 그리기
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: '마인크래프트 내 조건: 보야지 아쿠아틱'
+              name: '마인크래프트 내 조건: 보야지 아쿠아틱'
+            Conditionals:
+              key: 조건
+            Simon Says:
+              key: 사이몬 가라사대
+              name: 사이몬 가라사대
+            Learning Sprites with Sprite Lab:
+              key: 스프라이트 랩으로 스프라이트 배우기
+              name: 스프라이트 랩으로 헤엄치는 물고기
+            Alien Dance Party with Sprite Lab:
+              key: 스프라이트 랩으로 외계인 댄스 파티
+              name: 스프라이트 랩으로 외계인 댄스 파티
+            Private and Personal Information:
+              key: 프라이버시 및 개인 정보
+              name: 프라이버시 및 개인 정보
+            About Me:
+              key: 내 소개
+              name: 스프라이트 랩으로 자기 소개
+            Digital Sharing:
+              key: 디지털 공유
+              name: 디지털 공유
+            Nested Loops in Bee:
+              key: 벌 내 중첩 루프
+              name: 미로 내 중첩 루프
+            Nested Loops in Artist:
+              key: 아티스트 내 중첩 루프
+              name: 중첩 루프를 사용한 멋진 모양
+            Nested Loops in Frozen:
+              key: 겨울 왕국 내 중첩 루프
+            'Functions: Songwriting':
+              key: '함수: 작곡'
+              name: 노래 만들기
+            Functions in Minecraft:
+              key: 마인크래프트 내 함수
+              name: 마인크래프트 내 함수
+            Functions in Harvester:
+              key: 수확인 내 함수
+            Functions in Artist:
+              key: 아티스트 내 함수
+            Designing for Accessibility:
+              key: 접근가능성을 위한 설계
+              name: 접근가능성을 위한 설계
+            End of Course Project:
+              key: 과정말 프로젝트
+              name: 과정말 프로젝트
+          lesson_groups:
+            ramp_up:
+              display_name: 램프 업
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_nested_loops:
+              display_name: 중첩 반복
+            csf_functions:
+              display_name: 함수
+            csf_impacts:
+              display_name: 컴퓨팅의 영향
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+        coursef-2021:
+          title: 과정 F (2020)
+          description: 여러 종류의 루프와 이벤트, 함수, 조건을 사용하는 방법을 배우세요. 다른 문제해결 기법을 조사하고 컴퓨팅과 인터넷의 사회적 영향을 토론하세요. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
+          description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
+          description_audience: '나이: 9-13'
+          lessons:
+            Functions in Minecraft:
+              key: 마인크래프트 내 함수
+              name: 마인크래프트 내 함수
+            Learning Sprites with Sprite Lab:
+              key: 스프라이트 랩으로 스프라이트 배우기
+              name: 스프라이트 랩으로 헤엄치는 물고기
+            Events with Sprite Lab:
+              name: 스프라이트 랩으로 외계인 댄스 파티
+            Loops with the Artist:
+              key: 아티스트와의 루프
+              name: 루프로 그리기
+            Nested Loops in the Maze:
+              key: 미로 내 중첩 루프
+              name: 미로 내 중첩 루프
+            The Power of Words:
+              key: 말의 힘
+              name: 말의 힘
+            Envelope Variables:
+              key: 변수들 함께 묶기
+              name: 변수들 함께 묶기
+            Variables as Constant in Artist:
+              key: 아티스트 내 상수로서 변수
+            Variables that Change in Bee:
+              key: 벌 내에서 변경되는 변수
+            Variables that Change in Artist:
+              key: 아티스트 내 변경되는 변수
+            Simulating Experiments:
+              key: 실험 시뮬레이션
+              name: 실험 시뮬레이션
+            AI for Oceans:
+              key: 바다를 위한 AI
+              name: 바다를 위한 AI
+            Internet:
+              key: 인터넷
+              name: 인터넷
+            For Loop Fun:
+              key: 재미있는 반복
+              name: 재미있는 반복
+            For Loops in Bee:
+              key: 벌 내 위한 함수
+            For Loops in Artist:
+              key: 아티스트 내 위한 루프
+            Editing Behaviors:
+              key: 행동 편집
+              name: 스프라이트 랩 내 행동
+            End of Course Project:
+              key: 과정말 프로젝트
+              name: 과정말 프로젝트
+          lesson_groups:
+            ramp_up:
+              display_name: 램프 업
+            csf_digcit:
+              display_name: 디지털 시민의식
+            csf_variables:
+              display_name: 변수
+            csf_for_loops:
+              display_name: 반복을 위한
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+        express-2021:
+          title: 익스프레스 과정(2020)
+          description: 아래 레슨을 자신의 속도에 맞게 공부해 봄으로써 컴퓨터 과학에 대해 배워 보세요! 컴퓨터 프로그램 만들기와 문제해결 능력 개발, 재미 있는 도전 해결하기 등을 배우세요! 친구와 가족, 선생님들과 공유할 게임과 창의적인 프로젝트를 만드세요.
+          description_short: '컴퓨터 과학 소개: 고학년 학생을 위해 초등학교 커리큘럼 중 최고의 커리큘럼을 결합합니다.'
+          description_audience: '나이: 9-18'
+          lessons:
+            Dance Party:
+              key: 댄스 파티
+              name: 댄스 파티
+            Programming with Angry Birds:
+              key: 앵그리 버드로 프로그래밍
+              name: 앵그리 버드로 프로그래밍
+            Debugging with Scrat:
+              key: 스크랫으로 디버깅
+              name: 스크랫으로 디버깅
+            Collecting Treasure with Laurel:
+              key: 라우렐로 보물 모으기
+              name: 라우렐로 보물 모으기
+            Creating Art with Code:
+              key: 코드로 아트 창작
+              name: 코드로 아트 창작
+            Nested Loops in Maze:
+              key: 미로 내 중첩 루프
+              name: 미로 내 중첩 루프
+            Snowflakes with Anna and Elsa:
+              key: 안나, 엘사와 눈송이
+              name: 안나, 엘사와 눈송이
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: '마인크래프트 내 조건: 보야지 아쿠아틱'
+              name: '마인크래프트 내 조건: 보야지 아쿠아틱'
+            Until Loops in Maze:
+              key: 미로 내 까지 루프
+              name: 미로 내 까지 루프
+            Functions in Minecraft:
+              key: 마인크래프트 내 함수
+              name: 마인크래프트 내 함수
+            Swimming Fish in Sprite Lab:
+              key: 스프라이트 랩에서 헤엄치는 물고기
+              name: 스프라이트 랩에서 헤엄치는 물고기
+            Alien Dance Party:
+              key: 외계인 댄스 파티
+              name: 외계인 댄스 파티
+            Behaviors in Sprite Lab:
+              key: 스프라이트 랩 내 행동
+              name: 스프라이트 랩 내 행동
+            End of Course Project:
+              key: 과정말 프로젝트
+              name: 과정말 프로젝트
+          lesson_groups:
+            csf_warmup:
+              display_name: 워밍 업
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_conditionals:
+              display_name: 조건
+            csf_functions:
+              display_name: 함수
+            csf_variables:
+              display_name: 변수
+            csf_for_loops:
+              display_name: 반복을 위한
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+        pre-express-2021:
+          description: 아래 레슨을 자신의 속도에 맞게 공부해 봄으로써 컴퓨터 과학에 대해 배워 보세요! 컴퓨터 프로그램 만들기와 문제해결 능력 개발, 재미 있는 도전 해결하기 등을 배우세요! 친구와 가족, 선생님들과 공유할 게임과 창의적인 프로젝트를 만드세요.
+          description_short: '아직 읽지 못하는 이들을 위한 컴퓨터 과학 소개: 유치원과 1학년 과정의 최고 교육 부분을 결합.'
+          description_audience: '나이: 4-8'
+          lessons:
+            Learn to Drag and Drop:
+              key: 드래그와 드롭 방법 배우기
+              name: 드래그와 드롭 방법 배우기
+            Sequencing with Scrat:
+              key: 스크랫으로 시퀸싱
+              name: 스크랫으로 시퀸싱
+            Programming in with Angry Birds:
+              key: 앵그리버드로 프로그래밍
+              name: 앵그리버드로 프로그래밍
+            Programming with Rey and BB-8:
+              key: 레이와 BB-8로 프로그래밍
+              name: 레이와 BB-8로 프로그래밍
+            Loops with Scrat:
+              key: 스크랫을 사용한 루프
+              name: 스크랫을 사용한 루프
+            Loops with Laurel:
+              key: 라우렐을 사용한 루프
+              name: 라우렐을 사용한 루프
+            Ocean Scene with Loops:
+              key: 루프를 사용한 해양 장면
+              name: 루프를 사용한 해양 장면
+            Drawing Gardens with Loops:
+              key: 루프로 정원 그리기
+              name: 루프로 정원 그리기
+          lesson_groups:
+            csf_sequencing:
+              display_name: 시퀸싱
+            csf_loops:
+              display_name: 반복
+            csf_events:
+              display_name: 이벤트
+        csf-2021-pilot:
+          lessons:
+            Learning Sprites with Sprite Lab:
+              name: 스프라이트 랩으로 헤엄치는 물고기
+            Virus Simulation for Code Bytes:
+              name: 시뮬레이션 코딩
+            lesson-1:
+              name: 변수들 함께 묶기
+          lesson_groups:
+            ramp_up:
+              display_name: 소개
+            outbreak:
+              display_name: 발생 시뮬레이션
+            lessonGroup-3:
+              display_name: 변수
