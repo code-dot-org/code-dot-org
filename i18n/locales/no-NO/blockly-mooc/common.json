@@ -480,6 +480,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Sjekker om en verdi er mindre enn eller lik en annen verdi. Returnerer sann hvis verdien på den venstre siden av uttrykket er mindre enn eller lik verdien på høyre side av uttrykket.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Mindre enn eller lik-operator",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_description": "Tar x opphøyet i y",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param0_description": "Grunntallet.",

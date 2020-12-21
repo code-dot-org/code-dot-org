@@ -366,6 +366,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "ពិសោធន៍ថាតើតម្លៃតូចជាងឬស្មើនឹងតម្លៃផ្សេងទៀត។ ផ្ដល់តំលៃពិតបើតម្លៃនៅខាងឆ្វេងដៃនៃកន្សោមតូចជាងឬស្មើនឹងតម្លៃនៅជ្រុងខាងស្ដាំនៃកន្សោម",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "សញ្ញាតិចជាងឬស្មើគ្នា",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_description": "យក x ទៅជាស្វ័យគុណ y",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param0_description": "លេងគោល។",
