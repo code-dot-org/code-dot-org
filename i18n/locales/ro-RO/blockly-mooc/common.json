@@ -501,6 +501,8 @@
   "dropletBlock_mathAbs_description": "Ia valoarea absolută a lui x",
   "dropletBlock_mathAbs_param0": "x",
   "dropletBlock_mathAbs_signatureOverride": "Math.abs(x)",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathMax_description": "Ia valoarea maximă dintre una sau mai multe valori n1, n2,..., nX",
   "dropletBlock_mathMax_signatureOverride": "Math.max(n1, n2, ..., nX)",
   "dropletBlock_mathMin_description": "Ia valoarea minimă dintre una sau mai multe valori n1, n2,..., nX",
