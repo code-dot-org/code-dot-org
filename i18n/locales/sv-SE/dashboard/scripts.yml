@@ -2989,7 +2989,206 @@ sv:
               name: Kurs A
             Course B:
               name: Kurs B
-        ml-playground:
+        csd1-2021:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd3-2021:
           lessons:
-            intro:
-              name: Introduktion
+            Variables:
+              key: variabler
+              name: variabler
+            Text:
+              key: text
+              name: text
+            Conditionals:
+              key: Villkor
+              name: Villkor
+            Functions:
+              key: funktioner
+              name: funktioner
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd5-2021:
+          lessons:
+            Representing Images:
+              key: Representerar bilder
+              name: Representerar bilder
+            Problem Solving and Data:
+              key: Problemlösning och data
+              name: Problemlösning och data
+            Automating Data Decisions:
+              key: Automatisera databeslut
+              name: Automatisera databeslut
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funktioner med parametrar
+              name: Funktioner med parametrar
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Binära tal
+              name: Binära tal
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: variabler
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Listor
+            csp_loops:
+              display_name: loopar
+            csp_project:
+              display_name: Projekt
+        csp7-2021:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Glada kartor
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Flytta det, flytta den
+              name: Flytta det, flytta den
+            'Loops: Getting Loopy':
+              name: Att bli snurrig
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binära armband
+              name: Binära armband
+            'Events: The Big Event':
+              name: Den stora händelsen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_binary:
+              display_name: Binära
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Kalkyleringsprogrammering
+            Relay Programming:
+              key: Stafettprogrammering
+              name: Stafettprogrammering
+            Dance Party:
+              key: Dansparty
+              name: Dansparty
+            Conditionals with Cards:
+              key: Villkorssatser med kort
+              name: Villkorssatser med kort
+            'Unplugged: Binary':
+              key: 'Ouppkopplad: Binärt'
+              name: Binära bilder
+            Artist Binary:
+              key: Artist binär
+              name: Artist binär
+          lesson_groups:
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+            csf_binary:
+              display_name: Binära
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Villkor
+            'Functions: Songwriting':
+              name: Låtskrivande
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_nested_loops:
+              display_name: Kapslade slingor(loopar)
+            csf_functions:
+              display_name: funktioner
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Envelope variabler
+              name: Envelope variabler
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: '''För'' loop skoj'
+              name: '''För'' loop skoj'
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_variables:
+              display_name: variabler
+            csf_for_loops:
+              display_name: '''För'' loopar'
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Dansparty
+              name: Dansparty
+          lesson_groups:
+            csf_warmup:
+              display_name: Uppvärmning
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+            csf_functions:
+              display_name: funktioner
+            csf_variables:
+              display_name: variabler
+            csf_for_loops:
+              display_name: '''För'' loopar'
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Envelope variabler
+          lesson_groups:
+            ramp_up:
+              display_name: Introduktion
+            lessonGroup-3:
+              display_name: variabler
