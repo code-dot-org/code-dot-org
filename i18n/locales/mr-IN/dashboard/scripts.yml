@@ -118,3 +118,32 @@ mr:
           lessons:
             Events:
               name: ईव्हेंट्स
+        coursea-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        courseb-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        coursec-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        coursed-2021:
+          lessons:
+            Dance Party:
+              key: डांस पार्टी
+              name: डांस पार्टी
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        express-2021:
+          lessons:
+            Dance Party:
+              key: डांस पार्टी
+              name: डांस पार्टी
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
