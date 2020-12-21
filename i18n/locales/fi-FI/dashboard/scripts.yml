@@ -2780,7 +2780,220 @@ fi:
               name: Nopeus
             Functions:
               name: Funktiot
-        ml-playground:
+        csd1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+            csd1_1:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            csd1_2:
+              display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+        csd3-2021:
           lessons:
-            intro:
-              name: Johdanto
+            Variables:
+              key: Muuttujat
+              name: Muuttujat
+            Text:
+              key: teksti
+              name: teksti
+            Conditionals:
+              key: Ehtolausekkeet
+              name: Ehtolausekkeet
+            Velocity:
+              key: Nopeus
+              name: Nopeus
+            Functions:
+              key: Funktiot
+              name: Funktiot
+          lesson_groups:
+            csd3_1:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            csd3_2:
+              display_name: 'Luku 2: Pelien rakentaminen'
+            cspSurvey:
+              display_name: Kysely
+        csd4-2021:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            csd4_2:
+              display_name: 'Luku 2: Apsin prototypointi'
+            csd5_2:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+            cspSurvey:
+              display_name: Kysely
+        csd5-2021:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            csd5_2:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+            cspSurvey:
+              display_name: Kysely
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Parametrilliset funktiot
+              name: Parametrilliset funktiot
+          lesson_groups:
+            csd6_1:
+              display_name: 'Luku 1: Laitteiston palaute'
+            csd6_2:
+              display_name: 'Luku 2: Laitteiston syöte'
+            cspSurvey:
+              display_name: Kysely
+        csp1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Muuttujat
+            csp_conditionals:
+              display_name: Ehtolausekkeet
+            csp_functions:
+              display_name: Funktiot
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: Silmukat
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Iloiset kartat
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Liikuta, liikuta
+              name: Liikuta, liikuta
+            'Loops: Getting Loopy':
+              name: Mennään silmukoille
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binäärikorut
+              name: Binäärikorut
+            'Events: The Big Event':
+              name: Suuri tapahtuma
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_binary:
+              display_name: Binääri
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Ruutupaperiohjelmointi
+            Relay Programming:
+              key: Releohjelmointi
+              name: Releohjelmointi
+            Dance Party:
+              key: Tanssibileet
+              name: Tanssibileet
+            Conditionals with Cards:
+              key: Ehtolauseet pelikorteilla
+              name: Ehtolauseet pelikorteilla
+            'Unplugged: Binary':
+              key: 'Tietokoneeton tekeminen: binääri'
+              name: Binäärikuvat
+            Artist Binary:
+              key: 'Taiteilija: binääri'
+              name: 'Taiteilija: binääri'
+          lesson_groups:
+            csf_events:
+              display_name: Tapahtumat
+            csf_loops:
+              display_name: Silmukat
+            csf_conditionals:
+              display_name: Ehtolausekkeet
+            csf_binary:
+              display_name: Binääri
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Ehtolausekkeet
+            'Functions: Songwriting':
+              name: Säveltäminen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_nested_loops:
+              display_name: Sisäkkäiset silmukat
+            csf_functions:
+              display_name: Funktiot
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Kirjekuorimuuttujat
+              name: Kirjekuorimuuttujat
+            Internet:
+              key: Internet
+              name: Internetti
+            For Loop Fun:
+              key: Silmukkahupia
+              name: Silmukkahupia
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_variables:
+              display_name: Muuttujat
+            csf_for_loops:
+              display_name: Silmukat
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Tanssibileet
+              name: Tanssibileet
+          lesson_groups:
+            csf_loops:
+              display_name: Silmukat
+            csf_conditionals:
+              display_name: Ehtolausekkeet
+            csf_functions:
+              display_name: Funktiot
+            csf_variables:
+              display_name: Muuttujat
+            csf_for_loops:
+              display_name: Silmukat
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Kirjekuorimuuttujat
+          lesson_groups:
+            ramp_up:
+              display_name: Johdanto
+            lessonGroup-3:
+              display_name: Muuttujat
