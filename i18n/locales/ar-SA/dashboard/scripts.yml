@@ -15089,7 +15089,1356 @@ ar:
           lessons:
             AI for Oceans:
               name: الذكاء الاصطناعي للمحيطات
-            intro:
-              name: مقدمة
             visualizing:
               name: تمثيل البيانات في رسوم مرئية
+        csd1-2021:
+          title: استكشافات علوم الكمبيوتر (CSD) الوحدة 1 - حل المشكلات والحوسبة
+          description: "حل المشكلات والحوسبة مقدمة تفاعلية وتعاونية للغاية في مجال علوم الكمبيوتر، كما تم تأطيرها ضمن السعي الأوسع لحل المشكلات. سوف تتدرب على استخدام عملية حل المشكلات للتعامل مع سلسلة من الألغاز والتحديات وسيناريوهات العالم الحقيقي. بعد ذلك، ستتعلم كيف تقوم أجهزة الكمبيوتر بإدخال المعلومات وإخراجها وتخزينها ومعالجتها لمساعدة البشر على حل المشكلات. تختتم الوحدة بمشروع تقوم فيه بتصميم تطبيق يساعد على حل مشكلة من اختيارك.\\r"
+          description_short: "تعرف على كيفية عمل البشر باستخدام أجهزة الكمبيوتر لحل المشكلات."
+          lessons:
+            CS Discoveries Pre-survey:
+              key: استطلاع رأي مسبق عن استكشافات علوم الكمبيوتر
+              name: استطلاع رأي مسبق عن استكشافات علوم الكمبيوتر
+            Intro to Problem Solving:
+              key: مقدمة عن حل المشكلات
+              name: مقدمة عن حل المشكلات
+            The Problem Solving Process:
+              key: عملية حل المشكلات
+              name: عملية حل المشكلات
+            Exploring Problem Solving:
+              key: استكشاف حل المشكلات
+              name: استكشاف حل المشكلات
+            What is a Computer?:
+              key: ما هو الكمبيوتر؟
+              name: ما هو الكمبيوتر؟
+            Input and Output:
+              key: الإدخال والإخراج
+              name: الإدخال والإخراج
+            Processing:
+              key: المعالجة
+              name: المعالجة
+            Storage:
+              key: التخزين
+              name: التخزين
+            Project - Propose an App:
+              key: المشروع - اقتراح تطبيق
+              name: المشروع - اقتراح تطبيق
+            Post-Project Test:
+              key: اختبار ما بعد المشروع
+              name: اختبار ما بعد المشروع
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              key: مقدمة عن حل المشكلات - طاولة من ورق الصحف (الدرس البديل 1)
+              name: مقدمة عن حل المشكلات - طاولة من ورق الصحف (الدرس البديل 1)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              key: مقدمة عن حل المشكلات - جسر من السباغيتي (الدرس البديل 1)
+              name: مقدمة عن حل المشكلات - جسر من السباغيتي (الدرس البديل 1)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              key: مقدمة عن حل المشكلات - برج من الورق (الدرس البديل 1)
+              name: مقدمة عن حل المشكلات - برج من الورق (الدرس البديل 1)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              key: استكشاف حل المشكلات - موضوع الحيوانات (الدرس البديل 3)
+              name: استكشاف حل المشكلات - موضوع الحيوانات (الدرس البديل 3)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              key: استكشاف حل المشكلات - موضوع الألعاب (الدرس البديل 3)
+              name: استكشاف حل المشكلات - موضوع الألعاب (الدرس البديل 3)
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+            csd1_1:
+              display_name: 'الفصل 1: عملية حل المشكل'
+            csd1_2:
+              display_name: 'الفصل 2: الحواسيب وحل المشكل'
+            csd1_3:
+              display_name: دروس بديلة
+        csd2-2021:
+          title: استكشافات علوم الكمبيوتر (CSD) الوحدة 2 - تطوير الويب
+          description: "في الوحدة 2، ستتعلم كيفية إنشاء المحتوى ومشاركته على صفحات الويب الخاصة بك. بعد تحديد المحتوى الذي تريد مشاركته مع العالم من حولك، ستتعلم كيفية تنظيم صفحاتك وتصميمها باستخدام HTML وCSS. ستتمرن أيضًا على مهارات برمجة قيّمة مثل تصحيح الأخطاء، باستخدام الموارد والعمل الجماعي."
+          description_short: "تعلم كيفية تصميم موقع الويب الخاص بك في مختبر الويب."
+          lessons:
+            Exploring Web Pages:
+              key: استكشاف صفحات الويب
+              name: استكشاف صفحات الويب
+            Intro to HTML:
+              key: مقدمة عن HTML
+              name: مقدمة عن HTML
+            Headings:
+              key: العناوين
+              name: العناوين
+            'Mini-Project: HTML Web Page':
+              key: 'مشروع مصغر: صفحة ويب HTML'
+              name: 'مشروع مصغر: صفحة ويب HTML'
+            Digital Footprint:
+              key: البصمة الرقمية
+              name: البصمة الرقمية
+            Styling Text with CSS:
+              key: تصميم النص باستخدام CSS
+              name: تصميم النص باستخدام CSS
+            'Mini-Project: Your Personal Style':
+              key: 'مشروع مصغر: أسلوبك الشخصي'
+              name: 'مشروع مصغر: أسلوبك الشخصي'
+            Intellectual Property:
+              key: الملكية الفكرية
+              name: الملكية الفكرية
+            'Websites for Expression ':
+              key: 'مواقع الويب المخصصة للتعبير'
+              name: 'مواقع الويب المخصصة للتعبير'
+            Styling Elements with CSS:
+              key: تصميم العناصر باستخدام CSS
+              name: تصميم العناصر باستخدام CSS
+            Your Web Page - Prepare:
+              key: صفحة الويب الخاصة بك - تحضير
+              name: صفحة الويب الخاصة بك - تحضير
+            Team Problem Solving:
+              key: فريق حل المشكلات
+              name: فريق حل المشكلات
+            Sources and Research:
+              key: المصادر والبحوث المنهجية
+              name: المصادر والبحوث المنهجية
+            Planning a Multi-page Website:
+              key: تخطيط موقع ويب متعدد الصفحات
+              name: تخطيط موقع ويب متعدد الصفحات
+            Linking Pages:
+              key: ربط الصفحات
+              name: ربط الصفحات
+            Project - Website for a Purpose:
+              key: المشروع - الموقع الإلكتروني لغرض ما
+              name: المشروع - الموقع الإلكتروني لغرض ما
+            Peer Review and Final Touches:
+              key: مراجعة الأقران واللمسات الأخيرة
+              name: مراجعة الأقران واللمسات الأخيرة
+            Post-Project Test:
+              key: اختبار ما بعد المشروع
+              name: اختبار ما بعد المشروع
+            CS Discoveries Post Course survey:
+              key: استطلاع رأي بعد انتهاء دورة استكشافات علوم الكمبيوتر
+              name: استطلاع رأي بعد انتهاء دورة استكشافات علوم الكمبيوتر
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csd3-2021:
+          title: استكشافات علوم الكمبيوتر (CSD) الوحدة 3 - الرسوم المتحركة والألعاب
+          description: "في الوحدة 3، ستستفيد من تجربة كتابة الكود أثناء برمجة الرسوم المتحركة والفنون التفاعلية والألعاب في مختبر الألعاب. تبدأ الوحدة بأشكال بسيطة وتتقدم تدريجيًا للوصول إلى ألعاب أكثر تعقيدًا تعتمد على النقوش المتحركة، باستخدام نفس مفاهيم البرمجة وعملية التصميم التي يستخدمها علماء الكمبيوتر يوميًا. في المشروع النهائي، ستطور برنامجًا تفاعليًا مخصصًا."
+          description_short: "البرمجة"
+          lessons:
+            Programming for Entertainment:
+              key: البرمجة للترفيه
+              name: البرمجة للترفيه
+            Plotting Shapes:
+              key: رسم الأشكال
+              name: رسم الأشكال
+            Drawing in Game Lab:
+              key: الرسم في مختبر الألعاب
+              name: الرسم في مختبر الألعاب
+            Variables:
+              key: المتغيرات
+              name: المتغيرات
+            Sprites:
+              key: النقوش المتحركة
+              name: النقوش المتحركة
+            Text:
+              key: النص
+              name: النص
+            'Mini-Project: Captioned Scenes':
+              key: 'مشروع صغير: المشاهدات ذات التعليقات التوضيحية'
+              name: 'مشروع صغير: المشاهدات ذات التعليقات التوضيحية'
+            The Draw Loop:
+              key: حلقة الرسم
+              name: حلقة الرسم
+            Sprite Movement:
+              key: حركة النقش المتحرك
+              name: حركة النقش المتحرك
+            'Mini-Project: Animation':
+              key: 'مشروع صغير: الرسوم المتحركة'
+              name: 'مشروع صغير: الرسوم المتحركة'
+            Conditionals:
+              key: الجمل الشرطية
+              name: الجمل الشرطية
+            Keyboard Input:
+              key: مدخلات لوحة المفاتيح
+              name: مدخلات لوحة المفاتيح
+            Mouse Input:
+              key: مدخلات الماوس
+              name: مدخلات الماوس
+            Project - Interactive Card:
+              key: المشروع - البطاقة التفاعلية
+              name: المشروع - البطاقة التفاعلية
+            Velocity:
+              key: السرعة
+              name: السرعة
+            Collision Detection:
+              key: اكتشاف التصادم
+              name: اكتشاف التصادم
+            'Mini-Project: Side Scroller':
+              key: 'مشروع صغير: التمرير الجانبي'
+              name: 'مشروع صغير: التمرير الجانبي'
+            Complex Sprite Movement:
+              key: الحركة المعقدة للنقش المتحرك
+              name: الحركة المعقدة للنقش المتحرك
+            Collisions:
+              key: التصادمات
+              name: التصادمات
+            'Mini-Project: Flyer Game':
+              key: 'مشروع صغير: لعبة التحليق'
+              name: 'مشروع صغير: لعبة التحليق'
+            Functions:
+              key: دوال
+              name: دوال
+            The Game Design Process:
+              key: عملية تصميم اللعبة
+              name: عملية تصميم اللعبة
+            Using the Game Design Process:
+              key: استخدام عملية تصميم اللعبة
+              name: استخدام عملية تصميم اللعبة
+            Project - Design a Game:
+              key: المشروع - تصميم لعبة
+              name: المشروع - تصميم لعبة
+            Post-Project Test:
+              key: اختبار ما بعد المشروع
+              name: اختبار ما بعد المشروع
+            CS Discoveries Post Course survey:
+              key: استطلاع رأي بعد انتهاء دورة استكشافات علوم الكمبيوتر
+              name: استطلاع رأي بعد انتهاء دورة استكشافات علوم الكمبيوتر
+          lesson_groups:
+            csd3_1:
+              display_name: 'الفصل 1: الصور والمتحركات'
+            csd3_2:
+              display_name: 'الفصل 2: إنشاء الألعاب'
+            cspSurvey:
+              display_name: استبيان
+        csd4-2021:
+          title: CSD Unit 4 - The Design Process ('19-'20)
+          description: تقدم الوحدة 4 الآثار الاجتماعية الأوسع للحوسبة. من خلال سلسلة من تحديات التصميم، ستتعلم كيفية فهم احتياجات الآخرين بشكل أفضل أثناء تطوير حل لمشكلة ما. يتكون النصف الثاني من الوحدة من مشروع تكراري للفريق، حيث تتاح للفرق الفرصة لتحديد الحاجة التي يهتمون بها، وحلول النموذج الأولي على الورق وفي مختبر التطبيقات، وحلول الاختبار مع المستخدمين الحقيقيين للحصول على ملاحظات والتوجه نحو تكرار أكثر.
+          description_short: "تعرف على كيفية تصميم برنامج يلبي احتياجات المستخدمين."
+          lessons:
+            Analysis of Design:
+              key: تحليل التصميم
+              name: تحليل التصميم
+            Understanding Your User:
+              key: فهم المستخدم
+              name: فهم المستخدم
+            User-Centered Design Micro Activity:
+              key: نشاط صغير عن التصميم الذي يركز على المستخدم
+              name: نشاط صغير عن التصميم الذي يركز على المستخدم
+            User Interfaces:
+              key: واجهات المستخدم
+              name: واجهات المستخدم
+            Feedback and Testing:
+              key: الملاحظات والاختبار
+              name: الملاحظات والاختبار
+            Identifying User Needs:
+              key: تحديد احتياجات المستخدم
+              name: تحديد احتياجات المستخدم
+            Project - Paper Prototype:
+              key: المشروع - النموذج الورقي الأولي
+              name: المشروع - النموذج الورقي الأولي
+            Designing Apps for Good:
+              key: تصميم تطبيقات من أجل الخير
+              name: تصميم تطبيقات من أجل الخير
+            Market Research:
+              key: أبحاث السوق
+              name: أبحاث السوق
+            Paper Prototypes:
+              key: النماذج الورقية الأولية
+              name: النماذج الورقية الأولية
+            Prototype Testing:
+              key: اختبار النموذج الأولي
+              name: اختبار النموذج الأولي
+            Digital Design:
+              key: التصميم الرقمي
+              name: التصميم الرقمي
+            Linking Screens:
+              key: ربط الشاشات
+              name: ربط الشاشات
+            Testing the App:
+              key: اختبار التطبيق
+              name: اختبار التطبيق
+            Improving and Iterating:
+              key: التحسينات والتكرارات
+              name: التحسينات والتكرارات
+            Project - App Presentation:
+              key: المشروع - عرض التطبيق
+              name: المشروع - عرض التطبيق
+            Post-Project Test:
+              key: اختبار ما بعد المشروع
+              name: اختبار ما بعد المشروع
+            CS Discoveries Post Course survey:
+              key: استطلاع رأي بعد انتهاء دورة استكشافات علوم الكمبيوتر
+              name: استطلاع رأي بعد انتهاء دورة استكشافات علوم الكمبيوتر
+          lesson_groups:
+            csd4_1:
+              display_name: 'الفصل 1: التصميم المحوري للمستخدم'
+            csd4_2:
+              display_name: 'الفصل 2: نمذجة التطبيق'
+            csd5_2:
+              display_name: 'الفصل 2: حل مشكلات البيانات'
+            cspSurvey:
+              display_name: استبيان
+        csd5-2021:
+          title: CSD Unit 5 - Data and Society ('19-'20)
+          description: تتناول الوحدة 5 أهمية البيانات في حل المشكلات وتسلط الضوء على كيف يمكن لأجهزة الكمبيوتر المساعدة في هذه العملية. يستكشف الفصل الأول الأنظمة المختلفة المستخدمة لتمثيل المعلومات في الكمبيوتر والتحديات والمفاضلات الناتجة عن استخدامها. في الفصل الثاني، ستتعلم كيفية استخدام مجموعات البيانات لحل المشكلات، وكيف تساعد أجهزة الكمبيوتر في أتمتة خطوات هذه العملية. يختتم هذا الفصل من خلال النظر في كيفية تطبيق عملية حل المشكلات باستخدام البيانات على منطقة من اختيارك.
+          description_short: تعرّف على كيفية استخدام الأشخاص لأجهزة الكمبيوتر لحل مشاكل البيانات.
+          lessons:
+            Representation Matters:
+              key: مسائل التمثيل
+              name: مسائل التمثيل
+            Patterns and Representation:
+              key: الأنماط والتمثيل
+              name: الأنماط والتمثيل
+            ASCII and Binary Representation:
+              key: ASCII والتمثيل الثنائي
+              name: ASCII والتمثيل الثنائي
+            Representing Images:
+              key: تمثيل الصور
+              name: تمثيل الصور
+            Representing Numbers:
+              key: تمثيل الأرقام
+              name: تمثيل الأرقام
+            Keeping Data Secret:
+              key: الحفاظ على سرية البيانات
+              name: الحفاظ على سرية البيانات
+            Combining Representations:
+              key: الجمع بين التمثيلات
+              name: الجمع بين التمثيلات
+            Project - Create a Representation:
+              key: المشروع - إنشاء تمثيل
+              name: المشروع - إنشاء تمثيل
+            Problem Solving and Data:
+              key: حل المشكلات والبيانات
+              name: حل المشكلات والبيانات
+            Problem Solving with Big Data:
+              key: حل المشكلات باستخدام البيانات الضخمة
+              name: حل المشكلات باستخدام البيانات الضخمة
+            Structuring Data:
+              key: هيكلة البيانات
+              name: هيكلة البيانات
+            Making Decisions with Data:
+              key: اتخاذ القرارات باستخدام البيانات
+              name: اتخاذ القرارات باستخدام البيانات
+            Interpreting Data:
+              key: تفسير البيانات
+              name: تفسير البيانات
+            Automating Data Decisions:
+              key: أتمتة قرارات البيانات
+              name: أتمتة قرارات البيانات
+            Post-Project Test:
+              key: اختبار ما بعد المشروع
+              name: اختبار ما بعد المشروع
+            CS Discoveries Post Course survey:
+              key: استطلاع رأي بعد انتهاء دورة استكشافات علوم الكمبيوتر
+              name: استطلاع رأي بعد انتهاء دورة استكشافات علوم الكمبيوتر
+          lesson_groups:
+            csd5_1:
+              display_name: "الفصل 1: تمثيل المعلومات\n"
+            csd5_2:
+              display_name: 'الفصل 2: حل مشكلات البيانات'
+            cspSurvey:
+              display_name: استبيان
+        csd6-2021:
+          title: CSD Unit 6 - Physical Computing ('19-'20)
+          description: تستكشف الوحدة 6 دور منصات الأجهزة في الحوسبة وكيف يمكن لأجهزة الاستشعار المختلفة توفير مدخلات ومخرجات أكثر فعالية من لوحة المفاتيح والماوس والشاشة التقليدية. باستخدام مختبر التطبيقات ولوحة الأضواء الدائرية من شركة أدافروت، ستطور برامج تستخدم نفس مدخلات ومخرجات الأجهزة التي تراها في الأجهزة الذكية، وتبحث كيف يمكن أن يؤدي نموذج أولي بسيط إلى منتج نهائي. تختتم الوحدة بتحدي في التصميم لاستخدام لوحة الأضواء الدائرية كأساس لابتكار التصميم الخاص بك.
+          description_short: تعلم البرمجة بالأجهزة المادية.
+          lessons:
+            Innovations in Computing:
+              key: ابتكارات في الحوسبة
+              name: ابتكارات في الحوسبة
+            Designing Screens with Code:
+              key: تصميم الشاشات باستخدام الكود
+              name: تصميم الشاشات باستخدام الكود
+            The Circuit Playground:
+              key: لوحة الأضواء الدائرية
+              name: لوحة الأضواء الدائرية
+            Input Unplugged:
+              key: نشاط غير متصل عن المدخلات
+              name: نشاط غير متصل عن المدخلات
+            Board Events:
+              key: أحداث اللوحة
+              name: أحداث اللوحة
+            Getting Properties:
+              key: الحصول على الخصائص
+              name: الحصول على الخصائص
+            Analog Input:
+              key: المدخلات التناظرية
+              name: المدخلات التناظرية
+            The Program Design Process:
+              key: عملية تصميم البرنامج
+              name: عملية تصميم البرنامج
+            'Project: Make a Game':
+              key: 'المشروع: تصميم لعبة'
+              name: 'المشروع: تصميم لعبة'
+            Arrays and Color LEDs:
+              key: المجموعات الوصفية ومصابيح LED الملونة
+              name: المجموعات الوصفية ومصابيح LED الملونة
+            Making Music:
+              key: إنشاء موسيقى
+              name: إنشاء موسيقى
+            Arrays and For Loops:
+              key: المجموعات الوصفية وحلقات For
+              name: المجموعات الوصفية وحلقات For
+            Accelerometer:
+              key: مقياس التسارع
+              name: مقياس التسارع
+            Functions with Parameters:
+              key: الدوال والمعاملات
+              name: الدوال والمعاملات
+            Circuits and Physical Prototypes:
+              key: الدوائر والنماذج الأولية المادية
+              name: الدوائر والنماذج الأولية المادية
+            'Project: Prototype an Innovation':
+              key: 'المشروع: إعداد نموذج أولي لابتكار'
+              name: 'المشروع: إعداد نموذج أولي لابتكار'
+            Post-Project Test:
+              key: اختبار ما بعد المشروع
+              name: اختبار ما بعد المشروع
+            CS Discoveries Post Course survey:
+              key: استطلاع رأي بعد انتهاء دورة استكشافات علوم الكمبيوتر
+              name: استطلاع رأي بعد انتهاء دورة استكشافات علوم الكمبيوتر
+          lesson_groups:
+            csd6_1:
+              display_name: 'الفصل 1: البرمجة باستخدام الأجهزة'
+            csd6_2:
+              display_name: "الفصل 2: بناء نماذج أوليّة مادية\n"
+            cspSurvey:
+              display_name: استبيان
+        csp1-2021:
+          title: مبادئ علوم الكمبيوتر (CSP) الوحدة 1 - المعلومات الرقمية (2020 - 2021)
+          lessons:
+            CS Principles Pre-survey:
+              key: استطلاع رأي مسبق عن مبادئ علوم الكمبيوتر
+              name: استطلاع رأي مسبق عن مبادئ علوم الكمبيوتر
+            Welcome to CSP:
+              key: مرحبًا بك في مبادئ علوم الكمبيوتر (CSP)
+              name: مرحبًا بك في مبادئ علوم الكمبيوتر (CSP)
+            Representing Information:
+              key: تمثيل المعلومات
+              name: تمثيل المعلومات
+            Circle Square Patterns:
+              key: ارسم دائرة حول الأنماط المربعة
+              name: ارسم دائرة حول الأنماط المربعة
+            Binary Numbers:
+              key: أرقام ثنائية
+              name: أرقام ثنائية
+            Overflow and Rounding:
+              key: التجاوز والتقريب
+              name: التجاوز والتقريب
+            Representing Text:
+              key: تمثيل النص
+              name: تمثيل النص
+            Black and White Images:
+              key: صور أبيض وأسود
+              name: صور أبيض وأسود
+            Color Images:
+              key: صور بالألوان
+              name: صور بالألوان
+            Lossless Compression:
+              key: الضغط بدون فقدان البيانات
+              name: الضغط بدون فقدان البيانات
+            Lossy Compression:
+              key: الضغط مع فقدان البيانات
+              name: الضغط مع فقدان البيانات
+            Intellectual Property:
+              key: الملكية الفكرية
+              name: الملكية الفكرية
+            Project - Digital Information Dilemmas Part 1:
+              key: مشروع - معضلات المعلومات الرقمية، الجزء 1
+              name: مشروع - معضلات المعلومات الرقمية، الجزء 1
+            Project - Digital Information Dilemmas Part 2:
+              key: مشروع - معضلات المعلومات الرقمية، الجزء 2
+              name: مشروع - معضلات المعلومات الرقمية، الجزء 2
+            'Lesson 14: Assessment Day':
+              key: 'الدرس 14: يوم التقييم'
+              name: 'الدرس 14: يوم التقييم'
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+            csp_unit1_2020:
+              display_name: '(قديم) الوحدة 1: معلومات رقمية'
+        csp2-2021:
+          title: مبادئ علوم الكمبيوتر الوحدة 2 - الإنترنت (2020 - 2021)
+          lessons:
+            Welcome to the Internet:
+              key: مرحبًا بك في الإنترنت
+              name: مرحبًا بك في الإنترنت
+            Building a Network:
+              key: بناء شبكة
+              name: بناء شبكة
+            The Need for Addressing:
+              key: الحاجة إلى العنونة
+              name: الحاجة إلى العنونة
+            Routers and Redundancy:
+              key: الموجهات والتكرار
+              name: الموجهات والتكرار
+            Packets:
+              key: الحزم
+              name: الحزم
+            DNS and HTTP:
+              key: DNS وHTTP
+              name: DNS وHTTP
+            Project - Internet Dilemmas Part 1:
+              key: مشروع - معضلات الإنترنت، الجزء 1
+              name: مشروع - معضلات الإنترنت، الجزء 1
+            Project - Internet Dilemmas Part 2:
+              key: مشروع - معضلات الإنترنت، الجزء 2
+              name: مشروع - معضلات الإنترنت، الجزء 2
+            'Lesson 9: Assessment Day':
+              key: 'الدرس 9: يوم التقييم'
+              name: 'الدرس 9: يوم التقييم'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'الوحدة 2: الانترنت'
+        csp3-2021:
+          title: مبادئ علوم الكمبيوتر (CSP) الوحدة 3 - مقدمة عن تصميم التطبيقات (2020-2021)
+          lessons:
+            Introduction to Apps:
+              key: مقدمة إلى التطبيقات
+              name: مقدمة إلى التطبيقات
+            Project - Designing an App Part 1:
+              key: 'المشروع: تصميم تطبيق الجزء 1'
+              name: 'المشروع: تصميم تطبيق الجزء 1'
+            Project - Designing an App Part 2:
+              key: 'المشروع: تصميم تطبيق الجزء 2'
+              name: 'المشروع: تصميم تطبيق الجزء 2'
+            The Need for Programming Languages:
+              key: الحاجة إلى لغات البرمجة
+              name: الحاجة إلى لغات البرمجة
+            Intro to Programming:
+              key: مقدمة في البرمجة
+              name: مقدمة في البرمجة
+            Debugging:
+              key: تصحيح الأخطاء
+              name: تصحيح الأخطاء
+            Project - Designing an App Part 3:
+              key: 'المشروع: تصميم تطبيق الجزء 3'
+              name: 'المشروع: تصميم تطبيق الجزء 3'
+            Project - Designing an App Part 4:
+              key: 'المشروع: تصميم تطبيق الجزء 4'
+              name: 'المشروع: تصميم تطبيق الجزء 4'
+            Project - Designing an App Part 5:
+              key: 'المشروع: تصميم تطبيق الجزء 5'
+              name: 'المشروع: تصميم تطبيق الجزء 5'
+            'Lesson 11: Assessment Day':
+              key: 'الدرس 11: يوم التقييم'
+              name: 'الدرس 11: يوم التقييم'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'الوحدة 3: مقدمة في تصميم التطبيقات'
+        csp4-2021:
+          title: مبادئ علوم الكمبيوتر (CSP) الوحدة 4 - المتغيرات والتعبيرات الشرطية والدوال (2020 - 2021)
+          lessons:
+            Variables Explore:
+              key: استكشاف المتغيرات
+              name: استكشاف المتغيرات
+            Variables Investigate:
+              key: التحقيق في المتغيرات
+              name: التحقيق في المتغيرات
+            Variables Practice:
+              key: التدرب على المتغيرات
+              name: التدرب على المتغيرات
+            Variables Make:
+              key: صنع المتغيرات
+              name: صنع المتغيرات
+            Conditionals Explore:
+              key: استكشاف التعبيرات الشرطية
+              name: استكشاف التعبيرات الشرطية
+            Conditionals Investigate:
+              key: التحقيق في التعبيرات الشرطية
+              name: التحقيق في التعبيرات الشرطية
+            Conditionals Practice:
+              key: التدرب على التعبيرات الشرطية
+              name: التدرب على التعبيرات الشرطية
+            Conditional Make:
+              key: صنع التعبيرات الشرطية
+              name: صنع التعبيرات الشرطية
+            Functions Explore / Investigate:
+              key: استكشاف الدوال والتحقيق فيها
+              name: استكشاف الدوال والتحقيق فيها
+            Functions Practice:
+              key: التدرب على الدوال
+              name: التدرب على الدوال
+            Functions Make:
+              key: صنع الدوال
+              name: صنع الدوال
+            Project - Decision Maker App Part 1:
+              key: المشروع - تطبيق صانع القرار الجزء 1
+              name: المشروع - تطبيق صانع القرار الجزء 1
+            Project - Decision Maker App Part 2:
+              key: المشروع - تطبيق صانع القرار الجزء 2
+              name: المشروع - تطبيق صانع القرار الجزء 2
+            Project - Decision Maker App Part 3:
+              key: المشروع - تطبيق صانع القرار الجزء 3
+              name: المشروع - تطبيق صانع القرار الجزء 3
+            'Lesson 15: Assessment Day':
+              key: 'الدرس 15: يوم التقييم'
+              name: 'الدرس 15: يوم التقييم'
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
+        csp5-2021:
+          title: مبادئ علوم الكمبيوتر (CSP) الوحدة 5 - القوائم والحلقات والاجتياز (2020 - 2021)
+          lessons:
+            Lists Explore:
+              key: استكشاف القوائم
+              name: استكشاف القوائم
+            Lists Investigate:
+              key: التحقيق في القوائم
+              name: التحقيق في القوائم
+            Lists Practice:
+              key: التدرب على القوائم
+              name: التدرب على القوائم
+            Lists Make:
+              key: صنع القوائم
+              name: صنع القوائم
+            Loops Explore:
+              key: استكشاف الحلقات
+              name: استكشاف الحلقات
+            Loops Investigate:
+              key: التحقيق في الحلقات
+              name: التحقيق في الحلقات
+            Loops Practice:
+              key: التدرب على الحلقات
+              name: التدرب على الحلقات
+            Loops Make:
+              key: صنع الحلقات
+              name: صنع الحلقات
+            Traversals Explore:
+              key: استكشاف الاجتياز
+              name: استكشاف الاجتياز
+            Traversals Investigate:
+              key: التحقق من الاجتياز
+              name: التحقق من الاجتياز
+            Traversals Practice:
+              key: التدرب على الاجتياز
+              name: التدرب على الاجتياز
+            Traversals Make:
+              key: صنع الاجتياز
+              name: صنع الاجتياز
+            Semester Hackathon Part 1:
+              key: هاكاثون الفصل الدراسي الجزء 1
+              name: هاكاثون الفصل الدراسي الجزء 1
+            Semester Hackathon Part 2:
+              key: هاكاثون الفصل الدراسي الجزء 2
+              name: هاكاثون الفصل الدراسي الجزء 2
+            Semester Hackathon Part 3:
+              key: هاكاثون الفصل الدراسي الجزء 3
+              name: هاكاثون الفصل الدراسي الجزء 3
+            Semester Hackathon Part 4:
+              key: هاكاثون الفصل الدراسي الجزء 4
+              name: هاكاثون الفصل الدراسي الجزء 4
+            Semester Hackathon Part 5:
+              key: هاكاثون الفصل الدراسي الجزء 5
+              name: هاكاثون الفصل الدراسي الجزء 5
+            'Lesson 18: Assessment Day':
+              key: 'الدرس 18: يوم التقييم'
+              name: 'الدرس 18: يوم التقييم'
+          lesson_groups:
+            csp_lists:
+              display_name: القوائم
+            csp_loops:
+              display_name: الحلقات
+            csp_traversals:
+              display_name: الاجتيازات
+            csp_project:
+              display_name: مشروع
+        csp6-2021:
+          title: مبادئ علوم الكمبيوتر (CSP) الوحدة 6 - الخوارزميات (2020-2021)
+          lessons:
+            Algorithms Solve Problems:
+              key: الخوارزميات تحل المشكلات
+              name: الخوارزميات تحل المشكلات
+            Algorithm Efficiency:
+              key: كفاءة الخوارزمية
+              name: كفاءة الخوارزمية
+            Unreasonable Time:
+              key: وقت غير معقول
+              name: وقت غير معقول
+            The Limits of Algorithms:
+              key: قيود الخوارزميات
+              name: قيود الخوارزميات
+            Parallel and Distributed Algorithms:
+              key: الخوارزميات المتوازية والموزعة
+              name: الخوارزميات المتوازية والموزعة
+            'Lesson 6: Assessment Day':
+              key: 'الدرس 6: يوم التقييم'
+              name: 'الدرس 6: يوم التقييم'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'الوحدة 6: الخوارزميات'
+        csp7-2021:
+          lessons:
+            Parameters and Return Explore:
+              key: استكشاف المعلمات والإرجاع
+              name: استكشاف المعلمات والإرجاع
+            Parameters and Return Investigate:
+              key: التحقيق في المعلمات والإرجاع
+              name: التحقيق في المعلمات والإرجاع
+            Parameters and Return Practice:
+              key: التدرب على المعلمات والإرجاع
+              name: التدرب على المعلمات والإرجاع
+            Parameters and Return Make:
+              key: صنع المعلمات والإرجاع
+              name: صنع المعلمات والإرجاع
+            Libraries Explore:
+              key: استكشاف المكتبات
+              name: استكشاف المكتبات
+            Libraries Investigate:
+              key: التحقيق في المكتبات
+              name: التحقيق في المكتبات
+            Libraries Practice:
+              key: التدريب على المكتبات
+              name: التدريب على المكتبات
+            Project - Make a Library Part 1:
+              key: مشروع - صنع مكتبة الجزء 1
+              name: مشروع - صنع مكتبة الجزء 1
+            Project - Make a Library Part 2:
+              key: مشروع - صنع مكتبة الجزء 2
+              name: مشروع - صنع مكتبة الجزء 2
+            Project - Make a Library Part 3:
+              key: مشروع - صنع مكتبة الجزء 3
+              name: مشروع - صنع مكتبة الجزء 3
+            'Lesson 11: Assessment Day':
+              key: 'الدرس 11: يوم التقييم'
+              name: 'الدرس 11: يوم التقييم'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: إعداد وإرجاع القيم
+            csp_libraries:
+              display_name: المكتبات
+        csp8-2021:
+          title: مبادئ علوم الكمبيوتر (CSP) الوحدة 8 - الإعداد لإنشاء مهام الأداء (2020-2021)
+          lessons:
+            Create PT - Review the Task:
+              key: إنشاء مهام الأداء - مراجعة المهمة
+              name: إنشاء مهام الأداء - مراجعة المهمة
+            Create PT - Make a Plan:
+              key: إنشاء مهام الأداء - وضع خطة
+              name: إنشاء مهام الأداء - وضع خطة
+            Create PT - Complete the Task:
+              key: الإعداد لإنشاء مهام الأداء - إكمال المهمة
+              name: الإعداد لإنشاء مهام الأداء - إكمال المهمة
+        csp9-2021:
+          title: مبادئ علوم الكمبيوتر (CSP) الوحدة 9 - البيانات (2020-2021)
+          lessons:
+            Learning From Data:
+              key: التعلم من البيانات
+              name: التعلم من البيانات
+            Exploring One Column:
+              key: استكشاف عمود واحد
+              name: استكشاف عمود واحد
+            Filtering and Cleaning Data:
+              key: تصفية البيانات ومحوها
+              name: تصفية البيانات ومحوها
+            Exploring Two Columns:
+              key: استكشاف عمودين
+              name: استكشاف عمودين
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: البيانات الضخمة والتعهيد الجماعي والتعلم الآلي
+              name: البيانات الضخمة والتعهيد الجماعي والتعلم الآلي
+            Machine Learning and Bias:
+              key: التعلم الآلي والتحيز
+              name: التعلم الآلي والتحيز
+            Project - Tell a Data Story - Part 1:
+              key: المشروع - رواية قصة عن البيانات - الجزء 1
+              name: المشروع - رواية قصة عن البيانات - الجزء 1
+            Project - Tell a Data Story - Part 2:
+              key: المشروع - رواية قصة عن البيانات - الجزء 2
+              name: المشروع - رواية قصة عن البيانات - الجزء 2
+            'Lesson 9: Assessment Day':
+              key: 'الدرس 9: يوم التقييم'
+              name: 'الدرس 9: يوم التقييم'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'الوحدة 9: البيانات'
+        csp10-2021:
+          title: مبادئ علوم الكمبيوتر (CSP) الوحدة 10 - الأمن السيبراني والآثار العالمية (2020-2021)
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: مشروع - محاكاة الابتكار الجزء 1
+              name: مشروع - محاكاة الابتكار الجزء 1
+            Project - Innovation Simulation Part 2:
+              key: مشروع - محاكاة الابتكار الجزء 2
+              name: مشروع - محاكاة الابتكار الجزء 2
+            Data Policies and Privacy:
+              key: البيانات والسياسات والخصوصية
+              name: البيانات والسياسات والخصوصية
+            The Value of Privacy:
+              key: قيمة الخصوصية
+              name: قيمة الخصوصية
+            Project - Innovation Simulation Part 3:
+              key: مشروع - محاكاة الابتكار الجزء 3
+              name: مشروع - محاكاة الابتكار الجزء 3
+            Security Risks Part 1:
+              key: مخاطر الأمن الجزء 1
+              name: مخاطر الأمن الجزء 1
+            Security Risks Part 2:
+              key: مخاطر الأمن الجزء 2
+              name: مخاطر الأمن الجزء 2
+            'Project: Innovation Simulation Part 4':
+              key: 'مشروع: محاكاة الابتكار، الجزء 4'
+              name: 'مشروع: محاكاة الابتكار، الجزء 4'
+            Protecting Data Part 1:
+              key: حماية البيانات الجزء 1
+              name: حماية البيانات الجزء 1
+            Protecting Data Part 2:
+              key: حماية البيانات الجزء 2
+              name: حماية البيانات الجزء 2
+            'Project: Innovation Simulation Part 5':
+              key: 'مشروع: محاكاة الابتكار، الجزء 5'
+              name: 'مشروع: محاكاة الابتكار، الجزء 5'
+            'Project: Innovation Simulation Part 6':
+              key: 'مشروع: محاكاة الابتكار، الجزء 6'
+              name: 'مشروع: محاكاة الابتكار، الجزء 6'
+            'Project: Innovation Simulation Part 7':
+              key: 'مشروع: محاكاة الابتكار، الجزء 7'
+              name: 'مشروع: محاكاة الابتكار، الجزء 7'
+            'Lesson 14: Unit Assessment Day':
+              key: 'الدرس 14: يوم تقييم الوحدة'
+              name: 'الدرس 14: يوم تقييم الوحدة'
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'الوحدة 10: الأمان عبر الإنترنت والآثار العالمية'
+        coursea-2021:
+          title: الدورة "أ" (2020)
+          description: تعلم أساسيات علوم الكمبيوتر وأمان الإنترنت. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها.
+          description_short: مقدمة لعلم الكمبيوتر للطلاب ذوي مهارات القراءة السريعة.
+          description_audience: 'تتراوح الأعمار بين: 4-7'
+          lessons:
+            Safety in My Online Neighborhood:
+              key: السلامة في جاري على الإنترنت
+              name: السلامة في جاري على الإنترنت
+            Learn to Drag and Drop:
+              key: تعلم السحب والإسقاط
+              name: تعلم السحب والإسقاط
+            'Programming: Happy Maps':
+              key: 'البرمجة: الخرائط السعيدة'
+              name: الخرائط السعيدة
+            Sequencing with Scrat:
+              key: التسلسل مع سكرات
+              name: التسلسل مع سكرات
+            Programming in Ice Age:
+              key: البرمجة في العصر الجليدي
+              name: البرمجة مع سكرات
+            Programming with Rey and BB-8:
+              key: البرمجة مع Rey وBB-8
+              name: البرمجة مع Rey وBB-8
+            'Loops: Happy Loops':
+              key: 'الحلقات: الحلقات السعيدة'
+              name: الحلقات السعيدة
+            Loops in Ice Age:
+              key: الحلقات في العصر الجليدي
+              name: الحلقات مع سكرات
+            Loops in Collector:
+              key: الحلقات في لعبة التجميع
+              name: الحلقات مع لوريل
+            Ocean Scene with Loops:
+              key: مشهد المحيط باستخدام الحلقات
+              name: مشهد المحيط باستخدام الحلقات
+            'Events: The Big Event':
+              key: 'الأحداث: الحدث الكبير'
+              name: الحدث الكبير للصغار
+            Events in Play Lab:
+              key: الأحداث في مختبر الألعاب
+              name: أثناء التنقل مع الأحداث
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
+        courseb-2021:
+          title: الدورة "ب" (2020)
+          description: تعلم أساسيات علوم الكمبيوتر وأمان الإنترنت. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها.
+          description_short: مقدمة عن علوم الكمبيوتر للأطفال قبل تعلم القراءة. مشابه للدورة "أ"، ولكن مع عمق إضافي لتعلم المفاهيم.
+          description_audience: 'تتراوح الأعمار بين: 5-8'
+          lessons:
+            Digital Trails:
+              key: المسارات الرقمية
+              name: المسارات الرقمية
+            Move It, Move It:
+              key: حركها , حركهاحرّكها، حرّكها
+              name: حركها , حركهاحرّكها، حرّكها
+            Sequencing in Maze:
+              key: التسلسل في المتاهة
+              name: التسلسل مع لعبة الطيور الغاضبة
+            Programming in Maze:
+              key: البرمجة في المتاهة
+              name: البرمجة مع لعبة الطيور الغاضبة
+            Programming in Harvester:
+              key: البرمجة في الحاصدة
+              name: البرمجة مع الحاصدة
+            'Loops: Getting Loopy':
+              key: 'الحلقات: الدوران'
+              name: القبض على المعتوهون
+            Loops in Harvester:
+              key: الحلقات في الحاصدة
+              name: الحلقات مع الحاصدة
+            Loops in Collector:
+              key: الحلقات في لعبة التجميع
+              name: الحلقات مع لوريل
+            Loops in Artist:
+              key: الحلقات في الرسام
+              name: رسم الحدائق باستخدام الحلقات
+            The Right App:
+              key: التطبيق المناسب
+              name: التطبيق المناسب
+            'Events: The Big Event':
+              key: 'الأحداث: الحدث الكبير'
+              name: الحدث الكبير للصغار
+            Events in Play Lab:
+              key: الأحداث في مختبر الألعاب
+              name: معركة ملكية باستخدام الأحداث
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_impacts:
+              display_name: تأثيرات الحوسبة
+            csf_events:
+              display_name: الأحداث
+        coursec-2021:
+          title: الدورة "ج" (2020)
+          description: إنشاء برامج باستخدام التسلسل والحلقات والأحداث. ترجم الأحرف الأولى من اسمك إلى لغة ثنائية، واستكشف تقنيات حل المشكلات المختلفة، وتعلم كيفية التعامل مع التنمر الإلكتروني. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها!
+          description_short: تعلم أساسيات علوم الكمبيوتر وأنشئ تصاميمك وقصصك وألعابك الخاصة.
+          description_audience: 'تتراوح الأعمار بين: 6-10'
+          lessons:
+            Putting a STOP to Online Meanness:
+              key: وضع حد للدناءة على الإنترنت
+              name: وضع حد للدناءة على الإنترنت
+            Password Power-Up:
+              key: تشغيل كلمة المرور
+              name: تشغيل كلمة المرور
+            'Programming: My Robotic Friends':
+              key: 'البرمجة: أصدقائي الآليون'
+              name: أصدقائي الآليون الصغار
+            Programming in Maze:
+              key: البرمجة في المتاهة
+              name: البرمجة مع لعبة الطيور الغاضبة
+            Debugging in Maze:
+              key: تصحيح الأخطاء في المتاهة
+              name: تصحيح الأخطاء في المتاهة
+            Programming in Collector:
+              key: البرمجة في لعبة التجميع
+              name: تجميع الكنز مع لوريل
+            Programming in Artist:
+              key: البرمجة في الرسام
+              name: إنشاء فنون باستخدام التعليمة البرمجية
+            Binary Bracelets:
+              key: أساور الثنائية
+              name: أساور الثنائية
+            'Loops: My Loopy Robotic Friends':
+              key: 'الحلقات: أصدقائي الآليون دائمي الدوران'
+              name: أصدقائي الآليون دائمي الدوران للصغار
+            Loops with Rey and BB-8:
+              key: الحلقات مع Rey وBB-8
+              name: الحلقات مع Rey وBB-8
+            Loops in Harvester:
+              key: الحلقات في الحاصدة
+              name: حصاد المحاصيل باستخدام الحلقات
+            Looking Ahead:
+              key: التطلع للمستقبل
+              name: التطلع إلى المستقبل مع ماينكرافت
+            Sticker Art with Loops:
+              key: فن الملصقات مع الحلقات
+              name: فن الملصقات مع الحلقات
+            'Events: The Big Event':
+              key: 'الأحداث: الحدث الكبير'
+              name: الحدث الكبير
+            Build a Flappy Game:
+              key: تصمم لعبة فلابي
+              name: تصمم لعبة فلابي
+            Events in Play Lab:
+              key: الأحداث في مختبر الألعاب
+              name: لعبة المطاردة باستخدام الأحداث
+            Picturing Data:
+              key: تصوير البيانات
+              name: تصوير البيانات
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_sequencing:
+              display_name: التجزيء
+            csf_binary:
+              display_name: ثنائي
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
+        coursed-2021:
+          title: الدورة "د" (2020)
+          description: يطور الطلاب فهمهم للحلقات والتعبيرات الشرطية والأحداث. وبخلاف البرمجة، يتعلم الطلاب المزيد من المعلومات حول المواطنة الرقمية.
+          description_short: تعرف على التعبيرات الشرطية. صمم لوحاتك الفنية وألعابك وحتى حفلة رقص.
+          description_audience: 'تتراوح الأعمار بين: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'الخوارزميات: برمجة ورقة الرسم البياني'
+              name: برمجة ورقة الرسم البياني
+            Introduction to Online Puzzles:
+              key: مقدمة إلى الألغاز على الإنترنت
+              name: مقدمة إلى الألغاز على الإنترنت
+            Relay Programming:
+              key: برمجة السباق
+              name: برمجة السباق
+            Debugging in Collector:
+              key: تصحيح الأخطاء في لعبة التجميع
+              name: تصحيح الأخطاء مع لوريل
+            Events in Bounce:
+              key: الأحداث في لعبة الارتداد
+              name: الأحداث في لعبة الارتداد
+            Build a Star Wars Game:
+              key: تصميم لعبة حرب النجوم
+              name: تصميم لعبة حرب النجوم
+            Dance Party:
+              key: حفلة الرقص
+              name: حفلة الرقص
+            Loops in Ice Age:
+              key: الحلقات في العصر الجليدي
+              name: الحلقات في العصر الجليدي
+            Loops in Artist:
+              key: الحلقات في الرسام
+              name: رسم الأشكال باستخدام الحلقات
+            Nested Loops in Bee:
+              key: الحلقات المتداخلة في النحلة
+              name: الحلقات المتداخلة في المتاهة
+            Conditionals with Cards:
+              key: الشرطية مع بطاقات
+              name: الشرطية مع بطاقات
+            Conditionals in Bee:
+              key: التعبيرات الشرطية في النحلة
+              name: قالب "If/Else" مع النحلة
+            While Loops in Farmer:
+              key: حلقات While في المزارع
+              name: حلقات While في المزارع
+            Until Loops in Maze:
+              key: حلقات Until في المتاهة
+              name: حلقات Until في المتاهة
+            Conditionals & Loops in Harvester:
+              key: التعبيرات الشرطية والحلقات في الحاصدة
+              name: الحصاد باستخدام التعبيرات الشرطية
+            'Unplugged: Binary':
+              key: 'موصول: ثنائي'
+              name: صور ثنائية
+            Artist Binary:
+              key: ثنائي الفنان
+              name: ثنائي الفنان
+            Be A Super Digital Citizen:
+              key: كن مواطنًا رقميًا متميزًا
+              name: كن مواطنًا رقميًا متميزًا
+          lesson_groups:
+            csf_sequencing:
+              display_name: التجزيء
+            csf_events:
+              display_name: الأحداث
+            csf_loops:
+              display_name: الحلقات
+            csf_conditionals:
+              display_name: الجمل الشرطية
+            csf_binary:
+              display_name: ثنائي
+            csf_digcit:
+              display_name: المواطنة الرقمية
+        coursee-2021:
+          title: الدورة "هـ" (2020)
+          description: ابدأ في البرمجة باستخدام الخوارزميات والحلقات والتعبيرات الشرطية والأحداث ثم تنتقل إلى الدوال. في الجزء الثاني من هذه الدورة، قم بتصميم وإنشاء مشروع رئيسي يمكنك مشاركته مع أصدقائك وعائلتك.
+          description_short: راجع المفاهيم في الدورتين "ج" و"د"، ثم انتقل إلى أبعد من ذلك من خلال تعلم الدوال.
+          description_audience: 'تتراوح الأعمار بين: 8-12'
+          lessons:
+            Sequencing in the Maze:
+              key: التسلسل في المتاهة
+              name: التسلسل في المتاهة
+            Programming and Loops with the Artist:
+              key: البرمجة والحلقات مع الرسام
+              name: الرسم باستخدام الحلقات
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'التعبيرات الشرطية في ماينكرافت: الرحلة البحرية'
+              name: 'التعبيرات الشرطية في ماينكرافت: الرحلة البحرية'
+            Conditionals:
+              key: الجمل الشرطية
+              name: التعبيرات الشرطية مع المزارع
+            Simon Says:
+              key: سايمون يقول
+              name: سايمون يقول
+            Learning Sprites with Sprite Lab:
+              key: تعلم النقوش المتحركة مع مختبر النقوش المتحركة
+              name: السمكة السبّاحة في مختبر النقوش المتحركة
+            Alien Dance Party with Sprite Lab:
+              key: حفلة رقص الكائنات الفضائية في مختبر النقوش المتحركة
+              name: حفلة رقص الكائنات الفضائية في مختبر النقوش المتحركة
+            Private and Personal Information:
+              key: المعلومات الخاصة والشخصية
+              name: المعلومات الخاصة والشخصية
+            About Me:
+              key: نبذة عني
+              name: نبذة عني مع مختبر النقوش المتحركة
+            Digital Sharing:
+              key: المشاركة الرقمية
+              name: المشاركة الرقمية
+            Nested Loops in Bee:
+              key: الحلقات المتداخلة في النحلة
+              name: الحلقات المتداخلة في المتاهة
+            Nested Loops in Artist:
+              key: الحلقات المتداخلة في الرسام
+              name: الأشكال الفاخرة باستخدام الحلقات المتداخلة
+            Nested Loops in Frozen:
+              key: الحلقات المتداخلة مع فروزن
+              name: الحلقات المتداخلة مع فروزن
+            'Functions: Songwriting':
+              key: 'الدوال: تأليف الأغاني'
+              name: تأليف الأغاني
+            Functions in Minecraft:
+              key: الدوال في ماينكرافت
+              name: الدوال في ماينكرافت
+            Functions in Harvester:
+              key: الدوال في الحاصدة
+              name: الدوال مع الحاصدة
+            Functions in Artist:
+              key: الدوال في الرسام
+              name: الدوال مع الرسام
+            Designing for Accessibility:
+              key: التصميم من أجل الوصول
+              name: التصميم من أجل الوصول
+          lesson_groups:
+            ramp_up:
+              display_name: "مسرَّعة\n"
+            csf_sprites:
+              display_name: النقوش المتحركة
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_nested_loops:
+              display_name: الحلقات المتداخلة
+            csf_functions:
+              display_name: دوال
+            csf_impacts:
+              display_name: تأثيرات الحوسبة
+        coursef-2021:
+          title: الدورة "و" (2020)
+          description: تعلم استخدام أنواع مختلفة من الحلقات والأحداث والدوال والتعبيرات الشرطية. تحقق من تقنيات حل المشكلات المختلفة وناقش التأثيرات المجتمعية للحوسبة والإنترنت. في الجزء الثاني من هذه الدورة، قم بتصميم مشروع رئيسي وإنشاءه ومشاركته مع الأصدقاء والعائلة.
+          description_short: تعلم جميع المفاهيم في المبادئ الأساسية لعلوم الكمبيوتر وأنشئ فنّك أو قصتك أو لعبتك.
+          description_audience: 'تتراوح الأعمار بين: 9-13'
+          lessons:
+            Functions in Minecraft:
+              key: الدوال في ماينكرافت
+              name: الدوال في ماينكرافت
+            Learning Sprites with Sprite Lab:
+              key: تعلم النقوش المتحركة مع مختبر النقوش المتحركة
+              name: السمكة السبّاحة في مختبر النقوش المتحركة
+            Events with Sprite Lab:
+              name: حفلة رقص الكائنات الفضائية في مختبر النقوش المتحركة
+            Loops with the Artist:
+              name: الرسم باستخدام الحلقات
+            Nested Loops in the Maze:
+              key: الحلقات المتداخلة في المتاهة
+              name: الحلقات المتداخلة في المتاهة
+            The Power of Words:
+              key: قوة الكلمات
+              name: قوة الكلمات
+            Envelope Variables:
+              key: المتغيرات المغلف
+              name: المتغيرات المغلف
+            Variables as Constant in Artist:
+              key: المتغيرات كثوابت في الرسام
+              name: المتغيرات مع الرسام
+            Variables that Change in Bee:
+              key: المتغيرات التي تتغير في النحلة
+              name: تغيير المتغيرات مع النحلة
+            Variables that Change in Artist:
+              key: المتغيرات التي تتغير في الرسام
+              name: تغيير المتغيرات مع الرسام
+            Simulating Experiments:
+              key: محاكاة التجارب
+              name: محاكاة التجارب
+            AI for Oceans:
+              key: الذكاء الاصطناعي للمحيطات
+              name: الذكاء الاصطناعي للمحيطات
+            Internet:
+              key: الإنترنت
+              name: الانترنت
+            For Loop Fun:
+              key: حلقة فور، مرح
+              name: حلقة فور، مرح
+            For Loops in Bee:
+              key: حلقات For في النحلة
+              name: حلقات For مع النحلة
+            For Loops in Artist:
+              key: حلقات For في الرسام
+              name: حلقات For مع الرسام
+            Editing Behaviors:
+              key: تعديل السلوكيات
+              name: السلوكيات في مختبر النقوش المتحركة
+            Virtual Pet:
+              name: الحيوانات الأليفة الافتراضية مع مختبر النقوش المتحركة
+          lesson_groups:
+            ramp_up:
+              display_name: "مسرَّعة\n"
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_variables:
+              display_name: المتغيرات
+            csf_for_loops:
+              display_name: للحلقات
+            csf_sprites:
+              display_name: النقوش المتحركة
+        express-2021:
+          title: دورة سريعة (2020)
+          description: تعلم علوم الكمبيوتر من خلال تجربة الدروس أدناه بالسرعة التي تناسبك! تعلم كيفية إنشاء برامج الكمبيوتر، وتطوير مهارات حل المشكلات، وشق طريقك مارًا بمجموعة من التحديات الممتعة! أنشئ ألعابًا ومشاريع إبداعية لمشاركتها مع الأصدقاء والعائلة والمعلمين.
+          description_short: 'مقدمة عن علوم الكمبيوتر: تجمع بين أفضل مناهجنا الابتدائية للطلاب الأكبر سنًا.'
+          description_audience: 'تتراوح الأعمار بين: 9-18'
+          lessons:
+            Dance Party:
+              key: حفلة الرقص
+              name: حفلة الرقص
+            Programming with Angry Birds:
+              key: البرمجة مع لعبة الطيور الغاضبة
+              name: البرمجة مع لعبة الطيور الغاضبة
+            Debugging with Scrat:
+              key: تصحيح الأخطاء مع سكرات
+              name: تصحيح الأخطاء مع سكرات
+            Collecting Treasure with Laurel:
+              key: تجميع الكنز مع لوريل
+              name: تجميع الكنز مع لوريل
+            Creating Art with Code:
+              key: إنشاء فنون باستخدام التعليمة البرمجية
+              name: إنشاء فنون باستخدام التعليمة البرمجية
+            Loops with Rey and BB-8:
+              key: الحلقات مع Rey وBB-8
+              name: الحلقات مع Rey وBB-8
+            Sticker Art with Loops:
+              key: فن الملصقات مع الحلقات
+              name: فن الملصقات مع الحلقات
+            Nested Loops in Maze:
+              key: الحلقات المتداخلة في المتاهة
+              name: الحلقات المتداخلة في المتاهة
+            Snowflakes with Anna and Elsa:
+              key: رقاقات الثلج مع آنا وإلسا
+              name: رقاقات الثلج مع آنا وإلسا
+            If/Else with Bee:
+              key: قالب "If/Else" مع النحلة
+              name: قالب "If/Else" مع النحلة
+            While Loops with the Farmer:
+              key: حلقات While مع المزارع
+              name: حلقات While مع المزارع
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'التعبيرات الشرطية في ماينكرافت: الرحلة البحرية'
+              name: 'التعبيرات الشرطية في ماينكرافت: الرحلة البحرية'
+            Until Loops in Maze:
+              key: حلقات Until في المتاهة
+              name: حلقات Until في المتاهة
+            Harvesting with Conditionals:
+              key: الحصاد باستخدام التعبيرات الشرطية
+              name: الحصاد باستخدام التعبيرات الشرطية
+            Functions in Minecraft:
+              key: الدوال في ماينكرافت
+              name: الدوال في ماينكرافت
+            Functions with Harvester:
+              key: الدوال مع الحاصدة
+              name: الدوال مع الحاصدة
+            Functions with Artist:
+              key: الدوال مع الرسام
+              name: الدوال مع الرسام
+            Variables with Artist:
+              key: المتغيرات مع الرسام
+              name: المتغيرات مع الرسام
+            Changing Variables with Bee:
+              key: تغيير المتغيرات مع النحلة
+              name: تغيير المتغيرات مع النحلة
+            Changing Variables with Artist:
+              key: تغيير المتغيرات مع الرسام
+              name: تغيير المتغيرات مع الرسام
+            For Loops with Bee:
+              key: حلقات For مع النحلة
+              name: حلقات For مع النحلة
+            For Loops with Artist:
+              key: حلقات For مع الرسام
+              name: حلقات For مع الرسام
+            Swimming Fish in Sprite Lab:
+              key: السمكة السبّاحة في مختبر النقوش المتحركة
+              name: السمكة السبّاحة في مختبر النقوش المتحركة
+            Alien Dance Party:
+              key: حفلة رقص الكائنات الفضائية
+              name: حفلة رقص الكائنات الفضائية
+            Behaviors in Sprite Lab:
+              key: السلوكيات في مختبر النقوش المتحركة
+              name: السلوكيات في مختبر النقوش المتحركة
+            Virtual Pet with Sprite Lab:
+              key: الحيوانات الأليفة الافتراضية مع مختبر النقوش المتحركة
+              name: الحيوانات الأليفة الافتراضية مع مختبر النقوش المتحركة
+          lesson_groups:
+            csf_warmup:
+              display_name: تجهيز
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_conditionals:
+              display_name: الجمل الشرطية
+            csf_functions:
+              display_name: دوال
+            csf_variables:
+              display_name: المتغيرات
+            csf_for_loops:
+              display_name: للحلقات
+            csf_sprites:
+              display_name: النقوش المتحركة
+        pre-express-2021:
+          title: دروس سريعة للأطفال قبل تعلم القراءة (2020)
+          description: تعلم علوم الكمبيوتر من خلال تجربة الدروس أدناه بالسرعة التي تناسبك! تعلم كيفية إنشاء برامج الكمبيوتر، وتطوير مهارات حل المشكلات، وشق طريقك مارًا بمجموعة من التحديات الممتعة! أنشئ ألعابًا ومشاريع إبداعية لمشاركتها مع الأصدقاء والعائلة والمعلمين.
+          description_short: 'مقدمة عن علوم الكمبيوتر للأطفال قبل تعلم القراءة: تجمع بين أفضل ما لدينا من دورات رياض الأطفال والصف الأول.'
+          description_audience: 'تتراوح الأعمار بين: 4-8'
+          lessons:
+            Learn to Drag and Drop:
+              key: تعلم السحب والإسقاط
+              name: تعلم السحب والإسقاط
+            Sequencing with Scrat:
+              key: التسلسل مع سكرات
+              name: التسلسل مع سكرات
+            Programming with Rey and BB-8:
+              key: البرمجة مع Rey وBB-8
+              name: البرمجة مع Rey وBB-8
+            Programming in Harvester:
+              key: البرمجة في الحاصدة
+              name: البرمجة في الحاصدة
+            Loops with Scrat:
+              key: الحلقات مع سكرات
+              name: الحلقات مع سكرات
+            Loops with Laurel:
+              key: الحلقات مع لوريل
+              name: الحلقات مع لوريل
+            Ocean Scene with Loops:
+              key: مشهد المحيط باستخدام الحلقات
+              name: مشهد المحيط باستخدام الحلقات
+            Drawing Gardens with Loops:
+              key: رسم الحدائق باستخدام الحلقات
+              name: رسم الحدائق باستخدام الحلقات
+            On the Move with Events:
+              key: أثناء التنقل مع الأحداث
+              name: أثناء التنقل مع الأحداث
+            A Royal Battle with Events:
+              key: معركة ملكية باستخدام الأحداث
+              name: معركة ملكية باستخدام الأحداث
+          lesson_groups:
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
+        csf-2021-pilot:
+          lessons:
+            Learning Sprites with Sprite Lab:
+              name: السمكة السبّاحة في مختبر النقوش المتحركة
+            lesson-1:
+              name: المتغيرات المغلف
+          lesson_groups:
+            ramp_up:
+              display_name: مقدمة
+            lessonGroup-3:
+              display_name: المتغيرات
