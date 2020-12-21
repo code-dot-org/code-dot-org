@@ -4094,10 +4094,333 @@ uk:
             Course E/F:
               name: Курс E/F
           description_audience: Внутрішній
-        ml-playground:
-          lessons:
-            intro:
-              name: Вступ
         2021drafting:
           description_audience: Внутрішній
           description_short: Внутрішній
+        csd1-2021:
+          description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення проблем."
+          lessons:
+            Processing:
+              key: В обробці
+              name: В обробці
+            Storage:
+              key: Сховище
+              name: Сховище
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csd1_1:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            csd1_2:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+        csd2-2021:
+          description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження, використання ресурсів і командна робота.  "
+          description_short: "  Навчіться створювати свій власний вебсайт у Веб-лабораторії."
+          lessons:
+            Intellectual Property:
+              key: Інтелектуальна власність
+              name: Інтелектуальна власність
+            CSS Classes:
+              key: Класи CSS
+              name: Класи CSS
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+        csd3-2021:
+          description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
+          description_short: " Навчіться програмувати анімацію, інтерактивне мистецтво та ігри в Game Lab."
+          lessons:
+            Variables:
+              key: Змінні
+              name: Змінні
+            Sprites:
+              key: Спрайти
+              name: Спрайти
+            Text:
+              key: Текст
+              name: Текст
+            Conditionals:
+              key: Умови
+              name: Умови
+            Velocity:
+              key: Швидкість
+              name: Швидкість
+            Collisions:
+              key: Зіткнення
+              name: Зіткнення
+            Functions:
+              key: Функції
+              name: Функції
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Зображення та анімації'
+            csd3_2:
+              display_name: 'Глава 2: Побудова ігор'
+            cspSurvey:
+              display_name: Опитування
+        csd4-2021:
+          description_short: "  Дізнайтеся, як розробити програму, яка відповідає потребам користувачів."
+          lesson_groups:
+            csd4_1:
+              display_name: "Глава 1: Використуйте\nЦентрований дизайн"
+            csd4_2:
+              display_name: 'Глава 2: Прототипування додатків'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+            cspSurvey:
+              display_name: Опитування
+        csd5-2021:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представлення інформації'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+            cspSurvey:
+              display_name: Опитування
+        csd6-2021:
+          lessons:
+            Accelerometer:
+              key: Акселерометр
+              name: Акселерометр
+            Functions with Parameters:
+              key: Функції з параметрами
+              name: Функції з параметрами
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Програмування з обладнанням'
+            csd6_2:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+            cspSurvey:
+              display_name: Опитування
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Двійкові Числа
+              name: Двійкові Числа
+            Color Images:
+              key: Робота з кольорами зображень
+              name: Робота з кольорами зображень
+            Lossless Compression:
+              key: Стискання без втрат
+              name: Стискання без втрат
+            Intellectual Property:
+              key: Інтелектуальна власність
+              name: Інтелектуальна власність
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csp_unit1_2020:
+              display_name: 'Розділ 1: Цифрова інформація'
+        csp2-2021:
+          lessons:
+            Packets:
+              key: Пакет
+              name: Пакет
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: Функції
+            csp_project:
+              display_name: Проект
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Списки
+            csp_loops:
+              display_name: Цикли
+            csp_traversals:
+              display_name: Переходи
+            csp_project:
+              display_name: Проект
+        csp7-2021:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметри і значення, які повертаються
+            csp_libraries:
+              display_name: Бібліотеки
+        coursea-2021:
+          title: Курс А (2020)
+          description_audience: 'Вік: 4-7'
+          lessons:
+            'Programming: Happy Maps':
+              name: Щасливі карти
+            Loops in Ice Age:
+              key: Петлі в Ice Age
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+        courseb-2021:
+          title: Курс В (2020)
+          description_audience: 'Вік: 5-8'
+          lessons:
+            Move It, Move It:
+              key: Рухайся, рухайся
+              name: Рухайся, рухайся
+            'Loops: Getting Loopy':
+              name: Економія на повторах
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+        coursec-2021:
+          title: Курс С (2020)
+          description_audience: 'Вік: 6-10'
+          lessons:
+            Binary Bracelets:
+              key: Двійкові браслети
+              name: Двійкові браслети
+            Looking Ahead:
+              key: Дивлячись вперед
+            'Events: The Big Event':
+              name: Велика подія
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_binary:
+              display_name: Двійкова система
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+        coursed-2021:
+          title: Курс D (2020)
+          description_audience: 'Вік: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Програмування по клітинках
+            Relay Programming:
+              key: Естафетне програмування
+              name: Естафетне програмування
+            Dance Party:
+              key: Танцювальна вечірка
+              name: Танцювальна вечірка
+            Loops in Ice Age:
+              key: Петлі в Ice Age
+              name: Петлі в Ice Age
+            Conditionals with Cards:
+              key: Листівки та умови
+              name: Листівки та умови
+            'Unplugged: Binary':
+              key: 'Безмашинні вправи: двійкова система'
+              name: Двійкові зображення
+            Artist Binary:
+              key: 'Художник: двійкова система'
+              name: 'Художник: двійкова система'
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_events:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_binary:
+              display_name: Двійкова система
+            csf_digcit:
+              display_name: Цифрове громадянство
+        coursee-2021:
+          title: Курс Е (2020)
+          description_audience: 'Вік: 8-12'
+          lessons:
+            Conditionals:
+              key: Умови
+            About Me:
+              key: Про мене
+            'Functions: Songwriting':
+              name: Написання пісень
+          lesson_groups:
+            ramp_up:
+              display_name: Просунутися
+            csf_sprites:
+              display_name: Спрайти
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_nested_loops:
+              display_name: Вкладені цикли
+            csf_functions:
+              display_name: Функції
+        coursef-2021:
+          title: Курс F (2020)
+          description_audience: 'Вік: 9-13'
+          lessons:
+            Loops with the Artist:
+              key: Петлі з художником
+            Envelope Variables:
+              key: Конвертні змінні
+              name: Конвертні змінні
+            Internet:
+              key: Інтернет
+              name: Інтернет
+            For Loop Fun:
+              key: Ігри з циклами
+              name: Ігри з циклами
+          lesson_groups:
+            ramp_up:
+              display_name: Просунутися
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_variables:
+              display_name: Змінні
+            csf_for_loops:
+              display_name: Цикли For
+            csf_sprites:
+              display_name: Спрайти
+        express-2021:
+          description_audience: 'Вік: 9-18'
+          lessons:
+            Dance Party:
+              key: Танцювальна вечірка
+              name: Танцювальна вечірка
+          lesson_groups:
+            csf_warmup:
+              display_name: Розминка
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_functions:
+              display_name: Функції
+            csf_variables:
+              display_name: Змінні
+            csf_for_loops:
+              display_name: Цикли For
+            csf_sprites:
+              display_name: Спрайти
+        pre-express-2021:
+          description_audience: 'Вік: 4-8'
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Конвертні змінні
+          lesson_groups:
+            ramp_up:
+              display_name: Вступ
+            lessonGroup-3:
+              display_name: Змінні
