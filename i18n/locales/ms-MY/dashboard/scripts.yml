@@ -836,3 +836,113 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
+        csd3-2021:
+          lessons:
+            Variables:
+              key: Pembolehubah
+              name: Pembolehubah
+            Text:
+              key: teks
+              name: teks
+            Conditionals:
+              key: Bersyarat
+              name: Bersyarat
+            Functions:
+              key: Fungsi
+              name: Fungsi
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Fungsi-fungsi dengan parameter
+              name: Fungsi-fungsi dengan parameter
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Senarai
+            csp_loops:
+              display_name: Gelung
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Peta-peta Gembira
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+        courseb-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+        coursec-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Pengaturcaraan kertas graf
+            Relay Programming:
+              key: Pengaturcaraan penyampai
+              name: Pengaturcaraan penyampai
+            Dance Party:
+              key: Majlis Tari-Menari
+              name: Majlis Tari-Menari
+          lesson_groups:
+            csf_events:
+              display_name: Acara-acara
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Bersyarat
+          lesson_groups:
+            csf_functions:
+              display_name: Fungsi
+        coursef-2021:
+          lessons:
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            csf_variables:
+              display_name: Pembolehubah
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Majlis Tari-Menari
+              name: Majlis Tari-Menari
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
+            csf_functions:
+              display_name: Fungsi
+            csf_variables:
+              display_name: Pembolehubah
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pembolehubah
