@@ -2886,7 +2886,323 @@ th:
               name: คอร์ส A
             Course B:
               name: คอร์ส B
-        ml-playground:
+        csd1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd3-2021:
           lessons:
-            intro:
-              name: บทเกริ่นนำ
+            Variables:
+              key: ตัวแปร
+              name: ตัวแปร
+            Text:
+              key: ข้อความ
+              name: ข้อความ
+            Conditionals:
+              key: เงื่อนไข 
+              name: เงื่อนไข 
+            Functions:
+              key: ฟังก์ชัน
+              name: ฟังก์ชัน
+          lesson_groups:
+            csd3_1:
+              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
+            csd3_2:
+              display_name: 'บทที่ 2: การสร้างเกม'
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd4-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: ฟังก์ชันกับพารามิเตอร์
+              name: ฟังก์ชันกับพารามิเตอร์
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: การแก้ไขจุดบกพร่อง
+              name: การแก้ไขจุดบกพร่อง
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: ตัวแปร
+            csp_conditionals:
+              display_name: เงื่อนไข 
+            csp_functions:
+              display_name: ฟังก์ชัน
+            csp_project:
+              display_name: โปรเจกต์
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: รายการ
+            csp_loops:
+              display_name: ลูป
+            csp_project:
+              display_name: โปรเจกต์
+        coursea-2021:
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          lessons:
+            'Programming: Happy Maps':
+              name: แผนที่แห่งความสุข
+            Programming with Rey and BB-8:
+              key: การเขียนโปรแกรมกับเรย์และบีบี-8
+              name: การเขียนโปรแกรมกับเรย์และบีบี-8
+            Loops in Ice Age:
+              key: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
+            Loops in Collector:
+              key: ใช้ลูปกับนักสะสม
+              name: ลูปไปกับลอเรล
+            Ocean Scene with Loops:
+              key: ฉากมหาสมุทรกับลูป
+              name: ฉากมหาสมุทรกับลูป
+            Events in Play Lab:
+              key: อีเวนต์กับเพลย์แลป
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+        courseb-2021:
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          lessons:
+            Move It, Move It:
+              key: ขยับหน่อยสิ ขยับหน่อย
+              name: ขยับหน่อยสิ ขยับหน่อย
+            Sequencing in Maze:
+              name: การจัดลำดับ กับเจ้านกขี้โมโห (Angry Birds)
+            Programming in Maze:
+              name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
+            Programming in Harvester:
+              name: การเขียนโปรแกรมไปกับเกษตรกรผู้เก็บเกี่ยว
+            'Loops: Getting Loopy':
+              key: 'ลูป: มาวนลูปกัน'
+              name: มาวนลูปกัน
+            Loops in Harvester:
+              key: ลูปต่างๆที่ใช้กับเรื่องเกษตรกร
+              name: ลูปไปกับเกษตรกรผู้เก็บเกี่ยว
+            Loops in Collector:
+              key: ใช้ลูปกับนักสะสม
+              name: ลูปไปกับลอเรล
+            Loops in Artist:
+              key: ลูปกับศิลปิน
+            Events in Play Lab:
+              key: อีเวนต์กับเพลย์แลป
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+        coursec-2021:
+          lessons:
+            Programming in Maze:
+              name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
+            Debugging in Maze:
+              key: การหาจุดบกพร่องกับเขาวงกต
+              name: การหาจุดบกพร่องกับเขาวงกต
+            Programming in Artist:
+              key: การเขียนโปรแกรมในเรื่องศิลปิน
+              name: การสร้างศิลปะด้วยโค้ด
+            Loops in Harvester:
+              key: ลูปต่างๆที่ใช้กับเรื่องเกษตรกร
+              name: เก็บเกี่ยวพืชผลต่างๆ ด้วยการใช้ลูป
+            'Events: The Big Event':
+              name: อีเวนท์ใหญ่
+            Events in Play Lab:
+              key: อีเวนต์กับเพลย์แลป
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+        coursed-2021:
+          description: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested loops) ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events) นอกเหนือจากการเขียนโค้ดแล้ว ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: การเขียนกระดาษกราฟ
+            Relay Programming:
+              key: โปรแกรมการถ่ายทอดข้อมูล
+              name: โปรแกรมการถ่ายทอดข้อมูล
+            Debugging in Collector:
+              key: 'การดีบั๊ก: กับเรื่องนักสะสม'
+              name: 'การดีบั๊ก: กับเรื่องนักสะสม'
+            Dance Party:
+              key: Dance Party
+              name: Dance Party
+            Loops in Ice Age:
+              key: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
+              name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
+            Loops in Artist:
+              key: ลูปกับศิลปิน
+              name: วาดรูปร่างต่างๆ ด้วยลูป
+            Nested Loops in Bee:
+              key: ลูปซ้อนลูป ในเรื่องผึ้ง
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
+            Conditionals with Cards:
+              key: เงื่อนไข
+              name: เงื่อนไข
+            Conditionals in Bee:
+              name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
+            While Loops in Farmer:
+              key: ลูปขณะที่ (while loops) ในเกมเกษตรกร
+              name: ลูปขณะที่ (while loops) ในเกมเกษตรกร
+            Conditionals & Loops in Harvester:
+              key: เงื่อนไขและลูปกับเรื่องเกษตรกร
+              name: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
+            Artist Binary:
+              key: ศิลปินศูนย์หนึ่ง
+              name: ศิลปิน Binary
+          lesson_groups:
+            csf_events:
+              display_name: เหตุการณ์
+            csf_loops:
+              display_name: ลูป
+            csf_conditionals:
+              display_name: เงื่อนไข 
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: เงื่อนไข 
+            Nested Loops in Bee:
+              key: ลูปซ้อนลูป ในเรื่องผึ้ง
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
+            Nested Loops in Artist:
+              key: ลูปซ้อนลูป ในเกมศิลปิน
+              name: ลูปซ้อนลูป ในเกมศิลปิน
+            Nested Loops in Frozen:
+              key: ลูปซ้อนลูป ในเกม Frozen
+              name: ลูปซ้อนลูป กับเกม Frozen
+            Functions in Minecraft:
+              key: ฟังก์ชั่นในไมน์คราฟท์
+              name: ฟังก์ชั่นในไมน์คราฟท์
+            Functions in Harvester:
+              key: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
+              name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_nested_loops:
+              display_name: ลูปซ้อนลูป
+            csf_functions:
+              display_name: ฟังก์ชัน
+        coursef-2021:
+          lessons:
+            Functions in Minecraft:
+              key: ฟังก์ชั่นในไมน์คราฟท์
+              name: ฟังก์ชั่นในไมน์คราฟท์
+            Nested Loops in the Maze:
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
+            Internet:
+              key: อินเทอร์เน็ต
+              name: อินเทอร์เน็ต
+            For Loop Fun:
+              key: สนุกกับ For ลูป
+              name: สนุกกับ For ลูป
+            For Loops in Bee:
+              key: ลูป For ในเรื่องผึ้ง
+              name: ลูป For ในเรื่องผึ้ง
+          lesson_groups:
+            csf_digcit:
+              display_name: พลเมืองดิจิทัล
+            csf_variables:
+              display_name: ตัวแปร
+            csf_for_loops:
+              display_name: การวนรอบ
+        express-2021:
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          lessons:
+            Dance Party:
+              key: Dance Party
+              name: Dance Party
+            Programming with Angry Birds:
+              key: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
+              name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
+            Creating Art with Code:
+              key: การสร้างศิลปะด้วยโค้ด
+              name: การสร้างศิลปะด้วยโค้ด
+            Nested Loops in Maze:
+              key: ลูปซ้อนลูป ในเกมเขาวงกต
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
+            Snowflakes with Anna and Elsa:
+              key: ลูปซ้อนลูป ในเกม Frozen
+              name: ลูปซ้อนลูป ในเกม Frozen
+            If/Else with Bee:
+              key: เงื่อนไข (If/Else) กับเรื่องผึ้ง
+              name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
+            While Loops with the Farmer:
+              key: ลูปขณะที่ (while loops) กับเกมเกษตรกร
+              name: ลูปขณะที่ (while loops) กับเกมเกษตรกร
+            Harvesting with Conditionals:
+              key: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
+              name: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
+            Functions in Minecraft:
+              key: ฟังก์ชั่นในไมน์คราฟท์
+              name: ฟังก์ชั่นในไมน์คราฟท์
+            Functions with Harvester:
+              key: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+              name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            For Loops with Bee:
+              key: ลูป For ในเรื่องผึ้ง
+              name: ลูป For ในเรื่องผึ้ง
+          lesson_groups:
+            csf_warmup:
+              display_name: อุ่นเครื่อง
+            csf_loops:
+              display_name: ลูป
+            csf_conditionals:
+              display_name: เงื่อนไข 
+            csf_functions:
+              display_name: ฟังก์ชัน
+            csf_variables:
+              display_name: ตัวแปร
+            csf_for_loops:
+              display_name: การวนรอบ
+        pre-express-2021:
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          lessons:
+            Programming with Rey and BB-8:
+              key: การเขียนโปรแกรมกับเรย์และบีบี-8
+              name: การเขียนโปรแกรมกับเรย์และบีบี-8
+            Loops with Laurel:
+              key: ลูปไปกับลอเรล
+              name: ลูปไปกับลอเรล
+            Ocean Scene with Loops:
+              key: ฉากมหาสมุทรกับลูป
+              name: ฉากมหาสมุทรกับลูป
+          lesson_groups:
+            csf_loops:
+              display_name: ลูป
+            csf_events:
+              display_name: เหตุการณ์
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: บทเกริ่นนำ
+            lessonGroup-3:
+              display_name: ตัวแปร
