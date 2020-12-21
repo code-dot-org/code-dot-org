@@ -559,13 +559,16 @@ km-KH:
   video_title_obama: ការយល់ឃើញរបស់ប្រធានាធិបតី Obama ចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័រ
   video_title_hoc_is_here: កម្មវិធី Hour of Code នៅទីនេះ - មនុស្សគ្រប់គ្នាអាចសិក្សា
   video_title_anybody_can_learn: មនុស្សគ្រប់គ្នាអាចរៀនបាន
+  video_title_steph_curry: កម្មវិធី Hour of Code ជាមួយ Steph Curry
   video_title_draymond_green: កម្មវិធី Hour of Code ជាមួយ Draymond Green
   video_title_russell_okung: កម្មវិធី Hour of Code ជាមួយ Russell Okung
   video_title_real_madrid: កម្មវិធី Hour of Code ជាមួយ Real Madrid
   video_title_marco_belinelli: កម្មវិធី Hour of Code ជាមួយ Marco Belinelli
   video_title_chris_bosh: ការយល់ឃើញចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័ររបស់ Chris Bosh
+  video_title_my_name_is_aracely: ខ្ញុំ​ឈ្មោះ Aracely
   video_1min: ១នាទី
   video_2min: ២នាទី
+  video_3min: ៣នាទី
   video_5min: ៥នាទី
   speak_another_language: និយាយភាសាផ្សេងទៀត?
   help_translate: ជួយពួកយើងក្នុងការបកប្រែភាសា។
@@ -588,6 +591,7 @@ km-KH:
     ឬនរណាម្នាក់ដែលអាច<span style="font-family: ''Gotham 7r'', sans-serif;">បំផុសគំនិត</span>សិស្សរបស់ពួកគេដោយនិយាយអំពីទំហំនៃលទ្ធភាពដែលមានក្នុងវិទ្យាសាស្រ្តកុំព្យូទ័រ
     (ដែលអាចធ្វើតាមរយៈការឆ្លើយឆ្លងជាវីដេអូ)។'
   volunteer_engineer_submission_intro_guide: សិក្សាបន្ថែមពី<a href="%{volunteer_guide}">កម្មវិធីអ្នកស្ម័គ្រចិត្តរបស់យើងនៅទីនេះ</a>។
+  volunteer_engineer_submission_intro_guide_markdown: សិក្សាបន្ថែមពី  [កម្មវិធីអ្នកស្ម័គ្រចិត្តរបស់យើងនៅទីនេះ](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: សូមបញ្ចូលពត៌មានដូចខាងក្រោមប្រសិនបើអ្នកជានិស្សិតវិទ្យាសាស្រ្តកុំព្យូទ័រឬអ្នកជំនាញផ្នែកបង្កើតកម្មវិធី។
     ចន្លោះបំពេញដែលមានសញ្ញា<span class="form-required-field">*</span> គឺតម្រូវឲបំពេញជាដាច់ខាត។
   volunteer_engineer_submission_intro_links: តើអ្នកជាគ្រូបង្រៀនកំពុងស្វែងរកអ្នកស្ម័គ្រចិត្តដែរឬទេ?
@@ -847,7 +851,9 @@ km-KH:
     បន្ថែមជាមួយអ្នកជំនាញក្នុងវិស័យបច្ចេកវិទ្យា"
   hoc2018_mc_video_1min: ១នាទី
   hoc2018_mc_video_2min: ២នាទី
+  hoc2018_mc_video_3min: ៣នាទី
   hoc2018_mc_video_5min: ៥នាទី
+  hoc2018_mc_video_title_steph_curry: កម្មវិធី Hour of Code ជាមួយ Steph Curry
   hoc2018_mc_video_title_sports: ជំរុញខ្លួនអ្នក។ មនុស្សគ្រប់គ្នាអាចរៀនបាន។
   hoc2018_mc_video_title_inspire_girl: បំផុសគំនិតក្មេងស្រី
   hoc2018_mc_video_title_cs_intro: ការណែនាំពីវិទ្យាសាស្ត្រកុំព្យូទ័រ
@@ -855,6 +861,7 @@ km-KH:
   hoc2018_mc_video_title_obama: ការយល់ឃើញរបស់ប្រធានាធិបតី Obama ចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័រ
   hoc2018_mc_video_title_hoc_is_here: កម្មវិធី Hour of Code នៅទីនេះ - មនុស្សគ្រប់គ្នាអាចសិក្សា
   hoc2018_mc_video_title_anybody_can_learn: មនុស្សគ្រប់គ្នាអាចរៀនបាន
+  hoc2018_mc_video_title_my_name_is_aracely: ខ្ញុំ​ឈ្មោះ Aracely
   hoc2018_mc_homepage_join_us: ចូលរួមជាមួយយើង
   hoc2018_mc_homepage_try_it: សាកល្បង
   hoc2018_mc_back: Minecraft បានត្រលប់មកវិញជាមួយហ្នឹងសកម្មភាពថ្មីសំរាប់ Hour of Code!
