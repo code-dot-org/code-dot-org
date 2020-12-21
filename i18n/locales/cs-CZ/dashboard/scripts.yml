@@ -3684,5 +3684,368 @@ cs:
           lessons:
             AI for Oceans:
               name: AI pomáhá oceánům
-            intro:
-              name: Úvod
+        csd1-2021:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            csd1_2:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
+        csd3-2021:
+          title: CSD Kapitola 3 - Animace and hry
+          description_short: "Programování"
+          lessons:
+            Variables:
+              key: Proměnné
+              name: Proměnné
+            Random Numbers:
+              key: Náhodná čísla
+              name: Náhodná čísla
+            Sprites:
+              key: Postavy
+              name: Postavy
+            Text:
+              key: Text
+              name: Text
+            Conditionals:
+              key: Podmínky
+              name: Podmínky
+            Functions:
+              key: Funkce
+              name: Funkce
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            csd3_2:
+              display_name: 'Kapitola 2: Tvorba her'
+        csd4-2021:
+          lesson_groups:
+            csd4_2:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        csd5-2021:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funkce s Parametry
+              name: Funkce s Parametry
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kapitola 1: Programování s hardware'
+            csd6_2:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Binární čísla
+              name: Binární čísla
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'Kapitola 1: Digitální informace'
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Ladění
+              name: Ladění
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznamy
+            csp_loops:
+              display_name: Cykly
+        coursea-2021:
+          title: Kurz A (2019)
+          lessons:
+            'Programming: Happy Maps':
+              name: Šťastné mapy
+            Programming with Rey and BB-8:
+              key: Programování s Rey a BB-8
+              name: Programování s Rey a BB-8
+            Loops in Ice Age:
+              key: Cykly v Době ledové
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
+        courseb-2021:
+          title: Kurz B (2019)
+          lessons:
+            Move It, Move It:
+              key: Pohyb, pohyb
+              name: Pohyb, pohyb
+            Programming in Maze:
+              name: Programujeme s Angry Birds
+            'Loops: Getting Loopy':
+              key: 'Cykly: Bláznění s cykly'
+              name: Bláznění s cykly
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
+        coursec-2021:
+          title: Kurz C (2019)
+          lessons:
+            'Programming: My Robotic Friends':
+              key: 'Programování: Moji robotičtí přátelé'
+              name: Moji robotičtí přátelé (ml.)
+            Programming in Maze:
+              name: Programujeme s Angry Birds
+            Debugging in Maze:
+              key: Odstraňujeme chyby v bludišti
+              name: Odstraňujeme chyby v bludišti
+            Programming in Collector:
+              name: Sbíráme poklady s Laurel
+            Programming in Artist:
+              name: Malujeme s pomocí kódu
+            Binary Bracelets:
+              key: Binární náramky
+              name: Binární náramky
+            'Loops: My Loopy Robotic Friends':
+              key: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+              name: Moji zacyklení robotičtí přátelé (ml.)
+            Loops with Rey and BB-8:
+              key: Cykly s Rey a BB-8
+              name: Cykly s Rey a BB-8
+            Loops in Harvester:
+              name: Sběr úrody s cykly
+            Looking Ahead:
+              name: Pohled do budoucna s Minecraftem
+            Sticker Art with Loops:
+              key: Razítka v cyklech
+              name: Razítka v cyklech
+            'Events: The Big Event':
+              name: Velká událost
+            Build a Flappy Game:
+              key: Vytvoř hru Flappy Bird
+              name: Vytvoř hru Flappy Bird
+            Events in Play Lab:
+              name: Honička s událostmi
+            Picturing Data:
+              key: Zobrazení dat
+              name: Zobrazení dat
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_binary:
+              display_name: Binární
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
+        coursed-2021:
+          title: Kurz D (2019)
+          description: Studenti se naučí chápat cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programování na čtverečkovaném papíru
+            Introduction to Online Puzzles:
+              key: Představení online úloh
+              name: Představení online úloh
+            Relay Programming:
+              key: Štafetové programování
+              name: Štafetové programování
+            Debugging in Collector:
+              name: Ladění s Laurel
+            Events in Bounce:
+              key: Události s Bounce
+              name: Události s Bounce
+            Build a Star Wars Game:
+              key: Vytvoř Star Wars hru
+              name: Vytvoř Star Wars hru
+            Dance Party:
+              key: Taneční večírek
+              name: Taneční večírek
+            Loops in Ice Age:
+              key: Cykly v Době ledové
+              name: Cykly v Době ledové
+            Loops in Artist:
+              name: Kreslení tvarů s cykly
+            Nested Loops in Bee:
+              name: Vnořené cykly v bludišti
+            Conditionals with Cards:
+              key: Podmínky s kartami
+              name: Podmínky s kartami
+            Conditionals in Bee:
+              name: Pokud/jinak se včelkou
+            While Loops in Farmer:
+              key: Cykly pokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
+            Until Loops in Maze:
+              key: Cykly dokud (until) v bludišti
+              name: Cykly dokud (until) v bludišti
+            Conditionals & Loops in Harvester:
+              name: Zahradničení s podmínkami
+            'Unplugged: Binary':
+              key: 'Nezapojené: binární'
+              name: Binární obrázky
+            Artist Binary:
+              key: Binární umělec
+              name: Binární obrázky s umělcem
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_events:
+              display_name: Události
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            csf_binary:
+              display_name: Binární
+            csf_digcit:
+              display_name: Digitální občanství
+        coursee-2021:
+          title: Kurz E (2019)
+          lessons:
+            Programming and Loops with the Artist:
+              name: Kreslení s cykly
+            Conditionals:
+              key: Podmínky
+            Simon Says:
+              key: Kuba řekl
+              name: Kuba řekl
+            Nested Loops in Bee:
+              name: Vnořené cykly v bludišti
+            'Functions: Songwriting':
+              name: Skládání písniček
+            Functions in Harvester:
+              name: Funkce s farmářkou
+          lesson_groups:
+            csf_sprites:
+              display_name: Postavy
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_nested_loops:
+              display_name: Vnořené cykly
+            csf_functions:
+              display_name: Funkce
+        coursef-2021:
+          title: Kurz F (2019)
+          lessons:
+            Loops with the Artist:
+              name: Kreslení s cykly
+            Nested Loops in the Maze:
+              key: Vnořené cykly v bludišti
+              name: Vnořené cykly v bludišti
+            Envelope Variables:
+              key: Obálkové proměnné
+              name: Obálkové proměnné
+            AI for Oceans:
+              key: AI pomáhá oceánům
+              name: AI pomáhá oceánům
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: For cyklus zábavy
+              name: For cyklus zábavy
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_variables:
+              display_name: Proměnné
+            csf_for_loops:
+              display_name: Cykly "For"
+            csf_sprites:
+              display_name: Postavy
+        express-2021:
+          title: Rychlý kurz (2019)
+          lessons:
+            Dance Party:
+              key: Taneční večírek
+              name: Taneční večírek
+            Programming with Angry Birds:
+              key: Programujeme s Angry Birds
+              name: Programujeme s Angry Birds
+            Collecting Treasure with Laurel:
+              key: Sbíráme poklady s Laurel
+              name: Sbíráme poklady s Laurel
+            Creating Art with Code:
+              key: Malujeme s pomocí kódu
+              name: Malujeme s pomocí kódu
+            Loops with Rey and BB-8:
+              key: Cykly s Rey a BB-8
+              name: Cykly s Rey a BB-8
+            Sticker Art with Loops:
+              key: Razítka v cyklech
+              name: Razítka v cyklech
+            Nested Loops in Maze:
+              key: Vnořené cykly v bludišti
+              name: Vnořené cykly v bludišti
+            Snowflakes with Anna and Elsa:
+              key: Vločky s Annou a Elsou
+              name: Vločky s Annou a Elsou
+            If/Else with Bee:
+              key: Pokud/jinak se včelkou
+              name: Pokud/jinak se včelkou
+            While Loops with the Farmer:
+              key: Cykly pokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
+            Until Loops in Maze:
+              key: Cykly dokud (until) v bludišti
+              name: Cykly dokud (until) v bludišti
+            Harvesting with Conditionals:
+              key: Zahradničení s podmínkami
+              name: Zahradničení s podmínkami
+            Functions with Harvester:
+              key: Funkce s farmářkou
+              name: Funkce s farmářkou
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            csf_functions:
+              display_name: Funkce
+            csf_variables:
+              display_name: Proměnné
+            csf_for_loops:
+              display_name: Cykly "For"
+            csf_sprites:
+              display_name: Postavy
+        pre-express-2021:
+          lessons:
+            Programming with Rey and BB-8:
+              key: Programování s Rey a BB-8
+              name: Programování s Rey a BB-8
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Obálkové proměnné
+          lesson_groups:
+            ramp_up:
+              display_name: Úvod
+            lessonGroup-3:
+              display_name: Proměnné
