@@ -15209,7 +15209,1356 @@ zh-TW:
           lessons:
             AI for Oceans:
               name: 在海洋中使用的 AI
-            intro:
-              name: 介紹
             visualizing:
               name: 資料視覺化
+        csd1-2021:
+          title: CSD 單元 1 - 問題解決 ('19-'20)
+          description: "問題解決與運算是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\\r"
+          description_short: "瞭解人類與何與電腦一起解決問題。"
+          lessons:
+            CS Discoveries Pre-survey:
+              key: 電腦科學探索課前問卷調查
+              name: 電腦科學探索課前問卷調查
+            Intro to Problem Solving:
+              key: 問題解決能力的介紹
+              name: 問題解決能力的介紹
+            The Problem Solving Process:
+              key: 問題解決流程
+              name: 問題解決流程
+            Exploring Problem Solving:
+              key: 問題解決探索
+              name: 問題解決探索
+            What is a Computer?:
+              key: 電腦是什麼？
+              name: 電腦是什麼？
+            Input and Output:
+              key: 輸入與輸出
+              name: 輸入與輸出
+            Processing:
+              key: 處理
+              name: 處理
+            Storage:
+              key: 儲存
+              name: 儲存
+            Project - Propose an App:
+              key: 專案 - 提出應用程式建議
+              name: 專案 - 提出應用程式建議
+            Post-Project Test:
+              key: 專案後測驗
+              name: 專案後測驗
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csd1_1:
+              display_name: '第 1 章：解決問題的流程'
+            csd1_2:
+              display_name: '第 2 章：計算機與問題解決能力'
+            csd1_3:
+              display_name: 替代課程
+        csd2-2021:
+          title: CSD 單元 2 - Web 開發
+          description: "In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
+          description_short: "在 Web Lab 中學習製作自己的網站。"
+          lessons:
+            Exploring Web Pages:
+              key: 瀏覽網頁
+              name: 瀏覽網頁
+            Intro to HTML:
+              key: HTML 簡介
+              name: HTML 簡介
+            Headings:
+              key: 標題
+              name: 標題
+            'Mini-Project: HTML Web Page':
+              key: '迷你專案: HTML網頁'
+              name: '迷你專案: HTML網頁'
+            Digital Footprint:
+              key: 數位足跡
+              name: 數位足跡
+            Styling Text with CSS:
+              key: 透過 CSS 修改文字樣式
+              name: 透過 CSS 修改文字樣式
+            'Mini-Project: Your Personal Style':
+              key: '迷你專案: 你的個人風格'
+              name: '迷你專案: 你的個人風格'
+            Intellectual Property:
+              key: 知識產權
+              name: 知識產權
+            Using Images:
+              key: 使用圖片
+              name: 使用圖片
+            'Websites for Expression ':
+              key: '建立網站，表達內容'
+              name: '建立網站，表達內容'
+            Styling Elements with CSS:
+              key: 透過 CSS 修改元素樣式
+              name: 透過 CSS 修改元素樣式
+            Your Web Page - Prepare:
+              key: 你的網頁 - 準備
+              name: 你的網頁 - 準備
+            Project - Personal Web Page:
+              key: 專案 - 個人網頁
+              name: 專案 - 個人網頁
+            Websites for a Purpose:
+              key: 有目的的網站
+              name: 有目的的網站
+            Team Problem Solving:
+              key: 團隊問題解決
+              name: 團隊問題解決
+            Sources and Research:
+              key: 資料來源與研究
+              name: 資料來源與研究
+            Planning a Multi-page Website:
+              key: 規劃多頁網站
+              name: 規劃多頁網站
+            Linking Pages:
+              key: 鏈接頁面
+              name: 鏈接頁面
+            Project - Website for a Purpose:
+              key: 專案 - 為達成目的而製作網站
+              name: 專案 - 為達成目的而製作網站
+            Peer Review and Final Touches:
+              key: 同儕審查與最後修訂
+              name: 同儕審查與最後修訂
+            Post-Project Test:
+              key: 專案後測驗
+              name: 專案後測驗
+            CS Discoveries Post Course survey:
+              key: 電腦科學探索課後問卷調查
+              name: 電腦科學探索課後問卷調查
+          lesson_groups:
+            csd2_1v2:
+              display_name: '第1章: 建立網頁'
+            csd2_2v2:
+              display_name: '第2章: 多網頁網站'
+            cspSurvey:
+              display_name: 問卷
+        csd3-2021:
+          title: CSD 單元 3 -互動式遊戲和動畫
+          description: "在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。"
+          description_short: "Game Lab 編程環境介紹"
+          lessons:
+            Programming for Entertainment:
+              key: 娛樂用途的程式設計
+              name: 娛樂用途的程式設計
+            Plotting Shapes:
+              key: 幾何繪圖
+              name: 幾何繪圖
+            Drawing in Game Lab:
+              key: 用 Game Lab 繪圖
+              name: 用 Game Lab 繪圖
+            Variables:
+              key: 變數
+              name: 變數
+            Random Numbers:
+              key: 隨機取數
+              name: 隨機取數
+            Sprites:
+              key: 角色
+              name: 角色
+            Text:
+              key: 文字
+              name: 文字
+            The Draw Loop:
+              key: draw（繪圖）迴圈
+              name: draw（繪圖）迴圈
+            Sprite Movement:
+              key: 角色動作
+              name: 角色動作
+            Conditionals:
+              key: 條件判斷（Conditionals）
+              name: 條件判斷（Conditionals）
+            Keyboard Input:
+              key: 鍵盤輸入
+              name: 鍵盤輸入
+            Project - Interactive Card:
+              key: 專案 - 互動式卡片
+              name: 專案 - 互動式卡片
+            Velocity:
+              key: 速度
+              name: 速度
+            Collision Detection:
+              key: 碰撞檢測
+              name: 碰撞檢測
+            Complex Sprite Movement:
+              key: 複合角色動作
+              name: 複合角色動作
+            Collisions:
+              key: 碰撞
+              name: 碰撞
+            Functions:
+              key: 函式
+              name: 函式
+            The Game Design Process:
+              key: 遊戲設計流程
+              name: 遊戲設計流程
+            Using the Game Design Process:
+              key: 使用遊戲設計流程
+              name: 使用遊戲設計流程
+            Project - Design a Game:
+              key: 專案 - 設計一個遊戲
+              name: 專案 - 設計一個遊戲
+            Post-Project Test:
+              key: 專案後測驗
+              name: 專案後測驗
+            CS Discoveries Post Course survey:
+              key: 電腦科學探索課後問卷調查
+              name: 電腦科學探索課後問卷調查
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章：圖像和動畫'
+            csd3_2:
+              display_name: '第 2 章：創建遊戲'
+            cspSurvey:
+              display_name: 問卷
+        csd4-2021:
+          title: CSD Unit 4 - The Design Process ('19-'20)
+          description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和 App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
+          description_short: "學習如何設計程式，以符合使用者的需要。"
+          lessons:
+            Analysis of Design:
+              key: 設計分析
+              name: 設計分析
+            Understanding Your User:
+              key: 瞭解您的使用者
+              name: 瞭解您的使用者
+            User-Centered Design Micro Activity:
+              key: 以使用者為中心的微型活動
+              name: 以使用者為中心的微型活動
+            User Interfaces:
+              key: 使用者介面
+              name: 使用者介面
+            Feedback and Testing:
+              key: 回饋與測試
+              name: 回饋與測試
+            Identifying User Needs:
+              key: 確定使用者需求
+              name: 確定使用者需求
+            Project - Paper Prototype:
+              key: 專案 - 紙上原型
+              name: 專案 - 紙上原型
+            Designing Apps for Good:
+              key: 設計良好的應用程式
+              name: 設計良好的應用程式
+            Market Research:
+              key: 市場研究
+              name: 市場研究
+            Paper Prototypes:
+              key: 紙上原型
+              name: 紙上原型
+            Prototype Testing:
+              key: 原型測試
+              name: 原型測試
+            Digital Design:
+              key: 數位設計
+              name: 數位設計
+            Linking Screens:
+              key: 連結不同畫面
+              name: 連結不同畫面
+            Testing the App:
+              key: 測試應用程式
+              name: 測試應用程式
+            Improving and Iterating:
+              key: 改善和迭代
+              name: 改善和迭代
+            Project - App Presentation:
+              key: 專案 - 應用程式簡報
+              name: 專案 - 應用程式簡報
+            Post-Project Test:
+              key: 專案後測驗
+              name: 專案後測驗
+            CS Discoveries Post Course survey:
+              key: 電腦科學探索課後問卷調查
+              name: 電腦科學探索課後問卷調查
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：用戶為中心的設計'
+            csd4_2:
+              display_name: '第 2 章︰ 應用程式原型'
+            csd5_2:
+              display_name: '第 2 章：解決數據問題'
+            cspSurvey:
+              display_name: 問卷
+        csd5-2021:
+          title: CSD 單元 5 - 數據和社會
+          description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第 2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
+          description_short: 瞭解大家怎樣使用電腦解決資料問題。
+          lessons:
+            Representation Matters:
+              key: 表示事項
+              name: 表示事項
+            Patterns and Representation:
+              key: 模式和標記法
+              name: 模式和標記法
+            ASCII and Binary Representation:
+              key: ASCII 和 二進位表示法
+              name: ASCII 和 二進位表示法
+            Representing Images:
+              key: 表示圖像
+              name: 表示圖像
+            Representing Numbers:
+              key: 數字表示法
+              name: 數字表示法
+            Keeping Data Secret:
+              key: 讓資料保密
+              name: 讓資料保密
+            Combining Representations:
+              key: 組合表示
+              name: 組合表示
+            Project - Create a Representation:
+              key: 專案 - 創建標記法
+              name: 專案 - 創建標記法
+            Problem Solving and Data:
+              key: 問題解決與數據
+              name: 問題解決與數據
+            Problem Solving with Big Data:
+              key: 用大數據解決問題
+              name: 用大數據解決問題
+            Structuring Data:
+              key: 資料的建構
+              name: 資料的建構
+            Making Decisions with Data:
+              key: 依數據來做決定
+              name: 依數據來做決定
+            Interpreting Data:
+              key: 解譯數據
+              name: 解譯數據
+            Automating Data Decisions:
+              key: 自動化數據決策
+              name: 自動化數據決策
+            Post-Project Test:
+              key: 專案後測驗
+              name: 專案後測驗
+            CS Discoveries Post Course survey:
+              key: 電腦科學探索課後問卷調查
+              name: 電腦科學探索課後問卷調查
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章：表達信息'
+            csd5_2:
+              display_name: '第 2 章：解決數據問題'
+            cspSurvey:
+              display_name: 問卷
+        csd6-2021:
+          title: CSD 單元 6 - 物理運算
+          description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
+          description_short: 在實體裝置上開發程式
+          lessons:
+            Innovations in Computing:
+              key: 運算上的創新
+              name: 運算上的創新
+            Designing Screens with Code:
+              key: 以程式碼設計螢幕畫面
+              name: 以程式碼設計螢幕畫面
+            The Circuit Playground:
+              key: 電路（Circuit ）遊樂場
+              name: 電路（Circuit ）遊樂場
+            Input Unplugged:
+              key: 不插電介紹輸入（Input）
+              name: 不插電介紹輸入（Input）
+            Board Events:
+              key: 電路板事件
+              name: 電路板事件
+            Getting Properties:
+              key: 取得屬性
+              name: 取得屬性
+            Analog Input:
+              key: 模擬輸入
+              name: 模擬輸入
+            The Program Design Process:
+              key: 程式設計流程
+              name: 程式設計流程
+            'Project: Make a Game':
+              key: '專案：創建一個遊戲'
+              name: '專案：創建一個遊戲'
+            Arrays and Color LEDs:
+              key: 陣列與彩色 LED
+              name: 陣列與彩色 LED
+            Making Music:
+              key: 製作音樂
+              name: 製作音樂
+            Arrays and For Loops:
+              key: 陣列和 for（計數）迴圈
+              name: 陣列和 for（計數）迴圈
+            Accelerometer:
+              key: 加速計
+              name: 加速計
+            Functions with Parameters:
+              key: 函式帶參數
+              name: 函式帶參數
+            Circuits and Physical Prototypes:
+              key: 電路與實體原型
+              name: 電路與實體原型
+            'Project: Prototype an Innovation':
+              key: '專案：原型創新'
+              name: '專案：原型創新'
+            Post-Project Test:
+              key: 專案後測驗
+              name: 專案後測驗
+            CS Discoveries Post Course survey:
+              key: 電腦科學探索課後問卷調查
+              name: 電腦科學探索課後問卷調查
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：硬體輸出'
+            csd6_2:
+              display_name: '第 2 章：建立物理原型'
+            cspSurvey:
+              display_name: 問卷
+        csp1-2021:
+          title: CSP 單元 1 - 數位資訊 ('20-'21)
+          lessons:
+            CS Principles Pre-survey:
+              key: 計算機科學原理課前問卷調查
+              name: 計算機科學原理課前問卷調查
+            Welcome to CSP:
+              key: 歡迎來到 CSP
+              name: 歡迎來到 CSP
+            Representing Information:
+              key: 表示資訊
+              name: 表示資訊
+            Circle Square Patterns:
+              key: 圓形與正方形模式
+              name: 圓形與正方形模式
+            Binary Numbers:
+              key: 二進位數
+              name: 二進位數
+            Overflow and Rounding:
+              key: 溢位與捨入
+              name: 溢位與捨入
+            Representing Text:
+              key: 表示文字
+              name: 表示文字
+            Black and White Images:
+              key: 黑白圖像
+              name: 黑白圖像
+            Color Images:
+              key: 彩色圖像
+              name: 彩色圖像
+            Lossless Compression:
+              key: 無損壓縮
+              name: 無損壓縮
+            Lossy Compression:
+              key: 有損壓縮
+              name: 有損壓縮
+            Intellectual Property:
+              key: 知識產權
+              name: 知識產權
+            Project - Digital Information Dilemmas Part 1:
+              key: 專案 - 數位資訊困境 第 1 部分
+              name: 專案 - 數位資訊困境 第 1 部分
+            Project - Digital Information Dilemmas Part 2:
+              key: 專案 - 數位資訊困境 第 2 部分
+              name: 專案 - 數位資訊困境 第 2 部分
+            'Lesson 14: Assessment Day':
+              key: '課堂 14：評估日'
+              name: '課堂 14：評估日'
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csp_unit1_2020:
+              display_name: '（舊）單元 1：數位資訊'
+        csp2-2021:
+          title: CSP 單元 2 - 網際網路 ('20-'21)
+          lessons:
+            Welcome to the Internet:
+              key: 歡迎來到網際網路
+              name: 歡迎來到網際網路
+            Building a Network:
+              key: 建立網路
+              name: 建立網路
+            The Need for Addressing:
+              key: 定址的需要
+              name: 定址的需要
+            Routers and Redundancy:
+              key: 路由器與備援
+              name: 路由器與備援
+            Packets:
+              key: 封包
+              name: 封包
+            DNS and HTTP:
+              key: DNS 與 HTTP
+              name: DNS 與 HTTP
+            Project - Internet Dilemmas Part 1:
+              key: 專案 - 網際網路困境 第 1 部分
+              name: 專案 - 網際網路困境 第 1 部分
+            Project - Internet Dilemmas Part 2:
+              key: 專案 - 網際網路困境 第 2 部分
+              name: 專案 - 網際網路困境 第 2 部分
+            'Lesson 9: Assessment Day':
+              key: '課堂 9：評估日'
+              name: '課堂 9：評估日'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '（舊）單元 2：網際網路'
+        csp3-2021:
+          title: CSP 單元 3 - 應用程式設計簡介 ('20-'21)
+          lessons:
+            Introduction to Apps:
+              key: 應用程式簡介
+              name: 應用程式簡介
+            Project - Designing an App Part 1:
+              key: 專案 - 設計應用程式 第 1 部分
+              name: 專案 - 設計應用程式 第 1 部分
+            Project - Designing an App Part 2:
+              key: 專案 - 設計應用程式 第 2 部分
+              name: 專案 - 設計應用程式 第 2 部分
+            The Need for Programming Languages:
+              key: 程式語言的需要
+              name: 程式語言的需要
+            Intro to Programming:
+              key: 程式設計簡介
+              name: 程式設計簡介
+            Debugging:
+              key: 除錯
+              name: 除錯
+            Project - Designing an App Part 3:
+              key: 專案 - 設計應用程式 第 3 部分
+              name: 專案 - 設計應用程式 第 3 部分
+            Project - Designing an App Part 4:
+              key: 專案 - 設計應用程式 第 4 部分
+              name: 專案 - 設計應用程式 第 4 部分
+            Project - Designing an App Part 5:
+              key: 專案 - 設計應用程式 第 5 部分
+              name: 專案 - 設計應用程式 第 5 部分
+            'Lesson 11: Assessment Day':
+              key: '課堂 11：評估日'
+              name: '課堂 11：評估日'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: '單元 3：應用程式設計簡介'
+        csp4-2021:
+          title: CSP 單元 4 - 變數（Variable）、條件式（Conditional）與函式（Function）('20-'21)
+          lessons:
+            Variables Explore:
+              key: 變數探索
+              name: 變數探索
+            Variables Investigate:
+              key: 變數研究
+              name: 變數研究
+            Variables Practice:
+              key: 變數的練習
+              name: 變數的練習
+            Variables Make:
+              key: 變數的建立
+              name: 變數的建立
+            Conditionals Explore:
+              key: 條件式探索
+              name: 條件式探索
+            Conditionals Investigate:
+              key: 條件式研究
+              name: 條件式研究
+            Conditionals Practice:
+              key: 條件判斷的練習
+              name: 條件判斷的練習
+            Conditional Make:
+              key: 條件式製作
+              name: 條件式製作
+            Functions Explore / Investigate:
+              key: 函式探索 / 研究
+              name: 函式探索 / 研究
+            Functions Practice:
+              key: 函式的練習
+              name: 函式的練習
+            Functions Make:
+              key: 函式的建立
+              name: 函式的建立
+            Project - Decision Maker App Part 1:
+              key: 專案 - 決策者應用程式 第 1 部分
+              name: 專案 - 決策者應用程式 第 1 部分
+            Project - Decision Maker App Part 2:
+              key: 專案 - 決策者應用程式 第 2 部分
+              name: 專案 - 決策者應用程式 第 2 部分
+            Project - Decision Maker App Part 3:
+              key: 專案 - 決策者應用程式 第 3 部分
+              name: 專案 - 決策者應用程式 第 3 部分
+            'Lesson 15: Assessment Day':
+              key: '課堂 15：評估日'
+              name: '課堂 15：評估日'
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
+        csp5-2021:
+          title: CSP 單元 5 - 清單（List）、迴圈（Loop）與尋訪（Traversal）('20-'21)
+          lessons:
+            Lists Explore:
+              key: 清單探索
+              name: 清單探索
+            Lists Investigate:
+              key: 清單研究
+              name: 清單研究
+            Lists Practice:
+              key: 清單的練習
+              name: 清單的練習
+            Lists Make:
+              key: 清單製作
+              name: 清單製作
+            Loops Explore:
+              key: 迴圈探索
+              name: 迴圈探索
+            Loops Investigate:
+              key: 迴圈研究
+              name: 迴圈研究
+            Loops Practice:
+              key: 迴圈的練習
+              name: 迴圈的練習
+            Loops Make:
+              key: 迴圈製作
+              name: 迴圈製作
+            Traversals Explore:
+              key: 尋訪探索
+              name: 尋訪探索
+            Traversals Investigate:
+              key: 尋訪研究
+              name: 尋訪研究
+            Traversals Practice:
+              key: 遍歷的練習
+              name: 遍歷的練習
+            Traversals Make:
+              key: 尋訪製作
+              name: 尋訪製作
+            Semester Hackathon Part 1:
+              key: 學期黑客松 第 1 部分
+              name: 學期黑客松 第 1 部分
+            Semester Hackathon Part 2:
+              key: 學期黑客松 第 2 部分
+              name: 學期黑客松 第 2 部分
+            Semester Hackathon Part 3:
+              key: 學期黑客松 第 3 部分
+              name: 學期黑客松 第 3 部分
+            Semester Hackathon Part 4:
+              key: 學期黑客松 第 4 部分
+              name: 學期黑客松 第 4 部分
+            Semester Hackathon Part 5:
+              key: 學期黑客松 第 5 部分
+              name: 學期黑客松 第 5 部分
+            'Lesson 18: Assessment Day':
+              key: '課堂 18：評估日'
+              name: '課堂 18：評估日'
+          lesson_groups:
+            csp_lists:
+              display_name: 清單
+            csp_loops:
+              display_name: 迴圈
+            csp_traversals:
+              display_name: 尋訪
+            csp_project:
+              display_name: 專案
+        csp6-2021:
+          title: CSP 單元 6 - 演算法 ('20-'21)
+          lessons:
+            Algorithms Solve Problems:
+              key: 用演算法解決問題
+              name: 用演算法解決問題
+            Algorithm Efficiency:
+              key: 演算法效率
+              name: 演算法效率
+            Unreasonable Time:
+              key: 不合理的執行時間
+              name: 不合理的執行時間
+            The Limits of Algorithms:
+              key: 演算法的限制
+              name: 演算法的限制
+            Parallel and Distributed Algorithms:
+              key: 平行與分散式演算法
+              name: 平行與分散式演算法
+            'Lesson 6: Assessment Day':
+              key: '課堂 6：評估日'
+              name: '課堂 6：評估日'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: '單元 6：演算法'
+        csp7-2021:
+          lessons:
+            Parameters and Return Explore:
+              key: 參數與回傳探索
+              name: 參數與回傳探索
+            Parameters and Return Investigate:
+              key: 參數與回傳研究
+              name: 參數與回傳研究
+            Parameters and Return Practice:
+              key: 參數與回傳練習
+              name: 參數與回傳練習
+            Parameters and Return Make:
+              key: 參數與回傳製作
+              name: 參數與回傳製作
+            Libraries Explore:
+              key: 函式庫探索
+              name: 函式庫探索
+            Libraries Investigate:
+              key: 函式庫研究
+              name: 函式庫研究
+            Libraries Practice:
+              key: 函式庫練習
+              name: 函式庫練習
+            Project - Make a Library Part 1:
+              key: 專案 - 製作函式庫 第 1 部分
+              name: 專案 - 製作函式庫 第 1 部分
+            Project - Make a Library Part 2:
+              key: 專案 - 製作函式庫 第 2 部分
+              name: 專案 - 製作函式庫 第 2 部分
+            Project - Make a Library Part 3:
+              key: 專案 - 製作函式庫 第 3 部分
+              name: 專案 - 製作函式庫 第 3 部分
+            'Lesson 11: Assessment Day':
+              key: '課堂 11：評估日'
+              name: '課堂 11：評估日'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 參數及函數回傳值
+            csp_libraries:
+              display_name: 程式庫
+        csp8-2021:
+          title: CSP 單元 8 - 建立 PT 準備 ('20-'21)
+          lessons:
+            Create PT - Review the Task:
+              key: 建立 PT - 檢閱任務
+              name: 建立 PT - 檢閱任務
+            Create PT - Make a Plan:
+              key: 建立 PT - 制定計畫
+              name: 建立 PT - 制定計畫
+            Create PT - Complete the Task:
+              key: 建立 PT - 完成任務
+              name: 建立 PT - 完成任務
+        csp9-2021:
+          title: CSP 單元 9 - 資料 ('20-'21)
+          lessons:
+            Learning From Data:
+              key: 從資料中學習
+              name: 從資料中學習
+            Exploring One Column:
+              key: 學習 1 個欄
+              name: 學習 1 個欄
+            Filtering and Cleaning Data:
+              key: 篩選與清理資料
+              name: 篩選與清理資料
+            Exploring Two Columns:
+              key: 學習 2 個欄
+              name: 學習 2 個欄
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: 大數據、群眾外包與機器學習
+              name: 大數據、群眾外包與機器學習
+            Machine Learning and Bias:
+              key: 機器學習與偏見
+              name: 機器學習與偏見
+            Project - Tell a Data Story - Part 1:
+              key: 專案 - 訴說關於資料的故事 - 第 1 部分
+              name: 專案 - 訴說關於資料的故事 - 第 1 部分
+            Project - Tell a Data Story - Part 2:
+              key: 專案 - 訴說關於資料的故事 - 第 2 部分
+              name: 專案 - 訴說關於資料的故事 - 第 2 部分
+            'Lesson 9: Assessment Day':
+              key: '課堂 9：評估日'
+              name: '課堂 9：評估日'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '單元 9：資料'
+        csp10-2021:
+          title: CSP 單元 10 - 網路安全與全球影響 ('20-'21)
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: 專案 - 創新模擬 第 1 部分
+              name: 專案 - 創新模擬 第 1 部分
+            Project - Innovation Simulation Part 2:
+              key: 專案 - 創新模擬 第 2 部分
+              name: 專案 - 創新模擬 第 2 部分
+            Data Policies and Privacy:
+              key: 資料政策與隱私
+              name: 資料政策與隱私
+            The Value of Privacy:
+              key: 隱私的價值
+              name: 隱私的價值
+            Project - Innovation Simulation Part 3:
+              key: 專案 - 創新模擬 第 3 部分
+              name: 專案 - 創新模擬 第 3 部分
+            Security Risks Part 1:
+              key: 安全風險第 1 部分
+              name: 安全風險第 1 部分
+            Security Risks Part 2:
+              key: 安全風險第 2 部分
+              name: 安全風險第 2 部分
+            'Project: Innovation Simulation Part 4':
+              key: '專案：創新模擬 第 4 部分'
+              name: '專案：創新模擬 第 4 部分'
+            Protecting Data Part 1:
+              key: 保護資料第 1 部分
+              name: 保護資料第 1 部分
+            Protecting Data Part 2:
+              key: 保護資料第 2 部分
+              name: 保護資料第 2 部分
+            'Project: Innovation Simulation Part 5':
+              key: '專案：創新模擬 第 5 部分'
+              name: '專案：創新模擬 第 5 部分'
+            'Project: Innovation Simulation Part 6':
+              key: '專案：創新模擬 第 6 部分'
+              name: '專案：創新模擬 第 6 部分'
+            'Project: Innovation Simulation Part 7':
+              key: '專案：創新模擬 第 7 部分'
+              name: '專案：創新模擬 第 7 部分'
+            'Lesson 14: Unit Assessment Day':
+              key: '課堂 14：單元評估日'
+              name: '課堂 14：單元評估日'
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: '單元 10：網路安全與全球影響'
+        coursea-2021:
+          title: 課程 A（2019）
+          description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_short: 為學齡前兒童設計的計算機科學指引。
+          description_audience: '年齡：4-7'
+          lessons:
+            Learn to Drag and Drop:
+              key: 學習滑鼠的拖放
+              name: 學習滑鼠的拖放
+            'Programming: Happy Maps':
+              key: '程式設計 - 快樂地圖'
+              name: 快樂地圖
+            Sequencing with Scrat:
+              key: 和鼠奎特一起學序列
+              name: 和鼠奎特一起學序列
+            Programming in Ice Age:
+              key: 在冰河歷險紀裡編程
+              name: 和鼠奎特一起寫程式
+            Programming with Rey and BB-8:
+              key: 和 BB-8 與 Rey 一起寫程式
+              name: 和 BB-8 與 Rey 一起寫程式
+            'Loops: Happy Loops':
+              key: '迴圈（Loops） - 快樂迴圈'
+              name: 迴圈（Loops） - 快樂迴圈
+            Loops in Ice Age:
+              key: 冰河歷險紀中的迴圈
+              name: 和鼠奎特一起學迴圈（Loop）
+            Loops in Collector:
+              key: 收藏家中的迴圈（Loops）
+              name: 與 Laurel 一起學習迴圈
+            Ocean Scene with Loops:
+              key: 海洋場景與迴圈（Loop）
+              name: 海洋場景與迴圈（Loop）
+            'Events: The Big Event':
+              key: '事件：大事件'
+              name: 小小大事件
+            Events in Play Lab:
+              key: Play Lab 中的事件（Event）
+              name: 讓事件活動起來
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
+        courseb-2021:
+          title: 課程 B（2019）
+          description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_short: 為學前兒童準備的電腦科學介紹。類似課程 A，但採用更深入的概念。
+          description_audience: '年齡 5-8'
+          lessons:
+            Move It, Move It:
+              key: 移動它，移動它
+              name: 移動它，移動它
+            Sequencing in Maze:
+              key: 迷宮中的陣列（Sequence）
+              name: 迷宮中的循序（Sequence）
+            Programming in Maze:
+              key: 在迷宮中編程（Programming ）
+              name: 與憤怒鳥一起編程
+            Programming in Harvester:
+              key: 和農夫一起學程式
+              name: 和農夫一起學程式
+            'Loops: Getting Loopy':
+              key: '迴圈：學習迴圈'
+              name: 學習迴圈
+            Loops in Harvester:
+              key: 和收割者一起學迴圈（Loop）
+              name: 與農夫一起學迴圈（Loops）
+            Loops in Collector:
+              key: 收藏家中的迴圈（Loops）
+              name: 與 Laurel 一起學習迴圈
+            Loops in Artist:
+              key: 藝術家中的迴圈（Loops）
+              name: 使用迴圈（Loop）在花園中繪畫
+            The Right App:
+              key: 合適的應用程式
+              name: 合適的應用程式
+            'Events: The Big Event':
+              key: '事件：大事件'
+              name: 小小大事件
+            Events in Play Lab:
+              key: Play Lab 中的事件（Event）
+              name: 以事件（Event）展開皇家大戰
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_impacts:
+              display_name: 運算的影響
+            csf_events:
+              display_name: 事件
+        coursec-2021:
+          title: 課程 C（2019）
+          description: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
+          description_short: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
+          description_audience: '年齡 6-10'
+          lessons:
+            'Programming: My Robotic Friends':
+              key: '程式設計：我的機器人朋友'
+              name: 我的小機器人朋友
+            Programming in Maze:
+              key: 在迷宮中編程（Programming ）
+              name: 與憤怒鳥一起編程
+            Debugging in Maze:
+              key: 在迷宮中除錯
+              name: 在迷宮中除錯
+            Programming in Collector:
+              key: 和收藏家學編程（Program）
+              name: 和 Laurel 一起收集寶石
+            Programming in Artist:
+              key: 在藝術家中學習程式設計
+              name: 用代碼創作藝術
+            Binary Bracelets:
+              key: 二進制手環
+              name: 二進制手環
+            'Loops: My Loopy Robotic Friends':
+              key: '迴圈：我的愛迴圈機器人朋友'
+              name: 我的愛迴圈小機器人朋友
+            Loops with Rey and BB-8:
+              key: 和 BB-8 與 Rey 一起練習迴圈（Loop）
+              name: 和 BB-8 與 Rey 一起練習迴圈（Loop）
+            Loops in Harvester:
+              key: 和收割者一起學迴圈（Loop）
+              name: 使用迴圈（Loop）收割農作物
+            Looking Ahead:
+              key: 展望未來
+              name: 與 Minecraft 一起展望未來
+            Sticker Art with Loops:
+              key: 使用迴圈（Loop）繪畫貼紙藝術
+              name: 使用迴圈（Loop）繪畫貼紙藝術
+            'Events: The Big Event':
+              key: '事件：大事件'
+              name: 大事件
+            Build a Flappy Game:
+              key: 製作像素鳥遊戲
+              name: 製作像素鳥遊戲
+            Events in Play Lab:
+              key: Play Lab 中的事件（Event）
+              name: 使用事件（Event）玩追逐遊戲
+            Picturing Data:
+              key: 描繪資料
+              name: 描繪資料
+            'End of Course Project: Create a Play Lab Game':
+              name: 課程結束專案
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_binary:
+              display_name: 二進制（Binary）
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
+            csf_data:
+              display_name: 數據
+            end_of_course_project:
+              display_name: 課程結束專案
+        coursed-2021:
+          title: 課程 D（2019）
+          description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
+          description_short: 學習條件式陳述句。你可製作自己的藝術品、遊戲，甚至舞蹈派對！
+          description_audience: '年齡 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: '演算法：方格紙程式設計'
+              name: 方格紙編程
+            Introduction to Online Puzzles:
+              key: 線上謎題簡介
+              name: 線上謎題簡介
+            Relay Programming:
+              key: 接力編程
+              name: 接力編程
+            Debugging in Collector:
+              key: 和收藏家學除錯（Debug）
+              name: 和 Laurel 學除錯（Debug）
+            Events in Bounce:
+              key: 彈板遊戲中的事件（Event）
+              name: 彈板遊戲中的事件（Event）
+            Build a Star Wars Game:
+              key: 創建一個星際大戰遊戲！
+              name: 創建一個星際大戰遊戲！
+            Dance Party:
+              key: 舞蹈派對
+              name: 舞蹈派對
+            Loops in Ice Age:
+              key: 冰河歷險紀中的迴圈
+              name: 冰河歷險紀中的迴圈
+            Loops in Artist:
+              key: 藝術家中的迴圈（Loops）
+              name: 以迴圈（Loop）繪畫藝術作品
+            Nested Loops in Bee:
+              key: 蜜蜂裡的巢狀迴圈（Nested Loops）
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
+            Conditionals with Cards:
+              key: 用撲克牌學習條件判斷（Conditionals）
+              name: 用撲克牌學習條件判斷（Conditionals）
+            Conditionals in Bee:
+              key: 在蜜蜂遊戲中的條件式（Conditional）
+              name: 與小蜜蜂一起嘗試 If/Else（如果/否則）
+            While Loops in Farmer:
+              key: 農夫遊戲中的 while（當）迴圈
+              name: 農夫遊戲中的 while（當）迴圈
+            Until Loops in Maze:
+              key: 迷宮裡的 until（直到）迴圈
+              name: 迷宮裡的 until（直到）迴圈
+            Conditionals & Loops in Harvester:
+              key: 收割者遊戲中的條件式（Conditional）與迴圈（Loop）
+              name: 使用條件式（Conditional）收割農作物
+            'Unplugged: Binary':
+              key: '不插電活動 - 二進制'
+              name: 二進制圖像
+            Artist Binary:
+              key: 小藝術家 - 二進制（Binary）
+              name: 小藝術家 - 二進制（Binary）
+            End of Course Project:
+              key: 課程結束專案
+              name: 課程結束專案
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_events:
+              display_name: 事件
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csf_binary:
+              display_name: 二進制（Binary）
+            csf_digcit:
+              display_name: 數位公民
+            end_of_course_project:
+              display_name: 課程結束專案
+        coursee-2021:
+          title: 課程 E（2019）
+          description: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第 2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
+          description_short: 預覽課程 C & D 的概念，進一步的學習函式。
+          description_audience: '年齡 8-12'
+          lessons:
+            Sequencing in the Maze:
+              key: 迷宮中的陣列（Sequence）
+              name: 迷宮中的陣列（Sequence）
+            Programming and Loops with the Artist:
+              key: 用藝術家設計程式並練習迴圈（Loop）
+              name: 以迴圈（Loop）繪畫
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Minecraft 中的條件式：水上巡航 '
+              name: 'Minecraft 中的條件式：水上巡航 '
+            Conditionals:
+              key: 條件判斷（Conditionals）
+              name: 與農夫一起嘗試條件式（Conditional）
+            Simon Says:
+              key: 老師說
+              name: 老師說
+            Learning Sprites with Sprite Lab:
+              key: 在 Sprite Lab 中學習角色（Sprite）
+              name: Sprite Lab 中的游泳小魚
+            Alien Dance Party with Sprite Lab:
+              key: 用 Sprite Lab 創作外星人舞蹈派對
+              name: 用 Sprite Lab 創作外星人舞蹈派對
+            Private and Personal Information:
+              key: 私密與個人資訊
+              name: 私密與個人資訊
+            About Me:
+              key: 關於我
+              name: 關於我
+            Digital Sharing:
+              key: 數位分享
+              name: 數位分享
+            Nested Loops in Bee:
+              key: 蜜蜂裡的巢狀迴圈（Nested Loops）
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
+            Nested Loops in Artist:
+              key: 小藝術家裡的巢狀迴圈（Nested Loops）
+              name: 小藝術家裡的巢狀迴圈（Nested Loops）
+            Nested Loops in Frozen:
+              key: 冰雪奇緣中的巢狀迴圈（Nested Loop）
+              name: 在冰雪奇緣中使用巢狀迴圈（Nested Loop）
+            'Functions: Songwriting':
+              key: '函式：作曲'
+              name: 歌曲創作
+            Functions in Minecraft:
+              key: Minecraft 中的函式
+              name: Minecraft 中的函式
+            Functions in Harvester:
+              key: 收割者遊戲中的函式（Function）
+              name: 在收割者遊戲中學習函式（Function）
+            Functions in Artist:
+              key: 藝術家遊戲中的函式（Function）
+              name: 在藝術家遊戲中使用函式（Function）
+            Designing for Accessibility:
+              key: 以無障礙為目的設計程式
+              name: 以無障礙為目的設計程式
+            End of Course Project:
+              key: 課程結束專案
+              name: 課程結束專案
+          lesson_groups:
+            ramp_up:
+              display_name: 提升
+            csf_sprites:
+              display_name: 角色
+            csf_digcit:
+              display_name: 數位公民
+            csf_nested_loops:
+              display_name: 巢狀迴圈
+            csf_functions:
+              display_name: 函式
+            csf_impacts:
+              display_name: 運算的影響
+            end_of_course_project:
+              display_name: 課程結束專案
+        coursef-2021:
+          title: 課程 F（2019）
+          description: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第 2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
+          description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+          description_audience: '年齡 9-13'
+          lessons:
+            Functions in Minecraft:
+              key: Minecraft 中的函式
+              name: Minecraft 中的函式
+            Learning Sprites with Sprite Lab:
+              key: 在 Sprite Lab 中學習角色（Sprite）
+              name: Sprite Lab 中的游泳小魚
+            Events with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
+            Loops with the Artist:
+              key: 讓畫家進行迴圈操作
+              name: 以迴圈（Loop）繪畫
+            Nested Loops in the Maze:
+              key: 迷宮裡的巢狀迴圈（Nested Loop）
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
+            The Power of Words:
+              key: 語言的力量
+              name: 語言的力量
+            Envelope Variables:
+              key: 信封變數
+              name: 信封變數
+            Variables as Constant in Artist:
+              key: 在藝術家中以變數做為常數
+              name: 在藝術家遊戲中學習變數
+            Variables that Change in Bee:
+              key: 在蜜蜂遊戲中更改的變數
+              name: 在蜜蜂遊戲中變更變數
+            Variables that Change in Artist:
+              key: 在藝術家遊戲中更改的變數
+              name: 在藝術家遊戲中變更變數
+            Simulating Experiments:
+              key: 模擬實驗
+              name: 模擬實驗
+            AI for Oceans:
+              key: 在海洋中使用的 AI
+              name: 在海洋中使用的 AI
+            Internet:
+              key: 網際網路 Internet
+              name: 網際網路
+            For Loop Fun:
+              key: 有趣的計次迴圈
+              name: 有趣的計次迴圈
+            For Loops in Bee:
+              key: 蜜蜂遊戲中的 for（計數）迴圈
+              name: 與蜜蜂一起嘗試 for（計數）迴圈
+            For Loops in Artist:
+              key: 藝術家中的計數迴圈（For Loops）
+              name: 藝術家中的計數迴圈（For Loops）
+            Editing Behaviors:
+              key: 編輯行為
+              name: Sprite Lab 的行為（Behavior）
+            Virtual Pet:
+              name: 在 Sprite Lab 中製作虛擬寵物
+            End of Course Project:
+              key: 課程結束專案
+              name: 課程結束專案
+          lesson_groups:
+            ramp_up:
+              display_name: 提升
+            csf_digcit:
+              display_name: 數位公民
+            csf_variables:
+              display_name: 變數
+            csf_data:
+              display_name: 數據
+            csf_for_loops:
+              display_name: 計次迴圈（For Loops）
+            csf_sprites:
+              display_name: 角色
+            end_of_course_project:
+              display_name: 課程結束專案
+        express-2021:
+          title: 速學課程（2019）
+          description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_short: '電腦科學簡介：結合我們最優秀的國小課程內容，供年齡較大的學生學習。'
+          description_audience: '年齡 9-18'
+          lessons:
+            Dance Party:
+              key: 舞蹈派對
+              name: 舞蹈派對
+            Programming with Angry Birds:
+              key: 與憤怒鳥一起編程
+              name: 與憤怒鳥一起編程
+            Debugging with Scrat:
+              key: 與鼠奎特一起除錯
+              name: 與鼠奎特一起除錯
+            Collecting Treasure with Laurel:
+              key: 和 Laurel 一起收集寶石
+              name: 和 Laurel 一起收集寶石
+            Creating Art with Code:
+              key: 用代碼創作藝術
+              name: 用代碼創作藝術
+            Loops with Rey and BB-8:
+              key: 和 BB-8 與 Rey 一起練習迴圈（Loop）
+              name: 和 BB-8 與 Rey 一起練習迴圈（Loop）
+            Sticker Art with Loops:
+              key: 使用迴圈（Loop）繪畫貼紙藝術
+              name: 使用迴圈（Loop）繪畫貼紙藝術
+            Nested Loops in Maze:
+              key: 迷宮裡的巢狀迴圈（Nested Loops）
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
+            Snowflakes with Anna and Elsa:
+              key: 和安娜與艾莎一同玩雪花
+              name: 和安娜與艾莎一同玩雪花
+            If/Else with Bee:
+              key: 與小蜜蜂一起嘗試 If/Else（如果/否則）
+              name: 與小蜜蜂一起嘗試 If/Else（如果/否則）
+            While Loops with the Farmer:
+              key: 與農夫一起嘗試 while（當）迴圈
+              name: 與農夫一起嘗試 while（當）迴圈
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Minecraft 中的條件式：水上巡航 '
+              name: 'Minecraft 中的條件式：水上巡航 '
+            Until Loops in Maze:
+              key: 迷宮裡的 until（直到）迴圈
+              name: 迷宮裡的 until（直到）迴圈
+            Harvesting with Conditionals:
+              key: 使用條件式（Conditional）收割農作物
+              name: 使用條件式（Conditional）收割農作物
+            Functions in Minecraft:
+              key: Minecraft 中的函式
+              name: Minecraft 中的函式
+            Functions with Harvester:
+              key: 在收割者遊戲中學習函式（Function）
+              name: 在收割者遊戲中學習函式（Function）
+            Functions with Artist:
+              key: 在藝術家遊戲中使用函式（Function）
+              name: 在藝術家遊戲中使用函式（Function）
+            Variables with Artist:
+              key: 在藝術家遊戲中學習變數
+              name: 在藝術家遊戲中學習變數
+            Changing Variables with Bee:
+              key: 在蜜蜂遊戲中變更變數
+              name: 在蜜蜂遊戲中變更變數
+            Changing Variables with Artist:
+              key: 在藝術家遊戲中變更變數
+              name: 在藝術家遊戲中變更變數
+            For Loops with Bee:
+              key: 與蜜蜂一起嘗試 for（計數）迴圈
+              name: 與蜜蜂一起嘗試 for（計數）迴圈
+            For Loops with Artist:
+              key: 藝術家中的計數迴圈（For Loops）
+              name: 藝術家中的計數迴圈（For Loops）
+            Swimming Fish in Sprite Lab:
+              key: Sprite Lab 中的游泳小魚
+              name: Sprite Lab 中的游泳小魚
+            Alien Dance Party:
+              key: 外星人舞蹈派對
+              name: 外星人舞蹈派對
+            Behaviors in Sprite Lab:
+              key: Sprite Lab 的行為（Behavior）
+              name: Sprite Lab 的行為（Behavior）
+            Virtual Pet with Sprite Lab:
+              key: 在 Sprite Lab 中製作虛擬寵物
+              name: 在 Sprite Lab 中製作虛擬寵物
+            End of Course Project:
+              key: 課程結束專案
+              name: 課程結束專案
+          lesson_groups:
+            csf_warmup:
+              display_name: 熱身
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csf_functions:
+              display_name: 函式
+            csf_variables:
+              display_name: 變數
+            csf_for_loops:
+              display_name: 計次迴圈（For Loops）
+            csf_sprites:
+              display_name: 角色
+            end_of_course_project:
+              display_name: 課程結束專案
+        pre-express-2021:
+          title: 學前兒童的速學課程（2020）
+          description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_short: '為學前兒童提供的電腦科學簡介：結合我們的最佳幼稚園與一年級課程。'
+          description_audience: '年齡：4-8'
+          lessons:
+            Learn to Drag and Drop:
+              key: 學習滑鼠的拖放
+              name: 學習滑鼠的拖放
+            Sequencing with Scrat:
+              key: 和鼠奎特一起學序列
+              name: 和鼠奎特一起學序列
+            Programming with Rey and BB-8:
+              key: 和 BB-8 與 Rey 一起寫程式
+              name: 和 BB-8 與 Rey 一起寫程式
+            Programming in Harvester:
+              key: 和農夫一起學程式
+              name: 和農夫一起學程式
+            Loops with Scrat:
+              key: 和鼠奎特一起學迴圈（Loop）
+              name: 和鼠奎特一起學迴圈（Loop）
+            Loops with Laurel:
+              key: 與 Laurel 一起學習迴圈
+              name: 與 Laurel 一起學習迴圈
+            Ocean Scene with Loops:
+              key: 海洋場景與迴圈（Loop）
+              name: 海洋場景與迴圈（Loop）
+            Drawing Gardens with Loops:
+              key: 使用迴圈（Loop）在花園中繪畫
+              name: 使用迴圈（Loop）在花園中繪畫
+            On the Move with Events:
+              key: 讓事件活動起來
+              name: 讓事件活動起來
+            A Royal Battle with Events:
+              key: 以事件（Event）展開皇家大戰
+              name: 以事件（Event）展開皇家大戰
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
+        csf-2021-pilot:
+          lessons:
+            Learning Sprites with Sprite Lab:
+              name: Sprite Lab 中的游泳小魚
+            lesson-1:
+              name: 信封變數
+          lesson_groups:
+            ramp_up:
+              display_name: 介紹
+            lessonGroup-3:
+              display_name: 變數
