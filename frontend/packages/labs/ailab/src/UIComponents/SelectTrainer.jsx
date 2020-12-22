@@ -24,6 +24,7 @@ class SelectTrainer extends Component {
         <form>
           <label>
             <p>Which Machine Learning Algorithm would you like to use?</p>
+            <p>PICK ME!</p>
             <select
               value={this.props.selectedTrainer}
               onChange={this.handleChangeSelect}
