@@ -3099,7 +3099,9 @@
         "outbreak5": "Faça com que todos os monstros comecem a se recuperar quando um monstro saudável toca em um monstro doente.",
         "outbreak6": "Adicione uma chance percentual de o monstro adoecer sempre que um monstro saudável tocar em um monstro doente. Faça isto para todas as combinações de monstros, com e sem máscara.",
         "outbreak7": "Crie um novo traje para monstros com imunidade ao vírus e use-o na sua simulação.",
-        "outbreak8": "Compartilhe uma mensagem com a sua simulação."
+        "outbreak8": "Compartilhe uma mensagem com a sua simulação.",
+        "courseA_maze_ramp3b_2019": "Remova o último bloco da sequência arrastando-o para a caixa de ferramentas. Em seguida clique em \"Executar\".",
+        "courseA_maze_ramp3b_2020": "Remova o último bloco da sequência arrastando-o para a caixa de ferramentas. Em seguida clique em \"Executar\"."
       }
     }
   }
