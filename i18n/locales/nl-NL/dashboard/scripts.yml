@@ -4836,6 +4836,20 @@ nl:
             lesson group:
               display_name: weergavenaam
           description_audience: Intern
+        virustest:
+          title: Een uitbraak simuleren
+          description_short: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Een simulatie programmeren
+          lesson_groups:
+            outbreak:
+              display_name: Uitbraaksimulatie
+          title: Uitbraaksimulator
+          description_short: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+          description: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+          name: uitbraak
         2021drafting:
           description_audience: Intern
           description_short: Intern
@@ -5319,10 +5333,14 @@ nl:
               display_name: Gebeurtenissen
         csf-2021-pilot:
           lessons:
+            Virus Simulation for Code Bytes:
+              name: Een simulatie programmeren
             lesson-1:
               name: Envelop variabelen
           lesson_groups:
             ramp_up:
               display_name: Introductie
+            outbreak:
+              display_name: Uitbraaksimulatie
             lessonGroup-3:
               display_name: Variabelen
