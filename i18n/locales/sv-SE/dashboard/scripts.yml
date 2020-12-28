@@ -2989,6 +2989,20 @@ sv:
               name: Kurs A
             Course B:
               name: Kurs B
+        virustest:
+          title: Simulera ett utbrott
+          description_short: 'Använd Sprite Lab för att skapa en simulering av ett virusutbrott.'
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Koda en simulering
+          lesson_groups:
+            outbreak:
+              display_name: Utbrottssimulering
+          title: Utbrottssimulator
+          description_short: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
+          description: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
+          name: utbrott
         csd1-2021:
           lesson_groups:
             csd1_1:
@@ -3185,10 +3199,14 @@ sv:
               display_name: Händelser
         csf-2021-pilot:
           lessons:
+            Virus Simulation for Code Bytes:
+              name: Koda en simulering
             lesson-1:
               name: Envelope variabler
           lesson_groups:
             ramp_up:
               display_name: Introduktion
+            outbreak:
+              display_name: Utbrottssimulering
             lessonGroup-3:
               display_name: variabler
