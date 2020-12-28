@@ -1275,6 +1275,8 @@ zh-CN:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 当按左方向键时
+      gamelab_whenPromptAnswered:
+        text: 当[VAR][0]被回答
       gamelab_whenRightArrow:
         text: 当按右方向键时
       gamelab_whenTouching:
