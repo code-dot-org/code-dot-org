@@ -582,7 +582,11 @@ ur:
               name: سبق
         virustest:
           title: وباء کے پھیلنے کا سیمیولیشن
+          description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
         outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: ایک سیمولیشن کا کوڈ لکھنا
           lesson_groups:
             outbreak:
               display_name: وباء کی سیمولیشن
@@ -677,6 +681,8 @@ ur:
               display_name: ایونٹس/واقعات
         csf-2021-pilot:
           lessons:
+            Virus Simulation for Code Bytes:
+              name: ایک سیمولیشن کا کوڈ لکھنا
             lesson-1:
               name: لفافہ متغیرات
           lesson_groups:
