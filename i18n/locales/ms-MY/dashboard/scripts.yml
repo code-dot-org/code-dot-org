@@ -241,6 +241,8 @@ ms:
               name: Fungsi
             Variables:
               name: Pembolehubah
+            Sprites:
+              name: Jin
             Conditionals:
               name: Bersyarat
         grade2:
@@ -285,6 +287,12 @@ ms:
               name: Senarai
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
+        workshop-gamelab:
+          lessons:
+            Sprites:
+              name: Jin
+            Input:
+              name: Input
         coursee-ramp:
           lessons:
             Conditionals:
@@ -301,6 +309,8 @@ ms:
           lessons:
             Variables:
               name: Pembolehubah
+            Sprites:
+              name: Jin
             Conditionals:
               name: Bersyarat
             Functions:
@@ -317,6 +327,8 @@ ms:
           lessons:
             Variables:
               name: Pembolehubah
+            Sprites:
+              name: Jin
             Conditionals:
               name: Bersyarat
             Functions:
@@ -361,6 +373,8 @@ ms:
           lessons:
             Variables:
               name: Pembolehubah
+            Sprites:
+              name: Jin
             Conditionals:
               name: Bersyarat
             Functions:
@@ -369,6 +383,8 @@ ms:
           lessons:
             Variables:
               name: Pembolehubah
+            Sprites:
+              name: Jin
             Conditionals:
               name: Bersyarat
             Functions:
@@ -445,6 +461,8 @@ ms:
               display_name: Pembolehubah
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Jin
           lessons:
             The Artist:
               name: Pelukis
@@ -471,6 +489,8 @@ ms:
               name: Majlis Tari-Menari
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Jin
             csf_functions:
               display_name: Fungsi
           lessons:
@@ -486,6 +506,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pembolehubah
+            csf_sprites:
+              display_name: Jin
           lessons:
             Relay Programming:
               name: Pengaturcaraan penyampai
@@ -535,6 +557,8 @@ ms:
           lessons:
             Variables:
               name: Pembolehubah
+            Sprites:
+              name: Jin
             Conditionals:
               name: Bersyarat
             Functions:
@@ -557,6 +581,10 @@ ms:
               name: Menghantar nombor
             The Internet:
               name: Internet
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Jin
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -637,6 +665,8 @@ ms:
           lessons:
             Variables:
               name: Pembolehubah
+            Sprites:
+              name: Jin
             Conditionals:
               name: Bersyarat
             Functions:
@@ -689,6 +719,8 @@ ms:
               display_name: Bersyarat
             csf_events:
               display_name: Acara-acara
+            csf_sprites:
+              display_name: Jin
           lessons:
             Conditionals:
               name: Bersyarat
@@ -700,6 +732,8 @@ ms:
               display_name: Bersyarat
             csf_events:
               display_name: Acara-acara
+            csf_sprites:
+              display_name: Jin
           lessons:
             Conditionals:
               name: Bersyarat
@@ -731,6 +765,8 @@ ms:
               name: Fungsi
             Text:
               name: teks
+            Sprites:
+              name: Jin
         coursea-2020:
           lesson_groups:
             csf_loops:
@@ -769,12 +805,16 @@ ms:
               name: Majlis Tari-Menari
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Jin
             csf_functions:
               display_name: Fungsi
         coursef-2020:
           lesson_groups:
             csf_variables:
               display_name: Pembolehubah
+            csf_sprites:
+              display_name: Jin
           lessons:
             Internet:
               name: Internet
@@ -788,6 +828,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pembolehubah
+            csf_sprites:
+              display_name: Jin
           lessons:
             Dance Party:
               name: Majlis Tari-Menari
@@ -830,17 +872,36 @@ ms:
           lessons:
             Variables:
               name: Pembolehubah
+            Sprites:
+              name: Jin
             Text:
               name: teks
             Conditionals:
               name: Bersyarat
             Functions:
               name: Fungsi
+        virustest:
+          title: Mensimulasikan Wabak
+          description_short: 'Gunakan Makmal Jin untuk mencipta simulasi wabak virus.'
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Mengekod Simulasi
+          lesson_groups:
+            outbreak:
+              display_name: Simulasi Wabak
+          title: Simulator Wabak
+          description_short: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
+          description: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
+          name: wabak
         csd3-2021:
           lessons:
             Variables:
               key: Pembolehubah
               name: Pembolehubah
+            Sprites:
+              key: Jin
+              name: Jin
             Text:
               key: teks
               name: teks
@@ -912,6 +973,8 @@ ms:
             Conditionals:
               key: Bersyarat
           lesson_groups:
+            csf_sprites:
+              display_name: Jin
             csf_functions:
               display_name: Fungsi
         coursef-2021:
@@ -922,6 +985,8 @@ ms:
           lesson_groups:
             csf_variables:
               display_name: Pembolehubah
+            csf_sprites:
+              display_name: Jin
         express-2021:
           lessons:
             Dance Party:
@@ -936,6 +1001,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pembolehubah
+            csf_sprites:
+              display_name: Jin
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -943,6 +1010,11 @@ ms:
             csf_events:
               display_name: Acara-acara
         csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Mengekod Simulasi
           lesson_groups:
+            outbreak:
+              display_name: Simulasi Wabak
             lessonGroup-3:
               display_name: Pembolehubah
