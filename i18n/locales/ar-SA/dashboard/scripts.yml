@@ -15085,12 +15085,26 @@ ar:
               name: الدورة B
             CS Discoveries:
               name: اكتشافات علوم الكمبيوتر
+        virustest:
+          title: محاكاة الانتشار
+          description_short: 'استخدم Sprite Lab لبرمجة محاكاة من انتشار فيروس. '
         ml-playground:
           lessons:
             AI for Oceans:
               name: الذكاء الاصطناعي للمحيطات
             visualizing:
               name: تمثيل البيانات في رسوم مرئية
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: برمجة محاكاة
+          lesson_groups:
+            outbreak:
+              display_name: محاكاة الانتشار
+          title: محاكي الانتشار
+          description_short: 'استخدم Sprite Lab لبرمجة محاكاة من انتشار فيروس.'
+          description: 'استخدم Sprite Lab لبرمجة محاكاة من انتشار فيروس.'
+          name: الانتشار
         csd1-2021:
           title: استكشافات علوم الكمبيوتر (CSD) الوحدة 1 - حل المشكلات والحوسبة
           description: "حل المشكلات والحوسبة مقدمة تفاعلية وتعاونية للغاية في مجال علوم الكمبيوتر، كما تم تأطيرها ضمن السعي الأوسع لحل المشكلات. سوف تتدرب على استخدام عملية حل المشكلات للتعامل مع سلسلة من الألغاز والتحديات وسيناريوهات العالم الحقيقي. بعد ذلك، ستتعلم كيف تقوم أجهزة الكمبيوتر بإدخال المعلومات وإخراجها وتخزينها ومعالجتها لمساعدة البشر على حل المشكلات. تختتم الوحدة بمشروع تقوم فيه بتصميم تطبيق يساعد على حل مشكلة من اختيارك.\\r"
@@ -16435,10 +16449,14 @@ ar:
           lessons:
             Learning Sprites with Sprite Lab:
               name: السمكة السبّاحة في مختبر النقوش المتحركة
+            Virus Simulation for Code Bytes:
+              name: برمجة محاكاة
             lesson-1:
               name: المتغيرات المغلف
           lesson_groups:
             ramp_up:
               display_name: مقدمة
+            outbreak:
+              display_name: محاكاة الانتشار
             lessonGroup-3:
               display_name: المتغيرات
