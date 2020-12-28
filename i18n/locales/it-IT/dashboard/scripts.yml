@@ -7489,7 +7489,7 @@ it:
           title: Simulazione dell'epidemia
           description_short: 'Usa Sprite Lab per programmare la simulazione di un''epidemia di virus.'
           description: 'Usa Sprite Lab per programmare la simulazione di un''epidemia di virus.'
-          name: Epidemia
+          name: epidemia
         csd1-2021:
           lessons:
             The Problem Solving Process:
