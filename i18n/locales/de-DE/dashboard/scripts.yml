@@ -17257,7 +17257,9 @@ de:
               name: CS Entdeckungen
           description: '[empty string]'
         virustest:
+          title: Simulieren eines Ausbruchs
           description_audience: '[empty string]'
+          description_short: 'Entwickle mit Sprite Lab die Simulation eines Virenausbruchs. '
           description: '[empty string]'
         ml-playground:
           lessons:
@@ -17267,7 +17269,17 @@ de:
               name: Datensätze anzeigen
           description_audience: '[empty string]'
         outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Programmierung einer Simulation
+          lesson_groups:
+            outbreak:
+              display_name: Ausbruchssimulation
+          title: Ausbruch-Simulator
           description_audience: '[empty string]'
+          description_short: 'Programmiere mit Sprite Lab die Simulation eines Virenausbruchs. '
+          description: 'Programmiere mit Sprite Lab die Simulation eines Virenausbruchs. '
+          name: Ausbruch
         apps-for-good:
           description_audience: '[empty string]'
           description_short: '[empty string]'
@@ -18671,10 +18683,14 @@ de:
           lessons:
             Learning Sprites with Sprite Lab:
               name: Schwimmende Fische mit Sprite Lab.
+            Virus Simulation for Code Bytes:
+              name: Programmierung einer Simulation
             lesson-1:
               name: Umschlag-Variablen
           lesson_groups:
             ramp_up:
               display_name: Einführung
+            outbreak:
+              display_name: Ausbruchssimulation
             lessonGroup-3:
               display_name: Variablen
