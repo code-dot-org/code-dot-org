@@ -6834,12 +6834,26 @@ vi:
           lesson_groups:
             lg_1:
               display_name: Nội dung
+        virustest:
+          title: Mô phỏng dịch bệnh bùng phát
+          description_short: 'Hãy sử dụng Sprite Lab để tạo ra bản mô phỏng dịch bệnh bùng phát vi rút.'
         ml-playground:
           lessons:
             AI for Oceans:
               name: Trí Tuệ Nhân Tạo cho Đại Dương
             visualizing:
               name: Làm dự liệu hiển thị được
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Lập trình mô phỏng
+          lesson_groups:
+            outbreak:
+              display_name: Mô phỏng dịch bệnh bùng phát
+          title: Trình mô phỏng dịch bệnh bùng phát
+          description_short: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
+          description: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
+          name: dịch bệnh bùng phát
         csd1-2021:
           lessons:
             CS Discoveries Pre-survey:
@@ -7188,10 +7202,14 @@ vi:
               display_name: Các sự kiện
         csf-2021-pilot:
           lessons:
+            Virus Simulation for Code Bytes:
+              name: Lập trình mô phỏng
             lesson-1:
               name: Các biến phong bì
           lesson_groups:
             ramp_up:
               display_name: Giới thiệu
+            outbreak:
+              display_name: Mô phỏng dịch bệnh bùng phát
             lessonGroup-3:
               display_name: Các biến
