@@ -1332,6 +1332,21 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosgandan so'ng u qaysi rasmni yaratadi?
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
@@ -1346,6 +1361,21 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosgandan so'ng u qaysi rasmni yaratadi?
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
@@ -1360,6 +1390,21 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosgandan so'ng u qaysi rasmni yaratadi?
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
@@ -1374,6 +1419,21 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosgandan so'ng u qaysi rasmni yaratadi?
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -1391,6 +1451,13 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosganingizda ushbu dastur qaysi rasmni chiqaradi?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -1408,6 +1475,13 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosganingizda ushbu dastur qaysi rasmni chiqaradi?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
@@ -1425,6 +1499,13 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosganingizda ushbu dastur qaysi rasmni chiqaradi?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
@@ -1442,6 +1523,13 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosganingizda ushbu dastur qaysi rasmni chiqaradi?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: 'Asalari bulutga o''tib, nima bo''lishidan qat''i nazar, nektar olishga
@@ -1825,36 +1913,72 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
+        markdown: |-
+          Ushbu jumboqdagi o'simliklar yo makkajo'xori yoki karam bo'ladi.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: O'rim-yig'imchi barcha hosilni yig'ib oladi.
-        - {}
-        - correct: true
+          feedback: Noto'g'ri. Bu yerda oshqovoqni yig'ish uchun kod yo'q.
+        - text: Terimchi o'zi olgan yo'l bilan biron hosilni yig'maydi.
+          feedback: Noto'g'ri. Kod terimchini zinapoya naqshida bir necha marotaba
+            o'tkazib, u duch kelganicha makkajo'xori yoki karam yig'ib beradi. U oshqovoqni
+            olmaydi.
+        - text: Terimchi oshqovoqdan tashqari barcha hosilni yig'ib oladi.
+          correct: true
           feedback: To‘g’ri!
         - text: Men bilmayman
+          feedback: Kod terimchini zinapoya naqshida bir necha marotaba o'tkazib,
+            u duch kelganicha makkajo'xori yoki karam yig'diradi. Terimchi oshqovoqni
+            olmaydi.
         questions:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
+        markdown: |-
+          Ushbu jumboqdagi o'simliklar yo makkajo'xori yoki karam bo'ladi.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - text: O'rim-yig'imchi barcha hosilni yig'ib oladi.
-        - {}
-        - correct: true
+          feedback: Noto'g'ri. Bu yerda oshqovoqni yig'ish uchun kod yo'q.
+        - text: Terimchi o'zi olgan yo'l bilan biron hosilni yig'maydi.
+          feedback: Noto'g'ri. Kod terimchini zinapoya naqshida bir necha marotaba
+            o'tkazib, u duch kelganicha makkajo'xori yoki karam yig'ib beradi. U oshqovoqni
+            olmaydi.
+        - text: Terimchi oshqovoqdan tashqari barcha hosilni yig'ib oladi.
+          correct: true
           feedback: To‘g’ri!
         - text: Men bilmayman
+          feedback: Kod terimchini zinapoya naqshida bir necha marotaba o'tkazib,
+            u duch kelganicha makkajo'xori yoki karam yig'diradi. Terimchi oshqovoqni
+            olmaydi.
         questions:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
+        markdown: |-
+          Ushbu jumboqdagi o'simliklar yo makkajo'xori yoki karam bo'ladi.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
         - text: O'rim-yig'imchi barcha hosilni yig'ib oladi.
-        - {}
-        - correct: true
+          feedback: Noto'g'ri. Bu yerda oshqovoqni yig'ish uchun kod yo'q.
+        - text: Terimchi o'zi olgan yo'l bilan biron hosilni yig'maydi.
+          feedback: Noto'g'ri. Kod terimchini zinapoya naqshida bir necha marotaba
+            o'tkazib, u duch kelganicha makkajo'xori yoki karam yig'ib beradi. U oshqovoqni
+            olmaydi.
+        - text: Terimchi oshqovoqdan tashqari barcha hosilni yig'ib oladi.
+          correct: true
           feedback: To‘g’ri!
         - text: Men bilmayman
+          feedback: Kod terimchini zinapoya naqshida bir necha marotaba o'tkazib,
+            u duch kelganicha makkajo'xori yoki karam yig'diradi. Terimchi oshqovoqni
+            olmaydi.
         questions:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
+        markdown: |-
+          Ushbu jumboqdagi o'simliklar yo makkajo'xori yoki karam bo'ladi.
+          <br/>
       courseD_multi_farmer_ramp13:
         answers:
         - text: Dehqon yo'lning oxirigacha yurib, oshqovoqni yig'ib oladi.
@@ -2034,34 +2158,55 @@ uz-UZ:
             bosgandan so'ng nima bo'ladi?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - correct: true
+        - text: Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga yurib qoladi.
+          correct: true
           feedback: To‘g’ri!
         - text: Zombi kungaboqarga yetib boradi.
+          feedback: Noto'g'ri. Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
+            yurib qoladi.
         - text: Zombi birinchi yo‘lda o‘ng tomonga buriladi va abadiy aylana bo‘ylab
             yuradi.
+          feedback: Noto'g'ri. Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
+            yurib qoladi.
         - text: Men bilmayman
+          feedback: Bu kodda Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
+            yurib qoladi.
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga yurib qoladi.
+          correct: true
           feedback: To‘g’ri!
         - text: Zombi kungaboqarga yetib boradi.
+          feedback: Noto'g'ri. Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
+            yurib qoladi.
         - text: Zombi birinchi yo‘lda o‘ng tomonga buriladi va abadiy aylana bo‘ylab
             yuradi.
+          feedback: Noto'g'ri. Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
+            yurib qoladi.
         - text: Men bilmayman
+          feedback: Bu kodda Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
+            yurib qoladi.
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga yurib qoladi.
+          correct: true
           feedback: To‘g’ri!
         - text: Zombi kungaboqarga yetib boradi.
+          feedback: Noto'g'ri. Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
+            yurib qoladi.
         - text: Zombi birinchi yo‘lda o‘ng tomonga buriladi va abadiy aylana bo‘ylab
             yuradi.
+          feedback: Noto'g'ri. Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
+            yurib qoladi.
         - text: Men bilmayman
+          feedback: Bu kodda Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
+            yurib qoladi.
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
@@ -2155,196 +2300,366 @@ uz-UZ:
             son‘g nima sodir bo‘ladi deb oylasiz?
       courseE_multi_bee_functions_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: The same program will work to solve this puzzle, too.
+          correct: true
+          feedback: Correct!  It doesn't matter that there is a different amount of
+            honey. The function is programmed to handle that.
+        - text: The bee won't make enough honey.
+          feedback: Incorrect. The function is programmed to handle any amount of
+            honey over 0.
+        - text: The bee will try to make too much honey.
+          feedback: Incorrect. The function is programmed to handle any amount of
+            honey over 0.
         - text: Men bilmayman
+          feedback: The program will work to solve this puzzle, too. It is programmed
+            to handle any amount of honey over 0.
         questions:
-        - {}
+        - text: Here is the exact same program from the last puzzle, but the amount
+            of honey to collect in this puzzle has changed. What will happen when
+            you click "Run"?
       courseE_multi_farmer_functions11_predict:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: The harvester will pick two pumpkins.
+          feedback: Incorrect.  The harvester does not call "check and pick" until
+            she gets to the corn.
+        - text: The harvester will pick all of the pumpkins.
+          feedback: Incorrect.  The harvester does not call "check and pick" until
+            she gets to the corn.
+        - text: The harvester will pick the lettuce.
+          feedback: Incorrect. The harvester only makes one turn, and ends at the
+            corn.
+        - text: The harvester will pick the corn.
+          correct: true
           feedback: To‘g’ri!
         questions:
-        - {}
+        - text: Look at the functions defined below. What will the harvester pick?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: The harvester will pick two pumpkins.
+        - text: The harvester will pick all of the pumpkins.
+        - text: The harvester will pick the lettuce.
+          correct: true
           feedback: To‘g’ri!
-        - {}
+        - text: The harvester will pick the corn.
         questions:
-        - {}
+        - text: Look at the functions defined below. What will the harvester pick?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: The harvester will pick two pumpkins.
+        - text: The harvester will pick all of the pumpkins.
+        - text: The harvester will pick the lettuce.
+          correct: true
           feedback: To‘g’ri!
-        - {}
+        - text: The harvester will pick the corn.
         questions:
-        - {}
+        - text: Look at the functions defined below. What will the harvester pick?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: The harvester will pick two pumpkins.
+        - text: The harvester will pick all of the pumpkins.
+        - text: The harvester will pick the lettuce.
+          correct: true
           feedback: To‘g’ri!
-        - {}
+        - text: The harvester will pick the corn.
         questions:
-        - {}
+        - text: Look at the functions defined below. What will the harvester pick?
       courseE_prediction_artistFunction1:
         answers:
-        - {}
+        - text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
+          feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
         - text: Rassom bitta kvadrat chizadi.
-        - {}
-        - correct: true
+          feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
+        - text: Rassom bir-biri ustidan ikkita kvadratni chizadi.
+          feedback: Noto'g'ri. Kvadratning har bir tomonining uzunligi atigi 100 pikselni
+            tashkil etadi, ammo rassom funksiyalar orasida 175 pikselga sakrab chiqadi.
+        - text: Rassom ikkita kvadratni o'rtada kichik bo'shliq bilan chizadi.
+          correct: true
+          feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
+            sakrash mavjud.
         questions:
-        - {}
+        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
       courseE_prediction_artistFunction1_2018:
         answers:
-        - {}
+        - text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
+          feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
         - text: Rassom bitta kvadrat chizadi.
-        - {}
-        - correct: true
+          feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
+        - text: Rassom bir-biri ustidan ikkita kvadratni chizadi.
+          feedback: Noto'g'ri. Kvadratning har bir tomonining uzunligi atigi 100 pikselni
+            tashkil etadi, ammo rassom funksiyalar orasida 175 pikselga sakrab chiqadi.
+        - text: Rassom ikkita kvadratni o'rtada kichik bo'shliq bilan chizadi.
+          correct: true
+          feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
+            sakrash mavjud.
         questions:
-        - {}
+        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - {}
+        - text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
+          feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
         - text: Rassom bitta kvadrat chizadi.
-        - {}
-        - correct: true
+          feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
+        - text: Rassom bir-biri ustidan ikkita kvadratni chizadi.
+          feedback: Noto'g'ri. Kvadratning har bir tomonining uzunligi atigi 100 pikselni
+            tashkil etadi, ammo rassom funksiyalar orasida 175 pikselga sakrab chiqadi.
+        - text: Rassom ikkita kvadratni o'rtada kichik bo'shliq bilan chizadi.
+          correct: true
+          feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
+            sakrash mavjud.
         questions:
-        - {}
+        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
-        - {}
+        - text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
+          feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
         - text: Rassom bitta kvadrat chizadi.
-        - {}
-        - correct: true
+          feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
+        - text: Rassom bir-biri ustidan ikkita kvadratni chizadi.
+          feedback: Noto'g'ri. Kvadratning har bir tomonining uzunligi atigi 100 pikselni
+            tashkil etadi, ammo rassom funksiyalar orasida 175 pikselga sakrab chiqadi.
+        - text: Rassom ikkita kvadratni o'rtada kichik bo'shliq bilan chizadi.
+          correct: true
+          feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
+            sakrash mavjud.
         questions:
-        - {}
+        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
       courseE_prediction_artistFunction1_copy:
         answers:
-        - {}
+        - text: Nothing. The function is not called in the program.
+          feedback: Incorrect. The function is actually called two times in the program.
         - text: Rassom bitta kvadrat chizadi.
-        - {}
-        - correct: true
+          feedback: Incorrect. The function is actually called two times in the program.
+        - text: The artist will draw two squares that overlap.
+          feedback: Incorrect. The length of each side of the square is only 100 pixels,
+            but the artist jumps by 175 pixels between functions.
+        - text: The artist will draw two squares with a small gap in between.
+          correct: true
+          feedback: Correct! The function is called two times in the program, with
+            a jump in between.
         questions:
-        - {}
+        - text: What will happen when you press "Run"?
       courseF_bee_variables_8a_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Asalari nektar yig'maydi, chunki o'zgaruvchi nomi "yig'ish" emas.
+          feedback: Noto'g'ri. O'zgaruvchining nomi uning qiymatiga ta'sir qilmaydi.
+        - text: Asalari faqat 2 ta nektar yig'adi.
+          correct: true
           feedback: To‘g’ri!
-        - {}
+        - text: Asalari nektarning hammasini yig'adi.
+          feedback: Noto'g'ri. So'nggi ikkita funksiya chaqirilishidan oldin o'zgaruvchi
+            qaytadan 0 ga tenglashtiriladi.
         - text: Men bilmayman
+          feedback: So'nggi ikkita funksiya chaqirilishidan oldin o'zgaruvchi 0 ga
+            tenglashtiriladi, unda har safar 1 qo'shiladi. Keyin asalari 2 ta nektar
+            birligini to'playdi.
         questions:
-        - {}
+        - text: Quyidagi kodga qarang. Oxirida asalari nechta nektar birligini yig'adi?
+        title: Bee Variables Multi
       courseF_bee_variables_8a_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Asalari nektar yig'maydi, chunki o'zgaruvchi nomi "yig'ish" emas.
+          feedback: Noto'g'ri. O'zgaruvchining nomi uning qiymatiga ta'sir qilmaydi.
+        - text: Asalari faqat 2 ta nektar yig'adi.
+          correct: true
           feedback: To‘g’ri!
-        - {}
+        - text: Asalari nektarning hammasini yig'adi.
+          feedback: Noto'g'ri. So'nggi ikkita funksiya chaqirilishidan oldin o'zgaruvchi
+            qaytadan 0 ga tenglashtiriladi.
         - text: Men bilmayman
+          feedback: So'nggi ikkita funksiya chaqirilishidan oldin o'zgaruvchi 0 ga
+            tenglashtiriladi, unda har safar 1 qo'shiladi. Keyin asalari 2 ta nektar
+            birligini to'playdi.
         questions:
-        - {}
+        - text: Quyidagi kodga qarang. Oxirida asalari nechta nektar birligini yig'adi?
+        title: Bee Variables Multi
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: Asalari nektar yig'maydi, chunki o'zgaruvchi nomi "yig'ish" emas.
+          feedback: Noto'g'ri. O'zgaruvchining nomi uning qiymatiga ta'sir qilmaydi.
+        - text: Asalari faqat 2 ta nektar yig'adi.
+          correct: true
           feedback: To‘g’ri!
-        - {}
+        - text: Asalari nektarning hammasini yig'adi.
+          feedback: Noto'g'ri. So'nggi ikkita funksiya chaqirilishidan oldin o'zgaruvchi
+            qaytadan 0 ga tenglashtiriladi.
         - text: Men bilmayman
+          feedback: So'nggi ikkita funksiya chaqirilishidan oldin o'zgaruvchi 0 ga
+            tenglashtiriladi, unda har safar 1 qo'shiladi. Keyin asalari 2 ta nektar
+            birligini to'playdi.
         questions:
-        - {}
+        - text: Quyidagi kodga qarang. Oxirida asalari nechta nektar birligini yig'adi?
+        title: Bee Variables Multi
       courseF_multi_artist_for10_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: The artist will draw a straight line that increases in thickness from
+            one side of the play space to the other.
+          feedback: Incorrect. The artist turns between iterations of the `for` loop.
+        - text: 'The artist will draw a spiral and each time through the `for` loop,
+            the line gets longer and thinner. '
+          feedback: Incorrect. Each time through the `for` loop, the artist draws
+            a longer line that is also thicker.
+        - text: The artist will draw a spiral and each time through the `for` loop,
+            the line gets longer and thicker.
+          correct: true
           feedback: To‘g’ri!
         - text: Men bilmayman
+          feedback: Incorrect. Each time through the `for` loop, the artist draws
+            a longer line that is also thicker.
         questions:
         - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        markdown: Ushbu rasmda cho'tka kengligini o'zgartirish uchun biz "for" siklidagi
+          hisoblagichni ishlatdik.
       courseF_multi_artist_for10_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: The artist will draw a straight line that increases in thickness from
+            one side of the play space to the other.
+          feedback: Incorrect. The artist turns between iterations of the `for` loop.
+        - text: 'The artist will draw a spiral and each time through the `for` loop,
+            the line gets longer and thinner. '
+          feedback: Incorrect. Each time through the `for` loop, the artist draws
+            a longer line that is also thicker.
+        - text: The artist will draw a spiral and each time through the `for` loop,
+            the line gets longer and thicker.
+          correct: true
           feedback: To‘g’ri!
         - text: Men bilmayman
+          feedback: Incorrect. Each time through the `for` loop, the artist draws
+            a longer line that is also thicker.
         questions:
         - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        markdown: Ushbu rasmda cho'tka kengligini o'zgartirish uchun biz "for" siklidagi
+          hisoblagichni ishlatdik.
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: The artist will draw a straight line that increases in thickness from
+            one side of the play space to the other.
+          feedback: Incorrect. The artist turns between iterations of the `for` loop.
+        - text: 'The artist will draw a spiral and each time through the `for` loop,
+            the line gets longer and thinner. '
+          feedback: Incorrect. Each time through the `for` loop, the artist draws
+            a longer line that is also thicker.
+        - text: The artist will draw a spiral and each time through the `for` loop,
+            the line gets longer and thicker.
+          correct: true
           feedback: To‘g’ri!
         - text: Men bilmayman
+          feedback: Incorrect. Each time through the `for` loop, the artist draws
+            a longer line that is also thicker.
         questions:
         - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        markdown: Ushbu rasmda cho'tka kengligini o'zgartirish uchun biz "for" siklidagi
+          hisoblagichni ishlatdik.
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: The artist will draw a straight line that increases in thickness from
+            one side of the play space to the other.
+          feedback: Incorrect. The artist turns between iterations of the `for` loop.
+        - text: 'The artist will draw a spiral and each time through the `for` loop,
+            the line gets longer and thinner. '
+          feedback: Incorrect. Each time through the `for` loop, the artist draws
+            a longer line that is also thicker.
+        - text: The artist will draw a spiral and each time through the `for` loop,
+            the line gets longer and thicker.
+          correct: true
           feedback: To‘g’ri!
         - text: Men bilmayman
+          feedback: Incorrect. Each time through the `for` loop, the artist draws
+            a longer line that is also thicker.
         questions:
         - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        markdown: Ushbu rasmda cho'tka kengligini o'zgartirish uchun biz "for" siklidagi
+          hisoblagichni ishlatdik.
       courseF_multi_artist_fwp2_predict1:
         answers:
-        - correct: true
+        - text: The artist will use the same function to draw two different sized
+            boxes.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: The artist will use two different functions to draw two different
+            sized boxes.
+          feedback: Incorrect.  Using parameters lets you use a single function to
+            create different outcomes.
+        - text: The artist will use two different functions to draw the same sized
+            box twice.
+          feedback: Incorrect.  Using parameters lets you use a single function to
+            create different outcomes.
         - text: Men bilmayman
+          feedback: The program uses parameters to allow a single function to create
+            two different size boxes.
         questions:
-        - {}
+        - text: What will happen when you run this program?
+        markdown: |+
+          We have added parameters to the 'draw a square' function.  Click the blue "edit" button to see the entire function definition.
+
+
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - correct: true
+        - text: The artist will draw a triangle with 50 pixel sides.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: The artist will draw a 50-sided polygon with 3 pixel sides.
+          feedback: Incorrect. The variable `length` would need to be in the `repeat`
+            loop for that to happen.
+        - text: The artist will draw three open sides with 50 degree turns.
+          feedback: Incorrect.  The `length` variable would need to be used in the
+            `turn` block for that to happen.
         - text: Men bilmayman
+          feedback: The `length` variable is set to 50 and is being used in the `move
+            forward by` block, so the artist will draw a triangle with 50 pixel sides.
         questions:
-        - {}
+        - text: We have set the variable "length" to 50. What will happen when you
+            click "Run"?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - correct: true
+        - text: The artist will draw a triangle with 50 pixel sides.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: The artist will draw a 50-sided polygon with 3 pixel sides.
+          feedback: Incorrect. The variable `length` would need to be in the `repeat`
+            loop for that to happen.
+        - text: The artist will draw three open sides with 50 degree turns.
+          feedback: Incorrect.  The `length` variable would need to be used in the
+            `turn` block for that to happen.
         - text: Men bilmayman
+          feedback: The `length` variable is set to 50 and is being used in the `move
+            forward by` block, so the artist will draw a triangle with 50 pixel sides.
         questions:
-        - {}
+        - text: We have set the variable "length" to 50. What will happen when you
+            click "Run"?
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - correct: true
+        - text: The artist will draw a triangle with 50 pixel sides.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: The artist will draw a 50-sided polygon with 3 pixel sides.
+          feedback: Incorrect. The variable `length` would need to be in the `repeat`
+            loop for that to happen.
+        - text: The artist will draw three open sides with 50 degree turns.
+          feedback: Incorrect.  The `length` variable would need to be used in the
+            `turn` block for that to happen.
         - text: Men bilmayman
+          feedback: The `length` variable is set to 50 and is being used in the `move
+            forward by` block, so the artist will draw a triangle with 50 pixel sides.
         questions:
-        - {}
+        - text: We have set the variable "length" to 50. What will happen when you
+            click "Run"?
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
-        - correct: true
+        - text: The artist will draw a triangle with 50 pixel sides.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: The artist will draw a 50-sided polygon with 3 pixel sides.
+          feedback: Incorrect. The variable `length` would need to be in the `repeat`
+            loop for that to happen.
+        - text: The artist will draw three open sides with 50 degree turns.
+          feedback: Incorrect.  The `length` variable would need to be used in the
+            `turn` block for that to happen.
         - text: Men bilmayman
+          feedback: The `length` variable is set to 50 and is being used in the `move
+            forward by` block, so the artist will draw a triangle with 50 pixel sides.
         questions:
-        - {}
+        - text: We have set the variable "length" to 50. What will happen when you
+            click "Run"?
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - text: 'Asalari bulutga o''tib, nima bo''lishidan qat''i nazar, nektar olishga
@@ -2363,106 +2678,210 @@ uz-UZ:
           feedback: '"If at flower" bloki asalari faqat bulut ostida gul bo''lsa,
             nektar olishga harakat qilishini ta''minlaydi.'
         questions:
-        - {}
+        - text: If there is not a flower the bee should do nothing. Take a good look
+            at the code below. What do you think will happen after you click "Run"?
+        markdown: "The cloud is blocking the view. There could be a flower under this
+          cloud. If there is a flower, the bee will need to collect nectar **once**.
+          \n"
       courseF_multi_bee_conditionals7_predict2:
         answers:
-        - correct: true
+        - text: The bee will get nectar at each flower, otherwise it will make honey.
+          correct: true
           feedback: To‘g’ri!
         - text: Asalarilar ham gullardan, ham asal uyasidan nektar olishga harakat
             qiladi.
+          feedback: Incorrect. The `if at flower` block lets the bee get nectar at
+            each flower and make honey if there's not a flower (therefore a honeycomb.).
         - text: Asalarilar asalni ham gullardan, ham asal qoliplaridan olishga harakat
             qiladi.
+          feedback: Incorrect. Incorrect. The `if at flower` block lets the bee get
+            nectar at each flower and honey at each honeycomb.
         - text: Men bilmayman
+          feedback: The `if at flower` block lets the bee get nectar at each flower,
+            otherwise it makes honey.
         questions:
-        - {}
+        - text: Look carefully at the code below. What do you think will happen after
+            you click "Run"?
+        markdown: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb!
+          Either way, there will only ever be **one** flower or **one** honeycomb
+          under each cloud. \n"
       courseF_multi_bee_for3_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: 'The bee will move forward and collect all of the nectar from every
+            flower. '
+          feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+        - text: The bee will move forward and collect all of the nectar from every
+            flower, except for one.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: 'The bee will move forward and collect one nectar from each flower. '
+          feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+        - text: 'The bee will move forward and try to collect more nectar than is
+            in the flowers. '
+          feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
         questions:
-        - {}
+        - text: Read the code below. What will happen when you click "Run"?
+        markdown: Ah! "For" siklidan foydalanish bu jumboqni ancha osonlashtiradi!
       courseF_multi_bee_for3_predict1_2018:
         answers:
-        - {}
-        - correct: true
+        - text: 'The bee will move forward and collect all of the nectar from every
+            flower. '
+          feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+        - text: The bee will move forward and collect all of the nectar from every
+            flower, except for one.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: 'The bee will move forward and collect one nectar from each flower. '
+          feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+        - text: 'Bilmayman. '
+          feedback: "`For` sikli asalariga kerakli miqdordagi nektar to'plashiga imkon
+            beradi, ammo u faqat 4 ta gulga yetishga sozlangan."
         questions:
-        - {}
+        - text: Read the code below. What will happen when you click "Run"?
+        markdown: Ah! "For" siklidan foydalanish bu jumboqni ancha osonlashtiradi!
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: 'The bee will move forward and collect all of the nectar from every
+            flower. '
+          feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+        - text: The bee will move forward and collect all of the nectar from every
+            flower, except for one.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: 'The bee will move forward and collect one nectar from each flower. '
+          feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+        - text: 'Bilmayman. '
+          feedback: "`For` sikli asalariga kerakli miqdordagi nektar to'plashiga imkon
+            beradi, ammo u faqat 4 ta gulga yetishga sozlangan."
         questions:
-        - {}
+        - text: Read the code below. What will happen when you click "Run"?
+        markdown: Ah! "For" siklidan foydalanish bu jumboqni ancha osonlashtiradi!
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: 'The bee will move forward and collect all of the nectar from every
+            flower. '
+          feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+        - text: The bee will move forward and collect all of the nectar from every
+            flower, except for one.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: 'The bee will move forward and collect one nectar from each flower. '
+          feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+        - text: 'Bilmayman. '
+          feedback: "`For` sikli asalariga kerakli miqdordagi nektar to'plashiga imkon
+            beradi, ammo u faqat 4 ta gulga yetishga sozlangan."
         questions:
-        - {}
+        - text: Read the code below. What will happen when you click "Run"?
+        markdown: Ah! "For" siklidan foydalanish bu jumboqni ancha osonlashtiradi!
       courseF_multi_bee_fwp9_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: The bee will not collect any nectar or honey.
+          feedback: Incorrect. The function is set to collect as many nectar or honey
+            as is passed through a parameter.
+        - text: 'The bee will collect three nectar or honey, then two nectar or honey
+            in a stair-step pattern. '
+          correct: true
+          feedback: Correct! The function is set to collect as many nectar or honey
+            as is passed through a parameter.
+        - text: 'The bee will collect only one nectar or honey in each iteration of
+            the loop. '
+          feedback: Incorrect.  The function is set to collect as many nectar or honey
+            as is passed through a parameter.
         - text: Men bilmayman
+          feedback: Clicking to look inside of the function shows that it is set to
+            collect as many nectar or honey as is passed through a parameter.
         questions:
         - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        markdown: |+
+          Underneath these clouds, there is either a flower with exactly 1 nectar, or a honeycomb with exactly 1 honey.  Click the blue "edit" button on the function to see what is inside before answering the question below.
+
+
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: The pirate would say, "Pleasure to meet you, Ali." and that is all.
+          correct: true
+          feedback: 'Correct. '
+        - text: The pirate would say, "Pleasure to meet you." and that is all.
+          feedback: Incorrect. Notice that the `join` block inserts the provided name
+            into the pirate's sentence.
+        - text: The pirate would say, "Ali" and that is all.
+          feedback: Incorrect. Notice that the `join` block inserts the provided name
+            into the pirate's sentence.
         - text: Men bilmayman
+          feedback: 'Incorrect. Notice that the `join` block inserts the provided
+            name (Ali) into the pirate''s sentence. '
         questions:
-        - {}
+        - text: What would happen if the user entered the name "Ali" at the prompt?
+        markdown: "**This puzzle uses a new block called the `ask` block.**\n\nThe
+          `ask` block stops the program and prompts the user to enter some text. \n\nWhatever
+          text the user enters is then saved to the variable shown at the end of the
+          `ask` block.  In this case, it's the variable `name`.\n"
       coursee_prediction_artistfunction2:
         answers:
-        - {}
-        - correct: true
+        - text: Rassom jumboqni to'g'ri yachadi.
+          feedback: Noto'g'ri. Siklda "ko'pburchaklar qatori" o'rniga "ko'pburchak
+            chizish" funksiyasi ishlatiladi.
+        - text: Rassom deraza naqshida to'rtta kvadrat chizadi.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: Rassom kvadratlarning faqat bitta qatorini chizadi.
+          feedback: Noto'g'ri. Dastur "ko'pburchaklar qatori" funksiyasini chaqirmaydi.
+        - text: Rassom to'rt kvadratni bir-birining ustiga chizadi.
+          feedback: Noto'g'ri. "Ko'pburchak chizish" chaqirishlari o'rtasida sikl
+            90 darajaga buriladi.
         questions:
-        - {}
+        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
       coursee_prediction_artistfunction2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: The artist will solve the puzzle correctly.
+          feedback: Incorrect. The loop uses "draw polygon" instead of "draw line
+            of polygons".
+        - text: The artist will draw four squares in a window pattern.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: The artist will draw only one line of squares.
+          feedback: Incorrect. The program does not call "draw line of polygons".
+        - text: The artist will draw four squares on top of one another.
+          feedback: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
         questions:
-        - {}
+        - text: What will happen when you press the "Run" button?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: The artist will solve the puzzle correctly.
+          feedback: Incorrect. The loop uses "draw polygon" instead of "draw line
+            of polygons".
+        - text: The artist will draw four squares in a window pattern.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: The artist will draw only one line of squares.
+          feedback: Incorrect. The program does not call "draw line of polygons".
+        - text: The artist will draw four squares on top of one another.
+          feedback: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
         questions:
-        - {}
+        - text: What will happen when you press the "Run" button?
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: The artist will solve the puzzle correctly.
+          feedback: Incorrect. The loop uses "draw polygon" instead of "draw line
+            of polygons".
+        - text: The artist will draw four squares in a window pattern.
+          correct: true
           feedback: To‘g’ri!
-        - {}
-        - {}
+        - text: The artist will draw only one line of squares.
+          feedback: Incorrect. The program does not call "draw line of polygons".
+        - text: The artist will draw four squares on top of one another.
+          feedback: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
         questions:
-        - {}
+        - text: What will happen when you press the "Run" button?
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel ushbu kod yordamida 4 ta xazina yig’adi.
@@ -2600,6 +3019,7 @@ uz-UZ:
           # Loyiha taqdimotlari
 
           Loyihalaringizni taqdim etish vaqti keldi! O'qituvchingiz ishingizni sinfdoshlaringizga qanday taqdim etishingiz haqida batafsilroq ma'lumot beradi.
+        content1: tafsilotlar bu yerda
       Prepare for your presentation_2018:
         markdown: |-
           # Loyiha taqdimotlari
@@ -2973,6 +3393,7 @@ uz-UZ:
 
 
           Tugatgandan so'ng, simulyatsiyangizni boshqalar bilan ulashing. Virus shaharga kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida xabaringizni ulashing.
+        content1: description here
       outbreak_story2:
         markdown: |-
           # Kasallik: Olim kabi fikrlash
@@ -3007,6 +3428,7 @@ uz-UZ:
           * Ehtimollar, immunitet, vaksinalar va boshqalar!
 
           Siz simulyatsiya modelingizni boshqalar bilan ulashishingiz yoki shaharga virus kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida dikr almashishingiz mumkin.
+        content1: description here
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Erishuvchanlik (Accessibility) uchun dizayn
@@ -3095,6 +3517,7 @@ uz-UZ:
           | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
           | Let's get creative with nested loops! | Let's get creative with functions! |
 
+        content1: Test Markdown darslik sahifasi
       OPD-K5 Vocabulary:
         markdown: |-
           # CS asoslari> Kalit so'zlar
@@ -3794,3 +4217,634 @@ uz-UZ:
           <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"> <button class="plc"> Rejangizni joylashtiring >> </button></a>
 
           Forumda sharh qoldirgandan so'ng, bu yerga qayting va davom etish uchun pastga bosing.
+      Begin planning your project:
+        content1: tafsilotlar bu yerda
+        markdown: "# Dizayn jarayoni\nDasturiy ta'minotni loyihalash hamisha ko'plab
+          mayda muammolarni hal qilishni anglatadi. Dasturiy ta'minotni loyihalashdagi
+          asosiy muammo nimadan boshlashni aniqlash.\n\nUshbu jarayon har narsada
+          foydalidir, ammo biz uni dasturlarni ishlab chiqishda ishlatishga e'tibor
+          qaratamiz.\n\n<!-- Translate the terms \"Define\", \"Prepare\", \"Try\",
+          \"Reflect\" and change font size and positioning as needed-->\n<div style=\"position:
+          relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Aniqlash</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Tayyorlanish</div>\n
+          \ <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Sinab ko'rish</div>\n  <div style=\"position: absolute;
+          top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">O'ylash</div>\n</div>\n\n*
+          ** Aniqlash **\n  * Siz qanday dastur yaratmoqchisiz?\n  * Sizni nimalar
+          cheklaydi?\n  * Muvaffaqiyat nimaga o'xshaydi?\n* ** Tayyorlash **\n  *
+          Brainstorm / mumkin bo'lgan elementlarni tadqiq qilish\n  * Ijobiy va salbiy
+          tomonlarini solishtirish\n  * Reja tuzish\n* ** Sinab ko'rish **\n  * Rejangizni
+          amalda qo'llang\n* ** O'ylash **\n  * Sizning natijalaringiz dasturni aniqlash
+          paytida qo'ygan maqsadlaringizga qanday mos keladi?\n  * Siz bundan nimani
+          o'rganishingiz yoki keyingi safar yaxshilashingiz mumkin?\n  * Siz qanday
+          yangi muammolarni topdingiz?\n\n# Bu nimaga o'xshaydi\nKeyingi bir necha
+          hafta mobaynida siz ba'zi mavjud o'yinlar bilan tajriba o'tkazish va o'zingiz
+          o'rgangan narsalar asosida o'z o'yiningizni loyihalashtirish imkoniyatiga
+          ega bo'lasiz. O'z o'yiningizni yaratgandan so'ng, uni boshqalarga taqdim
+          etish va fikr-mulohazalar olish imkoniyatiga ega bo'lasiz. Ushbu qadamlarning
+          barchasi dasturiy ta'minot sohasida juda muhimdir va dizayn jarayoni elementlari
+          bilan mashq qilish sizga yanada samarali mahsulotlarni yaratishda yordam
+          beradi.\n\nDizayn jarayoni haqida ko'proq bilib olsak, kelgusi haftalar
+          quyidagicha bo'ladi:\n\n1. ** Aniqlash va tayyorlanish **\n   * G'oyalarni
+          olish va cheklovlarni tushunish uchun mavjud o'yinlarni o'rganing\n   *
+          Brainstorm qiling va yangi yoki o'zgartirilgan dasturni rejalashtiring\n1.
+          ** Sinab ko'ring **\n   * Ilova yaratish rejangizga amal qiling\n1. ** O'ylash
+          va tahrirlash **\n   * Loyihalarni yaxshilash uchun ilovalarni boshqa guruh
+          bilan almashing\n1. ** Taqdim etish **\n   * Yakuniy mahsulotingizni namoyish
+          qiling!\n"
+      Begin planning your project_2018:
+        content1: tafsilotlar bu yerda
+        markdown: "# Dizayn jarayoni\nDasturiy ta'minotni loyihalash hamisha ko'plab
+          mayda muammolarni hal qilishni anglatadi. Dasturiy ta'minotni loyihalashdagi
+          asosiy muammo nimadan boshlashni aniqlash.\n\nUshbu jarayon har narsada
+          foydalidir, ammo biz uni dasturlarni ishlab chiqishda ishlatishga e'tibor
+          qaratamiz.\n\n<!-- Translate the terms \"Define\", \"Prepare\", \"Try\",
+          \"Reflect\" and change font size and positioning as needed-->\n<div style=\"position:
+          relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Aniqlash</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Tayyorlanish</div>\n
+          \ <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Sinab ko'rish</div>\n  <div style=\"position: absolute;
+          top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">O'ylash</div>\n</div>\n\n*
+          ** Aniqlash **\n  * Siz qanday dastur yaratmoqchisiz?\n  * Sizni nimalar
+          cheklaydi?\n  * Muvaffaqiyat nimaga o'xshaydi?\n* ** Tayyorlash **\n  *
+          Brainstorm / mumkin bo'lgan elementlarni tadqiq qilish\n  * Ijobiy va salbiy
+          tomonlarini solishtirish\n  * Reja tuzish\n* ** Sinab ko'rish **\n  * Rejangizni
+          amalda qo'llang\n* ** O'ylash **\n  * Sizning natijalaringiz dasturni aniqlash
+          paytida qo'ygan maqsadlaringizga qanday mos keladi?\n  * Siz bundan nimani
+          o'rganishingiz yoki keyingi safar yaxshilashingiz mumkin?\n  * Siz qanday
+          yangi muammolarni topdingiz?\n\n# Bu nimaga o'xshaydi\nKeyingi bir necha
+          hafta mobaynida siz ba'zi mavjud o'yinlar bilan tajriba o'tkazish va o'zingiz
+          o'rgangan narsalar asosida o'z o'yiningizni loyihalashtirish imkoniyatiga
+          ega bo'lasiz. O'z o'yiningizni yaratgandan so'ng, uni boshqalarga taqdim
+          etish va fikr-mulohazalar olish imkoniyatiga ega bo'lasiz. Ushbu qadamlarning
+          barchasi dasturiy ta'minot sohasida juda muhimdir va dizayn jarayoni elementlari
+          bilan mashq qilish sizga yanada samarali mahsulotlarni yaratishda yordam
+          beradi.\n\nDizayn jarayoni haqida ko'proq bilib olsak, kelgusi haftalar
+          quyidagicha bo'ladi:\n\n1. ** Aniqlash va tayyorlanish **\n   * G'oyalarni
+          olish va cheklovlarni tushunish uchun mavjud o'yinlarni o'rganing\n   *
+          Brainstorm qiling va yangi yoki o'zgartirilgan dasturni rejalashtiring\n1.
+          ** Sinab ko'ring **\n   * Ilova yaratish rejangizga amal qiling\n1. ** O'ylash
+          va tahrirlash **\n   * Loyihalarni yaxshilash uchun ilovalarni boshqa guruh
+          bilan almashing\n1. ** Taqdim etish **\n   * Yakuniy mahsulotingizni namoyish
+          qiling!\n"
+      Begin planning your project_2018_2019:
+        content1: tafsilotlar bu yerda
+      Begin planning your project_2018_2019_2020:
+        content1: tafsilotlar bu yerda
+      OPD-K5 Reviewing Reflections:
+        content1: description here
+      OPD-K5 Stage3aGo_copy:
+        content1: description here
+      OPD-K5 conditionals introduced:
+        content1: description here
+      OPD-K5 debugging:
+        content1: description here
+      OPD-K5 diving deeper intro:
+        content1: description here
+      OPD-K5 events introduced:
+        content1: description here
+      OPD-K5 for loops:
+        content1: description here
+      OPD-K5 for loops intro:
+        content1: description here
+      OPD-K5 for loops introduction:
+        content1: description here
+      OPD-K5 functions introduced:
+        content1: description here
+      OPD-K5 journaling:
+        content1: description here
+      OPD-K5 lesson implementation planning:
+        content1: description here
+      OPD-K5 lesson plans:
+        content1: description here
+      OPD-K5 loops introduced:
+        content1: description here
+      OPD-K5 project:
+        content1: description here
+      OPD-K5 projects introduction:
+        content1: description here
+      OPD-K5 role_of_teacher:
+        content1: description here
+      OPD-K5 sequencing introduced:
+        content1: description here
+      OPD-K5 sprite lab:
+        content1: description here
+      OPD-K5 sprite lab introduction:
+        content1: description here
+      OPD-K5 sprite lab unplugged:
+        content1: description here
+      OPD-K5 sprite lab video:
+        content1: description here
+      OPD-K5 types of lessons:
+        content1: description here
+      OPD-K5 using lesson plans:
+        content1: description here
+      OPD-K5 variables:
+        content1: description here
+      OPD-K5 variables introduction:
+        content1: description here
+      OPD-K5 variables unplugged:
+        content1: description here
+      OPD-K5 where to next:
+        content1: description here
+      OPD-K5-projects-1:
+        content1: description here
+      courseE_EOC_2020:
+        display_name: End of Course Project
+      courseExpress_EOC_2020:
+        display_name: End of Course Project
+      courseF_EOC_2020:
+        display_name: End of Course Project
+      courseF_external_variableConstant:
+        markdown: |+
+          <h2>O'zgaruvchilar haqida ko'proq ma'lumot</h2>
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>Siz o'zgaruvchini ... o'zgarmas sifatida ishlatishning bitta ajoyib usulini bilib oldingiz!
+          O'zgaruvchini o'zgarmas sifatida ishlatganda, siz bir marta qiymatni o'rnatasiz, so'ngra "Ishga tushirish" tugmasini bosgandan so'ng uni o'zgartirmasdan *o'sha* qiymatdan foydalanasiz. </h3>
+          <br/><hr/>
+          <h3>Seriyaning keyingi qismida siz dastur ichida o'zgarish *qiladigan* o'zgaruvchilar bilan kod yozasiz.</h3>
+
+      courseF_markdown_conditionals_intro:
+        markdown: |+
+          # **Ushbu darsda...**
+
+          ### **Shartlar** bu to'g'ri yoki yolg'on bo'lishi mumkin bo'lgan narsalar.
+
+          ### Siz hodisalar sodir bo'lishini ta'minlash uchun dasturda "while", "until`" yoki "if`" kabi shartlardan foydalanishni bilib olasiz!
+          ---
+
+          ## ** O'rganish uchun bloklar **
+
+          ![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)
+
+          ![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)
+
+          ![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)
+
+
+        content1: Test Markdown darslik sahifasi
+      csf_password_power-up:
+        content1: tafsilotlar bu yerda
+      csf_putting_a_stop_to_online_meanness:
+        content1: tafsilotlar bu yerda
+      courseF_external_variableConstant_2018:
+        markdown: |+
+          <h2>O'zgaruvchilar haqida ko'proq ma'lumot</h2>
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>Siz o'zgaruvchini ... o'zgarmas sifatida ishlatishning bitta ajoyib usulini bilib oldingiz!
+          O'zgaruvchini o'zgarmas sifatida ishlatganda, siz bir marta qiymatni o'rnatasiz, so'ngra "Ishga tushirish" tugmasini bosgandan so'ng uni o'zgartirmasdan *o'sha* qiymatdan foydalanasiz. </h3>
+          <br/><hr/>
+          <h3>Seriyaning keyingi qismida siz dastur ichida o'zgarish *qiladigan* o'zgaruvchilar bilan kod yozasiz.</h3>
+
+
+
+      courseF_external_variableConstant_2018_2019:
+        markdown: |+
+          <h2>O'zgaruvchilar haqida ko'proq ma'lumot</h2>
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>Siz o'zgaruvchini ... o'zgarmas sifatida ishlatishning bitta ajoyib usulini bilib oldingiz!
+          O'zgaruvchini o'zgarmas sifatida ishlatganda, siz bir marta qiymatni o'rnatasiz, so'ngra "Ishga tushirish" tugmasini bosgandan so'ng uni o'zgartirmasdan *o'sha* qiymatdan foydalanasiz. </h3>
+          <br/><hr/>
+          <h3>Seriyaning keyingi qismida siz dastur ichida o'zgarish *qiladigan* o'zgaruvchilar bilan kod yozasiz.</h3>
+
+
+
+      courseF_external_variableConstant_2018_2019_2020:
+        markdown: |+
+          <h2>O'zgaruvchilar haqida ko'proq ma'lumot</h2>
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>Siz o'zgaruvchini ... o'zgarmas sifatida ishlatishning bitta ajoyib usulini bilib oldingiz!
+          O'zgaruvchini o'zgarmas sifatida ishlatganda, siz bir marta qiymatni o'rnatasiz, so'ngra "Ishga tushirish" tugmasini bosgandan so'ng uni o'zgartirmasdan *o'sha* qiymatdan foydalanasiz. </h3>
+          <br/><hr/>
+          <h3>Seriyaning keyingi qismida siz dastur ichida o'zgarish *qiladigan* o'zgaruvchilar bilan kod yozasiz.</h3>
+
+
+
+      courseF_markdown_algorithms_end:
+        markdown: |-
+          # ** Siz endigina "algoritmlar"ni o'rgandingiz! **
+
+
+
+          ### ** Algoritm bu shunchaki vazifani bajarish uchun qadamlar ro'yxati **. Algoritmlarning qiziqarli tomoni shundaki, nima bo'lishini bosqichma-bosqich hal qilasiz.
+
+          ### Mashina uchun algoritmni yozishda bu ** dastur ** deb ataladi.
+
+          ---
+
+          ## ** O'rganish uchun so'zlar **
+
+          * ### ** Algoritm ** - topshiriqni bajarish uchun qadamlar ro'yxati
+
+          * ### ** Dastur ** - mashina bajara oladigan qilib kodlangan algoritm
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_algorithms_intro:
+        markdown: |
+          # ** Ushbu darsda ... **
+
+          ### Siz qachondir biror kimga aniq nima qilishni aytib ko'rganmisiz? Ular har doim so'zlaringizga rioya qilganmi?
+
+          ### Bugun siz mashinaga bosqichma-bosqich nima qilish kerakligini aytasiz va u aytganingizni qiladi!
+
+          ---
+
+          ## ** O'rganish uchun bloklar **
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_debugging_end:
+        markdown: |-
+          # ** Siz hozirgina "debugging" tushunchasini o'rgandingiz! **
+
+          ### ** Bug - bu xatoga yo'l qo'yadigan narsa. ** Bu dasturdagi xato. Ushbu xatolarni topib, ularni tuzatganingizda, siz muammoni **debugging** qilasiz.
+
+          ### Barcha xatolarni topish va tuzatish uchun siz **qat'iyatlilik** (bu taslim bo'lmaslik ma'nosini anglatadigan yana bir so'z) bilan shug'ullanishingiz kerak.
+
+          ---
+
+          ## ** O'rganish uchun so'zlar **
+
+          * ### ** Bug ** - dasturning noto'g'ri ishlashiga sabab bo'lgan narsa.
+
+          * ### **Debugging (Xatolarni tuzatish)** - algoritm yoki dasturdagi muammolarni topish va ularni tuzatish
+
+          * ### ** Qat'iyatlilik ** - Taslim bo'lmaslik
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_debugging_intro:
+        markdown: |
+          # Ushbu darsda ...
+
+          ### Xatolar haqida o'ylaganingizda nimani o'ylaysiz?
+
+          ### Ko'pchilik "bug" so'zini eshitganda, sudralib yuruvchi jirkanch narsalar haqida o'ylashadi. Kompyuter fanida "bug"lar tirik jonzot emas, biroq "ayyor" bo'lishi mumkin.
+
+          ### Ushbu darsdagi jumboqlar siz uchun allaqachon yechilgan! Ammo shoshmang - yechimlar to'gri ishlamaydiganga o'xshaydi. Ularda xatolar bormi?
+
+          ---
+
+          ## O'rganish uchun bloklar
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_forloops_end:
+        markdown: |-
+          # ** Siz endigina "for sikli"ni o'rgandingiz! **
+
+          ### ** "For" sikllarida siz boshlang'ich, to'xtash va qadam qiymatlarini o'rnatasiz. **
+
+          ### Ushbu yangi "takrorlash" sikli sizga sikl qachon boshlanishini, qachon tugashini va har safar ishlaganda sik nimani va qanchaga oshirishi kerakligini nazorat qilish imkonini beradi.
+
+          ### Ko'proq nazorat sizga jumboqlarni tezroq yechishni anglatadi!
+
+          ---
+
+          ## ** O'rganish uchun so'zlar **
+
+          ### ** For sikli ** - oldindan belgilangan boshlanish, tugash va qadam qiymatlariga ega bo'lgan sikllar.
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_forloops_end_2019:
+        markdown: |-
+          # ** Siz endigina "for sikli"ni o'rgandingiz! **
+
+          ### ** "For" sikllarida siz boshlang'ich, to'xtash va qadam qiymatlarini o'rnatasiz. **
+
+          ### Ushbu yangi "takrorlash" sikli sizga sikl qachon boshlanishini, qachon tugashini va har safar ishlaganda sik nimani va qanchaga oshirishi kerakligini nazorat qilish imkonini beradi.
+
+          ### Ko'proq nazorat sizga jumboqlarni tezroq yechishni anglatadi!
+
+          ---
+
+          ## ** O'rganish uchun so'zlar **
+
+          ### ** For sikli ** - oldindan belgilangan boshlanish, tugash va qadam qiymatlariga ega bo'lgan sikllar.
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_forloops_end_2019_2020:
+        markdown: |-
+          # ** Siz endigina "for sikli"ni o'rgandingiz! **
+
+          ### ** "For" sikllarida siz boshlang'ich, to'xtash va qadam qiymatlarini o'rnatasiz. **
+
+          ### Ushbu yangi "takrorlash" sikli sizga sikl qachon boshlanishini, qachon tugashini va har safar ishlaganda sik nimani va qanchaga oshirishi kerakligini nazorat qilish imkonini beradi.
+
+          ### Ko'proq nazorat sizga jumboqlarni tezroq yechishni anglatadi!
+
+          ---
+
+          ## ** O'rganish uchun so'zlar **
+
+          ### ** For sikli ** - oldindan belgilangan boshlanish, tugash va qadam qiymatlariga ega bo'lgan sikllar.
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_forloops_intro:
+        markdown: |-
+          # ** Ushbu darsda ... **
+
+          ### Bugun siz "takrorlash" ning yangi turi haqida bilib olasiz. Siz foydalanadigan blok ko'rinishi:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *For*tunately ("Omadimizga" ma'nodagi so'z o'yini), ushbu yangi sikl bu kabi jumboqlarni yechishni osonlashtiradi!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_forloops_intro_2019:
+        markdown: |-
+          # ** Ushbu darsda ... **
+
+          ### Bugun siz "takrorlash" ning yangi turi haqida bilib olasiz. Siz foydalanadigan blok ko'rinishi:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *For*tunately ("Omadimizga" ma'nodagi so'z o'yini), ushbu yangi sikl bu kabi jumboqlarni yechishni osonlashtiradi!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_forloops_intro_2019_2020:
+        markdown: |-
+          # ** Ushbu darsda ... **
+
+          ### Bugun siz "takrorlash" ning yangi turi haqida bilib olasiz. Siz foydalanadigan blok ko'rinishi:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *For*tunately ("Omadimizga" ma'nodagi so'z o'yini), ushbu yangi sikl bu kabi jumboqlarni yechishni osonlashtiradi!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_loops_end:
+        markdown: |-
+          # ** Siz endigina "sikllarni" bilib oldingiz! **
+
+          ### ** Sikl - bu biron bir narsani qayta-qayta bajarish harakati. ** Biror narsani qayta-qayta qilish uchun yana bir so'z takrorlashdir.
+
+          ### Sikllar naqshlarni takrorlash uchun juda foydali. Dastlab dasturingizni hech qanday sikl yozmasdan yozish, keyin naqsh topishga harakat qilish foydali.
+
+          ### Biror naqshni ko'rsangiz, ushbu naqshni `repeat` - "takrorlash" blokiga joylang!
+
+          ---
+
+          ## ** O'rganish uchun so'zlar **
+
+          * ### ** Sikl ** - Biror narsani qayta-qayta bajarish
+
+          * ### ** Takrorlash ** - Biror narsani qayta qilish
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_loops_intro:
+        markdown: |
+          # Ushbu darsda ...
+
+          ### Tasavvur qiling, siz qahramoningiz ** 5 ** marta oldinga siljishini xohlaysiz. Bu qiyin emas - ** 5 ** marta oldinga siljish bloklarini tortib olish. Endi tasavvur qiling, sizning qahramoningiz ** 5000 ** marta oldinga siljishini xohlaysiz!
+
+          ### ** 5000 ** marta blokni tortib olish uchun qancha vaqt ketishi mumkin?
+
+          ### Buning oson yo'li borligini bilasizmi? Mana u!
+
+          ---
+
+          ## O'rganish uchun bloklar
+
+          ![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_variables_end:
+        markdown: |-
+          # ** Siz "o'zgaruvchilar"ni o'rgandingiz! **
+
+          ### O'zgaruvchini ishlatish uchun unga nom va qiymat kerak. Nom o'zgarmaydi, lekin qiymati o'zgarishi mumkin. Shu tarzda siz o'zgarmaydigan nomdan dasturingizda ixtiyoriy joyda foydalanishingiz mumkin!
+
+          ---
+
+          ## **O'rganish uchun so'zlar**
+
+          ### **O'zgaruvchi** - o'zgarishi mumkin bo'lgan ma'lumotga murojaat qilish uchun nom
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_variables_end_2019:
+        markdown: |-
+          # ** Siz "o'zgaruvchilar"ni o'rgandingiz! **
+
+          ### O'zgaruvchini ishlatish uchun unga nom va qiymat kerak. Nom o'zgarmaydi, lekin qiymati o'zgarishi mumkin. Shu tarzda siz o'zgarmaydigan nomdan dasturingizda ixtiyoriy joyda foydalanishingiz mumkin!
+
+          ---
+
+          ## **O'rganish uchun so'zlar**
+
+          ### **O'zgaruvchi** - o'zgarishi mumkin bo'lgan ma'lumotga murojaat qilish uchun nom
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_variables_end_2019_2020:
+        markdown: |-
+          # ** Siz "o'zgaruvchilar"ni o'rgandingiz! **
+
+          ### O'zgaruvchini ishlatish uchun unga nom va qiymat kerak. Nom o'zgarmaydi, lekin qiymati o'zgarishi mumkin. Shu tarzda siz o'zgarmaydigan nomdan dasturingizda ixtiyoriy joyda foydalanishingiz mumkin!
+
+          ---
+
+          ## **O'rganish uchun so'zlar**
+
+          ### **O'zgaruvchi** - o'zgarishi mumkin bo'lgan ma'lumotga murojaat qilish uchun nom
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_variables_intro:
+        markdown: |+
+          # ** Ushbu darsda ... **
+
+          ### *O'zgaruvchilar* - o'zgarishi mumkin bo'lgan ma'lumotlarning konteyneri. Konteynerga ega bo'lish, barcha qiymatlarni aniq bilmagan holda ham dasturni yozishga imkon beradi!
+
+
+          ---
+
+          ## ** O'rganish uchun bloklar **
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_variables_intro_2019:
+        markdown: |+
+          # ** Ushbu darsda ... **
+
+          ### *O'zgaruvchilar* - o'zgarishi mumkin bo'lgan ma'lumotlarning konteyneri. Konteynerga ega bo'lish, barcha qiymatlarni aniq bilmagan holda ham dasturni yozishga imkon beradi!
+
+
+          ---
+
+          ## ** O'rganish uchun bloklar **
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_variables_intro_2019_2020:
+        markdown: |+
+          # ** Ushbu darsda ... **
+
+          ### *O'zgaruvchilar* - o'zgarishi mumkin bo'lgan ma'lumotlarning konteyneri. Konteynerga ega bo'lish, barcha qiymatlarni aniq bilmagan holda ham dasturni yozishga imkon beradi!
+
+
+          ---
+
+          ## ** O'rganish uchun bloklar **
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_conditionals_end:
+        markdown: |-
+          # ** Siz hozirgina "shartli bayonotlarni" bilib oldingiz! **
+
+          ### Shartli bayonotlar kompyuter fanida juda foydali. O'zingizning sevimli veb-saytingizga kirganingizni va parolingizni yozganingizni tasavvur qiling. Siz kiritgan parol sizning foydalanuvchi nomingiz uchun saqlagan parolga mos kelishini * tekshirish uchun veb-sayt shartli bayonotlardan foydalanishi kerak.
+
+          ### "Agar" u mos bo'lsa, tizimga kiring!
+
+          ### "Aks holda" foydalanuvchiga xato ko'rsating.
+
+          ---
+
+          ## ** O'rganish uchun so'zlar **
+
+          * ### ** Shart ** - biror amalga ruxsat berishdan oldin dastur tekshiradigan narsa
+
+          * ### ** Shartli bayonotlar** - faqat ma'lum shartlarda ishlaydigan bayonotlar
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_nestedloops_end:
+        markdown: |-
+          # ** Siz endigina "ichki ilmoqlarni" bilib oldingiz! **
+
+          ### ** Ichma-ich sikl - bu sikl ichidagi sikl. ** Buni boshqa sikllarni o'z ichiga qulay va shinam qilib joylab olgan tashqi sikl kabi tasavvur qiling.
+
+          ### Ichki sikllar naqshlardagi naqshlarini takrorlash uchun juda qulay. To'g'ri ishlatilsa, ular juda foydali bo'lishi mumkin!
+
+          ---
+
+          ## ** O'rganish uchun so'zlar **
+
+          ### __ Ichma-ich sikllar__ - sikl ichidagi sikl
+        content1: Test Markdown darslik sahifasi
+      courseF_markdown_nestedloops_intro:
+        markdown: |
+          # ** Ushbu darsda ... **
+
+          ### Hech o'ylab ko'rganmisiz, agar siz "sikl ichiga boshqa sikl* joylasangiz nima bo'ladi?
+
+          ### Bu sizni shunchaki sikllashishga majbur qilishi mumkin!
+
+          ### Agar oddiy sikl naqshlarni takrorlashda foydali bo'lsa, boshqa sikl ichidagi sikl nimani yaxshi bajaradi deb o'ylaysiz? Keling, bilib olamiz!
+
+          ---
+
+          ## ** O'rganish uchun bloklar **
+
+          ![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)
+        content1: Test Markdown darslik sahifasi
+      courseD_EOC_2020:
+        display_name: End of Course Project
+      csf_be_a_super_digital_citizen:
+        content1: description here
+      BinaryImages-Unplugged:
+        markdown: |-
+          # Binar rasmlar
+
+          Faqat ikkita oddiy qiymatdan foydalangan holda tasvirni tiklash bo'yicha xabar bering.
+      BinaryImages-Unplugged_2020:
+        markdown: |-
+          # Binar rasmlar
+
+          Faqat ikkita oddiy qiymatdan foydalangan holda tasvirni tiklash bo'yicha xabar bering.
+      DigitalCitizenship-Unplugged:
+        markdown: |-
+          # Raqamli fuqarolik
+
+          Ba’zi ma’lumotlar onlayn tarzda tarqatish uchun xavfli hisoblanadi. Bu dars sizga xavfsiz va maxfiy ma’lumotlar o‘rtasidagi farqni o‘rganishga yordam beradi
+      GraphPaperProgramming-Unplugged:
+        markdown: |-
+          # Katakli qog'ozda dasturlash
+
+          Sinfdoshlaringiz rasm chizishda foydalanishi mumkin bo'lgan algoritmlarni yozing.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |-
+          # Katakli qog'ozda dasturlash
+
+          Sinfdoshlaringiz rasm chizishda foydalanishi mumkin bo'lgan algoritmlarni yozing.
+      RelayProgramming-Unplugged:
+        markdown: |-
+          # Navbatda dasturlash
+
+          Jamoalarga bo'lining va birgalikda rasm chizish uchun dasturlarni yozing.
+      RelayProgramming-Unplugged_2020:
+        markdown: |-
+          # Navbatda dasturlash
+
+          Jamoalarga bo'lining va birgalikda rasm chizish uchun dasturlarni yozing.
+      courseD_external_binary1:
+        markdown: "<h1>Ikkilik sonlar bilan rasm chizish</h1>\n \n<h3> Ikkilik - bu
+          faqat ikkita variant yordamida ma'lumotni aks ettirish usuli. Bunda ikkita
+          holat <b> o'chirilgan </b> va <b> yoqilgan bo'ladi</b>.\n<br/>\nBu yerda
+          biz <b> 0 </b> raqamini \"o'chirish\" kodi va <b> 1 </b> raqamini \"yoqish\"
+          kodi sifatida ishlatamiz.\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Ushbu bosqichda biz sizga \"piksellar\" orqali o'tishingiz
+          va ba'zilarni \"yoqish\" orqali rasm hosil qilishingiz mumkin bo'lgan panjara
+          taqdim etdik! </h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018:
+        markdown: "<h1>Ikkilik sonlar bilan rasm chizish</h1>\n \n<h3> Ikkilik - bu
+          faqat ikkita variant yordamida ma'lumotni aks ettirish usuli. Bunda ikkita
+          holat <b> o'chirilgan </b> va <b> yoqilgan bo'ladi</b>.\n<br/>\nBu yerda
+          biz <b> 0 </b> raqamini \"o'chirish\" kodi va <b> 1 </b> raqamini \"yoqish\"
+          kodi sifatida ishlatamiz.\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Ushbu bosqichda biz sizga \"piksellar\" orqali o'tishingiz
+          va ba'zilarni \"yoqish\" orqali rasm hosil qilishingiz mumkin bo'lgan panjara
+          taqdim etdik! </h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019:
+        markdown: "<h1>Ikkilik sonlar bilan rasm chizish</h1>\n \n<h3> Ikkilik - bu
+          faqat ikkita variant yordamida ma'lumotni aks ettirish usuli. Bunda ikkita
+          holat <b> o'chirilgan </b> va <b> yoqilgan bo'ladi</b>.\n<br/>\nBu yerda
+          biz <b> 0 </b> raqamini \"o'chirish\" kodi va <b> 1 </b> raqamini \"yoqish\"
+          kodi sifatida ishlatamiz.\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Ushbu bosqichda biz sizga \"piksellar\" orqali o'tishingiz
+          va ba'zilarni \"yoqish\" orqali rasm hosil qilishingiz mumkin bo'lgan panjara
+          taqdim etdik! </h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019_2020:
+        markdown: "<h1>Ikkilik sonlar bilan rasm chizish</h1>\n \n<h3> Ikkilik - bu
+          faqat ikkita variant yordamida ma'lumotni aks ettirish usuli. Bunda ikkita
+          holat <b> o'chirilgan </b> va <b> yoqilgan bo'ladi</b>.\n<br/>\nBu yerda
+          biz <b> 0 </b> raqamini \"o'chirish\" kodi va <b> 1 </b> raqamini \"yoqish\"
+          kodi sifatida ishlatamiz.\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Ushbu bosqichda biz sizga \"piksellar\" orqali o'tishingiz
+          va ba'zilarni \"yoqish\" orqali rasm hosil qilishingiz mumkin bo'lgan panjara
+          taqdim etdik! </h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_project_exemplars_2020_2021:
+        content1: Test Markdown darslik sahifasi
+      courseE_project_exemplars_2019_2020:
+        content1: Test Markdown darslik sahifasi
+      courseExpress_project_exemplars_2019_2020:
+        content1: Test Markdown darslik sahifasi
+      courseF_project_exemplars_2019:
+        content1: Test Markdown darslik sahifasi
+      courseF_project_exemplars_2019_2020:
+        content1: Test Markdown darslik sahifasi

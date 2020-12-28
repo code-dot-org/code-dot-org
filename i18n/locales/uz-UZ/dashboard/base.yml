@@ -315,10 +315,17 @@ uz:
       sections: "Boʻlimlar"
       help_support: "Yordam va qo‘llab-quvvatlash"
       report_bug: "Muammo haqida xabar berish"
+      report_abuse: "Report abuse"
       teacher_community: "O‘qituvchilar hamjamiyati"
       professional_learning: "Kasbiy ta'lim"
       documentation: "Hujjatlar"
       tutorials: "Qo‘llanmalar"
+      app_lab_documentation: "App Lab Documentation"
+      app_lab_tutorials: "App Lab Tutorials"
+      game_lab_documentation: "Game Lab Documentation"
+      game_lab_tutorials: "Game Lab Tutorials"
+      sprite_lab_documentation: "Sprite Lab Documentation"
+      sprite_lab_tutorials: "Sprite Lab Tutorials"
       web_lab_documentation: "Web Lab hujjatlari"
       educate_overview: "Pedagog muxtasari"
       educate_elementary: "Boshlang'ich maktab"
@@ -345,6 +352,7 @@ uz:
       help_us: "Bizga yordam bering"
       teach: "O'qiting"
       about: "Biz haqimizda"
+      legal: "Privacy & Legal"
       legal_privacy: "Maxfiylik siyosati"
       legal_tos: "Xizmat shartlari"
     user:
@@ -352,6 +360,7 @@ uz:
       district_dashboard: 'Tuman paneli'
       label: 'Salom %{username}'
       stats: 'Dasturlash studiyasi'
+      my_projects: 'My projects'
       settings: 'Akkaunt sozlamalari'
       logout: 'Chiqish'
       signin: 'Kirish'
@@ -369,11 +378,13 @@ uz:
       basketball: 'Basketbol'
       bounce: 'Sakrash'
       calc: 'Calc'
+      dance: 'Dance Party'
       eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'Muzlagan (Frozen)'
       gamelab: 'O‘yin laboratoriyasi'
       gamelab_jr: 'O‘yin laboratoriyasi (beta)'
+      gumball: 'The Amazing World of Gumball'
       iceage: 'Muzlik davri'
       infinity: 'Cheksizlik'
       makerlab: 'Maker asboblar to‘plami'
@@ -386,7 +397,10 @@ uz:
       playlab_k1: 'Play Lab (Maktabgacha)'
       scratch: 'Scratch'
       sports: 'Sport'
+      spritelab: 'Sprite Lab'
       starwars: 'Yulduzlar urushi'
+      starwarsblocks: 'Star Wars (Blocks)'
+      starwarsblocks_hour: 'Star Wars (Blocks)'
       weblab: 'Web Lab'
       view_all: 'Barcha loyihalarni ko‘rish...'
     popup:
@@ -418,6 +432,7 @@ uz:
       student: 'O‘quvchi'
       viewing_solution: 'Yechimni ko''rish'
       try_it_yourself: 'Oʻzingiz urinib koʻring'
+      section: 'Section'
       example: 'Misol yechimi'
       example_with_number: 'Misol yechimi %{solution_number}'
       submitted_on: 'Yoqilgan:'
@@ -509,6 +524,7 @@ uz:
     no_primary_course: "Dasturlash studiyasi boshqa kursini sinab ko‘ring"
     choose_next_course: "Quyidagi birini tanlab Code Studio kursini sinab ko'ring"
     print_certificate: "Sertifikatni chop etish"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
   move_students:
     new_section_dne: "Kechirasiz, lekin %{new_section_code} bo'lim mavjud emas. Boshqa bo'lim kodini kiriting."
     section_code_cant_be_current_section: "Joriy bo'lim yangi bo'lim bilan bir xil bo'lishi mumkin emas."
@@ -620,6 +636,10 @@ uz:
       body_short: "Ilovani ishlab chiqing, uni bloklar yoki JavaScript kodini ishlab chiqing, keyin uni bir necha soniya ichida ulashing."
       audience: '13+ yosh'
       cta: 'Qanday qilishni o‘rganing'
+    dance:
+      title: 'Dance Party'
+    dance-2019:
+      title: 'Dance Party'
     hoc:
       title: 'Klassik labirint'
       body: 'Informatika asoslari bilan tanishib ko‘ring. Millionlar buni uddalashdi.'
@@ -628,6 +648,7 @@ uz:
       body: 'O‘z o‘yiningizni 10 daqiqa ichida yaratishni xohlaysizmi? Flappy Code darsimizni sinab ko‘ring!'
     20-hour:
       title: 'Tezlashtirilgan kurs'
+      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
       body_short: '2-4-kurslarning tezlashtirilgan versiyasida asosiy kompyuter fanlarini o''rganing.'
     hoc2014:
       try_new_tutorial: 'Beta-versiyadagi yangi "Daturlash soati" o''quv qo''llanmamizni sinab ko''ring'
@@ -1012,11 +1033,13 @@ uz:
         codecademy: 'CodeCademy'
         csfirst: 'Google CS First'
         khan: 'Xon Akademiyasi'
+        kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
         other: "Boshqa:"
       robotics:
         grok: 'Grok Learning'
+        kodable: 'Kodable'
         lego: 'LEGO Education'
         microbit: 'Microbit'
         ozobot: 'Ozobot'
