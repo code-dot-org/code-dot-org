@@ -2886,6 +2886,20 @@ th:
               name: คอร์ส A
             Course B:
               name: คอร์ส B
+        virustest:
+          title: จำลองการระบาด
+          description_short: 'ใช้แลปสไปรท์เพื่อสร้างการจำลองการระบาดของไวรัส '
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: การเข้ารหัสการจำลอง
+          lesson_groups:
+            outbreak:
+              display_name: การจำลองการระบาด
+          title: เครื่องจำลองการระบาด
+          description_short: 'ใช้แลปสไปรท์เพื่อจำลองสถานการณ์การระบาดของไวรัส '
+          description: 'ใช้แลปสไปรท์เพื่อจำลองสถานการณ์การระบาดของไวรัส '
+          name: การระบาด
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -3201,8 +3215,13 @@ th:
             csf_events:
               display_name: เหตุการณ์
         csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: การเข้ารหัสการจำลอง
           lesson_groups:
             ramp_up:
               display_name: บทเกริ่นนำ
+            outbreak:
+              display_name: การจำลองการระบาด
             lessonGroup-3:
               display_name: ตัวแปร
