@@ -15410,12 +15410,26 @@ id:
               name: Kursus B
             CS Discoveries:
               name: CS Discoveries
+        virustest:
+          title: Mensimulasikan Wabah
+          description_short: 'Gunakan Sprite Lab untuk membuat simulasi wabah virus.'
         ml-playground:
           lessons:
             AI for Oceans:
               name: AI for Oceans
             visualizing:
               name: Membayangkan data
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Membuat Kode Simulasi
+          lesson_groups:
+            outbreak:
+              display_name: Simulasi Wabah
+          title: Simulator Wabah
+          description_short: 'Gunakan Sprite Lab untuk memprogram simulasi wabah virus.'
+          description: 'Gunakan Sprite Lab untuk memprogram simulasi wabah virus.'
+          name: wabah
         csd1-2021:
           title: CSD Unit 1 - Pemecahan Masalah dan Komputasi
           description: " Pemecahan Masalah dan Komputasi merupakan pengenalan bidang ilmu komputer yang sangat interaktif dan kolaboratif, karena dibingkai dalam upaya lebih luas untuk memecahkan masalah. Anda akan berlatih menggunakan proses pemecahan masalah untuk menjawab serangkaian puzzle, tantangan, dan skenario dunia nyata. Berikutnya,  Anda akan mempelajari cara komputer melakukan input, output, menyimpan, dan memproses informasi untuk membantu manusia memecahkan masalah.  Unit ini diakhiri dengan sebuah proyek yang menugasi Anda merancang sebuah aplikasi yang membantu memecahkan masalah pilihan Anda.\\r\n"
@@ -16799,10 +16813,14 @@ id:
           lessons:
             Learning Sprites with Sprite Lab:
               name: Iklan Berenang dengan Sprite Lab
+            Virus Simulation for Code Bytes:
+              name: Membuat Kode Simulasi
             lesson-1:
               name: Sampul Variabel
           lesson_groups:
             ramp_up:
               display_name: Pendahuluan
+            outbreak:
+              display_name: Simulasi Wabah
             lessonGroup-3:
               display_name: variabel
