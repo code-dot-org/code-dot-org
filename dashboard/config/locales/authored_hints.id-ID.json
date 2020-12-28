@@ -8684,6 +8684,32 @@
         },
         "courseE_farmer_predict2": {
           "courseE_farmer_ramp12e_b": "Solusi untuk puzzle ini akan sangat mirip dengan solusi untuk puzzle terakhir, tetapi berbalik ke arah yang lain."
+        },
+        "outbreak1": {
+          "step1": "Gunakan blok ini untuk membuat sprite Anda:\n\n[blockly block][0]\n\n[blockly block][1]\n\nBlok ini terletak pada kategori **Sprites** toolbox.",
+          "step2": "Ubah ukuran sprite dengan blok ini: [blockly block][0].\n\nTerletak pada kategori **Actions** toolbox.",
+          "step3": "Buat semua sprite mulai keliling dengan ini: [blockly block][0].\n\nBlok ini terletak pada kategori **Actions** toolbox."
+        },
+        "outbreak2": {
+          "hint1": "Klik tombol `+` pada blok event. Isi tempat yang kosong pada blok `change costume` dengan blok `subject` yang ada di dalamnya.\n\n[blockly block][0]"
+        },
+        "outbreak3": {
+          "hint1": "Untuk memberikan masker kepada monster, gunakan blok `change costume` dengan event `when clicked`:\n\n[blockly block][0]\n\nPastikan pula untuk menarik blok `clicked` kecil yang berwarna merah!",
+          "hint2": "Kode baru untuk level ini akan terlihat seperti ini:\n\n[blockly block][0]"
+        },
+        "outbreak4": {
+          "challenge": "## Mencari tantangan ekstra?\n\nAnda juga dapat membuat monster bergerak lebih cepat atau lebih lambat.\n\n1.  Klik `Edit` pada blok ini [blockly block][0] \n2.  Naikkan atau turunkan jumlahnya pada blok ini: \n\n[blockly block][1]\n\nUntuk membuat monsternya bergerak lebih lambat, pilih angka desimal seperti `0,5` atau `0,25`. Agar bergerak lebih cepat, pilih angka yang lebih besar dari 1."
+        },
+        "outbreak5": {
+          "solution2": "Kode baru Anda akan terlihat seperti ini:\n\n[blockly block][0]"
+        },
+        "outbreak6": {
+          "hint2": "Pastikan untuk menggerakkan blok \"action\" lainnya ke bagian dalam blok `if chance`:\n\n[blockly block][0]",
+          "hint1": "Anda harus menambahkan 3 event `when touches` lagi untuk memeriksa semua potensi kombinasi `touches` antara sprite yang sehat dan yang terinfeksi.\n\n[blockly block][0]"
+        },
+        "outbreak7": {
+          "whenclicked": "## Vaksin\n\nAnda dapat mensimulasikan pemberian vaksin kepada monster saat mengklik mereka. Untuk melakukannya, gunakan blok `change costume` dengan event ini:\n\n[blockly block][0]",
+          "verionhistory": "Merasa kehabisan akal? Anda dapat me-reset kode Anda dengan mengklik `Version History` di bawah ini, lalu memilih \"Start Over\"."
         }
       }
     }
