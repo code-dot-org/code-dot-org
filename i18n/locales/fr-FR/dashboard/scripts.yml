@@ -14844,12 +14844,26 @@ fr:
               name: Cours B
             CS Discoveries:
               name: Découvertes de l'Informatique
+        virustest:
+          title: Simulation d'une épidémie
+          description_short: 'Utilisez Sprite Lab pour créer une simulation à partir d''une épidémie de virus.'
         ml-playground:
           lessons:
             AI for Oceans:
               name: IA pour les Océans
             visualizing:
               name: Visualiser les Données
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Codage d'une simulation
+          lesson_groups:
+            outbreak:
+              display_name: Simulation de l'épidémie
+          title: Simulateur d'épidémie
+          description_short: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
+          description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
+          name: épidémie
         csd1-2021:
           title: CSD Unité 1 - La Résolution de Problèmes et l'Informatique (2019 - 2020)
           description: "La Résolution de Problèmes et l'Informatique est une introduction, hautement interactive et collaborative, au domaine de l'informatique, dans le cadre de la recherche, plus large, de la résolution de problèmes. Tu t'entraîneras à utiliser un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios réels. Ensuite, tu apprendras comment les ordinateurs entrent, sortent, stockent et traitent les informations pour aider les humains à résoudre les problèmes. L'unité se termine par un projet dans lequel tu conçois une application qui permet de résoudre un problème de ton choix.\\r"
@@ -16106,10 +16120,14 @@ fr:
           lessons:
             Learning Sprites with Sprite Lab:
               name: Des Poissons qui Nagent, avec le Labo des Lutins
+            Virus Simulation for Code Bytes:
+              name: Codage d'une simulation
             lesson-1:
               name: Variables de l'Enveloppe
           lesson_groups:
             ramp_up:
               display_name: Introduction
+            outbreak:
+              display_name: Simulation de l'épidémie
             lessonGroup-3:
               display_name: variables
