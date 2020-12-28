@@ -1604,6 +1604,8 @@ ro:
               name: 'Albină: Condiţionale'
         gradeKinder:
           lessons:
+            Debugging:
+              name: Corectare erori
             Events:
               name: Evenimente
             Events Unplugged:
@@ -1624,6 +1626,8 @@ ro:
               name: Compunând Cântece
         grade1:
           lessons:
+            Debugging:
+              name: Corectare erori
             Events:
               name: Evenimente
             Events Unplugged:
@@ -1818,6 +1822,10 @@ ro:
             csd1_2:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
           lessons:
+            The Problem Solving Process:
+              name: Procesul de Rezolvare a Problemei
+            What is a Computer?:
+              name: Ce Este un Computer?
             Processing:
               description_teacher: Elevii completează două activități fără calculator de sortare de carduri pentru a explora semnificația procesării și legătura acesteia cu rezolvarea problemelor. Prima are puține constrângeri și este folosită pentru a introduce o definiție la nivel înalt a procesării. Următorul introduce mai multe constrângeri care îi obligă pe elevi să dezvolte un algoritm care va procesa întotdeauna cu succes cardurile. Elevii dezvoltă, testează și împart, în mod iterativ, algoritmii lor cu colegii de clasă. O discuție finală va pune elevii să reflecteze la tipurile diferite de rezolvare a problemelor pe care le-au folosit în cadrul acestor activități, precum și la valoarea producerii unui algoritm care să rezolve o problemă.
         csp-online-test:
@@ -1948,11 +1956,15 @@ ro:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Going Places Safely:
               name: Mergând în locuri în siguranţă
         courseb-draft:
           description_audience: '[șir gol]'
           lessons:
+            Loops in Artist:
+              name: Cicluri cu Artistul
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
             Your Digital Footprint:
@@ -1968,6 +1980,8 @@ ro:
               name: Amprenta ta Digitală
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Harvester:
+              name: Cicluri în Harvester
         coursed-draft:
           description_audience: '[șir gol]'
           lessons:
@@ -2265,6 +2279,11 @@ ro:
               name: Funcţii
         csd1-old:
           description_audience: '[șir gol]'
+          lessons:
+            The Problem Solving Process:
+              name: Procesul de Rezolvare a Problemei
+            What is a Computer?:
+              name: Ce Este un Computer?
         csd2-draft:
           title: '[șir gol]'
           description_audience: '[șir gol]'
@@ -2278,6 +2297,11 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lessons:
+            The Problem Solving Process:
+              name: Procesul de Rezolvare a Problemei
+            What is a Computer?:
+              name: Ce Este un Computer?
         csd3-chapters:
           title: '[șir gol]'
           description_audience: '[șir gol]'
@@ -2330,6 +2354,8 @@ ro:
           description_short: '[șir gol]'
           description: '[șir gol]'
           lessons:
+            Loops with BB-8:
+              name: Cicluri cu BB-8
             Ice Age Play Lab:
               name: Laboratorul Joaca Ice Age
             Bounce:
@@ -2359,6 +2385,7 @@ ro:
             Loops in Collector:
               description_student: '[șir gol]'
             Loops in Artist:
+              name: Cicluri cu Artistul
               description_student: '[șir gol]'
             'Events: The Big Event':
               description_student: '[șir gol]'
@@ -2371,12 +2398,18 @@ ro:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+            Loops in Artist:
+              name: Cicluri cu Artistul
         coursec-2017:
           title: Curs C
           assignment_family_title: Curs C
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+            Loops in Harvester:
+              name: Cicluri în Harvester
+            Loops in Artist:
+              name: Cicluri cu Artistul
         coursed-2017:
           title: Curs D
           assignment_family_title: Curs D
@@ -2406,6 +2439,8 @@ ro:
               name: Compoziții muzicale cu parametri
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Nested Loops:
               name: Repetiții imbricate
         coursef-2017:
@@ -2420,6 +2455,8 @@ ro:
           lessons:
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Artist:
+              name: Cicluri cu Artistul
         csdnovice:
           lessons:
             Wrap Up:
@@ -2516,6 +2553,8 @@ ro:
           lessons:
             Introduction:
               name: Introducere
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Internet:
               name: Internet
             Digital Citizenship:
@@ -2536,6 +2575,8 @@ ro:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Spelling Bee:
               name: Albina de Ortografie
         subgoal-labels-opt-in:
@@ -2598,6 +2639,8 @@ ro:
           lessons:
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Nested Loops:
               name: Repetiții imbricate
             Conditionals:
@@ -2625,6 +2668,8 @@ ro:
               name: Binar cu artist
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Loops in Ice Age:
               name: Bucle în Ice Age
         csp3-a:
@@ -2639,6 +2684,8 @@ ro:
           lessons:
             Introduction:
               name: Introducere
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Building a Foundation:
               name: Construirea unei Fundaţii
             Nested Loops:
@@ -2647,6 +2694,9 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lessons:
+            Loops in Artist:
+              name: Cicluri cu Artistul
         new-e:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -2661,6 +2711,8 @@ ro:
           lessons:
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Conditionals:
               name: Condiţionale
             Internet:
@@ -2679,6 +2731,8 @@ ro:
           lessons:
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Ice Age Play Lab:
               name: Laboratorul Joaca Ice Age
             Envelope Variables:
@@ -2741,6 +2795,8 @@ ro:
           lessons:
             Personal Innovations:
               name: Inovații personale
+            What is a Computer?:
+              name: Ce Este un Computer?
             Simple Encryption:
               name: Criptare simplă
         allthesurveys:
@@ -2814,6 +2870,8 @@ ro:
           lessons:
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Nested Loops:
               name: Repetiții imbricate
             Introduction:
@@ -2836,6 +2894,8 @@ ro:
           lessons:
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Introduction:
               name: Introducere
             Ice Age Play Lab:
@@ -3524,6 +3584,10 @@ ro:
             CS Discoveries Pre-survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+            The Problem Solving Process:
+              name: Procesul de Rezolvare a Problemei
+            What is a Computer?:
+              name: Ce Este un Computer?
         csd4-2018:
           description_audience: '[șir gol]'
           lesson_groups:
@@ -4164,6 +4228,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Artist:
+              name: Cicluri cu Artistul
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops in Bee/Zombie:
@@ -4270,6 +4335,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Artist:
+              name: Cicluri cu Artistul
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops:
@@ -4472,6 +4538,10 @@ ro:
             CS Discoveries Pre-survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+            The Problem Solving Process:
+              name: Procesul de Rezolvare a Problemei
+            What is a Computer?:
+              name: Ce Este un Computer?
         andrea-test:
           lesson_groups:
             required:
@@ -4504,6 +4574,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Artist:
+              name: Cicluri cu Artistul
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Events: The Big Event':
@@ -4541,6 +4612,7 @@ ro:
             Going Places Safely:
               name: Mergând în locuri în siguranţă
             Loops in Artist:
+              name: Cicluri cu Artistul
               description_student: '[șir gol]'
         courseb-2019:
           lesson_groups:
@@ -5184,6 +5256,8 @@ ro:
               name: Condiționale cu Carduri
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Artist:
+              name: Cicluri cu Artistul
         csp1-pilot-staging:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -5319,6 +5393,9 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lessons:
+            What is a Computer?:
+              name: Ce Este un Computer?
         fit2019-apprentice:
           lesson_groups:
             required:
@@ -5345,6 +5422,10 @@ ro:
             CS Discoveries Pre-survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+            The Problem Solving Process:
+              name: Procesul de Rezolvare a Problemei
+            What is a Computer?:
+              name: Ce Este un Computer?
             Post-Project Test:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
@@ -5414,6 +5495,9 @@ ro:
               display_name: Conţinut
             required:
               display_name: Prezentare generală
+          lessons:
+            Debugging:
+              name: Corectare erori
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -5515,6 +5599,9 @@ ro:
           lesson_groups:
             csd1_2:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+          lessons:
+            What is a Computer?:
+              name: Ce Este un Computer?
         csp2-pilot:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -5540,6 +5627,8 @@ ro:
           lessons:
             Introduction:
               name: Introducere
+            Loops in Artist:
+              name: Cicluri cu Artistul
             Nested Loops:
               name: Repetiții imbricate
         csp6-pilot:
@@ -5851,6 +5940,10 @@ ro:
             CS Discoveries Pre-survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+            The Problem Solving Process:
+              name: Procesul de Rezolvare a Problemei
+            What is a Computer?:
+              name: Ce Este un Computer?
             Post-Project Test:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
@@ -6125,6 +6218,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Artist:
+              name: Cicluri cu Artistul
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops in Bee:
@@ -6219,6 +6313,7 @@ ro:
             Ocean Scene with Loops:
               description_student: '[șir gol]'
             Loops in Artist:
+              name: Cicluri cu Artistul
               description_student: '[șir gol]'
             Tell a Story in Play Lab:
               description_student: '[șir gol]'
@@ -6243,6 +6338,9 @@ ro:
               name: Routere și redundanță
         csp3-2020:
           description_audience: '[șir gol]'
+          lessons:
+            Debugging:
+              name: Corectare erori
         csp6-2020:
           description_audience: '[șir gol]'
         csp8-2020:
@@ -6301,6 +6399,11 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lessons:
+            Tools:
+              name: Instrumente
+            Debugging:
+              name: Corectare erori
         csd2-virtual:
           description_audience: '[șir gol]'
           lesson_groups:
@@ -6632,12 +6735,24 @@ ro:
               name: Descoperiri informatice
           description: '[șir gol]'
         virustest:
+          title: Se simulează o Epidemie
           description_audience: '[șir gol]'
+          description_short: 'Folosește Sprite Lab pentru a creea o simulare dintr-o epidemie a unui virus.'
           description: '[șir gol]'
         ml-playground:
           description_audience: '[șir gol]'
         outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Cum se Codifică o Simulare
+          lesson_groups:
+            outbreak:
+              display_name: Simulare Epidemie
+          title: Simulator Epidemie
           description_audience: '[șir gol]'
+          description_short: 'Utilizează Laboratorul Sprite pentru a programa simularea unei epidemii dintr-un virus'
+          description: 'Utilizează Laboratorul Sprite pentru a programa simularea unei epidemii dintr-un virus'
+          name: epidemie
         apps-for-good:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -6646,6 +6761,13 @@ ro:
           description: '[șir gol]'
         csd1-2021:
           description_audience: '[șir gol]'
+          lessons:
+            The Problem Solving Process:
+              key: Procesul de Rezolvare a Problemei
+              name: Procesul de Rezolvare a Problemei
+            What is a Computer?:
+              key: Ce Este un Computer?
+              name: Ce Este un Computer?
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
@@ -6740,6 +6862,10 @@ ro:
               name: Routere și redundanță
         csp3-2021:
           description_audience: '[șir gol]'
+          lessons:
+            Debugging:
+              key: Corectare erori
+              name: Corectare erori
         csp4-2021:
           description_audience: '[șir gol]'
           lesson_groups:
@@ -6787,6 +6913,10 @@ ro:
               name: Mutaţi-l, mutați-l
             'Loops: Getting Loopy':
               name: Transformând în Buclă
+            Loops in Harvester:
+              key: Cicluri în Harvester
+            Loops in Artist:
+              key: Cicluri cu Artistul
           lesson_groups:
             csf_digcit:
               display_name: Cetățenia Digitală
@@ -6799,6 +6929,8 @@ ro:
             Binary Bracelets:
               key: Brăţări Binare
               name: Brăţări Binare
+            Loops in Harvester:
+              key: Cicluri în Harvester
             'Events: The Big Event':
               name: Marele eveniment
           lesson_groups:
@@ -6823,6 +6955,8 @@ ro:
             Loops in Ice Age:
               key: Bucle în Ice Age
               name: Bucle în Ice Age
+            Loops in Artist:
+              key: Cicluri cu Artistul
             Conditionals with Cards:
               key: Condiționale cu Carduri
               name: Condiționale cu Carduri
@@ -6903,10 +7037,14 @@ ro:
               display_name: Evenimente
         csf-2021-pilot:
           lessons:
+            Virus Simulation for Code Bytes:
+              name: Cum se Codifică o Simulare
             lesson-1:
               name: Variabile de tip plic
           lesson_groups:
             ramp_up:
               display_name: Introducere
+            outbreak:
+              display_name: Simulare Epidemie
             lessonGroup-3:
               display_name: Variabile
