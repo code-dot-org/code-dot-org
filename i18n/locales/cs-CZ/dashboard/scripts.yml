@@ -3680,10 +3680,24 @@ cs:
               name: Kurz B
             CS Discoveries:
               name: Objevujeme informatiku
+        virustest:
+          title: Simulace šíření
+          description_short: 'Vytvořte ve Sprite Labu simulaci šíření viru. '
         ml-playground:
           lessons:
             AI for Oceans:
               name: AI pomáhá oceánům
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Kódování simulace
+          lesson_groups:
+            outbreak:
+              display_name: Simulace šíření
+          title: Simulátor šíření
+          description_short: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
+          description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
+          name: šíření
         csd1-2021:
           lesson_groups:
             csd1_1:
@@ -4042,10 +4056,14 @@ cs:
               display_name: Události
         csf-2021-pilot:
           lessons:
+            Virus Simulation for Code Bytes:
+              name: Kódování simulace
             lesson-1:
               name: Obálkové proměnné
           lesson_groups:
             ramp_up:
               display_name: Úvod
+            outbreak:
+              display_name: Simulace šíření
             lessonGroup-3:
               display_name: Proměnné
