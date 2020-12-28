@@ -15205,12 +15205,26 @@ zh-TW:
               name: 課程 B
             CS Discoveries:
               name: 計算機科學探索
+        virustest:
+          title: 模擬疫情爆發
+          description_short: '使用精靈圖實驗室創建一個病毒爆發模擬。 '
         ml-playground:
           lessons:
             AI for Oceans:
               name: 在海洋中使用的 AI
             visualizing:
               name: 資料視覺化
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: 編碼一個模擬
+          lesson_groups:
+            outbreak:
+              display_name: 疫情爆發模擬
+          title: 疫情爆發模擬
+          description_short: '使用精靈圖實驗室進行病毒爆發模擬程式設計。 '
+          description: '使用精靈圖實驗室進行病毒爆發模擬程式設計。 '
+          name: 疫情爆發
         csd1-2021:
           title: CSD 單元 1 - 問題解決 ('19-'20)
           description: "問題解決與運算是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\\r"
@@ -16555,10 +16569,14 @@ zh-TW:
           lessons:
             Learning Sprites with Sprite Lab:
               name: Sprite Lab 中的游泳小魚
+            Virus Simulation for Code Bytes:
+              name: 編碼一個模擬
             lesson-1:
               name: 信封變數
           lesson_groups:
             ramp_up:
               display_name: 介紹
+            outbreak:
+              display_name: 疫情爆發模擬
             lessonGroup-3:
               display_name: 變數
