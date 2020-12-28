@@ -15591,12 +15591,26 @@ tr:
           title: Sandbox Müfredat Seviyeleri
           description_audience: Dahili
           description_short: 'Doğrudan ders planları ile bağlantılı olan ancak diğer komut dosyalarında görünmeyen seviyeler. '
+        virustest:
+          title: Salgın Simülasyonu Yapmak
+          description_short: 'Bir virüs salgınının simülasyonunu yapmak için Sprite Lab''ı kullanın.'
         ml-playground:
           lessons:
             AI for Oceans:
               name: "Okyanuslar için Yapay Zeka\n"
             visualizing:
               name: Veriyi görselleştirme
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Simülasyon Kodlama
+          lesson_groups:
+            outbreak:
+              display_name: Salgın Simülasyonu
+          title: Salgın Simülatörü
+          description_short: 'Bir virüs salgınının simülasyonunu programlamak için Sprite Lab''ı kullanın.'
+          description: 'Bir virüs salgınının simülasyonunu programlamak için Sprite Lab''ı kullanın.'
+          name: salgın
         2021drafting:
           description_audience: Dahili
           description_short: Dahili
@@ -17006,10 +17020,14 @@ tr:
           lessons:
             Learning Sprites with Sprite Lab:
               name: Hareketli Nesne Laboratuvarı ile Yüzen Balık
+            Virus Simulation for Code Bytes:
+              name: Simülasyon Kodlama
             lesson-1:
               name: Zarf değişkenleri
           lesson_groups:
             ramp_up:
               display_name: Giriş
+            outbreak:
+              display_name: Salgın Simülasyonu
             lessonGroup-3:
               display_name: Değişkenler
