@@ -5057,12 +5057,26 @@ ru:
               name: Курс B
             CS Discoveries:
               name: Открытия в информатике
+        virustest:
+          title: Симулятор эпидемии
+          description_short: 'Используйте Sprite Lab для создания симулятора эпидемии вируса.'
         ml-playground:
           lessons:
             AI for Oceans:
               name: AI для океанов
             visualizing:
               name: Визуализация данных
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Программирование симулятора
+          lesson_groups:
+            outbreak:
+              display_name: Симуляция эпидемии
+          title: Симулятор эпидемии
+          description_short: 'Используйте Sprite Lab для программирования симулятора эпидемии вируса.'
+          description: 'Используйте Sprite Lab для программирования симулятора эпидемии вируса.'
+          name: эпидемия
         csd1-2021:
           lessons:
             The Problem Solving Process:
@@ -5519,10 +5533,14 @@ ru:
               display_name: События
         csf-2021-pilot:
           lessons:
+            Virus Simulation for Code Bytes:
+              name: Программирование симулятора
             lesson-1:
               name: Конвертные переменные
           lesson_groups:
             ramp_up:
               display_name: Введение
+            outbreak:
+              display_name: Симуляция эпидемии
             lessonGroup-3:
               display_name: Переменные
