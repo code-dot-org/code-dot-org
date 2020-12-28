@@ -2825,7 +2825,255 @@ el:
               name: Μάθημα A
             Course B:
               name: Μάθημα B
-        ml-playground:
+        virustest:
+          title: Εξομοιώνοντας μία Έξαρση
+          description_short: Χρησιμοποιήστε το Sprite Lab για να δημιουργήσετε μια
+            προσομοίωση από μία έξαρση ιού.
+        outbreak:
           lessons:
-            intro:
-              name: Εισαγωγή
+            Virus Simulation for Code Bytes:
+              name: Κωδικοποίηση μίας προσομοίωσης
+          lesson_groups:
+            outbreak:
+              display_name: Προσομοίωση Επιδημικής Έξαρσης
+          title: Προσομοιωτής Επιδημικής Έξαρσης
+          description_short: Χρησιμοποιήστε το Sprite Lab για να προγραμματίσετε μια
+            προσομοίωση από μία έξαρση ιού.
+          description: Χρησιμοποιήστε το Sprite Lab για να προγραμματίσετε μια προσομοίωση
+            από μία έξαρση ιού.
+          name: έξαρση
+        csd1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd3-2021:
+          description_short: Προγραμματισμός
+          lessons:
+            Variables:
+              key: Μεταβλητές
+              name: Μεταβλητές
+            Random Numbers:
+              key: Τυχαίοι αριθμοί
+              name: Τυχαίοι αριθμοί
+            Sprites:
+              key: Χαρακτήρας
+              name: Χαρακτήρας
+            Sprite Properties:
+              key: Ιδιότητες Χαρακτήρα
+              name: Ιδιότητες Χαρακτήρα
+            Text:
+              key: κείμενο
+              name: κείμενο
+            Conditionals:
+              key: Συνθήκες
+              name: Συνθήκες
+            Velocity:
+              key: Ταχύτητα
+              name: Ταχύτητα
+            Functions:
+              key: Συναρτήσεις
+              name: Συναρτήσεις
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd4-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Συναρτήσεις με παραμέτρους
+              name: Συναρτήσεις με παραμέτρους
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csp1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Εντοπισμός σφαλμάτων
+              name: Εντοπισμός σφαλμάτων
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Μεταβλητές
+            csp_conditionals:
+              display_name: Συνθήκες
+            csp_functions:
+              display_name: Συναρτήσεις
+            csp_project:
+              display_name: Έργο
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Λίστες
+            csp_loops:
+              display_name: Βρόχοι
+            csp_project:
+              display_name: Έργο
+        csp7-2021:
+          lesson_groups:
+            csp_libraries:
+              display_name: Βιβλιοθήκες
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Χαρούμενοι Χάρτες
+            Loops in Ice Age:
+              key: Βρόχοι στην Εποχή των Παγετώνων
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Μετακίνησέ το, Μετακίνησέ το
+              name: Μετακίνησέ το, Μετακίνησέ το
+            'Loops: Getting Loopy':
+              name: Επαναλαμβανόμαστε
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Δυαδικά Βραχιόλια
+              name: Δυαδικά Βραχιόλια
+            'Events: The Big Event':
+              name: Το Μεγάλο Γεγονός
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_binary:
+              display_name: Δυαδικό
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
+            Relay Programming:
+              key: Προγραμματισμός Ρελέ
+              name: Προγραμματισμός Ρελέ
+            Dance Party:
+              key: Πάρτι Χορού
+              name: Πάρτι Χορού
+            Loops in Ice Age:
+              key: Βρόχοι στην Εποχή των Παγετώνων
+              name: Βρόχοι στην Εποχή των Παγετώνων
+            Conditionals with Cards:
+              key: Υποθέσεις με Κάρτες
+              name: Υποθέσεις με Κάρτες
+            'Unplugged: Binary':
+              key: 'Εκτός Σύνδεσης: Δυαδικοί'
+              name: Δυαδικές Εικόνες
+            Artist Binary:
+              key: Δυαδικοί Καλλιτέχνη
+              name: Δυαδικοί Καλλιτέχνη
+          lesson_groups:
+            csf_events:
+              display_name: Συμβάντα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_conditionals:
+              display_name: Συνθήκες
+            csf_binary:
+              display_name: Δυαδικό
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Συνθήκες
+            'Functions: Songwriting':
+              name: Σύνθεση τραγουδιού
+          lesson_groups:
+            csf_sprites:
+              display_name: Χαρακτήρας
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_nested_loops:
+              display_name: Φωλιασμένες Επαναλήψεις
+            csf_functions:
+              display_name: Συναρτήσεις
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Μεταβλητές
+              name: Μεταβλητές
+            Internet:
+              key: Διαδίκτυο
+              name: Το Διαδίκτυο
+            For Loop Fun:
+              key: Διασκέδαση με το Βρόχο Για
+              name: Διασκέδαση με το Βρόχο Για
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_variables:
+              display_name: Μεταβλητές
+            csf_for_loops:
+              display_name: Βρόχοι Για
+            csf_sprites:
+              display_name: Χαρακτήρας
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Πάρτι Χορού
+              name: Πάρτι Χορού
+          lesson_groups:
+            csf_warmup:
+              display_name: Ζέσταμα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_conditionals:
+              display_name: Συνθήκες
+            csf_functions:
+              display_name: Συναρτήσεις
+            csf_variables:
+              display_name: Μεταβλητές
+            csf_for_loops:
+              display_name: Βρόχοι Για
+            csf_sprites:
+              display_name: Χαρακτήρας
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Κωδικοποίηση μίας προσομοίωσης
+            lesson-1:
+              name: Μεταβλητές
+          lesson_groups:
+            ramp_up:
+              display_name: Εισαγωγή
+            outbreak:
+              display_name: Προσομοίωση Επιδημικής Έξαρσης
+            lessonGroup-3:
+              display_name: Μεταβλητές
