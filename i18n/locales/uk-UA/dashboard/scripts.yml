@@ -4094,6 +4094,20 @@ uk:
             Course E/F:
               name: Курс E/F
           description_audience: Внутрішній
+        virustest:
+          title: Симулювання Спалаху
+          description_short: 'Створіть симуляцію спалаху вірусу за допомогою Sprite Lab.'
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Моделювання симуляції
+          lesson_groups:
+            outbreak:
+              display_name: Симуляція спалаху
+          title: Симулятор спалаху
+          description_short: 'Запрограмуйте симуляцію спалаху вірусу за допомогою Sprite Lab.'
+          description: 'Запрограмуйте симуляцію спалаху вірусу за допомогою Sprite Lab.'
+          name: спалах
         2021drafting:
           description_audience: Внутрішній
           description_short: Внутрішній
@@ -4417,10 +4431,14 @@ uk:
               display_name: Події
         csf-2021-pilot:
           lessons:
+            Virus Simulation for Code Bytes:
+              name: Моделювання симуляції
             lesson-1:
               name: Конвертні змінні
           lesson_groups:
             ramp_up:
               display_name: Вступ
+            outbreak:
+              display_name: Симуляція спалаху
             lessonGroup-3:
               display_name: Змінні
