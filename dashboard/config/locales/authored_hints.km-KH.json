@@ -134,7 +134,7 @@
           "2-3_Bee_Functions_6_a": "អ្នកមិនចាំបាច់ប្រើប្រាស់ការធ្វើច្រើនដងជាមួយអនុគមន៍នោះទេ ។ ព្យាយាមរផ្លសា់ទី ប្រើអនុគមន៍ រួចហើយផ្លាស់ទីនិងប្រើប្រាស់អនុគមន៍ម្តងទៀត ។"
         },
         "2-3 Bee Functions 8": {
-          "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n !\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
+          "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n \\!\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
         },
         "2-3 Bee Functions 9": {
           "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន ។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត ។ មិនយូទេអ្នកនឹងបានជោគជ័យ !",
@@ -816,7 +816,7 @@
           "courseD_bee_debugging_challenge1_c": "បន្ទាប់ពីឃ្មុំធ្វើឱ្យវាស្ថិតនៅជួរខាងក្រោម សូមឱ្យវាធ្វើម្តងទៀតនូវពាក្យបញ្ជាទាំងនេះ:\n\n-   ធ្វើឡើងវិញ ២ ដង:\n    -   ទៅមុខ\n    -   ធ្វើទឹកឃ្មុំ ៣\n-   រំកិលថយក្រោយ"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "ចុងបញ្ចប់ ប្រមូលកំណប់ដែលនៅសល់។ បន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "នេះគឺជាដំណោះស្រាយពេញលេញសម្រាប់បញ្ហានេះ។\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -2090,6 +2090,135 @@
         "Dance_2019_09": {
           "validation": "**តើធ្វើយ៉ាងម៉េចទើបអាចឆ្លងកាត់វគ្គនេះបាន?**\n\n-   គ្រាន់តែចុចប៊ូតុង \"Finish\" ទៅវារួចបាត់ទៅហើយ!",
           "repeat_every_ideas": "**ពិបាករកគំនិតថ្មីមែនទេ?**\n\n-   អ្នកអាចធ្វើអោយទំហំអ្នករបាំកាន់តែធំឡើងៗ\n-   ឬក៏អ្នកអាចប្ដូរទិសដៅរបស់អ្នករបាំរបស់អ្នក ធ្វើអោយពួកគេបង្វិលជុំក៏បាន។\n\n_អ្នកក៏អាចប្រើចំនួនអវិជ្ជមានដើម្បីធ្វើអោយមានលក្ខណៈផ្ទុយវិញបានដែរ!_"
+        },
+        "courseD_farmer_while1": {
+          "courseD_farmer_while1_a": "អ្នកនឹងត្រូវផ្លាស់ទីទៅមុខ៤ដង ដើម្បីទៅដល់គំនរ។ តើអ្នកអាចប្រើ ' ធ្វើម្ដងទៀត ' ដើម្បីរង្វិលជុំដដែលៗបានឬទេ?",
+          "courseD_farmer_while1_b": "ប្រើប្លុក \"ដកចេញមួយ\" នៅពេលអ្នកឈរនៅលើគំនរដី ដើម្បីដកវាចេញ។"
+        },
+        "courseD_farmer_while1_2018": {
+          "courseD_farmer_while1_a": "អ្នកនឹងត្រូវផ្លាស់ទីទៅមុខ៤ដង ដើម្បីទៅដល់គំនរ។ តើអ្នកអាចប្រើ ' ធ្វើម្ដងទៀត ' ដើម្បីរង្វិលជុំដដែលៗបានឬទេ?",
+          "courseD_farmer_while1_b": "ប្រើប្លុក \"ដកចេញមួយ\" នៅពេលអ្នកឈរនៅលើគំនរដី ដើម្បីដកវាចេញ។"
+        },
+        "courseD_farmer_while1_2019": {
+          "courseD_farmer_while1_a": "អ្នកនឹងត្រូវផ្លាស់ទីទៅមុខ៤ដង ដើម្បីទៅដល់គំនរ។ តើអ្នកអាចប្រើ ' ធ្វើម្ដងទៀត ' ដើម្បីរង្វិលជុំដដែលៗបានឬទេ?",
+          "courseD_farmer_while1_b": "ប្រើប្លុក \"ដកចេញមួយ\" នៅពេលអ្នកឈរនៅលើគំនរដី ដើម្បីដកវាចេញ។"
+        },
+        "courseD_farmer_while1_2020": {
+          "courseD_farmer_while1_a": "អ្នកនឹងត្រូវផ្លាស់ទីទៅមុខ៤ដង ដើម្បីទៅដល់គំនរ។ តើអ្នកអាចប្រើ ' ធ្វើម្ដងទៀត ' ដើម្បីរង្វិលជុំដដែលៗបានឬទេ?",
+          "courseD_farmer_while1_b": "ប្រើប្លុក \"ដកចេញមួយ\" នៅពេលអ្នកឈរនៅលើគំនរដី ដើម្បីដកវាចេញ។"
+        },
+        "courseE_artist_functions8_2018": {
+          "courseD_artist_functions8_f": "អ្នកគ្រាន់តែត្រូវការប្លុក `move forward` មួយប៉ុណ្ណោះ, ប៉ុន្តែអ្នកនឹងត្រូវការប្លុក  `jump forward` និង/ ឬ `jump backward` ពីរបី !",
+          "courseD_artist_functions8_a": "ចាប់ផ្តើមដោយបង្កើតអនុគមន៍សម្រាប់បង្កើតការ៉េ, បន្ទាប់មកសាកល្បងបង្កើតអនុគមន៍ សម្រាប់បង្កើតបន្ទាត់នៃការ៉េមួយ។\n\nតើអ្នកប្រើអនុគមន៍ `draw a line of squares` ដើម្បីបង្កើតរូបភាពនេះយ៉ាងដូចម្តេច?",
+          "courseD_artist_functions8_d": "ដើម្បីបង្កើតជាបន្ទាត់ការ៉េ,\n\n-   ធ្វើឡើងវិញ ៣ ដង\n-   គូរការ៉េដែលមានប្រវែង \\*\\* ៥០ ភីកសែល \\*\\*\n-   លោតទៅមុខ \\*\\* ១០០ ភីកសែល \\*\\*",
+          "courseD_artist_functions8_b": "គិតថាជួរនីមួយៗនៅក្នុងរូបភាពនេះជានៃបន្ទាត់ការ៉េ ៣ ។ តើមាននៃបន្ទាត់ការ៉េប៉ុន្មានជួរ ហើយតើអ្នកចាប់ផ្តើមគូរវានៅទីណា?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)"
+        },
+        "courseE_artist_functions8_2019": {
+          "courseD_artist_functions8_f": "អ្នកគ្រាន់តែត្រូវការប្លុក `move forward` មួយប៉ុណ្ណោះ, ប៉ុន្តែអ្នកនឹងត្រូវការប្លុក  `jump forward` និង/ ឬ `jump backward` ពីរបី !",
+          "courseD_artist_functions8_a": "ចាប់ផ្តើមដោយបង្កើតអនុគមន៍សម្រាប់បង្កើតការ៉េ, បន្ទាប់មកសាកល្បងបង្កើតអនុគមន៍ សម្រាប់បង្កើតបន្ទាត់នៃការ៉េមួយ។\n\nតើអ្នកប្រើអនុគមន៍ `draw a line of squares` ដើម្បីបង្កើតរូបភាពនេះយ៉ាងដូចម្តេច?",
+          "courseD_artist_functions8_d": "ដើម្បីបង្កើតជាបន្ទាត់ការ៉េ,\n\n-   ធ្វើឡើងវិញ ៣ ដង\n-   គូរការ៉េដែលមានប្រវែង \\*\\* ៥០ ភីកសែល \\*\\*\n-   លោតទៅមុខ \\*\\* ១០០ ភីកសែល \\*\\*",
+          "courseD_artist_functions8_b": "គិតថាជួរនីមួយៗនៅក្នុងរូបភាពនេះជានៃបន្ទាត់ការ៉េ ៣ ។ តើមាននៃបន្ទាត់ការ៉េប៉ុន្មានជួរ ហើយតើអ្នកចាប់ផ្តើមគូរវានៅទីណា?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)"
+        },
+        "courseE_artist_functions8_2020": {
+          "courseD_artist_functions8_f": "អ្នកគ្រាន់តែត្រូវការប្លុក `move forward` មួយប៉ុណ្ណោះ, ប៉ុន្តែអ្នកនឹងត្រូវការប្លុក  `jump forward` និង/ ឬ `jump backward` ពីរបី !",
+          "courseD_artist_functions8_a": "ចាប់ផ្តើមដោយបង្កើតអនុគមន៍សម្រាប់បង្កើតការ៉េ, បន្ទាប់មកសាកល្បងបង្កើតអនុគមន៍ សម្រាប់បង្កើតបន្ទាត់នៃការ៉េមួយ។\n\nតើអ្នកប្រើអនុគមន៍ `draw a line of squares` ដើម្បីបង្កើតរូបភាពនេះយ៉ាងដូចម្តេច?",
+          "courseD_artist_functions8_d": "ដើម្បីបង្កើតជាបន្ទាត់ការ៉េ,\n\n-   ធ្វើឡើងវិញ ៣ ដង\n-   គូរការ៉េដែលមានប្រវែង \\*\\* ៥០ ភីកសែល \\*\\*\n-   លោតទៅមុខ \\*\\* ១០០ ភីកសែល \\*\\*",
+          "courseD_artist_functions8_b": "គិតថាជួរនីមួយៗនៅក្នុងរូបភាពនេះជានៃបន្ទាត់ការ៉េ ៣ ។ តើមាននៃបន្ទាត់ការ៉េប៉ុន្មានជួរ ហើយតើអ្នកចាប់ផ្តើមគូរវានៅទីណា?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)"
+        },
+        "courseE_artist_functions9_2018": {
+          "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
+          "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
+        },
+        "courseE_artist_functions9_2019": {
+          "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
+          "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
+        },
+        "courseE_artist_functions9_2020": {
+          "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
+          "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
+        },
+        "courseD_farmer_while2": {
+          "courseD_farmer_while2_a": "អ្នកត្រូវផ្លាស់ទីតែម្ដងប៉ុណ្ណោះ ដើម្បីទៅដល់រណ្ដៅ។",
+          "courseD_farmer_while2_b": "អ្នកនឹងត្រូវការប្លុក \"បំពេញមួយ\" ចំនួនប្រាំមួយដង។ តើអ្នកអាចប្រើការរង្វិលជុំដដែលៗមួយ ដើម្បីធ្វើអោយវាកាន់តែងាយជាងមុនឬទេ?"
+        },
+        "courseD_farmer_while2_2018": {
+          "courseD_farmer_while2_a": "អ្នកត្រូវផ្លាស់ទីតែម្ដងប៉ុណ្ណោះ ដើម្បីទៅដល់រណ្ដៅ។",
+          "courseD_farmer_while2_b": "អ្នកនឹងត្រូវការប្លុក \"បំពេញមួយ\" ចំនួនប្រាំមួយដង។ តើអ្នកអាចប្រើការរង្វិលជុំដដែលៗមួយ ដើម្បីធ្វើអោយវាកាន់តែងាយជាងមុនឬទេ?"
+        },
+        "courseD_farmer_while2_2019": {
+          "courseD_farmer_while2_a": "អ្នកត្រូវផ្លាស់ទីតែម្ដងប៉ុណ្ណោះ ដើម្បីទៅដល់រណ្ដៅ។",
+          "courseD_farmer_while2_b": "អ្នកនឹងត្រូវការប្លុក \"បំពេញមួយ\" ចំនួនប្រាំមួយដង។ តើអ្នកអាចប្រើការរង្វិលជុំដដែលៗមួយ ដើម្បីធ្វើអោយវាកាន់តែងាយជាងមុនឬទេ?"
+        },
+        "courseD_farmer_while2_2020": {
+          "courseD_farmer_while2_a": "អ្នកត្រូវផ្លាស់ទីតែម្ដងប៉ុណ្ណោះ ដើម្បីទៅដល់រណ្ដៅ។",
+          "courseD_farmer_while2_b": "អ្នកនឹងត្រូវការប្លុក \"បំពេញមួយ\" ចំនួនប្រាំមួយដង។ តើអ្នកអាចប្រើការរង្វិលជុំដដែលៗមួយ ដើម្បីធ្វើអោយវាកាន់តែងាយជាងមុនឬទេ?"
+        },
+        "courseD_farmer_while3": {
+          "courseD_farmer_while3_a": "រង្វិលជុំដដែលៗ អាចជួយអ្នកធ្វើអោយកូដកាន់តែងាយ។",
+          "courseD_farmer_while3_b": "អ្នកមិនគួរត្រូវការប្លុក \"បង្វិល\" ដើម្បីទៅដល់គំនរទេ។"
+        },
+        "courseD_farmer_while3_2018": {
+          "courseD_farmer_while3_a": "រង្វិលជុំដដែលៗ អាចជួយអ្នកធ្វើអោយកូដកាន់តែងាយ។",
+          "courseD_farmer_while3_b": "អ្នកមិនគួរត្រូវការប្លុក \"បង្វិល\" ដើម្បីទៅដល់គំនរទេ។"
+        },
+        "courseD_farmer_while3_2019": {
+          "courseD_farmer_while3_a": "រង្វិលជុំដដែលៗ អាចជួយអ្នកធ្វើអោយកូដកាន់តែងាយ។",
+          "courseD_farmer_while3_b": "អ្នកមិនគួរត្រូវការប្លុក \"បង្វិល\" ដើម្បីទៅដល់គំនរទេ។"
+        },
+        "courseD_farmer_while3_2020": {
+          "courseD_farmer_while3_a": "រង្វិលជុំដដែលៗ អាចជួយអ្នកធ្វើអោយកូដកាន់តែងាយ។",
+          "courseD_farmer_while3_b": "អ្នកមិនគួរត្រូវការប្លុក \"បង្វិល\" ដើម្បីទៅដល់គំនរទេ។"
+        },
+        "courseE_artist_functions10": {
+          "courseD_artist_functions10_b": "គំនូរនេះគឺដូចជាគំនូរចុងក្រោយដែរ, ប៉ុន្តែអនុគមន៍ `draw line` ឥឡូវកំពុងគូររូបខុសគ្នា។",
+          "courseD_artist_functions10_a": "ដើម្បីជៀសវាងការប្រើប្រាស់ប្លុក `move forward` ច្រើនដង, បង្កើតអនុគមន៍\n `draw hexagon`ហើយហៅវាច្រើនដង។",
+          "courseD_artist_functions10_c": "តើអ្នកឃើញកន្លែងដែលគំនូរនេះអាចប្រើអនុគមន៍មួយដែលហៅថា `line of hexagons`ទេ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions10_2018": {
+          "courseD_artist_functions10_b": "គំនូរនេះគឺដូចជាគំនូរចុងក្រោយដែរ, ប៉ុន្តែអនុគមន៍ `draw line` ឥឡូវកំពុងគូររូបខុសគ្នា។",
+          "courseD_artist_functions10_a": "ដើម្បីជៀសវាងការប្រើប្រាស់ប្លុក `move forward` ច្រើនដង, បង្កើតអនុគមន៍\n `draw hexagon`ហើយហៅវាច្រើនដង។",
+          "courseD_artist_functions10_c": "តើអ្នកឃើញកន្លែងដែលគំនូរនេះអាចប្រើអនុគមន៍មួយដែលហៅថា `line of hexagons`ទេ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions10_2019": {
+          "courseD_artist_functions10_b": "គំនូរនេះគឺដូចជាគំនូរចុងក្រោយដែរ, ប៉ុន្តែអនុគមន៍ `draw line` ឥឡូវកំពុងគូររូបខុសគ្នា។",
+          "courseD_artist_functions10_a": "ដើម្បីជៀសវាងការប្រើប្រាស់ប្លុក `move forward` ច្រើនដង, បង្កើតអនុគមន៍\n `draw hexagon`ហើយហៅវាច្រើនដង។",
+          "courseD_artist_functions10_c": "តើអ្នកឃើញកន្លែងដែលគំនូរនេះអាចប្រើអនុគមន៍មួយដែលហៅថា `line of hexagons`ទេ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions10_2020": {
+          "courseD_artist_functions10_b": "គំនូរនេះគឺដូចជាគំនូរចុងក្រោយដែរ, ប៉ុន្តែអនុគមន៍ `draw line` ឥឡូវកំពុងគូររូបខុសគ្នា។",
+          "courseD_artist_functions10_a": "ដើម្បីជៀសវាងការប្រើប្រាស់ប្លុក `move forward` ច្រើនដង, បង្កើតអនុគមន៍\n `draw hexagon`ហើយហៅវាច្រើនដង។",
+          "courseD_artist_functions10_c": "តើអ្នកឃើញកន្លែងដែលគំនូរនេះអាចប្រើអនុគមន៍មួយដែលហៅថា `line of hexagons`ទេ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions8": {
+          "courseD_artist_functions8_f": "អ្នកគ្រាន់តែត្រូវការប្លុក `move forward` មួយប៉ុណ្ណោះ, ប៉ុន្តែអ្នកនឹងត្រូវការប្លុក  `jump forward` និង/ ឬ `jump backward` ពីរបី !",
+          "courseD_artist_functions8_a": "ចាប់ផ្តើមដោយបង្កើតអនុគមន៍សម្រាប់បង្កើតការ៉េ, បន្ទាប់មកសាកល្បងបង្កើតអនុគមន៍ សម្រាប់បង្កើតបន្ទាត់នៃការ៉េមួយ។\n\nតើអ្នកប្រើអនុគមន៍ `draw a line of squares` ដើម្បីបង្កើតរូបភាពនេះយ៉ាងដូចម្តេច?",
+          "courseD_artist_functions8_d": "ដើម្បីបង្កើតជាបន្ទាត់ការ៉េ,\n\n-   ធ្វើឡើងវិញ ៣ ដង\n-   គូរការ៉េដែលមានប្រវែង \\*\\* ៥០ ភីកសែល \\*\\*\n-   លោតទៅមុខ \\*\\* ១០០ ភីកសែល \\*\\*",
+          "courseD_artist_functions8_b": "គិតថាជួរនីមួយៗនៅក្នុងរូបភាពនេះជានៃបន្ទាត់ការ៉េ ៣ ។ តើមាននៃបន្ទាត់ការ៉េប៉ុន្មានជួរ ហើយតើអ្នកចាប់ផ្តើមគូរវានៅទីណា?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_c": "នៅចុងបញ្ចប់នៃជួរនីមួយៗនៃបន្ទាត់ការ៉េ, សិល្បករនឹងត្រូវលោតចុះក្រោមនិងថយក្រោយ មុនពេលគាត់គូរបន្ទាត់ការ៉េបន្ទាប់។"
+        },
+        "courseE_artist_functions9": {
+          "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
+          "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
+        },
+        "courseE_bee_functions4": {
+          "courseE_bee_functions4_b": "ប្រើប្លុក `move and get nectar` ពណ៌បៃតង ដើម្បីហៅអនុគមន៍នេះ។"
+        },
+        "courseE_bee_functions5": {
+          "courseE_bee_functions5_a": "ចូរកែសម្រួលអនុគមន៍ ដូច្នេះវាអាចដោះស្រាយបញ្ហា ដោយមិនចាំបាច់ផ្លាស់ប្តូរប្រូក្រាមសំខាន់។",
+          "courseE_bee_functions5_c": "ប្លុក `move forward` អាចផ្លាស់ប្តូរទៅជាប្លុក `move backward` បាន។ ប្រើវាជំនួសឱ្យការបង្វែរទិសដៅនៅចុងបញ្ចប់នៃផ្លូវ!",
+          "courseE_bee_functions5_b": "អនុគមន៍របស់អ្នកគួរតែបង្កើតឱ្យតួអង្គឃ្មុំ: \n\n-   បត់\n-   រំកិលទៅមុខ\n-   ប្រមូលទឹកដមទាំងអស់\n-   រំកិលថយក្រោយ\n-   ត្រលប់ទៅទិសដៅដែលតួអង្គឃ្មុំចាប់ផ្តើមដំបូង"
         }
       }
     }
