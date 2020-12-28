@@ -940,6 +940,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Maaari mong baguhin ang numerong ito.",
           "courseE_artist_ramp8_2": "Mag-click dito para ma-type kung ilang beses uulitin ang iyong code."
+        },
+        "outbreak2": {
+          "minitoolbox": "Mag-click dito upang palakihin ang bloke.",
+          "pointerlocation": "Mag-drag ng isang bloke ng paksa dito."
+        },
+        "outbreak7": {
+          "costumes_callout": "I-click upang makagawa ng isang bagong costume"
         }
       }
     }
