@@ -2351,6 +2351,20 @@ da:
               name: Betingelser
             Functions:
               name: Funktioner
+        virustest:
+          title: Simulering af et udbrud
+          description_short: 'Brug Sprite Lab til at oprette en simulation ud af et virusudbrud. '
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Kodning af en simulation
+          lesson_groups:
+            outbreak:
+              display_name: Udbrud Simulering
+          title: Udbrud Simulator
+          description_short: 'Brug Sprite Lab til at programmere en simulation ud af et virusudbrud. '
+          description: 'Brug Sprite Lab til at programmere en simulation ud af et virusudbrud. '
+          name: udbrud
         csd3-2021:
           description_short: "Programmering"
           lessons:
@@ -2520,10 +2534,14 @@ da:
               display_name: Hændelser
         csf-2021-pilot:
           lessons:
+            Virus Simulation for Code Bytes:
+              name: Kodning af en simulation
             lesson-1:
               name: Omslut variabler
           lesson_groups:
             ramp_up:
               display_name: Introduktion
+            outbreak:
+              display_name: Udbrud Simulering
             lessonGroup-3:
               display_name: Variabler
