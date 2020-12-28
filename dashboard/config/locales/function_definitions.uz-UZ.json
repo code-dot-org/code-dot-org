@@ -92,6 +92,9 @@
         "Find the Wizard": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "check guess": {
+            "name": "check guess"
           }
         },
         "Geometric Sun": {
@@ -100,6 +103,32 @@
           },
           "diamond": {
             "name": "olmos"
+          },
+          "draw a door": {
+            "name": "eshik chizish"
+          },
+          "draw grass": {
+            "name": "maysa chizish"
+          },
+          "draw windows": {
+            "name": "oynalar chizish"
+          },
+          "rectangle": {
+            "name": "toʻgʻri toʻrtburchak",
+            "description": "aha-ha"
+          },
+          "sun": {
+            "name": "quyosh"
+          },
+          "window": {
+            "name": "oyna"
+          },
+          "triangle": {
+            "name": "uchburchak"
+          },
+          "square": {
+            "name": "kvadrat",
+            "description": "aha-ha"
           }
         },
         "Geometric Sun_2018": {
@@ -108,6 +137,32 @@
           },
           "diamond": {
             "name": "olmos"
+          },
+          "draw a door": {
+            "name": "eshik chizish"
+          },
+          "draw grass": {
+            "name": "maysa chizish"
+          },
+          "draw windows": {
+            "name": "oynalar chizish"
+          },
+          "rectangle": {
+            "name": "toʻgʻri toʻrtburchak",
+            "description": "aha-ha"
+          },
+          "sun": {
+            "name": "quyosh"
+          },
+          "window": {
+            "name": "oyna"
+          },
+          "triangle": {
+            "name": "uchburchak"
+          },
+          "square": {
+            "name": "kvadrat",
+            "description": "aha-ha"
           }
         },
         "NEW Course 4 Artist Params 10": {
@@ -314,7 +369,7 @@
         },
         "courseE_artist_concept_challenge1": {
           "do something": {
-            "name": "nimadir qilish"
+            "name": "nimadir qiling"
           }
         },
         "courseE_artist_concept_challenge1_2018": {
@@ -633,7 +688,7 @@
         },
         "courseE_playLab_scaffold1": {
           "do something": {
-            "name": "nimadir qilish"
+            "name": "nimadir qiling"
           }
         },
         "courseE_playLab_scaffold2": {
@@ -662,17 +717,20 @@
             "parameters": {
               "size": "kattalik",
               "color": "rang"
-            }
+            },
+            "name": "checker"
           },
           "Make gingham": {
             "parameters": {
               "size": "kattalik"
-            }
+            },
+            "name": "Make gingham"
           },
           "black outline": {
             "parameters": {
               "length": "uzunlik"
-            }
+            },
+            "name": "black outline"
           }
         },
         "courseF_artist_fwp2": {
@@ -683,23 +741,27 @@
             "name": "kvadrat chizish",
             "parameters": {
               "length": "uzunlik"
-            }
+            },
+            "description": "draw a square with length parameter\n"
           },
           "checker": {
             "parameters": {
               "size": "kattalik",
               "color": "rang"
-            }
+            },
+            "name": "checker"
           },
           "Make gingham": {
             "parameters": {
               "size": "kattalik"
-            }
+            },
+            "name": "Make gingham"
           },
           "black outline": {
             "parameters": {
               "length": "uzunlik"
-            }
+            },
+            "name": "black outline"
           }
         },
         "courseF_artist_fwp9": {
@@ -873,18 +935,21 @@
               "sides": "tomonlar",
               "length": "uzunlik"
             },
-            "name": "n-tomonli shakl"
+            "name": "n-tomonli shakl",
+            "description": "Shakl hozirgi paytda necha tomonga egaligiga qarab o'zgaradi. Buning uchun ikkita parametr, uzunlik va tomonlar kerak. Uzunlik"
           },
           "draw a loop": {
             "parameters": {
               "sides": "tomonlar",
               "length": "uzunlik"
-            }
+            },
+            "name": "sikl chizish"
           },
           "draw spiral circle": {
             "parameters": {
               "size": "kattalik"
-            }
+            },
+            "name": "spiralli aylana chizish"
           }
         },
         "InspirationalArtwork_2018": {
@@ -892,15 +957,18 @@
             "parameters": {
               "sides": "tomonlar",
               "length": "uzunlik"
-            }
+            },
+            "name": "sikl chizish"
           },
           "draw spiral circle": {
             "parameters": {
               "size": "kattalik"
-            }
+            },
+            "name": "spiralli aylana chizish"
           },
           "n-sided shape": {
-            "name": "n-tomonli shakl"
+            "name": "n-tomonli shakl",
+            "description": "Shakl hozirgi paytda necha tomonga egaligiga qarab o'zgaradi. Buning uchun ikkita parametr, uzunlik va tomonlar kerak. Uzunlik"
           }
         },
         "MC_HOC_2017_FP20x20": {
@@ -1185,28 +1253,44 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "olov chizish"
+          },
+          "draw fire": {
+            "name": "o't (olov) chizish"
           }
         },
         "courseC_artist_prog3_2018": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "olov chizish"
+          },
+          "draw fire": {
+            "name": "o't (olov) chizish"
           }
         },
         "courseC_artist_prog3_2019": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "olov chizish"
+          },
+          "draw fire": {
+            "name": "o't (olov) chizish"
           }
         },
         "courseC_artist_prog3_2020": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "olov chizish"
+          },
+          "draw fire": {
+            "name": "o't (olov) chizish"
           }
         },
         "courseE_artist_concept1_2018": {
@@ -1621,7 +1705,8 @@
             "name": "kvadrat chizish",
             "parameters": {
               "length": "uzunlik"
-            }
+            },
+            "description": "draw a square with a length parameter"
           }
         },
         "courseF_artist_fwp3": {
@@ -1634,18 +1719,21 @@
           "draw a square2": {
             "parameters": {
               "size": "kattalik"
-            }
+            },
+            "name": "draw a square2"
           },
           "filled square": {
             "parameters": {
               "size": "kattalik",
               "color": "rang"
-            }
+            },
+            "name": "filled square"
           },
           "black outline": {
             "parameters": {
               "length": "uzunlik"
-            }
+            },
+            "name": "black outline"
           }
         },
         "courseF_bee_fwp4": {
@@ -1673,21 +1761,24 @@
           "rowOfNectarOrHoney": {
             "parameters": {
               "width": "kenglik"
-            }
+            },
+            "name": "rowOfNectarOrHoney"
           }
         },
         "courseF_bee_fwp8": {
           "rowOfNectarOrHoney": {
             "parameters": {
               "width": "kenglik"
-            }
+            },
+            "name": "rowOfNectarOrHoney"
           }
         },
         "courseF_bee_fwp9_predict1": {
           "rowOfNectarOrHoney": {
             "parameters": {
               "width": "kenglik"
-            }
+            },
+            "name": "rowOfNectarOrHoney"
           }
         },
         "courseF_bee_fwp_challenge1": {
@@ -1722,16 +1813,25 @@
         "courseF_bee_variables_8_2018": {
           "collect": {
             "name": "yig‘ish"
+          },
+          "move and increment": {
+            "name": "ko'chirish va oshirish"
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
             "name": "yig‘ish"
+          },
+          "move and increment": {
+            "name": "ko'chirish va oshirish"
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "yig‘ish"
+          },
+          "move and increment": {
+            "name": "ko'chirish va oshirish"
           }
         },
         "courseE_artist_functions2": {
@@ -1857,6 +1957,231 @@
           },
           "starting path": {
             "name": "boshlash yo'li"
+          }
+        },
+        "Alien Defender": {
+          "game has been won": {
+            "name": "o'yin yutildi"
+          }
+        },
+        "Guess The Number": {
+          "check guess": {
+            "name": "check guess",
+            "parameters": {
+              "theGuess": "theGuess"
+            }
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": "kuchaytirgich"
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": "kuchaytirgich"
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": "kuchaytirgich"
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": "kuchaytirgich"
+          }
+        },
+        "courseE_bee_concept4": {
+          "honey nectar": {
+            "name": "asal nektar"
+          }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+            "name": "move and make honey"
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
+            "name": "move and make honey"
+          }
+        },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+            "name": "collect all nectar"
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+            "name": "get all nectar"
+          }
+        },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+            "name": "navigate"
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+            "name": "check and pick"
+          },
+          "find pumpkin": {
+            "name": "find pumpkin"
+          },
+          "wander path": {
+            "name": "wander path"
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+            "name": "makkajo'xori va oshqovoq"
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+            "name": "makkajo'xori va oshqovoq"
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+            "name": "makkajo'xori va oshqovoq"
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+            "name": "makkajo'xori va oshqovoq"
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+            "name": "makkajo'xori va oshqovoq"
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+            "name": "navigate"
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+            "name": "navigate"
+          }
+        },
+        "courseF_bee_functions2": {
+          "get only nectar": {
+            "name": "get only nectar"
+          }
+        },
+        "courseF_bee_functions3": {
+          "only make honey": {
+            "name": "only make honey"
+          }
+        },
+        "courseF_bee_variables_1_2018": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_1_2019": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_1_2020": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_2_2018": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_2_2019": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_2_2020": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_3_2018": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_3_2019": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_3_2020": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_4_2018": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_4_2019": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_4_2020": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_5_2018": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_5_2019": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_5_2020": {
+          "collect row": {
+            "name": "qatorni yig'ish"
+          }
+        },
+        "courseF_bee_variables_6_2018": {
+          "collect stairs": {
+            "name": "zinapoyalarni yig'ish"
+          }
+        },
+        "courseF_bee_variables_6_2019": {
+          "collect stairs": {
+            "name": "zinapoyalarni yig'ish"
+          }
+        },
+        "courseF_bee_variables_6_2020": {
+          "collect stairs": {
+            "name": "zinapoyalarni yig'ish"
+          }
+        },
+        "Robot Doodle": {
+          "25 pixel square": {
+            "name": "25 pikselli kvadrat"
+          },
+          "draw eye": {
+            "name": "koʻz chizish"
+          }
+        },
+        "Robot Doodle_2018": {
+          "25 pixel square": {
+            "name": "25 pikselli kvadrat"
+          },
+          "draw eye": {
+            "name": "koʻz chizish"
           }
         }
       }

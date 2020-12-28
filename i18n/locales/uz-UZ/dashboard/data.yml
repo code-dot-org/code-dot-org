@@ -39,6 +39,7 @@ uz:
         Custom: Rassom
         CustomStudio: Play Lab - O‘yin laboratoriyasi
         Gamelab: O‘yin laboratoriyasi
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronza
@@ -363,6 +364,7 @@ uz:
         CSF_EF_cs_matters: Kompyuter fanlari ahamiyatli
         CSF_maze_intro_k1_blocks: Code Studio. Kirish
         CSF_maze_intro_text_blocks: Code Studio. Kirish
+        CSF_my_robotic_friends: My Robotic Friends
         CSF_Power_of_Words: So'zning kuchi
         CSF_Super_Digital_Citizen: Super Raqamli Fuqarolik
         CSF_stevie_big_project: Stivi va Katta loyiha

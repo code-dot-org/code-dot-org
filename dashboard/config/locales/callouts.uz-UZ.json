@@ -622,10 +622,12 @@
           "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
         },
         "courseD_maze_ramp3_2019": {
-          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin."
+          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin.",
+          "stone_block_2": "Kulrang bloklarni olib tashlab bo'lmaydi."
         },
         "courseD_maze_ramp3_2020": {
-          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin."
+          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin.",
+          "stone_block_2": "Kulrang bloklarni olib tashlab bo'lmaydi."
         },
         "courseD_maze_ramp4_2019": {
           "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
@@ -930,6 +932,283 @@
         },
         "courseE_aboutme_2_2020": {
           "": "Bu yerni bosing!"
+        },
+        "Geometric Sun": {
+          "4-5_Artist_Patterns_Free_Play_1": "Sizning barcha sevimli bloklaringiz endi toifalarga ajratilgan. Hamma narsa qayerga ketganini bilish uchun ushbu so'zlarni bosing!"
+        },
+        "Geometric Sun_2018": {
+          "4-5_Artist_Patterns_Free_Play_1": "Sizning barcha sevimli bloklaringiz endi toifalarga ajratilgan. Hamma narsa qayerga ketganini bilish uchun ushbu so'zlarni bosing!"
+        },
+        "OPD-K5-projects-4": {
+          "courseE_playLab_scaffold3_1": "Get the actor to this flag to move on to the next level."
+        },
+        "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "Keyingi bosqichga o'tish uchun aktyorni ushbu bayroqqa olib boring."
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "courseE_playLab_scaffold3_1": "Keyingi bosqichga o'tish uchun aktyorni ushbu bayroqqa olib boring."
+        },
+        "courseC_maze_debugging5": {
+          "courseC_maze_debugging5_1": "Grey blocks cannot be deleted!"
+        },
+        "courseE_artist_functions1": {
+          "courseD_artist_functions1_1": "Birinchi kvadratni yaratishda yordam berish uchun ushbu blokdan foydalanaylik."
+        },
+        "courseE_artist_functions1_copy": {
+          "courseD_artist_functions1_1": "Let's start by using this block to help create the first square."
+        },
+        "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "Ushbu yashil blok ishga tushganda, funksiyadagi barcha kodlar ishlaydi. Birinchi kvadrat chizilganidan keyin rassom nima qilishi kerak?"
+        },
+        "courseE_artist_functions2_2018": {
+          "courseD_artist_functions2_1": "Ushbu yashil blok ishga tushganda, funksiyadagi barcha kodlar ishlaydi. Birinchi kvadrat chizilganidan keyin rassom nima qilishi kerak?"
+        },
+        "courseE_artist_functions2_2019": {
+          "courseD_artist_functions2_1": "Ushbu yashil blok ishga tushganda, funksiyadagi barcha kodlar ishlaydi. Birinchi kvadrat chizilganidan keyin rassom nima qilishi kerak?"
+        },
+        "courseE_artist_functions2_2020": {
+          "courseD_artist_functions2_1": "Ushbu yashil blok ishga tushganda, funksiyadagi barcha kodlar ishlaydi. Birinchi kvadrat chizilganidan keyin rassom nima qilishi kerak?"
+        },
+        "courseE_artist_functions2_copy": {
+          "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
+        },
+        "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "Funksiyalarni yaratish uchun bloklar asboblar qutisidagi ushbu yorliq ostida joylashgan."
+        },
+        "courseE_artist_functions8a_2018": {
+          "courseD_artist_functions8_1": "Your blocks to create functions have been moved under this label in the toolbox."
+        },
+        "courseE_artist_functions8a_2019": {
+          "courseD_artist_functions8_1": "Your blocks to create functions have been moved under this label in the toolbox."
+        },
+        "courseE_artist_functions8a_2020": {
+          "courseD_artist_functions8_1": "Your blocks to create functions have been moved under this label in the toolbox."
+        },
+        "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Pastga qo'shimcha kod qo'shish orqali ushbu dasturni davom eting.",
+          "courseE_artist_functions_challenge1_callout2": "Agar sizga ushbu dizayn yoqmasa, uni xohlagan narsangizga o'zgartiring!"
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
+          "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
+          "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
+          "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
+        },
+        "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Pastga qo'shimcha kod qo'shish orqali ushbu dasturni davom eting.",
+          "courseE_artist_functions_challenge2_callout2": "Agar sizga ushbu dizayn yoqmasa, uni xohlagan narsangizga o'zgartiring!"
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
+          "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
+          "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
+          "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
+        },
+        "courseE_farmer_functions1": {
+          "courseE_farmer_functions1_2": "Asboblar qutisi bu safar biroz boshqacha tartibda! Qaysi bloklaringiz borligini ko'rish uchun turli toifalarni bosib ko'ring."
+        },
+        "courseE_farmer_functions13_2018": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseE_farmer_functions13_2019": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseE_farmer_functions1_2018": {
+          "courseE_farmer_functions1_2": "The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have."
+        },
+        "courseE_farmer_functions1_2019": {
+          "courseE_farmer_functions1_2": "The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have."
+        },
+        "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_2": "The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have."
+        },
+        "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "Bu noma'lum sabzavot. Dasturni har safar ishga tushirganingizda u o'zgaradi."
+        },
+        "courseE_farmer_functions1a_2018": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseE_farmer_functions1a_2019": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseE_farmer_functions1a_2020": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "Bu noma'lum sabzavot. Dasturni har safar ishga tushirganingizda u o'zgaradi."
+        },
+        "courseE_farmer_functions2b_2018": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseE_farmer_functions2b_2019": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseE_farmer_functions2b_2020": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseE_playLab_scaffold3": {
+          "courseE_playLab_scaffold3_1": "Keyingi bosqichga o'tish uchun aktyorni ushbu bayroqqa olib boring."
+        },
+        "courseF_bee_variables_1_2018": {
+          "courseF_bee_functions_1_2018_1": "O'zgaruvchilaringizni bu yerda topishingiz mumkin!"
+        },
+        "courseF_bee_variables_1_2019": {
+          "courseF_bee_functions_1_2018_1": "O'zgaruvchilaringizni bu yerda topishingiz mumkin!"
+        },
+        "courseF_bee_variables_1_2020": {
+          "courseF_bee_functions_1_2018_1": "O'zgaruvchilaringizni bu yerda topishingiz mumkin!"
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Yangi blok!"
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "Yangi blok!"
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "Yangi blok!",
+          "new_block_4": "Yangi blok!"
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "Yangi blok!",
+          "dance_callout_11_b": "Yangi blok!"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Bu yerda \"barcha o'rdaklar\" bloklari bor"
+        },
+        "Dance_2019_01": {
+          "dance_callout_01": "Bu yerda raqqosning turini tanlang."
+        },
+        "Dance_2019_02": {
+          "dance_callout_11_a": "Ushbu blokni dasturingizga qo'shing.",
+          "arrow_buttons": "Raqqosni boshqarish uchun o'q tugmachalarini bosing."
+        },
+        "Dance_2019_05": {
+          "dance_callout_05": "Dasturingizga yangi hodisa qo'shing."
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "Yangi blok!"
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "Yangi blok!"
+        },
+        "Dance_2019_09": {
+          "new_block_3": "Yangi blok!",
+          "new_block_4": "Yangi blok!"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "Yangi blok!",
+          "dance_callout_11_b": "Yangi blok!"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Bu yerda \"barcha o'rdaklar\" bloklari bor"
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "O'zingiz yoki o'qituvchingiz kodingiz ishlashi haqida eslatma qoldirishi uchun ushbu blokdan foydalaning."
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "O'zingiz yoki o'qituvchingiz kodingiz ishlashi haqida eslatma qoldirishi uchun ushbu blokdan foydalaning."
+        },
+        "OPD-K5-spritelab-3": {
+          "spritelab_comment": "O'zingiz yoki o'qituvchingiz kodingiz ishlashi haqida eslatma qoldirishi uchun ushbu blokdan foydalaning."
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "Yangi raqqosni bu yerga qo'shing"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "Yangi raqqosni bu yerga qo'shing"
+        },
+        "courseA_collector_loops1_2019": {
+          "courseA_collector_loops1_1": "Xazinani olish uchun ushbu blokdan foydalaning."
+        },
+        "courseA_collector_loops1_2020": {
+          "courseA_collector_loops1_1": "Xazinani olish uchun ushbu blokdan foydalaning."
+        },
+        "courseB_collector_loops1_2018": {
+          "courseB_collector_loops1_1": "Xazinani olish uchun ushbu blokdan foydalaning."
+        },
+        "courseB_collector_loops1_2019": {
+          "courseB_collector_loops1_1": "Xazinani olish uchun ushbu blokdan foydalaning."
+        },
+        "courseB_collector_loops1_2020": {
+          "courseB_collector_loops1_1": "Xazinani olish uchun ushbu blokdan foydalaning."
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Ushbu blokni dasturingizga qo'shing!"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "Ushbu blokni dasturingizga qo'shing!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "Ushbu blokni dasturingizga qo'shing!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "Ushbu blokni dasturingizga qo'shing!"
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "Ushbu blokni dasturingizga qo'shing!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "Ushbu blokni dasturingizga qo'shing!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "Ushbu blokni dasturingizga qo'shing!"
+        },
+        "courseD_farmer_while7_2018": {
+          "courseD_farmer_while7_2018_PathAhead": "Ushbu jumboqni yechish uchun siz \"oldinda yo'l bo'lguncha\" blokidan foydalanishingiz kerak."
+        },
+        "courseD_farmer_while7_2019": {
+          "courseD_farmer_while7_2018_PathAhead": "Ushbu jumboqni yechish uchun siz \"oldinda yo'l bo'lguncha\" blokidan foydalanishingiz kerak."
+        },
+        "courseD_farmer_while7_2020": {
+          "courseD_farmer_while7_2018_PathAhead": "Ushbu jumboqni yechish uchun siz \"oldinda yo'l bo'lguncha\" blokidan foydalanishingiz kerak."
+        },
+        "course4_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
+          "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
+        },
+        "4-5 Artist Patterns Free Play": {
+          "4-5_Artist_Patterns_Free_Play_1": "Sizning barcha sevimli bloklaringiz endi toifalarga ajratilgan. Hamma narsa qayerga ketganini bilish uchun ushbu so'zlarni bosing!"
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "Bu \"takrorlash\" sikli! Uni ish maydoniga joylang va qayta-qayta ishlatmoqchi bo'lgan kodni qo'shing."
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_1": "Bu \"takrorlash\" sikli! Uni ish maydoniga joylang va qayta-qayta ishlatmoqchi bo'lgan kodni qo'shing."
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_1": "Bu \"takrorlash\" sikli! Uni ish maydoniga joylang va qayta-qayta ishlatmoqchi bo'lgan kodni qo'shing."
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agent suv ustida suzib yurishi mumkin, ammo o'yinchi bunga qodir emas!"
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "Agent suv ustida suzib yurishi mumkin, ammo o'yinchi bunga qodir emas!"
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "Agent suv ustida suzib yurishi mumkin, ammo o'yinchi bunga qodir emas!"
+        },
+        "course3_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
+          "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
+        },
+        "course3_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
+          "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
         }
       }
     }
