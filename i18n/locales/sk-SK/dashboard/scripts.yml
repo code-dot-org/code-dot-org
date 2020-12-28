@@ -4779,6 +4779,8 @@ sk:
             Loops with the Artist:
               name: Kreslenie s cyklami
               description_teacher: Sledujte nadšenie na tvárach vašich študentov ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu. Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel pre portfólio, či ako ukážku pre rodičov. 
+            Editing Behaviors:
+              name: Správania v Sprite Labe
             Virtual Pet:
               name: Virtuálne zvieratko so Sprite Labom
             End of Course Project:
@@ -5127,6 +5129,8 @@ sk:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Editing Behaviors:
+              name: Správania v Sprite Labe
             Virtual Pet with Sprite Lab:
               name: Virtuálne zvieratko so Sprite Labom
             Build A Project:
@@ -7068,6 +7072,8 @@ sk:
             Internet:
               name: Internet
               description_teacher: I keď mnoho ľudí denne internet používa, veľa z nich nevie, ako funguje. V tejto lekcii budú študenti predstierať, že prechádzajú cez internet a to tak, že sa budú učiť o pripojeniach, URL aj IP adresách a DNS.
+            Editing Behaviors:
+              name: Správania v Sprite Labe
             Virtual Pet:
               name: Virtuálne zvieratko so Sprite Labom
             The Power of Words:
@@ -7191,6 +7197,8 @@ sk:
               name: Spoznaj Sprite Lab
             Alien Dance Party:
               name: Mimozemská tanečná párty
+            Behaviors in Sprite Lab:
+              name: Správania v Sprite Labe
         pre-express-2020:
           title: Zrýchlený kurz pre predškolákov (2020)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
@@ -7484,10 +7492,24 @@ sk:
               name: Kurz B
             CS Discoveries:
               name: Objavujeme informatiku
+        virustest:
+          title: Prebieha simulácia nákazy
+          description_short: 'Pomocou programu Sprite Lab vytvorte simuláciu nákazy vírusom'
         ml-playground:
           lessons:
             AI for Oceans:
               name: AI pomáha oceánom
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Kódovanie nákazy
+          lesson_groups:
+            outbreak:
+              display_name: Simulácia napadnutia
+          title: Simulácia nákazy
+          description_short: 'Pomocou programu Sprite Lab naprogramujte simuláciu nákazy vírusom.'
+          description: 'Pomocou programu Sprite Lab naprogramujte simuláciu nákazy vírusom.'
+          name: nákaza
         csd1-2021:
           title: CSD Kapitola 1 - Riešenie problémov a výpočtová technika ('20-'21)
           description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
@@ -8050,6 +8072,8 @@ sk:
             For Loops in Artist:
               key: Cykly "for" s Umelcom
               name: Cykly "for" s Umelcom
+            Editing Behaviors:
+              name: Správania v Sprite Labe
             Virtual Pet:
               name: Virtuálne zvieratko so Sprite Labom
             End of Course Project:
@@ -8145,6 +8169,9 @@ sk:
             Alien Dance Party:
               key: Mimozemská tanečná párty
               name: Mimozemská tanečná párty
+            Behaviors in Sprite Lab:
+              key: Správania v Sprite Labe
+              name: Správania v Sprite Labe
             Virtual Pet with Sprite Lab:
               key: Virtuálne zvieratko so Sprite Labom
               name: Virtuálne zvieratko so Sprite Labom
@@ -8214,10 +8241,14 @@ sk:
           lessons:
             Learning Sprites with Sprite Lab:
               name: Plávajúca ryba so Sprite Labom
+            Virus Simulation for Code Bytes:
+              name: Kódovanie nákazy
             lesson-1:
               name: Premenné v obálkach
           lesson_groups:
             ramp_up:
               display_name: Úvod
+            outbreak:
+              display_name: Simulácia napadnutia
             lessonGroup-3:
               display_name: Premenné
