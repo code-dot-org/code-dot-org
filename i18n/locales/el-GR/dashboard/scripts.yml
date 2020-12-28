@@ -2760,6 +2760,20 @@ el:
               name: Μάθημα A
             Course B:
               name: Μάθημα B
+        virustest:
+          title: Εξομοιώνοντας μία Έξαρση
+          description_short: 'Χρησιμοποιήστε το Sprite Lab για να δημιουργήσετε μια προσομοίωση από μία έξαρση ιού.'
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Κωδικοποίηση μίας προσομοίωσης
+          lesson_groups:
+            outbreak:
+              display_name: Προσομοίωση Επιδημικής Έξαρσης
+          title: Προσομοιωτής Επιδημικής Έξαρσης
+          description_short: 'Χρησιμοποιήστε το Sprite Lab για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
+          description: 'Χρησιμοποιήστε το Sprite Lab για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
+          name: έξαρση
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -2984,10 +2998,14 @@ el:
               display_name: Συμβάντα
         csf-2021-pilot:
           lessons:
+            Virus Simulation for Code Bytes:
+              name: Κωδικοποίηση μίας προσομοίωσης
             lesson-1:
               name: Μεταβλητές
           lesson_groups:
             ramp_up:
               display_name: Εισαγωγή
+            outbreak:
+              display_name: Προσομοίωση Επιδημικής Έξαρσης
             lessonGroup-3:
               display_name: Μεταβλητές
