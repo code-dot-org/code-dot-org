@@ -1,4 +1,5 @@
 # Sign up for account through /join/:section_code endpoint with invalid and valid form inputs
+# Users see sign up form when they attempt to join section without being signed in
 Feature: Using the join section page while not signed in
 
   Scenario: Join section while not signed in with invalid form inputs
