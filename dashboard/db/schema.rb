@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_16_185353) do
+ActiveRecord::Schema.define(version: 2021_01_03_234601) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1589,7 +1589,7 @@ ActiveRecord::Schema.define(version: 2020_12_16_185353) do
     t.index ["user_id"], name: "index_survey_results_on_user_id"
   end
 
-  create_table "teacher_feedbacks", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "teacher_feedbacks", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.text "comment"
     t.integer "student_id"
     t.integer "level_id", null: false
