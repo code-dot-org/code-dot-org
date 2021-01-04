@@ -16,7 +16,8 @@ import {
   selectedColumnsHaveDatatype,
   continuousColumnsHaveOnlyNumbers,
   trainerSelected,
-  compatibleLabelAndTrainer
+  compatibleLabelAndTrainer,
+  namedModel
 } from "./validate.js";
 
 import { ColumnTypes, MLTypes } from "./constants.js";
@@ -615,6 +616,12 @@ export function validationMessages(state) {
     errorString:
       "The label datatype must be compatible with the training algorithm.",
     successString: "The label datatype and training algorithm are compatible."
+  };
+  validationMessages["nameModel"] = {
+    panel: "saveModel",
+    readyToTrain: namedModel(state),
+    errorString: "Please name your model.",
+    successString: "Your model is named."
   };
   return validationMessages;
 }
