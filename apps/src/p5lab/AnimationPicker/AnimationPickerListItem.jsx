@@ -64,7 +64,8 @@ class AnimationPickerListItem extends React.Component {
     label: PropTypes.string,
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
-    category: PropTypes.string
+    category: PropTypes.string,
+    isSpriteLab: PropTypes.bool
   };
 
   state = {
@@ -89,12 +90,16 @@ class AnimationPickerListItem extends React.Component {
         display: this.state.loaded ? 'block' : 'none'
       }
     ];
-
-    const iconImageSrc = this.props.category
-      ? `/blockly/media/gamelab/animation-previews/category_${
-          this.props.category
-        }.png`
-      : '';
+    let iconImageSrc = '';
+    if (this.props.category) {
+      iconImageSrc = this.props.isSpriteLab
+        ? `/blockly/media/gamelab/animation-previews-spritelab/category_${
+            this.props.category
+          }.png`
+        : `/blockly/media/gamelab/animation-previews-gamelab/category_${
+            this.props.category
+          }.png`;
+    }
 
     return (
       <div
