@@ -90,6 +90,9 @@ class AnimationPickerListItem extends React.Component {
         display: this.state.loaded ? 'block' : 'none'
       }
     ];
+
+    // TODO(JillianK): Remove this additional isSpriteLab logic once new sprites have been added to the SpriteLab animation library.
+    // Jira context: https://codedotorg.atlassian.net/browse/STAR-1319
     let iconImageSrc = '';
     if (this.props.category) {
       iconImageSrc = this.props.isSpriteLab
