@@ -9,6 +9,19 @@ function draw() {
 }
 
 /**
+ * Must run in the interpreter, not natively, so that we can execute valueFn to get its value
+ * and be able to use that value within beginCollectingData. If beginCollectingData ran natively,
+ * calling valueFn would add a call into the interpreter on the call stack, but wouldn't execute
+ * immediately, so we wouldn't be able to use the value from within beginCollectingData.
+ */
+function beginCollectingData(valueFn, label) {
+  collectData(function() {
+    printText(['Time in seconds: ',getTime("seconds"),' | ', label, ': ', valueFn()].join(''));
+  });
+}
+
+
+/**
  * Must run in the interpreter, not natively, so that callback executes before withPercentChance() returns,
  * rather than being added to the stack. For example, consider the following program:
  * var i = 10;
@@ -54,6 +67,10 @@ function clickedOn(spriteId, callback) {
 
 function draggable() {
   return {func: draggableFunc(), name: 'draggable'};
+}
+
+function followingTargets() {
+  return {func: followingTargetsFunc(), name: 'following targets'};
 }
 
 function tumbling(spriteId) {
