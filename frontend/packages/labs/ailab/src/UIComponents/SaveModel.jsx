@@ -20,7 +20,7 @@ class SaveModel extends Component {
   };
 
   onClickSave = () => {
-    if (this.props.trainedModelDetails.name != undefined) {
+    if (this.props.trainedModelDetails.name !== undefined) {
       this.props.saveTrainedModel(this.props.dataToSave);
     }
   };
