@@ -185,6 +185,10 @@ export const commands = {
     eventCommands.spriteClicked(condition, spriteArg, callback);
   },
 
+  whenSpriteCreated(spriteArg, callback) {
+    eventCommands.whenSpriteCreated(spriteArg, callback);
+  },
+
   whenPromptAnswered(variableName, callback) {
     eventCommands.whenPromptAnswered(variableName, callback);
   },
