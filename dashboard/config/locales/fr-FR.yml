@@ -134,8 +134,15 @@ fr:
       vous identifier en tapant votre mot de passe, ci-dessous.
     use_clever: Désolé, votre compte Code.org n'est pas lié à %{provider}. Merci de
       vous connecter via Clever Portal.
+    invalid_provider: Désolé, les comptes %{provider} ne pas peuvent être liés à des
+      comptes Code.org.
+    migration_required: Désolé, nous ne pouvons pas connecter ou déconnecter des comptes
+      qui utilisent encore l'ancienne mouture des comptes. Veuillez mettre à jour
+      vers la nouvelle mouture de comptes.
     unable_to_connect_provider: Impossible de connecter votre compte Code.org à votre
       compte %{provider}. Veuillez réessayer.
+    disconnect_successful: Opération réussie! Nous avons déconnecté le compte externe
+      de votre compte Code.org.
     already_in_use: Votre compte %{provider} est déjà connecté à un autre compte Code.org.
     already_linked: Votre compte %{provider} est déjà lié à votre compte de Code.org.
     existing_account:
@@ -395,6 +402,7 @@ fr:
       game_lab_tutorials: Tutoriels du Labo des Jeux
       sprite_lab_documentation: Documentation sur le Labo des Lutins
       sprite_lab_tutorials: Tutoriels du Labo des Lutins
+      web_lab_documentation: Documentation Web Lab
       educate_overview: Aperçu enseignant
       educate_elementary: École primaire
       educate_middle: Collège
@@ -508,6 +516,8 @@ fr:
       worked_with: A travaillé avec
       update_lock_settings: Mettre à jour les paramètres de verrouillage ici.
       clear_response: Effacer la réponse
+    student_code_view_diabled: Le code d'étudiant ne peut être visualisé pour cette
+      activité.
   user:
     email_confirm_needed: 'L''adresse e-mail n''a pas été confirmée:'
     email_confirm_needed_required: 'Votre adresse e-mail %{email} n''a pas été confirmée
@@ -579,6 +589,7 @@ fr:
       afin de rester informé des progrès et des projets de votre enfant. Vous pourrez
       également utiliser cette l'adresse électronique pour récupérer le mot de passe.
     parent_guardian_email_label: E-mail du parent/tuteur
+    remove_parent_email_label: Supprimer
     none: Aucun
     only_one_parent_email_supported_warning: 'Remarque : notre système ne supporte
       qu''une seule adresse électronique de parent/tuteur par compte étudiant, pour
@@ -696,6 +707,8 @@ fr:
       href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Fourni par Amazon Web Services
+    google_copyright: "&copy; Google Inc. utilisé avec autorisation. Google Classroom
+      est une marque déposée de Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE et Hour
       of Code&reg; sont des marques déposées de Code.org."
     copyright: Copyright
@@ -1032,6 +1045,18 @@ fr:
       être indisponibles pour vos élèves avant votre acceptation expresse des conditions
       mises à jour.
     review_terms: Consulter les éléments modifiés
+  donor_interstitial:
+    title: Vos leçons CS gratuites sont rendues possibles par...
+    subtitle: Nous voudrions remercier les généreux donateurs dont le soutien a fait
+      de Code.org un réel succès. Nous nous engageons à maintenir Code.org gratuit
+      pour les écoles et les étudiants, mondialement, grâce à la générosité continue
+      de nos donateurs [donors](%{donors_url})!
+    local_supporters: Soutiens Locaux
+    global_supporters: Soutiens Mondiaux
+    support_codeorg_1: Chaque dollar donné à Code.org apporte des opportunités à plus
+      d'étudiants.
+    support_codeorg_2: "[Faire un don maintenant](%{donate_url}) pour soutnenir Code.org."
+    get_started: Débuter avec Code.org
   school_info_interstitial:
     title: Nous voulons apporter l'Informatique à tous les étudiants - aidez-nous
       à suivre notre progression !
@@ -1301,6 +1326,7 @@ fr:
       school_country:
         canada: Canada
         chile: Chili
+        colombia: Colombie
         israel: Israël
         malaysia: Malaisie
         mexico: Mexique
@@ -1349,6 +1375,7 @@ fr:
         csf_express: Les Fondamentaux de l’Informatique (Pré-Express ou Express)
         csd: Découvertes de l'Informatique
         csp: Principes de l'Informatique
+        not_applicable: Non applicable
       email_opt_in:
         opt_in_yes: Oui
         opt_in_no: Non
@@ -1368,6 +1395,9 @@ fr:
         de Code.org. Veuillez continuer à partager vos questions et vos commentaires
         avec nous en nous écrivant à [support@code.org](%{support_email_url}) ou en
         postant sur le [forum des enseignants](%{teacher_forum_url})!
+      facilitator_not_listed: Mon facilitateur n'est pas listé
+      facilitator_not_applicable: Non applicable
+      organizer_not_listed: Mon organisateur n'est pas listé
     logged_out:
       heading: Merci de votre intérêt pour le Programme d’Apprentissage Professionnel
         !
@@ -1399,6 +1429,7 @@ fr:
     l'adresse du site internet et réessaie. Sinon, retourne sur la page d'accueil.
   page_not_found_button: Retourner à la page d’accueil
   copy: Copier
+  confirm: Confirmer
   maker:
     google_oauth:
       login_with_google: Connectez - vous à l'application Maker avec Google
@@ -1412,9 +1443,12 @@ fr:
         connectez avec Google.
       error_invalid_user: Identifiant invalide. Veuillez vous reconnecter.
       error_no_code: Veuillez entrer votre code de connexion.
+      confirm_login: Sélectionnez "Confirmer" pour vous connecter avec votre compte
+        Google.
   parent_email_banner:
     text: "**Êtes-vous un parent ou un tuteur ?** Associez votre adresse électronique
       à ce compte afin de rester informé des progrès et des projets de votre enfant
       !** "
     link_your_email: Associez votre adresse électronique
     not_now: Pas maintenant
+  unit_prefix: Unité %{n}
