@@ -51,6 +51,89 @@ const styles = {
   }
 };
 
+class ObjectiveLine extends React.Component {
+  static propTypes = {
+    editing: PropTypes.bool,
+    description: PropTypes.string.isRequired,
+    onSave: PropTypes.func.isRequired,
+    onEditCancel: PropTypes.func.isRequired,
+    onEditClick: PropTypes.func.isRequired,
+    onRemove: PropTypes.func.isRequired,
+    lineStyle: PropTypes.object
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      description: props.description
+    };
+  }
+
+  handleClickOutside = evt => {
+    if (this.state.currentlyEditingIndex) {
+      this.props.onSave(this.state.description);
+    }
+  };
+
+  handleCancelClick = e => {
+    this.setState({description: this.props.description});
+    this.props.onEditCancel();
+  };
+
+  render() {
+    return (
+      <tr style={this.props.lineStyle}>
+        <td style={{height: 30}}>
+          {this.props.editing ? (
+            <input
+              value={this.state.description}
+              onChange={e =>
+                this.setState({
+                  description: e.target.value
+                })
+              }
+              onKeyDown={e => {
+                if (e.key === 'Enter') {
+                  this.props.onSave(this.state.description);
+                }
+              }}
+              style={{
+                width: '98%'
+              }}
+              type="text"
+            />
+          ) : (
+            <div>{this.state.description}</div>
+          )}
+        </td>
+        {this.props.editing ? (
+          <td style={styles.actionButtons}>
+            <div
+              style={styles.save}
+              onMouseDown={() => this.props.onSave(this.state.description)}
+            >
+              <i className="fa fa-check" />
+            </div>
+            <div style={styles.remove} onMouseDown={this.handleCancelClick}>
+              <i className="fa fa-times" />
+            </div>
+          </td>
+        ) : (
+          <td style={styles.actionButtons}>
+            <div style={styles.edit} onMouseDown={this.props.onEditClick}>
+              <i className="fa fa-edit" />
+            </div>
+            <div style={styles.remove} onMouseDown={this.props.onRemove}>
+              <i className="fa fa-trash" />
+            </div>
+          </td>
+        )}
+      </tr>
+    );
+  }
+}
+
 export default class ObjectivesEditor extends Component {
   static propTypes = {
     objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -61,7 +144,6 @@ export default class ObjectivesEditor extends Component {
     super(props);
 
     this.state = {
-      objectiveInput: '',
       currentlyEditingIndex: null
     };
   }
@@ -86,14 +168,14 @@ export default class ObjectivesEditor extends Component {
 
   handleEdit = idx => {
     this.setState({
-      currentlyEditingIndex: idx,
-      objectiveInput: this.props.objectives[idx].description
+      currentlyEditingIndex: idx
     });
   };
 
   handleCancel = () => {
     let {currentlyEditingIndex} = this.state;
     let {objectives} = this.props;
+    console.log('here');
     if (
       objectives[currentlyEditingIndex].description === '' &&
       currentlyEditingIndex === objectives.length - 1
@@ -101,22 +183,20 @@ export default class ObjectivesEditor extends Component {
       this.props.updateObjectives(objectives.slice(0, objectives.length - 1));
     }
     this.setState({
-      objectiveInput: '',
       currentlyEditingIndex: null
     });
   };
 
-  handleSave = () => {
-    let {objectiveInput, currentlyEditingIndex} = this.state;
+  handleSave = newDescription => {
+    let {currentlyEditingIndex} = this.state;
     let {objectives} = this.props;
     const newObjectives = [...objectives];
     newObjectives[currentlyEditingIndex] = {
       ...objectives[currentlyEditingIndex],
-      description: objectiveInput
+      description: newDescription
     };
     this.props.updateObjectives(newObjectives);
     this.setState({
-      objectiveInput: '',
       currentlyEditingIndex: null
     });
   };
@@ -128,12 +208,12 @@ export default class ObjectivesEditor extends Component {
       objectives.concat([{description: '', key: newObjectiveKey}])
     );
     this.setState({
-      currentlyEditingIndex: objectives.length,
-      objectiveInput: ''
+      currentlyEditingIndex: objectives.length
     });
   };
 
   render() {
+    console.log(this.props.objectives);
     return (
       <div>
         <input
@@ -145,64 +225,34 @@ export default class ObjectivesEditor extends Component {
           <table style={{width: '100%'}}>
             <thead>
               <tr>
-                <th style={{width: '90%'}}>Description</th>
-                <th style={{width: '30%'}}>Actions</th>
+                <th
+                  style={{
+                    width: '90%'
+                  }}
+                >
+                  Description
+                </th>
+                <th
+                  style={{
+                    width: '30%'
+                  }}
+                >
+                  Actions
+                </th>
               </tr>
             </thead>
             <tbody>
               {this.props.objectives.map((objective, index) => (
-                <tr
+                <ObjectiveLine
                   key={objective.key}
-                  style={index % 2 === 1 ? styles.oddRow : {}}
-                >
-                  <td style={{height: 30}}>
-                    {this.state.currentlyEditingIndex === index ? (
-                      <input
-                        value={this.state.objectiveInput}
-                        onChange={e =>
-                          this.setState({objectiveInput: e.target.value})
-                        }
-                        onKeyDown={e => {
-                          if (e.key === 'Enter') {
-                            this.handleSave();
-                          }
-                        }}
-                        style={{width: '98%'}}
-                        type="text"
-                      />
-                    ) : (
-                      <div>{objective.description}</div>
-                    )}
-                  </td>
-                  {this.state.currentlyEditingIndex === index ? (
-                    <td style={styles.actionButtons}>
-                      <div style={styles.save} onMouseDown={this.handleSave}>
-                        <i className="fa fa-check" />
-                      </div>
-                      <div
-                        style={styles.remove}
-                        onMouseDown={this.handleCancel}
-                      >
-                        <i className="fa fa-times" />
-                      </div>
-                    </td>
-                  ) : (
-                    <td style={styles.actionButtons}>
-                      <div
-                        style={styles.edit}
-                        onMouseDown={() => this.handleEdit(index)}
-                      >
-                        <i className="fa fa-edit" />
-                      </div>
-                      <div
-                        style={styles.remove}
-                        onMouseDown={() => this.handleRemove(index)}
-                      >
-                        <i className="fa fa-trash" />
-                      </div>
-                    </td>
-                  )}
-                </tr>
+                  description={objective.description}
+                  lineStyle={index % 2 === 1 ? styles.oddRow : {}}
+                  onSave={this.handleSave}
+                  onEditCancel={this.handleCancel}
+                  onEditClick={() => this.handleEdit(index)}
+                  onRemove={() => this.handleRemove(index)}
+                  editing={this.state.currentlyEditingIndex === index}
+                />
               ))}
             </tbody>
           </table>
