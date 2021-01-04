@@ -122,6 +122,7 @@ class P5LabView extends React.Component {
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
               hideBackgrounds={hideBackgrounds}
               canDraw={canDraw}
+              isSpriteLab={this.props.spriteLab}
             />
           )}
         </div>
