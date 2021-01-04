@@ -1119,34 +1119,43 @@ exports.createJsWrapperBlockCreator = function(
           this.initMiniFlyout(miniToolboxXml);
         }
 
-        // For mini-toolbox, indicate which blocks should receive the duplicate on drag
-        // behavior and indicates the sibling block to shadow the value from
-        if (this.type === 'gamelab_clickedSpritePointer') {
-          this.setParentForCopyOnDrag('gamelab_spriteClickedSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_spriteClicked' &&
-              root.getConnections_()[1] &&
-              root.getConnections_()[1].targetBlock()
-          );
-        }
-        if (this.type === 'gamelab_subjectSpritePointer') {
-          this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_checkTouching' &&
-              root.getConnections_()[1] &&
-              root.getConnections_()[1].targetBlock()
-          );
-        }
-        if (this.type === 'gamelab_objectSpritePointer') {
-          this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_checkTouching' &&
-              root.getConnections_()[2] &&
-              root.getConnections_()[2].targetBlock()
-          );
+        // Set block to shadow for preview field if needed
+        switch (this.type) {
+          case 'gamelab_clickedSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_spriteClicked' &&
+                root.getConnections_()[1] &&
+                root.getConnections_()[1].targetBlock()
+            );
+            break;
+          case 'gamelab_newSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_whenSpriteCreated' &&
+                root.getConnections_()[1] &&
+                root.getConnections_()[1].targetBlock()
+            );
+            break;
+          case 'gamelab_subjectSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_checkTouching' &&
+                root.getConnections_()[1] &&
+                root.getConnections_()[1].targetBlock()
+            );
+            break;
+          case 'gamelab_objectSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_checkTouching' &&
+                root.getConnections_()[2] &&
+                root.getConnections_()[2].targetBlock()
+            );
+            break;
+          default:
+            // Not a pointer block, so no block to shadow
+            break;
         }
 
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
