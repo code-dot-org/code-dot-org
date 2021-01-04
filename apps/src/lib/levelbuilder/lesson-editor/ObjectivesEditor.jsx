@@ -128,7 +128,7 @@ export default class ObjectivesEditor extends Component {
       objectives.concat([{description: '', key: newObjectiveKey}])
     );
     this.setState({
-      currentlyEditingIndex: objectives.length - 1,
+      currentlyEditingIndex: objectives.length,
       objectiveInput: ''
     });
   };
