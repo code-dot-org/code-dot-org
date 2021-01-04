@@ -2,7 +2,6 @@ require 'aws-sdk-s3'
 require 'cdo/aws/s3'
 
 class Api::V1::MlModelsController < Api::V1::JsonApiController
-  skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
 
   S3_BUCKET = 'cdo-v3-trained-ml-models'
@@ -10,6 +9,9 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # POST api/v1/ml_models/save
   # Save a trained ML model to S3 and a reference to it in the database.
   def save
+    # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
+    headers['csrf-token'] = form_authenticity_token
+
     model_id = generate_id
     UserMlModel.create!(
       user_id: current_user.id,
@@ -24,6 +26,9 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # GET api/v1/ml_models/names
   # Retrieve the names and ids of a user's trained ML models.
   def user_ml_model_names
+    # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
+    headers['csrf-token'] = form_authenticity_token
+
     user_ml_model_data = UserMlModel.where(user_id: current_user.id).map {|user_ml_model| {"id": user_ml_model.model_id, "name": user_ml_model.name}}
     render json: user_ml_model_data.to_json
   end
@@ -31,6 +36,9 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # GET api/v1/ml_models/:model_id
   # Retrieve a trained ML model from S3
   def get_trained_model
+    # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
+    headers['csrf-token'] = form_authenticity_token
+
     model = download_from_s3(params[:model_id])
     render json: model
   end
