@@ -8,15 +8,15 @@
         },
         "courseF_playlab_variables2b": {
           "48d6215903dff56238e52e8891380c8f": "ko‘k",
-          "f59f10539890569d3b1deb0e4352ab84": "Today, I'm wearing my ",
-          "810f7026db2f96c4e654f4664e44be04": " jersey!"
+          "f59f10539890569d3b1deb0e4352ab84": "Bugun men kiyaman",
+          "810f7026db2f96c4e654f4664e44be04": " jersi!"
         },
         "courseF_playlab_variables5c": {
           "bda9643ac6601722a28f238714274da4": "qizil",
-          "ff800dc7251afead2cdf9c569ff5c9bc": "It is quite  ",
-          "c30c9d9f51c03a6d42d66cea54206abd": " today, isn't it?",
-          "b92274a5b4513e80f4bd6a8136581578": "That's the strangest shade of ",
-          "f54929e86cc7510907895070d8b05979": " I ever did see!"
+          "ff800dc7251afead2cdf9c569ff5c9bc": "Bu nisbatan",
+          "c30c9d9f51c03a6d42d66cea54206abd": "bugun, shundaymi?",
+          "b92274a5b4513e80f4bd6a8136581578": "Bu eng g'alati soya",
+          "f54929e86cc7510907895070d8b05979": " men qachondir ko'rgan!"
         },
         "courseF_project_1": {
           "498cd895eb5a102c5aeb977e2b928dee": "Rahmat!",
@@ -76,7 +76,7 @@
         },
         "Choose Your Own Adventure": {
           "fe724bc07d1e8b57e53ebfd03c0ec4f5": "Xavotirga o'rin yo'q! Ishonchim komil, uni topa olaman",
-          "9360086c2f9d62ba563c6fcbfbd9b402": "Men hozir topishga ketaman! Xayr!",
+          "9360086c2f9d62ba563c6fcbfbd9b402": "Men hozir izlashni boshlayman! Xayr!",
           "6d411b45e39818da535ba9f8a2cf58e2": "Bu meni jodugarga aylantirdi!",
           "73af7ec7b0065fb5eb15d6c0ca695ed3": "Men haqiqatan ham bu tayoqchaning egasini topishim kerak edi!",
           "c332bf82ea63d21d1d1b701a07ab9afd": "Yordamingiz uchun tashakkur, lekin men endi ketishim kerak",
@@ -90,38 +90,38 @@
           "cc2ecba4e56986752892c0e68c8e32e0": "Daraja "
         },
         "Guess The Number": {
-          "5c95950acb6c51d88cc8869eb31f2bdf": "Siz uddaladingiz!",
+          "5c95950acb6c51d88cc8869eb31f2bdf": "Uddaladingiz!",
           "214e809e9d24f40cc42fa2f04f59a1cf": "Pingvinni yutib yuborishimdan oldin mening yoshimni taxmin qiling!",
-          "015c8ae47c8964d793ddc123b7ba6b81": "No one alive is that young.",
-          "56582da5c99c1bb46ab5dcda003f8c27": "Too young.",
-          "781b7711244d030e4ed6e1bfa883364e": "I'm not even 20 yet!",
-          "01bab55de9d3319f27c5213b4661c79f": "Not that old!"
+          "015c8ae47c8964d793ddc123b7ba6b81": "Bu yoshda hech kim tirik emas.",
+          "56582da5c99c1bb46ab5dcda003f8c27": "O'ta yosh.",
+          "781b7711244d030e4ed6e1bfa883364e": "Men hali 20 yosh ham emasman!",
+          "01bab55de9d3319f27c5213b4661c79f": "Bu yoshda emas!"
         },
         "Find the Wizard": {
           "22b45b2cf2d4a2a3d7b3faa522013b26": "Uchtagacha sanang va men yo'q bo'lib ketaman! Meni topish uchun 1 dan 400 gacha raqamni taxmin qiling!"
         },
         "courseF_playlab_variables1a": {
-          "ea904c9d18bd602705f598372988aaa8": "What should I shout?",
-          "97a97de7add5e8dcd9f70a407d56968e": "Goal!"
+          "ea904c9d18bd602705f598372988aaa8": "Nima deb baqirishim kerak?",
+          "97a97de7add5e8dcd9f70a407d56968e": "Gol!"
         },
         "courseF_playlab_variables3b_josh": {
-          "88789b154a4ffbbd84108b0c80f8c464": "How old are you, Brian?",
-          "662722f1029078dad7a3683c64d8b922": "Wow! I'm ",
-          "ae096fbf24d913754b01a1601672bf62": " too!"
+          "88789b154a4ffbbd84108b0c80f8c464": "Yoshing nechada, Brayn?",
+          "662722f1029078dad7a3683c64d8b922": "Vah! Men ",
+          "ae096fbf24d913754b01a1601672bf62": "ham!"
         },
         "courseF_playlab_variables4b": {
-          "2e1749915d40abd8f43fc2b9dd13649c": "It be a pleasure, ",
-          "ecb2903fb054395baf72ea1da127be32": "Ye be pretty tall for a ",
-          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " year old, "
+          "2e1749915d40abd8f43fc2b9dd13649c": "Bajonudil,",
+          "ecb2903fb054395baf72ea1da127be32": "Bo'yingiz juda baland...",
+          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " yosh, "
         },
         "courseF_playlab_variables4c_predictive1": {
-          "d065635d5fffcb3739555ae93006081c": "Pleasure to meet you, "
+          "d065635d5fffcb3739555ae93006081c": "Siz bilan uchrashganimdan xursandman, "
         },
         "courseF_playlab_variables8c": {
-          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Congrats, ",
-          "cd0d7bbbbb604e524bfc25effa78095d": ", I was thinking of the color ",
-          "8460ae10541cf8ded22a4e899ddfc0bb": "Sorry, ",
-          "8622f69e8cf70458a82fc22d8e46372f": ", I was not thinking of the color "
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Tabriklar,",
+          "cd0d7bbbbb604e524bfc25effa78095d": ", men rang haqida o'yladim",
+          "8460ae10541cf8ded22a4e899ddfc0bb": "Uzr, ",
+          "8622f69e8cf70458a82fc22d8e46372f": ", men rang haqida o'ylamadim"
         }
       }
     }

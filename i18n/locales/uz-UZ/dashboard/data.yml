@@ -58,7 +58,7 @@ uz:
         parameters: Funksiyalar (parameterlari bilan)
     level:
       instructions:
-        maze_2_2: 'Quloqsiz cho‘chqachani tutishda yordam berolmaysizmi? Keraklicha “oldinga yur” bloklarini tagma-tag taxlab, “bajar” tugmasini bosib, menga uni tutishga ko‘maklashing. '
+        maze_2_2: 'Quloqsiz cho‘chqachani tutishda yordam berolasizmi? Keraklicha “oldinga siljish” bloklarini tagma-tag taxlab, “Ishga tushirish” tugmasini bosib, menga uni tutishga ko‘maklashing. '
         maze_2_1: Bu cho‘chqacha asablarimni o‘ynayapti. Uni tutishga yordam bering!
         maze_2_2_5: Mani yo‘lak bo‘ylab yurgizib, ahmoq cho‘chqachani tutishimga ko‘maklashing. TNT bombacha va patimni yulinishidan ehtiyot bo‘ling!
         maze_2_3: Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)
