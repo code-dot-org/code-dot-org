@@ -15,9 +15,9 @@ import {
 import {Provider} from 'react-redux';
 
 const studentData = [
-  {id: 1, name: 'studentb'},
-  {id: 3, name: 'studentc'},
-  {id: 0, name: 'studenta'}
+  {id: '1', name: 'studentb'},
+  {id: '3', name: 'studentc'},
+  {id: '0', name: 'studenta'}
 ];
 
 describe('VirtualizedSummaryView', () => {
@@ -27,20 +27,32 @@ describe('VirtualizedSummaryView', () => {
     stubRedux();
     registerReducers({sectionProgress, scriptSelection, currentUser});
     defaultProps = {
-      levelsByLesson: {
-        0: {
-          0: [{id: '789', status: 'perfect'}]
+      levelProgressByStudent: {
+        '0': {
+          '789': {
+            status: 'perfect',
+            result: 1,
+            paired: false
+          }
         },
-        1: {
-          0: [{id: '789', status: 'perfect'}]
+        '1': {
+          '789': {
+            status: 'perfect',
+            result: 1,
+            paired: false
+          }
         },
-        3: {
-          0: [{id: '789', status: 'perfect'}]
+        '3': {
+          '789': {
+            status: 'perfect',
+            result: 1,
+            paired: false
+          }
         }
       },
       lessonOfInterest: 1,
       section: {
-        id: 1,
+        id: '1',
         script: {id: 123},
         students: studentData
       },
@@ -96,7 +108,7 @@ describe('VirtualizedSummaryView', () => {
       <UnconnectedVirtualizedDetailView {...defaultProps} />
     );
     wrapper.instance().detailView = {forceUpdateGrids: forceUpdateGridsSpy};
-    wrapper.setProps({levelsByLesson: {}});
+    wrapper.setProps({levelProgressByStudent: {}});
     expect(forceUpdateGridsSpy).to.have.been.calledOnce;
   });
 });

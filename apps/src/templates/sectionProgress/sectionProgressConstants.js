@@ -18,7 +18,8 @@ export const scriptDataPropType = PropTypes.shape({
     })
   ),
   family_name: PropTypes.string,
-  version_year: PropTypes.string
+  version_year: PropTypes.string,
+  name: PropTypes.string
 });
 
 // Types of views of the progress tab

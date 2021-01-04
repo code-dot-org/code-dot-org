@@ -332,8 +332,8 @@ class ApiController < ApplicationController
 
     # Get the level progress for each student
     render json: {
-      students: student_progress,
-      student_timestamps: student_timestamps,
+      student_progress: student_progress,
+      student_last_updates: student_timestamps,
       pagination: {
         total_pages: paged_students.total_pages,
         page: page,

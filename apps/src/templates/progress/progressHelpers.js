@@ -3,6 +3,9 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {PUZZLE_PAGE_NONE} from './progressTypes';
+import {TestResults} from '@cdo/apps/constants';
+import {activityCssClass} from '@cdo/apps/code-studio/activityUtils';
+import _ from 'lodash';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -193,4 +196,88 @@ export const processedLevel = level => {
     sublevels:
       level.sublevels && level.sublevels.map(level => processedLevel(level))
   };
+};
+
+const getLevelResult = serverProgress => {
+  if (serverProgress.status === LevelStatus.locked) {
+    return TestResults.LOCKED_RESULT;
+  }
+  if (serverProgress.readonly_answers) {
+    return TestResults.READONLY_SUBMISSION_RESULT;
+  }
+  if (serverProgress.submitted) {
+    return TestResults.SUBMITTED_RESULT;
+  }
+
+  return serverProgress.result || TestResults.NO_TESTS_RUN;
+};
+
+/**
+ * Parse a level progress object that we get from the server using either
+ * /api/user_progress or /dashboardapi/section_level_progress into our
+ * canonical studentLevelProgressType shape.
+ * @param {object} serverObject A progress object from the server
+ * @returns {studentLevelProgressType} Our canonical progress shape
+ */
+export const levelProgressFromServer = serverObject => {
+  return {
+    status: serverObject.status || LevelStatus.not_tried,
+    result: getLevelResult(serverObject),
+    paired: serverObject.paired || false,
+    timeSpent: serverObject.time_spent || 0,
+    pages:
+      serverObject.pages_completed && serverObject.pages_completed.length > 1
+        ? serverObject.pages_completed.map(
+            pageResult =>
+              (pageResult && levelProgressFromResult(pageResult)) ||
+              levelProgressWithStatus(LevelStatus.not_tried)
+          )
+        : null
+  };
+};
+
+/**
+ * Given an object from the server with student progress data keyed by level ID,
+ * parse the progress data into our canonical studenLevelProgressType
+ * @param {{levelId:serverProgress}} serverStudentProgress
+ * @returns {{levelId:studentLevelProgressType}}
+ */
+export const processServerStudentProgress = serverStudentProgress => {
+  return _.mapValues(serverStudentProgress, progress =>
+    levelProgressFromServer(progress)
+  );
+};
+
+/**
+ * Given an object from the server with section progress data keyed by student
+ * ID and level ID, parse the progress data into our canonical
+ * studenLevelProgressType
+ * @param {{studenId:{levelId:serverProgress}}} serverSectionProgress
+ * @returns {{studenId:{levelId:studentLevelProgressType}}}
+ */
+export const processServerSectionProgress = serverSectionProgress => {
+  const studentProgress = _.mapValues(serverSectionProgress, student =>
+    processServerStudentProgress(student)
+  );
+  return studentProgress;
+};
+
+/**
+ * Create a studentLevelProgressType object with the provided status string
+ * @param {string} status
+ * @returns {studentLevelProgressType}
+ */
+export const levelProgressWithStatus = status => {
+  return levelProgressFromServer({status: status});
+};
+
+/**
+ * Create a studentLevelProgressType object from the provided result value.
+ * This is used to merge progress data from session storage which only includes
+ * a result value into our data model that uses studentLevelProgressType objects.
+ * @param {number} result
+ * @returns {studentLevelProgressType}
+ */
+export const levelProgressFromResult = result => {
+  return levelProgressWithStatus(activityCssClass(result));
 };
