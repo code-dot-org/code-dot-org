@@ -21,7 +21,6 @@ $(document).ready(function() {
   ReactDOM.render(
     <Provider store={store}>
       <FoormEditorManager
-        updateFormQuestions={updateFormQuestions}
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
         {...getScriptData('props')}
