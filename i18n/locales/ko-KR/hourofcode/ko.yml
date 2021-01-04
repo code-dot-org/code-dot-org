@@ -1444,15 +1444,15 @@ ko:
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
-  tutorial_vidcodemagic_name: SFX Magic
-  tutorial_vidcodemagices_name: SFX Magic
-  tutorial_codespeakmeal_name: Code a Healthy Meal App
+  tutorial_vidcodemagic_name: SFX 매직
+  tutorial_vidcodemagices_name: SFX 매직
+  tutorial_codespeakmeal_name: 건강한 식사 앱 코딩
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
   tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
-  tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
-  tutorial_ttrace_name: Race Condition
+  tutorial_itchball_name: 'iTCHcode: 바운싱 볼'
+  tutorial_ttrace_name: 레이스 조건
   tutorial_plethora_name: 'Plethora: Cause and Effect'
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
@@ -4003,8 +4003,7 @@ ko:
     using a loop.
   tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
     screen using a loop.
-  tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
-    healthy food decisions.
+  tutorial_codespeakmeal_longdescription: 사용자에게 건강한 식습관을 갖도록 돕는 앱 코딩 방법 배우기.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
