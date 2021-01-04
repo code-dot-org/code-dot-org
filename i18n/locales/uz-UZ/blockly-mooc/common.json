@@ -1406,7 +1406,7 @@
   "rubricLevelTwoHeader": "Ishonchli dalillar",
   "rubricLevelFourHeader": "Dalil yo‘q",
   "runNatively": "Mahalliy ravishda ishga tushirish (Beta)",
-  "runProgram": "Yugur",
+  "runProgram": "Ishga tushirish",
   "runTooltip": "Ish joyidagi bloklar tomonidan belgilangan dasturni ishga tushiring.",
   "runtimeErrorMsg": "Dasturingiz muvaffaqiyatli ishlamadi. Iltimos, {lineNumber} qatorini olib tashlang va qaytadan urinib ko‘ring.",
   "save": "Saqlash",
