@@ -68,15 +68,22 @@ class Script < ApplicationRecord
     )
   end
 
+  # The set of models which may be touched by ScriptSeed
   scope :with_seed_models, -> do
     includes(
       [
+        {
+          unit_group_units: {
+            unit_group: :course_version
+          }
+        },
         :course_version,
         :lesson_groups,
         {
           lessons: [
             {lesson_activities: :activity_sections},
-            :resources
+            :resources,
+            :objectives
           ]
         },
         :script_levels,
@@ -120,6 +127,12 @@ class Script < ApplicationRecord
 
   def self.script_directory
     SCRIPT_DIRECTORY
+  end
+
+  SCRIPT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+
+  def self.script_json_directory
+    SCRIPT_JSON_DIRECTORY
   end
 
   def generate_plc_objects
@@ -958,7 +971,10 @@ class Script < ApplicationRecord
 
     # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
     added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
-      added_script = add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      added_script =
+        options[:properties][:is_migrated] == true ?
+          seed_from_json_file(options[:name]) :
+          add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       progressbar.increment if show_progress
       added_script.name
     rescue => e
@@ -1171,8 +1187,8 @@ class Script < ApplicationRecord
   end
 
   def write_script_json
-    script_json_filepath = "#{Rails.root}/config/scripts_json/#{name}.script_json"
-    File.write(script_json_filepath, Services::ScriptSeed.serialize_seeding_json(self))
+    filepath = Script.script_json_filepath(name)
+    File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
 
   # @param types [Array<string>]
@@ -1759,8 +1775,14 @@ class Script < ApplicationRecord
     Services::ScriptSeed.serialize_seeding_json(self)
   end
 
-  # Wrapper for convenience
-  def self.seed_from_json_file(file_or_path)
-    Services::ScriptSeed.seed_from_json_file(file_or_path)
+  # @param [String] script_name - name of the script to seed from .script_json
+  # @returns [Script] - the newly seeded script object
+  def self.seed_from_json_file(script_name)
+    filepath = script_json_filepath(script_name)
+    Services::ScriptSeed.seed_from_json_file(filepath) if File.exist?(filepath)
+  end
+
+  def self.script_json_filepath(script_name)
+    "#{script_json_directory}/#{script_name}.script_json"
   end
 end
