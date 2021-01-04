@@ -221,6 +221,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
+    const generator = blocklyWrapper.getGenerator();
+    if (!generator.isInitialized) {
+      generator.init(blocklyWrapper.mainBlockSpace);
+    }
     let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
     );
