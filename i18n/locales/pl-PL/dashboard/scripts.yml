@@ -2076,7 +2076,7 @@ pl:
         csp5-2017:
           title: CSP Jednostka 5 - Budowanie aplikacji ('17- '18)
           description: Ten dział stanowi kontynuację wprowadzania koncepcji fundamentalnych programowania komputerowego, co odblokowuje możliwość tworzenia bogatych, interaktywnych aplikacji. W tym dziale używa się JavaScript jako języka oprogramowania oraz App Lab jako środowiska programowania do budowania aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie języki i narzędzia programowania. 
-          description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
+          description_short: Kontynuuj poznawanie podstawowych pojęć programowania komputerów w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
               display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
@@ -3510,7 +3510,7 @@ pl:
               name: Przygotowanie i wsparcie AP
         csd4-2017:
           title: Część 4 CSD - Proces projektowania ('17-'18)
-          description_short: "Ucz się, jak projektować program, który zaspokaja potrzeby użytkowników"
+          description_short: "Ucz się, jak zaprojektować program, który zaspokoi potrzeby Twoich użytkowników"
           description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa działu składa się z iteracyjnego projektu zespołowego, w trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i kształtować dalszą iterację.
           lesson_groups:
             csd4_1:
@@ -4350,7 +4350,7 @@ pl:
               name: 'Algorytmy z życia wzięte: Gra w kości'
         csd6-2017:
           title: CSD Jednostka 6 - Obliczenia fizyczne ('17-'18)
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           description: W dziale 6 zgłębia się zagadnienie roli platform sprzętowych w informatyce oraz sposobu, w jaki różne czujniki są w stanie zapewnić bardziej efektywne dane wejściowe i wyniki wyjściowe od tradycyjnej klawiatury, myszki i monitora. Używając App Lab i Adafruit’s Circuit Playground, będziesz opracowywać programy, w których wykorzystuje się te same sprzętowe elementy wejściowe i wyjściowe, które widzisz w urządzeniach inteligentnych patrząc, w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego. Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako podstawy innowacji Twojego własnego projektu.
           lesson_groups:
             csd6_1:
@@ -6950,7 +6950,7 @@ pl:
             Cats and Dogs:
               name: Koty i psy
         csd3-2018:
-          title: Dział 3 CSD - Animacje i gry ('18-'19)
+          title: CSD Jednostka 3 - Animacje i gry ('18-'19)
           description: "W dziale 3 będziesz korzystać z doświadczeń w zakresie kodowania w trakcie programowania animacji, sztuki interaktywną i gry w Game Lab.Dział rozpoczyna się  od prostych kształtów i buduje się w nim bardziej wyszukane animacje i gry oparte na duszku, używając tych samych koncepcji programowania i procesu projektowania, którego informatycy używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać spersonalizowany program interaktywny."
           description_short: "Naucz się programować animacje, interaktywne grafiki i gry w Game Lab."
           lesson_groups:
@@ -7053,9 +7053,9 @@ pl:
             CS Discoveries End of Semester Survey:
               name: Ankieta pod koniec semestru Odkrycia informatyki
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         csd2-2018:
-          title: Dział 2 CSD - Rozwój Internetu ('18- '19)
+          title: CSD Jednostka 2 - Rozwój Internetu ('18- '19)
           description: "W dziale 2 nauczysz się, jak tworzyć i udostępniać treści na Twoich własnych stronach internetowych. Po podjęciu decyzji jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności w zakresie programowania takie jak debugowanie i komentowanie. Pod koniec wej części będziesz mieć osobistą stronę internetową, którą możesz opublikować w Internecie."
           description_short: "  Naucz się budować swoją własną stronę internetową w Web Lab."
           lesson_groups:
@@ -7123,7 +7123,7 @@ pl:
               description_student: W ciągu ostatnich kilku dni realizacji materiału w tym dziale klasa wykańcza swoje witryny internetowe pracując z rówieśnikami celem uzyskania od nich informacji zwrotnej, weryfikacji kategorii oraz dopracowania strony. Na koniec przerabiania działu, każdy udostępnia swoje projekty oraz informację, jak zostały one opracowane.
               description_teacher: "Uczniowie poświęcili mnóstwo czasu w ramach przerabiania działu pracując na swoich witrynach internetowych. W ciągu ostatnich kilku dni uczniowie wykańczają swoje witryny internetowe. Pracują z rówieśnikami, aby uzyskać informację zwrotną, wykańczają witryny internetowe, weryfikują rubryki i przedstawiają stosowany proces. W celu zakończenia działu, będą udostępniać swoje projekty i również omówienie ogólne procesu, który przyjęli do uzyskania końcowego układu. \\r\n"
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         coursea-2018:
           title: Kurs A (2018)
           assignment_family_title: Kurs A
@@ -7490,11 +7490,11 @@ pl:
             Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.:
               name: Jednostka 1.2 - Protokoły internetowe, TCP/IP, DNS, HTTP, itp.
             Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression:
-              name: Jednostak 2 - 1. Bity, bajty, szesnastkowy system liczbowy i kompresja
+              name: Jednostka 2 - 1. Bity, bajty, szesnastkowy system liczbowy i kompresja
             Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts:
               name: Jednostka 2 - 2. Interpretowanie danych i wykresów, giga dane, globalne czynniki oddziaływania
             Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
-              name: Dział 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrahowanie
+              name: Jednostka 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrakcja
             Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
               name: Jednostka 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrakcja
             'Unit 1 Assessment 1 - Binary and Ascii ':
@@ -7567,7 +7567,7 @@ pl:
         csd6-2018:
           title: CSD Jednostka 6 - Obliczenia fizyczne ('18- '19)
           description: W dziale 6 zgłębia się zagadnienie roli platform sprzętowych w informatyce oraz sposobu, w jaki różne czujniki są w stanie zapewnić bardziej efektywne dane wejściowe i wyniki wyjściowe od tradycyjnej klawiatury, myszki i monitora. Używając App Lab i Adafruit’s Circuit Playground, będziesz opracowywać programy, w których wykorzystuje się te same sprzętowe elementy wejściowe i wyjściowe, które widzisz w urządzeniach inteligentnych patrząc, w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego. Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako podstawy innowacji Twojego własnego projektu.
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           lesson_groups:
             csd6_1:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
@@ -7639,7 +7639,7 @@ pl:
             'Project: Prototype an Innovation':
               name: 'Projekt - Zbuduj prototyp rozwiązania innowacyjnego'
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         coursee-2018:
           title: Kurs E (2018)
           assignment_family_title: Kurs E
@@ -7659,7 +7659,7 @@ pl:
             'Programming: My Robotic Friends':
               name: Moi przyjaciele wśród robotów
             Sequence in Maze:
-              name: Sekwencje w labiryncie
+              name: Kodowanie z komentarzami
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
             Debugging with Scrat:
@@ -7708,7 +7708,7 @@ pl:
               description_student: Nie pisz zbyt dużego kodu, aby zebrać cały nektar i miód. Zamiast tego użyj funkcji!
               description_teacher: W drugiej rundzie ćwiczeń z funkcjami w Internecie uczniowie będą nawigować po złożonych ścieżkach, zebrać mnóstwo nektaru oraz produkować mnóstwo miodu.
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Determine the Concept:
               name: Określ pomysł
               description_student: "Nie zdradzamy żadnych tajemnic! Na tej lekcji można wykorzystać wszystkie umiejętności, które dotychczas zdobyłeś."
@@ -7772,7 +7772,7 @@ pl:
             'Programming: My Robotic Friends':
               name: Moi przyjaciele wśród robotów
             Sequence in Maze:
-              name: Sekwencje w labiryncie
+              name: Kodowanie z komentarzami
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
             Debugging with Scrat:
@@ -7988,9 +7988,9 @@ pl:
               description_student: 'Ta lekcja obejmuje aspekty wejściowe i wyjściowe komputerów w kontekście, który jest ważny i znany dla uczniów: aplikacji. Klasa ocenia różne aplikacje internetowe służące do analizowania konkretnych problemów przeznaczone do ich rozwiązania, dane wejściowe, które potrzebne były uczniom do pracy oraz wyników, które przekazują użytkownikom. Klasa kończy się obserwacjami na temat tych aplikacji, jak również rozmowie prowadzonej przez nauczyciela poświęconej  oddziaływaniu aplikacji na społeczeństwo.'
               description_teacher: 'Ta lekcja weryfikuje aspekty wejściowe i wyjściowe, przechowywania i przetwarzania komputerów w kontekście, który jest ważny i znany dla uczniów: aplikacji. W parach uczniowie oceniają aplikacje na smartfona służące do analizowania konkretnych problemów przeznaczone do ich rozwiązania, dane wejściowe, które potrzebne były uczniom do pracy i przetwarzania, które zmieniają te dane wejściowe w pożądane wyniki końcowe, oraz informacje, które chcieliby przechować na później. Klasa kończy się rozmową, która łączy lekcję z aplikacjami znanymi uczniom.'
         csd4-2018:
-          title: Część 4 CSD - Proces projektowania ('18-'19)
+          title: CSD Jednostka 4 - Proces projektowania ('18-'19)
           description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa działu składa się z iteracyjnego projektu zespołowego, w trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i kształtować dalszą iterację.
-          description_short: "Ucz się, jak projektować program, który zaspokaja potrzeby użytkowników"
+          description_short: "Ucz się, jak zaprojektować program, który zaspokoi potrzeby Twoich użytkowników"
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -8064,9 +8064,9 @@ pl:
               description_student: Każdy zespół przygotowuje prezentację, aby "sprzedać" opracowaną przez siebie aplikację. Ten czas przeznaczony jest na zmagania, tryumfy oraz plany na przyszłość. 
               description_teacher: W tym momencie zespoły zgłębiły już temat znaczenia w wymiarze osobistym i społecznym, opracowały i przetestowały prototyp papierowy i prototyp cyfrowy oraz przeprowadziły iterację na aplikacji wstępnej, aby uwzględnić nowe cechy oraz naprawione błędy.Teraz nadszedł czas, na weryfikację tego, co zrobiły i połączenie tego w spójnej prezentacji mającej na celu przedstawienie procesu tworzenia. Korzystając z szablonu prezentacji zespoły przygotowują się do pokazania procesu opracowania aplikacji, z uwzględnieniem problemu, który postanowiły rozwiązać, sposobów włączenia informacji zwrotnych z testowania oraz swoich planów na przyszłość. 
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         csd5-2018:
-          title: Część 5 CSD - Dane a społeczeństwo ('18- '19)
+          title: CSD Jednostka 5 - Dane a społeczeństwo ('18- '19)
           description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie danych są używane do rozwiązywania problemów i jak komputery pomagają w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem, jak proces rozwiązywania problemu z danym może być stosowany w wybranym przez siebie obszarze.
           description_short: Dowiedz się, w jaki sposób ludzie używają komputerów, aby rozwiązywać problemy z danymi.
           lesson_groups:
@@ -8138,7 +8138,7 @@ pl:
               description_student: Celem zakończenia przerabiania materiału tego działu klasa projektuje sposoby wykorzystania danych, aby opracować zalecenia i przewidywania, aby pomóc rozwiązać problem. W pierwszych kilku działaniach klasa prowadzi burzę mózgów dotyczącą problemów, prowadzi proste badania i definiuje wybrany przez siebie problem. Decyduje, jakiego rodzaju dane chce zbierać, sposób, w jaki można je zbierać oraz sposób, w jaki można je wykorzystać przed wymianą informacji zwrotnych oraz ostateczną prezentacją.
               description_teacher: W celu skończenia przerabiania materiału tego działu uczniowie projektują wyszukiwarkę zaleceń w oparciu o zbierane i analizowane dane pochodzące od ich kolegów z klasy. Po przyjrzeniu się przykładom aplikacji na potrzeby dokonywania zaleceń, uczniowie kierują się przewodnikiem po projekcie, aby skończyć tę wielodniową pracę. W ramach pierwszych działań uczniowie podejmują decyzję, w dokonaniu jakiego pierwszego wyboru chcą pomóc użytkownikowi, jakie dane są im potrzebne do udzielenia zalecenia, tworzą ankietę i zbierają informacje na temat decyzji swoich kolegów z klasy. Następnie dokonują interpretacji danych oraz wykorzystują nabytą wiedzę do utworzenia algorytmu rekomendacji. W końcu używają algorytmów do udzielenia rekomendacji kilku kolegom z klasy. Uczniowie przeprowadzają weryfikację wśród rówieśników i wprowadzają stosowne aktualizacje do swoich projektów przed opracowaniem prezentacji dla klasy.
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         csp2-2018:
           title: CSP Jednostka 2 - Informacje cyfrowe ('18-'19)
           description: Ten dział dalej zgłębia sposoby kodowania, przedstawiania i manipulowania informacjami cyfrowymi. Zdolność do cyfrowej manipulacji danymi, wizualizacja tego oraz identyfikacji wzorców, trendów oraz potencjalnych znaczeń jest ważną umiejętnością praktyczną, której informatycy używają codziennie. Zrozumienie, skąd pochodzą dane, posiadanie intuicji na temat tego, czego możemy się z nich nauczyć lub co możemy z nich wyciągnąć i możliwość korzystania z narzędzi komputacyjnych do manipulacji danych i przekazywać na ten temat informacje stanowi umiejętność podstawową, o której mowa w tym dziale.
@@ -8271,12 +8271,12 @@ pl:
             CS Principles Post-Course Survey:
               name: Zasady informatyki Ankieta po kursie 
         csp4-2018:
-          title: Dział 4 CSP - Ważne dane i prywatność ('18- '19)
+          title: CSP Jednostka 4 - Giga dane i prywatność ('18- '19)
           description: Bogaty w dane świat, w którym żyjemy, niesię ze sobą wiele złożonych pytań dotyczących polityki publicznej, prawa, etyki oraz oddziaływania społecznego. Do celów niniejszego rozdziału można zaliczyć wypracowanie dopracowanego i zrównoważonego poglądu na temat danych na świecie, z uwzględnieniem pozytywnych i negatywnych skutków tego działania oraz zrozumienia postaw sposobu i przyczyny działania nowoczesnego szyfrowania.
           description_short: Eksploruj bogaty w dane świat, w którym żyjemy oraz sposób, w jaki dane wpływają na strategię publiczną, prywatność osób, bezpieczeństwo, prawo i etykę.
           lesson_groups:
             csp4_1_2018:
-              display_name: 'Dział 4: Ważne dane i prywatność'
+              display_name: 'Jednostka 4: Giga dane i prywatność'
             cspAssessment:
               display_name: Sprawdzian z rozdziału
             cspSurvey:
@@ -8309,15 +8309,15 @@ pl:
             Check Your Assumptions:
               name: Sprawdź swoje założenia
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Mid-Year Survey:
               name: Ankieta w trakcie roku
             CS Principles Post-Course Survey:
               name: Zasady informatyki Ankieta po kursie 
         csp5-2018:
-          title: Dział 5 CSP - Budowanie aplikacji ('18- '19)
+          title: CSP Jednostka 5 - Budowanie aplikacji ('18- '19)
           description: Ten dział stanowi kontynuację wprowadzania koncepcji fundamentalnych programowania komputerowego, co odblokowuje możliwość tworzenia bogatych, interaktywnych aplikacji. W tym dziale używa się JavaScript jako języka oprogramowania oraz App Lab jako środowiska programowania do budowania aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie języki i narzędzia programowania. 
-          description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
+          description_short: Kontynuuj poznawanie podstawowych pojęć programowania komputerów w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
               display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
@@ -8658,16 +8658,16 @@ pl:
         csd-post-survey:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           description_audience: Uczniowie CSD
-          description_short: Ankieta dla uczniów po odbyciu kursu CSD
+          description_short: CSD Ankieta dla uczniów po odbyciu kursu
           description: Witamy w ankiecie po ukończeniu kursu poświęconego "Odkryciom informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi mają charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko wyniki w ujęciu zbiorczym, pochodzące od całej klasy. Takie wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org, umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i zaangażowanie.
           lesson_groups:
             csd_survey:
               display_name: Ankieta po odbyciu kursu
           lessons:
             CSD post-course survey:
-              name: Ankieta po zakończeniu kursu  CSD
+              name: CSD Ankieta po zakończeniu kursu
         csd-novice-18:
-          title: Przemyślenia Nowicjusza "Odkrycia CS" 2018-2019
+          title: Odkrycia Informatyki Przemyślenia Nowicjusza 2018-2019
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia 2019 [CS Discoveries Facilitators in Training 2019]
           description_short: 'Materiały do przemyśleń nowicjusza przeznaczone dla prowadzących "Odkrycia CS" na szkoleniu'
           description: Jest to zbiór przemyśleń nowicjusza dla prowadzących "Odkrycia CS" Code.org w trakcie szkolenia podczas pięciodniowego warsztatu letniego. Znajdziesz tutaj zachęty do przemyśleń na każdy dzień Twojego osobistego, pięciodniowego warsztatu letniego. Te pytania będą podstawą pracy, którą realizujemy na "Weekendzie szkoleniowym dla prowadzących".
@@ -9017,7 +9017,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Lists Explore:
               name: Eksploruj listy
         dance-extras:
@@ -9277,12 +9277,12 @@ pl:
               name: Zbuduj grę Play Lab
             'Unplugged: Binary':
               name: Binarne obrazy (Binary Images)
-              description_student: Ucz się, jak komputery przechowują obrazki z użyciem języka dającego tylko dwie opcje.
+              description_student: Ucz się, jak komputery przechowują obrazki używając języka z tylko dwoma opcjami.
               description_teacher: Chociaż wiele osób sądzi, że binarne są tylko zera i jedynki, uczniom zostanie wprowadzona koncepcja, że informacje mogą być reprezentowane na różne binarne sposoby.  Na tej lekcji to pojęcie jest rozwijane jeszcze dalej i ilustruje, jak komputer może również przechowywać bardziej złożone informacje (takie jak obrazy i kolory) w postaci binarnej.
             Artist Binary:
               name: Binarne obrazy z Artystą
-              description_student: Na tej lekcji będziesz się uczyć jak tworzyć obrazki składające się tylko z zer i jedynek.
-              description_teacher: Ta seria lekcji internetowych będzie edukować  uczniów w zakresie tworzenia obrazków z użyciem włączenia i wyłączenia.
+              description_student: Na tej lekcji będziesz się uczyć, jak tworzyć obrazki używając tylko zer i jedynek.
+              description_teacher: Na tej serii lekcji internetowych uczniowie będą się uczyć, jak tworzyć obrazki z użyciem włączania i wyłączania.
             Build a Star Wars Game:
               name: Zbuduj grę Star Wars
               description_student: Poczuj moc w trakcie budowania swojej własnej gry Star Wars na tej lekcji.
@@ -9351,7 +9351,7 @@ pl:
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji, aby uzyskać jak najskuteczniejszy kod?
               description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
               description_student: Dzięki funkcjom będziesz oszczędzać mnóstwo pracy w trakcie pomocy udzielanej farmerce przy żniwach.
               description_teacher: Uczniowie ćwiczyli tworzenie efektownych projektów w interfejsie Artist oraz przechodzenia przez labirynty w interfejsie Bee, ale dzisiaj będą używać funkcji do zbierania plonów w interfejsie Farmer. Na tej lekcji uczniowie będą zmuszeni do używania funkcji na nowe sposoby łącząc je z pętlami "dopóki" i wyrażeniami "jeśli/w przeciwnym razie".
             Copyright and Creativity:
@@ -9512,7 +9512,7 @@ pl:
             Functions in Minecraft:
               name: Funkcje w Minecrafcie
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Functions in Artist:
               name: Funkcje z Artistą
             Screen Out the Mean:
@@ -10203,7 +10203,7 @@ pl:
         csd4-2019:
           title: CSD Jednostka 34 - Proces projektowania ('19-'20)
           description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa działu składa się z iteracyjnego projektu zespołowego, w trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i kształtować dalszą iterację.
-          description_short: "Ucz się, jak projektować program, który zaspokaja potrzeby użytkowników"
+          description_short: "Ucz się, jak zaprojektować program, który zaspokoi potrzeby Twoich użytkowników"
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -10361,7 +10361,7 @@ pl:
         csd6-2019:
           title: CSD Jednostka 6 - Obliczenia fizyczne ('19- '20)
           description: W dziale 6 zgłębia się zagadnienie roli platform sprzętowych w informatyce oraz sposobu, w jaki różne czujniki są w stanie zapewnić bardziej efektywne dane wejściowe i wyniki wyjściowe od tradycyjnej klawiatury, myszki i monitora. Używając App Lab i Adafruit’s Circuit Playground, będziesz opracowywać programy, w których wykorzystuje się te same sprzętowe elementy wejściowe i wyjściowe, które widzisz w urządzeniach inteligentnych patrząc, w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego. Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako podstawy innowacji Twojego własnego projektu.
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           lesson_groups:
             csd6_1:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
@@ -10467,7 +10467,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             'Lesson 15: Unit 4 Assessment':
               name: 'Lekcja 15: Jednostka 4 Sprawdzian'
             Unit 4 STUDENT Survey:
@@ -10611,7 +10611,7 @@ pl:
           description_short: Eksploruj bogaty w dane świat, w którym żyjemy oraz sposób, w jaki dane wpływają na strategię publiczną, prywatność osób, bezpieczeństwo, prawo i etykę.
           lesson_groups:
             csp4_1_2018:
-              display_name: 'Dział 4: Ważne dane i prywatność'
+              display_name: 'Jednostka 4: Giga dane i prywatność'
             cspAssessment:
               display_name: Sprawdzian z rozdziału
             cspSurvey:
@@ -10638,7 +10638,7 @@ pl:
             Rapid Research - Cybercrime:
               name: Szybkie badania - Cyberprzestępczość
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Mid-Year Survey:
               name: Ankieta w trakcie roku
             'Optional: Data Questions':
@@ -10648,7 +10648,7 @@ pl:
         csp5-2019:
           title: CSP Jednostka 5 - Budowanie aplikacji ('19- '20)
           description: Ten dział stanowi kontynuację wprowadzania koncepcji fundamentalnych programowania komputerowego, co odblokowuje możliwość tworzenia bogatych, interaktywnych aplikacji. W tym dziale używa się JavaScript jako języka oprogramowania oraz App Lab jako środowiska programowania do budowania aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie języki i narzędzia programowania. 
-          description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
+          description_short: Kontynuuj poznawanie podstawowych pojęć programowania komputerów w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
               display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
@@ -11053,7 +11053,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp2-pilot-staging:
           title: 'Jednostka 2: Internet'
           lesson_groups:
@@ -11103,7 +11103,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp3-pilot-staging:
           title: 'Jednostka  3: Wprowadzenie do projektowania aplikacji'
           lessons:
@@ -11144,7 +11144,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Introduction to Apps:
               name: Wprowadzenie do aplikacji
             'Project: Designing an App, pt. 1':
@@ -11224,7 +11224,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp5-pilot-staging:
           title: 'Jednostka 5: Listy, pętle i przejścia'
           lesson_groups:
@@ -11276,7 +11276,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Lists Explore:
               name: Eksploruj listy
             Lists Investigate:
@@ -11372,7 +11372,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp7-pilot-staging:
           title: 'Jednostka 7: Funkcje i Biblioteki'
           lesson_groups:
@@ -11420,7 +11420,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Functions with Parameters and Return Explore:
               name: Eksploruj funkcje z parametrami i zwracaniem
             Libraries:
@@ -11496,7 +11496,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp9-pilot-staging:
           title: 'Jednostka 9: Dane'
           lesson_groups:
@@ -11546,7 +11546,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp10-pilot-staging:
           title: 'Jednostka 10: Globalne oddziaływanie'
           lesson_groups:
@@ -11596,7 +11596,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         pluralsight:
           title: Uzyskaj dostęp do Pluralsight One
           lessons:
@@ -11621,7 +11621,7 @@ pl:
               display_name: Ankieta
           lessons:
             CSD post-course survey:
-              name: Ankieta po zakończeniu kursu  CSD
+              name: CSD Ankieta po zakończeniu kursu
         csp-post-survey-2018:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           description_audience: Uczniowie CSP
@@ -12811,7 +12811,7 @@ pl:
             Alligator Holes:
               name: Jamy aligatorów
             Food Chain Game:
-              name: Gra w łańcuch pokarmowy
+              name: Gra z łańcuchem pokarmowym
             Invasive Species:
               name: Gatunek inwazyjny
             Conditionals with Cards (Integrated Lesson)- Part 2:
@@ -12833,7 +12833,7 @@ pl:
             Functions in Minecraft:
               name: Funkcje w Minecrafcie
             Functions with Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Functions with Artist:
               name: Funkcje z Artistą
             Pythons impacting native populations:
@@ -13347,11 +13347,11 @@ pl:
             'Alternate Versions of Lesson 1: Intro to Problem Solving':
               name: 'Alternatywne wersje lekcji 1: Wprowadzenie do rozwiązywania problemów'
             'Alternate Versions of Lesson 3: Exploring Problem Solving':
-              name: 'Alternatywne wersje lekcji 3: Zgłębianie zagadnienia rozwiązywania problemów'
+              name: 'Alternatywne wersje lekcji 3: Zgłębianie rozwiązywania problemów'
             'Lesson 1: Intro to Problem Solving - Newspaper Table':
               name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Stolik prasowy'
             'Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
-              name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Most z makaronu'
+              name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Most z spaghetti'
             'Lesson 1: Intro to Problem Solving - Paper Tower':
               name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Wieża z papieru'
             'Lesson 3: Exploring Problem Solving - Games Theme':
@@ -13423,7 +13423,7 @@ pl:
         csd4-2020:
           title: CSD jednostka 4 - Proces projektowania ('20-'21)
           description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa działu składa się z iteracyjnego projektu zespołowego, w trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i kształtować dalszą iterację.
-          description_short: "Ucz się, jak projektować program, który zaspokaja potrzeby użytkowników"
+          description_short: "Ucz się, jak zaprojektować program, który zaspokoi potrzeby Twoich użytkowników"
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -13583,7 +13583,7 @@ pl:
         csd6-2020:
           title: CSD Jednostka 6 - Obliczenia fizyczne ('20- '21)
           description: W dziale 6 zgłębia się zagadnienie roli platform sprzętowych w informatyce oraz sposobu, w jaki różne czujniki są w stanie zapewnić bardziej efektywne dane wejściowe i wyniki wyjściowe od tradycyjnej klawiatury, myszki i monitora. Używając App Lab i Adafruit’s Circuit Playground, będziesz opracowywać programy, w których wykorzystuje się te same sprzętowe elementy wejściowe i wyjściowe, które widzisz w urządzeniach inteligentnych patrząc, w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego. Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako podstawy innowacji Twojego własnego projektu.
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           lesson_groups:
             csd6_1:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
@@ -14110,12 +14110,12 @@ pl:
               description_teacher: Uczniowie będą ćwiczyć pętle "dopóki", pętle "aż do" oraz instrukcje "jeśli/ w przeciwnym razie". We wszystkich tych blokach używa się wyrażeń warunkowych. Ćwicząc wszystkie trzy, uczniowie będą się uczyć pisania złożonych i elastycznych kodów.
             'Unplugged: Binary':
               name: Binarne obrazy (Binary Images)
-              description_student: Ucz się, jak komputery przechowują obrazki z użyciem języka dającego tylko dwie opcje.
+              description_student: Ucz się, jak komputery przechowują obrazki używając języka z tylko dwoma opcjami.
               description_teacher: Chociaż wiele osób sądzi, że binarne są tylko zera i jedynki, uczniom zostanie wprowadzona koncepcja, że informacje mogą być reprezentowane na różne binarne sposoby.  Na tej lekcji to pojęcie jest rozwijane jeszcze dalej i ilustruje, jak komputer może również przechowywać bardziej złożone informacje (takie jak obrazy i kolory) w postaci binarnej.
             Artist Binary:
               name: Binarne obrazy z Artystą
-              description_student: Na tej lekcji będziesz się uczyć jak tworzyć obrazki składające się tylko z zer i jedynek.
-              description_teacher: Ta seria lekcji internetowych będzie edukować  uczniów w zakresie tworzenia obrazków z użyciem włączenia i wyłączenia.
+              description_student: Na tej lekcji będziesz się uczyć, jak tworzyć obrazki używając tylko zer i jedynek.
+              description_teacher: Na tej serii lekcji internetowych uczniowie będą się uczyć, jak tworzyć obrazki z użyciem włączania i wyłączania.
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
               description_student: Niektórych informacji nie można bezpiecznie udostępniać w internecie. Ta lekcja pomoże Ci w rozpoznaniu różnicy pomiędzy informacjami bezpiecznymi a informacjami prywatnymi.
@@ -14224,7 +14224,7 @@ pl:
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji, aby uzyskać jak najskuteczniejszy kod?
               description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
               description_student: Dzięki funkcjom będziesz oszczędzać mnóstwo pracy w trakcie pomocy udzielanej farmerce przy żniwach.
               description_teacher: Uczniowie ćwiczyli tworzenie efektownych projektów w interfejsie Artist oraz przechodzenia przez labirynty w interfejsie Bee, ale dzisiaj będą używać funkcji do zbierania plonów w interfejsie Farmer. Na tej lekcji uczniowie będą zmuszeni do używania funkcji na nowe sposoby łącząc je z pętlami "dopóki" i wyrażeniami "jeśli/w przeciwnym razie".
             Functions in Artist:
@@ -14457,7 +14457,7 @@ pl:
             Harvesting with Conditionals:
               name: Żniwa z wyrażeniami warunkowymi
             Functions with Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Functions with Artist:
               name: Funkcje z Artistą
             Variables with Artist:
@@ -15846,7 +15846,7 @@ pl:
         csd4-2021:
           title: CSD jednostka 4 - Proces projektowania ('20-'21)
           description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa działu składa się z iteracyjnego projektu zespołowego, w trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i kształtować dalszą iterację.
-          description_short: "Ucz się, jak projektować program, który zaspokaja potrzeby użytkowników"
+          description_short: "Ucz się, jak zaprojektować program, który zaspokoi potrzeby Twoich użytkowników"
           lessons:
             Analysis of Design:
               key: Analiza Projektu
@@ -15979,7 +15979,7 @@ pl:
         csd6-2021:
           title: CSD Jednostka 6 - Obliczenia fizyczne ('20- '21)
           description: W dziale 6 zgłębia się zagadnienie roli platform sprzętowych w informatyce oraz sposobu, w jaki różne czujniki są w stanie zapewnić bardziej efektywne dane wejściowe i wyniki wyjściowe od tradycyjnej klawiatury, myszki i monitora. Używając App Lab i Adafruit’s Circuit Playground, będziesz opracowywać programy, w których wykorzystuje się te same sprzętowe elementy wejściowe i wyjściowe, które widzisz w urządzeniach inteligentnych patrząc, w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego. Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako podstawy innowacji Twojego własnego projektu.
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           lessons:
             Innovations in Computing:
               key: Innowacje w informatyce
@@ -16764,7 +16764,7 @@ pl:
               name: Funkcje w Minecrafcie
             Functions in Harvester:
               key: Funkcje w interfejsie Harvester
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Functions in Artist:
               key: Funkcje z Arystą
               name: Funkcje z Artistą
@@ -16918,8 +16918,8 @@ pl:
               key: Funkcje w Minecrafcie
               name: Funkcje w Minecrafcie
             Functions with Harvester:
-              key: Funkcje z interfejsem Harvester
-              name: Funkcje z interfejsem Harvester
+              key: Funkcje ze żniwiarką
+              name: Funkcje ze żniwiarką
             Functions with Artist:
               key: Funkcje z Artistą
               name: Funkcje z Artistą

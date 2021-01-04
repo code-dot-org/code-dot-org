@@ -723,7 +723,7 @@ pl:
             Functions with Return Values:
               name: Funkcje zwracające wartości
             Image Scroller with Key Events:
-              name: Scroller obrazów ze zdarzeniami kluczowymi
+              name: Scroller obrazów ze zdarzeniami klawiszowymi
             Introducing Design Mode:
               name: Wprowadzenie do trybu projektowania
             Introduction to Arrays:
@@ -1075,7 +1075,7 @@ pl:
             Bubble Choice:
               name: Wybór bańki
             Contained Levels:
-              name: Poziomy ograniczone
+              name: Zawarte poziomy
             ML Fish:
               name: Ryba ML
             AI Lab:
@@ -1217,7 +1217,7 @@ pl:
         equity-pd:
           lessons:
             Code.org Equity PD:
-              name: Równość PD Code. org
+              name: Równość PD z Code. org
             Necessary Background:
               name: Niezbędne przygotowanie
         science-PD2:
@@ -1623,7 +1623,7 @@ pl:
             Functions with Return Values:
               name: Funkcje zwracające wartości
             Image Scroller with Key Events:
-              name: Scroller obrazów ze zdarzeniami kluczowymi
+              name: Scroller obrazów ze zdarzeniami klawiszowymi
             Introduction to Arrays:
               name: Wprowadzenie do tablic
             Loops and Simulations:
@@ -2161,9 +2161,8 @@ pl:
             oprogramowania oraz App Lab jako środowiska programowania do budowania
             aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie
             języki i narzędzia programowania.
-          description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania
-            komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych
-            aplikacji.
+          description_short: Kontynuuj poznawanie podstawowych pojęć programowania
+            komputerów w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
               display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
@@ -2189,7 +2188,7 @@ pl:
             Functions with Return Values:
               name: Funkcje zwracające wartości
             Image Scroller with Key Events:
-              name: Scroller obrazów ze zdarzeniami kluczowymi
+              name: Scroller obrazów ze zdarzeniami klawiszowymi
             Introducing Design Mode:
               name: Wprowadzenie do trybu projektowania
             Introduction to Arrays:
@@ -2514,7 +2513,7 @@ pl:
         allthehiddenthings:
           lessons:
             Contained Levels:
-              name: Poziomy ograniczone
+              name: Zawarte poziomy
             Game Lab:
               name: Laboratorium Gier (Game Lab)
         cspunit1-support-test:
@@ -2794,8 +2793,7 @@ pl:
             'New Artist: Functions':
               name: 'Nowy Artysta: Funkcje'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
-              name: Scena projektu wzmocnionego rusztowaniem (pętle, zdarzenia, warunki,
-                funkcje)
+              name: Etap projektu rusztowania (pętle, zdarzenia, warunki, funkcje)
             Songwriting:
               name: Pisanie piosenek
             'Unplugged: Funky Functions':
@@ -3032,7 +3030,7 @@ pl:
             Lesson 2,3:
               name: Lekcja 2,3
             Test stage with bubbles:
-              name: Test sprawdzający z bańkami
+              name: Etap testu z bańkami
         csd3-2017:
           title: CSP Jednostka 3 - Animacje i gry ('17- '18)
           description: W dziale 3 będziesz korzystać z doświadczeń w zakresie kodowania
@@ -3088,14 +3086,14 @@ pl:
             Velocity:
               name: Prędkość
               description_student: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, klasę wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
-                typu " side scroller".
+                typu "side scroller".
               description_teacher: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, uczniów wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
                 typu "side scroller".
@@ -4011,7 +4009,7 @@ pl:
             Images in HTML:
               name: Obrazy w HTML
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: Na tej lekcji wprowadza się pojęcie CSS jako sposobu
                 stylizowania elementów na stronie. Klasa poznaje podstawową składnię
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
@@ -4020,10 +4018,10 @@ pl:
               description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
                 sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
                 składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują na stronie HTML poświęconej
+                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
                 zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
                 Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu do swojej prywatnej strony internetotej.
+                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
                 \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
@@ -4037,25 +4035,25 @@ pl:
                 Uczniowie rozpoczynają tę lekcję od przyjrzenia się stronie internetotej
                 na temat "Deserów świata" [Desserts of the World]. Analizują i modyfikują
                 nowe style CSS na tej stronie dodając swoje własne style do strony.
-                Po wykonaniu pracy na stronie "Desery świata" [Desserts of the World]
-                uczniowie wykorzystują nowo nabytą wiedzę w zakresie właściwości CSS
-                do stylizacji swoich prywatnych stron internetowych w szerszym zakresie.
+                Po wykonaniu pracy na tej stronie uczniowie wykorzystują nowo nabytą
+                wiedzę w zakresie właściwości CSS do stylizacji swoich prywatnych
+                stron internetowych w szerszym zakresie.
             Exploring Websites:
               name: Odkrywanie stron
               description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
-                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada szereg
-                witryn najczęściej używanych w Stanach Zjednoczonych i omawia, w jaki
-                sposób każda z tych witryn jest przydatna dla użytkowników i jak może
-                służyć również jej twórcom.
+                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
+                witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
+                w jaki sposób każda z tych witryn jest przydatna dla użytkowników
+                i jak może służyć również jej twórcom.
 
 '
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
                 internetowa może służyć, zarówno z punktu widzenia użytkowników, jak
-                i twórców. Klasa bada szereg witryn najczęściej używanych w Stanach
-                Zjednoczonych i omawia, w jaki sposób każda z tych witryn jest przydatna
-                dla użytkowników i jak może służyć również jej twórcom.
+                i twórców. Klasa bada wiele witryn najczęściej wykorzystywanych w
+                Stanach Zjednoczonych i omawia, w jaki sposób każda z tych witryn
+                jest przydatna dla użytkowników i jak może służyć również jej twórcom.
             'Websites for Expression ':
               name: Strony internetowe służące wyrażeniu się
               description_student: Jak możemy używać stron internetowych do osobistej
@@ -4243,8 +4241,8 @@ pl:
               name: Przygotowanie i wsparcie AP
         csd4-2017:
           title: Część 4 CSD - Proces projektowania ('17-'18)
-          description_short: Ucz się, jak projektować program, który zaspokaja potrzeby
-            użytkowników
+          description_short: Ucz się, jak zaprojektować program, który zaspokoi potrzeby
+            Twoich użytkowników
           description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego
             informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej
             rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa
@@ -5375,7 +5373,7 @@ pl:
               name: 'Algorytmy z życia wzięte: Gra w kości'
         csd6-2017:
           title: CSD Jednostka 6 - Obliczenia fizyczne ('17-'18)
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           description: W dziale 6 zgłębia się zagadnienie roli platform sprzętowych
             w informatyce oraz sposobu, w jaki różne czujniki są w stanie zapewnić
             bardziej efektywne dane wejściowe i wyniki wyjściowe od tradycyjnej klawiatury,
@@ -5480,9 +5478,9 @@ pl:
                 LEDami poprzez uzyskiwanie do nich dostępu z listy.
             For Loops:
               name: Pętle dla (for)
-              description_student: Klasa uczy się o instrukcjach powtarzających się
-                używając _pętli "dla"_ najpierw poprzez sterowanie "robotem" za pomocą
-                siatki, a następnie w App Lab.
+              description_student: Klasa uczy się o instrukcjach powtarzania używając
+                _pętli "dla"_ najpierw poprzez sterowanie "robotem" na siatce, a następnie
+                w App Lab.
               description_teacher: Na tej lekcji uczniom wprowadza się _pętlę "dla"_
                 jako sposób powtarzania tego samego kodu określoną liczbę razy. Uczniowie
                 rozpoczynają od zajęć w trybie "unplugged", bez komputera, na których
@@ -6489,7 +6487,7 @@ pl:
             Project - Multi-Page Websites:
               name: Projekt -  Wielostronicowe witryny internetowe
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
             Sources and Search Engines:
@@ -6596,8 +6594,7 @@ pl:
               name: Weź udział w badaniu podłużnym!
         fmscsd3preview:
           title: CSD - Rysowanie w Game Lab
-          description_audience: Gimnazjum Falmouth [Falmouth Middle School] (Mike
-            Harvey)
+          description_audience: Gimnazjum Falmouth (Mike Harvey)
           lessons:
             Plotting Shapes:
               name: Rysowanie kształtów
@@ -6660,7 +6657,7 @@ pl:
             Clean Code and Debugging:
               name: Czysty kod i debugowanie
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
             Multi-Page Websites:
@@ -7397,7 +7394,7 @@ pl:
                 również będą mieli okazję utworzyć własną grę lub opowieść po przeprowadzeniu
                 ich po poziomach.
             Envelope Variables:
-              name: 'Zmienne: Zmienne w kopertach'
+              name: 'Zmienne: Koperty jako zmienne'
               description_student: 'Koperty i zmienne mają coś wspólnego: w obu przechowuje
                 się wartościowe rzeczy. Teraz będziecie się uczyć o tym, czym są zmienne
                 i jakie wspaniałe rzeczy są w stanie robić.'
@@ -7451,7 +7448,7 @@ pl:
               name: Pętle for z Artystą
               description_student: Przygotuj się na stworzenie kolejnego dzieła. Teraz
                 będziesz używać pętli "dla", aby tworzyć takie obrazki, na widok których
-                odbiorcom "opadnie szczena".
+                odbiorcom opadnie szczęka.
               description_teacher: Na tej lekcji uczniowie będą kontynuować ćwiczenie
                 pętli "dla", tym razem korzystając z interfejsu Artist. Uczniowie
                 będą rozwiązywać łamigłówki łącząc koncepcje zmiennych, pętli oraz
@@ -7461,7 +7458,7 @@ pl:
               name: 'Funkcje: Pisanie piosenek z parametrami'
               description_student: A może po prosu wydasz kolejny singiel z wielkim
                 przebojem! Na tej lekcji będziesz się uczyć, czym są parametry oraz
-                w jak tworzyć fantastyczne piosenki!
+                jak tworzyć fantastyczne piosenki!
               description_teacher: Jedną z najwspanialszych konstrukcji w informatyce
                 jest funkcja.  Funkcje (czasami nazywane procedurami) są mini programami,
                 które można wielokrotnie używać wewnątrz większych programów. Ta lekcja
@@ -7479,8 +7476,8 @@ pl:
             Functions with Parameters in Artist:
               name: Funkcje z parametrami z Artystą
               description_student: Szykuj palce do programowania. W ramach tych łamigłówek
-                będziesz tworzyć spektakularne rysunki w interfejsie Artist używając
-                funkcji z parametrami.
+                będziesz tworzyć spektakularne rysunki z Artystą używając funkcji
+                z parametrami.
               description_teacher: Na tej lekcji uczniowie będą kontynuować pracę
                 z użyciem funkcji z parametrami i bez nich. Uczniowie będą mieli okazję
                 do utworzenia swoich własnych rysunków z parametrami i bez nich, przed
@@ -7780,8 +7777,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
         csp4-dlp:
           title: CSP Jednostka 4 Głębokie uczenie
           description_audience: Zasady informatyki Prowadzcy na szkoleniu
@@ -7802,8 +7798,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 4 Deeper Learning Reflections:
-              name: Ukończ Dział 4 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 4 Przemyślenia na temat pogłębionej nauki
         csp5-dlp:
           title: Dział 5 CSP Pogłębiona nauka (Deeper Learning)
           description_audience: Zasady informatyki Prowadzcy na szkoleniu
@@ -7824,8 +7819,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 5 Deeper Learning Reflections:
-              name: Ukończ Dział 5 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 5 Przemyślenia na temat pogłębionej nauki
         csd1-dlp:
           title: Odkrycia informatyki Jednostka 1 Głębokie uczenie
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia  [CS
@@ -7896,8 +7890,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 5 Deeper Learning Reflections:
-              name: Ukończ Dział 5 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 5 Przemyślenia na temat pogłębionej nauki
         csd4-dlp:
           title: ' Pogłębiona nauka działu 4 "Odkryć informatyki'' [CS Discoveries
             Deeper Learning]'
@@ -7921,8 +7914,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 4 Deeper Learning Reflections:
-              name: Ukończ Dział 4 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 4 Przemyślenia na temat pogłębionej nauki
         csd3-dlp:
           title: Odkrycia informatyki Jednostka 2 Głębokie uczenie
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia  [CS
@@ -7945,8 +7937,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
         csd2-dlp:
           title: Odkrycia informatyki Jednostka 2 Głębokie uczenie
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia  [CS
@@ -8077,7 +8068,7 @@ pl:
             Conditional Loops in Maze:
               name: Pętle warunkowe w Labiryncie
             'Variables: Envelope Variables':
-              name: 'Zmienne: Zmienne w kopertach'
+              name: 'Zmienne: Koperty jako zmienne'
             'For Loops: For Loop Fun':
               name: 'Pętle "for": Zabawa z pętlami "for"'
             'Functions: Songwriting with Parameters':
@@ -8450,7 +8441,7 @@ pl:
             Conditionals & Loops in Farmer:
               name: Wyrażenia warunkowe i pętle z Rolnikiem
             'Variables: Envelope Variables':
-              name: 'Zmienne: Zmienne w kopertach'
+              name: 'Zmienne: Koperty jako zmienne'
             Variables in Artist:
               name: Zmienne z Artystą
             Variables in Play Lab:
@@ -9277,7 +9268,7 @@ pl:
             Cats and Dogs:
               name: Koty i psy
         csd3-2018:
-          title: Dział 3 CSD - Animacje i gry ('18-'19)
+          title: CSD Jednostka 3 - Animacje i gry ('18-'19)
           description: W dziale 3 będziesz korzystać z doświadczeń w zakresie kodowania
             w trakcie programowania animacji, sztuki interaktywną i gry w Game Lab.Dział
             rozpoczyna się  od prostych kształtów i buduje się w nim bardziej wyszukane
@@ -9497,14 +9488,14 @@ pl:
             Velocity:
               name: Prędkość
               description_student: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, klasę wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
-                typu " side scroller".
+                typu "side scroller".
               description_teacher: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, uczniów wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
                 typu "side scroller".
@@ -9641,9 +9632,9 @@ pl:
             CS Discoveries End of Semester Survey:
               name: Ankieta pod koniec semestru Odkrycia informatyki
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         csd2-2018:
-          title: Dział 2 CSD - Rozwój Internetu ('18- '19)
+          title: CSD Jednostka 2 - Rozwój Internetu ('18- '19)
           description: W dziale 2 nauczysz się, jak tworzyć i udostępniać treści na
             Twoich własnych stronach internetowych. Po podjęciu decyzji jaką treść
             chcesz udostępniać światu nauczysz się, jak konstruować i stylizować swoje
@@ -9664,19 +9655,19 @@ pl:
             Exploring Websites:
               name: Odkrywanie stron
               description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
-                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada szereg
-                witryn najczęściej używanych w Stanach Zjednoczonych i omawia, w jaki
-                sposób każda z tych witryn jest przydatna dla użytkowników i jak może
-                służyć również jej twórcom.
+                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
+                witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
+                w jaki sposób każda z tych witryn jest przydatna dla użytkowników
+                i jak może służyć również jej twórcom.
 
 '
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
                 internetowa może służyć, zarówno z punktu widzenia użytkowników, jak
-                i twórców. Klasa bada szereg witryn najczęściej używanych w Stanach
-                Zjednoczonych i omawia, w jaki sposób każda z tych witryn jest przydatna
-                dla użytkowników i jak może służyć również jej twórcom.
+                i twórców. Klasa bada wiele witryn najczęściej wykorzystywanych w
+                Stanach Zjednoczonych i omawia, w jaki sposób każda z tych witryn
+                jest przydatna dla użytkowników i jak może służyć również jej twórcom.
             'Websites for Expression ':
               name: Strony internetowe służące wyrażeniu się
               description_student: Jak możemy używać stron internetowych do osobistej
@@ -9825,7 +9816,7 @@ pl:
                 nawigację pomiędzy stronami zanim opublikują całą witrynę w Internecie.
                 \r\n\r"
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: Na tej lekcji wprowadza się pojęcie CSS jako sposobu
                 stylizowania elementów na stronie. Klasa poznaje podstawową składnię
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
@@ -9834,10 +9825,10 @@ pl:
               description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
                 sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
                 składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują na stronie HTML poświęconej
+                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
                 zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
                 Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu do swojej prywatnej strony internetotej.
+                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
                 \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
@@ -9851,9 +9842,9 @@ pl:
                 Uczniowie rozpoczynają tę lekcję od przyjrzenia się stronie internetotej
                 na temat "Deserów świata" [Desserts of the World]. Analizują i modyfikują
                 nowe style CSS na tej stronie dodając swoje własne style do strony.
-                Po wykonaniu pracy na stronie "Desery świata" [Desserts of the World]
-                uczniowie wykorzystują nowo nabytą wiedzę w zakresie właściwości CSS
-                do stylizacji swoich prywatnych stron internetowych w szerszym zakresie.
+                Po wykonaniu pracy na tej stronie uczniowie wykorzystują nowo nabytą
+                wiedzę w zakresie właściwości CSS do stylizacji swoich prywatnych
+                stron internetowych w szerszym zakresie.
             Sources and Search Engines:
               name: Źródła i wyszukiwarki
               description_student: Po  zakończeniu pierwszego poszukiwania skarbu
@@ -9901,7 +9892,7 @@ pl:
                 omówienie ogólne procesu, który przyjęli do uzyskania końcowego układu.
                 \r\n"
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         coursea-2018:
           title: Kurs A (2018)
           assignment_family_title: Kurs A
@@ -10052,7 +10043,7 @@ pl:
             Conditionals & Loops in Farmer:
               name: Wyrażenia warunkowe i pętle z Rolnikiem
             'Variables: Envelope Variables':
-              name: 'Zmienne: Zmienne w kopertach'
+              name: 'Zmienne: Koperty jako zmienne'
             Variables in Artist:
               name: Zmienne z Artystą
             Variables in Play Lab:
@@ -10326,12 +10317,12 @@ pl:
             Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.:
               name: Jednostka 1.2 - Protokoły internetowe, TCP/IP, DNS, HTTP, itp.
             Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression:
-              name: Jednostak 2 - 1. Bity, bajty, szesnastkowy system liczbowy i kompresja
+              name: Jednostka 2 - 1. Bity, bajty, szesnastkowy system liczbowy i kompresja
             Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts:
               name: Jednostka 2 - 2. Interpretowanie danych i wykresów, giga dane,
                 globalne czynniki oddziaływania
             Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
-              name: Dział 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrahowanie
+              name: Jednostka 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrakcja
             Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
               name: Jednostka 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrakcja
             'Unit 1 Assessment 1 - Binary and Ascii ':
@@ -10427,7 +10418,7 @@ pl:
             w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego.
             Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako
             podstawy innowacji Twojego własnego projektu.
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           lesson_groups:
             csd6_1:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
@@ -10499,7 +10490,7 @@ pl:
             'Project: Prototype an Innovation':
               name: Projekt - Zbuduj prototyp rozwiązania innowacyjnego
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         coursee-2018:
           title: Kurs E (2018)
           assignment_family_title: Kurs E
@@ -10523,7 +10514,7 @@ pl:
             'Programming: My Robotic Friends':
               name: Moi przyjaciele wśród robotów
             Sequence in Maze:
-              name: Sekwencje w labiryncie
+              name: Kodowanie z komentarzami
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
             Debugging with Scrat:
@@ -10625,7 +10616,7 @@ pl:
                 uczniowie będą nawigować po złożonych ścieżkach, zebrać mnóstwo nektaru
                 oraz produkować mnóstwo miodu.
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Determine the Concept:
               name: Określ pomysł
               description_student: Nie zdradzamy żadnych tajemnic! Na tej lekcji można
@@ -10755,7 +10746,7 @@ pl:
             'Programming: My Robotic Friends':
               name: Moi przyjaciele wśród robotów
             Sequence in Maze:
-              name: Sekwencje w labiryncie
+              name: Kodowanie z komentarzami
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
             Debugging with Scrat:
@@ -10877,7 +10868,7 @@ pl:
               name: Pętle "for" z Artystą
               description_student: Przygotuj się na stworzenie kolejnego dzieła. Teraz
                 będziesz używać pętli "dla", aby tworzyć takie obrazki, na widok których
-                odbiorcom "opadnie szczena".
+                odbiorcom opadnie szczęka.
               description_teacher: Na tej lekcji uczniowie będą kontynuować ćwiczenie
                 pętli "dla", tym razem korzystając z interfejsu Artist. Uczniowie
                 będą rozwiązywać łamigłówki łącząc koncepcje zmiennych, pętli oraz
@@ -10887,7 +10878,7 @@ pl:
               name: Pisanie piosenek z parametrami
               description_student: A może po prosu wydasz kolejny singiel z wielkim
                 przebojem! Na tej lekcji będziesz się uczyć, czym są parametry oraz
-                w jak tworzyć fantastyczne piosenki!
+                jak tworzyć fantastyczne piosenki!
               description_teacher: Jedną z najwspanialszych konstrukcji w informatyce
                 jest funkcja.  Funkcje (czasami nazywane procedurami) są mini programami,
                 które można wielokrotnie używać wewnątrz większych programów. Ta lekcja
@@ -10899,8 +10890,8 @@ pl:
             Functions with Parameters in Artist:
               name: Funkcje z parametrami z Artystą
               description_student: Szykuj palce do programowania. W ramach tych łamigłówek
-                będziesz tworzyć spektakularne rysunki w interfejsie Artist używając
-                funkcji z parametrami.
+                będziesz tworzyć spektakularne rysunki z Artystą używając funkcji
+                z parametrami.
               description_teacher: Na tej lekcji uczniowie będą kontynuować pracę
                 z użyciem funkcji z parametrami i bez nich. Uczniowie będą mieli okazję
                 do utworzenia swoich własnych rysunków z parametrami i bez nich, przed
@@ -11282,7 +11273,7 @@ pl:
                 na później. Klasa kończy się rozmową, która łączy lekcję z aplikacjami
                 znanymi uczniom.'
         csd4-2018:
-          title: Część 4 CSD - Proces projektowania ('18-'19)
+          title: CSD Jednostka 4 - Proces projektowania ('18-'19)
           description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego
             informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej
             rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa
@@ -11291,8 +11282,8 @@ pl:
             tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania
             na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i
             kształtować dalszą iterację.
-          description_short: Ucz się, jak projektować program, który zaspokaja potrzeby
-            użytkowników
+          description_short: Ucz się, jak zaprojektować program, który zaspokoi potrzeby
+            Twoich użytkowników
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -11570,9 +11561,9 @@ pl:
                 rozwiązać, sposobów włączenia informacji zwrotnych z testowania oraz
                 swoich planów na przyszłość.
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         csd5-2018:
-          title: Część 5 CSD - Dane a społeczeństwo ('18- '19)
+          title: CSD Jednostka 5 - Dane a społeczeństwo ('18- '19)
           description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu problemów
             oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym procesie.
             W pierwszym rozdziale bada się różne systemy używane do przedstawiania
@@ -11891,7 +11882,7 @@ pl:
                 aktualizacje do swoich projektów przed opracowaniem prezentacji dla
                 klasy.
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         csp2-2018:
           title: CSP Jednostka 2 - Informacje cyfrowe ('18-'19)
           description: Ten dział dalej zgłębia sposoby kodowania, przedstawiania i
@@ -12049,7 +12040,7 @@ pl:
             CS Principles Post-Course Survey:
               name: Zasady informatyki Ankieta po kursie
         csp4-2018:
-          title: Dział 4 CSP - Ważne dane i prywatność ('18- '19)
+          title: CSP Jednostka 4 - Giga dane i prywatność ('18- '19)
           description: Bogaty w dane świat, w którym żyjemy, niesię ze sobą wiele
             złożonych pytań dotyczących polityki publicznej, prawa, etyki oraz oddziaływania
             społecznego. Do celów niniejszego rozdziału można zaliczyć wypracowanie
@@ -12061,7 +12052,7 @@ pl:
             prawo i etykę.
           lesson_groups:
             csp4_1_2018:
-              display_name: 'Dział 4: Ważne dane i prywatność'
+              display_name: 'Jednostka 4: Giga dane i prywatność'
             cspAssessment:
               display_name: Sprawdzian z rozdziału
             cspSurvey:
@@ -12094,22 +12085,21 @@ pl:
             Check Your Assumptions:
               name: Sprawdź swoje założenia
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Mid-Year Survey:
               name: Ankieta w trakcie roku
             CS Principles Post-Course Survey:
               name: Zasady informatyki Ankieta po kursie
         csp5-2018:
-          title: Dział 5 CSP - Budowanie aplikacji ('18- '19)
+          title: CSP Jednostka 5 - Budowanie aplikacji ('18- '19)
           description: Ten dział stanowi kontynuację wprowadzania koncepcji fundamentalnych
             programowania komputerowego, co odblokowuje możliwość tworzenia bogatych,
             interaktywnych aplikacji. W tym dziale używa się JavaScript jako języka
             oprogramowania oraz App Lab jako środowiska programowania do budowania
             aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie
             języki i narzędzia programowania.
-          description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania
-            komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych
-            aplikacji.
+          description_short: Kontynuuj poznawanie podstawowych pojęć programowania
+            komputerów w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
               display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
@@ -12281,8 +12271,7 @@ pl:
               name: Ukończ Dział 2 Przemyślenia na temat pogłębionej nauki [Deeper
                 Learning Reflections]
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
         csd2-dlp-18:
           title: "  Odkrycia Informatyki, Jednostka 2, Pogłębiona Nauka 2018-2019"
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia
@@ -12330,8 +12319,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
         csd4-dlp-18:
           title: ' Pogłębiona nauka działu 4 "Odkryć informatyki'' [CS Discoveries
             Deeper Learning] 2018-2019'
@@ -12358,8 +12346,7 @@ pl:
               name: Ukończ Dział 2 Przemyślenia na temat pogłębionej nauki [Deeper
                 Learning Reflections]
             Complete Unit 4 Deeper Learning Reflections:
-              name: Ukończ Dział 4 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 4 Przemyślenia na temat pogłębionej nauki
         csd5-dlp-18:
           title: ' Pogłębiona nauka działu 5 "Odkryć informatyki'' [CS Discoveries
             Deeper Learning] 2018-2019'
@@ -12383,8 +12370,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 5 Deeper Learning Reflections:
-              name: Ukończ Dział 5 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 5 Przemyślenia na temat pogłębionej nauki
         csd6-dlp-18:
           title: ' Pogłębiona nauka działu 6 "Odkryć informatyki'' [CS Discoveries
             Deeper Learning] 2018-2019'
@@ -12408,8 +12394,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 5 Deeper Learning Reflections:
-              name: Ukończ Dział 5 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 5 Przemyślenia na temat pogłębionej nauki
             Complete Unit 6 Deeper Learning Reflections:
               name: Ukończ Dział 6 Przemyślenia na temat pogłębionej nauki [Deeper
                 Learning Reflections]
@@ -12484,8 +12469,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
         csp4-dlp-18:
           title: " Zasady informatyki,  Jednostka 4, Pogłębiona Nauka 2018-2019"
           description_audience: Prowadzący "Zasady informatyki" w procesie szkolenia
@@ -12508,11 +12492,9 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
             Complete Unit 4 Deeper Learning Reflections:
-              name: Ukończ Dział 4 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 4 Przemyślenia na temat pogłębionej nauki
         csp5-dlp-18:
           title: " Zasady informatyki,  Jednostka 5, Pogłębiona Nauka 2018-2019"
           description_audience: Prowadzący "Zasady informatyki" w procesie szkolenia
@@ -12535,8 +12517,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 5 Deeper Learning Reflections:
-              name: Ukończ Dział 5 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 5 Przemyślenia na temat pogłębionej nauki
         csp-explore-dlp-18:
           title: ' Pogłębiona nauka "Zasad informatyki'' [CS Principles Deeper Learning]
             2018-2019'
@@ -12596,7 +12577,7 @@ pl:
         csd-post-survey:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           description_audience: Uczniowie CSD
-          description_short: Ankieta dla uczniów po odbyciu kursu CSD
+          description_short: CSD Ankieta dla uczniów po odbyciu kursu
           description: Witamy w ankiecie po ukończeniu kursu poświęconego "Odkryciom
             informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi
             mają charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko wyniki
@@ -12608,9 +12589,9 @@ pl:
               display_name: Ankieta po odbyciu kursu
           lessons:
             CSD post-course survey:
-              name: Ankieta po zakończeniu kursu  CSD
+              name: CSD Ankieta po zakończeniu kursu
         csd-novice-18:
-          title: Przemyślenia Nowicjusza "Odkrycia CS" 2018-2019
+          title: Odkrycia Informatyki Przemyślenia Nowicjusza 2018-2019
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia
             2019 [CS Discoveries Facilitators in Training 2019]
           description_short: Materiały do przemyśleń nowicjusza przeznaczone dla prowadzących
@@ -12995,7 +12976,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Lists Explore:
               name: Eksploruj listy
         dance-extras:
@@ -13058,7 +13039,7 @@ pl:
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
                 aby uzyskać jak najskuteczniejszy kod?
               description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być
-                funkcje w tej wesołej i interaktywnej przygodzie w grze Minecraft!
+                funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             The Power of Words:
               name: Moc słów
               description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma
@@ -13134,7 +13115,7 @@ pl:
               name: Pętle "for" z Artystą
               description_student: Przygotuj się na stworzenie kolejnego dzieła. Teraz
                 będziesz używać pętli "dla", aby tworzyć takie obrazki, na widok których
-                odbiorcom "opadnie szczena".
+                odbiorcom opadnie szczęka.
               description_teacher: Na tej lekcji uczniowie będą kontynuować ćwiczenie
                 pętli "dla", ale tym razem korzystając z interfejsu Artist. Uczniowie
                 będą rozwiązywać łamigłówki łącząc koncepcje zmiennych, pętli oraz
@@ -13531,8 +13512,8 @@ pl:
               name: Zbuduj grę Play Lab
             'Unplugged: Binary':
               name: Binarne obrazy (Binary Images)
-              description_student: Ucz się, jak komputery przechowują obrazki z użyciem
-                języka dającego tylko dwie opcje.
+              description_student: Ucz się, jak komputery przechowują obrazki używając
+                języka z tylko dwoma opcjami.
               description_teacher: Chociaż wiele osób sądzi, że binarne są tylko zera
                 i jedynki, uczniom zostanie wprowadzona koncepcja, że informacje mogą
                 być reprezentowane na różne binarne sposoby.  Na tej lekcji to pojęcie
@@ -13541,10 +13522,10 @@ pl:
                 w postaci binarnej.
             Artist Binary:
               name: Binarne obrazy z Artystą
-              description_student: Na tej lekcji będziesz się uczyć jak tworzyć obrazki
-                składające się tylko z zer i jedynek.
-              description_teacher: Ta seria lekcji internetowych będzie edukować  uczniów
-                w zakresie tworzenia obrazków z użyciem włączenia i wyłączenia.
+              description_student: Na tej lekcji będziesz się uczyć, jak tworzyć obrazki
+                używając tylko zer i jedynek.
+              description_teacher: Na tej serii lekcji internetowych uczniowie będą
+                się uczyć, jak tworzyć obrazki z użyciem włączania i wyłączania.
             Build a Star Wars Game:
               name: Zbuduj grę Star Wars
               description_student: Poczuj moc w trakcie budowania swojej własnej gry
@@ -13659,9 +13640,9 @@ pl:
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
                 aby uzyskać jak najskuteczniejszy kod?
               description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być
-                funkcje w tej wesołej i interaktywnej przygodzie w grze Minecraft!
+                funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
               description_student: Dzięki funkcjom będziesz oszczędzać mnóstwo pracy
                 w trakcie pomocy udzielanej farmerce przy żniwach.
               description_teacher: Uczniowie ćwiczyli tworzenie efektownych projektów
@@ -13972,7 +13953,7 @@ pl:
             Functions in Minecraft:
               name: Funkcje w Minecrafcie
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Functions in Artist:
               name: Funkcje z Artistą
             Screen Out the Mean:
@@ -14876,19 +14857,19 @@ pl:
             Exploring Websites:
               name: Odkrywanie stron
               description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
-                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada szereg
-                witryn najczęściej używanych w Stanach Zjednoczonych i omawia, w jaki
-                sposób każda z tych witryn jest przydatna dla użytkowników i jak może
-                służyć również jej twórcom.
+                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
+                witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
+                w jaki sposób każda z tych witryn jest przydatna dla użytkowników
+                i jak może służyć również jej twórcom.
 
 '
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
                 internetowa może służyć, zarówno z punktu widzenia użytkowników, jak
-                i twórców. Klasa bada szereg witryn najczęściej używanych w Stanach
-                Zjednoczonych i omawia, w jaki sposób każda z tych witryn jest przydatna
-                dla użytkowników i jak może służyć również jej twórcom.
+                i twórców. Klasa bada wiele witryn najczęściej wykorzystywanych w
+                Stanach Zjednoczonych i omawia, w jaki sposób każda z tych witryn
+                jest przydatna dla użytkowników i jak może służyć również jej twórcom.
             'Websites for Expression ':
               name: Strony internetowe służące wyrażeniu się
               description_student: Jak możemy używać stron internetowych do osobistej
@@ -15037,7 +15018,7 @@ pl:
                 nawigację pomiędzy stronami zanim opublikują całą witrynę w Internecie.
                 \r\n\r"
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: Na tej lekcji wprowadza się pojęcie CSS jako sposobu
                 stylizowania elementów na stronie. Klasa poznaje podstawową składnię
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
@@ -15046,10 +15027,10 @@ pl:
               description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
                 sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
                 składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują na stronie HTML poświęconej
+                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
                 zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
                 Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu do swojej prywatnej strony internetotej.
+                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
                 \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
@@ -15063,9 +15044,9 @@ pl:
                 Uczniowie rozpoczynają tę lekcję od przyjrzenia się stronie internetotej
                 na temat "Deserów świata" [Desserts of the World]. Analizują i modyfikują
                 nowe style CSS na tej stronie dodając swoje własne style do strony.
-                Po wykonaniu pracy na stronie "Desery świata" [Desserts of the World]
-                uczniowie wykorzystują nowo nabytą wiedzę w zakresie właściwości CSS
-                do stylizacji swoich prywatnych stron internetowych w szerszym zakresie.
+                Po wykonaniu pracy na tej stronie uczniowie wykorzystują nowo nabytą
+                wiedzę w zakresie właściwości CSS do stylizacji swoich prywatnych
+                stron internetowych w szerszym zakresie.
             Sources and Search Engines:
               name: Źródła i wyszukiwarki
               description_student: Po  zakończeniu pierwszego poszukiwania skarbu
@@ -15337,14 +15318,14 @@ pl:
             Velocity:
               name: Prędkość
               description_student: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, klasę wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
-                typu " side scroller".
+                typu "side scroller".
               description_teacher: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, uczniów wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
                 typu "side scroller".
@@ -15494,8 +15475,8 @@ pl:
             tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania
             na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i
             kształtować dalszą iterację.
-          description_short: Ucz się, jak projektować program, który zaspokaja potrzeby
-            użytkowników
+          description_short: Ucz się, jak zaprojektować program, który zaspokoi potrzeby
+            Twoich użytkowników
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -16112,7 +16093,7 @@ pl:
             w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego.
             Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako
             podstawy innowacji Twojego własnego projektu.
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           lesson_groups:
             csd6_1:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
@@ -16218,7 +16199,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             'Lesson 15: Unit 4 Assessment':
               name: 'Lekcja 15: Jednostka 4 Sprawdzian'
             Unit 4 STUDENT Survey:
@@ -16387,7 +16368,7 @@ pl:
             prawo i etykę.
           lesson_groups:
             csp4_1_2018:
-              display_name: 'Dział 4: Ważne dane i prywatność'
+              display_name: 'Jednostka 4: Giga dane i prywatność'
             cspAssessment:
               display_name: Sprawdzian z rozdziału
             cspSurvey:
@@ -16414,7 +16395,7 @@ pl:
             Rapid Research - Cybercrime:
               name: Szybkie badania - Cyberprzestępczość
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Mid-Year Survey:
               name: Ankieta w trakcie roku
             'Optional: Data Questions':
@@ -16429,9 +16410,8 @@ pl:
             oprogramowania oraz App Lab jako środowiska programowania do budowania
             aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie
             języki i narzędzia programowania.
-          description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania
-            komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych
-            aplikacji.
+          description_short: Kontynuuj poznawanie podstawowych pojęć programowania
+            komputerów w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
               display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
@@ -16739,13 +16719,13 @@ pl:
             ramp_up:
               display_name: Intensyfikacja działań
             time4cs_c1:
-              display_name: 'Kolekcja 1: Region Everglades i jego ekosystemy'
+              display_name: 'Kolekcja 1: Everglades i jego ekosystemy'
             time4cs_c2:
-              display_name: 'Kolekcja 2: Łańcuchy żywieniowe (w regionie Everglades)'
+              display_name: 'Kolekcja 2: Łańcuchy żywieniowe (w Everglades)'
             time4cs_c3:
-              display_name: 'Kolekcja 3: Gatunki rodzime (w regionie Everglades)'
+              display_name: 'Kolekcja 3: Gatunki rodzime (w Everglades)'
             time4cs_c4:
-              display_name: 'Kolekcja 4: Wpływ gatunków napływowych (w regionie Everglades)'
+              display_name: 'Kolekcja 4: Wpływ gatunków napływowych (w Everglades)'
             time4cs_c5:
               display_name: 'Kolekcja 5: Obywatele biorą sprawy w swoje ręce'
           lessons:
@@ -16878,7 +16858,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp2-pilot-staging:
           title: 'Jednostka 2: Internet'
           lesson_groups:
@@ -16928,7 +16908,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp3-pilot-staging:
           title: 'Jednostka  3: Wprowadzenie do projektowania aplikacji'
           lessons:
@@ -16969,7 +16949,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Introduction to Apps:
               name: Wprowadzenie do aplikacji
             'Project: Designing an App, pt. 1':
@@ -17049,7 +17029,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp5-pilot-staging:
           title: 'Jednostka 5: Listy, pętle i przejścia'
           lesson_groups:
@@ -17101,7 +17081,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Lists Explore:
               name: Eksploruj listy
             Lists Investigate:
@@ -17197,7 +17177,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp7-pilot-staging:
           title: 'Jednostka 7: Funkcje i Biblioteki'
           lesson_groups:
@@ -17245,7 +17225,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Functions with Parameters and Return Explore:
               name: Eksploruj funkcje z parametrami i zwracaniem
             Libraries:
@@ -17321,7 +17301,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp9-pilot-staging:
           title: 'Jednostka 9: Dane'
           lesson_groups:
@@ -17371,7 +17351,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp10-pilot-staging:
           title: 'Jednostka 10: Globalne oddziaływanie'
           lesson_groups:
@@ -17421,7 +17401,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         pluralsight:
           title: Uzyskaj dostęp do Pluralsight One
           lessons:
@@ -17451,7 +17431,7 @@ pl:
               display_name: Ankieta
           lessons:
             CSD post-course survey:
-              name: Ankieta po zakończeniu kursu  CSD
+              name: CSD Ankieta po zakończeniu kursu
         csp-post-survey-2018:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           description_audience: Uczniowie CSP
@@ -17867,19 +17847,19 @@ pl:
             Exploring Websites:
               name: Odkrywanie stron
               description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
-                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada szereg
-                witryn najczęściej używanych w Stanach Zjednoczonych i omawia, w jaki
-                sposób każda z tych witryn jest przydatna dla użytkowników i jak może
-                służyć również jej twórcom.
+                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
+                witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
+                w jaki sposób każda z tych witryn jest przydatna dla użytkowników
+                i jak może służyć również jej twórcom.
 
 '
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
                 internetowa może służyć, zarówno z punktu widzenia użytkowników, jak
-                i twórców. Klasa bada szereg witryn najczęściej używanych w Stanach
-                Zjednoczonych i omawia, w jaki sposób każda z tych witryn jest przydatna
-                dla użytkowników i jak może służyć również jej twórcom.
+                i twórców. Klasa bada wiele witryn najczęściej wykorzystywanych w
+                Stanach Zjednoczonych i omawia, w jaki sposób każda z tych witryn
+                jest przydatna dla użytkowników i jak może służyć również jej twórcom.
             'Websites for Expression ':
               name: Strony internetowe służące wyrażeniu się
               description_student: Jak możemy używać stron internetowych do osobistej
@@ -18028,7 +18008,7 @@ pl:
                 nawigację pomiędzy stronami zanim opublikują całą witrynę w Internecie.
                 \r\n\r"
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: Na tej lekcji wprowadza się pojęcie CSS jako sposobu
                 stylizowania elementów na stronie. Klasa poznaje podstawową składnię
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
@@ -18037,10 +18017,10 @@ pl:
               description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
                 sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
                 składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują na stronie HTML poświęconej
+                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
                 zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
                 Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu do swojej prywatnej strony internetotej.
+                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
                 \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
@@ -18054,9 +18034,9 @@ pl:
                 Uczniowie rozpoczynają tę lekcję od przyjrzenia się stronie internetotej
                 na temat "Deserów świata" [Desserts of the World]. Analizują i modyfikują
                 nowe style CSS na tej stronie dodając swoje własne style do strony.
-                Po wykonaniu pracy na stronie "Desery świata" [Desserts of the World]
-                uczniowie wykorzystują nowo nabytą wiedzę w zakresie właściwości CSS
-                do stylizacji swoich prywatnych stron internetowych w szerszym zakresie.
+                Po wykonaniu pracy na tej stronie uczniowie wykorzystują nowo nabytą
+                wiedzę w zakresie właściwości CSS do stylizacji swoich prywatnych
+                stron internetowych w szerszym zakresie.
             Sources and Search Engines:
               name: Źródła i wyszukiwarki
               description_student: Po  zakończeniu pierwszego poszukiwania skarbu
@@ -18360,14 +18340,14 @@ pl:
             Velocity:
               name: Prędkość
               description_student: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, klasę wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
-                typu " side scroller".
+                typu "side scroller".
               description_teacher: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, uczniów wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
                 typu "side scroller".
@@ -18997,7 +18977,7 @@ pl:
             k5_basic_concepts:
               display_name: Podstawowe pojęcia kodowania oraz praktyki edukacyjne
             k5_diving_deeper:
-              display_name: 'Nurkowanie głębiej: Kursy E i F'
+              display_name: 'Zgłębiaj bardziej: Kursy E i F'
             k5_next_steps:
               display_name: Następne Kroki
           lessons:
@@ -19044,19 +19024,19 @@ pl:
             Functions:
               name: Funkcje
             Diving Deeper:
-              name: Nurkowanie głębiej
+              name: Zgłębiaj bardziej
             Next steps:
               name: Następne kroki
             Diving deeper:
-              name: Nurkowanie głębiej
+              name: Zgłębiaj bardziej
             Diving deeper (for Courses E and F):
-              name: Nurkowanie głębiej (dla kursów E i F)
+              name: Zgłębiaj bardziej (dla Kursów E i F)
             Welcome to "Teaching Computer Science Fundamentals":
               name: Witamy na "Podstawach Nauczania Informatyki"
             Diving Deeper (for Courses E and F):
-              name: Nurkowanie głębiej (dla kursów E i F)
+              name: Zgłębiaj bardziej (dla Kursów E i F)
             'Diving Deeper: Courses E and F':
-              name: 'Nurkowanie głębiej: Kursy E i F'
+              name: 'Zgłębiaj bardziej: Kursy E i F'
             Sprite Lab:
               name: Sprite Lab
             Variables:
@@ -19244,13 +19224,13 @@ pl:
           description: "[Dodaj Opis]"
           lesson_groups:
             time4cs_c1:
-              display_name: 'Kolekcja 1: Region Everglades i jego ekosystemy'
+              display_name: 'Kolekcja 1: Everglades i jego ekosystemy'
             time4cs_c2:
-              display_name: 'Kolekcja 2: Łańcuchy żywieniowe (w regionie Everglades)'
+              display_name: 'Kolekcja 2: Łańcuchy żywieniowe (w Everglades)'
             time4cs_c3:
-              display_name: 'Kolekcja 3: Gatunki rodzime (w regionie Everglades)'
+              display_name: 'Kolekcja 3: Gatunki rodzime (w Everglades)'
             time4cs_c4:
-              display_name: 'Kolekcja 4: Wpływ gatunków napływowych (w regionie Everglades)'
+              display_name: 'Kolekcja 4: Wpływ gatunków napływowych (w Everglades)'
             time4cs_c5:
               display_name: 'Kolekcja 5: Obywatele biorą sprawy w swoje ręce'
           lessons:
@@ -19269,7 +19249,7 @@ pl:
             Alligator Holes:
               name: Jamy aligatorów
             Food Chain Game:
-              name: Gra w łańcuch pokarmowy
+              name: Gra z łańcuchem pokarmowym
             Invasive Species:
               name: Gatunek inwazyjny
             Conditionals with Cards (Integrated Lesson)- Part 2:
@@ -19291,7 +19271,7 @@ pl:
             Functions in Minecraft:
               name: Funkcje w Minecrafcie
             Functions with Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Functions with Artist:
               name: Funkcje z Artistą
             Pythons impacting native populations:
@@ -19745,7 +19725,7 @@ pl:
                 sobie dokładnie w jakim zakresie tracą kontrolę nad informacjami,
                 które ujawnią w Internecie."
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: "**Pytanie dnia: Jak można wyrazić swój styl osobisty
                 na stronie internetotej?**\r\n\r\n\r\nNa tej lekcji wprowadza się
                 pojęcie CSS jako sposobu stylizowania elementów na stronie. Klasa
@@ -20304,12 +20284,11 @@ pl:
             'Alternate Versions of Lesson 1: Intro to Problem Solving':
               name: 'Alternatywne wersje lekcji 1: Wprowadzenie do rozwiązywania problemów'
             'Alternate Versions of Lesson 3: Exploring Problem Solving':
-              name: 'Alternatywne wersje lekcji 3: Zgłębianie zagadnienia rozwiązywania
-                problemów'
+              name: 'Alternatywne wersje lekcji 3: Zgłębianie rozwiązywania problemów'
             'Lesson 1: Intro to Problem Solving - Newspaper Table':
               name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Stolik prasowy'
             'Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
-              name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Most z makaronu'
+              name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Most z spaghetti'
             'Lesson 1: Intro to Problem Solving - Paper Tower':
               name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Wieża z papieru'
             'Lesson 3: Exploring Problem Solving - Games Theme':
@@ -20501,8 +20480,8 @@ pl:
             tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania
             na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i
             kształtować dalszą iterację.
-          description_short: Ucz się, jak projektować program, który zaspokaja potrzeby
-            użytkowników
+          description_short: Ucz się, jak zaprojektować program, który zaspokoi potrzeby
+            Twoich użytkowników
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -21121,7 +21100,7 @@ pl:
             w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego.
             Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako
             podstawy innowacji Twojego własnego projektu.
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           lesson_groups:
             csd6_1:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
@@ -22383,8 +22362,8 @@ pl:
                 będą się uczyć pisania złożonych i elastycznych kodów.
             'Unplugged: Binary':
               name: Binarne obrazy (Binary Images)
-              description_student: Ucz się, jak komputery przechowują obrazki z użyciem
-                języka dającego tylko dwie opcje.
+              description_student: Ucz się, jak komputery przechowują obrazki używając
+                języka z tylko dwoma opcjami.
               description_teacher: Chociaż wiele osób sądzi, że binarne są tylko zera
                 i jedynki, uczniom zostanie wprowadzona koncepcja, że informacje mogą
                 być reprezentowane na różne binarne sposoby.  Na tej lekcji to pojęcie
@@ -22393,10 +22372,10 @@ pl:
                 w postaci binarnej.
             Artist Binary:
               name: Binarne obrazy z Artystą
-              description_student: Na tej lekcji będziesz się uczyć jak tworzyć obrazki
-                składające się tylko z zer i jedynek.
-              description_teacher: Ta seria lekcji internetowych będzie edukować  uczniów
-                w zakresie tworzenia obrazków z użyciem włączenia i wyłączenia.
+              description_student: Na tej lekcji będziesz się uczyć, jak tworzyć obrazki
+                używając tylko zer i jedynek.
+              description_teacher: Na tej serii lekcji internetowych uczniowie będą
+                się uczyć, jak tworzyć obrazki z użyciem włączania i wyłączania.
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
               description_student: Niektórych informacji nie można bezpiecznie udostępniać
@@ -22607,9 +22586,9 @@ pl:
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
                 aby uzyskać jak najskuteczniejszy kod?
               description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być
-                funkcje w tej wesołej i interaktywnej przygodzie w grze Minecraft!
+                funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
               description_student: Dzięki funkcjom będziesz oszczędzać mnóstwo pracy
                 w trakcie pomocy udzielanej farmerce przy żniwach.
               description_teacher: Uczniowie ćwiczyli tworzenie efektownych projektów
@@ -22693,7 +22672,7 @@ pl:
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
                 aby uzyskać jak najskuteczniejszy kod?
               description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być
-                funkcje w tej wesołej i interaktywnej przygodzie w grze Minecraft!
+                funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             Learning Sprites with Sprite Lab:
               name: Pływająca ryba w Sprite Lab
               description_student: Naucz się tworzyć i edytować duszki.
@@ -22804,7 +22783,7 @@ pl:
               name: Pętle "for" z Artystą
               description_student: Przygotuj się na stworzenie kolejnego dzieła. Teraz
                 będziesz używać pętli "dla", aby tworzyć takie obrazki, na widok których
-                odbiorcom "opadnie szczena".
+                odbiorcom opadnie szczęka.
               description_teacher: Na tej lekcji uczniowie będą kontynuować ćwiczenie
                 pętli "dla", ale tym razem korzystając z interfejsu Artist. Uczniowie
                 będą rozwiązywać łamigłówki łącząc koncepcje zmiennych, pętli oraz
@@ -23029,7 +23008,7 @@ pl:
             Harvesting with Conditionals:
               name: Żniwa z wyrażeniami warunkowymi
             Functions with Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Functions with Artist:
               name: Funkcje z Artistą
             Variables with Artist:
@@ -23530,7 +23509,7 @@ pl:
                 sobie dokładnie w jakim zakresie tracą kontrolę nad informacjami,
                 które ujawnią w Internecie."
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: Na tej lekcji wprowadza się pojęcie CSS jako sposobu
                 stylizowania elementów na stronie. Klasa poznaje podstawową składnię
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
@@ -23539,10 +23518,10 @@ pl:
               description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
                 sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
                 składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują na stronie HTML poświęconej
+                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
                 zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
                 Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu do swojej prywatnej strony internetotej.
+                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
                 \r\n\r"
             Intellectual Property:
               name: Własność intelektualna
@@ -23582,9 +23561,9 @@ pl:
                 Uczniowie rozpoczynają tę lekcję od przyjrzenia się stronie internetotej
                 na temat "Deserów świata" [Desserts of the World]. Analizują i modyfikują
                 nowe style CSS na tej stronie dodając swoje własne style do strony.
-                Po wykonaniu pracy na stronie "Desery świata" [Desserts of the World]
-                uczniowie wykorzystują nowo nabytą wiedzę w zakresie właściwości CSS
-                do stylizacji swoich prywatnych stron internetowych w szerszym zakresie.
+                Po wykonaniu pracy na tej stronie uczniowie wykorzystują nowo nabytą
+                wiedzę w zakresie właściwości CSS do stylizacji swoich prywatnych
+                stron internetowych w szerszym zakresie.
             Project - Planning Layout and Style:
               name: Projekt - Planowanie układu i stylu
             Project - Building a Webpage:
@@ -23967,7 +23946,7 @@ pl:
             k5_basic_concepts_1:
               display_name: Podstawowe pojęcia kodowania oraz praktyki edukacyjne
             k5_diving_deeper_1:
-              display_name: 'Nurkowanie głębiej: Kursy E i F'
+              display_name: 'Zgłębiaj bardziej: Kursy E i F'
             k5_next_steps_1:
               display_name: Następne Kroki
         dani-test-2020:
@@ -24662,6 +24641,8 @@ pl:
               name: AI dla oceanów
             oceans:
               name: Uczenie maszynowe z AI dla oceanów
+            intro:
+              name: Wprowadzenie do uczenia maszynowego
             society:
               name: Uczenie maszynowe i społeczny oddźwięk
             decisions:
@@ -24705,14 +24686,14 @@ pl:
             SVM:
               name: SVM
             App:
-              name: Tworzenie aplikacji
+              name: Tworzenie modeli w rzeczywistym świecie
             Ethics:
               name: Etyka
             Project:
               name: Projekt końcowy
             appendix:
               name: Appendix
-          title: Jednostk Ml/AI - CSD
+          title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI
             dla CSD. W przypadku pytań na ten temat, należy zwrócić się do Dana Schneidera.
@@ -24851,8 +24832,8 @@ pl:
               key: Cyfrowy ślad
               name: Cyfrowy ślad
             Styling Text with CSS:
-              key: Stylowanie tekstu przy użyciu CSS
-              name: Stylowanie tekstu przy użyciu CSS
+              key: Ustalanie stylu tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
             'Mini-Project: Your Personal Style':
               key: 'Mini-Projekt: Twój osobisty styl'
               name: 'Mini-Projekt: Twój osobisty styl'
@@ -25020,8 +25001,8 @@ pl:
             tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania
             na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i
             kształtować dalszą iterację.
-          description_short: Ucz się, jak projektować program, który zaspokaja potrzeby
-            użytkowników
+          description_short: Ucz się, jak zaprojektować program, który zaspokoi potrzeby
+            Twoich użytkowników
           lessons:
             Analysis of Design:
               key: Analiza Projektu
@@ -25171,7 +25152,7 @@ pl:
             w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego.
             Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako
             podstawy innowacji Twojego własnego projektu.
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           lessons:
             Innovations in Computing:
               key: Innowacje w informatyce
@@ -25972,7 +25953,7 @@ pl:
               name: Funkcje w Minecrafcie
             Functions in Harvester:
               key: Funkcje w interfejsie Harvester
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Functions in Artist:
               key: Funkcje z Arystą
               name: Funkcje z Artistą
@@ -26135,8 +26116,8 @@ pl:
               key: Funkcje w Minecrafcie
               name: Funkcje w Minecrafcie
             Functions with Harvester:
-              key: Funkcje z interfejsem Harvester
-              name: Funkcje z interfejsem Harvester
+              key: Funkcje ze żniwiarką
+              name: Funkcje ze żniwiarką
             Functions with Artist:
               key: Funkcje z Artistą
               name: Funkcje z Artistą
