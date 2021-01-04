@@ -97,16 +97,19 @@
           "made_of_stone": "ប្លុកទាំងនេះគឺត្រូវបានគេធ្វើឡើងដោយដុំថ្ម។អ្នកអាចផ្លាស់វាចេញ ប៉ុន្តែអ្នកមិនអាចលុបវាបានទេ"
         },
         "course3_artist_functions_challenge1": {
-          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "course3_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "course3_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "ប្រើប្រាស់ពាក្យបញ្ជានេះ ដើម្បីរំកិលសត្វឃ្មុំថយក្រោយ។"
         },
         "course4_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_1": "ប្លក់ពណ័ប្រផេះមិនអាចលុបចោលបានទេ!"
@@ -288,28 +291,36 @@
           "courseD_artist_functions2_1": "\nនៅពេលប្លុកពណ៌បៃតងនេះដំណើរ, កូដទាំងអស់នៅក្នុងអនុគមន៍នឹងដំណើរការ។ តើវិចិត្រករគួរធ្វើអ្វីបន្ទាប់ពីគូរការ៉េដំបូង?"
         },
         "courseE_artist_functions_challenge1": {
-          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge1_2018": {
-          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge1_2019": {
-          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge1_2020": {
-          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge2_2018": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge2_2019": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge2_2020": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseC_maze_programming1": {
           "grade2_CaringForNewPet_0_1": "បន្ទាប់ពីភ្ជាប់ប្លុកទាំងអស់រួចហើយ ចុច \"រត់\" ដើម្បីចាប់ផ្តើមកម្មវិធីរបស់អ្នក។"
@@ -363,6 +374,94 @@
         },
         "courseE_artist_functions8": {
           "courseD_artist_functions8_1": "ប្លុករបស់អ្នកដើម្បីបង្កើតអនុគមន៍ ត្រូវបានផ្លាស់ប្តូរនៅក្រោមស្លាកនេះនៅក្នុងប្រអប់ឧបករណ៍។"
+        },
+        "CSD U3 Variables Predict Where XY": {
+          "grid": "ចុចទីនេះដើម្បីបង្ហាញក្រឡាចត្រង្គ"
+        },
+        "CSD U3 Variables Predict Where XY_2018": {
+          "grid": "ចុចទីនេះដើម្បីបង្ហាញក្រឡាចត្រង្គ"
+        },
+        "CSD U3 Variables Predict Where XY_2019": {
+          "grid": "ចុចទីនេះដើម្បីបង្ហាញក្រឡាចត្រង្គ"
+        },
+        "CSD U3 debug": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 debug_2018": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 debug_2019": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 ellipse": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 ellipse_2018": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 ellipse_2019": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 fill": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 fill_2018": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 fill_2019": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 rect": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "នេះជាប៊ូតុងចុចសម្រាប់ \"រត់\"។"
+        },
+        "CSD U3 rect_2018": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ"
+        },
+        "CSD U3 rect_2019": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ"
+        },
+        "CSD U3 sequence": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 sequence_2018": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 sequence_2019": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "Dance_2019_01": {
+          "dance_callout_01": "ចូរជ្រើសរើសប្រភេទអ្នករបាំនៅទីនេះ។"
+        },
+        "CSD U3 Variables Predict Where X": {
+          "CSD_U3_variables": "ប្តូរលេខនៅទីនេះ"
+        },
+        "CSD U3 Variables Predict Where X_2018": {
+          "CSD_U3_variables": "ប្តូរលេខនៅទីនេះ"
+        },
+        "CSD U3 Variables Predict Where X_2019": {
+          "CSD_U3_variables": "ប្តូរលេខនៅទីនេះ"
+        },
+        "CSD U3 Sprites intro sprites": {
+          "": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite"
+        },
+        "CSD U3 Sprites intro sprites_2018": {
+          "": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite"
+        },
+        "CSD U3 Sprites intro sprites_2019": {
+          "": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite"
         }
       }
     }

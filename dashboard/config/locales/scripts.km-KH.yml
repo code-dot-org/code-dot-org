@@ -92,6 +92,10 @@ km:
           lessons:
             The Internet:
               name: អ៊ីនធឺណិត
+        algebraPD2a:
+          lessons:
+            Free Play:
+              name: លេងដោយសេរី
         allthethings:
           lessons:
             Bounce:
@@ -741,6 +745,9 @@ km:
               display_name: លក្ខខណ្ឌ
             csp_functions:
               display_name: អនុ​គមន៍
+          lessons:
+            Surveys:
+              name: ការស្ទង់មតិ
         csp1-2019:
           lessons:
             The Internet:
@@ -829,6 +836,10 @@ km:
               name: លក្ខខណ្ឌ
             Functions:
               name: អនុ​គមន៍
+            Shapes and Parameters:
+              name: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
+            Random Numbers:
+              name: លេខចៃដន្យ
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -915,8 +926,12 @@ km:
               name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
         csd3-2020:
           lessons:
+            Shapes and Parameters:
+              name: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
             Variables:
               name: អ​ថេរ
+            Random Numbers:
+              name: លេខចៃដន្យ
             Conditionals:
               name: លក្ខខណ្ឌ
             Functions:
@@ -1023,8 +1038,12 @@ km:
               name: អ​ថេរ
         csd3-virtual:
           lessons:
+            Shapes and Parameters:
+              name: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
             Variables:
               name: អ​ថេរ
+            Random Numbers:
+              name: លេខចៃដន្យ
             Text:
               name: អត្ថ​​បទ
             Conditionals:
@@ -1033,9 +1052,15 @@ km:
               name: អនុ​គមន៍
         csd3-2021:
           lessons:
+            Shapes and Parameters:
+              key: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
+              name: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
             Variables:
               key: អ​ថេរ
               name: អ​ថេរ
+            Random Numbers:
+              key: លេខចៃដន្យ
+              name: លេខចៃដន្យ
             Text:
               key: អត្ថ​​បទ
               name: អត្ថ​​បទ
