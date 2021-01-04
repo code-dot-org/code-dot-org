@@ -94,7 +94,7 @@
             "name": "nimadir qilish"
           },
           "check guess": {
-            "name": "check guess"
+            "name": "taxminni tekshiring"
           }
         },
         "Geometric Sun": {
@@ -718,19 +718,19 @@
               "size": "kattalik",
               "color": "rang"
             },
-            "name": "checker"
+            "name": "tekshiruvchi"
           },
           "Make gingham": {
             "parameters": {
               "size": "kattalik"
             },
-            "name": "Make gingham"
+            "name": "Gingham (yo'l-yo'l mato/soyabon) qiling"
           },
           "black outline": {
             "parameters": {
               "length": "uzunlik"
             },
-            "name": "black outline"
+            "name": "qora kontur"
           }
         },
         "courseF_artist_fwp2": {
@@ -742,26 +742,26 @@
             "parameters": {
               "length": "uzunlik"
             },
-            "description": "draw a square with length parameter\n"
+            "description": "uzunlik parametri bilan kvadrat chizish"
           },
           "checker": {
             "parameters": {
               "size": "kattalik",
               "color": "rang"
             },
-            "name": "checker"
+            "name": "tekshiruvchi"
           },
           "Make gingham": {
             "parameters": {
               "size": "kattalik"
             },
-            "name": "Make gingham"
+            "name": "Gingham (yo'l-yo'l mato/soyabon) qiling"
           },
           "black outline": {
             "parameters": {
               "length": "uzunlik"
             },
-            "name": "black outline"
+            "name": "qora kontur"
           }
         },
         "courseF_artist_fwp9": {
@@ -1706,7 +1706,7 @@
             "parameters": {
               "length": "uzunlik"
             },
-            "description": "draw a square with a length parameter"
+            "description": "uzunlik parametri bilan kvadrat chizish"
           }
         },
         "courseF_artist_fwp3": {
@@ -1720,20 +1720,20 @@
             "parameters": {
               "size": "kattalik"
             },
-            "name": "draw a square2"
+            "name": "square2 kvadrat chizish"
           },
           "filled square": {
             "parameters": {
               "size": "kattalik",
               "color": "rang"
             },
-            "name": "filled square"
+            "name": "to'ldirilgan kvadrat"
           },
           "black outline": {
             "parameters": {
               "length": "uzunlik"
             },
-            "name": "black outline"
+            "name": "qora kontur"
           }
         },
         "courseF_bee_fwp4": {
@@ -1966,7 +1966,7 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "check guess",
+            "name": "taxminni tekshiring",
             "parameters": {
               "theGuess": "theGuess"
             }
@@ -1999,38 +1999,38 @@
         },
         "courseE_bee_functions10": {
           "move and make honey": {
-            "name": "move and make honey"
+            "name": "harakat qiling va asal g'amlang"
           }
         },
         "courseE_bee_functions11_predict1": {
           "move and make honey": {
-            "name": "move and make honey"
+            "name": "harakat qiling va asal g'amlang"
           }
         },
         "courseE_bee_functions8": {
           "collect all nectar": {
-            "name": "collect all nectar"
+            "name": "barcha nektarni yig'ing"
           }
         },
         "courseE_bee_functions9": {
           "get all nectar": {
-            "name": "get all nectar"
+            "name": "barcha nektarni oling"
           }
         },
         "courseE_farmer_functions10b": {
           "navigate": {
-            "name": "navigate"
+            "name": "yo'l topib yurish"
           }
         },
         "courseE_farmer_functions11_predict": {
           "check and pick": {
-            "name": "check and pick"
+            "name": "tekshirish va yig'ish"
           },
           "find pumpkin": {
-            "name": "find pumpkin"
+            "name": "oshqovoqni toping"
           },
           "wander path": {
-            "name": "wander path"
+            "name": "aylanma yo'l"
           }
         },
         "courseE_farmer_functions2ba": {
@@ -2060,22 +2060,22 @@
         },
         "courseE_farmer_functions8b": {
           "navigate": {
-            "name": "navigate"
+            "name": "yo'l topib yurish"
           }
         },
         "courseE_farmer_functions9b": {
           "navigate": {
-            "name": "navigate"
+            "name": "yo'l topib yurish"
           }
         },
         "courseF_bee_functions2": {
           "get only nectar": {
-            "name": "get only nectar"
+            "name": "faqat nektarni oling"
           }
         },
         "courseF_bee_functions3": {
           "only make honey": {
-            "name": "only make honey"
+            "name": "faqat asal g'amlang"
           }
         },
         "courseF_bee_variables_1_2018": {

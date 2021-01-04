@@ -959,7 +959,7 @@ uz-UZ:
         - text: Men bilmayman
           feedback: Rassom kvadrat chizadi.
         questions:
-        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugamsini bosganingizda
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bosganingizda
             nima bo‘ladi?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
@@ -973,7 +973,7 @@ uz-UZ:
         - text: Men bilmayman
           feedback: Rassom kvadrat chizadi.
         questions:
-        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugamsini bosganingizda
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bosganingizda
             nima bo‘ladi?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
@@ -987,7 +987,7 @@ uz-UZ:
         - text: Men bilmayman
           feedback: Rassom kvadrat chizadi.
         questions:
-        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugamsini bosganingizda
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bosganingizda
             nima bo‘ladi?
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
@@ -1001,7 +1001,7 @@ uz-UZ:
         - text: Men bilmayman
           feedback: Rassom kvadrat chizadi.
         questions:
-        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugamsini bosganingizda
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bosganingizda
             nima bo‘ladi?
       courseC_multi_harvester_loops11_predict1:
         answers:
@@ -1200,7 +1200,7 @@ uz-UZ:
         - text: Bilmadim
           feedback: Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur qiladi.
         questions:
-        - text: Sizningcha "Run" tugamsini bosganingizda nima bo‘ladi?
+        - text: Sizningcha "Run" tugmasini bosganingizda nima bo‘ladi?
       courseC_multi_starWars_predict1_2018:
         answers:
         - text: BB-8 harakatlanmaydi.
@@ -1215,7 +1215,7 @@ uz-UZ:
         - text: Bilmadim
           feedback: Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur qiladi.
         questions:
-        - text: Sizningcha "Run" tugamsini bosganingizda nima bo‘ladi?
+        - text: Sizningcha "Run" tugmasini bosganingizda nima bo‘ladi?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - text: BB-8 harakatlanmaydi.
@@ -1230,7 +1230,7 @@ uz-UZ:
         - text: Bilmadim
           feedback: Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur qiladi.
         questions:
-        - text: Sizningcha "Run" tugamsini bosganingizda nima bo‘ladi?
+        - text: Sizningcha "Run" tugmasini bosganingizda nima bo‘ladi?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 harakatlanmaydi.
@@ -1245,7 +1245,7 @@ uz-UZ:
         - text: Bilmadim
           feedback: Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur qiladi.
         questions:
-        - text: Sizningcha "Run" tugamsini bosganingizda nima bo‘ladi?
+        - text: Sizningcha "Run" tugmasini bosganingizda nima bo‘ladi?
       courseC_multi_starWars_predict2:
         answers:
         - text: BB-8 birinchi siklda juda uzoqqa boradi.
@@ -2300,69 +2300,87 @@ uz-UZ:
             son‘g nima sodir bo‘ladi deb oylasiz?
       courseE_multi_bee_functions_predict1:
         answers:
-        - text: The same program will work to solve this puzzle, too.
+        - text: Ushbu jumboqni yechishda ham o'sha dastur ishlaydi.
           correct: true
-          feedback: Correct!  It doesn't matter that there is a different amount of
-            honey. The function is programmed to handle that.
-        - text: The bee won't make enough honey.
-          feedback: Incorrect. The function is programmed to handle any amount of
-            honey over 0.
-        - text: The bee will try to make too much honey.
-          feedback: Incorrect. The function is programmed to handle any amount of
-            honey over 0.
+          feedback: To'g'ri! Asalning miqdori boshqaligi muhim emas. Funksiya buni
+            amalga oshirish uchun dasturlashtirilgan.
+        - text: Asalari yetatli miqdorda asal g'amlamaydi.
+          feedback: Noto'g'ri. Funksiya 0 dan katta bo'lgan har qanday miqdordagi
+            asal bilan ishlashga mo'ljallangan.
+        - text: Asalari o'ta ko'p asal g'amlashga harakat qiladi.
+          feedback: Noto'g'ri. Funksiya 0 dan katta bo'lgan har qanday miqdordagi
+            asal bilan ishlashga mo'ljallangan.
         - text: Men bilmayman
-          feedback: The program will work to solve this puzzle, too. It is programmed
-            to handle any amount of honey over 0.
+          feedback: Dastur ushbu jumboqni yechish uchun ham ishlaydi. U 0 dan katta
+            har qanday miqdordagi asalni g'amlash uchun dasturlashtirilgan.
         questions:
-        - text: Here is the exact same program from the last puzzle, but the amount
-            of honey to collect in this puzzle has changed. What will happen when
-            you click "Run"?
+        - text: Mana oxirgi jumboqdagi dastur, ammo bu jumboqda to'planadigan asal
+            miqdori o'zgargan. "Ishga tushirish" tugmasini bosganingizda nima sodir
+            bo'ladi?
       courseE_multi_farmer_functions11_predict:
         answers:
-        - text: The harvester will pick two pumpkins.
-          feedback: Incorrect.  The harvester does not call "check and pick" until
-            she gets to the corn.
-        - text: The harvester will pick all of the pumpkins.
-          feedback: Incorrect.  The harvester does not call "check and pick" until
-            she gets to the corn.
-        - text: The harvester will pick the lettuce.
-          feedback: Incorrect. The harvester only makes one turn, and ends at the
-            corn.
-        - text: The harvester will pick the corn.
+        - text: Terimchi ikkita oshqovoqni terib oladi.
+          feedback: Noto'g'ri. Terimchi makkajo'xori oldiga kelmaguncha "tekshiring
+            va yig'ing" funksiyasini chaqirmaydi.
+        - text: Terimchi barcha oshqovoqni terib oladi.
+          feedback: Noto'g'ri. Terimchi makkajo'xori oldiga kelmaguncha "tekshiring
+            va yig'ing" funksiyasini chaqirmaydi.
+        - text: Terimchi salatni terib oladi.
+          feedback: Noto'g'ri. Terimchi faqat bitta burilish qiladi va makkajo'xori
+            oldida to'xtaydi.
+        - text: Terimchi makkajo'xorini terib oladi.
           correct: true
           feedback: To‘g’ri!
         questions:
-        - text: Look at the functions defined below. What will the harvester pick?
+        - text: Quyida tavsiflangan funksiyalarga qarang. Terimchi nima yig'adi?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - text: The harvester will pick two pumpkins.
-        - text: The harvester will pick all of the pumpkins.
-        - text: The harvester will pick the lettuce.
+        - text: Terimchi ikkita oshqovoqni terib oladi.
+          feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+        - text: Terimchi barcha oshqovoqni terib oladi.
+          feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+        - text: Terimchi salatni terib oladi.
           correct: true
           feedback: To‘g’ri!
-        - text: The harvester will pick the corn.
+        - text: Terimchi makkajo'xorini terib oladi.
+          feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
         questions:
-        - text: Look at the functions defined below. What will the harvester pick?
+        - text: Quyida tavsiflangan funksiyalarga qarang. Terimchi nima yig'adi?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - text: The harvester will pick two pumpkins.
-        - text: The harvester will pick all of the pumpkins.
-        - text: The harvester will pick the lettuce.
+        - text: Terimchi ikkita oshqovoqni terib oladi.
+          feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+        - text: Terimchi barcha oshqovoqni terib oladi.
+          feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+        - text: Terimchi salatni terib oladi.
           correct: true
           feedback: To‘g’ri!
-        - text: The harvester will pick the corn.
+        - text: Terimchi makkajo'xorini terib oladi.
+          feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
         questions:
-        - text: Look at the functions defined below. What will the harvester pick?
+        - text: Quyida tavsiflangan funksiyalarga qarang. Terimchi nima yig'adi?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
-        - text: The harvester will pick two pumpkins.
-        - text: The harvester will pick all of the pumpkins.
-        - text: The harvester will pick the lettuce.
+        - text: Terimchi ikkita oshqovoqni terib oladi.
+          feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+        - text: Terimchi barcha oshqovoqni terib oladi.
+          feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+        - text: Terimchi salatni terib oladi.
           correct: true
           feedback: To‘g’ri!
-        - text: The harvester will pick the corn.
+        - text: Terimchi makkajo'xorini terib oladi.
+          feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
         questions:
-        - text: Look at the functions defined below. What will the harvester pick?
+        - text: Quyida tavsiflangan funksiyalarga qarang. Terimchi nima yig'adi?
       courseE_prediction_artistFunction1:
         answers:
         - text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
@@ -2377,7 +2395,7 @@ uz-UZ:
           feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
             sakrash mavjud.
         questions:
-        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       courseE_prediction_artistFunction1_2018:
         answers:
         - text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
@@ -2392,7 +2410,7 @@ uz-UZ:
           feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
             sakrash mavjud.
         questions:
-        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       courseE_prediction_artistFunction1_2018_2019:
         answers:
         - text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
@@ -2407,7 +2425,7 @@ uz-UZ:
           feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
             sakrash mavjud.
         questions:
-        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
         - text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
@@ -2422,22 +2440,22 @@ uz-UZ:
           feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
             sakrash mavjud.
         questions:
-        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       courseE_prediction_artistFunction1_copy:
         answers:
-        - text: Nothing. The function is not called in the program.
-          feedback: Incorrect. The function is actually called two times in the program.
+        - text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
+          feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
         - text: Rassom bitta kvadrat chizadi.
-          feedback: Incorrect. The function is actually called two times in the program.
-        - text: The artist will draw two squares that overlap.
-          feedback: Incorrect. The length of each side of the square is only 100 pixels,
-            but the artist jumps by 175 pixels between functions.
-        - text: The artist will draw two squares with a small gap in between.
+          feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
+        - text: Rassom bir-biri ustidan ikkita kvadratni chizadi.
+          feedback: Noto'g'ri. Kvadratning har bir tomonining uzunligi atigi 100 pikselni
+            tashkil etadi, ammo rassom funksiyalar orasida 175 pikselga sakrab chiqadi.
+        - text: Rassom ikkita kvadratni o'rtada kichik bo'shliq bilan chizadi.
           correct: true
-          feedback: Correct! The function is called two times in the program, with
-            a jump in between.
+          feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
+            sakrash mavjud.
         questions:
-        - text: What will happen when you press "Run"?
+        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
       courseF_bee_variables_8a_2018:
         answers:
         - text: Asalari nektar yig'maydi, chunki o'zgaruvchi nomi "yig'ish" emas.
@@ -2491,175 +2509,177 @@ uz-UZ:
         title: Bee Variables Multi
       courseF_multi_artist_for10_predict1:
         answers:
-        - text: The artist will draw a straight line that increases in thickness from
-            one side of the play space to the other.
-          feedback: Incorrect. The artist turns between iterations of the `for` loop.
-        - text: 'The artist will draw a spiral and each time through the `for` loop,
-            the line gets longer and thinner. '
-          feedback: Incorrect. Each time through the `for` loop, the artist draws
-            a longer line that is also thicker.
-        - text: The artist will draw a spiral and each time through the `for` loop,
-            the line gets longer and thicker.
+        - text: Rassom o'yin maydonining bir tomonidan boshqasiga qalinligi oshib
+            boradigan to'g'ri chiziqni chizadi.
+          feedback: Noto'g'ri. Rassom "for" siklining qadami oshishi orasida buriladi.
+        - text: Rassom spiral chizadi va har safar "for" siklidan o'tishda chiziq
+            uzayadi va ingichka bo'lib boradi.
+          feedback: Noto'g'ri. Har safar "for" siklidan o'tishda rassom chizgan chiziq
+            uzayadi va yo'gonlashib boradi.
+        - text: Rassom spiral chizadi va har safar "for" siklidan o'tishda chiziq
+            uzayadi va yo'gonlashib boradi.
           correct: true
           feedback: To‘g’ri!
         - text: Men bilmayman
-          feedback: Incorrect. Each time through the `for` loop, the artist draws
-            a longer line that is also thicker.
+          feedback: Noto'g'ri. Har safar "for" siklidan o'tishda rassom chizgan chiziq
+            uzayadi va yo'gonlashib boradi.
         questions:
-        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
         markdown: Ushbu rasmda cho'tka kengligini o'zgartirish uchun biz "for" siklidagi
           hisoblagichni ishlatdik.
       courseF_multi_artist_for10_predict1_2018:
         answers:
-        - text: The artist will draw a straight line that increases in thickness from
-            one side of the play space to the other.
-          feedback: Incorrect. The artist turns between iterations of the `for` loop.
-        - text: 'The artist will draw a spiral and each time through the `for` loop,
-            the line gets longer and thinner. '
-          feedback: Incorrect. Each time through the `for` loop, the artist draws
-            a longer line that is also thicker.
-        - text: The artist will draw a spiral and each time through the `for` loop,
-            the line gets longer and thicker.
+        - text: Rassom o'yin maydonining bir tomonidan boshqasiga qalinligi oshib
+            boradigan to'g'ri chiziqni chizadi.
+          feedback: Noto'g'ri. Rassom "for" siklining qadami oshishi orasida buriladi.
+        - text: Rassom spiral chizadi va har safar "for" siklidan o'tishda chiziq
+            uzayadi va ingichka bo'lib boradi.
+          feedback: Noto'g'ri. Har safar "for" siklidan o'tishda rassom chizgan chiziq
+            uzayadi va yo'gonlashib boradi.
+        - text: Rassom spiral chizadi va har safar "for" siklidan o'tishda chiziq
+            uzayadi va yo'gonlashib boradi.
           correct: true
           feedback: To‘g’ri!
         - text: Men bilmayman
-          feedback: Incorrect. Each time through the `for` loop, the artist draws
-            a longer line that is also thicker.
+          feedback: Noto'g'ri. Har safar "for" siklidan o'tishda rassom chizgan chiziq
+            uzayadi va yo'gonlashib boradi.
         questions:
-        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
         markdown: Ushbu rasmda cho'tka kengligini o'zgartirish uchun biz "for" siklidagi
           hisoblagichni ishlatdik.
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
-        - text: The artist will draw a straight line that increases in thickness from
-            one side of the play space to the other.
-          feedback: Incorrect. The artist turns between iterations of the `for` loop.
-        - text: 'The artist will draw a spiral and each time through the `for` loop,
-            the line gets longer and thinner. '
-          feedback: Incorrect. Each time through the `for` loop, the artist draws
-            a longer line that is also thicker.
-        - text: The artist will draw a spiral and each time through the `for` loop,
-            the line gets longer and thicker.
+        - text: Rassom o'yin maydonining bir tomonidan boshqasiga qalinligi oshib
+            boradigan to'g'ri chiziqni chizadi.
+          feedback: Noto'g'ri. Rassom "for" siklining qadami oshishi orasida buriladi.
+        - text: Rassom spiral chizadi va har safar "for" siklidan o'tishda chiziq
+            uzayadi va ingichka bo'lib boradi.
+          feedback: Noto'g'ri. Har safar "for" siklidan o'tishda rassom chizgan chiziq
+            uzayadi va yo'gonlashib boradi.
+        - text: Rassom spiral chizadi va har safar "for" siklidan o'tishda chiziq
+            uzayadi va yo'gonlashib boradi.
           correct: true
           feedback: To‘g’ri!
         - text: Men bilmayman
-          feedback: Incorrect. Each time through the `for` loop, the artist draws
-            a longer line that is also thicker.
+          feedback: Noto'g'ri. Har safar "for" siklidan o'tishda rassom chizgan chiziq
+            uzayadi va yo'gonlashib boradi.
         questions:
-        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
         markdown: Ushbu rasmda cho'tka kengligini o'zgartirish uchun biz "for" siklidagi
           hisoblagichni ishlatdik.
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
-        - text: The artist will draw a straight line that increases in thickness from
-            one side of the play space to the other.
-          feedback: Incorrect. The artist turns between iterations of the `for` loop.
-        - text: 'The artist will draw a spiral and each time through the `for` loop,
-            the line gets longer and thinner. '
-          feedback: Incorrect. Each time through the `for` loop, the artist draws
-            a longer line that is also thicker.
-        - text: The artist will draw a spiral and each time through the `for` loop,
-            the line gets longer and thicker.
+        - text: Rassom o'yin maydonining bir tomonidan boshqasiga qalinligi oshib
+            boradigan to'g'ri chiziqni chizadi.
+          feedback: Noto'g'ri. Rassom "for" siklining qadami oshishi orasida buriladi.
+        - text: Rassom spiral chizadi va har safar "for" siklidan o'tishda chiziq
+            uzayadi va ingichka bo'lib boradi.
+          feedback: Noto'g'ri. Har safar "for" siklidan o'tishda rassom chizgan chiziq
+            uzayadi va yo'gonlashib boradi.
+        - text: Rassom spiral chizadi va har safar "for" siklidan o'tishda chiziq
+            uzayadi va yo'gonlashib boradi.
           correct: true
           feedback: To‘g’ri!
         - text: Men bilmayman
-          feedback: Incorrect. Each time through the `for` loop, the artist draws
-            a longer line that is also thicker.
+          feedback: Noto'g'ri. Har safar "for" siklidan o'tishda rassom chizgan chiziq
+            uzayadi va yo'gonlashib boradi.
         questions:
-        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
         markdown: Ushbu rasmda cho'tka kengligini o'zgartirish uchun biz "for" siklidagi
           hisoblagichni ishlatdik.
       courseF_multi_artist_fwp2_predict1:
         answers:
-        - text: The artist will use the same function to draw two different sized
-            boxes.
+        - text: Rassom ikki xil o'lchamdagi qutilarni chizish uchun bitta funksiyadan
+            foydalanadi.
           correct: true
           feedback: To‘g’ri!
-        - text: The artist will use two different functions to draw two different
-            sized boxes.
-          feedback: Incorrect.  Using parameters lets you use a single function to
-            create different outcomes.
-        - text: The artist will use two different functions to draw the same sized
-            box twice.
-          feedback: Incorrect.  Using parameters lets you use a single function to
-            create different outcomes.
+        - text: Rassom ikki xil o'lchamdagi qutilarni chizish uchun ikkita har xil
+            funksiyadan foydalanadi.
+          feedback: Noto'g'ri. Parametrlardan foydalanish turli xil natijalar uchun
+            bitta funksiyadan foydalanishga imkon beradi.
+        - text: Rassom ikkita bir xil o'lchamdagi qutilarni chizish uchun ikkita har
+            xil funksiyadan foydalanadi.
+          feedback: Noto'g'ri. Parametrlardan foydalanish turli xil natijalar uchun
+            bitta funksiyadan foydalanishga imkon beradi.
         - text: Men bilmayman
-          feedback: The program uses parameters to allow a single function to create
-            two different size boxes.
+          feedback: Dastur bitta funksiyaga ikki xil o'lchamdagi qutilarni yaratishga
+            imkon berash uchun parametrlardan foydalanadi.
         questions:
-        - text: What will happen when you run this program?
-        markdown: |+
-          We have added parameters to the 'draw a square' function.  Click the blue "edit" button to see the entire function definition.
-
-
+        - text: Ushbu dasturni ishga tushirganda nima bo'ladi?
+        markdown: "Biz \"kvadrat chizish\" funksiyasiga parametrlar qo'shdik. Funksiyaning
+          to'liq ta'rifini ko'rish uchun ko'k \"tahrirlash\" tugmasini bosing.\n\n"
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - text: The artist will draw a triangle with 50 pixel sides.
+        - text: Rassom 50 piksel tomonli uchburchak chizadi.
           correct: true
           feedback: To‘g’ri!
-        - text: The artist will draw a 50-sided polygon with 3 pixel sides.
-          feedback: Incorrect. The variable `length` would need to be in the `repeat`
-            loop for that to happen.
-        - text: The artist will draw three open sides with 50 degree turns.
-          feedback: Incorrect.  The `length` variable would need to be used in the
-            `turn` block for that to happen.
+        - text: Rassom har bir tomoni 3 pikselga teng 50-burchak chizadi.
+          feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisi "takrorlash" siklida
+            bo'lishi kerak.
+        - text: Rassom uchta ochiq tomonni 50 darajaga burilish bilan chizadi.
+          feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisini "burilish" blokida
+            ishlatish kerak bo'ladi.
         - text: Men bilmayman
-          feedback: The `length` variable is set to 50 and is being used in the `move
-            forward by` block, so the artist will draw a triangle with 50 pixel sides.
+          feedback: '`Uzunlik` o''zgaruvchisi 50 ga o''rnatilgan va u "oldinga siljish"
+            blokida ishlatiladi, shuning uchun rassom tomonlari 50 pikselli uchburchak
+            chizadi.'
         questions:
-        - text: We have set the variable "length" to 50. What will happen when you
-            click "Run"?
+        - text: Biz "uzunlik" o'zgaruvchisini 50 ga o'rnatdik. "Ishga tushirish" tugmachasini
+            bosganingizda nima bo'ladi?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - text: The artist will draw a triangle with 50 pixel sides.
+        - text: Rassom 50 piksel tomonli uchburchak chizadi.
           correct: true
           feedback: To‘g’ri!
-        - text: The artist will draw a 50-sided polygon with 3 pixel sides.
-          feedback: Incorrect. The variable `length` would need to be in the `repeat`
-            loop for that to happen.
-        - text: The artist will draw three open sides with 50 degree turns.
-          feedback: Incorrect.  The `length` variable would need to be used in the
-            `turn` block for that to happen.
+        - text: Rassom har bir tomoni 3 pikselga teng 50-burchak chizadi.
+          feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisi "takrorlash" siklida
+            bo'lishi kerak.
+        - text: Rassom uchta ochiq tomonni 50 darajaga burilish bilan chizadi.
+          feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisini "burilish" blokida
+            ishlatish kerak bo'ladi.
         - text: Men bilmayman
-          feedback: The `length` variable is set to 50 and is being used in the `move
-            forward by` block, so the artist will draw a triangle with 50 pixel sides.
+          feedback: '`Uzunlik` o''zgaruvchisi 50 ga o''rnatilgan va u "oldinga siljish"
+            blokida ishlatiladi, shuning uchun rassom tomonlari 50 pikselli uchburchak
+            chizadi.'
         questions:
-        - text: We have set the variable "length" to 50. What will happen when you
-            click "Run"?
+        - text: Biz "uzunlik" o'zgaruvchisini 50 ga o'rnatdik. "Ishga tushirish" tugmachasini
+            bosganingizda nima bo'ladi?
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - text: The artist will draw a triangle with 50 pixel sides.
+        - text: Rassom 50 piksel tomonli uchburchak chizadi.
           correct: true
           feedback: To‘g’ri!
-        - text: The artist will draw a 50-sided polygon with 3 pixel sides.
-          feedback: Incorrect. The variable `length` would need to be in the `repeat`
-            loop for that to happen.
-        - text: The artist will draw three open sides with 50 degree turns.
-          feedback: Incorrect.  The `length` variable would need to be used in the
-            `turn` block for that to happen.
+        - text: Rassom har bir tomoni 3 pikselga teng 50-burchak chizadi.
+          feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisi "takrorlash" siklida
+            bo'lishi kerak.
+        - text: Rassom uchta ochiq tomonni 50 darajaga burilish bilan chizadi.
+          feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisini "burilish" blokida
+            ishlatish kerak bo'ladi.
         - text: Men bilmayman
-          feedback: The `length` variable is set to 50 and is being used in the `move
-            forward by` block, so the artist will draw a triangle with 50 pixel sides.
+          feedback: '`Uzunlik` o''zgaruvchisi 50 ga o''rnatilgan va u "oldinga siljish"
+            blokida ishlatiladi, shuning uchun rassom tomonlari 50 pikselli uchburchak
+            chizadi.'
         questions:
-        - text: We have set the variable "length" to 50. What will happen when you
-            click "Run"?
+        - text: Biz "uzunlik" o'zgaruvchisini 50 ga o'rnatdik. "Ishga tushirish" tugmachasini
+            bosganingizda nima bo'ladi?
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
-        - text: The artist will draw a triangle with 50 pixel sides.
+        - text: Rassom 50 piksel tomonli uchburchak chizadi.
           correct: true
           feedback: To‘g’ri!
-        - text: The artist will draw a 50-sided polygon with 3 pixel sides.
-          feedback: Incorrect. The variable `length` would need to be in the `repeat`
-            loop for that to happen.
-        - text: The artist will draw three open sides with 50 degree turns.
-          feedback: Incorrect.  The `length` variable would need to be used in the
-            `turn` block for that to happen.
+        - text: Rassom har bir tomoni 3 pikselga teng 50-burchak chizadi.
+          feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisi "takrorlash" siklida
+            bo'lishi kerak.
+        - text: Rassom uchta ochiq tomonni 50 darajaga burilish bilan chizadi.
+          feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisini "burilish" blokida
+            ishlatish kerak bo'ladi.
         - text: Men bilmayman
-          feedback: The `length` variable is set to 50 and is being used in the `move
-            forward by` block, so the artist will draw a triangle with 50 pixel sides.
+          feedback: '`Uzunlik` o''zgaruvchisi 50 ga o''rnatilgan va u "oldinga siljish"
+            blokida ishlatiladi, shuning uchun rassom tomonlari 50 pikselli uchburchak
+            chizadi.'
         questions:
-        - text: We have set the variable "length" to 50. What will happen when you
-            click "Run"?
+        - text: Biz "uzunlik" o'zgaruvchisini 50 ga o'rnatdik. "Ishga tushirish" tugmachasini
+            bosganingizda nima bo'ladi?
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - text: 'Asalari bulutga o''tib, nima bo''lishidan qat''i nazar, nektar olishga
@@ -2678,153 +2698,156 @@ uz-UZ:
           feedback: '"If at flower" bloki asalari faqat bulut ostida gul bo''lsa,
             nektar olishga harakat qilishini ta''minlaydi.'
         questions:
-        - text: If there is not a flower the bee should do nothing. Take a good look
-            at the code below. What do you think will happen after you click "Run"?
-        markdown: "The cloud is blocking the view. There could be a flower under this
-          cloud. If there is a flower, the bee will need to collect nectar **once**.
-          \n"
+        - text: Agar gul bo'lmasa, asalari hech narsa qilmasligi kerak. Quyidagi kodni
+            yaxshilab ko'rib chiqing. Sizningcha, "Ishga tushirish" tugmasini bosganda
+            nima bo'ladi?
+        markdown: Bulut ko'rinishni to'sib qo'ymoqda. Ushbu bulut ostida gul bo'lishi
+          mumkin edi. Agar gul bo'lsa, asalari nektarni **bir marta** olishi kerak.
       courseF_multi_bee_conditionals7_predict2:
         answers:
-        - text: The bee will get nectar at each flower, otherwise it will make honey.
+        - text: Asalari har bir guldan nektar oladi, aks holda u asal g'amlaydi.
           correct: true
           feedback: To‘g’ri!
         - text: Asalarilar ham gullardan, ham asal uyasidan nektar olishga harakat
             qiladi.
-          feedback: Incorrect. The `if at flower` block lets the bee get nectar at
-            each flower and make honey if there's not a flower (therefore a honeycomb.).
+          feedback: Noto'g'ri. "if at flower" bloki asalari har bir guldan nektar
+            olishga va agar gul bo'lmasa (yani sota - asal uchun chuqurcha bo'lsa)
+            asal joylashga imkon beradi.
         - text: Asalarilar asalni ham gullardan, ham asal qoliplaridan olishga harakat
             qiladi.
-          feedback: Incorrect. Incorrect. The `if at flower` block lets the bee get
-            nectar at each flower and honey at each honeycomb.
+          feedback: Noto'g'ri. Noto'g'ri. "if at flower" bloki asalari har bir guldan
+            nektar olish va har bir asalari inidagi chuqurchada (sotada) asal joylashiga
+            imkon beradi.
         - text: Men bilmayman
-          feedback: The `if at flower` block lets the bee get nectar at each flower,
-            otherwise it makes honey.
+          feedback: '"if at flower" bloki asalari har bir guldan nektar olishi va
+            har bir chuqurchada asal g''amlashiga imkon beradi.'
         questions:
-        - text: Look carefully at the code below. What do you think will happen after
-            you click "Run"?
-        markdown: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb!
-          Either way, there will only ever be **one** flower or **one** honeycomb
-          under each cloud. \n"
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi deb o'ylaysiz?
+        markdown: 'Ba''zan bulut gulni to''sadi, ba''zida asal uyasini to''sadi! Qanday
+          bo''lmasin, har bir bulut ostida faqat **bitta** gul yoki **bitta** asal
+          uchun chuqurcha bo''ladi.
+
+'
       courseF_multi_bee_for3_predict1:
         answers:
-        - text: 'The bee will move forward and collect all of the nectar from every
-            flower. '
+        - text: Asalari oldinga siljiydi va har bir guldan barcha nektarlarni yig'adi.
           feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
             imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
-        - text: The bee will move forward and collect all of the nectar from every
-            flower, except for one.
+        - text: Asalari oldinga siljiydi va bittadan tashqari barcha guldan barcha
+            nektarlarni yig'adi.
           correct: true
           feedback: To‘g’ri!
-        - text: 'The bee will move forward and collect one nectar from each flower. '
+        - text: Asalari oldinga siljiydi va har bir guldan bitta nektarni yig'adi.
           feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
             imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
-        - text: 'The bee will move forward and try to collect more nectar than is
-            in the flowers. '
+        - text: Asalari oldinga siljiydi va gullarda boriga qaraganda ko'proq nektar
+            yig'ishga harakat qiladi.
           feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
             imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
         questions:
-        - text: Read the code below. What will happen when you click "Run"?
+        - text: Quyidagi kodni o'qing. "Run" tugmasini bossangiz nima bo‘ladi?
         markdown: Ah! "For" siklidan foydalanish bu jumboqni ancha osonlashtiradi!
       courseF_multi_bee_for3_predict1_2018:
         answers:
-        - text: 'The bee will move forward and collect all of the nectar from every
-            flower. '
+        - text: Asalari oldinga siljiydi va har bir guldan barcha nektarlarni yig'adi.
           feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
             imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
-        - text: The bee will move forward and collect all of the nectar from every
-            flower, except for one.
+        - text: Asalari oldinga siljiydi va bittadan tashqari barcha guldan barcha
+            nektarlarni yig'adi.
           correct: true
           feedback: To‘g’ri!
-        - text: 'The bee will move forward and collect one nectar from each flower. '
+        - text: Asalari oldinga siljiydi va har bir guldan bitta nektarni yig'adi.
           feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
             imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
         - text: 'Bilmayman. '
           feedback: "`For` sikli asalariga kerakli miqdordagi nektar to'plashiga imkon
             beradi, ammo u faqat 4 ta gulga yetishga sozlangan."
         questions:
-        - text: Read the code below. What will happen when you click "Run"?
+        - text: Quyidagi kodni o'qing. "Run" tugmasini bossangiz nima bo‘ladi?
         markdown: Ah! "For" siklidan foydalanish bu jumboqni ancha osonlashtiradi!
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
-        - text: 'The bee will move forward and collect all of the nectar from every
-            flower. '
+        - text: Asalari oldinga siljiydi va har bir guldan barcha nektarlarni yig'adi.
           feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
             imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
-        - text: The bee will move forward and collect all of the nectar from every
-            flower, except for one.
+        - text: Asalari oldinga siljiydi va bittadan tashqari barcha guldan barcha
+            nektarlarni yig'adi.
           correct: true
           feedback: To‘g’ri!
-        - text: 'The bee will move forward and collect one nectar from each flower. '
+        - text: Asalari oldinga siljiydi va har bir guldan bitta nektarni yig'adi.
           feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
             imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
         - text: 'Bilmayman. '
           feedback: "`For` sikli asalariga kerakli miqdordagi nektar to'plashiga imkon
             beradi, ammo u faqat 4 ta gulga yetishga sozlangan."
         questions:
-        - text: Read the code below. What will happen when you click "Run"?
+        - text: Quyidagi kodni o'qing. "Run" tugmasini bossangiz nima bo‘ladi?
         markdown: Ah! "For" siklidan foydalanish bu jumboqni ancha osonlashtiradi!
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
-        - text: 'The bee will move forward and collect all of the nectar from every
-            flower. '
+        - text: Asalari oldinga siljiydi va har bir guldan barcha nektarlarni yig'adi.
           feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
             imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
-        - text: The bee will move forward and collect all of the nectar from every
-            flower, except for one.
+        - text: Asalari oldinga siljiydi va bittadan tashqari barcha guldan barcha
+            nektarlarni yig'adi.
           correct: true
           feedback: To‘g’ri!
-        - text: 'The bee will move forward and collect one nectar from each flower. '
+        - text: Asalari oldinga siljiydi va har bir guldan bitta nektarni yig'adi.
           feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
             imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
         - text: 'Bilmayman. '
           feedback: "`For` sikli asalariga kerakli miqdordagi nektar to'plashiga imkon
             beradi, ammo u faqat 4 ta gulga yetishga sozlangan."
         questions:
-        - text: Read the code below. What will happen when you click "Run"?
+        - text: Quyidagi kodni o'qing. "Run" tugmasini bossangiz nima bo‘ladi?
         markdown: Ah! "For" siklidan foydalanish bu jumboqni ancha osonlashtiradi!
       courseF_multi_bee_fwp9_predict1:
         answers:
-        - text: The bee will not collect any nectar or honey.
-          feedback: Incorrect. The function is set to collect as many nectar or honey
-            as is passed through a parameter.
-        - text: 'The bee will collect three nectar or honey, then two nectar or honey
-            in a stair-step pattern. '
+        - text: Asalari hech qanday nektar yoki asal yig'maydi.
+          feedback: Noto'g'ri. Funksiya parametr orqali belgilangan miqdorda nektar
+            yoki asal yig'ishga sozlangan.
+        - text: Asalari zinapoyali naqshda uchta nektar yoki asal, so'ng ikkita nektar
+            yoki asal to'playdi.
           correct: true
-          feedback: Correct! The function is set to collect as many nectar or honey
-            as is passed through a parameter.
-        - text: 'The bee will collect only one nectar or honey in each iteration of
-            the loop. '
-          feedback: Incorrect.  The function is set to collect as many nectar or honey
-            as is passed through a parameter.
+          feedback: To'g'ri. Funksiya parametr orqali belgilangan miqdorda nektar
+            yoki asal yig'ishga sozlangan.
+        - text: Asaları har bir sikl takrorlanishida faqat bitta nektar yoki asal
+            to'playdi.
+          feedback: Noto'g'ri. Funksiya parametr orqali belgilangan miqdorda nektar
+            yoki asal yig'ishga sozlangan.
         - text: Men bilmayman
-          feedback: Clicking to look inside of the function shows that it is set to
-            collect as many nectar or honey as is passed through a parameter.
+          feedback: Ichiga qarash ko'rsatadiki, funksiya parametr orqali belgilangan
+            miqdorda nektar yoki asal yig'ishga sozlangan.
         questions:
-        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
-        markdown: |+
-          Underneath these clouds, there is either a flower with exactly 1 nectar, or a honeycomb with exactly 1 honey.  Click the blue "edit" button on the function to see what is inside before answering the question below.
-
-
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
+        markdown: Ushbu bulutlar ostida yoki aniq 1 ta nektarga ega gul yoki aniq
+          1 ta asalli sota mavjud. Quyidagi savolga javob berishdan oldin funksiyadagi
+          ko'k "tahrirlash" tugmasini bosing va ichidagi narsalarni ko'ring.
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - text: The pirate would say, "Pleasure to meet you, Ali." and that is all.
+        - text: 'Qaroqchi: "Siz bilan uchrashganimdan xursandman, Ali" der edi va
+            barchasi shu.'
           correct: true
-          feedback: 'Correct. '
-        - text: The pirate would say, "Pleasure to meet you." and that is all.
-          feedback: Incorrect. Notice that the `join` block inserts the provided name
-            into the pirate's sentence.
-        - text: The pirate would say, "Ali" and that is all.
-          feedback: Incorrect. Notice that the `join` block inserts the provided name
-            into the pirate's sentence.
+          feedback: 'To‘g‘ri. '
+        - text: 'Qaroqchi: "Siz bilan uchrashganimdan xursandman." der edi va barchasi
+            shu.'
+          feedback: Noto'g'ri. E'tibor bering, "qo'shilish" bloki ko'rsatilgan ismni
+            qaroqchining gapiga qo'shadi.
+        - text: 'Qaroqchi: "Ali" deb aytadi bo''ldi.'
+          feedback: Noto'g'ri. E'tibor bering, "qo'shilish" bloki ko'rsatilgan ismni
+            qaroqchining gapiga qo'shadi.
         - text: Men bilmayman
-          feedback: 'Incorrect. Notice that the `join` block inserts the provided
-            name (Ali) into the pirate''s sentence. '
+          feedback: 'Noto''g''ri. E''tibor bering, "qo''shilish" bloki ko''rsatilgan
+            (Ali) ismni qaroqchining gapiga qo''shadi. '
         questions:
-        - text: What would happen if the user entered the name "Ali" at the prompt?
-        markdown: "**This puzzle uses a new block called the `ask` block.**\n\nThe
-          `ask` block stops the program and prompts the user to enter some text. \n\nWhatever
-          text the user enters is then saved to the variable shown at the end of the
-          `ask` block.  In this case, it's the variable `name`.\n"
+        - text: Agar foydalanuvchi so'rovda "Ali" ismini kiritsa nima bo'ladi?
+        markdown: |-
+          ** Ushbu jumboqda `Ask` bloki deb nomlangan yangi blok ishlatiladi. **
+
+          `Ask` bloki dasturni to'xtatadi va foydalanuvchidan biror matn kiritishni so'raydi.
+
+          Foydalanuvchi qaysi matnni kiritmasin, u "ask" blokining oxirida ko'rsatilgan o'zgaruvchiga saqlanadi. Bizning holda, bu "name" o'zgaruvchisi.
       coursee_prediction_artistfunction2:
         answers:
         - text: Rassom jumboqni to'g'ri yachadi.
@@ -2839,49 +2862,52 @@ uz-UZ:
           feedback: Noto'g'ri. "Ko'pburchak chizish" chaqirishlari o'rtasida sikl
             90 darajaga buriladi.
         questions:
-        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       coursee_prediction_artistfunction2_2018:
         answers:
-        - text: The artist will solve the puzzle correctly.
-          feedback: Incorrect. The loop uses "draw polygon" instead of "draw line
-            of polygons".
-        - text: The artist will draw four squares in a window pattern.
+        - text: Rassom jumboqni to'g'ri yachadi.
+          feedback: Noto'g'ri. Siklda "ko'pburchaklar qatori" o'rniga "ko'pburchak
+            chizish" funksiyasi ishlatiladi.
+        - text: Rassom deraza naqshida to'rtta kvadrat chizadi.
           correct: true
           feedback: To‘g’ri!
-        - text: The artist will draw only one line of squares.
-          feedback: Incorrect. The program does not call "draw line of polygons".
-        - text: The artist will draw four squares on top of one another.
-          feedback: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        - text: Rassom kvadratlarning faqat bitta qatorini chizadi.
+          feedback: Noto'g'ri. Dastur "ko'pburchaklar qatori" funksiyasini chaqirmaydi.
+        - text: Rassom to'rt kvadratni bir-birining ustiga chizadi.
+          feedback: Noto'g'ri. "Ko'pburchak chizish" chaqirishlari o'rtasida sikl
+            90 darajaga buriladi.
         questions:
-        - text: What will happen when you press the "Run" button?
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - text: The artist will solve the puzzle correctly.
-          feedback: Incorrect. The loop uses "draw polygon" instead of "draw line
-            of polygons".
-        - text: The artist will draw four squares in a window pattern.
+        - text: Rassom jumboqni to'g'ri yachadi.
+          feedback: Noto'g'ri. Siklda "ko'pburchaklar qatori" o'rniga "ko'pburchak
+            chizish" funksiyasi ishlatiladi.
+        - text: Rassom deraza naqshida to'rtta kvadrat chizadi.
           correct: true
           feedback: To‘g’ri!
-        - text: The artist will draw only one line of squares.
-          feedback: Incorrect. The program does not call "draw line of polygons".
-        - text: The artist will draw four squares on top of one another.
-          feedback: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        - text: Rassom kvadratlarning faqat bitta qatorini chizadi.
+          feedback: Noto'g'ri. Dastur "ko'pburchaklar qatori" funksiyasini chaqirmaydi.
+        - text: Rassom to'rt kvadratni bir-birining ustiga chizadi.
+          feedback: Noto'g'ri. "Ko'pburchak chizish" chaqirishlari o'rtasida sikl
+            90 darajaga buriladi.
         questions:
-        - text: What will happen when you press the "Run" button?
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
-        - text: The artist will solve the puzzle correctly.
-          feedback: Incorrect. The loop uses "draw polygon" instead of "draw line
-            of polygons".
-        - text: The artist will draw four squares in a window pattern.
+        - text: Rassom jumboqni to'g'ri yachadi.
+          feedback: Noto'g'ri. Siklda "ko'pburchaklar qatori" o'rniga "ko'pburchak
+            chizish" funksiyasi ishlatiladi.
+        - text: Rassom deraza naqshida to'rtta kvadrat chizadi.
           correct: true
           feedback: To‘g’ri!
-        - text: The artist will draw only one line of squares.
-          feedback: Incorrect. The program does not call "draw line of polygons".
-        - text: The artist will draw four squares on top of one another.
-          feedback: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        - text: Rassom kvadratlarning faqat bitta qatorini chizadi.
+          feedback: Noto'g'ri. Dastur "ko'pburchaklar qatori" funksiyasini chaqirmaydi.
+        - text: Rassom to'rt kvadratni bir-birining ustiga chizadi.
+          feedback: Noto'g'ri. "Ko'pburchak chizish" chaqirishlari o'rtasida sikl
+            90 darajaga buriladi.
         questions:
-        - text: What will happen when you press the "Run" button?
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel ushbu kod yordamida 4 ta xazina yig’adi.
@@ -3858,6 +3884,7 @@ uz-UZ:
           Forumda sharh qoldirgandan so'ng, bu yerga qayting va keyingi bosqichga o'tish uchun pastga bosing.
 
           Keyingi bosqichda biz sikllar qo'shish orqali dasturlarimizga biroz murakkablik kiritamiz.
+        content1: tafsilotlar bu yerda
       OPD-K5 Stage4Go:
         markdown: |-
           # Sikllar > Kompyutersiz darslar
@@ -4298,63 +4325,63 @@ uz-UZ:
       Begin planning your project_2018_2019_2020:
         content1: tafsilotlar bu yerda
       OPD-K5 Reviewing Reflections:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 Stage3aGo_copy:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 conditionals introduced:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 debugging:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 diving deeper intro:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 events introduced:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 for loops:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 for loops intro:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 for loops introduction:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 functions introduced:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 journaling:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 lesson implementation planning:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 lesson plans:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 loops introduced:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 project:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 projects introduction:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 role_of_teacher:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 sequencing introduced:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 sprite lab:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 sprite lab introduction:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 sprite lab unplugged:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 sprite lab video:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 types of lessons:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 using lesson plans:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 variables:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 variables introduction:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 variables unplugged:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5 where to next:
-        content1: description here
+        content1: tafsilotlar bu yerda
       OPD-K5-projects-1:
-        content1: description here
+        content1: tafsilotlar bu yerda
       courseE_EOC_2020:
         display_name: End of Course Project
       courseExpress_EOC_2020:
