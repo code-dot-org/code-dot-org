@@ -46,7 +46,7 @@ class AnimationPicker extends React.Component {
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
     canDraw: PropTypes.bool.isRequired,
-    isSpriteLab: PropTypes.bool,
+    categoryImagePathPrefix: PropTypes.string,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -86,7 +86,7 @@ class AnimationPicker extends React.Component {
         defaultQuery={this.props.defaultQuery}
         hideBackgrounds={this.props.hideBackgrounds}
         canDraw={this.props.canDraw}
-        isSpriteLab={this.props.isSpriteLab}
+        categoryImagePathPrefix={this.props.categoryImagePathPrefix}
       />
     );
   }
