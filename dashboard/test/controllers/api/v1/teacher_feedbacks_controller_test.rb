@@ -5,6 +5,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   COMMENT1 = 'Comment Alpha'
   COMMENT2 = 'Comment Beta'
   COMMENT3 = 'Comment Gamma'
+  COMMENT4 = 'Comment Happy Delta 😀'
   PERFORMANCE1 = 'performanceLevel1'
   PERFORMANCE2 = 'performanceLevel3'
   PERFORMANCE3 = 'performanceLevel4'
@@ -287,6 +288,15 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_in feedback.student
     post "#{API}/#{feedback.id}/increment_visit_count"
     assert_response :unprocessable_entity
+  end
+
+  test 'can save emojis in teacher feedback' do
+    teacher_sign_in_and_give_feedback(@teacher, @student, @level, @script_level, COMMENT4, PERFORMANCE1)
+    sign_out @teacher
+
+    sign_in @student
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id}
+    assert_equal 'Comment Happy Delta 😀', parsed_response[0]['comment']
   end
 
   private
