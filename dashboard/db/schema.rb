@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_01_03_234601) do
     t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id"
   end
 
-  create_table "activity_sections", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "activity_sections", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "lesson_activity_id", null: false
     t.string "key", null: false
     t.integer "position", null: false
@@ -532,7 +532,7 @@ ActiveRecord::Schema.define(version: 2021_01_03_234601) do
     t.index ["school_id"], name: "index_ib_school_codes_on_school_id", unique: true
   end
 
-  create_table "lesson_activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "lesson_activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "lesson_id", null: false
     t.string "key", null: false
     t.integer "position", null: false
@@ -554,7 +554,7 @@ ActiveRecord::Schema.define(version: 2021_01_03_234601) do
     t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true
   end
 
-  create_table "lessons_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "lessons_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "lesson_id", null: false
     t.integer "resource_id", null: false
     t.index ["lesson_id", "resource_id"], name: "index_lessons_resources_on_lesson_id_and_resource_id", unique: true
@@ -652,7 +652,7 @@ ActiveRecord::Schema.define(version: 2021_01_03_234601) do
     t.float "value", null: false
   end
 
-  create_table "objectives", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "objectives", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.text "properties"
     t.integer "lesson_id"
     t.datetime "created_at", null: false
@@ -1286,7 +1286,7 @@ ActiveRecord::Schema.define(version: 2021_01_03_234601) do
     t.index ["school_district_id"], name: "index_regional_partners_school_districts_on_school_district_id"
   end
 
-  create_table "resources", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "resources", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "url", null: false
     t.string "key", null: false
