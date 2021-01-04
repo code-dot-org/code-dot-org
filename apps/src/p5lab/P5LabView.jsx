@@ -102,6 +102,11 @@ class P5LabView extends React.Component {
     // we don't want students to be able to draw their own backgrounds in spritelab so if we're showing
     // backgrounds alone, we must be in spritelab and we should get rid of the draw your own option
     const canDraw = !this.props.isBackground;
+    // TODO(JillianK): Remove this param and all uses of it once new sprites have been added to the Spritelab animaion library.
+    // Jira context: https://codedotorg.atlassian.net/browse/STAR-1319
+    const categoryImagePathPrefix = this.props.spriteLab
+      ? '/blockly/media/gamelab/animation-previews-spritelab/category_'
+      : '/blockly/media/gamelab/animation-previews-gamelab/category_';
     return (
       <div style={codeModeStyle}>
         <div
@@ -122,9 +127,7 @@ class P5LabView extends React.Component {
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
               hideBackgrounds={hideBackgrounds}
               canDraw={canDraw}
-              // TODO(JillianK): Remove this param and all uses of it once new sprites have been added to the Spritelab animaion library.
-              // Jira context: https://codedotorg.atlassian.net/browse/STAR-1319
-              isSpriteLab={this.props.spriteLab}
+              categoryImagePathPrefix={categoryImagePathPrefix}
             />
           )}
         </div>
@@ -146,6 +149,11 @@ class P5LabView extends React.Component {
 
   renderAnimationMode() {
     const {allowAnimationMode, interfaceMode} = this.props;
+    // TODO(JillianK): Remove this param and all uses of it once new sprites have been added to the Spritelab animaion library.
+    // Jira context: https://codedotorg.atlassian.net/browse/STAR-1319
+    const categoryImagePathPrefix = this.props.spriteLab
+      ? '/blockly/media/gamelab/animation-previews-spritelab/category_'
+      : '/blockly/media/gamelab/animation-previews-gamelab/category_';
     return allowAnimationMode &&
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
       <AnimationTab
@@ -154,6 +162,7 @@ class P5LabView extends React.Component {
         hideUploadOption={this.props.spriteLab}
         hideAnimationNames={this.props.spriteLab}
         hideBackgrounds={this.props.spriteLab}
+        categoryImagePathPrefix={categoryImagePathPrefix}
       />
     ) : (
       undefined

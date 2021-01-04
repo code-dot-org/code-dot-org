@@ -54,7 +54,7 @@ export default class AnimationPickerBody extends React.Component {
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
     canDraw: PropTypes.bool.isRequired,
-    isSpriteLab: PropTypes.bool
+    categoryImagePathPrefix: PropTypes.string
   };
 
   state = {
@@ -176,7 +176,7 @@ export default class AnimationPickerBody extends React.Component {
         }
         category={category}
         onClick={this.onCategoryChange}
-        isSpriteLab={this.props.isSpriteLab}
+        categoryImagePathPrefix={this.props.categoryImagePathPrefix}
       />
     ));
   }
