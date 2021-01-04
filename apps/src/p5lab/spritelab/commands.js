@@ -99,6 +99,10 @@ export const commands = {
     actionCommands.setProp(spriteArg, 'tint', null);
   },
 
+  setDefaultSpriteSize(size) {
+    actionCommands.setDefaultSpriteSize(size);
+  },
+
   setProp(spriteArg, prop, val) {
     actionCommands.setProp.apply(this, [spriteArg, prop, val]);
   },

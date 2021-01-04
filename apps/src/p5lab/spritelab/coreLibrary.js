@@ -8,6 +8,7 @@ var newSprites = {};
 export var background;
 export var title = '';
 export var subtitle = '';
+export var defaultSpriteSize = 100;
 
 export function reset() {
   spriteId = 0;
@@ -17,6 +18,7 @@ export function reset() {
   background = 'white';
   title = subtitle = '';
   userInputEventCallbacks = {};
+  defaultSpriteSize = 100;
 }
 
 /**
