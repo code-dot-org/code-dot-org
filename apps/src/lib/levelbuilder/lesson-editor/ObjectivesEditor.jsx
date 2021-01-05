@@ -117,7 +117,11 @@ const ObjectiveLine = onClickOutside(
               >
                 <i className="fa fa-check" />
               </div>
-              <div style={styles.remove} onMouseDown={this.handleCancelClick}>
+              <div
+                style={styles.remove}
+                className="unit-test-cancel-edit"
+                onMouseDown={this.handleCancelClick}
+              >
                 <i className="fa fa-times" />
               </div>
             </td>
@@ -126,7 +130,11 @@ const ObjectiveLine = onClickOutside(
               <div style={styles.edit} onMouseDown={this.props.onEditClick}>
                 <i className="fa fa-edit" />
               </div>
-              <div style={styles.remove} onMouseDown={this.props.onRemove}>
+              <div
+                style={styles.remove}
+                className="unit-test-remove-objective"
+                onMouseDown={this.props.onRemove}
+              >
                 <i className="fa fa-trash" />
               </div>
             </td>
@@ -178,7 +186,6 @@ export default class ObjectivesEditor extends Component {
   handleCancel = () => {
     let {currentlyEditingIndex} = this.state;
     let {objectives} = this.props;
-    console.log('here');
     if (
       objectives[currentlyEditingIndex].description === '' &&
       currentlyEditingIndex === objectives.length - 1
@@ -216,7 +223,6 @@ export default class ObjectivesEditor extends Component {
   };
 
   render() {
-    console.log(this.props.objectives);
     return (
       <div>
         <input
