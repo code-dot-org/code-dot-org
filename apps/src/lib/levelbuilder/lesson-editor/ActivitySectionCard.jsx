@@ -90,7 +90,7 @@ of text that explains to the teacher what to say or do to run the lesson or
 it could be a section of a lesson that shows a set of levels that are used
 at that point in the lesson (also known as a progression). ActivitySections
 can have tips attached to the beginning of their content and can be marked with
-slide or remarks as well.
+remarks as well.
  */
 
 class ActivitySectionCard extends Component {
@@ -275,15 +275,6 @@ class ActivitySectionCard extends Component {
     });
   };
 
-  toggleSlides = () => {
-    this.props.updateActivitySectionField(
-      this.props.activityPosition,
-      this.props.activitySection.position,
-      'slide',
-      !this.props.activitySection.slide
-    );
-  };
-
   toggleRemarks = () => {
     this.props.updateActivitySectionField(
       this.props.activityPosition,
@@ -346,6 +337,16 @@ class ActivitySectionCard extends Component {
       this.props.activitySection.position,
       'text',
       currentText + `\n[r ${resourceKey}]`
+    );
+  };
+
+  appendSlide = () => {
+    const currentText = this.props.activitySection.text;
+    this.props.updateActivitySectionField(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      'text',
+      currentText + ` [slide]`
     );
   };
 
@@ -432,22 +433,11 @@ class ActivitySectionCard extends Component {
           </label>
           <div style={styles.checkboxesAndButtons}>
             <span style={styles.checkboxes}>
-              {this.props.activitySection.scriptLevels.length === 0 && (
-                <label style={styles.labelAndCheckbox}>
-                  Remarks
-                  <input
-                    checked={this.props.activitySection.remarks}
-                    onChange={this.toggleRemarks}
-                    type="checkbox"
-                    style={styles.checkbox}
-                  />
-                </label>
-              )}
               <label style={styles.labelAndCheckbox}>
-                Slides
+                Remarks
                 <input
-                  checked={this.props.activitySection.slide}
-                  onChange={this.toggleSlides}
+                  checked={this.props.activitySection.remarks}
+                  onChange={this.toggleRemarks}
                   type="checkbox"
                   style={styles.checkbox}
                 />
@@ -491,6 +481,7 @@ class ActivitySectionCard extends Component {
           addLevel={this.handleAddLevel}
           activityPosition={this.props.activityPosition}
           appendResourceLink={this.appendResourceLink}
+          appendSlide={this.appendSlide}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}

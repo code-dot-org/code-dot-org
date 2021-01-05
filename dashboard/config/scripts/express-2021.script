@@ -7,8 +7,9 @@ family_name 'express'
 version_year '2021'
 curriculum_umbrella 'CSF'
 is_course true
+is_migrated true
 
-lesson_group 'csf_warmup', display_name: 'Warm-Up'
+lesson_group 'csf_warmup', display_name: 'Warm Up'
 lesson 'Dance Party', display_name: 'Dance Party'
 level 'CourseD_Dance_2020_vid1_2021'
 level 'CourseD_Dance_2020_01_2021'
@@ -147,7 +148,7 @@ level 'courseD_artist_4_2021'
 level 'courseD_artist_5_2021'
 level 'courseD_artist_6_2021'
 
-lesson 'Looking Ahead with Minecraft ', display_name: 'Looking Ahead with Minecraft '
+lesson 'Looking Ahead with Minecraft ', display_name: 'Looking Ahead with Minecraft'
 level 'Overworld Move to Sheep_2021'
 level 'Overworld Chop Tree_2021'
 level 'Overworld Shear Sheep_2021'
