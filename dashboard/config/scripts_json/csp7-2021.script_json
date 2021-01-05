@@ -2515,7 +2515,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U7L1 CFU Return_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2538,7 +2541,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "U7 Param Return Investigate Rock_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2561,7 +2567,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "U7 Param Investigate Poetry App_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2584,7 +2593,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U7L2 CSP CFU Param and Return_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2607,7 +2619,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "console.log Practice"
+        "progression": "console.log Practice",
+        "level_keys": [
+          "U7 Param Return Practice Part 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2630,7 +2645,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "console.log Practice"
+        "progression": "console.log Practice",
+        "level_keys": [
+          "U7 Param Return Practice Part 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2653,7 +2671,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "console.log Practice"
+        "progression": "console.log Practice",
+        "level_keys": [
+          "U7 Param Return Practice Part 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2676,7 +2697,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "console.log Practice"
+        "progression": "console.log Practice",
+        "level_keys": [
+          "U7 Param Return Practice Part 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2699,7 +2723,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "console.log Practice"
+        "progression": "console.log Practice",
+        "level_keys": [
+          "U7 Param Return Practice Part 5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2722,7 +2749,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Practice"
+        "progression": "App Practice",
+        "level_keys": [
+          "U7 Param Investigate Calculator App_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2745,7 +2775,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "App Practice"
+        "progression": "App Practice",
+        "level_keys": [
+          "U7 Param Practice App 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2768,7 +2801,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "MOD Practice"
+        "progression": "MOD Practice",
+        "level_keys": [
+          "U7 Param Return Practice MOD_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2791,7 +2827,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice"
+        "progression": "Check For Understanding: AP Practice",
+        "level_keys": [
+          "U73 CFU Param Return AP_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2814,7 +2853,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Try the Rock Paper Scissors App"
+        "progression": "Try the Rock Paper Scissors App",
+        "level_keys": [
+          "U7 Param Return Make RPS App_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2837,7 +2879,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Rock Paper Scissors App"
+        "progression": "Make the Rock Paper Scissors App",
+        "level_keys": [
+          "U7 Param Return Make RPS App Project_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2860,7 +2905,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U7 L04 Exit Ticket_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2883,7 +2931,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "States App"
+        "progression": "States App",
+        "level_keys": [
+          "U7L6 States App Investigation_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2906,7 +2957,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pigify App"
+        "progression": "Pigify App",
+        "level_keys": [
+          "U7L6 Pigify App Investigation_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2929,7 +2983,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U7L6 CSP CFU Libraries_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2952,7 +3009,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Using Libraries"
+        "progression": "Using Libraries",
+        "level_keys": [
+          "U7 Libraries Practice 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2975,7 +3035,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Using Libraries"
+        "progression": "Using Libraries",
+        "level_keys": [
+          "U7 Libraries Practice 5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2998,7 +3061,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Testing Libraries"
+        "progression": "Testing Libraries",
+        "level_keys": [
+          "U7 Libraries Practice 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3021,7 +3087,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Testing Libraries"
+        "progression": "Testing Libraries",
+        "level_keys": [
+          "U7 Libraries Practice 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3044,7 +3113,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Testing Libraries"
+        "progression": "Testing Libraries",
+        "level_keys": [
+          "U7 Libraries Practice 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3067,7 +3139,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U77 CFU Libraries AP_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3090,7 +3165,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Build Your Library"
+        "progression": "Build Your Library",
+        "level_keys": [
+          "U7 Libraries Project Part 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3113,7 +3191,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Build Your Library"
+        "progression": "Build Your Library",
+        "level_keys": [
+          "U7 Libraries Project Part 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3136,7 +3217,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Test a Classmate's Library"
+        "progression": "Test a Classmate's Library",
+        "level_keys": [
+          "U7 Libraries Project Test a Library_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3159,7 +3243,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Build Your Library"
+        "progression": "Build Your Library",
+        "level_keys": [
+          "U7 Libraries Project Part 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3182,7 +3269,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 7 Exam"
+        "progression": "Unit 7 Exam",
+        "level_keys": [
+          "CSP Unit 7 AP-Style Assessment _2021"
+        ]
       },
       "named_level": null,
       "bonus": false,

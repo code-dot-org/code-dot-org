@@ -470,8 +470,7 @@
       "key": "4f715f57-8664-46ac-aa62-26655d5db2d3",
       "position": 1,
       "properties": {
-        "name": "Tech Setup",
-        "duration": 0
+        "name": "Tech Setup"
       },
       "seeding_key": {
         "lesson_activity.key": "4f715f57-8664-46ac-aa62-26655d5db2d3",
@@ -1301,7 +1300,7 @@
         "description": "[slide]  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\r\n\t* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join.",
         "tips": [
           {
-            "key": "tip",
+            "key": "35",
             "type": "teachingTip",
             "markdown": "The slide icon [slide] indicates that there is a slide in the unit slide deck that corresponds to this activity or prompt. \r\n"
           }
@@ -1378,7 +1377,7 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
+            "key": "36",
             "type": "teachingTip",
             "markdown": "If students need help coming up with ideas, share these tips:\r\n\r\n* This doesn’t have to be a subject in school - it very well might not be.  \r\n\r\n \t* As a person, as an individual who is living and breathing in this world, there is something that you probably know a lot about - maybe you feel like you know more about than most people. What is that thing?\r\n\r\n"
           }
@@ -1396,7 +1395,7 @@
         "description": "[slide]  **Prompt:** What’s something that you know a lot about? Something that you could teach somebody?\"",
         "tips": [
           {
-            "key": "tip",
+            "key": "37",
             "type": "teachingTip",
             "markdown": "**\"Why do the pre-course survey?\"**\r\n\r\n* A major goal of CS Principles is to broaden participation in computer science.  \r\n* It is *crucial* therefore to have insight into students' attitidues and beliefs about computer science *before* the course so that we can measure the amount of change that occured *after* the course is over.\r\n\r\n* Please note that this survey is **anonymous for students**\r\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\r\n   \r\nPlease help by having your students contribute to this vital dataset.  Their voices make the difference!\r\n\r\n**How much time does it take?**\r\n\r\n* The survey is roughly 40 quick response items. We expect it to take 5-10 minutes to complete.   You might consider administering it on an admin day at school, or as an early homework.\r\n* Because it is a pre-course survey it is important that students take it as early in the course as possible, before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.\r\n\r\nThank you!\r\n\r\n-- The Code.org Team\r\n"
           }
@@ -1413,7 +1412,7 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
+            "key": "38",
             "type": "teachingTip",
             "markdown": "What you’re trying to do here is get students to state something that they are interested in, but also know a lot about - something they might have insights into.  \r\n\r\nA big part of students’ enthusiasm for sharing will come from your enthusiasm and genuine interest in getting to know them.  \r\n\r\nStudents might need prodding: there is something that makes them interesting and unique.  Something they like to do, have interest in, read about, have some expertise in, a hidden talent.\r\n"
           }
@@ -1488,7 +1487,7 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
+            "key": "39",
             "type": "teachingTip",
             "markdown": "Keep things quick.  If a group is worried about not being innovative enough, remind them that very small ideas can have big consequences.  People once thought it was ridiculous that you would want to send a short text message to another person over a phone.  \r\n\r\nAlternatively, a group may have a great idea that they want to spend more time on.  They can do that later.  For now, just remind them it’s a rapid prototype.\r\n"
           }
@@ -1541,7 +1540,7 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
+            "key": "40",
             "type": "teachingTip",
             "markdown": "Take this opportunity to explain the importance of bringing individual interests and perspectives to this course. From day one, students should be thinking about how to apply the principles they learn to their own lives, and hopefully they will be excited to do so.\r\n"
           }
@@ -1583,7 +1582,7 @@
         "description": "[slide]  **Prompt:** What are you excited to learn about in this course?",
         "tips": [
           {
-            "key": "discussion",
+            "key": "41",
             "type": "discussionGoal",
             "markdown": "Students can discuss in small groups and then share out with the whole class. It's ok if at this point students don't have an answer to this prompt. \r\n\r\n"
           }
@@ -2176,10 +2175,10 @@
       "key": "26421fa6-b7f9-440a-b97a-7a79686aec0c",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Imagine you work at a local store. In the register all you have are nine $10 bills, nine $1 bills, and nine dimes.",
+        "description": "[slide]  **Prompt:** Imagine you work at a local store. In the register all you have are nine $10 bills, nine $1 bills, and nine dimes.\n\n* What’s the largest amount of change that you can give someone? \n* What’s the least? \n* What would you do if someone needed 7 cents in change?",
         "tips": [
           {
-            "key": "discussion",
+            "key": "1",
             "type": "discussionGoal",
             "markdown": "Today we’re going to explore what happens when you don’t have the right “places” to store information. This can happen when you try to store very large numbers, very small ones, and everything in-between! The goal of the prompt is to understand the very real problem of making sure that enough place values are available to represent numbers. \n\n* The largest amount of change you can give someone is $99.90. \n* The least change you can give is $0.10. \n* You can’t give someone $0.07. You also can’t give someone $1.25 in change (because you have no nickels!) \n \nAt both extremes of the number range, large and small -- and in between numbers -- you are unable to build some numbers because you don’t have the place values to do so.\n"
           }
@@ -2187,17 +2186,6 @@
       },
       "seeding_key": {
         "activity_section.key": "26421fa6-b7f9-440a-b97a-7a79686aec0c",
-        "lesson_activity.key": "6936af82-8c41-4b9b-85c7-135b2835057e"
-      }
-    },
-    {
-      "key": "928ad415-ea9a-4965-932d-6a55b030e6d1",
-      "position": 2,
-      "properties": {
-        "description": "* What’s the largest amount of change that you can give someone? \n* What’s the least? \n* What would you do if someone needed 7 cents in change?"
-      },
-      "seeding_key": {
-        "activity_section.key": "928ad415-ea9a-4965-932d-6a55b030e6d1",
         "lesson_activity.key": "6936af82-8c41-4b9b-85c7-135b2835057e"
       }
     },
@@ -2219,7 +2207,7 @@
         "description": "We will start exploring large place values to see what happens when a big number gets too big. Go to the Binary Odometer Widget on Level 2 of the lesson on Code Studio.This is a widget that simulates a car odometer - a device that tracks how far the car has driven (in miles or kilometers). Explore the odometer to understand how it works.",
         "tips": [
           {
-            "key": "tip",
+            "key": "2",
             "type": "teachingTip",
             "markdown": "Students will tackle the problem of “running out of place values” when counting to bigger and bigger numbers. They will play with a digital odometer widget to explore what happens when you add one to the largest number you can represent in a number system.\n"
           }
@@ -2273,7 +2261,7 @@
         "description": "[slide]  **Discuss:**",
         "tips": [
           {
-            "key": "discussion",
+            "key": "3",
             "type": "discussionGoal",
             "markdown": "When the odometer turns over -- exceeds the number of place values it can physically display -- the odometer reading correctly shows all but one number in its place value positions. \n\nFor example: \n\n![](https://curriculum.code.org/media/uploads/binary1.png)\n\nAfter the odometer turns over:\n\n![](https://curriculum.code.org/media/uploads/binary3.png)\n\nAs you can see, all the numbers should flip to 0 and the one of the left should flip to 1. But we are out of place values! So the numbers flip to 0, but nothing flips to 1. The number we are trying to represent does not fit in the number of bits we have available to accurately display it.\n\nLike a bathtub that has reached its maximum capacity for holding water and is now overflowing, the odometer has reached its maximum capacity and has reached **overflow**. \n"
           }
@@ -2326,7 +2314,7 @@
         "description": "[slide]  **Do This:** Cut and fold your Flippy Do Pro following the guidance on the slide. Fill out all the numbers if they are not already done.",
         "tips": [
           {
-            "key": "tip",
+            "key": "4",
             "type": "teachingTip",
             "markdown": "* The Flippy Do Pro is still using 8 bits to represent a number. But this time, the place value of each bit has been assigned in a different way than in the previous Flippy Do or on the Binary Odometer. The bits have been \"shifted\" to the right two times. The value 1 (2^0) is no longer the smallest place value. The value of a bit just to the right of 1 (2^0) is 0.5, which is 2^-1. The value to the right again is 0.25 which is 2^-2.\n\n* Students may struggle with negative exponents. What's more important than emphasizing the math is emphasizing the pattern of place values in the Flippy Do Pro. As you move left, the place value doubles. As you move right, the place value halves. \n\n* Help students see that using the Flippy Do Pro is similar to using the Flippy Do. To form a value, flip the flaps up or down at the bottom of the device to create a sequence of zeros and ones. Note that the range of place values is limited by the largest bit value, 2^5 which is 32, and the smallest bit value, 2^-2 which is 0.25. As with the Flippy Do, adding together all the values for each place value containing a \"1\" produces the total value represented on the Flippy Do Pro. \n\n"
           }
@@ -2344,7 +2332,7 @@
         "description": "The Flippy Do Pro is similar to the one you made before. But this time, the Flippy Do Pro is already filled with binary place values assigned in a different way -- they include fractions.When using the Flippy Do Pro, the numbers on the left-hand side of the line are whole numbers and those on the right-hand side of the line are fractional numbers.",
         "tips": [
           {
-            "key": "tip",
+            "key": "5",
             "type": "teachingTip",
             "markdown": "When referring to the Flippy Do Pro, we are using a vertical line to indicate the difference between the fractional part and the whole part of a number being represented.  Using language in a clear way can be tricky for this lesson because “decimal” can mean different things to students.  For example, students frequently refer to a number as a “decimal” if it isn’t a whole number (ex. Students may call “1.23” a “decimal”) but here we want to stick with students thinking as a decimal number to be a “base 10” number.  Therefore, we avoid using the word “decimal point” in the Flippy Do Pro and instead talk about the fractional part of the number and the whole part of the number.   The purpose of doing this is to maintain using \"decimal\" to only refer to a \"base 10\" number.  For your own personal knowledge, you can read more about \"decimal points\" and \"binary points\" on [Wikipedia](https://en.wikipedia.org/wiki/Radix_point).\n"
           }
@@ -2387,7 +2375,7 @@
         "description": "**Prompt:** Why is it a problem for a computer if your answers are different than others?",
         "tips": [
           {
-            "key": "discussion",
+            "key": "6",
             "type": "discussionGoal",
             "markdown": "**Goal:** Computers rely on precision. Think of a calculator. We depend on 1+1 always equaling 2. Rounding is necessary because of the limits of bits, but can lead to errors.  \n"
           }
@@ -2416,7 +2404,7 @@
       "properties": {
         "tips": [
           {
-            "key": "discussion",
+            "key": "7",
             "type": "discussionGoal",
             "markdown": "As students have seen, you can make “any number” in your head, but the tool you use to represent a number has limitations. It has a fixed number of place values it can show. The odometer keeps running after you move beyond its upper limit, but the largest place values cannot be displayed due to overflow error. \r\n\r\nIn the Flippy Do Pro, you assigned some of the bits to fractions, but you saw that you still couldn’t represent certain “small” numbers -- you could only show a number that was “close to” your target number. This is roundoff error, an error that occurs when bit arrangements can’t represent numbers as intended.  \r\n\r\nUltimately, regardless of the size of our odometer or Flippy Do Pro, and how many bits we add to them, there’s going to be numbers that are too large, too small, or “in-between” the values we want to represent.\r\n"
           }
@@ -4717,6 +4705,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4739,7 +4730,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Computer Science is Changing Everything"
+        "progression": "Computer Science is Changing Everything",
+        "level_keys": [
+          "Computer Science is Changing Everything_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4762,7 +4756,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "csp_socialBelonging_control_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4785,7 +4782,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L3 CFU Sending Complex Messages_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4808,7 +4808,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "CSP U1L4 CYU3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4831,7 +4834,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L5 CFU how many bits_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4854,7 +4860,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L5 CFU adding bits_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4877,7 +4886,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L5 CFU bin dec similarities_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4900,7 +4912,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Widget: Binary Odometer"
+        "progression": "Widget: Binary Odometer",
+        "level_keys": [
+          "Widget: Binary Odometer_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4923,7 +4938,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L6 CFU beyond odometer_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4946,7 +4964,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L6 CFU representing fractions_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4969,7 +4990,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L8 Reflection Multiple Representations CSP_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4992,7 +5016,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Intro to Pixelation Encoding B&W"
+        "progression": "Video: Intro to Pixelation Encoding B&W",
+        "level_keys": [
+          "U1 L9 Introduction to Pixelation_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5015,7 +5042,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5038,7 +5068,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5061,7 +5094,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5084,7 +5120,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5107,7 +5146,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5130,7 +5172,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L9 CFU pixel data_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5153,7 +5198,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5176,7 +5224,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L9 CFU Sampling_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5199,7 +5250,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "RGB Color"
+        "progression": "RGB Color",
+        "level_keys": [
+          "CSP U1L10 RGB_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5222,7 +5276,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5245,7 +5302,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "More Shades of Color"
+        "progression": "More Shades of Color",
+        "level_keys": [
+          "CSP U1L10 More Shades of Color_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5268,7 +5328,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5291,7 +5354,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5314,7 +5380,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Color Sampling"
+        "progression": "Color Sampling",
+        "level_keys": [
+          "CSP U1L10 Color Sampling_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5337,7 +5406,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5360,7 +5432,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L10 Multiple Choice analog vs digital_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5383,7 +5458,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L10 CFU Sampling_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5406,7 +5484,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Widget: Text Compression"
+        "progression": "Widget: Text Compression",
+        "level_keys": [
+          "U1L11 Widget: Text Compression_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5429,7 +5510,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Text Compression Widget with Aloe Blacc"
+        "progression": "Video: Text Compression Widget with Aloe Blacc",
+        "level_keys": [
+          "U1 L11 Text Compression Widget Aloe Blacc_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5452,7 +5536,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5475,7 +5562,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L11 CFU Compression for Email_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5498,7 +5588,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lossy Compression Widget"
+        "progression": "Lossy Compression Widget",
+        "level_keys": [
+          "U1 Lossy Compression Widget v1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5521,7 +5614,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Lossy Compression Widget"
+        "progression": "Lossy Compression Widget",
+        "level_keys": [
+          "U1 Lossy Compression Widget v2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5544,7 +5640,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5567,7 +5666,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L12 CFU Creative Commons_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5590,7 +5692,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L12 CFU Copyright_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5613,7 +5718,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L13 CFU Digital Representation_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5636,7 +5744,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L14 CSP CFU digital information_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5659,7 +5770,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 1 Exam"
+        "progression": "Unit 1 Exam",
+        "level_keys": [
+          "CSP Unit 1 AP-Style Assessment _2021"
+        ]
       },
       "named_level": null,
       "bonus": false,

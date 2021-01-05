@@ -186,7 +186,7 @@ class LessonGroup < ApplicationRecord
   # @return [Boolean] - Whether any changes to this lesson group were saved.
   def update_from_curriculum_builder(cb_chapter_data)
     # In the future, only levelbuilder should be added to this list.
-    raise unless [:development, :adhoc].include? rack_env
+    raise unless [:development, :adhoc, :levelbuilder].include? rack_env
 
     cb_questions = cb_chapter_data['questions']
     if cb_questions.present? && big_questions.blank?

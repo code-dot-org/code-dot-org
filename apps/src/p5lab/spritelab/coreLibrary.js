@@ -3,10 +3,12 @@ var nativeSpriteMap = {};
 var inputEvents = [];
 var behaviors = [];
 var userInputEventCallbacks = {};
+var newSprites = {};
 
 export var background;
 export var title = '';
 export var subtitle = '';
+export var defaultSpriteSize = 100;
 
 export function reset() {
   spriteId = 0;
@@ -16,6 +18,7 @@ export function reset() {
   background = 'white';
   title = subtitle = '';
   userInputEventCallbacks = {};
+  defaultSpriteSize = 100;
 }
 
 /**
@@ -119,13 +122,19 @@ export function getSpriteIdsInUse() {
  * @param {Sprite} sprite
  * @returns {Number} A unique id to reference the sprite.
  */
-export function addSprite(sprite, name) {
+export function addSprite(sprite, name, animation) {
   nativeSpriteMap[spriteId] = sprite;
   sprite.id = spriteId;
   if (name) {
     enforceUniqueSpriteName(name);
     sprite.name = name;
   }
+  if (animation) {
+    // Add to new sprites map so we can fire a "when sprite created" event if needed
+    newSprites[animation] = newSprites[animation] || [];
+    newSprites[animation].push(sprite);
+  }
+
   spriteId++;
   return sprite.id;
 }
@@ -189,6 +198,10 @@ export function addEvent(type, args, callback) {
   inputEvents.push({type: type, args: args, callback: callback});
 }
 
+export function clearCollectDataEvents() {
+  inputEvents = inputEvents.filter(e => e.type !== 'collectData');
+}
+
 function atTimeEvent(inputEvent, p5Inst) {
   if (inputEvent.args.unit === 'seconds') {
     const previousTime = inputEvent.previousTime || 0;
@@ -210,6 +223,17 @@ function atTimeEvent(inputEvent, p5Inst) {
   }
   // Don't call callback
   return [];
+}
+
+function collectDataEvent(inputEvent, p5Inst) {
+  // Only log data once per second, approximate 30 frames per second
+  if (p5Inst.World.frameCount % 30 === 0) {
+    // Call callback with no extra args
+    return [{}];
+  } else {
+    // Don't call callback
+    return [];
+  }
 }
 
 function repeatForeverEvent(inputEvent, p5Inst) {
@@ -329,6 +353,15 @@ function whileClickEvent(inputEvent, p5Inst) {
   return callbackArgList;
 }
 
+function whenSpriteCreatedEvent(inputEvent, p5Inst) {
+  let callbackArgList = [];
+  let sprites = newSprites[inputEvent.args.costume] || [];
+  sprites.forEach(sprite => {
+    callbackArgList.push({newSprite: sprite.id});
+  });
+  return callbackArgList;
+}
+
 /**
  * @param {Object} inputEvent
  * @param p5Inst - the running P5 instance
@@ -342,6 +375,8 @@ function getCallbackArgListForEvent(inputEvent, p5Inst) {
   switch (inputEvent.type) {
     case 'atTime':
       return atTimeEvent(inputEvent, p5Inst);
+    case 'collectData':
+      return collectDataEvent(inputEvent, p5Inst);
     case 'repeatForever':
       return repeatForeverEvent(inputEvent, p5Inst);
     case 'whenpress':
@@ -356,6 +391,8 @@ function getCallbackArgListForEvent(inputEvent, p5Inst) {
       return whenClickEvent(inputEvent, p5Inst);
     case 'whileclick':
       return whileClickEvent(inputEvent, p5Inst);
+    case 'whenSpriteCreated':
+      return whenSpriteCreatedEvent(inputEvent, p5Inst);
   }
 }
 
@@ -366,6 +403,9 @@ export function runEvents(p5Inst) {
       inputEvent.callback(args);
     });
   });
+
+  // Clear newSprites. Used for whenSpriteCreated events and should be reset every tick.
+  newSprites = {};
 }
 
 export function addBehavior(sprite, behavior) {
