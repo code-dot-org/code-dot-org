@@ -103,7 +103,7 @@ class SchoolDistrict < ApplicationRecord
       import_options_1819 = {col_sep: ",", headers: true, quote_char: "\x00"}
       # Used table generator here to get columns of interest:
       # https://nces.ed.gov/ccd/elsi/tableGenerator.aspx
-      AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/ELSI_csv_export_637423414304008909966.csv") do |filename|
+      AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/ELSI_csv_export_6374544705259568713496.csv") do |filename|
         SchoolDistrict.merge_from_csv(filename, import_options_1819, true, new_attributes: ['last_known_school_year_open']) do |row|
           {
             id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
