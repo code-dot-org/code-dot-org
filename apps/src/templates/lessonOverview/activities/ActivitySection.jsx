@@ -59,7 +59,7 @@ export default class ActivitySection extends Component {
 
     return (
       <div>
-        <h4 id={`activity-section-${section.key}`}>{section.displayName}</h4>
+        <h3 id={`activity-section-${section.key}`}>{section.displayName}</h3>
         {section.remarks && (
           <div>
             <h4>
