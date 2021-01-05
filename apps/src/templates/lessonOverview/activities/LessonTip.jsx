@@ -21,6 +21,9 @@ const styles = {
   icon: {
     marginLeft: 7,
     marginRight: 5
+  },
+  tip: {
+    marginBottom: 5
   }
 };
 
@@ -58,7 +61,7 @@ export default class LessonTip extends Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.tip}>
         <div
           style={{
             ...styles.tab,
