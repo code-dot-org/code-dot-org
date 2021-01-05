@@ -30,7 +30,7 @@ class PublicKeyCryptography < Widget
   )
 
   before_validation do
-    self.href = 'public_key_cryptography/public_key_cryptography.html'
+    self.href = 'public_key_cryptography/public_key_cryptography.html.haml'
   end
 
   def self.create_from_level_builder(params, level_params)
