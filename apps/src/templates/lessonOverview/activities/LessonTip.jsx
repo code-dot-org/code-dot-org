@@ -10,7 +10,7 @@ const styles = {
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     color: color.white,
-    padding: '5px, 10px',
+    padding: '5px 10px',
     width: 200
   },
   box: {
