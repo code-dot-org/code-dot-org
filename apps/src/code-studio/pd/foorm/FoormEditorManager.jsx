@@ -7,6 +7,11 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
 import FoormEditor from './FoormEditor';
+import {
+  resetAvailableForms,
+  setLastSaved,
+  setSaveError
+} from './editor/foormEditorRedux';
 
 const styles = {
   loadError: {
@@ -22,9 +27,14 @@ class FoormEditorManager extends React.Component {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
     formNamesAndVersions: PropTypes.array,
+    formCategories: PropTypes.array,
 
     // populated by redux
-    formQuestions: PropTypes.object
+    formQuestions: PropTypes.object,
+    availableForms: PropTypes.array,
+    resetAvailableForms: PropTypes.func,
+    setLastSaved: PropTypes.func,
+    setSaveError: PropTypes.func
   };
 
   constructor(props) {
@@ -33,18 +43,21 @@ class FoormEditorManager extends React.Component {
     this.state = {
       formKey: 0,
       formPreviewQuestions: null,
-      formattedConfigurationOptions: this.getFormattedConfigurationDropdownOptions(
-        this.props.formNamesAndVersions
-      ),
       showCodeMirror: false,
-      formName: null,
-      formVersion: null,
       hasLoadError: false
     };
+
+    this.props.resetAvailableForms(this.props.formNamesAndVersions);
   }
 
-  getFormattedConfigurationDropdownOptions(formNamesAndVersions) {
-    return formNamesAndVersions.map((formNameAndVersion, i) => {
+  componentDidUpdate(prevProps) {
+    if (prevProps.formNamesAndVersions !== this.props.formNamesAndVersions) {
+      this.props.resetAvailableForms(this.props.formNamesAndVersions);
+    }
+  }
+
+  getFormattedConfigurationDropdownOptions() {
+    return this.props.availableForms.map((formNameAndVersion, i) => {
       const formName = formNameAndVersion['name'];
       const formVersion = formNameAndVersion['version'];
       const formId = formNameAndVersion['id'];
@@ -52,7 +65,7 @@ class FoormEditorManager extends React.Component {
         <MenuItem
           key={i}
           eventKey={i}
-          onClick={() => this.loadConfiguration(formName, formVersion, formId)}
+          onClick={() => this.loadConfiguration(formId)}
         >
           {`${formName}, version ${formVersion}`}
         </MenuItem>
@@ -60,7 +73,9 @@ class FoormEditorManager extends React.Component {
     });
   }
 
-  loadConfiguration(formName, formVersion, formId) {
+  loadConfiguration(formId) {
+    this.props.setLastSaved(null);
+    this.props.setSaveError(null);
     $.ajax({
       url: `/api/v1/pd/foorm/form/${formId}`,
       type: 'get'
@@ -69,20 +84,20 @@ class FoormEditorManager extends React.Component {
         this.props.updateFormData(result);
         this.setState({
           showCodeMirror: true,
-          formName: formName,
-          formVersion: formVersion,
-          formId: formId,
           hasLoadError: false
         });
         this.props.resetCodeMirror(result['questions']);
       })
       .fail(() => {
-        this.props.updateFormData({questions: {}, published: null});
-        this.setState({
-          showCodeMirror: true,
+        this.props.updateFormData({
+          questions: {},
+          published: null,
           formName: null,
           formVersion: null,
-          formId: null,
+          formId: null
+        });
+        this.setState({
+          showCodeMirror: true,
           hasLoadError: true
         });
         this.props.resetCodeMirror({});
@@ -90,11 +105,17 @@ class FoormEditorManager extends React.Component {
   }
 
   initializeEmptyCodeMirror = () => {
-    this.setState({
-      showCodeMirror: true,
+    this.props.setLastSaved(null);
+    this.props.setSaveError(null);
+    this.props.updateFormData({
+      questions: {},
+      published: null,
       formName: null,
       formVersion: null,
-      formId: null,
+      formId: null
+    });
+    this.setState({
+      showCodeMirror: true,
       hasLoadError: false
     });
     this.props.resetCodeMirror({});
@@ -118,7 +139,7 @@ class FoormEditorManager extends React.Component {
         </p>
         <div>
           <DropdownButton id="load_config" title="Load Form..." className="btn">
-            {this.state.formattedConfigurationOptions}
+            {this.getFormattedConfigurationDropdownOptions()}
           </DropdownButton>
           <Button onClick={this.initializeEmptyCodeMirror} className="btn">
             New Form
@@ -130,9 +151,8 @@ class FoormEditorManager extends React.Component {
         {this.state.showCodeMirror && (
           <FoormEditor
             populateCodeMirror={this.props.populateCodeMirror}
-            formName={this.state.formName}
-            formVersion={this.state.formVersion}
-            formId={this.state.formId}
+            formCategories={this.props.formCategories}
+            resetCodeMirror={this.props.resetCodeMirror}
           />
         )}
       </div>
@@ -140,6 +160,15 @@ class FoormEditorManager extends React.Component {
   }
 }
 
-export default connect(state => ({
-  formQuestions: state.foorm.formQuestions || {}
-}))(FoormEditorManager);
+export default connect(
+  state => ({
+    formQuestions: state.foorm.formQuestions || {},
+    availableForms: state.foorm.availableForms || []
+  }),
+  dispatch => ({
+    resetAvailableForms: formMetadata =>
+      dispatch(resetAvailableForms(formMetadata)),
+    setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
+    setSaveError: saveError => dispatch(setSaveError(saveError))
+  })
+)(FoormEditorManager);

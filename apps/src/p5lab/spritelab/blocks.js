@@ -255,6 +255,10 @@ const customInputTypes = {
             block.shortString = spritelabMsg.clicked();
             block.longString = spritelabMsg.clickedSprite();
             break;
+          case 'gamelab_newSpritePointer':
+            block.shortString = spritelabMsg.new();
+            block.longString = spritelabMsg.newSprite();
+            break;
           case 'gamelab_subjectSpritePointer':
             block.shortString = spritelabMsg.subject();
             block.longString = spritelabMsg.subjectSprite();
@@ -281,6 +285,8 @@ const customInputTypes = {
       switch (block.type) {
         case 'gamelab_clickedSpritePointer':
           return '{id: extraArgs.clickedSprite}';
+        case 'gamelab_newSpritePointer':
+          return '{id: extraArgs.newSprite}';
         case 'gamelab_subjectSpritePointer':
           return '{id: extraArgs.subjectSprite}';
         case 'gamelab_objectSpritePointer':

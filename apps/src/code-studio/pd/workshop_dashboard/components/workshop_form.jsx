@@ -659,9 +659,7 @@ export class WorkshopForm extends React.Component {
 
   handleLocationChange = event => {
     const location = event && event.target && event.target.value;
-    if (location) {
-      this.setState({['location_address']: location});
-    }
+    this.setState({location_address: location});
     return location;
   };
 

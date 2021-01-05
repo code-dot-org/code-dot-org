@@ -123,8 +123,23 @@ export const commands = {
    * @param {string} opts.language The language of the text to play.
    */
   async playSpeech(opts) {
-    apiValidateType(opts, 'playSpeech', 'text', opts.text, 'string');
-    apiValidateType(opts, 'playSpeech', 'gender', opts.gender, 'string');
+    const validText = apiValidateType(
+      opts,
+      'playSpeech',
+      'text',
+      opts.text,
+      'string'
+    );
+    const validGender = apiValidateType(
+      opts,
+      'playSpeech',
+      'gender',
+      opts.gender,
+      'string'
+    );
+    if (!validText || !validGender) {
+      return;
+    }
     apiValidateType(
       opts,
       'playSpeech',
