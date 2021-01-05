@@ -922,7 +922,7 @@ class User < ApplicationRecord
     email = params.delete(:email)
     hashed_email = params.delete(:hashed_email)
     should_update_contact_info = email.present? || hashed_email.present?
-    transaction do
+    transaction(requres_new: true) do
       update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email) if should_update_contact_info
       update!(params)
     end
@@ -957,7 +957,7 @@ class User < ApplicationRecord
 
     new_attributes = email_preference.nil? ? {} : email_preference
 
-    transaction do
+    transaction(requires_new: true) do
       if migrated?
         update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
       else
