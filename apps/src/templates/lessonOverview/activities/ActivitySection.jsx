@@ -54,7 +54,7 @@ export default class ActivitySection extends Component {
     // The minimum width the activity section can have is 25
     const tipWidth = Math.min(
       Math.round((tipsTotalLength / totalLengthOfSectionText) * 100),
-      80
+      75
     );
 
     return (
@@ -88,7 +88,7 @@ export default class ActivitySection extends Component {
           <div
             style={{
               ...styles.textAndProgression,
-              ...(sectionHasTips && {width: `${100 - tipWidth}%`})
+              ...(!sectionHasTips && {width: `${100 - tipWidth}%`})
             }}
           >
             <SafeMarkdown markdown={section.text} />
