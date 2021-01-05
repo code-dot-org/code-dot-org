@@ -88,9 +88,9 @@
       .header_right
         - if !@hide_sign_in_option && signin_button_enabled
           #sign_in_or_user
-            = render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options
-        = render file: Rails.root.join('..', 'shared', 'haml', 'help_button.haml'), locals: hamburger_options
-        = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
+            = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'user_header.haml')), type: :haml, locals: user_header_options
+        = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'help_button.haml')), type: :haml, locals: hamburger_options
+        = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'hamburger.haml')), type: :haml, locals: hamburger_options
   }
 
 :ruby
