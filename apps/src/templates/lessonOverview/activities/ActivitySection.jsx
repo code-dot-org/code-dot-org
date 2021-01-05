@@ -31,7 +31,8 @@ const styles = {
   },
   textAndProgression: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    width: '100%' // If there are tips for the activity section this is updated below
   }
 };
 
