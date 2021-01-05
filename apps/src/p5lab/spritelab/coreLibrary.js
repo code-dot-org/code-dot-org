@@ -226,8 +226,11 @@ function atTimeEvent(inputEvent, p5Inst) {
 }
 
 function collectDataEvent(inputEvent, p5Inst) {
-  // Only log data once per second, approximate 30 frames per second
-  if (p5Inst.World.frameCount % 30 === 0) {
+  const previous = inputEvent.previous || 0;
+  inputEvent.previous = p5Inst.World.seconds;
+
+  // Only log data once per second
+  if (p5Inst.World.seconds !== previous) {
     // Call callback with no extra args
     return [{}];
   } else {
