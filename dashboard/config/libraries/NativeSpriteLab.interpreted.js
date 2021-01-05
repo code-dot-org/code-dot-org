@@ -16,7 +16,7 @@ function draw() {
  */
 function beginCollectingData(valueFn, label) {
   collectData(function() {
-    printText(['Time in seconds: ',getTime("seconds"),' | ', label || '', ': ', valueFn()].join(''));
+    printText(['Time: ',getTime("seconds"),' sec. | ', label || '', ': ', valueFn()].join(''));
   });
 }
 
