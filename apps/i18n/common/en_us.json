@@ -944,6 +944,7 @@
   "lastUpdatedCurrentTeacher": "Updated by you",
   "seenByStudent": "Seen by student",
   "lastUpdatedNoTime": "Last Updated:",
+  "lastUpdatedWithTime": "Last updated {time}",
   "learnMore": "Learn more",
   "leaveSection": "Leave section",
   "less": "Less",
