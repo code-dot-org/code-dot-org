@@ -54,7 +54,7 @@ export default class ActivitySection extends Component {
     // The minimum width the activity section can have is 25
     const tipWidth = Math.min(
       Math.round((tipsTotalLength / totalLengthOfSectionText) * 100),
-      75
+      80
     );
 
     return (
