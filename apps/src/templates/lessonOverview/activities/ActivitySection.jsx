@@ -60,7 +60,12 @@ export default class ActivitySection extends Component {
     return (
       <div>
         <h3 id={`activity-section-${section.key}`}>{section.displayName}</h3>
-        <div style={styles.activitySection}>
+        <div
+          style={{
+            ...styles.activitySection,
+            ...(sectionHasTips && {position: 'relative', left: -30})
+          }}
+        >
           {sectionHasTips && (
             <div style={styles.tipIcons}>
               {section.tips.map((tip, index) => {
