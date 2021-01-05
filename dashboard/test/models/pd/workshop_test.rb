@@ -7,18 +7,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   freeze_time
 
-  self.use_transactional_test_case = true
-  setup_all do
+  setup do
     @organizer = create(:program_manager)
     @workshop = create(:workshop, organizer: @organizer)
 
     @workshop_organizer = create(:workshop_organizer)
     @organizer_workshop = create(:workshop, organizer: @workshop_organizer)
-  end
-  setup do
-    @workshop.reload
-
-    @organizer_workshop.reload
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
