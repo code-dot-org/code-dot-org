@@ -25,7 +25,7 @@ module ActiveSupport
         setup_all do
           # Global fixture-setup happens once, and must persist outside any transaction.
           setup_fixtures
-          if use_transactional_test_case?
+          if false && use_transactional_test_case?
             @test_case_connections = enlist_transaction_connections
             @test_case_connections.each do |connection|
               connection.begin_transaction joinable: false, lock_thread: true
@@ -35,7 +35,7 @@ module ActiveSupport
         end
 
         teardown_all do
-          if use_transactional_test_case && @test_case_connections
+          if false && use_transactional_test_case && @test_case_connections
             @test_case_connections.each do |connection|
               connection.rollback_transaction if connection.transaction_open?
               connection.pool.lock_thread = false
