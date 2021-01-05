@@ -21,34 +21,33 @@ const styles = {
   icon: {
     marginLeft: 7,
     marginRight: 5
+  },
+  tip: {
+    marginTop: 10,
+    marginBottom: 10
   }
 };
 
-// background color for Tip box
 export const tipTypes = {
   teachingTip: {
     displayName: i18n.teachingTip(),
     icon: 'lightbulb-o',
-    color: color.orange,
-    backgroundColor: color.lightest_orange
+    color: color.orange
   },
   contentCorner: {
     displayName: i18n.contentCorner(),
     icon: 'graduation-cap',
-    color: color.teal,
-    backgroundColor: color.lightest_teal
+    color: color.teal
   },
   discussionGoal: {
     displayName: i18n.discussionGoal(),
     icon: 'comments',
-    color: color.purple,
-    backgroundColor: color.lightest_purple
+    color: color.purple
   },
   assessmentOpportunity: {
     displayName: i18n.assessmentOpportunity(),
     icon: 'check-circle',
-    color: color.purple,
-    backgroundColor: color.lightest_purple
+    color: color.purple
   }
 };
 
@@ -59,7 +58,7 @@ export default class LessonTip extends Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.tip}>
         <div
           style={{
             ...styles.tab,
@@ -75,8 +74,7 @@ export default class LessonTip extends Component {
         <div
           style={{
             ...styles.box,
-            ...{borderColor: tipTypes[this.props.tip.type].color},
-            ...{backgroundColor: tipTypes[this.props.tip.type].backgroundColor}
+            ...{borderColor: tipTypes[this.props.tip.type].color}
           }}
         >
           <SafeMarkdown markdown={this.props.tip.markdown} />
