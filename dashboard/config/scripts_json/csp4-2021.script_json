@@ -580,8 +580,7 @@
       "key": "130f1637-d1ce-4908-956c-6a65fc45f7b4",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 0
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "130f1637-d1ce-4908-956c-6a65fc45f7b4",
@@ -613,19 +612,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f48aba60-09c2-4164-90d7-9c92b1f0567a",
-        "lesson.key": "Variables Practice",
-        "lesson_group.key": "csp_variables",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
-      "key": "958b6149-00c4-4770-a90a-a3b4b49d98a8",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "958b6149-00c4-4770-a90a-a3b4b49d98a8",
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021"
@@ -1778,32 +1764,20 @@
       }
     },
     {
-      "key": "828230fc-1b8a-45d5-968e-cab246cfc366",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. You may optionally wish to do a quick vocabulary review or address any questions that came up in the last lesson. Otherwise, give students more time to get hands on with some code.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "828230fc-1b8a-45d5-968e-cab246cfc366",
-        "lesson_activity.key": "130f1637-d1ce-4908-956c-6a65fc45f7b4"
-      }
-    },
-    {
       "key": "4c1abb58-c15b-4ffb-8e35-59c06fe8f43a",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. In our next lesson you're going to have to use a lot of these on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
         "tips": [
           {
-            "key": "tip",
+            "key": "1",
             "type": "teachingTip",
             "markdown": "This is the first official \"Practice\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Practice Lessons:\n**Overview:** Students practice using the new concept through a scaffolded series of programming activities.\n\n* Students work independently or in pairs\n* Teacher introduces debugging practices that the beginning of the Activity and circulates the room during the lesson to provide targeted support.\n\n**Goal:** Students gain confidence in writing and debugging programs that use the new concept.  \n\n![](https://curriculum.code.org/media/uploads/practice.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Practice Lessons](https://www.youtube.com/watch?v=Aad0UJXGcR4)\n\n"
+          },
+          {
+            "key": "2",
+            "type": "teachingTip",
+            "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. You may optionally wish to do a quick vocabulary review or address any questions that came up in the last lesson. Otherwise, give students more time to get hands on with some code."
           }
         ],
         "remarks": true,
@@ -1845,7 +1819,7 @@
         "description": "[slide]  **Do This:** Direct students to Code Studio, Lesson 3 Level 2.",
         "tips": [
           {
-            "key": "tip",
+            "key": "3",
             "type": "teachingTip",
             "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\r\n\r\n"
           }
@@ -1857,24 +1831,37 @@
       }
     },
     {
-      "key": "35d2283d-bd89-4ee4-a132-d0991822faf2",
+      "key": "2f2a1c92-597a-448b-85c8-d2538610f5a9",
       "position": 4,
       "properties": {
-        "description": "**Levels 2-3 Assigning Numbers and Strings:** These levels only use the console.log() command which prints commands in the debug console. Some key points in these levels.\r\n\r\n* Students should practice using the \"Watch\" area to track how variables change over a program\r\n* Students are asked to discuss what they see with a partner\r\n* These levels heavily reinforce language around assigning and creating variables\r\n* Level 3 is a debugging-heavy level which introduces more rules about syntax.\r\n\r\n**Levels 4-8 Variables and Operators:** These levels have students practice writing more complex expressions and using operators. A few tricky things to look out for\r\n\r\n* These levels transition from using only `console.log` to using full apps with user interfaces.\r\n* Level 6 introduces `\\n`, the new line character\r\n* Students continue to be encouraged to discuss what they are learning with a neighbor\r\n* Levels 7 and 8 introduce the use of the counter pattern with numbers and strings. Students may need to consult the Help and Tips tab for support."
+        "name": "Assigning Numbers and Strings",
+        "description": "**Levels 1-2 Assigning Numbers and Strings:** These levels only use the console.log() command which prints commands in the debug console. Some key points in these levels.\n\n* Students should practice using the \"Watch\" area to track how variables change over a program\n* Students are asked to discuss what they see with a partner\n* These levels heavily reinforce language around assigning and creating variables\n* Level 2 is a debugging-heavy level which introduces more rules about syntax.\n"
       },
       "seeding_key": {
-        "activity_section.key": "35d2283d-bd89-4ee4-a132-d0991822faf2",
+        "activity_section.key": "2f2a1c92-597a-448b-85c8-d2538610f5a9",
+        "lesson_activity.key": "b3c72085-c8f0-4971-beef-af3066cee04a"
+      }
+    },
+    {
+      "key": "0aa444f3-dc71-4156-bd82-4dd9384a344f",
+      "position": 5,
+      "properties": {
+        "name": "Variables and Operators",
+        "description": "**Levels 3-7 Variables and Operators:** These levels have students practice writing more complex expressions and using operators. A few tricky things to look out for\n\n* These levels transition from using only `console.log` to using full apps with user interfaces.\n* Level 5 introduces `\\n`, the new line character\n* Students continue to be encouraged to discuss what they are learning with a neighbor\n* Levels 6 and 7 introduce the use of the counter pattern with numbers and strings. Students may need to consult the Help and Tips tab for support."
+      },
+      "seeding_key": {
+        "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f",
         "lesson_activity.key": "b3c72085-c8f0-4971-beef-af3066cee04a"
       }
     },
     {
       "key": "1adf5772-0b76-42e4-85c2-2bbff867d6b3",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Regroup:** Bring the class back together to watch the Scope Practice Video.",
         "tips": [
           {
-            "key": "tip",
+            "key": "4",
             "type": "teachingTip",
             "markdown": " [slide] **Reviewing a Map Level:** Level 9 is a Map Level, which contains a review of variable scope. It is highly recommended that you watch the video in Level 9 prior to the lesson. Slides are available for this lesson if you would like to optinally review as a class.\r\n"
           }
@@ -1887,12 +1874,36 @@
     },
     {
       "key": "3fc29f48-9747-4005-b7a2-806efcf58865",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "[slide] **Display:** Scope Practice video. This video is located on the slides and on Level 9. You may opt to have students watch it alone or as a class. \r\n\r\n[slide] **Do This:** Discuss debugging scope issues with the next three slides before directing students back to Code Studio.\r\n\r\n[slide] **Levels 9-10 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\r\n\r\n* Create variables once\r\n* Create variables at the top of your program\r\n* Don't create variables inside `onEvent()` or `function()` blocks\r\n\r\n[slide] **Level 11 Putting It All Together:** This level asks students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide."
+        "description": "[slide] **Display:** Scope Practice video. This video is located on the slides and on Level 9. You may opt to have students watch it alone or as a class. \n\n[slide] **Do This:** Discuss debugging scope issues with the next three slides before directing students back to Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "3fc29f48-9747-4005-b7a2-806efcf58865",
+        "lesson_activity.key": "b3c72085-c8f0-4971-beef-af3066cee04a"
+      }
+    },
+    {
+      "key": "a732bd47-4ca3-4bed-abc9-8c322ee19f10",
+      "position": 8,
+      "properties": {
+        "name": "Debugging Scope Issues",
+        "description": "[slide] **Levels 8-9 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\n\n* Create variables once\n* Create variables at the top of your program\n* Don't create variables inside `onEvent()` or `function()` blocks"
+      },
+      "seeding_key": {
+        "activity_section.key": "a732bd47-4ca3-4bed-abc9-8c322ee19f10",
+        "lesson_activity.key": "b3c72085-c8f0-4971-beef-af3066cee04a"
+      }
+    },
+    {
+      "key": "ee21e1af-4bbd-4689-9f14-40d7e9de55e5",
+      "position": 9,
+      "properties": {
+        "name": "Putting it Together",
+        "description": "[slide] **Level 10 Putting It All Together:** This level asks students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "ee21e1af-4bbd-4689-9f14-40d7e9de55e5",
         "lesson_activity.key": "b3c72085-c8f0-4971-beef-af3066cee04a"
       }
     },
@@ -1903,7 +1914,7 @@
         "description": "[slide]  **Prompt:** What aspects of working with variables do you feel like clicked today? What do you still feel like you have trouble with?",
         "tips": [
           {
-            "key": "discussion",
+            "key": "5",
             "type": "discussionGoal",
             "markdown": "**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n\r\n"
           }
@@ -1959,72 +1970,6 @@
       "seeding_key": {
         "activity_section.key": "af9415ac-6ed8-4707-9a7f-6e1fa9f1504a",
         "lesson_activity.key": "f48aba60-09c2-4164-90d7-9c92b1f0567a"
-      }
-    },
-    {
-      "key": "72f63f76-ad52-4191-bf13-271386edd2cb",
-      "position": 1,
-      "properties": {
-        "name": "Assigning Numbers and Strings"
-      },
-      "seeding_key": {
-        "activity_section.key": "72f63f76-ad52-4191-bf13-271386edd2cb",
-        "lesson_activity.key": "958b6149-00c4-4770-a90a-a3b4b49d98a8"
-      }
-    },
-    {
-      "key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1",
-      "position": 2,
-      "properties": {
-        "name": "Variables and Operators"
-      },
-      "seeding_key": {
-        "activity_section.key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1",
-        "lesson_activity.key": "958b6149-00c4-4770-a90a-a3b4b49d98a8"
-      }
-    },
-    {
-      "key": "588a6457-304d-459c-a8b6-196e28cf647c",
-      "position": 3,
-      "properties": {
-        "name": "Debugging Scope Issues"
-      },
-      "seeding_key": {
-        "activity_section.key": "588a6457-304d-459c-a8b6-196e28cf647c",
-        "lesson_activity.key": "958b6149-00c4-4770-a90a-a3b4b49d98a8"
-      }
-    },
-    {
-      "key": "51eebae6-eb24-45f2-ab94-8bdd94ce5ab0",
-      "position": 4,
-      "properties": {
-        "name": "Putting it Together"
-      },
-      "seeding_key": {
-        "activity_section.key": "51eebae6-eb24-45f2-ab94-8bdd94ce5ab0",
-        "lesson_activity.key": "958b6149-00c4-4770-a90a-a3b4b49d98a8"
-      }
-    },
-    {
-      "key": "2bb7978e-55bf-4eaf-aaea-4d892bf0a358",
-      "position": 5,
-      "properties": {
-        "name": "Check For Understanding: AP Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "2bb7978e-55bf-4eaf-aaea-4d892bf0a358",
-        "lesson_activity.key": "958b6149-00c4-4770-a90a-a3b4b49d98a8"
-      }
-    },
-    {
-      "key": "336f7b28-b805-479b-9089-6c5aa2a39ecb",
-      "position": 6,
-      "properties": {
-        "name": "Check for Understanding: AP Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "336f7b28-b805-479b-9089-6c5aa2a39ecb",
-        "lesson_activity.key": "958b6149-00c4-4770-a90a-a3b4b49d98a8"
       }
     },
     {
@@ -4198,10 +4143,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Assigning Numbers and Strings",
-        "level_keys": [
-          "U4 L03 Variables numbers practice 1_2021"
-        ]
+        "progression": "Assigning Numbers and Strings"
       },
       "named_level": null,
       "bonus": false,
@@ -4212,7 +4154,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "72f63f76-ad52-4191-bf13-271386edd2cb"
+        "activity_section.key": "2f2a1c92-597a-448b-85c8-d2538610f5a9"
       },
       "level_keys": [
         "U4 L03 Variables numbers practice 1_2021"
@@ -4224,10 +4166,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Assigning Numbers and Strings",
-        "level_keys": [
-          "U4 L03 Variables numbers practice 4_2021"
-        ]
+        "progression": "Assigning Numbers and Strings"
       },
       "named_level": null,
       "bonus": false,
@@ -4238,7 +4177,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "72f63f76-ad52-4191-bf13-271386edd2cb"
+        "activity_section.key": "2f2a1c92-597a-448b-85c8-d2538610f5a9"
       },
       "level_keys": [
         "U4 L03 Variables numbers practice 4_2021"
@@ -4250,10 +4189,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
-        "level_keys": [
-          "U4 L03 Variables operator practice 1_2021"
-        ]
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -4264,7 +4200,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1"
+        "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 1_2021"
@@ -4276,10 +4212,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
-        "level_keys": [
-          "U4 L03 Variables operator practice 3_2021"
-        ]
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -4290,7 +4223,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1"
+        "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 3_2021"
@@ -4302,10 +4235,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
-        "level_keys": [
-          "U4 L03 Variables operator practice 2_2021"
-        ]
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -4316,7 +4246,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1"
+        "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 2_2021"
@@ -4328,10 +4258,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
-        "level_keys": [
-          "U4 L03 Variables operator practice 5_2021"
-        ]
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -4342,7 +4269,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1"
+        "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 5_2021"
@@ -4354,10 +4281,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
-        "level_keys": [
-          "U4 L03 Variables operator practice 6_2021"
-        ]
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -4368,7 +4292,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1"
+        "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 6_2021"
@@ -4380,10 +4304,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Debugging Scope Issues",
-        "level_keys": [
-          "U4 L03 Variable Scope: Local vs. Global_2021"
-        ]
+        "progression": "Debugging Scope Issues"
       },
       "named_level": null,
       "bonus": false,
@@ -4394,7 +4315,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "588a6457-304d-459c-a8b6-196e28cf647c"
+        "activity_section.key": "a732bd47-4ca3-4bed-abc9-8c322ee19f10"
       },
       "level_keys": [
         "U4 L03 Variable Scope: Local vs. Global_2021"
@@ -4406,10 +4327,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Debugging Scope Issues",
-        "level_keys": [
-          "U4 L03 Scope Issue_2021"
-        ]
+        "progression": "Debugging Scope Issues"
       },
       "named_level": null,
       "bonus": false,
@@ -4420,7 +4338,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "588a6457-304d-459c-a8b6-196e28cf647c"
+        "activity_section.key": "a732bd47-4ca3-4bed-abc9-8c322ee19f10"
       },
       "level_keys": [
         "U4 L03 Scope Issue_2021"
@@ -4432,10 +4350,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Putting it Together",
-        "level_keys": [
-          "U4 L03 Variables operator practice 4_2021"
-        ]
+        "progression": "Putting it Together"
       },
       "named_level": null,
       "bonus": false,
@@ -4446,7 +4361,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "51eebae6-eb24-45f2-ab94-8bdd94ce5ab0"
+        "activity_section.key": "ee21e1af-4bbd-4689-9f14-40d7e9de55e5"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 4_2021"
@@ -4458,10 +4373,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
-        "level_keys": [
-          "U4L3 CFU Variables Psuedocode_2021"
-        ]
+        "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "named_level": null,
       "bonus": false,
@@ -4472,7 +4384,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "2bb7978e-55bf-4eaf-aaea-4d892bf0a358"
+        "activity_section.key": "af9415ac-6ed8-4707-9a7f-6e1fa9f1504a"
       },
       "level_keys": [
         "U4L3 CFU Variables Psuedocode_2021"
@@ -4481,13 +4393,10 @@
     {
       "chapter": 22,
       "position": 12,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding: AP Practice",
-        "level_keys": [
-          "U4L3 CFU Variables Randomness Psuedocode_2021"
-        ]
+        "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "named_level": null,
       "bonus": false,
@@ -4498,7 +4407,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "336f7b28-b805-479b-9089-6c5aa2a39ecb"
+        "activity_section.key": "af9415ac-6ed8-4707-9a7f-6e1fa9f1504a"
       },
       "level_keys": [
         "U4L3 CFU Variables Randomness Psuedocode_2021"
@@ -6039,7 +5948,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "72f63f76-ad52-4191-bf13-271386edd2cb"
+        "activity_section.key": "2f2a1c92-597a-448b-85c8-d2538610f5a9"
       }
     },
     {
@@ -6051,7 +5960,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "72f63f76-ad52-4191-bf13-271386edd2cb"
+        "activity_section.key": "2f2a1c92-597a-448b-85c8-d2538610f5a9"
       }
     },
     {
@@ -6063,7 +5972,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1"
+        "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f"
       }
     },
     {
@@ -6075,7 +5984,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1"
+        "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f"
       }
     },
     {
@@ -6087,7 +5996,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1"
+        "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f"
       }
     },
     {
@@ -6099,7 +6008,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1"
+        "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f"
       }
     },
     {
@@ -6111,7 +6020,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "14ee3f0b-1d40-429a-9233-45cc76abfbe1"
+        "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f"
       }
     },
     {
@@ -6123,7 +6032,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "588a6457-304d-459c-a8b6-196e28cf647c"
+        "activity_section.key": "a732bd47-4ca3-4bed-abc9-8c322ee19f10"
       }
     },
     {
@@ -6135,7 +6044,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "588a6457-304d-459c-a8b6-196e28cf647c"
+        "activity_section.key": "a732bd47-4ca3-4bed-abc9-8c322ee19f10"
       }
     },
     {
@@ -6147,7 +6056,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "51eebae6-eb24-45f2-ab94-8bdd94ce5ab0"
+        "activity_section.key": "ee21e1af-4bbd-4689-9f14-40d7e9de55e5"
       }
     },
     {
@@ -6159,7 +6068,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "2bb7978e-55bf-4eaf-aaea-4d892bf0a358"
+        "activity_section.key": "af9415ac-6ed8-4707-9a7f-6e1fa9f1504a"
       }
     },
     {
@@ -6171,7 +6080,7 @@
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "336f7b28-b805-479b-9089-6c5aa2a39ecb"
+        "activity_section.key": "af9415ac-6ed8-4707-9a7f-6e1fa9f1504a"
       }
     },
     {
