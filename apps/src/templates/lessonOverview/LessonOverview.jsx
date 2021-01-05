@@ -36,7 +36,8 @@ const styles = {
     justifyContent: 'space-between'
   },
   navLink: {
-    fontSize: 18,
+    fontSize: 14,
+    lineHeight: '22px',
     color: color.purple,
     margin: '10px 0px'
   },
