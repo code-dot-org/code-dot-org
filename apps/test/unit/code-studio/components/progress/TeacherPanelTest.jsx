@@ -220,7 +220,7 @@ describe('TeacherPanel', () => {
               },
               section_script_levels: [
                 {
-                  id: '11',
+                  id: 11,
                   user_id: 1,
                   status: LevelStatus.not_tried
                 }
@@ -259,7 +259,7 @@ describe('TeacherPanel', () => {
               },
               section_script_levels: [
                 {
-                  id: '11',
+                  id: 11,
                   user_id: 1,
                   status: LevelStatus.not_tried
                 }
@@ -283,7 +283,7 @@ describe('TeacherPanel', () => {
               },
               section_script_levels: [
                 {
-                  id: '11',
+                  id: 11,
                   user_id: 1,
                   status: LevelStatus.not_tried
                 }

@@ -43,8 +43,8 @@ const stageData = [
     lockable: false,
     levels: [
       {
-        ids: ['2106'],
-        activeId: '2106',
+        ids: [2106],
+        activeId: 2106,
         position: 1,
         kind: LevelKind.unplugged,
         icon: null,
@@ -57,8 +57,8 @@ const stageData = [
         sublevels: []
       },
       {
-        ids: ['323'],
-        activeId: '323',
+        ids: [323],
+        activeId: 323,
         position: 2,
         page_number: 1,
         kind: LevelKind.assessment,
@@ -71,8 +71,8 @@ const stageData = [
         sublevels: []
       },
       {
-        ids: ['322'],
-        activeId: '322',
+        ids: [322],
+        activeId: 322,
         position: 3,
         page_number: 2,
         kind: LevelKind.assessment,
@@ -104,8 +104,8 @@ const stageData = [
     lockable: false,
     levels: [
       {
-        ids: ['330'],
-        activeId: '330',
+        ids: [330],
+        activeId: 330,
         position: 1,
         kind: LevelKind.puzzle,
         icon: null,
@@ -118,8 +118,8 @@ const stageData = [
         sublevels: []
       },
       {
-        ids: ['339'],
-        activeId: '339',
+        ids: [339],
+        activeId: 339,
         position: 2,
         kind: LevelKind.puzzle,
         icon: null,
@@ -131,8 +131,8 @@ const stageData = [
         sublevels: []
       },
       {
-        ids: ['341'],
-        activeId: '341',
+        ids: [341],
+        activeId: 341,
         position: 3,
         kind: LevelKind.puzzle,
         icon: null,
@@ -776,12 +776,14 @@ describe('progressReduxTest', () => {
                 kind: LevelKind.unplugged,
                 title: 'Unplugged Activity',
                 ids: ['123'],
+                activeId: '123',
                 display_as_unplugged: true
               },
               {
                 kind: LevelKind.puzzle,
                 title: 1,
                 ids: ['124'],
+                activeId: '123',
                 display_as_unplugged: false
               }
             ]
@@ -1040,6 +1042,7 @@ describe('progressReduxTest', () => {
           url: '',
           name: 'fake level',
           ids: ['1'],
+          activeId: 1,
           title: 1
         }
       ]
@@ -1092,6 +1095,7 @@ describe('progressReduxTest', () => {
 
     it('includes bonus levels in groups if includeBonusLevels is true', () => {
       const bonusLevel = {
+        activeId: 2106,
         ids: ['2106'],
         title: 1,
         bonus: true
