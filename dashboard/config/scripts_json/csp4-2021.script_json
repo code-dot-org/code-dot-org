@@ -535,19 +535,6 @@
       }
     },
     {
-      "key": "19851be7-424e-43d5-9111-f7af9b16a975",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "19851be7-424e-43d5-9111-f7af9b16a975",
-        "lesson.key": "Variables Explore",
-        "lesson_group.key": "csp_variables",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
       "key": "91e27497-7900-458f-80f0-c68bf658df07",
       "position": 1,
       "properties": {
@@ -584,19 +571,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "9817079b-6797-4c6b-bbe7-3e07da6a2ec2",
-        "lesson.key": "Variables Investigate",
-        "lesson_group.key": "csp_variables",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
-      "key": "55990673-7a65-4247-9ecd-761679899078",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "55990673-7a65-4247-9ecd-761679899078",
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021"
@@ -1312,7 +1286,7 @@
         "description": "**Group:** Place students in pairs",
         "tips": [
           {
-            "key": "tip",
+            "key": "523",
             "type": "teachingTip",
             "markdown": "This is the first official \"Explore\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Explore Lessons:\n**Overview:** Students explore the new concept through a teacher-led hands-on group activity.\n\n* Typically uses physical manipulatives\n* Teacher leads with support of slides and activity guides\n\n**Goal:** Students begin to develop a shared mental model and understand the main ideas of the new concept. \n\n![](https://curriculum.code.org/media/uploads/explore.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Explore Lessons](https://www.youtube.com/watch?v=mzm-xqXH8BQ)\n"
           }
@@ -1325,13 +1299,14 @@
       }
     },
     {
-      "key": "f528584d-2350-47dd-b60b-be6e6ca932f9",
+      "key": "bbd31b65-9e49-4875-8d33-4868043f5a24",
       "position": 2,
       "properties": {
+        "name": "Sample Apps",
         "description": "[slide] **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 2-4). Students can explore one or more depending on time."
       },
       "seeding_key": {
-        "activity_section.key": "f528584d-2350-47dd-b60b-be6e6ca932f9",
+        "activity_section.key": "bbd31b65-9e49-4875-8d33-4868043f5a24",
         "lesson_activity.key": "e24c8de8-865e-4df1-8b46-e8121a3d5fb3"
       }
     },
@@ -1342,7 +1317,7 @@
         "description": "[slide]  **Prompt:** These are samples of the kinds of apps you'll be able to build by the end of this unit. As you go through them, write down at least two examples where the app seems to be keeping track of a piece of information or using it to make decisions.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "524",
             "type": "discussionGoal",
             "markdown": "**Goal:** Have volunteers share what they noticed with the room. Some ideas include:\n\n* The Pet Rock App keeps track of clicks and uses it to decide when the pet rock will \"evolve\"\n* The Poem App keeps track of the poem as you write it\n* The Thermostat App keeps track of temperature and uses it to change the color of the text\n\n"
           }
@@ -1385,7 +1360,7 @@
         "description": "**Distribute:** Give each pair of students",
         "tips": [
           {
-            "key": "tip",
+            "key": "525",
             "type": "teachingTip",
             "markdown": "**Supplies Substitutions:** There's no need to use stickie notes if you have other scraps of colored paper. Also consider cutting stickies in 4 to make them go further. If you don't have dry erase markers handy consider using pieces of masking tape on the baggies. \r\n"
           }
@@ -1414,7 +1389,7 @@
         "description": "[slide]  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Variables.",
         "tips": [
           {
-            "key": "tip",
+            "key": "526",
             "type": "teachingTip",
             "markdown": "**Running the Activity:** This activity asks students to follow along as a number of core concepts for programming are introduced. The model is typically that a term or concept is introduced and modeled and then afterwards students are encouraged to try it out on their own. Trying it out typically means they are writing information on a sticky note and sharing it with another group before discussing the results with the whole class.\r\n\r\nSlides with animations have an icon in the bottom left corner to let you know you need to click to reveal more of the slide's content. \r\n\r\nTo help you more easily prepare the activity and keep track of your instructions, detailed instructions have been included as speaker notes in the presentation. Here are some tips to help you throughout the presentation.\r\n\r\n* There are opportunities throughout the presentation for students to actively engage. At these moments students should be making things with their manipulatives or using them to answer questions. Use these opportunities to check progress.\r\n* There is a fair amount of new vocabulary introduced but it is introduced gradually and with intentional repetition. Make a point of actively modeling the use of new terms.\r\n* The most important goal here is building a mental model. It is ok if students have some open questions that will get resolved over the subsequent conditional lessons.\r\n* Both you and students can use the \"Key Takeaways\" to check your understanding at the end."
           }
@@ -1475,7 +1450,7 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What will the value of score be at the end of the program?\r\n\r\n```\r\nvar score\r\nscore <- 3\r\nscore <- score + 1\r\nscore <- \"The score is: \" + score\r\n```",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "c053bf2e-bfac-4b36-a882-c3b3d8506eb7",
@@ -1483,51 +1458,19 @@
       }
     },
     {
-      "key": "1891c7fc-7663-4bf1-bb9b-ebdcc5b96311",
+      "key": "a1a44fc5-5b83-45fb-a0c6-ceefaac44f03",
       "position": 1,
       "properties": {
-        "name": "Sample Apps"
-      },
-      "seeding_key": {
-        "activity_section.key": "1891c7fc-7663-4bf1-bb9b-ebdcc5b96311",
-        "lesson_activity.key": "19851be7-424e-43d5-9111-f7af9b16a975"
-      }
-    },
-    {
-      "key": "ea04f2bf-88ae-4d4c-8df5-ec63acf0cd3a",
-      "position": 2,
-      "properties": {
-        "name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "ea04f2bf-88ae-4d4c-8df5-ec63acf0cd3a",
-        "lesson_activity.key": "19851be7-424e-43d5-9111-f7af9b16a975"
-      }
-    },
-    {
-      "key": "07cbffc6-8f2c-4024-8c44-8c42985b551b",
-      "position": 1,
-      "properties": {
+        "description": "Yesterday we explored storing information like a computer. Computers store each piece of information in a variable. In Javascript, we name or declare a variable with the keyword `var`. Today we are going to look at a new app that stores information in variables.",
+        "remarks": true,
+        "name": "Preview the Lesson",
         "tips": [
           {
-            "key": "tip",
+            "key": "tip-1",
             "type": "teachingTip",
             "markdown": "This is the first official \"Investigate\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Investigate Lessons:\n**Overview:** Students investigate two or three sample programs that use the new concept.\n\n* Close-reading of working programs\n* Teacher-led discussions\n* Tasks to modify apps\n\n**Goal:** Students become comfortable reading and modifying programs that use the new concept. \n\n![](https://curriculum.code.org/media/uploads/investigate.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Investigate Lessons](https://www.youtube.com/watch?v=jC85CeXs3ds)\n"
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "07cbffc6-8f2c-4024-8c44-8c42985b551b",
-        "lesson_activity.key": "91e27497-7900-458f-80f0-c68bf658df07"
-      }
-    },
-    {
-      "key": "a1a44fc5-5b83-45fb-a0c6-ceefaac44f03",
-      "position": 2,
-      "properties": {
-        "description": "Yesterday we explored storing information like a computer. Computers store each piece of information in a variable. In Javascript, we name or declare a variable with the keyword `var`. Today we are going to look at a new app that stores information in variables.",
-        "remarks": true,
-        "name": "Preview the Lesson"
       },
       "seeding_key": {
         "activity_section.key": "a1a44fc5-5b83-45fb-a0c6-ceefaac44f03",
@@ -1536,12 +1479,12 @@
     },
     {
       "key": "23f77e06-84ca-4eb8-babf-ecaa982de927",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "[slide]  **Prompt:** Let's do a quick review. How does a baggy represent a variable?",
         "tips": [
           {
-            "key": "discussion",
+            "key": "2",
             "type": "discussionGoal",
             "markdown": "The baggy represents a variable by storing one item: a value on a sticky note placed in a named baggy. The value in the baggy can be changed at any time, just like a variable's value can change. \n\n"
           }
@@ -1567,8 +1510,8 @@
       "key": "c032d228-77cb-4be6-b527-13c756a145df",
       "position": 2,
       "properties": {
-        "description": "[slide] **Level 2: Thermostat App v.1:** This level introduces a new app for students to investigate. It represents a Thermostat App where the temperature can be changed up and down. \r\n\r\n* Run the app: Let students run the app for a few minutes.\r\n* Predict: Students predict the information that is being stored in variables. \r\n\r\n[slide] **Level 3: Thermostat App v.1 Code:**  \r\n\r\n* Assign Code Sections: Assign half the pairs to investigate the first section on lines 1-12. The other half investigates the second half on lines 14-21. \r\n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so. \r\n* Explain Your Section: Have partners make a group with members of the other section and carefully explain how their section works line by line.",
-        "name": "Investigation #1: Thermostat App v.1 (Levels 2 - 3) - 10 mins\r"
+        "description": "[slide] **Level 1: Thermostat App v.1:** This level introduces a new app for students to investigate. It represents a Thermostat App where the temperature can be changed up and down. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n[slide] **Level 2: Thermostat App v.1 Code:**  \n\n* Assign Code Sections: Assign half the pairs to investigate the first section on lines 1-12. The other half investigates the second half on lines 14-21. \n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so. \n* Explain Your Section: Have partners make a group with members of the other section and carefully explain how their section works line by line.",
+        "name": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
       "seeding_key": {
         "activity_section.key": "c032d228-77cb-4be6-b527-13c756a145df",
@@ -1582,7 +1525,7 @@
         "description": "*  Class Discussion: Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "3",
             "type": "discussionGoal",
             "markdown": "Here are some points that students are likely to bring up while discussing their code:\r\n\r\n**Lines 1-12:** \r\n   \r\n   \t* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\r\n   \t* On line 7, an `onEvent` is created for when the `downButton` is clicked. \r\n   \t* When the down button is clicked, the `temp` variable decreases by one.\r\n   \t* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\r\n   \t* The text on the screen is set to dispay the value stored in the variable `tempF`\r\n   \t* A sound is played.\r\n\r\n**Lines 14-21**\r\n\r\n* On line 16, an `onEvent` is created for when the `upButton` is clicked.\r\n* When the up button is clicked, the `temp` variable is increased by one.\r\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\r\n   \t* The text on the screen is set to dispay the value stored in the variable `tempF`\r\n   \t* A sound is played\r\n\r\n"
           }
@@ -1608,8 +1551,8 @@
       "key": "ac5c4280-580d-43e9-9210-675bf64c19c4",
       "position": 5,
       "properties": {
-        "description": "[slide] **Level 4:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\r\n\r\n* Run the app: Let students run the app for a few minutes.\r\n* Discuss Changes: Talk through how the app is different than the first version. \r\n* Find the `Math.round` command: Discuss with a partner how this command might work. Try deleting `Math.round` in lines 3, 15, and 28. What happens? Add it back in.",
-        "name": "Investigation #2: Thermostat App v.2 (Level 4) - 10 mins\r"
+        "description": "[slide] **Level 3:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the `Math.round` command: Discuss with a partner how this command might work. Try deleting `Math.round` in lines 3, 15, and 28. What happens? Add it back in.",
+        "name": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
       },
       "seeding_key": {
         "activity_section.key": "ac5c4280-580d-43e9-9210-675bf64c19c4",
@@ -1623,7 +1566,7 @@
         "description": "*  Class Discussion: Ask a few students to explain what's happening on line 3 with `Math.round`.\r\n* Modify the Code: Change the code so that no space displays between the temperature and the unit description (\"F\" or \"C\").",
         "tips": [
           {
-            "key": "discussion",
+            "key": "4",
             "type": "discussionGoal",
             "markdown": "On line 3, the Fahrenheit temperature is converted to Celsius. `Math.round` rounds a given value to the nearest integer. \r\n"
           }
@@ -1638,8 +1581,8 @@
       "key": "99f96442-f5ae-4fa9-a1a7-04157d63e578",
       "position": 7,
       "properties": {
-        "description": "[slide] **Level 5:** This program is again an updated version of the Thermostat app with a login screen. \r\n\r\n* Run the app: Let students run the app for a few minutes.\r\n* Predict: Students predict the information that is being stored in variables. \r\n\r\n[slide] **Level 6:** The code for Thermostat App v.3 is displayed.\r\n\r\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
-        "name": "Investigation #3: Thermostat App v.3 (Levels 5 - 6) - 8 mins\r"
+        "description": "[slide] **Level 4:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n[slide] **Level 5:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
+        "name": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
       "seeding_key": {
         "activity_section.key": "99f96442-f5ae-4fa9-a1a7-04157d63e578",
@@ -1647,13 +1590,24 @@
       }
     },
     {
-      "key": "1fb1a060-1dac-4532-9f75-5164cb18de16",
+      "key": "f8370707-3e61-46e3-a6b8-094afbe34e32",
       "position": 8,
+      "properties": {
+        "name": "Thermostat App v3"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8370707-3e61-46e3-a6b8-094afbe34e32",
+        "lesson_activity.key": "c4eb36e1-32dc-4590-8ad2-5121bb841814"
+      }
+    },
+    {
+      "key": "1fb1a060-1dac-4532-9f75-5164cb18de16",
+      "position": 9,
       "properties": {
         "description": "*  Class Discussion: Look at line 40. How does `getText()` work? What is it doing?\r\n* Modify the Code: Add an explanation point `\"!\"` to the end of the string stored in `userName`.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "5",
             "type": "discussionGoal",
             "markdown": "`getText` gets the string of text that is found in the element with the given id. In this case, the id is `\"nameInput\"`. In our app, the name written in the `\"nameInput\"` element is concatenated with \"Hi\" and then stored in the variable `myName`. \r\n"
           }
@@ -1666,7 +1620,7 @@
     },
     {
       "key": "cc54e7e2-9570-4288-984f-531927ddd29b",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "We are learning two patterns here:\r\n\r\n* Counter Pattern with Event\r\n* Variables with String Concatenation Pattern\r\n\r\nThe Counter Pattern with Event is a common pattern for updating variables that you will use in making many different apps. We call it the **Counter Pattern with Event**.",
         "remarks": true,
@@ -1679,7 +1633,7 @@
     },
     {
       "key": "cef2237e-cdb6-4432-b9a0-8561ff2257a4",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "[slide] **Display:** Talk through the pattern with students."
       },
@@ -1690,12 +1644,12 @@
     },
     {
       "key": "283921b8-736a-4710-a00d-f8dca0f42cca",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "**Prompt:** With a partner, discuss the following:",
         "tips": [
           {
-            "key": "discussion",
+            "key": "6",
             "type": "discussionGoal",
             "markdown": "Students should step through each line of the pattern, explaining what's happening. \r\n\r\nCounter Pattern with Event:\r\n\r\n* myVar gets the value 0\r\n* When the event is triggered, myVar is updated getting the current value of myVar and adding 1.\r\n\r\nThe **Counter Pattern with Event** might be used to update a score in a game when an item is clicked.\r\n"
           }
@@ -1708,7 +1662,7 @@
     },
     {
       "key": "d416764e-ce8f-4e9a-856c-76357300ee93",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "* The \"Counter Pattern with Event\" should look familiar! How would you explain this pattern to another person? \r\n* When might you want to use the \"Counter Pattern with Event\"?"
       },
@@ -1719,7 +1673,7 @@
     },
     {
       "key": "71b90d08-9788-4c3c-8904-b5c030620ccc",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "Variables can store many different types of information including numbers and Strings. Anything placed inside of the quotation marks becomes a String. \r\n\r\nGuess what! There's a pattern for working with Strings. When we want to combine Strings with other Strings, numbers, or even with another variable we call that concatenation.",
         "remarks": true
@@ -1731,12 +1685,12 @@
     },
     {
       "key": "55b83c45-4852-4653-9233-4f394b2d4e52",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "[slide]  **Display:** Talk through the pattern with students.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "7",
             "type": "discussionGoal",
             "markdown": "Students should be able to verbally explain how the **Variable with String Concatenation Pattern** works. \r\n\r\n* myString gets the value \"rock\"\r\n* myOtherStrings gets the value \"roll\"\r\n* myStory gets the value that is stored in myString (\"rock\") and combines that with a string \"and\" and the value stored in myOtherString (\"roll\")\r\n* myStory now stores the value: \"rock and roll\"\r\n\r\n"
           }
@@ -1749,7 +1703,7 @@
     },
     {
       "key": "4d322e4f-5154-44ea-83e7-6d72b8495ddf",
-      "position": 15,
+      "position": 16,
       "properties": {
         "description": "**Prompt:** Explain to a partner how the \"Variable with String Concatenation Pattern\" works."
       },
@@ -1777,7 +1731,7 @@
         "description": "[slide]  **Prompt:** Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?",
         "tips": [
           {
-            "key": "discussion",
+            "key": "8",
             "type": "discussionGoal",
             "markdown": "**Answers:** \r\nWhat can be stored in a variable?\r\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \r\n\t* Numbers\r\n\t* Strings\r\n\t\t* Including concatenated strings (`temp + \" F\"`)\r\n\r\nWhy is using a meaningful name for the variable important?\r\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\r\n* It also helps readers predict what values may be stored in the variables. \r\n\r\n"
           }
@@ -1821,50 +1775,6 @@
       "seeding_key": {
         "activity_section.key": "f5ef04e0-b85c-4885-ad0a-c109abdce40a",
         "lesson_activity.key": "9817079b-6797-4c6b-bbe7-3e07da6a2ec2"
-      }
-    },
-    {
-      "key": "3aae4000-5be0-4597-aec7-687711e15aaa",
-      "position": 1,
-      "properties": {
-        "name": "Thermostat App v1"
-      },
-      "seeding_key": {
-        "activity_section.key": "3aae4000-5be0-4597-aec7-687711e15aaa",
-        "lesson_activity.key": "55990673-7a65-4247-9ecd-761679899078"
-      }
-    },
-    {
-      "key": "3ef3089c-5bdb-44c1-9ac1-2d7d8bcc5a61",
-      "position": 2,
-      "properties": {
-        "name": "Thermostat App v2"
-      },
-      "seeding_key": {
-        "activity_section.key": "3ef3089c-5bdb-44c1-9ac1-2d7d8bcc5a61",
-        "lesson_activity.key": "55990673-7a65-4247-9ecd-761679899078"
-      }
-    },
-    {
-      "key": "900b1976-abd8-49ea-89d7-27d1d6fa4c37",
-      "position": 3,
-      "properties": {
-        "name": "Thermostat App v3"
-      },
-      "seeding_key": {
-        "activity_section.key": "900b1976-abd8-49ea-89d7-27d1d6fa4c37",
-        "lesson_activity.key": "55990673-7a65-4247-9ecd-761679899078"
-      }
-    },
-    {
-      "key": "f49d8d40-dfe8-41dc-ad00-d8abe914dd75",
-      "position": 4,
-      "properties": {
-        "name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "f49d8d40-dfe8-41dc-ad00-d8abe914dd75",
-        "lesson_activity.key": "55990673-7a65-4247-9ecd-761679899078"
       }
     },
     {
@@ -4058,10 +3968,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
-        "level_keys": [
-          "CSP U4 My Pet Rock Example App_2021"
-        ]
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": false,
@@ -4072,7 +3979,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "1891c7fc-7663-4bf1-bb9b-ebdcc5b96311"
+        "activity_section.key": "bbd31b65-9e49-4875-8d33-4868043f5a24"
       },
       "level_keys": [
         "CSP U4 My Pet Rock Example App_2021"
@@ -4084,10 +3991,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
-        "level_keys": [
-          "U4 L01 Poetry App_2021"
-        ]
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": false,
@@ -4098,7 +4002,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "1891c7fc-7663-4bf1-bb9b-ebdcc5b96311"
+        "activity_section.key": "bbd31b65-9e49-4875-8d33-4868043f5a24"
       },
       "level_keys": [
         "U4 L01 Poetry App_2021"
@@ -4110,10 +4014,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
-        "level_keys": [
-          "U4 L01 Thermostat App_2021"
-        ]
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": false,
@@ -4124,7 +4025,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "1891c7fc-7663-4bf1-bb9b-ebdcc5b96311"
+        "activity_section.key": "bbd31b65-9e49-4875-8d33-4868043f5a24"
       },
       "level_keys": [
         "U4 L01 Thermostat App_2021"
@@ -4136,10 +4037,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U1 L02 CYU MC_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": false,
@@ -4150,7 +4048,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "ea04f2bf-88ae-4d4c-8df5-ec63acf0cd3a"
+        "activity_section.key": "c053bf2e-bfac-4b36-a882-c3b3d8506eb7"
       },
       "level_keys": [
         "U1 L02 CYU MC_2021"
@@ -4162,10 +4060,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Thermostat App v1",
-        "level_keys": [
-          "U4 L02 Thermostat App v1_2021"
-        ]
+        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
       "named_level": null,
       "bonus": false,
@@ -4176,7 +4071,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "3aae4000-5be0-4597-aec7-687711e15aaa"
+        "activity_section.key": "c032d228-77cb-4be6-b527-13c756a145df"
       },
       "level_keys": [
         "U4 L02 Thermostat App v1_2021"
@@ -4188,10 +4083,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Thermostat App v1",
-        "level_keys": [
-          "U4 L02 Thermostat App v1 Code_2021"
-        ]
+        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
       "named_level": null,
       "bonus": false,
@@ -4202,7 +4094,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "3aae4000-5be0-4597-aec7-687711e15aaa"
+        "activity_section.key": "c032d228-77cb-4be6-b527-13c756a145df"
       },
       "level_keys": [
         "U4 L02 Thermostat App v1 Code_2021"
@@ -4214,10 +4106,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Thermostat App v2",
-        "level_keys": [
-          "U4 L02 Thermostat App v2_2021"
-        ]
+        "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
       },
       "named_level": null,
       "bonus": false,
@@ -4228,7 +4117,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "3ef3089c-5bdb-44c1-9ac1-2d7d8bcc5a61"
+        "activity_section.key": "ac5c4280-580d-43e9-9210-675bf64c19c4"
       },
       "level_keys": [
         "U4 L02 Thermostat App v2_2021"
@@ -4240,10 +4129,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Thermostat App v3",
-        "level_keys": [
-          "U4 L02 Thermostat App v3_2021"
-        ]
+        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
       "named_level": null,
       "bonus": false,
@@ -4254,7 +4140,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "900b1976-abd8-49ea-89d7-27d1d6fa4c37"
+        "activity_section.key": "99f96442-f5ae-4fa9-a1a7-04157d63e578"
       },
       "level_keys": [
         "U4 L02 Thermostat App v3_2021"
@@ -4266,10 +4152,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Thermostat App v3",
-        "level_keys": [
-          "U4 L02 Thermostat App v3 pt2_2021"
-        ]
+        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
       "named_level": null,
       "bonus": false,
@@ -4280,7 +4163,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "900b1976-abd8-49ea-89d7-27d1d6fa4c37"
+        "activity_section.key": "99f96442-f5ae-4fa9-a1a7-04157d63e578"
       },
       "level_keys": [
         "U4 L02 Thermostat App v3 pt2_2021"
@@ -4292,10 +4175,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U4 L02 CYU Exit Ticket_2021"
-        ]
+        "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": null,
       "bonus": false,
@@ -4306,7 +4186,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "f49d8d40-dfe8-41dc-ad00-d8abe914dd75"
+        "activity_section.key": "f5ef04e0-b85c-4885-ad0a-c109abdce40a"
       },
       "level_keys": [
         "U4 L02 CYU Exit Ticket_2021"
@@ -6039,7 +5919,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "1891c7fc-7663-4bf1-bb9b-ebdcc5b96311"
+        "activity_section.key": "bbd31b65-9e49-4875-8d33-4868043f5a24"
       }
     },
     {
@@ -6051,7 +5931,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "1891c7fc-7663-4bf1-bb9b-ebdcc5b96311"
+        "activity_section.key": "bbd31b65-9e49-4875-8d33-4868043f5a24"
       }
     },
     {
@@ -6063,7 +5943,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "1891c7fc-7663-4bf1-bb9b-ebdcc5b96311"
+        "activity_section.key": "bbd31b65-9e49-4875-8d33-4868043f5a24"
       }
     },
     {
@@ -6075,7 +5955,7 @@
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "ea04f2bf-88ae-4d4c-8df5-ec63acf0cd3a"
+        "activity_section.key": "c053bf2e-bfac-4b36-a882-c3b3d8506eb7"
       }
     },
     {
@@ -6087,7 +5967,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "3aae4000-5be0-4597-aec7-687711e15aaa"
+        "activity_section.key": "c032d228-77cb-4be6-b527-13c756a145df"
       }
     },
     {
@@ -6099,7 +5979,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "3aae4000-5be0-4597-aec7-687711e15aaa"
+        "activity_section.key": "c032d228-77cb-4be6-b527-13c756a145df"
       }
     },
     {
@@ -6111,7 +5991,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "3ef3089c-5bdb-44c1-9ac1-2d7d8bcc5a61"
+        "activity_section.key": "ac5c4280-580d-43e9-9210-675bf64c19c4"
       }
     },
     {
@@ -6123,7 +6003,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "900b1976-abd8-49ea-89d7-27d1d6fa4c37"
+        "activity_section.key": "99f96442-f5ae-4fa9-a1a7-04157d63e578"
       }
     },
     {
@@ -6135,7 +6015,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "900b1976-abd8-49ea-89d7-27d1d6fa4c37"
+        "activity_section.key": "99f96442-f5ae-4fa9-a1a7-04157d63e578"
       }
     },
     {
@@ -6147,7 +6027,7 @@
         "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "f49d8d40-dfe8-41dc-ad00-d8abe914dd75"
+        "activity_section.key": "f5ef04e0-b85c-4885-ad0a-c109abdce40a"
       }
     },
     {

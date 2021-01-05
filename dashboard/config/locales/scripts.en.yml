@@ -18445,10 +18445,10 @@ en:
               name: Intro to Problem Solving - Paper Tower (Alternate Lesson 1)
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               key: Exploring Problem Solving - Animals Theme (Alternate Lesson 3)
-              name: Exploring Problem Solving   Animals Theme (Alternate Lesson 3)
+              name: Exploring Problem Solving - Animals Theme (Alternate Lesson 3)
             Exploring Problem Solving - Games Theme (Alternate Lesson 3):
               key: Exploring Problem Solving - Games Theme (Alternate Lesson 3)
-              name: Exploring Problem Solving   Games Theme (Alternate Lesson 3)
+              name: Exploring Problem Solving - Games Theme (Alternate Lesson 3)
           lesson_groups:
             cspSurvey:
               display_name: Survey
@@ -18562,7 +18562,7 @@ en:
               display_name: Survey
           name: csd2-2021
         csd3-2021:
-          title: CSD Unit 3 - Interactive Animations and Games ('20-'21)
+          title: CSD Unit 3 - Interactive Animations and Games ('21-'22)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
@@ -19382,7 +19382,7 @@ en:
               display_name: 'Unit 10: Cybersecurity and Global Impacts'
           name: csp10-2021
         coursea-2021:
-          title: Course A (2020)
+          title: Course A (2021)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
@@ -19722,7 +19722,7 @@ en:
               display_name: End of Course Project
           name: coursee-2021
         coursef-2021:
-          title: Course F (2020)
+          title: Course F (2021)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'Ages: 9-13'
