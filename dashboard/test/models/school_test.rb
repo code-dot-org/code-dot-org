@@ -57,6 +57,35 @@ class SchoolTest < ActiveSupport::TestCase
     School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true, &parse_row)
   end
 
+  test 'delete_state_cs_offerings' do
+    school = create :census_school, :with_state_cs_offering
+    school.state_school_id = 'test_id'
+
+    state_cs_offerings = school.state_cs_offering
+
+    refute school.state_cs_offering.empty?
+    deleted_state_cs_offerings = school.delete_state_cs_offerings(false)
+
+    assert school.state_cs_offering.empty?
+    assert_equal state_cs_offerings, deleted_state_cs_offerings
+  end
+
+  test 'reload_state_cs_offerings' do
+    school = create :school
+    state_cs_offering = create :state_cs_offering
+    state_cs_offering_collection = Census::StateCsOffering.where(state_school_id: state_cs_offering.state_school_id)
+
+    assert school.state_cs_offering.empty?
+    school.reload_state_cs_offerings(state_cs_offering_collection, false)
+    puts school.state_cs_offering
+
+    #school.reload
+    puts school.state_cs_offering.pluck(:course, :school_year)
+
+    assert_equal state_cs_offering_collection.pluck(:course, :school_year),
+      school.state_cs_offering.pluck(:course, :school_year)
+  end
+
   test 'null state_school_id is valid' do
     school = build :school, :without_state_school_id
     assert school.valid?, school.errors.full_messages
