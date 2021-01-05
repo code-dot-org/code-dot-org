@@ -125,7 +125,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'replace mappings fails on invalid non-unique zip-code mapping' do
-    create :regional_partner_with_mappings
+    build(:regional_partner_with_mappings).save(validate: false)
     sign_in @workshop_admin
     mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')
     post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
@@ -138,14 +138,15 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'replace mappings fails on invalid non-unique state mapping' do
-    create(:regional_partner_with_mappings, mappings: [
-             create(
-               :pd_regional_partner_mapping,
-               zip_code: nil,
-               state: 'WA'
-             )
-           ]
-    )
+    build(:regional_partner_with_mappings, mappings:
+          [
+            create(
+              :pd_regional_partner_mapping,
+              zip_code: nil,
+              state: 'WA'
+            )
+          ]
+    ).save(validate: false)
 
     sign_in @workshop_admin
     mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')

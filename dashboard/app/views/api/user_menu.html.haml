@@ -1,1 +1,1 @@
-=render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: @user_header_options
+=render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'user_header.haml')), type: :haml, locals: @user_header_options
