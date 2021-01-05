@@ -507,9 +507,9 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
  * @property {boolean} field Indicates that an input is a field input, i.e. a
  *   textbox. The generated code will be wrapped in quotes if the arg has type
  *   "String".
- * @property {boolean} empty Indicates that an input should not render a
- *   connection or generate any code. Mostly just useful as a line break for
- *   non-inlined blocks.
+ * @property {boolean} dummy Indicates that an input should be a dummy input, i.e. does
+ * not render a connection or generate code. Useful as a line break or to add an
+ * image to a block.
  * @property {boolean} assignment Indicates that this block should generate
  *   an assignment statement, with this input yielding the variable name.
  * @property {boolean} defer Indicates that this input should be wrapped in a
@@ -530,6 +530,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
 
 const DROPDOWN_INPUT = 'dropdown';
 const VALUE_INPUT = 'value';
+const INLINE_DUMMY_INPUT = 'inlineDummy';
 const DUMMY_INPUT = 'dummy';
 const STATEMENT_INPUT = 'statement';
 const FIELD_INPUT = 'field';
@@ -598,8 +599,8 @@ const determineInputs = function(text, args, strictTypes = []) {
         mode = arg.customInput;
       } else if (arg.statement) {
         mode = STATEMENT_INPUT;
-      } else if (arg.empty) {
-        mode = DUMMY_INPUT;
+      } else if (arg.dummy) {
+        mode = arg.inline ? INLINE_DUMMY_INPUT : DUMMY_INPUT;
       } else if (arg.variableInput) {
         mode = VARIABLE_INPUT;
       } else {
@@ -679,6 +680,22 @@ const STANDARD_INPUT_TYPES = {
       return `function () {\n${code}}`;
     }
   },
+  [INLINE_DUMMY_INPUT]: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      if (inputConfig.customOptions && inputConfig.customOptions.assetUrl) {
+        currentInputRow.appendTitle(
+          new Blockly.FieldImage(
+            Blockly.assetUrl(inputConfig.customOptions.assetUrl),
+            inputConfig.customOptions.width,
+            inputConfig.customOptions.height
+          )
+        );
+      }
+    },
+    generateCode(block, inputConfig) {
+      return null;
+    }
+  },
   [DUMMY_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
       return block.appendDummyInput();
@@ -747,7 +764,9 @@ const STANDARD_INPUT_TYPES = {
         .appendTitle(new Blockly.FieldVariable(null), inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      return block.getTitleValue(inputConfig.name);
+      return Blockly.JavaScript.translateVarName(
+        block.getTitleValue(inputConfig.name)
+      );
     }
   },
   [FIELD_INPUT]: {
@@ -1100,34 +1119,43 @@ exports.createJsWrapperBlockCreator = function(
           this.initMiniFlyout(miniToolboxXml);
         }
 
-        // For mini-toolbox, indicate which blocks should receive the duplicate on drag
-        // behavior and indicates the sibling block to shadow the value from
-        if (this.type === 'gamelab_clickedSpritePointer') {
-          this.setParentForCopyOnDrag('gamelab_spriteClickedSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_spriteClicked' &&
-              root.getConnections_()[1] &&
-              root.getConnections_()[1].targetBlock()
-          );
-        }
-        if (this.type === 'gamelab_subjectSpritePointer') {
-          this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_checkTouching' &&
-              root.getConnections_()[1] &&
-              root.getConnections_()[1].targetBlock()
-          );
-        }
-        if (this.type === 'gamelab_objectSpritePointer') {
-          this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_checkTouching' &&
-              root.getConnections_()[2] &&
-              root.getConnections_()[2].targetBlock()
-          );
+        // Set block to shadow for preview field if needed
+        switch (this.type) {
+          case 'gamelab_clickedSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_spriteClicked' &&
+                root.getConnections_()[1] &&
+                root.getConnections_()[1].targetBlock()
+            );
+            break;
+          case 'gamelab_newSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_whenSpriteCreated' &&
+                root.getConnections_()[1] &&
+                root.getConnections_()[1].targetBlock()
+            );
+            break;
+          case 'gamelab_subjectSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_checkTouching' &&
+                root.getConnections_()[1] &&
+                root.getConnections_()[1].targetBlock()
+            );
+            break;
+          case 'gamelab_objectSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_checkTouching' &&
+                root.getConnections_()[2] &&
+                root.getConnections_()[2].targetBlock()
+            );
+            break;
+          default:
+            // Not a pointer block, so no block to shadow
+            break;
         }
 
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);

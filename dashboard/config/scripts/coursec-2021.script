@@ -6,6 +6,8 @@ project_widget_types ["playlab", "artist"]
 family_name 'coursec'
 version_year '2021'
 curriculum_umbrella 'CSF'
+is_course true
+is_migrated true
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 lesson 'Putting a STOP to Online Meanness', display_name: 'Putting a STOP to Online Meanness'

@@ -1,7 +1,7 @@
 class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update, :require_captcha]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -162,6 +162,14 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     scripts = Script.valid_scripts(current_user).map(&:assignable_info)
     render json: scripts
+  end
+
+  # GET /api/v1/sections/require_captcha
+  # Get the recaptcha site key for frontend and whether current user requires captcha verification
+  def require_captcha
+    return head :forbidden unless current_user
+    site_key = CDO.recaptcha_site_key
+    render json: {key: site_key}
   end
 
   private

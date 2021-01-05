@@ -7,8 +7,7 @@ require 'net/http'
 require_relative '../../deployment'
 require 'cdo/lesson_import_helper'
 
-# Once this script is ready, only levelbuilder should be added to this list.
-raise unless [:development, :adhoc].include? rack_env
+raise unless [:development, :adhoc, :levelbuilder].include? rack_env
 
 $verbose = false
 def log(str)
@@ -82,6 +81,8 @@ def main(options)
   options.unit_names.each do |unit_name|
     script = Script.find_by_name!(unit_name)
     log "found code studio script name #{script.name} with id #{script.id}"
+
+    raise "Only hidden scripts can be imported" unless script.hidden
 
     # If a path is not found, curriculum builder returns a 302 redirect the same
     # path with the /en-us prefix, which then returns 404. to make error

@@ -7,8 +7,9 @@ family_name 'coursee'
 version_year '2021'
 curriculum_umbrella 'CSF'
 is_course true
+is_migrated true
 
-lesson_group 'ramp_up', display_name: 'Ramp-Up'
+lesson_group 'ramp_up', display_name: 'Ramp Up'
 lesson 'Sequencing in the Maze', display_name: 'Sequencing in the Maze'
 level 'courseD_video_ramp1_2021', progression: 'Maze Intro: Programming with Blocks'
 level 'courseD_maze_ramp1_2021', progression: 'Practice'
