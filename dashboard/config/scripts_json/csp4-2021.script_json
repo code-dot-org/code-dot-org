@@ -1312,7 +1312,7 @@
         "description": "**Group:** Place students in pairs",
         "tips": [
           {
-            "key": "tip",
+            "key": "1",
             "type": "teachingTip",
             "markdown": "This is the first official \"Explore\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Explore Lessons:\n**Overview:** Students explore the new concept through a teacher-led hands-on group activity.\n\n* Typically uses physical manipulatives\n* Teacher leads with support of slides and activity guides\n\n**Goal:** Students begin to develop a shared mental model and understand the main ideas of the new concept. \n\n![](https://curriculum.code.org/media/uploads/explore.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Explore Lessons](https://www.youtube.com/watch?v=mzm-xqXH8BQ)\n"
           }
@@ -1342,7 +1342,7 @@
         "description": "[slide]  **Prompt:** These are samples of the kinds of apps you'll be able to build by the end of this unit. As you go through them, write down at least two examples where the app seems to be keeping track of a piece of information or using it to make decisions.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "2",
             "type": "discussionGoal",
             "markdown": "**Goal:** Have volunteers share what they noticed with the room. Some ideas include:\n\n* The Pet Rock App keeps track of clicks and uses it to decide when the pet rock will \"evolve\"\n* The Poem App keeps track of the poem as you write it\n* The Thermostat App keeps track of temperature and uses it to change the color of the text\n\n"
           }
@@ -1382,10 +1382,10 @@
       "key": "ba9405e1-063f-43b8-adbf-219667cc62ba",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each pair of students",
+        "description": "**Distribute:** Give each pair of students\n\n* A small stack of red and yellow sticky notes\n* A pen / pencil\n* 3 plastic baggies\n* A dry erase marker to share with another group",
         "tips": [
           {
-            "key": "tip",
+            "key": "3",
             "type": "teachingTip",
             "markdown": "**Supplies Substitutions:** There's no need to use stickie notes if you have other scraps of colored paper. Also consider cutting stickies in 4 to make them go further. If you don't have dry erase markers handy consider using pieces of masking tape on the baggies. \r\n"
           }
@@ -1397,24 +1397,13 @@
       }
     },
     {
-      "key": "e5cd4610-c1a6-45ad-9d5f-b828b523743d",
-      "position": 3,
-      "properties": {
-        "description": "* A small stack of red and yellow sticky notes\r\n* A pen / pencil\r\n* 3 plastic baggies\r\n* A dry erase marker to share with another group"
-      },
-      "seeding_key": {
-        "activity_section.key": "e5cd4610-c1a6-45ad-9d5f-b828b523743d",
-        "lesson_activity.key": "0c8d3a4a-a901-437d-b8b8-77ab80dda331"
-      }
-    },
-    {
       "key": "4b14afac-5056-4a47-b941-941a4bbc0d28",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "[slide]  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Variables.",
         "tips": [
           {
-            "key": "tip",
+            "key": "4",
             "type": "teachingTip",
             "markdown": "**Running the Activity:** This activity asks students to follow along as a number of core concepts for programming are introduced. The model is typically that a term or concept is introduced and modeled and then afterwards students are encouraged to try it out on their own. Trying it out typically means they are writing information on a sticky note and sharing it with another group before discussing the results with the whole class.\r\n\r\nSlides with animations have an icon in the bottom left corner to let you know you need to click to reveal more of the slide's content. \r\n\r\nTo help you more easily prepare the activity and keep track of your instructions, detailed instructions have been included as speaker notes in the presentation. Here are some tips to help you throughout the presentation.\r\n\r\n* There are opportunities throughout the presentation for students to actively engage. At these moments students should be making things with their manipulatives or using them to answer questions. Use these opportunities to check progress.\r\n* There is a fair amount of new vocabulary introduced but it is introduced gradually and with intentional repetition. Make a point of actively modeling the use of new terms.\r\n* The most important goal here is building a mental model. It is ok if students have some open questions that will get resolved over the subsequent conditional lessons.\r\n* Both you and students can use the \"Key Takeaways\" to check your understanding at the end."
           }
@@ -1427,7 +1416,7 @@
     },
     {
       "key": "0af7ecf5-186e-4120-a92e-c4746565b975",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functionsvariables1.svg){: style=\"border:1px solid black\"} |**Say:** Today we are going to explore Variables. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables2.svg){: style=\"border:1px solid black\"} |**Say:** We're going to be thinking about how computers work with information. We're going to call one \"piece\" of information a \"value\". Right now there are two different types of values: numbers and strings. There are a few ways to tell them apart. Numbers work the way you normally think of numbers. They are made of the digits 0 through 9. We are going to put numbers on yellow sticky notes. When we write numbers you don't need quotes. Strings are made of any characters you can see on the keyboard which means all these examples count as strings. Strings go inside double quotes. You can see how it would be important to tell the number 123 apart from the string \"123\".  <br><br> **Do This:** Make one string and one number and hold it up at your table. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables3.svg){: style=\"border:1px solid black\"} | **Say:** Operator is just a fancy name for the plus, minus, multiply, and divide symbols. An expression is a combination of two sticky notes and an operator. When I ask you \"what's 2 plus 3\" you say \"5\"! You just \"evaluated\" the expression 2+3, or figure out what the value is. Since 5 is a number, we put it on a yellow sticky. When evaluating an expression, we follow order of operations - just like in math class. <br><br> **Do This:** Evaluate the expression 5-1 and make a sticky note. Make sure you pick the correct color and decide if you need quotes or not!   |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables4.svg){: style=\"border:1px solid black\"} | **Say:** This table shows the different ways we can create expressions. We can use all four operators with numbers the normal way. When you want to use strings, you can only use the + operator and it connects the two words together. If you're connecting a number and a string, the number first gets converted to a string. <br><br> **Do This:** With your partner make a sticky note for each of these 5 expressions and we'll share as a class. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click through to see the answers. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables5.svg){: style=\"border:1px solid black\"} | **Say:** We're going to call the plastic baggies on your table \"variables\". Variables can hold at most one value, or sticky note. They have names that use no quotes, include no spaces, and must start with a letter. For now just practice making a variable with your partner. <br><br> **Do This:** Make one variable with any name you like. Share it with another group. Make sure you use a whiteboard marker so we can reuse the baggies later.  |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables6.svg){: style=\"border:1px solid black\"} | **Say:** We can evaluate expressions that include variable names. To do that, first make a copy of the sticky note inside the variable. Then evaluate the expression the way you normally would. These two examples show you how. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables7.svg){: style=\"border:1px solid black\"} | **Do This:** Evaluate these expressions. Make sure to pay attention to whether it evaluates to a string or a number. <br><br> **Note:** Have students share their answers by holding up the sticky notes for each solution. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers. | \r\n|![](https://curriculum.code.org/media/uploads/CSPVariables8.svg){: style=\"border:1px solid black\"} | **Say:** Now let's write programs. We're going to stop using sticky notes, but will highlight strings and numbers to help you remember the difference. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables9.svg){: style=\"border:1px solid black\"} | **Say:** Here's what a program looks like. The var command tells the computer to create a variable. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables10.svg){: style=\"border:1px solid black\"} | **Say:** The left arrow is called the \"assignment operator\". That's just a fancy word for \"put this value in the baggy\". If we wanted to read line 01 we would say \"pow gets 3\". We know that variables can only hold one sticky note or value. So if we try to assign a variable that already has a value in it, we just throw the old one away. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. <br><br> **Say:** In a computer you don't actually put the old number in a trash can, it's totally deleted! The numbers are stored as electrical charges somewhere in your computer's memory. When you assign a new number to a variable it actually erases the old number, and stores  the new number in its place. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables11.svg){: style=\"border:1px solid black\"} | **Do This:** Run this program. Compare your results with another group. <br><br> **Note:** Walk around the room making sure students are following the rules correctly.  No baggies should have more than one sticky note in them. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables12.svg){: style=\"border:1px solid black\"} | **Say:** Now let's combine what we've learned. You can use assignment with expressions. In order for this to work you need to evaluate first, then assign. This makes sense because we know we can only put one sticky note in the variable baggy. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables13.svg){: style=\"border:1px solid black\"} | **Do This:** Run the program. Compare your results with another group. <br><br> **Note:** Walk around the room making sure students are evaluating before they assign. Reinforce the language \"gets\" for the assignment operator. For example, line 02 would read \"fly gets two plus day\". <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables14.svg){: style=\"border:1px solid black\"} | **Say:** We're not going to highlight our strings and numbers anymore. We can just use double quotes around the strings to tell the difference.  |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables15.svg){: style=\"border:1px solid black\"} | **Do This:** Run through this program together as a class. <br><br> **Note:** Reinforce: <br><br> Evaluate,  then assign <br><br> As shown on line 04, there's no special \"connection\" made between variables. All we're doing is moving information around. <br><br> Variables only hold one value, the old one is \"thrown away\" (again, what's happening is that assignment replaces the electric charges somewhere inside the computer so the old value is actually \"erased\" or \"deleted\") <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions_slide22.svg){: style=\"border:1px solid black\"} | **Do This:** Run this program. Compare your results with another group. <br><br> **Note:** Have students hold up their two baggies when they're done. Make sure students are evaluating and then assigning. Call out that last three lines which can be a little nutty to think about. You're using a variable's value as part of the assignment. This lets it \"count up by one\". <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables17.svg){: style=\"border:1px solid black\"} | **Do This:** Review the key takeaways with students. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables18.svg){: style=\"border:1px solid black\"} | **Say:** In some programming languages the assignment operator is not written with an arrow but is written as an equal sign. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables19.svg){: style=\"border:1px solid black\"} | **Say:** Here's how the assignment operator looks in Javascript. We'll see more of this in the next lesson! <br><br> **Note:** In math = means \"are equal forever\". In programming = means \"put this value in this variable\".|"
       },
@@ -4058,10 +4047,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "CSP U4 My Pet Rock Example App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": false,
@@ -4084,10 +4073,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L01 Poetry App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": false,
@@ -4110,10 +4099,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L01 Thermostat App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": false,
@@ -4136,10 +4125,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U1 L02 CYU MC_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": false,
@@ -4162,10 +4151,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Thermostat App v1",
         "level_keys": [
           "U4 L02 Thermostat App v1_2021"
-        ]
+        ],
+        "progression": "Thermostat App v1"
       },
       "named_level": null,
       "bonus": false,
@@ -4188,10 +4177,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Thermostat App v1",
         "level_keys": [
           "U4 L02 Thermostat App v1 Code_2021"
-        ]
+        ],
+        "progression": "Thermostat App v1"
       },
       "named_level": null,
       "bonus": false,
@@ -4214,10 +4203,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Thermostat App v2",
         "level_keys": [
           "U4 L02 Thermostat App v2_2021"
-        ]
+        ],
+        "progression": "Thermostat App v2"
       },
       "named_level": null,
       "bonus": false,
@@ -4240,10 +4229,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Thermostat App v3",
         "level_keys": [
           "U4 L02 Thermostat App v3_2021"
-        ]
+        ],
+        "progression": "Thermostat App v3"
       },
       "named_level": null,
       "bonus": false,
@@ -4266,10 +4255,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Thermostat App v3",
         "level_keys": [
           "U4 L02 Thermostat App v3 pt2_2021"
-        ]
+        ],
+        "progression": "Thermostat App v3"
       },
       "named_level": null,
       "bonus": false,
@@ -4292,10 +4281,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U4 L02 CYU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": false,
@@ -4318,10 +4307,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Assigning Numbers and Strings",
         "level_keys": [
           "U4 L03 Variables numbers practice 1_2021"
-        ]
+        ],
+        "progression": "Assigning Numbers and Strings"
       },
       "named_level": null,
       "bonus": false,
@@ -4344,10 +4333,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Assigning Numbers and Strings",
         "level_keys": [
           "U4 L03 Variables numbers practice 4_2021"
-        ]
+        ],
+        "progression": "Assigning Numbers and Strings"
       },
       "named_level": null,
       "bonus": false,
@@ -4370,10 +4359,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 1_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -4396,10 +4385,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 3_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -4422,10 +4411,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 2_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -4448,10 +4437,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 5_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -4474,10 +4463,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 6_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -4500,10 +4489,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Debugging Scope Issues",
         "level_keys": [
           "U4 L03 Variable Scope: Local vs. Global_2021"
-        ]
+        ],
+        "progression": "Debugging Scope Issues"
       },
       "named_level": null,
       "bonus": false,
@@ -4526,10 +4515,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Debugging Scope Issues",
         "level_keys": [
           "U4 L03 Scope Issue_2021"
-        ]
+        ],
+        "progression": "Debugging Scope Issues"
       },
       "named_level": null,
       "bonus": false,
@@ -4552,10 +4541,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Putting it Together",
         "level_keys": [
           "U4 L03 Variables operator practice 4_2021"
-        ]
+        ],
+        "progression": "Putting it Together"
       },
       "named_level": null,
       "bonus": false,
@@ -4578,10 +4567,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U4L3 CFU Variables Psuedocode_2021"
-        ]
+        ],
+        "progression": "Check For Understanding: AP Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4604,10 +4593,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding: AP Practice",
         "level_keys": [
           "U4L3 CFU Variables Randomness Psuedocode_2021"
-        ]
+        ],
+        "progression": "Check for Understanding: AP Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4630,10 +4619,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Try the Photo Liker App",
         "level_keys": [
           "U4 L04 Variables Make Project_2021"
-        ]
+        ],
+        "progression": "Try the Photo Liker App"
       },
       "named_level": null,
       "bonus": false,
@@ -4656,10 +4645,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Photo Liker App",
         "level_keys": [
           "U4 L04 Variables Make Project Submit_2021"
-        ]
+        ],
+        "progression": "Make the Photo Liker App"
       },
       "named_level": null,
       "bonus": false,
@@ -4682,10 +4671,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Conditionals: Boolean Expressions",
         "level_keys": [
           "U4 L06 Introduction to Conditionals: Boolean Expressions_2021"
-        ]
+        ],
+        "progression": "Conditionals: Boolean Expressions"
       },
       "named_level": null,
       "bonus": false,
@@ -4708,10 +4697,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U4 L05 CYU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": false,
@@ -4734,10 +4723,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4L06 Introduction to Conditionals: if Statements_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -4760,10 +4749,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L06 Lemon Hunter App v1 Code_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -4786,10 +4775,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements",
         "level_keys": [
           "U4L06 Introduction to Conditionals: if-else Statements_2021"
-        ]
+        ],
+        "progression": "If-Else Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -4812,10 +4801,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements",
         "level_keys": [
           "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
-        ]
+        ],
+        "progression": "If-Else Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -4838,10 +4827,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements",
         "level_keys": [
           "U4 L06 Lemon Hunter App v2 Code_2021"
-        ]
+        ],
+        "progression": "If-Else Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -4864,10 +4853,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators: AND OR",
         "level_keys": [
           "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
-        ]
+        ],
+        "progression": "Logical Operators: AND OR"
       },
       "named_level": null,
       "bonus": false,
@@ -4890,10 +4879,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators: AND OR",
         "level_keys": [
           "U4 L06 Lemon Hunter App v3 Code_2021"
-        ]
+        ],
+        "progression": "Logical Operators: AND OR"
       },
       "named_level": null,
       "bonus": false,
@@ -4916,10 +4905,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Patterns: If-else-if",
         "level_keys": [
           "Checking Multiple Conditions with If-elseif_2021"
-        ]
+        ],
+        "progression": "Patterns: If-else-if"
       },
       "named_level": null,
       "bonus": false,
@@ -4942,10 +4931,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check Your Understanding",
         "level_keys": [
           "U4 L06 CYU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Check Your Understanding"
       },
       "named_level": null,
       "bonus": false,
@@ -4968,10 +4957,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Boolean expressions",
         "level_keys": [
           "U4 L07 Conditionals Practice 1_2021"
-        ]
+        ],
+        "progression": "Boolean expressions"
       },
       "named_level": null,
       "bonus": false,
@@ -4994,10 +4983,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Boolean expressions",
         "level_keys": [
           "U4 L07 Conditionals Practice 2_2021"
-        ]
+        ],
+        "progression": "Boolean expressions"
       },
       "named_level": null,
       "bonus": false,
@@ -5020,10 +5009,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Boolean expressions",
         "level_keys": [
           "U4 L07 Conditionals Practice 3_2021"
-        ]
+        ],
+        "progression": "Boolean expressions"
       },
       "named_level": null,
       "bonus": false,
@@ -5046,10 +5035,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 10_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -5072,10 +5061,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 4_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -5098,10 +5087,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 5_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -5124,10 +5113,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 6_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -5150,10 +5139,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice equivalent expressions_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -5176,10 +5165,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators",
         "level_keys": [
           "U4 L07 Conditionals Practice 7_2021"
-        ]
+        ],
+        "progression": "Logical Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -5202,10 +5191,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators",
         "level_keys": [
           "U4 L07 Conditionals Practice 8_2021"
-        ]
+        ],
+        "progression": "Logical Operators"
       },
       "named_level": null,
       "bonus": false,
@@ -5228,10 +5217,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U4L10 CFU Conditionals Psuedocode_2021"
-        ]
+        ],
+        "progression": "Check For Understanding: AP Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -5254,10 +5243,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U4L10 CFU Conditionals Psuedocode 2_2021"
-        ]
+        ],
+        "progression": "Check For Understanding: AP Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -5280,10 +5269,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Try to the Museum Ticket Generator App",
         "level_keys": [
           "U4 L08 Conditionals Make Project Sample_2021"
-        ]
+        ],
+        "progression": "Try to the Museum Ticket Generator App"
       },
       "named_level": null,
       "bonus": false,
@@ -5306,10 +5295,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Museum Ticket Generator App",
         "level_keys": [
           "U4L08 Museum Ticket Generator_2021"
-        ]
+        ],
+        "progression": "Make the Museum Ticket Generator App"
       },
       "named_level": null,
       "bonus": false,
@@ -5332,10 +5321,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore Functions",
         "level_keys": [
           "U4 L09 Functions Song_2021"
-        ]
+        ],
+        "progression": "Explore Functions"
       },
       "named_level": null,
       "bonus": false,
@@ -5358,10 +5347,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Declaring and Calling Functions",
         "level_keys": [
           "U4L09 Intro to Functions Video_2021"
-        ]
+        ],
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
       "bonus": false,
@@ -5384,10 +5373,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Declaring and Calling Functions",
         "level_keys": [
           "U4 L09 Score Clicker Investigate_2021"
-        ]
+        ],
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
       "bonus": false,
@@ -5410,10 +5399,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Declaring and Calling Functions",
         "level_keys": [
           "U4 L09 Thermostat App v7_2021"
-        ]
+        ],
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
       "bonus": false,
@@ -5436,10 +5425,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Update Screen Pattern",
         "level_keys": [
           "updateScreen Pattern_2021"
-        ]
+        ],
+        "progression": "Update Screen Pattern"
       },
       "named_level": null,
       "bonus": false,
@@ -5462,10 +5451,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check Your Understanding",
         "level_keys": [
           "CSP U4 L09 CFU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Check Your Understanding"
       },
       "named_level": null,
       "bonus": false,
@@ -5488,10 +5477,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice Calling Functions 1_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": false,
@@ -5514,10 +5503,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice 1_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": false,
@@ -5540,10 +5529,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice 2_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": false,
@@ -5566,10 +5555,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice 3_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": false,
@@ -5592,10 +5581,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Build Practice 2_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": false,
@@ -5618,10 +5607,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Function Scope",
         "level_keys": [
           "Debugging Variable Scope and Functions_2021"
-        ]
+        ],
+        "progression": "Function Scope"
       },
       "named_level": null,
       "bonus": false,
@@ -5644,10 +5633,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Function Scope",
         "level_keys": [
           "U4 L10 Functions Scope Practice 1 v2_2021"
-        ]
+        ],
+        "progression": "Function Scope"
       },
       "named_level": null,
       "bonus": false,
@@ -5670,10 +5659,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "When to Declare Functions",
         "level_keys": [
           "When to Make Functions Map_2021"
-        ]
+        ],
+        "progression": "When to Declare Functions"
       },
       "named_level": null,
       "bonus": false,
@@ -5696,10 +5685,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "When to Declare Functions",
         "level_keys": [
           "U4 L10 Making Functions Practice_2021"
-        ]
+        ],
+        "progression": "When to Declare Functions"
       },
       "named_level": null,
       "bonus": false,
@@ -5722,10 +5711,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U4L10 CFU Functions Psuedocode_2021"
-        ]
+        ],
+        "progression": "Check For Understanding: AP Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -5748,10 +5737,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Quote Maker App",
         "level_keys": [
           "U4 L11 Functions Make 1 2020_2021"
-        ]
+        ],
+        "progression": "Quote Maker App"
       },
       "named_level": null,
       "bonus": false,
@@ -5774,10 +5763,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Quote Maker App",
         "level_keys": [
           "U4 L11 Functions Make 2020_2021"
-        ]
+        ],
+        "progression": "Make the Quote Maker App"
       },
       "named_level": null,
       "bonus": false,
@@ -5800,10 +5789,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L12 Practice PT 1_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": false,
@@ -5826,10 +5815,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L12 Practice PT 2_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": false,
@@ -5852,10 +5841,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create the Screens",
         "level_keys": [
           "U4 L13 Practice PT 1_2021"
-        ]
+        ],
+        "progression": "Create the Screens"
       },
       "named_level": null,
       "bonus": false,
@@ -5878,10 +5867,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create the Variables",
         "level_keys": [
           "U4 L13 Practice PT 2_2021"
-        ]
+        ],
+        "progression": "Create the Variables"
       },
       "named_level": null,
       "bonus": false,
@@ -5904,10 +5893,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create the Function",
         "level_keys": [
           "U4 L13 Practice PT 3_2021"
-        ]
+        ],
+        "progression": "Create the Function"
       },
       "named_level": null,
       "bonus": false,
@@ -5930,10 +5919,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Add onEvents",
         "level_keys": [
           "U4 L13 Practice PT 4_2021"
-        ]
+        ],
+        "progression": "Add onEvents"
       },
       "named_level": null,
       "bonus": false,
@@ -5956,10 +5945,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Test Your Decision Maker App",
         "level_keys": [
           "U4 L14 Practice PT 1_2021"
-        ]
+        ],
+        "progression": "Test Your Decision Maker App"
       },
       "named_level": null,
       "bonus": false,
@@ -5982,10 +5971,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Submit Your Decision Maker App",
         "level_keys": [
           "U4 L14 Practice PT 2_2021"
-        ]
+        ],
+        "progression": "Submit Your Decision Maker App"
       },
       "named_level": null,
       "bonus": false,
@@ -6008,10 +5997,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 4 Exam",
         "level_keys": [
           "CSP 20-21 Unit 4 Assessment_2021"
-        ]
+        ],
+        "progression": "Unit 4 Exam"
       },
       "named_level": null,
       "bonus": false,
