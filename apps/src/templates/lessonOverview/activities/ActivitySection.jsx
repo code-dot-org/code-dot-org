@@ -64,7 +64,7 @@ export default class ActivitySection extends Component {
         <div
           style={{
             ...styles.activitySection,
-            ...(sectionHasTips && {position: 'relative', left: -30})
+            ...(sectionHasTips && {position: 'relative', left: '-30px'})
           }}
         >
           {sectionHasTips && (
