@@ -26,7 +26,7 @@ class ProfanityController < ApplicationController
       DCDO.get('profanity_request_limit_per_min_default', REQUEST_LIMIT_PER_MIN_DEFAULT)
     period = 60
 
-    ProfanityHelper.throttled_find_profanities(params[:text], locale, id, limit, period) do |profanities|
+    ProfanityHelper.throttled_find_profanities(params[:text]&.to_s, locale, id, limit, period) do |profanities|
       return render json: profanities
     end
 

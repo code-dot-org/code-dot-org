@@ -162,6 +162,11 @@ export const commands = {
       }
     });
   },
+
+  setDefaultSpriteSize(size) {
+    coreLibrary.defaultSpriteSize = size;
+  },
+
   setProp(spriteArg, prop, val) {
     if (val === undefined) {
       return;
