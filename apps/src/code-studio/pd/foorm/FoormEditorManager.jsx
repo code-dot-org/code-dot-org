@@ -10,7 +10,10 @@ import FoormEditor from './FoormEditor';
 import {
   resetAvailableForms,
   setLastSaved,
-  setSaveError
+  setSaveError,
+  setFormData,
+  setHasError,
+  setLastSavedQuestions
 } from './editor/foormEditorRedux';
 
 const styles = {
@@ -22,8 +25,6 @@ const styles = {
 
 class FoormEditorManager extends React.Component {
   static propTypes = {
-    updateFormQuestions: PropTypes.func,
-    updateFormData: PropTypes.func,
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
     formNamesAndVersions: PropTypes.array,
@@ -34,7 +35,10 @@ class FoormEditorManager extends React.Component {
     availableForms: PropTypes.array,
     resetAvailableForms: PropTypes.func,
     setLastSaved: PropTypes.func,
-    setSaveError: PropTypes.func
+    setSaveError: PropTypes.func,
+    setFormData: PropTypes.func,
+    setHasError: PropTypes.func,
+    setLastSavedQuestions: PropTypes.func
   };
 
   constructor(props) {
@@ -81,15 +85,14 @@ class FoormEditorManager extends React.Component {
       type: 'get'
     })
       .done(result => {
-        this.props.updateFormData(result);
+        this.updateFormData(result);
         this.setState({
           showCodeMirror: true,
           hasLoadError: false
         });
-        this.props.resetCodeMirror(result['questions']);
       })
       .fail(() => {
-        this.props.updateFormData({
+        this.updateFormData({
           questions: {},
           published: null,
           formName: null,
@@ -100,14 +103,13 @@ class FoormEditorManager extends React.Component {
           showCodeMirror: true,
           hasLoadError: true
         });
-        this.props.resetCodeMirror({});
       });
   }
 
   initializeEmptyCodeMirror = () => {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
-    this.props.updateFormData({
+    this.updateFormData({
       questions: {},
       published: null,
       formName: null,
@@ -118,7 +120,13 @@ class FoormEditorManager extends React.Component {
       showCodeMirror: true,
       hasLoadError: false
     });
-    this.props.resetCodeMirror({});
+  };
+
+  updateFormData = formData => {
+    this.props.setFormData(formData);
+    this.props.setHasError(false);
+    this.props.setLastSavedQuestions(formData['questions']);
+    this.props.resetCodeMirror(formData['questions']);
   };
 
   render() {
@@ -169,6 +177,10 @@ export default connect(
     resetAvailableForms: formMetadata =>
       dispatch(resetAvailableForms(formMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
-    setSaveError: saveError => dispatch(setSaveError(saveError))
+    setSaveError: saveError => dispatch(setSaveError(saveError)),
+    setFormData: formData => dispatch(setFormData(formData)),
+    setHasError: hasError => dispatch(setHasError(hasError)),
+    setLastSavedQuestions: formQuestions =>
+      dispatch(setLastSavedQuestions(formQuestions))
   })
 )(FoormEditorManager);
