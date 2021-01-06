@@ -18,15 +18,17 @@ import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 const styles = {
   frontPage: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    marginTop: 40
   },
   left: {
-    width: '60%'
+    width: '60%',
+    paddingRight: 20
   },
   right: {
     width: '40%',
-    padding: 10,
-    borderLeft: 'solid 1px black'
+    padding: '0px 10px 10px 20px',
+    borderLeft: 'solid 1px #333'
   },
   header: {
     margin: '10px 0px',
@@ -34,8 +36,10 @@ const styles = {
     justifyContent: 'space-between'
   },
   navLink: {
-    fontSize: 18,
-    color: color.purple
+    fontSize: 14,
+    lineHeight: '22px',
+    color: color.purple,
+    margin: '10px 0px'
   },
   copyResourceWarningArea: {
     color: '#8a6d3b',
@@ -43,6 +47,9 @@ const styles = {
     border: '2px solid #f5e79e',
     borderRadius: 4,
     padding: '10px 10px 0px 10px'
+  },
+  titleNoTopMargin: {
+    marginTop: 0
   }
 };
 
@@ -135,7 +142,7 @@ class LessonOverview extends Component {
           <div style={styles.left}>
             {lesson.overview && (
               <div>
-                <h2>{i18n.overview()}</h2>
+                <h2 style={styles.titleNoTopMargin}>{i18n.overview()}</h2>
                 <SafeMarkdown markdown={lesson.overview} />
               </div>
             )}
@@ -157,8 +164,8 @@ class LessonOverview extends Component {
           <div style={styles.right}>
             {lesson.objectives.length > 0 && (
               <div>
-                <h2>{i18n.objectives()}</h2>
-                <h3>{i18n.objectivesSubheading()}</h3>
+                <h2 style={styles.titleNoTopMargin}>{i18n.objectives()}</h2>
+                <h5>{i18n.objectivesSubheading()}</h5>
                 <ul>
                   {lesson.objectives.map(objective => (
                     <li key={objective.id}>
@@ -182,19 +189,19 @@ class LessonOverview extends Component {
                 </div>
                 {lesson.resources['Teacher'] && (
                   <div>
-                    <h3>{i18n.forTheTeachers()}</h3>
+                    <h5>{i18n.forTheTeachers()}</h5>
                     {this.compileResourceList('Teacher')}
                   </div>
                 )}
                 {lesson.resources['Student'] && (
                   <div>
-                    <h3>{i18n.forTheStudents()}</h3>
+                    <h5>{i18n.forTheStudents()}</h5>
                     {this.compileResourceList('Student')}
                   </div>
                 )}
                 {lesson.resources['All'] && (
                   <div>
-                    <h3>{i18n.forAll()}</h3>
+                    <h5>{i18n.forAll()}</h5>
                     {this.compileResourceList('All')}
                   </div>
                 )}
