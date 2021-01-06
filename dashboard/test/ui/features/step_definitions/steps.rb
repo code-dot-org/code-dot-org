@@ -1402,6 +1402,26 @@ And(/^I join the section$/) do
   end
 end
 
+And(/^I attempt to join the section$/) do
+  steps %Q{
+    Given I am on "#{@section_url}"
+  }
+end
+
+And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |invalid, name|
+  password = invalid ? 'Short' : 'ExtraLong'
+  email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+  age = "10"
+  steps %Q{
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "#{age}" option in dropdown "user_age"
+    And I click ".btn.btn-primary" to load a new page
+  }
+end
+
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end

@@ -21,50 +21,6 @@ describe('AzureTextToSpeech', () => {
     playBytesStub.restore();
   });
 
-  describe('enqueueAndPlay', () => {
-    it('plays given soundPromise', async () => {
-      const response = azureTTS.createSoundResponse_({
-        bytes: new ArrayBuffer()
-      });
-
-      await azureTTS.enqueueAndPlay(() => {
-        return Promise.resolve(response);
-      });
-
-      expect(playBytesStub).to.have.been.calledOnce;
-      expect(azureTTS.queue_.length).to.equal(0);
-    });
-
-    it('does not play if sound is already playing', async () => {
-      azureTTS.playing = true;
-      const response = azureTTS.createSoundResponse_({
-        bytes: new ArrayBuffer()
-      });
-      response.playbackOptions.onEnded = sinon.spy();
-
-      await azureTTS.enqueueAndPlay(() => {
-        return Promise.resolve(response);
-      });
-
-      expect(playBytesStub).not.to.have.been.called;
-      expect(response.playbackOptions.onEnded).not.to.have.been.called;
-    });
-
-    it('does not play if sound response was unsuccessful', async () => {
-      const response = azureTTS.createSoundResponse_({
-        error: 'An error occurred'
-      });
-      response.playbackOptions.onEnded = sinon.spy();
-
-      await azureTTS.enqueueAndPlay(() => {
-        return Promise.resolve(response);
-      });
-
-      expect(playBytesStub).not.to.have.been.called;
-      expect(response.playbackOptions.onEnded).to.have.been.calledOnce;
-    });
-  });
-
   describe('createSoundPromise', () => {
     let onFailureSpy;
 
@@ -281,6 +237,66 @@ describe('AzureTextToSpeech', () => {
           });
         });
       });
+    });
+  });
+
+  describe('asyncPlayFromQueue_', () => {
+    let playSpy, successfulResponse;
+
+    beforeEach(() => {
+      playSpy = sinon.spy();
+      successfulResponse = azureTTS.createSoundResponse_({
+        bytes: new ArrayBuffer()
+      });
+    });
+
+    it('no-ops if sound is already playing', async () => {
+      const dequeueStub = sinon.stub(azureTTS, 'dequeue_');
+      azureTTS.playing = true;
+
+      await azureTTS.asyncPlayFromQueue_(playSpy);
+      expect(dequeueStub).not.to.have.been.called;
+      expect(playSpy).not.to.have.been.called;
+
+      dequeueStub.restore();
+    });
+
+    it('no-ops if queue is empty', async () => {
+      const dequeueStub = sinon.stub(azureTTS, 'dequeue_').returns(undefined);
+
+      await azureTTS.asyncPlayFromQueue_(playSpy);
+      expect(dequeueStub).to.have.been.calledOnce;
+      expect(playSpy).not.to.have.been.called;
+
+      dequeueStub.restore();
+    });
+
+    it('plays sound if response was successful', async () => {
+      const dequeueStub = sinon
+        .stub(azureTTS, 'dequeue_')
+        .returns(() => Promise.resolve(successfulResponse));
+
+      await azureTTS.asyncPlayFromQueue_(playSpy);
+      expect(playSpy).to.have.been.calledOnce;
+
+      dequeueStub.restore();
+    });
+
+    it('ends sound if response was unsuccessful', async () => {
+      const unsuccessfulResponse = azureTTS.createSoundResponse_({
+        error: new Error()
+      });
+      unsuccessfulResponse.playbackOptions.onEnded = sinon.spy();
+      const dequeueStub = sinon
+        .stub(azureTTS, 'dequeue_')
+        .returns(() => Promise.resolve(unsuccessfulResponse));
+
+      await azureTTS.asyncPlayFromQueue_(playSpy);
+      expect(unsuccessfulResponse.playbackOptions.onEnded).to.have.been
+        .calledOnce;
+      expect(playSpy).not.to.have.been.called;
+
+      dequeueStub.restore();
     });
   });
 });
