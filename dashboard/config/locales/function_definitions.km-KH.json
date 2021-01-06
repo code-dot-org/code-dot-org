@@ -1288,6 +1288,26 @@
           "rowOfNectarOrHoney": {
             "name": "rowOfNectarOrHoney"
           }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+            "name": "ផ្លាស់ទីនិងបង្កើតទឹកឃ្មុំ"
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
+            "name": "ផ្លាស់ទីនិងបង្កើតទឹកឃ្មុំ"
+          }
+        },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+            "name": "យកទឹកដមផ្កាទាំងអស់"
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+            "name": "យកទឹកដមផ្កាទាំងអស់"
+          }
         }
       }
     }

@@ -2513,7 +2513,161 @@ lt:
           lesson_groups:
             lg_1:
               display_name: Turinys
-        ml-playground:
+        csd3-2021:
           lessons:
-            intro:
-              name: Įvadas
+            Variables:
+              key: Kintamieji
+              name: Kintamieji
+            Text:
+              key: Tekstas
+              name: Tekstas
+            Conditionals:
+              key: Sąlyginiai sakiniai
+              name: Sąlyginiai sakiniai
+            Velocity:
+              key: Greitis
+              name: Greitis
+            Functions:
+              key: Komandų kūrimas
+              name: Komandų kūrimas
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Komandos su parametrais
+              name: Komandos su parametrais
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Dvejetainiai skaičiai
+              name: Dvejetainiai skaičiai
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Kintamieji
+            csp_conditionals:
+              display_name: Sąlyginiai sakiniai
+            csp_functions:
+              display_name: Komandų kūrimas
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Sąrašai
+            csp_loops:
+              display_name: Kartojimas
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Laimingieji žemėlapiai
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Judėk, judėk
+              name: Judėk, judėk
+            'Loops: Getting Loopy':
+              name: Kartojimo supratimas
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Dvejetainės apyrankės
+              name: Dvejetainės apyrankės
+            'Events: The Big Event':
+              name: Didelis įvykis
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_binary:
+              display_name: Dvejetainis
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programavimas ant languoto popieriaus
+            Relay Programming:
+              key: Programavimas komandoje
+              name: Programavimas komandoje
+            Conditionals with Cards:
+              key: Sąlyginiai sakiniai su kortomis
+              name: Sąlyginiai sakiniai su kortomis
+            'Unplugged: Binary':
+              key: 'Be kompiuterio: dvejetainiai skaičiai'
+              name: Dvejetainiai vaizdai
+            Artist Binary:
+              key: 'Meninkas: dvejetainis'
+              name: 'Meninkas: dvejetainis'
+          lesson_groups:
+            csf_events:
+              display_name: Įvykiai
+            csf_loops:
+              display_name: Kartojimas
+            csf_conditionals:
+              display_name: Sąlyginiai sakiniai
+            csf_binary:
+              display_name: Dvejetainis
+            csf_digcit:
+              display_name: Virtuali pilietybė
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Sąlyginiai sakiniai
+            'Functions: Songwriting':
+              name: Dainų rašymas
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_nested_loops:
+              display_name: Kartojimas kartojime
+            csf_functions:
+              display_name: Komandų kūrimas
+        coursef-2021:
+          lessons:
+            Internet:
+              key: Internetas
+              name: Internetas
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_variables:
+              display_name: Kintamieji
+            csf_for_loops:
+              display_name: Kartojimas
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Kartojimas
+            csf_conditionals:
+              display_name: Sąlyginiai sakiniai
+            csf_functions:
+              display_name: Komandų kūrimas
+            csf_variables:
+              display_name: Kintamieji
+            csf_for_loops:
+              display_name: Kartojimas
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Įvadas
+            lessonGroup-3:
+              display_name: Kintamieji

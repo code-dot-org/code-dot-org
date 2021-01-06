@@ -565,6 +565,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Teszteli hogy egy érték nagyobb vagy egyenlő egy másik értéknél. Igaz értéket ad vissza, ha kissebb vagy egyenlő a kifejezés bal oldalán lévő érték a kifejezés jobb oldalán lévő értéknél.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Kevesebb, vagy egyenlő operátor",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_description": "Y-t emeld az x-edik re",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param0_description": "Alapszám.",

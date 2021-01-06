@@ -605,3 +605,114 @@ ta:
               name: உரை
             Functions:
               name: செயல்பாடுகள்
+        virustest:
+          title: ஒரு தீவிர நோய் பரவலை உருவகப்படுத்துதல்
+          description_short: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை உருவாக்க ஸ்ப்ரைட்
+            ஆய்வகத்தைப் பயன்படுத்தவும்.
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
+          lesson_groups:
+            outbreak:
+              display_name: தீவிர நோய் பரவலை உருவகப்படுத்துதல்
+          title: " தீவிர நோய் பரவலை உருவகப்படுத்துபவர் "
+          description_short: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய
+            ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்
+          description: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய ஸ்ப்ரைட்
+            ஆய்வகத்தைப் பயன்படுத்தவும்
+          name: தீவிர நோய் பரவல்
+        csd3-2021:
+          lessons:
+            Variables:
+              key: மாறிலிகள்
+              name: மாறிலிகள்
+            Text:
+              key: உரை
+              name: உரை
+            Functions:
+              key: செயல்பாடுகள்
+              name: செயல்பாடுகள்
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: பட்டியல்கள்
+            csp_loops:
+              display_name: சுழற்சிகள்
+        coursea-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        courseb-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        coursec-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: வரைதாள் செய்நிரல்
+            Dance Party:
+              key: நடன விருந்து
+              name: நடன விருந்து
+          lesson_groups:
+            csf_events:
+              display_name: நிகழ்வுகள்
+            csf_loops:
+              display_name: சுழற்சிகள்
+        coursee-2021:
+          lessons:
+            'Functions: Songwriting':
+              name: பாடல் எழுதுதல்
+          lesson_groups:
+            csf_functions:
+              display_name: செயல்பாடுகள்
+        coursef-2021:
+          lessons:
+            Internet:
+              name: இணையம்
+          lesson_groups:
+            csf_variables:
+              display_name: மாறிலிகள்
+        express-2021:
+          lessons:
+            Dance Party:
+              key: நடன விருந்து
+              name: நடன விருந்து
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_functions:
+              display_name: செயல்பாடுகள்
+            csf_variables:
+              display_name: மாறிலிகள்
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
+          lesson_groups:
+            outbreak:
+              display_name: தீவிர நோய் பரவலை உருவகப்படுத்துதல்
+            lessonGroup-3:
+              display_name: மாறிலிகள்

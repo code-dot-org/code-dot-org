@@ -4,7 +4,7 @@ title: Kod Saatı təşkil etmək üçün qeydiyyatdan keçdiyinizə görə tə�
 
 # Kod Saatı təşkil etmək üçün qeydiyyatdan keçdiyinizə görə təşəkkür!
 
-<br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> **Kod Saatı {{ campaign_date/full }} tarixinə qədər davam edəcək və yeni təlimatlar və digər maraqlı yeniləmələr barədə sizinlə əlaqə saxlayacağıq. Bu arada, indi nə etmək istəyirsiniz?**
 
 As a special thank you to Hour of Code organizers, we have a new poster set featuring Malala, Stephen Curry, Shakira and more available to order at a [50% discount from Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). This year, each set comes with 6 posters and 126 "I did the Hour of Code" stickers. With the discount you'll get them for less than our cost to make them. Supplies are limited, so order your posters soon. If you're not in the United States, you can [download and print all posters]({{ promote/promote_posters_url }}).
 

@@ -6416,7 +6416,395 @@ is:
               name: Uppgötvanir tölvunarfræði
         ml-playground:
           lessons:
-            intro:
-              name: Kynning
             visualizing:
               name: Sjóngerving gagna
+        csd1-2021:
+          description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
+          lessons:
+            Input and Output:
+              key: Inntak og Úttak
+              name: Inntak og Úttak
+            Processing:
+              key: Vinnsla
+              name: Vinnsla
+            Storage:
+              key: Vistun
+              name: Vistun
+            Project - Propose an App:
+              key: Verkefni - Tillaga að Appi
+              name: Verkefni - Tillaga að Appi
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+            csd1_1:
+              display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            csd1_2:
+              display_name: 'Kafli 2: Tölvur og lausn vandamála'
+            csd1_3:
+              display_name: Annað kennsluefni
+        csd2-2021:
+          description_short: "  Lærðu að búa til þinn eigin vef í Vefsmiðjunni."
+          lessons:
+            Intro to HTML:
+              key: Kynning á HTML
+              name: Kynning á HTML
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+        csd3-2021:
+          description_short: "Forritun"
+          lessons:
+            Drawing in Game Lab:
+              key: Teikning í Leikjasmiðju
+              name: Teikning í Leikjasmiðju
+            Variables:
+              key: Breytur
+              name: Breytur
+            Sprites:
+              key: Kvikar
+              name: Kvikar
+            Sprite Properties:
+              key: Eiginleikar kvika
+              name: Eiginleikar kvika
+            Text:
+              key: texti
+              name: texti
+            Sprite Movement:
+              key: Hreyfing kvika
+              name: Hreyfing kvika
+            Conditionals:
+              key: Skilyrði
+              name: Skilyrði
+            Velocity:
+              key: Hraði
+              name: Hraði
+            Collision Detection:
+              key: Skynjun árekstra
+              name: Skynjun árekstra
+            Complex Sprite Movement:
+              key: Samsett kvikahreyfing
+              name: Samsett kvikahreyfing
+            Collisions:
+              key: Árekstrar
+              name: Árekstrar
+            Functions:
+              key: Föll
+              name: Föll
+            The Game Design Process:
+              key: Ferli leikjahönnunar
+              name: Ferli leikjahönnunar
+            Using the Game Design Process:
+              key: Notkun leikjahönnunarferlisins
+              name: Notkun leikjahönnunarferlisins
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kafli 1: Myndir og Hreyfing'
+            csd3_2:
+              display_name: 'Kafli 2: Gerð leikja'
+            cspSurvey:
+              display_name: Könnun
+        csd4-2021:
+          lessons:
+            Identifying User Needs:
+              key: Greining á þörfum notenda
+              name: Greining á þörfum notenda
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kafli 1: Notendamiðuð hönnun'
+            csd4_2:
+              display_name: 'Kafli 2: Frumgerðir appa'
+            csd5_2:
+              display_name: 'Kafli 2: Lausn vandamála með gögn'
+            cspSurvey:
+              display_name: Könnun
+        csd5-2021:
+          description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
+          description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál með gögn.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kafli 1: Kóðun upplýsinga'
+            csd5_2:
+              display_name: 'Kafli 2: Lausn vandamála með gögn'
+            cspSurvey:
+              display_name: Könnun
+        csd6-2021:
+          lessons:
+            Making Music:
+              key: Lagasmíð
+              name: Lagasmíð
+            Functions with Parameters:
+              key: Föll með stikum
+              name: Föll með stikum
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kafli 1: Forritun vélbúnaðar'
+            csd6_2:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+            cspSurvey:
+              display_name: Könnun
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Tvíundartölur
+              name: Tvíundartölur
+          lesson_groups:
+            cspSurvey:
+              display_name: Könnun
+            csp_unit1_2020:
+              display_name: 'Kafli 1 - Stafrænar upplýsingar'
+        csp2-2021:
+          lessons:
+            The Need for Addressing:
+              key: Þörfin fyrir vistföng
+              name: Þörfin fyrir vistföng
+            Routers and Redundancy:
+              key: Netbeinar og umfremd
+              name: Netbeinar og umfremd
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Villuleit
+              name: Villuleit
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Eining 3: Kynning á gerð appa'
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Breytur
+            csp_conditionals:
+              display_name: Skilyrði
+            csp_functions:
+              display_name: Föll
+            csp_project:
+              display_name: Verkefni
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Listar
+            csp_loops:
+              display_name: Lykkjur
+            csp_traversals:
+              display_name: Yfirferðir
+            csp_project:
+              display_name: Verkefni
+        csp7-2021:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Stikar og skilagildi
+            csp_libraries:
+              display_name: Söfn
+        csp10-2021:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Eining 10: Netöryggi og mikilvægi þess'
+        coursea-2021:
+          title: Námskeið A (2019)
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
+          description_audience: 'Aldur: 4-7'
+          lessons:
+            'Programming: Happy Maps':
+              name: Krúttleg kort
+            'Loops: Happy Loops':
+              name: Lukkulegar lykkjur
+            Loops in Ice Age:
+              key: Lykkjur í Ísöld
+            Loops in Collector:
+              name: Lykkjur með Láru
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+        courseb-2021:
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          lessons:
+            Move It, Move It:
+              key: Hreyfa sig, hreyfa sig
+              name: Hreyfa sig, hreyfa sig
+            Sequencing in Maze:
+              key: Röð aðgerða í Völundarhúsi
+              name: Röð aðgerða með Angry Birds
+            Programming in Harvester:
+              key: Forritun með Hirðinum
+              name: Forritun með Hirðinum
+            'Loops: Getting Loopy':
+              name: Lykkjulæti
+            Loops in Harvester:
+              name: Lykkjur með Hirðinum
+            Loops in Collector:
+              name: Lykkjur með Láru
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+        coursec-2021:
+          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 6-10'
+          lessons:
+            Binary Bracelets:
+              key: Stafræn armbönd
+              name: Stafræn armbönd
+            Looking Ahead:
+              key: Horft fram á við
+              name: Horft fram á við
+            'Events: The Big Event':
+              name: Stórviðburður
+          lesson_groups:
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_binary:
+              display_name: Tvíundir
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+            csf_data:
+              display_name: Gögn
+        coursed-2021:
+          description_audience: 'Aldur: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Forritun rúðublaða
+            Relay Programming:
+              key: Boðhlaupsforritun
+              name: Boðhlaupsforritun
+            Dance Party:
+              key: Danspartý
+              name: Danspartý
+            Loops in Ice Age:
+              key: Lykkjur í Ísöld
+              name: Lykkjur í Ísöld
+            Conditionals with Cards:
+              key: Skilyrði með kortum
+              name: Skilyrði með kortum
+            'Unplugged: Binary':
+              key: 'Verkefni án tölvu: Tvíundir'
+              name: Tvíundarmyndir
+            Artist Binary:
+              key: 'Listamaður: Tvíundir'
+              name: 'Listamaður: Tvíundir'
+          lesson_groups:
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_events:
+              display_name: Atvik
+            csf_loops:
+              display_name: Lykkjur
+            csf_conditionals:
+              display_name: Skilyrði
+            csf_binary:
+              display_name: Tvíundir
+            csf_digcit:
+              display_name: Stafrænn borgari
+        coursee-2021:
+          description_audience: 'Aldur: 8 - 12'
+          lessons:
+            Conditionals:
+              key: Skilyrði
+            'Functions: Songwriting':
+              name: Lagasmíð
+          lesson_groups:
+            ramp_up:
+              display_name: Efling
+            csf_sprites:
+              display_name: Kvikar
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_nested_loops:
+              display_name: Innri lykkjur
+            csf_functions:
+              display_name: Föll
+        coursef-2021:
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 9-13'
+          lessons:
+            The Power of Words:
+              key: Afl orða
+              name: Afl orða
+            Envelope Variables:
+              key: Umslagabreytur
+              name: Umslagabreytur
+            Internet:
+              key: Internet
+              name: Internetið
+            For Loop Fun:
+              key: Fyndnar frá lykkjur
+              name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              key: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              key: Frá-lykkjur með Listamanni
+          lesson_groups:
+            ramp_up:
+              display_name: Efling
+            csf_digcit:
+              display_name: Stafrænn borgari
+            csf_variables:
+              display_name: Breytur
+            csf_data:
+              display_name: Gögn
+            csf_for_loops:
+              display_name: Frá lykkjur
+            csf_sprites:
+              display_name: Kvikar
+        express-2021:
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          lessons:
+            Dance Party:
+              key: Danspartý
+              name: Danspartý
+          lesson_groups:
+            csf_warmup:
+              display_name: Upphitun
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_conditionals:
+              display_name: Skilyrði
+            csf_functions:
+              display_name: Föll
+            csf_variables:
+              display_name: Breytur
+            csf_for_loops:
+              display_name: Frá lykkjur
+            csf_sprites:
+              display_name: Kvikar
+        pre-express-2021:
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          lessons:
+            Programming in Harvester:
+              key: Forritun með Hirðinum
+              name: Forritun með Hirðinum
+            Loops with Laurel:
+              key: Lykkjur með Láru
+              name: Lykkjur með Láru
+          lesson_groups:
+            csf_sequencing:
+              display_name: Skipanaröð
+            csf_loops:
+              display_name: Lykkjur
+            csf_events:
+              display_name: Atvik
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Umslagabreytur
+          lesson_groups:
+            ramp_up:
+              display_name: Kynning
+            lessonGroup-3:
+              display_name: Breytur

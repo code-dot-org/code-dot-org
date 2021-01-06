@@ -120,7 +120,10 @@ fr:
     need_unlock: "Pas reçu les instructions de déverrouillage?"
     not_linked: "Désolé, votre compte Code.org n'est pas lié à %{provider}. Vous devez vous identifier en tapant votre mot de passe, ci-dessous."
     use_clever: "Désolé, votre compte Code.org n'est pas lié à %{provider}. Merci de vous connecter via Clever Portal."
+    invalid_provider: "Désolé, les comptes %{provider} ne pas peuvent être liés à des comptes Code.org."
+    migration_required: "Désolé, nous ne pouvons pas connecter ou déconnecter des comptes qui utilisent encore l'ancienne mouture des comptes. Veuillez mettre à jour vers la nouvelle mouture de comptes."
     unable_to_connect_provider: "Impossible de connecter votre compte Code.org à votre compte %{provider}. Veuillez réessayer."
+    disconnect_successful: "Opération réussie! Nous avons déconnecté le compte externe de votre compte Code.org."
     already_in_use: "Votre compte %{provider} est déjà connecté à un autre compte Code.org."
     already_linked: "Votre compte %{provider} est déjà lié à votre compte de Code.org."
     existing_account:
@@ -322,6 +325,7 @@ fr:
       game_lab_tutorials: "Tutoriels du Labo des Jeux"
       sprite_lab_documentation: "Documentation sur le Labo des Lutins"
       sprite_lab_tutorials: "Tutoriels du Labo des Lutins"
+      web_lab_documentation: "Documentation Web Lab"
       educate_overview: "Aperçu enseignant"
       educate_elementary: "École primaire"
       educate_middle: "Collège"
@@ -435,6 +439,7 @@ fr:
       worked_with: 'A travaillé avec'
       update_lock_settings: 'Mettre à jour les paramètres de verrouillage ici.'
       clear_response: 'Effacer la réponse'
+    student_code_view_diabled: 'Le code d''étudiant ne peut être visualisé pour cette activité.'
   user:
     email_confirm_needed: 'L''adresse e-mail n''a pas été confirmée:'
     email_confirm_needed_required: 'Votre adresse e-mail %{email} n''a pas été confirmée :'
@@ -474,6 +479,7 @@ fr:
     for_parents_and_guardians: "Pour les parents et tuteurs"
     link_a_parent_email: "Associez l'adresse électronique d'un parent/tuteur à ce compte afin de rester informé des progrès et des projets de votre enfant. Vous pourrez également utiliser cette l'adresse électronique pour récupérer le mot de passe."
     parent_guardian_email_label: "E-mail du parent/tuteur"
+    remove_parent_email_label: "Supprimer"
     none: "Aucun"
     only_one_parent_email_supported_warning: "Remarque : notre système ne supporte qu'une seule adresse électronique de parent/tuteur par compte étudiant, pour le moment."
     encrypted: "chiffré"
@@ -547,6 +553,7 @@ fr:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utilise p5.play, qui est distribué sous la licence <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Fourni par Amazon Web Services'
+    google_copyright: '&copy; Google Inc. utilisé avec autorisation. Google Classroom est une marque déposée de Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE et Hour of Code&reg; sont des marques déposées de Code.org.'
     copyright: 'Copyright'
     more: 'Plus'
@@ -583,7 +590,7 @@ fr:
   compatibility:
     upgrade:
       unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue."
-      link: "Pour en savoir plus"
+      link: "En savoir plus"
       applab_unsupported_tablet: "Le Labo des Applis fonctionne idéalement sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil sur votre appareil actuel."
       gamelab_unsupported_tablet: "Le Labo des Jeux fonctionne idéalement sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil sur votre appareil actuel."
       oceans_unsupported_browser: "Ce navigateur n'est pas pris en charge pour ce didacticiel. Veuillez essayer de visiter cette page en utilisant Edge, Chrome, Firefox ou un autre navigateur moderne."
@@ -793,6 +800,14 @@ fr:
     reminder_desc: 'Nous avons mis à jour nos <a href="%{tos_url}" target="_blank">Conditions d’utilisation</a> et notre<a href="%{privacy_url}" target="_blank">Politique de confidentialité</a>. Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.'
     reminder_desc_markdown: Nous avons mis à jour nos [Conditions d’utilisation](%{tos_url}) et notre[Politique de confidentialité](%{privacy_url}). Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.
     review_terms: "Consulter les éléments modifiés"
+  donor_interstitial:
+    title: "Vos leçons CS gratuites sont rendues possibles par..."
+    subtitle: "Nous voudrions remercier les généreux donateurs dont le soutien a fait de Code.org un réel succès. Nous nous engageons à maintenir Code.org gratuit pour les écoles et les étudiants, mondialement, grâce à la générosité continue de nos donateurs [donors](%{donors_url})!"
+    local_supporters: "Soutiens Locaux"
+    global_supporters: "Soutiens Mondiaux"
+    support_codeorg_1: "Chaque dollar donné à Code.org apporte des opportunités à plus d'étudiants."
+    support_codeorg_2: "[Faire un don maintenant](%{donate_url}) pour soutnenir Code.org."
+    get_started: "Débuter avec Code.org"
   school_info_interstitial:
     title: "Nous voulons apporter l'Informatique à tous les étudiants - aidez-nous à suivre notre progression !"
     message: "Veuillez saisir les informations de l’école ci-dessous."
@@ -989,6 +1004,7 @@ fr:
       school_country:
         canada: 'Canada'
         chile: 'Chili'
+        colombia: 'Colombie'
         israel: 'Israël'
         malaysia: 'Malaisie'
         mexico: 'Mexique'
@@ -1037,6 +1053,7 @@ fr:
         csf_express: 'Les Fondamentaux de l’Informatique (Pré-Express ou Express)'
         csd: 'Découvertes de l''Informatique'
         csp: 'Principes de l''Informatique'
+        not_applicable: "Non applicable"
       email_opt_in:
         opt_in_yes: 'Oui'
         opt_in_no: 'Non'
@@ -1045,6 +1062,9 @@ fr:
       intro: "Merci d’avoir pris le temps de recevoir une formation sur le programme d’études de Code.org. Notre mission d’apporter des opportunités d’éducation en informatique à tous les enfants, de toutes les écoles, du monde entier, ne serait pas possible sans vous."
       instructions: "Veuillez remplir le formulaire, ci-dessous, pour indiquer que 1) vous avez participé à un atelier de formation dirigé par un des partenaires internationaux de Code.org et 2) vous acceptez de partager vos informations avec notre partenaire international, dans votre pays, afin qu’il puisse soutenir votre parcours en tant que professeur d’informatique."
       thanks_markdown: "Merci d’avoir soumis votre réponse ! Nous aurons grand plaisir à vous soutenir au long de votre découverte du programme d’études et des outils de Code.org. Veuillez continuer à partager vos questions et vos commentaires avec nous en nous écrivant à [support@code.org](%{support_email_url}) ou en postant sur le [forum des enseignants](%{teacher_forum_url})!"
+      facilitator_not_listed: "Mon facilitateur n'est pas listé"
+      facilitator_not_applicable: "Non applicable"
+      organizer_not_listed: "Mon organisateur n'est pas listé"
     logged_out:
       heading: 'Merci de votre intérêt pour le Programme d’Apprentissage Professionnel !'
       body: 'Pour commencer, vous devez d’abord être connecté à votre compte de Code.org. Si vous désirez plus d’informations sur le programme, avant de commencer votre demande, veuillez consulter l’<a href="%{url}">aperçu du Programme d’Apprentissage Professionnel</a>.'
@@ -1060,9 +1080,10 @@ fr:
     accept: 'J''accepte'
   page_not_found_title: "Page Introuvable"
   page_not_found_header: '404 : Page Introuvable'
-  page_not_found_description: "La page recherchée n’existe pas à cette adresse. Vérifiez l’adresse Web et réessayez, ou retournez à notre page d’accueil."
+  page_not_found_description: "La page recherchée n'existe pas à cette adresse. Vérifie l'adresse du site internet et réessaie. Sinon, retourne sur la page d'accueil."
   page_not_found_button: "Retourner à la page d’accueil"
   copy: 'Copier'
+  confirm: 'Confirmer'
   maker:
     google_oauth:
       login_with_google: 'Connectez - vous à l''application Maker avec Google'
@@ -1072,7 +1093,9 @@ fr:
       error_wrong_provider: 'Mauvais fournisseur. Veuillez vous assurez que vous vous connectez avec Google.'
       error_invalid_user: 'Identifiant invalide. Veuillez vous reconnecter.'
       error_no_code: 'Veuillez entrer votre code de connexion.'
+      confirm_login: 'Sélectionnez "Confirmer" pour vous connecter avec votre compte Google.'
   parent_email_banner:
     text: "**Êtes-vous un parent ou un tuteur ?** Associez votre adresse électronique à ce compte afin de rester informé des progrès et des projets de votre enfant !** "
     link_your_email: "Associez votre adresse électronique"
     not_now: "Pas maintenant"
+  unit_prefix: "Unité %{n}"

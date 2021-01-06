@@ -756,7 +756,10 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "verificar hipótesis"
+            "name": "verificar hipótesis",
+            "parameters": {
+              "theGuess": "la Suposición"
+            }
           }
         },
         "InspirationalArtwork": {
@@ -3302,7 +3305,8 @@
             "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
-            }
+            },
+            "description": "dibuja un cuadrado con el parámetro 'longitud'"
           },
           "checker": {
             "name": "verificador",
@@ -3332,7 +3336,8 @@
             "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
-            }
+            },
+            "description": "dibuja un cuadrado con un parámetro 'longitud'"
           }
         },
         "courseF_artist_fwp3": {

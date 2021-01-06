@@ -1111,17 +1111,20 @@
         "courseB_maze_seq6_2018": {
           "courseB_maze_seq5_c": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!",
           "courseB_maze_seq6_a": "최종 코드에는 3개의 이동 블록이 있어야 합니다.",
-          "courseB_maze_seq6_b": "막히면, 2개 부분, 한 부분은 측면, 한 부분은 위 아래로 나눠 퍼즐을 풀어 보세요. "
+          "courseB_maze_seq6_b": "막히면, 2개 부분, 한 부분은 측면, 한 부분은 위 아래로 나눠 퍼즐을 풀어 보세요. ",
+          "courseB_maze_seq5_d": "도토리로 가는 방법을 잘 모르겠어요? 이 경로를 시도해 보세요!"
         },
         "courseB_maze_seq6_2019": {
           "courseB_maze_seq5_c": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!",
           "courseB_maze_seq6_a": "최종 코드에는 3개의 이동 블록이 있어야 합니다.",
-          "courseB_maze_seq6_b": "막히면, 2개 부분, 한 부분은 측면, 한 부분은 위 아래로 나눠 퍼즐을 풀어 보세요. "
+          "courseB_maze_seq6_b": "막히면, 2개 부분, 한 부분은 측면, 한 부분은 위 아래로 나눠 퍼즐을 풀어 보세요. ",
+          "courseB_maze_seq5_d": "도토리로 가는 방법을 잘 모르겠어요? 이 경로를 시도해 보세요!"
         },
         "courseB_maze_seq6_2020": {
           "courseB_maze_seq5_c": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!",
           "courseB_maze_seq6_a": "최종 코드에는 3개의 이동 블록이 있어야 합니다.",
-          "courseB_maze_seq6_b": "막히면, 2개 부분, 한 부분은 측면, 한 부분은 위 아래로 나눠 퍼즐을 풀어 보세요. "
+          "courseB_maze_seq6_b": "막히면, 2개 부분, 한 부분은 측면, 한 부분은 위 아래로 나눠 퍼즐을 풀어 보세요. ",
+          "courseB_maze_seq5_d": "도토리로 가는 방법을 잘 모르겠어요? 이 경로를 시도해 보세요!"
         },
         "courseB_maze_seq8": {
           "courseB_maze_seq8_b": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!",
@@ -1159,15 +1162,18 @@
         },
         "courseB_starWars_prog9_2018": {
           "courseB_starWars_prog9_a": "실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  ",
-          "courseB_starWars_prog9_b": "이 퍼즐을 푸는 방법은 많이 있습니다."
+          "courseB_starWars_prog9_b": "이 퍼즐을 푸는 방법은 많이 있습니다.",
+          "courseB_starWars_prog9_c": "여기서 '반복' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml>루프가 도움이 될까요?"
         },
         "courseB_starWars_prog9_2019": {
           "courseB_starWars_prog9_a": "실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  ",
-          "courseB_starWars_prog9_b": "이 퍼즐을 푸는 방법은 많이 있습니다."
+          "courseB_starWars_prog9_b": "이 퍼즐을 푸는 방법은 많이 있습니다.",
+          "courseB_starWars_prog9_c": "여기서 '반복' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml>루프가 도움이 될까요?"
         },
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  ",
-          "courseB_starWars_prog9_b": "이 퍼즐을 푸는 방법은 많이 있습니다."
+          "courseB_starWars_prog9_b": "이 퍼즐을 푸는 방법은 많이 있습니다.",
+          "courseB_starWars_prog9_c": "여기서 '반복' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml>루프가 도움이 될까요?"
         },
         "courseC_artist_prog2": {
           "courseC_artist_prog2_a": "'앞으로 100 픽셀 이동' 블록을 쓰면 자동으로 라인을 그려질 것입니다.",
@@ -1628,30 +1634,39 @@
         "courseB_collector_loops_challenge2a_2019": {
           "courseB_collector_loops_challenge2a_a": "뭔가 잘못되었으면, 디버깅 해보세요. 포기하지 마세요!",
           "courseB_collector_loops_challenge2a_b": "미로를 빠져 나가기 위해 이 옵션을 보세요. 반복되는 패턴이 보이나요?",
-          "courseB_collector_loops_challenge2a_c": "보물을 모두 모으기 위해 두 개의 [블러클리 블록][0] 블록을 루프 내부에 추가하거나 아니면 블록을 자체 '반복' 블록 안에 놓아야 합니다. "
+          "courseB_collector_loops_challenge2a_c": "보물을 모두 모으기 위해 두 개의 <xml> <block type=\"collector_collect\"/></xml> 블록을 루프 내부에 추가하거나 아니면 블록을 자체 '반복' 블록 안에 놓아야 합니다. "
         },
         "courseB_collector_loops_challenge2a_2020": {
           "courseB_collector_loops_challenge2a_a": "뭔가 잘못되었으면, 디버깅 해보세요. 포기하지 마세요!",
           "courseB_collector_loops_challenge2a_b": "미로를 빠져 나가기 위해 이 옵션을 보세요. 반복되는 패턴이 보이나요?",
-          "courseB_collector_loops_challenge2a_c": "보물을 모두 모으기 위해 두 개의 [블러클리 블록][0] 블록을 루프 내부에 추가하거나 아니면 블록을 자체 '반복' 블록 안에 놓아야 합니다. "
+          "courseB_collector_loops_challenge2a_c": "보물을 모두 모으기 위해 두 개의 <xml> <block type=\"collector_collect\"/></xml> 블록을 루프 내부에 추가하거나 아니면 블록을 자체 '반복' 블록 안에 놓아야 합니다. "
         },
         "courseA_harvester_loops5": {
-          "courseA_harvester_loops5_a": "막히면, 2개 부분, 한 부분은 코너 앞, 한 부분은 코너 다음에 있는 퍼즐을 풀어 보세요. "
+          "courseA_harvester_loops5_a": "막히면, 2개 부분, 한 부분은 코너 앞, 한 부분은 코너 다음에 있는 퍼즐을 풀어 보세요. ",
+          "courseA_harvester_loops5_b": "최종 코드에는**한 개**의 `반복`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> 루프와 **한 개**의 `남쪽으로 이동` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> 블록, **한 개**의 `서쪽으로 이동` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> 블록이 들어 있을 것입니다.",
+          "courseA_harvester_loops5_c": "옥수수를 모두 따기 위해 이 경로를 이용하세요!"
         },
         "courseA_harvester_loops5_2019": {
-          "courseA_harvester_loops5_a": "막히면, 2개 부분, 한 부분은 코너 앞, 한 부분은 코너 다음에 있는 퍼즐을 풀어 보세요. "
+          "courseA_harvester_loops5_a": "막히면, 2개 부분, 한 부분은 코너 앞, 한 부분은 코너 다음에 있는 퍼즐을 풀어 보세요. ",
+          "courseA_harvester_loops5_b": "최종 코드에는**한 개**의 `반복`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> 루프와 **한 개**의 `남쪽으로 이동` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> 블록, **한 개**의 `서쪽으로 이동` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> 블록이 들어 있을 것입니다.",
+          "courseA_harvester_loops5_c": "옥수수를 모두 따기 위해 이 경로를 이용하세요!"
         },
         "courseA_harvester_loops5_2020": {
-          "courseA_harvester_loops5_a": "막히면, 2개 부분, 한 부분은 코너 앞, 한 부분은 코너 다음에 있는 퍼즐을 풀어 보세요. "
+          "courseA_harvester_loops5_a": "막히면, 2개 부분, 한 부분은 코너 앞, 한 부분은 코너 다음에 있는 퍼즐을 풀어 보세요. ",
+          "courseA_harvester_loops5_b": "최종 코드에는**한 개**의 `반복`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> 루프와 **한 개**의 `남쪽으로 이동` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> 블록, **한 개**의 `서쪽으로 이동` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> 블록이 들어 있을 것입니다.",
+          "courseA_harvester_loops5_c": "옥수수를 모두 따기 위해 이 경로를 이용하세요!"
         },
         "courseA_harvester_seq2": {
-          "courseA_harvester_seq2_b": "종이에 각 단계를 적어 솔루션을 찾아 보세요!"
+          "courseA_harvester_seq2_b": "종이에 각 단계를 적어 솔루션을 찾아 보세요!",
+          "courseA_harvester_seq2_a": "옥수수를 딸때 <xml><block type=\"harvester_corn\"/></xml>을 사용하는 걸 잊지 마세요!"
         },
         "courseA_harvester_seq2_2019": {
-          "courseA_harvester_seq2_b": "종이에 각 단계를 적어 솔루션을 찾아 보세요!"
+          "courseA_harvester_seq2_b": "종이에 각 단계를 적어 솔루션을 찾아 보세요!",
+          "courseA_harvester_seq2_a": "옥수수를 딸때 <xml><block type=\"harvester_corn\"/></xml>을 사용하는 걸 잊지 마세요!"
         },
         "courseA_harvester_seq2_2020": {
-          "courseA_harvester_seq2_b": "종이에 각 단계를 적어 솔루션을 찾아 보세요!"
+          "courseA_harvester_seq2_b": "종이에 각 단계를 적어 솔루션을 찾아 보세요!",
+          "courseA_harvester_seq2_a": "옥수수를 딸때 <xml><block type=\"harvester_corn\"/></xml>을 사용하는 걸 잊지 마세요!"
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_a": "새를 움직이게 하는데 어려움이 있으면, 블록이 <xml>\n  <block type=\"when_run\"/>\n</xml> 아래 제 자리에 끼어져 있는지 확인하세요. ",
@@ -1662,12 +1677,12 @@
           "courseA_maze_seq1_b": "돼지에게 가게 하려면 새는 서쪽으로 3회 이동해야 합니다. 이 블록:<xml><block type=\"maze_moveWest\"/></xml>을 사용하세요. "
         },
         "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_a": "새를 움직이게 하는데 어려움이 있으면, 블록이 [블러클리 블록][0] 아래 제 자리에 끼어져 있는지 확인하세요. ",
-          "courseA_maze_seq1_b": "돼지에게 가게 하려면 새는 서쪽으로 3회 이동해야 합니다. 이 블록:[블러클리 블록][0]을 사용하세요. "
+          "courseA_maze_seq1_a": "새를 움직이게 하는데 어려움이 있으면, 블록이 <xml>\n  <block type=\"when_run\"/>\n</xml> 아래 제 자리에 끼어져 있는지 확인하세요. ",
+          "courseA_maze_seq1_b": "돼지에게 가게 하려면 새는 서쪽으로 3회 이동해야 합니다. 이 블록:<xml><block type=\"maze_moveWest\"/></xml>을 사용하세요. "
         },
         "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_a": "새를 움직이게 하는데 어려움이 있으면, 블록이 [블러클리 블록][0] 아래 제 자리에 끼어져 있는지 확인하세요. ",
-          "courseA_maze_seq1_b": "돼지에게 가게 하려면 새는 서쪽으로 3회 이동해야 합니다. 이 블록:[블러클리 블록][0]을 사용하세요. "
+          "courseA_maze_seq1_a": "새를 움직이게 하는데 어려움이 있으면, 블록이 <xml>\n  <block type=\"when_run\"/>\n</xml> 아래 제 자리에 끼어져 있는지 확인하세요. ",
+          "courseA_maze_seq1_b": "돼지에게 가게 하려면 새는 서쪽으로 3회 이동해야 합니다. 이 블록:<xml><block type=\"maze_moveWest\"/></xml>을 사용하세요. "
         },
         "courseA_maze_seq2": {
           "courseA_maze_seq2_a": "이 프로그램에는 1개의 블록이 빠져 있습니다. 어느 것인지 알아낼 수 있어요?",
@@ -1687,13 +1702,16 @@
           "courseA_maze_seq5_b": "두 개 방향을 가리키는 2개의 블록이 필요합니다."
         },
         "courseA_maze_seq5_2018": {
-          "1": "종이에 각 단계를 적어 솔루션을 찾아 보세요!"
+          "1": "종이에 각 단계를 적어 솔루션을 찾아 보세요!",
+          "2": "이 블록이 필요할 것입니다:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_2019": {
-          "1": "종이에 각 단계를 적어 솔루션을 찾아 보세요!"
+          "1": "종이에 각 단계를 적어 솔루션을 찾아 보세요!",
+          "2": "이 블록이 필요할 것입니다:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_2020": {
-          "1": "종이에 각 단계를 적어 솔루션을 찾아 보세요!"
+          "1": "종이에 각 단계를 적어 솔루션을 찾아 보세요!",
+          "2": "이 블록이 필요할 것입니다:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_copy": {
           "courseA_maze_seq5_a": "종이에 각 단계를 적어 솔루션을 찾아 보세요!",
@@ -1754,11 +1772,11 @@
           "courseA_collector_loops1_b": "간단한 해결책은 동쪽으로 2회 이동하여 보물을 얻는 것일 거예요."
         },
         "courseA_collector_loops1_2019": {
-          "courseA_collector_loops1_a": "보물을 가지고 정사각형으로 이동한 후, 이 블록을 사용하여 집어 올리세요.\n\n[블러클리 블록][0]",
+          "courseA_collector_loops1_a": "보물을 가지고 정사각형으로 이동한 후, 이 블록을 사용하여 집어 올리세요.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "간단한 해결책은 동쪽으로 2회 이동하여 보물을 얻는 것일 거예요."
         },
         "courseA_collector_loops1_2020": {
-          "courseA_collector_loops1_a": "보물을 가지고 정사각형으로 이동한 후, 이 블록을 사용하여 집어 올리세요.\n\n[블러클리 블록][0]",
+          "courseA_collector_loops1_a": "보물을 가지고 정사각형으로 이동한 후, 이 블록을 사용하여 집어 올리세요.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
           "courseA_collector_loops1_b": "간단한 해결책은 동쪽으로 2회 이동하여 보물을 얻는 것일 거예요."
         },
         "courseA_collector_loops2": {
@@ -1771,11 +1789,11 @@
         },
         "courseA_collector_loops2_2019": {
           "courseA_collector_loops2_a": "이동을 해야 보물을 모을 수 있게 됩니다.",
-          "courseA_collector_loops2_b": "보물을 가지고 정사각형으로 이동한 후, 이 블록을 사용하여 집어 올리세요.\n\n[블러클리 블록][0]"
+          "courseA_collector_loops2_b": "보물을 가지고 정사각형으로 이동한 후, 이 블록을 사용하여 집어 올리세요.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops2_2020": {
           "courseA_collector_loops2_a": "이동을 해야 보물을 모을 수 있게 됩니다.",
-          "courseA_collector_loops2_b": "보물을 가지고 정사각형으로 이동한 후, 이 블록을 사용하여 집어 올리세요.\n\n[블러클리 블록][0]"
+          "courseA_collector_loops2_b": "보물을 가지고 정사각형으로 이동한 후, 이 블록을 사용하여 집어 올리세요.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3": {
           "courseA_collector_loops3_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프를 사용해 보세요! ",
@@ -1786,10 +1804,10 @@
           "courseA_collector_loops3_b": "기억하세요, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프 내부에는 1개 이상의 블록을 놓을 수 있습니다."
         },
         "courseA_collector_loops3_2019": {
-          "courseA_collector_loops3_b": "기억하세요, [블러클리 블록][0] 루프 내부에는 1개 이상의 블록을 놓을 수 있습니다."
+          "courseA_collector_loops3_b": "기억하세요, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프 내부에는 1개 이상의 블록을 놓을 수 있습니다."
         },
         "courseA_collector_loops3_2020": {
-          "courseA_collector_loops3_b": "기억하세요, [블러클리 블록][0] 루프 내부에는 1개 이상의 블록을 놓을 수 있습니다."
+          "courseA_collector_loops3_b": "기억하세요, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프 내부에는 1개 이상의 블록을 놓을 수 있습니다."
         },
         "courseA_collector_loops4": {
           "courseA_collector_loops4_a": "라우렐이 얼마나 멀리 갈지를 변경하려면 루프 실행 횟수를 변경하세요.",
@@ -1801,11 +1819,11 @@
         },
         "courseA_collector_loops4_2019": {
           "courseA_collector_loops4_a": "라우렐이 얼마나 멀리 갈지를 변경하려면 루프 실행 횟수를 변경하세요.",
-          "courseA_collector_loops4_b": "라우렐은  [블러클리 블록][0] 루프를 끝낸 후에야 아래로 걸어가 보물을 수집할 수 있음을 잊지 마세오!"
+          "courseA_collector_loops4_b": "라우렐은  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프를 끝낸 후에야 아래로 걸어가 보물을 수집할 수 있음을 잊지 마세오!"
         },
         "courseA_collector_loops4_2020": {
           "courseA_collector_loops4_a": "라우렐이 얼마나 멀리 갈지를 변경하려면 루프 실행 횟수를 변경하세요.",
-          "courseA_collector_loops4_b": "라우렐은  [블러클리 블록][0] 루프를 끝낸 후에야 아래로 걸어가 보물을 수집할 수 있음을 잊지 마세오!"
+          "courseA_collector_loops4_b": "라우렐은  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프를 끝낸 후에야 아래로 걸어가 보물을 수집할 수 있음을 잊지 마세오!"
         },
         "courseA_collector_loops5": {
           "courseA_collector_loops5_a": "답을 바로 알아내지 못하겠으면, 종이를 사용하여 어떤 화살표가 필요한지 알아내고 패턴을 보세요.",
@@ -1820,12 +1838,12 @@
         "courseA_collector_loops5_2019": {
           "courseA_collector_loops5_a": "답을 바로 알아내지 못하겠으면, 종이를 사용하여 어떤 화살표가 필요한지 알아내고 패턴을 보세요.",
           "courseA_collector_loops5_b": "문제를 2개 부분으로 나누고 옆으로 그 다음에는 아래로 이동하세요.",
-          "courseA_collector_loops5_c": "라우렐을 서쪽으로 이동하여 보물을 수집하는 [블러클리 블록][0] 루프로 시작하길 원할 수 있습니다. "
+          "courseA_collector_loops5_c": "라우렐을 서쪽으로 이동하여 보물을 수집하는 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프로 시작하길 원할 수 있습니다. "
         },
         "courseA_collector_loops5_2020": {
           "courseA_collector_loops5_a": "답을 바로 알아내지 못하겠으면, 종이를 사용하여 어떤 화살표가 필요한지 알아내고 패턴을 보세요.",
           "courseA_collector_loops5_b": "문제를 2개 부분으로 나누고 옆으로 그 다음에는 아래로 이동하세요.",
-          "courseA_collector_loops5_c": "라우렐을 서쪽으로 이동하여 보물을 수집하는 [블러클리 블록][0] 루프로 시작하길 원할 수 있습니다. "
+          "courseA_collector_loops5_c": "라우렐을 서쪽으로 이동하여 보물을 수집하는 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프로 시작하길 원할 수 있습니다. "
         },
         "courseA_collector_preLoops7": {
           "courseA_collector_loops2_b": "보물을 가지고 정사각형으로 이동한 후, 이 블록을 사용하여 집어 올리세요.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
@@ -1835,13 +1853,16 @@
           "courseA_maze_seq10_b": "이 퍼즐을 풀려면 3개 방향으로 가야 합니다."
         },
         "courseA_maze_seq10_2018": {
-          "courseA_maze_seq10_a": "어려움을 겪고 있으면, 먼저 종이 위에 각 단계를 적어보세요."
+          "courseA_maze_seq10_a": "어려움을 겪고 있으면, 먼저 종이 위에 각 단계를 적어보세요.",
+          "courseA_maze_seq10_b": "이 퍼즐을 풀려면 3개 방향으로 가야 합니다."
         },
         "courseA_maze_seq10_2019": {
-          "courseA_maze_seq10_a": "어려움을 겪고 있으면, 먼저 종이 위에 각 단계를 적어보세요."
+          "courseA_maze_seq10_a": "어려움을 겪고 있으면, 먼저 종이 위에 각 단계를 적어보세요.",
+          "courseA_maze_seq10_b": "이 퍼즐을 풀려면 3개 방향으로 가야 합니다."
         },
         "courseA_maze_seq10_2020": {
-          "courseA_maze_seq10_a": "어려움을 겪고 있으면, 먼저 종이 위에 각 단계를 적어보세요."
+          "courseA_maze_seq10_a": "어려움을 겪고 있으면, 먼저 종이 위에 각 단계를 적어보세요.",
+          "courseA_maze_seq10_b": "이 퍼즐을 풀려면 3개 방향으로 가야 합니다."
         },
         "courseA_maze_seq10_copy": {
           "courseA_maze_seq10_a": "어려움을 겪고 있으면, 먼저 종이 위에 각 단계를 적어보세요.",
@@ -1904,11 +1925,11 @@
         },
         "courseB_collector_loops2_2019": {
           "courseB_collector_loops2_a": "이동을 해야 보물을 모을 수 있게 됩니다.",
-          "courseB_collector_loops2_b": "보물이 있는 곳에 도달했을 때, [블러클리 블록][0] 블록을 사용하여 보물을 집어듭니다."
+          "courseB_collector_loops2_b": "보물이 있는 곳에 도달했을 때, <xml><block type=\"collector_collect\"/></xml> 블록을 사용하여 보물을 집어듭니다."
         },
         "courseB_collector_loops2_2020": {
           "courseB_collector_loops2_a": "이동을 해야 보물을 모을 수 있게 됩니다.",
-          "courseB_collector_loops2_b": "보물이 있는 곳에 도달했을 때, [블러클리 블록][0] 블록을 사용하여 보물을 집어듭니다."
+          "courseB_collector_loops2_b": "보물이 있는 곳에 도달했을 때, <xml><block type=\"collector_collect\"/></xml> 블록을 사용하여 보물을 집어듭니다."
         },
         "courseB_collector_loops4": {
           "courseB_collector_loops4_b": "라우렐이 얼마나 멀리 갈지를 변경하려면 루프 실행 횟수를 변경하세요.",
@@ -1917,15 +1938,18 @@
         },
         "courseB_collector_loops4_2018": {
           "courseB_collector_loops4_b": "라우렐이 얼마나 멀리 갈지를 변경하려면 루프 실행 횟수를 변경하세요.",
-          "courseB_collector_loops4_a": "단계 버튼을 사용하여 어디가 잘못되었는지 알아 내세요."
+          "courseB_collector_loops4_a": "단계 버튼을 사용하여 어디가 잘못되었는지 알아 내세요.",
+          "courseB_collector_loops4_c": "라우렐은 `반복` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프를 끝낸 후 아래로 걸어가 보물을 수집해야 합니다!"
         },
         "courseB_collector_loops4_2019": {
           "courseB_collector_loops4_b": "라우렐이 얼마나 멀리 갈지를 변경하려면 루프 실행 횟수를 변경하세요.",
-          "courseB_collector_loops4_a": "단계 버튼을 사용하여 어디가 잘못되었는지 알아 내세요."
+          "courseB_collector_loops4_a": "단계 버튼을 사용하여 어디가 잘못되었는지 알아 내세요.",
+          "courseB_collector_loops4_c": "라우렐은 `반복` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프를 끝낸 후 아래로 걸어가 보물을 수집해야 합니다!"
         },
         "courseB_collector_loops4_2020": {
           "courseB_collector_loops4_b": "라우렐이 얼마나 멀리 갈지를 변경하려면 루프 실행 횟수를 변경하세요.",
-          "courseB_collector_loops4_a": "단계 버튼을 사용하여 어디가 잘못되었는지 알아 내세요."
+          "courseB_collector_loops4_a": "단계 버튼을 사용하여 어디가 잘못되었는지 알아 내세요.",
+          "courseB_collector_loops4_c": "라우렐은 `반복` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프를 끝낸 후 아래로 걸어가 보물을 수집해야 합니다!"
         },
         "course1_collector_loops_challenge1": {
           "courseA_collector_loops_challenge1_b": "한 번에 뭔가를 한 번만 하고 있으면 루프를 사용할 필요가 없습니다."
@@ -1939,12 +1963,12 @@
           "courseA_artist_loops2_b": "이 블록 <xml><block type=\"simple_move_right\"/></xml>을 사용하여 이 퍼즐을 푸세요."
         },
         "courseA_artist_loops2_2019": {
-          "courseA_artist_loops2_a": "라인 그리는 방법을 알아내지 못하겠어요? 블록을 [블러클리 블록][0] 블록에 붙이기 시작하여 무슨 일이 일어나는지 보세요.   ",
-          "courseA_artist_loops2_b": "이 블록 [블러클리 블록][0]을 사용하여 이 퍼즐을 푸세요."
+          "courseA_artist_loops2_a": "라인 그리는 방법을 알아내지 못하겠어요? 블록을 <xml><block type=\"when_run\"/></xml> 블록에 붙이기 시작하여 무슨 일이 일어나는지 보세요.   ",
+          "courseA_artist_loops2_b": "이 블록 <xml><block type=\"simple_move_right\"/></xml>을 사용하여 이 퍼즐을 푸세요."
         },
         "courseA_artist_loops2_2020": {
-          "courseA_artist_loops2_a": "라인 그리는 방법을 알아내지 못하겠어요? 블록을 [블러클리 블록][0] 블록에 붙이기 시작하여 무슨 일이 일어나는지 보세요.   ",
-          "courseA_artist_loops2_b": "이 블록 [블러클리 블록][0]을 사용하여 이 퍼즐을 푸세요."
+          "courseA_artist_loops2_a": "라인 그리는 방법을 알아내지 못하겠어요? 블록을 <xml><block type=\"when_run\"/></xml> 블록에 붙이기 시작하여 무슨 일이 일어나는지 보세요.   ",
+          "courseA_artist_loops2_b": "이 블록 <xml><block type=\"simple_move_right\"/></xml>을 사용하여 이 퍼즐을 푸세요."
         },
         "courseA_artist_loops3": {
           "courseA_artist_loops3_a": "손가락으로 천천히 프로그램을 추적하여 어디가 잘못되었는지 보세요. ",
@@ -1972,11 +1996,11 @@
         },
         "courseA_artist_loops4_2019": {
           "courseA_artist_loops4_a": "루프를 4회 이상 반복하고자 하면, 블록 위에 있는 숫자를 변경할 수 있습니다.",
-          "courseA_artist_loops4_b": "[블러클리 블록][0]\n\n블록을 한 번만 사용할 수 있으므로 [블러클리 블록][1] 루프 안에 놓아보도록 하세요."
+          "courseA_artist_loops4_b": "<xml><block type=\"simple_move_right\"/></xml>\n\n블록을 한 번만 사용할 수 있으므로 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> 루프 안에 놓아보도록 하세요."
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "루프를 4회 이상 반복하고자 하면, 블록 위에 있는 숫자를 변경할 수 있습니다.",
-          "courseA_artist_loops4_b": "[블러클리 블록][0]\n\n블록을 한 번만 사용할 수 있으므로 [블러클리 블록][1] 루프 안에 놓아보도록 하세요."
+          "courseA_artist_loops4_b": "<xml><block type=\"simple_move_right\"/></xml>\n\n블록을 한 번만 사용할 수 있으므로 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> 루프 안에 놓아보도록 하세요."
         },
         "courseA_artist_loops5": {
           "courseA_artist_loops5_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 블록에 대해 배운 것을 사용하여 이 퍼즐을 완료하세요!",
@@ -1989,14 +2013,14 @@
           "courseA_artist_loops5_c": "<xml><block type=\"simple_move_right\"/></xml> 블록을 한 번만 사용할 수 있으므로  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프 안에 놓아보도록 하세요."
         },
         "courseA_artist_loops5_2019": {
-          "courseA_artist_loops5_a": "[블러클리 블록][0] 블록에 대해 배운 것을 사용하여 이 퍼즐을 완료하세요!",
+          "courseA_artist_loops5_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 블록에 대해 배운 것을 사용하여 이 퍼즐을 완료하세요!",
           "courseA_artist_loops5_b": "루프를 4회 이상 반복하고자 하면, 블록 위에 있는 숫자를 변경할 수 있습니다.",
-          "courseA_artist_loops5_c": "[블러클리 블록][0] 블록을 한 번만 사용할 수 있으므로  [블러클리 블록][1] 루프 안에 놓아보도록 하세요."
+          "courseA_artist_loops5_c": "<xml><block type=\"simple_move_right\"/></xml> 블록을 한 번만 사용할 수 있으므로  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프 안에 놓아보도록 하세요."
         },
         "courseA_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "[블러클리 블록][0] 블록에 대해 배운 것을 사용하여 이 퍼즐을 완료하세요!",
+          "courseA_artist_loops5_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 블록에 대해 배운 것을 사용하여 이 퍼즐을 완료하세요!",
           "courseA_artist_loops5_b": "루프를 4회 이상 반복하고자 하면, 블록 위에 있는 숫자를 변경할 수 있습니다.",
-          "courseA_artist_loops5_c": "[블러클리 블록][0] 블록을 한 번만 사용할 수 있으므로  [블러클리 블록][1] 루프 안에 놓아보도록 하세요."
+          "courseA_artist_loops5_c": "<xml><block type=\"simple_move_right\"/></xml> 블록을 한 번만 사용할 수 있으므로  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프 안에 놓아보도록 하세요."
         },
         "courseA_artist_loops6": {
           "courseA_artist_loops6_a": "언덕을 만드는 방법을 알아내지 못하겠어요? 블록으로 잠깐 플레이하여 각각이 무엇을 그리는지 보세요.   ",
@@ -2027,12 +2051,12 @@
         "courseA_artist_loops7_2019": {
           "courseA_artist_loops7_a": "루프를 어디에 놓아야 할지 모르겠어요? 차례로 코드를 적어 패턴을 찾으세요.",
           "courseA_artist_loops7_b": "먼저 한 물결을 위한 코드를 적고 그 다음, 그것을 반복하여 다른 두 개를 그리세요.",
-          "courseA_artist_loops7_c": "[블러클리 블록][0] 루프 안에는 1개 이상의 블록을 놓을 수 있다는 점을 기억하세요."
+          "courseA_artist_loops7_c": "<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> 루프 안에는 1개 이상의 블록을 놓을 수 있다는 점을 기억하세요."
         },
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "루프를 어디에 놓아야 할지 모르겠어요? 차례로 코드를 적어 패턴을 찾으세요.",
           "courseA_artist_loops7_b": "먼저 한 물결을 위한 코드를 적고 그 다음, 그것을 반복하여 다른 두 개를 그리세요.",
-          "courseA_artist_loops7_c": "[블러클리 블록][0] 루프 안에는 1개 이상의 블록을 놓을 수 있다는 점을 기억하세요."
+          "courseA_artist_loops7_c": "<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> 루프 안에는 1개 이상의 블록을 놓을 수 있다는 점을 기억하세요."
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "코드를 실행하여 무엇이 적혀져 있는지 보세요. ",
@@ -2064,11 +2088,11 @@
         },
         "courseA_collector_loops6_2019": {
           "courseA_collector_loops6_a": "무엇이 잘못되었는지 알아내지 못하겠어요? 코드를 몇 차례 실행하여 무슨 일이 일어나는지 보세요.",
-          "courseA_collector_loops6_b": "가장 짧은 솔루션은 2개의 [블러클리 블록][0] 루프를 교대로 갖는 것입니다.  "
+          "courseA_collector_loops6_b": "가장 짧은 솔루션은 2개의 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프를 교대로 갖는 것입니다.  "
         },
         "courseA_collector_loops6_2020": {
           "courseA_collector_loops6_a": "무엇이 잘못되었는지 알아내지 못하겠어요? 코드를 몇 차례 실행하여 무슨 일이 일어나는지 보세요.",
-          "courseA_collector_loops6_b": "가장 짧은 솔루션은 2개의 [블러클리 블록][0] 루프를 교대로 갖는 것입니다.  "
+          "courseA_collector_loops6_b": "가장 짧은 솔루션은 2개의 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프를 교대로 갖는 것입니다.  "
         },
         "courseA_collector_loops7": {
           "courseA_collector_loops7_a": "다음에 무엇이 올지 알수 없으면, 코드를 실행하여 라우렐이 결국 어디에 가 있는지 보세요."
@@ -2112,11 +2136,11 @@
         },
         "courseA_collector_loops9_2019": {
           "courseA_collector_loops9_a": "루프를 사용할 최고의 장소를 찾지 못하면, 차례로 코딩을 해보며 패턴을 찾으세요. ",
-          "courseA_collector_loops9_b": "또 다른 루프 안에 [블러클리 블록][0] 루프 2개를 놓아 코드를 더 짧게 만드세요!"
+          "courseA_collector_loops9_b": "또 다른 루프 안에 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프 2개를 놓아 코드를 더 짧게 만드세요!"
         },
         "courseA_collector_loops9_2020": {
           "courseA_collector_loops9_a": "루프를 사용할 최고의 장소를 찾지 못하면, 차례로 코딩을 해보며 패턴을 찾으세요. ",
-          "courseA_collector_loops9_b": "또 다른 루프 안에 [블러클리 블록][0] 루프 2개를 놓아 코드를 더 짧게 만드세요!"
+          "courseA_collector_loops9_b": "또 다른 루프 안에 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 루프 2개를 놓아 코드를 더 짧게 만드세요!"
         },
         "courseA_collector_loops_challenge1": {
           "courseA_collector_loops_challenge1_a": "뭔가 잘못된 것처럼 보이면 각 루프에서 숫자를 변경해 보세요.",
@@ -2134,13 +2158,13 @@
           "courseA_collector_loops_challenge1_a": "뭔가 잘못된 것처럼 보이면 각 루프에서 숫자를 변경해 보세요.",
           "courseA_collector_loops_challenge1_b": "한 번에 뭔가를 한 번만 하고 있으면 루프를 사용할 필요가 없습니다.",
           "courseA_collector_loops_challenge1_c": "시작할 때 동굴 우측에 6개의 보석이 있지만 남쪽으로 5회 이동하여 보물을 얻어야만 합니다. 이유를 아세요?",
-          "courseA_collector_loops_challenge1_d": "시작 문제는 마지막 2개의 보석을 수집하지 않습니다. 이 코드를 맨 끝:[블러클리 블록][0]에 추가해 보세요."
+          "courseA_collector_loops_challenge1_d": "시작 문제는 마지막 2개의 보석을 수집하지 않습니다. 이 코드를 맨 끝:<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>에 추가해 보세요."
         },
         "courseA_collector_loops_challenge1_2020": {
           "courseA_collector_loops_challenge1_a": "뭔가 잘못된 것처럼 보이면 각 루프에서 숫자를 변경해 보세요.",
           "courseA_collector_loops_challenge1_b": "한 번에 뭔가를 한 번만 하고 있으면 루프를 사용할 필요가 없습니다.",
           "courseA_collector_loops_challenge1_c": "시작할 때 동굴 우측에 6개의 보석이 있지만 남쪽으로 5회 이동하여 보물을 얻어야만 합니다. 이유를 아세요?",
-          "courseA_collector_loops_challenge1_d": "시작 문제는 마지막 2개의 보석을 수집하지 않습니다. 이 코드를 맨 끝:[블러클리 블록][0]에 추가해 보세요."
+          "courseA_collector_loops_challenge1_d": "시작 문제는 마지막 2개의 보석을 수집하지 않습니다. 이 코드를 맨 끝:<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>에 추가해 보세요."
         },
         "courseA_collector_loops_challenge2kp": {
           "courseA_collector_loops_challenge2kp_b": "이 경로를 시도하여 솔루션에 도달하세요.",
@@ -2237,16 +2261,17 @@
         },
         "courseA_artist_loops9_2018": {
           "courseA_artist_loops9_a": "계단 나머지를 그리기 위해 주어진 코드에 또 다른 블록을 추가하세요. ",
-          "courseA_artist_loops9_c": "루프를 어디에 놓아야 할지 모르겠으면 차례로 코드를 적어 패턴을 찾으세요."
+          "courseA_artist_loops9_c": "루프를 어디에 놓아야 할지 모르겠으면 차례로 코드를 적어 패턴을 찾으세요.",
+          "courseA_artist_loops9_b": "추가한 블록은 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> 루프 안으로 들어 가야 합니다."
         },
         "courseA_artist_loops9_2019": {
           "courseA_artist_loops9_a": "계단 나머지를 그리기 위해 주어진 코드에 또 다른 블록을 추가하세요. ",
-          "courseA_artist_loops9_b": "추가한 블록은 \n\n[블러클리 블록][0]\n\n 루프 내부로 가야 합니다.",
+          "courseA_artist_loops9_b": "추가한 블록은 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n 루프 내부로 가야 합니다.",
           "courseA_artist_loops9_c": "루프를 어디에 놓아야 할지 모르겠으면 차례로 코드를 적어 패턴을 찾으세요."
         },
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "계단 나머지를 그리기 위해 주어진 코드에 또 다른 블록을 추가하세요. ",
-          "courseA_artist_loops9_b": "추가한 블록은 \n\n[블러클리 블록][0]\n\n 루프 내부로 가야 합니다.",
+          "courseA_artist_loops9_b": "추가한 블록은 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n 루프 내부로 가야 합니다.",
           "courseA_artist_loops9_c": "루프를 어디에 놓아야 할지 모르겠으면 차례로 코드를 적어 패턴을 찾으세요."
         },
         "courseA_artist_loops_challenge2a": {
@@ -2260,12 +2285,12 @@
           "courseA_artist_loops_challenge2_c": "이 퍼즐을 끝내려면 블록 모두가 루프 안에 있어야 합니다."
         },
         "courseA_artist_loops_challenge2a_2019": {
-          "courseA_artist_loops_challenge2_a": "이 [블러클리 블록][0]과 같은 블록은 아티스트가 비스듬히 움직일 수 있게 해줄 것입니다. ",
+          "courseA_artist_loops_challenge2_a": "이 <xml>  <block type=\"simple_move_up_left\"/></xml>과 같은 블록은 아티스트가 비스듬히 움직일 수 있게 해줄 것입니다. ",
           "courseA_artist_loops_challenge2_b": "한 텐트가 끝나면, 두 번 '점프'하여 다음으로 갑니다!",
           "courseA_artist_loops_challenge2_c": "이 퍼즐을 끝내려면 블록 모두가 루프 안에 있어야 합니다."
         },
         "courseA_artist_loops_challenge2a_2020": {
-          "courseA_artist_loops_challenge2_a": "이 [블러클리 블록][0]과 같은 블록은 아티스트가 비스듬히 움직일 수 있게 해줄 것입니다. ",
+          "courseA_artist_loops_challenge2_a": "이 <xml>  <block type=\"simple_move_up_left\"/></xml>과 같은 블록은 아티스트가 비스듬히 움직일 수 있게 해줄 것입니다. ",
           "courseA_artist_loops_challenge2_b": "한 텐트가 끝나면, 두 번 '점프'하여 다음으로 갑니다!",
           "courseA_artist_loops_challenge2_c": "이 퍼즐을 끝내려면 블록 모두가 루프 안에 있어야 합니다."
         },
@@ -2279,11 +2304,11 @@
         },
         "courseA_playLab_events2_2019": {
           "courseA_playLab_events2_a": "개가 뭔가 말할 수 있게 만드는 블록을 찾으세요.",
-          "courseA_playLab_events2_b": "이것은 이 퍼즐:\n\n[블러클리 블록][0]을 완성하는데 필요한 코드입니다."
+          "courseA_playLab_events2_b": "이것은 이 퍼즐:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>을 완성하는데 필요한 코드입니다."
         },
         "courseA_playLab_events2_2020": {
           "courseA_playLab_events2_a": "개가 뭔가 말할 수 있게 만드는 블록을 찾으세요.",
-          "courseA_playLab_events2_b": "이것은 이 퍼즐:\n\n[블러클리 블록][0]을 완성하는데 필요한 코드입니다."
+          "courseA_playLab_events2_b": "이것은 이 퍼즐:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>을 완성하는데 필요한 코드입니다."
         },
         "courseA_playLab_events3": {
           "courseA_playLab_events3_a": "이 <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> 블록을 그려 <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> 하부에 끼우세요.",
@@ -2294,11 +2319,11 @@
           "courseA_playLab_events3_b": "일단 프로그램을 작성하고 나면 좌측 화살표 키를 사용하여 조르즈를 깃발로 이동하게 해야 한다는걸 기억하세요. 깃발이 녹색으로 변하면 끝난 것입니다!"
         },
         "courseA_playLab_events3_2019": {
-          "courseA_playLab_events3_a": "이 [블러클리 블록][0] 블록을 그려 [블러클리 블록][1] 하부에 끼우세요.",
+          "courseA_playLab_events3_a": "이 <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> 블록을 그려 <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> 하부에 끼우세요.",
           "courseA_playLab_events3_b": "일단 프로그램을 작성하고 나면 좌측 화살표 키를 사용하여 조르즈를 깃발로 이동하게 해야 한다는걸 기억하세요. 깃발이 녹색으로 변하면 끝난 것입니다!"
         },
         "courseA_playLab_events3_2020": {
-          "courseA_playLab_events3_a": "이 [블러클리 블록][0] 블록을 그려 [블러클리 블록][1] 하부에 끼우세요.",
+          "courseA_playLab_events3_a": "이 <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> 블록을 그려 <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> 하부에 끼우세요.",
           "courseA_playLab_events3_b": "일단 프로그램을 작성하고 나면 좌측 화살표 키를 사용하여 조르즈를 깃발로 이동하게 해야 한다는걸 기억하세요. 깃발이 녹색으로 변하면 끝난 것입니다!"
         },
         "courseA_playLab_events4": {
@@ -2310,12 +2335,12 @@
           "courseA_playLab_events4_b": "이것은 이 퍼즐:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>을 완성하는데 필요한 코드입니다."
         },
         "courseA_playLab_events4_2019": {
-          "courseA_playLab_events4_a": "여기 조르즈를 우측으로 이동하게 하는데 필요한 이벤트 블록:\n\n[블러클리 블록][0]이 있습니다.",
-          "courseA_playLab_events4_b": "이것은 이 퍼즐:\n\n[블러클리 블록][0]을 완성하는데 필요한 코드입니다."
+          "courseA_playLab_events4_a": "여기 조르즈를 우측으로 이동하게 하는데 필요한 이벤트 블록:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>이 있습니다.",
+          "courseA_playLab_events4_b": "이것은 이 퍼즐:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>을 완성하는데 필요한 코드입니다."
         },
         "courseA_playLab_events4_2020": {
-          "courseA_playLab_events4_a": "여기 조르즈를 우측으로 이동하게 하는데 필요한 이벤트 블록:\n\n[블러클리 블록][0]이 있습니다.",
-          "courseA_playLab_events4_b": "이것은 이 퍼즐:\n\n[블러클리 블록][0]을 완성하는데 필요한 코드입니다."
+          "courseA_playLab_events4_a": "여기 조르즈를 우측으로 이동하게 하는데 필요한 이벤트 블록:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>이 있습니다.",
+          "courseA_playLab_events4_b": "이것은 이 퍼즐:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>을 완성하는데 필요한 코드입니다."
         },
         "courseA_playLab_events5": {
           "courseA_playLab_events5_a": "여기 조르즈를 위 아래로 이동하게 하기 위해 사용해야 하는 이벤트 블록:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\n과 \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>이 있습니다.",
@@ -2326,12 +2351,12 @@
           "courseA_playLab_events5_b": "블록에서 그림을 클릭하고 새 키를 선택하여 이벤트 화살표를 위한 키를 변경할 수 있다는 것을 아셨어요?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
         },
         "courseA_playLab_events5_2019": {
-          "courseA_playLab_events5_a": "여기 조르즈를 위 아래로 이동하게 하기 위해 사용해야 하는 이벤트 블록:\n\n[블러클리 블록][0]\n\n과 \n\n[블러클리 블록][1]이 있습니다.",
-          "courseA_playLab_events5_b": "블록에서 그림을 클릭하고 새 키를 선택하여 이벤트 화살표를 위한 키를 변경할 수 있다는 것을 아셨어요?\n\n[][0]"
+          "courseA_playLab_events5_a": "여기 조르즈를 위 아래로 이동하게 하기 위해 사용해야 하는 이벤트 블록:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\n과 \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>이 있습니다.",
+          "courseA_playLab_events5_b": "블록에서 그림을 클릭하고 새 키를 선택하여 이벤트 화살표를 위한 키를 변경할 수 있다는 것을 아셨어요?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
         },
         "courseA_playLab_events5_2020": {
-          "courseA_playLab_events5_a": "여기 조르즈를 위 아래로 이동하게 하기 위해 사용해야 하는 이벤트 블록:\n\n[블러클리 블록][0]\n\n과 \n\n[블러클리 블록][1]이 있습니다.",
-          "courseA_playLab_events5_b": "블록에서 그림을 클릭하고 새 키를 선택하여 이벤트 화살표를 위한 키를 변경할 수 있다는 것을 아셨어요?\n\n[][0]"
+          "courseA_playLab_events5_a": "여기 조르즈를 위 아래로 이동하게 하기 위해 사용해야 하는 이벤트 블록:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\n과 \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>이 있습니다.",
+          "courseA_playLab_events5_b": "블록에서 그림을 클릭하고 새 키를 선택하여 이벤트 화살표를 위한 키를 변경할 수 있다는 것을 아셨어요?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
         },
         "courseA_playLab_events6": {
           "courseA_playLab_events6_a": "여기 조르즈가 클릭될 때 그가 뭔가를 하도록 만드는데 사용할 수 있는 이벤트 블록:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>이 있습니다.",
@@ -2344,14 +2369,14 @@
           "courseA_playLab_events6_c": "여기 무작위 사운드가 나오게 만드는데 사용할 수 있는 블록:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>이 있습니다."
         },
         "courseA_playLab_events6_2019": {
-          "courseA_playLab_events6_a": "여기 조르즈가 클릭될 때 그가 뭔가를 하도록 만드는데 사용할 수 있는 이벤트 블록:\n\n[블러클리 블록][0]이 있습니다.",
-          "courseA_playLab_events6_b": "여기 배경을 변경하기 위해 사용할 수 있는 블록:\n\n[블러클리 블록][0]이 있습니다.",
-          "courseA_playLab_events6_c": "여기 무작위 사운드가 나오게 만드는데 사용할 수 있는 블록:\n\n[블러클리 블록][0]이 있습니다."
+          "courseA_playLab_events6_a": "여기 조르즈가 클릭될 때 그가 뭔가를 하도록 만드는데 사용할 수 있는 이벤트 블록:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>이 있습니다.",
+          "courseA_playLab_events6_b": "여기 배경을 변경하기 위해 사용할 수 있는 블록:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>이 있습니다.",
+          "courseA_playLab_events6_c": "여기 무작위 사운드가 나오게 만드는데 사용할 수 있는 블록:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>이 있습니다."
         },
         "courseA_playLab_events6_2020": {
-          "courseA_playLab_events6_a": "여기 조르즈가 클릭될 때 그가 뭔가를 하도록 만드는데 사용할 수 있는 이벤트 블록:\n\n[블러클리 블록][0]이 있습니다.",
-          "courseA_playLab_events6_b": "여기 배경을 변경하기 위해 사용할 수 있는 블록:\n\n[블러클리 블록][0]이 있습니다.",
-          "courseA_playLab_events6_c": "여기 무작위 사운드가 나오게 만드는데 사용할 수 있는 블록:\n\n[블러클리 블록][0]이 있습니다."
+          "courseA_playLab_events6_a": "여기 조르즈가 클릭될 때 그가 뭔가를 하도록 만드는데 사용할 수 있는 이벤트 블록:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>이 있습니다.",
+          "courseA_playLab_events6_b": "여기 배경을 변경하기 위해 사용할 수 있는 블록:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>이 있습니다.",
+          "courseA_playLab_events6_c": "여기 무작위 사운드가 나오게 만드는데 사용할 수 있는 블록:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>이 있습니다."
         },
         "course1_playlab_events_challenge1": {
           "courseA_playlab_events_challenge1_a": "로빈을 클릭할 때 펭귄 와들이 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
@@ -2371,10 +2396,10 @@
           "courseA_playLab_events7_a": "이 블록을 사용하여 액터가 충돌할 때 일어날 일을 제어하세요.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
         "courseA_playLab_events7_2019": {
-          "courseA_playLab_events7_a": "이 블록을 사용하여 액터가 충돌할 때 일어날 일을 제어하세요.\n\n[블러클리 블록][0]"
+          "courseA_playLab_events7_a": "이 블록을 사용하여 액터가 충돌할 때 일어날 일을 제어하세요.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
         "courseA_playLab_events7_2020": {
-          "courseA_playLab_events7_a": "이 블록을 사용하여 액터가 충돌할 때 일어날 일을 제어하세요.\n\n[블러클리 블록][0]"
+          "courseA_playLab_events7_a": "이 블록을 사용하여 액터가 충돌할 때 일어날 일을 제어하세요.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1": {
           "courseA_playlab_events_challenge1_a": "로빈을 클릭할 때 펭귄 와들이 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
@@ -2391,18 +2416,18 @@
           "courseA_playlab_events_challenge1_e": "마지막으로, 스피프를 클릭할 때 마법사 웬델이 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2019": {
-          "courseA_playlab_events_challenge1_a": "로빈을 클릭할 때 펭귄 와들이 보이게 만드세요!\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge1_b": "와들을 클릭할 때 귀신 부가 보이게 만드세요!\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge1_c": "부를 클릭할 때 보송보송한 괴물 제이든이 보이게 만드세요!\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge1_d": "괴물을 클릭할 때 로봇 스피프가 보이게 만드세요!\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge1_e": "마지막으로, 스피프를 클릭할 때 마법사 웬델이 보이게 만드세요!\n\n[블러클리 블록][0]"
+          "courseA_playlab_events_challenge1_a": "로빈을 클릭할 때 펭귄 와들이 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "와들을 클릭할 때 귀신 부가 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "부를 클릭할 때 보송보송한 괴물 제이든이 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "괴물을 클릭할 때 로봇 스피프가 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "마지막으로, 스피프를 클릭할 때 마법사 웬델이 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2020": {
-          "courseA_playlab_events_challenge1_a": "로빈을 클릭할 때 펭귄 와들이 보이게 만드세요!\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge1_b": "와들을 클릭할 때 귀신 부가 보이게 만드세요!\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge1_c": "부를 클릭할 때 보송보송한 괴물 제이든이 보이게 만드세요!\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge1_d": "괴물을 클릭할 때 로봇 스피프가 보이게 만드세요!\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge1_e": "마지막으로, 스피프를 클릭할 때 마법사 웬델이 보이게 만드세요!\n\n[블러클리 블록][0]"
+          "courseA_playlab_events_challenge1_a": "로빈을 클릭할 때 펭귄 와들이 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "와들을 클릭할 때 귀신 부가 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "부를 클릭할 때 보송보송한 괴물 제이든이 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "괴물을 클릭할 때 로봇 스피프가 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "마지막으로, 스피프를 클릭할 때 마법사 웬델이 보이게 만드세요!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2": {
           "courseA_playlab_events_challenge2_a": "새를 노래하게 만들 수 있습니다.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
@@ -2415,14 +2440,14 @@
           "courseA_playlab_events_challenge2_c": "화난 괴물이 으르렁거리게 만들 수 있습니다.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2_2019": {
-          "courseA_playlab_events_challenge2_a": "새를 노래하게 만들 수 있습니다.\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge2_b": "로봇에게 삐 소리를 내게 만들 수 있습니다.\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge2_c": "화난 괴물이 으르렁거리게 만들 수 있습니다.\n\n[블러클리 블록][0]"
+          "courseA_playlab_events_challenge2_a": "새를 노래하게 만들 수 있습니다.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "로봇에게 삐 소리를 내게 만들 수 있습니다.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "화난 괴물이 으르렁거리게 만들 수 있습니다.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2_2020": {
-          "courseA_playlab_events_challenge2_a": "새를 노래하게 만들 수 있습니다.\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge2_b": "로봇에게 삐 소리를 내게 만들 수 있습니다.\n\n[블러클리 블록][0]",
-          "courseA_playlab_events_challenge2_c": "화난 괴물이 으르렁거리게 만들 수 있습니다.\n\n[블러클리 블록][0]"
+          "courseA_playlab_events_challenge2_a": "새를 노래하게 만들 수 있습니다.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "로봇에게 삐 소리를 내게 만들 수 있습니다.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "화난 괴물이 으르렁거리게 만들 수 있습니다.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseC_maze_programming1": {
           "courseC_maze_programming1_0": "모든 블록이 완전하게 서로 꽉 끼워져 있는지 확인하고 그 다음, \"실행\"을 다시 클릭하세요."
@@ -2879,13 +2904,16 @@
           "course_starWars_loops9_c": "이 퍼즐을 풀기 위해 좌측으로 회전할 필요는 없습니다. 모든 회전은 우측으로 할 수 있습니다.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseA_harvester_loops6": {
-          "courseA_harvester_loops6_a": "막혔으면, 종이 위에 각 단계를 적어보고 반복되는 패턴을 찾아 보세요."
+          "courseA_harvester_loops6_a": "막혔으면, 종이 위에 각 단계를 적어보고 반복되는 패턴을 찾아 보세요.",
+          "courseA_harvester_loops6_b": "이 경로가 옥수수를 모두 따기 위해 택해야 하는 경로입니다."
         },
         "courseA_harvester_loops6_2019": {
-          "courseA_harvester_loops6_a": "막혔으면, 종이 위에 각 단계를 적어보고 반복되는 패턴을 찾아 보세요."
+          "courseA_harvester_loops6_a": "막혔으면, 종이 위에 각 단계를 적어보고 반복되는 패턴을 찾아 보세요.",
+          "courseA_harvester_loops6_b": "이 경로가 옥수수를 모두 따기 위해 택해야 하는 경로입니다."
         },
         "courseA_harvester_loops6_2020": {
-          "courseA_harvester_loops6_a": "막혔으면, 종이 위에 각 단계를 적어보고 반복되는 패턴을 찾아 보세요."
+          "courseA_harvester_loops6_a": "막혔으면, 종이 위에 각 단계를 적어보고 반복되는 패턴을 찾아 보세요.",
+          "courseA_harvester_loops6_b": "이 경로가 옥수수를 모두 따기 위해 택해야 하는 경로입니다."
         },
         "courseC_artist_loop1": {
           "courseC_artist_loop1_a": "루프를 변경할 필요는 없어요. 그저 그 위에 블록 한 개를 놓아요.",
@@ -3132,7 +3160,8 @@
         },
         "courseC_harvester_loops_challenge1a_2018": {
           "courseC_harvester_loops_challenge1_a": "루프 없이는 너무 어려워요!",
-          "courseC_harvester_loops_challenge1_b": "필요한 만큼 많이 '앞으로 이동'과 '옥수수 따기'를 반복하고 그 다음, 각 코너에서 '우회전'을 할 수 있습니다."
+          "courseC_harvester_loops_challenge1_b": "필요한 만큼 많이 '앞으로 이동'과 '옥수수 따기'를 반복하고 그 다음, 각 코너에서 '우회전'을 할 수 있습니다.",
+          "courseC_harvester_loops_challenge1_c": "처음 두 차례 옥수수를 딴 후, 중첩 루프를 사용하여 다음 여덟 개의 옥수수를 딸 수 있습니다.\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
         },
         "courseC_harvester_loops_challenge1a_2019": {
           "courseC_harvester_loops_challenge1_a": "루프 없이는 너무 어려워요!",
@@ -3529,7 +3558,8 @@
         },
         "courseD_artist_nestedLoops1a_2018": {
           "courseD_artist_nestedLoops1a_b": "루프로 삼각형을 만들면, 아티스트는 그들이 시작했던 것과 동일한 방식을 마주하게 됩니다. 이것은 60도 회전을 훨씬 더 쉽게 만들어 줄 것입니다.",
-          "courseD_artist_nestedLoops1a_c": "색상을 원하면, 코드에서 '색상 설정' 블록을 사용하세요. 템플릿 이미지에 있는 색상을 일치시킬 필요는 없습니다."
+          "courseD_artist_nestedLoops1a_c": "색상을 원하면, 코드에서 '색상 설정' 블록을 사용하세요. 템플릿 이미지에 있는 색상을 일치시킬 필요는 없습니다.",
+          "courseD_artist_nestedLoops1a_a": "총 6개의 삼각형을 그려야 합니다 (팁: 시작하기 위해 지난 퍼즐의 코드를 사용하세요). 각 삼각형을 끝낸 후 60도로 돌리고 이동하여 다음 삼각형을 시작하세요.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)"
         },
         "courseD_artist_nestedLoops1a_2019": {
           "courseD_artist_nestedLoops1a_a": "총 6개의 삼각형을 그려야 합니다. 각 삼각형을 끝낸 후 60도로 돌리고 이동하여 다음 삼각형을 시작하세요.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
@@ -3765,13 +3795,16 @@
           "courseD_collector_debugging2_c": "이 패턴의 한 측면을 위해 보물을 모아 보세요. 이것을 반복하여 다른 두 측면 위 보물을 모을 수 있어요?"
         },
         "courseD_collector_debugging2a_2018": {
-          "courseD_collector_debugging2a_a": "\"단계\" 버튼을 사용하여 첫 번째 단계에 있는 모든 것이 맞는지 보세요.\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?"
+          "courseD_collector_debugging2a_a": "\"단계\" 버튼을 사용하여 첫 번째 단계에 있는 모든 것이 맞는지 보세요.\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?",
+          "courseD_collector_debugging2a_c": "무슨 일이 일어 났어요?\n\n원래 무슨 일이 일어 났어야 했어요?\n\n그것이 말하는 바는 무엇이지요?"
         },
         "courseD_collector_debugging2a_2019": {
-          "courseD_collector_debugging2a_a": "\"단계\" 버튼을 사용하여 첫 번째 단계에 있는 모든 것이 맞는지 보세요.\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?"
+          "courseD_collector_debugging2a_a": "\"단계\" 버튼을 사용하여 첫 번째 단계에 있는 모든 것이 맞는지 보세요.\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?",
+          "courseD_collector_debugging2a_c": "무슨 일이 일어 났어요?\n\n원래 무슨 일이 일어 났어야 했어요?\n\n그것이 말하는 바는 무엇이지요?"
         },
         "courseD_collector_debugging2a_2020": {
-          "courseD_collector_debugging2a_a": "\"단계\" 버튼을 사용하여 첫 번째 단계에 있는 모든 것이 맞는지 보세요.\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?"
+          "courseD_collector_debugging2a_a": "\"단계\" 버튼을 사용하여 첫 번째 단계에 있는 모든 것이 맞는지 보세요.\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?",
+          "courseD_collector_debugging2a_c": "무슨 일이 일어 났어요?\n\n원래 무슨 일이 일어 났어야 했어요?\n\n그것이 말하는 바는 무엇이지요?"
         },
         "courseD_bee_conditionals1_predict1": {
           "courseD_bee_conditionals1_a": "과즙을 얻으려 하기 전 구름 아래 꽃이 있는지 보기 위해 `만약` 블록을 사용해야 할 것입니다."
@@ -3930,13 +3963,16 @@
           "courseD_collector_debugging5_b": "일단 원했던 방식대로 첫 번째 루프가 있으면, 코드의 나머지 부분은 어떤 거예요?"
         },
         "courseD_collector_debugging6a_2018": {
-          "courseD_collector_debugging6_a": "\"단계\" 버튼을 사용하여 코드 전체를 실행해 보세요.  첫 번째 단계에서 모든 게 잘 되고 있어요?\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?"
+          "courseD_collector_debugging6_a": "\"단계\" 버튼을 사용하여 코드 전체를 실행해 보세요.  첫 번째 단계에서 모든 게 잘 되고 있어요?\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?",
+          "courseD_collector_debugging6_b": "필요한 블록 모두가 워크스페이스에 있는 듯 보이네요. 너무 혼동되면 \"다시 시작\"을 클릭해 보세요. "
         },
         "courseD_collector_debugging6a_2019": {
-          "courseD_collector_debugging6_a": "\"단계\" 버튼을 사용하여 코드 전체를 실행해 보세요.  첫 번째 단계에서 모든 게 잘 되고 있어요?\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?"
+          "courseD_collector_debugging6_a": "\"단계\" 버튼을 사용하여 코드 전체를 실행해 보세요.  첫 번째 단계에서 모든 게 잘 되고 있어요?\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?",
+          "courseD_collector_debugging6_b": "필요한 블록 모두가 워크스페이스에 있는 듯 보이네요. 너무 혼동되면 \"다시 시작\"을 클릭해 보세요. "
         },
         "courseD_collector_debugging6a_2020": {
-          "courseD_collector_debugging6_a": "\"단계\" 버튼을 사용하여 코드 전체를 실행해 보세요.  첫 번째 단계에서 모든 게 잘 되고 있어요?\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?"
+          "courseD_collector_debugging6_a": "\"단계\" 버튼을 사용하여 코드 전체를 실행해 보세요.  첫 번째 단계에서 모든 게 잘 되고 있어요?\n\n두 번째는 어때요?\n\n어디가 잘못되었어요?",
+          "courseD_collector_debugging6_b": "필요한 블록 모두가 워크스페이스에 있는 듯 보이네요. 너무 혼동되면 \"다시 시작\"을 클릭해 보세요. "
         },
         "course2_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_b": "이 퍼즐에서 각 공간에는 꽃 또는 벌집이 있거나 아무 것도 없을 수 있습니다. 각 사각형에서 '만약/아니면' 조건문을 반복할 수 있다는 의미입니다."
@@ -4005,7 +4041,7 @@
           "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_playLab_cond1": {
           "courseD_playLab_cond1_a": "이 도전을 풀기 위해,  `액터 1 위로 이동` 블록을  `위 화살표일 때`이벤트에 부착하고, 그 다음 모든 다른 방향과 동일하게 행동하세요.",
@@ -4772,15 +4808,18 @@
         },
         "courseC_maze_debugging5_2018": {
           "courseC_maze_debugging5_a": "워크ㅡㅅ페이스에 이미 많은 유용한 블록이 있습니다. 그것들 모두를 삭제하지 마세요! \n\n\"단계\" 버튼을 사용하여 진행하여 코드의 어디가 잘못되었는지 알아내세요.",
-          "courseC_maze_debugging5_b": "스크랫이 해야 하는 일을 소리 내어 말해 보세요. 워크스페이스에 있는 코드와 똑같습니까? 뭐가 잘못되었어요?"
+          "courseC_maze_debugging5_b": "스크랫이 해야 하는 일을 소리 내어 말해 보세요. 워크스페이스에 있는 코드와 똑같습니까? 뭐가 잘못되었어요?",
+          "courseC_maze_debugging5_c": "다운드롭을 클릭하여 회전 블럭의 방향을 변경할 수 있습니다."
         },
         "courseC_maze_debugging5_2019": {
           "courseC_maze_debugging5_a": "워크ㅡㅅ페이스에 이미 많은 유용한 블록이 있습니다. 그것들 모두를 삭제하지 마세요! \n\n\"단계\" 버튼을 사용하여 진행하여 코드의 어디가 잘못되었는지 알아내세요.",
-          "courseC_maze_debugging5_b": "스크랫이 해야 하는 일을 소리 내어 말해 보세요. 워크스페이스에 있는 코드와 똑같습니까? 뭐가 잘못되었어요?"
+          "courseC_maze_debugging5_b": "스크랫이 해야 하는 일을 소리 내어 말해 보세요. 워크스페이스에 있는 코드와 똑같습니까? 뭐가 잘못되었어요?",
+          "courseC_maze_debugging5_c": "다운드롭을 클릭하여 회전 블럭의 방향을 변경할 수 있습니다."
         },
         "courseC_maze_debugging5_2020": {
           "courseC_maze_debugging5_a": "워크ㅡㅅ페이스에 이미 많은 유용한 블록이 있습니다. 그것들 모두를 삭제하지 마세요! \n\n\"단계\" 버튼을 사용하여 진행하여 코드의 어디가 잘못되었는지 알아내세요.",
-          "courseC_maze_debugging5_b": "스크랫이 해야 하는 일을 소리 내어 말해 보세요. 워크스페이스에 있는 코드와 똑같습니까? 뭐가 잘못되었어요?"
+          "courseC_maze_debugging5_b": "스크랫이 해야 하는 일을 소리 내어 말해 보세요. 워크스페이스에 있는 코드와 똑같습니까? 뭐가 잘못되었어요?",
+          "courseC_maze_debugging5_c": "다운드롭을 클릭하여 회전 블럭의 방향을 변경할 수 있습니다."
         },
         "courseC_maze_debugging6": {
           "courseC_maze_debugging6_a": "-   스크랫이 원래 해야 할 일은?\n-   스크랫이 한 일은?\n-   그것이 말하는 바는?",
@@ -4905,17 +4944,20 @@
         "courseC_artist_prog5_2018": {
           "courseC_artist_prog5_a": "어디가 잘못되었는지 보기 위해 코드를 한 라인 한 라인 씩 실행할 수 있을 때까지 슬라이더의 속도를 줄입니다.",
           "courseC_artist_prog5_d": "각 회전은 우측으로 90도 이어야 합니다.",
-          "courseC_artist_prog5_b": "실수하는 것을 두려워하지 마세요! 퍼즐을 아직 풀지 않았더라도 블록을 추가하고 코드를 실행하여 어떤 일이 벌어지는지 보세요."
+          "courseC_artist_prog5_b": "실수하는 것을 두려워하지 마세요! 퍼즐을 아직 풀지 않았더라도 블록을 추가하고 코드를 실행하여 어떤 일이 벌어지는지 보세요.",
+          "courseC_artist_prog5_c": "블록에서 드롭다운 메뉴를 사용하여 블록이 하는 일을 변경할 수 있습니다!"
         },
         "courseC_artist_prog5_2019": {
           "courseC_artist_prog5_a": "어디가 잘못되었는지 보기 위해 코드를 한 라인 한 라인 씩 실행할 수 있을 때까지 슬라이더의 속도를 줄입니다.",
           "courseC_artist_prog5_d": "각 회전은 우측으로 90도 이어야 합니다.",
-          "courseC_artist_prog5_b": "실수하는 것을 두려워하지 마세요! 퍼즐을 아직 풀지 않았더라도 블록을 추가하고 코드를 실행하여 어떤 일이 벌어지는지 보세요."
+          "courseC_artist_prog5_b": "실수하는 것을 두려워하지 마세요! 퍼즐을 아직 풀지 않았더라도 블록을 추가하고 코드를 실행하여 어떤 일이 벌어지는지 보세요.",
+          "courseC_artist_prog5_c": "블록에서 드롭다운 메뉴를 사용하여 블록이 하는 일을 변경할 수 있습니다!"
         },
         "courseC_artist_prog5_2020": {
           "courseC_artist_prog5_a": "어디가 잘못되었는지 보기 위해 코드를 한 라인 한 라인 씩 실행할 수 있을 때까지 슬라이더의 속도를 줄입니다.",
           "courseC_artist_prog5_d": "각 회전은 우측으로 90도 이어야 합니다.",
-          "courseC_artist_prog5_b": "실수하는 것을 두려워하지 마세요! 퍼즐을 아직 풀지 않았더라도 블록을 추가하고 코드를 실행하여 어떤 일이 벌어지는지 보세요."
+          "courseC_artist_prog5_b": "실수하는 것을 두려워하지 마세요! 퍼즐을 아직 풀지 않았더라도 블록을 추가하고 코드를 실행하여 어떤 일이 벌어지는지 보세요.",
+          "courseC_artist_prog5_c": "블록에서 드롭다운 메뉴를 사용하여 블록이 하는 일을 변경할 수 있습니다!"
         },
         "courseC_artist_prog6": {
           "courseC_artist_prog6_a": "아티스트는 이미 그의 첫 번째 선을 그리기 위해 맞는 방향을 향하고 있습니다.",
@@ -5042,13 +5084,16 @@
           "courseB_maze_seq4_b": "이 퍼즐을 풀기 위해 <xml><block type=\"maze_moveEast\"/></xml> 블록을 사용하길 원할 것입니다."
         },
         "courseB_maze_seq4_2018": {
-          "courseB_maze_seq4_b": "이 퍼즐을 풀기 위해 <xml><block type=\"maze_moveEast\"/></xml> 블록을 사용하길 원할 것입니다."
+          "courseB_maze_seq4_b": "이 퍼즐을 풀기 위해 <xml><block type=\"maze_moveEast\"/></xml> 블록을 사용하길 원할 것입니다.",
+          "courseB_maze_seq4_a": "도토리로 갈 때까지 한 번에 한 개 지침을 추가해 보세요."
         },
         "courseB_maze_seq4_2019": {
-          "courseB_maze_seq4_b": "이 퍼즐을 풀기 위해 [블러클리 블록][0] 블록을 사용하길 원할 것입니다."
+          "courseB_maze_seq4_b": "이 퍼즐을 풀기 위해 <xml><block type=\"maze_moveEast\"/></xml> 블록을 사용하길 원할 것입니다.",
+          "courseB_maze_seq4_a": "도토리로 갈 때까지 한 번에 한 개 지침을 추가해 보세요."
         },
         "courseB_maze_seq4_2020": {
-          "courseB_maze_seq4_b": "이 퍼즐을 풀기 위해 [블러클리 블록][0] 블록을 사용하길 원할 것입니다."
+          "courseB_maze_seq4_b": "이 퍼즐을 풀기 위해 <xml><block type=\"maze_moveEast\"/></xml> 블록을 사용하길 원할 것입니다.",
+          "courseB_maze_seq4_a": "도토리로 갈 때까지 한 번에 한 개 지침을 추가해 보세요."
         },
         "courseB_maze_seq5": {
           "courseB_maze_seq5_a": "막혔으면, 종이 위에 경로를 그려 보세요.",
@@ -5057,15 +5102,18 @@
         },
         "courseB_maze_seq5_2018": {
           "courseB_maze_seq5_a": "막혔으면, 종이 위에 경로를 그려 보세요.",
-          "courseB_maze_seq5_b": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!"
+          "courseB_maze_seq5_b": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!",
+          "courseB_maze_seq5_c": "도토리로 가는 방법을 잘 모르겠어요? 이 경로를 시도해 보세요."
         },
         "courseB_maze_seq5_2019": {
           "courseB_maze_seq5_a": "막혔으면, 종이 위에 경로를 그려 보세요.",
-          "courseB_maze_seq5_b": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!"
+          "courseB_maze_seq5_b": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!",
+          "courseB_maze_seq5_c": "도토리로 가는 방법을 잘 모르겠어요? 이 경로를 시도해 보세요."
         },
         "courseB_maze_seq5_2020": {
           "courseB_maze_seq5_a": "막혔으면, 종이 위에 경로를 그려 보세요.",
-          "courseB_maze_seq5_b": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!"
+          "courseB_maze_seq5_b": "이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!",
+          "courseB_maze_seq5_c": "도토리로 가는 방법을 잘 모르겠어요? 이 경로를 시도해 보세요."
         },
         "courseB_maze_seq7": {
           "courseB_maze_seq7_a": "1개의 블록을 추가하여 새를 돼지에게로 이동하세요.",
@@ -5073,25 +5121,34 @@
           "courseB_maze_seq7_c": "돼지에게 갈 수 없어요? 이 경로를 따라가 보세요!"
         },
         "courseB_maze_seq7_2018": {
-          "courseB_maze_seq7_b": "주어진 코드를 실행해 보고 어디에서 끝나는지 보세요."
+          "courseB_maze_seq7_b": "주어진 코드를 실행해 보고 어디에서 끝나는지 보세요.",
+          "courseB_maze_seq7_a": "블록을 한 개 추가하여 스크랫이 도토리로 이동 하게 하세요.",
+          "courseB_maze_seq7_c": "도토리로 갈 수 없어요? 이 경로를 시도해 보세요!"
         },
         "courseB_maze_seq7_2019": {
-          "courseB_maze_seq7_b": "주어진 코드를 실행해 보고 어디에서 끝나는지 보세요."
+          "courseB_maze_seq7_b": "주어진 코드를 실행해 보고 어디에서 끝나는지 보세요.",
+          "courseB_maze_seq7_a": "블록을 한 개 추가하여 스크랫이 도토리로 이동 하게 하세요.",
+          "courseB_maze_seq7_c": "도토리로 갈 수 없어요? 이 경로를 시도해 보세요!"
         },
         "courseB_maze_seq7_2020": {
-          "courseB_maze_seq7_b": "주어진 코드를 실행해 보고 어디에서 끝나는지 보세요."
+          "courseB_maze_seq7_b": "주어진 코드를 실행해 보고 어디에서 끝나는지 보세요.",
+          "courseB_maze_seq7_a": "블록을 한 개 추가하여 스크랫이 도토리로 이동 하게 하세요.",
+          "courseB_maze_seq7_c": "도토리로 갈 수 없어요? 이 경로를 시도해 보세요!"
         },
         "courseB_maze_seq8_2018": {
           "courseB_maze_seq8_a": "퍼즐을 풀 때까지 한 번에 한 블록씩 추가해 보세요.",
-          "courseB_maze_seq8_c": "어느 길로 가야할 지 모르겠어요? 이 경로를 따라가 보세요!"
+          "courseB_maze_seq8_c": "어느 길로 가야할 지 모르겠어요? 이 경로를 따라가 보세요!",
+          "courseB_maze_seq8_b": "이 퍼즐을 푸는 데는 한 가지 이상의 방법이 있습니다!"
         },
         "courseB_maze_seq8_2019": {
           "courseB_maze_seq8_a": "퍼즐을 풀 때까지 한 번에 한 블록씩 추가해 보세요.",
-          "courseB_maze_seq8_c": "어느 길로 가야할 지 모르겠어요? 이 경로를 따라가 보세요!"
+          "courseB_maze_seq8_c": "어느 길로 가야할 지 모르겠어요? 이 경로를 따라가 보세요!",
+          "courseB_maze_seq8_b": "이 퍼즐을 푸는 데는 한 가지 이상의 방법이 있습니다!"
         },
         "courseB_maze_seq8_2020": {
           "courseB_maze_seq8_a": "퍼즐을 풀 때까지 한 번에 한 블록씩 추가해 보세요.",
-          "courseB_maze_seq8_c": "어느 길로 가야할 지 모르겠어요? 이 경로를 따라가 보세요!"
+          "courseB_maze_seq8_c": "어느 길로 가야할 지 모르겠어요? 이 경로를 따라가 보세요!",
+          "courseB_maze_seq8_b": "이 퍼즐을 푸는 데는 한 가지 이상의 방법이 있습니다!"
         },
         "course1_artist_loops_challenge4": {
           "courseB_artist_loops_challenge1_b": "주사위 중 하나를 끝냈으면, 다음 것으로 '점프'하세요!",
@@ -5126,12 +5183,12 @@
         },
         "courseB_artist_loops_challenge1_2019": {
           "courseB_artist_loops_challenge1_b": "주사위 중 하나를 끝냈으면, 다음 것으로 '점프'하세요!",
-          "courseB_artist_loops_challenge1_a": "이와 같은 블록: [블러클리 블록][0]은 아티스트가 비스듬히 움직일 수 있게 해줄 것입니다. ",
+          "courseB_artist_loops_challenge1_a": "이와 같은 블록: <xml>  <block type=\"simple_move_up_right\"/></xml>은 아티스트가 비스듬히 움직일 수 있게 해줄 것입니다. ",
           "courseB_artist_loops_challenge1_c": "일부 동일 선 위에서 두 번 `이동` 또는 `점프`가 필요할 것입니다. "
         },
         "courseB_artist_loops_challenge1_2020": {
           "courseB_artist_loops_challenge1_b": "주사위 중 하나를 끝냈으면, 다음 것으로 '점프'하세요!",
-          "courseB_artist_loops_challenge1_a": "이와 같은 블록: [블러클리 블록][0]은 아티스트가 비스듬히 움직일 수 있게 해줄 것입니다. ",
+          "courseB_artist_loops_challenge1_a": "이와 같은 블록: <xml>  <block type=\"simple_move_up_right\"/></xml>은 아티스트가 비스듬히 움직일 수 있게 해줄 것입니다. ",
           "courseB_artist_loops_challenge1_c": "일부 동일 선 위에서 두 번 `이동` 또는 `점프`가 필요할 것입니다. "
         },
         "courseB_artist_loops_challenge2": {
@@ -5193,14 +5250,14 @@
           "courseB_collector_loops_challenge1_c": "각 경로 사이에서 동쪽으로 두 번 이동:\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\n14개의 블록만으로 이것을 할 수 있습니다. 솔루션을 보기 위해 한 개 이상의 힌트를 클릭하세요. "
         },
         "courseB_collector_loops_challenge1_2019": {
-          "courseB_collector_loops_challenge1_d": "이것을 시도하세요:\n\n[블러클리 블록][0]",
-          "courseB_collector_loops_challenge1_b": "다음 명령을 반복하여 시작하세요:\n\n[블러클리 블록][0]",
-          "courseB_collector_loops_challenge1_c": "각 경로 사이에서 동쪽으로 두 번 이동:\n\n[블러클리 블록][0]\n\n14개의 블록만으로 이것을 할 수 있습니다. 솔루션을 보기 위해 한 개 이상의 힌트를 클릭하세요. "
+          "courseB_collector_loops_challenge1_d": "이것을 시도하세요:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseB_collector_loops_challenge1_b": "다음 명령을 반복하여 시작하세요:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "각 경로 사이에서 동쪽으로 두 번 이동:\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\n14개의 블록만으로 이것을 할 수 있습니다. 솔루션을 보기 위해 한 개 이상의 힌트를 클릭하세요. "
         },
         "courseB_collector_loops_challenge1_2020": {
-          "courseB_collector_loops_challenge1_d": "이것을 시도하세요:\n\n[블러클리 블록][0]",
-          "courseB_collector_loops_challenge1_b": "다음 명령을 반복하여 시작하세요:\n\n[블러클리 블록][0]",
-          "courseB_collector_loops_challenge1_c": "각 경로 사이에서 동쪽으로 두 번 이동:\n\n[블러클리 블록][0]\n\n14개의 블록만으로 이것을 할 수 있습니다. 솔루션을 보기 위해 한 개 이상의 힌트를 클릭하세요. "
+          "courseB_collector_loops_challenge1_d": "이것을 시도하세요:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseB_collector_loops_challenge1_b": "다음 명령을 반복하여 시작하세요:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "각 경로 사이에서 동쪽으로 두 번 이동:\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\n14개의 블록만으로 이것을 할 수 있습니다. 솔루션을 보기 위해 한 개 이상의 힌트를 클릭하세요. "
         },
         "courseB_collector_loops_challenge2": {
           "courseB_collector_loops_challenge2_d": "이 솔루션을 시도하세요:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
@@ -5226,11 +5283,11 @@
         },
         "courseB_maze_seq_challenge1_2019": {
           "courseB_maze_seq_challenge1_a": "가장 짧은 경로가 이번에는 효과가 없을 수 있어요.",
-          "courseB_maze_seq_challenge1_b": "[블러클리 블록][0] 루프를 사용해 시작해 보세요! "
+          "courseB_maze_seq_challenge1_b": "<xml><block type=\"maze_moveWest\"/></xml> 루프를 사용해 시작해 보세요! "
         },
         "courseB_maze_seq_challenge1_2020": {
           "courseB_maze_seq_challenge1_a": "가장 짧은 경로가 이번에는 효과가 없을 수 있어요.",
-          "courseB_maze_seq_challenge1_b": "[블러클리 블록][0] 루프를 사용해 시작해 보세요! "
+          "courseB_maze_seq_challenge1_b": "<xml><block type=\"maze_moveWest\"/></xml> 루프를 사용해 시작해 보세요! "
         },
         "courseB_maze_seq_challenge2": {
           "courseB_maze_seq_challenge2_a": "이 퍼즐을 풀기 위해 블록을 추가하거나 제거할 필요는 없습니다.",
@@ -5260,12 +5317,12 @@
         },
         "courseB_playlab_events6_2019": {
           "courseB_playlab_events6_c": "통과하려면 깃발 모두로 가야 합니다!",
-          "courseB_playlab_events6_a": "이벤트 블록이 필요할 것입니다.\n\n[블러클리 블록][0]",
+          "courseB_playlab_events6_a": "이벤트 블록이 필요할 것입니다.\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
           "courseB_playlab_events6_b": " `___ 화살표를 눌렀을 때` 이벤트 블록 위 드롭다운 화살표를 사용하여 다른 방향을 선택하세요."
         },
         "courseB_playlab_events6_2020": {
           "courseB_playlab_events6_c": "통과하려면 깃발 모두로 가야 합니다!",
-          "courseB_playlab_events6_a": "이벤트 블록이 필요할 것입니다.\n\n[블러클리 블록][0]",
+          "courseB_playlab_events6_a": "이벤트 블록이 필요할 것입니다.\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
           "courseB_playlab_events6_b": " `___ 화살표를 눌렀을 때` 이벤트 블록 위 드롭다운 화살표를 사용하여 다른 방향을 선택하세요."
         },
         "courseB_playlab_events_challenge1": {
@@ -5279,14 +5336,14 @@
           "courseB_playlab_events_challenge1_c": "레이스가 끝날 때 모두가 뭐라고 말할까요? 이 이벤트로 그들이 말하게 만드세요:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml> "
         },
         "courseB_playlab_events_challenge1_2019": {
-          "courseB_playlab_events_challenge1_a": "`▼`를 누를 때 다른 동물이 아래로 이동하도록 만드세요. \n\n[블러클리 블록][0]",
-          "courseB_playlab_events_challenge1_b": "이 블록을 사용해 동물 속도를 변경하세요:\n\n[블러클리 블록][0] ",
-          "courseB_playlab_events_challenge1_c": "레이스가 끝날 때 모두가 뭐라고 말할까요? 이 이벤트로 그들이 말하게 만드세요:\n\n[블러클리 블록][0] "
+          "courseB_playlab_events_challenge1_a": "`▼`를 누를 때 다른 동물이 아래로 이동하도록 만드세요. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "이 블록을 사용해 동물 속도를 변경하세요:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml> ",
+          "courseB_playlab_events_challenge1_c": "레이스가 끝날 때 모두가 뭐라고 말할까요? 이 이벤트로 그들이 말하게 만드세요:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml> "
         },
         "courseB_playlab_events_challenge1_2020": {
-          "courseB_playlab_events_challenge1_a": "`▼`를 누를 때 다른 동물이 아래로 이동하도록 만드세요. \n\n[블러클리 블록][0]",
-          "courseB_playlab_events_challenge1_b": "이 블록을 사용해 동물 속도를 변경하세요:\n\n[블러클리 블록][0] ",
-          "courseB_playlab_events_challenge1_c": "레이스가 끝날 때 모두가 뭐라고 말할까요? 이 이벤트로 그들이 말하게 만드세요:\n\n[블러클리 블록][0] "
+          "courseB_playlab_events_challenge1_a": "`▼`를 누를 때 다른 동물이 아래로 이동하도록 만드세요. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "이 블록을 사용해 동물 속도를 변경하세요:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml> ",
+          "courseB_playlab_events_challenge1_c": "레이스가 끝날 때 모두가 뭐라고 말할까요? 이 이벤트로 그들이 말하게 만드세요:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml> "
         },
         "course1_artist_loops_challenge3": {
           "courseA_artist_loops_challenge2_a": "이와 같은 블록: <xml>  <block type=\"simple_move_up_left\"/></xml>은 아티스트가 비스듬히 움직일 수 있게 해줄 것입니다. "
@@ -5309,13 +5366,16 @@
           "courseB_artist_loops3_b": "아티스트는 이 선을 그리기 위해 남쪽으로 이동하고 싶을 것입니다."
         },
         "courseB_artist_loops3_2018": {
-          "courseB_artist_loops3_b": "아티스트는 이 선을 그리기 위해 남쪽으로 이동하고 싶을 것입니다."
+          "courseB_artist_loops3_b": "아티스트는 이 선을 그리기 위해 남쪽으로 이동하고 싶을 것입니다.",
+          "courseB_artist_loops3_a": "더 나은 코드를 위해 `반복` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프를 사용해야 하는 걸 기억하세요!"
         },
         "courseB_artist_loops3_2019": {
-          "courseB_artist_loops3_b": "아티스트는 이 선을 그리기 위해 남쪽으로 이동하고 싶을 것입니다."
+          "courseB_artist_loops3_b": "아티스트는 이 선을 그리기 위해 남쪽으로 이동하고 싶을 것입니다.",
+          "courseB_artist_loops3_a": "더 나은 코드를 위해 `반복` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프를 사용해야 하는 걸 기억하세요!"
         },
         "courseB_artist_loops3_2020": {
-          "courseB_artist_loops3_b": "아티스트는 이 선을 그리기 위해 남쪽으로 이동하고 싶을 것입니다."
+          "courseB_artist_loops3_b": "아티스트는 이 선을 그리기 위해 남쪽으로 이동하고 싶을 것입니다.",
+          "courseB_artist_loops3_a": "더 나은 코드를 위해 `반복` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프를 사용해야 하는 걸 기억하세요!"
         },
         "courseB_artist_loops4": {
           "courseB_artist_loops4_a": "점프 블록은 선을 그리지 않고도 앞으로 이동하게 해줍니다.",
@@ -5364,12 +5424,12 @@
         },
         "courseB_artist_loops7_2019": {
           "courseB_artist_loops7_a": "이 도전은 **4**개 루프를 연이어 사용합니다!",
-          "courseB_artist_loops7_b": "각 루프는 다른 방향으로 가는 계단 패턴을 만든다는 점에 주의하세요.\n\n[][0]",
+          "courseB_artist_loops7_b": "각 루프는 다른 방향으로 가는 계단 패턴을 만든다는 점에 주의하세요.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "루프는 다음을 합니다:\n\n-   루프 1\n    -   오른쪽\n    -   아래\n\n-   루프 2\n    -   오른쪽\n    -   위\n\n-   루프 3\n    -   왼쪽\n    -   위\n\n-   루프 4\n    -   왼쪽\n    -   아래"
         },
         "courseB_artist_loops7_2020": {
           "courseB_artist_loops7_a": "이 도전은 **4**개 루프를 연이어 사용합니다!",
-          "courseB_artist_loops7_b": "각 루프는 다른 방향으로 가는 계단 패턴을 만든다는 점에 주의하세요.\n\n[][0]",
+          "courseB_artist_loops7_b": "각 루프는 다른 방향으로 가는 계단 패턴을 만든다는 점에 주의하세요.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "루프는 다음을 합니다:\n\n-   루프 1\n    -   오른쪽\n    -   아래\n\n-   루프 2\n    -   오른쪽\n    -   위\n\n-   루프 3\n    -   왼쪽\n    -   위\n\n-   루프 4\n    -   왼쪽\n    -   아래"
         },
         "courseB_artist_loops8": {
@@ -5411,10 +5471,10 @@
           "courseB_collector_loops1_a": "<xml><block type=\"collector_collect_simplified\"/></xml> 블록은 보석 위에 서서 그것을 집을 때 사용할 수 있습니다."
         },
         "courseB_collector_loops1_2019": {
-          "courseB_collector_loops1_a": "[블러클리 블록][0] 블록은 보석 위에 서서 그것을 집을 때 사용할 수 있습니다."
+          "courseB_collector_loops1_a": "<xml><block type=\"collector_collect_simplified\"/></xml> 블록은 보석 위에 서서 그것을 집을 때 사용할 수 있습니다."
         },
         "courseB_collector_loops1_2020": {
-          "courseB_collector_loops1_a": "[블러클리 블록][0] 블록은 보석 위에 서서 그것을 집을 때 사용할 수 있습니다."
+          "courseB_collector_loops1_a": "<xml><block type=\"collector_collect_simplified\"/></xml> 블록은 보석 위에 서서 그것을 집을 때 사용할 수 있습니다."
         },
         "courseB_collector_loops3": {
           "courseB_collector_prog3_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> 블록을 사용해 보물을 모아 보세요! ",
@@ -5425,11 +5485,11 @@
           "courseB_collector_prog3_b": "반복 루프 안에는 한 개 이상의 블록을 넣을 수 있다는 점을 기억하세요."
         },
         "courseB_collector_loops3_2019": {
-          "courseB_collector_prog3_a": "[블러클리 블록][0] 블록을 사용해 보물을 모아 보세요! ",
+          "courseB_collector_prog3_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> 블록을 사용해 보물을 모아 보세요! ",
           "courseB_collector_prog3_b": "반복 루프 안에는 한 개 이상의 블록을 넣을 수 있다는 점을 기억하세요."
         },
         "courseB_collector_loops3_2020": {
-          "courseB_collector_prog3_a": "[블러클리 블록][0] 블록을 사용해 보물을 모아 보세요! ",
+          "courseB_collector_prog3_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> 블록을 사용해 보물을 모아 보세요! ",
           "courseB_collector_prog3_b": "반복 루프 안에는 한 개 이상의 블록을 넣을 수 있다는 점을 기억하세요."
         },
         "courseB_collector_loops5": {
@@ -5457,17 +5517,20 @@
         "courseB_collector_loops6_2018": {
           "courseB_collector_loops6_a": "어디서부터 잘못되기 시작했는지 알아낼 수 없으세요?  \"단계\" 버튼을 사용하여 코드를 한 번에 한 블록씩 실행해 보세요.",
           "courseB_collector_loops6_b": "\"3\"을 클릭하고 다른 숫자를 선택하여 반복 루프 실행 횟수를 변경할 수 있습니다.",
-          "courseB_collector_loops6_d": "혼동되면, 이 퍼즐을 3개 부분으로 나눠 보세요."
+          "courseB_collector_loops6_d": "혼동되면, 이 퍼즐을 3개 부분으로 나눠 보세요.",
+          "courseB_collector_loops6_c": "이 퍼즐을 풀기 위해 `반복`  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프 3개를 사용하길 원할 것입니다."
         },
         "courseB_collector_loops6_2019": {
           "courseB_collector_loops6_a": "어디서부터 잘못되기 시작했는지 알아낼 수 없으세요?  \"단계\" 버튼을 사용하여 코드를 한 번에 한 블록씩 실행해 보세요.",
           "courseB_collector_loops6_b": "\"3\"을 클릭하고 다른 숫자를 선택하여 반복 루프 실행 횟수를 변경할 수 있습니다.",
-          "courseB_collector_loops6_d": "혼동되면, 이 퍼즐을 3개 부분으로 나눠 보세요."
+          "courseB_collector_loops6_d": "혼동되면, 이 퍼즐을 3개 부분으로 나눠 보세요.",
+          "courseB_collector_loops6_c": "이 퍼즐을 풀기 위해 `반복`  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프 3개를 사용하길 원할 것입니다."
         },
         "courseB_collector_loops6_2020": {
           "courseB_collector_loops6_a": "어디서부터 잘못되기 시작했는지 알아낼 수 없으세요?  \"단계\" 버튼을 사용하여 코드를 한 번에 한 블록씩 실행해 보세요.",
           "courseB_collector_loops6_b": "\"3\"을 클릭하고 다른 숫자를 선택하여 반복 루프 실행 횟수를 변경할 수 있습니다.",
-          "courseB_collector_loops6_d": "혼동되면, 이 퍼즐을 3개 부분으로 나눠 보세요."
+          "courseB_collector_loops6_d": "혼동되면, 이 퍼즐을 3개 부분으로 나눠 보세요.",
+          "courseB_collector_loops6_c": "이 퍼즐을 풀기 위해 `반복`  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프 3개를 사용하길 원할 것입니다."
         },
         "courseB_collector_loops8": {
           "courseB_collector_loops8_challenge_a": "반복 루프를 어디에 놓아야 할지 모르겠으면 차례로 코드를 적어 패턴을 찾으세요."
@@ -5488,10 +5551,10 @@
           "courseB_playlab_events2_a": "이것은 공룡 데이지에게 뭔가 말하게 만드는 블록입니다:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events2_2019": {
-          "courseB_playlab_events2_a": "이것은 공룡 데이지에게 뭔가 말하게 만드는 블록입니다:\n\n[블러클리 블록][0]"
+          "courseB_playlab_events2_a": "이것은 공룡 데이지에게 뭔가 말하게 만드는 블록입니다:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events2_2020": {
-          "courseB_playlab_events2_a": "이것은 공룡 데이지에게 뭔가 말하게 만드는 블록입니다:\n\n[블러클리 블록][0]"
+          "courseB_playlab_events2_a": "이것은 공룡 데이지에게 뭔가 말하게 만드는 블록입니다:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3": {
           "courseB_playlab_events3_a": "이것은 이벤트를 추가할 때 사용해야 하는 블록입니다:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
@@ -5502,12 +5565,12 @@
           "courseB_playlab_events3_b": "이것은 데이지의 기분을 바꾸는 데 필요한 블록입니다:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3_2019": {
-          "courseB_playlab_events3_a": "이것은 이벤트를 추가할 때 사용해야 하는 블록입니다:\n\n[블러클리 블록][0]",
-          "courseB_playlab_events3_b": "이것은 데이지의 기분을 바꾸는 데 필요한 블록입니다:\n\n[블러클리 블록][0]"
+          "courseB_playlab_events3_a": "이것은 이벤트를 추가할 때 사용해야 하는 블록입니다:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "이것은 데이지의 기분을 바꾸는 데 필요한 블록입니다:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3_2020": {
-          "courseB_playlab_events3_a": "이것은 이벤트를 추가할 때 사용해야 하는 블록입니다:\n\n[블러클리 블록][0]",
-          "courseB_playlab_events3_b": "이것은 데이지의 기분을 바꾸는 데 필요한 블록입니다:\n\n[블러클리 블록][0]"
+          "courseB_playlab_events3_a": "이것은 이벤트를 추가할 때 사용해야 하는 블록입니다:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "이것은 데이지의 기분을 바꾸는 데 필요한 블록입니다:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4": {
           "courseB_playlab_events4_a": "이것은 좌측 화살표를 제어하는 이벤트입니다:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
@@ -5518,12 +5581,12 @@
           "courseB_playlab_events4_b": "이것은 기사를 좌측으로 이동하게 만드는 블록입니다:\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4_2019": {
-          "courseB_playlab_events4_a": "이것은 좌측 화살표를 제어하는 이벤트입니다:\n\n[블러클리 블록][0]",
-          "courseB_playlab_events4_b": "이것은 기사를 좌측으로 이동하게 만드는 블록입니다:\n\n[블러클리 블록][0]"
+          "courseB_playlab_events4_a": "이것은 좌측 화살표를 제어하는 이벤트입니다:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_b": "이것은 기사를 좌측으로 이동하게 만드는 블록입니다:\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4_2020": {
-          "courseB_playlab_events4_a": "이것은 좌측 화살표를 제어하는 이벤트입니다:\n\n[블러클리 블록][0]",
-          "courseB_playlab_events4_b": "이것은 기사를 좌측으로 이동하게 만드는 블록입니다:\n\n[블러클리 블록][0]"
+          "courseB_playlab_events4_a": "이것은 좌측 화살표를 제어하는 이벤트입니다:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_b": "이것은 기사를 좌측으로 이동하게 만드는 블록입니다:\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events5": {
           "courseB_playlab_events5_a": "이것은 우측 화살표를 제어하는 이벤트 블록입니다: \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
@@ -5534,12 +5597,12 @@
           "courseB_playlab_events5_b": "이것은 기사를 도망가게 만드는 블록입니다:\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events5_2019": {
-          "courseB_playlab_events5_a": "이것은 우측 화살표를 제어하는 이벤트 블록입니다: \n\n[블러클리 블록][0]",
-          "courseB_playlab_events5_b": "이것은 기사를 도망가게 만드는 블록입니다:\n\n[블러클리 블록][0]"
+          "courseB_playlab_events5_a": "이것은 우측 화살표를 제어하는 이벤트 블록입니다: \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "이것은 기사를 도망가게 만드는 블록입니다:\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events5_2020": {
-          "courseB_playlab_events5_a": "이것은 우측 화살표를 제어하는 이벤트 블록입니다: \n\n[블러클리 블록][0]",
-          "courseB_playlab_events5_b": "이것은 기사를 도망가게 만드는 블록입니다:\n\n[블러클리 블록][0]"
+          "courseB_playlab_events5_a": "이것은 우측 화살표를 제어하는 이벤트 블록입니다: \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "이것은 기사를 도망가게 만드는 블록입니다:\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events7": {
           "courseB_playlab_events7_a": "이것은 필요하게 될 이벤트 블록입니다: \n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
@@ -5552,14 +5615,14 @@
           "courseB_playlab_events7_c": "이것은 기사를 사라지게 하는데 필요한 블록입니다:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events7_2019": {
-          "courseB_playlab_events7_a": "이것은 필요하게 될 이벤트 블록입니다: \n\n[블러클리 블록][0]",
-          "courseB_playlab_events7_b": "이것은 소리가 나오게 하는데 필요한 블록입니다:\n\n[블러클리 블록][0]",
-          "courseB_playlab_events7_c": "이것은 기사를 사라지게 하는데 필요한 블록입니다:\n\n[블러클리 블록][0]"
+          "courseB_playlab_events7_a": "이것은 필요하게 될 이벤트 블록입니다: \n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "이것은 소리가 나오게 하는데 필요한 블록입니다:\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "이것은 기사를 사라지게 하는데 필요한 블록입니다:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events7_2020": {
-          "courseB_playlab_events7_a": "이것은 필요하게 될 이벤트 블록입니다: \n\n[블러클리 블록][0]",
-          "courseB_playlab_events7_b": "이것은 소리가 나오게 하는데 필요한 블록입니다:\n\n[블러클리 블록][0]",
-          "courseB_playlab_events7_c": "이것은 기사를 사라지게 하는데 필요한 블록입니다:\n\n[블러클리 블록][0]"
+          "courseB_playlab_events7_a": "이것은 필요하게 될 이벤트 블록입니다: \n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "이것은 소리가 나오게 하는데 필요한 블록입니다:\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "이것은 기사를 사라지게 하는데 필요한 블록입니다:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge2": {
           "courseB_playlab_events_challenge2_a": "게임에 나오는 각 동물은 클릭하면 사라져야 합니다. 또한 1초 또는 2초 후에 다시 돌아 와야 합니다.",
@@ -5575,14 +5638,14 @@
         },
         "courseB_playlab_events_challenge2_2019": {
           "courseB_playlab_events_challenge2_a": "게임에 나오는 각 동물은 클릭하면 사라져야 합니다. 또한 1초 또는 2초 후에 다시 돌아 와야 합니다.",
-          "courseB_playlab_events_challenge2_b": "다른 이벤트 블록을 사용해 다른 동물도 사라지게 만드세요! \n\n[블러클리 블록][0]",
-          "courseB_playlab_events_challenge2_c": "추가 명령을 사용하여 클릭 시 소리가 나오거나 또는 포인트 점수가 올라가게 하세요!\n\n[블러클리 블록][0]",
+          "courseB_playlab_events_challenge2_b": "다른 이벤트 블록을 사용해 다른 동물도 사라지게 만드세요! \n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "추가 명령을 사용하여 클릭 시 소리가 나오거나 또는 포인트 점수가 올라가게 하세요!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "혼합하세요!\n\n어떤 동물이 다른 동물 보다 더 많은 포인트를 얻게 만드세요.\n다른 소리를 사용하세요.\n동물 기분을 바꾸세요!"
         },
         "courseB_playlab_events_challenge2_2020": {
           "courseB_playlab_events_challenge2_a": "게임에 나오는 각 동물은 클릭하면 사라져야 합니다. 또한 1초 또는 2초 후에 다시 돌아 와야 합니다.",
-          "courseB_playlab_events_challenge2_b": "다른 이벤트 블록을 사용해 다른 동물도 사라지게 만드세요! \n\n[블러클리 블록][0]",
-          "courseB_playlab_events_challenge2_c": "추가 명령을 사용하여 클릭 시 소리가 나오거나 또는 포인트 점수가 올라가게 하세요!\n\n[블러클리 블록][0]",
+          "courseB_playlab_events_challenge2_b": "다른 이벤트 블록을 사용해 다른 동물도 사라지게 만드세요! \n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "추가 명령을 사용하여 클릭 시 소리가 나오거나 또는 포인트 점수가 올라가게 하세요!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "혼합하세요!\n\n어떤 동물이 다른 동물 보다 더 많은 포인트를 얻게 만드세요.\n다른 소리를 사용하세요.\n동물 기분을 바꾸세요!"
         },
         "courseB_starWars_prog1": {
@@ -5595,11 +5658,11 @@
         },
         "courseB_starWars_prog1_2019": {
           "courseB_starWars_prog1_a": "한 번에 한 블록 씩 추가해 보고 그 다음, \"실행\"을 클릭하여 무슨 일이 벌어지는지 보세요.",
-          "courseB_starWars_prog1_b": "이 퍼즐을 풀기 위해 동쪽으로 이동하고 싶을 거예요. 얼마나 멀리 이동해야 할까요?\n\n[블러클리 블록][0] \n"
+          "courseB_starWars_prog1_b": "이 퍼즐을 풀기 위해 동쪽으로 이동하고 싶을 거예요. 얼마나 멀리 이동해야 할까요?\n\n<xml><block type=\"studio_moveEast\"/></xml> "
         },
         "courseB_starWars_prog1_2020": {
           "courseB_starWars_prog1_a": "한 번에 한 블록 씩 추가해 보고 그 다음, \"실행\"을 클릭하여 무슨 일이 벌어지는지 보세요.",
-          "courseB_starWars_prog1_b": "이 퍼즐을 풀기 위해 동쪽으로 이동하고 싶을 거예요. 얼마나 멀리 이동해야 할까요?\n\n[블러클리 블록][0] \n"
+          "courseB_starWars_prog1_b": "이 퍼즐을 풀기 위해 동쪽으로 이동하고 싶을 거예요. 얼마나 멀리 이동해야 할까요?\n\n<xml><block type=\"studio_moveEast\"/></xml> "
         },
         "courseB_starWars_prog2": {
           "courseB_starWars_prog2_a": "이 문제를 두 개 부분으로 나누세요. 고철 더미 한 개를 얻고 그 다음, 다른 더미를 마저 얻는 방법을 알아 내세요. "
@@ -5636,11 +5699,11 @@
         },
         "courseB_starWars_prog4_2019": {
           "courseB_starWars_prog4_a": "한 번에 코드 한 부분만 작성하세요. 실행하여 거기서부터 어디로 가야 할 지 알아 내세요. ",
-          "courseB_starWars_prog4_b": "더 짧은 코드를 만들기 위해 '반복' 블럭을 사용해 보세요! \n\n[블러클리 블록][0] "
+          "courseB_starWars_prog4_b": "더 짧은 코드를 만들기 위해 '반복' 블럭을 사용해 보세요! \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml> "
         },
         "courseB_starWars_prog4_2020": {
           "courseB_starWars_prog4_a": "한 번에 코드 한 부분만 작성하세요. 실행하여 거기서부터 어디로 가야 할 지 알아 내세요. ",
-          "courseB_starWars_prog4_b": "더 짧은 코드를 만들기 위해 '반복' 블럭을 사용해 보세요! \n\n[블러클리 블록][0] "
+          "courseB_starWars_prog4_b": "더 짧은 코드를 만들기 위해 '반복' 블럭을 사용해 보세요! \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml> "
         },
         "courseB_starWars_prog5": {
           "courseB_starWars_prog5_a": "이 패턴은 마지막 퍼즐과 비슷해 보이지 않죠?",
@@ -5658,13 +5721,13 @@
           "courseB_starWars_prog5_a": "이 패턴은 마지막 퍼즐과 비슷해 보이지 않죠?",
           "courseB_starWars_prog5_b": "BB-8는 그 위로 구르며 고철 집을 거예요.",
           "courseB_starWars_prog5_c": "이 패턴을 손가락으로 따라가세요. 움직이며 금속 조각을 세세요.",
-          "courseB_starWars_prog5_da": "계단 퍼즐과 동일한 솔루션을 사용하면 무슨 일이 벌어지는지 보세요.\n\n[][0]"
+          "courseB_starWars_prog5_da": "계단 퍼즐과 동일한 솔루션을 사용하면 무슨 일이 벌어지는지 보세요.\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2020": {
           "courseB_starWars_prog5_a": "이 패턴은 마지막 퍼즐과 비슷해 보이지 않죠?",
           "courseB_starWars_prog5_b": "BB-8는 그 위로 구르며 고철 집을 거예요.",
           "courseB_starWars_prog5_c": "이 패턴을 손가락으로 따라가세요. 움직이며 금속 조각을 세세요.",
-          "courseB_starWars_prog5_da": "계단 퍼즐과 동일한 솔루션을 사용하면 무슨 일이 벌어지는지 보세요.\n\n[][0]"
+          "courseB_starWars_prog5_da": "계단 퍼즐과 동일한 솔루션을 사용하면 무슨 일이 벌어지는지 보세요.\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6": {
           "courseB_starWars_prog6_a": "이 패턴은 방향 마다 두번 이동하는 계단과 같습니다.",
@@ -5676,11 +5739,11 @@
         },
         "courseB_starWars_prog6_2019": {
           "courseB_starWars_prog6_a": "이 패턴은 방향 마다 두번 이동하는 계단과 같습니다.",
-          "courseB_starWars_prog6_b": "더 짧은 코드를 만들기 위해 '반복' 블럭을 사용해 보세요! \n\n[블러클리 블록][0] "
+          "courseB_starWars_prog6_b": "더 짧은 코드를 만들기 위해 '반복' 블럭을 사용해 보세요! \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml> "
         },
         "courseB_starWars_prog6_2020": {
           "courseB_starWars_prog6_a": "이 패턴은 방향 마다 두번 이동하는 계단과 같습니다.",
-          "courseB_starWars_prog6_b": "더 짧은 코드를 만들기 위해 '반복' 블럭을 사용해 보세요! \n\n[블러클리 블록][0] "
+          "courseB_starWars_prog6_b": "더 짧은 코드를 만들기 위해 '반복' 블럭을 사용해 보세요! \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml> "
         },
         "courseB_starWars_prog7": {
           "courseB_starWars_prog7_a": "이 패턴은 마지막 퍼즐과 비슷해 보이지 않죠?",
@@ -5712,11 +5775,11 @@
         },
         "courseB_starWars_prog8_2019": {
           "courseB_starWars_prog8_a": "이미 다녀 왔던 우주로 다시 가도 괜찮아요. ",
-          "courseB_starWars_prog8_b": "'반복' 블럭을 사용해 안에 넣었던 코드에 무슨 일이 일어나는지 보세요. \n\n[블러클리 블록][0] "
+          "courseB_starWars_prog8_b": "'반복' 블럭을 사용해 안에 넣었던 코드에 무슨 일이 일어나는지 보세요. \n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml> "
         },
         "courseB_starWars_prog8_2020": {
           "courseB_starWars_prog8_a": "이미 다녀 왔던 우주로 다시 가도 괜찮아요. ",
-          "courseB_starWars_prog8_b": "'반복' 블럭을 사용해 안에 넣었던 코드에 무슨 일이 일어나는지 보세요. \n\n[블러클리 블록][0] "
+          "courseB_starWars_prog8_b": "'반복' 블럭을 사용해 안에 넣었던 코드에 무슨 일이 일어나는지 보세요. \n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml> "
         },
         "courseC_artist_loops1a": {
           "courseC_artist_loops1a_a": "이것은 필요하게 될 첫 번째 블록입니다: \n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
@@ -5937,13 +6000,16 @@
           "courseD_artist_project1_b": "`앞으로 이동`으로는 선을 그리는 한편 `앞으로 점프`로는 그러지 않는다는 걸 기억하세요."
         },
         "courseD_artist_2_2018": {
-          "courseD_artist_project1_a": "`회전` 블록 위 드롭다운 메뉴를 사용하여 어느 각이 필요한지 선택하세요!"
+          "courseD_artist_project1_a": "`회전` 블록 위 드롭다운 메뉴를 사용하여 어느 각이 필요한지 선택하세요!",
+          "courseD_artist_project1_b": "`이동`은 선을 그리지만 `점프`는 선을 그리지 않는다는 걸 기억하세요."
         },
         "courseD_artist_2_2018_2019": {
-          "courseD_artist_project1_a": "`회전` 블록 위 드롭다운 메뉴를 사용하여 어느 각이 필요한지 선택하세요!"
+          "courseD_artist_project1_a": "`회전` 블록 위 드롭다운 메뉴를 사용하여 어느 각이 필요한지 선택하세요!",
+          "courseD_artist_project1_b": "`이동`은 선을 그리지만 `점프`는 선을 그리지 않는다는 걸 기억하세요."
         },
         "courseD_artist_2_2018_2020": {
-          "courseD_artist_project1_a": "`회전` 블록 위 드롭다운 메뉴를 사용하여 어느 각이 필요한지 선택하세요!"
+          "courseD_artist_project1_a": "`회전` 블록 위 드롭다운 메뉴를 사용하여 어느 각이 필요한지 선택하세요!",
+          "courseD_artist_project1_b": "`이동`은 선을 그리지만 `점프`는 선을 그리지 않는다는 걸 기억하세요."
         },
         "courseD_artist_project1": {
           "courseD_artist_project1_a": "`회전` 블록 위 드롭다운 메뉴를 사용하여 어느 각이 필요한지 선택하세요!",
@@ -7484,6 +7550,741 @@
         "courseF_bee_fwp7": {
           "courseF_bee_fwp7_a": "이 함수를 위해 두 번째 매개변수는 필요하지 않고 단지 두 번째 '만약' 조건문이 필요해요.",
           "courseF_bee_fwp7_b": "`만약` 조건문을 함수에 추가해 벌이 꿀집과 꽃 모두를 확인하게 합니다."
+        },
+        "courseA_harvester_loops1": {
+          "courseA_harvester_loops1_a": "일단 옥수수로 이동하면, 이 블록을 사용하여 따세요!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops1_2019": {
+          "courseA_harvester_loops1_a": "일단 옥수수로 이동하면, 이 블록을 사용하여 따세요!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops1_2020": {
+          "courseA_harvester_loops1_a": "일단 옥수수로 이동하면, 이 블록을 사용하여 따세요!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops2": {
+          "courseA_harvester_loops2_a": "코드에는 **네**개의 `서쪽으로 이동` <xml><block type=\"maze_moveWest\"/></xml> 블록과\n\n**네**개의 `옥수수 따기` <xml><block type=\"harvester_corn\"/></xml> 블록이 들어 갈 것입니다.",
+          "courseA_harvester_loops2_b": "여전히 문제가 있으면, 단계를 크게 소리 내어 말해 보세요."
+        },
+        "courseA_harvester_loops2_2019": {
+          "courseA_harvester_loops2_b": "여전히 문제가 있으면, 단계를 크게 소리 내어 말해 보세요."
+        },
+        "courseA_harvester_loops2_2020": {
+          "courseA_harvester_loops2_b": "여전히 문제가 있으면, 단계를 크게 소리 내어 말해 보세요."
+        },
+        "courseA_harvester_loops3": {
+          "courseA_harvester_loops3_a": "이것처럼 '반복' 블럭을 사용하세요! \n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ",
+          "courseA_harvester_loops3_b": "코드를 반복하기 위해 '반복' (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> 루프를 밖으로 드래그하고 그 다음, 원하는 블록을 그 안에 넣으세요. "
+        },
+        "courseA_harvester_loops3_2019": {
+          "courseA_harvester_loops3_a": "이것처럼 '반복' 블럭을 사용하세요! \n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ",
+          "courseA_harvester_loops3_b": "코드를 반복하기 위해 '반복' (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> 루프를 밖으로 드래그하고 그 다음, 원하는 블록을 그 안에 넣으세요. "
+        },
+        "courseA_harvester_loops3_2020": {
+          "courseA_harvester_loops3_a": "이것처럼 '반복' 블럭을 사용하세요! \n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ",
+          "courseA_harvester_loops3_b": "코드를 반복하기 위해 '반복' (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> 루프를 밖으로 드래그하고 그 다음, 원하는 블록을 그 안에 넣으세요. "
+        },
+        "courseA_harvester_loops4": {
+          "courseA_harvester_loops4_a": "무슨 일이 일어 나는지 보기 위해 `실행`을 누르는 것을 겁내지 마세요!",
+          "courseA_harvester_loops4_b": "거기에 옥수수가 몇 개 있어요? 코드를 몇 번 반복했어요?"
+        },
+        "courseA_harvester_loops4_2019": {
+          "courseA_harvester_loops4_a": "무슨 일이 일어 나는지 보기 위해 `실행`을 누르는 것을 겁내지 마세요!",
+          "courseA_harvester_loops4_b": "거기에 옥수수가 몇 개 있어요? 코드를 몇 번 반복했어요?"
+        },
+        "courseA_harvester_loops4_2020": {
+          "courseA_harvester_loops4_a": "무슨 일이 일어 나는지 보기 위해 `실행`을 누르는 것을 겁내지 마세요!",
+          "courseA_harvester_loops4_b": "거기에 옥수수가 몇 개 있어요? 코드를 몇 번 반복했어요?"
+        },
+        "courseA_harvester_loops5a": {
+          "courseA_harvester_loops5a_a": "한 개의 '반복' <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>루프가 차례로 필요할 것입니다.",
+          "courseA_harvester_loops5a_b": "한 루프는 `서쪽으로 이동`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>을 반복하고 다른 루프는 `동쪽으로 이동`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>을 반복할 것입니다.",
+          "courseA_harvester_loops5a_c": "이 경로를 사용하여 한 방향으로 이동하고 그 다음 다른 것을 사용합니다."
+        },
+        "courseA_harvester_loops5a_2019": {
+          "courseA_harvester_loops5a_a": "한 개의 '반복' <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>루프가 차례로 필요할 것입니다.",
+          "courseA_harvester_loops5a_b": "한 루프는 `서쪽으로 이동`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>을 반복하고 다른 루프는 `동쪽으로 이동`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>을 반복할 것입니다.",
+          "courseA_harvester_loops5a_c": "이 경로를 사용하여 한 방향으로 이동하고 그 다음 다른 것을 사용합니다."
+        },
+        "courseA_harvester_loops5a_2020": {
+          "courseA_harvester_loops5a_a": "한 개의 '반복' <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>루프가 차례로 필요할 것입니다.",
+          "courseA_harvester_loops5a_b": "한 루프는 `서쪽으로 이동`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>을 반복하고 다른 루프는 `동쪽으로 이동`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>을 반복할 것입니다.",
+          "courseA_harvester_loops5a_c": "이 경로를 사용하여 한 방향으로 이동하고 그 다음 다른 것을 사용합니다."
+        },
+        "courseA_harvester_loops5b": {
+          "courseA_harvester_loops5b_a": "`실행`을 눌러 무슨 일이 일어나는지 보세요!",
+          "courseA_harvester_loops5b_b": "루프가 맞는 횟수로 반복하고 있습니까?",
+          "courseA_harvester_loops5b_c": "한 방향으로 이동하고 그 다음, 이 경로로 다른 방향으로 이동합니다."
+        },
+        "courseA_harvester_loops5b_2019": {
+          "courseA_harvester_loops5b_a": "`실행`을 눌러 무슨 일이 일어나는지 보세요!",
+          "courseA_harvester_loops5b_b": "루프가 맞는 횟수로 반복하고 있습니까?",
+          "courseA_harvester_loops5b_c": "한 방향으로 이동하고 그 다음, 이 경로로 다른 방향으로 이동합니다."
+        },
+        "courseA_harvester_loops5b_2020": {
+          "courseA_harvester_loops5b_a": "`실행`을 눌러 무슨 일이 일어나는지 보세요!",
+          "courseA_harvester_loops5b_b": "루프가 맞는 횟수로 반복하고 있습니까?",
+          "courseA_harvester_loops5b_c": "한 방향으로 이동하고 그 다음, 이 경로로 다른 방향으로 이동합니다."
+        },
+        "courseA_harvester_loops7": {
+          "courseA_harvester_loops7_a": "두 개의 '반복' <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>루프가 차례로 필요할 것입니다!",
+          "courseA_harvester_loops7_b": "두 개의 루프를 사용하여 이 경로를 따라 가세요."
+        },
+        "courseA_harvester_loops7_2019": {
+          "courseA_harvester_loops7_a": "두 개의 '반복' <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>루프가 차례로 필요할 것입니다!",
+          "courseA_harvester_loops7_b": "두 개의 루프를 사용하여 이 경로를 따라 가세요."
+        },
+        "courseA_harvester_loops7_2020": {
+          "courseA_harvester_loops7_a": "두 개의 '반복' <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>루프가 차례로 필요할 것입니다!",
+          "courseA_harvester_loops7_b": "두 개의 루프를 사용하여 이 경로를 따라 가세요."
+        },
+        "courseA_harvester_loops9": {
+          "courseA_harvester_loops9_a": "이 퍼즐을 최대 세 부분으로 나누세요. 첫 번째 코너까지 한 부분, 두 번째 코너까지 또 한 부분, 끝까지가 나머지 한 부분이 되게 나눕니다. ",
+          "courseA_harvester_loops9_b": "각 부분을 완료한 후 무슨 일이 일어 나는지 보기 위해 `실행`을 누르는 것을 겁내지 마세요!",
+          "courseA_harvester_loops9_c": "옥수수를 모두 따기 위해 이 경로를 따라 가세요."
+        },
+        "courseA_harvester_loops9_2019": {
+          "courseA_harvester_loops9_a": "이 퍼즐을 최대 세 부분으로 나누세요. 첫 번째 코너까지 한 부분, 두 번째 코너까지 또 한 부분, 끝까지가 나머지 한 부분이 되게 나눕니다. ",
+          "courseA_harvester_loops9_b": "각 부분을 완료한 후 무슨 일이 일어 나는지 보기 위해 `실행`을 누르는 것을 겁내지 마세요!",
+          "courseA_harvester_loops9_c": "옥수수를 모두 따기 위해 이 경로를 따라 가세요."
+        },
+        "courseA_harvester_loops9_2020": {
+          "courseA_harvester_loops9_a": "이 퍼즐을 최대 세 부분으로 나누세요. 첫 번째 코너까지 한 부분, 두 번째 코너까지 또 한 부분, 끝까지가 나머지 한 부분이 되게 나눕니다. ",
+          "courseA_harvester_loops9_b": "각 부분을 완료한 후 무슨 일이 일어 나는지 보기 위해 `실행`을 누르는 것을 겁내지 마세요!",
+          "courseA_harvester_loops9_c": "옥수수를 모두 따기 위해 이 경로를 따라 가세요."
+        },
+        "courseA_harvester_seq1": {
+          "courseA_harvester_seq1_a": "수확인이 옥수수를 찾을 때 이 블록을 사용해 옥수수를 따세요!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "옥수수로 가려면 수확인은 동쪽으로 3회 이동해야 합니다. 이 블록:<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>을 사용하세요. "
+        },
+        "courseA_harvester_seq10": {
+          "courseA_harvester_seq10_a": "잘 안돼요? 먼저 종이 위에 각 단계를 적어 보세요.",
+          "courseA_harvester_seq10_b": "`동쪽으로 이동`하고 그 다음 `북쪽으로 이동`해야 합니다. 마찬가지로 옥수수를 모두 얻어야 하는 걸 잊지 마세요!",
+          "courseA_harvester_seq10_c": "옥수수를 모두 따기 위해 이 경로를 이용해 보세요!"
+        },
+        "courseA_harvester_seq10_2019": {
+          "courseA_harvester_seq10_a": "잘 안돼요? 먼저 종이 위에 각 단계를 적어 보세요.",
+          "courseA_harvester_seq10_b": "`동쪽으로 이동`하고 그 다음 `북쪽으로 이동`해야 합니다. 마찬가지로 옥수수를 모두 얻어야 하는 걸 잊지 마세요!",
+          "courseA_harvester_seq10_c": "옥수수를 모두 따기 위해 이 경로를 이용해 보세요!"
+        },
+        "courseA_harvester_seq10_2020": {
+          "courseA_harvester_seq10_a": "잘 안돼요? 먼저 종이 위에 각 단계를 적어 보세요.",
+          "courseA_harvester_seq10_b": "`동쪽으로 이동`하고 그 다음 `북쪽으로 이동`해야 합니다. 마찬가지로 옥수수를 모두 얻어야 하는 걸 잊지 마세요!",
+          "courseA_harvester_seq10_c": "옥수수를 모두 따기 위해 이 경로를 이용해 보세요!"
+        },
+        "courseA_harvester_seq13": {
+          "courseA_bee_seq1_a": "일단 수확인이 옥수수로 가면 이 블록을 사용해 옥수수를 따세요.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq13_2019": {
+          "courseA_bee_seq1_a": "일단 수확인이 옥수수로 가면 이 블록을 사용해 옥수수를 따세요.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq13_2020": {
+          "courseA_bee_seq1_a": "일단 수확인이 옥수수로 가면 이 블록을 사용해 옥수수를 따세요.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2019": {
+          "courseA_harvester_seq1_a": "수확인이 옥수수를 찾을 때 이 블록을 사용해 옥수수를 따세요!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "옥수수로 가려면 수확인은 동쪽으로 3회 이동해야 합니다. 이 블록:<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>을 사용하세요. "
+        },
+        "courseA_harvester_seq1_2020": {
+          "courseA_harvester_seq1_a": "수확인이 옥수수를 찾을 때 이 블록을 사용해 옥수수를 따세요!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "옥수수로 가려면 수확인은 동쪽으로 3회 이동해야 합니다. 이 블록:<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>을 사용하세요. "
+        },
+        "courseA_harvester_seq3": {
+          "courseA_harvester_seq3_a": "이 블록을 사용해야 하는 걸 기억했어요?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "단계를 소리 내어 크게 말하고 그렇게 하는 것이 답을 알아내는 데 도움이 되는지 보세요."
+        },
+        "courseA_harvester_seq3_2019": {
+          "courseA_harvester_seq3_a": "이 블록을 사용해야 하는 걸 기억했어요?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "단계를 소리 내어 크게 말하고 그렇게 하는 것이 답을 알아내는 데 도움이 되는지 보세요."
+        },
+        "courseA_harvester_seq3_2020": {
+          "courseA_harvester_seq3_a": "이 블록을 사용해야 하는 걸 기억했어요?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "단계를 소리 내어 크게 말하고 그렇게 하는 것이 답을 알아내는 데 도움이 되는지 보세요."
+        },
+        "courseA_harvester_seq4": {
+          "courseA_harvester_seq4_a": "수확인과 옥수수 사이에 스페이스가 몇 개가 있습니까? 워크스페이스에 이미 몇 개의 블록이 있습니까?",
+          "courseA_harvester_seq4_b": "`동쪽으로 이동` 블록 다섯 개와 `옥수수 따기` 블록 한 개가 필요할 것입니다:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq4_2019": {
+          "courseA_harvester_seq4_a": "수확인과 옥수수 사이에 스페이스가 몇 개가 있습니까? 워크스페이스에 이미 몇 개의 블록이 있습니까?",
+          "courseA_harvester_seq4_b": "`동쪽으로 이동` 블록 다섯 개와 `옥수수 따기` 블록 한 개가 필요할 것입니다:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq4_2020": {
+          "courseA_harvester_seq4_a": "수확인과 옥수수 사이에 스페이스가 몇 개가 있습니까? 워크스페이스에 이미 몇 개의 블록이 있습니까?",
+          "courseA_harvester_seq4_b": "`동쪽으로 이동` 블록 다섯 개와 `옥수수 따기` 블록 한 개가 필요할 것입니다:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5": {
+          "courseA_harvester_seq5_a": "수확인을 잘못된 길로 이동하게 하는 블록은 어느 것입니까?",
+          "courseA_harvester_seq5_b": "한 개 블록을 제거 해야 합니다.",
+          "courseA_harvester_seq5_c": "이 블록을 휴지통에 버리세요!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq5_2019": {
+          "courseA_harvester_seq5_a": "수확인을 잘못된 길로 이동하게 하는 블록은 어느 것입니까?",
+          "courseA_harvester_seq5_b": "한 개 블록을 제거 해야 합니다.",
+          "courseA_harvester_seq5_c": "이 블록을 휴지통에 버리세요!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq5_2020": {
+          "courseA_harvester_seq5_a": "수확인을 잘못된 길로 이동하게 하는 블록은 어느 것입니까?",
+          "courseA_harvester_seq5_b": "한 개 블록을 제거 해야 합니다.",
+          "courseA_harvester_seq5_c": "이 블록을 휴지통에 버리세요!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6": {
+          "courseA_harvester_seq6_a": "잘 안되면, 각 단계를 소리 내어 크게 말해 보세요. 바른 경로를 알아내는 데 도움이 될거예요."
+        },
+        "courseA_harvester_seq6_2019": {
+          "courseA_harvester_seq6_a": "잘 안되면, 각 단계를 소리 내어 크게 말해 보세요. 바른 경로를 알아내는 데 도움이 될거예요."
+        },
+        "courseA_harvester_seq6_2020": {
+          "courseA_harvester_seq6_a": "잘 안되면, 각 단계를 소리 내어 크게 말해 보세요. 바른 경로를 알아내는 데 도움이 될거예요."
+        },
+        "courseA_harvester_seq7": {
+          "courseA_harvester_seq7_a": "막히면, 2개 부분, 한 부분은 코너 앞, 다른 한 부분은 코너 다음에 있는 퍼즐을 풀어 보세요. ",
+          "courseA_harvester_seq7_b": "문제가 있어요? 이 경로가 수확인이 선택해야 하는 경로입니다."
+        },
+        "courseA_harvester_seq7_2019": {
+          "courseA_harvester_seq7_a": "막히면, 2개 부분, 한 부분은 코너 앞, 다른 한 부분은 코너 다음에 있는 퍼즐을 풀어 보세요. ",
+          "courseA_harvester_seq7_b": "문제가 있어요? 이 경로가 수확인이 선택해야 하는 경로입니다."
+        },
+        "courseA_harvester_seq7_2020": {
+          "courseA_harvester_seq7_a": "막히면, 2개 부분, 한 부분은 코너 앞, 다른 한 부분은 코너 다음에 있는 퍼즐을 풀어 보세요. ",
+          "courseA_harvester_seq7_b": "문제가 있어요? 이 경로가 수확인이 선택해야 하는 경로입니다."
+        },
+        "courseA_harvester_seq8": {
+          "courseA_harvester_seq8_a": "최종 코드에는 **4**개의 이동 블록과 **2**개의 따기 블록이 있어야 합니다."
+        },
+        "courseA_harvester_seq8_2019": {
+          "courseA_harvester_seq8_a": "최종 코드에는 **4**개의 이동 블록과 **2**개의 따기 블록이 있어야 합니다."
+        },
+        "courseA_harvester_seq8_2020": {
+          "courseA_harvester_seq8_a": "최종 코드에는 **4**개의 이동 블록과 **2**개의 따기 블록이 있어야 합니다."
+        },
+        "courseA_harvester_seq9": {
+          "courseA_harvester_seq9_a": "코드를 서너 번 실행하여 무슨 일이 일어나는지 보세요. 수확인이 어디에서 멈췄습니까?",
+          "courseA_harvester_seq9_b": "옥수수를 모두 따는 걸 잊지 마세요! 옥수수 따기 블럭이 **3**개 필요할 것입니다.",
+          "courseA_harvester_seq9_c": "옥수수를 모두 따려면 이 경로를 택해야 합니다."
+        },
+        "courseA_harvester_seq9_2019": {
+          "courseA_harvester_seq9_a": "코드를 서너 번 실행하여 무슨 일이 일어나는지 보세요. 수확인이 어디에서 멈췄습니까?",
+          "courseA_harvester_seq9_b": "옥수수를 모두 따는 걸 잊지 마세요! 옥수수 따기 블럭이 **3**개 필요할 것입니다.",
+          "courseA_harvester_seq9_c": "옥수수를 모두 따려면 이 경로를 택해야 합니다."
+        },
+        "courseA_harvester_seq9_2020": {
+          "courseA_harvester_seq9_a": "코드를 서너 번 실행하여 무슨 일이 일어나는지 보세요. 수확인이 어디에서 멈췄습니까?",
+          "courseA_harvester_seq9_b": "옥수수를 모두 따는 걸 잊지 마세요! 옥수수 따기 블럭이 **3**개 필요할 것입니다.",
+          "courseA_harvester_seq9_c": "옥수수를 모두 따려면 이 경로를 택해야 합니다."
+        },
+        "courseA_maze_ramp2_2018": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2019": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2020": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2018": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2019": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2020": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2018": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2019": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2020": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2018": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2019": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2020": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2018": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2019": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2020": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_seq5a_2018": {
+          "1": "단계를 소리 내어 크게 말하고 그렇게 하는 것이 답을 알아내는 데 도움이 되는지 보세요."
+        },
+        "courseA_maze_seq5a_2019": {
+          "1": "단계를 소리 내어 크게 말하고 그렇게 하는 것이 답을 알아내는 데 도움이 되는지 보세요."
+        },
+        "courseA_maze_seq5a_2020": {
+          "1": "단계를 소리 내어 크게 말하고 그렇게 하는 것이 답을 알아내는 데 도움이 되는지 보세요."
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "1": "스크랫이 여러분이 원하는 대로 움직이지 않으면, 두 개의 블록 모두 함께 완전하게 클릭되었는지 확인하고 그 다음, \"실행\"을 다시 클릭하세요.",
+          "2": "실수할까봐 겁내지 마세요! 뭔가를 시도하고, 그래도 안되면, 다른 뭔가를 시도하세요!"
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "1": "스크랫이 여러분이 원하는 대로 움직이지 않으면, 두 개의 블록 모두 함께 완전하게 클릭되었는지 확인하고 그 다음, \"실행\"을 다시 클릭하세요.",
+          "2": "실수할까봐 겁내지 마세요! 뭔가를 시도하고, 그래도 안되면, 다른 뭔가를 시도하세요!"
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "1": "스크랫이 여러분이 원하는 대로 움직이지 않으면, 두 개의 블록 모두 함께 완전하게 클릭되었는지 확인하고 그 다음, \"실행\"을 다시 클릭하세요.",
+          "2": "실수할까봐 겁내지 마세요! 뭔가를 시도하고, 그래도 안되면, 다른 뭔가를 시도하세요!"
+        },
+        "courseB_Scrat_ramp2_2018": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2019": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2020": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2018": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2018": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2019": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2020": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2018": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2019": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2020": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2018": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2019": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2020": {
+          "1": "코드는 이것과 같은 모습이어야 합니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_artist_loops5_2018": {
+          "courseB_artist_loops5_a": "`반복` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프를 밖으로 드래그하고 그 다음, 다른 블록을 그 안에 넣으세요. 이렇게 몇 번을 반복해야 할까요?"
+        },
+        "courseB_artist_loops5_2019": {
+          "courseB_artist_loops5_a": "`반복` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프를 밖으로 드래그하고 그 다음, 다른 블록을 그 안에 넣으세요. 이렇게 몇 번을 반복해야 할까요?"
+        },
+        "courseB_artist_loops5_2020": {
+          "courseB_artist_loops5_a": "`반복` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 루프를 밖으로 드래그하고 그 다음, 다른 블록을 그 안에 넣으세요. 이렇게 몇 번을 반복해야 할까요?"
+        },
+        "courseB_iceage_loops1": {
+          "courseB_iceage_loops1_a": "깨진 얼음을 조심하세요! 스크랫이 그 속으로 바로 떨어질 거예요!",
+          "courseB_iceage_loops1_b": "이 블록이 사용해야 할 것입니다:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops10": {
+          "courseB_iceage_loops10_a": "깨진 얼음을 조심하세요! 스크랫이 물 속으로 빠질 거예요!",
+          "courseB_iceage_loops10_b": "단계를 소리 내어 크게 말하거나 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops10_c": "이것은 긴 퍼즐입니다! 이 경로를 따라 가세요."
+        },
+        "courseB_iceage_loops10_2019": {
+          "courseB_iceage_loops10_a": "깨진 얼음을 조심하세요! 스크랫이 물 속으로 빠질 거예요!",
+          "courseB_iceage_loops10_b": "단계를 소리 내어 크게 말하거나 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops10_c": "이것은 긴 퍼즐입니다! 이 경로를 따라 가세요."
+        },
+        "courseB_iceage_loops10_2020": {
+          "courseB_iceage_loops10_a": "깨진 얼음을 조심하세요! 스크랫이 물 속으로 빠질 거예요!",
+          "courseB_iceage_loops10_b": "단계를 소리 내어 크게 말하거나 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops10_c": "이것은 긴 퍼즐입니다! 이 경로를 따라 가세요."
+        },
+        "courseB_iceage_loops1_2019": {
+          "courseB_iceage_loops1_a": "깨진 얼음을 조심하세요! 스크랫이 그 속으로 바로 떨어질 거예요!",
+          "courseB_iceage_loops1_b": "이 블록이 사용해야 할 것입니다:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops1_2020": {
+          "courseB_iceage_loops1_a": "깨진 얼음을 조심하세요! 스크랫이 그 속으로 바로 떨어질 거예요!",
+          "courseB_iceage_loops1_b": "이 블록이 사용해야 할 것입니다:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops2": {
+          "courseB_iceage_loops2_a": "이 퍼즐을 두 개 부분으로 나눠 풀어 보세요: 코너 앞 한 부분과 코너 다음 한 부분. ",
+          "courseB_iceage_loops2_b": "잘 안되면, 단계를 크게 소리 내어 말해 보세요.",
+          "courseB_iceage_loops2_c": "이 경로를 따라 가 스크랫이 도토리로 가게 하세요."
+        },
+        "courseB_iceage_loops2_2019": {
+          "courseB_iceage_loops2_a": "이 퍼즐을 두 개 부분으로 나눠 풀어 보세요: 코너 앞 한 부분과 코너 다음 한 부분. ",
+          "courseB_iceage_loops2_b": "잘 안되면, 단계를 크게 소리 내어 말해 보세요.",
+          "courseB_iceage_loops2_c": "이 경로를 따라 가 스크랫이 도토리로 가게 하세요."
+        },
+        "courseB_iceage_loops2_2020": {
+          "courseB_iceage_loops2_a": "이 퍼즐을 두 개 부분으로 나눠 풀어 보세요: 코너 앞 한 부분과 코너 다음 한 부분. ",
+          "courseB_iceage_loops2_b": "잘 안되면, 단계를 크게 소리 내어 말해 보세요.",
+          "courseB_iceage_loops2_c": "이 경로를 따라 가 스크랫이 도토리로 가게 하세요."
+        },
+        "courseB_iceage_loops3": {
+          "courseB_iceage_loops3_a": "이 새 블록을 사용해 보세요! <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "코드를 반복하기 위해 '반복' 루프를 밖으로 드래그하고,\n\n<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>\n\n그 다음, 원하는 블록을 그 안에 넣으세요."
+        },
+        "courseB_iceage_loops4": {
+          "courseB_iceage_loops4_a": "스크랫이 도토리로 가기 위해 취할 수 있는 단계를 적어 보세요. 패턴이 보여요? ",
+          "courseB_iceage_loops4_b": "코드를 실행하여 무슨 일이 일어 나는지 보는 것을 겁내지 마세요!",
+          "courseB_iceage_loops4_c": "이 경로는 스크랫이 택해야 하는 경로입니다."
+        },
+        "courseB_iceage_loops4_2019": {
+          "courseB_iceage_loops4_a": "스크랫이 도토리로 가기 위해 취할 수 있는 단계를 적어 보세요. 패턴이 보여요? ",
+          "courseB_iceage_loops4_b": "코드를 실행하여 무슨 일이 일어 나는지 보는 것을 겁내지 마세요!",
+          "courseB_iceage_loops4_c": "이 경로는 스크랫이 택해야 하는 경로입니다."
+        },
+        "courseB_iceage_loops4_2020": {
+          "courseB_iceage_loops4_a": "스크랫이 도토리로 가기 위해 취할 수 있는 단계를 적어 보세요. 패턴이 보여요? ",
+          "courseB_iceage_loops4_b": "코드를 실행하여 무슨 일이 일어 나는지 보는 것을 겁내지 마세요!",
+          "courseB_iceage_loops4_c": "이 경로는 스크랫이 택해야 하는 경로입니다."
+        },
+        "courseB_iceage_loops6": {
+          "courseB_iceage_loops6_a": "최종 코드에는 **세 개**의 이동 블록이 들어 있을 것입니다.",
+          "courseB_iceage_loops6_b": "**한 개** 루프만 더 추가하면 됩니다!",
+          "courseB_iceage_loops6_c": "최종 경로는 다음과 같이 보여야 합니다."
+        },
+        "courseB_iceage_loops6_2019": {
+          "courseB_iceage_loops6_a": "최종 코드에는 **세 개**의 이동 블록이 들어 있을 것입니다.",
+          "courseB_iceage_loops6_b": "**한 개** 루프만 더 추가하면 됩니다!",
+          "courseB_iceage_loops6_c": "최종 경로는 다음과 같이 보여야 합니다."
+        },
+        "courseB_iceage_loops6_2020": {
+          "courseB_iceage_loops6_a": "최종 코드에는 **세 개**의 이동 블록이 들어 있을 것입니다.",
+          "courseB_iceage_loops6_b": "**한 개** 루프만 더 추가하면 됩니다!",
+          "courseB_iceage_loops6_c": "최종 경로는 다음과 같이 보여야 합니다."
+        },
+        "courseB_iceage_loops7": {
+          "courseB_iceage_loops7_a": "잘 안되면, 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops7_b": "이 경로는 스크랫이 도트리로 가기 위해 택해야 하는 경로입니다."
+        },
+        "courseB_iceage_loops7_2019": {
+          "courseB_iceage_loops7_a": "잘 안되면, 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops7_b": "이 경로는 스크랫이 도트리로 가기 위해 택해야 하는 경로입니다."
+        },
+        "courseB_iceage_loops7_2020": {
+          "courseB_iceage_loops7_a": "잘 안되면, 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops7_b": "이 경로는 스크랫이 도트리로 가기 위해 택해야 하는 경로입니다."
+        },
+        "courseB_iceage_loops8": {
+          "courseB_iceage_loops8_a": "이동 블록이 맞아요? 그 밖에 무엇을 변경할 수 있을까요?",
+          "courseB_iceage_loops8_b": "첫 번째 루프는 **3**회 반복해야 하고 두 번째는 **5**회, 세 번째 루프는 **4**회, 마지막 루프는**4**회 반복해야 합니다.",
+          "courseB_iceage_loops8_c": "루프를 사용하여 스크랫이 이 경로를 따라 가게 도와 주세요."
+        },
+        "courseB_iceage_loops8_2019": {
+          "courseB_iceage_loops8_a": "이동 블록이 맞아요? 그 밖에 무엇을 변경할 수 있을까요?",
+          "courseB_iceage_loops8_b": "첫 번째 루프는 **3**회 반복해야 하고 두 번째는 **5**회, 세 번째 루프는 **4**회, 마지막 루프는**4**회 반복해야 합니다.",
+          "courseB_iceage_loops8_c": "루프를 사용하여 스크랫이 이 경로를 따라 가게 도와 주세요."
+        },
+        "courseB_iceage_loops8_2020": {
+          "courseB_iceage_loops8_a": "이동 블록이 맞아요? 그 밖에 무엇을 변경할 수 있을까요?",
+          "courseB_iceage_loops8_b": "첫 번째 루프는 **3**회 반복해야 하고 두 번째는 **5**회, 세 번째 루프는 **4**회, 마지막 루프는**4**회 반복해야 합니다.",
+          "courseB_iceage_loops8_c": "루프를 사용하여 스크랫이 이 경로를 따라 가게 도와 주세요."
+        },
+        "courseB_iceage_loops9": {
+          "courseB_iceage_loops9_a": "문제가 있어요? 이 퍼즐을 더 작은 부분으로 나눠 보세요. 코딩할 때 퍼즐을 실행하는 것을 두려워 하지 마세요.",
+          "courseB_iceage_loops9_b": "최종 코드에는 **4개**의 루프가 있어야 합니다.",
+          "courseB_iceage_loops9_c": "스크랫을 도토리를 얻기 위해 이 경로를 따라 가야 합니다."
+        },
+        "courseB_iceage_loops9_2019": {
+          "courseB_iceage_loops9_a": "문제가 있어요? 이 퍼즐을 더 작은 부분으로 나눠 보세요. 코딩할 때 퍼즐을 실행하는 것을 두려워 하지 마세요.",
+          "courseB_iceage_loops9_b": "최종 코드에는 **4개**의 루프가 있어야 합니다.",
+          "courseB_iceage_loops9_c": "스크랫을 도토리를 얻기 위해 이 경로를 따라 가야 합니다."
+        },
+        "courseB_iceage_loops9_2020": {
+          "courseB_iceage_loops9_a": "문제가 있어요? 이 퍼즐을 더 작은 부분으로 나눠 보세요. 코딩할 때 퍼즐을 실행하는 것을 두려워 하지 마세요.",
+          "courseB_iceage_loops9_b": "최종 코드에는 **4개**의 루프가 있어야 합니다.",
+          "courseB_iceage_loops9_c": "스크랫을 도토리를 얻기 위해 이 경로를 따라 가야 합니다."
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1_a": "블록을 <xml><block type=\"when_run\"/></xml> 블록에 연결하여 스크랫을 이동하게 만드세요! ",
+          "courseB_maze_seq1_b": "<xml><block type=\"maze_moveSouth\"/></xml> 화살표 중 세 개를 드래그하여 <xml><block type=\"when_run\"/></xml> 블록에 연결하여 스크랫이 도토리로 가게 합니다."
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1_a": "블록을 <xml><block type=\"when_run\"/></xml> 블록에 연결하여 스크랫을 이동하게 만드세요! ",
+          "courseB_maze_seq1_b": "<xml><block type=\"maze_moveSouth\"/></xml> 화살표 중 세 개를 드래그하여 <xml><block type=\"when_run\"/></xml> 블록에 연결하여 스크랫이 도토리로 가게 합니다."
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1_a": "블록을 <xml><block type=\"when_run\"/></xml> 블록에 연결하여 스크랫을 이동하게 만드세요! ",
+          "courseB_maze_seq1_b": "<xml><block type=\"maze_moveSouth\"/></xml> 화살표 중 세 개를 드래그하여 <xml><block type=\"when_run\"/></xml> 블록에 연결하여 스크랫이 도토리로 가게 합니다."
+        },
+        "courseB_starWars_prog2_2018": {
+          "courseB_starWars_prog2_a": "이 문제를 두 개 부분으로 나누세요. 고철 더미 한 개를 얻고 그 다음, 다른 더미를 마저 얻는 방법을 알아 내세요. "
+        },
+        "courseC_artist_loopsPrePre1a_2018": {
+          "courseC_artist_loopsPrePre1a_a": "필요하게 될 첫 번째 블록입니다: \n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "앞으로 50 픽셀 이동하려면, 이 블록을 사용하세요:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
+        },
+        "courseC_artist_loopsPrePre1a_2019": {
+          "courseC_artist_loopsPrePre1a_a": "필요하게 될 첫 번째 블록입니다: \n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "앞으로 50 픽셀 이동하려면, 이 블록을 사용하세요:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
+        },
+        "courseC_artist_loopsPrePre1a_2020": {
+          "courseC_artist_loopsPrePre1a_a": "필요하게 될 첫 번째 블록입니다: \n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "앞으로 50 픽셀 이동하려면, 이 블록을 사용하세요:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
+        },
+        "courseC_starWars_loops5_2018": {
+          "courseC_starWars_loops5_a": "최고의 솔루션은 '앞으로 이동'을 한 번 사용하고 그 다음 회전, 그 다음 루프를 사용합니다."
+        },
+        "courseC_starWars_loops5_2019": {
+          "courseC_starWars_loops5_a": "최고의 솔루션은 '앞으로 이동'을 한 번 사용하고 그 다음 회전, 그 다음 루프를 사용합니다."
+        },
+        "courseC_starWars_loops5_2020": {
+          "courseC_starWars_loops5_a": "최고의 솔루션은 '앞으로 이동'을 한 번 사용하고 그 다음 회전, 그 다음 루프를 사용합니다."
+        },
+        "courseD_artist_5_2018": {
+          "1": "도형을 다른 것으로 바꿀 생각이면, 각도 역시 바꿔야 한다는 걸 잊지 마세요! "
+        },
+        "courseD_artist_5_2018_2019": {
+          "1": "도형을 다른 것으로 바꿀 생각이면, 각도 역시 바꿔야 한다는 걸 잊지 마세요! "
+        },
+        "courseD_artist_5_2018_2020": {
+          "1": "도형을 다른 것으로 바꿀 생각이면, 각도 역시 바꿔야 한다는 걸 잊지 마세요! "
+        },
+        "courseD_bounce_events10s_2018": {
+          "courseD_bounce_events10s_a": "코드에 다음의 이벤트 두 가지 모두가 있어야 합니다:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+        },
+        "courseD_bounce_events10s_2019": {
+          "courseD_bounce_events10s_a": "코드에 다음의 이벤트 두 가지 모두가 있어야 합니다:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+        },
+        "courseD_bounce_events10s_2020": {
+          "courseD_bounce_events10s_a": "코드에 다음의 이벤트 두 가지 모두가 있어야 합니다:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+        },
+        "courseD_bounce_events11s_2018": {
+          "courseD_bounce_events11s_a": "게임이 시작될 때와 골인을 했을 때 손에서 공이 떨어져 나갈 때 공을 던져야 합니다."
+        },
+        "courseD_bounce_events11s_2019": {
+          "courseD_bounce_events11s_a": "게임이 시작될 때와 골인을 했을 때 손에서 공이 떨어져 나갈 때 공을 던져야 합니다."
+        },
+        "courseD_bounce_events11s_2020": {
+          "courseD_bounce_events11s_a": "게임이 시작될 때와 골인을 했을 때 손에서 공이 떨어져 나갈 때 공을 던져야 합니다."
+        },
+        "courseD_bounce_events12s_2018": {
+          "courseD_bounce_events12s_a": "블록을 '실행 시' 이벤트에 부착하여 농구공 또는 손의 속도를 높일 수 있습니다.",
+          "courseD_bounce_events12s_b": "2점짜리 슛팅을 해보고 팀 로고를 출신 지역의 로고로 변경해 보세요. "
+        },
+        "courseD_bounce_events12s_2019": {
+          "courseD_bounce_events12s_a": "블록을 '실행 시' 이벤트에 부착하여 농구공 또는 손의 속도를 높일 수 있습니다.",
+          "courseD_bounce_events12s_b": "2점짜리 슛팅을 해보고 팀 로고를 출신 지역의 로고로 변경해 보세요. "
+        },
+        "courseD_bounce_events12s_2020": {
+          "courseD_bounce_events12s_a": "블록을 '실행 시' 이벤트에 부착하여 농구공 또는 손의 속도를 높일 수 있습니다.",
+          "courseD_bounce_events12s_b": "2점짜리 슛팅을 해보고 팀 로고를 출신 지역의 로고로 변경해 보세요. "
+        },
+        "courseD_bounce_events1s_2018": {
+          "courseD_bounce_events1s_a": "이 게임을 작동되게 하려면, `좌측으로 이동` 블록을 `왼쪽 화살표일 때` 이벤트에 추가해야 합니다:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "이 퍼즐을 풀기 위해 \"실행\"을 누르고 손을 바스켓에 갖다 대는 것을 잊지 마세요."
+        },
+        "courseD_bounce_events1s_2019": {
+          "courseD_bounce_events1s_a": "이 게임을 작동되게 하려면, `좌측으로 이동` 블록을 `왼쪽 화살표일 때` 이벤트에 추가해야 합니다:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "이 퍼즐을 풀기 위해 \"실행\"을 누르고 손을 바스켓에 갖다 대는 것을 잊지 마세요."
+        },
+        "courseD_bounce_events1s_2020": {
+          "courseD_bounce_events1s_a": "이 게임을 작동되게 하려면, `좌측으로 이동` 블록을 `왼쪽 화살표일 때` 이벤트에 추가해야 합니다:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "이 퍼즐을 풀기 위해 \"실행\"을 누르고 손을 바스켓에 갖다 대는 것을 잊지 마세요."
+        },
+        "courseD_bounce_events2s_2018": {
+          "courseD_bounce_events2s_a": "이것이 되게 하려면 두 세트의 `이동` 이벤트를 코딩해야 할 것입니다.\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_bounce_events2s_2019": {
+          "courseD_bounce_events2s_a": "이것이 되게 하려면 두 세트의 `이동` 이벤트를 코딩해야 할 것입니다.\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_bounce_events2s_2020": {
+          "courseD_bounce_events2s_a": "이것이 되게 하려면 두 세트의 `이동` 이벤트를 코딩해야 할 것입니다.\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_bounce_events5s_2018": {
+          "courseD_bounce_events5s_a": "이 퍼즐을 풀기 위해  손을 움직일 필요는 없습니다.",
+          "courseD_bounce_events5s_b": "이 코드를 워크스페이스에 추가했는지 확인하세요:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events5s_2019": {
+          "courseD_bounce_events5s_a": "이 퍼즐을 풀기 위해  손을 움직일 필요는 없습니다.",
+          "courseD_bounce_events5s_b": "이 코드를 워크스페이스에 추가했는지 확인하세요:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events5s_2020": {
+          "courseD_bounce_events5s_a": "이 퍼즐을 풀기 위해  손을 움직일 필요는 없습니다.",
+          "courseD_bounce_events5s_b": "이 코드를 워크스페이스에 추가했는지 확인하세요:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events6s_2018": {
+          "courseD_bounce_events6s_a": "이것과 같아 보이는 이벤트를 갖고 있어요?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "코드를 바르게 작성했으면, 이기기 위해 손을 움직일 필요가 없습니다."
+        },
+        "courseD_bounce_events6s_2019": {
+          "courseD_bounce_events6s_a": "이것과 같아 보이는 이벤트를 갖고 있어요?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "코드를 바르게 작성했으면, 이기기 위해 손을 움직일 필요가 없습니다."
+        },
+        "courseD_bounce_events6s_2020": {
+          "courseD_bounce_events6s_a": "이것과 같아 보이는 이벤트를 갖고 있어요?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "코드를 바르게 작성했으면, 이기기 위해 손을 움직일 필요가 없습니다."
+        },
+        "courseD_bounce_events7s_2018": {
+          "courseD_bounce_events7s_a": "사운드를 원하는 더 많은 장소에 추가할 수 있습니다!"
+        },
+        "courseD_bounce_events7s_2019": {
+          "courseD_bounce_events7s_a": "사운드를 원하는 더 많은 장소에 추가할 수 있습니다!"
+        },
+        "courseD_bounce_events7s_2020": {
+          "courseD_bounce_events7s_a": "사운드를 원하는 더 많은 장소에 추가할 수 있습니다!"
+        },
+        "courseD_collector_debugging5a_2018": {
+          "courseD_collector_debugging5a_a": "그것이 하는 일은?\n\n그것이 원래 하기로 되어 있는 일은?\n\n그것이 말하는 바는?",
+          "courseD_collector_debugging5a_b": "일단 첫 번째 줄의 보물을 모았으면, 코드에 무엇이 남아 있어요?"
+        },
+        "courseD_collector_debugging5a_2019": {
+          "courseD_collector_debugging5a_a": "그것이 하는 일은?\n\n그것이 원래 하기로 되어 있는 일은?\n\n그것이 말하는 바는?",
+          "courseD_collector_debugging5a_b": "일단 첫 번째 줄의 보물을 모았으면, 코드에 무엇이 남아 있어요?"
+        },
+        "courseD_collector_debugging5a_2020": {
+          "courseD_collector_debugging5a_a": "그것이 하는 일은?\n\n그것이 원래 하기로 되어 있는 일은?\n\n그것이 말하는 바는?",
+          "courseD_collector_debugging5a_b": "일단 첫 번째 줄의 보물을 모았으면, 코드에 무엇이 남아 있어요?"
+        },
+        "courseD_iceage_loops1": {
+          "courseD_iceage_loops1_a": "깨진 얼음을 조심하세요! 스크랫이 그 속으로 바로 떨어질 거예요!",
+          "courseD_iceage_loops1_b": "이 블록이 사용해야 할 것입니다:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
+        },
+        "courseD_iceage_loops10": {
+          "courseB_iceage_loops10_a": "깨진 얼음을 조심하세요! 스크랫이 물 속으로 빠질 거예요!",
+          "courseB_iceage_loops10_b": "단계를 소리 내어 크게 말하거나 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops10_c": "이것은 긴 퍼즐입니다! 이 경로를 따라 가세요."
+        },
+        "courseD_iceage_loops10_2019": {
+          "courseB_iceage_loops10_a": "깨진 얼음을 조심하세요! 스크랫이 물 속으로 빠질 거예요!",
+          "courseB_iceage_loops10_b": "단계를 소리 내어 크게 말하거나 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops10_c": "이것은 긴 퍼즐입니다! 이 경로를 따라 가세요."
+        },
+        "courseD_iceage_loops10_2020": {
+          "courseB_iceage_loops10_a": "깨진 얼음을 조심하세요! 스크랫이 물 속으로 빠질 거예요!",
+          "courseB_iceage_loops10_b": "단계를 소리 내어 크게 말하거나 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops10_c": "이것은 긴 퍼즐입니다! 이 경로를 따라 가세요."
+        },
+        "courseD_iceage_loops1_2019": {
+          "courseD_iceage_loops1_a": "깨진 얼음을 조심하세요! 스크랫이 그 속으로 바로 떨어질 거예요!",
+          "courseD_iceage_loops1_b": "이 블록이 사용해야 할 것입니다:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
+        },
+        "courseD_iceage_loops1_2020": {
+          "courseD_iceage_loops1_a": "깨진 얼음을 조심하세요! 스크랫이 그 속으로 바로 떨어질 거예요!",
+          "courseD_iceage_loops1_b": "이 블록이 사용해야 할 것입니다:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
+        },
+        "courseD_iceage_loops2": {
+          "courseD_iceage_loops2_a": "이 퍼즐을 두 개 부분으로 나눠 풀어 보세요: 코너 앞 한 부분과 코너 다음 한 부분. ",
+          "courseD_iceage_loops2_b": "잘 안되면, 단계를 크게 소리 내어 말해 보세요.",
+          "courseD_iceage_loops2_c": "이 경로를 따라 가 스크랫이 도토리로 가게 하세요."
+        },
+        "courseD_iceage_loops2_2019": {
+          "courseD_iceage_loops2_a": "이 퍼즐을 두 개 부분으로 나눠 풀어 보세요: 코너 앞 한 부분과 코너 다음 한 부분. ",
+          "courseD_iceage_loops2_b": "잘 안되면, 단계를 크게 소리 내어 말해 보세요.",
+          "courseD_iceage_loops2_c": "이 경로를 따라 가 스크랫이 도토리로 가게 하세요."
+        },
+        "courseD_iceage_loops2_2020": {
+          "courseD_iceage_loops2_a": "이 퍼즐을 두 개 부분으로 나눠 풀어 보세요: 코너 앞 한 부분과 코너 다음 한 부분. ",
+          "courseD_iceage_loops2_b": "잘 안되면, 단계를 크게 소리 내어 말해 보세요.",
+          "courseD_iceage_loops2_c": "이 경로를 따라 가 스크랫이 도토리로 가게 하세요."
+        },
+        "courseD_iceage_loops3": {
+          "courseB_iceage_loops3_a": "이 새 블록을 사용해 보세요! <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+          "courseB_iceage_loops3_b": "코드를 반복하기 위해 '반복'루프를 밖으로 드래그하고 그 다음, 반복하길 원하는 블록을 그 안에 넣으세요."
+        },
+        "courseD_iceage_loops3_2019": {
+          "courseB_iceage_loops3_b": "코드를 반복하기 위해 '반복'루프를 밖으로 드래그하고 그 다음, 반복하길 원하는 블록을 그 안에 넣으세요."
+        },
+        "courseD_iceage_loops3_2020": {
+          "courseB_iceage_loops3_b": "코드를 반복하기 위해 '반복'루프를 밖으로 드래그하고 그 다음, 반복하길 원하는 블록을 그 안에 넣으세요."
+        },
+        "courseD_iceage_loops4": {
+          "courseD_iceage_loops4_a": "코드를 실행하여 무슨 일이 일어 나는지 보는 것을 겁내지 마세요!",
+          "courseD_iceage_loops4_b": "스크랫이 도토리로 가기 위해 취할 수 있는 단계를 적어 보세요. 패턴이 보여요? ",
+          "courseD_iceage_loops4_c": "이 경로는 스크랫이 택해야 하는 경로입니다."
+        },
+        "courseD_iceage_loops4_2019": {
+          "courseD_iceage_loops4_a": "코드를 실행하여 무슨 일이 일어 나는지 보는 것을 겁내지 마세요!",
+          "courseD_iceage_loops4_b": "스크랫이 도토리로 가기 위해 취할 수 있는 단계를 적어 보세요. 패턴이 보여요? ",
+          "courseD_iceage_loops4_c": "이 경로는 스크랫이 택해야 하는 경로입니다."
+        },
+        "courseD_iceage_loops4_2020": {
+          "courseD_iceage_loops4_a": "코드를 실행하여 무슨 일이 일어 나는지 보는 것을 겁내지 마세요!",
+          "courseD_iceage_loops4_b": "스크랫이 도토리로 가기 위해 취할 수 있는 단계를 적어 보세요. 패턴이 보여요? ",
+          "courseD_iceage_loops4_c": "이 경로는 스크랫이 택해야 하는 경로입니다."
+        },
+        "courseD_iceage_loops6": {
+          "courseD_iceage_loops6_a": "최종 코드에는 **세 개**의 `앞으로 이동` 블록이 들어 있을 것입니다.",
+          "courseD_iceage_loops6_b": "**한 개** 루프만 더 추가하면 됩니다!",
+          "courseD_iceage_loops6_c": "최종 경로는 다음과 같이 보여야 합니다."
+        },
+        "courseD_iceage_loops6_2019": {
+          "courseD_iceage_loops6_a": "최종 코드에는 **세 개**의 `앞으로 이동` 블록이 들어 있을 것입니다.",
+          "courseD_iceage_loops6_b": "**한 개** 루프만 더 추가하면 됩니다!",
+          "courseD_iceage_loops6_c": "최종 경로는 다음과 같이 보여야 합니다."
+        },
+        "courseD_iceage_loops6_2020": {
+          "courseD_iceage_loops6_a": "최종 코드에는 **세 개**의 `앞으로 이동` 블록이 들어 있을 것입니다.",
+          "courseD_iceage_loops6_b": "**한 개** 루프만 더 추가하면 됩니다!",
+          "courseD_iceage_loops6_c": "최종 경로는 다음과 같이 보여야 합니다."
+        },
+        "courseD_iceage_loops7": {
+          "courseB_iceage_loops7_a": "잘 안되면, 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops7_b": "이 경로는 스크랫이 도트리로 가기 위해 택해야 하는 경로입니다."
+        },
+        "courseD_iceage_loops7_2019": {
+          "courseB_iceage_loops7_a": "잘 안되면, 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops7_b": "이 경로는 스크랫이 도트리로 가기 위해 택해야 하는 경로입니다."
+        },
+        "courseD_iceage_loops7_2020": {
+          "courseB_iceage_loops7_a": "잘 안되면, 종이 위에 각 단계를 적어보세요. 패턴이 보여요?",
+          "courseB_iceage_loops7_b": "이 경로는 스크랫이 도트리로 가기 위해 택해야 하는 경로입니다."
+        },
+        "courseD_iceage_loops8": {
+          "courseD_iceage_loops8_a": "`회전` 블록이 맞아요? 그 밖에 무엇을 변경할 수 있을까요?",
+          "courseD_iceage_loops8_b": "첫 번째 루프는 **3**회 반복해야 하고 두 번째는 **5**회, 세 번째 루프는 **4**회, 마지막 루프는**4**회 반복해야 합니다.",
+          "courseD_iceage_loops8_c": "루프를 사용하여 스크랫이 이 경로를 따라 가게 도와 주세요."
+        },
+        "courseD_iceage_loops8_2019": {
+          "courseD_iceage_loops8_a": "`회전` 블록이 맞아요? 그 밖에 무엇을 변경할 수 있을까요?",
+          "courseD_iceage_loops8_b": "첫 번째 루프는 **3**회 반복해야 하고 두 번째는 **5**회, 세 번째 루프는 **4**회, 마지막 루프는**4**회 반복해야 합니다.",
+          "courseD_iceage_loops8_c": "루프를 사용하여 스크랫이 이 경로를 따라 가게 도와 주세요."
+        },
+        "courseD_iceage_loops8_2020": {
+          "courseD_iceage_loops8_a": "`회전` 블록이 맞아요? 그 밖에 무엇을 변경할 수 있을까요?",
+          "courseD_iceage_loops8_b": "첫 번째 루프는 **3**회 반복해야 하고 두 번째는 **5**회, 세 번째 루프는 **4**회, 마지막 루프는**4**회 반복해야 합니다.",
+          "courseD_iceage_loops8_c": "루프를 사용하여 스크랫이 이 경로를 따라 가게 도와 주세요."
+        },
+        "courseD_iceage_loops9": {
+          "courseD_iceage_loops9_a": "문제가 있어요? 이 퍼즐을 더 작은 부분으로 나눠 보세요. 코딩할 때 퍼즐을 실행하는 것을 두려워 하지 마세요.",
+          "courseD_iceage_loops9_b": "최종 코드에는 **4개**의 루프가 있어야 합니다.",
+          "courseD_iceage_loops9_c": "스크랫을 도토리를 얻기 위해 이 경로를 따라 가야 합니다."
+        },
+        "courseD_iceage_loops9_2019": {
+          "courseD_iceage_loops9_a": "문제가 있어요? 이 퍼즐을 더 작은 부분으로 나눠 보세요. 코딩할 때 퍼즐을 실행하는 것을 두려워 하지 마세요.",
+          "courseD_iceage_loops9_b": "최종 코드에는 **4개**의 루프가 있어야 합니다.",
+          "courseD_iceage_loops9_c": "스크랫을 도토리를 얻기 위해 이 경로를 따라 가야 합니다."
+        },
+        "courseD_iceage_loops9_2020": {
+          "courseD_iceage_loops9_a": "문제가 있어요? 이 퍼즐을 더 작은 부분으로 나눠 보세요. 코딩할 때 퍼즐을 실행하는 것을 두려워 하지 마세요.",
+          "courseD_iceage_loops9_b": "최종 코드에는 **4개**의 루프가 있어야 합니다.",
+          "courseD_iceage_loops9_c": "스크랫을 도토리를 얻기 위해 이 경로를 따라 가야 합니다."
+        },
+        "coursea_maze_ramp1_2018": {
+          "courseC_maze_programming1_a": "새가 돼지로 가지 않으면 두 개의 블록 모두 함께 완전하게 클릭되었는지 확인하고 그 다음, \"실행\"을 다시 클릭하세요.",
+          "courseC_maze_programming1_b": "실수할까봐 겁내지 마세요! 뭔가를 시도하고, 그래도 안되면, 다른 뭔가를 시도하세요!"
+        },
+        "coursea_maze_ramp1_2019": {
+          "courseC_maze_programming1_a": "새가 돼지로 가지 않으면 두 개의 블록 모두 함께 완전하게 클릭되었는지 확인하고 그 다음, \"실행\"을 다시 클릭하세요.",
+          "courseC_maze_programming1_b": "실수할까봐 겁내지 마세요! 뭔가를 시도하고, 그래도 안되면, 다른 뭔가를 시도하세요!"
+        },
+        "coursea_maze_ramp1_2020": {
+          "courseC_maze_programming1_a": "새가 돼지로 가지 않으면 두 개의 블록 모두 함께 완전하게 클릭되었는지 확인하고 그 다음, \"실행\"을 다시 클릭하세요.",
+          "courseC_maze_programming1_b": "실수할까봐 겁내지 마세요! 뭔가를 시도하고, 그래도 안되면, 다른 뭔가를 시도하세요!"
         }
       }
     }

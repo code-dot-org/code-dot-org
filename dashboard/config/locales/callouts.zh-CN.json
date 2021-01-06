@@ -1789,6 +1789,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "您可以更改此数字。",
           "courseE_artist_ramp8_2": "单击此处键入重复代码的次数。"
+        },
+        "outbreak2": {
+          "minitoolbox": "点击这里扩展块。",
+          "pointerlocation": "在这里拖动一个主题块。"
+        },
+        "outbreak7": {
+          "costumes_callout": "点击以制作新服装"
         }
       }
     }

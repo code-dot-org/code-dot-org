@@ -11,61 +11,71 @@ km:
   campaign_date_full: ខែធ្នូ ថ្ងៃទី ៥ ដល់ ថ្ងៃទី ១១
   campaign_date_year: ឆ្នាំ​២០១៦
   campaign_date_full_year: ខែធ្នូ ថ្ងៃទី ៥ ដល់ ថ្ងៃទី ១១ ឆ្នាំ ២០១៦
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: ឆ្នាំ​២០១៦
-  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
-  europe_campaign_date_start_short: Oct. 10
-  europe_campaign_date_start_long: October 10
-  europe_campaign_date_short: Oct. 10-25
-  europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: ឆ្នាំ​២០១៦
-  europe_campaign_date_full_year: October 10-25, 2020
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: ឆ្នាំ​២០១៦
-  africa_campaign_date_full_year: October 1-31, 2020
-  hoc2020_header: Learn today, build a brighter tomorrow.
-  hoc2020_header_with_line_break_markdown: |-
-    Learn today,
+  latam_campaign_date_start_short: 'ថ្ងៃទី 1 ខែ តុលា
 
-    build a brighter tomorrow.
-  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
-    we want. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    today, build a brighter tomorrow.'
+'
+  latam_campaign_date_start_long: ថ្ងៃទី 1 ខែ តុលា
+  latam_campaign_date_short: ថ្ងៃទី 1 តុលា - 18 ធ្នូ
+  latam_campaign_date_full: ថ្ងៃទី 1 តុលា - 18 ធ្នូ
+  latam_campaign_date_year: ឆ្នាំ​២០១៦
+  latam_campaign_date_full_year: ថ្ងៃទី 1 ខែ តុលា - ថ្ងៃទី 18 ខែ ធ្នូ
+  europe_campaign_date_start_short: 'ថ្ងៃទី 10 ខែ តុលា
+
+'
+  europe_campaign_date_start_long: ថ្ងៃទី 10 ខែ តុលា
+  europe_campaign_date_short: ថ្ងៃទី 10 -25 តុលា
+  europe_campaign_date_full: ថ្ងៃទី 10 -25 តុលា
+  europe_campaign_date_year: ឆ្នាំ​២០១៦
+  europe_campaign_date_full_year: ថ្ងៃទី10 -25 តុលា
+  africa_campaign_date_start_short: 'ថ្ងៃទី 1 ខែ តុលា
+
+'
+  africa_campaign_date_start_long: ថ្ងៃទី 1 ខែ តុលា
+  africa_campaign_date_short: ថ្ងៃទី1-31 តុលា
+  africa_campaign_date_full: ថ្ងៃទី 1-31 តុលា
+  africa_campaign_date_year: ឆ្នាំ​២០១៦
+  africa_campaign_date_full_year: ថ្ងៃទី 1-31 តុលា
+  hoc2020_header: រៀនថ្ងៃនេះ កសាងថ្ងៃស្អែកភ្លឺថ្លាជាងមុន។
+  hoc2020_header_with_line_break_markdown: |
+    រៀនថ្ងៃនេះ
+
+    កសាងថ្ងៃស្អែកភ្លឺថ្លាជាងមុន
+  social_hoc2020_cs_important: 'វិទ្យាសាស្ត្រកុំព្យូទ័រ មានសារៈសំខាន់ជាងពេលណាទាំងអស់។
+    តោះកសាងអនាគតដែលយើងចង់បាន។ #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: " #HourOfCode គឺអំពី #CSforGood ។ រៀនថ្ងៃនេះ
+    កសាងថ្ងៃស្អែកភ្លឺថ្លាជាងមុន។\n"
   social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
     of millions of students. One-hour tutorials are available in 45+ languages for
     all ages.
-  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
-    science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
-  hoc2019_header: Learn computer science. Change the world.
-  hoc2019_header_line1_mobile: Learn computer science.
-  hoc2019_header_line2_mobile: Change the world.
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
+  social_hoc2020_coming_dates: Hour of Code នឹងមកដល់នៅថ្ងៃទី ៧-១៣ ខែធ្នូឆ្នាំ ២០២០
+    ។ វិទ្យាសាស្ត្រកុំព្យូទ័រគឺជាមូលដ្ឋានគ្រឹះសម្រាប់សិស្សគ្រប់រូបក្នុងការរៀន។
+  hoc2020_ai_subheader: " Hour of Code 2020  បានមកដល់ហើយ! "
+  hoc2020_ai_header: ស្វែងយល់អំពី⁣ Artificial Intelligence
+  hoc2020_ai_description: AI និង Machine Learning កំពុងជះឥទ្ធិពលដល់ពិភពលោកទាំងមូលរបស់យើង។
+    ចូលរួមជាមួយយើងខ្ញុំដើម្បីស្វែងយល់ពី AI នៅក្នុងខ្សែវីដេអូភាគថ្មី ដែលបណ្តុះបណ្តាល
+    AI សំរាប់មហាសមុទ្រ ដែលមានជាង ២៥ ភាសា ដែលពិភាក្សាអំពីក្រមសីលធម៌និងអ្វីផ្សេងៗជាច្រើនទៀត
+    ...
+  hoc2019_header: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រ។ ផ្លាស់​ប្តូ​រ​ពិភពលោក។
+  hoc2019_header_line1_mobile: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រ។
+  hoc2019_header_line2_mobile: ផ្លាស់​ប្តូ​រ​ពិភពលោក
+  social_hoc2019_every_sudent: 'សិស្សគ្រប់រូបមានសក្តានុពលក្នុងការផ្លាស់ប្តូរពិភពលោក។
+    ជួយពួកគេឱ្យចាប់ផ្តើម។ #CSforGood'
+  social_hoc2019_learn_computer_science: 'រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រ។ ផ្លាស់​ប្តូ​រ​ពិភពលោក។
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
-    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  social_hoc_is_coming: Hour of Code មកដល់ហើយ!
+  social_hoc2019_hoc_is_about_csforgood: " #HourOfCode គឺអំពី #CSforGood។ រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រ។
+    ផ្លាស់​ប្តូ​រ​ពិភពលោក។\n"
+  social_hoc2019_coming_dates: Hour of Code នឹងមកដល់ថ្ងៃទី ៩-១៥ ខែធ្នូឆ្នាំ ២០១៩ ។
+    វិទ្យាសាស្ត្រកុំព្យូទ័រជាមូលដ្ឋានគ្រឹះសម្រាប់សិស្សគ្រប់រូបក្នុងការរៀន។
+  social_hoc2019_dance: មានបញ្ចាំងជូនជាពិសេស Katy Perry, Shawn Mendes, Panicលោ! នៅឌីស្កូ,
+    Lil Nas X, បងប្រុសចូណាស, នីគីមីណានិង ៣៤ ទៀត!
+  oceans_landing_title: 'AI សំរាប់មហាសមុទ្រ
+
+'
+  oceans_landing_description: រៀនអំពី machine learning និងក្រមសីលធម៌ការប្រើប្រាស់របស់
+    AI។
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Available in 25+ languages | Grades 3+
+  oceans_landing_specs: មានជា ២៥+ ភាសា | ថ្នាក់ទី ៣+
   oceans_landing_explanation: Computer science is about so much more than coding!
     Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -139,7 +149,9 @@ km:
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
   hoc_live_join_us: ចូលរួមជាមួយយើង
-  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_header: 'AI សំរាប់មហាសមុទ្រ
+
+'
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
@@ -9620,7 +9632,9 @@ km:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: 'AI សំរាប់មហាសមុទ្រ
+
+'
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
