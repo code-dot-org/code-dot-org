@@ -137,7 +137,7 @@ export const commands = {
       opts.gender,
       'string'
     );
-    if (!validText || !validGender) {
+    if (!validText || opts.text.length === 0 || !validGender) {
       return;
     }
     apiValidateType(
