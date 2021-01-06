@@ -25,14 +25,25 @@ class FollowersController < ApplicationController
       return render 'student_user_new', formats: [:html]
     end
 
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      if @user.save && @section&.add_student(@user)
-        sign_in(:user, @user)
-        redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
-        return
+    if current_user && current_user.display_captcha? && !verify_recaptcha
+      current_user.increment_section_attempts
+      flash[:alert] = I18n.t('follower.captcha_required')
+      # Concatenate section code so user does not have to type section code again
+      # Note that @section will always be defined due to validations in load_section
+      inputted_section_code = @section ? @section.code : ''
+      redirection = request.path + '/' + inputted_section_code
+      redirect_to redirection
+      return
+    else
+      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+        if @user.save && @section&.add_student(@user)
+          sign_in(:user, @user)
+          @user.increment_section_attempts
+          redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
+          return
+        end
       end
     end
-
     render 'student_user_new', formats: [:html]
   end
 
@@ -64,6 +75,9 @@ class FollowersController < ApplicationController
     # Note that we treat the section as not being found if the section user
     # (i.e., the teacher) does not exist (possibly soft-deleted) or is not a teacher
     unless @section && @section.user&.teacher?
+      if current_user
+        current_user.increment_section_attempts
+      end
       redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
       return
     end
