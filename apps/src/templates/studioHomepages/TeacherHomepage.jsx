@@ -14,6 +14,7 @@ import TeacherResources from './TeacherResources';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import NpsSurveyBlock from './NpsSurveyBlock';
 import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
@@ -38,6 +39,7 @@ export class UnconnectedTeacherHomepage extends Component {
     isEnglish: PropTypes.bool.isRequired,
     ncesSchoolId: PropTypes.string,
     showCensusBanner: PropTypes.bool.isRequired,
+    showNpsSurvey: PropTypes.bool,
     donorBannerName: PropTypes.string,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
     teacherName: PropTypes.string,
@@ -45,8 +47,7 @@ export class UnconnectedTeacherHomepage extends Component {
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
     specialAnnouncement: shapes.specialAnnouncement,
-    beginGoogleImportRosterFlow: PropTypes.func,
-    mapboxAccessToken: PropTypes.string
+    beginGoogleImportRosterFlow: PropTypes.func
   };
 
   state = {
@@ -169,6 +170,7 @@ export class UnconnectedTeacherHomepage extends Component {
       ncesSchoolId,
       censusQuestion,
       schoolYear,
+      showNpsSurvey,
       teacherId,
       teacherName,
       teacherEmail,
@@ -198,6 +200,7 @@ export class UnconnectedTeacherHomepage extends Component {
         <div className={'container main'}>
           <ProtectedStatefulDiv ref="flashes" />
           <ProtectedStatefulDiv ref="teacherReminders" />
+          {showNpsSurvey && <NpsSurveyBlock />}
           {isEnglish && specialAnnouncement && (
             <SpecialAnnouncementActionBlock
               announcement={specialAnnouncement}
@@ -251,7 +254,6 @@ export class UnconnectedTeacherHomepage extends Component {
                 onInClassChange={event =>
                   this.handleCensusBannerInClassChange(event)
                 }
-                mapboxAccessToken={this.props.mapboxAccessToken}
               />
               <br />
             </div>

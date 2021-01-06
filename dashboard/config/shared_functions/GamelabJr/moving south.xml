@@ -4,7 +4,7 @@
     <arg name="this sprite" type="Sprite"/>
     <description>move a sprite downwards across the screen</description>
   </mutation>
-  <title name="NAME">moving south</title>
+  <title name="NAME" id="moving south">moving south</title>
   <statement name="STACK">
     <block type="gamelab_moveInDirection">
       <title name="DIRECTION">"South"</title>

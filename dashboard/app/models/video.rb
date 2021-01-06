@@ -16,7 +16,7 @@
 #
 
 # Links to a YouTube video
-class Video < ActiveRecord::Base
+class Video < ApplicationRecord
   include Seeded
 
   default_scope {order(:key)}

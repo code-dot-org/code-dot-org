@@ -40,6 +40,10 @@ export const commands = {
   },
 
   // Action commands
+  addTarget(spriteArg, targetArg) {
+    actionCommands.addTarget(spriteArg, targetArg);
+  },
+
   bounceOff(spriteArg, targetArg) {
     actionCommands.bounceOff(spriteArg, targetArg);
   },
@@ -75,6 +79,10 @@ export const commands = {
     actionCommands.mirrorSprite(spriteArg, direction);
   },
 
+  moveBackward(spriteArg, distance) {
+    actionCommands.moveForward(spriteArg, -1 * distance);
+  },
+
   moveInDirection(spriteArg, distance, direction) {
     actionCommands.moveInDirection(spriteArg, distance, direction);
   },
@@ -91,12 +99,32 @@ export const commands = {
     actionCommands.setProp(spriteArg, 'tint', null);
   },
 
+  setDefaultSpriteSize(size) {
+    actionCommands.setDefaultSpriteSize(size);
+  },
+
   setProp(spriteArg, prop, val) {
     actionCommands.setProp.apply(this, [spriteArg, prop, val]);
   },
 
-  setQuestion(questionText, variableName, callback) {
-    worldCommands.setQuestion(questionText, variableName, callback);
+  setPrompt(promptText, variableName, callback) {
+    worldCommands.setPrompt(promptText, variableName, callback);
+  },
+
+  setPromptWithChoices(
+    promptText,
+    variableName,
+    choice1,
+    choice2,
+    choice3,
+    callback
+  ) {
+    worldCommands.setPromptWithChoices(
+      promptText,
+      variableName,
+      [choice1, choice2, choice3],
+      callback
+    );
   },
 
   setTint(spriteArg, color) {
@@ -120,6 +148,10 @@ export const commands = {
     return behaviorCommands.draggableFunc(this);
   },
 
+  followingTargetsFunc(spriteArg) {
+    return behaviorCommands.followingTargetsFunc(this);
+  },
+
   removeAllBehaviors(spriteArg) {
     behaviorCommands.removeAllBehaviors(spriteArg);
   },
@@ -137,6 +169,10 @@ export const commands = {
     eventCommands.checkTouching(condition, sprite1, sprite2, callback);
   },
 
+  collectData(callback) {
+    eventCommands.collectData(callback);
+  },
+
   keyPressed(condition, key, callback) {
     eventCommands.keyPressed(condition, key, callback);
   },
@@ -145,12 +181,20 @@ export const commands = {
     eventCommands.repeatForever(callback);
   },
 
+  stopCollectingData() {
+    eventCommands.stopCollectingData();
+  },
+
   spriteClicked(condition, spriteArg, callback) {
     eventCommands.spriteClicked(condition, spriteArg, callback);
   },
 
-  whenQuestionAnswered(variableName, callback) {
-    eventCommands.whenQuestionAnswered(variableName, callback);
+  whenSpriteCreated(spriteArg, callback) {
+    eventCommands.whenSpriteCreated(spriteArg, callback);
+  },
+
+  whenPromptAnswered(variableName, callback) {
+    eventCommands.whenPromptAnswered(variableName, callback);
   },
 
   // Location commands
@@ -247,6 +291,14 @@ export const commands = {
   },
   showTitleScreen(title, subtitle) {
     worldCommands.showTitleScreen(title, subtitle);
+  },
+
+  textJoin(text1, text2) {
+    return worldCommands.textJoin(text1, text2);
+  },
+
+  textVariableJoin(text1, text2) {
+    return worldCommands.textJoin(text1, text2);
   },
 
   // Validation commands

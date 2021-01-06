@@ -57,15 +57,72 @@ export default storybook => {
     },
 
     {
-      name: 'LessonGroup with summary view',
+      name: 'LessonGroup in teacher summary view with one hidden lesson',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, 3)}>
           <LessonGroup
             lessonGroup={{displayName: 'My Group'}}
             isPlc={false}
             isSummaryView={true}
             lessons={lessons}
             levelsByLesson={levelsByLesson}
+          />
+        </Provider>
+      )
+    },
+
+    {
+      name: 'LessonGroup with all lessons hidden teacher summary view',
+      story: () => (
+        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, 1)}>
+          <LessonGroup
+            lessonGroup={{
+              displayName: 'My Group',
+              description: 'Lesson Group Description',
+              bigQuestions: 'Why? Who? Where?'
+            }}
+            isPlc={false}
+            isSummaryView={true}
+            lessons={[lessons[0]]}
+            levelsByLesson={[levelsByLesson[0]]}
+          />
+        </Provider>
+      )
+    },
+
+    {
+      name: 'LessonGroup with no lessons teacher summary view',
+      story: () => (
+        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, 1)}>
+          <LessonGroup
+            lessonGroup={{
+              displayName: 'My Group',
+              description: 'Lesson Group Description',
+              bigQuestions: 'Why? Who? Where?'
+            }}
+            isPlc={false}
+            isSummaryView={true}
+            lessons={[]}
+            levelsByLesson={[]}
+          />
+        </Provider>
+      )
+    },
+
+    {
+      name: 'LessonGroup with all lessons hidden student summary view (empty)',
+      story: () => (
+        <Provider store={createStoreWithHiddenLesson(ViewType.Student, 1)}>
+          <LessonGroup
+            lessonGroup={{
+              displayName: 'My Group',
+              description: 'Lesson Group Description',
+              bigQuestions: 'Why? Who? Where?'
+            }}
+            isPlc={false}
+            isSummaryView={true}
+            lessons={[lessons[0]]}
+            levelsByLesson={[levelsByLesson[0]]}
           />
         </Provider>
       )

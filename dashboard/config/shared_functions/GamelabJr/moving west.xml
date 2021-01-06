@@ -4,7 +4,7 @@
     <arg name="this sprite" type="Sprite"/>
     <description>move a sprite to the left across the screen</description>
   </mutation>
-  <title name="NAME">moving west</title>
+  <title name="NAME" id="moving west">moving west</title>
   <statement name="STACK">
     <block type="gamelab_moveInDirection">
       <title name="DIRECTION">"West"</title>

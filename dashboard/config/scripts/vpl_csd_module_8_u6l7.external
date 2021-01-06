@@ -5,24 +5,24 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 #Unit 6 - Lesson 7:  Analog Input 
-**Estimated time: 20 minutes**
+**Estimated time: 20 - 25 minutes**
 
 
 
 
 ## Investigation Goals
 
-**Become familiar with taking input from Analog Sensors**
+**Become familiar with taking input from Analog Sensors on the Circuit Playground**
 
-**Identify what students will be doing with the Circuit Playground in App Lab**
+**Identify how students will engage within Code Studio using the Circuit Playground**
 
 ## Investigation Tasks
 
 * If you have a Circuit Playground, **complete** Levels 1 through 5
 
-* If you do not have a Circuit Playground, **preview** Levels 1 through 5 
+* If you do not have a Circuit Playground, **preview and read** through Levels 1 through 5 
 
-Click continue to begin Levels 1 through 5 https://studio.code.org/s/csd6-2020/stage/7/puzzle/1?section_id=2839944
+Click continue to begin 
 
 
 

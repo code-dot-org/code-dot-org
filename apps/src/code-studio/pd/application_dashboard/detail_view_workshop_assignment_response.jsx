@@ -35,7 +35,11 @@ export default class DetailViewWorkshopAssignmentResponse extends React.Componen
       answer = (
         <span>
           {this.props.assignedWorkshop.name} (
-          <a href={this.props.assignedWorkshop.url} target="_blank">
+          <a
+            href={this.props.assignedWorkshop.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             see workshop
           </a>
           )

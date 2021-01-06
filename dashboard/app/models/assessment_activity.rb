@@ -17,7 +17,7 @@
 #  index_assessment_activities_on_user_and_level_and_script  (user_id,level_id,script_id)
 #
 
-class AssessmentActivity < ActiveRecord::Base
+class AssessmentActivity < ApplicationRecord
   belongs_to :user
   belongs_to :script
   belongs_to :level

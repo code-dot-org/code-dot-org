@@ -1017,6 +1017,17 @@ Given(/^I create a temp script and lesson$/) do
   puts "created temp script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
 end
 
+Given(/^I create a temp migrated script and lesson$/) do
+  response = browser_request(
+    url: '/api/test/create_migrated_script',
+    method: 'POST'
+  )
+  data = JSON.parse(response)
+  @temp_script_name = data['script_name']
+  @temp_lesson_id = data['lesson_id']
+  puts "created temp migrated script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
+end
+
 Given(/^I view the temp script overview page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}"
@@ -1024,15 +1035,14 @@ Given(/^I view the temp script overview page$/) do
   }
 end
 
-Given(/^I view the temp script (legacy|gui) edit page$/) do |type|
-  params = type == 'gui' ? '?beta=1' : ''
+Given(/^I view the temp script edit page$/) do
   steps %{
-    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit#{params}"
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
     And I wait until element ".edit_script" is visible
   }
 end
 
-Given(/^I try to view the temp script legacy edit page$/) do
+Given(/^I try to view the temp script edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
   }
@@ -1392,6 +1402,26 @@ And(/^I join the section$/) do
   end
 end
 
+And(/^I attempt to join the section$/) do
+  steps %Q{
+    Given I am on "#{@section_url}"
+  }
+end
+
+And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |invalid, name|
+  password = invalid ? 'Short' : 'ExtraLong'
+  email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+  age = "10"
+  steps %Q{
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "#{age}" option in dropdown "user_age"
+    And I click ".btn.btn-primary" to load a new page
+  }
+end
+
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
@@ -1652,6 +1682,13 @@ Then /^I open the stage lock dialog$/ do
   wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
   @browser.execute_script("$('.uitest-locksettings').children().first().click()")
   wait_short_until {jquery_is_element_visible('.modal-body')}
+end
+
+Then /^I open the send lesson dialog for lesson (\d+)$/ do |lesson_num|
+  wait_for_jquery
+  wait_short_until {@browser.execute_script("return $('.uitest-sendlesson').length") > lesson_num}
+  @browser.execute_script("$('.uitest-sendlesson').eq(#{lesson_num - 1}).children().first().click()")
+  wait_short_until {jquery_is_element_visible('.modal')}
 end
 
 Then /^I unlock the stage for students$/ do

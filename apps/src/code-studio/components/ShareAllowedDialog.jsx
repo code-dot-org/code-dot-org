@@ -435,6 +435,7 @@ class ShareAllowedDialog extends React.Component {
                         <a
                           href={facebookShareUrl}
                           target="_blank"
+                          rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             this.props.onClickPopup.bind(this),
                             'facebook'
@@ -447,6 +448,7 @@ class ShareAllowedDialog extends React.Component {
                         <a
                           href={twitterShareUrl}
                           target="_blank"
+                          rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             this.props.onClickPopup.bind(this),
                             'twitter'

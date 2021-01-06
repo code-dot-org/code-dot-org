@@ -124,6 +124,7 @@ class StudentTable extends React.Component {
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"
+                      rel="noopener noreferrer"
                       style={styles.linkIcon}
                     >
                       <FontAwesome icon="external-link" />

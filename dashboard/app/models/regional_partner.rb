@@ -22,7 +22,7 @@
 
 require 'state_abbr'
 
-class RegionalPartner < ActiveRecord::Base
+class RegionalPartner < ApplicationRecord
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   has_many :regional_partner_program_managers
@@ -194,7 +194,7 @@ class RegionalPartner < ActiveRecord::Base
             # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
             # See https://github.com/alexreisner/geocoder#error-handling
             Retryable.retryable(on: StandardError) do
-              state = Geocoder.search(zip_code)&.first&.state_code
+              state = Geocoder.search(zip_code).select {|result| result&.country_code&.downcase == "us"}&.first&.state_code
             end
           end
         rescue StandardError => e

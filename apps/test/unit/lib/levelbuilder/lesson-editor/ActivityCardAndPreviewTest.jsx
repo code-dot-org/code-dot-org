@@ -9,17 +9,23 @@ describe('ActivityCardAndPreview', () => {
   let defaultProps,
     setActivitySectionRef,
     updateTargetActivitySection,
+    clearTargetActivitySection,
+    generateActivitySectionKey,
     updateActivitySectionMetrics;
   beforeEach(() => {
     setActivitySectionRef = sinon.spy();
     updateTargetActivitySection = sinon.spy();
+    clearTargetActivitySection = sinon.spy();
     updateActivitySectionMetrics = sinon.spy();
+    generateActivitySectionKey = sinon.spy();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,
       setActivitySectionRef,
       updateTargetActivitySection,
+      clearTargetActivitySection,
       updateActivitySectionMetrics,
+      generateActivitySectionKey,
       targetActivitySectionPos: 1,
       activitySectionMetrics: []
     };

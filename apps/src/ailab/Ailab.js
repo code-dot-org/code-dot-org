@@ -6,6 +6,7 @@ import {getStore} from '../redux';
 import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
+import $ from 'jquery';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -122,12 +123,17 @@ Ailab.prototype.onContinue = function() {
 };
 
 Ailab.prototype.initMLActivities = function() {
-  const {mode} = this.level;
+  const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
-
-  // Set up initial state
-  const canvas = document.getElementById('activity-canvas');
-  const backgroundCanvas = document.getElementById('background-canvas');
+  const saveTrainedModel = dataToSave => {
+    $.ajax({
+      method: 'POST',
+      url: '/api/v1/ml_models/save',
+      type: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(dataToSave)
+    });
+  };
 
   setAssetPath('/blockly/media/skins/ailab/');
 
@@ -135,13 +141,10 @@ Ailab.prototype.initMLActivities = function() {
 
   // Set initial state for UI elements.
   initAll({
-    canvas,
-    backgroundCanvas,
-    appMode: mode,
+    mode,
     onContinue,
-    registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
-    playSound: this.studioApp_.playAudio.bind(this.studioApp_),
-    i18n: ailabMsg
+    i18n: ailabMsg,
+    saveTrainedModel
   });
 };
 

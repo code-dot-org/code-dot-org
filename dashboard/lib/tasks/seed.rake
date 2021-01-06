@@ -188,13 +188,16 @@ namespace :seed do
     :libraries,
   ].freeze
 
-  # Do the minimum amount of work to seed a single script, without seeding
-  # levels or other dependencies. For use in development. Example:
+  # Do the minimum amount of work to seed a single script or glob, without
+  # seeding levels or other dependencies. For use in development. Examples:
   # rake seed:single_script SCRIPT_NAME=express-2019
+  # rake seed:single_script SCRIPT_NAME="csp*-2020"
   timed_task single_script: :environment do
     script_name = ENV['SCRIPT_NAME']
     raise "must specify SCRIPT_NAME=" unless script_name
-    script_files = ["config/scripts/#{script_name}.script"]
+    script_files = Dir.glob("config/scripts/#{script_name}.script")
+    raise "no matching scripts found" unless script_files.present?
+    puts "seeding only scripts:\n#{script_files.join("\n")}"
     update_scripts(script_files: script_files)
   end
 

@@ -5,17 +5,18 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 #Unit 6 - Lesson 2: Designing Screens with Code
-**Estimated 5 minutes**
+**Estimated Time: 20 minutes**
 
 ## Revisiting App Lab
 
-We engaged with App Lab in previous modules focused on getting ready to teach Units 3 and 4.  In this section, you will continue to explore App Lab in Code Studio with Lesson 2: Designing Screens with Code. We will be wearing our "teacher hat" here to identify the level types included in Lesson 2 that support students. We will wear our "student hat" with Lesson 2 in the investigation that follows and practice using App Lab.
+We have engaged with App Lab in previous modules for Units 3 and 4. In this section, you will continue to explore App Lab in Code Studio with Lesson 2: Designing Screens with Code. Let’s put on our “teacher hat” here as we identify the level types students will encounter in Lesson 2. Then, we will wear our "student hat" during the investigation that follows for Lesson 2 in order to prepare supporting students as they engage with App Lab.
 
-**Note**:  You may feel more comfortable with App Lab if you have taught or plan to teach Unit 4.  Otherwise, consider taking more time practicing using App Lab.  Write down any questions or concerns you may want to bring up with the facilitators during the synchronous workshop. 
+**Note:** You may feel more comfortable with App Lab if you have taught or plan to teach Unit 4. If you need more practice using App Lap, consider taking more time during the next levels as well as going back to levels in Unit 4 on code studio. Share any questions you want your facilitator to address in the synchronous workshop in the “Questions from Asynchronous Work” slide.
 
-## Level Types
 
-Let's take a look at the different level types included in Lesson 2.  
+## Level Types in Lesson 2
+
+Let's read about the different level types included in Lesson 2.  
 
 * **Predict Level** 
 	* Students read working code, discuss the code with a partner, and then predict what the code will do before running it themselves. 

@@ -50,7 +50,9 @@ class Ability
       :maker_discount,
       :edit_manifest,
       :update_manifest,
-      :foorm_editor
+      :foorm_editor,
+      :pd_foorm,
+      Foorm::Form
     ]
     cannot :index, Level
 
@@ -80,6 +82,7 @@ class Ability
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
       can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
+      can :create, UserMlModel, user_id: user.id
 
       can :list_projects, Section do |section|
         can?(:manage, section) || user.sections_as_student.include?(section)
@@ -234,7 +237,8 @@ class Ability
         Script,
         ScriptLevel,
         Video,
-        :foorm_editor
+        :foorm_editor,
+        Foorm::Form
       ]
 
       # Only custom levels are editable.
@@ -247,6 +251,8 @@ class Ability
       can [:upload, :destroy], :level_starter_asset
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
+
+      can :validate_form, :pd_foorm
     end
 
     if user.persisted?
@@ -279,7 +285,9 @@ class Ability
         Script,
         ScriptLevel,
         UserLevel,
-        UserScript
+        UserScript,
+        :pd_foorm,
+        Foorm::Form
       ]
     end
   end
