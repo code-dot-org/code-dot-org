@@ -295,13 +295,14 @@ class School < ApplicationRecord
         # should this quote char thing be removed? I think supposed to allow importing
         # double quotes in columns, but I think double quotes are used correctly to
         # surround a column containing a comma (at least in the geographic data file below)
-        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, true, true) do |row|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, true, is_dry_run: false, new_attributes: ['last_known_school_year_open', 'school_category']) do |row|
           {
             id:                           row['NCESSCH'].to_i.to_s,
             name:                         row['SCH_NAME'].upcase,
             # Four schools with addresses longer than 50 characters (DB column limit)
+            # Also four schools with second address line longer than 30 characters.
             address_line1:                row['LSTREET1'].to_s.upcase.truncate(50).presence,
-            address_line2:                row['LSTREET2'].to_s.upcase.presence,
+            address_line2:                row['LSTREET2'].to_s.upcase.truncate(30).presence,
             address_line3:                row['LSTREET3'].to_s.upcase.presence,
             city:                         row['LCITY'].to_s.upcase.presence,
             state:                        row['LSTATE'].to_s.upcase.presence,
@@ -321,7 +322,7 @@ class School < ApplicationRecord
       # Download link found here: https://nces.ed.gov/programs/edge/Geographic/SchoolLocations
       # Actual download link: https://nces.ed.gov/programs/edge/data/EDGE_GEOCODE_PUBLICSCH_1819.zip
       AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/EDGE_GEOCODE_PUBLICSCH_1819.csv") do |filename|
-        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: true) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
             latitude:           row['LAT'].to_f,
@@ -330,6 +331,16 @@ class School < ApplicationRecord
         end
       end
     end
+  end
+
+  def load_state_cs_offerings(offerings_to_load, is_dry_run)
+    offerings_to_load.each do |offering|
+      new_offering = offering.slice(:course, :school_year)
+      new_offering[:state_school_id] = state_school_id
+      Census::StateCsOffering.create!(new_offering) unless is_dry_run
+    end
+
+    return state_cs_offering.reload
   end
 
   # Loads/merges the data from a CSV into the schools table.
@@ -344,6 +355,8 @@ class School < ApplicationRecord
     updated_schools_attribute_frequency = {}
     unchanged_schools = 0
     duplicate_schools = []
+    state_cs_offerings_deleted_count = 0
+    state_cs_offerings_reloaded_count = 0
 
     ActiveRecord::Base.transaction do
       schools = CSV.read(filename, options).each do |row|
@@ -362,6 +375,9 @@ class School < ApplicationRecord
             duplicate_schools << parsed
           end
         elsif write_updates
+          old_state_school_id = loaded.state_school_id.clone
+          has_state_cs_offerings = loaded.state_cs_offering.any?
+
           loaded.assign_attributes(parsed)
 
           if loaded.changed?
@@ -379,37 +395,23 @@ class School < ApplicationRecord
 
             # We need to delete and reload state_cs_offerings
             # if we're going to update the state_school_id for a given school.
-            has_state_cs_offerings = loaded.state_school_id_was.nil? ?
-              false :
-              loaded.state_cs_offering.any?
-            state_cs_offerings_hashes = []
-            must_reload_state_cs_offerings = loaded.changed.include?('state_school_id') && has_state_cs_offerings
-            if must_reload_state_cs_offerings && !is_dry_run
-              # Notes that this method should be deleted, and we can just use
-              # loaded.state_cs_offering.destroy_all.
-              state_cs_offerings_hashes = loaded.delete_state_cs_offerings(loaded.state_school_id_was)
+            deleted_state_cs_offerings = []
+            if has_state_cs_offerings && loaded.changed.include?('state_school_id')
+              deleted_state_cs_offerings = Census::StateCsOffering.where(state_school_id: old_state_school_id).destroy_all unless is_dry_run
+              state_cs_offerings_deleted_count += deleted_state_cs_offerings.count
             end
-
-            # store before update
-            previous_state_school_id = loaded.state_school_id_was
 
             loaded.update!(parsed) unless is_dry_run
 
-            if must_reload_state_cs_offerings && !is_dry_run
-              state_cs_offerings_hashes.each do |state_cs_offering|
-                new_offering = state_cs_offering.slice(:course, :school_year)
-                new_offering[:state_school_id] = loaded.state_school_id
-                Census::StateCsOffering.new(new_offering).save!
-              end
+            if deleted_state_cs_offerings.any?
+              reloaded_state_cs_offerings = loaded.load_state_cs_offerings(deleted_state_cs_offerings, is_dry_run)
+              state_cs_offerings_reloaded_count += reloaded_state_cs_offerings.count
 
-              loaded.reload
-
-              reconstituted = loaded.state_cs_offering.pluck(:course, :school_year)
-              original = state_cs_offerings_hashes.map {|state_cs_offering| state_cs_offering.slice(:course, :school_year)}
+              # Check and see if old and new are the same
+              reconstituted = reloaded_state_cs_offerings.pluck(:course, :school_year)
+              original = deleted_state_cs_offerings.pluck(:course, :school_year)
               failure = ((reconstituted - original) + (original - reconstituted)).any?
-              raise ActiveRecord::Rollback, "Mismatch between state CS offerings deleted and recreated for NCES ID #{loaded.id}, originally #{original.length} records, now #{reconstituted.length} records" if failure
-
-              puts "After reconstitution: Found #{loaded.state_cs_offering.count} state CS offerings for previous state school ID: #{previous_state_school_id}, new state school ID: #{loaded.state_school_id}, school ID: #{loaded.id}"
+              raise "Mismatch between state CS offerings deleted and recreated for NCES ID #{loaded.id}, originally #{original.length} records, now #{reconstituted.length} records" if failure
             end
           else
             unchanged_schools += 1
@@ -423,7 +425,8 @@ class School < ApplicationRecord
       "#{new_schools.length} new schools added.\n"\
       "#{updated_schools} schools updated.\n"\
       "#{unchanged_schools} schools unchanged (school considered changed if only update was adding new columns included in this import).\n"\
-      "#{duplicate_schools.length} duplicate schools skipped.\n"
+      "#{duplicate_schools.length} duplicate schools skipped.\n"\
+      "State CS offerings deleted: #{state_cs_offerings_deleted_count}, state CS offerings reloaded: #{state_cs_offerings_reloaded_count}\n"
 
     if updated_schools_attribute_frequency.any?
       summary_message <<
