@@ -12,7 +12,7 @@
 #
 class LessonsVocabulary < ApplicationRecord
   belongs_to :lesson
-  belongs_to :resource
+  belongs_to :vocabulary
 
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.
