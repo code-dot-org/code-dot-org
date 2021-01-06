@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
 import ProjectCard from '@cdo/apps/templates/projects/ProjectCard';
+import msg from '@cdo/locale';
 
 describe('ProjectCard', () => {
   const featuredProjectData = {
@@ -23,7 +24,7 @@ describe('ProjectCard', () => {
       />
     );
     const featuredLabel = wrapper.find('div').last();
-    expect(featuredLabel.text()).to.equal('Featured Project');
+    expect(featuredLabel.text()).to.equal(msg.featuredProject());
   });
   it('displays published label', () => {
     const wrapper = shallow(
@@ -34,6 +35,6 @@ describe('ProjectCard', () => {
       />
     );
     const publishedLabel = wrapper.find('div').last();
-    expect(publishedLabel.text()).to.have.string('Published:');
+    expect(publishedLabel.text()).to.have.string(msg.published());
   });
 });
