@@ -6,6 +6,7 @@ import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
+import MLApi from '@cdo/apps/lib/util/mlApi';
 import * as makerApi from '@cdo/apps/lib/kits/maker/api';
 import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
@@ -678,6 +679,16 @@ export var blocks = [
       1: ChartApi.getChartTypeDropdown
     }
   },
+  {
+    func: 'getPrediction',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['model', 'callback'],
+    params: ['"myModel"', 'function (value) {\n \n}'],
+    dropdown: {
+      0: MLApi.getModelNames
+    }
+  },
 
   {
     func: 'moveForward',
@@ -1165,6 +1176,12 @@ export const categories = {
   Goals: {
     id: 'goals',
     color: 'deeppurple',
+    blocks: []
+  },
+  ML: {
+    id: 'ML',
+    color: 'blue',
+    rgb: color.blue,
     blocks: []
   }
 };

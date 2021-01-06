@@ -534,3 +534,7 @@ export function drawChartFromRecords(
     callback: callback
   });
 }
+
+export function getPrediction(model, callback) {
+  return Applab.executeCmd(null, 'getPrediction', {model, callback});
+}
