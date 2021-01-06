@@ -7,7 +7,7 @@
     "properties": {
       "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "curriculum_path": "https://curriculum.code.org/csd-20/unit4/{LESSON}",
+      "curriculum_path": "https://curriculum.code.org/csd-preview-21/unit4/{LESSON}",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "has_lesson_plan": true,
@@ -20,20 +20,9 @@
         [
           "teacherForum",
           "https://forum.code.org/c/csd"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csd-preview-21/unit4/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csd-preview-21/unit4/standards/"
-        ],
-        [
-          "codeIntroduced",
-          "https://curriculum.code.org/csd-preview-21/unit4/code/"
         ]
-      ]
+      ],
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -67,21 +56,9 @@
       }
     },
     {
-      "key": "csd5_2",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "Chapter 2: Solving Data Problems"
-      },
-      "seeding_key": {
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd4-preview-2021"
-      }
-    },
-    {
       "key": "cspSurvey",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Survey"
       },
@@ -326,7 +303,7 @@
       },
       "seeding_key": {
         "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd5_2",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-preview-2021"
       }
     },
@@ -1292,7 +1269,7 @@
           "CSD User Centered Design Post-Project Test_preview-2021"
         ],
         "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd5_2",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-preview-2021"
       },
       "level_keys": [
@@ -1823,7 +1800,7 @@
           "CSD User Centered Design Post-Project Test_preview-2021"
         ],
         "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd5_2",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-preview-2021"
       }
     },
