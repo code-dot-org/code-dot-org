@@ -404,17 +404,18 @@ class School < ApplicationRecord
       end
     end
 
+    future_tense_dry_run = is_dry_run ? ' to be' : ''
     summary_message =
       "School seeding: done processing #{filename}.\n"\
-      "#{new_schools.length} new schools added.\n"\
-      "#{updated_schools} schools updated.\n"\
-      "#{unchanged_schools} schools unchanged (school considered changed if only update was adding new columns included in this import).\n"\
-      "#{duplicate_schools.length} duplicate schools skipped.\n"\
-      "State CS offerings deleted: #{state_cs_offerings_deleted_count}, state CS offerings reloaded: #{state_cs_offerings_reloaded_count}\n"
+      "#{new_schools.length} new schools#{future_tense_dry_run} added.\n"\
+      "#{updated_schools} schools#{future_tense_dry_run} updated.\n"\
+      "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (school considered changed if only update was adding new columns included in this import).\n"\
+      "#{duplicate_schools.length} duplicate schools#{future_tense_dry_run} skipped.\n"\
+      "State CS offerings#{future_tense_dry_run} deleted: #{state_cs_offerings_deleted_count}, state CS offerings#{future_tense_dry_run} reloaded: #{state_cs_offerings_reloaded_count}\n"
 
     if updated_schools_attribute_frequency.any?
       summary_message <<
-        "Among updated schools, these attributes were updated:\n"\
+        "Among updated schools, these attributes #{is_dry_run ? 'will be' : 'were'} updated:\n"\
         "#{updated_schools_attribute_frequency.sort_by {|_, v| v}.
           reverse.
           map {|attribute, frequency| attribute + ': ' + frequency.to_s}.join("\n")}\n"
@@ -424,13 +425,13 @@ class School < ApplicationRecord
     if is_dry_run
       if new_schools.any?
         summary_message <<
-          "Schools added:\n"\
+          "Schools#{future_tense_dry_run} added:\n"\
           "#{new_schools.map {|school| school[:name] + ' ' + school[:id].to_s}.join("\n")}\n"
       end
 
       if duplicate_schools.any?
         summary_message <<
-          "Duplicate schools skipped:\n"\
+          "Duplicate schools#{future_tense_dry_run} skipped:\n"\
           "#{duplicate_schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")}"
       end
     end
