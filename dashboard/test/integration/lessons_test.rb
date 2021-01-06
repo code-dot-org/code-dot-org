@@ -45,7 +45,6 @@ class LessonsTest < ActionDispatch::IntegrationTest
       position: 1,
       name: 'activity section name',
       remarks: false,
-      slide: true,
       description: 'activity section description',
       tips: []
     )
@@ -99,7 +98,6 @@ class LessonsTest < ActionDispatch::IntegrationTest
     assert_equal 'activity section name', activity_section_data['name']
     # assigning a serialized_attribute to false sets the value to nil
     assert_nil activity_section_data['remarks']
-    assert_equal true, activity_section_data['slide']
 
     assert_equal 1, activity_section_data['scriptLevels'].count
     script_level_data = activity_section_data['scriptLevels'].first
@@ -128,7 +126,6 @@ class LessonsTest < ActionDispatch::IntegrationTest
     activity_section_data = activity_data['activitySections'].first
     activity_section_data['name'] = 'new activity section name'
     activity_section_data['remarks'] = true
-    activity_section_data['slide'] = false
 
     script_level_data = activity_section_data['scriptLevels'].first
     script_level_data['assessment'] = true
@@ -162,8 +159,6 @@ class LessonsTest < ActionDispatch::IntegrationTest
     @activity_section.reload
     assert_equal 'new activity section name', @activity_section.name
     assert_equal true, @activity_section.remarks
-    # assigning a serialized_attribute to false sets the value to nil
-    assert_nil @activity_section.slide
     assert_equal [@script_level], @activity_section.script_levels
 
     @script_level.reload

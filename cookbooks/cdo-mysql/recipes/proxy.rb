@@ -21,7 +21,11 @@ remote_file proxysql_file do
   source "https://github.com/wjordan/proxysql/releases/download/v2.0.15-aurora_2.09_fix/#{proxysql_filename}"
   checksum "29fe79e54bce0f532084bfd8e5a13a55f1f8530f92be8a0e7db847aefcb1762f"
 end
-dpkg_package('proxysql') {source proxysql_file}
+dpkg_package('proxysql') do
+  source proxysql_file
+  version '2.0.15'
+  options '--force-confold'
+end
 
 writer = URI.parse(node['cdo-secrets']['db_writer'] || 'mysql2://root@localhost/')
 writer.hostname = '127.0.0.1' if writer.hostname == 'localhost'
