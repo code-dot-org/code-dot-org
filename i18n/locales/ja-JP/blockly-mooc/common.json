@@ -578,6 +578,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "値がもう一方の値よりも小さいか同じであるかどうかをテストします。式の左辺の値が式の右辺の値以下である場合にtrueを返します。",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "小さいもしくは等しい演算子",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_description": "xをy乗します",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param0_description": "底",

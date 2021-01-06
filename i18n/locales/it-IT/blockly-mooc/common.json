@@ -589,6 +589,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Verifica se un valore è minore di o uguale a un altro valore. Restituisce vero se il valore a sinistra dell'espressione è minore di o uguale a il valore a destra dell'espressione.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Operatore minore o uguale",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_description": "Eleva x alla potenza y",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param0_description": "La base.",

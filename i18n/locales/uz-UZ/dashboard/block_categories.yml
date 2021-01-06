@@ -3,11 +3,11 @@ uz:
     block_categories:
       Actions: Harakatlar
       Advanced: Rivojlangan
-      Behaviors: Hatti-harakatlar
-      Brushes: Cho'tka
+      Behaviors: Xatti-harakatlar
+      Brushes: Choʻtkalar
       Color: Rang
-      Comment: Izoh
-      Comments: Izohlar
+      Comment: Fikr
+      Comments: Fikrlar
       Conditionals: Shartli bayonotlar
       Dancers: Raqqoslar
       Default: Standart
@@ -27,5 +27,5 @@ uz:
       Sprites: Spraytlar
       Text: Matn
       Variables: O‘zgaruvchilar
-      'Variables ': 'O''zgaruvchilar '
+      'Variables ': 'Oʻzgaruvchilar '
       World: Dunyo

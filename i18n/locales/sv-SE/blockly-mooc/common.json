@@ -254,6 +254,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Testar om ett värde är mindre än eller lika med ett annat värde. Returnerar sant om värdet på vänster sida om uttrycket är mindre än eller lika med värdet på högersida av uttrycket.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Mindre än eller lika med-operator",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "Returnerar ett slumptal från 0 (ingår) upp till 1 (ingår inte)",
   "dropletBlock_mathRandom_signatureOverride": "Matte.slumpa()",
