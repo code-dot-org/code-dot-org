@@ -44,4 +44,5 @@ level 'sprite lab - ask and answer', progression: 'Text Input'
 level 'anjali- Math Blocks', progression: 'Math Blocks'
 level '2020 new SL stuff', progression: 'New Sprite Animations'
 level 'symmetry', progression: 'Symmetry'
+level 'courseF_2021_template', progression: 'Full Toolbox and/or Template'
 
