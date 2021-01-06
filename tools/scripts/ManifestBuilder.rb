@@ -13,7 +13,6 @@ DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/g
 SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/spritelab/spriteCostumeLibrary.json".freeze
 DOWNLOAD_DESTINATION = '~/cdo-animation-library'.freeze
 SPRITE_COSTUME_LIST = SPRITE_LAB_ANIMATION_LIST
-SKIP_CATEGORIES = DEPRECATED_CATEGORIES
 
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
@@ -287,9 +286,7 @@ The animation has been skipped.
       # This lambda runs synchronously after each entry is done processing - it's
       # used to collect up results and warnings to the original process/thread.
       if result.is_a? Hash
-        unless SKIP_CATEGORIES.include? result["categories"][0]
-          animation_metadata_by_name[name] = result
-        end
+        animation_metadata_by_name[name] = result
       else
         @warnings.push result
       end
