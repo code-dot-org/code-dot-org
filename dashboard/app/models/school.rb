@@ -317,19 +317,6 @@ class School < ApplicationRecord
           }
         end
       end
-
-      CDO.log.info "Seeding 2018-2019 public and charter school geographic data."
-      # Download link found here: https://nces.ed.gov/programs/edge/Geographic/SchoolLocations
-      # Actual download link: https://nces.ed.gov/programs/edge/data/EDGE_GEOCODE_PUBLICSCH_1819.zip
-      AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/EDGE_GEOCODE_PUBLICSCH_1819.csv") do |filename|
-        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: true) do |row|
-          {
-            id:                 row['NCESSCH'].to_i.to_s,
-            latitude:           row['LAT'].to_f,
-            longitude:          row['LON'].to_f
-          }
-        end
-      end
     end
   end
 
