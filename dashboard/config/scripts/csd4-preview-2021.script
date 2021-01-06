@@ -1,10 +1,10 @@
 login_required true
 hideable_lessons true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-preview-21/unit4/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-preview-21/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-preview-21/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-preview-21/unit4/code/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-preview-21/unit4/"], ["teacherForum", "https://forum.code.org/c/csd"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/csd-20/unit4/{LESSON}'
+curriculum_path 'https://curriculum.code.org/csd-preview-21/unit4/{LESSON}'
 project_sharing true
 curriculum_umbrella 'CSD'
 
@@ -85,7 +85,6 @@ lesson 'Project - App Presentation', display_name: 'Project - App Presentation'
 level 'CSD U4L16 autoSFLP_preview-2021', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch2_preview-2021', progression: 'Reflection', assessment: true
 
-lesson_group 'csd5_2', display_name: 'Chapter 2: Solving Data Problems'
 lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
 level 'CSD User Centered Design Post-Project Test_preview-2021', assessment: true
 
