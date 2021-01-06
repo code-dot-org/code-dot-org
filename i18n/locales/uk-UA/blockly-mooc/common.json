@@ -291,6 +291,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Перевіряє, чи є значення менше або дорівнює іншому значенню. Повертає значення true, якщо значення виразу у лівій частині — менше або дорівнює значенню з правого боку виразу.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Оператор менше або дорівнює",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param1": "у",
   "dropletBlock_mathRandom_description": "Повертає випадкове число від 0 (включно) до 1 (не включно)",

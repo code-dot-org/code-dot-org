@@ -23835,16 +23835,1518 @@ tr:
           description_audience: Dahili
           description_short: 'Doğrudan ders planları ile bağlantılı olan ancak diğer
             komut dosyalarında görünmeyen seviyeler. '
+        virustest:
+          title: Salgın Simülasyonu Yapmak
+          description_short: Bir virüs salgınının simülasyonunu yapmak için Sprite
+            Lab'ı kullanın.
         ml-playground:
           lessons:
             AI for Oceans:
               name: 'Okyanuslar için Yapay Zeka
 
 '
-            intro:
-              name: Giriş
             visualizing:
               name: Veriyi görselleştirme
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Simülasyon Kodlama
+          lesson_groups:
+            outbreak:
+              display_name: Salgın Simülasyonu
+          title: Salgın Simülatörü
+          description_short: Bir virüs salgınının simülasyonunu programlamak için
+            Sprite Lab'ı kullanın.
+          description: Bir virüs salgınının simülasyonunu programlamak için Sprite
+            Lab'ı kullanın.
+          name: salgın
         2021drafting:
           description_audience: Dahili
           description_short: Dahili
+        csd1-2021:
+          title: CSD Ünite 1 - Problem Çözme ve Bilişim ('20-'21)
+          description: "Problem Çözme ve Bilişim, daha geniş problem çözme arayışında
+            çerçevelendiği üzere, bilgisayar bilimi alanına yüksek derecede etkileşimli
+            ve işbirlikçi bir giriştir. Bir dizi bulmaca, zorluk ve gerçek dünya senaryolarını
+            yönlendirmek için bir problem çözme sürecini kullanmayı pratik edeceksiniz.
+            Sonra, insanların problemlerini çözmede yardım etmek için bilgisayarların
+            bilgiyi nasıl girdiğini, çıkardığını ve işlediğini öğreneceksiniz. Ünite,
+            seçtiğiniz bir problemi çözmede yardım eden bir uygulama tasarladığınız
+            bir proje ile sonlanır.\r"
+          description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
+            nasıl çalıştıklarını öğrenin."
+          lessons:
+            CS Discoveries Pre-survey:
+              key: CS Keşifleri Anket öncesi
+              name: CS Keşifleri Anket öncesi
+            Intro to Problem Solving:
+              key: Problem çözme tanıtımı
+              name: Problem çözme tanıtımı
+            The Problem Solving Process:
+              key: Problem çözme süreci
+              name: Problem çözme süreci
+            Exploring Problem Solving:
+              key: Problem çözmeyi keşfetme
+              name: Problem çözmeyi keşfetme
+            What is a Computer?:
+              key: Bilgisayar nedir?
+              name: Bilgisayar nedir?
+            Input and Output:
+              key: Girdiler ve çıktılar
+              name: Girdiler ve çıktılar
+            Processing:
+              key: İşleme
+              name: İşleme
+            Storage:
+              key: Depolama
+              name: Depolama
+            Project - Propose an App:
+              key: Proje - bir uygulama önermek
+              name: Proje - bir uygulama önermek
+            Post-Project Test:
+              key: Proje Sonrası Test
+              name: Proje Sonrası Test
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              key: Problem Çözmeye Giriş - Gazete Tablosu (Alternatif Ders 1)
+              name: Problem Çözmeye Giriş - Gazete Tablosu (Alternatif Ders 1)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              key: Problem Çözmeye Giriş - Spagetti Köprüsü (Alternatif Ders 1)
+              name: Problem Çözmeye Giriş - Spagetti Köprüsü (Alternatif Ders 1)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              key: Problem Çözmeye Giriş - Kağıt Kule (Alternatif Ders 1)
+              name: Problem Çözmeye Giriş - Kağıt Kule (Alternatif Ders 1)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              key: Problem Çözmeyi Keşfetme - Hayvan Teması (Alternatif Ders 3)
+              name: Problem Çözmeyi Keşfetme - Hayvan Teması (Alternatif Ders 3)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              key: Problem Çözmeyi Keşfetme - Oyun Teması (Alternatif Ders 3)
+              name: Problem Çözmeyi Keşfetme - Oyun Teması (Alternatif Ders 3)
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            csd1_1:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+            csd1_2:
+              display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+            csd1_3:
+              display_name: Alternatif Dersler
+        csd2-2021:
+          title: CSD Ünite 2 - Ağ Geliştirme ('20-'21)
+          description: " 2. Ünitede, kendi web sayfanızda nasıl içerik oluşturacağınız
+            ve paylaşacağınızı öğreneceksiniz. Dünyayla ne tür içerik paylaşacağınıza
+            karar verdikten sonra, web sayfanızı HTML ve CSS kullanarak nasıl yapılandıracağınızı
+            ve biçimlendireceğinizi öğreneceksiniz. Aynı zamanda hata ayıklama (debugging)
+            ve yorumlama (commenting) gibi önemli programlama becerilerini uygulayacaksınız.
+            Ünitenin sonunda, İnternette yayınlanabilecek kişisel bir web siteniz
+            olacak."
+          description_short: "  Web Lab'da kendi web siteni oluşturmayı öğren."
+          lessons:
+            Exploring Web Pages:
+              key: Web Sayfalarını Keşfetme
+              name: Web Sayfalarını Keşfetme
+            Intro to HTML:
+              key: HTML' ye Giriş
+              name: HTML' ye Giriş
+            Headings:
+              key: Başlıklar
+              name: Başlıklar
+            'Mini-Project: HTML Web Page':
+              key: 'Mini-Proje: HTML Web Sayfası'
+              name: 'Mini-Proje: HTML Web Sayfası'
+            Digital Footprint:
+              key: Dijital Ayak İzi
+              name: Dijital Ayak İzi
+            Styling Text with CSS:
+              key: CSS ile Metin Biçimlendirme
+              name: CSS ile Metin Biçimlendirme
+            'Mini-Project: Your Personal Style':
+              key: 'Mini-Proje: Kişisel Stiliniz'
+              name: 'Mini-Proje: Kişisel Stiliniz'
+            Intellectual Property:
+              key: Fikri Mülkiyet
+              name: Fikri Mülkiyet
+            Using Images:
+              key: Resimleri Kullanma
+              name: Resimleri Kullanma
+            'Websites for Expression ':
+              key: 'İfade Web Siteleri '
+              name: 'İfade Web Siteleri '
+            Styling Elements with CSS:
+              key: CSS ile Stil Öğeleri
+              name: CSS ile Stil Öğeleri
+            Your Web Page - Prepare:
+              key: Web Sayfanız - Hazırla
+              name: Web Sayfanız - Hazırla
+            Project - Personal Web Page:
+              key: Proje - Kişisel Web Sayfası
+              name: Proje - Kişisel Web Sayfası
+            Websites for a Purpose:
+              key: Bir Amaca yönelik Web Siteleri
+              name: Bir Amaca yönelik Web Siteleri
+            Team Problem Solving:
+              key: Takım Problem Çözme
+              name: Takım Problem Çözme
+            Sources and Research:
+              key: Kaynaklar ve Araştırma
+              name: Kaynaklar ve Araştırma
+            CSS Classes:
+              key: CSS Sınıfları
+              name: CSS Sınıfları
+            Planning a Multi-page Website:
+              key: Çok sayfalı bir Web sitesi planlama
+              name: Çok sayfalı bir Web sitesi planlama
+            Linking Pages:
+              key: Sayfaları Bağlama
+              name: Sayfaları Bağlama
+            Project - Website for a Purpose:
+              key: Proje - Bir Amaca yönelik Web Sitesi
+              name: Proje - Bir Amaca yönelik Web Sitesi
+            Peer Review and Final Touches:
+              key: Akran İncelemesi ve Son Rötuşlar
+              name: Akran İncelemesi ve Son Rötuşlar
+            Post-Project Test:
+              key: Proje Sonrası Test
+              name: Proje Sonrası Test
+            CS Discoveries Post Course survey:
+              key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+              name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+          lesson_groups:
+            csd2_1v2:
+              display_name: 'Bölüm 1: Web sayfası oluşturma'
+            csd2_2v2:
+              display_name: 'Bölüm 2: Çok sayfalı Web siteleri'
+            cspSurvey:
+              display_name: Anket
+        csd3-2021:
+          title: CSD Ünite 3 - Etkileşimli Animasyonlar ve Oyunlar ('20-'21)
+          description: " Ünite 3'te Oyun Laboratuvarında animasyonlar, etkileşimli
+            sanat ve oyunlar programladığından dolayı kodlama deneyimini arttıracaksın.
+            Ünite, basit şekiller ile başlar ve bilgisayar bilim insanlarının günlük
+            kullandığı ile aynı programlama kavramları ve tasarım süreci kullanılarak
+            daha karmaşık hareketli nesne tabanlı oyunlara doğru ilerler. Final projesinde
+            kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz."
+          description_short: Programlama
+          lessons:
+            Programming for Entertainment:
+              key: Eğlence için programlama
+              name: Eğlence için programlama
+            Plotting Shapes:
+              key: Şekiller çizme
+              name: Şekiller çizme
+            Drawing in Game Lab:
+              key: Game Lab' da Çizim
+              name: Game Lab' da Çizim
+            Shapes and Parameters:
+              key: Şekiller ve Parametreler
+              name: Şekiller ve Parametreler
+            Variables:
+              key: Değişkenler
+              name: Değişkenler
+            Random Numbers:
+              key: Rastgele Sayılar
+              name: Rastgele Sayılar
+            Sprites:
+              key: Hareketli Nesneler
+              name: Hareketli Nesneler
+            Sprite Properties:
+              key: Nesne özellikleri
+              name: Nesne özellikleri
+            Text:
+              key: yazı
+              name: yazı
+            'Mini-Project: Captioned Scenes':
+              key: 'Mini-Proje: Alt yazılı Sahneler'
+              name: 'Mini-Proje: Alt yazılı Sahneler'
+            The Draw Loop:
+              key: Döngü çiz
+              name: Döngü çiz
+            Sprite Movement:
+              key: Hareketli Nesnelerin Hareketi
+              name: Hareketli Nesnelerin Hareketi
+            'Mini-Project: Animation':
+              key: 'Mini-Proje: Animasyon'
+              name: 'Mini-Proje: Animasyon'
+            Conditionals:
+              key: Koşullar
+              name: Koşullar
+            Keyboard Input:
+              key: Klavye girişi
+              name: Klavye girişi
+            Mouse Input:
+              key: Fare Girdisi
+              name: Fare Girdisi
+            Project - Interactive Card:
+              key: Proje - interaktif kart
+              name: Proje - interaktif kart
+            Velocity:
+              key: Hız
+              name: Hız
+            Collision Detection:
+              key: Çarpışmanın algılanması
+              name: Çarpışmanın algılanması
+            'Mini-Project: Side Scroller':
+              key: 'Mini-Proje: Side Scroller (Yan Kaydırma Oyunu)'
+              name: 'Mini-Proje: Side Scroller (Yan Kaydırma Oyunu)'
+            Complex Sprite Movement:
+              key: Karmaşık Hareketli Nesne Hareketi
+              name: Karmaşık Hareketli Nesne Hareketi
+            Collisions:
+              key: Çarpışmalar
+              name: Çarpışmalar
+            'Mini-Project: Flyer Game':
+              key: 'Mini-Proje: Flyer Oyunu'
+              name: 'Mini-Proje: Flyer Oyunu'
+            Functions:
+              key: Fonksiyonlar
+              name: Fonksiyonlar
+            The Game Design Process:
+              key: Oyun tasarım süreci
+              name: Oyun tasarım süreci
+            Using the Game Design Process:
+              key: Oyun tasarım süreci kullanarak
+              name: Oyun tasarım süreci kullanarak
+            Project - Design a Game:
+              key: Proje - Bir oyun tasarla
+              name: Proje - Bir oyun tasarla
+            Post-Project Test:
+              key: Proje Sonrası Test
+              name: Proje Sonrası Test
+            CS Discoveries Post Course survey:
+              key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+              name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bölüm 1: Resim ve animasyon'
+            csd3_2:
+              display_name: 'Bölüm 2: Oyun geliştirme'
+            cspSurvey:
+              display_name: Anket
+        csd4-2021:
+          title: CSD Ünite 4 - Tasarım Süreci ('20-'21)
+          description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır.
+            Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin
+            ihtiyaçlarını daha iyi anlayabileceğinizi öğreneceksiniz. Birimin ikinci
+            yarısı, ekiplerin bakım ihtiyaçlarını belirleme, hem kağıt üzerinde hem
+            de Uygulama Laboratuarında prototip çözümler üretme ve gerçek kullanıcılar
+            ile geribildirim almak ve ilerlemek için çözümler test etme imkanı sağlayan
+            bir tekrarlayıcı takım projesinden oluşur.
+          description_short: "  Kullanıcılarınızın gereksinimlerini karşılayan bir
+            programı nasıl tasarlayacağını öğren."
+          lessons:
+            Analysis of Design:
+              key: Tasarım analizi
+              name: Tasarım analizi
+            Understanding Your User:
+              key: Kullanıcınızı anlama
+              name: Kullanıcınızı anlama
+            User-Centered Design Micro Activity:
+              key: Kullanıcı Merkezli Tasarım Mikro Aktivitesi
+              name: Kullanıcı Merkezli Tasarım Mikro Aktivitesi
+            User Interfaces:
+              key: Kullanıcı Arayüzleri
+              name: Kullanıcı Arayüzleri
+            Feedback and Testing:
+              key: Geri bildirim ve Test
+              name: Geri bildirim ve Test
+            Identifying User Needs:
+              key: Kullanıcı İhtiyaçlarını Tanımlama
+              name: Kullanıcı İhtiyaçlarını Tanımlama
+            Project - Paper Prototype:
+              key: Proje - Kağıt Modeli
+              name: Proje - Kağıt Modeli
+            Designing Apps for Good:
+              key: Yararlı uygulamalar tasarlama
+              name: Yararlı uygulamalar tasarlama
+            Market Research:
+              key: Pazar araştırması
+              name: Pazar araştırması
+            Paper Prototypes:
+              key: Kağıt Prototipler
+              name: Kağıt Prototipler
+            Prototype Testing:
+              key: Prototip testi
+              name: Prototip testi
+            Digital Design:
+              key: Dijital Tasarım
+              name: Dijital Tasarım
+            Linking Screens:
+              key: Bağlama Ekranları
+              name: Bağlama Ekranları
+            Testing the App:
+              key: Uygulamayı Test Etmek
+              name: Uygulamayı Test Etmek
+            Improving and Iterating:
+              key: Geliştirme ve Tekrarlama
+              name: Geliştirme ve Tekrarlama
+            Project - App Presentation:
+              key: Proje - Uygulama Sunumu
+              name: Proje - Uygulama Sunumu
+            Post-Project Test:
+              key: Proje Sonrası Test
+              name: Proje Sonrası Test
+            CS Discoveries Post Course survey:
+              key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+              name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
+            csd4_2:
+              display_name: 'Bölüm 2: Uygulama prototipleme'
+            csd5_2:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
+            cspSurvey:
+              display_name: Anket
+        csd5-2021:
+          title: CSD ünite 5 - veri ve toplum
+          description: 5. ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların
+            bu sürece nasıl yardımcı olabileceğini vurgulamaktadır. Birinci kısım
+            bir bilgisayarda bilgiyi temsil etmek için kullanılan farklı sistemleri
+            ve bunları kullanmanın getirdiği zorlukları, artılarını ve eksilerini
+            araştırır. İkinci kısımda problem çözmek için kullanılan verilerin nasıl
+            toplandığını ve bilgisayarların bu işlemin adımlarını otamatikleştirmede
+            nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede
+            seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
+          description_short: İnsanların veri problemlerini çözmek için bilgisayarı
+            nasıl kullandıklarını öğrenin.
+          lessons:
+            Representation Matters:
+              key: Konuları ifade etme
+              name: Konuları ifade etme
+            Patterns and Representation:
+              key: Desen ve gösterimi
+              name: Desen ve gösterimi
+            ASCII and Binary Representation:
+              key: ASCII ve ikili gösterimi
+              name: ASCII ve ikili gösterimi
+            Representing Images:
+              key: Görüntüleri ifade etme
+              name: Görüntüleri ifade etme
+            Representing Numbers:
+              key: Numaraları temsil eden
+              name: Numaraları temsil eden
+            Keeping Data Secret:
+              key: Verileri Gizli Tutmak
+              name: Verileri Gizli Tutmak
+            Combining Representations:
+              key: İfadeleri birleştirme
+              name: İfadeleri birleştirme
+            Project - Create a Representation:
+              key: Proje - bir ifade oluşturun
+              name: Proje - bir ifade oluşturun
+            Problem Solving and Data:
+              key: Problem çözme ve veri
+              name: Problem çözme ve veri
+            Problem Solving with Big Data:
+              key: Büyük veri ile Problem çözme
+              name: Büyük veri ile Problem çözme
+            Structuring Data:
+              key: Verilerin Yapılandırılması
+              name: Verilerin Yapılandırılması
+            Making Decisions with Data:
+              key: Veri ile karar verme
+              name: Veri ile karar verme
+            Interpreting Data:
+              key: Veri Yorumlama
+              name: Veri Yorumlama
+            Automating Data Decisions:
+              key: Veri ile kararları otomatikleştirme
+              name: Veri ile kararları otomatikleştirme
+            Project - Make a Recommendation:
+              key: Proje - Bir Öneri Yapın
+              name: Proje - Bir Öneri Yapın
+            Post-Project Test:
+              key: Proje Sonrası Test
+              name: Proje Sonrası Test
+            CS Discoveries Post Course survey:
+              key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+              name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+            csd5_2:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
+            cspSurvey:
+              display_name: Anket
+        csd6-2021:
+          title: CSD bilgisayar birimi 6 - fiziksel
+          description: Altıncı bölüm Bilgisayarı keşvetme, Öğrenciler App laboratuvar
+            ve Maker Toolkit ile programlar geliştirir ve fiziksel bir tahta ile iletişim
+            kurar.
+          description_short: Fiziksel aygıtları programlama
+          lessons:
+            Innovations in Computing:
+              key: Bilişimdeki Yenilikler
+              name: Bilişimdeki Yenilikler
+            Designing Screens with Code:
+              key: Kod ile Ekranlar Tasarlama
+              name: Kod ile Ekranlar Tasarlama
+            The Circuit Playground:
+              key: Çember Oyun Alanı
+              name: Çember Oyun Alanı
+            Input Unplugged:
+              key: Bağımsız (Unplugged) Girdi
+              name: Bağımsız (Unplugged) Girdi
+            Board Events:
+              key: Kurul Etkinlikleri
+              name: Kurul Etkinlikleri
+            Getting Properties:
+              key: Özelikleri Alma
+              name: Özelikleri Alma
+            Analog Input:
+              key: Analog girdi
+              name: Analog girdi
+            The Program Design Process:
+              key: Program Tasarım Süreci
+              name: Program Tasarım Süreci
+            'Project: Make a Game':
+              key: 'Proje: Bir Oyun Yap'
+              name: 'Proje: Bir Oyun Yap'
+            Arrays and Color LEDs:
+              key: Diziler ve Renkli LED'ler
+              name: Diziler ve Renkli LED'ler
+            Making Music:
+              key: Müzik yapma
+              name: Müzik yapma
+            Arrays and For Loops:
+              key: Diziler ve For Döngüleri
+              name: Diziler ve For Döngüleri
+            Accelerometer:
+              key: İvme Ölçer
+              name: İvme Ölçer
+            Functions with Parameters:
+              key: Fonksiyon parametreleri
+              name: Fonksiyon parametreleri
+            Circuits and Physical Prototypes:
+              key: Devreler ve Fiziksel Prototipler
+              name: Devreler ve Fiziksel Prototipler
+            'Project: Prototype an Innovation':
+              key: 'Proje: Bir yenilik prototiple'
+              name: 'Proje: Bir yenilik prototiple'
+            Post-Project Test:
+              key: Proje Sonrası Test
+              name: Proje Sonrası Test
+            CS Discoveries Post Course survey:
+              key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+              name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bölüm 1: Donanım çıktısı'
+            csd6_2:
+              display_name: 'Bölüm 1: Donanım girdisi'
+            cspSurvey:
+              display_name: Anket
+        csp1-2021:
+          title: CSP Ünite 1 - Dijital Bilgi ('20-'21)
+          lessons:
+            CS Principles Pre-survey:
+              key: Bilgisayar Bilimi ilkeleri ön anket
+              name: Bilgisayar Bilimi ilkeleri ön anket
+            Welcome to CSP:
+              key: CSP'ye Hoşgeldiniz
+              name: CSP'ye Hoşgeldiniz
+            Representing Information:
+              key: Sunulan Bilgi
+              name: Sunulan Bilgi
+            Circle Square Patterns:
+              key: Çember Kare Desenler
+              name: Çember Kare Desenler
+            Binary Numbers:
+              key: İkili Sayılar
+              name: İkili Sayılar
+            Overflow and Rounding:
+              key: Taşma ve Yuvarlama
+              name: Taşma ve Yuvarlama
+            Representing Text:
+              key: Metni Gösterme
+              name: Metni Gösterme
+            Black and White Images:
+              key: Siyah ve Beyaz Resimler
+              name: Siyah ve Beyaz Resimler
+            Color Images:
+              key: Renkli Resimler
+              name: Renkli Resimler
+            Lossless Compression:
+              key: Kayıpsız Sıkıştırma
+              name: Kayıpsız Sıkıştırma
+            Lossy Compression:
+              key: Kayıplı Sıkıştırma
+              name: Kayıplı Sıkıştırma
+            Intellectual Property:
+              key: Fikri Mülkiyet
+              name: Fikri Mülkiyet
+            Project - Digital Information Dilemmas Part 1:
+              key: Proje - Dijital Bilgi İkilemleri Kısım 1
+              name: Proje - Dijital Bilgi İkilemleri Kısım 1
+            Project - Digital Information Dilemmas Part 2:
+              key: Proje - Dijital Bilgi İkilemleri Kısım 2
+              name: Proje - Dijital Bilgi İkilemleri Kısım 2
+            'Lesson 14: Assessment Day':
+              key: 'Ders 14: Ünite Değerlendirme'
+              name: 'Ders 14: Ünite Değerlendirme'
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            csp_unit1_2020:
+              display_name: 'Ünite 1: Sayısal bilgi'
+        csp2-2021:
+          title: CSP Ünite 2 - İnternet ('20-'21)
+          lessons:
+            Welcome to the Internet:
+              key: İnternete Hoşgeldiniz
+              name: İnternete Hoşgeldiniz
+            Building a Network:
+              key: Bir Ağ Oluşturma
+              name: Bir Ağ Oluşturma
+            The Need for Addressing:
+              key: Adresleme için ihtiyaç
+              name: Adresleme için ihtiyaç
+            Routers and Redundancy:
+              key: Yönlendiriciler ve yedeklilik
+              name: Yönlendiriciler ve yedeklilik
+            Packets:
+              key: Paketler
+              name: Paketler
+            DNS and HTTP:
+              key: DNS ve HTTP
+              name: DNS ve HTTP
+            Project - Internet Dilemmas Part 1:
+              key: Proje - İnternet İkilemleri Kısım 1
+              name: Proje - İnternet İkilemleri Kısım 1
+            Project - Internet Dilemmas Part 2:
+              key: Proje - İnternet İkilemleri Kısım 2
+              name: Proje - İnternet İkilemleri Kısım 2
+            'Lesson 9: Assessment Day':
+              key: 'Ders 9: Değerlendirme Günü'
+              name: 'Ders 9: Değerlendirme Günü'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Ünite 2: Internet'
+        csp3-2021:
+          title: CSP Ünite 3 - Uygulama Tasarımına Giriş ('20-'21)
+          lessons:
+            Introduction to Apps:
+              key: Uygulamalara Giriş
+              name: Uygulamalara Giriş
+            Project - Designing an App Part 1:
+              key: Proje - Bir Uygulama Tasarlama Kısım 1
+              name: Proje - Bir Uygulama Tasarlama Kısım 1
+            Project - Designing an App Part 2:
+              key: Proje - Bir Uygulama Tasarlama Kısım 2
+              name: Proje - Bir Uygulama Tasarlama Kısım 2
+            The Need for Programming Languages:
+              key: Programlama dilleri ne duyulan ihtiyaç
+              name: Programlama dilleri ne duyulan ihtiyaç
+            Intro to Programming:
+              key: Programlamaya Giriş
+              name: Programlamaya Giriş
+            Debugging:
+              key: Hata Ayıklama (Debugging)
+              name: Hata Ayıklama (Debugging)
+            Project - Designing an App Part 3:
+              key: Proje - Bir Uygulama Tasarlama Kısım 3
+              name: Proje - Bir Uygulama Tasarlama Kısım 3
+            Project - Designing an App Part 4:
+              key: Proje - Bir Uygulama Tasarlama Kısım 4
+              name: Proje - Bir Uygulama Tasarlama Kısım 4
+            Project - Designing an App Part 5:
+              key: Proje - Bir Uygulama Tasarlama Kısım 5
+              name: Proje - Bir Uygulama Tasarlama Kısım 5
+            'Lesson 11: Assessment Day':
+              key: 'Ders 11: Değerlendirme Günü'
+              name: 'Ders 11: Değerlendirme Günü'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Ünite 3: Uygulama Tasarımına Giriş'
+        csp4-2021:
+          title: CSP Ünite 4 - Değişkenler, Koşullar ve Fonksiyonlar ('20-'21)
+          lessons:
+            Variables Explore:
+              key: Değişkenleri Keşfetme
+              name: Değişkenleri Keşfetme
+            Variables Investigate:
+              key: Değişkenleri Araştırma
+              name: Değişkenleri Araştırma
+            Variables Practice:
+              key: Değişkenleri Uygulama
+              name: Değişkenleri Uygulama
+            Variables Make:
+              key: Değişkenleri Yapma
+              name: Değişkenleri Yapma
+            Conditionals Explore:
+              key: Koşulları Keşfetme
+              name: Koşulları Keşfetme
+            Conditionals Investigate:
+              key: Koşulları Araştırma
+              name: Koşulları Araştırma
+            Conditionals Practice:
+              key: 'Koşulları Uygulama
+
+'
+              name: 'Koşulları Uygulama
+
+'
+            Conditional Make:
+              key: Koşul Yapma
+              name: Koşul Yapma
+            Functions Explore / Investigate:
+              key: Fonksiyonları Keşfetme / Araştırma
+              name: Fonksiyonları Keşfetme / Araştırma
+            Functions Practice:
+              key: Fonksiyonları Uygulama
+              name: Fonksiyonları Uygulama
+            Functions Make:
+              key: Fonksiyonları Yapma
+              name: Fonksiyonları Yapma
+            Project - Decision Maker App Part 1:
+              key: Proje - Karar Verici Uygulama Kısım 1
+              name: Proje - Karar Verici Uygulama Kısım 1
+            Project - Decision Maker App Part 2:
+              key: Proje - Karar Verici Uygulama Kısım 2
+              name: Proje - Karar Verici Uygulama Kısım 2
+            Project - Decision Maker App Part 3:
+              key: Proje - Karar Verici Uygulama Kısım 3
+              name: Proje - Karar Verici Uygulama Kısım 3
+            'Lesson 15: Assessment Day':
+              key: 'Ders 15: Değerlendirme Günü'
+              name: 'Ders 15: Değerlendirme Günü'
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
+        csp5-2021:
+          title: CSP Ünite 5 - Listeler, Döngüler ve Gezinmeler ('20-'21)
+          lessons:
+            Lists Explore:
+              key: Listeleri Keşfet
+              name: Listeleri Keşfet
+            Lists Investigate:
+              key: Listeleri Araştırma
+              name: Listeleri Araştırma
+            Lists Practice:
+              key: Listeleri Uygulama
+              name: Listeleri Uygulama
+            Lists Make:
+              key: Listeleri Yapma
+              name: Listeleri Yapma
+            Loops Explore:
+              key: Döngüleri Keşfetme
+              name: Döngüleri Keşfetme
+            Loops Investigate:
+              key: Döngüleri Araştırma
+              name: Döngüleri Araştırma
+            Loops Practice:
+              key: Döngüleri Uygulama
+              name: Döngüleri Uygulama
+            Loops Make:
+              key: Döngüleri Oluşturma
+              name: Döngüleri Oluşturma
+            Traversals Explore:
+              key: Gezinmeleri Keşfetme
+              name: Gezinmeleri Keşfetme
+            Traversals Investigate:
+              key: Gezinmeleri Araştırma
+              name: Gezinmeleri Araştırma
+            Traversals Practice:
+              key: Gezinmeleri Uygulama
+              name: Gezinmeleri Uygulama
+            Traversals Make:
+              key: Gezinmeleri Yapma
+              name: Gezinmeleri Yapma
+            Semester Hackathon Part 1:
+              key: Dönem Hackathon Kısım 1
+              name: Dönem Hackathon Kısım 1
+            Semester Hackathon Part 2:
+              key: Dönem Hackathon Kısım 2
+              name: Dönem Hackathon Kısım 2
+            Semester Hackathon Part 3:
+              key: Dönem Hackathon Kısım 3
+              name: Dönem Hackathon Kısım 3
+            Semester Hackathon Part 4:
+              key: Dönem Hackathon Kısım 4
+              name: Dönem Hackathon Kısım 4
+            Semester Hackathon Part 5:
+              key: Dönem Hackathon Kısım 5
+              name: Dönem Hackathon Kısım 5
+            'Lesson 18: Assessment Day':
+              key: 'Ders 18: Değerlendirme Günü'
+              name: 'Ders 18: Değerlendirme Günü'
+          lesson_groups:
+            csp_lists:
+              display_name: Listeler
+            csp_loops:
+              display_name: Döngüler
+            csp_traversals:
+              display_name: Gezinmeler
+            csp_project:
+              display_name: Proje
+        csp6-2021:
+          title: CSP Ünite 6 -Algoritmalar ('20-'21)
+          lessons:
+            Algorithms Solve Problems:
+              key: Algoritmalar, Prblemleri Çözer
+              name: Algoritmalar, Prblemleri Çözer
+            Algorithm Efficiency:
+              key: Algoritma Verimliliği
+              name: Algoritma Verimliliği
+            Unreasonable Time:
+              key: Mantıksız Süre
+              name: Mantıksız Süre
+            The Limits of Algorithms:
+              key: Algoritma Sınırları
+              name: Algoritma Sınırları
+            Parallel and Distributed Algorithms:
+              key: Paralel ve Dağıtılmış Algoritmalar
+              name: Paralel ve Dağıtılmış Algoritmalar
+            'Lesson 6: Assessment Day':
+              key: 'Ders 6: Değerlendirme Günü'
+              name: 'Ders 6: Değerlendirme Günü'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Ünite 6: Algoritmalar'
+        csp7-2021:
+          lessons:
+            Parameters and Return Explore:
+              key: Parametreleri ve Dönüşü Keşfetme
+              name: Parametreleri ve Dönüşü Keşfetme
+            Parameters and Return Investigate:
+              key: Parametreleri ve Dönüşü Araştırma
+              name: Parametreleri ve Dönüşü Araştırma
+            Parameters and Return Practice:
+              key: Parametreleri ve Dönüşü Uygulama
+              name: Parametreleri ve Dönüşü Uygulama
+            Parameters and Return Make:
+              key: Parametreleri ve Dönüşü Yapma
+              name: Parametreleri ve Dönüşü Yapma
+            Libraries Explore:
+              key: Kütüphaneleri Keşfetme
+              name: Kütüphaneleri Keşfetme
+            Libraries Investigate:
+              key: Kütüphaneleri Araştırma
+              name: Kütüphaneleri Araştırma
+            Libraries Practice:
+              key: Kütüphaneleri Uygulama
+              name: Kütüphaneleri Uygulama
+            Project - Make a Library Part 1:
+              key: Proje - Bir Kütüphane Yapma Kısım 1
+              name: Proje - Bir Kütüphane Yapma Kısım 1
+            Project - Make a Library Part 2:
+              key: Proje - Bir Kütüphane Yapma Kısım 2
+              name: Proje - Bir Kütüphane Yapma Kısım 2
+            Project - Make a Library Part 3:
+              key: Proje - Bir Kütüphane Yapma Kısım 3
+              name: Proje - Bir Kütüphane Yapma Kısım 3
+            'Lesson 11: Assessment Day':
+              key: 'Ders 11: Değerlendirme Günü'
+              name: 'Ders 11: Değerlendirme Günü'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametreler ve Dönüş Değerleri
+            csp_libraries:
+              display_name: Kütüphaneler
+        csp8-2021:
+          title: CSP Ünite 8 - Performans Görevi Hazırlığı Oluşturma ('20-'21)
+          lessons:
+            Create PT - Review the Task:
+              key: Performans Görevi Oluştur - Görevi Gözden Geçir
+              name: Performans Görevi Oluştur - Görevi Gözden Geçir
+            Create PT - Make a Plan:
+              key: Performans Görevi Oluştur - Bir Plan Hazırla
+              name: Performans Görevi Oluştur - Bir Plan Hazırla
+            Create PT - Complete the Task:
+              key: Performans Görevini Oluştur - Görevi Tamamla
+              name: Performans Görevini Oluştur - Görevi Tamamla
+        csp9-2021:
+          title: CSP Ünite 9 -Veriler ('20-'21)
+          lessons:
+            Learning From Data:
+              key: Verilerden Öğrenme
+              name: Verilerden Öğrenme
+            Exploring One Column:
+              key: Bir Sütunu Keşfetme
+              name: Bir Sütunu Keşfetme
+            Filtering and Cleaning Data:
+              key: Veri Filtreleme ve Temizleme
+              name: Veri Filtreleme ve Temizleme
+            Exploring Two Columns:
+              key: İki Sütunu Keşfetme
+              name: İki Sütunu Keşfetme
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: Büyük Veri, Kalabalık Kaynaklandırma ve Makine Öğrenimi
+              name: Büyük Veri, Kalabalık Kaynaklandırma ve Makine Öğrenimi
+            Machine Learning and Bias:
+              key: Makine Öğrenimi ve Yanlılık
+              name: Makine Öğrenimi ve Yanlılık
+            Project - Tell a Data Story - Part 1:
+              key: Proje - Bir Veri Hikayesi Anlat - Kısım 1
+              name: Proje - Bir Veri Hikayesi Anlat - Kısım 1
+            Project - Tell a Data Story - Part 2:
+              key: Proje - Bir Veri Hikayesi Anlat - Kısım 2
+              name: Proje - Bir Veri Hikayesi Anlat - Kısım 2
+            'Lesson 9: Assessment Day':
+              key: 'Ders 9: Değerlendirme Günü'
+              name: 'Ders 9: Değerlendirme Günü'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Ünite 9: Veriler'
+        csp10-2021:
+          title: CSP Ünite 10 - Siber güvenlik ve Küresel Etkiler ('20-'21)
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: Proje - Yenilik Simülasyonu Kısım 1
+              name: Proje - Yenilik Simülasyonu Kısım 1
+            Project - Innovation Simulation Part 2:
+              key: Proje - Yenilik Simülasyonu Kısım 2
+              name: Proje - Yenilik Simülasyonu Kısım 2
+            Data Policies and Privacy:
+              key: Veri Politikaları ve Gizlilik
+              name: Veri Politikaları ve Gizlilik
+            The Value of Privacy:
+              key: Gizliliğin Değeri
+              name: Gizliliğin Değeri
+            Project - Innovation Simulation Part 3:
+              key: Proje - Yenilik Simülasyonu Kısım 3
+              name: Proje - Yenilik Simülasyonu Kısım 3
+            Security Risks Part 1:
+              key: Güvenlik Riskleri Kısım 1
+              name: Güvenlik Riskleri Kısım 1
+            Security Risks Part 2:
+              key: Güvenlik Riskleri Kısım 2
+              name: Güvenlik Riskleri Kısım 2
+            'Project: Innovation Simulation Part 4':
+              key: 'Proje: Yenilik Simülasyonu Kısım 4'
+              name: 'Proje: Yenilik Simülasyonu Kısım 4'
+            Protecting Data Part 1:
+              key: Verinin Korunması Kısım 1
+              name: Verinin Korunması Kısım 1
+            Protecting Data Part 2:
+              key: Verinin Korunması Kısım 2
+              name: Verinin Korunması Kısım 2
+            'Project: Innovation Simulation Part 5':
+              key: 'Proje: Yenilik Simülasyonu Kısım 5'
+              name: 'Proje: Yenilik Simülasyonu Kısım 5'
+            'Project: Innovation Simulation Part 6':
+              key: 'Proje: Yenilik Simülasyonu Kısım 6'
+              name: 'Proje: Yenilik Simülasyonu Kısım 6'
+            'Project: Innovation Simulation Part 7':
+              key: 'Proje: Yenilik Simülasyonu Kısım 7'
+              name: 'Proje: Yenilik Simülasyonu Kısım 7'
+            'Lesson 14: Unit Assessment Day':
+              key: 'Ders 14: Ünite Değerlendirme Günü'
+              name: 'Ders 14: Ünite Değerlendirme Günü'
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: Ünite 10 - Siber güvenlik ve Küresel Etkiler
+        coursea-2021:
+          title: Ders A (2020)
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
+            Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
+            oluştur.
+          description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
+          description_audience: 'Yaş: 4-7'
+          lessons:
+            Safety in My Online Neighborhood:
+              key: Çevrimiçi Mahallemde Güvenlik
+              name: Çevrimiçi Mahallemde Güvenlik
+            Learn to Drag and Drop:
+              key: Sürükleyip Bırakmayı Öğrenin
+              name: Sürükleyip Bırakmayı Öğrenin
+            'Programming: Happy Maps':
+              key: 'Programlama: Mutlu Haritalar'
+              name: Mutlu Haritalar
+            Sequencing with Scrat:
+              key: Scrat ile Sıralama
+              name: Scrat ile Sıralama
+            Programming in Ice Age:
+              key: Buz Devrinde Programlama
+              name: Scrat ile programlama
+            Programming with Rey and BB-8:
+              key: Rey ve BB-8 ile programlama
+              name: Rey ve BB-8 ile programlama
+            'Loops: Happy Loops':
+              key: 'Döngüler: Mutlu Döngüler'
+              name: 'Döngüler: Mutlu Döngüler'
+            Loops in Ice Age:
+              key: Buz Devrindeki Döngüler
+              name: Scrat ile Döngüler
+            Loops in Collector:
+              key: Toplayıcıda Döngüler
+              name: Toplayıcıda Döngüler
+            Ocean Scene with Loops:
+              key: Sanatçıların Döngüleri
+              name: Sanatçıların Döngüleri
+            'Events: The Big Event':
+              key: 'Olaylar: Büyük Olay'
+              name: Büyük Olay Jr.
+            Events in Play Lab:
+              key: Play Lab' da Olaylar
+              name: Play Lab' da Olaylar
+          lesson_groups:
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_sequencing:
+              display_name: Sıralama
+            csf_loops:
+              display_name: Döngüler
+            csf_events:
+              display_name: Olaylar
+        courseb-2021:
+          title: Kurs B (2020)
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
+            Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
+            oluştur.
+          description_short: Okul öncesi çocuklar için bilgisayar bilimine giriş.
+            Kurs A ile benzer ancak ilave kavram derinliği vardır.
+          description_audience: 'Yaş: 5-8'
+          lessons:
+            Digital Trails:
+              key: Dijital İzler
+              name: Dijital İzler
+            Move It, Move It:
+              key: Çabuk, Çabuk Taşı
+              name: Çabuk, Çabuk Taşı
+            Sequencing in Maze:
+              key: Labirentte Sıralama
+              name: Angry Birds ile Dizileme
+            Programming in Maze:
+              key: Labirentte Programlama
+              name: Labirentte Programlama
+            Programming in Harvester:
+              key: Hasatçıda Programlama
+              name: Hasatçı ile Programlama
+            'Loops: Getting Loopy':
+              key: 'Döngüler: Loopy Başlarken'
+              name: Döngüselleşme
+            Loops in Harvester:
+              key: Hasatçıdaki Döngüler
+              name: Hasatçı ile Döngüler
+            Loops in Collector:
+              key: Toplayıcıda Döngüler
+              name: Toplayıcıda Döngüler
+            Loops in Artist:
+              key: Sanatçı- Döngüler
+              name: Sanatçıların Döngüleri
+            The Right App:
+              key: Doğru Uygulama
+              name: Doğru Uygulama
+            'Events: The Big Event':
+              key: 'Olaylar: Büyük Olay'
+              name: Büyük Olay Jr.
+            Events in Play Lab:
+              key: Play Lab' da Olaylar
+              name: Play Lab' da Olaylar
+          lesson_groups:
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_sequencing:
+              display_name: Sıralama
+            csf_loops:
+              display_name: Döngüler
+            csf_impacts:
+              display_name: Bilgisayarın Etkileri
+            csf_events:
+              display_name: Olaylar
+        coursec-2021:
+          title: Kurs C (2020)
+          description: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin
+            baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini
+            araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda,
+            kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
+            hikayelerinizi ve sanatınızı oluşturun.
+          description_audience: 'Yaş: 6-10'
+          lessons:
+            Putting a STOP to Online Meanness:
+              key: Çevrimiçi Kötülüğe bir DUR deme
+              name: Çevrimiçi Kötülüğe bir DUR deme
+            Password Power-Up:
+              key: Şifre Güçlendirme
+              name: Şifre Güçlendirme
+            'Programming: My Robotic Friends':
+              key: 'Programlama: Robot dostlarım'
+              name: 'Programlama: Robot dostlarım'
+            Programming in Maze:
+              key: Labirentte Programlama
+              name: Labirentte Programlama
+            Debugging in Maze:
+              key: Labirentte Hata Ayıklama
+              name: Labirentte Hata Ayıklama
+            Programming in Collector:
+              key: Koleksiyoncu programlama
+              name: Koleksiyoncu programlama
+            Programming in Artist:
+              key: Sanatçı Programlama
+              name: Sanatçı Programlama
+            Binary Bracelets:
+              key: İkilik Bileklikler
+              name: İkilik Bileklikler
+            'Loops: My Loopy Robotic Friends':
+              key: 'Döngüler: Loopy robot dostlarım'
+              name: 'Döngüler: Loopy robot dostlarım'
+            Loops with Rey and BB-8:
+              key: Rey ve BB-8 ile döngüler
+              name: Rey ve BB-8 ile döngüler
+            Loops in Harvester:
+              key: Hasatçıdaki Döngüler
+              name: Döngüler ile Ürünleri Hasat Etme
+            Looking Ahead:
+              key: Geleceğe bakış
+              name: Geleceğe bakış
+            Sticker Art with Loops:
+              key: Sanatçıların Döngüleri
+              name: Sanatçıların Döngüleri
+            'Events: The Big Event':
+              key: 'Olaylar: Büyük Olay'
+              name: Büyük Olay
+            Build a Flappy Game:
+              key: Bir Kanat Çırpma Oyunu Oluşturmak
+              name: Bir Kanat Çırpma Oyunu Oluşturmak
+            Events in Play Lab:
+              key: Play Lab' da Olaylar
+              name: Play Lab' da Olaylar
+            Picturing Data:
+              key: Verilerin Resmedilmesi
+              name: Verilerin Resmedilmesi
+            'End of Course Project: Create a Play Lab Game':
+              name: Ders Projesinin Sonu
+          lesson_groups:
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_sequencing:
+              display_name: Sıralama
+            csf_binary:
+              display_name: İkili
+            csf_loops:
+              display_name: Döngüler
+            csf_events:
+              display_name: Olaylar
+            csf_data:
+              display_name: Veri
+            end_of_course_project:
+              display_name: Ders Projesinin Sonu
+        coursed-2021:
+          title: Kurs D (2020)
+          description: Öğrenciler; döngüler, koşullar ve olaylara dair anlayışlarını
+            geliştirecektir. Kodlamanın ötesinde öğrenciler, dijital vatandaşlık ile
+            ilgili bilgi edinecektir.
+          description_short: Koşullu ifadeleri öğrenin. Kendi sanatını, oyunlarını
+            ve hatta bir dans partisi oluştur.
+          description_audience: 'Yaş: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'Algoritma: Grafik Kağıdı ile Programlama'
+              name: Grafik Kağıdı Programlama
+            Introduction to Online Puzzles:
+              key: Online Bulmacalara Giriş
+              name: Online Bulmacalara Giriş
+            Relay Programming:
+              key: Röle Programlama
+              name: Röle Programlama
+            Debugging in Collector:
+              key: Toplayıcıda Hata Ayıklama
+              name: Toplayıcıda Hata Ayıklama
+            Events in Bounce:
+              key: Sıçrama Olayları
+              name: Sıçrama Olayları
+            Build a Star Wars Game:
+              key: Star Wars oyunu oluştur
+              name: Star Wars oyunu oluştur
+            Dance Party:
+              key: Dans Partisi
+              name: Dans Partisi
+            Loops in Ice Age:
+              key: Buz Devrindeki Döngüler
+              name: Buz Devrindeki Döngüler
+            Loops in Artist:
+              key: Sanatçı- Döngüler
+              name: Sanatçıların Döngüleri
+            Nested Loops in Bee:
+              key: Arı -içiçe döngüler
+              name: Labirentte İçiçe Döngüler
+            Conditionals with Cards:
+              key: Kartlarla Koşullu Önermeler
+              name: Kartlarla Koşullu Önermeler
+            Conditionals in Bee:
+              key: Koşullar-Arı
+              name: Koşullar-Arı
+            While Loops in Farmer:
+              key: Çiftçi Döngüleri
+              name: Çiftçi Döngüleri
+            Until Loops in Maze:
+              key: Labirentte Bitiş Döngüleri
+              name: Labirentte Bitiş Döngüleri
+            Conditionals & Loops in Harvester:
+              key: Hasatçıda Koşullar & Döngüler
+              name: Koşullarla Hasat Etme
+            'Unplugged: Binary':
+              key: 'Bağımsız: İkili Taban (Binary)'
+              name: İkili Sistemle Resimler
+            Artist Binary:
+              key: Sanaçtı İkili Taban
+              name: Sanaçtı İkili Taban
+            Be A Super Digital Citizen:
+              key: Süper Bir Dijital Vatandaş Olun
+              name: Süper Bir Dijital Vatandaş Olun
+            End of Course Project:
+              key: Ders Projesinin Sonu
+              name: Ders Projesinin Sonu
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sıralama
+            csf_events:
+              display_name: Olaylar
+            csf_loops:
+              display_name: Döngüler
+            csf_conditionals:
+              display_name: Koşullar
+            csf_binary:
+              display_name: İkili
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            end_of_course_project:
+              display_name: Ders Projesinin Sonu
+        coursee-2021:
+          title: Kurs E (2020)
+          description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın
+            ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız
+            ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
+          description_short: Kurslar C & D'deki kavramları gözden geçirin, sonra fonksiyonları
+            öğrenerek ilerleyin.
+          description_audience: 8-12 yaş grubu
+          lessons:
+            Sequencing in the Maze:
+              key: Labirentte Sıralama
+              name: Labirentte Sıralama
+            Programming and Loops with the Artist:
+              key: Sanatçı ile Programlama ve Döngüler
+              name: Döngüler ile çizim
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Minecraft''ta Koşullar: Su Yolculuğu'
+              name: 'Minecraft''ta Koşullar: Su Yolculuğu'
+            Conditionals:
+              key: Koşullar
+              name: Çiftçi Koşulları
+            Simon Says:
+              key: Simon Diyor ki
+              name: Simon Diyor ki
+            Learning Sprites with Sprite Lab:
+              key: Hareketli Nesne Laboratuvarı ile Hareketli Nesneleri Öğrenme
+              name: Hareketli Nesne Laboratuvarı ile Yüzen Balık
+            Alien Dance Party with Sprite Lab:
+              key: Hareketli Nesne Laboratuvarı ile Uzaylı Dans Partisi
+              name: Hareketli Nesne Laboratuvarı ile Uzaylı Dans Partisi
+            Private and Personal Information:
+              key: Özel ve Kişisel Bilgiler
+              name: Özel ve Kişisel Bilgiler
+            About Me:
+              key: Hakkımda
+              name: Ben ve Hareketli Nesne Laboratuvarı Hakkında
+            Digital Sharing:
+              key: Dijital Paylaşım
+              name: Dijital Paylaşım
+            Nested Loops in Bee:
+              key: Arı -içiçe döngüler
+              name: Labirentte İçiçe Döngüler
+            Nested Loops in Artist:
+              key: Sanatçıların İç İçe Döngüleri
+              name: Sanatçıların İç İçe Döngüleri
+            Nested Loops in Frozen:
+              key: Frozen'da İç İçe Döngüler
+              name: Frozen ile İçiçe Döngüler
+            'Functions: Songwriting':
+              key: 'Fonksiyonlar: şarkı yazma'
+              name: Şarkı yazma
+            Functions in Minecraft:
+              key: " Minecraft Fonksiyonları"
+              name: " Minecraft Fonksiyonları"
+            Functions in Harvester:
+              key: Hasatçı Fonksiyonları
+              name: Hasatçı Fonksiyonları
+            Functions in Artist:
+              key: Sanatçı- Fonksiyonlar
+              name: Sanatçı- Fonksiyonlar
+            Designing for Accessibility:
+              key: Erişilebilirlik için Tasarlama
+              name: Erişilebilirlik için Tasarlama
+            End of Course Project:
+              key: Ders Projesinin Sonu
+              name: Ders Projesinin Sonu
+          lesson_groups:
+            ramp_up:
+              display_name: Arttır
+            csf_sprites:
+              display_name: Hareketli Nesneler
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_nested_loops:
+              display_name: İç İçe Döngüler
+            csf_functions:
+              display_name: Fonksiyonlar
+            csf_impacts:
+              display_name: Bilgisayarın Etkileri
+            end_of_course_project:
+              display_name: Ders Projesinin Sonu
+        coursef-2021:
+          title: Kurs F (2020)
+          description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma
+            hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve
+            bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci
+            bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık
+            projesi tasarlayınız ve oluşturunuz.
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
+            hikayelerinizi ve sanatınızı oluşturun.
+          description_audience: 'Yaş: 9-13'
+          lessons:
+            Functions in Minecraft:
+              key: " Minecraft Fonksiyonları"
+              name: " Minecraft Fonksiyonları"
+            Learning Sprites with Sprite Lab:
+              key: Hareketli Nesne Laboratuvarı ile Hareketli Nesneleri Öğrenme
+              name: Hareketli Nesne Laboratuvarı ile Yüzen Balık
+            Events with Sprite Lab:
+              name: Hareketli Nesne Laboratuvarı ile Uzaylı Dans Partisi
+            Loops with the Artist:
+              name: Döngüler ile çizim
+            Nested Loops in the Maze:
+              key: Labirentte İçiçe Döngüler
+              name: Labirentte İçiçe Döngüler
+            The Power of Words:
+              key: Kelimelerin gücü
+              name: Kelimelerin gücü
+            Envelope Variables:
+              key: Zarf değişkenleri
+              name: Zarf değişkenleri
+            Variables as Constant in Artist:
+              key: Sanatçıda Sabit Değişkenler
+              name: Sanatçı ile Değişkenler
+            Variables that Change in Bee:
+              key: Arıda Değişen Değişkenler
+              name: Arı ile Değişkenleri Değiştirme
+            Variables that Change in Artist:
+              key: Sanatçıda Değişen Değişkenler
+              name: Sanatçı ile Değişkenleri Değiştirme
+            Simulating Experiments:
+              key: Deneyleri Benzetme
+              name: Deneyleri Benzetme
+            AI for Oceans:
+              key: 'Okyanuslar için Yapay Zeka
+
+'
+              name: 'Okyanuslar için Yapay Zeka
+
+'
+            Internet:
+              key: İnternet
+              name: İnternet
+            For Loop Fun:
+              key: Şununla Say Döngüsü Eğlencesi
+              name: Şununla Say Döngüsü Eğlencesi
+            For Loops in Bee:
+              key: Arı - şununla say döngüleri
+              name: Arı - şununla say döngüleri
+            For Loops in Artist:
+              key: Sanatçı-Şununla say Döngüleri
+              name: Sanatçı-Şununla say Döngüleri
+            Editing Behaviors:
+              key: Davranışları Düzeltme
+              name: Hareketli Nesne Laboratuvarındaki Davranışlar
+            Virtual Pet:
+              name: Hareketli Nesne Laboratuvarı ile Sanal Evcil Hayvan
+            End of Course Project:
+              key: Ders Projesinin Sonu
+              name: Ders Projesinin Sonu
+          lesson_groups:
+            ramp_up:
+              display_name: Arttır
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_variables:
+              display_name: Değişkenler
+            csf_data:
+              display_name: Veri
+            csf_for_loops:
+              display_name: For Döngüleri
+            csf_sprites:
+              display_name: Hareketli Nesneler
+            end_of_course_project:
+              display_name: Ders Projesinin Sonu
+        express-2021:
+          title: Hızlandırılmış Kurs (2020)
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
+            Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
+            oluştur.
+          description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın
+            en iyilerini daha eski öğrenciler için birleştirir.'
+          description_audience: 'Yaş: 9-18'
+          lessons:
+            Dance Party:
+              key: Dans Partisi
+              name: Dans Partisi
+            Programming with Angry Birds:
+              key: Labirentte Programlama
+              name: Labirentte Programlama
+            Debugging with Scrat:
+              key: Scrat ile Hata Ayıklama
+              name: Scrat ile Hata Ayıklama
+            Collecting Treasure with Laurel:
+              key: Koleksiyoncu programlama
+              name: Koleksiyoncu programlama
+            Creating Art with Code:
+              key: Sanatçı Programlama
+              name: Sanatçı Programlama
+            Loops with Rey and BB-8:
+              key: Rey ve BB-8 ile döngüler
+              name: Rey ve BB-8 ile döngüler
+            Sticker Art with Loops:
+              key: Sanatçıların Döngüleri
+              name: Sanatçıların Döngüleri
+            Nested Loops in Maze:
+              key: Labirentte İçiçe Döngüler
+              name: Labirentte İçiçe Döngüler
+            Snowflakes with Anna and Elsa:
+              key: Frozen'da İç İçe Döngüler
+              name: Frozen'da İç İçe Döngüler
+            'Looking Ahead with Minecraft ':
+              key: Minecraft ile Geleceğe Bakma
+              name: Minecraft ile Geleceğe Bakma
+            If/Else with Bee:
+              key: Koşullar-Arı
+              name: Koşullar-Arı
+            While Loops with the Farmer:
+              key: Çiftçi Döngüleri
+              name: Çiftçi Döngüleri
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Minecraft''ta Koşullar: Su Yolculuğu'
+              name: 'Minecraft''ta Koşullar: Su Yolculuğu'
+            Until Loops in Maze:
+              key: Labirentte Bitiş Döngüleri
+              name: Labirentte Bitiş Döngüleri
+            Harvesting with Conditionals:
+              key: Koşullarla Hasat Etme
+              name: Koşullarla Hasat Etme
+            Functions in Minecraft:
+              key: " Minecraft Fonksiyonları"
+              name: " Minecraft Fonksiyonları"
+            Functions with Harvester:
+              key: Hasatçı Fonksiyonları
+              name: Hasatçı Fonksiyonları
+            Functions with Artist:
+              key: Sanatçı- Fonksiyonlar
+              name: Sanatçı- Fonksiyonlar
+            Variables with Artist:
+              key: Sanatçı ile Değişkenler
+              name: Sanatçı ile Değişkenler
+            Changing Variables with Bee:
+              key: Arı ile Değişkenleri Değiştirme
+              name: Arı ile Değişkenleri Değiştirme
+            Changing Variables with Artist:
+              key: Sanatçı ile Değişkenleri Değiştirme
+              name: Sanatçı ile Değişkenleri Değiştirme
+            For Loops with Bee:
+              key: Arı - şununla say döngüleri
+              name: Arı - şununla say döngüleri
+            For Loops with Artist:
+              key: Sanatçı-Şununla say Döngüleri
+              name: Sanatçı-Şununla say Döngüleri
+            Swimming Fish in Sprite Lab:
+              key: Hareketli Nesne Laboratuvarında Yüzen Balık
+              name: Hareketli Nesne Laboratuvarında Yüzen Balık
+            Alien Dance Party:
+              key: Uzaylı Dans Partisi
+              name: Uzaylı Dans Partisi
+            Behaviors in Sprite Lab:
+              key: Hareketli Nesne Laboratuvarındaki Davranışlar
+              name: Hareketli Nesne Laboratuvarındaki Davranışlar
+            Virtual Pet with Sprite Lab:
+              key: Hareketli Nesne Laboratuvarı ile Sanal Evcil Hayvan
+              name: Hareketli Nesne Laboratuvarı ile Sanal Evcil Hayvan
+            End of Course Project:
+              key: Ders Projesinin Sonu
+              name: Ders Projesinin Sonu
+          lesson_groups:
+            csf_warmup:
+              display_name: Isınma
+            csf_sequencing:
+              display_name: Sıralama
+            csf_loops:
+              display_name: Döngüler
+            csf_conditionals:
+              display_name: Koşullar
+            csf_functions:
+              display_name: Fonksiyonlar
+            csf_variables:
+              display_name: Değişkenler
+            csf_for_loops:
+              display_name: For Döngüleri
+            csf_sprites:
+              display_name: Hareketli Nesneler
+            end_of_course_project:
+              display_name: Ders Projesinin Sonu
+        pre-express-2021:
+          title: Okul Öncesi Çocuklar için Hızlandırılmış (2020)
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
+            Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
+            oluştur.
+          description_short: 'Okul öncesi çocuklar için bilgisayar bilimlerine giriş:
+            anaokulu ve birinci sınıf derslerimizin en iyisini birleştirir.'
+          description_audience: 'Yaş: 4-8'
+          lessons:
+            Learn to Drag and Drop:
+              key: Sürükleyip Bırakmayı Öğrenin
+              name: Sürükleyip Bırakmayı Öğrenin
+            Sequencing with Scrat:
+              key: Scrat ile Sıralama
+              name: Scrat ile Sıralama
+            Programming in with Angry Birds:
+              key: Angry Birds ile Programlama
+              name: Angry Birds ile Programlama
+            Programming with Rey and BB-8:
+              key: Rey ve BB-8 ile programlama
+              name: Rey ve BB-8 ile programlama
+            Programming in Harvester:
+              key: Hasatçıda Programlama
+              name: Hasatçıda Programlama
+            Loops with Scrat:
+              key: Scrat ile Döngüler
+              name: Scrat ile Döngüler
+            Loops with Laurel:
+              key: Toplayıcıda Döngüler
+              name: Toplayıcıda Döngüler
+            Ocean Scene with Loops:
+              key: Sanatçıların Döngüleri
+              name: Sanatçıların Döngüleri
+            Drawing Gardens with Loops:
+              key: Sanatçıların Döngüleri
+              name: Sanatçıların Döngüleri
+            On the Move with Events:
+              key: Play Lab' da Olaylar
+              name: Play Lab' da Olaylar
+            A Royal Battle with Events:
+              key: Play Lab' da Olaylar
+              name: Play Lab' da Olaylar
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sıralama
+            csf_loops:
+              display_name: Döngüler
+            csf_events:
+              display_name: Olaylar
+        csf-2021-pilot:
+          lessons:
+            Learning Sprites with Sprite Lab:
+              name: Hareketli Nesne Laboratuvarı ile Yüzen Balık
+            Virus Simulation for Code Bytes:
+              name: Simülasyon Kodlama
+            lesson-1:
+              name: Zarf değişkenleri
+          lesson_groups:
+            ramp_up:
+              display_name: Giriş
+            outbreak:
+              display_name: Salgın Simülasyonu
+            lessonGroup-3:
+              display_name: Değişkenler

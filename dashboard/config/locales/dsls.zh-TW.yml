@@ -3347,12 +3347,12 @@ zh-TW:
         - text: 鼠奎特會向前移動3次，轉彎，然後再向前移動3次，讓它拿到橡果！
           correct: true
           feedback: 正確！
-        - text: 鼠奎特會向前移動，然後轉彎並碎裂。
+        - text: 鼠奎特會向前移動，然後轉彎並跌落。
           feedback: 不正確。將`移動-向前`積木放入`重複`積木內將導致 Scrat 向前移動 3 次。
         - text: 我不知道。
-          feedback: 將「move forward」模塊放進「repeat」模塊會致使鼠奎特向前移動3次。然後它轉彎，繼續向前移動3次，讓它拿到橡果！
+          feedback: 將移動-向前積木放進重複積木會致使鼠奎特向前移動3次。然後它轉彎，繼續向前移動3次，讓它拿到橡果！
         questions:
-        - text: 這個程式使用新的模塊。當您按下「運行」時，您認為會發生什麼？
+        - text: 這個程式使用新的積木。當您按下「運行」時，您認為會發生什麼？
       courseD_project_exemplars_2020_2021:
         content1: '測試標記課件頁面
 
@@ -4960,5 +4960,73 @@ zh-TW:
         title: 發現計算機科學, 學生先修課程調查
       outbreak_story:
         content1: 在此描述
+        markdown: "# 大爆發：創建你自己的模擬\n\n## 歡迎來到怪物鎮！\n怪物鎮通常是一個開心和健康的地方。怪物們喜歡四處漫步訪問朋友。
+          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n一天，一個怪物開始感覺不適。怪物接觸了一個**病毒**！一個病毒是一個可以使你生病的東西。但是怪物們不是很擔心。他們繼續訪問朋友。\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n不久後，另外兩個怪物病了。這是同一個病毒！他們好像從他們的朋友感染上了病毒。\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n病毒逐漸的傳播到了其他怪物身上。健康的怪物們開始擔心他們全都會生病。生病的怪物們擔心他們會傳播病毒到他人身上。\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## 阻止傳播\n幸運的是，在研究完病毒之後，怪物鎮的鄰居們發現戴上口罩會緩解病毒的傳播。帶上口罩後，生病的怪物們會降低傳播病毒的幾率。\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          接下來會發生什麼？\n\n今天，你們將會創造你自己的關於怪物鎮病毒爆發的**類比**。類比是過程或系統的電腦模型。學習程式設計並預測接下來在怪物鎮會發生什麼。\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *病毒會傳播多快？*\n\n* *人人都會生病嗎？*\n\n* *口罩有什麼作用？*\n\n\n當你完成時，與其他人分享你的模擬。分享你認為在病毒到達城鎮時我們可以做些什麼來保護其他人的健康。 "
       outbreak_story2:
         content1: 在此描述
+        markdown: "# 疫情爆發：像科學家一樣思考\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n模擬是學習現實世界中難以觀察的事物的好方法。它們幫助科學家解決問題，安全有效地測試新想法。你的類比是一種展示怪物鎮病毒爆發景象的方法。\n\n##
+          重置和重複！\n即使你自己編寫代碼，也不可能確切地知道當你按下運行時將發生什麼。怪物隨機漫步，所以你不知道病毒傳播的速度是快還是慢。無論何時更改代碼，請確保多次運行模擬。事物不會以同樣的方式發生兩次！\n\n##
+          收集資料\n試著在運行模擬時寫下觀察結果。你可以計算生病的怪物數量，或使用計時器查看事物發生的速度。例如，如果沒有人戴口罩，那麼所有怪物都生病通常需要多久？
+          \n\n## 進行預測\n如果你理解了你的模型，你就可以用它來進行預測。你甚至可以更改類比運行的方式，並猜測將會發生什麼不同的情況。例如：\n*
+          如果有兩倍數量的怪物會發生什麼？\n* 如果怪物以一半的速度移動會發生什麼？\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## 怪物鎮像真實世界嗎？\n任何模型所能達到的逼真程度都是有限的。 \n* 你的疫情爆發類比與真實世界的病毒爆發有什麼共同點？\n*
+          有什麼區別？\n當你完成這個活動後，與老師或你的家人討論這些問題！\n\n## 我們還能對什麼建模？\n你已經創建了魔鬼鎮疫情爆發的工作模型。哪些事情是你希望它能而你的類比卻無法做或顯示的？繼續前進，學習更多模型：\n*
+          增加模擬中的怪物數量\n* 説明怪物從病毒中恢復\n* 概率，免疫，疫苗，等等！\n\n你還可以與其他人分享你的類比模型，或者分享你認為在病毒來到城鎮時我們可以做些什麼來説明他人保持健康的資訊。 "
+      outbreak_freeplay_choice:
+        description: 你已完成教程！不斷更改或改進你的項目。你可以選擇繼續使用相同的塊或嘗試擴展工具箱。
+        display_name: 自由發揮

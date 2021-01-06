@@ -2122,7 +2122,166 @@ mi:
           lesson_groups:
             lg_1:
               display_name: Ihirangi
-        ml-playground:
+        csd3-2021:
           lessons:
-            intro:
-              name: Kupu Whakataki
+            Variables:
+              key: Ngā Taurangi
+              name: Ngā Taurangi
+            Text:
+              key: Kuputuhi
+              name: Kuputuhi
+            Conditionals:
+              key: Ngā Here
+              name: Ngā Here
+            Functions:
+              key: Ngā Taumahi
+              name: Ngā Taumahi
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Ngā Taumahi Whai Tawhā
+              name: Ngā Taumahi Whai Tawhā
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Ngā Rārangi
+            csp_loops:
+              display_name: Ngā Koromeke
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Ngā Mahere Harikoa
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: E Neke, E Neke
+              name: E Neke, E Neke
+            'Loops: Getting Loopy':
+              name: Kia Koromeke
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Kōmore Ā-Rua
+              name: Kōmore Ā-Rua
+            'Events: The Big Event':
+              name: Te Takahanga Nui
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_binary:
+              display_name: Tāhūrua
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Papatono Pepa Kauwhata
+            Relay Programming:
+              key: Papatonotanga ā-Tānga
+              name: Papatonotanga ā-Tānga
+            Dance Party:
+              key: Te Pāti Kanikani
+              name: Te Pāti Kanikani
+            'Unplugged: Binary':
+              key: 'Momotu: Tāhūrua'
+              name: Ngā Atahanga Tāhūrua
+            Artist Binary:
+              key: Rehetoi Tāhūrua
+              name: Rehetoi Tāhūrua
+          lesson_groups:
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_binary:
+              display_name: Tāhūrua
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Ngā Here
+            'Functions: Songwriting':
+              name: Te Tito Waiata
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_nested_loops:
+              display_name: Ngā Koromeke Tauroto
+            csf_functions:
+              display_name: Ngā Taumahi
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Ngā Taurangi Kōpaki
+              name: Ngā Taurangi Kōpaki
+            Internet:
+              key: Te Ipurangi
+              name: Te Ipurangi
+            For Loop Fun:
+              key: Kia Ngahau te Mahi Koromeke
+              name: Kia Ngahau te Mahi Koromeke
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_variables:
+              display_name: Ngā Taurangi
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Te Pāti Kanikani
+              name: Te Pāti Kanikani
+          lesson_groups:
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_variables:
+              display_name: Ngā Taurangi
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Ngā Taurangi Kōpaki
+          lesson_groups:
+            ramp_up:
+              display_name: Kupu Whakataki
+            lessonGroup-3:
+              display_name: Ngā Taurangi

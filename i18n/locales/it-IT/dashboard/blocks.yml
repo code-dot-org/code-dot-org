@@ -1330,6 +1330,10 @@ it:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": non pesce
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mia-etichetta
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": non la mia-etichetta
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: "{QUESTION} rapida dell'utente per la variabile {VAR} con scelte {A}{B}{C}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

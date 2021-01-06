@@ -6834,11 +6834,382 @@ vi:
           lesson_groups:
             lg_1:
               display_name: Nội dung
+        virustest:
+          title: Mô phỏng dịch bệnh bùng phát
+          description_short: 'Hãy sử dụng Sprite Lab để tạo ra bản mô phỏng dịch bệnh bùng phát vi rút.'
         ml-playground:
           lessons:
             AI for Oceans:
               name: Trí Tuệ Nhân Tạo cho Đại Dương
-            intro:
-              name: Giới thiệu
             visualizing:
               name: Làm dự liệu hiển thị được
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Lập trình mô phỏng
+          lesson_groups:
+            outbreak:
+              display_name: Mô phỏng dịch bệnh bùng phát
+          title: Trình mô phỏng dịch bệnh bùng phát
+          description_short: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
+          description: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
+          name: dịch bệnh bùng phát
+        csd1-2021:
+          lessons:
+            CS Discoveries Pre-survey:
+              key: Tiền khảo sát CS Discoveries
+              name: Tiền khảo sát CS Discoveries
+            Intro to Problem Solving:
+              key: Giới thiệu phần giải quyết vấn đề
+              name: Giới thiệu phần giải quyết vấn đề
+            The Problem Solving Process:
+              key: Quá trình giải quyết vấn đề
+              name: Quá trình giải quyết vấn đề
+            Exploring Problem Solving:
+              key: Khám phá Giải quyết vấn đề
+              name: Khám phá Giải quyết vấn đề
+            What is a Computer?:
+              key: Máy tính là gì?
+              name: Máy tính là gì?
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd2-2021:
+          description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong Kho Dữ liệu Web."
+          lessons:
+            Digital Footprint:
+              key: Dấu vết số
+              name: Dấu vết số
+            Styling Text with CSS:
+              key: Tạo phong cách cho văn bản với CSS
+              name: Tạo phong cách cho văn bản với CSS
+            Intellectual Property:
+              key: Sở hữu trí tuệ
+              name: Sở hữu trí tuệ
+            Styling Elements with CSS:
+              key: Tạo phong cách cho các thành phần với CSS
+              name: Tạo phong cách cho các thành phần với CSS
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd3-2021:
+          description_short: "Lập trình"
+          lessons:
+            Drawing in Game Lab:
+              key: Bản vẽ trong Kho trò chơi
+              name: Bản vẽ trong Kho trò chơi
+            Variables:
+              key: Các biến
+              name: Các biến
+            Text:
+              key: Văn bản
+              name: Văn bản
+            Conditionals:
+              key: Điều kiện
+              name: Điều kiện
+            Project - Interactive Card:
+              key: 'Dự án: Thẻ tương tác'
+              name: 'Dự án: Thẻ tương tác'
+            Collision Detection:
+              key: Phát hiện va chạm
+              name: Phát hiện va chạm
+            Complex Sprite Movement:
+              key: Di chuyển nhân vật phức tạp
+              name: Di chuyển nhân vật phức tạp
+            Collisions:
+              key: Va chạm
+              name: Va chạm
+            Functions:
+              key: Các hàm
+              name: Các hàm
+            The Game Design Process:
+              key: Quá trình thiết kế trò chơi
+              name: Quá trình thiết kế trò chơi
+            Using the Game Design Process:
+              key: Sử dụng quy trình thiết kế trò chơi
+              name: Sử dụng quy trình thiết kế trò chơi
+            Project - Design a Game:
+              key: Dự án - thiết kế một trò chơi
+              name: Dự án - thiết kế một trò chơi
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd4-2021:
+          lessons:
+            Analysis of Design:
+              key: Phân tích thiết kế
+              name: Phân tích thiết kế
+            Understanding Your User:
+              key: Tìm hiểu về người dùng của bạn
+              name: Tìm hiểu về người dùng của bạn
+            Designing Apps for Good:
+              key: Thiết kế ứng dụng nhằm mục đích tốt
+              name: Thiết kế ứng dụng nhằm mục đích tốt
+            Market Research:
+              key: Nghiên cứu thị trường
+              name: Nghiên cứu thị trường
+            Paper Prototypes:
+              key: Nguyên mẫu giấy
+              name: Nguyên mẫu giấy
+            Prototype Testing:
+              key: Thử nghiệm nguyên mẫu
+              name: Thử nghiệm nguyên mẫu
+            Testing the App:
+              key: Thử Ứng dụng
+              name: Thử Ứng dụng
+            Improving and Iterating:
+              key: Cải thiện và Lặp lại
+              name: Cải thiện và Lặp lại
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd6-2021:
+          lessons:
+            Making Music:
+              key: Tạo âm nhạc
+              name: Tạo âm nhạc
+            Functions with Parameters:
+              key: Hàm và tham số
+              name: Hàm và tham số
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csp1-2021:
+          lessons:
+            CS Principles Pre-survey:
+              key: Nguyên lý KHMT trước khi khảo sát
+              name: Nguyên lý KHMT trước khi khảo sát
+            Representing Information:
+              key: Miêu tả thông tin
+              name: Miêu tả thông tin
+            Binary Numbers:
+              key: Số nhị phân
+              name: Số nhị phân
+            Intellectual Property:
+              key: Sở hữu trí tuệ
+              name: Sở hữu trí tuệ
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csp2-2021:
+          lessons:
+            The Need for Addressing:
+              key: Sự cần thiết cho các địa chỉ
+              name: Sự cần thiết cho các địa chỉ
+            Routers and Redundancy:
+              key: Bộ định tuyến và dự phòng
+              name: Bộ định tuyến và dự phòng
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Danh sách
+            csp_loops:
+              display_name: Vòng lặp
+        csp8-2021:
+          lessons:
+            Create PT - Complete the Task:
+              key: Tạo PT - hoàn thành nhiệm vụ
+              name: Tạo PT - hoàn thành nhiệm vụ
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Bản đồ thú vị
+            Sequencing with Scrat:
+              key: Học về chuỗi tuần tự cùng sóc Scrat
+              name: Học về chuỗi tuần tự cùng sóc Scrat
+            Programming with Rey and BB-8:
+              key: Lập trình cùng Rey và robot BB-8
+              name: Lập trình cùng Rey và robot BB-8
+            Loops in Ice Age:
+              key: Vòng lặp trong Kỷ băng hà
+            Ocean Scene with Loops:
+              key: Vòng lặp trong câu chuyện về biển
+              name: Vòng lặp trong câu chuyện về biển
+          lesson_groups:
+            csf_digcit:
+              display_name: Công dân số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Di chuyển nó, di chuyển nó
+              name: Di chuyển nó, di chuyển nó
+            Sequencing in Maze:
+              key: Chuỗi tuần tự trong mê cung
+              name: Chuỗi tuần tự cùng Angry Birds
+            Programming in Maze:
+              key: Lập trình trong mê cung
+            'Loops: Getting Loopy':
+              name: Tạo vòng lặp
+          lesson_groups:
+            csf_digcit:
+              display_name: Công dân số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
+        coursec-2021:
+          lessons:
+            Programming in Maze:
+              key: Lập trình trong mê cung
+            Binary Bracelets:
+              key: Vòng đeo tay nhị phân
+              name: Vòng đeo tay nhị phân
+            Looking Ahead:
+              key: Nhìn về phía trước
+              name: Nhìn về phía trước
+            'Events: The Big Event':
+              name: Sự kiện lớn
+          lesson_groups:
+            csf_digcit:
+              display_name: Công dân số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_binary:
+              display_name: Nhị phân
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: lập trình đồ thị trên giấy
+            Relay Programming:
+              key: Chương trình chuyển tiếp
+              name: Chương trình chuyển tiếp
+            Dance Party:
+              key: Bữa Tiệc Khiêu Vũ
+              name: Bữa Tiệc Khiêu Vũ
+            Loops in Ice Age:
+              key: Vòng lặp trong Kỷ băng hà
+              name: Vòng lặp trong Kỷ băng hà
+            'Unplugged: Binary':
+              key: 'Chưa hoạt động: nhị phân'
+              name: Hình ảnh Nhị phân
+            Artist Binary:
+              key: Nghệ sĩ nhị phân
+              name: Nghệ sĩ nhị phân
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_events:
+              display_name: Các sự kiện
+            csf_loops:
+              display_name: Vòng lặp
+            csf_conditionals:
+              display_name: Điều kiện
+            csf_binary:
+              display_name: Nhị phân
+            csf_digcit:
+              display_name: Công dân số
+        coursee-2021:
+          lessons:
+            Sequencing in the Maze:
+              key: Chuỗi tuần tự trong mê cung
+              name: Chuỗi tuần tự trong mê cung
+            Conditionals:
+              key: Điều kiện
+            Nested Loops in Frozen:
+              name: Vòng lặp lồng với Frozen
+            'Functions: Songwriting':
+              name: Sáng tác với tham số
+          lesson_groups:
+            csf_digcit:
+              display_name: Công dân số
+            csf_nested_loops:
+              display_name: Vòng lặp lồng nhau
+            csf_functions:
+              display_name: Các hàm
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Các biến phong bì
+              name: Các biến phong bì
+            AI for Oceans:
+              key: Trí Tuệ Nhân Tạo cho Đại Dương
+              name: Trí Tuệ Nhân Tạo cho Đại Dương
+            Internet:
+              key: internet
+              name: Internet
+            For Loop Fun:
+              key: Cho vòng lặp vui vẻ
+              name: Cho vòng lặp vui vẻ
+          lesson_groups:
+            csf_digcit:
+              display_name: Công dân số
+            csf_variables:
+              display_name: Các biến
+            csf_for_loops:
+              display_name: Cho vòng lặp
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Bữa Tiệc Khiêu Vũ
+              name: Bữa Tiệc Khiêu Vũ
+            Debugging with Scrat:
+              key: Gỡ lỗi với Scrat
+              name: Gỡ lỗi với Scrat
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_conditionals:
+              display_name: Điều kiện
+            csf_functions:
+              display_name: Các hàm
+            csf_variables:
+              display_name: Các biến
+            csf_for_loops:
+              display_name: Cho vòng lặp
+        pre-express-2021:
+          lessons:
+            Sequencing with Scrat:
+              key: Học về chuỗi tuần tự cùng sóc Scrat
+              name: Học về chuỗi tuần tự cùng sóc Scrat
+            Programming with Rey and BB-8:
+              key: Lập trình cùng Rey và robot BB-8
+              name: Lập trình cùng Rey và robot BB-8
+            Ocean Scene with Loops:
+              key: Vòng lặp trong câu chuyện về biển
+              name: Vòng lặp trong câu chuyện về biển
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Lập trình mô phỏng
+            lesson-1:
+              name: Các biến phong bì
+          lesson_groups:
+            ramp_up:
+              display_name: Giới thiệu
+            outbreak:
+              display_name: Mô phỏng dịch bệnh bùng phát
+            lessonGroup-3:
+              display_name: Các biến
