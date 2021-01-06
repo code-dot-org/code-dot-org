@@ -1,3 +1,5 @@
+DEPRECATED_CATEGORIES = %w[characters environment gameplay generic_items obstacles]
+
 DEFAULT_SPRITES_LIST = [
   {name: 'bear', key: 'category_animals/bear'},
   {name: 'bee', key: 'category_animals/bee'},
