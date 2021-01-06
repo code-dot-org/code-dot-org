@@ -64,7 +64,7 @@ export default class ActivitySection extends Component {
         <div
           style={{
             ...styles.activitySection,
-            ...(sectionHasTips && {position: 'relative', left: '-30px'})
+            ...(sectionHasTips && {position: 'relative', left: -30})
           }}
         >
           {sectionHasTips && (
@@ -95,12 +95,12 @@ export default class ActivitySection extends Component {
               </div>
             )}
             <div
-              style={
-                section.remarks && {
+              style={{
+                ...(section.remarks && {
                   borderLeft: '5px solid #CCC',
                   paddingLeft: 5
-                }
-              }
+                })
+              }}
             >
               <SafeMarkdown markdown={section.text} />
               {section.scriptLevels.length > 0 && (
