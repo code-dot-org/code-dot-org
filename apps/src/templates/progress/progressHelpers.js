@@ -183,9 +183,7 @@ export const processedLevel = level => {
     bubbleText:
       level.kind === LevelKind.unplugged
         ? undefined
-        : isSublevel
-        ? level.letter
-        : level.title.toString(),
+        : level.letter || level.title.toString(),
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus,
     pageNumber:
