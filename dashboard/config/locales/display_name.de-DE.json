@@ -605,7 +605,11 @@
         "spritelab_extras_repeat": "Lauter Sprites!",
         "outbreak1": "Virus Simulation",
         "outbreak2": "Virus Simulation",
-        "outbreak3": "Virus Simulation"
+        "outbreak3": "Virus Simulation",
+        "outbreak4": "Modifiziere deine Simulation",
+        "outbreak6": "Zufällige Chance",
+        "outbreak7": "Immunität und Impfungen",
+        "outbreak8": "Teile eine Nachricht"
       }
     }
   }

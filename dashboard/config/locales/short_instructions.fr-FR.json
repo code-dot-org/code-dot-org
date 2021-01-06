@@ -2976,7 +2976,15 @@
         "scrat 17": "Ok, recommençons pour s'entraîner - ce n'est pas très différent, mais fait attention au mur !",
         "scrat 18": "Le bloc \"Si-Sinon\" vérifie une condition, puis fait une chose OU une autre. Pour me conduire au gland, essaie d'utiliser ce nouveau bloc.",
         "scrat 19": "Encore un exercice avec le bloc « Si/Sinon » - peux-tu y arriver dès le premier essai?",
-        "scrat 20": "Peux-tu ajouter 3 blocs pour m'aider à résoudre un labyrinthe plus complexe ? Si tu le fais correctement, je peux suivre un chemin sinueux, peut importe sa longueur. Vite ! La glace est en train de fondre !"
+        "scrat 20": "Peux-tu ajouter 3 blocs pour m'aider à résoudre un labyrinthe plus complexe ? Si tu le fais correctement, je peux suivre un chemin sinueux, peut importe sa longueur. Vite ! La glace est en train de fondre !",
+        "outbreak7": "Créez un nouveau costume pour les monstres immunisés contre le virus et utilisez-le dans votre simulation.",
+        "outbreak8": "Partagez un message avec votre simulation.",
+        "outbreak1": "Créer 10 sprites en bonne santé et 1 sprite malade. Changez leur taille et faites-les errer.",
+        "outbreak2": "Changez les monstres en bonne santé en monstres malades lorsqu'ils se touchent.",
+        "outbreak3": "Changez les monstres en monstres avec des masques lorsque vous cliquez dessus.",
+        "outbreak4": "Modifiez le nombre et la taille des sprites de monstre pour votre simulation.",
+        "outbreak5": "Faites en sorte que tous les monstres malades commencent à se rétablir lorsqu'un monstre en bonne santé touche un monstre malade.",
+        "outbreak6": "Ajoutez un pourcentage de chances que les monstres en bonne santé tombent malade chaque fois qu'ils touchent des monstres malades. Faites cela pour toutes les combinaisons de monstres, avec et sans masque."
       }
     }
   }

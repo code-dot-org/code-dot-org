@@ -2165,7 +2165,162 @@ gl:
               name: Condicionais
             Functions:
               name: Funcións
-        ml-playground:
+        csd3-2021:
           lessons:
-            intro:
-              name: Introdución
+            Variables:
+              key: Variables
+              name: Variables
+            Text:
+              key: Texto
+              name: Texto
+            Conditionals:
+              key: Condicionais
+              name: Condicionais
+            Functions:
+              key: Funcións
+              name: Funcións
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funcións con parámetros
+              name: Funcións con parámetros
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Mapas Felices
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Creando camiños
+              name: Creando camiños
+            'Loops: Getting Loopy':
+              name: Bucleándose
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Pulseiras Binarias
+              name: Pulseiras Binarias
+            'Events: The Big Event':
+              name: O Gran Evento
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programación en Papel Cadriculado
+            Relay Programming:
+              key: Programación por relevos
+              name: Programación por relevos
+            Conditionals with Cards:
+              key: Condicionais con cartas
+              name: Condicionais con cartas
+            'Unplugged: Binary':
+              key: 'Desconectado: binario'
+              name: Imaxes binárias
+            Artist Binary:
+              key: Artista binario
+              name: Artista binario
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cidadanía dixital
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Condicionais
+            'Functions: Songwriting':
+              name: Composición
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_nested_loops:
+              display_name: Bucles aniñados
+            csf_functions:
+              display_name: Funcións
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Variábeis de sobre
+              name: Variábeis de sobre
+            Internet:
+              key: Internet
+              name: A Internet
+            For Loop Fun:
+              key: Diversión con bucles "para" (for)
+              name: Diversión con bucles "para" (for)
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funcións
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Variábeis de sobre
+          lesson_groups:
+            ramp_up:
+              display_name: Introdución
+            lessonGroup-3:
+              display_name: Variables

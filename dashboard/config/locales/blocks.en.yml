@@ -1375,6 +1375,10 @@ en:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": not fish
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": not my-label
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}
       Mikelab_changeAnim:
         text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:

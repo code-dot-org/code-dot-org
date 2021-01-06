@@ -1992,7 +1992,153 @@ sl:
           lesson_groups:
             lg_1:
               display_name: Vsebina
-        ml-playground:
+        csd3-2021:
           lessons:
-            intro:
-              name: Uvod
+            Variables:
+              key: Spremenljivke
+              name: Spremenljivke
+            Text:
+              key: Besedilo
+              name: Besedilo
+            Conditionals:
+              key: Pogoji
+              name: Pogoji
+            Functions:
+              key: Funkcije
+              name: Funkcije
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funkcije s parametri
+              name: Funkcije s parametri
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Veseli zemljevidi
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Premakni se, premakni
+              name: Premakni se, premakni
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        coursec-2021:
+          lessons:
+            'Events: The Big Event':
+              name: Veliki dogodek
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_binary:
+              display_name: Binarno
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Obarvajmo kvadratke
+            Relay Programming:
+              key: Relejsko programiranje
+              name: Relejsko programiranje
+            Conditionals with Cards:
+              key: Pogojniki s kartami
+              name: Pogojniki s kartami
+            'Unplugged: Binary':
+              key: 'Brez prijave: Binarno'
+              name: Binarne slike
+            Artist Binary:
+              key: Umetnik Binarno
+              name: Umetnik Binarno
+          lesson_groups:
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Pogoji
+            'Functions: Songwriting':
+              name: Napiši pesem
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_nested_loops:
+              display_name: Gnezdenje zank
+            csf_functions:
+              display_name: Funkcije
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Spremeljivke v ovojnicah
+              name: Spremeljivke v ovojnicah
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: Zabava s "for" zankami
+              name: Zabava s "for" zankami
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_variables:
+              display_name: Spremenljivke
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Spremenljivke
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Spremeljivke v ovojnicah
+          lesson_groups:
+            ramp_up:
+              display_name: Uvod
+            lessonGroup-3:
+              display_name: Spremenljivke

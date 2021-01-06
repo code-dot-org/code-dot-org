@@ -4333,5 +4333,429 @@ ja:
           lessons:
             AI for Oceans:
               name: 海洋のためのAI
-            intro:
-              name: はじめに
+        csd1-2021:
+          title: CSDユニット1 - 問題の解決とコンピューティング
+          description: "問題解決とコンピューティングは、コンピューター サイエンスの世界を高度にインタラクティブで協調的な形で紹介し、問題解決のより広い枠組みを見ていきます。問題解決プロセスを使って練習し、一連のパズル、課題、および実際のシナリオをこなしていきます。次に、コンピューターがどのように情報を入力、出力、保存、処理して、人が問題を解決するのを助けているかを学びます。このユニットの終わりに、選択した問題の解決に役立つアプリケーションを設計します。\\r"
+          description_short: "人が問題を解決するためにコンピューターを使ってどのように作業をするかを学びます。"
+          lessons:
+            The Problem Solving Process:
+              key: The Problem Solving Process
+              name: The Problem Solving Process
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            csd1_1:
+              display_name: '第 1章: 問題解決プロセス'
+            csd1_2:
+              display_name: '第 2 章コンピューターと問題解決'
+            csd1_3:
+              display_name: 代替レッスン
+        csd2-2021:
+          title: CSDユニット2 - ウェブ開発
+          description: "ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグ、リソースの使用、チームワークなどの貴重なプログラミングスキルも練習します。"
+          description_short: "ウェブラボで独自のウェブサイトを構築する方法を学びましょう。"
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csd3-2021:
+          title: CSDユニット3 - インタラクティブなアニメーションとゲーム
+          description: "ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。"
+          description_short: "ゲームラボでアニメーション、インタラクティブアート、ゲームのプログラミングを学びましょう。"
+          lessons:
+            Variables:
+              key: 変数（へんすう）
+              name: 変数（へんすう）
+            Text:
+              key: テキスト
+              name: テキスト
+            Conditionals:
+              key: 条件
+              name: 条件
+            Velocity:
+              key: 速度
+              name: 速度
+            Functions:
+              key: 関数(かんすう) 
+              name: 関数(かんすう) 
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章: 画像とアニメーション'
+            csd3_2:
+              display_name: '第2章: ゲームを作る'
+            cspSurvey:
+              display_name: アンケート
+        csd4-2021:
+          title: CSDユニット4 - 設計プロセス
+          description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
+          description_short: "ユーザーのニーズを満たすプログラムを設計する方法を学びましょう。"
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：ユーザーを中心にしたデザイン'
+            csd4_2:
+              display_name: '第 2 章：アプリのプロトタイピング'
+            csd5_2:
+              display_name: '第 2 章：データ問題を解決'
+            cspSurvey:
+              display_name: アンケート
+        csd5-2021:
+          title: CSDユニット5 - データと社会 ('20～'21)
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
+          lesson_groups:
+            csd5_1:
+              display_name: '第1章：情報を表現する'
+            csd5_2:
+              display_name: '第 2 章：データ問題を解決'
+            cspSurvey:
+              display_name: アンケート
+        csd6-2021:
+          title: CSDユニット6 - フィジカルコンピューティング ('20～'21)
+          description: ユニット6では、コンピューティングにおけるハードウェアプラットフォームの役割と、従来のキーボード、マウス、モニターと比べてさまざまなセンサーによりどのように効果的な入力と出力が行えるかを探ります。アプリラボとAdafruitのサーキット プレイグラウンドを使って、スマートデバイスで見られるのと同じハードウェア入力と出力を利用するプログラムを開発し、単純な粗いプロトタイプがどのようにして完成品につながるかを見ていきます。ユニットの最後には、独自の革新的な設計を行う基礎としてサーキット プレイグラウンドを使用するというデザインチャレンジが用意されています。
+          description_short: 物理デバイスでプログラミングする方法を学びます。
+          lessons:
+            Functions with Parameters:
+              key: パラメーター付き関数
+              name: パラメーター付き関数
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章: ハードウェアを使ったプログラミング'
+            csd6_2:
+              display_name: '第 2 章: 物理プロパティの構築'
+            cspSurvey:
+              display_name: アンケート
+        csp1-2021:
+          title: CSPユニット1 - デジタル情報 ('20～'21)
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            csp_unit1_2020:
+              display_name: 'ユニット1: デジタル情報'
+        csp2-2021:
+          title: CSPユニット2 - インターネット ('20～'21)
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'ユニット2: インターネット'
+        csp3-2021:
+          title: CSPユニット3 - アプリ設計入門 ('20 - '21)
+          lessons:
+            Debugging:
+              key: Debugging
+              name: Debugging
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'ユニット3: アプリ設計入門'
+        csp4-2021:
+          title: CSPユニット4 - 変数、条件文、関数 ('20～'21)
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
+            csp_project:
+              display_name: プロジェクト
+        csp5-2021:
+          title: CSPユニット5 - リスト、ループ、トラバーサル ('20 - '21)
+          lesson_groups:
+            csp_lists:
+              display_name: リスト
+            csp_loops:
+              display_name: くりかえし
+            csp_traversals:
+              display_name: トラバーサル
+            csp_project:
+              display_name: プロジェクト
+        csp6-2021:
+          title: CSPユニット6 - アルゴリズム ('20～21)
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'ユニット6: アルゴリズム'
+        csp7-2021:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: パラメータと戻り値
+        csp8-2021:
+          title: CSPユニット8 - PT準備の作成 ('20～'21)
+        csp9-2021:
+          title: CSPユニット9 - データ ('20～'21)
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'ユニット9: データ'
+        csp10-2021:
+          title: CSPユニット10 - サイバーセキュリティとグローバルインパクト ('20～'21)
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'ユニット10: サイバーセキュリティとグローバルインパクト'
+        coursea-2021:
+          title: コース A (2020)
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 低学年向けコンピューター サイエンス入門
+          description_audience: '4-7 才'
+          lessons:
+            Learn to Drag and Drop:
+              key: ドラッグ＆ドロップ
+              name: ドラッグ＆ドロップ
+            'Programming: Happy Maps':
+              key: 'プログラミング：ハッピー マップ'
+              name: ハッピーマップ
+            'Loops: Happy Loops':
+              key: 'くりかえし：ハッピー ループ'
+              name: くりかえし：ハッピー ループ
+            Loops in Ice Age:
+              key: アイス・エイジのループ
+            Loops in Collector:
+              key: くりかえし あつめる
+              name: くりかえし あつめる
+            Ocean Scene with Loops:
+              key: アーティストくりかえし
+              name: アーティストくりかえし
+            'Events: The Big Event':
+              key: 'イベント: おおきなイベント'
+            Events in Play Lab:
+              key: プレイ ラボのイベント
+              name: プレイ ラボのイベント
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+        courseb-2021:
+          title: コース B (2020)
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 就学前の児童のためのコンピューター サイエンス入門。コースAと似ていますが、コンセプトが深化しています。
+          description_audience: '5-8 才'
+          lessons:
+            Move It, Move It:
+              key: 動かせ！動かせ！
+              name: 動かせ！動かせ！
+            Programming in Maze:
+              key: めいろ のプログラミング
+              name: めいろ のプログラミング
+            'Loops: Getting Loopy':
+              name: ルーピーをゲット
+            Loops in Harvester:
+              key: "Loops in Harvester\n"
+            Loops in Collector:
+              key: くりかえし あつめる
+              name: くりかえし あつめる
+            Loops in Artist:
+              key: アーティストくりかえし
+              name: アーティストくりかえし
+            'Events: The Big Event':
+              key: 'イベント: おおきなイベント'
+            Events in Play Lab:
+              key: プレイ ラボのイベント
+              name: プレイ ラボのイベント
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+        coursec-2021:
+          title: コース C (2020)
+          description: シーケンス、ループ、イベントを含むプログラムを作成します。イニシャルをバイナリに変換し、さまざまな問題解決手法を調査し、ネット上のいじめに対処する方法を学びます。コースの最後に、独自のゲームやストーリーを作成して共有しましょう！
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 6～10才'
+          lessons:
+            Programming in Maze:
+              key: めいろ のプログラミング
+              name: めいろ のプログラミング
+            Binary Bracelets:
+              key: バイナリ ブレスレット
+              name: バイナリ ブレスレット
+            Loops in Harvester:
+              key: "Loops in Harvester\n"
+            Sticker Art with Loops:
+              key: アーティストくりかえし
+              name: アーティストくりかえし
+            'Events: The Big Event':
+              key: 'イベント: おおきなイベント'
+              name: ビッグイベント
+            Events in Play Lab:
+              key: プレイ ラボのイベント
+              name: プレイ ラボのイベント
+            Picturing Data:
+              key: データで予測
+              name: データで予測
+          lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_binary:
+              display_name: ２しんすう
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+        coursed-2021:
+          title: コース D (2020)
+          description: 生徒はループ、条件、イベントについての理解を深めます。プログラミング以外に、生徒はデジタル シティズンシップについて学びます。
+          description_short: 条件文について学び、独自のアート、ゲーム、さらにはダンスパーティーを作成しましょう。
+          description_audience: '年齢: 7～11才'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: グラフ用紙のプログラミング
+            Relay Programming:
+              key: プログラミングをリレーする
+              name: プログラミングをリレーする
+            Dance Party:
+              key: ダンスパーティー
+              name: ダンスパーティー
+            Loops in Ice Age:
+              key: アイス・エイジのループ
+              name: アイス・エイジのループ
+            Loops in Artist:
+              key: アーティストくりかえし
+              name: アーティストくりかえし
+            Conditionals with Cards:
+              key: カードと条件
+              name: カードと条件
+            'Unplugged: Binary':
+              key: 'アンプラグド: バイナリ'
+              name: バイナリ画像
+            Artist Binary:
+              key: アーティスト：バイナリ
+              name: アーティスト：バイナリ
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_events:
+              display_name: イベント
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            csf_binary:
+              display_name: ２しんすう
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+        coursee-2021:
+          title: コース E (2020)
+          description: アルゴリズム、ループ、条件文、イベントを使ってプログラミングから始めて、関数に移ります。このコースの後半では、友だちや家族と共有できるキャップストーンプロジェクトを設計して作成します。
+          description_short: コースCとDの概念を確認してから、関数を学習してさらに進みます。
+          description_audience: '年齢: 8～12才'
+          lessons:
+            Conditionals:
+              key: 条件
+            Simon Says:
+              key: サイモンは言う
+              name: サイモンは言う
+            Digital Sharing:
+              key: デジタル共有
+              name: デジタル共有
+            'Functions: Songwriting':
+              name: 作詞作曲
+          lesson_groups:
+            ramp_up:
+              display_name: ランプアップ
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_nested_loops:
+              display_name: 入れ子のループ
+            csf_functions:
+              display_name: 関数(かんすう) 
+        coursef-2021:
+          title: コース F (2020)
+          description: このコースでは、さまざまな種類のループ、イベント、関数、条件文を使用する方法を学びます。さまざまな問題解決手法を調査し、コンピューティングとインターネットの社会的影響について話し合います。このコースの後半では、友人や家族と共有できるキャップストーンプロジェクトを設計して作成します。
+          description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 9～13才'
+          lessons:
+            Envelope Variables:
+              key: エンベロープ変数
+              name: エンベロープ変数
+            AI for Oceans:
+              key: 海洋のためのAI
+              name: 海洋のためのAI
+            Internet:
+              key: インターネット
+              name: インターネット
+            For Loop Fun:
+              key: Forループを楽しむ
+              name: Forループを楽しむ
+          lesson_groups:
+            ramp_up:
+              display_name: ランプアップ
+            csf_digcit:
+              display_name: デジタル シティズンシップ
+            csf_variables:
+              display_name: 変数（へんすう）
+            csf_for_loops:
+              display_name: ループ用
+        express-2021:
+          title: エクスプレスコース (2020)
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          description_short: 'コンピューター サイエンス入門: 小学校低学年向けの最高のカリキュラムを高学年の性と向けに組み合わせています。'
+          description_audience: '年齢: 9～18才'
+          lessons:
+            Dance Party:
+              key: ダンスパーティー
+              name: ダンスパーティー
+            Programming with Angry Birds:
+              key: めいろ のプログラミング
+              name: めいろ のプログラミング
+            Sticker Art with Loops:
+              key: アーティストくりかえし
+              name: アーティストくりかえし
+          lesson_groups:
+            csf_warmup:
+              display_name: ウォームアップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            csf_functions:
+              display_name: 関数(かんすう) 
+            csf_variables:
+              display_name: 変数（へんすう）
+            csf_for_loops:
+              display_name: ループ用
+        pre-express-2021:
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          description_short: '低学年向けのコンピュータ サイエンス入門です。幼児向けと小学1年生向けコースの良い所をとりだしました。'
+          description_audience: '年齢: 4～8才'
+          lessons:
+            Learn to Drag and Drop:
+              key: ドラッグ＆ドロップ
+              name: ドラッグ＆ドロップ
+            Loops with Laurel:
+              key: くりかえし あつめる
+              name: くりかえし あつめる
+            Ocean Scene with Loops:
+              key: アーティストくりかえし
+              name: アーティストくりかえし
+            Drawing Gardens with Loops:
+              key: アーティストくりかえし
+              name: アーティストくりかえし
+            On the Move with Events:
+              key: プレイ ラボのイベント
+              name: プレイ ラボのイベント
+            A Royal Battle with Events:
+              key: プレイ ラボのイベント
+              name: プレイ ラボのイベント
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: エンベロープ変数
+          lesson_groups:
+            ramp_up:
+              display_name: はじめに
+            lessonGroup-3:
+              display_name: 変数（へんすう）

@@ -5779,5 +5779,116 @@ ru-RU:
           * [Алюминиевые лодки](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       outbreak_story:
         content1: описание здесь
+        markdown: "# Эпидемия: Создай свой собственный симулятор\n\n## Добро пожаловать
+          в Город Монстров!\nГород Монстров всегда был благополучным и здоровым местом.
+          Монстры из Города Монстров любили гулять и заходить в гости к друзьям. \n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nОднажды один из монстров почувствовал себя неважно.
+          Он заразился **вирусом**! Вирус - это крошечный микроб, от которого можно
+          заболеть. Остальные монстры не особо волновались. Они продолжали навещать
+          своих друзей.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nВскоре после этого стало плохо еще двум монстрам.
+          Все тот же вирус! Судя по всему, они подхватили его у своего друга.\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nВирус медленно распространялся на других монстров,
+          находившихся поблизости. Здоровые монстры начали беспокоиться, что все они
+          заболеют. Больные монстры забеспокоились, что передадут вирус всем остальным.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Остановка распространения\nК счастью,
+          изучив вирус, соседи Города Монстров сделали важное открытие. Они поняли,
+          что с меньшей вероятностью будут распространять вирус, если будут носить
+          маски. С масками на лице больные монстры с меньшей вероятностью передавали
+          бы вирус здоровым.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Что дальше?\n\nСегодня вам предстоит написать код для создания и запуска
+          собственного **симулятора** вирусной эпидемии в Городе Монстров. Симуляция
+          - это компьютерная модель процесса или системы. Научитесь кодировать и делать
+          прогнозы о том, что произойдет с соседями Города Монстров.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Как быстро будет распространяться
+          вирус?*\n\n* *Все ли заболеют?*\n\n* *Чем могут помочь маски?*\n\n\nЗакончив,
+          поделитесь вашим симулятором с другими. Расскажите нам о том, что, по вашему
+          мнению, мы можем сделать, чтобы помочь другим сохранить здоровье, когда
+          в город придет вирус.\n"
       outbreak_story2:
         content1: описание здесь
+        markdown: |
+          # Эпидемия: думать как ученый
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Симуляторы - отличный способ изучать вещи, которые сложно наблюдать в реальном мире. Они помогают ученым решать проблемы и безопасно и эффективно проверять новые идеи. Ваша симуляция - это способ показать, как может выглядеть вирусная эпидемия в Городе Монстров.
+
+          ## Возвращайтесь и повторяйте снова!
+          Даже когда вы пишете код сами, невозможно точно знать, что произойдет, когда вы нажмете кнопку запуска. Монстры передвигаются случайным образом, поэтому вы не знаете, будет ли вирус распространяться быстро или медленно. Всякий раз, когда вы меняете ваш код, обязательно запускайте симуляцию более одного раза. Дважды одно и то же событие не произойдет!
+
+          ## Сбор данных
+          Попробуйте записывать свои наблюдения в процессе моделирования. Вы можете подсчитать количество заболевших монстров или использовать таймер, чтобы увидеть, как быстро происходят события. Например, сколько времени обычно требуется на то, чтобы все монстры заболели, если ни у одного из них нет масок?
+
+          ## Делаем прогнозы
+          Если вы понимаете вашу модель, вы можете использовать ее для прогнозирования. Вы даже можете изменить способ поведения симулятора и угадать, что при этом изменится. Например:
+          * Что было бы, если бы монстров было вдвое больше?
+          * Что произойдет, если монстры будут двигаться вдвое медленнее?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Похож ли Город Монстров на реальный мир?
+          У любой модели есть свой предел реалистичности.
+          * Что общего между вашим симулятором и вирусными эпидемиями в реальном мире?
+          * Какие у них отличия?
+          Закончив это задание, обсудите эти вопросы с учителями или членами вашей семьи!
+
+          ## Что еще можно смоделировать?
+          Вы уже создали работающую модель эпидемии в Городе Монстров. Чего еще не может сделать или продемонстрировать ваш симулятор? Нажмите «Продолжить», чтобы научиться моделировать еще больше вещей, например:
+          * Увеличить количество монстров в симуляторе
+          * Помочь монстрам оправиться от вируса
+          * Вероятность, иммунитет, вакцины и многое другое!
+
+          Вы также можете поделиться вашим симулятором с другими или поделиться сообщением о том, что, по вашему мнению, мы можем сделать, чтобы помочь другим сохранить здоровье, когда в город придет вирус.
+      outbreak_freeplay_choice:
+        display_name: Свободная игра
+        description: Вы завершили обучение! Продолжайте вносить изменения и улучшения
+          в ваш проект. Вы можете продолжить работу с теми же блоками или попробовать
+          расширенный набор инструментов.
