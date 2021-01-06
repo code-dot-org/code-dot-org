@@ -14,8 +14,15 @@
     .info
       Open computing jobs
 -unless data[:growth_vs_average_f] < 0.0
-  %p.fact.subfact
+  %p.fact.subfact{style: "margin-bottom: 0px;"}
     (<b>#{data[:growth_vs_average_f]}x</b> the state average demand rate)
+%p.fact.subfact
+  with an average salary of <b>$#{format_integer_with_commas(data[:avg_sal_computing_i])}</b>
+%p.fact
+  %strong.figure
+    =number_to_percentage(data[:count_schools_teach_cs_i], precision: 0)
+  .info
+    of public high schools teach a CS class
 %p.fact
   -unless data[:cs_graduates] == 0
     %strong.figure
