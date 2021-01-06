@@ -331,6 +331,7 @@ module ProjectsList
           # For privacy reasons, include only the first initial of the student's name.
           studentName: UserHelpers.initial(project_and_user[:name]),
           studentAgeRange: UserHelpers.age_range_from_birthday(project_and_user[:birthday]),
+          isFeatured: false
         }
       ).with_indifferent_access
     end
