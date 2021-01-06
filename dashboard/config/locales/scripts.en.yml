@@ -18445,10 +18445,10 @@ en:
               name: Intro to Problem Solving - Paper Tower (Alternate Lesson 1)
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               key: Exploring Problem Solving - Animals Theme (Alternate Lesson 3)
-              name: Exploring Problem Solving - Animals Theme (Alternate Lesson 3)
+              name: Exploring Problem Solving   Animals Theme (Alternate Lesson 3)
             Exploring Problem Solving - Games Theme (Alternate Lesson 3):
               key: Exploring Problem Solving - Games Theme (Alternate Lesson 3)
-              name: Exploring Problem Solving - Games Theme (Alternate Lesson 3)
+              name: Exploring Problem Solving   Games Theme (Alternate Lesson 3)
           lesson_groups:
             cspSurvey:
               display_name: Survey
@@ -19996,7 +19996,7 @@ en:
           description_short: Learn about events, variables, and conditionals, and create your own animations, games, and simulations.
           description: "Learn to use events by programming in Sprite Lab. Investigate different design techniques and discuss societal impacts of computing. \n\n**Pilot 2021**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June, 2021 only."
         csd4-preview-2021:
-          title: CSD Unit 4 - The Design Process ('20-'21)
+          title: CSD Unit 4 - The Design Process ('21-'22 Beta Preview)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
           description_short: "  Learn how to design a program that meets the needs of your users."
           description_audience: ''
