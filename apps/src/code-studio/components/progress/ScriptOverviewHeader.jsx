@@ -82,6 +82,7 @@ class ScriptOverviewHeader extends Component {
     scriptName: PropTypes.string.isRequired,
     scriptTitle: PropTypes.string.isRequired,
     scriptDescription: PropTypes.string.isRequired,
+    scriptStudentDescription: PropTypes.string.isRequired,
     betaTitle: PropTypes.string,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
@@ -124,6 +125,7 @@ class ScriptOverviewHeader extends Component {
       scriptName,
       scriptTitle,
       scriptDescription,
+      scriptStudentDescription,
       betaTitle,
       viewAs,
       isSignedIn,
@@ -228,11 +230,20 @@ class ScriptOverviewHeader extends Component {
                 />
               )}
             </div>
-            <SafeMarkdown
-              style={styles.description}
-              openExternalLinksInNewTab={true}
-              markdown={scriptDescription}
-            />
+            {viewAs === ViewType.Teacher && (
+              <SafeMarkdown
+                style={styles.description}
+                openExternalLinksInNewTab={true}
+                markdown={scriptDescription}
+              />
+            )}
+            {viewAs === ViewType.Student && (
+              <SafeMarkdown
+                style={styles.description}
+                openExternalLinksInNewTab={true}
+                markdown={scriptStudentDescription}
+              />
+            )}
           </div>
           <ProtectedStatefulDiv ref={element => (this.protected = element)} />
         </div>
@@ -250,6 +261,7 @@ export default connect(state => ({
   scriptName: state.progress.scriptName,
   scriptTitle: state.progress.scriptTitle,
   scriptDescription: state.progress.scriptDescription,
+  scriptStudentDescription: state.progress.scriptStudentDescription,
   betaTitle: state.progress.betaTitle,
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
