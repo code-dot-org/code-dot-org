@@ -56,6 +56,7 @@ class AddLevelFilters extends Component {
         <label style={styles.label}>
           By Name:
           <input
+            className="uitest-add-level-name-input"
             style={styles.input}
             onChange={this.props.handleChangeLevelName}
             value={this.props.levelName}

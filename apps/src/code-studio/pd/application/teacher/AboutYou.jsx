@@ -79,11 +79,11 @@ export default class AboutYou extends LabeledFormComponent {
         <Modal.Body>
           At this time, we are only able to provide this program to teachers in
           the United States. Please visit our website for additional Code.org{' '}
-          <a href={PD_RESOURCES_URL} target="_blank">
+          <a href={PD_RESOURCES_URL} target="_blank" rel="noopener noreferrer">
             professional development resources
           </a>{' '}
           and opportunities to connect with other{' '}
-          <a href={CS_TEACHERS_URL} target="_blank">
+          <a href={CS_TEACHERS_URL} target="_blank" rel="noopener noreferrer">
             computer science teachers
           </a>
           .
@@ -137,11 +137,11 @@ export default class AboutYou extends LabeledFormComponent {
         <p>
           If you need more information about the program before you apply,
           please visit the{' '}
-          <a href={CSD_URL} target="_blank">
+          <a href={CSD_URL} target="_blank" rel="noopener noreferrer">
             CS Discoveries
           </a>{' '}
           and{' '}
-          <a href={CSP_URL} target="_blank">
+          <a href={CSP_URL} target="_blank" rel="noopener noreferrer">
             CS Principles
           </a>{' '}
           landing pages. For additional questions regarding the program or

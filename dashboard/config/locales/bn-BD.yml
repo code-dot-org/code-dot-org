@@ -401,6 +401,4 @@ bn:
         opt_in_no: না
   cookie_banner:
     accept: আমি একমত
-  gdpr_dialog:
-    true: '"হ্যাঁ"'
   copy: অনুলিপি

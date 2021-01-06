@@ -1,10 +1,11 @@
 # We need "press keys" to type into the React form's fields, but that doesn't work on IE.
 @no_ie
 @no_mobile
+
 Feature: Using the Lesson Edit Page
   Scenario: Save changes using the lesson edit page
     Given I create a levelbuilder named "Levi"
-    And I create a temp script and lesson
+    And I create a temp migrated script and lesson
     And I view the temp lesson edit page
 
     # Match the text 'Editing Lesson "Temp Lesson"'
@@ -31,7 +32,7 @@ Feature: Using the Lesson Edit Page
 
   Scenario: Add a level using the lesson edit page
     Given I create a levelbuilder named "Levi"
-    And I create a temp script and lesson
+    And I create a temp migrated script and lesson
     And I view the temp lesson edit page
     And I wait until element ".uitest-activity-card" is visible
     And element ".uitest-open-add-level-button" is visible
@@ -45,8 +46,9 @@ Feature: Using the Lesson Edit Page
     And I wait until element "#add-level-type" is visible
     # If the next step fails, we should consider replacing "Artist" with any other
     # level type which does not appear in the initial view, here and below.
-    And element "td" does not contain text "Artist"
+    # And element "td" does not contain text "Artist"
     And I select the "Artist" option in dropdown "add-level-type"
+    And I press keys "Standalone_Artist_1" for element ".uitest-add-level-name-input"
     And element ".fa-search" is visible
     And I press ".fa-search" using jQuery
     # We will know the search has completed after the following step, because we
@@ -60,9 +62,33 @@ Feature: Using the Lesson Edit Page
     # Verify lesson editor updated
     Then element ".uitest-bubble" contains text "1"
     And element ".uitest-bubble" contains text "2"
+    And element ".uitest-level-token-name" contains text "Standalone_Artist_1"
 
     # Verify lesson overview updated
     When I click "button[type='submit']" to load a new page
     And I wait until element "#show-container" is visible
     And I wait until element ".uitest-bubble" contains text "1"
     Then element ".uitest-bubble" contains text "2"
+
+  @no_firefox
+  Scenario: Update script level properties
+    Given I create a levelbuilder named "Levi"
+    And I create a temp migrated script and lesson
+    And I view the temp lesson edit page
+    And I wait until element ".uitest-activity-card" is visible
+    And element ".uitest-level-token-name" is visible
+    And I press ".uitest-level-token-name" using jQuery
+    And I wait until element ".level-token-checkboxes" is visible
+    And element ".level-token-checkboxes input[type=checkbox]:nth(1)" is not checked
+    And I press ".level-token-checkboxes input[type=checkbox]:nth(1)" using jQuery
+    And element ".level-token-checkboxes input[type=checkbox]:nth(1)" is checked
+
+    When I click "button[type='submit']" to load a new page
+    And I wait until element "#show-container" is visible
+    Then element ".uitest-ProgressPill .fa-check" is visible
+
+    When I view the temp lesson edit page
+    And I wait until element ".uitest-activity-card" is visible
+    And I press ".uitest-level-token-name" using jQuery
+    And I wait until element ".level-token-checkboxes" is visible
+    Then element ".level-token-checkboxes input[type=checkbox]:nth(1)" is checked

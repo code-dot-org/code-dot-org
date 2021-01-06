@@ -2316,7 +2316,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 小藝術家會畫出一個正方形。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - text: 小藝術家將畫出一個三邊相等的三角形。
@@ -2331,7 +2331,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 小藝術家會畫出一個正方形。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
         - text: 小藝術家將畫出一個三邊相等的三角形。
@@ -2346,7 +2346,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 小藝術家會畫出一個正方形。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - text: 小藝術家將畫出一個三邊相等的三角形。
@@ -2361,7 +2361,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 小藝術家會畫出一個正方形。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -2374,7 +2374,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，農夫將收集多少個南瓜？
+        - text: 仔細查看下面的程式碼。點擊「運行」後，農夫將收集多少個南瓜？
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
@@ -2387,7 +2387,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，農夫將收集多少個南瓜？
+        - text: 仔細查看下面的程式碼。點擊「運行」後，農夫將收集多少個南瓜？
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
@@ -2400,7 +2400,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，農夫將收集多少個南瓜？
+        - text: 仔細查看下面的程式碼。點擊「運行」後，農夫將收集多少個南瓜？
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
@@ -2413,46 +2413,46 @@ zh-TW:
         - text: 我不知道。
           feedback: 農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，農夫將收集多少個南瓜？
+        - text: 仔細查看下面的程式碼。點擊「運行」後，農夫將收集多少個南瓜？
       courseC_multi_maze_debugging8_predict1:
         answers:
-        - text: 這條程式不會失敗。Scrat 將獲得橡樹果實。
-          feedback: 不正確。Scrat 在最後一次轉彎的時候走錯了路。
-        - text: Scrat 在最後一次轉彎時將走錯路。
+        - text: 這個程式不會失敗。鼠奎特將獲得橡樹果實。
+          feedback: 不正確。鼠奎特在最後一次轉彎的時候走錯了路。
+        - text: 鼠奎特在最後一次轉彎時將走錯路。
           correct: true
           feedback: 正確！
-        - text: Scrat 邁出的步數太少，最終不能得到橡樹果實。
-          feedback: 不正確。Scrat 轉錯方向後，還差了一步。
+        - text: 鼠奎特邁出的步數太少，最終不能得到橡樹果實。
+          feedback: 不正確。鼠奎特轉錯方向後，還差了一步。
         - text: 我不知道。
-          feedback: 第一個錯誤是 Scrat 在最後一次轉彎的時候走錯了路。
+          feedback: 第一個錯誤是鼠奎特在最後一次轉彎的時候走錯了路。
         questions:
-        - text: 仔細查看下面的代碼。導致該程式失敗的第一個錯誤是什麼？
+        - text: 仔細查看下面的程式碼。導致該程式失敗的第一個錯誤是什麼？
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
-        - text: 這條程式不會失敗。Scrat 將獲得橡樹果實。
-          feedback: 不正確。Scrat 在最後一次轉彎的時候走錯了路。
-        - text: Scrat 在最後一次轉彎時將走錯路。
+        - text: 這個程式不會失敗。鼠奎特將獲得橡樹果實。
+          feedback: 不正確。鼠奎特在最後一次轉彎的時候走錯了路。
+        - text: 鼠奎特在最後一次轉彎時將走錯路。
           correct: true
           feedback: 正確！
-        - text: Scrat 邁出的步數太少，最終不能得到橡樹果實。
-          feedback: 不正確。Scrat 轉錯方向後，還差了一步。
+        - text: 鼠奎特邁出的步數太少，最終不能得到橡樹果實。
+          feedback: 不正確。鼠奎特轉錯方向後，還差了一步。
         - text: 我不知道。
-          feedback: 第一個錯誤是 Scrat 在最後一次轉彎的時候走錯了路。
+          feedback: 第一個錯誤是鼠奎特在最後一次轉彎的時候走錯了路。
         questions:
-        - text: 仔細查看下面的代碼。導致該程式失敗的第一個錯誤是什麼？
+        - text: 仔細查看下面的程式碼。導致該程式失敗的第一個錯誤是什麼？
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
-        - text: 這條程式不會失敗。Scrat 將獲得橡樹果實。
-          feedback: 不正確。Scrat 在最後一次轉彎的時候走錯了路。
-        - text: Scrat 在最後一次轉彎時將走錯路。
+        - text: 這個程式不會失敗。鼠奎特將獲得橡樹果實。
+          feedback: 不正確。鼠奎特在最後一次轉彎的時候走錯了路。
+        - text: 鼠奎特在最後一次轉彎時將走錯路。
           correct: true
           feedback: 正確！
-        - text: Scrat 邁出的步數太少，最終不能得到橡樹果實。
-          feedback: 不正確。Scrat 轉錯方向後，還差了一步。
+        - text: 鼠奎特邁出的步數太少，最終不能得到橡樹果實。
+          feedback: 不正確。鼠奎特轉錯方向後，還差了一步。
         - text: 我不知道。
-          feedback: 第一個錯誤是 Scrat 在最後一次轉彎的時候走錯了路。
+          feedback: 第一個錯誤是鼠奎特在最後一次轉彎的時候走錯了路。
         questions:
-        - text: 仔細查看下面的代碼。導致該程式失敗的第一個錯誤是什麼？
+        - text: 仔細查看下面的程式碼。導致該程式失敗的第一個錯誤是什麼？
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - text: 小松鼠即將拿到橡果.程式碼中沒有錯誤.
@@ -2470,55 +2470,55 @@ zh-TW:
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
-        - text: 這隻鳥會撞到 TNT。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+        - text: 這隻鳥會撞到炸藥。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 我不知道。
-          feedback: 此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 這個程式碼讓小鳥抓到了豬豬。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
-        - text: 這隻鳥會撞到 TNT。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+        - text: 這隻鳥會撞到炸藥。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 我不知道。
-          feedback: 此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 這個程式碼讓小鳥抓到了豬豬。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
-        - text: 這隻鳥會撞到 TNT。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+        - text: 這隻鳥會撞到炸藥。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 我不知道。
-          feedback: 此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 這個程式碼讓小鳥抓到了豬豬。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
-        - text: 這隻鳥會撞到 TNT。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+        - text: 這隻鳥會撞到炸藥。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 我不知道。
-          feedback: 此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 這個程式碼讓小鳥抓到了豬豬。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 不會移動。
@@ -2583,7 +2583,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_starWars_predict2_2018:
         answers:
         - text: BB-8 在第一次循環會跑太遠。
@@ -2596,7 +2596,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - text: BB-8 在第一次循環會跑太遠。
@@ -2609,7 +2609,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - text: BB-8 在第一次循環會跑太遠。
@@ -2622,7 +2622,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseD_EOC_2020:
         display_name: 課程結束專案
         description: 你已經到達課程D的最後一課!選擇一個要創建的項目
@@ -2638,7 +2638,7 @@ zh-TW:
           correct: true
           feedback: 正確！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後將創建什麼圖像？
+        - text: 仔細查看下面的程式。點擊「運行」按鈕後將會創造出什麼樣的圖案？
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
@@ -2651,7 +2651,7 @@ zh-TW:
           correct: true
           feedback: 正確！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後將創建什麼圖像？
+        - text: 仔細查看下面的程式。點擊「運行」按鈕後將會創造出什麼樣的圖案？
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
@@ -2664,7 +2664,7 @@ zh-TW:
           correct: true
           feedback: 正確！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後將創建什麼圖像？
+        - text: 仔細查看下面的程式。點擊「運行」按鈕後將會創造出什麼樣的圖案？
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
@@ -2677,18 +2677,18 @@ zh-TW:
           correct: true
           feedback: 正確！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後將創建什麼圖像？
+        - text: 仔細查看下面的程式。點擊「運行」按鈕後將會創造出什麼樣的圖案？
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
           correct: true
           feedback: 正確！
         - text: B
-          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         - text: C
-          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         - text: 我不知道。
-          feedback: 內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         markdown: |+
           <table>
           <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
@@ -2697,18 +2697,18 @@ zh-TW:
           <br/><br/>
 
         questions:
-        - text: 請仔細閱讀下面的代碼。當你點擊「運行」時，此程式將繪製出什麼圖形？
+        - text: 請仔細閱讀下方的程式。當你點擊「運行」時，這支程式將會畫出什麼圖形呢？
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
           correct: true
           feedback: 正確！
         - text: B
-          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         - text: C
-          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         - text: 我不知道。
-          feedback: 內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         markdown: |+
           <table>
           <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
@@ -2717,18 +2717,18 @@ zh-TW:
           <br/><br/>
 
         questions:
-        - text: 請仔細閱讀下面的代碼。當你點擊「運行」時，此程式將繪製出什麼圖形？
+        - text: 請仔細閱讀下方的程式。當你點擊「運行」時，這支程式將會畫出什麼圖形呢？
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
           correct: true
           feedback: 正確！
         - text: B
-          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         - text: C
-          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         - text: 我不知道。
-          feedback: 內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         markdown: |+
           <table>
           <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
@@ -2737,18 +2737,18 @@ zh-TW:
           <br/><br/>
 
         questions:
-        - text: 請仔細閱讀下面的代碼。當你點擊「運行」時，此程式將繪製出什麼圖形？
+        - text: 請仔細閱讀下方的程式。當你點擊「運行」時，這支程式將會畫出什麼圖形呢？
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
           correct: true
           feedback: 正確！
         - text: B
-          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         - text: C
-          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         - text: 我不知道。
-          feedback: 內層迴圈畫出了一個五邊形，外層迴圈將其重複四次。
+          feedback: 內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
         markdown: |+
           <table>
           <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
@@ -2757,72 +2757,72 @@ zh-TW:
           <br/><br/>
 
         questions:
-        - text: 請仔細閱讀下面的代碼。當你點擊「運行」時，此程式將繪製出什麼圖形？
+        - text: 請仔細閱讀下方的程式。當你點擊「運行」時，這支程式將會畫出什麼圖形呢？
       courseD_multi_bee_conditionals1_predict1:
         answers:
-        - text: 無論如何，蜜蜂都會移到雲中並嘗試獲取花蜜。
+        - text: 無論如何，蜜蜂都需要移動到雲朵之中，並且嘗試獲取花蜜。
           feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
-        - text: 蜜蜂會移動到雲中，但只有在下面有花的情況下，才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵之中，但只有在雲朵下方有花的情況，才會嘗試獲取花蜜。
           correct: true
           feedback: 正確！
-        - text: 蜜蜂會移動到雲上，然後不管怎樣都什麼也不做。
-          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵上方，然後不管怎樣什麼也都不會做。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。
         - text: 我不知道。
-          feedback: "`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。"
+          feedback: "`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。"
         questions:
-        - text: 雲朵遮擋了視線。雲朵下可能有朵花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下面的代碼。你認為點擊「運行」後會發生什麼？
+        - text: 雲朵遮擋了視線。雲朵下可能會有花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下方的程式。你認為點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
-        - text: 無論如何，蜜蜂都會移到雲中並嘗試獲取花蜜。
+        - text: 無論如何，蜜蜂都需要移動到雲朵之中，並且嘗試獲取花蜜。
           feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
-        - text: 蜜蜂會移動到雲中，但只有在下面有花的情況下，才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵之中，但只有在雲朵下方有花的情況，才會嘗試獲取花蜜。
           correct: true
           feedback: 正確！
-        - text: 蜜蜂會移動到雲上，然後不管怎樣都什麼也不做。
-          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵上方，然後不管怎樣什麼也都不會做。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。
         - text: 我不知道。
-          feedback: "`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。"
+          feedback: "`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。"
         questions:
-        - text: 雲朵遮擋了視線。雲朵下可能有朵花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下面的代碼。你認為點擊「運行」後會發生什麼？
+        - text: 雲朵遮擋了視線。雲朵下可能會有花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下方的程式。你認為點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
-        - text: 無論如何，蜜蜂都會移到雲中並嘗試獲取花蜜。
+        - text: 無論如何，蜜蜂都需要移動到雲朵之中，並且嘗試獲取花蜜。
           feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
-        - text: 蜜蜂會移動到雲中，但只有在下面有花的情況下，才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵之中，但只有在雲朵下方有花的情況，才會嘗試獲取花蜜。
           correct: true
           feedback: 正確！
-        - text: 蜜蜂會移動到雲上，然後不管怎樣都什麼也不做。
-          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵上方，然後不管怎樣什麼也都不會做。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。
         - text: 我不知道。
-          feedback: "`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。"
+          feedback: "`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。"
         questions:
-        - text: 雲朵遮擋了視線。雲朵下可能有朵花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下面的代碼。你認為點擊「運行」後會發生什麼？
+        - text: 雲朵遮擋了視線。雲朵下可能會有花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下方的程式。你認為點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
-        - text: 無論如何，蜜蜂都會移到雲中並嘗試獲取花蜜。
+        - text: 無論如何，蜜蜂都需要移動到雲朵之中，並且嘗試獲取花蜜。
           feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
-        - text: 蜜蜂會移動到雲中，但只有在下面有花的情況下，才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵之中，但只有在雲朵下方有花的情況，才會嘗試獲取花蜜。
           correct: true
           feedback: 正確！
-        - text: 蜜蜂會移動到雲上，然後不管怎樣都什麼也不做。
-          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵上方，然後不管怎樣什麼也都不會做。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。
         - text: 我不知道。
-          feedback: "`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。"
+          feedback: "`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。"
         questions:
-        - text: 雲朵遮擋了視線。雲朵下可能有朵花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下面的代碼。你認為點擊「運行」後會發生什麼？
+        - text: 雲朵遮擋了視線。雲朵下可能會有花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下方的程式。你認為點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
-        - text: 無論如何，蜜蜂都會移到雲中並嘗試獲取花蜜。
+        - text: 無論如何，蜜蜂都需要移動到雲朵之中，並且嘗試獲取花蜜。
           feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
-        - text: 蜜蜂會移動到雲中，但只有在下面有花的情況下，才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵之中，但只有在雲朵下方有花的情況，才會嘗試獲取花蜜。
           correct: true
           feedback: 正確！
-        - text: 蜜蜂會移動到雲上，然後不管怎樣都什麼也不做。
-          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵上方，然後不管怎樣什麼也都不會做。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。
         - text: 我不知道。
-          feedback: "`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。"
+          feedback: "`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。"
         questions:
-        - text: 雲朵遮擋了視線。雲朵下可能有朵花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下面的代碼。你認為點擊「運行」後會發生什麼？
+        - text: 雲朵遮擋了視線。雲朵下可能會有花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下方的程式。你認為點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: 蜜蜂在每朵花上獲取花蜜，在每個蜂窩上釀造蜂蜜。
@@ -2831,11 +2831,11 @@ zh-TW:
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取花蜜。
           feedback: 不正確。`如果在花上`積木可以使蜜蜂在每朵花上取得花蜜，在每個蜂窩上釀造蜂蜜。
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取蜂蜜。
-          feedback: 不正確。不正確。`如果在花上`積木可以使蜜蜂在每朵花上取得花蜜，在每個蜂窩上釀造蜂蜜。
+          feedback: 不正確。`如果在花朵上`積木可以使蜜蜂在每朵花上取得花蜜，在每個蜂窩上釀造蜂蜜。
         - text: 我不知道。
           feedback: "`如果在花上`積木可以使蜜蜂在每朵花上取得花蜜，在每個蜂窩上釀造蜂蜜。"
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，會有什麼結果？請記住：每朵雲後面只會有*一*個蜂窩或*一*朵花。
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後，會有什麼結果呢？請記住：每朵雲的後面只會有*一*個蜂窩或*一*朵花。
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - text: 蜜蜂在每朵花上獲取花蜜，在每個蜂窩上釀造蜂蜜。
@@ -2844,11 +2844,11 @@ zh-TW:
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取花蜜。
           feedback: 不正確。`如果在花上`積木可以使蜜蜂在每朵花上取得花蜜，在每個蜂窩上釀造蜂蜜。
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取蜂蜜。
-          feedback: 不正確。不正確。`如果在花上`積木可以使蜜蜂在每朵花上取得花蜜，在每個蜂窩上釀造蜂蜜。
+          feedback: 不正確。`如果在花朵上`積木可以使蜜蜂在每朵花上取得花蜜，在每個蜂窩上釀造蜂蜜。
         - text: 我不知道。
           feedback: "`如果在花上`積木可以使蜜蜂在每朵花上取得花蜜，在每個蜂窩上釀造蜂蜜。"
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，會有什麼結果？請記住：每朵雲後面只會有*一*個蜂窩或*一*朵花。
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後，會有什麼結果呢？請記住：每朵雲的後面只會有*一*個蜂窩或*一*朵花。
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
@@ -2873,9 +2873,9 @@ zh-TW:
 '
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - text: 蜜蜂將向前移動並僅收集一次花蜜。
+        - text: 蜜蜂將向前移動並收集一次花蜜。
           feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
-        - text: 蜜蜂將只得到 2 個單位的花蜜。
+        - text: 蜜蜂將只得到 2 個花蜜。
           feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
         - text: 蜜蜂會獲得所有的花蜜。
           correct: true
@@ -2883,12 +2883,12 @@ zh-TW:
         - text: 我不知道。
           feedback: 蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
         questions:
-        - text: 仔細查看下面的巢狀迴圈。點擊「運行」會發生什麼？
+        - text: 仔細觀察下方的巢狀迴圈。並且點擊「運行」看看會發生什麼？
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - text: 蜜蜂將向前移動並僅收集一次花蜜。
+        - text: 蜜蜂將向前移動並收集一次花蜜。
           feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
-        - text: 蜜蜂將只得到 2 個單位的花蜜。
+        - text: 蜜蜂將只得到 2 個花蜜。
           feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
         - text: 蜜蜂會獲得所有的花蜜。
           correct: true
@@ -2896,12 +2896,12 @@ zh-TW:
         - text: 我不知道。
           feedback: 蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
         questions:
-        - text: 仔細查看下面的巢狀迴圈。點擊「運行」會發生什麼？
+        - text: 仔細觀察下方的巢狀迴圈。並且點擊「運行」看看會發生什麼？
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - text: 蜜蜂將向前移動並僅收集一次花蜜。
+        - text: 蜜蜂將向前移動並收集一次花蜜。
           feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
-        - text: 蜜蜂將只得到 2 個單位的花蜜。
+        - text: 蜜蜂將只得到 2 個花蜜。
           feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
         - text: 蜜蜂會獲得所有的花蜜。
           correct: true
@@ -2909,12 +2909,12 @@ zh-TW:
         - text: 我不知道。
           feedback: 蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
         questions:
-        - text: 仔細查看下面的巢狀迴圈。點擊「運行」會發生什麼？
+        - text: 仔細觀察下方的巢狀迴圈。並且點擊「運行」看看會發生什麼？
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
-        - text: 蜜蜂將向前移動並僅收集一次花蜜。
+        - text: 蜜蜂將向前移動並收集一次花蜜。
           feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
-        - text: 蜜蜂將只得到 2 個單位的花蜜。
+        - text: 蜜蜂將只得到 2 個花蜜。
           feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
         - text: 蜜蜂會獲得所有的花蜜。
           correct: true
@@ -2922,7 +2922,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
         questions:
-        - text: 仔細查看下面的巢狀迴圈。點擊「運行」會發生什麼？
+        - text: 仔細觀察下方的巢狀迴圈。並且點擊「運行」看看會發生什麼？
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
@@ -2938,7 +2938,7 @@ zh-TW:
           feedback: 蜜蜂在向前移動迴圈的過程中收集到 2 個花蜜，然後在向下迴圈的過程中收集到 2 個花蜜。這個過程又處於另一個發生兩次的迴圈中。4
             乘以 2 是 8！
         questions:
-        - text: 仔細查看下面的代碼。當你點擊「運行」時，蜜蜂會釀造多少蜂蜜？
+        - text: 仔細觀察下方的程式積木。當你點擊「運行」按鈕時，你覺得蜜蜂會釀造多少蜂蜜呢？
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
@@ -2954,7 +2954,7 @@ zh-TW:
           feedback: 蜜蜂在向前移動迴圈的過程中收集到 2 個花蜜，然後在向下迴圈的過程中收集到 2 個花蜜。這個過程又處於另一個發生兩次的迴圈中。4
             乘以 2 是 8！
         questions:
-        - text: 仔細查看下面的代碼。當你點擊「運行」時，蜜蜂會釀造多少蜂蜜？
+        - text: 仔細觀察下方的程式積木。當你點擊「運行」按鈕時，你覺得蜜蜂會釀造多少蜂蜜呢？
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
@@ -2970,7 +2970,7 @@ zh-TW:
           feedback: 蜜蜂在向前移動迴圈的過程中收集到 2 個花蜜，然後在向下迴圈的過程中收集到 2 個花蜜。這個過程又處於另一個發生兩次的迴圈中。4
             乘以 2 是 8！
         questions:
-        - text: 仔細查看下面的代碼。當你點擊「運行」時，蜜蜂會釀造多少蜂蜜？
+        - text: 仔細觀察下方的程式積木。當你點擊「運行」按鈕時，你覺得蜜蜂會釀造多少蜂蜜呢？
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
@@ -2986,36 +2986,36 @@ zh-TW:
           feedback: 蜜蜂在向前移動迴圈的過程中收集到 2 個花蜜，然後在向下迴圈的過程中收集到 2 個花蜜。這個過程又處於另一個發生兩次的迴圈中。4
             乘以 2 是 8！
         questions:
-        - text: 仔細查看下面的代碼。當你點擊「運行」時，蜜蜂會釀造多少蜂蜜？
+        - text: 仔細觀察下方的程式積木。當你點擊「運行」按鈕時，你覺得蜜蜂會釀造多少蜂蜜呢？
       courseD_multi_collector_debugging10_predict1:
         answers:
         - text: Laurel 在繞著正方形走時會轉錯方向。
           feedback: 不正確。這在某種程度上是正確的，但是迴圈並沒有運行足夠長的時間來獲得所有的寶藏。
         - text: 迴圈運行的時間不夠長，不能使 Laurel 獲得所有寶藏。
-          feedback: 不正確。這在某種程度上是正確的，但是蜜蜂在沿著正方形走時轉錯了方向。
+          feedback: 不正確。這裡雖然有部分是正確的，但蜜蜂在沿著正方形移動時轉錯了方向。
         - text: Laurel 走錯了路，*而且*迴圈時間還不夠長，所以 Laurel 無法獲得所有寶藏。
           correct: true
           feedback: 正確！
         - text: 我不知道。
           feedback: Laurel 走錯了路，*而且*迴圈時間還不夠長，所以 Laurel 無法獲得所有寶藏。
         questions:
-        - text: 仔細查看下面的代碼。當你點擊「運行」時，Laurel 為什麼沒法收集所有寶藏？警告：這是一個難題，請務必在回答前閱讀所有選項！
+        - text: 仔細查看下方的程式。當你點擊「運行」按鈕時，Laurel 為什麼沒辦法收集所有寶石呢？警告：這是一個難題，請務必在回答前閱讀所有選項！
       courseD_multi_farmer_condLoops9_predict1:
         answers:
         - text: 收割機將收集所有農作物。
-          feedback: 不正確。這裡沒有用來收集南瓜的代碼。
-        - text: 收割機不會沿著她的路線收集任何農作物。
-          feedback: 不正確。該代碼將令收割機反復畫出階梯狀圖案，並收集她遇到的盡可能多的玉米或生菜。她不會收集南瓜。
-        - text: 收割機將收集除南瓜以外的所有農作物。
+          feedback: 不正確。這裡沒有用來收集南瓜的程式。
+        - text: 收割機不會沿著它的路線收集任何農作物。
+          feedback: 不正確。該程式將讓收割機反覆畫出階梯狀的圖案，並收集它盡可能遇到的玉米或生菜。而它還是不會收集南瓜。
+        - text: 收割機將收集除了南瓜以外的所有農作物。
           correct: true
           feedback: 正確！
         - text: 我不知道。
-          feedback: 該代碼將令收割機反復畫出階梯狀圖案，並收集她遇到的盡可能多的玉米或生菜。她不會收集南瓜。
+          feedback: 這個程式將會讓收割機反覆畫出階梯狀的圖案，並收集它盡可能遇到的玉米或生菜。而它還是不會收集南瓜。
         markdown: |
           "這個關卡中的新芽將是玉米或生菜。
           <br/>"
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: 收割機將收集所有農作物。
@@ -3041,7 +3041,7 @@ zh-TW:
           "這個關卡中的新芽將是玉米或生菜。
           <br/>"
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - text: 收割機將收集所有農作物。
@@ -3067,7 +3067,7 @@ zh-TW:
           "這個關卡中的新芽將是玉米或生菜。
           <br/>"
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
         - text: 收割機將收集所有農作物。
@@ -3093,78 +3093,78 @@ zh-TW:
           "這個關卡中的新芽將是玉米或生菜。
           <br/>"
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_farmer_ramp13:
         answers:
-        - text: 農夫將走到路徑盡頭，收穫南瓜。
+        - text: 農夫將走到路徑的盡頭，來獲得南瓜。
           feedback: 不正確。`收集南瓜`積木位於迴圈內部，因此農夫將嘗試在每個步驟收集南瓜而不是在最後才收集。
-        - text: 農夫將嘗試在每個正方形中收集南瓜，但卻永遠也到不了南瓜那裡。
+        - text: 農夫將嘗試在每個方格中收集南瓜，但卻永遠也到不了南瓜的位置。
           correct: true
           feedback: 正確！
-        - text: 農夫將走四個空格，然後嘗試收集一個南瓜。
+        - text: 農夫將走四步，然後嘗試收集一個南瓜。
           feedback: 不正確。`收集南瓜`積木位於迴圈內部，因此農夫將嘗試在每個步驟收集南瓜而不是在最後才收集。
         - text: 我不知道。
-          feedback: "`收集南瓜`積木位於迴圈內部，因此農夫將嘗試在每個步驟收集南瓜而不是在最後才收集。"
-        markdown: 這是一個新的關卡類型，它使用的積木跟你之前見過的類似。你可以預測運行以下代碼時會發生什麼情況嗎？
+          feedback: "`收集南瓜`積木位於迴圈裡面，因此農夫將嘗試在每個步驟都會收集南瓜，而不是走到最後才收集。"
+        markdown: 這是一個新的關卡類型，它使用的積木和你之前看過的類似。你覺得運行以下程式時會發生什麼事？
         questions:
         - text: " "
       courseD_multi_farmer_while10_predict2:
         answers:
-        - text: 什麼都沒有。此代碼運行後只剩下平地。
+        - text: 什麼都沒有。此程式運行後會只剩下平地。
           feedback: 錯誤，沒有移除土堆的程式積木。
-        - text: 此代碼運行後土堆完全不受影響。
+        - text: 此程式運行後土堆完全不受影響。
           correct: true
           feedback: 正確！
-        - text: 此代碼運行後完全不會碰到坑洞。
+        - text: 此程式運行後完全不會碰到坑洞。
           feedback: 錯誤，`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。
         - text: 我不知道。
           feedback: "`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。"
         questions:
-        - text: 看看下面的代碼。這個關卡結束時還會剩下什麼？
+        - text: 看看下方的程式。這個關卡結束時還會剩下什麼呢？
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - text: 什麼都沒有。此代碼運行後只剩下平地。
+        - text: 什麼都沒有。此程式運行後會只剩下平地。
           feedback: 錯誤，沒有移除土堆的程式積木。
-        - text: 此代碼運行後土堆完全不受影響。
+        - text: 此程式運行後土堆完全不受影響。
           correct: true
           feedback: 正確！
-        - text: 此代碼運行後完全不會碰到坑洞。
+        - text: 此程式運行後完全不會碰到坑洞。
           feedback: 錯誤，`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。
         - text: 我不知道。
           feedback: "`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。"
         questions:
-        - text: 看看下面的代碼。這個關卡結束時還會剩下什麼？
+        - text: 看看下方的程式。這個關卡結束時還會剩下什麼呢？
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - text: 什麼都沒有。此代碼運行後只剩下平地。
+        - text: 什麼都沒有。此程式運行後會只剩下平地。
           feedback: 錯誤，沒有移除土堆的程式積木。
-        - text: 此代碼運行後土堆完全不受影響。
+        - text: 此程式運行後土堆完全不受影響。
           correct: true
           feedback: 正確！
-        - text: 此代碼運行後完全不會碰到坑洞。
+        - text: 此程式運行後完全不會碰到坑洞。
           feedback: 錯誤，`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。
         - text: 我不知道。
           feedback: "`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。"
         questions:
-        - text: 看看下面的代碼。這個關卡結束時還會剩下什麼？
+        - text: 看看下方的程式。這個關卡結束時還會剩下什麼呢？
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
-        - text: 什麼都沒有。此代碼運行後只剩下平地。
+        - text: 什麼都沒有。此程式運行後會只剩下平地。
           feedback: 錯誤，沒有移除土堆的程式積木。
-        - text: 此代碼運行後土堆完全不受影響。
+        - text: 此程式運行後土堆完全不受影響。
           correct: true
           feedback: 正確！
-        - text: 此代碼運行後完全不會碰到坑洞。
+        - text: 此程式運行後完全不會碰到坑洞。
           feedback: 錯誤，`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。
         - text: 我不知道。
           feedback: "`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。"
         questions:
-        - text: 看看下面的代碼。這個關卡結束時還會剩下什麼？
+        - text: 看看下方的程式。這個關卡結束時還會剩下什麼呢？
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: 什麼都不會發生。
           feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
-        - text: 農夫永遠不會停止移除土堆。
+        - text: 農夫永遠都不會停止剷除土壤。
           feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
         - text: 只要有土堆，農夫就會移除它，直到它消失。
           correct: true
@@ -3172,12 +3172,12 @@ zh-TW:
         - text: 我不知道。
           feedback: 只要有土堆，農夫就會移除它，直到它消失。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - text: 什麼都不會發生。
           feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
-        - text: 農夫永遠不會停止移除土堆。
+        - text: 農夫永遠都不會停止剷除土壤。
           feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
         - text: 只要有土堆，農夫就會移除它，直到它消失。
           correct: true
@@ -3185,12 +3185,12 @@ zh-TW:
         - text: 我不知道。
           feedback: 只要有土堆，農夫就會移除它，直到它消失。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - text: 什麼都不會發生。
           feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
-        - text: 農夫永遠不會停止移除土堆。
+        - text: 農夫永遠都不會停止剷除土壤。
           feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
         - text: 只要有土堆，農夫就會移除它，直到它消失。
           correct: true
@@ -3198,12 +3198,12 @@ zh-TW:
         - text: 我不知道。
           feedback: 只要有土堆，農夫就會移除它，直到它消失。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - text: 什麼都不會發生。
           feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
-        - text: 農夫永遠不會停止移除土堆。
+        - text: 農夫永遠都不會停止剷除土壤。
           feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
         - text: 只要有土堆，農夫就會移除它，直到它消失。
           correct: true
@@ -3211,20 +3211,20 @@ zh-TW:
         - text: 我不知道。
           feedback: 只要有土堆，農夫就會移除它，直到它消失。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_maze_until10_predict2:
         answers:
-        - text: 殭屍將立即向右轉並被卡住。
+        - text: 殭屍將會立即向右轉並且被卡住。
           correct: true
           feedback: 正確！
-        - text: 殭屍將吃到向日葵上。
-          feedback: 不正確。在這段代碼中，它會*先*右轉然後才看看能不能直走。因此，關卡失敗了。
-        - text: 殭屍將在第一個路徑上右轉並永遠繞圈轉。
-          feedback: 不正確。殭屍只會尋找右轉或直行。它永遠不會向左轉，因此幾乎立即就卡住了。
+        - text: 殭屍將成功吃到向日葵。
+          feedback: 不正確。在這段程式中，它會*先*右轉然後才思考能不能直走。因此，關卡失敗了。
+        - text: 殭屍將在第一條路徑上右轉，並且持續不斷地原地旋轉。
+          feedback: 不正確。殭屍只會右轉或向前走。它永遠不會向左轉，所以常常馬上就卡住了。
         - text: 我不知道。
           feedback: 在這段代碼中，它會*先*右轉然後才看看能不能直走。因此，關卡失敗了。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - text: '殭屍會經過正確的路徑，最後無限地來回繞圈。
@@ -3232,11 +3232,11 @@ zh-TW:
 '
           correct: true
           feedback: 正確！
-        - text: 殭屍將吃到向日葵上。
+        - text: 殭屍將成功吃到向日葵。
           feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
 
 '
-        - text: 殭屍將在第一個路徑上右轉並永遠繞圈轉。
+        - text: 殭屍將在第一條路徑上右轉，並且持續不斷地原地旋轉。
           feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
 
 '
@@ -3245,7 +3245,7 @@ zh-TW:
 
 '
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - text: '殭屍會經過正確的路徑，最後無限地來回繞圈。
@@ -3253,11 +3253,11 @@ zh-TW:
 '
           correct: true
           feedback: 正確！
-        - text: 殭屍將吃到向日葵上。
+        - text: 殭屍將成功吃到向日葵。
           feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
 
 '
-        - text: 殭屍將在第一個路徑上右轉並永遠繞圈轉。
+        - text: 殭屍將在第一條路徑上右轉，並且持續不斷地原地旋轉。
           feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
 
 '
@@ -3266,7 +3266,7 @@ zh-TW:
 
 '
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
         - text: '殭屍會經過正確的路徑，最後無限地來回繞圈。
@@ -3274,11 +3274,11 @@ zh-TW:
 '
           correct: true
           feedback: 正確！
-        - text: 殭屍將吃到向日葵上。
+        - text: 殭屍將成功吃到向日葵。
           feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
 
 '
-        - text: 殭屍將在第一個路徑上右轉並永遠繞圈轉。
+        - text: 殭屍將在第一條路徑上右轉，並且持續不斷地原地旋轉。
           feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
 
 '
@@ -3287,59 +3287,59 @@ zh-TW:
 
 '
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後會發生什麼？
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_maze_until2_predict1:
         answers:
-        - text: 鳥根本不會動。
-          feedback: 不正確。代碼使小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這樣直到抓到小豬為止！
+        - text: 小鳥角色完全不會動。
+          feedback: 不正確。程式將讓小鳥在有路的情況下一直向前移動，然後向左轉。它會持續一直這樣移動，直到抓到豬豬為止！
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
         - text: 憤怒鳥會移到前方然後衝進炸藥堆裡。
-          feedback: 不正確。代碼使小鳥在有安全通路的情況下一直向前移動，然後向左轉。它會一直這樣直到找到小豬為止！
+          feedback: 不正確。程式將讓小鳥在安全的的路徑上，持續不停向前移動，然後向左轉。它會一直這麼做，直到找到豬豬為止！
         - text: 我不知道。
-          feedback: 代碼使小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這樣直到找到小豬為止！
+          feedback: 程式讓小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這麼做，直到找到豬豬為止！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，你認為會發生什麼？
+        - text: 仔細看看下方的程式。點擊「運行」按鈕後，你認為會發生什麼事呢？
       courseD_multi_maze_until2_predict1_2018:
         answers:
-        - text: 鳥根本不會動。
-          feedback: 不正確。代碼使小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這樣直到抓到小豬為止！
+        - text: 小鳥角色完全不會動。
+          feedback: 不正確。程式將讓小鳥在有路的情況下一直向前移動，然後向左轉。它會持續一直這樣移動，直到抓到豬豬為止！
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
         - text: 憤怒鳥會移到前方然後衝進炸藥堆裡。
-          feedback: 不正確。代碼使小鳥在有安全通路的情況下一直向前移動，然後向左轉。它會一直這樣直到找到小豬為止！
+          feedback: 不正確。程式將讓小鳥在安全的的路徑上，持續不停向前移動，然後向左轉。它會一直這麼做，直到找到豬豬為止！
         - text: 我不知道。
-          feedback: 代碼使小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這樣直到找到小豬為止！
+          feedback: 程式讓小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這麼做，直到找到豬豬為止！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，你認為會發生什麼？
+        - text: 仔細看看下方的程式。點擊「運行」按鈕後，你認為會發生什麼事呢？
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
-        - text: 鳥根本不會動。
-          feedback: 不正確。代碼使小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這樣直到抓到小豬為止！
+        - text: 小鳥角色完全不會動。
+          feedback: 不正確。程式將讓小鳥在有路的情況下一直向前移動，然後向左轉。它會持續一直這樣移動，直到抓到豬豬為止！
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
         - text: 憤怒鳥會移到前方然後衝進炸藥堆裡。
-          feedback: 不正確。代碼使小鳥在有安全通路的情況下一直向前移動，然後向左轉。它會一直這樣直到找到小豬為止！
+          feedback: 不正確。程式將讓小鳥在安全的的路徑上，持續不停向前移動，然後向左轉。它會一直這麼做，直到找到豬豬為止！
         - text: 我不知道。
-          feedback: 代碼使小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這樣直到找到小豬為止！
+          feedback: 程式讓小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這麼做，直到找到豬豬為止！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，你認為會發生什麼？
+        - text: 仔細看看下方的程式。點擊「運行」按鈕後，你認為會發生什麼事呢？
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
-        - text: 鳥根本不會動。
-          feedback: 不正確。代碼使小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這樣直到抓到小豬為止！
+        - text: 小鳥角色完全不會動。
+          feedback: 不正確。程式將讓小鳥在有路的情況下一直向前移動，然後向左轉。它會持續一直這樣移動，直到抓到豬豬為止！
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
         - text: 憤怒鳥會移到前方然後衝進炸藥堆裡。
-          feedback: 不正確。代碼使小鳥在有安全通路的情況下一直向前移動，然後向左轉。它會一直這樣直到找到小豬為止！
+          feedback: 不正確。程式將讓小鳥在安全的的路徑上，持續不停向前移動，然後向左轉。它會一直這麼做，直到找到豬豬為止！
         - text: 我不知道。
-          feedback: 代碼使小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這樣直到找到小豬為止！
+          feedback: 程式讓小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這麼做，直到找到豬豬為止！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，你認為會發生什麼？
+        - text: 仔細看看下方的程式。點擊「運行」按鈕後，你認為會發生什麼事呢？
       courseD_multi_scrat_predict1:
         answers:
         - text: 沒事。鼠奎特一動不動。
@@ -3378,152 +3378,152 @@ zh-TW:
         description: 你已經到達課程E的結尾!選擇一個要創建的項目
       courseE_multi_bee_functions_predict1:
         answers:
-        - text: 同樣的程式也可以用來通過這個關卡。
+        - text: 使用相同的程式也可以通過這一關。
           correct: true
-          feedback: 正確！蜂蜜的數量不同也沒關係。該函式的設計能夠正確處理該問題。
+          feedback: 正確！蜂蜜的數量不同也沒關係。該函式的設計能夠正確處理這一個問題。
         - text: 蜜蜂釀造的蜂蜜不夠。
           feedback: 不正確。該函式已設計為處理超過 0 的任何蜂蜜。
-        - text: 蜜蜂會嘗試釀造太多蜂蜜。
+        - text: 蜜蜂會嘗試釀造過量的蜂蜜。
           feedback: 不正確。該函式已設計為處理超過 0 的任何蜂蜜。
         - text: 我不知道。
           feedback: 該程式也可以通過這個關卡。它可以處理超過 0 的任何蜂蜜。
         questions:
-        - text: 這與上一個關卡完全相同，但是在該關卡中收集的蜂蜜量有了變化。點擊「運行」會發生什麼？
+        - text: 這與上一個關卡完全相同，但是收集的蜂蜜量有了變化。點擊「運行」會發生什麼事呢？
       courseE_multi_farmer_functions11_predict:
         answers:
-        - text: 收割機將採集兩個南瓜。
-          feedback: 不正確。收割機在到達玉米之前不會呼叫`檢查和採集`。
-        - text: 收割機將採摘所有南瓜。
-          feedback: 不正確。收割機在到達玉米之前不會呼叫`檢查和採集`。
-        - text: 收割機將採摘生菜。
-          feedback: 不正確。收割機只會轉一次彎，到玉米那裡結束。
-        - text: 收割機將採摘玉米。
+        - text: 收割機將採收兩顆南瓜。
+          feedback: 不正確。收割機在到達玉米之前都沒有呼叫`檢查和採集`函式。
+        - text: 收割機將採收所有南瓜。
+          feedback: 不正確。收割機在到達玉米之前都沒有呼叫`檢查和採集`函式。
+        - text: 收割機將採收生菜。
+          feedback: 不正確。收割機只會轉一次彎，到玉米的位置時就停止。
+        - text: 收割機將採收玉米。
           correct: true
           feedback: 正確！
         questions:
-        - text: 查看下面定義的函式。收割機會採摘什麼？
+        - text: 查看下面定義的函式。收割機會採收什麼作物呢？
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - text: 收割機將採集兩個南瓜。
+        - text: 收割機將採收兩顆南瓜。
           feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
 
 '
-        - text: 收割機將採摘所有南瓜。
+        - text: 收割機將採收所有南瓜。
           feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
 
 '
-        - text: 收割機將採摘生菜。
+        - text: 收割機將採收生菜。
           correct: true
           feedback: 正確！
-        - text: 收割機將採摘玉米。
+        - text: 收割機將採收玉米。
           feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
 
 '
         questions:
-        - text: 查看下面定義的函式。收割機會採摘什麼？
+        - text: 查看下面定義的函式。收割機會採收什麼作物呢？
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - text: 收割機將採集兩個南瓜。
+        - text: 收割機將採收兩顆南瓜。
           feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
 
 '
-        - text: 收割機將採摘所有南瓜。
+        - text: 收割機將採收所有南瓜。
           feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
 
 '
-        - text: 收割機將採摘生菜。
+        - text: 收割機將採收生菜。
           correct: true
           feedback: 正確！
-        - text: 收割機將採摘玉米。
+        - text: 收割機將採收玉米。
           feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
 
 '
         questions:
-        - text: 查看下面定義的函式。收割機會採摘什麼？
+        - text: 查看下面定義的函式。收割機會採收什麼作物呢？
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
-        - text: 收割機將採集兩個南瓜。
+        - text: 收割機將採收兩顆南瓜。
           feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
 
 '
-        - text: 收割機將採摘所有南瓜。
+        - text: 收割機將採收所有南瓜。
           feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
 
 '
-        - text: 收割機將採摘生菜。
+        - text: 收割機將採收生菜。
           correct: true
           feedback: 正確！
-        - text: 收割機將採摘玉米。
+        - text: 收割機將採收玉米。
           feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
 
 '
         questions:
-        - text: 查看下面定義的函式。收割機會採摘什麼？
+        - text: 查看下面定義的函式。收割機會採收什麼作物呢？
       courseE_prediction_artistFunction1:
         answers:
-        - text: 沒有。程式中未呼叫該函式。
+        - text: 什麼事都沒發生，因為程式沒有呼叫函式。
           feedback: 不正確，這個函式在程式中被呼叫了兩次。
         - text: 小藝術家將繪製一個正方形。
           feedback: 不正確，這個函式在程式中被呼叫了兩次。
         - text: 小藝術家將繪製兩個重疊的正方形。
-          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳了 175 像素。
-        - text: 小藝術家將繪製兩個正方形，並且兩個正方形之間的間隙很小。
+          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳躍了 175 像素。
+        - text: 小藝術家將繪製兩個間距很小正方形。
           correct: true
-          feedback: 正確！該函式在程式中被呼叫了兩次，中間有一個跳轉。
+          feedback: 正確！該函式在程式中被呼叫了兩次，並且中間有向後跳躍了一小步。
         questions:
-        - text: 按下「運行」後會發生什麼？
+        - text: 按下「運行」後會發生什麼事呢？
       courseE_prediction_artistFunction1_2018:
         answers:
-        - text: 沒有。程式中未呼叫該函式。
+        - text: 什麼事都沒發生，因為程式沒有呼叫函式。
           feedback: 不正確，這個函式在程式中被呼叫了兩次。
         - text: 小藝術家將繪製一個正方形。
           feedback: 不正確，這個函式在程式中被呼叫了兩次。
         - text: 小藝術家將繪製兩個重疊的正方形。
-          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳了 175 像素。
-        - text: 小藝術家將繪製兩個正方形，並且兩個正方形之間的間隙很小。
+          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳躍了 175 像素。
+        - text: 小藝術家將繪製兩個間距很小正方形。
           correct: true
-          feedback: 正確！該函式在程式中被呼叫了兩次，中間有一個跳轉。
+          feedback: 正確！該函式在程式中被呼叫了兩次，並且中間有向後跳躍了一小步。
         questions:
-        - text: 按下「運行」後會發生什麼？
+        - text: 按下「運行」後會發生什麼事呢？
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - text: 沒有。程式中未呼叫該函式。
+        - text: 什麼事都沒發生，因為程式沒有呼叫函式。
           feedback: 不正確，這個函式在程式中被呼叫了兩次。
         - text: 小藝術家將繪製一個正方形。
           feedback: 不正確，這個函式在程式中被呼叫了兩次。
         - text: 小藝術家將繪製兩個重疊的正方形。
-          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳了 175 像素。
-        - text: 小藝術家將繪製兩個正方形，並且兩個正方形之間的間隙很小。
+          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳躍了 175 像素。
+        - text: 小藝術家將繪製兩個間距很小正方形。
           correct: true
-          feedback: 正確！該函式在程式中被呼叫了兩次，中間有一個跳轉。
+          feedback: 正確！該函式在程式中被呼叫了兩次，並且中間有向後跳躍了一小步。
         questions:
-        - text: 按下「運行」後會發生什麼？
+        - text: 按下「運行」後會發生什麼事呢？
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
-        - text: 沒有。程式中未呼叫該函式。
+        - text: 什麼事都沒發生，因為程式沒有呼叫函式。
           feedback: 不正確，這個函式在程式中被呼叫了兩次。
         - text: 小藝術家將繪製一個正方形。
           feedback: 不正確，這個函式在程式中被呼叫了兩次。
         - text: 小藝術家將繪製兩個重疊的正方形。
-          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳了 175 像素。
-        - text: 小藝術家將繪製兩個正方形，並且兩個正方形之間的間隙很小。
+          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳躍了 175 像素。
+        - text: 小藝術家將繪製兩個間距很小正方形。
           correct: true
-          feedback: 正確！該函式在程式中被呼叫了兩次，中間有一個跳轉。
+          feedback: 正確！該函式在程式中被呼叫了兩次，並且中間有向後跳躍了一小步。
         questions:
-        - text: 按下「運行」後會發生什麼？
+        - text: 按下「運行」後會發生什麼事呢？
       courseE_prediction_artistFunction1_copy:
         answers:
-        - text: 沒有。程式中未呼叫該函式。
+        - text: 什麼事都沒發生，因為程式沒有呼叫函式。
           feedback: 不正確，這個函式在程式中被呼叫了兩次。
         - text: 小藝術家將繪製一個正方形。
           feedback: 不正確，這個函式在程式中被呼叫了兩次。
         - text: 小藝術家將繪製兩個重疊的正方形。
-          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳了 175 像素。
-        - text: 小藝術家將繪製兩個正方形，並且兩個正方形之間的間隙很小。
+          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳躍了 175 像素。
+        - text: 小藝術家將繪製兩個間距很小正方形。
           correct: true
-          feedback: 正確！該函式在程式中被呼叫了兩次，中間有一個跳轉。
+          feedback: 正確！該函式在程式中被呼叫了兩次，並且中間有向後跳躍了一小步。
         questions:
-        - text: 按下「運行」後會發生什麼？
+        - text: 按下「運行」後會發生什麼事呢？
       courseE_project_exemplars_2019:
         content1: '測試標記課件頁面
 
@@ -3660,13 +3660,13 @@ zh-TW:
 '
       courseF_external_variableConstant:
         markdown: |-
-          <h2>有關變數的更多資訊</h2>
+          <h2>變數的更多資訊</h2>
 
           <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
-          <h3>你剛剛學習了一種將變數用作常量的好方法！
-          當將變數用作常量時，你將設定一個值，然後在程式中多次使用該*相同*的值，而無需在點擊「運行」後更改該值。</h3>
+          <h3>你剛剛學習了一種將變數作為常數的好方法！
+          當變數當作常數在使用時，你將需要設定一個值，然後在程式中多次使用該*相同*的值，這樣就不需要在點擊「運行」後更改該值。</h3>
           <br/><hr/>
-          <h3>在本系列的下一部分中，你將編寫帶有在程式內部變化的變數的代碼。</h3>
+          <h3>在本系列的下一部分中，你將編寫一個會在程式內部改變數值的變數。</h3>
       courseF_external_variableConstant_2018:
         markdown: "\"<h2>有關變數的更多資訊</h2>\n\n\n<img src=\"\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"\"
           style=\"\"padding-left: 30px; width:300px; float:right;\"\"/>\n<h3>你剛剛學習了一種將變數用作常量的好方法！
@@ -3903,70 +3903,70 @@ zh-TW:
         answers:
         - text: 小藝術家將繪製一行從遊戲區一側到另一側厚度增加的直線。
           feedback: 不正確。小藝術家在`計數`迴圈的反覆之間進行切換。
-        - text: 小藝術家將繪製一個螺旋，並且每次通過`計數`迴圈，線條都會越來越長和越來越細。
-          feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
-        - text: 小藝術家將繪製一個螺旋，並且每次通過`計數`迴圈，線條都會越來越長和越來越粗。
+        - text: 小藝術家將繪製一個螺旋圖形，並且每次執行到`計次`重複積木時，線條都會越來越長以及越來越細。
+          feedback: 不正確。每次執行到`計次`重複積木時，小藝術家都會畫一條更長且更粗的線條。
+        - text: 小藝術家將繪製一個螺旋圖形，並且每次執行到`計次`重複積木時，線條都會越來越長以及越來越粗。
           correct: true
           feedback: 正確！
         - text: 我不知道。
-          feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
+          feedback: 不正確。每次執行到`計次`重複積木時，小藝術家都會畫一條更長且更粗的線條。
         markdown: 我們使用`計數`迴圈中的計數器來更改此圖形上筆刷的寬度。
         questions:
-        - text: 點擊「運行」時會發生什麼？
+        - text: 點擊「運行」時會發生什麼事呢？
       courseF_multi_artist_for10_predict1_2018:
         answers:
         - text: 小藝術家將繪製一行從遊戲區一側到另一側厚度增加的直線。
           feedback: 不正確。小藝術家在`計數`迴圈的反覆之間進行切換。
-        - text: 小藝術家將繪製一個螺旋，並且每次通過`計數`迴圈，線條都會越來越長和越來越細。
-          feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
-        - text: 小藝術家將繪製一個螺旋，並且每次通過`計數`迴圈，線條都會越來越長和越來越粗。
+        - text: 小藝術家將繪製一個螺旋圖形，並且每次執行到`計次`重複積木時，線條都會越來越長以及越來越細。
+          feedback: 不正確。每次執行到`計次`重複積木時，小藝術家都會畫一條更長且更粗的線條。
+        - text: 小藝術家將繪製一個螺旋圖形，並且每次執行到`計次`重複積木時，線條都會越來越長以及越來越粗。
           correct: true
           feedback: 正確！
         - text: 我不知道。
-          feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
+          feedback: 不正確。每次執行到`計次`重複積木時，小藝術家都會畫一條更長且更粗的線條。
         markdown: 我們使用`計數`迴圈中的計數器來更改此圖形上筆刷的寬度。
         questions:
-        - text: 點擊「運行」時會發生什麼？
+        - text: 點擊「運行」時會發生什麼事呢？
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
         - text: 小藝術家將繪製一行從遊戲區一側到另一側厚度增加的直線。
           feedback: 不正確。小藝術家在`計數`迴圈的反覆之間進行切換。
-        - text: 小藝術家將繪製一個螺旋，並且每次通過`計數`迴圈，線條都會越來越長和越來越細。
-          feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
-        - text: 小藝術家將繪製一個螺旋，並且每次通過`計數`迴圈，線條都會越來越長和越來越粗。
+        - text: 小藝術家將繪製一個螺旋圖形，並且每次執行到`計次`重複積木時，線條都會越來越長以及越來越細。
+          feedback: 不正確。每次執行到`計次`重複積木時，小藝術家都會畫一條更長且更粗的線條。
+        - text: 小藝術家將繪製一個螺旋圖形，並且每次執行到`計次`重複積木時，線條都會越來越長以及越來越粗。
           correct: true
           feedback: 正確！
         - text: 我不知道。
-          feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
+          feedback: 不正確。每次執行到`計次`重複積木時，小藝術家都會畫一條更長且更粗的線條。
         markdown: 我們使用`計數`迴圈中的計數器來更改此圖形上筆刷的寬度。
         questions:
-        - text: 點擊「運行」時會發生什麼？
+        - text: 點擊「運行」時會發生什麼事呢？
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - text: 小藝術家將繪製一行從遊戲區一側到另一側厚度增加的直線。
           feedback: 不正確。小藝術家在`計數`迴圈的反覆之間進行切換。
-        - text: 小藝術家將繪製一個螺旋，並且每次通過`計數`迴圈，線條都會越來越長和越來越細。
-          feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
-        - text: 小藝術家將繪製一個螺旋，並且每次通過`計數`迴圈，線條都會越來越長和越來越粗。
+        - text: 小藝術家將繪製一個螺旋圖形，並且每次執行到`計次`重複積木時，線條都會越來越長以及越來越細。
+          feedback: 不正確。每次執行到`計次`重複積木時，小藝術家都會畫一條更長且更粗的線條。
+        - text: 小藝術家將繪製一個螺旋圖形，並且每次執行到`計次`重複積木時，線條都會越來越長以及越來越粗。
           correct: true
           feedback: 正確！
         - text: 我不知道。
-          feedback: 不正確。每次通過`計數`迴圈，小藝術家都會畫一行更長的線，而且也更粗。
+          feedback: 不正確。每次執行到`計次`重複積木時，小藝術家都會畫一條更長且更粗的線條。
         markdown: 我們使用`計數`迴圈中的計數器來更改此圖形上筆刷的寬度。
         questions:
-        - text: 點擊「運行」時會發生什麼？
+        - text: 點擊「運行」時會發生什麼事呢？
       courseF_multi_artist_fwp2_predict1:
         answers:
         - text: 小藝術家將使用相同的函式繪製兩個不同大小的盒子。
           correct: true
           feedback: 正確！
         - text: 小藝術家將使用兩種不同的函式繪製兩個不同大小的盒子。
-          feedback: 不正確。使用參數可讓你使用單個函式來創建不同的結果。
-        - text: 小藝術家將使用兩種不同的函式繪製相同大小的盒子兩次。
-          feedback: 不正確。使用參數可讓你使用單個函式來創建不同的結果。
+          feedback: 不正確。使用參數可以讓你透過一個函式來創造不同的結果。
+        - text: 小藝術家將使用兩種不同的函式繪製兩個相同大小的盒子。
+          feedback: 不正確。使用參數可以讓你透過一個函式來創造不同的結果。
         - text: 我不知道。
-          feedback: 該程式使用參數來讓單個函式創建兩個不同大小的框。
-        markdown: 我們向`畫個正方形`函式添加了參數。點擊藍色的「編輯」按鈕來查看整個函式定義。
+          feedback: 這個程式使用參數來讓一個函式繪製兩個不同大小的盒子。
+        markdown: 我們為`畫個正方形`函式添加了參數。點擊藍色的「編輯」按鈕來查看整個函式的定義。
         questions:
         - text: 當程式運行時會發生什麼事？
       courseF_multi_artist_variables3a_predict1:
@@ -3975,105 +3975,105 @@ zh-TW:
           correct: true
           feedback: 正確！
         - text: 小藝術家將繪製一個邊長 3 像素的 50 邊形。
-          feedback: 不正確。變數`長度`必須放在`重複`迴圈中才能實現。
+          feedback: 不正確。變數`長度`必須放在`重複`積木中才能順利執行。
         - text: 小藝術家將繪製三條開放邊，然後轉向 50 度。
-          feedback: 不正確。可能需要在`轉向`積木中使用`長度`變數才能實現。
+          feedback: 不正確。可能需要在`轉向`積木中使用到`長度`變數才能正確執行。
         - text: 我不知道。
-          feedback: "`長度`變數設定為 50，並在`向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
+          feedback: "`長度`變數設定為 50，並在`移動向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
         questions:
-        - text: 我們將變數`長度`設定為 50。點擊「運行」時會發生什麼？
+        - text: 我們將變數`長度`設定為 50。你覺得點擊「運行」時會發生什麼事呢？
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - text: 小藝術家將繪製一個邊長 50 像素的三角形。
           correct: true
           feedback: 正確！
         - text: 小藝術家將繪製一個邊長 3 像素的 50 邊形。
-          feedback: 不正確。變數`長度`必須放在`重複`迴圈中才能實現。
+          feedback: 不正確。變數`長度`必須放在`重複`積木中才能順利執行。
         - text: 小藝術家將繪製三條開放邊，然後轉向 50 度。
-          feedback: 不正確。可能需要在`轉向`積木中使用`長度`變數才能實現。
+          feedback: 不正確。可能需要在`轉向`積木中使用到`長度`變數才能正確執行。
         - text: 我不知道。
-          feedback: "`長度`變數設定為 50，並在`向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
+          feedback: "`長度`變數設定為 50，並在`移動向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
         questions:
-        - text: 我們將變數`長度`設定為 50。點擊「運行」時會發生什麼？
+        - text: 我們將變數`長度`設定為 50。你覺得點擊「運行」時會發生什麼事呢？
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
         - text: 小藝術家將繪製一個邊長 50 像素的三角形。
           correct: true
           feedback: 正確！
         - text: 小藝術家將繪製一個邊長 3 像素的 50 邊形。
-          feedback: 不正確。變數`長度`必須放在`重複`迴圈中才能實現。
+          feedback: 不正確。變數`長度`必須放在`重複`積木中才能順利執行。
         - text: 小藝術家將繪製三條開放邊，然後轉向 50 度。
-          feedback: 不正確。可能需要在`轉向`積木中使用`長度`變數才能實現。
+          feedback: 不正確。可能需要在`轉向`積木中使用到`長度`變數才能正確執行。
         - text: 我不知道。
-          feedback: "`長度`變數設定為 50，並在`向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
+          feedback: "`長度`變數設定為 50，並在`移動向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
         questions:
-        - text: 我們將變數`長度`設定為 50。點擊「運行」時會發生什麼？
+        - text: 我們將變數`長度`設定為 50。你覺得點擊「運行」時會發生什麼事呢？
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - text: 小藝術家將繪製一個邊長 50 像素的三角形。
           correct: true
           feedback: 正確！
         - text: 小藝術家將繪製一個邊長 3 像素的 50 邊形。
-          feedback: 不正確。變數`長度`必須放在`重複`迴圈中才能實現。
+          feedback: 不正確。變數`長度`必須放在`重複`積木中才能順利執行。
         - text: 小藝術家將繪製三條開放邊，然後轉向 50 度。
-          feedback: 不正確。可能需要在`轉向`積木中使用`長度`變數才能實現。
+          feedback: 不正確。可能需要在`轉向`積木中使用到`長度`變數才能正確執行。
         - text: 我不知道。
-          feedback: "`長度`變數設定為 50，並在`向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
+          feedback: "`長度`變數設定為 50，並在`移動向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
         questions:
-        - text: 我們將變數`長度`設定為 50。點擊「運行」時會發生什麼？
+        - text: 我們將變數`長度`設定為 50。你覺得點擊「運行」時會發生什麼事呢？
       courseF_multi_bee_conditionals1_predict1:
         answers:
-        - text: 無論如何，蜜蜂都會移到雲中並嘗試獲取花蜜。
+        - text: 無論如何，蜜蜂都需要移動到雲朵之中，並且嘗試獲取花蜜。
           feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
-        - text: 蜜蜂會移動到雲中，但只有在下面有花的情況下，才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵之中，但只有在雲朵下方有花的情況，才會嘗試獲取花蜜。
           correct: true
           feedback: 正確！
-        - text: 蜜蜂會移動到雲上，然後不管怎樣都什麼也不做。
-          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵上方，然後不管怎樣什麼也都不會做。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。
         - text: 我不知道。
-          feedback: "`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。"
+          feedback: "`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。"
         markdown: 雲遮擋了視線。在這朵雲下可能有一朵花。如果有一朵花，蜜蜂需要收集**一次**花蜜。
         questions:
-        - text: 如果沒有花，蜜蜂就什麼也不做。看一下下面的代碼。點擊「運行」後，你認為會發生什麼？
+        - text: 如果沒有花，蜜蜂就什麼也不做。看看下方的程式。點擊「運行」後，你認為會發生什麼事呢？
       courseF_multi_bee_conditionals7_predict2:
         answers:
         - text: 蜜蜂在每朵花上都會採集花蜜，否則會釀造蜂蜜。
           correct: true
           feedback: 正確！
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取花蜜。
-          feedback: 不正確。`如果在花上`積木可以使蜜蜂在每朵花上取得花蜜，如果不是花，就釀造蜂蜜（因為是蜂窩）。
+          feedback: 不正確。`如果在花朵上`積木可以讓蜜蜂在每朵花上取得花蜜，如果不是花，就釀造蜂蜜（因為是蜂窩）。
         - text: 蜜蜂會嘗試從花朵和蜂窩中獲取蜂蜜。
-          feedback: 不正確。不正確。`如果在花上`積木可以使蜜蜂在每朵花上取得花蜜，在每個蜂窩上釀造蜂蜜。
+          feedback: 不正確。`如果在花朵上`積木可以讓蜜蜂在每朵花上取得花蜜，或是在每個蜂窩上釀造蜂蜜。
         - text: 我不知道。
-          feedback: "`如果在花上`積木使蜜蜂在每朵花上取得花蜜，否則就釀造蜂蜜。"
-        markdown: 有時朵雲遮住的是一朵花，有時遮住的是一個蜂窩！無論哪種方式，每朵雲下都只會有**一朵**花或**一個**蜂窩。
+          feedback: "`如果在花朵上`積木可以讓蜜蜂在每朵花上取得花蜜，否則就釀造蜂蜜。"
+        markdown: 有時雲朵遮住的是一朵花，有時遮住的是一個蜂窩！無論哪種情況，每朵雲下都只會有**一朵**花或**一個**蜂窩。
         questions:
-        - text: 仔細看下面的代碼。點擊「運行」後，你認為會發生什麼？
+        - text: 仔細看看下方的程式。你認為點擊「運行」後會發生什麼事呢？
       courseF_multi_bee_for3_predict1:
         answers:
         - text: 蜜蜂會向前移動，並從每朵花中採集所有的花蜜。
-          feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         - text: 蜜蜂將向前移動，並從每朵花中收集所有的花蜜，除了一朵。
           correct: true
           feedback: 正確！
         - text: 蜜蜂會向前移動，並從每朵花中收集一個花蜜。
-          feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
-        - text: 蜜蜂會前進，並嘗試收集比花朵中更多的花蜜。
-          feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+        - text: 蜜蜂會前進，並嘗試收集比現有數量還要更多的花蜜。
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         markdown: '啊!  使用`計數`迴圈能使這個關卡變得容易得多！
 
 '
         questions:
-        - text: 閱讀下面的代碼。點擊「運行」時會發生什麼？
+        - text: 觀察下方的程式。點擊「運行」時會發生什麼事呢？
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 蜜蜂會向前移動，並從每朵花中採集所有的花蜜。
-          feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         - text: 蜜蜂將向前移動，並從每朵花中收集所有的花蜜，除了一朵。
           correct: true
           feedback: 正確！
         - text: 蜜蜂會向前移動，並從每朵花中收集一個花蜜。
-          feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         - text: '我不知道。 '
           feedback: '不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
 
@@ -4082,16 +4082,16 @@ zh-TW:
 
 '
         questions:
-        - text: 閱讀下面的代碼。點擊「運行」時會發生什麼？
+        - text: 觀察下方的程式。點擊「運行」時會發生什麼事呢？
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 蜜蜂會向前移動，並從每朵花中採集所有的花蜜。
-          feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         - text: 蜜蜂將向前移動，並從每朵花中收集所有的花蜜，除了一朵。
           correct: true
           feedback: 正確！
         - text: 蜜蜂會向前移動，並從每朵花中收集一個花蜜。
-          feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         - text: '我不知道。 '
           feedback: '不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
 
@@ -4100,16 +4100,16 @@ zh-TW:
 
 '
         questions:
-        - text: 閱讀下面的代碼。點擊「運行」時會發生什麼？
+        - text: 觀察下方的程式。點擊「運行」時會發生什麼事呢？
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: 蜜蜂會向前移動，並從每朵花中採集所有的花蜜。
-          feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         - text: 蜜蜂將向前移動，並從每朵花中收集所有的花蜜，除了一朵。
           correct: true
           feedback: 正確！
         - text: 蜜蜂會向前移動，並從每朵花中收集一個花蜜。
-          feedback: 不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         - text: '我不知道。 '
           feedback: '不正確。`計數`迴圈將使蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
 
@@ -4118,32 +4118,32 @@ zh-TW:
 
 '
         questions:
-        - text: 閱讀下面的代碼。點擊「運行」時會發生什麼？
+        - text: 觀察下方的程式。點擊「運行」時會發生什麼事呢？
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: 蜜蜂不會收集任何花蜜或蜂蜜。
           feedback: 不正確。該函式設定為收集通過參數傳遞的盡可能多的花蜜或蜂蜜。
-        - text: 蜜蜂將按階梯狀收集三個花蜜或蜂蜜，然後是兩個花蜜或蜂蜜。
+        - text: 蜜蜂將依照階梯形狀的移動路徑，收集三個花蜜或蜂蜜，然後是兩個花蜜或蜂蜜。
           correct: true
           feedback: 正確！該函式設定為收集通過參數傳遞的盡可能多的花蜜或蜂蜜。
-        - text: 在迴圈的每次反覆中，蜜蜂只會收集一個花蜜或蜂蜜。
+        - text: 在每次執行重複積木時，蜜蜂只會收集一個花蜜或蜂蜜。
           feedback: 不正確。該函式設定為收集通過參數傳遞的盡可能多的花蜜或蜂蜜。
         - text: 我不知道。
           feedback: 點擊來查看該函式的內部表明，該函式已設定為收集與通過參數傳遞的一樣多的花蜜或蜂蜜。
-        markdown: 在這些雲朵的下面，有一朵花正好有 1 個花蜜，或者是一個蜂窩正好有 1 個蜂蜜。在回答以下問題之前，點擊函式上的藍色「編輯」按鈕來查看內部內容。
+        markdown: 在這些雲朵的下方，有一朵花正好有 1 個花蜜，或者是一個蜂窩正好有 1 個蜂蜜。在回答以下問題之前，點擊函式上的藍色「編輯」按鈕來查看函式的內容。
         questions:
-        - text: 點擊「運行」時會發生什麼？
+        - text: 點擊「運行」時會發生什麼事呢？
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - text: 海盜會說：「很高興見到你，Ali。」僅此而已。
+        - text: 海盜只會說：「很高興見到你，Ali。」
           correct: true
           feedback: 正確。
-        - text: 海盜會說：「很高興見到你。」僅此而已。
-          feedback: 不正確。注意，`聯接`積木會將提供的名稱插入到海盜的句子中。
-        - text: 海盜會說：「Ali」，僅此而已。
-          feedback: 不正確。注意，`聯接`積木會將提供的名稱插入到海盜的句子中。
+        - text: 海盜只會說：「很高興見到你。」
+          feedback: 不正確。注意，`組合`積木會將使用者輸入的名稱，加入到海盜說的話之中。
+        - text: 海盜只會說：「Ali。」
+          feedback: 不正確。注意，`組合`積木會將使用者輸入的名稱，加入到海盜說的話之中。
         - text: 我不知道。
-          feedback: 不正確。注意，`聯接`積木會將提供的名稱插入到海盜的句子中。
+          feedback: 不正確。注意，`組合`積木會將使用者輸入的名稱，加入到海盜說的話之中。
         markdown: |-
           **這個關卡使用了一個叫做`詢問`的新積木。**
 
@@ -4151,7 +4151,7 @@ zh-TW:
 
           使用者輸入的任何文本都將保存到`詢問`積木末尾顯示的變數中。
         questions:
-        - text: 如果使用者在提示符下輸入名稱「Ali」會怎樣？
+        - text: 如果使用者在提問時，於輸入欄位輸入「Ali」會發生什麼事呢？
       courseF_project_exemplars_2019:
         content1: '測試標記課件頁面
 
@@ -4199,55 +4199,55 @@ zh-TW:
       coursee_prediction_artistfunction2:
         answers:
         - text: 藝術家會完美地解決這個難題。
-          feedback: 不正確。迴圈使用`繪製多邊形`而不是`繪製一行多邊形`。
-        - text: 小藝術家將按窗戶的佈局來繪製四個正方形。
+          feedback: 不正確。重複積木之中應使用`繪製多邊形`而不是`繪製一排多邊形`。
+        - text: 小藝術家將依照窗戶的佈局來繪製四個正方形。
           correct: true
           feedback: 正確！
-        - text: 小藝術家將只畫一行正方形。
-          feedback: 不正確。程式未呼叫`繪製一行多邊形`。
+        - text: 小藝術家將只畫一排正方形。
+          feedback: 不正確。程式沒有呼叫`繪製一排多邊形`的這個函式。
         - text: 小藝術家將繪製向上重疊的四個正方形。
-          feedback: 不正確。在兩次呼叫`繪製多邊形`之間，迴圈旋轉了 90 度。
+          feedback: 不正確。在呼叫兩次`繪製多邊形`的函式之間，重複積木將角色旋轉了 90 度。
         questions:
-        - text: 按下「運行」按鈕會發生什麼？
+        - text: 按下「運行」按鈕會發生什麼事呢？
       coursee_prediction_artistfunction2_2018:
         answers:
         - text: 藝術家會完美地解決這個難題。
-          feedback: 不正確。迴圈使用`繪製多邊形`而不是`繪製一行多邊形`。
-        - text: 小藝術家將按窗戶的佈局來繪製四個正方形。
+          feedback: 不正確。重複積木之中應使用`繪製多邊形`而不是`繪製一排多邊形`。
+        - text: 小藝術家將依照窗戶的佈局來繪製四個正方形。
           correct: true
           feedback: 正確！
-        - text: 小藝術家將只畫一行正方形。
-          feedback: 不正確。程式未呼叫`繪製一行多邊形`。
+        - text: 小藝術家將只畫一排正方形。
+          feedback: 不正確。程式沒有呼叫`繪製一排多邊形`的這個函式。
         - text: 小藝術家將繪製向上重疊的四個正方形。
-          feedback: 不正確。在兩次呼叫`繪製多邊形`之間，迴圈旋轉了 90 度。
+          feedback: 不正確。在呼叫兩次`繪製多邊形`的函式之間，重複積木將角色旋轉了 90 度。
         questions:
-        - text: 按下「運行」按鈕會發生什麼？
+        - text: 按下「運行」按鈕會發生什麼事呢？
       coursee_prediction_artistfunction2_2018_2019:
         answers:
         - text: 藝術家會完美地解決這個難題。
-          feedback: 不正確。迴圈使用`繪製多邊形`而不是`繪製一行多邊形`。
-        - text: 小藝術家將按窗戶的佈局來繪製四個正方形。
+          feedback: 不正確。重複積木之中應使用`繪製多邊形`而不是`繪製一排多邊形`。
+        - text: 小藝術家將依照窗戶的佈局來繪製四個正方形。
           correct: true
           feedback: 正確！
-        - text: 小藝術家將只畫一行正方形。
-          feedback: 不正確。程式未呼叫`繪製一行多邊形`。
+        - text: 小藝術家將只畫一排正方形。
+          feedback: 不正確。程式沒有呼叫`繪製一排多邊形`的這個函式。
         - text: 小藝術家將繪製向上重疊的四個正方形。
-          feedback: 不正確。在兩次呼叫`繪製多邊形`之間，迴圈旋轉了 90 度。
+          feedback: 不正確。在呼叫兩次`繪製多邊形`的函式之間，重複積木將角色旋轉了 90 度。
         questions:
-        - text: 按下「運行」按鈕會發生什麼？
+        - text: 按下「運行」按鈕會發生什麼事呢？
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
         - text: 藝術家會完美地解決這個難題。
-          feedback: 不正確。迴圈使用`繪製多邊形`而不是`繪製一行多邊形`。
-        - text: 小藝術家將按窗戶的佈局來繪製四個正方形。
+          feedback: 不正確。重複積木之中應使用`繪製多邊形`而不是`繪製一排多邊形`。
+        - text: 小藝術家將依照窗戶的佈局來繪製四個正方形。
           correct: true
           feedback: 正確！
-        - text: 小藝術家將只畫一行正方形。
-          feedback: 不正確。程式未呼叫`繪製一行多邊形`。
+        - text: 小藝術家將只畫一排正方形。
+          feedback: 不正確。程式沒有呼叫`繪製一排多邊形`的這個函式。
         - text: 小藝術家將繪製向上重疊的四個正方形。
-          feedback: 不正確。在兩次呼叫`繪製多邊形`之間，迴圈旋轉了 90 度。
+          feedback: 不正確。在呼叫兩次`繪製多邊形`的函式之間，重複積木將角色旋轉了 90 度。
         questions:
-        - text: 按下「運行」按鈕會發生什麼？
+        - text: 按下「運行」按鈕會發生什麼事呢？
       csd-pre-survey-2017-levelgroup:
         markdown: |
           # 概述
@@ -4264,6 +4264,7 @@ zh-TW:
           * [鋁箔紙船 - 範例](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - 活動指南 ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
 
           [/key]
+        title: 發現計算機科學, 學生先修課程調查
       csf_be_a_super_digital_citizen:
         content1: 在此描述
         markdown: |-
@@ -4299,58 +4300,58 @@ zh-TW:
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
-        - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
-          feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
-        - text: Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: 使用此程式碼萊拉將收集到 4 個寶藏。
+          feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: 萊拉試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
           correct: true
           feedback: 正確！
         - text: Laurel 會收集到所有寶石。
-          feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+          feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
         - text: 我不知道。
-          feedback: Laurel 會收集到所有寶石。
+          feedback: 萊拉會收集到所有寶石。
         questions:
-        - text: 仔細查看下面的代碼。如果代碼運行到最後（忽略任何錯誤），那麼 Laurel 會收集多少寶藏？
+        - text: 仔細查看下面的程式碼。如果程式碼運行到最後（忽略任何錯誤），那麼萊拉會收集多少寶藏？
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
-          feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
-        - text: Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: 使用此程式碼萊拉將收集到 4 個寶藏。
+          feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: 萊拉試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
           correct: true
           feedback: 正確！
         - text: Laurel 會收集到所有寶石。
-          feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+          feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
         - text: 我不知道。
-          feedback: Laurel 會收集到所有寶石。
+          feedback: 萊拉會收集到所有寶石。
         questions:
         - text: '仔細看一下這段程式碼。你認為程式執行後會發生什麼？
 
 '
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
-          feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
-        - text: Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: 使用此程式碼萊拉將收集到 4 個寶藏。
+          feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: 萊拉試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
           correct: true
           feedback: 正確！
         - text: Laurel 會收集到所有寶石。
-          feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+          feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
         - text: 我不知道。
-          feedback: Laurel 會收集到所有寶石。
+          feedback: 萊拉會收集到所有寶石。
         questions:
         - text: '仔細看一下這段程式碼。你認為程式執行後會發生什麼？
 
 '
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
-          feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
-        - text: Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: 使用此程式碼萊拉將收集到 4 個寶藏。
+          feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: 萊拉試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
           correct: true
           feedback: 正確！
         - text: Laurel 會收集到所有寶石。
-          feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+          feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
         - text: 我不知道。
-          feedback: Laurel 會收集到所有寶石。
+          feedback: 萊拉會收集到所有寶石。
         questions:
         - text: '仔細看一下這段程式碼。你認為程式執行後會發生什麼？
 
@@ -4935,3 +4936,29 @@ zh-TW:
         markdown: 此課程被要求考慮無聊的及自我表達等"問題"，與反映他們如何著手處理這些問題以及他們自己的生活。從那邊，他們會探索資訊科學整體來說、特別是程式語言，以娛樂的一個特殊的形式或是自我表達的一個載具所扮演的角色。
       CSD Web Development Post-Project Test:
         title: Web Development Post-Project Test
+      CSD U1 Test:
+        title: 電腦和問題解決課後測試
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          # 概述
+
+          本堂課將分組設計鋁箔紙船，該船將在盡可能承載最多硬幣的情況下漂浮在水上。在課程結束時，小組將會討論在活動中的經驗，並與將在本課程其他部分中所要解決的類型問題建立聯繫。
+
+
+          ## 資源
+
+          * [鋁箔紙船](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 活動指南 (複製為 [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+        teacher_markdown: |-
+          [key]
+
+          * [鋁箔紙船 - 範例](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - 活動指南 ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
+      csd-pre-survey-2017-levelgroup_2018:
+        title: 發現計算機科學, 學生先修課程調查
+      csd-pre-survey-levelgroup_2019:
+        title: 發現計算機科學, 學生先修課程調查
+      outbreak_story:
+        content1: 在此描述
+      outbreak_story2:
+        content1: 在此描述

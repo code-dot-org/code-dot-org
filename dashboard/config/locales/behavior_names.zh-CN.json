@@ -285,6 +285,33 @@
         "courseF_extras_sim": {
           "wandering 2": "徘徊 2",
           "wandering 1": "徘徊 1"
+        },
+        "outbreak1": {
+          "wandering": "徘徊"
+        },
+        "outbreak2": {
+          "wandering": "徘徊"
+        },
+        "outbreak3": {
+          "wandering": "徘徊"
+        },
+        "outbreak4": {
+          "wandering": "徘徊"
+        },
+        "outbreak5": {
+          "wandering": "徘徊"
+        },
+        "outbreak6": {
+          "wandering": "徘徊"
+        },
+        "outbreak7": {
+          "wandering": "徘徊"
+        },
+        "outbreak8": {
+          "wandering": "徘徊"
+        },
+        "outbreak_freeplay": {
+          "wandering": "徘徊"
         }
       }
     }

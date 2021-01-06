@@ -1058,7 +1058,7 @@ cs-CZ:
     videí</a>
   hoc2014_try_new_tutorials: Vyzkoušejte naše nové návody pro Hodinu Kódu
   hoc2014_try_new_tutorial: Vyzkoušej náš nový výukový kurz Hour of Code v beta verzi
-  hoc2014_try_scrat: Angry Birds, PvZ a Scratch
+  hoc2014_try_scrat: Angry Birds, PvZ a Scrat
   hoc2014_try_frozen: Umělec s Annou a Elsa, od zmrazené
   carousel_heading_codeorg: Tutoriály od Code.org
   carousel_heading_codeorg_any_device: Cvičení na Code.org (pro všechna zařízení)
@@ -1970,6 +1970,11 @@ cs-CZ:
     Code.org a partnery.
   hoc_overview_partner_activities_link: Zobrazit aktivity
   hoc_overview_start_tutorial: Spustit
+  hoc_overview_more_resources: Chcete-li další prostředky, pomocí kterých se můžete
+    zapojit do naší dálkové učebny, podívejte se na našeho průvodce pořádáním [virtuální
+    „Hodiny programování“](https://hourofcode.com/us/how-to/virtual). Studentům, kteří
+    mají jen omezenou nebo vůbec žádnou techniku nebo připojení, sdílejte tento balíček
+    [aktivit „Hodiny programování“](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Zobrazit příručku učitele
   hoc2018_creativity: kreativita
   hoc2018_creativity_create: Vytvořit
@@ -2063,9 +2068,14 @@ cs-CZ:
   page_not_found_title: Stránka nebyla nalezena
   page_not_found_header: 404 - Stránka nebyla nalezena
   page_not_found_button: Zpět domů
+  hoc2018_mc_thank_microsoft: Děkujeme společnosti Microsoft, že podporuje naši vizi
+    a misi zajištění toho, aby všechny děti měly příležitost učit se počítačové vědy
+    a dovednosti potřebné k dosahování úspěchu ve 21. století.
   hoc2019_dance_previous_versions: "Hledáte předchozí verzi Tanečního večírku?  \nKlikněte
     zde, abyste začali [Část 1](%{dance_2018_link}) a [Část 2](%{dance_extras_2018_link})
     z minulého roku."
   homepage_slot_text_title_at_home: Učte se doma
   homepage_slot_text_blurb_at_home: S těmito podklady to bude hračka
   page_not_available_button: Zpět domů
+  footer_powered_by_aws: Poháněn Amazon Web Services
+  codebytes_skinny_banner_english_only: Pouze anglicky

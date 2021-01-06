@@ -194,10 +194,17 @@ tr:
     mismatch_password: Girdiğiniz iki parola aynı değil
     student_consent: Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal
       vasimin izni olduğunu onaylıyorum.
-    agree_us_website: Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı
-      kabul ediyorum.
-    my_data_to_us: Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne
-      gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.
+    agree_us_data_transfer_student: "**Code.org'un bu siteyi kullanımım ile ilgili
+      verileri (kişisel veriler dahil), barındırma ve işleme amacıyla Amerika Birleşik
+      Devletleri'ne** aktarabileceğini kabul ediyorum."
+    agree_us_data_transfer_teacher: "**Code.org'un bu siteyi kullanımım (ve öğrencimin
+      kullanımı) ile ilgili verileri (kişisel veriler dahil), barındırma ve işleme
+      amacıyla Amerika Birleşik Devletleri'ne** aktarabileceğini kabul ediyorum."
+    data_collection_us: Code.org, kâr amacı gütmeyen, ABD merkezli bir web sitesi
+      olup ABD'nin veri toplama için geçerli kanunlarının, ülkemdeki kanunlardan farklı
+      olabileceğini anlıyorum.
+    visit_privacy: Daha fazla bilgi için Code.org'un [Gizlilik Politikasını](%{privacy_url})
+      ziyaret edin.
     student_terms_markdown: Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza
       izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında
       asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik
@@ -1337,15 +1344,6 @@ tr:
       veya cihazınızdaki çerezlerin depolanmasını kabul etmiş olursunuz.
     more_information: Code.org'un Gizlilik Politikasına bakın.
     accept: Kabul ediyorum
-  gdpr_dialog:
-    heading: Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul
-      ediyor musunuz?
-    message: Bu siteyi kullanımınıza ilişkin veriler Amerika Birleşik Devletleri’ne
-      gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.
-    link_intro: Ayrıntılar için gizlilik politikamıza
-    privacy_policy: gizlilik politikası
-    logout: Oturumu Kapat
-    true: Evet
   page_not_found_title: Sayfa Bulunamadı
   page_not_found_header: '404: Sayfa Bulunamadı'
   page_not_found_description: Aradığınız sayfa bu adreste bulunmuyor. Web adresini

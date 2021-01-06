@@ -1140,6 +1140,8 @@ ms:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': musim
               sejuk
             undefined: tiada
+      gamelab_setBackgroundImageAs:
+        text: tetapkan latar belakang ke {IMG}
       gamelab_setProp:
         text: Set {SPRITE} {PROPERTY} Untuk {VAL}
         options:
@@ -1631,7 +1633,6 @@ ms:
             '"stoneBricks"': batu bata
             '"mossyStoneBricks"': batu bata berlumut
             '"crackedStoneBricks"': batu bata retak
-            '"decorativeStoneBricks"': batu bata hiasan
             '"blueCoralBlock"': blok karang biru
             '"pinkCoralBlock"': blok karang merah jambu
             '"magentaCoralBlock"': blok karang magenta

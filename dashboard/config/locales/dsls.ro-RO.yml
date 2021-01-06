@@ -2398,3 +2398,18 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      CSD U1 Test:
+        title: Test Post-Proiect Computere și Rezolvare de Probleme
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          #Prezentare generală
+
+          Lecția se desfășoară în grupuri care încearcă să proiecteze bărci construite din folie de aluminiu, bărci care vor transporta cât se poate de multe monede. La sfârșitul lecției, grupurile vor discuta despre experiența avută în timpul activității de proiectare și vor descoperi legături între tipurile de algoritmi pe care le vor folosi de-a lungul cursului.
+
+          ##Resurse
+
+          * [Bărci de aluminiu](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Ghid de lecție (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      outbreak_story:
+        content1: descrierea aici
+      outbreak_story2:
+        content1: descrierea aici

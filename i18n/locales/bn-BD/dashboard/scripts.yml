@@ -1619,3 +1619,7 @@ bn:
               name: কোর্স A
             Course B:
               name: কোর্স B
+        ml-playground:
+          lessons:
+            intro:
+              name: ভূমিকা

@@ -765,6 +765,8 @@ ca:
         text: color aleatori
       gamelab_randomColor:
         text: color aleatori
+      gamelab_repeatForever:
+        text: repetir per sempre
       gamelab_setBackground:
         text: definir el color de fons {COLOR}
       gamelab_setBackgroundImage:
@@ -1014,7 +1016,6 @@ ca:
             '"stoneBricks"': maons de pedra
             '"mossyStoneBricks"': maons de pedra amb molsa
             '"crackedStoneBricks"': maons de pedra esquerdats
-            '"decorativeStoneBricks"': maons de pedra decoratius
             '"blueCoralBlock"': bloc de corall blau
             '"pinkCoralBlock"': bloc de corall rosa
             '"magentaCoralBlock"': bloc de corall magenta

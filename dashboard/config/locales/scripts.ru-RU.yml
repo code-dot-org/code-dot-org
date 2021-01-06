@@ -1426,6 +1426,8 @@ ru:
           lessons:
             Digital Citizenship:
               name: Цифровое гражданство
+            More Programming with Scratch:
+              name: Больше программирования в Scratch
             Songwriting:
               name: Написание песен
         grade1:
@@ -1705,6 +1707,8 @@ ru:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
+            Learn to Drag and Drop:
+              name: Изучение перетаскивания
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
@@ -1713,6 +1717,8 @@ ru:
               name: Безопасное путешествие
         courseb-draft:
           lessons:
+            Learn to Drag and Drop:
+              name: Изучение перетаскивания
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
@@ -1768,6 +1774,8 @@ ru:
               name: Цифровое гражданство
             Build Your Project:
               name: Создать свой проект
+            More Programming with Scratch:
+              name: Больше программирования в Scratch
             Private and Personal Information:
               name: Private and Personal Information
             Internet:
@@ -2132,9 +2140,13 @@ ru:
           description_audience: 'Возраст: 4-7'
           description_short: Введение в компьютерные науки для детей, еще не умеющих
             читать.
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
+            Learn to Drag and Drop:
+              name: Последовательность действий при перетаскивании
             'Loops: Happy Loops':
               description_teacher: Циклы - это очень полезный и мощный инструмент
                 в программировании. Чтобы понять, насколько полезными могут быть циклы,
@@ -2149,13 +2161,19 @@ ru:
           assignment_family_title: Курс B
           description_short: Введение в компьютерные науки для детей, еще не умеющих
             читать (аналог курса А, но с большим разнообразием для учащихся постарше).
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
+            Learn to Drag and Drop:
+              name: Последовательность действий при перетаскивании
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            Programming with Rey and BB-8:
+              name: Программирование с Рееем и BB-8
         coursec-2017:
           title: Курс С
           assignment_family_title: Курс С
@@ -2358,6 +2376,8 @@ ru:
           title: Экспресс-курс
           assignment_family_title: Экспресс-курс
           description_audience: 'Возраст: 9-18'
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           lesson_groups:
             content:
               display_name: Содержимое
@@ -2396,9 +2416,13 @@ ru:
               name: Вложенные циклы
         pre-express-2017:
           description_audience: 'Возраст: 4-8'
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
+            Learn to Drag and Drop:
+              name: Последовательность действий при перетаскивании
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
@@ -2782,6 +2806,8 @@ ru:
               name: Списки
         coursea-2018:
           assignment_family_title: Курс A
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           description_short: Введение в компьютерные науки для детей, еще не умеющих
             читать.
           description_audience: 'Возраст: 4-7'
@@ -2790,11 +2816,14 @@ ru:
               name: Незамеченные Баги
             'Persistence & Frustration: Stevie and the Marbles':
               name: Стиви и Большой Проект
+            Learn to Drag and Drop:
+              name: Изучение перетаскивания
             'Programming: Happy Maps':
               name: Весёлые карты
             Going Places Safely:
               name: Безопасное путешествие
             'Loops: Happy Loops':
+              name: Счастливые циклы
               description_teacher: Циклы - это очень полезный и мощный инструмент
                 в программировании. Чтобы понять, насколько полезными могут быть циклы,
                 ученикам нужно будет водить, чтобы найти более простой способ решить
@@ -2808,6 +2837,8 @@ ru:
         express-2018:
           title: Экспресс-курс
           assignment_family_title: Экспресс-курс
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           description_audience: 'Возраст: 9-18'
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -2858,15 +2889,27 @@ ru:
               name: Программирование на бумаге в клеточку
         courseb-2018:
           assignment_family_title: Курс B
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
+            Learn to Drag and Drop:
+              name: Изучение перетаскивания
             Your Digital Footprint:
               name: Твой цифровой след
+            Programming with Rey and BB-8:
+              name: Программирование с Рееем и BB-8
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            Programming in Ice Age:
+              name: Программирование со Скратом
+            Loops in Ice Age:
+              name: Циклы со Скратом
+            Sequencing with Scrat:
+              name: Последовательность в "Скрат"
             Move It, Move It:
               name: Вперед, вперед
             Copyright and Creativity:
@@ -3333,6 +3376,8 @@ ru:
             Thursday:
               name: Четверг
         pre-express-2018:
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           description_audience: 'Возраст: 4-8'
           lessons:
             'Debugging: Unspotted Bugs':
@@ -3341,6 +3386,8 @@ ru:
               name: Стиви и Большой Проект
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
+            Learn to Drag and Drop:
+              name: Изучение перетаскивания
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
@@ -3349,10 +3396,18 @@ ru:
               name: Пчела
             Move It, Move It:
               name: Вперед, вперед
+            Sequencing with Scrat:
+              name: Последовательность в "Скрат"
             Your Digital Footprint:
               name: Твой цифровой след
+            Programming in Ice Age:
+              name: Программирование со Скратом
             Copyright and Creativity:
               name: Честность в творчестве и игре
+            Programming with Rey and BB-8:
+              name: Программирование с Рееем и BB-8
+            Loops in Ice Age:
+              name: Циклы со Скратом
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стиви и Большой Проект
         fit-test:
@@ -3668,6 +3723,8 @@ ru:
         gamelab:
           title: Лаборатория игр
         coursea-2019:
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           description_short: Введение в компьютерные науки для детей, еще не умеющих
             читать.
           description_audience: 'Возраст: 4-7'
@@ -3686,6 +3743,7 @@ ru:
             Going Places Safely:
               name: Безопасное путешествие
             'Loops: Happy Loops':
+              name: Счастливые циклы
               description_teacher: Циклы - это очень полезный и мощный инструмент
                 в программировании. Чтобы понять, насколько полезными могут быть циклы,
                 ученикам нужно будет водить, чтобы найти более простой способ решить
@@ -3696,7 +3754,21 @@ ru:
               name: Циклы в исполнителе Художник
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
+            Learn to Drag and Drop:
+              name: Изучение перетаскивания
+              description_student: Щелкните и перетащите, чтобы закончить головоломки.
+            Loops in Ice Age:
+              name: Циклы со Скратом
+            Programming in Ice Age:
+              name: Программирование со Скратом
+            Programming with Rey and BB-8:
+              name: Программирование с Рееем и BB-8
+            Sequencing with Scrat:
+              name: Последовательность в "Скрат"
+              description_student: Запрограммируйте Скрета, чтобы добраться до желудя.
         courseb-2019:
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -3709,8 +3781,12 @@ ru:
           lessons:
             Move It, Move It:
               name: Вперед, вперед
+            Sequencing with Scrat:
+              name: Последовательность в "Скрат"
             Your Digital Footprint:
               name: Твой цифровой след
+            Programming with Rey and BB-8:
+              name: Программирование с Рееем и BB-8
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Loops in Collector:
@@ -3733,14 +3809,22 @@ ru:
           lessons:
             Move It, Move It:
               name: Вперед, вперед
+            Sequencing with Scrat:
+              name: Последовательность в "Скрат"
             Your Digital Footprint:
               name: Твой цифровой след
+            Programming with Rey and BB-8:
+              name: Программирование с Рееем и BB-8
+            Loops in Ice Age:
+              name: Циклы со Скратом
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Spelling Bee:
               name: Пчела
+            Learn to Drag and Drop:
+              name: Изучение перетаскивания
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
         removed19:
@@ -4213,6 +4297,10 @@ ru:
             csf_events:
               display_name: События
           lessons:
+            Sequencing with Scrat:
+              name: Последовательность в "Скрат"
+            Programming with Rey and BB-8:
+              name: Программирование с Рееем и BB-8
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Ocean Scene with Loops:
@@ -4608,6 +4696,8 @@ ru:
             Sprites:
               name: Спрайты
         coursea-2020:
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           description_short: Введение в компьютерные науки для детей, еще не умеющих
             читать.
           description_audience: 'Возраст: 4-7'
@@ -4623,18 +4713,36 @@ ru:
           lessons:
             Going Places Safely:
               name: Безопасное путешествие
+            Learn to Drag and Drop:
+              name: Изучение перетаскивания
+              description_student: Щелкните и перетащите, чтобы закончить головоломки.
             'Programming: Happy Maps':
               name: Весёлые карты
+            Sequencing with Scrat:
+              name: Последовательность в "Скрат"
+              description_student: Запрограммируйте Скрета, чтобы добраться до желудя.
+            Programming in Ice Age:
+              name: Программирование со Скратом
+            Programming with Rey and BB-8:
+              name: Программирование с Рееем и BB-8
             'Loops: Happy Loops':
+              name: Счастливые циклы
               description_teacher: Циклы - это очень полезный и мощный инструмент
                 в программировании. Чтобы понять, насколько полезными могут быть циклы,
                 ученикам нужно будет водить, чтобы найти более простой способ решить
                 повседневные проблемы.
+            Loops in Ice Age:
+              name: Циклы со Скратом
             Loops in Collector:
               name: Циклы в Собирателе
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
+            Safety in My Online Neighborhood:
+              name: Безопасность в моем интернет-окружении
+              description_student: Узнайте, как безопасно посещать сайты в Интернете.
         courseb-2020:
+          description: Изучите основы информатики и интернет-безопасности. В конце
+            курса создайте свою собственную игру или историю, которой сможете поделиться.
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -4877,6 +4985,12 @@ ru:
             csf_events:
               display_name: События
           lessons:
+            Learn to Drag and Drop:
+              name: Изучение перетаскивания
+            Sequencing with Scrat:
+              name: Последовательность в "Скрат"
+            Programming with Rey and BB-8:
+              name: Программирование с Рееем и BB-8
             Spelling Bee:
               name: Пчела
             Loops in Ice Age:
@@ -4887,6 +5001,8 @@ ru:
               name: Циклы в исполнителе Художник
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            Loops with Scrat:
+              name: Циклы со Скратом
             Loops with Laurel:
               name: Циклы в Собирателе
             Drawing Gardens with Loops:
@@ -5100,3 +5216,11 @@ ru:
               name: Курс B
             CS Discoveries:
               name: Открытия в информатике
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI для океанов
+            intro:
+              name: Введение
+            visualizing:
+              name: Визуализация данных

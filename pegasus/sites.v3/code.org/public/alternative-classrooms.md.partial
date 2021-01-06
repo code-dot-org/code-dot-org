@@ -38,7 +38,7 @@ We also highly recommend you watch the recorded webinar for a walkthrough of the
 
 <div class="col-60">
 {{ alt_classrooms_vid }}
-<i>Note: this recording is from a webinar specific to a CS Principles teacher. Lesson-specific adaptations are currently available only for CS Principles, and will be released for CS Discoveries in early September. To access the full video, <a href=
+<i>Note: this recording is from a webinar specific to a CS Principles teacher. Lesson-specific adaptations are currently available for CS Principles and CS Discoveries. To access the full video, <a href=
 https://code.zoom.us/rec/play/vpN8JLivrjk3GoeTuQSDA_5_W9Toev6shyVPr6dfmByzAHMLN1v3N-MWYuG8VL58QfLYAPsIFFbnn54k?autoplay=true" target="_blank">click here</a>.</i>
 </div>
 
@@ -148,8 +148,8 @@ Click each question to expand and see the answers. Don’t see your question ans
 	<li>
 		<strong>Block Documentation</strong> (<a href="https://studio.code.org/docs/spritelab/" target="_blank">Sprite Lab</a>, <a href="https://studio.code.org/docs/applab/" target="_blank">App Lab</a>, <a href="https://studio.code.org/docs/gamelab/" target="_blank">Game Lab</a>, <a href="https://studio.code.org/docs/weblab/" target="_blank">Web Lab</a>): students can learn more about how to use specific coding blocks by hovering over a code block on a level, and then tapping “See examples” in the tooltip that appears.
 		<br>
-		<img src="/images/fit-567/athome/block_doc.png" alt="Example of code block documentation">	
-		<br>	
+		<img src="/images/fit-567/athome/block_doc.png" alt="Example of code block documentation">
+		<br>
 	</li>
 </ul>
 <br>

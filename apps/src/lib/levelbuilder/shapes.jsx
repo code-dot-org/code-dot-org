@@ -56,7 +56,6 @@ export const activitySectionShape = PropTypes.shape({
   position: PropTypes.number.isRequired,
   displayName: PropTypes.string.isRequired,
   remarks: PropTypes.bool,
-  slide: PropTypes.bool,
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape).isRequired
@@ -74,7 +73,12 @@ export const activityShape = PropTypes.shape({
 export const resourceShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  audience: PropTypes.string,
+  assessment: PropTypes.bool,
+  includeInPdf: PropTypes.bool,
+  downloadUrl: PropTypes.string
 });
 
 export const levelShapeForScript = PropTypes.shape({
@@ -117,7 +121,7 @@ export const lessonGroupShape = PropTypes.shape({
 
 export const relatedLessonShape = PropTypes.shape({
   scriptTitle: PropTypes.string.isRequired,
-  versionYear: PropTypes.string.isRequired,
+  versionYear: PropTypes.string,
   lockable: PropTypes.bool,
   relativePosition: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,

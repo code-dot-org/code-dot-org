@@ -163,12 +163,15 @@ cs-CZ:
         title: 'Umělec: ladění - Vícenásobná volba 1'
       2-3 artist functions multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
         questions:
         - text: Vyber správné bloky k nakreslení tohoto obrázku pomocí zadané funkce
         title: Umělecká funkční vícenásobná volba jedna
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
       2-3 artist loops match 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
@@ -327,8 +330,9 @@ cs-CZ:
         title: Vícenásobná volba
       4-5 Crowdsourcing Multi 1:
         answers:
-        - {}
-        - correct: true
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
         questions:
         - text: Který z těchto obrázků představuje nejlépe crowdsourcing?
         title: Vícenásobná volba
@@ -354,14 +358,16 @@ cs-CZ:
         title: Vícenásobná volba
       4-5 Internet Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 23.23.224.106
+        - text: 54.209.61.132
+        - text: 64.14.68.10
+        - text: 54.243.71.82
+          correct: true
         questions:
         - text: Když se pokusíš přihlásit ke code.org, IP adresa je nejpravděpodobnější
             z DNS?
         title: Vícenásobná volba
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
       4-5 Internet Multi 2:
         answers:
         - text: code.org
@@ -373,121 +379,153 @@ cs-CZ:
         - text: Když DNS poslal tě ke stránce na adrese IP 100.42.50.110, na kterém
             website jsi?
         title: Vícenásobná volba
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
       4-5 Songwriting Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Lou, Lou, skip to my Lou,
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin."
+          correct: true
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin.\n\nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,"
+        - text: "Fly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,
+            \  \nSkip to my Lou, my darlin."
         questions:
-        - {}
+        - text: Jaký je největší kus této písně, které lze nastavit jako refrén? Refrén
+            se opakuje přesně pokaždé, když se vyvolá.
         title: Vícenásobná volba
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
       4-5 Suncatchers Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "**STACK**"
+        - text: "**STAMP**"
+        - text: "**STAR**"
+        - text: "**RAMP**"
         content1: Porovnej každý program na slovo, které dělá pomocí poskytované skupiny
           dovedností.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         title: Porovnání
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
       4-5 Suncatchers Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         questions:
         - text: Který z programů pod <em>nemá</em> přesně stejné pořadí jako Program
             1?
         title: Vícenásobná volba
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
       4-5 artist loops multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
         questions:
         - text: Které bloky vytváří návrh?
         title: 'Umělec - cykly: Vícenásobná volba'
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
       4-5 artist multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
         questions:
         - text: Které bloky nakreslí obdélník s obvodem 100?
         title: Umělecká vícenásobná volba
       4-5 artist multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
         questions:
         - text: Která kresba je symetrická?
         title: Umělecká vícenásobná volba
       4-5 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
         questions:
         - text: Vyber nejlepší bloky.
         title: Včelí podmínková vícenásobná volba
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
+        content2: Fialová květina může mít buď 3, 2 nebo 1 nektar, ale neznáš jejich
+          počet. Které bloky správně zkontrolují a sesbírají všechen nektar z fialové
+          květiny?
       4-5 bee debug multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png\n"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
         questions:
         - text: Která verze funkce bude fungovat?
         title: Včelí ladící vícenásobná volba
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
       4-5 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
         questions:
         - text: Které bloky vyřeší puzzle?
         title: Včelí cyklická vícenásobná volba
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
       4-5 maze conditionals multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
         questions:
         - text: Které bloky vyřeší puzzle?
         title: Bludištní podmínková vícenásobná volba
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
       4-5 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
         content1: Přiřaď bloky k hádankám
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         title: Porovnávací bludiště
       4-5 maze multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
         questions:
         - text: Které bloky vyřeší puzzle?
         title: Bludištní vícenásobná volba
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
       BigEvent-Unplugged:
         markdown: |
           # Velká událost
@@ -2728,3 +2766,7 @@ cs-CZ:
           Klikni na Pokračovat a vyzkoušej si to!"
       CSD User Centered Design Post-Project Test:
         title: 'Design zaměřený na uživatele: Test po projektu'
+      CSD U1 Test:
+        title: Počítač a řešení problémů - test po projektu
+      CSD U5 test:
+        title: Data a společnost - test po projektu

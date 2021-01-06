@@ -79,13 +79,13 @@ nl:
     submit: 'Hint toevoegen'
   appname: "Code.org"
   stage: "level"
-  stage_number: "Niveau %{number}"
+  stage_number: "Les %{number}"
   puzzle: "Puzzel"
   trophies: "prijzen"
   courses: 'Cursussen'
   courses_page:
-    title_student: "Leer meer op Code Studio"
-    title_teacher: "Leren met Code Studio"
+    title_student: "Leer Informatica"
+    title_teacher: "Informaticawetenschappen onderwijzen"
   unplugged_activity: 'Unplugged Activiteit'
   of: "van"
   more: "MEER"
@@ -114,15 +114,22 @@ nl:
     clever: 'Slimme Account'
     powerschool: 'Powerschool'
     forgot_password: 'Wachtwoord vergeten?'
+    migration_success: 'Gelukt! Je hebt geüpdatet naar onze nieuwe accountervaring.'
+    demigration_success: 'De nieuwe accountervaring is nu afgezet voor je account.'
     need_confirmation: "Geen bevestigingsinstructies ontvangen?"
     need_unlock: "Nog geen unlock instructies ontvangen?"
     not_linked: "Sorry, je Code.org account is niet gelinkt aan je %{provider}. Om in te loggen zal je onderaan je wachtwoord moeten invullen."
     use_clever: "Sorry, uw Code.org account is niet gekoppeld aan uw %{provider}. Gelieve aan te melden via uw Clever Portal."
+    invalid_provider: "Je %{provider}-account kan niet worden verbonden met je Code.org-account."
+    migration_required: "Sorry, we kunnen geen accounts die nog gebruikmaken van de oude accountervaring verbinden of loskoppelen. Gelieve te updaten naar de nieuwe accountervaring."
+    unable_to_connect_provider: "Het lukt niet om je Code.org account te verbinden met je %{provider} account. Probeer opnieuw aub."
+    disconnect_successful: "Gelukt! We hebben het externe account losgekoppeld van je Code.org account."
     already_in_use: "Je %{provider}-account is al verbonden met een ander Code.org-account."
     already_linked: "Je %{provider}-account is al verbonden met je Code.org-account."
     existing_account:
       account_exists: "Goed nieuws! Je hebt al een Code.org-account dat %{email} gebruikt"
       sign_in: "Log alsjeblieft in met je bestaande account. Daarna kun je met je %{provider}-account verbinden in je Accountinstellingenpagina."
+      sign_up: "Niet jouw emailadres? Wil je een nieuw account maken met een ander emailadres? Als je kiest om een nieuw account te maken, kan je nadien je %{provider} profiel verbinden via de Accountinstellingen pagina."
   signup_form:
     email_signup: 'Aanmelden met je e-mailadres'
     student_count: '%{count} studenten hebben zich reeds aangemeld.'
@@ -149,8 +156,11 @@ nl:
     valid_password: "Geldig wachtwoord!"
     invalid_password: "Wachtwoord moet ten minste 6 tekens lang zijn"
     mismatch_password: "De twee wachtwoorden komen niet overeen"
-    agree_us_website: "Ik ga akkoord met het gebruik van een website die in de Verenigde Staten gevestigd is."
-    my_data_to_us: "Gegevens over mijn gebruik van deze site mogen worden verzonden naar en opgeslagen of verwerkt worden in de Verenigde Staten."
+    student_consent: "Ik bevestig dat ik toestemming heb van mijn ouder of voogd om the Code.org diensten te gebruiken."
+    agree_us_data_transfer_teacher: '**Ik ga ermee akkoord dat Code.org data overbrengt (waaronder persoonlijke gegevens) van mijn gebruik (en het gebruik door mijn studenten) van deze website naar de Verenigde Staten** met als doel het hosten en verwerken van dergelijke data.'
+    data_collection_us: "Ik begrijp dat Code.org een in de VS gevestigde non-profit website is en dat de wetten waaronder het verzamelen van data in de VS valt kunnen afwijken van de wetten in mijn land."
+    visit_privacy: 'Ga naar het [Privacybeleid](%{privacy_url}) van Code.org voor meer informatie.'
+    student_terms_markdown: "Emailadressen worden niet bewaard in een formaat dat ons toelaat om leerlingen te mailen. Leerlingen zullen nooit mails ontvangen van Code.org behalve bij een wachtwoord reset. Zie onze [privacy policy](http://code.org/privacy) voor meer informatie."
     additional_information: "We hebben aanvullende informatie nodig om door te kunnen gaan met uw registratie."
     user_type_button: "Accounttype bijwerken"
     user_type_label: "Accounttype"
@@ -163,6 +173,7 @@ nl:
     email_preference_privacy: "(Zie ons privacy beleid)"
     email_preference_yes: "Ja"
     email_preference_no: "Nee"
+    email_preference_required: "Je moet een emailvoorkeur instellen."
     parent_account_checkbox: "Ik ben een ouder/voogd die zich aanmeld namens mijn kind."
     parent_account_email_progress_permission: "Kunnen wij u af en toe e-mailen over de voortgang van uw kind en de projecten, en u op de hoogte houden van hun cursus en informatica?  [(Zie ons privacybeleid)](%{privacy_policy_url})"
     parent_account_email_label: "E-mail ouder/voog"
@@ -206,6 +217,7 @@ nl:
     login: 'Aanmelden'
     invalid_login: 'Onjuiste login, probeer opnieuw'
     pair_programming: 'Ik werk met een partner achter de computer'
+    student_privacy_markdown: "Meer informatie over waarom u niet uw volledige naam ziet vindt u [hier](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Wachtwoord vergeten?'
@@ -235,6 +247,7 @@ nl:
     parent_email_added_subject: 'Welkom bij Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Welkom bij Code.org!'
+    delete_teacher_subject: 'Code.org melding: Je account is verwijderd.'
   section:
     your_section:
       one: 'Jouw sectie:'
@@ -282,6 +295,12 @@ nl:
     updated: '%{model} bijgewerkt.'
     destroyed: '%{model} is succesvol verwijderd.'
     access_denied: 'Je hebt geen toegang tot dit %{model}.'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "Het emailadres dat je hebt ingegeven, komt niet overeen met het emailadres van dit account."
+        personal_login_created_email: 'Het aanmaken van je persoonlijk account is gelukt. Je kan nu je account bereiken door in te loggen met je emailadres en wachtwoord.'
+        personal_login_created_username: 'Het aanmaken van je persoonlijk account is gelukt. Je kan nu je account bereiken door in te loggen met je gebruikersnaam (%{username}) en wachtwoord'
   nav:
     header:
       finished_hoc: "Ik heb mijn Uur Code afgemaakt"
@@ -296,6 +315,8 @@ nl:
       professional_learning: "Professioneel Leren"
       documentation: "Documentatie"
       tutorials: "Tutorials"
+      web_lab_documentation: "Web Lab Documentatie"
+      educate_overview: "Leerkracht Overzicht"
       educate_elementary: "Basisschool"
       educate_middle: "Middelbare school"
       educate_high: "Middelbare school"
@@ -310,6 +331,7 @@ nl:
       about_donors: "Sponsors"
       about_partners: "Partners"
       about_team: "Volledig Team"
+      about_news: "Persinfo"
       about_evaluation: "Beoordeling"
       about_jobs: "Vacatures"
       about_contact: "Neem contact met ons op"
@@ -352,8 +374,10 @@ nl:
       gumball: 'Gumball'
       iceage: 'Ice Age'
       infinity: 'Oneindig'
+      makerlab: 'Maker Gereedschap'
       minecraft_adventurer: 'Minecraft avonturier'
       minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_codebuilder: 'Minecraft: Code Verbinding'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Held'
       playlab: 'Speel Lab'
@@ -409,16 +433,25 @@ nl:
     current_password_hint: '(we hebben je huidige wachtwoord nodig om je veranderingen te bevestigen)'
     delete: 'Verwijder jouw account'
     delete_text: "Door op de knop hieronder te drukken verwijder je jouw account."
+    delete_text_teacher_managed_note: "Je hebt niet de nodige rechten om dit account te verwijderen omdat het door je leerkracht wordt beheerd. Je leerkracht(en) moeten je verwijderen uit hun groepen, voordat je je account kan verwijderen."
     delete_text_teacher_note: "Let op: door jouw account te verwijderen, worden de accounts van de leerlingen niet verwijderd."
     delete_confirm: 'Weet je zeker dat je jouw account wil verwijderen?'
     deleted_user: 'verwijder gebruiker'
+    no_password_because_oauth: 'Geen wachtwoord nodig omdat je inlogt met een externe provider.'
     no_password_because_sponsored: 'Neem contact op met uw leraar voor het beheren van uw wachtwoord.'
     create_personal_login: 'Maak een persoonlijke login'
+    create_personal_login_under_13_info: 'Als je je Code.org account wilt kunnen blijven gebruiken na dit schooljaar, vraag dan aan je ouder/voogd om je te helpen bij het aanmaken van een persoonlijke login hieronder.'
     create_personal_login_under_13_username: "Gebruikersnaam (gebruik niet uw echte naam!)"
     create_personal_login_under_13_parent_email: 'E-mailadres van ouder/voogd'
+    create_personal_login_info: 'Als je je Code.org account wilt kunnen blijven gebruiken na dit schooljaar, kan je hieronder een persoonlijke login aanmaken.'
+    create_personal_login_link_account: 'Als alternatief kan je ook kiezen dit account te verbinden met een persoonlijke account onder de "Beheer verbonden accounts" sectie.'
+    create_personal_login_email_note: "Merk op: Emailadressen worden niet bewaard in een formaat dat ons toelaat om leerlingen te mailen. Leerlingen zullen nooit mails ontvangen van Code.org behalve bij een wachtwoord reset. Zie onze <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> voor meer informatie."
+    create_personal_login_email_note_markdown: 'Merk op: Emailadressen worden niet bewaard in een formaat dat ons toelaat om leerlingen te mailen. Leerlingen zullen nooit mails ontvangen van Code.org behalve bij een wachtwoord reset. Zie onze [privacy policy](%{privacy_policy_url}) voor meer informatie.'
     enter_new_login_info: 'Voer je nieuwe aanmeldgegevens in'
+    confirm_secret_words: 'Bevestig dat jij het bent door je huidige geheime woorden in te geven.'
     parent_email_label: "E-mailadres van ouder/verzorger (optioneel)"
     parent_email_hint: "(dit kan worden gebruikt voor wachtwoordherstel)"
+    enter_parent_email: "Geef het emailadres van je ouder of voogd in (voor wachtwoordherstel)"
     update: "Account bijwerken"
     account_successfully_updated: "Account succesvol bijgewerkt."
     update_email: "Bijwerken"
@@ -566,7 +599,7 @@ nl:
   upsell:
     applab:
       title: 'App Lab'
-      body: "App Lab is een programmeer omgeving waar jij simpele apps kan maken. Ontwerp een app, codeer met blokken of JavaScript om het te laten werken, en deel je app dan in een par seconden."
+      body: "App Lab is een programmeeromgeving waarmee je simpele apps kan maken. Ontwerp een app, programmeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden."
       body_short: "Ontwerp een app, codeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden."
       audience: 'Leeftijd 13+'
       cta: 'Leer hoe'
@@ -592,10 +625,14 @@ nl:
       body: "Bekijk een galerij van apps en kunstwerken gemaakt door onze gebruikers"
     gamelab:
       title: "Game Lab"
+      body: "Game Lab is een programmeeromgeving waarin je eenvoudige animaties en games kan maken met objecten en personages die met elkaar interageren."
       audience: "Leeftijd 13+"
       cta: "Leer hoe"
+    hoc-encryption:
+      body: "Leerlingen willen technieken leren om versleutelde berichten te maken en te breken."
     weblab:
       title: "Web Lab (bèta)"
+      body: "Web Lab is een programmeeromgeving waarin je eenvoudige webpagina's gebruikmakend van HTML en CSS kan maken. Ontwerp je webpagina's en deel je site binnen enkele seconden."
       audience: "Leeftijd 13+"
       cta: "Leer hoe"
     frozen:
@@ -615,9 +652,10 @@ nl:
       title: "Minecraft"
     hero:
       title: "Minecraft"
-      body: "Minecraft is terug bij Hour of Code met een gloednieuwe activiteit! Gebruik code om door Minecraft te reizen."
+      body: "Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer om door Minecraft te reizen."
     text-compression:
       title: "Tekstcompressie"
+      body: "In deze les zullen leerlingen de Tekstcompressiewidget gebruiken om tekst te comprimeren door patronen te vervangen door symbolen."
     unplugged:
       title: "'Unplugged' lessen"
       audience: "Leeftijden 6+"
@@ -625,8 +663,10 @@ nl:
       body_short: "Als je geen computers hebt, probeer dan deze 'unplugged' lessen in je klaslokaal."
     unplugged_conditionals:
       title: "Voorwaardelijke instructies"
+      body: "Leer over algoritmes en conditionele statements in deze \"unplugged\" activiteit door gebruik te maken van een kaartspel."
     widgets:
       title: "Widgets"
+      body: "Studenten kunnen concepten uit onze 'CW Principles cursus' diepgaand verkennen door gebruik te maken van deze digitale hulpmiddelen. Gebruik de widgets op zichzelf, of maak een één-concept-les."
       audience: "Leeftijd 14+"
       cta: "Leer hoe"
   landing:
@@ -684,6 +724,8 @@ nl:
     open_response_body: "Bedankt voor uw reactie!"
     correct_title: "Juist"
     correct_body: "Dat is het juiste antwoord."
+  lesson_extras:
+    bonus_level: "Bonuslevel"
   dialog:
     ok: "OK"
     startover_title: "Weet je zeker dat je opnieuw wilt beginnen?"
@@ -697,13 +739,20 @@ nl:
   age_interstitial:
     age: Je leeftijd
     header: Update Account Informatie
+    disclaimer: "Zoals altijd zal code.org deze informatie nooit uitlenen, verkopen of delen met derden."
+    sign_out_markdown: 'Als je je leeftijd niet wilt ingeven, kan je [uitloggen](%{url}).'
   terms_interstitial:
+    title: "Aangepaste gebruiksvoorwaarden en privacy policy"
     tos: "Gebruiksvoorwaarden"
     privacy: "Privacybeleid"
     privacy_notice: "Privacyverklaring"
+    accept_label: 'Ik ga akkoord met de <a href="%{tos_url}" target="_blank">gebruiksvoorwaarden</a> en <a href="%{privacy_url}" target="_blank">privacy policy</a>.'
+    accept_label_markdown: Ik ga akkoord met de [gebruiksvoorwaarden](%{tos_url}) en [privacy policy](%{privacy_url}).
     accept: "Accepteren"
     print: "Afdrukken"
+    review_terms: "Herzie de aangepaste gebruiksvoorwaarden"
   donor_interstitial:
+    title: "Je gratis informaticacursussen worden mogelijk gemaakt door..."
     local_supporters: "Lokale ondersteuners"
     global_supporters: "Globale ondersteuners"
     support_codeorg_1: "Elke euro die Code.org ontvangt, geeft meer leerlingen kansen."
@@ -826,7 +875,7 @@ nl:
         mexico: 'Mexico'
         thailand: 'Thailand'
       subjects:
-        cs: 'informatica'
+        cs: 'informaticawetenschappen'
         ict: 'ICT'
         math: 'wiskundige'
         science: 'Wetenschap'
@@ -857,11 +906,6 @@ nl:
   courses_category: 'Volledige Cursussen'
   cookie_banner:
     accept: 'Ik ga akkoord'
-  gdpr_dialog:
-    heading: 'Gaat u akkoord met het gebruik van een website die in de Verenigde Staten gevestigd is?'
-    message: 'Gegevens over uw gebruik van deze site kunnen worden verzonden naar en opgeslagen of verwerkt worden in de Verenigde Staten.'
-    logout: 'Uitloggen'
-    yes: 'Ja'
   page_not_found_title: "Pagina niet gevonden"
   copy: 'Kopieër'
   parent_email_banner:

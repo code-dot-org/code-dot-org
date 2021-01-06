@@ -69,7 +69,11 @@ class P5LabVisualizationColumn extends React.Component {
   pickerPointerMove = e => {
     if (this.props.pickingLocation) {
       this.props.updatePicker(
-        calculateOffsetCoordinates(this.divGameLab, e.clientX, e.clientY)
+        calculateOffsetCoordinates(
+          this.divGameLab,
+          Math.floor(e.clientX),
+          Math.floor(e.clientY)
+        )
       );
     }
   };
@@ -161,29 +165,32 @@ class P5LabVisualizationColumn extends React.Component {
 
     return (
       <div style={{position: 'relative'}}>
-        <ProtectedVisualizationDiv>
-          <Pointable
-            id="divGameLab"
-            style={divGameLabStyle}
-            tabIndex="1"
-            onPointerMove={this.pickerPointerMove}
-            onPointerUp={this.pickerPointerUp}
-            elementRef={el => (this.divGameLab = el)}
-          />
-          <VisualizationOverlay
-            width={APP_WIDTH}
-            height={APP_HEIGHT}
-            onMouseMove={this.onMouseMove}
-          >
-            <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
-            <CrosshairOverlay flip={spriteLab} />
-            <TooltipOverlay providers={[coordinatesProvider(spriteLab)]} />
-          </VisualizationOverlay>
-        </ProtectedVisualizationDiv>
-        <TextConsole consoleMessages={this.props.consoleMessages} />
-        {experiments.isEnabled(experiments.SPRITELAB_INPUT) && (
-          <SpritelabInput />
-        )}
+        <div style={{position: 'relative'}}>
+          <ProtectedVisualizationDiv>
+            <Pointable
+              id="divGameLab"
+              style={divGameLabStyle}
+              tabIndex="1"
+              onPointerMove={this.pickerPointerMove}
+              onPointerUp={this.pickerPointerUp}
+              elementRef={el => (this.divGameLab = el)}
+            />
+            <VisualizationOverlay
+              width={APP_WIDTH}
+              height={APP_HEIGHT}
+              onMouseMove={this.onMouseMove}
+            >
+              <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
+              <CrosshairOverlay flip={spriteLab} />
+              <TooltipOverlay providers={[coordinatesProvider(spriteLab)]} />
+            </VisualizationOverlay>
+          </ProtectedVisualizationDiv>
+          <TextConsole consoleMessages={this.props.consoleMessages} />
+          {experiments.isEnabled(experiments.SPRITELAB_INPUT) && (
+            <SpritelabInput />
+          )}
+        </div>
+
         <GameButtons>
           <ArrowButtons />
 

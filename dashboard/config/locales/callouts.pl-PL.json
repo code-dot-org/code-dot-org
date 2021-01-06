@@ -644,10 +644,10 @@
           "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseB_Scrat_ramp1_2019": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseB_Scrat_ramp1_2020": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseB_Scrat_ramp3a_2019": {
           "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
@@ -1470,6 +1470,19 @@
         },
         "express_maze_debugging9_2020": {
           "express_maze_debugging9_2019_1": "Przeciągnij  bloki z przybornika do swojego obszaru roboczego."
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić swój program."
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić swój program."
+        },
+        "outbreak2": {
+          "minitoolbox": "Kliknij tutaj, aby rozwinąć blok.",
+          "pointerlocation": "Przeciągnij tutaj blok tematu."
+        },
+        "outbreak7": {
+          "costumes_callout": "Kliknij, aby utworzyć nowy kostium"
         }
       }
     }

@@ -708,7 +708,12 @@
         "grade5_artist_binary4": "Você consegue desenhar este padrão usando\na repetição de uma string binária de 3 dígitos?",
         "grade5_artist_binary5": "Cada string binária representa uma linha dessa\nimagem. Você consegue reorganizá-las de forma que elas desenhem um rostinho feliz\nao invés de um rostinho triste?",
         "grade5_artist_binary8": "Termine o desenho.",
-        "k-1 maze 1": "Você pode me mover para o oeste para chegar até o porco?"
+        "k-1 maze 1": "Você pode me mover para o oeste para chegar até o porco?",
+        "scrat 16": "Bolota! Bolota! Bolota! Usa um bloco \"se\" para me levar até lá com o menor número de blocos.",
+        "scrat 17": "Ok, vamos fazer novamente para praticar - este não é muito diferente, mas cuidado com a parede!",
+        "scrat 18": "Os blocos \"se-senão\" verificam uma condição, e depois fazem uma coisa OU outra. Para eu chegar à bolota tenta usar este novo bloco.",
+        "scrat 19": "Pratica mais uma vez o bloco \"se-senão\", consegues à primeira tentativa?",
+        "scrat 20": "Podes adicionar apenas 3 blocos para me ajudares a resolver um labirinto mais complexo? Se o fizeres bem, eu consigo andar em qualquer caminho com curvas não interessa o comprimento.  Despacha-te! O gelo está a derreter!"
       }
     }
   }

@@ -1,0 +1,7 @@
+name 'CSD U6 test debugging multi_2021'
+question 'A team is creating a prototype that plays a happy sound on the computer when the left board button is pressed and a sad song on the computer when the right board button is pressed. The happy song is working, but the sad song is not. Choose a HARDWARE problem that could be causing this bug.'
+right 'The right button is broken on the board.'
+wrong 'The speakers on the computer are not working.'
+wrong 'The file name for the sad song is incorrect.'
+wrong 'The board is not connected to the computer.'
+wrong 'The event handler does not have the correct parameters.'

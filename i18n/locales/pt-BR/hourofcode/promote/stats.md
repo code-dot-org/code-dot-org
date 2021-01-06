@@ -30,7 +30,7 @@ Esperamos que isso desperte o interesse dos alunos para continuar aprendendo. Al
 
 #### Por que isso é importante?
 
-A tecnologia está transformando todos os setores do planeta. Em 2015, 7 milhões das novas vagas de trabalho nos EUA eram de cargos que valorizam as habilidades em programação — inclusive nas áreas de arte e design. But 55 percent of schools in the U.S. don't teach computer science. Chegou a hora de agirmos de acordo com o século XXI. Sabemos que, independentemente do que nossos alunos venham a fazer quando chegarem à idade adulta, quer optem pela medicina, quer optem pela administração, política ou artes, saber como construir a tecnologia dará a eles confiança, além de uma vantagem competitiva. <br /> <br />
+A tecnologia está transformando todos os setores do planeta. Em 2015, 7 milhões das novas vagas de trabalho nos EUA eram de cargos que valorizam as habilidades em programação — inclusive nas áreas de arte e design. But 53 percent of schools in the U.S. don't teach computer science. Chegou a hora de agirmos de acordo com o século XXI. Sabemos que, independentemente do que nossos alunos venham a fazer quando chegarem à idade adulta, quer optem pela medicina, quer optem pela administração, política ou artes, saber como construir a tecnologia dará a eles confiança, além de uma vantagem competitiva. <br /> <br />
 
 #### A quote you can use in materials
 

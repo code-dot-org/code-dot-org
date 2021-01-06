@@ -1065,6 +1065,8 @@ mi:
         text: tae matapōkere
       gamelab_randomColor:
         text: tae matapōkere
+      gamelab_repeatForever:
+        text: tōaitia mō ake ake
       gamelab_setBackground:
         text: kowhiri te tae papamuri {COLOR}
       gamelab_setBackgroundImage:
@@ -1364,7 +1366,6 @@ mi:
             '"stoneBricks"': periki kowhatu
             '"mossyStoneBricks"': periki kowhatu kohukohu
             '"crackedStoneBricks"': periki kowhatu pakaru
-            '"decorativeStoneBricks"': periki kowhatu whakapaipai
             '"blueCoralBlock"': paraka punga moana kikorangi
             '"pinkCoralBlock"': paraka punga moana māwhero
             '"magentaCoralBlock"': paraka punga moana mākurakura

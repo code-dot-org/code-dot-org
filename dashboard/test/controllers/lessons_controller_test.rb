@@ -6,6 +6,9 @@ class LessonsControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
+    # stub writes so that we dont actually make updates to filesystem
+    File.stubs(:write)
+
     @script = create :script, name: 'unit-1'
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
@@ -122,12 +125,12 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.create(
       name: 'My Activity',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
     section = activity.activity_sections.create(
       name: 'My Activity Section',
       position: 1,
-      seeding_key: 'activity-section-key'
+      key: 'activity-section-key'
     )
 
     get :show, params: {
@@ -175,18 +178,61 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
   test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :redirect
+  test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
 
-  test 'update lesson' do
+  test 'update lesson returns summary of updated lesson' do
     sign_in @levelbuilder
 
     put :update, params: @update_params
 
-    assert_redirected_to "/lessons/#{@lesson.id}"
-    @lesson.reload
-    assert_equal 'new overview', @lesson.overview
-    assert_equal 'new student overview', @lesson.student_overview
-    assert_equal 0, @lesson.lesson_activities.count
+    assert_equal 'new overview', JSON.parse(@response.body)['overview']
+    assert_equal 'new student overview', JSON.parse(@response.body)['studentOverview']
+  end
+
+  test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    error = assert_raises RuntimeError do
+      post :update, params: {
+        id: lesson.id,
+        lesson: {name: lesson.name},
+        originalLessonData: {"name": "Not the name"}
+      }
+    end
+
+    assert_includes error.message, "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
+  end
+
+  test 'can update if database matches starting content for current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+
+    post :update, params: {
+      id: lesson.id,
+      lesson: {name: lesson.name},
+      originalLessonData: JSON.generate(lesson.summarize_for_lesson_edit.except(:updatedAt))
+    }
+
+    assert_response :success
   end
 
   test 'cannot update lesson with legacy script levels' do
@@ -217,7 +263,6 @@ class LessonsControllerTest < ActionController::TestCase
 
     put :update, params: @update_params
 
-    assert_redirected_to "/lessons/#{@lesson.id}"
     @lesson.reload
     assert_equal 'new overview', @lesson.overview
     assert_equal 'new student overview', @lesson.student_overview
@@ -227,23 +272,48 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 1, activity.position
   end
 
+  test 'update writes lesson name to i18n and script_json in levelbuilder mode' do
+    @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
+
+    # Just make sure the new lesson name appears somewhere in the new file contents.
+    File.stubs(:write).with do |filename, data|
+      filename.end_with?('scripts.en.yml') && data.include?(@update_params[:name])
+    end.once
+
+    # Just make sure the new lesson name appears somewhere in the new file contents.
+    File.stubs(:write).with do |filename, data|
+      filename.end_with?('.script_json') && data.include?(@update_params[:name])
+    end.once
+
+    sign_in @levelbuilder
+    put :update, params: @update_params
+  end
+
+  test 'update does not write lesson name without levelbuilder mode' do
+    @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    File.stubs(:write).raises('must not modify filesystem')
+    sign_in @levelbuilder
+    put :update, params: @update_params
+  end
+
   test 'remove activity via lesson update' do
     sign_in @levelbuilder
 
     id_a = @lesson.lesson_activities.create(
       name: 'activity A',
       position: 1,
-      seeding_key: 'key_a'
+      key: 'key_a'
     ).id
     @lesson.lesson_activities.create(
       name: 'activity B',
       position: 2,
-      seeding_key: 'key_b'
+      key: 'key_b'
     ).id
     id_c = @lesson.lesson_activities.create(
       name: 'activity C',
       position: 3,
-      seeding_key: 'key_c'
+      key: 'key_c'
     ).id
 
     @update_params['activities'] = [
@@ -260,7 +330,6 @@ class LessonsControllerTest < ActionController::TestCase
     ].to_json
 
     put :update, params: @update_params
-    assert_redirected_to "/lessons/#{@lesson.id}"
 
     @lesson.reload
     assert_equal 2, @lesson.lesson_activities.count
@@ -281,7 +350,7 @@ class LessonsControllerTest < ActionController::TestCase
     old_activity = @lesson.lesson_activities.create(
       name: 'activity name',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
 
     @update_params['activities'] = [
@@ -300,7 +369,6 @@ class LessonsControllerTest < ActionController::TestCase
 
     put :update, params: @update_params
 
-    assert_redirected_to "/lessons/#{@lesson.id}"
     @lesson.reload
 
     assert_equal 1, @lesson.lesson_activities.count
@@ -321,17 +389,17 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.create(
       name: 'activity name',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
     activity.activity_sections.create(
       name: 'section A',
       position: 1,
-      seeding_key: 'key_a'
+      key: 'key_a'
     ).id
     id_b = activity.activity_sections.create(
       name: 'section B',
       position: 2,
-      seeding_key: 'key_b'
+      key: 'key_b'
     ).id
 
     @update_params['activities'] = [
@@ -350,7 +418,6 @@ class LessonsControllerTest < ActionController::TestCase
     ].to_json
 
     put :update, params: @update_params
-    assert_redirected_to "/lessons/#{@lesson.id}"
 
     @lesson.reload
     assert_equal 1, @lesson.lesson_activities.count
@@ -374,9 +441,11 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'update lesson removing and adding resources' do
-    resource_to_keep = create :resource
-    resource_to_add = create :resource
-    resource_to_remove = create :resource
+    course_version = create :course_version
+    resource_to_keep = create :resource, course_version: course_version
+    resource_to_add = create :resource, course_version: course_version
+    resource_to_remove = create :resource, course_version: course_version
+    @lesson.script.course_version = course_version
 
     @lesson.resources << resource_to_keep
     @lesson.resources << resource_to_remove
@@ -449,12 +518,12 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.create(
       name: 'activity name',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
     section = activity.activity_sections.create(
       name: 'section name',
       position: 1,
-      seeding_key: 'section-key'
+      key: 'section-key'
     )
 
     level_to_add = create :maze, name: 'level-to-add'
@@ -487,7 +556,6 @@ class LessonsControllerTest < ActionController::TestCase
 
     put :update, params: @update_params
 
-    assert_redirected_to "/lessons/#{@lesson.id}"
     @lesson.reload
 
     assert_equal activity, @lesson.lesson_activities.first
@@ -507,12 +575,12 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.create(
       name: 'activity name',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
     section = activity.activity_sections.create(
       name: 'section name',
       position: 1,
-      seeding_key: 'section-key'
+      key: 'section-key'
     )
 
     existing_survey = create :level_group, name: 'existing-survey'
@@ -527,7 +595,7 @@ class LessonsControllerTest < ActionController::TestCase
       assessment: true
     )
 
-    existing_summary = existing_script_level.summarize_for_edit
+    existing_summary = existing_script_level.summarize_for_lesson_edit
     assert_equal 1, existing_summary[:activitySectionPosition]
     assert_equal existing_survey.id, existing_summary[:activeId]
     existing_summary[:assessment] = false
@@ -565,7 +633,6 @@ class LessonsControllerTest < ActionController::TestCase
 
     put :update, params: @update_params
 
-    assert_redirected_to "/lessons/#{@lesson.id}"
     @lesson.reload
 
     assert_equal activity, @lesson.lesson_activities.first
@@ -601,12 +668,12 @@ class LessonsControllerTest < ActionController::TestCase
       activity = @lesson.lesson_activities.create(
         name: 'activity name',
         position: i,
-        seeding_key: "activity-key-#{i}"
+        key: "activity-key-#{i}"
       )
       section = activity.activity_sections.create(
         name: 'section name',
         position: 1,
-        seeding_key: "section-key-#{i}"
+        key: "section-key-#{i}"
       )
       section.script_levels.create(
         position: i,
@@ -624,7 +691,7 @@ class LessonsControllerTest < ActionController::TestCase
     #     sl 2
     # activity 2
     #   section 2
-    activities_data = @lesson.lesson_activities.map(&:summarize_for_edit)
+    activities_data = @lesson.lesson_activities.map(&:summarize_for_lesson_edit)
     assert_equal 2, activities_data.count
     script_level_data = activities_data.last[:activitySections].first[:scriptLevels].pop
     script_level_data[:activitySectionPosition] = 2
@@ -633,7 +700,6 @@ class LessonsControllerTest < ActionController::TestCase
     @update_params['activities'] = activities_data.to_json
 
     put :update, params: @update_params
-    assert_redirected_to "/lessons/#{@lesson.id}"
 
     @lesson.reload
     script_levels = @lesson.lesson_activities.first.activity_sections.first.script_levels
@@ -657,12 +723,12 @@ class LessonsControllerTest < ActionController::TestCase
       activity = @lesson.lesson_activities.create(
         name: 'activity name',
         position: i,
-        seeding_key: "activity-key-#{i}"
+        key: "activity-key-#{i}"
       )
       section = activity.activity_sections.create(
         name: 'section name',
         position: 1,
-        seeding_key: "section-key-#{i}"
+        key: "section-key-#{i}"
       )
       section.script_levels.create(
         position: i,
@@ -680,7 +746,7 @@ class LessonsControllerTest < ActionController::TestCase
     #   section 2
     #     sl 2
     #     sl 1
-    activities_data = @lesson.lesson_activities.map(&:summarize_for_edit)
+    activities_data = @lesson.lesson_activities.map(&:summarize_for_lesson_edit)
     assert_equal 2, activities_data.count
     script_level_data = activities_data.first[:activitySections].first[:scriptLevels].pop
     script_level_data[:activitySectionPosition] = 2
@@ -689,7 +755,6 @@ class LessonsControllerTest < ActionController::TestCase
     @update_params['activities'] = activities_data.to_json
 
     put :update, params: @update_params
-    assert_redirected_to "/lessons/#{@lesson.id}"
 
     @lesson.reload
     script_levels = @lesson.lesson_activities.first.activity_sections.first.script_levels
@@ -705,12 +770,12 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.create(
       name: 'activity name',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
     section = activity.activity_sections.create(
       name: 'section name',
       position: 1,
-      seeding_key: 'section-key'
+      key: 'section-key'
     )
     [1, 2, 3].each do |i|
       section.script_levels.create(
@@ -723,7 +788,7 @@ class LessonsControllerTest < ActionController::TestCase
     end
     sl_ids = section.script_levels.map(&:id)
 
-    script_levels_data = section.script_levels.map(&:summarize_for_edit)
+    script_levels_data = section.script_levels.map(&:summarize_for_lesson_edit)
     assert_equal 3, script_levels_data.count
 
     @update_params['activities'] = [
@@ -746,7 +811,6 @@ class LessonsControllerTest < ActionController::TestCase
     ].to_json
 
     put :update, params: @update_params
-    assert_redirected_to "/lessons/#{@lesson.id}"
 
     @lesson.reload
     assert_equal activity, @lesson.lesson_activities.first

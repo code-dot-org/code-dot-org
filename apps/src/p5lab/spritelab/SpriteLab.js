@@ -4,7 +4,7 @@ import * as coreLibrary from './coreLibrary';
 import Sounds from '@cdo/apps/Sounds';
 import {getStore} from '@cdo/apps/redux';
 import {clearConsole} from './textConsoleModule';
-import {clearQuestions} from './spritelabInputModule';
+import {clearPrompts} from './spritelabInputModule';
 
 var SpriteLab = function() {
   P5Lab.call(this);
@@ -47,6 +47,6 @@ SpriteLab.prototype.preview = function() {
 SpriteLab.prototype.reset = function() {
   P5Lab.prototype.reset.call(this);
   coreLibrary.reset();
-  getStore().dispatch(clearQuestions());
+  getStore().dispatch(clearPrompts());
   this.preview();
 };

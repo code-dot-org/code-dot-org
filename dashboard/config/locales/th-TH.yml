@@ -608,9 +608,6 @@ th:
         opt_in_no: ไม่ใช่
   cookie_banner:
     accept: ฉันเห็นด้วย
-  gdpr_dialog:
-    privacy_policy: นโยบายความเป็นส่วนตัว
-    true: ใช่
   page_not_found_header: '404: ไม่พบหน้าดังกล่าว'
   page_not_found_description: หน้าที่ท่านกำลังหาอยู่นั้นไม่ปรากฎตามที่อยู่ดังกล่าว
     เช็คที่อยู่ของเว็ปแล้วลองส่งใหม่อีกครั้ง หรือกลับไปที่โฮมเพจของเรา

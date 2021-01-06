@@ -4,6 +4,8 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import color from '@cdo/apps/util/color';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import _ from 'lodash';
 
 const styles = {
   dialog: {
@@ -72,7 +74,7 @@ const initialState = {
   name: '',
   type: '',
   audience: '',
-  pdf: false,
+  includeInPdf: false,
   assessment: false,
   url: '',
   downloadUrl: '',
@@ -83,13 +85,28 @@ export default class AddResourceDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onSave: PropTypes.func,
-    handleClose: PropTypes.func.isRequired
+    handleClose: PropTypes.func.isRequired,
+    existingResource: resourceShape,
+    courseVersionId: PropTypes.number
   };
 
   constructor(props) {
     super(props);
 
-    this.state = {...initialState};
+    if (props.existingResource) {
+      this.state = {
+        name: props.existingResource.name,
+        type: props.existingResource.type,
+        audience: props.existingResource.audience,
+        includeInPdf: props.existingResource.includeInPdf,
+        assessment: props.existingResource.assessment,
+        url: props.existingResource.url,
+        downloadUrl: props.existingResource.downloadUrl,
+        error: ''
+      };
+    } else {
+      this.state = {...initialState};
+    }
   }
 
   validateResource = () => {
@@ -118,22 +135,31 @@ export default class AddResourceDialog extends Component {
     e.preventDefault();
     if (this.validateResource()) {
       const formData = new FormData(e.target);
-      fetch('/resources', {
-        method: 'POST',
+      const method = this.props.existingResource ? 'PATCH' : 'POST';
+      const url = this.props.existingResource
+        ? `/resources/${this.props.existingResource.id}`
+        : '/resources';
+      fetch(url, {
+        method,
         headers: {'X-CSRF-Token': formData.get('authenticity_token')},
         body: formData
       })
+        .then(response => {
+          if (!response.ok) {
+            this.setState({error: response.statusText});
+          }
+          return response;
+        })
         .then(response => (response.ok ? response.json() : {}))
         .then(json => {
-          if (json !== {}) {
+          if (!_.isEmpty(json)) {
             this.resetState();
             if (this.props.onSave) {
               this.props.onSave(json);
             }
             this.props.handleClose();
           }
-        })
-        .catch(error => this.setState({error}));
+        });
     }
   };
 
@@ -151,12 +177,21 @@ export default class AddResourceDialog extends Component {
         useUpdatedStyles
         style={styles.dialog}
       >
-        <h2>Add Resource</h2>
+        <h2>
+          {this.props.existingResource ? 'Edit Resource' : 'Add Resource'}
+        </h2>
         {this.state.error !== '' && (
           <h3 style={{color: 'red'}}>{this.state.error}</h3>
         )}
         <form id="create-resource-form" onSubmit={this.saveResource}>
           <RailsAuthenticityToken />
+          {this.props.courseVersionId && (
+            <input
+              type="hidden"
+              name="courseVersionId"
+              value={this.props.courseVersionId}
+            />
+          )}
           <div style={styles.container}>
             <label style={styles.inputAndLabel}>
               Resource Name *
@@ -210,6 +245,7 @@ export default class AddResourceDialog extends Component {
                   style={styles.checkboxInput}
                   name="assessment"
                   value={this.state.assessment}
+                  checked={this.state.assessment}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -218,8 +254,9 @@ export default class AddResourceDialog extends Component {
                 <input
                   type="checkbox"
                   style={styles.checkboxInput}
-                  name="pdf"
-                  value={this.state.pdf}
+                  name="includeInPdf"
+                  value={this.state.includeInPdf}
+                  checked={this.state.includeInPdf}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -249,7 +286,7 @@ export default class AddResourceDialog extends Component {
             <input
               id="submit-button"
               type="submit"
-              value="Close and Add"
+              value="Close and Save"
               style={styles.submitButton}
             />
           </DialogFooter>

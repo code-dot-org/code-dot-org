@@ -178,6 +178,8 @@ kk:
         text: кездейсоқ түс
       gamelab_randomColor:
         text: кездейсоқ түс
+      gamelab_repeatForever:
+        text: әрқашан қайтала
       gamelab_setBackgroundImage:
         options:
           IMG:

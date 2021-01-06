@@ -81,6 +81,14 @@ it-IT:
             &emsp; Se (la CARTA è di CUORI)<br>
             &emsp; &emsp; Assegna alla TUA squadra 1 punto.
         title: Esercizio di Verifica (Risposte Multiple)
+        teacher_markdown: |-
+          ## Insegnanti:
+
+          Gli studenti potrebbero operare in base ad idee errate, e questo è un grande posto per stuzzicarli. Se gli studenti pensano che *non* ci sia una risposta esatta, allora potrebbero aver capito male le condizionali.
+
+          Ecco un video che aiuta a capire cosa succede in questa domanda:
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
@@ -127,13 +135,15 @@ it-IT:
         title: Esercizio di Verifica (Associazioni)
       2-3 Maze Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
         questions:
         - text: Quale di queste sequenze di istruzioni mi fa arrivare fino al maialino?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
       2-3 Relay Programming Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
@@ -163,16 +173,21 @@ it-IT:
         questions:
         - text: Cosa dovresti modificare per ottenere un cerchio perfetto?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
       2-3 artist functions multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
         questions:
         - text: Scegli la sequenza di blocchi che disegna correttamente la figura
             qui a fianco usando la funzione `draw a rectangle` (<i>disegna un rettangolo</i>)
             illustrata ancora più a sinistra.
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
       2-3 artist loops match 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
@@ -188,22 +203,28 @@ it-IT:
         title: Esercizio di Verifica (Corrispondenza)
       2-3 artist loops multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
         questions:
         - text: Quale figura viene disegnata da questo ciclo?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
       2-3 artist loops multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
         questions:
         - text: Quale figura viene disegnata da questo programma?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
       2-3 artist match 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
@@ -241,13 +262,15 @@ it-IT:
         title: Esercizio di Verifica (Risposte Multiple)
       2-3 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi ti fa raccogliere tutto il nettare?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
       2-3 maze match 1:
         answers:
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
@@ -261,13 +284,15 @@ it-IT:
         title: Esercizio di Verifica (Corrispondenza)
       2-3 maze multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi è corretta?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
       4-5 Algorithms Match 1:
         answers:
         - text: "<h4>Imposta a 0 il punteggio del Giocatore 1</h4>"
@@ -423,71 +448,86 @@ it-IT:
         title: Esercizio di Verifica (Risposte Multiple)
       4-5 artist loops multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi disegna la figura geometrica qui a sinistra?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
       4-5 artist multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi ti fa disegnare un rettangolo avente il
             perimetro pari a 100 pixel?
         title: Esercizio di Verifica (Risposte Multiple)
       4-5 artist multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
         questions:
         - text: Quale figura è simmetrica (rispetto ad un asse verticale)?
         title: Esercizio di Verifica (Risposte Multiple)
       4-5 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
         content2: Un fiore viola può avere 3, 2 oppure 1 dose di nettare, ma non puoi
           saperlo prima di eseguire il programma. Quali blocchi controllano e raccolgono
           correttamente tutto il nettare da un fiore viola?
         questions:
         - text: Scegli la sequenza di blocchi che risolve l'esercizio.
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
       4-5 bee debug multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
         questions:
         - text: Quale versione della funzione è corretta?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
       4-5 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi è corretta?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
       4-5 maze conditionals multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi è corretta?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
       4-5 maze match 1:
         answers:
         - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
@@ -501,13 +541,15 @@ it-IT:
         title: Esercizio di Verifica (Associazioni)
       4-5 maze multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi è corretta?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
       Begin planning your project:
         content1: descrizione qui
         markdown: "# Il processo di progettazione\nProgettare software significa risolvere
@@ -1449,15 +1491,18 @@ it-IT:
         questions:
         - text: Quale sequenza di blocchi ti fa completare il disegno?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
       K-1 Artist 1 Multi 2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         questions:
         - text: Quale sequenza di blocchi ti fa disegnare un quadrato?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
       K-1 Artist 2 Match 2:
         answers:
         - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
@@ -1474,25 +1519,28 @@ it-IT:
         title: Esercizio di Verifica (Corrispondenza)
       K-1 Bee 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
         - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
         questions:
         - text: Sommando il nettare contenuto nei due fiori in alto a sinistra, quante
             dosi di nettare ottieni?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
       K-1 Bee 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
         - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
           correct: true
         questions:
         - text: Sommando il nettare contenuto nei due fiori in alto a sinistra, quante
             dosi di nettare ottieni?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
       K-1 Bee Loops Match 1:
         answers:
         - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
@@ -1572,6 +1620,7 @@ it-IT:
         - text: Quale blocco devi aggiungere alla sequenza mostrata qua a sinistra
             per farmi arrivare al maialino?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
       K-1 Maze Loops Multi 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
@@ -1593,6 +1642,7 @@ it-IT:
         - text: Scegli il blocco `ripeti` che esegue gli stessi movimenti della sequenza
             di blocchi sulla sinistra.
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
       K-1 Maze Match 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
@@ -1617,6 +1667,7 @@ it-IT:
         questions:
         - text: Quale sequenza di blocchi mi fa arrivare al maialino?
         title: 'Labirinto: Sequenze e Cicli'
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
       K-1 Move It Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
@@ -1659,6 +1710,7 @@ it-IT:
         - text: Quale sequenza di blocchi devi scegliere per scrivere le lettere della
             parola "MOVE"?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
       K-1 Word Search Multi 3:
         answers:
         - text: SET
@@ -1669,6 +1721,7 @@ it-IT:
         - text: Con la sequenza di spostamenti che ti è stata data, quale parola riesci
             a scrivere?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
       Multi-Screen Apps:
         content1: descrizione qui
       New Challenge Introduction:
@@ -4135,37 +4188,53 @@ it-IT:
         - feedback: Sbagliato.
         - correct: true
           feedback: Corretto!
-        - feedback: Sbagliato.
-        - feedback: Sbagliata
+        - text: Lo sprite si muoverà.
+          feedback: Sbagliato.
+        - text: Lo sprite cambierà colori.
+          feedback: Sbagliata
         questions:
-        - {}
+        - text: Clicca il pulsante "modifica" per vedere come funziona il 'comportamento
+            misterioso'. Studia il codice all'interno, poi fai un pronostico.
       behaviors 1 predict_2020:
         answers:
         - feedback: Sbagliato.
         - correct: true
           feedback: Corretto!
-        - feedback: Sbagliato.
-        - feedback: Sbagliata
+        - text: Lo sprite si muoverà.
+          feedback: Sbagliato.
+        - text: Lo sprite cambierà colori.
+          feedback: Sbagliata
         questions:
-        - {}
+        - text: Clicca il pulsante "modifica" per vedere come funziona il 'comportamento
+            misterioso'. Studia il codice all'interno, poi fai un pronostico.
       behaviors 4 predict:
         answers:
-        - feedback: Sbagliato.
-        - correct: true
+        - text: Sinistra poi giù
+          feedback: Sbagliato.
+        - text: Diagonalmente
+          correct: true
           feedback: Corretto!
-        - feedback: 'Sbagliato. '
-        - feedback: Sbagliata
+        - text: Zig zag
+          feedback: 'Sbagliato. '
+        - text: Giù, poi sinistra
+          feedback: Sbagliata
         questions:
-        - {}
+        - text: Fai un pronostico. In che direzione si sposterà il satellite verso
+            la galassia?
       behaviors 4 predict_2020:
         answers:
-        - feedback: Sbagliato.
-        - correct: true
+        - text: Sinistra poi giù
+          feedback: Sbagliato.
+        - text: Diagonalmente
+          correct: true
           feedback: Corretto!
-        - feedback: 'Sbagliato. '
-        - feedback: Sbagliata
+        - text: Zig zag
+          feedback: 'Sbagliato. '
+        - text: Giù, poi sinistra
+          feedback: Sbagliata
         questions:
-        - {}
+        - text: Fai un pronostico. In che direzione si sposterà il satellite verso
+            la galassia?
       courseC_multi_artist_prog6_predict1:
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
@@ -4343,12 +4412,25 @@ it-IT:
             errore che farà fallire l''esecuzione di questo programma? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Scrat raggiungerà la ghianda. Non ci sono bug nel codice.
+          feedback: Errato. Prima, Scart si gira nella direzione errata, poi non si
+            muove in avanti abbastanza volte per raggiungere la ghianda.
+        - text: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
+          correct: true
+          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
+            si muove in avanti abbastanza volte per raggiungere la ghianda.
+        - text: Scrat non raggiungerà la ghianda perché non ci sono abbastanza blocchi
+            'vai avanti'.
+          correct: true
+          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
+            si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Non lo so.
+          feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
+            sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
+            la ghianda.
         questions:
-        - {}
+        - text: Cerca i bug in questo codice. Scrat raggiungerà la ghianda o c'è un
+            problema?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
@@ -4551,6 +4633,8 @@ it-IT:
             Cosa succederà quando cliccherai su "Esegui"?
       courseD_EOC_2020:
         display_name: Progetto di fine corso
+        description: Hai raggiunto l'ultima lezione del Corso D! Scegli un progetto
+          da creare.
       courseD_external_binary1:
         markdown: "<h1>Disegna con il codice binario</h1>\n \n<h3>Il codice binario
           è un modo di rappresentare i dati usando solo due opzioni alternative. In
@@ -4959,10 +5043,15 @@ it-IT:
             ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: L'ape otterrà il nettare ad ogni fiore e farà il miele ad ogni nido.
+          correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
+          feedback: Errato. Il blocco 'se al fiore' fa prendere il nettare all'ape
+            ad ogni fiore e fa il miele ad ogni nido.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
+          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
+            all'ape ad ogni fiore e fare il miele ad ogni nido..
         - text: Non lo so.
         questions:
         - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
@@ -4970,10 +5059,15 @@ it-IT:
             ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: L'ape otterrà il nettare ad ogni fiore e farà il miele ad ogni nido.
+          correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
+          feedback: Errato. Il blocco 'se al fiore' fa prendere il nettare all'ape
+            ad ogni fiore e fa il miele ad ogni nido.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
+          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
+            all'ape ad ogni fiore e fare il miele ad ogni nido..
         - text: Non lo so.
         questions:
         - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
@@ -5596,6 +5690,7 @@ it-IT:
             quando cliccherai su "Esegui"?
       courseE_EOC_2020:
         display_name: Progetto di fine corso
+        description: Hai raggiunto la fine del Corso E! Scegli un progetto da creare.
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Lo stesso programma funzionerà anche per risolvere questo esercizio.
@@ -5761,8 +5856,11 @@ it-IT:
         - text: Cosa succederà quando cliccherai su "Esegui"?
       courseExpress_EOC_2020:
         display_name: Progetto di fine corso
+        description: Hai raggiunto l'ultima lezione del Corso Express! Scegli un progetto
+          da creare.
       courseF_EOC_2020:
         display_name: Progetto di fine corso
+        description: Hai raggiunto la fine del Corso F! Scegli un progetto da creare.
       courseF_bee_variables_8a_2018:
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
@@ -5782,6 +5880,7 @@ it-IT:
         questions:
         - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
             raccolto l'ape?
+        title: Variabili Multiple Ape
       courseF_bee_variables_8a_2018_2019:
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
@@ -5801,6 +5900,7 @@ it-IT:
         questions:
         - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
             raccolto l'ape?
+        title: Variabili Multiple Ape
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
@@ -5820,6 +5920,7 @@ it-IT:
         questions:
         - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
             raccolto l'ape?
+        title: Variabili Multiple Ape
       courseF_external_variableConstant:
         markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
@@ -6617,12 +6718,39 @@ it-IT:
           * [Barche in alluminio - esemplari](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Guida per l'attività ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
 
           [/key]
+        title: Alla Scoperta dell'Informatica - Indagine preliminare
       csf_be_a_super_digital_citizen:
         content1: descrizione qui
+        markdown: |-
+          # Cittadino Super Digitale
+
+          ## Come possiamo essere sostenitori quando vediamo il cyberbullismo?
       csf_password_power-up:
         content1: descrizione qui
+        markdown: |-
+          # Migliora la Tua Password
+
+          ## Suggerimenti della Password da Ricordare
+
+          * Inizia con una **frase** memorabile
+          * Solo i tuoi **genitori** dovrebbero sapere la tua password.
+          * Crea password con almeno **otto** caratteri.
+          * Usa lettere, numeri e **simboli** nella tua password.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: descrizione qui
+        markdown: |-
+          # STOP alla Cattiveria
+
+          ## Cosa dovresti fare se qualcuno è cattivo con te online?
+
+          * **S**egnalalo ad un adulto fidato.
+          * **T**ieniti lontano dal dispositivo.
+          * **O**ttieni il permesso dal genitore di usare quel sito.
+          * **P**ensa online e metti in pausa.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image.1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
         - text: Usando questo codice Laura raccoglierà 4 diamanti.
@@ -6696,3 +6824,242 @@ it-IT:
         questions:
         - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
+      CSD U1 Test:
+        title: Computer e Risoluzione dei Problemi - Verifica finale
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Panoramica\n\nLa classe lavora in gruppi per progettare barche
+          con fogli di alluminio che possano imbarcare più centesimi possibili. Alla
+          fine della lezione i gruppi riflettono sulle esperienze acquisite con l'attività
+          e le metteranno in relazione con le modalità di risoluzione dei problemi
+          che utilizzeranno per il resto del corso. \n\n\n## Risorse\n\n* [Barche
+          Alluminio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Guida Attività (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        teacher_markdown: |
+          [key]
+
+          * [Barche in alluminio - esemplari](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Guida per l'attività ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
+      csd-pre-survey-2017-levelgroup_2018:
+        title: Alla Scoperta dell'Informatica - Indagine preliminare
+      csd-pre-survey-levelgroup_2019:
+        title: Alla Scoperta dell'Informatica - Indagine preliminare
+      outbreak_story:
+        content1: descrizione qui
+      outbreak_story2:
+        content1: descrizione qui
+      BigEvent-Unplugged:
+        markdown: |-
+          # Il Grande Evento
+
+          In informatica, gli eventi sono azioni monitorate da un computer. In questa lezione reagirai differentemente in base al pulsante che viene premuto.
+      BigEvent-Unplugged_2020:
+        markdown: |-
+          # Il Grande Evento
+
+          In informatica, gli eventi sono azioni monitorate da un computer. In questa lezione reagirai differentemente in base al pulsante che viene premuto.
+      BinaryBracelets-Unplugged:
+        markdown: |-
+          # Braccialetti Binari
+
+          Crea un braccialetto che rappresenta il tuo nome in un sistema compreso dai computer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |-
+          # Braccialetti Binari
+
+          Crea un braccialetto che rappresenta il tuo nome in un sistema compreso dai computer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryImages-Unplugged:
+        markdown: |-
+          # Immagini Binarie
+
+          Comunica come ricreare un'immagine usando solo due valori semplici.
+      BinaryImages-Unplugged_2020:
+        markdown: |-
+          # Immagini Binarie
+
+          Comunica come ricreare un'immagine usando solo due valori semplici.
+      CSD U3 Entertainment:
+        teacher_markdown: |-
+          Ecco alcuni siti per iniziare per gli studenti.  Questi siti sono generalmente appropriati per la scuola, ma il contenuto cambia frequentemente, quindi **suggeriamo fortemente di controllare ogni sito in cerca di contenuti inappropriati prima di condividerlo con gli studenti**.
+
+          ## Nella Magia - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ### Panoramica
+
+          Questo sito si concentra sulle notizie sulla Disney, ma potresti essere sorpreso dal grande ruolo che l'Informatica gioca in tutte le loro diverse forme di intrattenimento. Non essendo un sito concentrato sull'informatica, vedrai l'uso della funzione di ricerca per trovare gli articoli rilevanti.
+
+          ### Campi rilevanti
+
+          * Film/TV
+          * Animazioni
+          * Robotica/Animatronic
+          * Giochi
+
+          # Video di Critical Path - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### Panoramica
+
+          Video che mostrano molte persone al lavoro in diverse aree dell'industria videoludica, che parlano di ciò che fanno.
+
+          ### Campi Rilevanti
+
+          * Giochi
+          * Animazioni
+          * Arte
+
+          ## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)
+
+          ### Panoramica
+
+          Music Think Tank è un blog mirato agli impiegati nell'industria musicale. Non è un sito specifico per l'Informatica, ma cercare "informatica" o "programmazione" rivelerà alcuni articoli interessanti.
+
+          ### Campi Rilevanti
+
+          * Musica
+
+          ## Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+          ### Panoramica
+
+          Mentre questo podcast non presenta molto nel percorso della programmazione formale professionale (ovvero, persone che lo fanno per vivere), è una grande risorsa per vedere i vari percorsi in cui gli amatoriali creano intrattenimento con la programmazione.
+
+          ### Campi Rilevanti
+
+          * Tutti
+      CSD U3 Lesson Overview 1:
+        markdown: |-
+          # Panoramica
+
+          Alla classe viene chiesto di considerare i "problemi" della noia e dell'espressione di sé, e di riflettere su come affrontano quei problemi nelle proprie vita. Da lì, esploreranno come l'Informatica in generale, e nello specifico la programmazione, gioca un ruolo in una forma d'intrattenimento specifica o come un veicolo per l'espressione di sé.
+
+          ## Risorse
+
+          * [Informatica e Intrattenimento - Guida all'Attività](https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+        teacher_markdown: |+
+          * [Informatica e Intrattenimento](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))
+
+
+      CSD U3 Lesson Overview 2:
+        markdown: |-
+          # Panoramica
+
+          Questa lezione esplora le sfide di comunicare come disegnare con le forme ed usare uno strumento che introduce come questo problema è affrontato nel Game Lab. La classe usa uno strumento del Game Lab per posizionare in modo interattivo le forme sulla griglia 400 per 400 del Game Lab. Partners, poi, procede istruendovi su come disegnare un'immagine nascosta usando questo strumento, tenendo conto di molte sfide della programmazione nel Game Lab.
+        teacher_markdown: |
+          [key]
+
+          * [Disegnare Forme](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))
+
+          [/key]
+      CSD U3 Lesson Overview 3:
+        markdown: |+
+          # Panoramica
+
+          La classe è introdotta al Game Lab, l'ambiente di programmazione per quest'unità, ed inizia ad usarlo per posizionare le forme sulla schermata. La lezione copre le basi della sequenziazione e del debugging, così come alcuni semplici comandi. Alla fine della lezione, la classe crea una versione online dell'immagine che hanno progettato nella lezione precedente.
+          ## Vocabolario
+
+          * **Bug** - Parte di un programma che non funziona correttamente.
+          * **Debugging** - Trovare e risolvere problemi nel tuo algoritmo o programma.
+          * **Programma** - Un algoritmo programmato in qualcosa che può essere eseguito da una macchina.
+
+          ## Codice Introdotto
+
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [fill()](//studio.code.org/docs/gamelab/fill/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |
+          # Panoramica
+
+          Questa lezione estende le abilità di disegno per includere larghezza e altezza ed introduce il concetto di generazione numerica casuale. La classe impara a disegnare con le versioni di ellipse() e rect() che includono i parametri di larghezza e altezza e ad usare il blocco background() per riempire la schermata con il colore. Alla fine della progressione, la classe è introdotta al blocco randomNumber() ed usa i nuovi blocchi per disegnare un serpente arcobaleno casuale.
+          ## Vocabolario
+
+          * **Parametro** - Un pezza aggiuntivo di informazioni che passi alla funzione per personalizzarla per un bisogno specifico.
+
+          ## Codice Introdotto
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD User Centered Design Post-Project Test:
+        title: 'Design Incentrato sull''Utente: Test Post-Progetto'
+      ConditionalsWithCards-Unplugged:
+        markdown: |-
+          # Condizionali con le Carte
+
+          Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |-
+          # Condizionali con le Carte
+
+          Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
+      DigitalCitizenship-Unplugged:
+        markdown: |-
+          # Cittadinanza Digitale
+
+          Alcune informazioni non sono sicure da condividere online. Questa lezione ti aiuterà a imparare la differenza tra informazioni sicure e private.
+      GraphPaperProgramming-Unplugged:
+        markdown: |-
+          # Programmazione su Carta Grafica
+
+          Scrivi algoritmi che i tuoi compagni di classe possano usare per disegnare immagini.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |-
+          # Programmazione su Carta Grafica
+
+          Scrivi algoritmi che i tuoi compagni di classe possano usare per disegnare immagini.
+      MyRoboticFriends-Unplugged:
+        markdown: |-
+          # I Miei Amici Robotici
+
+          Impara a programmare scrivendo il codice per i tuoi amici!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # I Miei Amici Robotici
+
+          Impara a programmare scrivendo il codice per i tuoi amici!
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # Il Potere delle Parole
+
+          ## Cosa dovresti fare quando qualcuno usa un linguaggio cattivo od offensivo su internet?
+      PowerfulPasswords-Unplugged:
+        markdown: |-
+          # Password Potente
+
+          Esplora perché le persone usano le password, imparane i benefici e scopri le strategie per creare e mantenere le password forti e sicure.
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Informazioni Private e Personali
+
+          ## Quali informazioni su di te si possono condividere online?
+      ScreenOutTheMean-Unplugged:
+        markdown: |-
+          # Scherma la Cattiveria
+
+          Oggi imparerai cosa fare se qualcuno è cattivo online.
+      SimonSays-Unplugged:
+        markdown: |-
+          # Simone Dice
+
+          Gioca un gioco e pensa a quali comandi sono necessari per ottenere il giusto risultato.
+      SimonSays-Unplugged_2020:
+        markdown: |-
+          # Simone Dice
+
+          Gioca un gioco e pensa a quali comandi sono necessari per ottenere il giusto risultato.
+      gradek1_activity_beNice:
+        markdown: "# Comportarsi Bene nel Laboratorio di Informatica\n  \n<br/><br/>
+          \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nVai al piano della lezione\n</button>\n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Continua</a>"
+      CSD U5 test:
+        title: Test Post-Progetto sui Dati e la Società

@@ -144,6 +144,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     1. `brew install openssl`
     1. `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
 1. [Check rmagick version](#rmagick)
+1. If you want to render personalized certificates locally, see these special instructions regarding [ImageMagick with pango](#imagemagick-with-pango).
 1. Prevent future problems related to the `Too many open files` error:
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
         ```
@@ -318,6 +319,71 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
 - `gem uninstall rmagick`
 - `gem install rmagick -v 2.15.4`
+
+### ImageMagick with Pango
+
+**Note:** Most developers won't need to peronsonalize certificates locally, but some will.  Here are notes on getting this working on macOS.
+
+Certificates have been greatly improved with the ability to apply text in many languages.  
+
+This is done by using “pango”.  It seems on Linux machines, ImageMagick already contains Pango, but on macOS it doesn’t... at least as installed using brew.
+
+So we need to install a version of ImageMagick that includes Pango.  There are tons of threads online where people can’t get it to work.
+
+The good news is that we figured out a solution.
+
+First modify the ImageMagick formula in brew, using
+
+```
+brew edit imagemagick
+```
+
+Note that one developer found they needed to `brew edit imagemagick@6`.)
+
+Change `--without-pango` to `--with-pango`.  However, that’s not enough.  Add
+
+```
+depends_on "pango"
+```
+
+near the similar entries.  This is the step that we couldn’t find online anywhere.
+
+Then
+
+```
+brew uninstall imagemagick
+```
+
+(Note that one developer found they needed to  and `brew uninstall imagemagick@6`.)
+Then
+
+```
+brew install imagemagick@6 --build-from-source
+```
+
+Then, because it’s `@6`, we need to
+
+```
+brew link imagemagick@6 --force
+```
+
+to make it generally accessible from both the command line and from rmagick.
+(We still use `imagemagick@6` because we need magicwand, whatever that is.)
+Now, we have Pango in our ImageMagick, which we can test with
+
+```
+convert pango:"test text" test.png
+```
+
+Finally, it’s likely that we now have a slightly different version of ImageMagick.
+We need rmagick to rediscover that with
+
+```
+bundle remove rmagick
+bundle add rmagick
+```
+
+Restart `dashboard-server` and if all went well, we see text rendering on customized certificates again.
 
 #### libv8
 

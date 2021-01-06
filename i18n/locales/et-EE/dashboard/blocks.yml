@@ -856,6 +856,8 @@ et:
         text: juhuslik värv
       gamelab_randomColor:
         text: juhuslik värv
+      gamelab_repeatForever:
+        text: korda igavesti
       gamelab_setBackground:
         text: määra taustavärv {COLOR}
       gamelab_setBackgroundImage:
@@ -1162,7 +1164,6 @@ et:
             '"stoneBricks"': kivi-tellised
             '"mossyStoneBricks"': sammaldunud kivi-tellised
             '"crackedStoneBricks"': mõranenud kivi-tellised
-            '"decorativeStoneBricks"': dekoratiivsed kivi-tellised
             '"blueCoralBlock"': sinise koralli plokk
             '"pinkCoralBlock"': roosa koralli plokk
             '"magentaCoralBlock"': magenta koralli plokk

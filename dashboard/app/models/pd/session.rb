@@ -19,7 +19,7 @@
 
 require 'cdo/code_generation'
 
-class Pd::Session < ActiveRecord::Base
+class Pd::Session < ApplicationRecord
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: 'pd_workshop_id'

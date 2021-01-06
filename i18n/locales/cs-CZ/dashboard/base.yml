@@ -147,8 +147,6 @@ cs:
     invalid_password: "Heslo musí obsahovat nejméně 6 znaků"
     mismatch_password: "Zadaná dvě hesla se neshodují"
     student_consent: "Potvrzuji, že mám od svých rodičů nebo zákonného zástupce dovoleno používat Code.org."
-    agree_us_website: "Souhlasím s používáním webových stránek provozovaných ve Spojených státech."
-    my_data_to_us: "Informace ohledně mého používání těchto stránek mohou být posílány do Spojených států a tamtéž i uchovávány."
     additional_information: "Potřebujeme další informace pro pokračování vaši registrace."
     user_type_button: "Aktualizovat typ účtu"
     user_type_label: "Typ účtu"
@@ -963,11 +961,6 @@ cs:
     message: 'Pokud budete pokračovat v prohlížení naší stránky nebo kliknete na "Souhlasím", souhlasíte s uložením cookies na svém počítači nebo přístroji.'
     more_information: "Zobrazte si zásady ochrany soukromí pro Code.org."
     accept: 'Souhlasím'
-  gdpr_dialog:
-    heading: 'Souhlasíte s používáním webových stránek provozovaných ve Spojených státech?'
-    message: 'Informace ohledně Vašeho používání těchto stránek mohou být posílány do Spojených států a tamtéž i uchovávány.'
-    privacy_policy: 'zásady ochrany osobních údajů'
-    yes: 'Ano'
   page_not_found_title: "Stránka nebyla nalezena"
   page_not_found_header: '404 - Stránka nebyla nalezena'
   page_not_found_button: "Zpět domů"

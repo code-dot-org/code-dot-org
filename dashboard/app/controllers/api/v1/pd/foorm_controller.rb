@@ -1,22 +1,27 @@
-class Api::V1::Pd::FoormController < ::ApplicationController
+class Api::V1::Pd::FoormController < ApplicationController
   include Api::CsvDownload
 
   # POST api/v1/pd/foorm/form_with_library_items
   def fill_in_library_items
     form_questions = params[:form_questions].as_json
-    filled_in_form = Foorm::Form.fill_in_library_items(form_questions)
-    render json: filled_in_form
+    begin
+      filled_in_form = Foorm::Form.fill_in_library_items(form_questions)
+      render json: filled_in_form
+    rescue => e
+      render status: 500, json: {error: e.message}
+    end
   end
 
-  # GET api/v1/pd/foorm/form_data
+  # GET api/v1/pd/foorm/form/:id
   def get_form_data
-    form_name = params[:name]
-    form_version = params[:version]
-    form_data = Foorm::Form.where(name: form_name, version: form_version).first
+    form_data = Foorm::Form.find(params[:id])
     if form_data
       data_to_return = {
         questions: JSON.parse(form_data.questions),
-        published: form_data.published
+        published: form_data.published,
+        name: form_data.name,
+        version: form_data.version,
+        id: form_data.id
       }
       render json: data_to_return
     else
@@ -29,7 +34,8 @@ class Api::V1::Pd::FoormController < ::ApplicationController
     forms = Foorm::Form.all.map do |form|
       {
         name: form.name,
-        version: form.version
+        version: form.version,
+        id: form.id
       }
     end
     render json: forms
@@ -57,5 +63,18 @@ class Api::V1::Pd::FoormController < ::ApplicationController
     end
     csv = form.submissions_to_csv(submissions)
     send_csv_attachment(csv, filename)
+  end
+
+  # POST api/v1/pd/foorm/validate_form
+  def validate_form
+    authorize! :validate_form, :pd_foorm
+
+    form_questions = params[:form_questions].as_json
+    errors = Foorm::Form.validate_questions(form_questions)
+    if errors.empty?
+      return render status: 200, json: {}
+    else
+      return render status: 500, json: {error: errors}
+    end
   end
 end

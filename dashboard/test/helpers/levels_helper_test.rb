@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'webmock/minitest'
 
 class LevelsHelperTest < ActionView::TestCase
   include Devise::Test::ControllerHelpers

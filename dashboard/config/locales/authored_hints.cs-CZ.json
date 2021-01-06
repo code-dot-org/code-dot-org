@@ -217,10 +217,12 @@
           "4-5_Artist_7_a": "Který úhel je nejmenší? V jakém úhlu stojí Malíř? "
         },
         "4-5 Artist 8": {
-          "4-5_Artist_8_a": "Dlouhé strany mají vždy 240 pixelů. To znamená, že dvě krátké strany musí být celkem:\n\n\\*\\* 800 - 240 - 240 = 320 \\*\\*\n\nCo znamená \\*\\* 320/2 \\*\\*? "
+          "4-5_Artist_8_a": "Dlouhé strany mají vždy 240 pixelů. To znamená, že dvě krátké strany musí být celkem:\n\n\\*\\* 800 - 240 - 240 = 320 \\*\\*\n\nCo znamená \\*\\* 320/2 \\*\\*? ",
+          "4-5_Artist_8_b": "Tento obrázek lze nakreslit dvěma způsoby!\n\n-   Nakresli dva obdélníky s jednou společnou stranou, které jsou \\*\\* 120 \\*\\* dlouhé a \\*\\* 160 \\*\\* široké.\n\n-   Nejprve nakresli jeden obdélník, který je \\*\\* 240 \\*\\* dlouhý a \\*\\* 160 \\*\\* široký. Potom přidej prostřední čáru."
         },
         "4-5 Artist 9": {
-          "4-5_Artist_9_b": "Budete muset nakreslit tři stejně velké trojúhelníky. Nezapomeňte, že do každé nové pozice musíte skočit."
+          "4-5_Artist_9_b": "Budete muset nakreslit tři stejně velké trojúhelníky. Nezapomeňte, že do každé nové pozice musíte skočit.",
+          "4-5_Artist_9_a": "Jestliže je trojúhelník rovnostranný, pak jsou všechny jeho strany a všechny úhly shodné."
         },
         "4-5 Artist Assessment 1": {
           "4-5_Artist_Assessment_1_a": "K dokončení této hádanky stačí pouze nakreslit vnější trojúhelník."
@@ -2711,7 +2713,7 @@
           "courseD_collector_debugging9_a": "Je několik cest, jak tuto úlohu vyřešit... ale všechny zahrnují otočky!"
         },
         "courseD_farmer_condLoops5_2019": {
-          "courseD_farmer_condLoops5_a": "Máme novou smyčku: `opakuj, dokud tam jsou dýně`. Chápeš, jak ji použít v této úloze?"
+          "courseD_farmer_condLoops5_a": "Máme novou smyčku: `opakuj, dokud nenastane - tam jsou dýně`. Chápeš, jak ji použít v této úloze?"
         },
         "courseD_farmer_condLoops6_2018": {
           "courseD_farmer_condLoops6_a": "Využij cyklus `pokud je cesta vpřed` nebo blok `když je cesta vpřed / jinak`, abys posunul(a) farmářku dále přes spirálu.",
@@ -3091,10 +3093,10 @@
           "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2018": {
-          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2019": {
-          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2020": {
           "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
@@ -3243,6 +3245,59 @@
         },
         "courseE_farmer_predict2": {
           "courseE_farmer_ramp12e_b": "Řešení této úlohy bude hodně podobné předchozímu řešení, jen se farmářka musí otáčet opačným směrem."
+        },
+        "4-5 Artist 5": {
+          "4-5_Artist_5_a": "Metoda pokus-omyl je skvělá, ale problém můžeš vyřešit také rozdělením úhlu 90 stupňů na třetiny.\n\n\\*\\* 90/3 = \\\\ \\_ \\\\ \\_ \\\\ \\_ \\\\ \\_ \\\\ \\_ \\*\\*"
+        },
+        "4-5 Maze 4": {
+          "4-5_Maze_4_a": "Pokud se ti nedaří zjistit, kam umístit opakování, zkus krokovat a najít nějaký vzor."
+        },
+        "course3_maze_debugging_challenge1": {
+          "courseC_maze_debugging_challenge1_b": "Scratova cesta má tvar obdélníku! Vždy se musí otočit stejným směrem!",
+          "courseC_maze_debugging_challenge1_c": "Pokud se někde zasekneš, buď můžeš vždy začít od začátku nebo můžeš odstranit všechny bloky a pokusit se o to sám!"
+        },
+        "course3_maze_debugging_challenge2": {
+          "courseC_maze_debugging_challenge2_a": "Jedním z řešení je přidat mezi otočení více kroků dopředu.",
+          "courseC_maze_debugging_challenge2_b": "Pokud se někde zasekneš, buď můžeš vždy začít od začátku nebo můžeš odstranit všechny bloky a pokusit se o to sám!",
+          "courseC_maze_debugging_challenge2_c": "Existují dvě různé cesty, kterými se můžeš řídit s využitím bloku `posuň se vpřed` a čtyři bloky `otoč se`. Pokud najdeš způsob, jak použít blok `opakovat`, může jich být ještě více!"
+        },
+        "course3_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_a": "Pokud zavoláš funkci ještě jednou, můžeš v posledním rohu vytvořit stejný vzhled. Můžeš také `skočit na...` jinou pozici nebo měnit celý výsledek podle svých představ!"
+        },
+        "course3_farmer_condLoops_challenge1": {
+          "courseD_farmer_condLoops_challenge1_a": "Tlačítko `KROK` může být v této výzvě velmi užitečné."
+        },
+        "course3_farmer_condLoops_challenge2": {
+          "courseD_farmer_condLoops_challenge2_a": "Množství každé zeleniny se v každém prostoru liší. Proto použij smyčky `dokud`."
+        },
+        "4-5 Nested Loops 12": {
+          "4-5_Nested_Loops_12_a": "**360 ÷ 36 ＝ ？**"
+        },
+        "4-5 Nested Loops 6": {
+          "4-5_Nested_Loops_6_a": "Po každém průchodu cyklem se nezapomeň otočit.\n\nBudeš to opakovat pro 6 trojúhelníků otočením o 360 stupňů.\n\n\\*\\* 360 ÷ 6 = ? \\*\\*"
+        },
+        "4-5 Nested Loops 7": {
+          "4-5_Nested_Loops_7_a": "Tento nákres bude vytvořením cyklem s 10 opakováním a celkovým otočením o 360 stupňů.\n\n\\*\\* 360 ÷ 10 = ? \\*\\*"
+        },
+        "4-5 Nested Loops 8": {
+          "4-5_Nested_Loops_8_a": "Budeš opakovat tento nákres 6 krát s celkovým otočením o 360 stupňů.\n\n**360 ÷ 6 ＝?**"
+        },
+        "course2_artist_nestedLoops_challenge1": {
+          "courseD_artist_nestedLoops_challenge1_a": "Při tvorbě čtyř osmiúhelníků začni vytvořením vnořené smyčky. Otoč o 45 stupňů, abys tvořil osmiúhelník. Po každém osmiúhelníku skoč a otoč se o 90 stupňů.",
+          "courseD_artist_nestedLoops_challenge1_b": "Sestav kód pro nakreslení trojúhelníku uvnitř vnořené smyčky. Při tvorbě trojúhelníku použij otočení o 120 stupňů.",
+          "courseD_artist_nestedLoops_challenge1_c": "Sestav vnořenou smyčku:\n\n-   Opakuj 8 krát\n    -   nakresli osmiúhelník\n    -   nakresli trojúhelník\n    -   skoč dopředu o 50 pixelů\n    -   otoč se doprava o 90 stupňů"
+        },
+        "4-5 While Loops 8": {
+          "4-5_While_Loops_8_a": "Každý předmět potřebuje vlastní smyčku `dokud`."
+        },
+        "4-5 Bee Nested Loops Rows": {
+          "4-5_Bee_Nested_Loops_Rows_a": "Chceš-li úkol dokončit, pokus se se to řešit jako dlouhý obdélník, kde se včela musí pohybovat dopředu a poté několikrát otočí doleva."
+        },
+        "4-5 Bee Debugging 1": {
+          "4-5_Bee_Debugging_1_a": "Pokud máš potíže se zjištěnmí, co není v pořádku, zkus spustit program, aby bylo vidět, kde se něco pokazí."
+        },
+        "course3_collector_debugging_challenge2": {
+          "courseD_collector_debugging_challenge2_a": "Začni tím, že se soustředíš na sbírání DVOU drahokamů z každé z prvních dvou hromádek.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n\nVyužij následující bloky.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         }
       }
     }

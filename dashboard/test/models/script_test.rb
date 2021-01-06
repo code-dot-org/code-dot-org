@@ -245,6 +245,69 @@ class ScriptTest < ActiveSupport::TestCase
     assert_empty script.properties
   end
 
+  test 'can setup new migrated script' do
+    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+
+    # the contents of test-migrated-new.script and test-migrated-new.script_json
+    # reflect that of a new script which has been modified only by adding
+    # `is_migrated true` to the .script file.
+    script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-new.script')
+    Script.setup([script_file])
+
+    script = Script.find_by_name('test-migrated-new')
+    assert script.is_migrated
+  end
+
+  test 'can setup migrated script with new models' do
+    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+
+    # test that LessonActivity, ActivitySection and Objective can be seeded
+    # from .script_json when is_migrated is specified in the .script file.
+    create :maze, name: 'test_maze_level'
+    script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
+    Script.setup([script_file])
+
+    script = Script.find_by_name('test-migrated-models')
+    assert script.is_migrated
+    assert_equal 1, script.lesson_groups.count
+    assert_equal 1, script.lessons.count
+    lesson = script.lessons.first
+    assert_equal 1, lesson.lesson_activities.count
+    activity = lesson.lesson_activities.first
+    assert_equal 'My Activity', activity.name
+    assert_equal 1, activity.activity_sections.count
+    section = activity.activity_sections.first
+    assert_equal 'My Activity Section', section.name
+    assert_equal 1, section.script_levels.count
+    script_level = section.script_levels.first
+    assert_equal 1, script_level.levels.count
+    assert_equal 'test_maze_level', script_level.levels.first.name
+    assert_equal 1, script.levels.count
+    assert_equal 'test_maze_level', script.levels.first.name
+  end
+
+  test 'script_json settings override take precedence for migrated script' do
+    Script.stubs(:script_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+
+    script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-overrides.script')
+    Script.setup([script_file])
+
+    # If settings differ between .script and .script_json for a migrated script,
+    # the .script_json settings must take preference. This is somewhat of an
+    # implementation-agnostic test, because the implementation doesn't even look
+    # at anything inside the .script file besides the is_migrated property for
+    # migrated scripts.
+    script = Script.find_by_name('test-migrated-overrides')
+    assert script.is_migrated
+    assert script.tts
+    assert_equal 'my-pilot-experiment', script.pilot_experiment
+    refute script.editor_experiment
+    refute script.login_required
+    refute script.student_detail_progress_view
+    assert_equal ['my lesson group'], script.lesson_groups.map(&:key)
+    assert_equal ['my lesson'], script.lessons.map(&:key)
+  end
+
   test 'should not create two scripts with same name' do
     create(:script, name: 'script')
     raise = assert_raises ActiveRecord::RecordInvalid do
@@ -624,6 +687,18 @@ class ScriptTest < ActiveSupport::TestCase
     assert script.can_view_version?(teacher)
   end
 
+  test 'visible scripts can not be marked at is_migrated' do
+    assert_raises ActiveRecord::RecordInvalid do
+      create :script, name: 'my-visible-script', hidden: false, properties: {is_migrated: true}
+    end
+  end
+
+  test 'hidden scripts can be marked at is_migrated' do
+    script = create :script, name: 'my-hidden-script', hidden: true,  properties: {is_migrated: true}
+
+    assert script.properties["is_migrated"]
+  end
+
   test 'can_view_version? is true if script is latest stable version in student locale or in English' do
     latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', is_stable: true, supported_locales: []
     latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', is_stable: true, supported_locales: ['it-it']
@@ -873,6 +948,20 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script_level, script: script, lesson: lesson)
 
     assert_nil script.summarize(false)[:lessons]
+  end
+
+  test 'summarize includes show_calendar' do
+    script = create(:script, name: 'calendar-script')
+
+    script.show_calendar = true
+    assert script.show_calendar
+    summary = script.summarize
+    assert summary[:showCalendar]
+
+    script.show_calendar = false
+    refute script.show_calendar
+    summary = script.summarize
+    refute summary[:showCalendar]
   end
 
   test 'summarize includes has_verified_resources' do
@@ -2655,7 +2744,7 @@ class ScriptTest < ActiveSupport::TestCase
     # seeding_key should not make queries
     assert_queries(0) do
       expected = {'script.name' => script.name}
-      assert_equal expected, script.seeding_key(ScriptSeed::SeedContext.new)
+      assert_equal expected, script.seeding_key(Services::ScriptSeed::SeedContext.new)
     end
   end
 

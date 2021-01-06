@@ -13840,7 +13840,7 @@ tr:
               description_teacher: "**Günün Sorusu: Sahnelerimizi ve animasyonlarımızı geliştirmek için metni nasıl kullanabiliriz?**\\r\n\\r\nBu ders, koordinat düzlemi ve parametreleri kullanarak sınıfa daha fazla pratik yaptırarak, Oyun Laboratuvarının metin komutlarını tanıtır. Dersin başında öğrencilere, Oyun  Laboratuvarında oluşturulmuş bir çizgi filme alt yazı koymaları istenir. Sonrasında, ekrana metin yerleştirmeyi ve büyüklük gibi diğer metin özelliklerini kontrol etmeyi denedikleri Kod Stüdyosuna geçerler. Değerlendirmeyi erken tamamlayan öğrenciler, metin özellikleri ile ilişkili daha zor blokları öğrenmeye devam edebilir. "
             'Mini-Project: Captioned Scenes':
               name: 'Mini-Proje: Alt yazılı Sahneler'
-              description_student: "**Günün Sorusu: Yaratıcılığımızı sergilemek için Oyun Laboratuvarını nasıl kullanabiliriz?**\\r\n\\r\nŞu ana kadar öğrenilen koda hızlıca göz attıktan sonra ünitenin birinci yaratıcı projesi sınıfa tanıtılır. Bir model olarak problem çözme sürecini kullanarak öğrenciler, oluşturmak istedikleri sahneyi tanımlar, ihtiyaç duydukları farklı kodu düşünerek hazırlanır, Oyun Laboratuvarında planlarını dener, sonra oluşturduklarını yansıtırlar. Sonunda da oluşturduğu projeleri akranları ile paylaşma şansı olur."
+              description_student: "**Günün Sorusu: Yaratıcılığımızı sergilemek için Oyun Laboratuvarını nasıl kullanabiliriz?**\\r\n\\r\nŞu ana kadar öğrenilen koda hızlıca göz attıktan sonra ünitenin birinci yaratıcı projesi sınıfa tanıtılır. Bir model olarak problem çözme sürecini kullanarak öğrenciler, oluşturmak istedikleri sahneyi tanımlar, ihtiyaç duydukları farklı kodu düşünerek hazırlanır, Oyun Laboratuvarında planlarını dener, sonra oluşturduklarını yansıtırlar. Sonunda da oluşturduğu projeyi akranları ile paylaşma şansı olur."
               description_teacher: "**Günün Sorusu: Yaratıcılığımızı sergilemek için Oyun Laboratuvarını nasıl kullanabiliriz?**\\r\n\\r\nŞu ana kadar öğrenilen koda hızlıca göz attıktan sonra ünitenin birinci yaratıcı projesi öğrencilere tanıtılır. Bir model olarak problem çözme sürecini kullanarak öğrenciler, oluşturmak istedikleri sahneyi tanımlar, ihtiyaç duydukları farklı kodu düşünerek hazırlanır, Oyun Laboratuvarında planlarını dener, sonra oluşturduklarını yansıtırlar. Sonunda da oluşturduğu projeleri akranları ile paylaşma şansı olur."
             'Mini-Project: Animation':
               name: 'Mini-Proje: Animasyon'
@@ -15402,7 +15402,7 @@ tr:
               description_teacher: "**Günün Sorusu: Sahnelerimizi ve animasyonlarımızı geliştirmek için metni nasıl kullanabiliriz?**\\r\n\\r\nBu ders, koordinat düzlemi ve parametreleri kullanarak sınıfa daha fazla pratik yaptırarak, Oyun Laboratuvarının metin komutlarını tanıtır. Dersin başında öğrencilere, Oyun  Laboratuvarında oluşturulmuş bir çizgi filme alt yazı koymaları istenir. Sonrasında, ekrana metin yerleştirmeyi ve büyüklük gibi diğer metin özelliklerini kontrol etmeyi denedikleri Kod Stüdyosuna geçerler. Değerlendirmeyi erken tamamlayan öğrenciler, metin özellikleri ile ilişkili daha zor blokları öğrenmeye devam edebilir. "
             'Mini-Project: Captioned Scenes':
               name: 'Mini-Proje: Alt yazılı Sahneler'
-              description_student: "**Günün Sorusu: Yaratıcılığımızı sergilemek için Oyun Laboratuvarını nasıl kullanabiliriz?**\\r\n\\r\nŞu ana kadar öğrenilen koda hızlıca göz attıktan sonra ünitenin birinci yaratıcı projesi sınıfa tanıtılır. Bir model olarak problem çözme sürecini kullanarak öğrenciler, oluşturmak istedikleri sahneyi tanımlar, ihtiyaç duydukları farklı kodu düşünerek hazırlanır, Oyun Laboratuvarında planlarını dener, sonra oluşturduklarını yansıtırlar. Sonunda da oluşturduğu projeleri akranları ile paylaşma şansı olur."
+              description_student: "**Günün Sorusu: Yaratıcılığımızı sergilemek için Oyun Laboratuvarını nasıl kullanabiliriz?**\\r\n\\r\nŞu ana kadar öğrenilen koda hızlıca göz attıktan sonra ünitenin birinci yaratıcı projesi sınıfa tanıtılır. Bir model olarak problem çözme sürecini kullanarak öğrenciler, oluşturmak istedikleri sahneyi tanımlar, ihtiyaç duydukları farklı kodu düşünerek hazırlanır, Oyun Laboratuvarında planlarını dener, sonra oluşturduklarını yansıtırlar. Sonunda da oluşturduğu projeyi akranları ile paylaşma şansı olur."
               description_teacher: "**Günün Sorusu: Yaratıcılığımızı sergilemek için Oyun Laboratuvarını nasıl kullanabiliriz?**\\r\n\\r\nŞu ana kadar öğrenilen koda hızlıca göz attıktan sonra ünitenin birinci yaratıcı projesi öğrencilere tanıtılır. Bir model olarak problem çözme sürecini kullanarak öğrenciler, oluşturmak istedikleri sahneyi tanımlar, ihtiyaç duydukları farklı kodu düşünerek hazırlanır, Oyun Laboratuvarında planlarını dener, sonra oluşturduklarını yansıtırlar. Sonunda da oluşturduğu projeleri akranları ile paylaşma şansı olur."
             The Draw Loop:
               name: Döngü çiz
@@ -15571,9 +15571,9 @@ tr:
             Module 6:
               name: 'Modül 6'
             Module 7:
-              name: Modül 7
+              name: 'Modül 7'
             Module 8:
-              name: Modül 8
+              name: 'Modül 8'
           title: Bilgisayar Bilimi İlkeleri Sanal Profesyonel Öğrenim
         curriculum-sandbox-levels:
           lessons:
@@ -15591,3 +15591,14 @@ tr:
           title: Sandbox Müfredat Seviyeleri
           description_audience: Dahili
           description_short: 'Doğrudan ders planları ile bağlantılı olan ancak diğer komut dosyalarında görünmeyen seviyeler. '
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: "Okyanuslar için Yapay Zeka\n"
+            intro:
+              name: Giriş
+            visualizing:
+              name: Veriyi görselleştirme
+        2021drafting:
+          description_audience: Dahili
+          description_short: Dahili

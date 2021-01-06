@@ -1,0 +1,10 @@
+course_version_2018:
+  key: 2018
+  display_name: "2018"
+  content_root_type: "Script"
+  content_root_id: 1
+course_version_2019:
+  key: 2019
+  display_name: "2019"
+  content_root_type: "Script"
+  content_root_id: 1

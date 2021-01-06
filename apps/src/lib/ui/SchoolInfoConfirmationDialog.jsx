@@ -41,8 +41,7 @@ class SchoolInfoConfirmationDialog extends Component {
         school_type: PropTypes.string,
         school_name: PropTypes.string,
         full_address: PropTypes.string
-      }).isRequired,
-      mapboxAccessToken: PropTypes.string
+      }).isRequired
     }).isRequired,
     onClose: PropTypes.func,
     isOpen: PropTypes.bool

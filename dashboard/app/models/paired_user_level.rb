@@ -14,7 +14,7 @@
 #  index_paired_user_levels_on_navigator_user_level_id  (navigator_user_level_id)
 #
 
-class PairedUserLevel < ActiveRecord::Base
+class PairedUserLevel < ApplicationRecord
   belongs_to :navigator_user_level, class_name: 'UserLevel'
   belongs_to :driver_user_level, class_name: 'UserLevel'
 

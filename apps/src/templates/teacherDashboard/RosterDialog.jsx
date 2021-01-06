@@ -135,7 +135,11 @@ const LoadError = ({rosterProvider, loginType}) => {
           <p>{locale.authorizeGoogleClassroomsText()}</p>
           <ReauthorizeGoogleClassroom />
           <p>
-            <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
+            <a
+              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {locale.errorLoadingRosteredSectionsSupport()}
             </a>
           </p>
@@ -145,7 +149,11 @@ const LoadError = ({rosterProvider, loginType}) => {
       return (
         <p>
           {locale.errorLoadingRosteredSections({type: loginType})}{' '}
-          <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
+          <a
+            href={ROSTERED_SECTIONS_SUPPORT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {locale.errorLoadingRosteredSectionsSupport()}
           </a>
         </p>

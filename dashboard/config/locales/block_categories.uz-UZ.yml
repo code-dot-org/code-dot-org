@@ -9,18 +9,23 @@ uz:
       Color: Rang
       Comment: Izoh
       Comments: Izohlar
-      Conditionals: Shart buyruqlari
+      Conditionals: Shartli bayonotlar
       Dancers: Raqqoslar
+      Default: Standart
+      Events: Hodisalar
       Functions: Funksiyalar
       'Functions ': 'Vazifalar '
       Game/Score: O'yin/Hisob
       Games/Score: O'yin/Hisob
       Groups: Guruhlar
+      Input: Kiritish
       Locations: Manzil
       Logic: Mantiq
       Loops: Sikllar
       Math: Matematik
       Numbers: Raqamlar
+      Properties: Xususiyatlar
+      Sprites: Spraytlar
       Text: Matn
       Variables: O‘zgaruvchilar
       'Variables ': 'O''zgaruvchilar '

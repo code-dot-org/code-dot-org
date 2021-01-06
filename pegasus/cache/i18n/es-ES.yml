@@ -547,16 +547,16 @@ es-ES:
   playlab_gumball_title: Gumball
   playlab_iceage_title: La Era de Hielo - Próximamente
   playlab_iceage_title_live: La Era de Hielo
-  starwars_subtitle: Construyendo una Galaxia con Código - Eventos
+  starwars_subtitle: Cómo construir una galaxia con código
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Arrastra y suelta los bloques y utiliza JavaScript.
-  starwars_javascript_specs: Sólo en inglés | Navegadores Actuales | Mayores de 11
+  starwars_javascript_description: Utiliza bloques de arrastrar y soltar y JavaScript.
+  starwars_javascript_specs: Sólo en inglés | Navegadores modernos | Mayores de 11
     años
   starwars_blocks_title: Bloques
-  starwars_blocks_description: Arrastra y suelta los bloques.
-  starwars_blocks_specs: varios lenguajes|smartphones, tablets, navegadores actuales
-    | Edad 6-106
-  starwars_platform_text: Cualquier navegador moderno, smartphone, tableta
+  starwars_blocks_description: Utiliza bloques de arrastrar y soltar.
+  starwars_blocks_specs: Varios idiomas | Navegadores modernos, smartphones, tabletas
+    | Mayores de 6 años
+  starwars_platform_text: Navegadores modernos, smartphones, tabletas
   mc_name: Hora de Code de Minecraft
   mc_longdescription: Utiliza bloques de código para llevar a Steve o Alex en una
     aventura a través del mundo de Minecraft.
@@ -575,8 +575,8 @@ es-ES:
   minecraft_agent_description: "¡Minecraft está de vuelta para la Hora del Código
     con una actividad nueva! Viaja a través de Minecraft con códigos."
   minecraft_agent_button: Inicio
-  minecraft_designer_description: Construye un juego de Minecraft. Crea tus propias
-    versiones de las gallinas, ovejas, Creepers, zombis y más.
+  minecraft_designer_description: Construye tu propia versión de Minecraft. Crea tus
+    propias versiones de las gallinas, ovejas, Creepers, zombis y más.
   minecraft_designer_button: Inicio
   minecraft_adventurer_description: Utiliza el código para guiar a Alex o Steve hacia
     una aventura.
@@ -1268,7 +1268,7 @@ es-ES:
     target="_blank">actualizar tu navegador</a>.
   mobile_devices: Guías asociadas para dispositivos móviles
   frozen_name: Programa con Ana y Elsa
-  starwars_name: 'Star Wars: Creando una Galaxia con Código'
+  starwars_name: 'La guerra de las galaxias: cómo construir una galaxia con código'
   codeorg_name: Laberinto clásico
   codeintl_name: Laberinto clásico
   thinkersmithspanish_name: Mis amigos robóticos
@@ -1374,7 +1374,7 @@ es-ES:
   classicmaze_name: Laberinto clásico
   iceage_name: La Era de Hielo
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (bloques)
+  starwarsblocks_name: La guerra de las galaxias (bloques)
   hoc-encryption_name: Cifrado simple
   text-compression_name: Compresión de texto
   applab_name: Laboratorio de Aplicaciones
@@ -1506,7 +1506,7 @@ es-ES:
   projguts_platformtext: Desconectado
   hourofcode_platformtext: Cualquier navegador moderno, smartphone, tableta
   frozen_platformtext: Navegadores modernos y tabletas
-  starwars_platformtext: Navegadores actuales y tabletas
+  starwars_platformtext: Navegadores modernos y tabletas
   playlab_platformtext: Cualquier navegador moderno, smartphone, tableta
   monstercoding_platformtext: Navegadores modernos, iOS, Android
   allcancode_platformtext: Navegadores modernos, iOS
@@ -1572,8 +1572,8 @@ es-ES:
     Birds!
   frozen_shortdescription: Vamos a usar código para unirnos a Anna y Elsa mientras
     exploran la magia y la belleza del hielo.
-  starwars_shortdescription: Aprende a programar droides y crea tu propio juego Star
-    Wars en una galaxia muy, muy lejana.
+  starwars_shortdescription: Aprende a programar droides y crea tu propio juego de
+    La guerra de las galaxias en una galaxia muy, muy lejana.
   playlab_shortdescription: "¡Crea una historia o haz un juego con Laboratorio de
     Juegos!"
   infinity_shortdescription: Utilice el laboratorio de juegos para crear una historia
@@ -1806,8 +1806,8 @@ es-ES:
     la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que
     patinas sobre hielo y harás un paisaje invernal que luego puedes compartir con
     tus amigos!
-  starwars_longdescription: Aprende a programar androides y crea tu propio juego Star
-    Wars en una galaxia muy, muy lejana.
+  starwars_longdescription: Aprende a programar droides y crea tu propio juego de
+    La guerra de las galaxias en una galaxia muy, muy lejana.
   playlab_longdescription: "¡Crea una historia o haz un juego con el Laboratorio de
     juegos! ¡Haz que animales, piratas, zombis, ninjas y muchos personajes más se
     muevan, hagan sonidos, marquen puntos y hasta lancen bolas de fuego!"
@@ -2186,6 +2186,7 @@ es-ES:
     actualízalo a <a href='%{supported_browsers_url}', target='_blank'>uno de nuestros
     navegadores compatibles</a>. Puedes tratar de ver la página, pero la funcionalidad
     podría verse afectada.
+  starwars_shortcode: estrella
   mc_shortcode: mc
   flappy_shortcode: aletear
   header_home: Inicio
@@ -2374,8 +2375,8 @@ es-ES:
   hoc2018_mc_hero_description: "¡Minecraft está de vuelta para la Hora del Código
     con una actividad nueva! Viaja a través de Minecraft con códigos."
   hoc2018_mc_designer_title: Diseñador de Minecraft
-  hoc2018_mc_designer_description: Construye un juego de Minecraft. Crea tus propias
-    versiones de las gallinas, ovejas, Creepers, zombis y más.
+  hoc2018_mc_designer_description: Construye tu propia versión de Minecraft. Crea
+    tus propias versiones de las gallinas, ovejas, Creepers, zombis y más.
   hoc2018_mc_adventurer_title: Aventurero de Minecraft
   hoc2018_mc_adventurer_description: Utiliza el código para guiar a Alex o Steve hacia
     una aventura.
@@ -2552,3 +2553,5 @@ es-ES:
   homepage_slot_text_title_at_home: Aprende desde casa
   homepage_slot_text_blurb_at_home: Aprender es fácil con estos recursos
   page_not_available_button: Volver a la página de inicio
+  footer_powered_by_aws: Impulsado por Amazon Web Services
+  codebytes_skinny_banner_english_only: Sólo en inglés

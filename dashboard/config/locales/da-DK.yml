@@ -193,9 +193,16 @@ da:
     mismatch_password: De to adgangskoder du har indtastet stemmer ikke overens
     student_consent: Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres
       eller værges tilladelse til at benytte tjenesterne fra Code.org.
-    agree_us_website: Jeg accepterer at bruge en hjemmeside baseret i USA.
-    my_data_to_us: Data fra min brug af dette websted kan sendes til og gemmes eller
-      behandles i USA.
+    agree_us_data_transfer_student: "**Jeg accepterer, at Code.org kan overføre min
+      databrug (inklusive personlige data) fra dette websted til USA** for hosting
+      og behandling af sådanne data."
+    agree_us_data_transfer_teacher: "**Jeg accepterer, at Code.org kan overføre min
+      databrug (inklusive personlige data)  (og mine studerendes brug) fra dette websted
+      til USA** for hosting og behandling sådanne data."
+    data_collection_us: Jeg forstår, at Code.org er et non-profit-websted baseret
+      i USA, og at lovgivningen om dataindsamling i USA kan afvige fra lovene i mit
+      land.
+    visit_privacy: Besøg Code.org's [Privacy Policy](%{privacy_url}) for at lære mere.
     student_terms_markdown: E-mailadresser er ikke gemt i form af, at vi kontakter
       eleverne. Elever vil aldrig modtage e-mails fra Code.org, bortset fra, at hvis
       det er genopretning af adgangskoder. Se vores [privatlivspolitik](http://code.org/privacy)
@@ -1098,14 +1105,6 @@ da:
   cookie_banner:
     more_information: Se Code.org's privatlivspolitik.
     accept: Jeg er enig
-  gdpr_dialog:
-    heading: Accepterer du at bruge en hjemmeside baseret i USA?
-    message: Data fra din brug af dette websted kan sendes til og gemmes eller behandles
-      i USA.
-    link_intro: For nærmere oplysninger se vores
-    privacy_policy: privatlivspolitik
-    logout: Log af
-    true: Ja
   copy: Kopier
   parent_email_banner:
     text: "** Er du forælder eller værge? ** Knyt din e-mail til denne konto for at

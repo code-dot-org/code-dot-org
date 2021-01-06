@@ -1,8 +1,6 @@
 /** @file Board controller for Adafruit Circuit Playground */
-/* global SerialPort */ // Maybe provided by the Code.org Browser
 import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import ChromeSerialPort from 'chrome-serialport';
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import experiments from '@cdo/apps/util/experiments';
@@ -25,6 +23,7 @@ import Led from './Led';
 import {isNodeSerialAvailable} from '../../portScanning';
 import PlaygroundButton from './Button';
 import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
+import {serialPortType} from '../../util/browserChecks';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -93,7 +92,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
-        this.boardType_ = detectBoardTypeFromPort();
+        this.boardType_ = detectBoardTypeFromPort(this.port_);
         if (this.boardType_ === BOARD_TYPE.EXPRESS) {
           this.fiveBoard_.isExpressBoard = true;
         }
@@ -245,6 +244,15 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   reset() {
+    /*
+     * Clear send queue of any pending messages.
+     * Important to do this before calling cleanupCircuitPlaygroundComponents. That function
+     * resets the state on the various board components, which requires writing to the board.
+     * So if we clear the queue after we call cleanupCircuitPlaygroundComponents, but before
+     * all of the writes complete, the board will be left in a partially-reset state.
+     */
+    this.serialPort_.queue = [];
+
     cleanupCircuitPlaygroundComponents(
       this.prewiredComponents_,
       false /* shouldDestroyComponents */
@@ -339,49 +347,38 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
-    // A gotcha here: These two types of SerialPort provide similar, but not
-    // exactly equivalent, interfaces.  When making changes to construction
-    // here maker sure to test both paths:
-    //
-    // Code.org Browser case: Native Node SerialPort 6 is available on window.
-    //
-    // Code.org connector app case: ChromeSerialPort bridges through the Chrome
-    // app, implements SerialPort 3's interface.
-    const SerialPortType = isNodeSerialAvailable()
-      ? SerialPort
-      : ChromeSerialPort.SerialPort;
+    const SerialPortType = serialPortType();
 
     const port = new SerialPortType(portName, {
       baudRate: SERIAL_BAUD
     });
 
     if (isNodeSerialAvailable()) {
-      const queue = [];
+      port.queue = [];
       let sendPending = false;
       const oldWrite = port.write;
 
       const trySend = buffer => {
         if (buffer) {
-          queue.push(buffer);
+          port.queue.push(buffer);
         }
 
-        if (sendPending || queue.length === 0) {
+        if (sendPending || port.queue.length === 0) {
           // Exhausted pending send buffer.
           return;
         }
-
-        if (queue.length > 512) {
+        if (port.queue.length > 512) {
           throw new Error(
             'Send queue is full! More than 512 pending messages.'
           );
         }
 
-        const toSend = queue.shift();
+        const toSend = port.queue.shift();
         sendPending = true;
         oldWrite.call(port, toSend, 'binary', function() {
           sendPending = false;
 
-          if (queue.length !== 0) {
+          if (port.queue.length !== 0) {
             trySend();
           }
         });

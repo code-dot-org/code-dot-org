@@ -18,7 +18,7 @@
 # also associates an intro video
 
 # Game.name also maps to localized strings, e.g. [data.en.yml]: game: name: 'Unplug1': 'Introduction to Computer Science'
-class Game < ActiveRecord::Base
+class Game < ApplicationRecord
   include Seeded
   has_many :levels
   belongs_to :intro_video, foreign_key: 'intro_video_id', class_name: 'Video'
@@ -313,7 +313,7 @@ class Game < ActiveRecord::Base
   )
 
   def self.setup
-    videos_by_key = Video.all.index_by(&:key)
+    videos_by_key = Video.all.where(locale: 'en-US').index_by(&:key)
     games = GAMES_BY_INDEX.map.with_index(1) do |line, id|
       name, app, intro_video_key = line.split ':'
       {id: id, name: name, app: app, intro_video_id: videos_by_key[intro_video_key]&.id}

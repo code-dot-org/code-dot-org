@@ -20,7 +20,11 @@ const AFE_CONSENT_BODY = (
     I give Code.org permission to share my name and email address, and my
     school's name, address, and NCES ID, with Amazon.com (required to
     participate). Use of your personal information is subject to{' '}
-    <a href={AMAZON_PRIVACY_POLICY_URL} target="_blank">
+    <a
+      href={AMAZON_PRIVACY_POLICY_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Amazon’s Privacy Policy
     </a>
     .
@@ -34,7 +38,7 @@ const CSTA_CONSENT_BODY = (
     school's name, address, and NCES ID, with the Computer Science Teachers
     Association (required if you want a CSTA+ membership). I provide my consent
     to the use of my personal data as described in the{' '}
-    <a href={CSTA_PRIVACY_POLICY_URL} target="_blank">
+    <a href={CSTA_PRIVACY_POLICY_URL} target="_blank" rel="noopener noreferrer">
       CSTA Privacy Policy
     </a>
     .

@@ -2732,7 +2732,7 @@
         "courseB_collector_loops6_2019": {
           "courseB_collector_loops6_a": "无法找出哪里出错？请使用\"步进\"按钮来逐模块运行程序。",
           "courseB_collector_loops6_b": "通过单击 \"3\" 并选择其他数字, 可以更改重复循环运行的次数。",
-          "courseB_collector_loops6_c": "需使用 3次`重复` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 循环来解决这个难题。",
+          "courseB_collector_loops6_c": "需使用 3 次 `重复` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 循环来通过此关。",
           "courseB_collector_loops6_d": "如果你感到迷惑, 试着把这个关卡分成3块。"
         },
         "courseB_collector_loops6_2020": {
@@ -3857,8 +3857,8 @@
           "courseC_artist_loopsPrePre1a_b": "要向前移动50像素, 请使用以下模块：\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "如果使用模块让我 '前进  <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> 像素'，我会自动画一条线。",
-          "courseC_artist_prog2_b": "怎么才能转弯呢？使用 '向右转  <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> 度' 模块。"
+          "courseC_artist_prog2_a": "如果使用模块让我 '前进 100 像素'，我会自动画一条线。",
+          "courseC_artist_prog2_b": "怎么才能转弯呢？使用 '向右转 90 度' 模块。"
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "如果使用模块让我 '前进  <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> 像素'，我会自动画一条线。",

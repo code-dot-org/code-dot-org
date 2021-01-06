@@ -161,12 +161,21 @@ module Cdo
       return @@curriculum_languages
     end
 
-    def curriculum_url(locale, path = '')
-      locale = locale.downcase.to_s
-      domain = "https://curriculum.code.org"
-      curriculum_languages.include?(locale) ?
-        File.join(domain, locale, path) :
-        File.join(domain, path)
+    def curriculum_url(locale, uri = '', autocomplete_partial_path = true)
+      return unless uri
+      uri = URI.encode(uri)
+      uri = URI.parse(uri)
+
+      uri.host = "curriculum.code.org" if uri.host.nil? && autocomplete_partial_path
+      uri.scheme = "https" if uri.scheme.nil? && autocomplete_partial_path
+      uri.path = '/' + uri.path unless uri.path.start_with?('/')
+
+      if uri.host == "curriculum.code.org"
+        locale = locale.downcase.to_s
+        uri.path = File.join('', locale, uri.path) if curriculum_languages.include?(locale)
+      end
+
+      uri.to_s
     end
 
     def dir(*dirs)

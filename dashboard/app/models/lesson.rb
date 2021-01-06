@@ -24,7 +24,7 @@ require 'cdo/shared_constants'
 
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Lesson)
-class Lesson < ActiveRecord::Base
+class Lesson < ApplicationRecord
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
@@ -36,6 +36,7 @@ class Lesson < ActiveRecord::Base
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
+  has_many :lessons_resources # join table. we need this association for seeding logic
   has_many :objectives, dependent: :destroy
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
@@ -53,6 +54,7 @@ class Lesson < ActiveRecord::Base
     preparation
     announcements
     visible_after
+    assessment_opportunities
   )
 
   # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
@@ -206,7 +208,7 @@ class Lesson < ActiveRecord::Base
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
-  def summarize(include_bonus_levels = false)
+  def summarize(include_bonus_levels = false, for_edit: false)
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
@@ -223,7 +225,7 @@ class Lesson < ActiveRecord::Base
         title: localized_title,
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
-        levels: cached_levels.map {|l| l.summarize(false)},
+        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
         unplugged: display_as_unplugged # TODO: Update to use unplugged property
@@ -267,9 +269,10 @@ class Lesson < ActiveRecord::Base
   # TODO: [PLAT-369] trim down to only include those fields needed on the
   # script edit page
   def summarize_for_script_edit
-    summary = summarize.dup
+    summary = summarize(for_edit: true).dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = name
+    summary[:lesson_group_display_name] = lesson_group&.display_name
     summary.freeze
   end
 
@@ -285,9 +288,11 @@ class Lesson < ActiveRecord::Base
   # the client.
   def summarize_for_lesson_edit
     {
+      id: id,
       name: name,
       overview: overview,
       studentOverview: student_overview,
+      assessmentOpportunities: assessment_opportunities,
       assessment: assessment,
       unplugged: unplugged,
       lockable: lockable,
@@ -295,9 +300,11 @@ class Lesson < ActiveRecord::Base
       purpose: purpose,
       preparation: preparation,
       announcements: announcements,
-      activities: lesson_activities.map(&:summarize_for_edit),
-      resources: resources,
-      objectives: objectives.map(&:summarize_for_edit)
+      activities: lesson_activities.map(&:summarize_for_lesson_edit),
+      resources: resources.map(&:summarize_for_lesson_edit),
+      objectives: objectives.map(&:summarize_for_edit),
+      courseVersionId: lesson_group.script.get_course_version&.id,
+      updatedAt: updated_at
     }
   end
 
@@ -307,7 +314,7 @@ class Lesson < ActiveRecord::Base
       position: relative_position,
       lockable: lockable,
       key: key,
-      displayName: localized_title,
+      displayName: localized_name,
       overview: overview || '',
       announcements: announcements,
       purpose: purpose || '',
@@ -315,7 +322,8 @@ class Lesson < ActiveRecord::Base
       activities: lesson_activities.map(&:summarize_for_lesson_show),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       objectives: objectives.map(&:summarize_for_lesson_show),
-      is_teacher: user&.teacher?
+      is_teacher: user&.teacher?,
+      assessmentOpportunities: assessment_opportunities
     }
   end
 
@@ -352,6 +360,21 @@ class Lesson < ActiveRecord::Base
 
         level_json
       end
+    }
+  end
+
+  # Returns a hash representing i18n strings in scripts.en.yml which may need
+  # to be updated after this object was updated. Currently, this only updates
+  # the lesson name.
+  def i18n_hash
+    {
+      script.name => {
+        'lessons' => {
+          key => {
+            'name' => name
+          }
+        }
+      }
     }
   end
 
@@ -447,20 +470,24 @@ class Lesson < ActiveRecord::Base
     # this update, so just set activity_section_position as the source of truth
     # and then fix chapter and position values after.
     script.fix_script_level_positions
+    # Reload the lesson to make sure the positions information we have is all up
+    # to date
+    reload
   end
 
   def update_objectives(objectives)
     return unless objectives
 
     self.objectives = objectives.map do |objective|
-      persisted_objective = objective['id'].blank? ? Objective.new : Objective.find(objective['id'])
+      persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
     end
   end
 
-  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
@@ -547,7 +574,7 @@ class Lesson < ActiveRecord::Base
     related_lessons.map do |lesson|
       {
         scriptTitle: lesson.script.localized_title,
-        versionYear: lesson.script.get_course_version.version_year,
+        versionYear: lesson.script.get_course_version&.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
         id: lesson.id,
@@ -580,7 +607,7 @@ class Lesson < ActiveRecord::Base
 
     lesson_activities.create(
       position: activity['position'],
-      seeding_key: SecureRandom.uuid
+      key: SecureRandom.uuid
     )
   end
 end

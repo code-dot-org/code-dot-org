@@ -2142,3 +2142,13 @@ no-NO:
         - {}
         questions:
         - {}
+      csd-pre-survey-2017-levelgroup:
+        title: CS Funns Før-Kurs' Studentundersøkelse
+      csd-pre-survey-2017-levelgroup_2018:
+        title: CS Funns Før-Kurs' Studentundersøkelse
+      csd-pre-survey-levelgroup_2019:
+        title: CS Funns Før-Kurs' Studentundersøkelse
+      outbreak_story:
+        content1: beskrivelse her
+      outbreak_story2:
+        content1: beskrivelse her

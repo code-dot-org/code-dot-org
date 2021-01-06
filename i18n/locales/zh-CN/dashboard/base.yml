@@ -159,8 +159,10 @@ zh-CN:
     invalid_password: "密码必须至少为 6 个字符"
     mismatch_password: "您输入的两个密码不匹配"
     student_consent: "我确认我的父母或法定监护人同意我使用 Code.org 的服务。"
-    agree_us_website: "我同意使用美国的网站。"
-    my_data_to_us: "我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。"
+    agree_us_data_transfer_student: '**我同意 Code.org 在我使用本网站的过程中会传输资料（包括个人资料）到美利坚合众国**以保存和使用本资料。'
+    agree_us_data_transfer_teacher: '**我同意 Code.org 在我（和我学生的）使用本网站的过程中会传输资料（包括个人资料）到美利坚合众国**以保存和使用本资料。'
+    data_collection_us: "我理解 Code.org 是基于美国的非营利组织，在美国管理该网站资料收集的法律可能会与我所从的国家有不同。"
+    visit_privacy: '访问 Code.org 的[隐私条款]（%{privacy_url}）以了解跟多。'
     student_terms_markdown: "注意：电子邮箱不会被存储，并用作与学生取得联系。Code.org 不会向学生发送与密码恢复无关的任何邮件。更多信息请查阅 [隐私政策](http://code.org/privacy)。"
     additional_information: "我们需要一些额外的信息来继续为你注册."
     user_type_button: "更新帐户类型"
@@ -1072,13 +1074,6 @@ zh-CN:
     message: '通过继续浏览我们的网站或单击"我同意"，您同意在你的计算机或设备上存储 cookies。'
     more_information: "查看 Code.org 的隐私政策。"
     accept: '我同意'
-  gdpr_dialog:
-    heading: '你同意使用一个美国的网站吗？'
-    message: '您使用本网站产生的数据可能会被传输至美国并在美国存储或处理。'
-    link_intro: '有关详细信息，请参阅我们'
-    privacy_policy: '隐私条款'
-    logout: '注销'
-    yes: '对'
   page_not_found_title: "找不到页面"
   page_not_found_header: '404：找不到页面'
   page_not_found_description: "您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。"

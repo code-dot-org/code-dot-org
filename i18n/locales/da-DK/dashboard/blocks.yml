@@ -1138,6 +1138,8 @@ da:
         text: figur {SPRITE} stopper {BEHAVIOR}
       gamelab_removeTint:
         text: fjern farve fra {THIS}
+      gamelab_repeatForever:
+        text: Gentag for evigt
       gamelab_setAnimation:
         text: ændre {THIS} udseende til {ANIMATION}
       gamelab_setBackground:
@@ -1158,6 +1160,8 @@ da:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': undervands
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
             undefined: ingen
+      gamelab_setBackgroundImageAs:
+        text: sæt baggrund til {IMG}
       gamelab_setProp:
         text: skift {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -1569,7 +1573,6 @@ da:
             '"stoneBricks"': mursten
             '"mossyStoneBricks"': mursten med mos
             '"crackedStoneBricks"': knækkede mursten
-            '"decorativeStoneBricks"': dekorative mursten
             '"blueCoralBlock"': blå koral-blok
             '"pinkCoralBlock"': pink koral-blok
             '"magentaCoralBlock"': magenta koral-blok

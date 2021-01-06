@@ -2175,3 +2175,7 @@ ca:
               name: Curs A
             Course B:
               name: Curs B
+        ml-playground:
+          lessons:
+            intro:
+              name: Introducció

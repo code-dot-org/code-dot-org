@@ -2,32 +2,35 @@
 #
 # Table name: schools
 #
-#  id                 :string(12)       not null, primary key
-#  school_district_id :integer
-#  name               :string(255)      not null
-#  city               :string(255)      not null
-#  state              :string(255)      not null
-#  zip                :string(255)      not null
-#  school_type        :string(255)      not null
-#  created_at         :datetime         not null
-#  updated_at         :datetime         not null
-#  address_line1      :string(50)
-#  address_line2      :string(30)
-#  address_line3      :string(30)
-#  latitude           :decimal(8, 6)
-#  longitude          :decimal(9, 6)
-#  state_school_id    :string(255)
+#  id                          :string(12)       not null, primary key
+#  school_district_id          :integer
+#  name                        :string(255)      not null
+#  city                        :string(255)      not null
+#  state                       :string(255)      not null
+#  zip                         :string(255)      not null
+#  school_type                 :string(255)      not null
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  address_line1               :string(50)
+#  address_line2               :string(30)
+#  address_line3               :string(30)
+#  latitude                    :decimal(8, 6)
+#  longitude                   :decimal(9, 6)
+#  state_school_id             :string(255)
+#  school_category             :string(255)
+#  last_known_school_year_open :string(9)
 #
 # Indexes
 #
-#  index_schools_on_id                  (id) UNIQUE
-#  index_schools_on_name_and_city       (name,city)
-#  index_schools_on_school_district_id  (school_district_id)
-#  index_schools_on_state_school_id     (state_school_id) UNIQUE
-#  index_schools_on_zip                 (zip)
+#  index_schools_on_id                           (id) UNIQUE
+#  index_schools_on_last_known_school_year_open  (last_known_school_year_open)
+#  index_schools_on_name_and_city                (name,city)
+#  index_schools_on_school_district_id           (school_district_id)
+#  index_schools_on_state_school_id              (state_school_id) UNIQUE
+#  index_schools_on_zip                          (zip)
 #
 
-class School < ActiveRecord::Base
+class School < ApplicationRecord
   include Seeded
 
   self.primary_key = 'id'

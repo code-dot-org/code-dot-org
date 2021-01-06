@@ -403,6 +403,8 @@ sl:
         text: naključna barva
       gamelab_randomColor:
         text: naključna barva
+      gamelab_repeatForever:
+        text: ponavljaj kar naprej
       gamelab_setBackgroundImage:
         options:
           IMG:

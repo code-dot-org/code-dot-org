@@ -1,13 +1,13 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2018-03-26T16:21:17.000Z",
-  "user_id": 1,
   "properties": {
     "video_key": "C2_conditionals_with_cards",
     "parent_level_id": 9446,
     "name_suffix": "_2018"
   },
+  "game_id": 31,
+  "created_at": "2018-03-26T16:21:17.000Z",
+  "user_id": 1,
   "published": true
 }]]></config>
 </Unplugged>

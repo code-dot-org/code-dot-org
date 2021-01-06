@@ -1,68 +1,75 @@
 ---
-title: Learning computer science when schools are closed in response to Covid19
+title: Kovid19 pandemiyasi sababli maktablar yopilganda kompyuter fanini o‘rganish
 ---
 
 <a id="top"></a>
 
-# Learning computer science when schools are closed
+# Maktablar yopiqligida kompyuter fanini o‘rganish
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
 {{ athome_vid_intro }}
 </div>
 
-<p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
-<p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
-<p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
-<p><a href="#apps">No computer at home? See smartphone options</a></p>
+<p>Kovid-19 pandemiyasi sababli dunyo nihoyatda qiyin davrni boshdan kechirmoqda, sog'liqni saqlash, hamjamiyat va iqtisodiyotga nisbatan tobora ko'payib borayotgan salbiy ta'sirlar bilan kurashmoqda. Xavfsizlik choralari mamlakat bo'ylab maktablarning yopilishiga olib keldi. </p>
+<p>Biz o'qituvchilar, talabalar va oilalarni mumkin bo'lgan har qanday yo'l bilan qo'llab-quvvatlashni xohlaymiz. Quyida o'quvchingizga uyda kompyuter fanlarini o'rganishda yordam beradigan manbalar to'plami keltirilgan. <strong>Ota-onalar - agar siz o'quvchingiz uchun Code.org hisob qaydnomasini yaratmoqchi bo'lsangiz yoki ularga mavjud bo'lgan qayd yozuviga kirishda yordam berishni o'ylasangiz, iltimos, <a href="https://support.code.org/hc/en-us/articles/360040703792">ushbu qo'llanmani o'qing</a>.</strong></p>
+<p>Shuningdek, biz o'qituvchilarga o'quvchilar masofadan turib yoki ijtimoiy jihatdan ajralgan sinflarda <a href="#teacher-support">kompyuter fanini o'qitishni davom ettirishga yordam beradigan ba'zi manbalarni</a> to'pladik. </p>
+<p><a href="#apps">Uyda kompyuter yo'qmi? Smartfon variantlarini ko'ring</a></p>
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
 
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
 
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
 
-## Hour of Code: Try these engaging, introductory tutorials
-Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
-* [Dance Party](https://code.org/dance)  - Code a dance party featuring music by Katy Perry, Shawn Mendes, and more.
-* [Minecraft](https://code.org/api/hour/begin/mc) - Use your creativity and problem solving skill to journey and explore new worlds.
-* [AI for Oceans](https://code.org/oceans) - Learn how AI and machine learning can be used to address world problems.
-* [Flappy Code](http://studio.code.org/s/flappy/reset) - Write your own flappy game code.
-* [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
-* And many [more tutorials](https://code.org/hourofcode/overview)!
+<p style="border: 0; color: #4d575f">7-11 dekabr kunlari CodeBytes-ning jonli mini-darslarida ishtirok eting!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">CodeBytes uchun CS Education Week - Kompyuter fanlari haftasining har kunida kompyuter fanidan 20 daqiqali interaktiv darslarga qo'shiling. Har kuni ikki marta jonli efirga uzatiladigan CodeBytes - bu talabalar uchun #HourOfCode-da virtual ishtirok etishning ajoyib usuli!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Qo'shimcha ma'lumotni <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a> sahifasidan olishingiz mumkin</p>
+</div>
 
-<p><a href="#top">[Back to top]</a></p>
+<div class="clearboth"></div></div>
+
+## Dasturlash soati: Ushbu qiziqarli, kirish qo'llanmalarini bilan tanishing
+Barcha yoshlar uchun mo'ljallangan bir soatlik dars bilan tanishing. 45 dan ortiq tilda yuzlab mashg'ulot va o'quv qo'llanmalar mavjud.
+* [Raqslar bazmi](https://code.org/dance) - Keti Perri, Shoun Mendes va boshqalarning musiqalari bilan raqs bazmini dasturlash.
+* [Minecraft](https://code.org/api/hour/begin/mc) - sayohat qilish va yangi dunyoni o'rganish uchun ijodkorlik va muammolarni hal qilish qobiliyatingizdan foydalaning.
+* [Okeanlar uchun sun'iy intellekt](https://code.org/oceans) - Dunyo muammolarini hal qilishda sun'iy intellekt va mashina o'rganishi usullaridan qanday foydalanish mumkinligini bilib oling.
+* [Flappy Code](http://studio.code.org/s/flappy/reset) - "Flappy" o'yin kodini yozing.
+* [Astronomiyada dasturlash](https://quorumlanguage.com/hourofcode/astro1.html) - ko'zi ojiz o'quvchilar uchun qulay dasturlash tili - Quorum yordamida astronomiya haqida ma'lumot oling.
+* Va yana ko'plab [o'quv qo'llanmalari](https://code.org/hourofcode/overview)!
+
+<p><a href="#top">[Yuqoriga qaytish]</a></p>
 
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Videos: Watch these easy 3-5 minute educational videos
+## Videolar: Ushbu 3-5 daqiqalik ta'limiy yengil videolarni tomosha qiling
 
 {{ athome_videos }}
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Yuqoriga qaytish]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
 <a id="express"></a>
 
-## Learn the fundamentals with our self-paced courses
-### **Express courses**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+## Mustaqil o‘tiladigan kurslarimiz bilan asoslarni o‘rganing
+### **Ekspress kurslar**
+Talabalar mustaqil ta'lim olishni boshlashi uchun ajoyib imkoniyat. Siz drag & drop bloklari yordamida kompyuter fanlari asoslarini o‘rganasiz. Mustaqil ravishda rasm va o'yinlar yarating. <strong>Izoh: Ekspress kurslar hozirda faqat ingliz, hind, italyan va ispan tillarida mavjud. Boshqa tillar uchun biz 20 soatlik <a href="https://studio.code.org/s/20-hour">Tezlashtirilgan kursimizni</a> tavsiya qilamiz. Sizning tilingizda nima borligini bilish uchun bizning <a href="https://studio.code.org/courses">kurs katalogimiz</a> bilan tanishing.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Ekspress Kurs</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Maktabgacha yoshdagilar uchun Ekspress Kurs</a>
 
 </div>
 <div style="clear: both"></div>
@@ -73,10 +80,10 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div style="clear: both; margin-bottom: 30px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Yuqoriga qaytish]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Learn to design and build apps with App Lab
+## App Lab yordamida dasturlarni loyihalashtirish va yaratishni o‘rganing
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -86,75 +93,85 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-66">
 
-<p>App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, and share your creation with family and friends.</p>
-<p>Ages 13+, all modern browsers, English only</p>
-<a href="https://code.org/educate/applab"><button>Try it out</button></a>
+<p>App Lab - bu oddiy dasturlarni yaratish uchun dasturiy muhit. Dastur yarating, JavaScript-dagi kodni bloklar yoki matnlar bilan yarating va yaratgan narsalaringizni oila va do'stlaringizga ulashing.</p>
+<p>13+ yosh uchun, barcha zamonaviy brauzerlarda, faqat ingliz tilida</p>
+<a href="https://code.org/educate/applab"><button>Sinab ko'ring</button></a>
 
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Yuqoriga qaytish]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## No computer at home? Try these smartphone apps
+## Uyda kompyuter yo'qmi? Ushbu smartfon uchun dasturlarni sinab ko‘ring
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
+<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a> 
+Algoritmlar, patternlarni aniqlash, ketma-ketliklar, sikllar va shartli bayonotlar kabi kodlash asoslarini o'rgatishda, o'quvchilarni hayajonli sarguzashtlarga olib boradigan maftunkor mobil kodlash o'yini. <i>(barcha yoshdagilar uchun).</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
+<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>5-9 yoshdagi bolalar uchun mukofotlangan dasturlashni o‘rganish platformasi. Dasturlashni o'rganib, jumboqlarni yechib va Foo-lar bilan o'yinlar yarating. <strong>Eslatma: codeSpark 3 oylik bepul sinov muddatini taqdim etadi. Ro'yxatdan o'tishda ota-onaning elektron pochta manzili va kredit karta ma'lumotlari talab qilinadi.</strong><i>(5-sinfgacha bo'lgan o'quvchilar uchun)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Chigirtka</strong></h3></a> Telefoningizda haqiqiy JavaScript yozishni o‘rgatadigan qiziqarli va tezkor darslar bilan kodlashni o‘rganing. Google dasturi bilan kod. <i>(o‘rta va yuqori sinflar uchun)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Yuqoriga qaytish]</a></p>
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Limited or no internet access? Check out these unplugged activities
-* [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
-* [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
+## Internetga ulanish bormi yoki yo‘qmi? Ushbu ulanishsiz mashg‘ulotlar bilan tanishing
+* [Salom Rubi](https://www.helloruby.com/play) - kompyuterlar, texnologiyalar va dasturiy ta'minotni o‘rganish uchun dunyodagi eng antiqa usul. Muammoni yechish, qonuniyatlarni aniqlash, algoritmik fikrlash, muammolarni debag qilish va birgalikda ishlash kabi bir qator informatika mavzularidagi mashg‘ulotlar. *(4-10 yosh uchun)*
+* [CS Unplugged - internetga ulanishsiz](https://csunplugged.org/en/) kartochkalar, iplar, rangli qalamchalar va turli xil narsalardan foydalanadigan qiziqarli o'yinlar va jumboqlar orqali informatika fanini o‘rgatadigan bepul o‘quv materiallari to‘plami. *(5-14 yosh uchun)*
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Yuqoriga qaytish]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+## Code Break: Code.org jamoasi va maxsus mehmonlardan bilim oling!
+
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Algoritm, sun'iy intellekt va shifrlash kabi informatika tushunchalarini o‘rganish uchun har hafta o‘tkaziladigan interaktiv sinfda maxsus mehmonlar Code.org bosh direktori Xadi Partovi mezbonligida.</p>
+<p>Agar siz "Code Break"ning barcha epizodlarini ko'rib chiqmagan bo'lsangiz, hali ham kech emas! Jonli epizodlar endi efirga uzatilmaydi, ammo siz barcha epizodlarni va mustaqil mashg‘ulotlarni <a href="https://code.org/break">bu yerda</a> ko'rishingiz mumkin.</p>
+
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 <a id="teacher-support"></a>
 
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
+## Virtual yoki ijtimoiy jihatdan ajratilgan sinflarda o‘qituvchilarni qo‘llab-quvvatlash
+Iltimos, virtual yoki ijtimoiy jihatdan ajratilgan sinf muhitida o'qituvchilar uchun manbalar va takliflarni ko'rish uchun <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> saytiga tashrif buyuring. Kursga oid manbalar quyidagi havolalar orqali olinishi mumkin.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
+<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Kompyuter Fanlari Tamoyillari</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
+<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Kompyuter Fanlari Kashfiyotlari</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Kompyuter Fanlari Asoslari</p></a></div>
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Yuqoriga qaytish]</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

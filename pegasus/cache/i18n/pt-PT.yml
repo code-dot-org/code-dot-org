@@ -1956,3 +1956,5 @@ pt-PT:
   page_not_found_description: A página que estavas a procurar não existe neste endereço.
     Verifica o endereço web e carrega novamente. Ou então, volta para a nossa página
     inicial.
+  footer_powered_by_aws: Powered by Amazon Web Services
+  codebytes_skinny_banner_english_only: Apenas em inglês

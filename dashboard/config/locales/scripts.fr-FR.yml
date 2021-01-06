@@ -13102,7 +13102,7 @@ fr:
         dance:
           title: Soirée Dansante (2018)
           description_short: Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
-            Ciara, et 25 autres !
+            Ciara, et 25 autres artistes !
           description: Codez votre propre Soirée Dansante à partager avec vos amis
             !
           lessons:
@@ -23692,3 +23692,11 @@ fr:
               name: Cours B
             CS Discoveries:
               name: Découvertes de l'Informatique
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: IA pour les Océans
+            intro:
+              name: Introduction
+            visualizing:
+              name: Visualiser les Données

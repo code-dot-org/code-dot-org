@@ -1,9 +1,9 @@
 name 'csp-7-exam1-API-algorithms-2020'
 editor_experiment ''
-right '![](https://images.code.org/e9a25b6b35faa4063f052148452222f9-image-1603991896322.png)'
-wrong '![](https://images.code.org/9c4d98f9a4d3ed7cd919987ee831ab69-image-1603991916308.png)'
-wrong '![](https://images.code.org/949c952fc4fc25607015b726dbe29e85-image-1603991931869.png)'
-wrong '![](https://images.code.org/04f70994b0a1bc87f336d0c80fe3ddfe-image-1603991943777.png)'
+right '![](https://images.code.org/4948c6f6eba7ced880b33c31a2c9735f-image-1604608364369.27.15 PM.png)'
+wrong '![](https://images.code.org/995e40fe93f09df5bda26477784d2a07-image-1604608770294.38.50 PM.png)'
+wrong '![](https://images.code.org/fe81d575064fbb0da6b80e9331009748-image-1604609006618.43.08 PM.png)'
+wrong '![](https://images.code.org/7f3cc07ac8d70c8a68508f676d813926-image-1604609125912.45.01 PM.png)'
 
 
 
@@ -20,7 +20,7 @@ function moveForward();
 function rotateLeft();
 
 // turns the robot to the right
-function rototateRight
+function rotateRight();
 
 // checks if a robot can move in any direction
 // direction {string} - the direction to be checked

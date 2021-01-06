@@ -6,18 +6,26 @@ sk:
         csd_category_name: Objavujeme informatiku ('17-'18)
         csd_2018_category_name: Objavujeme informatiku ('18-'19)
         csd_2019_category_name: Objavujeme informatiku ('19-'20)
+        csd_2020_category_name: Objavujeme Informatiku ('20-'21)
+        csd_pilot_category_name: Objavujeme Informatiku test
         csf_category_name: Základy Informatiky
         csf_2018_category_name: Základy Informatiky (2018)
+        csf_2019_category_name: Základy Informatiky ('19-'20)
+        csf_2020_category_name: Základy Informatiky ('20-'21)
         csf_international_category_name: Základy Informatiky (medzinárodná verzia)
         csf2_draft_category_name: 'Vo vývoji: Kurzy A - F'
         csp_category_name: Princípy Informatiky ('15-'16)
         csp_2018_category_name: Princípy Informatiky ('18-'19)
         csp_2019_category_name: Princípy Informatiky ('19-'20)
+        csp_2020_category_name: Princípy Informatiky ('20-'21)
         cspexams_category_name: Princípy Informatiky - Cvičný test
         csp17_category_name: Princípy Informatiky ('17-'18)
         full_course_category_name: Všetky kurzy
         hoc_category_name: Hodina Kódu
         math_category_name: Matematické
+        research_studies_category_name: Výskumné štúdie
+        twenty_hour_category_name: 20-Hodina
+        tts_category_name: Prevod textu na reč
         other_category_name: Ostatné
       name:
         course1:
@@ -291,6 +299,8 @@ sk:
               name: Veľká hra - booleovské výrazy
             'Play Lab: Booleans':
               name: Netopier Sam
+            'Play Lab: Collision Detection (Big Game)':
+              name: Veľká hra - detekcia kolízií
             'Play Lab: Defining Functions':
               name: Raketová výška
             'Play Lab: Defining Variables (Big Game)':
@@ -332,6 +342,8 @@ sk:
               name: Pedagogika informatiky
             Introduction to PD:
               name: Úvod do PD
+            K-5 Courses:
+              name: K-5 Kurzy
             Next Steps:
               name: Ďalšie kroky
             'Programming Concept: Conditionals':
@@ -529,6 +541,8 @@ sk:
               name: Posielanie naformátovaného textu
             Sending Numbers:
               name: Posielanie čísiel
+            Text Compression:
+              name: Kompresia textu
         algebraPD:
           lessons:
             Course Overview:
@@ -547,16 +561,29 @@ sk:
           lessons:
             Booleans:
               name: Booleanovské výrazy
+            Design Recipe Practice:
+              name: Prax Tvorby Dizajnu
             Evaluation Blocks:
               name: Vyhodnocovanie blokov
             Luigi's Pizza:
               name: Luigiho pizza
+            Rocket-Height:
+              name: Raketová výška
             Sam the Bat:
               name: Netopier Sam
             Strings and Images:
               name: Vlákna a obrázky
             Your Game - Animation:
               name: Tvoja hra - Animácie
+            Your Game - Collision Detection:
+              name: Tvoja hra - detekcia kolízií
+            Your Game - Player Movement:
+              name: Tvoja hra - Hráčov pohyb
+        text-compression:
+          title: Kompresia textu
+          lessons:
+            Text Compression:
+              name: Kompresia textu
         CSPPD:
           lessons:
             Growth Mindset:
@@ -593,6 +620,8 @@ sk:
               name: Čo je to ECS?
         sciencePD:
           lessons:
+            Dispositions and Classroom Culture:
+              name: Dispozície a kultúra v triede
             Introduction to PD:
               name: Úvod do PD
             The Tutorial:
@@ -609,6 +638,8 @@ sk:
               name: Tvorba funkcií
             Digital Assistant Project:
               name: Projekt Digitálny asistent
+            Introducing Design Mode:
+              name: Predstavenie dizajnového módu
             Introduction to Arrays:
               name: Úvod do zoskupení
             Introduction to Digital Assistants:
@@ -691,6 +722,8 @@ sk:
               name: Prečo informatika patrí k matematike
         sciencePD-NexTech:
           lessons:
+            Dispositions and Classroom Culture:
+              name: Dispozície a kultúra v triede
             Introduction to PD:
               name: Úvod do PD
             The Tutorial:
@@ -699,6 +732,8 @@ sk:
               name: Čo očakávať
         sciencePD-iZone:
           lessons:
+            Dispositions and Classroom Culture:
+              name: Dispozície a kultúra v triede
             Introduction to PD:
               name: Úvod do PD
             The Tutorial:
@@ -737,6 +772,8 @@ sk:
               name: Voľná hra
             Luigi's Pizza:
               name: Luigiho pizza
+            Rocket-Height:
+              name: Raketová výška
             Sam the Bat:
               name: Netopier Sam
             Strings and Images:
@@ -769,6 +806,8 @@ sk:
               name: Minecraft
             Studio:
               name: Štúdio
+            Text Compression:
+              name: Kompresia textu
             Web Lab:
               name: Web Lab
             Sprite Lab:
@@ -785,6 +824,8 @@ sk:
               name: Vyhodnocovanie blokov
             Next Steps:
               name: Ďalšie kroky
+            Rocket-Height:
+              name: Raketová výška
             Strings and Images:
               name: Vlákna a obrázky
             Teacher Dashboard:
@@ -1139,6 +1180,8 @@ sk:
               name: Kódovanie farebných obrázkov
             Lossy Compression and File Formats:
               name: Stratové komprimovanie a formáty súborov
+            Text Compression:
+              name: Kompresia textu
             Post-Course Survey:
               name: Hodnotenie kurzu
         csp3-2017:
@@ -1180,6 +1223,8 @@ sk:
           lessons:
             Digital Assistant Project:
               name: Projekt Digitálny asistent
+            Introducing Design Mode:
+              name: Predstavenie dizajnového módu
             Introduction to Arrays:
               name: Úvod do zoskupení
             Introduction to Digital Assistants:
@@ -1220,6 +1265,8 @@ sk:
               name: Využitie procesu na tvorbu hry
         2016_sciencePD_phase1:
           lessons:
+            Dispositions and Classroom Culture:
+              name: Dispozície a kultúra v triede
             Introduction to PD:
               name: Úvod do PD
             The Tutorial:
@@ -1248,6 +1295,8 @@ sk:
               name: Prečo informatika patrí k matematike
         sciencePD1:
           lessons:
+            Dispositions and Classroom Culture:
+              name: Dispozície a kultúra v triede
             Introduction to PD:
               name: Úvod do PD
             The Tutorial:
@@ -1281,6 +1330,8 @@ sk:
               name: Game Lab
         CSDU4-Draft:
           lessons:
+            Design Mode:
+              name: Dizajnový mód
             Analysis of Design:
               name: Analýza dizajnu
             Re-designing a Space:
@@ -4313,6 +4364,8 @@ sk:
           lessons:
             Bytes and File Sizes:
               name: Byty a veľkosti súborov
+            Text Compression:
+              name: Kompresia textu
             Encoding B&W Images:
               name: Kódovanie čiernobielych obrázkov
             Encoding Color Images:
@@ -4742,6 +4795,10 @@ sk:
             Digital Sharing:
               name: Digitálne zdieľanie
               description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne prostredie. Študenti by mali byť vedení k dodržiavaniu autorských práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho občana.
+            Simulating Experiments:
+              name: Simulácia experimentov
+              description_student: Spusti simulácie na počítači a experimentuj zmenou premenných.
+              description_teacher: "Spustením jednoduchej simulácie v Sprite Lab si študenti vyskúšajú, ako je možné pomocou výpočtov zhromažďovať údaje, ktoré identifikujú trendy alebo vzory. Po opakovanom spustení simulácie budú mať študenti možnosť predpovedať, ako môže zmena premennej v simulácii ovplyvniť výsledok, a potom túto hypotézu otestovať.\n"
         dance-low:
           title: Tanečná Párty (slabé pripojenie)
           description_short: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi! (Táto verzia je pre pomalé pripojenie)
@@ -5081,7 +5138,7 @@ sk:
             Concept Practice with Minecraft:
               name: Pohľad do budúcnosti s Minecraftom
         csd1-2019:
-          description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Jednotku uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
+          description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -5616,6 +5673,8 @@ sk:
           lessons:
             Bytes and File Sizes:
               name: Byty a veľkosti súborov
+            Text Compression:
+              name: Kompresia textu
             Encoding B&W Images:
               name: Kódovanie čiernobielych obrázkov
             Encoding Color Images:
@@ -5772,6 +5831,10 @@ sk:
               display_name: Funkcie
             csp_project:
               display_name: Projekt
+        csp3-pilot-staging:
+          lessons:
+            'Project: Share Your App':
+              name: 'Projekt: Zdieľaj svoju appku'
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -5897,7 +5960,7 @@ sk:
             Wrap Up:
               name: Zhrnutie
         csd1-pilot:
-          description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Jednotku uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
+          description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -6051,6 +6114,8 @@ sk:
             required:
               display_name: Prehľad
           lessons:
+            'Project: Share Your App':
+              name: 'Projekt: Zdieľaj svoju appku'
             Debugging:
               name: Hľadanie a odstraňovanie chýb
         csl-vn:
@@ -6215,6 +6280,10 @@ sk:
               name: Premenné
             For Loops:
               name: Cykly "For"
+            End-of-course projects:
+              name: Záverečné projekty
+            End of Course projects:
+              name: Záverečné projekty
         dance-extras-2019:
           description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
           description_short: Pokračuj za hranice Hodiny Kódu s touto aktivitou nadväzujúcou na Code.org Tanečnú Párty.
@@ -6431,7 +6500,8 @@ sk:
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd1-2020:
-          description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Jednotku uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
+          title: CSD Kapitola 1 - Riešenie problémov a výpočtová technika ('20-'21)
+          description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -6442,19 +6512,24 @@ sk:
           lessons:
             Intro to Problem Solving:
               name: Úvod do riešenia problémov
+              description_student: "**Otázka dňa: Čo nám môže pomôcť spolupracovať a tímovo riešiť problémy?**\\r\n\\r\nTrieda pracuje v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac drobných. Na konci hodiny sa skupina zamyslí nad svojimi skúsenosťami s touto aktivitou a spojí si ich s typmi riešenia problémov, ktoré budú používať po zvyšok kurzu.\\r"
               description_teacher: "**Otázka dňa: Čo nám môže pomôcť spolupracovať a tímovo riešiť problémy?**\\r\n\\r\nV tejto lekcii študenti pracujú v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac drobných. Skupiny pracujú na svojich člnoch počas dvoch kôl, ktorých cieľom je zvýšiť počet drobných, ktoré čln udrží. Štruktúra aktivity načrtne rôzne kroky procesu riešenia problémov, s ktorými sa študenti podrobnejšie zoznámia v priebehu nasledujúcej lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré budú riešiť po zvyšok kurzu.\\r\n\\r\n**K dispozícii sú aj alternatívne verzie tejto lekcie** \\r\n\\r\n* [Stôl z novín](../4/)\\r\n* [Most z cestovín](../5/)\\r\n* [Papierová veža](../6/)"
             The Problem Solving Process:
               name: Proces riešenia problémov
+              description_student: "**Otázka dňa: Aké všeobecné kroky môžeme použiť na riešenie rôznych typov problémov?**\\r\n\\r\nTáto lekcia predstavuje formálny proces riešenia problémov, ktorý bude trieda počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Trieda najprv spojí tieto kroky s problémom hliníkových člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre riešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií, pre každý krok procesu, na plagáty, ktoré budú používať počas celého kurzu a roka."
               description_teacher: "**Otázka dňa: Aké všeobecné kroky môžeme použiť na riešenie rôznych typov problémov?**\\r\n\\r\nTáto lekcia predstavuje formálny proces riešenia problémov, ktorý budú študenti počas roka používať, Definuj - Priprav - Vyskúšaj - Prehodnoť. Lekcia začína požiadaním študentov, aby prediskutovali rôzne typy problémov, s ktorými sa stretávajú v každodennom živote. Študentom sa potom ukážu štyri kroky procesu riešenia problémov a budú sa spolu usilovať o prepojenie týchto abstraktných krokov so svojimi skutočnými skúsenosťami s riešením problémov. Študenti najprv prepoja tieto kroky s problémom hliníkových člnov z predchádzajúcej lekcie, potom s problémom, ktorý už vedia dobre vyriešiť, a nakoniec s problémom, v ktorého riešení by sa chceli zlepšiť. Na konci hodiny trieda pozbiera zoznam všeobecne užitočných stratégií pre každý krok procesu na plagáty, ktoré budú používať počas celého kurzu a roka."
             Exploring Problem Solving:
               name: Objavovanie riešenia problémov
+              description_student: "**Otázka dňa: Ako môžeme aplikovať proces riešenia problémov na rôzne druhy problémov?**\\r\n\\r\nV tejto lekcii trieda aplikuje proces riešenia problémov na tri rôzne úlohy: osemsmerovku, zasadací poriadok na narodeninovej oslave, a plánovanie výletu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov."
               description_teacher: "**Otázka dňa: Ako môžeme aplikovať proces riešenia problémov na rôzne druhy problémov?**\\r\n\\r\nV tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a redizajnujú triedu. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.\\r\n\\r\nDokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
-              description_student: "**Otázka dňa: Čo je počítač?**\\r\n\\r\nV tejto lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda v skupinách triedi obrázky na „je počítač“ alebo „nie je počítač“ na plagáte a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície."
+              description_student: "**Otázka dňa: Čo je počítač?**\\r\n\\r\nV tejto lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii možných definícií pre počítač, trieda v skupinách triedi obrázky na „je počítač“ alebo „nie je počítač“ na plagáte a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície."
+              description_teacher: "**Otázka dňa: Čo je počítač?**\\r\n\\r\nV tejto lekcii trieda vypracuje predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda v skupinách triedi obrázky na „je počítač“ alebo „nie je počítač“ na plagáte a vysvetľuje ich rozhodnutia pri niektorých ťažkých kategorizáciách. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície."
             Input and Output:
               name: Vstup a Výstup
               description_student: "**Otázka dňa: Ako využívajú počítače vstup a výstup na získanie a poskytnutie informácií potrebných na riešenie problémov?**\\r\n\\r\n\\r\nV tejto lekcii sa trieda zaoberá tým, ako počítače získavajú a poskytujú informácie používateľovi prostredníctvom vstupov a výstupov. Po zvážení, aké informácie by boli potrebné na vyriešenie „problému myslenia“, trieda identifikuje vstupy a výstupy tohto procesu. Potom preskúmajú sériu aplikácií a pre každú z nich určia vstupy a výstupy."
+              description_teacher: "**Otázka dňa: Ako využívajú počítače vstup a výstup na získanie a poskytnutie informácií potrebných na riešenie problémov?**\\r\n\\r\nV tejto lekcii sa študenti zaoberajú tým, ako počítače získavajú a poskytujú informácie používateľovi prostredníctvom vstupov a výstupov. Študenti najprv zváženia, aké informácie by boli potrebné na vyriešenie „problému myslenia“, a potom na základe týchto informácií formulujú odporučenie. Trieda identifikuje vstupy a výstupy tohto procesu. Potom preskúmajú sériu aplikácií a pre každú z nich určia vstupy a výstupy. Nakoniec zvážia iné typy vstupov a výstupov, ktorými počítače môžu pomôcť pri riešení problémov."
             Processing:
               name: Spracovanie
               description_student: "**Otázka dňa: Akými rôznymi spôsobmi spracovávajú počítače informácie?\n**\\r\n\\r\nTáto lekcia predstavuje štyri typy spracovania, ktoré bude trieda používať počas celého kurzu. Prostredníctvom série aplikácií trieda skúma, ako sa spracovaním menia vstupy na výstupy. Nakoniec trieda prediskutuje ďalšie typy spracovania, ktoré by boli užitočné."
@@ -6978,6 +7053,10 @@ sk:
             Variables that Change in Artist:
               name: Meniace sa premenné s Umelcom
               description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal aj chápal. Prejdením riadených úloh, študenti kočia úrovňou volných hier a uvidia čo sa naučili a ako tvoria svoje vlastné dizajny.
+            Simulating Experiments:
+              name: Simulácia experimentov
+              description_student: Spusti simulácie na počítači a experimentuj zmenou premenných.
+              description_teacher: "Spustením jednoduchej simulácie v Sprite Lab si študenti vyskúšajú, ako je možné pomocou výpočtov zhromažďovať údaje, ktoré identifikujú trendy alebo vzory. Po opakovanom spustení simulácie budú mať študenti možnosť predpovedať, ako môže zmena premennej v simulácii ovplyvniť výsledok, a potom túto hypotézu otestovať.\n"
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
@@ -7262,6 +7341,8 @@ sk:
               name: Udalosti
             Conditionals:
               name: Podmienky
+            End of Course projects:
+              name: Záverečné projekty
             Functions:
               name: Funkcie
             Variables:
@@ -7403,3 +7484,9 @@ sk:
               name: Kurz B
             CS Discoveries:
               name: Objavujeme informatiku
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI pomáha oceánom
+            intro:
+              name: Úvod

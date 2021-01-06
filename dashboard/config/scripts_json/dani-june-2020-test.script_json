@@ -5,6 +5,7 @@
     "hidden": true,
     "login_required": false,
     "properties": {
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,

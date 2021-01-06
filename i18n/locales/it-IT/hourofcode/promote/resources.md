@@ -125,7 +125,7 @@ title: Risorse
     </p>
     
     <p>
-      I computer sono ovunque e stanno cambiando ogni industria del pianeta. Ma solo il 45% di tutte le scuole superiori insegna informatica (negli Stati Uniti). La buona notizia è che intendiamo cambiare rotta! Se hai già sentito parlare dell'Ora del Codice, probabilmente sai già che ha fatto la storia. Più di 100 milioni di studenti hanno provato un'Ora del Codice.
+      I computer sono ovunque e stanno cambiando ogni industria del pianeta. Ma solo il 47% di tutte le scuole superiori insegna informatica (negli Stati Uniti). La buona notizia è che intendiamo cambiare rotta! Se hai già sentito parlare dell'Ora del Codice, probabilmente sai già che ha fatto la storia. Più di 100 milioni di studenti hanno provato un'Ora del Codice.
     </p>
     
     <p>
@@ -178,7 +178,7 @@ title: Risorse
     </p>
     
     <p>
-      I computer sono ovunque e stanno cambiando ogni industria del pianeta. Ma solo il 45% di tutte le scuole superiori insegna informatica (negli Stati Uniti). La buona notizia è che intendiamo cambiare rotta! Se avete già sentito parlare dell'Ora del Codice, forse sapete che ha fatto storia - più di 100 milioni gli studenti nel mondo hanno provato un'Ora del Codice. Anche leader come il presidente Obama e il primo ministro canadese Justin Trudeau hanno scritto le loro prime righe di codice durante questa campagna.
+      I computer sono ovunque e stanno cambiando ogni industria del pianeta. Ma solo il 47% di tutte le scuole superiori insegna informatica (negli Stati Uniti). La buona notizia è che intendiamo cambiare rotta! Se avete già sentito parlare dell'Ora del Codice, forse sapete che ha fatto storia - più di 100 milioni gli studenti nel mondo hanno provato un'Ora del Codice. Anche leader come il presidente Obama e il primo ministro canadese Justin Trudeau hanno scritto le loro prime righe di codice durante questa campagna.
     </p>
     
     <p>
@@ -211,7 +211,7 @@ title: Risorse
     </p>
     
     <p>
-      Ma solo una piccola parte di noi sta imparando <strong>come</strong> funziona la tecnologia. Meno della metà di tutte le scuole insegna informatica (negli Stati Uniti).
+      Ma solo una piccola parte di noi sta imparando <strong>come</strong> funziona la tecnologia. Solo il 47% di tutte le scuole insegna informatica (negli Stati Uniti).
     </p>
     
     <p>
@@ -248,7 +248,7 @@ title: Risorse
     </p>
     
     <p>
-      I computer sono ovunque e stanno cambiando ogni industria del pianeta, ma solo il 45% delle scuole superiori insegna informatica (negli Stati Uniti). Le ragazze e le minoranze sono molto poco rappresentate negli studi informatici e nelle aziende tecnologiche. La buona notizia è che intendiamo cambiare rotta.
+      I computer sono ovunque e stanno cambiando ogni industria del pianeta, ma solo il 47% delle scuole superiori insegna informatica (negli Stati Uniti). Le ragazze e le minoranze sono molto poco rappresentate negli studi informatici e nelle aziende tecnologiche. La buona notizia è che intendiamo cambiare rotta.
     </p>
     
     <p>

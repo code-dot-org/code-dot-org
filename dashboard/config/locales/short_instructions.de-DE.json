@@ -2455,8 +2455,8 @@
         "courseD_playLab_cond1_2018": "Bringe Pegleg zu den Fahnen, um diese Aufgabe zu lösen.",
         "courseD_playLab_cond2": "Gib Pegleg jedes Mal einen Punkt, wenn er es zum Drachen schafft.",
         "courseD_playLab_cond2_2018": "Gib Pegleg jedes Mal einen Punkt, wenn er es zum Drachen schafft.",
-        "courseD_playLab_cond3": "Programmiere die Emotionen des Drachen so, dass sie sich jede Sekunde zufällig ändern.",
-        "courseD_playLab_cond3_2018": "Programmiere die Emotionen des Drachen so, dass sie sich jede Sekunde zufällig ändern.",
+        "courseD_playLab_cond3": "Lass die Stimmung des Drachens nach jeder Sekunde zufällig wechseln! ",
+        "courseD_playLab_cond3_2018": "Lass die Stimmung des Drachens nach jeder Sekunde zufällig wechseln! ",
         "courseD_playLab_cond3a": "Wenn Pegleg den Drachen erreicht, erhält er 2 Punkte, wenn der Drache fröhlich ist, ansonsten erhält er 1 Punkt.",
         "courseD_playLab_cond3a_2018": "Wenn Pegleg den Drachen erreicht, erhält er 2 Punkte, wenn der Drache fröhlich ist, ansonsten erhält er 1 Punkt.",
         "courseD_playLab_cond4": "Füge ein wenig Code hinzu, so dass der Ninja (Figur 3) Pegleg jagt, sobald das Spiel beginnt. Beende das Spiel als verloren, falls der Ninja ihn erwischt.",
@@ -2998,7 +2998,13 @@
         "courseD_video_nestedLoopsArtist": "Verwende das, was du gelernt haSt, um dieses Dreieck zu zeichnen.",
         "courseE_bee_ramp14": "Bewege dich vorwärts, bis du den Salat erreichst, und pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife.",
         "courseE_farmer_predict1": "Solange es Salat gibt, pflücken den Salat!",
-        "courseE_farmer_predict2": "Bewege dich vorwärts, bis du den Salat erreichst, und pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife."
+        "courseE_farmer_predict2": "Bewege dich vorwärts, bis du den Salat erreichst, und pflücke dann alle Salatköpfe durch den Einsatz einer 'während'-Schleife.",
+        "scrat 16": "Eichel! Eichel! Eichel! Benutze einen \"wenn\"-Baustein, um mich mit der geringsten Anzahl von Bausteinen dorthin zu bringen.",
+        "scrat 17": "Ok, machen wir das nochmal zur Übung - das ist nicht viel anders, aber pass auf die Wand auf!",
+        "scrat 18": "Die \"Wenn-Sonst\"-Bausteine prüfen eine Bedingung und machen dann eine Sache ODER eine andere. Um mich zur Eichel zu bringen, versuche diesen neuen Bausteine zu benutzen.",
+        "scrat 19": "Noch eine Übung mit dem „Wenn-Ansonsten\" Baustein, schaffst du es mit dem ersten Versuch?",
+        "scrat 20": "Kannst du nur 3 Blöcke hinzufügen, die mir helfen, ein komplexeres Labyrinth zu lösen? Wenn du es richtig machst, kann ich jeden kurvigen Weg gehen, egal wie lang er ist. Beeil dich! Das Eis schmilzt!",
+        "outbreak1": "Erzeuge 10 gesunde Sprites und 1 krankes Sprite. Verändere ihre Größe und lass sie wandern."
       }
     }
   }

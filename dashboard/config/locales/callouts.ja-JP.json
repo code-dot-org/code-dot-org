@@ -254,7 +254,7 @@
           "snowflake_dropdown": "このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!"
         },
         "OPD-K5-forloops-5": {
-          "courseF_bee_for4_1": "`まつ`は、ここにあります。"
+          "courseF_bee_for4_1": "`まで`は、ここにあります。"
         },
         "OPD-K5-projects-4": {
           "courseE_playLab_scaffold3_1": "はたを目指して 主人公を動かそう。"
@@ -472,13 +472,13 @@
           "courseA_collector_loops1_1": "ツールボックスに あたらしい ブロックが あるよ。あとで せつめいを するので、まっててね。"
         },
         "courseA_maze_ramp2_2019": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseA_maze_ramp2_2020": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseA_maze_ramp3a_2018": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_1": "ヒントが ほしいときは、でんきゅうを クリック！"
@@ -544,10 +544,10 @@
           "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
         },
         "courseB_Scrat_ramp3a_2019": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseB_Scrat_ramp3a_2020": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseB_artist_loops3": {
           "courseB_artist_loops3_1": "このブロックをつかえるのは、1回だけです。どうやって つかいますか？\n"
@@ -730,16 +730,16 @@
           "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
         },
         "courseC_maze_programming2": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseC_maze_programming2_2018": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseC_maze_programming2_2019": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseC_maze_programming2_2020": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseC_maze_programming3": {
           "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
@@ -758,16 +758,16 @@
           "courseC_maze_programming3_3": "はい色のブロックは けすことが できません。"
         },
         "courseC_maze_programming4": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用する回数です。"
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseC_maze_programming4_2018": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用する回数です。"
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseC_maze_programming4_2019": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用する回数です。"
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseC_maze_programming4_2020": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用する回数です。"
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseC_maze_programming5": {
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
@@ -876,10 +876,10 @@
           "courseD_farmer_while7_2018_PathAhead": "このパズルでは、`前に道がある間` を使います。"
         },
         "courseD_maze_intro4_2019": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用する回数です。"
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseD_maze_intro4_2020": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用する回数です。"
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseD_maze_intro5a_2019": {
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
@@ -900,16 +900,16 @@
           "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
         },
         "courseD_maze_ramp2": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseD_maze_ramp2_2018": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseD_maze_ramp2_2019": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseD_maze_ramp2_2020": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
@@ -928,16 +928,16 @@
           "stone_block_2": "灰色のブロックは、消すことができません。"
         },
         "courseD_maze_ramp4": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用する回数です。"
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseD_maze_ramp4_2018": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用する回数です。"
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseD_maze_ramp4_2019": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用する回数です。"
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseD_maze_ramp4_2020": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用する回数です。"
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseD_maze_ramp5": {
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
@@ -976,13 +976,13 @@
           "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
         },
         "courseD_scrat_ramp2": {
-          "courseC_maze_programming2_1": "これはツールボックスで パズルをクリアするのに必要なブロックが入っています。"
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseD_scrat_ramp3": {
           "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。"
         },
         "courseD_scrat_ramp4": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用する回数です。"
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseD_scrat_ramp5": {
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
@@ -1187,34 +1187,34 @@
           "courseF_bee_conditionals2_2": "ツールボックスはグルーピングされています。ラベルをクリックすれば、必要なブロックが出てきます。"
         },
         "courseF_bee_conditionals5": {
-          "courseF_bee_conditionals5_1": "長方形は辺の長さがちがっているので、このブロックを使います。"
+          "courseF_bee_conditionals5_1": "長方形のように辺の長さがちがっている場合は、このブロックを使います。"
         },
         "courseF_bee_for4": {
-          "courseF_bee_for4_1": "`まつ`は、ここにあります。"
+          "courseF_bee_for4_1": "`まで`は、ここにあります。"
         },
         "courseF_bee_for4_2018": {
-          "courseF_bee_for4_1": "`まつ`は、ここにあります。"
+          "courseF_bee_for4_1": "`まで`は、ここにあります。"
         },
         "courseF_bee_for4_2019": {
-          "courseF_bee_for4_1": "`まつ`は、ここにあります。"
+          "courseF_bee_for4_1": "`まで`は、ここにあります。"
         },
         "courseF_bee_for4_2020": {
-          "courseF_bee_for4_1": "`まつ`は、ここにあります。"
+          "courseF_bee_for4_1": "`まで`は、ここにあります。"
         },
         "courseF_bee_for9": {
-          "courseF_bee_for9_1": "`計算（けいさん）`ブロックは、ここにあります。"
+          "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
         },
         "courseF_bee_for9_2018": {
-          "courseF_bee_for9_1": "`計算（けいさん）`ブロックは、ここにあります。"
+          "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
         },
         "courseF_bee_for9_2019": {
-          "courseF_bee_for9_1": "`計算（けいさん）`ブロックは、ここにあります。"
+          "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
         },
         "courseF_bee_for9_2020": {
-          "courseF_bee_for9_1": "`計算（けいさん）`ブロックは、ここにあります。"
+          "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
         },
         "courseF_bee_functions2": {
-          "courseF_bee_functions2_1": "このブロックを関数と呼びます。中を見るのは、\"編集\"ボタンをクリックします！"
+          "courseF_bee_functions2_1": "このブロックを関数と呼びます。中を見るには、\"編集\"ボタンをクリックします！"
         },
         "courseF_bee_functions6": {
           "courseF_bee_functions6_1": "ここをクリックすれば簡単に必要な命令を見つけることができます。"
@@ -1230,7 +1230,7 @@
           "courseF_bee_fwp2_a": "関数はここにあります。"
         },
         "courseF_bee_fwp3": {
-          "courseF_bee_fwp3_1": "くもとときに使った 下に何があるか調べる関数を 使います。"
+          "courseF_bee_fwp3_1": "くものときに使った 下に何があるか調べる関数を 使います。"
         },
         "courseF_bee_fwp4": {
           "courseF_bee_fwp4_1": "\"編集\"ボタンをクリックして、関数にパラメータを追加しよう。"

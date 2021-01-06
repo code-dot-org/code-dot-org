@@ -1955,7 +1955,7 @@
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_a": "إذا واجهتك صعوبة في تحريك الطير، تأكد من أن المربعات البرمجية مستقرة في أماكنها تحت <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "\"يجب أن يتحرك الطير غربًا 3 مرات للوصول إلى الخنزير. استخدم هذا المربع البرمجي:\n<xml><block type=\"maze_moveWest\"/></xml>\""
+          "courseA_maze_seq1_b": "يجب أن يتحرك الطير غربًا 3 مرات للوصول إلى الخنزير. استخدم هذا المربع البرمجي:\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq10": {
           "courseA_maze_seq10_a": "إذا واجهتك مشكلة، حاول كتابة الخطوات على قطعة ورق أولأً",
@@ -1999,7 +1999,7 @@
         },
         "courseA_maze_seq1_2018": {
           "courseA_maze_seq1_a": "إذا واجهتك صعوبة في تحريك الطير، تأكد من أن المربعات البرمجية مستقرة في أماكنها تحت <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "\"يجب أن يتحرك الطير غربًا 3 مرات للوصول إلى الخنزير. استخدم هذا المربع البرمجي:\n<xml><block type=\"maze_moveWest\"/></xml>\""
+          "courseA_maze_seq1_b": "يجب أن يتحرك الطير غربًا 3 مرات للوصول إلى الخنزير. استخدم هذا المربع البرمجي:\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq1_2019": {
           "courseA_maze_seq1_a": "إذا واجهتك صعوبة في تحريك الطير، تأكد من أن المربعات البرمجية مستقرة في أماكنها تحت <xml>\n  <block type=\"when_run\"/>\n</xml>",

@@ -99,7 +99,7 @@ end
 def initialize_youtube(client_secrets_path, upload_files)
   service = Google::Apis::YoutubeV3::YouTubeService.new
   service.client_options.application_name = APPLICATION_NAME
-  service.authorization = authorize(client_secrets_path) unless upload_files
+  service.authorization = authorize(client_secrets_path) if upload_files
   service
 end
 

@@ -2,6 +2,8 @@
 uz-UZ:
   hour_of_code: Dasturlash soati
   hello: Salom Dunyo
+  'yes': Ha
+  'no': yo‘q
   select_language: Iltimos, tilni tanlang
   upgrade_ie_message: Code.org tez orada Internet Explorer 8, 9 va 10 brauzerlarida
     ishlamay qoladi. Brauzeringizni yangiroq brauzer bilan almashtiring.
@@ -22,21 +24,32 @@ uz-UZ:
     ham ko‘ring.
   n_have_learned_an_hoc: "<h1>Dasturlash soatini</h1><h2>sinab ko‘ring</h2><h3>o‘tganlar:
     #</h3>"
+  try_hoc_num_served: "<h1>Dasturlash soatini</h1><h2>sinab ko‘ring</h2><h3>%{num}
+    o‘tganlar: #</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an #Try an
   anybody_can_learn: Har kim o‘rganishi mumkin.
   learn_now: Hoziroq o‘rganing
   petition_message: Har bir maktabning har bir o‘quvchisida informatikani o‘rganish
     imkoniyati bo‘lishi kerak
   petition_sign_message: 'Agar rozi bo‘lsangiz, ismingizni kiriting. Boshqalarga #
     qo‘shiling.'
+  petition_sign_message_num: Agar rozi bo‘lsangiz, ismingizni kiriting. Boshqalarga
+    %{num} qo‘shiling.
   petition_join_others: 'Boshqalarga # qo‘shiling'
   name: Ismi
-  email: Elektron pochta
+  email: E-mail
   zipcode: Pochta indeksi yoki mamlakat
   submit: Taqdim qilmoq
   twentyhours_heading: Informatika kursiga kirish darsini sinab ko‘ring
   twentyhours_text: Ilk Dasturlash soatini tugatdingizmi? Quyidagi kurslar orqali
     informatika va dasturlash asoslarini o‘rganing.
   og_title: Har bir bola imkoniyat uchun munosib
+  og_title_soon: Dasturlash soati yaqinlashmoqda
   og_title_here: Kod yozish soati yetib keldi!
   og_description: Maktablardagi har bir o'quvchi Informatika o'rganishga munosib.
     Chunki bu dunyoni o'zgartirmoqda.
@@ -45,6 +58,7 @@ uz-UZ:
     bilimlar asosidir.
   hoc2014_heading: 8-14 dekabr 2014-yilda o‘tkaziladigan <a href="http://hourofcode.com">Dasturlash
     soatiga</a><br/> qo‘shiling<br/>
+  hoc2014_students: Oʻquvchilar
   hoc2014_try: Sinab ko‘ring
   hoc2014_teachers: O‘qituvchilar
   hoc2014_host: Tashkillashtiring
@@ -55,9 +69,11 @@ uz-UZ:
   csedweek_map_signup: O‘z tadbiringizni ro‘yxatdan o‘tkazing
   csedweek_map_search_placeholder: Dasturlash soati tadbirlarini qidiring
   csedweek_map_search_search: Qidiruv
+  csedweek_map_search_reset: Qayta o‘rnatish
   csedweek_map_legend_title: Afsona
   csedweek_map_legend_event: Dasturlash soati tadbiri
   csedweek_map_legend_cs_tech_jam: Maxsus tadbir
+  cded_sign_up: Ro‘yxatdan o‘tish
   cded_try_it: Sinab ko‘ring
   try_now: Hoziroq sinang
   california_heading: O‘z maktabingizdan Informatika o‘tishlarini so‘rang
@@ -79,7 +95,7 @@ uz-UZ:
   all_ages: Barcha yoshdagilar uchun
   beginner: Boshlovchi
   n_participants: "# ta qatnashchi"
-  go: Olg'a
+  go: Olg‘a
   thank_you_: Rahmat!
   congratulations: Tabriklaymiz!
   congratulations_on_completing_hoc: Dasturlash soatini tugatganingiz bilan tabriklaymiz
@@ -143,7 +159,7 @@ uz-UZ:
   participant_parent: Ota-ona
   participant_educator: Pedagog
   participant_engineer: Dasturchi
-  participant_other: Yuqoridagilardan birortasiyam
+  participant_other: Yuqoridagilardan boshqa
   print_all: Barchasini chop etish
   print_ice_art: Muzli san'at asaringizni chop eting
   create_art_with_zombie: yoki zombi bilan mukammalroq asar yarating
@@ -158,7 +174,7 @@ uz-UZ:
     yoki yozgi oromgohda o‘rganishingiz mumkin.'
   learn_next_level: Boshqa Dasturlash studiyasi kursini sinab ko‘ring
   learn_online: Boshqa kurslarni onlayn tarzda sinab ko‘ring
-  learn_classes: Mahalliy darslar toping
+  learn_classes: Mahalliy darslarni toping
   just_did_hoc: 'Men #HourOfCode''ni o‘tdim - siz ham sinab ko‘ring! @codeorg'
   learn_hoc: Dasturlash soatini o‘ting
   beyond_hoc: Dasturlash soatidan tashqari
@@ -186,8 +202,10 @@ uz-UZ:
   studiobar_title_nolink: Dasturlash studiyasini ko‘rib chiqing
   studiobar_elementary_title: Boshlang‘ich kurslar
   studiobar_elementary_body: K&#8209;5 uchun bizning yangi uchta darslarimiz
+  studiobar_dance_body: O‘z Raqs Bazmingizni yarating va ulashing
   studiobar_hoc_title: Dasturlash soati
   studiobar_hoc_body: Jahldor qushchalar bilan dasturlashni o‘rganing
+  studiobar_flappy_title: Flappy o‘yinini yarating
   studiobar_flappy_body: O‘z pirilloq quscha o‘yiningizni yaratib ulashing
   studiobar_teacher_title: O‘qituvchilar uchun tayyorlangan
   studiobar_teacher_body: Sinfingizga Dasturlash studiyasini tanishtiring
@@ -249,13 +267,18 @@ uz-UZ:
   homepage_hero_text_stat_students: 'Dasturlash studiyasida #student_count ta o‘quvchi
     ro‘yxatdan o‘tgan.'
   homepage_hero_text_stat_served: 'Dasturlash soatini #served kishi o‘tdi.'
+  homepage_hero_hoc_is_coming: Dasturlash soati yaqinlashmoqda
+  homepage_hero_hoc_is_here: Dasturlash soati keldi
   homepage_slot_text_hoc: Dasturlash soati
   homepage_slot_text_frozen: 'Muzyurak: Anna va Elza bilan'
   homepage_slot_text_studio: Barcha mashg‘ulotlarimiz
+  homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Xarid
+  homepage_slot_text_flappy: Flappy o‘yinini yarating
   homepage_action_text_hoc: Har bir o‘quvchi uchun Dasturlash soati.
   homepage_action_text_num_served: "# kishi sinab ko‘rdi"
   homepage_action_text_join_us: Bizga qo'shiling
+  homepage_action_text_sign_up: Ro‘yxatdan o‘tish
   homepage_action_text_try_it: Sinab ko‘ring
   homepage_action_text_volunteers: Texnik ko‘ngillilarni taklif qilamiz
   homepage_action_text_codevideo: Videoni ko‘ring
@@ -277,9 +300,11 @@ uz-UZ:
   homepage_banner_40k_teachers_link: Ko‘proq bilish
   homepage_slot_text_title_hoc: Dasturlash soati
   homepage_slot_text_blurb_hoc: Har kim o‘rganishi mumkin. Bugundan boshlang.
+  homepage_slot_text_link_hoc: Kod soatini sinab ko‘ring
   homepage_slot_text_link_host: Dasturlash soatini o‘tkazing
   homepage_slot_text_link_hocserved: "# kishi sinab ko‘rdi"
   homepage_solot_text_link_volunteer: Dasturlash soatiga ko‘ngilli bo‘lib qo‘shiling
+  homepage_slot_text_title_students: Oʻquvchilar
   homepage_slot_text_blurb_students: Barcha mashg‘ulotlarimizni ko‘zdan kechiring
   homepage_slot_text_link_codestudio: Dasturlash studiyasini sinab ko‘ring
   homepage_slot_text_link_local: O‘z hududingizdan o‘quv kursi toping
@@ -296,6 +321,8 @@ uz-UZ:
   homepage_slot_text_link_stats: Statistika bilan tanishing
   homepage_slot_text_link_buy: Bizga qo‘shiling
   homepage_slot_text_link_donate: Xayriya qiling
+  homepage_gallery_header: " %{project_count} milliondan ziyod Code.org loyihalari
+    yaratilgan"
   homepage_header_donors: Code.org yordam berganlarga o‘z minnatdorchiligini bildiradi
   homepage_donors_seall: Barchasini ko‘ring
   homepage_donors_donate: Xayriya qiling
@@ -339,6 +366,10 @@ uz-UZ:
   class_submission_level_college: Kollej
   class_submission_level_vocational: Kasbiy
   class_submission_languages_other: Boshqa til(lar)
+  videos_more: O‘rnak modellari va taniqli shaxslar ishtiroki bilan ko‘proq <a href='%{inspiring_videos_playlist}'>
+    ruhlantiruvchi videolar </a>.
+  careers_page_more: Texnologiya sohasidagi mutaxassislar ishtiroki bilan ko'proq
+    <a href='%{careers_url}' target='_blank'> ruhlantiruvchi videolar </a>.
   playlab_iceage_title_live: Muzlik davri
   starwars_subtitle: Dasturlash bilan galaktika quring
   starwars_javascript_title: JavaScript
@@ -346,19 +377,55 @@ uz-UZ:
   starwars_javascript_specs: 'Faqat inglizcha | Zamonaviy brauzerlar | Yosh: 11+'
   starwars_blocks_title: Bloklar
   starwars_blocks_description: Ko‘chuvchi bloklardan foydalaning.
+  starwars_blocks_specs: 'Many languages | Modern browsers, smartphones, tablets |
+    Yosh: 6-106'
   starwars_platform_text: Zamonaviy brauzerlar, smartfonlar, planshetlar
   mc_name: Maynkraft Dasturlash soati
   mc_longdescription: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod
     bloklaridan foydalaning.
   mc_shortdescription: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod
     bloklaridan foydalaning.
+  mc_gradelevel: 'Yosh: 6-106'
   mc_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  mc_specs: 'Many languages | Modern browsers and tablets | Yosh: 6-106'
+  minecraft_agent: Minecraft Qahramon sayohati
+  minecraft_designer: Minecraft Dizayner
+  minecraft_adventurer: Minecraft Sarguzashtchi
+  minecraft_tutorials: Minecraft Dasturlash soati qo‘llanmalari
+  minecraft_specs: 'Ko‘p tillar | Zamonaviy brauzerlar va planshetlar | Sinf: 2+'
+  minecraft_agent_description: Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan
+    qaytdi! Minecraft bo‘yicha kod bilan sayohat.
   minecraft_agent_button: Boshlash
+  minecraft_designer_description: Minecraft-ning o'z versiyangizda hayvonlarni va
+    boshqa Minecraft jonzotlarini dasturlab yarating.
   minecraft_designer_button: Boshlash
+  minecraft_adventurer_description: Aleks yoki Stivni sarguzashtga olib borish uchun
+    koddan foydalaning.
   minecraft_adventurer_button: Boshlash
+  minecraft_no_internet: Internet yo‘qmi?
+  minecraft_download_adventurer: '"Minecraft Adventurer"ning oflayn versiyasini yuklab
+    oling.'
   minecraft_subtitle: Maynkraft Dasturlash soati
+  sports_og_title: O'zingizga turtki bering. Har kim o'rganishi mumkin.
   sports_watch_video: Videoni ko‘ring
+  sports_video_title: O'zingizga turtki bering. Har kim o'rganishi mumkin.
+  watch_inspirational_videos: Ishni boshlashdan oldin ushbu ruhlantiruvchi videolardan
+    birini tomosha qiling
+  video_title_cs_is_everything: Kompyuter fanlari hamma narsani o‘zgartirmoqda
   video_title_inspire_girl: Qizlarni ruhlantiring
+  video_title_cs_intro: Informatikaga kirish
+  video_title_schools_dont_teach: Aksariyat maktablar nimani o‘rgatmaydi?
+  video_title_obama: Prezident Obama informatika haqida
+  video_title_hoc_is_here: Dasturlash soati keldi - Har kim o‘rganishi mumkin
+  video_title_anybody_can_learn: Har kim o‘rganishi mumkin
+  video_title_steph_curry: Stiv Karri bilan Dasturlash soati
+  video_title_my_name_is_aracely: Mening ismim Araseli
+  video_1min: 1 daqiqa
+  video_2min: 2 daqiqa
+  video_3min: 3 daqiqa
+  video_5min: 5 daqiqa
+  no_internet: Internet yo‘qmi?
+  are_you_teacher: O'qituvchimisiz?
   volunteer_engineer_submission_title: O‘quvchi va ko‘ngillilarni Dasturlash soatiga
     jalb qiling.
   volunteer_engineer_submission_subtitle_generic: 'Bu yil (7-13 dekabr, 2015) 100
@@ -410,8 +477,14 @@ uz-UZ:
   volunteer_engineer_submission_field_description_placeholder: Tajriba va/yoki qatnashishni
     ta'riflash
   volunteer_engineer_submission_header_private: Ma'lumot saqlanib, hech qachon tarqatilmaydi
+  volunteer_engineer_submission_field_email: Elektron pochta manzili
   volunteer_engineer_submission_field_email_desc: Elektron pochtangiz hech qachon
     tarqatilmaydi, ammo sizga o‘qituvchilardan takliflarni jo‘natamiz.
+  volunteer_engineer_submission_field_email_placeholder: Elektron pochta manzili
+  volunteer_engineer_submission_field_email_preference_privacy: "(Maxfiylik siyosatimizga
+    qarang)"
+  volunteer_engineer_submission_field_email_preference_yes: Ha
+  volunteer_engineer_submission_field_email_preference_no: yo‘q
   volunteer_engineer_submission_final_paragraph: Dasturlash soati uchun o‘qituvchilar
     yoki boshqa ko‘ngillilar bog‘lanishi uchun siz xaritada ko‘rsatilasiz. Sizning
     elektron pochtangiz va manzilingiz hech qachon tarqatilmaydi. Ammo boshqa ma‘lumotlar
@@ -476,6 +549,11 @@ uz-UZ:
   dashboard_landing_useful_links: Boshqa foydali havolalar
   dashboard_landing_office_hours: Shaxsan savol bering! Oylik video offis soatlarimizga
     tashrif buyuring.
+  dashboard_landing_print_certificates: Ushbu kursni tugatgan talabalar uchun sertifikatlarni
+    chop eting
+  dashboard_landing_educator_blog: Yangiliklar va bizning materiallarimizdagi yangilanishlar
+    haqida Pedagog blogida o'qing
+  dashboard_landing_video_player: Maktabingizda yangi video pleyerimizni sinab ko'ring
   dashboard_landing_progress_title: Sinfning asosiy yutuqlari
   dashboard_landing_progress_biggest: Bu sizning eng katta bo‘limingiz uchun yutuqlaringiz.
   dashboard_landing_view_progress: "%{biggest_section} uchun o‘sishni ko‘rish"
@@ -484,26 +562,50 @@ uz-UZ:
   dashboard_landing_loading: Yuklanyapti...
   dashboard_action_cancel: Bekor qilish
   dashboard_action_delete: O'chirish
+  dashboard_action_delete_yes: Ha
+  dashboard_action_delete_no: yo‘q
   dashboard_action_confirm: O'chirasizmi?
   dashboard_action_done: Bajarildi
+  dashboard_filter_all: Barcha
   dashboard_navigation_home_page: O‘qituvchining bosh sahifasi
   dashboard_navigation_section_lesson_plans: Dars rejasi va materiallari
+  dashboard_navigation_section_community: Qo‘llab-quvvatlash
   dashboard_navigation_add_students: O‘quvchilarni qo‘shing
   dashboard_navigation_manage_students: O‘quvchilarni boshqarish
   dashboard_navigation_lesson_plans_resources: Dars rejasi va materiallari
   dashboard_navigation_section: 'Bo‘lim: %{section_name}'
   dashboard_navigation_student: 'O‘quvchi: %{student_name}'
+  dashboard_progress_not_started: boshlanmagan
+  dashboard_progress_in_progress: Jarayonda
+  dashboard_progress_completed_too_many_blocks: bajarildi, juda ko'p bloklar
+  dashboard_progress_completed_perfect: yakunlandi, mukammal
+  dashboard_progress_furthest_level_attempted: eng yuqori darajaga harakat qilindi
+  dashboard_progress_submitted: qabul qilingan
   dashboard_sections_new_section: Yangi bo‘lim
+  dashboard_sections_table_pairing_allowed: Juftlikda dasturlash
+  dashboard_sections_table_students: Oʻquvchilar
   dashboard_sections_name: Bo‘lim nomi
   dashboard_sections_close: Yopish
   dashboard_students_name: Ismi
+  dashboard_students_male: Erkak
+  dashboard_students_female: Ayol
   dashboard_students_completed_levels: O‘tilgan bosqichlar
   dashboard_students_total_lines: Kod satrlari
   dashboard_students_secret_word_title: Sirli so'z
+  dashboard_course1: 'Kurs 1:'
+  dashboard_course2: 'Kurs 2:'
+  dashboard_course3: 'Kurs 3:'
+  dashboard_course4: 'Kurs 4: '
+  dashboard_coursea: 'Kurs A: '
+  dashboard_courseb: 'Kurs B: '
+  dashboard_coursec: 'Kurs C: '
+  dashboard_coursed: 'Kurs D: '
+  dashboard_coursee: 'Kurs E: '
+  dashboard_coursef: 'Kurs F: '
   dashboard_sequence: Ketma-ketlik
   dashboard_grade_other: Boshqa
   dashboard_login_word: So'z
-  dashboard_login_none: Elektron pochta
+  dashboard_login_none: E-mail
   dashboard_stage: Pog`ona
   dashboard_puzzle: Jumboq
   dashboard_question: Savol
@@ -511,57 +613,474 @@ uz-UZ:
   dashboard_teacher: O'qituvchi
   dashboard_student: O‘quvchi
   learn_more: Hoziroq sinang
+  learn_sign_up_button: Ro‘yxatdan o‘tish
   learn_hoc_prizes: Har bir o‘qituvchi uchun atalgan sovg‘alar haqida <a href="https://hourofcode.com/prizes">xabardor
     bo‘ling</a>.
+  hoc2014_try_new_tutorial: Beta-versiyadagi yangi "Daturlash soati" o'quv qo'llanmamizni
+    sinab ko'ring
+  hoc2014_try_frozen: Muzlagan Anna va Elza bilan Rassom
   previous: Avvalgi
   next: Keyingi
+  codeorg_name: Klassik labirint
+  codeintl_name: Klassik labirint
+  khan_name: JavaScript bilan tanishish
+  khanes_name: JavaScript bilan tanishish
+  khanpt_name: JavaScript bilan tanishish
+  khanhe_name: JavaScript bilan tanishish
+  khanfr_name: JavaScript bilan tanishish
+  khanpl_name: JavaScript bilan tanishish
   blockly_name: Blokli
+  hourofcode_name: Klassik labirint
+  playlab_name: Play Lab - O‘yin laboratoriyasi
+  infinity_name: Cheksiz O‘yin laboratoriyasi
+  artist_name: Rassom
+  course1_name: Kurs 1
+  course2_name: Kurs 2
+  course3_name: Kurs 3
+  course4_name: Kurs 4
+  coursea-draft_name: Kurs A
+  coursea_name: Kurs A
+  courseb-draft_name: Kurs B
+  courseb_name: Kurs B
+  coursec-draft_name: Kurs C
+  coursec_name: Kurs C
+  coursed-draft_name: Kurs D
+  coursed_name: Kurs D
+  coursee-draft_name: Kurs E
+  coursee_name: Kurs E
+  coursef-draft_name: Kurs F
+  coursef_name: Kurs F
+  coursea-2017_name: Kurs A (2017)
+  courseb-2017_name: Kurs B (2017)
+  coursec-2017_name: Kurs C (2017)
+  coursed-2017_name: Kurs D (2017)
+  coursee-2017_name: Kurs E (2017)
+  coursef-2017_name: Kurs F (2017)
+  express-2018_name: Ekspress Kurs (2018)
+  pre-express-2018_name: Maktabgacha ekspress kurs (2018)
+  pre-express-2019_name: Maktabgacha ekspress kurs (2019)
+  pre-express-2020_name: Maktabgacha ekspress kurs (2020)
+  accelerated_name: Tezlashtirilgan kurs
+  pre-express_name: Maktabgacha ekspress kurs
+  20-hour_name: Tezlashtirilgan kurs
+  classicmaze_name: Klassik labirint
   iceage_name: Muzlik davri
-  applab_name: Ilova labaratoriyasi
+  minecraft_name: Minecraft
+  hoc-encryption_name: Oddiy Shifrlash
+  text-compression_name: Matnni Zichlash
+  applab_name: Ilovalar laboratoriyasi
+  gamelab_name: O‘yin laboratoriyasi
+  applab_gradelevel: 13+ yosh
+  codeorg_gradelevel: 'Yosh: 4-104'
+  codeintl_gradelevel: 'Yosh: 4-104'
+  khan_gradelevel: O'rta maktab +
+  khanes_gradelevel: O'rta maktab +
+  khanpt_gradelevel: O'rta maktab +
+  khanhe_gradelevel: O'rta maktab +
+  khanfr_gradelevel: O'rta maktab +
+  khanpl_gradelevel: O'rta maktab +
+  tynker_gradelevel: 'Yosh: 5-13'
+  scratch_gradelevel: 'Yosh: 8+'
   lightbot_gradelevel: Barcha yoshdagilar uchun
   thinkersmith_gradelevel: Barcha yoshdagilar uchun
+  condcards_gradelevel: 'Yosh: 8-12'
   lightbotintl_gradelevel: Barcha yoshdagilar uchun
   codehs_gradelevel: Yuqori sinflar
   codecademy_gradelevel: Yuqori sinflar
+  codecombat_gradelevel: O'rta maktab +
+  codemonkey_gradelevel: O'rta maktab +
+  codeavengers_gradelevel: O'rta maktab +
   processing_gradelevel: Yuqori sinflar
+  robomind_gradelevel: 8-13 yosh
+  groklearning_gradelevel: O'rta maktab +
+  quorum_gradelevel: O'rta maktab +
   codespark_gradelevel: Boshlang‘ich sinflar
   kodable_gradelevel: Boshlang‘ich sinflar
+  tynkerapp_gradelevel: 'Yosh: 5-13'
+  robomindnl_gradelevel: 8-13 yosh
+  flappy_gradelevel: 'Yosh: 6-106'
   bitsbox_gradelevel: Boshlang‘ich sinflar
   makeschool_gradelevel: Yuqori sinflar
   touchdevelop_gradelevel: Yuqori sinflar
+  appinventor_gradelevel: O'rta maktab +
   blockly_gradelevel: Barcha yoshdagilar uchun
+  thinkersmith2_gradelevel: 'Yosh: 8+'
+  kodableunplugged_gradelevel: 8-13 yosh
+  projguts_gradelevel: 'Yosh: 10-13'
+  hourofcode_gradelevel: 'Yosh: 6-106'
+  frozen_gradelevel: 'Yosh: 8-108'
+  starwars_gradelevel: 'Yosh: 6-106'
+  playlab_gradelevel: 'Yosh: 6-14'
+  infinity_gradelevel: 'Yosh: 6-14'
+  artist_gradelevel: 'Yosh: 8-108'
+  monstercoding_gradelevel: 'Yosh: 5-13'
+  allcancode_gradelevel: 'Yosh: 5-10'
+  csfirst_gradelevel: 'Yosh: 9-14'
   boxisland_gradelevel: Boshlang‘ich sinflar
+  codesters_gradelevel: 'Yosh: 12-14'
+  texasinstruments_gradelevel: 'Yosh: 13-16'
+  teacherled_gradelevel: 'Yosh: 5+'
+  course1_gradelevel: 'Yosh: 4-6'
+  course2_gradelevel: 'Yosh: 6-18'
+  course3_gradelevel: 'Yosh: 8-18'
+  coursea_gradelevel: 'Yosh: 4-7'
+  courseb_gradelevel: 'Yosh: 5-8'
+  coursec_gradelevel: 'Yosh: 6-10'
+  coursed_gradelevel: 'Yosh: 7-11'
+  coursee_gradelevel: 'Yosh: 8-12'
+  coursef_gradelevel: 'Yosh: 9-13'
+  coursea-2017_gradelevel: 'Yosh: 4-7'
+  courseb-2017_gradelevel: 'Yosh: 5-8'
+  coursec-2017_gradelevel: 'Yosh: 6-10'
+  coursed-2017_gradelevel: 'Yosh: 7-11'
+  coursee-2017_gradelevel: 'Yosh: 8-12'
+  coursef-2017_gradelevel: 'Yosh: 9-13'
+  coursea-2018_gradelevel: 'Yosh: 4-7'
+  courseb-2018_gradelevel: 'Yosh: 5-8'
+  coursec-2018_gradelevel: 'Yosh: 6-10'
+  coursed-2018_gradelevel: 'Yosh: 7-11'
+  coursee-2018_gradelevel: 'Yosh: 8-12'
+  coursef-2018_gradelevel: 'Yosh: 9-13'
+  coursea-2019_gradelevel: 'Yosh: 4-7'
+  courseb-2019_gradelevel: 'Yosh: 5-8'
+  coursec-2019_gradelevel: 'Yosh: 6-10'
+  coursed-2019_gradelevel: 'Yosh: 7-11'
+  coursee-2019_gradelevel: 'Yosh: 8-12'
+  coursef-2019_gradelevel: 'Yosh: 9-13'
   codeorg_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
   codeintl_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  thinkersmithspanish_platformtext: Kompyutersiz
+  khan_platformtext: Zamonaviy brauzerlar
+  khanes_platformtext: Zamonaviy brauzerlar
+  khanpt_platformtext: Zamonaviy brauzerlar
+  khanhe_platformtext: Zamonaviy brauzerlar
+  khanfr_platformtext: Zamonaviy brauzerlar
+  khanpl_platformtext: Zamonaviy brauzerlar
+  tynker_platformtext: Zamonaviy brauzerlar
+  thinkersmith_platformtext: Kompyutersiz
+  condcards_platformtext: Kompyutersiz
+  codecademy_platformtext: Zamonaviy brauzerlar. iOS, Android apps
+  codecombat_platformtext: Zamonaviy brauzerlar (Follow-on course requires $$)
+  codemonkey_platformtext: Zamonaviy brauzerlar
+  codeavengers_platformtext: Zamonaviy brauzerlar
+  processing_platformtext: Zamonaviy brauzerlar
+  robomind_platformtext: Zamonaviy brauzerlar, Mobile web
+  groklearning_platformtext: Zamonaviy brauzerlar
+  quorum_platformtext: Zamonaviy brauzerlar. Screen-readers supported
+  robomindnl_platformtext: Zamonaviy brauzerlar, Mobile web
   flappy_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  bitsbox_platformtext: Zamonaviy brauzerlar
+  blockly_platformtext: Faqat zamonaviy brauzerlar
+  thinkersmith2_platformtext: Kompyutersiz
+  kodableunplugged_platformtext: Kompyutersiz
+  projguts_platformtext: Kompyutersiz
   hourofcode_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
   playlab_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  monstercoding_platformtext: Zamonaviy brauzerlar, iOS, Android
+  allcancode_platformtext: Zamonaviy brauzerlar, iOS
+  csfirst_platformtext: Zamonaviy brauzerlar
+  codesters_platformtext: Zamonaviy brauzerlar
   teacherled_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  khan_shortdescription: JavaScript bilan rasm chizishni o'rganing
+  khanes_shortdescription: JavaScript bilan rasm chizishni o'rganing
+  khanpt_shortdescription: JavaScript bilan rasm chizishni o'rganing
+  khanhe_shortdescription: JavaScript bilan rasm chizishni o'rganing
+  khanfr_shortdescription: JavaScript bilan rasm chizishni o'rganing
+  khanpl_shortdescription: JavaScript bilan rasm chizishni o'rganing
+  frozen_shortdescription: Anna va Elza muzning sehri va go‘zalligini o‘rganayapti,
+    ularga koddan foydalanib qo‘shilaylik.
+  starwars_shortdescription: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada
+    o'z Star Wars o‘yiningizni yarating.
+  playlab_shortdescription: Play Lab yordamida hikoya yoki o‘yin yarating!
+  infinity_shortdescription: Disney Infinity qahramonlari ishtirokidagi hikoya yoki
+    o‘yin yaratish uchun Play Lab-dan foydalaning.
+  artist_shortdescription: Rassom bilan ajoyib rasmlar va dizayn chizing!
+  coursea_shortdescription_congrats: Maktabgacha yoshdagilarni kompyuter fanlari bilan
+    tanishtirish
+  courseb_shortdescription_congrats: Maktabgacha yoshdagi o'quvchilar uchun kompyuter
+    fanlariga kirish. (A kursiga o'xshash, ammo kattaroq yoshdagi o'quvchilar uchun
+    xilma-xillik bilan).
+  coursec_shortdescription_congrats: Informatika asoslarini o‘rganing va o‘z san'at
+    asari, hikoya va o‘yinlaringizni yarating.
+  coursed_shortdescription_congrats: C kursidan tushunchalarni tezkor o‘rganib oling,
+    so‘ngra algoritmlar, ichma-ich sikllar, shartli bayonotlar va boshqalar bilan
+    o‘rganishni davom eting.
+  coursee_shortdescription_congrats: C va D kurslaridagi tushunchalarni tezkor o‘ting,
+    so‘ng funksiyalar bilan davom eting.
+  coursef_shortdescription_congrats: Informatika asoslari kursidan barcha tushunchalarni
+    o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+  coursea-2017_shortdescription_congrats: Maktabgacha yoshdagilarni kompyuter fanlari
+    bilan tanishtirish
+  courseb-2017_shortdescription_congrats: Maktabgacha yoshdagi o'quvchilar uchun kompyuter
+    fanlariga kirish. (A kursiga o'xshash, ammo kattaroq yoshdagi o'quvchilar uchun
+    xilma-xillik bilan).
+  coursec-2017_shortdescription_congrats: Informatika asoslarini o‘rganing va o‘z
+    san'at asari, hikoya va o‘yinlaringizni yarating.
+  coursed-2017_shortdescription_congrats: C kursidan tushunchalarni tezkor o‘rganib
+    oling, so‘ngra algoritmlar, ichma-ich sikllar, shartli bayonotlar va boshqalar
+    bilan o‘rganishni davom eting.
+  coursee-2017_shortdescription_congrats: C va D kurslaridagi tushunchalarni tezkor
+    o‘ting, so‘ng funksiyalar bilan davom eting.
+  coursef-2017_shortdescription_congrats: Informatika asoslari kursidan barcha tushunchalarni
+    o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+  coursea-2018_shortdescription_congrats: Maktabgacha yoshdagilarni kompyuter fanlari
+    bilan tanishtirish
+  courseb-2018_shortdescription_congrats: Maktabgacha yoshdagi o'quvchilar uchun kompyuter
+    fanlariga kirish. (A kursiga o'xshash, ammo kattaroq yoshdagi o'quvchilar uchun
+    xilma-xillik bilan).
+  coursec-2018_shortdescription_congrats: Informatika asoslarini o‘rganing va o‘z
+    san'at asari, hikoya va o‘yinlaringizni yarating.
+  coursed-2018_shortdescription_congrats: C kursidan tushunchalarni tezkor o‘rganib
+    oling, so‘ngra algoritmlar, ichma-ich sikllar, shartli bayonotlar va boshqalar
+    bilan o‘rganishni davom eting.
+  coursee-2018_shortdescription_congrats: C va D kurslaridagi tushunchalarni tezkor
+    o‘ting, so‘ng funksiyalar bilan davom eting.
+  coursef-2018_shortdescription_congrats: Informatika asoslari kursidan barcha tushunchalarni
+    o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+  coursea-2019_shortdescription_congrats: Maktabgacha yoshdagilarni kompyuter fanlari
+    bilan tanishtirish
+  courseb-2019_shortdescription_congrats: Maktabgacha yoshdagi o'quvchilar uchun kompyuter
+    fanlariga kirish. (A kursiga o'xshash, ammo kattaroq yoshdagi o'quvchilar uchun
+    xilma-xillik bilan).
+  coursec-2019_shortdescription_congrats: Informatika asoslarini o‘rganing va o‘z
+    san'at asari, hikoya va o‘yinlaringizni yarating.
+  coursed-2019_shortdescription_congrats: C kursidan tushunchalarni tezkor o‘rganib
+    oling, so‘ngra algoritmlar, ichma-ich sikllar, shartli bayonotlar va boshqalar
+    bilan o‘rganishni davom eting.
+  coursee-2019_shortdescription_congrats: C va D kurslaridagi tushunchalarni tezkor
+    o‘ting, so‘ng funksiyalar bilan davom eting.
+  coursef-2019_shortdescription_congrats: Informatika asoslari kursidan barcha tushunchalarni
+    o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+  starwars_longdescription: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada
+    o'z Star Wars o‘yiningizni yarating.
   w3schools_beyond_name: HTML bilib oling
+  codeorg_beyond_gradelevel: 'Yosh: 4-104'
+  khan_beyond_gradelevel: O'rta maktab +
+  tynker_beyond_gradelevel: 'Yosh: 5-13'
+  scratch_beyond_gradelevel: 'Yosh: 8+'
   lightbot_beyond_gradelevel: Barcha yoshdagilar uchun
   codecademy_beyond_gradelevel: Yuqori sinflar
   kodable_beyond_gradelevel: Boshlang‘ich sinflar
   scratchjr_beyond_gradelevel: Boshlang‘ich sinflar
+  hopscotch_beyond_gradelevel: O'rta maktab +
+  pocketcode_beyond_gradelevel: O'rta maktab +
+  groklearning_beyond_gradelevel: O'rta maktab +
   hacketyhack_beyond_gradelevel: Yuqori sinflar
+  robomind_beyond_gradelevel: 8-13 yosh
   makeschool_beyond_gradelevel: Yuqori sinflar
+  appinventor_beyond_gradelevel: O'rta maktab +
   touchdevelop_beyond_gradelevel: Yuqori sinflar
   codehs_beyond_gradelevel: Yuqori sinflar
   edx_beyond_gradelevel: Universitut
   coursera_beyond_gradelevel: Universitut
   udacity_beyond_gradelevel: Universitut
   teachingtree_beyond_gradelevel: Universitut
+  kodu_beyond_gradelevel: 'Yosh: 8+'
+  cargobot_beyond_gradelevel: 'Yosh: 8+'
+  kidsruby_beyond_gradelevel: 'Yosh: 12+'
+  w3schools_beyond_gradelevel: 'Yosh: 12+'
+  codeavengers_beyond_gradelevel: O'rta maktab +
+  mozilla_beyond_gradelevel: 'Yosh: 12+'
+  codecombat_beyond_gradelevel: O'rta maktab +
+  lego_beyond_gradelevel: O'rta maktab +
+  finch_beyond_gradelevel: 'Yosh: 8+'
   processing_beyond_gradelevel: Yuqori sinflar
+  alice_beyond_gradelevel: O'rta maktab +
+  sphero_beyond_gradelevel: 'Yosh: 8+'
+  tynker_beyond_platformtext: Zamonaviy brauzerlar ($$ required)
+  codecademy_beyond_platformtext: Zamonaviy brauzerlar. iOS, Android apps
+  groklearning_beyond_platformtext: Zamonaviy brauzerlar
+  robomind_beyond_platformtext: Zamonaviy brauzerlar, Mobile web
+  processing_beyond_platformtext: Zamonaviy brauzerlar
+  khan_beyond_shortdescription: JavaScript bilan rasm chizishni o'rganing
+  compatibility_unsupported_browser_markdown: Brauzeringiz qo'llab-quvvatlanmaydi.
+    Iltimos, brauzeringizni [qo'llab-quvvatlanadigan brauzerlarimizdan biriga](%{supported_browsers_url})
+    yangilang. Siz sahifani ko'rishga urinib ko'rishingiz mumkin, ammo funksionallik
+    buzilishi mumkin.
   flappy_shortcode: qanot qoqmoq
+  header_my_dashboard: Mening boshqaruv panelim
   header_courses: Kurslar
+  header_course_catalog: Kurslar katalogi
+  header_project_gallery: Loyihalar
+  header_sections: Boʻlimlar
+  header_professional_learning: Kasbiy ta'lim
+  header_educate_overview: Pedagog muxtasari
+  header_educate_elementary: Boshlang'ich maktab
+  header_educate_middle: O‘rta maktab
+  header_educate_high: Yuqori sinflar
   header_educate_hoc: Dasturlash soati
+  header_educate_partner: Bizning hamkorimiz bo'ling
+  header_educate_beyond: Code.org-dan tashqarida
+  header_educate_inspire: Talabani ilhomlantiring
+  header_educate_community: Onlayn hamjamiyat
+  header_educate_tools: Vositalar va videolar
+  header_about_us: Biz haqimizda
+  header_about_leadership: Yetakchilik
+  header_about_donors: Donorlar
+  header_about_partners: Hamkorlar
+  header_about_team: To'liq jamoa
+  header_about_news: Yangiliklar sahifasi
+  header_about_evaluation: Baholash
+  header_about_jobs: Ish
+  header_about_contact: Biz bilan bog'laning
+  header_about_faqs: Ko‘p beriladigan savollar
+  header_learn: Oʻrganish
+  header_teach: O'qiting
+  header_help_us: Bizga yordam bering
+  header_about: Biz haqimizda
+  header_teacher_community: O‘qituvchilar hamjamiyati
+  header_help_support: Yordam va qo‘llab-quvvatlash
+  header_report_bug: Muammo haqida xabar berish
+  header_legal_privacy: Maxfiylik siyosati
   header_legal_tos: Xizmat shartlari
+  header_tutorials: Qo‘llanmalar
+  header_documentation: Hujjatlar
+  user_header_label: Salom %{username}
+  user_header_team: Jamoa
+  user_header_settings: Akkaunt sozlamalari
+  user_header_logout: Chiqish
+  user_header_signin: Kirish
+  user_header_create: Yarating
+  user_header_applab: Ilovalar laboratoriyasi
+  user_header_artist: Rassom
+  user_header_gamelab: O‘yin laboratoriyasi
+  user_header_playlab: Play Lab - O‘yin laboratoriyasi
+  user_header_minecraft: Minecraft
+  user_header_flappy: Flappy
+  user_header_view_all: Barcha loyihalarni ko‘rish...
+  user_header_view_my_projects: Mening loyihalarimni ko‘rish
+  view_all_sections: Barcha bo‘limlarni ko‘rish
+  applab_tile_title: 'App Lab. Kirish (Yosh: 13+)'
+  applab_tile_subtitle: JavaScript-da bloklarga asoslangan dasturlash yordamida o‘z
+    dasturingizni yarating. Yoki matnga asoslangan dasturlash bilan mahoratingizni
+    keyingi pog‘onaga ko‘taring. (Faqat ingliz tilida)
   applab_tile_start_tutorial: Boshlash
+  applab_tile_teacher_guide: O‘qituvchilar qo‘llanmasi bilan tanishing
+  aquatic_name: 'Minecraft: Suvga sayohat'
+  account_sign_up_email_opt_in: Sizga elektron pochta orqali bizning kurslarimiz,
+    mahalliy imkoniyatlarimiz yoki boshqa kompyuter fanlari yangiliklari to‘g‘risida
+    xabar yuborishimiz mumkinmi? (taxminan bir oyda bir marta)
+  account_sign_up_child_accept_terms: Code.org xizmatlaridan foydalanish uchun ota-onam
+    yoki qonuniy vakilimning ruxsati borligini tasdiqlayman.
+  hoc_overview_dance_subtitle: Do‘stlaringiz bilan ulashish uchun Raqslar bazmini
+    dasturlang. Keti Perri, Madonna, J. Balvin, Sia, Kit Urban, Siyara va yana 25
+    dan ziyod yulduzlar ishtiroki bilan!
+  hoc_overview_title: Code.org saytidan Dasturlash soati mashg‘ulotlari
+  hoc_overview_subtitle: '<a href="https://hourofcode.com">Dasturlash soati</a> 180dan
+    ortiq davlatlarda o‘nlab million talabalarni o‘z ichiga olgan global harakat.
+    Har qanday kishi dunyoning istalgan yerida Dasturlash soati tadbirini tashkillashtirishi
+    mumkin yoki bizning 45dan ortiq tillarga tarjima qilingan 500dan ortiq bir soatlik
+    darslar bilan tanishishi mumkin. '
+  hoc_overview_partner_activities_title: Hamkorlardan ko‘proq mashg‘ulorlar
+  hoc_overview_partner_activities_body: Dasturlash soati veb-saytida Code.org va hamkorlar
+    tomonidan ishlab chiqilgan barcha yosh va tajriba darajalari uchun 500 dan ortiq
+    kompyuter fanlari mashg‘ulotlari mavjud.
+  hoc_overview_partner_activities_link: Mashg‘ulotlarni ko‘rish
   hoc_overview_start_tutorial: Boshlash
+  hoc_overview_view_teacher_guide: O‘qituvchilar qo‘llanmasi bilan tanishing
   hoc2018_creativity_create: Yaratmoq
+  hoc2018_mc_page_title: Minecraft Dasturlash soati qo‘llanmalari
+  hoc2018_mc_details: 'Ko‘p tillar | Zamonaviy brauzerlar va planshetlar | Sinf: 2+'
+  hoc2018_mc_aquatic_title: 'Minecraft: Suvga sayohat'
+  hoc2018_mc_aquatic_description: Minecraft Dasturlash soatiga yangi mashg‘ulotlar
+    bilan qaytdi! Minecraft bo‘yicha kod bilan sayohat.
+  hoc2018_mc_hero_title: Minecraft Qahramon sayohati
+  hoc2018_mc_hero_description: Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan
+    qaytdi! Minecraft bo‘yicha kod bilan sayohat.
+  hoc2018_mc_designer_title: Minecraft Dizayner
+  hoc2018_mc_designer_description: Minecraft-ning o'z versiyangizda hayvonlarni va
+    boshqa Minecraft jonzotlarini dasturlab yarating.
+  hoc2018_mc_adventurer_title: Minecraft Sarguzashtchi
+  hoc2018_mc_adventurer_description: Aleks yoki Stivni sarguzashtga olib borish uchun
+    koddan foydalaning.
   hoc2018_mc_start: Boshlash
+  hoc2018_mc_no_internet: Internet yo‘qmi?
+  hoc2018_mc_download_adventurer: '"Minecraft Adventurer"ning oflayn versiyasini yuklab
+    oling.'
+  hoc2018_mc_educators: Pedagoglar uchun
+  hoc2018_mc_educators_box1_title: Minecraft bilan kod yozing
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Ta''limiy nashr Minecraft-da standartlarga
+    muvofiq o‘quv dasturi, o‘qitish va kod yozishni ta''minlaydi.'
+  hoc2018_mc_educators_box1_button: Boshladik
+  hoc2018_mc_educators_box2_title: Fasilitator uchun qo‘llanmani yuklab oling
+  hoc2018_mc_educators_box2_desc: Ushbu qo‘llanma sizga Dasturlash soatini o‘tkazishda
+    va o‘quvchilaringizni kompyuter fanlari bilan shug'ullanishga qiziqtirishga yordam
+    beradi.
+  hoc2018_mc_educators_box2_button: Yuklab olish
+  hoc2018_mc_educators_box3_title: Talabalar uchun bepul seminarda qatnashing
+  hoc2018_mc_educators_box3_desc: O‘z hududingizda joylashgan Microsoft ofisida o‘tkaziladigan
+    "Dasturlash soati" bepul seminariga qatnashing. Olti va undan yuqori yoshdagi
+    barcha mahorat darajadagi ishtirokchilar uchun.
+  hoc2018_mc_educators_box3_button: Seminar topish
+  hoc2018_mc_educators_box4_title: Ko‘proq kompyuter fanlari manbalaridan foydalaning
+  hoc2018_mc_educators_box4_desc: Microsoft-dan raqamli ko‘nikmalar va kompyuter fanlari
+    bo‘yicha ta'limiy resurslar yordamida o‘zingizning jamiyatingizda o'zgarishlarni
+    qiling.
+  hoc2018_mc_educators_box4_button: Resurslar bilan tanishing
+  hoc2018_mc_watch_videos: Ishni boshlashdan oldin ushbu ruhlantiruvchi videolardan
+    birini tomosha qiling
+  hoc2018_mc_videos_more: O‘rnak modellari va taniqli shaxslar ishtiroki bilan ko‘proq
+    <a href='%{inspiring_videos_playlist}'> ruhlantiruvchi videolar </a>.
+  hoc2018_mc_careers_more: Texnologiya sohasidagi mutaxassislar ishtiroki bilan ko'proq
+    <a href='%{careers_url}' target='_blank'> ruhlantiruvchi videolar </a>.
+  hoc2018_mc_video_1min: 1 daqiqa
+  hoc2018_mc_video_2min: 2 daqiqa
+  hoc2018_mc_video_3min: 3 daqiqa
+  hoc2018_mc_video_5min: 5 daqiqa
+  hoc2018_mc_video_title_steph_curry: Stiv Karri bilan Dasturlash soati
+  hoc2018_mc_video_title_sports: O'zingizga turtki bering. Har kim o'rganishi mumkin.
+  hoc2018_mc_video_title_cs_is_everything: Kompyuter fanlari hamma narsani o‘zgartirmoqda
   hoc2018_mc_video_title_inspire_girl: Qizlarni ruhlantiring
+  hoc2018_mc_video_title_cs_intro: Informatikaga kirish
+  hoc2018_mc_video_title_schools_dont_teach: Aksariyat maktablar nimani o‘rgatmaydi?
+  hoc2018_mc_video_title_obama: Prezident Obama informatika haqida
+  hoc2018_mc_video_title_hoc_is_here: Dasturlash soati keldi - Har kim o‘rganishi
+    mumkin
+  hoc2018_mc_video_title_anybody_can_learn: Har kim o‘rganishi mumkin
+  hoc2018_mc_video_title_my_name_is_aracely: Mening ismim Araseli
   hoc2018_mc_homepage_join_us: Bizga qo'shiling
   hoc2018_mc_homepage_try_it: Sinab ko‘ring
+  hoc2018_mc_back_journey: Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan
+    qaytdi! Minecraft bo‘yicha kod bilan sayohat.
+  hoc2018_mc_teacher_guide: O‘qituvchilar qo‘llanmasi bilan tanishing
+  hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_continue_learning: Minecraft bilan o‘rganishni davom eting.
+  hoc2018_mc_go_to_mc_education: Minecraft Education-ga boring
+  hoc2018_mc_short_description_shorter: Suv osti dunyosini kod bilan o‘rganish va
+    qurish uchun ijodkorlik va muammolarni hal qilish qobiliyatingizdan foydalaning.
+  hoc2018_mc_journey: Minecraft orqali kod bilan sayohat.
+  hoc2018_dance_party_subheading: Raqs bazmini tarjima qilishga yordam bering
+  hoc2018_dance_party_box_description: Do‘stlaringiz bilan ulashish uchun Raqs bazmini
+    dasturlang!
   hoc2018_dance_party_button: Boshlash
+  hoc2018_dance_keep_on_dancing_box_title: Raqsni davom eting
+  hoc2018_dance_keep_on_dancing_description: Kengaytirilgan loyiha g‘oyalari bilan
+    Dasturlash soatidan keyin davom eting.
+  hoc2018_dance_keep_on_dancing_button: 2-qismni boshlash
+  hoc2018_dance_teacher_resources_title: O'qituvchilar uchun resurslar
+  hoc2018_dance_teacher_resources_tile1_description: Dars rejalari, sertifikatlar
+    va musiqani filtrlash.
   hoc2018_dance_teacher_resources_tile1_button: Dars rejasi
+  hoc2018_dance_teacher_resources_tile2_title: 'Raqs Bazmi: Kompyutersiz'
+  hoc2018_dance_teacher_resources_tile2_description: Hech qanday kompyuter kerak emas!
+    Raqs bazmini sahnalashtirish uchun dasturlashni o‘rganing.
+  hoc2018_dance_teacher_resources_tile2_button: Kompyutersiz o‘tiladigan mashg‘ulotlar
+  hoc2018_dance_featured_student_creations_title: O‘quvchilar ijodidan na'munalar
+  hoc2018_dance_videos_section_heading: Ilhomlaning
+  hoc2018_dance_video_title_what_is_creativity: Ijodkorlik nima?
+  hoc2018_dance_view_creativity_video_playlist: Ijodkorlik nima? Barcha epizodlarni
+    ko‘rish (5 daqiqa)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: 'Hamkor:'
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer * - bu bolalikdan karyeraga qadar keng qamrovli dastur bo‘lib, kam ta'minlangan
+    va boshqa imkoniyati cheklangan bolalar va yoshlarni kompyuter fanlari sohasida
+    kasbiy o‘sishga lhomlantirish, o‘qitish va o‘rgatish. <a href='%{amazon_future_engineer_link}'
+    target='_blank'> Batafsil </a>
   hoc2018_dance_amazon_about_future_engineer_button: Ko‘proq bilish
+  hoc2018_dance_amazon_future_engineer_footer: "* Ushbu o‘quv qo‘llanmada musiqasi
+    ishlatilgan san'atkorlar o'zlarining musiqalarini Code.org saytiga litsenziyalash
+    uchun Amazonga homiylik qilishmaydi va qo‘llab-quvvatlashmaydi."
+  hoc2018_mc_with_microsoft: 'Hamkor:'
+  footer_powered_by_aws: Amazon Web Services va "Powered by AWS" logotipi Amazon.com,
+    Inc yoki uning AQSh va/yoki boshqa mamlakatlardagi filiallarining savdo belgilaridir.
+  codebytes_skinny_banner_english_only: Faqat ingliz tilida

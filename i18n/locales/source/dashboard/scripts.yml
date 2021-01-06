@@ -1222,6 +1222,8 @@ en:
               name: Contained Levels
             ML Fish:
               name: ML Fish
+            AI Lab:
+              name: AI Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -15496,6 +15498,7 @@ en:
               name: Variables Make Demo
             'Lesson 11: Assessment Day':
               name: 'Lesson 11: Assessment Day'
+          name: csp7-2020
         csd2-projects-temp:
           title: CSD Web Projects - TEMP
           description_audience: ''
@@ -18207,14 +18210,15 @@ en:
             Module 6:
               name: 'Module 6: Introduction to the Create Performance Task'
             Module 7:
-              name: Module 7
+              name: 'Module 7: Tools and structure in Unit 9 - Data'
             Module 8:
-              name: Module 8
+              name: 'Module 8: Building community and preparing students for the AP Exam'
           lesson_groups: {}
           title: CS Principles Virtual Professional Learning
           description_audience: ''
           description_short: ''
           description: ''
+          name: vpl-csp-2020
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -18261,8 +18265,68 @@ en:
               name: USE Programs (AppLab Only)
             MODIFY Programs:
               name: MODIFY Programs (AppLab -> Widget -> AppLab)
+            Does Code.org Like Your Dog?:
+              name: Does Code.org Like Your Dog?
+            dog:
+              name: Does Code.org Like Your Dog?
+            AI for Oceans:
+              name: AI for Oceans
+            oceans:
+              name: Machine Learning with AI for Oceans
+            intro:
+              name: Introduction
+            society:
+              name: Machine Learning & Societal Impact
+            decisions:
+              name: Decision Making with Models
+            visualizing:
+              name: Visualizing Data
+            knn-train:
+              name: Train a model with continuous labels (KNN)
+            knn-use:
+              name: Act out model with continuous labels (KNN)
+            knn-app:
+              name: Make an app with continuous labels (KNN)
+            svm-train:
+              name: Train a model with categorical labels (SVM)
+            svm-use:
+              name: Act out model with categorical labels (SVM)
+            svm-app:
+              name: Make an app with categorical labels (SVM)
+            model:
+              name: Model Card
+            data:
+              name: Explore datasets & choose one for your app
+            project-app:
+              name: 'Mini-Project: Make an ML App'
+            miseducation:
+              name: Mis-education of the Machine
+            ethics:
+              name: Ethics
+            ethics-hoc2020:
+              name: AI & Ethics Hour of Code 2020
+            hypothesis:
+              name: Creating a Data Hypothesis
+            goldilocks:
+              name: Goldilocks Principles
+            collection:
+              name: Collecting Your Own Data
+            project:
+              name: Final project
+            KNN:
+              name: KNN
+            SVM:
+              name: SVM
+            App:
+              name: Making an app
+            Ethics:
+              name: Ethics
+            Project:
+              name: Final project
+            appendix:
+              name: Appendix
           lesson_groups: {}
-          title: Ml/AI Unit - CSD
+          title: ML/AI Unit - CSD
           description_audience: ''
           description_short: ML/AI Unit
           description: Brainstorm / Playground area for ML/AI Unit Development for CSD. For future questions about this, ask Dan Schneider.
@@ -18273,7 +18337,27 @@ en:
           lesson_groups:
             outbreak:
               display_name: Outbreak Simulation
-          title: Outbreak
+          title: Outbreak Simulator
           description_audience: ''
           description_short: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
           description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+          name: outbreak
+        apps-for-good:
+          lessons:
+            Build an App for Good:
+              name: Build an App for Good
+          lesson_groups: {}
+          title: Apps for Good
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2021drafting:
+          lessons:
+            Sprite Lab:
+              name: Sprite Lab Blocks
+          lesson_groups:
+            Toolbox Levels:
+              display_name: Toolbox Levels
+          title: Planning script for CI and CSF 2021
+          description_audience: Internal
+          description_short: Internal

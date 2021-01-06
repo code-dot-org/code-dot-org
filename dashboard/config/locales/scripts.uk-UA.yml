@@ -285,7 +285,7 @@ uk:
             Intro:
               name: Вступ
             Variables:
-              name: змінні
+              name: Змінні
         algebra:
           title: Інформатика в алгебрі
           description: Вивчайте функціональне програмування через алгебру
@@ -373,7 +373,7 @@ uk:
             Conditionals:
               name: Умови
             Functions:
-              name: функції
+              name: Функції
             Graph Paper Programming:
               name: Програмування по клітинках
             Introduction to Computer Science:
@@ -1053,7 +1053,7 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
             Defender:
               name: Захисник
             Velocity:
@@ -1263,9 +1263,9 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
             Variables:
-              name: змінні
+              name: Змінні
             Sprites:
               name: Спрайти
             Conditionals:
@@ -1291,7 +1291,7 @@ uk:
             For Loops:
               name: Цикли For
             Functions:
-              name: функції
+              name: Функції
             Functions with Parameters:
               name: Функції з параметрами
             Loops:
@@ -1299,7 +1299,7 @@ uk:
             Nested Loops:
               name: Вкладені цикли
             Variables:
-              name: змінні
+              name: Змінні
             While Loops:
               name: Цикли "поки"
         algebrapdnext:
@@ -1670,7 +1670,7 @@ uk:
         csd3-draft:
           lessons:
             Variables:
-              name: змінні
+              name: Змінні
             Sprites:
               name: Спрайти
             Conditionals:
@@ -1680,7 +1680,7 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
         csd5-2017:
           lesson_groups:
             csd5_1:
@@ -1701,7 +1701,7 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
         csd2-draft:
           lessons:
             Intellectual Property:
@@ -1721,7 +1721,7 @@ uk:
         csd3-chapters:
           lessons:
             Variables:
-              name: змінні
+              name: Змінні
             Sprites:
               name: Спрайти
             Conditionals:
@@ -1731,7 +1731,7 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
             'null':
               name: нічого
         coursef-ramp:
@@ -1959,6 +1959,8 @@ uk:
           lessons:
             deprecated:
               name: застаріла
+            other:
+              name: інше
             Thanks:
               name: Дякуємо
         csp3-research-mxghyt:
@@ -2203,7 +2205,7 @@ uk:
               display_name: Опитування
           lessons:
             Variables:
-              name: змінні
+              name: Змінні
             Sprites:
               name: Спрайти
             Conditionals:
@@ -2213,7 +2215,7 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
         csd3-2018:
           description: " У блоці 3 ви будете спиратися на свій досвід кодування під
             час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій
@@ -2232,7 +2234,7 @@ uk:
               display_name: Опитування
           lessons:
             Variables:
-              name: змінні
+              name: Змінні
             Sprites:
               name: Спрайти
             Conditionals:
@@ -2242,7 +2244,7 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
         csd2-2018:
           description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його
             на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися
@@ -2780,11 +2782,11 @@ uk:
         cspplayground:
           lesson_groups:
             csp_variables:
-              display_name: змінні
+              display_name: Змінні
             csp_conditionals:
               display_name: Умови
             csp_functions:
-              display_name: функції
+              display_name: Функції
             csp_project:
               display_name: Проект
         dance-extras:
@@ -2796,7 +2798,7 @@ uk:
             ramp_up:
               display_name: Просунутися
             csf_variables:
-              display_name: змінні
+              display_name: Змінні
             csf_for_loops:
               display_name: Цикли For
             csf_internet:
@@ -2870,7 +2872,7 @@ uk:
             csf_nested_loops:
               display_name: Вкладені цикли
             csf_functions:
-              display_name: функції
+              display_name: Функції
           lessons:
             Building a Foundation:
               name: Закладання основ
@@ -2898,9 +2900,9 @@ uk:
             csf_conditionals:
               display_name: Умови
             csf_functions:
-              display_name: функції
+              display_name: Функції
             csf_variables:
-              display_name: змінні
+              display_name: Змінні
             csf_for_loops:
               display_name: Цикли For
             csf_sprites:
@@ -3086,7 +3088,7 @@ uk:
               display_name: Опитування
           lessons:
             Variables:
-              name: змінні
+              name: Змінні
             Sprites:
               name: Спрайти
             Conditionals:
@@ -3096,7 +3098,7 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
         csd4-2019:
           description_short: "  Дізнайтеся, як розробити програму, яка відповідає
             потребам користувачів."
@@ -3135,11 +3137,11 @@ uk:
         csp4-pilot:
           lesson_groups:
             csp_variables:
-              display_name: змінні
+              display_name: Змінні
             csp_conditionals:
               display_name: Умови
             csp_functions:
-              display_name: функції
+              display_name: Функції
             csp_project:
               display_name: Проект
             required:
@@ -3277,31 +3279,31 @@ uk:
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: змінні
+              display_name: Змінні
             csp_conditionals:
               display_name: Умови
             csp_functions:
-              display_name: функції
+              display_name: Функції
             csp_project:
               display_name: Проект
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: змінні
+              display_name: Змінні
             csp_conditionals:
               display_name: Умови
             csp_functions:
-              display_name: функції
+              display_name: Функції
             csp_project:
               display_name: Проект
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: змінні
+              display_name: Змінні
             csp_conditionals:
               display_name: Умови
             csp_functions:
-              display_name: функції
+              display_name: Функції
             csp_project:
               display_name: Проект
         csp5-pilot-staging:
@@ -3319,11 +3321,11 @@ uk:
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: змінні
+              display_name: Змінні
             csp_conditionals:
               display_name: Умови
             csp_functions:
-              display_name: функції
+              display_name: Функції
             csp_project:
               display_name: Проект
         csp7-pilot-staging:
@@ -3338,31 +3340,31 @@ uk:
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: змінні
+              display_name: Змінні
             csp_conditionals:
               display_name: Умови
             csp_functions:
-              display_name: функції
+              display_name: Функції
             csp_project:
               display_name: Проект
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: змінні
+              display_name: Змінні
             csp_conditionals:
               display_name: Умови
             csp_functions:
-              display_name: функції
+              display_name: Функції
             csp_project:
               display_name: Проект
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: змінні
+              display_name: Змінні
             csp_conditionals:
               display_name: Умови
             csp_functions:
-              display_name: функції
+              display_name: Функції
             csp_project:
               display_name: Проект
         express-2018-vn:
@@ -3470,7 +3472,7 @@ uk:
               display_name: Опитування
           lessons:
             Variables:
-              name: змінні
+              name: Змінні
             Sprites:
               name: Спрайти
             Conditionals:
@@ -3480,7 +3482,7 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
         csp3-pilot:
           lesson_groups:
             content:
@@ -3629,11 +3631,11 @@ uk:
             Events:
               name: Події
             Functions:
-              name: функції
+              name: Функції
             Next steps:
               name: Наступні кроки
             Variables:
-              name: змінні
+              name: Змінні
             For Loops:
               name: Цикли For
         dance-extras-2019:
@@ -3641,11 +3643,11 @@ uk:
         csp4-preview:
           lesson_groups:
             csp_variables:
-              display_name: змінні
+              display_name: Змінні
             csp_conditionals:
               display_name: Умови
             csp_functions:
-              display_name: функції
+              display_name: Функції
             csp_project:
               display_name: Проект
         time4cs-original-unit-1:
@@ -3663,7 +3665,7 @@ uk:
             csf_nested_loops:
               display_name: Вкладені цикли
             csf_functions:
-              display_name: функції
+              display_name: Функції
           lessons:
             Crowdsourcing:
               name: Краудсорсинг
@@ -3734,11 +3736,11 @@ uk:
         csp4-2020:
           lesson_groups:
             csp_variables:
-              display_name: змінні
+              display_name: Змінні
             csp_conditionals:
               display_name: Умови
             csp_functions:
-              display_name: функції
+              display_name: Функції
             csp_project:
               display_name: Проект
         csp5-2020:
@@ -3846,7 +3848,7 @@ uk:
               display_name: Опитування
           lessons:
             Variables:
-              name: змінні
+              name: Змінні
             Conditionals:
               name: Умови
             Velocity:
@@ -3854,7 +3856,7 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
             Text:
               name: Текст
             Sprites:
@@ -3960,7 +3962,7 @@ uk:
             csf_nested_loops:
               display_name: Вкладені цикли
             csf_functions:
-              display_name: функції
+              display_name: Функції
           lessons:
             'Functions: Songwriting':
               name: Написання пісень
@@ -3973,7 +3975,7 @@ uk:
             csf_digcit:
               display_name: Цифрове громадянство
             csf_variables:
-              display_name: змінні
+              display_name: Змінні
             csf_for_loops:
               display_name: Цикли For
             csf_sprites:
@@ -3999,9 +4001,9 @@ uk:
             csf_conditionals:
               display_name: Умови
             csf_functions:
-              display_name: функції
+              display_name: Функції
             csf_variables:
-              display_name: змінні
+              display_name: Змінні
             csf_for_loops:
               display_name: Цикли For
             csf_sprites:
@@ -4086,7 +4088,7 @@ uk:
             Processing Arrays:
               name: Обробка масивів
             Variables:
-              name: змінні
+              name: Змінні
         virtual-holding-place:
           lesson_groups:
             content:
@@ -4099,7 +4101,7 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
         code-break:
           lessons:
             Algorithms:
@@ -4132,9 +4134,9 @@ uk:
             Conditionals:
               name: Умови
             Functions:
-              name: функції
+              name: Функції
             Variables:
-              name: змінні
+              name: Змінні
             For Loops:
               name: Цикли For
             Next steps:
@@ -4155,7 +4157,7 @@ uk:
             та ігри в Game Lab."
           lessons:
             Variables:
-              name: змінні
+              name: Змінні
             Sprites:
               name: Спрайти
             Text:
@@ -4167,7 +4169,7 @@ uk:
             Collisions:
               name: Зіткнення
             Functions:
-              name: функції
+              name: Функції
           lesson_groups:
             csd3_1:
               display_name: Зміст
@@ -4208,3 +4210,10 @@ uk:
             Course E/F:
               name: Курс E/F
           description_audience: Внутрішній
+        ml-playground:
+          lessons:
+            intro:
+              name: Вступ
+        2021drafting:
+          description_audience: Внутрішній
+          description_short: Внутрішній

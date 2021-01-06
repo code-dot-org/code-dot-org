@@ -21,7 +21,7 @@ function animations(areBackgrounds) {
     console.warn('No sprites available');
     return [['sprites missing', 'null']];
   }
-  return animationList.orderedKeys
+  let results = animationList.orderedKeys
     .filter(key => {
       const animation = animationList.propsByKey[key];
       const isBackground = (animation.categories || []).includes('backgrounds');
@@ -40,6 +40,14 @@ function animations(areBackgrounds) {
         return [url, `"${animation.name}"`];
       }
     });
+  // In case either all backgrounds or all costumes are missing and we request them, this allows the "create
+  // new sprite" and "set background as" blocks to continue working without crashing.
+  // When they are used without sprites being set, the image dropdown for those blocks will be empty except
+  // for the "More" button. The user will have to add sprites/backgrounds to this dropdown one by one using the "More" button.
+  if (results.length === 0) {
+    return [['sprites missing', 'null']];
+  }
+  return results;
 }
 function sprites() {
   return animations(false);
@@ -247,6 +255,10 @@ const customInputTypes = {
             block.shortString = spritelabMsg.clicked();
             block.longString = spritelabMsg.clickedSprite();
             break;
+          case 'gamelab_newSpritePointer':
+            block.shortString = spritelabMsg.new();
+            block.longString = spritelabMsg.newSprite();
+            break;
           case 'gamelab_subjectSpritePointer':
             block.shortString = spritelabMsg.subject();
             block.longString = spritelabMsg.subjectSprite();
@@ -273,6 +285,8 @@ const customInputTypes = {
       switch (block.type) {
         case 'gamelab_clickedSpritePointer':
           return '{id: extraArgs.clickedSprite}';
+        case 'gamelab_newSpritePointer':
+          return '{id: extraArgs.newSprite}';
         case 'gamelab_subjectSpritePointer':
           return '{id: extraArgs.subjectSprite}';
         case 'gamelab_objectSpritePointer':
@@ -511,13 +525,11 @@ export default {
 
       openEditor(e) {
         e.stopPropagation();
-        behaviorEditor.openEditorForFunction(this, this.getTitleValue('VAR'));
+        behaviorEditor.openEditorForFunction(this, this.getTitle_('VAR').id);
       },
 
       getVars() {
-        return Blockly.Variables.getVars.bind(this)(
-          Blockly.BlockValueType.BEHAVIOR
-        );
+        return {};
       },
 
       renameVar(oldName, newName) {
@@ -579,7 +591,7 @@ export default {
 
     generator.gamelab_behavior_get = function() {
       const name = Blockly.JavaScript.variableDB_.getName(
-        this.getTitleValue('VAR'),
+        this.getTitle_('VAR').id,
         Blockly.Procedures.NAME_TYPE
       );
       const extraArgs = [];
@@ -606,9 +618,7 @@ export default {
         },
         overrides: {
           getVars(category) {
-            return {
-              Behavior: [this.getTitleValue('NAME')]
-            };
+            return {};
           },
           callType_: 'gamelab_behavior_get'
         }

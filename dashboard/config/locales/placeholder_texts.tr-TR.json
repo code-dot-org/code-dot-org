@@ -21,10 +21,12 @@
           "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
         },
         "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
         },
         "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
         },
         "courseF_playlab_variables2b": {
           "48d6215903dff56238e52e8891380c8f": "mavi"
@@ -35,6 +37,28 @@
         "courseF_project_1": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!",
           "498cd895eb5a102c5aeb977e2b928dee": "Teşekkür ederiz!"
+        },
+        "courseE_aboutme_1": {
+          "b63151482630edd1589a9ac24d107c49": "Bu benim! Rikki! Kodlama yapmayı, Thuy ile takılmayı ve dondurmayı yemeyi severim!",
+          "810896b14fc6615f0c76628b9b6a727e": "Bu, benim en iyi arkadaşım Thuy! Sporda gerçekten de çok iyi!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Dondurma, en sevdiğim ikram! Ama muhtemelen bunu koltukta yememeliyim...",
+          "a50ec512bdd98483a7cdcd88cbe11933": "Bu, evcil hayvanım tavşan, Bayan Lolipop! Ona neden bu ismi verdiğimi bilmiyorum!",
+          "6f97975a0bda0c9219915161149cbb26": "Bu, benim bilgisayarım! HER zaman onda kodlama yaparım!",
+          "1c6636ce086fef9305c6e3d25e37d5b2": "İşte size bir sır: Thuy çok gıdıklanıyor!",
+          "fce3b93eaa64a8869c47ba25daa8887f": "Harika!",
+          "41a18649f969a00ec0b2feba20db997f": "Bence bu renk sende daha iyi duruyor, Bayan Lolipop!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "Bu bilgisayar, delice kodlama becerilerimin altından kalkamıyor!"
+        },
+        "courseE_aboutme_1_2020": {
+          "b63151482630edd1589a9ac24d107c49": "Bu benim! Rikki! Kodlama yapmayı, Thuy ile takılmayı ve dondurmayı yemeyi severim!",
+          "810896b14fc6615f0c76628b9b6a727e": "Bu, benim en iyi arkadaşım Thuy! Sporda gerçekten de çok iyi!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Dondurma, en sevdiğim ikram! Ama muhtemelen bunu koltukta yememeliyim...",
+          "a50ec512bdd98483a7cdcd88cbe11933": "Bu, evcil hayvanım tavşan, Bayan Lolipop! Ona neden bu ismi verdiğimi bilmiyorum!",
+          "6f97975a0bda0c9219915161149cbb26": "Bu, benim bilgisayarım! HER zaman onda kodlama yaparım!",
+          "1c6636ce086fef9305c6e3d25e37d5b2": "İşte size bir sır: Thuy çok gıdıklanıyor!",
+          "fce3b93eaa64a8869c47ba25daa8887f": "Harika!",
+          "41a18649f969a00ec0b2feba20db997f": "Bence bu renk sende daha iyi duruyor, Bayan Lolipop!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "Bu bilgisayar, delice kodlama becerilerimin altından kalkamıyor!"
         }
       }
     }

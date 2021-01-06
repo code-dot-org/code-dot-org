@@ -20,7 +20,7 @@
 # complete the unit.
 #
 # Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
-class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
+class Plc::EnrollmentModuleAssignment < ApplicationRecord
   belongs_to :plc_enrollment_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment'
   belongs_to :plc_learning_module, class_name: '::Plc::LearningModule'
   belongs_to :user

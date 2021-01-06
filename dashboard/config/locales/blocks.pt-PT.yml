@@ -1157,6 +1157,8 @@ pt:
         text: Sprite {SPRITE} Pára {BEHAVIOR}
       gamelab_removeTint:
         text: remover cor de {THIS}
+      gamelab_repeatForever:
+        text: repetir para sempre
       gamelab_setAnimation:
         text: Mudar {THIS} traje para {ANIMATION}
       gamelab_setBackground:
@@ -1179,6 +1181,8 @@ pt:
               de água
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
             undefined: nenhum
+      gamelab_setBackgroundImageAs:
+        text: definir fundo para {IMG}
       gamelab_setProp:
         text: Definir {SPRITE} {PROPERTY} Para {VAL}
         options:
@@ -1715,7 +1719,6 @@ pt:
             '"stoneBricks"': tijolos de pedra
             '"mossyStoneBricks"': tijolos de pedra com musgo
             '"crackedStoneBricks"': tijolos de pedra rachada
-            '"decorativeStoneBricks"': tijolos de pedra decorativa
             '"blueCoralBlock"': bloco de coral azul
             '"pinkCoralBlock"': bloco de coral rosa
             '"magentaCoralBlock"': bloco de coral magenta

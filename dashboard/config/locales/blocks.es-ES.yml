@@ -361,7 +361,7 @@ es:
         text: crear un nuevo {COSTUME} en {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': alien
+            '"ALIEN"': alienígena
             '"BEAR"': oso
             '"CAT"': gato
             '"DOG"': perro
@@ -1156,6 +1156,8 @@ es:
         text: sprite {SPRITE} detiene {BEHAVIOR}
       gamelab_removeTint:
         text: eliminar color de {THIS}
+      gamelab_repeatForever:
+        text: Repetir para siempre
       gamelab_setAnimation:
         text: cambiar {THIS} disfraz a {ANIMATION}
       gamelab_setBackground:
@@ -1179,6 +1181,8 @@ es:
               el agua
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': invierno
             undefined: ninguno
+      gamelab_setBackgroundImageAs:
+        text: establecer fondo a {IMG}
       gamelab_setProp:
         text: establecer {SPRITE} {PROPERTY} a {VAL}
         options:
@@ -1721,7 +1725,6 @@ es:
             '"stoneBricks"': ladrillos de piedra
             '"mossyStoneBricks"': ladrillos de piedra musgosa
             '"crackedStoneBricks"': ladrillos de piedra quebrados
-            '"decorativeStoneBricks"': ladrillos de piedra decorativa
             '"blueCoralBlock"': bloque de coral azul
             '"pinkCoralBlock"': bloque de coral rosa
             '"magentaCoralBlock"': bloque de coral magenta

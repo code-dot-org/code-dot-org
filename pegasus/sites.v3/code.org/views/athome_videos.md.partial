@@ -1,5 +1,18 @@
 <div class="col-33" style="padding-right: 20px;">
 
+{{ ai_vid_intro }}
+
+</div>
+
+<div class="col-66">
+
+<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y" target="_blank")>How AI Works</a>: With an introduction by Microsoft CEO Satya Nadella, this series of short videos will introduce you to how artificial intelligence works and why it matters. Learn about neural networks, or how AI learns, and delve into issues like algorithmic bias and the ethics of AI decision-making.
+
+</div>
+
+<div style="clear: both; margin-bottom: 40px"></div>
+<div class="col-33" style="padding-right: 20px;">
+
 {{ athome_vid_howcomputers }}
 
 </div>
@@ -24,4 +37,5 @@
 </div>
 
 <div style="clear: both; margin-bottom: 40px"></div>
+
 [Visit our video library.](https://code.org/educate/resources/videos)

@@ -75,6 +75,7 @@ export default class TeacherResourcesDropdown extends React.Component {
               key={index}
               href={link}
               target="_blank"
+              rel="noopener noreferrer"
               onClick={this.handleItemClick}
             >
               {stringForType[type]}

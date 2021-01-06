@@ -175,6 +175,8 @@ bn:
         text: যেকোনো রঙ
       gamelab_randomColor:
         text: যেকোনো রঙ
+      gamelab_repeatForever:
+        text: সবসময় পুনরাবৃত্তি করুন
       gamelab_setBackgroundImage:
         options:
           IMG:

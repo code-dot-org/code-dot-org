@@ -1185,7 +1185,7 @@
           "courseD_bee_conditionals_challenge1_b": "W tej łamigłówce każde miejsce może mieścić kwiatek, plaster miodu lub nic. Oznacza to, że w każdym kwadracie możesz powtórzyć swoją sekwencję „jeśli/w przeciwnym razie”. "
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach 'jeśli na kwiatku', kod wewnątrz 'dopóki nektar > 0' będzie działał tylko, jeśli pszczółka jest na kwiatku. Główna różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzór:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach 'jeśli na kwiatku', kod wewnątrz 'dopóki nektar > 0' będzie działał tylko, jeśli pszczółka jest na kwiatku. Główna różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzór:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Oryginalny kod działałby świetnie - gdyby był tylko jeden skarb na każdym stosie!",
@@ -1244,7 +1244,7 @@
           "courseF_bee_functions_challenge2_b": "**Rozwiązanie:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "Następnie zbierz pozostałe klejnoty w tym rzędzie.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nDodaj te bloki do swojego programu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Następnie zbierz pozostałe klejnoty w tym rzędzie.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nDodaj te bloki do swojego programu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "W końcu zbierz pozostałe klejnoty. Dodaj te bloki do swojego programu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Tutaj jest pełne rozwiązanie tej łamigłówki.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1508,10 +1508,12 @@
           "courseA_collector_loops3_b": "Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz pętli  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_collector_loops3_2019": {
-          "courseA_collector_loops3_b": "Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz pętli  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
+          "courseA_collector_loops3_b": "Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz pętli  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>.",
+          "courseA_collector_loops3_a": "Spróbuj użyć pętli <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
         },
         "courseA_collector_loops3_2020": {
-          "courseA_collector_loops3_b": "Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz pętli  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
+          "courseA_collector_loops3_b": "Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz pętli  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>.",
+          "courseA_collector_loops3_a": "Spróbuj użyć pętli <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
         },
         "courseA_collector_loops4": {
           "courseA_collector_loops4_a": "Aby zmienić odległość, jaką pokonuje Laurel, zmień liczbę powtórzeń przebiegu pętli.",
@@ -1657,20 +1659,24 @@
           "courseA_collector_loops2_b": "Kiedy zbliżyłeś się do kwadratu ze skarbem, użyj tego bloku, aby go podnieść.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_harvester_loops2_2019": {
-          "courseA_harvester_loops2_a": "Twój kod będzie miał **cztery** bloki  \"przejdź na zachód\"\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\ni **cztery** bloki <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. "
+          "courseA_harvester_loops2_a": "Twój kod będzie miał **cztery** bloki  \"przejdź na zachód\"\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\ni **cztery** bloki <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. ",
+          "courseA_harvester_loops2_b": "Jeśli nadal masz problem, spróbuj wypowiedzieć kroki/ czynności na głos."
         },
         "courseA_harvester_loops2_2020": {
-          "courseA_harvester_loops2_a": "Twój kod będzie miał **cztery** bloki  \"przejdź na zachód\"\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\ni **cztery** bloki <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. "
+          "courseA_harvester_loops2_a": "Twój kod będzie miał **cztery** bloki  \"przejdź na zachód\"\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\ni **cztery** bloki <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. ",
+          "courseA_harvester_loops2_b": "Jeśli nadal masz problem, spróbuj wypowiedzieć kroki/ czynności na głos."
         },
         "courseA_harvester_loops3": {
           "courseA_harvester_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał.",
           "courseA_harvester_loops3_a": "Użyj bloku \"powtórz\" takiego, jak ten, aby sobie pomóc!"
         },
         "courseA_harvester_loops3_2019": {
-          "courseA_harvester_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał."
+          "courseA_harvester_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał.",
+          "courseA_harvester_loops3_a": "Użyj bloku \"powtórz\" takiego, jak ten, aby sobie pomóc!"
         },
         "courseA_harvester_loops3_2020": {
-          "courseA_harvester_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał."
+          "courseA_harvester_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał.",
+          "courseA_harvester_loops3_a": "Użyj bloku \"powtórz\" takiego, jak ten, aby sobie pomóc!"
         },
         "courseA_harvester_loops5": {
           "courseA_harvester_loops5_a": "Jeśli utkniesz, spróbuj rozwiązać zagadkę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie.",
@@ -1678,30 +1684,38 @@
           "courseA_harvester_loops5_c": "Użyj tej ścieżki, aby zebrać całą kukurydzę!"
         },
         "courseA_harvester_loops5_2019": {
-          "courseA_harvester_loops5_a": "Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie."
+          "courseA_harvester_loops5_a": "Jeśli utkniesz, spróbuj rozwiązać zagadkę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie.",
+          "courseA_harvester_loops5_b": "Twój kod końcowy będzie miał **jedną** pętlę <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> **jeden** blok \"przejdź na południe\" <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> i **jeden** blok \"przejdź na wschód\" <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_c": "Użyj tej ścieżki, aby zebrać całą kukurydzę!"
         },
         "courseA_harvester_loops5_2020": {
-          "courseA_harvester_loops5_a": "Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie."
+          "courseA_harvester_loops5_a": "Jeśli utkniesz, spróbuj rozwiązać zagadkę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie.",
+          "courseA_harvester_loops5_b": "Twój kod końcowy będzie miał **jedną** pętlę <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> **jeden** blok \"przejdź na południe\" <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> i **jeden** blok \"przejdź na wschód\" <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_c": "Użyj tej ścieżki, aby zebrać całą kukurydzę!"
         },
         "courseA_harvester_loops6": {
           "courseA_harvester_loops6_a": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru i znajdź powtarzające się wzorce. ",
           "courseA_harvester_loops6_b": "To jest ścieżka, którą powinieneś obrać, aby zebrać całą kukurydzę."
         },
         "courseA_harvester_loops6_2019": {
-          "courseA_harvester_loops6_a": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru i znajdź powtarzające się wzorce. "
+          "courseA_harvester_loops6_a": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru i znajdź powtarzające się wzorce. ",
+          "courseA_harvester_loops6_b": "To jest ścieżka, którą powinieneś obrać, aby zebrać całą kukurydzę."
         },
         "courseA_harvester_loops6_2020": {
-          "courseA_harvester_loops6_a": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru i znajdź powtarzające się wzorce. "
+          "courseA_harvester_loops6_a": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru i znajdź powtarzające się wzorce. ",
+          "courseA_harvester_loops6_b": "To jest ścieżka, którą powinieneś obrać, aby zebrać całą kukurydzę."
         },
         "courseA_harvester_seq2": {
           "courseA_harvester_seq2_b": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!",
           "courseA_harvester_seq2_a": "Nie zapomnij użyć <xml><block type=\"harvester_corn\"/></xml>, aby zebrać kukurydzę!"
         },
         "courseA_harvester_seq2_2019": {
-          "courseA_harvester_seq2_b": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!"
+          "courseA_harvester_seq2_b": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!",
+          "courseA_harvester_seq2_a": "Nie zapomnij użyć <xml><block type=\"harvester_corn\"/></xml>, aby zebrać kukurydzę!"
         },
         "courseA_harvester_seq2_2020": {
-          "courseA_harvester_seq2_b": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!"
+          "courseA_harvester_seq2_b": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!",
+          "courseA_harvester_seq2_a": "Nie zapomnij użyć <xml><block type=\"harvester_corn\"/></xml>, aby zebrać kukurydzę!"
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_a": "Jeśli masz kłopot, aby ptak się poruszył sprawdź, czy bloki podłączyły się pod <xml>\n  <block type=\"when_run\"/>\n</xml>",
@@ -1716,10 +1730,12 @@
           "courseA_maze_seq10_b": "Będziesz musiał poruszać się w 3 różnych kierunkach, aby rozwiązać tę łamigłówkę."
         },
         "courseA_maze_seq10_2019": {
-          "courseA_maze_seq10_a": "Jeśli masz problem, spróbuj najpierw zapisać wszystkie kroki na kartce papieru."
+          "courseA_maze_seq10_a": "Jeśli masz problem, spróbuj najpierw zapisać wszystkie kroki na kartce papieru.",
+          "courseA_maze_seq10_b": "Będziesz musiał poruszać się w 3 różnych kierunkach, aby rozwiązać tę łamigłówkę."
         },
         "courseA_maze_seq10_2020": {
-          "courseA_maze_seq10_a": "Jeśli masz problem, spróbuj najpierw zapisać wszystkie kroki na kartce papieru."
+          "courseA_maze_seq10_a": "Jeśli masz problem, spróbuj najpierw zapisać wszystkie kroki na kartce papieru.",
+          "courseA_maze_seq10_b": "Będziesz musiał poruszać się w 3 różnych kierunkach, aby rozwiązać tę łamigłówkę."
         },
         "courseA_maze_seq10_copy": {
           "courseA_maze_seq10_a": "Jeśli masz problem, spróbuj najpierw zapisać wszystkie kroki na kartce papieru.",
@@ -1779,10 +1795,12 @@
           "2": "Będziesz musiał użyć tego bloku:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_2019": {
-          "1": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!"
+          "1": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!",
+          "2": "Będziesz musiał użyć tego bloku:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_2020": {
-          "1": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!"
+          "1": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!",
+          "2": "Będziesz musiał użyć tego bloku:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_copy": {
           "courseA_maze_seq5_a": "Spróbuj zapisać kroki na papierze, aby znaleźć rozwiązanie!",
@@ -1798,11 +1816,11 @@
         },
         "courseA_maze_seq6_2019": {
           "courseA_maze_seq6_a": "Twój kod końcowy powinien zawierać 3 bloki przemieszczania.",
-          "courseA_maze_seq6_b": "Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie."
+          "courseA_maze_seq6_b": "Jeśli utkniesz, spróbuj rozwiązać zagadkę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie."
         },
         "courseA_maze_seq6_2020": {
           "courseA_maze_seq6_a": "Twój kod końcowy powinien zawierać 3 bloki przemieszczania.",
-          "courseA_maze_seq6_b": "Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie."
+          "courseA_maze_seq6_b": "Jeśli utkniesz, spróbuj rozwiązać zagadkę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie."
         },
         "courseA_maze_seq6_copy": {
           "courseA_maze_seq6_a": "Twój kod końcowy powinien zawierać 3 bloki przemieszczania.",
@@ -2029,10 +2047,12 @@
           "courseB_artist_loops3_a": "Pamiętaj, aby użyć pętli \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> w celu uzyskania lepszego kodu![0]"
         },
         "courseB_artist_loops3_2019": {
-          "courseB_artist_loops3_b": "Artysta będzie chciał przenieść się na południe aby rysować linię."
+          "courseB_artist_loops3_b": "Artysta będzie chciał przenieść się na południe aby rysować linię.",
+          "courseB_artist_loops3_a": "Pamiętaj, aby użyć pętli \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> w celu uzyskania lepszego kodu![0]"
         },
         "courseB_artist_loops3_2020": {
-          "courseB_artist_loops3_b": "Artysta będzie chciał przenieść się na południe aby rysować linię."
+          "courseB_artist_loops3_b": "Artysta będzie chciał przenieść się na południe aby rysować linię.",
+          "courseB_artist_loops3_a": "Pamiętaj, aby użyć pętli \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> w celu uzyskania lepszego kodu![0]"
         },
         "courseB_artist_loops4": {
           "courseB_artist_loops4_a": "Blok skoku pozwala Ci przechodzić do przodu bez rysowania linii.",
@@ -2272,12 +2292,14 @@
         "courseB_collector_loops6_2019": {
           "courseB_collector_loops6_a": "Czy nie jesteś w stanie stwierdzić, co działa źle?  Spróbuj użyć przycisku \"Krok\", aby uruchomić swój program po jednym bloku.",
           "courseB_collector_loops6_b": "Możesz zmienić ilość powtarzania się pętli poprzez kliknięcie w \"3\" i wybranie innej wartości.",
-          "courseB_collector_loops6_d": "Jeśli nie wiesz co zrobić, rozbij tą zagadkę na 3 części."
+          "courseB_collector_loops6_d": "Jeśli nie wiesz co zrobić, rozbij tą zagadkę na 3 części.",
+          "courseB_collector_loops6_c": "Być może będziesz chciał użyć 3 pętli  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, aby rozwiązać tę łamigłówkę."
         },
         "courseB_collector_loops6_2020": {
           "courseB_collector_loops6_a": "Czy nie jesteś w stanie stwierdzić, co działa źle?  Spróbuj użyć przycisku \"Krok\", aby uruchomić swój program po jednym bloku.",
           "courseB_collector_loops6_b": "Możesz zmienić ilość powtarzania się pętli poprzez kliknięcie w \"3\" i wybranie innej wartości.",
-          "courseB_collector_loops6_d": "Jeśli nie wiesz co zrobić, rozbij tą zagadkę na 3 części."
+          "courseB_collector_loops6_d": "Jeśli nie wiesz co zrobić, rozbij tą zagadkę na 3 części.",
+          "courseB_collector_loops6_c": "Być może będziesz chciał użyć 3 pętli  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, aby rozwiązać tę łamigłówkę."
         },
         "courseB_collector_loops7": {
           "courseB_collector_loops7_a": "Jeśli ta łamigłówka sprawia Ci kłopot, spróbuj narysować ją na papierze, co pomoże Ci ją rozwikłać.",
@@ -2374,10 +2396,12 @@
           "courseB_iceage_loops3_a": "Użyj tego nowego bloku! <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>"
         },
         "courseB_iceage_loops3_2019": {
-          "courseB_iceage_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał."
+          "courseB_iceage_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał.",
+          "courseB_iceage_loops3_a": "Użyj tego nowego bloku! \n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>"
         },
         "courseB_iceage_loops3_2020": {
-          "courseB_iceage_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał."
+          "courseB_iceage_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał.",
+          "courseB_iceage_loops3_a": "Użyj tego nowego bloku! \n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>"
         },
         "courseB_maze_seq1": {
           "courseB_maze_seq1_a": "Połącz bloki z blokiem <xml><block type=\"when_run\"/></xml>, aby poruszyć ptaszka!",
@@ -2409,10 +2433,12 @@
           "courseB_maze_seq4_a": "Spróbuj dodawać jedno polecenie na raz, aż dojdziesz do żołędzia."
         },
         "courseB_maze_seq4_2019": {
-          "courseB_maze_seq4_b": "Być może będziesz chciał użyć bloku  <xml><block type=\"maze_moveEast\"/></xml>, aby rozwiązać tę łamigłówkę."
+          "courseB_maze_seq4_b": "Być może będziesz chciał użyć bloku  <xml><block type=\"maze_moveEast\"/></xml>, aby rozwiązać tę łamigłówkę.",
+          "courseB_maze_seq4_a": "Spróbuj dodawać jedno polecenie na raz, aż dojdziesz do żołędzia."
         },
         "courseB_maze_seq4_2020": {
-          "courseB_maze_seq4_b": "Być może będziesz chciał użyć bloku  <xml><block type=\"maze_moveEast\"/></xml>, aby rozwiązać tę łamigłówkę."
+          "courseB_maze_seq4_b": "Być może będziesz chciał użyć bloku  <xml><block type=\"maze_moveEast\"/></xml>, aby rozwiązać tę łamigłówkę.",
+          "courseB_maze_seq4_a": "Spróbuj dodawać jedno polecenie na raz, aż dojdziesz do żołędzia."
         },
         "courseB_maze_seq5": {
           "courseB_maze_seq5_a": "Jeśli gdzieś utkniesz, spróbuj narysować ścieżkę na papierze.",
@@ -2449,12 +2475,14 @@
         "courseB_maze_seq6_2019": {
           "courseB_maze_seq6_a": "Twój kod końcowy powinien zawierać trzy bloki przemieszczania.",
           "courseB_maze_seq6_b": "Jeśli utkniesz, spróbuj rozwiązać łamigłówkę w dwóch częściach - jednej na boki, a drugą w górę i w dół.",
-          "courseB_maze_seq5_c": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę."
+          "courseB_maze_seq5_c": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę.",
+          "courseB_maze_seq5_d": "Nie jesteś pewny, jak dostać się do żołędzia? Wypróbuj tę ścieżkę!"
         },
         "courseB_maze_seq6_2020": {
           "courseB_maze_seq6_a": "Twój kod końcowy powinien zawierać trzy bloki przemieszczania.",
           "courseB_maze_seq6_b": "Jeśli utkniesz, spróbuj rozwiązać łamigłówkę w dwóch częściach - jednej na boki, a drugą w górę i w dół.",
-          "courseB_maze_seq5_c": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę."
+          "courseB_maze_seq5_c": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę.",
+          "courseB_maze_seq5_d": "Nie jesteś pewny, jak dostać się do żołędzia? Wypróbuj tę ścieżkę!"
         },
         "courseB_maze_seq7": {
           "courseB_maze_seq7_a": "Dodaj 1 blok, aby doprowadzić ptaszka do świnki.",
@@ -2467,10 +2495,14 @@
           "courseB_maze_seq7_c": "Nie jesteś w stanie dostać się do żołędzia? Wypróbuj tę ścieżkę!"
         },
         "courseB_maze_seq7_2019": {
-          "courseB_maze_seq7_b": "Spróbuj uruchomić kod, który otrzymasz, aby zobaczyć, gdzie dotrzesz."
+          "courseB_maze_seq7_b": "Spróbuj uruchomić kod, który otrzymasz, aby zobaczyć, gdzie dotrzesz.",
+          "courseB_maze_seq7_a": "Dodaj 1 blok, aby doprowadzić Scrata do żołędzia.",
+          "courseB_maze_seq7_c": "Nie jesteś w stanie dostać się do żołędzia? Wypróbuj tę ścieżkę!"
         },
         "courseB_maze_seq7_2020": {
-          "courseB_maze_seq7_b": "Spróbuj uruchomić kod, który otrzymasz, aby zobaczyć, gdzie dotrzesz."
+          "courseB_maze_seq7_b": "Spróbuj uruchomić kod, który otrzymasz, aby zobaczyć, gdzie dotrzesz.",
+          "courseB_maze_seq7_a": "Dodaj 1 blok, aby doprowadzić Scrata do żołędzia.",
+          "courseB_maze_seq7_c": "Nie jesteś w stanie dostać się do żołędzia? Wypróbuj tę ścieżkę!"
         },
         "courseB_maze_seq8": {
           "courseB_maze_seq8_a": "Spróbuj dodawać jeden blok na raz, aż rozwiążesz tę łamigłówkę.",
@@ -2837,11 +2869,13 @@
         },
         "courseB_starWars_prog9_2019": {
           "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
-          "courseB_starWars_prog9_b": "Jest wiele sposobów na rozwiązanie tej zagadki."
+          "courseB_starWars_prog9_b": "Jest wiele sposobów na rozwiązanie tej zagadki.",
+          "courseB_starWars_prog9_c": "Czy pętla \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> mogłaby tutaj pomóc?"
         },
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
-          "courseB_starWars_prog9_b": "Jest wiele sposobów na rozwiązanie tej zagadki."
+          "courseB_starWars_prog9_b": "Jest wiele sposobów na rozwiązanie tej zagadki.",
+          "courseB_starWars_prog9_c": "Czy pętla \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> mogłaby tutaj pomóc?"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "Blok \"ustaw postać 1 w obrazku ???\" może być użyty, aby dodać postać do sceny.",
@@ -2919,19 +2953,19 @@
         },
         "courseC_PlayLab_events4": {
           "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
-          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać ****\\_\\_\\_****mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
+          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać \\***\\*\\_\\_\\_\\*\\***mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
         },
         "courseC_PlayLab_events4_2018": {
           "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
-          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać ****\\_\\_\\_****mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
+          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać \\***\\*\\_\\_\\_\\*\\***mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
         },
         "courseC_PlayLab_events4_2019": {
           "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
-          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać ****\\_\\_\\_****mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
+          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać \\***\\*\\_\\_\\_\\*\\***mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
         },
         "courseC_PlayLab_events4_2020": {
           "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
-          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać ****\\_\\_\\_****mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
+          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać \\***\\*\\_\\_\\_\\*\\***mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
         },
         "courseC_PlayLab_events5": {
           "courseC_PlayLab_events5_a": "Trzeba kliknąć menu rozwijane na bloku \"postać mówi\", aby znaleźć tekst: \"Co nowego?\"",
@@ -3610,16 +3644,16 @@
           "courseC_flappy_events5_a": "Musisz użyć bloku \"zdobądź punkt\", aby przejść ten poziom."
         },
         "courseC_flappy_events6": {
-          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami ******\\_****** razy\" do wydarzenia \"Gdy klikniesz\"."
+          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami **\\*\\***\\_**\\*\\*** razy\" do wydarzenia \"Gdy klikniesz\"."
         },
         "courseC_flappy_events6_2018": {
-          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami ******\\_****** razy\" do wydarzenia \"Gdy klikniesz\"."
+          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami **\\*\\***\\_**\\*\\*** razy\" do wydarzenia \"Gdy klikniesz\"."
         },
         "courseC_flappy_events6_2019": {
-          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami ******\\_****** razy\" do wydarzenia \"Gdy klikniesz\"."
+          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami **\\*\\***\\_**\\*\\*** razy\" do wydarzenia \"Gdy klikniesz\"."
         },
         "courseC_flappy_events6_2020": {
-          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami ******\\_****** razy\" do wydarzenia \"Gdy klikniesz\"."
+          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami **\\*\\***\\_**\\*\\*** razy\" do wydarzenia \"Gdy klikniesz\"."
         },
         "courseC_flappy_events7": {
           "courseC_flappy_events7_a": "Możesz zmienić tło używając bloku \"ustaw scenę\". "
@@ -5133,16 +5167,16 @@
           "courseD_bee_conditionals_challenge1_b": "W tej łamigłówce każde miejsce może mieścić kwiatek, plaster miodu lub nic. Oznacza to, że w każdym kwadracie możesz powtórzyć swoją sekwencję „jeśli/w przeciwnym razie”. "
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Dlaczego program działa w pierwszej połowie? Pomyśl dlaczego pszczółka musi poruszać się w tył. Ile nektaru zbiera pszczółka za każdym razem, gdy porusza się na kwiatem?",
@@ -5327,8 +5361,8 @@
           "courseD_collector_debugging9_b": "Wymyśl, jak rozwiążesz tę łamigłówkę, a potem przesuwaj się krok-po-kroku, aby spróbować utworzyć kod dopasowany do tego, co masz na myśli. "
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Zacznij od zebrania tylko **dwóch** klejnotów z każdego z pierwszych \\*\\*dwóch stosów. \n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUżyj tych bloków.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Następnie zbierz pozostałe klejnoty w tym rzędzie.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nDodaj te bloki do swojego programu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Zacznij od zebrania tylko **dwóch** klejnotów z każdego z pierwszych \\*\\*dwóch stosów. \n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUżyj tych bloków.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Następnie zbierz pozostałe klejnoty w tym rzędzie.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nDodaj te bloki do swojego programu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "W końcu zbierz pozostałe klejnoty. Dodaj te bloki do swojego programu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Tutaj jest pełne rozwiązanie tej łamigłówki.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -7615,7 +7649,7 @@
           "iceage_hello2_a": "Aby rozwiązać tę łamigłówkę trzeba skłonić Sida, aby coś powiedział z wykorzystaniem bloku \"postać 1 mówi\". Trzeba również skłonić Manny'ego, aby coś powiedział przy pomocy bloku \"postać 2 mówi\". "
         },
         "iceage_move_events": {
-          "iceage_move_events_a": "Do każdego wydarzenia \"Gdy strzałka ****\\_****\" będzie trzeba dołączyć komendę \"Przemieść postać 1\", aby rozwiązać tę łamigłówkę. "
+          "iceage_move_events_a": "Do każdego wydarzenia \"Gdy strzałka \\***\\*\\_\\*\\***\" będzie trzeba dołączyć komendę \"Przemieść postać 1\", aby rozwiązać tę łamigłówkę. "
         },
         "iceage_move_to_actor": {
           "iceage_move_to_actor_a": "Jeśli chodzi o tę łamigłówkę, czy możesz albo przemieścić Diego na doł o 200 pikseli lub przemieścić Manny'ego do góry o 200 pikseli.",
@@ -8336,6 +8370,324 @@
         "coursea_maze_ramp1_2018": {
           "courseC_maze_programming1_a": "Jeśli ten ptak nie dociera do świnki upewnij się, że oba bloki zostały w ściśle połączone, a następnie ponownie kliknij „Uruchom”.",
           "courseC_maze_programming1_b": "Nie bój się popełniać błędów! Wypróbuj jedną rzecz, a jeśli ona się nie sprawdzi, wypróbuj coś innego!"
+        },
+        "courseA_harvester_loops1_2019": {
+          "courseA_harvester_loops1_a": "Kiedy już zbliżysz się do kukurydzy, użyj tego bloku, aby ją zebrać!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops1_2020": {
+          "courseA_harvester_loops1_a": "Kiedy już zbliżysz się do kukurydzy, użyj tego bloku, aby ją zebrać!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops4_2019": {
+          "courseA_harvester_loops4_a": "Nie bój się wcisnąć \"Uruchom\", aby przekonać się, co się stanie!",
+          "courseA_harvester_loops4_b": "Ile jest tam egzemplarzy kukurydzy? Ile razy powtarza się Twój kod?"
+        },
+        "courseA_harvester_loops4_2020": {
+          "courseA_harvester_loops4_a": "Nie bój się wcisnąć \"Uruchom\", aby przekonać się, co się stanie!",
+          "courseA_harvester_loops4_b": "Ile jest tam egzemplarzy kukurydzy? Ile razy powtarza się Twój kod?"
+        },
+        "courseA_harvester_loops5a_2019": {
+          "courseA_harvester_loops5a_a": "Będzie Ci potrzebna jedna pętla \"powtórz\" <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> po drugiej.",
+          "courseA_harvester_loops5a_b": "Jedna pętla będzie powtarzać \"przejdź na południe\" <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, a druga będzie powtarzać \"przejdź na wschód\" <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_c": "Użyj tej ścieżki, aby przejść jedną drogą, a potem innej."
+        },
+        "courseA_harvester_loops5a_2020": {
+          "courseA_harvester_loops5a_a": "Będzie Ci potrzebna jedna pętla \"powtórz\" <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> po drugiej.",
+          "courseA_harvester_loops5a_b": "Jedna pętla będzie powtarzać \"przejdź na południe\" <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, a druga będzie powtarzać \"przejdź na wschód\" <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_c": "Użyj tej ścieżki, aby przejść jedną drogą, a potem innej."
+        },
+        "courseA_harvester_loops5b_2019": {
+          "courseA_harvester_loops5b_a": "Wciśnij  \"Uruchom\", aby przekonać się, co się stanie!",
+          "courseA_harvester_loops5b_b": "Czy Twoje pętle powtarzają się odpowiednią ilość czasu?",
+          "courseA_harvester_loops5b_c": "Przemieszczaj się w jedną stronę, a potem w drugą, tą ścieżką."
+        },
+        "courseA_harvester_loops5b_2020": {
+          "courseA_harvester_loops5b_a": "Wciśnij  \"Uruchom\", aby przekonać się, co się stanie!",
+          "courseA_harvester_loops5b_b": "Czy Twoje pętle powtarzają się odpowiednią ilość czasu?",
+          "courseA_harvester_loops5b_c": "Przemieszczaj się w jedną stronę, a potem w drugą, tą ścieżką."
+        },
+        "courseA_harvester_loops7_2019": {
+          "courseA_harvester_loops7_a": "Będziesz potrzebować dwóch pętli \"powtórz\" <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> jedna po drugiej!",
+          "courseA_harvester_loops7_b": "Użyj dwóch pętli, aby podążać tą ścieżką."
+        },
+        "courseA_harvester_loops7_2020": {
+          "courseA_harvester_loops7_a": "Będziesz potrzebować dwóch pętli \"powtórz\" <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> jedna po drugiej!",
+          "courseA_harvester_loops7_b": "Użyj dwóch pętli, aby podążać tą ścieżką."
+        },
+        "courseA_harvester_loops9_2019": {
+          "courseA_harvester_loops9_a": "Podziel tę łamigłówkę na trzy różne części. Jedną część do pierwszego zakrętu, jedną część do drugiego zakrętu i jedną część do końca.",
+          "courseA_harvester_loops9_b": "Nie bój się uruchomić swojego kodu po każdej części, aby przekonać się, co się stanie!",
+          "courseA_harvester_loops9_c": "Podążaj tą ścieżką, aby zebrać całą kukurydzę."
+        },
+        "courseA_harvester_loops9_2020": {
+          "courseA_harvester_loops9_a": "Podziel tę łamigłówkę na trzy różne części. Jedną część do pierwszego zakrętu, jedną część do drugiego zakrętu i jedną część do końca.",
+          "courseA_harvester_loops9_b": "Nie bój się uruchomić swojego kodu po każdej części, aby przekonać się, co się stanie!",
+          "courseA_harvester_loops9_c": "Podążaj tą ścieżką, aby zebrać całą kukurydzę."
+        },
+        "courseA_harvester_seq10_2019": {
+          "courseA_harvester_seq10_a": "Czy utknąłeś? Spróbuj najpierw zapisać kroki na kartce papieru.",
+          "courseA_harvester_seq10_b": "Musisz \"Iść na wschód\", a następnie \"Iść na północ\". Zrób to dwukrotnie. Nie zapomnij też zebrać całej kukurydzy!",
+          "courseA_harvester_seq10_c": "Spróbuj użyć tej ścieżki, aby zebrać całą kukurydzę."
+        },
+        "courseA_harvester_seq10_2020": {
+          "courseA_harvester_seq10_a": "Czy utknąłeś? Spróbuj najpierw zapisać kroki na kartce papieru.",
+          "courseA_harvester_seq10_b": "Musisz \"Iść na wschód\", a następnie \"Iść na północ\". Zrób to dwukrotnie. Nie zapomnij też zebrać całej kukurydzy!",
+          "courseA_harvester_seq10_c": "Spróbuj użyć tej ścieżki, aby zebrać całą kukurydzę."
+        },
+        "courseA_harvester_seq13_2019": {
+          "courseA_bee_seq1_a": "Użyj tego bloku, aby zebrać kukurydzę, gdy żniwiarka ją znajdzie!"
+        },
+        "courseA_harvester_seq13_2020": {
+          "courseA_bee_seq1_a": "Użyj tego bloku, aby zebrać kukurydzę, gdy żniwiarka ją znajdzie!"
+        },
+        "courseA_harvester_seq1_2019": {
+          "courseA_harvester_seq1_a": "Użyj tego bloku, aby zebrać kukurydzę, gdy żniwiarka ją znajdzie!",
+          "courseA_harvester_seq1_b": "Żniwiarka będzie musiała się przesunąć 3 razy na wschód, aby dotrzeć do kukurydzy. Użyj tego bloku:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2020": {
+          "courseA_harvester_seq1_a": "Użyj tego bloku, aby zebrać kukurydzę, gdy żniwiarka ją znajdzie!",
+          "courseA_harvester_seq1_b": "Żniwiarka będzie musiała się przesunąć 3 razy na wschód, aby dotrzeć do kukurydzy. Użyj tego bloku:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq3_2019": {
+          "courseA_harvester_seq3_a": "Czy pamiętałeś, aby użyć tego bloku?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "Wypowiedz głośno kroki i zobacz, czy to Ci pomaga wymyślić odpowiedź."
+        },
+        "courseA_harvester_seq3_2020": {
+          "courseA_harvester_seq3_a": "Czy pamiętałeś, aby użyć tego bloku?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "Wypowiedz głośno kroki i zobacz, czy to Ci pomaga wymyślić odpowiedź."
+        },
+        "courseA_harvester_seq4_2019": {
+          "courseA_harvester_seq4_a": "Ile jest spacji pomiędzy żniwiarkę, a kukurydzę? Ile bloków jest już w Waszym obszarze roboczym?",
+          "courseA_harvester_seq4_b": "Będziesz potrzebować pięć bloków \"Przesuń na wschód\" i jednego bloku \"Zbierz kukurydzę\":\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq4_2020": {
+          "courseA_harvester_seq4_a": "Ile jest spacji pomiędzy żniwiarkę, a kukurydzę? Ile bloków jest już w Waszym obszarze roboczym?",
+          "courseA_harvester_seq4_b": "Będziesz potrzebować pięć bloków \"Przesuń na wschód\" i jednego bloku \"Zbierz kukurydzę\":\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2019": {
+          "courseA_harvester_seq5_a": "Który blok przesuwa żniwiarkę w złą stronę?",
+          "courseA_harvester_seq5_b": "Musisz usunąć jeden blok.",
+          "courseA_harvester_seq5_c": "Wyrzuć ten blok do kosza!"
+        },
+        "courseA_harvester_seq5_2020": {
+          "courseA_harvester_seq5_a": "Który blok przesuwa żniwiarkę w złą stronę?",
+          "courseA_harvester_seq5_b": "Musisz usunąć jeden blok.",
+          "courseA_harvester_seq5_c": "Wyrzuć ten blok do kosza!"
+        },
+        "courseA_harvester_seq6_2019": {
+          "courseA_harvester_seq6_a": "Jeśli utkniesz, spróbuj głośno wypowiedzieć kroki/czynności. Pomóc może wypracowanie właściwej ścieżki."
+        },
+        "courseA_harvester_seq6_2020": {
+          "courseA_harvester_seq6_a": "Jeśli utkniesz, spróbuj głośno wypowiedzieć kroki/czynności. Pomóc może wypracowanie właściwej ścieżki."
+        },
+        "courseA_harvester_seq7_2019": {
+          "courseA_harvester_seq7_a": "Spróbuj rozwiązać zagadkę w 2 etapach, jeden etap przed zakrętem i jeden etap po zakręcie.",
+          "courseA_harvester_seq7_b": "Masz kłopot? To jest ścieżka, jaką powinna obrać żniwiarka."
+        },
+        "courseA_harvester_seq7_2020": {
+          "courseA_harvester_seq7_a": "Spróbuj rozwiązać zagadkę w 2 etapach, jeden etap przed zakrętem i jeden etap po zakręcie.",
+          "courseA_harvester_seq7_b": "Masz kłopot? To jest ścieżka, jaką powinna obrać żniwiarka."
+        },
+        "courseA_harvester_seq8_2019": {
+          "courseA_harvester_seq8_a": "Twój kod końcowy powinien zawierać **4** bloki przemieszczania i **2** bloki zbierania."
+        },
+        "courseA_harvester_seq8_2020": {
+          "courseA_harvester_seq8_a": "Twój kod końcowy powinien zawierać **4** bloki przemieszczania i **2** bloki zbierania."
+        },
+        "courseA_harvester_seq9_2019": {
+          "courseA_harvester_seq9_a": "Uruchom kod kilka razy, aby zobaczyć, co się dzieje. Gdzie żniwiarka się zatrzyma?",
+          "courseA_harvester_seq9_b": "Nie zapomnij zebrać całej kukurydzy! Będziesz potrzebować **3** bloków zbierania kukurydzy.",
+          "courseA_harvester_seq9_c": "Powinieneś obrać tę ścieżkę, aby zebrać całą kukurydzę."
+        },
+        "courseA_harvester_seq9_2020": {
+          "courseA_harvester_seq9_a": "Uruchom kod kilka razy, aby zobaczyć, co się dzieje. Gdzie żniwiarka się zatrzyma?",
+          "courseA_harvester_seq9_b": "Nie zapomnij zebrać całej kukurydzy! Będziesz potrzebować **3** bloków zbierania kukurydzy.",
+          "courseA_harvester_seq9_c": "Powinieneś obrać tę ścieżkę, aby zebrać całą kukurydzę."
+        },
+        "courseA_maze_ramp2_2019": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2020": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2019": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2020": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2019": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2020": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2019": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2020": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2019": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2020": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_seq5a_2019": {
+          "1": "Wypowiedz głośno kroki i zobacz, czy to Ci pomaga wymyślić odpowiedź."
+        },
+        "courseA_maze_seq5a_2020": {
+          "1": "Wypowiedz głośno kroki i zobacz, czy to Ci pomaga wymyślić odpowiedź."
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "1": "Jeśli Scrat nie robi tego, co chcesz, upewnij się, czy oba bloki zostały całkowicie ze sobą połączone, a następnie ponownie kliknij \"Uruchom\". ",
+          "2": "Nie bój się popełniać błędów! Wypróbuj jedną rzecz, a jeśli ona się nie sprawdzi, wypróbuj coś innego!"
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "1": "Jeśli Scrat nie robi tego, co chcesz, upewnij się, czy oba bloki zostały całkowicie ze sobą połączone, a następnie ponownie kliknij \"Uruchom\". ",
+          "2": "Nie bój się popełniać błędów! Wypróbuj jedną rzecz, a jeśli ona się nie sprawdzi, wypróbuj coś innego!"
+        },
+        "courseB_Scrat_ramp2_2019": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2020": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2019": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2020": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2019": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2020": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2019": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2020": {
+          "1": "Program główny powinien wyglądać tak:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_artist_loops5_2019": {
+          "courseB_artist_loops5_a": "Przeciągnij na zewnątrz pętlę \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, a następnie wstaw do niej pozostałe bloki. Ile razy musisz tę czynność powtórzyć?"
+        },
+        "courseB_artist_loops5_2020": {
+          "courseB_artist_loops5_a": "Przeciągnij na zewnątrz pętlę \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, a następnie wstaw do niej pozostałe bloki. Ile razy musisz tę czynność powtórzyć?"
+        },
+        "courseB_iceage_loops10_2019": {
+          "courseB_iceage_loops10_a": "Uważaj na popękany lód! Scart wpadnie do wody!",
+          "courseB_iceage_loops10_b": "Spróbuj wypowiedzieć głośno kroki/ działania głośno lub zapisać je na kartce papieru. Czy dostrzegasz jakieś wzorca?",
+          "courseB_iceage_loops10_c": "To jest długa łamigłówka! Podążaj tą ścieżką."
+        },
+        "courseB_iceage_loops10_2020": {
+          "courseB_iceage_loops10_a": "Uważaj na popękany lód! Scart wpadnie do wody!",
+          "courseB_iceage_loops10_b": "Spróbuj wypowiedzieć głośno kroki/ działania głośno lub zapisać je na kartce papieru. Czy dostrzegasz jakieś wzorca?",
+          "courseB_iceage_loops10_c": "To jest długa łamigłówka! Podążaj tą ścieżką."
+        },
+        "courseB_iceage_loops1_2019": {
+          "courseB_iceage_loops1_a": "Uważaj na popękany lód! Scart wpadnie do środka!",
+          "courseB_iceage_loops1_b": "Będziesz musiał użyć tego bloku:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops1_2020": {
+          "courseB_iceage_loops1_a": "Uważaj na popękany lód! Scart wpadnie do środka!",
+          "courseB_iceage_loops1_b": "Będziesz musiał użyć tego bloku:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops2_2019": {
+          "courseB_iceage_loops2_a": "Podziel tę łamigłówkę na dwie części: pierwszą przed zakrętem, a drugą po zakręcie.",
+          "courseB_iceage_loops2_b": "Jeśli gdzieś utkniesz, spróbuj wypowiedzieć kroki/ czynności na głos.",
+          "courseB_iceage_loops2_c": "Podążaj tę ścieżkę, aby doprowadzić Scrata do żołędzia."
+        },
+        "courseB_iceage_loops2_2020": {
+          "courseB_iceage_loops2_a": "Podziel tę łamigłówkę na dwie części: pierwszą przed zakrętem, a drugą po zakręcie.",
+          "courseB_iceage_loops2_b": "Jeśli gdzieś utkniesz, spróbuj wypowiedzieć kroki/ czynności na głos.",
+          "courseB_iceage_loops2_c": "Podążaj tę ścieżkę, aby doprowadzić Scrata do żołędzia."
+        },
+        "courseB_iceage_loops4_2019": {
+          "courseB_iceage_loops4_a": "Spróbuj zapisać kroki, które Scrat podjąłby, aby dojść do żołędzia. Czy dostrzegasz wzorzec?",
+          "courseB_iceage_loops4_b": "Nie bój się uruchomić swojego kodu, aby przekonać się, co się stanie!",
+          "courseB_iceage_loops4_c": "To jest ścieżka, jaką powinien obrać Scrat."
+        },
+        "courseB_iceage_loops4_2020": {
+          "courseB_iceage_loops4_a": "Spróbuj zapisać kroki, które Scrat podjąłby, aby dojść do żołędzia. Czy dostrzegasz wzorzec?",
+          "courseB_iceage_loops4_b": "Nie bój się uruchomić swojego kodu, aby przekonać się, co się stanie!",
+          "courseB_iceage_loops4_c": "To jest ścieżka, jaką powinien obrać Scrat."
+        },
+        "courseB_iceage_loops6_2019": {
+          "courseB_iceage_loops6_a": "Twój kod końcowy powinien zawierać **trzy** bloki ruchu.",
+          "courseB_iceage_loops6_b": "Musisz już tylko dodać jeszcze **jedną** pętlę!",
+          "courseB_iceage_loops6_c": "Twoja ścieżka końcowa powinna wyglądać tak."
+        },
+        "courseB_iceage_loops6_2020": {
+          "courseB_iceage_loops6_a": "Twój kod końcowy powinien zawierać **trzy** bloki ruchu.",
+          "courseB_iceage_loops6_b": "Musisz już tylko dodać jeszcze **jedną** pętlę!",
+          "courseB_iceage_loops6_c": "Twoja ścieżka końcowa powinna wyglądać tak."
+        },
+        "courseB_iceage_loops7_2019": {
+          "courseB_iceage_loops7_a": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru. Czy dostrzegasz wzorzec?",
+          "courseB_iceage_loops7_b": "To jest ścieżka, jaką powinien obrać Scrat, aby dotrzeć do żołędzia."
+        },
+        "courseB_iceage_loops7_2020": {
+          "courseB_iceage_loops7_a": "Jeśli gdzieś utkniesz, spróbuj zapisać kroki na kartce papieru. Czy dostrzegasz wzorzec?",
+          "courseB_iceage_loops7_b": "To jest ścieżka, jaką powinien obrać Scrat, aby dotrzeć do żołędzia."
+        },
+        "courseB_iceage_loops8_2019": {
+          "courseB_iceage_loops8_a": "Czy bloki ruchu są odpowiednie? Co jeszcze możesz zmienić?",
+          "courseB_iceage_loops8_b": "Pierwsza pętla powinna się powtarzać **3** razy, druga powinna się powtarzać **5** razy, trzecia pętla powinna się powtarzać **4** razy, a ostatnia pętla powinna się powtórzyć **4** razy.",
+          "courseB_iceage_loops8_c": "Użyj pętli, aby pomóc Scratowi podążać tą ścieżką."
+        },
+        "courseB_iceage_loops8_2020": {
+          "courseB_iceage_loops8_a": "Czy bloki ruchu są odpowiednie? Co jeszcze możesz zmienić?",
+          "courseB_iceage_loops8_b": "Pierwsza pętla powinna się powtarzać **3** razy, druga powinna się powtarzać **5** razy, trzecia pętla powinna się powtarzać **4** razy, a ostatnia pętla powinna się powtórzyć **4** razy.",
+          "courseB_iceage_loops8_c": "Użyj pętli, aby pomóc Scratowi podążać tą ścieżką."
+        },
+        "courseB_iceage_loops9_2019": {
+          "courseB_iceage_loops9_a": "Masz kłopot? Spróbuj podzielić tę łamigłówkę na mniejsze kawałki. Nie bój się uruchomić swoją łamigłówkę w trakcie kodowania!",
+          "courseB_iceage_loops9_b": "Twój kod końcowy powinien zawierać **4** pętle.",
+          "courseB_iceage_loops9_c": "Scrat powinien podążać tę ścieżkę, aby dojść do żołędzia."
+        },
+        "courseB_iceage_loops9_2020": {
+          "courseB_iceage_loops9_a": "Masz kłopot? Spróbuj podzielić tę łamigłówkę na mniejsze kawałki. Nie bój się uruchomić swoją łamigłówkę w trakcie kodowania!",
+          "courseB_iceage_loops9_b": "Twój kod końcowy powinien zawierać **4** pętle.",
+          "courseB_iceage_loops9_c": "Scrat powinien podążać tę ścieżkę, aby dojść do żołędzia."
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1_a": "Połącz bloki z blokiem <xml><block type=\"when_run\"/></xml>, aby wprawić Scrata w ruch!",
+          "courseB_maze_seq1_b": "Przeciągnij trzy z tych strzałek <xml><block type=\"maze_moveSouth\"/></xml> na zewnątrz i połącz je z blokiem <xml><block type=\"when_run\"/></xml>, aby doprowadzić Scrata do żołędzia."
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1_a": "Połącz bloki z blokiem <xml><block type=\"when_run\"/></xml>, aby wprawić Scrata w ruch!",
+          "courseB_maze_seq1_b": "Przeciągnij trzy z tych strzałek <xml><block type=\"maze_moveSouth\"/></xml> na zewnątrz i połącz je z blokiem <xml><block type=\"when_run\"/></xml>, aby doprowadzić Scrata do żołędzia."
+        },
+        "coursea_maze_ramp1_2019": {
+          "courseC_maze_programming1_a": "Jeśli ten ptak nie dociera do świnki upewnij się, że oba bloki zostały w ściśle połączone, a następnie ponownie kliknij „Uruchom”.",
+          "courseC_maze_programming1_b": "Nie bój się popełniać błędów! Wypróbuj jedną rzecz, a jeśli ona się nie sprawdzi, wypróbuj coś innego!"
+        },
+        "coursea_maze_ramp1_2020": {
+          "courseC_maze_programming1_a": "Jeśli ten ptak nie dociera do świnki upewnij się, że oba bloki zostały w ściśle połączone, a następnie ponownie kliknij „Uruchom”.",
+          "courseC_maze_programming1_b": "Nie bój się popełniać błędów! Wypróbuj jedną rzecz, a jeśli ona się nie sprawdzi, wypróbuj coś innego!"
+        },
+        "outbreak3": {
+          "hint2": "Nowy kod dla tego poziomu powinien wyglądać następująco:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "outbreak5": {
+          "order": "Upewnij się, że blok... \n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\n...występuje przed tym blokiem:\n\n<xml><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">recovering</title></block></value></block></xml>",
+          "solution": "Na przykład:\n\n<xml>\n<block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n              <block type=\"gamelab_addBehaviorSimple\">\n                <value name=\"SPRITE\">\n                  <block type=\"gamelab_allSpritesWithAnimation\">\n                    <title name=\"ANIMATION\">\"sick\"</title>\n                  </block>\n                </value>\n                <value name=\"BEHAVIOR\">\n                  <block type=\"gamelab_behavior_get\">\n                    <mutation></mutation>\n                    <title name=\"VAR\">recovering</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "outbreak6": {
+          "hint1": "Będziesz musiał dodać jeszcze 3 zdarzenia „kiedy dotyka”, aby sprawdzić wszystkie możliwe kombinacje „dotknięć” zdrowych i zainfekowanych duszków.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "outbreak7": {
+          "whenclicked": "## Szczepionki\n\nKlikając na nie, możesz symulować szczepienie potworów. Aby to zrobić, użyj bloku „zmiana kostiumu” w przypadku tego zdarzenia:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "Czujesz się zablokowany? Zawsze możesz zresetować kod, klikając na Historia wersji poniżej, a następnie wybierając opcję Zacznij od nowa."
         }
       }
     }

@@ -196,10 +196,22 @@ pl:
     student_consent: Jeżeli mam mniej niż 13 lat, to potwierdzam, że mam zgodę mojego
       rodzica lub prawnego opiekuna na korzystanie przeze mnie z serwisu na stronie
       Code.org.
-    agree_us_website: Zgadzam się na korzystanie ze strony, której siedziba znajduje
-      się w Stanach Zjednoczonych.
-    my_data_to_us: Dane gromadzone podczas korzystania przeze mnie z tej witryny mogą
-      być wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych.
+    agree_us_data_transfer_student: "**Zgadzam się, że Code.org może przekazywać dane
+      (w tym dane osobowe) wynikające z mojego korzystania z tej witryny do Stanów
+      Zjednoczonych** w celu hostowania i przetwarzania takich danych."
+    agree_us_data_transfer_teacher: "**Zgadzam się, że Code.org może przekazywać dane
+      (w tym dane osobowe) wynikające z mojego korzystania (i korzystania moich uczniów)
+      z tej witryny do Stanów Zjednoczonych** w celu hostowania i przetwarzania takich
+      danych."
+    data_collection_us: 'Rozumiem, że Code.org jest witryną non-profit z siedzibą
+      w Stanach Zjednoczonych i że przepisy dotyczące gromadzenia danych w Stanach
+      Zjednoczonych mogą różnić się od przepisów obowiązujących w moim kraju.
+
+'
+    visit_privacy: 'Odwiedź [Politykę prywatności](%{privacy_url}) Code.org, aby dowiedzieć
+      się więcej.
+
+'
     student_terms_markdown: Adresy e-mail nie są przechowywane w postaci, która pozwalałaby
       nam kontaktować się z uczniami. Uczniowie nigdy nie będą otrzymywać e-maili
       od Code.org, z wyjątkiem odzyskiwania hasła. Więcej informacji znajduje się
@@ -499,6 +511,7 @@ pl:
       worked_with: Pracował/a z
       update_lock_settings: Zaktualizuj tutaj ustawienia blokady.
       clear_response: Wyczyść odpowiedź
+    student_code_view_diabled: Nie można wyświetlić kodu ucznia dla tego działania.
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -681,6 +694,9 @@ pl:
     code_from_html: Code.org używa p5.play, który ma licencję <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Zasilany przez Amazon Web Services
+    built_on_github: Oparty na GitHub firmy Microsoft
+    google_copyright: "&Kopiuj; Google Inc. wykorzystane za zgodą. Google Classroom
+      to znak towarowy firmy Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour
       of Code&reg; są znakami handlowymi Code.org."
     copyright: Prawa autorskie
@@ -1369,15 +1385,6 @@ pl:
       się na przechowywanie plików cookie na Twoim komputerze lub urządzeniu.
     more_information: Zapoznaj się z polityką prywatności Code.org.
     accept: Zgadzam się
-  gdpr_dialog:
-    heading: Czy zgadzasz się na korzystanie ze strony, której siedziba znajduje się
-      w Stanach Zjednoczonych?
-    message: Dane gromadzone podczas korzystania przez Ciebie z tej witryny mogą być
-      wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych.
-    link_intro: Aby uzyskać szczegółowe informacje zobacz naszą
-    privacy_policy: politykę prywatności
-    logout: Wyloguj się
-    true: Tak
   page_not_found_title: Strona nie została znaleziona
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_description: Strona, której szukasz, nie istnieje pod tym adresem.

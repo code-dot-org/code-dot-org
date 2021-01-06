@@ -182,6 +182,8 @@ gl:
         text: cor aleatoria
       gamelab_randomColor:
         text: cor aleatoria
+      gamelab_repeatForever:
+        text: Repetir para sempre
       gamelab_setBackgroundImage:
         options:
           IMG:

@@ -1,0 +1,10 @@
+name 'GettingLoopy-Unplugged_2021'
+video_key 'C1_getting_loopy'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Getting Loopy
+
+This lesson introduces the programming concept of loops through a dance activity.
+MARKDOWN

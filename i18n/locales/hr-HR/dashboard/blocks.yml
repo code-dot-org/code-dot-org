@@ -192,6 +192,8 @@ hr:
         text: nasumično odabrana boja
       gamelab_randomColor:
         text: nasumično odabrana boja
+      gamelab_repeatForever:
+        text: ponavljaj zauvijek
       gamelab_setBackgroundImage:
         options:
           IMG:

@@ -245,3 +245,164 @@ export const emptyNonUserFacingGroup = {
   description: '',
   lessons: []
 };
+
+export const mapLessonGroupDataForEditor = rawLessonGroups => {
+  let lessonGroups = (rawLessonGroups || [])
+    .filter(lesson_group => lesson_group.id)
+    .map(lesson_group => ({
+      key: lesson_group.key,
+      displayName: lesson_group.display_name,
+      userFacing: lesson_group.user_facing,
+      position: lesson_group.position,
+      description: lesson_group.description || '',
+      bigQuestions: lesson_group.big_questions || '',
+      lessons: lesson_group.lessons
+        .filter(lesson => lesson.id)
+        .map((lesson, lessonIndex) => ({
+          id: lesson.id,
+          key: lesson.key,
+          position: lessonIndex + 1,
+          lockable: lesson.lockable,
+          assessment: lesson.assessment,
+          unplugged: lesson.unplugged,
+          name: lesson.name,
+          /*
+           * NOTE: The Script Edit GUI no longer includes the editing of levels
+           * as those have been moved out to the lesson edit page. We include
+           * level information here behind the scenes because it allows us to
+           * continue to use ScriptDSl for the time being until we are ready
+           * to move on to our future system.
+           */
+          // Only include the first level of an assessment (uid ending with "_0").
+          levels: lesson.levels
+            .filter(level => !level.uid || /_0$/.test(level.uid))
+            .map(level => ({
+              position: level.position,
+              activeId: level.activeId,
+              ids: level.ids.slice(),
+              kind: level.kind,
+              skin: level.skin,
+              videoKey: level.videoKey,
+              concepts: level.concepts,
+              conceptDifficulty: level.conceptDifficulty,
+              progression: level.progression,
+              named: !!level.name,
+              bonus: level.bonus,
+              assessment: level.assessment,
+              challenge: level.challenge
+            }))
+        }))
+    }));
+  if (lessonGroups.length === 0) {
+    lessonGroups = [emptyNonUserFacingGroup];
+  }
+
+  return lessonGroups;
+};
+
+// Replace ' with \'
+const escape = str => str.replace(/'/, "\\'");
+
+export const getSerializedLessonGroups = (rawLessonGroups, levelKeyList) => {
+  const lessonGroups = _.cloneDeep(rawLessonGroups);
+  let s = [];
+  lessonGroups.forEach(lessonGroup => {
+    if (lessonGroup.userFacing && lessonGroup.lessons.length > 0) {
+      let t = `lesson_group '${lessonGroup.key}'`;
+      if (lessonGroup.displayName) {
+        t += `, display_name: '${escape(lessonGroup.displayName)}'`;
+      }
+      s.push(t);
+      if (lessonGroup.description) {
+        s.push(`lesson_group_description '${escape(lessonGroup.description)}'`);
+      }
+      if (lessonGroup.bigQuestions) {
+        s.push(
+          `lesson_group_big_questions '${escape(lessonGroup.bigQuestions)}'`
+        );
+      }
+    }
+    if (lessonGroup.lessons) {
+      lessonGroup.lessons.forEach(lesson => {
+        s = s.concat(serializeLesson(lesson, levelKeyList));
+      });
+    }
+  });
+
+  s.push('');
+  return s.join('\n');
+};
+
+/**
+ * Generate the ScriptDSL format.
+ * @param lesson
+ * @return {string}
+ */
+const serializeLesson = (lesson, levelKeyList) => {
+  let s = [];
+  let t = `lesson '${escape(lesson.key)}'`;
+  if (lesson.name) {
+    t += `, display_name: '${escape(lesson.name)}'`;
+  }
+  if (lesson.lockable) {
+    t += ', lockable: true';
+  }
+  if (lesson.visible_after) {
+    t += ', visible_after: true';
+  }
+  s.push(t);
+  if (lesson.levels) {
+    lesson.levels.forEach(level => {
+      s = s.concat(serializeLevel(levelKeyList, level.ids[0], level));
+    });
+  }
+  s.push('');
+  return s.join('\n');
+};
+
+/**
+ * Generate the ScriptDSL format.
+ * NOTE: The Script Edit GUI no long includes the editing of levels
+ * as those have been moved out to the lesson edit page. We include
+ * level information here behind the scenes because it allows us to
+ * continue to use ScriptDSl for the time being until we are ready
+ * to move on to our future system.
+ * @param id
+ * @param level
+ * @return {string}
+ */
+const serializeLevel = (levelKeyList, id, level) => {
+  const s = [];
+  const key = levelKeyList[id];
+  if (/^blockly:/.test(key)) {
+    if (level.skin) {
+      s.push(`skin '${escape(level.skin)}'`);
+    }
+    if (level.videoKey) {
+      s.push(`video_key_for_next_level '${escape(level.videoKey)}'`);
+    }
+    if (level.concepts) {
+      // concepts is a comma-separated list of single-quoted strings, so do
+      // not escape its single quotes.
+      s.push(`concepts ${level.concepts}`);
+    }
+    if (level.conceptDifficulty) {
+      s.push(`level_concept_difficulty '${escape(level.conceptDifficulty)}'`);
+    }
+  }
+  let l = level.bonus ? `bonus '${escape(key)}'` : `level '${escape(key)}'`;
+  if (level.progression) {
+    l += `, progression: '${escape(level.progression)}'`;
+  }
+  if (level.named) {
+    l += `, named: true`;
+  }
+  if (level.assessment) {
+    l += `, assessment: true`;
+  }
+  if (level.challenge) {
+    l += `, challenge: true`;
+  }
+  s.push(l);
+  return s;
+};

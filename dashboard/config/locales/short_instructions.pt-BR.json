@@ -3086,7 +3086,12 @@
         "courseD_video_nestedLoopsArtist": "Use o que você aprendeu para desenhar este triângulo.",
         "courseE_bee_ramp14": "Avance até chegar à alface e, em seguida, colha tudo usando um laço `while`.",
         "courseE_farmer_predict1": "Enquanto houver alface, colha alface!",
-        "courseE_farmer_predict2": "Avance até chegar à alface e, em seguida, colha tudo usando um laço `while`."
+        "courseE_farmer_predict2": "Avance até chegar à alface e, em seguida, colha tudo usando um laço `while`.",
+        "scrat 16": "Bolota! Bolota! Bolota! Use um bloco \"se\" para me levar lá com o menor número de blocos.",
+        "scrat 17": "Ok, vamos fazer novamente para praticar - este não é muito diferente, mas tome cuidado com a parede!",
+        "scrat 18": "Os blocos \"se-senão\" verificam uma condição e, em seguida, fazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco.",
+        "scrat 19": "Vamos praticar o uso do bloco \"se-senão\" mais uma vez. Você consegue\nacertar na primeira tentativa?",
+        "scrat 20": "Você consegue adicionar apenas 3 blocos para me ajudar a percorrer um labirinto mais complexo? Se você acertar, eu posso andar por qualquer caminho cheio de curvas, não importa o comprimento. Rápido! O gelo está derretendo!"
       }
     }
   }

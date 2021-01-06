@@ -38,6 +38,7 @@ hu:
         NetSim: Internet szimulátor
         Custom: Művész
         CustomStudio: Játéklabor
+        Gamelab: Játék Labor
         Spritelab: Sprite labor
     trophy:
       name:
@@ -410,6 +411,8 @@ hu:
         CSF_Spritelab_MakeSprite_CDEF: Hogyan készíts sprite-ot a Sprite laborban
         hoc_dance_warmup: Táncos buli - Bemelegítés
         hoc_dance_congrats: Táncos buli - Bulizz tovább!
+        c_and_c_great_to_create: Remek dolog tisztességesen alkotni és játszani 
+        c_and_c_digital_sharing: Digitális megosztás
         csd_pair_programming: Páros programozás
         csd_applab_parameters: Paraméteres függvények
         csd_problem_solving_process: A probléma-megoldási folyamat
@@ -419,6 +422,7 @@ hu:
         hoc_dance_events_2019: Táncos buli 2019 - Események
         hoc_dance_measures_2019: Táncos buli 2019 - Ütemek
         hoc_dance_properties_2019: Táncos buli 2019 - Tulajdonságok
+        csf_private_and_personal_information: Magán és személyes információk
         csd_what_computers_are: Mi az a számítógép?
     callout:
       text:

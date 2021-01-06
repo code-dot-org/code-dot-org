@@ -737,7 +737,7 @@
           "moving east": "bergerak ke timur"
         },
         "behaviors 3": {
-          "zooming east": "menanjak ke timur",
+          "zooming east": "melesat ke timur",
           "driving east": "mengemudi ke timur",
           "wandering": "pengembaraan",
           "spinning left": "berputar ke kiri",
@@ -753,7 +753,7 @@
           "moving east": "bergerak ke timur"
         },
         "behaviors 3_2020": {
-          "zooming east": "menanjak ke timur",
+          "zooming east": "melesat ke timur",
           "driving east": "mengemudi ke timur",
           "wandering": "pengembaraan",
           "spinning left": "berputar ke kiri",
@@ -770,7 +770,7 @@
         },
         "behaviors 3a": {
           "spinning right": "berputar ke kanan",
-          "zooming east": "menanjak ke timur",
+          "zooming east": "melesat ke timur",
           "driving east": "mengemudi ke timur",
           "wandering": "pengembaraan",
           "spinning left": "berputar ke kiri",
@@ -786,7 +786,7 @@
         },
         "behaviors 3a_2020": {
           "spinning right": "berputar ke kanan",
-          "zooming east": "menanjak ke timur",
+          "zooming east": "melesat ke timur",
           "driving east": "mengemudi ke timur",
           "wandering": "pengembaraan",
           "spinning left": "berputar ke kiri",
@@ -1074,6 +1074,74 @@
           "moving west": "bergerak ke barat",
           "patrolling": "perondaan",
           "swimming left and right": "berenang ke kiri dan kanan"
+        },
+        "outbreak1": {
+          "wandering": "pengembaraan"
+        },
+        "outbreak2": {
+          "wandering": "pengembaraan"
+        },
+        "outbreak3": {
+          "wandering": "pengembaraan"
+        },
+        "outbreak4": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan"
+        },
+        "outbreak5": {
+          "wandering": "pengembaraan"
+        },
+        "outbreak6": {
+          "wandering": "pengembaraan"
+        },
+        "outbreak7": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan"
+        },
+        "outbreak8": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan"
+        },
+        "outbreak_freeplay": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan"
         }
       }
     }

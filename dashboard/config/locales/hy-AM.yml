@@ -703,6 +703,4 @@ hy:
         opt_in_no: ոչ
   cookie_banner:
     accept: Ես համաձայն եմ
-  gdpr_dialog:
-    true: այո
   copy: պատճեն
