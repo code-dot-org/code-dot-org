@@ -5,13 +5,13 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "peer_reviews_to_complete": 0,
       "teacher_resources": [
         [
           "lessonPlans",
           "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
         ]
-      ]
+      ],
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -639,6 +639,28 @@
       "level_keys": [
         "symmetry"
       ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Full Toolbox and/or Template"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_2021_template"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_2021_template"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -850,6 +872,26 @@
         "lesson_group.key": "Toolbox Levels",
         "script.name": "2021drafting"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_2021_template",
+        "script_level.level_keys": [
+          "courseF_2021_template"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "objectives": [
+
   ]
 }
