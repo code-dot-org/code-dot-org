@@ -292,9 +292,6 @@ class School < ApplicationRecord
       # Download link found here: https://nces.ed.gov/ccd/files.asp#Fiscal:2,LevelId:7,SchoolYearId:33,Page:1
       # Actual download link: https://nces.ed.gov/ccd/data/zip/ccd_sch_029_1819_w_1a_091019.zip
       AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/ccd_sch_029_1819_w_1a_091019.csv") do |filename|
-        # should this quote char thing be removed? I think supposed to allow importing
-        # double quotes in columns, but I think double quotes are used correctly to
-        # surround a column containing a comma (at least in the geographic data file below)
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, true, is_dry_run: false, new_attributes: ['last_known_school_year_open', 'school_category']) do |row|
           {
             id:                           row['NCESSCH'].to_i.to_s,
