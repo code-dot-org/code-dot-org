@@ -5086,11 +5086,6 @@ en:
           lessons:
             Simple Sprite Movement:
               name: Simple Sprite Movement
-          title: ''
-          description: ''
-          student_description: ''
-          description_short: ''
-          description_audience: ''
         csd6-draft:
           title: CSD Unit 6 Revisions Draft
           description_audience: ''
@@ -6802,11 +6797,6 @@ en:
           lessons:
             TTS:
               name: TTS
-          title: ''
-          description: ''
-          student_description: ''
-          description_short: ''
-          description_audience: ''
         express-2017:
           title: Express Course
           assignment_family_title: Express Course
@@ -15164,11 +15154,6 @@ en:
               name: 'Collision Detector: Designing Screens'
             'Collision Detector: Processing with Events':
               name: 'Collision Detector: Processing with Events'
-          title: ''
-          description: ''
-          student_description: ''
-          description_short: ''
-          description_audience: ''
         dance-2019:
           title: Dance Party (2019)
           description_audience: ''
@@ -16643,11 +16628,6 @@ en:
         moneppo-1:
           lesson_groups: {}
           lessons: {}
-          title: ''
-          description: ''
-          student_description: ''
-          description_short: ''
-          description_audience: ''
         coursea-2020:
           title: Course A (2020)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -18339,11 +18319,6 @@ en:
         gamelabprojects:
           lessons: {}
           lesson_groups: {}
-          title: ''
-          description: ''
-          student_description: ''
-          description_short: ''
-          description_audience: ''
         k5-onlinepd-2020:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
