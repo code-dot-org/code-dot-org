@@ -2,19 +2,27 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { setSelectedTrainer, getCompatibleTrainers } from "../redux";
+import { setSelectedTrainer, getCompatibleTrainers, setKValue } from "../redux";
 import { styles } from "../constants";
 
 class SelectTrainer extends Component {
   static propTypes = {
     selectedTrainer: PropTypes.string,
     setSelectedTrainer: PropTypes.func,
-    compatibleTrainers: PropTypes.object
+    compatibleTrainers: PropTypes.object,
+    setKValue: PropTypes.func, // set static propTypes for setKValue and kValue
+    kValue: PropTypes.number
   };
 
   handleChangeSelect = event => {
     this.props.setSelectedTrainer(event.target.value);
   };
+
+  /* add event handler -> handleChangeInput Function */
+  handleChangeInput = event => {
+    console.log("Console log for kValue:", event.target.value);
+    this.props.setKValue(parseInt(event.target.value));
+  }
 
   render() {
     const { compatibleTrainers, selectedTrainer } = this.props;
@@ -24,7 +32,6 @@ class SelectTrainer extends Component {
         <form>
           <label>
             <p>Which Machine Learning Algorithm would you like to use?</p>
-            <p>PICK ME!</p>
             <select
               value={this.props.selectedTrainer}
               onChange={this.handleChangeSelect}
@@ -47,6 +54,22 @@ class SelectTrainer extends Component {
               </div>
             )}
           </label>
+          {
+            // conditional rendering for selected classification and input for k value 
+            
+            (this.props.selectedTrainer === 'knnClassify' ||
+            this.props.selectedTrainer === 'knnRegress') && (
+          <div>
+            <label>  
+             <p>What would you like the value of K to be?</p> 
+                    <input
+                    /* value of input is handled by default */
+                      onChange={this.handleChangeInput}
+                      type="text"
+                    />
+             </label>
+          </div>
+            )}
         </form>
       </div>
     );
@@ -56,11 +79,15 @@ class SelectTrainer extends Component {
 export default connect(
   state => ({
     selectedTrainer: state.selectedTrainer,
-    compatibleTrainers: getCompatibleTrainers(state)
+    compatibleTrainers: getCompatibleTrainers(state),
+    kValue: state.kValue
   }),
   dispatch => ({
     setSelectedTrainer(selectedTrainer) {
       dispatch(setSelectedTrainer(selectedTrainer));
+    },
+    setKValue(kValue) {
+      dispatch(setKValue(kValue));
     }
   })
 )(SelectTrainer);
