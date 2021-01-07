@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -709,19 +710,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "68953f65-76c5-4ac0-a779-a645f5f2986d",
-        "lesson.key": "Conditionals Explore",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
-      "key": "a808aa11-8424-4b8f-bf5c-25c1c7e65d76",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a808aa11-8424-4b8f-bf5c-25c1c7e65d76",
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021"
@@ -2204,7 +2192,6 @@
         "description": "**Distribute:** Give each pair of students:",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Supplies Substitutions:** There's no need to use stickie notes if you have other scraps of colored paper. Also consider cutting stickies in 4 to make them go further. If you don't have dry erase markers handy consider using pieces of masking tape on the baggies.\n"
           }
@@ -2233,7 +2220,6 @@
         "description": "[slide]  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Conditionals.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Running the Activity:** This activity asks students to follow along as a number of core concepts for programming are introduced. The model is typically that a term or concept is introduced and modeled and then afterwards students are encouraged to try it out on their own. Trying it out typically means they are writing information on a sticky note and sharing it with another group before discussing the results with the whole class.\n\nSlides with animations have an icon in the bottom left corner to let you know you need to click to reveal more of the slide's content. \n\nTo help you more easily prepare the activity and keep track of your instructions, detailed instructions have been included as speaker notes in the presentation. Here are some tips to help you throughout the presentation.\n\n* There are opportunities throughout the presentation for students to actively engage. At these moments students should be making things with their manipulatives or using them to answer questions. Use these opportunities to check progress.\n* There is a fair amount of new vocabulary introduced but it is introduced gradually and with intentional repetition. Make a point of actively modeling the use of new terms.\n* The most important goal here is building a mental model. It is ok if students have some open questions that will get resolved over the subsequent conditional lessons.\n* Both you and students can use the \"Key Takeaways\" to check your understanding at the end."
           }
@@ -2256,10 +2242,22 @@
       }
     },
     {
-      "key": "2aab6591-9d0e-48d4-a7cc-8ac4148ecc33",
+      "key": "87a276e9-7f77-4cac-99cf-6d3f71dde6eb",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Video:** [r cs-principles-conditionals-part-1-boolean-expressions]\tAs a class watch the video on Boolean expressions. \r\n\r\n\r\n[slide] **Journal:** Have students add the following words and definitions to their journals: Boolean Value and Boolean Expression.\r\n\r\n---"
+        "name": "Conditionals: Boolean Expressions",
+        "description": "[slide]  **Video:** [r cs-principles-conditionals-part-1-boolean-expressions]\tAs a class watch the video on Boolean expressions. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "87a276e9-7f77-4cac-99cf-6d3f71dde6eb",
+        "lesson_activity.key": "68953f65-76c5-4ac0-a779-a645f5f2986d"
+      }
+    },
+    {
+      "key": "2aab6591-9d0e-48d4-a7cc-8ac4148ecc33",
+      "position": 2,
+      "properties": {
+        "description": "[slide] **Journal:** Have students add the following words and definitions to their journals: Boolean Value and Boolean Expression.\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "2aab6591-9d0e-48d4-a7cc-8ac4148ecc33",
@@ -2268,7 +2266,7 @@
     },
     {
       "key": "e5fed8da-b44f-4082-8162-d59762fced56",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Can a computer evaluate an expression to something between true and false? Can you write an expression to deal with a \"maybe\" answer?",
         "name": "Assessment: Check For Understanding\r"
@@ -2276,28 +2274,6 @@
       "seeding_key": {
         "activity_section.key": "e5fed8da-b44f-4082-8162-d59762fced56",
         "lesson_activity.key": "68953f65-76c5-4ac0-a779-a645f5f2986d"
-      }
-    },
-    {
-      "key": "ae920f76-c35e-476f-87d0-143dff428073",
-      "position": 1,
-      "properties": {
-        "name": "Conditionals: Boolean Expressions"
-      },
-      "seeding_key": {
-        "activity_section.key": "ae920f76-c35e-476f-87d0-143dff428073",
-        "lesson_activity.key": "a808aa11-8424-4b8f-bf5c-25c1c7e65d76"
-      }
-    },
-    {
-      "key": "011bac85-697e-4e9c-94ff-f0f62257b041",
-      "position": 2,
-      "properties": {
-        "name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "011bac85-697e-4e9c-94ff-f0f62257b041",
-        "lesson_activity.key": "a808aa11-8424-4b8f-bf5c-25c1c7e65d76"
       }
     },
     {
@@ -3911,12 +3887,12 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Apps"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4 My Pet Rock Example App_2021"
@@ -3934,12 +3910,12 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Apps"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L01 Poetry App_2021"
@@ -3957,12 +3933,12 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Apps"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L01 Thermostat App_2021"
@@ -3985,7 +3961,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 L02 CYU MC_2021"
@@ -4003,12 +3979,12 @@
       "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1_2021"
@@ -4026,12 +4002,12 @@
       "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1 Code_2021"
@@ -4049,12 +4025,12 @@
       "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 Thermostat App v2_2021"
@@ -4072,12 +4048,12 @@
       "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3_2021"
@@ -4095,12 +4071,12 @@
       "chapter": 9,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3 pt2_2021"
@@ -4123,7 +4099,7 @@
         "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 CYU Exit Ticket_2021"
@@ -4141,12 +4117,12 @@
       "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Assigning Numbers and Strings"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 1_2021"
@@ -4164,12 +4140,12 @@
       "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Assigning Numbers and Strings"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 4_2021"
@@ -4187,12 +4163,12 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 1_2021"
@@ -4210,12 +4186,12 @@
       "chapter": 14,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 3_2021"
@@ -4233,12 +4209,12 @@
       "chapter": 15,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 2_2021"
@@ -4256,12 +4232,12 @@
       "chapter": 16,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 5_2021"
@@ -4279,12 +4255,12 @@
       "chapter": 17,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 6_2021"
@@ -4302,12 +4278,12 @@
       "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging Scope Issues"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variable Scope: Local vs. Global_2021"
@@ -4325,12 +4301,12 @@
       "chapter": 19,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging Scope Issues"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Scope Issue_2021"
@@ -4348,12 +4324,12 @@
       "chapter": 20,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Putting it Together"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 4_2021"
@@ -4376,7 +4352,7 @@
         "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L3 CFU Variables Psuedocode_2021"
@@ -4399,7 +4375,7 @@
         "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L3 CFU Variables Randomness Psuedocode_2021"
@@ -4417,15 +4393,12 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Try the Photo Liker App",
-        "level_keys": [
-          "U4 L04 Variables Make Project_2021"
-        ]
+        "progression": "Try the Photo Liker App"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L04 Variables Make Project_2021"
@@ -4445,13 +4418,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Photo Liker App",
-        "level_keys": [
-          "U4 L04 Variables Make Project Submit_2021"
-        ]
+        "progression": "Make the Photo Liker App"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L04 Variables Make Project Submit_2021"
@@ -4469,15 +4439,12 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Conditionals: Boolean Expressions",
-        "level_keys": [
-          "U4 L06 Introduction to Conditionals: Boolean Expressions_2021"
-        ]
+        "progression": "Conditionals: Boolean Expressions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L06 Introduction to Conditionals: Boolean Expressions_2021"
@@ -4485,7 +4452,7 @@
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ae920f76-c35e-476f-87d0-143dff428073"
+        "activity_section.key": "87a276e9-7f77-4cac-99cf-6d3f71dde6eb"
       },
       "level_keys": [
         "U4 L06 Introduction to Conditionals: Boolean Expressions_2021"
@@ -4497,13 +4464,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U4 L05 CYU Exit Ticket_2021"
-        ]
+        "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L05 CYU Exit Ticket_2021"
@@ -4511,7 +4475,7 @@
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "011bac85-697e-4e9c-94ff-f0f62257b041"
+        "activity_section.key": "e5fed8da-b44f-4082-8162-d59762fced56"
       },
       "level_keys": [
         "U4 L05 CYU Exit Ticket_2021"
@@ -4521,15 +4485,12 @@
       "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: if Statements_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if Statements_2021"
@@ -4547,15 +4508,12 @@
       "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L06 Lemon Hunter App v1 Code_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v1 Code_2021"
@@ -4573,15 +4531,12 @@
       "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "If-Else Statements",
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: if-else Statements_2021"
-        ]
+        "progression": "If-Else Statements"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else Statements_2021"
@@ -4599,15 +4554,12 @@
       "chapter": 30,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "If-Else Statements",
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
-        ]
+        "progression": "If-Else Statements"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
@@ -4625,15 +4577,12 @@
       "chapter": 31,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "If-Else Statements",
-        "level_keys": [
-          "U4 L06 Lemon Hunter App v2 Code_2021"
-        ]
+        "progression": "If-Else Statements"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v2 Code_2021"
@@ -4651,15 +4600,12 @@
       "chapter": 32,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Logical Operators: AND OR",
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
-        ]
+        "progression": "Logical Operators: AND OR"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
@@ -4677,15 +4623,12 @@
       "chapter": 33,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Logical Operators: AND OR",
-        "level_keys": [
-          "U4 L06 Lemon Hunter App v3 Code_2021"
-        ]
+        "progression": "Logical Operators: AND OR"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v3 Code_2021"
@@ -4703,15 +4646,12 @@
       "chapter": 34,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Patterns: If-else-if",
-        "level_keys": [
-          "Checking Multiple Conditions with If-elseif_2021"
-        ]
+        "progression": "Patterns: If-else-if"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Checking Multiple Conditions with If-elseif_2021"
@@ -4731,13 +4671,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check Your Understanding",
-        "level_keys": [
-          "U4 L06 CYU Exit Ticket_2021"
-        ]
+        "progression": "Check Your Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L06 CYU Exit Ticket_2021"
@@ -4755,15 +4692,12 @@
       "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Boolean expressions",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 1_2021"
-        ]
+        "progression": "Boolean expressions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 1_2021"
@@ -4781,15 +4715,12 @@
       "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Boolean expressions",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 2_2021"
-        ]
+        "progression": "Boolean expressions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 2_2021"
@@ -4807,15 +4738,12 @@
       "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Boolean expressions",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 3_2021"
-        ]
+        "progression": "Boolean expressions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 3_2021"
@@ -4833,15 +4761,12 @@
       "chapter": 39,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 10_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 10_2021"
@@ -4859,15 +4784,12 @@
       "chapter": 40,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 4_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 4_2021"
@@ -4885,15 +4807,12 @@
       "chapter": 41,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 5_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 5_2021"
@@ -4911,15 +4830,12 @@
       "chapter": 42,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 6_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 6_2021"
@@ -4937,15 +4853,12 @@
       "chapter": 43,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L07 Conditionals Practice equivalent expressions_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice equivalent expressions_2021"
@@ -4963,15 +4876,12 @@
       "chapter": 44,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Logical Operators",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 7_2021"
-        ]
+        "progression": "Logical Operators"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 7_2021"
@@ -4989,15 +4899,12 @@
       "chapter": 45,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Logical Operators",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 8_2021"
-        ]
+        "progression": "Logical Operators"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 8_2021"
@@ -5017,13 +4924,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
-        "level_keys": [
-          "U4L10 CFU Conditionals Psuedocode_2021"
-        ]
+        "progression": "Check For Understanding: AP Practice"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L10 CFU Conditionals Psuedocode_2021"
@@ -5043,13 +4947,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
-        "level_keys": [
-          "U4L10 CFU Conditionals Psuedocode 2_2021"
-        ]
+        "progression": "Check For Understanding: AP Practice"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L10 CFU Conditionals Psuedocode 2_2021"
@@ -5067,15 +4968,12 @@
       "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Try to the Museum Ticket Generator App",
-        "level_keys": [
-          "U4 L08 Conditionals Make Project Sample_2021"
-        ]
+        "progression": "Try to the Museum Ticket Generator App"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L08 Conditionals Make Project Sample_2021"
@@ -5095,13 +4993,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Museum Ticket Generator App",
-        "level_keys": [
-          "U4L08 Museum Ticket Generator_2021"
-        ]
+        "progression": "Make the Museum Ticket Generator App"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator_2021"
@@ -5119,15 +5014,12 @@
       "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Explore Functions",
-        "level_keys": [
-          "U4 L09 Functions Song_2021"
-        ]
+        "progression": "Explore Functions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L09 Functions Song_2021"
@@ -5145,15 +5037,12 @@
       "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Declaring and Calling Functions",
-        "level_keys": [
-          "U4L09 Intro to Functions Video_2021"
-        ]
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L09 Intro to Functions Video_2021"
@@ -5171,15 +5060,12 @@
       "chapter": 52,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Declaring and Calling Functions",
-        "level_keys": [
-          "U4 L09 Score Clicker Investigate_2021"
-        ]
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L09 Score Clicker Investigate_2021"
@@ -5197,15 +5083,12 @@
       "chapter": 53,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Declaring and Calling Functions",
-        "level_keys": [
-          "U4 L09 Thermostat App v7_2021"
-        ]
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L09 Thermostat App v7_2021"
@@ -5223,15 +5106,12 @@
       "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Update Screen Pattern",
-        "level_keys": [
-          "updateScreen Pattern_2021"
-        ]
+        "progression": "Update Screen Pattern"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "updateScreen Pattern_2021"
@@ -5251,13 +5131,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check Your Understanding",
-        "level_keys": [
-          "CSP U4 L09 CFU Exit Ticket_2021"
-        ]
+        "progression": "Check Your Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4 L09 CFU Exit Ticket_2021"
@@ -5275,15 +5152,12 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Declare and Call Functions",
-        "level_keys": [
-          "U4 L10 Functions Practice Calling Functions 1_2021"
-        ]
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Practice Calling Functions 1_2021"
@@ -5301,15 +5175,12 @@
       "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Declare and Call Functions",
-        "level_keys": [
-          "U4 L10 Functions Practice 1_2021"
-        ]
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Practice 1_2021"
@@ -5327,15 +5198,12 @@
       "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Declare and Call Functions",
-        "level_keys": [
-          "U4 L10 Functions Practice 2_2021"
-        ]
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Practice 2_2021"
@@ -5353,15 +5221,12 @@
       "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Declare and Call Functions",
-        "level_keys": [
-          "U4 L10 Functions Practice 3_2021"
-        ]
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Practice 3_2021"
@@ -5379,15 +5244,12 @@
       "chapter": 60,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Declare and Call Functions",
-        "level_keys": [
-          "U4 L10 Functions Build Practice 2_2021"
-        ]
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Build Practice 2_2021"
@@ -5405,15 +5267,12 @@
       "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Function Scope",
-        "level_keys": [
-          "Debugging Variable Scope and Functions_2021"
-        ]
+        "progression": "Function Scope"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Debugging Variable Scope and Functions_2021"
@@ -5431,15 +5290,12 @@
       "chapter": 62,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Function Scope",
-        "level_keys": [
-          "U4 L10 Functions Scope Practice 1 v2_2021"
-        ]
+        "progression": "Function Scope"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Scope Practice 1 v2_2021"
@@ -5457,15 +5313,12 @@
       "chapter": 63,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "When to Declare Functions",
-        "level_keys": [
-          "When to Make Functions Map_2021"
-        ]
+        "progression": "When to Declare Functions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "When to Make Functions Map_2021"
@@ -5483,15 +5336,12 @@
       "chapter": 64,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "When to Declare Functions",
-        "level_keys": [
-          "U4 L10 Making Functions Practice_2021"
-        ]
+        "progression": "When to Declare Functions"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Making Functions Practice_2021"
@@ -5511,13 +5361,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
-        "level_keys": [
-          "U4L10 CFU Functions Psuedocode_2021"
-        ]
+        "progression": "Check For Understanding: AP Practice"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L10 CFU Functions Psuedocode_2021"
@@ -5535,15 +5382,12 @@
       "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Quote Maker App",
-        "level_keys": [
-          "U4 L11 Functions Make 1 2020_2021"
-        ]
+        "progression": "Quote Maker App"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L11 Functions Make 1 2020_2021"
@@ -5563,13 +5407,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Quote Maker App",
-        "level_keys": [
-          "U4 L11 Functions Make 2020_2021"
-        ]
+        "progression": "Make the Quote Maker App"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L11 Functions Make 2020_2021"
@@ -5587,15 +5428,12 @@
       "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Sample Apps",
-        "level_keys": [
-          "U4 L12 Practice PT 1_2021"
-        ]
+        "progression": "Sample Apps"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L12 Practice PT 1_2021"
@@ -5613,15 +5451,12 @@
       "chapter": 69,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Sample Apps",
-        "level_keys": [
-          "U4 L12 Practice PT 2_2021"
-        ]
+        "progression": "Sample Apps"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L12 Practice PT 2_2021"
@@ -5639,15 +5474,12 @@
       "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Create the Screens",
-        "level_keys": [
-          "U4 L13 Practice PT 1_2021"
-        ]
+        "progression": "Create the Screens"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L13 Practice PT 1_2021"
@@ -5665,15 +5497,12 @@
       "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Create the Variables",
-        "level_keys": [
-          "U4 L13 Practice PT 2_2021"
-        ]
+        "progression": "Create the Variables"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L13 Practice PT 2_2021"
@@ -5691,15 +5520,12 @@
       "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Create the Function",
-        "level_keys": [
-          "U4 L13 Practice PT 3_2021"
-        ]
+        "progression": "Create the Function"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L13 Practice PT 3_2021"
@@ -5717,15 +5543,12 @@
       "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Add onEvents",
-        "level_keys": [
-          "U4 L13 Practice PT 4_2021"
-        ]
+        "progression": "Add onEvents"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L13 Practice PT 4_2021"
@@ -5743,15 +5566,12 @@
       "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Test Your Decision Maker App",
-        "level_keys": [
-          "U4 L14 Practice PT 1_2021"
-        ]
+        "progression": "Test Your Decision Maker App"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L14 Practice PT 1_2021"
@@ -5771,13 +5591,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Submit Your Decision Maker App",
-        "level_keys": [
-          "U4 L14 Practice PT 2_2021"
-        ]
+        "progression": "Submit Your Decision Maker App"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L14 Practice PT 2_2021"
@@ -5797,13 +5614,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 4 Exam",
-        "level_keys": [
-          "CSP 20-21 Unit 4 Assessment_2021"
-        ]
+        "progression": "Unit 4 Exam"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Unit 4 Assessment_2021"
@@ -6116,7 +5930,7 @@
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ae920f76-c35e-476f-87d0-143dff428073"
+        "activity_section.key": "87a276e9-7f77-4cac-99cf-6d3f71dde6eb"
       }
     },
     {
@@ -6128,7 +5942,7 @@
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "011bac85-697e-4e9c-94ff-f0f62257b041"
+        "activity_section.key": "e5fed8da-b44f-4082-8162-d59762fced56"
       }
     },
     {

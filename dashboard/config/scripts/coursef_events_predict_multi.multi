@@ -1,0 +1,6 @@
+name 'courseF_events_predict_multi'
+question 'Read the code, then make a prediction.'
+wrong 'The sprite will just spin right.', feedback: 'Incorrect. The sprite will also move east.'
+wrong 'The sprite will just move east.', feedback: 'Incorrect. The sprite has not stopped spinning, so it will do both simultaneously.'
+right 'The sprite will spin and move at the same time.', feedback: 'Correct! Both behaviors will happen simultaneously.'
+wrong 'The sprite will spin first and then move later.', feedback: 'Incorrect. In Sprite Lab, connected blocks happen immediately after each the last one, so both behaviors will happen simultaneously.'
