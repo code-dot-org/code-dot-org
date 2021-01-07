@@ -134,8 +134,13 @@ export default class AnimationPreview extends React.Component {
     };
 
     const imageStyle = {
-      maxWidth: '100%',
-      maxHeight: '100%',
+      // The maxWidth and maxHeight params need to be 'none' for the animation previews to animate.
+      // Our animation previews involve scaling up the size of the spritesheet such that each frame fills the container.
+      // To do the animation, the spritesheet is moved around (using xOffset and yOffset).
+      // If the image is not allowed to exceed the size of the container, the animation will show the spritesheet with all of the frames rotating
+      // instead of a single appropriate frame at a time.
+      maxWidth: 'none',
+      maxHeight: 'none',
       width: scaledSourceSize.x,
       height: scaledSourceSize.y,
       marginLeft: xOffset,
@@ -143,7 +148,9 @@ export default class AnimationPreview extends React.Component {
     };
     const backgroundImageStyle = {
       borderRadius: 10,
-      height: '100%'
+      height: '100%',
+      maxWidth: '100%',
+      maxHeight: '100%'
     };
 
     if (
