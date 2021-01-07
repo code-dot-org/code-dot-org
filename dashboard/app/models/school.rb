@@ -124,8 +124,8 @@ class School < ApplicationRecord
       School.transaction do
         merge_from_csv(schools_tsv)
       end
-      #else
-      #School.seed_from_s3
+    else
+      School.seed_from_s3
     end
   end
 
@@ -314,6 +314,19 @@ class School < ApplicationRecord
           }
         end
       end
+
+      CDO.log.info "Seeding 2018-2019 public and charter school geographic data."
+      # Download link found here: https://nces.ed.gov/programs/edge/Geographic/SchoolLocations
+      # Actual download link: https://nces.ed.gov/programs/edge/data/EDGE_GEOCODE_PUBLICSCH_1819.zip
+      AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/EDGE_GEOCODE_PUBLICSCH_1819.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: true, write_inserts: false) do |row|
+          {
+            id:                 row['NCESSCH'].to_i.to_s,
+            latitude:           row['LAT'].to_f,
+            longitude:          row['LON'].to_f
+          }
+        end
+      end
     end
   end
 
@@ -332,7 +345,7 @@ class School < ApplicationRecord
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT schools.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, new_attributes: [])
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, new_attributes: [], write_inserts: true)
     schools = nil
     new_schools = []
     updated_schools = 0
@@ -347,7 +360,7 @@ class School < ApplicationRecord
         parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
         loaded = find_by_id(parsed[:id])
 
-        if loaded.nil?
+        if loaded.nil? && write_inserts
           begin
             School.new(parsed).save! unless is_dry_run
             new_schools << parsed
@@ -358,9 +371,13 @@ class School < ApplicationRecord
             CDO.log.info "Record with NCES ID #{parsed[:id]} and state school ID #{parsed[:state_school_id]} not unique, not added"
             duplicate_schools << parsed
           end
-        elsif write_updates
+        elsif !loaded.nil? && write_updates
           old_state_school_id = loaded.state_school_id.clone
-          has_state_cs_offerings = loaded.state_cs_offering.any?
+
+          # skip DB query if state school ID not in provided set of data
+          has_state_cs_offerings = parsed.key?(:state_school_id) ?
+            loaded.state_cs_offering.any? :
+            false
 
           loaded.assign_attributes(parsed)
 
@@ -426,7 +443,7 @@ class School < ApplicationRecord
       if new_schools.any?
         summary_message <<
           "Schools#{future_tense_dry_run} added:\n"\
-          "#{new_schools.map {|school| school[:name] + ' ' + school[:id].to_s}.join("\n")}\n"
+          "#{new_schools.map {|school| (school[:name] || '') + ' ' + school[:id].to_s}.join("\n")}\n"
       end
 
       if duplicate_schools.any?
