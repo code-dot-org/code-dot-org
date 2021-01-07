@@ -83,7 +83,8 @@ export default class ListItemThumbnail extends React.Component {
       root: {
         border:
           'solid 2px ' +
-          (this.props.isSelected ? color.purple : color.light_gray)
+          (this.props.isSelected ? color.purple : color.light_gray),
+        maxHeight: this.state.previewSize + 8 + 'px'
       }
     });
     let playBehavior;

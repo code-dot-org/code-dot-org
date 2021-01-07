@@ -149,6 +149,7 @@ export default class AnimationPreview extends React.Component {
     const backgroundImageStyle = {
       borderRadius: 10,
       height: '100%',
+      width: '100%',
       maxWidth: '100%',
       maxHeight: '100%'
     };
