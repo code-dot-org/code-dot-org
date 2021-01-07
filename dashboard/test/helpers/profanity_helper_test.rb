@@ -36,4 +36,12 @@ class ProfanityHelperTest < ActionView::TestCase
     ProfanityHelper.throttled_find_profanities('bad words', 'en-US', 'a1b2c3', 1, 1) {|profanities| actual_profanities = profanities}
     assert_equal expected_profanities, actual_profanities
   end
+
+  test 'throttled_find_profanities: yields nil if text is empty' do
+    Rails.cache.expects(:read).never
+
+    actual_profanities = -1
+    ProfanityHelper.throttled_find_profanities('', 'en-US', 'a1b2c3', 1, 1) {|profanities| actual_profanities = profanities}
+    assert_nil actual_profanities
+  end
 end
