@@ -10,9 +10,10 @@ class SelectTrainer extends Component {
     selectedTrainer: PropTypes.string,
     setSelectedTrainer: PropTypes.func,
     compatibleTrainers: PropTypes.object,
-    setKValue: PropTypes.func, // set static propTypes for setKValue and kValue
+    setKValue: PropTypes.func,
     kValue: PropTypes.number
   };
+
 
   handleChangeSelect = event => {
     this.props.setSelectedTrainer(event.target.value);
@@ -20,7 +21,6 @@ class SelectTrainer extends Component {
 
   /* add event handler -> handleChangeInput Function */
   handleChangeInput = event => {
-    console.log("Console log for kValue:", event.target.value);
     this.props.setKValue(parseInt(event.target.value));
   }
 
@@ -55,13 +55,11 @@ class SelectTrainer extends Component {
             )}
           </label>
           {
-            // conditional rendering for selected classification and input for k value 
-            
             (this.props.selectedTrainer === 'knnClassify' ||
             this.props.selectedTrainer === 'knnRegress') && (
           <div>
-            <label>  
-             <p>What would you like the value of K to be?</p> 
+            <label>
+             <p>What would you like the value of K to be?</p>
                     <input
                     /* value of input is handled by default */
                       onChange={this.handleChangeInput}
