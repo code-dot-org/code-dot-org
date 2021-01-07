@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import {actions, selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
 
 const styles = {
   button: {
@@ -22,8 +23,18 @@ class PauseButton extends React.Component {
     isAttached: PropTypes.bool.isRequired
   };
 
+  state = {
+    pauseStart: 0
+  };
+
   togglePause = () => {
-    console.log('toggle');
+    const current = new Date().getTime();
+    if (this.props.isPaused) {
+      coreLibrary.addPauseTime(current - this.state.pauseStart);
+      this.setState({pauseStart: 0});
+    } else {
+      this.setState({pauseStart: current});
+    }
     this.props.togglePause();
   };
 
