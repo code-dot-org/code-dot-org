@@ -134,8 +134,8 @@ export default class AnimationPreview extends React.Component {
     };
 
     const imageStyle = {
-      maxWidth: '100%',
-      maxHeight: '100%',
+      maxWidth: 'none',
+      maxHeight: 'none',
       width: scaledSourceSize.x,
       height: scaledSourceSize.y,
       marginLeft: xOffset,
@@ -143,7 +143,9 @@ export default class AnimationPreview extends React.Component {
     };
     const backgroundImageStyle = {
       borderRadius: 10,
-      height: '100%'
+      height: '100%',
+      maxWidth: '100%',
+      maxHeight: '100%'
     };
 
     if (
