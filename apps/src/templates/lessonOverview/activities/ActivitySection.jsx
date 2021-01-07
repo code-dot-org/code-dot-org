@@ -31,7 +31,8 @@ const styles = {
   },
   textAndProgression: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    width: '100%' // If there are tips for the activity section this is updated below
   }
 };
 
@@ -59,42 +60,53 @@ export default class ActivitySection extends Component {
 
     return (
       <div>
-        <h4 id={`activity-section-${section.key}`}>{section.displayName}</h4>
-        {section.remarks && (
-          <div>
-            <h4>
-              <FontAwesome icon="microphone" />
-              <span style={styles.remarksHeader}>{i18n.remarks()}</span>
-            </h4>
-          </div>
-        )}
+        <h3 id={`activity-section-${section.key}`}>{section.displayName}</h3>
         <div
           style={{
             ...styles.activitySection,
-            ...(section.remarks && {borderLeft: '5px solid #CCC'})
+            ...(sectionHasTips && {position: 'relative', left: -30})
           }}
         >
-          <div style={styles.tipIcons}>
-            {section.tips.map((tip, index) => {
-              return (
-                <FontAwesome
-                  key={`tipIcon-${index}`}
-                  icon={tipTypes[tip.type].icon}
-                  style={{color: tipTypes[tip.type].color}}
-                />
-              );
-            })}
-          </div>
+          {sectionHasTips && (
+            <div style={styles.tipIcons}>
+              {section.tips.map((tip, index) => {
+                return (
+                  <FontAwesome
+                    key={`tipIcon-${index}`}
+                    icon={tipTypes[tip.type].icon}
+                    style={{color: tipTypes[tip.type].color}}
+                  />
+                );
+              })}
+            </div>
+          )}
           <div
             style={{
               ...styles.textAndProgression,
               ...(sectionHasTips && {width: `${100 - tipWidth}%`})
             }}
           >
-            <SafeMarkdown markdown={section.text} />
-            {section.scriptLevels.length > 0 && (
-              <ProgressionDetails progression={section} />
+            {section.remarks && (
+              <div>
+                <h4>
+                  <FontAwesome icon="microphone" />
+                  <span style={styles.remarksHeader}>{i18n.remarks()}</span>
+                </h4>
+              </div>
             )}
+            <div
+              style={{
+                ...(section.remarks && {
+                  borderLeft: '5px solid #CCC',
+                  paddingLeft: 5
+                })
+              }}
+            >
+              <SafeMarkdown markdown={section.text} />
+              {section.scriptLevels.length > 0 && (
+                <ProgressionDetails progression={section} />
+              )}
+            </div>
           </div>
           <div
             style={{
