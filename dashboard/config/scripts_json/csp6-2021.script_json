@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -1901,13 +1902,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U6 L01 Algorithms vs Problems_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 L01 Algorithms vs Problems_2021"
@@ -1925,15 +1923,12 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Widget: Ticket Generator",
-        "level_keys": [
-          "CSP U6L2 Ticket Generator_2021"
-        ]
+        "progression": "Widget: Ticket Generator"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L2 Ticket Generator_2021"
@@ -1953,13 +1948,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U6L2 CFU Binary Search Steps_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U6L2 CFU Binary Search Steps_2021"
@@ -1979,13 +1971,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U6L2 CFU Efficiency and Algorithms_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U6L2 CFU Efficiency and Algorithms_2021"
@@ -2005,13 +1994,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U6L3 CFU Reasonable vs Unreasonable_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U6L3 CFU Reasonable vs Unreasonable_2021"
@@ -2031,13 +2017,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U6 L03 Evaluate Reasonable or Not_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 L03 Evaluate Reasonable or Not_2021"
@@ -2055,15 +2038,12 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Widget: Traveling Salesman",
-        "level_keys": [
-          "CSP U6L4 Traveling Salesman_2021"
-        ]
+        "progression": "Widget: Traveling Salesman"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L4 Traveling Salesman_2021"
@@ -2081,15 +2061,12 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Widget: Traveling Salesman - Random Nodes",
-        "level_keys": [
-          "CSP U6L4 Random Traveling Salesman_2021"
-        ]
+        "progression": "Widget: Traveling Salesman - Random Nodes"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U6L4 Random Traveling Salesman_2021"
@@ -2109,13 +2086,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U6L4 CFU Reason for Heuristics_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U6L4 CFU Reason for Heuristics_2021"
@@ -2135,13 +2109,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U6 L04 Unreasonable vs Undecidable_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 L04 Unreasonable vs Undecidable_2021"
@@ -2161,13 +2132,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U6L5 CFU Calculate Speedup_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U6L5 CFU Calculate Speedup_2021"
@@ -2187,13 +2155,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U6 L05 Speedup Forever_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U6 L05 Speedup Forever_2021"
@@ -2213,13 +2178,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 6 Exam",
-        "level_keys": [
-          "CSP Unit 6 AP-Style Assessment _2021"
-        ]
+        "progression": "Unit 6 Exam"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 6 AP-Style Assessment _2021"
