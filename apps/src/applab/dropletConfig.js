@@ -18,6 +18,7 @@ import {
 } from './setPropertyDropdown';
 import {getStore} from '../redux';
 import * as applabConstants from './constants';
+import experiments from '../util/experiments';
 
 var DEFAULT_WIDTH = applabConstants.APP_WIDTH.toString();
 var DEFAULT_HEIGHT = (
@@ -678,13 +679,6 @@ export var blocks = [
       1: ChartApi.getChartTypeDropdown
     }
   },
-  {
-    func: 'getPrediction',
-    parent: api,
-    category: 'Data',
-    paletteParams: ['model', 'testValues', 'callback'],
-    params: ['"myModel"', 'testValues', 'function (value) {\n \n}']
-  },
 
   {
     func: 'moveForward',
@@ -1137,6 +1131,16 @@ export var blocks = [
     noAutocomplete: true
   }
 ];
+
+if (experiments.isEnabled(experiments.APPLAB_ML)) {
+  blocks.push({
+    func: 'getPrediction',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['model', 'testValues', 'callback'],
+    params: ['"myModel"', 'testValues', 'function (value) {\n \n}']
+  });
+}
 
 export const categories = {
   'UI controls': {
