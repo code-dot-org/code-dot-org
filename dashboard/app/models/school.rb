@@ -409,7 +409,7 @@ class School < ApplicationRecord
       "School seeding: done processing #{filename}.\n"\
       "#{new_schools.length} new schools#{future_tense_dry_run} added.\n"\
       "#{updated_schools} schools#{future_tense_dry_run} updated.\n"\
-      "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (school considered changed if only update was adding new columns included in this import).\n"\
+      "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (school considered unchanged if only update was adding new columns included in this import).\n"\
       "#{duplicate_schools.length} duplicate schools#{future_tense_dry_run} skipped.\n"\
       "State CS offerings#{future_tense_dry_run} deleted: #{state_cs_offerings_deleted_count}, state CS offerings#{future_tense_dry_run} reloaded: #{state_cs_offerings_reloaded_count}\n"
 
