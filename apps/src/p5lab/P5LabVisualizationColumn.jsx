@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 import GameButtons from '@cdo/apps/templates/GameButtons';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
+import PauseButton from '@cdo/apps/templates/PauseButton';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
 import experiments from '@cdo/apps/util/experiments';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
@@ -192,6 +193,9 @@ class P5LabVisualizationColumn extends React.Component {
         </div>
 
         <GameButtons>
+          {experiments.isEnabled(experiments.SPRITELAB_PAUSE) && (
+            <PauseButton />
+          )}
           <ArrowButtons />
 
           <CompletionButton />
