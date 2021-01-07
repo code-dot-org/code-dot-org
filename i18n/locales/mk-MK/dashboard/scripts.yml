@@ -255,3 +255,55 @@ mk:
               name: Променливи
             Text:
               name: Текст
+        csd3-2021:
+          lessons:
+            Variables:
+              key: Променливи
+              name: Променливи
+            Text:
+              key: Текст
+              name: Текст
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Листи
+            csp_loops:
+              display_name: Лупови
+        coursea-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        courseb-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursec-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursed-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursef-2021:
+          lesson_groups:
+            csf_variables:
+              display_name: Променливи
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+            csf_variables:
+              display_name: Променливи
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Променливи

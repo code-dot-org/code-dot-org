@@ -1737,10 +1737,10 @@
       "key": "7091d49a-c4ac-4c04-aaa4-290efb0ee705",
       "position": 1,
       "properties": {
-        "description": "**Journal 3-2-1:**",
+        "description": "**Journal 3-2-1:**\n\n1. What are three types of board events you have seen so far?\n2. Describe two different situations and how they would need two **different** events.\n3. What's one other event you haven't learned yet, but you think might exist?",
         "tips": [
           {
-            "key": "assessment",
+            "key": "1",
             "type": "assessmentOpportunity",
             "markdown": "Students should make reasonable choices for when one board event might be better than another.  You may want to have a short class discussion before or after this journal prompt to highlight the advanages and disadvantages of each event type. \r\n\r\n"
           }
@@ -1748,17 +1748,6 @@
       },
       "seeding_key": {
         "activity_section.key": "7091d49a-c4ac-4c04-aaa4-290efb0ee705",
-        "lesson_activity.key": "9510fed3-bbb9-4c12-8242-537177b47a10"
-      }
-    },
-    {
-      "key": "02bb1d92-60c8-4ff1-8c9f-963801f3fd78",
-      "position": 2,
-      "properties": {
-        "description": "3. What are three types of board events you have seen so far?\r\n2. Describe two different situations and how they would need two **different** events.\r\n3. What's one other event you haven't learned yet, but you think might exist?"
-      },
-      "seeding_key": {
-        "activity_section.key": "02bb1d92-60c8-4ff1-8c9f-963801f3fd78",
         "lesson_activity.key": "9510fed3-bbb9-4c12-8242-537177b47a10"
       }
     },
@@ -2000,32 +1989,20 @@
       }
     },
     {
-      "key": "c749009d-6fa4-42b7-950a-e71f04ba6d22",
+      "key": "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f",
       "position": 2,
       "properties": {
+        "description": "**Discuss:** Students should have individually created a list of board components, events, and functions they would need to make the game they played. Ask students to share their lists with a neighbor before discussing as a class.",
         "tips": [
           {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Keeping Focus:** Students can easily get distracted by the fun of playing the game. Let them play for a while but eventually encourage them to follow the on-screen instructions and make a list of the board components, events, and variables that would be necessary to create the game.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "c749009d-6fa4-42b7-950a-e71f04ba6d22",
-        "lesson_activity.key": "c03168ed-89c2-4ce7-85d2-641c03d490e5"
-      }
-    },
-    {
-      "key": "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f",
-      "position": 3,
-      "properties": {
-        "description": "tip!!!tip-0<!-- place where you'd like the icon --> **Discuss:** Students should have individually created a list of board components, events, and functions they would need to make the game they played. Ask students to share their lists with a neighbor before discussing as a class.",
-        "tips": [
-          {
-            "key": "discussion",
+            "key": "2",
             "type": "discussionGoal",
             "markdown": "**Running the Conversation:** You can write \"Board\", \"Events\", and \"Functions\" on the board and record their ideas below each. Ask students to justify their decisions but don't feel the need to settle on one right answer.\r\n\r\n"
+          },
+          {
+            "key": "tip-2",
+            "type": "teachingTip",
+            "markdown": "**Keeping Focus:** Students can easily get distracted by the fun of playing the game. Let them play for a while but eventually encourage them to follow the on-screen instructions and make a list of the board components, events, and variables that would be necessary to create the game.\n"
           }
         ],
         "name": "Stop: Review Project Guide\r"
@@ -2037,12 +2014,12 @@
     },
     {
       "key": "0d9ecf02-4bac-4dc3-86c4-ba83c96e8a14",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "description": "**Distribute:** Give each student or pair of students a copy of the project guide.",
+        "description": "**Distribute:** Give each student or pair of students a copy of the project guide.\n\n**Prompt:** Compare the list of things you thought would be needed to the ones on this project guide. Do you notice any differences? \n\n**Discuss:** As a class compare the list you had on the board to the list of board components, events, and functions on the project guide. Note the similarities. Where there are differences try to understand why. Don't approach one set as \"right\" vs. \"wrong\" but just confirm both would be able to make the game students played.",
         "tips": [
           {
-            "key": "tip",
+            "key": "3",
             "type": "teachingTip",
             "markdown": "**Sharing the Project Guide:** Students are not actually writing on the project guide in this lesson. You can give each student their own copy for reference but you might also choose to print one copy per pair, share digital copies, or just display the guide on the projector. So long as it is available for reference any approach will work fine.\r\n\r\n"
           }
@@ -2054,19 +2031,8 @@
       }
     },
     {
-      "key": "a3b6be1b-e0b4-487e-8993-b18deb00825a",
-      "position": 5,
-      "properties": {
-        "description": "**Prompt:** Compare the list of things you thought would be needed to the ones on this project guide. Do you notice any differences? \r\n\r\n**Discuss:** As a class compare the list you had on the board to the list of board components, events, and functions on the project guide. Note the similarities. Where there are differences try to understand why. Don't approach one set as \"right\" vs. \"wrong\" but just confirm both would be able to make the game students played."
-      },
-      "seeding_key": {
-        "activity_section.key": "a3b6be1b-e0b4-487e-8993-b18deb00825a",
-        "lesson_activity.key": "c03168ed-89c2-4ce7-85d2-641c03d490e5"
-      }
-    },
-    {
       "key": "796b633c-05c1-4346-ba4f-65cdeb4a7715",
-      "position": 6,
+      "position": 4,
       "properties": {
         "description": "There's usually lots of ways you can structure a program to get it to work the way you want. The important thing when writing complex or large programs is that you start with a plan. Today we're going to look at how we could implement this plan to build our own emoji race game. By the end of the lesson you'll not only have built your game, but you'll know how to change it and make it your own. Let's get going!",
         "remarks": true

@@ -1476,6 +1476,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Anda bisa merubah angka ini.",
           "courseE_artist_ramp8_2": "Klik di sini untuk mengetik berapa kali kode Anda berulang."
+        },
+        "outbreak2": {
+          "minitoolbox": "Klik di sini untuk memperluas blok.",
+          "pointerlocation": "Tarik blok subject ke sini."
+        },
+        "outbreak7": {
+          "costumes_callout": "Klik untuk membuat kostum baru"
         }
       }
     }

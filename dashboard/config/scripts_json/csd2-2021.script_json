@@ -3633,7 +3633,7 @@
         "description": "**Discuss:** Students should brainstorm ideas independently, then share with a neighbor, and finally share with the whole class.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "1",
             "type": "discussionGoal",
             "markdown": "**Goal:** This warm-up should generate a list of ways students express their ideas. If they need help getting started, offer them a couple of examples from the list below. The goal of this warm-up is to frame web development as another form of self-expression. \r\n\r\n"
           }
@@ -3709,7 +3709,7 @@
         "description": "**Brainstorm Content:** Read through this section of the activity guide. Then give students several minutes to silently brainstorm content they might want to include on a personal website.",
         "tips": [
           {
-            "key": "tip",
+            "key": "2",
             "type": "teachingTip",
             "markdown": "**Use Journals:** The activity for today's lesson can easily be completed in student journals. Project or otherwise share the prompts and let students complete their work in their journals.\r\n"
           }
@@ -3761,7 +3761,7 @@
         "description": "**Web Page Purpose:** Give students some time to think about what purposes their own web pages will serve. Try to steer the conversation away from the exact content of the site, which they will have time to plan in a later lesson.",
         "tips": [
           {
-            "key": "assessment",
+            "key": "3",
             "type": "assessmentOpportunity",
             "markdown": "Students should identify their websites as an opportunity to express themselves and their own goals. Check that each student has an explanation of why their site is personally significant.\r\n"
           }
@@ -3802,7 +3802,7 @@
         "description": "**Prompt:**  Now that you've had a chance to share your website ideas, write down...",
         "tips": [
           {
-            "key": "assessment",
+            "key": "4",
             "type": "assessmentOpportunity",
             "markdown": "As students share different aspects of the websites, make sure that the discussion highlights the creative aspects of making websites, and that websites can be a form of personal expression unique to each individual.\r\n"
           }
@@ -5156,7 +5156,7 @@
         "description": "**Share:** Allow students to share out some of their favorite features.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "38",
             "type": "discussionGoal",
             "markdown": "The goal of this discussion is to make sure that the various features that students have learned are top of mind when they begin to design their sites. Make sure students are mentioning the features that they have particularly enjoyed in the unit, and review the tags and css properties that create them.\r\n\r\n"
           }
@@ -5220,7 +5220,7 @@
         "description": "Teams should describe each page in the site, including its purpose. On separate sheets of paper, they should sketch out the various pages. This allows different team members to focus on different pages.",
         "tips": [
           {
-            "key": "tip",
+            "key": "39",
             "type": "teachingTip",
             "markdown": "You may want to ask groups to run their sketches by you before moving on. Make sure that the pages all appear to be the same style, and that they include a way to navigate from one to another.\r\n\r\n"
           }
@@ -5310,7 +5310,7 @@
         "description": "**Prompt:** Describe a difference of opinion that members of your team had, and how you resolved it.",
         "tips": [
           {
-            "key": "assessment",
+            "key": "40",
             "type": "assessmentOpportunity",
             "markdown": "Check that student descriptions of the disagreement and resolution involve effective and collaborative strategies for working together.\r\n"
           }

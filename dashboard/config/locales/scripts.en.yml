@@ -19008,7 +19008,7 @@ en:
           name: csd2-2021
           student_description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
         csd3-2021:
-          title: CSD Unit 3 - Interactive Animations and Games ('20-'21)
+          title: CSD Unit 3 - Interactive Animations and Games ('21-'22)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
@@ -19842,7 +19842,7 @@ en:
           name: csp10-2021
           student_description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
         coursea-2021:
-          title: Course A (2020)
+          title: Course A (2021)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
@@ -20187,7 +20187,7 @@ en:
           name: coursee-2021
           student_description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
         coursef-2021:
-          title: Course F (2020)
+          title: Course F (2021)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'Ages: 9-13'
@@ -20465,7 +20465,7 @@ en:
           description: "Learn to use events by programming in Sprite Lab. Investigate different design techniques and discuss societal impacts of computing. \n\n**Pilot 2021**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June, 2021 only."
           student_description: "Learn to use events by programming in Sprite Lab. Investigate different design techniques and discuss societal impacts of computing. \n\n**Pilot 2021**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June, 2021 only."
         csd4-preview-2021:
-          title: CSD Unit 4 - The Design Process ('20-'21)
+          title: CSD Unit 4 - The Design Process ('21-'22 Beta Preview)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
           description_short: "  Learn how to design a program that meets the needs of your users."
           description_audience: ''

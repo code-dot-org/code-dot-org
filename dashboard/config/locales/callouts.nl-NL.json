@@ -752,6 +752,13 @@
         },
         "courseC_starWars_loops2_copy": {
           "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
+        },
+        "outbreak2": {
+          "minitoolbox": "Klik hier om het blok uit te breiden.",
+          "pointerlocation": "Sleep hier een subjectblok naartoe."
+        },
+        "outbreak7": {
+          "costumes_callout": "Klikken om een nieuw kostuum te maken"
         }
       }
     }

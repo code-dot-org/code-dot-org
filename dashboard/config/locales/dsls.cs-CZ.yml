@@ -2770,3 +2770,38 @@ cs-CZ:
         title: Počítač a řešení problémů - test po projektu
       CSD U5 test:
         title: Data a společnost - test po projektu
+      outbreak_freeplay_choice:
+        display_name: Volná hra
+        description: A to je konec kurzu. Pokračujte ve změnách a vylepšování projektu.
+          Můžete dál pracovat se stejnými bloky anebo zkusit panel nástrojů rozšířit.
+      outbreak_story2:
+        markdown: "# Šíření: uvažujte jako vědec\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulace jsou výborné na pochopení
+          jevů, jejichž pozorování může být v reálném světě obtížné. Pomáhají vědcům
+          bezpečně a účinně řešit problémy a testovat nové nápady. Vaše simulace představuje
+          způsob, jak znázornit možný scénář šíření viru ve Městě příšerek.\n\n##
+          Resetujte a spusťte znovu!\nI když jste sami autorem svého kódu, je nemožné
+          vědět přesně, co se stane, až stisknete tlačítko Spustit. Pohyb příšerek
+          je náhodný, takže nemůžete tušit, jestli se virus rozšíří rychle, nebo pomalu.
+          Kdykoli kód upravíte, spusťte simulaci více než jednou. Každé spuštění má
+          unikátní průběh!\n\n## Shromáždění dat\nDoporučujeme zapisovat si během
+          spuštěné simulace svá pozorování. Můžete počítat, kolik příšerek se nakazí,
+          nebo pomocí časovače zjistit, jak rychle se nákaza šíří. Zkusíte třeba zjistit,
+          jak dlouho obvykle trvá, než se nakazí všechny příšerky, pokud žádná z nich
+          nemá roušku? \n\n## Předvídání\nPokud svůj model dobře znáte, může vám pomoct
+          dělat předpovědi. Můžete dokonce měnit průběh simulace a odhadovat, jak
+          se průběh změní. Například:\n* Co by se stalo, kdyby bylo ve městě dvakrát
+          tolik příšerek?\n* Co by se stalo, kdyby se příšerky pohybovaly poloviční
+          rychlostí?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Podobá se Město příšerek reálnému světu?\nKaždý
+          model může být realistický jen do určité míry. \n* Co má simulace šíření
+          společného s šířením viru v reálném světě?\n* Jaké jsou rozdíly?\nAž tuhle
+          aktivitu dokončíte, proberte tyto otázky doma nebo s učitelem ve škole!\n\n##
+          Co dalšího by se dalo modelovat?\nVytvořili jste pracovní model šíření viru
+          ve Městě příšerek. Co vaše simulace nedokáže namodelovat nebo zobrazit,
+          ale vy byste chtěli, aby to uměla? Stiskněte Pokračovat a naučte se vytvářet
+          složitější model, například:\n* zvyšovat počet příšerek v simulaci,\n* pomoct
+          příšerkám, aby se z nákazy vyléčily,\n* řešit pravděpodobnost, imunitu,
+          očkování a další.\n\nO svůj simulační model se můžete podělit s ostatními
+          nebo můžete sdílet své návrhy, co můžeme dělat, abychom pomohli ochránit
+          zdravé obyvatele našeho města, až k nám virus dorazí. \n"

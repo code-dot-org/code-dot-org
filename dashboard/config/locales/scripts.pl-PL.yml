@@ -723,7 +723,7 @@ pl:
             Functions with Return Values:
               name: Funkcje zwracające wartości
             Image Scroller with Key Events:
-              name: Scroller obrazów ze zdarzeniami kluczowymi
+              name: Scroller obrazów ze zdarzeniami klawiszowymi
             Introducing Design Mode:
               name: Wprowadzenie do trybu projektowania
             Introduction to Arrays:
@@ -1075,7 +1075,7 @@ pl:
             Bubble Choice:
               name: Wybór bańki
             Contained Levels:
-              name: Poziomy ograniczone
+              name: Zawarte poziomy
             ML Fish:
               name: Ryba ML
             AI Lab:
@@ -1217,7 +1217,7 @@ pl:
         equity-pd:
           lessons:
             Code.org Equity PD:
-              name: Równość PD Code. org
+              name: Równość PD z Code. org
             Necessary Background:
               name: Niezbędne przygotowanie
         science-PD2:
@@ -1623,7 +1623,7 @@ pl:
             Functions with Return Values:
               name: Funkcje zwracające wartości
             Image Scroller with Key Events:
-              name: Scroller obrazów ze zdarzeniami kluczowymi
+              name: Scroller obrazów ze zdarzeniami klawiszowymi
             Introduction to Arrays:
               name: Wprowadzenie do tablic
             Loops and Simulations:
@@ -2035,14 +2035,13 @@ pl:
               name: Ankieta po odbyciu kursu
         csp3-2017:
           title: Jednostka 3 CSP - Wprowadzenie do programowania ('17-'18)
-          description: "Ten rozdział wprowadza koncepcje fundamentalne programowania
-            komputerowego, co odblokowuje możliwość tworzenia bogatych, interaktywnych
-            aplikacji. W tym kursie używa się JavaScript jako języka oprogramowania
-            oraz App Lab jako środowiska programowania do budowania aplikacji, ale
-            koncepcje poznane w ramach tych lekcji obejmują wszystkie języki i narzędzia
-            programowania. .\r\n\r\nTen rozdział zaktualizowano po raz ostatni 30
-            października 2017 roku. Czytaj więcej o aktualizacjach curriculum na stronie
-            forum.code.org/c/csp/updates."
+          description: "Ta jednostka wprowadza podstawowe pojęcia programowania komputerów,
+            co umożliwia tworzenie bogatych, interaktywnych aplikacji. W tym kursie
+            używa się JavaScript jako języka oprogramowania oraz App Lab jako środowiska
+            programowania do budowania aplikacji, ale pojęcia poznane w ramach tych
+            lekcji łączą wszystkie języki i narzędzia programowania. .\r\n\r\nTa jednostka
+            została zaktualizowana po raz ostatni 30 października 2017 roku. Czytaj
+            więcej o aktualizacjach curriculum na stronie forum.code.org/c/csp/updates."
           description_short: 'Naucz się podstaw programowania w JavaScript, korzystając
             z podejścia top-down do projektowania przy użyciu klasycznej grafiki żółwia.
 
@@ -2097,14 +2096,14 @@ pl:
               name: Ankieta po odbyciu kursu
         csp4-2017:
           title: CSP Jednostka 4 - Giga dane i prywatność ('17- '18)
-          description: "Bogaty w dane świat, w którym żyjemy, niesię ze sobą wiele
+          description: "Bogaty w dane świat, w którym żyjemy, niesie ze sobą wiele
             złożonych pytań dotyczących polityki publicznej, prawa, etyki oraz oddziaływania
-            społecznego. Do celów niniejszego rozdziału można zaliczyć wypracowanie
-            dopracowanego i zrównoważonego poglądu na temat danych na świecie, z uwzględnieniem
-            pozytywnych i negatywnych skutków tego działania oraz zrozumienia postaw
-            sposobu i przyczyny działania nowoczesnego szyfrowania.\r\n\r\nTen rozdział
-            zaktualizowano ostatnio w listopadzie 2017 roku. Czytaj więcej na temat
-            aktualizacji curriculum na stronie forum.code.org/c/csp/updates."
+            społecznego. Do celów niniejszej jednostki można zaliczyć wypracowanie
+            uzgodnionego i zrównoważonego poglądu na temat danych na świecie, z uwzględnieniem
+            pozytywnych i negatywnych skutków tego działania oraz zrozumienia podstaw
+            sposobu i przyczyny działania nowoczesnego szyfrowania.\r\n\r\nTa jednostka
+            została zaktualizowana ostatnio w listopadzie 2017 roku. Czytaj więcej
+            na temat aktualizacji curriculum na stronie forum.code.org/c/csp/updates."
           description_short: Eksploruj bogaty w dane świat, w którym żyjemy oraz sposób,
             w jaki dane wpływają na strategię publiczną, prywatność osób, bezpieczeństwo,
             prawo i etykę.
@@ -2162,9 +2161,8 @@ pl:
             oprogramowania oraz App Lab jako środowiska programowania do budowania
             aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie
             języki i narzędzia programowania.
-          description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania
-            komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych
-            aplikacji.
+          description_short: Kontynuuj poznawanie podstawowych pojęć programowania
+            komputerów w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
               display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
@@ -2190,7 +2188,7 @@ pl:
             Functions with Return Values:
               name: Funkcje zwracające wartości
             Image Scroller with Key Events:
-              name: Scroller obrazów ze zdarzeniami kluczowymi
+              name: Scroller obrazów ze zdarzeniami klawiszowymi
             Introducing Design Mode:
               name: Wprowadzenie do trybu projektowania
             Introduction to Arrays:
@@ -2515,7 +2513,7 @@ pl:
         allthehiddenthings:
           lessons:
             Contained Levels:
-              name: Poziomy ograniczone
+              name: Zawarte poziomy
             Game Lab:
               name: Laboratorium Gier (Game Lab)
         cspunit1-support-test:
@@ -2795,8 +2793,7 @@ pl:
             'New Artist: Functions':
               name: 'Nowy Artysta: Funkcje'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
-              name: Scena projektu wzmocnionego rusztowaniem (pętle, zdarzenia, warunki,
-                funkcje)
+              name: Etap projektu rusztowania (pętle, zdarzenia, warunki, funkcje)
             Songwriting:
               name: Pisanie piosenek
             'Unplugged: Funky Functions':
@@ -3033,7 +3030,7 @@ pl:
             Lesson 2,3:
               name: Lekcja 2,3
             Test stage with bubbles:
-              name: Test sprawdzający z bańkami
+              name: Etap testu z bańkami
         csd3-2017:
           title: CSP Jednostka 3 - Animacje i gry ('17- '18)
           description: W dziale 3 będziesz korzystać z doświadczeń w zakresie kodowania
@@ -3064,16 +3061,18 @@ pl:
               name: Rysuj pętlę i losowość
             Drawing in Game Lab:
               name: Rysowanie w Game Lab
-              description_student: Klasę wprowadza się w Game Lab, środowisko programowania
-                na potrzeby tej części. Zaczyna go używać do ustawiania kształtów
-                na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania,
-                jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy
-                wersję online, które zaprojektowano na poprzedniej lekcji.
-              description_teacher: Klasę wprowadza się w Game Lab, środowisko programowania
-                na potrzeby tej części. Zaczyna go używać do ustawiania kształtów
-                na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania,
-                jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy
-                wersję online, które zaprojektowano na poprzedniej lekcji.
+              description_student: Klasa zostaje wprowadzona do Game Lab, środowiska
+                programowania na potrzeby tej jednostki i zaczyna go używać do ustawiania
+                kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania
+                i debugowania, jak również kilku prostym komendom. Pod koniec lekcji
+                klasa tworzy wersję online obrazu, zaprojektowanego na poprzedniej
+                lekcji.
+              description_teacher: Uczniowie zostają wprowadzeni do Game Lab, środowiska
+                programowania na potrzeby tej jednostki i zaczynają go używać do ustawiania
+                kształtów na ekranie. Poznają podstawy sekwencjonowania i debugowania,
+                jak również kilku prostych komend. Pod koniec lekcji będą potrafili
+                zaprogramować obraz podobny do tego, który utworzyli posługując się
+                narzędziami do rysowania na poprzedniej lekcji.
             'Project: Interactive Card':
               name: 'Projekt: Interaktywna karta'
             Sprites and Images:
@@ -3087,14 +3086,14 @@ pl:
             Velocity:
               name: Prędkość
               description_student: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, klasę wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
-                typu " side scroller".
+                typu "side scroller".
               description_teacher: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, uczniów wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
                 typu "side scroller".
@@ -4010,7 +4009,7 @@ pl:
             Images in HTML:
               name: Obrazy w HTML
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: Na tej lekcji wprowadza się pojęcie CSS jako sposobu
                 stylizowania elementów na stronie. Klasa poznaje podstawową składnię
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
@@ -4019,10 +4018,10 @@ pl:
               description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
                 sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
                 składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują na stronie HTML poświęconej
+                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
                 zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
                 Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu do swojej prywatnej strony internetotej.
+                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
                 \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
@@ -4036,25 +4035,25 @@ pl:
                 Uczniowie rozpoczynają tę lekcję od przyjrzenia się stronie internetotej
                 na temat "Deserów świata" [Desserts of the World]. Analizują i modyfikują
                 nowe style CSS na tej stronie dodając swoje własne style do strony.
-                Po wykonaniu pracy na stronie "Desery świata" [Desserts of the World]
-                uczniowie wykorzystują nowo nabytą wiedzę w zakresie właściwości CSS
-                do stylizacji swoich prywatnych stron internetowych w szerszym zakresie.
+                Po wykonaniu pracy na tej stronie uczniowie wykorzystują nowo nabytą
+                wiedzę w zakresie właściwości CSS do stylizacji swoich prywatnych
+                stron internetowych w szerszym zakresie.
             Exploring Websites:
               name: Odkrywanie stron
               description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
-                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada szereg
-                witryn najczęściej używanych w Stanach Zjednoczonych i omawia, w jaki
-                sposób każda z tych witryn jest przydatna dla użytkowników i jak może
-                służyć również jej twórcom.
+                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
+                witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
+                w jaki sposób każda z tych witryn jest przydatna dla użytkowników
+                i jak może służyć również jej twórcom.
 
 '
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
                 internetowa może służyć, zarówno z punktu widzenia użytkowników, jak
-                i twórców. Klasa bada szereg witryn najczęściej używanych w Stanach
-                Zjednoczonych i omawia, w jaki sposób każda z tych witryn jest przydatna
-                dla użytkowników i jak może służyć również jej twórcom.
+                i twórców. Klasa bada wiele witryn najczęściej wykorzystywanych w
+                Stanach Zjednoczonych i omawia, w jaki sposób każda z tych witryn
+                jest przydatna dla użytkowników i jak może służyć również jej twórcom.
             'Websites for Expression ':
               name: Strony internetowe służące wyrażeniu się
               description_student: Jak możemy używać stron internetowych do osobistej
@@ -4242,8 +4241,8 @@ pl:
               name: Przygotowanie i wsparcie AP
         csd4-2017:
           title: Część 4 CSD - Proces projektowania ('17-'18)
-          description_short: Ucz się, jak projektować program, który zaspokaja potrzeby
-            użytkowników
+          description_short: Ucz się, jak zaprojektować program, który zaspokoi potrzeby
+            Twoich użytkowników
           description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego
             informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej
             rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa
@@ -5374,7 +5373,7 @@ pl:
               name: 'Algorytmy z życia wzięte: Gra w kości'
         csd6-2017:
           title: CSD Jednostka 6 - Obliczenia fizyczne ('17-'18)
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           description: W dziale 6 zgłębia się zagadnienie roli platform sprzętowych
             w informatyce oraz sposobu, w jaki różne czujniki są w stanie zapewnić
             bardziej efektywne dane wejściowe i wyniki wyjściowe od tradycyjnej klawiatury,
@@ -5479,9 +5478,9 @@ pl:
                 LEDami poprzez uzyskiwanie do nich dostępu z listy.
             For Loops:
               name: Pętle dla (for)
-              description_student: Klasa uczy się o instrukcjach powtarzających się
-                używając _pętli "dla"_ najpierw poprzez sterowanie "robotem" za pomocą
-                siatki, a następnie w App Lab.
+              description_student: Klasa uczy się o instrukcjach powtarzania używając
+                _pętli "dla"_ najpierw poprzez sterowanie "robotem" na siatce, a następnie
+                w App Lab.
               description_teacher: Na tej lekcji uczniom wprowadza się _pętlę "dla"_
                 jako sposób powtarzania tego samego kodu określoną liczbę razy. Uczniowie
                 rozpoczynają od zajęć w trybie "unplugged", bez komputera, na których
@@ -6488,7 +6487,7 @@ pl:
             Project - Multi-Page Websites:
               name: Projekt -  Wielostronicowe witryny internetowe
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
             Sources and Search Engines:
@@ -6595,8 +6594,7 @@ pl:
               name: Weź udział w badaniu podłużnym!
         fmscsd3preview:
           title: CSD - Rysowanie w Game Lab
-          description_audience: Gimnazjum Falmouth [Falmouth Middle School] (Mike
-            Harvey)
+          description_audience: Gimnazjum Falmouth (Mike Harvey)
           lessons:
             Plotting Shapes:
               name: Rysowanie kształtów
@@ -6659,7 +6657,7 @@ pl:
             Clean Code and Debugging:
               name: Czysty kod i debugowanie
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
             Multi-Page Websites:
@@ -7024,16 +7022,16 @@ pl:
                 Uczniowie będą również zgłębiać czym jest zachowanie odpowiedzialne i pełne poszanowania względem społeczności offline i online w ramach działań zmierzających do nauczenia się jak być dobrymi obywatelami cyfrowymi.
             Build a Play Lab Game:
               name: Zbuduj grę Play Lab
-              description_student: Ta lekcja przeprowadzi Cię przez tworzenie Twojej
+              description_student: Ta lekcja przeprowadzi Cię przez tworzenie swojej
                 własnej gry wideo.
               description_teacher: W ramach tych zajęć online uczniowie będą mieli
                 okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
                 wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną
                 grę. Czas na kreatywność i utworzenie gry w Play Lab!
             'Unplugged: Binary':
-              name: 'Poza granicami programowania: Obrazki binarne'
-              description_student: Ucz się, jak komputery przechowują obrazki z użyciem
-                prostych koncepcji takich jak włączenie i wyłączenie.
+              name: 'Poza programowaniem: Binarne obrazki'
+              description_student: Ucz się, jak komputery przechowują obrazy z użyciem
+                prostych pomysłów, takich jak włączenie i wyłączenie.
               description_teacher: Chociaż wiele osób sądzi, że binarne są tylko zera
                 i jedynki, uczniom zostanie wprowadzona koncepcja, że informacje mogą
                 być reprezentowane na różne binarne sposoby.  Na tej lekcji to pojęcie
@@ -7270,7 +7268,7 @@ pl:
                 pętle "powtórz", wyrażenia warunkowe, pętle "dopóki" i funkcje.
             Build a Play Lab Game:
               name: Zbuduj grę Play Lab
-              description_student: Ćwicz tworzenie gier do udostępnienia znajomym
+              description_student: Ćwicz tworzenie gier, aby udostępniać je znajomym
                 i rodzinie.
               description_teacher: Na tej lekcji wykorzystuje się interfejs Play Lab,
                 platformy, na której uczniowie mogą tworzyć swoje własne gry i wywoływać
@@ -7301,9 +7299,9 @@ pl:
                 uczniowie będą udawać, że płyną przez Internet, cały czas ucząc się
                 o połączeniach, URL, adresach sieciowych IP i DNS.
             Crowdsourcing:
-              name: 'Poza granicami programowania: Crowdsourcing'
+              name: 'Poza programowaniem: Crowdsourcing'
               description_student: Na tej lekcji będziesz się uczył o crowdsourcingu,
-                procesie budowania projektu przy pomocy zespołu.
+                procesie budowania projektu z zespołem.
               description_teacher: W informatyce, stajemy w obliczu znaczących, zniechęcających
                 problemów. Wyzwania takiej, jak znajdowanie wielkich liczb pierwszych
                 lub tworzenia sekwencji DNA są prawie niemożliwe do zrealizowania
@@ -7327,7 +7325,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Functions in Harvester:
@@ -7385,7 +7383,7 @@ pl:
                 online. Uczniowie prowadzą następnie burzę mózgów na temat sposobów
                 reagowania na cybernękanie. '
             Ice Age Play Lab:
-              name: Zdarzenia w "Epoce lodowcowej"
+              name: Zdarzenia w Epoce lodowcowej
               description_student: Pomyśl o swojej ulubionej grze wideo? Czy zastanawiałeś
                 się kiedyś, jak została utworzona? W ramach tych łamigłówek będziecie
                 tworzyć swoją własną grę wideo z przyjaciółmi z "Epoki lodowcowej".
@@ -7396,7 +7394,7 @@ pl:
                 również będą mieli okazję utworzyć własną grę lub opowieść po przeprowadzeniu
                 ich po poziomach.
             Envelope Variables:
-              name: 'Zmienne: Zmienne w kopertach'
+              name: 'Zmienne: Koperty jako zmienne'
               description_student: 'Koperty i zmienne mają coś wspólnego: w obu przechowuje
                 się wartościowe rzeczy. Teraz będziecie się uczyć o tym, czym są zmienne
                 i jakie wspaniałe rzeczy są w stanie robić.'
@@ -7450,7 +7448,7 @@ pl:
               name: Pętle for z Artystą
               description_student: Przygotuj się na stworzenie kolejnego dzieła. Teraz
                 będziesz używać pętli "dla", aby tworzyć takie obrazki, na widok których
-                odbiorcom "opadnie szczena".
+                odbiorcom opadnie szczęka.
               description_teacher: Na tej lekcji uczniowie będą kontynuować ćwiczenie
                 pętli "dla", tym razem korzystając z interfejsu Artist. Uczniowie
                 będą rozwiązywać łamigłówki łącząc koncepcje zmiennych, pętli oraz
@@ -7460,7 +7458,7 @@ pl:
               name: 'Funkcje: Pisanie piosenek z parametrami'
               description_student: A może po prosu wydasz kolejny singiel z wielkim
                 przebojem! Na tej lekcji będziesz się uczyć, czym są parametry oraz
-                w jak tworzyć fantastyczne piosenki!
+                jak tworzyć fantastyczne piosenki!
               description_teacher: Jedną z najwspanialszych konstrukcji w informatyce
                 jest funkcja.  Funkcje (czasami nazywane procedurami) są mini programami,
                 które można wielokrotnie używać wewnątrz większych programów. Ta lekcja
@@ -7478,8 +7476,8 @@ pl:
             Functions with Parameters in Artist:
               name: Funkcje z parametrami z Artystą
               description_student: Szykuj palce do programowania. W ramach tych łamigłówek
-                będziesz tworzyć spektakularne rysunki w interfejsie Artist używając
-                funkcji z parametrami.
+                będziesz tworzyć spektakularne rysunki z Artystą używając funkcji
+                z parametrami.
               description_teacher: Na tej lekcji uczniowie będą kontynuować pracę
                 z użyciem funkcji z parametrami i bez nich. Uczniowie będą mieli okazję
                 do utworzenia swoich własnych rysunków z parametrami i bez nich, przed
@@ -7586,7 +7584,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
         csdnovice:
           title: Przemyślenia prowadzącego - nowicjusza TeacherCon "Odkrycia informatyki"
           description_audience: " CSD Prowadzący-nowicjusze"
@@ -7779,8 +7777,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
         csp4-dlp:
           title: CSP Jednostka 4 Głębokie uczenie
           description_audience: Zasady informatyki Prowadzcy na szkoleniu
@@ -7801,8 +7798,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 4 Deeper Learning Reflections:
-              name: Ukończ Dział 4 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 4 Przemyślenia na temat pogłębionej nauki
         csp5-dlp:
           title: Dział 5 CSP Pogłębiona nauka (Deeper Learning)
           description_audience: Zasady informatyki Prowadzcy na szkoleniu
@@ -7823,8 +7819,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 5 Deeper Learning Reflections:
-              name: Ukończ Dział 5 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 5 Przemyślenia na temat pogłębionej nauki
         csd1-dlp:
           title: Odkrycia informatyki Jednostka 1 Głębokie uczenie
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia  [CS
@@ -7895,8 +7890,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 5 Deeper Learning Reflections:
-              name: Ukończ Dział 5 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 5 Przemyślenia na temat pogłębionej nauki
         csd4-dlp:
           title: ' Pogłębiona nauka działu 4 "Odkryć informatyki'' [CS Discoveries
             Deeper Learning]'
@@ -7920,8 +7914,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 4 Deeper Learning Reflections:
-              name: Ukończ Dział 4 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 4 Przemyślenia na temat pogłębionej nauki
         csd3-dlp:
           title: Odkrycia informatyki Jednostka 2 Głębokie uczenie
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia  [CS
@@ -7944,8 +7937,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
         csd2-dlp:
           title: Odkrycia informatyki Jednostka 2 Głębokie uczenie
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia  [CS
@@ -8076,7 +8068,7 @@ pl:
             Conditional Loops in Maze:
               name: Pętle warunkowe w Labiryncie
             'Variables: Envelope Variables':
-              name: 'Zmienne: Zmienne w kopertach'
+              name: 'Zmienne: Koperty jako zmienne'
             'For Loops: For Loop Fun':
               name: 'Pętle "for": Zabawa z pętlami "for"'
             'Functions: Songwriting with Parameters':
@@ -8300,7 +8292,7 @@ pl:
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Intro to Conditionals with Farmer:
               name: Wprowadzenie do wyrażeń warunkowych z Rolnikiem
             'Algorithms: Dice Race':
@@ -8449,7 +8441,7 @@ pl:
             Conditionals & Loops in Farmer:
               name: Wyrażenia warunkowe i pętle z Rolnikiem
             'Variables: Envelope Variables':
-              name: 'Zmienne: Zmienne w kopertach'
+              name: 'Zmienne: Koperty jako zmienne'
             Variables in Artist:
               name: Zmienne z Artystą
             Variables in Play Lab:
@@ -8526,7 +8518,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Dice Race':
               name: 'Algorytmy: Wyścig kości'
             Course E Introduction:
@@ -8588,7 +8580,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Tangrams':
               name: 'Algorytmy: Tangramy'
             Course E Introduction:
@@ -9043,7 +9035,7 @@ pl:
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Dice Race':
               name: 'Algorytmy: Wyścig kości'
             Introduction:
@@ -9109,7 +9101,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Tangrams':
               name: 'Algorytmy: Tangramy'
             Introduction:
@@ -9276,7 +9268,7 @@ pl:
             Cats and Dogs:
               name: Koty i psy
         csd3-2018:
-          title: Dział 3 CSD - Animacje i gry ('18-'19)
+          title: CSD Jednostka 3 - Animacje i gry ('18-'19)
           description: W dziale 3 będziesz korzystać z doświadczeń w zakresie kodowania
             w trakcie programowania animacji, sztuki interaktywną i gry w Game Lab.Dział
             rozpoczyna się  od prostych kształtów i buduje się w nim bardziej wyszukane
@@ -9336,16 +9328,18 @@ pl:
                 podsumowującej.
             Drawing in Game Lab:
               name: Rysowanie w Game Lab
-              description_student: Klasę wprowadza się w Game Lab, środowisko programowania
-                na potrzeby tej części. Zaczyna go używać do ustawiania kształtów
-                na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania,
-                jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy
-                wersję online, które zaprojektowano na poprzedniej lekcji.
-              description_teacher: Klasę wprowadza się w Game Lab, środowisko programowania
-                na potrzeby tej części. Zaczyna go używać do ustawiania kształtów
-                na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania,
-                jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy
-                wersję online, które zaprojektowano na poprzedniej lekcji.
+              description_student: Klasa zostaje wprowadzona do Game Lab, środowiska
+                programowania na potrzeby tej jednostki i zaczyna go używać do ustawiania
+                kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania
+                i debugowania, jak również kilku prostym komendom. Pod koniec lekcji
+                klasa tworzy wersję online obrazu, zaprojektowanego na poprzedniej
+                lekcji.
+              description_teacher: Uczniowie zostają wprowadzeni do Game Lab, środowiska
+                programowania na potrzeby tej jednostki i zaczynają go używać do ustawiania
+                kształtów na ekranie. Poznają podstawy sekwencjonowania i debugowania,
+                jak również kilku prostych komend. Pod koniec lekcji będą potrafili
+                zaprogramować obraz podobny do tego, który utworzyli posługując się
+                narzędziami do rysowania na poprzedniej lekcji.
             Shapes and Randomization:
               name: Kształty oraz losowość
             Variables:
@@ -9494,14 +9488,14 @@ pl:
             Velocity:
               name: Prędkość
               description_student: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, klasę wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
-                typu " side scroller".
+                typu "side scroller".
               description_teacher: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, uczniów wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
                 typu "side scroller".
@@ -9638,9 +9632,9 @@ pl:
             CS Discoveries End of Semester Survey:
               name: Ankieta pod koniec semestru Odkrycia informatyki
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         csd2-2018:
-          title: Dział 2 CSD - Rozwój Internetu ('18- '19)
+          title: CSD Jednostka 2 - Rozwój Internetu ('18- '19)
           description: W dziale 2 nauczysz się, jak tworzyć i udostępniać treści na
             Twoich własnych stronach internetowych. Po podjęciu decyzji jaką treść
             chcesz udostępniać światu nauczysz się, jak konstruować i stylizować swoje
@@ -9661,19 +9655,19 @@ pl:
             Exploring Websites:
               name: Odkrywanie stron
               description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
-                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada szereg
-                witryn najczęściej używanych w Stanach Zjednoczonych i omawia, w jaki
-                sposób każda z tych witryn jest przydatna dla użytkowników i jak może
-                służyć również jej twórcom.
+                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
+                witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
+                w jaki sposób każda z tych witryn jest przydatna dla użytkowników
+                i jak może służyć również jej twórcom.
 
 '
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
                 internetowa może służyć, zarówno z punktu widzenia użytkowników, jak
-                i twórców. Klasa bada szereg witryn najczęściej używanych w Stanach
-                Zjednoczonych i omawia, w jaki sposób każda z tych witryn jest przydatna
-                dla użytkowników i jak może służyć również jej twórcom.
+                i twórców. Klasa bada wiele witryn najczęściej wykorzystywanych w
+                Stanach Zjednoczonych i omawia, w jaki sposób każda z tych witryn
+                jest przydatna dla użytkowników i jak może służyć również jej twórcom.
             'Websites for Expression ':
               name: Strony internetowe służące wyrażeniu się
               description_student: Jak możemy używać stron internetowych do osobistej
@@ -9822,7 +9816,7 @@ pl:
                 nawigację pomiędzy stronami zanim opublikują całą witrynę w Internecie.
                 \r\n\r"
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: Na tej lekcji wprowadza się pojęcie CSS jako sposobu
                 stylizowania elementów na stronie. Klasa poznaje podstawową składnię
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
@@ -9831,10 +9825,10 @@ pl:
               description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
                 sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
                 składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują na stronie HTML poświęconej
+                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
                 zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
                 Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu do swojej prywatnej strony internetotej.
+                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
                 \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
@@ -9848,9 +9842,9 @@ pl:
                 Uczniowie rozpoczynają tę lekcję od przyjrzenia się stronie internetotej
                 na temat "Deserów świata" [Desserts of the World]. Analizują i modyfikują
                 nowe style CSS na tej stronie dodając swoje własne style do strony.
-                Po wykonaniu pracy na stronie "Desery świata" [Desserts of the World]
-                uczniowie wykorzystują nowo nabytą wiedzę w zakresie właściwości CSS
-                do stylizacji swoich prywatnych stron internetowych w szerszym zakresie.
+                Po wykonaniu pracy na tej stronie uczniowie wykorzystują nowo nabytą
+                wiedzę w zakresie właściwości CSS do stylizacji swoich prywatnych
+                stron internetowych w szerszym zakresie.
             Sources and Search Engines:
               name: Źródła i wyszukiwarki
               description_student: Po  zakończeniu pierwszego poszukiwania skarbu
@@ -9898,7 +9892,7 @@ pl:
                 omówienie ogólne procesu, który przyjęli do uzyskania końcowego układu.
                 \r\n"
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         coursea-2018:
           title: Kurs A (2018)
           assignment_family_title: Kurs A
@@ -10049,7 +10043,7 @@ pl:
             Conditionals & Loops in Farmer:
               name: Wyrażenia warunkowe i pętle z Rolnikiem
             'Variables: Envelope Variables':
-              name: 'Zmienne: Zmienne w kopertach'
+              name: 'Zmienne: Koperty jako zmienne'
             Variables in Artist:
               name: Zmienne z Artystą
             Variables in Play Lab:
@@ -10323,50 +10317,53 @@ pl:
             Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.:
               name: Jednostka 1.2 - Protokoły internetowe, TCP/IP, DNS, HTTP, itp.
             Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression:
-              name: Jednostak 2 - 1. Bity, bajty, szesnastkowy system liczbowy i kompresja
+              name: Jednostka 2 - 1. Bity, bajty, szesnastkowy system liczbowy i kompresja
             Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts:
               name: Jednostka 2 - 2. Interpretowanie danych i wykresów, giga dane,
                 globalne czynniki oddziaływania
             Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
-              name: Dział 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrahowanie
+              name: Jednostka 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrakcja
             Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
-              name: Dział 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrahowanie
+              name: Jednostka 3 - 1. Programowanie - Żółw, pętle, funkcje, abstrakcja
             'Unit 1 Assessment 1 - Binary and Ascii ':
-              name: 'Dział 1 Ocena 1: System binarny i Ascii'
+              name: 'Jednostka 1 SPrawdzian 1: System binarny i ASCII'
             Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc:
-              name: Dział 1 Ocena 2 - Protokoły internetowe, TCP/IP, DNS, HTTP, itp
+              name: Jednostka 1 Sprawdzian 2 - Protokoły internetowe, TCP/IP, DNS,
+                HTTP, itp
             Unit 2-1 - Bits, Bytes, Hexadecimal and Compression:
-              name: Dział 2 - 1. Bity, bajty, szesnastkowy system liczbowy i kompresja
+              name: Jednostka  2 - 1. Bity, bajty, szesnastkowy system liczbowy i
+                kompresja
             Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts:
               name: Jednostka 2 - 2. Interpretowanie danych i wykresów, giga dane,
                 globalne czynniki oddziaływania
             Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction:
-              name: Dział 3 - 1. Programowanie żółwia,  pętle, funkcje, abstrahowanie
+              name: Jednostka 3 Quiz 1. Programowanie żółwia,  pętle, funkcje, abstrakcja
             Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression:
-              name: Dział 2 Ocena 1 - Bity, bajty, szesnastkowy system liczbowy i
-                kompresja
+              name: Jednostka 2 Sprawdzian 1 - Bity, bajty, szesnastkowy system liczbowy
+                i kompresja
             Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts:
               name: Jednostka 2 - 2 - Interpretowanie danych i wykresów, giga dane,
                 globalne czynniki oddziaływania
             Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction:
-              name: Dział 3 Ocena 1 - Programowanie żółwia,  pętle, funkcje, abstrahowanie
+              name: Jednostka 3 Sprawdzian 1 - Programowanie żółwia,  pętle, funkcje,
+                abstrakcja
             Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption:
-              name: Część 4 Ocena 1 - Prywatność, cyberbezpieczeństwo, szyfrowanie
+              name: Jednostka 4 Sprawdzian 1 - Prywatność, cyberbezpieczeństwo, szyfrowanie
             Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review:
-              name: Dział 5 Ocena 1 - Zdarzenia, zmienne, debugowanie, arytmetyka,
+              name: Jednostka 5 Sprawdzian 1 - Zdarzenia, zmienne, debugowanie, arytmetyka,
                 weryfikacja żółwia
             Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings:
-              name: Dział 5 Ocena 2 - Instrukcje "jeśli", wyrażenia boolowskie, ciągi
-                Statements, Boolean Expressions, Strings
+              name: Jednostka 5 Sprawdzian 2 - Instrukcje "jeśli", wyrażenia boolowskie,
+                łańcuchy
             Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists:
-              name: Dział 5 Ocena 3 - Instrukcje "jeśli", wyrażenia boolowskie, tablice
-                i listy
+              name: Jednostka 5 Sprawdzian 3 - Instrukcje "dopóki", wyrażenia boolowskie,
+                tablice i listy
             Unit 5 Assessment 4 - List Algorithms, Functions with Return Values:
-              name: Dział 5 Ocena 4 - Sporządź listę algorytmów, funkcje z wartościami
-                zwrotnymi
+              name: Jednostka 5 Sprawdzian 4 - Algorytmy na listach, funkcje ze zwracaniem
+                wartości
             Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
-              name: Dział 5 Ocena 5 - Praktyka pytań pseudokodu AP (zmienne, procedury,
-                węzły, zastrzeżenia warunkowe)
+              name: Jednostka 5 Sprawdzian 5 - Praktyka pytań o pseudokododzie w ramach
+                AP (zmienne, procedury, pętle, wyrażenia warunkowe)
         coursec-2018:
           title: Kurs C (2018)
           assignment_family_title: Kurs C
@@ -10421,7 +10418,7 @@ pl:
             w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego.
             Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako
             podstawy innowacji Twojego własnego projektu.
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           lesson_groups:
             csd6_1:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
@@ -10493,7 +10490,7 @@ pl:
             'Project: Prototype an Innovation':
               name: Projekt - Zbuduj prototyp rozwiązania innowacyjnego
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         coursee-2018:
           title: Kurs E (2018)
           assignment_family_title: Kurs E
@@ -10517,7 +10514,7 @@ pl:
             'Programming: My Robotic Friends':
               name: Moi przyjaciele wśród robotów
             Sequence in Maze:
-              name: Sekwencje w labiryncie
+              name: Kodowanie z komentarzami
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
             Debugging with Scrat:
@@ -10531,7 +10528,7 @@ pl:
             Nested Loops:
               name: Zagnieżdżone pętle w labiryncie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Dice Race':
               name: 'Algorytmy: Wyścig kości'
               description_student: Dowiedz jak opisać grę z punktu widzenia za tej
@@ -10619,7 +10616,7 @@ pl:
                 uczniowie będą nawigować po złożonych ścieżkach, zebrać mnóstwo nektaru
                 oraz produkować mnóstwo miodu.
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Determine the Concept:
               name: Określ pomysł
               description_student: Nie zdradzamy żadnych tajemnic! Na tej lekcji można
@@ -10631,7 +10628,7 @@ pl:
                 pętle "powtórz", wyrażenia warunkowe, pętle "dopóki" i funkcje.
             Build a Play Lab Game:
               name: Zbuduj grę Play Lab
-              description_student: Ćwicz tworzenie gier do udostępnienia znajomym
+              description_student: Ćwicz tworzenie gier, aby udostępniać je znajomym
                 i rodzinie.
               description_teacher: Na tej lekcji wykorzystuje się interfejs Play Lab,
                 platformy, na której uczniowie mogą tworzyć swoje własne gry i wywoływać
@@ -10706,7 +10703,7 @@ pl:
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
               description_student: Na tej lekcji będziesz się uczył o crowdsourcingu,
-                procesie budowania projektu przy pomocy zespołu.
+                procesie budowania projektu z zespołem.
               description_teacher: W informatyce, stajemy w obliczu znaczących, zniechęcających
                 problemów. Wyzwania takiej, jak znajdowanie wielkich liczb pierwszych
                 lub tworzenia sekwencji DNA są prawie niemożliwe do zrealizowania
@@ -10749,7 +10746,7 @@ pl:
             'Programming: My Robotic Friends':
               name: Moi przyjaciele wśród robotów
             Sequence in Maze:
-              name: Sekwencje w labiryncie
+              name: Kodowanie z komentarzami
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
             Debugging with Scrat:
@@ -10763,7 +10760,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w labiryncie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Tangrams':
               name: 'Algorytmy: Tangramy'
               description_student: "Teraz będziesz się uczyć o algorytmach używając
@@ -10871,7 +10868,7 @@ pl:
               name: Pętle "for" z Artystą
               description_student: Przygotuj się na stworzenie kolejnego dzieła. Teraz
                 będziesz używać pętli "dla", aby tworzyć takie obrazki, na widok których
-                odbiorcom "opadnie szczena".
+                odbiorcom opadnie szczęka.
               description_teacher: Na tej lekcji uczniowie będą kontynuować ćwiczenie
                 pętli "dla", tym razem korzystając z interfejsu Artist. Uczniowie
                 będą rozwiązywać łamigłówki łącząc koncepcje zmiennych, pętli oraz
@@ -10881,7 +10878,7 @@ pl:
               name: Pisanie piosenek z parametrami
               description_student: A może po prosu wydasz kolejny singiel z wielkim
                 przebojem! Na tej lekcji będziesz się uczyć, czym są parametry oraz
-                w jak tworzyć fantastyczne piosenki!
+                jak tworzyć fantastyczne piosenki!
               description_teacher: Jedną z najwspanialszych konstrukcji w informatyce
                 jest funkcja.  Funkcje (czasami nazywane procedurami) są mini programami,
                 które można wielokrotnie używać wewnątrz większych programów. Ta lekcja
@@ -10893,8 +10890,8 @@ pl:
             Functions with Parameters in Artist:
               name: Funkcje z parametrami z Artystą
               description_student: Szykuj palce do programowania. W ramach tych łamigłówek
-                będziesz tworzyć spektakularne rysunki w interfejsie Artist używając
-                funkcji z parametrami.
+                będziesz tworzyć spektakularne rysunki z Artystą używając funkcji
+                z parametrami.
               description_teacher: Na tej lekcji uczniowie będą kontynuować pracę
                 z użyciem funkcji z parametrami i bez nich. Uczniowie będą mieli okazję
                 do utworzenia swoich własnych rysunków z parametrami i bez nich, przed
@@ -11276,7 +11273,7 @@ pl:
                 na później. Klasa kończy się rozmową, która łączy lekcję z aplikacjami
                 znanymi uczniom.'
         csd4-2018:
-          title: Część 4 CSD - Proces projektowania ('18-'19)
+          title: CSD Jednostka 4 - Proces projektowania ('18-'19)
           description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego
             informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej
             rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa
@@ -11285,8 +11282,8 @@ pl:
             tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania
             na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i
             kształtować dalszą iterację.
-          description_short: Ucz się, jak projektować program, który zaspokaja potrzeby
-            użytkowników
+          description_short: Ucz się, jak zaprojektować program, który zaspokoi potrzeby
+            Twoich użytkowników
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -11564,9 +11561,9 @@ pl:
                 rozwiązać, sposobów włączenia informacji zwrotnych z testowania oraz
                 swoich planów na przyszłość.
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         csd5-2018:
-          title: Część 5 CSD - Dane a społeczeństwo ('18- '19)
+          title: CSD Jednostka 5 - Dane a społeczeństwo ('18- '19)
           description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu problemów
             oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym procesie.
             W pierwszym rozdziale bada się różne systemy używane do przedstawiania
@@ -11885,7 +11882,7 @@ pl:
                 aktualizacje do swoich projektów przed opracowaniem prezentacji dla
                 klasy.
             CS Discoveries Post-Course Survey:
-              name: Ankieta po kursie "Odkrycia Informatyki"
+              name: Ankieta po kursie Odkrycia Informatyki
         csp2-2018:
           title: CSP Jednostka 2 - Informacje cyfrowe ('18-'19)
           description: Ten dział dalej zgłębia sposoby kodowania, przedstawiania i
@@ -12043,7 +12040,7 @@ pl:
             CS Principles Post-Course Survey:
               name: Zasady informatyki Ankieta po kursie
         csp4-2018:
-          title: Dział 4 CSP - Ważne dane i prywatność ('18- '19)
+          title: CSP Jednostka 4 - Giga dane i prywatność ('18- '19)
           description: Bogaty w dane świat, w którym żyjemy, niesię ze sobą wiele
             złożonych pytań dotyczących polityki publicznej, prawa, etyki oraz oddziaływania
             społecznego. Do celów niniejszego rozdziału można zaliczyć wypracowanie
@@ -12055,7 +12052,7 @@ pl:
             prawo i etykę.
           lesson_groups:
             csp4_1_2018:
-              display_name: 'Dział 4: Ważne dane i prywatność'
+              display_name: 'Jednostka 4: Giga dane i prywatność'
             cspAssessment:
               display_name: Sprawdzian z rozdziału
             cspSurvey:
@@ -12088,22 +12085,21 @@ pl:
             Check Your Assumptions:
               name: Sprawdź swoje założenia
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Mid-Year Survey:
               name: Ankieta w trakcie roku
             CS Principles Post-Course Survey:
               name: Zasady informatyki Ankieta po kursie
         csp5-2018:
-          title: Dział 5 CSP - Budowanie aplikacji ('18- '19)
+          title: CSP Jednostka 5 - Budowanie aplikacji ('18- '19)
           description: Ten dział stanowi kontynuację wprowadzania koncepcji fundamentalnych
             programowania komputerowego, co odblokowuje możliwość tworzenia bogatych,
             interaktywnych aplikacji. W tym dziale używa się JavaScript jako języka
             oprogramowania oraz App Lab jako środowiska programowania do budowania
             aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie
             języki i narzędzia programowania.
-          description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania
-            komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych
-            aplikacji.
+          description_short: Kontynuuj poznawanie podstawowych pojęć programowania
+            komputerów w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
               display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
@@ -12275,8 +12271,7 @@ pl:
               name: Ukończ Dział 2 Przemyślenia na temat pogłębionej nauki [Deeper
                 Learning Reflections]
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
         csd2-dlp-18:
           title: "  Odkrycia Informatyki, Jednostka 2, Pogłębiona Nauka 2018-2019"
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia
@@ -12324,8 +12319,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
         csd4-dlp-18:
           title: ' Pogłębiona nauka działu 4 "Odkryć informatyki'' [CS Discoveries
             Deeper Learning] 2018-2019'
@@ -12352,8 +12346,7 @@ pl:
               name: Ukończ Dział 2 Przemyślenia na temat pogłębionej nauki [Deeper
                 Learning Reflections]
             Complete Unit 4 Deeper Learning Reflections:
-              name: Ukończ Dział 4 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 4 Przemyślenia na temat pogłębionej nauki
         csd5-dlp-18:
           title: ' Pogłębiona nauka działu 5 "Odkryć informatyki'' [CS Discoveries
             Deeper Learning] 2018-2019'
@@ -12377,8 +12370,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 5 Deeper Learning Reflections:
-              name: Ukończ Dział 5 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 5 Przemyślenia na temat pogłębionej nauki
         csd6-dlp-18:
           title: ' Pogłębiona nauka działu 6 "Odkryć informatyki'' [CS Discoveries
             Deeper Learning] 2018-2019'
@@ -12402,8 +12394,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 5 Deeper Learning Reflections:
-              name: Ukończ Dział 5 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 5 Przemyślenia na temat pogłębionej nauki
             Complete Unit 6 Deeper Learning Reflections:
               name: Ukończ Dział 6 Przemyślenia na temat pogłębionej nauki [Deeper
                 Learning Reflections]
@@ -12478,8 +12469,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
         csp4-dlp-18:
           title: " Zasady informatyki,  Jednostka 4, Pogłębiona Nauka 2018-2019"
           description_audience: Prowadzący "Zasady informatyki" w procesie szkolenia
@@ -12502,11 +12492,9 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 3 Deeper Learning Reflections:
-              name: Ukończ Dział 3 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 3 Przemyślenia na temat pogłębionej nauki
             Complete Unit 4 Deeper Learning Reflections:
-              name: Ukończ Dział 4 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 4 Przemyślenia na temat pogłębionej nauki
         csp5-dlp-18:
           title: " Zasady informatyki,  Jednostka 5, Pogłębiona Nauka 2018-2019"
           description_audience: Prowadzący "Zasady informatyki" w procesie szkolenia
@@ -12529,8 +12517,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Unit 5 Deeper Learning Reflections:
-              name: Ukończ Dział 5 Przemyślenia na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ Jednostkę 5 Przemyślenia na temat pogłębionej nauki
         csp-explore-dlp-18:
           title: ' Pogłębiona nauka "Zasad informatyki'' [CS Principles Deeper Learning]
             2018-2019'
@@ -12590,7 +12577,7 @@ pl:
         csd-post-survey:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           description_audience: Uczniowie CSD
-          description_short: Ankieta dla uczniów po odbyciu kursu CSD
+          description_short: CSD Ankieta dla uczniów po odbyciu kursu
           description: Witamy w ankiecie po ukończeniu kursu poświęconego "Odkryciom
             informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi
             mają charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko wyniki
@@ -12602,9 +12589,9 @@ pl:
               display_name: Ankieta po odbyciu kursu
           lessons:
             CSD post-course survey:
-              name: Ankieta po zakończeniu kursu  CSD
+              name: CSD Ankieta po zakończeniu kursu
         csd-novice-18:
-          title: Przemyślenia Nowicjusza "Odkrycia CS" 2018-2019
+          title: Odkrycia Informatyki Przemyślenia Nowicjusza 2018-2019
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia
             2019 [CS Discoveries Facilitators in Training 2019]
           description_short: Materiały do przemyśleń nowicjusza przeznaczone dla prowadzących
@@ -12971,7 +12958,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Student Survey (Variables):
@@ -12989,7 +12976,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Lists Explore:
               name: Eksploruj listy
         dance-extras:
@@ -13042,7 +13029,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals in Farmer:
@@ -13052,7 +13039,7 @@ pl:
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
                 aby uzyskać jak najskuteczniejszy kod?
               description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być
-                funkcje w tej wesołej i interaktywnej przygodzie w grze Minecraft!
+                funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             The Power of Words:
               name: Moc słów
               description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma
@@ -13128,7 +13115,7 @@ pl:
               name: Pętle "for" z Artystą
               description_student: Przygotuj się na stworzenie kolejnego dzieła. Teraz
                 będziesz używać pętli "dla", aby tworzyć takie obrazki, na widok których
-                odbiorcom "opadnie szczena".
+                odbiorcom opadnie szczęka.
               description_teacher: Na tej lekcji uczniowie będą kontynuować ćwiczenie
                 pętli "dla", ale tym razem korzystając z interfejsu Artist. Uczniowie
                 będą rozwiązywać łamigłówki łącząc koncepcje zmiennych, pętli oraz
@@ -13308,7 +13295,7 @@ pl:
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
               description_student: Na tej lekcji będziesz się uczył o crowdsourcingu,
-                procesie budowania projektu przy pomocy zespołu.
+                procesie budowania projektu z zespołem.
               description_teacher: W informatyce, stajemy w obliczu znaczących, zniechęcających
                 problemów. Wyzwania takiej, jak znajdowanie wielkich liczb pierwszych
                 lub tworzenia sekwencji DNA są prawie niemożliwe do zrealizowania
@@ -13525,8 +13512,8 @@ pl:
               name: Zbuduj grę Play Lab
             'Unplugged: Binary':
               name: Binarne obrazy (Binary Images)
-              description_student: Ucz się, jak komputery przechowują obrazki z użyciem
-                języka dającego tylko dwie opcje.
+              description_student: Ucz się, jak komputery przechowują obrazki używając
+                języka z tylko dwoma opcjami.
               description_teacher: Chociaż wiele osób sądzi, że binarne są tylko zera
                 i jedynki, uczniom zostanie wprowadzona koncepcja, że informacje mogą
                 być reprezentowane na różne binarne sposoby.  Na tej lekcji to pojęcie
@@ -13535,10 +13522,10 @@ pl:
                 w postaci binarnej.
             Artist Binary:
               name: Binarne obrazy z Artystą
-              description_student: Na tej lekcji będziesz się uczyć jak tworzyć obrazki
-                składające się tylko z zer i jedynek.
-              description_teacher: Ta seria lekcji internetowych będzie edukować  uczniów
-                w zakresie tworzenia obrazków z użyciem włączenia i wyłączenia.
+              description_student: Na tej lekcji będziesz się uczyć, jak tworzyć obrazki
+                używając tylko zer i jedynek.
+              description_teacher: Na tej serii lekcji internetowych uczniowie będą
+                się uczyć, jak tworzyć obrazki z użyciem włączania i wyłączania.
             Build a Star Wars Game:
               name: Zbuduj grę Star Wars
               description_student: Poczuj moc w trakcie budowania swojej własnej gry
@@ -13595,7 +13582,7 @@ pl:
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals:
@@ -13653,9 +13640,9 @@ pl:
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
                 aby uzyskać jak najskuteczniejszy kod?
               description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być
-                funkcje w tej wesołej i interaktywnej przygodzie w grze Minecraft!
+                funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
               description_student: Dzięki funkcjom będziesz oszczędzać mnóstwo pracy
                 w trakcie pomocy udzielanej farmerce przy żniwach.
               description_teacher: Uczniowie ćwiczyli tworzenie efektownych projektów
@@ -13769,7 +13756,7 @@ pl:
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
               description_student: Na tej lekcji będziesz się uczył o crowdsourcingu,
-                procesie budowania projektu przy pomocy zespołu.
+                procesie budowania projektu z zespołem.
               description_teacher: W informatyce, stajemy w obliczu znaczących, zniechęcających
                 problemów. Wyzwania takiej, jak znajdowanie wielkich liczb pierwszych
                 lub tworzenia sekwencji DNA są prawie niemożliwe do zrealizowania
@@ -13800,7 +13787,7 @@ pl:
                 tego, by uczniowie zaprojektowali swój własnych projekt pod koniec
                 tego etapu.
             Nested Loops in Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
               description_student: Anna i Elsa umieją świetnie jeździć na łyżwach,
                 ale potrzebują Twojej pomocy w utworzeniu układów na lodzie. Użyj
                 pętli zagnieżdżonych do utworzenia czegoś niewiarygodnie FAJNEGO.
@@ -13966,7 +13953,7 @@ pl:
             Functions in Minecraft:
               name: Funkcje w Minecrafcie
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Functions in Artist:
               name: Funkcje z Artistą
             Screen Out the Mean:
@@ -14870,19 +14857,19 @@ pl:
             Exploring Websites:
               name: Odkrywanie stron
               description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
-                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada szereg
-                witryn najczęściej używanych w Stanach Zjednoczonych i omawia, w jaki
-                sposób każda z tych witryn jest przydatna dla użytkowników i jak może
-                służyć również jej twórcom.
+                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
+                witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
+                w jaki sposób każda z tych witryn jest przydatna dla użytkowników
+                i jak może służyć również jej twórcom.
 
 '
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
                 internetowa może służyć, zarówno z punktu widzenia użytkowników, jak
-                i twórców. Klasa bada szereg witryn najczęściej używanych w Stanach
-                Zjednoczonych i omawia, w jaki sposób każda z tych witryn jest przydatna
-                dla użytkowników i jak może służyć również jej twórcom.
+                i twórców. Klasa bada wiele witryn najczęściej wykorzystywanych w
+                Stanach Zjednoczonych i omawia, w jaki sposób każda z tych witryn
+                jest przydatna dla użytkowników i jak może służyć również jej twórcom.
             'Websites for Expression ':
               name: Strony internetowe służące wyrażeniu się
               description_student: Jak możemy używać stron internetowych do osobistej
@@ -15031,7 +15018,7 @@ pl:
                 nawigację pomiędzy stronami zanim opublikują całą witrynę w Internecie.
                 \r\n\r"
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: Na tej lekcji wprowadza się pojęcie CSS jako sposobu
                 stylizowania elementów na stronie. Klasa poznaje podstawową składnię
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
@@ -15040,10 +15027,10 @@ pl:
               description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
                 sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
                 składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują na stronie HTML poświęconej
+                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
                 zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
                 Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu do swojej prywatnej strony internetotej.
+                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
                 \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
@@ -15057,9 +15044,9 @@ pl:
                 Uczniowie rozpoczynają tę lekcję od przyjrzenia się stronie internetotej
                 na temat "Deserów świata" [Desserts of the World]. Analizują i modyfikują
                 nowe style CSS na tej stronie dodając swoje własne style do strony.
-                Po wykonaniu pracy na stronie "Desery świata" [Desserts of the World]
-                uczniowie wykorzystują nowo nabytą wiedzę w zakresie właściwości CSS
-                do stylizacji swoich prywatnych stron internetowych w szerszym zakresie.
+                Po wykonaniu pracy na tej stronie uczniowie wykorzystują nowo nabytą
+                wiedzę w zakresie właściwości CSS do stylizacji swoich prywatnych
+                stron internetowych w szerszym zakresie.
             Sources and Search Engines:
               name: Źródła i wyszukiwarki
               description_student: Po  zakończeniu pierwszego poszukiwania skarbu
@@ -15171,16 +15158,18 @@ pl:
                 podsumowującej.
             Drawing in Game Lab:
               name: Rysowanie w Game Lab
-              description_student: Klasę wprowadza się w Game Lab, środowisko programowania
-                na potrzeby tej części. Zaczyna go używać do ustawiania kształtów
-                na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania,
-                jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy
-                wersję online, które zaprojektowano na poprzedniej lekcji.
-              description_teacher: Klasę wprowadza się w Game Lab, środowisko programowania
-                na potrzeby tej części. Zaczyna go używać do ustawiania kształtów
-                na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania,
-                jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy
-                wersję online, które zaprojektowano na poprzedniej lekcji.
+              description_student: Klasa zostaje wprowadzona do Game Lab, środowiska
+                programowania na potrzeby tej jednostki i zaczyna go używać do ustawiania
+                kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania
+                i debugowania, jak również kilku prostym komendom. Pod koniec lekcji
+                klasa tworzy wersję online obrazu, zaprojektowanego na poprzedniej
+                lekcji.
+              description_teacher: Uczniowie zostają wprowadzeni do Game Lab, środowiska
+                programowania na potrzeby tej jednostki i zaczynają go używać do ustawiania
+                kształtów na ekranie. Poznają podstawy sekwencjonowania i debugowania,
+                jak również kilku prostych komend. Pod koniec lekcji będą potrafili
+                zaprogramować obraz podobny do tego, który utworzyli posługując się
+                narzędziami do rysowania na poprzedniej lekcji.
             Shapes and Randomization:
               name: Kształty oraz losowość
             Variables:
@@ -15329,14 +15318,14 @@ pl:
             Velocity:
               name: Prędkość
               description_student: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, klasę wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
-                typu " side scroller".
+                typu "side scroller".
               description_teacher: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, uczniów wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
                 typu "side scroller".
@@ -15486,8 +15475,8 @@ pl:
             tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania
             na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i
             kształtować dalszą iterację.
-          description_short: Ucz się, jak projektować program, który zaspokaja potrzeby
-            użytkowników
+          description_short: Ucz się, jak zaprojektować program, który zaspokoi potrzeby
+            Twoich użytkowników
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -16104,7 +16093,7 @@ pl:
             w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego.
             Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako
             podstawy innowacji Twojego własnego projektu.
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           lesson_groups:
             csd6_1:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
@@ -16200,7 +16189,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -16210,7 +16199,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             'Lesson 15: Unit 4 Assessment':
               name: 'Lekcja 15: Jednostka 4 Sprawdzian'
             Unit 4 STUDENT Survey:
@@ -16379,7 +16368,7 @@ pl:
             prawo i etykę.
           lesson_groups:
             csp4_1_2018:
-              display_name: 'Dział 4: Ważne dane i prywatność'
+              display_name: 'Jednostka 4: Giga dane i prywatność'
             cspAssessment:
               display_name: Sprawdzian z rozdziału
             cspSurvey:
@@ -16406,7 +16395,7 @@ pl:
             Rapid Research - Cybercrime:
               name: Szybkie badania - Cyberprzestępczość
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Mid-Year Survey:
               name: Ankieta w trakcie roku
             'Optional: Data Questions':
@@ -16421,9 +16410,8 @@ pl:
             oprogramowania oraz App Lab jako środowiska programowania do budowania
             aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie
             języki i narzędzia programowania.
-          description_short: Kontynuuj poznawanie fundamentalnych koncepcji programowania
-            komputerowego w JavaScript poprzez tworzenie bogatych, interaktywnych
-            aplikacji.
+          description_short: Kontynuuj poznawanie podstawowych pojęć programowania
+            komputerów w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
           lesson_groups:
             csp5_1:
               display_name: 'Rozdział 1: Programowanie sterowane zdarzeniami'
@@ -16731,13 +16719,13 @@ pl:
             ramp_up:
               display_name: Intensyfikacja działań
             time4cs_c1:
-              display_name: 'Kolekcja 1: Region Everglades i jego ekosystemy'
+              display_name: 'Kolekcja 1: Everglades i jego ekosystemy'
             time4cs_c2:
-              display_name: 'Kolekcja 2: Łańcuchy żywieniowe (w regionie Everglades)'
+              display_name: 'Kolekcja 2: Łańcuchy żywieniowe (w Everglades)'
             time4cs_c3:
-              display_name: 'Kolekcja 3: Gatunki rodzime (w regionie Everglades)'
+              display_name: 'Kolekcja 3: Gatunki rodzime (w Everglades)'
             time4cs_c4:
-              display_name: 'Kolekcja 4: Wpływ gatunków napływowych (w regionie Everglades)'
+              display_name: 'Kolekcja 4: Wpływ gatunków napływowych (w Everglades)'
             time4cs_c5:
               display_name: 'Kolekcja 5: Obywatele biorą sprawy w swoje ręce'
           lessons:
@@ -16774,7 +16762,7 @@ pl:
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Learning Sprites with Sprite Lab:
               name: Uczące się duszki w Sprite Lab
             Alien Dance Party with Sprite Lab:
@@ -16860,7 +16848,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -16870,7 +16858,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp2-pilot-staging:
           title: 'Jednostka 2: Internet'
           lesson_groups:
@@ -16910,7 +16898,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -16920,7 +16908,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp3-pilot-staging:
           title: 'Jednostka  3: Wprowadzenie do projektowania aplikacji'
           lessons:
@@ -16951,7 +16939,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -16961,7 +16949,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Introduction to Apps:
               name: Wprowadzenie do aplikacji
             'Project: Designing an App, pt. 1':
@@ -17031,7 +17019,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -17041,7 +17029,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp5-pilot-staging:
           title: 'Jednostka 5: Listy, pętle i przejścia'
           lesson_groups:
@@ -17083,7 +17071,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -17093,7 +17081,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Lists Explore:
               name: Eksploruj listy
             Lists Investigate:
@@ -17179,7 +17167,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -17189,7 +17177,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp7-pilot-staging:
           title: 'Jednostka 7: Funkcje i Biblioteki'
           lesson_groups:
@@ -17227,7 +17215,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -17237,7 +17225,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
             Functions with Parameters and Return Explore:
               name: Eksploruj funkcje z parametrami i zwracaniem
             Libraries:
@@ -17303,7 +17291,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -17313,7 +17301,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp9-pilot-staging:
           title: 'Jednostka 9: Dane'
           lesson_groups:
@@ -17353,7 +17341,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -17363,7 +17351,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         csp10-pilot-staging:
           title: 'Jednostka 10: Globalne oddziaływanie'
           lesson_groups:
@@ -17403,7 +17391,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -17413,7 +17401,7 @@ pl:
             Practice PT Part 3:
               name: Praktyka PT Część 3
             Unit 4 Assessment:
-              name: Dział 4 Ocena
+              name: Jednostka 4 Sprawdzian
         pluralsight:
           title: Uzyskaj dostęp do Pluralsight One
           lessons:
@@ -17443,7 +17431,7 @@ pl:
               display_name: Ankieta
           lessons:
             CSD post-course survey:
-              name: Ankieta po zakończeniu kursu  CSD
+              name: CSD Ankieta po zakończeniu kursu
         csp-post-survey-2018:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           description_audience: Uczniowie CSP
@@ -17859,19 +17847,19 @@ pl:
             Exploring Websites:
               name: Odkrywanie stron
               description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
-                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada szereg
-                witryn najczęściej używanych w Stanach Zjednoczonych i omawia, w jaki
-                sposób każda z tych witryn jest przydatna dla użytkowników i jak może
-                służyć również jej twórcom.
+                internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
+                witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
+                w jaki sposób każda z tych witryn jest przydatna dla użytkowników
+                i jak może służyć również jej twórcom.
 
 '
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
                 internetowa może służyć, zarówno z punktu widzenia użytkowników, jak
-                i twórców. Klasa bada szereg witryn najczęściej używanych w Stanach
-                Zjednoczonych i omawia, w jaki sposób każda z tych witryn jest przydatna
-                dla użytkowników i jak może służyć również jej twórcom.
+                i twórców. Klasa bada wiele witryn najczęściej wykorzystywanych w
+                Stanach Zjednoczonych i omawia, w jaki sposób każda z tych witryn
+                jest przydatna dla użytkowników i jak może służyć również jej twórcom.
             'Websites for Expression ':
               name: Strony internetowe służące wyrażeniu się
               description_student: Jak możemy używać stron internetowych do osobistej
@@ -18020,7 +18008,7 @@ pl:
                 nawigację pomiędzy stronami zanim opublikują całą witrynę w Internecie.
                 \r\n\r"
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: Na tej lekcji wprowadza się pojęcie CSS jako sposobu
                 stylizowania elementów na stronie. Klasa poznaje podstawową składnię
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
@@ -18029,10 +18017,10 @@ pl:
               description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
                 sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
                 składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują na stronie HTML poświęconej
+                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
                 zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
                 Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu do swojej prywatnej strony internetotej.
+                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
                 \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
@@ -18046,9 +18034,9 @@ pl:
                 Uczniowie rozpoczynają tę lekcję od przyjrzenia się stronie internetotej
                 na temat "Deserów świata" [Desserts of the World]. Analizują i modyfikują
                 nowe style CSS na tej stronie dodając swoje własne style do strony.
-                Po wykonaniu pracy na stronie "Desery świata" [Desserts of the World]
-                uczniowie wykorzystują nowo nabytą wiedzę w zakresie właściwości CSS
-                do stylizacji swoich prywatnych stron internetowych w szerszym zakresie.
+                Po wykonaniu pracy na tej stronie uczniowie wykorzystują nowo nabytą
+                wiedzę w zakresie właściwości CSS do stylizacji swoich prywatnych
+                stron internetowych w szerszym zakresie.
             Sources and Search Engines:
               name: Źródła i wyszukiwarki
               description_student: Po  zakończeniu pierwszego poszukiwania skarbu
@@ -18192,16 +18180,18 @@ pl:
                 podsumowującej.
             Drawing in Game Lab:
               name: Rysowanie w Game Lab
-              description_student: Klasę wprowadza się w Game Lab, środowisko programowania
-                na potrzeby tej części. Zaczyna go używać do ustawiania kształtów
-                na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania,
-                jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy
-                wersję online, które zaprojektowano na poprzedniej lekcji.
-              description_teacher: Klasę wprowadza się w Game Lab, środowisko programowania
-                na potrzeby tej części. Zaczyna go używać do ustawiania kształtów
-                na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania i debugowania,
-                jak również kilku prostym komendom. Pod koniec lekcji klasa tworzy
-                wersję online, które zaprojektowano na poprzedniej lekcji.
+              description_student: Klasa zostaje wprowadzona do Game Lab, środowiska
+                programowania na potrzeby tej jednostki i zaczyna go używać do ustawiania
+                kształtów na ekranie. Lekcja poświęcona jest podstawom sekwencjonowania
+                i debugowania, jak również kilku prostym komendom. Pod koniec lekcji
+                klasa tworzy wersję online obrazu, zaprojektowanego na poprzedniej
+                lekcji.
+              description_teacher: Uczniowie zostają wprowadzeni do Game Lab, środowiska
+                programowania na potrzeby tej jednostki i zaczynają go używać do ustawiania
+                kształtów na ekranie. Poznają podstawy sekwencjonowania i debugowania,
+                jak również kilku prostych komend. Pod koniec lekcji będą potrafili
+                zaprogramować obraz podobny do tego, który utworzyli posługując się
+                narzędziami do rysowania na poprzedniej lekcji.
             Shapes and Randomization:
               name: Kształty oraz losowość
             Variables:
@@ -18350,14 +18340,14 @@ pl:
             Velocity:
               name: Prędkość
               description_student: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, klasę wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
-                typu " side scroller".
+                typu "side scroller".
               description_teacher: Po krótkiej powtórce dotyczącej tego, jakiego wzorca
-                licznika używa się do przemieszczania duszków, uczniów wprowadza się
-                w właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
+                licznika używa się do przemieszczania duszków, wprowadza się w klasie
+                właściwości, które ustalają bezpośrednio prędkość i prędkość obrotową.
                 W miarę użytkowania nowych właściwości w różny sposób, nabywają oni
                 umiejętności, które są im potrzebne do utworzenia podstawotej gry
                 typu "side scroller".
@@ -18987,7 +18977,7 @@ pl:
             k5_basic_concepts:
               display_name: Podstawowe pojęcia kodowania oraz praktyki edukacyjne
             k5_diving_deeper:
-              display_name: 'Nurkowanie głębiej: Kursy E i F'
+              display_name: 'Zgłębiaj bardziej: Kursy E i F'
             k5_next_steps:
               display_name: Następne Kroki
           lessons:
@@ -19034,19 +19024,19 @@ pl:
             Functions:
               name: Funkcje
             Diving Deeper:
-              name: Nurkowanie głębiej
+              name: Zgłębiaj bardziej
             Next steps:
               name: Następne kroki
             Diving deeper:
-              name: Nurkowanie głębiej
+              name: Zgłębiaj bardziej
             Diving deeper (for Courses E and F):
-              name: Nurkowanie głębiej (dla kursów E i F)
+              name: Zgłębiaj bardziej (dla Kursów E i F)
             Welcome to "Teaching Computer Science Fundamentals":
               name: Witamy na "Podstawach Nauczania Informatyki"
             Diving Deeper (for Courses E and F):
-              name: Nurkowanie głębiej (dla kursów E i F)
+              name: Zgłębiaj bardziej (dla Kursów E i F)
             'Diving Deeper: Courses E and F':
-              name: 'Nurkowanie głębiej: Kursy E i F'
+              name: 'Zgłębiaj bardziej: Kursy E i F'
             Sprite Lab:
               name: Sprite Lab
             Variables:
@@ -19150,7 +19140,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Practice PT Part 1:
@@ -19234,13 +19224,13 @@ pl:
           description: "[Dodaj Opis]"
           lesson_groups:
             time4cs_c1:
-              display_name: 'Kolekcja 1: Region Everglades i jego ekosystemy'
+              display_name: 'Kolekcja 1: Everglades i jego ekosystemy'
             time4cs_c2:
-              display_name: 'Kolekcja 2: Łańcuchy żywieniowe (w regionie Everglades)'
+              display_name: 'Kolekcja 2: Łańcuchy żywieniowe (w Everglades)'
             time4cs_c3:
-              display_name: 'Kolekcja 3: Gatunki rodzime (w regionie Everglades)'
+              display_name: 'Kolekcja 3: Gatunki rodzime (w Everglades)'
             time4cs_c4:
-              display_name: 'Kolekcja 4: Wpływ gatunków napływowych (w regionie Everglades)'
+              display_name: 'Kolekcja 4: Wpływ gatunków napływowych (w Everglades)'
             time4cs_c5:
               display_name: 'Kolekcja 5: Obywatele biorą sprawy w swoje ręce'
           lessons:
@@ -19259,7 +19249,7 @@ pl:
             Alligator Holes:
               name: Jamy aligatorów
             Food Chain Game:
-              name: Gra w łańcuch pokarmowy
+              name: Gra z łańcuchem pokarmowym
             Invasive Species:
               name: Gatunek inwazyjny
             Conditionals with Cards (Integrated Lesson)- Part 2:
@@ -19273,7 +19263,7 @@ pl:
             Fancy Shapes using Nested Loops:
               name: Wymyślne kształty z użyciem pętli zagnieżdżonych
             Nested Loops with Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
             Fishy Business:
               name: Podejrzany interes
             Songwriting (Integrated Lesson):
@@ -19281,7 +19271,7 @@ pl:
             Functions in Minecraft:
               name: Funkcje w Minecrafcie
             Functions with Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Functions with Artist:
               name: Funkcje z Artistą
             Pythons impacting native populations:
@@ -19488,7 +19478,7 @@ pl:
             Functions Explore / Investigate:
               name: Eksploruj/Badaj wyrażenia warunkowe
             Functions Practice:
-              name: Funkcje - Praktyka
+              name: Funkcje - Ćwiczenia
             Functions Make:
               name: Twórz funkcje
             Project - Decision Maker App Part 1:
@@ -19588,6 +19578,7 @@ pl:
               name: Pokaz tworzenia zmiennych
             'Lesson 11: Assessment Day':
               name: 'Lekcja 11: Dzień sprawdzianu'
+          name: csp7-2020
         csd2-projects-temp:
           title: CSD Projekty internetowe - TYMCZASOWE
           description: Tymczasowe miejsce na przechowywanie nowych mini-projektów
@@ -19734,7 +19725,7 @@ pl:
                 sobie dokładnie w jakim zakresie tracą kontrolę nad informacjami,
                 które ujawnią w Internecie."
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: "**Pytanie dnia: Jak można wyrazić swój styl osobisty
                 na stronie internetotej?**\r\n\r\n\r\nNa tej lekcji wprowadza się
                 pojęcie CSS jako sposobu stylizowania elementów na stronie. Klasa
@@ -20293,12 +20284,11 @@ pl:
             'Alternate Versions of Lesson 1: Intro to Problem Solving':
               name: 'Alternatywne wersje lekcji 1: Wprowadzenie do rozwiązywania problemów'
             'Alternate Versions of Lesson 3: Exploring Problem Solving':
-              name: 'Alternatywne wersje lekcji 3: Zgłębianie zagadnienia rozwiązywania
-                problemów'
+              name: 'Alternatywne wersje lekcji 3: Zgłębianie rozwiązywania problemów'
             'Lesson 1: Intro to Problem Solving - Newspaper Table':
               name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Stolik prasowy'
             'Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
-              name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Most z makaronu'
+              name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Most z spaghetti'
             'Lesson 1: Intro to Problem Solving - Paper Tower':
               name: 'Lekcja 1: Wprowadzenie do rozwiązywania problemów - Wieża z papieru'
             'Lesson 3: Exploring Problem Solving - Games Theme':
@@ -20490,8 +20480,8 @@ pl:
             tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania
             na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i
             kształtować dalszą iterację.
-          description_short: Ucz się, jak projektować program, który zaspokaja potrzeby
-            użytkowników
+          description_short: Ucz się, jak zaprojektować program, który zaspokoi potrzeby
+            Twoich użytkowników
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -21110,7 +21100,7 @@ pl:
             w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego.
             Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako
             podstawy innowacji Twojego własnego projektu.
-          description_short: Naucz się programować przy pomocy urządzeń informatycznych.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
           lesson_groups:
             csd6_1:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
@@ -21739,6 +21729,7 @@ pl:
                 burzę mózgów w sprawie tego, jakiego typu gry \"Flyer\" chcieliby
                 mieć, a następnie wykorzystują uporządkowany proces do zaprogramowania
                 gry w \"Studiu kodowania\"."
+          name: csd3-2020
         coursea-2020:
           title: Kurs A (2020)
           description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie.
@@ -22371,8 +22362,8 @@ pl:
                 będą się uczyć pisania złożonych i elastycznych kodów.
             'Unplugged: Binary':
               name: Binarne obrazy (Binary Images)
-              description_student: Ucz się, jak komputery przechowują obrazki z użyciem
-                języka dającego tylko dwie opcje.
+              description_student: Ucz się, jak komputery przechowują obrazki używając
+                języka z tylko dwoma opcjami.
               description_teacher: Chociaż wiele osób sądzi, że binarne są tylko zera
                 i jedynki, uczniom zostanie wprowadzona koncepcja, że informacje mogą
                 być reprezentowane na różne binarne sposoby.  Na tej lekcji to pojęcie
@@ -22381,10 +22372,10 @@ pl:
                 w postaci binarnej.
             Artist Binary:
               name: Binarne obrazy z Artystą
-              description_student: Na tej lekcji będziesz się uczyć jak tworzyć obrazki
-                składające się tylko z zer i jedynek.
-              description_teacher: Ta seria lekcji internetowych będzie edukować  uczniów
-                w zakresie tworzenia obrazków z użyciem włączenia i wyłączenia.
+              description_student: Na tej lekcji będziesz się uczyć, jak tworzyć obrazki
+                używając tylko zer i jedynek.
+              description_teacher: Na tej serii lekcji internetowych uczniowie będą
+                się uczyć, jak tworzyć obrazki z użyciem włączania i wyłączania.
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
               description_student: Niektórych informacji nie można bezpiecznie udostępniać
@@ -22572,7 +22563,7 @@ pl:
                 tego, by uczniowie zaprojektowali swój własnych projekt pod koniec
                 tego etapu.
             Nested Loops in Frozen:
-              name: Zagnieżdżone pętle z interfejsem Frozen
+              name: Zagnieżdżone pętle w Krainie Lodu
               description_student: Anna i Elsa umieją świetnie jeździć na łyżwach,
                 ale potrzebują Twojej pomocy w utworzeniu układów na lodzie. Użyj
                 pętli zagnieżdżonych do utworzenia czegoś niewiarygodnie FAJNEGO.
@@ -22595,9 +22586,9 @@ pl:
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
                 aby uzyskać jak najskuteczniejszy kod?
               description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być
-                funkcje w tej wesołej i interaktywnej przygodzie w grze Minecraft!
+                funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             Functions in Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
               description_student: Dzięki funkcjom będziesz oszczędzać mnóstwo pracy
                 w trakcie pomocy udzielanej farmerce przy żniwach.
               description_teacher: Uczniowie ćwiczyli tworzenie efektownych projektów
@@ -22681,7 +22672,7 @@ pl:
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
                 aby uzyskać jak najskuteczniejszy kod?
               description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być
-                funkcje w tej wesołej i interaktywnej przygodzie w grze Minecraft!
+                funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             Learning Sprites with Sprite Lab:
               name: Pływająca ryba w Sprite Lab
               description_student: Naucz się tworzyć i edytować duszki.
@@ -22792,7 +22783,7 @@ pl:
               name: Pętle "for" z Artystą
               description_student: Przygotuj się na stworzenie kolejnego dzieła. Teraz
                 będziesz używać pętli "dla", aby tworzyć takie obrazki, na widok których
-                odbiorcom "opadnie szczena".
+                odbiorcom opadnie szczęka.
               description_teacher: Na tej lekcji uczniowie będą kontynuować ćwiczenie
                 pętli "dla", ale tym razem korzystając z interfejsu Artist. Uczniowie
                 będą rozwiązywać łamigłówki łącząc koncepcje zmiennych, pętli oraz
@@ -22841,7 +22832,7 @@ pl:
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
               description_student: Na tej lekcji będziesz się uczył o crowdsourcingu,
-                procesie budowania projektu przy pomocy zespołu.
+                procesie budowania projektu z zespołem.
               description_teacher: W informatyce, stajemy w obliczu znaczących, zniechęcających
                 problemów. Wyzwania takiej, jak znajdowanie wielkich liczb pierwszych
                 lub tworzenia sekwencji DNA są prawie niemożliwe do zrealizowania
@@ -23017,7 +23008,7 @@ pl:
             Harvesting with Conditionals:
               name: Żniwa z wyrażeniami warunkowymi
             Functions with Harvester:
-              name: Funkcje z interfejsem Harvester
+              name: Funkcje ze żniwiarką
             Functions with Artist:
               name: Funkcje z Artistą
             Variables with Artist:
@@ -23518,7 +23509,7 @@ pl:
                 sobie dokładnie w jakim zakresie tracą kontrolę nad informacjami,
                 które ujawnią w Internecie."
             Styling Text with CSS:
-              name: Stylowanie tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
               description_student: Na tej lekcji wprowadza się pojęcie CSS jako sposobu
                 stylizowania elementów na stronie. Klasa poznaje podstawową składnię
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
@@ -23527,10 +23518,10 @@ pl:
               description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
                 sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
                 składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują na stronie HTML poświęconej
+                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
                 zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
                 Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu do swojej prywatnej strony internetotej.
+                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
                 \r\n\r"
             Intellectual Property:
               name: Własność intelektualna
@@ -23570,9 +23561,9 @@ pl:
                 Uczniowie rozpoczynają tę lekcję od przyjrzenia się stronie internetotej
                 na temat "Deserów świata" [Desserts of the World]. Analizują i modyfikują
                 nowe style CSS na tej stronie dodając swoje własne style do strony.
-                Po wykonaniu pracy na stronie "Desery świata" [Desserts of the World]
-                uczniowie wykorzystują nowo nabytą wiedzę w zakresie właściwości CSS
-                do stylizacji swoich prywatnych stron internetowych w szerszym zakresie.
+                Po wykonaniu pracy na tej stronie uczniowie wykorzystują nowo nabytą
+                wiedzę w zakresie właściwości CSS do stylizacji swoich prywatnych
+                stron internetowych w szerszym zakresie.
             Project - Planning Layout and Style:
               name: Projekt - Planowanie układu i stylu
             Project - Building a Webpage:
@@ -23955,7 +23946,7 @@ pl:
             k5_basic_concepts_1:
               display_name: Podstawowe pojęcia kodowania oraz praktyki edukacyjne
             k5_diving_deeper_1:
-              display_name: 'Nurkowanie głębiej: Kursy E i F'
+              display_name: 'Zgłębiaj bardziej: Kursy E i F'
             k5_next_steps_1:
               display_name: Następne Kroki
         dani-test-2020:
@@ -24597,6 +24588,7 @@ pl:
             Module 8:
               name: Moduł 8
           title: Wirtualne Profesjonalne Kształcenie w zakresie Zasad Informatyki
+          name: vpl-csp-2020
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -24650,7 +24642,7 @@ pl:
             oceans:
               name: Uczenie maszynowe z AI dla oceanów
             intro:
-              name: Wstęp
+              name: Wprowadzenie do uczenia maszynowego
             society:
               name: Uczenie maszynowe i społeczny oddźwięk
             decisions:
@@ -24694,17 +24686,18 @@ pl:
             SVM:
               name: SVM
             App:
-              name: Tworzenie aplikacji
+              name: Tworzenie modeli w rzeczywistym świecie
             Ethics:
               name: Etyka
             Project:
               name: Projekt końcowy
             appendix:
               name: Appendix
-          title: Jednostk Ml/AI - CSD
+          title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI
             dla CSD. W przypadku pytań na ten temat, należy zwrócić się do Dana Schneidera.
+          name: ml-playground
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -24732,3 +24725,1544 @@ pl:
           title: Planowanie skryptów dla CI i CSF 2021
           description_audience: Wewnętrzne
           description_short: Wewnętrzne
+          name: 2021 projekt
+        csd1-2021:
+          title: Część 1 CSD - Rozwiązywanie problemów i informatyka ('20- '21)
+          description: "\"Rozwiązywanie problemów i informatyka\" stanowi niezwykle
+            interaktywny i zachęcający do współpracy wstęp do dziedziny informatyki,
+            ujętej w ramy z szerzej rozumianego dążenia do rozwiązywania problemów.
+            \ Będziesz ćwiczyć proces rozwiązywania problemów do rozwiązania serii
+            łamigłówek, wyzwań i scenariuszy z prawdziwego świata. Potem będziesz
+            się dowiadywać, jak dane wejściowe, wyniki wyjściowe, przechowywanie oraz
+            przetwarzanie informacji pomagają ludziom w rozwiązywaniu problemów. Dział
+            kończy się projektem, w którym projektujesz aplikację, która pomaga rozwiązać
+            wybrany przez Ciebie problem. \r"
+          description_short: Dowiedz się, w jaki sposób ludzie pracują na komputerach,
+            aby rozwiązać problemy.
+          lessons:
+            CS Discoveries Pre-survey:
+              key: Ankieta wstępna dotycząca Odkryć Informatyki
+              name: Ankieta wstępna dotycząca Odkryć Informatyki
+            Intro to Problem Solving:
+              key: Wprowadzenie do rozwiązywania problemów
+              name: Wprowadzenie do rozwiązywania problemów
+            The Problem Solving Process:
+              key: Proces rozwiązywania problemów
+              name: Proces rozwiązywania problemów
+            Exploring Problem Solving:
+              key: Zgłębianie rozwiązywania problemów
+              name: Zgłębianie rozwiązywania problemów
+            What is a Computer?:
+              key: Czym jest komputer?
+              name: Czym jest komputer?
+            Input and Output:
+              key: Wejście i Wyjście
+              name: Wejście i Wyjście
+            Processing:
+              key: Przetwarzanie
+              name: Przetwarzanie
+            Storage:
+              key: Pamięć
+              name: Pamięć
+            Project - Propose an App:
+              key: Projekt - Zaproponuj aplikację
+              name: Projekt - Zaproponuj aplikację
+            Post-Project Test:
+              key: Testy po realizacji projektu
+              name: Testy po realizacji projektu
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              key: Wprowadzenie do rozwiązywania problemów - Stolik prasowy (Alternatywna
+                lekcja 1)
+              name: Wprowadzenie do rozwiązywania problemów - Stolik prasowy (Alternatywna
+                lekcja 1)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              key: Wprowadzenie do rozwiązywania problemów - Spaghetti Most (Alternatywna
+                lekcja 1)
+              name: Wprowadzenie do rozwiązywania problemów - Spaghetti Most (Alternatywna
+                lekcja 1)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              key: Wprowadzenie do rozwiązywania problemów - Papierowa wieża (Alternatywna
+                lekcja 1)
+              name: Wprowadzenie do rozwiązywania problemów - Papierowa wieża (Alternatywna
+                lekcja 1)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              key: Wprowadzenie do rozwiązywania problemów - Motywy zwierząt (Alternatywna
+                lekcja 3)
+              name: Wprowadzenie do rozwiązywania problemów - Motywy zwierząt (Alternatywna
+                lekcja 3)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              key: Wprowadzenie do rozwiązywania problemów - Motywy gier (Alternatywna
+                lekcja 3)
+              name: Wprowadzenie do rozwiązywania problemów - Motywy gier (Alternatywna
+                lekcja 3)
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csd1_1:
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
+            csd1_2:
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
+            csd1_3:
+              display_name: Lekcje alternatywne
+          name: csd1-2021
+        csd2-2021:
+          title: CSD Jednostka 2 - Rozwój sieci ('20- '21)
+          description: W Części 2 nauczysz się, jak tworzyć i udostępniać treści na
+            Twoich własnych stronach internetowych. Po podjęciu decyzji jaką treść
+            chcesz udostępniać światu nauczysz się, jak konstruować i stylizować swoje
+            strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności
+            w zakresie programowania takie jak debugowanie, korzystanie  z zasobów
+            i praca zespołowa.
+          description_short: "  Naucz się budować swoją własną stronę internetową
+            w Web Lab."
+          lessons:
+            Exploring Web Pages:
+              key: Badanie stron internetowych
+              name: Badanie stron internetowych
+            Intro to HTML:
+              key: Wprowadzenie do HTML
+              name: Wprowadzenie do HTML
+            Headings:
+              key: Nagłówki
+              name: Nagłówki
+            'Mini-Project: HTML Web Page':
+              key: 'Mini-Projekt: strona internetowa HTML'
+              name: 'Mini-Projekt: strona internetowa HTML'
+            Digital Footprint:
+              key: Cyfrowy ślad
+              name: Cyfrowy ślad
+            Styling Text with CSS:
+              key: Ustalanie stylu tekstu przy użyciu CSS
+              name: Ustalanie stylu tekstu przy użyciu CSS
+            'Mini-Project: Your Personal Style':
+              key: 'Mini-Projekt: Twój osobisty styl'
+              name: 'Mini-Projekt: Twój osobisty styl'
+            Intellectual Property:
+              key: Własność intelektualna
+              name: Własność intelektualna
+            Using Images:
+              key: Korzystając z obrazów
+              name: Korzystając z obrazów
+            'Websites for Expression ':
+              key: Strony internetowe służące wyrażeniu się
+              name: Strony internetowe służące wyrażeniu się
+            Styling Elements with CSS:
+              key: Stylizowanie elementów przy pomocy CSS
+              name: Stylizowanie elementów przy pomocy CSS
+            Your Web Page - Prepare:
+              key: Twoja strona internetowa - Przygotuj
+              name: Twoja strona internetowa - Przygotuj
+            Project - Personal Web Page:
+              key: Projekt - osobista strona internetowa
+              name: Projekt - osobista strona internetowa
+            Websites for a Purpose:
+              key: Strony internetowe dla określonego celu
+              name: Strony internetowe dla określonego celu
+            Team Problem Solving:
+              key: Zespołowe rozwiązywanie problemów
+              name: Zespołowe rozwiązywanie problemów
+            Sources and Research:
+              key: Źródła i badanie
+              name: Źródła i badanie
+            CSS Classes:
+              key: Klasy CSS
+              name: Klasy CSS
+            Planning a Multi-page Website:
+              key: Planowanie wielostronicotej witryny internetotej
+              name: Planowanie wielostronicotej witryny internetotej
+            Linking Pages:
+              key: Łączenie stron
+              name: Łączenie stron
+            Project - Website for a Purpose:
+              key: Projekt - Strona internetowa do określonego celu
+              name: Projekt - Strona internetowa do określonego celu
+            Peer Review and Final Touches:
+              key: Weryfikacja krzyżowa i ostatnie wykończenia
+              name: Weryfikacja krzyżowa i ostatnie wykończenia
+            Post-Project Test:
+              key: Testy po realizacji projektu
+              name: Testy po realizacji projektu
+            CS Discoveries Post Course survey:
+              key: Odkrycia informatyki Ankieta po kursie
+              name: Odkrycia informatyki Ankieta po kursie
+          lesson_groups:
+            csd2_1v2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            csd2_2v2:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+            cspSurvey:
+              display_name: Ankieta
+          name: csd2-2021
+        csd3-2021:
+          title: CSD Jednostka 3 - Interaktywne animacje i gry ('20- '21)
+          description: W dziale 3 będziesz korzystać z doświadczeń w zakresie kodowania
+            w trakcie programowania animacji, sztuki interaktywną i gry w Game Lab.Dział
+            rozpoczyna się  od prostych kształtów i buduje się w nim bardziej wyszukane
+            animacje i gry oparte na duszku, używając tych samych koncepcji programowania
+            i procesu projektowania, którego informatycy używają w codziennej pracy.
+            W ramach projektu finałowego będziesz opracowywać spersonalizowany program
+            interaktywny.
+          description_short: Naucz się programować animacje, interaktywne grafiki
+            i gry w Game Lab.
+          lessons:
+            Programming for Entertainment:
+              key: Programowanie dla rozrywki
+              name: Programowanie dla rozrywki
+            Plotting Shapes:
+              key: Rysowanie kształtów
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              key: Rysowanie w Game Lab
+              name: Rysowanie w Game Lab
+            Variables:
+              key: Zmienne
+              name: Zmienne
+            Random Numbers:
+              key: Losowe liczby
+              name: Losowe liczby
+            Sprite Properties:
+              key: Właściwości duszka
+              name: Właściwości duszka
+            Text:
+              key: Tekst
+              name: Tekst
+            'Mini-Project: Captioned Scenes':
+              key: 'Mini-Projekt: Sceny z napisami'
+              name: 'Mini-Projekt: Sceny z napisami'
+            Sprite Movement:
+              key: Ruch duszka
+              name: Ruch duszka
+            'Mini-Project: Animation':
+              key: 'Mini-Projekt: Animacja'
+              name: 'Mini-Projekt: Animacja'
+            Conditionals:
+              key: Zdania z warunkami
+              name: Zdania z warunkami
+            Keyboard Input:
+              key: Wejście z klawiatury
+              name: Wejście z klawiatury
+            Mouse Input:
+              key: Użycie myszy
+              name: Użycie myszy
+            Project - Interactive Card:
+              key: Projekt - Interaktywna karta
+              name: Projekt - Interaktywna karta
+            Velocity:
+              key: Prędkość
+              name: Prędkość
+            Collision Detection:
+              key: Wykrywanie kolizji
+              name: Wykrywanie kolizji
+            'Mini-Project: Side Scroller':
+              key: 'Mini-Projekt: Side Scroller'
+              name: 'Mini-Projekt: Side Scroller'
+            Complex Sprite Movement:
+              key: Złożony ruch duszka
+              name: Złożony ruch duszka
+            Collisions:
+              key: Kolizje
+              name: Kolizje
+            'Mini-Project: Flyer Game':
+              key: 'Mini-projekt: Gra typu Flyer'
+              name: 'Mini-projekt: Gra typu Flyer'
+            Functions:
+              key: Funkcje
+              name: Funkcje
+            The Game Design Process:
+              key: Proces projektowania gry
+              name: Proces projektowania gry
+            Using the Game Design Process:
+              key: Używanie procesu projektowania gier
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              key: Projekt - Zaprojektuj grę
+              name: Projekt - Zaprojektuj grę
+            Post-Project Test:
+              key: Testy po realizacji projektu
+              name: Testy po realizacji projektu
+            CS Discoveries Post Course survey:
+              key: Odkrycia informatyki Ankieta po kursie
+              name: Odkrycia informatyki Ankieta po kursie
+          lesson_groups:
+            csd3_1:
+              display_name: 'Rozdział 1: Obrazy i animacje'
+            csd3_2:
+              display_name: 'Rozdział 2: Budowanie gier'
+            cspSurvey:
+              display_name: Ankieta
+          name: csd3-2021
+        csd4-2021:
+          title: CSD jednostka 4 - Proces projektowania ('20-'21)
+          description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego
+            informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej
+            rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa
+            działu składa się z iteracyjnego projektu zespołowego, w trakcie którego
+            zespoły mają możliwość identyfikacji potrzeb, które są dla nich ważne,
+            tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania
+            na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i
+            kształtować dalszą iterację.
+          description_short: Ucz się, jak zaprojektować program, który zaspokoi potrzeby
+            Twoich użytkowników
+          lessons:
+            Analysis of Design:
+              key: Analiza Projektu
+              name: Analiza Projektu
+            Understanding Your User:
+              key: Zrozumienie twojego użytkownika
+              name: Zrozumienie twojego użytkownika
+            User-Centered Design Micro Activity:
+              key: Mikrozajęcia poświęcone projektowaniu ukierunkowanemu na użytkownika
+              name: Mikrozajęcia poświęcone projektowaniu ukierunkowanemu na użytkownika
+            User Interfaces:
+              key: Interfejsy użytkownika
+              name: Interfejsy użytkownika
+            Feedback and Testing:
+              key: Informacje zwrotne i testowanie
+              name: Informacje zwrotne i testowanie
+            Identifying User Needs:
+              key: Identyfikowanie potrzeb użytkownika
+              name: Identyfikowanie potrzeb użytkownika
+            Project - Paper Prototype:
+              key: Projekt - Prototyp papierowy
+              name: Projekt - Prototyp papierowy
+            Designing Apps for Good:
+              key: Projektowanie aplikacji na dobre
+              name: Projektowanie aplikacji na dobre
+            Market Research:
+              key: Badania rynku
+              name: Badania rynku
+            Paper Prototypes:
+              key: Prototypy na papierze
+              name: Prototypy na papierze
+            Prototype Testing:
+              key: Testowanie prototypu
+              name: Testowanie prototypu
+            Digital Design:
+              key: Projekt cyfrowy
+              name: Projekt cyfrowy
+            Linking Screens:
+              key: Łączenie ekranów
+              name: Łączenie ekranów
+            Testing the App:
+              key: Testowanie aplikacji
+              name: Testowanie aplikacji
+            Improving and Iterating:
+              key: Polepszanie i iterowanie
+              name: Polepszanie i iterowanie
+            Project - App Presentation:
+              key: Projekt - Prezentacja aplikacji
+              name: Projekt - Prezentacja aplikacji
+            Post-Project Test:
+              key: Testy po realizacji projektu
+              name: Testy po realizacji projektu
+            CS Discoveries Post Course survey:
+              key: Odkrycia informatyki Ankieta po kursie
+              name: Odkrycia informatyki Ankieta po kursie
+          lesson_groups:
+            csd4_1:
+              display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
+            csd4_2:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
+            csd5_2:
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
+            cspSurvey:
+              display_name: Ankieta
+          name: csd4-2021
+        csd5-2021:
+          title: CSD Jednostka 5 - Dane a społeczeństwo ('20- '21)
+          description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu problemów
+            oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym procesie.
+            W pierwszym rozdziale bada się różne systemy używane do przedstawiania
+            informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez
+            tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie
+            danych są używane do rozwiązywania problemów i jak komputery pomagają
+            w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem,
+            jak proces rozwiązywania problemu z danym może być stosowany w wybranym
+            przez siebie obszarze.
+          description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,
+            aby rozwiązywać problemy z danymi.
+          lessons:
+            Representation Matters:
+              key: Reprezentacja ma znaczenie
+              name: Reprezentacja ma znaczenie
+            Patterns and Representation:
+              key: Wzorce i reprezentacje
+              name: Wzorce i reprezentacje
+            ASCII and Binary Representation:
+              key: ASCII i reprezentacja binarna
+              name: ASCII i reprezentacja binarna
+            Representing Images:
+              key: Reprezentowanie obrazów
+              name: Reprezentowanie obrazów
+            Representing Numbers:
+              key: Reprezentacja liczb
+              name: Reprezentacja liczb
+            Keeping Data Secret:
+              key: Zachowywanie danych w tajemnicy
+              name: Zachowywanie danych w tajemnicy
+            Combining Representations:
+              key: Łączenie reprezentacji
+              name: Łączenie reprezentacji
+            Project - Create a Representation:
+              key: Projekt - Twórz reprezentację
+              name: Projekt - Twórz reprezentację
+            Problem Solving and Data:
+              key: Rozwiązywanie problemów i dane
+              name: Rozwiązywanie problemów i dane
+            Problem Solving with Big Data:
+              key: Rozwiązywanie problemów z giga danymi
+              name: Rozwiązywanie problemów z giga danymi
+            Structuring Data:
+              key: Strukturyzacja danych
+              name: Strukturyzacja danych
+            Making Decisions with Data:
+              key: Podejmowanie decyzji na podstawie danych
+              name: Podejmowanie decyzji na podstawie danych
+            Interpreting Data:
+              key: Interpretacja danych
+              name: Interpretacja danych
+            Automating Data Decisions:
+              key: Automatyzacja decyzji dotyczących danych
+              name: Automatyzacja decyzji dotyczących danych
+            Project - Make a Recommendation:
+              key: Projekt - zarekomenduj
+              name: Projekt - zarekomenduj
+            Post-Project Test:
+              key: Testy po realizacji projektu
+              name: Testy po realizacji projektu
+            CS Discoveries Post Course survey:
+              key: Odkrycia informatyki Ankieta po kursie
+              name: Odkrycia informatyki Ankieta po kursie
+          lesson_groups:
+            csd5_1:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            csd5_2:
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
+            cspSurvey:
+              display_name: Ankieta
+          name: csd5-2021
+        csd6-2021:
+          title: CSD Jednostka 6 - Obliczenia fizyczne ('20- '21)
+          description: W dziale 6 zgłębia się zagadnienie roli platform sprzętowych
+            w informatyce oraz sposobu, w jaki różne czujniki są w stanie zapewnić
+            bardziej efektywne dane wejściowe i wyniki wyjściowe od tradycyjnej klawiatury,
+            myszki i monitora. Używając App Lab i Adafruit’s Circuit Playground, będziesz
+            opracowywać programy, w których wykorzystuje się te same sprzętowe elementy
+            wejściowe i wyjściowe, które widzisz w urządzeniach inteligentnych patrząc,
+            w jaki sposób prosty, toporny prototyp może prowadzić do wyrobu gotowego.
+            Dział kończy się wyzwaniem projektowym, aby użyć Circuit Playground jako
+            podstawy innowacji Twojego własnego projektu.
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
+          lessons:
+            Innovations in Computing:
+              key: Innowacje w informatyce
+              name: Innowacje w informatyce
+            The Circuit Playground:
+              key: Circuit Playground
+              name: Circuit Playground
+            Input Unplugged:
+              key: Dane wejściowe dla bez komputera
+              name: Dane wejściowe dla bez komputera
+            Board Events:
+              key: Zdarzenia na tablicy
+              name: Zdarzenia na tablicy
+            Getting Properties:
+              key: Właściwości getterów
+              name: Właściwości getterów
+            Analog Input:
+              key: Wejście analogowe
+              name: Wejście analogowe
+            The Program Design Process:
+              key: Proces projektowania programu
+              name: Proces projektowania programu
+            'Project: Make a Game':
+              key: 'Projekt: Stwórz grę'
+              name: 'Projekt: Stwórz grę'
+            Arrays and Color LEDs:
+              key: Tablice i kolorowe LEDy
+              name: Tablice i kolorowe LEDy
+            Making Music:
+              key: Tworzenie muzyki
+              name: Tworzenie muzyki
+            Arrays and For Loops:
+              key: Tablice i pętle "dla"
+              name: Tablice i pętle "dla"
+            Accelerometer:
+              key: Akcelerometr
+              name: Akcelerometr
+            Functions with Parameters:
+              key: Funkcje z parametrami
+              name: Funkcje z parametrami
+            Circuits and Physical Prototypes:
+              key: Obwody i prototypy fizyczne
+              name: Obwody i prototypy fizyczne
+            'Project: Prototype an Innovation':
+              key: Projekt - Zbuduj prototyp rozwiązania innowacyjnego
+              name: Projekt - Zbuduj prototyp rozwiązania innowacyjnego
+            Post-Project Test:
+              key: Testy po realizacji projektu
+              name: Testy po realizacji projektu
+            CS Discoveries Post Course survey:
+              key: Odkrycia informatyki Ankieta po kursie
+              name: Odkrycia informatyki Ankieta po kursie
+          lesson_groups:
+            csd6_1:
+              display_name: 'Rozdział 1: Programowanie sprzętowe'
+            csd6_2:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+            cspSurvey:
+              display_name: Ankieta
+          name: csd6-2021
+        csp1-2021:
+          title: CSP Jednostka 1 - Informacje cyfrowe ('20-'21)
+          lessons:
+            CS Principles Pre-survey:
+              key: Ankieta wstępna dotyczące zasad informatyki
+              name: Ankieta wstępna dotyczące zasad informatyki
+            Welcome to CSP:
+              key: Witamy w CSP
+              name: Witamy w CSP
+            Representing Information:
+              key: Reprezentowanie informacji
+              name: Reprezentowanie informacji
+            Circle Square Patterns:
+              key: Otocz kółkiem wzorce kwadratu
+              name: Otocz kółkiem wzorce kwadratu
+            Binary Numbers:
+              key: Liczby binarne
+              name: Liczby binarne
+            Overflow and Rounding:
+              key: Nadmiar i zaokrąglanie
+              name: Nadmiar i zaokrąglanie
+            Representing Text:
+              key: Reprezentowanie Tekstu
+              name: Reprezentowanie Tekstu
+            Black and White Images:
+              key: Czarno-białe obrazki
+              name: Czarno-białe obrazki
+            Color Images:
+              key: Kolorowe obrazki
+              name: Kolorowe obrazki
+            Lossless Compression:
+              key: Kompresja bezstratna
+              name: Kompresja bezstratna
+            Lossy Compression:
+              key: Kompresja stratna
+              name: Kompresja stratna
+            Intellectual Property:
+              key: Własność intelektualna
+              name: Własność intelektualna
+            Project - Digital Information Dilemmas Part 1:
+              key: Projekt - Dylematy związane z informacją cyfrową, Część 1
+              name: Projekt - Dylematy związane z informacją cyfrową, Część 1
+            Project - Digital Information Dilemmas Part 2:
+              key: Projekt - Dylematy związane z informacją cyfrową, Część 2
+              name: Projekt - Dylematy związane z informacją cyfrową, Część 2
+            'Lesson 14: Assessment Day':
+              key: 'Lekcja 14: Dzień sprawdzianu'
+              name: 'Lekcja 14: Dzień sprawdzianu'
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csp_unit1_2020:
+              display_name: 'Jednostka 1: Informacje cyfrowe'
+          name: csp1-2021
+        csp2-2021:
+          title: CSP Jednostka 2 - Internet ('20-'21)
+          lessons:
+            Welcome to the Internet:
+              key: Witamy w Internecie
+              name: Witamy w Internecie
+            Building a Network:
+              key: Budowanie sieci
+              name: Budowanie sieci
+            The Need for Addressing:
+              key: Potrzeba adresowania
+              name: Potrzeba adresowania
+            Routers and Redundancy:
+              key: Routery i nadmiarowość
+              name: Routery i nadmiarowość
+            Packets:
+              key: Pakiety
+              name: Pakiety
+            DNS and HTTP:
+              key: DNS i HTTP
+              name: DNS i HTTP
+            Project - Internet Dilemmas Part 1:
+              key: Projekt - Dylematy z Internetem Część 1
+              name: Projekt - Dylematy z Internetem Część 1
+            Project - Internet Dilemmas Part 2:
+              key: Projekt - Dylematy z Internetem Część 2
+              name: Projekt - Dylematy z Internetem Część 2
+            'Lesson 9: Assessment Day':
+              key: 'Lekcja 9: Dzień sprawdzianu'
+              name: 'Lekcja 9: Dzień sprawdzianu'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Jednostka 2: Internet'
+          name: csp2-2021
+        csp3-2021:
+          title: Część 3 CSP - Wprowadzenie do projektowania aplikacji ('20-'21)
+          lessons:
+            Introduction to Apps:
+              key: Wprowadzenie do aplikacji
+              name: Wprowadzenie do aplikacji
+            Project - Designing an App Part 1:
+              key: Projekt - Projektowanie aplikacji, część 1
+              name: Projekt - Projektowanie aplikacji, część 1
+            Project - Designing an App Part 2:
+              key: Projekt - Projektowanie aplikacji, część 2
+              name: Projekt - Projektowanie aplikacji, część 2
+            The Need for Programming Languages:
+              key: Zapotrzebowanie na języki programowania
+              name: Zapotrzebowanie na języki programowania
+            Intro to Programming:
+              key: Wprowadzenie do programowania
+              name: Wprowadzenie do programowania
+            Debugging:
+              key: Debugowanie
+              name: Debugowanie
+            Project - Designing an App Part 3:
+              key: Projekt - Projektowanie aplikacji, część 3
+              name: Projekt - Projektowanie aplikacji, część 3
+            Project - Designing an App Part 4:
+              key: Projekt - Projektowanie aplikacji, część 4
+              name: Projekt - Projektowanie aplikacji, część 4
+            Project - Designing an App Part 5:
+              key: Projekt - Projektowanie aplikacji Część 5
+              name: Projekt - Projektowanie aplikacji Część 5
+            'Lesson 11: Assessment Day':
+              key: 'Lekcja 11: Dzień sprawdzianu'
+              name: 'Lekcja 11: Dzień sprawdzianu'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
+          name: csp3-2021
+        csp4-2021:
+          title: CSP Jednostka 4 - Zmienne, instrukcje warunkowe i funkcje ('20-'21)
+          lessons:
+            Variables Explore:
+              key: Exploruj zmienne
+              name: Exploruj zmienne
+            Variables Investigate:
+              key: Badaj zmienne
+              name: Badaj zmienne
+            Variables Practice:
+              key: Zmienne - Praktyka
+              name: Zmienne - Praktyka
+            Variables Make:
+              key: Twórz zmienne
+              name: Twórz zmienne
+            Conditionals Explore:
+              key: Eksploruj wyrażenia warunkowe
+              name: Eksploruj wyrażenia warunkowe
+            Conditionals Investigate:
+              key: Badaj wyrażenia warunkowe
+              name: Badaj wyrażenia warunkowe
+            Conditionals Practice:
+              key: Zmienne - Praktyka
+              name: Zmienne - Praktyka
+            Conditional Make:
+              key: Twórz zmienne
+              name: Twórz zmienne
+            Functions Explore / Investigate:
+              key: Eksploruj/Badaj wyrażenia warunkowe
+              name: Eksploruj/Badaj wyrażenia warunkowe
+            Functions Practice:
+              key: Funkcje - Ćwiczenia
+              name: Funkcje - Ćwiczenia
+            Functions Make:
+              key: Twórz funkcje
+              name: Twórz funkcje
+            Project - Decision Maker App Part 1:
+              key: Projekt - Aplikacja dla decydenta - Część 1
+              name: Projekt - Aplikacja dla decydenta - Część 1
+            Project - Decision Maker App Part 2:
+              key: Projekt - Aplikacja dla decydenta - Część 2
+              name: Projekt - Aplikacja dla decydenta - Część 2
+            Project - Decision Maker App Part 3:
+              key: Projekt - Aplikacja dla decydenta - Część 3
+              name: Projekt - Aplikacja dla decydenta - Część 3
+            'Lesson 15: Assessment Day':
+              key: 'Lekcja 15: Dzień sprawdzianu'
+              name: 'Lekcja 15: Dzień sprawdzianu'
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
+            csp_project:
+              display_name: Projekt
+          name: csp4-2021
+        csp5-2021:
+          title: CSP Jednostka 5 - Listy, pętle i połączenia ('20-'21)
+          lessons:
+            Lists Explore:
+              key: Eksploruj listy
+              name: Eksploruj listy
+            Lists Investigate:
+              key: Badaj listy
+              name: Badaj listy
+            Lists Practice:
+              key: Ćwiczenia w zakresie list
+              name: Ćwiczenia w zakresie list
+            Lists Make:
+              key: Twórz listy
+              name: Twórz listy
+            Loops Explore:
+              key: Eksploruj pętle
+              name: Eksploruj pętle
+            Loops Investigate:
+              key: Badanie pętli
+              name: Badanie pętli
+            Loops Practice:
+              key: Praktykowanie pętli
+              name: Praktykowanie pętli
+            Loops Make:
+              key: Twórzenie pętli
+              name: Twórzenie pętli
+            Traversals Explore:
+              key: Eksploruj przejścia
+              name: Eksploruj przejścia
+            Traversals Investigate:
+              key: Badaj przejścia
+              name: Badaj przejścia
+            Traversals Practice:
+              key: Praktykuj przejścia
+              name: Praktykuj przejścia
+            Traversals Make:
+              key: Twórz przejścia
+              name: Twórz przejścia
+            Semester Hackathon Part 1:
+              key: Semestralny Hackathon - Część 1
+              name: Semestralny Hackathon - Część 1
+            Semester Hackathon Part 2:
+              key: Semestralny Hackathon - Część 2
+              name: Semestralny Hackathon - Część 2
+            Semester Hackathon Part 3:
+              key: Semestralny Hackathon - Część 3
+              name: Semestralny Hackathon - Część 3
+            Semester Hackathon Part 4:
+              key: Semestralny Hackathon - Część 4
+              name: Semestralny Hackathon - Część 4
+            Semester Hackathon Part 5:
+              key: Semestralny Hackathon - Część 5
+              name: Semestralny Hackathon - Część 5
+            'Lesson 18: Assessment Day':
+              key: 'Lekcja  18: Dzień sprawdzianu'
+              name: 'Lekcja  18: Dzień sprawdzianu'
+          lesson_groups:
+            csp_lists:
+              display_name: Listy
+            csp_loops:
+              display_name: Pętle
+            csp_traversals:
+              display_name: Przejścia
+            csp_project:
+              display_name: Projekt
+          name: csp5-2021
+        csp6-2021:
+          title: CSP Jednostka 6 - Algorytmy ('20-'21)
+          lessons:
+            Algorithms Solve Problems:
+              key: Algorytmy rozwiązują problemy
+              name: Algorytmy rozwiązują problemy
+            Algorithm Efficiency:
+              key: Efektywność algorytmów
+              name: Efektywność algorytmów
+            Unreasonable Time:
+              key: Nierozsądny czas
+              name: Nierozsądny czas
+            The Limits of Algorithms:
+              key: Ograniczenia algorytmów
+              name: Ograniczenia algorytmów
+            Parallel and Distributed Algorithms:
+              key: Algorytmy równoległe i rozproszone
+              name: Algorytmy równoległe i rozproszone
+            'Lesson 6: Assessment Day':
+              key: 'Lekcja 6: Dzień sprawdzianu'
+              name: 'Lekcja 6: Dzień sprawdzianu'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Jednistka 6: Algorytmy'
+          name: csp6-2021
+        csp7-2021:
+          lessons:
+            Parameters and Return Explore:
+              key: Odkrywaj parametry i zwracanie wartości
+              name: Odkrywaj parametry i zwracanie wartości
+            Parameters and Return Investigate:
+              key: Badaj parametry i zwracanie wartości
+              name: Badaj parametry i zwracanie wartości
+            Parameters and Return Practice:
+              key: Praktyka - parametry i zwracanie wartości
+              name: Praktyka - parametry i zwracanie wartości
+            Parameters and Return Make:
+              key: Twórz parametry i wartości zwracane
+              name: Twórz parametry i wartości zwracane
+            Libraries Explore:
+              key: Eksploruj biblioteki
+              name: Eksploruj biblioteki
+            Libraries Investigate:
+              key: Badaj biblioteki
+              name: Badaj biblioteki
+            Libraries Practice:
+              key: Praktyka bibliotek
+              name: Praktyka bibliotek
+            Project - Make a Library Part 1:
+              key: Projekt - Utwórz bibliotekę Część 1
+              name: Projekt - Utwórz bibliotekę Część 1
+            Project - Make a Library Part 2:
+              key: Projekt - Utwórz bibliotekę Część 2
+              name: Projekt - Utwórz bibliotekę Część 2
+            Project - Make a Library Part 3:
+              key: Projekt - Utwórz bibliotekę Część 3
+              name: Projekt - Utwórz bibliotekę Część 3
+            'Lesson 11: Assessment Day':
+              key: 'Lekcja 11: Dzień sprawdzianu'
+              name: 'Lekcja 11: Dzień sprawdzianu'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametry i wartości zwracane
+            csp_libraries:
+              display_name: Biblioteki
+          name: csp7-2021
+        csp8-2021:
+          title: CSP Jednostka 8 - Utwórz przygotowanie PT ('20-'21)
+          lessons:
+            Create PT - Review the Task:
+              key: Utwórz PT - Przeglądnij zadanie
+              name: Utwórz PT - Przeglądnij zadanie
+            Create PT - Make a Plan:
+              key: Utwórz PT - Sporządź plan
+              name: Utwórz PT - Sporządź plan
+            Create PT - Complete the Task:
+              key: Utwórz PT - Wykonaj zadanie
+              name: Utwórz PT - Wykonaj zadanie
+          name: csp8-2021
+        csp9-2021:
+          title: CSP Jednostka 9 - Dane ('20-'21)
+          lessons:
+            Learning From Data:
+              key: Nauka z danych
+              name: Nauka z danych
+            Exploring One Column:
+              key: Eksplorowanie jednej kolumny
+              name: Eksplorowanie jednej kolumny
+            Filtering and Cleaning Data:
+              key: Filtrowanie i czyszczenie danych
+              name: Filtrowanie i czyszczenie danych
+            Exploring Two Columns:
+              key: Eksplorowanie dwóch kolumn
+              name: Eksplorowanie dwóch kolumn
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: Giga dane, crowdsourcing i uczenie maszynowe
+              name: Giga dane, crowdsourcing i uczenie maszynowe
+            Machine Learning and Bias:
+              key: Uczenie maszynowe i uprzedzenia
+              name: Uczenie maszynowe i uprzedzenia
+            Project - Tell a Data Story - Part 1:
+              key: Projekt - Opowiedz historię o danych - Część 1
+              name: Projekt - Opowiedz historię o danych - Część 1
+            Project - Tell a Data Story - Part 2:
+              key: Projekt - Opowiedz historię o danych - Część 2
+              name: Projekt - Opowiedz historię o danych - Część 2
+            'Lesson 9: Assessment Day':
+              key: 'Lekcja 9: Dzień sprawdzianu'
+              name: 'Lekcja 9: Dzień sprawdzianu'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Jednostka 9: Dane'
+          name: csp9-2021
+        csp10-2021:
+          title: CSP Jednostka 10 - Cyberbezpieczeństwo i oddziaływanie globalne ('20-'21)
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: Projekt - Symulacja innowacji Część 1
+              name: Projekt - Symulacja innowacji Część 1
+            Project - Innovation Simulation Part 2:
+              key: Projekt - Symulacja innowacji Część 2
+              name: Projekt - Symulacja innowacji Część 2
+            Data Policies and Privacy:
+              key: Regulaminy danych i prywatność
+              name: Regulaminy danych i prywatność
+            The Value of Privacy:
+              key: Znaczenie prywatności
+              name: Znaczenie prywatności
+            Project - Innovation Simulation Part 3:
+              key: Projekt - Symulacja innowacji Część 3
+              name: Projekt - Symulacja innowacji Część 3
+            Security Risks Part 1:
+              key: Zagrożenia dla bezpieczeństwa Część 1
+              name: Zagrożenia dla bezpieczeństwa Część 1
+            Security Risks Part 2:
+              key: Zagrożenia dla bezpieczeństwa Część 2
+              name: Zagrożenia dla bezpieczeństwa Część 2
+            'Project: Innovation Simulation Part 4':
+              key: 'Projekt: Symulacja innowacji Część 4'
+              name: 'Projekt: Symulacja innowacji Część 4'
+            Protecting Data Part 1:
+              key: Ochrona danych Część 1
+              name: Ochrona danych Część 1
+            Protecting Data Part 2:
+              key: Ochrona danych Część 2
+              name: Ochrona danych Część 2
+            'Project: Innovation Simulation Part 5':
+              key: 'Projekt: Symulacja innowacji Część 5'
+              name: 'Projekt: Symulacja innowacji Część 5'
+            'Project: Innovation Simulation Part 6':
+              key: 'Projekt: Symulacja innowacji Część 6'
+              name: 'Projekt: Symulacja innowacji Część 6'
+            'Project: Innovation Simulation Part 7':
+              key: 'Projekt: Symulacja innowacji Część 7'
+              name: 'Projekt: Symulacja innowacji Część 7'
+            'Lesson 14: Unit Assessment Day':
+              key: 'Lekcja 14: Dzień sprawdzianu Jednostki'
+              name: 'Lekcja 14: Dzień sprawdzianu Jednostki'
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Jednostka 10: Cyberbezpieczeństwo i globalne oddziaływanie'
+          name: csp10-2021
+        coursea-2021:
+          title: Kurs A (2020)
+          description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie.
+            Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+            udostępnić.
+          description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
+          description_audience: W wieku 4-7
+          lessons:
+            Safety in My Online Neighborhood:
+              key: Bezpieczeństwo w moim otoczeniu online
+              name: Bezpieczeństwo w moim otoczeniu online
+            Learn to Drag and Drop:
+              key: Nauka metody przeciągać i upuszczać
+              name: Nauka metody przeciągać i upuszczać
+            'Programming: Happy Maps':
+              key: 'Programowanie: Szczęśliwe mapy'
+              name: Szczęśliwe Mapy (Happy Maps)
+            Sequencing with Scrat:
+              key: Tworzenie sekwencji ze Scratem
+              name: Tworzenie sekwencji ze Scratem
+            Programming in Ice Age:
+              key: Programowanie w Epoce lodowcotej
+              name: Programowanie ze Scratem
+            Programming with Rey and BB-8:
+              key: Programowanie z Reyem i BB-8
+              name: Programowanie z Reyem i BB-8
+            'Loops: Happy Loops':
+              key: 'Pętle: Szczęśliwe pętle'
+              name: Szczęśliwe pętle
+            Loops in Ice Age:
+              key: Pętle w Epoce Lodowcowej
+              name: Pętle ze Scratem
+            Loops in Collector:
+              key: Pętle w interfejsie Collector
+              name: Pętle z Laurel
+            Ocean Scene with Loops:
+              key: Scena oceanu z pętlami
+              name: Scena oceanu z pętlami
+            'Events: The Big Event':
+              key: 'Zdarzenia: Wielkie zdarzenie'
+              name: Wielkie Zdarzenie Jr.
+            Events in Play Lab:
+              key: Zdarzenia w Play Lab
+              name: W drodze ze zdarzeniami
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
+          name: coursea-2021
+        courseb-2021:
+          title: Kurs B (2020)
+          description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie.
+            Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+            udostępnić.
+          description_short: Wprowadzenie do informatyki dla nieumiejących jeszcze
+            czytać. Podobne do Kursu A, ale z pogłębieniem pojęć.
+          description_audience: W wieku 5-8
+          lessons:
+            Digital Trails:
+              key: Cyfrowe szlaki
+              name: Cyfrowe szlaki
+            Move It, Move It:
+              key: Przenieść go, przenieść go
+              name: Przenieść go, przenieść go
+            Sequencing in Maze:
+              key: Sekwencje w labiryncie
+              name: Tworzenie sekwencji z Angry Birds
+            Programming in Maze:
+              key: Programowanie w labiryncie
+              name: Programowanie z Angry Birds
+            Programming in Harvester:
+              key: Programowanie w Harvesterze
+              name: Programowanie przy pomocy interfejsu Harvester
+            'Loops: Getting Loopy':
+              key: 'Pętle: Poznając pętle'
+              name: Poznając pętle
+            Loops in Harvester:
+              key: Pętle ze żniwiarką
+              name: Pętle z interfejsem Harvester
+            Loops in Collector:
+              key: Pętle w interfejsie Collector
+              name: Pętle z Laurel
+            Loops in Artist:
+              key: Pętle z Artystą
+              name: Rysowanie ogrodów z pętlami
+            The Right App:
+              key: Odpowiednia aplikacja
+              name: Odpowiednia aplikacja
+            'Events: The Big Event':
+              key: 'Zdarzenia: Wielkie zdarzenie'
+              name: Wielkie Zdarzenie Jr.
+            Events in Play Lab:
+              key: Zdarzenia w Play Lab
+              name: Królewska bitwa ze zdarzeniami
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_impacts:
+              display_name: Wplywy informatyki
+            csf_events:
+              display_name: Zdarzenia
+          name: courseb-2021
+        coursec-2021:
+          title: Kurs C (2020)
+          description: Twórz programy przy pomocy tworzenia sekwencji, pętli i zdarzeń.
+            Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania
+            problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz
+            swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+          description_short: Poznaj podstawy informatyki i twórz własne artystyczne
+            dzieła, opowiadania i gry.
+          description_audience: W wieku 6-10
+          lessons:
+            Putting a STOP to Online Meanness:
+              key: Stawianie STOP świństwom online
+              name: Stawianie STOP świństwom online
+            Password Power-Up:
+              key: Włączenie na hasło
+              name: Włączenie na hasło
+            'Programming: My Robotic Friends':
+              key: 'Programowanie: Moi robotyczni przyjaciele'
+              name: Moi robotyczni przyjaciele Jr.
+            Programming in Maze:
+              key: Programowanie w labiryncie
+              name: Programowanie z Angry Birds
+            Debugging in Maze:
+              key: Debugowanie w labiryncie
+              name: Debugowanie w labiryncie
+            Programming in Collector:
+              key: Programowanie w interfejsie Collector
+              name: Zbieranie skarbów z Laurel
+            Programming in Artist:
+              key: Programowanie z Artistą
+              name: Tworzenie grafiki przy pomocy kodu
+            Binary Bracelets:
+              key: Binarne bransoletki
+              name: Binarne bransoletki
+            'Loops: My Loopy Robotic Friends':
+              key: 'Pętle: Moi zapętleni robotyczni przyjaciele'
+              name: Moi zapętleni robotyczni przyjaciele Jr.
+            Loops with Rey and BB-8:
+              key: Pętle z Rey i BB-8
+              name: Pętle z Rey i BB-8
+            Loops in Harvester:
+              key: Pętle ze żniwiarką
+              name: Żniwa z użyciem pętli
+            Looking Ahead:
+              key: Patrząc w przyszłość
+              name: Patrząc w przyszłość z Minecraftem
+            Sticker Art with Loops:
+              key: Grafika naklejek przy pomocy pętli
+              name: Grafika naklejek przy pomocy pętli
+            'Events: The Big Event':
+              key: 'Zdarzenia: Wielkie zdarzenie'
+              name: Wielkie wydarzenie
+            Build a Flappy Game:
+              key: Zbuduj grę z Flappym
+              name: Zbuduj grę z Flappym
+            Events in Play Lab:
+              key: Zdarzenia w Play Lab
+              name: Gra w berka ze zdarzeniami
+            Picturing Data:
+              key: Zobrazowanie Danych
+              name: Zobrazowanie Danych
+            'End of Course Project: Create a Play Lab Game':
+              key: 'Projekt na koniec kursu: Utwórz grę Play Lab'
+              name: Koniec projektu kursu
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_binary:
+              display_name: Binarny
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          name: coursec-2021
+        coursed-2021:
+          title: Kurs D (2020)
+          description: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń
+            warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie
+            cyfrowym.
+          description_short: Ucz się o instrukcjach warunkowych. Twórz swoją własną
+            grafikę, gry, a nawet potańcówkę.
+          description_audience: W wieku 7-11
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'Algorytmy: Programowanie na papierze milimetrowym'
+              name: Programowanie na papierze milimetrowym
+            Introduction to Online Puzzles:
+              key: Wprowadzenie do Puzzli Online
+              name: Wprowadzenie do Puzzli Online
+            Relay Programming:
+              key: Sztafeta programowania
+              name: Sztafeta programowania
+            Debugging in Collector:
+              key: Debugowanie w interfejsie Collector
+              name: Debugowanie z Laurel
+            Events in Bounce:
+              key: Zdarzenia w Bounce
+              name: Zdarzenia w Bounce
+            Build a Star Wars Game:
+              key: Zbuduj grę Star Wars
+              name: Zbuduj grę Star Wars
+            Dance Party:
+              key: Potańcówka
+              name: Potańcówka
+            Loops in Ice Age:
+              key: Pętle w Epoce Lodowcowej
+              name: Pętle w Epoce Lodowcowej
+            Loops in Artist:
+              key: Pętle z Artystą
+              name: Rysowanie kształtów przy pomocy pętli
+            Nested Loops in Bee:
+              key: Zagnieżdżone pętle z pszczółką
+              name: Zagnieżdżone pętle w labiryncie
+            Conditionals with Cards:
+              key: Warunkowe z kartami
+              name: Warunkowe z kartami
+            Conditionals in Bee:
+              key: Wyrażenie warunkowe z Pszczółką
+              name: '"jeśli/w przeciwnym razie" z Pszczółką'
+            While Loops in Farmer:
+              key: Pętle "dopóki" w interfejsie Farmer
+              name: Pętle "dopóki" w interfejsie Farmer
+            Until Loops in Maze:
+              key: Pętle "dopóki" w labiryncie
+              name: Pętle "dopóki" w labiryncie
+            Conditionals & Loops in Harvester:
+              key: Pętle warunkowe w interfejsie Harvester
+              name: Żniwa z wyrażeniami warunkowymi
+            'Unplugged: Binary':
+              key: 'Bez komputera: Binarny'
+              name: Binarne obrazy (Binary Images)
+            Artist Binary:
+              key: 'Artysta: Binarny'
+              name: Binarne obrazy z Artystą
+            Be A Super Digital Citizen:
+              key: Bądź Super Cyfrowym Obywatelem
+              name: Bądź Super Cyfrowym Obywatelem
+            End of Course Project:
+              key: Koniec projektu kursu
+              name: Koniec projektu kursu
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_events:
+              display_name: Zdarzenia
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            csf_binary:
+              display_name: Binarny
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          name: coursed-2021
+        coursee-2021:
+          title: Kurs E (2020)
+          description: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń warunkowych
+            oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej części tego
+            kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić
+            znajomym i rodzinie.
+          description_short: Powtórz koncepcje ujęte w kursach C i D, a następnie
+            przejdź dalej do nauki funkcji.
+          description_audience: W wieku 8-12
+          lessons:
+            Sequencing in the Maze:
+              key: Tworzenie sekwencji w labiryncie
+              name: Tworzenie sekwencji w labiryncie
+            Programming and Loops with the Artist:
+              key: Programowanie i pętle z Artystą
+              name: Rysowanie przy pomocy pętli
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
+              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
+            Conditionals:
+              key: Zdania z warunkami
+              name: Wyrażenia warunkowe z interfejsem Farmer
+            Simon Says:
+              key: Simon mówi
+              name: Simon mówi
+            Learning Sprites with Sprite Lab:
+              key: Uczące się duszki w Sprite Lab
+              name: Pływająca ryba w Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              key: Wydarzenia z Sprite Lab
+              name: Wydarzenia z Sprite Lab
+            Private and Personal Information:
+              key: Informacje prywatne i osobowe
+              name: Informacje prywatne i osobowe
+            About Me:
+              key: O mnie
+              name: O mnie ze Sprite Lab
+            Digital Sharing:
+              key: Udostępnianie cyfrowe
+              name: Udostępnianie cyfrowe
+            Nested Loops in Bee:
+              key: Zagnieżdżone pętle z pszczółką
+              name: Zagnieżdżone pętle w labiryncie
+            Nested Loops in Artist:
+              key: Zagnieżdżone pętle z Artistą
+              name: Wymyślne kształty z użyciem pętli zagnieżdżonych
+            Nested Loops in Frozen:
+              key: Zagnieżdżone pętle w Krainie Lodu
+              name: Zagnieżdżone pętle w Krainie Lodu
+            'Functions: Songwriting':
+              key: 'Funkcje: Pisanie piosenki'
+              name: Pisanie piosenek
+            Functions in Minecraft:
+              key: Funkcje w Minecrafcie
+              name: Funkcje w Minecrafcie
+            Functions in Harvester:
+              key: Funkcje w interfejsie Harvester
+              name: Funkcje ze żniwiarką
+            Functions in Artist:
+              key: Funkcje z Arystą
+              name: Funkcje z Artistą
+            Designing for Accessibility:
+              key: Projektowanie pod kątem dostępności
+              name: Projektowanie pod kątem dostępności
+            End of Course Project:
+              key: Koniec projektu kursu
+              name: Koniec projektu kursu
+          lesson_groups:
+            ramp_up:
+              display_name: Intensyfikacja działań
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_nested_loops:
+              display_name: Zagnieżdżające się  pętle
+            csf_functions:
+              display_name: Funkcje
+            csf_impacts:
+              display_name: Wplywy informatyki
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          name: coursee-2021
+        coursef-2021:
+          title: Kurs F (2020)
+          description: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji
+            i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz
+            dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej
+            części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
+            udostępnić znajomym i rodzinie.
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz
+            własne dzieło sztuki, historyjkę lub grę.
+          description_audience: W wieku 9-13
+          lessons:
+            Functions in Minecraft:
+              key: Funkcje w Minecrafcie
+              name: Funkcje w Minecrafcie
+            Learning Sprites with Sprite Lab:
+              key: Uczące się duszki w Sprite Lab
+              name: Pływająca ryba w Sprite Lab
+            Events with Sprite Lab:
+              key: Zdarzenia z Sprite Lab
+              name: Wydarzenia z Sprite Lab
+            Loops with the Artist:
+              key: Pętle z Artystą
+              name: Rysowanie przy pomocy pętli
+            Nested Loops in the Maze:
+              key: Zagnieżdżone pętle w labiryncie
+              name: Zagnieżdżone pętle w labiryncie
+            The Power of Words:
+              key: Moc słów
+              name: Moc słów
+            Envelope Variables:
+              key: Zmienne w kopertach
+              name: Zmienne w kopertach
+            Variables as Constant in Artist:
+              key: Zmienne jako stałe z Artystą
+              name: Zmienne z Artystą
+            Variables that Change in Bee:
+              key: Zmienne, które się zmieniają z pszczółką
+              name: Zmienianie zmiennych z Pszczółką
+            Variables that Change in Artist:
+              key: Zmienne, które się zmieniają z Artystą
+              name: Zmienianie zmiennych z Artistą
+            Simulating Experiments:
+              key: Symulowanie eksperymentów
+              name: Symulowanie eksperymentów
+            AI for Oceans:
+              key: AI dla oceanów
+              name: AI dla oceanów
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: Zabawa z pętlą "dla"
+              name: Zabawa z pętlą "dla"
+            For Loops in Bee:
+              key: Pętle for z Pszczółką
+              name: Pętle "for" z Pszczółką
+            For Loops in Artist:
+              key: Pętle for z Artystą
+              name: Pętle "for" z Artystą
+            Editing Behaviors:
+              key: Edytowanie zachowań
+              name: Zachowania w interfejsie Sprite Lab
+            Virtual Pet:
+              key: Wirtualny zwierzak
+              name: Wirtualny zwierzak z Sprite Lab
+            End of Course Project:
+              key: Koniec projektu kursu
+              name: Koniec projektu kursu
+          lesson_groups:
+            ramp_up:
+              display_name: Intensyfikacja działań
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_variables:
+              display_name: Zmienne
+            csf_for_loops:
+              display_name: Pętle dla (for)
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          name: coursef-2021
+        express-2021:
+          title: Kurs ekspresowy (2020)
+          description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym
+            tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności w
+            zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
+            gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          description_short: 'Wprowadzenie do informatyki: łączy nasze najlepsze programy
+            nauczania w szkole podstawowej dla starszych uczniów.'
+          description_audience: W wieku 9-18
+          lessons:
+            Dance Party:
+              key: Potańcówka
+              name: Potańcówka
+            Programming with Angry Birds:
+              key: Programowanie z Angry Birds
+              name: Programowanie z Angry Birds
+            Debugging with Scrat:
+              key: Debugwanie ze Scratem
+              name: Debugwanie ze Scratem
+            Collecting Treasure with Laurel:
+              key: Zbieranie skarbów z Laurel
+              name: Zbieranie skarbów z Laurel
+            Creating Art with Code:
+              key: Tworzenie grafiki przy pomocy kodu
+              name: Tworzenie grafiki przy pomocy kodu
+            Loops with Rey and BB-8:
+              key: Pętle z Rey i BB-8
+              name: Pętle z Rey i BB-8
+            Sticker Art with Loops:
+              key: Grafika naklejek przy pomocy pętli
+              name: Grafika naklejek przy pomocy pętli
+            Nested Loops in Maze:
+              key: Zagnieżdżone pętle w labiryncie
+              name: Zagnieżdżone pętle w labiryncie
+            Snowflakes with Anna and Elsa:
+              key: Płatki śniegu z Anną i Elzą
+              name: Płatki śniegu z Anną i Elzą
+            'Looking Ahead with Minecraft ':
+              key: Patrząc w przyszłość z Minecraftem
+              name: Patrząc w przyszłość z Minecraftem
+            If/Else with Bee:
+              key: '"jeśli/w przeciwnym razie" z Pszczółką'
+              name: '"jeśli/w przeciwnym razie" z Pszczółką'
+            While Loops with the Farmer:
+              key: Pętle "dopóki" przy pomocy interfejsu Farmer
+              name: Pętle "dopóki" przy pomocy interfejsu Farmer
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
+              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
+            Until Loops in Maze:
+              key: Pętle "dopóki" w labiryncie
+              name: Pętle "dopóki" w labiryncie
+            Harvesting with Conditionals:
+              key: Żniwa z wyrażeniami warunkowymi
+              name: Żniwa z wyrażeniami warunkowymi
+            Functions in Minecraft:
+              key: Funkcje w Minecrafcie
+              name: Funkcje w Minecrafcie
+            Functions with Harvester:
+              key: Funkcje ze żniwiarką
+              name: Funkcje ze żniwiarką
+            Functions with Artist:
+              key: Funkcje z Artistą
+              name: Funkcje z Artistą
+            Variables with Artist:
+              key: Zmienne z Artystą
+              name: Zmienne z Artystą
+            Changing Variables with Bee:
+              key: Zmienianie zmiennych z Pszczółką
+              name: Zmienianie zmiennych z Pszczółką
+            Changing Variables with Artist:
+              key: Zmienianie zmiennych z Artistą
+              name: Zmienianie zmiennych z Artistą
+            For Loops with Bee:
+              key: Pętle "for" z Pszczółką
+              name: Pętle "for" z Pszczółką
+            For Loops with Artist:
+              key: Pętle "for" z Artystą
+              name: Pętle "for" z Artystą
+            Swimming Fish in Sprite Lab:
+              key: Pływająca ryba w Sprite Lab
+              name: Pływająca ryba w Sprite Lab
+            Alien Dance Party:
+              key: Potańcówka ufoludków
+              name: Potańcówka ufoludków
+            Behaviors in Sprite Lab:
+              key: Zachowania w interfejsie Sprite Lab
+              name: Zachowania w interfejsie Sprite Lab
+            Virtual Pet with Sprite Lab:
+              key: Wirtualny zwierzak z Sprite Lab
+              name: Wirtualny zwierzak z Sprite Lab
+            End of Course Project:
+              key: Koniec projektu kursu
+              name: Koniec projektu kursu
+          lesson_groups:
+            csf_warmup:
+              display_name: Rozgrzewka
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            csf_functions:
+              display_name: Funkcje
+            csf_variables:
+              display_name: Zmienne
+            csf_for_loops:
+              display_name: Pętle dla (for)
+            end_of_course_project:
+              display_name: Koniec projektu kursu
+          name: express-2021
+        pre-express-2021:
+          title: Ekspresowy kurs dla dzieci, które nie umieją czytać (2020)
+          description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym
+            tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności w
+            zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
+            gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          description_short: 'Wprowadzenie do informatyki dla nie umiejących czytać:
+            łączy najlepsze elementy z naszych kursów dla przedszkoli i pierwszej
+            klasy.'
+          description_audience: W wieku 4-8
+          lessons:
+            Learn to Drag and Drop:
+              key: Nauka metody przeciągać i upuszczać
+              name: Nauka metody przeciągać i upuszczać
+            Sequencing with Scrat:
+              key: Tworzenie sekwencji ze Scratem
+              name: Tworzenie sekwencji ze Scratem
+            Programming in with Angry Birds:
+              key: Programowanie z Angry Birds
+              name: Programowanie z Angry Birds
+            Programming with Rey and BB-8:
+              key: Programowanie z Reyem i BB-8
+              name: Programowanie z Reyem i BB-8
+            Programming in Harvester:
+              key: Programowanie w Harvesterze
+              name: Programowanie w Harvesterze
+            Loops with Scrat:
+              key: Pętle ze Scratem
+              name: Pętle ze Scratem
+            Loops with Laurel:
+              key: Pętle z Laurel
+              name: Pętle z Laurel
+            Ocean Scene with Loops:
+              key: Scena oceanu z pętlami
+              name: Scena oceanu z pętlami
+            Drawing Gardens with Loops:
+              key: Rysowanie ogrodów z pętlami
+              name: Rysowanie ogrodów z pętlami
+            On the Move with Events:
+              key: W drodze ze zdarzeniami
+              name: W drodze ze zdarzeniami
+            A Royal Battle with Events:
+              key: Królewska bitwa ze zdarzeniami
+              name: Królewska bitwa ze zdarzeniami
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekwencjonowanie
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
+          name: pre-express-2021
+        csf-2021-pilot:
+          lessons:
+            Introduction to Course F:
+              name: Wprowadzenie do Kursu F
+            Learning Sprites with Sprite Lab:
+              name: Pływająca ryba w Sprite Lab
+            Virus Simulation for Code Bytes:
+              name: Symulowanie symulacji
+            Course F Introduction:
+              name: Wprowadzenie do Kursu F
+            lesson-1:
+              name: Zmienne w kopertach
+            lesson-2:
+              name: Przechowywanie i przetwarzanie tekstu
+            lesson-3:
+              name: Utwórz Chat-Bot
+            lesson-4:
+              name: Obliczenia ze zmiennymi
+            lesson-5:
+              name: Grupy duszków
+            lesson-6:
+              name: Utwórz grę Kolekcjonera
+          lesson_groups:
+            ramp_up:
+              display_name: Wstęp
+            outbreak:
+              display_name: Symulowanie przerwania
+            introduction:
+              display_name: Wprowadzenie do Sprite Lab
+              description: Przeglądaj projekty utworzone za pomocą Sprite Lab. Naucz
+                się podstaw kodowania za pomocą duszków i zdarzeń!
+            lessonGroup-3:
+              display_name: Zmienne
+              description: Przechowuj wartości w zmiennych i wczytaj je później w
+                programie. Modyfikuj wartości przechowywane w zmiennych, aby tworzyć
+                ekscytujące interaktywne projekty!
+          name: csf-2021-pilot
+          title: Podstawy Informatyki 2021 Pilotaż
+          description_audience: Ponadpodstawowy
+          description_short: Dowiedz się o zdarzeniach, zmiennych i warunkowych oraz
+            twórz własne animacje, gry i symulacje.
+          description: |-
+            Naucz się korzystać ze zdarzeń, programując w Sprite Lab. Zbadaj różne techniki projektowania i omów społeczne skutki informatyki.
+
+            ** Pilot 2021 **: Dziękujemy za wypróbowanie nowych lekcji. Jesteśmy wdzięczni za wszelkie uwagi. Ten kurs pilotażowy będzie dostępny tylko do czerwca 2021 roku.

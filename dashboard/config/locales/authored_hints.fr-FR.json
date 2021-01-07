@@ -3676,7 +3676,7 @@
           "courseC_artist_loops1a_b": "Utilise ce bloc pour dessiner l’autocollant !\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1a_2019": {
-          "courseC_artist_loops1a_a": "Voici le premier bloc dont tu auras besoin :\n\n<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>",
+          "courseC_artist_loops1a_a": "Voici le premier bloc dont tu auras besoin :\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
           "courseC_artist_loops1a_b": "Utilise ce bloc pour dessiner l’autocollant !\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1a_2020": {
@@ -3728,7 +3728,7 @@
           "courseC_artist_loops4a_a": "Utilise ce bloc pour sauter en avant :\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nN’oublie pas de modifier la distance !"
         },
         "courseC_artist_loops4a_2019": {
-          "courseC_artist_loops4a_a": "Utilise ce bloc pour sauter en avant :\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">100</title>\n</block>\n</xml>\n\nN’oublie pas de modifier la distance !",
+          "courseC_artist_loops4a_a": "Utilise ce bloc pour sauter en avant :\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nN’oublie pas de modifier la distance !",
           "courseC_artist_loops4a_b": "Ton programme devrait ressembler à ceci!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops4a_2020": {
@@ -8718,6 +8718,32 @@
         },
         "courseE_farmer_predict2": {
           "courseE_farmer_ramp12e_b": "La solution à cette énigme ressemblera beaucoup à la solution au dernier puzzle, mais en tournant dans l'autre sens."
+        },
+        "outbreak7": {
+          "whenclicked": "## Vaccins\n\nVous pouvez simuler l'administration d'un vaccin aux monstres en cliquant sur eux. Pour ce faire, utilisez le bloc \"changer de costume\" à l'aide de cet événement :\n\n[blockly block][0]",
+          "verionhistory": "Vous êtes bloqué ? Vous pouvez toujours réinitialiser votre code en cliquant sur \"Historique des versions\" ci-dessous, puis en choisissant \"Recommencer\"."
+        },
+        "outbreak2": {
+          "hint1": "Cliquez sur le bouton \"+\" dans le bloc d'événements. Remplissez l'espace vide dans le bloc \"changer le costume\" avec le bloc \"sujet\" qui se trouve à l'intérieur.\n[blockly block][0]"
+        },
+        "outbreak1": {
+          "step1": "Utilisez ces blocs pour créer vos sprites :\n\n[blockly block][0]\n\n[blockly block][1]\n\nCe bloc se trouve dans la catégorie **Sprites** de la boîte à outils.",
+          "step2": "Changez la taille des sprites avec ce bloc : [blockly block][0].\n\nIl se trouve dans la catégorie **Actions** de la boîte à outils.",
+          "step3": "Faites en sorte que tous les sprites commencent à errer avec ça : [blockly block][0].\n\nCe bloc se trouve dans la catégorie **Actions** de la boîte à outils."
+        },
+        "outbreak3": {
+          "hint1": "Pour donner des masques aux monstres, utilisez le bloc \"changer le costume\" avec un événement \"si cliqué\":\n\n[blockly block][0]\n\nN'oubliez pas de faire glisser le petit bloc rouge \"cliqué\" également!",
+          "hint2": "Le nouveau code pour ce niveau devrait ressembler à ceci :\n\n[blockly block][0]"
+        },
+        "outbreak4": {
+          "challenge": "## Vous souhaitez relever un autre défi ?\n\nVous pouvez également faire en sorte que les monstres se déplacent plus rapidement ou plus lentement.\n\n1.  Cliquez sur \"Modifier\" dans ce bloc [blockly block][0] \n2.  Augmentez ou diminuez le nombre dans ce bloc: \n\n[blockly block][1]\n\nPour que les monstres se déplacent plus lentement, choisissez un nombre décimal comme \"0,5\" ou \"0,25\". Pour les faire se déplacer plus vite, choisissez un nombre supérieur à 1."
+        },
+        "outbreak5": {
+          "solution2": "Votre nouveau code devrait ressembler à ceci :\n\n[blockly block][0]"
+        },
+        "outbreak6": {
+          "hint2": "Veillez à déplacer les autres blocs \"action\" vers l'intérieur du bloc \"si probabilité\" :\n\n[blockly block][0]",
+          "hint1": "Vous devrez ajouter 3 autres événements \"si touche\" pour vérifier toutes les combinaisons de \"contacts\" possibles entre les sprites en bonne santé et les sprites infectés.\n\n[blockly block][0]"
         }
       }
     }
