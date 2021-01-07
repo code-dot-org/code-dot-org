@@ -4,6 +4,7 @@ var inputEvents = [];
 var behaviors = [];
 var userInputEventCallbacks = {};
 var newSprites = {};
+var pauseTime = 0;
 
 export var background;
 export var title = '';
@@ -19,6 +20,19 @@ export function reset() {
   title = subtitle = '';
   userInputEventCallbacks = {};
   defaultSpriteSize = 100;
+  pauseTime = 0;
+}
+
+export function addPauseTime(time) {
+  pauseTime += time;
+}
+
+/**
+ * Returns World.seconds adjusted to exclude time during which the app was paused
+ */
+export function getAdjustedWorldTime(p5Inst) {
+  const current = new Date().getTime();
+  return Math.round((current - p5Inst._startTime - pauseTime) / 1000);
 }
 
 /**
@@ -205,13 +219,11 @@ export function clearCollectDataEvents() {
 function atTimeEvent(inputEvent, p5Inst) {
   if (inputEvent.args.unit === 'seconds') {
     const previousTime = inputEvent.previousTime || 0;
-    inputEvent.previousTime = p5Inst.World.seconds;
+    const worldTime = getAdjustedWorldTime(p5Inst);
+    inputEvent.previousTime = worldTime;
     // There are many ticks per second, but we only want to fire the event once (on the first tick where
-    // World.seconds matches the event argument)
-    if (
-      p5Inst.World.seconds === inputEvent.args.n &&
-      previousTime !== inputEvent.args.n
-    ) {
+    // the time matches the event argument)
+    if (worldTime === inputEvent.args.n && previousTime !== inputEvent.args.n) {
       // Call callback with no extra args
       return [{}];
     }
@@ -227,10 +239,11 @@ function atTimeEvent(inputEvent, p5Inst) {
 
 function collectDataEvent(inputEvent, p5Inst) {
   const previous = inputEvent.previous || 0;
-  inputEvent.previous = p5Inst.World.seconds;
+  const worldTime = getAdjustedWorldTime(p5Inst);
+  inputEvent.previous = worldTime;
 
   // Only log data once per second
-  if (p5Inst.World.seconds !== previous) {
+  if (worldTime !== previous) {
     // Call callback with no extra args
     return [{}];
   } else {
