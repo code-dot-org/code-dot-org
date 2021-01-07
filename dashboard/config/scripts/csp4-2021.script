@@ -15,12 +15,12 @@ level 'U4 L01 Thermostat App_2021', progression: 'Sample Apps'
 level 'U1 L02 CYU MC_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Variables Investigate', display_name: 'Variables Investigate'
-level 'U4 L02 Thermostat App v1_2021', progression: 'Thermostat App v1'
-level 'U4 L02 Thermostat App v1 Code_2021', progression: 'Thermostat App v1'
-level 'U4 L02 Thermostat App v2_2021', progression: 'Thermostat App v2'
-level 'U4 L02 Thermostat App v3_2021', progression: 'Thermostat App v3'
-level 'U4 L02 Thermostat App v3 pt2_2021', progression: 'Thermostat App v3'
-level 'U4 L02 CYU Exit Ticket_2021', progression: 'Check For Understanding', assessment: true
+level 'U4 L02 Thermostat App v1_2021', progression: 'Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins'
+level 'U4 L02 Thermostat App v1 Code_2021', progression: 'Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins'
+level 'U4 L02 Thermostat App v2_2021', progression: 'Investigation #2: Thermostat App v.2 (Level 3) - 10 mins'
+level 'U4 L02 Thermostat App v3_2021', progression: 'Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins'
+level 'U4 L02 Thermostat App v3 pt2_2021', progression: 'Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins'
+level 'U4 L02 CYU Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
 
 lesson 'Variables Practice', display_name: 'Variables Practice'
 level 'U4 L03 Variables numbers practice 1_2021', progression: 'Assigning Numbers and Strings'
@@ -33,8 +33,8 @@ level 'U4 L03 Variables operator practice 6_2021', progression: 'Variables and O
 level 'U4 L03 Variable Scope: Local vs. Global_2021', progression: 'Debugging Scope Issues'
 level 'U4 L03 Scope Issue_2021', progression: 'Debugging Scope Issues'
 level 'U4 L03 Variables operator practice 4_2021', progression: 'Putting it Together'
-level 'U4L3 CFU Variables Psuedocode_2021', progression: 'Check For Understanding: AP Practice', assessment: true
-level 'U4L3 CFU Variables Randomness Psuedocode_2021', progression: 'Check for Understanding: AP Practice', assessment: true
+level 'U4L3 CFU Variables Psuedocode_2021', progression: 'Assessment: Check For Understanding: AP Practice', assessment: true
+level 'U4L3 CFU Variables Randomness Psuedocode_2021', progression: 'Assessment: Check For Understanding: AP Practice', assessment: true
 
 lesson 'Variables Make', display_name: 'Variables Make'
 level 'U4 L04 Variables Make Project_2021', progression: 'Try the Photo Liker App'
@@ -43,7 +43,7 @@ level 'U4 L04 Variables Make Project Submit_2021', progression: 'Make the Photo 
 lesson_group 'csp_conditionals', display_name: 'Conditionals'
 lesson 'Conditionals Explore', display_name: 'Conditionals Explore'
 level 'U4 L06 Introduction to Conditionals: Boolean Expressions_2021', progression: 'Conditionals: Boolean Expressions'
-level 'U4 L05 CYU Exit Ticket_2021', progression: 'Check For Understanding', assessment: true
+level 'U4 L05 CYU Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
 
 lesson 'Conditionals Investigate', display_name: 'Conditionals Investigate'
 level 'U4L06 Introduction to Conditionals: if Statements_2021', progression: 'If-Statements'
