@@ -111,7 +111,7 @@ class SchoolDistrict < ApplicationRecord
             city:                         row['Location City [District] 2018-19'].to_s.upcase.presence,
             state:                        row['Location State Abbr [District] 2018-19'].strip.to_s.upcase.presence,
             zip:                          row['Location ZIP [District] 2018-19'].tr('"=', ''),
-            last_known_school_year_open:  '2018-2019'
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2018-19']) ? '2018-2019' : nil
           }
         end
       end
