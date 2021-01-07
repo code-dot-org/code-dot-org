@@ -90,7 +90,7 @@ export const levelShapeForScript = PropTypes.shape({
   videoKey: PropTypes.string,
   concepts: PropTypes.string,
   conceptDifficulty: PropTypes.string,
-  progression: PropTypes.bool,
+  progression: PropTypes.string,
   named: PropTypes.bool,
   bonus: PropTypes.bool,
   assessment: PropTypes.bool,
