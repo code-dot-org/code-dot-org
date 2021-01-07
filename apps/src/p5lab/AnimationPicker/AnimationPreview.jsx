@@ -134,6 +134,7 @@ export default class AnimationPreview extends React.Component {
     };
 
     const imageStyle = {
+      // The maxWidth and maxHeight params need to be 'none' for the animation previews to animate
       maxWidth: 'none',
       maxHeight: 'none',
       width: scaledSourceSize.x,
