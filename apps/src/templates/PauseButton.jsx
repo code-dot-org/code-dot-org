@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
+import {actions, selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 
 const styles = {
   button: {
@@ -13,27 +15,38 @@ const styles = {
 };
 
 class PauseButton extends React.Component {
+  static propTypes = {
+    // from redux
+    togglePause: PropTypes.func.isRequired,
+    isPaused: PropTypes.bool.isRequired,
+    isAttached: PropTypes.bool.isRequired
+  };
+
   togglePause = () => {
     console.log('toggle');
+    this.props.togglePause();
   };
 
   render() {
-    const isAttached = true;
-    const isPaused = false;
     return (
       <button
         type="button"
         onClick={this.togglePause}
         style={styles.button}
-        disabled={!isAttached}
+        disabled={!this.props.isAttached}
       >
-        <i className={isPaused ? 'fa fa-play' : 'fa fa-pause'} />
+        <i className={this.props.isPaused ? 'fa fa-play' : 'fa fa-pause'} />
       </button>
     );
   }
 }
 
 export default connect(
-  state => ({}),
-  dispatch => ({})
+  state => ({
+    isAttached: selectors.isAttached(state),
+    isPaused: selectors.isPaused(state)
+  }),
+  {
+    togglePause: actions.togglePause
+  }
 )(PauseButton);
