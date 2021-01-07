@@ -12,7 +12,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
 
   teardown do
     # Some tests access and store data in the cache, so clear between tests to avoid state leakage
-    Rails.cache.clear
+    CDO.shared_cache.clear
   end
 
   test 'get_token: returns token on success' do
