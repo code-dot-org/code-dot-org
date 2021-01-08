@@ -173,6 +173,8 @@ class ActivityCard extends Component {
             name={activity.displayName || 'Unnamed Activity'}
             move={this.handleMoveActivity}
             remove={this.handleRemoveActivity}
+            item={this.props.activity}
+            itemType={'activity'}
           />
         </div>
         <div style={styles.activityBody} hidden={this.props.collapsed}>
