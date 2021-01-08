@@ -286,6 +286,37 @@ module Services
       )
     end
 
+    test 'seed updates lesson vocabularies' do
+      script = create_script_tree
+      CourseOffering.add_course_offering(script)
+      assert script.course_version
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.vocabularies.first.update!(word: 'updated word', definition: 'updated definition')
+        lesson.vocabularies.create(
+          word: 'new word',
+          key: "#{lesson.name}-vocab-3",
+          definition: "new definition",
+          course_version: script.course_version
+        )
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal(
+        ['updated word', 'word', 'new word'],
+        lesson.vocabularies.map(&:word)
+      )
+      assert_equal(
+        ['updated definition', 'definition', 'new definition'],
+        lesson.vocabularies.map(&:definition)
+      )
+    end
+
     test 'seed deletes lesson_groups' do
       script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
@@ -449,6 +480,30 @@ module Services
       assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
       expected_counts['LessonsResource'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
+    # Vocabulary is owned by the course version. We need to make sure all the
+    # vocabulary we need for this script are created, but we should never remove
+    # any vocabulary because it might be in use by another lesson in this course
+    # version.
+    test 'seed deletes lessons_vocabularies but not vocabularies' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        assert_equal 2, lesson.vocabularies.count
+        lesson.vocabularies.delete(lesson.vocabularies.first)
+        assert_equal 1, lesson.vocabularies.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LessonsVocabulary'] -= 1
       assert_equal expected_counts, get_counts
     end
 
