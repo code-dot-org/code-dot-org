@@ -43,6 +43,7 @@ km-KH:
   csedweek_og_description: ថ្ងៃទី៤ ដល់ថ្ងៃទី១០ ខែធ្នូ ឆ្នាំ២០១៧។ វិទ្យាសាស្រ្តកុំព្យូទ័រគឺជាមូលដ្ឋានគ្រិះសំរាប់ការសិក្សារបស់សិស្សទាំងអស់។
   hoc2014_heading: ចូលរួម<a href="http://hourofcode.com">កម្មវិធី Hour of Code</a><br/>នៅថ្ងៃទី៨
     ដល់ថ្ងៃទី១៤ ខែធ្នូ ឆ្នាំ២០១៤<br/>
+  hoc2014_students: សិស្ស
   hoc2014_try: សាកល្បង
   hoc2014_teachers: គ្រូបង្រៀន
   hoc2014_host: រៀបចំ
@@ -379,6 +380,7 @@ km-KH:
   homepage_slot_text_link_host: រៀបចំកម្មវិធី Hour of Code
   homepage_slot_text_link_hocserved: "# បានប្រើប្រាស់"
   homepage_solot_text_link_volunteer: ស្ម័គ្រចិត្តក្នុងកម្មវិធី Hour of Code
+  homepage_slot_text_title_students: សិស្ស
   homepage_slot_text_blurb_students: ស្វែងរកការបង្រៀនរបស់យើងទាំងអស់
   homepage_slot_text_blurb_students_courses: ស្វែងរកមេរៀនរបស់យើង
   homepage_slot_text_link_codestudio: សាកល្បង Code Studio
@@ -559,13 +561,16 @@ km-KH:
   video_title_obama: ការយល់ឃើញរបស់ប្រធានាធិបតី Obama ចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័រ
   video_title_hoc_is_here: កម្មវិធី Hour of Code នៅទីនេះ - មនុស្សគ្រប់គ្នាអាចសិក្សា
   video_title_anybody_can_learn: មនុស្សគ្រប់គ្នាអាចរៀនបាន
+  video_title_steph_curry: កម្មវិធី Hour of Code ជាមួយ Steph Curry
   video_title_draymond_green: កម្មវិធី Hour of Code ជាមួយ Draymond Green
   video_title_russell_okung: កម្មវិធី Hour of Code ជាមួយ Russell Okung
   video_title_real_madrid: កម្មវិធី Hour of Code ជាមួយ Real Madrid
   video_title_marco_belinelli: កម្មវិធី Hour of Code ជាមួយ Marco Belinelli
   video_title_chris_bosh: ការយល់ឃើញចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័ររបស់ Chris Bosh
+  video_title_my_name_is_aracely: ខ្ញុំ​ឈ្មោះ Aracely
   video_1min: ១នាទី
   video_2min: ២នាទី
+  video_3min: ៣នាទី
   video_5min: ៥នាទី
   speak_another_language: និយាយភាសាផ្សេងទៀត?
   help_translate: ជួយពួកយើងក្នុងការបកប្រែភាសា។
@@ -588,6 +593,7 @@ km-KH:
     ឬនរណាម្នាក់ដែលអាច<span style="font-family: ''Gotham 7r'', sans-serif;">បំផុសគំនិត</span>សិស្សរបស់ពួកគេដោយនិយាយអំពីទំហំនៃលទ្ធភាពដែលមានក្នុងវិទ្យាសាស្រ្តកុំព្យូទ័រ
     (ដែលអាចធ្វើតាមរយៈការឆ្លើយឆ្លងជាវីដេអូ)។'
   volunteer_engineer_submission_intro_guide: សិក្សាបន្ថែមពី<a href="%{volunteer_guide}">កម្មវិធីអ្នកស្ម័គ្រចិត្តរបស់យើងនៅទីនេះ</a>។
+  volunteer_engineer_submission_intro_guide_markdown: សិក្សាបន្ថែមពី  [កម្មវិធីអ្នកស្ម័គ្រចិត្តរបស់យើងនៅទីនេះ](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: សូមបញ្ចូលពត៌មានដូចខាងក្រោមប្រសិនបើអ្នកជានិស្សិតវិទ្យាសាស្រ្តកុំព្យូទ័រឬអ្នកជំនាញផ្នែកបង្កើតកម្មវិធី។
     ចន្លោះបំពេញដែលមានសញ្ញា<span class="form-required-field">*</span> គឺតម្រូវឲបំពេញជាដាច់ខាត។
   volunteer_engineer_submission_intro_links: តើអ្នកជាគ្រូបង្រៀនកំពុងស្វែងរកអ្នកស្ម័គ្រចិត្តដែរឬទេ?
@@ -741,8 +747,70 @@ km-KH:
   dashboard_assessments_none_part2: ប្រសិនបើអ្នកកំពុងបង្រៀនអនុវិទ្យាល័យឬវិទ្យាល័យយើងមានសំណួរសំរាប់ធ្វើការវាស់ស្ទង់ដែលអាចរកបានក្នុងផ្នែកមួយនៃ
     Code.org ដើម្បីជួយសិស្សរបស់អ្នកត្រៀមលក្ខណៈសម្រាប់ការធ្វើតេស្តចូលរៀន ។ ដើម្បីប្រើប្រាស់ការវាស់ស្ទង់ទាំងនេះ
     ដំបូងជ្រើសមេរៀនសំរាប់ថ្នាក់របស់អ្នក រួចជ្រើសរើសមេរៀនចេញពីតារាងជម្រើសខាងលើហើយអ្នកនឹងឃើញចំលើយនៅទីនោះ។
+  dashboard_surveys_answers: ការស្ទង់មតិ
+  dashboard_percent: ភាគរយ
+  dashboard_filter_by_stage: ត្រងតាមដំណាក់កាល
+  dashboard_filter_all: ទាំងអស់
+  dashboard_download_csv: ទាញយក CSV
+  dashboard_navigation_home_page: ទំព័រដើមគ្រូបង្រៀន
+  dashboard_navigation_section_student_progress: គណនីនិស្សិតនិងការរីកចម្រេីន
+  dashboard_navigation_section_teacher_progress: វឌ្ឍនភាពវគ្គសិក្សារបស់អ្នក
+  dashboard_navigation_section_lesson_plans: ផែនការមេរៀននិងធនធាន
   dashboard_navigation_section_community: ការ​គាំទ្រ
+  dashboard_navigation_section_pd: ការអភិវឌ្ឍន៍វិជ្ជាជីវៈ
+  dashboard_navigation_section_speakers: |-
+    កុំព្យូទ័ រ
+    វាគ្មិនភ្ញៀវ
+  dashboard_navigation_all_sections: គណនីនិស្សិតនិងការរីកចម្រេីន
+  dashboard_navigation_view_text_responses: ការឆ្លើយតបអត្ថបទ
+  dashboard_navigation_view_assessments: ការវាយតំលៃ
+  dashboard_navigation_view_assessments_surveys: ការវាយតំលៃ
+  dashboard_navigation_add_students: បន្ថែមសិស្ស
+  dashboard_navigation_manage_students: គ្រប់គ្រងនិស្សិត
+  dashboard_navigation_lesson_plans_resources: ស្តង់ដារកម្មវិធីសិក្សា
+  dashboard_navigation_view_stats: ស្ថិតិ
+  dashboard_navigation_section: ផ្នែក%{section_name}
+  dashboard_navigation_student: សិស្ស%{student_name}
+  dashboard_progress_not_completed: មិនបានបញ្ចប់
+  dashboard_progress_view: មើលវឌ្ឍនភាពនៅក្នុង
+  dashboard_progress_student_in_script: ព័ត៌មានវឌ្ឍនភាពសម្រាប់%{student_name}ក្នុង%{script_name}
+  dashboard_progress_pair_programming: ការសរសេរកម្មវិធីជាគូ
+  dashboard_responses_view: មើលការឆ្លើយតបជាអត្ថបទនៅក្នុង៖
+  dashboard_responses_none: ភាគច្រើននៃថ្នាក់រៀនរបស់យើងត្រូវបានរចនាឡើងដើម្បីធ្វើការសម្រាប់ក្មេងជាងវ័យហើយមិនតម្រូវឱ្យសិស្សវាយបញ្ចូលអត្ថបទឆ្លើយតបនឹងសំណួរទេដូច្នេះអ្នកនឹងមិនឃើញការឆ្លើយតបជាអត្ថបទណាមួយនៅទីនេះទេ។
+    សម្រាប់សិស្សដែលមានវ័យចំណាស់នៅក្នុងវគ្គសិក្សាពាក់កណ្តាលនិងវិទ្យាល័យអ្នកអាចឃើញការដាក់ស្នើរបស់ពួកគេចំពោះសំណួរឆ្លើយសំណួរបើកចំហដោយជ្រើសរើសវគ្គសិក្សាដែលបានកំណត់ពីការធ្លាក់ចុះខាងលើ។
+  dashboard_sections_new_section: ផ្នែកថ្មី
+  dashboard_sections_new_google_section: ផ្នែកនាំចូលពី Google classroom
+  dashboard_sections_jumbotron_instruction: បង្កើតផ្នែកថ្មីហើយបន្ថែម សិស្សឱ្យពួកគេ។
+    ផ្នែកជួយអ្នករៀបចំសិស្សជាក្រុមតូចៗដូច្នេះអ្នកអាចតាមដានវឌ្ឍនភាពរបស់ពួកគេនិងគ្រប់គ្រងគណនីរបស់ពួកគេ។
+  dashboard_sections_table_section: " ថ្មី\n"
+  dashboard_sections_table_secret: ប្រភេទចូល
+  dashboard_sections_table_grade: ថ្នាក់
+  dashboard_sections_table_course: វគ្គសិក្សា
+  dashboard_sections_table_stage_extras: ការបន្ថែមដំណាក់កាល
+  dashboard_sections_table_students: សិស្ស
+  dashboard_sections_table_code: លេខកូដផ្នែក
+  dashboard_sections_name: ឈ្មោះផ្នែក
+  dashboard_sections_choose_secret: |-
+    ប្រសិនបើអ្នកចង់ផ្តល់គណនីដល់សិស្សរបស់អ្នកសូមជ្រើសរើសប្រភេទសម្ងាត់មួយ
+    ពាក្យ
+    រូបភាព
+    សម្រាប់ផ្នែកនោះ។
+  dashboard_sections_secret_word: ពាក្យ  អនុញ្ញាតឱ្យអ្នកកំណត់ពាក្យសំងាត់សម្រាប់សិស្សម្នាក់ៗ។
+  dashboard_sections_secret_picture: រូបភាព  អនុញ្ញាតឱ្យអ្នកកំណត់រូបភាពសំងាត់សម្រាប់សិស្សម្នាក់ៗដែលល្អសម្រាប់សិស្សក្មេងៗដែលមិនទាន់អាចវាយបញ្ចូលបាន។
+  dashboard_sections_secret_none: ប្រសិនបើអ្នកចង់អោយសិស្សរបស់អ្នកគ្រប់គ្រងគណនីផ្ទាល់ខ្លួនរបស់ពួកគេរួមទាំងការជ្រើសរើសពាក្យសម្ងាត់ផ្ទាល់ខ្លួនសូមជ្រើសរើសយកប្រភេទ
+    គ្មាន ។
+  dashboard_sections_print_secrets: បន្ទាប់មកអ្នកអាចបោះពុម្ពសន្លឹកបៀមួយសន្លឹកដែលមានព័ត៌មានគណនីដែលត្រូវចែកចាយដល់សិស្សរបស់អ្នកម្នាក់ៗ។
+  dashboard_sections_switch_section: ប្តូរផ្នែក៖
   dashboard_sections_close: បិទ
+  dashboard_sections_move_students_desc: ជ្រើសរើសនិស្សិតឱ្យផ្លាស់ទៅផ្នែកថ្មី។ ការផ្លាស់ប្តូរនិស្សិតនឹងមិនច្បាស់ពីការរីកចម្រើនរបស់ពួកគេទេ
+  dashboard_sections_one_per_teacher: សិស្សអាចស្ថិតនៅក្នុងផ្នែកតែមួយប៉ុណ្ណោះសម្រាប់គ្រូនីមួយៗ។
+    សិស្សរបស់អ្នកនឹងត្រូវបានបន្ថែមទៅផ្នែកថ្មីនេះហើយទុកផ្នែកចាស់របស់ពួកគេ។
+  dashboard_sections_move_to_section: ផ្លាស់ទីទៅផ្នែក៖
+  dashboard_sections_enter_code: បញ្ចូលលេខកូដផ្នែក៖
+  dashboard_sections_code_placeholder: លេខកូដ ៦ ខ្ទង់ (ABCDEF)
+  dashboard_sections_other_section: គ្រូផ្សេងទៀត
+  dashboard_sections_both_sections: តើអ្នកចង់អោយនិស្សិតស្ថិតនៅក្នុងផ្នែកទាំងពីរទេ?
+  dashboard_sections_yes_both: បាទ / ចាសខ្ញុំចង់ចម្លងនិស្សិតឱ្យស្ថិតនៅក្នុងផ្នែកបច្ចុប្បន្ននេះនិងផ្នែកថ្មី
   dashboard_students_name: ឈ្មោះ
   dashboard_students_male: ប្រុស
   dashboard_students_female: ស្រី
@@ -810,6 +878,7 @@ km-KH:
   header_about_faqs: សម្រាប់សំនួរបន្ថែមទៀត
   header_learn: ស្វែងយល់បន្ថែំម
   header_teach: បង្រៀន
+  header_stats: ស្ថិតិ
   header_help_us: ជួយពួកយើង
   header_about: អំពី
   header_teacher_community: សមាគមន៏នៃគ្រូបង្រៀន
@@ -847,7 +916,9 @@ km-KH:
     បន្ថែមជាមួយអ្នកជំនាញក្នុងវិស័យបច្ចេកវិទ្យា"
   hoc2018_mc_video_1min: ១នាទី
   hoc2018_mc_video_2min: ២នាទី
+  hoc2018_mc_video_3min: ៣នាទី
   hoc2018_mc_video_5min: ៥នាទី
+  hoc2018_mc_video_title_steph_curry: កម្មវិធី Hour of Code ជាមួយ Steph Curry
   hoc2018_mc_video_title_sports: ជំរុញខ្លួនអ្នក។ មនុស្សគ្រប់គ្នាអាចរៀនបាន។
   hoc2018_mc_video_title_inspire_girl: បំផុសគំនិតក្មេងស្រី
   hoc2018_mc_video_title_cs_intro: ការណែនាំពីវិទ្យាសាស្ត្រកុំព្យូទ័រ
@@ -855,6 +926,7 @@ km-KH:
   hoc2018_mc_video_title_obama: ការយល់ឃើញរបស់ប្រធានាធិបតី Obama ចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័រ
   hoc2018_mc_video_title_hoc_is_here: កម្មវិធី Hour of Code នៅទីនេះ - មនុស្សគ្រប់គ្នាអាចសិក្សា
   hoc2018_mc_video_title_anybody_can_learn: មនុស្សគ្រប់គ្នាអាចរៀនបាន
+  hoc2018_mc_video_title_my_name_is_aracely: ខ្ញុំ​ឈ្មោះ Aracely
   hoc2018_mc_homepage_join_us: ចូលរួមជាមួយយើង
   hoc2018_mc_homepage_try_it: សាកល្បង
   hoc2018_mc_back: Minecraft បានត្រលប់មកវិញជាមួយហ្នឹងសកម្មភាពថ្មីសំរាប់ Hour of Code!

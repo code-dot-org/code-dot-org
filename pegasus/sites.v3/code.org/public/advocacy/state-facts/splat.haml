@@ -118,14 +118,14 @@ state-facts: true
             high school students
           in
           = state_info[:state_name_s]
-          took an AP Computer Science exam in 2019.
+          took an AP Computer Science exam in 2020.
         - else
           Only
           %b
             = format_integer_with_commas(state_info[:ap_cs_exams_i])
             exams were taken in AP Computer Science by high school students in
           = state_info[:state_name_s]
-          in 2019
+          in 2020
           = precede "(" do
             = format_integer_with_commas(state_info[:ap_csa_exams_i])
           took AP CS A and
@@ -138,7 +138,7 @@ state-facts: true
             = state_info[:percent_ap_female_i]
         - else
           none
-        were female
+        were taken by female students
         = surround "(", "%" do
           = format_integer_with_commas(state_info[:percent_ap_csa_female_i])
         for AP CS A and
@@ -219,7 +219,7 @@ state-facts: true
           = surround "(", "% of" do
             = state_info[:percent_schools_ap_cs_i]
           = state_info[:state_code_s]
-          schools with AP programs) offered an AP Computer Science course in 2018-2019
+          schools with AP programs) offered an AP Computer Science course in 2019-2020
           = surround "(", "%" do
             = state_info[:percent_schools_ap_csa_i]
           offered AP CS A and
@@ -236,7 +236,7 @@ state-facts: true
         - else
           No schools in
           = state_info[:state_code_s]
-          offered an AP Computer Science course in 2018-2019.
+          offered an AP Computer Science course in 2019-2020.
         - if state_param != 'AK' && state_param != 'AL' && state_param != 'AR' && state_param != 'CA' && state_param != 'FL' && state_param != 'IL' && state_param != 'LA' && state_param != 'MD' && state_param != 'MI' && state_param != 'MN' && state_param != 'MT' && state_param != 'ND' && state_param != 'NE' && state_param != 'NH' && state_param != 'NJ' && state_param != 'NY' && state_param != 'OH' && state_param != 'PA' && state_param != 'RI' && state_param != 'VA'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
       %li

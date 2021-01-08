@@ -807,6 +807,13 @@ FactoryGirl.define do
     description 'fake description'
   end
 
+  factory :vocabulary do
+    association :course_version
+    sequence(:key) {|n| "vocab-#{n}"}
+    word 'word'
+    definition 'definition'
+  end
+
   factory :callout do
     sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'

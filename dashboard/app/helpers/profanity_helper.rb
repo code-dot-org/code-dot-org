@@ -11,7 +11,7 @@ module ProfanityHelper
   # @param [Integer] limit - Number of requests allowed over period.
   # @param [Integer] period - Period of time in seconds.
   def self.throttled_find_profanities(text, locale, id, limit, period)
-    return nil if text.nil_or_empty?
+    return yield(nil) if text.nil_or_empty?
     key = cache_key(text, locale)
     return yield(Rails.cache.read(key)) if Rails.cache.exist?(key)
     return if Cdo::Throttle.throttle(PROFANITY_PREFIX + id.to_s, limit, period)

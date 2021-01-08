@@ -116,7 +116,6 @@ describe('activitiesEditorRedux reducer tests', () => {
               position: 1,
               displayName: 'Making drawings',
               remarks: true,
-              slide: false,
               scriptLevels: [],
               text: 'Drawing text',
               tips: []

@@ -27,7 +27,8 @@ export default class RelatedLessons extends Component {
   };
 
   getRelatedLessonText(lesson) {
-    const includeYear = !lesson.scriptTitle.includes(lesson.versionYear);
+    const includeYear =
+      lesson.versionYear && !lesson.scriptTitle.includes(lesson.versionYear);
     const year = includeYear ? ` - ${lesson.versionYear}` : '';
     const type = lesson.lockable ? 'Lockable' : 'Lesson';
     return `${lesson.scriptTitle}${year} - ${type} ${lesson.relativePosition}`;
