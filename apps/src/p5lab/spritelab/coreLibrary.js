@@ -4,7 +4,8 @@ var inputEvents = [];
 var behaviors = [];
 var userInputEventCallbacks = {};
 var newSprites = {};
-var pauseTime = 0;
+var totalPauseTime = 0;
+var currentPauseStartTime = 0;
 
 export var background;
 export var title = '';
@@ -20,11 +21,16 @@ export function reset() {
   title = subtitle = '';
   userInputEventCallbacks = {};
   defaultSpriteSize = 100;
-  pauseTime = 0;
+  totalPauseTime = 0;
 }
 
-export function addPauseTime(time) {
-  pauseTime += time;
+export function startPause(time) {
+  currentPauseStartTime = time;
+}
+
+export function endPause(time) {
+  totalPauseTime += time - currentPauseStartTime;
+  currentPauseStartTime = 0;
 }
 
 /**
@@ -32,7 +38,7 @@ export function addPauseTime(time) {
  */
 export function getAdjustedWorldTime(p5Inst) {
   const current = new Date().getTime();
-  return Math.round((current - p5Inst._startTime - pauseTime) / 1000);
+  return Math.round((current - p5Inst._startTime - totalPauseTime) / 1000);
 }
 
 /**
