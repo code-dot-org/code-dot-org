@@ -83,7 +83,7 @@
                   = t('signup_form.gender')
                 = f.select :gender, gender_options
             %br/
-            = submit_tag 'Register', class: 'btn btn-primary', id: 'register_join_section'
+            = submit_tag 'Register', class: 'btn btn-primary', disabled: true, id: 'register_join_section'
 
         #student-terms
           != t('signup_form.student_terms_markdown', markdown: true)
