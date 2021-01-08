@@ -17,7 +17,8 @@
           "curriculum",
           "/link/to/curriculum"
         ]
-      ]
+      ],
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -4731,12 +4732,12 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Computer Science is Changing Everything"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Computer Science is Changing Everything_2021"
@@ -4759,7 +4760,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_socialBelonging_control_2021"
@@ -6179,19 +6180,6 @@
   ],
   "resources": [
     {
-      "name": "Computer Science is Changing Everything",
-      "url": "https://youtu.be/1x54GqfL3UY",
-      "key": "innovation-video-1-1",
-      "properties": {
-        "type": "Video",
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "innovation-video-1-1"
-      }
-    },
-    {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
       "key": "CSP Unit 1 Presentation",
@@ -6225,6 +6213,19 @@
       },
       "seeding_key": {
         "resource.key": "personal-innovations-1"
+      }
+    },
+    {
+      "name": "Computer Science is Changing Everything",
+      "url": "https://youtu.be/1x54GqfL3UY",
+      "key": "innovation-video-1-1",
+      "properties": {
+        "type": "Video",
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4"
+      },
+      "seeding_key": {
+        "resource.key": "innovation-video-1-1"
       }
     },
     {
@@ -6613,12 +6614,6 @@
     {
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
-        "resource.key": "innovation-video-1-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
         "resource.key": "CSP Unit 1 Presentation"
       }
     },
@@ -6632,6 +6627,12 @@
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
         "resource.key": "personal-innovations-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "innovation-video-1-1"
       }
     },
     {

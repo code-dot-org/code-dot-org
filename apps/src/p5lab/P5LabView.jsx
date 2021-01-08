@@ -40,7 +40,8 @@ class P5LabView extends React.Component {
     isIframeEmbed: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     spriteLab: PropTypes.bool.isRequired,
-    isBackground: PropTypes.bool
+    isBackground: PropTypes.bool,
+    pauseHandler: PropTypes.func.isRequired
   };
 
   state = {
@@ -119,7 +120,10 @@ class P5LabView extends React.Component {
           style={visualizationColumnStyle}
         >
           {this.props.showVisualizationHeader && <P5LabVisualizationHeader />}
-          <P5LabVisualizationColumn finishButton={showFinishButton} />
+          <P5LabVisualizationColumn
+            finishButton={showFinishButton}
+            pauseHandler={this.props.pauseHandler}
+          />
           {this.getChannelId() && (
             <AnimationPicker
               channelId={this.getChannelId()}

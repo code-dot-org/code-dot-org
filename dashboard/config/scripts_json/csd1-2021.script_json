@@ -18,7 +18,8 @@
         ]
       ],
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -59,7 +60,7 @@
       "position": 3,
       "properties": {
         "display_name": "Chapter 2: Computers and Problem Solving",
-        "big_questions": "* How do computers help people to solve problems?\r\n* How do people and computers approach problems differently?\r\n* What does a computer need from people in order to solve problems effectively?",
+        "big_questions": "* How do computers help people to solve problems?\n* How do people and computers approach problems differently?\n* What does a computer need from people in order to solve problems effectively?",
         "description": "This chapter presents computers as machines that solve information problems. Students begin by building a common definition for a computer that focuses on functionality instead of specific hardware. They then explore the ways that computers approach problems. For their final project, students propose an app that could be used to solve a problem of their choosing."
       },
       "seeding_key": {
@@ -2697,7 +2698,6 @@
         "description": "**Circulate:** The first part of this reflection serves as a review of input and output.   As students reflect on the prompt, check their answers to ensure that they understand how input and output are used in the app.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Students may identify the user's birthdate as one input and possibly the current date as another input. The message of whether or not it is the birthday is the output. The decision of which message to output is based on whether the current date matches the date that the user inputs. \r\n\r\n\r\n"
           }
@@ -2715,7 +2715,6 @@
         "description": "Ask students to share out how they thought the app made the decision.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Students may have trouble articulating exactly how the app makes its decision.  Encourage discussion and highlight the \"matching\" and \"if/then\" facets of the decision make process.  (e.g. \"The app **compares** the birthdate to today's date.\" / **If** the birthdate is the same as today's date, **then** display \"Happy Birthday!\")\r\n\r\n\r\n"
           }
@@ -2780,7 +2779,6 @@
         "description": "**Prompt:**  How does this app use if/then and comparing to turn the input into output?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Allow students to share out their answers, and reinforce that comparing can mean deciding whether any two things are the same, not just numbers.\r\n\r\n"
           }
@@ -2809,7 +2807,6 @@
         "description": "**Prompt:**  This app uses some different types of processing to make decisions.  What kinds of processing might it use?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Allow students to share out their answers, but make sure that the \"counting\" and the \"find a match\" are highlighted in the discussion.\r\n\r\n"
           }
@@ -2862,7 +2859,6 @@
         "description": "**Circulate:** Allow students to complete the rest of the chart in their groups. As they fill out the charts, ask them to elaborate on how the app works and what makes that particular type of processing useful.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Because almost all apps use more than one form of processing, students may identify unexpected aspects of the apps. The most important part is their explanation. They should be reasoning about how the input is used to generate the output of the app.\r\n"
           }
@@ -2924,10 +2920,9 @@
       "key": "ed3fc57d-be54-4625-bae7-5cac4680d615",
       "position": 2,
       "properties": {
-        "description": "<!-- place where you'd like the icon -->  **Discuss:** As a class, discuss the examples students brainstormed.",
+        "description": "**Discuss:** As a class, discuss the examples students brainstormed.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Students' answers will vary, but make sure that they are reasonably using processing to change an input into an output.\r\n"
           }
@@ -5073,12 +5068,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pre-survey-levelgroup_2021"
-        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pre-survey-levelgroup_2021"
@@ -5096,15 +5088,12 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Video: Problem Solving Process",
-        "level_keys": [
-          "CSD Problem Solving Process Video_2021"
-        ]
+        "progression": "Video: Problem Solving Process"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Problem Solving Process Video_2021"
@@ -5122,15 +5111,12 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Video: What Makes a Computer, a Computer?",
-        "level_keys": [
-          "CSD What Makes a Computer a Computer Video_2021"
-        ]
+        "progression": "Video: What Makes a Computer, a Computer?"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD What Makes a Computer a Computer Video_2021"
@@ -5148,15 +5134,12 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "App: Pet Chooser",
-        "level_keys": [
-          "CSD U1 IO Pet Chooser_2021"
-        ]
+        "progression": "App: Pet Chooser"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 IO Pet Chooser_2021"
@@ -5174,15 +5157,12 @@
       "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "App: Story Creator",
-        "level_keys": [
-          "CSD U1 IO Story_2021"
-        ]
+        "progression": "App: Story Creator"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 IO Story_2021"
@@ -5200,15 +5180,12 @@
       "chapter": 6,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "App: Improved Pet Chooser",
-        "level_keys": [
-          "CSD U1 IO Pet Chooser 2_2021"
-        ]
+        "progression": "App: Improved Pet Chooser"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 IO Pet Chooser 2_2021"
@@ -5228,10 +5205,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Is It Your Birthday?",
-        "level_keys": [
-          "CSD U1 processing bday_2021"
-        ]
+        "progression": "App: Is It Your Birthday?"
       },
       "named_level": null,
       "bonus": false,
@@ -5254,10 +5228,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: National Park Quiz",
-        "level_keys": [
-          "CSD U1 processing npark_2021"
-        ]
+        "progression": "App: National Park Quiz"
       },
       "named_level": null,
       "bonus": false,
@@ -5280,10 +5251,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: How Many Countries...",
-        "level_keys": [
-          "CSD U1 processing countries_2021"
-        ]
+        "progression": "App: How Many Countries..."
       },
       "named_level": null,
       "bonus": false,
@@ -5306,10 +5274,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: My Famous Birthday",
-        "level_keys": [
-          "CSD U1 processing writers_2021"
-        ]
+        "progression": "App: My Famous Birthday"
       },
       "named_level": null,
       "bonus": false,
@@ -5332,10 +5297,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Stamp Notebook",
-        "level_keys": [
-          "CSD U1 processing notebook_2021"
-        ]
+        "progression": "App: Stamp Notebook"
       },
       "named_level": null,
       "bonus": false,
@@ -5358,10 +5320,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: The Fastest Finger",
-        "level_keys": [
-          "CSD U1 processing fastest_2021"
-        ]
+        "progression": "App: The Fastest Finger"
       },
       "named_level": null,
       "bonus": false,
@@ -5384,10 +5343,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Guess the Number",
-        "level_keys": [
-          "CSD U1 processing guess_2021"
-        ]
+        "progression": "App: Guess the Number"
       },
       "named_level": null,
       "bonus": false,
@@ -5410,10 +5366,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Where Should I Live?",
-        "level_keys": [
-          "CSD U1 processing live_2021"
-        ]
+        "progression": "App: Where Should I Live?"
       },
       "named_level": null,
       "bonus": false,
@@ -5434,15 +5387,12 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "App: Outfit Picker",
-        "level_keys": [
-          "CSD U1 storage outfit_2021"
-        ]
+        "progression": "App: Outfit Picker"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage outfit_2021"
@@ -5460,15 +5410,12 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "App: Friend Finder",
-        "level_keys": [
-          "CSD U1 storage friends_2021"
-        ]
+        "progression": "App: Friend Finder"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage friends_2021"
@@ -5486,15 +5433,12 @@
       "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "App: Kids Movie Recommender",
-        "level_keys": [
-          "CSD U1 storage movies_2021"
-        ]
+        "progression": "App: Kids Movie Recommender"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage movies_2021"
@@ -5512,15 +5456,12 @@
       "chapter": 18,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Video: IOSP Model",
-        "level_keys": [
-          "CSD U1 storage video_2021"
-        ]
+        "progression": "Video: IOSP Model"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage video_2021"
@@ -5540,13 +5481,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U1Ch2_2021"
-        ]
+        "progression": "Reflection"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U1Ch2_2021"
@@ -5566,12 +5504,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSD U1 Test_2021"
-        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 Test_2021"
