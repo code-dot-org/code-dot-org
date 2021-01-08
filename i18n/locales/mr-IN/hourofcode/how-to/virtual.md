@@ -29,12 +29,12 @@ Even if you plan for students to complete their activities independently, we rec
 
 ## What to prepare ahead of time
 
-### 1. Determine your video conferencing platform
+### १ Determine your video conferencing platform
 Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
+### २. Plan how students will participate
 **Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
 
 It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.

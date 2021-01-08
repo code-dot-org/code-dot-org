@@ -1342,6 +1342,8 @@ zh-TW:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 不是魚
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 我的標籤
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 不是我的標籤
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changeAnim:
         text: 角色 {SPRITE} 造型設為 {COSTUME}
       Mikelab_changePropBy:

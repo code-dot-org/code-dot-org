@@ -1527,3 +1527,168 @@ ky:
           lessons:
             Lesson:
               name: Сабак
+        csd3-2021:
+          lessons:
+            Variables:
+              key: Өзгөрмөлөр
+              name: Өзгөрмөлөр
+            Text:
+              key: Тексттер
+              name: Тексттер
+            Conditionals:
+              key: Шартуулар
+              name: Шартуулар
+            Functions:
+              key: Функциялар
+              name: Функциялар
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Параметри бар функциялар
+              name: Параметри бар функциялар
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Тизмелер
+            csp_loops:
+              display_name: Циклдер
+        coursea-2021:
+          lessons:
+            Ocean Scene with Loops:
+              key: Океан көрүнүшү циклдар менен
+              name: Океан көрүнүшү циклдар менен
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
+        courseb-2021:
+          lessons:
+            Loops in Artist:
+              key: Сүрөтчүдөгү циклдар
+              name: Циклдар менен бакчаларды тартуу
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
+        coursec-2021:
+          lessons:
+            Programming in Artist:
+              key: Сүрөтчүдөгү програмдоо
+              name: Код менен Сүрөт жаратуу
+            Sticker Art with Loops:
+              key: Чаптама өнөрү циклдар менен
+              name: Чаптама өнөрү циклдар менен
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Графикалык кагазды програмдоо
+            Relay Programming:
+              key: Релени програмдоо
+              name: Релени програмдоо
+            Loops in Artist:
+              key: Сүрөтчүдөгү циклдар
+              name: Циклдар менен формаларды тартуу
+            Artist Binary:
+              key: Сүрөтчү бинардык система
+              name: Сүрөтчү менен бинардык сүрөттөр
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+            csf_conditionals:
+              display_name: Шартуулар
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Шартуулар
+            Nested Loops in Artist:
+              key: Сүрөтчүдөгү салынган циклдар
+              name: Салынган циклдар менен укмуштуу формалар
+            Nested Loops in Frozen:
+              key: Тоңгондогу салынган циклдар
+              name: Тоңгондогу салынган циклдар
+            Functions in Artist:
+              key: Сүрөтчүдөгү функциялар
+              name: Сүрөтчү менен функциялар
+          lesson_groups:
+            csf_functions:
+              display_name: Функциялар
+        coursef-2021:
+          lessons:
+            Variables as Constant in Artist:
+              name: Сүрөтчү менен өзгөрмөлөр
+            Variables that Change in Artist:
+              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
+            Internet:
+              name: Интернет
+            For Loops in Artist:
+              key: Сүрөтчүдөгү for циклдары
+              name: Сүрөтчү менен for циклдары
+          lesson_groups:
+            csf_variables:
+              display_name: Өзгөрмөлөр
+        express-2021:
+          lessons:
+            Creating Art with Code:
+              key: Код менен Сүрөт жаратуу
+              name: Код менен Сүрөт жаратуу
+            Sticker Art with Loops:
+              key: Чаптама өнөрү циклдар менен
+              name: Чаптама өнөрү циклдар менен
+            Snowflakes with Anna and Elsa:
+              key: Анна жана Элза менен карчалар
+              name: Анна жана Элза менен карчалар
+            Functions with Artist:
+              key: Сүрөтчү менен функциялар
+              name: Сүрөтчү менен функциялар
+            Variables with Artist:
+              key: Сүрөтчү менен өзгөрмөлөр
+              name: Сүрөтчү менен өзгөрмөлөр
+            Changing Variables with Artist:
+              key: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
+              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
+            For Loops with Artist:
+              key: Сүрөтчү менен for циклдары
+              name: Сүрөтчү менен for циклдары
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_functions:
+              display_name: Функциялар
+            csf_variables:
+              display_name: Өзгөрмөлөр
+        pre-express-2021:
+          lessons:
+            Ocean Scene with Loops:
+              key: Океан көрүнүшү циклдар менен
+              name: Океан көрүнүшү циклдар менен
+            Drawing Gardens with Loops:
+              key: Циклдар менен бакчаларды тартуу
+              name: Циклдар менен бакчаларды тартуу
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Өзгөрмөлөр

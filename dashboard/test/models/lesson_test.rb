@@ -196,6 +196,23 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 1, summary[:position]
   end
 
+  test 'summarize for script edit includes bonus levels' do
+    script = create :script, is_migrated: true, hidden: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1
+    activity = create :lesson_activity, lesson: lesson
+    section = create :activity_section, lesson_activity: activity
+    level1 = create :level
+    level2 = create :level
+    create :script_level, script: script, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level1]
+    create :script_level, script: script, lesson: lesson, activity_section: section, activity_section_position: 2, levels: [level2], bonus: true
+
+    levels_data = lesson.summarize_for_script_edit[:levels]
+    assert_equal 2, levels_data.length
+    refute levels_data.first[:bonus]
+    assert levels_data.last[:bonus]
+  end
+
   test 'raises error when creating invalid lockable lessons' do
     script = create :script
     lesson_group = create :lesson_group, script: script

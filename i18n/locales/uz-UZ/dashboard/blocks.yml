@@ -1325,6 +1325,10 @@ uz:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": baliq emas
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": my-label emas
+      Mikelab_allSpritesWithAnimation:
+        text: "[ANIMATION][0]"
+      Mikelab_beginDataCollection:
+        text: '[A][2][B][3][C][4] tanlovli [VAR][1] o''zgaruvchisi uchun foydalanuvchidan [QUESTION][0] so''rovi'
       Mikelab_changePropBy:
         options:
           PROPERTY:

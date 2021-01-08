@@ -2351,7 +2351,197 @@ da:
               name: Betingelser
             Functions:
               name: Funktioner
-        ml-playground:
+        virustest:
+          title: Simulering af et udbrud
+          description_short: 'Brug Sprite Lab til at oprette en simulation ud af et virusudbrud. '
+        outbreak:
           lessons:
-            intro:
-              name: Introduktion
+            Virus Simulation for Code Bytes:
+              name: Kodning af en simulation
+          lesson_groups:
+            outbreak:
+              display_name: Udbrud Simulering
+          title: Udbrud Simulator
+          description_short: 'Brug Sprite Lab til at programmere en simulation ud af et virusudbrud. '
+          description: 'Brug Sprite Lab til at programmere en simulation ud af et virusudbrud. '
+          name: udbrud
+        csd3-2021:
+          description_short: "Programmering"
+          lessons:
+            Variables:
+              key: Variabler
+              name: Variabler
+            Sprites:
+              key: figure
+              name: figure
+            Text:
+              key: Tekst
+              name: Tekst
+            Conditionals:
+              key: Betingelser
+              name: Betingelser
+            Functions:
+              key: Funktioner
+              name: Funktioner
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funktioner med parametre
+              name: Funktioner med parametre
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
+              display_name: Løkker
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Glade Kort
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Flyt det, flyt det
+              name: Flyt det, flyt det
+            'Loops: Getting Loopy':
+              name: Blive Svimmel
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binære armbånd
+              name: Binære armbånd
+            'Events: The Big Event':
+              name: Den store begivenhed
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_binary:
+              display_name: Binære
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programmering på millimeterpapir
+            Relay Programming:
+              key: Stafet-programmering
+              name: Stafet-programmering
+            Dance Party:
+              key: Dance Party
+              name: Dance Party
+            Conditionals with Cards:
+              key: Betingelser med kortspil
+              name: Betingelser med kortspil
+            'Unplugged: Binary':
+              key: 'Unplugged: Binære'
+              name: Binære billeder
+            Artist Binary:
+              key: Kunstner binære
+              name: Kunstner binære
+          lesson_groups:
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_binary:
+              display_name: Binære
+            csf_digcit:
+              display_name: Digital statsborgerskab
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Betingelser
+            'Functions: Songwriting':
+              name: Sangskrivning
+          lesson_groups:
+            csf_sprites:
+              display_name: figure
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_nested_loops:
+              display_name: Indlejret Løkker
+            csf_functions:
+              display_name: Funktioner
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Omslut variabler
+              name: Omslut variabler
+            Internet:
+              key: Internet
+              name: Internettet
+            For Loop Fun:
+              key: For loop sjov
+              name: For loop sjov
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_variables:
+              display_name: Variabler
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: figure
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Dance Party
+              name: Dance Party
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_functions:
+              display_name: Funktioner
+            csf_variables:
+              display_name: Variabler
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: figure
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Kodning af en simulation
+            lesson-1:
+              name: Omslut variabler
+          lesson_groups:
+            ramp_up:
+              display_name: Introduktion
+            outbreak:
+              display_name: Udbrud Simulering
+            lessonGroup-3:
+              display_name: Variabler

@@ -1080,13 +1080,16 @@
           "swimming left and right": "links und rechts schwimmend"
         },
         "outbreak1": {
-          "wandering": "wandernd"
+          "wandering": "wandernd",
+          "recovering": "Wiederherstellen"
         },
         "outbreak2": {
-          "wandering": "wandernd"
+          "wandering": "wandernd",
+          "recovering": "Wiederherstellen"
         },
         "outbreak3": {
-          "wandering": "wandernd"
+          "wandering": "wandernd",
+          "recovering": "Wiederherstellen"
         },
         "outbreak4": {
           "wandering": "wandernd",
@@ -1100,13 +1103,17 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
-          "patrolling": "patrouillierend"
+          "patrolling": "patrouillierend",
+          "recovering": "Wiederherstellen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten"
         },
         "outbreak5": {
-          "wandering": "wandernd"
+          "wandering": "wandernd",
+          "recovering": "Wiederherstellen"
         },
         "outbreak6": {
-          "wandering": "wandernd"
+          "wandering": "wandernd",
+          "recovering": "Wiederherstellen"
         },
         "outbreak7": {
           "wandering": "wandernd",
@@ -1119,7 +1126,10 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
-          "patrolling": "patrouillierend"
+          "patrolling": "patrouillierend",
+          "recovering": "Wiederherstellen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "moving left and right": "rechts und links bewegen"
         },
         "outbreak8": {
           "wandering": "wandernd",
@@ -1132,7 +1142,10 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
-          "patrolling": "patrouillierend"
+          "patrolling": "patrouillierend",
+          "recovering": "Wiederherstellen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "moving left and right": "rechts und links bewegen"
         },
         "outbreak_freeplay": {
           "wandering": "wandernd",

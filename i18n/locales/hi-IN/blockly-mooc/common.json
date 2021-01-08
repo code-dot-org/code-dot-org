@@ -452,6 +452,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "जांच करता है कि कोई मूल्य दूसरे मूल्य से कम है या बराबर। यदि  व्यंजक के बाईं ओर का मूल्य,  व्यंजक के दाईं ओर के मूल्य से कम या बराबर हो तो सही जवाब देता है।",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "इससे कम या बराबर ऑपरेटर",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_description": "x को y की पावर में ले जाता है",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param0_description": "आधार संख्या।",
