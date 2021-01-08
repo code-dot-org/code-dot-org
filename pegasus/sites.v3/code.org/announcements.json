@@ -4,13 +4,13 @@
   },
 
   "banners": {
-    "teacher-apps-open-2020": {
+    "teacher-apps-open-2021": {
       "image": "/images/professional-learning-2019-3.png",
       "title": "Sign up for Professional Learning",
-      "body": "98% of teachers recommend our engaging programs from elementary school to AP computer science for high school. Join our hands-on workshops with other teachers from your area. Spaces are limited, so apply today!",
+      "body": "98% of participating teachers recommend our engaging, highly supportive program. Join our hands-on workshops with other teachers from your area. Scholarships and discounts available in most areas.",
       "buttonText": "Join us",
-      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
-      "buttonId": "teacher-apps-open-2020-sign-up"
+      "buttonUrl": "https://code.org/educate/professional-learning",
+      "buttonId": "teacher-apps-open-2021-sign-up"
     },
     "teacher-apps-closing-2020": {
       "image": "/images/professional-learning-2019-closing-soon.png",
@@ -47,7 +47,7 @@
       "buttonId": "view-project-ideas-2020-button",
       "backgroundColor": "#59b9dc"
     },
-   "soonhoc-2020": {
+    "soonhoc-2020": {
       "image": "/images/teacherdashboard1.png",
       "title": "The Hour of Code is Coming",
       "body": "Sign up your class to try one of the over 115 new activities for the Hour of Code (Dec. 7-13). This year, we’ll explore how we can harness computer science and technologies like AI to help build the society we want to live in. Sign up today!",
@@ -55,7 +55,7 @@
       "buttonUrl": "https://hourofcode.com/us#join",
       "buttonId": "2020-soonhoc"
     },
- "codebytes-2020": {
+    "codebytes-2020": {
       "image": "/images/marketing/CodeBytes_TeacherDashboard_540X289_CandyBag.png",
       "title": "CodeBytes: Live interactive mini-lessons during CSEdWeek!",
       "body": "Planning for the Hour of Code with your virtual classroom? Join us for CodeBytes, a series of 20 minute lessons that will livestream December 7-11. Episodes are designed for all grade bands and students with varying technology access.",
@@ -63,7 +63,7 @@
       "buttonUrl": "http://code.org/codebytes",
       "buttonId": "codebytes"
     },
- "ai-2020": {
+    "ai-2020": {
       "image": "/images/marketing/AI-2020-540X289.png",
       "title": "Explore Artificial Intelligence and Machine Learning",
       "body": "Join us to explore how AI impacts our entire world in a brand new video series, train AI for Oceans in 25+ languages, and hear from a panel of experts during the Ethics of AI livestream on Tuesday, December 8th.",
