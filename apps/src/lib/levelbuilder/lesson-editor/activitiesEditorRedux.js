@@ -502,6 +502,11 @@ export const getSerializedActivities = rawActivities => {
         delete scriptLevel.position;
         delete scriptLevel.levelNumber;
       });
+
+      activitySection.tips.forEach(tip => {
+        // Key is just used in the react UI
+        delete tip.key;
+      });
     });
   });
 
