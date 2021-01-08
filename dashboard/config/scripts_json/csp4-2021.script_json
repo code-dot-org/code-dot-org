@@ -1260,7 +1260,6 @@
         "description": "**Group:** Place students in pairs",
         "tips": [
           {
-            "key": "523",
             "type": "teachingTip",
             "markdown": "This is the first official \"Explore\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Explore Lessons:\n**Overview:** Students explore the new concept through a teacher-led hands-on group activity.\n\n* Typically uses physical manipulatives\n* Teacher leads with support of slides and activity guides\n\n**Goal:** Students begin to develop a shared mental model and understand the main ideas of the new concept. \n\n![](https://curriculum.code.org/media/uploads/explore.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Explore Lessons](https://www.youtube.com/watch?v=mzm-xqXH8BQ)\n"
           }
@@ -1291,7 +1290,6 @@
         "description": "[slide]  **Prompt:** These are samples of the kinds of apps you'll be able to build by the end of this unit. As you go through them, write down at least two examples where the app seems to be keeping track of a piece of information or using it to make decisions.",
         "tips": [
           {
-            "key": "524",
             "type": "discussionGoal",
             "markdown": "**Goal:** Have volunteers share what they noticed with the room. Some ideas include:\n\n* The Pet Rock App keeps track of clicks and uses it to decide when the pet rock will \"evolve\"\n* The Poem App keeps track of the poem as you write it\n* The Thermostat App keeps track of temperature and uses it to change the color of the text\n\n"
           }
@@ -1334,7 +1332,6 @@
         "description": "**Distribute:** Give each pair of students",
         "tips": [
           {
-            "key": "525",
             "type": "teachingTip",
             "markdown": "**Supplies Substitutions:** There's no need to use stickie notes if you have other scraps of colored paper. Also consider cutting stickies in 4 to make them go further. If you don't have dry erase markers handy consider using pieces of masking tape on the baggies. \r\n"
           }
@@ -1363,7 +1360,6 @@
         "description": "[slide]  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Variables.",
         "tips": [
           {
-            "key": "526",
             "type": "teachingTip",
             "markdown": "**Running the Activity:** This activity asks students to follow along as a number of core concepts for programming are introduced. The model is typically that a term or concept is introduced and modeled and then afterwards students are encouraged to try it out on their own. Trying it out typically means they are writing information on a sticky note and sharing it with another group before discussing the results with the whole class.\r\n\r\nSlides with animations have an icon in the bottom left corner to let you know you need to click to reveal more of the slide's content. \r\n\r\nTo help you more easily prepare the activity and keep track of your instructions, detailed instructions have been included as speaker notes in the presentation. Here are some tips to help you throughout the presentation.\r\n\r\n* There are opportunities throughout the presentation for students to actively engage. At these moments students should be making things with their manipulatives or using them to answer questions. Use these opportunities to check progress.\r\n* There is a fair amount of new vocabulary introduced but it is introduced gradually and with intentional repetition. Make a point of actively modeling the use of new terms.\r\n* The most important goal here is building a mental model. It is ok if students have some open questions that will get resolved over the subsequent conditional lessons.\r\n* Both you and students can use the \"Key Takeaways\" to check your understanding at the end."
           }
@@ -3887,12 +3883,12 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Apps"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4 My Pet Rock Example App_2021"
@@ -3910,12 +3906,12 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Apps"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L01 Poetry App_2021"
@@ -3933,12 +3929,12 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Apps"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L01 Thermostat App_2021"
@@ -3961,7 +3957,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 L02 CYU MC_2021"
