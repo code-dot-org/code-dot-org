@@ -27,6 +27,7 @@ Scenario: Teacher submits inline mini-contact form after adding zip and email
   Given I create a teacher named "Severus"
   And I am on "http://code.org/educate/professional-learning/middle-high"
   And I wait until element "#regional-partner-mini-contact-form-middle-high" is visible
+	And I dismiss the language selector
 
   # Let's clear out the email to make sure that it's required.
   Given I scroll the "#email" element into view
