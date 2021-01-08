@@ -36,6 +36,7 @@ class Lesson < ApplicationRecord
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
+  has_and_belongs_to_many :vocabularies, join_table: :lessons_vocabularies
   has_many :lessons_resources # join table. we need this association for seeding logic
   has_many :objectives, dependent: :destroy
 
