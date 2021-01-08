@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 import GameButtons from '@cdo/apps/templates/GameButtons';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
+import PauseButton from '@cdo/apps/templates/PauseButton';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
 import experiments from '@cdo/apps/util/experiments';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
@@ -56,8 +57,19 @@ class P5LabVisualizationColumn extends React.Component {
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
-    consoleMessages: PropTypes.array.isRequired
+    consoleMessages: PropTypes.array.isRequired,
+    pauseHandler: PropTypes.func.isRequired
   };
+
+  constructor(props) {
+    super(props);
+    this.spritelabPauseExperiment = experiments.isEnabled(
+      experiments.SPRITELAB_PAUSE
+    );
+    this.spritelabInputExperiment = experiments.isEnabled(
+      experiments.SPRITELAB_INPUT
+    );
+  }
 
   // Cache app-space mouse coordinates, which we get from the
   // VisualizationOverlay when they change.
@@ -186,12 +198,13 @@ class P5LabVisualizationColumn extends React.Component {
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
-          {experiments.isEnabled(experiments.SPRITELAB_INPUT) && (
-            <SpritelabInput />
-          )}
+          {this.spritelabInputExperiment && <SpritelabInput />}
         </div>
 
         <GameButtons>
+          {this.spritelabPauseExperiment && (
+            <PauseButton pauseHandler={this.props.pauseHandler} />
+          )}
           <ArrowButtons />
 
           <CompletionButton />

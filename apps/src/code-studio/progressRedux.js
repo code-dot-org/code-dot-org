@@ -90,6 +90,7 @@ export default function reducer(state = initialState, action) {
       scriptName: action.scriptName,
       scriptTitle: action.scriptTitle,
       scriptDescription: action.scriptDescription,
+      scriptStudentDescription: action.scriptStudentDescription,
       betaTitle: action.betaTitle,
       courseId: action.courseId,
       currentStageId,
@@ -394,6 +395,7 @@ export const initProgress = ({
   scriptName,
   scriptTitle,
   scriptDescription,
+  scriptStudentDescription,
   betaTitle,
   courseId,
   isFullProgress
@@ -409,6 +411,7 @@ export const initProgress = ({
   scriptName,
   scriptTitle,
   scriptDescription,
+  scriptStudentDescription,
   betaTitle,
   courseId,
   isFullProgress
