@@ -16,5 +16,6 @@
 #  index_vocabularies_on_word_and_definition        (word,definition)
 #
 class Vocabulary < ApplicationRecord
+  has_and_belongs_to_many :lessons, join_table: :lessons_vocabularies
   belongs_to :course_version
 end
