@@ -809,7 +809,7 @@ FactoryGirl.define do
 
   factory :vocabulary do
     association :course_version
-    key 'word'
+    sequence(:key) {|n| "vocab-#{n}"}
     word 'word'
     definition 'definition'
   end

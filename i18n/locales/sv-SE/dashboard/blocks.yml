@@ -1274,6 +1274,8 @@ sv:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": inte fiska
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": min-etikett
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": inte min etikett
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

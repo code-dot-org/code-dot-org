@@ -18299,9 +18299,755 @@ fil:
               name: Kursong A
             Course B:
               name: Kursong B
+        virustest:
+          title: Ginagaya ang isang Pagsiklab
+          description_short: 'Gumamit ng Sprite Lab upang gumawa ng isang simulasyon
+            mula sa isang lumitaw na virus. '
         ml-playground:
           lessons:
-            intro:
-              name: Panimula
             visualizing:
               name: Pagpapakita ng mga Datos
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Pag-coding ng isang Simulasyon
+          lesson_groups:
+            outbreak:
+              display_name: Simula ng Simulasyon
+          title: Simulator ng Pagsiklab
+          description_short: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon
+            mula sa isang lumitaw na virus. '
+          description: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon
+            mula sa isang lumitaw na virus. '
+          name: pagsiklab
+        csd1-2021:
+          description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
+            para lutasan ang mga problema."
+          lessons:
+            CS Discoveries Pre-survey:
+              key: Pre-surbey ng CS Discoveries
+              name: Pre-surbey ng CS Discoveries
+            Intro to Problem Solving:
+              key: Panimula sa Paglutas ng Problema
+              name: Panimula sa Paglutas ng Problema
+            The Problem Solving Process:
+              key: Ang Proseso ng Pagtuklas ng Problema
+              name: Ang Proseso ng Pagtuklas ng Problema
+            Exploring Problem Solving:
+              key: Pagtuklas sa Paglutas ng Problema
+              name: Pagtuklas sa Paglutas ng Problema
+            What is a Computer?:
+              key: Ano ang isang Kompyuter?
+              name: Ano ang isang Kompyuter?
+            Input and Output:
+              key: Input at Output
+              name: Input at Output
+            Processing:
+              key: Pagproseso
+              name: Pagproseso
+            Storage:
+              key: Imbakan
+              name: Imbakan
+            Project - Propose an App:
+              key: Proyekto - Pagmungkahi ng App
+              name: Proyekto - Pagmungkahi ng App
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csd1_1:
+              display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            csd1_2:
+              display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
+        csd2-2021:
+          description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi
+            ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung
+            anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano
+            gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay
+            magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng
+            pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay
+            magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
+          description_short: "  Matutong bumuo ng iyong sariling we site sa Web Lab."
+          lessons:
+            Intro to HTML:
+              key: Panimula sa HTML
+              name: Panimula sa HTML
+            Headings:
+              key: Mga Heading
+              name: Mga Heading
+            Digital Footprint:
+              key: Digital na Bakas
+              name: Digital na Bakas
+            Styling Text with CSS:
+              key: Pag-style ng Teksto gamit ang CSS
+              name: Pag-style ng Teksto gamit ang CSS
+            Intellectual Property:
+              key: Intelektwal na Pag-aari
+              name: Intelektwal na Pag-aari
+            'Websites for Expression ':
+              key: 'Mga Website para sa Pagpapahayag '
+              name: 'Mga Website para sa Pagpapahayag '
+            Styling Elements with CSS:
+              key: Pag-istilo sa mga Elemento gamit ang CSS
+              name: Pag-istilo sa mga Elemento gamit ang CSS
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+        csd3-2021:
+          description_short: " Matutong mag-program ng mga animasyon, inter-aktib
+            na sining, at mga laro sa Game Lab."
+          lessons:
+            Programming for Entertainment:
+              key: Pag-program para sa Libangan
+              name: Pag-program para sa Libangan
+            Plotting Shapes:
+              key: Pag-plot ng mga Hugis
+              name: Pag-plot ng mga Hugis
+            Drawing in Game Lab:
+              key: Pagguhit sa Game Lab
+              name: Pagguhit sa Game Lab
+            Variables:
+              key: Mga variable
+              name: Mga variable
+            Sprites:
+              key: Mga Sprites
+              name: Mga Sprites
+            Text:
+              key: Text
+              name: Text
+            The Draw Loop:
+              key: Ang Draw na Loop
+              name: Ang Draw na Loop
+            Sprite Movement:
+              key: Galaw ng mga Sprite
+              name: Galaw ng mga Sprite
+            Conditionals:
+              key: Mga conditional
+              name: Mga conditional
+            Keyboard Input:
+              key: Keyboard na Input
+              name: Keyboard na Input
+            Project - Interactive Card:
+              key: Proyekto - Inter-aktib na Baraha
+              name: Proyekto - Inter-aktib na Baraha
+            Velocity:
+              key: Belosidad
+              name: Belosidad
+            Collision Detection:
+              key: Pagtukoy sa mga Banggaan
+              name: Pagtukoy sa mga Banggaan
+            Complex Sprite Movement:
+              key: Kumplikadong Sprite na Kilusan
+              name: Kumplikadong Sprite na Kilusan
+            Collisions:
+              key: Mga Banggaan
+              name: Mga Banggaan
+            Functions:
+              key: Mga function
+              name: Mga function
+            The Game Design Process:
+              key: Ang Proseso ng Pagdisenyo ng Laro
+              name: Ang Proseso ng Pagdisenyo ng Laro
+            Using the Game Design Process:
+              key: Gamitin ang Proseso ng Pagdisenyo ng Laro
+              name: Gamitin ang Proseso ng Pagdisenyo ng Laro
+            Project - Design a Game:
+              key: Proyekto - Pagdisenyo ng Laro
+              name: Proyekto - Pagdisenyo ng Laro
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kabanata 1: Mga Larawan at Animation'
+            csd3_2:
+              display_name: 'Kabanata 2: Paggawa ng mga Laro'
+            cspSurvey:
+              display_name: Pagsisiyasat
+        csd4-2021:
+          description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng
+            pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo
+            na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan
+            ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang
+            bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung
+            saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan
+            na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa
+            papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga
+            gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
+          lessons:
+            Analysis of Design:
+              key: Pagsusuri ng Disenyo
+              name: Pagsusuri ng Disenyo
+            Understanding Your User:
+              key: Pag-uunawa sa Iyong Gumagamit
+              name: Pag-uunawa sa Iyong Gumagamit
+            User-Centered Design Micro Activity:
+              key: Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit
+              name: Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit
+            User Interfaces:
+              key: Mga interface ng Gumagamit
+              name: Mga interface ng Gumagamit
+            Feedback and Testing:
+              key: Feedback at Pagsubok
+              name: Feedback at Pagsubok
+            Identifying User Needs:
+              key: Pagtukoy sa mga Pangangailangan ng Gumagamit
+              name: Pagtukoy sa mga Pangangailangan ng Gumagamit
+            Project - Paper Prototype:
+              key: Proyekto - Papel na Prototype
+              name: Proyekto - Papel na Prototype
+            Designing Apps for Good:
+              key: Pagdidisenyo ng mga App para sa Ikabubuti
+              name: Pagdidisenyo ng mga App para sa Ikabubuti
+            Market Research:
+              key: Pananaliksik sa Merkado
+              name: Pananaliksik sa Merkado
+            Paper Prototypes:
+              key: Papel na mga Prototype
+              name: Papel na mga Prototype
+            Prototype Testing:
+              key: Prototype na Pagsusuri
+              name: Prototype na Pagsusuri
+            Digital Design:
+              key: Digital na Disenyo
+              name: Digital na Disenyo
+            Linking Screens:
+              key: Pag-uugnay sa mga Screen
+              name: Pag-uugnay sa mga Screen
+            Testing the App:
+              key: Pag-test ng App
+              name: Pag-test ng App
+            Improving and Iterating:
+              key: Pagpapahusay at pag-uulit
+              name: Pagpapahusay at pag-uulit
+            Project - App Presentation:
+              key: Proyekto - Pagpapakita ng App
+              name: Proyekto - Pagpapakita ng App
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
+            csd4_2:
+              display_name: 'Kabanata 2: Pag-Prototype ng App'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
+        csd5-2021:
+          title: CSD Yunit 5 - Mga Datos at Lipunan
+          description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas
+            ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong
+            sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga
+            sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter
+            at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata,
+            matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para
+            maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong
+            sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos
+            sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema
+            sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
+          description_short: Matututo kung paano ang mga tao gumamit ng mga kompyuter
+            para malutas ang mga problem sa mga datos.
+          lessons:
+            Representation Matters:
+              key: Ang Representasyon ay Mahalaga
+              name: Ang Representasyon ay Mahalaga
+            Patterns and Representation:
+              key: Mga Pattern at Representasyon
+              name: Mga Pattern at Representasyon
+            ASCII and Binary Representation:
+              key: ASCII at Binary na Representasyon
+              name: ASCII at Binary na Representasyon
+            Representing Images:
+              key: Pagkakatawan sa mga Larawan
+              name: Pagkakatawan sa mga Larawan
+            Representing Numbers:
+              key: Pagrepresenta ng mga Numero
+              name: Pagrepresenta ng mga Numero
+            Keeping Data Secret:
+              key: Pagiging Sekreto ng mga Datos
+              name: Pagiging Sekreto ng mga Datos
+            Combining Representations:
+              key: Pagsasama-sama ng mga Representasyon
+              name: Pagsasama-sama ng mga Representasyon
+            Project - Create a Representation:
+              key: Proyekto - Paglikha ng Representasyon
+              name: Proyekto - Paglikha ng Representasyon
+            Problem Solving and Data:
+              key: Paglutas ng mga Problema at mga Datos
+              name: Paglutas ng mga Problema at mga Datos
+            Problem Solving with Big Data:
+              key: Paglutas ng Problema kasama ang Malalaking mga Datos
+              name: Paglutas ng Problema kasama ang Malalaking mga Datos
+            Structuring Data:
+              key: Pagsasaayos ng mga Datos
+              name: Pagsasaayos ng mga Datos
+            Making Decisions with Data:
+              key: Paggawa ng mga Desisyon na may mga Datos
+              name: Paggawa ng mga Desisyon na may mga Datos
+            Interpreting Data:
+              key: Pag-intindi ng mga Datos
+              name: Pag-intindi ng mga Datos
+            Automating Data Decisions:
+              key: Pag-Automate ng mga Datos na mga Desisyon
+              name: Pag-Automate ng mga Datos na mga Desisyon
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
+        csd6-2021:
+          title: CSD Yunit 6 - Pisikal na Pag-Compute
+          description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga
+            hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga
+            sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa
+            mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit
+            Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa
+            parehong hardware na mga input at output na makikita mo sa mga smart na
+            mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na
+            prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos
+            sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang
+            isang basihan para sa pagbabago ng iyong sarling disenyo.
+          description_short: Matutong mag-program sa mga pisikal na mga kagamitan.
+          lessons:
+            Innovations in Computing:
+              key: Mga Pagbabago sa Pag-Compute
+              name: Mga Pagbabago sa Pag-Compute
+            Designing Screens with Code:
+              key: Pagdidisenyo ng mga Screen gamit ang Code
+              name: Pagdidisenyo ng mga Screen gamit ang Code
+            The Circuit Playground:
+              key: Ang Circuit na Playground
+              name: Ang Circuit na Playground
+            Input Unplugged:
+              key: Input na Naka-Unplugged
+              name: Input na Naka-Unplugged
+            Board Events:
+              key: Mga Pangyayari sa Board
+              name: Mga Pangyayari sa Board
+            Getting Properties:
+              key: Pagkuha ng mga Katangian
+              name: Pagkuha ng mga Katangian
+            Analog Input:
+              key: Analog na Input
+              name: Analog na Input
+            The Program Design Process:
+              key: Ang Proseso ng Pagdisenyo ng Programa
+              name: Ang Proseso ng Pagdisenyo ng Programa
+            'Project: Make a Game':
+              key: 'Proyekto: Gumawa ng Laro'
+              name: 'Proyekto: Gumawa ng Laro'
+            Arrays and Color LEDs:
+              key: Mga Array at mga LED na mga kulay
+              name: Mga Array at mga LED na mga kulay
+            Making Music:
+              key: Paglikha ng Musika
+              name: Paglikha ng Musika
+            Arrays and For Loops:
+              key: Mga Array at mga For Loop
+              name: Mga Array at mga For Loop
+            Accelerometer:
+              key: Accelerometer
+              name: Accelerometer
+            Functions with Parameters:
+              key: Mga function na meron mga parameter
+              name: Mga function na meron mga parameter
+            Circuits and Physical Prototypes:
+              key: Mga Circuit at Pisikal na mga Prototype
+              name: Mga Circuit at Pisikal na mga Prototype
+            'Project: Prototype an Innovation':
+              key: 'Proyekto: Mag-Prototype ng isang Pagbabago'
+              name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kabanata 1: Output ng Hardware'
+            csd6_2:
+              display_name: 'Kabanata 2: Input ng Hardware'
+            cspSurvey:
+              display_name: Pagsisiyasat
+        csp1-2021:
+          lessons:
+            CS Principles Pre-survey:
+              key: Bago ang Surbey sa mga Prinsipyo sa CS
+              name: Bago ang Surbey sa mga Prinsipyo sa CS
+            Representing Information:
+              key: Pagrepresenta ng Impormasyon
+              name: Pagrepresenta ng Impormasyon
+            Binary Numbers:
+              key: Binary na mga Numero
+              name: Binary na mga Numero
+            Intellectual Property:
+              key: Intelektwal na Pag-aari
+              name: Intelektwal na Pag-aari
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csp_unit1_2020:
+              display_name: "(luma) Yunit 1: Digital na Impormasyon"
+        csp2-2021:
+          lessons:
+            The Need for Addressing:
+              key: Ang Pangangailangan ng Addressing
+              name: Ang Pangangailangan ng Addressing
+            Routers and Redundancy:
+              key: Mga Routers at Redundancy
+              name: Mga Routers at Redundancy
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Pagdedebug
+              name: Pagdedebug
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Mga listahan
+            csp_loops:
+              display_name: Mga loop
+        csp8-2021:
+          lessons:
+            Create PT - Complete the Task:
+              key: Lumkiha ng PT - Kompletuhin ang Gawain
+              name: Lumkiha ng PT - Kompletuhin ang Gawain
+        coursea-2021:
+          description: Alamin ang mga pangunahing alituntunin sa computer science
+            at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
+            laro o istorya na maaari mong ibahagi.
+          description_short: Isang panimula sa computer science para sa mga hindi
+            pa marunong magbasa.
+          description_audience: 'Mga Edad: 4-7'
+          lessons:
+            Learn to Drag and Drop:
+              key: Matutong Mag-Drag at Mag-Drop
+              name: Matutong Mag-Drag at Mag-Drop
+            'Programming: Happy Maps':
+              key: 'Pag-Program: Masayang mga Mapa'
+              name: Happy Maps
+            Programming with Rey and BB-8:
+              key: Pag-Program kasama sina Rey at BB-8
+              name: Pag-Program kasama sina Rey at BB-8
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
+        courseb-2021:
+          description: Alamin ang mga pangunahing alituntunin sa computer science
+            at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
+            laro o istorya na maaari mong ibahagi.
+          description_audience: 'Mga Edad: 5-8'
+          lessons:
+            Move It, Move It:
+              key: Galawin ito, Galawin ito
+              name: Galawin ito, Galawin ito
+            Programming in Maze:
+              key: Pag-Program sa Maze
+              name: Pag-Program sa Maze
+            'Loops: Getting Loopy':
+              key: 'Mga Loops: Pagiging Loopy'
+              name: Pagiging Loopy
+            Loops in Harvester:
+              key: Mga Loops sa Harvester
+              name: Mga Loops sa Harvester
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_loops:
+              display_name: Mga loop
+            csf_impacts:
+              display_name: Epekto ng Pag-Compute
+            csf_events:
+              display_name: Mga event
+        coursec-2021:
+          description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops,
+            at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang
+            iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano
+            tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro
+            o istorya na maaari mong ibahagi!
+          description_short: Alamin ang mga pangunahing alituntunin ng computer science
+            at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
+          description_audience: 'Mga Edad: 6-10'
+          lessons:
+            'Programming: My Robotic Friends':
+              key: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+            Programming in Maze:
+              key: Pag-Program sa Maze
+              name: Pag-Program sa Maze
+            Debugging in Maze:
+              key: Pagde-debug sa Maze
+              name: Pagde-debug sa Maze
+            Programming in Collector:
+              key: Pag-program sa Kolektor
+              name: Pag-program sa Kolektor
+            Programming in Artist:
+              key: Pag-program sa Artist
+              name: Pag-program sa Artist
+            Binary Bracelets:
+              key: Binary na mga Pulseras
+              name: Binary na mga Pulseras
+            'Loops: My Loopy Robotic Friends':
+              key: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops with Rey and BB-8:
+              key: Mga Loops kasama sina Rey at BB-8
+              name: Mga Loops kasama sina Rey at BB-8
+            Loops in Harvester:
+              key: Mga Loops sa Harvester
+              name: Mga Loops sa Harvester
+            Looking Ahead:
+              key: Masdan ang Hinaharap
+              name: Masdan ang Hinaharap
+            'Events: The Big Event':
+              name: The Big Event
+            Build a Flappy Game:
+              key: Bumuo ng Flappy na Laro
+              name: Bumuo ng Flappy na Laro
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_binary:
+              display_name: Binary
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'Mga Algoritmo: Graph na Papel na Pag-program'
+              name: Graph Paper Programming
+            Introduction to Online Puzzles:
+              key: Pambungad sa mga Online na mga Palaisipan
+              name: Pambungad sa mga Online na mga Palaisipan
+            Relay Programming:
+              key: Relay Programming
+              name: Relay Programming
+            Debugging in Collector:
+              key: Pagde-debug sa Kolektor
+              name: Pagde-debug sa Kolektor
+            Events in Bounce:
+              key: Mga Pangyayari sa Bounce
+              name: Mga Pangyayari sa Bounce
+            Build a Star Wars Game:
+              key: Bumuo ng Star Wars na Laro
+              name: Bumuo ng Star Wars na Laro
+            Dance Party:
+              key: Dance Party
+              name: Dance Party
+            Nested Loops in Bee:
+              key: Mga Naka-Nest na mga Loop sa Bee
+              name: Naka-nest na mga Loops sa Maze
+            Conditionals with Cards:
+              key: Mga Conditional gamit ang mga Card
+              name: Mga Conditional gamit ang mga Card
+            Conditionals in Bee:
+              key: Mga Kondisyonal sa Bee
+              name: Mga Kondisyonal sa Bee
+            While Loops in Farmer:
+              key: Mga While Loops sa Farmer
+              name: Mga While Loops sa Farmer
+            Conditionals & Loops in Harvester:
+              key: Mga Kondisyonal & Mga Loop sa Harvester
+              name: Mga Kondisyonal & Mga Loop sa Harvester
+            'Unplugged: Binary':
+              key: 'Unplugged: Binary'
+              name: Binary na mga Larawan
+            Artist Binary:
+              key: Artist na Binary
+              name: Artist na Binary
+          lesson_groups:
+            csf_events:
+              display_name: Mga event
+            csf_loops:
+              display_name: Mga loop
+            csf_conditionals:
+              display_name: Mga conditional
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+        coursee-2021:
+          description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga
+            kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function.
+            Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone
+            na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
+          description_audience: 'Mga Edad: 8-12'
+          lessons:
+            Conditionals:
+              key: Mga conditional
+            Private and Personal Information:
+              key: Pribado at Personal na Impormasyon
+              name: Pribado at Personal na Impormasyon
+            Nested Loops in Bee:
+              key: Mga Naka-Nest na mga Loop sa Bee
+              name: Naka-nest na mga Loops sa Maze
+            Nested Loops in Artist:
+              key: Naka--nest na mga Loops sa Artist
+              name: Naka--nest na mga Loops sa Artist
+            Nested Loops in Frozen:
+              key: Naka-nest na mga Loop sa Frozen
+              name: Naka-Nest na mga Loops sa Frozen
+            'Functions: Songwriting':
+              key: 'Mga Function: Pagsusulat ng Awit'
+              name: Pagsusulat ng Awit
+            Functions in Artist:
+              key: Mga Function sa Artist
+              name: Mga Function sa Artist
+          lesson_groups:
+            ramp_up:
+              display_name: Pabilisin
+            csf_sprites:
+              display_name: Mga Sprites
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_nested_loops:
+              display_name: Mga Loops na naka-nest
+            csf_functions:
+              display_name: Mga function
+            csf_impacts:
+              display_name: Epekto ng Pag-Compute
+        coursef-2021:
+          description: Matutong gumami sa iba't ibang uri ng mga loop, mga event,
+            mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan
+            sa paglutas ng mga problema at talakayain ang mga epekto ng computing
+            at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo
+            at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga
+            kaibigan at pamilya.
+          description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman
+            sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
+          description_audience: 'Mga Edad: 9-13'
+          lessons:
+            Nested Loops in the Maze:
+              name: Naka-nest na mga Loops sa Maze
+            The Power of Words:
+              key: Ang Kapangyarihan ng mga Salita
+              name: Ang Kapangyarihan ng mga Salita
+            Envelope Variables:
+              key: Balot ng mga Variables
+              name: Balot ng mga Variables
+            Internet:
+              key: Internet
+              name: The Internet
+            For Loop Fun:
+              key: Saya sa For Loop
+              name: Saya sa For Loop
+            For Loops in Bee:
+              key: Mga For Loops sa Bee
+              name: Mga For Loops sa Bee
+            For Loops in Artist:
+              key: Mga Loops sa Artist
+              name: Mga Loops sa Artist
+          lesson_groups:
+            ramp_up:
+              display_name: Pabilisin
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_variables:
+              display_name: Mga variable
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: Mga Sprites
+        express-2021:
+          description: Alamin ang mga pangunahing alituntunin sa computer science
+            at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
+            laro o istorya na maaari mong ibahagi.
+          description_short: 'Isang introduksyon sa computer science: pinagsama ang
+            pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang
+            mga estudyante.'
+          description_audience: 'Mga Edad: 9-18'
+          lessons:
+            Dance Party:
+              key: Dance Party
+              name: Dance Party
+            Programming with Angry Birds:
+              key: Pag-Program sa Maze
+              name: Pag-Program sa Maze
+            Debugging with Scrat:
+              key: Pagde-debug gamit ang Scrat
+              name: Pagde-debug gamit ang Scrat
+            Collecting Treasure with Laurel:
+              key: Pag-program sa Kolektor
+              name: Pag-program sa Kolektor
+            Creating Art with Code:
+              key: Pag-program sa Artist
+              name: Pag-program sa Artist
+            Loops with Rey and BB-8:
+              key: Mga Loops kasama sina Rey at BB-8
+              name: Mga Loops kasama sina Rey at BB-8
+            Nested Loops in Maze:
+              key: Naka-nest na mga Loops sa Maze
+              name: Naka-nest na mga Loops sa Maze
+            Snowflakes with Anna and Elsa:
+              key: Naka-nest na mga Loop sa Frozen
+              name: Naka-nest na mga Loop sa Frozen
+            If/Else with Bee:
+              key: Mga Kondisyonal sa Bee
+              name: Mga Kondisyonal sa Bee
+            While Loops with the Farmer:
+              key: Mga While Loops sa Farmer
+              name: Mga While Loops sa Farmer
+            Harvesting with Conditionals:
+              key: Mga Kondisyonal & Mga Loop sa Harvester
+              name: Mga Kondisyonal & Mga Loop sa Harvester
+            Functions with Artist:
+              key: Mga Function sa Artist
+              name: Mga Function sa Artist
+            For Loops with Bee:
+              key: Mga For Loops sa Bee
+              name: Mga For Loops sa Bee
+            For Loops with Artist:
+              key: Mga Loops sa Artist
+              name: Mga Loops sa Artist
+          lesson_groups:
+            csf_loops:
+              display_name: Mga loop
+            csf_conditionals:
+              display_name: Mga conditional
+            csf_functions:
+              display_name: Mga function
+            csf_variables:
+              display_name: Mga variable
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: Mga Sprites
+        pre-express-2021:
+          description: Alamin ang mga pangunahing alituntunin sa computer science
+            at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
+            laro o istorya na maaari mong ibahagi.
+          description_short: 'Isang introduksyon sa computer science para sa mga hindi
+            marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at
+            unang baitang na mga kurso.'
+          description_audience: 'Mga Edad: 4-8'
+          lessons:
+            Learn to Drag and Drop:
+              key: Matutong Mag-Drag at Mag-Drop
+              name: Matutong Mag-Drag at Mag-Drop
+            Programming with Rey and BB-8:
+              key: Pag-Program kasama sina Rey at BB-8
+              name: Pag-Program kasama sina Rey at BB-8
+          lesson_groups:
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Pag-coding ng isang Simulasyon
+            lesson-1:
+              name: Balot ng mga Variables
+          lesson_groups:
+            ramp_up:
+              display_name: Panimula
+            outbreak:
+              display_name: Simula ng Simulasyon
+            lessonGroup-3:
+              display_name: Mga variable

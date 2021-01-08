@@ -4779,6 +4779,8 @@ sk:
             Loops with the Artist:
               name: Kreslenie s cyklami
               description_teacher: Sledujte nadšenie na tvárach vašich študentov ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu. Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel pre portfólio, či ako ukážku pre rodičov. 
+            Editing Behaviors:
+              name: Správania v Sprite Labe
             Virtual Pet:
               name: Virtuálne zvieratko so Sprite Labom
             End of Course Project:
@@ -5127,6 +5129,8 @@ sk:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Editing Behaviors:
+              name: Správania v Sprite Labe
             Virtual Pet with Sprite Lab:
               name: Virtuálne zvieratko so Sprite Labom
             Build A Project:
@@ -7068,6 +7072,8 @@ sk:
             Internet:
               name: Internet
               description_teacher: I keď mnoho ľudí denne internet používa, veľa z nich nevie, ako funguje. V tejto lekcii budú študenti predstierať, že prechádzajú cez internet a to tak, že sa budú učiť o pripojeniach, URL aj IP adresách a DNS.
+            Editing Behaviors:
+              name: Správania v Sprite Labe
             Virtual Pet:
               name: Virtuálne zvieratko so Sprite Labom
             The Power of Words:
@@ -7191,6 +7197,8 @@ sk:
               name: Spoznaj Sprite Lab
             Alien Dance Party:
               name: Mimozemská tanečná párty
+            Behaviors in Sprite Lab:
+              name: Správania v Sprite Labe
         pre-express-2020:
           title: Zrýchlený kurz pre predškolákov (2020)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
@@ -7484,9 +7492,763 @@ sk:
               name: Kurz B
             CS Discoveries:
               name: Objavujeme informatiku
+        virustest:
+          title: Prebieha simulácia nákazy
+          description_short: 'Pomocou programu Sprite Lab vytvorte simuláciu nákazy vírusom'
         ml-playground:
           lessons:
             AI for Oceans:
               name: AI pomáha oceánom
-            intro:
-              name: Úvod
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Kódovanie nákazy
+          lesson_groups:
+            outbreak:
+              display_name: Simulácia napadnutia
+          title: Simulácia nákazy
+          description_short: 'Pomocou programu Sprite Lab naprogramujte simuláciu nákazy vírusom.'
+          description: 'Pomocou programu Sprite Lab naprogramujte simuláciu nákazy vírusom.'
+          name: nákaza
+        csd1-2021:
+          title: CSD Kapitola 1 - Riešenie problémov a výpočtová technika ('20-'21)
+          description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
+          lessons:
+            Intro to Problem Solving:
+              key: Úvod do riešenia problémov
+              name: Úvod do riešenia problémov
+            The Problem Solving Process:
+              key: Proces riešenia problémov
+              name: Proces riešenia problémov
+            Exploring Problem Solving:
+              key: Objavovanie riešenia problémov
+              name: Objavovanie riešenia problémov
+            What is a Computer?:
+              key: Čo je počítač?
+              name: Čo je počítač?
+            Input and Output:
+              key: Vstup a Výstup
+              name: Vstup a Výstup
+            Processing:
+              key: Spracovanie
+              name: Spracovanie
+            Storage:
+              key: Pamäť
+              name: Pamäť
+            Project - Propose an App:
+              key: Projekt - Navrhnite aplikáciu
+              name: Projekt - Navrhnite aplikáciu
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              key: Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)
+              name: Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              key: Objavovanie riešenia problémov - Hry (Alternatívna Lekcia 3)
+              name: Objavovanie riešenia problémov - Hry (Alternatívna Lekcia 3)
+          lesson_groups:
+            cspSurvey:
+              display_name: Dotazník
+            csd1_1:
+              display_name: 'Kapitola 1: Proces riešenia problémov'
+            csd1_2:
+              display_name: 'Kapitola 2: Počítače a riešenie problémov'
+        csd2-2021:
+          lessons:
+            Digital Footprint:
+              key: Digitálna stopa
+              name: Digitálna stopa
+            CS Discoveries Post Course survey:
+              key: 'Objavujeme informatiku: Záverečný dotazník'
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            cspSurvey:
+              display_name: Dotazník
+        csd3-2021:
+          lessons:
+            Programming for Entertainment:
+              key: Programovanie pre zábavu
+              name: Programovanie pre zábavu
+            Plotting Shapes:
+              key: Tvorba tvarov
+              name: Tvorba tvarov
+            Drawing in Game Lab:
+              key: Kreslenie v Game Labe
+              name: Kreslenie v Game Labe
+            Variables:
+              key: Premenné
+              name: Premenné
+            Sprites:
+              key: Objekt "sprite"
+              name: Objekt "sprite"
+            Sprite Properties:
+              key: Vlastnosti postáv
+              name: Vlastnosti postáv
+            Text:
+              key: Text
+              name: Text
+            The Draw Loop:
+              key: Cyklus kreslenia
+              name: Cyklus kreslenia
+            Sprite Movement:
+              key: Pohyb "sprite" objektu
+              name: Pohyb "sprite" objektu
+            Conditionals:
+              key: Podmienky
+              name: Podmienky
+            Keyboard Input:
+              key: Stlačenie kláves ako vstup
+              name: Stlačenie kláves ako vstup
+            Project - Interactive Card:
+              key: Projekt - Interaktívna pohľadnica
+              name: Projekt - Interaktívna pohľadnica
+            Velocity:
+              key: Rýchlosť
+              name: Rýchlosť
+            Collision Detection:
+              key: Detekcia kolízie
+              name: Detekcia kolízie
+            Complex Sprite Movement:
+              key: Komplexný pohyb „sprite“ objektov
+              name: Komplexný pohyb „sprite“ objektov
+            Collisions:
+              key: Kolízie "sprite" objektov
+              name: Kolízie "sprite" objektov
+            Functions:
+              key: Funkcie
+              name: Funkcie
+            The Game Design Process:
+              key: Proces tvorby hry
+              name: Proces tvorby hry
+            Using the Game Design Process:
+              key: Využitie procesu na tvorbu hry
+              name: Využitie procesu na tvorbu hry
+            Project - Design a Game:
+              key: Projekt - Vytvor vlastnú hru
+              name: Projekt - Vytvor vlastnú hru
+            CS Discoveries Post Course survey:
+              key: 'Objavujeme informatiku: Záverečný dotazník'
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitola 1: Obrázky a animácie'
+            csd3_2:
+              display_name: 'Kapitola 2: Tvorba hier'
+            cspSurvey:
+              display_name: Dotazník
+        csd4-2021:
+          lessons:
+            Analysis of Design:
+              key: Analýza dizajnu
+              name: Analýza dizajnu
+            Digital Design:
+              key: Digitálny dizajn
+              name: Digitálny dizajn
+            CS Discoveries Post Course survey:
+              key: 'Objavujeme informatiku: Záverečný dotazník'
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
+            csd4_2:
+              display_name: 'Kapitola 2: Prototypovanie aplikácií'
+            csd5_2:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+            cspSurvey:
+              display_name: Dotazník
+        csd5-2021:
+          lessons:
+            CS Discoveries Post Course survey:
+              key: 'Objavujeme informatiku: Záverečný dotazník'
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            csd5_2:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+            cspSurvey:
+              display_name: Dotazník
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funkcie s parametrami
+              name: Funkcie s parametrami
+            CS Discoveries Post Course survey:
+              key: 'Objavujeme informatiku: Záverečný dotazník'
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kapitola 1: Programovanie s hardvérom'
+            csd6_2:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+            cspSurvey:
+              display_name: Dotazník
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Binárne čísla
+              name: Binárne čísla
+          lesson_groups:
+            cspSurvey:
+              display_name: Dotazník
+            csp_unit1_2020:
+              display_name: 'Lekcia 1: Digitálne informácie'
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Hľadanie a odstraňovanie chýb
+              name: Hľadanie a odstraňovanie chýb
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Premenné
+            csp_conditionals:
+              display_name: Podmienky
+            csp_functions:
+              display_name: Funkcie
+            csp_project:
+              display_name: Projekt
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Zoznamy
+            csp_loops:
+              display_name: Cykly
+            csp_traversals:
+              display_name: Prechody
+            csp_project:
+              display_name: Projekt
+        csp7-2021:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametre a Hodnoty návratnosti
+            csp_libraries:
+              display_name: Knižnice
+        coursea-2021:
+          title: Kurz A (2019)
+          description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
+          description_short: Predstavenie informatiky pre predškolákov.
+          description_audience: 'Vek: 4-7'
+          lessons:
+            Learn to Drag and Drop:
+              key: Nauč sa presunúť a pustiť
+              name: Nauč sa presunúť a pustiť
+            'Programming: Happy Maps':
+              key: 'Programovanie: Veselé mapy'
+              name: Veselé mapy
+            Sequencing with Scrat:
+              key: Postupnosť krokov so Scratom
+              name: Postupnosť krokov so Scratom
+            Programming in Ice Age:
+              key: Programovanie v Dobe ľadovej
+              name: Programovanie so Scratom
+            Programming with Rey and BB-8:
+              key: Programovanie s Rey a BB-8
+              name: Programovanie s Rey a BB-8
+            'Loops: Happy Loops':
+              name: Veselé cykly
+            Loops in Ice Age:
+              key: Cykly v Dobe ľadovej
+              name: Cykly so Scratom
+            Loops in Collector:
+              name: Cykly s Laurel
+            Ocean Scene with Loops:
+              key: Na mori s cyklami
+              name: Na mori s cyklami
+            'Events: The Big Event':
+              key: 'Udalosti: Veľká udalosť'
+              name: Veľká udalosť Jr.
+            Events in Play Lab:
+              name: Udalosti v pohybe
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Udalosti
+        courseb-2021:
+          title: Kurz B (2019)
+          description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
+          description_short: Úvod do informatiky pre žiakov, ktorí len začínajú čítať. Podobný Kurzu A, ale jednotlivé koncepty precvičí viac dohĺbky.
+          description_audience: 'Vek 5-8'
+          lessons:
+            Move It, Move It:
+              key: Pohni sa, pohni sa
+              name: Pohni sa, pohni sa
+            Sequencing in Maze:
+              key: Postupnosť krokov v bludisku
+              name: Postupnosť krokov s Angry Birds
+            Programming in Maze:
+              key: Programovanie v bludisku
+              name: Programovanie s Angry Birds
+            Programming in Harvester:
+              name: Programovanie so Záhradníčkou
+            'Loops: Getting Loopy':
+              key: 'Cykly sa zacykľujú'
+              name: Cykly sa zacykľujú
+            Loops in Harvester:
+              key: Cykly so Záhradníčkou
+              name: Cykly so Záhradníčkou
+            Loops in Collector:
+              name: Cykly s Laurel
+            Loops in Artist:
+              key: Cykly s Umelcom
+              name: Kreslenie v záhrade pomocou cyklov
+            The Right App:
+              key: Správna aplikácia
+              name: Správna aplikácia
+            'Events: The Big Event':
+              key: 'Udalosti: Veľká udalosť'
+              name: Veľká udalosť Jr.
+            Events in Play Lab:
+              name: Kráľovská bitka s udalosťami
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_impacts:
+              display_name: Vplyv Informatiky
+            csf_events:
+              display_name: Udalosti
+        coursec-2021:
+          title: Kurz C (2019)
+          description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
+          description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky, príbehy a hry.
+          description_audience: 'Vek: 6-10'
+          lessons:
+            'Programming: My Robotic Friends':
+              key: 'Programovanie: Moji robotickí kamaráti'
+              name: Moji robotickí kamaráti (ml.)
+            Programming in Maze:
+              key: Programovanie v bludisku
+              name: Programovanie s Angry Birds
+            Debugging in Maze:
+              key: Odstraňovanie chýb v bludisku
+              name: Odstraňovanie chýb v bludisku
+            Programming in Collector:
+              key: Programovanie so zberateľkou
+              name: Zbieranie pokladov s Laurel
+            Programming in Artist:
+              key: Programovanie s Umelcom
+              name: Umenie s pomocou kódu
+            Binary Bracelets:
+              key: Binárne náramky
+              name: Binárne náramky
+            'Loops: My Loopy Robotic Friends':
+              key: 'Cykly: Moji zacyklení robotickí kamaráti'
+              name: Moji zacyklení robotickí kamaráti (ml.)
+            Loops with Rey and BB-8:
+              key: Cykly s Rey a BB-8
+              name: Cykly s Rey a BB-8
+            Loops in Harvester:
+              key: Cykly so Záhradníčkou
+              name: Zber úrody s cyklami
+            Looking Ahead:
+              name: Pohľad do budúcnosti s Minecraftom
+            Sticker Art with Loops:
+              key: Pečiatkovanie v cykloch
+              name: Pečiatkovanie v cykloch
+            'Events: The Big Event':
+              key: 'Udalosti: Veľká udalosť'
+              name: Veľká udalosť
+            Build a Flappy Game:
+              key: Vytvor si vlastnú hru Flappy
+              name: Vytvor si vlastnú hru Flappy
+            Events in Play Lab:
+              name: Naháňačka s udalosťami
+            Picturing Data:
+              key: Zobrazenie dát v grafoch
+              name: Zobrazenie dát v grafoch
+            'End of Course Project: Create a Play Lab Game':
+              name: Záverečný projekt
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_binary:
+              display_name: Binárny
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Udalosti
+            end_of_course_project:
+              display_name: Záverečný projekt
+        coursed-2021:
+          title: Kurz D (2019)
+          description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
+          description_short: Nauč sa používať podmienky. Vytvor vlastný obraz, príbeh, hru, či tanečnú party.
+          description_audience: 'Vek 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'Algoritmy: Programovanie na štvorčekový papier'
+              name: Programovanie na štvorčekový papier
+            Introduction to Online Puzzles:
+              key: Predstavenie online úloh
+              name: Predstavenie online úloh
+            Relay Programming:
+              key: Štafetové programovanie
+              name: Štafetové programovanie
+            Debugging in Collector:
+              key: Odstraňovanie chýb s Laurel
+              name: Odstraňovanie chýb s Laurel
+            Events in Bounce:
+              key: Udalosti v Bounce
+              name: Udalosti v Bounce
+            Build a Star Wars Game:
+              key: Vytvor hru Star Wars
+              name: Vytvor hru Star Wars
+            Dance Party:
+              key: Tanečná Párty
+              name: Tanečná Párty
+            Loops in Ice Age:
+              key: Cykly v Dobe ľadovej
+              name: Cykly v Dobe ľadovej
+            Loops in Artist:
+              key: Cykly s Umelcom
+              name: Kreslenie tvarov pomocou cyklov
+            Nested Loops in Bee:
+              key: Vnorené cykly s včelou
+              name: Vnorené cykly v bludisku
+            Conditionals with Cards:
+              key: Podmienky s kartami
+              name: Podmienky s kartami
+            Conditionals in Bee:
+              key: Podmienky s včelou
+              name: Podmienky "ak/inak" s včelou
+            While Loops in Farmer:
+              key: Cykly "pokiaľ" s Farmárkou
+              name: Cykly "pokiaľ" s Farmárkou
+            Until Loops in Maze:
+              key: Cykly "dovtedy kým" v bludisku
+              name: Cykly "dovtedy kým" v bludisku
+            Conditionals & Loops in Harvester:
+              key: Podmienky a cykly so Záhradníčkou
+              name: Zber úrody s podmienkami
+            'Unplugged: Binary':
+              key: 'Bez počítača: binárna forma'
+              name: Binárne obrázky
+            Artist Binary:
+              key: Binárny Umelec
+              name: Binárne obrázky s Umelcom
+            End of Course Project:
+              key: Záverečný projekt
+              name: Záverečný projekt
+          lesson_groups:
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_events:
+              display_name: Udalosti
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmienky
+            csf_binary:
+              display_name: Binárny
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            end_of_course_project:
+              display_name: Záverečný projekt
+        coursee-2021:
+          title: Kurz E (2019)
+          description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
+          description_short: Zopakuj si koncepty z kurzov C a D a potom sa nauč používať funkcie.
+          description_audience: 'Vek 8-12'
+          lessons:
+            Sequencing in the Maze:
+              key: Postupnosť krokov v bludisku
+              name: Postupnosť krokov v bludisku
+            Programming and Loops with the Artist:
+              name: Kreslenie s cyklami
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
+              name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
+            Conditionals:
+              key: Podmienky
+              name: Podmienky s Farmárkou
+            Simon Says:
+              key: Simon vraví
+              name: Simon vraví
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Labom
+            Alien Dance Party with Sprite Lab:
+              key: Mimozemská tanečná párty so Sprite Labom
+              name: Mimozemská tanečná párty so Sprite Labom
+            Private and Personal Information:
+              key: Súkromné a osobné údaje
+              name: Súkromné a osobné údaje
+            About Me:
+              name: '"O mne" so Sprite Labom'
+            Digital Sharing:
+              key: Digitálne zdieľanie
+              name: Digitálne zdieľanie
+            Nested Loops in Bee:
+              key: Vnorené cykly s včelou
+              name: Vnorené cykly v bludisku
+            Nested Loops in Artist:
+              key: Vnorené cykly s Umelcom
+              name: Ornamenty pomocou vnorených cyklov
+            Nested Loops in Frozen:
+              key: Vnorené cykly vo Frozen
+              name: Vnorené cykly s Frozen
+            'Functions: Songwriting':
+              key: 'Funkcie: Písanie pesničiek'
+              name: Písanie pesničiek
+            Functions in Minecraft:
+              key: Funkcie v Minecrafte
+              name: Funkcie v Minecrafte
+            Functions in Harvester:
+              key: Funkcie so Záhradníčkou
+              name: Funkcie so Záhradníčkou
+            Functions in Artist:
+              key: Funkcie s Umelcom
+              name: Funkcie s Umelcom
+            End of Course Project:
+              key: Záverečný projekt
+              name: Záverečný projekt
+          lesson_groups:
+            ramp_up:
+              display_name: Príprava
+            csf_sprites:
+              display_name: Objekt "sprite"
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_nested_loops:
+              display_name: Vnorené cykly
+            csf_functions:
+              display_name: Funkcie
+            csf_impacts:
+              display_name: Vplyv Informatiky
+            end_of_course_project:
+              display_name: Záverečný projekt
+        coursef-2021:
+          title: Kurz F (2019)
+          description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
+          description_audience: 'Vek 9-13'
+          lessons:
+            Functions in Minecraft:
+              key: Funkcie v Minecrafte
+              name: Funkcie v Minecrafte
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Labom
+            Events with Sprite Lab:
+              name: Mimozemská tanečná párty so Sprite Labom
+            Loops with the Artist:
+              key: Cykly s umelcom
+              name: Kreslenie s cyklami
+            Nested Loops in the Maze:
+              name: Vnorené cykly v bludisku
+            The Power of Words:
+              key: Objav silu slov
+              name: Objav silu slov
+            Envelope Variables:
+              key: Premenné v obálkach
+              name: Premenné v obálkach
+            Variables as Constant in Artist:
+              name: Premenné s Umelcom
+            Variables that Change in Bee:
+              name: Meniace sa premenné s včelou
+            Variables that Change in Artist:
+              name: Meniace sa premenné s Umelcom
+            Simulating Experiments:
+              key: Simulácia experimentov
+              name: Simulácia experimentov
+            AI for Oceans:
+              key: AI pomáha oceánom
+              name: AI pomáha oceánom
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: Zábava s cyklami "for"
+              name: Zábava s cyklami "for"
+            For Loops in Bee:
+              key: Cykly "for" s včelou
+              name: Cykly "for" s včelou
+            For Loops in Artist:
+              key: Cykly "for" s Umelcom
+              name: Cykly "for" s Umelcom
+            Editing Behaviors:
+              name: Správania v Sprite Labe
+            Virtual Pet:
+              name: Virtuálne zvieratko so Sprite Labom
+            End of Course Project:
+              key: Záverečný projekt
+              name: Záverečný projekt
+          lesson_groups:
+            ramp_up:
+              display_name: Príprava
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_variables:
+              display_name: Premenné
+            csf_for_loops:
+              display_name: Cykly "For"
+            csf_sprites:
+              display_name: Objekt "sprite"
+            end_of_course_project:
+              display_name: Záverečný projekt
+        express-2021:
+          title: Zrýchlený kurz (2019)
+          description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
+          description_audience: 'Vek: 9-18'
+          lessons:
+            Dance Party:
+              key: Tanečná Párty
+              name: Tanečná Párty
+            Programming with Angry Birds:
+              key: Programovanie s Angry Birds
+              name: Programovanie s Angry Birds
+            Debugging with Scrat:
+              key: Odstraňovanie chýb so Scratom
+              name: Odstraňovanie chýb so Scratom
+            Collecting Treasure with Laurel:
+              key: Zbieranie pokladov s Laurel
+              name: Zbieranie pokladov s Laurel
+            Creating Art with Code:
+              key: Umenie s pomocou kódu
+              name: Umenie s pomocou kódu
+            Loops with Rey and BB-8:
+              key: Cykly s Rey a BB-8
+              name: Cykly s Rey a BB-8
+            Sticker Art with Loops:
+              key: Pečiatkovanie v cykloch
+              name: Pečiatkovanie v cykloch
+            Nested Loops in Maze:
+              key: Vnorené cykly v bludisku
+              name: Vnorené cykly v bludisku
+            Snowflakes with Anna and Elsa:
+              key: Snehové vločky s Annou a Elsou
+              name: Snehové vločky s Annou a Elsou
+            If/Else with Bee:
+              key: Podmienky "ak/inak" s včelou
+              name: Podmienky "ak/inak" s včelou
+            While Loops with the Farmer:
+              key: Cykly "pokiaľ" s Farmárkou
+              name: Cykly "pokiaľ" s Farmárkou
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
+              name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
+            Until Loops in Maze:
+              key: Cykly "dovtedy kým" v bludisku
+              name: Cykly "dovtedy kým" v bludisku
+            Harvesting with Conditionals:
+              key: Zber úrody s podmienkami
+              name: Zber úrody s podmienkami
+            Functions in Minecraft:
+              key: Funkcie v Minecrafte
+              name: Funkcie v Minecrafte
+            Functions with Harvester:
+              key: Funkcie so Záhradníčkou
+              name: Funkcie so Záhradníčkou
+            Functions with Artist:
+              key: Funkcie s Umelcom
+              name: Funkcie s Umelcom
+            Variables with Artist:
+              key: Premenné s Umelcom
+              name: Premenné s Umelcom
+            Changing Variables with Bee:
+              key: Meniace sa premenné s včelou
+              name: Meniace sa premenné s včelou
+            Changing Variables with Artist:
+              key: Meniace sa premenné s Umelcom
+              name: Meniace sa premenné s Umelcom
+            For Loops with Bee:
+              key: Cykly "for" s včelou
+              name: Cykly "for" s včelou
+            For Loops with Artist:
+              key: Cykly "for" s Umelcom
+              name: Cykly "for" s Umelcom
+            Swimming Fish in Sprite Lab:
+              key: Spoznaj Sprite Lab
+              name: Spoznaj Sprite Lab
+            Alien Dance Party:
+              key: Mimozemská tanečná párty
+              name: Mimozemská tanečná párty
+            Behaviors in Sprite Lab:
+              key: Správania v Sprite Labe
+              name: Správania v Sprite Labe
+            Virtual Pet with Sprite Lab:
+              key: Virtuálne zvieratko so Sprite Labom
+              name: Virtuálne zvieratko so Sprite Labom
+            End of Course Project:
+              key: Záverečný projekt
+              name: Záverečný projekt
+          lesson_groups:
+            csf_warmup:
+              display_name: Úvodná aktivita
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmienky
+            csf_functions:
+              display_name: Funkcie
+            csf_variables:
+              display_name: Premenné
+            csf_for_loops:
+              display_name: Cykly "For"
+            csf_sprites:
+              display_name: Objekt "sprite"
+            end_of_course_project:
+              display_name: Záverečný projekt
+        pre-express-2021:
+          title: Zrýchlený kurz pre predškolákov (2020)
+          description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
+          description_short: 'Predstavenie informatiky pre predškolákov: kombinuje to najlepšie z našich kurzov pre predškolákov a prvú triedu.'
+          description_audience: 'Vek: 4-8'
+          lessons:
+            Learn to Drag and Drop:
+              key: Nauč sa presunúť a pustiť
+              name: Nauč sa presunúť a pustiť
+            Sequencing with Scrat:
+              key: Postupnosť krokov so Scratom
+              name: Postupnosť krokov so Scratom
+            Programming with Rey and BB-8:
+              key: Programovanie s Rey a BB-8
+              name: Programovanie s Rey a BB-8
+            Loops with Scrat:
+              key: Cykly so Scratom
+              name: Cykly so Scratom
+            Loops with Laurel:
+              key: Cykly s Laurel
+              name: Cykly s Laurel
+            Ocean Scene with Loops:
+              key: Na mori s cyklami
+              name: Na mori s cyklami
+            Drawing Gardens with Loops:
+              key: Kreslenie v záhrade pomocou cyklov
+              name: Kreslenie v záhrade pomocou cyklov
+            On the Move with Events:
+              key: Udalosti v pohybe
+              name: Udalosti v pohybe
+            A Royal Battle with Events:
+              key: Kráľovská bitka s udalosťami
+              name: Kráľovská bitka s udalosťami
+          lesson_groups:
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Udalosti
+        csf-2021-pilot:
+          lessons:
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Labom
+            Virus Simulation for Code Bytes:
+              name: Kódovanie nákazy
+            lesson-1:
+              name: Premenné v obálkach
+          lesson_groups:
+            ramp_up:
+              display_name: Úvod
+            outbreak:
+              display_name: Simulácia napadnutia
+            lessonGroup-3:
+              display_name: Premenné

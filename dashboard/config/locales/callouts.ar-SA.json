@@ -1325,6 +1325,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "يمكنك تغيير هذا الرقم.",
           "courseE_artist_ramp8_2": "انقر هنا لطباعة رقم مرات تكرار تعليماتك البرمجية."
+        },
+        "outbreak2": {
+          "minitoolbox": "انقر هنا لتوسيع الكتلة.",
+          "pointerlocation": "اسحب كتلة الموضوع هنا."
+        },
+        "outbreak7": {
+          "costumes_callout": "انقر لصنع زي جديد"
         }
       }
     }

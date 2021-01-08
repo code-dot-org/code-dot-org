@@ -1149,6 +1149,8 @@ se:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": Ii leat guolli
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mu-gilkor
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ii leat mu-gilkor
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

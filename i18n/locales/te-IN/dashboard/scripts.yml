@@ -118,3 +118,32 @@ te:
           lessons:
             Events:
               name: ఈవెంట్లు
+        coursea-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        courseb-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursec-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursed-2021:
+          lessons:
+            Dance Party:
+              key: డాన్స్ పార్టీ
+              name: డాన్స్ పార్టీ
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        express-2021:
+          lessons:
+            Dance Party:
+              key: డాన్స్ పార్టీ
+              name: డాన్స్ పార్టీ
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు

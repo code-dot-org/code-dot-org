@@ -2258,7 +2258,166 @@ ne:
           lesson_groups:
             lg_1:
               display_name: Content
-        ml-playground:
+        csd3-2021:
           lessons:
-            intro:
-              name: Introduction
+            Variables:
+              key: Variables
+              name: Variables
+            Text:
+              key: Text
+              name: Text
+            Conditionals:
+              key: Conditionals
+              name: Conditionals
+            Functions:
+              key: Functions
+              name: Functions
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Functions with Parameters
+              name: Functions with Parameters
+        csp1-2021:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '(old) Unit 1: Digital Information'
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Happy Maps
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Move It, Move It
+              name: Move It, Move It
+            'Loops: Getting Loopy':
+              name: Getting Loopy
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binary Bracelets
+              name: Binary Bracelets
+            'Events: The Big Event':
+              name: The Big Event
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_binary:
+              display_name: Binary
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Graph Paper Programming
+            Relay Programming:
+              key: Relay programming
+              name: Relay programming
+            Conditionals with Cards:
+              key: Conditionals with Cards
+              name: Conditionals with Cards
+            'Unplugged: Binary':
+              key: 'Unplugged: Binary'
+              name: Binary Images
+            Artist Binary:
+              key: Artist Binary
+              name: Artist Binary
+          lesson_groups:
+            csf_events:
+              display_name: कार्य 
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital Citizenship
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Conditionals
+            'Functions: Songwriting':
+              name: Songwriting
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_nested_loops:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Envelope Variables
+              name: Envelope Variables
+            Internet:
+              key: Internet
+              name: The Internet
+            For Loop Fun:
+              key: For Loop Fun
+              name: For Loop Fun
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_functions:
+              display_name: Functions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Envelope Variables
+          lesson_groups:
+            ramp_up:
+              display_name: Introduction
+            lessonGroup-3:
+              display_name: Variables

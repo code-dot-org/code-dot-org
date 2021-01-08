@@ -4058,3 +4058,41 @@ id-ID:
         content1: deskripsi di sini
       outbreak_story2:
         content1: deskripsi di sini
+        markdown: "# Wabah: Berpikir Seperti Ilmuwan\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulasi adalah cara yang pas untuk
+          mempelajari hal-hal yang mungkin sulit diamati di dunia nyata. Simulasi
+          membantu ilmuwan untuk mengatasi masalah dan menguji ide-ide baru dengan
+          aman dan efisien. Simulasi Anda adalah cara untuk menunjukkan bagaimana
+          wabah virus di Monster Town terlihat.\n\n## Reset dan Putar Ulang!\nBahkan
+          saat Anda menulis kodenya sendiri, sangat tidak mungkin mengetahui dengan
+          pasti apa yang akan terjadi saat Anda menekan jalankan. Monster itu berkeliling
+          secara acak, jadi Anda tidak akan tahu apakah virusnya menyebar dengan cepat
+          atau lambat. Setiap kali mengubah kode, pastikan untuk menjalankan simulasi
+          Anda lebih dari satu kali. Sesuatu tidak akan terjadi dengan cara yang sama
+          dua kali!\n\n## Mengumpulkan Data\nCoba tuliskan pengamatan Anda saat menjalankan
+          simulasinya. Anda dapat menghitung jumlah monster yang sakit atau gunakan
+          timer untuk melihat seberapa cepat sesuatu terjadi. Misalnya, berapa lama
+          umumnya semua monster sakit jika tidak ada yang memakai masker? \n\n## Membuat
+          Prediksi\nJika Anda memahami model Anda, Anda dapat menggunakannya untuk
+          membuat prediksi. Anda bahkan dapat mengubah cara menjalankan simulasi Anda
+          dan menebak apa yang akan terjadi secara berbeda. Misalnya:\n* Apa yang
+          akan terjadi jika monsternya dua kali lebih banyak?\n* Apa yang akan terjadi
+          jika monsternya bergerak dengan setengah kecepatan?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Apakah Monster Town seperti dunia nyata?\nAda
+          batasan terkait seberapa realistis model akan terlihat. \n* Apa kesamaan
+          simulasi wabah Anda dengan wabah virus di dunia nyata?\n* Apa perbedaannya?\nSetelah
+          menyelesaikan kegiatan ini, diskusikan pertanyaan-pertanyaan ini dengan
+          guru atau keluarga Anda!\n\n## Apa lagi yang dapat kita buatkan model?\nAnda
+          telah membuat model kerja wabah di Monster Town. Hal-hal apa saja yang tidak
+          dapat dilakukan atau ditunjukkan oleh simulasi Anda yang Anda harap dapat
+          diwujudkan? Tekan lanjutkan untuk terus belajar membuat model lebih banyak
+          lagi:\n* Menambah jumlah monster dalam simulasi\n* Membantu monster sembuh
+          dari virus\n* Probabilitas, kekebalan, vaksin, dan lainnya!\n\nAnda juga
+          dapat membagikan model simulasi Anda dengan orang lain, atau berbagi pesan
+          tentang apa yang menurut Anda dapat kita lakukan untuk membantu orang lain
+          tetap sehat saat virus masuk ke kota."
+      outbreak_freeplay_choice:
+        display_name: Permainan Gratis
+        description: Anda telah menyelesaikan tutorial! Terus lakukan perubahan atau
+          perbaikan pada proyek Anda. Anda dapat memilih untuk tetap menggunakan block
+          yang sama atau mencoba toolbox yang diperluas.

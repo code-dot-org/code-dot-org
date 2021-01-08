@@ -5743,9 +5743,6 @@ he:
           description_short: 'השתמשו במעבדת הדמויות כדי ליצור סימולציה מתוך התפרצות וירוסים.'
           description: ' '
         ml-playground:
-          lessons:
-            intro:
-              name: מבוא
           description_audience: ' '
         outbreak:
           lessons:
@@ -5763,3 +5760,307 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+        2021drafting:
+          description: ' '
+        csd1-2021:
+          description_audience: ' '
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        csd2-2021:
+          description_audience: ' '
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csd3-2021:
+          description_audience: ' '
+          lessons:
+            Variables:
+              key: משתנים
+              name: משתנים
+            Sprites:
+              key: דמויות
+              name: דמויות
+            Sprite Properties:
+              key: מאפייני ספרייט
+              name: מאפייני ספרייט
+            Text:
+              key: טקסט
+              name: טקסט
+            Conditionals:
+              key: תנאים
+              name: תנאים
+            Functions:
+              key: פונקציות
+              name: פונקציות
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+        csd4-2021:
+          description_audience: ' '
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd5-2021:
+          description_audience: ' '
+          lessons:
+            ASCII and Binary Representation:
+              key: ייצוג ASCII וייצוג בינארי
+              name: ייצוג ASCII וייצוג בינארי
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd6-2021:
+          description_audience: ' '
+          lessons:
+            Arrays and For Loops:
+              key: מערכים ולולאות עבור
+              name: מערכים ולולאות עבור
+            Functions with Parameters:
+              key: פונקציות ופרמטרים
+              name: פונקציות ופרמטרים
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            cspSurvey:
+              display_name: סקר
+        csp1-2021:
+          description_audience: ' '
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp2-2021:
+          description_audience: ' '
+        csp3-2021:
+          description_audience: ' '
+        csp4-2021:
+          description_audience: ' '
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp5-2021:
+          description_audience: ' '
+          lesson_groups:
+            csp_lists:
+              display_name: רשימות
+            csp_loops:
+              display_name: חזרות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp6-2021:
+          description_audience: ' '
+        csp7-2021:
+          description_audience: ' '
+        csp8-2021:
+          description_audience: ' '
+        csp9-2021:
+          description_audience: ' '
+        csp10-2021:
+          description_audience: ' '
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: מפות שמחות
+            Loops in Ice Age:
+              key: לולאות בעידן הקרח
+              name: לולאות עם סקראט
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: זוזו, זוזו
+              name: זוזו, זוזו
+            Sequencing in Maze:
+              name: יצירת רצפים עם ציפורים כועסות
+            Programming in Maze:
+              key: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        coursec-2021:
+          lessons:
+            Programming in Maze:
+              key: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
+            Debugging in Maze:
+              key: איתור באגים במבוך
+              name: איתור באגים במבוך
+            Binary Bracelets:
+              key: צמידים בינארים
+              name: צמידים בינארים
+            'Events: The Big Event':
+              name: האירוע הגדול
+          lesson_groups:
+            csf_binary:
+              display_name: בינארי
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        coursed-2021:
+          description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: תכנות לנייר משבצות
+            Introduction to Online Puzzles:
+              key: היכרות עם חידות מבוכים
+              name: היכרות עם חידות מבוכים
+            Relay Programming:
+              key: הרץ פעולה בשנית
+              name: הרץ פעולה בשנית
+            Debugging in Collector:
+              name: ניפוי שגיאות עם לורל
+            Dance Party:
+              key: מסיבת ריקודים
+              name: מסיבת ריקודים
+            Loops in Ice Age:
+              key: לולאות בעידן הקרח
+              name: לולאות בעידן הקרח
+            Nested Loops in Bee:
+              name: לולאות מקוננות במבוך
+            Conditionals with Cards:
+              key: התניות עם כרטיסים
+              name: התניות עם כרטיסים
+            Until Loops in Maze:
+              key: לולאות "עד" במבוך
+              name: לולאות "עד" במבוך
+            'Unplugged: Binary':
+              name: תמונות בינאריות
+            Artist Binary:
+              key: אמן בינארי
+              name: אמן בינארי
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_binary:
+              display_name: בינארי
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: תנאים
+            Nested Loops in Bee:
+              name: לולאות מקוננות במבוך
+            'Functions: Songwriting':
+              name: כתיבת שירים
+          lesson_groups:
+            ramp_up:
+              display_name: העלה רמה
+            csf_sprites:
+              display_name: דמויות
+            csf_functions:
+              display_name: פונקציות
+        coursef-2021:
+          lessons:
+            Nested Loops in the Maze:
+              name: לולאות מקוננות במבוך
+            Internet:
+              key: אינטרנט
+              name: האינטרנט
+            For Loop Fun:
+              key: כיף עם לולאת "עבור"
+              name: כיף עם לולאת "עבור"
+            For Loops in Bee:
+              key: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              key: לולאות עבור עם האמן
+          lesson_groups:
+            ramp_up:
+              display_name: העלה רמה
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+            csf_sprites:
+              display_name: דמויות
+        express-2021:
+          lessons:
+            Dance Party:
+              key: מסיבת ריקודים
+              name: מסיבת ריקודים
+            Programming with Angry Birds:
+              key: תכנות עם ציפורים כועסות
+              name: תכנות עם ציפורים כועסות
+            Debugging with Scrat:
+              key: ניפוי שגיאות עם סקראט
+              name: ניפוי שגיאות עם סקראט
+            Nested Loops in Maze:
+              key: לולאות מקוננות במבוך
+              name: לולאות מקוננות במבוך
+            Until Loops in Maze:
+              key: לולאות "עד" במבוך
+              name: לולאות "עד" במבוך
+          lesson_groups:
+            csf_warmup:
+              display_name: חימום
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_functions:
+              display_name: פונקציות
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+            csf_sprites:
+              display_name: דמויות
+        pre-express-2021:
+          lessons:
+            Loops with Scrat:
+              key: לולאות עם סקראט
+              name: לולאות עם סקראט
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: קידוד של סימולציה
+          lesson_groups:
+            ramp_up:
+              display_name: מבוא
+            outbreak:
+              display_name: סימולציית התפרצות
+            lessonGroup-3:
+              display_name: משתנים
