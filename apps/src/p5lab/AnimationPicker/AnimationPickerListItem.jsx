@@ -64,7 +64,8 @@ class AnimationPickerListItem extends React.Component {
     label: PropTypes.string,
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
-    category: PropTypes.string
+    category: PropTypes.string,
+    categoryImagePathPrefix: PropTypes.string
   };
 
   state = {
@@ -89,11 +90,8 @@ class AnimationPickerListItem extends React.Component {
         display: this.state.loaded ? 'block' : 'none'
       }
     ];
-
     const iconImageSrc = this.props.category
-      ? `/blockly/media/gamelab/animation-previews/category_${
-          this.props.category
-        }.png`
+      ? this.props.categoryImagePathPrefix + `${this.props.category}.png`
       : '';
 
     return (
