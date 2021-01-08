@@ -1297,6 +1297,8 @@ he:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": לא דגים
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": התווית שלי
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": לא התווית שלי
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

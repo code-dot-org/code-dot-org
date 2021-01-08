@@ -223,6 +223,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Teston nëse një vlerë është më e vogël ose e barabartë me një vlerë tjetër. Kthehet e saktë nëse vlera në anën e majtë të shprehjes është më e vogël ose e barabartë me vlerën në anën e djathtë të shprehjes.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Operatori më i vogël ose i barabartë",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "Kthen nje numer te rastësishëm nga 0 (duke e përfshirë) deri në... por pa e përfshirë 1(duke e përjashtuar)",
   "dropletBlock_mathRandom_signatureOverride": "Math.random()",

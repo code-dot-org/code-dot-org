@@ -14404,7 +14404,1172 @@ mn:
           lessons:
             AI for Oceans:
               name: Далайд зориулсан ХОУ
-            intro:
-              name: Танилцуулга
             visualizing:
               name: Өгөгдөл төсөөлж байна
+        csd1-2021:
+          title: CSD Нэгж 1 - Асуудлыг шийдвэрлэх ба тооцоолох ('19 -'20)
+          description: "Асуудлыг шийдвэрлэх өргөн хүрээний хүрээнд боловсруулагдсан, компьютерийн шинжлэх ухааны салбарт өндөр интерактив, хамтын ажиллагаатай танилцуулга юм. Та олон тооны таавар, сорилт, бодит ертөнцийн асуудлыг шийдвэрлэхийн тулд асуудлыг шийдвэрлэх явцдаа ашиглах болно. Дараа нь компьютерууд хүмүүст бэрхшээлийг шийдвэрлэхэд туслахын тулд хэрхэн мэдээлэл оруулах, гаргах, хадгалах, боловсруулах талаар суралцах болно. Энэ хэсэг нь таны сонгосон асуудлыг шийдэхэд туслах програм зохиох төслөөр дуусдаг.\\r\n"
+          description_short: "  Асуудлыг шийдэхийн тулд хүмүүс компьютертэй хэрхэн ажилладаг талаар олж мэдээрэй."
+          lessons:
+            CS Discoveries Pre-survey:
+              key: КШУ-ны нээлтүүдийн урьдчилсан судалгаа
+              name: КШУ-ны нээлтүүдийн урьдчилсан судалгаа
+            Intro to Problem Solving:
+              key: Асуудлыг шийдвэрлэх талаар танилцуулга
+              name: Асуудлыг шийдвэрлэх талаар танилцуулга
+            The Problem Solving Process:
+              key: Асуудал шийдэх үйл явц
+              name: Асуудал шийдэх үйл явц
+            Exploring Problem Solving:
+              key: Асуудлыг шийдэхийг судлах
+              name: Асуудлыг шийдэхийг судлах
+            What is a Computer?:
+              key: Компьютер гэж юу вэ?
+              name: Компьютер гэж юу вэ?
+            Input and Output:
+              key: Оролт ба гаралт
+              name: Оролт ба гаралт
+            Processing:
+              key: Боловсруулалт
+              name: Боловсруулалт
+            Storage:
+              key: Хадгалалт
+              name: Хадгалалт
+            Project - Propose an App:
+              key: Төсөл - Апп санал болгох
+              name: Төсөл - Апп санал болгох
+            Post-Project Test:
+              key: Төслийн дараах тест
+              name: Төслийн дараах тест
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csd1_1:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            csd1_2:
+              display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+        csd2-2021:
+          description: " 2-р нэгжээс та өөрийн вэб хуудсан дээр хэрхэн контент үүсгэж, хуваалцах талаар суралцах болно. Та ямар контентийг дэлхийтэй хуваалцахаа шийдсэний дараа HTML болон CSS-ийг ашиглан хуудсаа хэрхэн бүтээж, хэлбэржүүлэх талаар суралцах болно. Та алдаа засах болон сэтгэгдэл бичих гэх мэт үнэ цэнэтэй програмчлалын ур чадвар эзэмших болно. Энэ хэсгийн төгсгөлд та Интернетэд нийтэлж болох хувийн вэбсайттай болно."
+          description_short: "  Вэб Лаб дээр өөрийн вэбсайт үүсгэхийг сур."
+          lessons:
+            Exploring Web Pages:
+              key: Вэб хуудсуудыг судлах
+              name: Вэб хуудсуудыг судлах
+            Intro to HTML:
+              key: HTML-н танилцуулга
+              name: HTML-н танилцуулга
+            Headings:
+              key: Гарчиг
+              name: Гарчиг
+            Digital Footprint:
+              key: Дижитал ул мөр
+              name: Дижитал ул мөр
+            Styling Text with CSS:
+              key: Текстийг CSS ашиглан загварчлах
+              name: Текстийг CSS ашиглан загварчлах
+            Intellectual Property:
+              key: Оюуны өмч
+              name: Оюуны өмч
+            'Websites for Expression ':
+              key: 'Илэрхийлэх вэбсайтууд '
+              name: 'Илэрхийлэх вэбсайтууд '
+            Styling Elements with CSS:
+              key: Элементийг CSS ашиглан загварчлах
+              name: Элементийг CSS ашиглан загварчлах
+            Team Problem Solving:
+              key: Багийн асуудлыг шийдэх
+              name: Багийн асуудлыг шийдэх
+            Sources and Research:
+              key: Эх сурвалж, судалгаа
+              name: Эх сурвалж, судалгаа
+            Planning a Multi-page Website:
+              key: Олон хуудаст вэбсайт төлөвлөх
+              name: Олон хуудаст вэбсайт төлөвлөх
+            Linking Pages:
+              key: Хуудас холбох
+              name: Хуудас холбох
+            Project - Website for a Purpose:
+              key: Төсөл - Зорилго бүхий вэбсайт
+              name: Төсөл - Зорилго бүхий вэбсайт
+            Peer Review and Final Touches:
+              key: Хамтрагчдын хяналт ба төгсгөлийн зөвлөмжүүд
+              name: Хамтрагчдын хяналт ба төгсгөлийн зөвлөмжүүд
+            Post-Project Test:
+              key: Төслийн дараах тест
+              name: Төслийн дараах тест
+            CS Discoveries Post Course survey:
+              key: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+              name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+        csd3-2021:
+          title: CSD Нэгж 3 - Анимейшн ба тоглоомууд
+          description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн, интерактив урлаг, тоглоом програмчлах замаар өөрийн кодчилох туршлага дээр үндэслэх болно. Энэ нэгж нь энгийн хэлбэрээс эхэлж, илүү боловсронгуй шидтэний тоглоом дээр суурилдаг бөгөөд ижил төстэй програмчлалын үзэл баримтлал, компьютерийн эрдэмтэд өдөр бүр ашигладаг дизайны процессыг ашигладаг. Төгсгөлийн төсөлд та хувийн байдлаар интерактив хөтөлбөр боловсруулах болно."
+          description_short: " Тоглоомын лабораторид анимейшн, интерактив урлаг, тоглоом программчилж сурах."
+          lessons:
+            Programming for Entertainment:
+              key: Үзвэр үйлчилгээний програмчлал
+              name: Үзвэр үйлчилгээний програмчлал
+            Plotting Shapes:
+              key: Дүрсийг зураглах
+              name: Дүрсийг зураглах
+            Drawing in Game Lab:
+              key: Тоглоомын лабораторид зураг зурах
+              name: Тоглоомын лабораторид зураг зурах
+            Variables:
+              key: Хувьсагчууд
+              name: Хувьсагчууд
+            Sprites:
+              key: Шидтэнгүүд
+              name: Шидтэнгүүд
+            Text:
+              key: Текст
+              name: Текст
+            The Draw Loop:
+              key: Зурах гогцоо
+              name: Зурах гогцоо
+            Sprite Movement:
+              key: Шидтэний хөдөлгөөн
+              name: Шидтэний хөдөлгөөн
+            Conditionals:
+              key: Нөхцлүүд
+              name: Нөхцлүүд
+            Keyboard Input:
+              key: Гараар оруулах
+              name: Гараар оруулах
+            Project - Interactive Card:
+              key: Төсөл - Интерактив карт
+              name: Төсөл - Интерактив карт
+            Velocity:
+              key: Хурд
+              name: Хурд
+            Collision Detection:
+              key: Мөргөлдөөнийг илрүүлэх
+              name: Мөргөлдөөнийг илрүүлэх
+            Complex Sprite Movement:
+              key: Шидтэний нийлмэл хөдөлгөөн
+              name: Шидтэний нийлмэл хөдөлгөөн
+            Collisions:
+              key: Мөргөлдөөн
+              name: Мөргөлдөөн
+            Functions:
+              key: Функцүүд
+              name: Функцүүд
+            The Game Design Process:
+              key: Тоглоомын дизайн боловсруулах үйл явц
+              name: Тоглоомын дизайн боловсруулах үйл явц
+            Using the Game Design Process:
+              key: Тоглоомын дизайн боловсруулах үйл явцыг ашиглах
+              name: Тоглоомын дизайн боловсруулах үйл явцыг ашиглах
+            Project - Design a Game:
+              key: Төсөл - Тоглоом зохиох
+              name: Төсөл - Тоглоом зохиох
+            Post-Project Test:
+              key: Төслийн дараах тест
+              name: Төслийн дараах тест
+            CS Discoveries Post Course survey:
+              key: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+              name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd3_1:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            csd3_2:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+            cspSurvey:
+              display_name: Судалгаа
+        csd4-2021:
+          title: CSD Нэгж 4 - Дизайны үйл явц ('19 -'20)
+          description: Нэгж 4 нь тооцооллын нийгмийн өргөн нөлөөг танилцуулдаг. Хэд хэдэн дизайны сорилтыг даван туулснаар аливаа асуудлын шийдлийг боловсруулж байхдаа бусдын хэрэгцээг хэрхэн илүү сайн ойлгох талаар суралцах болно. Хэсгийн хоёрдугаар хагас нь давтагдсан багийн төслөөс бүрдэх бөгөөд багуудын үеэр тэдний анхаарах хэрэгцээ, прототипийн шийдлүүдийг цаасан дээр болон App Lab-д тодорхойлох, бодит хэрэглэгчидтэй туршилтын шийдлүүдийг санал авах, цааш нь жолоодох боломжтой болно.
+          description_short: "  Хэрэглэгчдийнхээ хэрэгцээ шаардлагад нийцсэн програм зохиох талаар сур."
+          lessons:
+            Analysis of Design:
+              key: Дизайны шинжилгээ
+              name: Дизайны шинжилгээ
+            Understanding Your User:
+              key: Хэрэглэгчээ ойлгох
+              name: Хэрэглэгчээ ойлгох
+            User-Centered Design Micro Activity:
+              key: Хэрэглэгч төвтэй дизайны микро үйл ажиллагаа
+              name: Хэрэглэгч төвтэй дизайны микро үйл ажиллагаа
+            User Interfaces:
+              key: Хэрэглэгчийн интерфейс
+              name: Хэрэглэгчийн интерфейс
+            Feedback and Testing:
+              key: Санал хүсэлт ба тест
+              name: Санал хүсэлт ба тест
+            Identifying User Needs:
+              key: Хэрэглэгчийн хэрэгцээг тодорхойлох
+              name: Хэрэглэгчийн хэрэгцээг тодорхойлох
+            Project - Paper Prototype:
+              key: Төсөл - Цаасны прототип
+              name: Төсөл - Цаасны прототип
+            Designing Apps for Good:
+              key: Сайн сайхны төлөө апп зохиох
+              name: Сайн сайхны төлөө апп зохиох
+            Market Research:
+              key: Зах зээлийн судалгаа
+              name: Зах зээлийн судалгаа
+            Paper Prototypes:
+              key: Цаасан туршилт
+              name: Цаасан туршилт
+            Prototype Testing:
+              key: Жишээ туршилт
+              name: Жишээ туршилт
+            Digital Design:
+              key: Дижитал дизайн
+              name: Дижитал дизайн
+            Linking Screens:
+              key: Дэлгэцүүдийг холбож байна
+              name: Дэлгэцүүдийг холбож байна
+            Testing the App:
+              key: Апп-ыг туршиж байна
+              name: Апп-ыг туршиж байна
+            Improving and Iterating:
+              key: Сайжруулалт ба давталт
+              name: Сайжруулалт ба давталт
+            Project - App Presentation:
+              key: Төсөл - Апп танилцуулга
+              name: Төсөл - Апп танилцуулга
+            Post-Project Test:
+              key: Төслийн дараах тест
+              name: Төслийн дараах тест
+            CS Discoveries Post Course survey:
+              key: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+              name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd4_1:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            csd4_2:
+              display_name: '2-р бүлэг: Программын ноорог'
+            csd5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+            cspSurvey:
+              display_name: Судалгаа
+        csd5-2021:
+          title: CSD Нэгж 5 - Өгөгдөл ба нийгэм ('19 -'20)
+          description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын талаар өгүүлж, компьютерууд энэ үйл явцад хэрхэн тусалж болохыг тодруулж өгдөг. Эхний бүлэгт компьютерт мэдээллийг илэрхийлэхэд ашигладаг өөр өөр системүүд, тэдгээрийг ашиглахад тулгарч буй бэрхшээл, арилжааллын талаар авч үзсэн болно. Хоёрдахь бүлэгт та хэрхэн мэдээлэл цуглуулах асуудлыг шийдвэрлэхэд ашигладаг, компьютерууд энэ үйл явцыг хэрхэн яаж автоматжуулахад тусалдаг болохыг олж мэдэх болно. Бүлэг нь өгөгдлийн асуудлыг шийдвэрлэх үйл явцыг таны сонгосон хэсэгт хэрхэн хэрэгжүүлж болох талаар авч үзсэнээр дуусдаг.
+          description_short: Хүмүүс өгөгдлийн асуудлыг шийдвэрлэхэд компьютер хэрхэн ашигладаг талаар олж мэдээрэй.
+          lessons:
+            Representation Matters:
+              key: Төлөөллийн асуудал
+              name: Төлөөллийн асуудал
+            Patterns and Representation:
+              key: Дүрсүүд ба төлөөлөл
+              name: Дүрсүүд ба төлөөлөл
+            ASCII and Binary Representation:
+              key: ASCII ба хоёртын төлөөлөл
+              name: ASCII ба хоёртын төлөөлөл
+            Representing Images:
+              key: Зургийг төлөөлөх
+              name: Зургийг төлөөлөх
+            Representing Numbers:
+              key: Тоог төлөөлөх
+              name: Тоог төлөөлөх
+            Keeping Data Secret:
+              key: Мэдээллийг нууцлах
+              name: Мэдээллийг нууцлах
+            Combining Representations:
+              key: Төлөөллийг нэгтгэх
+              name: Төлөөллийг нэгтгэх
+            Project - Create a Representation:
+              key: Төсөл - Төлөөлөл бий болгох
+              name: Төсөл - Төлөөлөл бий болгох
+            Problem Solving and Data:
+              key: Асуудлыг шийдвэрлэх ба өгөгдөл
+              name: Асуудлыг шийдвэрлэх ба өгөгдөл
+            Problem Solving with Big Data:
+              key: Том өгөгдлийг ашиглан асуудлыг шийдвэрлэх
+              name: Том өгөгдлийг ашиглан асуудлыг шийдвэрлэх
+            Structuring Data:
+              key: Өгөгдлийг бүтэцчилэх
+              name: Өгөгдлийг бүтэцчилэх
+            Making Decisions with Data:
+              key: Өгөгдлөөр шийдвэр гаргах
+              name: Өгөгдлөөр шийдвэр гаргах
+            Interpreting Data:
+              key: Өгөгдлийг тайлбарлах
+              name: Өгөгдлийг тайлбарлах
+            Automating Data Decisions:
+              key: Өгөгдлийн шийдвэрийг автоматжуулах
+              name: Өгөгдлийн шийдвэрийг автоматжуулах
+            Post-Project Test:
+              key: Төслийн дараах тест
+              name: Төслийн дараах тест
+            CS Discoveries Post Course survey:
+              key: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+              name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd5_1:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            csd5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+            cspSurvey:
+              display_name: Судалгаа
+        csd6-2021:
+          title: CSD Нэгж 6 - Биет тооцоолол ('19 -'20)
+          description: 6-р нэгж нь тооцоолол хийхэд техник хангамжийн платформын үүргийг судалж, өөр мэдрэгч нь уламжлалт гар, хулгана, дэлгэцээс илүү үр дүнтэй оролт, гаралтыг хэрхэн өгч болохыг судалж үздэг. App Lab болон Adafruit-ийн хэлхээний тоглоомын талбайг ашигласнаар та ухаалаг төхөөрөмж дээр хардагтай адилхан тоног төхөөрөмжийн оролт, гаралтыг ашигладаг програмууд боловсруулж, энгийн бүдүүлэг загварыг хэрхэн бүтээх вэ гэдгийг харах болно. Энэ хэсэг нь Circuit тоглоомын талбайг өөрийн дизайны шинэтгэлийн үндэс болгон ашиглахаар төлөвлөж буй дизайны сорилттойгоор дуусдаг.
+          description_short: Биет төхөөрөмжөөр програмчилж сур.
+          lessons:
+            Innovations in Computing:
+              key: Тооцоолол дээрх инноваци
+              name: Тооцоолол дээрх инноваци
+            Designing Screens with Code:
+              key: Дэлгэцийг кодоор загварчлах
+              name: Дэлгэцийг кодоор загварчлах
+            The Circuit Playground:
+              key: Хэлхээний тоглоомын талбай
+              name: Хэлхээний тоглоомын талбай
+            Input Unplugged:
+              key: Оролтыг салгав
+              name: Оролтыг салгав
+            Board Events:
+              key: Самбарын үйл явдлууд
+              name: Самбарын үйл явдлууд
+            Getting Properties:
+              key: Шинж чанарыг авах
+              name: Шинж чанарыг авах
+            Analog Input:
+              key: Аналог оролт
+              name: Аналог оролт
+            The Program Design Process:
+              key: Программын дизайны үйл явц
+              name: Программын дизайны үйл явц
+            'Project: Make a Game':
+              key: 'Төсөл: Тоглоом бүтээх'
+              name: 'Төсөл: Тоглоом бүтээх'
+            Arrays and Color LEDs:
+              key: Матрицууд ба өнгийн LED
+              name: Матрицууд ба өнгийн LED
+            Making Music:
+              key: Хөгжим зохиох
+              name: Хөгжим зохиох
+            Arrays and For Loops:
+              key: Матрицууд ба гогцоонд зориулав
+              name: Матрицууд ба гогцоонд зориулав
+            Accelerometer:
+              key: Хурдасгуур хэмжигч
+              name: Хурдасгуур хэмжигч
+            Functions with Parameters:
+              key: Параметртэй функцүүд
+              name: Параметртэй функцүүд
+            Circuits and Physical Prototypes:
+              key: Хэлхээ ба биет туршилт
+              name: Хэлхээ ба биет туршилт
+            'Project: Prototype an Innovation':
+              key: 'Төсөл: Инновацийг загварчлах'
+              name: 'Төсөл: Инновацийг загварчлах'
+            Post-Project Test:
+              key: Төслийн дараах тест
+              name: Төслийн дараах тест
+            CS Discoveries Post Course survey:
+              key: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+              name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd6_1:
+              display_name: '1-р бүлэг: Техник хангамжтай хамт программчлах'
+            csd6_2:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+            cspSurvey:
+              display_name: Судалгаа
+        csp1-2021:
+          lessons:
+            CS Principles Pre-survey:
+              key: КШУ-ны зарчмууд Судалгааны өмнөх
+              name: КШУ-ны зарчмууд Судалгааны өмнөх
+            Welcome to CSP:
+              key: CSP-д тавтай морил
+              name: CSP-д тавтай морил
+            Representing Information:
+              key: Мэдээллийг төлөөлөх
+              name: Мэдээллийг төлөөлөх
+            Circle Square Patterns:
+              key: Дугуй квадрат дүрсүүд
+              name: Дугуй квадрат дүрсүүд
+            Binary Numbers:
+              key: Хоёртын тоо
+              name: Хоёртын тоо
+            Overflow and Rounding:
+              key: Хэт урсгал болон ойролцоолох
+              name: Хэт урсгал болон ойролцоолох
+            Representing Text:
+              key: Төлөөлөх текст
+              name: Төлөөлөх текст
+            Black and White Images:
+              key: Хар ба цагаан зургууд
+              name: Хар ба цагаан зургууд
+            Color Images:
+              key: Өнгөт зураг
+              name: Өнгөт зураг
+            Lossless Compression:
+              key: Алдагдалгүй шахалт
+              name: Алдагдалгүй шахалт
+            Lossy Compression:
+              key: Алдагдалгүй шахалт
+              name: Алдагдалгүй шахалт
+            Intellectual Property:
+              key: Оюуны өмч
+              name: Оюуны өмч
+            'Lesson 14: Assessment Day':
+              key: 'Хичээл 14: Үнэлгээний өдөр'
+              name: 'Хичээл 14: Үнэлгээний өдөр'
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csp_unit1_2020:
+              display_name: '2-р нэгж: Дижитал мэдээлэл'
+        csp2-2021:
+          lessons:
+            Welcome to the Internet:
+              key: Интернэтэд тавтай морил
+              name: Интернэтэд тавтай морил
+            Building a Network:
+              key: Сүлжээ байгуулах
+              name: Сүлжээ байгуулах
+            The Need for Addressing:
+              key: Хаяглах хэрэгцээ
+              name: Хаяглах хэрэгцээ
+            Routers and Redundancy:
+              key: Чиглүүлэгч ба бууруулагч
+              name: Чиглүүлэгч ба бууруулагч
+            Packets:
+              key: Пакетууд
+              name: Пакетууд
+            DNS and HTTP:
+              key: DNS ба HTTP
+              name: DNS ба HTTP
+            'Lesson 9: Assessment Day':
+              key: 'Хичээл 9: Үнэлгээний өдөр'
+              name: 'Хичээл 9: Үнэлгээний өдөр'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Нэгж 2: Интернэт'
+        csp3-2021:
+          lessons:
+            Introduction to Apps:
+              key: Аппын танилцуулга
+              name: Аппын танилцуулга
+            Project - Designing an App Part 1:
+              key: Төсөл - Апп зохиох хэсэг 1
+              name: Төсөл - Апп зохиох хэсэг 1
+            Project - Designing an App Part 2:
+              key: Төсөл - Апп зохиох хэсэг 2
+              name: Төсөл - Апп зохиох хэсэг 2
+            The Need for Programming Languages:
+              key: Програмчлалын хэлний хэрэгцээ
+              name: Програмчлалын хэлний хэрэгцээ
+            Debugging:
+              key: Алдааг засах
+              name: Алдааг засах
+            Project - Designing an App Part 3:
+              key: Төсөл - Апп зохиох хэсэг 3
+              name: Төсөл - Апп зохиох хэсэг 3
+            Project - Designing an App Part 4:
+              key: Төсөл - Апп зохиох хэсэг 4
+              name: Төсөл - Апп зохиох хэсэг 4
+            'Lesson 11: Assessment Day':
+              key: 'Хичээл 11: Үнэлгээний өдөр'
+              name: 'Хичээл 11: Үнэлгээний өдөр'
+        csp4-2021:
+          lessons:
+            Variables Explore:
+              key: Хувьсагчдын талаар судлах
+              name: Хувьсагчдын талаар судлах
+            Variables Investigate:
+              key: Хувьсагчдыг судлах
+              name: Хувьсагчдыг судлах
+            Variables Practice:
+              key: Хувьсагчдын дадлага
+              name: Хувьсагчдын дадлага
+            Variables Make:
+              key: Хувьсагч хийх
+              name: Хувьсагч хийх
+            Conditionals Explore:
+              key: Нөхцлүүдийг судлах
+              name: Нөхцлүүдийг судлах
+            Conditionals Investigate:
+              key: Нөхцлүүдийг судлах
+              name: Нөхцлүүдийг судлах
+            Conditionals Practice:
+              key: Нөхцлүүдийн дадлага
+              name: Нөхцлүүдийн дадлага
+            Conditional Make:
+              key: Нөхцлүүдийг хийх
+              name: Нөхцлүүдийг хийх
+            Functions Explore / Investigate:
+              key: Функцүүдийг судлах/тагнах
+              name: Функцүүдийг судлах/тагнах
+            Functions Practice:
+              key: Функцүүдийн дадлага
+              name: Функцүүдийн дадлага
+            Functions Make:
+              key: Функцүүдийг хийх
+              name: Функцүүдийг хийх
+            'Lesson 15: Assessment Day':
+              key: 'Хичээл 15: Үнэлгээний өдөр'
+              name: 'Хичээл 15: Үнэлгээний өдөр'
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
+        csp5-2021:
+          lessons:
+            Lists Explore:
+              key: Жагсаалтууд судлах
+              name: Жагсаалтууд судлах
+            Lists Investigate:
+              key: Жагсаалтуудыг судлах
+              name: Жагсаалтуудыг судлах
+            Lists Practice:
+              key: Жагсаалтын дадлага
+              name: Жагсаалтын дадлага
+            Lists Make:
+              key: Жагсаалт гаргах
+              name: Жагсаалт гаргах
+            Loops Explore:
+              key: Гогцоонууд судлах
+              name: Гогцоонууд судлах
+            Loops Investigate:
+              key: Гогцоог судлах
+              name: Гогцоог судлах
+            Loops Practice:
+              key: Гогцооны дадлага
+              name: Гогцооны дадлага
+            Loops Make:
+              key: Гогцоо хийх
+              name: Гогцоо хийх
+            Traversals Explore:
+              key: Traversal судлах
+              name: Traversal судлах
+            Traversals Investigate:
+              key: Traversal судлах
+              name: Traversal судлах
+            Traversals Practice:
+              key: Traversal дадлага
+              name: Traversal дадлага
+            Traversals Make:
+              key: Traversal хийх
+              name: Traversal хийх
+            Semester Hackathon Part 1:
+              key: Семестрийн Hackathon Хэсэг 1
+              name: Семестрийн Hackathon Хэсэг 1
+            Semester Hackathon Part 2:
+              key: Семестрийн Hackathon Хэсэг 2
+              name: Семестрийн Hackathon Хэсэг 2
+            Semester Hackathon Part 3:
+              key: Семестрийн Hackathon Хэсэг 3
+              name: Семестрийн Hackathon Хэсэг 3
+            Semester Hackathon Part 4:
+              key: Семестрийн Hackathon Хэсэг 4
+              name: Семестрийн Hackathon Хэсэг 4
+            Semester Hackathon Part 5:
+              key: Семестрийн Hackathon Хэсэг 5
+              name: Семестрийн Hackathon Хэсэг 5
+          lesson_groups:
+            csp_lists:
+              display_name: Жагсаалтууд
+            csp_loops:
+              display_name: Гогцоонууд
+            csp_traversals:
+              display_name: Нэвтрэлтүүд
+            csp_project:
+              display_name: Төсөл
+        csp6-2021:
+          lessons:
+            Algorithms Solve Problems:
+              key: Алгоритмууд асуудлыг шийдвэрлэх
+              name: Алгоритмууд асуудлыг шийдвэрлэх
+            Algorithm Efficiency:
+              key: Алгоритмын үр ашиг
+              name: Алгоритмын үр ашиг
+            Unreasonable Time:
+              key: Үндэслэлгүй цаг хугацаа
+              name: Үндэслэлгүй цаг хугацаа
+            The Limits of Algorithms:
+              key: Алгоритмын хязгаар
+              name: Алгоритмын хязгаар
+            Parallel and Distributed Algorithms:
+              key: Зэрэгцээ ба тархсан алгоритмууд
+              name: Зэрэгцээ ба тархсан алгоритмууд
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Нэгж 6: Алгоритмууд'
+        csp7-2021:
+          lessons:
+            Libraries Explore:
+              key: Номын сан судлах
+              name: Номын сан судлах
+            Libraries Investigate:
+              key: Номын сангуудыг мөрдөх
+              name: Номын сангуудыг мөрдөх
+            'Lesson 11: Assessment Day':
+              key: 'Хичээл 11: Үнэлгээний өдөр'
+              name: 'Хичээл 11: Үнэлгээний өдөр'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметрүүд ба буцаах утгууд
+            csp_libraries:
+              display_name: Номын сангууд
+        csp8-2021:
+          lessons:
+            Create PT - Complete the Task:
+              key: PT үүсгэх - Даалгаврыг дуусгах
+              name: PT үүсгэх - Даалгаврыг дуусгах
+        csp9-2021:
+          lessons:
+            'Lesson 9: Assessment Day':
+              key: 'Хичээл 9: Үнэлгээний өдөр'
+              name: 'Хичээл 9: Үнэлгээний өдөр'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Нэгж 9: Өгөгдөл'
+        csp10-2021:
+          lessons:
+            Data Policies and Privacy:
+              key: Өгөгдлийн бодлого, нууцлал
+              name: Өгөгдлийн бодлого, нууцлал
+            The Value of Privacy:
+              key: Нууцлалын үнэ цэнэ
+              name: Нууцлалын үнэ цэнэ
+            Security Risks Part 1:
+              key: Аюулгүй байдлын эрсдэл Хэсэг 1
+              name: Аюулгүй байдлын эрсдэл Хэсэг 1
+            Security Risks Part 2:
+              key: Аюулгүй байдлын эрсдэл Хэсэг 2
+              name: Аюулгүй байдлын эрсдэл Хэсэг 2
+            Protecting Data Part 1:
+              key: Өгөгдлийг хамгаалах 1-р хэсэг
+              name: Өгөгдлийг хамгаалах 1-р хэсэг
+            Protecting Data Part 2:
+              key: Өгөгдлийг хамгаалах 2-р хэсэг
+              name: Өгөгдлийг хамгаалах 2-р хэсэг
+            'Lesson 14: Unit Assessment Day':
+              key: 'Хичээл 14: Нэгжийн үнэлгээний өдөр'
+              name: 'Хичээл 14: Нэгжийн үнэлгээний өдөр'
+        coursea-2021:
+          title: Хичээл А (2019)
+          description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг мэдэж аваарай. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго.
+          description_short: Анхлан сурагчдын компьютерын шинжлэх ухааны танилцуулга.
+          description_audience: '4-7 насныхан'
+          lessons:
+            Learn to Drag and Drop:
+              key: Чирж буулгаж сурах
+              name: Чирж буулгаж сурах
+            'Programming: Happy Maps':
+              key: 'Программчлал: Аз жаргалтай газрын зураг'
+              name: Аз жаргалтай газрын зургууд
+            Sequencing with Scrat:
+              key: Скраттай дарааллуулах
+              name: Скраттай дарааллуулах
+            Programming in Ice Age:
+              key: Мөсөн галав дээр програмчлах
+              name: Скраттай програмчлах
+            Programming with Rey and BB-8:
+              key: Рэй ба BB-8-тай програмчлах
+              name: Рэй ба BB-8-тай програмчлах
+            'Loops: Happy Loops':
+              key: 'Гогцоо: Аз жаргалтай гогцоо'
+              name: Аз жаргалтай гогцоо
+            Loops in Ice Age:
+              key: Мөсөн галавын гогцоонууд
+              name: Скраттай гогцоо
+            Loops in Collector:
+              key: Цуглуулагч дахь гогцоо
+              name: Лаурелтай гогцоо
+            Ocean Scene with Loops:
+              key: Гогцоо бүхий далайн үзэгдэл
+              name: Гогцоо бүхий далайн үзэгдэл
+            'Events: The Big Event':
+              key: 'Үйл явдал: Том үйл явдал'
+              name: Том үйл явдал Жр.
+            Events in Play Lab:
+              key: Тоглоомын лаборатори дахь үйл явдлууд
+              name: Үйл явдалтай хамт хөдөлж байна
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
+        courseb-2021:
+          title: Хичээл В (2019)
+          description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг мэдэж аваарай. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго.
+          description_short: Урьдчилан уншигчдад зориулсан компьютерийн шинжлэх ухааны танилцуулга. Курс А-тай адилхан боловч нэмэлт ойлголтын гүнтэй.
+          description_audience: '5-8 насныхан'
+          lessons:
+            Move It, Move It:
+              key: Хөдөлгөөрэй, хөдөлгөөрэй
+              name: Хөдөлгөөрэй, хөдөлгөөрэй
+            Sequencing in Maze:
+              key: Ээдрээ дээр дараалуулах
+              name: Ууртай шувуугаар дараалуулах
+            Programming in Maze:
+              key: Ээдрээ дээр програмчлах
+              name: Ууртай шувуугаар програмчлах
+            Programming in Harvester:
+              key: Ургац хураагч дээр програмчлах
+              name: Ургац хураагчтай хамт програмчлах
+            'Loops: Getting Loopy':
+              key: 'Гогцоо: Гогцоотой болох'
+              name: Гогцоорох
+            Loops in Harvester:
+              key: Ургац хураагч дахь гогцоо
+              name: Ургац хураагч дахь гогцоо
+            Loops in Collector:
+              key: Цуглуулагч дахь гогцоо
+              name: Лаурелтай гогцоо
+            Loops in Artist:
+              key: Зураач дээрх гогцоо
+              name: Цэцэрлэгийг гогцоотой зурах
+            The Right App:
+              key: Зөв апп
+              name: Зөв апп
+            'Events: The Big Event':
+              key: 'Үйл явдал: Том үйл явдал'
+              name: Том үйл явдал Жр.
+            Events in Play Lab:
+              key: Тоглоомын лаборатори дахь үйл явдлууд
+              name: Үйл явдлуудтай хааны тулаан
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_impacts:
+              display_name: Тооцооллын нөлөө
+            csf_events:
+              display_name: Үйл явдлууд
+        coursec-2021:
+          title: Хичээл С (2019)
+          description: Дараалал, гогцоо, үйл явдал бүхий програмууд үүсгэ. Эх үсгээ хоёртын хэл рүү орчуулж, асуудлыг шийдэх өөр арга техникийг судалж, кибер дайралтад хэрхэн хариу үйлдэл үзүүлэхээ сур. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго!
+          description_short: Компьютерийн шинжлэх ухааны үндсийг мэдэж, өөрийн урлаг, түүх, тоглоом зохиох.
+          description_audience: '6-10 насныхан'
+          lessons:
+            'Programming: My Robotic Friends':
+              key: 'Программчлал: Миний робот найзууд'
+              name: Миний робот найзууд Жр.
+            Programming in Maze:
+              key: Ээдрээ дээр програмчлах
+              name: Ууртай шувуугаар програмчлах
+            Debugging in Maze:
+              key: Ээдрээ дээр алдааг засах
+              name: Ээдрээ дээр алдааг засах
+            Programming in Collector:
+              key: Цуглуулагч дээр програмчлах
+              name: Лаурельтай хамт эрдэнэс цуглуулах
+            Programming in Artist:
+              key: Зураач дээр програмчлах
+              name: Код бүхий урлагийг бий болгох
+            Binary Bracelets:
+              key: Хоёртын бугуйвч
+              name: Хоёртын бугуйвч
+            'Loops: My Loopy Robotic Friends':
+              key: 'Гогцоо: Миний гогцоот робот найзууд'
+              name: Миний гогцоот робот найзууд Жр.
+            Loops with Rey and BB-8:
+              key: Рэй ба BB-8-тэй гогцоо
+              name: Рэй ба BB-8-тэй гогцоо
+            Loops in Harvester:
+              key: Ургац хураагч дахь гогцоо
+              name: Гогцоотой хамт ургац хураах
+            Looking Ahead:
+              key: Урагш харах
+              name: Minecraft-тай урагш харах
+            Sticker Art with Loops:
+              key: Гогцоо бүхий наах урлаг
+              name: Гогцоо бүхий наах урлаг
+            'Events: The Big Event':
+              key: 'Үйл явдал: Том үйл явдал'
+              name: Том үйл явдал
+            Build a Flappy Game:
+              key: Хийсдэг тоглоом бүтээх
+              name: Хийсдэг тоглоом бүтээх
+            Events in Play Lab:
+              key: Тоглоомын лаборатори дахь үйл явдлууд
+              name: Үйл явдалтай хөөцөлдөх тоглоом
+            Picturing Data:
+              key: Өгөгдлийг зураглах
+              name: Өгөгдлийг зураглах
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_binary:
+              display_name: Хоёрт
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
+        coursed-2021:
+          title: Хичээл D (2019)
+          description: Сурагчид сараалжилсан гогцоо, нөхцлүүд, үйл явдлын талаарх ойлголтыг хөгжүүлдэг. Кодлохоос цааш сурагчид дижитал иргэншлийн талаар суралцдаг.
+          description_short: Нөхцөлт мэдэгдлийн талаар мэдэж аваарай. Өөрийн урлаг, тоглоом, тэр ч байтугай бүжгийн үдэшлэг зохио.
+          description_audience: '7-11 насныхан'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'Алгоритм: График цаасны программчлал'
+              name: График цаасны программчлал
+            Introduction to Online Puzzles:
+              key: Онлайн таавруудын танилцуулга
+              name: Онлайн таавруудын танилцуулга
+            Relay Programming:
+              key: Буухиа программчлал
+              name: Буухиа программчлал
+            Debugging in Collector:
+              key: Цуглуулагч дээр алдаа засах
+              name: Лаурельтай алдааг засах
+            Events in Bounce:
+              key: Ойлт дахь үйл явдлууд
+              name: Ойлт дахь үйл явдлууд
+            Build a Star Wars Game:
+              key: Оддын дайны тоглоом бүтээх
+              name: Оддын дайны тоглоом бүтээх
+            Dance Party:
+              key: Бүжгийн үдэшлэг
+              name: Бүжгийн үдэшлэг
+            Loops in Ice Age:
+              key: Мөсөн галавын гогцоонууд
+              name: Мөсөн галавын гогцоонууд
+            Loops in Artist:
+              key: Зураач дээрх гогцоо
+              name: Дүрсийг гогцоотой зурах
+            Nested Loops in Bee:
+              key: Зураач дээрх сараалжилсан гогцоо
+              name: Ээдрээ дээрх сараалжилсан гогцоо
+            Conditionals with Cards:
+              key: Карт бүхий нөхцлүүд
+              name: Карт бүхий нөхцлүүд
+            Conditionals in Bee:
+              key: Зөгий дээрх нөхцлүүд
+              name: Зөгийтэй хамтарсан хэрэв/өөр
+            While Loops in Farmer:
+              key: Фермер дээрх Байхад гогцоо
+              name: Фермер дээрх Байхад гогцоо
+            Until Loops in Maze:
+              key: Ээдрээ дээрх хүртэлх гогцоо
+              name: Ээдрээ дээрх хүртэлх гогцоо
+            Conditionals & Loops in Harvester:
+              key: Ургац хураагч дээрх нөхцлүүд ба гогцоо
+              name: Нөхцлүүдтэй ургац хураах
+            'Unplugged: Binary':
+              key: 'Залгаагүй: Хоёрт'
+              name: Хоёртын зураг
+            Artist Binary:
+              key: Зураачийн хоёрт
+              name: Зураачтай хамтарсан хоёртын зураг
+          lesson_groups:
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_events:
+              display_name: Үйл явдлууд
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_conditionals:
+              display_name: Нөхцлүүд
+            csf_binary:
+              display_name: Хоёрт
+            csf_digcit:
+              display_name: Дижитал иргэншил
+        coursee-2021:
+          title: Хичээл E (2019)
+          description: Алгоритм, гогцоо, нөхцлүүд, үйл явдлууд ашиглан кодчилолоо эхлүүлж, дараа нь та функцүүд дээр шилжих болно. Энэ сургалтын хоёрдугаар хэсэгт найз нөхөд, гэр бүлийнхэнтэйгээ хуваалцах боломжтой capstone төсөл зохиож, бүтээгээрэй.
+          description_short: C ба D хичээл дэх ойлголтыг хянаж үзэх, цааш нь сурах функцээр цааш явах.
+          description_audience: '8-12 насныхан'
+          lessons:
+            Sequencing in the Maze:
+              key: Ээдрээ дээр дараалуулах
+              name: Ээдрээ дээр дараалуулах
+            Programming and Loops with the Artist:
+              key: Зураачтай хамтарсан програмчлал ба гогцоо
+              name: Гогцоотой зурах
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Minecraft дахь нөхцлүүд: Усан аялал'
+              name: 'Minecraft дахь нөхцлүүд: Усан аялал'
+            Conditionals:
+              key: Нөхцлүүд
+              name: Фермертэй хамтарсан нөхцлүүд
+            Simon Says:
+              key: Саймон хэлэв
+              name: Саймон хэлэв
+            Learning Sprites with Sprite Lab:
+              key: Шидтэний лабораторитай хамт Шидтэнг сурах
+              name: Шидтэний лабтай хамтарсан сэлж буй загас
+            Alien Dance Party with Sprite Lab:
+              key: Шидтэний лабтай хамтарсан Харийнхны бүжгийн үдэшлэг
+              name: Шидтэний лабтай хамтарсан Харийнхны бүжгийн үдэшлэг
+            Private and Personal Information:
+              key: Хувийн ба өөрийн мэдээлэл
+              name: Хувийн ба өөрийн мэдээлэл
+            About Me:
+              key: Миний тухай
+              name: Шидтэний лабтай хамтарсан миний тухай
+            Digital Sharing:
+              key: Дижитал хуваалцах
+              name: Дижитал хуваалцах
+            Nested Loops in Bee:
+              key: Зураач дээрх сараалжилсан гогцоо
+              name: Ээдрээ дээрх сараалжилсан гогцоо
+            Nested Loops in Artist:
+              key: Зураач дээрх сараалжилсан гогцоо
+              name: Сараалжилсан гогцоо ашигласан гоё дүрсүүд
+            Nested Loops in Frozen:
+              key: Frozen дээрх сараалжилсан гогцоо
+              name: Frozen-р хийсэн сараалжилсан гогцоо
+            'Functions: Songwriting':
+              key: 'Функц: Дуу бичих'
+              name: Дуу бичих
+            Functions in Minecraft:
+              key: Minecraft дээрх функцүүд
+              name: Minecraft дээрх функцүүд
+            Functions in Harvester:
+              key: Ургац хураагчийн функцүүд
+              name: Ургац хураагчтай хамтарсан функцүүд
+            Functions in Artist:
+              key: Зураачийн чиг үүрэг
+              name: Зураачийнтай хамтарсан функцүүд
+            Designing for Accessibility:
+              key: Хүртээмжтэй болгохын тулд дизайн хийх
+              name: Хүртээмжтэй болгохын тулд дизайн хийх
+          lesson_groups:
+            ramp_up:
+              display_name: Босгох
+            csf_sprites:
+              display_name: Шидтэнгүүд
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_nested_loops:
+              display_name: Сараалжсан гогцоо
+            csf_functions:
+              display_name: Функцүүд
+            csf_impacts:
+              display_name: Тооцооллын нөлөө
+        coursef-2021:
+          title: Хичээл F (2019)
+          description: Төрөл бүрийн гогцоо, үйл явдал, функц, нөхцлийг ашиглаж сур. Асуудлыг шийдэх янз бүрийн арга техникийг судалж, тооцоолол ба интернетийн нийгэмд үзүүлэх нөлөөллийг судлаарай. Энэ сургалтын хоёрдугаар хэсэгт найз нөхөд, гэр бүлийнхэнтэйгээ хуваалцах боломжтой capstone төсөл зохиож, бүтээгээрэй.
+          description_short: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
+          description_audience: '9-13 насныхан'
+          lessons:
+            Functions in Minecraft:
+              key: Minecraft дээрх функцүүд
+              name: Minecraft дээрх функцүүд
+            Learning Sprites with Sprite Lab:
+              key: Шидтэний лабораторитай хамт Шидтэнг сурах
+              name: Шидтэний лабтай хамтарсан сэлж буй загас
+            Events with Sprite Lab:
+              name: Шидтэний лабтай хамтарсан Харийнхны бүжгийн үдэшлэг
+            Loops with the Artist:
+              name: Гогцоотой зурах
+            Nested Loops in the Maze:
+              key: Ээдрээ дээрх сараалжилсан гогцоо
+              name: Ээдрээ дээрх сараалжилсан гогцоо
+            The Power of Words:
+              key: Үгийн хүч
+              name: Үгийн хүч
+            Envelope Variables:
+              key: Дугтуйны хувьсагчид
+              name: Дугтуйны хувьсагчид
+            Variables as Constant in Artist:
+              name: Зураачтай хамтарсан хувьсагчид
+            Variables that Change in Bee:
+              name: Зөгийтэй хамт хувьсагчдыг өөрчлөх
+            Variables that Change in Artist:
+              name: Зураачтай хамтарсан хувьсагчдыг өөрчлөх
+            Simulating Experiments:
+              key: Туршилтыг дуурайх
+              name: Туршилтыг дуурайх
+            AI for Oceans:
+              key: Далайд зориулсан ХОУ
+              name: Далайд зориулсан ХОУ
+            Internet:
+              key: Интернэт
+              name: Интернэт
+            For Loop Fun:
+              key: Гогцоонд зориулсан хөгжилтэй зүйлс
+              name: Гогцоонд зориулсан хөгжилтэй зүйлс
+            For Loops in Bee:
+              key: Зөгийн дээрх -д зориулав гогцоо
+              name: Зөгийтэй хамтарсан -д зориулав гогцоо
+            For Loops in Artist:
+              key: Зураач дээрх -д зориулав гогцоо
+              name: Зураачтай хамтарсан -д зориулав гогцоо
+            Editing Behaviors:
+              name: Шидтэний лаб дахь зан чанар
+            Virtual Pet:
+              name: Шидтэний лабтай хамтарсан виртуал гэрийн тэжээвэр амьтан
+          lesson_groups:
+            ramp_up:
+              display_name: Босгох
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_variables:
+              display_name: Хувьсагчууд
+            csf_for_loops:
+              display_name: Гогцоонд зориулав
+            csf_sprites:
+              display_name: Шидтэнгүүд
+        express-2021:
+          title: Шуурхай хичээл (2019)
+          description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг мэдэж аваарай. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго.
+          description_short: 'Компьютерийн шинжлэх ухааны танилцуулга: бага ангийн сурагчдад зориулсан манай сургуулийн хамгийн сайн сургалтын хөтөлбөрийг нэгтгэдэг.'
+          description_audience: '9-18 насныхан'
+          lessons:
+            Dance Party:
+              key: Бүжгийн үдэшлэг
+              name: Бүжгийн үдэшлэг
+            Programming with Angry Birds:
+              key: Ууртай шувуугаар програмчлах
+              name: Ууртай шувуугаар програмчлах
+            Debugging with Scrat:
+              key: Скратаар алдааг засах
+              name: Скратаар алдааг засах
+            Collecting Treasure with Laurel:
+              key: Лаурельтай хамт эрдэнэс цуглуулах
+              name: Лаурельтай хамт эрдэнэс цуглуулах
+            Creating Art with Code:
+              key: Код бүхий урлагийг бий болгох
+              name: Код бүхий урлагийг бий болгох
+            Loops with Rey and BB-8:
+              key: Рэй ба BB-8-тэй гогцоо
+              name: Рэй ба BB-8-тэй гогцоо
+            Sticker Art with Loops:
+              key: Гогцоо бүхий наах урлаг
+              name: Гогцоо бүхий наах урлаг
+            Nested Loops in Maze:
+              key: Ээдрээ дээрх сараалжилсан гогцоо
+              name: Ээдрээ дээрх сараалжилсан гогцоо
+            Snowflakes with Anna and Elsa:
+              key: Анна, Эльсатай хамтарсан цасан ширхгүүд
+              name: Анна, Эльсатай хамтарсан цасан ширхгүүд
+            If/Else with Bee:
+              key: Зөгийтэй хамтарсан хэрэв/өөр
+              name: Зөгийтэй хамтарсан хэрэв/өөр
+            While Loops with the Farmer:
+              key: Фермертэй хамтарсан Байхад гогцоо
+              name: Фермертэй хамтарсан Байхад гогцоо
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Minecraft дахь нөхцлүүд: Усан аялал'
+              name: 'Minecraft дахь нөхцлүүд: Усан аялал'
+            Until Loops in Maze:
+              key: Ээдрээ дээрх хүртэлх гогцоо
+              name: Ээдрээ дээрх хүртэлх гогцоо
+            Harvesting with Conditionals:
+              key: Нөхцлүүдтэй ургац хураах
+              name: Нөхцлүүдтэй ургац хураах
+            Functions in Minecraft:
+              key: Minecraft дээрх функцүүд
+              name: Minecraft дээрх функцүүд
+            Functions with Harvester:
+              key: Ургац хураагчтай хамтарсан функцүүд
+              name: Ургац хураагчтай хамтарсан функцүүд
+            Functions with Artist:
+              key: Зураачийнтай хамтарсан функцүүд
+              name: Зураачийнтай хамтарсан функцүүд
+            Variables with Artist:
+              key: Зураачтай хамтарсан хувьсагчид
+              name: Зураачтай хамтарсан хувьсагчид
+            Changing Variables with Bee:
+              key: Зөгийтэй хамт хувьсагчдыг өөрчлөх
+              name: Зөгийтэй хамт хувьсагчдыг өөрчлөх
+            Changing Variables with Artist:
+              key: Зураачтай хамтарсан хувьсагчдыг өөрчлөх
+              name: Зураачтай хамтарсан хувьсагчдыг өөрчлөх
+            For Loops with Bee:
+              key: Зөгийтэй хамтарсан -д зориулав гогцоо
+              name: Зөгийтэй хамтарсан -д зориулав гогцоо
+            For Loops with Artist:
+              key: Зураачтай хамтарсан -д зориулав гогцоо
+              name: Зураачтай хамтарсан -д зориулав гогцоо
+            Swimming Fish in Sprite Lab:
+              key: Шидтэний лабораторид суралцах
+              name: Шидтэний лабораторид суралцах
+            Alien Dance Party:
+              key: Харийнхны бүжгийн үдэшлэг
+              name: Харийнхны бүжгийн үдэшлэг
+            Behaviors in Sprite Lab:
+              key: Шидтэний лаб дахь зан чанар
+              name: Шидтэний лаб дахь зан чанар
+            Virtual Pet with Sprite Lab:
+              key: Шидтэний лабтай хамтарсан виртуал гэрийн тэжээвэр амьтан
+              name: Шидтэний лабтай хамтарсан виртуал гэрийн тэжээвэр амьтан
+          lesson_groups:
+            csf_warmup:
+              display_name: Бие халаалт
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_conditionals:
+              display_name: Нөхцлүүд
+            csf_functions:
+              display_name: Функцүүд
+            csf_variables:
+              display_name: Хувьсагчууд
+            csf_for_loops:
+              display_name: Гогцоонд зориулав
+            csf_sprites:
+              display_name: Шидтэнгүүд
+        pre-express-2021:
+          title: Урьдчилан унших Шуурхай (2019)
+          description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг мэдэж аваарай. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго.
+          description_short: 'Урьдчилан уншигчдад зориулсан компьютерийн шинжлэх ухааны танилцуулга: манай цэцэрлэгийн шилдэг анги болон нэгдүгээр ангийн сургалтуудыг нэгтгэдэг.'
+          description_audience: '4-8 насныхан'
+          lessons:
+            Learn to Drag and Drop:
+              key: Чирж буулгаж сурах
+              name: Чирж буулгаж сурах
+            Sequencing with Scrat:
+              key: Скраттай дарааллуулах
+              name: Скраттай дарааллуулах
+            Programming with Rey and BB-8:
+              key: Рэй ба BB-8-тай програмчлах
+              name: Рэй ба BB-8-тай програмчлах
+            Programming in Harvester:
+              key: Ургац хураагч дээр програмчлах
+              name: Ургац хураагч дээр програмчлах
+            Loops with Scrat:
+              key: Скраттай гогцоо
+              name: Скраттай гогцоо
+            Loops with Laurel:
+              key: Лаурелтай гогцоо
+              name: Лаурелтай гогцоо
+            Ocean Scene with Loops:
+              key: Гогцоо бүхий далайн үзэгдэл
+              name: Гогцоо бүхий далайн үзэгдэл
+            Drawing Gardens with Loops:
+              key: Цэцэрлэгийг гогцоотой зурах
+              name: Цэцэрлэгийг гогцоотой зурах
+            On the Move with Events:
+              key: Үйл явдалтай хамт хөдөлж байна
+              name: Үйл явдалтай хамт хөдөлж байна
+            A Royal Battle with Events:
+              key: Үйл явдлуудтай хааны тулаан
+              name: Үйл явдлуудтай хааны тулаан
+          lesson_groups:
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
+        csf-2021-pilot:
+          lessons:
+            Learning Sprites with Sprite Lab:
+              name: Шидтэний лабтай хамтарсан сэлж буй загас
+            lesson-1:
+              name: Дугтуйны хувьсагчид
+          lesson_groups:
+            ramp_up:
+              display_name: Танилцуулга
+            lessonGroup-3:
+              display_name: Хувьсагчууд

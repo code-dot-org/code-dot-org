@@ -5839,7 +5839,7 @@ es-ES:
             difícil, ¡asegúrate de leer todas las opciones antes de responder!'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - text: La cosechadora recogerá todos los cultivos.
+        - text: La granjera recogerá todos los cultivos.
           feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
         - text: La cosechadora no recogerá cultivos en el camino que está tomando.
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones

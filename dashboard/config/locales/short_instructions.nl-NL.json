@@ -1729,7 +1729,15 @@
         "courseC_starWars_loops6_2018": "Lussen werken ook als er meer dan een blok in zit. Kun je een lus maken van deze reeks instructies?",
         "courseC_starWars_loops6_2019": "Lussen werken ook als er meer dan een blok in zit. Kun je een lus maken van deze reeks instructies?",
         "courseC_starWars_loops6_2020": "Lussen werken ook als er meer dan een blok in zit. Kun je een lus maken van deze reeks instructies?",
-        "courseC_starWars_loops6_copy": "Lussen werken ook als er meer dan een blok in zit. Kun je een lus maken van deze reeks instructies?"
+        "courseC_starWars_loops6_copy": "Lussen werken ook als er meer dan een blok in zit. Kun je een lus maken van deze reeks instructies?",
+        "outbreak1": "Creëer 10 gezonde sprites en 1 zieke sprite. Wijzig hun grootte en laat ze rondzwerven.",
+        "outbreak2": "Wijzig de gezonde monsters in zieke monsters als ze elkaar aanraken.",
+        "outbreak3": "Wijzig monsters in monsters met mondkapjes als u op ze klikt.",
+        "outbreak4": "Wijzig voor uw simulatie het aantal en de grootte van de monstersprites.",
+        "outbreak5": "Laat alle zieke monsters beginnen met genezen als een gezond monster een ziek monster aanraakt.",
+        "outbreak6": "Voeg een percentagekanst toe voor monster om ziek te wordne als gezonde monsters zieke monsters aanraken. Doe dit bij alle combinaties van monsters met en zonder mondkapjes.",
+        "outbreak7": "Creëer een nieuw kostuum voor monster die immuun voor het virus zijn, en gebruik deze in uw simulatie.",
+        "outbreak8": "Deel een bericht met uw simulatie."
       }
     }
   }

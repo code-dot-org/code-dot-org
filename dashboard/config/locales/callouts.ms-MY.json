@@ -85,6 +85,13 @@
         },
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Lihat di sini untuk blok \"semua itik\""
+        },
+        "outbreak2": {
+          "minitoolbox": "Klik sini untuk kembangkan blok.",
+          "pointerlocation": "Tarik blok subjek ke sini."
+        },
+        "outbreak7": {
+          "costumes_callout": "Klik untuk mencipta kostum baru"
         }
       }
     }

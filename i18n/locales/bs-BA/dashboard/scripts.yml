@@ -2891,7 +2891,183 @@ bs:
               name: Kurs A
             Course B:
               name: Kurs B
-        ml-playground:
+        csd3-2021:
           lessons:
-            intro:
-              name: Uvod
+            Variables:
+              key: Varijable
+              name: Varijable
+            Text:
+              key: Tekst
+              name: Tekst
+            Conditionals:
+              key: Uvjeti
+              name: Uvjeti
+            Velocity:
+              key: Brzina
+              name: Brzina
+            Functions:
+              key: Funkcije
+              name: Funkcije
+        csd4-2021:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+        csd5-2021:
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+        csd6-2021:
+          lessons:
+            Making Music:
+              key: Pravljenje muzike
+              name: Pravljenje muzike
+            Functions with Parameters:
+              key: Funkcije sa Parametrima
+              name: Funkcije sa Parametrima
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Binarni Brojevi
+              name: Binarni Brojevi
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Petlje
+        coursea-2021:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          lessons:
+            'Programming: Happy Maps':
+              name: Vesele Mape
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        courseb-2021:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          lessons:
+            Move It, Move It:
+              key: Pomakni, Pomakni
+              name: Pomakni, Pomakni
+            'Loops: Getting Loopy':
+              name: Zapetljavanje
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binarne narukvice
+              name: Binarne narukvice
+            'Events: The Big Event':
+              name: Veliki Događaj
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_binary:
+              display_name: Binarno
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Papirno Programiranje Grafikona
+            Relay Programming:
+              key: Prijenos programiranja
+              name: Prijenos programiranja
+            Dance Party:
+              key: Plesna zabava
+              name: Plesna zabava
+            Conditionals with Cards:
+              key: Uvjeti s Kartama
+              name: Uvjeti s Kartama
+            'Unplugged: Binary':
+              key: 'Izvanmrežno: Binarni'
+            Artist Binary:
+              key: Umjetnik Binarno
+              name: Umjetnik Binarno
+          lesson_groups:
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Uvjeti
+            'Functions: Songwriting':
+              name: Pisanje pjesama
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_nested_loops:
+              display_name: Ugniježdene Petlje
+            csf_functions:
+              display_name: Funkcije
+        coursef-2021:
+          lessons:
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Od-Do-Za Petlje
+        express-2021:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          lessons:
+            Dance Party:
+              key: Plesna zabava
+              name: Plesna zabava
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Od-Do-Za Petlje
+        pre-express-2021:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Uvod
+            lessonGroup-3:
+              display_name: Varijable

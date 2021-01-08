@@ -305,10 +305,10 @@
           "dance_party_11_5_groups": "Tu hľadaj blok \"všetky kačice\""
         },
         "Fish Tank 3-validated_2019": {
-          "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom ako tvoj kód funguje."
+          "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom, ako tvoj kód funguje."
         },
         "Fish Tank 3-validated_2020": {
-          "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom ako tvoj kód funguje."
+          "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom, ako tvoj kód funguje."
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Tento krátky pokyn hovorí počítaču, aby v pracovnom priestore spustil VEĽKÝ blok kódu s rovnakým názvom."
@@ -1459,6 +1459,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Toto číslo môžete zmeniť.",
           "courseE_artist_ramp8_2": "Kliknite sem pre zadanie počtu opakovaní vášho kódu."
+        },
+        "outbreak2": {
+          "minitoolbox": "Kliknutím sem rozbalíte blok.",
+          "pointerlocation": "Sem potiahnite blok predmetu."
+        },
+        "outbreak7": {
+          "costumes_callout": "Kliknite na vytvorenie nového kostýmu"
         }
       }
     }

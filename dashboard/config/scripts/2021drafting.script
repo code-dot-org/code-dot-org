@@ -7,8 +7,12 @@ level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Video: Introducing Spr
 level 'courseF_intro_apps', progression: 'Exploration: Sample Apps'
 level 'courseF_intro_birds_puzzle', progression: 'Exploration: Writing Code'
 
-lesson 'Learning Sprites with Sprite Lab', display_name: 'Programming with Sprite Lab'
+lesson 'Making Sprites', display_name: 'Making Sprites'
 level 'CourseEF_video_MakeSprite_2020', progression: 'How to Make a Sprite'
+
+lesson 'Sprites in Action', display_name: 'Sprites in Action'
+level 'courseF_events_predict', progression: 'Prediction'
+level 'CDEF_video_SpritesInAction_2020', progression: 'Video: Sprites in Action'
 
 lesson_group 'lessonGroup-3', display_name: 'Variables'
 lesson_group_description 'Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!'
@@ -44,4 +48,5 @@ level 'sprite lab - ask and answer', progression: 'Text Input'
 level 'anjali- Math Blocks', progression: 'Math Blocks'
 level '2020 new SL stuff', progression: 'New Sprite Animations'
 level 'symmetry', progression: 'Symmetry'
+level 'courseF_2021_template', progression: 'Full Toolbox and/or Template'
 

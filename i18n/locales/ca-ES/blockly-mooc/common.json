@@ -183,6 +183,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Prova si un valor és inferior o igual a un altre valor. Retorna cert si el valor a la part esquerra de l'expressió és inferior o igual al valor a la dreta de l'expressió.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Operador Menys que o igual",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "Retorna un nombre aleatori entre 0 (inclòs) fins però sense incloure 1 (exclusiu)",
   "dropletBlock_mathRandom_signatureOverride": "Math.aleatori()",

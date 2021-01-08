@@ -41,6 +41,12 @@ class ProfanityControllerTest < ActionController::TestCase
     assert_equal @expected_profanities.to_json, @response.body
   end
 
+  test 'find: returns null if params[:text] is empty' do
+    post :find, params: {text: ""}
+    assert_response :success
+    assert_equal "null", @response.body
+  end
+
   test 'find: returns 429 if request is throttled' do
     ProfanityHelper.expects(:throttled_find_profanities).once.returns(nil)
     Honeybadger.expects(:notify).once

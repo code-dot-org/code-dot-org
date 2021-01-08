@@ -2916,7 +2916,207 @@ et:
           lesson_groups:
             lg_1:
               display_name: Sisu
-        ml-playground:
+        csd1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd3-2021:
           lessons:
-            intro:
-              name: Sissejuhatus
+            Variables:
+              key: Muutujad
+              name: Muutujad
+            Text:
+              key: Tekst
+              name: Tekst
+            Conditionals:
+              key: Tingimuslaused
+              name: Tingimuslaused
+            Velocity:
+              key: Velocity
+              name: Velocity
+            Functions:
+              key: Funktsioonid
+              name: Funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd4-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Parameetritega funktsioonid
+              name: Parameetritega funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Binaararvud
+              name: Binaararvud
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Loendid
+            csp_loops:
+              display_name: Tsüklid
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Happy Maps
+            Loops in Ice Age:
+              key: Tsüklik - Jääaeg
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Liiguta, liiguta
+              name: Liiguta, liiguta
+            'Loops: Getting Loopy':
+              name: Muutub tsükliliseks
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binaarsed käevõrud
+              name: Binaarsed käevõrud
+            'Events: The Big Event':
+              name: Suursündmus
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_binary:
+              display_name: Binaarne
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Millimeetripaberi programmeerimine
+            Relay Programming:
+              key: Relee programmeerimine
+              name: Relee programmeerimine
+            Dance Party:
+              key: Tantsuõhtu
+              name: Tantsuõhtu
+            Loops in Ice Age:
+              key: Tsüklik - Jääaeg
+              name: Tsüklik - Jääaeg
+            Conditionals with Cards:
+              key: Tingimuslaused kaartidel
+              name: Tingimuslaused kaartidel
+            'Unplugged: Binary':
+              key: 'Unplugged: Binaar'
+              name: Binaarsed pildid
+            Artist Binary:
+              key: Kunstnik Binaar
+              name: Kunstnik Binaar
+          lesson_groups:
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_binary:
+              display_name: Binaarne
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Tingimuslaused
+            'Functions: Songwriting':
+              name: Laulude kirjutamine
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_nested_loops:
+              display_name: Korduvad tsüklid
+            csf_functions:
+              display_name: Funktsioonid
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Ümbriku muutujad
+              name: Ümbriku muutujad
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: For Loop Fun
+              name: For Loop Fun
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_variables:
+              display_name: Muutujad
+            csf_for_loops:
+              display_name: For tsükkel
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Tantsuõhtu
+              name: Tantsuõhtu
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_functions:
+              display_name: Funktsioonid
+            csf_variables:
+              display_name: Muutujad
+            csf_for_loops:
+              display_name: For tsükkel
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Ümbriku muutujad
+          lesson_groups:
+            ramp_up:
+              display_name: Sissejuhatus
+            lessonGroup-3:
+              display_name: Muutujad

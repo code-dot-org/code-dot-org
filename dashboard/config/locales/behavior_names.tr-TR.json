@@ -1076,13 +1076,16 @@
           "spinning and growing": "dönme ve büyüme"
         },
         "outbreak1": {
-          "wandering": "gezinme"
+          "wandering": "gezinme",
+          "recovering": "iyileşiyor"
         },
         "outbreak2": {
-          "wandering": "gezinme"
+          "wandering": "gezinme",
+          "recovering": "iyileşiyor"
         },
         "outbreak3": {
-          "wandering": "gezinme"
+          "wandering": "gezinme",
+          "recovering": "iyileşiyor"
         },
         "outbreak4": {
           "wandering": "gezinme",
@@ -1096,13 +1099,17 @@
           "moving north": "kuzeye ilerleme",
           "jittering": "kararsızlık",
           "moving west": "batıya ilerleme",
-          "patrolling": "denetleme"
+          "patrolling": "denetleme",
+          "recovering": "iyileşiyor",
+          "moving with arrow keys": "ok tuşları ile hareket"
         },
         "outbreak5": {
-          "wandering": "gezinme"
+          "wandering": "gezinme",
+          "recovering": "iyileşiyor"
         },
         "outbreak6": {
-          "wandering": "gezinme"
+          "wandering": "gezinme",
+          "recovering": "iyileşiyor"
         },
         "outbreak7": {
           "wandering": "gezinme",
@@ -1115,7 +1122,10 @@
           "moving north": "kuzeye ilerleme",
           "jittering": "kararsızlık",
           "moving west": "batıya ilerleme",
-          "patrolling": "denetleme"
+          "patrolling": "denetleme",
+          "recovering": "iyileşiyor",
+          "moving left and right": "sola ve sağa hareket",
+          "moving with arrow keys": "ok tuşları ile hareket"
         },
         "outbreak8": {
           "wandering": "gezinme",
@@ -1128,7 +1138,10 @@
           "moving north": "kuzeye ilerleme",
           "jittering": "kararsızlık",
           "moving west": "batıya ilerleme",
-          "patrolling": "denetleme"
+          "patrolling": "denetleme",
+          "recovering": "iyileşiyor",
+          "moving left and right": "sola ve sağa hareket",
+          "moving with arrow keys": "ok tuşları ile hareket"
         },
         "outbreak_freeplay": {
           "wandering": "gezinme",
