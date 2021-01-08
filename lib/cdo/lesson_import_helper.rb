@@ -56,6 +56,9 @@ module LessonImportHelper
       if models_to_import.include?('Resource')
         lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
       end
+      if models_to_import.include?('Vocabulary')
+        lesson.vocabularies = create_lesson_vocabularies(cb_lesson_data['vocab'], course_version_id)
+      end
     end
   end
 
@@ -81,6 +84,25 @@ module LessonImportHelper
       resource.include_in_pdf = cb_resource['gd']
       resource.save! if resource.changed?
       resource
+    end
+  end
+
+  def self.create_lesson_vocabularies(cb_vocab, course_version_id)
+    cb_vocab.map do |cb_vocabulary|
+      raise unless cb_vocabulary['word']
+      vocab = Vocabulary.find_or_initialize_by(
+        course_version_id: course_version_id,
+        key: cb_vocabulary['word']
+      )
+      vocab.word = cb_vocabulary['word']
+      vocab.definition =
+        if ['csd', 'csp'].include? CourseVersion.find(course_version_id).course_offering.key
+          cb_vocabulary['detailDef']
+        else
+          cb_vocabulary['simpleDef']
+        end
+      vocab.save! if vocab.changed?
+      vocab
     end
   end
 

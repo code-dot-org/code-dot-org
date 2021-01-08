@@ -38,9 +38,9 @@ def parse_options
 
         Usage: #{$0} [options]
 
-        Example: runner.rb -u coursea-2021
-        Example: runner.rb -l -u csd1-2021
-        Example: runner.rb -l -u csp2-2021,csp3-2021,csp4-2021
+        Example: runner.rb -u coursea-2021 -m LessonGroup,Lesson,Activity,Resource,Objective,Vocabulary
+        Example: runner.rb -l -u csd1-2021 -m Activity,Resource,Objective
+        Example: runner.rb -l -u csp2-2021,csp3-2021,csp4-2021 -m Lesson
       BANNER
 
       opts.separator ""
@@ -53,7 +53,7 @@ def parse_options
         options.unit_names = unit_names
       end
 
-      opts.on('-m', '--models Resource,Vocabulary', Array, 'Models to import: LessonGroup, Lesson, Activity, Resource, or Objective') do |models|
+      opts.on('-m', '--models Resource,Vocabulary', Array, 'Models to import: LessonGroup, Lesson, Activity, Resource, Objective, or Vocabulary') do |models|
         options.models = models
       end
 
