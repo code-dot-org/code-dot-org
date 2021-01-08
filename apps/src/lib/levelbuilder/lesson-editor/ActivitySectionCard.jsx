@@ -429,8 +429,6 @@ class ActivitySectionCard extends Component {
               }
               move={this.handleMoveActivitySection}
               remove={this.handleRemoveActivitySection}
-              item={this.props.activitySection}
-              itemType={'activitySection'}
             />
           </label>
           <div style={styles.checkboxesAndButtons}>
