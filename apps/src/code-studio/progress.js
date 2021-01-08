@@ -281,6 +281,7 @@ function initializeStoreWithProgress(
       scriptName: scriptData.name,
       scriptTitle: scriptData.title,
       scriptDescription: scriptData.description,
+      scriptStudentDescription: scriptData.studentDescription,
       betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress
