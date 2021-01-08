@@ -76,6 +76,7 @@ class FollowersController < ApplicationController
     # (i.e., the teacher) does not exist (possibly soft-deleted) or is not a teacher
     unless @section && @section.user&.teacher?
       if current_user
+        current_user.reset_section_attempts_if_needed
         current_user.increment_section_attempts
       end
       redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])

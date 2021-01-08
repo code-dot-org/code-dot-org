@@ -2278,16 +2278,21 @@ class User < ApplicationRecord
     properties['section_attempts_last_reset'] = DateTime.now.to_s
   end
 
+  def reset_section_attempts_if_needed
+    # Failed section attempts reset after 24 hours
+    if reset_section_attempts?
+      reset_section_attempts
+      save
+    end
+  end
+
   def display_captcha?
+    reset_section_attempts_if_needed
     num_section_attempts >= 3
   end
 
   # Let's make sure we only hit this code when the user is already registered
   def increment_section_attempts
-    # Failed section attempts reset after 24 hours
-    if reset_section_attempts?
-      reset_section_attempts
-    end
     properties.merge!({'section_attempts' => 1}) {|_, old_val, increment_val| old_val + increment_val}
     save
   end
