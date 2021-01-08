@@ -663,8 +663,7 @@
       "key": "da433c13-5e0a-48fe-a697-d2288e831912",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "da433c13-5e0a-48fe-a697-d2288e831912",
@@ -1947,9 +1946,8 @@
         "description": "**Discuss:** Ask the students if they could tell how you were feeling when you couldn't figure out the answer.  They might suggest that you were \"mad\" or \"sad\".  Instead of telling them \"no\", describe that you were feeling a little bit mad, a little bit sad, and a little bit confused.  When you put all of those emotions together, it makes a feeling called \"frustration\".  When you are \"frustrated\" you might think you are mad, sad, or confused -- and you might be tempted to give up -- but frustration is a natural feeling and it's a big hint that you are about to learn something!  Instead of quitting, practice persistence.  Keep trying over and over again.  After a few times, you will start to understand how to debug your problems!",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
-            "markdown": "For more on persistence and frustration, try reading [Stevie and the Big Project](https://drive.google.com/open?id=0B-uvt08wYSQqTUFzaGxKSk45QkU) to your students. It will help them spot moments of frustration.  It will also help give them the tools to deal with it.\n\nIf you do not read the book, take a moment to cover tips on frustration and persistence as a class:\n\n##### Tips to Help With Frustration\n- Count to 10\n- Take deep breaths\n- Journal about them\n- Talk to a partner about them\n- Ask for help\n\n##### Tips for Being Persistent\n- Keep track of what you have already tried\n- Describe what is happening\n- Describe what is supposed to happen\n- What does that tell you?\n- Make a change and try again\n"
+            "markdown": "##### Tips to Help With Frustration\n- Count to 10\n- Take deep breaths\n- Journal about them\n- Talk to a partner about them\n- Ask for help\n\n##### Tips for Being Persistent\n- Keep track of what you have already tried\n- Describe what is happening\n- Describe what is supposed to happen\n- What does that tell you?\n- Make a change and try again\n"
           }
         ]
       },
@@ -1987,7 +1985,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Here are some clarifications that need to be shared from time to time:\r\n\r\n- Only one person from each group can be at the image at one time.\r\n- It is okay to discuss algorithms with the rest of the group in line, even up to the point of planning who is going to write what when they get to the image.\r\n- When a student debugs a program by crossing out an incorrect instruction (or a grouping of incorrect instructions) this counts as their entire turn. The next player will need to figure out how to correct the removed item.\r\n"
           }
