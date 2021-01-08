@@ -24,6 +24,7 @@ level 'U6L2 CFU Efficiency and Algorithms', progression: 'Check For Understandin
 
 lesson 'Unreasonable Time', display_name: 'Unreasonable Time'
 level 'CSP U6L3 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U6L2 Ticket Generator', progression: 'Widget: Ticket Generator'
 level 'U6L3 CFU Reasonable vs Unreasonable', progression: 'Check For Understanding', assessment: true
 level 'U6 L03 Evaluate Reasonable or Not', progression: 'Check For Understanding', assessment: true
 

@@ -18,3 +18,19 @@ for(var i = 0; <INSERT CODE>; i++){
 
 Which of the following will NOT result in an error if placed where the program reads `<INSERT CODE>` and the program is run?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** All choices except `i < list.length` will result in an error when the program looks for an element in the list that does not exist. A will look for `list[3]`, C will look for `list[10]`, and D will look for `list[5]`.
+
+Students practice writing for-loops in [Lesson 7 - Loops Practice](https://curriculum.code.org/csp-20/unit5/7/)  
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CRD-2.I: For errors in an algorithm or program: 
+a. Identify the error.
+b. Correct the error.
+:::
+
+
+MARKDOWN

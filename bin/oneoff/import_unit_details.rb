@@ -7,8 +7,7 @@ require 'net/http'
 require_relative '../../deployment'
 require 'cdo/lesson_import_helper'
 
-# Once this script is ready, only levelbuilder should be added to this list.
-raise unless [:development, :adhoc].include? rack_env
+raise unless [:development, :adhoc, :levelbuilder].include? rack_env
 
 $verbose = false
 def log(str)

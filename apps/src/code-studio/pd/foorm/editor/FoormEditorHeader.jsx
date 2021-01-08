@@ -44,14 +44,14 @@ const TIME_FORMAT = 'h:mm a';
 
 class FoormEditorHeader extends Component {
   static propTypes = {
-    formVersion: PropTypes.number,
     livePreviewToggled: PropTypes.func,
     livePreviewStatus: PropTypes.string,
-    formName: PropTypes.string,
 
     // populated by Redux
     formQuestions: PropTypes.object,
-    isFormPublished: PropTypes.bool
+    isFormPublished: PropTypes.bool,
+    formName: PropTypes.string,
+    formVersion: PropTypes.number
   };
 
   constructor(props) {
@@ -161,5 +161,7 @@ class FoormEditorHeader extends Component {
 
 export default connect(state => ({
   formQuestions: state.foorm.formQuestions || {},
-  isFormPublished: state.foorm.isFormPublished
+  isFormPublished: state.foorm.isFormPublished,
+  formName: state.foorm.formName,
+  formVersion: state.foorm.formVersion
 }))(FoormEditorHeader);

@@ -286,7 +286,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
 
     DeleteAccountsHelper.any_instance.stubs(:purge_user).with do |account|
       raise 'Intentional failure' if account == student_needs_review
-      raise 'Pardot::InvalidApiKeyException' if account == student_autoretryable
+      raise 'Net::ReadTimeout' if account == student_autoretryable
       account.update!(purged_at: Time.now); true
     end
 
