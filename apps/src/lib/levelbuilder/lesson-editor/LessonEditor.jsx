@@ -126,7 +126,7 @@ class LessonEditor extends Component {
 
           this.props.initActivities(activities);
           this.setState({
-            lastSaved: data.updatedAt,
+            lastSaved: Date.now(),
             isSaving: false,
             originalLessonData: data
           });
