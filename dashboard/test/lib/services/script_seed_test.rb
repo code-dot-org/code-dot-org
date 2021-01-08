@@ -53,7 +53,7 @@ module Services
       #     These would be good candidates to eliminate in future optimization.
       #   16 queries, one for each LevelsScriptLevel.
       #   4 queries, one to remove LessonsResources from each Lesson.
-      #   4 queries, one to remove LessonsVocabularies from each Lesson.
+      #   2 queries, one to remove LessonsVocabularies from each Lesson.
       #   17 queries, 1 to populate the Game.by_name cache, and 16 to look up Game objects by id.
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
@@ -61,7 +61,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(80) do
+      assert_queries(85) do
         ScriptSeed.seed_from_json(json)
       end
 
