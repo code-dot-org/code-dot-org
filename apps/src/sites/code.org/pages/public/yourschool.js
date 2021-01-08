@@ -37,6 +37,10 @@ function showYourSchool() {
         hideMap={yourschoolElement.data('parameters-hide-map')}
         prefillData={prefillData}
         currentCensusYear={yourschoolElement.data('parameters-school-year')}
+        showProfessionalLearningBanner={
+          yourschoolElement.data('parameters-locale') === 'en-US' &&
+          yourschoolElement.data('parameters-teacher-applications-active')
+        }
       />
     </Provider>,
     yourschoolElement[0]
