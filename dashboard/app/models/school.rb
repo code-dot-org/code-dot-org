@@ -319,7 +319,7 @@ class School < ApplicationRecord
       # Download link found here: https://nces.ed.gov/programs/edge/Geographic/SchoolLocations
       # Actual download link: https://nces.ed.gov/programs/edge/data/EDGE_GEOCODE_PUBLICSCH_1819.zip
       AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/EDGE_GEOCODE_PUBLICSCH_1819.csv") do |filename|
-        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: true, write_inserts: false) do |row|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false, write_inserts: false) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
             latitude:           row['LAT'].to_f,
