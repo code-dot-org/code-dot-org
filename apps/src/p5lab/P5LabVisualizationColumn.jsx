@@ -57,7 +57,8 @@ class P5LabVisualizationColumn extends React.Component {
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
-    consoleMessages: PropTypes.array.isRequired
+    consoleMessages: PropTypes.array.isRequired,
+    pauseHandler: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -201,7 +202,9 @@ class P5LabVisualizationColumn extends React.Component {
         </div>
 
         <GameButtons>
-          {this.spritelabPauseExperiment && <PauseButton />}
+          {this.spritelabPauseExperiment && (
+            <PauseButton pauseHandler={this.props.pauseHandler} />
+          )}
           <ArrowButtons />
 
           <CompletionButton />

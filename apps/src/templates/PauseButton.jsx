@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import {actions, selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
 
 const styles = {
   button: {
@@ -17,6 +16,7 @@ const styles = {
 
 class PauseButton extends React.Component {
   static propTypes = {
+    pauseHandler: PropTypes.func.isRequired,
     // from redux
     togglePause: PropTypes.func.isRequired,
     isPaused: PropTypes.bool.isRequired,
@@ -28,13 +28,7 @@ class PauseButton extends React.Component {
   };
 
   togglePause = () => {
-    const current = new Date().getTime();
-    if (this.props.isPaused) {
-      coreLibrary.addPauseTime(current - this.state.pauseStart);
-      this.setState({pauseStart: 0});
-    } else {
-      this.setState({pauseStart: current});
-    }
+    this.props.pauseHandler(this.props.isPaused);
     this.props.togglePause();
   };
 
