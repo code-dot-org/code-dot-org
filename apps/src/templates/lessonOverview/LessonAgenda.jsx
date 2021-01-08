@@ -9,11 +9,11 @@ export default class LessonAgenda extends Component {
   };
 
   render() {
-    // Do not link to sections that are progressions and sections without a displayName
+    // Do not link to sections without a displayName
     let filteredActivitiesList = _.cloneDeep(this.props.activities);
     filteredActivitiesList.forEach(activity => {
       activity.activitySections = activity.activitySections.filter(
-        section => section.displayName !== '' && section.scriptLevels.length < 1
+        section => section.displayName !== ''
       );
     });
 
