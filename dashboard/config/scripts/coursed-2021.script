@@ -5,6 +5,7 @@ family_name 'coursed'
 version_year '2021'
 curriculum_umbrella 'CSF'
 is_course true
+is_migrated true
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
 lesson 'Algorithms: Graph Paper Programming', display_name: 'Graph Paper Programming'

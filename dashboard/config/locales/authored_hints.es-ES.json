@@ -3835,8 +3835,8 @@
           "courseC_artist_loopsPrePre1a_b": "Para avanzar 50 píxeles , utiliza este bloque :! \\[] (Https\\://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "Si utiliza el bloque para hacerme 'avanzar 100 píxeles', sacaré una línea automáticamente.",
-          "courseC_artist_prog2_b": "¿Tienes problemas girando la esquina? Usa el bloque `girar a la derecha 90 grados`."
+          "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea.\"*",
+          "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea.\"*",
@@ -6100,8 +6100,8 @@
           "courseD_collector_ramp9_b": "Si quieres simplificar tu código, ¡puedes poner un loop repetir dentro de otro! Esto se llama un **loop anidado**."
         },
         "courseD_farmer_condLoops1": {
-          "courseD_farmer_condLoops1_a": "Necesitarás buscar maíz 5 veces, usando un loop repetir.",
-          "courseD_farmer_condLoops1_b": "Asegúrate de usar un bloque `si en el maíz` o ¡podrías intentar elegir algo que no esté allí!"
+          "courseD_farmer_condLoops1_a": "Necesitarás buscar el maíz 5 veces, utilizando un bucle de repetición.",
+          "courseD_farmer_condLoops1_b": "Asegúrate de utilizar un bloque `si en el maíz` o ¡podrías acabar cosechando cualquier otra cosa!"
         },
         "courseD_farmer_condLoops1_2018": {
           "courseD_farmer_condLoops1_a": "Necesitarás buscar maíz 5 veces, usando un loop repetir.",
@@ -6116,9 +6116,9 @@
           "courseD_farmer_condLoops1_b": "Asegúrate de usar un bloque `si en el maíz` o ¡podrías intentar elegir algo que no esté allí!"
         },
         "courseD_farmer_condLoops2": {
-          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las afirmaciones 'si' ubicando una dentro de la otra.  ",
-          "courseD_farmer_condLoops2_b": "Para este desafío, debes tener dos afirmaciones`si/si no` y una afirmación `si` simple.\".",
-          "courseD_farmer_condLoops2_c": "Tu sentencia `si` podría parecerse mucho a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
+          "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las sentencias 'if' situando una dentro de la otra.  ",
+          "courseD_farmer_condLoops2_b": "Para este desafío, deberías tener una sentencia `if/if else` y una sentencia `if`.",
+          "courseD_farmer_condLoops2_c": "Tu sentencia `if` podría parecerse a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
         },
         "courseD_farmer_condLoops2_2018": {
           "courseD_farmer_condLoops2_a": "La mejor manera de hacer esto es anidar las afirmaciones 'si' ubicando una dentro de la otra.  ",
@@ -6136,8 +6136,8 @@
           "courseD_farmer_condLoops2_c": "Tu sentencia `si` podría parecerse mucho a esto: \n\n-   si en el maíz\n    -   recoger maíz\n-   si no\n    -   si en la lechuga\n        -   recoger lechuga\n\n Si no hay nada allí, ¡no recogerás nada!"
         },
         "courseD_farmer_condLoops3": {
-          "courseD_farmer_condLoops3_a": "Para obtener todos los elementos, intenta anidar afirmaciones ' if ' de profundidad tres.\n\nEsto significa que debe poner una afirmación `si ' dentro de otra, a continuación, poner una tercera afirmación`si ' dentro de la segunda.",
-          "courseD_farmer_condLoops3_b": "Para este desafío, debes tener dos afirmaciones`si/si no` y una afirmación `si` simple."
+          "courseD_farmer_condLoops3_a": "Para conseguir todos los elementos, intenta anidar sentencias ' if' con tres profundidades.\n\nEsto significa que deberías situar una sentencia \\`if ' dentro de otra, y luego situar una tercera sentencia ' if ' dentro de la segunda.",
+          "courseD_farmer_condLoops3_b": "Para este desafío, deberías tener dos sentencias `if/else` y una sentencia `if`."
         },
         "courseD_farmer_condLoops3_2018": {
           "courseD_farmer_condLoops3_a": "Para obtener todos los elementos, intenta anidar afirmaciones ' if ' de profundidad tres.\n\nEsto significa que debe poner una afirmación `si ' dentro de otra, a continuación, poner una tercera afirmación`si ' dentro de la segunda.",
@@ -6152,9 +6152,9 @@
           "courseD_farmer_condLoops3_b": "Para este desafío, debes tener dos afirmaciones`si/si no` y una afirmación `si` simple."
         },
         "courseD_farmer_condLoops4": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtilizar un loop 'mientras hay lechuga' para seguir recogiendo hasta que cada pieza haya sido recolectada.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El loop `while` manejará espacios vacíos también! Como no hay lechuga, no elegirá ninguna y permitirá que el código avance.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puede utilizar un loop `mientras camino por delante` o un loop 'repetir\\` para todos los cultivos."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtiliza un bucle 'mientras haya lechuga' para seguir recogiendo hasta que no quede ninguna.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "¡El bucle `while` se encargará también de los espacios vacíos! Si no hay lechugas, no recogerá ninguna y dejará que el código avance.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puedes utilizar un bucle `mientras sigues adelante` o un bucle 'repetir\\` para pasar por todos los cultivos."
         },
         "courseD_farmer_condLoops4_2018": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4": "Nadie sabe cuántas lechugas crecerán de cada brote. \n\nUtilizar un loop 'mientras hay lechuga' para seguir recogiendo hasta que cada pieza haya sido recolectada.",
@@ -6172,8 +6172,8 @@
           "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Puede utilizar un loop `mientras camino por delante` o un loop 'repetir\\` para todos los cultivos."
         },
         "courseD_farmer_condLoops5": {
-          "courseD_farmer_condLoops5_a": "Hay un nuevo loop: 'repetir hasta en la calabaza'. ¿Puedes ver cómo usarlo en este desafío?",
-          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Usa un loop `mientras` para reunirlos a todos!"
+          "courseD_farmer_condLoops5_a": "Hay un nuevo bucle: 'repetir hasta en la calabaza'. ¿Puedes ver cómo utilizarlo en este desafío?",
+          "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Utiliza un bucle `while` para reunirlas todas!"
         },
         "courseD_farmer_condLoops5_2018": {
           "courseD_farmer_condLoops5_a": "Hay un nuevo loop: 'repetir hasta en la calabaza'. ¿Puedes ver cómo usarlo en este desafío?",
@@ -6187,8 +6187,8 @@
           "courseD_farmer_condLoops5_b": "Podría haber más de una planta de maíz o lechuga en cada lugar. ¡Usa un loop `mientras` para reunirlos a todos!"
         },
         "courseD_farmer_condLoops6": {
-          "courseD_farmer_condLoops6_a": "Usa un loop 'mientras hay maíz' para asegurarte que obtienes todo el maíz en el camino. Este bloque no hará nada si no hay ningún maíz para recoger.",
-          "courseD_farmer_condLoops6_b": "¡Asegúrate de comprobar 'si' hay un camino por delante antes de tomar el siguiente paso!"
+          "courseD_farmer_condLoops6_a": "Utiliza un bucle 'mientras hay maíz' para asegurarte de que recoges todo el maíz en el camino. Este bloque no hará nada si no hay maíz para recoger.",
+          "courseD_farmer_condLoops6_b": "¡Asegúrate de comprobar 'si' hay un camino por delante antes de dar el siguiente paso!"
         },
         "courseD_farmer_condLoops6_2018": {
           "courseD_farmer_condLoops6_a": "Utiliza un bucle `mientras camino por delante` o un bloque `si camino por delante / si no` para mover a la granjera hacia abajo en cada parte de la espiral.",
@@ -6203,8 +6203,8 @@
           "courseD_farmer_condLoops6_b": "Sólo necesita el control del maíz durante la mayor parte de la cosecha. Sólo debes elegir una calabaza al final de su programa."
         },
         "courseD_farmer_condLoops7": {
-          "courseD_farmer_condLoops7_a": "Ten en cuenta que el camino más fácil para llegar a todos los cultivos sigue siendo una espiral. \n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Intenta usar `cuando camino adelante` para mantener a la cosechadora moviéndose el número correcto de pasos."
+          "courseD_farmer_condLoops7_a": "Ten en cuenta que el camino más sencillo para llegar a todos los cultivos sigue siendo una espiral. \n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "Intenta utilizar `cuando sigas adelante` para que la granjera siga avanzando el número correcto de pasos."
         },
         "courseD_farmer_condLoops7_2018": {
           "courseD_farmer_condLoops7_a": "Ten en cuenta que el camino más fácil para llegar a todos los cultivos sigue siendo una espiral. \n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",

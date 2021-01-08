@@ -535,6 +535,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "يختبر ما إذا كانت القيمة أقل من قيمة أخرى أو مساوية لها. وتصبح \"صحيحة\" إذا كانت القيمة في الجانب الأيسر من التعبير أقل من القيمة في الجانب الأيمن من التعبير أو مساوية لها.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "عملية أصغر أو يساوي",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_description": "تأخذ س للقوة ص",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param0_description": "العدد الأساسي.",

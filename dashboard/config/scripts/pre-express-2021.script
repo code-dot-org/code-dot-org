@@ -7,6 +7,7 @@ family_name 'pre-express'
 version_year '2021'
 curriculum_umbrella 'CSF'
 is_course true
+is_migrated true
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
 lesson 'Learn to Drag and Drop', display_name: 'Learn to Drag and Drop'
@@ -56,7 +57,7 @@ level 'courseB_Scrat_ramp3b_2021'
 level 'courseB_Scrat_ramp4a_2021'
 level 'courseB_Scrat_ramp5a_2021'
 
-lesson 'Programming in with Angry Birds', display_name: 'Programming in with Angry Birds'
+lesson 'Programming in with Angry Birds', display_name: 'Programming with Angry Birds'
 level 'elementary_video_pairProgramming_2021'
 level 'courseA_maze_seq1_2021'
 level 'courseA_maze_seq5_2021'
@@ -84,7 +85,7 @@ level 'courseB_starWars_prog9_2021'
 level 'courseB_starWars_prog10_2021'
 level 'courseB_starWars_prog11_2021'
 
-lesson 'Programming in Harvester', display_name: 'Programming in Harvester'
+lesson 'Programming in Harvester', display_name: 'Programming with Harvester'
 level 'courseA_harvester_intro_2021'
 level 'courseA_harvester_seq1_2021'
 level 'courseA_harvester_seq2_2021'

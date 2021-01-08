@@ -78,7 +78,8 @@
           "courseB_maze_seq2_callout1": "ប្រើប៊ូតុងជំហាននៅក្នុងកម្មវិធីដើម្បីដំនើរការមួយជំហានម្តងៗ។ វានឹងជួយអ្នកឱ្យរកឃើញនៅកំហុស!"
         },
         "courseC_maze_programming3": {
-          "courseC_maze_programming3_3": "របងទាំងនេះសុទ្ធតែជាថ្ម វាមិនអាចបំបែកបានទេ។"
+          "courseC_maze_programming3_3": "របងទាំងនេះសុទ្ធតែជាថ្ម វាមិនអាចបំបែកបានទេ។",
+          "courseC_maze_programming3_2": "អ្នកអាចអូសប្លុកដែលនៅសល់ទៅប្រអប់ឧបករណ៍ដើម្បីបោះវាចោល។"
         },
         "courseC_maze_programming3_2018": {
           "courseC_maze_programming3_3": "របងទាំងនេះសុទ្ធតែជាថ្ម វាមិនអាចបំបែកបានទេ។",
@@ -96,16 +97,19 @@
           "made_of_stone": "ប្លុកទាំងនេះគឺត្រូវបានគេធ្វើឡើងដោយដុំថ្ម។អ្នកអាចផ្លាស់វាចេញ ប៉ុន្តែអ្នកមិនអាចលុបវាបានទេ"
         },
         "course3_artist_functions_challenge1": {
-          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "course3_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "course3_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "ប្រើប្រាស់ពាក្យបញ្ជានេះ ដើម្បីរំកិលសត្វឃ្មុំថយក្រោយ។"
         },
         "course4_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_1": "ប្លក់ពណ័ប្រផេះមិនអាចលុបចោលបានទេ!"
@@ -287,28 +291,177 @@
           "courseD_artist_functions2_1": "\nនៅពេលប្លុកពណ៌បៃតងនេះដំណើរ, កូដទាំងអស់នៅក្នុងអនុគមន៍នឹងដំណើរការ។ តើវិចិត្រករគួរធ្វើអ្វីបន្ទាប់ពីគូរការ៉េដំបូង?"
         },
         "courseE_artist_functions_challenge1": {
-          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge1_2018": {
-          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge1_2019": {
-          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge1_2020": {
-          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge1_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge2_2018": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge2_2019": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
         },
         "courseE_artist_functions_challenge2_2020": {
-          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
+          "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!",
+          "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។"
+        },
+        "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "បន្ទាប់ពីភ្ជាប់ប្លុកទាំងអស់រួចហើយ ចុច \"រត់\" ដើម្បីចាប់ផ្តើមកម្មវិធីរបស់អ្នក។"
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "នេះគឺជាប្រអប់ឧបករណ៍។ វាជាកន្លែងដែលអ្នកនឹងរកឃើញប្លុកបន្ថែមដើម្បីបញ្ចប់បញ្ហា។"
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "នេះគឺជាដែនកំណត់នៃប្លុករបស់អ្នក។ វាប្រាប់អ្នកពីចំនួនប្លុកដែលអ្នកនៅសល់សម្រាប់ទុកប្រើ។"
+        },
+        "courseC_maze_programming5": {
+          "": "ប្លុកទាំងនេះមិនមានលេខនៅលើពួកគេទេ។ អ្នកអាចប្រើច្រើនតាមដែលអ្នកចង់បាន!"
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "អ្នកមិនចាំបាច់ប្រើពណ៌កូល័រដើម្បីទទួលបាននៅល្បែងដែលត្រឹមត្រូវនោះទេ។ តែប្រសិនបើអ្នកចង់ ពណ៌ចម្រុះដែលដាក់នៅទីនេះវាអាចធ្វើឲ្យអ្នកងាយស្រួល។​"
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_1": "អ្នកមិនចាំបាច់ប្រើពណ៌កូល័រដើម្បីទទួលបាននៅល្បែងដែលត្រឹមត្រូវនោះទេ។ តែប្រសិនបើអ្នកចង់ ពណ៌ចម្រុះដែលដាក់នៅទីនេះវាអាចធ្វើឲ្យអ្នកងាយស្រួល។​"
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_1": "អ្នកមិនចាំបាច់ប្រើពណ៌កូល័រដើម្បីទទួលបាននៅល្បែងដែលត្រឹមត្រូវនោះទេ។ តែប្រសិនបើអ្នកចង់ ពណ៌ចម្រុះដែលដាក់នៅទីនេះវាអាចធ្វើឲ្យអ្នកងាយស្រួល។​"
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_1": "អ្នកមិនចាំបាច់ប្រើពណ៌កូល័រដើម្បីទទួលបាននៅល្បែងដែលត្រឹមត្រូវនោះទេ។ តែប្រសិនបើអ្នកចង់ ពណ៌ចម្រុះដែលដាក់នៅទីនេះវាអាចធ្វើឲ្យអ្នកងាយស្រួល។​"
+        },
+        "CourseD_Dance_2020_01": {
+          "dance_callout_01": "ចូរជ្រើសរើសប្រភេទអ្នករបាំនៅទីនេះ។"
+        },
+        "CourseD_Dance_2020_02": {
+          "dance_callout_11_a": "ចូរដាក់ប្លុកនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n",
+          "arrow_buttons": "អ្នកអាចចុចលើប៊ូតុងសញ្ញាព្រួញដើម្បីបញ្ជាអ្នករបាំរបស់អ្នក។"
+        },
+        "CourseD_Dance_2020_05": {
+          "dance_callout_05": "ចូរបន្ថែមព្រឹត្តិការណ៍ថ្មីមួយទៀតទៅក្នុងកម្មវិធីរបស់អ្នក។"
+        },
+        "Dance_2019_02": {
+          "dance_callout_11_a": "ចូរដាក់ប្លុកនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n",
+          "arrow_buttons": "អ្នកអាចចុចលើប៊ូតុងសញ្ញាព្រួញដើម្បីបញ្ជាអ្នករបាំរបស់អ្នក។"
+        },
+        "Dance_2019_05": {
+          "dance_callout_05": "ចូរបន្ថែមព្រឹត្តិការណ៍ថ្មីមួយទៀតទៅក្នុងកម្មវិធីរបស់អ្នក។"
+        },
+        "courseE_artist_functions8a_2018": {
+          "courseD_artist_functions8_1": "ប្លុករបស់អ្នកដើម្បីបង្កើតអនុគមន៍ ត្រូវបានផ្លាស់ប្តូរនៅក្រោមស្លាកនេះនៅក្នុងប្រអប់ឧបករណ៍។"
+        },
+        "courseE_artist_functions8a_2019": {
+          "courseD_artist_functions8_1": "ប្លុករបស់អ្នកដើម្បីបង្កើតអនុគមន៍ ត្រូវបានផ្លាស់ប្តូរនៅក្រោមស្លាកនេះនៅក្នុងប្រអប់ឧបករណ៍។"
+        },
+        "courseE_artist_functions8a_2020": {
+          "courseD_artist_functions8_1": "ប្លុករបស់អ្នកដើម្បីបង្កើតអនុគមន៍ ត្រូវបានផ្លាស់ប្តូរនៅក្រោមស្លាកនេះនៅក្នុងប្រអប់ឧបករណ៍។"
+        },
+        "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "ប្លុករបស់អ្នកដើម្បីបង្កើតអនុគមន៍ ត្រូវបានផ្លាស់ប្តូរនៅក្រោមស្លាកនេះនៅក្នុងប្រអប់ឧបករណ៍។"
+        },
+        "CSD U3 Variables Predict Where XY": {
+          "grid": "ចុចទីនេះដើម្បីបង្ហាញក្រឡាចត្រង្គ"
+        },
+        "CSD U3 Variables Predict Where XY_2018": {
+          "grid": "ចុចទីនេះដើម្បីបង្ហាញក្រឡាចត្រង្គ"
+        },
+        "CSD U3 Variables Predict Where XY_2019": {
+          "grid": "ចុចទីនេះដើម្បីបង្ហាញក្រឡាចត្រង្គ"
+        },
+        "CSD U3 debug": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 debug_2018": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 debug_2019": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 ellipse": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 ellipse_2018": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 ellipse_2019": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 fill": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 fill_2018": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 fill_2019": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 rect": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "នេះជាប៊ូតុងចុចសម្រាប់ \"រត់\"។"
+        },
+        "CSD U3 rect_2018": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ"
+        },
+        "CSD U3 rect_2019": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ"
+        },
+        "CSD U3 sequence": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 sequence_2018": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 sequence_2019": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "Dance_2019_01": {
+          "dance_callout_01": "ចូរជ្រើសរើសប្រភេទអ្នករបាំនៅទីនេះ។"
+        },
+        "CSD U3 Variables Predict Where X": {
+          "CSD_U3_variables": "ប្តូរលេខនៅទីនេះ"
+        },
+        "CSD U3 Variables Predict Where X_2018": {
+          "CSD_U3_variables": "ប្តូរលេខនៅទីនេះ"
+        },
+        "CSD U3 Variables Predict Where X_2019": {
+          "CSD_U3_variables": "ប្តូរលេខនៅទីនេះ"
+        },
+        "CSD U3 Sprites intro sprites": {
+          "": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite"
+        },
+        "CSD U3 Sprites intro sprites_2018": {
+          "": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite"
+        },
+        "CSD U3 Sprites intro sprites_2019": {
+          "": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite"
         }
       }
     }

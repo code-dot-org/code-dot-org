@@ -7,9 +7,9 @@ import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import FoormEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormEditorManager';
 import foorm, {
   setFormQuestions,
-  setFormData,
   setHasError
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
+import _ from 'lodash';
 
 import 'survey-react/survey.css';
 
@@ -21,8 +21,6 @@ $(document).ready(function() {
   ReactDOM.render(
     <Provider store={store}>
       <FoormEditorManager
-        updateFormQuestions={updateFormQuestions}
-        updateFormData={updateFormData}
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
         {...getScriptData('props')}
@@ -58,14 +56,19 @@ const updateFormQuestions = formQuestions => {
   getStore().dispatch(setHasError(false));
 };
 
-const updateFormData = formData => {
-  getStore().dispatch(setFormData(formData));
-  getStore().dispatch(setHasError(false));
-};
-
 function resetCodeMirror(json) {
   if (codeMirror) {
     codeMirror.setValue(JSON.stringify(json, null, 2));
     getStore().dispatch(setHasError(false));
   }
 }
+
+window.onbeforeunload = evt => {
+  let storeState = getStore().getState().foorm;
+  if (
+    storeState.hasError ||
+    !_.isEqual(storeState.lastSavedFormQuestions, storeState.formQuestions)
+  ) {
+    return 'Are you sure you want to exit? You may have unsaved changes.';
+  }
+};

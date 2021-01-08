@@ -18,7 +18,10 @@ class Api::V1::Pd::FoormController < ApplicationController
     if form_data
       data_to_return = {
         questions: JSON.parse(form_data.questions),
-        published: form_data.published
+        published: form_data.published,
+        name: form_data.name,
+        version: form_data.version,
+        id: form_data.id
       }
       render json: data_to_return
     else

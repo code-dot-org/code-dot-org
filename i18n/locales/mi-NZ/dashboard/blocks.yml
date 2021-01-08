@@ -1130,6 +1130,8 @@ mi:
             '"d"': d
       Mikelab_addBehaviorSimple:
         text: parehe {SPRITE} ka {BEHAVIOR}
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

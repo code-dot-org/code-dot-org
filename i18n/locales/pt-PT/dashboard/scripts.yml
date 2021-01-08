@@ -3347,7 +3347,255 @@ pt:
               name: Curso A
             Course B:
               name: Curso B
-        ml-playground:
+        csd1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Inquérito
+            csd1_1:
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadores e Resolução de Problemas'
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Inquérito
+        csd3-2021:
+          description_short: "Programação"
           lessons:
-            intro:
-              name: Introdução
+            Shapes and Parameters:
+              key: Formas e Parâmetros
+              name: Formas e Parâmetros
+            Variables:
+              key: Variáveis
+              name: Variáveis
+            Random Numbers:
+              key: Números Aleatórios
+              name: Números Aleatórios
+            Text:
+              key: Texto
+              name: Texto
+            Conditionals:
+              key: Condicionais
+              name: Condicionais
+            Velocity:
+              key: Velocidade
+              name: Velocidade
+            Functions:
+              key: Funções
+              name: Funções
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imagens e Animações'
+            csd3_2:
+              display_name: 'Capítulo 2: Construindo Jogos'
+            cspSurvey:
+              display_name: Inquérito
+        csd4-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Inquérito
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Inquérito
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funções com parâmetros
+              name: Funções com parâmetros
+          lesson_groups:
+            cspSurvey:
+              display_name: Inquérito
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Números Binários
+              name: Números Binários
+          lesson_groups:
+            cspSurvey:
+              display_name: Inquérito
+            csp_unit1_2020:
+              display_name: 'Unidade 1: Informação Digital'
+        csp2-2021:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unidade 2: A Internet'
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variáveis
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funções
+            csp_project:
+              display_name: Projecto
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Ciclos
+            csp_project:
+              display_name: Projecto
+        csp7-2021:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotecas 
+        csp10-2021:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unidade 10: Ciber Segurança e Impactos Globais'
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Mapas felizes
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciação
+            csf_loops:
+              display_name: Ciclos
+            csf_events:
+              display_name: Eventos
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Criando caminhos
+              name: Criando caminhos
+            'Loops: Getting Loopy':
+              name: Repetindo
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciação
+            csf_loops:
+              display_name: Ciclos
+            csf_events:
+              display_name: Eventos
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Pulseiras binárias
+              name: Pulseiras binárias
+            'Events: The Big Event':
+              name: O Grande Evento
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciação
+            csf_binary:
+              display_name: Binário
+            csf_loops:
+              display_name: Ciclos
+            csf_events:
+              display_name: Eventos
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programação de papel milimetrico
+            Relay Programming:
+              key: Programação por revezamento
+              name: Programação por revezamento
+            Dance Party:
+              key: Festa da Dança
+              name: Festa da Dança
+            Conditionals with Cards:
+              key: Condicionais com cartas
+              name: Condicionais com cartas
+            'Unplugged: Binary':
+              key: 'Offline: binário'
+              name: Imagens binárias
+            Artist Binary:
+              key: 'Artista: binário'
+              name: 'Artista: binário'
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciação
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Ciclos
+            csf_conditionals:
+              display_name: Condicionais
+            csf_binary:
+              display_name: Binário
+            csf_digcit:
+              display_name: Cidadania digital
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Condicionais
+            Simon Says:
+              key: O Rei Manda
+              name: O Rei Manda
+            Digital Sharing:
+              key: Partilha Digital
+              name: Partilha Digital
+            'Functions: Songwriting':
+              name: Composição
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_nested_loops:
+              display_name: Laços aninhados
+            csf_functions:
+              display_name: Funções
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Variáveis do envelope
+              name: Variáveis do envelope
+            Internet:
+              key: Internet
+              name: A Internet
+            For Loop Fun:
+              key: Diversão com laços for
+              name: Diversão com laços for
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_variables:
+              display_name: Variáveis
+            csf_for_loops:
+              display_name: Ciclos "for"
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Festa da Dança
+              name: Festa da Dança
+          lesson_groups:
+            csf_warmup:
+              display_name: Aquecimento
+            csf_sequencing:
+              display_name: Sequenciação
+            csf_loops:
+              display_name: Ciclos
+            csf_conditionals:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funções
+            csf_variables:
+              display_name: Variáveis
+            csf_for_loops:
+              display_name: Ciclos "for"
+        pre-express-2021:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciação
+            csf_loops:
+              display_name: Ciclos
+            csf_events:
+              display_name: Eventos
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Variáveis do envelope
+          lesson_groups:
+            ramp_up:
+              display_name: Introdução
+            lessonGroup-3:
+              display_name: Variáveis

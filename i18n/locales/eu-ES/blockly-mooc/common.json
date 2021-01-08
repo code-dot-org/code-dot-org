@@ -243,6 +243,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Balio bat beste bat baino txikiagoa edo berdina den aztertzen du. True itzultzen du adierazpenaren ezkerreko aldea eskuineko balioa baino txikiagoa edo berdina baldin bada.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Txikiago edo berdin eragilea",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "0 eta 1 arteko ausazko zenbaki bat itzultzen du, 0a barne baina 1a kanpoan utziz (exklusiboa)",
   "dropletBlock_mathRandom_signatureOverride": "Math.random()",
