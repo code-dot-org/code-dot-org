@@ -73,8 +73,8 @@ class ActivitySection < ApplicationRecord
         # position and chapter will be updated based on activity_section_position later
         activity_section_position: sl_data['activitySectionPosition'] || 0,
         # Script levels containing anonymous levels must be assessments.
-        assessment: !!sl_data['assessment'] || sl.anonymous?,
-        bonus: !!sl_data['bonus'],
+        assessment: sl_data['assessment'] || sl.anonymous?,
+        bonus: sl_data['bonus'],
         challenge: !!sl_data['challenge'],
         progression: name.present? && name
       )
