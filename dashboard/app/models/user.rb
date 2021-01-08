@@ -2293,6 +2293,7 @@ class User < ApplicationRecord
 
   # Let's make sure we only hit this code when the user is already registered
   def increment_section_attempts
+    reset_section_attempts_if_needed
     properties.merge!({'section_attempts' => 1}) {|_, old_val, increment_val| old_val + increment_val}
     save
   end
