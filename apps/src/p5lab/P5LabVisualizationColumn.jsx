@@ -60,6 +60,16 @@ class P5LabVisualizationColumn extends React.Component {
     consoleMessages: PropTypes.array.isRequired
   };
 
+  constructor(props) {
+    super(props);
+    this.spritelabPauseExperiment = experiments.isEnabled(
+      experiments.SPRITELAB_PAUSE
+    );
+    this.spritelabInputExperiment = experiments.isEnabled(
+      experiments.SPRITELAB_INPUT
+    );
+  }
+
   // Cache app-space mouse coordinates, which we get from the
   // VisualizationOverlay when they change.
   state = {
@@ -187,15 +197,11 @@ class P5LabVisualizationColumn extends React.Component {
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
-          {experiments.isEnabled(experiments.SPRITELAB_INPUT) && (
-            <SpritelabInput />
-          )}
+          {this.spritelabInputExperiment && <SpritelabInput />}
         </div>
 
         <GameButtons>
-          {experiments.isEnabled(experiments.SPRITELAB_PAUSE) && (
-            <PauseButton />
-          )}
+          {this.spritelabPauseExperiment && <PauseButton />}
           <ArrowButtons />
 
           <CompletionButton />
