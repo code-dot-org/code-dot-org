@@ -125,7 +125,6 @@ class ScriptOverviewHeader extends Component {
       scriptName,
       scriptTitle,
       scriptDescription,
-      scriptStudentDescription,
       betaTitle,
       viewAs,
       isSignedIn,
@@ -230,20 +229,11 @@ class ScriptOverviewHeader extends Component {
                 />
               )}
             </div>
-            {viewAs === ViewType.Teacher && (
-              <SafeMarkdown
-                style={styles.description}
-                openExternalLinksInNewTab={true}
-                markdown={scriptDescription}
-              />
-            )}
-            {viewAs === ViewType.Student && (
-              <SafeMarkdown
-                style={styles.description}
-                openExternalLinksInNewTab={true}
-                markdown={scriptStudentDescription}
-              />
-            )}
+            <SafeMarkdown
+              style={styles.description}
+              openExternalLinksInNewTab={true}
+              markdown={scriptDescription}
+            />
           </div>
           <ProtectedStatefulDiv ref={element => (this.protected = element)} />
         </div>
