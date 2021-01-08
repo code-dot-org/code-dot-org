@@ -82,9 +82,8 @@ progress.showDisabledBubblesAlert = function() {
  *   stageExtras enabled for this script
  * @param {boolean} isLessonExtras Boolean indicating we are not on a script
  *   level and therefore are on lesson extras
- * @param {string} currentPageNumber The page we are on if this is a multi-
- *   page level. This is intentionally a string despite being a numerical
- *   value since it gets used in the url
+ * @param {number} currentPageNumber The page we are on if this is a multi-
+ *   page level.
  */
 progress.generateStageProgress = function(
   scriptData,
@@ -276,9 +275,8 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {boolean} [saveAnswersBeforeNavigation]
  * @param {boolean} [isLessonExtras] Optional boolean indicating we are not on
  *   a script level and therefore are on lesson extras
- * @param {string} [currentPageNumber] Optional. The page we are on if this is
- *   a multi-page level. This is intentionally a string despite being a
- *   numerical value since it gets used in the url
+ * @param {number} [currentPageNumber] Optional. The page we are on if this is
+ *   a multi-page level.
  */
 function initializeStoreWithProgress(
   store,

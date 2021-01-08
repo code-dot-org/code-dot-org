@@ -22,6 +22,7 @@ import {Provider} from 'react-redux';
 import progress from './progress';
 import {getStore} from '../redux';
 
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
 /**
@@ -30,11 +31,6 @@ import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
 // Namespace for manipulating the header DOM.
 var header = {};
-
-/**
- * See ApplicationHelper::PUZZLE_PAGE_NONE.
- */
-const PUZZLE_PAGE_NONE = '-1';
 
 /**
  * @param {object} scriptData
@@ -59,9 +55,8 @@ const PUZZLE_PAGE_NONE = '-1';
  * @param {string} currentLevelId The id of the level the user is currently
  *   on. This gets used in the url and as a key in many objects. Therefore,
  *   it is a string despite always being a numerical value
- * @param {string} currentPageNumber The page we are on if this is a multi-
- *   page level. This gets used in the URL and therefore is intentionally a
- *   string despite always being a numerical value
+ * @param {number} currentPageNumber The page we are on if this is a multi-
+ *   page level.
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with

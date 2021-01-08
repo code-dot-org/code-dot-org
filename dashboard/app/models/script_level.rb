@@ -495,7 +495,7 @@ class ScriptLevel < ApplicationRecord
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
       new_level[:uid] = "#{level_id}_#{page_index}"
-      new_level[:page_number] = (page_index + 1).to_s
+      new_level[:page_number] = page_index + 1
       new_level[:url] << "/page/#{page_index + 1}"
       new_level[:position] = last_level_summary[:position] + page_index
       new_level[:title] = last_level_summary[:position] + page_index

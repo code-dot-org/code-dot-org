@@ -2,6 +2,7 @@ import {fullyLockedStageMapping} from '@cdo/apps/code-studio/stageLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {PUZZLE_PAGE_NONE} from './progressTypes';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -169,11 +170,9 @@ export function summarizeProgressInStage(levelsWithStatus) {
  * contains more data than we need. This filters to the parts our views care about.
  */
 export const processedLevel = level => {
-  // id and pageNumber should be strings since they get used in object keys
-  // and urls.
-  const id = level.activeId || level.id;
   return {
-    id: id.toString(),
+    // ids should be a strings since they are used for object keys
+    id: (level.activeId || level.id).toString(),
     url: level.url,
     name: level.name,
     progression: level.progression,
@@ -184,7 +183,10 @@ export const processedLevel = level => {
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus,
-    pageNumber: level.page_number && level.page_number.toString(),
+    pageNumber:
+      typeof level.page_number !== 'undefined'
+        ? level.page_number
+        : PUZZLE_PAGE_NONE,
     sublevels:
       level.sublevels && level.sublevels.map(level => processedLevel(level))
   };

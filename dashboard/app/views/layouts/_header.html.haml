@@ -142,7 +142,7 @@
       #{stage_data.to_json},
       #{user_progress},
       "#{script_level&.level_id || -1}",
-      "#{puzzle_page}",
+      #{puzzle_page},
       #{signed_in},
       #{lesson_extras_enabled || 'null'},
       #{script_name_data.to_json},
