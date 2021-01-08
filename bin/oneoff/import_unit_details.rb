@@ -53,6 +53,10 @@ def parse_options
         options.unit_names = unit_names
       end
 
+      opts.on('-m', '--models Resource,Vocabulary', Array, 'Models to import: LessonGroup, Lesson, Activity, Resource, or Objective') do |models|
+        options.models = models
+      end
+
       opts.on('-n', '--dry-run', 'Perform basic validation without importing any data.') do
         options.dry_run = true
       end
@@ -101,14 +105,14 @@ def main(options)
     next if options.dry_run
 
     lesson_pairs.each do |lesson, cb_lesson|
-      LessonImportHelper.update_lesson(lesson, cb_lesson)
+      LessonImportHelper.update_lesson(lesson, options.models, cb_lesson)
       log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson.to_json[0, 50]}...")
     end
 
     paired_lesson_ids = lesson_pairs.map {|lesson, _| lesson.id}
     lockable_lessons_to_update = script.lessons.select(&:lockable?).reject {|l| paired_lesson_ids.include?(l.id)}
     lockable_lessons_to_update.each do |lockable|
-      LessonImportHelper.update_lesson(lockable)
+      LessonImportHelper.update_lesson(lockable, options.models)
     end
 
     updated_lesson_group_count = lesson_group_pairs.count do |lesson_group, cb_chapter|
@@ -118,7 +122,7 @@ def main(options)
       # Use a heuristic to make sure we do not import CSF chapter descriptions
       # which are equal to the chapter title.
       cb_chapter['description'] = nil if cb_chapter['description'] == cb_chapter['title']
-      lesson_group.update_from_curriculum_builder(cb_chapter)
+      lesson_group.update_from_curriculum_builder(cb_chapter) if options.models.include?('LessonGroup')
     end
 
     script.fix_script_level_positions
