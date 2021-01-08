@@ -1,4 +1,4 @@
-const KNN = require('ml-knn');
+import KNN from 'ml-knn';
 
 const KNNTrainers = ['knnClassify', 'knnRegress'];
 
@@ -42,7 +42,7 @@ export function predict(modelData) {
       feature => modelData.testData[feature]
     );
     // Make a prediction.
-    const rawPrediction = model.predict(testValues)[0];
+    const rawPrediction = model.predict(testValues);
     // Convert prediction to human readable (if needed)
     const prediction = Object.keys(modelData.featureNumberKey).includes(
       modelData.labelColumn

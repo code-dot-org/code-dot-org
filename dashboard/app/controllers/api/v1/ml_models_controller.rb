@@ -18,7 +18,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     )
     upload_to_s3(model_id, params["ml_model"].to_json)
 
-    render json: "hooray!"
+    render json: {id: model_id}
   end
 
   # GET api/v1/ml_models/names
