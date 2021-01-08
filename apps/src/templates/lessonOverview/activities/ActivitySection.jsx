@@ -25,9 +25,12 @@ const styles = {
     display: 'flex',
     flexDirection: 'column'
   },
-  remarksHeader: {
+  remarks: {
     marginLeft: 5,
     fontStyle: 'italic'
+  },
+  remarksHeader: {
+    marginTop: 0
   },
   textAndProgression: {
     display: 'flex',
@@ -88,9 +91,9 @@ export default class ActivitySection extends Component {
           >
             {section.remarks && (
               <div>
-                <h4>
+                <h4 style={styles.remarksHeader}>
                   <FontAwesome icon="microphone" />
-                  <span style={styles.remarksHeader}>{i18n.remarks()}</span>
+                  <span style={styles.remarks}>{i18n.remarks()}</span>
                 </h4>
               </div>
             )}
