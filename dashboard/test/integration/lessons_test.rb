@@ -163,6 +163,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
 
     @script_level.reload
     assert @script_level.assessment
+    assert_equal nil, @script_level.bonus
     refute @script_level.challenge
     assert_equal 1, @script_level.levels.count
     assert_equal [@level], @script_level.levels.all
