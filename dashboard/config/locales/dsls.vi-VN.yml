@@ -2189,5 +2189,90 @@ vi-VN:
         - {}
       outbreak_story:
         content1: mô tả ở đây
+        markdown: |-
+          # Dịch bệnh bùng phát: Tự lập trình mô phỏng
+
+          ## Chào mừng bạn đến với Thị Trấn Quái Vật!
+          Thị Trấn Quái Vật vốn là một thị trấn hạnh phúc và khỏe mạnh. Các quái vật trong Thị Trấn Quái Vật rất thích lang thang khắp nơi để ghé thăm bạn bè.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Một ngày nọ, một chú quái vật bắt đầu có cảm giác bị ốm. Chú quái vật này đã bị dính **vi rút** rồi! Vi rút là một loại vi khuẩn nhỏ xíu khiến bạn bị ốm. Các quái vật khác thì vẫn vô tư. Họ tiếp tục ghé thăm bạn bè.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Không lâu sau, thêm hai quái vật nữa bị ốm. Vẫn là loại vi rút đó! Dường như họ bị nhiễm vi rút từ bạn bè của mình.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Vi rút dần lây lan sang các quái vật khác ở xung quanh. Các quái vật khỏe mạnh bắt đầu lo lắng rằng họ cũng bị ốm. Các quái vật bị ốm bắt đầu lo lắng rằng họ sẽ lây vi rút cho những quái vật khác.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Ngăn chặn lây lan
+          May mắn thay, sau khi nghiên cứu loại vi rút này, vùng đất láng giềng của Thị Trấn Quái Vật đã phát hiện ra một thông tin quan trọng. Họ nhận ra rằng vi rút sẽ khó lây lan hơn nếu họ đeo khẩu trang che miệng. Nếu đeo khẩu trang, quái vật bị ốm sẽ khó truyền vi rút cho các quái vật khỏe mạnh.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Rồi chuyện gì sẽ xảy ra?
+
+          Hôm nay, bạn sẽ lập trình để tạo ra và tự mình chạy **mô phỏng** dịch bệnh bùng phát do vi rút tại Thị Trấn Quái Vật. Bản mô phỏng là một mô hình máy tính cho một quy trình hoặc một hệ thống. Hãy học cách lập trình và dự đoán điều gì sẽ xảy ra với các vùng đất láng giềng của Thị Trấn Quái Vật.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *Vi rút lây lan nhanh tới mức nào?*
+
+          * *Rồi rất cả mọi người sẽ bị ốm sao?*
+
+          * *Khẩu trang có tác dụng gì?*
+
+
+          Sau khi hoàn thành, hãy chia sẻ bản mô phỏng với mọi người. Hãy chia sẻ thông điệp mang những suy nghĩ của bạn về cách giữ gìn sức khỏe cho mọi người khi vi rút lan tới thị trấn.
       outbreak_story2:
         content1: mô tả ở đây
+        markdown: |
+          # Dịch bệnh bùng phát: Tư duy như nhà khoa học
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Mô phỏng là phương pháp lý tưởng để tìm hiểu những sự việc khó quan sát trong thế giới thực. Phương pháp này giúp các nhà khoa học giải quyết các vấn đề và thử nghiệm các ý tưởng mới một cách an toàn và hiệu quả. Bản mô phỏng của bạn là phương thức minh họa cách vi rút lây lan trong Thị Trấn Quái Vật.
+
+          ## Đặt lại và chạy lại!
+          Ngay cả khi bạn chính là người lập trình thì cũng không thể biết chính xác điều gì sẽ xảy ra khi nhấn nút "Chạy". Các quái vật lang thang ngẫu nhiên nên bạn không biết vi rút sẽ lây lan nhanh hay chậm. Mỗi khi bạn thay đổi mã lập trình, hãy đảm bảo chạy mô phỏng nhiều hơn một lần. Sự việc có thể không lặp lại tới lần thứ hai đâu!
+
+          ## Thu thập dữ liệu
+          Hãy thử ghi lại những gì bạn quan sát được trong quá trình chạy mô phỏng. Bạn có thể đếm số quái vật bị ốm hoặc sử dụng đồng hồ bấm giờ xem sự việc diễn ra nhanh tới mức nào. Ví dụ: Thông thường sẽ mất bao nhiêu thời gian để toàn bộ quái vật bị ốm nếu không có ai đeo khẩu trang?
+
+          ## Đưa ra dự đoán
+          Nếu bạn hiểu mô hình của mình, bạn có thể sử dụng mô hình đó để đưa ra dự đoán. Bạn thậm chí còn có thể thay đổi cách chạy mô phỏng và đoán xem sẽ có những thay đổi gì xảy ra. Ví dụ:
+          * Điều gì sẽ xảy ra nếu có số lượng quái vật gấp đôi?
+          * Điều gì sẽ xảy ra nếu tốc độ di chuyển của quái vật giảm còn một nửa?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Thị Trấn Quái Vật có giống thế giới thực không?
+          Mỗi mô hình đều có giới hạn về tính chân thực.
+          * Mô phỏng dịch bệnh bùng phát có điểm chung gì so với dịch bệnh bùng phát do vi rút trong thế giới thực?
+          * Điểm khác biệt là gì?
+          Sau khi hoàn thành hoạt động này, hãy thảo luận các câu hỏi này với thầy cô giáo và gia đình nhé!
+
+          ## Chúng ta có thể tạo mô hình nào khác?
+          Bạn đã tạo mô hình vận hành dịch bệnh bùng phát tại Thị Trấn Quái vật rồi. Những điểm nào bản mô phỏng của bạn chưa làm được hoặc cho thấy bạn mong muốn làm được điều đó? Hãy nhấn tiếp tục để tìm hiểu thêm và học thêm về cách tạo mô hình:
+          * Tăng số lượng quái vật trong bản mô phỏng
+          * Giúp quái vật hồi phục sau khi nhiễm vi rút
+          * Xác suất, miễn dịch, vắc xin và nhiều điều khác!
+
+          Bạn còn có thể chia sẻ mô hình mô phỏng của mình với người khác hoặc chia sẻ thông điệp về những gì bạn nghĩ bạn có thể làm được để giúp mọi người khỏe mạnh khi vi rút lan tới thị trấn.
+      outbreak_freeplay_choice:
+        display_name: chơi miễn phí
+        description: Bạn đã hoàn thành phần hướng dẫn! Hãy tiếp tục thay đổi hoặc
+          cải thiện dự án của mình. Bạn có thể chọn tiếp tục làm việc với các khối
+          giống như vậy hoặc thử hộp công cụ mở rộng.

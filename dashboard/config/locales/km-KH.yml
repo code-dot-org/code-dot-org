@@ -317,6 +317,7 @@ km:
       about_contact: ទំនាក់ទំនងមកពួកយើង
       about_faqs: សម្រាប់សំនួរបន្ថែមទៀត
       learn: ស្វែងយល់បន្ថែំម
+      stats: ស្ថិតិ
       help_us: ជួយពួកយើង
       teach: បង្រៀន
       about: អំពី
@@ -371,6 +372,7 @@ km:
       student: សិស្ស
       viewing_solution: មើលចម្លើយ
       try_it_yourself: សាកល្បងដោយខ្លួនឯង
+      section: " ថ្មី\n"
       example: ចម្លើយគំរូ
       example_with_number: ចម្លើយគំរូទី%{solution_number}
       submitted_on: ដាក់ចូលនៅៈ

@@ -78,6 +78,20 @@ export default class JoinSection extends React.Component {
 
   state = {...INITIAL_STATE};
 
+  fetchCaptchaInfo = () => {
+    $.get({
+      url: '/api/v1/sections/require_captcha',
+      dataType: 'json'
+    }).done(data => {
+      const {key} = data;
+      this.setState({key});
+    });
+  };
+
+  componentDidMount() {
+    this.fetchCaptchaInfo();
+  }
+
   handleChange = event => this.setState({sectionCode: event.target.value});
 
   handleKeyUp = event => {
@@ -152,6 +166,7 @@ export default class JoinSection extends React.Component {
             __useDeprecatedTag
             onClick={this.joinSection}
             color={Button.ButtonColor.gray}
+            disabled={this.state.sectionCode.length === 0}
             text={i18n.joinSection()}
             style={styles.button}
           />

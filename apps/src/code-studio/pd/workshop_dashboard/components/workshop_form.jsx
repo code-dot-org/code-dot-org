@@ -1,5 +1,3 @@
-/* global google */
-
 /**
  * Form for creating / editing workshop details.
  */
@@ -8,7 +6,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import Select from 'react-select';
-import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import moment from 'moment';
 import Spinner from '../../components/spinner';
@@ -45,6 +42,7 @@ import {
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import CourseSelect from './CourseSelect';
 import SubjectSelect from './SubjectSelect';
+import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
 
 const styles = {
   readOnlyInput: {
@@ -114,7 +112,6 @@ export class WorkshopForm extends React.Component {
     let initialState = {
       errors: [],
       shouldValidate: false,
-      useAutocomplete: true,
       facilitators: [],
       location_name: '',
       location_address: '',
@@ -168,19 +165,7 @@ export class WorkshopForm extends React.Component {
     return initialState;
   }
 
-  componentDidMount() {
-    this.enableAutocompleteLocation();
-  }
-
   componentWillUnmount() {
-    if (this.isGoogleMapsLoaded()) {
-      if (this.gm_authFailure) {
-        window.gm_authFailure = this.old_gm_authFailure;
-      }
-      if (this.autocomplete) {
-        google.maps.event.clearInstanceListeners(this.autocomplete);
-      }
-    }
     if (this.saveRequest) {
       this.saveRequest.abort();
     }
@@ -197,10 +182,6 @@ export class WorkshopForm extends React.Component {
     if (nextProps.readOnly && !this.props.readOnly) {
       this.setState(this.computeInitialState(this.props));
     }
-  }
-
-  componentDidUpdate() {
-    this.enableAutocompleteLocation();
   }
 
   loadAvailableFacilitators(course) {
@@ -223,44 +204,6 @@ export class WorkshopForm extends React.Component {
         regionalPartners: data
       });
     });
-  }
-
-  isGoogleMapsLoaded() {
-    return typeof google === 'object' && typeof google.maps === 'object';
-  }
-
-  enableAutocompleteLocation() {
-    if (!this.state.useAutocomplete) {
-      return;
-    }
-
-    // The way to catch google auth errors is in a global function :(
-    // See https://developers.google.com/maps/documentation/javascript/events#auth-errors
-    // If google auth fails, remove the autocomplete and re-draw.
-    if (!this.gm_authFailure) {
-      // Save existing function, if one exists.
-      this.old_gm_authFailure = window.gm_authFailure;
-      window.gm_authFailure = this.gm_authFailure = () => {
-        if (this.old_gm_authFailure) {
-          this.old_gm_authFailure();
-        }
-        this.setState({useAutocomplete: false});
-      };
-    }
-
-    if (
-      !this.autocomplete &&
-      this.locationAddressControl &&
-      this.isGoogleMapsLoaded()
-    ) {
-      this.autocomplete = new google.maps.places.Autocomplete(
-        this.locationAddressControl
-      );
-      google.maps.event.addListener(this.autocomplete, 'place_changed', () => {
-        const place = this.autocomplete.getPlace();
-        this.setState({location_address: place.formatted_address});
-      });
-    }
   }
 
   // Convert from [start, end] to [date, startTime, endTime]
@@ -714,6 +657,12 @@ export class WorkshopForm extends React.Component {
     return value;
   };
 
+  handleLocationChange = event => {
+    const location = event && event.target && event.target.value;
+    this.setState({location_address: location});
+    return location;
+  };
+
   handleVirtualChange = event => {
     // This field gets its own handler both so we can coerce its value to
     // boolean, and so we can enforce some business logic that says:
@@ -1009,20 +958,13 @@ export class WorkshopForm extends React.Component {
             <Col sm={6}>
               <FormGroup>
                 <ControlLabel>Location Address (optional)</ControlLabel>
-                <FormControl
-                  type="text"
-                  key={this.state.useAutocomplete} // Change key to force re-draw
-                  ref={ref =>
-                    (this.locationAddressControl = ReactDOM.findDOMNode(ref))
-                  }
-                  value={this.state.location_address || ''}
+                <MapboxLocationSearchField
                   placeholder="Enter a location"
-                  id="location_address"
-                  name="location_address"
-                  onChange={this.handleFieldChange}
-                  maxLength={255}
+                  onChange={this.handleLocationChange}
+                  value={this.state.location_address || ''}
+                  readOnly={this.props.readOnly}
                   style={this.getInputStyle()}
-                  disabled={this.props.readOnly}
+                  className={'form-control'}
                 />
               </FormGroup>
             </Col>

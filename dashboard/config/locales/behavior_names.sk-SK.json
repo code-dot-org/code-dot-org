@@ -1080,13 +1080,16 @@
           "spinning and growing": "točenie a zväčšovanie"
         },
         "outbreak1": {
-          "wandering": "túlať sa"
+          "wandering": "túlať sa",
+          "recovering": "zotavenie"
         },
         "outbreak2": {
-          "wandering": "túlať sa"
+          "wandering": "túlať sa",
+          "recovering": "zotavenie"
         },
         "outbreak3": {
-          "wandering": "túlať sa"
+          "wandering": "túlať sa",
+          "recovering": "zotavenie"
         },
         "outbreak4": {
           "wandering": "túlať sa",
@@ -1100,13 +1103,17 @@
           "moving north": "posúvať sa na sever",
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
-          "patrolling": "hliadkovať"
+          "patrolling": "hliadkovať",
+          "recovering": "zotavenie",
+          "moving with arrow keys": "posúvanie klávesami so šípkami"
         },
         "outbreak5": {
-          "wandering": "túlať sa"
+          "wandering": "túlať sa",
+          "recovering": "zotavenie"
         },
         "outbreak6": {
-          "wandering": "túlať sa"
+          "wandering": "túlať sa",
+          "recovering": "zotavenie"
         },
         "outbreak7": {
           "wandering": "túlať sa",
@@ -1119,7 +1126,10 @@
           "moving north": "posúvať sa na sever",
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
-          "patrolling": "hliadkovať"
+          "patrolling": "hliadkovať",
+          "recovering": "zotavenie",
+          "moving left and right": "pohybovať sa vľavo a vpravo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami"
         },
         "outbreak8": {
           "wandering": "túlať sa",
@@ -1132,7 +1142,10 @@
           "moving north": "posúvať sa na sever",
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
-          "patrolling": "hliadkovať"
+          "patrolling": "hliadkovať",
+          "recovering": "zotavenie",
+          "moving left and right": "pohybovať sa vľavo a vpravo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami"
         },
         "outbreak_freeplay": {
           "wandering": "túlať sa",

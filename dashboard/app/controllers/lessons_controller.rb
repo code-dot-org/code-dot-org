@@ -24,7 +24,9 @@ class LessonsController < ApplicationController
   # GET /lessons/1/edit
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit
-    @related_lessons = @lesson.summarize_related_lessons
+    # Return an empty list, because computing the list of related lessons here
+    # sometimes hits a bug and causes the lesson edit page to fail to load.
+    @related_lessons = []
     @search_options = Level.search_options
     view_options(full_width: true)
   end

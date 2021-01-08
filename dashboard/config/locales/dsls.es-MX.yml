@@ -7362,16 +7362,58 @@ es-MX:
         content1: Prueba de reducción de la página del libro de texto
       courseF_markdown_forloops_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          **Acabas de aprender bucles ´desde´**
+          **Los bucles ´desde´son bucles en los que fijas el comienzo, el final y los valores para cada paso**
+          Este nuevo tipo de bucles ´repetir´te proporciona más control sobre los comienzos y finales de los bucles y cuánto debe incrementar el valor tu bucle cada vez que se ejecute.
+          ¡Más control significa que puedes resolver los puzles mucho más rápido!
+
+          **Vocabulario que hay que saber**
+          *Bucle desde* los bucles desde son bucles que tienen un comienzo, final e incremento (intervalo entre los pasos) predeterminados.
       courseF_markdown_forloops_end_2019:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          **Acabas de aprender bucles ´desde´**
+          **Los bucles ´desde´son bucles en los que fijas el comienzo, el final y los valores para cada paso**
+          Este nuevo tipo de bucles ´repetir´te proporciona más control sobre los comienzos y finales de los bucles y cuánto debe incrementar el valor tu bucle cada vez que se ejecute.
+          ¡Más control significa que puedes resolver los puzles mucho más rápido!
+
+          **Vocabulario que hay que saber**
+          *Bucle desde* los bucles desde son bucles que tienen un comienzo, final e incremento (intervalo entre los pasos) predeterminados.
       courseF_markdown_forloops_end_2019_2020:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          **Acabas de aprender bucles ´desde´**
+          **Los bucles ´desde´son bucles en los que fijas el comienzo, el final y los valores para cada paso**
+          Este nuevo tipo de bucles ´repetir´te proporciona más control sobre los comienzos y finales de los bucles y cuánto debe incrementar el valor tu bucle cada vez que se ejecute.
+          ¡Más control significa que puedes resolver los puzles mucho más rápido!
+
+          **Vocabulario que hay que saber**
+          *Bucle desde* los bucles desde son bucles que tienen un comienzo, final e incremento (intervalo entre los pasos) predeterminados.
       courseF_markdown_forloops_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          **En esta lección...**
+
+          ##Hoy aprenderás un nuevo tipo de bucle ´repetir´. Aquí puedes ver el bloque que usarás:
+
+          *¡Este nuevo bucle hará que resolver puzles como estos sera muy fácil!
       courseF_markdown_forloops_intro_2019:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          **En esta lección...**
+
+          ##Hoy aprenderás un nuevo tipo de bucle ´repetir´. Aquí puedes ver el bloque que usarás:
+
+          *¡Este nuevo bucle hará que resolver puzles como estos sera muy fácil!
       courseF_markdown_forloops_intro_2019_2020:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          **En esta lección...**
+
+          ##Hoy aprenderás un nuevo tipo de bucle ´repetir´. Aquí puedes ver el bloque que usarás:
+
+          *¡Este nuevo bucle hará que resolver puzles como estos sera muy fácil!
       courseF_markdown_loops_end:
         content1: Prueba de reducción de la página del libro de texto
       courseF_markdown_loops_intro:
@@ -7382,16 +7424,34 @@ es-MX:
         content1: Prueba de reducción de la página del libro de texto
       courseF_markdown_variables_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          **Acabas de aprender a utilizar "variables"**
+          Para usar una variable, necesitas un nombre y un valor. El nombre no cambia, pero el valor sí que puede hacerlo. De esta manera, ¡puedes usar el nombre la variable como un contenedor en el lugar que quieras dentro de tu programa!
       courseF_markdown_variables_end_2019:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          **Acabas de aprender a utilizar "variables"**
+          Para usar una variable, necesitas un nombre y un valor. El nombre no cambia, pero el valor sí que puede hacerlo. De esta manera, ¡puedes usar el nombre la variable como un contenedor en el lugar que quieras dentro de tu programa!
       courseF_markdown_variables_end_2019_2020:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          **Acabas de aprender a utilizar "variables"**
+          Para usar una variable, necesitas un nombre y un valor. El nombre no cambia, pero el valor sí que puede hacerlo. De esta manera, ¡puedes usar el nombre la variable como un contenedor en el lugar que quieras dentro de tu programa!
       courseF_markdown_variables_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "**En esta lección...**\n\n### Las *variables* son contenedores
+          de información que pueden cambiar. Tener este contenedor te permite escribir
+          un programa ¡incluso cuando no conoces todos los valores hasta más adelante! "
       courseF_markdown_variables_intro_2019:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "**En esta lección...**\n\n### Las *variables* son contenedores
+          de información que pueden cambiar. Tener este contenedor te permite escribir
+          un programa ¡incluso cuando no conoces todos los valores hasta más adelante! "
       courseF_markdown_variables_intro_2019_2020:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "**En esta lección...**\n\n### Las *variables* son contenedores
+          de información que pueden cambiar. Tener este contenedor te permite escribir
+          un programa ¡incluso cuando no conoces todos los valores hasta más adelante! "
       courseF_multi_artist_for10_predict1:
         answers:
         - text: El artista dibujará una línea recta que aumenta su grosor de un lado
@@ -7428,6 +7488,8 @@ es-MX:
             dibuja una línea más larga y más gruesa.
         questions:
         - text: ¿Qué sucederá si haces clic en "Ejecutar"?
+        markdown: Hemos usado el contador de nuestro bucle ´desde´´ para cambiar el
+          ancho de nuestro pincel en este dibujo.
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
         - text: El artista dibujará una línea recta que aumenta su grosor de un lado
@@ -7446,6 +7508,8 @@ es-MX:
             dibuja una línea más larga y más gruesa.
         questions:
         - text: ¿Qué sucederá si haces clic en "Ejecutar"?
+        markdown: Hemos usado el contador de nuestro bucle ´desde´´ para cambiar el
+          ancho de nuestro pincel en este dibujo.
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - text: El artista dibujará una línea recta que aumenta su grosor de un lado
@@ -7464,6 +7528,8 @@ es-MX:
             dibuja una línea más larga y más gruesa.
         questions:
         - text: ¿Qué sucederá si haces clic en "Ejecutar"?
+        markdown: Hemos usado el contador de nuestro bucle ´desde´´ para cambiar el
+          ancho de nuestro pincel en este dibujo.
       courseF_multi_artist_fwp2_predict1:
         answers:
         - text: El artista usará la misma función para dibujar dos cajas de diferente
@@ -7635,6 +7701,7 @@ es-MX:
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
@@ -7652,6 +7719,7 @@ es-MX:
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
@@ -7669,6 +7737,7 @@ es-MX:
             de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: La abeja no recogerá néctar o miel.
@@ -8042,3 +8111,23 @@ es-MX:
           * ¡Probabilidad, inmunidad, vacunas y más!
 
           También puedes compartir tu modelo de simulación con otras personas o compartir un mensaje sobre lo que crees que podemos hacer para ayudar a mantener a otros sanos cuando llega un virus.
+      courseF_external_variableConstant_2018:
+        markdown: |-
+          Más sobre Variables.
+
+          Acabas de aprender una manera genial de usar una variable... ¡como una constante! Cuando usas una variable como una constante, estás fijando su valor una vez y luego usando ese "igual" valor multitud de veces en tu programa sin cambiarlo tras hacer click en "Ejecutar".
+          En la siguiente parte de la serie, escribirás código con variables que "sí" cambian dentro del programa.
+      courseF_external_variableConstant_2018_2019:
+        markdown: |-
+          Más sobre Variables.
+
+          Acabas de aprender una manera genial de usar una variable... ¡como una constante! Cuando usas una variable como una constante, estás fijando su valor una vez y luego usando ese "igual" valor multitud de veces en tu programa sin cambiarlo tras hacer click en "Ejecutar".
+          En la siguiente parte de la serie, escribirás código con variables que "sí" cambian dentro del programa.
+      courseF_external_variableConstant_2018_2019_2020:
+        markdown: |-
+          Más sobre Variables.
+
+          Acabas de aprender una manera genial de usar una variable... ¡como una constante! Cuando usas una variable como una constante, estás fijando su valor una vez y luego usando ese "igual" valor multitud de veces en tu programa sin cambiarlo tras hacer click en "Ejecutar".
+          En la siguiente parte de la serie, escribirás código con variables que "sí" cambian dentro del programa.
+      outbreak_freeplay_choice:
+        display_name: Juego libre

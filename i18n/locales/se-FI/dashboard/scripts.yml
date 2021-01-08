@@ -6467,3 +6467,273 @@ se:
               name: AI Mearaide
             visualizing:
               name: Visuálisere Dataid
+        csd1-2021:
+          lessons:
+            CS Discoveries Pre-survey:
+              key: CS Fuomášumiid Ovda-iskkadeapmi
+              name: CS Fuomášumiid Ovda-iskkadeapmi
+            Intro to Problem Solving:
+              key: Láidehus ČuolbmaČoavdimii
+              name: Láidehus ČuolbmaČoavdimii
+            Exploring Problem Solving:
+              key: Vásihit ČuolbmaČoavdima
+              name: Vásihit ČuolbmaČoavdima
+            Input and Output:
+              key: Input ja Output
+              name: Input ja Output
+            Processing:
+              key: Gieđahallan
+              name: Gieđahallan
+            Storage:
+              key: Vuorká
+              name: Vuorká
+            Project - Propose an App:
+              key: Prošeakta - Evttohit App:a
+              name: Prošeakta - Evttohit App:a
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+            csd1_1:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            csd1_2:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+        csd2-2021:
+          lessons:
+            Intro to HTML:
+              key: Láidehus HTML:ii
+              name: Láidehus HTML:ii
+            Headings:
+              key: Bajilčállagat
+              name: Bajilčállagat
+            Digital Footprint:
+              key: Digitála Luodda
+              name: Digitála Luodda
+            Styling Text with CSS:
+              key: Stylet Teavstta CSS:ain
+              name: Stylet Teavstta CSS:ain
+            'Websites for Expression ':
+              key: 'Neahttasiiddut Dadjamiidda'
+              name: 'Neahttasiiddut Dadjamiidda'
+            Styling Elements with CSS:
+              key: Stylet Elemeanttaid CSS:ain
+              name: Stylet Elemeanttaid CSS:ain
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd3-2021:
+          lessons:
+            Programming for Entertainment:
+              key: Programmere Guoimmuheami
+              name: Programmere Guoimmuheami
+            Plotting Shapes:
+              key: Plottet Hámiid
+              name: Plottet Hámiid
+            Drawing in Game Lab:
+              key: Tevdnet SpeallanLáb:as
+              name: Tevdnet SpeallanLáb:as
+            Sprites:
+              key: Sprite:at
+              name: Sprite:at
+            Sprite Movement:
+              key: Sprite Lihkadeapmi
+              name: Sprite Lihkadeapmi
+            Keyboard Input:
+              key: Boallobeavddi Input
+              name: Boallobeavddi Input
+            Project - Interactive Card:
+              key: Prošeakta  - Interaktiivva Koarta
+              name: Prošeakta  - Interaktiivva Koarta
+            Complex Sprite Movement:
+              key: Kompleaksa Sprite Lihkastagat
+              name: Kompleaksa Sprite Lihkastagat
+            Collisions:
+              key: Oktiibeaškkeheamit
+              name: Oktiibeaškkeheamit
+            The Game Design Process:
+              key: Spealu Designa Proseassa
+              name: Spealu Designa Proseassa
+            Using the Game Design Process:
+              key: Geavat Spealu Designa Proseassa
+              name: Geavat Spealu Designa Proseassa
+            Project - Design a Game:
+              key: Prošeakta  - Designe Spealu
+              name: Prošeakta  - Designe Spealu
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd4-2021:
+          lessons:
+            Analysis of Design:
+              key: Analyseret Designa
+              name: Analyseret Designa
+            Understanding Your User:
+              key: Ipmirdit Du Geavaheaddji
+              name: Ipmirdit Du Geavaheaddji
+            User-Centered Design Micro Activity:
+              key: GeavaheaddjeStivrejuvvon Designa Mikrodoaibma
+              name: GeavaheaddjeStivrejuvvon Designa Mikrodoaibma
+            Designing Apps for Good:
+              key: Designet App:aid Buorrin
+              name: Designet App:aid Buorrin
+            Market Research:
+              key: MárkanIskkadeapmi
+              name: MárkanIskkadeapmi
+            Paper Prototypes:
+              key: BáberPrototyhpat
+              name: BáberPrototyhpat
+            Prototype Testing:
+              key: Prototyhpa Teasten
+              name: Prototyhpa Teasten
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd6-2021:
+          lessons:
+            'Project: Make a Game':
+              key: 'Prošeakta: Ráhkat Spealu'
+              name: 'Prošeakta: Ráhkat Spealu'
+            Making Music:
+              key: Ráhkat Musihka
+              name: Ráhkat Musihka
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp1-2021:
+          lessons:
+            CS Principles Pre-survey:
+              key: CS Prinsihpat Ovdal Iskkadeapmi
+              name: CS Prinsihpat Ovdal Iskkadeapmi
+            Binary Numbers:
+              key: Binára Nummarat
+              name: Binára Nummarat
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp2-2021:
+          lessons:
+            The Need for Addressing:
+              key: Dárbu Váldit oktavuođa
+              name: Dárbu Váldit oktavuođa
+            Routers and Redundancy:
+              key: Routarat ja Dárbbašmeahttumat
+              name: Routarat ja Dárbbašmeahttumat
+        csp8-2021:
+          lessons:
+            Create PT - Complete the Task:
+              key: Ráhkat PT - Válbme Barggu
+              name: Ráhkat PT - Válbme Barggu
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Movttegis Kárttat
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        courseb-2021:
+          lessons:
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
+            The Right App:
+              key: Dat Rievttes App:a
+              name: Dat Rievttes App:a
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binára Giehtabáttit
+              name: Binára Giehtabáttit
+            'Loops: My Loopy Robotic Friends':
+              key: 'Mohkit: Mu Mohkke Robota Olbmát'
+            Looking Ahead:
+              key: Geahča Ovddasguvlui
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+            Picturing Data:
+              key: Presenteret Dátaid
+              name: Presenteret Dátaid
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursed-2021:
+          lessons:
+            Build a Star Wars Game:
+              key: Ráhkat Náste Soahti Spealu
+              name: Ráhkat Náste Soahti Spealu
+            'Unplugged: Binary':
+              key: 'Neahtahaga - Binára'
+              name: Binára Govat
+            Artist Binary:
+              key: Dáiddár Binára
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+        coursee-2021:
+          lessons:
+            Simon Says:
+              key: Simmon Sihtá
+              name: Simmon Sihtá
+            Private and Personal Information:
+              key: Priváhta ja Persovnnlaš Dieđut
+              name: Priváhta ja Persovnnlaš Dieđut
+            Digital Sharing:
+              key: Digitála Juohkin
+              name: Digitála Juohkin
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Konvoluhtta Variábelat
+              name: Konvoluhtta Variábelat
+            AI for Oceans:
+              key: AI Mearaide
+              name: AI Mearaide
+            Internet:
+              key: Interneahtta
+            For Loop Fun:
+              key: Suohttasat Mohkiid váste
+              name: Suohttasat Mohkiid váste
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_sprites:
+              display_name: Sprite:at
+        express-2021:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Konvoluhtta Variábelat

@@ -62,5 +62,9 @@ export const commands = {
   showTitleScreen(title, subtitle) {
     coreLibrary.title = title || '';
     coreLibrary.subtitle = subtitle || '';
+  },
+
+  textJoin(text1, text2) {
+    return [text1, text2].join('');
   }
 };

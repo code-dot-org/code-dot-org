@@ -7665,8 +7665,73 @@ zh-CN:
         title: 计算机科学发现学生课前问卷
       outbreak_story:
         content1: 描述
+        markdown: "# 大爆发：创建你自己的模拟\n\n## 欢迎到魔鬼镇！\n魔鬼镇通常是一个开心和健康的地方。魔鬼们喜欢探索和访问朋友。 \n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n一天，一个魔鬼开始感觉不适。魔鬼接触了一个**病毒**！一个病毒是一个可以使你生病的东西。但是魔鬼们不是很担心。他们继续访问朋友。\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n不久后，另外两个魔鬼病了。这是同一个病毒！他们好像从他们的朋友感染上了病毒。\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n这个病毒逐渐的传播到了其他魔鬼身上。健康的魔鬼们开始担心他们全都会生病。病的魔鬼们担心他们会传播病毒到他人身上。\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## 阻止传播\n幸运的是，在研究完病毒之后，魔鬼镇的邻居们发现戴上口罩会缓解病毒的传播。带上口罩后，病的魔鬼们会降低传播病毒的几率。\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          接下来会发生什么？\n\n今天，你们将会创造你自己的关于魔鬼镇病毒爆发的**模拟**。一个模拟是一个关于某物的计算机模型。学习编程并预算接下来会在魔鬼镇发生什么。\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *病毒会传播多快？*\n\n* *人人都会生病吗？*\n\n当你完成时，向其他人分享你的模拟。分享你认为我们可以做什么以在有病毒时保护其他人的健康。 "
       outbreak_story2:
         content1: 描述
+        markdown: "# 疫情爆发：像科学家一样思考\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n模拟是学习现实世界中难以观察的事物的好方法。它们帮助科学家解决问题，安全有效地测试新想法。你的模拟是一种展示怪物镇病毒爆发景象的方法。\n\n##
+          重置和重复！\n即使你自己编写代码，也不可能确切地知道当你按下运行时将发生什么。怪物随机漫步，所以你不知道病毒传播的速度是快还是慢。无论何时更改代码，请确保多次运行模拟。事物不会以同样的方式发生两次！\n\n##
+          收集数据\n试着在运行模拟时写下观察结果。你可以计算生病的怪物数量，或使用计时器查看事物发生的速度。例如，如果没有人戴口罩，那么所有怪物都生病通常需要多久？
+          \n\n## 进行预测\n如果你理解了你的模型，你就可以用它来进行预测。你甚至可以更改模拟运行的方式，并猜测将会发生什么不同的情况。例如：\n*
+          如果有两倍数量的怪物会发生什么？\n* 如果怪物以一半的速度移动会发生什么？\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## 怪物镇像真实世界吗？\n任何模型所能达到的逼真程度都是有限的。 \n* 你的疫情爆发模拟与真实世界的病毒爆发有什么共同点？\n*
+          有什么区别？\n当你完成这个活动后，与老师或你的家人讨论这些问题！\n\n## 我们还能对什么建模？\n你已经创建了魔鬼镇疫情爆发的工作模型。哪些事情是你希望它能而你的模拟却无法做或显示的？继续前进，学习更多模型：\n*
+          增加模拟中的怪物数量\n* 帮助怪物从病毒中恢复\n* 概率，免疫，疫苗，等等！\n\n你还可以与其他人分享你的模拟模型，或者分享你认为在病毒来到城镇时我们可以做些什么来帮助他人保持健康的信息。 "
       OPD-K5 Participation_copy:
         markdown: |
           # 计划你的课程
@@ -7692,3 +7757,6 @@ zh-CN:
           ##找到适合你的学习方式
 
           最后，在线学习并不适合所有人。本课程没有配备教师或内置机制能让你与其他学习者进行实时交流。如果您发现自己需要更多一对一的关注，或者你在有真实合作参与的线下课堂上学习效果更好，推荐你参与我们的<a href="http://code.org/professional-development-workshops" target="blank">面对面专业发展研讨会</a>。
+      outbreak_freeplay_choice:
+        display_name: 自由发挥
+        description: 你已完成教程！不断更改或改进你的项目。你可以选择继续使用相同的块或尝试扩展工具箱。

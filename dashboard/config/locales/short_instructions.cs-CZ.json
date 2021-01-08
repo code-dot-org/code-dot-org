@@ -1401,7 +1401,15 @@
         "4-5 Bee Debugging 1": "Tyto bloky mě opravdu otravují.\n\nMůžeš je opravit?",
         "4-5 Bee Debugging 6": "Fialová květina má při každém spuštění hádanky jiný počet nektaru.\n\nOprav bloky tak, aby se vždy posbíral všechen nektar.",
         "4-5 Bee Debugging 8": "Tato funkce je sice v pořádku, ale je použita nesprávným způsobem.",
-        "course3_collector_debugging_challenge2": "Jsi odborníkem na vnořené cykly? Využij toho, co už umíš a posbírej veškerý poklad!"
+        "course3_collector_debugging_challenge2": "Jsi odborníkem na vnořené cykly? Využij toho, co už umíš a posbírej veškerý poklad!",
+        "outbreak1": "Vytvořte 10 zdravých a 1 nakaženou postavu. Změňte jejich velikost a uveďte je do pohybu.",
+        "outbreak3": "Nasaďte příšerce roušku tím, že na ni kliknete. ",
+        "outbreak4": "Změňte počet a velikost postav příšerek pro simulaci.",
+        "outbreak8": "Sdílet zprávu se simulací.",
+        "outbreak2": "Nastavte, aby se zdravé příšerky při dotyku změnily na nakažené.",
+        "outbreak5": "Nastavte, aby se všechny nakažené příšerky začaly uzdravovat, když se nakažené příšerky dotkne zdravá příšerka.",
+        "outbreak6": "Přidejte procentuální pravděpodobnost, kdy se příšerky nakazí, kdykoli se zdravá příšerka dotkne nakažené příšerky. Proveďte to pro všechny kombinace setkání příšerek s rouškou a bez roušky.",
+        "outbreak7": "Vytvořte nový kostým pro příšerky, které jsou na virus imunní, a použijte ho v simulaci."
       }
     }
   }
