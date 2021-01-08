@@ -135,6 +135,20 @@ Ailab.prototype.initMLActivities = function() {
     });
   };
 
+  const exportToAppLab = dataToSave => {
+    $.ajax({
+      method: 'POST',
+      url: '/api/v1/ml_models/save',
+      type: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(dataToSave)
+    }).done(model => {
+      window.location.href =
+        'http://localhost-studio.code.org:3000/projects/applab/new?modelId=' +
+        model.id;
+    });
+  };
+
   setAssetPath('/blockly/media/skins/ailab/');
 
   const {initAll} = require('@code-dot-org/ml-playground');
@@ -144,7 +158,8 @@ Ailab.prototype.initMLActivities = function() {
     mode,
     onContinue,
     i18n: ailabMsg,
-    saveTrainedModel
+    saveTrainedModel,
+    exportToAppLab
   });
 };
 
