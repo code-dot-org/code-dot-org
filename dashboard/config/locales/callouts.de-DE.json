@@ -1616,6 +1616,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Du kannst diese Zahl ändern",
           "courseE_artist_ramp8_2": "Klicke hier, um die Anzahl der Wiederholungen deines Codes einzugeben."
+        },
+        "outbreak2": {
+          "minitoolbox": "Klicke hier, um den Block zu erweitern.",
+          "pointerlocation": "Ziehe einen Subjekt-Block hierher."
+        },
+        "outbreak7": {
+          "costumes_callout": "Klicke, um ein neues Kostüm zu erstellen."
         }
       }
     }

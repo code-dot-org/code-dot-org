@@ -3356,7 +3356,264 @@ hu:
           lesson_groups:
             lg_1:
               display_name: Tartalom
-        ml-playground:
+        csd1-2021:
+          description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a számítógépek a problémák megoldásában."
           lessons:
-            intro:
-              name: Bevezető
+            Intro to Problem Solving:
+              key: Bevezetés a problémamegoldásba
+              name: Bevezetés a problémamegoldásba
+            The Problem Solving Process:
+              key: A probléma-megoldási folyamat
+              name: A probléma-megoldási folyamat
+            What is a Computer?:
+              key: Mi az a számítógép?
+              name: Mi az a számítógép?
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csd1_1:
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
+            csd1_2:
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
+        csd2-2021:
+          lessons:
+            CSS Classes:
+              key: CSS osztályok
+              name: CSS osztályok
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd3-2021:
+          description_short: "Programozás"
+          lessons:
+            Variables:
+              key: változók
+              name: változók
+            Random Numbers:
+              key: Véletlen számok
+              name: Véletlen számok
+            Sprites:
+              key: Sprite-ok
+              name: Sprite-ok
+            Sprite Properties:
+              key: Sprite tulajdonságok
+              name: Sprite tulajdonságok
+            Text:
+              key: szöveg
+              name: szöveg
+            Conditionals:
+              key: Feltételek
+              name: Feltételek
+            Functions:
+              key: funkciók
+              name: funkciók
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd4-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Paraméteres függvények
+              name: Paraméteres függvények
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csp1-2021:
+          lessons:
+            Representing Information:
+              key: Az információ ábrázolása
+              name: Az információ ábrázolása
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp_unit1_2020:
+              display_name: '2. fejezet: Digitális információ'
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Listák
+            csp_loops:
+              display_name: hurkok
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Vidám térképek
+            Programming with Rey and BB-8:
+              key: Programozás Rey és BB-8 segítségével
+              name: Programozás Rey és BB-8 segítségével
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Mozgás, mozgás
+              name: Mozgás, mozgás
+            'Loops: Getting Loopy':
+              name: Ciklikusság
+            The Right App:
+              key: A megfelelő alkalmazás
+              name: A megfelelő alkalmazás
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Bináris karkötők
+              name: Bináris karkötők
+            Loops with Rey and BB-8:
+              key: Ciklusok Reyjel és BB-8-tel
+              name: Ciklusok Reyjel és BB-8-tel
+            'Events: The Big Event':
+              name: A nagy esemény
+            Picturing Data:
+              key: Az adatok leképezése
+              name: Az adatok leképezése
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_binary:
+              display_name: Bináris
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Grafikus programozás
+            Relay Programming:
+              key: Váltó programozás
+              name: Váltó programozás
+            Dance Party:
+              key: Táncos buli
+              name: Táncos buli
+            Conditionals with Cards:
+              key: Feltételek kártyákkal
+              name: Feltételek kártyákkal
+            'Unplugged: Binary':
+              key: 'Gép nélküli feladatok: kettes számrendszer'
+              name: Bináris képek
+            Artist Binary:
+              key: 'Művész: a kettes számrendszer'
+              name: 'Művész: a kettes számrendszer'
+          lesson_groups:
+            csf_events:
+              display_name: Események
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_binary:
+              display_name: Bináris
+            csf_digcit:
+              display_name: Digitális állampolgárság
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Feltételek
+            Simon Says:
+              key: Simon mondja
+              name: Simon mondja
+            Private and Personal Information:
+              key: Magán és személyes információk
+              name: Magán és személyes információk
+            Digital Sharing:
+              key: Digitális megosztás
+              name: Digitális megosztás
+            'Functions: Songwriting':
+              name: Dalszerzés paraméterekkel
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite-ok
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_nested_loops:
+              display_name: Egymásba ágyazott ciklusok
+            csf_functions:
+              display_name: funkciók
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Boríték változók
+              name: Boríték változók
+            Internet:
+              key: Internet
+              name: Az internet
+            For Loop Fun:
+              key: Szórakozás a For ciklussal
+              name: Szórakozás a For ciklussal
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_variables:
+              display_name: változók
+            csf_for_loops:
+              display_name: Számláló ciklusok
+            csf_sprites:
+              display_name: Sprite-ok
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Táncos buli
+              name: Táncos buli
+            Loops with Rey and BB-8:
+              key: Ciklusok Reyjel és BB-8-tel
+              name: Ciklusok Reyjel és BB-8-tel
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_functions:
+              display_name: funkciók
+            csf_variables:
+              display_name: változók
+            csf_for_loops:
+              display_name: Számláló ciklusok
+            csf_sprites:
+              display_name: Sprite-ok
+        pre-express-2021:
+          lessons:
+            Programming with Rey and BB-8:
+              key: Programozás Rey és BB-8 segítségével
+              name: Programozás Rey és BB-8 segítségével
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Boríték változók
+          lesson_groups:
+            ramp_up:
+              display_name: Bevezető
+            lessonGroup-3:
+              display_name: változók

@@ -1319,6 +1319,10 @@ ko:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 물고기가 아닙니다.
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 내 라벨
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 내 라벨이 아님
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: 선택항목 {A}{B}{C}으로 변수 {VAR}를 위한 사용자 {QUESTION} 유도
       Mikelab_changePropBy:
         options:
           PROPERTY:

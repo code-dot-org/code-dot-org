@@ -1215,6 +1215,8 @@ da:
             '"d"': d
       Mikelab_addBehaviorSimple:
         text: figur {SPRITE} begynder {BEHAVIOR}
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

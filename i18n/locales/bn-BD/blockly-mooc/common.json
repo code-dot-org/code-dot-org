@@ -124,6 +124,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "টেস্ট করে একটি মান অন্য মান থেকে কম বা সমান কিনা। সত্য ফেরৎ দেয় যদি বাম দিকের অভিব্যক্তির মান ডান দিকের মান থেকে কম বা সমান হয়।",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "কম অথবা সমান চালক",
   "dropletBlock_mathAbs_param0": "এক্স",
+  "dropletBlock_mathIncrement_param0": "এক্স",
+  "dropletBlock_mathDecrement_param0": "এক্স",
   "dropletBlock_mathPow_param0": "এক্স",
   "dropletBlock_mathRandom_description": "০ এর সমান বা বড় কিন্তু ১ থেকে ছোট সীমা মধ্যে এলোমেলো সংখ্যা ফিরান",
   "dropletBlock_mathRandom_signatureOverride": "Math.random()",

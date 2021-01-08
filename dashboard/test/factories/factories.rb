@@ -803,7 +803,15 @@ FactoryGirl.define do
   end
 
   factory :objective do
+    sequence(:key) {|n| "objective-#{n}"}
     description 'fake description'
+  end
+
+  factory :vocabulary do
+    association :course_version
+    sequence(:key) {|n| "vocab-#{n}"}
+    word 'word'
+    definition 'definition'
   end
 
   factory :callout do

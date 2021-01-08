@@ -46,7 +46,7 @@ Feature: Using the Lesson Edit Page
     And I wait until element "#add-level-type" is visible
     # If the next step fails, we should consider replacing "Artist" with any other
     # level type which does not appear in the initial view, here and below.
-    And element "td" does not contain text "Artist"
+    # And element "td" does not contain text "Artist"
     And I select the "Artist" option in dropdown "add-level-type"
     And I press keys "Standalone_Artist_1" for element ".uitest-add-level-name-input"
     And element ".fa-search" is visible

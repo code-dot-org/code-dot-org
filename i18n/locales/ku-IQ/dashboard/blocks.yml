@@ -1061,6 +1061,8 @@ ku:
         text: پۆتانی yی {SPRITE}
       Mikelab_addBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

@@ -269,7 +269,7 @@ class Lesson < ApplicationRecord
   # TODO: [PLAT-369] trim down to only include those fields needed on the
   # script edit page
   def summarize_for_script_edit
-    summary = summarize(for_edit: true).dup
+    summary = summarize(true, for_edit: true).dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = name
     summary[:lesson_group_display_name] = lesson_group&.display_name
@@ -303,7 +303,7 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
-      courseVersionId: lesson_group.script.course_version&.id,
+      courseVersionId: lesson_group.script.get_course_version&.id,
       updatedAt: updated_at
     }
   end
@@ -470,13 +470,16 @@ class Lesson < ApplicationRecord
     # this update, so just set activity_section_position as the source of truth
     # and then fix chapter and position values after.
     script.fix_script_level_positions
+    # Reload the lesson to make sure the positions information we have is all up
+    # to date
+    reload
   end
 
   def update_objectives(objectives)
     return unless objectives
 
     self.objectives = objectives.map do |objective|
-      persisted_objective = objective['id'].blank? ? Objective.new : Objective.find(objective['id'])
+      persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
@@ -571,7 +574,7 @@ class Lesson < ApplicationRecord
     related_lessons.map do |lesson|
       {
         scriptTitle: lesson.script.localized_title,
-        versionYear: lesson.script.get_course_version.version_year,
+        versionYear: lesson.script.get_course_version&.version_year,
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
         id: lesson.id,

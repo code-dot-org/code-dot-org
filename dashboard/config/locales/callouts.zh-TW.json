@@ -384,7 +384,7 @@
           "Infinity_repeat_callout": "放置移動積木到這裡面"
         },
         "InspirationalArtwork": {
-          "InspirationalArtwork_1": "嘗試使用這個標籤下的新「comment」（注釋）模塊將註釋留在程式中！"
+          "InspirationalArtwork_1": "嘗試使用這個標籤下的新「comment」（注釋）積木將註釋留在程式中！"
         },
         "InspirationalArtwork_2018": {
           "InspirationalArtwork_1": "嘗試使用該標籤下的`註釋`積木在程式中留下註釋！\n"
@@ -469,7 +469,7 @@
           "spritelab_comment": "使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。\n"
         },
         "OPD-K5-variables-1": {
-          "grade5_artist_variables_triangles1_1": "請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！"
+          "grade5_artist_variables_triangles1_1": "請注意，現在積木有輸入數字的新方法。這些「數學」積木可以拉出並移動！"
         },
         "OPD-K5-variables-5": {
           "courseF_artist_variables3_a": "使用這個來設置變數 `length`（長度）的值。"
@@ -514,10 +514,10 @@
           "craft_inside_repeat": "將積木放在這裡可以重複執行程式"
         },
         "Robot Doodle": {
-          "4-5_Artist_Patterns_Free_Play_2": "嘗試使用這個標籤下的新「comment」（注釋）模塊將註釋留在程式中！"
+          "4-5_Artist_Patterns_Free_Play_2": "嘗試使用這個標籤下的新「comment」（注釋）積木將註釋留在程式中！"
         },
         "Robot Doodle_2018": {
-          "4-5_Artist_Patterns_Free_Play_2": "嘗試使用這個標籤下的新「comment」（注釋）模塊將註釋留在程式中！"
+          "4-5_Artist_Patterns_Free_Play_2": "嘗試使用這個標籤下的新「comment」（注釋）積木將註釋留在程式中！"
         },
         "Underground Avoiding Lava": {
           "craft_callout_moveforward": "此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？"
@@ -681,13 +681,13 @@
           "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
         },
         "courseA_maze_ramp2_2019": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseA_maze_ramp2_2020": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseA_maze_ramp3a_2018": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_1": "當您需要提示時，點一下燈泡！"
@@ -753,22 +753,22 @@
           "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
         },
         "courseB_Scrat_ramp3a_2019": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseB_Scrat_ramp3a_2020": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseB_artist_loops3": {
-          "courseB_artist_loops3_1": "工具箱裡只有一個模塊可以做到。您會如何使用它？"
+          "courseB_artist_loops3_1": "工具箱裡只有一個積木可以做到。您會如何使用它？"
         },
         "courseB_artist_loops3_2018": {
-          "courseB_artist_loops3_1": "工具箱裡只有一個模塊可以做到。您會如何使用它？"
+          "courseB_artist_loops3_1": "工具箱裡只有一個積木可以做到。您會如何使用它？"
         },
         "courseB_artist_loops3_2019": {
-          "courseB_artist_loops3_1": "工具箱裡只有一個模塊可以做到。您會如何使用它？"
+          "courseB_artist_loops3_1": "工具箱裡只有一個積木可以做到。您會如何使用它？"
         },
         "courseB_artist_loops3_2020": {
-          "courseB_artist_loops3_1": "工具箱裡只有一個模塊可以做到。您會如何使用它？"
+          "courseB_artist_loops3_1": "工具箱裡只有一個積木可以做到。您會如何使用它？"
         },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "這個數字指的是工具箱中已經沒有這個積木。"
@@ -804,16 +804,16 @@
           "courseB_maze_seq3_1": "灰色的積木就像石頭一樣，無法被破壞和丟棄。"
         },
         "courseB_playlab_events6": {
-          "courseB_playlab_events6_a": "使用綠色的下拉箭頭來改變方向。"
+          "courseB_playlab_events6_a": "使用綠色的下拉選單來改變方向。"
         },
         "courseB_playlab_events6_2018": {
-          "courseB_playlab_events6_a": "使用綠色的下拉箭頭來改變方向。"
+          "courseB_playlab_events6_a": "使用綠色的下拉選單來改變方向。"
         },
         "courseB_playlab_events6_2019": {
-          "courseB_playlab_events6_a": "使用綠色的下拉箭頭來改變方向。"
+          "courseB_playlab_events6_a": "使用綠色的下拉選單來改變方向。"
         },
         "courseB_playlab_events6_2020": {
-          "courseB_playlab_events6_a": "使用綠色的下拉箭頭來改變方向。"
+          "courseB_playlab_events6_a": "使用綠色的下拉選單來改變方向。"
         },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "讓角色移動到這個旗幟以完成這個關卡。"
@@ -939,56 +939,56 @@
           "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
         },
         "courseC_maze_programming2": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseC_maze_programming2_2018": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseC_maze_programming2_2019": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseC_maze_programming2_2020": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseC_maze_programming3": {
-          "courseC_maze_programming3_2": "您可以將多餘的模塊拖到工具箱移除。",
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
           "courseC_maze_programming3_3": "You can drag extra blocks to the toolbox to throw them away."
         },
         "courseC_maze_programming3_2018": {
-          "courseC_maze_programming3_2": "您可以將多餘的模塊拖到工具箱移除。",
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
           "courseC_maze_programming3_3": "You can drag extra blocks to the toolbox to throw them away."
         },
         "courseC_maze_programming3_2019": {
-          "courseC_maze_programming3_2": "您可以將多餘的模塊拖到工具箱移除。",
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
           "courseC_maze_programming3_3": "You can drag extra blocks to the toolbox to throw them away."
         },
         "courseC_maze_programming3_2020": {
-          "courseC_maze_programming3_2": "您可以將多餘的模塊拖到工具箱移除。",
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
           "courseC_maze_programming3_3": "You can drag extra blocks to the toolbox to throw them away."
         },
         "courseC_maze_programming4": {
-          "courseC_maze_programming4_1": "這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。"
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
         "courseC_maze_programming4_2018": {
-          "courseC_maze_programming4_1": "這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。"
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
         "courseC_maze_programming4_2019": {
-          "courseC_maze_programming4_1": "這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。"
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
         "courseC_maze_programming4_2020": {
-          "courseC_maze_programming4_1": "這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。"
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
         "courseC_maze_programming5": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseC_maze_programming5_2018": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseC_maze_programming5_2019": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseC_maze_programming5_2020": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseC_maze_programming7": {
           "courseC_maze_programming7_1": "這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。",
@@ -1085,16 +1085,16 @@
           "courseD_farmer_while7_2018_PathAhead": "你需要使用`重複 判斷 前面有路`積木來解決這個關卡。\n"
         },
         "courseD_maze_intro4_2019": {
-          "courseC_maze_programming4_1": "這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。"
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
         "courseD_maze_intro4_2020": {
-          "courseC_maze_programming4_1": "這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。"
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
         "courseD_maze_intro5a_2019": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_intro5a_2020": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp1": {
           "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
@@ -1109,68 +1109,68 @@
           "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
         },
         "courseD_maze_ramp2": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseD_maze_ramp2_2018": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseD_maze_ramp2_2019": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseD_maze_ramp2_2020": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseD_maze_ramp3": {
-          "courseC_maze_programming3_2": "您可以將多餘的模塊拖到工具箱移除。",
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
           "stone_block_2": "灰色積木是用石頭做的，不能扔掉。"
         },
         "courseD_maze_ramp3_2018": {
-          "courseC_maze_programming3_2": "您可以將多餘的模塊拖到工具箱移除。",
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
           "stone_block_2": "灰色積木是用石頭做的，不能扔掉。"
         },
         "courseD_maze_ramp3_2019": {
-          "courseC_maze_programming3_2": "您可以將多餘的模塊拖到工具箱移除。",
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
           "stone_block_2": "灰色的積木是不能扔掉的。\n"
         },
         "courseD_maze_ramp3_2020": {
-          "courseC_maze_programming3_2": "您可以將多餘的模塊拖到工具箱移除。",
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
           "stone_block_2": "灰色的積木是不能扔掉的。\n"
         },
         "courseD_maze_ramp4": {
-          "courseC_maze_programming4_1": "這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。"
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
         "courseD_maze_ramp4_2018": {
-          "courseC_maze_programming4_1": "這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。"
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
         "courseD_maze_ramp4_2019": {
-          "courseC_maze_programming4_1": "這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。"
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
         "courseD_maze_ramp4_2020": {
-          "courseC_maze_programming4_1": "這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。"
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
         "courseD_maze_ramp5": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp5_2018": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp5_2019": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp5_2020": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp5a": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp5a_2018": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp5a_2019": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp5a_2020": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp6": {
           "courseD_maze_ramp6_1": "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
@@ -1185,16 +1185,16 @@
           "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
         },
         "courseD_scrat_ramp2": {
-          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到完成本關的額外模塊。"
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseD_scrat_ramp3": {
-          "courseC_maze_programming3_2": "您可以將多餘的模塊拖到工具箱移除。"
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。"
         },
         "courseD_scrat_ramp4": {
-          "courseC_maze_programming4_1": "這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。"
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
         "courseD_scrat_ramp5": {
-          "": "這些模塊上沒有數字。您可以想用多少就用多少！"
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_scrat_ramp6": {
           "courseD_maze_ramp6_1": "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
@@ -1411,16 +1411,16 @@
           "courseF_bee_for4_1": "您將在這裡找到「for」迴圈！"
         },
         "courseF_bee_for9": {
-          "courseF_bee_for9_1": "您將在此處找到「math」模塊。"
+          "courseF_bee_for9_1": "您將在此處找到「math」積木。"
         },
         "courseF_bee_for9_2018": {
-          "courseF_bee_for9_1": "您將在此處找到「math」模塊。"
+          "courseF_bee_for9_1": "您將在此處找到「math」積木。"
         },
         "courseF_bee_for9_2019": {
-          "courseF_bee_for9_1": "您將在此處找到「math」模塊。"
+          "courseF_bee_for9_1": "您將在此處找到「math」積木。"
         },
         "courseF_bee_for9_2020": {
-          "courseF_bee_for9_1": "您將在此處找到「math」模塊。"
+          "courseF_bee_for9_1": "您將在此處找到「math」積木。"
         },
         "courseF_bee_functions2": {
           "courseF_bee_functions2_1": "這個積木稱做函式（function）。點擊「編輯」按鈕看看裡面有什麼！"
@@ -1436,7 +1436,7 @@
           "courseF_bee_fwp1_1": "您可以在這裡找到「if」語句。"
         },
         "courseF_bee_fwp2": {
-          "courseF_bee_fwp2_a": "調用函式的模塊在這裏。"
+          "courseF_bee_fwp2_a": "調用函式的積木在這裏。"
         },
         "courseF_bee_fwp3": {
           "courseF_bee_fwp3_1": "檢查空白空間和雲時可以使用相同函式。"
@@ -1457,16 +1457,16 @@
           "courseF_bee_functions_1_2018_1": "可以在這裡找到你的變量！"
         },
         "courseF_playlab_variables1a": {
-          "courseF_playlab_variables1a_1": "工具箱已分類，可以更輕鬆地找到所需的模塊。"
+          "courseF_playlab_variables1a_1": "工具箱已分類，可以更輕鬆地找到所需的積木。"
         },
         "courseF_playlab_variables5c": {
-          "courseF_playlab_variables5c_1": "您將在這裡找到變數模塊。"
+          "courseF_playlab_variables5c_1": "您將在這裡找到變數積木。"
         },
         "courseF_playlab_variables6c": {
-          "courseF_playlab_variables5c_1": "您將在這裡找到變數模塊。"
+          "courseF_playlab_variables5c_1": "您將在這裡找到變數積木。"
         },
         "courseF_playlab_variables7c": {
-          "courseF_playlab_variables7c_1": "在這裡找到「ask」模塊！"
+          "courseF_playlab_variables7c_1": "在這裡找到「ask」積木！"
         },
         "coursea_maze_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "在將所有的積木連在一起後，按「執行」啟動程式。\n"
@@ -1525,16 +1525,16 @@
           "replace_questions": "使用下拉清單，把「???」換成一個數字。"
         },
         "grade5_artist_variables_triangles1": {
-          "grade5_artist_variables_triangles1_1": "請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！"
+          "grade5_artist_variables_triangles1_1": "請注意，現在積木有輸入數字的新方法。這些「數學」積木可以拉出並移動！"
         },
         "grade5_artist_variables_triangles1_2018": {
-          "grade5_artist_variables_triangles1_1": "請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！"
+          "grade5_artist_variables_triangles1_1": "請注意，現在積木有輸入數字的新方法。這些「數學」積木可以拉出並移動！"
         },
         "grade5_artist_variables_triangles1_2019": {
-          "grade5_artist_variables_triangles1_1": "請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！"
+          "grade5_artist_variables_triangles1_1": "請注意，現在積木有輸入數字的新方法。這些「數學」積木可以拉出並移動！"
         },
         "grade5_artist_variables_triangles1_2020": {
-          "grade5_artist_variables_triangles1_1": "請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！"
+          "grade5_artist_variables_triangles1_1": "請注意，現在積木有輸入數字的新方法。這些「數學」積木可以拉出並移動！"
         },
         "CSD U6 light show": {
           "CSDUDL03P09": "這條線是做什麼的？"
@@ -1561,6 +1561,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "你可以修改這個數字。",
           "courseE_artist_ramp8_2": "點擊此處輸入程式要重複的次數。"
+        },
+        "outbreak2": {
+          "minitoolbox": "點擊這裡擴展塊。",
+          "pointerlocation": "在這裡拖動一個主題塊。"
+        },
+        "outbreak7": {
+          "costumes_callout": "點擊以製作新服裝"
         }
       }
     }

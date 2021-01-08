@@ -1080,13 +1080,16 @@
           "wandering 1": "perambulando 1"
         },
         "outbreak1": {
-          "wandering": "vagando"
+          "wandering": "vagando",
+          "recovering": "recuperando-se"
         },
         "outbreak2": {
-          "wandering": "vagando"
+          "wandering": "vagando",
+          "recovering": "recuperando-se"
         },
         "outbreak3": {
-          "wandering": "vagando"
+          "wandering": "vagando",
+          "recovering": "recuperando-se"
         },
         "outbreak4": {
           "wandering": "vagando",
@@ -1100,13 +1103,17 @@
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
-          "patrolling": "patrulhando"
+          "patrolling": "patrulhando",
+          "recovering": "recuperando-se",
+          "moving with arrow keys": "utilizando as setas"
         },
         "outbreak5": {
-          "wandering": "vagando"
+          "wandering": "vagando",
+          "recovering": "recuperando-se"
         },
         "outbreak6": {
-          "wandering": "vagando"
+          "wandering": "vagando",
+          "recovering": "recuperando-se"
         },
         "outbreak7": {
           "wandering": "vagando",
@@ -1119,7 +1126,10 @@
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
-          "patrolling": "patrulhando"
+          "patrolling": "patrulhando",
+          "recovering": "recuperando-se",
+          "moving left and right": "movimentação para a esquerda e para a direita",
+          "moving with arrow keys": "utilizando as setas"
         },
         "outbreak8": {
           "wandering": "vagando",
@@ -1132,7 +1142,10 @@
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
-          "patrolling": "patrulhando"
+          "patrolling": "patrulhando",
+          "recovering": "recuperando-se",
+          "moving left and right": "movimentação para a esquerda e para a direita",
+          "moving with arrow keys": "utilizando as setas"
         },
         "outbreak_freeplay": {
           "wandering": "vagando",
