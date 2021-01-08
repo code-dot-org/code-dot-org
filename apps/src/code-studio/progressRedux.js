@@ -8,6 +8,7 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {authorizeLockable} from './stageLockRedux';
 
@@ -67,7 +68,7 @@ const initialState = {
   // prior to having information about the user login state.
   // TODO: Use sign in state to determine where to source user progress from
   usingDbProgress: false,
-  currentPageNumber: '0'
+  currentPageNumber: PUZZLE_PAGE_NONE
 };
 
 /**
