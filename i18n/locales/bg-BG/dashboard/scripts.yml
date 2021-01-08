@@ -3459,7 +3459,205 @@ bg:
           lesson_groups:
             lg_1:
               display_name: Съдържание
-        ml-playground:
+        csd1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd3-2021:
+          description_short: "Програмиране"
           lessons:
-            intro:
-              name: Въведение
+            Variables:
+              key: Променливи
+              name: Променливи
+            Sprite Properties:
+              key: Свойства на Спрайта
+              name: Свойства на Спрайта
+            Text:
+              key: Текст
+              name: Текст
+            Conditionals:
+              key: Условия
+              name: Условия
+            Velocity:
+              key: Скорост
+              name: Скорост
+            Functions:
+              key: Функции
+              name: Функции
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd4-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Функции с параметри
+              name: Функции с параметри
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Бинарни числа
+              name: Бинарни числа
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифрова информация'
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Списъци
+            csp_loops:
+              display_name: Повторения
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Щастливи карти
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Преместете го, преместете го
+              name: Преместете го, преместете го
+            'Loops: Getting Loopy':
+              name: Да повтаряме
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Двоични гривни
+              name: Двоични гривни
+            'Events: The Big Event':
+              name: Голямото събитие
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_binary:
+              display_name: Двоичен код
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+            csf_data:
+              display_name: Данни
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Програмиране на милиметрова хартия
+            Relay Programming:
+              key: Повтори програмирането
+              name: Повтори програмирането
+            Conditionals with Cards:
+              key: Условия с карти
+              name: Условия с карти
+            'Unplugged: Binary':
+              key: 'Ънплъгд: двоичен код'
+              name: Бинарни образи(картини)
+            Artist Binary:
+              key: 'Художник: Бинарен код'
+              name: 'Художник: Бинарен код'
+          lesson_groups:
+            csf_events:
+              display_name: Събития
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_binary:
+              display_name: Двоичен код
+            csf_digcit:
+              display_name: Цифрови граждани
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Условия
+            'Functions: Songwriting':
+              name: Писане на песен
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_nested_loops:
+              display_name: Вмъкнати цикли
+            csf_functions:
+              display_name: Функции
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Плик с променливи
+              name: Плик с променливи
+            Internet:
+              key: Интернет
+              name: Интернет
+            For Loop Fun:
+              key: Повторения за забавление
+              name: Повторения за забавление
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_variables:
+              display_name: Променливи
+            csf_data:
+              display_name: Данни
+            csf_for_loops:
+              display_name: За циклите
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_functions:
+              display_name: Функции
+            csf_variables:
+              display_name: Променливи
+            csf_for_loops:
+              display_name: За циклите
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Плик с променливи
+          lesson_groups:
+            ramp_up:
+              display_name: Въведение
+            lessonGroup-3:
+              display_name: Променливи

@@ -3001,7 +3001,15 @@
         "behaviors free play_2020": "Serbest oyun: Kendi dış boşluk sahnenizi oluşturun!",
         "Virtual Pet 8_2019": "**Serbest Oyun:** Evcil hayvanınıza daha başka ne yaptırabilirsiniz? Sevdiğiniz herhangi bir şeyi deneyin!",
         "Virtual Pet 8_2020": "**Serbest Oyun:** Evcil hayvanınıza daha başka ne yaptırabilirsiniz? Sevdiğiniz herhangi bir şeyi deneyin!",
-        "OPD-K5 whats your plan": "Bu deneyimden en iyi biçimde faydalanmanız için bu çevrimiçi kursu nasıl ve ne zaman tamamlayacağınızı düşünmek için şimdi bir dakika ayırın. İyi bir plan tasarladığınızda, Computer Science Fundamentals'a daha derinlemesine dalmaya devam edin. "
+        "OPD-K5 whats your plan": "Bu deneyimden en iyi biçimde faydalanmanız için bu çevrimiçi kursu nasıl ve ne zaman tamamlayacağınızı düşünmek için şimdi bir dakika ayırın. İyi bir plan tasarladığınızda, Computer Science Fundamentals'a daha derinlemesine dalmaya devam edin. ",
+        "outbreak1": "10 sağlıklı hareketli nesne ve 1 hasta hareketli nesne oluşturun. Boyutlarını değiştirin ve dolaşmalarını sağlayın.",
+        "outbreak2": "Dokundukları zaman sağlıklı canavarları hasta canavarlara dönüştür.",
+        "outbreak3": "Tıkladığınızda canavarları maskeli canavara dönüştürün.",
+        "outbreak4": "Simülasyonunuzdaki canavar tipi hareketli nesne sayısını ve boyutunu değiştirin.",
+        "outbreak5": "Sağlıklı bir canavar hasta bir canavara dokunduğunda tüm hasta canavarların iyileşmeye başlamasını sağlayın.",
+        "outbreak6": "Sağlıklı canavarlar hasta canavarlara dokunduğunda, canavarların hastalanması olasılığını yüzde olarak ekleyin. Bunu maskeli ve maskesiz tüm canavar kombinasyonları için yapın.",
+        "outbreak7": "Virüse karşı bağışıklığı olan canavarlar için yeni bir kostüm oluşturun ve bunu simülasyonunuzda kullanın.",
+        "outbreak8": "Simülasyonunuz ile mesaj paylaşın."
       }
     }
   }

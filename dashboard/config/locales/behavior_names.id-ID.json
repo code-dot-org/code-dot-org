@@ -1076,13 +1076,16 @@
           "swimming left and right": "berenang ke kiri dan kanan"
         },
         "outbreak1": {
-          "wandering": "pengembaraan"
+          "wandering": "pengembaraan",
+          "recovering": "memulihkan"
         },
         "outbreak2": {
-          "wandering": "pengembaraan"
+          "wandering": "pengembaraan",
+          "recovering": "memulihkan"
         },
         "outbreak3": {
-          "wandering": "pengembaraan"
+          "wandering": "pengembaraan",
+          "recovering": "memulihkan"
         },
         "outbreak4": {
           "wandering": "pengembaraan",
@@ -1094,15 +1097,19 @@
           "moving south": "bergerak ke selatan",
           "swimming left and right": "berenang ke kiri dan kanan",
           "moving north": "bergerak ke utara",
-          "jittering": "gugup",
+          "jittering": "gelisah",
           "moving west": "bergerak ke barat",
-          "patrolling": "perondaan"
+          "patrolling": "perondaan",
+          "recovering": "memulihkan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         },
         "outbreak5": {
-          "wandering": "pengembaraan"
+          "wandering": "pengembaraan",
+          "recovering": "memulihkan"
         },
         "outbreak6": {
-          "wandering": "pengembaraan"
+          "wandering": "pengembaraan",
+          "recovering": "memulihkan"
         },
         "outbreak7": {
           "wandering": "pengembaraan",
@@ -1115,7 +1122,10 @@
           "moving north": "bergerak ke utara",
           "jittering": "gugup",
           "moving west": "bergerak ke barat",
-          "patrolling": "perondaan"
+          "patrolling": "perondaan",
+          "recovering": "memulihkan",
+          "moving left and right": "bergerak ke kiri dan ke kanan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         },
         "outbreak8": {
           "wandering": "pengembaraan",
@@ -1128,7 +1138,10 @@
           "moving north": "bergerak ke utara",
           "jittering": "gugup",
           "moving west": "bergerak ke barat",
-          "patrolling": "perondaan"
+          "patrolling": "perondaan",
+          "recovering": "memulihkan",
+          "moving left and right": "bergerak ke kiri dan ke kanan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         },
         "outbreak_freeplay": {
           "wandering": "pengembaraan",

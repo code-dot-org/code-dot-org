@@ -448,7 +448,15 @@
         "frozen square loop 3x": "Hãy tạo ra 3 hình vuông, chuyển sau mỗi hình. Hãy chắc chắn xoay 120 độ trước mỗi hình vuông mới. ",
         "frozen square snowflake": "Bạn có thể tạo một bông tuyết sử dụng khối \"Lặp lại\" để làm một hình vuông 10 lần, và khối \"Xoay\" để xoay 36 độ giữa mỗi hình?",
         "courseC_video_angles": "Hãy giúp Scrat đến chỗ hạt Sồi nhé!",
-        "scrat 19": "Một sự luyện tập nữa với khối \"nếu-không thì\", bạn có thể làm đúng ngay lần đầu cố gắng?"
+        "scrat 19": "Một sự luyện tập nữa với khối \"nếu-không thì\", bạn có thể làm đúng ngay lần đầu cố gắng?",
+        "outbreak1": "Tạo 10 nhân vật khỏe mạnh và 1 nhân vật bị ốm. Thay đổi kích thước các nhân vật và cho họ lang thang.",
+        "outbreak2": "Thay đổi quái vật khỏe mạnh thành quái vật bị ốm khi họ chạm vào nhau.",
+        "outbreak3": "Thay đổi các quái vật thành quái vật đeo khẩu trang khi bạn nhấn vào họ.",
+        "outbreak4": "Thay đổi số lượng và kích thước của các nhân vật quái vật trong mô phỏng của bạn.",
+        "outbreak5": "Cho tất cả số quái vật bị ốm bắt đầu hồi phục khi một quái vật khỏe mạnh chạm vào quái vật bị ốm.",
+        "outbreak6": "Thêm phần trăm khả năng quái vật bị ốm mỗi khi quái vật khỏe mạnh chạm vào quái vật bị ốm. Hãy làm như vậy với tất cả các cách kết hợp quái vật có và không có khẩu trang.",
+        "outbreak7": "Tạo trang phục cho quái vật miễn dịch với vi rút và sử dụng trong mô phỏng của bạn.",
+        "outbreak8": "Chia sẻ thông điệp kèm theo bản mô phỏng của bạn."
       }
     }
   }

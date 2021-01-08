@@ -415,6 +415,7 @@ uz:
       about_contact: Biz bilan bog'laning
       about_faqs: Ko‘p beriladigan savollar
       learn: Oʻrganish
+      stats: Statistika
       help_us: Bizga yordam bering
       teach: O'qiting
       about: Biz haqimizda
@@ -692,6 +693,7 @@ uz:
       GNU LGPL 2.1 </a> ostida litsenziyalangan.
     powered_by_aws: Amazon Web Services va "Powered by AWS" logotipi Amazon.com, Inc
       yoki uning AQSh va/yoki boshqa mamlakatlardagi filiallarining savdo belgilaridir.
+    built_on_github: Microsoft-dan GitHub-da yaratilgan
     google_copyright: "&copy; Google Inc. ruxsati bilan ishlatilgan. Google Classroom
       - Google Inc savdo belgisi."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipi va
@@ -1395,6 +1397,11 @@ uz:
       rozilik bildirasiz.
     more_information: Code.org Maxfiylik siyosati bilan tanishing
     accept: Roziman
+  page_not_found_title: Sahifa topilmadi
+  page_not_found_header: '404: Sahifa topilmadi'
+  page_not_found_description: Siz izlayotgan sahifa ushbu manzilda mavjud emas. Veb-manzilni
+    tekshiring va qayta yuboring. Yoki, bizning bosh sahifamizga qayting.
+  page_not_found_button: Bosh sahifaga qaytish
   copy: Nusxalash
   maker:
     google_oauth:

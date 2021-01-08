@@ -1792,7 +1792,7 @@ sk-SK:
         - text: Sprite zmení farby.
           feedback: Nesprávne
         questions:
-        - text: Ak chceš vedieť ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
+        - text: Ak chceš vedieť, ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
             Naštuduj si kód a odhadni, čo sa bude diať.
       behaviors 1 predict_2020:
         answers:
@@ -1806,7 +1806,7 @@ sk-SK:
         - text: Sprite zmení farby.
           feedback: Nesprávne
         questions:
-        - text: Ak chceš vedieť ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
+        - text: Ak chceš vedieť, ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
             Naštuduj si kód a odhadni, čo sa bude diať.
       behaviors 4 predict:
         answers:
@@ -3307,7 +3307,7 @@ sk-SK:
           | Snehové vločky (Ľadové kráľovstvo) | Lietadlo (Sprite Lab) |
           |---|---|
           | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
-          | Zabav sa s funkciami! | Skús ku hre pridať text, alebo skóre! |
+          | Zabav sa s funkciami! | Skús ku hre pridať text alebo skóre! |
 
       courseF_EOC_2020:
         description: 'Sme na konci kurzu F! Vyber si, aký projekt vytvoríš. '
@@ -3652,30 +3652,38 @@ sk-SK:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
-        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
+        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku, ako ide z
             jednej strany hracej plochy ku druhej.
         - text: 'Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak
-            čiara bude dlhšia a tenšía. '
+            čiara bude dlhšia a tenšia. '
+          feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
+            ktorá je tiež hrubšia.
         - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
             bude dlhšia a hrubšia.
           correct: true
           feedback: Správne!
         - text: Neviem.
+          feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
+            ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
           `for` cyklu.  '
         questions:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
-        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
+        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku, ako ide z
             jednej strany hracej plochy ku druhej.
         - text: 'Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak
-            čiara bude dlhšia a tenšía. '
+            čiara bude dlhšia a tenšia. '
+          feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
+            ktorá je tiež hrubšia.
         - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
             bude dlhšia a hrubšia.
           correct: true
           feedback: Správne!
         - text: Neviem.
+          feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
+            ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
           `for` cyklu.  '
         questions:
@@ -3717,6 +3725,8 @@ sk-SK:
         - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
         - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
         - text: Neviem.
+          feedback: Premenná `dĺžka` je nastavená na 50 a používa sa v bloku `posuň
+            dopredu o`, takže umelec nakreslí trojuholník so stranami dlhými 50 pixelov.
         questions:
         - text: Nastavili sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
@@ -3727,6 +3737,8 @@ sk-SK:
         - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
         - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
         - text: Neviem.
+          feedback: Premenná `dĺžka` je nastavená na 50 a používa sa v bloku `posuň
+            dopredu o`, takže umelec nakreslí trojuholník so stranami dlhými 50 pixelov.
         questions:
         - text: Nastavili sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
       courseF_multi_bee_conditionals1_predict1:
@@ -3840,34 +3852,34 @@ sk-SK:
 
           ## Sprite Lab
 
-          | Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |
+          | Koláčik (Sprite Lab) | Helikoptéra (Sprite Lab) |
           |---|---|
           | [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
-          | Skús ku hre pridať text, alebo skóre! | Skús ku hre pridať text, alebo skóre! |
+          | Skús ku hre pridať text alebo skóre! | Skús ku hre pridať text alebo skóre! |
 
           ## Umelec
 
           | Kvety (Umelec) | Špirála (Umelec) |
           |---|---|
           | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
-          | Let's get creative with variables! | Let's get creative with For Loops! |
+          | Zabav sa s premennými! |  Zabav sa s cyklami "for"! |
 
       courseF_project_exemplars_2019_2020:
         content1: Strana učebnice s obodovaním testu
         markdown: "# Príklady projektov\n\nA teraz si vytvoríš svoj záverečný projekt.
           Skôr, ako začneš, si prehliadni niekoľko príkladov.\n\n## Sprite Lab\n\n|
-          Cupcake Game (Sprite Lab) | \tAirplane Game (Sprite Lab) |\n|---|---|\n|
-          [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          Koláčik (Sprite Lab) | \tLietadlo (Sprite Lab) |\n|---|---|\n| [![Cupcake
+          Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
           \"Cupcake Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
           | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png
           \"Airplane Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
-          |\n| Skús ku tejto hre pridať text, alebo skóre! | Skús ku tejto hre pridať
-          text, alebo skóre! |\n\n## Umelec\n\n| Flowers (Artist) | Spiral (Artist)
+          |\n| Skús ku tejto hre pridať text alebo skóre! | Skús ku tejto hre pridať
+          text alebo skóre! |\n\n## Umelec\n\n| Kvety (Umelec) | Špirála (Umelec)
           |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png
           \"Flowers (Artist)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
           | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png
           \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
-          \ |\n| Zabav s s premennými! | Zabav sa s cyklami \"for\"! |"
+          \ |\n| Zabav sa s premennými! | Zabav sa s cyklami \"for\"! |"
       coursee_prediction_artistfunction2:
         answers:
         - text: Umelec vyrieši túto úlohu správne.
@@ -4282,7 +4294,7 @@ sk-SK:
         markdown: |
           # Crowdsourcing
 
-          Zisti, ako ti pomôže crowdsourcing, v informatike bežná technika riešenia problémov, dokončiť úlohu efektívnejšie spoločne v triede, ako keby si to musel zvládnuť sám.
+          Zisti, ako ti pomôže crowdsourcing, v informatike bežná technika riešenia problémov, dokončiť úlohu efektívnejšie spoločne v triede, ako keby ju každý musel zvládnuť sám.
       DigitalSharing-Unplugged:
         markdown: |-
           # Digitálne zdieľanie
@@ -4352,3 +4364,71 @@ sk-SK:
         title: Objavujeme Informatiku Študentský dotazník pred kurzom
       csd-pre-survey-2017-levelgroup_2018:
         title: Objavujeme Informatiku Študentský dotazník pred kurzom
+      outbreak_freeplay_choice:
+        display_name: Voľná hra
+        description: Dokončili ste výukový program! Neustále doplňujte zmeny alebo
+          vylepšenia do svojho projektu. Môžete sa rozhodnúť pokračovať v práci s
+          rovnakými blokmi alebo môžete vyskúšať rozšírený panel nástrojov.
+      outbreak_story2:
+        markdown: |-
+          #  Nákaza: Myslite ako vedec
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Simulácie sú skvelým spôsobom, ako sa naučiť veci, ktoré sa v reálnom svete ťažko pozorujú. Pomáhajú vedcom vyriešiť problémy a testovať nové nápady bezpečným a efektívnym spôsobom. Simulácia vám ukáže, ako by mohla nákaza vírusom v mestečku Monster Town vyzerať.
+
+          ## Obnoviť a znova prehrať!
+          Aj keď si sami napíšete kód, je nemožné presne vedieť, čo sa stane po stlačení tlačidla Spustiť. Príšery sa pohybujú náhodne, takže neviete, či sa vírus šíri rýchlo alebo pomaly. Kedykoľvek zmeníte kód, nezabudnite simuláciu spustiť viackrát. Veci sa nestanú dvakrát rovnako!
+
+          ## Zhromažďovanie údajov
+          Zapisujte si svoje pozorovania počas spustenia simulácie. Môžete spočítať počet príšer, ktoré ochorejú, alebo pomocou časovača zistiť, ako rýchlo sa veci dejú. Napríklad ako dlho zvyčajne trvá, kým ochorejú všetky príšery, ak žiadna z nich nenosí masku?
+
+          ## Vytváranie predpovedí
+          Ak rozumiete svojmu modelu, môžete ho použiť na predpovede. Môžete dokonca zmeniť priebeh svojej simulácie a hádať, čo sa stane inak. Napríklad:
+          * Čo by sa stalo, keby tam bolo dvakrát toľko príšer?
+          * Čo by sa stalo, keby sa príšery pohybovali polovičnou rýchlosťou
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Je Monster Town ako skutočný svet?
+          Miera, do ktorej môže byť akýkoľvek model realistický, podlieha obmedzeniam.
+          * Čo má vaša simulácia napadnutia spoločné s napadnutím vírusov v reálnom svete?
+          * Aké sú rozdiely?
+          Po dokončení tejto aktivity diskutujte o týchto otázkach s učiteľmi alebo so svojou rodinou!
+
+          ## Čo ešte môžeme vymodelovať?
+          V mestečku Monster Town ste už vytvorili funkčný model ohniska nákazy. Čo vaša simulácia nedokáže urobiť alebo ukážte, čo by ste si želali, aby dokázala? Ak chcete pokračovať, stlačte tlačidlo Pokračovať a naučte sa modelovať ešte viac:
+          * Zvyšovať počet príšer v simulácii
+          * Pomáhať príšerám zotaviť sa z vírusu
+          * Pravdepodobnosť, imunita, vakcíny atď.!
+
+          Môžete tiež zdieľať svoj simulačný model s ostatnými alebo zdieľať správu o tom, čo si myslíte, že môžeme urobiť, aby sme pomohli udržať zdravie ostatných, keď sa do mesta dostane vírus.
+      outbreak_story:
+        markdown: |
+          # Nákaza: Nakódujte vlastnú simuláciu
+
+          ## Vitajte v mestečku  Monster Town!
+          Mestečko Monster Town bolo zvyčajne šťastným a zdravým miestom. Príšery z mesta Monster Town sa radi prechádzali a navštevovali svojich priateľov.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Jedného dňa sa jedna z príšeriek začala cítiť zle. Nakazila sa **vírusom**! Vírus je malý mikrób, následkom ktorého môžete ochorieť. Ostatné príšerky sa príliš neobávali. Stále navštevovali svojich priateľov.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Čoskoro potom ochoreli ďalšie dve príšerky. Bol to ten istý vírus! Zdá sa, že vírusom sa nakazili od svojho priateľa.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Vírus sa pomaly šíril medzi ďalšími príšerkami, ktoré bývali v blízkosti. Zdravé príšerky sa začali obávať, že postupne všetky ochorejú. Choré príšerky sa začali obávať, že nakazia vírusom ostatným.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Zastavenie šírenia
+          Našťastie po skúmaní vírusu sa obyvateľom susedného mesta podaril dôležitý objav. Uvedomili si, že šírenie vírusu sa môže spomaliť, ak si budú ústa zakrývať maskou. Vďaka týmto tvárovým maskám sa znížila pravdepodobnosť, že by choré príšerky mohli vírusom nakaziť zdravé príšerky.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">

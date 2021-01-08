@@ -597,6 +597,8 @@
   "dropletBlock_mathAbs_description": "Mengambil nilai absolut x",
   "dropletBlock_mathAbs_param0": "x",
   "dropletBlock_mathAbs_signatureOverride": "Math.ABS(x)",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathMax_description": "Mengambil nilai maksimum antara satu atau lebih nilai n1, n2,..., nX",
   "dropletBlock_mathMax_signatureOverride": "Math.Max (n1, n2,..., nX)",
   "dropletBlock_mathMin_description": "Mengambil nilai minimum antara satu atau lebih nilai n1, n2,..., nX",

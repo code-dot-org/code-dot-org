@@ -3186,7 +3186,231 @@
               name: Kurs A
             Course B:
               name: Kurs B
-        ml-playground:
+        csd1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøkelse
+            csd1_1:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            csd1_2:
+              display_name: 'Kapittel 2: Datamaskiner og problemløsning'
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøkelse
+        csd3-2021:
           lessons:
-            intro:
-              name: Introduksjon
+            Variables:
+              key: Variabler
+              name: Variabler
+            Sprite Properties:
+              key: Figuregenskaper
+              name: Figuregenskaper
+            Text:
+              key: tekst
+              name: tekst
+            Conditionals:
+              key: Betingelser
+              name: Betingelser
+            Velocity:
+              key: Hastighet
+              name: Hastighet
+            Functions:
+              key: Funksjoner
+              name: Funksjoner
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapittel 1: Bilder og animasjoner'
+            csd3_2:
+              display_name: 'Kapittel 2: Bygge spill'
+            cspSurvey:
+              display_name: Undersøkelse
+        csd4-2021:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapittel 1: Bruke sentrert design'
+            csd4_2:
+              display_name: 'Kapittel 2: Prototyping av app'
+            csd5_2:
+              display_name: 'Kapittel 2: Problemløsing med data'
+            cspSurvey:
+              display_name: Undersøkelse
+        csd5-2021:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kapittel 1: Representerer informasjon'
+            csd5_2:
+              display_name: 'Kapittel 2: Problemløsing med data'
+            cspSurvey:
+              display_name: Undersøkelse
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funksjoner med parametre
+              name: Funksjoner med parametre
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kapittel 1: Programmere hardware'
+            csd6_2:
+              display_name: 'Kapittel 2: Bygge fysiske prototyper'
+            cspSurvey:
+              display_name: Undersøkelse
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Binære Tall
+              name: Binære Tall
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøkelse
+            csp_unit1_2020:
+              display_name: '(gammel) Enhet 1: Digital informasjon'
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funksjoner
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
+              display_name: Løkker
+        coursea-2021:
+          description_short: En introduksjon til datavitenskap for førskolebarn.
+          lessons:
+            'Programming: Happy Maps':
+              name: Glade Kart
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendelser
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Flytt den, flytt den
+              name: Flytt den, flytt den
+            'Loops: Getting Loopy':
+              name: Gå i spinn
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendelser
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binær armbånd
+              name: Binær armbånd
+            'Events: The Big Event':
+              name: Den store begivenheten
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_binary:
+              display_name: Binær
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendelser
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Millimeterpapirprogrammering
+            Relay Programming:
+              key: Relé programmering
+              name: Relé programmering
+            Dance Party:
+              key: Dansefest
+              name: Dansefest
+            Conditionals with Cards:
+              key: Betingelser med kort
+              name: Betingelser med kort
+            'Unplugged: Binary':
+              key: 'Frakoblet: Binær'
+              name: Binære Bilder
+            Artist Binary:
+              key: Kunstner Binær
+              name: Kunstner Binær
+          lesson_groups:
+            csf_events:
+              display_name: Hendelser
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_binary:
+              display_name: Binær
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Betingelser
+            'Functions: Songwriting':
+              name: Låtskriving
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_nested_loops:
+              display_name: Løkker i løkker
+            csf_functions:
+              display_name: Funksjoner
+        coursef-2021:
+          description_short: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
+          lessons:
+            Envelope Variables:
+              key: Konvolutt variabler
+              name: Konvolutt variabler
+            Internet:
+              key: Internett
+              name: Internett
+            For Loop Fun:
+              key: Morro med for løkker
+              name: Morro med for løkker
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_variables:
+              display_name: Variabler
+            csf_for_loops:
+              display_name: For-løkker
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Dansefest
+              name: Dansefest
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_functions:
+              display_name: Funksjoner
+            csf_variables:
+              display_name: Variabler
+            csf_for_loops:
+              display_name: For-løkker
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendelser
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: Konvolutt variabler
+          lesson_groups:
+            ramp_up:
+              display_name: Introduksjon
+            lessonGroup-3:
+              display_name: Variabler

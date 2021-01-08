@@ -229,16 +229,39 @@
           "shrinking": "縮小"
         },
         "outbreak4": {
-          "shrinking": "縮小"
+          "shrinking": "縮小",
+          "recovering": "恢復",
+          "moving with arrow keys": "使用方向鍵移動"
         },
         "outbreak7": {
-          "shrinking": "縮小"
+          "shrinking": "縮小",
+          "recovering": "恢復",
+          "moving left and right": "左右移動",
+          "moving with arrow keys": "使用方向鍵移動"
         },
         "outbreak8": {
-          "shrinking": "縮小"
+          "shrinking": "縮小",
+          "recovering": "恢復",
+          "moving left and right": "左右移動",
+          "moving with arrow keys": "使用方向鍵移動"
         },
         "outbreak_freeplay": {
           "shrinking": "縮小"
+        },
+        "outbreak1": {
+          "recovering": "恢復"
+        },
+        "outbreak2": {
+          "recovering": "恢復"
+        },
+        "outbreak3": {
+          "recovering": "恢復"
+        },
+        "outbreak5": {
+          "recovering": "恢復"
+        },
+        "outbreak6": {
+          "recovering": "恢復"
         }
       }
     }

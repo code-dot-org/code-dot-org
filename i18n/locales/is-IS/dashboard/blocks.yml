@@ -1322,6 +1322,10 @@ is:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": ekki fiskur
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mitt-merki
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ekki mitt-merki
+      Mikelab_allSpritesWithAnimation:
+        text: aalab allar {ANIMATION}
+      Mikelab_beginDataCollection:
+        text: biðja notanda {QUESTION} um breytu {VAR} með valkosti {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:

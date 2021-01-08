@@ -273,7 +273,7 @@ class Lesson < ApplicationRecord
   # TODO: [PLAT-369] trim down to only include those fields needed on the
   # script edit page
   def summarize_for_script_edit
-    summary = summarize(for_edit: true).dup
+    summary = summarize(true, for_edit: true).dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = name
     summary[:lesson_group_display_name] = lesson_group&.display_name
@@ -307,7 +307,7 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
-      courseVersionId: lesson_group.script.course_version&.id,
+      courseVersionId: lesson_group.script.get_course_version&.id,
       updatedAt: updated_at
     }
   end
