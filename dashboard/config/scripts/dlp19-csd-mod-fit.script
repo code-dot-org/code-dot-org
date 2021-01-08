@@ -12,9 +12,11 @@ level 'dlp19_overview4', progression: 'Evaluation'
 level 'dlp19_overview5', progression: 'Due Dates'
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Understanding the Curriculum', display_name: 'Understanding the Curriculum'
+lesson 'Focus Area 1', display_name: 'Curriculum'
 level 'dlp19_csd_prework-fit_content1'
+level 'dlp19_csd_prework-fit-prompt'
 
-lesson 'Demonstrating Understanding', display_name: 'Demonstrating Understanding'
+lesson 'Focus Area 2', display_name: 'Learning Platform'
+level 'dlp19_csd_prework-fit_content1'
 level 'dlp19_csd_prework-fit-prompt'
 

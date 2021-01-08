@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_14_003529) do
+ActiveRecord::Schema.define(version: 2021_01_05_170753) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -657,7 +657,7 @@ ActiveRecord::Schema.define(version: 2020_12_14_003529) do
     t.integer "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "key"
+    t.string "key", null: false
     t.index ["key"], name: "index_objectives_on_key", unique: true
     t.index ["lesson_id"], name: "index_objectives_on_lesson_id"
   end
@@ -1303,6 +1303,7 @@ ActiveRecord::Schema.define(version: 2020_12_14_003529) do
     t.string "city", null: false
     t.string "state", null: false
     t.string "zip", null: false
+    t.string "last_known_school_year_open", limit: 9
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name", "city"], name: "index_school_districts_on_name_and_city", type: :fulltext
@@ -1381,7 +1382,10 @@ ActiveRecord::Schema.define(version: 2020_12_14_003529) do
     t.decimal "latitude", precision: 8, scale: 6, comment: "Location latitude"
     t.decimal "longitude", precision: 9, scale: 6, comment: "Location longitude"
     t.string "state_school_id"
+    t.string "school_category"
+    t.string "last_known_school_year_open", limit: 9
     t.index ["id"], name: "index_schools_on_id", unique: true
+    t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"
     t.index ["state_school_id"], name: "index_schools_on_state_school_id", unique: true
@@ -1850,6 +1854,17 @@ ActiveRecord::Schema.define(version: 2020_12_14_003529) do
     t.string "download"
     t.string "locale", default: "en-US", null: false
     t.index ["key", "locale"], name: "index_videos_on_key_and_locale", unique: true
+  end
+
+  create_table "vocabularies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "word", null: false
+    t.text "definition", null: false
+    t.integer "course_version_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key", "course_version_id"], name: "index_vocabularies_on_key_and_course_version_id", unique: true
+    t.index ["word", "definition"], name: "index_vocabularies_on_word_and_definition", type: :fulltext
   end
 
   add_foreign_key "ap_school_codes", "schools"

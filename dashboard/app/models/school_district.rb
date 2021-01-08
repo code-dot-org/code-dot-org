@@ -2,13 +2,14 @@
 #
 # Table name: school_districts
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)      not null
-#  city       :string(255)      not null
-#  state      :string(255)      not null
-#  zip        :string(255)      not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                          :integer          not null, primary key
+#  name                        :string(255)      not null
+#  city                        :string(255)      not null
+#  state                       :string(255)      not null
+#  zip                         :string(255)      not null
+#  last_known_school_year_open :string(9)
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
 #
 # Indexes
 #

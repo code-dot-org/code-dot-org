@@ -42,13 +42,15 @@ const PREVIEW_OFF = 'preview-off';
 class FoormEditor extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func.isRequired,
-    formName: PropTypes.string,
-    formVersion: PropTypes.number,
-    formId: PropTypes.number,
+    resetCodeMirror: PropTypes.func.isRequired,
+    formCategories: PropTypes.array,
     // populated by redux
     formQuestions: PropTypes.object,
     formHasError: PropTypes.bool,
-    isFormPublished: PropTypes.bool
+    isFormPublished: PropTypes.bool,
+    formName: PropTypes.string,
+    formVersion: PropTypes.number,
+    formId: PropTypes.number
   };
 
   constructor(props) {
@@ -85,6 +87,7 @@ class FoormEditor extends React.Component {
 
   componentDidMount() {
     this.props.populateCodeMirror();
+    this.previewFoorm();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -306,8 +309,10 @@ class FoormEditor extends React.Component {
             </Tab>
           </Tabs>
         </div>
-        {/* For now, only allow save of existing forms. */}
-        {this.props.formName && <FoormSaveBar formId={this.props.formId} />}
+        <FoormSaveBar
+          formCategories={this.props.formCategories}
+          resetCodeMirror={this.props.resetCodeMirror}
+        />
       </div>
     );
   }
@@ -316,5 +321,8 @@ class FoormEditor extends React.Component {
 export default connect(state => ({
   formQuestions: state.foorm.formQuestions || {},
   isFormPublished: state.foorm.isFormPublished,
-  formHasError: state.foorm.hasError
+  formHasError: state.foorm.hasError,
+  formName: state.foorm.formName,
+  formVersion: state.foorm.formVersion,
+  formId: state.foorm.formId
 }))(FoormEditor);
