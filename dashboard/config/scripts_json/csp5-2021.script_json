@@ -1057,19 +1057,6 @@
       }
     },
     {
-      "key": "930e4ebe-ec8f-4992-a890-a22b8f4daa5d",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "930e4ebe-ec8f-4992-a890-a22b8f4daa5d",
-        "lesson.key": "Traversals Explore",
-        "lesson_group.key": "csp_traversals",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
       "key": "9d2a2e62-db9d-41cb-88b7-bfc8bedc8d1c",
       "position": 1,
       "properties": {
@@ -1634,7 +1621,6 @@
         "description": "[slide] \r\n **Prompt:** What are some similarities and differences between variables and lists? How does a list manage complexity in a program?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Discussion Goal:** Students may bring up the following points:\r\n\r\n* Both are used to store information\r\n* Lists store multiple items, but variables only store one\r\n* When written in Javascript, both start with the keyword var\r\n* Lists are written with square brackets around them \r\n* Lists can store many different types of data\r\n\r\nManaging complexity:\r\n\r\n* You don't need to know how a list is created in order to use it - all you need is the name. There is a separation between the abstract properties of the data type (list) and the concrete details of its representation.\r\n* Programs that use lists are easier to read and manage - separate variables are not needed for each  individual element\r\n\r\n\r\n"
           }
@@ -1646,28 +1632,17 @@
       }
     },
     {
-      "key": "6f314324-0ed2-492d-a5e9-144bd3737759",
+      "key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
       "position": 1,
       "properties": {
+        "description": "[slide] \r\n**Level 2 - Video:** Show the video explaining how to determine the length of a list. \r\n\r\n**Group:** Place students in pairs.\r\n\r\n[slide] \r\n **Levels 3 - 4: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\r\n\r\n\r\n[slide] \r\n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.",
+        "name": "Accessing Lists - 20 mins\r",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "tip!!!tip-0<!-- place where you'd like the icon -->**Finding Target Responses:** With a verified teacher account you should be able to see target responses to each question posed on each level.\r\n\r\n**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then watch the videos. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided on the bottom of the instructions area for verified teachers.\r\n\r\n**Show Videos at the Front:** Show videos at the front of the room rather than having students watch them individually. It will be a good opportunity to bring the room back together.\r\n\r\n**Display Code at the Front:** If your room allows it, display the code during the Code Investigation at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\r\n\r\n**Save Modifications for the End:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\r\n\r\n"
+            "markdown": "**Finding Target Responses:** With a verified teacher account you should be able to see target responses to each question posed on each level.\n\n**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then watch the videos. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided on the bottom of the instructions area for verified teachers.\n\n**Show Videos at the Front:** Show videos at the front of the room rather than having students watch them individually. It will be a good opportunity to bring the room back together.\n\n**Display Code at the Front:** If your room allows it, display the code during the Code Investigation at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n**Save Modifications for the End:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\n\n"
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6f314324-0ed2-492d-a5e9-144bd3737759",
-        "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
-      }
-    },
-    {
-      "key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
-      "position": 2,
-      "properties": {
-        "description": "[slide] \r\n**Level 2 - Video:** Show the video explaining how to determine the length of a list. \r\n\r\n**Group:** Place students in pairs.\r\n\r\n[slide] \r\n **Levels 3 - 4: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\r\n\r\n\r\n[slide] \r\n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.",
-        "name": "Accessing Lists - 20 mins\r"
       },
       "seeding_key": {
         "activity_section.key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
@@ -1676,7 +1651,7 @@
     },
     {
       "key": "962d1c24-6e38-4312-8fa9-fc80467d200d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "[slide] \r\n **Level 5 - Video:** Show the video explaining how to determine the length of a list. \r\n\r\n\r\n[slide] \r\n **Levels 6 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\r\n\r\n**Discuss:** Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.",
         "name": "Changing Lists\r"
@@ -1688,7 +1663,7 @@
     },
     {
       "key": "e075e19e-fe03-4ee3-bfe9-4aa1144baaf4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "If there is time remaining, have pairs return to one or more of the apps and make the suggested modifications.",
         "name": "Modify Apps\r"
@@ -1717,7 +1692,6 @@
         "description": "[slide] \r\n **Prompt:** What aspects of using lists do you feel you already understand? What questions do you want to dig into more tomorrow during the practice lesson?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Use this discussion to identify any points of confusion that will need to be reviewed in coming lessons.\r\n\r\n"
           }
@@ -2922,7 +2896,6 @@
         "description": "[slide]  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Traversals.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Running the Activity:** This activity asks students to follow along as a number of core concepts for programming are introduced. The model is typically that a term or concept is introduced and modeled and then afterwards students are encouraged to try it out on their own. Trying it out typically means they are writing information on a sticky note and sharing it with another group before discussing the results with the whole class.\n\nSlides with animations have an icon in the bottom left corner to let you know you need to click to reveal more of the slide's content. \n\nTo help you more easily prepare the activity and keep track of your instructions, detailed instructions have been included as speaker notes in the presentation. Here are some tips to help you throughout the presentation.\n\n* There are opportunities throughout the presentation for students to actively engage. At these moments students should be making things with their manipulatives or using them to answer questions. Use these opportunities to check progress.\n* There is a fair amount of new vocabulary introduced but it is introduced gradually and with intentional repetition. Make a point of actively modeling the use of new terms.\n* The most important goal here is building a mental model. It is ok if students have some open questions that will get resolved over the subsequent conditional lessons.\n* Both you and students can use the \"Key Takeaways\" to check your understanding at the end.\n\n"
           }
@@ -2949,7 +2922,7 @@
       "key": "480dabbd-334b-4980-a8e5-5deb0cce3fc9",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Do This:** Review key takeaways with the class. \r\n\r\n\r\n[slide] \r\n **Video:** As a class watch the video on Traversals. \r\n\r\n**Journal:** Have students add the definition for the word traversal to their journal."
+        "description": "[slide] \n **Do This:** Review key takeaways with the class. \n\n[slide] \n **Video:** As a class watch the video on Traversals. \n\n**Journal:** Have students add the definition for the word traversal to their journal."
       },
       "seeding_key": {
         "activity_section.key": "480dabbd-334b-4980-a8e5-5deb0cce3fc9",
@@ -2969,8 +2942,19 @@
       }
     },
     {
-      "key": "1027ef0e-7e60-4f6f-b4a9-2d68211cf1c8",
+      "key": "1ddf321d-57a8-4172-8ccf-cdb08b8ed776",
       "position": 3,
+      "properties": {
+        "name": "Introduction to Traversal"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ddf321d-57a8-4172-8ccf-cdb08b8ed776",
+        "lesson_activity.key": "6cac2785-a577-4c38-84d7-6ccb691ca222"
+      }
+    },
+    {
+      "key": "1027ef0e-7e60-4f6f-b4a9-2d68211cf1c8",
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -2981,7 +2965,7 @@
     },
     {
       "key": "e19ba162-e7c1-4ab3-9062-36d4c35db240",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Why is traversal with a for loop a good method for accessing and updating items in a lengthy list?",
         "name": "Assessment: Check For Understanding\r"
@@ -2989,28 +2973,6 @@
       "seeding_key": {
         "activity_section.key": "e19ba162-e7c1-4ab3-9062-36d4c35db240",
         "lesson_activity.key": "6cac2785-a577-4c38-84d7-6ccb691ca222"
-      }
-    },
-    {
-      "key": "ec14ac68-7db5-4183-a527-50914a2edfe8",
-      "position": 1,
-      "properties": {
-        "name": "Introduction to Traversal"
-      },
-      "seeding_key": {
-        "activity_section.key": "ec14ac68-7db5-4183-a527-50914a2edfe8",
-        "lesson_activity.key": "930e4ebe-ec8f-4992-a890-a22b8f4daa5d"
-      }
-    },
-    {
-      "key": "f5650609-c73f-47c6-adb6-70407706018d",
-      "position": 2,
-      "properties": {
-        "name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "f5650609-c73f-47c6-adb6-70407706018d",
-        "lesson_activity.key": "930e4ebe-ec8f-4992-a890-a22b8f4daa5d"
       }
     },
     {
@@ -4186,12 +4148,12 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Accessing Lists"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Introduction to Lists - Part 4_2021"
@@ -4209,12 +4171,12 @@
       "chapter": 5,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Accessing Lists"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Lists Investigate Outfitly Code_2021"
@@ -4232,12 +4194,12 @@
       "chapter": 6,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Accessing Lists"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Lists Investigate Bandly Code_2021"
@@ -4255,12 +4217,12 @@
       "chapter": 7,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Changing Lists"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Introduction to Lists - Part 3_2021"
@@ -4278,12 +4240,12 @@
       "chapter": 8,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Changing Lists"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Lists Investigate Partnersly Code_2021"
@@ -4301,12 +4263,12 @@
       "chapter": 9,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "List Patterns"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Random List Access Pattern_2021"
@@ -4324,12 +4286,12 @@
       "chapter": 10,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "List Patterns"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "List Scrolling Pattern_2021"
@@ -5106,12 +5068,12 @@
       "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Traversal"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Processing Lists with Loops_2021"
@@ -5119,7 +5081,7 @@
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "ec14ac68-7db5-4183-a527-50914a2edfe8"
+        "activity_section.key": "1ddf321d-57a8-4172-8ccf-cdb08b8ed776"
       },
       "level_keys": [
         "Processing Lists with Loops_2021"
@@ -5131,10 +5093,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L09 Traversals Exit Ticket_2021"
@@ -5142,7 +5104,7 @@
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "f5650609-c73f-47c6-adb6-70407706018d"
+        "activity_section.key": "e19ba162-e7c1-4ab3-9062-36d4c35db240"
       },
       "level_keys": [
         "U5 L09 Traversals Exit Ticket_2021"
@@ -6158,7 +6120,7 @@
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "ec14ac68-7db5-4183-a527-50914a2edfe8"
+        "activity_section.key": "1ddf321d-57a8-4172-8ccf-cdb08b8ed776"
       }
     },
     {
@@ -6170,7 +6132,7 @@
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "f5650609-c73f-47c6-adb6-70407706018d"
+        "activity_section.key": "e19ba162-e7c1-4ab3-9062-36d4c35db240"
       }
     },
     {
