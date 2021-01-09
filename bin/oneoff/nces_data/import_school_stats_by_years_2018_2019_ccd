@@ -45,8 +45,7 @@ COMMUNITY_TYPE_MAP = {
 # @returns [String, nil] the sanitized version of the string, with equal signs and double
 #   quotations removed. Returns nil on nil input, or if value is a dash (signifies missing in NCES data).
 def sanitize_string_for_db(unsanitized)
-  # May be required for school student count import.
-  #unsanitized = unsanitized == '-' ? nil : unsanitized
+  unsanitized = unsanitized == '-' ? nil : unsanitized
   unsanitized&.tr('="', '')
 end
 
@@ -91,10 +90,6 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_129_1819_w_1a_09101
   end
 end
 
-# TO DO: Import student counts (by race/ethnicity)
-
-# TO DO: Import free and reduced lunch student counts
-
 AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/EDGE_GEOCODE_PUBLICSCH_1819.csv") do |filename|
   SchoolStatsByYear.transaction do
     SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'ISO-8859-1:UTF-8'}) do |row|
@@ -102,6 +97,30 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/EDGE_GEOCODE_PUBLICSCH_1819
         school_id:      row['NCESSCH'].to_i.to_s,
         school_year:    SURVEY_YEAR,
         community_type: COMMUNITY_TYPE_MAP[row['LOCALE']]
+      }
+    end
+  end
+end
+
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/School_lvl_demo.csv") do |filename|
+  SchoolStatsByYear.transaction do
+    SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00"}) do |row|
+      row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+
+      {
+        school_id:      row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
+        school_year:    SURVEY_YEAR,
+
+        students_total:     row['Total Students All Grades (Includes AE) [Public School] 2018-19'].presence.try {|v| v.to_i == 0 ? nil : v.to_i},
+        student_am_count:   row['American Indian/Alaska Native Students [Public School] 2018-19'].to_i,
+        student_as_count:   row['Asian or Asian/Pacific Islander Students [Public School] 2018-19'].to_i,
+        student_bl_count:   row['Black Students [Public School] 2018-19'].to_i,
+        student_hi_count:   row['Hispanic Students [Public School] 2018-19'].to_i,
+        student_wh_count:   row['White Students [Public School] 2018-19'].to_i,
+        student_hp_count:   row['Hawaiian Nat./Pacific Isl. Students [Public School] 2018-19'].to_i,
+        student_tr_count:   row['Two or More Races Students [Public School] 2018-19'].to_i,
+
+        frl_eligible_total: row['Free and Reduced Lunch Students [Public School] 2018-19'].to_i
       }
     end
   end
