@@ -119,6 +119,7 @@ class ScriptEditor extends React.Component {
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
       description: this.props.i18nData.description,
+      studentDescription: this.props.i18nData.studentDescription,
       announcements: this.props.initialAnnouncements,
       hidden: this.props.initialHidden,
       isStable: this.props.initialIsStable,
@@ -223,6 +224,7 @@ class ScriptEditor extends React.Component {
       is_course: this.state.isCourse,
       show_calendar: this.state.showCalendar,
       description: this.state.description,
+      student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
       visible_to_teachers: !this.state.hidden,
       is_stable: this.state.isStable,
@@ -322,29 +324,41 @@ class ScriptEditor extends React.Component {
             onChange={e => this.setState({descriptionAudience: e.target.value})}
           />
         </label>
-        <label>
-          Short Description
-          <HelpTip>
-            <p>
-              This description is used when space is limited such as on the
-              Teacher and Student homepage for the course cards.
-            </p>
-          </HelpTip>
-          <input
-            value={this.state.descriptionShort}
-            style={styles.input}
-            onChange={e => this.setState({descriptionShort: e.target.value})}
+
+        <CollapsibleEditorSection title="Overviews">
+          <label>
+            Short Overview
+            <HelpTip>
+              <p>
+                This description is used when space is limited such as on the
+                Teacher and Student homepage for the course cards.
+              </p>
+            </HelpTip>
+            <input
+              value={this.state.descriptionShort}
+              style={styles.input}
+              onChange={e => this.setState({descriptionShort: e.target.value})}
+            />
+          </label>
+          <TextareaWithMarkdownPreview
+            markdown={this.state.description}
+            label={'Teacher Overview'}
+            name={'description'}
+            inputRows={5}
+            handleMarkdownChange={e =>
+              this.setState({description: e.target.value})
+            }
           />
-        </label>
-        <TextareaWithMarkdownPreview
-          markdown={this.state.description}
-          label={'Description'}
-          name={'description'}
-          inputRows={5}
-          handleMarkdownChange={e =>
-            this.setState({description: e.target.value})
-          }
-        />
+          <TextareaWithMarkdownPreview
+            markdown={this.state.studentDescription}
+            label={'Student Overview'}
+            name={'student_description'}
+            inputRows={5}
+            handleMarkdownChange={e =>
+              this.setState({studentDescription: e.target.value})
+            }
+          />
+        </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Basic Settings">
           <label>
