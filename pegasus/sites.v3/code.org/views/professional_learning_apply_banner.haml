@@ -1,10 +1,14 @@
 - use_sign_up_text ||= false
 - link_suffix ||= nil
+- style ||= nil
 - data = {}
 - data[:useSignUpText] = use_sign_up_text
 - data[:nominated] = params[:nominated]
 - data[:linkSuffix] = link_suffix
+- data[:style] = style
 
-%script{src: webpack_asset_path('js/code.org/views/professional_learning_apply_banner.js'), data: {props: data.to_json}}
+-# Professional Learning is only available in the US
+- if I18n.locale == :"en-US" && DCDO.get("teacher_applications_active", CDO.default_teacher_applications_active)
+  %script{src: webpack_asset_path('js/code.org/views/professional_learning_apply_banner.js'), data: {props: data.to_json}}
 
-#apply-banner-container
+  #apply-banner-container
