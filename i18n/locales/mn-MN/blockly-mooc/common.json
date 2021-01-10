@@ -470,6 +470,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Утга нь өөр утгаас бага эсвэл тэнцүү эсэхийг шалгадаг. Илэрхийллийн зүүн талд байгаа утга нь илэрхийллийн баруун талд байгаа утгаас бага буюу тэнцүү бол үнэн гэсэн хариу өгнө.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Бага эсвэл тэнцүү оператор",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_description": "Х-г у зэрэг дэвшүүлнэ",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param0_description": "Үндсэн тоо.",

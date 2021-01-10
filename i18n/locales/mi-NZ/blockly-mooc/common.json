@@ -116,6 +116,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Ka whakamātau mēnā he iti iho, he rite tonu rānei tētahi uara i tētahi atu uara. Ka hoki pono mai mēnā he iti iho, he rite tonu rānei te uara o te kīanga kei te taha mauī i te kīanga kei te taha matau.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Pūtohu iti iho, rite tonu rānei",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "Ka whakahoki tau matapōkere atu i te 0 (kua kapia) ki te 1 (kāore i kapia)",
   "dropletBlock_mathRandom_signatureOverride": "Pāngarau.matapōkere()",

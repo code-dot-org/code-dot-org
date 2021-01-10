@@ -480,6 +480,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Tohle číslo můžeš změnit.",
           "courseE_artist_ramp8_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
+        },
+        "outbreak2": {
+          "minitoolbox": "Kliknutím sem rozšíříte blok.",
+          "pointerlocation": "Přetáhněte blok předmětu sem."
+        },
+        "outbreak7": {
+          "costumes_callout": "Kliknutím vytvořte nový kostým"
         }
       }
     }

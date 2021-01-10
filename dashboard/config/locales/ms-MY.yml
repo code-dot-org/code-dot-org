@@ -1,5 +1,8 @@
 ---
 ms:
+  errors:
+    messages:
+      not_saved: 'Sila betulkan kesilapan yang berikut:'
   activerecord:
     errors:
       messages:
