@@ -10,6 +10,13 @@ export default storybook => {
         name: 'YourSchool',
         description: `Container component for /yourschool`,
         story: () => <YourSchool hideMap={true} />
+      },
+      {
+        name: 'YourSchool - with professional learning banner',
+        description: `Container component for /yourschool - with professional learning banner`,
+        story: () => (
+          <YourSchool hideMap={true} showProfessionalLearningBanner={true} />
+        )
       }
     ]);
 };
