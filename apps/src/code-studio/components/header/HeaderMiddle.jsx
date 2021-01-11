@@ -6,6 +6,7 @@ import ScriptName from './ScriptName';
 import LessonProgress from '../progress/LessonProgress';
 import HeaderPopup from './HeaderPopup';
 import HeaderFinish from './HeaderFinish';
+import {lessonExtrasUrl} from '@cdo/apps/code-studio/progressRedux';
 import _ from 'lodash';
 import $ from 'jquery';
 
@@ -32,8 +33,9 @@ class HeaderMiddle extends React.Component {
     appLoaded: PropTypes.bool,
     scriptNameData: PropTypes.object,
     lessonData: PropTypes.object,
+    lessonExtrasUrl: PropTypes.string,
     scriptData: PropTypes.object,
-    currentLevelId: PropTypes.number,
+    currentLevelId: PropTypes.string,
     linesOfCodeText: PropTypes.string,
     isRtl: PropTypes.bool
   };
@@ -337,5 +339,9 @@ class HeaderMiddle extends React.Component {
 export default connect(state => ({
   isRtl: state.isRtl,
   appLoadStarted: state.header.appLoadStarted,
-  appLoaded: state.header.appLoaded
+  appLoaded: state.header.appLoaded,
+  lessonExtrasUrl: lessonExtrasUrl(
+    state.progress,
+    state.progress.currentStageId
+  )
 }))(HeaderMiddle);
