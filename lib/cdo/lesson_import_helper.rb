@@ -88,6 +88,7 @@ module LessonImportHelper
   end
 
   def self.create_lesson_vocabularies(cb_vocab, course_version_id)
+    return [] if cb_vocab.blank?
     cb_vocab.map do |cb_vocabulary|
       raise unless cb_vocabulary['word']
       vocab = Vocabulary.find_or_initialize_by(
