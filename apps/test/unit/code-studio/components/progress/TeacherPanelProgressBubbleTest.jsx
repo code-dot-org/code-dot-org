@@ -7,7 +7,6 @@ import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
   level: {
-    id: 123,
     assessment: null,
     contained: false,
     driver: null,

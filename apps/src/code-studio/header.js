@@ -56,15 +56,12 @@ const PUZZLE_PAGE_NONE = -1;
  *   }>
  * }}
  * @param {object} progressData
- * @param {number} currentLevelId
- * @param {number} currentPageNumber The page we are on if this is a multi-
- *   page level
+ * @param {string} currentLevelId
+ * @param {number} puzzlePage
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
- * @param {boolean} isLessonExtras Boolean indicating we are not on a script
- *   level and therefore are on lesson extras
  */
 header.build = function(
   scriptData,
@@ -72,11 +69,10 @@ header.build = function(
   lessonData,
   progressData,
   currentLevelId,
-  currentPageNumber,
+  puzzlePage,
   signedIn,
   stageExtrasEnabled,
   scriptNameData,
-  isLessonExtras,
   hasAppOptions
 ) {
   const store = getStore();
@@ -90,7 +86,8 @@ header.build = function(
   progressData = progressData || {};
 
   const linesOfCodeText = progressData.linesOfCodeText;
-  let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
+
+  let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
 
   // Set up the store immediately.
   progress.generateStageProgress(
@@ -101,9 +98,7 @@ header.build = function(
     currentLevelId,
     saveAnswersBeforeNavigation,
     signedIn,
-    stageExtrasEnabled,
-    isLessonExtras,
-    currentPageNumber
+    stageExtrasEnabled
   );
 
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"

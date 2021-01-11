@@ -7,7 +7,6 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
   level: {
-    id: 1,
     levelNumber: 1,
     status: LevelStatus.perfect,
     url: '/foo/bar',
@@ -298,7 +297,6 @@ describe('ProgressBubble', () => {
 
   it('renders a progress pill for unplugged lessons', () => {
     const unpluggedLevel = {
-      id: 1,
       status: LevelStatus.perfect,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
@@ -317,7 +315,6 @@ describe('ProgressBubble', () => {
 
   it('does not render a progress pill for unplugged when small', () => {
     const unpluggedLevel = {
-      id: 1,
       status: LevelStatus.perfect,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
