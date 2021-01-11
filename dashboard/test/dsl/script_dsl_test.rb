@@ -261,6 +261,46 @@ endvariants
     assert_equal expected, output
   end
 
+  test 'test Script DSL property has_lesson_plan as property hash' do
+    input_dsl = <<~DSL
+      lesson 'Lesson1', display_name: 'Lesson1',
+        has_lesson_plan: true
+      level 'Level 1'
+      lesson 'Lesson2', display_name: 'Lesson2',
+        has_lesson_plan: false
+      level 'Level 2'
+    DSL
+    expected = DEFAULT_PROPS.merge(
+      {
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              key: "Lesson1",
+              name: "Lesson1",
+              has_lesson_plan: true,
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+              ]
+            },
+            {
+              key: "Lesson2",
+              name: "Lesson2",
+              has_lesson_plan: false,
+              script_levels: [
+                {levels: [{name: "Level 2"}]},
+              ]
+            }
+          ]
+        ]
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
   test 'can set hideable_lessons' do
     input_dsl = <<~DSL
       hideable_lessons 'true'
