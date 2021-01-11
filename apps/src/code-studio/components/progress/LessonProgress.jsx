@@ -11,7 +11,6 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
-import {LevelKind} from '@cdo/apps/util/sharedConstants';
 import $ from 'jquery';
 
 const styles = {
@@ -79,11 +78,10 @@ class LessonProgress extends Component {
   static propTypes = {
     levels: PropTypes.arrayOf(levelType).isRequired,
     lessonExtrasUrl: PropTypes.string,
-    isLessonExtras: PropTypes.bool,
+    onLessonExtras: PropTypes.bool,
     lessonTrophyEnabled: PropTypes.bool,
     width: PropTypes.number,
-    setDesiredWidth: PropTypes.func,
-    currentPageNumber: PropTypes.number
+    setDesiredWidth: PropTypes.func
   };
 
   getFullWidth() {
@@ -162,12 +160,7 @@ class LessonProgress extends Component {
   }
 
   render() {
-    const {
-      currentPageNumber,
-      lessonExtrasUrl,
-      isLessonExtras,
-      lessonTrophyEnabled
-    } = this.props;
+    const {lessonExtrasUrl, onLessonExtras, lessonTrophyEnabled} = this.props;
     let levels = this.props.levels;
 
     // Only puzzle levels (non-concept levels) should count towards mastery.
@@ -201,33 +194,29 @@ class LessonProgress extends Component {
             style={styles.inner}
           >
             {lessonTrophyEnabled && <div style={styles.spacer} />}
-            {levels.map((level, index) => {
-              let isCurrent = level.isCurrentLevel;
-              if (isCurrent && level.kind === LevelKind.assessment) {
-                isCurrent = currentPageNumber === level.pageNumber;
-              }
-              return (
-                <div
-                  key={index}
-                  ref={isCurrent ? 'currentLevel' : null}
-                  style={{
-                    ...(level.isUnplugged && isCurrent && styles.pillContainer)
-                  }}
-                >
-                  <ProgressBubble
-                    level={level}
-                    disabled={false}
-                    smallBubble={!isCurrent}
-                    lessonTrophyEnabled={lessonTrophyEnabled}
-                  />
-                </div>
-              );
-            })}
+            {levels.map((level, index) => (
+              <div
+                key={index}
+                ref={level.isCurrentLevel ? 'currentLevel' : null}
+                style={{
+                  ...(level.isUnplugged &&
+                    level.isCurrentLevel &&
+                    styles.pillContainer)
+                }}
+              >
+                <ProgressBubble
+                  level={level}
+                  disabled={false}
+                  smallBubble={!level.isCurrentLevel}
+                  lessonTrophyEnabled={lessonTrophyEnabled}
+                />
+              </div>
+            ))}
             {lessonExtrasUrl && !lessonTrophyEnabled && (
-              <div ref={isLessonExtras ? 'currentLevel' : null}>
+              <div ref={onLessonExtras ? 'currentLevel' : null}>
                 <LessonExtrasProgressBubble
                   lessonExtrasUrl={lessonExtrasUrl}
-                  perfect={isLessonExtras}
+                  perfect={onLessonExtras}
                 />
               </div>
             )}
@@ -252,6 +241,5 @@ export default connect(state => ({
     state.progress,
     state.progress.currentStageId
   ),
-  isLessonExtras: state.progress.isLessonExtras,
-  currentPageNumber: state.progress.currentPageNumber
+  onLessonExtras: state.progress.currentLevelId === 'stage_extras'
 }))(LessonProgress);
