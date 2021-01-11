@@ -3,15 +3,23 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
+  setLabelColumn,
   setColumnsByDataType,
-  getCurrentColumnData
+  getCurrentColumnData,
+  addSelectedFeature,
+  removeSelectedFeature,
+  getCurrentColumnIsSelectedFeature
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
 
 class ColumnInspector extends Component {
   static propTypes = {
     setColumnsByDataType: PropTypes.func.isRequired,
-    currentColumnData: PropTypes.object
+    currentColumnData: PropTypes.object,
+    setLabelColumn: PropTypes.func.isRequired,
+    addSelectedFeature: PropTypes.func.isRequired,
+    removeSelectedFeature: PropTypes.func.isRequired,
+    currentColumnIsSelectedFeature: PropTypes.bool
   };
 
   handleChangeDataType = (event, feature) => {
@@ -19,9 +27,22 @@ class ColumnInspector extends Component {
     this.props.setColumnsByDataType(feature, event.target.value);
   };
 
+  setPredictColumn = () => {
+    this.props.setLabelColumn(this.props.currentColumnData.id);
+  }
+
+  addFeature = () => {
+    this.props.addSelectedFeature(this.props.currentColumnData.id);
+  }
+
+  removeFeature = () => {
+    this.props.removeSelectedFeature(this.props.currentColumnData.id);
+  }
+
   render() {
     const {
-      currentColumnData
+      currentColumnData,
+      currentColumnIsSelectedFeature
     } = this.props;
 
     return (
@@ -140,6 +161,18 @@ class ColumnInspector extends Component {
                 <br />
               </div>
             </form>
+
+            <button onClick={this.setPredictColumn}>Predict this column</button>
+            <br/>
+            {!currentColumnIsSelectedFeature && (
+              <div>
+                <button onClick={this.addFeature}>Predict based on this column</button>
+                <br/>
+              </div>
+            )}
+            {currentColumnIsSelectedFeature && (
+              <button onClick={this.removeFeature}>Don't predict based on this column</button>
+            )}
           </div>
         )}
       </div>
@@ -149,11 +182,21 @@ class ColumnInspector extends Component {
 
 export default connect(
   state => ({
-    currentColumnData: getCurrentColumnData(state)
+    currentColumnData: getCurrentColumnData(state),
+    currentColumnIsSelectedFeature: getCurrentColumnIsSelectedFeature(state)
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {
       dispatch(setColumnsByDataType(column, dataType));
+    },
+    setLabelColumn(labelColumn) {
+      dispatch(setLabelColumn(labelColumn));
+    },
+    addSelectedFeature(labelColumn) {
+      dispatch(addSelectedFeature(labelColumn));
+    },
+    removeSelectedFeature(labelColumn) {
+      dispatch(removeSelectedFeature(labelColumn));
     }
   })
 )(ColumnInspector);

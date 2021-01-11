@@ -32,6 +32,8 @@ const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
+const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
+const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
 const SET_PERCENT_DATA_TO_RESERVE = "SET_PERCENT_DATA_TO_RESERVE";
@@ -82,6 +84,14 @@ export const setColumnsByDataType = (column, dataType) => ({
 
 export function setSelectedFeatures(selectedFeatures) {
   return { type: SET_SELECTED_FEATURES, selectedFeatures };
+}
+
+export function addSelectedFeature(selectedFeature) {
+  return { type: ADD_SELECTED_FEATURE, selectedFeature };
+}
+
+export function removeSelectedFeature(selectedFeature) {
+  return { type: REMOVE_SELECTED_FEATURE, selectedFeature };
 }
 
 export function setLabelColumn(labelColumn) {
@@ -252,6 +262,21 @@ export default function rootReducer(state = initialState, action) {
       selectedFeatures: action.selectedFeatures
     };
   }
+
+  if (action.type === ADD_SELECTED_FEATURE) {
+    return {
+      ...state,
+      selectedFeatures: [...state.selectedFeatures, action.selectedFeature]
+    };
+  }
+
+  if (action.type === REMOVE_SELECTED_FEATURE) {
+    return {
+      ...state,
+      selectedFeatures: state.selectedFeatures.filter(item => item !== action.selectedFeature)
+    };
+  }
+
   if (action.type === SET_LABEL_COLUMN) {
     return {
       ...state,
@@ -828,4 +853,8 @@ export function getPanelButtons(state) {
   }
 
   return { prev, next };
+}
+
+export function getCurrentColumnIsSelectedFeature(state) {
+  return state.selectedFeatures.includes(state.currentColumn);
 }
