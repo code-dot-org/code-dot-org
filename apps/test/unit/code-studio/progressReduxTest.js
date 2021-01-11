@@ -60,7 +60,6 @@ const stageData = [
         ids: [323],
         activeId: 323,
         position: 2,
-        page_number: 1,
         kind: LevelKind.assessment,
         icon: null,
         title: 1,
@@ -74,7 +73,6 @@ const stageData = [
         ids: [322],
         activeId: 322,
         position: 3,
-        page_number: 2,
         kind: LevelKind.assessment,
         icon: null,
         title: 2,
@@ -166,7 +164,7 @@ const initialScriptOverviewProgress = {
 
 // The initial progress passed to the puzzle page
 const initialPuzzlePageProgress = {
-  currentLevelId: 341,
+  currentLevelId: '341',
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
   lessonGroups: [],
@@ -200,7 +198,7 @@ describe('progressReduxTest', () => {
       const action = initProgress(initialPuzzlePageProgress);
       const nextState = reducer(undefined, action);
 
-      assert.equal(nextState.currentLevelId, 341);
+      assert.equal(nextState.currentLevelId, '341');
       assert.equal(nextState.professionalLearningCourse, false);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
       assert.deepEqual(
@@ -630,7 +628,6 @@ describe('progressReduxTest', () => {
       const expected = [
         [
           {
-            id: 2106,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1',
@@ -642,7 +639,6 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: true,
             levelNumber: undefined,
-            pageNumber: undefined,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
@@ -650,7 +646,6 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
-            id: 323,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2',
@@ -662,7 +657,6 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: false,
             levelNumber: 1,
-            pageNumber: 1,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
@@ -670,7 +664,6 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
-            id: 322,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3',
@@ -682,7 +675,6 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: false,
             levelNumber: 2,
-            pageNumber: 2,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
@@ -692,7 +684,6 @@ describe('progressReduxTest', () => {
         ],
         [
           {
-            id: 330,
             status: 'not_tried',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1',
@@ -704,7 +695,6 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: false,
             levelNumber: 1,
-            pageNumber: undefined,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
@@ -712,7 +702,6 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
-            id: 339,
             status: 'perfect',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2',
@@ -724,7 +713,6 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: false,
             levelNumber: 2,
-            pageNumber: undefined,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
@@ -732,7 +720,6 @@ describe('progressReduxTest', () => {
             sublevels: []
           },
           {
-            id: 341,
             status: 'attempted',
             url:
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3',
@@ -744,7 +731,6 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: false,
             levelNumber: 3,
-            pageNumber: undefined,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
@@ -811,7 +797,7 @@ describe('progressReduxTest', () => {
     it('sets isCurrentLevel to true for current level only', () => {
       const initializedState = {
         ...reducer(undefined, initProgress(initialScriptOverviewProgress)),
-        currentLevelId: stageData[0].levels[1].activeId
+        currentLevelId: stageData[0].levels[1].activeId.toString()
       };
 
       const stageId = stageData[0].id;
