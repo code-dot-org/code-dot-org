@@ -1286,6 +1286,8 @@ nl:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": geen vis
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mijn-label
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": niet mijn-label
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

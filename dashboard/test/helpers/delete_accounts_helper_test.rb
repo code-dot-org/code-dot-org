@@ -1820,44 +1820,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Pardot
-  # pegasus.contact_rollups
+  # pegasus.contact_rollups (V1)
   #
-
-  test "Pardot: Calls delete_pardot_prospects" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(true)
-
-    with_contact_rollup_for(teacher) do |_, pardot_id|
-      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([])
-      purge_user teacher
-    end
-  end
-
-  test "Pardot: Raises if Pardot reports issues deleting prospects" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(true)
-
-    with_contact_rollup_for(teacher) do |_, pardot_id|
-      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([pardot_id])
-      assert_raises RuntimeError do
-        purge_user teacher
-      end
-    end
-  end
-
-  test "Pardot: Does not contact Pardot outside of production" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(false)
-
-    with_contact_rollup_for(teacher) do
-      Pardot.expects(:delete_pardot_prospects).never
-      purge_user teacher
-    end
-  end
 
   test "contact_rollups: Deletes user records" do
     teacher_a = create :teacher

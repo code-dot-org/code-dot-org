@@ -2647,7 +2647,15 @@
         "courseE_farmer_predict2": "Bergerak maju sampai Anda mencapai selada, lalu ambil semuanya menggunakan loop `while`.",
         "scrat 19": "Cobalah sekali lagi praktekkan blok \"jika tidak\" (if-else), bisakah Anda mendapatkannya jawaban yang benar pada percobaan pertama?",
         "courseA_maze_ramp3b_2019": "Hapus blok terakhir dalam urutan dengan menariknya ke toolbox, lalu klik \"Run\".",
-        "courseA_maze_ramp3b_2020": "Hapus blok terakhir dalam urutan dengan menariknya ke toolbox, lalu klik \"Run\"."
+        "courseA_maze_ramp3b_2020": "Hapus blok terakhir dalam urutan dengan menariknya ke toolbox, lalu klik \"Run\".",
+        "outbreak1": "Buat 10 sprite sehat dan 1 sprite sakit. Ubah ukurannya dan buat mereka berkeliling.",
+        "outbreak2": "Ubah monster yang sehat menjadi monster sakit saat mereka bersentuhan.",
+        "outbreak3": "Ubah monster menjadi monster dengan masker wajah saat Anda mengekliknya.",
+        "outbreak4": "Ubah jumlah dan ukuran sprite monster untuk simulasi Anda.",
+        "outbreak5": "Buat semua monster yang sakit mulai pulih saat monster yang sehat menyentuh monster yang sakit.",
+        "outbreak6": "Tambahkan persentase peluang bagi monster untuk  sakit setiap kali monster sehat menyentuh monster yang sakit. Lakukan ini untuk semua kombinasi monster dengan dan tanpa masker.",
+        "outbreak7": "Buat kostum baru bagi monster yang kebal dengan virus dan gunakan dalam simulasi Anda.",
+        "outbreak8": "Bagikan pesan dengan simulasi Anda."
       }
     }
   }

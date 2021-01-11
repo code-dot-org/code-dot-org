@@ -1226,6 +1226,42 @@
         },
         "courseF_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_callout1": "이 함수는 옥수수를 따는데 효과적일 수 있지만 다른 야채는 어떤가요?"
+        },
+        "courseA_collector_loops1_2019": {
+          "courseA_collector_loops1_1": "이 블록을 사용하여 보물을 모으세요."
+        },
+        "courseA_collector_loops1_2020": {
+          "courseA_collector_loops1_1": "이 블록을 사용하여 보물을 모으세요."
+        },
+        "courseB_collector_loops1_2018": {
+          "courseB_collector_loops1_1": "이 블록을 사용하여 보물을 모으세요."
+        },
+        "courseB_collector_loops1_2019": {
+          "courseB_collector_loops1_1": "이 블록을 사용하여 보물을 모으세요."
+        },
+        "courseB_collector_loops1_2020": {
+          "courseB_collector_loops1_1": "이 블록을 사용하여 보물을 모으세요."
+        },
+        "courseC_collector_prog1_2018": {
+          "courseC_collector_prog1_1": "툴박스에서 새 블록을 봤어요? 걱정하지 말아요. 다른 레슨에서 그것들이 어떻게 사용하는지 보여줄께요."
+        },
+        "courseC_collector_prog1_2019": {
+          "courseC_collector_prog1_1": "툴박스에서 새 블록을 봤어요? 걱정하지 말아요. 다른 레슨에서 그것들이 어떻게 사용하는지 보여줄께요."
+        },
+        "courseC_collector_prog1_2020": {
+          "courseC_collector_prog1_1": "툴박스에서 새 블록을 봤어요? 걱정하지 말아요. 다른 레슨에서 그것들이 어떻게 사용하는지 보여줄께요."
+        },
+        "courseC_maze_debugging5_2018": {
+          "courseC_maze_debugging5_1": "이 회색 블록은 잠겨 있으며 삭제할 수 없습니다!"
+        },
+        "coursea_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "모든 블록을 끼운 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "모든 블록을 끼운 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "모든 블록을 끼운 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
         }
       }
     }

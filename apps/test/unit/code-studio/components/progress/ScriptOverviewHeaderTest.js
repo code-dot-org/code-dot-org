@@ -20,7 +20,9 @@ const defaultProps = {
   scriptName: 'course1',
   scriptTitle: 'Course One',
   scriptDescription:
-    '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
+    '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
+  scriptStudentDescription:
+    '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   versions: []
 };
 
@@ -151,12 +153,12 @@ describe('ScriptOverviewHeader', () => {
     assert.equal(true, coursea2018.isSelected);
   });
 
-  it('has correct unit description', () => {
+  it('has correct unit description for teacher', () => {
     const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true
     });
     expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
-      '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+      '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
   });
 });

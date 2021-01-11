@@ -460,18 +460,48 @@ ko-KR:
         - correct: true
         - {}
         - {}
+        markdown: |
+          <pre>
+          &lt;h3&gt; 달걀 &lt;/h3&gt;
+          &lt;h1&gt; 베이컨 &lt;/h1&gt;
+          &lt;h6&gt; 와플 &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |2
+           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **레벨 유형:** 학생들에게 HTML 제목이 웹페이지에 어떻게 표시되는지 묻는 객관식 문제. 어느 학생이 질문에 바르게 답했는지 확인하려면 그 레벨로 가서 우측에서 교사 패널을 잡아 당겨 알 수 있습니다. 질문에 맞게 답한 학생은 녹색 버블을 갖게 될 것입니다. 학생들은 정답을 말할 때까지 질문에 계속 답할 수 있어 여러 번 추측하고 확인함으로써 정답에 점점 가까워 질 수 있습니다.
+
+          <div class="clear"></div>
       CSD Header Size MC_2018:
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        markdown: |
+          <pre>
+          &lt;h3&gt; 달걀 &lt;/h3&gt;
+          &lt;h1&gt; 베이컨 &lt;/h1&gt;
+          &lt;h6&gt; 와플 &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |2
+           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **레벨 유형:** 학생들에게 HTML 제목이 웹페이지에 어떻게 표시되는지 묻는 객관식 문제. 어느 학생이 질문에 바르게 답했는지 확인하려면 그 레벨로 가서 우측에서 교사 패널을 잡아 당겨 알 수 있습니다. 질문에 맞게 답한 학생은 녹색 버블을 갖게 될 것입니다. 학생들은 정답을 말할 때까지 질문에 계속 답할 수 있어 여러 번 추측하고 확인함으로써 정답에 점점 가까워 질 수 있습니다.
+
+          <div class="clear"></div>
       CSD Header Size MC_2018_2019:
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        markdown: |
+          <pre>
+          &lt;h3&gt; 달걀 &lt;/h3&gt;
+          &lt;h1&gt; 베이컨 &lt;/h1&gt;
+          &lt;h6&gt; 와플 &lt;/h6&gt;
+          </pre>
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Overview
@@ -531,10 +561,106 @@ ko-KR:
           * [앱과 문제해결 - 채점표](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         content1: 설명 입력
+        markdown: |+
+          # 페이지 시작하기
+
+          개인 웹페이지를 만들 시간입니다! 세상과 공유할 컨텐츠를 선택할 수 있습니다.
+
+          ## 정의
+
+          지금까지 배웠던 HTML을 사용하여 웹페이지를 만듭니다. 웹페이지에는 최소 **두 개의 다른 크기의 제목**이 들어가야 하고 **단락을 사용해야 ** 합니다.
+
+          ## 준비
+
+          웹페이지 코딩을 시작하기 전, 계획을 세워야 합니다. 이전 몇 개의 레슨을 작성했을 때의 아이디어를 사용하여 이 페이지를 어떤 내용으로 할지 결정합니다. 다른 페이지는 나중에 만들 기회를 가질 것입니다.
+
+          웹페이지와 그 안에 들어갈 제목과 단락의 스케치를 그리세요. 스케치를 파트너에게 보여주고 페이지의 다른 부분에 어떤 태그를 사용할지 설명하세요. 다른 태그가 무엇인지 잊어버렸으면 이전 레벨을 보거나 또는 파트너에게 도움을 청할 수 있습니다.
+
+          아직 코딩하는 법을 배우지 않은 뭔가를 스케치했으면 그것은 나중을 위해 남겨둘 수 있습니다.
+
+          ## 시도
+
+          이전에 배웠던 HTML를 사용하여 페이지를 만듭니다. 잘 안되면 파트너에게 도움을 청할 수 있지만 자신의 웹페이지에서는 **여러분이 운전자**이며 모든 코드를 스스로 입력해야 합니다.
+
+          ## 반영
+
+          일단 웹페이지가 완성되면, 스케치와 비교하여 빠진 부분이 없는지 확인합니다. 파트너에게도 보게 하여 피드백과 페이지를 더 좋게 만들기 위해 필요한 변경사항이 있는지 생각해 보라고 합니다.
+
+
+        teacher_markdown: |-
+          # 개인 웹사이트 프로젝트
+
+          이 레벨에서 개인 웹사이트 프로젝트가 시작되며 학생들은 단원 내내 이 프로젝트를 계속 수행할 것입니다. 학생들에게 코드 스튜디오로 돌아가기 전 저널 스케치를 보여 달라고 하거나 또는 그들 스스로 준비되었을 때를 결정하게 할 수 있습니다.
+
+          일찍 마친 학생들은 새 컨텐츠를 페이지에 추가하거나 또는 끝낸 컨텐츠를 수정할 수 있습니다.
       CSD U2 Design Project_2018:
         content1: 설명 입력
+        markdown: |+
+          # 페이지 시작하기
+
+          개인 웹페이지를 만들 시간입니다! 세상과 공유할 컨텐츠를 선택할 수 있습니다.
+
+          ## 정의
+
+          지금까지 배웠던 HTML을 사용하여 웹페이지를 만듭니다. 웹페이지에는 최소 **두 개의 다른 크기의 제목**이 들어가야 하고 **단락을 사용해야 ** 합니다.
+
+          ## 준비
+
+          웹페이지 코딩을 시작하기 전, 계획을 세워야 합니다. 이전 몇 개의 레슨을 작성했을 때의 아이디어를 사용하여 이 페이지를 어떤 내용으로 할지 결정합니다. 다른 페이지는 나중에 만들 기회를 가질 것입니다.
+
+          웹페이지와 그 안에 들어갈 제목과 단락의 스케치를 그리세요. 스케치를 파트너에게 보여주고 페이지의 다른 부분에 어떤 태그를 사용할지 설명하세요. 다른 태그가 무엇인지 잊어버렸으면 이전 레벨을 보거나 또는 파트너에게 도움을 청할 수 있습니다.
+
+          아직 코딩하는 법을 배우지 않은 뭔가를 스케치했으면 그것은 나중을 위해 남겨둘 수 있습니다.
+
+          ## 시도
+
+          이전에 배웠던 HTML를 사용하여 페이지를 만듭니다. 잘 안되면 파트너에게 도움을 청할 수 있지만 자신의 웹페이지에서는 **여러분이 운전자**이며 모든 코드를 스스로 입력해야 합니다.
+
+          ## 반영
+
+          일단 웹페이지가 완성되면, 스케치와 비교하여 빠진 부분이 없는지 확인합니다. 파트너에게도 보게 하여 피드백과 페이지를 더 좋게 만들기 위해 필요한 변경사항이 있는지 생각해 보라고 합니다.
+
+
+        teacher_markdown: |-
+          # 개인 웹사이트 프로젝트
+
+          이 레벨에서 개인 웹사이트 프로젝트가 시작되며 학생들은 단원 내내 이 프로젝트를 계속 수행할 것입니다. 학생들에게 코드 스튜디오로 돌아가기 전 저널 스케치를 보여 달라고 하거나 또는 그들 스스로 준비되었을 때를 결정하게 할 수 있습니다.
+
+          일찍 마친 학생들은 새 컨텐츠를 페이지에 추가하거나 또는 끝낸 컨텐츠를 수정할 수 있습니다.
       CSD U2 Design Project_2018_2019:
         content1: 설명 입력
+        markdown: |+
+          # 페이지 시작하기
+
+          개인 웹페이지를 만들 시간입니다! 세상과 공유할 컨텐츠를 선택할 수 있습니다.
+
+          ## 정의
+
+          지금까지 배웠던 HTML을 사용하여 웹페이지를 만듭니다. 웹페이지에는 최소 **두 개의 다른 크기의 제목**이 들어가야 하고 **단락을 사용해야 ** 합니다.
+
+          ## 준비
+
+          웹페이지 코딩을 시작하기 전, 계획을 세워야 합니다. 이전 몇 개의 레슨을 작성했을 때의 아이디어를 사용하여 이 페이지를 어떤 내용으로 할지 결정합니다. 다른 페이지는 나중에 만들 기회를 가질 것입니다.
+
+          웹페이지와 그 안에 들어갈 제목과 단락의 스케치를 그리세요. 스케치를 파트너에게 보여주고 페이지의 다른 부분에 어떤 태그를 사용할지 설명하세요. 다른 태그가 무엇인지 잊어버렸으면 이전 레벨을 보거나 또는 파트너에게 도움을 청할 수 있습니다.
+
+          아직 코딩하는 법을 배우지 않은 뭔가를 스케치했으면 그것은 나중을 위해 남겨둘 수 있습니다.
+
+          ## 시도
+
+          이전에 배웠던 HTML를 사용하여 페이지를 만듭니다. 잘 안되면 파트너에게 도움을 청할 수 있지만 자신의 웹페이지에서는 **여러분이 운전자**이며 모든 코드를 스스로 입력해야 합니다.
+
+          ## 반영
+
+          일단 웹페이지가 완성되면, 스케치와 비교하여 빠진 부분이 없는지 확인합니다. 파트너에게도 보게 하여 피드백과 페이지를 더 좋게 만들기 위해 필요한 변경사항이 있는지 생각해 보라고 합니다.
+
+
+        teacher_markdown: |-
+          # 개인 웹사이트 프로젝트
+
+          이 레벨에서 개인 웹사이트 프로젝트가 시작되며 학생들은 단원 내내 이 프로젝트를 계속 수행할 것입니다. 학생들에게 코드 스튜디오로 돌아가기 전 저널 스케치를 보여 달라고 하거나 또는 그들 스스로 준비되었을 때를 결정하게 할 수 있습니다.
+
+          일찍 마친 학생들은 새 컨텐츠를 페이지에 추가하거나 또는 끝낸 컨텐츠를 수정할 수 있습니다.
       CSD U2 L1 Overview:
         content1: 설명 입력
       CSD U2 L2 Overview:
@@ -551,10 +677,79 @@ ko-KR:
         content1: 설명 입력
       CSD U2 expand project:
         content1: 설명 입력
+        markdown: |
+          # 웹사이트 확장
+
+          다음 레벨에서는 두 번째 페이지를 추가하여 웹사이트를 확장합니다. 계획을 파트너와 함께 토론하지만 사이트를 만드는 일은 각자 스스로 합니다.
+
+          다음 레벨에서는 세 가지 일을 해야 합니다.
+
+          1. 새 페이지 만들기.
+          2. 새 페이지 이름 짓기.
+          3. 새 페이지에 컨텐츠 넣기
+
+          추가하는 새 페이지에는 다음이 포함되어야 합니다:
+
+          * 최소 한 개 목록
+          * 최소 한 개 제목
+
+          코딩을 시작하기 전, 무엇에 관한 웹사이트를 만들지 계획이 있어야 합니다. 여기 몇 가지 아이디어가 있습니다. 각 페이지를 클릭하면 전체 크기 버전을 볼 수 있습니다.
+
+          | 레시피 |  펀 팩트 목록 | 안내 방법 |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: '학생의 웹사이트를 확장하기 위한 지침은 보드 상에 나와 있어 학급과 함께 살펴 볼 수 있습니다. 클릭하며
+          학생들에게 샘플 웹페이지를 보여주세요. '
       CSD U2 expand project_2018:
         content1: 설명 입력
+        markdown: |
+          # 웹사이트 확장
+
+          다음 레벨에서는 두 번째 페이지를 추가하여 웹사이트를 확장합니다. 계획을 파트너와 함께 토론하지만 사이트를 만드는 일은 각자 스스로 합니다.
+
+          다음 레벨에서는 세 가지 일을 해야 합니다.
+
+          1. 새 페이지 만들기.
+          2. 새 페이지 이름 짓기.
+          3. 새 페이지에 컨텐츠 넣기
+
+          추가하는 새 페이지에는 다음이 포함되어야 합니다:
+
+          * 최소 한 개 목록
+          * 최소 한 개 제목
+
+          코딩을 시작하기 전, 무엇에 관한 웹사이트를 만들지 계획이 있어야 합니다. 여기 몇 가지 아이디어가 있습니다. 각 페이지를 클릭하면 전체 크기 버전을 볼 수 있습니다.
+
+          | 레시피 |  펀 팩트 목록 | 안내 방법 |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: '학생의 웹사이트를 확장하기 위한 지침은 보드 상에 나와 있어 학급과 함께 살펴 볼 수 있습니다. 클릭하며
+          학생들에게 샘플 웹페이지를 보여주세요. '
       CSD U2 expand project_2018_2019:
         content1: 설명 입력
+        markdown: |
+          # 웹사이트 확장
+
+          다음 레벨에서는 두 번째 페이지를 추가하여 웹사이트를 확장합니다. 계획을 파트너와 함께 토론하지만 사이트를 만드는 일은 각자 스스로 합니다.
+
+          다음 레벨에서는 세 가지 일을 해야 합니다.
+
+          1. 새 페이지 만들기.
+          2. 새 페이지 이름 짓기.
+          3. 새 페이지에 컨텐츠 넣기
+
+          추가하는 새 페이지에는 다음이 포함되어야 합니다:
+
+          * 최소 한 개 목록
+          * 최소 한 개 제목
+
+          코딩을 시작하기 전, 무엇에 관한 웹사이트를 만들지 계획이 있어야 합니다. 여기 몇 가지 아이디어가 있습니다. 각 페이지를 클릭하면 전체 크기 버전을 볼 수 있습니다.
+
+          | 레시피 |  펀 팩트 목록 | 안내 방법 |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: '학생의 웹사이트를 확장하기 위한 지침은 보드 상에 나와 있어 학급과 함께 살펴 볼 수 있습니다. 클릭하며
+          학생들에게 샘플 웹페이지를 보여주세요. '
       CSD U2 image debug match:
         answers:
         - {}
@@ -581,6 +776,7 @@ ko-KR:
         - {}
         - {}
         - {}
+        markdown: " *힌트: 일부 HTML 목록에 오류가 있어 코드 내 어떤 실수가 오류를 일으켰는지 생각해야 합니다.*"
       CSD U2 lists match_2018:
         answers:
         - {}
@@ -594,6 +790,7 @@ ko-KR:
         - {}
         - {}
         - {}
+        markdown: " *힌트: 일부 HTML 목록에 오류가 있어 코드 내 어떤 실수가 오류를 일으켰는지 생각해야 합니다.*"
       CSD U2 lists match_2018_2019:
         answers:
         - {}
@@ -607,6 +804,7 @@ ko-KR:
         - {}
         - {}
         - {}
+        markdown: " *힌트: 일부 HTML 목록에 오류가 있어 코드 내 어떤 실수가 오류를 일으켰는지 생각해야 합니다.*"
       CSD U2 project guide:
         content1: 설명 입력
       CSD U2 project guide_2018:
@@ -1376,7 +1574,8 @@ ko-KR:
           feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
         - text: 아티스트는 단일 선을 그릴 것입니다.
           feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
-        - correct: true
+        - text: 아티스트가 정사각형을 그릴 것입니다.
+          correct: true
           feedback: 맞습니다!
         - text: 잘 모르겠음.
           feedback: 아티스트는 사각형을 그립니다.
@@ -1388,7 +1587,8 @@ ko-KR:
           feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
         - text: 아티스트는 단일 선을 그릴 것입니다.
           feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
-        - correct: true
+        - text: 아티스트가 정사각형을 그릴 것입니다.
+          correct: true
           feedback: 맞습니다!
         - text: 잘 모르겠음.
           feedback: 아티스트는 사각형을 그립니다.
@@ -1400,7 +1600,8 @@ ko-KR:
           feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
         - text: 아티스트는 단일 선을 그릴 것입니다.
           feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
-        - correct: true
+        - text: 아티스트가 정사각형을 그릴 것입니다.
+          correct: true
           feedback: 맞습니다!
         - text: 잘 모르겠음.
           feedback: 아티스트는 사각형을 그립니다.
@@ -1734,6 +1935,13 @@ ko-KR:
           feedback: 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
         questions:
         - text: 아래 코드를 잘 보세요. "실행"을 클릭하면 이 프로그램은 어떤 그림을 만들까요?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -1747,6 +1955,13 @@ ko-KR:
           feedback: 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
         questions:
         - text: 아래 코드를 잘 보세요. "실행"을 클릭하면 이 프로그램은 어떤 그림을 만들까요?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
@@ -1760,6 +1975,13 @@ ko-KR:
           feedback: 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
         questions:
         - text: 아래 코드를 잘 보세요. "실행"을 클릭하면 이 프로그램은 어떤 그림을 만들까요?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
@@ -1773,6 +1995,13 @@ ko-KR:
           feedback: 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
         questions:
         - text: 아래 코드를 잘 보세요. "실행"을 클릭하면 이 프로그램은 어떤 그림을 만들까요?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: '벌이 구름으로 이동하여 무엇이든 상관 없이 과즙을 얻으려 할 것입니다. '
@@ -2747,6 +2976,7 @@ ko-KR:
           ## Resources
 
           * [알루미늄 보트](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 활동가이드 (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+        title: CS 발견 학생 과정 전 설문 조사
       csf_be_a_super_digital_citizen:
         content1: 설명 입력
       csf_password_power-up:
@@ -2783,7 +3013,7 @@ ko-KR:
         - text: 잘 모르겠음.
           feedback: 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
         questions:
-        - {}
+        - text: 이 코드는 주의 깊게 보세요. 프로그램이 "실행"되면 무슨 일이 벌어질거라 생각하세요?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - text: 라우렐은 이 코드를 사용하여 4개의 보물을 모을 거예요.
@@ -2796,7 +3026,7 @@ ko-KR:
         - text: 잘 모르겠음.
           feedback: 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
         questions:
-        - {}
+        - text: 이 코드는 주의 깊게 보세요. 프로그램이 "실행"되면 무슨 일이 벌어질거라 생각하세요?
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - text: 라우렐은 이 코드를 사용하여 4개의 보물을 모을 거예요.
@@ -2809,7 +3039,7 @@ ko-KR:
         - text: 잘 모르겠음.
           feedback: 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
         questions:
-        - {}
+        - text: 이 코드는 주의 깊게 보세요. 프로그램이 "실행"되면 무슨 일이 벌어질거라 생각하세요?
       gradek1_activity_beNice:
         markdown: "# 컴퓨터 실습실에서의 동작"
       Unit 1 Lesson 1 Overview:
@@ -2839,3 +3069,173 @@ ko-KR:
         content1: 설명 입력
       outbreak_story2:
         content1: 설명 입력
+      csd-pre-survey-levelgroup_2019:
+        title: CS 발견 학생 과정 전 설문 조사
+      CSD U2 Top Websites_2018:
+        markdown: |
+          # 미국 상위 웹사이트
+
+          다음은 미국에서 가장 자주 방문되는 웹사이트입니다. 각각에는 웹사이트의 주요 기능에 관한 간단한 설명이 포함되어 있습니다.
+
+
+          * Google.com - 웹사이트 및 사진, 동영상, 기타 미디어 검색 엔진
+          * Youtube.com - 등급과 코멘트가 수록된 사용자가 제출한 동영상으로 구성된 사이트
+          * Facebook.com - 사용자가 친구와 정보를 공유하는 소셜 미디어 커뮤니티* Amazon.com - 모든 종류의 상품을 위한 온라인 쇼핑 사이트
+          * Yahoo.com - 검색 엔진, 이메일 사업자, 뉴스 소스
+          * Wikipedia.org - 사용자가 생성한 컨텐츠로 구성된 무료 백과사전
+      CSD U2 Top Websites_2018_2019:
+        markdown: |
+          # 미국 상위 웹사이트
+
+          다음은 미국에서 가장 자주 방문되는 웹사이트입니다. 각각에는 웹사이트의 주요 기능에 관한 간단한 설명이 포함되어 있습니다.
+
+
+          * Google.com - 웹사이트 및 사진, 동영상, 기타 미디어 검색 엔진
+          * Youtube.com - 등급과 코멘트가 수록된 사용자가 제출한 동영상으로 구성된 사이트
+          * Facebook.com - 사용자가 친구와 정보를 공유하는 소셜 미디어 커뮤니티* Amazon.com - 모든 종류의 상품을 위한 온라인 쇼핑 사이트
+          * Yahoo.com - 검색 엔진, 이메일 사업자, 뉴스 소스
+          * Wikipedia.org - 사용자가 생성한 컨텐츠로 구성된 무료 백과사전
+      CSD U2 Expression Exemplars:
+        markdown: |
+          # 개인 웹사이트 예시
+
+          아래 웹사이트를 클릭하여 다른 학생이 만든 개인 웹사이트를 확인하세요.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Expression Exemplars_2018:
+        markdown: |
+          # 개인 웹사이트 예시
+
+          아래 웹사이트를 클릭하여 다른 학생이 만든 개인 웹사이트를 확인하세요.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Expression Exemplars_2018_2019:
+        markdown: |
+          # 개인 웹사이트 예시
+
+          아래 웹사이트를 클릭하여 다른 학생이 만든 개인 웹사이트를 확인하세요.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 PSP Programming:
+        markdown: |+
+          # 프로그래밍을 위한 문제해결 프로세스
+
+          ## 정의
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * 목표를 이해하기 위해 지침을 주의 깊게 읽음
+          * 문제를 본인의 단어로 바꾸어 말함
+          * 적용하도록 요구받고 있는 새로운 능력 식별
+          * 이것과 유사한 이미 풀었던 다른 문제 찾기.
+          * 더 스마트한 코드가 있으면, 그것을 읽어 그것이 하는 일을 이해.
+
+          ## 준비
+          * 아이디어를 영어 또는 유사부호로 작성
+          * 아이디어를 종이에 스케치
+          * 하는 방법에 대해 이미 아는 내용과 아직 알지 못하는 내용을 나열
+          * 아이디어를 학급원에게 설명
+          * 과거에 작성했던 유사 프로그램 검토
+
+          ## 시도
+          * 한 번에 한 개의 작은 부분 작성
+          * 프로그램을 자주 테스트
+          * 명령어를 사용해 코드가 하는 일을 문서화
+          * 적절한 디버깅 전략 적용
+          * 막히거나 또는 문제를 풀었는지 모르겠으면 이전 단계로 돌아갑니다.
+
+          ## 반영
+          * 완성한 프로그램을 정의한 문제와 비교하여 문제의 모든 측면을 해결했는지 확인
+          * 학급원에게 자신의 프로그램을 해보라고 요청하고 그들이 애쓰거나 또는 혼란스러워 하는 지점을 기록
+          * 학급원에게 자신의 코드를 읽어 보라고 요청하여 문서화가 명확하고 정확하게 되었는지 확인
+          * 프로그램을 "쪼개어" 더 낫게 취급할 수 있는 상호작용 또는 인풋 유형 찾기
+          * 다음 반복 시 만들 수 있는 몇 가지 점진적 변화 식별
+
+
+        teacher_markdown: |
+          # 문제해결 프로세스 검토
+
+          문제해결 프로세스의 네 가지 단계를 전체 학급이 함께 검토합니다.
+      CSD U2 PSP Programming_2018:
+        markdown: |+
+          # 프로그래밍을 위한 문제해결 프로세스
+
+          ## 정의
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * 목표를 이해하기 위해 지침을 주의 깊게 읽음
+          * 문제를 본인의 단어로 바꾸어 말함
+          * 적용하도록 요구받고 있는 새로운 능력 식별
+          * 이것과 유사한 이미 풀었던 다른 문제 찾기.
+          * 더 스마트한 코드가 있으면, 그것을 읽어 그것이 하는 일을 이해.
+
+          ## 준비
+          * 아이디어를 영어 또는 유사부호로 작성
+          * 아이디어를 종이에 스케치
+          * 하는 방법에 대해 이미 아는 내용과 아직 알지 못하는 내용을 나열
+          * 아이디어를 학급원에게 설명
+          * 과거에 작성했던 유사 프로그램 검토
+
+          ## 시도
+          * 한 번에 한 개의 작은 부분 작성
+          * 프로그램을 자주 테스트
+          * 명령어를 사용해 코드가 하는 일을 문서화
+          * 적절한 디버깅 전략 적용
+          * 막히거나 또는 문제를 풀었는지 모르겠으면 이전 단계로 돌아갑니다.
+
+          ## 반영
+          * 완성한 프로그램을 정의한 문제와 비교하여 문제의 모든 측면을 해결했는지 확인
+          * 학급원에게 자신의 프로그램을 해보라고 요청하고 그들이 애쓰거나 또는 혼란스러워 하는 지점을 기록
+          * 학급원에게 자신의 코드를 읽어 보라고 요청하여 문서화가 명확하고 정확하게 되었는지 확인
+          * 프로그램을 "쪼개어" 더 낫게 취급할 수 있는 상호작용 또는 인풋 유형 찾기
+          * 다음 반복 시 만들 수 있는 몇 가지 점진적 변화 식별
+
+
+        teacher_markdown: |
+          # 문제해결 프로세스 검토
+
+          문제해결 프로세스의 네 가지 단계를 전체 학급이 함께 검토합니다.
+      CSD U2 PSP Programming_2018_2019:
+        markdown: |+
+          # 프로그래밍을 위한 문제해결 프로세스
+
+          ## 정의
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * 목표를 이해하기 위해 지침을 주의 깊게 읽음
+          * 문제를 본인의 단어로 바꾸어 말함
+          * 적용하도록 요구받고 있는 새로운 능력 식별
+          * 이것과 유사한 이미 풀었던 다른 문제 찾기.
+          * 더 스마트한 코드가 있으면, 그것을 읽어 그것이 하는 일을 이해.
+
+          ## 준비
+          * 아이디어를 영어 또는 유사부호로 작성
+          * 아이디어를 종이에 스케치
+          * 하는 방법에 대해 이미 아는 내용과 아직 알지 못하는 내용을 나열
+          * 아이디어를 학급원에게 설명
+          * 과거에 작성했던 유사 프로그램 검토
+
+          ## 시도
+          * 한 번에 한 개의 작은 부분 작성
+          * 프로그램을 자주 테스트
+          * 명령어를 사용해 코드가 하는 일을 문서화
+          * 적절한 디버깅 전략 적용
+          * 막히거나 또는 문제를 풀었는지 모르겠으면 이전 단계로 돌아갑니다.
+
+          ## 반영
+          * 완성한 프로그램을 정의한 문제와 비교하여 문제의 모든 측면을 해결했는지 확인
+          * 학급원에게 자신의 프로그램을 해보라고 요청하고 그들이 애쓰거나 또는 혼란스러워 하는 지점을 기록
+          * 학급원에게 자신의 코드를 읽어 보라고 요청하여 문서화가 명확하고 정확하게 되었는지 확인
+          * 프로그램을 "쪼개어" 더 낫게 취급할 수 있는 상호작용 또는 인풋 유형 찾기
+          * 다음 반복 시 만들 수 있는 몇 가지 점진적 변화 식별
+
+
+        teacher_markdown: |
+          # 문제해결 프로세스 검토
+
+          문제해결 프로세스의 네 가지 단계를 전체 학급이 함께 검토합니다.

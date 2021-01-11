@@ -554,6 +554,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "בודק האם ערך קטן או שווה לערך אחר. מחזיר - אמת - אם הערך בצד שמאל של הביטוי קטן או שווה לערך בצד ימין של הביטוי.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "קטן או שווה מהמפעיל",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_description": "לוקח x בחזקת y",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param0_description": "מספר הבסיס.",

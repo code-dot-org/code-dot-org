@@ -2126,7 +2126,155 @@ hr:
               name: Uvjeti
             Functions:
               name: Funkcije
-        ml-playground:
+        csd3-2021:
           lessons:
-            intro:
-              name: Uvod
+            Variables:
+              key: Varijable
+              name: Varijable
+            Text:
+              key: tekst
+              name: tekst
+            Conditionals:
+              key: Uvjeti
+              name: Uvjeti
+            Functions:
+              key: Funkcije
+              name: Funkcije
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funkcije s parametrima
+              name: Funkcije s parametrima
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Petlje
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Vesele karte
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Pomakni, pomakni
+              name: Pomakni, pomakni
+            'Loops: Getting Loopy':
+              name: Zapetljancije
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binarne narukvice
+              name: Binarne narukvice
+            'Events: The Big Event':
+              name: Veliki događaj
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_binary:
+              display_name: Binarno
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Grafičko programiranje
+            Relay Programming:
+              key: Odnosno programiranje
+              name: Odnosno programiranje
+            Conditionals with Cards:
+              key: Uvjeti s kartama
+              name: Uvjeti s kartama
+            'Unplugged: Binary':
+              key: 'Izvanmrežno: Logički operatori'
+            Artist Binary:
+              key: Umjetnik binarno
+              name: Umjetnik binarno
+          lesson_groups:
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno građanstvo
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Uvjeti
+            'Functions: Songwriting':
+              name: Pisanje pjesama
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_nested_loops:
+              display_name: Ugniježđene petlje
+            csf_functions:
+              display_name: Funkcije
+        coursef-2021:
+          lessons:
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: For Petlja Zabava
+              name: For Petlja Zabava
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Petlja brojača
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Petlja brojača
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Uvod
+            lessonGroup-3:
+              display_name: Varijable

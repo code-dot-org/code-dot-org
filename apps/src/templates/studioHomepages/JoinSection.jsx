@@ -166,6 +166,7 @@ export default class JoinSection extends React.Component {
             __useDeprecatedTag
             onClick={this.joinSection}
             color={Button.ButtonColor.gray}
+            disabled={this.state.sectionCode.length === 0}
             text={i18n.joinSection()}
             style={styles.button}
           />
