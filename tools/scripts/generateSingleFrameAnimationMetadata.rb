@@ -39,6 +39,7 @@ class MetadataBuilder
         metadata['frameSize'] = PngUtils.dimensions_from_png(png_file.read)
         metadata['looping'] = true
         metadata['frameDelay'] = 2
+        metadata['categories'] = @options[:categories] || []
 
         # Write metadata to file
         File.open(File.join(dirname, basename + '.json'), 'w') do |json_file|
@@ -81,6 +82,10 @@ cli_parser = OptionParser.new do |opts|
 
   opts.on("--aliases one,two,...", Array, "Search aliases to include in metadata for ALL processed files") do |list|
     options[:aliases] = list
+  end
+
+  opts.on("--categories one,two,...", Array, "Categories to include in metadata for ALL processed files") do |list|
+    options[:categories] = list
   end
 
   opts.on('-q', '--quiet', 'Only log warnings and errors') do
