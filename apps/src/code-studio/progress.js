@@ -78,10 +78,6 @@ progress.showDisabledBubblesAlert = function() {
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
- * @param {boolean} isLessonExtras Boolean indicating we are not on a script
- *   level and therefore are on lesson extras
- * @param {number} currentPageNumber The page we are on if this is a multi-
- *   page level
  */
 progress.generateStageProgress = function(
   scriptData,
@@ -91,9 +87,7 @@ progress.generateStageProgress = function(
   currentLevelId,
   saveAnswersBeforeNavigation,
   signedIn,
-  stageExtrasEnabled,
-  isLessonExtras,
-  currentPageNumber
+  stageExtrasEnabled
 ) {
   const store = getStore();
 
@@ -113,9 +107,7 @@ progress.generateStageProgress = function(
     },
     currentLevelId,
     false,
-    saveAnswersBeforeNavigation,
-    isLessonExtras,
-    currentPageNumber
+    saveAnswersBeforeNavigation
   );
 
   store.dispatch(
@@ -269,19 +261,13 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {boolean} isFullProgress - True if this contains progress for the entire
  *   script vs. a single stage.
  * @param {boolean} [saveAnswersBeforeNavigation]
- * @param {boolean} [isLessonExtras] Optional boolean indicating we are not on
- *   a script level and therefore are on lesson extras
- * @param {number} [currentPageNumber] Optional. The page we are on if this is
- *   a multi-page level
  */
 function initializeStoreWithProgress(
   store,
   scriptData,
   currentLevelId,
   isFullProgress,
-  saveAnswersBeforeNavigation = false,
-  isLessonExtras = false,
-  currentPageNumber
+  saveAnswersBeforeNavigation = false
 ) {
   store.dispatch(
     initProgress({
@@ -298,9 +284,7 @@ function initializeStoreWithProgress(
       scriptStudentDescription: scriptData.studentDescription,
       betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
-      isFullProgress: isFullProgress,
-      isLessonExtras: isLessonExtras,
-      currentPageNumber: currentPageNumber
+      isFullProgress: isFullProgress
     })
   );
 
