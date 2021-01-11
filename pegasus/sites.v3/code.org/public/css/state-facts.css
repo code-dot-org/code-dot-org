@@ -1,5 +1,4 @@
 .intro-text {
-  width: 55%;
   float: left;
 }
 
@@ -41,12 +40,6 @@
   line-height: 14px;
 }
 
-.improve-edu {
-  float: left;
-  width: 55%;
-  margin-bottom: 30px;
-}
-
 .improve-edu-h2 {
   margin-top: 0px;
 }
@@ -54,4 +47,22 @@
 .quote-center {
   text-align: center;
   margin: 0px 50px;
+}
+
+li>ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.open-jobs {
+  background-color: #00adbc;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 28px;
+}
+.graduates {
+  text-align: center;
+  color: dimgray;
+  font-size: 22px;
 }
