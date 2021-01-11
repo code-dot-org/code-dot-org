@@ -386,8 +386,8 @@ class ScriptLevel < ApplicationRecord
     end
 
     summary = {
-      ids: ids,
-      activeId: oldest_active_level.id,
+      ids: ids.map(&:to_s),
+      activeId: oldest_active_level.id.to_s,
       position: position,
       kind: kind,
       icon: level.icon,
@@ -421,11 +421,6 @@ class ScriptLevel < ApplicationRecord
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
       summary[:assessment] = !!assessment
       summary[:challenge] = !!challenge
-
-      # TODO: (charlie) we will move this string conversion out of this
-      # `for_edit` block as soon as code studio updates to use strings for ids
-      summary[:ids] = summary[:ids].map(&:to_s)
-      summary[:activeId] = summary[:activeId].to_s
     end
 
     if include_prev_next
@@ -458,11 +453,11 @@ class ScriptLevel < ApplicationRecord
 
   def summarize_for_lesson_show
     summary = summarize
-    summary[:id] = id
+    summary[:id] = id.to_s
     summary[:levels] = levels.map do |level|
       {
         name: level.name,
-        id: level.id,
+        id: level.id.to_s,
         icon: level.icon,
         isConceptLevel: level.concept_level?
       }
@@ -472,7 +467,6 @@ class ScriptLevel < ApplicationRecord
 
   def summarize_for_lesson_edit
     summary = summarize(for_edit: true)
-    summary[:id] = id.to_s
     summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
       {
@@ -507,7 +501,7 @@ class ScriptLevel < ApplicationRecord
   def summarize_as_bonus(user_id = nil)
     perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
     {
-      id: id,
+      id: id.to_s,
       type: level.type,
       description: level.try(:bubble_choice_description),
       display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
@@ -528,7 +522,7 @@ class ScriptLevel < ApplicationRecord
     lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
     if lesson_extra_user_level
       {
-        id: lesson_extra_user_level.id,
+        id: lesson_extra_user_level.id.to_s,
         bonus: true,
         user_id: student.id,
         status: SharedConstants::LEVEL_STATUS.perfect,
@@ -539,7 +533,7 @@ class ScriptLevel < ApplicationRecord
         # Some lessons have a lesson extras option without any bonus levels. In
         # these cases, they just display previous lesson challenges. These should
         # be displayed as "perfect." Example level: /s/express-2020/stage/28/extras
-        id: -1,
+        id: '-1',
         bonus: true,
         user_id: student.id,
         passed: true,
@@ -547,7 +541,7 @@ class ScriptLevel < ApplicationRecord
       }
     else
       {
-        id: bonus_level_ids.first,
+        id: bonus_level_ids.first.to_s,
         bonus: true,
         user_id: student.id,
         passed: false,
@@ -584,7 +578,7 @@ class ScriptLevel < ApplicationRecord
     end
 
     teacher_panel_summary = {
-      id: level.id,
+      id: level.id.to_s,
       contained: contained,
       submitLevel: level.properties['submittable'] == 'true',
       paired: paired,
