@@ -22,6 +22,7 @@ export const lessonShape = PropTypes.shape({
   purpose: PropTypes.string.isRequired,
   preparation: PropTypes.string.isRequired,
   resources: PropTypes.object,
+  vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired,
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
   assessmentOpportunities: PropTypes.string.isRequired
 });
