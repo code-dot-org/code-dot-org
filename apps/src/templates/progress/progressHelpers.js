@@ -171,8 +171,7 @@ export function summarizeProgressInStage(levelsWithStatus) {
  */
 export const processedLevel = level => {
   return {
-    // ids should be a strings since they are used for object keys
-    id: (level.activeId || level.id).toString(),
+    id: level.activeId || level.id,
     url: level.url,
     name: level.name,
     progression: level.progression,
