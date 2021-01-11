@@ -20,7 +20,8 @@ export const styles = {
     color: "#e51f68"
   },
   ready: {
-    color: "#73be73"
+    color: "#73be73",
+    backgroundColor: "white"
   },
 
   panelContainer: {
@@ -49,7 +50,13 @@ export const styles = {
     backgroundColor: "rgb(230,230,230)",
     borderRadius: 5,
     xwidth: "calc(70% - 100px)",
-    border: "solid 1px black"
+    border: "solid 1px black",
+    overflow: "hidden"
+  },
+
+  panelContentLeft: {
+    float: 'left',
+    width: '80%'
   },
 
   subPanel: {
@@ -81,11 +88,13 @@ export const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 18,
     boxSizing: "border-box",
-    overflow: "scroll"
+    overflow: "scroll",
+    marginTop: 59
   },
 
   dataDisplayTable: {
-    whiteSpace: "nowrap"
+    whiteSpace: "nowrap",
+    borderSpacing: 0
   },
 
   finePrint: {
@@ -107,6 +116,53 @@ export const styles = {
     color: "white",
     textAlign: "right"
   },
+
+  dataDisplayHeaderCurrent: {
+    display: "inline-block",
+    width: 120,
+    backgroundColor: "black",
+    color: "yellow",
+    textAlign: "right"
+  },
+
+  dataDisplayHeaderLabel: {
+    display: "inline-block",
+    width: 120,
+    backgroundColor: "rgb(186, 168, 70)",
+    color: "white",
+    textAlign: "right"
+  },
+
+  dataDisplayHeaderSelectedFeature: {
+    display: "inline-block",
+    width: 120,
+    backgroundColor: "rgb(70, 186, 168)",
+    color: "white",
+    textAlign: "right"
+  },
+
+  dataDisplayCellLabel: {
+    display: "inline-block",
+    backgroundColor: "rgba(186, 168, 70, 0.4)",
+    width: 120,
+    textAlign: "right"
+  },
+
+  dataDisplayCellSelectedFeature: {
+    display: "inline-block",
+    backgroundColor: "rgba(70, 186, 168, 0.4)",
+    width: 120,
+    textAlign: "right"
+  },
+
+  dataDisplayCellCurrent: {
+    display: "inline-block",
+    width: 120,
+    textAlign: "right",
+    color: "yellow",
+    backgroundColor: "grey"
+  },
+
   dataDisplayCell: {
     display: "inline-block",
     width: 120,
@@ -156,6 +212,16 @@ export const styles = {
     right: 20,
     bottom: 20,
     fontSize: 30,
+    cursor: "pointer"
+  },
+
+  navButton: {
+    backgroundColor: "black",
+    color: "white",
+    borderRadius: 5,
+    fontSize: 24,
+    border: "initial",
+    padding: "10px 20px 10px 20px",
     cursor: "pointer"
   }
 };

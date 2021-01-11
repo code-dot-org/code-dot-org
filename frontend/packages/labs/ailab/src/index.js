@@ -7,7 +7,8 @@ import rootReducer, {
   setMode,
   setCurrentPanel,
   setSelectedCSV,
-  setSelectedJSON
+  setSelectedJSON,
+  setSelectedTrainer
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
@@ -48,6 +49,11 @@ const processMode = mode => {
       parseJSON(assetPath + item.metadataPath);
 
       store.dispatch(setCurrentPanel("dataDisplay"));
+    }
+
+    // Select a trainer immediately.
+    if (mode.hideSelectTrainer) {
+      store.dispatch(setSelectedTrainer(mode.hideSelectTrainer));
     }
   } else {
     store.dispatch(setCurrentPanel("selectDataset"));

@@ -11,7 +11,7 @@ import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
 import { connect } from "react-redux";
-import { getPanels, setCurrentPanel, validationMessages } from "./redux";
+import { getPanels, getPanelButtons, setCurrentPanel, validationMessages } from "./redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquare, faCheckSquare } from "@fortawesome/free-regular-svg-icons";
 
@@ -55,6 +55,54 @@ class PanelTabs extends Component {
   }
 }
 
+class PanelButtons extends Component {
+  static propTypes = {
+    panels: PropTypes.arrayOf(PropTypes.object),
+    panelButtons: PropTypes.object,
+    currentPanel: PropTypes.string,
+    setCurrentPanel: PropTypes.func
+  };
+
+  render() {
+    const { panels, panelButtons, currentPanel, setCurrentPanel } = this.props;
+
+    let previousText, nextText, previousPanel, nextPanel;
+
+    /*if (currentPanel === "dataDisplay") {
+      previousText = null;
+      nextText = "Train";
+      previousPanel = null;
+      nextPanel = "trainModel";
+    }*/
+
+    return (
+      <div>
+        {panelButtons.prev && (
+          <div style={styles.previousButton}>
+            <button
+              style={styles.navButton}
+              onClick={() => setCurrentPanel(panelButtons.prev.panel)}
+            >
+              {panelButtons.prev.text}
+            </button>
+          </div>
+        )}
+
+        {panelButtons.next && (
+          <div style={styles.nextButton}>
+            <button
+              style={styles.navButton}
+              onClick={() => setCurrentPanel(panelButtons.next.panel)}
+            >
+              {panelButtons.next.text}
+            </button>
+          </div>
+        )}
+      </div>
+    );
+  }
+}
+
 class Panels extends Component {
   static propTypes = {
     currentPanel: PropTypes.string,
@@ -68,8 +116,6 @@ class Panels extends Component {
       <div style={styles.panelContainer}>
         {currentPanel === "selectDataset" && <SelectDataset />}
         {currentPanel === "dataDisplay" && <DataDisplay />}
-        {currentPanel === "selectFeatures" && <SelectFeatures />}
-        {currentPanel === "columnInspector" && <ColumnInspector />}
         {currentPanel === "selectTrainer" && <SelectTrainer />}
         {currentPanel === "trainModel" && <TrainModel />}
         {currentPanel === "results" && <Results />}
@@ -123,6 +169,7 @@ class ValidationMessages extends Component {
 class App extends Component {
   static propTypes = {
     panels: PropTypes.arrayOf(PropTypes.object),
+    panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
     validationMessages: PropTypes.object,
@@ -132,6 +179,7 @@ class App extends Component {
   render() {
     const {
       panels,
+      panelButtons,
       currentPanel,
       setCurrentPanel,
       validationMessages,
@@ -150,9 +198,16 @@ class App extends Component {
             currentPanel={currentPanel}
             saveTrainedModel={saveTrainedModel}
           />
-          <ValidationMessages
+          {currentPanel === "dataDisplay" && <ColumnInspector />}
+          {/*<ValidationMessages
             currentPanel={currentPanel}
             validationMessages={validationMessages}
+          />*/}
+          <PanelButtons
+            panels={panels}
+            panelButtons={panelButtons}
+            currentPanel={currentPanel}
+            setCurrentPanel={setCurrentPanel}
           />
         </div>
       </div>
@@ -163,6 +218,7 @@ class App extends Component {
 export default connect(
   state => ({
     panels: getPanels(state),
+    panelButtons: getPanelButtons(state),
     currentPanel: state.currentPanel,
     validationMessages: validationMessages(state)
   }),

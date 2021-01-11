@@ -39,7 +39,16 @@ const sampleModes = {
     datasets: ["candy", "titanic", "foods"]
   },
 
-  level_7_6: {}
+  level_7_6: {},
+
+  brendan: {
+    datasets: ["candy"],
+    hideSpecifyColumns: true,
+    hideSelectTrainer: "knnClassify",
+    hideChooseReserve: true,
+    hideModelCard: true,
+    hideSave: true
+  }
 };
 
 // Look for a ?mode= parameter on the URL

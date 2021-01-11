@@ -78,7 +78,10 @@ export default class SVMTrainer {
     store.dispatch(setTrainedModel(model));
     const size = Buffer.byteLength(JSON.stringify(model));
     const kiloBytes = size / 1024;
-    store.dispatch(setModelSize(kiloBytes));
+
+    setTimeout(() => {
+      store.dispatch(setModelSize(kiloBytes));
+    }, 2000);
   }
 
   batchPredict(accuracyCheckExamples) {

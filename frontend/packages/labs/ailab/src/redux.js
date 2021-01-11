@@ -47,6 +47,7 @@ const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
 const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
+const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 
 // Action creators
 export function setMode(mode) {
@@ -158,6 +159,10 @@ export function setCurrentPanel(currentPanel) {
   return { type: SET_CURRENT_PANEL, currentPanel };
 }
 
+export function setCurrentColumn(currentColumn) {
+  return { type: SET_CURRENT_COLUMN, currentColumn };
+}
+
 const initialState = {
   csvfile: undefined,
   jsonfile: undefined,
@@ -179,7 +184,8 @@ const initialState = {
   modelSize: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
-  currentPanel: "selectDataset"
+  currentPanel: "selectDataset",
+  currentColumn: undefined
 };
 
 // Reducer
@@ -315,6 +321,7 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_MODEL_SIZE) {
     return {
       ...state,
+      currentPanel: "results",
       modelSize: action.modelSize
     };
   }
@@ -335,6 +342,19 @@ export default function rootReducer(state = initialState, action) {
       ...state,
       currentPanel: action.currentPanel
     };
+  }
+  if (action.type === SET_CURRENT_COLUMN) {
+    if (state.currentColumn === action.currentColumn) {
+      return {
+        ...state,
+        currentColumn: undefined
+      };
+    } else {
+      return {
+        ...state,
+        currentColumn: action.currentColumn
+      };
+    }
   }
   return state;
 }
@@ -371,6 +391,21 @@ export function getSelectedColumns(state) {
     .map(columnId => {
       return { id: columnId, readOnly: isColumnReadOnly(state, columnId) };
     });
+}
+
+export function getCurrentColumnData(state) {
+  if (!state.currentColumn) {
+    return null;
+  }
+
+  return {
+    id: state.currentColumn,
+    readOnly: isColumnReadOnly(state, state.currentColumn),
+    dataType: state.columnsByDataType[state.currentColumn],
+    uniqueOptions: getUniqueOptions(state, state.currentColumn),
+    range: getRange(state, state.currentColumn),
+    frequencies: getOptionFrequencies(state, state.currentColumn)
+  };
 }
 
 export function getSelectedCategoricalColumns(state) {
@@ -673,8 +708,6 @@ export function getShowChooseReserve(state) {
 const panelList = [
   { id: "selectDataset", label: "Import" },
   { id: "dataDisplay", label: "Data" },
-  { id: "selectFeatures", label: "Features" },
-  { id: "columnInspector", label: "Columns" },
   { id: "selectTrainer", label: "Trainer" },
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
@@ -697,6 +730,11 @@ function isPanelVisible(state, panelId) {
     }
   }
 
+  if (panelId === "selectTrainer") {
+    if (mode && mode.hideSelectTrainer) {
+      return false;
+    }
+  }
   return true;
 }
 
@@ -746,9 +784,48 @@ function isPanelEnabled(state, panelId) {
 export function getPanels(state) {
   return panelList
     .filter(panel => {
-      return isPanelVisible(panel.id);
+      return isPanelVisible(state, panel.id);
     })
     .map(panel => {
       return { ...panel, enabled: isPanelEnabled(state, panel.id) };
     });
+}
+
+/*
+  { id: "selectDataset", label: "Import" },
+  { id: "dataDisplay", label: "Data" },
+  { id: "selectTrainer", label: "Trainer" },
+  { id: "trainModel", label: "Train" },
+  { id: "results", label: "Results" },
+  { id: "predict", label: "Predict" },
+  { id: "saveModel", label: "Save" }
+*/
+
+// Given the current panel, return the appropriate previous & next buttons.
+export function getPanelButtons(state) {
+  let prev, next;
+
+  if (state.currentPanel == "selectDataset") {
+    prev = null;
+    next = isPanelEnabled(state, "dataDisplay")
+      ? { panel: "dataDisplay", text: "Data" }
+      : null;
+  } else if (state.currentPanel == "dataDisplay") {
+    prev = isPanelEnabled(state, "selectDataset")
+      ? { panel: "selectDataset", text: "Import" }
+      : null;
+    next = isPanelEnabled(state, "selectTrainer")
+      ? { panel: "selectTrainer", text: "Trainer" }
+      : null;
+  } else if (state.currentPanel == "selectTrainer") {
+    prev = { panel: "dataDisplay", text: "Data" };
+    next = isPanelEnabled(state, "trainModel")
+      ? { panel: "trainModel", text: "Train" }
+      : null;
+  } else if (state.currentPanel == "results") {
+    prev = {panel: "dataDisplay", text: "Data"};
+    next = null;
+  }
+
+  return { prev, next };
 }

@@ -2,13 +2,18 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getEmptyCellDetails } from "../redux";
+import { getEmptyCellDetails, setCurrentColumn } from "../redux";
 import { styles } from "../constants";
+import SelectFeatures from "./SelectFeatures";
 
 class DataDisplay extends Component {
   static propTypes = {
     data: PropTypes.array,
-    emptyCellDetails: PropTypes.array
+    labelColumn: PropTypes.string,
+    selectedFeatures: PropTypes.array,
+    emptyCellDetails: PropTypes.array,
+    setCurrentColumn: PropTypes.func,
+    currentColumn: PropTypes.string
   };
 
   constructor(props) {
@@ -16,7 +21,8 @@ class DataDisplay extends Component {
 
     this.state = {
       showRawData: true,
-      showEmptyCellDetails: false
+      showEmptyCellDetails: false,
+      showSelectFeatures: null
     };
   }
 
@@ -32,11 +38,61 @@ class DataDisplay extends Component {
     });
   };
 
+  getColumnHeaderStyle = key => {
+    if (key === this.props.currentColumn) {
+      return styles.dataDisplayHeaderCurrent;
+    } else if (key === this.props.labelColumn) {
+      return styles.dataDisplayHeaderLabel;
+    } else if (this.props.selectedFeatures.includes(key)) {
+      return styles.dataDisplayHeaderSelectedFeature;
+    } else {
+      return styles.dataDisplayHeader;
+    }
+  };
+
+  getColumnCellStyle = key => {
+    if (key === this.props.currentColumn) {
+      return styles.dataDisplayCellCurrent;
+    } else if (key === this.props.labelColumn) {
+      return styles.dataDisplayCellLabel;
+    } else if (this.props.selectedFeatures.includes(key)) {
+      return styles.dataDisplayCellSelectedFeature;
+    } else {
+      return styles.dataDisplayCell;
+    }
+  };
+
+  showSelectFeatures = (mode) => {
+    this.setState({showSelectFeatures: mode});
+  };
+
+  onSelectFeaturesClose = () => {
+    this.setState({showSelectFeatures: null});
+  };
+
   render() {
-    const data = this.props.data;
+    const { data, setCurrentColumn } = this.props;
 
     return (
       <div id="data-display">
+        {this.state.showSelectFeatures && (
+          <SelectFeatures mode={this.state.showSelectFeatures} onClose={this.onSelectFeaturesClose}/>
+        )}
+
+        <div style={{ fontSize: 36 }}>
+          Predict{" "}
+          <span style={{ color: "rgb(186, 168, 70)" }} onClick={() => this.showSelectFeatures("label")}>
+            {this.props.labelColumn || "..."}
+          </span>{" "}
+          based on{" "}
+          <span style={{ color: "rgb(70, 186, 168)" }} onClick={() => this.showSelectFeatures("features")}>
+            {this.props.selectedFeatures.length > 0
+              ? this.props.selectedFeatures.join(", ")
+              : ".."}
+          </span>
+          {"."}
+        </div>
+        <br />
         <div style={styles.panel}>
           <div style={styles.largeText}>Imported Data</div>
           {this.state.showRawData && (
@@ -48,7 +104,10 @@ class DataDisplay extends Component {
                       {data.length > 0 &&
                         Object.keys(data[0]).map(key => {
                           return (
-                            <th key={key} style={styles.dataDisplayHeader}>
+                            <th
+                              key={key}
+                              style={this.getColumnHeaderStyle(key)}
+                            >
                               {key}
                             </th>
                           );
@@ -63,7 +122,11 @@ class DataDisplay extends Component {
                             {data.length > 0 &&
                               Object.keys(row).map(key => {
                                 return (
-                                  <td key={key} style={styles.dataDisplayCell}>
+                                  <td
+                                    key={key}
+                                    style={this.getColumnCellStyle(key)}
+                                    onClick={() => setCurrentColumn(key)}
+                                  >
                                     {row[key]}
                                   </td>
                                 );
@@ -110,7 +173,17 @@ class DataDisplay extends Component {
   }
 }
 
-export default connect(state => ({
-  data: state.data,
-  emptyCellDetails: getEmptyCellDetails(state)
-}))(DataDisplay);
+export default connect(
+  state => ({
+    data: state.data,
+    labelColumn: state.labelColumn,
+    selectedFeatures: state.selectedFeatures,
+    emptyCellDetails: getEmptyCellDetails(state),
+    currentColumn: state.currentColumn
+  }),
+  dispatch => ({
+    setCurrentColumn(column) {
+      dispatch(setCurrentColumn(column));
+    }
+  })
+)(DataDisplay);

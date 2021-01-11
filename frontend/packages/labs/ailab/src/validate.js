@@ -133,6 +133,7 @@ regression algorithms only work with continuous data.
 @return {boolean}
  */
 export function compatibleLabelAndTrainer(state) {
+
   const labelAndTrainerSelected =
     oneLabelSelected(state) && trainerSelected(state);
   const trainerLabelType = state.selectedTrainer

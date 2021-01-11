@@ -3,21 +3,15 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
-  getSelectedColumns,
   setColumnsByDataType,
-  getOptionFrequenciesByColumn,
-  getRangesByColumn
+  getCurrentColumnData
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
 
 class ColumnInspector extends Component {
   static propTypes = {
-    selectedColumns: PropTypes.arrayOf(PropTypes.object),
-    columnsByDataType: PropTypes.object,
     setColumnsByDataType: PropTypes.func.isRequired,
-    uniqueOptionsByColumn: PropTypes.object,
-    getRangesByColumn: PropTypes.func,
-    rangesByColumn: PropTypes.object
+    currentColumnData: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
@@ -27,16 +21,14 @@ class ColumnInspector extends Component {
 
   render() {
     const {
-      selectedColumns,
-      columnsByDataType,
-      uniqueOptionsByColumn,
-      rangesByColumn
+      currentColumnData
     } = this.props;
 
     return (
       <div id="column-inspector">
-        {selectedColumns.length > 0 && (
-          <div style={styles.panel}>
+        {currentColumnData && (
+          <div style={styles.validationMessagesLight}>
+            {/*
             <div style={styles.largeText}>
               Describe the data in each of your selected columns
             </div>
@@ -56,100 +48,97 @@ class ColumnInspector extends Component {
               continuous data, it's not going to work for training this type of
               machine learning model.
             </p>
+            */}
             <form>
-              {selectedColumns.map((column, index) => {
-                return (
-                  <div key={index}>
-                    <label>
-                      {column.readOnly && (
-                        <div>
-                          {column.id}: {columnsByDataType[column.id]}
-                        </div>
-                      )}
+              <div>
+                <label>
+                  {currentColumnData.readOnly && (
+                    <div>
+                      {currentColumnData.id}: {currentColumnData.dataType}
+                    </div>
+                  )}
 
-                      {!column.readOnly && (
-                        <div>
-                          {column.id}: &nbsp;
-                          <select
-                            onChange={event =>
-                              this.handleChangeDataType(event, column.id)
-                            }
-                            value={columnsByDataType[column.id]}
-                          >
-                            {Object.values(ColumnTypes).map((option, index) => {
+                  {!currentColumnData.readOnly && (
+                    <div>
+                      {currentColumnData.id}: &nbsp;
+                      <select
+                        onChange={event =>
+                          this.handleChangeDataType(event, currentColumnData.id)
+                        }
+                        value={currentColumnData.dataType}
+                      >
+                        {Object.values(ColumnTypes).map((option, index) => {
+                          return (
+                            <option key={index} value={option}>
+                              {option}
+                            </option>
+                          );
+                        })}
+                      </select>
+                    </div>
+                  )}
+                </label>
+
+                {currentColumnData.dataType ===
+                  ColumnTypes.CATEGORICAL && (
+                  <div>
+                    <p>
+                      {Object.keys(currentColumnData.uniqueOptions).length}{" "}
+                      unique values for {currentColumnData.id}:{" "}
+                    </p>
+                    <div style={styles.subPanel}>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Option</th>
+                            <th>Frequency</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {Object.keys(currentColumnData.uniqueOptions)
+                            .sort()
+                            .map((option, index) => {
                               return (
-                                <option key={index} value={option}>
-                                  {option}
-                                </option>
+                                <tr key={index}>
+                                  <td>{option}</td>
+                                  <td>
+                                    {
+                                      currentColumnData.frequencies[
+                                        option
+                                      ]
+                                    }
+                                  </td>
+                                </tr>
                               );
                             })}
-                          </select>
-                        </div>
-                      )}
-                    </label>
-
-                    {columnsByDataType[column.id] ===
-                      ColumnTypes.CATEGORICAL && (
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
+                {/* currentColumnData.kind === ColumnTypes.CONTINUOUS && (
+                  <div>
+                    {currentColumnData.range && (
                       <div>
-                        <p>
-                          {Object.keys(uniqueOptionsByColumn[column.id]).length}{" "}
-                          unique values for {column.id}:{" "}
-                        </p>
-                        <div style={styles.subPanel}>
-                          <table>
-                            <thead>
-                              <tr>
-                                <th>Option</th>
-                                <th>Frequency</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {Object.keys(uniqueOptionsByColumn[column.id])
-                                .sort()
-                                .map((option, index) => {
-                                  return (
-                                    <tr key={index}>
-                                      <td>{option}</td>
-                                      <td>
-                                        {
-                                          uniqueOptionsByColumn[column.id][
-                                            option
-                                          ]
-                                        }
-                                      </td>
-                                    </tr>
-                                  );
-                                })}
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    )}
-                    {columnsByDataType[column] === ColumnTypes.CONTINUOUS && (
-                      <div>
-                        {rangesByColumn[column.id] && (
-                          <div>
-                            {isNaN(rangesByColumn[column.id].min) && (
-                              <p style={styles.error}>
-                                Continuous columns should contain only numbers.
-                              </p>
-                            )}
-                            {!isNaN(rangesByColumn[column.id].min) && (
-                              <div style={styles.subPanel}>
-                                min: {rangesByColumn[column.id].min}
-                                <br />
-                                max: {rangesByColumn[column.id].max}
-                              </div>
-                            )}
+                        {isNaN(rangesByColumn[column.id].min) && (
+                          <p style={styles.error}>
+                            Continuous columns should contain only numbers.
+                          </p>
+                        )}
+                        {!isNaN(rangesByColumn[column.id].min) && (
+                          <div style={styles.subPanel}>
+                            min: {rangesByColumn[column.id].min}
+                            <br />
+                            max: {rangesByColumn[column.id].max}
                           </div>
                         )}
                       </div>
                     )}
-                    <br />
-                    <br />
                   </div>
-                );
-              })}
+                )*/}
+                <br />
+                <br />
+              </div>
             </form>
           </div>
         )}
@@ -160,10 +149,7 @@ class ColumnInspector extends Component {
 
 export default connect(
   state => ({
-    selectedColumns: getSelectedColumns(state),
-    columnsByDataType: state.columnsByDataType,
-    uniqueOptionsByColumn: getOptionFrequenciesByColumn(state),
-    rangesByColumn: getRangesByColumn(state)
+    currentColumnData: getCurrentColumnData(state)
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {
