@@ -445,6 +445,7 @@ module Services
         :name,
         :absolute_position,
         :lockable,
+        :has_lesson_plan,
         :relative_position,
         :properties,
         :seeding_key

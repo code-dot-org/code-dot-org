@@ -88,6 +88,7 @@ class Lesson < ApplicationRecord
         absolute_position: (counters.lesson_position += 1),
         lesson_group: lesson_group,
         lockable: !!raw_lesson[:lockable],
+        has_lesson_plan: !!raw_lesson[:has_lesson_plan],
         visible_after: raw_lesson[:visible_after],
         relative_position: !!raw_lesson[:lockable] ? (counters.lockable_count += 1) : (counters.non_lockable_count += 1)
       )
