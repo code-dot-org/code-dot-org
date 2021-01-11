@@ -1,0 +1,7 @@
+name 'CSD U5 test clean multi_preview-2021'
+question 'A class took a survey to decide where to go on a class trip, and they want to make a chart to see how popular each choice was. Will the need to make any changes to the data before creating the chart?'
+wrong 'No, it is dishonest to change the data before putting it into a chart.'
+right 'Yes, they should correct misspellings and standardize names so the chart is more accurate.'
+wrong 'Yes, they should take out places that they think will not be good for the class trip.'
+wrong 'No, changing data will confuse people when their answers aren\’t in the chart.'
+wrong 'No, if the data has problems, they should give the survey again.'

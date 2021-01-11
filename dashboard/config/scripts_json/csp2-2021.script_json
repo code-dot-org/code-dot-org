@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -1752,10 +1753,10 @@
       "key": "863340cb-353c-4b99-99f3-6a846dc807a9",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:**  Suppose our school library is moving to a new building on campus and the librarian has asked for your help.",
+        "description": "[slide]  **Prompt:**  Suppose our school library is moving to a new building on campus and the librarian has asked for your help.\n* What approach would you take if you just needed to clear out the space by the end of the day?\n* How would your approach change if you had more time and wanted to check that every book made it safely and was on the same shelf it was on before the move?",
         "tips": [
           {
-            "key": "discussion",
+            "key": "26",
             "type": "discussionGoal",
             "markdown": "**Goals:** This prompt foreshadows the challenge students will see in today's lesson and also the core difference between the two protocols they'll look at, TCP, and UDP. You don't need to cover either of those at this point in the lesson. Some key points to draw out:\r\n\r\n* In the first instance you would probably just load them into boxes and carry them over. You might even be ok if some were lost or the order got messed up. What matters is speed.\r\n* In the second case there'd need to be some kind of record keeping to make sure that every book was recorded as well as the order it was placed in.\r\n* In both cases you wouldn't move the entire library at once, you would move boxes or chunks of books at a time.\r\n\r\nNote this is a tight lesson with a significant wrap up. Aim to keep this warm up short and move to the main activity quickly.\r\n"
           }
@@ -1767,19 +1768,8 @@
       }
     },
     {
-      "key": "8676e384-6107-483b-baa2-a14ce6ee27f1",
-      "position": 2,
-      "properties": {
-        "description": "* What approach would you take if you just needed to clear out the space by the end of the day?\r\n* How would your approach change if you had more time and wanted to check that every book made it safely and was on the same shelf it was on before the move?"
-      },
-      "seeding_key": {
-        "activity_section.key": "8676e384-6107-483b-baa2-a14ce6ee27f1",
-        "lesson_activity.key": "0e878849-ad33-4ce0-8ee3-696839be1d7d"
-      }
-    },
-    {
       "key": "3f602919-17dd-45ed-9241-49ffb9ffec4f",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "[slide] In the last lesson we learned that messages can take different paths to get to the same place on the Internet.  Sometimes, we need to send really large messages over the internet, like movies or large pictures.  Just like moving your entire school library, there are problems that arise when we want to send large messages on the internet.  Today we're going to learn about two different protocols for sending information online, one that's used when all we care about is speed, and one that's used when accuracy is more important.",
         "remarks": true
@@ -1808,7 +1798,7 @@
         "description": "**Circulate:**  Look for students to notice that messages are being cut off after 80 bits.  Once several students notice this, ask one of them to share with the class.",
         "tips": [
           {
-            "key": "tip",
+            "key": "27",
             "type": "teachingTip",
             "markdown": "**Why 80 bits?:** The choice to make the messages 80 bits long is totally arbitrary to motivate the lesson. IP packets are much larger. This limit makes it easier for students to quickly run into the core challenges of this lesson.\r\n\r\n**Previewing Metadata:** While you will formally cover this vocabulary in the wrap up, use this moment to start using this term so it will be more familiar later.\r\n"
           }
@@ -1884,7 +1874,7 @@
         "description": "[slide]  **Protocol 2 - Check for Errors - 10 mins:** Give students 10 minutes to develop a protocol that can address the challenges they just saw. Just as before students should construct a multi-packet message and send them all at once. After that initial message, however, the receiver and sender can continue to communicate to ensure the full message is received and correctly ordered. Circulate the room checking in on different groups and encouraging them to test their protocols out and be ready to share their solutions with the class.",
         "tips": [
           {
-            "key": "tip",
+            "key": "28",
             "type": "teachingTip",
             "markdown": "**Encouraging Good Protocols:** If students are unsure of how to write their protocols, try asking some of these questions:\r\n\r\n* Think back to the warm up.  How would you label the moving boxes for the library?\r\n* Could you use a similar labeling system for the parts of your message?\r\n* Since we have limited space to work with for each message, what short codes could you use to label them?  (Numbers, letters)\r\n* What signal can we send to let the receiver know how many messages to expect in total?\r\n* What signal can we send to let the sender know to resend a particular message?\r\n* What signal can we send to let the sender know we received all the messages?\r\n\r\n**More Than One Solution:** There's lots of ways to solve this problem! Emphasize to students that while their protocol needs to solve the problem, there's not just one right answer and their solution doesn't need to look like their classmates.\r\n\r\n**Looking Ahead:** In the future version of the Internet Simulator students will see that packets are actually typically numbered like the image below. You don't need to share this information but it is useful to know where the Internet Simulator is heading.\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2019-11-15-at-9.47.26-AM.png){: style='float:right;height:100px'}\r\n"
           }
@@ -1948,7 +1938,7 @@
         "description": "[slide]  **Display:**  Watch [r the-internet-packets-routing-and-reliability-1]",
         "tips": [
           {
-            "key": "tip",
+            "key": "29",
             "type": "teachingTip",
             "markdown": "**Key Video Takeaways:** The video includes a lot of information about how packets move through the Internet. The most important points for students to understand are that\r\n\r\n* Large files are split into packets to be sent\r\n* Packets may take different routes through the network and arrive out of order\r\n* TCP ensures that packets that arrive out of order or are lost are re-ordered\r\n* Packets include metadata like their IP address or a packet number to help move them through the network or reorganize them when they arrive\r\n* Collectively this system makes the Internet more reliable\r\n\r\n**Covering UDP:** UDP is not covered in the video and students do not need to understand it in great detail. The depth of explanation in the slides is sufficient to explain the differences between them and why each would be used.\r\n"
           }
@@ -2573,12 +2563,12 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Widget: Internet Simulator"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L1 Internet Simulator: Sending Text_2021"
@@ -2601,7 +2591,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L1 CFU how use internet_2021"
@@ -2624,7 +2614,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L1 CFU paths_2021"
@@ -2642,12 +2632,12 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Internet Simulator: Broadcast Mode"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L2 CSP Internet Simulator Broadcast_2021"
@@ -2670,7 +2660,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L2 CSP CFU IP Addresses_2021"
@@ -2693,7 +2683,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L2 CSP CFU IP works_2021"
@@ -2711,12 +2701,12 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Internet Simulator: Routers"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L3 CSP Internet Simulator Routers_2021"
@@ -2739,7 +2729,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L3 CSP CFU Routers_2021"
@@ -2762,7 +2752,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L3 CSP CFU Redundancy_2021"
@@ -2780,12 +2770,12 @@
       "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Internet Simulator: Packets"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L4 CSP Internet Simulator Packets 2_2021"
@@ -2808,7 +2798,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L4 Multiple Choice packets_2021"
@@ -2831,7 +2821,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L4 CSP CFU terms_2021"
@@ -2849,12 +2839,12 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Internet Simulator: DNS"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L5 CSP Internet Simulator DNS_2021"
@@ -2877,7 +2867,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L4 CSP CFU scale_2021"
@@ -2900,7 +2890,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L5 CSP CFU subgroups_2021"
@@ -2923,7 +2913,7 @@
         "progression": "Unit 2 Exam"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 2 MC Assessment _2021"

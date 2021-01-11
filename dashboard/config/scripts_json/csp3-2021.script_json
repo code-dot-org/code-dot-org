@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -2595,12 +2596,12 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Exploration"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Water Conservation Sample App_2021"
@@ -2618,12 +2619,12 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Exploration"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Bird Quiz App_2021"
@@ -2641,12 +2642,12 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Exploration"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Hamilton Township App_2021"
@@ -2664,12 +2665,12 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Exploration"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Four Square App_2021"
@@ -2687,12 +2688,12 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Exploration"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Monarch Butterfly App_2021"
@@ -2710,12 +2711,12 @@
       "chapter": 6,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "How Computers Work"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "How Computers Work part 1 CSP_2021"
@@ -2733,12 +2734,12 @@
       "chapter": 7,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Investigation"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Water Conservation Sample App Investigate_2021"
@@ -2756,12 +2757,12 @@
       "chapter": 8,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Investigation"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Bird Quiz App Investigation_2021"
@@ -2779,12 +2780,12 @@
       "chapter": 9,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Investigation"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Hamilton Township App Investigation_2021"
@@ -2802,12 +2803,12 @@
       "chapter": 10,
       "position": 10,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Investigation"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Four Square App Investigation_2021"
@@ -2825,12 +2826,12 @@
       "chapter": 11,
       "position": 11,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Investigation"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Monarch Butterfly App Investigation_2021"
@@ -2853,7 +2854,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L1 Input Output Matching_2021"
@@ -2871,12 +2872,12 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Hamilton Township Design Mode_2021"
@@ -2894,12 +2895,12 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Themes_2021"
@@ -2917,12 +2918,12 @@
       "chapter": 15,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Colors_2021"
@@ -2940,12 +2941,12 @@
       "chapter": 16,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Images_2021"
@@ -2963,12 +2964,12 @@
       "chapter": 17,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Icons_2021"
@@ -2986,12 +2987,12 @@
       "chapter": 18,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode ids_2021"
@@ -3009,12 +3010,12 @@
       "chapter": 19,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Copy an App"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Copy an App_2021"
@@ -3037,7 +3038,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L2 CSP CFU ID names_2021"
@@ -3055,12 +3056,12 @@
       "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Prototype"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Bird Quiz Storyboard_2021"
@@ -3078,12 +3079,12 @@
       "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build Your Screens"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L4 Design Screens_2021"
@@ -3106,7 +3107,7 @@
         "progression": "Check For Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L5 CSP CFU natural language_2021"
@@ -3124,12 +3125,12 @@
       "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Code Investigation"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Investigate Sequential 1_2021"
@@ -3147,12 +3148,12 @@
       "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Code Investigation"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Investigate Sequential 2_2021"
@@ -3170,12 +3171,12 @@
       "chapter": 26,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Code Investigation"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 1_2021"
@@ -3193,12 +3194,12 @@
       "chapter": 27,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Code Investigation"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 2_2021"
@@ -3216,12 +3217,12 @@
       "chapter": 28,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Code Investigation"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 3_2021"
@@ -3244,7 +3245,7 @@
         "progression": "Check for Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L6 CSP CFU Sequential vs Event Driven_2021"
@@ -3262,12 +3263,12 @@
       "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 1_2021"
@@ -3285,12 +3286,12 @@
       "chapter": 31,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 2_2021"
@@ -3308,12 +3309,12 @@
       "chapter": 32,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 3_2021"
@@ -3331,12 +3332,12 @@
       "chapter": 33,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 4_2021"
@@ -3354,12 +3355,12 @@
       "chapter": 34,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 5_2021"
@@ -3377,12 +3378,12 @@
       "chapter": 35,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 6_2021"
@@ -3400,12 +3401,12 @@
       "chapter": 36,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 8_2021"
@@ -3428,7 +3429,7 @@
         "progression": "Check for Understanding"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L7 CSP CFU What was confusing_2021"
@@ -3446,12 +3447,12 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pair Programming"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 L08 Pair Programming Video_2021"
@@ -3469,12 +3470,12 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Add Code"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L4 Add Code_2021"
@@ -3492,12 +3493,12 @@
       "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Add More Code"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L9 Add More Code_2021"
@@ -3520,7 +3521,7 @@
         "progression": "Submit Your App"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L10 Submit App_2021"
@@ -3543,7 +3544,7 @@
         "progression": "Unit 3 Exam"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 3 MC Assessment _2021"

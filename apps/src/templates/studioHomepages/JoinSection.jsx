@@ -168,6 +168,7 @@ export default class JoinSection extends React.Component {
             onClick={this.joinSection}
             className="ui-test-join-section"
             color={Button.ButtonColor.gray}
+            disabled={this.state.sectionCode.length === 0}
             text={i18n.joinSection()}
             style={styles.button}
           />

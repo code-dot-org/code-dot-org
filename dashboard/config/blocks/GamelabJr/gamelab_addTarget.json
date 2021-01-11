@@ -1,0 +1,22 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "addTarget",
+    "blockText": "{SPRITE} gets target {TARGET}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "TARGET",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}
