@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import Button from '@cdo/apps/templates/Button';
+import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
 
 const styles = {
   main: {
@@ -66,7 +67,8 @@ const styles = {
 };
 
 const INITIAL_STATE = {
-  sectionCode: ''
+  sectionCode: '',
+  displayCaptcha: false
 };
 
 export default class JoinSection extends React.Component {
@@ -83,8 +85,8 @@ export default class JoinSection extends React.Component {
       url: '/api/v1/sections/require_captcha',
       dataType: 'json'
     }).done(data => {
-      const {key} = data;
-      this.setState({key});
+      const {key, requireCaptcha} = data;
+      this.setState({key, requireCaptcha});
     });
   };
 
@@ -96,11 +98,22 @@ export default class JoinSection extends React.Component {
 
   handleKeyUp = event => {
     if (event.key === 'Enter') {
-      this.joinSection();
+      this.validateRecaptcha();
     } else if (event.key === 'Escape') {
       this.setState(INITIAL_STATE);
     }
   };
+
+  validateRecaptcha = () => {
+    const {requireCaptcha} = this.state;
+    if (requireCaptcha) {
+      this.setState({displayCaptcha: true});
+    } else {
+      this.joinSection();
+    }
+  };
+
+  close = () => this.setState({displayCaptcha: false});
 
   joinSection = () => {
     const sectionCode = this.state.sectionCode;
@@ -164,11 +177,20 @@ export default class JoinSection extends React.Component {
           />
           <Button
             __useDeprecatedTag
-            onClick={this.joinSection}
+            onClick={this.validateRecaptcha}
             color={Button.ButtonColor.gray}
             disabled={this.state.sectionCode.length === 0}
             text={i18n.joinSection()}
             style={styles.button}
+          />
+        </div>
+        <div>
+          <ReCaptchaDialog
+            isOpen={this.state.displayCaptcha}
+            handleSubmit={this.joinSection}
+            handleCancel={this.close}
+            submitText={i18n.verifyNotBot()}
+            siteKey={this.state.key}
           />
         </div>
         <div style={styles.clear} />

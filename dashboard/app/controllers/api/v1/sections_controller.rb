@@ -169,7 +169,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def require_captcha
     return head :forbidden unless current_user
     site_key = CDO.recaptcha_site_key
-    render json: {key: site_key}
+    # TODO: change this back to dynamic value once you had changes in
+    render json: {key: site_key, requireCaptcha: true}
   end
 
   private
