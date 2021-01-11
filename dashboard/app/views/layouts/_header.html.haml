@@ -105,14 +105,6 @@
     # don't trust outside content in parameter :puzzle_page - should be integer, so immediately call to_i
     puzzle_page = params[:puzzle_page] ? params[:puzzle_page].to_i : ApplicationHelper::PUZZLE_PAGE_NONE
 
-    if script_level
-      uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page - 1}" : script_level.level_id.to_s
-    else
-      # A bit of an abuse of uid, we dont have a specific level id in this case, so just use a hardcoded string
-      uid = SharedConstants::LEVEL_KIND.stage_extras
-    end
-
-
     script_data = script.summarize_header
     lesson_group_data = script.lesson_groups.map(&:summarize)
     stage_data = (@stage || script_level.lesson).summarize
@@ -150,11 +142,12 @@
       #{lesson_group_data.to_json},
       #{stage_data.to_json},
       #{user_progress},
-      "#{uid}",
+      #{script_level&.level_id || -1},
       #{puzzle_page},
       #{signed_in},
       #{lesson_extras_enabled || 'null'},
-      #{script_name_data.to_json}
+      #{script_name_data.to_json},
+      #{!script_level},
     )
     //]]>
 
