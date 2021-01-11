@@ -2270,20 +2270,18 @@ class User < ApplicationRecord
   # There aare two possible states in which we would want to reset section attempts
   # 1) Initialize for the first time 2) 24 hours have passed since last attempt
   def reset_section_attempts?
-    !num_section_attempts || num_section_attempts == 0 || (DateTime.now - DateTime.parse(properties['section_attempts_last_reset'])).to_i > 0
+    !num_section_attempts || !properties['section_attempts_last_reset'] || num_section_attempts == 0 || (DateTime.now - DateTime.parse(properties['section_attempts_last_reset'])).to_i > 0
   end
 
   def reset_section_attempts
     properties['section_attempts'] = 0
     properties['section_attempts_last_reset'] = DateTime.now.to_s
+    save
   end
 
   def reset_section_attempts_if_needed
     # Failed section attempts reset after 24 hours
-    if reset_section_attempts?
-      reset_section_attempts
-      save
-    end
+    reset_section_attempts if reset_section_attempts?
   end
 
   def display_captcha?

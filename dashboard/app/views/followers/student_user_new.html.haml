@@ -83,7 +83,7 @@
                   = t('signup_form.gender')
                 = f.select :gender, gender_options
             %br/
-            = submit_tag 'Register', class: 'btn btn-primary', disabled: true, id: 'register_join_section'
+            = submit_tag 'Register', class: 'btn btn-primary', id: 'register_join_section'
 
         #student-terms
           != t('signup_form.student_terms_markdown', markdown: true)
@@ -117,9 +117,6 @@
       password_message_confirmation.text("#{t('signup_form.mismatch_password')}");
     } else {
       password_message_confirmation.text("");
-      if ($('#user_password').val().length >= 6) {
-        $("#register_join_section").prop("disabled", false);
-      }
     }
     password_message.text("");
   });
