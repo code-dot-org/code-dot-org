@@ -1278,6 +1278,8 @@ el:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": όχι ψάρια
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": η ετικέτα μου
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": δεν είναι η ετικέτα μου
+      Mikelab_allSpritesWithAnimation:
+        text: aalab όλοι {ANIMATION}
       Mikelab_changePropBy:
         options:
           PROPERTY:

@@ -315,10 +315,17 @@ uz:
       sections: "Boʻlimlar"
       help_support: "Yordam va qo‘llab-quvvatlash"
       report_bug: "Muammo haqida xabar berish"
+      report_abuse: "Report abuse"
       teacher_community: "O‘qituvchilar hamjamiyati"
       professional_learning: "Kasbiy ta'lim"
       documentation: "Hujjatlar"
       tutorials: "Qo‘llanmalar"
+      app_lab_documentation: "App Lab Documentation"
+      app_lab_tutorials: "App Lab Tutorials"
+      game_lab_documentation: "Game Lab Documentation"
+      game_lab_tutorials: "Game Lab Tutorials"
+      sprite_lab_documentation: "Sprite Lab Documentation"
+      sprite_lab_tutorials: "Sprite Lab Tutorials"
       web_lab_documentation: "Web Lab hujjatlari"
       educate_overview: "Pedagog muxtasari"
       educate_elementary: "Boshlang'ich maktab"
@@ -341,9 +348,11 @@ uz:
       about_contact: "Biz bilan bog'laning"
       about_faqs: "Ko‘p beriladigan savollar"
       learn: "Oʻrganish"
+      stats: "Statistika"
       help_us: "Bizga yordam bering"
       teach: "O'qiting"
       about: "Biz haqimizda"
+      legal: "Privacy & Legal"
       legal_privacy: "Maxfiylik siyosati"
       legal_tos: "Xizmat shartlari"
     user:
@@ -351,6 +360,7 @@ uz:
       district_dashboard: 'Tuman paneli'
       label: 'Salom %{username}'
       stats: 'Dasturlash studiyasi'
+      my_projects: 'My projects'
       settings: 'Akkaunt sozlamalari'
       logout: 'Chiqish'
       signin: 'Kirish'
@@ -368,11 +378,13 @@ uz:
       basketball: 'Basketbol'
       bounce: 'Sakrash'
       calc: 'Calc'
+      dance: 'Dance Party'
       eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'Muzlagan (Frozen)'
       gamelab: 'O‘yin laboratoriyasi'
       gamelab_jr: 'O‘yin laboratoriyasi (beta)'
+      gumball: 'The Amazing World of Gumball'
       iceage: 'Muzlik davri'
       infinity: 'Cheksizlik'
       makerlab: 'Maker asboblar to‘plami'
@@ -385,7 +397,10 @@ uz:
       playlab_k1: 'Play Lab (Maktabgacha)'
       scratch: 'Scratch'
       sports: 'Sport'
+      spritelab: 'Sprite Lab'
       starwars: 'Yulduzlar urushi'
+      starwarsblocks: 'Star Wars (Blocks)'
+      starwarsblocks_hour: 'Star Wars (Blocks)'
       weblab: 'Web Lab'
       view_all: 'Barcha loyihalarni ko‘rish...'
     popup:
@@ -417,6 +432,7 @@ uz:
       student: 'O‘quvchi'
       viewing_solution: 'Yechimni ko''rish'
       try_it_yourself: 'Oʻzingiz urinib koʻring'
+      section: 'Section'
       example: 'Misol yechimi'
       example_with_number: 'Misol yechimi %{solution_number}'
       submitted_on: 'Yoqilgan:'
@@ -508,6 +524,7 @@ uz:
     no_primary_course: "Dasturlash studiyasi boshqa kursini sinab ko‘ring"
     choose_next_course: "Quyidagi birini tanlab Code Studio kursini sinab ko'ring"
     print_certificate: "Sertifikatni chop etish"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
   move_students:
     new_section_dne: "Kechirasiz, lekin %{new_section_code} bo'lim mavjud emas. Boshqa bo'lim kodini kiriting."
     section_code_cant_be_current_section: "Joriy bo'lim yangi bo'lim bilan bir xil bo'lishi mumkin emas."
@@ -538,6 +555,7 @@ uz:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org p5.play-dan foydalanadi, u <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1 </a> ostida litsenziyalangan.'
     powered_by_aws: 'Amazon Web Services va "Powered by AWS" logotipi Amazon.com, Inc yoki uning AQSh va/yoki boshqa mamlakatlardagi filiallarining savdo belgilaridir.'
+    built_on_github: 'Microsoft-dan GitHub-da yaratilgan'
     google_copyright: '&copy; Google Inc. ruxsati bilan ishlatilgan. Google Classroom - Google Inc savdo belgisi.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipi va Hour of Code&reg; Code.org savdo belgilari.'
     copyright: 'Mualliflik huquqi'
@@ -618,6 +636,10 @@ uz:
       body_short: "Ilovani ishlab chiqing, uni bloklar yoki JavaScript kodini ishlab chiqing, keyin uni bir necha soniya ichida ulashing."
       audience: '13+ yosh'
       cta: 'Qanday qilishni o‘rganing'
+    dance:
+      title: 'Dance Party'
+    dance-2019:
+      title: 'Dance Party'
     hoc:
       title: 'Klassik labirint'
       body: 'Informatika asoslari bilan tanishib ko‘ring. Millionlar buni uddalashdi.'
@@ -626,6 +648,7 @@ uz:
       body: 'O‘z o‘yiningizni 10 daqiqa ichida yaratishni xohlaysizmi? Flappy Code darsimizni sinab ko‘ring!'
     20-hour:
       title: 'Tezlashtirilgan kurs'
+      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
       body_short: '2-4-kurslarning tezlashtirilgan versiyasida asosiy kompyuter fanlarini o''rganing.'
     hoc2014:
       try_new_tutorial: 'Beta-versiyadagi yangi "Daturlash soati" o''quv qo''llanmamizni sinab ko''ring'
@@ -1010,11 +1033,13 @@ uz:
         codecademy: 'CodeCademy'
         csfirst: 'Google CS First'
         khan: 'Xon Akademiyasi'
+        kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
         other: "Boshqa:"
       robotics:
         grok: 'Grok Learning'
+        kodable: 'Kodable'
         lego: 'LEGO Education'
         microbit: 'Microbit'
         ozobot: 'Ozobot'
@@ -1052,6 +1077,10 @@ uz:
     message: 'Bizning saytni ko''rib chiqishni davom ettirish yoki "Men roziman" tugmasini bosish orqali siz cookie-fayllarni kompyuteringizda yoki qurilmangizda saqlashga rozilik bildirasiz.'
     more_information: "Code.org Maxfiylik siyosati bilan tanishing"
     accept: 'Roziman'
+  page_not_found_title: "Sahifa topilmadi"
+  page_not_found_header: '404: Sahifa topilmadi'
+  page_not_found_description: "Siz izlayotgan sahifa ushbu manzilda mavjud emas. Veb-manzilni tekshiring va qayta yuboring. Yoki, bizning bosh sahifamizga qayting."
+  page_not_found_button: "Bosh sahifaga qaytish"
   copy: 'Nusxalash'
   maker:
     google_oauth:

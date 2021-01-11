@@ -45,6 +45,7 @@ const initialState = {
   scriptName: null,
   scriptTitle: null,
   courseId: null,
+  isLessonExtras: false,
 
   // The remaining fields do change after initialization
   // a mapping of level id to result
@@ -65,7 +66,8 @@ const initialState = {
   // possible that we can get the user progress back from the DB
   // prior to having information about the user login state.
   // TODO: Use sign in state to determine where to source user progress from
-  usingDbProgress: false
+  usingDbProgress: false,
+  currentPageNumber: 0
 };
 
 /**
@@ -90,10 +92,13 @@ export default function reducer(state = initialState, action) {
       scriptName: action.scriptName,
       scriptTitle: action.scriptTitle,
       scriptDescription: action.scriptDescription,
+      scriptStudentDescription: action.scriptStudentDescription,
       betaTitle: action.betaTitle,
       courseId: action.courseId,
       currentStageId,
-      hasFullProgress: action.isFullProgress
+      hasFullProgress: action.isFullProgress,
+      isLessonExtras: action.isLessonExtras,
+      currentPageNumber: action.currentPageNumber
     };
   }
 
@@ -394,9 +399,12 @@ export const initProgress = ({
   scriptName,
   scriptTitle,
   scriptDescription,
+  scriptStudentDescription,
   betaTitle,
   courseId,
-  isFullProgress
+  isFullProgress,
+  isLessonExtras,
+  currentPageNumber
 }) => ({
   type: INIT_PROGRESS,
   currentLevelId,
@@ -409,9 +417,12 @@ export const initProgress = ({
   scriptName,
   scriptTitle,
   scriptDescription,
+  scriptStudentDescription,
   betaTitle,
   courseId,
-  isFullProgress
+  isFullProgress,
+  isLessonExtras,
+  currentPageNumber
 });
 
 export const clearProgress = () => ({
@@ -545,8 +556,7 @@ const peerReviewLevels = state =>
 const isCurrentLevel = (currentLevelId, level) => {
   return (
     !!currentLevelId &&
-    ((level.ids &&
-      level.ids.map(id => id.toString()).indexOf(currentLevelId) !== -1) ||
+    ((level.ids && level.ids.indexOf(currentLevelId) !== -1) ||
       level.uid === currentLevelId)
   );
 };

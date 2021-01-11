@@ -187,6 +187,7 @@ uz:
         title: Estafetali dasturlash
         desc: Talabalar estafeta poygasida qatnashadilar, u yerda "Katak qog'ozli dasturlash" tasviriga asoslanib algoritm yozish uchun hovli bo'ylab yuguradilar. Ular bir vaqtning o'zida bitta ko'rsatma yozishlari mumkin va agar biror joyda xato bo'lsa, hamma narsani shu nuqtagacha o'chirib tashlashlari kerak.
       courseD_unplugged_conditionalsCards:
+        title: Conditionals with Cards
         desc: Shartli bayonotlar to'g'risida ma'lumot olish uchun talabalar karta o'yini o'ynaydilar va "Agar men qizil karta olsam, men ball olaman" va "agar men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
       courseD_unplugged_binaryImages:
         title: Ikkilik Rasmlar
@@ -227,6 +228,7 @@ uz:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
+        title: My Robotic Friends
         desc: Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
       PlantASeed_2018:
         title: 'Hayotiy algoritmlar: Urug‘ ekish'
@@ -282,6 +284,7 @@ uz:
         title: Estafetali dasturlash
         desc: Ushbu mashg'ulotda disk sozlamasi  va qat'iyatlilik bo'yicha qisqa dars bilan boshlanadi, so'ngra talabalar jamoalarga bo'linib, birgalikda birma-bir ko'rsatma yozish uchun birgalikda harakat qilishlari bilan tezda soat poygasiga o'tishadi.
       courseB_unplugged_MRF_2019:
+        title: My Robotic Friends
         desc: Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
       BuildingAFoundation_2019:
         title: 'tarjima qilinmagan: en-US.data.unplugged.BuildingAFoundation_2018.title'

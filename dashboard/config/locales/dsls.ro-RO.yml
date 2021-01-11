@@ -2411,5 +2411,97 @@ ro-RO:
           * [Bărci de aluminiu](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Ghid de lecție (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       outbreak_story:
         content1: descrierea aici
+        markdown: "Epideme: Cod Propriu de Simulare\n\n## Bine Ai Venit în Orașul
+          Monstrullui!\nOrașul Monstrului era, de obiceim un loc vesel și sănătos.
+          Monștrii Orașului Monstrului iubeau să se plimbe și să își viziteze prietenii.
+          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nÎntr-o zi, unul dintre monștri a început să se simtă
+          rău. Monstrul a căpătat un **virus**! Un virus este un germen mic, care
+          te poate face să devii bolnav. Ceilalți monștri nu au fost prea îngrijorați.
+          Au continuat să îți viziteze prietenii.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nCurând după aceea, alți doi monștri s-au îmbolnăvit.
+          De același virus! Se pare că au luat virusul de la prietenul lor.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nÎncet, virusul s-a  împrăștiat la alți monștri din
+          apropiere. Monștrii sănătoși au început să se îngrijoreze că s-ar putea
+          îmbolnăvi. Monștrii bolnavi au început să se îngrijoreze că ar putea să
+          îi îmbolnăvească pe ceilalți.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">"
       outbreak_story2:
         content1: descrierea aici
+        markdown: "# Epidemie: Gândind Ca un Om de Știință\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulările sun un mod minunat de a
+          învăța lucrurile care pot fi greu de observat în lumea reală. Ele îi ajută
+          pe oamenii de știință să rezolve probleme și să testeze idei noi în mod
+          sigur și eficient. Simularea ta este un mod de a arăta cum poate arăta o
+          epidemie virusală înt Orașul Monstrului.\n\n## Resetează și Reia!\nChiar
+          dacă scrii codul personal, este imposibil să știi exact ce se va întâmpla
+          când apeși pe rulare. Monștrii colindă aleatoriu, deci nu poți știi dacă
+          virului se va împrăștia rapid sau lent. Ori de câte ori schimbi codul, asigură-te
+          să fulezi simularea ta mai mult de o dată. Lucrurile nu se petrec la fel
+          de două ori!\n\n## Culegerea Datelor\nÎncearcă să scrii observațiile pe
+          măsură ce rulezi simularea. Poți număra monștrii care se îmbolnăvesc sau
+          folosi un temporizator pentru a vedea cât de rapid se petrec lucrurile.
+          De exemplu, cât durează până ce toți monștrii se îmbolnăvesc dacă niciunul
+          nu poartă măști?\n\n## Predicții\nDacă înțelegi modelul tău, poți să îl
+          folosești pentru a face predicții. Poți chiar să schimbi modul de funcționare
+          a simulării și să presupui ce va fi diferit. De exemplu:\n* Ce s-ar întâmpla
+          acă ar fi de două ori mai mulți monștri?\n* Ce s-ar întâmpla dacă monștrii
+          s-ar mișca cu jumătate din viteză?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Este Orașul Monstrului ca lumea reală?\nExistă
+          o limită a cât de ralist poate fi orice model\n* Ce are în comun simularea
+          epidemiei tale cu epidemiile virale din lumea reală?\n* Care sunt diferențele?\nCând
+          termini această activitate, discută aceste întrebări cu profesorii sau familia
+          ta!\n\n## Ce mai putem modela?\nAi creat deja un model de lucru al epidemiei
+          din Orașul Monstrului. Care sunt lucrurile pe care simularea ta nu le poate
+          face sau care arată ce ai dori să facă? Apasă continuă pentru a continua
+          si a învăța să modelezi și mai mult:\n* Mărind numărul de monștri în simulare\n*
+          Ajutând monștrii să își revină din virus\n* Probabilitate, imunitate, vaccinuri
+          și multe altele!\n\nDe asemenea, poți să partajezi modelul tău de simulare
+          cu alții, sau să partajezi un mesaj despre ce crezi că putem să facem ca
+          să îi menținem pe ceilalți sănătoși atunci când un virus intră în oraș. "
+      outbreak_freeplay_choice:
+        display_name: Joc la liber
+        description: Ai terminat tutorialul! Continuă să faci schimbări sau îmbunătățiri
+          ale proiectului tău. Poți alege să continui să lucrezi cu aceleazi blocuri
+          sau să încerci o cutie cu instrumente expandată.

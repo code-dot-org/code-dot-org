@@ -1578,6 +1578,13 @@
         },
         "behaviors free play_2020": {
           "behaviors_edit": "Kodu bu davranışa ekleyin."
+        },
+        "outbreak2": {
+          "minitoolbox": "Bloğu genişletmek için buraya tıklayın.",
+          "pointerlocation": "Buraya bir konu bloğu sürükleyin."
+        },
+        "outbreak7": {
+          "costumes_callout": "Yeni bir kostüm yapmak için tıklayın"
         }
       }
     }

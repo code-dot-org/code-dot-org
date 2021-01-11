@@ -78,6 +78,10 @@ progress.showDisabledBubblesAlert = function() {
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
+ * @param {boolean} isLessonExtras Boolean indicating we are not on a script
+ *   level and therefore are on lesson extras
+ * @param {number} currentPageNumber The page we are on if this is a multi-
+ *   page level
  */
 progress.generateStageProgress = function(
   scriptData,
@@ -87,7 +91,9 @@ progress.generateStageProgress = function(
   currentLevelId,
   saveAnswersBeforeNavigation,
   signedIn,
-  stageExtrasEnabled
+  stageExtrasEnabled,
+  isLessonExtras,
+  currentPageNumber
 ) {
   const store = getStore();
 
@@ -107,7 +113,9 @@ progress.generateStageProgress = function(
     },
     currentLevelId,
     false,
-    saveAnswersBeforeNavigation
+    saveAnswersBeforeNavigation,
+    isLessonExtras,
+    currentPageNumber
   );
 
   store.dispatch(
@@ -261,13 +269,19 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {boolean} isFullProgress - True if this contains progress for the entire
  *   script vs. a single stage.
  * @param {boolean} [saveAnswersBeforeNavigation]
+ * @param {boolean} [isLessonExtras] Optional boolean indicating we are not on
+ *   a script level and therefore are on lesson extras
+ * @param {number} [currentPageNumber] Optional. The page we are on if this is
+ *   a multi-page level
  */
 function initializeStoreWithProgress(
   store,
   scriptData,
   currentLevelId,
   isFullProgress,
-  saveAnswersBeforeNavigation = false
+  saveAnswersBeforeNavigation = false,
+  isLessonExtras = false,
+  currentPageNumber
 ) {
   store.dispatch(
     initProgress({
@@ -281,9 +295,12 @@ function initializeStoreWithProgress(
       scriptName: scriptData.name,
       scriptTitle: scriptData.title,
       scriptDescription: scriptData.description,
+      scriptStudentDescription: scriptData.studentDescription,
       betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
-      isFullProgress: isFullProgress
+      isFullProgress: isFullProgress,
+      isLessonExtras: isLessonExtras,
+      currentPageNumber: currentPageNumber
     })
   );
 

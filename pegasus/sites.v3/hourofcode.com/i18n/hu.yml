@@ -5602,28 +5602,31 @@ hu:
     Computer programmers often start projects by using everyday language to write
     out what they want to happen in their code–this is called pseudocode.Youth will
     work in groups to write pseudocode for a simple movement or dance move.
-  tutorial_irobotpicture_longdescription: Robots have lots of sensors that work together
-    to help the robot understand everything around it. Just like sensors, our friends
-    can often see, hear, feel or understand things that we cannot. In this activity,
-    work together to help decode secret messages and crack the code!
-  tutorial_kcjmyself_longdescription: In this activity, you'll learn how to use Scratch
-    to code an animation all about you! Design a custom character to represent yourself,
-    make it move around, and add different backdrops to show off your hometown. This
-    project is simple enough for kids to complete by themselves or with support from
-    a grown up.
-  tutorial_nearpodalgorithms_longdescription: 'In this Nearpod lesson, students identify
-    an algorithm as a set of step-by-step directions. Students learn to create, test,
-    and fix an algorithm to complete a specific task. '
-  tutorial_kibodrop_longdescription: Engineering is about persistence and grit. Today
-    the students will become engineers, learning the steps of the Engineering Design
-    Process. They will create models out of craft and recycled materials, then they
-    will test the sturdiness of their models by dropping them from ankle height. This
-    is an unplugged activity; KIBO robots are optional.
-  tutorial_ozobotcolor1_longdescription: Students will learn the basic functionality
-    of Ozobot, including how to calibrate the bot's sensors, and how to draw lines
-    for the bot to follow.
-  tutorial_scigirlspixels_longdescription: 'In this unplugged activity, you will learn
-    what a pixel is and how to send a simple black and white image to a friend! '
+  tutorial_irobotpicture_longdescription: A robotoknak számos szenzora van, amik együtt
+    dolgoznak, hogy segítsenek a robotnak mindent megérteni a környezetében. Pont
+    mint a szenzorok, a barátaink is sokszor látnak, hallanak, éreznek vagy megértenek
+    olyan dolgokat, amiket mi nem. Ebben a tevékenységben dolgozzatok együtt, hogy
+    segítsetek dekódolni a titkos üzeneteket és feltörjétek a kódot!
+  tutorial_kcjmyself_longdescription: Ebben a tevékenységben azt fogod megtanulni,
+    hogy hogyan használd a Scratch-et, hogy egy olyan animációt kódolhass, ami rólad
+    szól! Tervezz egy egyedi karakter, aki képviselni fog téged, késztesd mozgásra,
+    és adj hozzá különböző háttereket, hogy megmutasd a szülővárosodat! Ez a projekt
+    elég egyszerű ahhoz, hogy a gyerekek magukban, vagy egy felnőtt támogatásával
+    teljesítsék őket.
+  tutorial_nearpodalgorithms_longdescription: 'Ebben a Nearpod leckében a tanulók
+    egy algoritmus parancsait azonosítják be lépésről lépésre. A diákok megtanulnak
+    algoritmust létrehozni, tesztelni és javítani egy adott feladat elvégzéséhez. '
+  tutorial_kibodrop_longdescription: A mérnöki munka a kitartásról és az elszántságról
+    szól. Ma a hallgatók mérnökökké válnak, megtanulva a mérnöki tervezési folyamat
+    lépéseit. Kézműves és újrahasznosított anyagokból készítenek modelleket, majd
+    bokamagasságból leejtve tesztelik modelljeik szilárdságát. Ehhez a tevékenységhez
+    nincs szükség informatikai eszközökre; a KIBO robotok opcionálisak.
+  tutorial_ozobotcolor1_longdescription: A hallgatók megtanulják az Ozobot alapvető
+    funkcióit, beleértve a bot érzékelőinek kalibrálását, és hogy hogyan rajzoljanak
+    vonalakat amiket a bot követni fog.
+  tutorial_scigirlspixels_longdescription: 'Ebben az informatikai eszköz nélkül végezhető
+    tevékenységben megtanulhatod, hogy mi az a pixel, és hogy hogyan küldj egy egyszerű
+    fekete-fehér képet egy barátnak! '
   tutorial_kcjheroines_longdescription: In this activity, you'll learn about different
     Canadian women who have made history. Using Scratch, you'll learn how to code
     a video game celebrating their lives and accomplishments. Choose a heroine, customize
