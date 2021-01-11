@@ -262,6 +262,45 @@ function renderFooterInSharedGame() {
   );
 }
 
+Applab.autogenerateML = function() {
+  $.ajax({
+    url: '/api/v1/ml_models',
+    method: 'GET'
+  }).then(modelData => {
+    console.log('modelData', modelData);
+    modelData.selectedFeatures.forEach(feature => {
+      var label = designMode.createElement('LABEL');
+      label.textContent = feature + ':';
+      label.id = feature + '_label';
+      if (Object.keys(modelData.featureNumberKey).includes(feature)) {
+        var select = designMode.createElement('DROPDOWN');
+        select.id = feature + '_dropdown';
+        // App Lab automatically addss "option 1" and "option 2", remove them.
+        select.options.remove(0);
+        select.options.remove(0);
+        Object.keys(modelData.featureNumberKey[feature]).forEach(option => {
+          var optionElement = document.createElement('option');
+          optionElement.text = option;
+          select.options.add(optionElement);
+        });
+      } else {
+        var input = designMode.createElement('TEXT_INPUT');
+        input.id = feature + '_input';
+      }
+    });
+    var label = designMode.createElement('LABEL');
+    label.textContent = modelData.labelColumn;
+    // TODO: this could be problematic if the name isn't formatted appropriately
+    label.id = modelData.name + '_label';
+    var prediction = designMode.createElement('TEXT_INPUT');
+    prediction.text = '?';
+    prediction.id = modelData.name + '_prediction';
+    var predictButton = designMode.createElement('BUTTON');
+    predictButton.textContent = 'Predict';
+    predictButton.id = modelData.name + '_predict';
+  });
+};
+
 /**
  * @param {string} code The code to search for Data Storage APIs
  * @return {boolean} True if the code uses any data storage APIs
@@ -544,6 +583,7 @@ Applab.init = function(config) {
     // Set designModeViz contents after it is created in configureDom()
     // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || '');
+    Applab.autogenerateML();
   };
 
   config.afterEditorReady = function() {

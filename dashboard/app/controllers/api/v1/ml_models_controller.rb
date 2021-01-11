@@ -31,7 +31,8 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # GET api/v1/ml_models/:model_id
   # Retrieve a trained ML model from S3
   def get_trained_model
-    model = download_from_s3(params[:model_id])
+    model_id = params[:model_id] ? params[:model_id] : UserMlModel.where(user_id: current_user.id).last.model_id
+    model = download_from_s3(model_id)
     render json: model
   end
 
