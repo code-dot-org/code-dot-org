@@ -387,7 +387,7 @@ class ScriptDSL < BaseDSL
     t = "lesson '#{escape(lesson.key)}'"
     t += ", display_name: '#{escape(lesson.name)}'" if lesson.name
     t += ', lockable: true' if lesson.lockable
-    t += ", has_lesson_plan: #{lesson.has_lesson_plan}"
+    t += ", has_lesson_plan: #{!!lesson.has_lesson_plan}"
     t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
     s << t
     lesson.script_levels.each do |sl|
