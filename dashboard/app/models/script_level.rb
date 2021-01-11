@@ -128,6 +128,14 @@ class ScriptLevel < ApplicationRecord
       seed_key_data = script_level.seeding_key(seed_context, false)
       script_level_attributes[:seed_key] = HashingUtils.ruby_hash_to_md5_hash(seed_key_data)
 
+      # Preserve the level_keys property. If we detected an existing script
+      # level earlier, then the level keys have not changed and it is safe to
+      # use the existing level_keys. Otherwise these will be regenerated.
+      # These are not strictly needed, because level_keys are only used during
+      # seeding. However, this eliminates the problem where level_keys disappear
+      # from .script_json files after a script is saved.
+      properties[:level_keys] = script_level.get_level_keys(seed_context, true)
+
       script_level.assign_attributes(script_level_attributes)
       # We must assign properties separately since otherwise, a missing property won't correctly overwrite the current value
       script_level.properties = properties
@@ -482,6 +490,7 @@ class ScriptLevel < ApplicationRecord
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
       new_level[:uid] = "#{level_id}_#{page_index}"
+      new_level[:page_number] = page_index + 1
       new_level[:url] << "/page/#{page_index + 1}"
       new_level[:position] = last_level_summary[:position] + page_index
       new_level[:title] = last_level_summary[:position] + page_index
@@ -514,13 +523,26 @@ class ScriptLevel < ApplicationRecord
     lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
     if lesson_extra_user_level
       {
+        id: lesson_extra_user_level.id,
         bonus: true,
         user_id: student.id,
         status: SharedConstants::LEVEL_STATUS.perfect,
         passed: true
       }.merge!(lesson_extra_user_level.attributes)
+    elsif bonus_level_ids.count == 0
+      {
+        # Some lessons have a lesson extras option without any bonus levels. In
+        # these cases, they just display previous lesson challenges. These should
+        # be displayed as "perfect." Example level: /s/express-2020/stage/28/extras
+        id: -1,
+        bonus: true,
+        user_id: student.id,
+        passed: true,
+        status: SharedConstants::LEVEL_STATUS.perfect
+      }
     else
       {
+        id: bonus_level_ids.first,
         bonus: true,
         user_id: student.id,
         passed: false,
@@ -557,6 +579,7 @@ class ScriptLevel < ApplicationRecord
     end
 
     teacher_panel_summary = {
+      id: level.id,
       contained: contained,
       submitLevel: level.properties['submittable'] == 'true',
       paired: paired,

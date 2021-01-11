@@ -87,6 +87,7 @@ class FoormEditor extends React.Component {
 
   componentDidMount() {
     this.props.populateCodeMirror();
+    this.previewFoorm();
   }
 
   componentDidUpdate(prevProps, prevState) {

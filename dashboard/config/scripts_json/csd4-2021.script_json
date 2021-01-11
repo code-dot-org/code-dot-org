@@ -18,7 +18,8 @@
         ]
       ],
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -33,7 +34,7 @@
       "position": 1,
       "properties": {
         "display_name": "Chapter 1: User Centered Design",
-        "big_questions": "* How do designers identify the needs of their user?\r\n* How can we ensure that a user's needs are met by our designs?\r\n* What processes will best allow us to efficiently create, test, and iterate upon our designs?",
+        "big_questions": "* How do designers identify the needs of their user?\n* How can we ensure that a user's needs are met by our designs?\n* What processes will best allow us to efficiently create, test, and iterate upon our designs?",
         "description": "This chapter introduces the design process as a specific version of the problem solving process in which empathy for a user's needs is consistently integrated. Students learn strategies for identifying user needs and assessing how well different designs address them. In particular they learn how to develop a paper prototype, how to gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps."
       },
       "seeding_key": {
@@ -47,7 +48,7 @@
       "position": 2,
       "properties": {
         "display_name": "Chapter 2: App Prototyping",
-        "big_questions": "* How do teams effectively work together to develop software?\r\n* What roles beyond programming are necessary to design and develop software?\r\n* How do designers incorporate feedback into multiple iterations of a product?",
+        "big_questions": "* How do teams effectively work together to develop software?\n* What roles beyond programming are necessary to design and develop software?\n* How do designers incorporate feedback into multiple iterations of a product?",
         "description": "This chapter is focused on a long running group project that allows students to apply all they've learned about User-Centered Design to develop an app prototype.  Working in teams, students identify a social issue that they care about and design and prototype an app to address that issue.  This is an opportunity for students to explore other roles in software development, such as product management, marketing, design, and testing."
       },
       "seeding_key": {
@@ -5984,13 +5985,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U4Ch1_2021"
-        ]
+        "progression": "Reflection"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch1_2021"
@@ -6008,15 +6006,12 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
-        "level_keys": [
-          "Example App Types_2021"
-        ]
+        "progression": "Demo Apps"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Example App Types_2021"
@@ -6034,15 +6029,12 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
-        "level_keys": [
-          "CSDU4 Quiz App Demo_2021"
-        ]
+        "progression": "Demo Apps"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Quiz App Demo_2021"
@@ -6060,15 +6052,12 @@
       "chapter": 4,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
-        "level_keys": [
-          "CSDU4 Decision App Demo_2021"
-        ]
+        "progression": "Demo Apps"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Decision App Demo_2021"
@@ -6086,15 +6075,12 @@
       "chapter": 5,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
-        "level_keys": [
-          "CSDU4 List App Demo_2021"
-        ]
+        "progression": "Demo Apps"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 List App Demo_2021"
@@ -6112,15 +6098,12 @@
       "chapter": 6,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
-        "level_keys": [
-          "CSDU4 Crowdsource App Demo_2021"
-        ]
+        "progression": "Demo Apps"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Crowdsource App Demo_2021"
@@ -6138,15 +6121,12 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
-        "level_keys": [
-          "CSDU4 Design Mode Video_2021"
-        ]
+        "progression": "Build a Screen"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Design Mode Video_2021"
@@ -6164,15 +6144,12 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
-        "level_keys": [
-          "U4 Model Design 1_2021"
-        ]
+        "progression": "Build a Screen"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Design 1_2021"
@@ -6190,15 +6167,12 @@
       "chapter": 9,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
-        "level_keys": [
-          "U4 Model Design 2_2021"
-        ]
+        "progression": "Build a Screen"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Design 2_2021"
@@ -6216,15 +6190,12 @@
       "chapter": 10,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
-        "level_keys": [
-          "U4 Model Design 3_2021"
-        ]
+        "progression": "Build a Screen"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Design 3_2021"
@@ -6242,15 +6213,12 @@
       "chapter": 11,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
-        "level_keys": [
-          "U4 Model Design 4_2021"
-        ]
+        "progression": "Build a Screen"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Design 4_2021"
@@ -6268,15 +6236,12 @@
       "chapter": 12,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Finish a Screen",
-        "level_keys": [
-          "U4 Model Design 5_2021"
-        ]
+        "progression": "Finish a Screen"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Design 5_2021"
@@ -6294,15 +6259,12 @@
       "chapter": 13,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Finish a Screen",
-        "level_keys": [
-          "U4 Model Design 6_2021"
-        ]
+        "progression": "Finish a Screen"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Design 6_2021"
@@ -6322,13 +6284,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Finish a Screen",
-        "level_keys": [
-          "U4 Model Design 7_2021"
-        ]
+        "progression": "Finish a Screen"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Design 7_2021"
@@ -6346,15 +6305,12 @@
       "chapter": 15,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "App Project: Screen Design",
-        "level_keys": [
-          "Design a Screen for your App_2021"
-        ]
+        "progression": "App Project: Screen Design"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Design a Screen for your App_2021"
@@ -6374,13 +6330,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "App Project: Screen Design",
-        "level_keys": [
-          "CSD U4 - Design Mode Project_2021"
-        ]
+        "progression": "App Project: Screen Design"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U4 - Design Mode Project_2021"
@@ -6398,15 +6351,12 @@
       "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
-        "level_keys": [
-          "U4 Model Program 1_2021"
-        ]
+        "progression": "Adding Screens"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Program 1_2021"
@@ -6424,15 +6374,12 @@
       "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
-        "level_keys": [
-          "U4 Model Program 1.5_2021"
-        ]
+        "progression": "Adding Screens"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Program 1.5_2021"
@@ -6450,15 +6397,12 @@
       "chapter": 19,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
-        "level_keys": [
-          "U4 Model Program 2_2021"
-        ]
+        "progression": "Adding Screens"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Program 2_2021"
@@ -6476,15 +6420,12 @@
       "chapter": 20,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
-        "level_keys": [
-          "U4 Model Program 2.5_2021"
-        ]
+        "progression": "Adding Screens"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Program 2.5_2021"
@@ -6502,15 +6443,12 @@
       "chapter": 21,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Events and Linking Screens",
-        "level_keys": [
-          "U4 Model Program 3_2021"
-        ]
+        "progression": "Events and Linking Screens"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Program 3_2021"
@@ -6528,15 +6466,12 @@
       "chapter": 22,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Events and Linking Screens",
-        "level_keys": [
-          "U4 Model Program 4_2021"
-        ]
+        "progression": "Events and Linking Screens"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Program 4_2021"
@@ -6556,13 +6491,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Events and Linking Screens",
-        "level_keys": [
-          "U4 Model Program 5_2021"
-        ]
+        "progression": "Events and Linking Screens"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 Model Program 5_2021"
@@ -6580,15 +6512,12 @@
       "chapter": 24,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Combining Projects",
-        "level_keys": [
-          "CSDU4 Project Import_2021"
-        ]
+        "progression": "Combining Projects"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Project Import_2021"
@@ -6608,13 +6537,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Combining Projects",
-        "level_keys": [
-          "CSDU4 Project Events_2021"
-        ]
+        "progression": "Combining Projects"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Project Events_2021"
@@ -6632,14 +6558,11 @@
       "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSDU4 Project Bug Feature_2021"
-        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU4 Project Bug Feature_2021"
@@ -6659,13 +6582,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U4Ch2_2021"
-        ]
+        "progression": "Reflection"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch2_2021"
@@ -6685,12 +6605,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSD User Centered Design Post-Project Test_2021"
-        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD User Centered Design Post-Project Test_2021"
@@ -6708,14 +6625,11 @@
       "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "csd-post-survey-intro-2019_2021"
-        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-post-survey-intro-2019_2021"
@@ -6735,12 +6649,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-post-survey-levelgroup_2021"
-        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-post-survey-levelgroup_2021"
