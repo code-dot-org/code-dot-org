@@ -18,7 +18,8 @@
         ]
       ],
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -33,7 +34,7 @@
       "position": 1,
       "properties": {
         "display_name": "Chapter 1: Representing Information",
-        "big_questions": "* Why is representation important in problem solving?\r\n* What features does a representation system need to be useful?\r\n* What is necessary to create usable binary representation systems?\r\n* How can we combine systems together to get more complex information?\r\n",
+        "big_questions": "* Why is representation important in problem solving?\n* What features does a representation system need to be useful?\n* What is necessary to create usable binary representation systems?\n* How can we combine systems together to get more complex information?\n",
         "description": "This chapter focuses on data representation and its role in solving information problems.  Students learn what a representation system needs to be useful, and how computers are able to represent different types of information using binary systems.  For the chapter project, students represent their perfect day in a binary punch card and trade with classmates to decipher."
       },
       "seeding_key": {
@@ -47,7 +48,7 @@
       "position": 2,
       "properties": {
         "display_name": "Chapter 2: Solving Data Problems",
-        "big_questions": "* How does data help us to solve problems?\r\n* How do computers and humans use data differently?\r\n* What parts of the data problem solving process can be automated?\r\n* What kinds of problems do computers use data to solve in the real world?",
+        "big_questions": "* How does data help us to solve problems?\n* How do computers and humans use data differently?\n* What parts of the data problem solving process can be automated?\n* What kinds of problems do computers use data to solve in the real world?",
         "description": "Students explore how data can be used to answer interesting questions and solve problems.  Using a modified version of the general Problem Solving Process, students look at how computers and humans use data differently and the pros and cons of automating problem solving.  After learning ways that computers use data in the real world, students choose their own problem and use data to address it."
       },
       "seeding_key": {
@@ -5237,12 +5238,12 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 black white images pixelation_2021"
@@ -5260,12 +5261,12 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 2_2021"
@@ -5283,12 +5284,12 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 3_2021"
@@ -5306,12 +5307,12 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 4_2021"
@@ -5329,12 +5330,12 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 black white images pixelation 5_2021"
@@ -5352,12 +5353,12 @@
       "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 1_2021"
@@ -5375,12 +5376,12 @@
       "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 2_2021"
@@ -5398,12 +5399,12 @@
       "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 4-new_2021"
@@ -5421,12 +5422,12 @@
       "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 5-new_2021"
@@ -5444,12 +5445,12 @@
       "chapter": 10,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 6-new_2021"
@@ -5467,12 +5468,12 @@
       "chapter": 11,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary 7-new_2021"
@@ -5490,12 +5491,12 @@
       "chapter": 12,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary and Data"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 binary video_2021"
@@ -5513,12 +5514,12 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Combining Representations"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 combining rep_2021"
@@ -5536,12 +5537,12 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Combining Representations"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 student record_2021"
@@ -5559,12 +5560,12 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Keeping Data Secret"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Encryption 2_2021"
@@ -5582,12 +5583,12 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Keeping Data Secret"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Encryption 1_2021"
@@ -5610,7 +5611,7 @@
         "progression": "Reflection"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U5Ch1_2021"
@@ -5628,12 +5629,12 @@
       "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Data Visualization"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 data visualization_2021"
@@ -5651,12 +5652,12 @@
       "chapter": 19,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Data Visualization"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Pizza_2021"
@@ -5674,12 +5675,12 @@
       "chapter": 20,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Data Visualization"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Pizza 2_2021"
@@ -5697,12 +5698,12 @@
       "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Cake Survey"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 crosstab warmup_2021"
@@ -5720,12 +5721,12 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Problem Solving"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Netflix Data Video_2021"
@@ -5743,12 +5744,12 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Problem Solving"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Waze Data Video_2021"
@@ -5766,12 +5767,12 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Problem Solving"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 Amazon Data Video_2021"
@@ -5789,12 +5790,12 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample App"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd u5 recommender sample_2021"
@@ -5817,7 +5818,7 @@
         "progression": "Reflection"
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U5Ch2_2021"
@@ -5839,7 +5840,7 @@
       "properties": {
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U5 test_2021"
@@ -5857,11 +5858,11 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-post-survey-intro-2019_2021"
@@ -5883,7 +5884,7 @@
       "properties": {
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-post-survey-levelgroup_2021"

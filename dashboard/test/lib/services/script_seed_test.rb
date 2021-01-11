@@ -20,7 +20,7 @@ module Services
     # When adding a new model that is serialized, update this test to include the model, generate new json,
     # save it to test-serialize-seeding-json.script_json, and eyeball the changes to see that they look right.
     test 'serialize_seeding_json' do
-      script = create_script_tree('test-serialize-seeding-json')
+      script = create_script_tree(name_prefix: 'test-serialize-seeding-json')
 
       filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
       # Uncomment the following line to update test-serialize-seeding-json.script_json
@@ -50,16 +50,16 @@ module Services
       #     layer down in the hierarchy.
       #   12 queries - ScriptLevel validations related to having an activity_section.
       #     These would be good candidates to eliminate in future optimization.
-      #   8 queries, one for each LevelsScriptLevel.
+      #   16 queries, one for each LevelsScriptLevel.
       #   4 queries, one to remove LessonsResources from each Lesson.
-      #   9 queries, 1 to populate the Game.by_name cache, and 8 to look up Game objects by id.
+      #   17 queries, 1 to populate the Game.by_name cache, and 16 to look up Game objects by id.
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
       # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(64) do
+      assert_queries(80) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -160,7 +160,7 @@ module Services
     # is ensured by using assert_queries(0) inside assert_script_trees_equal.
 
     test 'seed updates lesson groups' do
-      script = create_script_tree
+      script = create_script_tree(num_lesson_groups: 2)
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.lesson_groups.first.update!(big_questions: 'updated big questions')
@@ -208,7 +208,7 @@ module Services
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
       assert_equal(
-        ['Updated Activity Name', 'New Activity Name'],
+        ['Updated Activity Name', 'My Activity', 'New Activity Name'],
         lesson.lesson_activities.map(&:name)
       )
     end
@@ -232,7 +232,7 @@ module Services
       assert_script_trees_equal script_with_changes, script
       activity = script.lessons.first.lesson_activities.first
       assert_equal(
-        ['Updated Section Name', 'New Section Name'],
+        ['Updated Section Name', 'My Activity Section', 'New Section Name'],
         activity.activity_sections.map(&:name)
       )
     end
@@ -283,7 +283,7 @@ module Services
     end
 
     test 'seed deletes lesson_groups' do
-      script = create_script_tree
+      script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
 
       script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
@@ -302,22 +302,22 @@ module Services
       assert_equal [1], script.lesson_groups.map(&:position)
       assert_equal [1, 2], script.lessons.map(&:absolute_position)
       assert_equal [1, 2], script.lessons.map(&:relative_position)
-      assert_equal (1..4).to_a, script.script_levels.map(&:chapter)
+      assert_equal (1..16).to_a, script.script_levels.map(&:chapter)
       # Deleting the LessonGroup should also delete its two Lessons, their two ScriptLevels each, and their LevelsScriptLevels.
       expected_counts = original_counts.clone
       expected_counts['LessonGroup'] -= 1
       expected_counts['Lesson'] -= 2
-      expected_counts['LessonActivity'] -= 2
-      expected_counts['ActivitySection'] -= 2
-      expected_counts['ScriptLevel'] -= 4
-      expected_counts['LevelsScriptLevel'] -= 4
+      expected_counts['LessonActivity'] -= 4
+      expected_counts['ActivitySection'] -= 8
+      expected_counts['ScriptLevel'] -= 16
+      expected_counts['LevelsScriptLevel'] -= 16
       expected_counts['LessonsResource'] -= 4
       expected_counts['Objective'] -= 4
       assert_equal expected_counts, get_counts
     end
 
     test 'seed deletes lessons' do
-      script = create_script_tree
+      script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
 
       script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
@@ -334,14 +334,14 @@ module Services
       assert_script_trees_equal script_with_deletion, script
       assert_equal (1..3).to_a, script.lessons.map(&:absolute_position)
       assert_equal (1..3).to_a, script.lessons.map(&:relative_position)
-      assert_equal (1..6).to_a, script.script_levels.map(&:chapter)
+      assert_equal (1..24).to_a, script.script_levels.map(&:chapter)
       # Deleting the lesson should also delete its two ScriptLevels, and their LevelsScriptLevels.
       expected_counts = original_counts.clone
       expected_counts['Lesson'] -= 1
-      expected_counts['LessonActivity'] -= 1
-      expected_counts['ActivitySection'] -= 1
-      expected_counts['ScriptLevel'] -= 2
-      expected_counts['LevelsScriptLevel'] -= 2
+      expected_counts['LessonActivity'] -= 2
+      expected_counts['ActivitySection'] -= 4
+      expected_counts['ScriptLevel'] -= 8
+      expected_counts['LevelsScriptLevel'] -= 8
       expected_counts['LessonsResource'] -= 2
       expected_counts['Objective'] -= 2
       assert_equal expected_counts, get_counts
@@ -360,15 +360,15 @@ module Services
       script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
-      assert_equal (1..4).to_a, script.lessons.map(&:absolute_position)
-      assert_equal (1..4).to_a, script.lessons.map(&:relative_position)
-      assert_equal (1..6).to_a, script.script_levels.map(&:chapter)
+      assert_equal (1..2).to_a, script.lessons.map(&:absolute_position)
+      assert_equal (1..2).to_a, script.lessons.map(&:relative_position)
+      assert_equal (1..12).to_a, script.script_levels.map(&:chapter)
       # Deleting the activity should also delete its two ScriptLevels, and their LevelsScriptLevels.
       expected_counts = original_counts.clone
       expected_counts['LessonActivity'] -= 1
-      expected_counts['ActivitySection'] -= 1
-      expected_counts['ScriptLevel'] -= 2
-      expected_counts['LevelsScriptLevel'] -= 2
+      expected_counts['ActivitySection'] -= 2
+      expected_counts['ScriptLevel'] -= 4
+      expected_counts['LevelsScriptLevel'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -385,9 +385,9 @@ module Services
       script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
-      assert_equal (1..4).to_a, script.lessons.map(&:absolute_position)
-      assert_equal (1..4).to_a, script.lessons.map(&:relative_position)
-      assert_equal (1..6).to_a, script.script_levels.map(&:chapter)
+      assert_equal (1..2).to_a, script.lessons.map(&:absolute_position)
+      assert_equal (1..2).to_a, script.lessons.map(&:relative_position)
+      assert_equal (1..14).to_a, script.script_levels.map(&:chapter)
       # Deleting the activity section should also delete its two ScriptLevels, and their LevelsScriptLevels.
       expected_counts = original_counts.clone
       expected_counts['ActivitySection'] -= 1
@@ -412,7 +412,7 @@ module Services
       script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
-      assert_equal (1..7).to_a, script.script_levels.map(&:chapter)
+      assert_equal (1..15).to_a, script.script_levels.map(&:chapter)
       # Deleting the ScriptLevel should also delete its LevelsScriptLevel.
       expected_counts = original_counts.clone
       expected_counts['ScriptLevel'] -= 1
@@ -589,12 +589,15 @@ module Services
     end
 
     def create_script_tree(
-      name_prefix=nil,
-      num_lesson_groups=2,
-      num_lessons_per_group=2,
-      num_script_levels_per_lesson=2,
-      num_resources_per_lesson=2,
-      num_objectives_per_lesson=2,
+      name_prefix: nil,
+      # only use one lesson group by default, to make tests run faster.
+      num_lesson_groups: 1,
+      num_lessons_per_group: 2,
+      num_activities_per_lesson: 2,
+      num_sections_per_activity: 2,
+      num_script_levels_per_section: 2,
+      num_resources_per_lesson: 2,
+      num_objectives_per_lesson: 2,
       with_unit_group: false
     )
       name_prefix ||= SecureRandom.uuid
@@ -602,7 +605,9 @@ module Services
       script = create(
         :script,
         name: "#{name_prefix}-script",
-        curriculum_path: 'my_curriculum_path'
+        curriculum_path: 'my_curriculum_path',
+        hidden: true,
+        is_migrated: true
       )
 
       if with_unit_group
@@ -626,30 +631,32 @@ module Services
 
       script.lesson_groups.each_with_index do |lg, m|
         num_lessons_per_group.times do |n|
-          name = "#{name_prefix}-lg-#{m + 1}-lesson-#{n + 1}"
+          name = "#{name_prefix}-lg-#{m + 1}-l-#{n + 1}"
           create :lesson, lesson_group: lg, script: script, name: name, key: name, overview: "overview #{m + 1} #{n + 1}"
         end
       end
 
-      i = 1
+      sl_num = 1
       script.lessons.each do |lesson|
-        # For now, just create one LessonActivity and ActivitySection per Lesson.
-        activity = lesson.lesson_activities.create(
-          name: 'My Activity',
-          position: 1,
-          key: "#{lesson.name}-activity-1"
-        )
-        section = activity.activity_sections.create(
-          name: 'My Activity Section',
-          position: 1,
-          key: "#{activity.key}-section-1"
-        )
-
-        num_script_levels_per_lesson.times do
-          game = create :game, name: "#{name_prefix}_game#{i}"
-          level = create :level, name: "#{name_prefix}_blockly_#{i}", level_num: "1_2_#{i}", game: game
-          create :script_level, activity_section: section, activity_section_position: i, lesson: lesson, script: script, levels: [level], challenge: i.even?
-          i += 1
+        (1..num_activities_per_lesson).each do |activity_pos|
+          activity = lesson.lesson_activities.create(
+            name: 'My Activity',
+            position: activity_pos,
+            key: "#{lesson.name}-a-#{activity_pos}"
+          )
+          (1..num_sections_per_activity).each do |section_pos|
+            section = activity.activity_sections.create(
+              name: 'My Activity Section',
+              position: section_pos,
+              key: "#{activity.key}-s-#{section_pos}"
+            )
+            (1..num_script_levels_per_section).each do |sl_pos|
+              game = create :game, name: "#{name_prefix}_game#{sl_num}"
+              level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "1_2_#{sl_num}", game: game
+              create :script_level, activity_section: section, activity_section_position: sl_pos, lesson: lesson, script: script, levels: [level], challenge: sl_num.even?
+              sl_num += 1
+            end
+          end
         end
 
         next unless course_version

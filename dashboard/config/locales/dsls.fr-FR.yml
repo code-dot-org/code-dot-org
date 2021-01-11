@@ -4249,3 +4249,45 @@ fr-FR:
         content1: description ici
       outbreak_story2:
         content1: description ici
+        markdown: "# Épidémie : Penser comme un scientifique\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nLes simulations sont un excellent moyen
+          d'apprendre des choses qui peuvent être difficiles à observer dans le monde
+          réel. Elles aident les scientifiques à résoudre des problèmes et à tester
+          de nouvelles idées de manière sûre et efficace. Votre simulation est un
+          moyen de montrer à quoi pourrait ressembler une épidémie de virus dans Monster
+          Town.\n\n## Réinitialisation et rediffusion !\nMême lorsque vous écrivez
+          le code vous-même, il est impossible de savoir exactement ce qui se passera
+          lorsque vous appuierez sur \"démarrer\". Les monstres se déplacent au hasard,
+          vous ne savez donc pas si le virus va se propager rapidement ou lentement.
+          Chaque fois que vous modifiez votre code, veillez à exécuter votre simulation
+          plus d'une fois. Les choses ne se passeront pas deux fois de la même manière
+          !\n\n## Collecte de données\nEssayez de noter vos observations pendant que
+          vous lancer votre simulation. Vous pouvez compter le nombre de monstres
+          qui tombent malades ou utiliser un minuteur pour voir à quelle vitesse les
+          choses se passent. Par exemple, combien de temps faut-il généralement à
+          tous les monstres pour tomber malades si aucun n'a de masque ? \n\n## Faire
+          des prédictions\nSi vous comprenez votre modèle, vous pouvez l'utiliser
+          pour faire des prédictions. Vous pouvez même modifier le déroulement de
+          votre simulation et deviner ce qui se passera différemment. Par exemple
+          :\n* Que se passerait-il s'il y avait deux fois plus de monstres ?\n* Que
+          se passerait-il si la vitesse de déplacement des monstres était réduite
+          de moitié ?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Monster Town est-elle comme le monde réel ?\nIl
+          y a une limite au réalisme d'un modèle. \n* Quel est le point commun entre
+          votre simulation et les épidémies de virus du monde réel ?\n* Quelles sont
+          les différences ?\nLorsque vous aurez terminé cette activité, posez ces
+          questions à vos professeurs ou à votre famille !\n\n## Pouvons-nous faire
+          d'autres modèles ?\nVous avez déjà créé un modèle fonctionnel de l'épidémie
+          à Monster Town. Quelles sont les choses que votre simulation ne peut pas
+          faire ou montrer que vous aimeriez qu'elle puisse faire ou montrer ? Appuyez
+          sur la touche \"continuer\" et apprenez à faire modifications :\n* Augmentez
+          le nombre de monstres dans la simulation\n* Aidez les monstres à se remettre
+          du virus\n* Probabilité, immunité, vaccins, et bien d'autres chose encore!\n\nVous
+          pouvez également partager votre modèle de simulation avec d'autres personnes,
+          ou partager un message sur ce que nous pouvons faire pour aider à garder
+          les autres en bonne santé quand un virus arrive en ville. \n"
+      outbreak_freeplay_choice:
+        display_name: Activité libre
+        description: Vous avez terminé le tutoriel ! Continuez à apporter des modifications
+          ou des améliorations à votre projet. Vous pouvez choisir de continuer à
+          travailler avec les mêmes blocs ou essayer une boîte à outils élargie.

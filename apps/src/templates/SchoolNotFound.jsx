@@ -69,9 +69,7 @@ export default class SchoolNotFound extends Component {
     showRequiredIndicators: PropTypes.bool,
     schoolNameLabel: PropTypes.string,
     // Note: useLocationSearch enables the MapboxLocationSearchField component. See documentation for how to enable.
-    useLocationSearch: PropTypes.bool,
-    // Note: mapboxAccessToken must be defined if useLocationSearch is true.
-    mapboxAccessToken: PropTypes.string
+    useLocationSearch: PropTypes.bool
   };
 
   static defaultProps = {
@@ -284,10 +282,17 @@ export default class SchoolNotFound extends Component {
               <MapboxLocationSearchField
                 ref={el => (this.locationSearchRef = el)}
                 name={this.props.fieldNames.googleLocation}
-                mapboxAccessToken={this.props.mapboxAccessToken}
                 value={this.props.schoolLocation}
                 onChange={this.handleChange.bind(this, 'schoolLocation')}
                 style={inputStyle}
+                locationTypes={[
+                  'country',
+                  'region',
+                  'place',
+                  'postcode',
+                  'locality',
+                  'neighborhood'
+                ]}
               />
             </label>
           </div>

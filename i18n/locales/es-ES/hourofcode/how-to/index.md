@@ -147,7 +147,7 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 <a id="other-resources"></a>
 
-## Otros recursos de Hora del Código para los educadores:
+## Otros recursos de Hora del Código para el profesorado:
 
 - Visita el [Foro de la Hora del Código para docentes](http://forum.code.org/c/plc/hour-of-code) para obtener consejos, perspectivas y apoyo de otros educadores.
 - Consulta las [preguntas frecuentes sobre la Hora del Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).

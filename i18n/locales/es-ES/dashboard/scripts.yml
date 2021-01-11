@@ -15094,7 +15094,1337 @@ es:
           lessons:
             AI for Oceans:
               name: Inteligencia Artificial para océanos
-            intro:
-              name: Introducción
             visualizing:
               name: Visualización de datos
+        csd1-2021:
+          title: CSD Unidad 1 - La resolución de problemas y la computación ('19-'20)
+          description: "La unidad sobre la resolución de problemas y la computación es una introducción muy interactiva y colaborativa al campo de las ciencias de la computación, enmarcada dentro de una búsqueda más amplia orientada a resolver problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de desafíos y escenarios del mundo real. A continuación, aprenderás cómo las computadoras toman, generan, almacenan y procesan información para ayudar a las personas a resolver problemas. La unidad concluye con un proyecto en el que diseñas una aplicación que ayuda a resolver un problema de tu elección.\\r\n"
+          description_short: "Aprende cómo los humanos trabajan con computadoras para resolver problemas."
+          lessons:
+            CS Discoveries Pre-survey:
+              key: Encuesta previa de Descubrimientos de Ciencias de la Computación
+              name: Encuesta previa de Descubrimientos de Ciencias de la Computación
+            Intro to Problem Solving:
+              key: Introducción a la resolución de problemas
+              name: Introducción a la resolución de problemas
+            The Problem Solving Process:
+              key: El proceso de resolución de problemas
+              name: El proceso de resolución de problemas
+            Exploring Problem Solving:
+              key: Exploración de la resolución de problemas
+              name: Exploración de la resolución de problemas
+            What is a Computer?:
+              key: '¿Qué es una computadora?'
+              name: '¿Qué es una computadora?'
+            Input and Output:
+              key: Entrada y salida
+              name: Entrada y salida
+            Processing:
+              key: Procesamiento
+              name: Procesamiento
+            Storage:
+              key: Almacenamiento
+              name: Almacenamiento
+            Project - Propose an App:
+              key: Proyecto - Propuesta de aplicación
+              name: Proyecto - Propuesta de aplicación
+            Post-Project Test:
+              key: Prueba posterior al proyecto
+              name: Prueba posterior al proyecto
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              key: Introducción a la Resolución de Problemas - La Mesa de Periódicos (Lección 1 Alterna)
+              name: Introducción a la Resolución de Problemas - La Mesa de Periódicos (Lección 1 Alterna)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              key: Introducción a la Resolución de Problemas - El Puente de Espaguetis (Lección 1 Alterna)
+              name: Introducción a la Resolución de Problemas - El Puente de Espaguetis (Lección 1 Alterna)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              key: Introducción a la Resolución de Problemas - El Torre de Papel (Lección 1 Alterna)
+              name: Introducción a la Resolución de Problemas - El Torre de Papel (Lección 1 Alterna)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              key: Explorar la Resolución de Problemas - Tema de Juegos (Lección 3 Alterna)
+              name: Explorar la Resolución de Problemas - Tema de Juegos (Lección 3 Alterna)
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csd1_1:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
+            csd1_3:
+              display_name: Lecciones alternativas
+        csd2-2021:
+          description: "En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet."
+          description_short: " Aprende a crear tu propio sitio web en el Laboratorio web."
+          lessons:
+            Exploring Web Pages:
+              key: Exploración de páginas web
+              name: Exploración de páginas web
+            Intro to HTML:
+              key: Introducción al HTML
+              name: Introducción al HTML
+            Headings:
+              key: Encabezados
+              name: Encabezados
+            Digital Footprint:
+              key: Huella digital
+              name: Huella digital
+            Styling Text with CSS:
+              key: Estilos de texto con CSS
+              name: Estilos de texto con CSS
+            'Mini-Project: Your Personal Style':
+              key: 'Mini-Proyecto: Tu Estilo Personal'
+              name: 'Mini-Proyecto: Tu Estilo Personal'
+            Intellectual Property:
+              key: Propiedad intelectual
+              name: Propiedad intelectual
+            Using Images:
+              key: Usando Imágenes
+              name: Usando Imágenes
+            'Websites for Expression ':
+              key: 'Sitios web para la expresión '
+              name: 'Sitios web para la expresión '
+            Styling Elements with CSS:
+              key: Estilos de elementos con CSS
+              name: Estilos de elementos con CSS
+            Your Web Page - Prepare:
+              key: Tu página web - Preparar
+              name: Tu página web - Preparar
+            Project - Personal Web Page:
+              key: Proyecto - Página Personal de Internet
+              name: Proyecto - Página Personal de Internet
+            Websites for a Purpose:
+              key: Sitios Web por un Propósito
+              name: Sitios Web por un Propósito
+            Team Problem Solving:
+              key: Resolución de problemas en equipo
+              name: Resolución de problemas en equipo
+            Sources and Research:
+              key: Fuentes e investigación
+              name: Fuentes e investigación
+            CSS Classes:
+              key: Clases CSS
+              name: Clases CSS
+            Planning a Multi-page Website:
+              key: Planificación de un sitio con varias páginas
+              name: Planificación de un sitio con varias páginas
+            Linking Pages:
+              key: Enlaces entre páginas
+              name: Enlaces entre páginas
+            Project - Website for a Purpose:
+              key: Proyecto - Sitio web para un propósito específico
+              name: Proyecto - Sitio web para un propósito específico
+            Peer Review and Final Touches:
+              key: Revisión de compañeros y ajustes finales
+              name: Revisión de compañeros y ajustes finales
+            Post-Project Test:
+              key: Prueba posterior al proyecto
+              name: Prueba posterior al proyecto
+            CS Discoveries Post Course survey:
+              key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+        csd3-2021:
+          title: CSD Unidad 3 - Animaciones y juegos
+          description: " En la Unidad 3, desarrollarás tu experiencia de programación a medida que programes animaciones, arte interactivo y juegos en el Laboratorio de juegos. La unidad comienza con formas simples y, a partir de los mismos conceptos de programación y el proceso de diseño que usan los científicos informáticos a diario, añade juegos más sofisticados basados en sprites. En el proyecto final, desarrollarás un programa personalizado e interactivo."
+          description_short: " Aprende a programar animaciones, arte interactivo y juegos en el Laboratorio de juegos."
+          lessons:
+            Programming for Entertainment:
+              key: Programación para entretenimiento
+              name: Programación para entretenimiento
+            Plotting Shapes:
+              key: Trazar formas
+              name: Trazar formas
+            Drawing in Game Lab:
+              key: Dibujar en el Laboratorio de juegos
+              name: Dibujar en el Laboratorio de juegos
+            Shapes and Parameters:
+              key: Formas y parámetros
+              name: Formas y parámetros
+            Variables:
+              key: Variables
+              name: Variables
+            Random Numbers:
+              key: Números aleatorios
+              name: Números aleatorios
+            Sprites:
+              key: Sprites
+              name: Sprites
+            Sprite Properties:
+              key: Propiedades de Sprite
+              name: Propiedades de Sprite
+            Text:
+              key: Texto
+              name: Texto
+            The Draw Loop:
+              key: El bucle 'dibujar'
+              name: El bucle 'dibujar'
+            Sprite Movement:
+              key: Movimiento de sprites
+              name: Movimiento de sprites
+            'Mini-Project: Animation':
+              key: 'Mini-Proyecto: Animación'
+              name: 'Mini-Proyecto: Animación'
+            Conditionals:
+              key: Condicionales
+              name: Condicionales
+            Keyboard Input:
+              key: Entrada de teclado
+              name: Entrada de teclado
+            Mouse Input:
+              key: Entrada del Ratón
+              name: Entrada del Ratón
+            Project - Interactive Card:
+              key: Proyecto - Tarjeta interactiva
+              name: Proyecto - Tarjeta interactiva
+            Velocity:
+              key: Velocidad
+              name: Velocidad
+            Collision Detection:
+              key: Detección de colisiones
+              name: Detección de colisiones
+            Complex Sprite Movement:
+              key: Movimiento complejo de sprites
+              name: Movimiento complejo de sprites
+            Collisions:
+              key: Colisiones
+              name: Colisiones
+            Functions:
+              key: Funciones
+              name: Funciones
+            The Game Design Process:
+              key: El proceso de diseño de juegos
+              name: El proceso de diseño de juegos
+            Using the Game Design Process:
+              key: Uso del proceso de diseño de juegos
+              name: Uso del proceso de diseño de juegos
+            Project - Design a Game:
+              key: Proyecto - Diseñar un juego
+              name: Proyecto - Diseñar un juego
+            Post-Project Test:
+              key: Prueba posterior al proyecto
+              name: Prueba posterior al proyecto
+            CS Discoveries Post Course survey:
+              key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            csd3_2:
+              display_name: 'Capítulo 2: Desarrollo de juegos'
+            cspSurvey:
+              display_name: Encuesta
+        csd4-2021:
+          title: CSD Unidad 4 - El proceso de diseño ('19-'20)
+          description: La Unidad 4 introduce los impactos sociales más amplios que tiene la computación. A través de una serie de desafíos de diseño, aprenderás a comprender mejor las necesidades de los demás mientras desarrollas una solución a un problema. La segunda mitad de la unidad consiste en un proyecto de equipo iterativo, durante el cual los equipos tienen la oportunidad de identificar una necesidad que les importa, crear prototipos de soluciones tanto en papel como en el Laboratorio de aplicaciones, y probar soluciones con usuarios reales para obtener comentarios y seguir adelante.
+          description_short: "  Aprende a diseñar un programa que satisfaga las necesidades de tus usuarios."
+          lessons:
+            Analysis of Design:
+              key: Análisis de diseño
+              name: Análisis de diseño
+            Understanding Your User:
+              key: Entender a tu usuario
+              name: Entender a tu usuario
+            User-Centered Design Micro Activity:
+              key: Microactividad de diseño centrada en el usuario
+              name: Microactividad de diseño centrada en el usuario
+            User Interfaces:
+              key: Interfaces de usuario
+              name: Interfaces de usuario
+            Feedback and Testing:
+              key: Comentarios y pruebas
+              name: Comentarios y pruebas
+            Identifying User Needs:
+              key: Identificar las necesidades de los usuarios
+              name: Identificar las necesidades de los usuarios
+            Project - Paper Prototype:
+              key: Proyecto - Prototipo en papel
+              name: Proyecto - Prototipo en papel
+            Designing Apps for Good:
+              key: Diseñar aplicaciones de forma definitiva
+              name: Diseñar aplicaciones de forma definitiva
+            Market Research:
+              key: Investigación del mercado
+              name: Investigación del mercado
+            Paper Prototypes:
+              key: Prototipos en papel
+              name: Prototipos en papel
+            Prototype Testing:
+              key: Pruebas de prototipos
+              name: Pruebas de prototipos
+            Digital Design:
+              key: Diseño digital
+              name: Diseño digital
+            Linking Screens:
+              key: Vinculación de pantallas
+              name: Vinculación de pantallas
+            Testing the App:
+              key: Prueba de la aplicación
+              name: Prueba de la aplicación
+            Improving and Iterating:
+              key: Mejoras y repeticiones
+              name: Mejoras y repeticiones
+            Project - App Presentation:
+              key: Proyecto - Presentación de la aplicación
+              name: Proyecto - Presentación de la aplicación
+            Post-Project Test:
+              key: Prueba posterior al proyecto
+              name: Prueba posterior al proyecto
+            CS Discoveries Post Course survey:
+              key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            csd4_2:
+              display_name: 'Capítulo 2: Prototipos de aplicaciones'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolución de problemas en los datos'
+            cspSurvey:
+              display_name: Encuesta
+        csd5-2021:
+          title: CSP Unidad 5 - Los datos y la sociedad ('19-'20)
+          description: La Unidad 5 trata sobre la importancia de los datos a la hora de resolver problemas y resalta cómo las computadoras pueden ayudar en este proceso. El primer capítulo explora los diferentes sistemas utilizados para representar información en una computadora, y los desafíos y concesiones planteados al usarlos. En el segundo capítulo, aprenderá cómo se utilizan las colecciones de datos para resolver problemas y cómo las computadoras ayudan a automatizar los pasos de este proceso. Al final del capítulo, se considera cómo se puede aplicar el proceso de resolución de problemas de datos a un área de tu elección.
+          description_short: Aprende cómo las personas usan las computadoras para resolver problemas de datos.
+          lessons:
+            Representation Matters:
+              key: Asuntos de representación
+              name: Asuntos de representación
+            Patterns and Representation:
+              key: Patrones y representación
+              name: Patrones y representación
+            ASCII and Binary Representation:
+              key: ASCII y representación binaria
+              name: ASCII y representación binaria
+            Representing Images:
+              key: Representar imágenes
+              name: Representar imágenes
+            Representing Numbers:
+              key: Representar números
+              name: Representar números
+            Keeping Data Secret:
+              key: Mantener los datos en secreto
+              name: Mantener los datos en secreto
+            Combining Representations:
+              key: Combinar representaciones
+              name: Combinar representaciones
+            Project - Create a Representation:
+              key: Proyecto - Crear una representación
+              name: Proyecto - Crear una representación
+            Problem Solving and Data:
+              key: La resolución de problemas y los datos
+              name: La resolución de problemas y los datos
+            Problem Solving with Big Data:
+              key: La resolución de problemas con Big Data
+              name: La resolución de problemas con Big Data
+            Structuring Data:
+              key: Estructurar datos
+              name: Estructurar datos
+            Making Decisions with Data:
+              key: Tomar decisiones con datos
+              name: Tomar decisiones con datos
+            Interpreting Data:
+              key: Interpretar datos
+              name: Interpretar datos
+            Automating Data Decisions:
+              key: Automatizar las decisiones basadas en datos
+              name: Automatizar las decisiones basadas en datos
+            Post-Project Test:
+              key: Prueba posterior al proyecto
+              name: Prueba posterior al proyecto
+            CS Discoveries Post Course survey:
+              key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representación de la información'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolución de problemas en los datos'
+            cspSurvey:
+              display_name: Encuesta
+        csd6-2021:
+          title: CSD Unidad 6 - Computación física ('19-'20)
+          description: La Unidad 6 explora el papel de las plataformas de hardware en la computación y cómo diferentes sensores pueden proporcionar entradas y salidas más efectivas que las del teclado, el ratón y el monitor tradicionales. Al usar el Laboratorio de aplicaciones y el Circuit Playground de Adafruit, podrás desarrollar programas que utilizan las mismas entradas y salidas de hardware que ves en los dispositivos inteligentes y observarás cómo un prototipo simple puede conducir a un producto terminado. La unidad concluye con un desafío de diseño en el que se utilizará Circuit Playground como base para innovar en tu propio diseño.
+          description_short: Aprende a programar con dispositivos físicos.
+          lessons:
+            Innovations in Computing:
+              key: Innovaciones en computación
+              name: Innovaciones en computación
+            Designing Screens with Code:
+              key: Diseñar pantallas a través del código
+              name: Diseñar pantallas a través del código
+            The Circuit Playground:
+              key: The Circuit Playground
+              name: The Circuit Playground
+            Input Unplugged:
+              key: Entrada sin conexión
+              name: Entrada sin conexión
+            Board Events:
+              key: Eventos del tablero
+              name: Eventos del tablero
+            Getting Properties:
+              key: Obtener propiedades
+              name: Obtener propiedades
+            Analog Input:
+              key: Entrada analógica
+              name: Entrada analógica
+            The Program Design Process:
+              key: El proceso de diseño de programas
+              name: El proceso de diseño de programas
+            'Project: Make a Game':
+              key: 'Proyecto: crear un juego'
+              name: 'Proyecto: crear un juego'
+            Arrays and Color LEDs:
+              key: Arreglos y LED de colores
+              name: Arreglos y LED de colores
+            Making Music:
+              key: Crear música
+              name: Crear música
+            Arrays and For Loops:
+              key: Arreglos y bucles 'desde'
+              name: Arreglos y bucles 'desde'
+            Accelerometer:
+              key: Acelerómetro
+              name: Acelerómetro
+            Functions with Parameters:
+              key: Funciones con parámetros
+              name: Funciones con parámetros
+            Circuits and Physical Prototypes:
+              key: Circuitos y prototipos físicos
+              name: Circuitos y prototipos físicos
+            'Project: Prototype an Innovation':
+              key: 'Proyecto: crear el prototipo de una innovación'
+              name: 'Proyecto: crear el prototipo de una innovación'
+            Post-Project Test:
+              key: Prueba posterior al proyecto
+              name: Prueba posterior al proyecto
+            CS Discoveries Post Course survey:
+              key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programación con hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+            cspSurvey:
+              display_name: Encuesta
+        csp1-2021:
+          lessons:
+            CS Principles Pre-survey:
+              key: Encuesta previa de Principios de Ciencias de la Computación
+              name: Encuesta previa de Principios de Ciencias de la Computación
+            Welcome to CSP:
+              key: Bienvenido a CSP
+              name: Bienvenido a CSP
+            Representing Information:
+              key: Representación de la información
+              name: Representación de la información
+            Circle Square Patterns:
+              key: Patrones cuadrados circulares
+              name: Patrones cuadrados circulares
+            Binary Numbers:
+              key: Números binarios
+              name: Números binarios
+            Overflow and Rounding:
+              key: Desbordamiento y redondeo
+              name: Desbordamiento y redondeo
+            Representing Text:
+              key: Representar texto
+              name: Representar texto
+            Black and White Images:
+              key: Imágenes en blanco y negro
+              name: Imágenes en blanco y negro
+            Color Images:
+              key: Imágenes a color
+              name: Imágenes a color
+            Lossless Compression:
+              key: Compresión sin pérdidas
+              name: Compresión sin pérdidas
+            Lossy Compression:
+              key: Compresión perdida
+              name: Compresión perdida
+            Intellectual Property:
+              key: Propiedad intelectual
+              name: Propiedad intelectual
+            Project - Digital Information Dilemmas Part 1:
+              key: 'Proyecto: dilemas de la información digital, parte 1'
+              name: 'Proyecto: dilemas de la información digital, parte 1'
+            Project - Digital Information Dilemmas Part 2:
+              key: 'Proyecto: dilemas de la información digital, parte 2'
+              name: 'Proyecto: dilemas de la información digital, parte 2'
+            'Lesson 14: Assessment Day':
+              key: 'Lección 14: día de evaluación'
+              name: 'Lección 14: día de evaluación'
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csp_unit1_2020:
+              display_name: 'Tema 1: Información digital'
+        csp2-2021:
+          lessons:
+            Welcome to the Internet:
+              key: Bienvenidos a Internet
+              name: Bienvenidos a Internet
+            Building a Network:
+              key: Crear una red
+              name: Crear una red
+            The Need for Addressing:
+              key: La necesidad de direccionamiento
+              name: La necesidad de direccionamiento
+            Routers and Redundancy:
+              key: Enrutadores y redundancia
+              name: Enrutadores y redundancia
+            Packets:
+              key: Paquetes
+              name: Paquetes
+            DNS and HTTP:
+              key: DNS y HTTP
+              name: DNS y HTTP
+            Project - Internet Dilemmas Part 1:
+              key: Proyecto - Dilemas de Internet Parte 1
+              name: Proyecto - Dilemas de Internet Parte 1
+            Project - Internet Dilemmas Part 2:
+              key: Proyecto - Dilemas de Internet Parte 2
+              name: Proyecto - Dilemas de Internet Parte 2
+            'Lesson 9: Assessment Day':
+              key: 'Lección 9: día de evaluación'
+              name: 'Lección 9: día de evaluación'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unidad 2: Internet'
+        csp3-2021:
+          lessons:
+            Introduction to Apps:
+              key: Introducción a las aplicaciones
+              name: Introducción a las aplicaciones
+            Project - Designing an App Part 1:
+              key: Proyecto - Diseñar una aplicación Parte 1
+              name: Proyecto - Diseñar una aplicación Parte 1
+            Project - Designing an App Part 2:
+              key: Proyecto - Diseñar una aplicación Parte 2
+              name: Proyecto - Diseñar una aplicación Parte 2
+            The Need for Programming Languages:
+              key: La necesidad de lenguajes de programación
+              name: La necesidad de lenguajes de programación
+            Intro to Programming:
+              key: Introducción a la programación
+              name: Introducción a la programación
+            Debugging:
+              key: Depuración
+              name: Depuración
+            Project - Designing an App Part 3:
+              key: Proyecto - Diseñar una aplicación Parte 3
+              name: Proyecto - Diseñar una aplicación Parte 3
+            Project - Designing an App Part 4:
+              key: Proyecto - Diseñar una aplicación Parte 4
+              name: Proyecto - Diseñar una aplicación Parte 4
+            Project - Designing an App Part 5:
+              key: Proyecto - Diseñar una aplicación Parte 5
+              name: Proyecto - Diseñar una aplicación Parte 5
+            'Lesson 11: Assessment Day':
+              key: 'Lección 11: día de evaluación'
+              name: 'Lección 11: día de evaluación'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unidad 3: Introducción al diseño de aplicaciones'
+        csp4-2021:
+          lessons:
+            Variables Explore:
+              key: Variables Explorar
+              name: Variables Explorar
+            Variables Investigate:
+              key: Investigar variables
+              name: Investigar variables
+            Variables Practice:
+              key: Variables Practicar
+              name: Variables Practicar
+            Variables Make:
+              key: Variables Crear
+              name: Variables Crear
+            Conditionals Explore:
+              key: Condicionales Explorar
+              name: Condicionales Explorar
+            Conditionals Investigate:
+              key: Condicionales Investigar
+              name: Condicionales Investigar
+            Conditionals Practice:
+              key: Condicionales Practicar
+              name: Condicionales Practicar
+            Conditional Make:
+              key: Condicionales Crear
+              name: Condicionales Crear
+            Functions Explore / Investigate:
+              key: Funciones Explorar / Investigar
+              name: Funciones Explorar / Investigar
+            Functions Practice:
+              key: Funciones Practicar
+              name: Funciones Practicar
+            Functions Make:
+              key: Funciones Crear
+              name: Funciones Crear
+            Project - Decision Maker App Part 1:
+              key: Proyecto - Aplicación de toma de decisiones - Parte 1
+              name: Proyecto - Aplicación de toma de decisiones - Parte 1
+            Project - Decision Maker App Part 2:
+              key: Proyecto - Aplicación de toma de decisiones - Parte 2
+              name: Proyecto - Aplicación de toma de decisiones - Parte 2
+            Project - Decision Maker App Part 3:
+              key: Proyecto - Aplicación de toma de decisiones - Parte 3
+              name: Proyecto - Aplicación de toma de decisiones - Parte 3
+            'Lesson 15: Assessment Day':
+              key: 'Lección 15: día de evaluación'
+              name: 'Lección 15: día de evaluación'
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: Funciones
+            csp_project:
+              display_name: Proyecto
+        csp5-2021:
+          lessons:
+            Lists Explore:
+              key: Explorar listas
+              name: Explorar listas
+            Lists Investigate:
+              key: Investigar listas
+              name: Investigar listas
+            Lists Practice:
+              key: Práctica de listas
+              name: Práctica de listas
+            Lists Make:
+              key: Crear listas
+              name: Crear listas
+            Loops Explore:
+              key: Explorar bucles
+              name: Explorar bucles
+            Loops Investigate:
+              key: Bucles Investigar
+              name: Bucles Investigar
+            Loops Practice:
+              key: Bucles Practicar
+              name: Bucles Practicar
+            Loops Make:
+              key: Bucles Crear
+              name: Bucles Crear
+            Traversals Explore:
+              key: Explorar recorridos
+              name: Explorar recorridos
+            Traversals Investigate:
+              key: Investigar recorridos
+              name: Investigar recorridos
+            Traversals Practice:
+              key: Practicar recorridos
+              name: Practicar recorridos
+            Traversals Make:
+              key: Crear recorridos
+              name: Crear recorridos
+            Semester Hackathon Part 1:
+              key: Hackatón semestral Parte 1
+              name: Hackatón semestral Parte 1
+            Semester Hackathon Part 2:
+              key: Hackatón semestral Parte 2
+              name: Hackatón semestral Parte 2
+            Semester Hackathon Part 3:
+              key: Hackatón semestral Parte 3
+              name: Hackatón semestral Parte 3
+            Semester Hackathon Part 4:
+              key: Hackatón semestral Parte 4
+              name: Hackatón semestral Parte 4
+            Semester Hackathon Part 5:
+              key: Hackatón semestral Parte 5
+              name: Hackatón semestral Parte 5
+            'Lesson 18: Assessment Day':
+              key: 'Lección 18: día de evaluación'
+              name: 'Lección 18: día de evaluación'
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+            csp_traversals:
+              display_name: Recorridos
+            csp_project:
+              display_name: Proyecto
+        csp6-2021:
+          lessons:
+            Algorithms Solve Problems:
+              key: Los algoritmos resuelven problemas
+              name: Los algoritmos resuelven problemas
+            Algorithm Efficiency:
+              key: Eficiencia del algoritmo
+              name: Eficiencia del algoritmo
+            Unreasonable Time:
+              key: Tiempo poco razonable
+              name: Tiempo poco razonable
+            The Limits of Algorithms:
+              key: Los límites de los algoritmos
+              name: Los límites de los algoritmos
+            Parallel and Distributed Algorithms:
+              key: Algoritmos paralelos y distribuidos
+              name: Algoritmos paralelos y distribuidos
+            'Lesson 6: Assessment Day':
+              key: 'Lección 6: Día de evaluación'
+              name: 'Lección 6: Día de evaluación'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Unidad 6: Algoritmos'
+        csp7-2021:
+          lessons:
+            Parameters and Return Practice:
+              key: Práctica de parámetros y valores de retorno
+              name: Práctica de parámetros y valores de retorno
+            Libraries Explore:
+              key: Explorar bibliotecas
+              name: Explorar bibliotecas
+            Libraries Investigate:
+              key: Investigar bibliotecas
+              name: Investigar bibliotecas
+            Project - Make a Library Part 1:
+              key: Proyecto - Hacer un Biblioteca Parte 1
+              name: Proyecto - Hacer un Biblioteca Parte 1
+            Project - Make a Library Part 2:
+              key: Proyecto - Hacer un Biblioteca Parte 2
+              name: Proyecto - Hacer un Biblioteca Parte 2
+            Project - Make a Library Part 3:
+              key: Proyecto - Hacer un Biblioteca Parte 3
+              name: Proyecto - Hacer un Biblioteca Parte 3
+            'Lesson 11: Assessment Day':
+              key: 'Lección 11: día de evaluación'
+              name: 'Lección 11: día de evaluación'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parámetros y valores de retorno
+            csp_libraries:
+              display_name: Bibliotecas
+        csp8-2021:
+          lessons:
+            Create PT - Review the Task:
+              key: Create de PT - Revisar la Tarea
+              name: Create de PT - Revisar la Tarea
+            Create PT - Make a Plan:
+              key: Create de PT - Hacer un Plan
+              name: Create de PT - Hacer un Plan
+            Create PT - Complete the Task:
+              key: PT de creación - Completar la tarea
+              name: PT de creación - Completar la tarea
+        csp9-2021:
+          lessons:
+            Learning From Data:
+              key: Aprendiendo de los datos
+              name: Aprendiendo de los datos
+            Exploring One Column:
+              key: Explorando una columna
+              name: Explorando una columna
+            Exploring Two Columns:
+              key: Explorando dos columnas
+              name: Explorando dos columnas
+            'Lesson 9: Assessment Day':
+              key: 'Lección 9: día de evaluación'
+              name: 'Lección 9: día de evaluación'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unidad 9: Datos'
+        csp10-2021:
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: 'Proyecto: Simulación de Innovación, Parte 1'
+              name: 'Proyecto: Simulación de Innovación, Parte 1'
+            Project - Innovation Simulation Part 2:
+              key: 'Proyecto: Simulación de Innovación, Parte 2'
+              name: 'Proyecto: Simulación de Innovación, Parte 2'
+            Data Policies and Privacy:
+              key: Políticas y privacidad de datos 
+              name: Políticas y privacidad de datos 
+            The Value of Privacy:
+              key: El valor de la privacidad
+              name: El valor de la privacidad
+            Project - Innovation Simulation Part 3:
+              key: 'Proyecto: Simulación de Innovación, Parte 3'
+              name: 'Proyecto: Simulación de Innovación, Parte 3'
+            Security Risks Part 1:
+              key: Riesgos de seguridad, parte 1
+              name: Riesgos de seguridad, parte 1
+            Security Risks Part 2:
+              key: Riesgos de seguridad Parte 2
+              name: Riesgos de seguridad Parte 2
+            'Project: Innovation Simulation Part 4':
+              key: 'Proyecto: Simulación de Innovación, Parte 4'
+              name: 'Proyecto: Simulación de Innovación, Parte 4'
+            Protecting Data Part 1:
+              key: Protección de datos, parte 1
+              name: Protección de datos, parte 1
+            Protecting Data Part 2:
+              key: Protección de datos, parte 2
+              name: Protección de datos, parte 2
+            'Project: Innovation Simulation Part 5':
+              key: 'Proyecto: Simulación de Innovación, Parte 5'
+              name: 'Proyecto: Simulación de Innovación, Parte 5'
+            'Project: Innovation Simulation Part 6':
+              key: 'Proyecto: Simulación de Innovación, Parte 6'
+              name: 'Proyecto: Simulación de Innovación, Parte 6'
+            'Project: Innovation Simulation Part 7':
+              key: 'Proyecto: Simulación de Innovación, Parte 7'
+              name: 'Proyecto: Simulación de Innovación, Parte 7'
+            'Lesson 14: Unit Assessment Day':
+              key: 'Lección 14: día de evaluación de la unidad'
+              name: 'Lección 14: día de evaluación de la unidad'
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unidad 10: Ciberseguridad e impactos globales'
+        coursea-2021:
+          title: Curso A (2019)
+          description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: Una introducción a las ciencias de la computación para prelectores.
+          description_audience: 'De 4 a 7 años'
+          lessons:
+            Learn to Drag and Drop:
+              key: Aprende a arrastrar y soltar
+              name: Aprende a arrastrar y soltar
+            'Programming: Happy Maps':
+              key: 'Programación: Mapas felices'
+              name: Mapas Felices
+            Sequencing with Scrat:
+              key: Secuencias con Scrat
+              name: Secuencias con Scrat
+            Programming in Ice Age:
+              key: Programación en la Era de Hielo
+              name: Programación con Scrat
+            Programming with Rey and BB-8:
+              key: Programación con Rey y BB-8
+              name: Programación con Rey y BB-8
+            'Loops: Happy Loops':
+              key: 'Loops: Loops felices'
+              name: Bucles felices
+            Loops in Ice Age:
+              key: Bucles de la Era de Hielo
+              name: Bucles con Scrat
+            Loops in Collector:
+              key: Loops en Recolectora
+              name: Bucles con Laurel
+            Ocean Scene with Loops:
+              key: Escena del océano con bucles
+              name: Escena del océano con bucles
+            'Events: The Big Event':
+              key: 'Eventos: El Gran Evento'
+              name: El Gran Evento Jr.
+            Events in Play Lab:
+              key: Eventos en Play Lab
+              name: En movimiento con eventos
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuencias
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        courseb-2021:
+          title: Curso B (2019)
+          description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: Una introducción a las ciencias de la computación para prelectores. Es similar al Curso A, pero con conceptos más avanzados.
+          description_audience: 'De 5 a 8 años'
+          lessons:
+            Digital Trails:
+              key: Senderos digitales
+              name: Senderos digitales
+            Move It, Move It:
+              key: Muévelo, Muévelo
+              name: Muévelo, Muévelo
+            Sequencing in Maze:
+              key: Secuencias en Laberinto
+              name: Secuencias con Angry Birds
+            Programming in Maze:
+              key: Programación en Laberinto
+              name: Programación con Angry Birds
+            Programming in Harvester:
+              key: Programación con la cosechadora
+              name: Programación con la cosechadora
+            'Loops: Getting Loopy':
+              key: 'Loops: Buscando Loopy'
+              name: Bucleandose
+            Loops in Harvester:
+              key: Bucles en la cosechadora
+              name: Bucles con la cosechadora
+            Loops in Collector:
+              key: Loops en Recolectora
+              name: Bucles con Laurel
+            Loops in Artist:
+              key: Loops en Artista
+              name: Dibujar jardines con bucles
+            The Right App:
+              key: La aplicación correcta
+              name: La aplicación correcta
+            'Events: The Big Event':
+              key: 'Eventos: El Gran Evento'
+              name: El Gran Evento Jr.
+            Events in Play Lab:
+              key: Eventos en Play Lab
+              name: Una batalla real con eventos
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuencias
+            csf_loops:
+              display_name: Bucles
+            csf_impacts:
+              display_name: Impactos de la computación
+            csf_events:
+              display_name: Eventos
+        coursec-2021:
+          title: Curso C (2019)
+          description: Crea programas con secuencias, bucles y eventos. Traduce tus iniciales a código binario, investiga distintas técnicas de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del curso podrás crear tu propio juego o historia para compartir!
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
+          description_audience: 'De 6 a 10 años'
+          lessons:
+            'Programming: My Robotic Friends':
+              key: 'Programación: Mis amigos robóticos'
+              name: Mis amigos robóticos Jr.
+            Programming in Maze:
+              key: Programación en Laberinto
+              name: Programación con Angry Birds
+            Debugging in Maze:
+              key: Depuración en el laberinto
+              name: Depuración en el laberinto
+            Programming in Collector:
+              key: Programación en Collector
+              name: Recoger tesoros con Laurel
+            Programming in Artist:
+              key: Programación en Artist
+              name: Crear arte con código
+            Binary Bracelets:
+              key: Pulseras Binarias
+              name: Pulseras Binarias
+            'Loops: My Loopy Robotic Friends':
+              key: 'Bucles: Mis amigos robóticos y repetitivos'
+              name: Mis amigos robóticos y repetitivos Jr.
+            Loops with Rey and BB-8:
+              key: Bucles con Rey y BB-8
+              name: Bucles con Rey y BB-8
+            Loops in Harvester:
+              key: Bucles en la cosechadora
+              name: Cosechar cultivos con bucles
+            Looking Ahead:
+              key: Mirar hacia adelante
+              name: Mirando hacia el Futuro con Minecraft
+            Sticker Art with Loops:
+              key: Arte con stickers y bucles
+              name: Arte con stickers y bucles
+            'Events: The Big Event':
+              key: 'Eventos: El Gran Evento'
+              name: El Gran Evento
+            Build a Flappy Game:
+              key: Construye un juego Flappy
+              name: Construye un juego Flappy
+            Events in Play Lab:
+              key: Eventos en Play Lab
+              name: Chase Game con Eventos
+            Picturing Data:
+              key: Gráficos de datos
+              name: Gráficos de datos
+            'End of Course Project: Create a Play Lab Game':
+              name: Proyecto de fin de curso
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuencias
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+            csf_data:
+              display_name: Datos
+            end_of_course_project:
+              display_name: Proyecto de fin de curso
+        coursed-2021:
+          title: Curso D (2019)
+          description: Los estudiantes desarrollan su comprensión de bucles anidados, bucles `mientras`, condicionales y eventos. Los estudiantes no solo aprenden a programar, sino que también aprenden sobre ciudadanía digital.
+          description_short: Aprende sobre sentencias condicionales y crea tu propio arte, historia o juego.
+          description_audience: 'De 7 a 11 años'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'Algoritmos: programación en papel cuadriculado'
+              name: Programación en papel cuadriculado
+            Introduction to Online Puzzles:
+              key: Introducción a los desafíos en línea
+              name: Introducción a los desafíos en línea
+            Relay Programming:
+              key: Programación de Relevos
+              name: Programación de Relevos
+            Debugging in Collector:
+              key: Depuración en Recolector
+              name: Depuración con Laurel
+            Events in Bounce:
+              key: Eventos de Rebote
+              name: Eventos de Rebote
+            Build a Star Wars Game:
+              key: Construye un juego de la Guerra de las Galaxias
+              name: Construye un juego de la Guerra de las Galaxias
+            Dance Party:
+              key: Fiesta de baile
+              name: Fiesta de baile
+            Loops in Ice Age:
+              key: Bucles de la Era de Hielo
+              name: Bucles de la Era de Hielo
+            Loops in Artist:
+              key: Loops en Artista
+              name: Dibujar formas con bucles
+            Nested Loops in Bee:
+              key: Bucles anidados en Abeja
+              name: Bucles anidados en Laberinto
+            Conditionals with Cards:
+              key: Condicionales con tarjetas
+              name: Condicionales con tarjetas
+            Conditionals in Bee:
+              key: Condicionales con Abeja
+              name: Condicionales con Abeja
+            While Loops in Farmer:
+              key: Bucles 'mientras' en Granjera
+              name: Bucles 'mientras' en Granjera
+            Until Loops in Maze:
+              key: Bucles 'mientras' en el Laberinto
+              name: Bucles 'mientras' en el Laberinto
+            Conditionals & Loops in Harvester:
+              key: Condicionales y bucles en Cosechadora
+              name: Cosechar con condicionales
+            'Unplugged: Binary':
+              key: 'Desconectado: binario'
+              name: Imágenes binarias
+            Artist Binary:
+              key: Artista binario
+              name: Artista binario
+            End of Course Project:
+              key: Proyecto de fin de curso
+              name: Proyecto de fin de curso
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secuencias
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionales
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            end_of_course_project:
+              display_name: Proyecto de fin de curso
+        coursee-2021:
+          title: Curso E (2019)
+          description: Empieza a programar con algoritmos, bucles, condicionales y eventos, y pasa luego a las funciones. En la segunda parte de este curso, diseñarás y crearás un proyecto final que puedes compartir con tus amigos y familiares.
+          description_short: Repasa conceptos en los Cursos C y D, y luego avanza mediante el aprendizaje de funciones.
+          description_audience: 'De 8 a 12 años'
+          lessons:
+            Sequencing in the Maze:
+              key: Secuencias en el Laberinto
+              name: Secuencias en el Laberinto
+            Programming and Loops with the Artist:
+              key: Programación y bucles con el Artista
+              name: Loops con el Artista
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Condicionales en Minecraft: Voyage Aquatic'
+              name: 'Condicionales en Minecraft: Voyage Aquatic'
+            Conditionals:
+              key: Condicionales
+              name: Condicionales con Granjera
+            Simon Says:
+              key: Simón dice
+              name: Simón dice
+            Learning Sprites with Sprite Lab:
+              key: Aprender sprites con Laboratorio de Sprite
+              name: Aprender sprites con Laboratorio de Sprite
+            Alien Dance Party with Sprite Lab:
+              key: Eventos con el Laboratorio de sprites
+              name: Eventos con el Laboratorio de sprites
+            Private and Personal Information:
+              key: 'traducción pendiente: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+              name: 'traducción pendiente: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+            About Me:
+              key: Acerca de mí
+              name: Acerca de mí con Sprite Lab
+            Digital Sharing:
+              key: Colaboración digital
+              name: Colaboración digital
+            Nested Loops in Bee:
+              key: Bucles anidados en Abeja
+              name: Bucles anidados en Laberinto
+            Nested Loops in Artist:
+              key: Bucles anidados en Artista
+              name: Formas elegantes con bucles anidados
+            Nested Loops in Frozen:
+              key: Bucles anidados en Frozen
+              name: Bucles anidados con Frozen
+            'Functions: Songwriting':
+              key: 'Funciones: composición musical'
+              name: Composición Musical
+            Functions in Minecraft:
+              key: Funciones en Minecraft
+              name: Funciones en Minecraft
+            Functions in Harvester:
+              key: Funciones en la Cosechadora
+              name: Funciones en Cosechadora
+            Functions in Artist:
+              key: Funciones de Artista
+              name: Funciones de Artista
+            Designing for Accessibility:
+              key: Diseñar con la accesibilidad en mente
+              name: Diseñar con la accesibilidad en mente
+            End of Course Project:
+              key: Proyecto de fin de curso
+              name: Proyecto de fin de curso
+          lesson_groups:
+            ramp_up:
+              display_name: Avanzar
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_nested_loops:
+              display_name: Bucles anidados
+            csf_functions:
+              display_name: Funciones
+            csf_impacts:
+              display_name: Impactos de la computación
+            end_of_course_project:
+              display_name: Proyecto de fin de curso
+        coursef-2021:
+          title: Curso F (2019)
+          description: Aprende a usar diferentes tipos de bucles, eventos, funciones y condicionales. Investiga distintas técnicas de resolución de problemas y debate sobre el impacto de la computación y de Internet en la sociedad. En la segunda parte del curso, diseña y crea un proyecto final que puedes compartir con tus amigos y familiares.
+          description_short: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
+          description_audience: 'De 9 a 13 años'
+          lessons:
+            Functions in Minecraft:
+              key: Funciones en Minecraft
+              name: Funciones en Minecraft
+            Learning Sprites with Sprite Lab:
+              key: Aprender sprites con Laboratorio de Sprite
+              name: Aprender sprites con Laboratorio de Sprite
+            Events with Sprite Lab:
+              name: Eventos con el Laboratorio de sprites
+            Loops with the Artist:
+              name: Loops con el Artista
+            Nested Loops in the Maze:
+              key: Bucles anidados en el Laberinto
+              name: Bucles anidados en Laberinto
+            The Power of Words:
+              key: El poder de las palabras
+              name: El poder de las palabras
+            Envelope Variables:
+              key: Variables de sobre
+              name: Variables de sobre
+            Variables as Constant in Artist:
+              name: Variables con Artista
+            Variables that Change in Bee:
+              name: Cambiar variables con Abeja
+            Variables that Change in Artist:
+              name: Cambiar variables con Artista
+            Simulating Experiments:
+              key: Simulación de experimentos
+              name: Simulación de experimentos
+            AI for Oceans:
+              key: Inteligencia Artificial para océanos
+              name: Inteligencia Artificial para océanos
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: Diversión con bucles Para
+              name: Diversión con bucles Para
+            For Loops in Bee:
+              key: Bucles `desde` en Abeja
+              name: Bucles 'desde' con la Abeja
+            For Loops in Artist:
+              key: Bucles `desde` en Artista
+              name: Bucles `desde'`con Artista
+            Editing Behaviors:
+              name: Editar comportamientos
+            Virtual Pet:
+              name: Mascota Virtual
+            End of Course Project:
+              key: Proyecto de fin de curso
+              name: Proyecto de fin de curso
+          lesson_groups:
+            ramp_up:
+              display_name: Avanzar
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_variables:
+              display_name: Variables
+            csf_data:
+              display_name: Datos
+            csf_for_loops:
+              display_name: Bucles Para
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Proyecto de fin de curso
+        express-2021:
+          title: Curso Express (2019)
+          description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: 'Una introducción a las ciencias de la computación: combina lo mejor de nuestro plan de estudios para escuelas primarias orientado a estudiantes mayores.'
+          description_audience: 'De 9 a 18 años'
+          lessons:
+            Dance Party:
+              key: Fiesta de baile
+              name: Fiesta de baile
+            Programming with Angry Birds:
+              key: Programación con Angry Birds
+              name: Programación con Angry Birds
+            Debugging with Scrat:
+              key: Depuración con Scrat
+              name: Depuración con Scrat
+            Collecting Treasure with Laurel:
+              key: Recoger tesoros con Laurel
+              name: Recoger tesoros con Laurel
+            Creating Art with Code:
+              key: Crear arte con código
+              name: Crear arte con código
+            Loops with Rey and BB-8:
+              key: Bucles con Rey y BB-8
+              name: Bucles con Rey y BB-8
+            Sticker Art with Loops:
+              key: Arte con stickers y bucles
+              name: Arte con stickers y bucles
+            Nested Loops in Maze:
+              key: Bucles anidados en Laberinto
+              name: Bucles anidados en Laberinto
+            Snowflakes with Anna and Elsa:
+              key: Copos de nieve con Anna y Elsa
+              name: Copos de nieve con Anna y Elsa
+            If/Else with Bee:
+              key: Condicionales con Abeja
+              name: Condicionales con Abeja
+            While Loops with the Farmer:
+              key: Bucles 'mientras' en la Granjera
+              name: Bucles 'mientras' en la Granjera
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Condicionales en Minecraft: Voyage Aquatic'
+              name: 'Condicionales en Minecraft: Voyage Aquatic'
+            Until Loops in Maze:
+              key: Bucles 'mientras' en el Laberinto
+              name: Bucles 'mientras' en el Laberinto
+            Harvesting with Conditionals:
+              key: Cosechar con condicionales
+              name: Cosechar con condicionales
+            Functions in Minecraft:
+              key: Funciones en Minecraft
+              name: Funciones en Minecraft
+            Functions with Harvester:
+              key: Funciones en Cosechadora
+              name: Funciones en Cosechadora
+            Functions with Artist:
+              key: Funciones de Artista
+              name: Funciones de Artista
+            Variables with Artist:
+              key: Variables con Artista
+              name: Variables con Artista
+            Changing Variables with Bee:
+              key: Cambiar variables con Abeja
+              name: Cambiar variables con Abeja
+            Changing Variables with Artist:
+              key: Cambiar variables con Artista
+              name: Cambiar variables con Artista
+            For Loops with Bee:
+              key: Bucles 'desde' con la Abeja
+              name: Bucles 'desde' con la Abeja
+            For Loops with Artist:
+              key: Bucles `desde'`con Artista
+              name: Bucles `desde'`con Artista
+            Swimming Fish in Sprite Lab:
+              key: Aprender sprites con Laboratorio de Sprite
+              name: Aprender sprites con Laboratorio de Sprite
+            Alien Dance Party:
+              key: Fiesta de baile extraterrestre
+              name: Fiesta de baile extraterrestre
+            Behaviors in Sprite Lab:
+              key: Editar comportamientos
+              name: Editar comportamientos
+            Virtual Pet with Sprite Lab:
+              key: Mascota Virtual
+              name: Mascota Virtual
+            End of Course Project:
+              key: Proyecto de fin de curso
+              name: Proyecto de fin de curso
+          lesson_groups:
+            csf_warmup:
+              display_name: Actividad previa
+            csf_sequencing:
+              display_name: Secuencias
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionales
+            csf_functions:
+              display_name: Funciones
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles Para
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Proyecto de fin de curso
+        pre-express-2021:
+          title: Curso Express para prelectores (2019)
+          description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: 'Una introducción a las ciencias de la computación para prelectores, que combina lo mejor de nuestros cursos para educación preescolar y primer grado.'
+          description_audience: 'De 4 a 8 años'
+          lessons:
+            Learn to Drag and Drop:
+              key: Aprende a arrastrar y soltar
+              name: Aprende a arrastrar y soltar
+            Sequencing with Scrat:
+              key: Secuencias con Scrat
+              name: Secuencias con Scrat
+            Programming with Rey and BB-8:
+              key: Programación con Rey y BB-8
+              name: Programación con Rey y BB-8
+            Programming in Harvester:
+              key: Programación con la cosechadora
+              name: Programación con la cosechadora
+            Loops with Scrat:
+              key: Bucles con Scrat
+              name: Bucles con Scrat
+            Loops with Laurel:
+              key: Bucles con Laurel
+              name: Bucles con Laurel
+            Ocean Scene with Loops:
+              key: Escena del océano con bucles
+              name: Escena del océano con bucles
+            Drawing Gardens with Loops:
+              key: Dibujar jardines con bucles
+              name: Dibujar jardines con bucles
+            On the Move with Events:
+              key: En movimiento con eventos
+              name: En movimiento con eventos
+            A Royal Battle with Events:
+              key: Una batalla real con eventos
+              name: Una batalla real con eventos
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secuencias
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        csf-2021-pilot:
+          lessons:
+            Learning Sprites with Sprite Lab:
+              name: Aprender sprites con Laboratorio de Sprite
+            lesson-1:
+              name: Variables de sobre
+          lesson_groups:
+            ramp_up:
+              display_name: Introducción
+            lessonGroup-3:
+              display_name: Variables

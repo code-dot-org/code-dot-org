@@ -10,7 +10,7 @@ export const commands = {
 
   getTime(unit) {
     if (unit === 'seconds') {
-      return this.World.seconds || 0;
+      return coreLibrary.getAdjustedWorldTime(this) || 0;
     } else if (unit === 'frames') {
       return this.World.frameCount || 0;
     }
@@ -62,5 +62,9 @@ export const commands = {
   showTitleScreen(title, subtitle) {
     coreLibrary.title = title || '';
     coreLibrary.subtitle = subtitle || '';
+  },
+
+  textJoin(text1, text2) {
+    return [text1, text2].join('');
   }
 };

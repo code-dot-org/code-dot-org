@@ -2119,7 +2119,169 @@ ca:
               name: Curs A
             Course B:
               name: Curs B
-        ml-playground:
+        csd3-2021:
           lessons:
-            intro:
-              name: Introducció
+            Variables:
+              key: Variables
+              name: Variables
+            Text:
+              key: text
+              name: text
+            Conditionals:
+              key: Condicionals
+              name: Condicionals
+            Functions:
+              key: Funcions
+              name: Funcions
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funcions amb Paràmetres
+              name: Funcions amb Paràmetres
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Llistes
+            csp_loops:
+              display_name: Bucles
+        coursea-2021:
+          description_short: Una introducció a la informàtica per prelectors.
+          description_audience: 'De 4 a 7 anys'
+          lessons:
+            'Programming: Happy Maps':
+              name: Mapes feliços
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+        courseb-2021:
+          description_audience: 'De 5 a 8 anys'
+          lessons:
+            Move It, Move It:
+              key: Mou-lo, Mou-lo
+              name: Mou-lo, Mou-lo
+            'Loops: Getting Loopy':
+              name: Fent bucles
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+        coursec-2021:
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: 'De 6 a 10 anys'
+          lessons:
+            Binary Bracelets:
+              key: Polseres binàries
+              name: Polseres binàries
+            'Events: The Big Event':
+              name: El gran esdeveniment
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_binary:
+              display_name: Binari
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+        coursed-2021:
+          description_audience: 'De 7 a 11 anys'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programació de paper quadriculat
+            Relay Programming:
+              key: Programació en relleus
+              name: Programació en relleus
+            Dance Party:
+              key: Festa de ball
+              name: Festa de ball
+            Conditionals with Cards:
+              key: Condicionals amb targetes
+              name: Condicionals amb targetes
+            'Unplugged: Binary':
+              key: 'Sense connexió: Binari'
+              name: Imatges binàries
+            Artist Binary:
+              key: Artista binari
+              name: Artista binari
+          lesson_groups:
+            csf_events:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_binary:
+              display_name: Binari
+            csf_digcit:
+              display_name: Ciutadania digital
+        coursee-2021:
+          description_audience: 'De 8 a 12 anys'
+          lessons:
+            Conditionals:
+              key: Condicionals
+            'Functions: Songwriting':
+              name: Composició de cançons
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_nested_loops:
+              display_name: Bucles imbricats
+            csf_functions:
+              display_name: Funcions
+        coursef-2021:
+          description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: 'De 9 a 13 anys'
+          lessons:
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Festa de ball
+              name: Festa de ball
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_functions:
+              display_name: Funcions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Introducció
+            lessonGroup-3:
+              display_name: Variables

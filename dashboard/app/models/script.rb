@@ -129,6 +129,12 @@ class Script < ApplicationRecord
     SCRIPT_DIRECTORY
   end
 
+  SCRIPT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+
+  def self.script_json_directory
+    SCRIPT_JSON_DIRECTORY
+  end
+
   def generate_plc_objects
     if professional_learning_course?
       unit_group = UnitGroup.find_by_name(professional_learning_course)
@@ -965,7 +971,10 @@ class Script < ApplicationRecord
 
     # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
     added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
-      added_script = add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      added_script =
+        options[:properties][:is_migrated] == true ?
+          seed_from_json_file(options[:name]) :
+          add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       progressbar.increment if show_progress
       added_script.name
     rescue => e
@@ -1178,8 +1187,8 @@ class Script < ApplicationRecord
   end
 
   def write_script_json
-    script_json_filepath = "#{Rails.root}/config/scripts_json/#{name}.script_json"
-    File.write(script_json_filepath, Services::ScriptSeed.serialize_seeding_json(self))
+    filepath = Script.script_json_filepath(name)
+    File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
 
   # @param types [Array<string>]
@@ -1300,6 +1309,7 @@ class Script < ApplicationRecord
       name: name,
       title: title_for_display,
       description: localized_description,
+      studentDescription: localized_student_description,
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       hidden: hidden,
@@ -1401,7 +1411,7 @@ class Script < ApplicationRecord
   # and its lessons, in a format that can be deep-merged with the contents of
   # scripts.en.yml.
   def summarize_i18n_for_copy(new_name)
-    data = %w(title description description_short description_audience).map do |key|
+    data = %w(title description student_description description_short description_audience).map do |key|
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
@@ -1420,7 +1430,7 @@ class Script < ApplicationRecord
   end
 
   def summarize_i18n_for_edit(include_lessons=true)
-    data = %w(title description description_short description_audience).map do |key|
+    data = %w(title description student_description description_short description_audience).map do |key|
       [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
@@ -1495,6 +1505,10 @@ class Script < ApplicationRecord
 
   def localized_description
     I18n.t "data.script.name.#{name}.description"
+  end
+
+  def localized_student_description
+    I18n.t "data.script.name.#{name}.student_description"
   end
 
   def disable_post_milestone?
@@ -1606,6 +1620,11 @@ class Script < ApplicationRecord
     if localized_description
       info[:description] = localized_description
     end
+
+    if localized_student_description
+      info[:student_description] = localized_student_description
+    end
+
     info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
@@ -1766,8 +1785,14 @@ class Script < ApplicationRecord
     Services::ScriptSeed.serialize_seeding_json(self)
   end
 
-  # Wrapper for convenience
-  def self.seed_from_json_file(file_or_path)
-    Services::ScriptSeed.seed_from_json_file(file_or_path)
+  # @param [String] script_name - name of the script to seed from .script_json
+  # @returns [Script] - the newly seeded script object
+  def self.seed_from_json_file(script_name)
+    filepath = script_json_filepath(script_name)
+    Services::ScriptSeed.seed_from_json_file(filepath) if File.exist?(filepath)
+  end
+
+  def self.script_json_filepath(script_name)
+    "#{script_json_directory}/#{script_name}.script_json"
   end
 end
