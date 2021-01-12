@@ -37,7 +37,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     assert_equal 60.days.ago, edap.deleted_after
     assert_equal 28.days.ago, edap.deleted_before
     assert_equal 200, edap.max_teachers_to_purge
-    assert_equal 4000, edap.max_accounts_to_purge
+    assert_equal 8000, edap.max_accounts_to_purge
   end
 
   test 'raises ArgumentError unless dry_run is boolean' do
