@@ -145,7 +145,6 @@ class FoormSaveBar extends Component {
     }
   };
 
-  // Could this be deduped with handleSave?
   handlePublish = () => {
     this.setState({
       isSaving: true,
@@ -154,16 +153,8 @@ class FoormSaveBar extends Component {
     this.props.setSaveError(null);
   };
 
-  // probably should dedupe these two methods (handlesavecancel and handlepublishcancel)
   handleSaveCancel = () => {
     this.setState({confirmationDialogBeingShownName: null, isSaving: false});
-  };
-
-  handlePublishCancel = () => {
-    this.setState({
-      confirmationDialogBeingShownName: null,
-      isSaving: false
-    });
   };
 
   handleNewFormSaveCancel = () => {
@@ -171,7 +162,6 @@ class FoormSaveBar extends Component {
   };
 
   save = url => {
-    // Dedupe AJAX request? Only diffs in URL, maybe some state changes?
     // Figure out what to do with saveError?
     // Need to update this so it doesn't automatically make survey published?
     $.ajax({
@@ -256,7 +246,7 @@ class FoormSaveBar extends Component {
     this.setState({
       isSaving: false
     });
-    // figure out exactly what this is doing
+
     this.props.setSaveError(
       (result.responseJSON && result.responseJSON.questions) ||
         result.responseText ||
@@ -407,7 +397,7 @@ class FoormSaveBar extends Component {
             this.save(`/foorm/forms/${this.props.formId}/publish`);
           }}
           okText={'Yes, publish the form'}
-          onCancel={this.handlePublishCancel}
+          onCancel={this.handleSaveCancel}
           headerText="Publish Form"
           bodyText={aboutToPublishWarning}
         />
