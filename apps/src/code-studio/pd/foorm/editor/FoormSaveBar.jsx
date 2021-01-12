@@ -84,7 +84,10 @@ const publishedSaveWarning = (
 const aboutToPublishWarning = (
   <div>
     <span style={styles.warning}>Warning: </span>You are about to publish a new
-    survey. Once a survey is published, it may be put into active use.
+    survey. Once a survey is published, it may be put into active use.{' '}
+    <span style={styles.warning}>
+      A published survey cannot be returned to draft mode!
+    </span>
     <br />
     <br />
     Are you sure you want to publish?
@@ -128,6 +131,11 @@ class FoormSaveBar extends Component {
     };
   }
 
+  updateQuestionsUrl = () =>
+    `/foorm/forms/${this.props.formId}/update_questions`;
+
+  publishUrl = () => `/foorm/forms/${this.props.formId}/publish`;
+
   handleSave = () => {
     this.setState({isSaving: true});
     this.props.setSaveError(null);
@@ -140,8 +148,7 @@ class FoormSaveBar extends Component {
       // if this is not an existing form, show new form save modal
       this.setState({showNewFormSave: true});
     } else {
-      const saveUrl = `/foorm/forms/${this.props.formId}/update_questions`;
-      this.save(saveUrl);
+      this.save(this.updateQuestionsUrl());
     }
   };
 
@@ -379,7 +386,7 @@ class FoormSaveBar extends Component {
             confirmationDialogNames.save
           }
           onOk={() => {
-            this.save(`/foorm/forms/${this.props.formId}/update_questions`);
+            this.save(this.updateQuestionsUrl());
           }}
           okText={'Yes, save the form'}
           onCancel={this.handleSaveCancel}
@@ -392,7 +399,7 @@ class FoormSaveBar extends Component {
             confirmationDialogNames.publish
           }
           onOk={() => {
-            this.save(`/foorm/forms/${this.props.formId}/publish`);
+            this.save(this.publishUrl());
           }}
           okText={'Yes, publish the form'}
           onCancel={this.handleSaveCancel}
