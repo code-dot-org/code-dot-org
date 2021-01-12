@@ -83,7 +83,6 @@ class Script < ApplicationRecord
           lessons: [
             {lesson_activities: :activity_sections},
             :resources,
-            :vocabularies,
             :objectives
           ]
         },

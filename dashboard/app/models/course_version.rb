@@ -22,7 +22,6 @@
 class CourseVersion < ApplicationRecord
   belongs_to :course_offering
   has_many :resources
-  has_many :vocabularies
 
   def units
     content_root_type == 'UnitGroup' ? content_root.default_scripts : [content_root]
