@@ -5,6 +5,7 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-preview-21/u
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-preview-21/unit4/{LESSON}'
+pilot_experiment 'csd-2021-preview'
 project_sharing true
 curriculum_umbrella 'CSD'
 
