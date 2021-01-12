@@ -133,7 +133,7 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   include FactoryGirl::Syntax::Methods
-  include ActiveSupport::Testing::SetupAllAndTeardownAll
+  prepend ActiveSupport::Testing::SetupAllAndTeardownAll
   include ActiveSupport::Testing::TransactionalTestCase
   include CaptureQueries
 

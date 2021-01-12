@@ -3,7 +3,7 @@ require 'testing/setup_all_and_teardown_all'
 require 'testing/transactional_test_case'
 
 class SetupAllAndTeardownAllTest < ActiveSupport::TestCase
-  include ActiveSupport::Testing::SetupAllAndTeardownAll
+  prepend ActiveSupport::Testing::SetupAllAndTeardownAll
   self.test_order = :sorted
 
   setup_all :reset_callback_record, :foo
@@ -43,7 +43,7 @@ class TransactionTest < ActiveSupport::TestCase
     # Remove this TestCase from the global test runner.
     runnables.delete self
 
-    include ActiveSupport::Testing::SetupAllAndTeardownAll
+    prepend ActiveSupport::Testing::SetupAllAndTeardownAll
     fixtures :callout
 
     def test_create_fixture
@@ -54,7 +54,7 @@ class TransactionTest < ActiveSupport::TestCase
   class TransactionalTestCaseTest < ActiveSupport::TestCase
     runnables.delete self
 
-    include ActiveSupport::Testing::SetupAllAndTeardownAll
+    prepend ActiveSupport::Testing::SetupAllAndTeardownAll
     include ActiveSupport::Testing::TransactionalTestCase
 
     self.use_transactional_test_case = true
