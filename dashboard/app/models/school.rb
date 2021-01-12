@@ -345,6 +345,7 @@ class School < ApplicationRecord
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT schools.
+
   def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, new_attributes: [], write_inserts: true)
     schools = nil
     new_schools = []
@@ -426,7 +427,7 @@ class School < ApplicationRecord
       "School seeding: done processing #{filename}.\n"\
       "#{new_schools.length} new schools#{future_tense_dry_run} added.\n"\
       "#{updated_schools} schools#{future_tense_dry_run} updated.\n"\
-      "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (school considered changed if only update was adding new columns included in this import).\n"\
+      "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (school considered unchanged if only update was adding new columns included in this import).\n"\
       "#{duplicate_schools.length} duplicate schools#{future_tense_dry_run} skipped.\n"\
       "State CS offerings#{future_tense_dry_run} deleted: #{state_cs_offerings_deleted_count}, state CS offerings#{future_tense_dry_run} reloaded: #{state_cs_offerings_reloaded_count}\n"
 
