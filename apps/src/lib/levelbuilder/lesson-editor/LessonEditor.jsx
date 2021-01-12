@@ -87,10 +87,6 @@ class LessonEditor extends Component {
 
     this.setState({isSaving: true, lastSaved: null, error: null});
 
-    // Remove updatedAt before sending information to server as updateAt time
-    // was not consistent between server version and client
-    delete this.state.originalLessonData.updatedAt;
-
     $.ajax({
       url: `/lessons/${this.state.originalLessonData.id}`,
       method: 'PUT',
