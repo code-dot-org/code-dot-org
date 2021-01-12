@@ -10,7 +10,7 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
     margin: '10px, 0px',
-    width: '100%',
+    width: '95%',
     backgroundColor: color.lightest_gray,
     padding: '0px 10px 10px 10px'
   },

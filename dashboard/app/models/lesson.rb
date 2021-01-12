@@ -13,6 +13,7 @@
 #  properties        :text(65535)
 #  lesson_group_id   :integer
 #  key               :string(255)      not null
+#  has_lesson_plan   :boolean
 #
 # Indexes
 #
@@ -325,6 +326,7 @@ class Lesson < ApplicationRecord
       preparation: preparation || '',
       activities: lesson_activities.map(&:summarize_for_lesson_show),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
       assessmentOpportunities: assessment_opportunities
