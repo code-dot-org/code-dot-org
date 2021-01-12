@@ -42,6 +42,11 @@ const styles = {
   dropdown: {
     margin: '0 6px',
     width: 300
+  },
+  warning: {
+    fontSize: 20,
+    fontStyle: 'italic',
+    padding: 10
   }
 };
 
@@ -71,6 +76,7 @@ class LessonEditor extends Component {
         this.props.initialLessonData.assessmentOpportunities || '',
       unplugged: this.props.initialLessonData.unplugged,
       lockable: this.props.initialLessonData.lockable,
+      hasLessonPlan: this.props.initialLessonData.hasLessonPlan,
       creativeCommonsLicense: this.props.initialLessonData
         .creativeCommonsLicense,
       assessment: this.props.initialLessonData.assessment,
@@ -99,6 +105,7 @@ class LessonEditor extends Component {
       data: JSON.stringify({
         name: this.state.displayName,
         lockable: this.state.lockable,
+        hasLessonPlan: this.state.hasLessonPlan,
         creativeCommonsLicense: this.state.creativeCommonsLicense,
         assessment: this.state.assessment,
         unplugged: this.state.unplugged,
@@ -153,6 +160,7 @@ class LessonEditor extends Component {
       assessmentOpportunities,
       unplugged,
       lockable,
+      hasLessonPlan,
       creativeCommonsLicense,
       assessment,
       purpose,
@@ -176,7 +184,7 @@ class LessonEditor extends Component {
 
         <CollapsibleEditorSection
           title="General Lesson Settings"
-          collapsed={true}
+          collapsed={hasLessonPlan}
         >
           <label>
             Lockable
@@ -191,6 +199,21 @@ class LessonEditor extends Component {
                 Check this box if this lesson should be locked for students. If
                 checked, teachers will be able to unlock the lesson for their
                 students.
+              </p>
+            </HelpTip>
+          </label>
+          <label>
+            Has Lesson Plan
+            <input
+              type="checkbox"
+              checked={hasLessonPlan}
+              style={styles.checkbox}
+              onChange={() => this.setState({hasLessonPlan: !hasLessonPlan})}
+            />
+            <HelpTip>
+              <p>
+                Check this box if this lesson should have a lesson plan for
+                teachers associated with it.
               </p>
             </HelpTip>
           </label>
@@ -244,108 +267,126 @@ class LessonEditor extends Component {
             </HelpTip>
           </label>
         </CollapsibleEditorSection>
-        <CollapsibleEditorSection title="Announcements" collapsed={true}>
-          <AnnouncementsEditor
-            announcements={announcements}
-            inputStyle={styles.input}
-            updateAnnouncements={this.handleUpdateAnnouncements}
-          />
-        </CollapsibleEditorSection>
+        {!hasLessonPlan && (
+          <div style={styles.warning}>
+            All lesson plan fields are hidden because "Has Lesson Plan" is NOT
+            checked. If you would like to edit the lesson plan for this lesson
+            please go to General Lesson Settings and check "Has Lesson Plan".
+          </div>
+        )}
+        {hasLessonPlan && (
+          <div>
+            <CollapsibleEditorSection title="Announcements" collapsed={true}>
+              <AnnouncementsEditor
+                announcements={announcements}
+                inputStyle={styles.input}
+                updateAnnouncements={this.handleUpdateAnnouncements}
+              />
+            </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection
-          title="Overviews"
-          collapsed={true}
-          fullWidth={true}
-        >
-          <TextareaWithMarkdownPreview
-            markdown={overview}
-            label={'Overview'}
-            inputRows={5}
-            handleMarkdownChange={e =>
-              this.setState({overview: e.target.value})
-            }
-          />
-          <TextareaWithMarkdownPreview
-            markdown={studentOverview}
-            label={'Student Overview'}
-            inputRows={5}
-            helpTip={
-              'This overview will appear on the students Lessons Resources page.'
-            }
-            handleMarkdownChange={e =>
-              this.setState({studentOverview: e.target.value})
-            }
-          />
-        </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Overviews"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <TextareaWithMarkdownPreview
+                markdown={overview}
+                label={'Overview'}
+                inputRows={5}
+                handleMarkdownChange={e =>
+                  this.setState({overview: e.target.value})
+                }
+              />
+              <TextareaWithMarkdownPreview
+                markdown={studentOverview}
+                label={'Student Overview'}
+                inputRows={5}
+                helpTip={
+                  'This overview will appear on the students Lessons Resources page.'
+                }
+                handleMarkdownChange={e =>
+                  this.setState({studentOverview: e.target.value})
+                }
+              />
+            </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection
-          title="Purpose and Prep"
-          collapsed={true}
-          fullWidth={true}
-        >
-          <TextareaWithMarkdownPreview
-            markdown={purpose}
-            label={'Purpose'}
-            inputRows={5}
-            handleMarkdownChange={e => this.setState({purpose: e.target.value})}
-          />
-          <TextareaWithMarkdownPreview
-            markdown={preparation}
-            label={'Preparation'}
-            inputRows={5}
-            handleMarkdownChange={e =>
-              this.setState({preparation: e.target.value})
-            }
-          />
-        </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Purpose and Prep"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <TextareaWithMarkdownPreview
+                markdown={purpose}
+                label={'Purpose'}
+                inputRows={5}
+                handleMarkdownChange={e =>
+                  this.setState({purpose: e.target.value})
+                }
+              />
+              <TextareaWithMarkdownPreview
+                markdown={preparation}
+                label={'Preparation'}
+                inputRows={5}
+                handleMarkdownChange={e =>
+                  this.setState({preparation: e.target.value})
+                }
+              />
+            </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection
-          title="Assessment Opportunities"
-          collapsed={true}
-          fullWidth={true}
-        >
-          <TextareaWithMarkdownPreview
-            markdown={assessmentOpportunities}
-            label={'Assessment Opportunities'}
-            inputRows={5}
-            handleMarkdownChange={e =>
-              this.setState({assessmentOpportunities: e.target.value})
-            }
-          />
-        </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Assessment Opportunities"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <TextareaWithMarkdownPreview
+                markdown={assessmentOpportunities}
+                label={'Assessment Opportunities'}
+                inputRows={5}
+                handleMarkdownChange={e =>
+                  this.setState({assessmentOpportunities: e.target.value})
+                }
+              />
+            </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection
-          title="Resources"
-          collapsed={true}
-          fullWidth={true}
-        >
-          {this.state.originalLessonData.courseVersionId ? (
-            <ResourcesEditor
-              courseVersionId={this.state.originalLessonData.courseVersionId}
-            />
-          ) : (
-            <h4>
-              A unit must be in a course version, i.e. a unit must belong to a
-              course or have 'Is a Standalone Course' checked, in order to add
-              resources.
-            </h4>
-          )}
-        </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Resources"
+              collapsed={true}
+              fullWidth={true}
+            >
+              {this.state.originalLessonData.courseVersionId ? (
+                <ResourcesEditor
+                  courseVersionId={
+                    this.state.originalLessonData.courseVersionId
+                  }
+                />
+              ) : (
+                <h4>
+                  A unit must be in a course version, i.e. a unit must belong to
+                  a course or have 'Is a Standalone Course' checked, in order to
+                  add resources.
+                </h4>
+              )}
+            </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection
-          title="Objectives"
-          collapsed={true}
-          fullWidth={true}
-        >
-          <ObjectivesEditor
-            objectives={this.state.objectives}
-            updateObjectives={this.handleUpdateObjectives}
-          />
-        </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Objectives"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <ObjectivesEditor
+                objectives={this.state.objectives}
+                updateObjectives={this.handleUpdateObjectives}
+              />
+            </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
-          <ActivitiesEditor />
-        </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Activities & Levels"
+              fullWidth={true}
+            >
+              <ActivitiesEditor />
+            </CollapsibleEditorSection>
+          </div>
+        )}
 
         <SaveBar
           handleSave={this.handleSave}

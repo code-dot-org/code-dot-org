@@ -265,6 +265,7 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
           lockable: lesson.lockable,
           assessment: lesson.assessment,
           unplugged: lesson.unplugged,
+          hasLessonPlan: lesson.hasLessonPlan,
           name: lesson.name,
           /*
            * NOTE: The Script Edit GUI no longer includes the editing of levels
