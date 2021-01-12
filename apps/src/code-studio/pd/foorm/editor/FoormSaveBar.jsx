@@ -40,8 +40,8 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-end'
   },
-  saveButton: {
-    margin: '10px 50px 10px 20px'
+  button: {
+    margin: '10px'
   },
   spinner: {
     fontSize: 25,
@@ -81,6 +81,16 @@ const publishedSaveWarning = (
   </div>
 );
 
+const aboutToPublishWarning = (
+  <div>
+    <span style={styles.warning}>Warning: </span>You are about to publish a new
+    survey. Once a survey is published, it may be put into active use.
+    <br />
+    <br />
+    Are you sure you want to publish?
+  </div>
+);
+
 class FoormSaveBar extends Component {
   static propTypes = {
     formCategories: PropTypes.array,
@@ -105,8 +115,10 @@ class FoormSaveBar extends Component {
     super(props);
 
     this.state = {
+      // should be able to combine these confirmation props
       showSaveConfirmation: false,
-      isSaving: false,
+      showPublishConfirmation: false,
+      isSavingOrPublishing: false,
       showNewFormSave: false,
       formName: null,
       formCategory: null
@@ -114,7 +126,7 @@ class FoormSaveBar extends Component {
   }
 
   handleSave = () => {
-    this.setState({isSaving: true});
+    this.setState({isSavingOrPublishing: true});
     this.props.setSaveError(null);
     if (this.props.isFormPublished) {
       // show a warning if in published mode
@@ -127,15 +139,35 @@ class FoormSaveBar extends Component {
     }
   };
 
+  // Could this be deduped with handleSave?
+  handlePublish = () => {
+    this.setState({
+      isSavingOrPublishing: true,
+      showPublishConfirmation: true
+    });
+    this.props.setSaveError(null);
+  };
+
+  // probably should dedupe these two methods (handlesavecancel and handlepublishcancel)
   handleSaveCancel = () => {
-    this.setState({showSaveConfirmation: false, isSaving: false});
+    this.setState({showSaveConfirmation: false, isSavingOrPublishing: false});
+  };
+
+  handlePublishCancel = () => {
+    this.setState({
+      showPublishConfirmation: false,
+      isSavingOrPublishing: false
+    });
   };
 
   handleNewFormSaveCancel = () => {
-    this.setState({showNewFormSave: false, isSaving: false});
+    this.setState({showNewFormSave: false, isSavingOrPublishing: false});
   };
 
   save = () => {
+    // Dedupe AJAX request? Only diffs in URL, maybe some state changes?
+    // Figure out what to do with saveError?
+    // Need to update this so it doesn't automatically make survey published?
     $.ajax({
       url: `/foorm/forms/${this.props.formId}/update_questions`,
       type: 'put',
@@ -155,6 +187,33 @@ class FoormSaveBar extends Component {
         this.handleSaveError(result);
         this.setState({
           showSaveConfirmation: false
+        });
+      });
+  };
+
+  publish = () => {
+    $.ajax({
+      url: `/foorm/forms/${this.props.formId}/publish`,
+      type: 'put',
+      contentType: 'application/json',
+      processData: false,
+      data: JSON.stringify({
+        questions: this.props.formQuestions
+      })
+    })
+      .done(result => {
+        // should rename this if i'm going to use it here.
+        this.handleSaveSuccess(result);
+
+        this.setState({
+          showPublishConfirmation: false
+        });
+      })
+      .fail(result => {
+        // should rename this if i'm going to use it here.
+        this.handleSaveError(result);
+        this.setState({
+          showPublishConfirmation: false
         });
       });
   };
@@ -197,7 +256,7 @@ class FoormSaveBar extends Component {
 
   handleSaveSuccess(result) {
     this.setState({
-      isSaving: false
+      isSavingOrPublishing: false
     });
     this.props.setLastSaved(Date.now());
     const updatedQuestions = JSON.parse(result.questions);
@@ -216,8 +275,9 @@ class FoormSaveBar extends Component {
 
   handleSaveError(result) {
     this.setState({
-      isSaving: false
+      isSavingOrPublishing: false
     });
+    // figure out exactly what this is doing
     this.props.setSaveError(
       (result.responseJSON && result.responseJSON.questions) ||
         result.responseText ||
@@ -319,7 +379,7 @@ class FoormSaveBar extends Component {
               className="saveErrorMessage"
             >{`Error Saving: ${this.props.saveError}`}</div>
           )}
-          {this.state.isSaving && (
+          {this.state.isSavingOrPublishing && (
             <div style={styles.spinner}>
               <FontAwesome icon="spinner" className="fa-spin" />
             </div>
@@ -327,12 +387,27 @@ class FoormSaveBar extends Component {
           <button
             className="btn btn-primary"
             type="button"
-            style={styles.saveButton}
+            style={styles.button}
             onClick={this.handleSave}
-            disabled={this.state.isSaving || this.props.formHasError}
+            disabled={
+              this.state.isSavingOrPublishing || this.props.formHasError
+            }
           >
             Save
           </button>
+          {!this.props.isFormPublished && (
+            <button
+              className="btn btn-danger"
+              type="button"
+              style={styles.button}
+              onClick={this.handlePublish}
+              disabled={
+                this.state.isSavingOrPublishing || this.props.formHasError
+              }
+            >
+              Publish
+            </button>
+          )}
         </div>
         {this.renderNewFormSaveModal()}
         <ConfirmationDialog
@@ -342,6 +417,14 @@ class FoormSaveBar extends Component {
           onCancel={this.handleSaveCancel}
           headerText="Save Form"
           bodyText={publishedSaveWarning}
+        />
+        <ConfirmationDialog
+          show={this.state.showPublishConfirmation}
+          onOk={this.publish}
+          okText={'Yes, publish the form'}
+          onCancel={this.handlePublishCancel}
+          headerText="Publish Form"
+          bodyText={aboutToPublishWarning}
         />
       </div>
     );
