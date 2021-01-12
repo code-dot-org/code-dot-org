@@ -30,6 +30,10 @@
           [
             "movement direction",
             "\"direction\""
+          ],
+          [
+            "speed",
+            "\"speed\""
           ]
         ]
       },
