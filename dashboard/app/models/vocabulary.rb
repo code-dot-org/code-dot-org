@@ -18,4 +18,18 @@
 class Vocabulary < ApplicationRecord
   has_and_belongs_to_many :lessons, join_table: :lessons_vocabularies
   belongs_to :course_version
+
+  def summarize_for_lesson_show
+    {key: key, word: display_word, definition: display_definition}
+  end
+
+  private
+
+  def display_word
+    word
+  end
+
+  def display_definition
+    definition
+  end
 end
