@@ -31,9 +31,23 @@ class Vocabulary < ApplicationRecord
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
   def seeding_key(_seed_context)
     # Course version is also needed to identify this object, and can be looked
-    # up from the script/unit which this resource is serialized within. If we
-    # were to serialize resources outside of .script_json, we'd need to include
+    # up from the script/unit which this vocabulary is serialized within. If we
+    # were to serialize vocabulary outside of .script_json, we'd need to include
     # a key respresenting the course version here.
     {'vocabulary.key': key}.stringify_keys
+  end
+  
+  def summarize_for_lesson_show
+    {key: key, word: display_word, definition: display_definition}
+  end
+
+  private
+
+  def display_word
+    word
+  end
+
+  def display_definition
+    definition
   end
 end

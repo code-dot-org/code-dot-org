@@ -9,6 +9,8 @@ social:
     "og:image:width": 850
     "og:image:height": 502
 ---
+{{ professional_learning_apply_banner }}
+
 # Resources for Teaching in Virtual and Socially-Distanced Classrooms
 
 <div class="col-40" style="padding-right: 20px">
