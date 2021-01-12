@@ -75,6 +75,8 @@ export const levelProgressStyle = (levelStatus, levelKind, disabled) => {
     backgroundColor: color.level_not_tried
   };
 
+  // We don't return early for disabled assessments that have been submitted
+  // so that they still show their submitted status.
   if ((disabled && levelStatus !== LevelStatus.submitted) || !levelStatus) {
     return style;
   }

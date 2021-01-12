@@ -166,7 +166,7 @@ class UserLevel < ApplicationRecord
     # no need to create a level if it's just going to be locked
     return if !user_level.persisted? && locked
 
-    # Used to set as submitted if locked and readonly, removing that 01/21
+    # Used to set as submitted if locked or readonly, removing both 01/21
     user_level.assign_attributes(
       readonly_answers: !locked && readonly_answers,
       unlocked_at: locked ? nil : Time.now,
