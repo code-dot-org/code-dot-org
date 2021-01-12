@@ -830,66 +830,6 @@
       }
     }
   ],
-  "vocabularies": [
-    {
-      "key": "test-serialize-seeding-json-lg-1-l-1-vocab-1",
-      "word": "word",
-      "definition": "definition",
-      "seeding_key": {
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-1-vocab-1"
-      }
-    },
-    {
-      "key": "test-serialize-seeding-json-lg-1-l-1-vocab-2",
-      "word": "word",
-      "definition": "definition",
-      "seeding_key": {
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-1-vocab-2"
-      }
-    },
-    {
-      "key": "test-serialize-seeding-json-lg-1-l-2-vocab-1",
-      "word": "word",
-      "definition": "definition",
-      "seeding_key": {
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-2-vocab-1"
-      }
-    },
-    {
-      "key": "test-serialize-seeding-json-lg-1-l-2-vocab-2",
-      "word": "word",
-      "definition": "definition",
-      "seeding_key": {
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-2-vocab-2"
-      }
-    }
-  ],
-  "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-1-vocab-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-1-vocab-2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-2-vocab-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-2-vocab-2"
-      }
-    }
-  ],
   "objectives": [
     {
       "key": "test-serialize-seeding-json-lg-1-l-1-objective-1",
