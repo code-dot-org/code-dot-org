@@ -91,6 +91,11 @@ const aboutToPublishWarning = (
   </div>
 );
 
+const confirmationDialogNames = {
+  save: 'save',
+  publish: 'publish'
+};
+
 class FoormSaveBar extends Component {
   static propTypes = {
     formCategories: PropTypes.array,
@@ -128,12 +133,15 @@ class FoormSaveBar extends Component {
     this.props.setSaveError(null);
     if (this.props.isFormPublished) {
       // show a warning if in published mode
-      this.setState({confirmationDialogBeingShownName: 'save'});
+      this.setState({
+        confirmationDialogBeingShownName: confirmationDialogNames.save
+      });
     } else if (this.props.formId === null || this.props.formId === undefined) {
       // if this is not an existing form, show new form save modal
       this.setState({showNewFormSave: true});
     } else {
-      this.save();
+      const saveUrl = `/foorm/forms/${this.props.formId}/update_questions`;
+      this.save(saveUrl);
     }
   };
 
@@ -141,7 +149,7 @@ class FoormSaveBar extends Component {
   handlePublish = () => {
     this.setState({
       isSaving: true,
-      confirmationDialogBeingShownName: 'publish'
+      confirmationDialogBeingShownName: confirmationDialogNames.publish
     });
     this.props.setSaveError(null);
   };
@@ -162,12 +170,12 @@ class FoormSaveBar extends Component {
     this.setState({showNewFormSave: false, isSaving: false});
   };
 
-  save = () => {
+  save = url => {
     // Dedupe AJAX request? Only diffs in URL, maybe some state changes?
     // Figure out what to do with saveError?
     // Need to update this so it doesn't automatically make survey published?
     $.ajax({
-      url: `/foorm/forms/${this.props.formId}/update_questions`,
+      url: url,
       type: 'put',
       contentType: 'application/json',
       processData: false,
@@ -382,15 +390,6 @@ class FoormSaveBar extends Component {
               <FontAwesome icon="spinner" className="fa-spin" />
             </div>
           )}
-          <button
-            className="btn btn-primary"
-            type="button"
-            style={styles.button}
-            onClick={this.handleSave}
-            disabled={this.state.isSaving || this.props.formHasError}
-          >
-            Save
-          </button>
           {!this.props.isFormPublished && (
             <button
               className="btn btn-danger"
@@ -402,19 +401,38 @@ class FoormSaveBar extends Component {
               Publish
             </button>
           )}
+          <button
+            className="btn btn-primary"
+            type="button"
+            style={styles.button}
+            onClick={this.handleSave}
+            disabled={this.state.isSaving || this.props.formHasError}
+          >
+            Save
+          </button>
         </div>
         {this.renderNewFormSaveModal()}
         <ConfirmationDialog
-          show={this.state.confirmationDialogBeingShownName === 'save'}
-          onOk={this.save}
+          show={
+            this.state.confirmationDialogBeingShownName ===
+            confirmationDialogNames.save
+          }
+          onOk={() => {
+            this.save(`/foorm/forms/${this.props.formId}/update_questions`);
+          }}
           okText={'Yes, save the form'}
           onCancel={this.handleSaveCancel}
           headerText="Save Form"
           bodyText={publishedSaveWarning}
         />
         <ConfirmationDialog
-          show={this.state.confirmationDialogBeingShownName === 'publish'}
-          onOk={this.publish}
+          show={
+            this.state.confirmationDialogBeingShownName ===
+            confirmationDialogNames.publish
+          }
+          onOk={() => {
+            this.save(`/foorm/forms/${this.props.formId}/publish`);
+          }}
           okText={'Yes, publish the form'}
           onCancel={this.handlePublishCancel}
           headerText="Publish Form"
