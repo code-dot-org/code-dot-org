@@ -28,11 +28,14 @@ module LessonImportHelper
     raise "Script must have course version" unless course_version_id
 
     lesson_levels = lesson.script_levels.reject {|l| l.levels[0].type == 'CurriculumReference'}
-    if models_to_import.include?('Lesson')
-      if cb_lesson_data.empty?
+    # Lockable lessons need to be handled as a separate case
+    if cb_lesson_data.empty?
+      if models_to_import.include?('Lesson')
         lesson.lesson_activities = update_lockable_lesson(lesson_levels, lesson.id)
         lesson.script_levels = []
-      else
+      end
+    else
+      if models_to_import.include?('Lesson')
         lesson.name = cb_lesson_data['title']
         lesson.overview = cb_lesson_data['teacher_desc']
         lesson.student_overview = cb_lesson_data['student_desc']
@@ -42,21 +45,21 @@ module LessonImportHelper
         lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
         lesson.save!
       end
-    end
-    if models_to_import.include?('Objective')
-      lesson.objectives = cb_lesson_data['objectives'].map do |o|
-        Objective.new(key: SecureRandom.uuid, description: o["name"])
+      if models_to_import.include?('Objective')
+        lesson.objectives = cb_lesson_data['objectives'].map do |o|
+          Objective.new(key: SecureRandom.uuid, description: o["name"])
+        end
       end
-    end
-    if models_to_import.include?('Activity')
-      lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson_levels, lesson)
-      lesson.script_levels = []
-    end
-    if models_to_import.include?('Resource')
-      lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
-    end
-    if models_to_import.include?('Vocabulary')
-      lesson.vocabularies = create_lesson_vocabularies(cb_lesson_data['vocab'], course_version_id)
+      if models_to_import.include?('Activity')
+        lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson_levels, lesson)
+        lesson.script_levels = []
+      end
+      if models_to_import.include?('Resource')
+        lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
+      end
+      if models_to_import.include?('Vocabulary')
+        lesson.vocabularies = create_lesson_vocabularies(cb_lesson_data['vocab'], course_version_id)
+      end
     end
   end
 
