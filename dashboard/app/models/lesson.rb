@@ -84,6 +84,7 @@ class Lesson < ApplicationRecord
         ) do |l|
           l.name = "" # will be updated below, but cant be null
           l.relative_position = 0 # will be updated below, but cant be null
+          l.has_lesson_plan = true # will be reset below if specified
         end
 
       lesson.assign_attributes(
@@ -231,6 +232,7 @@ class Lesson < ApplicationRecord
         title: localized_title,
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
+        hasLessonPlan: has_lesson_plan,
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
@@ -303,6 +305,7 @@ class Lesson < ApplicationRecord
       assessment: assessment,
       unplugged: unplugged,
       lockable: lockable,
+      hasLessonPlan: has_lesson_plan,
       creativeCommonsLicense: creative_commons_license,
       purpose: purpose,
       preparation: preparation,
