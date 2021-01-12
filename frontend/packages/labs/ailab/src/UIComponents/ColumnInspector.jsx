@@ -122,7 +122,7 @@ class ColumnInspector extends Component {
                 )}
 
 
-                {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+                {/*currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
                   <div>
                     <p>
                       {Object.keys(currentColumnData.uniqueOptions).length}{" "}
@@ -153,7 +153,7 @@ class ColumnInspector extends Component {
                       </table>
                     </div>
                   </div>
-                )}
+                )*/}
                 {/* currentColumnData.kind === ColumnTypes.CONTINUOUS && (
                   <div>
                     {currentColumnData.range && (

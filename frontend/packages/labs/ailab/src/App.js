@@ -83,6 +83,8 @@ class PanelButtons extends Component {
               style={styles.navButton}
               onClick={() => setCurrentPanel(panelButtons.prev.panel)}
             >
+              &#9664;
+              &nbsp;
               {panelButtons.prev.text}
             </button>
           </div>
@@ -95,6 +97,8 @@ class PanelButtons extends Component {
               onClick={() => setCurrentPanel(panelButtons.next.panel)}
             >
               {panelButtons.next.text}
+              &nbsp;
+              &#9654;
             </button>
           </div>
         )}

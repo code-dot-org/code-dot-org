@@ -764,6 +764,10 @@ function isPanelVisible(state, panelId) {
 }
 
 function isPanelEnabled(state, panelId) {
+  if (!isPanelVisible(state, panelId)) {
+    return false;
+  }
+
   if (panelId === "dataDisplay") {
     if (state.data.length === 0) {
       return false;
