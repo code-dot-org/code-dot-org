@@ -490,6 +490,7 @@ class ScriptLevel < ApplicationRecord
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
       new_level[:uid] = "#{level_id}_#{page_index}"
+      new_level[:page_number] = page_index + 1
       new_level[:url] << "/page/#{page_index + 1}"
       new_level[:position] = last_level_summary[:position] + page_index
       new_level[:title] = last_level_summary[:position] + page_index
@@ -522,13 +523,26 @@ class ScriptLevel < ApplicationRecord
     lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
     if lesson_extra_user_level
       {
+        id: lesson_extra_user_level.id,
         bonus: true,
         user_id: student.id,
         status: SharedConstants::LEVEL_STATUS.perfect,
         passed: true
       }.merge!(lesson_extra_user_level.attributes)
+    elsif bonus_level_ids.count == 0
+      {
+        # Some lessons have a lesson extras option without any bonus levels. In
+        # these cases, they just display previous lesson challenges. These should
+        # be displayed as "perfect." Example level: /s/express-2020/stage/28/extras
+        id: -1,
+        bonus: true,
+        user_id: student.id,
+        passed: true,
+        status: SharedConstants::LEVEL_STATUS.perfect
+      }
     else
       {
+        id: bonus_level_ids.first,
         bonus: true,
         user_id: student.id,
         passed: false,
@@ -565,6 +579,7 @@ class ScriptLevel < ApplicationRecord
     end
 
     teacher_panel_summary = {
+      id: level.id,
       contained: contained,
       submitLevel: level.properties['submittable'] == 'true',
       paired: paired,
