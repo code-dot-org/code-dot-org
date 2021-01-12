@@ -115,10 +115,8 @@ class FoormSaveBar extends Component {
     super(props);
 
     this.state = {
-      // should be able to combine these confirmation props
-      showSaveConfirmation: false,
-      showPublishConfirmation: false,
-      isSavingOrPublishing: false,
+      confirmationDialogBeingShownName: null,
+      isSaving: false,
       showNewFormSave: false,
       formName: null,
       formCategory: null
@@ -126,11 +124,11 @@ class FoormSaveBar extends Component {
   }
 
   handleSave = () => {
-    this.setState({isSavingOrPublishing: true});
+    this.setState({isSaving: true});
     this.props.setSaveError(null);
     if (this.props.isFormPublished) {
       // show a warning if in published mode
-      this.setState({showSaveConfirmation: true});
+      this.setState({confirmationDialogBeingShownName: 'save'});
     } else if (this.props.formId === null || this.props.formId === undefined) {
       // if this is not an existing form, show new form save modal
       this.setState({showNewFormSave: true});
@@ -142,26 +140,26 @@ class FoormSaveBar extends Component {
   // Could this be deduped with handleSave?
   handlePublish = () => {
     this.setState({
-      isSavingOrPublishing: true,
-      showPublishConfirmation: true
+      isSaving: true,
+      confirmationDialogBeingShownName: 'publish'
     });
     this.props.setSaveError(null);
   };
 
   // probably should dedupe these two methods (handlesavecancel and handlepublishcancel)
   handleSaveCancel = () => {
-    this.setState({showSaveConfirmation: false, isSavingOrPublishing: false});
+    this.setState({confirmationDialogBeingShownName: null, isSaving: false});
   };
 
   handlePublishCancel = () => {
     this.setState({
-      showPublishConfirmation: false,
-      isSavingOrPublishing: false
+      confirmationDialogBeingShownName: null,
+      isSaving: false
     });
   };
 
   handleNewFormSaveCancel = () => {
-    this.setState({showNewFormSave: false, isSavingOrPublishing: false});
+    this.setState({showNewFormSave: false, isSaving: false});
   };
 
   save = () => {
@@ -180,13 +178,13 @@ class FoormSaveBar extends Component {
       .done(result => {
         this.handleSaveSuccess(result);
         this.setState({
-          showSaveConfirmation: false
+          confirmationDialogBeingShownName: null
         });
       })
       .fail(result => {
         this.handleSaveError(result);
         this.setState({
-          showSaveConfirmation: false
+          confirmationDialogBeingShownName: null
         });
       });
   };
@@ -206,14 +204,14 @@ class FoormSaveBar extends Component {
         this.handleSaveSuccess(result);
 
         this.setState({
-          showPublishConfirmation: false
+          confirmationDialogBeingShownName: null
         });
       })
       .fail(result => {
         // should rename this if i'm going to use it here.
         this.handleSaveError(result);
         this.setState({
-          showPublishConfirmation: false
+          confirmationDialogBeingShownName: null
         });
       });
   };
@@ -256,7 +254,7 @@ class FoormSaveBar extends Component {
 
   handleSaveSuccess(result) {
     this.setState({
-      isSavingOrPublishing: false
+      isSaving: false
     });
     this.props.setLastSaved(Date.now());
     const updatedQuestions = JSON.parse(result.questions);
@@ -275,7 +273,7 @@ class FoormSaveBar extends Component {
 
   handleSaveError(result) {
     this.setState({
-      isSavingOrPublishing: false
+      isSaving: false
     });
     // figure out exactly what this is doing
     this.props.setSaveError(
@@ -379,7 +377,7 @@ class FoormSaveBar extends Component {
               className="saveErrorMessage"
             >{`Error Saving: ${this.props.saveError}`}</div>
           )}
-          {this.state.isSavingOrPublishing && (
+          {this.state.isSaving && (
             <div style={styles.spinner}>
               <FontAwesome icon="spinner" className="fa-spin" />
             </div>
@@ -389,9 +387,7 @@ class FoormSaveBar extends Component {
             type="button"
             style={styles.button}
             onClick={this.handleSave}
-            disabled={
-              this.state.isSavingOrPublishing || this.props.formHasError
-            }
+            disabled={this.state.isSaving || this.props.formHasError}
           >
             Save
           </button>
@@ -401,9 +397,7 @@ class FoormSaveBar extends Component {
               type="button"
               style={styles.button}
               onClick={this.handlePublish}
-              disabled={
-                this.state.isSavingOrPublishing || this.props.formHasError
-              }
+              disabled={this.state.isSaving || this.props.formHasError}
             >
               Publish
             </button>
@@ -411,7 +405,7 @@ class FoormSaveBar extends Component {
         </div>
         {this.renderNewFormSaveModal()}
         <ConfirmationDialog
-          show={this.state.showSaveConfirmation}
+          show={this.state.confirmationDialogBeingShownName === 'save'}
           onOk={this.save}
           okText={'Yes, save the form'}
           onCancel={this.handleSaveCancel}
@@ -419,7 +413,7 @@ class FoormSaveBar extends Component {
           bodyText={publishedSaveWarning}
         />
         <ConfirmationDialog
-          show={this.state.showPublishConfirmation}
+          show={this.state.confirmationDialogBeingShownName === 'publish'}
           onOk={this.publish}
           okText={'Yes, publish the form'}
           onCancel={this.handlePublishCancel}
