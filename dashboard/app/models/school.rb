@@ -444,7 +444,7 @@ class School < ApplicationRecord
       if new_schools.any?
         summary_message <<
           "Schools#{future_tense_dry_run} added:\n"\
-          "#{new_schools.map {|school| (school[:name]) + ' ' + school[:id].to_s}.join("\n")}\n"
+          "#{new_schools.map {|school| school[:name] + ' ' + school[:id].to_s}.join("\n")}\n"
       end
 
       if duplicate_schools.any?
