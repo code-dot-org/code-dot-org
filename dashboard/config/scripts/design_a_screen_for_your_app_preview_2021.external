@@ -11,17 +11,15 @@ Because you'll be dividing the work up, you'll want to do some planning ahead of
 * What colors will you use for backgrounds, text, and buttons
 * What's the general style and layout?
 
-# Namespacing
+# Naming Your Element IDs
+When you create an ID for your elements, it’s a good idea to include the name of your screen at the front of each ID. For example, if your screen name is account and you have an input box for the user’s first name, your ID for that input box would be account_firstName. 
 
-In the next lesson you will combine all of your team members' screens into one app. To make sure that the IDs on one page don't conflict with another you'll need to include a unique _namespace_ for your page. This will be something you add to the beginning of every id so that your element ids don't conflict with others when you merge everyone's screens together. Your namespace should be the ID of your screen with an underscore at the end. For example, if you are making the home page, you might use "home_" as your namespace - leading to ids such as:
+This helps differentiate the elements on your screen from the elements on everyone else’s screen. For example, if everyone on your team has a button called “home” on their screen, this can be confusing when trying to talk about the button on your screen rather than someone else’s. This will also help with future steps when it’s time to combine screens together.
 
-* "home_title"
-* "home_loginButton"
-* "home_logo"
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-#### Namespacing
+#### Naming Your Elements
 
 Ensuring that all students are both creating unique IDs for all elements and properly namespacing them will go a long way towards avoiding issues in the next lesson, so it pays to be a stickler here. You can provide students with the optional Screen Design Activity Guide to keep track of their element IDs.
 
