@@ -81,6 +81,12 @@ export const resourceShape = PropTypes.shape({
   downloadUrl: PropTypes.string
 });
 
+export const vocabularyShape = PropTypes.shape({
+  key: PropTypes.string.isRequired,
+  word: PropTypes.string.isRequired,
+  definition: PropTypes.string.isRequired
+});
+
 export const levelShapeForScript = PropTypes.shape({
   position: PropTypes.number,
   activeId: PropTypes.number,
