@@ -202,6 +202,15 @@ describe('ScriptEditor', () => {
   });
 
   describe('Saving Script Editor', () => {
+    let clock;
+
+    afterEach(() => {
+      if (clock) {
+        clock.restore();
+        clock = undefined;
+      }
+    });
+
     it('can save and keep editing', () => {
       const wrapper = createWrapper({});
       const scriptEditor = wrapper.find('ScriptEditor');
@@ -228,13 +237,15 @@ describe('ScriptEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(scriptEditor.state().isSaving).to.equal(true);
 
+      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      const expectedLastSaved = Date.now();
       server.respond();
+      clock.tick(50);
+
       scriptEditor.update();
       expect(utils.navigateToHref).to.not.have.been.called;
       expect(scriptEditor.state().isSaving).to.equal(false);
-      expect(scriptEditor.state().lastSaved).to.equal(
-        '2020-11-06T21:33:32.000Z'
-      );
+      expect(scriptEditor.state().lastSaved).to.equal(expectedLastSaved);
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       //check that last saved message is showing
       expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
