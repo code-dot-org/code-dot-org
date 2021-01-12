@@ -30,7 +30,7 @@ hr,hr,hr,hr-HR,Hrvatski,Croatian,TRUE,TRUE,hr,Croatian,FALSE,TRUE,TRUE,TRUE,FALS
 hu,hu,hu,hu-HU,Magyar,Hungarian,TRUE,TRUE,hu,Hungarian,TRUE,TRUE,FALSE,TRUE,FALSE
 hy,hy,hy,hy-AM,Հայերեն,Armenian,TRUE,FALSE,hy-AM,Armenian,FALSE,FALSE,FALSE,TRUE,FALSE
 id,id,id,id-ID,Bahasa Indonesia,Indonesian,TRUE,TRUE,id,Indonesian,TRUE,TRUE,FALSE,TRUE,TRUE
-in,in,in,in-TL,Crowdin In-Context,Crowdin In-Context,FALSE,FALSE,in-TL,Crowdin In-Context,FALSE,FALSE,FALSE,FALSE,FALSE
+in,in,in,in-TL,I18n Pseudo-Language,I18n Pseudo-Language,FALSE,FALSE,in-TL,I18n Pseudo-Language,FALSE,FALSE,FALSE,FALSE,FALSE
 is,is,is,is-IS,Íslenska,Icelandic,TRUE,TRUE,is,Icelandic,TRUE,TRUE,TRUE,TRUE,TRUE
 it,it,it,it-IT,Italiano,Italian,TRUE,TRUE,it,Italian,FALSE,TRUE,TRUE,TRUE,FALSE
 ja,ja,ja,ja-JP,日本語,Japanese,TRUE,TRUE,ja,Japanese,TRUE,TRUE,TRUE,TRUE,FALSE
