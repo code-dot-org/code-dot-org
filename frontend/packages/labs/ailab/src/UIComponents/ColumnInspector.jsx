@@ -11,6 +11,7 @@ import {
   getCurrentColumnIsSelectedFeature
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
+import Histogram from "react-chart-histogram";
 
 class ColumnInspector extends Component {
   static propTypes = {
@@ -29,21 +30,28 @@ class ColumnInspector extends Component {
 
   setPredictColumn = () => {
     this.props.setLabelColumn(this.props.currentColumnData.id);
-  }
+  };
 
   addFeature = () => {
     this.props.addSelectedFeature(this.props.currentColumnData.id);
-  }
+  };
 
   removeFeature = () => {
     this.props.removeSelectedFeature(this.props.currentColumnData.id);
-  }
+  };
 
   render() {
-    const {
-      currentColumnData,
-      currentColumnIsSelectedFeature
-    } = this.props;
+    const { currentColumnData, currentColumnIsSelectedFeature } = this.props;
+
+    let labels, data, options;
+
+    if (currentColumnData) {
+      labels = Object.keys(currentColumnData.uniqueOptions); // ['2016', '2017', '2018'];
+      data = Object.keys(currentColumnData.uniqueOptions).map(option => {
+        return currentColumnData.frequencies[option];
+      }); // [324, 45, 672];
+      options = { fillColor: "#000", strokeColor: "#000" };
+    }
 
     return (
       <div id="column-inspector">
@@ -100,8 +108,21 @@ class ColumnInspector extends Component {
                   )}
                 </label>
 
-                {currentColumnData.dataType ===
-                  ColumnTypes.CATEGORICAL && (
+                {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+                  <div>
+                    <br/>
+                    <Histogram
+                      xLabels={labels}
+                      yValues={data}
+                      width="300"
+                      height="150"
+                      options={options}
+                    />
+                  </div>
+                )}
+
+
+                {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
                   <div>
                     <p>
                       {Object.keys(currentColumnData.uniqueOptions).length}{" "}
@@ -123,11 +144,7 @@ class ColumnInspector extends Component {
                                 <tr key={index}>
                                   <td>{option}</td>
                                   <td>
-                                    {
-                                      currentColumnData.frequencies[
-                                        option
-                                      ]
-                                    }
+                                    {currentColumnData.frequencies[option]}
                                   </td>
                                 </tr>
                               );
@@ -163,15 +180,19 @@ class ColumnInspector extends Component {
             </form>
 
             <button onClick={this.setPredictColumn}>Predict this column</button>
-            <br/>
+            <br />
             {!currentColumnIsSelectedFeature && (
               <div>
-                <button onClick={this.addFeature}>Predict based on this column</button>
-                <br/>
+                <button onClick={this.addFeature}>
+                  Predict based on this column
+                </button>
+                <br />
               </div>
             )}
             {currentColumnIsSelectedFeature && (
-              <button onClick={this.removeFeature}>Don't predict based on this column</button>
+              <button onClick={this.removeFeature}>
+                Don't predict based on this column
+              </button>
             )}
           </div>
         )}
