@@ -48,8 +48,8 @@ class SchoolDistrict < ApplicationRecord
       SchoolDistrict.transaction do
         merge_from_csv(school_districts_tsv)
       end
-      #else
-      #SchoolDistrict.seed_from_s3
+    else
+      SchoolDistrict.seed_from_s3
     end
   end
 
@@ -112,7 +112,7 @@ class SchoolDistrict < ApplicationRecord
             city:                         row['Location City [District] 2018-19'].to_s.upcase.presence,
             state:                        row['Location State Abbr [District] 2018-19'].strip.to_s.upcase.presence,
             zip:                          row['Location ZIP [District] 2018-19'].tr('"=', ''),
-            last_known_school_year_open:  '2018-2019'
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2018-19']) ? '2018-2019' : nil
           }
         end
       end
