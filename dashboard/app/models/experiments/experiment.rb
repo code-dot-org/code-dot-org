@@ -92,6 +92,16 @@ class Experiment < ApplicationRecord
       name: 'time4cs-experiment',
       label: 'Broward Time4CS experiment group',
       allow_joining_via_url: true
+    },
+    {
+      name: 'csf-2021-pilot',
+      label: 'CSF 2021 Pilot',
+      allow_joining_via_url: false
+    },
+    {
+      name: 'csd-2021-preview',
+      label: 'CSD 2021 Preview',
+      allow_joining_via_url: true
     }
   ]
 

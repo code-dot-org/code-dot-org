@@ -207,6 +207,20 @@ class LessonOverview extends Component {
                 )}
               </div>
             )}
+            {lesson.vocabularies.length > 0 && (
+              <div>
+                <h2 style={styles.titleNoTopMargin}>{i18n.vocabulary()}</h2>
+                <ul>
+                  {lesson.vocabularies.map(vocab => (
+                    <li key={vocab.key}>
+                      <InlineMarkdown
+                        markdown={`**${vocab.word}** - ${vocab.definition}`}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
 
