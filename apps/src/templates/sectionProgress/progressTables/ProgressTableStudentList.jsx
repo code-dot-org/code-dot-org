@@ -8,6 +8,7 @@ import {scriptDataPropType, scrollbarWidth} from '../sectionProgressConstants';
 import ProgressTableStudentName from './ProgressTableStudentName';
 import progressTableStyles from './progressTableStyles.scss';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   gutter: {
@@ -40,15 +41,20 @@ export default class ProgressTableStudentList extends React.Component {
     }
 
     const {section, scriptData, studentTimestamps, localeCode} = this.props;
+    const studentUrl = scriptUrlForStudent(
+      section.id,
+      scriptData.name,
+      rowData.id
+    );
     return (
       <ProgressTableStudentName
         name={value}
         studentId={rowData.id}
         sectionId={section.id}
-        scriptName={scriptData.name}
         scriptId={scriptData.id}
         lastTimestamp={studentTimestamps[rowData.id]}
         localeCode={localeCode}
+        studentUrl={studentUrl}
       />
     );
   }
