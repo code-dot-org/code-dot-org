@@ -20,7 +20,7 @@ const styles = {
   },
   previewBox: {
     border: '1px solid black',
-    padding: '0px 10px 10px 25px'
+    padding: '0px 25px 10px 25px'
   },
   noPreview: {
     fontStyle: 'italic'

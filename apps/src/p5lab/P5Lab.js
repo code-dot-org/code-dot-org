@@ -391,8 +391,10 @@ P5Lab.prototype.init = function(config) {
     (!config.hideSource &&
       !config.level.debuggerDisabled &&
       !config.level.iframeEmbedAppAndCode);
+  var showPauseButton = experiments.isEnabled(experiments.SPRITELAB_PAUSE);
   var showDebugConsole = config.level.editCode && !config.hideSource;
-  this.debuggerEnabled = showDebugButtons || showDebugConsole;
+  this.debuggerEnabled =
+    showDebugButtons || showPauseButton || showDebugConsole;
 
   if (this.debuggerEnabled) {
     getStore().dispatch(
@@ -492,6 +494,7 @@ P5Lab.prototype.init = function(config) {
           <P5LabView
             showFinishButton={finishButtonFirstLine && showFinishButton}
             onMount={onMount}
+            pauseHandler={this.onPause}
           />
         </Provider>,
         document.getElementById(config.containerId)
@@ -646,6 +649,11 @@ P5Lab.prototype.setupReduxSubscribers = function(store) {
     }
   });
 };
+
+/**
+ * Override to change pause behavior.
+ */
+P5Lab.prototype.onPause = function() {};
 
 P5Lab.prototype.onIsRunningChange = function() {
   this.setCrosshairCursorForPlaySpace();
