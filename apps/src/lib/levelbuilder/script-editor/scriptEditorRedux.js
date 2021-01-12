@@ -138,6 +138,7 @@ function lessonGroups(state = [], action) {
       lessons.push({
         key: action.lessonKey,
         name: action.lessonName,
+        hasLessonPlan: true,
         levels: []
       });
       updateLessonPositions(newState);
@@ -345,6 +346,7 @@ const serializeLesson = (lesson, levelKeyList) => {
   if (lesson.name) {
     t += `, display_name: '${escape(lesson.name)}'`;
   }
+  t += `, has_lesson_plan: ${lesson.hasLessonPlan}`;
   if (lesson.lockable) {
     t += ', lockable: true';
   }
