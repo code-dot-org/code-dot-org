@@ -13,6 +13,7 @@
 #  properties        :text(65535)
 #  lesson_group_id   :integer
 #  key               :string(255)      not null
+#  has_lesson_plan   :boolean
 #
 # Indexes
 #
