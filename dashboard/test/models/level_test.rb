@@ -155,7 +155,7 @@ class LevelTest < ActiveSupport::TestCase
 
     summary = level.summarize_for_edit
 
-    assert_equal(summary[:id], level.id)
+    assert_equal(summary[:id], level.id.to_s)
     assert_equal(summary[:type], 'Maze')
     assert_equal(summary[:name], 'test_level')
     assert_equal(summary[:owner], 'Best Curriculum Writer')
