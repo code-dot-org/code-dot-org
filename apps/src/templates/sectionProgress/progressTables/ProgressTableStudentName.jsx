@@ -92,7 +92,7 @@ export default class ProgressTableStudentName extends React.PureComponent {
         aria-describedby={tooltipId}
       >
         {this.renderTooltip()}
-        {studentUrl && (
+        {studentUrl ? (
           <a
             style={styles.link}
             href={studentUrl}
@@ -100,8 +100,9 @@ export default class ProgressTableStudentName extends React.PureComponent {
           >
             {name}
           </a>
+        ) : (
+          <span>{name}</span>
         )}
-        {!studentUrl && <span>{name}</span>}
       </div>
     );
   }
