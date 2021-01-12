@@ -36,4 +36,18 @@ class Vocabulary < ApplicationRecord
     # a key respresenting the course version here.
     {'vocabulary.key': key}.stringify_keys
   end
+  
+  def summarize_for_lesson_show
+    {key: key, word: display_word, definition: display_definition}
+  end
+
+  private
+
+  def display_word
+    word
+  end
+
+  def display_definition
+    definition
+  end
 end
