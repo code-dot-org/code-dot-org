@@ -356,14 +356,14 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_place_fruit"
+          "courseF_sprites_make"
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "introduction",
         "script.name": "2021drafting"
       },
       "level_keys": [
-        "courseF_place_fruit"
+        "courseF_sprites_make"
       ]
     },
     {
@@ -378,14 +378,14 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_sprites_ship"
+          "courseF_sprites_positioning"
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "introduction",
         "script.name": "2021drafting"
       },
       "level_keys": [
-        "courseF_sprites_ship"
+        "courseF_sprites_positioning"
       ]
     },
     {
@@ -400,14 +400,14 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_sprites_clouds"
+          "courseF_sprites_properties"
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "introduction",
         "script.name": "2021drafting"
       },
       "level_keys": [
-        "courseF_sprites_clouds"
+        "courseF_sprites_properties"
       ]
     },
     {
@@ -933,9 +933,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_place_fruit",
+        "level.key": "courseF_sprites_make",
         "script_level.level_keys": [
-          "courseF_place_fruit"
+          "courseF_sprites_make"
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "introduction",
@@ -944,9 +944,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_sprites_ship",
+        "level.key": "courseF_sprites_positioning",
         "script_level.level_keys": [
-          "courseF_sprites_ship"
+          "courseF_sprites_positioning"
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "introduction",
@@ -955,9 +955,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_sprites_clouds",
+        "level.key": "courseF_sprites_properties",
         "script_level.level_keys": [
-          "courseF_sprites_clouds"
+          "courseF_sprites_properties"
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "introduction",
