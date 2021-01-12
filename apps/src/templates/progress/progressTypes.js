@@ -1,20 +1,7 @@
 import PropTypes from 'prop-types';
 
-/**
- * @typedef {Object} Level
- *
- * @property {number} id
- * @property {string} url
- * @property {string} name
- * @property {string} icon
- * @property {bool} isUnplugged
- * @property {number} levelNumber
- * @property {bool} isCurrentLevel
- * @property {bool} isConceptLevel
- * @property {string} kind
- */
-const levelWithoutStatusShape = {
-  id: PropTypes.number.isRequired,
+export const levelType = PropTypes.shape({
+  status: PropTypes.string.isRequired,
   url: PropTypes.string,
   name: PropTypes.string,
   icon: PropTypes.string,
@@ -22,26 +9,8 @@ const levelWithoutStatusShape = {
   levelNumber: PropTypes.number,
   isCurrentLevel: PropTypes.bool,
   isConceptLevel: PropTypes.bool,
-  kind: PropTypes.string
-};
-
-// Avoid recursive definition
-levelWithoutStatusShape.sublevels = PropTypes.arrayOf(
-  PropTypes.shape(levelWithoutStatusShape)
-);
-
-// In the future when the level object does not contain the status object,
-// we can export just levelType without needing levelTypeWithoutStatus.
-export const levelTypeWithoutStatus = PropTypes.shape(levelWithoutStatusShape);
-
-/**
- * @typedef {Object} Level
- *
- * @property {string} status
- */
-export const levelType = PropTypes.shape({
-  ...levelWithoutStatusShape,
-  status: PropTypes.string.isRequired
+  kind: PropTypes.string,
+  sublevels: PropTypes.arrayOf(PropTypes.object)
 });
 
 /**

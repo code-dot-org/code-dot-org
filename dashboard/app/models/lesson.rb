@@ -13,6 +13,7 @@
 #  properties        :text(65535)
 #  lesson_group_id   :integer
 #  key               :string(255)      not null
+#  has_lesson_plan   :boolean
 #
 # Indexes
 #
@@ -245,7 +246,6 @@ class Lesson < ApplicationRecord
         lesson_data[:levels] += extra_levels
         last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
         last_level_summary[:url] << "/page/1"
-        last_level_summary[:page_number] = 1
       end
 
       # Don't want lesson plans for lockable levels
