@@ -162,8 +162,6 @@ class FoormSaveBar extends Component {
   };
 
   save = url => {
-    // Figure out what to do with saveError?
-    // Need to update this so it doesn't automatically make survey published?
     $.ajax({
       url: url,
       type: 'put',
