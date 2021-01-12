@@ -166,8 +166,8 @@ class UserLevel < ApplicationRecord
     # no need to create a level if it's just going to be locked
     return if !user_level.persisted? && locked
 
+    # Used to set as submitted if locked and readonly, removing that 01/21
     user_level.assign_attributes(
-      submitted: locked || readonly_answers,
       readonly_answers: !locked && readonly_answers,
       unlocked_at: locked ? nil : Time.now,
       # level_group, which is the only levels that we lock, always sets best_result to 100 when complete
