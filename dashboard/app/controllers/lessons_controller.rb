@@ -95,6 +95,7 @@ class LessonsController < ApplicationController
       :unplugged,
       :creative_commons_license,
       :lockable,
+      :has_lesson_plan,
       :purpose,
       :preparation,
       :announcements,
