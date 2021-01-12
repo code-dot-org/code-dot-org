@@ -3,6 +3,7 @@ import sinon from 'sinon';
 import {TestResults} from '@cdo/apps/constants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import reducer, {
   initProgress,
   isPerfect,
@@ -43,8 +44,8 @@ const stageData = [
     lockable: false,
     levels: [
       {
-        ids: [2106],
-        activeId: 2106,
+        ids: ['2106'],
+        activeId: '2106',
         position: 1,
         kind: LevelKind.unplugged,
         icon: null,
@@ -57,8 +58,8 @@ const stageData = [
         sublevels: []
       },
       {
-        ids: [323],
-        activeId: 323,
+        ids: ['323'],
+        activeId: '323',
         position: 2,
         page_number: 1,
         kind: LevelKind.assessment,
@@ -71,8 +72,8 @@ const stageData = [
         sublevels: []
       },
       {
-        ids: [322],
-        activeId: 322,
+        ids: ['322'],
+        activeId: '322',
         position: 3,
         page_number: 2,
         kind: LevelKind.assessment,
@@ -104,8 +105,8 @@ const stageData = [
     lockable: false,
     levels: [
       {
-        ids: [330],
-        activeId: 330,
+        ids: ['330'],
+        activeId: '330',
         position: 1,
         kind: LevelKind.puzzle,
         icon: null,
@@ -118,8 +119,8 @@ const stageData = [
         sublevels: []
       },
       {
-        ids: [339],
-        activeId: 339,
+        ids: ['339'],
+        activeId: '339',
         position: 2,
         kind: LevelKind.puzzle,
         icon: null,
@@ -131,8 +132,8 @@ const stageData = [
         sublevels: []
       },
       {
-        ids: [341],
-        activeId: 341,
+        ids: ['341'],
+        activeId: '341',
         position: 3,
         kind: LevelKind.puzzle,
         icon: null,
@@ -642,7 +643,7 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: true,
             levelNumber: undefined,
-            pageNumber: undefined,
+            pageNumber: PUZZLE_PAGE_NONE,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
@@ -662,7 +663,7 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: false,
             levelNumber: 1,
-            pageNumber: '1',
+            pageNumber: 1,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
@@ -682,7 +683,7 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: false,
             levelNumber: 2,
-            pageNumber: '2',
+            pageNumber: 2,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
@@ -704,7 +705,7 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: false,
             levelNumber: 1,
-            pageNumber: undefined,
+            pageNumber: PUZZLE_PAGE_NONE,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
@@ -724,7 +725,7 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: false,
             levelNumber: 2,
-            pageNumber: undefined,
+            pageNumber: PUZZLE_PAGE_NONE,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
@@ -744,7 +745,7 @@ describe('progressReduxTest', () => {
             icon: null,
             isUnplugged: false,
             levelNumber: 3,
-            pageNumber: undefined,
+            pageNumber: PUZZLE_PAGE_NONE,
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
