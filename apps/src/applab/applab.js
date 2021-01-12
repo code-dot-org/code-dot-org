@@ -271,10 +271,10 @@ Applab.autogenerateML = function() {
     modelData.selectedFeatures.forEach(feature => {
       var label = designMode.createElement('LABEL');
       label.textContent = feature + ':';
-      label.id = feature + '_label';
+      label.id = 'design_' + feature + '_label';
       if (Object.keys(modelData.featureNumberKey).includes(feature)) {
         var select = designMode.createElement('DROPDOWN');
-        select.id = feature + '_dropdown';
+        select.id = 'design_' + feature + '_dropdown';
         // App Lab automatically addss "option 1" and "option 2", remove them.
         select.options.remove(0);
         select.options.remove(0);
@@ -285,19 +285,24 @@ Applab.autogenerateML = function() {
         });
       } else {
         var input = designMode.createElement('TEXT_INPUT');
-        input.id = feature + '_input';
+        input.id = 'design_' + feature + '_input';
       }
     });
     var label = designMode.createElement('LABEL');
     label.textContent = modelData.labelColumn;
     // TODO: this could be problematic if the name isn't formatted appropriately
-    label.id = modelData.name + '_label';
+    label.id = 'design_' + modelData.name + '_label';
     var prediction = designMode.createElement('TEXT_INPUT');
     prediction.text = '?';
-    prediction.id = modelData.name + '_prediction';
+    prediction.id = 'design_' + modelData.name + '_prediction';
     var predictButton = designMode.createElement('BUTTON');
     predictButton.textContent = 'Predict';
-    predictButton.id = modelData.name + '_predict';
+    var predictButtonId = 'design_' + modelData.name + '_predict';
+    predictButton.id = predictButtonId;
+    var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
+      console.log('did this work?!');
+    });`;
+    designMode.onInsertEvent(predictOnClick);
   });
 };
 
