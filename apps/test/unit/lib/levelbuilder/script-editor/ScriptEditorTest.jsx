@@ -216,7 +216,6 @@ describe('ScriptEditor', () => {
       const scriptEditor = wrapper.find('ScriptEditor');
 
       let returnData = {
-        updatedAt: '2020-11-06T21:33:32.000Z',
         scriptPath: '/s/test-script'
       };
       let server = sinon.fakeServer.create();
@@ -292,7 +291,6 @@ describe('ScriptEditor', () => {
       const scriptEditor = wrapper.find('ScriptEditor');
 
       let returnData = {
-        updatedAt: '2020-11-06T21:33:32.000Z',
         scriptPath: '/s/test-script'
       };
       let server = sinon.fakeServer.create();
