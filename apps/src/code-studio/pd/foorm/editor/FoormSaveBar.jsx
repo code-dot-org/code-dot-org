@@ -197,33 +197,6 @@ class FoormSaveBar extends Component {
       });
   };
 
-  publish = () => {
-    $.ajax({
-      url: `/foorm/forms/${this.props.formId}/publish`,
-      type: 'put',
-      contentType: 'application/json',
-      processData: false,
-      data: JSON.stringify({
-        questions: this.props.formQuestions
-      })
-    })
-      .done(result => {
-        // should rename this if i'm going to use it here.
-        this.handleSaveSuccess(result);
-
-        this.setState({
-          confirmationDialogBeingShownName: null
-        });
-      })
-      .fail(result => {
-        // should rename this if i'm going to use it here.
-        this.handleSaveError(result);
-        this.setState({
-          confirmationDialogBeingShownName: null
-        });
-      });
-  };
-
   isFormNameValid = () => {
     return this.state.formName && this.state.formName.match('^[a-z0-9_]+$');
   };
