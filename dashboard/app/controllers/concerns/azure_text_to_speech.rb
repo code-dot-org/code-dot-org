@@ -90,10 +90,10 @@ module AzureTextToSpeech
         native_name_s = native_locale_name[0][:native_name_s]
         voice_dictionary[native_name_s] ||= {}
         voice_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
-        voice_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
+        voice_dictionary[native_name_s]["locale"] ||= voice["Locale"]
       end
 
-      # Only keep voices that contain 2+ genders and a languageCode
+      # Only keep voices that contain 2+ genders and a locale
       voice_dictionary.reject {|_, opt| opt.length < 3}
     end
   rescue => e
@@ -122,7 +122,7 @@ module AzureTextToSpeech
   end
 
   def self.get_voice_by(locale, gender)
-    voice = get_voices&.values&.find {|v| v["languageCode"] == locale}
+    voice = get_voices&.values&.find {|v| v["locale"] == locale}
     return nil unless voice.present?
     voice[gender]
   end
