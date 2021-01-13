@@ -110,7 +110,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
       {'Locale' => 'en-US', 'Gender' => 'Male', 'ShortName' => 'Bob'},
       {'Locale' => 'it-IT', 'Gender' => 'Male', 'ShortName' => 'Dan'}, # Will be filtered out
     ]
-    expected_voices = {'English' => {'female' => 'Alice', 'languageCode' => 'en-US', 'male' => 'Bob'}}
+    expected_voices = {'English' => {'female' => 'Alice', 'locale' => 'en-US', 'male' => 'Bob'}}
     stub_request(:get, voices_url).
       with(headers: {'Authorization' => "Bearer #{@mock_token}"}).
       to_return(status: 200, body: mock_voice_response.to_json)
@@ -145,7 +145,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
   test 'get_voice_by: returns voice name if exists for given locale + gender' do
     AzureTextToSpeech.stubs(:get_voices).returns(
       {
-        'Deutsch' => {'female' => 'de-DE-HeddaRUS', 'languageCode' => 'de-DE', 'male' => 'de-DE-Stefan'}
+        'Deutsch' => {'female' => 'de-DE-HeddaRUS', 'locale' => 'de-DE', 'male' => 'de-DE-Stefan'}
       }
     )
 
