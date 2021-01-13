@@ -23,9 +23,9 @@ const getInitialState = () => ({
       position: 1,
       userFacing: true,
       lessons: [
-        {id: 100, key: 'a', name: 'A', position: 1, levels: []},
-        {id: 101, key: 'b', name: 'B', position: 2, levels: []},
-        {id: 102, key: 'c', name: 'C', position: 3, levels: []}
+        {id: 100, key: 'a', name: 'A', position: 1, levels: [], hasLessonPlan: true},
+        {id: 101, key: 'b', name: 'B', position: 2, levels: [], hasLessonPlan: false},
+        {id: 102, key: 'c', name: 'C', position: 3, levels: [], hasLessonPlan: true}
       ]
     },
     {
@@ -35,9 +35,9 @@ const getInitialState = () => ({
       position: 2,
       userFacing: true,
       lessons: [
-        {id: 104, key: 'd', name: 'D', position: 1, levels: []},
-        {id: 105, key: 'e', name: 'E', position: 2, levels: []},
-        {id: 106, key: 'f', name: 'F', position: 3, levels: []}
+        {id: 104, key: 'd', name: 'D', position: 1, levels: [], hasLessonPlan: true},
+        {id: 105, key: 'e', name: 'E', position: 2, levels: [], hasLessonPlan: true},
+        {id: 106, key: 'f', name: 'F', position: 3, levels: [], hasLessonPlan: false}
       ]
     }
   ]
@@ -58,13 +58,13 @@ describe('scriptEditorRedux reducer tests', () => {
     // Verify that the JSON contains serialized lesson groups.
     expect(serializedLessonGroups).to.equal(
       "lesson_group 'lg-key', display_name: 'Display Name'\n" +
-        "lesson 'a', display_name: 'A'\n\n" +
-        "lesson 'b', display_name: 'B'\n\n" +
-        "lesson 'c', display_name: 'C'\n\n" +
+        "lesson 'a', display_name: 'A', has_lesson_plan: true\n\n" +
+        "lesson 'b', display_name: 'B', has_lesson_plan: false\n\n" +
+        "lesson 'c', display_name: 'C', has_lesson_plan: true\n\n" +
         "lesson_group 'lg-key-2', display_name: 'Display Name 2'\n" +
-        "lesson 'd', display_name: 'D'\n\n" +
-        "lesson 'e', display_name: 'E'\n\n" +
-        "lesson 'f', display_name: 'F'\n\n"
+        "lesson 'd', display_name: 'D', has_lesson_plan: true\n\n" +
+        "lesson 'e', display_name: 'E', has_lesson_plan: true\n\n" +
+        "lesson 'f', display_name: 'F', has_lesson_plan: false\n\n"
     );
   });
 
