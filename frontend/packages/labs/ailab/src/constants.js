@@ -223,5 +223,16 @@ export const styles = {
     border: "initial",
     padding: "10px 20px 10px 20px",
     cursor: "pointer"
+  },
+
+  predictButton: {
+    backgroundColor: "rgb(186, 168, 70)"
+  },
+  predictBasedButton: {
+    backgroundColor: "rgb(70, 186, 168)"
+  },
+  dontPredictBasedButton: {
+    backgroundColor: "rgb(70, 186, 168)"
   }
+
 };

@@ -179,18 +179,18 @@ class ColumnInspector extends Component {
               </div>
             </form>
 
-            <button onClick={this.setPredictColumn}>Predict this column</button>
+            <button onClick={this.setPredictColumn} style={styles.predictButton}>Predict this column</button>
             <br />
             {!currentColumnIsSelectedFeature && (
               <div>
-                <button onClick={this.addFeature}>
+                <button onClick={this.addFeature} style={styles.predictBasedButton}>
                   Predict based on this column
                 </button>
                 <br />
               </div>
             )}
             {currentColumnIsSelectedFeature && (
-              <button onClick={this.removeFeature}>
+              <button onClick={this.removeFeature} style={styles.dontPredictBasedButton}>
                 Don't predict based on this column
               </button>
             )}

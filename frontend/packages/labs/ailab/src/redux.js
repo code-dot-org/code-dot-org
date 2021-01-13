@@ -273,7 +273,9 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === REMOVE_SELECTED_FEATURE) {
     return {
       ...state,
-      selectedFeatures: state.selectedFeatures.filter(item => item !== action.selectedFeature)
+      selectedFeatures: state.selectedFeatures.filter(
+        item => item !== action.selectedFeature
+      )
     };
   }
 
@@ -764,10 +766,6 @@ function isPanelVisible(state, panelId) {
 }
 
 function isPanelEnabled(state, panelId) {
-  if (!isPanelVisible(state, panelId)) {
-    return false;
-  }
-
   if (panelId === "dataDisplay") {
     if (state.data.length === 0) {
       return false;
@@ -836,23 +834,30 @@ export function getPanelButtons(state) {
 
   if (state.currentPanel == "selectDataset") {
     prev = null;
-    next = isPanelEnabled(state, "dataDisplay")
-      ? { panel: "dataDisplay", text: "Data" }
-      : null;
+    next =
+      isPanelVisible(state, "dataDisplay") &&
+      isPanelEnabled(state, "dataDisplay")
+        ? { panel: "dataDisplay", text: "Data" }
+        : null;
   } else if (state.currentPanel == "dataDisplay") {
-    prev = isPanelEnabled(state, "selectDataset")
-      ? { panel: "selectDataset", text: "Import" }
-      : null;
-    next = isPanelEnabled(state, "selectTrainer")
-      ? { panel: "selectTrainer", text: "Trainer" }
-      : null;
+    prev =
+      isPanelVisible(state, "selectDataset") &&
+      isPanelEnabled(state, "selectDataset")
+        ? { panel: "selectDataset", text: "Import" }
+        : null;
+    next =
+      isPanelVisible(state, "selectTrainer") &&
+      isPanelEnabled(state, "selectTrainer")
+        ? { panel: "selectTrainer", text: "Trainer" }
+        : null;
   } else if (state.currentPanel == "selectTrainer") {
     prev = { panel: "dataDisplay", text: "Data" };
-    next = isPanelEnabled(state, "trainModel")
-      ? { panel: "trainModel", text: "Train" }
-      : null;
+    next =
+      isPanelVisible(state, "trainModel") && isPanelEnabled(state, "trainModel")
+        ? { panel: "trainModel", text: "Train" }
+        : null;
   } else if (state.currentPanel == "results") {
-    prev = {panel: "dataDisplay", text: "Data"};
+    prev = { panel: "dataDisplay", text: "Data" };
     next = null;
   }
 

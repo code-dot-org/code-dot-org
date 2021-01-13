@@ -42,7 +42,7 @@
   		"type": "categorical"
   	},
   	{
-  		"id": "type_sports?",
+  		"id": "type_sports",
   		"type": "categorical"
   	},
     {
