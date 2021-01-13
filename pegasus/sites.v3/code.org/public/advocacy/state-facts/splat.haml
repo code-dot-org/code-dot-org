@@ -13,6 +13,7 @@ state-facts: true
 %script{src:'https://www.google.com/jsapi'}
 %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-facts-print.css'}
 %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-facts.css'}
+%link{:rel=>'stylesheet', :href=>'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'}
 
 // Generates custom state fact sheets based on the data in cdo-state-promote Google Sheet.
 
@@ -378,10 +379,6 @@ state-facts: true
         = state_info[:other_partners_t]
         to help spread K-5 computer science to its schools.
 
-  .quote-center
-    %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.”
-    %p — Steve Jobs
-
   %div
     %p
       %h2.together What can your state do to improve computer science education?
@@ -567,36 +564,6 @@ state-facts: true
             %b IHE Admission - 
             = state_info[:higher_ed_t]
 
-  %h2.together
-    Who can you connect with locally to talk about K-12 CS education policy?
-  %ul
-    %li
-      You can reach Code.org’s policy contact for your state,
-      = succeed "," do
-        = state_info[:code_name_s]
-      at
-      = succeed "." do
-        = state_info[:code_email_s]
-    - if state_info[:ecep_name_s] != "NA"
-      %li
-        The Expanding Computing Education Pathways (ECEP) Alliance
-        = precede "(" do
-          = succeed ")," do
-            %a{href: "https://www.ecepalliance.org"} www.ecepalliance.org
-        an NSF funded Broadening Participation in Computing Alliance, seeks to increase the number and diversity of students in computing and computing-intensive degrees by promoting state-level computer science education reform. ECEP supports 22 states and the territory of Puerto Rico to develop effective and replicable interventions to broaden participation in computing and to create state-level infrastructure to foster equitable computing education policies. You can reach your ECEP point of contact
-        = succeed "." do
-          = state_info[:ecep_name_s]
-          at
-          = state_info[:ecep_email_s]
-          - if state_info[:ecep_name_2_s] != "NA"
-            or
-            = state_info[:ecep_name_2_s]
-            at
-            = state_info[:ecep_email_2_s]
-          - if state_info[:ecep_url_s] != "NA"
-            and see your state ECEP project at
-            %a{href: state_info[:ecep_url_s]}= state_info[:ecep_url_s]
-
   %div
     %h3 Follow us!
     %p
@@ -610,4 +577,38 @@ state-facts: true
         %a{href: "https://twitter.com/codeorg"} Twitter
     %div
       %p Launched in 2013, Code.org® is a nonprofit dedicated to expanding access to computer science, and increasing participation by women and underrepresented youth. Our vision is that every student in every school should have the opportunity to learn computer science.
+    %h3
+      Who can you connect with locally to talk about K-12 CS education policy?
+    %ul
+      %li
+        You can reach Code.org’s policy contact for your state,
+        = succeed "," do
+          = state_info[:code_name_s]
+        at
+        = succeed "." do
+          = state_info[:code_email_s]
+      - if state_info[:ecep_name_s] != "NA"
+        %li
+          The Expanding Computing Education Pathways (ECEP) Alliance
+          = precede "(" do
+            = succeed ")," do
+              %a{href: "https://www.ecepalliance.org", target: "_blank"} www.ecepalliance.org
+          an NSF funded Broadening Participation in Computing Alliance, seeks to increase the number and diversity 
+          of students in computing and computing-intensive degrees by promoting state-level computer science education. 
+          ECEP supports 22 states and the territory of Puerto Rico to develop effective and replicable interventions to 
+          broaden participation in computing and to create state-level infrastructure to foster equitable computing 
+          education policies. You can reach your ECEP point of contact
+          = succeed "." do
+            = state_info[:ecep_name_s]
+            at
+            = state_info[:ecep_email_s]
+            - if state_info[:ecep_name_2_s] != "NA"
+              or
+              = state_info[:ecep_name_2_s]
+              at
+              = state_info[:ecep_email_2_s]
+            - if state_info[:ecep_url_s] != "NA"
+              and see your state ECEP project at
+              %a{href: state_info[:ecep_url_s]}= state_info[:ecep_url_s]
+
     %p.clear-both.sources Data is from the Conference Board for job demand, the Bureau of Labor Statistics for state salary and national job projections data, the College Board for AP exam data, the National Center for Education Statistics for university graduate data, the Gallup and Google research study Education Trends in the State of Computer Science in U.S. K-12 Schools for parent demand, the 2018 Computer Science Access Report for schools that offer computer science, and Code.org for its own courses, professional learning programs, and participation data.
