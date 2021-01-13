@@ -44,10 +44,11 @@ export default class ReCaptchaDialog extends React.Component {
     const script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js';
     script.id = 'captcha';
+    script.async = true;
     window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
     window.onCaptchaExpired = () => this.onCaptchaExpiration();
+    document.head.appendChild(script);
     script.onload = () => this.setState({loadedCaptcha: true});
-    document.body.appendChild(script);
   }
 
   componentWillUnmount() {
@@ -84,14 +85,12 @@ export default class ReCaptchaDialog extends React.Component {
         >
           <h3>{i18n.verifyNotBot()}</h3>
           {!this.state.loadedCaptcha && <Spinner size="large" />}
-          {this.state.loadedCaptcha && (
-            <div
-              className="g-recaptcha"
-              data-sitekey={siteKey}
-              data-callback="onCaptchaSubmit"
-              data-expired-callback="onCaptchaExpired"
-            />
-          )}
+          <div
+            className="g-recaptcha"
+            data-sitekey={siteKey}
+            data-callback="onCaptchaSubmit"
+            data-expired-callback="onCaptchaExpired"
+          />
           <DialogFooter>
             <Button
               onClick={handleCancel}

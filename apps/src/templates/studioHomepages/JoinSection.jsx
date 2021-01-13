@@ -6,6 +6,7 @@ import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import Button from '@cdo/apps/templates/Button';
 import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const styles = {
   main: {
@@ -63,11 +64,15 @@ const styles = {
   },
   clear: {
     clear: 'both'
+  },
+  spinner: {
+    marginTop: '10px'
   }
 };
 
 const INITIAL_STATE = {
   sectionCode: '',
+  isLoaded: false,
   displayCaptcha: false
 };
 
@@ -86,7 +91,7 @@ export default class JoinSection extends React.Component {
       dataType: 'json'
     }).done(data => {
       const {key, requireCaptcha} = data;
-      this.setState({key, requireCaptcha});
+      this.setState({key, requireCaptcha, isLoaded: true});
     });
   };
 
@@ -153,6 +158,11 @@ export default class JoinSection extends React.Component {
 
   render() {
     const {enrolledInASection} = this.props;
+    const {isLoaded, requireCaptcha} = this.state;
+
+    if (!isLoaded) {
+      return <Spinner size="large" style={styles.spinner} />;
+    }
 
     return (
       <div
@@ -185,13 +195,15 @@ export default class JoinSection extends React.Component {
           />
         </div>
         <div>
-          <ReCaptchaDialog
-            isOpen={this.state.displayCaptcha}
-            handleSubmit={this.joinSection}
-            handleCancel={this.close}
-            submitText={i18n.verifyNotBot()}
-            siteKey={this.state.key}
-          />
+          {isLoaded && requireCaptcha && (
+            <ReCaptchaDialog
+              isOpen={this.state.displayCaptcha}
+              handleSubmit={this.joinSection}
+              handleCancel={this.close}
+              submitText={i18n.verifyNotBot()}
+              siteKey={this.state.key}
+            />
+          )}
         </div>
         <div style={styles.clear} />
       </div>
