@@ -44,11 +44,6 @@
   margin-top: 0px;
 }
 
-.quote-center {
-  text-align: center;
-  margin: 0px 50px;
-}
-
 li>ul {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -59,10 +54,10 @@ li>ul {
   color: white;
   text-align: center;
   padding: 15px 20px;
-  font-size: 28px;
+  font-size: 24px;
 }
 .graduates {
   text-align: center;
   color: dimgray;
-  font-size: 22px;
+  font-size: 18px;
 }
