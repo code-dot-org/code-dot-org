@@ -43,11 +43,11 @@ export const sampleActivities = [
         text: 'This progression teaches you programming!',
         scriptLevels: [
           {
-            id: 10,
+            id: '10',
             levels: [
               {
                 name: 'Level 1',
-                id: 1,
+                id: '1',
                 url: 'levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
@@ -60,7 +60,7 @@ export const sampleActivities = [
             ],
             position: 1,
             levelNumber: 1,
-            activeId: 1,
+            activeId: '1',
             kind: 'puzzle',
             bonus: false,
             assessment: false,
@@ -68,11 +68,11 @@ export const sampleActivities = [
             expand: false
           },
           {
-            id: 11,
+            id: '11',
             levels: [
               {
                 name: 'Level 2',
-                id: 2,
+                id: '2',
                 url: '/levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
@@ -84,7 +84,7 @@ export const sampleActivities = [
               },
               {
                 name: 'Level 3',
-                id: 3,
+                id: '3',
                 url: '/levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
@@ -97,7 +97,7 @@ export const sampleActivities = [
             ],
             position: 2,
             levelNumber: 2,
-            activeId: 2,
+            activeId: '2',
             kind: 'assessment',
             bonus: false,
             assessment: true,
