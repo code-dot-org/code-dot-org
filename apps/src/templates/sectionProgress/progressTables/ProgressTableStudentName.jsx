@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '../../../lib/util/firehose';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -22,10 +21,10 @@ export default class ProgressTableStudentName extends React.PureComponent {
     name: PropTypes.string.isRequired,
     studentId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
-    scriptName: PropTypes.string,
     scriptId: PropTypes.number,
     lastTimestamp: PropTypes.number,
-    localeCode: PropTypes.string
+    localeCode: PropTypes.string,
+    studentUrl: PropTypes.string.isRequired
   };
 
   constructor(props) {
@@ -80,8 +79,7 @@ export default class ProgressTableStudentName extends React.PureComponent {
   }
 
   render() {
-    const {name, studentId, sectionId, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(sectionId, scriptName, studentId);
+    const {name, studentUrl} = this.props;
     const tooltipId = this.tooltipId();
 
     return (
@@ -92,16 +90,13 @@ export default class ProgressTableStudentName extends React.PureComponent {
         aria-describedby={tooltipId}
       >
         {this.renderTooltip()}
-        {studentUrl && (
-          <a
-            style={styles.link}
-            href={studentUrl}
-            onClick={this.recordStudentNameClick}
-          >
-            {name}
-          </a>
-        )}
-        {!studentUrl && <span>{name}</span>}
+        <a
+          style={styles.link}
+          href={studentUrl}
+          onClick={this.recordStudentNameClick}
+        >
+          {name}
+        </a>
       </div>
     );
   }
