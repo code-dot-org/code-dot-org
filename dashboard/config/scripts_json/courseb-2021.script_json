@@ -538,8 +538,7 @@
       "key": "4f870e69-6c13-4513-a1d9-e6b1b8e22053",
       "position": 5,
       "properties": {
-        "name": "Extension Activities",
-        "duration": 0
+        "name": "Extension Activities"
       },
       "seeding_key": {
         "lesson_activity.key": "4f870e69-6c13-4513-a1d9-e6b1b8e22053",
@@ -1322,7 +1321,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": " - Use calm bodies in the lab\r\n - Remember not to chew gum or candy\r\n - Sanitize your hands\r\n - Sit with your partner at one computer\r\n - Make sure that the first \"driver\" can reach the mouse\r\n - When you get frustrated, don't hit or shake the computer or monitor\r\n - Follow the [r 202020] rule\r\n - How to deal with the [r wiggles] every 20-30 minutes (requires a free login on GoNoodle)\r\n - Ask your partner before you ask the teacher\r\n - Keep volume down so everyone else can hear their partners\r\n - Use your journal for keeping track of feelings and solutions\r\n\r\n"
           }
@@ -1385,7 +1383,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Show the students the right way to help classmates:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch  the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
           }
@@ -1420,24 +1417,24 @@
       }
     },
     {
-      "key": "b43821ea-fcde-4389-a55f-285b77e61964",
-      "position": 4,
-      "properties": {
-        "name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "b43821ea-fcde-4389-a55f-285b77e61964",
-        "lesson_activity.key": "248075ed-be23-4145-bbe5-f629eb3df448"
-      }
-    },
-    {
       "key": "b9d126ca-d582-403d-a4dc-45c555d65700",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \r\n\r\n - Utilize pair programming whenever possible during the activity.\r\n - Encourage students with questions/challenges to start by asking their partner.\r\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\r\n - Remind students to use the debugging process before you approach.\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
       "seeding_key": {
         "activity_section.key": "b9d126ca-d582-403d-a4dc-45c555d65700",
+        "lesson_activity.key": "248075ed-be23-4145-bbe5-f629eb3df448"
+      }
+    },
+    {
+      "key": "b43821ea-fcde-4389-a55f-285b77e61964",
+      "position": 5,
+      "properties": {
+        "name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "b43821ea-fcde-4389-a55f-285b77e61964",
         "lesson_activity.key": "248075ed-be23-4145-bbe5-f629eb3df448"
       }
     },
@@ -6286,16 +6283,27 @@
       }
     },
     {
-      "name": "Move It, Move It",
-      "url": "https://drive.google.com/open?id=1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg",
-      "key": "mimi-activity",
+      "name": "Pair Programming",
+      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+      "key": "pair-programming-vid",
       "properties": {
-        "type": "Map Activity",
-        "audience": "Student",
-        "include_in_pdf": true
+        "type": "Student Video",
+        "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "mimi-activity"
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "name": "Unplugged Blockly Blocks (Grades K-1)",
+      "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
+      "key": "course-ab-blockly-blocks",
+      "properties": {
+        "type": "Manipulatives",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "course-ab-blockly-blocks"
       }
     },
     {
@@ -6309,6 +6317,19 @@
       },
       "seeding_key": {
         "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "name": "Move It, Move It",
+      "url": "https://drive.google.com/open?id=1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg",
+      "key": "mimi-activity",
+      "properties": {
+        "type": "Map Activity",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "mimi-activity"
       }
     },
     {
@@ -6332,30 +6353,6 @@
       },
       "seeding_key": {
         "resource.key": "class-section-video"
-      }
-    },
-    {
-      "name": "Unplugged Blockly Blocks (Grades K-1)",
-      "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
-      "key": "course-ab-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "name": "Pair Programming",
-      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-      "key": "pair-programming-vid",
-      "properties": {
-        "type": "Student Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "pair-programming-vid"
       }
     },
     {
@@ -6677,13 +6674,25 @@
     {
       "seeding_key": {
         "lesson.key": "Sequencing in Maze",
-        "resource.key": "mimi-activity"
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "resource.key": "course-ab-blockly-blocks"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sequencing in Maze",
         "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "resource.key": "mimi-activity"
       }
     },
     {
@@ -6696,18 +6705,6 @@
       "seeding_key": {
         "lesson.key": "Sequencing in Maze",
         "resource.key": "class-section-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "resource.key": "pair-programming-vid"
       }
     },
     {
@@ -6836,6 +6833,12 @@
         "resource.key": "common-sense-media-pause-think"
       }
     }
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
   ],
   "objectives": [
     {
