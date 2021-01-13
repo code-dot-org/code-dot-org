@@ -143,7 +143,7 @@ describe('FoormEditor', () => {
         .find('ConfirmationDialog')
         .at(1)
         .prop('show'),
-      'ConfirmationDialog is showing'
+      'Publish ConfirmationDialog is showing'
     );
 
     // simulate save click. Cannot click on button itself because it is in the modal
@@ -223,7 +223,7 @@ describe('FoormEditor', () => {
         .find('ConfirmationDialog')
         .at(0)
         .prop('show'),
-      'ConfirmationDialog is showing'
+      'Save ConfirmationDialog is showing'
     );
 
     // simulate save click. Cannot click on button itself because it is in the modal
@@ -276,7 +276,7 @@ describe('FoormEditor', () => {
         .find('ConfirmationDialog')
         .at(0)
         .prop('show'),
-      'ConfirmationDialog is showing'
+      'Save ConfirmationDialog is showing'
     );
 
     // simulate cancel click. Cannot click on button itself because it is in the modal
@@ -313,7 +313,7 @@ describe('FoormEditor', () => {
         .find('ConfirmationDialog')
         .at(1)
         .prop('show'),
-      'ConfirmationDialog is showing'
+      'Publish ConfirmationDialog is showing'
     );
 
     // simulate cancel click. Cannot click on button itself because it is in the modal
