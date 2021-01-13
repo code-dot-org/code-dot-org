@@ -59,7 +59,7 @@ for (let i = 0; i < 20; i++) {
 }
 
 const mockProgress = {
-  currentLevelId: '123',
+  currentLevelId: 123,
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
   stages: [

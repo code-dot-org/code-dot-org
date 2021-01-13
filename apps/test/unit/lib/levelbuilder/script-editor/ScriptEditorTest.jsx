@@ -49,7 +49,9 @@ describe('ScriptEditor', () => {
       i18nData: {
         stageDescriptions: [],
         description:
-          '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+          '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
+        studentDescription:
+          '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       },
       isLevelbuilder: true,
       locales: [],
@@ -87,9 +89,9 @@ describe('ScriptEditor', () => {
 
       expect(wrapper.find('input').length).to.equal(24);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
-      expect(wrapper.find('textarea').length).to.equal(2);
+      expect(wrapper.find('textarea').length).to.equal(3);
       expect(wrapper.find('select').length).to.equal(5);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(0);
@@ -101,9 +103,9 @@ describe('ScriptEditor', () => {
 
       expect(wrapper.find('input').length).to.equal(24);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
-      expect(wrapper.find('textarea').length).to.equal(3);
+      expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(5);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
@@ -159,11 +161,22 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({
         initialHidden: false
       });
-      expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(1);
+      expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
       expect(
-        wrapper.find('TextareaWithMarkdownPreview').prop('markdown')
+        wrapper
+          .find('TextareaWithMarkdownPreview')
+          .at(0)
+          .prop('markdown')
       ).to.equal(
-        '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+        '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+      );
+      expect(
+        wrapper
+          .find('TextareaWithMarkdownPreview')
+          .at(1)
+          .prop('markdown')
+      ).to.equal(
+        '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       );
     });
 
@@ -189,12 +202,20 @@ describe('ScriptEditor', () => {
   });
 
   describe('Saving Script Editor', () => {
+    let clock;
+
+    afterEach(() => {
+      if (clock) {
+        clock.restore();
+        clock = undefined;
+      }
+    });
+
     it('can save and keep editing', () => {
       const wrapper = createWrapper({});
       const scriptEditor = wrapper.find('ScriptEditor');
 
       let returnData = {
-        updatedAt: '2020-11-06T21:33:32.000Z',
         scriptPath: '/s/test-script'
       };
       let server = sinon.fakeServer.create();
@@ -215,13 +236,15 @@ describe('ScriptEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(scriptEditor.state().isSaving).to.equal(true);
 
+      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      const expectedLastSaved = Date.now();
       server.respond();
+      clock.tick(50);
+
       scriptEditor.update();
       expect(utils.navigateToHref).to.not.have.been.called;
       expect(scriptEditor.state().isSaving).to.equal(false);
-      expect(scriptEditor.state().lastSaved).to.equal(
-        '2020-11-06T21:33:32.000Z'
-      );
+      expect(scriptEditor.state().lastSaved).to.equal(expectedLastSaved);
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       //check that last saved message is showing
       expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
@@ -268,7 +291,6 @@ describe('ScriptEditor', () => {
       const scriptEditor = wrapper.find('ScriptEditor');
 
       let returnData = {
-        updatedAt: '2020-11-06T21:33:32.000Z',
         scriptPath: '/s/test-script'
       };
       let server = sinon.fakeServer.create();
