@@ -96,7 +96,7 @@ export default class AzureTextToSpeech {
    * @param {Object} opts
    * @param {string} opts.text
    * @param {string} opts.gender
-   * @param {string} opts.languageCode
+   * @param {string} opts.locale
    * @param {string} opts.authenticityToken Rails authenticity token. Optional.
    * @param {function(string)} opts.onFailure Called with an error message if the sound will not be played.
    * @returns {function} A thunk that returns a promise, which resolves to a SoundResponse. Example usage:
@@ -104,11 +104,11 @@ export default class AzureTextToSpeech {
    * const soundResponse = await soundPromise();
    */
   createSoundPromise = opts => () => {
-    const {text, gender, languageCode, authenticityToken, onFailure} = opts;
-    const id = this.cacheKey_(languageCode, gender, text);
-    const cachedSound = this.getCachedSound_(languageCode, gender, text);
+    const {text, gender, locale, authenticityToken, onFailure} = opts;
+    const id = this.cacheKey_(locale, gender, text);
+    const cachedSound = this.getCachedSound_(locale, gender, text);
     const wrappedSetCachedSound = soundResponse => {
-      this.setCachedSound_(languageCode, gender, text, soundResponse);
+      this.setCachedSound_(locale, gender, text, soundResponse);
     };
     const wrappedCreateSoundResponse = this.createSoundResponse_;
 
@@ -132,7 +132,7 @@ export default class AzureTextToSpeech {
       try {
         const profaneWords = await findProfanity(
           text,
-          languageCode,
+          locale,
           authenticityToken
         );
         if (profaneWords && profaneWords.length > 0) {
@@ -146,7 +146,7 @@ export default class AzureTextToSpeech {
         const bytes = await this.convertTextToSpeech(
           text,
           gender,
-          languageCode,
+          locale,
           authenticityToken
         );
         const soundResponse = wrappedCreateSoundResponse({id, bytes});
@@ -239,41 +239,41 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Generates the cache key, which is an MD5 hash of the composite key (languageCode-gender-text).
+   * Generates the cache key, which is an MD5 hash of the composite key (locale-gender-text).
    * We hash the composite key to avoid extra-long cache keys (as the text is part of the key).
-   * @param {string} languageCode
+   * @param {string} locale
    * @param {string} gender
    * @param {string} text
    * @returns {string} MD5 hash string
    * @private
    */
-  cacheKey_ = (languageCode, gender, text) => {
-    return hashString([languageCode, gender, text].join('-'));
+  cacheKey_ = (locale, gender, text) => {
+    return hashString([locale, gender, text].join('-'));
   };
 
   /**
    * Returns the cached SoundResponse if it exists.
-   * @param {string} languageCode
+   * @param {string} locale
    * @param {string} gender
    * @param {string} text
    * @returns {SoundResponse|undefined}
    * @private
    */
-  getCachedSound_ = (languageCode, gender, text) => {
-    const key = this.cacheKey_(languageCode, gender, text);
+  getCachedSound_ = (locale, gender, text) => {
+    const key = this.cacheKey_(locale, gender, text);
     return this.cachedSounds_[key];
   };
 
   /**
    * Adds the given SoundResponse to the cache.
-   * @param {string} languageCode
+   * @param {string} locale
    * @param {string} gender
    * @param {string} text
    * @param {SoundResponse} SoundResponse
    * @private
    */
-  setCachedSound_ = (languageCode, gender, text, soundResponse) => {
-    const key = this.cacheKey_(languageCode, gender, text);
+  setCachedSound_ = (locale, gender, text, soundResponse) => {
+    const key = this.cacheKey_(locale, gender, text);
     this.cachedSounds_[key] = soundResponse;
   };
 
