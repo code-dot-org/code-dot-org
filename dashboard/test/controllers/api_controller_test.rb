@@ -383,7 +383,7 @@ class ApiControllerTest < ActionController::TestCase
 
     post :update_lockable_state, params: {updates: updates}
     user_level = UserLevel.find_by(user_level_data)
-    assert_equal true, user_level.submitted?
+    assert_equal false, user_level.submitted?
     assert_equal true, user_level.readonly_answers?
     assert_not_nil user_level.unlocked_at
 
