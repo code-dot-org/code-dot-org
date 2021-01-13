@@ -115,7 +115,6 @@ header.build = function(
           scriptData={scriptData}
           currentLevelId={currentLevelId}
           linesOfCodeText={linesOfCodeText}
-          hasAppOptions={hasAppOptions}
         />
       </Provider>,
       document.querySelector('.header_level')
