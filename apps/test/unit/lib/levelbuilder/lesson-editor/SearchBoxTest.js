@@ -12,7 +12,7 @@ describe('SearchBox', () => {
     fetch_spy = sinon.stub(window, 'fetch');
     defaultProps = {
       onSearchSelect: () => {},
-      courseVersionId: 1,
+      additionalQueryParams: {extraParam1: 1, extraParam2: 2},
       searchUrl: 'fakesearch',
       constructOptions
     };
@@ -38,7 +38,7 @@ describe('SearchBox', () => {
       .getOptions('abc')
       .then(() => {
         expect(fetch_spy).to.have.been.calledWith(
-          '/fakesearch?query=abc&limit=7&courseVersionId=1'
+          '/fakesearch?query=abc&limit=7&extraParam1=1&extraParam2=2'
         );
         expect(constructOptions).to.have.been.calledWith(
           JSON.stringify(returnData)

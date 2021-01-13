@@ -7,9 +7,9 @@ import _ from 'lodash';
 export default class SearchBox extends Component {
   static propTypes = {
     onSearchSelect: PropTypes.func.isRequired,
-    courseVersionId: PropTypes.number,
     searchUrl: PropTypes.string.isRequired,
-    constructOptions: PropTypes.func.isRequired
+    constructOptions: PropTypes.func.isRequired,
+    additionalQueryParams: PropTypes.object
   };
 
   constructor(props) {
@@ -33,8 +33,8 @@ export default class SearchBox extends Component {
       query: encodeURIComponent(q),
       limit: searchLimit
     };
-    if (this.props.courseVersionId) {
-      params['courseVersionId'] = this.props.courseVersionId;
+    if (this.props.additionalQueryParams) {
+      Object.assign(params, this.props.additionalQueryParams);
     }
     const query_params = Object.keys(params)
       .map(key => `${key}=${params[key]}`)

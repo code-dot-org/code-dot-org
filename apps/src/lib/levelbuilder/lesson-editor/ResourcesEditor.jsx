@@ -167,9 +167,11 @@ class ResourcesEditor extends Component {
             <label>Select a resource to add</label>
             <SearchBox
               onSearchSelect={this.onSearchSelect}
-              courseVersionId={this.props.courseVersionId}
               searchUrl={'resourcesearch'}
               constructOptions={this.constructSearchOptions}
+              additionalQueryParams={{
+                courseVersionId: this.props.courseVersionId
+              }}
             />
           </div>
           <table style={{width: '100%'}}>
