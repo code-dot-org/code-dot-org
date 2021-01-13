@@ -48,6 +48,7 @@ describe('LessonEditor', () => {
         studentOverview: 'Overview of the lesson for students',
         unplugged: false,
         lockable: false,
+        hasLessonPlan: true,
         assessment: false,
         creativeCommonsLicense: 'Creative Commons BY-NC-SA',
         purpose: 'The purpose of the lesson is for people to learn',
