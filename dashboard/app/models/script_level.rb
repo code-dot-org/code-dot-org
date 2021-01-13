@@ -467,6 +467,7 @@ class ScriptLevel < ApplicationRecord
 
   def summarize_for_lesson_edit
     summary = summarize(for_edit: true)
+    summary[:id] = id.to_s
     summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
       {
