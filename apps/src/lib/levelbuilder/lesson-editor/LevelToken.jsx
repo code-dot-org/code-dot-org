@@ -9,6 +9,7 @@ import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 import {toggleExpand} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import _ from 'lodash';
 
 const styles = {
   levelToken: {
@@ -119,12 +120,17 @@ class LevelToken extends Component {
   };
 
   scriptLevelForProgressBubble = activeLevel => {
-    let progressBubbleLevel = activeLevel;
+    let progressBubbleLevel = _.cloneDeep(activeLevel);
 
     progressBubbleLevel['isCurrentLevel'] = false;
     progressBubbleLevel['status'] = LevelStatus.not_tried;
     progressBubbleLevel['levelNumber'] = this.props.scriptLevel.levelNumber;
     progressBubbleLevel['kind'] = this.props.scriptLevel.kind;
+
+    // TODO: (charlie) this is temporary backward compatibility with
+    // ProgressBubble, which will be updated to use strings for ids
+    // in an upcoming PR
+    progressBubbleLevel['id'] = parseInt(activeLevel.id);
 
     return progressBubbleLevel;
   };
