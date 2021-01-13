@@ -7,7 +7,7 @@ const ADD_VOCABULARY = 'vocabulariesEditor/ADD_VOCABULARY';
 const EDIT_VOCABULARY = 'vocabulariesEditor/EDIT_VOCABULARY';
 const REMOVE_VOCABULARY = 'vocabulariesEditor/REMOVE_VOCABULARY';
 
-export const initVocabularies = vocabularys => ({
+export const initVocabularies = vocabularies => ({
   type: INIT,
   vocabularies
 });

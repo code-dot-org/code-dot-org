@@ -23,7 +23,7 @@ class Vocabulary < ApplicationRecord
     {key: key, word: display_word, definition: display_definition}
   end
 
-  def summarize_for_lesson_edit
+  def summarize_for_edit
     {key: key, word: word, definition: definition}
   end
 

@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import VocabulariesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -328,6 +329,24 @@ class LessonEditor extends Component {
               A unit must be in a course version, i.e. a unit must belong to a
               course or have 'Is a Standalone Course' checked, in order to add
               resources.
+            </h4>
+          )}
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection
+          title="Vocabulary"
+          collapsed={true}
+          fullWidth={true}
+        >
+          {this.state.originalLessonData.courseVersionId ? (
+            <VocabulariesEditor
+              courseVersionId={this.state.originalLessonData.courseVersionId}
+            />
+          ) : (
+            <h4>
+              A unit must be in a course version, i.e. a unit must belong to a
+              course or have 'Is a Standalone Course' checked, in order to add
+              vocabulary.
             </h4>
           )}
         </CollapsibleEditorSection>
