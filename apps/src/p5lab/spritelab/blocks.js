@@ -538,9 +538,12 @@ export default {
         }
       },
 
-      renameProcedure(oldName, newName) {
+      renameProcedure(oldName, newName, userCreated) {
         if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
+          if (userCreated) {
+            this.getTitle_('VAR').id = newName;
+          }
         }
       },
 
