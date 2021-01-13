@@ -6954,6 +6954,7 @@ en:
             Spelling Bee:
               name: Spelling Bee
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          name: pre-express-2017
         subgoal-labels-opt-in:
           title: Subgoal Labels Study Opt-in
           description_audience: ''
