@@ -5,7 +5,7 @@ import LessonTip, {
   tipTypes
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
-import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {activitySectionShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import i18n from '@cdo/locale';
 
 const styles = {

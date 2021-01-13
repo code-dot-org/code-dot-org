@@ -38,8 +38,11 @@ class Lesson < ApplicationRecord
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
   has_and_belongs_to_many :vocabularies, join_table: :lessons_vocabularies
-  has_many :lessons_resources # join table. we need this association for seeding logic
   has_many :objectives, dependent: :destroy
+
+  # join tables needed for seeding logic
+  has_many :lessons_resources
+  has_many :lessons_vocabularies
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
@@ -249,6 +252,7 @@ class Lesson < ApplicationRecord
         lesson_data[:levels] += extra_levels
         last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
         last_level_summary[:url] << "/page/1"
+        last_level_summary[:page_number] = 1
       end
 
       # Don't want lesson plans for lockable levels
@@ -309,8 +313,7 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
-      courseVersionId: lesson_group.script.get_course_version&.id,
-      updatedAt: updated_at
+      courseVersionId: lesson_group.script.get_course_version&.id
     }
   end
 
@@ -327,6 +330,7 @@ class Lesson < ApplicationRecord
       preparation: preparation || '',
       activities: lesson_activities.map(&:summarize_for_lesson_show),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
       assessmentOpportunities: assessment_opportunities

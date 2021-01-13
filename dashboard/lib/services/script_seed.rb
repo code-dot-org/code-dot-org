@@ -18,7 +18,7 @@ module Services
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
       :script_levels, :levels_script_levels, :levels, :resources,
-      :lessons_resources, :objectives, keyword_init: true
+      :lessons_resources, :vocabularies, :lessons_vocabularies, :objectives, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -42,6 +42,8 @@ module Services
       sections = activities.map(&:activity_sections).flatten
       resources = script.lessons.map(&:resources).flatten
       lessons_resources = script.lessons.map(&:lessons_resources).flatten
+      vocabularies = script.lessons.map(&:vocabularies).flatten
+      lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
       objectives = script.lessons.map(&:objectives).flatten
 
       seed_context = SeedContext.new(
@@ -55,6 +57,8 @@ module Services
         levels: my_levels,
         resources: resources,
         lessons_resources: lessons_resources,
+        vocabularies: vocabularies,
+        lessons_vocabularies: lessons_vocabularies,
         objectives: objectives
       )
       scope = {seed_context: seed_context}
@@ -69,6 +73,8 @@ module Services
         levels_script_levels: script.levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json},
         resources: resources.map {|r| ScriptSeed::ResourceSerializer.new(r, scope: scope).as_json},
         lessons_resources: lessons_resources.map {|lr| ScriptSeed::LessonsResourceSerializer.new(lr, scope: scope).as_json},
+        vocabularies: vocabularies.map {|v| ScriptSeed::VocabularySerializer.new(v, scope: scope).as_json},
+        lessons_vocabularies: lessons_vocabularies.map {|lv| ScriptSeed::LessonsVocabularySerializer.new(lv, scope: scope).as_json},
         objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json}
       }
       JSON.pretty_generate(data)
@@ -138,6 +144,8 @@ module Services
         levels_script_levels_data = data['levels_script_levels']
         resources_data = data['resources']
         lessons_resources_data = data['lessons_resources']
+        vocabularies_data = data['vocabularies']
+        lessons_vocabularies_data = data['lessons_vocabularies']
         objectives_data = data['objectives']
         seed_context = SeedContext.new
 
@@ -149,9 +157,9 @@ module Services
 
         seed_context.script = import_script(script_data)
 
-        # Course version must be set before resources are imported. If the
+        # Course version must be set before resources and vocabulary are imported. If the
         # script is in a unit group, we must wait and let the next seed step set
-        # the course version on the unit group before resources can be imported.
+        # the course version on the unit group before resources and vocabulary can be imported.
         if seed_context.script.is_course
           CourseOffering.add_course_offering(seed_context.script)
         end
@@ -175,6 +183,8 @@ module Services
 
         seed_context.resources = import_resources(resources_data, seed_context)
         seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
+        seed_context.vocabularies = import_vocabularies(vocabularies_data, seed_context)
+        seed_context.lessons_vocabularies = import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
         seed_context.objectives = import_objectives(objectives_data, seed_context)
 
         seed_context.script
@@ -381,6 +391,70 @@ module Services
       LessonsResource.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
+    def self.import_vocabularies(vocabularies_data, seed_context)
+      course_version_id = seed_context.script.get_course_version&.id
+
+      return [] if vocabularies_data.blank?
+
+      unless course_version_id
+        # We can't import any vocabulary without a course version, because
+        # course_version_id is required for vocabulary. Don't raise, because we
+        # may be in the scenario where this script does belong to a unit group,
+        # but that association is not present in the database yet because the
+        # seed process has not yet run on this machine since that relationship
+        # was added. In this scenario, the relationship to the unit group and
+        # its course version will be established in a later seed step. Then,
+        # this method will be able to import vocabulary the next time the
+        # seed process runs.
+        if vocabularies_data.count > 0
+          puts "WARNING: unable to import vocabulary into script #{seed_context.script.name} "\
+            "because course version is missing. This is only to be expected if "\
+            "the script is being seeded for the first time."
+        end
+        return []
+      end
+
+      vocabularies_to_import = vocabularies_data.map do |vocabulary_data|
+        vocabulary_attrs = vocabulary_data.except('seeding_key')
+        vocabulary_attrs['course_version_id'] = course_version_id
+        Vocabulary.new(vocabulary_attrs)
+      end
+
+      # Vocabulary are owned by the course version. Therefore, do not delete
+      # any vocabulary which no longer appear in the serialized data.
+      Vocabulary.import! vocabularies_to_import, on_duplicate_key_update: get_columns(Vocabulary)
+      vocabulary_keys = vocabularies_to_import.map(&:key)
+      Vocabulary.where(course_version_id: course_version_id, key: vocabulary_keys)
+    end
+
+    def self.import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
+      return [] unless seed_context.script.get_course_version
+      return [] if lessons_vocabularies_data.blank?
+
+      lessons_vocabularies_to_import = lessons_vocabularies_data.map do |lv_data|
+        lesson_id = seed_context.lessons.select {|l| l.key == lv_data['seeding_key']['lesson.key']}.first&.id
+        raise 'No lesson found' if lesson_id.nil?
+
+        vocabulary_id = seed_context.vocabularies.select {|v| v.key == lv_data['seeding_key']['vocabulary.key']}.first&.id
+        raise 'No vocabulary found' if vocabulary_id.nil?
+
+        LessonsVocabulary.new(
+          lesson_id: lesson_id,
+          vocabulary_id: vocabulary_id
+        )
+      end
+
+      # destroy_outdated_objects won't work on LessonsVocabulary objects because
+      # they do not have an id field. Work around this by inefficiently deleting
+      # all LessonsVocabularies using 1 query per lesson, and then re-importing all
+      # LessonsVocabularies in a single query. It may be possible to eliminate
+      # these extra queries by adding an id column to the LessonsVocabularies model.
+      seed_context.lessons.each {|l| l.vocabularies = []}
+
+      LessonsVocabulary.import! lessons_vocabularies_to_import, on_duplicate_key_update: get_columns(LessonsVocabulary)
+      LessonsVocabulary.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+    end
+
     def self.import_objectives(objectives_data, seed_context)
       objectives_to_import = objectives_data.map do |objective_data|
         lesson_id = seed_context.lessons.select {|l| l.key == objective_data['seeding_key']['lesson.key']}.first&.id
@@ -527,6 +601,22 @@ module Services
     end
 
     class LessonsResourceSerializer < ActiveModel::Serializer
+      attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class VocabularySerializer < ActiveModel::Serializer
+      attributes :key, :word, :definition, :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class LessonsVocabularySerializer < ActiveModel::Serializer
       attributes :seeding_key
 
       def seeding_key
