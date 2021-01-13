@@ -20447,9 +20447,9 @@ en:
             Virus Simulation for Code Bytes:
               name: Coding a Simulation
             Course F Introduction:
-              name: Introduction to Course F
+              name: Introducing Sprite Lab
             lesson-1:
-              name: Envelope Variables
+              name: Blank Space Variables
             lesson-2:
               name: Storing and Retrieving Text
             lesson-3:
@@ -20460,6 +20460,10 @@ en:
               name: Groups of Sprites
             lesson-6:
               name: Create a Collector Game
+            Making Sprites:
+              name: Making Sprites
+            Sprites in Action:
+              name: Sprites in Action
           lesson_groups:
             ramp_up:
               display_name: Introduction
@@ -20471,6 +20475,9 @@ en:
             lessonGroup-3:
               display_name: Variables
               description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
+            Sprites:
+              display_name: Sprites
+              description: Learn the basics of coding with sprites!
           name: csf-2021-pilot
           title: CS Fundamentals 2021 Pilot
           description_audience: Upper Elementary
