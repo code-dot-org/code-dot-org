@@ -51,6 +51,7 @@ class LessonsController < ApplicationController
     end
 
     if Rails.application.config.levelbuilder_mode
+      script.fix_lesson_positions
       @lesson.script.reload
 
       # This endpoint will only be hit from the lesson edit page, which is only
