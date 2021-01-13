@@ -5,16 +5,16 @@ import sinon from 'sinon';
 import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 
 const defaultScriptLevel = {
-  id: 10,
+  id: '10',
   position: 1,
   levels: [
     {
       name: 'Level 1',
-      id: 2,
+      id: '2',
       url: '/fake/url/'
     }
   ],
-  activeId: 2,
+  activeId: '2',
   expand: true
 };
 
