@@ -23,9 +23,30 @@ const getInitialState = () => ({
       position: 1,
       userFacing: true,
       lessons: [
-        {id: 100, key: 'a', name: 'A', position: 1, levels: [], hasLessonPlan: true},
-        {id: 101, key: 'b', name: 'B', position: 2, levels: [], hasLessonPlan: false},
-        {id: 102, key: 'c', name: 'C', position: 3, levels: [], hasLessonPlan: true}
+        {
+          id: 100,
+          key: 'a',
+          name: 'A',
+          position: 1,
+          levels: [],
+          hasLessonPlan: true
+        },
+        {
+          id: 101,
+          key: 'b',
+          name: 'B',
+          position: 2,
+          levels: [],
+          hasLessonPlan: false
+        },
+        {
+          id: 102,
+          key: 'c',
+          name: 'C',
+          position: 3,
+          levels: [],
+          hasLessonPlan: true
+        }
       ]
     },
     {
@@ -35,9 +56,30 @@ const getInitialState = () => ({
       position: 2,
       userFacing: true,
       lessons: [
-        {id: 104, key: 'd', name: 'D', position: 1, levels: [], hasLessonPlan: true},
-        {id: 105, key: 'e', name: 'E', position: 2, levels: [], hasLessonPlan: true},
-        {id: 106, key: 'f', name: 'F', position: 3, levels: [], hasLessonPlan: false}
+        {
+          id: 104,
+          key: 'd',
+          name: 'D',
+          position: 1,
+          levels: [],
+          hasLessonPlan: true
+        },
+        {
+          id: 105,
+          key: 'e',
+          name: 'E',
+          position: 2,
+          levels: [],
+          hasLessonPlan: true
+        },
+        {
+          id: 106,
+          key: 'f',
+          name: 'F',
+          position: 3,
+          levels: [],
+          hasLessonPlan: false
+        }
       ]
     }
   ]
