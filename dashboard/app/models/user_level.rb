@@ -49,12 +49,6 @@ class UserLevel < ApplicationRecord
     where(script: stage.script, level: levels)
   end
 
-  def readonly_requires_submitted
-    if readonly_answers? && !submitted?
-      errors.add(:readonly_answers, 'readonly_answers only valid on submitted UserLevel')
-    end
-  end
-
   def attempted?
     !best_result.nil?
   end
