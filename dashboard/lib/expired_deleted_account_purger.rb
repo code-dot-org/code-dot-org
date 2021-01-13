@@ -53,9 +53,9 @@ class ExpiredDeletedAccountPurger
     # Do nothing if more than this number of accounts would be purged in total.
     # We may need to adjust this over time as activity increases on our site.
     # This is a loose constraint because cascading student deletes make this a very spiky metric.
-    # 4000 is ~0.01% of our user rows.
-    # We expect this to stay below 1500 during September 2018.
-    @max_accounts_to_purge = options[:max_accounts_to_purge] || 4000
+    # 8000 is ~0.01% of our user rows in 2021. We expect this to stay below 2000 during regular
+    # months and 5000 during the HOC week purge (1st week of Jan).
+    @max_accounts_to_purge = options[:max_accounts_to_purge] || 8000
     raise ArgumentError.new('max_accounts_to_purge must be Integer') unless @max_accounts_to_purge.is_a? Integer
 
     reset

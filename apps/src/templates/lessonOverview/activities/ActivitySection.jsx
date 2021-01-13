@@ -5,7 +5,7 @@ import LessonTip, {
   tipTypes
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
-import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {activitySectionShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -25,9 +25,12 @@ const styles = {
     display: 'flex',
     flexDirection: 'column'
   },
-  remarksHeader: {
+  remarks: {
     marginLeft: 5,
     fontStyle: 'italic'
+  },
+  remarksHeader: {
+    marginTop: 0
   },
   textAndProgression: {
     display: 'flex',
@@ -88,9 +91,9 @@ export default class ActivitySection extends Component {
           >
             {section.remarks && (
               <div>
-                <h4>
+                <h4 style={styles.remarksHeader}>
                   <FontAwesome icon="microphone" />
-                  <span style={styles.remarksHeader}>{i18n.remarks()}</span>
+                  <span style={styles.remarks}>{i18n.remarks()}</span>
                 </h4>
               </div>
             )}
@@ -103,9 +106,6 @@ export default class ActivitySection extends Component {
               }}
             >
               <SafeMarkdown markdown={section.text} />
-              {section.scriptLevels.length > 0 && (
-                <ProgressionDetails progression={section} />
-              )}
             </div>
           </div>
           <div
@@ -119,6 +119,9 @@ export default class ActivitySection extends Component {
             })}
           </div>
         </div>
+        {section.scriptLevels.length > 0 && (
+          <ProgressionDetails progression={section} />
+        )}
       </div>
     );
   }

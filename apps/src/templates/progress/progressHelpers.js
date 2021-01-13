@@ -170,6 +170,7 @@ export function summarizeProgressInStage(levelsWithStatus) {
  */
 export const processedLevel = level => {
   return {
+    id: level.activeId || level.id,
     url: level.url,
     name: level.name,
     progression: level.progression,
@@ -180,6 +181,8 @@ export const processedLevel = level => {
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus,
-    sublevels: level.sublevels
+    pageNumber: level.page_number,
+    sublevels:
+      level.sublevels && level.sublevels.map(level => processedLevel(level))
   };
 };
