@@ -421,6 +421,11 @@ class ScriptLevel < ApplicationRecord
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
       summary[:assessment] = !!assessment
       summary[:challenge] = !!challenge
+
+      # TODO: (charlie) we will move this string conversion out of this
+      # `for_edit` block as soon as code studio updates to use strings for ids
+      summary[:ids] = summary[:ids].map(&:to_s)
+      summary[:activeId] = summary[:activeId].to_s
     end
 
     if include_prev_next
@@ -467,11 +472,11 @@ class ScriptLevel < ApplicationRecord
 
   def summarize_for_lesson_edit
     summary = summarize(for_edit: true)
-    summary[:id] = id
+    summary[:id] = id.to_s
     summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
       {
-        id: level.id,
+        id: level.id.to_s,
         name: level.name,
         url: edit_level_path(id: level.id)
       }
