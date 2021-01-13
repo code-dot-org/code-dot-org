@@ -84,10 +84,7 @@ class Tutorials
   end
 
   def self.sort_by_popularity?(site, hoc_mode)
-    # temporarily turning off sorting by popularity so that a new popularity rank can be established
-    false
-    # after new popularity rank is established, re-enable:
-    # ("post-hoc" == hoc_mode) || (site == 'code.org' && [false, 'pre-hoc'].include?(hoc_mode))
+    ("post-hoc" == hoc_mode) || (site == 'code.org' && [false, 'pre-hoc'].include?(hoc_mode))
   end
 end
 
