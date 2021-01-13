@@ -267,13 +267,17 @@ Applab.autogenerateML = function() {
     url: '/api/v1/ml_models',
     method: 'GET'
   }).then(modelData => {
-    console.log('modelData', modelData);
+    var x = 20;
+    var y = 20;
     modelData.selectedFeatures.forEach(feature => {
-      var label = designMode.createElement('LABEL');
+      y = y + 20;
+      var label = designMode.createElement('LABEL', x, y);
       label.textContent = feature + ':';
       label.id = 'design_' + feature + '_label';
+      label.style.width = '300px';
+      y = y + 20;
       if (Object.keys(modelData.featureNumberKey).includes(feature)) {
-        var select = designMode.createElement('DROPDOWN');
+        var select = designMode.createElement('DROPDOWN', x, y);
         select.id = 'design_' + feature + '_dropdown';
         // App Lab automatically addss "option 1" and "option 2", remove them.
         select.options.remove(0);
@@ -288,18 +292,21 @@ Applab.autogenerateML = function() {
         input.id = 'design_' + feature + '_input';
       }
     });
-    var label = designMode.createElement('LABEL');
+    y = y + 40;
+    var label = designMode.createElement('LABEL', x, y);
     label.textContent = modelData.labelColumn;
     // TODO: this could be problematic if the name isn't formatted appropriately
     label.id = 'design_' + modelData.name + '_label';
-    var prediction = designMode.createElement('TEXT_INPUT');
-    prediction.text = '?';
+    label.style.width = '300px';
+    y = y + 20;
+    var prediction = designMode.createElement('TEXT_INPUT', x, y);
     prediction.id = 'design_' + modelData.name + '_prediction';
-    var predictButton = designMode.createElement('BUTTON');
+    y = y + 40;
+    var predictButton = designMode.createElement('BUTTON', x, y);
     predictButton.textContent = 'Predict';
-    var predictButtonId = 'design_' + modelData.name + '_predict';
-    predictButton.id = predictButtonId;
-    var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
+    var predictButtonId = modelData.name + '_predict';
+    designMode.updateProperty(predictButton, 'id', predictButtonId);
+    var predictOnClick = `onEvent("${predictButtonId}", "click", function(_) {
       console.log('did this work?!');
     });`;
     designMode.onInsertEvent(predictOnClick);

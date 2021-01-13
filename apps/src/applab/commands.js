@@ -98,7 +98,8 @@ function apiValidateDomIdExistence(
       allowCodeElements: true,
       allowDesignPrefix: true,
       allowDesignElements: true,
-      allowTurtleCanvas: Boolean(opts.turtleCanvas)
+      allowTurtleCanvas: Boolean(opts.turtleCanvas),
+      allowAutoGenElements: true
     };
     var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
