@@ -30,6 +30,7 @@ const fakeSublevels = [
 
 const DEFAULT_PROPS = {
   level: {
+    id: 123,
     display_name: 'Bubble Choice',
     description: 'Choose one or more levels!',
     sublevels: fakeSublevels,
