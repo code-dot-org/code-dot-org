@@ -15,9 +15,9 @@ import {
 import {Provider} from 'react-redux';
 
 const studentData = [
-  {id: '1', name: 'studentb'},
-  {id: '3', name: 'studentc'},
-  {id: '0', name: 'studenta'}
+  {id: 1, name: 'studentb'},
+  {id: 3, name: 'studentc'},
+  {id: 0, name: 'studenta'}
 ];
 
 describe('VirtualizedSummaryView', () => {
@@ -28,21 +28,21 @@ describe('VirtualizedSummaryView', () => {
     registerReducers({sectionProgress, scriptSelection, currentUser});
     defaultProps = {
       levelProgressByStudent: {
-        '0': {
+        0: {
           '789': {
             status: 'perfect',
             result: 1,
             paired: false
           }
         },
-        '1': {
+        1: {
           '789': {
             status: 'perfect',
             result: 1,
             paired: false
           }
         },
-        '3': {
+        3: {
           '789': {
             status: 'perfect',
             result: 1,
@@ -52,7 +52,7 @@ describe('VirtualizedSummaryView', () => {
       },
       lessonOfInterest: 1,
       section: {
-        id: '1',
+        id: 1,
         script: {id: 123},
         students: studentData
       },

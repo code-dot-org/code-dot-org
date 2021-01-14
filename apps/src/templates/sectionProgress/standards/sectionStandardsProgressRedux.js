@@ -316,6 +316,7 @@ export function getPluggedLessonCompletionStatus(state, lesson) {
       let numLevelsInLessonCompletedByStudent = 0;
       levelIds.forEach(levelId => {
         const levelProgress = levelProgressByScript[studentId][levelId];
+        // console.log('progress', studentId, levelId, levelProgress);
         if (
           levelProgress &&
           levelProgress.result >= TestResults.MINIMUM_PASS_RESULT
@@ -352,6 +353,7 @@ export function fetchStandardsCoveredForScript(scriptId) {
       dataType: 'json',
       url: `/dashboardapi/script_standards/${scriptId}`
     }).then(data => {
+      console.log('standards data', scriptId, data);
       const standardsData = data;
       dispatch(setStandardsData(standardsData));
     });
@@ -373,6 +375,7 @@ export function fetchStudentLevelScores(scriptId, sectionId) {
       return fetch(url, {credentials: 'include'})
         .then(response => response.json())
         .then(data => {
+          console.log('scores data', data);
           const scoresData = data;
           unpluggedLessonIds.forEach(lessonId =>
             dispatch(setStudentLevelScores(scriptId, lessonId, scoresData))

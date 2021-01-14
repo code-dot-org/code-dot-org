@@ -26,6 +26,7 @@ import {
 } from '@cdo/apps/templates/sectionProgress/multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from '@cdo/apps/templates/sectionProgress/SectionProgressNameCell';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const ARROW_PADDING = 60;
 // Only show arrow next to lesson numbers if column is larger than a single small bubble and it's margin.
@@ -252,15 +253,30 @@ class VirtualizedDetailView extends Component {
         />
       );
     } else {
+      // Note: this provides temporary backward compatibility until we merge
+      // a refactor of this table that uses studentLevelProgress objects
+      // instead of level.status
       const stageLevels = scriptData.stages[stageIdIndex].levels;
+      const studentProgress = levelProgressByStudent[student.id] || {};
+      const levelsWithStatus = stageLevels.map(level => {
+        const progress = studentProgress[level.id] || {
+          status: LevelStatus.not_tried
+        };
+        const sublevels = (level.sublevels || []).map(sublevel => {
+          const subProgress = studentProgress[sublevel.id] || {
+            status: LevelStatus.not_tried
+          };
+          return {...sublevel, status: subProgress.status};
+        });
+        return {...level, sublevels: sublevels, status: progress.status};
+      });
       child = (
         <StudentProgressDetailCell
           studentId={student.id}
           sectionId={section.id}
           stageId={stageIdIndex}
           stageExtrasEnabled={section.stageExtras}
-          levels={stageLevels}
-          studentProgress={levelProgressByStudent[student.id] || {}}
+          levelsWithStatus={levelsWithStatus}
         />
       );
     }
