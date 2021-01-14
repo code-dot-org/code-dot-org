@@ -14,7 +14,6 @@
 # Indexes
 #
 #  index_resources_on_course_version_id_and_key  (course_version_id,key) UNIQUE
-#  index_resources_on_name_and_url               (name,url)
 #
 
 # A Resource represents a link to external material for a lesson
