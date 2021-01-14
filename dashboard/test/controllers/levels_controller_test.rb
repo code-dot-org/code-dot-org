@@ -92,6 +92,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get filtered levels with owner_id" do
+    Level.where(user_id: @levelbuilder.id).destroy_all
     level = create :level, user: @levelbuilder
     get :get_filtered_levels, params: {page: 1, owner_id: @levelbuilder.id}
     assert_equal level[:name], JSON.parse(@response.body)['levels'][0]["name"]

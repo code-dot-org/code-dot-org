@@ -4863,7 +4863,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Odometer Activity"
+        "progression": "Odometer Activity",
+        "level_keys": [
+          "Widget: Binary Odometer_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4886,7 +4889,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L6 CFU beyond odometer_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4909,7 +4915,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L6 CFU representing fractions_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5192,7 +5201,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "RGB Color"
+        "progression": "RGB Color",
+        "level_keys": [
+          "CSP U1L10 RGB_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5215,7 +5227,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5238,7 +5253,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "More Shades of Color"
+        "progression": "More Shades of Color",
+        "level_keys": [
+          "CSP U1L10 More Shades of Color_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5261,7 +5279,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5284,7 +5305,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5307,7 +5331,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Color Sampling"
+        "progression": "Color Sampling",
+        "level_keys": [
+          "CSP U1L10 Color Sampling_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5330,7 +5357,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5353,7 +5383,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding\r"
+        "progression": "Assessment: Check For Understanding\r",
+        "level_keys": [
+          "U1L10 Multiple Choice analog vs digital_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5376,7 +5409,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding\r"
+        "progression": "Assessment: Check For Understanding\r",
+        "level_keys": [
+          "U1L10 CFU Sampling_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -6473,6 +6509,18 @@
       }
     },
     {
+      "name": "CSP Unit 1 - Digital Information",
+      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
+      "key": "CSP Unit 1 Presentation",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "CSP Unit 1 Presentation"
+      }
+    },
+    {
       "name": "How Computers Work - Data and Binary",
       "url": "https://www.youtube.com/watch?v=USCBCmwMCDA",
       "key": "how-computers-work-data-and-binary",
@@ -6483,18 +6531,6 @@
       },
       "seeding_key": {
         "resource.key": "how-computers-work-data-and-binary"
-      }
-    },
-    {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
       }
     },
     {
@@ -6774,13 +6810,13 @@
     {
       "seeding_key": {
         "lesson.key": "Color Images",
-        "resource.key": "how-computers-work-data-and-binary"
+        "resource.key": "CSP Unit 1 Presentation"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Color Images",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "how-computers-work-data-and-binary"
       }
     },
     {
@@ -6855,6 +6891,12 @@
         "resource.key": "CSP Unit 1 Presentation"
       }
     }
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
   ],
   "objectives": [
     {
