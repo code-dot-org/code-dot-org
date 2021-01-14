@@ -146,3 +146,9 @@ export function compatibleLabelAndTrainer(state) {
     : false;
   return compatible;
 }
+
+/* Checks that the model is named. */
+export function namedModel(state) {
+  const name = state.trainedModelDetails.name;
+  return !!name;
+}

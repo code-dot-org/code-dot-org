@@ -1,4 +1,5 @@
 {
+  "defaultLabelColumn": "delicious?",
   "fields": [
   	{
   		"id": "name",

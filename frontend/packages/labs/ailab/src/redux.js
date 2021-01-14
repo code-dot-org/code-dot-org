@@ -16,7 +16,8 @@ import {
   selectedColumnsHaveDatatype,
   continuousColumnsHaveOnlyNumbers,
   trainerSelected,
-  compatibleLabelAndTrainer
+  compatibleLabelAndTrainer,
+  namedModel
 } from "./validate.js";
 
 import { ColumnTypes, MLTypes } from "./constants.js";
@@ -29,6 +30,7 @@ const SET_SELECTED_JSON = "SET_SELECTED_JSON";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
+const SET_K_VALUE = "SET_K_VALUE";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
@@ -40,12 +42,12 @@ const SET_ACCURACY_CHECK_PREDICTED_LABELS =
   "SET_ACCURACY_CHECK_PREDICTED_LABELS";
 const SET_TRAINING_EXAMPLES = "SET_TRAINING_EXAMPLES";
 const SET_TRAINING_LABELS = "SET_TRAINING_LABELS";
-const SET_SHOW_PREDICT = "SET_SHOW_PREDICT";
 const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
 const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
+const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 
 // Action creators
 export function setMode(mode) {
@@ -70,6 +72,10 @@ export function setImportedMetadata(metadata) {
 
 export function setSelectedTrainer(selectedTrainer) {
   return { type: SET_SELECTED_TRAINER, selectedTrainer };
+}
+
+export function setKValue (kValue) {
+  return { type: SET_K_VALUE, kValue };
 }
 
 export const setColumnsByDataType = (column, dataType) => ({
@@ -129,10 +135,6 @@ export function setTrainingLabels(trainingLabels) {
   return { type: SET_TRAINING_LABELS, trainingLabels };
 }
 
-export function setShowPredict(showPredict) {
-  return { type: SET_SHOW_PREDICT, showPredict };
-}
-
 export function setTestData(testData) {
   return { type: SET_TEST_DATA, testData };
 }
@@ -157,12 +159,17 @@ export function setTrainedModelDetails(trainedModelDetails) {
   return { type: SET_TRAINED_MODEL_DETAILS, trainedModelDetails };
 }
 
+export function setCurrentPanel(currentPanel) {
+  return { type: SET_CURRENT_PANEL, currentPanel };
+}
+
 const initialState = {
   csvfile: undefined,
   jsonfile: undefined,
   data: [],
-  metadata: {},
+  metadata: undefined,
   selectedTrainer: undefined,
+  kValue: undefined,
   columnsByDataType: {},
   selectedFeatures: [],
   labelColumn: undefined,
@@ -173,12 +180,12 @@ const initialState = {
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
-  showPredict: false,
   testData: {},
   prediction: {},
   modelSize: undefined,
   trainedModel: undefined,
-  trainedModelDetails: {}
+  trainedModelDetails: {},
+  currentPanel: "selectDataset"
 };
 
 // Reducer
@@ -208,15 +215,32 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_IMPORTED_METADATA) {
-    return {
+    var newState = {
       ...state,
       metadata: action.metadata
     };
+
+    if (
+      state.mode &&
+      state.mode.datasets &&
+      state.mode.datasets.length > 1 &&
+      state.mode.hideSelectLabel
+    ) {
+      newState.labelColumn = action.metadata.defaultLabelColumn;
+    }
+
+    return newState;
   }
   if (action.type === SET_SELECTED_TRAINER) {
     return {
       ...state,
       selectedTrainer: action.selectedTrainer
+    };
+  }
+  if (action.type === SET_K_VALUE) {
+    return {
+      ...state,
+      kValue: action.kValue
     };
   }
   if (action.type === SET_COLUMNS_BY_DATA_TYPE) {
@@ -282,12 +306,6 @@ export default function rootReducer(state = initialState, action) {
       accuracyCheckPredictedLabels: action.predictedLabels
     };
   }
-  if (action.type === SET_SHOW_PREDICT) {
-    return {
-      ...state,
-      showPredict: action.showPredict
-    };
-  }
   if (action.type === SET_TEST_DATA) {
     return {
       ...state,
@@ -302,7 +320,8 @@ export default function rootReducer(state = initialState, action) {
   }
   if (action.type === RESET_STATE) {
     return {
-      ...initialState
+      ...initialState,
+      mode: state.mode
     };
   }
   if (action.type === SET_MODEL_SIZE) {
@@ -323,6 +342,12 @@ export default function rootReducer(state = initialState, action) {
       trainedModelDetails: action.trainedModelDetails
     };
   }
+  if (action.type === SET_CURRENT_PANEL) {
+    return {
+      ...state,
+      currentPanel: action.currentPanel
+    };
+  }
   return state;
 }
 
@@ -340,10 +365,24 @@ export function getCategoricalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.CATEGORICAL);
 }
 
+function isColumnReadOnly(state, column) {
+  const metadataColumnType =
+    state.metadata &&
+    state.metadata.fields &&
+    state.metadata.fields.find(field => {
+      return field.id === column;
+    }).type;
+
+  return metadataColumnType && state.mode && state.mode.hideSpecifyColumns;
+}
+
 export function getSelectedColumns(state) {
   return state.selectedFeatures
     .concat(state.labelColumn)
-    .filter(column => column !== undefined && column !== "");
+    .filter(column => column !== undefined && column !== "")
+    .map(columnId => {
+      return { id: columnId, readOnly: isColumnReadOnly(state, columnId) };
+    });
 }
 
 export function getSelectedCategoricalColumns(state) {
@@ -524,62 +563,78 @@ export function getSummaryStat(state) {
 }
 
 export function validationMessages(state) {
-  const validationMessages = [];
-  validationMessages.push({
+  const validationMessages = {};
+  validationMessages["notEnoughData"] = {
+    panel: "dataDisplay",
     readyToTrain: datasetUploaded(state),
     errorString: "There is not enough data to train a model.",
     successString: `There are ${state.data.length} rows of data.`
-  });
-  validationMessages.push({
+  };
+  validationMessages["columnNames"] = {
+    panel: "dataDisplay",
     readyToTrain: uniqueColumnNames(state),
     errorString:
       "Each column must have a name, and column names must be unique.",
     successString: "Each column has a unique name."
-  });
-  validationMessages.push({
+  };
+  validationMessages["emptyCells"] = {
+    panel: "dataDisplay",
     readyToTrain: noEmptyCells(state),
     errorString: "There can't be any empty cells.",
     successString: "Each cell has a value!"
-  });
-  validationMessages.push({
+  };
+  validationMessages["selectLabel"] = {
+    panel: "selectFeatures",
     readyToTrain: oneLabelSelected(state),
     errorString: "Please designate one column as the label column.",
     successString: "Label column has been selected."
-  });
-  validationMessages.push({
+  };
+  validationMessages["selectFeatures"] = {
+    panel: "selectFeatures",
     readyToTrain: minOneFeatureSelected(state),
     errorString: "Please select at least one feature to train.",
     successString: "At least one feature is selected."
-  });
-  validationMessages.push({
+  };
+  validationMessages["columnUsage"] = {
+    panel: "selectFeatures",
     readyToTrain: uniqLabelFeaturesSelected(state),
     errorString:
       "A column can not be selected as a both a feature and a label.",
     successString: "Label and feature(s) columns are unique."
-  });
-  validationMessages.push({
+  };
+  validationMessages["columnData"] = {
+    panel: "selectFeatures",
     readyToTrain: selectedColumnsHaveDatatype(state),
     errorString:
       "Feature and label columns must contain only continuous or categorical data.",
     successString:
       "Selected features and label contain continuous or categorical data"
-  });
-  validationMessages.push({
+  };
+  validationMessages["continuousNumbers"] = {
+    panel: "selectFeatures",
     readyToTrain: continuousColumnsHaveOnlyNumbers(state),
     errorString: "Continuous columns should contain only numbers.",
     successString: "Continuous columns contain only numbers."
-  });
-  validationMessages.push({
+  };
+  validationMessages["training"] = {
+    panel: "selectTrainer",
     readyToTrain: trainerSelected(state),
     errorString: "Please select a training algorithm.",
     successString: "Training algorithm selected."
-  });
-  validationMessages.push({
+  };
+  validationMessages["compatibleLabel"] = {
+    panel: "selectTrainer",
     readyToTrain: compatibleLabelAndTrainer(state),
     errorString:
       "The label datatype must be compatible with the training algorithm.",
     successString: "The label datatype and training algorithm are compatible."
-  });
+  };
+  validationMessages["nameModel"] = {
+    panel: "saveModel",
+    readyToTrain: namedModel(state),
+    errorString: "Please name your model.",
+    successString: "Your model is named."
+  };
   return validationMessages;
 }
 
@@ -600,11 +655,112 @@ export function getEmptyCellDetails(state) {
 
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
-  dataToSave.selectedTrainer = state.selectedTrainer;
-  dataToSave.trainedModel = state.trainedModel;
   dataToSave.name = state.trainedModelDetails.name;
   dataToSave.description = state.trainedModelDetails.description;
+  dataToSave.selectedTrainer = state.selectedTrainer;
+  dataToSave.selectedFeatures = state.selectedFeatures;
+  dataToSave.featureNumberKey = state.featureNumberKey;
+  dataToSave.labelColumn = state.labelColumn;
   dataToSave.summaryStat = getSummaryStat(state);
+  dataToSave.trainedModel = state.trainedModel;
 
   return dataToSave;
+}
+
+export function getShowSelectLabels(state) {
+  return (
+    !(state.mode && state.mode.hideSelectLabel) &&
+    getSelectableLabels(state).length > 0
+  );
+}
+
+export function getSpecifiedDatasets(state) {
+  return state.mode && state.mode.datasets;
+}
+
+export function getShowChooseReserve(state) {
+  return !(state.mode && state.mode.hideChooseReserve);
+}
+
+const panelList = [
+  { id: "selectDataset", label: "Import" },
+  { id: "dataDisplay", label: "Data" },
+  { id: "selectFeatures", label: "Features" },
+  { id: "columnInspector", label: "Columns" },
+  { id: "selectTrainer", label: "Trainer" },
+  { id: "trainModel", label: "Train" },
+  { id: "results", label: "Results" },
+  { id: "predict", label: "Predict" },
+  { id: "saveModel", label: "Save" }
+];
+
+function isPanelVisible(state, panelId) {
+  const mode = state.mode;
+
+  if (panelId === "selectDataset") {
+    if (mode && mode.datasets && mode.datasets.length === 1) {
+      return false;
+    }
+  }
+
+  if (panelId === "saveModel") {
+    if (mode && mode.hideSave) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function isPanelEnabled(state, panelId) {
+  if (panelId === "dataDisplay") {
+    if (state.data.length === 0) {
+      return false;
+    }
+  }
+
+  if (panelId === "columnInspector") {
+    if (getSelectedColumns(state).length === 0) {
+      return false;
+    }
+  }
+
+  if (panelId === "selectFeatures") {
+    if (!isDataUploaded(state)) {
+      return false;
+    }
+  }
+
+  if (panelId === "trainModel") {
+    if (!readyToTrain(state)) {
+      return false;
+    }
+  }
+
+  if (panelId === "results") {
+    if (
+      state.percentDataToReserve === 0 ||
+      state.accuracyCheckExamples.length === 0
+    ) {
+      return false;
+    }
+  }
+
+  // Also see if the previous panel was visible, recursively.
+  const panelIndex = panelList.findIndex(element => element.id === panelId);
+  if (panelIndex > 0) {
+    return isPanelEnabled(state, panelList[panelIndex - 1].id);
+  }
+
+  return true;
+}
+
+export function getPanels(state) {
+  return panelList
+    .filter(panel => {
+      return isPanelVisible(panel.id);
+    })
+    .map(panel => {
+      return { ...panel, enabled: isPanelEnabled(state, panel.id) };
+    });
 }

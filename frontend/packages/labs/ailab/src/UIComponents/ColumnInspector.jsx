@@ -12,14 +12,12 @@ import { ColumnTypes, styles } from "../constants.js";
 
 class ColumnInspector extends Component {
   static propTypes = {
-    getSelectedColumns: PropTypes.func,
-    selectedColumns: PropTypes.array,
+    selectedColumns: PropTypes.arrayOf(PropTypes.object),
     columnsByDataType: PropTypes.object,
     setColumnsByDataType: PropTypes.func.isRequired,
     uniqueOptionsByColumn: PropTypes.object,
     getRangesByColumn: PropTypes.func,
-    rangesByColumn: PropTypes.object,
-    metadata: PropTypes.object
+    rangesByColumn: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
@@ -27,19 +25,17 @@ class ColumnInspector extends Component {
     this.props.setColumnsByDataType(feature, event.target.value);
   };
 
-  getMetadataColumnType(column) {
-    return (
-      this.props.metadata.fields &&
-      this.props.metadata.fields.find(field => {
-        return field.id === column;
-      }).type
-    );
-  }
-
   render() {
+    const {
+      selectedColumns,
+      columnsByDataType,
+      uniqueOptionsByColumn,
+      rangesByColumn
+    } = this.props;
+
     return (
       <div id="column-inspector">
-        {this.props.selectedColumns.length > 0 && (
+        {selectedColumns.length > 0 && (
           <div style={styles.panel}>
             <div style={styles.largeText}>
               Describe the data in each of your selected columns
@@ -61,18 +57,24 @@ class ColumnInspector extends Component {
               machine learning model.
             </p>
             <form>
-              {this.props.selectedColumns.map((column, index) => {
+              {selectedColumns.map((column, index) => {
                 return (
                   <div key={index}>
-                    {this.props.columnsByDataType[column] && (
-                      <label>
-                        {column}: {this.getMetadataColumnType(column)}
-                        {!this.getMetadataColumnType(column) && (
+                    <label>
+                      {column.readOnly && (
+                        <div>
+                          {column.id}: {columnsByDataType[column.id]}
+                        </div>
+                      )}
+
+                      {!column.readOnly && (
+                        <div>
+                          {column.id}: &nbsp;
                           <select
                             onChange={event =>
-                              this.handleChangeDataType(event, column)
+                              this.handleChangeDataType(event, column.id)
                             }
-                            value={this.props.columnsByDataType[column]}
+                            value={columnsByDataType[column.id]}
                           >
                             {Object.values(ColumnTypes).map((option, index) => {
                               return (
@@ -82,19 +84,16 @@ class ColumnInspector extends Component {
                               );
                             })}
                           </select>
-                        )}
-                      </label>
-                    )}
-                    {this.props.columnsByDataType[column] ===
+                        </div>
+                      )}
+                    </label>
+
+                    {columnsByDataType[column.id] ===
                       ColumnTypes.CATEGORICAL && (
                       <div>
                         <p>
-                          {
-                            Object.keys(
-                              this.props.uniqueOptionsByColumn[column]
-                            ).length
-                          }{" "}
-                          unique values for {column}:{" "}
+                          {Object.keys(uniqueOptionsByColumn[column.id]).length}{" "}
+                          unique values for {column.id}:{" "}
                         </p>
                         <div style={styles.subPanel}>
                           <table>
@@ -105,9 +104,7 @@ class ColumnInspector extends Component {
                               </tr>
                             </thead>
                             <tbody>
-                              {Object.keys(
-                                this.props.uniqueOptionsByColumn[column]
-                              )
+                              {Object.keys(uniqueOptionsByColumn[column.id])
                                 .sort()
                                 .map((option, index) => {
                                   return (
@@ -115,9 +112,9 @@ class ColumnInspector extends Component {
                                       <td>{option}</td>
                                       <td>
                                         {
-                                          this.props.uniqueOptionsByColumn[
-                                            column
-                                          ][option]
+                                          uniqueOptionsByColumn[column.id][
+                                            option
+                                          ]
                                         }
                                       </td>
                                     </tr>
@@ -128,21 +125,20 @@ class ColumnInspector extends Component {
                         </div>
                       </div>
                     )}
-                    {this.props.columnsByDataType[column] ===
-                      ColumnTypes.CONTINUOUS && (
+                    {columnsByDataType[column] === ColumnTypes.CONTINUOUS && (
                       <div>
-                        {this.props.rangesByColumn[column] && (
+                        {rangesByColumn[column.id] && (
                           <div>
-                            {isNaN(this.props.rangesByColumn[column].min) && (
+                            {isNaN(rangesByColumn[column.id].min) && (
                               <p style={styles.error}>
                                 Continuous columns should contain only numbers.
                               </p>
                             )}
-                            {!isNaN(this.props.rangesByColumn[column].min) && (
+                            {!isNaN(rangesByColumn[column.id].min) && (
                               <div style={styles.subPanel}>
-                                min: {this.props.rangesByColumn[column].min}
+                                min: {rangesByColumn[column.id].min}
                                 <br />
-                                max: {this.props.rangesByColumn[column].max}
+                                max: {rangesByColumn[column.id].max}
                               </div>
                             )}
                           </div>
@@ -167,8 +163,7 @@ export default connect(
     selectedColumns: getSelectedColumns(state),
     columnsByDataType: state.columnsByDataType,
     uniqueOptionsByColumn: getOptionFrequenciesByColumn(state),
-    rangesByColumn: getRangesByColumn(state),
-    metadata: state.metadata
+    rangesByColumn: getRangesByColumn(state)
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {

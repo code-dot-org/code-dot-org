@@ -1,4 +1,5 @@
 {
+  "defaultLabelColumn": "cook",
   "fields": [
   	{
   		"id": "cook",
