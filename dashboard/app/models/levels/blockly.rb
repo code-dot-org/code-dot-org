@@ -579,8 +579,6 @@ class Blockly < Level
     end
     block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
       behavior_name = behavior.at_xpath('./title[@name="NAME"]')
-      puts "from blockly.rb #{behavior_name}, #{behavior_name.content}, #{name}"
-      # puts "#{data.behavior_names.*}"
       next unless behavior_name
       localized_name = I18n.t(
         behavior_name.content,
