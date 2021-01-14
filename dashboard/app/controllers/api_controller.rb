@@ -203,143 +203,143 @@ class ApiController < ApplicationController
     render json: {}
   end
 
-  use_database_pool lockable_state: :persistent
-
   # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
-    unless current_user
-      render json: {}
-      return
+    ActiveRecord::Base.connected_to(role: :reading) do
+      unless current_user
+        render json: {}
+        return
+      end
+
+      data = current_user.sections.each_with_object({}) do |section, section_hash|
+        next if section.hidden
+        script = load_script(section)
+
+        section_hash[section.id] = {
+          section_id: section.id,
+          section_name: section.name,
+          stages: script.lessons.each_with_object({}) do |stage, stage_hash|
+            stage_state = stage.lockable_state(section.students)
+            stage_hash[stage.id] = stage_state unless stage_state.nil?
+          end
+        }
+      end
+
+      render json: data
     end
-
-    data = current_user.sections.each_with_object({}) do |section, section_hash|
-      next if section.hidden
-      script = load_script(section)
-
-      section_hash[section.id] = {
-        section_id: section.id,
-        section_name: section.name,
-        stages: script.lessons.each_with_object({}) do |stage, stage_hash|
-          stage_state = stage.lockable_state(section.students)
-          stage_hash[stage.id] = stage_state unless stage_state.nil?
-        end
-      }
-    end
-
-    render json: data
   end
-
-  use_database_pool section_progress: :persistent
 
   def section_progress
-    section = load_section
-    script = load_script(section)
+    ActiveRecord::Base.connected_to(role: :reading) do
+      section = load_section
+      script = load_script(section)
 
-    # stage data
-    stages = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:lesson).map do |stage, levels|
-      {
-        length: levels.length,
-        title: ActionController::Base.helpers.strip_tags(stage.localized_title)
-      }
-    end
-
-    script_levels = script.script_levels.select {|sl| sl.bonus.nil?}
-
-    # Clients are seeing requests time out for large sections as we attempt to
-    # send back all of this data. Allow them to instead request paginated data
-    if params[:page] && params[:per]
-      paged_students = section.students.page(params[:page]).per(params[:per])
-      # As designed, if there are 50 students, the client will ask for both
-      # page 1 and page 2, even though page 2 is out of range. However, it should
-      # never ask for page 3
-      if params[:page].to_i > paged_students.total_pages + 1
-        return head :range_not_satisfiable
+      # stage data
+      stages = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:lesson).map do |stage, levels|
+        {
+          length: levels.length,
+          title: ActionController::Base.helpers.strip_tags(stage.localized_title)
+        }
       end
-    else
-      paged_students = section.students
-    end
 
-    # student level completion data
-    students = paged_students.map do |student|
-      level_map = student.user_levels_by_level(script)
-      paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
-      student_levels = script_levels.map do |script_level|
-        user_levels = script_level.level_ids.map do |id|
-          contained_levels = Script.cache_find_level(id).contained_levels
-          if contained_levels.any?
-            level_map[contained_levels.first.id]
-          else
-            level_map[id]
-          end
-        end.compact
-        user_levels_ids = user_levels.map(&:id)
-        level_class = (best_activity_css_class user_levels).dup
-        paired = (paired_user_level_ids & user_levels_ids).any?
-        level_class << ' paired' if paired
-        title = paired ? '' : script_level.position
-        # We use a list rather than a hash here to save ourselves from sending
-        # the field names over the wire (which adds up to a lot of bytes when
-        # multiplied across all the levels)
-        [
-          level_class,
-          title,
-          # we use to build a path that included section_id/user_id. We now let
-          # the client adds these params itself, thus saving ourselves many bytes
-          # over the wire again
-          build_script_level_path(script_level)
-        ]
+      script_levels = script.script_levels.select {|sl| sl.bonus.nil?}
+
+      # Clients are seeing requests time out for large sections as we attempt to
+      # send back all of this data. Allow them to instead request paginated data
+      if params[:page] && params[:per]
+        paged_students = section.students.page(params[:page]).per(params[:per])
+        # As designed, if there are 50 students, the client will ask for both
+        # page 1 and page 2, even though page 2 is out of range. However, it should
+        # never ask for page 3
+        if params[:page].to_i > paged_students.total_pages + 1
+          return head :range_not_satisfiable
+        end
+      else
+        paged_students = section.students
       end
-      {id: student.id, levels: student_levels}
-    end
 
-    data = {
-      students: students,
-      script: {
-        id: script.id,
-        name: data_t_suffix('script.name', script.name, 'title'),
-        levels_count: script_levels.length,
-        stages: stages,
+      # student level completion data
+      students = paged_students.map do |student|
+        level_map = student.user_levels_by_level(script)
+        paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
+        student_levels = script_levels.map do |script_level|
+          user_levels = script_level.level_ids.map do |id|
+            contained_levels = Script.cache_find_level(id).contained_levels
+            if contained_levels.any?
+              level_map[contained_levels.first.id]
+            else
+              level_map[id]
+            end
+          end.compact
+          user_levels_ids = user_levels.map(&:id)
+          level_class = (best_activity_css_class user_levels).dup
+          paired = (paired_user_level_ids & user_levels_ids).any?
+          level_class << ' paired' if paired
+          title = paired ? '' : script_level.position
+          # We use a list rather than a hash here to save ourselves from sending
+          # the field names over the wire (which adds up to a lot of bytes when
+          # multiplied across all the levels)
+          [
+            level_class,
+            title,
+            # we use to build a path that included section_id/user_id. We now let
+            # the client adds these params itself, thus saving ourselves many bytes
+            # over the wire again
+            build_script_level_path(script_level)
+          ]
+        end
+        {id: student.id, levels: student_levels}
+      end
+
+      data = {
+        students: students,
+        script: {
+          id: script.id,
+          name: data_t_suffix('script.name', script.name, 'title'),
+          levels_count: script_levels.length,
+          stages: stages,
+        }
       }
-    }
 
-    render json: data
+      render json: data
+    end
   end
-
-  use_database_pool section_level_progress: :persistent
 
   # This API returns data similar to user_progress, but aggregated for all users
   # in the section. It also only returns the "levels" portion
   # If not specified, the API will default to a page size of 50, providing the first page
   # of students
   def section_level_progress
-    section = load_section
-    script = load_script(section)
+    ActiveRecord::Base.connected_to(role: :reading) do
+      section = load_section
+      script = load_script(section)
 
-    # Clients are seeing requests time out for large sections as we attempt to
-    # send back all of this data. Allow them to instead request paginated data
-    page = [params[:page].to_i, 1].max
-    per = params[:per].to_i || 50
+      # Clients are seeing requests time out for large sections as we attempt to
+      # send back all of this data. Allow them to instead request paginated data
+      page = [params[:page].to_i, 1].max
+      per = params[:per].to_i || 50
 
-    paged_students = section.students.page(page).per(per)
-    # As designed, if there are 50 students, the client will ask for both
-    # page 1 and page 2, even though page 2 is out of range. However, it should
-    # never ask for page 3
-    if page > paged_students.total_pages + 1
-      return head :range_not_satisfiable
-    end
+      paged_students = section.students.page(page).per(per)
+      # As designed, if there are 50 students, the client will ask for both
+      # page 1 and page 2, even though page 2 is out of range. However, it should
+      # never ask for page 3
+      if page > paged_students.total_pages + 1
+        return head :range_not_satisfiable
+      end
 
-    student_progress, student_timestamps = script_progress_for_users(paged_students, script)
+      student_progress, student_timestamps = script_progress_for_users(paged_students, script)
 
-    # Get the level progress for each student
-    render json: {
-      students: student_progress,
-      student_timestamps: student_timestamps,
-      pagination: {
-        total_pages: paged_students.total_pages,
-        page: page,
-        per: per,
+      # Get the level progress for each student
+      render json: {
+        students: student_progress,
+        student_timestamps: student_timestamps,
+        pagination: {
+          total_pages: paged_students.total_pages,
+          page: page,
+          per: per,
+        }
       }
-    }
+    end
   end
 
   # Get level progress for a set of users within this script.
@@ -397,21 +397,19 @@ class ApiController < ApplicationController
     render json: standards
   end
 
-  use_database_pool user_progress: :persistent
-
   # Return a JSON summary of the user's progress for params[:script].
   def user_progress
-    if current_user
-      script = Script.get_from_cache(params[:script])
-      user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
-      teacher_viewing_student = current_user.students.include?(user)
-      render json: summarize_user_progress(script, user).merge({teacherViewingStudent: teacher_viewing_student})
-    else
-      render json: {}
+    ActiveRecord::Base.connected_to(role: :reading) do
+      if current_user
+        script = Script.get_from_cache(params[:script])
+        user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
+        teacher_viewing_student = current_user.students.include?(user)
+        render json: summarize_user_progress(script, user).merge({teacherViewingStudent: teacher_viewing_student})
+      else
+        render json: {}
+      end
     end
   end
-
-  use_database_pool user_progress_for_stage: :persistent
 
   # Return the JSON details of the users progress on a particular script
   # level and marks the user as having started that level. (Because of the
@@ -419,52 +417,54 @@ class ApiController < ApplicationController
   # to avoid spurious activity monitor warnings about the level being started
   # but not completed.)
   def user_progress_for_stage
-    response = user_summary(current_user)
+    ActiveRecord::Base.connected_to(role: :reading) do
+      response = user_summary(current_user)
 
-    script = Script.get_from_cache(params[:script])
-    stage = script.lessons[params[:stage_position].to_i - 1]
-    script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
-    level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
+      script = Script.get_from_cache(params[:script])
+      stage = script.lessons[params[:stage_position].to_i - 1]
+      script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
+      level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
-    if current_user
-      user_level = current_user.last_attempt(level, script)
-      level_source = user_level.try(:level_source).try(:data)
+      if current_user
+        user_level = current_user.last_attempt(level, script)
+        level_source = user_level.try(:level_source).try(:data)
 
-      # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
-      response[:progress] = summarize_user_progress(script, current_user)[:levels]
+        # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
+        response[:progress] = summarize_user_progress(script, current_user)[:levels]
 
-      if user_level
-        response[:lastAttempt] = {
-          timestamp: user_level.updated_at.to_datetime.to_milliseconds,
-          source: level_source
-        }
-      end
-      response[:isHoc] = script.hoc?
+        if user_level
+          response[:lastAttempt] = {
+            timestamp: user_level.updated_at.to_datetime.to_milliseconds,
+            source: level_source
+          }
+        end
+        response[:isHoc] = script.hoc?
 
-      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(script, level, current_user)
-      if recent_driver
-        response[:pairingDriver] = recent_driver
-        if recent_attempt
-          response[:pairingAttempt] = edit_level_source_path(recent_attempt)
-        elsif level.channel_backed?
-          @level = level
-          recent_channel = get_channel_for(level, recent_user) if recent_user
-          response[:pairingChannelId] = recent_channel if recent_channel
+        recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(script, level, current_user)
+        if recent_driver
+          response[:pairingDriver] = recent_driver
+          if recent_attempt
+            response[:pairingAttempt] = edit_level_source_path(recent_attempt)
+          elsif level.channel_backed?
+            @level = level
+            recent_channel = get_channel_for(level, recent_user) if recent_user
+            response[:pairingChannelId] = recent_channel if recent_channel
+          end
         end
       end
-    end
 
-    if level.finishable?
-      slog(
-        tag: 'activity_start',
-        script_level_id: script_level.try(:id),
-        level_id: level.contained_levels.empty? ? level.id : level.contained_levels.first.id,
-        user_agent: request.user_agent.valid_encoding? ? request.user_agent : 'invalid_encoding',
-        locale: locale
-      )
-    end
+      if level.finishable?
+        slog(
+          tag: 'activity_start',
+          script_level_id: script_level.try(:id),
+          level_id: level.contained_levels.empty? ? level.id : level.contained_levels.first.id,
+          user_agent: request.user_agent.valid_encoding? ? request.user_agent : 'invalid_encoding',
+          locale: locale
+        )
+      end
 
-    render json: response
+      render json: response
+    end
   end
 
   def section_text_responses
