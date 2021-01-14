@@ -1,4 +1,5 @@
 import {TeacherScores} from '@cdo/apps/templates/sectionProgress/standards/standardsConstants';
+import {levelProgressFromResult} from '@cdo/apps/templates/progress/progressHelpers';
 
 export const unpluggedLessonList = [
   {
@@ -154,7 +155,7 @@ const scriptDataByScript = {
         title: 'Lesson 2: Learn to Drag and Drop',
         lesson_group_display_name: 'Sequencing',
         lockable: false,
-        levels: [{activeId: 10001}, {activeId: 10002}, {activeId: 10003}],
+        levels: [{activeId: '10001'}, {activeId: '10002'}, {activeId: '10003'}],
         description_student: 'Click and drag to finish the puzzles.',
         description_teacher:
           'This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.',
@@ -194,25 +195,27 @@ const scriptDataByScript = {
 
 export const pluggedLesson = scriptDataByScript[scriptId].stages[1];
 
+const progress20 = levelProgressFromResult(20);
+
 const sectionCompletedLesson = {
   92: {
     100001: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: progress20,
+      10002: progress20,
+      10003: progress20
     },
     100002: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: progress20,
+      10002: progress20,
+      10003: progress20
     },
     100003: {
-      10001: 20,
-      10002: 20
+      10001: progress20,
+      10002: progress20
     },
     100004: {
-      10001: 20,
-      10002: 20
+      10001: progress20,
+      10002: progress20
     }
   }
 };
@@ -220,24 +223,26 @@ const sectionCompletedLesson = {
 const sectionPartialCompletedLesson = {
   92: {
     100001: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: progress20,
+      10002: progress20,
+      10003: progress20
     },
     100002: {
-      10001: 20,
-      10002: 20,
-      10003: 20
+      10001: progress20,
+      10002: progress20,
+      10003: progress20
     }
   }
 };
 
 const studentLevelScoresByLessonComplete = {
-  92: {662: {100001: {10001: TeacherScores.COMPLETE}}}
+  92: {662: {100001: {10001: levelProgressFromResult(TeacherScores.COMPLETE)}}}
 };
 
 const studentLevelScoresByLessonIncomplete = {
-  92: {662: {100001: {10001: TeacherScores.INCOMPLETE}}}
+  92: {
+    662: {100001: {10001: levelProgressFromResult(TeacherScores.INCOMPLETE)}}
+  }
 };
 
 const selectedLessons = [

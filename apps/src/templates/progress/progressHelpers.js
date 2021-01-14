@@ -123,48 +123,54 @@ export function stageIsAllAssessment(levels) {
 
 /**
  * Summarizes stage progress data.
- * @param {[]} levelsWithStatus An array of objects each representing
- * students progress in a level
+ * @param {{id:studentLevelProgressType}} studentProgress An object keyed by
+ * level id containing objects representing the student's progress in that level
+ * @param {levelType[]} levels An array of the levels in a stage
  * @returns {object} An object with a total count of levels in each of the
  * following buckets: total, completed, imperfect, incomplete, attempted.
  */
-export function summarizeProgressInStage(levelsWithStatus) {
+export function summarizeProgressInStage(studentProgress, levels) {
   // Filter any bonus levels as they do not count toward progress.
-  levelsWithStatus = levelsWithStatus.filter(level => !level.bonus);
+  const filteredLevels = levels.filter(level => !level.bonus);
 
   // Get counts of statuses
   let statusCounts = {
-    total: levelsWithStatus.length,
+    total: 0,
     completed: 0,
     imperfect: 0,
     incomplete: 0,
     attempted: 0
   };
-  for (let i = 0; i < levelsWithStatus.length; i++) {
-    const status = levelsWithStatus[i].status;
-    switch (status) {
+
+  filteredLevels.forEach(level => {
+    const levelProgress = studentProgress[level.id];
+    if (!levelProgress) {
+      return;
+    }
+    statusCounts.total++;
+    switch (levelProgress.status) {
       case LevelStatus.perfect:
       case LevelStatus.submitted:
       case LevelStatus.free_play_complete:
       case LevelStatus.completed_assessment:
       case LevelStatus.readonly:
-        statusCounts.completed = statusCounts.completed + 1;
+        statusCounts.completed++;
         break;
       case LevelStatus.not_tried:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
+        statusCounts.incomplete++;
         break;
       case LevelStatus.attempted:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
-        statusCounts.attempted = statusCounts.attempted + 1;
+        statusCounts.incomplete++;
+        statusCounts.attempted++;
         break;
       case LevelStatus.passed:
-        statusCounts.imperfect = statusCounts.imperfect + 1;
+        statusCounts.imperfect++;
         break;
       // All others are assumed to be not tried
       default:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
+        statusCounts.incomplete++;
     }
-  }
+  });
   return statusCounts;
 }
 

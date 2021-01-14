@@ -17,9 +17,9 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
 
 const studentData = [
-  {id: '1', name: 'studentb'},
-  {id: '3', name: 'studentc'},
-  {id: '0', name: 'studenta'}
+  {id: 1, name: 'studentb'},
+  {id: 3, name: 'studentc'},
+  {id: 0, name: 'studenta'}
 ];
 
 describe('VirtualizedSummaryView', () => {
@@ -30,24 +30,24 @@ describe('VirtualizedSummaryView', () => {
     registerReducers({sectionProgress, scriptSelection, currentUser});
     defaultProps = {
       levelProgressByStudent: {
-        '0': {
+        0: {
           '789': levelProgressWithStatus(LevelStatus.perfect)
         },
-        '1': {
+        1: {
           '789': levelProgressWithStatus(LevelStatus.perfect)
         },
-        '3': {
+        3: {
           '789': levelProgressWithStatus(LevelStatus.perfect)
         }
       },
       lessonOfInterest: 1,
       section: {
-        id: '1',
+        id: 1,
         script: {id: '123'},
         students: studentData
       },
       scriptData: {
-        id: '123',
+        id: 123,
         stages: [
           {
             id: '456',

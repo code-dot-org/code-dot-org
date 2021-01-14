@@ -1,30 +1,32 @@
 import React, {Component} from 'react';
 import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
-import {
-  summarizeProgressInStage,
-  stageIsAllAssessment
-} from '@cdo/apps/templates/progress/progressHelpers';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 class StudentProgressSummaryCell extends Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
+    statusCounts: PropTypes.object.isRequired,
+    assessmentStage: PropTypes.bool.isRequired,
     style: PropTypes.object,
-    levelsWithStatus: PropTypes.arrayOf(PropTypes.object),
     onSelectDetailView: PropTypes.func
   };
 
   render() {
     const totalPixels = 20;
-    const statusCounts = summarizeProgressInStage(this.props.levelsWithStatus);
-    const assessmentStage = stageIsAllAssessment(this.props.levelsWithStatus);
-    const perfectPixels = Math.floor(
-      (statusCounts.completed / statusCounts.total) * totalPixels
-    );
-    const imperfectPixels = Math.floor(
-      (statusCounts.imperfect / statusCounts.total) * totalPixels
-    );
+    const {statusCounts, assessmentStage} = this.props;
+    const perfectPixels =
+      (statusCounts.total &&
+        Math.floor(
+          (statusCounts.completed / statusCounts.total) * totalPixels
+        )) ||
+      0;
+    const imperfectPixels =
+      (statusCounts.total &&
+        Math.floor(
+          (statusCounts.imperfect / statusCounts.total) * totalPixels
+        )) ||
+      0;
     const incompletePixels = totalPixels - perfectPixels - imperfectPixels;
     const started =
       statusCounts.attempted > 0 ||

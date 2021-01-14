@@ -316,6 +316,7 @@ export function getPluggedLessonCompletionStatus(state, lesson) {
       let numLevelsInLessonCompletedByStudent = 0;
       levelIds.forEach(levelId => {
         const levelProgress = levelProgressByScript[studentId][levelId];
+        // console.log('progress', studentId, levelId, levelProgress);
         if (
           levelProgress &&
           levelProgress.result >= TestResults.MINIMUM_PASS_RESULT

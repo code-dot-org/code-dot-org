@@ -7,6 +7,7 @@
 
 import _ from 'lodash';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
 import {createStore} from 'redux';
 import Immutable from 'immutable';
 
@@ -23,10 +24,12 @@ export const fakeLesson = (
   isFocusArea: false
 });
 
-export const fakeLevel = overrides => {
+export const fakeLevel = (overrides = {}) => {
   const levelNumber = overrides.levelNumber || 1;
+  const id = (overrides.id || levelNumber).toString();
+  delete overrides.id;
   return {
-    id: levelNumber.toString(),
+    id: id,
     status: LevelStatus.not_tried,
     levelNumber: levelNumber,
     bubbleText: levelNumber.toString(),
@@ -39,6 +42,7 @@ export const fakeLevel = overrides => {
 export const fakeLevels = (numLevels, {startLevel = 1, named = true} = {}) =>
   _.range(numLevels).map(index => {
     let overrideData = {
+      id: index + startLevel,
       levelNumber: index + startLevel
     };
     if (!named) {
@@ -46,6 +50,17 @@ export const fakeLevels = (numLevels, {startLevel = 1, named = true} = {}) =>
     }
     return fakeLevel(overrideData);
   });
+
+export const fakeProgressForLevels = (
+  levels,
+  status = LevelStatus.not_tried
+) => {
+  const progress = {};
+  levels.forEach(level => {
+    progress[level.id] = levelProgressWithStatus(status);
+  });
+  return progress;
+};
 
 /**
  * Creates the shell of a redux store with the provided lessonId being hidden
