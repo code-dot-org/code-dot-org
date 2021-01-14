@@ -115,7 +115,7 @@ export function setupApp(appOptions) {
       ) {
         $('#clear-puzzle-header').hide();
         // Only show Version History button if the user owns this project
-        if (project.isEditable()) {
+        if (project.isEditable() || appOptions.readonlyWorkspace) {
           $('#versions-header').show();
         }
       }

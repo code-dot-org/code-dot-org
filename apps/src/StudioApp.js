@@ -678,13 +678,16 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
       id: 'showVersionsModal'
     });
     ReactDOM.render(
-      React.createElement(VersionHistory, {
-        handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
-        useFilesApi: !!config.useFilesApi
-      }),
+      <Provider store={getStore()}>
+        <div>
+          <VersionHistory
+            handleClearPuzzle={this.handleClearPuzzle.bind(this, config)}
+            useFilesApi={!!config.useFilesApi}
+          />
+        </div>
+      </Provider>,
       contentDiv
     );
-
     dialog.show();
   };
 };

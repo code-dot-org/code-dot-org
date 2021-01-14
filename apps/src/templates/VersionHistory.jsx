@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import VersionRow from './VersionRow';
+import {connect} from 'react-redux';
 import {sources as sourcesApi, files as filesApi} from '../clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import * as utils from '../utils';
 import i18n from '@cdo/locale';
-
 /**
  * A component for viewing project version history.
  */
-export default class VersionHistory extends React.Component {
+export class VersionHistory extends React.Component {
   static propTypes = {
     handleClearPuzzle: PropTypes.func.isRequired,
-    useFilesApi: PropTypes.bool.isRequired
+    useFilesApi: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.string
   };
 
   /**
@@ -51,6 +52,8 @@ export default class VersionHistory extends React.Component {
       );
     }
   }
+
+  viewedByTeacher = () => this.props.isTeacher === 'teacher';
 
   /**
    * Called after the component mounts, when the server responds with the
@@ -170,6 +173,7 @@ export default class VersionHistory extends React.Component {
               lastModified={new Date(version.lastModified)}
               isLatest={version.isLatest}
               onChoose={this.onChooseVersion.bind(this, version.versionId)}
+              isTeacher={this.viewedByTeacher()}
             />
           );
         }.bind(this)
@@ -181,21 +185,23 @@ export default class VersionHistory extends React.Component {
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
-                <tr>
-                  <td>
-                    <p>{i18n.versionHistory_initialVersion_label()}</p>
-                  </td>
-                  <td width="250" style={{textAlign: 'right'}}>
-                    <button
-                      type="button"
-                      className="btn-danger"
-                      onClick={this.onConfirmClearPuzzle}
-                      style={{float: 'right'}}
-                    >
-                      {i18n.versionHistory_clearProgress_confirm()}
-                    </button>
-                  </td>
-                </tr>
+                {!this.viewedByTeacher && (
+                  <tr>
+                    <td>
+                      <p>{i18n.versionHistory_initialVersion_label()}</p>
+                    </td>
+                    <td width="250" style={{textAlign: 'right'}}>
+                      <button
+                        type="button"
+                        className="btn-danger"
+                        onClick={this.onConfirmClearPuzzle}
+                        style={{float: 'right'}}
+                      >
+                        {i18n.versionHistory_clearProgress_confirm()}
+                      </button>
+                    </td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
@@ -212,3 +218,7 @@ export default class VersionHistory extends React.Component {
     );
   }
 }
+export const UnconnectedVersionHistory = VersionHistory;
+export default connect(state => ({
+  isTeacher: state.currentUser.userType
+}))(VersionHistory);

@@ -10,7 +10,8 @@ export default class VersionRow extends React.Component {
     versionId: PropTypes.string.isRequired,
     lastModified: PropTypes.instanceOf(Date).isRequired,
     isLatest: PropTypes.bool,
-    onChoose: PropTypes.func
+    onChoose: PropTypes.func,
+    isTeacher: PropTypes.bool
   };
 
   getLastModifiedTimestamp() {
@@ -50,16 +51,20 @@ export default class VersionRow extends React.Component {
           <button type="button" className="version-preview">
             <i className="fa fa-eye" />
           </button>
-        </a>,
-        <button
-          type="button"
-          key={1}
-          className="btn-info"
-          onClick={this.props.onChoose}
-        >
-          {msg.restoreThisVersion()}
-        </button>
+        </a>
       ];
+      if (!this.props.isTeacher) {
+        button.push(
+          <button
+            type="button"
+            key={1}
+            className="btn-info"
+            onClick={this.props.onChoose}
+          >
+            {msg.restoreThisVersion()}
+          </button>
+        );
+      }
     }
 
     return (
