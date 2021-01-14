@@ -129,7 +129,7 @@ export default class ActivitySection extends Component {
           </div>
         </div>
         {section.scriptLevels.length > 0 && (
-          <ProgressionDetails progression={section} />
+          <ProgressionDetails section={section} />
         )}
       </div>
     );
