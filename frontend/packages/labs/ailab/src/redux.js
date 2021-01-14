@@ -30,6 +30,7 @@ const SET_SELECTED_JSON = "SET_SELECTED_JSON";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
+const SET_K_VALUE = "SET_K_VALUE";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
@@ -71,6 +72,10 @@ export function setImportedMetadata(metadata) {
 
 export function setSelectedTrainer(selectedTrainer) {
   return { type: SET_SELECTED_TRAINER, selectedTrainer };
+}
+
+export function setKValue (kValue) {
+  return { type: SET_K_VALUE, kValue };
 }
 
 export const setColumnsByDataType = (column, dataType) => ({
@@ -164,6 +169,7 @@ const initialState = {
   data: [],
   metadata: undefined,
   selectedTrainer: undefined,
+  kValue: undefined,
   columnsByDataType: {},
   selectedFeatures: [],
   labelColumn: undefined,
@@ -229,6 +235,12 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       selectedTrainer: action.selectedTrainer
+    };
+  }
+  if (action.type === SET_K_VALUE) {
+    return {
+      ...state,
+      kValue: action.kValue
     };
   }
   if (action.type === SET_COLUMNS_BY_DATA_TYPE) {

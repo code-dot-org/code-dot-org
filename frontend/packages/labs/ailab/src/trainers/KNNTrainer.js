@@ -15,7 +15,7 @@ export default class KNNTrainer {
   startTraining() {
     const state = store.getState();
     this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
-      k: 5
+      k: state.kValue
     });
     var model = this.knn.toJSON();
     store.dispatch(setTrainedModel(model));
