@@ -1066,9 +1066,9 @@ class Script < ApplicationRecord
   def fix_lesson_positions
     reload
 
-    total_count = 0
-    lockable_count = 0
-    non_lockable_count = 0
+    total_count = 1
+    lockable_count = 1
+    non_lockable_count = 1
     lessons.each do |lesson|
       lesson.absolute_position = total_count
       lesson.relative_position = lesson.lockable ? lockable_count : non_lockable_count
