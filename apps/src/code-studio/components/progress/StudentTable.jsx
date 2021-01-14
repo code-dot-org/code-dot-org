@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
@@ -63,7 +62,11 @@ class StudentTable extends React.Component {
     students: PropTypes.arrayOf(studentShape).isRequired,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired,
-    levels: PropTypes.arrayOf(levelType),
+    // While this userLevels object does have the properties of a levelType,
+    // it is conceptually more similar to a userLevel object. For example,
+    // the id property of this object is the user_level id. To get the level
+    // id, use the level_id property.
+    userLevels: PropTypes.arrayOf(PropTypes.object),
     sectionId: PropTypes.number,
     scriptName: PropTypes.string
   };
@@ -72,10 +75,10 @@ class StudentTable extends React.Component {
     let url;
     const queryStr = `?section_id=${this.props.sectionId}&user_id=${studentId}`;
 
-    if (this.props.levels) {
-      url = this.props.levels[0].bonus
+    if (this.props.userLevels) {
+      url = this.props.userLevels[0].bonus
         ? 'extras'
-        : this.props.levels[0].levelNumber;
+        : this.props.userLevels[0].levelNumber;
     } else {
       url = this.props.scriptName;
     }
@@ -93,7 +96,7 @@ class StudentTable extends React.Component {
   };
 
   render() {
-    const {students, onSelectUser, getSelectedUserId, levels} = this.props;
+    const {students, onSelectUser, getSelectedUserId, userLevels} = this.props;
     const selectedUserId = getSelectedUserId();
 
     return (
@@ -113,13 +116,17 @@ class StudentTable extends React.Component {
             >
               <td key={`td-${student.id}`} style={styles.td}>
                 <div style={styles.studentTableRow}>
-                  {levels && (
+                  {userLevels && (
                     <TeacherPanelProgressBubble
-                      level={levels.find(level => student.id === level.user_id)}
+                      userLevel={userLevels.find(
+                        userLevel => student.id === userLevel.user_id
+                      )}
                     />
                   )}
                   <div
-                    style={levels ? styles.nameWithBubble : styles.nameInScript}
+                    style={
+                      userLevels ? styles.nameWithBubble : styles.nameInScript
+                    }
                   >
                     {student.name}
                     <a
