@@ -33,7 +33,6 @@ class ResourcesAutocompleteTest < ActiveSupport::TestCase
     # sure the correct ones are fetched in each case.
     matches = ResourcesAutocomplete.get_search_matches("class", 5, @course_version_2018.id)
     assert_equal 2, matches.length
-    puts matches.inspect
     assert_equal ['resource_103', 'resource_104'], matches.map {|m| m["key"]}.sort
 
     # Check that specifying a course version id finds an associated resource

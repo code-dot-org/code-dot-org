@@ -5,9 +5,8 @@ class ResourcesAutocomplete < AutocompleteHelper
     rows = Resource.limit(limit)
     rows = rows.where(course_version_id: course_version_id)
     return [] if query.length < MIN_WORD_LENGTH
-    query = format_query(query)
     rows = rows.
-      where("MATCH(name,url) AGAINST(? in BOOLEAN MODE)", query)
+      where("LOWER(name) like '%#{query}%' or LOWER(url) like '%#{query}%'")
     return rows.map(&:attributes)
   end
 end
