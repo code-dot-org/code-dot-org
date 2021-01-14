@@ -543,6 +543,10 @@ export const mapActivityDataForEditor = rawActivities => {
       activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
+      activitySection.duration = activitySection.duration || '';
+
+      activitySection.progressionName = activitySection.progressionName || '';
+
       activitySection.scriptLevels = activitySection.scriptLevels || [];
       activitySection.scriptLevels.forEach(scriptLevel => {
         scriptLevel.status = LevelStatus.not_tried;
@@ -601,12 +605,14 @@ export default {
 export const emptyActivitySection = {
   key: 'activitySection-1',
   displayName: '',
+  duration: 0,
   levels: [],
   tips: [],
   remarks: false,
   text: '',
   scriptLevels: [],
-  position: 1
+  position: 1,
+  progressionName: ''
 };
 
 export const emptyActivity = {
