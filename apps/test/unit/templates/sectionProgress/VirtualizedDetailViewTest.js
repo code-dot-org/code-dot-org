@@ -29,13 +29,13 @@ describe('VirtualizedSummaryView', () => {
     defaultProps = {
       levelsByLesson: {
         0: {
-          0: [{id: 789, status: 'perfect'}]
+          0: [{id: '789', status: 'perfect'}]
         },
         1: {
-          0: [{id: 789, status: 'perfect'}]
+          0: [{id: '789', status: 'perfect'}]
         },
         3: {
-          0: [{id: 789, status: 'perfect'}]
+          0: [{id: '789', status: 'perfect'}]
         }
       },
       lessonOfInterest: 1,
@@ -49,7 +49,7 @@ describe('VirtualizedSummaryView', () => {
         stages: [
           {
             id: 456,
-            levels: [{id: 789}]
+            levels: [{id: '789'}]
           }
         ]
       },
