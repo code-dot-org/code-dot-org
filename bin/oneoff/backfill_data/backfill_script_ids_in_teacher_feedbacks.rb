@@ -3,6 +3,8 @@
 
 require_relative '../../../dashboard/config/environment'
 
+$stdout.sync = true
+
 def feedbacks_without_script_id
   TeacherFeedback.where(script_id: nil)
 end
@@ -15,7 +17,6 @@ def update_script_ids
   puts "starting backfilling script_ids"
   feedbacks_without_script_id.find_in_batches(batch_size: 1000) do |batch|
     print '.'
-    $stdout.flush
     batch.each do |teacher_feedback|
       # script_level_id is a required field in teacher_feedbacks, and
       # script_id is a required field of script_level. We might hit an error
