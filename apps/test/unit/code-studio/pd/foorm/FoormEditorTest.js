@@ -101,7 +101,7 @@ describe('FoormEditor', () => {
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
@@ -133,7 +133,7 @@ describe('FoormEditor', () => {
     expect(publishButton.contains('Publish')).to.be.true;
     publishButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
@@ -177,7 +177,7 @@ describe('FoormEditor', () => {
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
@@ -213,7 +213,7 @@ describe('FoormEditor', () => {
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
@@ -266,7 +266,7 @@ describe('FoormEditor', () => {
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
@@ -303,7 +303,7 @@ describe('FoormEditor', () => {
     expect(saveButton.contains('Publish')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
@@ -350,7 +350,7 @@ describe('FoormEditor', () => {
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
@@ -400,7 +400,7 @@ describe('FoormEditor', () => {
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
