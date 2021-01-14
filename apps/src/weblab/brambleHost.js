@@ -406,6 +406,10 @@ function uploadAllFilesFromBramble(callback) {
   });
 }
 
+function fileRefresh(callback = () => {}) {
+  brambleProxy_.fileRefresh(callback);
+}
+
 function addFileHTML() {
   brambleProxy_.addNewFile(
     {
@@ -565,6 +569,7 @@ if (parent.getWebLab) {
 // expose object for parent window to talk to us through
 const brambleHost = {
   // return file data from the Bramble editor
+  fileRefresh,
   addFileHTML,
   addFileCSS,
   undo,
