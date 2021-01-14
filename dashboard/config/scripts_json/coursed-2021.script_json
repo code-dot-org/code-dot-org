@@ -10973,6 +10973,654 @@
       }
     }
   ],
+  "vocabularies": [
+    {
+      "key": "Algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "seeding_key": {
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "seeding_key": {
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "key": "Algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "seeding_key": {
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Frustrated",
+      "word": "Frustrated",
+      "definition": "Feeling annoyed or angry because something is not the way you want it.",
+      "seeding_key": {
+        "vocabulary.key": "Frustrated"
+      }
+    },
+    {
+      "key": "Persistence",
+      "word": "Persistence",
+      "definition": "Trying again and again, even when something is very hard.",
+      "seeding_key": {
+        "vocabulary.key": "Persistence"
+      }
+    },
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "seeding_key": {
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "key": "Event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "seeding_key": {
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "seeding_key": {
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "key": "code",
+      "word": "code",
+      "definition": "(v) to write code, or to write instructions for a computer.",
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Command",
+      "word": "Command",
+      "definition": "An instruction for the computer. Many commands put together make up algorithms and computer programs. ",
+      "seeding_key": {
+        "vocabulary.key": "Command"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions.",
+      "seeding_key": {
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions.",
+      "seeding_key": {
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see if it is true before allowing an action.",
+      "seeding_key": {
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "key": "While Loop",
+      "word": "While Loop",
+      "definition": "A loop that continues to repeat while a condition is true.",
+      "seeding_key": {
+        "vocabulary.key": "While Loop"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions.",
+      "seeding_key": {
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "key": "Condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see if it is true before allowing an action.",
+      "seeding_key": {
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "key": "Until",
+      "word": "Until",
+      "definition": "A command that tells you to do something only up to the point that something becomes true.",
+      "seeding_key": {
+        "vocabulary.key": "Until"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions.",
+      "seeding_key": {
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "key": "Condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see if it is true before allowing an action.",
+      "seeding_key": {
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "key": "While Loop",
+      "word": "While Loop",
+      "definition": "A loop that continues to repeat while a condition is true.",
+      "seeding_key": {
+        "vocabulary.key": "While Loop"
+      }
+    },
+    {
+      "key": "Binary",
+      "word": "Binary",
+      "definition": "A way of representing information using only two options.",
+      "seeding_key": {
+        "vocabulary.key": "Binary"
+      }
+    },
+    {
+      "key": "Binary Alphabet",
+      "word": "Binary Alphabet",
+      "definition": "The two options used in your binary code.",
+      "seeding_key": {
+        "vocabulary.key": "Binary Alphabet"
+      }
+    },
+    {
+      "key": "Binary",
+      "word": "Binary",
+      "definition": "A way of representing information using only two options.",
+      "seeding_key": {
+        "vocabulary.key": "Binary"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "vocabulary.key": "Frustrated"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "vocabulary.key": "Persistence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Collector",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Collector",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "vocabulary.key": "Command"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals in Bee",
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "vocabulary.key": "While Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "vocabulary.key": "Until"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "vocabulary.key": "While Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unplugged: Binary",
+        "vocabulary.key": "Binary"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unplugged: Binary",
+        "vocabulary.key": "Binary Alphabet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist Binary",
+        "vocabulary.key": "Binary"
+      }
+    }
+  ],
   "objectives": [
     {
       "key": "3c4b51d5-b72f-42df-a55a-86c146214424",
