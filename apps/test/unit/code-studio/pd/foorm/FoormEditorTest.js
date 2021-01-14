@@ -97,13 +97,58 @@ describe('FoormEditor', () => {
 
     const saveBar = wrapper.find('FoormSaveBar');
 
-    const saveButton = saveBar.find('button').at(0);
+    const saveButton = saveBar.find('button').at(1);
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
+
+    server.respond();
+    saveBar.update();
+
+    expect(saveBar.find('FontAwesome').length).to.equal(0);
+    expect(saveBar.state().isSaving).to.equal(false);
+
+    //check that last saved message is showing
+    expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+  });
+
+  it('can publish form', () => {
+    const wrapper = createWrapper();
+
+    store.dispatch(setFormData(sampleDraftFormData));
+
+    const publishUrl = '/foorm/forms/0/publish';
+    server.respondWith('PUT', publishUrl, [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(sampleSaveData)
+    ]);
+
+    const saveBar = wrapper.find('FoormSaveBar');
+
+    const publishButton = saveBar.find('button').at(0);
+    expect(publishButton.contains('Publish')).to.be.true;
+    publishButton.simulate('click');
+
+    // check the spinner is showing
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(saveBar.state().isSaving).to.equal(true);
+
+    // check that modal pops up
+    assert(
+      wrapper
+        .find('ConfirmationDialog')
+        .at(1)
+        .prop('show'),
+      'Publish ConfirmationDialog is showing'
+    );
+
+    // simulate save click. Cannot click on button itself because it is in the modal
+    // which is outside the wrapper.
+    saveBar.instance().save(publishUrl);
 
     server.respond();
     saveBar.update();
@@ -128,11 +173,11 @@ describe('FoormEditor', () => {
 
     const saveBar = wrapper.find('FoormSaveBar');
 
-    const saveButton = saveBar.find('button').at(0);
+    const saveButton = saveBar.find('button').at(1);
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
@@ -153,8 +198,10 @@ describe('FoormEditor', () => {
     const wrapper = createWrapper();
 
     store.dispatch(setFormData(samplePublishedFormData));
+    wrapper.update();
 
-    server.respondWith('PUT', `/foorm/forms/1/update_questions`, [
+    const url = '/foorm/forms/1/update_questions';
+    server.respondWith('PUT', url, [
       200,
       {'Content-Type': 'application/json'},
       JSON.stringify(sampleSaveData)
@@ -166,19 +213,22 @@ describe('FoormEditor', () => {
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
     // check that modal pops up
     assert(
-      wrapper.find('ConfirmationDialog').prop('show'),
-      'ConfirmationDialog is showing'
+      wrapper
+        .find('ConfirmationDialog')
+        .at(0)
+        .prop('show'),
+      'Save ConfirmationDialog is showing'
     );
 
     // simulate save click. Cannot click on button itself because it is in the modal
     // which is outside the wrapper.
-    saveBar.instance().save();
+    saveBar.instance().save(url);
 
     server.respond();
     saveBar.update();
@@ -190,10 +240,25 @@ describe('FoormEditor', () => {
     expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
   });
 
+  it('hides publish button for published survey', () => {
+    const wrapper = createWrapper();
+
+    store.dispatch(setFormData(samplePublishedFormData));
+    wrapper.update();
+
+    const saveBarButtons = wrapper.find('FoormSaveBar').find('button');
+    const saveButton = saveBarButtons.at(0);
+
+    expect(saveButton.contains('Publish')).to.be.false;
+    expect(saveButton.contains('Save')).to.be.true;
+    expect(saveBarButtons.length).to.equal(1);
+  });
+
   it('can cancel save published form', () => {
     const wrapper = createWrapper();
 
     store.dispatch(setFormData(samplePublishedFormData));
+    wrapper.update();
 
     const saveBar = wrapper.find('FoormSaveBar');
 
@@ -201,14 +266,54 @@ describe('FoormEditor', () => {
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
     // check that modal pops up
     assert(
-      wrapper.find('ConfirmationDialog').prop('show'),
-      'ConfirmationDialog is showing'
+      wrapper
+        .find('ConfirmationDialog')
+        .at(0)
+        .prop('show'),
+      'Save ConfirmationDialog is showing'
+    );
+
+    // simulate cancel click. Cannot click on button itself because it is in the modal
+    // which is outside the wrapper.
+    saveBar.instance().handleSaveCancel();
+    saveBar.update();
+
+    expect(saveBar.find('FontAwesome').length).to.equal(0);
+    expect(saveBar.state().isSaving).to.equal(false);
+
+    //check that last saved message is not showing
+    expect(wrapper.find('.lastSavedMessage').length).to.equal(0);
+  });
+
+  it('can cancel publish form', () => {
+    const wrapper = createWrapper();
+
+    store.dispatch(setFormData(sampleDraftFormData));
+    wrapper.update();
+
+    const saveBar = wrapper.find('FoormSaveBar');
+
+    const saveButton = saveBar.find('button').at(0);
+    expect(saveButton.contains('Publish')).to.be.true;
+    saveButton.simulate('click');
+
+    // check the spinner is showing
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(saveBar.state().isSaving).to.equal(true);
+
+    // check that modal pops up
+    assert(
+      wrapper
+        .find('ConfirmationDialog')
+        .at(1)
+        .prop('show'),
+      'Publish ConfirmationDialog is showing'
     );
 
     // simulate cancel click. Cannot click on button itself because it is in the modal
@@ -227,6 +332,7 @@ describe('FoormEditor', () => {
     const wrapper = createWrapper();
 
     store.dispatch(setFormData(sampleNewFormData));
+    wrapper.update();
 
     server.respondWith('POST', `/foorm/forms`, [
       200,
@@ -240,11 +346,11 @@ describe('FoormEditor', () => {
     const saveBar = wrapper.find('FoormSaveBar');
 
     // click save button
-    const saveButton = saveBar.find('button').at(0);
+    const saveButton = saveBar.find('button').at(1);
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
@@ -290,11 +396,11 @@ describe('FoormEditor', () => {
     const saveBar = wrapper.find('FoormSaveBar');
 
     // click save button
-    const saveButton = saveBar.find('button').at(0);
+    const saveButton = saveBar.find('button').at(1);
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
-    // check the the spinner is showing
+    // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
