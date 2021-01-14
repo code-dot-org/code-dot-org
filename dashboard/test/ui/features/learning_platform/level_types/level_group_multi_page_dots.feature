@@ -72,7 +72,7 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
   And I am on "http://studio.code.org/s/allthethings/stage/23/puzzle/1?noautoplay=true"
   And I wait to see ".react_stage"
 
-  # Verify the three dots in the header all appear submitted.
+  # Verify the three dots in the header all reflect the correct completion status.
   And I verify progress in the header of the current page is "perfect_assessment" for level 2
   And I verify progress in the header of the current page is "not_tried" for level 3
   And I verify progress in the header of the current page is "attempted" for level 4
@@ -138,7 +138,7 @@ Scenario: optional free play level
   And I wait to see ".level-group-content"
   And check that the URL contains "/page/3"
 
-  # Verify the bubble status and submit dialog contents are now complete
+  # Verify the bubble status and submit dialog contents are the same as prior to the submit
   Then I verify progress in the header of the current page is "not_tried" for level 2
   Then I verify progress in the header of the current page is "attempted" for level 3
   Then I verify progress in the header of the current page is "perfect_assessment" for level 4
