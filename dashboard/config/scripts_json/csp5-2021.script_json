@@ -5099,7 +5099,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mile Tracker Investigation"
+        "progression": "Mile Tracker Investigation",
+        "level_keys": [
+          "U5 Traversals Investigate Mile Tracker Modify_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5122,7 +5125,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Data Tab Investigation"
+        "progression": "Data Tab Investigation",
+        "level_keys": [
+          "CSP U5L10 Traversals Investigate_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5145,7 +5151,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Random Dog Picker Investigation"
+        "progression": "Random Dog Picker Investigation",
+        "level_keys": [
+          "U5 Traversals Investigate Dog Finder Modify_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5168,7 +5177,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Traversal Patterns"
+        "progression": "Traversal Patterns",
+        "level_keys": [
+          "List Filter Pattern_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5191,7 +5203,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Traversal Patterns"
+        "progression": "Traversal Patterns",
+        "level_keys": [
+          "List Reduce Pattern_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5214,7 +5229,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "CSP U5L10 CFU Traversals_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5237,7 +5255,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Traversal Practice"
+        "progression": "Traversal Practice",
+        "level_keys": [
+          "U5 Traversals Practice Part 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5260,7 +5281,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Traversal Practice"
+        "progression": "Traversal Practice",
+        "level_keys": [
+          "U5 Traversals Practice Part 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5283,7 +5307,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Traversal Practice"
+        "progression": "Traversal Practice",
+        "level_keys": [
+          "U5 Traversals Practice Part 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5306,7 +5333,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Reduce and Filter Practice"
+        "progression": "Reduce and Filter Practice",
+        "level_keys": [
+          "U5 Traversals Practice Part 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5329,7 +5359,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Reduce and Filter Practice"
+        "progression": "Reduce and Filter Practice",
+        "level_keys": [
+          "U5 Traversals Practice Part 5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5352,7 +5385,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Reduce and Filter Practice"
+        "progression": "Reduce and Filter Practice",
+        "level_keys": [
+          "U5 Traversals Practice Part 6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5375,7 +5411,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Practice"
+        "progression": "App Practice",
+        "level_keys": [
+          "U5 Traversals Practice Part 7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5398,7 +5437,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice"
+        "progression": "Check For Understanding: AP Practice",
+        "level_keys": [
+          "U5L11 CFU For Each Psuedocode_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5421,7 +5463,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Try the Random Forecaster App"
+        "progression": "Try the Random Forecaster App",
+        "level_keys": [
+          "U5 Traversals Make Project Sample App 2020_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5444,7 +5489,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Random Forecaster App"
+        "progression": "Make the Random Forecaster App",
+        "level_keys": [
+          "U5 Traversals Make Project 2020_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -6958,6 +7006,12 @@
         "resource.key": "csp u5 presentation"
       }
     }
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
   ],
   "objectives": [
     {
