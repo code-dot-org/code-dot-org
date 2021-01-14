@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
+import SearchBox from './SearchBox';
 import {connect} from 'react-redux';
 import {
   addVocabulary,
@@ -26,6 +27,20 @@ class VocabulariesEditor extends Component {
     removeVocabulary: PropTypes.func.isRequired
   };
 
+  constructVocabularyOption = vocabulary => ({
+    value: vocabulary.key,
+    label: `${vocabulary.word} - ${vocabulary.definition}`,
+    vocabulary
+  });
+
+  constructSearchOptions = json => {
+    const vocabKeysAdded = this.props.vocabularies.map(vocab => vocab.key);
+    const vocabularies = json
+      .map(vocab => this.constructVocabularyOption(vocab))
+      .filter(vocab => vocabKeysAdded.indexOf(vocab.value) === -1);
+    return {options: vocabularies};
+  };
+
   render() {
     return (
       <div>
@@ -34,6 +49,15 @@ class VocabulariesEditor extends Component {
           name="vocabularies"
           value={JSON.stringify(this.props.vocabularies.map(v => v.key))}
         />
+        <div>
+          Select a vocabulary word to add
+          <SearchBox
+            onSearchSelect={e => this.props.addVocabulary(e.vocabulary)}
+            courseVersionId={this.props.courseVersionId}
+            searchUrl={'vocabsearch'}
+            constructOptions={this.constructSearchOptions}
+          />
+        </div>
         <div>
           <table style={{width: '100%'}}>
             <thead>
