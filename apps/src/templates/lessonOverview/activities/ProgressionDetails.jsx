@@ -33,7 +33,10 @@ export default class ProgressionDetails extends Component {
         : scriptLevel.levels[0];
 
     return {
-      id: activeLevel.id,
+      // TODO: (charlie) this is temporary backward compatibility with
+      // ProgressBubble, which will be updated to use strings for ids
+      // in an upcoming PR
+      id: parseInt(activeLevel.id),
       status: LevelStatus.not_tried,
       url: scriptLevel.url,
       name: activeLevel.name,
