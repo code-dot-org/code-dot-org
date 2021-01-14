@@ -1124,7 +1124,7 @@ class ScriptTest < ActiveSupport::TestCase
     response = script.summarize(true, nil, true)
     assert_equal 1, response[:lessons].length
     assert_equal 1, response[:lessons].first[:levels].length
-    assert_equal [level.id], response[:lessons].first[:levels].first[:ids]
+    assert_equal [level.id.to_s], response[:lessons].first[:levels].first[:ids]
   end
 
   test 'should generate PLC objects' do
