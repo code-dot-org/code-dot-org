@@ -178,6 +178,14 @@ class LessonEditor extends Component {
 
         <RelatedLessons relatedLessons={relatedLessons} />
 
+        {!hasLessonPlan && (
+          <div style={styles.warning}>
+            All lesson plan fields are hidden because "Has Lesson Plan" is NOT
+            checked. If you would like to edit the lesson plan for this lesson
+            please go to General Lesson Settings and check "Has Lesson Plan".
+          </div>
+        )}
+
         <CollapsibleEditorSection
           title="General Lesson Settings"
           collapsed={hasLessonPlan}
@@ -263,13 +271,31 @@ class LessonEditor extends Component {
             </HelpTip>
           </label>
         </CollapsibleEditorSection>
-        {!hasLessonPlan && (
-          <div style={styles.warning}>
-            All lesson plan fields are hidden because "Has Lesson Plan" is NOT
-            checked. If you would like to edit the lesson plan for this lesson
-            please go to General Lesson Settings and check "Has Lesson Plan".
-          </div>
-        )}
+        <CollapsibleEditorSection
+          title="Overviews"
+          collapsed={true}
+          fullWidth={true}
+        >
+          <TextareaWithMarkdownPreview
+            markdown={overview}
+            label={'Overview'}
+            inputRows={5}
+            handleMarkdownChange={e =>
+              this.setState({overview: e.target.value})
+            }
+          />
+          <TextareaWithMarkdownPreview
+            markdown={studentOverview}
+            label={'Student Overview'}
+            inputRows={5}
+            helpTip={
+              'This overview will appear on the students Lessons Resources page.'
+            }
+            handleMarkdownChange={e =>
+              this.setState({studentOverview: e.target.value})
+            }
+          />
+        </CollapsibleEditorSection>
         {hasLessonPlan && (
           <div>
             <CollapsibleEditorSection title="Announcements" collapsed={true}>
@@ -277,32 +303,6 @@ class LessonEditor extends Component {
                 announcements={announcements}
                 inputStyle={styles.input}
                 updateAnnouncements={this.handleUpdateAnnouncements}
-              />
-            </CollapsibleEditorSection>
-
-            <CollapsibleEditorSection
-              title="Overviews"
-              collapsed={true}
-              fullWidth={true}
-            >
-              <TextareaWithMarkdownPreview
-                markdown={overview}
-                label={'Overview'}
-                inputRows={5}
-                handleMarkdownChange={e =>
-                  this.setState({overview: e.target.value})
-                }
-              />
-              <TextareaWithMarkdownPreview
-                markdown={studentOverview}
-                label={'Student Overview'}
-                inputRows={5}
-                helpTip={
-                  'This overview will appear on the students Lessons Resources page.'
-                }
-                handleMarkdownChange={e =>
-                  this.setState({studentOverview: e.target.value})
-                }
               />
             </CollapsibleEditorSection>
 
@@ -374,15 +374,11 @@ class LessonEditor extends Component {
                 updateObjectives={this.handleUpdateObjectives}
               />
             </CollapsibleEditorSection>
-
-            <CollapsibleEditorSection
-              title="Activities & Levels"
-              fullWidth={true}
-            >
-              <ActivitiesEditor />
-            </CollapsibleEditorSection>
           </div>
         )}
+        <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
+          <ActivitiesEditor hasLessonPlan={hasLessonPlan} />
+        </CollapsibleEditorSection>
 
         <SaveBar
           handleSave={this.handleSave}
