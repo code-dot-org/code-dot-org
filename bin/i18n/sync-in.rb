@@ -16,11 +16,11 @@ require_relative 'redact_restore_utils'
 require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_in
-  # HocSyncUtils.sync_in
-  # localize_level_content
-  # localize_project_content
-  # localize_block_content
-  # localize_animation_library
+  HocSyncUtils.sync_in
+  localize_level_content
+  localize_project_content
+  localize_block_content
+  localize_animation_library
   localize_shared_functions
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
