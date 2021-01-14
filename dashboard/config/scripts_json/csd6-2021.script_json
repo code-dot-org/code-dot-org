@@ -3341,7 +3341,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Innovation Research"
+        "progression": "Innovation Research",
+        "level_keys": [
+          "CSDU6 Innovation_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3364,7 +3367,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Setting Properties"
+        "progression": "Setting Properties",
+        "level_keys": [
+          "CSD U6 setProperty predict app_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3387,7 +3393,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Setting Properties"
+        "progression": "Setting Properties",
+        "level_keys": [
+          "CSD U6 setProperty Text_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3410,7 +3419,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Setting Properties"
+        "progression": "Setting Properties",
+        "level_keys": [
+          "CSD U6 setProperty xy_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3433,7 +3445,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Events and Properties"
+        "progression": "Events and Properties",
+        "level_keys": [
+          "CSD U6 setProperty xy click_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3456,7 +3471,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Events and Properties"
+        "progression": "Events and Properties",
+        "level_keys": [
+          "CSD U6 setProperty xy random_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3479,7 +3497,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Events and Properties"
+        "progression": "Events and Properties",
+        "level_keys": [
+          "CSD U6 setProperty hidden_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3502,7 +3523,10 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Events and Properties"
+        "progression": "Events and Properties",
+        "level_keys": [
+          "CSD U6 setProperty hidden 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3525,7 +3549,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Emotion Machine Example"
+        "progression": "Emotion Machine Example",
+        "level_keys": [
+          "CSD U6 emotion machine example_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3548,7 +3575,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Building an App"
+        "progression": "Building an App",
+        "level_keys": [
+          "CSD U6 emotion machine 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3571,7 +3601,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Building an App"
+        "progression": "Building an App",
+        "level_keys": [
+          "CSD U6 emotion machine 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3594,7 +3627,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Building an App"
+        "progression": "Building an App",
+        "level_keys": [
+          "CSD U6 emotion machine 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3617,7 +3653,10 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Building an App"
+        "progression": "Building an App",
+        "level_keys": [
+          "CSD U6 emotion machine 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3640,7 +3679,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Hardware and Software"
+        "progression": "Hardware and Software",
+        "level_keys": [
+          "CSD U6 hardware software video_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3663,7 +3705,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Using the LED"
+        "progression": "Using the LED",
+        "level_keys": [
+          "CSDU6 Circuit Playground Test_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3686,7 +3731,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Using the LED"
+        "progression": "Using the LED",
+        "level_keys": [
+          "CSD U6 test LED_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3709,7 +3757,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Using the LED"
+        "progression": "Using the LED",
+        "level_keys": [
+          "CSD U6 predict LED button_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3732,7 +3783,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Using the LED"
+        "progression": "Using the LED",
+        "level_keys": [
+          "CSD U6 add LED button_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3755,7 +3809,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Using the LED"
+        "progression": "Using the LED",
+        "level_keys": [
+          "CSD U6 LED toggle_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3778,7 +3835,10 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "progression": "Using the LED"
+        "progression": "Using the LED",
+        "level_keys": [
+          "CSD U6 LED all_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3801,7 +3861,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "LED Apps"
+        "progression": "LED Apps",
+        "level_keys": [
+          "CSD U6 LED create intro_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3824,7 +3887,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "LED Apps"
+        "progression": "LED Apps",
+        "level_keys": [
+          "CSD U6 light show_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3847,7 +3913,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "LED Apps"
+        "progression": "LED Apps",
+        "level_keys": [
+          "CSD U6 Catch the Mouse_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3870,7 +3939,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "LED Apps"
+        "progression": "LED Apps",
+        "level_keys": [
+          "CSD U6 create LED app_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3893,7 +3965,10 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "progression": "LED Apps"
+        "progression": "LED Apps",
+        "level_keys": [
+          "CSD U6 create LED app 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3916,7 +3991,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Input Examples"
+        "progression": "Input Examples",
+        "level_keys": [
+          "CSDU6 GameLab Input 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3939,7 +4017,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Input Examples"
+        "progression": "Input Examples",
+        "level_keys": [
+          "CSDU6 AppLab Input 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3962,7 +4043,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Board Events"
+        "progression": "Board Events",
+        "level_keys": [
+          "CSDU6 - button LED prediction_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3985,7 +4069,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Board Events"
+        "progression": "Board Events",
+        "level_keys": [
+          "CSDU6 - LED buttonL_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4008,7 +4095,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Board Events"
+        "progression": "Board Events",
+        "level_keys": [
+          "CSDU6 - LED toggle buttonL up_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4031,7 +4121,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Using the Switch"
+        "progression": "Using the Switch",
+        "level_keys": [
+          "CSDU6 - lightswitch toggleswitch_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4054,7 +4147,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Using the Switch"
+        "progression": "Using the Switch",
+        "level_keys": [
+          "CSDU6 - toggle state LED prediction_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4077,7 +4173,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Using the Switch"
+        "progression": "Using the Switch",
+        "level_keys": [
+          "CSDU6 - toggleswitch state setProp_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4100,7 +4199,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "The Buzzer"
+        "progression": "The Buzzer",
+        "level_keys": [
+          "CSDU6 - buzzer intro_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4123,7 +4225,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "The Buzzer"
+        "progression": "The Buzzer",
+        "level_keys": [
+          "CSDU6 - buzzer duration_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4146,7 +4251,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "The Buzzer"
+        "progression": "The Buzzer",
+        "level_keys": [
+          "CSDU6 - buzzer duration buttons_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4169,6 +4277,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSDU6 - board event challenge_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4191,7 +4302,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Getting Properties"
+        "progression": "Getting Properties",
+        "level_keys": [
+          "CSD U6 getProperty Demo_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4214,7 +4328,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Getting Properties"
+        "progression": "Getting Properties",
+        "level_keys": [
+          "CSD U6 getProperty input_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4237,7 +4354,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Getting Properties"
+        "progression": "Getting Properties",
+        "level_keys": [
+          "CSD U6 getProperty dropdown_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4260,7 +4380,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Getting Properties"
+        "progression": "Getting Properties",
+        "level_keys": [
+          "CSD U6 getProperty board predict_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4283,7 +4406,10 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "progression": "Getting Properties"
+        "progression": "Getting Properties",
+        "level_keys": [
+          "CSD U6 getProperty buzzer_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4306,7 +4432,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Sliders"
+        "progression": "Sliders",
+        "level_keys": [
+          "CSD U6 slider intro_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4329,7 +4458,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Sliders"
+        "progression": "Sliders",
+        "level_keys": [
+          "CSD U6 frequency_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4352,7 +4484,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Sliders"
+        "progression": "Sliders",
+        "level_keys": [
+          "CSD U6 interval_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4375,7 +4510,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Change"
+        "progression": "Change",
+        "level_keys": [
+          "CSD U6 change_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4398,7 +4536,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Change"
+        "progression": "Change",
+        "level_keys": [
+          "CSD U6 get toggle_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4421,7 +4562,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Change"
+        "progression": "Change",
+        "level_keys": [
+          "CSD U6 getters debug_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4444,7 +4588,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Motorcycle"
+        "progression": "Motorcycle",
+        "level_keys": [
+          "CSD U6 move motorcycle_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4467,7 +4614,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Motorcycle"
+        "progression": "Motorcycle",
+        "level_keys": [
+          "CSD U6 design motorcycle_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4490,6 +4640,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSD U6 challenge motorcycle_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4512,7 +4665,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Sensor Experiment"
+        "progression": "Sensor Experiment",
+        "level_keys": [
+          "CSD U6 sensor experiment embedded_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4535,7 +4691,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Reading Sensors"
+        "progression": "Reading Sensors",
+        "level_keys": [
+          "CSD U6 analog sound_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4558,7 +4717,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Reading Sensors"
+        "progression": "Reading Sensors",
+        "level_keys": [
+          "CSD U6 analog light_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4581,7 +4743,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Reading Sensors"
+        "progression": "Reading Sensors",
+        "level_keys": [
+          "CSD U6 analog temp_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4604,7 +4769,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Sensor Events"
+        "progression": "Sensor Events",
+        "level_keys": [
+          "CSD U6 analog predict_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4627,7 +4795,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Sensor Events"
+        "progression": "Sensor Events",
+        "level_keys": [
+          "CSD U6 analog data_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4650,7 +4821,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Sensor Events"
+        "progression": "Sensor Events",
+        "level_keys": [
+          "CSD U6 analog change_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4673,7 +4847,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Sensor Events"
+        "progression": "Sensor Events",
+        "level_keys": [
+          "CSD U6 analog threshold_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4696,7 +4873,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Sensors to Colors"
+        "progression": "Sensors to Colors",
+        "level_keys": [
+          "CSD U6 analog rbg 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4719,7 +4899,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Sensors to Colors"
+        "progression": "Sensors to Colors",
+        "level_keys": [
+          "CSD U6 analog rbg 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4742,7 +4925,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Sensors to Colors"
+        "progression": "Sensors to Colors",
+        "level_keys": [
+          "CSD U6 analog rgb 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4765,6 +4951,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog challenge_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4787,7 +4976,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Sample Program"
+        "progression": "Sample Program",
+        "level_keys": [
+          "CSD U6 emoji race demo_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4810,7 +5002,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Plan Your Project"
+        "progression": "Plan Your Project",
+        "level_keys": [
+          "CSD U6 tugowar stop_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4833,7 +5028,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Screen Design"
+        "progression": "Screen Design",
+        "level_keys": [
+          "CSD U6 tugowar design 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4856,7 +5054,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Screen Design"
+        "progression": "Screen Design",
+        "level_keys": [
+          "CSD U6 tugowar design 1.5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4879,7 +5080,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Screen Design"
+        "progression": "Screen Design",
+        "level_keys": [
+          "CSD U6 tugowar design 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4902,7 +5106,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Finishing Functions"
+        "progression": "Finishing Functions",
+        "level_keys": [
+          "CSD U6 tugowar variables 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4925,7 +5132,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Finishing Functions"
+        "progression": "Finishing Functions",
+        "level_keys": [
+          "CSD U6 tugowar variables 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4948,7 +5158,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Finishing Functions"
+        "progression": "Finishing Functions",
+        "level_keys": [
+          "CSD U6 tugowar variables 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4971,7 +5184,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Checking for a Winner"
+        "progression": "Checking for a Winner",
+        "level_keys": [
+          "CSD U6 tugowar conditional_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4994,7 +5210,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Checking for a Winner"
+        "progression": "Checking for a Winner",
+        "level_keys": [
+          "CSD U6 tugowar setScreen_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5017,7 +5236,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Checking for a Winner"
+        "progression": "Checking for a Winner",
+        "level_keys": [
+          "CSD U6 tugowar setProperty_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5040,7 +5262,10 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Checking for a Winner"
+        "progression": "Checking for a Winner",
+        "level_keys": [
+          "CSD U6 tugowar buzzer_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5063,7 +5288,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Make it Your Own"
+        "progression": "Make it Your Own",
+        "level_keys": [
+          "CSD U6 tugowar final_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5086,7 +5314,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Demo - Bug Grab"
+        "progression": "Demo - Bug Grab",
+        "level_keys": [
+          "CSD U6 tugowar demo_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5109,7 +5340,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Plan Your Project"
+        "progression": "Plan Your Project",
+        "level_keys": [
+          "CSD U6 game project stop_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5132,7 +5366,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Screen Design"
+        "progression": "Screen Design",
+        "level_keys": [
+          "CSD U6 game project screens_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5155,7 +5392,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Events"
+        "progression": "Events",
+        "level_keys": [
+          "CSD U6 game project screen links_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5178,7 +5418,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Events"
+        "progression": "Events",
+        "level_keys": [
+          "CSD U6 game project board events_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5201,7 +5444,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Functions"
+        "progression": "Functions",
+        "level_keys": [
+          "CSD U6 game project functions define_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5224,7 +5470,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Functions"
+        "progression": "Functions",
+        "level_keys": [
+          "CSD U6 game project functions call_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5247,7 +5496,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Finishing Touches"
+        "progression": "Finishing Touches",
+        "level_keys": [
+          "CSD U6 game project finish_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5270,7 +5522,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection"
+        "progression": "Reflection",
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5293,7 +5548,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Introduction to Arrays"
+        "progression": "Video: Introduction to Arrays",
+        "level_keys": [
+          "CSD U6 arrays video_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5316,7 +5574,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Introduction to Arrays"
+        "progression": "Introduction to Arrays",
+        "level_keys": [
+          "CSD U6 arrays select predict_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5339,7 +5600,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Introduction to Arrays"
+        "progression": "Introduction to Arrays",
+        "level_keys": [
+          "CSDU6 arrays select rainbow_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5362,7 +5626,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Introduction to Arrays"
+        "progression": "Introduction to Arrays",
+        "level_keys": [
+          "CSDU6 array select days_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5385,7 +5652,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Introduction to Arrays"
+        "progression": "Introduction to Arrays",
+        "level_keys": [
+          "CSDU6 arrays select random_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5408,7 +5678,10 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "progression": "Introduction to Arrays"
+        "progression": "Introduction to Arrays",
+        "level_keys": [
+          "CSDU6 arrays select variable_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5431,7 +5704,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Using Arrays"
+        "progression": "Using Arrays",
+        "level_keys": [
+          "CSD U6 array multi_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5454,7 +5730,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Color LEDs"
+        "progression": "Color LEDs",
+        "level_keys": [
+          "CSD U6 colorLeds predict_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5477,7 +5756,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Color LEDs"
+        "progression": "Color LEDs",
+        "level_keys": [
+          "CSD U6 colorLED on_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5500,7 +5782,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Color LEDs"
+        "progression": "Color LEDs",
+        "level_keys": [
+          "CSD U6 LEDs color_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5523,7 +5808,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Color LEDs"
+        "progression": "Color LEDs",
+        "level_keys": [
+          "CSD U6 colorLeds debug_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5546,7 +5834,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Color LEDs"
+        "progression": "Color LEDs",
+        "level_keys": [
+          "CSD U6 colorLeds intensity_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5569,7 +5860,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Light Show"
+        "progression": "Light Show",
+        "level_keys": [
+          "CSD U6 colorLeds light pattern_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5592,7 +5886,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Light Show"
+        "progression": "Light Show",
+        "level_keys": [
+          "CSD U6 light pattern off_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5615,7 +5912,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenge Levels"
+        "progression": "Challenge Levels",
+        "level_keys": [
+          "CSD U6 light pattern challenge_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -5638,7 +5938,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Playing Notes"
+        "progression": "Playing Notes",
+        "level_keys": [
+          "CSDU6 circuit playground piano_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5661,7 +5964,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Playing Notes"
+        "progression": "Playing Notes",
+        "level_keys": [
+          "CSDU6 frequency modification_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5684,7 +5990,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Playing Notes"
+        "progression": "Playing Notes",
+        "level_keys": [
+          "CSDU6 frequency creation_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5707,7 +6016,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Playing Notes"
+        "progression": "Playing Notes",
+        "level_keys": [
+          "CSDU6 piano with notes_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5730,7 +6042,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Musical Arrays"
+        "progression": "Musical Arrays",
+        "level_keys": [
+          "CSD U6 array piano_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5753,7 +6068,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Musical Arrays"
+        "progression": "Musical Arrays",
+        "level_keys": [
+          "CSD U6 random array notes_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5776,7 +6094,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Musical Arrays"
+        "progression": "Musical Arrays",
+        "level_keys": [
+          "CSDU6 making new arrays_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5799,7 +6120,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Making Songs"
+        "progression": "Making Songs",
+        "level_keys": [
+          "CSDU6 play predict code_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5822,7 +6146,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Making Songs"
+        "progression": "Making Songs",
+        "level_keys": [
+          "CSDU6 play songs_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5845,7 +6172,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Making Songs"
+        "progression": "Making Songs",
+        "level_keys": [
+          "CSDU6 play null notes_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5868,7 +6198,10 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Making Songs"
+        "progression": "Making Songs",
+        "level_keys": [
+          "CDU U6 Playground Sound Board_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5891,6 +6224,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSDU6 buzzer 2d arrays_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -5913,6 +6249,9 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSDU6 buzzer.stop_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -5935,7 +6274,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Programs that Repeat"
+        "progression": "Programs that Repeat",
+        "level_keys": [
+          "CSD U6 for loop click predict_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5958,7 +6300,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Programs that Repeat"
+        "progression": "Programs that Repeat",
+        "level_keys": [
+          "CSD U6 for loop click exit_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5981,7 +6326,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: For Loops"
+        "progression": "Video: For Loops",
+        "level_keys": [
+          "CSD: For Loop_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6004,7 +6352,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "For Loops"
+        "progression": "For Loops",
+        "level_keys": [
+          "CSDU6 - for loop - predict print_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6027,7 +6378,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "For Loops"
+        "progression": "For Loops",
+        "level_keys": [
+          "CSD U6 for loop button array_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6050,7 +6404,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "For Loops"
+        "progression": "For Loops",
+        "level_keys": [
+          "CSD U6 for loop list.length_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6073,7 +6430,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "For Loops"
+        "progression": "For Loops",
+        "level_keys": [
+          "CSD U6 for loop images_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6096,7 +6456,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "For Loops"
+        "progression": "For Loops",
+        "level_keys": [
+          "CSD U6 for loop map_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6119,7 +6482,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "For Loops and Color LEDs"
+        "progression": "For Loops and Color LEDs",
+        "level_keys": [
+          "CSD U6 for loop led on_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6142,7 +6508,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "For Loops and Color LEDs"
+        "progression": "For Loops and Color LEDs",
+        "level_keys": [
+          "CSD U6 for loop led off_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6165,7 +6534,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "For Loops and Color LEDs"
+        "progression": "For Loops and Color LEDs",
+        "level_keys": [
+          "CSD U6 for loop led color_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6188,7 +6560,10 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "For Loops and Color LEDs"
+        "progression": "For Loops and Color LEDs",
+        "level_keys": [
+          "CSD U6 for loop led personalize_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6211,7 +6586,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Orientation"
+        "progression": "Orientation",
+        "level_keys": [
+          "CSD U6 Airplane predict_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6234,7 +6612,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Orientation"
+        "progression": "Orientation",
+        "level_keys": [
+          "CSD U6 investigate orientation_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6257,7 +6638,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Orientation"
+        "progression": "Orientation",
+        "level_keys": [
+          "CSD U6 directional leds pitch_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6280,7 +6664,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Orientation"
+        "progression": "Orientation",
+        "level_keys": [
+          "CSD U6 directional LEDs roll_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6303,7 +6690,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Accelerometer Events"
+        "progression": "Accelerometer Events",
+        "level_keys": [
+          "CSD U6 stillness game predict code_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6326,7 +6716,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Accelerometer Events"
+        "progression": "Accelerometer Events",
+        "level_keys": [
+          "CSD U6 Pedometer_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6349,7 +6742,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Accelerometer Events"
+        "progression": "Accelerometer Events",
+        "level_keys": [
+          "CSD U6 goalie_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6372,7 +6768,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Accelerometer Events"
+        "progression": "Accelerometer Events",
+        "level_keys": [
+          "CSD U6 Driver pt1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6395,7 +6794,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Accelerometer Events"
+        "progression": "Accelerometer Events",
+        "level_keys": [
+          "CSD U6 Driver pt 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6418,7 +6820,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Functions with Parameters"
+        "progression": "Functions with Parameters",
+        "level_keys": [
+          "CSD U6 params predict_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6441,7 +6846,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Functions with Parameters"
+        "progression": "Functions with Parameters",
+        "level_keys": [
+          "CSD U6 functions paramters video_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6464,7 +6872,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Functions with Parameters"
+        "progression": "Functions with Parameters",
+        "level_keys": [
+          "CSD U6 params modify clouds_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6487,7 +6898,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Functions with Parameters"
+        "progression": "Functions with Parameters",
+        "level_keys": [
+          "CSD U6 params modify planes_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6510,7 +6924,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Functions with Parameters"
+        "progression": "Functions with Parameters",
+        "level_keys": [
+          "CSD U6 params create colors_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6533,7 +6950,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Iteration and Parameters"
+        "progression": "Iteration and Parameters",
+        "level_keys": [
+          "CSD U6 iter predict bubbles_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6556,7 +6976,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Iteration and Parameters"
+        "progression": "Iteration and Parameters",
+        "level_keys": [
+          "CSD U6 iter modify bugs_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6579,7 +7002,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Iteration and Parameters"
+        "progression": "Iteration and Parameters",
+        "level_keys": [
+          "CSD U6 iter create notes_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6602,7 +7028,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Star Chaser"
+        "progression": "Star Chaser",
+        "level_keys": [
+          "CSD U6 params starchaser intro_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6625,7 +7054,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Star Chaser"
+        "progression": "Star Chaser",
+        "level_keys": [
+          "CSD U6 params starchaser 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6648,7 +7080,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Star Chaser"
+        "progression": "Star Chaser",
+        "level_keys": [
+          "CSD U6 params starchaser 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6671,7 +7106,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Star Chaser"
+        "progression": "Star Chaser",
+        "level_keys": [
+          "CSD U6 params starchaser 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6694,7 +7132,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Star Chaser"
+        "progression": "Star Chaser",
+        "level_keys": [
+          "CSD U6 params starchaser 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6717,7 +7158,10 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "progression": "Star Chaser"
+        "progression": "Star Chaser",
+        "level_keys": [
+          "CSD U6 params starchaser 5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6740,7 +7184,10 @@
       "activity_section_position": 7,
       "assessment": null,
       "properties": {
-        "progression": "Star Chaser"
+        "progression": "Star Chaser",
+        "level_keys": [
+          "CSD U6 params starchaser challenge 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -6763,7 +7210,10 @@
       "activity_section_position": 8,
       "assessment": null,
       "properties": {
-        "progression": "Star Chaser"
+        "progression": "Star Chaser",
+        "level_keys": [
+          "CSD U6 params starchaser challenge 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -6786,7 +7236,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Circuits and Logic"
+        "progression": "Circuits and Logic",
+        "level_keys": [
+          "CSD U6 circuit logic video_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6809,7 +7262,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Simple Circuits"
+        "progression": "Simple Circuits",
+        "level_keys": [
+          "CSD U6 circuit predict_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6832,7 +7288,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Simple Circuits"
+        "progression": "Simple Circuits",
+        "level_keys": [
+          "CSD U6 circuit pinMode_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6855,7 +7314,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Simple Circuits"
+        "progression": "Simple Circuits",
+        "level_keys": [
+          "CSD U6 circuit createLed_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6878,7 +7340,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Simple Circuits"
+        "progression": "Simple Circuits",
+        "level_keys": [
+          "CSD U6 circuit multi led_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6901,7 +7366,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Smart Bike - Blinkers"
+        "progression": "Smart Bike - Blinkers",
+        "level_keys": [
+          "CSD U6 circuit smart bike blinkers_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6924,7 +7392,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Smart Bike - Blinkers"
+        "progression": "Smart Bike - Blinkers",
+        "level_keys": [
+          "CSD U6 circuit smart bike blinker buttons_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6947,7 +7418,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Smart Bike - Blinkers"
+        "progression": "Smart Bike - Blinkers",
+        "level_keys": [
+          "CSD U6 circuit smart bike blinker build_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6970,7 +7444,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Button Circuits"
+        "progression": "Button Circuits",
+        "level_keys": [
+          "CSD U6 circuit createButton_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6993,7 +7470,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Finish the Prototype"
+        "progression": "Finish the Prototype",
+        "level_keys": [
+          "CSD U6 circuit smart bike buzzer_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7016,7 +7496,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Finish the Prototype"
+        "progression": "Finish the Prototype",
+        "level_keys": [
+          "CSD U6 circuit smart bike light_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7039,7 +7522,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Finish the Prototype"
+        "progression": "Finish the Prototype",
+        "level_keys": [
+          "CSD U6 circuit smart bike final_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7062,7 +7548,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Design Your Prototype"
+        "progression": "Design Your Prototype",
+        "level_keys": [
+          "CSD U6 final intro_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7085,7 +7574,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "User Interface"
+        "progression": "User Interface",
+        "level_keys": [
+          "CSDU6 - final project 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7108,7 +7600,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "User Interface"
+        "progression": "User Interface",
+        "level_keys": [
+          "CSDU6 - final project 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7131,7 +7626,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Board Input and Output"
+        "progression": "Board Input and Output",
+        "level_keys": [
+          "CSDU6 - final project 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7154,7 +7652,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Board Input and Output"
+        "progression": "Board Input and Output",
+        "level_keys": [
+          "CSDU6 - final project 5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7177,7 +7678,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Finishing Touches"
+        "progression": "Finishing Touches",
+        "level_keys": [
+          "CSDU6 - final project 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7200,7 +7704,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Finishing Touches"
+        "progression": "Finishing Touches",
+        "level_keys": [
+          "CSDU6 - final project 6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7223,7 +7730,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection"
+        "progression": "Reflection",
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7246,6 +7756,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Physical Computing Post-Project Test_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7268,6 +7781,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-intro-2019_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7290,6 +7806,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9667,6 +10186,136 @@
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "planning-your-innovation"
+      }
+    }
+  ],
+  "vocabularies": [
+    {
+      "key": "Innovation",
+      "word": "Innovation",
+      "definition": "A new or improved idea, device, product, etc, or the development thereof",
+      "seeding_key": {
+        "vocabulary.key": "Innovation"
+      }
+    },
+    {
+      "key": "Analog",
+      "word": "Analog",
+      "definition": "Any continuously changing signal that is not restricted to finite set of values. For example, the wave forms of spoken words are an analog signal.",
+      "seeding_key": {
+        "vocabulary.key": "Analog"
+      }
+    },
+    {
+      "key": "Digital",
+      "word": "Digital",
+      "definition": "Data or signals represented by a finite number of values. Analog signals (which can have infinite values) must be converted to digital in order to be computed with.",
+      "seeding_key": {
+        "vocabulary.key": "Digital"
+      }
+    },
+    {
+      "key": "Array",
+      "word": "Array",
+      "definition": "A data structure in JavaScript used to represent a list.",
+      "seeding_key": {
+        "vocabulary.key": "Array"
+      }
+    },
+    {
+      "key": "Array",
+      "word": "Array",
+      "definition": "A data structure in JavaScript used to represent a list.",
+      "seeding_key": {
+        "vocabulary.key": "Array"
+      }
+    },
+    {
+      "key": "For Loop",
+      "word": "For Loop",
+      "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
+      "seeding_key": {
+        "vocabulary.key": "For Loop"
+      }
+    },
+    {
+      "key": "Parameter",
+      "word": "Parameter",
+      "definition": "An extra piece of information passed to a function to customize it for a specific need",
+      "seeding_key": {
+        "vocabulary.key": "Parameter"
+      }
+    },
+    {
+      "key": "Prototype",
+      "word": "Prototype",
+      "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
+      "seeding_key": {
+        "vocabulary.key": "Prototype"
+      }
+    },
+    {
+      "key": "Circuit",
+      "word": "Circuit",
+      "definition": "A device that provides a path for an electric current to flow, often modifying that current. In computers, circuits allow for simple logical and mathematical operations using electricity.",
+      "seeding_key": {
+        "vocabulary.key": "Circuit"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "vocabulary.key": "Innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "vocabulary.key": "Analog"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "vocabulary.key": "Digital"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "vocabulary.key": "Array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "vocabulary.key": "Array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "vocabulary.key": "For Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "vocabulary.key": "Parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "vocabulary.key": "Prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "vocabulary.key": "Circuit"
       }
     }
   ],
