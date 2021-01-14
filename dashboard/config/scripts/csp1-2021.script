@@ -28,7 +28,7 @@ level 'U1L5 CFU adding bits_2021', progression: 'Check For Understanding', asses
 level 'U1L5 CFU bin dec similarities_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Overflow and Rounding', display_name: 'Overflow and Rounding'
-level 'Widget: Binary Odometer_2021', progression: 'Widget: Binary Odometer'
+level 'Widget: Binary Odometer_2021', progression: 'Odometer Activity'
 level 'U1L6 CFU beyond odometer_2021', progression: 'Check For Understanding', assessment: true
 level 'U1L6 CFU representing fractions_2021', progression: 'Check For Understanding', assessment: true
 
@@ -54,8 +54,8 @@ level 'CSP U1L10 Color Pixelation Widget 2_2021', progression: 'Pixelation Widge
 level 'CSP U1L10 Color Pixelation Widget 3_2021', progression: 'Pixelation Widget: Color'
 level 'CSP U1L10 Color Sampling_2021', progression: 'Color Sampling'
 level 'CSP U1L10 Color Pixelation Widget 4_2021', progression: 'Pixelation Widget: Color'
-level 'U1L10 Multiple Choice analog vs digital_2021', progression: 'Check For Understanding', assessment: true
-level 'U1L10 CFU Sampling_2021', progression: 'Check For Understanding', assessment: true
+level 'U1L10 Multiple Choice analog vs digital_2021', progression: 'Assessment: Check For Understanding', assessment: true
+level 'U1L10 CFU Sampling_2021', progression: 'Assessment: Check For Understanding', assessment: true
 
 lesson 'Lossless Compression', display_name: 'Lossless Compression'
 level 'U1L11 Widget: Text Compression_2021', progression: 'Widget: Text Compression'
