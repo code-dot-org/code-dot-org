@@ -263,7 +263,7 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2017-2018 PRELIMINARY public and charter school data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/ccd_sch_029_1718_w_0a_03302018_csv.zip
       AWS::S3.seed_from_file('cdo-nces', "2017-2018/ccd/ccd_sch_029_1718_w_0a_03302018.csv") do |filename|
-        # Set write_updates argument to false as a data import precaution.  We are only inserting new schools from this NCES dataset.
+        # Set update_existing argument to false as a data import precaution.  We are only inserting new schools from this NCES dataset.
         # Note as of November 2020, we never did the updates from this NCES update iteration.
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, false) do |row|
           {
@@ -319,7 +319,7 @@ class School < ApplicationRecord
       # Download link found here: https://nces.ed.gov/programs/edge/Geographic/SchoolLocations
       # Actual download link: https://nces.ed.gov/programs/edge/data/EDGE_GEOCODE_PUBLICSCH_1819.zip
       AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/EDGE_GEOCODE_PUBLICSCH_1819.csv") do |filename|
-        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false, write_inserts: false) do |row|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false, insert_new: false) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
             latitude:           row['LAT'].to_f,
@@ -344,9 +344,9 @@ class School < ApplicationRecord
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
-  # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT schools.
+  # @param update_existing [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT schools.
 
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, new_attributes: [], write_inserts: true)
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, update_existing = true, is_dry_run: false, new_attributes: [], insert_new: true)
     schools = nil
     new_schools = []
     updated_schools = 0
@@ -358,38 +358,38 @@ class School < ApplicationRecord
 
     ActiveRecord::Base.transaction do
       schools = CSV.read(filename, options).each do |row|
-        parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
-        loaded = find_by_id(parsed[:id])
+        csv_entry = block_given? ? yield(row) : row.to_hash.symbolize_keys
+        db_entry = find_by_id(csv_entry[:id])
 
-        if loaded.nil? && write_inserts
+        if db_entry.nil? && insert_new
           begin
-            School.new(parsed).save! unless is_dry_run
-            new_schools << parsed
+            School.new(csv_entry).save! unless is_dry_run
+            new_schools << csv_entry
           rescue ActiveRecord::RecordNotUnique
             # NCES ID and state school ID are required to be unique,
             # so this error would occur if two rows with different NCES IDs
             # had the same state school ID.
-            CDO.log.info "Record with NCES ID #{parsed[:id]} and state school ID #{parsed[:state_school_id]} not unique, not added"
-            duplicate_schools << parsed
+            CDO.log.info "Record with NCES ID #{csv_entry[:id]} and state school ID #{csv_entry[:state_school_id]} not unique, not added"
+            duplicate_schools << csv_entry
           end
-        elsif !loaded.nil? && write_updates
-          old_state_school_id = loaded.state_school_id.clone
+        elsif !db_entry.nil? && update_existing
+          old_state_school_id = db_entry.state_school_id.clone
 
           # skip DB query if state school ID not in provided set of data
-          has_state_cs_offerings = parsed.key?(:state_school_id) ?
-            loaded.state_cs_offering.any? :
+          has_state_cs_offerings = csv_entry.key?(:state_school_id) ?
+            db_entry.state_cs_offering.any? :
             false
 
-          loaded.assign_attributes(parsed)
+          db_entry.assign_attributes(csv_entry)
 
-          if loaded.changed?
+          if db_entry.changed?
             # Not counting schools as "updated" if the only change
             # is adding a new column. Otherwise, all found rows will be updated.
-            loaded.changed.sort == new_attributes.sort ?
+            db_entry.changed.sort == new_attributes.sort ?
               unchanged_schools += 1 :
               updated_schools += 1
 
-            loaded.changed.each do |attribute|
+            db_entry.changed.each do |attribute|
               updated_schools_attribute_frequency.key?(attribute) ?
                 updated_schools_attribute_frequency[attribute] += 1 :
                 updated_schools_attribute_frequency[attribute] = 1
@@ -398,22 +398,22 @@ class School < ApplicationRecord
             # We need to delete and reload state_cs_offerings
             # if we're going to update the state_school_id for a given school.
             deleted_state_cs_offerings = []
-            if has_state_cs_offerings && loaded.changed.include?('state_school_id')
+            if has_state_cs_offerings && db_entry.changed.include?('state_school_id')
               deleted_state_cs_offerings = Census::StateCsOffering.where(state_school_id: old_state_school_id).destroy_all unless is_dry_run
               state_cs_offerings_deleted_count += deleted_state_cs_offerings.count
             end
 
-            loaded.update!(parsed) unless is_dry_run
+            db_entry.update!(csv_entry) unless is_dry_run
 
             if deleted_state_cs_offerings.any?
-              reloaded_state_cs_offerings = loaded.load_state_cs_offerings(deleted_state_cs_offerings, is_dry_run)
+              reloaded_state_cs_offerings = db_entry.load_state_cs_offerings(deleted_state_cs_offerings, is_dry_run)
               state_cs_offerings_reloaded_count += reloaded_state_cs_offerings.count
 
               # Check and see if old and new are the same
               reconstituted = reloaded_state_cs_offerings.pluck(:course, :school_year)
               original = deleted_state_cs_offerings.pluck(:course, :school_year)
               failure = ((reconstituted - original) + (original - reconstituted)).any?
-              raise "Mismatch between state CS offerings deleted and recreated for NCES ID #{loaded.id}, originally #{original.length} records, now #{reconstituted.length} records" if failure
+              raise "Mismatch between state CS offerings deleted and recreated for NCES ID #{db_entry.id}, originally #{original.length} records, now #{reconstituted.length} records" if failure
             end
           else
             unchanged_schools += 1
