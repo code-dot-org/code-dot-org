@@ -73,7 +73,11 @@ const styles = {
     marginRight: 5
   },
   titleInput: {
-    width: 275
+    width: 275,
+    marginRight: 10
+  },
+  durationInput: {
+    width: 50
   }
 };
 
@@ -321,6 +325,15 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  handleChangeDuration = event => {
+    this.props.updateActivitySectionField(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      'duration',
+      event.target.value
+    );
+  };
+
   handleChangeProgressionName = event => {
     this.props.updateActivitySectionField(
       this.props.activityPosition,
@@ -430,6 +443,12 @@ class ActivitySectionCard extends Component {
               style={styles.titleInput}
               value={this.props.activitySection.displayName}
               onChange={this.handleChangeDisplayName}
+            />
+            <span style={styles.title}>Duration:</span>
+            <input
+              style={styles.durationInput}
+              value={this.props.activitySection.duration}
+              onChange={this.handleChangeDuration}
             />
             <OrderControls
               name={
