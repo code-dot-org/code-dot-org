@@ -321,6 +321,15 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  handleChangeProgressionName = event => {
+    this.props.updateActivitySectionField(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      'progressionName',
+      event.target.value
+    );
+  };
+
   handleChangeText = event => {
     this.props.updateActivitySectionField(
       this.props.activityPosition,
@@ -456,28 +465,41 @@ class ActivitySectionCard extends Component {
           style={styles.input}
           onChange={this.handleChangeText}
         />
-        {this.props.activitySection.scriptLevels.length > 0 &&
-          this.props.activitySection.scriptLevels.map(scriptLevel => (
-            <LevelToken
-              ref={levelToken => {
-                if (levelToken) {
-                  const metrics = ReactDOM.findDOMNode(
-                    levelToken
-                  ).getBoundingClientRect();
-                  this.levelTokenMetrics[scriptLevel.position] = metrics;
+        {this.props.activitySection.scriptLevels.length > 0 && (
+          <div>
+            <label>
+              <span style={styles.title}>Progression Title:</span>
+              <input
+                style={styles.titleInput}
+                value={this.props.activitySection.progressionName}
+                onChange={this.handleChangeProgressionName}
+              />
+            </label>
+            {this.props.activitySection.scriptLevels.map(scriptLevel => (
+              <LevelToken
+                ref={levelToken => {
+                  if (levelToken) {
+                    const metrics = ReactDOM.findDOMNode(
+                      levelToken
+                    ).getBoundingClientRect();
+                    this.levelTokenMetrics[scriptLevel.position] = metrics;
+                  }
+                }}
+                key={scriptLevel.position + '_' + scriptLevel.activeId[0]}
+                scriptLevel={scriptLevel}
+                removeLevel={this.handleRemoveLevel}
+                activitySectionPosition={this.props.activitySection.position}
+                activityPosition={activityPosition}
+                dragging={!!draggedLevelPos}
+                draggedLevelPos={scriptLevel.position === draggedLevelPos}
+                delta={
+                  this.state.currentYOffsets[scriptLevel.position - 1] || 0
                 }
-              }}
-              key={scriptLevel.position + '_' + scriptLevel.activeId[0]}
-              scriptLevel={scriptLevel}
-              removeLevel={this.handleRemoveLevel}
-              activitySectionPosition={this.props.activitySection.position}
-              activityPosition={activityPosition}
-              dragging={!!draggedLevelPos}
-              draggedLevelPos={scriptLevel.position === draggedLevelPos}
-              delta={this.state.currentYOffsets[scriptLevel.position - 1] || 0}
-              handleDragStart={this.handleDragStart}
-            />
-          ))}
+                handleDragStart={this.handleDragStart}
+              />
+            ))}
+          </div>
+        )}
         <ActivitySectionCardButtons
           activitySection={this.props.activitySection}
           addLevel={this.handleAddLevel}
