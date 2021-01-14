@@ -127,11 +127,6 @@ class LevelToken extends Component {
     progressBubbleLevel['levelNumber'] = this.props.scriptLevel.levelNumber;
     progressBubbleLevel['kind'] = this.props.scriptLevel.kind;
 
-    // TODO: (charlie) this is temporary backward compatibility with
-    // ProgressBubble, which will be updated to use strings for ids
-    // in an upcoming PR
-    progressBubbleLevel['id'] = parseInt(activeLevel.id);
-
     return progressBubbleLevel;
   };
 

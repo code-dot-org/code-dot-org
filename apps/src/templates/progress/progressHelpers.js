@@ -2,6 +2,7 @@ import {fullyLockedStageMapping} from '@cdo/apps/code-studio/stageLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {PUZZLE_PAGE_NONE} from './progressTypes';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -181,7 +182,10 @@ export const processedLevel = level => {
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus,
-    pageNumber: level.page_number,
+    pageNumber:
+      typeof level.page_number !== 'undefined'
+        ? level.page_number
+        : PUZZLE_PAGE_NONE,
     sublevels:
       level.sublevels && level.sublevels.map(level => processedLevel(level))
   };

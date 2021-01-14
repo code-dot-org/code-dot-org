@@ -95,7 +95,7 @@ DSL
   test 'summarize' do
     summary = @bubble_choice.summarize
     expected_summary = {
-      id: @bubble_choice.id,
+      id: @bubble_choice.id.to_s,
       display_name: @bubble_choice.display_name,
       description: @bubble_choice.description,
       name: @bubble_choice.name,
@@ -127,8 +127,8 @@ DSL
     expected_summary = [
       {
         # level_id and id are used by different features so keeping both
-        level_id: @sublevel1.id,
-        id: @sublevel1.id,
+        level_id: @sublevel1.id.to_s,
+        id: @sublevel1.id.to_s,
         display_name: @sublevel1.display_name,
         description: @sublevel1.bubble_choice_description,
         thumbnail_url: @sublevel1.thumbnail_url,
@@ -141,8 +141,8 @@ DSL
         status: 'not_tried'
       },
       {
-        level_id: @sublevel2.id,
-        id: @sublevel2.id,
+        level_id: @sublevel2.id.to_s,
+        id: @sublevel2.id.to_s,
         display_name: @sublevel2.name,
         description: @sublevel2.bubble_choice_description,
         thumbnail_url: nil,
