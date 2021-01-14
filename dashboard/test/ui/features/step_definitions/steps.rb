@@ -1408,6 +1408,8 @@ And(/^I join the section I already own$/) do
       Given I am on "#{@section_url}"
     }
   end
+end
+
 And(/^I attempt to join the section$/) do
   steps %Q{
     Given I am on "#{@section_url}"

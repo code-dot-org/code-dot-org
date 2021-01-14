@@ -34,6 +34,12 @@ const ALREADY_JOINED = {
   name: 'Test Section'
 };
 
+const ALREADY_OWNED = {
+  action: 'join',
+  result: 'section_owned',
+  id: 'ABCDEF'
+};
+
 describe('JoinSectionNotifications', () => {
   it('renders correct component when successfully join a section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...SUCCESSFUL_JOIN} />);
@@ -60,5 +66,10 @@ describe('JoinSectionNotifications', () => {
   it('renders correct component when already joined that section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...ALREADY_JOINED} />);
     expect(wrapper.find('JoinSectionExistsNotification')).to.have.lengthOf(1);
+  });
+
+  it('renders correct component when teacher already owns the section', () => {
+    let wrapper = shallow(<JoinSectionNotifications {...ALREADY_OWNED} />);
+    expect(wrapper.find('JoinSectionOwnedNotification')).to.have.lengthOf(1);
   });
 });
