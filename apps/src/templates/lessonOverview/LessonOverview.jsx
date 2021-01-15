@@ -130,7 +130,7 @@ class LessonOverview extends Component {
           />
         )}
         <h1>
-          {lesson.lockable
+          {lesson.hasLessonPlan
             ? lesson.displayName
             : i18n.lessonNumbered({
                 lessonNumber: lesson.position,
