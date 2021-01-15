@@ -263,7 +263,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 2, @lesson2.relative_position
     assert_equal 2, @lesson2.absolute_position
 
-    @update_params['lockable'] = true
+    @update_params['has_lesson_plan'] = true
 
     put :update, params: @update_params
 

@@ -336,10 +336,10 @@ class Script < ApplicationRecord
     candidate_level
   end
 
-  # Find the lockable or non-locakble stage based on its relative position.
+  # Find the lesson with or without lesson plan based on its relative position.
   # Raises `ActiveRecord::RecordNotFound` if no matching stage is found.
-  def stage_by_relative_position(position, lockable = false)
-    lessons.where(lockable: lockable).find_by!(relative_position: position)
+  def stage_by_relative_position(position, has_lesson_plan = false)
+    lessons.where(has_lesson_plan: has_lesson_plan).find_by!(relative_position: position)
   end
 
   # For all scripts, cache all related information (levels, etc),
@@ -823,7 +823,7 @@ class Script < ApplicationRecord
     script_levels.find(id: script_level_id.to_i)
   end
 
-  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
+  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, has_lesson_plan)
     relative_position ||= 1
     script_levels.find do |sl|
       # make sure we are checking the native properties of the script level
@@ -831,7 +831,7 @@ class Script < ApplicationRecord
       sl.position == puzzle_position.to_i &&
         !sl.bonus &&
         sl.lesson.relative_position == relative_position.to_i &&
-        sl.lesson.lockable? == lockable
+        sl.lesson.has_lesson_plan? == has_lesson_plan
     end
   end
 
@@ -1060,22 +1060,22 @@ class Script < ApplicationRecord
 
   # Lessons unfortunately have 2 position values:
   # 1. absolute_position: position within the Script
-  # 2. relative_position: position within the Script relative other lockable/non-lockable lessons
+  # 2. relative_position: position within the Script relative other lessons with or without lesson plans
   # This method updates the position values for all lessons in a script after
   # a lesson is saved
   def fix_lesson_positions
     reload
 
     total_count = 1
-    lockable_count = 1
-    non_lockable_count = 1
+    lesson_plan_count = 1
+    non_lesson_plan_count = 1
     lessons.each do |lesson|
       lesson.absolute_position = total_count
-      lesson.relative_position = lesson.lockable ? lockable_count : non_lockable_count
+      lesson.relative_position = lesson.has_lesson_plan ? lesson_plan_count : non_lesson_plan_count
       lesson.save!
 
       total_count += 1
-      lesson.lockable ? (lockable_count += 1) : (non_lockable_count += 1)
+      lesson.has_lesson_plan ? (lesson_plan_count += 1) : (non_lesson_plan_count += 1)
     end
   end
 
