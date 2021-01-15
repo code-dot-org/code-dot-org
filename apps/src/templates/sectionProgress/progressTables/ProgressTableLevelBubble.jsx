@@ -68,6 +68,130 @@ const styles = {
   }
 };
 
+function levelStyle(props) {
+  const {levelStatus, levelKind, disabled} = props;
+  return {
+    ...(!disabled && progressStyles.hoverStyle),
+    ...progressStyles.levelProgressStyle(levelStatus, levelKind, disabled)
+  };
+}
+
+function mainStyle(props) {
+  return {
+    ...styles.main,
+    ...levelStyle(props)
+  };
+}
+
+function largeStyle(props) {
+  const {disabled, bonus} = props;
+  return {
+    ...mainStyle(props),
+    ...styles.large,
+    ...(disabled && bonus && styles.bonusDisabled)
+  };
+}
+
+function largeContentStyle(props) {
+  const {bonus, paired} = props;
+  return {
+    ...progressStyles.flex,
+    ...styles.contents,
+    fontSize: paired || bonus ? 14 : 16
+  };
+}
+
+export function UnpluggedBubble(props) {
+  return (
+    <div
+      style={{
+        ...styles.main,
+        ...styles.unplugged,
+        ...levelStyle(props)
+      }}
+    >
+      <Content {...props} />
+    </div>
+  );
+}
+
+export function SmallCircle(props) {
+  return (
+    <div>
+      <div style={{...mainStyle(props), ...styles.smallCircle}}>
+        <Content {...props} />
+      </div>
+    </div>
+  );
+}
+
+function LargeBubble(props) {
+  const BubbleType = props.concept ? LargeDiamond : LargeCircle;
+  return (
+    <div style={styles.container}>
+      <BubbleType {...props} />
+    </div>
+  );
+}
+LargeBubble.propTypes = {
+  concept: PropTypes.bool
+};
+
+export function LargeCircle(props) {
+  return (
+    <div style={{...largeStyle(props), ...styles.largeCircle}}>
+      <div style={largeContentStyle(props)}>
+        <Content {...props} />
+      </div>
+    </div>
+  );
+}
+
+export function LargeDiamond(props) {
+  return (
+    <div style={{...largeStyle(props), ...styles.largeDiamond}}>
+      <div style={{...largeContentStyle(props), ...styles.diamondContents}}>
+        <Content {...props} />
+      </div>
+    </div>
+  );
+}
+
+export function Content(props) {
+  const {levelStatus, unplugged, bonus, paired, title} = props;
+  const locked = levelStatus === LevelStatus.locked;
+  return unplugged ? (
+    <span>{i18n.unpluggedActivity()}</span>
+  ) : locked ? (
+    <FontAwesome icon="lock" />
+  ) : paired ? (
+    <FontAwesome icon="users" />
+  ) : bonus ? (
+    <FontAwesome icon="flag-checkered" />
+  ) : title ? (
+    <span>{title}</span>
+  ) : null;
+}
+Content.propTypes = {
+  levelStatus: PropTypes.string,
+  unplugged: PropTypes.bool,
+  bonus: PropTypes.bool,
+  paired: PropTypes.bool,
+  title: PropTypes.string
+};
+
+export function LinkWrapper(props) {
+  return (
+    <a href={props.url} style={progressStyles.link}>
+      {props.children}
+    </a>
+  );
+}
+LinkWrapper.propTypes = {
+  url: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired
+};
+
 class ProgressTableLevelBubble extends React.PureComponent {
   static propTypes = {
     levelStatus: PropTypes.string,
@@ -82,105 +206,19 @@ class ProgressTableLevelBubble extends React.PureComponent {
     url: PropTypes.string.isRequired
   };
 
-  levelStyle() {
-    const {levelStatus, levelKind, disabled} = this.props;
-    return {
-      ...(!disabled && progressStyles.hoverStyle),
-      ...progressStyles.levelProgressStyle(levelStatus, levelKind, disabled)
-    };
-  }
-
-  mainStyle() {
-    return {
-      ...styles.main,
-      ...this.levelStyle()
-    };
-  }
-
-  largeStyle() {
-    const {disabled, bonus, concept} = this.props;
-    return {
-      ...this.mainStyle(),
-      ...styles.large,
-      ...((concept && styles.largeDiamond) || styles.largeCircle),
-      ...(disabled && bonus && styles.bonusDisabled)
-    };
-  }
-
-  renderUnplugged() {
-    return (
-      <div
-        style={{
-          ...styles.main,
-          ...styles.unplugged,
-          ...this.levelStyle()
-        }}
-      >
-        {i18n.unpluggedActivity()}
-      </div>
-    );
-  }
-
-  renderSmallBubble() {
-    const {title} = this.props;
-    return (
-      <div>
-        <div style={{...this.mainStyle(), ...styles.smallCircle}}>{title}</div>
-      </div>
-    );
-  }
-
-  content() {
-    const {levelStatus, bonus, paired, title} = this.props;
-    const locked = levelStatus === LevelStatus.locked;
-    return locked ? (
-      <FontAwesome icon="lock" />
-    ) : paired ? (
-      <FontAwesome icon="users" />
-    ) : bonus ? (
-      <FontAwesome icon="flag-checkered" />
-    ) : title ? (
-      title
-    ) : (
-      ''
-    );
-  }
-
-  renderLargeBubble() {
-    const {bonus, paired, concept} = this.props;
-    return (
-      <div style={styles.container}>
-        <div style={this.largeStyle()}>
-          <div
-            style={{
-              ...progressStyles.flex,
-              ...styles.contents,
-              ...(concept && styles.diamondContents),
-              fontSize: paired || bonus ? 14 : 16
-            }}
-          >
-            {this.content()}
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   render() {
-    const bubble = this.props.smallBubble
-      ? this.renderSmallBubble()
+    const BubbleType = this.props.smallBubble
+      ? SmallCircle
       : this.props.unplugged
-      ? this.renderUnplugged()
-      : this.renderLargeBubble();
+      ? UnpluggedBubble
+      : LargeBubble;
+
+    const bubble = <BubbleType {...this.props} />;
 
     if (this.props.disabled) {
       return bubble;
     }
-    return (
-      <a href={this.props.url} style={progressStyles.link}>
-        {bubble}
-      </a>
-    );
+    return <LinkWrapper {...this.props}>{bubble}</LinkWrapper>;
   }
 }
 
