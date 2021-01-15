@@ -616,7 +616,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     existing_summary = existing_script_level.summarize_for_lesson_edit
     assert_equal 1, existing_summary[:activitySectionPosition]
-    assert_equal existing_survey.id, existing_summary[:activeId]
+    assert_equal existing_survey.id.to_s, existing_summary[:activeId]
     existing_summary[:assessment] = false
 
     survey_to_add = create :level_group, name: 'survey-to-add'

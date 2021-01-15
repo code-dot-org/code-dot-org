@@ -1,0 +1,12 @@
+name 'courseF_sprites_freeplay'
+editor_experiment ''
+display_name 'Sprites - Free Play'
+description 'It\'s your turn to create whatever you want! What kind of project will you make?'
+
+sublevels
+level 'courseF_sprites_freeplay_food'
+level 'courseF_sprites_freeplay_aquatic'
+level 'courseF_sprites_freeplay_air'
+level 'courseF_sprites_freeplay_space'
+level 'courseF_sprites_freeplay_animals'
+level 'courseF_sprites_freeplay_blank'

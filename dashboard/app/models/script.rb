@@ -83,6 +83,7 @@ class Script < ApplicationRecord
           lessons: [
             {lesson_activities: :activity_sections},
             :resources,
+            :vocabularies,
             :objectives
           ]
         },
@@ -1350,7 +1351,6 @@ class Script < ApplicationRecord
       is_course: is_course?,
       background: background,
       is_migrated: is_migrated?,
-      updatedAt: updated_at,
       scriptPath: script_path(self),
       showCalendar: show_calendar
     }
