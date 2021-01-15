@@ -1308,6 +1308,7 @@ FactoryGirl.define do
     association :teacher
     association :level
     association :script_level
+    association :script
   end
 
   factory :teacher_score do
