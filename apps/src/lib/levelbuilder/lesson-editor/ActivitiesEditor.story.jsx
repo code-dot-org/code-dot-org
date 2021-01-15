@@ -23,10 +23,18 @@ const createStore = () => {
 export default storybook => {
   storybook.storiesOf('ActivitiesEditor', module).addStoryTable([
     {
-      name: 'ActivitiesEditor',
+      name: 'ActivitiesEditor For Lesson With Lesson Plan',
       story: () => (
         <Provider store={createStore()}>
-          <ActivitiesEditor />
+          <ActivitiesEditor hasLessonPlan={true} />
+        </Provider>
+      )
+    },
+    {
+      name: 'ActivitiesEditor For Lesson Without Lesson Plan',
+      story: () => (
+        <Provider store={createStore()}>
+          <ActivitiesEditor hasLessonPlan={false} />
         </Provider>
       )
     }
