@@ -436,7 +436,7 @@ class ApiControllerTest < ActionController::TestCase
 
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
-      assert_equal true, user_level.submitted?
+      assert_equal false, user_level.submitted?
       assert_equal false, user_level.readonly_answers?
       assert_nil user_level.unlocked_at
       # update_lockable_state does not modify updated_at
@@ -456,7 +456,7 @@ class ApiControllerTest < ActionController::TestCase
 
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
-      assert_equal true, user_level.submitted?
+      assert_equal false, user_level.submitted?
       assert_equal true, user_level.readonly_answers?
       assert_not_nil user_level.unlocked_at
       assert_equal expected_updated_at, user_level.updated_at
@@ -494,7 +494,7 @@ class ApiControllerTest < ActionController::TestCase
 
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
-      assert_equal false, user_level.submitted?
+      assert_equal true, user_level.submitted?
       assert_equal false, user_level.readonly_answers?
       assert_not_nil user_level.unlocked_at
       assert_equal expected_updated_at, user_level.updated_at
