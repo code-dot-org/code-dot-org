@@ -10420,6 +10420,416 @@
       }
     }
   ],
+  "vocabularies": [
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "seeding_key": {
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see if it is true before allowing an action.",
+      "seeding_key": {
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions.",
+      "seeding_key": {
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "key": "Condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see if it is true before allowing an action.",
+      "seeding_key": {
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions.",
+      "seeding_key": {
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "key": "While Loop",
+      "word": "While Loop",
+      "definition": "A loop that continues to repeat while a condition is true.",
+      "seeding_key": {
+        "vocabulary.key": "While Loop"
+      }
+    },
+    {
+      "key": "Behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "seeding_key": {
+        "vocabulary.key": "Behavior"
+      }
+    },
+    {
+      "key": "Sprite",
+      "word": "Sprite",
+      "definition": "A graphic on the screen with a location, size, and appearance.",
+      "seeding_key": {
+        "vocabulary.key": "Sprite"
+      }
+    },
+    {
+      "key": "Event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "seeding_key": {
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "key": "Copyright",
+      "word": "Copyright",
+      "definition": "the exclusive legal right to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same",
+      "seeding_key": {
+        "vocabulary.key": "Copyright"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Function",
+      "word": "Function",
+      "definition": "A piece of code that you can easily call over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Function"
+      }
+    },
+    {
+      "key": "Function",
+      "word": "Function",
+      "definition": "A piece of code that you can easily call over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Function"
+      }
+    },
+    {
+      "key": "Function",
+      "word": "Function",
+      "definition": "A piece of code that you can easily call over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Function"
+      }
+    },
+    {
+      "key": "Function",
+      "word": "Function",
+      "definition": "A piece of code that you can easily call over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Function"
+      }
+    },
+    {
+      "key": "Define",
+      "word": "Define",
+      "definition": "Figure out the details of the problems that you are trying to solve",
+      "seeding_key": {
+        "vocabulary.key": "Define"
+      }
+    },
+    {
+      "key": "Prepare",
+      "word": "Prepare",
+      "definition": "Research, plan, and acquire materials for the activity you are about to do",
+      "seeding_key": {
+        "vocabulary.key": "Prepare"
+      }
+    },
+    {
+      "key": "Reflect",
+      "word": "Reflect",
+      "definition": "Carefully think back on something with the intention of improving the outcome in the future",
+      "seeding_key": {
+        "vocabulary.key": "Reflect"
+      }
+    },
+    {
+      "key": "Try",
+      "word": "Try",
+      "definition": "Attempt to do something",
+      "seeding_key": {
+        "vocabulary.key": "Try"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in the Maze",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in the Maze",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in the Maze",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in the Maze",
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming and Loops with the Artist",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming and Loops with the Artist",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "While Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "vocabulary.key": "Behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "vocabulary.key": "Sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Sharing",
+        "vocabulary.key": "Copyright"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "vocabulary.key": "Function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "vocabulary.key": "Function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Harvester",
+        "vocabulary.key": "Function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Artist",
+        "vocabulary.key": "Function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "Define"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "Prepare"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "Reflect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "Try"
+      }
+    }
+  ],
   "objectives": [
     {
       "key": "b4e8f362-da15-48c9-98ab-ea7a3f586810",

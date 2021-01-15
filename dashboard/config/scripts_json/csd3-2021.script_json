@@ -17110,6 +17110,234 @@
       }
     }
   ],
+  "vocabularies": [
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Parameter",
+      "word": "Parameter",
+      "definition": "An extra piece of information passed to a function to customize it for a specific need",
+      "seeding_key": {
+        "vocabulary.key": "Parameter"
+      }
+    },
+    {
+      "key": "Variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "seeding_key": {
+        "vocabulary.key": "Variable"
+      }
+    },
+    {
+      "key": "Dot notation",
+      "word": "Dot notation",
+      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
+      "seeding_key": {
+        "vocabulary.key": "Dot notation"
+      }
+    },
+    {
+      "key": "Property",
+      "word": "Property",
+      "definition": "A label for a characteristic of a sprite, such as its location and appearance",
+      "seeding_key": {
+        "vocabulary.key": "Property"
+      }
+    },
+    {
+      "key": "Sprite",
+      "word": "Sprite",
+      "definition": "A character on the screen with properties that describe its location, movement, and look.",
+      "seeding_key": {
+        "vocabulary.key": "Sprite"
+      }
+    },
+    {
+      "key": "Property",
+      "word": "Property",
+      "definition": "A label for a characteristic of a sprite, such as its location and appearance",
+      "seeding_key": {
+        "vocabulary.key": "Property"
+      }
+    },
+    {
+      "key": "Boolean Expression",
+      "word": "Boolean Expression",
+      "definition": "in programming, an expression that evaluates to True or False. ",
+      "seeding_key": {
+        "vocabulary.key": "Boolean Expression"
+      }
+    },
+    {
+      "key": "Condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see whether it is true before deciding to take an action.",
+      "seeding_key": {
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run when certain conditions are true.",
+      "seeding_key": {
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run when certain conditions are true.",
+      "seeding_key": {
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "key": "Abstraction",
+      "word": "Abstraction",
+      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
+      "seeding_key": {
+        "vocabulary.key": "Abstraction"
+      }
+    },
+    {
+      "key": "Abstraction",
+      "word": "Abstraction",
+      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
+      "seeding_key": {
+        "vocabulary.key": "Abstraction"
+      }
+    },
+    {
+      "key": "Function",
+      "word": "Function",
+      "definition": "A named bit of programming instructions.",
+      "seeding_key": {
+        "vocabulary.key": "Function"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "vocabulary.key": "Parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "vocabulary.key": "Variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "vocabulary.key": "Dot notation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "vocabulary.key": "Property"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "vocabulary.key": "Sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "vocabulary.key": "Property"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "Boolean Expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "vocabulary.key": "Abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "vocabulary.key": "Abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "vocabulary.key": "Function"
+      }
+    }
+  ],
   "objectives": [
     {
       "key": "b2682f90-e600-48aa-aef4-def3798b261d",
