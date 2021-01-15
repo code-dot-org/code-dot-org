@@ -267,37 +267,39 @@ export default connect(
     }
 
     displayOutputToConsole() {
-      if (this.props.logOutput.size > 0) {
-        return this.props.logOutput.map((rowValue, i) => {
-          if ('function' === typeof rowValue.toJS) {
-            rowValue = rowValue.toJS();
-          }
-          if (rowValue.input) {
-            return <div key={i}>&gt; {rowValue.input}</div>;
-          } else if (rowValue.skipInspector) {
-            return rowValue.output;
-          } else if (this.isValidOutput(rowValue)) {
-            if (rowValue.fromConsoleLog) {
-              return (
-                <Inspector
-                  theme={inspectorTheme}
-                  key={i}
-                  data={rowValue.output}
-                />
-              );
-            } else {
-              return (
-                <div key={i}>
-                  &lt;{' '}
-                  <div style={style.inspector}>
-                    <Inspector theme={inspectorTheme} data={rowValue.output} />
-                  </div>
-                </div>
-              );
-            }
-          }
-        });
+      if (this.props.logOutput.size <= 0) {
+        return;
       }
+
+      return this.props.logOutput.map((rowValue, i) => {
+        if ('function' === typeof rowValue.toJS) {
+          rowValue = rowValue.toJS();
+        }
+        if (rowValue.input) {
+          return <div key={i}>&gt; {rowValue.input}</div>;
+        } else if (rowValue.skipInspector) {
+          return rowValue.output;
+        } else if (this.isValidOutput(rowValue)) {
+          if (rowValue.fromConsoleLog) {
+            return (
+              <Inspector
+                theme={inspectorTheme}
+                key={i}
+                data={rowValue.output}
+              />
+            );
+          } else {
+            return (
+              <div key={i}>
+                &lt;{' '}
+                <div style={style.inspector}>
+                  <Inspector theme={inspectorTheme} data={rowValue.output} />
+                </div>
+              </div>
+            );
+          }
+        }
+      });
     }
 
     render() {
