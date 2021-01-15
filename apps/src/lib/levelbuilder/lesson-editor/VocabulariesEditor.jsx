@@ -124,6 +124,7 @@ class VocabulariesEditor extends Component {
                   <td style={styles.actionsColumn}>
                     <div
                       style={styles.remove}
+                      className={'unit-test-remove-vocabulary'}
                       onMouseDown={() =>
                         this.setState({
                           confirmRemovalDialogOpen: true,
