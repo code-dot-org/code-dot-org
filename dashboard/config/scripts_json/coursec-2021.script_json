@@ -10054,6 +10054,388 @@
       }
     }
   ],
+  "vocabularies": [
+    {
+      "key": "Algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "seeding_key": {
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "seeding_key": {
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Sequencing",
+      "word": "Sequencing",
+      "definition": "Putting commands in correct order so computers can read the commands.",
+      "seeding_key": {
+        "vocabulary.key": "Sequencing"
+      }
+    },
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "seeding_key": {
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "seeding_key": {
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "key": "Binary",
+      "word": "Binary",
+      "definition": "A way of representing information using only two options.",
+      "seeding_key": {
+        "vocabulary.key": "Binary"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see if it is true before allowing an action.",
+      "seeding_key": {
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions.",
+      "seeding_key": {
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "seeding_key": {
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "key": "Event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "seeding_key": {
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "key": "Event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "seeding_key": {
+        "vocabulary.key": "Event"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "vocabulary.key": "Sequencing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Collector",
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Collector",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Collector",
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "vocabulary.key": "Binary"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looking Ahead",
+        "vocabulary.key": "Condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looking Ahead",
+        "vocabulary.key": "Conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "vocabulary.key": "Event"
+      }
+    }
+  ],
   "objectives": [
     {
       "key": "1b4ddab6-f8a7-436e-929d-8ea87e41575f",
