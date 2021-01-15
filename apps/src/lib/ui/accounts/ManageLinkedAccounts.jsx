@@ -319,8 +319,8 @@ const styles = {
   },
   tooltipOffset: {
     left:
-      CELL_WIDTH / 2 -
-      (tableLayoutStyles.cell.padding + BUTTON_PADDING + BUTTON_WIDTH / 2)
+      CELL_WIDTH / 2 - // This moves the tooltip to be in between the 2nd and 3rd columns of the table
+      (tableLayoutStyles.cell.padding + BUTTON_PADDING + BUTTON_WIDTH / 2) // This centers the tooltip over the button in the 3rd column
   },
   tooltip: {
     width: BUTTON_WIDTH * 2
