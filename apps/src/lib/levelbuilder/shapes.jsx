@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export const levelShape = PropTypes.shape({
   // id of level
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   //name of level
   name: PropTypes.string.isRequired,
   //url for editing level
@@ -22,14 +22,14 @@ export const levelShape = PropTypes.shape({
 
 export const scriptLevelShape = PropTypes.shape({
   // script level id
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 
   // The position of this level within the lesson in the UI.
   position: PropTypes.number.isRequired,
 
   // if only one level the id for that level
   // if multiple variants the level id for the active variant
-  activeId: PropTypes.number.isRequired,
+  activeId: PropTypes.string.isRequired,
   // all variants of this level
   levels: PropTypes.arrayOf(levelShape).isRequired,
 
@@ -89,8 +89,8 @@ export const vocabularyShape = PropTypes.shape({
 
 export const levelShapeForScript = PropTypes.shape({
   position: PropTypes.number,
-  activeId: PropTypes.number,
-  ids: PropTypes.arrayOf(PropTypes.number),
+  activeId: PropTypes.string,
+  ids: PropTypes.arrayOf(PropTypes.string),
   kind: PropTypes.string,
   skin: PropTypes.string,
   videoKey: PropTypes.string,
