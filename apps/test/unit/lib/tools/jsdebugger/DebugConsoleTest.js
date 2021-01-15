@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import DebugConsole from '@cdo/apps/lib/tools/jsdebugger/DebugConsole';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
