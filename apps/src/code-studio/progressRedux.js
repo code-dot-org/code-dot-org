@@ -297,18 +297,18 @@ export const getLevelResult = level => {
 };
 
 /**
- * Does some processing of our passed in stages, namely
+ * Does some processing of our passed in lesson, namely
  * - Removes 'hidden' field
- * - Adds 'stageNumber' field for non-lockable, non-PLC stages
+ * - Adds 'stageNumber' field for lessons with lesson plans, non-PLC stages
  */
 export function processedStages(stages, isPlc) {
-  let numberOfNonLockableStages = 0;
+  let numLessonsWithLessonPlan = 0;
 
   return stages.map(stage => {
     let stageNumber;
-    if (!isPlc && !stage.lockable) {
-      numberOfNonLockableStages++;
-      stageNumber = numberOfNonLockableStages;
+    if (!isPlc && stage.hasLessonPlan) {
+      numLessonsWithLessonPlan++;
+      stageNumber = numLessonsWithLessonPlan;
     }
     return {
       ..._.omit(stage, 'hidden'),
