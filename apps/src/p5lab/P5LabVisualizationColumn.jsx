@@ -66,9 +66,6 @@ class P5LabVisualizationColumn extends React.Component {
     this.spritelabPauseExperiment = experiments.isEnabled(
       experiments.SPRITELAB_PAUSE
     );
-    this.spritelabInputExperiment = experiments.isEnabled(
-      experiments.SPRITELAB_INPUT
-    );
   }
 
   // Cache app-space mouse coordinates, which we get from the
@@ -198,7 +195,7 @@ class P5LabVisualizationColumn extends React.Component {
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
-          {this.spritelabInputExperiment && <SpritelabInput />}
+          <SpritelabInput />
         </div>
 
         <GameButtons>
