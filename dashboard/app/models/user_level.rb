@@ -36,8 +36,6 @@ class UserLevel < ApplicationRecord
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
 
-  validate :readonly_requires_submitted
-
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
   scope :attempted, -> {where.not(best_result: nil)}
