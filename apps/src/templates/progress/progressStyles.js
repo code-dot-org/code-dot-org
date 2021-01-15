@@ -44,6 +44,9 @@ const assessmentStatusStyle = {
 };
 
 const levelStatusStyle = {
+  [LevelStatus.attempted]: {
+    borderColor: color.level_perfect
+  },
   [LevelStatus.perfect]: {
     borderColor: color.level_perfect,
     backgroundColor: color.level_perfect,
@@ -84,10 +87,6 @@ const levelStatusStyle = {
   [LevelStatus.review_accepted]: {
     color: color.white,
     backgroundColor: color.level_perfect
-  },
-  [LevelStatus.locked]: {
-    // Don't want our green border even though status isn't not_tried
-    borderColor: color.lighter_gray
   }
 };
 
@@ -109,7 +108,8 @@ export const levelProgressStyle = (levelStatus, levelKind, disabled) => {
   if (
     (disabled && levelStatus !== LevelStatus.submitted) ||
     !levelStatus ||
-    levelStatus === levelStatus.not_tried
+    levelStatus === levelStatus.not_tried ||
+    levelStatus === LevelStatus.locked
   ) {
     return style;
   }
