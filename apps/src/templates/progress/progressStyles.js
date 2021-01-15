@@ -17,16 +17,45 @@ export const hoverStyle = {
   }
 };
 
-const statusStyle = {
+const assessmentStatusStyle = {
+  [LevelStatus.attempted]: {
+    borderColor: color.level_submitted
+  },
+  [LevelStatus.submitted]: {
+    borderColor: color.level_submitted,
+    backgroundColor: color.level_submitted,
+    color: color.white
+  },
+  [LevelStatus.completed_assessment]: {
+    borderColor: color.level_submitted,
+    backgroundColor: color.level_submitted,
+    color: color.white
+  },
   [LevelStatus.perfect]: {
+    borderColor: color.level_submitted,
+    backgroundColor: color.level_submitted,
+    color: color.white
+  },
+  [LevelStatus.readonly]: {
+    borderColor: color.level_submitted,
+    backgroundColor: color.level_submitted,
+    color: color.white
+  }
+};
+
+const levelStatusStyle = {
+  [LevelStatus.perfect]: {
+    borderColor: color.level_perfect,
     backgroundColor: color.level_perfect,
     color: color.white
   },
   [LevelStatus.free_play_complete]: {
+    borderColor: color.level_perfect,
     backgroundColor: color.level_perfect,
     color: color.white
   },
   [LevelStatus.passed]: {
+    borderColor: color.level_perfect,
     backgroundColor: color.level_passed
   },
   // Note: There are submittable levels that are not assessments.
@@ -77,21 +106,21 @@ export const levelProgressStyle = (levelStatus, levelKind, disabled) => {
 
   // We don't return early for disabled assessments that have been submitted
   // so that they still show their submitted status.
-  if ((disabled && levelStatus !== LevelStatus.submitted) || !levelStatus) {
+  if (
+    (disabled && levelStatus !== LevelStatus.submitted) ||
+    !levelStatus ||
+    levelStatus === levelStatus.not_tried
+  ) {
     return style;
   }
 
-  if (levelStatus !== LevelStatus.not_tried) {
-    style.borderColor =
-      levelKind === LevelKind.assessment
-        ? color.level_submitted
-        : color.level_perfect;
-  }
+  const statusStyle =
+    levelKind === LevelKind.assessment
+      ? assessmentStatusStyle[levelStatus]
+      : levelStatusStyle[levelStatus];
 
-  style = {
+  return {
     ...style,
-    ...statusStyle[levelStatus]
+    ...statusStyle
   };
-
-  return style;
 };
