@@ -79,10 +79,10 @@ Scenario: Lock settings for students
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
-  Then I verify progress for stage 31 level 1 is "attempted_assessment"
-  Then I verify progress for stage 31 level 2 is "attempted_assessment"
-  Then I verify progress for stage 31 level 3 is "attempted_assessment"
-  Then I verify progress for stage 31 level 4 is "attempted_assessment"
+  Then I verify progress for stage 31 level 1 is "perfect_assessment"
+  Then I verify progress for stage 31 level 2 is "perfect_assessment"
+  Then I verify progress for stage 31 level 3 is "perfect_assessment"
+  Then I verify progress for stage 31 level 4 is "perfect_assessment"
 
   When I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/4"
   And I wait until element "h2:contains(Pre-survey)" is visible
