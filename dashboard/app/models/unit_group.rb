@@ -168,6 +168,11 @@ class UnitGroup < ApplicationRecord
     scripts_to_delete = default_unit_group_units.map(&:script).map(&:name) - new_scripts
     scripts_to_delete -= alternate_scripts.map {|hash| hash['alternate_script']}
 
+    if scripts_to_delete.any? {|s| Script.find_by_name!(s).prevent_course_version_change?}
+      errors.add(:base, 'Cannot delete scripts that have resources or vocabulary')
+      return false
+    end
+
     new_scripts.each_with_index do |script_name, index|
       script = Script.find_by_name!(script_name)
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: script) do |ugu|

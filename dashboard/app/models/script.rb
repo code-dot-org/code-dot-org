@@ -114,6 +114,8 @@ class Script < ApplicationRecord
 
   validate :set_is_migrated_only_for_migrated_scripts
 
+  validate :course_version_not_changed, if: :prevent_course_version_change?
+
   include SerializedProperties
 
   after_save :generate_plc_objects
@@ -124,6 +126,14 @@ class Script < ApplicationRecord
     if !!is_migrated && !hidden
       errors.add(:is_migrated, "Can't be set on a course that is visible")
     end
+  end
+
+  def prevent_course_version_change?
+    lessons.any? {|l| l.resources.count > 0} || lessons.any? {|l| l.resources.count > 0}
+  end
+
+  def course_version_not_changed
+    !(version_year_changed || is_course_changed || family_name_changed || curriculum_umbrella_changed)
   end
 
   def self.script_directory
