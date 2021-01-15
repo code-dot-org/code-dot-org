@@ -84,12 +84,14 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   test 'retrieves comment on requested level when teacher has given student feedback on multiple levels' do
     level2 = create :level
     script_level2 = create :script_level
+    script2 = script_level2.script
     level3 = create :level
     script_level3 = create :script_level
+    script3 = script_level3.script
 
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, level2, script_level2, COMMENT2, PERFORMANCE2)
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, level3, script_level3, COMMENT3, PERFORMANCE3)
+    teacher_sign_in_and_give_feedback(@teacher, @student, script2, level2, script_level2, COMMENT2, PERFORMANCE2)
+    teacher_sign_in_and_give_feedback(@teacher, @student, script3, level3, script_level3, COMMENT3, PERFORMANCE3)
     get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: level2.id, teacher_id: @teacher.id}
 
     assert_equal COMMENT2, parsed_response['comment']
