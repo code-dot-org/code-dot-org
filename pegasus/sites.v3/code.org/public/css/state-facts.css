@@ -61,3 +61,13 @@ li>ul {
   color: dimgray;
   font-size: 18px;
 }
+.footer-header {
+  font-size: 11px;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+.footer-list {
+  font-size: 9.5px;
+  padding-inline-start: 15px;
+  margin: 0px;
+}
