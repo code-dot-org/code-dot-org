@@ -131,7 +131,7 @@ class FoormEditor extends React.Component {
   fillFormWithLibraryItems = _.debounce(
     function() {
       $.ajax({
-        url: '/api/v1/pd/foorm/form_with_library_items',
+        url: '/api/v1/pd/foorm/form/form_with_library_items',
         type: 'post',
         contentType: 'application/json',
         processData: false,
