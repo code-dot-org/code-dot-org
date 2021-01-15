@@ -14,7 +14,8 @@ const assessmentStatuses = [
   LevelStatus.not_tried,
   LevelStatus.attempted,
   LevelStatus.submitted,
-  LevelStatus.completed_assessment
+  LevelStatus.completed_assessment,
+  LevelStatus.perfect
 ];
 
 const wrapperStyle = {
