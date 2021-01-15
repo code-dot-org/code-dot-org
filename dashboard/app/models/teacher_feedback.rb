@@ -33,6 +33,13 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :level
   belongs_to :script_level
   belongs_to :teacher, class_name: 'User'
+  validate :validate_script_and_script_level
+
+  def validate_script_and_script_level
+    if script_level.script_id != script_id
+      errors.add(:script_id, 'script_id does not match script_level.script_id')
+    end
+  end
 
   def self.get_student_level_feedback(student_id, level_id, teacher_id)
     where(
