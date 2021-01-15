@@ -160,7 +160,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = create_script_level_with_ancestors({levels: [bubble_choice]})
 
     expected_summary = {
-      id: bubble_choice.id,
+      id: bubble_choice.id.to_s,
       contained: false,
       submitLevel: false,
       paired: nil,

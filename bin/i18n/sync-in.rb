@@ -21,6 +21,7 @@ def sync_in
   localize_project_content
   localize_block_content
   localize_animation_library
+  localize_shared_functions
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
@@ -286,6 +287,19 @@ def localize_animation_library
   File.open(spritelab_animation_source_file, "w") do |file|
     animation_strings = ManifestBuilder.new({spritelab: true, silent: true}).get_animation_strings
     file.write(JSON.pretty_generate(animation_strings))
+  end
+end
+
+def localize_shared_functions
+  puts "Preparing shared functions"
+
+  shared_functions = SharedBlocklyFunction.where(level_type: 'GamelabJr').pluck(:name)
+  hash = {}
+  shared_functions.sort.each do |func|
+    hash[func] = func
+  end
+  File.open("i18n/locales/source/dashboard/shared_functions.yml", "w+") do |f|
+    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
   end
 end
 
