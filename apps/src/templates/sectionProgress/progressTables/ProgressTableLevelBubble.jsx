@@ -101,7 +101,7 @@ function largeContentStyle(props) {
   };
 }
 
-export function UnpluggedBubble(props) {
+function UnpluggedBubble(props) {
   return (
     <div
       style={{
@@ -115,7 +115,7 @@ export function UnpluggedBubble(props) {
   );
 }
 
-export function SmallCircle(props) {
+function SmallCircle(props) {
   return (
     <div>
       <div style={{...mainStyle(props), ...styles.smallCircle}}>
@@ -137,7 +137,7 @@ LargeBubble.propTypes = {
   concept: PropTypes.bool
 };
 
-export function LargeCircle(props) {
+function LargeCircle(props) {
   return (
     <div style={{...largeStyle(props), ...styles.largeCircle}}>
       <div style={largeContentStyle(props)}>
@@ -147,7 +147,7 @@ export function LargeCircle(props) {
   );
 }
 
-export function LargeDiamond(props) {
+function LargeDiamond(props) {
   return (
     <div style={{...largeStyle(props), ...styles.largeDiamond}}>
       <div style={{...largeContentStyle(props), ...styles.diamondContents}}>
@@ -157,7 +157,7 @@ export function LargeDiamond(props) {
   );
 }
 
-export function Content(props) {
+function Content(props) {
   const {levelStatus, unplugged, bonus, paired, title} = props;
   const locked = levelStatus === LevelStatus.locked;
   return unplugged ? (
@@ -180,7 +180,7 @@ Content.propTypes = {
   title: PropTypes.string
 };
 
-export function LinkWrapper(props) {
+function LinkWrapper(props) {
   return (
     <a href={props.url} style={progressStyles.link}>
       {props.children}
@@ -223,3 +223,14 @@ class ProgressTableLevelBubble extends React.PureComponent {
 }
 
 export default Radium(ProgressTableLevelBubble);
+
+export const subComps = IN_UNIT_TEST
+  ? {
+      UnpluggedBubble,
+      SmallCircle,
+      LargeCircle,
+      LargeDiamond,
+      Content,
+      LinkWrapper
+    }
+  : {};
