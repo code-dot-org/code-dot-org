@@ -602,7 +602,9 @@ Applab.init = function(config) {
     // Set designModeViz contents after it is created in configureDom()
     // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || '');
-    Applab.autogenerateML();
+    if (experiments.isEnabled(experiments.APPLAB_ML)) {
+      Applab.autogenerateML();
+    }
   };
 
   config.afterEditorReady = function() {
