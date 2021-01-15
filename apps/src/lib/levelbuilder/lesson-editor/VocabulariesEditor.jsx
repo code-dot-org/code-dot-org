@@ -99,7 +99,9 @@ class VocabulariesEditor extends Component {
           Select a vocabulary word to add
           <SearchBox
             onSearchSelect={e => this.props.addVocabulary(e.vocabulary)}
-            courseVersionId={this.props.courseVersionId}
+            additionalQueryParams={{
+              courseVersionId: this.props.courseVersionId
+            }}
             searchUrl={'vocabularysearch'}
             constructOptions={this.constructSearchOptions}
           />
