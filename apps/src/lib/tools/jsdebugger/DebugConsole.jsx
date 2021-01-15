@@ -214,9 +214,10 @@ export default connect(
       this.props.appendLog(output);
     }
 
-    componentDidUpdate() {
-      // here
-      this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
+    componentDidUpdate(prevProps) {
+      if (prevProps.logOutput.size !== this.props.logOutput.size) {
+        this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
+      }
     }
 
     clearDebugInput() {
