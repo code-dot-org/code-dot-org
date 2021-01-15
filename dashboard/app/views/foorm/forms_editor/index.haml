@@ -1,2 +1,6 @@
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/foorm/forms_editor/index.js'), data: @script_data}
+  = stylesheet_link_tag 'css/foorm_editor', media: 'all'
+
 #editor-container
-  -# to be populated by React
+  -# populated by React
