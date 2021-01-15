@@ -17,6 +17,11 @@ Dashboard::Application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # Use the schema cache dump to avoid forcing every front end to fetch the schema from
+  # the database. (Fetching the schema adds undesirable load and can trigger expensive
+  # recomputations of schema statistics.)
+  config.use_schema_cache_dump = false
+
   # Always reload static js and css.
   config.public_file_server.headers = {'Cache-Control' => 'must-revalidate, max-age=0'}
 
