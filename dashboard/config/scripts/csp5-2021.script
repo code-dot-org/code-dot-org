@@ -71,23 +71,23 @@ level 'U5 Loops Make Wallpaper App 2020_2021', progression: 'Make the Lock Scree
 lesson_group 'csp_traversals', display_name: 'Traversals'
 lesson 'Traversals Explore', display_name: 'Traversals Explore'
 level 'Processing Lists with Loops_2021', progression: 'Introduction to Traversal'
-level 'U5 L09 Traversals Exit Ticket_2021', progression: 'Check For Understanding', assessment: true
+level 'U5 L09 Traversals Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
 
 lesson 'Traversals Investigate', display_name: 'Traversals Investigate'
 level 'U5 Traversals Investigate Mile Tracker Modify_2021', progression: 'Mile Tracker Investigation'
-level 'CSP U5L10 Traversals Investigate_2021', progression: 'Intro to Datasets'
-level 'U5 Traversals Investigate Dog Finder Modify_2021', progression: 'Dog Finder Investigation'
+level 'CSP U5L10 Traversals Investigate_2021', progression: 'Data Tab Investigation'
+level 'U5 Traversals Investigate Dog Finder Modify_2021', progression: 'Random Dog Picker Investigation'
 level 'List Filter Pattern_2021', progression: 'Traversal Patterns'
 level 'List Reduce Pattern_2021', progression: 'Traversal Patterns'
 level 'CSP U5L10 CFU Traversals_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Traversals Practice', display_name: 'Traversals Practice'
-level 'U5 Traversals Practice Part 1_2021', progression: 'Traversal Practice'
-level 'U5 Traversals Practice Part 2_2021', progression: 'Traversal Practice'
 level 'U5 Traversals Practice Part 3_2021', progression: 'Traversal Practice'
-level 'U5 Traversals Practice Part 4_2021', progression: 'Filter and Reduce Practice'
-level 'U5 Traversals Practice Part 5_2021', progression: 'Filter and Reduce Practice'
-level 'U5 Traversals Practice Part 6_2021', progression: 'Filter and Reduce Practice'
+level 'U5 Traversals Practice Part 2_2021', progression: 'Traversal Practice'
+level 'U5 Traversals Practice Part 1_2021', progression: 'Traversal Practice'
+level 'U5 Traversals Practice Part 4_2021', progression: 'Reduce and Filter Practice'
+level 'U5 Traversals Practice Part 5_2021', progression: 'Reduce and Filter Practice'
+level 'U5 Traversals Practice Part 6_2021', progression: 'Reduce and Filter Practice'
 level 'U5 Traversals Practice Part 7_2021', progression: 'App Practice'
 level 'U5L11 CFU For Each Psuedocode_2021', progression: 'Check For Understanding: AP Practice', assessment: true
 

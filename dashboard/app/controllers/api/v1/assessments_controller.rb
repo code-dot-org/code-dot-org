@@ -52,7 +52,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       end
 
       assessments[level_group.id] = {
-        id: level_group.id,
+        id: level_group.id.to_s,
         questions: questions,
         name: script_level.lesson.localized_title,
       }

@@ -12,7 +12,7 @@ export default storybook => {
         story: () => (
           <ProgressBubble
             level={{
-              id: 1,
+              id: '1',
               levelNumber: 3,
               status: status,
               url: '/foo/bar',
@@ -28,7 +28,7 @@ export default storybook => {
           story: () => (
             <ProgressBubble
               level={{
-                id: 1,
+                id: '1',
                 levelNumber: 3,
                 status: LevelStatus.perfect,
                 url: '/foo/bar',
@@ -44,7 +44,7 @@ export default storybook => {
           story: () => (
             <ProgressBubble
               level={{
-                id: 1,
+                id: '1',
                 levelNumber: 3,
                 status: LevelStatus.perfect,
                 url: '/foo/bar',
@@ -60,7 +60,7 @@ export default storybook => {
           story: () => (
             <ProgressBubble
               level={{
-                id: 1,
+                id: '1',
                 levelNumber: 3,
                 status: LevelStatus.perfect,
                 url: '/foo/bar',
@@ -77,7 +77,7 @@ export default storybook => {
           story: () => (
             <ProgressBubble
               level={{
-                id: 1,
+                id: '1',
                 levelNumber: 3,
                 status: LevelStatus.perfect,
                 url: '/foo/bar',
@@ -96,7 +96,7 @@ export default storybook => {
           story: () => (
             <ProgressBubble
               level={{
-                id: 1,
+                id: '1',
                 levelNumber: 3,
                 status: LevelStatus.attempted,
                 url: '/foo/bar',
