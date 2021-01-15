@@ -1,4 +1,4 @@
-class Api::V1::Pd::FoormController < ApplicationController
+class Api::V1::Pd::Foorm::FormController < ApplicationController
   include Api::CsvDownload
 
   # POST api/v1/pd/foorm/form_with_library_items
