@@ -43,9 +43,11 @@ class LessonsController < ApplicationController
     end
 
     resources = (lesson_params['resources'] || []).map {|key| Resource.find_by_key(key)}
+    vocabularies = (lesson_params['vocabularies'] || []).map {|key| Vocabulary.find_by_key(key)}
     ActiveRecord::Base.transaction do
       @lesson.resources = resources.compact
-      @lesson.update!(lesson_params.except(:resources, :objectives, :original_lesson_data))
+      @lesson.vocabularies = vocabularies.compact
+      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :original_lesson_data))
       @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
     end
@@ -91,10 +93,12 @@ class LessonsController < ApplicationController
       :preparation,
       :announcements,
       :resources,
+      :vocabularies,
       :objectives
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
+    lp[:vocabularies] = JSON.parse(lp[:vocabularies]) if lp[:vocabularies]
     lp
   end
 end
