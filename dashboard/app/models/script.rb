@@ -1424,7 +1424,7 @@ class Script < ApplicationRecord
     {
       displayName: localized_title,
       link: link,
-      lessons: lessons.map(&:summarize_for_lesson_dropdown)
+      lessons: lessons.select(&:has_lesson_plan).map(&:summarize_for_lesson_dropdown)
     }
   end
 
