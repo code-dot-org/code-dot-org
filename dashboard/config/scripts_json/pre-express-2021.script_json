@@ -7433,6 +7433,402 @@
       }
     }
   ],
+  "vocabularies": [
+    {
+      "key": "Click",
+      "word": "Click",
+      "definition": "Press the mouse button",
+      "seeding_key": {
+        "vocabulary.key": "Click"
+      }
+    },
+    {
+      "key": "Double-Click",
+      "word": "Double-Click",
+      "definition": "Press the mouse button very quickly",
+      "seeding_key": {
+        "vocabulary.key": "Double-Click"
+      }
+    },
+    {
+      "key": "Drag",
+      "word": "Drag",
+      "definition": "Click your mouse button and hold as you move the mouse pointer to a new location",
+      "seeding_key": {
+        "vocabulary.key": "Drag"
+      }
+    },
+    {
+      "key": "Drop",
+      "word": "Drop",
+      "definition": "Release your mouse button to \"let go\" of an item that you are dragging",
+      "seeding_key": {
+        "vocabulary.key": "Drop"
+      }
+    },
+    {
+      "key": "Algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "seeding_key": {
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "seeding_key": {
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "key": "Algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "seeding_key": {
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "seeding_key": {
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "key": "Algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "seeding_key": {
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "seeding_key": {
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "seeding_key": {
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "key": "Event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "seeding_key": {
+        "vocabulary.key": "Event"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "vocabulary.key": "Click"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "vocabulary.key": "Double-Click"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "vocabulary.key": "Drag"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "vocabulary.key": "Drop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "On the Move with Events",
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "A Royal Battle with Events",
+        "vocabulary.key": "Event"
+      }
+    }
+  ],
   "objectives": [
     {
       "key": "14f085e6-a0a8-4218-9060-00d7b0dfbf07",

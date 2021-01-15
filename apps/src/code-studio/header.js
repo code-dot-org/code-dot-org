@@ -22,6 +22,7 @@ import {Provider} from 'react-redux';
 import progress from './progress';
 import {getStore} from '../redux';
 
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
 /**
@@ -30,11 +31,6 @@ import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
 // Namespace for manipulating the header DOM.
 var header = {};
-
-/**
- * See ApplicationHelper::PUZZLE_PAGE_NONE.
- */
-const PUZZLE_PAGE_NONE = -1;
 
 /**
  * @param {object} scriptData
@@ -49,16 +45,18 @@ const PUZZLE_PAGE_NONE = -1;
  *   finishLink: string,
  *   finishText: string,
  *   levels: Array.<{
- *     id: number,
+ *     id: string,
  *     position: number,
  *     title: string,
  *     kind: string
  *   }>
  * }}
  * @param {object} progressData
- * @param {number} currentLevelId
+ * @param {string} currentLevelId The id of the level the user is currently
+ *   on. This gets used in the url and as a key in many objects. Therefore,
+ *   it is a string despite always being a numerical value
  * @param {number} currentPageNumber The page we are on if this is a multi-
- *   page level
+ *   page level.
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
@@ -76,8 +74,7 @@ header.build = function(
   signedIn,
   stageExtrasEnabled,
   scriptNameData,
-  isLessonExtras,
-  hasAppOptions
+  isLessonExtras
 ) {
   const store = getStore();
   if (progressData) {
@@ -118,7 +115,6 @@ header.build = function(
           scriptData={scriptData}
           currentLevelId={currentLevelId}
           linesOfCodeText={linesOfCodeText}
-          hasAppOptions={hasAppOptions}
         />
       </Provider>,
       document.querySelector('.header_level')
