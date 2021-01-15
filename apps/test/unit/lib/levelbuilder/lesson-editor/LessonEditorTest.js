@@ -101,6 +101,39 @@ describe('LessonEditor', () => {
     expect(wrapper.find('SaveBar').length).to.equal(1);
   });
 
+  it('renders lesson editor for lesson without lesson plan', () => {
+    const wrapper = createWrapper({
+      initialLessonData: {
+        id: 1,
+        name: 'Survey Name',
+        overview: 'Survey Overview',
+        studentOverview: 'Student survey overview',
+        unplugged: false,
+        lockable: true,
+        hasLessonPlan: false,
+        assessment: false,
+        creativeCommonsLicense: 'Creative Commons BY-NC-SA',
+        purpose: '',
+        preparation: '',
+        announcements: [],
+        assessmentOpportunities: '',
+        courseVersionId: 1
+      }
+    });
+    expect(wrapper.contains('Survey Name'), 'Lesson Name').to.be.true;
+    expect(wrapper.contains('Survey Overview'), 'Lesson Overview').to.be.true;
+    expect(wrapper.contains('Student survey overview'), 'student overview').to
+      .be.true;
+    expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
+    expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
+    expect(wrapper.find('input').length).to.equal(7);
+    expect(wrapper.find('select').length).to.equal(1);
+    expect(wrapper.find('AnnouncementsEditor').length).to.equal(0);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(3);
+    expect(wrapper.find('ResourcesEditor').length).to.equal(0);
+    expect(wrapper.find('SaveBar').length).to.equal(1);
+  });
+
   it('can add activity', () => {
     const wrapper = createWrapper({});
     expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
