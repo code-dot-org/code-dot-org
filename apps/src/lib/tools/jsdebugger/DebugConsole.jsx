@@ -77,6 +77,19 @@ const style = {
   }
 };
 
+// These colors come from the ace editor defaults
+const inspectorTheme = {
+  ...chromeLight,
+  OBJECT_VALUE_NULL_COLOR: 'rgb(88, 92, 246)',
+  OBJECT_VALUE_UNDEFINED_COLOR: 'rgb(88, 92, 246)',
+  OBJECT_VALUE_REGEXP_COLOR: '#1A1AA6',
+  OBJECT_VALUE_STRING_COLOR: '#1A1AA6',
+  OBJECT_VALUE_SYMBOL_COLOR: '#1A1AA6',
+  OBJECT_VALUE_NUMBER_COLOR: 'rgb(0, 0, 205)',
+  OBJECT_VALUE_BOOLEAN_COLOR: 'rgb(88, 92, 246)',
+  OBJECT_VALUE_FUNCTION_PREFIX_COLOR: 'rgb(85, 106, 242)'
+};
+
 const WATCH_COMMAND_PREFIX = '$watch ';
 const UNWATCH_COMMAND_PREFIX = '$unwatch ';
 
@@ -202,6 +215,7 @@ export default connect(
     }
 
     componentDidUpdate() {
+      // here
       this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
     }
 
@@ -253,18 +267,6 @@ export default connect(
     }
 
     displayOutputToConsole() {
-      // These colors come from the ace editor defaults
-      const inspectorTheme = {
-        ...chromeLight,
-        OBJECT_VALUE_NULL_COLOR: 'rgb(88, 92, 246)',
-        OBJECT_VALUE_UNDEFINED_COLOR: 'rgb(88, 92, 246)',
-        OBJECT_VALUE_REGEXP_COLOR: '#1A1AA6',
-        OBJECT_VALUE_STRING_COLOR: '#1A1AA6',
-        OBJECT_VALUE_SYMBOL_COLOR: '#1A1AA6',
-        OBJECT_VALUE_NUMBER_COLOR: 'rgb(0, 0, 205)',
-        OBJECT_VALUE_BOOLEAN_COLOR: 'rgb(88, 92, 246)',
-        OBJECT_VALUE_FUNCTION_PREFIX_COLOR: 'rgb(85, 106, 242)'
-      };
       if (this.props.logOutput.size > 0) {
         return this.props.logOutput.map((rowValue, i) => {
           if ('function' === typeof rowValue.toJS) {
