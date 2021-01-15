@@ -1,4 +1,4 @@
-const KNN = require('ml-knn');
+import KNN from 'ml-knn';
 
 const KNNTrainers = ['knnClassify', 'knnRegress'];
 
@@ -31,6 +31,8 @@ modelData = {
 }
 
   value in testData is the converted algorithm-ready number, not the string
+
+  TODO: convert string data in testValues using the featureNumberKey
 */
 export function predict(modelData) {
   // Determine which algorithm to use.
@@ -38,11 +40,11 @@ export function predict(modelData) {
     // Re-instantiate the trained model.
     const model = KNN.load(modelData.trainedModel);
     // Prepare test data.
-    const testValues = modelData.selectedFeatures.map(
-      feature => modelData.testData[feature]
+    const testValues = modelData.selectedFeatures.map(feature =>
+      parseInt(modelData.testData[feature])
     );
     // Make a prediction.
-    const rawPrediction = model.predict(testValues)[0];
+    const rawPrediction = model.predict(testValues);
     // Convert prediction to human readable (if needed)
     const prediction = Object.keys(modelData.featureNumberKey).includes(
       modelData.labelColumn
