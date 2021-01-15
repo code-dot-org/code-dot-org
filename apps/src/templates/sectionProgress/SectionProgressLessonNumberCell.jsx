@@ -9,8 +9,7 @@ class SectionProgressLessonNumberCell extends Component {
   static propTypes = {
     // Sequence number counting all stage types in order
     position: PropTypes.number.isRequired,
-    // Sequence number which counts lockable and non-lockable stages separately,
-    // explained further in Stage#summarize
+    // Sequence number which counts lesson with lesson plans and lessons without lesson plans separately,
     relativePosition: PropTypes.number.isRequired,
     lockable: PropTypes.bool.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
