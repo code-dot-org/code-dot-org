@@ -7,9 +7,9 @@ import _ from 'lodash';
 export default class SearchBox extends Component {
   static propTypes = {
     onSearchSelect: PropTypes.func.isRequired,
-    courseVersionId: PropTypes.number,
     searchUrl: PropTypes.string.isRequired,
-    constructOptions: PropTypes.func.isRequired
+    constructOptions: PropTypes.func.isRequired,
+    additionalQueryParams: PropTypes.object
   };
 
   constructor(props) {
@@ -27,14 +27,14 @@ export default class SearchBox extends Component {
    * @param {function(err, result)} callback - Function called when the server
    *   returns results or a request error occurs.
    */
-  debouncedSearch = _.debounce((q, callback) => {
+  debouncedSearch = _.debounce((q, resolve, reject) => {
     const searchLimit = 7;
     const params = {
       query: encodeURIComponent(q),
       limit: searchLimit
     };
-    if (this.props.courseVersionId) {
-      params['courseVersionId'] = this.props.courseVersionId;
+    if (this.props.additionalQueryParams) {
+      Object.assign(params, this.props.additionalQueryParams);
     }
     const query_params = Object.keys(params)
       .map(key => `${key}=${params[key]}`)
@@ -54,8 +54,8 @@ export default class SearchBox extends Component {
       .then(json => {
         return this.props.constructOptions(json);
       })
-      .then(result => callback(null, result))
-      .catch(err => callback(err, null));
+      .then(resolve)
+      .catch(reject);
   }, 200);
 
   getOptions = q => {
@@ -67,13 +67,7 @@ export default class SearchBox extends Component {
     // Wrap the debounced call in a Promise so we _always_ return a promise
     // from this function, which resolves whenever results come back.
     return new Promise((resolve, reject) => {
-      this.debouncedSearch(q, (err, result) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(result);
-        }
-      });
+      this.debouncedSearch(q, resolve, reject);
     });
   };
 
