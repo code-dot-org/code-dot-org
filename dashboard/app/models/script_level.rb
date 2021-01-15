@@ -606,7 +606,7 @@ class ScriptLevel < ApplicationRecord
   end
 
   def summary_for_feedback
-    lesson_num = lesson.lockable ? lesson.absolute_position : lesson.relative_position
+    lesson_num = lesson.has_lesson_plan ? lesson.absolute_position : lesson.relative_position
 
     {
       lessonName: lesson.name,
