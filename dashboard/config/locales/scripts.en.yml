@@ -15809,7 +15809,7 @@ en:
             Project - Decision Maker App Part 3:
               name: Project - Decision Maker App Part 3
             'Lesson 15: Assessment Day':
-              name: 'Lesson 15: Assessment Day'
+              name: 'Assessment Day'
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
         csp5-2020:
           title: CSP Unit 5 - Lists, Loops, and Traversals ('20-'21)
@@ -15861,7 +15861,7 @@ en:
             Semester Hackathon Part 5:
               name: Semester Hackathon Part 5
             'Lesson 18: Assessment Day':
-              name: 'Lesson 18: Assessment Day'
+              name: 'Assessment Day'
             Unit 5 STUDENT Survey:
               name: Unit 5 STUDENT Survey
             Unit 5 TEACHER Survey:
@@ -15907,7 +15907,7 @@ en:
             Variables Make Demo:
               name: Variables Make Demo
             'Lesson 11: Assessment Day':
-              name: 'Lesson 11: Assessment Day'
+              name: 'Assessment Day'
           name: csp7-2020
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
         csd2-projects-temp:
@@ -17522,7 +17522,7 @@ en:
             Project - Digital Information Dilemmas Part 2:
               name: Project - Digital Information Dilemmas Part 2
             'Lesson 14: Assessment Day':
-              name: 'Lesson 14: Assessment Day'
+              name: 'Assessment Day'
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
@@ -17554,7 +17554,7 @@ en:
             Project - Internet Dilemmas Part 2:
               name: Project - Internet Dilemmas Part 2
             'Lesson 9: Assessment Day':
-              name: 'Lesson 9: Assessment Day'
+              name: 'Assessment Day'
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
         csp3-2020:
           title: CSP Unit 3 - Intro to App Design ('20-'21)
@@ -17588,7 +17588,7 @@ en:
             Project - Designing an App Part 5:
               name: Project - Designing an App Part 5
             'Lesson 11: Assessment Day':
-              name: 'Lesson 11: Assessment Day'
+              name: 'Assessment Day'
           name: csp3-2020
           student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
         csp6-2020:
@@ -17613,7 +17613,7 @@ en:
             Parallel and Distributed Algorithms:
               name: Parallel and Distributed Algorithms
             'Lesson 6: Assessment Day':
-              name: 'Lesson 6: Assessment Day'
+              name: 'Assessment Day'
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
           name: csp6-2020
         csp8-2020:
@@ -17660,7 +17660,7 @@ en:
             Project - Tell a Data Story - Part 2:
               name: Project - Tell a Data Story - Part 2
             'Lesson 9: Assessment Day':
-              name: 'Lesson 9: Assessment Day'
+              name: 'Assessment Day'
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
         csp10-2020:
           title: CSP Unit 10 - Cybersecurity and Global Impacts ('20-'21)
@@ -17706,7 +17706,7 @@ en:
             'Project: Innovation Simulation Part 7':
               name: 'Project: Innovation Simulation Part 7'
             'Lesson 14: Unit Assessment Day':
-              name: 'Lesson 14: Unit Assessment Day'
+              name: 'Unit Assessment Day'
           student_description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
         csp-march-virtual:
           title: CS Principles 20-21 Curriculum Training for Facilitators
