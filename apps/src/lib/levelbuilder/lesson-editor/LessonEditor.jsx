@@ -12,7 +12,8 @@ import RelatedLessons from './RelatedLessons';
 import {
   relatedLessonShape,
   activityShape,
-  resourceShape
+  resourceShape,
+  vocabularyShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import {connect} from 'react-redux';
@@ -55,6 +56,7 @@ class LessonEditor extends Component {
     // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
+    vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
     initActivities: PropTypes.func.isRequired
   };
 
@@ -111,6 +113,7 @@ class LessonEditor extends Component {
         objectives: JSON.stringify(this.state.objectives),
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
+        vocabularies: JSON.stringify(this.props.vocabularies.map(r => r.key)),
         announcements: JSON.stringify(this.state.announcements),
         originalLessonData: JSON.stringify(this.state.originalLessonData)
       })
@@ -382,7 +385,8 @@ export const UnconnectedLessonEditor = LessonEditor;
 export default connect(
   state => ({
     activities: state.activities,
-    resources: state.resources
+    resources: state.resources,
+    vocabularies: state.vocabularies
   }),
   {
     initActivities
