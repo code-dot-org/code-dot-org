@@ -17,6 +17,6 @@ class FoormLibraryEditorController < ApplicationController
       }.to_json
     }
 
-    render 'foorm/library_editor/index'
+    render 'foorm/libraries_editor/index'
   end
 end
