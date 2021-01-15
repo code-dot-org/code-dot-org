@@ -67,7 +67,7 @@ class FoormEditorHeader extends Component {
   validateQuestions = () => {
     this.setState({validationStarted: true});
     $.ajax({
-      url: '/api/v1/pd/foorm/validate_form',
+      url: '/api/v1/pd/foorm/form/validate_form',
       type: 'post',
       contentType: 'application/json',
       processData: false,

@@ -171,7 +171,7 @@ export default class SubmissionsDownloadForm extends React.Component {
         this.props.workshopId
       }/foorm/csv_survey_report`;
     } else {
-      return '/api/v1/pd/foorm/submissions_csv';
+      return '/api/v1/pd/foorm/form/submissions_csv';
     }
   }
 
@@ -181,7 +181,7 @@ export default class SubmissionsDownloadForm extends React.Component {
         this.props.workshopId
       }/foorm/forms_for_workshop`;
     } else {
-      return '/api/v1/pd/foorm/form_names';
+      return '/api/v1/pd/foorm/form/form_names';
     }
   }
 
