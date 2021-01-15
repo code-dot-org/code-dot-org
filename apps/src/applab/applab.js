@@ -293,7 +293,7 @@ Applab.autogenerateML = function() {
         var input = designMode.createElement('TEXT_INPUT');
         input.id = 'design_' + feature + '_input';
       }
-      var addFeature = `testValues["${feature}"] = getText("${selectId}")`;
+      var addFeature = `testValues.${feature} = getText("${selectId}");`;
       designMode.onInsertEvent(addFeature);
     });
     y = y + 40;
@@ -313,8 +313,8 @@ Applab.autogenerateML = function() {
     designMode.updateProperty(predictButton, 'id', predictButtonId);
     var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
       getPrediction("${modelData.name}", testValues, function(value) {
-        setText("${predictionId}", value)
-      })
+        setText("${predictionId}", value);
+      });
     });`;
     designMode.onInsertEvent(predictOnClick);
   });
