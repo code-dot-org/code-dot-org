@@ -755,7 +755,9 @@ Dashboard::Application.routes.draw do
   get 'foorm/preview/:name', to: 'foorm_preview#name', constraints: {name: /.*/}
   get 'foorm/preview', to: 'foorm_preview#index'
 
-  get 'foorm/editor', to: 'foorm_editor#index', constraints: {name: /.*/}
+  get 'foorm/editor', to: 'foorm_form_editor#index'
+  get 'foorm/editor/forms', to: 'foorm_form_editor#index'
+  get 'foorm/editor/libraries', to: 'foorm_library_editor#index'
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
