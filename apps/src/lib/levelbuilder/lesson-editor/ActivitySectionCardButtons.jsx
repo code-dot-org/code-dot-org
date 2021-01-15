@@ -176,31 +176,36 @@ class ActivitySectionCardButtons extends Component {
               </span>
             )}
           </span>
-          {this.props.activitySection.tips.length > 0 && (
-            <span>
-              {this.props.activitySection.tips.map(tip => (
-                <LessonTipIconWithTooltip
-                  tip={tip}
-                  key={tip.key}
-                  onClick={this.handleEditTip}
-                />
-              ))}
-            </span>
-          )}
+          {this.props.hasLessonPlan &&
+            this.props.activitySection.tips.length > 0 && (
+              <span>
+                {this.props.activitySection.tips.map(tip => (
+                  <LessonTipIconWithTooltip
+                    tip={tip}
+                    key={tip.key}
+                    onClick={this.handleEditTip}
+                  />
+                ))}
+              </span>
+            )}
         </div>
-        <FindResourceDialog
-          isOpen={this.state.addResourceOpen}
-          handleConfirm={this.handleCloseAddResource}
-          handleClose={() => this.setState({addResourceOpen: false})}
-        />
-        {/* Prevent dialog from trying to render when there is no tip to edit*/}
-        {this.state.tipToEdit && (
-          <EditTipDialog
-            isOpen={true}
-            handleConfirm={this.handleCloseAddTip}
-            tip={this.state.tipToEdit}
-            handleDelete={this.handleDeleteTip}
-          />
+        {this.props.hasLessonPlan && (
+          <div>
+            <FindResourceDialog
+              isOpen={this.state.addResourceOpen}
+              handleConfirm={this.handleCloseAddResource}
+              handleClose={() => this.setState({addResourceOpen: false})}
+            />
+            {/* Prevent dialog from trying to render when there is no tip to edit*/}
+            {this.state.tipToEdit && (
+              <EditTipDialog
+                isOpen={true}
+                handleConfirm={this.handleCloseAddTip}
+                tip={this.state.tipToEdit}
+                handleDelete={this.handleDeleteTip}
+              />
+            )}
+          </div>
         )}
         <AddLevelDialog
           isOpen={this.state.addLevelOpen}
