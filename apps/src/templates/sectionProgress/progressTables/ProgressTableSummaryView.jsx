@@ -5,7 +5,7 @@ import {
   statusPercentsForLevels,
   stageIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
-import {scriptDataPropType, scrollbarWidth} from '../sectionProgressConstants';
+import {scriptDataPropType} from '../sectionProgressConstants';
 import {
   getCurrentScriptData,
   jumpToLessonDetails
@@ -29,7 +29,10 @@ class ProgressTableSummaryView extends React.Component {
   }
 
   getTableWidth(lessons) {
-    return lessons.length * MIN_COLUMN_WIDTH;
+    return Math.max(
+      lessons.length * MIN_COLUMN_WIDTH,
+      progressTableStyles.CONTENT_VIEW_WIDTH
+    );
   }
 
   summaryCellFormatter(lesson, student, studentProgress) {
@@ -49,17 +52,12 @@ class ProgressTableSummaryView extends React.Component {
   }
 
   render() {
-    const width = Math.max(
-      MIN_COLUMN_WIDTH,
-      (progressTableStyles.CONTENT_VIEW_WIDTH - scrollbarWidth) /
-        this.props.scriptData.stages.length
-    );
     return (
       <ProgressTableContainer
         onClickLesson={this.props.onClickLesson}
         getTableWidth={lessons => this.getTableWidth(lessons)}
         columnWidths={new Array(this.props.scriptData.stages.length).fill(
-          width
+          MIN_COLUMN_WIDTH
         )}
         lessonCellFormatter={this.summaryCellFormatter}
       >
