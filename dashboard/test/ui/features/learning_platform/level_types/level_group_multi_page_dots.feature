@@ -121,7 +121,7 @@ Scenario: optional free play level
 
   # Verify the bubble status and submit dialog message show incomplete
 
-  Then I verify progress in the header of the current page is "attempted" for level 3
+  Then I verify progress in the header of the current page is "attempted_assessment" for level 3
 
   When I press ".submitButton" using jQuery
   And I wait to see a dialog titled "Submit your assessment"
