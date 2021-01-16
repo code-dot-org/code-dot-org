@@ -1059,7 +1059,7 @@ class Script < ApplicationRecord
   end
 
   # Lessons unfortunately have 2 position values:
-  # 1. absolute_position: position within the Script
+  # 1. absolute_position: position within the script (used to order lessons with in lesson groups in correct order)
   # 2. relative_position: position within the Script relative other lockable/non-lockable lessons
   # This method updates the position values for all lessons in a script after
   # a lesson is saved
