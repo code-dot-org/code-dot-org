@@ -114,7 +114,7 @@ class TestController < ApplicationController
     )
     lesson_without_lesson_plan = lesson_group.lessons.create(
       script: script,
-      key: 'temp-lesson',
+      key: 'temp-lesson-2',
       name: 'Temp Lesson Without Lesson Plan',
       has_lesson_plan: false,
       relative_position: 1,
