@@ -807,6 +807,13 @@ FactoryGirl.define do
     description 'fake description'
   end
 
+  factory :vocabulary do
+    association :course_version
+    sequence(:key) {|n| "vocab-#{n}"}
+    word 'word'
+    definition 'definition'
+  end
+
   factory :callout do
     sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'
@@ -1128,7 +1135,7 @@ FactoryGirl.define do
 
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {(School.maximum(:id).next).to_s}
+    id {((School.maximum(:id) || 0).next).to_s}
     address_line1 "123 Sample St"
     address_line2 "attn: Main Office"
     city "Seattle"

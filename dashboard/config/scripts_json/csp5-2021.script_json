@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -526,7 +527,7 @@
         "overview": "This is the final day of a five-day unit project. Students complete a Written Response, individually answering prompts about the project. Students then share their apps during a gallery walk. ",
         "student_overview": "This is the final day of a five-day unit project. Students complete a Written Response, individually answering prompts about the project. Students then share their apps during a gallery walk. ",
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
-        "preparation": "* Read through the Planning Guide paying particular focus to the Scoring Guidelines\r\n* Review the [Example Written Response Submission](https://www.studio.code.org/s/csp5-2020/stage/17/puzzle/1)\r\n and [Example Project App Submission](https://www.studio.code.org/s/csp5-2020/stage/17/puzzle/2) (in the blue teacher panel) ",
+        "preparation": "* Read through the Planning Guide paying particular focus to the Scoring Guidelines\n* Review the [Example Written Response Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/1)\n and [Example Project App Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/2) (in the blue teacher panel) ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -1056,24 +1057,11 @@
       }
     },
     {
-      "key": "930e4ebe-ec8f-4992-a890-a22b8f4daa5d",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "930e4ebe-ec8f-4992-a890-a22b8f4daa5d",
-        "lesson.key": "Traversals Explore",
-        "lesson_group.key": "csp_traversals",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
       "key": "9d2a2e62-db9d-41cb-88b7-bfc8bedc8d1c",
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "9d2a2e62-db9d-41cb-88b7-bfc8bedc8d1c",
@@ -1111,24 +1099,10 @@
       }
     },
     {
-      "key": "bdd2bd8c-0427-4ffb-a01c-6c3fdd23ca4c",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bdd2bd8c-0427-4ffb-a01c-6c3fdd23ca4c",
-        "lesson.key": "Traversals Investigate",
-        "lesson_group.key": "csp_traversals",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
       "key": "4909dde8-c244-4985-8482-1d23fbca66ea",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 0
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "4909dde8-c244-4985-8482-1d23fbca66ea",
@@ -1160,19 +1134,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "a901616d-689e-468f-ae88-e1a12f43111c",
-        "lesson.key": "Traversals Practice",
-        "lesson_group.key": "csp_traversals",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
-      "key": "be6b8bc9-2a28-4b6a-8a2a-b9c617cffb49",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "be6b8bc9-2a28-4b6a-8a2a-b9c617cffb49",
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021"
@@ -1215,19 +1176,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "5b113b1c-bea3-43d0-bf00-88b8f6e6be8b",
-        "lesson.key": "Traversals Make",
-        "lesson_group.key": "csp_traversals",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
-      "key": "5db2ba0a-b71e-4b57-b3f8-701a0cd8bcd8",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5db2ba0a-b71e-4b57-b3f8-701a0cd8bcd8",
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021"
@@ -1444,8 +1392,7 @@
       "key": "0f939a45-635d-47b2-825b-f3fb6a3f398b",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 0
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "0f939a45-635d-47b2-825b-f3fb6a3f398b",
@@ -1633,7 +1580,6 @@
         "description": "[slide] \r\n **Prompt:** What are some similarities and differences between variables and lists? How does a list manage complexity in a program?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Discussion Goal:** Students may bring up the following points:\r\n\r\n* Both are used to store information\r\n* Lists store multiple items, but variables only store one\r\n* When written in Javascript, both start with the keyword var\r\n* Lists are written with square brackets around them \r\n* Lists can store many different types of data\r\n\r\nManaging complexity:\r\n\r\n* You don't need to know how a list is created in order to use it - all you need is the name. There is a separation between the abstract properties of the data type (list) and the concrete details of its representation.\r\n* Programs that use lists are easier to read and manage - separate variables are not needed for each  individual element\r\n\r\n\r\n"
           }
@@ -1645,28 +1591,17 @@
       }
     },
     {
-      "key": "6f314324-0ed2-492d-a5e9-144bd3737759",
+      "key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
       "position": 1,
       "properties": {
+        "description": "[slide] \r\n**Level 2 - Video:** Show the video explaining how to determine the length of a list. \r\n\r\n**Group:** Place students in pairs.\r\n\r\n[slide] \r\n **Levels 3 - 4: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\r\n\r\n\r\n[slide] \r\n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.",
+        "name": "Accessing Lists - 20 mins\r",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "tip!!!tip-0<!-- place where you'd like the icon -->**Finding Target Responses:** With a verified teacher account you should be able to see target responses to each question posed on each level.\r\n\r\n**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then watch the videos. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided on the bottom of the instructions area for verified teachers.\r\n\r\n**Show Videos at the Front:** Show videos at the front of the room rather than having students watch them individually. It will be a good opportunity to bring the room back together.\r\n\r\n**Display Code at the Front:** If your room allows it, display the code during the Code Investigation at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\r\n\r\n**Save Modifications for the End:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\r\n\r\n"
+            "markdown": "**Finding Target Responses:** With a verified teacher account you should be able to see target responses to each question posed on each level.\n\n**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then watch the videos. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided on the bottom of the instructions area for verified teachers.\n\n**Show Videos at the Front:** Show videos at the front of the room rather than having students watch them individually. It will be a good opportunity to bring the room back together.\n\n**Display Code at the Front:** If your room allows it, display the code during the Code Investigation at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n**Save Modifications for the End:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\n\n"
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6f314324-0ed2-492d-a5e9-144bd3737759",
-        "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
-      }
-    },
-    {
-      "key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
-      "position": 2,
-      "properties": {
-        "description": "[slide] \r\n**Level 2 - Video:** Show the video explaining how to determine the length of a list. \r\n\r\n**Group:** Place students in pairs.\r\n\r\n[slide] \r\n **Levels 3 - 4: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\r\n\r\n\r\n[slide] \r\n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.",
-        "name": "Accessing Lists - 20 mins\r"
       },
       "seeding_key": {
         "activity_section.key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
@@ -1675,7 +1610,7 @@
     },
     {
       "key": "962d1c24-6e38-4312-8fa9-fc80467d200d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "[slide] \r\n **Level 5 - Video:** Show the video explaining how to determine the length of a list. \r\n\r\n\r\n[slide] \r\n **Levels 6 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\r\n\r\n**Discuss:** Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.",
         "name": "Changing Lists\r"
@@ -1687,7 +1622,7 @@
     },
     {
       "key": "e075e19e-fe03-4ee3-bfe9-4aa1144baaf4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "If there is time remaining, have pairs return to one or more of the apps and make the suggested modifications.",
         "name": "Modify Apps\r"
@@ -1716,7 +1651,6 @@
         "description": "[slide] \r\n **Prompt:** What aspects of using lists do you feel you already understand? What questions do you want to dig into more tomorrow during the practice lesson?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Use this discussion to identify any points of confusion that will need to be reviewed in coming lessons.\r\n\r\n"
           }
@@ -2921,7 +2855,6 @@
         "description": "[slide]  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Traversals.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Running the Activity:** This activity asks students to follow along as a number of core concepts for programming are introduced. The model is typically that a term or concept is introduced and modeled and then afterwards students are encouraged to try it out on their own. Trying it out typically means they are writing information on a sticky note and sharing it with another group before discussing the results with the whole class.\n\nSlides with animations have an icon in the bottom left corner to let you know you need to click to reveal more of the slide's content. \n\nTo help you more easily prepare the activity and keep track of your instructions, detailed instructions have been included as speaker notes in the presentation. Here are some tips to help you throughout the presentation.\n\n* There are opportunities throughout the presentation for students to actively engage. At these moments students should be making things with their manipulatives or using them to answer questions. Use these opportunities to check progress.\n* There is a fair amount of new vocabulary introduced but it is introduced gradually and with intentional repetition. Make a point of actively modeling the use of new terms.\n* The most important goal here is building a mental model. It is ok if students have some open questions that will get resolved over the subsequent conditional lessons.\n* Both you and students can use the \"Key Takeaways\" to check your understanding at the end.\n\n"
           }
@@ -2948,7 +2881,7 @@
       "key": "480dabbd-334b-4980-a8e5-5deb0cce3fc9",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Do This:** Review key takeaways with the class. \r\n\r\n\r\n[slide] \r\n **Video:** As a class watch the video on Traversals. \r\n\r\n**Journal:** Have students add the definition for the word traversal to their journal."
+        "description": "[slide] \n **Do This:** Review key takeaways with the class. \n\n[slide] \n **Video:** As a class watch the video on Traversals. \n\n**Journal:** Have students add the definition for the word traversal to their journal."
       },
       "seeding_key": {
         "activity_section.key": "480dabbd-334b-4980-a8e5-5deb0cce3fc9",
@@ -2968,8 +2901,19 @@
       }
     },
     {
-      "key": "1027ef0e-7e60-4f6f-b4a9-2d68211cf1c8",
+      "key": "1ddf321d-57a8-4172-8ccf-cdb08b8ed776",
       "position": 3,
+      "properties": {
+        "name": "Introduction to Traversal"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ddf321d-57a8-4172-8ccf-cdb08b8ed776",
+        "lesson_activity.key": "6cac2785-a577-4c38-84d7-6ccb691ca222"
+      }
+    },
+    {
+      "key": "1027ef0e-7e60-4f6f-b4a9-2d68211cf1c8",
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -2980,7 +2924,7 @@
     },
     {
       "key": "e19ba162-e7c1-4ab3-9062-36d4c35db240",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Why is traversal with a for loop a good method for accessing and updating items in a lengthy list?",
         "name": "Assessment: Check For Understanding\r"
@@ -2991,35 +2935,12 @@
       }
     },
     {
-      "key": "ec14ac68-7db5-4183-a527-50914a2edfe8",
-      "position": 1,
-      "properties": {
-        "name": "Introduction to Traversal"
-      },
-      "seeding_key": {
-        "activity_section.key": "ec14ac68-7db5-4183-a527-50914a2edfe8",
-        "lesson_activity.key": "930e4ebe-ec8f-4992-a890-a22b8f4daa5d"
-      }
-    },
-    {
-      "key": "f5650609-c73f-47c6-adb6-70407706018d",
-      "position": 2,
-      "properties": {
-        "name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "f5650609-c73f-47c6-adb6-70407706018d",
-        "lesson_activity.key": "930e4ebe-ec8f-4992-a890-a22b8f4daa5d"
-      }
-    },
-    {
       "key": "544c0f0b-39cc-4a70-b7df-fdfc0918fc3a",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Prompt:** Let's review the Traversal Machine. How did it work?",
+        "description": "[slide] **Prompt:** Let's review the Traversal Machine. How did it work?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** The Traversal Machine let us visualize how a for loop is used to traverse a list and interact with each element in the list one by one. \r\n\r\n"
           }
@@ -3031,29 +2952,17 @@
       }
     },
     {
-      "key": "ca20d4c0-ca4c-4ccc-a521-f976d2796492",
+      "key": "57fab675-41c9-44aa-ad7f-308dba387302",
       "position": 1,
       "properties": {
-        "description": "[slide]",
-        "name": "Mile Tracker"
-      },
-      "seeding_key": {
-        "activity_section.key": "ca20d4c0-ca4c-4ccc-a521-f976d2796492",
-        "lesson_activity.key": "ed41f7ef-2dee-487c-ad9b-9c53517bba57"
-      }
-    },
-    {
-      "key": "57fab675-41c9-44aa-ad7f-308dba387302",
-      "position": 2,
-      "properties": {
-        "description": "**Group:** Group students into groups of four.",
+        "description": "[slide] **Group:** Group students into groups of four.\n\n[slide] **Level 1:** Students read the entire code, and then students focuses their attention on a single function. Student should re-read the code for their function.\n\n* Student A - `average()` (lines 32-38)\n* Student B - `slow()` (lines 40-48)\n* Student C - `fast()` (lines 50-58)\n* Student D - `numberedListDisplay()` (lines 60-66)\n\n\n[slide] **Discuss:** Students discuss in their groups how each of their functions work, specifically referencing the list it uses and how it is traversed using a for loop. Then as a class address any confusion over how the app works. ",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided on the bottom of the instructions area for verified teachers.\n\n**Display Code at the Front:** If your room allows it, display the code during the Code Investigation at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n**Save Modifications for the End:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\n\n"
           }
-        ]
+        ],
+        "name": "Mile Tracker Investigation"
       },
       "seeding_key": {
         "activity_section.key": "57fab675-41c9-44aa-ad7f-308dba387302",
@@ -3061,22 +2970,11 @@
       }
     },
     {
-      "key": "c8572620-ca9a-44d8-bec3-c64ffa2125e0",
-      "position": 3,
-      "properties": {
-        "description": "[slide] **Level 2:** Students read the entire code, and then students focuses their attention on a single function. Student should re-read the code for their function.\n\n* Student A - `average()` (lines 32-38)\n* Student B - `slow()` (lines 40-48)\n* Student C - `fast()` (lines 50-58)\n* Student D - `numberedListDisplay()` (lines 60-66)\n\n\n[slide] **Discuss:** Students discuss in their groups how each of their functions work, specifically referencing the list it uses and how it is traversed using a for loop. Then as a class address any confusion over how the app works. \n\n\n[slide] **Modify:** Students work with a partner to create a function that adds together the total time of every element in the list. Console.log the result. Call this function in the `updateScreen()` function."
-      },
-      "seeding_key": {
-        "activity_section.key": "c8572620-ca9a-44d8-bec3-c64ffa2125e0",
-        "lesson_activity.key": "ed41f7ef-2dee-487c-ad9b-9c53517bba57"
-      }
-    },
-    {
       "key": "127a1baa-2374-416e-b6b2-30666e542983",
-      "position": 4,
+      "position": 2,
       "properties": {
-        "description": "[slide] **Level 3 (5 mins):** Students read the code, and then investigate the data tab.  \n\n* **Discuss:** Encourage students to share out what they found in the data tab, and how they can interact with it with code. \n\n* [slide] **Modify:** Students choose a new dataset to import to the project. Then students modify the code to print out a column of data from the chosen dataset. Point out to students that when they pull out a column, they are creating a list.",
-        "name": "Data Tab Investigate"
+        "description": "[slide] **Level 2 (5 mins):** Students read the code, and then investigate the data tab.  \n\n* **Discuss:** Encourage students to share out what they found in the data tab, and how they can interact with it with code. \n\n* [slide] **Modify:** Students choose a new dataset to import to the project. Then students modify the code to print out a column of data from the chosen dataset. Point out to students that when they pull out a column, they are creating a list.",
+        "name": "Data Tab Investigation"
       },
       "seeding_key": {
         "activity_section.key": "127a1baa-2374-416e-b6b2-30666e542983",
@@ -3085,17 +2983,16 @@
     },
     {
       "key": "e74ac992-2f41-4d45-978c-3af21c648b91",
-      "position": 5,
+      "position": 3,
       "properties": {
-        "description": "[slide] tip!!!tip-0<!-- place where you'd like the icon --> **Level 4:** Instruct students to run the app and then carefully read it. There is a lot of information in the comments in this app. Students work through all of the questions on the screen.",
+        "description": "[slide] **Level 3:** Instruct students to run the app and then carefully read it. There is a lot of information in the comments in this app. Students work through all of the questions on the screen.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Discussion Goal:** Make sure students arrive at the following answers.\n\n* *What are the names of the five lists in this program?*\n\t* `dogNames`, `dogHeight`, `dogImages`, `filteredDogNames`, `filteredDogImages`\n* *On what lines of code are the lists created?*\n\t* `dogNames`: 2\n\t* `dogHeight`: 3\n\t* `dogImages`: 4\n\t* `filteredDogNames`: 7\n\t* `filteredDogImages`: 8\n* *On what line's of code are the lists filled?\n\t* `dogNames`: 2\n\t* `dogHeight`: 3\n\t* `dogImages`: 4\n\t* `filteredDogNames`: 32-43\n\t* `filteredDogImages`: 32-43\n* *How are these lists filled?*\n\t* `dogNames`, `dogHeight`, and `dogImages` are filled by pulling a column of data from the dataset\n\t* For `filteredDogNames` and `filteredDogImages`, the `dogHeight` list is traversed. If `dogHeight` and `dogSize` meet the given conditions the names and images at the same index position in the `dogNames` and `dogImages` lists are added to the filtered lists. \n* *Open up the data tab and click to view the dogs table. What columns does this app use?*\n\t* \"Name\", \"Maximum Height\", \"Image\"\n* *Look at the filter function. On what lines are the filtered lists reset to blank lists?*\n\t* Lines 23 & 24\n* *What condition is being checked to determine if an element belongs in a filtered list?*\n\t* If a dog height is above or below a certain number\n\n"
           }
         ],
-        "name": "Random Dog Picker"
+        "name": "Random Dog Picker Investigation"
       },
       "seeding_key": {
         "activity_section.key": "e74ac992-2f41-4d45-978c-3af21c648b91",
@@ -3104,11 +3001,10 @@
     },
     {
       "key": "7aa54a91-90b9-4a3d-96ba-3e6df1ece3c8",
-      "position": 6,
+      "position": 4,
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Traversals can be tricky! In this case, we are filtering a list by information that is in another list. \n\nThere are three lists to start: `dogNames`, `dogHeights`, and `dogImages`. We want to sort out the dogs so that when the user picks a size from the dropdown, only dogs of that size show up in the display. \n\nTo do this, we traverse using a filter pattern. Using a loop to go through each item in the `dogHeights` list, if a dog's height matches up to the requirements, we pull the dog's image and name from those original lists (all the indexes will match) and put those in the new filtered lists. \n\nOnce this is done, we have filtered lists that we can pull from to display a random dog's name and image.\n\n"
           }
@@ -3121,9 +3017,10 @@
     },
     {
       "key": "36ecad32-1c00-4389-9699-85edce533063",
-      "position": 7,
+      "position": 5,
       "properties": {
-        "description": "[slide] **Discuss:** Go through the questions one by one and answer as a class. Afterwards, go line by line with the class explaining how the app works. \n\n**Levels 5-6:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today."
+        "description": "[slide] **Discuss:** Go through the questions one by one and answer as a class. Afterwards, go line by line with the class explaining how the app works. \n\n**Levels 4-5:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today.",
+        "name": "Traversal Patterns"
       },
       "seeding_key": {
         "activity_section.key": "36ecad32-1c00-4389-9699-85edce533063",
@@ -3146,7 +3043,7 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Explain how you would filter the dog dataset using traversal to have a filtered list of dogs who live long lives.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9c9e3eef-8e3b-4b87-89e3-37c90af8abb1",
@@ -3154,84 +3051,18 @@
       }
     },
     {
-      "key": "43721eec-3af0-4907-8a0f-60ab1593ae1f",
-      "position": 1,
-      "properties": {
-        "name": "Mile Tracker Investigation"
-      },
-      "seeding_key": {
-        "activity_section.key": "43721eec-3af0-4907-8a0f-60ab1593ae1f",
-        "lesson_activity.key": "bdd2bd8c-0427-4ffb-a01c-6c3fdd23ca4c"
-      }
-    },
-    {
-      "key": "f28e959d-1dd0-4336-8fd8-0a4b78de2913",
-      "position": 2,
-      "properties": {
-        "name": "Intro to Datasets"
-      },
-      "seeding_key": {
-        "activity_section.key": "f28e959d-1dd0-4336-8fd8-0a4b78de2913",
-        "lesson_activity.key": "bdd2bd8c-0427-4ffb-a01c-6c3fdd23ca4c"
-      }
-    },
-    {
-      "key": "9d329441-7d32-4a25-892d-d0340789d18e",
-      "position": 3,
-      "properties": {
-        "name": "Dog Finder Investigation"
-      },
-      "seeding_key": {
-        "activity_section.key": "9d329441-7d32-4a25-892d-d0340789d18e",
-        "lesson_activity.key": "bdd2bd8c-0427-4ffb-a01c-6c3fdd23ca4c"
-      }
-    },
-    {
-      "key": "1ce642bf-2a99-48dd-adee-4271b3a23de7",
-      "position": 4,
-      "properties": {
-        "name": "Traversal Patterns"
-      },
-      "seeding_key": {
-        "activity_section.key": "1ce642bf-2a99-48dd-adee-4271b3a23de7",
-        "lesson_activity.key": "bdd2bd8c-0427-4ffb-a01c-6c3fdd23ca4c"
-      }
-    },
-    {
-      "key": "c2fefc60-dbdb-4636-ac69-7908967839a2",
-      "position": 5,
-      "properties": {
-        "name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "c2fefc60-dbdb-4636-ac69-7908967839a2",
-        "lesson_activity.key": "bdd2bd8c-0427-4ffb-a01c-6c3fdd23ca4c"
-      }
-    },
-    {
-      "key": "578ad1e8-5cb3-40f7-93c8-bb729fb34b7a",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. You may optionally wish to do a quick vocabulary review or address any questions that came up in the last lesson. Otherwise, give students more time to get hands on with some code.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "578ad1e8-5cb3-40f7-93c8-bb729fb34b7a",
-        "lesson_activity.key": "4909dde8-c244-4985-8482-1d23fbca66ea"
-      }
-    },
-    {
       "key": "0dc404c5-1aed-4a44-bebc-c069fb80ae4d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. In our next lesson you're going to have to use a lot of these on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
         "remarks": true,
-        "name": "Quick Warm Up\r"
+        "name": "Quick Warm Up\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. You may optionally wish to do a quick vocabulary review or address any questions that came up in the last lesson. Otherwise, give students more time to get hands on with some code.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0dc404c5-1aed-4a44-bebc-c069fb80ae4d",
@@ -3266,14 +3097,7 @@
       "key": "49501848-9943-42dd-8c20-530a2ed0bd3b",
       "position": 3,
       "properties": {
-        "description": "**Levels 2-4 Traversal Practice** These levels have students perform simple traversals over lists that are created inside their code (not with the data import tools). In each program sample code is provided which students can use to help writing the code of their own.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\n"
-          }
-        ]
+        "name": "Traversal Practice"
       },
       "seeding_key": {
         "activity_section.key": "49501848-9943-42dd-8c20-530a2ed0bd3b",
@@ -3281,10 +3105,49 @@
       }
     },
     {
-      "key": "92ed293f-2ee1-4d6e-b597-2dd8da45e694",
+      "key": "2e9ff7bf-15fc-4249-abe1-61284bd73ec4",
       "position": 4,
       "properties": {
-        "description": "* Level 2: traverse over a list and console.log every element\n* Level 3: traverse over a list and console.log every element and its position\n* Level 4: traverse over two parallel lists and print elements from both\n\n**Levels 5-7 Reduce and Filter Practice:** Students practice the reduce and filter patterns introduced in the previous lesson. In each program sample code is provided which students can use to help writing the code of their own.\n\n* Level 5: filter a list of students to keep only those with more than 6 letters in their names. \n* Level 6: reduce a list to find the maximum price inside of it.\n* Level 7: filter a list of countries to find those in the \"Central America\" region. This program makes use of the data import tools.\n\n**Levels 8 App Practice:** In this level, students use the reduce pattern to finish building an app.\n\n* Level 8: Write code for the \"reduce\" pattern to calculate a student's average grade"
+        "description": "These levels have students perform simple traversals over lists that are created inside their code (not with the data import tools). In each program sample code is provided which students can use to help writing the code of their own.\n\n* **Level 1:** traverse over a list and console.log every element\n* **Level 2:** traverse over a list and console.log every element and its position\n* **Level 3:** traverse over two parallel lists and print elements from both",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2e9ff7bf-15fc-4249-abe1-61284bd73ec4",
+        "lesson_activity.key": "6410b5d4-7c92-4d43-8000-0bfa5647b888"
+      }
+    },
+    {
+      "key": "bb02b05a-f863-4127-a5d0-69ce27763cb2",
+      "position": 5,
+      "properties": {
+        "name": "Reduce and Filter Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb02b05a-f863-4127-a5d0-69ce27763cb2",
+        "lesson_activity.key": "6410b5d4-7c92-4d43-8000-0bfa5647b888"
+      }
+    },
+    {
+      "key": "7a5a32fe-a2dd-4efb-997a-9d581b0dd282",
+      "position": 6,
+      "properties": {
+        "description": "Students practice the reduce and filter patterns introduced in the previous lesson. In each program sample code is provided which students can use to help writing the code of their own.\n\n* **Level 4:** filter a list of students to keep only those with more than 6 letters in their names. \n* **Level 5:** reduce a list to find the maximum price inside of it.\n* **Level 6:** filter a list of countries to find those in the \"Central America\" region. This program makes use of the data import tools."
+      },
+      "seeding_key": {
+        "activity_section.key": "7a5a32fe-a2dd-4efb-997a-9d581b0dd282",
+        "lesson_activity.key": "6410b5d4-7c92-4d43-8000-0bfa5647b888"
+      }
+    },
+    {
+      "key": "92ed293f-2ee1-4d6e-b597-2dd8da45e694",
+      "position": 7,
+      "properties": {
+        "name": "App Practice"
       },
       "seeding_key": {
         "activity_section.key": "92ed293f-2ee1-4d6e-b597-2dd8da45e694",
@@ -3292,13 +3155,23 @@
       }
     },
     {
+      "key": "65304653-7959-4728-8abd-0f22e025917b",
+      "position": 8,
+      "properties": {
+        "description": "In this level, students use the reduce pattern to finish building an app.\n\n* **Level 8:** Write code for the \"reduce\" pattern to calculate a student's average grade"
+      },
+      "seeding_key": {
+        "activity_section.key": "65304653-7959-4728-8abd-0f22e025917b",
+        "lesson_activity.key": "6410b5d4-7c92-4d43-8000-0bfa5647b888"
+      }
+    },
+    {
       "key": "2d033dca-a945-4080-8dff-23e5d1c9c87d",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** What aspects of working with traversals do you feel like clicked today? What do you still feel like you have trouble with?",
+        "description": "[slide]  **Prompt:** What aspects of working with traversals do you feel like clicked today? What do you still feel like you have trouble with?\n\n",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n\r\n"
           }
@@ -3311,19 +3184,8 @@
       }
     },
     {
-      "key": "ee8d8a9e-1214-4019-8c8c-9dc8b2b7d385",
-      "position": 2,
-      "properties": {
-        "description": "**Discuss:** Have students share with one another before sharing with the whole class."
-      },
-      "seeding_key": {
-        "activity_section.key": "ee8d8a9e-1214-4019-8c8c-9dc8b2b7d385",
-        "lesson_activity.key": "a901616d-689e-468f-ae88-e1a12f43111c"
-      }
-    },
-    {
       "key": "a516175f-1d8d-41ea-919f-74b4f6a0ac04",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Working with traversals can be tricky. We will get more practice tomorrow by making an app that uses traversals and the data tools.",
         "remarks": true
@@ -3335,7 +3197,7 @@
     },
     {
       "key": "d72be697-92d4-44ce-a3c6-b726c676c0c1",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -3345,11 +3207,21 @@
       }
     },
     {
+      "key": "e4e7997b-8ea7-449e-933b-45fc031c9244",
+      "position": 4,
+      "properties": {
+        "name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4e7997b-8ea7-449e-933b-45fc031c9244",
+        "lesson_activity.key": "a901616d-689e-468f-ae88-e1a12f43111c"
+      }
+    },
+    {
       "key": "7b30b568-3d27-4348-a419-ef64439690c3",
       "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What is stored in `studentScores` after running the program code?\r\n\r\n![](https://images.code.org/7230ff7b6b25659600501141472cf036-image-1572026118949.png)",
-        "name": "Assessment: Check For Understanding: AP Practice\r"
+        "name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
         "activity_section.key": "7b30b568-3d27-4348-a419-ef64439690c3",
@@ -3357,73 +3229,29 @@
       }
     },
     {
-      "key": "dbc1ac3b-9967-4b2a-9c16-5100fab72438",
-      "position": 1,
+      "key": "40078008-ed70-4be5-ae76-756fe236f447",
+      "position": 6,
       "properties": {
-        "name": "Traversal Practice"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What is stored in `studentScores` after running the program code?\n\n![](https://images.code.org/7230ff7b6b25659600501141472cf036-image-1572026118949.png)"
       },
       "seeding_key": {
-        "activity_section.key": "dbc1ac3b-9967-4b2a-9c16-5100fab72438",
-        "lesson_activity.key": "be6b8bc9-2a28-4b6a-8a2a-b9c617cffb49"
-      }
-    },
-    {
-      "key": "2763ec57-7748-42f7-9b46-5b2013e1791e",
-      "position": 2,
-      "properties": {
-        "name": "Filter and Reduce Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "2763ec57-7748-42f7-9b46-5b2013e1791e",
-        "lesson_activity.key": "be6b8bc9-2a28-4b6a-8a2a-b9c617cffb49"
-      }
-    },
-    {
-      "key": "6417208a-8a99-4df1-8c82-762f403245b7",
-      "position": 3,
-      "properties": {
-        "name": "App Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "6417208a-8a99-4df1-8c82-762f403245b7",
-        "lesson_activity.key": "be6b8bc9-2a28-4b6a-8a2a-b9c617cffb49"
-      }
-    },
-    {
-      "key": "672ec767-ee81-4f59-a26d-818da7d0c49f",
-      "position": 4,
-      "properties": {
-        "name": "Check For Understanding: AP Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "672ec767-ee81-4f59-a26d-818da7d0c49f",
-        "lesson_activity.key": "be6b8bc9-2a28-4b6a-8a2a-b9c617cffb49"
-      }
-    },
-    {
-      "key": "062a71a9-ae2b-4b7c-86ae-b4568033688e",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. \n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "062a71a9-ae2b-4b7c-86ae-b4568033688e",
-        "lesson_activity.key": "88f74165-3f50-4fcd-afc5-d4cc8a06214e"
+        "activity_section.key": "40078008-ed70-4be5-ae76-756fe236f447",
+        "lesson_activity.key": "a901616d-689e-468f-ae88-e1a12f43111c"
       }
     },
     {
       "key": "e5d12501-e1e6-46f2-ba7e-21e284b0edb9",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "For the past few days, we've learned a lot about using traversals to make apps that manipulate large amounts of information. In today's Make Project you'll be practicing processing lists and using programming patterns with traversals to create a functioning Random Forecaster app.",
         "remarks": true,
-        "name": "Intro the Project"
+        "name": "Intro the Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e5d12501-e1e6-46f2-ba7e-21e284b0edb9",
@@ -3434,8 +3262,7 @@
       "key": "950b263d-5cd3-4b62-b2fd-68ff6aa22701",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Have students explore the working Random Forecaster app in Level 2.",
-        "name": "Build the Random Forecaster App"
+        "name": "Try the Random Forecaster App"
       },
       "seeding_key": {
         "activity_section.key": "950b263d-5cd3-4b62-b2fd-68ff6aa22701",
@@ -3443,19 +3270,13 @@
       }
     },
     {
-      "key": "3988538a-a74b-4c18-8f88-d5600f315f44",
+      "key": "5fe8f6f0-b064-4223-8895-240b4043a0ab",
       "position": 2,
       "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "* What information is needed to create this app?\n\t* The weather forecast for tomorrow for random cities, including the weather condition, high and low temperatures, and a weather icon.\n\n* What list filtering patterns might be used?\n\t* The List Filter Pattern: Filtering Multiple Lists is used.\n"
-          }
-        ]
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Have students explore the working Random Forecaster app in Level 2."
       },
       "seeding_key": {
-        "activity_section.key": "3988538a-a74b-4c18-8f88-d5600f315f44",
+        "activity_section.key": "5fe8f6f0-b064-4223-8895-240b4043a0ab",
         "lesson_activity.key": "5c1c384d-9c10-4bfa-8e64-b8ecda9edf53"
       }
     },
@@ -3463,7 +3284,13 @@
       "key": "d42a6d0e-182e-4ed5-baa7-5c66680c1133",
       "position": 3,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n* What information is needed to create this app?\n* What list filtering patterns might be used?"
+        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n* What information is needed to create this app?\n* What list filtering patterns might be used?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "* What information is needed to create this app?\n\t* The weather forecast for tomorrow for random cities, including the weather condition, high and low temperatures, and a weather icon.\n\n* What list filtering patterns might be used?\n\t* The List Filter Pattern: Filtering Multiple Lists is used."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d42a6d0e-182e-4ed5-baa7-5c66680c1133",
@@ -3471,19 +3298,13 @@
       }
     },
     {
-      "key": "36531350-6950-4de4-a6cb-3fa3e4f1753c",
+      "key": "ee815a14-786a-44e1-a5a8-67cec05b9bea",
       "position": 4,
       "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Supporting Students:** While students are working on their apps, circulate the room and check in with students who need a little help. Encourage students to collaborate and discuss bugs with each other.  \n\n**Debugging:** Review with students steps they can use to debug if they get stuck:\n\n* Run the code on turtle mode\n* Add the variables to the watcher\n* Explain the code to a friend\n"
-          }
-        ]
+        "name": "Make the Random Forecaster App"
       },
       "seeding_key": {
-        "activity_section.key": "36531350-6950-4de4-a6cb-3fa3e4f1753c",
+        "activity_section.key": "ee815a14-786a-44e1-a5a8-67cec05b9bea",
         "lesson_activity.key": "5c1c384d-9c10-4bfa-8e64-b8ecda9edf53"
       }
     },
@@ -3503,7 +3324,13 @@
       "key": "35324849-d62b-421f-84e5-31292766e246",
       "position": 6,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Random Forecaster app. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting."
+        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Random Forecaster app. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Supporting Students:** While students are working on their apps, circulate the room and check in with students who need a little help. Encourage students to collaborate and discuss bugs with each other.  \n\n**Debugging:** Review with students steps they can use to debug if they get stuck:\n\n* Run the code on turtle mode\n* Add the variables to the watcher\n* Explain the code to a friend"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "35324849-d62b-421f-84e5-31292766e246",
@@ -3517,7 +3344,6 @@
         "description": "[slide] Awesome work today! Make sure to submit your project when you're done with it!",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity.\r\n"
           }
@@ -3541,37 +3367,26 @@
       }
     },
     {
-      "key": "6eff5dba-43ef-4aab-8214-6a9714efa960",
+      "key": "980179f6-8887-4a78-b1cb-42b52de5b427",
       "position": 3,
       "properties": {
-        "description": "Use the rubric provided with the project to assess student projects.",
-        "name": "Assessment: Make Project\r"
+        "name": "Assessment"
       },
       "seeding_key": {
-        "activity_section.key": "6eff5dba-43ef-4aab-8214-6a9714efa960",
+        "activity_section.key": "980179f6-8887-4a78-b1cb-42b52de5b427",
         "lesson_activity.key": "5b113b1c-bea3-43d0-bf00-88b8f6e6be8b"
       }
     },
     {
-      "key": "c77d9147-fcb9-45a5-bbb0-5aef234f013f",
-      "position": 1,
+      "key": "6eff5dba-43ef-4aab-8214-6a9714efa960",
+      "position": 4,
       "properties": {
-        "name": "Try the Random Forecaster App"
+        "description": "Use the rubric provided with the project to assess student projects.",
+        "name": "Make Project"
       },
       "seeding_key": {
-        "activity_section.key": "c77d9147-fcb9-45a5-bbb0-5aef234f013f",
-        "lesson_activity.key": "5db2ba0a-b71e-4b57-b3f8-701a0cd8bcd8"
-      }
-    },
-    {
-      "key": "18e4cf28-8428-4b46-9949-a068a217aa4e",
-      "position": 2,
-      "properties": {
-        "name": "Make the Random Forecaster App"
-      },
-      "seeding_key": {
-        "activity_section.key": "18e4cf28-8428-4b46-9949-a068a217aa4e",
-        "lesson_activity.key": "5db2ba0a-b71e-4b57-b3f8-701a0cd8bcd8"
+        "activity_section.key": "6eff5dba-43ef-4aab-8214-6a9714efa960",
+        "lesson_activity.key": "5b113b1c-bea3-43d0-bf00-88b8f6e6be8b"
       }
     },
     {
@@ -3957,7 +3772,6 @@
         "description": "**Note:** The Written Response is to be completed individually. From this point on, partners should not discuss anything about their project.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "The Written Response portion of this project is a modified, short version of the Create Performance Task students will turn in to the College Board for the AP Exam. To have your students practice submitting this project using a similar interface to the Create Performance Task, see the [r csp-u5-hackathon-submission-on-ap-classroom] for instructions on how to set up an assessment on AP Classroom.\n"
           }
@@ -3976,7 +3790,6 @@
         "description": "[slide]  **Do This:** All students individually navigate to their projects on one tab or browser window. In another tab, students open the Written Response.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Programmers should share the project link with the designers. Designers open the project, then click \"View Code\", which is located on the top right of the screen.\n\n"
           }
@@ -3994,7 +3807,6 @@
         "description": "[slide]  On your Written Response, you will need to insert screenshots of code segments. What's a code segment? It's a collection of program statements that are part of a program. Together, they demonstrate some working part of your program. You can use screenshots of text or blocks for your code segments.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students may struggle with the prompt on managing complexity. Encourage students to think how the program would be written differently if no lists could be used. In most cases, this would involve a large amount of variables. Students need to be specific and explain what these variables would store.\n"
           }
@@ -4024,7 +3836,6 @@
         "description": "Great work everyone on the Hackathon Project! It's amazing how much you were able to accomplish in a short amount of time.And now, the moment that everyone has been waiting for. I have tallied up the votes and the winner is...",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Feel free to skip the announcement of a hackathon winner if you want to keep the project non-competitive. \r\n\r\n"
           }
@@ -4116,7 +3927,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Introduction to Lists",
         "level_keys": [
@@ -4124,7 +3935,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L01 Introduction to Lists_2021"
@@ -4142,7 +3953,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Introduction to Lists",
         "level_keys": [
@@ -4150,7 +3961,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Introduction to Lists - Part 2_2021"
@@ -4176,7 +3987,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-20-21-u5-assess-lists_2021"
@@ -4376,7 +4187,7 @@
       "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Setting up Lists",
         "level_keys": [
@@ -4384,7 +4195,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L03 Lists Practice 1_2021"
@@ -4402,7 +4213,7 @@
       "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Setting up Lists",
         "level_keys": [
@@ -4410,7 +4221,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L03 Lists Practice 2_2021"
@@ -4428,7 +4239,7 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Accessing Elements in a List",
         "level_keys": [
@@ -4436,7 +4247,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L03 Lists Practice 3.75_2021"
@@ -4454,7 +4265,7 @@
       "chapter": 14,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Accessing Elements in a List",
         "level_keys": [
@@ -4462,7 +4273,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L03 Lists Practice 3.5_2021"
@@ -4480,7 +4291,7 @@
       "chapter": 15,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Accessing Elements in a List",
         "level_keys": [
@@ -4488,7 +4299,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L03 Lists Practice 10_2021"
@@ -4506,7 +4317,7 @@
       "chapter": 16,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Strings and Indexes",
         "level_keys": [
@@ -4514,7 +4325,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L03 Lists Practice Strings 2_2021"
@@ -4532,7 +4343,7 @@
       "chapter": 17,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Strings and Indexes",
         "level_keys": [
@@ -4540,7 +4351,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L03 Lists Practice Strings 3_2021"
@@ -4558,7 +4369,7 @@
       "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "List Operations",
         "level_keys": [
@@ -4566,7 +4377,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L03 Lists Practice 4_2021"
@@ -4584,7 +4395,7 @@
       "chapter": 19,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "List Operations",
         "level_keys": [
@@ -4592,7 +4403,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L03 Lists Practice 5_2021"
@@ -4610,7 +4421,7 @@
       "chapter": 20,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "List Operations",
         "level_keys": [
@@ -4618,7 +4429,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L03 Lists Practice 9_2021"
@@ -4636,7 +4447,7 @@
       "chapter": 21,
       "position": 11,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "List Operations",
         "level_keys": [
@@ -4644,7 +4455,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 L03 Lists Practice 6_2021"
@@ -4670,7 +4481,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5L3 CFU Lists Psuedocode_2021"
@@ -4696,7 +4507,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5L3 CFU Lists Psuedocode 2_2021"
@@ -4714,7 +4525,7 @@
       "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Try the Reminders App",
         "level_keys": [
@@ -4722,7 +4533,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Lists Make Project Sample App 2020_2021"
@@ -4748,7 +4559,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Lists Make Project 2020_2021"
@@ -4766,7 +4577,7 @@
       "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Introduction to Loops",
         "level_keys": [
@@ -4774,7 +4585,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_applab_loops_2021"
@@ -4800,7 +4611,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L5 CSP CFU Looping_2021"
@@ -4818,7 +4629,7 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Coin Flipper App",
         "level_keys": [
@@ -4826,7 +4637,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Investigate Coin Flipper Predict_2021"
@@ -4844,7 +4655,7 @@
       "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Coin Flipper App",
         "level_keys": [
@@ -4852,7 +4663,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Investigate Coin Flipper_2021"
@@ -4870,7 +4681,7 @@
       "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Font Tester App",
         "level_keys": [
@@ -4878,7 +4689,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Investigate Font Tester_2021"
@@ -4904,7 +4715,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L6 CSP CFU Element Looping_2021"
@@ -4922,7 +4733,7 @@
       "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "While Loop Practice",
         "level_keys": [
@@ -4930,7 +4741,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Practice Part 1_2021"
@@ -4948,7 +4759,7 @@
       "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "While Loop Practice",
         "level_keys": [
@@ -4956,7 +4767,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Practice Part 2_2021"
@@ -4974,7 +4785,7 @@
       "chapter": 34,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "While Loop Practice",
         "level_keys": [
@@ -4982,7 +4793,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Practice Part 3_2021"
@@ -5000,7 +4811,7 @@
       "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loop Practice",
         "level_keys": [
@@ -5008,7 +4819,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Practice Part 4_2021"
@@ -5026,7 +4837,7 @@
       "chapter": 36,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loop Practice",
         "level_keys": [
@@ -5034,7 +4845,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Practice Part 5_2021"
@@ -5052,7 +4863,7 @@
       "chapter": 37,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loop Practice",
         "level_keys": [
@@ -5060,7 +4871,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Practice Part 6_2021"
@@ -5078,7 +4889,7 @@
       "chapter": 38,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Loops and Screen Elements",
         "level_keys": [
@@ -5086,7 +4897,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Practice Sentence Randomizer_2021"
@@ -5104,7 +4915,7 @@
       "chapter": 39,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Loops and Screen Elements",
         "level_keys": [
@@ -5112,7 +4923,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Practice Dice Roller_2021"
@@ -5138,7 +4949,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5L7 CFU Loops Psuedocode_2021"
@@ -5164,7 +4975,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5L7 CFU Loops Psuedocode 2_2021"
@@ -5182,7 +4993,7 @@
       "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Try the Lock Screen Maker",
         "level_keys": [
@@ -5190,7 +5001,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Make Wallpaper App Example 2020_2021"
@@ -5216,7 +5027,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Loops Make Wallpaper App 2020_2021"
@@ -5250,7 +5061,7 @@
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "ec14ac68-7db5-4183-a527-50914a2edfe8"
+        "activity_section.key": "1ddf321d-57a8-4172-8ccf-cdb08b8ed776"
       },
       "level_keys": [
         "Processing Lists with Loops_2021"
@@ -5262,7 +5073,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
+        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U5 L09 Traversals Exit Ticket_2021"
         ]
@@ -5276,7 +5087,7 @@
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "f5650609-c73f-47c6-adb6-70407706018d"
+        "activity_section.key": "e19ba162-e7c1-4ab3-9062-36d4c35db240"
       },
       "level_keys": [
         "U5 L09 Traversals Exit Ticket_2021"
@@ -5302,7 +5113,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "43721eec-3af0-4907-8a0f-60ab1593ae1f"
+        "activity_section.key": "57fab675-41c9-44aa-ad7f-308dba387302"
       },
       "level_keys": [
         "U5 Traversals Investigate Mile Tracker Modify_2021"
@@ -5314,7 +5125,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Intro to Datasets",
+        "progression": "Data Tab Investigation",
         "level_keys": [
           "CSP U5L10 Traversals Investigate_2021"
         ]
@@ -5328,7 +5139,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "f28e959d-1dd0-4336-8fd8-0a4b78de2913"
+        "activity_section.key": "127a1baa-2374-416e-b6b2-30666e542983"
       },
       "level_keys": [
         "CSP U5L10 Traversals Investigate_2021"
@@ -5340,7 +5151,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Dog Finder Investigation",
+        "progression": "Random Dog Picker Investigation",
         "level_keys": [
           "U5 Traversals Investigate Dog Finder Modify_2021"
         ]
@@ -5354,7 +5165,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "9d329441-7d32-4a25-892d-d0340789d18e"
+        "activity_section.key": "e74ac992-2f41-4d45-978c-3af21c648b91"
       },
       "level_keys": [
         "U5 Traversals Investigate Dog Finder Modify_2021"
@@ -5380,7 +5191,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "1ce642bf-2a99-48dd-adee-4271b3a23de7"
+        "activity_section.key": "36ecad32-1c00-4389-9699-85edce533063"
       },
       "level_keys": [
         "List Filter Pattern_2021"
@@ -5406,7 +5217,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "1ce642bf-2a99-48dd-adee-4271b3a23de7"
+        "activity_section.key": "36ecad32-1c00-4389-9699-85edce533063"
       },
       "level_keys": [
         "List Reduce Pattern_2021"
@@ -5432,7 +5243,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "c2fefc60-dbdb-4636-ac69-7908967839a2"
+        "activity_section.key": "9c9e3eef-8e3b-4b87-89e3-37c90af8abb1"
       },
       "level_keys": [
         "CSP U5L10 CFU Traversals_2021"
@@ -5446,22 +5257,22 @@
       "properties": {
         "progression": "Traversal Practice",
         "level_keys": [
-          "U5 Traversals Practice Part 1_2021"
+          "U5 Traversals Practice Part 3_2021"
         ]
       },
       "named_level": null,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 1_2021"
+          "U5 Traversals Practice Part 3_2021"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "dbc1ac3b-9967-4b2a-9c16-5100fab72438"
+        "activity_section.key": "49501848-9943-42dd-8c20-530a2ed0bd3b"
       },
       "level_keys": [
-        "U5 Traversals Practice Part 1_2021"
+        "U5 Traversals Practice Part 3_2021"
       ]
     },
     {
@@ -5484,7 +5295,7 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "dbc1ac3b-9967-4b2a-9c16-5100fab72438"
+        "activity_section.key": "49501848-9943-42dd-8c20-530a2ed0bd3b"
       },
       "level_keys": [
         "U5 Traversals Practice Part 2_2021"
@@ -5498,22 +5309,22 @@
       "properties": {
         "progression": "Traversal Practice",
         "level_keys": [
-          "U5 Traversals Practice Part 3_2021"
+          "U5 Traversals Practice Part 1_2021"
         ]
       },
       "named_level": null,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 3_2021"
+          "U5 Traversals Practice Part 1_2021"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "dbc1ac3b-9967-4b2a-9c16-5100fab72438"
+        "activity_section.key": "49501848-9943-42dd-8c20-530a2ed0bd3b"
       },
       "level_keys": [
-        "U5 Traversals Practice Part 3_2021"
+        "U5 Traversals Practice Part 1_2021"
       ]
     },
     {
@@ -5522,7 +5333,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Filter and Reduce Practice",
+        "progression": "Reduce and Filter Practice",
         "level_keys": [
           "U5 Traversals Practice Part 4_2021"
         ]
@@ -5536,7 +5347,7 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "2763ec57-7748-42f7-9b46-5b2013e1791e"
+        "activity_section.key": "bb02b05a-f863-4127-a5d0-69ce27763cb2"
       },
       "level_keys": [
         "U5 Traversals Practice Part 4_2021"
@@ -5548,7 +5359,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Filter and Reduce Practice",
+        "progression": "Reduce and Filter Practice",
         "level_keys": [
           "U5 Traversals Practice Part 5_2021"
         ]
@@ -5562,7 +5373,7 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "2763ec57-7748-42f7-9b46-5b2013e1791e"
+        "activity_section.key": "bb02b05a-f863-4127-a5d0-69ce27763cb2"
       },
       "level_keys": [
         "U5 Traversals Practice Part 5_2021"
@@ -5574,7 +5385,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Filter and Reduce Practice",
+        "progression": "Reduce and Filter Practice",
         "level_keys": [
           "U5 Traversals Practice Part 6_2021"
         ]
@@ -5588,7 +5399,7 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "2763ec57-7748-42f7-9b46-5b2013e1791e"
+        "activity_section.key": "bb02b05a-f863-4127-a5d0-69ce27763cb2"
       },
       "level_keys": [
         "U5 Traversals Practice Part 6_2021"
@@ -5614,7 +5425,7 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "6417208a-8a99-4df1-8c82-762f403245b7"
+        "activity_section.key": "92ed293f-2ee1-4d6e-b597-2dd8da45e694"
       },
       "level_keys": [
         "U5 Traversals Practice Part 7_2021"
@@ -5640,7 +5451,7 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "672ec767-ee81-4f59-a26d-818da7d0c49f"
+        "activity_section.key": "7b30b568-3d27-4348-a419-ef64439690c3"
       },
       "level_keys": [
         "U5L11 CFU For Each Psuedocode_2021"
@@ -5666,7 +5477,7 @@
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "c77d9147-fcb9-45a5-bbb0-5aef234f013f"
+        "activity_section.key": "950b263d-5cd3-4b62-b2fd-68ff6aa22701"
       },
       "level_keys": [
         "U5 Traversals Make Project Sample App 2020_2021"
@@ -5692,7 +5503,7 @@
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "18e4cf28-8428-4b46-9949-a068a217aa4e"
+        "activity_section.key": "ee815a14-786a-44e1-a5a8-67cec05b9bea"
       },
       "level_keys": [
         "U5 Traversals Make Project 2020_2021"
@@ -5702,7 +5513,7 @@
       "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Hackathon Project",
         "level_keys": [
@@ -5710,7 +5521,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Hackathon Project Day 2_2021"
@@ -5728,7 +5539,7 @@
       "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Hackathon Project",
         "level_keys": [
@@ -5736,7 +5547,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Hackathon Project Day 3_2021"
@@ -5754,7 +5565,7 @@
       "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Hackathon Project",
         "level_keys": [
@@ -5762,7 +5573,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U5 Hackathon Project Day 4_2021"
@@ -5814,7 +5625,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 5 AP-Style Assessment _2021"
@@ -6355,7 +6166,7 @@
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "ec14ac68-7db5-4183-a527-50914a2edfe8"
+        "activity_section.key": "1ddf321d-57a8-4172-8ccf-cdb08b8ed776"
       }
     },
     {
@@ -6367,7 +6178,7 @@
         "lesson.key": "Traversals Explore",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "f5650609-c73f-47c6-adb6-70407706018d"
+        "activity_section.key": "e19ba162-e7c1-4ab3-9062-36d4c35db240"
       }
     },
     {
@@ -6379,7 +6190,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "43721eec-3af0-4907-8a0f-60ab1593ae1f"
+        "activity_section.key": "57fab675-41c9-44aa-ad7f-308dba387302"
       }
     },
     {
@@ -6391,7 +6202,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "f28e959d-1dd0-4336-8fd8-0a4b78de2913"
+        "activity_section.key": "127a1baa-2374-416e-b6b2-30666e542983"
       }
     },
     {
@@ -6403,7 +6214,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "9d329441-7d32-4a25-892d-d0340789d18e"
+        "activity_section.key": "e74ac992-2f41-4d45-978c-3af21c648b91"
       }
     },
     {
@@ -6415,7 +6226,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "1ce642bf-2a99-48dd-adee-4271b3a23de7"
+        "activity_section.key": "36ecad32-1c00-4389-9699-85edce533063"
       }
     },
     {
@@ -6427,7 +6238,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "1ce642bf-2a99-48dd-adee-4271b3a23de7"
+        "activity_section.key": "36ecad32-1c00-4389-9699-85edce533063"
       }
     },
     {
@@ -6439,31 +6250,7 @@
         "lesson.key": "Traversals Investigate",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "c2fefc60-dbdb-4636-ac69-7908967839a2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U5 Traversals Practice Part 1_2021",
-        "script_level.level_keys": [
-          "U5 Traversals Practice Part 1_2021"
-        ],
-        "lesson.key": "Traversals Practice",
-        "lesson_group.key": "csp_traversals",
-        "script.name": "csp5-2021",
-        "activity_section.key": "dbc1ac3b-9967-4b2a-9c16-5100fab72438"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U5 Traversals Practice Part 2_2021",
-        "script_level.level_keys": [
-          "U5 Traversals Practice Part 2_2021"
-        ],
-        "lesson.key": "Traversals Practice",
-        "lesson_group.key": "csp_traversals",
-        "script.name": "csp5-2021",
-        "activity_section.key": "dbc1ac3b-9967-4b2a-9c16-5100fab72438"
+        "activity_section.key": "9c9e3eef-8e3b-4b87-89e3-37c90af8abb1"
       }
     },
     {
@@ -6475,7 +6262,31 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "dbc1ac3b-9967-4b2a-9c16-5100fab72438"
+        "activity_section.key": "49501848-9943-42dd-8c20-530a2ed0bd3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Practice Part 2_2021",
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 2_2021"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021",
+        "activity_section.key": "49501848-9943-42dd-8c20-530a2ed0bd3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Practice Part 1_2021",
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 1_2021"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021",
+        "activity_section.key": "49501848-9943-42dd-8c20-530a2ed0bd3b"
       }
     },
     {
@@ -6487,7 +6298,7 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "2763ec57-7748-42f7-9b46-5b2013e1791e"
+        "activity_section.key": "bb02b05a-f863-4127-a5d0-69ce27763cb2"
       }
     },
     {
@@ -6499,7 +6310,7 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "2763ec57-7748-42f7-9b46-5b2013e1791e"
+        "activity_section.key": "bb02b05a-f863-4127-a5d0-69ce27763cb2"
       }
     },
     {
@@ -6511,7 +6322,7 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "2763ec57-7748-42f7-9b46-5b2013e1791e"
+        "activity_section.key": "bb02b05a-f863-4127-a5d0-69ce27763cb2"
       }
     },
     {
@@ -6523,7 +6334,7 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "6417208a-8a99-4df1-8c82-762f403245b7"
+        "activity_section.key": "92ed293f-2ee1-4d6e-b597-2dd8da45e694"
       }
     },
     {
@@ -6535,7 +6346,7 @@
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "672ec767-ee81-4f59-a26d-818da7d0c49f"
+        "activity_section.key": "7b30b568-3d27-4348-a419-ef64439690c3"
       }
     },
     {
@@ -6547,7 +6358,7 @@
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "c77d9147-fcb9-45a5-bbb0-5aef234f013f"
+        "activity_section.key": "950b263d-5cd3-4b62-b2fd-68ff6aa22701"
       }
     },
     {
@@ -6559,7 +6370,7 @@
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "18e4cf28-8428-4b46-9949-a068a217aa4e"
+        "activity_section.key": "ee815a14-786a-44e1-a5a8-67cec05b9bea"
       }
     },
     {
@@ -7195,6 +7006,12 @@
         "resource.key": "csp u5 presentation"
       }
     }
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
   ],
   "objectives": [
     {

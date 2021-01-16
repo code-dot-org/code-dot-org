@@ -53,7 +53,7 @@ module Foorm
     # PUT foorm/form/:id/publish
     def publish
       if @form.published
-        return render plain: "success"
+        return render json: form
       end
 
       parsed_questions = JSON.parse(@form.questions)

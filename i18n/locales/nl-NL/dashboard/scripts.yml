@@ -4836,10 +4836,511 @@ nl:
             lesson group:
               display_name: weergavenaam
           description_audience: Intern
-        ml-playground:
+        virustest:
+          title: Een uitbraak simuleren
+          description_short: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+        outbreak:
           lessons:
-            intro:
-              name: Introductie
+            Virus Simulation for Code Bytes:
+              name: Een simulatie programmeren
+          lesson_groups:
+            outbreak:
+              display_name: Uitbraaksimulatie
+          title: Uitbraaksimulator
+          description_short: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+          description: 'Gebruik Sprite Lab om een simulatie van een virusuitbraak te simuleren.'
+          name: uitbraak
         2021drafting:
           description_audience: Intern
           description_short: Intern
+        csd1-2021:
+          lessons:
+            Storage:
+              key: Opslag
+              name: Opslag
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd2-2021:
+          lessons:
+            Headings:
+              key: Headings
+              name: Headings
+            Intellectual Property:
+              key: Intellectuele Eigendom
+              name: Intellectuele Eigendom
+            Using Images:
+              key: Afbeeldingen gebruiken
+              name: Afbeeldingen gebruiken
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd3-2021:
+          description_short: "Programmeren"
+          lessons:
+            Variables:
+              key: Variabelen
+              name: Variabelen
+            Sprites:
+              key: Sprites
+              name: Sprites
+            Text:
+              key: Tekst
+              name: Tekst
+            Conditionals:
+              key: Voorwaardelijke instructies
+              name: Voorwaardelijke instructies
+            Velocity:
+              key: Snelheid
+              name: Snelheid
+            Collision Detection:
+              key: Botsingdetectie
+              name: Botsingdetectie
+            Functions:
+              key: Functies
+              name: Functies
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd4-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd5-2021:
+          lessons:
+            Representing Images:
+              key: Het voorstellen van afbeeldingen
+              name: Het voorstellen van afbeeldingen
+            Representing Numbers:
+              key: Het voorstellen van getallen
+              name: Het voorstellen van getallen
+          lesson_groups:
+            csd5_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+            cspSurvey:
+              display_name: Vragenlijst
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Functies met Parameters
+              name: Functies met Parameters
+          lesson_groups:
+            csd6_1:
+              display_name: 'Hoofdstuk 1: Hardware uitgang'
+            csd6_2:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+            cspSurvey:
+              display_name: Vragenlijst
+        csp1-2021:
+          lessons:
+            Welcome to CSP:
+              key: Welkom bij CSP
+              name: Welkom bij CSP
+            Representing Information:
+              key: Het voorstellen van informatie
+              name: Het voorstellen van informatie
+            Circle Square Patterns:
+              key: Cirkel-Vierkant-Patronen
+              name: Cirkel-Vierkant-Patronen
+            Binary Numbers:
+              key: Binaire getallen
+              name: Binaire getallen
+            Overflow and Rounding:
+              key: Overflow en Afronding
+              name: Overflow en Afronding
+            Representing Text:
+              key: Het voorstellen van tekst
+              name: Het voorstellen van tekst
+            Black and White Images:
+              key: Zwart-witafbeeldingen
+              name: Zwart-witafbeeldingen
+            Color Images:
+              key: Kleurenafbeeldingen
+              name: Kleurenafbeeldingen
+            Lossless Compression:
+              key: Lossless Compressie
+              name: Lossless Compressie
+            Lossy Compression:
+              key: Lossy Compressie
+              name: Lossy Compressie
+            Intellectual Property:
+              key: Intellectuele Eigendom
+              name: Intellectuele Eigendom
+            Project - Digital Information Dilemmas Part 1:
+              key: Project - Digitale informatie dilemma's Deel 1
+              name: Project - Digitale informatie dilemma's Deel 1
+            Project - Digital Information Dilemmas Part 2:
+              key: Project - Digitale informatie dilemma's Deel 2
+              name: Project - Digitale informatie dilemma's Deel 2
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp2-2021:
+          lessons:
+            Welcome to the Internet:
+              key: Welkom bij het Internet
+              name: Welkom bij het Internet
+            Building a Network:
+              key: Het bouwen van een netwerk
+              name: Het bouwen van een netwerk
+            The Need for Addressing:
+              key: De Nood aan Adressering
+              name: De Nood aan Adressering
+            Routers and Redundancy:
+              key: Routers en Redundantie
+              name: Routers en Redundantie
+            Packets:
+              key: Paketten
+              name: Paketten
+            DNS and HTTP:
+              key: DNS en HTTP
+              name: DNS en HTTP
+            Project - Internet Dilemmas Part 1:
+              key: Project - Internetdilemma's Deel 1
+              name: Project - Internetdilemma's Deel 1
+            Project - Internet Dilemmas Part 2:
+              key: Project - Internetdilemma's Deel 2
+              name: Project - Internetdilemma's Deel 2
+        csp3-2021:
+          lessons:
+            Introduction to Apps:
+              key: Inleiding tot Apps
+              name: Inleiding tot Apps
+            Project - Designing an App Part 1:
+              key: Project - Ontwerp een app Deel 1
+              name: Project - Ontwerp een app Deel 1
+            Project - Designing an App Part 2:
+              key: Project - Ontwerp een app Deel 2
+              name: Project - Ontwerp een app Deel 2
+            The Need for Programming Languages:
+              key: De Nood Aan Programmeertalen
+              name: De Nood Aan Programmeertalen
+            Intro to Programming:
+              key: Inleiding tot programmeren
+              name: Inleiding tot programmeren
+            Debugging:
+              key: Foutopsporing
+              name: Foutopsporing
+            Project - Designing an App Part 3:
+              key: Project - Ontwerp een app Deel 3
+              name: Project - Ontwerp een app Deel 3
+            Project - Designing an App Part 4:
+              key: Project - Ontwerp een app Deel 4
+              name: Project - Ontwerp een app Deel 4
+            Project - Designing an App Part 5:
+              key: Project - Ontwerp een app Deel 5
+              name: Project - Ontwerp een app Deel 5
+        csp4-2021:
+          lessons:
+            Variables Explore:
+              key: Variabelen ontdekken
+              name: Variabelen ontdekken
+            Variables Investigate:
+              key: Variabelen onderzoeken
+              name: Variabelen onderzoeken
+            Variables Practice:
+              key: Variabelen oefenen
+              name: Variabelen oefenen
+            Variables Make:
+              key: Variabelen Maak
+              name: Variabelen Maak
+            Conditionals Explore:
+              key: Voorwaardelijke instructies ontdekken
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              key: Voorwaardelijke instructies onderzoeken
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              key: Voorwaardelijke instructies oefenen
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              key: Voorwaardelijke instructies Maak
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              key: Functies ontdekken / onderzoeken
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              key: Functies oefenen
+              name: Functies oefenen
+            Functions Make:
+              key: Functies Maak
+              name: Functies Maak
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+            csp_project:
+              display_name: Project
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Lijsten
+            csp_loops:
+              display_name: Lussen
+            csp_project:
+              display_name: Project
+        csp6-2021:
+          lessons:
+            Algorithms Solve Problems:
+              key: Algoritmes lossen problemen op
+              name: Algoritmes lossen problemen op
+            Algorithm Efficiency:
+              key: Efficiëntie van algoritmes
+              name: Efficiëntie van algoritmes
+            Unreasonable Time:
+              key: Onredelijke tijd
+              name: Onredelijke tijd
+            The Limits of Algorithms:
+              key: De limieten van algoritmes
+              name: De limieten van algoritmes
+            Parallel and Distributed Algorithms:
+              key: Parallelle en Gedistribueerde algoritmes
+              name: Parallelle en Gedistribueerde algoritmes
+        csp7-2021:
+          lessons:
+            Parameters and Return Explore:
+              key: Parameters en "return" ontdekken
+              name: Parameters en "return" ontdekken
+            Parameters and Return Investigate:
+              key: Parameters en "return" onderzoeken
+              name: Parameters en "return" onderzoeken
+            Parameters and Return Practice:
+              key: Parameters en "return" oefeningen
+              name: Parameters en "return" oefeningen
+            Parameters and Return Make:
+              key: Parameters en "return" Maak
+              name: Parameters en "return" Maak
+            Libraries Explore:
+              key: Bibliotheken ontdekken
+              name: Bibliotheken ontdekken
+            Libraries Investigate:
+              key: Bibliotheken Onderzoeken
+              name: Bibliotheken Onderzoeken
+            Libraries Practice:
+              key: Bibliotheken oefeningen
+              name: Bibliotheken oefeningen
+            Project - Make a Library Part 1:
+              key: Project - Maak een bibliotheek Deel 1
+              name: Project - Maak een bibliotheek Deel 1
+            Project - Make a Library Part 2:
+              key: Project - Maak een bibliotheek Deel 2
+              name: Project - Maak een bibliotheek Deel 2
+            Project - Make a Library Part 3:
+              key: Project - Maak een bibliotheek Deel 3
+              name: Project - Maak een bibliotheek Deel 3
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters en Returnwaardes
+            csp_libraries:
+              display_name: Bibliotheken
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              key: Machinaal leren en vooringenomenheid (bias)
+              name: Machinaal leren en vooringenomenheid (bias)
+        csp10-2021:
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: Project - Innovatiesimulatie Deel 1
+              name: Project - Innovatiesimulatie Deel 1
+            Project - Innovation Simulation Part 2:
+              key: Project - Innovatiesimulatie Deel 2
+              name: Project - Innovatiesimulatie Deel 2
+            Data Policies and Privacy:
+              key: Gegevensbeleid en Privacy
+              name: Gegevensbeleid en Privacy
+            The Value of Privacy:
+              key: De waarde van privacy
+              name: De waarde van privacy
+            Project - Innovation Simulation Part 3:
+              key: Project - Innovatiesimulatie Deel 3
+              name: Project - Innovatiesimulatie Deel 3
+            Security Risks Part 1:
+              key: Veiligheidsrisico's Deel 1
+              name: Veiligheidsrisico's Deel 1
+            Security Risks Part 2:
+              key: Veiligheidsrisico's Deel 2
+              name: Veiligheidsrisico's Deel 2
+            'Project: Innovation Simulation Part 4':
+              key: 'Project: Innovatiesimulatie Deel 4'
+              name: 'Project: Innovatiesimulatie Deel 4'
+            Protecting Data Part 1:
+              key: Het beschermen van data Deel 1
+              name: Het beschermen van data Deel 1
+            Protecting Data Part 2:
+              key: Het beschermen van data Deel 2
+              name: Het beschermen van data Deel 2
+            'Project: Innovation Simulation Part 5':
+              key: 'Project: Innovatiesimulatie Deel 5'
+              name: 'Project: Innovatiesimulatie Deel 5'
+            'Project: Innovation Simulation Part 6':
+              key: 'Project: Innovatiesimulatie Deel 6'
+              name: 'Project: Innovatiesimulatie Deel 6'
+            'Project: Innovation Simulation Part 7':
+              key: 'Project: Innovatiesimulatie Deel 7'
+              name: 'Project: Innovatiesimulatie Deel 7'
+        coursea-2021:
+          description_audience: 'Leeftijden: 4-7'
+          lessons:
+            'Programming: Happy Maps':
+              name: Vrolijke Routes
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+        courseb-2021:
+          description_audience: 'Leeftijden: 5-8'
+          lessons:
+            Move It, Move It:
+              key: verplaats het, verplaats het
+              name: verplaats het, verplaats het
+            'Loops: Getting Loopy':
+              name: Rondjes lopen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+        coursec-2021:
+          description_audience: 'Leeftijden: 6-10'
+          lessons:
+            Binary Bracelets:
+              key: Binaire armbanden
+              name: Binaire armbanden
+            'Events: The Big Event':
+              name: De grote gebeurtenis
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_binary:
+              display_name: Binaire
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+        coursed-2021:
+          description_audience: 'Leeftijden: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programmeren op Ruitjespapier
+            Relay Programming:
+              key: Estafette Programmeren
+              name: Estafette Programmeren
+            Build a Star Wars Game:
+              key: Bouw een Star Wars Spel!
+              name: Bouw een Star Wars Spel!
+            Dance Party:
+              key: Dansfeest
+              name: Dansfeest
+            Conditionals with Cards:
+              key: Statements met Kaarten
+              name: Statements met Kaarten
+            'Unplugged: Binary':
+              key: 'Unplugged: binair'
+              name: Binaire afbeeldingen
+            Artist Binary:
+              key: Kunstenaar Binary
+              name: Kunstenaar Binary
+          lesson_groups:
+            csf_events:
+              display_name: Gebeurtenissen
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_binary:
+              display_name: Binaire
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+        coursee-2021:
+          description_audience: 'Leeftijden: 8-12'
+          lessons:
+            Conditionals:
+              key: Voorwaardelijke instructies
+            About Me:
+              key: Over mij
+            'Functions: Songwriting':
+              name: Songwriting
+          lesson_groups:
+            ramp_up:
+              display_name: Inleiding
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_nested_loops:
+              display_name: Genestelde lussen
+            csf_functions:
+              display_name: Functies
+        coursef-2021:
+          description_audience: 'Leeftijden: 9-13'
+          lessons:
+            Envelope Variables:
+              key: Envelop variabelen
+              name: Envelop variabelen
+            Internet:
+              key: Internet
+              name: Het Internet
+            For Loop Fun:
+              key: For Lus fun
+              name: For Lus fun
+          lesson_groups:
+            ramp_up:
+              display_name: Inleiding
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_variables:
+              display_name: Variabelen
+            csf_for_loops:
+              display_name: For-lussen
+            csf_sprites:
+              display_name: Sprites
+        express-2021:
+          description_audience: 'Leeftijden: 9-18'
+          lessons:
+            Dance Party:
+              key: Dansfeest
+              name: Dansfeest
+          lesson_groups:
+            csf_warmup:
+              display_name: Opwarming
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_functions:
+              display_name: Functies
+            csf_variables:
+              display_name: Variabelen
+            csf_for_loops:
+              display_name: For-lussen
+            csf_sprites:
+              display_name: Sprites
+        pre-express-2021:
+          description_audience: 'Leeftijden: 4-8'
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Een simulatie programmeren
+            lesson-1:
+              name: Envelop variabelen
+          lesson_groups:
+            ramp_up:
+              display_name: Introductie
+            outbreak:
+              display_name: Uitbraaksimulatie
+            lessonGroup-3:
+              display_name: Variabelen

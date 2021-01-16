@@ -1391,6 +1391,7 @@ pl:
     Sprawdź adres strony i wyślij ponownie. Lub wróć na stronę główną.
   page_not_found_button: Powrót do strony domowej
   copy: Kopia/Kopiuj
+  confirm: Potwierdź
   maker:
     google_oauth:
       login_with_google: Zaloguj się na Maker App na Google
@@ -1405,6 +1406,9 @@ pl:
       error_invalid_user: Nieważny identyfikator użytkownika. Prosimy spróbować zalogować
         się ponownie.
       error_no_code: Prosimy wpisać swój kod logowania.
+      confirm_login: 'Wybierz Potwierdź, aby zalogować się ze swoim kontem Google.
+
+'
   parent_email_banner:
     text: "**Czy jesteś rodzicem lub opiekunem?** Połącz swój adres e-mail z tym kontem,
       aby być na bieżąco z postępami i projektami swojego dziecka!"

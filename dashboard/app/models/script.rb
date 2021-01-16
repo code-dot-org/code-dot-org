@@ -83,6 +83,7 @@ class Script < ApplicationRecord
           lessons: [
             {lesson_activities: :activity_sections},
             :resources,
+            :vocabularies,
             :objectives
           ]
         },
@@ -1309,6 +1310,7 @@ class Script < ApplicationRecord
       name: name,
       title: title_for_display,
       description: localized_description,
+      studentDescription: localized_student_description,
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       hidden: hidden,
@@ -1349,7 +1351,6 @@ class Script < ApplicationRecord
       is_course: is_course?,
       background: background,
       is_migrated: is_migrated?,
-      updatedAt: updated_at,
       scriptPath: script_path(self),
       showCalendar: show_calendar
     }
@@ -1410,7 +1411,7 @@ class Script < ApplicationRecord
   # and its lessons, in a format that can be deep-merged with the contents of
   # scripts.en.yml.
   def summarize_i18n_for_copy(new_name)
-    data = %w(title description description_short description_audience).map do |key|
+    data = %w(title description student_description description_short description_audience).map do |key|
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
@@ -1429,7 +1430,7 @@ class Script < ApplicationRecord
   end
 
   def summarize_i18n_for_edit(include_lessons=true)
-    data = %w(title description description_short description_audience).map do |key|
+    data = %w(title description student_description description_short description_audience).map do |key|
       [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
@@ -1504,6 +1505,10 @@ class Script < ApplicationRecord
 
   def localized_description
     I18n.t "data.script.name.#{name}.description"
+  end
+
+  def localized_student_description
+    I18n.t "data.script.name.#{name}.student_description"
   end
 
   def disable_post_milestone?
@@ -1615,6 +1620,11 @@ class Script < ApplicationRecord
     if localized_description
       info[:description] = localized_description
     end
+
+    if localized_student_description
+      info[:student_description] = localized_student_description
+    end
+
     info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])

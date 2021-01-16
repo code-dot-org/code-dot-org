@@ -77,6 +77,7 @@ class BubbleChoice < DSLDefined
   def summarize(script_level: nil, user: nil)
     user_id = user ? user.id : nil
     summary = {
+      id: id.to_s,
       display_name: display_name,
       description: description,
       name: name,
@@ -115,7 +116,7 @@ class BubbleChoice < DSLDefined
 
       level_info.merge!(
         {
-          id: level.id,
+          id: level.id.to_s,
           description: level.try(:bubble_choice_description),
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,
@@ -134,6 +135,10 @@ class BubbleChoice < DSLDefined
       if user_id
         level_info[:perfect] = UserLevel.find_by(level: level, user_id: user_id)&.perfect?
         level_info[:status] = level_info[:perfect] ? SharedConstants::LEVEL_STATUS.perfect : SharedConstants::LEVEL_STATUS.not_tried
+      else
+        # Pass an empty status if the user is not logged in so the ProgressBubble
+        # in the sublevel display can render correctly.
+        level_info[:status] = SharedConstants::LEVEL_STATUS.not_tried
       end
 
       summary << level_info

@@ -1438,6 +1438,7 @@
   compatibility_hide_this_warning: "Ocultar esta advertencia"
   compatibility_unsupported_browser: "Tu navegador no es compatible. Por favor, actualízalo a <a href='%{supported_browsers_url}', target='_blank'>uno de nuestros navegadores compatibles</a>. Puedes tratar de ver la página, pero la funcionalidad podría verse afectada."
   compatibility_unsupported_browser_markdown: "Tu navegador no es compatible. Actualiza tu navegador a [uno de nuestros navegadores compatibles](%{supported_browsers_url}) Puedes tratar de ver la página, pero la funcionalidad podría verse afectada."
+  starwars_shortcode: "estrella"
   mc_shortcode: "mc"
   flappy_shortcode: "aletear"
   header_home: "Inicio"

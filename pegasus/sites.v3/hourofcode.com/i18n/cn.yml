@@ -1326,7 +1326,7 @@ cn:
   tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
   tutorial_csfirstunplugged_name: CS First Unplugged
   tutorial_toxicodepython_name: Discover Python with Silent Teacher
-  tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
+  tutorial_codecombatozaria_name: '奥佳睿: 冒险启程'
   tutorial_vidcodedate_name: Climate Clock
   tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
@@ -3536,12 +3536,7 @@ cn:
   tutorial_toxicodepython_longdescription: Discover the basics of Python without any
     word or explanation. Our silent teacher will give you several series of challenges
     that will lead you to guess some rules and learn from your own mistakes.
-  tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
-    a hero in an epic adventure. You must use the power of coding to defeat a darkness
-    that has taken over the world! Along the way, you'll meet interesting characters
-    and travel to different lands, practicing coding concepts like sequences, loops,
-    debugging, and decomposition. In the end, you'll design a playable game that you
-    can share with your friends!
+  tutorial_codecombatozaria_longdescription: 在奥佳睿世界里，你将成为一个在史诗故事里冒险的英雄。你需要使用编程魔法打败统治世界的黑暗之力。在冒险旅程中，你会遇到很多有趣的人物角色，去往不同的魔法领地，学习和练习使用编程概念，例如序列、循环、调试、分解问题等。最后，你会设计出一个好玩的游戏，分享给你的朋友和同学。
   tutorial_vidcodedate_longdescription: 'The Climate Clock project is a culturally
     relevant intersection of math, environmental science, and computer science. In
     this Hour of Code activity, students will be guided through the construction of
