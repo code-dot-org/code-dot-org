@@ -31,6 +31,7 @@ const styles = {
 
 class ActivitiesEditor extends Component {
   static propTypes = {
+    hasLessonPlan: PropTypes.bool.isRequired,
     //redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
     addActivity: PropTypes.func.isRequired
@@ -151,17 +152,20 @@ class ActivitiesEditor extends Component {
             targetActivitySectionPos={this.state.targetActivitySectionPos}
             activitySectionMetrics={this.sectionMetrics}
             updateActivitySectionMetrics={this.updateActivitySectionMetrics}
+            hasLessonPlan={this.props.hasLessonPlan}
           />
         ))}
-        <button
-          onMouseDown={this.handleAddActivity}
-          className="btn add-activity"
-          style={styles.addActivity}
-          type="button"
-        >
-          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-          Activity
-        </button>
+        {this.props.hasLessonPlan && (
+          <button
+            onMouseDown={this.handleAddActivity}
+            className="btn add-activity"
+            style={styles.addActivity}
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            Activity
+          </button>
+        )}
         <input
           type="hidden"
           name="activities"
