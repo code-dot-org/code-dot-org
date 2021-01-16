@@ -215,10 +215,18 @@ export default connect(
     }
 
     componentDidUpdate(prevProps) {
-      if (prevProps.logOutput.size !== this.props.logOutput.size) {
-        this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
+      const prevOutputSize = prevProps.logOutput.size;
+      if (
+        typeof prevOutputSize === 'number' &&
+        prevOutputSize !== this.props.logOutput.size
+      ) {
+        this.jumpToBottom();
       }
     }
+
+    jumpToBottom = () => {
+      this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
+    };
 
     clearDebugInput() {
       // TODO: this needs to get called on ATTACH action being dispatched
