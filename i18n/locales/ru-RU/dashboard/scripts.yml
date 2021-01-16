@@ -5057,11 +5057,490 @@ ru:
               name: Курс B
             CS Discoveries:
               name: Открытия в информатике
+        virustest:
+          title: Симулятор эпидемии
+          description_short: 'Используйте Sprite Lab для создания симулятора эпидемии вируса.'
         ml-playground:
           lessons:
             AI for Oceans:
               name: AI для океанов
-            intro:
-              name: Введение
             visualizing:
               name: Визуализация данных
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Программирование симулятора
+          lesson_groups:
+            outbreak:
+              display_name: Симуляция эпидемии
+          title: Симулятор эпидемии
+          description_short: 'Используйте Sprite Lab для программирования симулятора эпидемии вируса.'
+          description: 'Используйте Sprite Lab для программирования симулятора эпидемии вируса.'
+          name: эпидемия
+        csd1-2021:
+          lessons:
+            The Problem Solving Process:
+              key: Процесс решения проблем
+              name: Процесс решения проблем
+            What is a Computer?:
+              key: Что такое компьютер?
+              name: Что такое компьютер?
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csd1_1:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            csd1_2:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
+        csd2-2021:
+          lessons:
+            CSS Classes:
+              key: CSS классы
+              name: CSS классы
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+        csd3-2021:
+          description_short: "Программирование"
+          lessons:
+            Plotting Shapes:
+              key: Рисование фигур
+              name: Рисование фигур
+            Variables:
+              key: Переменные
+              name: Переменные
+            Random Numbers:
+              key: Случайные числа
+              name: Случайные числа
+            Sprites:
+              key: Спрайты
+              name: Спрайты
+            Text:
+              key: Текст
+              name: Текст
+            Conditionals:
+              key: Условные команды
+              name: Условные команды
+            Velocity:
+              key: Скорость
+              name: Скорость
+            Collision Detection:
+              key: Обнаружение столкновений
+              name: Обнаружение столкновений
+            Functions:
+              key: функции
+              name: функции
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Изображения и анимации'
+            csd3_2:
+              display_name: 'Глава 2: Создание игры'
+            cspSurvey:
+              display_name: Опрос
+        csd4-2021:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            csd4_2:
+              display_name: 'Глава 2: Прототипирование приложения'
+            csd5_2:
+              display_name: 'Глава 2: Решение информационных проблем'
+            cspSurvey:
+              display_name: Опрос
+        csd5-2021:
+          lessons:
+            ASCII and Binary Representation:
+              key: ASCII и Двоичное Представление
+              name: ASCII и Двоичное Представление
+            Representing Images:
+              key: Представление изображений
+              name: Представление изображений
+            Representing Numbers:
+              key: Представления чисел
+              name: Представления чисел
+            Making Decisions with Data:
+              key: Использование данных для принятия решений
+              name: Использование данных для принятия решений
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представление информации'
+            csd5_2:
+              display_name: 'Глава 2: Решение информационных проблем'
+            cspSurvey:
+              display_name: Опрос
+        csd6-2021:
+          description_short: Программирование с физическими устройствами
+          lessons:
+            Analog Input:
+              key: Иной ввод
+              name: Иной ввод
+            Arrays and For Loops:
+              key: Множества и цикл for
+              name: Множества и цикл for
+            Functions with Parameters:
+              key: Процедуры с параметрами
+              name: Процедуры с параметрами
+            'Project: Prototype an Innovation':
+              key: 'Проект: Прототип Инновации'
+              name: 'Проект: Прототип Инновации'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Программирование с оборудованием'
+            csd6_2:
+              display_name: 'Глава 2: Создание физических прототипов'
+            cspSurvey:
+              display_name: Опрос
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Двоичные числа
+              name: Двоичные числа
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифровая информация'
+        csp2-2021:
+          lessons:
+            The Need for Addressing:
+              key: Необходимость адресации
+              name: Необходимость адресации
+            Routers and Redundancy:
+              key: Маршрутизаторы и резервирование
+              name: Маршрутизаторы и резервирование
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Урок 2: Интернет'
+        csp3-2021:
+          lessons:
+            The Need for Programming Languages:
+              key: Необходимость языков программирования
+              name: Необходимость языков программирования
+            Debugging:
+              key: Отладка
+              name: Отладка
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Списки
+            csp_loops:
+              display_name: Циклы
+            csp_traversals:
+              display_name: Обходов
+            csp_project:
+              display_name: Проект
+        csp7-2021:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметры и возвращаемые значения
+            csp_libraries:
+              display_name: Библиотеки
+        csp9-2021:
+          lessons:
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: Big Data, краудсорсинг и машинное обучение
+              name: Big Data, краудсорсинг и машинное обучение
+            Machine Learning and Bias:
+              key: Машинное обучение и предвзятость
+              name: Машинное обучение и предвзятость
+        coursea-2021:
+          description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
+          description_short: Введение в компьютерные науки для детей, еще не умеющих читать.
+          description_audience: 'Возраст: 4-7'
+          lessons:
+            Safety in My Online Neighborhood:
+              key: Безопасность в моем интернет-окружении
+              name: Безопасность в моем интернет-окружении
+            Learn to Drag and Drop:
+              key: Изучение перетаскивания
+              name: Изучение перетаскивания
+            'Programming: Happy Maps':
+              name: Весёлые карты
+            Sequencing with Scrat:
+              key: Последовательность в "Скрат"
+              name: Последовательность в "Скрат"
+            Programming in Ice Age:
+              name: Программирование со Скратом
+            Programming with Rey and BB-8:
+              key: Программирование с Рееем и BB-8
+              name: Программирование с Рееем и BB-8
+            'Loops: Happy Loops':
+              name: Счастливые циклы
+            Loops in Ice Age:
+              key: Циклы в ледниковом периоде
+              name: Циклы со Скратом
+            Loops in Collector:
+              key: Циклы в Собирателе
+              name: Циклы в Собирателе
+            Ocean Scene with Loops:
+              key: Циклы в исполнителе Художник
+              name: Циклы в исполнителе Художник
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+        courseb-2021:
+          description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
+          lessons:
+            Move It, Move It:
+              key: Вперед, вперед
+              name: Вперед, вперед
+            'Loops: Getting Loopy':
+              name: Зацикливание
+            Loops in Harvester:
+              key: Циклы в харвестере
+            Loops in Collector:
+              key: Циклы в Собирателе
+              name: Циклы в Собирателе
+            Loops in Artist:
+              key: Циклы в исполнителе Художник
+              name: Циклы в исполнителе Художник
+            The Right App:
+              key: The Right App
+              name: The Right App
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Двоичные браслеты
+              name: Двоичные браслеты
+            Loops in Harvester:
+              key: Циклы в харвестере
+            Sticker Art with Loops:
+              key: Циклы в исполнителе Художник
+              name: Циклы в исполнителе Художник
+            'Events: The Big Event':
+              name: Большое Событие
+            Picturing Data:
+              key: Изображение данных
+              name: Изображение данных
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_binary:
+              display_name: Двоичный
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+        coursed-2021:
+          description_audience: 'Возраст: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Программирование на бумаге в клеточку
+            Relay Programming:
+              key: Эстафетное программирование
+              name: Эстафетное программирование
+            Dance Party:
+              key: Танцевальная вечеринка
+              name: Танцевальная вечеринка
+            Loops in Ice Age:
+              key: Циклы в ледниковом периоде
+              name: Циклы в ледниковом периоде
+            Loops in Artist:
+              key: Циклы в исполнителе Художник
+              name: Циклы в исполнителе Художник
+            Nested Loops in Bee:
+              key: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
+            Conditionals with Cards:
+              key: Условные выражения с картами
+              name: Условные выражения с картами
+            While Loops in Farmer:
+              key: Цикл while в Фермере
+              name: Цикл while в Фермере
+            'Unplugged: Binary':
+              key: 'Урок без компьютера: Двоичный'
+              name: Двоичные образы
+            Artist Binary:
+              key: 'Художник: двоичная система'
+              name: 'Художник: двоичная система'
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_events:
+              display_name: События
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+            csf_binary:
+              display_name: Двоичный
+            csf_digcit:
+              display_name: Цифровое гражданство
+        coursee-2021:
+          description_audience: 'Возраст: 8-12'
+          lessons:
+            Conditionals:
+              key: Условные команды
+            Simon Says:
+              key: Саймон говорит
+              name: Саймон говорит
+            Private and Personal Information:
+              key: Private and Personal Information
+              name: Private and Personal Information
+            Digital Sharing:
+              key: Публикация цифровых произведений
+              name: Публикация цифровых произведений
+            Nested Loops in Bee:
+              key: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
+            Nested Loops in Artist:
+              key: Вложенные циклы в Художнике
+              name: Вложенные циклы в Художнике
+            'Functions: Songwriting':
+              name: Написание песен
+          lesson_groups:
+            ramp_up:
+              display_name: Продвинуться
+            csf_sprites:
+              display_name: Спрайты
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_nested_loops:
+              display_name: Вложенные циклы
+            csf_functions:
+              display_name: функции
+        coursef-2021:
+          description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
+          description_audience: 'Возраст: 9-13'
+          lessons:
+            Nested Loops in the Maze:
+              name: Вложенные циклы в Лабиринте
+            Envelope Variables:
+              key: Конвертные переменные
+              name: Конвертные переменные
+            AI for Oceans:
+              key: AI для океанов
+              name: AI для океанов
+            Internet:
+              key: интернет
+              name: Интернет
+            For Loop Fun:
+              key: Игры с циклами
+              name: Игры с циклами
+            For Loops in Bee:
+              key: Цикл for в Пчеле
+              name: Цикл for в Пчеле
+            For Loops in Artist:
+              key: Цикл for в Художнике
+              name: Цикл for в Художнике
+          lesson_groups:
+            ramp_up:
+              display_name: Продвинуться
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_variables:
+              display_name: Переменные
+            csf_for_loops:
+              display_name: Циклы с параметром
+            csf_sprites:
+              display_name: Спрайты
+        express-2021:
+          title: Экспресс-курс (2017)
+          description_audience: 'Возраст: 9-18'
+          lessons:
+            Dance Party:
+              key: Танцевальная вечеринка
+              name: Танцевальная вечеринка
+            Sticker Art with Loops:
+              key: Циклы в исполнителе Художник
+              name: Циклы в исполнителе Художник
+            Nested Loops in Maze:
+              key: Вложенные циклы в Лабиринте
+              name: Вложенные циклы в Лабиринте
+            While Loops with the Farmer:
+              key: Цикл while в Фермере
+              name: Цикл while в Фермере
+            For Loops with Bee:
+              key: Цикл for в Пчеле
+              name: Цикл for в Пчеле
+            For Loops with Artist:
+              key: Цикл for в Художнике
+              name: Цикл for в Художнике
+          lesson_groups:
+            csf_warmup:
+              display_name: Разогреть
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+            csf_functions:
+              display_name: функции
+            csf_variables:
+              display_name: Переменные
+            csf_for_loops:
+              display_name: Циклы с параметром
+            csf_sprites:
+              display_name: Спрайты
+        pre-express-2021:
+          description_audience: 'Возраст: 4-8'
+          lessons:
+            Learn to Drag and Drop:
+              key: Изучение перетаскивания
+              name: Изучение перетаскивания
+            Sequencing with Scrat:
+              key: Последовательность в "Скрат"
+              name: Последовательность в "Скрат"
+            Programming with Rey and BB-8:
+              key: Программирование с Рееем и BB-8
+              name: Программирование с Рееем и BB-8
+            Loops with Scrat:
+              key: Циклы со Скратом
+              name: Циклы со Скратом
+            Loops with Laurel:
+              key: Циклы в Собирателе
+              name: Циклы в Собирателе
+            Ocean Scene with Loops:
+              key: Циклы в исполнителе Художник
+              name: Циклы в исполнителе Художник
+            Drawing Gardens with Loops:
+              key: Циклы в исполнителе Художник
+              name: Циклы в исполнителе Художник
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Программирование симулятора
+            lesson-1:
+              name: Конвертные переменные
+          lesson_groups:
+            ramp_up:
+              display_name: Введение
+            outbreak:
+              display_name: Симуляция эпидемии
+            lessonGroup-3:
+              display_name: Переменные

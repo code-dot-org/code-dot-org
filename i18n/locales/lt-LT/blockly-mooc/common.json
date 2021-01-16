@@ -236,6 +236,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Patikrina, ar reikšmė yra mažesnė ar lygi kitai reikšmei. Grąžina teisingą rezultatą, jei kairėje pusėje esantis reiškinys yra mažesnis arba lygus nei dešinėje esantis reiškinys.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Mažiau arba lygu",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "Grąžina atsitiktinį skaičių nuo 0 (jį įskaitant) iki 1 (vieneto neįskaitant)",
   "dropletBlock_mathRandom_signatureOverride": "Math.random()",

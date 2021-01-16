@@ -113,6 +113,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Provjerava je li vrijednost manja od druge vrijednosti. Vraća true ako je vrijednost lijeve strane izraza manja ili jednaka vrijednosti na desnoj strani izraza.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Manje od ili jednak operatoru",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "Vraća slučajni broj u rasponu od 0 (uključivo) do 1, ali ne uključujući 1 (ekskluzivno)",
   "dropletBlock_mathRandom_signatureOverride": "Math.Random()",

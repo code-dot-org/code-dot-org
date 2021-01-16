@@ -254,7 +254,7 @@ gem 'aws-sdk-s3'
 gem 'aws-sdk-secretsmanager'
 
 # Lint tools
-group :development, :staging do
+group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
   gem 'rubocop', '~> 0.52', require: false
   gem 'scss_lint', require: false

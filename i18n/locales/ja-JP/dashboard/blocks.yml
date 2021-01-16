@@ -1284,6 +1284,8 @@ ja:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 魚ではない
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": マイレーベル
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 私のラベルではありません
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

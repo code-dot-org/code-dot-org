@@ -29,7 +29,7 @@ const MOVE_LEVEL_TO_ACTIVITY_SECTION =
 const SET_SCRIPT_LEVEL_FIELD = 'activitiesEditor/SET_SCRIPT_LEVEL_FIELD';
 const TOGGLE_EXPAND = 'activitiesEditor/TOGGLE_EXPAND';
 
-export const NEW_LEVEL_ID = -1;
+export const NEW_LEVEL_ID = '-1';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
@@ -501,6 +501,11 @@ export const getSerializedActivities = rawActivities => {
         // activitySectionPosition on the server.
         delete scriptLevel.position;
         delete scriptLevel.levelNumber;
+      });
+
+      activitySection.tips.forEach(tip => {
+        // Key is just used in the react UI
+        delete tip.key;
       });
     });
   });

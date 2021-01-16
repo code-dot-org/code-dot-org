@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -2562,7 +2563,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Widget: Internet Simulator",
         "level_keys": [
@@ -2570,7 +2571,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L1 Internet Simulator: Sending Text_2021"
@@ -2596,7 +2597,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L1 CFU how use internet_2021"
@@ -2622,7 +2623,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L1 CFU paths_2021"
@@ -2640,7 +2641,7 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Internet Simulator: Broadcast Mode",
         "level_keys": [
@@ -2648,7 +2649,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L2 CSP Internet Simulator Broadcast_2021"
@@ -2674,7 +2675,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L2 CSP CFU IP Addresses_2021"
@@ -2700,7 +2701,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L2 CSP CFU IP works_2021"
@@ -2718,7 +2719,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Internet Simulator: Routers",
         "level_keys": [
@@ -2726,7 +2727,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L3 CSP Internet Simulator Routers_2021"
@@ -2752,7 +2753,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L3 CSP CFU Routers_2021"
@@ -2778,7 +2779,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L3 CSP CFU Redundancy_2021"
@@ -2796,7 +2797,7 @@
       "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Internet Simulator: Packets",
         "level_keys": [
@@ -2804,7 +2805,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L4 CSP Internet Simulator Packets 2_2021"
@@ -2830,7 +2831,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L4 Multiple Choice packets_2021"
@@ -2856,7 +2857,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L4 CSP CFU terms_2021"
@@ -2874,7 +2875,7 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Internet Simulator: DNS",
         "level_keys": [
@@ -2882,7 +2883,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L5 CSP Internet Simulator DNS_2021"
@@ -2908,7 +2909,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L4 CSP CFU scale_2021"
@@ -2934,7 +2935,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L5 CSP CFU subgroups_2021"
@@ -2960,7 +2961,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 2 MC Assessment _2021"
@@ -3560,6 +3561,12 @@
         "resource.key": "csp-unit-2-the-internet"
       }
     }
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
   ],
   "objectives": [
     {

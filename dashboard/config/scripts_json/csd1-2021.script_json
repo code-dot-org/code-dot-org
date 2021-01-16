@@ -18,7 +18,8 @@
         ]
       ],
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -59,7 +60,7 @@
       "position": 3,
       "properties": {
         "display_name": "Chapter 2: Computers and Problem Solving",
-        "big_questions": "* How do computers help people to solve problems?\r\n* How do people and computers approach problems differently?\r\n* What does a computer need from people in order to solve problems effectively?",
+        "big_questions": "* How do computers help people to solve problems?\n* How do people and computers approach problems differently?\n* What does a computer need from people in order to solve problems effectively?",
         "description": "This chapter presents computers as machines that solve information problems. Students begin by building a common definition for a computer that focuses on functionality instead of specific hardware. They then explore the ways that computers approach problems. For their final project, students propose an app that could be used to solve a problem of their choosing."
       },
       "seeding_key": {
@@ -429,7 +430,7 @@
     },
     {
       "key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-      "name": "Exploring Problem Solving   Animals Theme (Alternate Lesson 3)",
+      "name": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
       "absolute_position": 14,
       "lockable": false,
       "relative_position": 12,
@@ -458,7 +459,7 @@
     },
     {
       "key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-      "name": "Exploring Problem Solving   Games Theme (Alternate Lesson 3)",
+      "name": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
       "absolute_position": 15,
       "lockable": false,
       "relative_position": 13,
@@ -616,8 +617,7 @@
       "key": "75941c07-de18-45db-b260-4cd48e0f1bf0",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "75941c07-de18-45db-b260-4cd48e0f1bf0",
@@ -1253,8 +1253,7 @@
       "key": "6ec491fa-334a-474f-96dd-3ba4550e81fa",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 0
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "6ec491fa-334a-474f-96dd-3ba4550e81fa",
@@ -1641,25 +1640,8 @@
       }
     },
     {
-      "key": "3eccf3e9-848f-4089-861e-40c8350c81cf",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This conversation aims to demonstrate that problems and problem solving are a part of everyday life. Use this brainstorm to list as many different kinds of problems on the board as you can. This will be useful when you later ask students to select one type of problem that you believe they're particularly good at solving.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3eccf3e9-848f-4089-861e-40c8350c81cf",
-        "lesson_activity.key": "135ce2c3-2a89-400c-a42e-4e8b71e2a309"
-      }
-    },
-    {
       "key": "a46854b4-0c89-445c-bb74-76b861c1f7a9",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "**Prompt:**\tWe use the term \"problem\" to refer to lots of different situations. I could say I have a problem for homework, a problem with my brother, and a problem with my car, and all three mean very different things. On a sheet of paper I want you to brainstorm as many different kinds of problems as you can and be ready to share with the class.",
         "name": "Problems Brainstorm\r"
@@ -1671,14 +1653,19 @@
     },
     {
       "key": "fabada45-479f-44d4-bc2d-dbeb8a8e7abd",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "discussion!!!discussion-1<!-- place where you'd like the icon -->  **Discuss:** Students should silently record their ideas in writing for a couple minutes. Afterwards invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list. Record all the different kinds of problems students think of on the board or somewhere else that they'll be clearly visible.",
+        "description": "**Discuss:** Students should silently record their ideas in writing for a couple minutes. Afterwards invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list. Record all the different kinds of problems students think of on the board or somewhere else that they'll be clearly visible.",
         "tips": [
           {
-            "key": "tip",
+            "key": "2",
             "type": "teachingTip",
             "markdown": "**Make Categories:** You may want to group problems into larger categories during this conversation and invite students to help you do so. For example, if two suggestions are \"finding my keys\" and \"finding my homework\" suggest a larger category of \"finding lost things\".\r\n\r\n**Real World Problems:** Try to guide students away from too many homework or subject-area type problems (e.g. math problems, word problems, science problems, etc.) by saying you're more interested in real-life problems like solving disagreements, making big decisions, fixing or finding things, getting from one place to another, etc.\r\n"
+          },
+          {
+            "key": "tip-2",
+            "type": "discussionGoal",
+            "markdown": "**Goal:** This conversation aims to demonstrate that problems and problem solving are a part of everyday life. Use this brainstorm to list as many different kinds of problems on the board as you can. This will be useful when you later ask students to select one type of problem that you believe they're particularly good at solving.\n"
           }
         ]
       },
@@ -1689,7 +1676,7 @@
     },
     {
       "key": "889b6e82-6222-44d5-a7e8-d6bea339eb73",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "Clearly we encounter problems in lots of different areas of our lives. Depending on the context, this word can have many different meanings. Today, we're going to look at some steps we can use to solve all sorts of problems.",
         "remarks": true
@@ -1701,9 +1688,9 @@
     },
     {
       "key": "1b5c295f-10f1-469e-8cbf-d16b7c19056f",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "description": "** Question of the Day: What are some common steps we can use to solve many different types of problems?**"
+        "description": "**Question of the Day: What are some common steps we can use to solve many different types of problems?**"
       },
       "seeding_key": {
         "activity_section.key": "1b5c295f-10f1-469e-8cbf-d16b7c19056f",
@@ -1737,7 +1724,7 @@
       "key": "23f003b6-2c1b-4e88-a343-f77714a50d89",
       "position": 3,
       "properties": {
-        "description": "**Video:** Watch the Problem Solving Process Video on Code Studio",
+        "description": "**Video:** Watch the Problem Solving Process Video on Code Studio\n\nIntroduce and as a class review the descriptions of the four steps in the process by reading them aloud. Answer or discuss any questions students have about the process but otherwise move on to completing the first section of the activity guide.",
         "name": "The Problem Solving Process\r"
       },
       "seeding_key": {
@@ -1746,19 +1733,8 @@
       }
     },
     {
-      "key": "593ff365-b358-4d21-85f0-51d10f9daf3b",
-      "position": 4,
-      "properties": {
-        "description": "Introduce and as a class review the descriptions of the four steps in the process by reading them aloud. Answer or discuss any questions students have about the process but otherwise move on to completing the first section of the activity guide."
-      },
-      "seeding_key": {
-        "activity_section.key": "593ff365-b358-4d21-85f0-51d10f9daf3b",
-        "lesson_activity.key": "675f7979-4687-4193-bd1e-10332a1ac050"
-      }
-    },
-    {
       "key": "aab191bf-3a2c-4f58-86d1-bfa34cf48052",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "Have students complete the first section of the activity guide by filling in the steps of the previous day's activity they think fall within each step of the problem solving process.",
         "name": "What it Looks Like\r"
@@ -1770,12 +1746,12 @@
     },
     {
       "key": "f3ad86f7-7c83-415c-aa5a-a276d6186faa",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "**Discuss:** Once students have completed the first section of the activity guide ask them to share with neighbors and then with the class as a whole.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "3",
             "type": "discussionGoal",
             "markdown": "**Goal:** For this first conversation in particular you're making sure students understand the meaning of the four different steps. While some steps might sometimes be categorized in two ways, use this chance to talk about that ambiguity. Your goal is to use the shared context of the aluminum boats problem to understand this process. Here's a possible set of steps students may come up with. \r\n\r\n**Define:** Understanding the problem when it was assigned, examining available resources, finding problems with their original design before deciding how to fix them, looking at problems with other groups' boats\r\n\r\n**Prepare:** Discussing with team members how to proceed, brainstorming approaches, anticipating possible flaws.\r\n\r\n**Try:** Actually building the boats, running the test\r\n\r\n**Reflect:** Examining the results of their test, comparing their results to their predictions, discussing with group members the reasons the boat sunk eventually.\r\n\r\n\r\n"
           }
@@ -1788,7 +1764,7 @@
     },
     {
       "key": "9071b1c1-0031-4e52-b8f6-a20e311f95c1",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "Ask students to select one type of problem that they think they're really good at solving. Use the list of problems already on the board to help students think of their type of problem. Again give them a couple of minutes to quietly record the steps of their process before sharing with a neighbor.",
         "name": "A Problem You Are Good at Solving\r"
@@ -1800,12 +1776,12 @@
     },
     {
       "key": "e3e59454-f8cc-47ef-a206-23e55cf74c89",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "**Discuss:** Have students share what they wrote with a neighbor and then once again lead a discussion of the conversations they had. Ask students to talk about the individual steps they're using to solve their chosen problem but also point out instances where the same types of strategies are appearing multiple times.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "4",
             "type": "discussionGoal",
             "markdown": "**Goal:** All three of these discussions aim to reinforce the meaning of the 4 steps in the problem solving process. In this discussion you might lean more heavily on other students to ensure that the strategies and steps being offered by students seem to fit the definitions of the 4 steps provided on the activity guide.\r\n"
           }
@@ -1818,7 +1794,7 @@
     },
     {
       "key": "7048cb12-62e3-4d97-a12a-7d75befc7d07",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "Place students in pairs and ask them to complete the final section of the activity guide. They will need to choose a type of problem that both members of the group want to get better at solving and then write the steps they would use within the problem solving process to solve that problem.\r\n\r\n**Discuss:** Lead one final share out in which students present how they would use the problem solving process to approach a less familiar problem.",
         "name": "A Problem You and a Classmate Want to Get Better at Solving\r"
@@ -1830,12 +1806,12 @@
     },
     {
       "key": "971b5c08-a61d-400c-a1ff-8ac3139a3c7c",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "**Distribute:** Give each group a piece of poster paper.",
         "tips": [
           {
-            "key": "tip",
+            "key": "5",
             "type": "teachingTip",
             "markdown": "You may also choose to do this activity digitally.   Check out the [forum](https://forum.code.org/c/csd) to see how other teachers have modified this activity for their classrooms, or to share your own modifications. \r\n"
           }
@@ -1849,7 +1825,7 @@
     },
     {
       "key": "6c98d6b3-a1ef-45a7-afb1-4d6fa842e50d",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "**Prompt:** At your tables, choose one of the problems that you worked on today, and create a poster that shows how the problem solving process can be used to help solve it.\r\n\r\n\r\n\r\n**Circulate:** As students work on their posters, ask them questions about their different problems, and how the steps to solve it relate to the general steps of the problem solving process.\r\n\r\n**Share:** Allow students to share their posters with the rest of the class."
       },
@@ -1876,7 +1852,7 @@
         "description": "**Prompt:** You saw a lot of different types of problems today, but they all used our Problem Solving Process.  For each step of the process, think of one general tip that could be useful no matter what problem someone is trying to solve.",
         "tips": [
           {
-            "key": "assessment",
+            "key": "6",
             "type": "assessmentOpportunity",
             "markdown": "Check that students are coming up with effective strategies for each step of the process. These should be general strategies, not specific to the particular problems that they chose to solve.\r\n"
           }
@@ -2722,7 +2698,6 @@
         "description": "**Circulate:** The first part of this reflection serves as a review of input and output.   As students reflect on the prompt, check their answers to ensure that they understand how input and output are used in the app.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Students may identify the user's birthdate as one input and possibly the current date as another input. The message of whether or not it is the birthday is the output. The decision of which message to output is based on whether the current date matches the date that the user inputs. \r\n\r\n\r\n"
           }
@@ -2740,7 +2715,6 @@
         "description": "Ask students to share out how they thought the app made the decision.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Students may have trouble articulating exactly how the app makes its decision.  Encourage discussion and highlight the \"matching\" and \"if/then\" facets of the decision make process.  (e.g. \"The app **compares** the birthdate to today's date.\" / **If** the birthdate is the same as today's date, **then** display \"Happy Birthday!\")\r\n\r\n\r\n"
           }
@@ -2805,7 +2779,6 @@
         "description": "**Prompt:**  How does this app use if/then and comparing to turn the input into output?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Allow students to share out their answers, and reinforce that comparing can mean deciding whether any two things are the same, not just numbers.\r\n\r\n"
           }
@@ -2834,7 +2807,6 @@
         "description": "**Prompt:**  This app uses some different types of processing to make decisions.  What kinds of processing might it use?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Allow students to share out their answers, but make sure that the \"counting\" and the \"find a match\" are highlighted in the discussion.\r\n\r\n"
           }
@@ -2887,7 +2859,6 @@
         "description": "**Circulate:** Allow students to complete the rest of the chart in their groups. As they fill out the charts, ask them to elaborate on how the app works and what makes that particular type of processing useful.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Because almost all apps use more than one form of processing, students may identify unexpected aspects of the apps. The most important part is their explanation. They should be reasoning about how the input is used to generate the output of the app.\r\n"
           }
@@ -2949,10 +2920,9 @@
       "key": "ed3fc57d-be54-4625-bae7-5cac4680d615",
       "position": 2,
       "properties": {
-        "description": "<!-- place where you'd like the icon -->  **Discuss:** As a class, discuss the examples students brainstormed.",
+        "description": "**Discuss:** As a class, discuss the examples students brainstormed.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Students' answers will vary, but make sure that they are reasonably using processing to change an input into an output.\r\n"
           }
@@ -4644,7 +4614,7 @@
         "description": "Allow students to share out individually.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "55",
             "type": "discussionGoal",
             "markdown": "This discussion serves as a review of the problem solving process and highlights how many different types of problems there could be. Encourage students to be creative and have some fun with the different \"problems\" they might solve.\r\n"
           }
@@ -4696,7 +4666,7 @@
         "description": "####    Tangrams",
         "tips": [
           {
-            "key": "tip",
+            "key": "56",
             "type": "teachingTip",
             "markdown": "**Integrating the Problem Solving Process:** The tangrams can actually take several minutes, especially if students are approaching without some kind of strategy. Remind them that one step is to Prepare before they just jump in and start hunting.\r\n\r\n**Make It a Race:** Making this problem a race is a good way to drive motivation and also ensure that groups don't share the solutions once they've found them.\r\n\r\n**Key:** A key showing possible solutions can be found online following the link provided above.\r\n\r\n"
           }
@@ -4726,7 +4696,7 @@
         "description": "####  Choose a Pet",
         "tips": [
           {
-            "key": "tip",
+            "key": "57",
             "type": "teachingTip",
             "markdown": "**Integrating the Problem Solving Process:** This problem is particularly challenging if you don't define the problem well. If you take it at face value, your job is to randomly guess and check where to place individual puts until you find a solution. It is much easier if you first list the possible pets for each person, then choose pets for the most selective people first.\r\n\r\nThis isn't the only approach to the problem, and you shouldn't rush to introduce it as such. Rather, encourage students to discuss with one another what they know needs to be true at the end and whether different approaches might help.\r\n   \r\n\r\n**Extending the Problem:** If one group finishes far before others you could give them a blank sheet of paper and ask them to solve the problem again but with a new condition of your choosing (e.g. pick one person in their solution and ask whether they can solve the problem with an added requirement.)\r\n"
           }
@@ -4755,7 +4725,7 @@
         "description": "####  Plan a Pet Adoption Event",
         "tips": [
           {
-            "key": "tip",
+            "key": "58",
             "type": "teachingTip",
             "markdown": "**Integrating the Problem Solving Process:** This problem is intentionally very open-ended and in fact has students develop the criteria they'll use to measure success. This problem does the best job of highlighting all 4 steps of the process and walks students more intentionally through the Define, Prepare, Try, and Reflect stages.\r\n\r\n**Give Resource Ideas:** Students may just brainstorm ideas by themselves, but also let them know about other resources such as search engines and image searchers to help give them inspiration if they are stuck. Let them look at other event pages and flyers online for help.\r\n\r\n**When to Stop:** This problem could easily take a 50 minute class period. Let students know ahead of time that there are time limits on what they're doing and encourage them to think how they would improve their plan using the problem solving process if they had more time to iterate.\r\n"
           }
@@ -4783,7 +4753,7 @@
       "properties": {
         "tips": [
           {
-            "key": "discussion",
+            "key": "59",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students have practiced using the problem solving process on a number of different problems. Help them synthesize the notes they have been keeping to better understand the role of each step and the value of the problem solving process in general. A sample set of conclusions is below but you should allow students to share your own insights before offering your own.\r\n\r\n**Define:** without defining a problem you might solve the wrong problem, not know where to start, or not know when you're finished\r\n\r\n**Prepare:** Even well-defined problems usually have many possible approaches. Make each try more likely to succeed by first examining your options and anticipating challenges\r\n\r\n**Try:** Without trying you'll never get anywhere. It's important to be persistent and patient so long as your plan still may work\r\n\r\n**Reflect:** You'll likely not solve the problem the first time or there will be a better way to solve it. Learn from your past attempts and get ready to start the process again.\r\n\r\n**The Problem Solving Process:** While you may notice you're using it even for small and trivial problems, this process is incredibly useful for large, complex, poorly-defined, or open-ended problems. It helps you make progress when the way forward may not always be clear.\r\n"
           }
@@ -4835,7 +4805,7 @@
         "description": "**Discuss:** Have groups share quickly before taking suggestions from the class as a whole.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "60",
             "type": "discussionGoal",
             "markdown": "There are many different strategies to help define problems, including the questions on the previous lesson's activity guide.  Some potentially useful questions include:\r\n\r\n* Who in particular the problem affects. What specifically do they need? In what kind of situations?\r\n* Why does the problem exist? (And why does that problem exist?) Keep asking to get to the heart of the problem.\r\n* How could I be able to tell the problem had been solved? What could I observe or measure?\r\n\r\n"
           }
@@ -4876,7 +4846,7 @@
         "description": "Allow students to share out individually.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "1",
             "type": "discussionGoal",
             "markdown": "This discussion serves as a review of the problem solving process and highlights how many different types of problems there could be. Encourage students to be creative and have some fun with the different \"problems\" they might solve.\r\n"
           }
@@ -4928,7 +4898,7 @@
         "description": "####  Maze",
         "tips": [
           {
-            "key": "tip",
+            "key": "2",
             "type": "teachingTip",
             "markdown": "**Integrating the Problem Solving Process:** This word search can actually take several minutes, especially if students are approaching without some kind of strategy. Remind them that one step is to Prepare before they just jump in and start hunting.\r\n\r\n**Make It a Race:** Making this problem a race is a good way to drive motivation and also ensure that groups don't share the locations of words once they've found them.\r\n\r\n**Key:** A key showing possible solutions can be found online following the link provided above.\r\n"
           }
@@ -4958,7 +4928,7 @@
         "description": "####  Partner Race Relay",
         "tips": [
           {
-            "key": "tip",
+            "key": "3",
             "type": "teachingTip",
             "markdown": "**Integrating the Problem Solving Process:** This problem is particularly challenging if you don't Define the problem well. If you take it at face value, your job is to randomly guess and check partnering the players until you find a fast solution. It is much easier if you come up with general strategies first (send fast people back, pair slow people together).\r\n\r\nThis isn't the only approach to the problem, and you shouldn't rush to introduce it as such. Rather, encourage students to discuss with one another what they know needs to be true at the end and whether different approaches might help.\r\n\r\n**Draw Pictures:** Students will likely do better if they try out different solutions. You may wish for students to use a journal or scratch paper as a place to brainstorm ideas.\r\n\r\n**Extending the Problem:** If one group finishes far before others you could give them a blank sheet of paper and ask them to solve the problem again but with a shorter time.  The minimum time for the solution is 42 minutes, and if students have already reached that time, challenge them to explain how they know that their time is the fastest.\r\n\r\n"
           }
@@ -4987,7 +4957,7 @@
         "description": "####  Make a Game",
         "tips": [
           {
-            "key": "tip",
+            "key": "4",
             "type": "teachingTip",
             "markdown": "**Integrating the Problem Solving Process:** This problem is intentionally very open-ended and in fact has students develop the criteria they'll use to measure success. This problem does the best job of highlighting all 4 steps of the process and walks students more intentionally through the Define, Prepare, Try, and Reflect stages.\r\n\r\n**Give Resource Ideas:** Students may just brainstorm ideas by themselves, but also let them know about other resources such as search engines and image searchers to help give them inspiration if they are stuck. Let them look at other games online for help.\r\n\r\n**When to Stop:** This problem could easily take a 50 minute class period. Let students know ahead of time that there are time limits on what they're doing and encourage them to think how they would improve their route using the problem solving process if they had more time to iterate.\r\n"
           }
@@ -5015,7 +4985,7 @@
       "properties": {
         "tips": [
           {
-            "key": "discussion",
+            "key": "5",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students have practiced using the problem solving process on a number of different problems. Help them synthesize the notes they have been keeping to better understand the role of each step and the value of the problem solving process in general. A sample set of conclusions is below but you should allow students to share your own insights before offering your own.\r\n\r\n**Define:** without defining a problem you might solve the wrong problem, not know where to start, or not know when you're finished\r\n\r\n**Prepare:** Even well-defined problems usually have many possible approaches. Make each try more likely to succeed by first examining your options and anticipating challenges\r\n\r\n**Try:** Without trying you'll never get anywhere. It's important to be persistent and patient so long as your plan still may work\r\n\r\n**Reflect:** You'll likely not solve the problem the first time or there will be a better way to solve it. Learn from your past attempts and get ready to start the process again.\r\n\r\n**The Problem Solving Process:** While you may notice you're using it even for small and trivial problems, this process is incredibly useful for large, complex, poorly-defined, or open-ended problems. It helps you make progress when the way forward may not always be clear.\r\n"
           }
@@ -5067,7 +5037,7 @@
         "description": "**Discuss:** Have groups share quickly before taking suggestions from the class as a whole.",
         "tips": [
           {
-            "key": "discussion",
+            "key": "6",
             "type": "discussionGoal",
             "markdown": "There are many different strategies to help define problems, including the questions on the previous lesson's activity guide.  Some potentially useful questions include:\r\n\r\n* Who in particular the problem affects. What specifically do they need? In what kind of situations?\r\n* Why the problem exists? (And why does that problem exist?) Keep asking to get to the heart of the problem.\r\n* How could I be able to tell the problem had been solved? What could I observe or measure?\r\n\r\n"
           }
@@ -5103,7 +5073,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pre-survey-levelgroup_2021"
@@ -5121,7 +5091,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Problem Solving Process",
         "level_keys": [
@@ -5129,7 +5099,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Problem Solving Process Video_2021"
@@ -5147,7 +5117,7 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: What Makes a Computer, a Computer?",
         "level_keys": [
@@ -5155,7 +5125,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD What Makes a Computer a Computer Video_2021"
@@ -5173,7 +5143,7 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App: Pet Chooser",
         "level_keys": [
@@ -5181,7 +5151,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 IO Pet Chooser_2021"
@@ -5199,7 +5169,7 @@
       "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App: Story Creator",
         "level_keys": [
@@ -5207,7 +5177,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 IO Story_2021"
@@ -5225,7 +5195,7 @@
       "chapter": 6,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App: Improved Pet Chooser",
         "level_keys": [
@@ -5233,7 +5203,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 IO Pet Chooser 2_2021"
@@ -5459,7 +5429,7 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App: Outfit Picker",
         "level_keys": [
@@ -5467,7 +5437,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage outfit_2021"
@@ -5485,7 +5455,7 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App: Friend Finder",
         "level_keys": [
@@ -5493,7 +5463,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage friends_2021"
@@ -5511,7 +5481,7 @@
       "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App: Kids Movie Recommender",
         "level_keys": [
@@ -5519,7 +5489,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage movies_2021"
@@ -5537,7 +5507,7 @@
       "chapter": 18,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: IOSP Model",
         "level_keys": [
@@ -5545,7 +5515,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 storage video_2021"
@@ -5571,7 +5541,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U1Ch2_2021"
@@ -5596,7 +5566,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U1 Test_2021"
@@ -6824,6 +6794,80 @@
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
         "resource.key": "solving-problems-activity-guide-game-2020"
+      }
+    }
+  ],
+  "vocabularies": [
+    {
+      "key": "Computer",
+      "word": "Computer",
+      "definition": "A machine that works with information.",
+      "seeding_key": {
+        "vocabulary.key": "Computer"
+      }
+    },
+    {
+      "key": "Input",
+      "word": "Input",
+      "definition": "the information computers get from users, devices, or other computers",
+      "seeding_key": {
+        "vocabulary.key": "Input"
+      }
+    },
+    {
+      "key": "Output",
+      "word": "Output",
+      "definition": "the information computers give to users, devices, or other computers",
+      "seeding_key": {
+        "vocabulary.key": "Output"
+      }
+    },
+    {
+      "key": "Processing",
+      "word": "Processing",
+      "definition": "The thinking work computers do to turn input into output.",
+      "seeding_key": {
+        "vocabulary.key": "Processing"
+      }
+    },
+    {
+      "key": "storage",
+      "word": "storage",
+      "definition": "saving information to use in the future",
+      "seeding_key": {
+        "vocabulary.key": "storage"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "vocabulary.key": "Computer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input and Output",
+        "vocabulary.key": "Input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input and Output",
+        "vocabulary.key": "Output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing",
+        "vocabulary.key": "Processing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storage",
+        "vocabulary.key": "storage"
       }
     }
   ],

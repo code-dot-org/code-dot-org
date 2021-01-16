@@ -2444,7 +2444,171 @@ si:
           lesson_groups:
             lg_1:
               display_name: අන්තර්ගතය
-        ml-playground:
+        csd3-2021:
+          description_short: "ක්‍රමලේඛනය"
           lessons:
-            intro:
-              name: හැදින්වීම
+            Variables:
+              key: විචල්‍යන්
+              name: විචල්‍යන්
+            Text:
+              key: පෙළ
+              name: පෙළ
+            Conditionals:
+              key: කන්ඩිෂනලස්
+              name: කන්ඩිෂනලස්
+            Functions:
+              key: ශ්‍රිතයන්
+              name: ශ්‍රිතයන්
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: පරාමිතියන් සහිත ශ්‍රිත
+              name: පරාමිතියන් සහිත ශ්‍රිත
+        csp1-2021:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: ලැයිස්තු
+            csp_loops:
+              display_name: ලූපයන්
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: සතුටු සිතියම්
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: එය ගෙන යන්න, ගෙන යන්න
+              name: එය ගෙන යන්න, ගෙන යන්න
+            'Loops: Getting Loopy':
+              name: ඔල්මාද වීම
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: ද්විමය වළලු
+              name: ද්විමය වළලු
+            'Events: The Big Event':
+              name: විශාල සිදුවීම
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_binary:
+              display_name: ද්විමය
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_data:
+              display_name: දත්ත
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: ප්‍රස්තාර රටා වැඩසටහන්
+            Relay Programming:
+              key: ක්‍රමලේඛණය ප්‍රතිචාරණය
+              name: ක්‍රමලේඛණය ප්‍රතිචාරණය
+            Conditionals with Cards:
+              key: කාඩ්පත් සමඟ කොන්දේසික
+              name: කාඩ්පත් සමඟ කොන්දේසික
+            'Unplugged: Binary':
+              key: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා'
+              name: ද්විමය පින්තූර
+            Artist Binary:
+              key: කලාකරු ද්විමය
+              name: කලාකරු ද්විමය
+          lesson_groups:
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_binary:
+              display_name: ද්විමය
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: කන්ඩිෂනලස්
+            'Functions: Songwriting':
+              name: ගීත ලිවීම
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_nested_loops:
+              display_name: නැවත නැවත සිදුවන ලුප
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: ආවරණය කරන ලද විචල්‍ය
+              name: ආවරණය කරන ලද විචල්‍ය
+            Internet:
+              key: අන්තර්ජාලය
+              name: අන්තර්ජාලය
+            For Loop Fun:
+              key: For ලුපයේ සතුට
+              name: For ලුපයේ සතුට
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_variables:
+              display_name: විචල්‍යන්
+            csf_data:
+              display_name: දත්ත
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_variables:
+              display_name: විචල්‍යන්
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+        csf-2021-pilot:
+          lessons:
+            lesson-1:
+              name: ආවරණය කරන ලද විචල්‍ය
+          lesson_groups:
+            ramp_up:
+              display_name: හැදින්වීම
+            lessonGroup-3:
+              display_name: විචල්‍යන්

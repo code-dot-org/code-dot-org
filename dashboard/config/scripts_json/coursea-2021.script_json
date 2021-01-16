@@ -457,24 +457,10 @@
       "key": "9ef71984-8749-46e9-ada3-889815c8f1b9",
       "position": 5,
       "properties": {
-        "name": "Extension Activities",
-        "duration": 0
+        "name": "Extension Activities"
       },
       "seeding_key": {
         "lesson_activity.key": "9ef71984-8749-46e9-ada3-889815c8f1b9",
-        "lesson.key": "Learn to Drag and Drop",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursea-2021"
-      }
-    },
-    {
-      "key": "e44d37e9-fb51-49c9-8146-1acec560c144",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e44d37e9-fb51-49c9-8146-1acec560c144",
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021"
@@ -1221,7 +1207,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": " - Use calm bodies in the lab\r\n - Remember not to chew gum or candy\r\n - Sanitize your hands\r\n - Sit with your partner at one computer\r\n - Make sure that the first \"driver\" can reach the mouse\r\n - When you get frustrated, don't hit or shake the computer or monitor\r\n - Follow the [r 202020] rule\r\n - How to deal with the [r wiggles] every 20-30 minutes (requires a free login on GoNoodle)\r\n - Ask your partner before you ask the teacher\r\n - Keep volume down so everyone else can hear their partners\r\n - Use your journal for keeping track of feelings and solutions\r\n\r\n"
           }
@@ -1274,7 +1259,6 @@
         "description": "Take some time to explicitly teach how to click, drag, and drop. Take time to introduce the language around the devices students will be using when they work on the puzzles. If you have tablets, students will be using a *touch screen*. If you have laptops, they will likely be using a *trackpad*. Desktop computers like you might find in a lab will rely on the use of the *mouse*.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Considering having students break down the steps of dragging and dropping and record them on the board. For example: \r\n\r\n1. Move the arrow to the block. \r\n2. Click and hold the mouse button. \r\n3. Move the mouse. \r\n4. Let go of the button.\r\n\r\nDoing this will give students practice with creating an *algorithm*, which is a concept that will be explored in upcoming lessons.\r\n"
           }
@@ -1303,7 +1287,6 @@
         "description": "Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online puzzles, the role of the teacher is primarily one of encouragement and support. Online puzzles are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are:",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Show the students the right way to help classmates:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch  the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
           }
@@ -1322,6 +1305,17 @@
       },
       "seeding_key": {
         "activity_section.key": "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa",
+        "lesson_activity.key": "86881655-9660-42ab-92ea-aa38d08cdeff"
+      }
+    },
+    {
+      "key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda",
+      "position": 6,
+      "properties": {
+        "name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda",
         "lesson_activity.key": "86881655-9660-42ab-92ea-aa38d08cdeff"
       }
     },
@@ -1346,17 +1340,6 @@
       "seeding_key": {
         "activity_section.key": "902cde98-a6eb-4a14-b992-43ba04b6c522",
         "lesson_activity.key": "9ef71984-8749-46e9-ada3-889815c8f1b9"
-      }
-    },
-    {
-      "key": "6c62afab-dce9-4474-a266-4c205df1788c",
-      "position": 1,
-      "properties": {
-        "name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c",
-        "lesson_activity.key": "e44d37e9-fb51-49c9-8146-1acec560c144"
       }
     },
     {
@@ -2797,7 +2780,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:1"
@@ -2823,7 +2806,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:2"
@@ -2849,7 +2832,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:3"
@@ -2875,7 +2858,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:4"
@@ -2901,7 +2884,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:5"
@@ -2927,7 +2910,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:6"
@@ -2953,7 +2936,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:7"
@@ -2979,7 +2962,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:8"
@@ -3005,7 +2988,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:9"
@@ -3031,7 +3014,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:10"
@@ -3057,7 +3040,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:11"
@@ -3083,7 +3066,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       },
       "level_keys": [
         "blockly:Jigsaw:12"
@@ -3510,8 +3493,8 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseB_maze_seq9_2021"
         ]
@@ -3873,8 +3856,8 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseB_starWars_prog8_2021"
         ]
@@ -4237,8 +4220,8 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseB_iceage_loops10_2021"
         ]
@@ -4576,8 +4559,8 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseA_collector_loops9_2021"
         ]
@@ -4991,8 +4974,8 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseA_artist_loops9_2021"
         ]
@@ -5446,7 +5429,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -5458,7 +5441,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -5470,7 +5453,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -5482,7 +5465,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -5494,7 +5477,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -5506,7 +5489,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -5518,7 +5501,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -5530,7 +5513,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -5542,7 +5525,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -5554,7 +5537,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -5566,7 +5549,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -5578,7 +5561,7 @@
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "6c62afab-dce9-4474-a266-4c205df1788c"
+        "activity_section.key": "31f60124-e5bb-4ed5-b5ef-97509d71cbda"
       }
     },
     {
@@ -7260,6 +7243,388 @@
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "resource.key": "csf-lesson-recommend"
+      }
+    }
+  ],
+  "vocabularies": [
+    {
+      "key": "Algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "seeding_key": {
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Click",
+      "word": "Click",
+      "definition": "Press the mouse button",
+      "seeding_key": {
+        "vocabulary.key": "Click"
+      }
+    },
+    {
+      "key": "Double-Click",
+      "word": "Double-Click",
+      "definition": "Press the mouse button very quickly",
+      "seeding_key": {
+        "vocabulary.key": "Double-Click"
+      }
+    },
+    {
+      "key": "Drag",
+      "word": "Drag",
+      "definition": "Click your mouse button and hold as you move the mouse pointer to a new location",
+      "seeding_key": {
+        "vocabulary.key": "Drag"
+      }
+    },
+    {
+      "key": "Drop",
+      "word": "Drop",
+      "definition": "Release your mouse button to \"let go\" of an item that you are dragging",
+      "seeding_key": {
+        "vocabulary.key": "Drop"
+      }
+    },
+    {
+      "key": "Algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "seeding_key": {
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "seeding_key": {
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "key": "Algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "seeding_key": {
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "key": "Debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "seeding_key": {
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "key": "Program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "seeding_key": {
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "key": "Bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "seeding_key": {
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "key": "Programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "seeding_key": {
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "seeding_key": {
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "key": "Repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "seeding_key": {
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "key": "Event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "seeding_key": {
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "key": "Event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "seeding_key": {
+        "vocabulary.key": "Event"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: Happy Maps",
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: Happy Maps",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: Happy Maps",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "vocabulary.key": "Click"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "vocabulary.key": "Double-Click"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "vocabulary.key": "Drag"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "vocabulary.key": "Drop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Ice Age",
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Ice Age",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Ice Age",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Ice Age",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Ice Age",
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "Algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "Debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "Program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "Bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "Programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Happy Loops",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Happy Loops",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "vocabulary.key": "Loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "vocabulary.key": "Repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "vocabulary.key": "Event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "vocabulary.key": "Event"
       }
     }
   ],
