@@ -340,7 +340,7 @@ class LessonEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
-          <ActivitiesEditor />
+          <ActivitiesEditor hasLessonPlan={true} />
         </CollapsibleEditorSection>
 
         <SaveBar
