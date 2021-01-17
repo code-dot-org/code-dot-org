@@ -1752,7 +1752,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal expected_level_names, actual_level_names
 
     new_dsl = <<~SCRIPT
-      lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: false
+      lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: true
       level 'Level 1_copy'
       level 'Level 4_copy'
       level 'Level 5_copy'

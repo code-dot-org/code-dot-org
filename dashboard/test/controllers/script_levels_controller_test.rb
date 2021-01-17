@@ -20,9 +20,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
     @custom_lesson_group = create(:lesson_group, script: @custom_script)
-    @custom_lesson_1 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 1', name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
-    @custom_lesson_2 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 2', name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
-    @custom_lesson_3 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 3', name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3')
+    @custom_lesson_1 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 1', name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1', has_lesson_plan: true)
+    @custom_lesson_2 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 2', name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2', has_lesson_plan: true)
+    @custom_lesson_3 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 3', name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3', has_lesson_plan: true)
     @custom_s1_l1 = create(
       :script_level,
       script: @custom_script,
@@ -1751,7 +1751,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "specifying a bonus level name will direct to that level" do
     script = create :script
     lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group, has_lesson_plan: true)
     script_level = create :script_level, lesson: lesson, script: script
     script_level.bonus = true
     script_level.save!
@@ -1767,7 +1767,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "a bonus scriptlevel id takes precedence over level name" do
     script = create :script
     lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group, has_lesson_plan: true)
     script_level_by_id = create :script_level, lesson: lesson, script: script
     script_level_by_name = create :script_level, lesson: lesson, script: script
     script_level_by_id.bonus = true
@@ -1787,7 +1787,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "a bad bonus level name shows extras page" do
     script = create :script
     lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group, has_lesson_plan: true)
     script_level_by_id = create :script_level, lesson: lesson, script: script
     script_level_by_name = create :script_level, lesson: lesson, script: script
     script_level_by_id.bonus = true
