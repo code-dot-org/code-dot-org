@@ -6,7 +6,8 @@ import {
   getShowChooseReserve,
   setPercentDataToReserve,
   setSelectedTrainer,
-  getCompatibleTrainers
+  getCompatibleTrainers,
+  setKValue
 } from "../redux";
 import { styles, TRAINING_DATA_PERCENTS } from "../constants";
 
@@ -16,7 +17,9 @@ class SelectTrainer extends Component {
     setPercentDataToReserve: PropTypes.func,
     selectedTrainer: PropTypes.string,
     setSelectedTrainer: PropTypes.func,
-    compatibleTrainers: PropTypes.object
+    compatibleTrainers: PropTypes.object,
+    setKValue: PropTypes.func,
+    kValue: PropTypes.number
   };
 
   handleChange = event => {
@@ -26,6 +29,11 @@ class SelectTrainer extends Component {
   handleChangeSelect = event => {
     this.props.setSelectedTrainer(event.target.value);
   };
+
+  /* add event handler -> handleChangeInput Function */
+  handleChangeInput = event => {
+    this.props.setKValue(parseInt(event.target.value));
+  }
 
   render() {
     const {
@@ -91,6 +99,20 @@ class SelectTrainer extends Component {
               </div>
             )}
           </label>
+          {
+            (this.props.selectedTrainer === 'knnClassify' ||
+            this.props.selectedTrainer === 'knnRegress') && (
+          <div>
+            <label>
+             <p>What would you like the value of K to be?</p>
+                    <input
+                    /* value of input is handled by default */
+                      onChange={this.handleChangeInput}
+                      type="text"
+                    />
+             </label>
+          </div>
+            )}
         </form>
       </div>
     );
@@ -103,7 +125,8 @@ export default connect(
     percentDataToReserve: state.percentDataToReserve,
 
     selectedTrainer: state.selectedTrainer,
-    compatibleTrainers: getCompatibleTrainers(state)
+    compatibleTrainers: getCompatibleTrainers(state),
+    kValue: state.kValue
   }),
   dispatch => ({
     setPercentDataToReserve(percentDataToReserve) {
@@ -111,6 +134,9 @@ export default connect(
     },
     setSelectedTrainer(selectedTrainer) {
       dispatch(setSelectedTrainer(selectedTrainer));
+    },
+    setKValue(kValue) {
+      dispatch(setKValue(kValue));
     }
   })
 )(SelectTrainer);
