@@ -110,7 +110,7 @@ class ColumnInspector extends Component {
 
                 {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
                   <div>
-                    <br/>
+                    <br />
                     <Histogram
                       xLabels={labels}
                       yValues={data}
@@ -120,7 +120,6 @@ class ColumnInspector extends Component {
                     />
                   </div>
                 )}
-
 
                 {/*currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
                   <div>
@@ -179,18 +178,29 @@ class ColumnInspector extends Component {
               </div>
             </form>
 
-            <button onClick={this.setPredictColumn} style={styles.predictButton}>Predict this column</button>
+            <button
+              onClick={this.setPredictColumn}
+              style={styles.predictButton}
+            >
+              Predict this column
+            </button>
             <br />
             {!currentColumnIsSelectedFeature && (
               <div>
-                <button onClick={this.addFeature} style={styles.predictBasedButton}>
+                <button
+                  onClick={this.addFeature}
+                  style={styles.predictBasedButton}
+                >
                   Predict based on this column
                 </button>
                 <br />
               </div>
             )}
             {currentColumnIsSelectedFeature && (
-              <button onClick={this.removeFeature} style={styles.dontPredictBasedButton}>
+              <button
+                onClick={this.removeFeature}
+                style={styles.dontPredictBasedButton}
+              >
                 Don't predict based on this column
               </button>
             )}

@@ -77,7 +77,7 @@ export function setSelectedTrainer(selectedTrainer) {
   return { type: SET_SELECTED_TRAINER, selectedTrainer };
 }
 
-export function setKValue (kValue) {
+export function setKValue(kValue) {
   return { type: SET_K_VALUE, kValue };
 }
 

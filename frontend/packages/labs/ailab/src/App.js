@@ -11,7 +11,12 @@ import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
 import { connect } from "react-redux";
-import { getPanels, getPanelButtons, setCurrentPanel, validationMessages } from "./redux";
+import {
+  getPanels,
+  getPanelButtons,
+  setCurrentPanel,
+  validationMessages
+} from "./redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquare, faCheckSquare } from "@fortawesome/free-regular-svg-icons";
 
@@ -83,8 +88,7 @@ class PanelButtons extends Component {
               style={styles.navButton}
               onClick={() => setCurrentPanel(panelButtons.prev.panel)}
             >
-              &#9664;
-              &nbsp;
+              &#9664; &nbsp;
               {panelButtons.prev.text}
             </button>
           </div>
@@ -97,8 +101,7 @@ class PanelButtons extends Component {
               onClick={() => setCurrentPanel(panelButtons.next.panel)}
             >
               {panelButtons.next.text}
-              &nbsp;
-              &#9654;
+              &nbsp; &#9654;
             </button>
           </div>
         )}

@@ -62,12 +62,12 @@ class DataDisplay extends Component {
     }
   };
 
-  showSelectFeatures = (mode) => {
-    this.setState({showSelectFeatures: mode});
+  showSelectFeatures = mode => {
+    this.setState({ showSelectFeatures: mode });
   };
 
   onSelectFeaturesClose = () => {
-    this.setState({showSelectFeatures: null});
+    this.setState({ showSelectFeatures: null });
   };
 
   render() {
@@ -76,16 +76,25 @@ class DataDisplay extends Component {
     return (
       <div id="data-display">
         {this.state.showSelectFeatures && (
-          <SelectFeatures mode={this.state.showSelectFeatures} onClose={this.onSelectFeaturesClose}/>
+          <SelectFeatures
+            mode={this.state.showSelectFeatures}
+            onClose={this.onSelectFeaturesClose}
+          />
         )}
 
         <div style={{ fontSize: 36 }}>
           Predict{" "}
-          <span style={{ color: "rgb(186, 168, 70)" }} onClick={() => this.showSelectFeatures("label")}>
+          <span
+            style={{ color: "rgb(186, 168, 70)" }}
+            onClick={() => this.showSelectFeatures("label")}
+          >
             {this.props.labelColumn || "..."}
           </span>{" "}
           based on{" "}
-          <span style={{ color: "rgb(70, 186, 168)" }} onClick={() => this.showSelectFeatures("features")}>
+          <span
+            style={{ color: "rgb(70, 186, 168)" }}
+            onClick={() => this.showSelectFeatures("features")}
+          >
             {this.props.selectedFeatures.length > 0
               ? this.props.selectedFeatures.join(", ")
               : ".."}

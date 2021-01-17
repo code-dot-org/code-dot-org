@@ -55,8 +55,8 @@ export const styles = {
   },
 
   panelContentLeft: {
-    float: 'left',
-    width: '80%'
+    float: "left",
+    width: "80%"
   },
 
   subPanel: {
@@ -234,5 +234,4 @@ export const styles = {
   dontPredictBasedButton: {
     backgroundColor: "rgb(70, 186, 168)"
   }
-
 };

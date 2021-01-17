@@ -49,8 +49,11 @@ class SelectFeatures extends Component {
     const marginLeft = mode === "label" ? 160 : 440;
 
     return (
-      <div id="select-features" style={{ position: "absolute", marginLeft: marginLeft }}>
-        <div style={{width: 'initial', ...styles.panel}}>
+      <div
+        id="select-features"
+        style={{ position: "absolute", marginLeft: marginLeft }}
+      >
+        <div style={{ width: "initial", ...styles.panel }}>
           <div onClick={onClose} style={{ position: "absolute", right: 20 }}>
             X
           </div>

@@ -33,7 +33,7 @@ class SelectTrainer extends Component {
   /* add event handler -> handleChangeInput Function */
   handleChangeInput = event => {
     this.props.setKValue(parseInt(event.target.value));
-  }
+  };
 
   render() {
     const {
@@ -99,20 +99,19 @@ class SelectTrainer extends Component {
               </div>
             )}
           </label>
-          {
-            (this.props.selectedTrainer === 'knnClassify' ||
-            this.props.selectedTrainer === 'knnRegress') && (
-          <div>
-            <label>
-             <p>What would you like the value of K to be?</p>
-                    <input
-                    /* value of input is handled by default */
-                      onChange={this.handleChangeInput}
-                      type="text"
-                    />
-             </label>
-          </div>
-            )}
+          {(this.props.selectedTrainer === "knnClassify" ||
+            this.props.selectedTrainer === "knnRegress") && (
+            <div>
+              <label>
+                <p>What would you like the value of K to be?</p>
+                <input
+                  /* value of input is handled by default */
+                  onChange={this.handleChangeInput}
+                  type="text"
+                />
+              </label>
+            </div>
+          )}
         </form>
       </div>
     );
