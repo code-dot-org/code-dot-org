@@ -41,7 +41,7 @@ const sampleModes = {
 
   level_7_6: {},
 
-  brendan: {
+  minimal: {
     datasets: ["candy"],
     hideSpecifyColumns: true,
     hideSelectTrainer: "knnClassify",
