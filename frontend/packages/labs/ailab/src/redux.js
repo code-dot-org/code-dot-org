@@ -849,6 +849,9 @@ export function getPanelButtons(state) {
       isPanelVisible(state, "selectTrainer") &&
       isPanelEnabled(state, "selectTrainer")
         ? { panel: "selectTrainer", text: "Trainer" }
+        : isPanelVisible(state, "trainModel") &&
+          isPanelEnabled(state, "trainModel")
+        ? { panel: "trainModel", text: "Train" }
         : null;
   } else if (state.currentPanel == "selectTrainer") {
     prev = { panel: "dataDisplay", text: "Data" };
