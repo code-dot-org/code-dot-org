@@ -127,6 +127,7 @@ class Panels extends Component {
   }
 }
 
+/*
 class ValidationMessages extends Component {
   static propTypes = {
     currentPanel: PropTypes.string,
@@ -164,6 +165,7 @@ class ValidationMessages extends Component {
     );
   }
 }
+*/
 
 class App extends Component {
   static propTypes = {
