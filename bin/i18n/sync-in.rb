@@ -101,18 +101,11 @@ def get_i18n_strings(level)
         i18n_strings['behavior_names'][name.content] = name.content if name
       end
 
-      text_blocks = blocks.xpath("//block[@type=\"text\"]")
-      i18n_strings['placeholder_texts'] = Hash.new unless text_blocks.empty?
-      text_blocks.each do |text_block|
-        text_title = text_block.at_xpath('./title[@name="TEXT"]')
-        # Skip empty or untranslatable string.
-        # A translatable string must have at least 3 consecutive alphabetic characters.
-        next unless text_title&.content =~ /[a-zA-Z]{3,}/
-
-        # Use only alphanumeric characters in lower cases as string key
-        text_key = Digest::MD5.hexdigest text_title.content
-        i18n_strings['placeholder_texts'][text_key] = text_title.content
-      end
+      ## Placeholder texts
+      i18n_strings['placeholder_texts'] = Hash.new
+      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'text', ['TEXT'])
+      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_ask', ['TEXT'])
+      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_showTitleScreen', %w[TEXT TITLE])
     end
   end
 
@@ -121,6 +114,27 @@ def get_i18n_strings(level)
   end
 
   i18n_strings.delete_if {|_, value| value.blank?}
+end
+
+def get_placeholder_texts(blocks, block_type, title_names)
+  results = {}  # TODO: change var name
+  blocks.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+    title_names.each do |title_name|
+      title = block.at_xpath("./title[@name=\"#{title_name}\"]")
+      # puts "title = #{title}"
+
+      # Skip empty or untranslatable string.
+      # A translatable string must have at least 3 consecutive alphabetic characters.
+      next unless title&.content =~ /[a-zA-Z]{3,}/
+
+      # Use only alphanumeric characters in lower cases as string key
+      text_key = Digest::MD5.hexdigest title.content
+      # puts "text_key = #{text_key}, title.content = #{title.content}"
+      results[text_key] = title.content
+    end
+  end
+
+  results
 end
 
 def localize_project_content
@@ -158,12 +172,16 @@ def localize_level_content
   Dir.chdir(Rails.root) do
     Script.all.each do |script|
       next unless ScriptConstants.i18n? script.name
+      # next unless script.name == 'coursee-2017' || script.name == 'express-2017' || script.name == 'coursee-2020'
+      # next unless script.name == 'express-2017'
+
       script_strings = {}
       script.script_levels.each do |script_level|
         level = script_level.oldest_active_level
         # Don't localize encrypted levels; the whole point of encryption is to
         # keep the contents of certain levels secret.
         next if level.encrypted?
+        # next unless level.name&.start_with?('courseE_playLab_scaffold') || level.name == 'Guess The Number' || level.name == 'courseE_aboutme_1_2020'
 
         url = I18nScriptUtils.get_level_url_key(script, level)
         script_strings[url] = get_i18n_strings(level)
