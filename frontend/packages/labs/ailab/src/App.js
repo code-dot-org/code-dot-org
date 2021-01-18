@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
-import SelectFeatures from "./UIComponents/SelectFeatures";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import SelectTrainer from "./UIComponents/SelectTrainer";
 import TrainModel from "./UIComponents/TrainModel";
@@ -69,22 +68,14 @@ class PanelButtons extends Component {
   };
 
   render() {
-    const { panels, panelButtons, currentPanel, setCurrentPanel } = this.props;
-
-    let previousText, nextText, previousPanel, nextPanel;
-
-    /*if (currentPanel === "dataDisplay") {
-      previousText = null;
-      nextText = "Train";
-      previousPanel = null;
-      nextPanel = "trainModel";
-    }*/
+    const { panelButtons, setCurrentPanel } = this.props;
 
     return (
       <div>
         {panelButtons.prev && (
           <div style={styles.previousButton}>
             <button
+              type="button"
               style={styles.navButton}
               onClick={() => setCurrentPanel(panelButtons.prev.panel)}
             >
@@ -97,6 +88,7 @@ class PanelButtons extends Component {
         {panelButtons.next && (
           <div style={styles.nextButton}>
             <button
+              type="button"
               style={styles.navButton}
               onClick={() => setCurrentPanel(panelButtons.next.panel)}
             >
@@ -189,7 +181,6 @@ class App extends Component {
       panelButtons,
       currentPanel,
       setCurrentPanel,
-      validationMessages,
       saveTrainedModel
     } = this.props;
 
@@ -206,10 +197,6 @@ class App extends Component {
             saveTrainedModel={saveTrainedModel}
           />
           {currentPanel === "dataDisplay" && <ColumnInspector />}
-          {/*<ValidationMessages
-            currentPanel={currentPanel}
-            validationMessages={validationMessages}
-          />*/}
           <PanelButtons
             panels={panels}
             panelButtons={panelButtons}

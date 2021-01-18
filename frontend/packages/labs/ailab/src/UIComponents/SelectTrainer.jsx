@@ -14,6 +14,7 @@ import { styles, TRAINING_DATA_PERCENTS } from "../constants";
 class SelectTrainer extends Component {
   static propTypes = {
     showChooseReserve: PropTypes.bool,
+    percentDataToReserve: PropTypes.number,
     setPercentDataToReserve: PropTypes.func,
     selectedTrainer: PropTypes.string,
     setSelectedTrainer: PropTypes.func,
@@ -22,16 +23,16 @@ class SelectTrainer extends Component {
     kValue: PropTypes.number
   };
 
-  handleChange = event => {
+  handleChangePercentReserve = event => {
     this.props.setPercentDataToReserve(parseInt(event.target.value));
   };
 
-  handleChangeSelect = event => {
+  handleChangeSelectTrainer = event => {
     this.props.setSelectedTrainer(event.target.value);
   };
 
   /* add event handler -> handleChangeInput Function */
-  handleChangeInput = event => {
+  handleChangeKValue = event => {
     this.props.setKValue(parseInt(event.target.value));
   };
 
@@ -58,7 +59,7 @@ class SelectTrainer extends Component {
                 Percent of dataset to reserve:{" "}
                 <select
                   value={percentDataToReserve}
-                  onChange={this.handleChange}
+                  onChange={this.handleChangePercentReserve}
                 >
                   {TRAINING_DATA_PERCENTS.map((percent, index) => {
                     return (
@@ -79,7 +80,7 @@ class SelectTrainer extends Component {
             <p>Which Machine Learning Algorithm would you like to use?</p>
             <select
               value={this.props.selectedTrainer}
-              onChange={this.handleChangeSelect}
+              onChange={this.handleChangeSelectTrainer}
             >
               <option>{""}</option>
               {Object.keys(compatibleTrainers).map((trainerKey, index) => {
@@ -106,7 +107,7 @@ class SelectTrainer extends Component {
                 <p>What would you like the value of K to be?</p>
                 <input
                   /* value of input is handled by default */
-                  onChange={this.handleChangeInput}
+                  onChange={this.handleChangeKValue}
                   type="text"
                 />
               </label>

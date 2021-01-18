@@ -830,28 +830,18 @@ export function getPanels(state) {
     });
 }
 
-/*
-  { id: "selectDataset", label: "Import" },
-  { id: "dataDisplay", label: "Data" },
-  { id: "selectTrainer", label: "Trainer" },
-  { id: "trainModel", label: "Train" },
-  { id: "results", label: "Results" },
-  { id: "predict", label: "Predict" },
-  { id: "saveModel", label: "Save" }
-*/
-
 // Given the current panel, return the appropriate previous & next buttons.
 export function getPanelButtons(state) {
   let prev, next;
 
-  if (state.currentPanel == "selectDataset") {
+  if (state.currentPanel === "selectDataset") {
     prev = null;
     next =
       isPanelVisible(state, "dataDisplay") &&
       isPanelEnabled(state, "dataDisplay")
         ? { panel: "dataDisplay", text: "Data" }
         : null;
-  } else if (state.currentPanel == "dataDisplay") {
+  } else if (state.currentPanel === "dataDisplay") {
     prev =
       isPanelVisible(state, "selectDataset") &&
       isPanelEnabled(state, "selectDataset")
@@ -865,13 +855,13 @@ export function getPanelButtons(state) {
           isPanelEnabled(state, "trainModel")
         ? { panel: "trainModel", text: "Train" }
         : null;
-  } else if (state.currentPanel == "selectTrainer") {
+  } else if (state.currentPanel === "selectTrainer") {
     prev = { panel: "dataDisplay", text: "Data" };
     next =
       isPanelVisible(state, "trainModel") && isPanelEnabled(state, "trainModel")
         ? { panel: "trainModel", text: "Train" }
         : null;
-  } else if (state.currentPanel == "results") {
+  } else if (state.currentPanel === "results") {
     prev = { panel: "dataDisplay", text: "Data" };
     next = null;
   }

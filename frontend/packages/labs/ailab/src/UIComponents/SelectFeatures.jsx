@@ -82,7 +82,7 @@ class SelectFeatures extends Component {
               </label>
             </form>
           )}
-          {mode == "features" && selectableFeatures.length > 0 && (
+          {mode === "features" && selectableFeatures.length > 0 && (
             <form style={styles.panelContentLeft}>
               <label>
                 <div style={styles.largeText}>

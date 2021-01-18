@@ -46,10 +46,10 @@ class ColumnInspector extends Component {
     let labels, data, options;
 
     if (currentColumnData) {
-      labels = Object.keys(currentColumnData.uniqueOptions); // ['2016', '2017', '2018'];
+      labels = Object.keys(currentColumnData.uniqueOptions);
       data = Object.keys(currentColumnData.uniqueOptions).map(option => {
         return currentColumnData.frequencies[option];
-      }); // [324, 45, 672];
+      });
       options = { fillColor: "#000", strokeColor: "#000" };
     }
 
@@ -179,6 +179,7 @@ class ColumnInspector extends Component {
             </form>
 
             <button
+              type="button"
               onClick={this.setPredictColumn}
               style={styles.predictButton}
             >
@@ -188,6 +189,7 @@ class ColumnInspector extends Component {
             {!currentColumnIsSelectedFeature && (
               <div>
                 <button
+                  type="button"
                   onClick={this.addFeature}
                   style={styles.predictBasedButton}
                 >
@@ -198,6 +200,7 @@ class ColumnInspector extends Component {
             )}
             {currentColumnIsSelectedFeature && (
               <button
+                type="button"
                 onClick={this.removeFeature}
                 style={styles.dontPredictBasedButton}
               >
