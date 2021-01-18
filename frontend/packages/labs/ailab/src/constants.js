@@ -233,5 +233,41 @@ export const styles = {
   },
   dontPredictBasedButton: {
     backgroundColor: "rgb(70, 186, 168)"
+  },
+
+  statement: {
+    fontSize: 36
+  },
+
+  statementLabel: {
+    color: "rgb(186, 168, 70)"
+  },
+
+  statementFeature: {
+    color: "rgb(70, 186, 168)"
+  },
+
+  selectLabelPopup: {
+    position: "absolute",
+    marginLeft: 160
+  },
+
+  selectFeaturesPopup: {
+    position: "absolute",
+    marginLeft: 440
+  },
+
+  selectFeaturesPopupClose: {
+    position: "absolute",
+    right: 20
+  },
+
+  selectLabelText: {
+    color: "rgb(186, 168, 70)"
+  },
+
+  selectFeaturesText: {
+    color: "rgb(70, 186, 168)"
   }
+
 };

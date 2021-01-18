@@ -82,17 +82,17 @@ class DataDisplay extends Component {
           />
         )}
 
-        <div style={{ fontSize: 36 }}>
+        <div style={styles.statement}>
           Predict{" "}
           <span
-            style={{ color: "rgb(186, 168, 70)" }}
+            style={styles.statementLabel}
             onClick={() => this.showSelectFeatures("label")}
           >
             {this.props.labelColumn || "..."}
           </span>{" "}
           based on{" "}
           <span
-            style={{ color: "rgb(70, 186, 168)" }}
+            style={styles.statementFeature}
             onClick={() => this.showSelectFeatures("features")}
           >
             {this.props.selectedFeatures.length > 0

@@ -46,15 +46,15 @@ class SelectFeatures extends Component {
       selectedFeatures
     } = this.props;
 
-    const marginLeft = mode === "label" ? 160 : 440;
+    const popupStyle = mode === "label" ? styles.selectLabelPopup : styles.selectFeaturesPopup;
 
     return (
       <div
         id="select-features"
-        style={{ position: "absolute", marginLeft: marginLeft }}
+        style={popupStyle}
       >
         <div style={{ width: "initial", ...styles.panel }}>
-          <div onClick={onClose} style={{ position: "absolute", right: 20 }}>
+          <div onClick={onClose} style={styles.selectFeaturesPopupClose}>
             X
           </div>
           {mode === "label" && showSelectLabels && (
@@ -62,7 +62,7 @@ class SelectFeatures extends Component {
               <label>
                 <div style={styles.largeText}>
                   Which{" "}
-                  <span style={{ color: "rgb(186, 168, 70)" }}>column</span>{" "}
+                  <span style={styles.selectLabelText}>column</span>{" "}
                   contains the labels for your dataset?
                 </div>
                 <p>
@@ -87,7 +87,7 @@ class SelectFeatures extends Component {
               <label>
                 <div style={styles.largeText}>
                   Which{" "}
-                  <span style={{ color: "rgb(70, 186, 168)" }}>features</span>{" "}
+                  <span style={styles.selectFeaturesText}>features</span>{" "}
                   are you interested in training on?
                 </div>
                 <p>
