@@ -16,8 +16,6 @@ import {
   setCurrentPanel,
   validationMessages
 } from "./redux";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquare, faCheckSquare } from "@fortawesome/free-regular-svg-icons";
 
 class PanelTabs extends Component {
   static propTypes = {
