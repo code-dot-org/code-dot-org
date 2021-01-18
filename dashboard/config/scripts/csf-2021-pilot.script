@@ -20,12 +20,13 @@ level 'courseF_sprites_behaviors', progression: 'Skill Building'
 level 'courseF_sprites_practice', progression: 'Practice'
 level 'courseF_sprites_freeplay', progression: 'Free Play: Make a Scene'
 
-lesson 'Sprites in Action', display_name: 'Sprites in Action'
-level 'courseF_events_predict', progression: 'Predict'
-level 'CDEF_video_SpritesInAction_2020', progression: 'Video: Sprites in Action'
+lesson 'Sprites in Action', display_name: 'Sprites in Action - coming soon!'
 
 lesson_group 'lessonGroup-3', display_name: 'Variables'
 lesson_group_description 'Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!'
-lesson 'lesson-1', display_name: 'Blank Space Variables'
-level 'EnvelopeVariables-Unplugged_2021', progression: 'Blank Space Variables'
+lesson 'lesson-1', display_name: 'Blank Space Variables - coming soon!'
+
+lesson 'variables-in-spritelab', display_name: 'Storing and Retrieving Text - coming soon!'
+
+lesson 'chatbot', display_name: 'Create a Chat-Bot - coming soon!'
 
