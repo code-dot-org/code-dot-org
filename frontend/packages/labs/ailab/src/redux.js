@@ -524,7 +524,7 @@ export function getUniqueOptionsByColumn(state) {
 
 export function getRangesByColumn(state) {
   let rangesByColumn = {};
-  getSelectedContinuousColumns(state).map(
+  getContinuousColumns(state).map(
     column => (rangesByColumn[column] = getRange(state, column))
   );
   return rangesByColumn;

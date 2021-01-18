@@ -8,7 +8,8 @@ import {
   getCurrentColumnData,
   addSelectedFeature,
   removeSelectedFeature,
-  getCurrentColumnIsSelectedFeature
+  getCurrentColumnIsSelectedFeature,
+  getRangesByColumn
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
 import Histogram from "react-chart-histogram";
@@ -20,7 +21,8 @@ class ColumnInspector extends Component {
     setLabelColumn: PropTypes.func.isRequired,
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
-    currentColumnIsSelectedFeature: PropTypes.bool
+    currentColumnIsSelectedFeature: PropTypes.bool,
+    rangesByColumn: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
@@ -41,11 +43,13 @@ class ColumnInspector extends Component {
   };
 
   render() {
-    const { currentColumnData, currentColumnIsSelectedFeature } = this.props;
+    const { currentColumnData, currentColumnIsSelectedFeature, rangesByColumn } = this.props;
 
     let labels, data, options;
-
-    if (currentColumnData) {
+    if (
+      currentColumnData &&
+      currentColumnData.dataType === ColumnTypes.CATEGORICAL
+    ) {
       labels = Object.keys(currentColumnData.uniqueOptions);
       data = Object.keys(currentColumnData.uniqueOptions).map(option => {
         return currentColumnData.frequencies[option];
@@ -153,26 +157,26 @@ class ColumnInspector extends Component {
                     </div>
                   </div>
                 )*/}
-                {/* currentColumnData.kind === ColumnTypes.CONTINUOUS && (
+                {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
                   <div>
                     {currentColumnData.range && (
                       <div>
-                        {isNaN(rangesByColumn[column.id].min) && (
+                        {isNaN(rangesByColumn[currentColumnData.id].min) && (
                           <p style={styles.error}>
                             Continuous columns should contain only numbers.
                           </p>
                         )}
-                        {!isNaN(rangesByColumn[column.id].min) && (
+                        {!isNaN(rangesByColumn[currentColumnData.id].min) && (
                           <div style={styles.subPanel}>
-                            min: {rangesByColumn[column.id].min}
+                            min: {rangesByColumn[currentColumnData.id].min}
                             <br />
-                            max: {rangesByColumn[column.id].max}
+                            max: {rangesByColumn[currentColumnData.id].max}
                           </div>
                         )}
                       </div>
                     )}
                   </div>
-                )*/}
+                )}
                 <br />
                 <br />
               </div>
@@ -217,7 +221,8 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
-    currentColumnIsSelectedFeature: getCurrentColumnIsSelectedFeature(state)
+    currentColumnIsSelectedFeature: getCurrentColumnIsSelectedFeature(state),
+    rangesByColumn: getRangesByColumn(state)
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {
