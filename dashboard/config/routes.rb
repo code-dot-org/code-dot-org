@@ -505,7 +505,7 @@ Dashboard::Application.routes.draw do
       end
 
       namespace :foorm do
-        namespace :form do
+        namespace :forms do
           post 'form_with_library_items', action: :fill_in_library_items
           get 'submissions_csv', action: :get_submissions_as_csv
           get 'form_names', action: :get_form_names_and_versions
