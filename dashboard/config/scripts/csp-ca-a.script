@@ -1,2 +1,3 @@
-lesson 'Commutative Assessment A'
+lesson 'Commutative Assessment A', display_name: 'Commutative Assessment A'
 level 'CSP Cumulative Assess A', assessment: true
+

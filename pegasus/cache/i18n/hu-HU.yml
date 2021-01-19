@@ -174,7 +174,7 @@ hu-HU:
   print_all: Kinyomtatni mindet
   print_ice_art: A jégrajzod kinyomtatása
   create_art_with_zombie: vagy készíts bonyolultabb műalkotást a zombival
-  i_am_a: Én vagyok egy
+  i_am_a: Foglalkozásom
   never_spam: Mi soha sem fogunk spamet küldeni
   enter_country: Add meg az országot, ha az Egyesült Államokon kívül élsz
   used_infrequent_updates: Csak ritka frissítéshez használatos
@@ -295,11 +295,11 @@ hu-HU:
   homepage_action_text_sign_up: Regisztrálás
   homepage_action_text_try_it: Próbáld ki
   homepage_action_text_volunteers: Technikai önkénteseket keresünk
-  homepage_action_text_codevideo: Nézd meg a videót
-  homepage_action_text_teachervideo: Nézd meg a videót
-  homepage_action_text_watchvideo: Nézd meg a videót
+  homepage_action_text_codevideo: Nézd meg a videót!
+  homepage_action_text_teachervideo: Nézd meg a videót!
+  homepage_action_text_watchvideo: Nézd meg a videót!
   homepage_action_text_girlvideo: Inspirálj egy lányt
-  homepage_action_text_learn: Kezdj tanulni
+  homepage_action_text_learn: Kezdj el tanulni!
   homepage_action_text_signpetition: Írd alá a petíciót
   homepage_signpetition_dropdown: Írd alá a petíciót &#x25BE;
   homepage_signpetition_dropdown_text: Egyetértek
@@ -324,7 +324,7 @@ hu-HU:
   homepage_slot_text_link_hocserved: "# fő már kipróbálta"
   homepage_solot_text_link_volunteer: Önkéntes az kódolás órájához
   homepage_slot_text_title_students: Tanuló
-  homepage_slot_text_blurb_students: Tekintsd meg az összes gyakorlatunkat
+  homepage_slot_text_blurb_students: Fedezd fel az összes játékot
   homepage_slot_text_blurb_students_courses: Fedezd fel a tanfolyamainkat
   homepage_slot_text_link_codestudio: Próbáld ki a Kód stúdiót
   homepage_slot_text_link_local: Keress egy helyi osztályt
@@ -343,6 +343,8 @@ hu-HU:
   homepage_slot_text_link_buy: Légy részese
   homepage_slot_text_link_donate: Adományozz
   homepage_slot_text_link_shop: Pólók, sapkák & egyéb
+  homepage_gallery_header: Több mint %{project_count} millió Code.org projekt készült
+    eddig
   homepage_header_donors: A Code.org megköszöni a támogatókat
   homepage_donors_seall: Összes megtekintése
   homepage_donors_donate: Adományozz
@@ -427,7 +429,7 @@ hu-HU:
   minecraft_continue_learning: 'Számítógép-tudomány mindenkinek: A Kódolás óráján
     túl a Microsoft Store-ban'
   sports_title: Kódold le a saját sportjátékodat
-  sports_watch_video: Nézd meg a videót
+  sports_watch_video: Nézd meg a videót!
   sports_all_sports_title: Kombinálj össze különböző sportágakat
   sports_athlete_Sarah: Sarah Quita Offringa, szörf bajnok
   sports_athlete_Marcelo: Marcelo, foci bajnok, a Real Madrid és a Brazil Nemzeti
@@ -894,6 +896,7 @@ hu-HU:
   iceage_name: Jégkorszak
   minecraft_name: Minecraft
   applab_name: App Lab
+  gamelab_name: Játék Labor
   sports_name: Kódold le a saját sportjátékodat
   applab_gradelevel: Kor 13+
   codeorg_gradelevel: 4-től 104 éves korig
@@ -1603,12 +1606,14 @@ hu-HU:
   user_header_signin: Bejelentkezés
   user_header_create: 'Alkoss '
   user_header_applab: 'App Labor '
+  user_header_artist: Művész
+  user_header_gamelab: Játék Labor
   user_header_playlab: Játéklabor
   user_header_dance: Táncos buli
   user_header_spritelab: Sprite labor
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
-  user_header_view_all: Összes projekt áttekintése...
+  user_header_view_all: Nézd meg az összes projektet...
   user_header_view_my_projects: Projektjeim megtekintése
   view_all_sections: Minden csoport megtekintése
   signing_in: Bejelentkezés
@@ -1631,6 +1636,11 @@ hu-HU:
     korosztály és minden képzettségi szint képviselői számára.
   hoc_overview_partner_activities_link: Tevékenységek megtekintése
   hoc_overview_start_tutorial: Kezdés
+  hoc_overview_more_resources: A [virtuális Hour of Code](https://hourofcode.com/us/how-to/virtual)
+    útmutatóban további forrásokat talál a távoktatáshoz . Ossza meg ezt a csomagot
+    [offline Hour of Code tevékenységek](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
+    azokkal a diákjaival, akiknek nincs vagy nem áll rendelkezésükre megfelelő technológia
+    és internetes kapcsolat.
   hoc_overview_view_teacher_guide: Oktatói útmutató megtekintése
   hoc2018_creativity: kreativitás
   hoc2018_creativity_create: Létrehoz
@@ -1706,3 +1716,8 @@ hu-HU:
   hoc2018_dance_amazon_about_future_engineer_button: Tudj meg többet
   hoc2018_dance_measure: Ütem
   hoc2018_dance_measure_colon: 'Ütem:'
+  hoc2018_mc_thank_microsoft: Köszönjük a Microsoftnak, hogy támogat bennünket elképzelésünk
+    és küldetésünk valóra váltásában, abban, hogy minden gyermeknek legyen lehetősége
+    számítástechnikát tanulni és a 21. században szükséges készségeket elsajátítani.
+  footer_powered_by_aws: Az Amazon Web Services működteti
+  codebytes_skinny_banner_english_only: Csak angol

@@ -4,7 +4,7 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Unit 1 Overview'
+lesson 'Unit 1 Overview', display_name: 'Unit 1 Overview'
 level 'What\'s inside and how is it organized?', named: true
 level 'Introduction to Unit 1', named: true
 level 'Unit 1 Teaching Philosophy and Commentary', named: true
@@ -12,12 +12,12 @@ level 'Teaching with the Internet Simulator', named: true
 level 'Practice Performance Tasks in Unit 1', named: true
 level 'Unit 1 Self-Assessment', named: true
 
-lesson 'AP Preparation and Support'
+lesson 'AP Preparation and Support', display_name: 'AP Preparation and Support'
 level 'Unit 1 Vocab and Concept Review Activity', named: true
 level 'AP Test Prep Guidance', named: true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Lessons 2 - 3: Binary Messages'
+lesson 'Lessons 2 - 3: Binary Messages', display_name: 'Lessons 2 - 3: Binary Messages'
 level 'Lesson 1.2 Overview', named: true
 level 'Understanding Communication Protocols', named: true
 level 'Lesson 1.3 Overview', named: true
@@ -26,7 +26,7 @@ level 'Internet Simulator: Sending Binary Messages', named: true
 level 'The Internet: Wires, Cables, and Wifi', named: true
 level 'Lessons 2 - 3: Teaching and Student Support Plan', named: true
 
-lesson 'Lessons 4 - 6: Encoding and Sending Numbers'
+lesson 'Lessons 4 - 6: Encoding and Sending Numbers', display_name: 'Lessons 4 - 6: Encoding and Sending Numbers'
 level 'Lesson 1.4 Overview', named: true
 level 'Why Teach Number Systems?', named: true
 level 'Lesson 1.5 Overview', named: true
@@ -36,7 +36,7 @@ level 'Internet Simulator: Sending Numbers', named: true
 level 'Reflection: Create your Own Number System', named: true
 level 'Lessons 4 - 6: Teaching and Student Support Plan', named: true
 
-lesson 'Lesson 7: Encoding and Sending Text'
+lesson 'Lesson 7: Encoding and Sending Text', display_name: 'Lesson 7: Encoding and Sending Text'
 level 'Lesson 1.7 Overview', named: true
 level 'What is ASCII?', named: true
 level 'Task: ASCII Representation of your Name', named: true
@@ -44,7 +44,7 @@ level 'What is HTML?', named: true
 level 'Internet Simulator: Sending Text', named: true
 level 'Lesson 7: Teaching and Student Support Plan', named: true
 
-lesson 'Lesson 9: Internet Addressing'
+lesson 'Lesson 9: Internet Addressing', display_name: 'Lesson 9: Internet Addressing'
 level 'Lesson 1.9 Overview', named: true
 level 'Addressing in the Game of Battleship', named: true
 level 'Task: Develop a Battleship Protocol', named: true
@@ -52,7 +52,7 @@ level 'Internet Simulator: Broadcast', named: true
 level 'The Internet: IP Addresses & DNS', named: true
 level 'Lesson 9: Teaching and Student Support Plan', named: true
 
-lesson 'Lessons 10 - 11: Routers, Redundancy, and Packets'
+lesson 'Lessons 10 - 11: Routers, Redundancy, and Packets', display_name: 'Lessons 10 - 11: Routers, Redundancy, and Packets'
 level 'Lesson 1.10 Overview', named: true
 level 'Internet Simulator: Routers', named: true
 level 'Lesson 1.11 Overview', named: true
@@ -60,7 +60,7 @@ level 'Internet Simulator: Packets', named: true
 level 'The Internet: Packets, Routing, and Reliability', named: true
 level 'Lessons 10 - 11: Teaching and Student Support Plan', named: true
 
-lesson 'Lessons 12 - 13: Abstraction on the Internet'
+lesson 'Lessons 12 - 13: Abstraction on the Internet', display_name: 'Lessons 12 - 13: Abstraction on the Internet'
 level 'Lesson 1.12 Overview', named: true
 level 'Internet Simulator: DNS', named: true
 level 'The Internet: IP Addresses & DNS', named: true
@@ -69,7 +69,7 @@ level 'The Internet: HTTP and HTML', named: true
 level 'Lessons 12 - 13: Teaching and Student Support Plan', named: true
 
 lesson_group 'practice', display_name: 'Teaching Practices'
-lesson 'Group Work and Peer Learning'
+lesson 'Group Work and Peer Learning', display_name: 'Group Work and Peer Learning'
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Group Work and Peer Learning in Unit 1', named: true
 level 'Collaborative Learning and Group Work: Description and Strategies', named: true
@@ -77,24 +77,25 @@ level 'The Official Peer Instruction Blog', named: true
 level 'the Journal of Peer Learning', named: true
 level 'Teaching Practice Plan: Group Work and Peer Learning', named: true
 
-lesson 'Balancing Teachers and Tools'
+lesson 'Balancing Teachers and Tools', display_name: 'Balancing Teachers and Tools'
 level 'Overview: Balancing Teachers and Tools', named: true
 level 'Balancing Teacher and Tools in Unit 1', named: true
 level 'Classroom Management Tips for School Computer Labs', named: true
 level 'Considerations for the 1-to-1 Classroom', named: true
 level 'Teaching Practice Plan: Balancing Teacher and Tools', named: true
 
-lesson 'Discovery Learning'
+lesson 'Discovery Learning', display_name: 'Discovery Learning'
 level 'Overview: Discovery Learning', named: true
 level 'Discovery Learning in Unit 1', named: true
 level 'Discovery learning definition and history', named: true
 level 'Discovery learning techniques', named: true
 level 'Teaching Practice Plan: Discovery Learning', named: true
 
-lesson 'Measuring Student Learning'
+lesson 'Measuring Student Learning', display_name: 'Measuring Student Learning'
 level 'Overview: Capturing Student Learning', named: true
 level 'Assessing Student Learning in Unit 1', named: true
 level 'What is the difference between formative and summative assessment?', named: true
 level 'Designing Assessment Questions', named: true
 level 'Classroom Assessment Techniques', named: true
 level 'Teaching Practice Plan: Assessing Student Learning', named: true
+

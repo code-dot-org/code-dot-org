@@ -1,4 +1,4 @@
-export const sensor_channels = {
+export const SENSOR_CHANNELS = {
   accelX: 8,
   accelY: 9,
   accelZ: 10,
@@ -8,6 +8,8 @@ export const sensor_channels = {
   magY: 14
 };
 export const EXTERNAL_PINS = [0, 1, 2];
+
+export const MB_API = 'microbit';
 
 export function roundToHundredth(rawValue) {
   return Math.floor(rawValue * 100) / 100;
@@ -33,6 +35,14 @@ export const MB_SENSOR_VARS = [
   'tempSensor',
   'compass'
 ];
+
+// milliseconds between samples for sensors
+export const SAMPLE_INTERVAL = 50;
+
+// Max number of milliseconds for which we store historical data
+export const MAX_SENSOR_BUFFER_DURATION = 3000;
+
+export const MAX_LIGHT_SENSOR_VALUE = 255;
 
 const BUTTON_EVENTS = ['down', 'up'];
 const SENSOR_EVENTS = ['change', 'data'];

@@ -1,26 +1,27 @@
-lesson 'Happy Maps'
+lesson 'Happy Maps', display_name: 'Happy Maps'
 level 'UnplugHappyMaps'
 
-lesson 'Move it, Move it'
+lesson 'Move it, Move it', display_name: 'Move it, Move it'
 level 'MoveIt'
 
-lesson 'Real-life Algorithms: Plant a Seed'
+lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Real-life Algorithms: Plant a Seed'
 level 'PlantASeed'
 
-lesson 'Graph Paper Programming'
+lesson 'Graph Paper Programming', display_name: 'Graph Paper Programming'
 level 'GraphPaperProgramming'
 
-lesson 'Building a Foundation'
+lesson 'Building a Foundation', display_name: 'Building a Foundation'
 level 'BuildingAFoundation'
 
-lesson 'Getting Loopy'
+lesson 'Getting Loopy', display_name: 'Getting Loopy'
 level 'GettingLoopy'
 
-lesson 'The Big Event'
+lesson 'The Big Event', display_name: 'The Big Event'
 level 'BigEvent'
 
-lesson 'Binary Bracelets'
+lesson 'Binary Bracelets', display_name: 'Binary Bracelets'
 level 'BinaryBracelets'
 
-lesson 'Songwriting'
+lesson 'Songwriting', display_name: 'Songwriting'
 level 'SongwritingParameters'
+

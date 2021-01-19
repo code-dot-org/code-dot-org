@@ -7,4 +7,4 @@
   = render partial: 'levels/editors/fields/weblab_code_area', locals: {f: f} if @level.is_a?(Weblab)
   = render partial: 'levels/editors/fields/block_pools', locals: {f: f} if @level.is_a?(GamelabJr) || @level.is_a?(Dancelab)
   = render partial: 'levels/editors/fields/helper_libraries', locals: {f: f} if @level.is_a?(GamelabJr) || @level.is_a?(Dancelab)
-  = render partial: 'levels/editors/fields/validation_code', locals: {f: f} unless @level.is_a?(Weblab)
+  = render partial: 'levels/editors/fields/validation_code', locals: {f: f}

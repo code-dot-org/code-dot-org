@@ -1,5 +1,6 @@
-lesson 'Simple Sprite Movement'
+lesson 'Simple Sprite Movement', display_name: 'Simple Sprite Movement'
 level 'GameLab Livecode Demo 1'
 level 'GameLab Livecode Demo 2'
 level 'GameLab Livecode Demo 3'
 level 'GameLab Livecode Demo 4'
+

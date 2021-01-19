@@ -42,6 +42,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
+    "validation_enabled": "true",
     "text_mode_at_start": "false",
     "hide_view_data_button": "true",
     "show_debug_watch": "false",
@@ -60,7 +61,7 @@
     "parent_level_id": 17621,
     "mini_rubric": "false",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/checking-multiple-conditions-with-if-else-if/"
+      "/docs/concepts/patterns/checking-multiple-conditions-with-if-else-if/"
     ],
     "encrypted": "false",
     "widget_mode": "false",

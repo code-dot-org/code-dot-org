@@ -49,7 +49,7 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       AllowVersionUpgrade: true
-      AutomatedSnapshotRetentionPeriod: 1
+      AutomatedSnapshotRetentionPeriod: 5
       ClusterParameterGroupName: default.redshift-1.0
       ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
       ClusterType: single-node
@@ -555,3 +555,46 @@ Resources:
                 Value: <%=environment%>-dashboard-cdn/
               - Name: suffix
                 Value: .gz
+  AuditLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /admin/auditlogs
+      # TODO Manually configured for now, uncomment when official resource support has been deployed.
+      # Ref: https://github.com/aws-cloudformation/aws-cloudformation-coverage-roadmap/issues/128
+      # KMSKeyId: !Ref AuditLogsKey
+  AuditLogsKey:
+    Type: AWS::KMS::Key
+    Properties:
+      Description: 'Used for encrypting audit logs.'
+      EnableKeyRotation: true
+      # See: https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/encrypt-log-data-kms.html#cmk-permissions
+      KeyPolicy:
+        Version: 2012-10-17
+        Id: key-policy-1
+        Statement:
+          - Sid: Enable IAM policies in source account for managing key access.
+            Effect: Allow
+            Principal: {AWS: [!Sub "arn:aws:iam::${AWS::AccountId}:root"]}
+            Action: 'kms:*'
+            Resource: '*'
+          - Sid: Restrict use of key to specific log groups.
+            Effect: Allow
+            Principal:
+              Service:
+                - !Sub "logs.${AWS::Region}.amazonaws.com"
+                - ssm.amazonaws.com
+            Action:
+              - 'kms:Encrypt'
+              - 'kms:Decrypt'
+              - 'kms:ReEncrypt*'
+              - 'kms:GenerateDataKey*'
+              - 'kms:DescribeKey'
+            Resource: '*'
+            Condition:
+              ArnEquals:
+                kms:EncryptionContext:aws:logs:arn: !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:${AuditLogs}"
+  AuditLogsKeyAlias:
+    Type: AWS::KMS::Alias
+    Properties:
+      AliasName: alias/auditlogs
+      TargetKeyId: !Ref AuditLogsKey

@@ -18,6 +18,7 @@
     "video_key": "csd_weblab_intro_2",
     "encrypted": "false",
     "mini_rubric": "false",
+    "validation_enabled": "true",
     "teacher_markdown": "# Using the Tool\r\n\r\nAs students work on this level, make sure they see that there is a new map level available to them in the \"Help and Tips\" tab.  This is a great place to look for extra resources that will help them to complete a level."
   },
   "published": true,

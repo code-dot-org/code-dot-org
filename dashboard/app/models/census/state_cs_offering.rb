@@ -98,7 +98,6 @@ class Census::StateCsOffering < ApplicationRecord
     AK
     AR
     CA
-    CO
     CT
     FL
     GA
@@ -109,7 +108,6 @@ class Census::StateCsOffering < ApplicationRecord
     LA
     MA
     MD
-    ME
     MN
     MO
     MS
@@ -118,8 +116,10 @@ class Census::StateCsOffering < ApplicationRecord
     NE
     NJ
     NM
+    NY
     OH
     OR
+    PA
     RI
     SC
     SD
@@ -1466,7 +1466,7 @@ class Census::StateCsOffering < ApplicationRecord
         courses = get_courses(state_code, row_hash, school_year, update)
         # state_school_id is unique so there should be at most one school.
         school = School.where(state_school_id: state_school_id).first
-        if school && state_school_id
+        if school && state_school_id && courses
           unless dry_run
             courses.each do |course|
               find_or_create_by!(
@@ -1480,8 +1480,9 @@ class Census::StateCsOffering < ApplicationRecord
         else
           # We don't have mapping for every school code so skip over any that
           # can't be found in the database.
-          CDO.log.warn "State CS Offering seeding: skipping row #{succeeded + skipped + 1} "\
-            "unknown state school id #{state_school_id}"
+          CDO.log.warn "State CS Offering seeding: skipping row #{succeeded + skipped + 1}, "\
+            "unknown state school id #{state_school_id}" \
+            "#{courses.nil? ? 'and/or found no CS courses' : ''}"
           skipped += 1
         end
       end

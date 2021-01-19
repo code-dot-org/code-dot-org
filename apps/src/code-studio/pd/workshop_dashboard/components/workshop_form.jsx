@@ -1,5 +1,3 @@
-/* global google */
-
 /**
  * Form for creating / editing workshop details.
  */
@@ -8,7 +6,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import Select from 'react-select';
-import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import moment from 'moment';
 import Spinner from '../../components/spinner';
@@ -34,15 +31,18 @@ import {
   PermissionPropType,
   WorkshopAdmin,
   Organizer,
-  Facilitator,
   ProgramManager,
   CsfFacilitator
 } from '../permission';
 import {
-  Courses,
-  Subjects
+  Subjects,
+  VirtualOnlySubjects,
+  MustSuppressEmailSubjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import CourseSelect from './CourseSelect';
+import SubjectSelect from './SubjectSelect';
+import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
 
 const styles = {
   readOnlyInput: {
@@ -65,14 +65,6 @@ const placeholderSession = {
   startTime: '9:00am',
   endTime: '5:00pm'
 };
-
-// When selecting whether a workshop is virtual through the UI,
-// a user is really selecting two things:
-//  a) whether the workshop is occurring virtually, and
-//  b) if there's a third party responsible for the content/structure of the workshop.
-// These two things are stored as separate attributes in the workshop model.
-const virtualWorkshopTypes = ['regional', 'friday_institute'];
-const thirdPartyProviders = ['friday_institute'];
 
 export class WorkshopForm extends React.Component {
   static contextTypes = {
@@ -100,7 +92,6 @@ export class WorkshopForm extends React.Component {
       regional_partner_name: PropTypes.string,
       regional_partner_id: PropTypes.number,
       virtual: PropTypes.bool,
-      third_party_provider: PropTypes.string,
       suppress_email: PropTypes.bool,
       organizer: PropTypes.shape({
         id: PropTypes.number,
@@ -121,7 +112,6 @@ export class WorkshopForm extends React.Component {
     let initialState = {
       errors: [],
       shouldValidate: false,
-      useAutocomplete: true,
       facilitators: [],
       location_name: '',
       location_address: '',
@@ -140,8 +130,7 @@ export class WorkshopForm extends React.Component {
       showTypeOptionsHelpDisplay: false,
       regional_partner_id: '',
       virtual: false,
-      suppress_email: false,
-      third_party_provider: null
+      suppress_email: false
     };
 
     if (props.workshop) {
@@ -162,8 +151,7 @@ export class WorkshopForm extends React.Component {
           'regional_partner_id',
           'organizer',
           'virtual',
-          'suppress_email',
-          'third_party_provider'
+          'suppress_email'
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(
@@ -177,19 +165,7 @@ export class WorkshopForm extends React.Component {
     return initialState;
   }
 
-  componentDidMount() {
-    this.enableAutocompleteLocation();
-  }
-
   componentWillUnmount() {
-    if (this.isGoogleMapsLoaded()) {
-      if (this.gm_authFailure) {
-        window.gm_authFailure = this.old_gm_authFailure;
-      }
-      if (this.autocomplete) {
-        google.maps.event.clearInstanceListeners(this.autocomplete);
-      }
-    }
     if (this.saveRequest) {
       this.saveRequest.abort();
     }
@@ -206,10 +182,6 @@ export class WorkshopForm extends React.Component {
     if (nextProps.readOnly && !this.props.readOnly) {
       this.setState(this.computeInitialState(this.props));
     }
-  }
-
-  componentDidUpdate() {
-    this.enableAutocompleteLocation();
   }
 
   loadAvailableFacilitators(course) {
@@ -232,44 +204,6 @@ export class WorkshopForm extends React.Component {
         regionalPartners: data
       });
     });
-  }
-
-  isGoogleMapsLoaded() {
-    return typeof google === 'object' && typeof google.maps === 'object';
-  }
-
-  enableAutocompleteLocation() {
-    if (!this.state.useAutocomplete) {
-      return;
-    }
-
-    // The way to catch google auth errors is in a global function :(
-    // See https://developers.google.com/maps/documentation/javascript/events#auth-errors
-    // If google auth fails, remove the autocomplete and re-draw.
-    if (!this.gm_authFailure) {
-      // Save existing function, if one exists.
-      this.old_gm_authFailure = window.gm_authFailure;
-      window.gm_authFailure = this.gm_authFailure = () => {
-        if (this.old_gm_authFailure) {
-          this.old_gm_authFailure();
-        }
-        this.setState({useAutocomplete: false});
-      };
-    }
-
-    if (
-      !this.autocomplete &&
-      this.locationAddressControl &&
-      this.isGoogleMapsLoaded()
-    ) {
-      this.autocomplete = new google.maps.places.Autocomplete(
-        this.locationAddressControl
-      );
-      google.maps.event.addListener(this.autocomplete, 'place_changed', () => {
-        const place = this.autocomplete.getPlace();
-        this.setState({location_address: place.formatted_address});
-      });
-    }
   }
 
   // Convert from [start, end] to [date, startTime, endTime]
@@ -333,49 +267,6 @@ export class WorkshopForm extends React.Component {
   handleOrganizerChange = event => {
     this.setState({organizer: {id: parseInt(event.target.value)}});
   };
-
-  renderCourseSelect(validation) {
-    let allowedCourses;
-    if (
-      this.props.permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)
-    ) {
-      allowedCourses = Courses;
-    } else if (this.props.permission.has(Facilitator)) {
-      allowedCourses = this.props.facilitatorCourses;
-    } else {
-      console.error(
-        'Insufficient permissions, expected one one of: Organizer, ProgramManager, WorkshopAdmin, or Facilitator'
-      );
-      allowedCourses = [];
-    }
-
-    const options = allowedCourses.map((course, i) => {
-      return (
-        <option key={i} value={course}>
-          {course}
-        </option>
-      );
-    });
-    const placeHolder = this.state.course ? null : <option />;
-    return (
-      <FormGroup validationState={validation.style.course}>
-        <ControlLabel>Course</ControlLabel>
-        <FormControl
-          componentClass="select"
-          value={this.state.course || ''}
-          id="course"
-          name="course"
-          onChange={this.handleCourseChange}
-          style={this.getInputStyle()}
-          disabled={this.props.readOnly}
-        >
-          {placeHolder}
-          {options}
-        </FormControl>
-        <HelpBlock>{validation.help.course}</HelpBlock>
-      </FormGroup>
-    );
-  }
 
   renderOnMapRadios(validation) {
     return (
@@ -508,6 +399,57 @@ export class WorkshopForm extends React.Component {
             {this.renderFundedSelect(validation)}
           </Col>
         </Row>
+        <Row>
+          <Col sm={5}>
+            <FormGroup validationState={validation.style.virtual}>
+              <ControlLabel>
+                Is this a virtual workshop?
+                <HelpTip>
+                  <p>Please update your selection if/when your plans change.</p>
+                </HelpTip>
+              </ControlLabel>
+              <SelectIsVirtual
+                value={this.state.virtual}
+                onChange={this.handleVirtualChange}
+                readOnly={
+                  this.props.readOnly ||
+                  VirtualOnlySubjects.includes(this.state.subject)
+                }
+              />
+              <HelpBlock>{validation.help.virtual}</HelpBlock>
+            </FormGroup>
+          </Col>
+          <Col sm={5}>
+            <FormGroup validationState={validation.style.suppress_email}>
+              <ControlLabel>
+                Enable workshop reminders?
+                <HelpTip>
+                  <p>
+                    <strong>
+                      This functionality is disabled for all academic year
+                      workshops and virtual CSF workshops.
+                    </strong>
+                  </p>
+                  <p>
+                    For in-person CSF workshops, choose if you'd like automated
+                    10-day and 3-day pre-workshop reminders to be sent to your
+                    participants.
+                  </p>
+                </HelpTip>
+              </ControlLabel>
+              <SelectSuppressEmail
+                onChange={this.handleSuppressEmailChange}
+                value={this.state.suppress_email || false}
+                readOnly={
+                  this.props.readOnly ||
+                  this.state.virtual ||
+                  MustSuppressEmailSubjects.includes(this.state.subject)
+                }
+              />
+              <HelpBlock>{validation.help.suppress_email}</HelpBlock>
+            </FormGroup>
+          </Col>
+        </Row>
       </FormGroup>
     );
   }
@@ -571,45 +513,6 @@ export class WorkshopForm extends React.Component {
         )}
       </FormGroup>
     );
-  }
-
-  renderSubjectSelect(validation) {
-    if (this.shouldRenderSubject()) {
-      const options = Subjects[this.state.course]
-        .filter(subject => {
-          // Only a WorkshopAdmin should be shown a Virtual workshop.
-          return (
-            subject.indexOf('Virtual') === -1 ||
-            this.props.permission.has(WorkshopAdmin)
-          );
-        })
-        .map((subject, i) => {
-          return (
-            <option key={i} value={subject}>
-              {subject}
-            </option>
-          );
-        });
-      const placeHolder = this.state.subject ? null : <option />;
-      return (
-        <FormGroup validationState={validation.style.subject}>
-          <ControlLabel>Subject</ControlLabel>
-          <FormControl
-            componentClass="select"
-            value={this.state.subject || ''}
-            id="subject"
-            name="subject"
-            onChange={this.handleFieldChange}
-            style={this.getInputStyle()}
-            disabled={this.props.readOnly}
-          >
-            {placeHolder}
-            {options}
-          </FormControl>
-          <HelpBlock>{validation.help.subject}</HelpBlock>
-        </FormGroup>
-      );
-    }
   }
 
   renderFeeInput(validation) {
@@ -754,32 +657,22 @@ export class WorkshopForm extends React.Component {
     return value;
   };
 
-  currentVirtualStatus = () => {
-    const {virtual, third_party_provider} = this.state;
-
-    // First, check if the third party provider is a valid
-    // virtual workshop type.
-    if (virtualWorkshopTypes.includes(third_party_provider)) {
-      return third_party_provider;
-    } else if (virtual) {
-      return 'regional';
-    } else {
-      return 'in_person';
-    }
+  handleLocationChange = event => {
+    const location = event && event.target && event.target.value;
+    this.setState({location_address: location});
+    return location;
   };
 
   handleVirtualChange = event => {
     // This field gets its own handler both so we can coerce its value to
     // boolean, and so we can enforce some business logic that says:
     // Virtual workshops ALWAYS suppress email.
-    const value = event.target.value;
-    const virtual = virtualWorkshopTypes.includes(value);
+    const virtual = event.target.value === 'true';
     const suppress_email = virtual || this.state.suppress_email;
 
     this.setState({
       virtual,
-      suppress_email,
-      third_party_provider: thirdPartyProviders.includes(value) ? value : null
+      suppress_email
     });
   };
 
@@ -825,6 +718,23 @@ export class WorkshopForm extends React.Component {
     this.loadAvailableFacilitators(course);
   };
 
+  handleSubjectChange = event => {
+    const subject = this.handleFieldChange(event);
+
+    if (VirtualOnlySubjects.includes(subject)) {
+      this.setState({
+        virtual: true,
+        suppress_email: true
+      });
+    }
+
+    if (MustSuppressEmailSubjects.includes(subject)) {
+      this.setState({
+        suppress_email: true
+      });
+    }
+  };
+
   handleCustomizeFeeChange = event => {
     const customizeFee = event.target.value === 'yes';
     const fee = customizeFee ? '' : null;
@@ -849,7 +759,6 @@ export class WorkshopForm extends React.Component {
       notes: this.state.notes,
       virtual: this.state.virtual,
       suppress_email: this.state.suppress_email,
-      third_party_provider: this.state.third_party_provider,
       sessions_attributes: this.prepareSessionsForApi(
         this.state.sessions,
         this.state.destroyedSessions
@@ -1030,64 +939,6 @@ export class WorkshopForm extends React.Component {
           />
           <br />
           <Row>
-            <Col sm={5}>
-              <FormGroup validationState={validation.style.virtual}>
-                <ControlLabel>
-                  Is this a virtual workshop?
-                  <HelpTip>
-                    <p>When a workshop is virtual, our system:</p>
-                    <ul>
-                      <li>
-                        Will not send most email notifications to enrollees,
-                        such as enrollment receipts and workshop reminders
-                      </li>
-                      <li>
-                        Will send a post-workshop survey designed for virtual
-                        workshops
-                      </li>
-                    </ul>
-                  </HelpTip>
-                </ControlLabel>
-                <SelectIsVirtual
-                  value={this.currentVirtualStatus()}
-                  onChange={this.handleVirtualChange}
-                  readOnly={this.props.readOnly}
-                />
-                <HelpBlock>{validation.help.virtual}</HelpBlock>
-              </FormGroup>
-            </Col>
-            <Col sm={5}>
-              <FormGroup validationState={validation.style.suppress_email}>
-                <ControlLabel>
-                  Enable email notifications?
-                  <HelpTip>
-                    <p>
-                      Code.org can send email notifications about this workshop
-                      to your attendees on your behalf. Notifications may
-                      include:
-                    </p>
-                    <ul>
-                      <li>Enrollment receipts</li>
-                      <li>10-day and 3-day workshop reminders</li>
-                      <li>Updates when workshop details change</li>
-                    </ul>
-                    <p>
-                      Code.org will always email a post-workshop survey to
-                      participants, even if you disable workshop notifications
-                      here.
-                    </p>
-                  </HelpTip>
-                </ControlLabel>
-                <SelectSuppressEmail
-                  onChange={this.handleSuppressEmailChange}
-                  value={this.state.suppress_email || false}
-                  readOnly={this.props.readOnly || this.state.virtual}
-                />
-                <HelpBlock>{validation.help.suppress_email}</HelpBlock>
-              </FormGroup>
-            </Col>
-          </Row>
-          <Row>
             <Col sm={4}>
               <FormGroup validationState={validation.style.location_name}>
                 <ControlLabel>Location Name</ControlLabel>
@@ -1107,20 +958,13 @@ export class WorkshopForm extends React.Component {
             <Col sm={6}>
               <FormGroup>
                 <ControlLabel>Location Address (optional)</ControlLabel>
-                <FormControl
-                  type="text"
-                  key={this.state.useAutocomplete} // Change key to force re-draw
-                  ref={ref =>
-                    (this.locationAddressControl = ReactDOM.findDOMNode(ref))
-                  }
-                  value={this.state.location_address || ''}
+                <MapboxLocationSearchField
                   placeholder="Enter a location"
-                  id="location_address"
-                  name="location_address"
-                  onChange={this.handleFieldChange}
-                  maxLength={255}
+                  onChange={this.handleLocationChange}
+                  value={this.state.location_address || ''}
+                  readOnly={this.props.readOnly}
                   style={this.getInputStyle()}
-                  disabled={this.props.readOnly}
+                  className={'form-control'}
                 />
               </FormGroup>
             </Col>
@@ -1142,8 +986,29 @@ export class WorkshopForm extends React.Component {
                 <HelpBlock>{validation.help.capacity}</HelpBlock>
               </FormGroup>
             </Col>
-            <Col sm={3}>{this.renderCourseSelect(validation)}</Col>
-            <Col sm={3}>{this.renderSubjectSelect(validation)}</Col>
+            <Col sm={3}>
+              <CourseSelect
+                course={this.state.course}
+                facilitatorCourses={this.props.facilitatorCourses}
+                permission={this.props.permission}
+                readOnly={this.props.readOnly}
+                inputStyle={this.getInputStyle()}
+                validation={validation}
+                onChange={this.handleCourseChange}
+              />
+            </Col>
+            <Col sm={3}>
+              {this.shouldRenderSubject() && (
+                <SubjectSelect
+                  course={this.state.course}
+                  subject={this.state.subject}
+                  readOnly={this.props.readOnly}
+                  inputStyle={this.getInputStyle()}
+                  validation={validation}
+                  onChange={this.handleSubjectChange}
+                />
+              )}
+            </Col>
           </Row>
           <Row>
             <Col sm={10}>
@@ -1217,19 +1082,16 @@ const SelectIsVirtual = ({value, readOnly, onChange}) => (
     style={readOnly ? styles.readOnlyInput : undefined}
     disabled={readOnly}
   >
-    <option key={'in_person'} value={'in_person'}>
+    <option key={false} value={false}>
       No, this is an in-person workshop.
     </option>
-    <option key={'friday_institute'} value={'friday_institute'}>
-      Yes, this is a Code.org-Friday Institute virtual workshop.
-    </option>
-    <option key={'regional'} value={'regional'}>
-      Yes, this is a regional virtual workshop.
+    <option key={true} value={true}>
+      Yes, this is a virtual workshop.
     </option>
   </FormControl>
 );
 SelectIsVirtual.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.bool.isRequired,
   readOnly: PropTypes.bool,
   onChange: PropTypes.func.isRequired
 };
@@ -1245,10 +1107,10 @@ const SelectSuppressEmail = ({value, readOnly, onChange}) => (
     disabled={readOnly}
   >
     <option key={false} value={false}>
-      Yes, send notifications on my behalf.
+      Yes, send reminders on my behalf.
     </option>
     <option key={true} value={true}>
-      No, I will handle communication with attendees myself.
+      No, I will remind enrollees myself.
     </option>
   </FormControl>
 );

@@ -58,12 +58,12 @@ class PhotoChooserProperties extends React.Component {
         />
         <ColorPickerPropertyRow
           desc={'background color'}
-          initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
+          initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
         <ColorPickerPropertyRow
           desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(element.style.color || '#000000')}
+          initialValue={element.style.color || '#000000'}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <PropertyRow
@@ -110,8 +110,12 @@ class PhotoChooserEvents extends React.Component {
 
   getPhotoSelectedEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code = `onEvent("${id}", "change", function() {\n  console.log("${id} photo selected!");\n  console.log(getImageURL("${id}"));\n});\n`;
-    return code;
+    const commands = [
+      `console.log("${id} photo selected!");`,
+      `console.log(getImageURL("${id}"));`
+    ];
+    const callback = `function( ) {\n\t${commands.join('\n\t')}\n}`;
+    return `onEvent("${id}", "change", ${callback});`;
   }
 
   insertPhotoSelected = () =>

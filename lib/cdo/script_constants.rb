@@ -231,12 +231,12 @@ module ScriptConstants
     APPLAB_2HOUR = 'applab-2hour'.freeze,
     CSD_POST_SURVEY = 'csd-post-survey'.freeze,
     DEEPDIVE_DEBUGGING = 'deepdive-debugging'.freeze,
-    FESBINARY = 'fesbinary'.freeze,
     FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
     GAMELAB = 'gamelab'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
+    OUTBREAK = 'outbreak'.freeze,
     PIXELATION = 'pixelation'.freeze,
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
@@ -244,12 +244,6 @@ module ScriptConstants
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
-
-  # An allowlist of all family names for courses.
-  COURSE_FAMILY_NAMES = [
-    CSD = 'csd'.freeze,
-    CSP = 'csp'.freeze,
-  ].freeze
 
   # An allowlist of all family names for scripts.
   FAMILY_NAMES = [
@@ -284,7 +278,9 @@ module ScriptConstants
     CSD3 = "csd3".freeze,
     CSD4 = "csd4".freeze,
     CSD5 = "csd5".freeze,
-    CSD6 = "csd6".freeze
+    CSD6 = "csd6".freeze,
+
+    TEST = 'ui-test-versioned-script'.freeze
   ].freeze
 
   def self.script_in_category?(category, script)
@@ -352,13 +348,52 @@ module ScriptConstants
     }
   end
 
+  CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
+
   def self.has_congrats_page?(script)
     script == ACCELERATED_NAME ||
       ScriptConstants.script_in_category?(:csf_international, script) ||
-      ScriptConstants.script_in_category?(:csf, script) ||
-      ScriptConstants.script_in_category?(:csf_2018, script) ||
-      ScriptConstants.script_in_category?(:csf_2019, script) ||
-      ScriptConstants.script_in_category?(:csf_2020, script)
+      CSF_COURSE_PATTERNS.map {|r| r =~ script}.any?
+  end
+
+  def self.csf_next_course_recommendation(course_name)
+    # These course names without years in them should be mapped statically to their recommendation.
+    static_mapping = {
+      "course1" => "course2",
+      "course2" => "course3",
+      "course3" => "course4",
+      "accelerated" => "course4",
+      "course4" => "applab"
+    }
+
+    return static_mapping[course_name] if static_mapping.include?(course_name)
+
+    # For CSF courses with years in their name, separate into prefix and year. Determine the recommended
+    # next prefix based on constant mapping, then add the year to the recommended prefix.
+    # Example: coursea-2019 becomes prefix: coursea, year: 2019.
+    # coursea maps to courseb, so return courseb-2019.
+    CSF_COURSE_PATTERNS.each do |r|
+      match_data = r.match(course_name)
+      next unless match_data
+
+      prefix = match_data[1]
+      year = match_data[2]
+
+      return "applab" if %w(coursef express).include?(prefix)
+
+      prefix_mapping = {
+        "coursea" => "courseb",
+        "courseb" => "coursec",
+        "coursec" => "coursed",
+        "coursed" => "coursee",
+        "coursee" => "coursef",
+        "pre-express" => "coursec"
+      }
+
+      return "#{prefix_mapping[prefix]}-#{year}" if prefix_mapping.include?(prefix)
+    end
+
+    return nil
   end
 
   def self.i18n?(script)
@@ -366,6 +401,7 @@ module ScriptConstants
       ScriptConstants.script_in_category?(:csf, script) ||
       ScriptConstants.script_in_category?(:csf_2018, script) ||
       ScriptConstants.script_in_category?(:csf_2019, script) ||
+      ScriptConstants.script_in_category?(:csf_2020, script) ||
       ScriptConstants.script_in_category?(:csd, script) ||
       ScriptConstants.script_in_category?(:csd_2018, script) ||
       ScriptConstants.script_in_category?(:csd_2019, script) ||

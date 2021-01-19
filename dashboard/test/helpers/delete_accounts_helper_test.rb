@@ -39,6 +39,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     # Skip real Firebase operations
     FirebaseHelper.stubs(:delete_channel)
+    FirebaseHelper.stubs(:delete_channels)
 
     # Global log used to check expected log output
     @log = StringIO.new
@@ -656,6 +657,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       "Rows are actually gone, not just anonymized"
 
     assert_logged "Removed 1 CensusSubmissionFormMap"
+  end
+
+  test "deletes census_inaccuracy_investigation associated census_submissions associated with user email" do
+    census_inaccuracy_investigation = create :census_inaccuracy_investigation
+    id = census_inaccuracy_investigation.id
+    user = census_inaccuracy_investigation.user
+    refute_empty Census::CensusInaccuracyInvestigation.where(id: id),
+      "Expected at least one CensusInaccuracyInvestigation under this email"
+
+    purge_user user
+
+    assert_empty Census::CensusInaccuracyInvestigation.where(id: id),
+      "Rows are actually gone, not just anonymized"
+
+    assert_logged "Removed 1 CensusInaccuracyInvestigation"
   end
 
   test "leaves no SchoolInfos referring to the deleted CensusSubmissions" do
@@ -1791,57 +1807,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       with_channel_for student do |storage_app_id_b, storage_id|
         storage_apps.where(id: storage_app_id_a).update(state: 'deleted')
 
+        student_channels = [storage_encrypt_channel_id(storage_id, storage_app_id_a),
+                            storage_encrypt_channel_id(storage_id, storage_app_id_b)]
         FirebaseHelper.
-          expects(:delete_channel).
-          with(storage_encrypt_channel_id(storage_id, storage_app_id_a))
-        FirebaseHelper.
-          expects(:delete_channel).
-          with(storage_encrypt_channel_id(storage_id, storage_app_id_b))
+          expects(:delete_channels).
+          with(student_channels)
 
         purge_user student
+        assert_logged "Deleting Firebase contents for 2 channels"
       end
     end
   end
 
   #
-  # Pardot
-  # pegasus.contact_rollups
+  # pegasus.contact_rollups (V1)
   #
-
-  test "Pardot: Calls delete_pardot_prospects" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(true)
-
-    with_contact_rollup_for(teacher) do |_, pardot_id|
-      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([])
-      purge_user teacher
-    end
-  end
-
-  test "Pardot: Raises if Pardot reports issues deleting prospects" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(true)
-
-    with_contact_rollup_for(teacher) do |_, pardot_id|
-      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([pardot_id])
-      assert_raises RuntimeError do
-        purge_user teacher
-      end
-    end
-  end
-
-  test "Pardot: Does not contact Pardot outside of production" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(false)
-
-    with_contact_rollup_for(teacher) do
-      Pardot.expects(:delete_pardot_prospects).never
-      purge_user teacher
-    end
-  end
 
   test "contact_rollups: Deletes user records" do
     teacher_a = create :teacher
@@ -2046,6 +2026,41 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     unsafe_purge_user program_manager
 
     refute_nil program_manager.purged_at
+  end
+
+  test 'does not delete email centric data if there is a live account with the same email' do
+    # This behaviour is desired so we don't accidentally delete data related to a live account.
+    # teacher created an account and has responded to one of our census surveys.
+    teacher_old = create :teacher
+    teacher_name = teacher_old.name
+    teacher_email = teacher_old.email
+
+    # create the email related data
+    create :census_your_school2017v0, submitter_email_address: teacher_email
+    refute_empty Census::CensusSubmission.where(submitter_email_address:  teacher_email),
+      "Expected at least one CensusSubmission under this email"
+    create :email_preference, email: teacher_email
+    refute_empty EmailPreference.where(email: teacher_email)
+    Poste2.create_recipient(teacher_email, name: teacher_name, ip_address: '127.0.0.1')
+    refute_empty PEGASUS_DB[:contacts].where(email: teacher_email)
+    # Pardot should not be told to delete the email from its records
+    ContactRollupsPardotMemory.expects(:find_or_create_by).never
+
+    # teacher deletes their old account because they no longer teach CS
+    teacher_old.destroy!
+    # teacher creates a new account because they started teaching CS again.
+    create :teacher, email: teacher_email
+    # the old teacher account which was soft deleted is now purged by our automated systems.
+    purge_user teacher_old
+
+    # confirm that the email related data is still present
+    refute_empty Census::CensusSubmission.where(submitter_email_address:  teacher_email),
+      "Expected at least one CensusSubmission under this email"
+    refute_empty EmailPreference.where(email: teacher_email)
+    refute_empty PEGASUS_DB[:contacts].where(email: teacher_email)
+
+    # confirm the old teacher account is purged
+    assert teacher_old.purged_at
   end
 
   private

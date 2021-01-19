@@ -8,6 +8,58 @@ function draw() {
   }
 }
 
+/**
+ * Must run in the interpreter, not natively, so that we can execute valueFn to get its value
+ * and be able to use that value within beginCollectingData. If beginCollectingData ran natively,
+ * calling valueFn would add a call into the interpreter on the call stack, but wouldn't execute
+ * immediately, so we wouldn't be able to use the value from within beginCollectingData.
+ */
+function beginCollectingData(valueFn, label) {
+  collectData(function() {
+    printText(['Time: ',getTime("seconds"),' sec. | ', label || '', ': ', valueFn()].join(''));
+  });
+}
+
+
+/**
+ * Must run in the interpreter, not natively, so that callback executes before withPercentChance() returns,
+ * rather than being added to the stack. For example, consider the following program:
+ * var i = 10;
+ * ifVarEquals(i, 10, function() {
+ *   printText("first");
+ * });
+ * printText("second");
+ *
+ * If ifVarEquals() executed natively, the print statements would happen out of order.
+ */
+function ifVarEquals(variableName, value, callback) {
+  if (variableName == value) {
+    callback();
+  }
+}
+
+/**
+ * Must run in the interpreter, not natively, so that callback executes before withPercentChance() returns,
+ * rather than being added to the stack. For example, consider the following program:
+ * var i = 0;
+ * for (var count = 0; count < 100; count++) {
+ *   withPercentChance(50, function () {
+ *     i = (typeof i == 'number' ? i : 0) + 1;
+ *   });
+ * }
+ * printText(i)
+ *
+ * If withPercentChance() executed natively, i would still be 0 because the callbacks wouldn't have executed yet.
+ * Instead, if we keep the whole execution within the interpreter, the callbacks will execute before printText(),
+ * as expected.
+ */
+
+function withPercentChance(num, callback) {
+  if (randomNumber(0, 100) < num) {
+    callback();
+  }
+}
+
 /* Legacy code only. Do not add any new code below here */
 function clickedOn(spriteId, callback) {
   spriteClicked('when', spriteId, callback);
@@ -15,6 +67,10 @@ function clickedOn(spriteId, callback) {
 
 function draggable() {
   return {func: draggableFunc(), name: 'draggable'};
+}
+
+function followingTargets() {
+  return {func: followingTargetsFunc(), name: 'following targets'};
 }
 
 function tumbling(spriteId) {
@@ -204,23 +260,23 @@ function setupSim(
   */
 
   checkTouching('while', {costume: s1costume}, {costume: s3costume}, function(extraArgs) {
-    if (World.collisions[extraArgs.target] == undefined) {
+    if (World.collisions[extraArgs.objectSprite] == undefined) {
       // We don't have any recorded collisions for this s3 sprite yet. Add it to the collisions map and
       // to the list of s3 to delete next tick.
-      World.collisions[extraArgs.target] = [];
-      World.s3ToDelete.push(extraArgs.target);
+      World.collisions[extraArgs.objectSprite] = [];
+      World.s3ToDelete.push(extraArgs.objectSprite);
     }
-    World.collisions[extraArgs.target].push(s1costume);
+    World.collisions[extraArgs.objectSprite].push(s1costume);
   });
 
   checkTouching('while', {costume: s2costume}, {costume: s3costume}, function(extraArgs) {
-    if (World.collisions[extraArgs.target] == undefined) {
+    if (World.collisions[extraArgs.objectSprite] == undefined) {
       // We don't have any recorded collisions for this s3 sprite yet. Add it to the collisions map and
       // to the list of s3 to delete next tick.
-      World.collisions[extraArgs.target] = [];
-      World.s3ToDelete.push(extraArgs.target);
+      World.collisions[extraArgs.objectSprite] = [];
+      World.s3ToDelete.push(extraArgs.objectSprite);
     }
-    World.collisions[extraArgs.target].push(s2costume);
+    World.collisions[extraArgs.objectSprite].push(s2costume);
   });
 
   function collectBehavior() {
@@ -249,7 +305,7 @@ function setupSim(
   addBehaviorSimple({id: 0}, new Behavior(collectBehavior));
 
   function checkSimulationEnd() {
-    if (countByAnimation(s3costume) === 0) {
+    if (countByAnimation({costume: s3costume}) === 0) {
       destroy({costume: s1costume});
       destroy({costume: s2costume});
       printText('The simulation has ended after ' + World.seconds + ' seconds');

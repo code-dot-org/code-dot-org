@@ -6,9 +6,12 @@ import color from '@cdo/apps/util/color';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import DownloadParentLetter from './DownloadParentLetter';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
+
+import LoginExport from './LoginExport';
 
 const styles = {
   explanation: {
@@ -22,7 +25,8 @@ const styles = {
     marginLeft: 10
   },
   sublistAlign: {
-    marginLeft: 20
+    marginLeft: 20,
+    marginBottom: 10
   }
 };
 
@@ -30,14 +34,22 @@ class ManageStudentsLoginInfo extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
+    sectionName: PropTypes.string,
     loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
+    studentData: PropTypes.array,
     // The prefix for the code studio url in the current environment,
     // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
     studioUrlPrefix: PropTypes.string
   };
 
   render() {
-    const {loginType, sectionId, sectionCode, studioUrlPrefix} = this.props;
+    const {
+      loginType,
+      sectionId,
+      sectionCode,
+      sectionName,
+      studioUrlPrefix
+    } = this.props;
 
     return (
       <div style={styles.explanation}>
@@ -54,6 +66,15 @@ class ManageStudentsLoginInfo extends Component {
                 )
               })}
             />
+            <div style={styles.sublistAlign}>
+              <InlineMarkdown markdown={i18n.loginExportInstructions()} />{' '}
+              <LoginExport
+                sectionCode={sectionCode}
+                sectionName={sectionName}
+                sectionLoginType={loginType}
+                students={this.props.studentData}
+              />
+            </div>
             <SafeMarkdown
               markdown={i18n.setUpClass3({
                 parentLetterLink: teacherDashboardUrl(
@@ -82,6 +103,19 @@ class ManageStudentsLoginInfo extends Component {
                 )
               })}
             />
+            <div style={styles.sublistAlign}>
+              <InlineMarkdown
+                markdown={i18n.loginExportInstructions({
+                  articleLink: 'support.code.org'
+                })}
+              />{' '}
+              <LoginExport
+                sectionCode={sectionCode}
+                sectionName={sectionName}
+                sectionLoginType={loginType}
+                students={this.props.studentData}
+              />
+            </div>
             <SafeMarkdown
               markdown={i18n.setUpClass3({
                 parentLetterLink: teacherDashboardUrl(

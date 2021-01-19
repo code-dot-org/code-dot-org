@@ -77,7 +77,7 @@ require 'sign_up_tracking'
 require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   include SerializedProperties
   include SchoolInfoDeduplicator
   include LocaleHelper
@@ -124,6 +124,8 @@ class User < ActiveRecord::Base
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
+  scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
+
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
@@ -147,7 +149,7 @@ class User < ActiveRecord::Base
 
   # courses a facilitator is able to teach
   has_many :courses_as_facilitator,
-    class_name: Pd::CourseFacilitator,
+    class_name: 'Pd::CourseFacilitator',
     foreign_key: :facilitator_id,
     dependent: :destroy
 
@@ -192,7 +194,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
 
   has_many :user_school_infos
-  after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
+  after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   has_one :circuit_playground_discount_application
@@ -201,6 +203,7 @@ class User < ActiveRecord::Base
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
 
+  has_many :sign_ins
   has_many :user_geos, -> {order 'updated_at desc'}
 
   before_validation :normalize_parent_email
@@ -431,27 +434,14 @@ class User < ActiveRecord::Base
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
-  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
+  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
-
-  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?', on: :update
-
-  def email_matches_for_oauth_upgrade
-    if user_type == User::TYPE_TEACHER
-      # The stored email must match the passed email
-      unless hashed_email == hashed_email_was
-        errors.add :base, I18n.t('devise.registrations.user.user_type_change_email_mismatch')
-        errors.add :email_mismatch, "Email mismatch" # only used to check for this error's existence
-      end
-    end
-    true
-  end
 
   validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
   validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
@@ -645,7 +635,7 @@ class User < ActiveRecord::Base
       :email_or_hashed_email_required?, on: :create
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
-  validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
+  validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
   validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
 
   def requires_email?
@@ -1020,7 +1010,7 @@ class User < ActiveRecord::Base
       return nil if login.size > max_credential_size || login.utf8mb4?
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
-      from("users IGNORE INDEX(index_users_on_deleted_at)").where(
+      ignore_deleted_at_index.where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
@@ -1265,10 +1255,10 @@ class User < ActiveRecord::Base
     return false if sections_as_student.empty?
 
     # Can't hide a script that isn't part of a course
-    course = script.try(:course)
-    return false unless course
+    unit_group = script.try(:unit_group)
+    return false unless unit_group
 
-    get_student_hidden_ids(course.id, false).include?(script.id)
+    get_student_hidden_ids(unit_group.id, false).include?(script.id)
   end
 
   # @return {Hash<string,number[]>|number[]}
@@ -1286,10 +1276,10 @@ class User < ActiveRecord::Base
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section.
   #   For students this will just be a list of script ids that are hidden for them.
-  def get_hidden_script_ids(course = nil)
-    return [] if !teacher? && course.nil?
+  def get_hidden_script_ids(unit_group = nil)
+    return [] if !teacher? && unit_group.nil?
 
-    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(course.id, false)
+    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
   end
 
   def student?
@@ -1544,12 +1534,12 @@ class User < ActiveRecord::Base
   end
 
   def assigned_script?(script)
-    section_scripts.include?(script) || section_courses.include?(script&.course)
+    section_scripts.include?(script) || section_courses.include?(script&.unit_group)
   end
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
-    scripts.map(&:course).compact.concat(section_courses).uniq
+    scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
@@ -1620,10 +1610,10 @@ class User < ActiveRecord::Base
     primary_script_id = Queries::ScriptActivity.primary_script(self).try(:id)
 
     # Filter out user_scripts that are already covered by a course
-    course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+    unit_group_units_script_ids = courses_as_student.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
-      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
+      select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
 
     user_script_data = user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
@@ -1655,7 +1645,7 @@ class User < ActiveRecord::Base
 
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
-    all_sections.map(&:course).compact.uniq
+    all_sections.map(&:unit_group).compact.uniq
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
@@ -1667,8 +1657,8 @@ class User < ActiveRecord::Base
     all_sections.each do |section|
       if section.script.present?
         all_scripts << section.script
-      elsif section.course.present?
-        all_scripts.concat(section.course.default_scripts)
+      elsif section.unit_group.present?
+        all_scripts.concat(section.unit_group.default_scripts)
       end
     end
 
@@ -1689,6 +1679,15 @@ class User < ActiveRecord::Base
   # Returns integer days since account creation, rounded down
   def account_age_days
     (DateTime.now - created_at.to_datetime).to_i
+  end
+
+  def first_sign_in_date
+    sign_ins.find_by(sign_in_count: 1)&.sign_in_at
+  end
+
+  def days_since_first_sign_in
+    return nil if first_sign_in_date.nil?
+    (DateTime.now - first_sign_in_date.to_datetime).to_i
   end
 
   # This method is meant to indicate a user has made progress (i.e. made a milestone
@@ -1735,11 +1734,12 @@ class User < ActiveRecord::Base
 
   # The synchronous handler for the track_level_progress helper.
   # @return [UserLevel]
-  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
+  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false, time_spent: nil)
     new_level_completed = false
     new_csf_level_perfected = false
 
     user_level = nil
+    script = nil
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
@@ -1769,10 +1769,13 @@ class User < ActiveRecord::Base
         user_level.level_source_id = level_source_id
       end
 
+      total_time_spent = user_level.calculate_total_time_spent(time_spent)
+      user_level.time_spent = total_time_spent if total_time_spent
+
       user_level.atomic_save!
     end
 
-    if pairing_user_ids
+    if pairing_user_ids&.any? && user_level.level.should_allow_pairing?(script.id)
       pairing_user_ids.each do |navigator_user_id|
         navigator_user_level, _ = User.track_level_progress(
           user_id: navigator_user_id,
@@ -1782,7 +1785,8 @@ class User < ActiveRecord::Base
           submitted: submitted,
           level_source_id: level_source_id,
           pairing_user_ids: nil,
-          is_navigator: true
+          is_navigator: true,
+          time_spent: time_spent
         )
         Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(

@@ -19,10 +19,16 @@ export default class Foorm extends React.Component {
     formVersion: PropTypes.number.isRequired,
     submitApi: PropTypes.string.isRequired,
     surveyData: PropTypes.object,
-    submitParams: PropTypes.object
+    submitParams: PropTypes.object,
+    customCssClasses: PropTypes.object,
+    onComplete: PropTypes.func
   };
 
-  customCss = {
+  static defaultProps = {
+    customCssClasses: {}
+  };
+
+  defaultCss = {
     root: 'sv_main sv_default_css foorm-reset-font',
     header: 'sv_header foorm-adjust-header',
     body: 'sv_body foorm-adjust-body',
@@ -46,7 +52,10 @@ export default class Foorm extends React.Component {
       next: 'sv_next_button foorm-button foorm-button-right',
       complete: 'sv_complete_btn foorm-button'
     },
-    row: 'sv_row foorm-adjust-row'
+    row: 'sv_row foorm-adjust-row',
+    dropdown: {
+      control: 'sv_q_dropdown_control foorm-adjust-dropdown-height'
+    }
   };
 
   constructor(props) {
@@ -65,6 +74,7 @@ export default class Foorm extends React.Component {
   }
 
   onComplete = (survey, options) => {
+    this.props.onComplete && this.props.onComplete(survey.data);
     let requestData = {
       answers: survey.data,
       form_name: this.props.formName,
@@ -129,15 +139,18 @@ export default class Foorm extends React.Component {
   }
 
   render() {
+    const css = {...this.defaultCss, ...this.props.customCssClasses};
     return (
       <div>
         <Survey.Survey
           model={this.surveyModel}
           onComplete={this.onComplete}
           data={this.props.surveyData}
-          css={this.customCss}
+          css={css}
           requiredText={'(Required)'}
           showCompletedPage={false}
+          maxTextLength={4000}
+          maxOthersLength={4000}
         />
         {this.state.statusMessage && (
           <div style={styles.statusMessage}>

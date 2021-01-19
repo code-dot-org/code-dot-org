@@ -243,25 +243,28 @@ class BucketHelper
       end
 
     FirehoseClient.instance.put_record(
-      study: 'project-data-integrity',
-      study_group: 'v4',
-      event: error_type,
+      :analysis,
+      {
+        study: 'project-data-integrity',
+        study_group: 'v4',
+        event: error_type,
 
-      project_id: encrypted_channel_id,
-      user_id: user_id,
+        project_id: encrypted_channel_id,
+        user_id: user_id,
 
-      data_json: {
-        currentVersionId: current_version,
-        tabId: tab_id,
-        key: key,
+        data_json: {
+          currentVersionId: current_version,
+          tabId: tab_id,
+          key: key,
 
-        # Server timestamp indicating when the first version of main.json was saved by the browser
-        # tab making this request. This is for diagnosing problems with writes from multiple browser
-        # tabs.
-        firstSaveTimestamp: timestamp,
+          # Server timestamp indicating when the first version of main.json was saved by the browser
+          # tab making this request. This is for diagnosing problems with writes from multiple browser
+          # tabs.
+          firstSaveTimestamp: timestamp,
 
-        versions: versions,
-      }.to_json
+          versions: versions,
+        }.to_json
+      }
     )
 
     return false
@@ -281,10 +284,6 @@ class BucketHelper
     key = s3_path owner_id, storage_app_id, filename
     copy_source = @bucket + '/' + s3_path(owner_id, storage_app_id, source_filename)
     response = s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
-
-    # TODO: (bbuchanan) Handle abuse_score metadata for animations.
-    # When copying an object, should also copy its abuse_score metadata.
-    # https://www.pivotaltracker.com/story/show/117949241
 
     # Delete the old version, if doing an in-place replace
     s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
@@ -412,13 +411,16 @@ class BucketHelper
         )
         version_restored = true
         FirehoseClient.instance.put_record(
-          study: 'bucket-warning',
-          study_group: self.class.name,
-          event: 'restore-specific-version',
-          data_string: 'Restore at Specified Version Failed. Restored most recent.',
-          data_json: {
-            source: "#{@bucket}/#{key}?versionId=#{version_id}"
-          }.to_json
+          :analysis,
+          {
+            study: 'bucket-warning',
+            study_group: self.class.name,
+            event: 'restore-specific-version',
+            data_string: 'Restore at Specified Version Failed. Restored most recent.',
+            data_json: {
+              source: "#{@bucket}/#{key}?versionId=#{version_id}"
+            }.to_json
+          }
         )
       else
         # Couldn't restore specific version and didn't find a latest version either.
@@ -426,13 +428,16 @@ class BucketHelper
         # In this case, we want to do nothing.
         response = {status: 'NOT_MODIFIED'}
         FirehoseClient.instance.put_record(
-          study: 'bucket-warning',
-          study_group: self.class.name,
-          event: 'restore-deleted-object',
-          data_string: 'Restore at Specified Version Failed on deleted object. No action taken.',
-          data_json: {
-            source: "#{@bucket}/#{key}?versionId=#{version_id}"
-          }.to_json
+          :analysis,
+          {
+            study: 'bucket-warning',
+            study_group: self.class.name,
+            event: 'restore-deleted-object',
+            data_string: 'Restore at Specified Version Failed on deleted object. No action taken.',
+            data_json: {
+              source: "#{@bucket}/#{key}?versionId=#{version_id}"
+            }.to_json
+          }
         )
       end
     end
@@ -477,22 +482,25 @@ class BucketHelper
     owner_id, storage_app_id = storage_decrypt_channel_id(project_id)
     key = s3_path owner_id, storage_app_id, filename
     FirehoseClient.instance.put_record(
-      study: 'project-data-integrity',
-      study_group: 'v4',
-      event: 'version-restored',
+      :analysis,
+      {
+        study: 'project-data-integrity',
+        study_group: 'v4',
+        event: 'version-restored',
 
-      # Make it easy to limit our search to restores in the sources bucket for a certain project.
-      project_id: project_id,
-      data_string: @bucket,
+        # Make it easy to limit our search to restores in the sources bucket for a certain project.
+        project_id: project_id,
+        data_string: @bucket,
 
-      user_id: user_id,
-      data_json: {
-        restoredVersionId: source_version_id,
-        newVersionId: new_version_id,
-        bucket: @bucket,
-        key: key,
-        filename: filename,
-      }.to_json
+        user_id: user_id,
+        data_json: {
+          restoredVersionId: source_version_id,
+          newVersionId: new_version_id,
+          bucket: @bucket,
+          key: key,
+          filename: filename,
+        }.to_json
+      }
     )
   end
 

@@ -64,7 +64,6 @@ class EditSectionForm extends Component {
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
-    sections: PropTypes.objectOf(sectionShape).isRequired,
     section: sectionShape.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
     handleSave: PropTypes.func.isRequired,
@@ -382,6 +381,7 @@ const LessonExtrasField = ({value, onChange, disabled}) => (
       <a
         href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
         target="_blank"
+        rel="noopener noreferrer"
       >
         {i18n.explainLessonExtrasLearnMore()}
       </a>
@@ -403,6 +403,7 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
       <a
         href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-within-Code-Studio-work-"
         target="_blank"
+        rel="noopener noreferrer"
       >
         {i18n.explainPairProgrammingLearnMore()}
       </a>
@@ -456,7 +457,6 @@ let defaultPropsFromState = state => ({
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
-  sections: state.teacherSections.sections,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),

@@ -37,7 +37,7 @@ join scripts sc on sc.id = us.script_id
 join users u_student on u_student.id = f.student_user_id
 join csp_csd_teachers_trained tt on tt.studio_person_id = u.studio_person_id and course = 'CS Discoveries'
 join school_stats ss on ss.school_id = tt.school_id
-where sc.id in (select script_id from course_scripts cs join courses c on c.id = cs.course_id where c.name in ('csd-2017','csd-2018', 'csd-2019'))
+where sc.id in (select script_id from course_scripts cs join unit_groups c on c.id = cs.course_id where c.name in ('csd-2017','csd-2018', 'csd-2019'))
 and us.started_at between '2019-07-01' and '2019-12-31'
 and (u_student.deleted_at is null or u_student.deleted_at::date >= '2020-01-01')
 and u_student.user_type = 'student'
@@ -94,7 +94,7 @@ join scripts sc on sc.id = us.script_id
 join users u_student on u_student.id = f.student_user_id
 join csp_csd_teachers_trained tt on tt.studio_person_id = u.studio_person_id and course = 'CS Discoveries'
 join school_stats ss on ss.school_id = tt.school_id
-where sc.id in (select script_id from course_scripts cs join courses c on c.id = cs.course_id where c.name in ('csd-2017','csd-2018', 'csd-2019'))
+where sc.id in (select script_id from course_scripts cs join unit_groups c on c.id = cs.course_id where c.name in ('csd-2017','csd-2018', 'csd-2019'))
 and us.started_at between '2019-07-01' and '2019-12-31'
 and (u_student.deleted_at is null or u_student.deleted_at::date >= '2020-01-01')
 and u_student.user_type = 'student'

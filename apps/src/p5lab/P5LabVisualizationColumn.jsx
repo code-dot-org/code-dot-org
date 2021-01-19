@@ -5,7 +5,9 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 import GameButtons from '@cdo/apps/templates/GameButtons';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
+import PauseButton from '@cdo/apps/templates/PauseButton';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
+import experiments from '@cdo/apps/util/experiments';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
 import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
@@ -20,6 +22,7 @@ import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './gamelab/GridOverlay';
 import TextConsole from './spritelab/TextConsole';
+import SpritelabInput from './spritelab/SpritelabInput';
 import {
   cancelLocationSelection,
   selectLocation,
@@ -54,8 +57,19 @@ class P5LabVisualizationColumn extends React.Component {
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
-    consoleMessages: PropTypes.array.isRequired
+    consoleMessages: PropTypes.array.isRequired,
+    pauseHandler: PropTypes.func.isRequired
   };
+
+  constructor(props) {
+    super(props);
+    this.spritelabPauseExperiment = experiments.isEnabled(
+      experiments.SPRITELAB_PAUSE
+    );
+    this.spritelabInputExperiment = experiments.isEnabled(
+      experiments.SPRITELAB_INPUT
+    );
+  }
 
   // Cache app-space mouse coordinates, which we get from the
   // VisualizationOverlay when they change.
@@ -67,7 +81,11 @@ class P5LabVisualizationColumn extends React.Component {
   pickerPointerMove = e => {
     if (this.props.pickingLocation) {
       this.props.updatePicker(
-        calculateOffsetCoordinates(this.divGameLab, e.clientX, e.clientY)
+        calculateOffsetCoordinates(
+          this.divGameLab,
+          Math.floor(e.clientX),
+          Math.floor(e.clientY)
+        )
       );
     }
   };
@@ -159,27 +177,34 @@ class P5LabVisualizationColumn extends React.Component {
 
     return (
       <div style={{position: 'relative'}}>
-        <ProtectedVisualizationDiv>
-          <Pointable
-            id="divGameLab"
-            style={divGameLabStyle}
-            tabIndex="1"
-            onPointerMove={this.pickerPointerMove}
-            onPointerUp={this.pickerPointerUp}
-            elementRef={el => (this.divGameLab = el)}
-          />
-          <VisualizationOverlay
-            width={APP_WIDTH}
-            height={APP_HEIGHT}
-            onMouseMove={this.onMouseMove}
-          >
-            <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
-            <CrosshairOverlay flip={spriteLab} />
-            <TooltipOverlay providers={[coordinatesProvider(spriteLab)]} />
-          </VisualizationOverlay>
-        </ProtectedVisualizationDiv>
-        <TextConsole consoleMessages={this.props.consoleMessages} />
+        <div style={{position: 'relative'}}>
+          <ProtectedVisualizationDiv>
+            <Pointable
+              id="divGameLab"
+              style={divGameLabStyle}
+              tabIndex="1"
+              onPointerMove={this.pickerPointerMove}
+              onPointerUp={this.pickerPointerUp}
+              elementRef={el => (this.divGameLab = el)}
+            />
+            <VisualizationOverlay
+              width={APP_WIDTH}
+              height={APP_HEIGHT}
+              onMouseMove={this.onMouseMove}
+            >
+              <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
+              <CrosshairOverlay flip={spriteLab} />
+              <TooltipOverlay providers={[coordinatesProvider(spriteLab)]} />
+            </VisualizationOverlay>
+          </ProtectedVisualizationDiv>
+          <TextConsole consoleMessages={this.props.consoleMessages} />
+          {this.spritelabInputExperiment && <SpritelabInput />}
+        </div>
+
         <GameButtons>
+          {this.spritelabPauseExperiment && (
+            <PauseButton pauseHandler={this.props.pauseHandler} />
+          )}
           <ArrowButtons />
 
           <CompletionButton />

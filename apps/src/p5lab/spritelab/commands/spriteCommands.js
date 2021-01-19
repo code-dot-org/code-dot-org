@@ -1,8 +1,8 @@
 import * as coreLibrary from '../coreLibrary';
 
 export const commands = {
-  countByAnimation(animation) {
-    let sprites = coreLibrary.getSpriteArray({costume: animation});
+  countByAnimation(spriteArg) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
     return sprites.length;
   },
   destroy(spriteArg) {
@@ -40,10 +40,14 @@ export const commands = {
   getThisSprite(which, extraArgs) {
     if (extraArgs) {
       if (which === 'this') {
-        return {id: extraArgs.sprite};
+        if (extraArgs.clickedSprite !== undefined) {
+          return {id: extraArgs.clickedSprite};
+        } else if (extraArgs.subjectSprite !== undefined) {
+          return {id: extraArgs.subjectSprite};
+        }
       }
       if (which === 'other') {
-        return {id: extraArgs.target};
+        return {id: extraArgs.objectSprite};
       }
     }
   },
@@ -61,6 +65,7 @@ export const commands = {
     }
     var sprite = this.createSprite(location.x, location.y);
     sprite.direction = 0;
+    sprite.speed = 5;
     sprite.baseScale = 1;
     sprite.setScale = function(scale) {
       sprite.scale = scale * sprite.baseScale;
@@ -68,7 +73,7 @@ export const commands = {
     sprite.getScale = function() {
       return sprite.scale / sprite.baseScale;
     };
-    let spriteArg = coreLibrary.addSprite(sprite, name);
+    let spriteArg = coreLibrary.addSprite(sprite, name, animation);
     if (animation) {
       sprite.setAnimation(animation);
       sprite.scale /= sprite.baseScale;
@@ -81,6 +86,7 @@ export const commands = {
         );
       sprite.scale *= sprite.baseScale;
     }
+    sprite.setScale(coreLibrary.defaultSpriteSize / 100);
     return spriteArg;
   },
 

@@ -2208,6 +2208,7 @@ es-MX:
   compatibility_unsupported_browser_markdown: Tu navegador no es compatible. Actualiza
     tu navegador a [uno de nuestros navegadores compatibles](%{supported_browsers_url})
     Puedes tratar de ver la página, pero la funcionalidad podría verse afectada.
+  starwars_shortcode: estrella
   mc_shortcode: mc
   flappy_shortcode: aletear
   header_home: Inicio
@@ -2363,6 +2364,11 @@ es-MX:
     y niveles de experiencia, desarrolladas por Code.org y nuestros socios.
   hoc_overview_partner_activities_link: Ver actividades
   hoc_overview_start_tutorial: Comenzar
+  hoc_overview_more_resources: Quieres más información recursos para animar a tus
+    estudiantes en tus clases remotas? consulta a nuestra guía de [Hora de Código
+    virtual](https://hourofcode.com/us/how-to/virtual). Para estudiantes sin computadoras,
+    o con poca conectividad, comparte este paquete que contiene [actividades desconectadas
+    de la Hora de Codigo]{https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Ver la guía para docentes
   hoc2018_creativity: creatividad
   hoc2018_creativity_create: Crear
@@ -2573,3 +2579,6 @@ es-MX:
     2](%{dance_extras_2018_link}) del último año."
   homepage_slot_text_title_at_home: Aprende desde casa
   homepage_slot_text_blurb_at_home: Aprender es fácil con estos recursos
+  page_not_available_button: Volver a la página de inicio
+  footer_powered_by_aws: Impulsado por Amazon Web Services
+  codebytes_skinny_banner_english_only: Solo en inglés

@@ -34,8 +34,8 @@ class ExpiredDeletedAccountPurger
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
     # Only purge accounts soft-deleted after this date.
-    # The default is when we released the updated messaging about hard-deletes.
-    @deleted_after = options[:deleted_after] || Time.parse('2018-07-31 4:18pm PDT')
+    # The default is 60 days ago.
+    @deleted_after = options[:deleted_after] || 60.days.ago
     raise ArgumentError.new('deleted_after must be Time') unless @deleted_after.is_a? Time
 
     # Only purge accounts soft-deleted this long ago.
@@ -53,9 +53,9 @@ class ExpiredDeletedAccountPurger
     # Do nothing if more than this number of accounts would be purged in total.
     # We may need to adjust this over time as activity increases on our site.
     # This is a loose constraint because cascading student deletes make this a very spiky metric.
-    # 4000 is ~0.01% of our user rows.
-    # We expect this to stay below 1500 during September 2018.
-    @max_accounts_to_purge = options[:max_accounts_to_purge] || 4000
+    # 8000 is ~0.01% of our user rows in 2021. We expect this to stay below 2000 during regular
+    # months and 5000 during the HOC week purge (1st week of Jan).
+    @max_accounts_to_purge = options[:max_accounts_to_purge] || 8000
     raise ArgumentError.new('max_accounts_to_purge must be Integer') unless @max_accounts_to_purge.is_a? Integer
 
     reset

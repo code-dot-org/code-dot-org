@@ -126,6 +126,18 @@ describe('Button', () => {
     assert.strictEqual(wrapper.props().style.backgroundColor, color.cyan);
   });
 
+  it('renders a purple button if we set color to purple', () => {
+    const wrapper = shallow(
+      <Button
+        __useDeprecatedTag
+        href="/foo/bar"
+        text="Click me"
+        color={Button.ButtonColor.purple}
+      />
+    );
+    assert.strictEqual(wrapper.props().style.backgroundColor, color.purple);
+  });
+
   it('renders a gray button if we set color to gray', () => {
     const wrapper = shallow(
       <Button

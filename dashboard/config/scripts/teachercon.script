@@ -1,38 +1,38 @@
 login_required true
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Introduction to Teachercon'
+lesson 'Introduction to Teachercon', display_name: 'Introduction to Teachercon'
 level 'Welcome to TeacherCon!', named: true
 level 'TeacherCon Agenda', named: true
 level 'TeacherCon Self-Assessment', named: true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Lesson 1,4'
+lesson 'Lesson 1,4', display_name: 'Lesson 1.4: Number Systems (Circle Triangle Square)'
 level 'U1L4 Lesson Overview', named: true
 
-lesson 'Lesson 1,6'
+lesson 'Lesson 1,6', display_name: 'Lesson 1.6: Sending Numbers'
 level 'U1L6 Lesson Overview', named: true
 
-lesson 'Lesson 1,9'
+lesson 'Lesson 1,9', display_name: 'Lesson 1.9: Internet Addressing (Battleship)'
 level 'U1L9 Lesson Overview', named: true
 
-lesson 'Lesson 1,10'
+lesson 'Lesson 1,10', display_name: 'Lesson 1.10: Routers and Redundancy'
 level 'U1L10 Lesson Overview', named: true
 
-lesson 'Lesson 1,11'
+lesson 'Lesson 1,11', display_name: 'Lesson 1.11: Packets and Making a Reliable Internet'
 level 'U1L11 Lesson Overview', named: true
 
-lesson 'Lesson 2,2'
+lesson 'Lesson 2,2', display_name: 'Lesson 2.2: Text Compression'
 level 'U2L2 Lesson Overview', named: true
 
-lesson 'Lesson 2,3'
+lesson 'Lesson 2,3', display_name: 'Lesson 2.3: Black and White Pixelation'
 level 'U2L3 Lesson Overview', named: true
 
-lesson 'Lesson 2,10'
+lesson 'Lesson 2,10', display_name: 'Lesson 2.10: Good and Bad Data Visualizations'
 level 'U2L10 Lesson Overview', named: true
 
 lesson_group 'practice', display_name: 'Teaching Practices'
-lesson 'Group Work and Peer Learning'
+lesson 'Group Work and Peer Learning', display_name: 'Group Work and Peer Learning'
 level 'Exploring Practices and Strategies during TeacherCon', named: true
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Collaborative Learning and Group Work: Description and Strategies', named: true
@@ -41,13 +41,13 @@ level 'the Journal of Peer Learning', named: true
 level 'Tuesday Report: Group Work and Peer Learning in Unit 1', named: true
 level 'Wednesday Report: Group Work and Peer Learning in Unit 1', named: true
 
-lesson 'Balancing Teachers and Tools'
+lesson 'Balancing Teachers and Tools', display_name: 'Balancing Teachers and Tools'
 level 'Exploring Practices and Strategies during TeacherCon', named: true
 level 'Overview: Balancing Teachers and Tools', named: true
 level 'Tuesday Report: Balancing Teachers and Tools in Unit 1', named: true
 level 'Wednesday Report: Balancing Teachers and Tools in Unit 1', named: true
 
-lesson 'Discovery Learning'
+lesson 'Discovery Learning', display_name: 'Discovery Learning'
 level 'Exploring Practices and Strategies during TeacherCon', named: true
 level 'Overview: Discovery Learning', named: true
 level 'Discovery learning definition and history', named: true
@@ -55,10 +55,11 @@ level 'Discovery learning techniques', named: true
 level 'Tuesday Report: Discovery Learning in Unit 1', named: true
 level 'Wednesday Report: Discovery Learning in Unit 1', named: true
 
-lesson 'Measuring Student Learning'
+lesson 'Measuring Student Learning', display_name: 'Measuring Student Learning'
 level 'Exploring Practices and Strategies during TeacherCon', named: true
 level 'Overview: Capturing Student Learning', named: true
 level 'What is the difference between formative and summative assessment?', named: true
 level 'Classroom Assessment Techniques', named: true
 level 'Tuesday Report: Measuring Student Learning in Unit 1', named: true
 level 'Wednesday Report: Measuring Student Learning in Unit 1', named: true
+

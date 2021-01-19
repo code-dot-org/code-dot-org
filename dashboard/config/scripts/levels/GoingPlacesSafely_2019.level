@@ -1,13 +1,13 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2019-01-22T18:09:10.000Z",
-  "user_id": 1,
   "properties": {
     "video_key": "C1_going_places_safely",
     "parent_level_id": 11600,
     "name_suffix": "_2019"
   },
+  "game_id": 31,
+  "created_at": "2019-01-22T18:09:10.000Z",
+  "user_id": 1,
   "published": true
 }]]></config>
 </Unplugged>

@@ -1,7 +1,5 @@
-/* global appOptions */
 import _ from 'lodash';
 import xml from './xml';
-import experiments from '@cdo/apps/util/experiments';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -435,7 +433,7 @@ exports.cleanBlocks = function(blocksDom) {
 
 /**
  * Adds any functions from functionsXml to blocksXml. If a function with the
- * same name is already present in blocksXml, it won't be added again.
+ * same id is already present in blocksXml, it won't be added again.
  */
 exports.appendNewFunctions = function(blocksXml, functionsXml) {
   const startBlocksDom = xml.parseElement(blocksXml);
@@ -448,13 +446,14 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     let startBlocksDocument = startBlocksDom.ownerDocument.evaluate
       ? startBlocksDom.ownerDocument
       : document;
-    const name = ownerDocument.evaluate(
-      'title[@name="NAME"]/text()',
+    const node = ownerDocument.evaluate(
+      'title[@name="NAME"]',
       func,
       null,
-      XPathResult.STRING_TYPE,
+      XPathResult.FIRST_ORDERED_NODE_TYPE,
       null
-    ).stringValue;
+    ).singleNodeValue;
+    const name = node && node.id;
     const type = ownerDocument.evaluate(
       '@type',
       func,
@@ -464,7 +463,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/title[@name="NAME"][text()="${name}"]`,
+        `//block[@type="${type}"]/title[@id="${name}"]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
@@ -508,14 +507,17 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
  * @property {boolean} field Indicates that an input is a field input, i.e. a
  *   textbox. The generated code will be wrapped in quotes if the arg has type
  *   "String".
- * @property {boolean} empty Indicates that an input should not render a
- *   connection or generate any code. Mostly just useful as a line break for
- *   non-inlined blocks.
+ * @property {boolean} dummy Indicates that an input should be a dummy input, i.e. does
+ * not render a connection or generate code. Useful as a line break or to add an
+ * image to a block.
  * @property {boolean} assignment Indicates that this block should generate
  *   an assignment statement, with this input yielding the variable name.
  * @property {boolean} defer Indicates that this input should be wrapped in a
  *   function before being passed into func, so that evaluation can be deferred
  *   until later.
+ * @property {boolean} variableInput Indicates that an input is a variable. The block
+ *   will have a dropown selector populated with all the variables in the program.
+ *   The generated code will be the variable, which will be defined as a global variable in the program.
  */
 
 /**
@@ -528,9 +530,11 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
 
 const DROPDOWN_INPUT = 'dropdown';
 const VALUE_INPUT = 'value';
+const INLINE_DUMMY_INPUT = 'inlineDummy';
 const DUMMY_INPUT = 'dummy';
 const STATEMENT_INPUT = 'statement';
 const FIELD_INPUT = 'field';
+const VARIABLE_INPUT = 'variable';
 
 /**
  * Splits a blockText into labelled inputs, each match will a label followed by
@@ -595,8 +599,10 @@ const determineInputs = function(text, args, strictTypes = []) {
         mode = arg.customInput;
       } else if (arg.statement) {
         mode = STATEMENT_INPUT;
-      } else if (arg.empty) {
-        mode = DUMMY_INPUT;
+      } else if (arg.dummy) {
+        mode = arg.inline ? INLINE_DUMMY_INPUT : DUMMY_INPUT;
+      } else if (arg.variableInput) {
+        mode = VARIABLE_INPUT;
       } else {
         mode = VALUE_INPUT;
       }
@@ -674,6 +680,22 @@ const STANDARD_INPUT_TYPES = {
       return `function () {\n${code}}`;
     }
   },
+  [INLINE_DUMMY_INPUT]: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      if (inputConfig.customOptions && inputConfig.customOptions.assetUrl) {
+        currentInputRow.appendTitle(
+          new Blockly.FieldImage(
+            Blockly.assetUrl(inputConfig.customOptions.assetUrl),
+            inputConfig.customOptions.width,
+            inputConfig.customOptions.height
+          )
+        );
+      }
+    },
+    generateCode(block, inputConfig) {
+      return null;
+    }
+  },
   [DUMMY_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
       return block.appendDummyInput();
@@ -700,6 +722,51 @@ const STANDARD_INPUT_TYPES = {
         code = JSON.stringify(code);
       }
       return code;
+    }
+  },
+  [VARIABLE_INPUT]: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      // Make sure the variable name gets declared at the top of the program
+      block.getVars = function() {
+        return {
+          [Blockly.Variables.DEFAULT_CATEGORY]: [
+            block.getTitleValue(inputConfig.name)
+          ]
+        };
+      };
+
+      // The following functions make sure that the variable naming/renaming options work for this block
+      block.renameVar = function(oldName, newName) {
+        if (
+          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+        ) {
+          block.setTitleValue(newName, inputConfig.name);
+        }
+      };
+      block.removeVar = function(oldName) {
+        if (
+          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+        ) {
+          block.dispose(true, true);
+        }
+      };
+      block.superSetTitleValue = block.setTitleValue;
+      block.setTitleValue = function(newValue, name) {
+        if (name === inputConfig.name && block.blockSpace.isFlyout) {
+          newValue = Blockly.Variables.generateUniqueName(newValue);
+        }
+        block.superSetTitleValue(newValue, name);
+      };
+
+      // Add the variable field to the block
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldVariable(null), inputConfig.name);
+    },
+    generateCode(block, inputConfig) {
+      return Blockly.JavaScript.translateVarName(
+        block.getTitleValue(inputConfig.name)
+      );
     }
   },
   [FIELD_INPUT]: {
@@ -828,7 +895,7 @@ exports.createJsWrapperBlockCreator = function(
 ) {
   const {ORDER_FUNCTION_CALL, ORDER_MEMBER, ORDER_NONE} = Blockly.JavaScript;
 
-  const generator = blockly.Generator.get('JavaScript');
+  const generator = blockly.getGenerator();
 
   const inputTypes = {
     ...STANDARD_INPUT_TYPES,
@@ -1001,10 +1068,7 @@ exports.createJsWrapperBlockCreator = function(
           this.setPreviousStatement(true);
         }
 
-        if (
-          miniToolboxBlocks &&
-          experiments.isEnabled(experiments.MINI_TOOLBOX)
-        ) {
+        if (miniToolboxBlocks) {
           var toggle = new Blockly.FieldIcon('+');
           var miniToolboxXml = '<xml>';
           miniToolboxBlocks.forEach(block => {
@@ -1040,7 +1104,14 @@ exports.createJsWrapperBlockCreator = function(
               });
             }
           });
-          if (appOptions.level.miniToolbox && !appOptions.readonlyWorkspace) {
+          // Use window.appOptions, not global appOptions, because the levelbuilder
+          // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
+          // there
+          if (
+            !window.appOptions ||
+            (window.appOptions.level.miniToolbox &&
+              !window.appOptions.readonlyWorkspace)
+          ) {
             this.appendDummyInput()
               .appendTitle(toggle)
               .appendTitle(' ');
@@ -1048,34 +1119,43 @@ exports.createJsWrapperBlockCreator = function(
           this.initMiniFlyout(miniToolboxXml);
         }
 
-        // For mini-toolbox, indicate which blocks should receive the duplicate on drag
-        // behavior and indicates the sibling block to shadow the value from
-        if (this.type === 'gamelab_clickedSpritePointer') {
-          this.setParentForCopyOnDrag('gamelab_spriteClickedSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_spriteClicked' &&
-              root.getConnections_()[1] &&
-              root.getConnections_()[1].targetBlock()
-          );
-        }
-        if (this.type === 'gamelab_subjectSpritePointer') {
-          this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_checkTouching' &&
-              root.getConnections_()[1] &&
-              root.getConnections_()[1].targetBlock()
-          );
-        }
-        if (this.type === 'gamelab_objectSpritePointer') {
-          this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_checkTouching' &&
-              root.getConnections_()[2] &&
-              root.getConnections_()[2].targetBlock()
-          );
+        // Set block to shadow for preview field if needed
+        switch (this.type) {
+          case 'gamelab_clickedSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_spriteClicked' &&
+                root.getConnections_()[1] &&
+                root.getConnections_()[1].targetBlock()
+            );
+            break;
+          case 'gamelab_newSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_whenSpriteCreated' &&
+                root.getConnections_()[1] &&
+                root.getConnections_()[1].targetBlock()
+            );
+            break;
+          case 'gamelab_subjectSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_checkTouching' &&
+                root.getConnections_()[1] &&
+                root.getConnections_()[1].targetBlock()
+            );
+            break;
+          case 'gamelab_objectSpritePointer':
+            this.setBlockToShadow(
+              root =>
+                root.type === 'gamelab_checkTouching' &&
+                root.getConnections_()[2] &&
+                root.getConnections_()[2].targetBlock()
+            );
+            break;
+          default:
+            // Not a pointer block, so no block to shadow
+            break;
         }
 
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
@@ -1144,6 +1224,20 @@ exports.createJsWrapperBlockCreator = function(
           values.push(`function (${params}) {\n${handlerCode}}`);
         } else {
           values.push(`function () {\n${handlerCode}}`);
+        }
+      }
+
+      if (
+        this.type === 'gamelab_setPrompt' ||
+        this.type === 'gamelab_setPromptWithChoices'
+      ) {
+        const input = this.getInput('VAR');
+        if (input) {
+          const targetBlock = input.connection.targetBlock();
+          if (targetBlock && targetBlock.type === 'variables_get') {
+            const varName = Blockly.JavaScript.blockToCode(targetBlock)[0];
+            values.push(`function(val) {${varName} = val;}`);
+          }
         }
       }
 

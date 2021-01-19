@@ -6,12 +6,13 @@ import {
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
+import {setCurrentUserId} from '@cdo/apps/templates/currentUserRedux';
 import plcHeaderReducer, {
   setPlcHeader
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
-import scriptAnnouncementReducer, {
+import announcementsReducer, {
   addAnnouncement
-} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+} from '@cdo/apps/code-studio/announcementsRedux';
 import locales, {setLocaleEnglishName} from '../../../../redux/localesRedux';
 
 $(document).ready(initPage);
@@ -34,6 +35,10 @@ function initPage() {
     );
   }
 
+  if (scriptData.user_id) {
+    store.dispatch(setCurrentUserId(scriptData.user_id));
+  }
+
   if (scriptData.has_verified_resources) {
     store.dispatch(setVerifiedResources(true));
   }
@@ -42,9 +47,9 @@ function initPage() {
     store.dispatch(setVerified());
   }
 
-  if (scriptData.script_announcements) {
-    registerReducers({scriptAnnouncements: scriptAnnouncementReducer});
-    scriptData.script_announcements.forEach(announcement =>
+  if (scriptData.announcements) {
+    registerReducers({announcements: announcementsReducer});
+    scriptData.announcements.forEach(announcement =>
       store.dispatch(
         addAnnouncement(
           announcement.notice,

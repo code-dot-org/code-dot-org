@@ -19,7 +19,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
     And I sign out
     Examples:
       | url                                                      | test_name                         | stitch_mode | user_type |
-      | http://studio.code.org/projects/applab/new               | new applab project                | scroll      | student   |
+      | http://studio.code.org/projects/applab/new               | new applab project                | none        | student   |
       | http://studio.code.org/                                  | logged in student studio homepage | css         | student   |
       | http://studio.code.org/                                  | logged in teacher studio homepage | css         | teacher   |
       | http://studio.code.org/s/allthethings                    | logged in script progress         | css         | student   |

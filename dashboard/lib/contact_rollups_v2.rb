@@ -85,6 +85,7 @@ class ContactRollupsV2
     # However, if the build steps above fail, none of them should run.
     sync_new_contacts_with_pardot
     sync_updated_contacts_with_pardot
+    delete_contacts_from_pardot
   end
 
   # Collects raw contact data from multiple tables into ContactRollupsRaw.
@@ -193,6 +194,21 @@ class ContactRollupsV2
     )
   end
 
+  def delete_contacts_from_pardot
+    start_time = Time.now
+    @log_collector.time_and_continue('Delete contacts marked for deletion from Pardot') do
+      results = ContactRollupsPardotMemory.delete_pardot_prospects(is_dry_run: @is_dry_run)
+      @log_collector.record_metrics(
+        ProspectsDeleted: results[:prospects_deleted],
+        ProspectDeletionsRejected: results[:prospect_deletions_rejected]
+      )
+    end
+  ensure
+    @log_collector.record_metrics(
+      {DeleteContactsDuration: Time.now - start_time}
+    )
+  end
+
   def get_table_metrics
     {
       RawRows: ContactRollupsRaw.count,
@@ -210,8 +226,12 @@ class ContactRollupsV2
   # unless in dry-run mode.
   def report_results
     @log_collector.record_metrics(get_table_metrics)
-    upload_metrics unless @is_dry_run
-    # TODO: Report to slack channel
+    unless @is_dry_run
+      upload_metrics
+      url = upload_to_s3
+      report_to_slack log_url: url
+    end
+
     print_logs
   end
 
@@ -226,6 +246,42 @@ class ContactRollupsV2
       }
     end
     Cdo::Metrics.push('ContactRollupsV2', aws_metrics)
+  end
+
+  # @return [String] url of the uploaded S3 object
+  def upload_to_s3
+    log_name = "crv2-#{Time.now.utc.strftime('%Y%m%dT%H%M%SZ')}.log"
+    AWS::S3::LogUploader.
+      new('cdo-audit-logs', "contact-rollups-v2/#{CDO.rack_env}").
+      upload_log(log_name, @log_collector.to_s)
+  end
+
+  # @return [Boolean, nil] true/false if a summary message is sent to Slack or not,
+  #   nil if CDO.hip_chat_logging is not enabled.
+  def report_to_slack(log_url: nil)
+    duration = @log_collector.metrics.values_at(
+      :CollectContactsDuration,
+      :ProcessContactsDuration,
+      :SyncNewContactsDuration,
+      :SyncUpdatedContactsDuration
+    ).compact.sum
+    formatted_duration = Time.at(duration).utc.strftime("%Hh:%Mm:%Ss")
+
+    log_link = "<a href='#{log_url}'>:cloud: Log on S3</a>"
+
+    cloud_watch_link =
+      "<a href='https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Contact-Rollups-V2'>"\
+      ":chart_with_upwards_trend: CloudWatch dashboard</a>"
+
+    summary = [
+      "*ContactRollupsV2* (#{CDO.rack_env}#{', dry-run' if @is_dry_run})",
+      "Number of Pardot prospects created: #{@log_collector.metrics[:ProspectsCreated]}",
+      "Number of Pardot prospects updated: #{@log_collector.metrics[:ProspectsUpdated]}",
+      "Number of contacts in ContactRollupsFinal: #{@log_collector.metrics[:FinalRows]}",
+      ":clock10: #{formatted_duration} #{log_link} #{cloud_watch_link}"
+    ].join("\n")
+
+    ChatClient.message 'cron-daily', summary
   end
 
   # Using truncate allows us to re-use row IDs,

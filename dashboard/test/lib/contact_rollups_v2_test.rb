@@ -34,7 +34,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     # Verify email preference
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email_preference.email, pardot_id: 1)
     refute_nil pardot_memory_record
-    assert_equal({'db_Opt_In' => 'Yes'}, pardot_memory_record.data_synced)
+    assert_equal({'db_Opt_In' => 'Yes'}, pardot_memory_record[:data_synced])
 
     contact_record = ContactRollupsFinal.find_by_email(email_preference.email)
     refute_nil contact_record
@@ -43,7 +43,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     # Verify parent email
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: student_with_parent_email.parent_email, pardot_id: 2)
     refute_nil pardot_memory_record
-    assert_equal({}, pardot_memory_record.data_synced)
+    assert_equal({'db_Roles_0' => 'Parent'}, pardot_memory_record[:data_synced])
 
     contact_record = ContactRollupsFinal.find_by_email(student_with_parent_email.parent_email)
     refute_nil contact_record
@@ -81,7 +81,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     # Verify results
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email, pardot_id: pardot_id)
     refute_nil pardot_memory_record
-    assert_equal({'db_Opt_In' => 'No'}, pardot_memory_record.data_synced)
+    assert_equal({'db_Opt_In' => 'No'}, pardot_memory_record[:data_synced])
 
     contact_record = ContactRollupsFinal.find_by_email(email)
     refute_nil contact_record
@@ -93,6 +93,9 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.expects(:submit_batch_request).never
     ContactRollupsPardotMemory.expects(:save_accepted_submissions).never
     ContactRollupsPardotMemory.expects(:save_rejected_submissions).never
+
+    # Called when deleting Pardot prospects
+    PardotV2.expects(:delete_prospects_by_email).never
 
     # Called when downloading Pardot ID-email mappings
     PardotV2.expects(:post_with_auth_retry).never

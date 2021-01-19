@@ -60,9 +60,7 @@ class UnassignButton extends React.Component {
 export const UnconnectedUnassignButton = UnassignButton;
 
 export default connect(
-  state => ({
-    sections: state.teacherSections.sections
-  }),
+  null,
   {
     unassignSection
   }

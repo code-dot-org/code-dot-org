@@ -8,6 +8,29 @@ Background:
   And I wait to see ".nextPageButton"
   And element ".nextPageButton" is visible
 
+Scenario: multi page level numbering
+  Then element ".level-group-number:nth(0)" contains text "1. "
+  And element ".level-group-content:nth(0) .multi-question" contains text "Which arrow gets"
+
+  And element ".level-group-number:nth(1)" contains text "2. "
+  And element ".level-group-content:nth(1) .multi-question" contains text "The standard QWERTY keyboard has"
+
+  When I press ".nextPageButton" using jQuery to load a new page
+  And I wait to see ".level-group-content"
+  And check that the URL contains "/page/2"
+
+  Then element ".level-group-number:nth(0)" contains text "4. "
+  And element ".level-group-content:nth(0) .multi-question" contains text "go at the beginning"
+
+  And element ".level-group-number:nth(3)" contains text "7. "
+  And element ".level-group-content:nth(3)" contains text "Reflecting on the ECS Curriculum"
+
+  # External level is not numbered
+  And element ".level-group-content:nth(4)" contains text "Sample external 2"
+
+  And element ".level-group-number:nth(4)" contains text "8. "
+  And element ".level-group-content:nth(5)" contains text "What are your goals"
+
 Scenario: Submit three pages.
   When element ".level-group-content:nth(0) .multi-question" contains text "Which arrow gets"
 

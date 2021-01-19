@@ -13,7 +13,6 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
       create :pd_enrollment, email: other_teacher.email, workshop: workshop
     end
 
-    create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop
     @ended_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop
     other_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csd_workshop
     create :pd_enrollment, email: @teacher.email, workshop: @csp_workshop
@@ -156,7 +155,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     prepare_scenario
 
     ['Bills Fandom 101', 'ECS Support', 'CSP Support'].each do |name|
-      plc_course = Course.find_by(name: name).try(:plc_course) || create(:plc_course, name: name)
+      plc_course = UnitGroup.find_by(name: name).try(:plc_course) || create(:plc_course, name: name)
       Plc::UserCourseEnrollment.create(user: @teacher, plc_course: plc_course)
     end
 

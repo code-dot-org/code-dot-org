@@ -3,10 +3,10 @@ peer_reviews_to_complete 4
 login_required true
 student_detail_progress_view true
 
-lesson 'Saturday Session Resources'
+lesson 'Saturday Session Resources', display_name: 'Saturday Session Resources'
 level 'Mar20 Prework_0'
 
-lesson 'Getting Familiar with Traversals EIPM'
+lesson 'Getting Familiar with Traversals EIPM', display_name: 'Getting Familiar with Traversals EIPM'
 level 'Mar20 Part1_1', progression: 'Overview and Setup'
 level 'Mar20 Part1_2', progression: 'Overview and Setup'
 level 'Mar20 Part1_Task1', progression: 'Tasks'
@@ -17,9 +17,10 @@ level 'Mar20 Part1_Task5', progression: 'Tasks'
 level 'Mar20 Part1_Task6', progression: 'Tasks'
 level 'Mar20 Part1_Task7', progression: 'Reflection'
 
-lesson 'Comparing Make Lessons'
+lesson 'Comparing Make Lessons', display_name: 'Comparing Make Lessons'
 level 'Mar20 Part2_1'
 level 'Mar20 Part2_Task1', progression: 'Tasks'
 level 'Mar20 Part2_Task2', progression: 'Tasks'
 level 'Mar20 Part2_Task3', progression: 'Tasks'
 level 'Mar20 Part2_Task4', progression: 'Reflection'
+

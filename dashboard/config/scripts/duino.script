@@ -1,15 +1,16 @@
-lesson 'Basic Circuits'
+lesson 'Basic Circuits', display_name: 'Basic Circuits'
 level 'duino battery led'
 level 'duino button led'
 
-lesson 'Blinky Lights'
+lesson 'Blinky Lights', display_name: 'Blinky Lights'
 level 'duino multi leds'
 level 'duino pov'
 
-lesson 'Making Music'
+lesson 'Making Music', display_name: 'Making Music'
 level 'duino music'
 level 'duino auduino'
 
-lesson 'JunkBot'
+lesson 'JunkBot', display_name: 'JunkBot'
 level 'duino junkbot build'
 level 'duino junkbot software'
+

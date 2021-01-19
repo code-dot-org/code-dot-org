@@ -49,7 +49,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       User.find(feedback.teacher_id).authorized_teacher?
     end
 
-    render json: @all_unseen_feedbacks.count, each_serializer: Api::V1::TeacherFeedbackSerializer
+    render json: @all_unseen_feedbacks.count
   end
 
   # POST /teacher_feedbacks
@@ -78,6 +78,6 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def teacher_feedback_params
-    params.require(:teacher_feedback).permit(:student_id, :level_id, :script_level_id, :comment, :teacher_id, :performance)
+    params.require(:teacher_feedback).permit(:student_id, :script_id, :level_id, :script_level_id, :comment, :teacher_id, :performance)
   end
 end

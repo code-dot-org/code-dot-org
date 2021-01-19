@@ -1,7 +1,8 @@
 hidden false
 has_lesson_plan true
+background 'oceans-blue'
 
-lesson 'Oceans'
+lesson 'Oceans', display_name: 'Oceans'
 level 'Oceans_Video_Machine_Learning'
 level 'Oceans_FishVTrash'
 level 'Oceans_CreaturesVTrashDemo'

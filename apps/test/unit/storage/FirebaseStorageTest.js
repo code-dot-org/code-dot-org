@@ -140,7 +140,7 @@ describe('FirebaseStorage', () => {
     it('warns and succeeds on key names with illegal characters', done => {
       let didWarn = false;
       FirebaseStorage.setKeyValue(
-        'foo.bar',
+        'foo/bar',
         'baz',
         () => verifyValueAndWarning(),
         error => {
@@ -156,6 +156,23 @@ describe('FirebaseStorage', () => {
           .once('value')
           .then(snapshot => {
             expect(snapshot.val()).to.deep.equal({'foo-bar': '"baz"'});
+            done();
+          });
+      }
+    });
+    it('escapes periods in the key', done => {
+      FirebaseStorage.setKeyValue(
+        'foo.bar',
+        'baz',
+        () => verifyValue(),
+        err => console.warn(err)
+      );
+      function verifyValue() {
+        getProjectDatabase()
+          .child(`storage/keys`)
+          .once('value')
+          .then(snapshot => {
+            expect(snapshot.val()).to.deep.equal({'foo%2Ebar': '"baz"'});
             done();
           });
       }

@@ -136,7 +136,7 @@ class Snapshot extends React.Component {
         >
           <div ref="snapshot">
             <h1>{this.props.chartTitle}</h1>
-            <img src={this.state.imageSrc} />
+            <img style={{maxHeight: '50vh'}} src={this.state.imageSrc} />
             <p>
               {msg.dataVisualizerSnapshotDescription({
                 date: moment().format('YYYY/MM/DD'),

@@ -64,7 +64,12 @@ class AnimationPickerListItem extends React.Component {
     label: PropTypes.string,
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
-    category: PropTypes.string
+    category: PropTypes.string,
+    categoryImagePathPrefix: PropTypes.string
+  };
+
+  state = {
+    loaded: false
   };
 
   render() {
@@ -72,13 +77,21 @@ class AnimationPickerListItem extends React.Component {
 
     const thumbnailStyle = [
       styles.thumbnail,
-      this.props.icon && styles.thumbnailIcon
+      this.props.icon && styles.thumbnailIcon,
+      this.props.animationProps && {
+        display: this.state.loaded ? 'block' : 'none'
+      }
     ];
 
-    const labelStyle = [styles.label, this.props.icon && styles.labelIcon];
-
+    const labelStyle = [
+      styles.label,
+      this.props.icon && styles.labelIcon,
+      this.props.animationProps && {
+        display: this.state.loaded ? 'block' : 'none'
+      }
+    ];
     const iconImageSrc = this.props.category
-      ? `/blockly/media/gamelab/animation-previews/${this.props.category}.png`
+      ? this.props.categoryImagePathPrefix + `${this.props.category}.png`
       : '';
 
     return (
@@ -97,6 +110,7 @@ class AnimationPickerListItem extends React.Component {
               playBehavior={
                 !this.props.playAnimations ? PlayBehavior.NEVER_PLAY : null
               }
+              onPreviewLoad={() => this.setState({loaded: true})}
             />
           )}
           {this.props.icon && <i className={'fa fa-' + this.props.icon} />}

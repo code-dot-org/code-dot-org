@@ -3,18 +3,16 @@
 
 #signin
 
-  - link_authentication_path = connect_authentication_option_path(provider: params[:provider])
-
   %p
     = I18n.t('auth.existing_account.sign_in', provider: I18n.t(params[:provider], scope: "auth"))
 
   %p
-    = link_to new_user_session_path({user_return_to: link_authentication_path}) do
+    = link_to new_user_session_path({user_return_to: edit_user_registration_path}) do
       %button= I18n.t('nav.user.signin')
 
   %p
     = I18n.t('auth.existing_account.sign_up', provider: I18n.t(params[:provider], scope: "auth"))
 
   %p
-    = link_to new_user_registration_path({user_return_to: link_authentication_path}) do
+    = link_to new_user_registration_path({user_return_to: edit_user_registration_path}) do
       %button.blue-button= I18n.t('nav.user.signup')

@@ -118,7 +118,7 @@ module ProjectsList
     end
 
     # Retrieve a class set of libraries for a specified class section
-    # @param section The section that has all students whose libraries should
+    # @param section The section that has all users whose libraries should
     #                be returned.
     # @return [Hash<Array<Hash>>] A hash of lists of published libraries.
     def fetch_section_libraries(section)
@@ -126,21 +126,21 @@ module ProjectsList
       section_users = section.students + [section.user]
 
       [].tap do |projects_list_data|
-        student_storage_ids = PEGASUS_DB[:user_storage_ids].
+        user_storage_ids = PEGASUS_DB[:user_storage_ids].
           where(user_id: section_users.pluck(:id)).
           select_hash(:id, :user_id)
-        student_storage_id_list = student_storage_ids.keys
+        user_storage_id_list = user_storage_ids.keys
         PEGASUS_DB[:storage_apps].
-          where(storage_id: student_storage_id_list, state: 'active').
+          where(storage_id: user_storage_id_list, state: 'active').
           where(project_type: project_types).
           where("value->'$.libraryName' IS NOT NULL").
           each do |project|
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
             channel_id = storage_encrypt_channel_id(project[:storage_id], project[:id])
-            project_owner = section_users.find {|user| user.id == student_storage_ids[project[:storage_id]]}
+            project_owner = section_users.find {|user| user.id == user_storage_ids[project[:storage_id]]}
             project_data = get_library_row_data(project, channel_id, section.name, project_owner)
-            if project_data && (project_owner.user_type == 'student' || project_data[:sharedWith].include?(section.id))
+            if project_data && (project_owner.id != section.user_id || project_data[:sharedWith].include?(section.id))
               projects_list_data << project_data
             end
           end
@@ -224,7 +224,8 @@ module ProjectsList
           "type" => project_details[:project_type],
           "publishedAt" => project_details[:published_at],
           "studentName" => UserHelpers.initial(project_details[:name]),
-          "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday])
+          "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday]),
+          "isFeatured" => true
         }
         data_for_featured_project_cards << data_for_featured_project_card
       end
@@ -330,6 +331,7 @@ module ProjectsList
           # For privacy reasons, include only the first initial of the student's name.
           studentName: UserHelpers.initial(project_and_user[:name]),
           studentAgeRange: UserHelpers.age_range_from_birthday(project_and_user[:birthday]),
+          isFeatured: false
         }
       ).with_indifferent_access
     end

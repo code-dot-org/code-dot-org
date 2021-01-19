@@ -5,12 +5,18 @@ import color from '../../util/color';
 import SafeMarkdown from '../../templates/SafeMarkdown';
 
 const styles = {
+  container: {
+    height: 40,
+    paddingTop: 12
+  },
   visible: {
     background: color.lighter_yellow,
-    padding: '1em'
+    paddingLeft: 12,
+    paddingRight: 12,
+    paddingBottom: 0
   },
-  hidden: {
-    height: '3em'
+  bottom: {
+    paddingBottom: 8
   }
 };
 
@@ -21,12 +27,14 @@ class DataEntryError extends React.Component {
 
   render() {
     return this.props.isVisible ? (
-      <div style={styles.visible}>
-        <SafeMarkdown markdown={msg.invalidDataEntryTypeError()} />
+      <div style={styles.bottom}>
+        <div style={{...styles.container, ...styles.visible}}>
+          <SafeMarkdown markdown={msg.invalidDataEntryTypeError()} />
+        </div>
       </div>
     ) : (
       // Blank space so layout stays the same whether or not error is visible.
-      <div style={styles.hidden} />
+      <div style={{...styles.container, ...styles.bottom}} />
     );
   }
 }

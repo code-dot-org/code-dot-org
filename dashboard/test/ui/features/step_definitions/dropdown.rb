@@ -9,7 +9,7 @@ And /^I press dropdown number (\d+)$/ do |n|
     # Click mouse in element location using Actions API as a workaround.
     @browser.action.move_to(text).click.perform
   else
-    text.find_element(:xpath, '../*[last()]').click
+    google_blockly? ? text.click : text.find_element(:xpath, '../*[last()]').click
   end
 end
 
@@ -32,7 +32,9 @@ Then /^I select item (\d+) from the dropdown$/ do |n|
 end
 
 Then /^the dropdown field has text "(.*?)"$/ do |text|
-  element_has_text("[block-id='4'] .blocklyEditableText", text)
+  id_selector = get_id_selector
+  # This step definition is only used in dropdown.feature, where the relevant dropdown is on the 9th block.
+  element_has_text("[#{id_selector}='9'] .blocklyEditableText", text)
 end
 
 And /^I press the image dropdown$/ do

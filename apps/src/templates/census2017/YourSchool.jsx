@@ -47,7 +47,8 @@ class YourSchool extends Component {
     alertUrl: PropTypes.string,
     prefillData: censusFormPrefillDataShape,
     hideMap: PropTypes.bool,
-    currentCensusYear: PropTypes.number
+    currentCensusYear: PropTypes.number,
+    showProfessionalLearningBanner: PropTypes.bool
   };
 
   state = {
@@ -124,12 +125,14 @@ class YourSchool extends Component {
           )}
         <h1 style={styles.heading}>{i18n.yourSchoolHeading()}</h1>
         <h3 style={styles.description}>{i18n.yourSchoolDescription()}</h3>
-        <ProfessionalLearningApplyBanner
-          nominated={false}
-          useSignUpText={true}
-          style={styles.banner}
-          linkSuffix={'middle-high'}
-        />
+        {this.props.showProfessionalLearningBanner && (
+          <ProfessionalLearningApplyBanner
+            nominated={false}
+            useSignUpText={false}
+            style={styles.banner}
+            linkSuffix={'middle-high'}
+          />
+        )}
         <YourSchoolResources />
         {!this.props.hideMap && (
           <div id="map">

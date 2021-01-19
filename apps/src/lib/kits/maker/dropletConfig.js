@@ -1,6 +1,5 @@
 import * as api from './api';
 import _ from 'lodash';
-import experiments from '@cdo/apps/util/experiments';
 import color from '../../../util/color';
 import {getFirstParam} from '../../../dropletUtils';
 import {
@@ -16,7 +15,11 @@ import {
   MB_COMPONENT_EVENTS
 } from './boards/microBit/MicroBitConstants';
 
-export const MAKER_CATEGORY = 'Maker';
+const config = {};
+export default config;
+
+const MAKER_CATEGORY = 'Maker';
+config.MAKER_CATEGORY = MAKER_CATEGORY;
 const CIRCUIT_CATEGORY = 'Circuit';
 const MICROBIT_CATEGORY = 'micro:bit';
 
@@ -26,11 +29,12 @@ const colorPixelVariables = _.range(N_COLOR_LEDS).map(
 );
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 
-export function stringifySong(song) {
+function stringifySong(song) {
   return (
     '[\n' + song.map(note => `  ${JSON.stringify(note)}`).join(',\n') + '\n]'
   );
 }
+config.stringifySong = stringifySong;
 
 /**
  * Generate an array of dropdown strings appropriate for the second
@@ -38,7 +42,7 @@ export function stringifySong(song) {
  * onBoardEvent.
  * @param {string} firstParam - first parameter to onBoardEvent
  */
-export function getBoardEventDropdownForParam(firstParam, componentEvents) {
+function getBoardEventDropdownForParam(firstParam, componentEvents) {
   const wrapInQuotes = e => `"${e}"`;
   const idealOptions = componentEvents[firstParam];
   if (Array.isArray(idealOptions)) {
@@ -58,11 +62,12 @@ export function getBoardEventDropdownForParam(firstParam, componentEvents) {
     .map(wrapInQuotes)
     .value();
 }
+config.getBoardEventDropdownForParam = getBoardEventDropdownForParam;
 
 // We don't want these to show up as blocks (because that interferes with
 // parameter dropdowns) but we also don't want them to generate "_ is not
 // defined" warnings from the linter.
-export const additionalPredefValues = Object.keys(CP_COMPONENT_EVENTS);
+config.additionalPredefValues = Object.keys(CP_COMPONENT_EVENTS);
 
 // Block properties we'll reuse in multiple entries
 const createLedProps = {
@@ -77,11 +82,17 @@ const createButtonProps = {
   paletteParams: ['pin'],
   params: ['0']
 };
+const createCapacitiveTouchSensorProps = {
+  parent: api,
+  category: MAKER_CATEGORY,
+  paletteParams: ['pin'],
+  params: ['0']
+};
 
 /**
  * Generic Johnny-Five / Firmata blocks
  */
-export const makerBlocks = [
+const makerBlocks = [
   {
     func: 'pinMode',
     parent: api,
@@ -326,7 +337,7 @@ const circuitPlaygroundBlocks = [
     type: 'property'
   },
 
-  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
+  // Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {
     func: 'isPressed',
     objectDropdown: {options: CP_BUTTON_VARS, dropdownOnly: true},
@@ -336,7 +347,7 @@ const circuitPlaygroundBlocks = [
     type: 'readonlyproperty',
     tipPrefix: '[Button].'
   },
-  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
+  // Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {
     func: 'holdtime',
     objectDropdown: {options: CP_BUTTON_VARS, dropdownOnly: true},
@@ -399,9 +410,19 @@ const circuitPlaygroundBlocks = [
   }
 ];
 
-const ledScreenPrefix = 'ledScreen[0][0].';
 /* micro:bit specific blocks */
 const microBitBlocks = [
+  {
+    func: 'createCapacitiveTouchSensor',
+    ...createCapacitiveTouchSensorProps,
+    type: 'either'
+  },
+  {
+    func: 'var mySensor = createCapacitiveTouchSensor',
+    ...createCapacitiveTouchSensorProps,
+    noAutocomplete: true,
+    docFunc: 'createCapacitiveTouchSensor'
+  },
   {
     func: 'onBoardEvent',
     parent: api,
@@ -421,22 +442,22 @@ const microBitBlocks = [
   },
   {func: 'ledScreen', category: MICROBIT_CATEGORY, type: 'readonlyproperty'},
   {
-    func: 'on',
-    blockPrefix: ledScreenPrefix,
+    func: 'ledScreen.on',
     category: MICROBIT_CATEGORY,
-    modeOptionName: '*.on'
+    params: ['0', '0'],
+    paletteParams: ['x', 'y']
   },
   {
-    func: 'off',
-    blockPrefix: ledScreenPrefix,
+    func: 'ledScreen.off',
     category: MICROBIT_CATEGORY,
-    modeOptionName: '*.off'
+    params: ['0', '0'],
+    paletteParams: ['x', 'y']
   },
   {
-    func: 'toggle',
-    blockPrefix: ledScreenPrefix,
+    func: 'ledScreen.toggle',
     category: MICROBIT_CATEGORY,
-    modeOptionName: '*.toggle'
+    params: ['0', '0'],
+    paletteParams: ['x', 'y']
   },
   {
     func: 'ledScreen.clear',
@@ -552,7 +573,7 @@ const microBitBlocks = [
   {func: 'tempSensor.C', category: MICROBIT_CATEGORY, type: 'readonlyproperty'}
 ];
 
-export const categories = {
+config.categories = {
   [MAKER_CATEGORY]: {
     color: 'cyan',
     rgb: color.droplet_cyan,
@@ -560,20 +581,24 @@ export const categories = {
   }
 };
 
-export let blocks = [];
+export let configMicrobit = {
+  categories: {
+    [MICROBIT_CATEGORY]: {
+      color: 'red',
+      rgb: color.droplet_red,
+      blocks: []
+    }
+  },
+  blocks: [...makerBlocks, ...microBitBlocks]
+};
 
-if (experiments.isEnabled(experiments.MICROBIT)) {
-  categories[MICROBIT_CATEGORY] = {
-    color: 'red',
-    rgb: color.droplet_red,
-    blocks: []
-  };
-  blocks = [...makerBlocks, ...microBitBlocks];
-} else {
-  categories[CIRCUIT_CATEGORY] = {
-    color: 'red',
-    rgb: color.droplet_red,
-    blocks: []
-  };
-  blocks = [...makerBlocks, ...circuitPlaygroundBlocks];
-}
+export let configCircuitPlayground = {
+  categories: {
+    [CIRCUIT_CATEGORY]: {
+      color: 'red',
+      rgb: color.droplet_red,
+      blocks: []
+    }
+  },
+  blocks: [...makerBlocks, ...circuitPlaygroundBlocks]
+};

@@ -106,10 +106,12 @@ class JsDebugger extends React.Component {
     debugConsole: PropTypes.bool.isRequired,
     debugWatch: PropTypes.bool.isRequired,
     debugSlider: PropTypes.bool.isRequired,
+    debugConsoleDisabled: PropTypes.bool.isRequired,
     appType: PropTypes.string.isRequired,
     isDebuggerPaused: PropTypes.bool.isRequired,
     isDebuggingSprites: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
+    isEditWhileRun: PropTypes.bool.isRequired,
     stepSpeed: PropTypes.number.isRequired,
     isOpen: PropTypes.bool.isRequired,
     isAttached: PropTypes.bool.isRequired,
@@ -461,7 +463,7 @@ class JsDebugger extends React.Component {
 
   render() {
     const {appType, isAttached, canRunNext, isRunning} = this.props;
-    const hasFocus = this.props.isDebuggerPaused;
+    const hasFocus = this.props.isDebuggerPaused && !this.props.isEditWhileRun;
 
     const canShowDebugSprites = appType === 'gamelab';
 
@@ -624,6 +626,7 @@ class JsDebugger extends React.Component {
           <DebugConsole
             style={openStyle}
             debugButtons={this.props.debugButtons}
+            debugConsoleDisabled={this.props.debugConsoleDisabled}
             debugWatch={showWatchPane}
             ref={debugConsole => (this._debugConsole = debugConsole)}
           />
@@ -655,8 +658,10 @@ export default connect(
     debugConsole: !!state.pageConstants.showDebugConsole,
     debugWatch: !!state.pageConstants.showDebugWatch,
     debugSlider: !!state.pageConstants.showDebugSlider,
+    debugConsoleDisabled: !!state.pageConstants.debugConsoleDisabled,
     appType: state.pageConstants.appType,
     isRunning: state.runState.isRunning,
+    isEditWhileRun: state.runState.isEditWhileRun,
     isDebuggerPaused: state.runState.isDebuggerPaused,
     isDebuggingSprites: state.runState.isDebuggingSprites,
     stepSpeed: state.runState.stepSpeed,

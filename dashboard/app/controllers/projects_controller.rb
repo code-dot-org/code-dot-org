@@ -151,6 +151,7 @@ class ProjectsController < ApplicationController
       return redirect_to '/', flash: {alert: 'Labs not allowed for admins.'} if current_user.admin
     end
 
+    view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
     @limited_gallery = limited_gallery?
     @current_tab = params[:tab_name]
   end
@@ -307,7 +308,6 @@ class ProjectsController < ApplicationController
     # for sharing pages, the app will display the footer inside the playspace instead
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @legacy_share_style = sharing && !@game.owns_footer_for_share?
-    azure_speech_service = azure_speech_service_options
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
@@ -319,8 +319,7 @@ class ProjectsController < ApplicationController
       small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
-      azure_speech_service_token: azure_speech_service[:azureSpeechServiceToken],
-      azure_speech_service_region: azure_speech_service[:azureSpeechServiceRegion]
+      azure_speech_service_voices: azure_speech_service_options[:voices]
     )
 
     if params[:key] == 'artist'
@@ -339,18 +338,21 @@ class ProjectsController < ApplicationController
     end
 
     FirehoseClient.instance.put_record(
-      study: 'project-views',
-      event: project_view_event_type(iframe_embed, sharing),
-      # allow cross-referencing with the storage_apps table.
-      project_id: storage_app_id,
-      # make it easier to group by project_type.
-      data_string: params[:key],
-      data_json: {
-        # not currently used, but may prove useful to have in the data later.
-        encrypted_channel_id: params[:channel_id],
-        # record type again to make it clear what data_string represents.
-        project_type: params[:key],
-      }.to_json
+      :analysis,
+      {
+        study: 'project-views',
+        event: project_view_event_type(iframe_embed, sharing),
+        # allow cross-referencing with the storage_apps table.
+        project_id: storage_app_id,
+        # make it easier to group by project_type.
+        data_string: params[:key],
+        data_json: {
+          # not currently used, but may prove useful to have in the data later.
+          encrypted_channel_id: params[:channel_id],
+          # record type again to make it clear what data_string represents.
+          project_type: params[:key],
+        }.to_json
+      }
     )
     render 'levels/show'
   end

@@ -102,7 +102,7 @@ class EditTableRow extends React.Component {
 
   render() {
     return (
-      <tr style={dataStyles.row}>
+      <tr style={dataStyles.row} className="uitest-data-table-row">
         {this.props.columnNames.map(columnName => (
           <td key={columnName} style={dataStyles.cell}>
             {this.state.isEditing && columnName !== 'id' ? (

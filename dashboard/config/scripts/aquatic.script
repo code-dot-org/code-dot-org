@@ -1,6 +1,6 @@
 hidden false
 
-lesson 'Aquatic'
+lesson 'Aquatic', display_name: 'Aquatic'
 level 'HOC 2018 Level_1'
 level 'HOC 2018 Level_2'
 level 'HOC 2018 Level_3'
@@ -13,3 +13,4 @@ level 'HOC 2018 Level_9b'
 level 'HOC 2018 Level_10'
 level 'HOC 2018 Level_11'
 level 'HOC 2018 Level_12'
+

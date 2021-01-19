@@ -15,7 +15,7 @@ class PardotV2Test < Minitest::Test
     result = PardotV2.retrieve_prospects(0, ['id']) {|mappings| yielded_result = mappings}
 
     assert_equal 0, result
-    assert_equal nil, yielded_result
+    assert_nil yielded_result
   end
 
   def test_retrieve_prospects_with_result
@@ -200,13 +200,25 @@ class PardotV2Test < Minitest::Test
           email: 'test0@domain.com',
           pardot_id: 10,
           opt_in: 1,
-          user_id: 111
+          user_id: 111,
+          forms_submitted: 'Census,Petition',
+          form_roles: 'engineer,teacher',
+          state: 'Washington',
+          city: 'Seattle',
+          postal_code: '98101',
+          country: 'United States',
         },
         expected_output: {
           email: 'test0@domain.com',
           id: 10,
           db_Opt_In: 'Yes',
-          db_Has_Teacher_Account: 'true'
+          db_Has_Teacher_Account: 'true',
+          db_Forms_Submitted: 'Census,Petition',
+          db_Form_Roles: 'engineer,teacher',
+          db_State: 'Washington',
+          db_City: 'Seattle',
+          db_Postal_Code: '98101',
+          db_Country: 'United States',
         }
       },
       {
@@ -228,10 +240,14 @@ class PardotV2Test < Minitest::Test
         input: {
           professional_learning_enrolled: COURSE_CSF,
           professional_learning_attended: COURSE_CSF,
+          hoc_organizer_years: '2019',
+          roles: 'Form Submitter',
         },
         expected_output: {
           db_Professional_Learning_Enrolled_0: COURSE_CSF,
           db_Professional_Learning_Attended_0: COURSE_CSF,
+          db_Hour_of_Code_Organizer_0: '2019',
+          db_Roles_0: 'Form Submitter',
         }
       },
       {
@@ -239,12 +255,18 @@ class PardotV2Test < Minitest::Test
         input: {
           professional_learning_enrolled: "#{COURSE_CSD},#{COURSE_CSF}",
           professional_learning_attended: "#{COURSE_CSP},#{COURSE_ECS}",
+          hoc_organizer_years: '2018,2019',
+          roles: 'Form Submitter,Petition Signer',
         },
         expected_output: {
           db_Professional_Learning_Enrolled_0: COURSE_CSD,
           db_Professional_Learning_Enrolled_1: COURSE_CSF,
           db_Professional_Learning_Attended_0: COURSE_CSP,
           db_Professional_Learning_Attended_1: COURSE_ECS,
+          db_Hour_of_Code_Organizer_0: '2018',
+          db_Hour_of_Code_Organizer_1: '2019',
+          db_Roles_0: 'Form Submitter',
+          db_Roles_1: 'Petition Signer',
         }
       }
     ]

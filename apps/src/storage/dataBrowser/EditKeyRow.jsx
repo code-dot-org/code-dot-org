@@ -84,7 +84,7 @@ class EditKeyRow extends React.Component {
 
   render() {
     return (
-      <tr style={dataStyles.row}>
+      <tr style={dataStyles.row} className="uitest-kv-table-row">
         <td style={dataStyles.cell}>{JSON.stringify(this.props.keyName)}</td>
         <td style={dataStyles.cell}>
           {this.state.isEditing ? (

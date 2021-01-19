@@ -1,8 +1,8 @@
-import {getProjectDatabase} from './firebaseUtils';
+import {getProjectDatabase, getPathRef} from './firebaseUtils';
 import _ from 'lodash';
 
 export function getColumnsRef(database, tableName) {
-  return database.child(`metadata/tables/${tableName}/columns`);
+  return getPathRef(database, `metadata/tables/${tableName}/columns`);
 }
 
 /**

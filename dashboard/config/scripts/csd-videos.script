@@ -1,14 +1,14 @@
-lesson 'Problem Solving and Computers'
+lesson 'Problem Solving and Computers', display_name: 'Problem Solving and Computers'
 level 'CSD What Makes a Computer a Computer Video_2019', named: true
 
-lesson 'Web Development'
+lesson 'Web Development', display_name: 'Web Development'
 level 'Intro to Web Lab - Part 1_2019', named: true
 level 'Intro to Web Lab - Part 2_2019', named: true
 level 'CSD U2 Pair Programming Video_2019', named: true
 level 'Video: Intro to CSS_2019', named: true
 level 'Video: Intro to CSS Part 2_2019', named: true
 
-lesson 'Games and Animations'
+lesson 'Games and Animations', display_name: 'Games and Animations'
 level 'CSD: Drawing in Game Lab 1_2019', named: true
 level 'CSD: Drawing in Game Lab 2_2019', named: true
 level 'Introduction to Variables - Part 1_2019', named: true
@@ -22,17 +22,18 @@ level 'CSD U3 - Conditionals Video_2019', named: true
 level 'CSD: Sprite Velocity_2019', named: true
 level 'CSD U3 Functions Call Function_2019', named: true
 
-lesson 'User Centered Design'
+lesson 'User Centered Design', display_name: 'User Centered Design'
 level 'CSDU4 Design Mode Video_2019', named: true
 
-lesson 'Data and Society'
+lesson 'Data and Society', display_name: 'Data and Society'
 level 'CSD U5 binary video_2019', named: true
 level 'CSD U5 Netflix Data Video_2019', named: true
 level 'CSD U5 Waze Data Video_2019', named: true
 level 'CSD U5 Amazon Data Video_2019', named: true
 
-lesson 'Physical Computing'
+lesson 'Physical Computing', display_name: 'Physical Computing'
 level 'CSD U6 hardware software video_2019', named: true
 level 'CSD U6 arrays video', named: true
 level 'CSD: For Loop_2019', named: true
 level 'CSD U6 functions paramters video_2019', named: true
+

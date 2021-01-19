@@ -74,12 +74,12 @@ class LabelProperties extends React.Component {
         />
         <ColorPickerPropertyRow
           desc={'text color'}
-          initialValue={elementUtils.rgb2hex(element.style.color)}
+          initialValue={element.style.color}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <ColorPickerPropertyRow
           desc={'background color'}
-          initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
+          initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
         <FontFamilyPropertyRow
@@ -142,15 +142,8 @@ class LabelEvents extends React.Component {
 
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "click", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' clicked!");\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("${id} clicked!");\n}`;
+    return `onEvent("${id}", "click", ${callback});`;
   }
 
   insertClick = () => {
@@ -283,10 +276,20 @@ export default {
 
       if (!widthLocked) {
         // Truncate the width before it runs off the edge of the screen
-        size.width = Math.min(clone.width() + 1 + horizontalPadding, maxWidth);
+        size.width = Math.min(
+          clone.width() +
+            1 +
+            horizontalPadding +
+            parseInt(element.style.borderWidth) * 2,
+          maxWidth
+        );
       }
       if (!heightLocked) {
-        size.height = clone.height() + 1 + verticalPadding;
+        size.height =
+          clone.height() +
+          1 +
+          verticalPadding +
+          parseInt(element.style.borderWidth) * 2;
       }
 
       clone.remove();

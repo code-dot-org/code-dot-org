@@ -772,6 +772,12 @@ input[type="radio"] {
     font-size: 16px;
     color: $light-gray;
     margin-right: 10px;
+
+    html[dir=rtl] & {
+      float: right;
+      margin-right: 0;
+      margin-left: 10px;
+    }
   }
 
   svg {
@@ -1167,6 +1173,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
     .generated-code-container {
       margin: 25px 10px 25px -80px;
+
+      html[dir=rtl] & {
+        margin: 25px -80px 25px 10px;
+      }
     }
   }
 
@@ -1182,6 +1192,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 .generated-code-container {
   margin-top: 10px;
   .generatedCodeMessage {
+    html[dir=rtl] & {
+      text-align: right;
+    }
+
     p {
       font-size: 14px;
       line-height: inherit;
@@ -1311,7 +1325,11 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     margin: 0;
     float: left;
     border: $lighter_gray;
-    border-style: solid
+    border-style: solid;
+
+    html[dir=rtl] & {
+      float: right;
+    }
   }
 
   div {
@@ -1321,6 +1339,15 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       margin-right: 25px;
       &.no-image {
         margin-left: 0;
+
+        html[dir=rtl] & {
+          margin-right: 0;
+        }
+      }
+
+      html[dir=rtl] & {
+        margin-right: $image_width + 15px;
+        margin-left: 25px;
       }
     }
   }
@@ -1338,6 +1365,13 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       background-color: transparent;
       text-decoration: none;
       color: white;
+    }
+
+    html[dir=rtl] & {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
     }
   }
 
@@ -1727,3 +1761,4 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 
 @import "RotateContainer";
 @import "HideToolbarHelper";
+@import "blockly";

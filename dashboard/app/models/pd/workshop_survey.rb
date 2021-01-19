@@ -14,7 +14,7 @@
 #  index_pd_workshop_surveys_on_pd_enrollment_id  (pd_enrollment_id) UNIQUE
 #
 
-class Pd::WorkshopSurvey < ActiveRecord::Base
+class Pd::WorkshopSurvey < ApplicationRecord
   include Pd::FacilitatorSpecificForm
 
   STRONGLY_DISAGREE_TO_STRONGLY_AGREE = [
@@ -111,7 +111,8 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
     pd_enrollment && (pd_enrollment.user.nil? || Pd::WorkshopSurvey.find_by_user(pd_enrollment.user).empty?)
   end
 
-  # Only show implementation questions if this is the CSD Units 2 and 3 workshop survey
+  # Only show implementation questions if this is the survey
+  # for the first CSD Academic Year Workshop of the year.
   def show_implementation_questions?
     pd_enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
   end

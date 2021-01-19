@@ -1,6 +1,8 @@
+# This test is vulnerable to existing application state in the target
+# environment and is skipped while PLC works to fix that.
+@skip
 @dashboard_db_access
 @eyes
-
 Feature: Teacher Application Dashboard view
 
   Scenario: Application dashboard, list view, detail view, cohort view

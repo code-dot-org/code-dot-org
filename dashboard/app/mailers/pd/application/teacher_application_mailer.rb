@@ -1,6 +1,6 @@
 module Pd::Application
   class TeacherApplicationMailer < ActionMailer::Base
-    CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = 'Liz Gauthier <liz.gauthier@code.org>'
+    CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = 'Jared Fritz <jared@code.org>'
     default from: 'Code.org <noreply@code.org>'
     default bcc: MailerConstants::PLC_EMAIL_LOG
 
@@ -67,7 +67,7 @@ module Pd::Application
       @application = teacher_application
 
       mail(
-        from: 'Liz Gauthier <teacher@code.org>',
+        from: 'Jared Fritz <teacher@code.org>',
         to: @application.formatted_partner_contact_email || CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
         subject: 'A principal has completed the principal approval form'
       )

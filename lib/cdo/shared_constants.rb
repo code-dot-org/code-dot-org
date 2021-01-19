@@ -142,6 +142,7 @@ module SharedConstants
       "setImageURL": null,
       "playSound": null,
       "stopSound": null,
+      "playSpeech": null,
       "showElement": null,
       "hideElement": null,
       "deleteElement": null,
@@ -247,6 +248,8 @@ module SharedConstants
       "mathMax": null,
       "mathMin": null,
       "mathRandom": null,
+      "mathPow": null,
+      "mathSqrt": null,
 
       // Variables
       "declareAssign_x": null,
@@ -288,6 +291,7 @@ module SharedConstants
       "boardConnected": null,
       "var myLed = createLed": null,
       "var myButton = createButton": null,
+      "var mySensor = createCapacitiveTouchSensor": null,
 
       // Circuit Playground
       "on": null,
@@ -329,6 +333,9 @@ module SharedConstants
       "on": null,
       "off": null,
       "toggle": null,
+      "ledScreen.on": null,
+      "ledScreen.off": null,
+      "ledScreen.toggle": null,
       "ledScreen.display": null,
       "ledScreen.clear": null,
       "ledScreen.scrollNumber": null,
@@ -381,6 +388,7 @@ module SharedConstants
       "drawSprites": null,
       "playSound": null,
       "stopSound": null,
+      "playSpeech": null,
       "keyDown": null,
       "keyWentDown": null,
       "keyWentUp": null,
@@ -539,6 +547,8 @@ module SharedConstants
       "mathMax": null,
       "mathMin": null,
       "mathRandom": null,
+      "mathPow": null,
+      "mathSqrt": null,
       "comment_Math": null,
 
       // Variables

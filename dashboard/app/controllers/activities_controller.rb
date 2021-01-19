@@ -12,6 +12,7 @@ class ActivitiesController < ApplicationController
   protect_from_forgery except: :milestone
 
   MAX_INT_MILESTONE = 2_147_483_647
+  MAX_INT_TIME_SPENT = 3600
 
   MIN_LINES_OF_CODE = 0
   MAX_LINES_OF_CODE = 1000
@@ -67,13 +68,16 @@ class ActivitiesController < ApplicationController
         )
         if share_filtering_error
           FirehoseClient.instance.put_record(
-            study: 'share_filtering',
-            study_group: 'v0',
-            event: 'share_filtering_error',
-            data_string: "#{share_filtering_error.class.name}: #{share_filtering_error}",
-            data_json: {
-              level_source_id: @level_source.id
-            }.to_json
+            :analysis,
+            {
+              study: 'share_filtering',
+              study_group: 'v0',
+              event: 'share_filtering_error',
+              data_string: "#{share_filtering_error.class.name}: #{share_filtering_error}",
+              data_json: {
+                level_source_id: @level_source.id
+              }.to_json
+            }
           )
         end
       end
@@ -112,8 +116,6 @@ class ActivitiesController < ApplicationController
 
     total_lines = if current_user && current_user.total_lines
                     current_user.total_lines
-                  else
-                    client_state.lines
                   end
 
     render json: milestone_response(
@@ -175,6 +177,8 @@ class ActivitiesController < ApplicationController
       @activity = Activity.new(attributes).tap(&:atomic_save!)
     end
     if @script_level
+      # convert milliseconds to seconds
+      time_since_last_milestone = [(params[:timeSinceLastMilestone].to_f / 1000).ceil.to_i, MAX_INT_TIME_SPENT].min
       @user_level, @new_level_completed = User.track_level_progress(
         user_id: current_user.id,
         level_id: @level.id,
@@ -183,6 +187,7 @@ class ActivitiesController < ApplicationController
         submitted: params[:submitted] == 'true',
         level_source_id: @level_source.try(:id),
         pairing_user_ids: pairing_user_ids,
+        time_spent: time_since_last_milestone
       )
 
       is_sublevel = !@script_level.levels.include?(@level)
@@ -201,7 +206,8 @@ class ActivitiesController < ApplicationController
           submitted: false,
           level_source_id: nil,
           pairing_user_ids: pairing_user_ids,
-          )
+          time_spent: time_since_last_milestone
+        )
       end
 
       # Make sure we don't log when @script_level is a multi-page assessment
@@ -244,7 +250,7 @@ class ActivitiesController < ApplicationController
     log_string = 'Milestone Report:'
     log_string +=
       if current_user || session.id
-        "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id))}"
+        "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id.to_s))}"
       else
         "\tanon"
       end

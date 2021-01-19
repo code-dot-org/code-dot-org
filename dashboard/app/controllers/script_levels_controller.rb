@@ -80,6 +80,10 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
 
+    # @view_as_user is used to determine redirect path for bubble choice levels
+    view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
+    @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
+
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
     # a path helper, so use a regex to compute the new path.
@@ -102,7 +106,10 @@ class ScriptLevelsController < ApplicationController
     end
 
     configure_caching(@script)
-    load_script_level
+
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
+    raise ActiveRecord::RecordNotFound unless @script_level
+    authorize! :read, @script_level, params.slice(:login_required)
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
@@ -147,7 +154,21 @@ class ScriptLevelsController < ApplicationController
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
 
+    @body_classes = @script_level.script.background
+
     present_level
+  end
+
+  def self.get_script_level(script, params)
+    if params[:chapter]
+      script.get_script_level_by_chapter(params[:chapter])
+    elsif params[:stage_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
+    elsif params[:lockable_stage_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
+    else
+      script.get_script_level_by_id(params[:id])
+    end
   end
 
   # Get a list of hidden stages for the current users section
@@ -309,21 +330,6 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  def load_script_level
-    @script_level =
-      if params[:chapter]
-        @script.get_script_level_by_chapter(params[:chapter])
-      elsif params[:stage_position]
-        @script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
-      elsif params[:lockable_stage_position]
-        @script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
-      else
-        @script.get_script_level_by_id(params[:id])
-      end
-    raise ActiveRecord::RecordNotFound unless @script_level
-    authorize! :read, @script_level
-  end
-
   def load_level_source
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
       # load the solution for teachers clicking "See the Solution"
@@ -367,7 +373,7 @@ class ScriptLevelsController < ApplicationController
     return if params[:user_id].blank?
 
     if current_user.nil?
-      render text: 'Teacher view is not available for this puzzle', layout: true
+      render html: I18n.t('teacher.student_code_view_diabled'), layout: true
       return
     end
 
@@ -463,7 +469,7 @@ class ScriptLevelsController < ApplicationController
     # for level groups, @level and @callback point to the parent level, so we
     # generate a url which can be used to report sublevel progress (after
     # appending the sublevel id).
-    if @level.game.level_group? || @level.try(:contained_levels).present?
+    if @level.game&.level_group? || @level.try(:contained_levels).present?
       @sublevel_callback = milestone_script_level_url(
         user_id: current_user.try(:id) || 0,
         script_level_id: @script_level.id,
@@ -477,6 +483,9 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
+      useGoogleBlockly: params[:blocklyVersion] == "Google",
+      azure_speech_service_voices: azure_speech_service_options[:voices],
+      authenticity_token: form_authenticity_token
     )
     readonly_view_options if @level.channel_backed? && params[:version]
 

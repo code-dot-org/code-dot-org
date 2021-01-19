@@ -86,4 +86,6 @@ export class MicrobitStubBoard {
   connectBoard() {
     this.connect();
   }
+
+  clearChannelData() {}
 }

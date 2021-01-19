@@ -26,6 +26,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "false",
+    "validation_enabled": "false",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "text_mode_at_start": "false",

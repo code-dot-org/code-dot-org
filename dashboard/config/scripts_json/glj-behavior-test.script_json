@@ -1,0 +1,110 @@
+{
+  "script": {
+    "name": "glj-behavior-test",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "glj-behavior-test"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "glj-behavior-test"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Cats and Dogs",
+      "name": "Cats and Dogs",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Cats and Dogs",
+        "lesson_group.key": "",
+        "script.name": "glj-behavior-test"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "KIKI GLJ Test 1"
+        ],
+        "lesson.key": "Cats and Dogs",
+        "lesson_group.key": "",
+        "script.name": "glj-behavior-test"
+      },
+      "level_keys": [
+        "KIKI GLJ Test 1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "KIKI GLJ Test 2"
+        ],
+        "lesson.key": "Cats and Dogs",
+        "lesson_group.key": "",
+        "script.name": "glj-behavior-test"
+      },
+      "level_keys": [
+        "KIKI GLJ Test 2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "KIKI GLJ Test 1",
+        "script_level.level_keys": [
+          "KIKI GLJ Test 1"
+        ],
+        "lesson.key": "Cats and Dogs",
+        "lesson_group.key": "",
+        "script.name": "glj-behavior-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "KIKI GLJ Test 2",
+        "script_level.level_keys": [
+          "KIKI GLJ Test 2"
+        ],
+        "lesson.key": "Cats and Dogs",
+        "lesson_group.key": "",
+        "script.name": "glj-behavior-test"
+      }
+    }
+  ]
+}

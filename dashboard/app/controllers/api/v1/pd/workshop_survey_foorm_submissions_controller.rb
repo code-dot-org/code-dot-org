@@ -11,13 +11,16 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
     pd_session_id = params[:pd_session_id].blank? ? nil : params[:pd_session_id].to_i
     day = params[:day].blank? ? nil : params[:day].to_i
     form_name = params[:form_name].presence
+    # agenda will be an empty string if none was provided, we would like to store it as null
+    workshop_agenda = params[:workshop_agenda].presence
 
     if Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(
       params[:user_id].to_i,
       params[:pd_workshop_id].to_i,
       pd_session_id,
       day,
-      form_name
+      form_name,
+      workshop_agenda
     )
       return render json: {error: 'User has already submitted a response'}, status: :conflict
     end
@@ -26,7 +29,8 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
       user_id: params[:user_id],
       pd_session_id: params[:pd_session_id],
       pd_workshop_id: params[:pd_workshop_id],
-      day: params[:day]
+      day: params[:day],
+      workshop_agenda: workshop_agenda
     )
     begin
       survey_submission.save_with_foorm_submission(answers.to_json, params[:form_name], params[:form_version])
@@ -65,7 +69,8 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
           pd_session_id: params[:pd_session_id],
           pd_workshop_id: params[:pd_workshop_id],
           day: params[:day],
-          facilitator_id: data[Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID]
+          facilitator_id: data[Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID],
+          workshop_agenda: params[:workshop_agenda].presence
         )
         begin
           survey_submission.save_with_foorm_submission(data.to_json, params[:form_name], params[:form_version])

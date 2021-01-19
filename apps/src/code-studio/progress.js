@@ -5,13 +5,12 @@ import {Provider} from 'react-redux';
 import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
-import LessonProgress from './components/progress/LessonProgress.jsx';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ScriptOverview from './components/progress/ScriptOverview.jsx';
-import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
+import {registerReducers} from '@cdo/apps/redux';
 import {setViewType, ViewType} from './viewAsRedux';
 import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -27,10 +26,14 @@ import {
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
+  selectSection,
   setSections,
   setPageType,
   pageTypes
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import googlePlatformApi, {
+  loadGooglePlatformApi
+} from '@cdo/apps/templates/progress/googlePlatformApiRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
 
 var progress = module.exports;
@@ -69,21 +72,30 @@ progress.showDisabledBubblesAlert = function() {
  *   we have in renderCourseProgress)
  * @param {object} stageData
  * @param {object} progressData
- * @param {string} currentLevelid
+ * @param {string} currentLevelid The id of the level the user is currently on.
+ *   This gets used in the url and as a key in many objects. Therefore, it is a
+ *   string despite always being a numerical value
  * @param {boolean} saveAnswersBeforeNavigation
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
+ * @param {boolean} isLessonExtras Boolean indicating we are not on a script
+ *   level and therefore are on lesson extras
+ * @param {number} currentPageNumber The page we are on if this is a multi-
+ *   page level.
  */
-progress.renderStageProgress = function(
+progress.generateStageProgress = function(
   scriptData,
+  lessonGroupData,
   stageData,
   progressData,
   currentLevelId,
   saveAnswersBeforeNavigation,
   signedIn,
-  stageExtrasEnabled
+  stageExtrasEnabled,
+  isLessonExtras,
+  currentPageNumber
 ) {
   const store = getStore();
 
@@ -95,6 +107,7 @@ progress.renderStageProgress = function(
     store,
     {
       name,
+      lessonGroups: lessonGroupData,
       lessons: [stageData],
       disablePostMilestone,
       age_13_required,
@@ -102,7 +115,9 @@ progress.renderStageProgress = function(
     },
     currentLevelId,
     false,
-    saveAnswersBeforeNavigation
+    saveAnswersBeforeNavigation,
+    isLessonExtras,
+    currentPageNumber
   );
 
   store.dispatch(
@@ -123,13 +138,6 @@ progress.renderStageProgress = function(
   if (progressData.isVerifiedTeacher) {
     store.dispatch(setVerified());
   }
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <LessonProgress />
-    </Provider>,
-    document.querySelector('.progress_container')
-  );
 };
 
 /**
@@ -146,6 +154,10 @@ progress.renderStageProgress = function(
 progress.renderCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
+  initializeStoreWithSections(store, scriptData);
+  if (scriptData.user_type === 'teacher') {
+    initializeGooglePlatformApi(store);
+  }
 
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
@@ -158,9 +170,6 @@ progress.renderCourseProgress = function(scriptData) {
   );
 
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
-  if (scriptData.sections) {
-    store.dispatch(setSections(scriptData.sections));
-  }
 
   store.dispatch(setPageType(pageTypes.scriptOverview));
 
@@ -191,33 +200,8 @@ progress.renderCourseProgress = function(scriptData) {
   );
 };
 
-/**
- * @param {HTMLElement} element - DOM element we want to render into
- * @param {string} scriptName - name of current script
- * @param {string} currentLevelId - Level that we're current on.
- * @param {string} linesOfCodeText - i18n'd string staging how many lines of code
- * @param {bool} student_detail_progress_view - Should we default to progress view
- *   user has
- */
-progress.renderMiniView = function(
-  element,
-  scriptName,
-  currentLevelId,
-  linesOfCodeText,
-  student_detail_progress_view
-) {
+progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
   const store = getStore();
-  if (student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
-  }
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <MiniView linesOfCodeText={linesOfCodeText} />
-    </Provider>,
-    element
-  );
-
   $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
     queryUserProgress(store, scriptData, currentLevelId);
@@ -283,17 +267,25 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {boolean} [scriptData.plc]
  * @param {object[]} [scriptData.stages]
  * @param {boolean} scriptData.age_13_required
- * @param {string} currentLevelId
+ * @param {string} currentLevelId The id of the level the user is currently on.
+ *   This gets used in the url and as a key in many objects. Therefore, it is a
+ *   string despite always being a numerical value
  * @param {boolean} isFullProgress - True if this contains progress for the entire
  *   script vs. a single stage.
  * @param {boolean} [saveAnswersBeforeNavigation]
+ * @param {boolean} [isLessonExtras] Optional boolean indicating we are not on
+ *   a script level and therefore are on lesson extras
+ * @param {number} [currentPageNumber] Optional. The page we are on if this is
+ *   a multi-page level.
  */
 function initializeStoreWithProgress(
   store,
   scriptData,
   currentLevelId,
   isFullProgress,
-  saveAnswersBeforeNavigation = false
+  saveAnswersBeforeNavigation = false,
+  isLessonExtras = false,
+  currentPageNumber
 ) {
   store.dispatch(
     initProgress({
@@ -301,14 +293,18 @@ function initializeStoreWithProgress(
       professionalLearningCourse: scriptData.plc,
       saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
       stages: scriptData.lessons,
+      lessonGroups: scriptData.lessonGroups,
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
       scriptTitle: scriptData.title,
       scriptDescription: scriptData.description,
+      scriptStudentDescription: scriptData.studentDescription,
       betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
-      isFullProgress: isFullProgress
+      isFullProgress: isFullProgress,
+      isLessonExtras: isLessonExtras,
+      currentPageNumber: currentPageNumber
     })
   );
 
@@ -319,13 +315,6 @@ function initializeStoreWithProgress(
   // Determine if we are viewing student progress.
   var isViewingStudentAnswer = !!clientState.queryParams('user_id');
 
-  // Merge in progress saved on the client, unless we are viewing student's work.
-  if (!isViewingStudentAnswer) {
-    store.dispatch(
-      mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
-    );
-  }
-
   if (scriptData.hideable_lessons) {
     // Note: This call is async
     store.dispatch(getHiddenStages(scriptData.name, true));
@@ -333,16 +322,62 @@ function initializeStoreWithProgress(
 
   store.dispatch(setIsAge13Required(scriptData.age_13_required));
 
-  // Progress from the server should be written down locally, unless we're a teacher
-  // viewing a student's work.
-  if (!isViewingStudentAnswer) {
-    let lastProgress;
-    store.subscribe(() => {
-      const nextProgress = store.getState().progress.levelProgress;
-      if (nextProgress !== lastProgress) {
-        lastProgress = nextProgress;
-        clientState.batchTrackProgress(scriptData.name, nextProgress);
-      }
-    });
+  // The rest of these actions are only relevant if the current user is the
+  // owner of the code being viewed.
+  if (isViewingStudentAnswer) {
+    return;
   }
+
+  // We should use client state XOR database state to track user progress
+  if (!store.getState().progress.usingDbProgress) {
+    store.dispatch(
+      mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
+    );
+  }
+
+  let lastProgress;
+  store.subscribe(() => {
+    const progressState = store.getState().progress;
+    const nextProgress = progressState.levelProgress;
+    const usingDbProgress = progressState.usingDbProgress;
+
+    // We should use client state XOR database state to track user progress.
+    // We may not know until much later, when we load the app, that there
+    // is state available from the DB.
+    if (!usingDbProgress && nextProgress !== lastProgress) {
+      lastProgress = nextProgress;
+      clientState.batchTrackProgress(scriptData.name, nextProgress);
+    }
+  });
+}
+
+function initializeStoreWithSections(store, scriptData) {
+  const sections = scriptData.sections;
+  if (!sections) {
+    return;
+  }
+
+  const currentSection = scriptData.section;
+  if (!currentSection) {
+    // If we don't have a selected section, simply set sections and we're done.
+    store.dispatch(setSections(sections));
+    return;
+  }
+
+  // If we do have a selected section, merge it with the minimal data in the
+  // `sections` array before storing in redux.
+  const idx = sections.findIndex(section => section.id === currentSection.id);
+  if (idx >= 0) {
+    sections[idx] = {
+      ...sections[idx],
+      ...currentSection
+    };
+  }
+  store.dispatch(setSections(sections));
+  store.dispatch(selectSection(currentSection.id.toString()));
+}
+
+function initializeGooglePlatformApi(store) {
+  registerReducers({googlePlatformApi});
+  store.dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
 }

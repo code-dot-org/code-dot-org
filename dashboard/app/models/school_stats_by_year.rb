@@ -41,7 +41,7 @@
 #  index_school_stats_by_years_on_school_id  (school_id)
 #
 
-class SchoolStatsByYear < ActiveRecord::Base
+class SchoolStatsByYear < ApplicationRecord
   self.primary_keys = :school_id, :school_year
 
   belongs_to :school
@@ -76,11 +76,13 @@ class SchoolStatsByYear < ActiveRecord::Base
   end
 
   # Percentage of underrepresented minorities students
+  # Note these are values between 0-100, not 0-1!
   def urm_percent
     percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.reduce(:+))
   end
 
   # Percentage of free/reduced lunch eligible students
+  # Note these are values between 0-100, not 0-1!
   def frl_eligible_percent
     percent_of_students(frl_eligible_total)
   end
@@ -109,7 +111,7 @@ class SchoolStatsByYear < ActiveRecord::Base
     %w(1 2 3 4 5).include? title_i_status
   end
 
-  # returns what percent "count" is of the total student enrollment
+  # returns what percent "count" is of the total student enrollment (0-100)
   def percent_of_students(count)
     return nil unless count && students_total
     (100.0 * count / students_total).round(2)

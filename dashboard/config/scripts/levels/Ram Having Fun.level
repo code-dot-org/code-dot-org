@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
   "game_id": 64,
-  "created_at": "2018-03-12T21:39:16.000Z",
+  "created_at": "2019-06-23T19:34:38.000Z",
   "level_num": "custom",
   "user_id": 255,
   "properties": {
@@ -42,11 +42,10 @@
     "pause_animations_by_default": "false",
     "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction moveBehavior() {\r\n  move.name = \"move\";\r\n  return move;\r\n}\r\n",
     "custom_blocks": "[\n  {\n    \"func\": \"moveBehavior\",\n    \"blockText\": \"move\",\n    \"returnType\": \"Behavior\"\n  }\n]\n",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"370b0846-8ab0-40a0-b89e-3b72ca2cb5d4\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"370b0846-8ab0-40a0-b89e-3b72ca2cb5d4\": {\r\n      \"name\": \"elephant\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/O6kdSZZ2xrp6RZfo2qbysQ/370b0846-8ab0-40a0-b89e-3b72ca2cb5d4.png?version=YP87xZOBc4GqgOKcXWLlQ3MGslXeO8Z_\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 81\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"YP87xZOBc4GqgOKcXWLlQ3MGslXeO8Z_\"\r\n    }\r\n  }\r\n}",
     "hide_custom_blocks": "false",
     "use_default_sprites": "false",
     "block_pool": "gamelab",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

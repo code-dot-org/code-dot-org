@@ -71,6 +71,9 @@ class ActiveSupport::TestCase
     UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
+
+    Cdo::Metrics.client ||= Aws::CloudWatch::Client.new(stub_responses: true)
+
     CDO.stubs(override_pegasus: nil)
     CDO.stubs(override_dashboard: nil)
 
@@ -300,9 +303,7 @@ class ActiveSupport::TestCase
   def assert_caching_disabled(cache_control_header)
     expected_directives = [
       'no-cache',
-      'no-store',
-      'must-revalidate',
-      'max-age=0'
+      'no-store'
     ]
     assert_cache_control_match expected_directives, cache_control_header
   end
@@ -442,7 +443,7 @@ class ActionController::TestCase
   #     assert_equal :admin, assigns(:permission)
   #   end
   def self.test_user_gets_response_for(action, method: :get, response: :success,
-    user: nil, params: {}, name: nil, queries: nil, &block)
+    user: nil, params: {}, name: nil, queries: nil, redirected_to: nil, &block)
 
     unless name.present?
       raise 'name is required when a block is provided' if block
@@ -454,10 +455,12 @@ class ActionController::TestCase
         end
 
       name = "#{user_display_name} calling #{method} #{action} should receive #{response}"
+      name += " to #{redirected_to}"
     end
 
     test name do
       # params can be a hash, or a proc that returns a hash at runtime
+      refute_nil params, "params in controller tests cannot be nil"
       params = instance_exec(&params) if params.is_a? Proc
 
       if user
@@ -473,6 +476,8 @@ class ActionController::TestCase
         send method, action, params: params
         assert_response response
       end
+
+      assert_redirected_to redirected_to if redirected_to
 
       # Run additional test logic, if supplied
       instance_exec(&block) if block

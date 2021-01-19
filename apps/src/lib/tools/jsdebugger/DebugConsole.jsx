@@ -16,7 +16,7 @@ import {
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
 import color from '../../../util/color';
-import Inspector from 'react-inspector';
+import {Inspector, chromeLight} from 'react-inspector';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -48,6 +48,12 @@ const style = {
     flexGrow: 0,
     flexShrink: 0,
     display: 'flex'
+  },
+  debugInputWrapperDisabled: {
+    flexGrow: 0,
+    flexShrink: 0,
+    display: 'flex',
+    backgroundColor: '#eee'
   },
   debugInputPrompt: {
     height: DEBUG_INPUT_HEIGHT,
@@ -126,6 +132,7 @@ export default connect(
         PropTypes.object,
         PropTypes.string
       ]).isRequired,
+      debugConsoleDisabled: PropTypes.bool.isRequired,
       maxLogLevel: PropTypes.string.isRequired,
       isAttached: PropTypes.bool.isRequired,
       addWatchExpression: PropTypes.func.isRequired,
@@ -144,6 +151,9 @@ export default connect(
       const input = e.target.value;
       if (e.keyCode === KeyCodes.ENTER) {
         e.preventDefault();
+        if (this.props.debugConsoleDisabled) {
+          return;
+        }
         this.props.commandHistory.push(input);
         e.target.value = '';
         this.appendLog({input: input});
@@ -243,6 +253,18 @@ export default connect(
     }
 
     displayOutputToConsole() {
+      // These colors come from the ace editor defaults
+      const inspectorTheme = {
+        ...chromeLight,
+        OBJECT_VALUE_NULL_COLOR: 'rgb(88, 92, 246)',
+        OBJECT_VALUE_UNDEFINED_COLOR: 'rgb(88, 92, 246)',
+        OBJECT_VALUE_REGEXP_COLOR: '#1A1AA6',
+        OBJECT_VALUE_STRING_COLOR: '#1A1AA6',
+        OBJECT_VALUE_SYMBOL_COLOR: '#1A1AA6',
+        OBJECT_VALUE_NUMBER_COLOR: 'rgb(0, 0, 205)',
+        OBJECT_VALUE_BOOLEAN_COLOR: 'rgb(88, 92, 246)',
+        OBJECT_VALUE_FUNCTION_PREFIX_COLOR: 'rgb(85, 106, 242)'
+      };
       if (this.props.logOutput.size > 0) {
         return this.props.logOutput.map((rowValue, i) => {
           if ('function' === typeof rowValue.toJS) {
@@ -254,13 +276,19 @@ export default connect(
             return rowValue.output;
           } else if (this.isValidOutput(rowValue)) {
             if (rowValue.fromConsoleLog) {
-              return <Inspector key={i} data={rowValue.output} />;
+              return (
+                <Inspector
+                  theme={inspectorTheme}
+                  key={i}
+                  data={rowValue.output}
+                />
+              );
             } else {
               return (
                 <div key={i}>
                   &lt;{' '}
                   <div style={style.inspector}>
-                    <Inspector data={rowValue.output} />
+                    <Inspector theme={inspectorTheme} data={rowValue.output} />
                   </div>
                 </div>
               );
@@ -309,7 +337,13 @@ export default connect(
           >
             {this.displayOutputToConsole()}
           </div>
-          <div style={style.debugInputWrapper}>
+          <div
+            style={
+              this.props.debugConsoleDisabled
+                ? style.debugInputWrapperDisabled
+                : style.debugInputWrapper
+            }
+          >
             <span style={style.debugInputPrompt} onClick={this.focus}>
               &gt;
             </span>
@@ -317,6 +351,7 @@ export default connect(
               type="text"
               spellCheck="false"
               id="debug-input"
+              disabled={this.props.debugConsoleDisabled}
               style={style.debugInput}
               ref={el => (this._debugInput = el)}
               onKeyDown={this.onInputKeyDown}

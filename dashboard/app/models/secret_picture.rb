@@ -14,7 +14,7 @@
 #  index_secret_pictures_on_path  (path) UNIQUE
 #
 
-class SecretPicture < ActiveRecord::Base
+class SecretPicture < ApplicationRecord
   include Seeded
 
   def self.setup

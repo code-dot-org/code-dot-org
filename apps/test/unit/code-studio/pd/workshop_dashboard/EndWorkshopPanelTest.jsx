@@ -47,7 +47,7 @@ describe('EndWorkshopPanel', () => {
     );
 
     // Click the 'End workshop' button to display the confirmation dialog
-    clickButton(wrapper, 'End Workshop and Send Survey');
+    clickButton(wrapper, 'End Workshop');
     assertDialogIsShowing(wrapper);
 
     // Simulate clicking the 'Cancel' button to close the confirmation dialog
@@ -67,7 +67,7 @@ describe('EndWorkshopPanel', () => {
     server.respondWith('POST', `/api/v1/pd/workshops/1/end`, [204, {}, '']);
 
     // Click the 'End workshop' button to display the confirmation dialog
-    clickButton(wrapper, 'End Workshop and Send Survey');
+    clickButton(wrapper, 'End Workshop');
     assertDialogIsShowing(wrapper);
 
     // Simulate clicking the 'Confirm' button to close the workshop

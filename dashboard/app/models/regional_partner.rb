@@ -22,7 +22,7 @@
 
 require 'state_abbr'
 
-class RegionalPartner < ActiveRecord::Base
+class RegionalPartner < ApplicationRecord
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   has_many :regional_partner_program_managers
@@ -31,7 +31,7 @@ class RegionalPartner < ActiveRecord::Base
     through: :regional_partner_program_managers
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', through: :regional_partner_program_managers
-  has_many :mappings, -> {order :state, :zip_code}, class_name: Pd::RegionalPartnerMapping, dependent: :destroy
+  has_many :mappings, -> {order :state, :zip_code}, class_name: 'Pd::RegionalPartnerMapping', dependent: :destroy
 
   has_many :pd_workshops, class_name: 'Pd::Workshop', foreign_key: 'regional_partner_id'
 
@@ -42,13 +42,11 @@ class RegionalPartner < ActiveRecord::Base
   serialized_attrs %w(
     cohort_capacity_csd
     cohort_capacity_csp
-    apps_open_date_csd_teacher
+    apps_open_date_teacher
+    apps_close_date_teacher
     apps_open_date_csd_facilitator
-    apps_open_date_csp_teacher
     apps_open_date_csp_facilitator
-    apps_close_date_csd_teacher
     apps_close_date_csd_facilitator
-    apps_close_date_csp_teacher
     apps_close_date_csp_facilitator
     apps_priority_deadline_date
     applications_principal_approval
@@ -104,15 +102,11 @@ class RegionalPartner < ActiveRecord::Base
   end
 
   def summer_workshops_earliest_apps_open_date
-    if apps_open_date_csd_teacher || apps_open_date_csp_teacher
-      Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].compact.min).strftime('%B %e, %Y')
-    end
+    apps_open_date_teacher && Date.parse(apps_open_date_teacher).strftime('%B %e, %Y')
   end
 
   def summer_workshops_latest_apps_close_date
-    if apps_close_date_csd_teacher || apps_close_date_csp_teacher
-      Date.parse([apps_close_date_csd_teacher, apps_close_date_csp_teacher].compact.max).strftime('%B %e, %Y')
-    end
+    apps_close_date_teacher && Date.parse(apps_close_date_teacher).strftime('%B %e, %Y')
   end
 
   def upcoming_summer_workshops
@@ -200,7 +194,7 @@ class RegionalPartner < ActiveRecord::Base
             # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
             # See https://github.com/alexreisner/geocoder#error-handling
             Retryable.retryable(on: StandardError) do
-              state = Geocoder.search(zip_code)&.first&.state_code
+              state = Geocoder.search(zip_code, params: {country: 'us'})&.first&.state_code
             end
           end
         rescue StandardError => e

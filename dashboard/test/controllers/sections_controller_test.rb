@@ -20,15 +20,15 @@ class SectionsControllerTest < ActionController::TestCase
 
   setup do
     # Expect any scripts/courses to be valid unless specified by test
-    Course.stubs(:valid_course_id?).returns(true)
+    UnitGroup.stubs(:valid_course_id?).returns(true)
     Script.stubs(:valid_script_id?).returns(true)
 
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @course = create(:course)
+    @unit_group = create(:unit_group)
     @script_in_course = create(:script)
-    create(:course_script, script: @script_in_course, course: @course, position: 1)
-    @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
+    create(:unit_group_unit, script: @script_in_course, unit_group: @unit_group, position: 1)
+    @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
     @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
   end
 
@@ -153,7 +153,7 @@ class SectionsControllerTest < ActionController::TestCase
       secret_words: @section_with_course_user_1.secret_words
     }
 
-    assert_redirected_to "/courses/#{@section_with_course.course.name}"
+    assert_redirected_to "/courses/#{@section_with_course.unit_group.name}"
   end
 
   test "login with show_pairing_dialog shows pairing dialog" do

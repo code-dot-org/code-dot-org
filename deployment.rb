@@ -8,7 +8,7 @@ require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 require 'cdo/git_utils'
 require 'uri'
 require 'cdo'
-require 'cdo/aws/cdo_google_credentials'
+require 'cdo/aws/config'
 
 ####################################################################################################
 ##

@@ -4,10 +4,10 @@
  * JS to communicate between Bramble and Code Studio
  */
 
-window.requirejs.config({
-  baseUrl: '/blockly/js/bramble/'
-  // DEVMODE: baseUrl: 'http://127.0.0.1:8000/src/'
-});
+const scriptData = document.querySelector('script[data-bramble]');
+const brambleConfig = JSON.parse(scriptData.dataset.bramble);
+const BRAMBLE_BASE_URL = brambleConfig.baseUrl;
+window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
 
 // This is needed to support jQuery binary downloads
 import '../assetManagement/download';
@@ -302,6 +302,67 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
   }
 }
 
+function validateProjectChanged(callback) {
+  getAllFileDataFromBramble((userFiles, error) => {
+    const startSources = webLab_.getStartSources();
+
+    // Don't let an error from bramble block the student from progressing.
+    if (error || userFiles.files.length !== startSources.files.length) {
+      callback(true /* project changed */);
+      return;
+    }
+
+    const changedFile = startSources.files.find(startFile => {
+      const matchingFile = userFiles.files.find(
+        file => file.name === startFile.name
+      );
+      // If startFile doesn't have `data` (and instead has something different
+      // like `url`), this is an image and is stored differently in the
+      // startSources than in bramble. Check for a matching file name, but
+      // don't compare data.
+      // Regex: Compare without whitespace.
+      return (
+        !matchingFile ||
+        (startFile.data &&
+          startFile.data.replace(/\s+/g, '') !==
+            matchingFile.data.replace(/\s+/g, ''))
+      );
+    });
+    callback(!!changedFile);
+  });
+}
+
+function getAllFileDataFromBramble(callback) {
+  const fs = bramble_.getFileSystem();
+  const sh = new fs.Shell();
+  const allFileData = [];
+
+  // enumerate files in the file system off the project root
+  sh.ls(`${weblabRoot}/${currentProjectPath}`, function(err, entries) {
+    // async-chained enumeration: get the file data for i-th file
+    function getEntryFileData(i, callback, err) {
+      if (err) {
+        callback(null, err);
+        return;
+      }
+      if (i < entries.length) {
+        const entry = entries[i];
+        getFileData(entry.path, (err, fileData) => {
+          // also get the file name
+          allFileData.push({name: entry.path, data: fileData.toString()});
+          getEntryFileData(i + 1, callback, err);
+        });
+      } else {
+        // end of list, call completion callback
+        callback({files: allFileData});
+      }
+    }
+
+    // start an async-chained enumeration through the file list
+    getEntryFileData(0, callback, err);
+  });
+}
+
 function uploadAllFilesFromBramble(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
@@ -343,6 +404,10 @@ function uploadAllFilesFromBramble(callback) {
       getEntryFileData(0, callback);
     }
   });
+}
+
+function fileRefresh(callback = () => {}) {
+  brambleProxy_.fileRefresh(callback);
 }
 
 function addFileHTML() {
@@ -504,6 +569,7 @@ if (parent.getWebLab) {
 // expose object for parent window to talk to us through
 const brambleHost = {
   // return file data from the Bramble editor
+  fileRefresh,
   addFileHTML,
   addFileCSS,
   undo,
@@ -520,7 +586,8 @@ const brambleHost = {
   onBrambleReady,
   onInspectorChanged,
   startInitialFileSync,
-  syncFiles
+  syncFiles,
+  validateProjectChanged
 };
 
 // Give our interface to our parent
@@ -534,10 +601,7 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load('#bramble', {
-    url:
-      '//downloads.computinginthecore.org/bramble_0.1.26/index.html?disableExtensions=bramble-move-file',
-    // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
-    // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
+    url: BRAMBLE_BASE_URL + '/index.html?disableExtensions=bramble-move-file',
     useLocationSearch: true,
     disableUIState: true,
     initialUIState: {
@@ -758,7 +822,5 @@ function modalError(message, Bramble, showButtons = true) {
 }
 
 // Load bramble.js
-requirejs(['bramble'], function(Bramble) {
-  // DEVMODE: requirejs(["bramble/client/main"], function (Bramble) {
-  load(Bramble);
-});
+const brambleClient = brambleConfig.devMode ? 'bramble/client/main' : 'bramble';
+requirejs([brambleClient], load);

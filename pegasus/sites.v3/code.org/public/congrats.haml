@@ -21,7 +21,6 @@ max_age: 60
   rescue ArgumentError
     bad_request
   end
-  pass unless ScriptConstants.script_in_any_category?(cert_script)
 
   if cert_id
     share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"

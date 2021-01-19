@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
+require_relative '../only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # This script fetches weather forecast data from api.openweathermap and uploads to the shared firebase channel.
 require_relative '../../../deployment'
-require 'cdo/only_one'
 require 'net/http'
 require 'json'
 require 'ostruct'
@@ -168,7 +169,7 @@ def get_weather_data
       record['Forecast Number'] = forecast_number
 
       # list.dt gives timestamp of forecast in UTC, city.timezone gives shift in seconds from UTC
-      parsed_date = Time.at(measurement['dt'] - parsed_response['city']['timezone'])
+      parsed_date = Time.at(measurement['dt'] + parsed_response['city']['timezone'])
       record.Date = parsed_date.strftime('%a %-m/%-d') # ex Wed 1/7
 
       weather_condition = measurement['weather'][0]
@@ -204,4 +205,4 @@ def main
   fb.upload_live_table('Daily Weather', records, columns)
 end
 
-main if only_one_running?(__FILE__)
+main

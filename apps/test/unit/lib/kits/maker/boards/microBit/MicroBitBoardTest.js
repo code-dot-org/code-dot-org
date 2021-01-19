@@ -11,6 +11,21 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
+import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
+
+function boardSetupAndStub(board) {
+  stubOpenSerialPort(board);
+  sinon.stub(board.boardClient_, 'connectBoard').callsFake(() => {
+    board.boardClient_.myPort = {write: () => {}};
+    sinon.stub(board.boardClient_.myPort, 'write');
+  });
+}
+
+function stubOpenSerialPort(board) {
+  sinon.stub(board, 'openSerialPort').callsFake(() => {
+    return Promise.resolve();
+  });
+}
 
 describe('MicroBitBoard', () => {
   let board;
@@ -20,6 +35,7 @@ describe('MicroBitBoard', () => {
     window.SerialPort = {};
     board = new MicroBitBoard();
     board.boardClient_ = new MicrobitStubBoard();
+    boardSetupAndStub(board);
   });
 
   afterEach(() => {
@@ -28,11 +44,7 @@ describe('MicroBitBoard', () => {
 
   describe('Maker Board Interface', () => {
     itImplementsTheMakerBoardInterface(MicroBitBoard, board => {
-      sinon.stub(board.boardClient_, 'connect').callsFake(() => {
-        board.boardClient_.myPort = {write: () => {}};
-        sinon.stub(board.boardClient_.myPort, 'write');
-      });
-
+      boardSetupAndStub(board);
       sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
       sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
     });
@@ -47,10 +59,7 @@ describe('MicroBitBoard', () => {
 
       beforeEach(() => {
         board = new MicroBitBoard();
-        sinon.stub(board.boardClient_, 'connect').callsFake(() => {
-          board.boardClient_.myPort = {write: () => {}};
-          sinon.stub(board.boardClient_.myPort, 'write');
-        });
+        boardSetupAndStub(board);
 
         jsInterpreter = {
           globalProperties: {},
@@ -354,6 +363,16 @@ describe('MicroBitBoard', () => {
             const newButton = board.createButton(pin);
             expect(newButton.pullup).to.be.false;
           });
+      });
+    });
+  });
+
+  describe(`createCapacitiveTouchSensor(pin)`, () => {
+    it('makes a CapacitiveTouchSensor controller', () => {
+      return board.connect().then(() => {
+        const pin = 1;
+        const newSensor = board.createCapacitiveTouchSensor(pin);
+        expect(newSensor).to.be.an.instanceOf(CapacitiveTouchSensor);
       });
     });
   });

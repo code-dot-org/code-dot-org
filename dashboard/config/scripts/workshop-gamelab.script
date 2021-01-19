@@ -1,4 +1,4 @@
-lesson 'Introduction'
+lesson 'Introduction', display_name: 'Introduction'
 level 'Game Lab Workshop: Introduction', named: true
 level 'CSD: Drawing in Game Lab 1', named: true
 level 'U3 - Simple Drawing - Rectangle'
@@ -13,7 +13,7 @@ level 'CSD U3 Variables make a square'
 level 'U3 Variables misconceptions try it'
 level 'CSD U3 Counters counter square movement'
 
-lesson 'Sprites'
+lesson 'Sprites', display_name: 'Sprites'
 level 'Game Lab Workshop: Variables to Sprites', named: true
 level 'CSD: Sprites in Game Lab', named: true
 level 'CSD U3 Sprites intro sprites'
@@ -25,7 +25,7 @@ level 'CSD U3 - images - first sprite with image'
 level 'CSD U3 - images - changing scene'
 level 'U3 - Sprites and Mod - Mouse X and Y'
 
-lesson 'Input'
+lesson 'Input', display_name: 'Input'
 level 'CSD U3 - Booleans Video', named: true
 level 'CSD U3 Boolean Modify'
 level 'CSD U3 - conditionals - Matching'
@@ -36,7 +36,7 @@ level 'CSD U3 If Else'
 level 'CSD U3 Keypress Watchers'
 level 'CSD U3 Keypress Matching'
 
-lesson 'Project: Interactive Card'
+lesson 'Project: Interactive Card', display_name: 'Project: Interactive Card'
 level 'CSD U3 SFLP Card Project', named: true
 level 'CSD U3 Interactive Card Exemplar', named: true
 level 'CSD U3 Interactive Card Background'
@@ -44,3 +44,4 @@ level 'CSD U3 Interactive Card Sprites'
 level 'CSD U3 Interactive Card User Input'
 level 'CSD U3 Interactive Card Other Conditionals'
 level 'CSD U3 Interactive Card Final'
+

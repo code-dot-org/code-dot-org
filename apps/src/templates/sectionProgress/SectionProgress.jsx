@@ -12,15 +12,17 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from '../../lib/ui/Headings';
 import {
-  ViewType,
-  loadScript,
   getCurrentProgress,
   getCurrentScriptData,
   setLessonOfInterest,
-  scriptDataPropType,
-  setCurrentView,
-  tooltipIdForStudent
+  setCurrentView
 } from './sectionProgressRedux';
+import {loadScript} from './sectionProgressLoader';
+import {
+  ViewType,
+  scriptDataPropType,
+  tooltipIdForStudent
+} from './sectionProgressConstants';
 import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
@@ -79,7 +81,6 @@ class SectionProgress extends Component {
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
-    loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
@@ -89,12 +90,12 @@ class SectionProgress extends Component {
   };
 
   componentDidMount() {
-    this.props.loadScript(this.props.scriptId, this.props.section.id);
+    loadScript(this.props.scriptId, this.props.section.id);
   }
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    this.props.loadScript(scriptId, this.props.section.id);
+    loadScript(scriptId, this.props.section.id);
 
     firehoseClient.putRecord(
       {
@@ -200,7 +201,6 @@ class SectionProgress extends Component {
       isLoadingProgress,
       showStandardsIntroDialog
     } = this.props;
-
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const lessons = scriptData ? scriptData.stages : [];
     const scriptWithStandardsSelected =
@@ -292,9 +292,6 @@ export default connect(
     localeCode: state.locales.localeCode
   }),
   dispatch => ({
-    loadScript(scriptId, sectionId) {
-      dispatch(loadScript(scriptId, sectionId));
-    },
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
     },

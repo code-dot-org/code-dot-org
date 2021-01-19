@@ -13,6 +13,7 @@ DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/g
 SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/spritelab/spriteCostumeLibrary.json".freeze
 DOWNLOAD_DESTINATION = '~/cdo-animation-library'.freeze
 SPRITE_COSTUME_LIST = SPRITE_LAB_ANIMATION_LIST
+SKIP_CATEGORIES = DEPRECATED_CATEGORIES
 
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
@@ -55,30 +56,15 @@ class ManifestBuilder
     alias_map = build_alias_map(animation_metadata)
     info "Mapped #{alias_map.size} aliases."
 
+    info "Building category map..."
+    category_map = build_category_map(animation_metadata)
+    info "Mapped #{category_map.size} categories"
+
     output_file = @options[:spritelab] ? SPRITELAB_OUTPUT_FILE : DEFAULT_OUTPUT_FILE
 
     # Write result to file
     File.open(output_file, 'w') do |file|
-      file.write(
-        JSON.pretty_generate(
-          {
-            # JSON-style file comment
-            '//': [
-              'Animation Library Manifest',
-              'GENERATED FILE: DO NOT MODIFY DIRECTLY',
-              'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
-            ],
-
-            # Strip aliases from metadata - they're no longer needed since they
-            #   are represented in the alias map.
-            # Also sort for stable updates
-            'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
-
-            # Sort alias map for stable updates
-            'aliases': alias_map.sort.to_h
-          }
-        )
-      )
+      file.write(generate_json(animation_metadata, alias_map, category_map))
     end
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
@@ -94,24 +80,7 @@ class ManifestBuilder
       AWS::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
         "manifests/spritelabCostumeLibrary.json",
-        JSON.pretty_generate(
-          {
-            # JSON-style file comment
-            '//': [
-              'Animation Library Manifest',
-              'GENERATED FILE: DO NOT MODIFY DIRECTLY',
-              'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
-            ],
-
-            # Strip aliases from metadata - they're no longer needed since they
-            #   are represented in the alias map.
-            # Also sort for stable updates
-            'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
-
-            # Sort alias map for stable updates
-            'aliases': alias_map.sort.to_h
-          }
-        ),
+        generate_json(animation_metadata, alias_map, category_map),
         acl: 'public-read',
         no_random: true,
         content_type: 'json'
@@ -193,35 +162,6 @@ The animation has been skipped.
         #{dim 'd[ o_0 ]b'}
     EOS
 
-    if @options[:spritelab] && @options[:upload_to_s3]
-      info "Uploading file to S3"
-      AWS::S3.upload_to_bucket(
-        DEFAULT_S3_BUCKET,
-        "manifests/spritelabCostumeLibrary.json",
-        JSON.pretty_generate(
-          {
-            # JSON-style file comment
-            '//': [
-              'Animation Library Manifest',
-              'GENERATED FILE: DO NOT MODIFY DIRECTLY',
-              'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
-            ],
-
-            # Strip aliases from metadata - they're no longer needed since they
-            #   are represented in the alias map.
-            # Also sort for stable updates
-            'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
-
-            # Sort alias map for stable updates
-            'aliases': alias_map.sort.to_h
-          }
-        ),
-        acl: 'public-read',
-        no_random: true,
-        content_type: 'json'
-      )
-    end
-
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => service_error
     warn service_error.inspect
@@ -251,7 +191,39 @@ The animation has been skipped.
         strings[aliaz] = aliaz
       end
     end
-    return strings
+    return strings.sort.to_h
+  end
+
+  # Takes in a locale (for the file suffix) and a map of string translations
+  # and replaces the aliases of the aliases of the animations with their translation.
+  # Then, the localized manifest is uploaded to S3 with the suffix .{locale}.json
+  def upload_localized_manifest(locale, strings)
+    return unless @options[:spritelab] && @options[:upload_to_s3]
+
+    @bucket ||= Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
+    @animation_objects ||= get_animation_objects(@bucket)
+
+    animation_metadata = build_animation_metadata(@animation_objects, {})
+    animation_metadata.each do |_, metadata|
+      metadata['aliases'] = metadata['aliases'].map {|aliaz| strings[aliaz]}
+      metadata['aliases'].delete_if(&:blank?)
+    end
+    alias_map = build_alias_map(animation_metadata)
+    category_map = build_category_map(animation_metadata)
+    normalized_category_map = {}
+    category_map.each do |key, value|
+      normalized_category_map[key.tr(' ', '_')] = value
+    end
+
+    info "Uploading file to S3"
+    AWS::S3.upload_to_bucket(
+      DEFAULT_S3_BUCKET,
+      "manifests/spritelabCostumeLibrary.#{locale}.json",
+      generate_json(animation_metadata, alias_map, normalized_category_map),
+      acl: 'public-read',
+      no_random: true,
+      content_type: 'json'
+    )
   end
 
   # Given an S3 bucket, return map of animation file objects:
@@ -315,7 +287,9 @@ The animation has been skipped.
       # This lambda runs synchronously after each entry is done processing - it's
       # used to collect up results and warnings to the original process/thread.
       if result.is_a? Hash
-        animation_metadata_by_name[name] = result
+        unless SKIP_CATEGORIES.include? result["categories"][0]
+          animation_metadata_by_name[name] = result
+        end
       else
         @warnings.push result
       end
@@ -420,6 +394,46 @@ The animation has been skipped.
     alias_progress_bar.finish unless alias_progress_bar.nil?
     alias_map.each {|k, v| verbose "#{bold k}: #{v.join(', ')}"} if @options[:verbose]
     alias_map
+  end
+
+  # Given a metadata map, build the category map
+  def build_category_map(animation_metadata)
+    category_progress_bar = ProgressBar.create(total: animation_metadata.size) unless @options[:quiet]
+    category_map = Hash.new {|h, k| h[k] = []}
+    animation_metadata.each do |name, metadata|
+      categories = metadata['categories']
+      categories.each do |category|
+        normalized_category = category.tr(' ', '_')
+        category_map[normalized_category] = (category_map[normalized_category] + [name]).uniq.sort
+      end
+      category_progress_bar.increment unless category_progress_bar.nil?
+    end
+    category_progress_bar.finish unless category_progress_bar.nil?
+    category_map
+  end
+
+  def generate_json(animation_metadata, alias_map, category_map)
+    JSON.pretty_generate(
+      {
+        # JSON-style file comment
+        '//': [
+          'Animation Library Manifest',
+          'GENERATED FILE: DO NOT MODIFY DIRECTLY',
+          'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
+        ],
+
+        # Strip aliases from metadata - they're no longer needed since they
+        #   are represented in the alias map.
+        # Also sort for stable updates
+        'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+
+        # Sort category map for stable updates
+        'categories': category_map.sort.to_h,
+
+        # Sort alias map for stable updates
+        'aliases': alias_map.sort.to_h
+      }
+    )
   end
 
   def verbose(s)

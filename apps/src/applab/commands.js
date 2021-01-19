@@ -802,7 +802,7 @@ applabCommands.drawImageURL = function(opts) {
   );
 
   var callback = function(success) {
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null, success);
     }
   };
@@ -2118,7 +2118,7 @@ applabCommands.drawChart = function(opts) {
     chartApi.warnings.forEach(function(warning) {
       outputWarning(warning.message);
     });
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null);
     }
   };
@@ -2225,7 +2225,7 @@ applabCommands.drawChartFromRecords = function(opts) {
     chartApi.warnings.forEach(function(warning) {
       outputWarning(warning.message);
     });
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null);
     }
   };

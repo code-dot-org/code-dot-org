@@ -78,7 +78,7 @@ describe('Circuit Playground Components', () => {
       });
     });
 
-    // TODO (bbuchanan): Remove this whole describe block when maker-captouch is on by default.
+    // Remove this whole describe block when maker-captouch is on by default.
     describe('with capTouch enabled', () => {
       before(() => experiments.setEnabled('maker-captouch', true));
       after(() => experiments.setEnabled('maker-captouch', false));
@@ -577,7 +577,7 @@ describe('Circuit Playground Components', () => {
     });
 
     describe('touchPads', () => {
-      // TODO (bbuchanan): Remove when maker-captouch is on by default.
+      // Remove these two lines when maker-captouch is on by default.
       before(() => experiments.setEnabled('maker-captouch', true));
       after(() => experiments.setEnabled('maker-captouch', false));
 
@@ -618,7 +618,7 @@ describe('Circuit Playground Components', () => {
     });
   });
 
-  // TODO (bbuchanan): Remove this whole describe block when maker-captouch is on by default.
+  // Remove this whole describe block when maker-captouch is on by default.
   describe('cleanupCircuitPlaygroundComponents() with capTouch enabled', () => {
     let components;
 

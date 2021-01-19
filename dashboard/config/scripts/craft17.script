@@ -1,4 +1,4 @@
-lesson 'craft17 stage'
+lesson 'craft17 stage', display_name: 'craft17 stage'
 level 'MC_HOC_2017_01_RETRY'
 level 'MC_HOC_2017_02_Cole'
 level 'MC_HOC_2017_03_Cole'
@@ -11,3 +11,4 @@ level 'MC_HOC_2017_07_Cole'
 level 'MC_HOC_2017_10_RETRY'
 level 'MC_HOC_2017_Ali'
 level 'MC_HOC_2017_FP20x20'
+

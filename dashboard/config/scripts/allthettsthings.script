@@ -1,6 +1,8 @@
 tts true
-lesson 'TTS'
+
+lesson 'TTS', display_name: 'TTS'
 level 'allthethings_ttscsf contained'
 level 'allthethings_ttscsd'
 level 'allthethings_ttscsp contained'
 level 'allthethings_ttscsp'
+

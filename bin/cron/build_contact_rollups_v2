@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
 require_relative '../../dashboard/lib/contact_rollups_v2'
-require 'cdo/only_one'
 
 def main
   # To avoid accidentally syncing bad data to Pardot, this script should run
@@ -20,4 +21,4 @@ ensure
   contact_rollups.report_results
 end
 
-main if only_one_running?(__FILE__)
+main

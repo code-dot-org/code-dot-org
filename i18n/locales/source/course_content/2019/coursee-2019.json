@@ -469,7 +469,7 @@
   },
   "https://studio.code.org/s/coursee-2019/stage/7/puzzle/4": {
     "short_instructions": "Create a new sprite that looks like a pink alien, then make it do a any move when it's clicked.  ",
-    "long_instructions": "Create a new sprite that looks like a pink alien. <img src=\"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu%2Fcategory_characters%2FalienPink.png\" width=\"3%\"></img>\n\nMake it do any move you want when it's clicked. Try using a new move this time!",
+    "long_instructions": "Create a new sprite that looks like a pink alien. <img src=\"https://studio.code.org/api/v1/animation-library/spritelab/2QJkd5Ya9YmFBKAnIwNVeRr0Om.Hroxu/category_characters/alienPink.png\" width=\"3%\"></img>\n\nMake it do any move you want when it's clicked. Try using a new move this time!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create a pink alien sprite.\n-   The pink alien sprite must start a behavior when clicked.",
     "behavior_names": {
       "spinning left": "spinning left",
@@ -585,6 +585,17 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
+    },
+    "placeholder_texts": {
+      "b63151482630edd1589a9ac24d107c49": "That's me! Rikki! I like to code, hangout with Thuy, and eat ice cream!",
+      "810896b14fc6615f0c76628b9b6a727e": "That's my best friend Thuy! She's really good at sports!",
+      "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Ice cream is my favorite treat! But I probably shouldn't eat it on the couch...",
+      "a50ec512bdd98483a7cdcd88cbe11933": "That's my pet rabbit, Ms. Lolipop! I have no idea why I named her that!",
+      "6f97975a0bda0c9219915161149cbb26": "That's my computer! I code on it ALL the time!",
+      "1c6636ce086fef9305c6e3d25e37d5b2": "Here's a secret: Thuy is extremely ticklish!",
+      "fce3b93eaa64a8869c47ba25daa8887f": "Yummy!",
+      "41a18649f969a00ec0b2feba20db997f": "I think I like this color better on you, Ms. Lolipop!",
+      "756afb811df2eb3ec88a9e98f3dcaa8d": "This computer can't handle my mad coding skills!"
     }
   },
   "https://studio.code.org/s/coursee-2019/stage/9/puzzle/2": {
@@ -624,6 +635,9 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
+    },
+    "placeholder_texts": {
+      "ed076287532e86365e841e92bfc50d8c": "Hello World!"
     }
   },
   "https://studio.code.org/s/coursee-2019/stage/9/puzzle/4": {
@@ -642,6 +656,9 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
+    },
+    "placeholder_texts": {
+      "ed076287532e86365e841e92bfc50d8c": "Hello World!"
     }
   },
   "https://studio.code.org/s/coursee-2019/stage/9/puzzle/5": {
@@ -660,6 +677,10 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
+    },
+    "placeholder_texts": {
+      "ed076287532e86365e841e92bfc50d8c": "Hello World!",
+      "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
     }
   },
   "https://studio.code.org/s/coursee-2019/stage/9/puzzle/6": {

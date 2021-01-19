@@ -24,6 +24,28 @@
 require 'cdo/contact_rollups/v2/pardot'
 
 class ContactRollupsPardotMemory < ApplicationRecord
+  # All Pardot prospect fields we care about, used to sync
+  # contacts between the production database and Pardot.
+  # db_* are custom fields and sorted alphabetically.
+  # @see https://pi.pardot.com/prospectFieldCustom
+  PARDOT_FIELDS = %w(
+    id
+    email
+    opted_out
+    db_City
+    db_Country
+    db_Form_Roles
+    db_Forms_Submitted
+    db_Has_Teacher_Account
+    db_Hour_of_Code_Organizer
+    db_Opt_In
+    db_Postal_Code
+    db_Professional_Learning_Attended
+    db_Professional_Learning_Enrolled
+    db_Roles
+    db_State
+  ).freeze
+
   self.table_name = 'contact_rollups_pardot_memory'
 
   # Downloads and saves new email-Pardot ID mappings from Pardot.
@@ -61,25 +83,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
   def self.download_pardot_prospects(last_id = nil, limit = nil)
     last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
 
-    # Note: db_* fields are sorted alphabetically
-    fields = %w(
-      id
-      email
-      db_City
-      db_Country
-      db_Form_Roles
-      db_Forms_Submitted
-      db_Has_Teacher_Account
-      db_Hour_of_Code_Organizer
-      db_Opt_In
-      db_Postal_Code
-      db_Professional_Learning_Attended
-      db_Professional_Learning_Enrolled
-      db_Roles
-      db_State
-    )
-
-    PardotV2.retrieve_prospects(last_id, fields, limit) do |prospects|
+    PardotV2.retrieve_prospects(last_id, PARDOT_FIELDS, limit) do |prospects|
       current_time = Time.now.utc
       batch = prospects.map do |item|
         {
@@ -100,6 +104,9 @@ class ContactRollupsPardotMemory < ApplicationRecord
   end
 
   def self.download_deleted_pardot_prospects(last_id = nil, limit = nil)
+    # Find emails that have been deleted in Pardot and mark them as such in our db.
+    # Don't need to download prospect data because Pardot data is derived from our
+    # production data. We have the source of truth to recreate those contacts if needed.
     PardotV2.retrieve_prospects(last_id, %w(id email), limit, true) do |deleted_prospects|
       current_time = Time.now.utc
       batch = deleted_prospects.map do |item|
@@ -256,18 +263,27 @@ class ContactRollupsPardotMemory < ApplicationRecord
 
   # Deletes prospects from Pardot API that have been marked for deletion
   # by the account deletion process.
-  def self.delete_pardot_prospects
+  def self.delete_pardot_prospects(is_dry_run: false)
     emails = ContactRollupsPardotMemory.
                where.not(marked_for_deletion_at: nil).
                pluck(:email)
 
     deleted_emails = []
-    emails.each do |email|
-      deleted_emails << email if PardotV2.delete_prospects_by_email(email)
+    if is_dry_run
+      CDO.log.info "[Dry run] #{emails.length} total prospects to be deleted from Pardot."
+    else
+      emails.each do |email|
+        deleted_emails << email if PardotV2.delete_prospects_by_email(email)
+      end
+
+      # clean-up step to delete rows once they've been deleted from Pardot
+      ContactRollupsPardotMemory.where(email: deleted_emails).delete_all if deleted_emails.present?
     end
 
-    # clean-up step to delete rows once they've been deleted from Pardot
-    ContactRollupsPardotMemory.where(email: deleted_emails).delete_all if deleted_emails.present?
+    {
+      prospects_deleted: deleted_emails.length,
+      prospect_deletions_rejected: emails.length - deleted_emails.length
+    }
   end
 
   # Saves sync results to database.

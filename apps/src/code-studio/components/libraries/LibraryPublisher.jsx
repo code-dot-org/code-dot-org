@@ -7,7 +7,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import Button from '@cdo/apps/templates/Button';
-import {findProfanity} from './util';
+import {findProfanity} from '@cdo/apps/utils';
 
 const styles = {
   alert: {
@@ -216,6 +216,7 @@ export default class LibraryPublisher extends React.Component {
     const {libraryDescription} = this.state;
     return (
       <textarea
+        id="ui-test-library-description"
         rows="2"
         cols="200"
         style={{...styles.textInput, ...styles.description}}
@@ -414,6 +415,7 @@ export default class LibraryPublisher extends React.Component {
         <div style={{position: 'relative'}}>
           <Button
             __useDeprecatedTag
+            id="ui-test-publish-library"
             style={{marginTop: 20}}
             onClick={this.validateAndPublish}
             text={alreadyPublished ? i18n.update() : i18n.publish()}
@@ -421,6 +423,7 @@ export default class LibraryPublisher extends React.Component {
           {onShareTeacherLibrary && (
             <Button
               __useDeprecatedTag
+              id="ui-test-manage-libraries"
               style={{marginTop: 20, marginLeft: 10}}
               onClick={onShareTeacherLibrary}
               text={i18n.manageLibraries()}
@@ -430,6 +433,7 @@ export default class LibraryPublisher extends React.Component {
           {alreadyPublished && (
             <Button
               __useDeprecatedTag
+              id="ui-test-unpublish-library"
               style={styles.unpublishButton}
               onClick={this.unpublish}
               text={i18n.unpublish()}

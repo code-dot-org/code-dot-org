@@ -1,0 +1,16 @@
+name 'U10 SSQRP1 part 3_2021'
+editor_experiment ''
+
+
+
+
+description 'Which of the following is considered a potential effect of the _GroceryGrabbr_ app rather than a function of the _GroceryGrabbr_ app?'
+right 'Using the app may result in the user being able to spend less time shopping for groceries and more time with their family and friends.'
+wrong 'Using the app allows users to locate grocery items on a list.'
+wrong 'The app enables users to receive a notification that the app is ready to be used when they enter the grocery store'
+wrong 'The app informs users of the total cost of their groceries.'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

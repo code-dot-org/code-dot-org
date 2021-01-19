@@ -108,6 +108,38 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: {error: e.message}, status: :bad_request
   end
 
+  def to_geojson(workshops)
+    locations = []
+    grouped_workshops = workshops.group_by do |w|
+      location = JSON.parse(w.processed_location)
+      [location['longitude'].round(3), location['latitude'].round(3)]
+    end
+    grouped_workshops.each do |location, workshop_list|
+      next if location.blank?
+      next unless location.length == 2
+      properties = {
+        show_deep_dive_marker: workshop_list.any? {|w| w.subject == Pd::Workshop::SUBJECT_CSF_201}.to_s,
+        workshop_count: workshop_list.count
+      }
+      properties['workshops'] = workshop_list.map do |w|
+        {
+          id: w.id,
+          location_name: w.location_name,
+          subject: w.subject,
+          sessions: w.sessions.map(&:formatted_date_with_start_and_end_times)
+        }
+      end
+      locations.append(
+        {
+          type: "Feature",
+          geometry: {type: "Point", coordinates: location},
+          properties: properties
+        }
+      )
+    end
+    {type: 'FeatureCollection', features: locations}.to_json
+  end
+
   # Upcoming (not started) public CSF workshops.
   def k5_public_map_index
     conditions = {
@@ -121,7 +153,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).
       where(conditions).where.not(processed_location: nil)
-    render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
+    if params['geojson']
+      render json: to_geojson(@workshops)
+    else
+      render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
+    end
   end
 
   # GET /api/v1/pd/workshops/1
@@ -274,7 +310,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :organizer_id,
       :virtual,
       :suppress_email,
-      :third_party_provider,
       sessions_attributes: [:id, :start, :end, :_destroy],
     ]
 

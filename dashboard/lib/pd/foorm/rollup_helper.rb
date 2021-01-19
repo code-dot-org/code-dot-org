@@ -25,7 +25,8 @@ module Pd::Foorm
     # get required information about a rollup question.
     # @param questions_and_forms: output of get_question_details
     # @param parsed_forms: output of FoormParser.parse_forms
-    # Only saves matrix data for now, and will throw out any questions that differ across foorms
+    # Will throw out any questions that have different columns/choices
+    # across forms
     # @return
     #   {
     #     general: {
@@ -45,12 +46,10 @@ module Pd::Foorm
       question_details.each do |form_type, questions_per_type|
         questions[form_type] = {}
         questions_per_type.each do |question, question_data|
-          # for now we will skip questions that don't have the same type and choices/rows/columns
-          # across all versions/forms.
-          next unless validate_question(question, question_data, parsed_forms, form_type)
-          first_form_key = question_data[:form_keys].first
-          parsed_form = parsed_forms[form_type][first_form_key]
-          parsed_question_data = parsed_form[question]
+          # For now we will skip questions that don't have the same type and choices/columns
+          # across all versions/forms. We will merge rows for matrix questions if type and columns are the same.
+          parsed_question_data = validate_and_get_question(question, question_data, parsed_forms, form_type)
+          next unless parsed_question_data
 
           questions[form_type][question] = {
             title: parsed_question_data[:title],
@@ -71,23 +70,26 @@ module Pd::Foorm
       questions
     end
 
-    # Validate question is valid for rolling up. Validations are:
-    #   - question is the same across all forms it was found in. Same is defined by
-    #   having the same type and same choices/rows/columns
+    # Validate question is valid for rolling up and return question if valid. Validations are:
+    #   - question is the same across all forms it was found in.
+    #    "Same" is defined as having the same type and same choices/columns.
+    #    If there are differences in rows, merge the rows together.
+    #    If there are any conflicts, take the text for the first row with a given id.
     #   - question answers can be parsed as integers
-    def self.validate_question(question, question_data, parsed_forms, form_type)
-      rows = nil
+    def self.validate_and_get_question(question, question_data, parsed_forms, form_type)
       columns = nil
+      question_to_return = nil
       question_data[:form_keys].each do |form_key|
         parsed_question = parsed_forms[form_type][form_key][question]
         return false unless parsed_question && parsed_question[:type] = question_data[:type]
+        question_to_return ||= parsed_question
         case parsed_question[:type]
         when ANSWER_MATRIX
-          if rows.nil? && columns.nil?
-            rows = parsed_question[:rows]
+          if columns.nil?
             columns = parsed_question[:columns]
           else
-            return false unless rows == parsed_question[:rows] && columns == parsed_question[:columns]
+            return false unless columns == parsed_question[:columns]
+            question_to_return[:rows] = question_to_return[:rows].merge(parsed_question[:rows])
           end
         when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT, ANSWER_RATING
           if columns.nil?
@@ -101,7 +103,7 @@ module Pd::Foorm
         # ensure column ids are integers or strings that can be parsed into integers
         return false unless [column_id.to_i, column_id.to_i.to_s].include? column_id
       end
-      return true
+      return question_to_return
     end
 
     # Finds forms in which question appears

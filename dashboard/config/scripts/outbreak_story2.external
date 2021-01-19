@@ -1,0 +1,38 @@
+name 'outbreak_story2'
+title 'Outbreak: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Outbreak: Thinking Like a Scientist
+
+<img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+Simulations are a great way to learn things that can be hard to observe in the real world. They help scientists solve problems and test new ideas safely and efficiently. Your simulation is a way to show how a virus outbreak in Monster Town might look.
+
+## Reset and Replay!
+Even when you write the code yourself, it's impossible to know exactly what will happen when you press run. The monsters wander randomly, so you don't know if the virus will spread fast or slow. Whenever you change your code, make sure to run your simulation more than once. Things won't happen the same way twice!
+
+## Collecting Data
+Try writing down your observations as you run your simulation. You can count the number of monsters that get sick or use a timer to see how fast things happen. For example, how long does it usually take for all monsters to get sick if none have masks? 
+
+## Making Predictions
+If you understand your model, you can use it to make predictions. You can even change how your simulation runs and guess what will happen differently. For example:
+* What would happen if there were twice as many monsters?
+* What would happen if the monsters moved at half the speed?
+
+<img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+## Is Monster Town like the real world?
+There is a limit to how realistic any model can get. 
+* What does your outbreak simulation have in common with real world virus outbreaks?
+* What are the differences?
+When you finish this activity, discuss these questions with teachers or your family!
+
+## What else can we model?
+You have already created a working model of the outbreak at Monster Town. What are the things your simulation can't do or show that you wish it could? Press continue to keep going and learn to model even more:
+* Increasing the number of monsters in the simulation
+* Helping monsters recover from the virus
+* Probability, immunity, vaccines, and more!
+
+You can also share your simulation model with others, or share a message about what you think we can do to help keep others healthy when a virus comes to town. 
+MARKDOWN

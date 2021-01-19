@@ -26,6 +26,7 @@
     "encrypted": "false",
     "rubric_key_concept": "Structure content on a web page using HTML. (Add an image to a web page.)",
     "mini_rubric": "false",
+    "validation_enabled": "true",
     "rubric_performance_level_1": "The image displays properly and an `alt` attribute gives a reasonable test description of the image.  No unnecessary code is included in the`img` tag.",
     "rubric_performance_level_2": "The image displays properly.",
     "rubric_performance_level_3": "The `img` tag is used and a source address for the image is provided, but there may be minor syntax errors or misspellings that prevent the image from being displayed properly.",

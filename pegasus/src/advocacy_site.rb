@@ -47,7 +47,7 @@ class AdvocacySite
             },
             {
               text_actual: "National landscape state details",
-              url: "https://docs.google.com/document/d/e/2PACX-1vTIZJaNtmPRBNb7_ZFHBxsGwyZqBSdpJN0iJ_pOgF-K-MNYikEeKTTj49ezDkMFRb1C_1w45gSrkcq6/pub",
+              url: "https://code.org/advocacy/landscape.pdf",
               new_tab: true
             },
             {

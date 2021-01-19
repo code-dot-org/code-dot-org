@@ -19,10 +19,8 @@ FactoryGirl.define do
   # example zip: 42001
   factory :regional_partner_kentucky, parent: :regional_partner_with_summer_workshops do
     # Applications are closed.
-    apps_open_date_csp_teacher {(Date.current - 5.days).strftime("%Y-%m-%d")}
-    apps_open_date_csd_teacher {(Date.current - 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
-    apps_close_date_csd_teacher {(Date.current - 3.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current - 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current - 3.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
   end
 
@@ -31,10 +29,8 @@ FactoryGirl.define do
     # No contact details, no workshop application dates, and no workshops.
     contact_name nil
     contact_email nil
-    apps_open_date_csp_teacher nil
-    apps_open_date_csd_teacher nil
-    apps_close_date_csp_teacher nil
-    apps_close_date_csd_teacher nil
+    apps_open_date_teacher nil
+    apps_close_date_teacher nil
     mappings {[create(:pd_regional_partner_mapping, state: "NJ")]}
     pd_workshops {[]}
   end
@@ -42,20 +38,15 @@ FactoryGirl.define do
   # example zip: 97202
   factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
     # Opening at a specific date in the future.
-    apps_open_date_csp_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
-    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher {(Date.current + 14.days).strftime("%Y-%m-%d")}
-    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
   end
 
   # example zip: 82001
   factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
-    # CSD dates but no CSP dates.
-    apps_open_date_csp_teacher nil
-    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher nil
-    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
   end
 
@@ -399,7 +390,7 @@ FactoryGirl.define do
     association :workshop
     sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
-    email {"participant_#{(User.maximum(:id) || 0) + 1}@example.com.xx"}
+    email {"participant_#{SecureRandom.hex(10)}@example.com.xx"}
     association :school_info
     code {SecureRandom.hex(10)}
 
@@ -452,11 +443,20 @@ FactoryGirl.define do
           create :pd_attendance, session: session, teacher: teacher
         end
       end
-      if evaluator.cdo_scholarship_recipient
+
+      scholarship_params = {
+        user: teacher,
+        course: Pd::Workshop::COURSE_KEY_MAP[evaluator.workshop.course],
+        application_year: evaluator.workshop.school_year
+      }
+
+      # We have an after_create hook on the enrollment model (see :set_default_scholarship_info)
+      # that creates a ScholarshipInfo entry in certain cases (namely, if the enrollment is in a CSF workshop).
+      # Skip creating a new ScholarshipInfo entry if one has already been created
+      # when the enrollment is created above.
+      if evaluator.cdo_scholarship_recipient && Pd::ScholarshipInfo.find_by(scholarship_params).nil?
         create :pd_scholarship_info,
-          user: teacher,
-          course: Pd::Workshop::COURSE_KEY_MAP[evaluator.workshop.course],
-          application_year: evaluator.workshop.school_year
+          scholarship_params
       end
     end
   end
@@ -553,6 +553,9 @@ FactoryGirl.define do
     initialize_with {attributes.transform_keys(&ruby_to_js_style_keys)}
   end
 
+  # ------- APPLICATIONS ------- #
+
+  # ------- Facilitator ------- #
   # default to csf
   factory :pd_facilitator1819_application_hash, parent: :pd_facilitator1819_application_hash_common do
     csf
@@ -760,25 +763,17 @@ FactoryGirl.define do
     end
   end
 
-  # default to csp
-  factory :pd_teacher1819_application_hash, parent: :pd_teacher1819_application_hash_common do
-    csp
-  end
+  # ------- Teacher ------- #
 
-  factory :pd_teacher1819_application_hash_common, class: 'Hash' do
+  factory :pd_teacher_application_hash_common, class: 'Hash' do
     country 'United States'
-    title 'Mr.'
     first_name 'Severus'
-    preferred_first_name 'Sevvy'
     last_name 'Snape'
     alternate_email 'ilovepotions@gmail.com'
     phone '5558675309'
-    address '123 Fake Street'
-    city 'Buffalo'
-    state 'Washington'
-    add_attribute :zip_code, '98101'
     gender_identity 'Male'
     race ['Other']
+    add_attribute :zip_code, '98101'
     association :school
     principal_first_name 'Albus'
     principal_last_name 'Dumbledore'
@@ -787,20 +782,7 @@ FactoryGirl.define do
     principal_confirm_email 'socks@hogwarts.edu'
     principal_phone_number '5555882300'
     current_role 'Teacher'
-    grades_at_school ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
-    grades_teaching ['Grade 7']
-    grades_expect_to_teach ['Grade 6', 'Grade 7']
-    does_school_require_cs_license 'Yes'
-    have_cs_license 'Yes'
-    subjects_teaching ['Computer Science']
-    subjects_expect_to_teach ['Computer Science']
-    subjects_licensed_to_teach ['Computer Science']
-    taught_in_past ['CS Fundamentals']
     previous_yearlong_cdo_pd ['CS in Science']
-    cs_offered_at_school ['AP CS A']
-    cs_opportunities_at_school ['Courses for credit']
-    plan_to_teach 'Yes, I plan to teach this course'
-    able_to_attend_single "Yes, I'm able to attend"
     committed 'Yes'
     willing_to_travel 'Up to 50 miles'
     agree 'Yes'
@@ -812,6 +794,50 @@ FactoryGirl.define do
         hash[:school] = hash[:school].id if hash[:school].is_a? School
       end.transform_keys(&ruby_to_js_style_keys)
     end
+
+    trait :with_custom_school do
+      school(-1)
+      school_name 'Code.org'
+      school_address '1501 4th Ave'
+      school_city 'Seattle'
+      school_state 'Washington'
+      school_zip_code '98101'
+      school_type 'Public school'
+    end
+
+    trait :with_multiple_workshops do
+      able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
+
+      after(:build) do |hash|
+        hash.delete 'ableToAttendSingle'
+      end
+    end
+  end
+
+  # default to csp
+  factory :pd_teacher1819_application_hash, parent: :pd_teacher1819_application_hash_common do
+    csp
+  end
+
+  factory :pd_teacher1819_application_hash_common, parent: :pd_teacher_application_hash_common do
+    title 'Mr.'
+    preferred_first_name 'Sevvy'
+    address '123 Fake Street'
+    city 'Buffalo'
+    state 'Washington'
+    grades_at_school ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
+    grades_teaching ['Grade 7']
+    grades_expect_to_teach ['Grade 6', 'Grade 7']
+    does_school_require_cs_license 'Yes'
+    have_cs_license 'Yes'
+    subjects_teaching ['Computer Science']
+    subjects_expect_to_teach ['Computer Science']
+    subjects_licensed_to_teach ['Computer Science']
+    taught_in_past ['CS Fundamentals']
+    cs_offered_at_school ['AP CS A']
+    cs_opportunities_at_school ['Courses for credit']
+    plan_to_teach 'Yes, I plan to teach this course'
+    able_to_attend_single "Yes, I'm able to attend"
 
     trait :csp do
       program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
@@ -830,23 +856,30 @@ FactoryGirl.define do
       csd_course_hours_per_year 'At least 100 course hours'
       csd_terms_per_year '1 quarter'
     end
+  end
 
-    trait :with_custom_school do
-      school(-1)
-      school_name 'Code.org'
-      school_address '1501 4th Ave'
-      school_city 'Seattle'
-      school_state 'Washington'
-      school_zip_code '98101'
-      school_type 'Public school'
+  factory :pd_teacher2021_application_hash_common, parent: :pd_teacher_application_hash_common do
+    pay_fee 'Yes, my school will be able to pay the full program fee.'
+    plan_to_teach Pd::Application::Teacher2021Application.options[:plan_to_teach].first
+    interested_in_online_program 'Yes'
+    completing_on_behalf_of_someone_else 'No'
+    cs_how_many_minutes 45
+    cs_how_many_days_per_week 5
+    cs_how_many_weeks_per_year 20
+    cs_total_course_hours 75
+    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
+
+    trait :csp do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
+      csp_which_grades ['11', '12']
+      csp_which_units ['Unit 1: Digital Information', 'Unit 2: Internet']
+      csp_how_offer 'As an AP course'
     end
 
-    trait :with_multiple_workshops do
-      able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
-
-      after(:build) do |hash|
-        hash.delete 'ableToAttendSingle'
-      end
+    trait :csd do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
+      csd_which_grades ['6', '7']
+      csd_which_units ['Unit 0: Problem Solving', 'Unit 1: Web Development']
     end
   end
 
@@ -864,164 +897,6 @@ FactoryGirl.define do
         application.lock!
       end
     end
-  end
-
-  # default to csp
-  factory :pd_teacher2021_application_hash, parent: :pd_teacher2021_application_hash_common do
-    csp
-  end
-
-  factory :pd_teacher2021_application_hash_common, class: 'Hash' do
-    country 'United States'
-    first_name 'Severus'
-    last_name 'Snape'
-    alternate_email 'ilovepotions@gmail.com'
-    phone '5558675309'
-    gender_identity 'Male'
-    race ['Other']
-    add_attribute :zip_code, '98101'
-    association :school
-    principal_first_name 'Albus'
-    principal_last_name 'Dumbledore'
-    principal_title 'Dr.'
-    principal_email 'socks@hogwarts.edu'
-    principal_confirm_email 'socks@hogwarts.edu'
-    principal_phone_number '5555882300'
-    current_role 'Teacher'
-    previous_yearlong_cdo_pd ['CS in Science']
-    committed 'Yes'
-    willing_to_travel 'Up to 50 miles'
-    agree 'Yes'
-    completing_on_behalf_of_someone_else 'No'
-    cs_how_many_minutes 45
-    cs_how_many_days_per_week 5
-    cs_how_many_weeks_per_year 20
-    cs_total_course_hours 75
-    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
-    pay_fee 'Yes, my school will be able to pay the full program fee.'
-    plan_to_teach Pd::Application::Teacher2021Application.options[:plan_to_teach].first
-    interested_in_online_program 'Yes'
-
-    initialize_with do
-      attributes.dup.tap do |hash|
-        # School in the form data is meant to be an id, but in the factory it can be provided as a School object
-        # In that case, replace it with the id from the associated model
-        hash[:school] = hash[:school].id if hash[:school].is_a? School
-      end.transform_keys(&ruby_to_js_style_keys)
-    end
-
-    trait :csp do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
-      csp_which_grades ['11', '12']
-      csp_which_units ['Unit 1: Digital Information', 'Unit 2: Internet']
-      csp_how_offer 'As an AP course'
-    end
-
-    trait :csd do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
-      csd_which_grades ['6', '7']
-      csd_which_units ['Unit 0: Problem Solving', 'Unit 1: Web Development']
-    end
-
-    trait :with_custom_school do
-      school(-1)
-      school_name 'Code.org'
-      school_address '1501 4th Ave'
-      school_city 'Seattle'
-      school_state 'Washington'
-      school_zip_code '98101'
-      school_type 'Public school'
-    end
-
-    trait :with_multiple_workshops do
-      able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
-
-      after(:build) do |hash|
-        hash.delete 'ableToAttendSingle'
-      end
-    end
-  end
-
-  factory :pd_teacher2021_application, class: 'Pd::Application::Teacher2021Application' do
-    association :user, factory: [:teacher, :with_school_info], strategy: :create
-    course 'csp'
-    transient do
-      form_data_hash {build :pd_teacher2021_application_hash_common, course.to_sym}
-    end
-    form_data {form_data_hash.to_json}
-  end
-
-  # default to do_you_approve: other
-  factory :pd_principal_approval2021_application_hash, parent: :pd_principal_approval2021_application_hash_common do
-    approved_other
-  end
-
-  factory :pd_principal_approval2021_application_hash_common, parent: :form_data_hash do
-    title 'Dr.'
-    first_name 'Albus'
-    last_name 'Dumbledore'
-    email 'albus@hogwarts.edu'
-    confirm_principal true
-
-    trait :approved_no do
-      do_you_approve 'No'
-    end
-
-    trait :approved_yes do
-      do_you_approve 'Yes'
-      with_approval_fields
-    end
-
-    trait :approved_other do
-      do_you_approve 'Other:'
-      with_approval_fields
-    end
-
-    trait :with_approval_fields do
-      school 'Hogwarts Academy of Witchcraft and Wizardry'
-      total_student_enrollment 200
-      free_lunch_percent '50'
-      white '16'
-      black '15'
-      hispanic '14'
-      asian '13'
-      pacific_islander '12'
-      american_indian '11'
-      other '10'
-      committed_to_master_schedule Pd::Application::PrincipalApproval2021Application.options[:committed_to_master_schedule][0]
-      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
-      committed_to_diversity 'Yes'
-      understand_fee 'Yes'
-      pay_fee Pd::Application::PrincipalApproval2021Application.options[:pay_fee][0]
-    end
-
-    trait :replace_course_yes_csp do
-      replace_course 'Yes'
-      replace_which_course_csp ['Beauty and Joy of Computing']
-    end
-
-    trait :replace_course_yes_csd do
-      replace_course 'Yes'
-      replace_which_course_csd ['CodeHS']
-    end
-  end
-
-  factory :pd_principal_approval2021_application, class: 'Pd::Application::PrincipalApproval2021Application' do
-    association :teacher_application, factory: :pd_teacher2021_application
-    course 'csp'
-    transient do
-      approved 'Yes'
-      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
-      form_data_hash do
-        build(
-          :pd_principal_approval2021_application_hash_common,
-          "approved_#{approved.downcase}".to_sym,
-          course: course,
-          replace_course: replace_course
-        )
-      end
-    end
-    form_data {form_data_hash.to_json}
   end
 
   # default to csp
@@ -1051,12 +926,62 @@ FactoryGirl.define do
     form_data {form_data_hash.to_json}
   end
 
-  # default to do_you_approve: other
-  factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1920_application_hash_common do
-    approved_other
+  # default to csp
+  factory :pd_teacher2021_application_hash, parent: :pd_teacher2021_application_hash_common do
+    csp
   end
 
-  factory :pd_principal_approval1920_application_hash_common, parent: :form_data_hash do
+  factory :pd_teacher2021_application, class: 'Pd::Application::Teacher2021Application' do
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    course 'csp'
+    transient do
+      form_data_hash {build :pd_teacher2021_application_hash_common, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  factory :pd_teacher2122_application_hash_common, parent: :pd_teacher_application_hash_common do
+    pay_fee Pd::Application::Teacher2122Application.options[:pay_fee].first
+    plan_to_teach Pd::Application::Teacher2122Application.options[:plan_to_teach].first
+    interested_in_online_program 'Yes'
+    completing_on_behalf_of_someone_else 'No'
+    cs_how_many_minutes 45
+    cs_how_many_days_per_week 5
+    cs_how_many_weeks_per_year 20
+    cs_total_course_hours 75
+    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
+
+    trait :csp do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
+      csp_which_grades ['11', '12']
+      csp_which_units ['Unit 1: Digital Information', 'Unit 2: The Internet']
+      csp_how_offer 'As an AP course'
+    end
+
+    trait :csd do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
+      csd_which_grades ['6', '7']
+      csd_which_units ['Unit 1: Problem Solving', 'Unit 2: Web Development']
+    end
+  end
+
+  # default to csp
+  factory :pd_teacher2122_application_hash, parent: :pd_teacher2122_application_hash_common do
+    csp
+  end
+
+  factory :pd_teacher2122_application, class: 'Pd::Application::Teacher2122Application' do
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    course 'csp'
+    transient do
+      form_data_hash {build :pd_teacher2122_application_hash_common, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # ----- Principal ----- #
+
+  factory :pd_principal_approval_application_hash_common, parent: :form_data_hash do
     title 'Dr.'
     first_name 'Albus'
     last_name 'Dumbledore'
@@ -1067,6 +992,129 @@ FactoryGirl.define do
       do_you_approve 'No'
     end
 
+    trait :replace_course_yes_csp do
+      replace_course 'Yes'
+      replace_which_course_csp ['Beauty and Joy of Computing']
+    end
+
+    trait :replace_course_yes_csd do
+      replace_course 'Yes'
+      replace_which_course_csd ['CodeHS']
+    end
+  end
+
+  # default to do_you_approve: other
+  factory :pd_principal_approval2122_application_hash, parent: :pd_principal_approval2122_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval2122_application_hash_common, parent: :pd_principal_approval_application_hash_common do
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
+    trait :with_approval_fields do
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50'
+      white '16'
+      black '15'
+      hispanic '14'
+      asian '13'
+      pacific_islander '12'
+      american_indian '11'
+      other '10'
+      committed_to_master_schedule Pd::Application::PrincipalApproval2122Application.options[:committed_to_master_schedule][0]
+      replace_course Pd::Application::PrincipalApproval2122Application.options[:replace_course][1]
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee Pd::Application::PrincipalApproval2122Application.options[:pay_fee][0]
+    end
+  end
+
+  factory :pd_principal_approval2122_application, class: 'Pd::Application::PrincipalApproval2122Application' do
+    association :teacher_application, factory: :pd_teacher2122_application
+    course 'csp'
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval2122Application.options[:replace_course][1]
+      form_data_hash do
+        build(
+          :pd_principal_approval2122_application_hash_common,
+          "approved_#{approved.downcase}".to_sym,
+          course: course,
+          replace_course: replace_course
+        )
+      end
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # default to do_you_approve: other
+  factory :pd_principal_approval2021_application_hash, parent: :pd_principal_approval2021_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval2021_application_hash_common, parent: :pd_principal_approval_application_hash_common do
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
+    trait :with_approval_fields do
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50'
+      white '16'
+      black '15'
+      hispanic '14'
+      asian '13'
+      pacific_islander '12'
+      american_indian '11'
+      other '10'
+      committed_to_master_schedule Pd::Application::PrincipalApproval2021Application.options[:committed_to_master_schedule][0]
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee Pd::Application::PrincipalApproval2021Application.options[:pay_fee][0]
+    end
+  end
+
+  factory :pd_principal_approval2021_application, class: 'Pd::Application::PrincipalApproval2021Application' do
+    association :teacher_application, factory: :pd_teacher2021_application
+    course 'csp'
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      form_data_hash do
+        build(
+          :pd_principal_approval2021_application_hash_common,
+          "approved_#{approved.downcase}".to_sym,
+          course: course,
+          replace_course: replace_course
+        )
+      end
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # default to do_you_approve: other
+  factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1920_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval1920_application_hash_common, parent: :pd_principal_approval_application_hash_common do
     trait :approved_yes do
       do_you_approve 'Yes'
       with_approval_fields
@@ -1096,16 +1144,6 @@ FactoryGirl.define do
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
     end
-
-    trait :replace_course_yes_csp do
-      replace_course 'Yes'
-      replace_which_course_csp ['Beauty and Joy of Computing']
-    end
-
-    trait :replace_course_yes_csd do
-      replace_course 'Yes'
-      replace_which_course_csd ['CodeHS']
-    end
   end
 
   factory :pd_principal_approval1920_application, class: 'Pd::Application::PrincipalApproval1920Application' do
@@ -1131,17 +1169,8 @@ FactoryGirl.define do
     approved_other
   end
 
-  factory :pd_principal_approval1819_application_hash_common, parent: :form_data_hash do
-    first_name 'Albus'
-    last_name 'Dumbledore'
+  factory :pd_principal_approval1819_application_hash_common, parent: :pd_principal_approval_application_hash_common do
     title 'Dr.'
-    email 'albus@hogwarts.edu'
-    confirm_principal true
-
-    trait :approved_no do
-      do_you_approve 'No'
-    end
-
     trait :approved_yes do
       do_you_approve 'Yes'
       with_approval_fields
@@ -1171,16 +1200,6 @@ FactoryGirl.define do
       understand_fee 'Yes'
       pay_fee 'Yes, my school or my teacher will be able to pay the full summer workshop program fee.'
     end
-
-    trait :replace_course_yes_csp do
-      replace_course 'Yes'
-      replace_which_course_csp ['Beauty and Joy of Computing']
-    end
-
-    trait :replace_course_yes_csd do
-      replace_course 'Yes'
-      replace_which_course_csd ['CodeHS']
-    end
   end
 
   factory :pd_principal_approval1819_application, class: 'Pd::Application::PrincipalApproval1819Application' do
@@ -1200,6 +1219,9 @@ FactoryGirl.define do
     end
     form_data {form_data_hash.to_json}
   end
+
+  # ---- Teacher Con ----- #
+  # TODO: Remove all Teachercon code
 
   # default to accepted
   factory :pd_teachercon1819_registration_hash, parent: :pd_teachercon1819_registration_hash_common do
@@ -1310,6 +1332,8 @@ FactoryGirl.define do
     association :user, factory: :teacher
     form_data {form_data_hash.to_json}
   end
+
+  # ----- FiT Weekend ----- #
 
   factory :pd_fit_weekend1819_registration_hash, parent: :form_data_hash do
     email "ssnape@hogwarts.edu"
@@ -1432,266 +1456,5 @@ FactoryGirl.define do
     email_type 'confirmation'
     application_status 'confirmation'
     to {application.user.email}
-  end
-
-  factory :foorm_form, class: 'Foorm::Form' do
-    sequence(:name) {|n| "FormName#{n}"}
-    version 0
-    questions '{}'
-  end
-
-  factory :basic_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/sample"
-    foorm_submission_metadata
-    answers '{}'
-  end
-
-  factory :day_5_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :pd_workshop, factory: :csd_summer_workshop
-    association :user, factory: :teacher
-    day 5
-
-    trait :answers_low do
-      association :foorm_submission, factory: [:daily_workshop_day_5_foorm_submission, :answers_low]
-    end
-
-    trait :answers_high do
-      association :foorm_submission, factory: [:daily_workshop_day_5_foorm_submission, :answers_high]
-    end
-  end
-
-  factory :daily_workshop_day_5_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/summer_workshop_post_survey"
-    foorm_submission_metadata
-
-    trait :answers_low do
-      answers '{
-        "overall_success": {
-          "more_prepared": "1",
-          "know_help":"1",
-          "pd_suitable_experience":"1",
-          "connected_community": "1",
-          "would_recommend":"1",
-          "absolute_best_pd":"1"
-        },
-        "teacher_engagement": {
-          "activities_engaging": "1",
-          "participated":"1",
-          "frequently_talk_about":"1",
-          "planning_to_use": "1"
-        },
-        "teaching_in_general_matrix": {
-          "formally_assess_learning": "1",
-          "recruit_strategies":"1",
-          "retain_strategies":"1"
-        },
-       "expertise_rating": 1,
-       "two_things_liked": "things",
-       "permission_promotional": "yes_with_name"
-      }'
-    end
-
-    trait :answers_high do
-      answers '{
-        "overall_success": {
-          "more_prepared": "7",
-          "know_help":"7",
-          "pd_suitable_experience":"7",
-          "connected_community": "7",
-          "would_recommend":"7",
-          "absolute_best_pd":"7"
-        },
-        "teacher_engagement": {
-          "activities_engaging": "7",
-          "participated":"7",
-          "frequently_talk_about":"7",
-          "planning_to_use": "7"
-        },
-        "teaching_in_general_matrix": {
-          "formally_assess_learning": "7",
-          "recruit_strategies":"7",
-          "retain_strategies":"7"
-        },
-       "expertise_rating": 5,
-       "two_things_liked": "things",
-       "permission_promotional": "yes_with_name"
-      }'
-    end
-  end
-
-  factory :day_0_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :pd_workshop, factory: :csd_summer_workshop
-    association :user, factory: :teacher
-    day 0
-
-    trait :answers_low do
-      association :foorm_submission, factory: [:daily_workshop_day_0_foorm_submission, :answers_low]
-    end
-
-    trait :answers_high do
-      association :foorm_submission, factory: [:daily_workshop_day_0_foorm_submission, :answers_high]
-    end
-  end
-
-  factory :daily_workshop_day_0_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/summer_workshop_pre_survey"
-    foorm_submission_metadata
-
-    trait :answers_low do
-      answers '{
-        "course_length_weeks":"5_fewer",
-        "teaching_cs_matrix":{"committed_to_teaching_cs": "1", "like_teaching_cs": "1", "understand_cs": "1", "skills_cs": "1"},
-        "expertise_rating":1,
-        "birth_year": "1990",
-        "racial_ethnic_identity": ["black_aa","white"]
-      }'
-    end
-
-    trait :answers_high do
-      answers '{
-        "course_length_weeks":"30_more",
-        "teaching_cs_matrix":{"committed_to_teaching_cs": "7", "like_teaching_cs": "7", "understand_cs": "7", "skills_cs": "7"},
-        "expertise_rating":5,
-        "birth_year": "1983",
-        "racial_ethnic_identity": ["black_aa","hispanic_latino"]
-      }'
-    end
-  end
-
-  factory :foorm_form_with_inconsistent_questions, class: 'Foorm::Form' do
-    name "surveys/pd/sample_survey"
-    version 0
-    created_at "2020-03-26 21:58:28"
-    updated_at "2020-03-26 21:58:28"
-    questions '{
-      "pages": [
-          {
-            "name": "teaching_context",
-            "elements": [
-            {
-              "type": "rating",
-              "title": "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
-              "name": "expertise_rating",
-              "indent": 12,
-              "titleLocation": "hidden",
-              "minRate": 2,
-              "minRateDescription": "Strongly aligned with A",
-              "maxRateDescription": "Strongly aligned with B!"
-            }]
-          }
-        ]
-      }'
-  end
-
-  factory :csf_intro_post_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :user, factory: :teacher
-    association :pd_workshop, factory: :csf_101_workshop
-
-    trait :answers_low do
-      association :foorm_submission, factory: [:csf_intro_post_foorm_submission, :answers_low]
-    end
-
-    trait :answers_high do
-      association :foorm_submission, factory: [:csf_intro_post_foorm_submission, :answers_high]
-    end
-  end
-
-  factory :csf_intro_post_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_csf_intro_post"
-    foorm_submission_metadata
-
-    trait :answers_low do
-      answers '{
-      "overall_success": {
-        "more_prepared": "1",
-        "where_to_go":"1",
-        "suitable_my_level":"1",
-        "feel_community": "1",
-        "would_recommend":"1",
-        "best_pd":"1"
-      },
-      "teacher_engagement": {
-        "engaging": "1",
-        "active":"1",
-        "ideas":"1"
-      },
-      "supported": "lots",
-      "permission": "no"
-    }'
-    end
-
-    trait :answers_high do
-      answers '{
-      "overall_success": {
-        "more_prepared": "7",
-        "where_to_go":"7",
-        "suitable_my_level":"7",
-        "feel_community": "7",
-        "would_recommend":"7",
-        "best_pd":"7"
-      },
-      "teacher_engagement": {
-        "engaging": "7",
-        "active":"7",
-        "ideas":"7"
-      },
-      "supported": "lots",
-      "permission": "yes_name"
-    }'
-    end
-  end
-
-  factory :csf_intro_post_facilitator_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :pd_workshop, factory: :csf_101_workshop
-    association :user, factory: :teacher
-
-    trait :answers_low do
-      association :foorm_submission, factory: [:csf_intro_post_facilitator_foorm_submission, :answers_low]
-    end
-
-    trait :answers_high do
-      association :foorm_submission, factory: [:csf_intro_post_facilitator_foorm_submission, :answers_high]
-    end
-  end
-
-  factory :csf_intro_post_facilitator_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_csf_intro_post"
-    foorm_submission_metadata
-
-    trait :answers_low do
-      answers '{
-      "facilitatorId": 1,
-      "facilitatorName": "Facilitator1",
-      "facilitator_effectiveness":{
-        "demonstrated_knowledge":"1",
-        "built_equitable":"1",
-        "on_track":"1",
-        "productive_discussions":"1",
-        "ways_equitable":"1",
-        "healthy_relationship":"1"
-      },
-      "k5_facilitator_did_well":"things done well"
-    }'
-    end
-
-    trait :answers_high do
-      answers '{
-      "facilitatorId": 1,
-      "facilitatorName": "Facilitator1",
-      "facilitator_effectiveness":{
-        "demonstrated_knowledge":"7",
-        "built_equitable":"7",
-        "on_track":"7",
-        "productive_discussions":"7",
-        "ways_equitable":"7",
-        "healthy_relationship":"7"
-      },
-      "k5_facilitator_did_well":"things done well"
-    }'
-    end
-  end
-
-  trait :foorm_submission_metadata do
-    form_version 0
   end
 end

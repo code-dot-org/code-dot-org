@@ -1,4 +1,4 @@
-# Brad (2018-11-14) Skip on IE due to blocked pop-ups and possible "new document" issues
+# Skip on IE due to blocked pop-ups and possible "new document" issues
 @no_ie
 @as_student
 @no_mobile

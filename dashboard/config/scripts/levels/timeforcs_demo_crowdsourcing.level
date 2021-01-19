@@ -1,14 +1,14 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2019-04-02T18:48:30.000Z",
-  "user_id": 1,
   "properties": {
     "video_key": "C3_crowdsourcing",
     "name_suffix": "_2019",
     "parent_level_id": 15247,
     "encrypted": "false"
   },
+  "game_id": 31,
+  "created_at": "2019-04-02T18:48:30.000Z",
+  "user_id": 1,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2019-04-02 18:49:09 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-04-02 18:53:42 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {

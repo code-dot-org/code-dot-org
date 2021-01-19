@@ -1,4 +1,5 @@
 {
+ "published": true,
  "pages": [
   {
    "name": "preamable_page",
@@ -195,6 +196,154 @@
        "text": "The tools and technologies that are part of the curriculum make sense and are easy to use."
       }
      ]
+    },
+    {
+     "type": "panel",
+     "name": "friday_institute_panel",
+     "elements": [
+      {
+       "type": "html",
+       "name": "question3",
+       "visible": false,
+       "html": "<p><span style=\"background-color: #ffff00;\"> &gt;&gt; FRIDAY-INSTITUTE-SPECIFIC&lt;&lt;</span></p>"
+      },
+      {
+       "type": "radiogroup",
+       "name": "friday_institute_which_tool",
+       "title": "Which video conferencing tool was primarily used for the synchronous (live meeting) portions of the workshop?",
+       "choices": [
+        {
+         "value": "hangouts",
+         "text": "Google Hangouts"
+        },
+        {
+         "value": "zoom",
+         "text": "Zoom"
+        },
+        {
+         "value": "teams",
+         "text": "Microsoft Teams"
+        },
+        {
+         "value": "goto_meeting",
+         "text": "GoToMeeting"
+        },
+        {
+         "value": "skype",
+         "text": "Skype"
+        },
+        {
+         "value": "dont_know",
+         "text": "Don't Know/Unsure"
+        }
+       ],
+       "hasOther": true,
+       "otherText": "Other"
+      },
+      {
+       "type": "matrix",
+       "name": "friday_institute_sync_tools",
+       "title": "Thinking about the video conferencing portions of the workshop, how much do you agree with the following?",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Strongly Disagree"
+        },
+        {
+         "value": "2",
+         "text": "Disagree"
+        },
+        {
+         "value": "3",
+         "text": "Slightly Disagree"
+        },
+        {
+         "value": "4",
+         "text": "Neutral"
+        },
+        {
+         "value": "5",
+         "text": "Slightly Agree"
+        },
+        {
+         "value": "6",
+         "text": "Agree"
+        },
+        {
+         "value": "7",
+         "text": "Strongly Agree"
+        }
+       ],
+       "rows": [
+        {
+         "value": "smoothly_for_all",
+         "text": "Overall the video conferencing technology seemed to work smoothly for all participants."
+        },
+        {
+         "value": "personal_tech_adequate",
+         "text": "My personal technology infrastructure - internet connection, bandwidth, screen size, software - was adequate for participating in the workshop."
+        },
+        {
+         "value": "video_conf_engaging",
+         "text": "I found the video conferencing portions of the workshop highly engaging."
+        }
+       ]
+      },
+      {
+       "type": "matrix",
+       "name": "friday_institute_async_tools",
+       "title": "This workshop also included activities you completed away from the larger group made available through your workshop website in the Friday Institute's Professional Learning and Collaboration Environment (PLACE) ",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Strongly Disagree"
+        },
+        {
+         "value": "2",
+         "text": "Disagree"
+        },
+        {
+         "value": "3",
+         "text": "Slightly Disagree"
+        },
+        {
+         "value": "4",
+         "text": "Neutral"
+        },
+        {
+         "value": "5",
+         "text": "Slightly Agree"
+        },
+        {
+         "value": "6",
+         "text": "Agree"
+        },
+        {
+         "value": "7",
+         "text": "Strongly Agree"
+        }
+       ],
+       "rows": [
+        {
+         "value": "moodle_worked_well_for_all",
+         "text": "Overall the PLACE site seemed to work well for all participants."
+        },
+        {
+         "value": "async_activities_engaging",
+         "text": "I found the activities I did on the PLACE site highly engaging."
+        },
+        {
+         "value": "moodle_organized_positive_exp",
+         "text": "The organization of the PLACE site made sense to me and made for a positive experience."
+        },
+        {
+         "value": "moodle_content_activities",
+         "text": "The content and activities on the PLACE site supported my professional learning and preparation to teach {workshop_course}"
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{is_friday_institute} = 'true'"
     },
     {
      "type": "panel",
@@ -669,7 +818,6 @@
        "name": "csd_which_units",
        "title": "Which units of CS Discoveries do you plan to teach in the 2020-2021 school year? ",
        "description": "Check all that apply",
-       "hasOther": true,
        "choices": [
         {
          "value": "unit_1",
@@ -699,7 +847,8 @@
          "value": "none",
          "text": "None / I am not planning to teach any of these units in 2020-21"
         }
-       ]
+       ],
+       "hasOther": true
       },
       {
        "type": "html",
@@ -796,8 +945,8 @@
      "type": "rating",
      "name": "lead_learner",
      "title": "Lead Learner. 1. model expertise in how to learn <---> 5. need deep content expertise ",
-     "correctAnswer": 1,
      "titleLocation": "hidden",
+     "correctAnswer": 1,
      "minRateDescription": "Strongly aligned with A",
      "maxRateDescription": "Strongly aligned with B"
     },
@@ -810,8 +959,8 @@
      "type": "rating",
      "name": "prioritize_time",
      "title": "Prioritize Time. 1. distribute equally <---> 5. prioritize most need",
-     "correctAnswer": 5,
      "titleLocation": "hidden",
+     "correctAnswer": 5,
      "minRateDescription": "Strongly aligned with A",
      "maxRateDescription": "Strongly aligned with B"
     },
@@ -823,9 +972,9 @@
     {
      "type": "rating",
      "name": "instructional_focus",
-     "title": "Instructional focus. 1. less material, leave fewer behind <---> 5. more material, some students struggle",
-     "correctAnswer": 1,
+     "title": "Instructional focus.  1. less material, leave fewer behind <---> 5. more material, some students struggle",
      "titleLocation": "hidden",
+     "correctAnswer": 1,
      "minRateDescription": "Strongly aligned with A",
      "maxRateDescription": "Strongly aligned with B"
     }

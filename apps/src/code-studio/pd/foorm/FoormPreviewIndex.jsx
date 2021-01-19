@@ -30,7 +30,8 @@ export default class FoormPreviewIndex extends React.Component {
     {id: 'workshopSubject', caption: 'Workshop subject', type: 'text'},
     {id: 'regionalPartnerName', caption: 'Regional partner name', type: 'text'},
     {id: 'isVirtual', caption: 'Is virtual', type: 'checkbox'},
-    {id: 'isFridayInstitute', caption: 'Is Friday Institute', type: 'checkbox'}
+    {id: 'isFridayInstitute', caption: 'Is Friday Institute', type: 'checkbox'},
+    {id: 'workshopAgenda', caption: 'Workshop Agenda', type: 'text'}
   ];
 
   constructor(props) {
@@ -94,7 +95,12 @@ export default class FoormPreviewIndex extends React.Component {
         <h2>Preview</h2>
         {this.props.forms.map((form, index) => (
           <div style={styles.linkContainer} key={index}>
-            <a style={styles.link} target="_blank" href={this.getFormUrl(form)}>
+            <a
+              style={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={this.getFormUrl(form)}
+            >
               {form.name}
             </a>
           </div>

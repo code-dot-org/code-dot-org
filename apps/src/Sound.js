@@ -23,6 +23,7 @@ function isIE9() {
  * @property {string} mp3
  * @property {string} ogg
  * @property {string} wav
+ * @property {bytes} bytes
  * @property {function} onPreloadError
  * @param audioContext context this sound can be played on, or null if none
  * @constructor
@@ -32,7 +33,8 @@ export default function Sound(config, audioContext) {
   this.audioContext = audioContext;
   this.audioElement = null; // if HTML5 Audio
   this.reusableBuffer = null; // if Web Audio
-  this.playableBuffer = null; // if Web Audio
+  this.playableBuffers = []; // if Web Audio
+  this.isPlayingCount = 0; // if Web Audio
 
   /**
    * @private {boolean} Whether the sound is currently playing - sadly, neither
@@ -65,24 +67,25 @@ Sound.prototype.play = function(options) {
   }
 
   if (this.reusableBuffer) {
-    this.playableBuffer = this.newPlayableBufferSource(
-      this.reusableBuffer,
-      options
-    );
+    let index =
+      this.playableBuffers.push(
+        this.newPlayableBufferSource(this.reusableBuffer, options)
+      ) - 1;
 
     // Hook up on-ended callback, although browser support may be limited.
-    this.playableBuffer.onended = function() {
-      this.isPlaying_ = false;
-      if (options.onEnded) {
-        options.onEnded();
+    this.playableBuffers[index].onended = function() {
+      this.isPlayingCount--;
+      if (this.isPlayingCount === 0) {
+        this.isPlaying_ = false;
+        options.onEnded && options.onEnded();
       }
     }.bind(this);
 
     // Play sound, supporting older versions of the Web Audio API which used noteOn(Off).
-    if (this.playableBuffer.start) {
-      this.playableBuffer.start(0);
+    if (this.playableBuffers[index].start) {
+      this.playableBuffers[index].start(0);
     } else {
-      this.playableBuffer.noteOn(0);
+      this.playableBuffers[index].noteOn(0);
     }
     this.handlePlayStarted(options);
     return;
@@ -147,6 +150,7 @@ Sound.prototype.handleLoadFailed = function(status) {
 };
 
 Sound.prototype.handlePlayStarted = function(options) {
+  this.isPlayingCount++;
   this.isPlaying_ = true;
   if (options.callback) {
     options.callback(true);
@@ -155,13 +159,16 @@ Sound.prototype.handlePlayStarted = function(options) {
 
 Sound.prototype.stop = function() {
   try {
-    if (this.playableBuffer) {
-      if (this.playableBuffer.stop) {
-        // Newest web audio pseudo-standard.
-        this.playableBuffer.stop(0);
-      } else if (this.playableBuffer.noteOff) {
-        // Older web audio.
-        this.playableBuffer.noteOff(0);
+    if (this.playableBuffers.length) {
+      for (let index in this.playableBuffers) {
+        if (this.playableBuffers[index].stop) {
+          // Newest web audio pseudo-standard.
+          this.playableBuffers[index].stop(0);
+        } else if (this.playableBuffers[index].noteOff) {
+          // Older web audio.
+          this.playableBuffers[index].noteOff(0);
+        }
+        this.isPlayingCount--;
       }
     } else if (this.audioElement) {
       // html 5 audio.
@@ -339,47 +346,97 @@ Sound.prototype.getPlayableFile = function() {
   return false;
 };
 
-Sound.prototype.preload = function() {
-  var file = this.getPlayableFile();
+/**
+ * Checks if bytes were provided and we are able to play them after decoding.
+ */
+Sound.prototype.getPlayableBytes = function() {
+  try {
+    if (!window.Audio) {
+      return false;
+    }
+
+    let audioTest = new window.Audio();
+    if (
+      this.config.hasOwnProperty('bytes') &&
+      audioTest.canPlayType('audio/mp3')
+    ) {
+      return this.config.bytes;
+    }
+  } catch (e) {
+    console.warn('No bytes provided or mp3 is not supported');
+  }
+
+  return false;
+};
+
+Sound.prototype.preloadFile = function() {
+  const file = this.getPlayableFile();
   if (!file) {
     return;
   }
 
   if (!this.config.forceHTML5 && window.AudioContext && this.audioContext) {
     var self = this;
-    this.preloadViaWebAudio(file, function(buffer) {
+    this.preloadViaWebAudio(file, buffer => {
       self.reusableBuffer = buffer;
     });
     return;
   }
 
   if (window.Audio) {
-    var audioElement = new window.Audio(file);
-    if (!audioElement || !audioElement.play) {
-      return;
-    }
-
-    if (!isIE9()) {
-      // Pre-cache audio
-      audioElement.play();
-      audioElement.pause();
-    }
-    this.audioElement = audioElement;
-
-    // Fire onLoad as soon as enough of the sound is loaded to play it
-    // all the way through.
-    var loadEventName = 'canplaythrough';
-    var eventListener = function() {
-      this.onSoundLoaded();
-      audioElement.removeEventListener(loadEventName, eventListener);
-    }.bind(this);
-    audioElement.addEventListener(loadEventName, eventListener);
-    audioElement.addEventListener('error', () => {
-      // Indicate failure without the http status code since it is not
-      // available in this context.
-      this.handleLoadFailed();
-    });
+    let audioElement = new window.Audio(file);
+    this.preloadAudioElement(audioElement);
   }
+};
+
+Sound.prototype.preloadBytes = function() {
+  const bytes = this.getPlayableBytes();
+  if (!bytes) {
+    return;
+  }
+
+  if (!this.config.forceHTML5 && window.AudioContext && this.audioContext) {
+    var self = this;
+    self.audioContext.decodeAudioData(bytes, buffer => {
+      self.reusableBuffer = buffer;
+      self.onSoundLoaded();
+    });
+    return;
+  }
+
+  if (window.Audio) {
+    const blob = new Blob([bytes], {type: 'audio/mpeg3'});
+    const url = window.URL.createObjectURL(blob);
+    const audioElement = new window.Audio(url);
+    this.preloadAudioElement(audioElement);
+  }
+};
+
+Sound.prototype.preloadAudioElement = function(audioElement) {
+  if (!audioElement || !audioElement.play) {
+    return;
+  }
+
+  if (!isIE9()) {
+    // Pre-cache audio
+    audioElement.play();
+    audioElement.pause();
+  }
+  this.audioElement = audioElement;
+
+  // Fire onLoad as soon as enough of the sound is loaded to play it
+  // all the way through.
+  var loadEventName = 'canplaythrough';
+  var eventListener = function() {
+    this.onSoundLoaded();
+    audioElement.removeEventListener(loadEventName, eventListener);
+  }.bind(this);
+  audioElement.addEventListener(loadEventName, eventListener);
+  audioElement.addEventListener('error', () => {
+    // Indicate failure without the http status code since it is not
+    // available in this context.
+    this.handleLoadFailed();
+  });
 };
 
 Sound.prototype.onSoundLoaded = function() {

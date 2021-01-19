@@ -131,6 +131,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
             scholarshipStatus={enrollment.scholarship_status}
             dropdownOptions={dropdownOptions}
             onChange={this.handleScholarshipStatusChange.bind(this, enrollment)}
+            isWorkshopAdmin={this.props.permissionList.has(WorkshopAdmin)}
           />
         </td>
       );

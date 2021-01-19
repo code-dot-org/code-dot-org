@@ -1,5 +1,5 @@
 import React from 'react';
-import {OAuthSectionTypes} from '../../templates/teacherDashboard/shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {
   SyncOmniAuthSectionButton,
   READY,

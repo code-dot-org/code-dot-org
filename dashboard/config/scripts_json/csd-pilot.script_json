@@ -1,0 +1,1339 @@
+{
+  "script": {
+    "name": "csd-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csd-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Pilot Information 1",
+      "name": "Pilot Information 1",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 1",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 2",
+      "name": "Pilot Information 2",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 2",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 3",
+      "name": "Pilot Information 3",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 3",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 4",
+      "name": "Pilot Information 4",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 4",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 5",
+      "name": "Pilot Information 5",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 5",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 6",
+      "name": "Pilot Information 6",
+      "absolute_position": 6,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 6",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 7",
+      "name": "Pilot Information 7",
+      "absolute_position": 7,
+      "lockable": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 7",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 8",
+      "name": "Pilot Information 8",
+      "absolute_position": 8,
+      "lockable": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 8",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 9",
+      "name": "Pilot Information 9",
+      "absolute_position": 9,
+      "lockable": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 9",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 10",
+      "name": "Pilot Information 10",
+      "absolute_position": 10,
+      "lockable": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 10",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 11",
+      "name": "Pilot Information 11",
+      "absolute_position": 11,
+      "lockable": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 11",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 12",
+      "name": "Pilot Information 12",
+      "absolute_position": 12,
+      "lockable": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 12",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 13",
+      "name": "Pilot Information 13",
+      "absolute_position": 13,
+      "lockable": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 13",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 14",
+      "name": "Pilot Information 14",
+      "absolute_position": 14,
+      "lockable": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 14",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 15",
+      "name": "Pilot Information 15",
+      "absolute_position": 15,
+      "lockable": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 15",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 16",
+      "name": "Pilot Information 16",
+      "absolute_position": 16,
+      "lockable": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 16",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 17",
+      "name": "Pilot Information 17",
+      "absolute_position": 17,
+      "lockable": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 17",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 18",
+      "name": "Pilot Information 18",
+      "absolute_position": 18,
+      "lockable": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 18",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 19",
+      "name": "Pilot Information 19",
+      "absolute_position": 19,
+      "lockable": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 19",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 20",
+      "name": "Pilot Information 20",
+      "absolute_position": 20,
+      "lockable": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 20",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 21",
+      "name": "Pilot Information 21",
+      "absolute_position": 21,
+      "lockable": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 21",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 22",
+      "name": "Pilot Information 22",
+      "absolute_position": 22,
+      "lockable": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 22",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 23",
+      "name": "Pilot Information 23",
+      "absolute_position": 23,
+      "lockable": false,
+      "relative_position": 23,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 23",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 24",
+      "name": "Pilot Information 24",
+      "absolute_position": 24,
+      "lockable": false,
+      "relative_position": 24,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 24",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 25",
+      "name": "Pilot Information 25",
+      "absolute_position": 25,
+      "lockable": false,
+      "relative_position": 25,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 25",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 26",
+      "name": "Pilot Information 26",
+      "absolute_position": 26,
+      "lockable": false,
+      "relative_position": 26,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 26",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 27",
+      "name": "Pilot Information 27",
+      "absolute_position": 27,
+      "lockable": false,
+      "relative_position": 27,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 27",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 28",
+      "name": "Pilot Information 28",
+      "absolute_position": 28,
+      "lockable": false,
+      "relative_position": 28,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 28",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "key": "Pilot Information 29",
+      "name": "Pilot Information 29",
+      "absolute_position": 29,
+      "lockable": false,
+      "relative_position": 29,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Pilot Information 29",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 1",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 2",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 3",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 4",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 5",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 6",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 7",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 8",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 9",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 10",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 11",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 12",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 13",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 14",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 15",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 16",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 17",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 18",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 19",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 20",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 21",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 22",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 23",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 24",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 25",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 26",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 27",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 28",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 29",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      },
+      "level_keys": [
+        "CSD Pilot Warning Page"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 1",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 2",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 3",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 4",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 5",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 6",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 7",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 8",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 9",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 10",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 11",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 12",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 13",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 14",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 15",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 16",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 17",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 18",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 19",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 20",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 21",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 22",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 23",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 24",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 25",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 26",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 27",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 28",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Pilot Warning Page",
+        "script_level.level_keys": [
+          "CSD Pilot Warning Page"
+        ],
+        "lesson.key": "Pilot Information 29",
+        "lesson_group.key": "",
+        "script.name": "csd-pilot"
+      }
+    }
+  ]
+}

@@ -2,16 +2,10 @@ class ScriptDSL < BaseDSL
   def initialize
     super
     @id = nil
-    @lesson = nil
-    @lesson_group = nil
     @lesson_groups = []
-    @lesson_lockable = false
-    @lesson_visible_after = nil
     @concepts = []
     @skin = nil
     @current_scriptlevel = nil
-    @scriptlevels = []
-    @lessons = []
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
@@ -25,7 +19,7 @@ class ScriptDSL < BaseDSL
     @curriculum_path = nil
     @project_widget_types = []
     @wrapup_video = nil
-    @script_announcements = nil
+    @announcements = nil
     @new_name = nil
     @family_name = nil
     @version_year = nil
@@ -36,6 +30,9 @@ class ScriptDSL < BaseDSL
     @project_sharing = nil
     @curriculum_umbrella = nil
     @tts = false
+    @is_course = false
+    @background = nil
+    @is_migrated = false
   end
 
   integer :id
@@ -53,9 +50,11 @@ class ScriptDSL < BaseDSL
   boolean :is_stable
   boolean :project_sharing
   boolean :tts
+  boolean :is_course
+  boolean :is_migrated
 
   string :wrapup_video
-  string :script_announcements
+  string :announcements
   string :new_name
   string :family_name
   string :version_year
@@ -63,6 +62,7 @@ class ScriptDSL < BaseDSL
   string :pilot_experiment
   string :editor_experiment
   string :curriculum_umbrella
+  string :background
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -84,26 +84,40 @@ class ScriptDSL < BaseDSL
     if key
       @lesson_groups << {
         key: key,
-        display_name: properties[:display_name]
+        display_name: properties[:display_name],
+        big_questions: [],
+        lessons: []
       }.compact
     end
-    @lesson_group = key
   end
 
-  def lesson(name, properties = {})
-    if @lesson
-      @lessons << {
-        lesson: @lesson,
-        visible_after: @lesson_visible_after,
-        scriptlevels: @scriptlevels,
+  def lesson_group_description(description)
+    @lesson_groups.last[:description] = description
+  end
+
+  def lesson_group_big_questions(questions)
+    @lesson_groups.last[:big_questions] = questions
+  end
+
+  def lesson(key, properties = {})
+    # For scripts that don't use lesson groups create a blank non-user facing lesson group
+    if key
+      if @lesson_groups.empty?
+        @lesson_groups << {
+          key: nil,
+          display_name: nil,
+          lessons: []
+        }
+      end
+
+      @lesson_groups.last[:lessons] << {
+        key: key,
+        name: properties[:display_name],
+        lockable: properties[:lockable],
+        visible_after: determine_visible_after_time(properties[:visible_after]),
+        script_levels: []
       }.compact
     end
-    @lesson = name
-    @lesson_lockable = properties[:lockable]
-    @lesson_visible_after = determine_visible_after_time(properties[:visible_after])
-    @scriptlevels = []
-    @concepts = []
-    @skin = nil
   end
 
   # If visible_after value is blank default to next wednesday at 8am PDT
@@ -125,7 +139,6 @@ class ScriptDSL < BaseDSL
     lesson(nil)
     {
       id: @id,
-      lessons: @lessons,
       hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
@@ -140,7 +153,7 @@ class ScriptDSL < BaseDSL
       curriculum_path: @curriculum_path,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
-      script_announcements: @script_announcements,
+      announcements: @announcements,
       new_name: @new_name,
       family_name: @family_name,
       version_year: @version_year,
@@ -151,7 +164,10 @@ class ScriptDSL < BaseDSL
       project_sharing: @project_sharing,
       curriculum_umbrella: @curriculum_umbrella,
       tts: @tts,
-      lesson_groups: @lesson_groups
+      lesson_groups: @lesson_groups,
+      is_course: @is_course,
+      background: @background,
+      is_migrated: @is_migrated
     }
   end
 
@@ -192,21 +208,13 @@ class ScriptDSL < BaseDSL
     progression = properties.delete(:progression)
     challenge = properties.delete(:challenge)
     experiments = properties.delete(:experiments)
-    named = properties.delete(:named)
     assessment = properties.delete(:assessment)
 
-    if named
-      properties[:named_level] = true
-    end
-
-    if assessment
-      properties[:assessment] = true
-    end
+    named = properties.delete(:named)
+    bonus = properties.delete(:bonus)
 
     level = {
       name: name,
-      lesson_group: @lesson_group,
-      lesson_lockable: @lesson_lockable,
       skin: @skin,
       concepts: @concepts.join(','),
       level_concept_difficulty: @level_concept_difficulty || {},
@@ -232,6 +240,10 @@ class ScriptDSL < BaseDSL
         @current_scriptlevel[:properties][:variants][name] = levelprops
       end
 
+      @current_scriptlevel[:assessment] = assessment if assessment
+      @current_scriptlevel[:bonus] = bonus if bonus
+      @current_scriptlevel[:named_level] = named if named
+
       if progression
         # Variant levels must always have the same progression (or no progression)
         current_progression = @current_scriptlevel[:properties][:progression]
@@ -240,14 +252,16 @@ class ScriptDSL < BaseDSL
         end
         @current_scriptlevel[:properties][:progression] = progression
       end
-      if challenge
-        @current_scriptlevel[:properties][:challenge] = challenge
-      end
+
+      @current_scriptlevel[:properties][:challenge] = challenge if challenge
     else
       script_level = {
-        lesson: @lesson,
         levels: [level]
       }
+
+      script_level[:assessment] = assessment if assessment
+      script_level[:bonus] = bonus if bonus
+      script_level[:named_level] = named if named
 
       if progression || challenge
         script_level[:properties] = {}
@@ -255,37 +269,39 @@ class ScriptDSL < BaseDSL
         script_level[:properties][:challenge] = true if challenge
       end
 
-      @scriptlevels << script_level
+      current_lesson_group = @lesson_groups.length - 1
+      current_lesson = @lesson_groups[current_lesson_group][:lessons].length - 1
+      @lesson_groups[current_lesson_group][:lessons][current_lesson][:script_levels] << script_level
     end
   end
 
   def variants
-    @current_scriptlevel = {levels: [], properties: {}, lesson: @lesson}
+    @current_scriptlevel = {levels: [], properties: {}}
   end
 
   def endvariants
-    @scriptlevels << @current_scriptlevel
+    @lesson_groups.last[:lessons].last[:script_levels] << @current_scriptlevel
     @current_scriptlevel = nil
   end
 
   # @override
   def i18n_hash
-    i18n_stage_strings = {}
-    @lessons.each do |stage|
-      i18n_stage_strings[stage[:lesson]] = {'name' => stage[:lesson]}
-    end
-
+    i18n_lesson_strings = {}
     i18n_lesson_group_strings = {}
     @lesson_groups.each do |lesson_group|
-      i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
+      if lesson_group[:key]
+        i18n_lesson_group_strings[lesson_group[:key]] = {}
+        lesson_group.select {|k, v| [:display_name, :description, :big_questions].include?(k) && !v.nil_or_empty?}.each do |k, v|
+          i18n_lesson_group_strings[lesson_group[:key]][k.to_s] = v
+        end
+      end
+      lesson_group[:lessons].each do |lesson|
+        i18n_lesson_strings[lesson[:key]] = {'name' => lesson[:name]}
+      end
     end
 
-    # temporarily include "stage" strings under both "stages" and "lessons"
-    # while we transition from the former term to the latter.
-    # TODO FND-1122
     {@name => {
-      'stages' => i18n_stage_strings,
-      'lessons' => i18n_stage_strings,
+      'lessons' => i18n_lesson_strings,
       'lesson_groups' => i18n_lesson_group_strings
     }}
   end
@@ -326,7 +342,7 @@ class ScriptDSL < BaseDSL
     s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
-    s << "script_announcements #{script.script_announcements}" if script.script_announcements
+    s << "announcements #{script.announcements}" if script.announcements
     s << "new_name '#{script.new_name}'" if script.new_name
     s << "family_name '#{script.family_name}'" if script.family_name
     s << "version_year '#{script.version_year}'" if script.version_year
@@ -337,6 +353,9 @@ class ScriptDSL < BaseDSL
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
     s << 'tts true' if script.tts
+    s << 'is_course true' if script.is_course
+    s << "background '#{script.background}'" if script.background
+    s << 'is_migrated true' if script.is_migrated
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)
@@ -348,8 +367,10 @@ class ScriptDSL < BaseDSL
     script.lesson_groups.each do |lesson_group|
       if lesson_group&.user_facing && !lesson_group.lessons.empty?
         t = "lesson_group '#{escape(lesson_group.key)}'"
-        t += ", display_name: '#{escape(lesson_group.localized_display_name)}'"
+        t += ", display_name: '#{escape(lesson_group.display_name)}'" if lesson_group.display_name
         s << t
+        s << "lesson_group_description '#{escape(lesson_group.description)}'" if lesson_group.description
+        s << "lesson_group_big_questions '#{escape(lesson_group.big_questions)}'" if lesson_group.big_questions
       end
       lesson_group.lessons.each do |lesson|
         s << serialize_lesson(lesson)
@@ -362,7 +383,8 @@ class ScriptDSL < BaseDSL
   def self.serialize_lesson(lesson)
     s = []
 
-    t = "lesson '#{escape(lesson.name)}'"
+    t = "lesson '#{escape(lesson.key)}'"
+    t += ", display_name: '#{escape(lesson.name)}'" if lesson.name
     t += ', lockable: true' if lesson.lockable
     t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
     s << t

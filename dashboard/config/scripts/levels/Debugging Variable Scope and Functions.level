@@ -6,7 +6,7 @@
   "user_id": 106,
   "properties": {
     "instructions_important": "false",
-    "reference": "/docs/concepts/app-lab/patterns/debugging-variable-scope-functions/",
+    "reference": "/docs/concepts/patterns/debugging-variable-scope-functions/",
     "parent_level_id": 17708,
     "encrypted": "false"
   },

@@ -11,17 +11,8 @@ title: Learning computer science when schools are closed in response to Covid19
 
 <p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
 <p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
-<p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
+<p>We also put together some <a href="#teacher-support">resources to help teachers continue teaching computer science</a> when their students are remote or in socially-distanced classrooms. </p>
 <p><a href="#apps">No computer at home? See smartphone options</a></p>
-
-<br>
-
-## Code Break: Learn from the Code.org team and special guests!
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
-
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
 ## Hour of Code: Try these engaging, introductory tutorials
 Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
@@ -121,32 +112,39 @@ A great option for students getting started on their own. You'll learn the funda
 
 <p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+## Learn from the Code.org team and special guests!
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Special guests join Code.org CEO Hadi Partovi in a live, interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
+<p>If you haven’t checked out all the Code Break or CodeBytes episodes, it’s not too late! Live episodes are no longer airing, but you can view all the Code Break episodes and self-paced activities <a href="https://code.org/break" target="_blank">here</a>. CodeBytes episodes can be found <a href="https://code.org/codebytes" target="_blank">here</a>.</p>
+
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 <a id="teacher-support"></a>
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
+## Support for teachers in virtual or socially-distanced classrooms
+Please visit <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> to view resources and suggestions for teachers in virtual or socially-distanced classroom environments. Course-specific resources can be accessed by clicking the links below.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
 <p><a href="#top">[Back to top]</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr>
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

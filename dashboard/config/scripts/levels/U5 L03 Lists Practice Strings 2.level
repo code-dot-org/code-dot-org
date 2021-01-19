@@ -33,6 +33,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
+    "validation_enabled": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "execute_palette_apis_only": "false",
@@ -49,10 +50,10 @@
     "parent_level_id": 19623,
     "encrypted": "false",
     "mini_rubric": "false",
-    "map_reference": "/docs/concepts/app-lab/patterns/random-list-access/",
+    "map_reference": "/docs/concepts/patterns/random-list-access/",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/list-scrolling-pattern/",
-      "/docs/concepts/app-lab/patterns/random-list-access/"
+      "/docs/concepts/patterns/list-scrolling-pattern/",
+      "/docs/concepts/patterns/random-list-access/"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",

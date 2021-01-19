@@ -1,64 +1,64 @@
 login_required true
 has_lesson_plan true
 
-lesson 'Personal Innovations'
+lesson 'Personal Innovations', display_name: 'Personal Innovations'
 level 'U1L1 Student Lesson Introduction'
 level 'U1L1 Innovation - Video'
 level 'U1L1 - FR computer science word association'
 
-lesson 'Sending Binary Messages'
+lesson 'Sending Binary Messages', display_name: 'Sending Binary Messages'
 level 'U1L2 Student Lesson Introduction'
 level 'U1L2 Multiple Choice Assessment Question', assessment: true
 level 'U1L2 Free response assessment question', assessment: true
 level 'U1L2 Free response reflection question', assessment: true
 
-lesson 'Sending Complex Messages'
+lesson 'Sending Complex Messages', display_name: 'Sending Complex Messages'
 level 'U1L3 Student Lesson Introduction'
 level 'U1L3 Free response reflection question', assessment: true
 level 'U1L3 Multiple Choice', assessment: true
 level 'U1L3 Free Response', assessment: true
 
-lesson 'Sending Binary Messages with the Internet Simulator'
+lesson 'Sending Binary Messages with the Internet Simulator', display_name: 'Sending Binary Messages with the Internet Simulator'
 level 'U1L4 Student Lesson Introduction'
 level 'U1L4 NetSim SendAB'
 level 'U1L4 Multiple Choice', assessment: true
 level 'U1L4 Free Response Reflection', assessment: true
 
-lesson 'Sending Bits in the Real World'
+lesson 'Sending Bits in the Real World', display_name: 'Sending Bits in the Real World'
 level 'U1L5 Student Lesson Introduction'
 level 'U1L5 How the Internet Works - Video'
 level 'U1L5 Matching Assessment', assessment: true
 
-lesson 'Number Systems'
+lesson 'Number Systems', display_name: 'Number Systems'
 level 'U1L6 Student Lesson Introduction'
 level 'U1L6 Assessment multiple choice', assessment: true
 level 'U1L6 Free Response Reflection', assessment: true
 
-lesson 'Binary Numbers'
+lesson 'Binary Numbers', display_name: 'Binary Numbers'
 level 'U1L7 Student Lesson Introduction'
 level 'Odometer'
 level 'U1L7 Free Response Assessment', assessment: true
 level 'U1L7 Free Response Reflection', assessment: true
 
-lesson 'Sending Numbers'
+lesson 'Sending Numbers', display_name: 'Sending Numbers'
 level 'U1L8 Student Lesson Introduction'
 level 'U1L8 NetSim numbers with decimal'
 level 'U1L8 Free Response Reflection', assessment: true
 level 'U1L8 Free Response2', assessment: true
 level 'U1L8 Multiple Choice', assessment: true
 
-lesson 'Encoding Numbers in the Real World'
+lesson 'Encoding Numbers in the Real World', display_name: 'Encoding Numbers in the Real World'
 level 'U1L9 Student Lesson Introduction'
 level 'U1L9 Free Response Assessment', assessment: true
 
-lesson 'Encoding and Sending Text'
+lesson 'Encoding and Sending Text', display_name: 'Encoding and Sending Text'
 level 'U1L10 Student Lesson Introduction'
 level 'U1L10 NetSim numbers with decimal'
 level 'U1L10 Assessment 1', assessment: true
 level 'U1L10 Assessment 2', assessment: true
 level 'U1L10 Assessment Free Response', assessment: true
 
-lesson 'Sending Formatted Text'
+lesson 'Sending Formatted Text', display_name: 'Sending Formatted Text'
 level 'U1L11 Student Lesson Introduction'
 level 'U1L11 NetSim numbers with Ascii'
 level 'U1L11 Assessment 1', assessment: true
@@ -66,11 +66,11 @@ level 'U1L11 Assessment 2', assessment: true
 level 'U1L11 Reflection Free Response', assessment: true
 level 'U1L11 Collaboration Reflection', assessment: true
 
-lesson 'Bytes and File Sizes'
+lesson 'Bytes and File Sizes', display_name: 'Bytes and File Sizes'
 level 'U1L12 Student Lesson Introduction'
 level 'U1L12 Reflection Free Response', assessment: true
 
-lesson 'Text Compression'
+lesson 'Text Compression', display_name: 'Text Compression'
 level 'U1L13 Student Lesson Summary'
 level 'U1L13 Text Compression'
 level 'U1L13 - Assess Text Compression reverse process', assessment: true
@@ -78,7 +78,7 @@ level 'U1L13 Assess Text Compression amount', assessment: true
 level 'U1L13 Assessment 1', assessment: true
 level 'U1L13 Assessment 2', assessment: true
 
-lesson 'Encoding B&W Images'
+lesson 'Encoding B&W Images', display_name: 'Encoding B&W Images'
 level 'U1L14 Student Lesson Summary'
 level 'Pixelation - Lesson 14 - Make the Letter A'
 level 'Pixelation - Lesson 14 - Fix bit offset'
@@ -86,7 +86,7 @@ level 'Pixelation - Lesson 14 - Make your own B and W Image'
 level 'U1L14 Assessment 1', assessment: true
 level 'U1L14 - Assessment 2', assessment: true
 
-lesson 'Encoding Color Images'
+lesson 'Encoding Color Images', display_name: 'Encoding Color Images'
 level 'U1L15 Student Lesson Summary'
 level 'Pixelation - Lesson 15 - Complete 3-bit color'
 level 'Pixelation - Lesson 15 - Color Shades'
@@ -97,9 +97,10 @@ level 'Pixelation - Lesson 15 - Favicon Instructions'
 level 'Pixelation - Lesson 15 - Color Free Play'
 level 'a bit about pixels'
 
-lesson 'Lossy Compression and File Formats'
+lesson 'Lossy Compression and File Formats', display_name: 'Lossy Compression and File Formats'
 level 'U1L16 Student Lesson Introduction'
 level 'U1L16 - Matching File Compression Types', assessment: true
 
-lesson 'Encode a Complex Thing'
+lesson 'Encode a Complex Thing', display_name: 'Encode an Experience'
 level 'U1L17 Student Lesson Introduction'
+

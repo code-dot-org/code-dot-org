@@ -28,6 +28,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
+    "validation_enabled": "false",
     "teacher_markdown": "#### Implementing Features and Fixes Individually\r\n\r\nBecause App Lab is difficult for large groups of students to work on simultaneously, we have students work on implementing features and fixes individually or in pairs. The benefit of this approach is that it allows the team as a whole to explore more potential features than if they were working all on the same app, but it also means that each team member's app will diverge further from the others as more changes are made.\r\n\r\nAs an optional extension activity you could provide a day of work for students to share their changes with each other and attempt to integrate all of the added features into a single app.\r\n\r\n#### Keeping Track of Changes\r\n\r\nThe more features students add to their app, the more likely they are to introduce new unforeseen bugs. To ensure that students always keep the most recent working copy of their app, encourage them make a remix before adding any new features. Make sure students leave the remix alone and return to this level to do their programming - this will ensure that when they go to submit their app for your review it is the most recent version.",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",

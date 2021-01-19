@@ -3,34 +3,35 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Apprentice Reflection Overview'
+lesson 'Apprentice Reflection Overview', display_name: 'Apprentice Reflection Overview'
 level 'welcome-apprentice-18', named: true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Day 1'
+lesson 'Day 1', display_name: 'Day 1'
 level 'morning-prep-monday'
 level 'feel-monday'
 level 'csp-pushDL-unit1'
 
-lesson 'Day 2'
+lesson 'Day 2', display_name: 'Day 2'
 level 'morning-prep-tuesday'
 level 'feel-tuesday'
 level 'instructional-strategy-tuesday'
 level 'csp-pushDL-unit1'
 
-lesson 'Day 3'
+lesson 'Day 3', display_name: 'Day 3'
 level 'morning-prep-wednesday'
 level 'feel-wednesday'
 level 'getting-buy-in-wednesday'
 level 'csp-pushDL-unit1'
 level 'csp-pushDL-unit2'
 
-lesson 'Day 4'
+lesson 'Day 4', display_name: 'Day 4'
 level 'morning-prep-thursday'
 level 'feel-thursday'
 level 'recruiting-thursday'
 level 'csp-pushDL-unit2'
 level 'csp-pushDL-unit3'
 
-lesson 'Wrap Up'
+lesson 'Wrap Up', display_name: 'Wrap Up'
 level 'apprentice-congrats', named: true
+

@@ -14,6 +14,17 @@ Parameters:
     Default: master
     MaxLength: 16
 <% end -%>
+<% if frontends -%>
+  DaemonInstanceType:
+    Type: String
+  AutoscaleRollingBatchSize:
+    Type: Number
+    Default: 20
+<% end -%>
+<% if options.console -%>
+  ConsoleInstanceType:
+    Type: String
+<% end -%>
 Resources:
   # Stack-specific IAM permissions applied to both daemon and frontends.
   CDOPolicy:
@@ -28,6 +39,7 @@ Resources:
             Action: 'secretsmanager:GetSecretValue'
             Resource:
               - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
+              - !Ref ChefConfig
 <% if database -%>
               - !Ref DatabaseSecret
 <% end -%>
@@ -71,13 +83,15 @@ Resources:
             Resource:
               - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/<%=CDO.dcdo_table_name%>"
               - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/<%=CDO.gatekeeper_table_name%>"
-          # Write analysis events to Firehose.
+          # Write to our Firehose streams
           # TODO: Import resources into stack.
           - Effect: Allow
             Action:
             - 'firehose:PutRecord'
             - 'firehose:PutRecordBatch'
-            Resource: !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
+            Resource:
+              - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
+              - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/i18n-string-tracking-events"
           # S3 access for student-libraries bucket
           - Effect: Allow
             Action:
@@ -99,11 +113,11 @@ Resources:
   image_id: IMAGE_ID,
   ssh_key_name: SSH_KEY_NAME,
   subnets: subnets(azs(AVAILABILITY_ZONES - ['us-east-1e'])), # us-east-1e doesn't support m5 instance types.
-  frontend_policies: [Ref: 'CDOPolicy'],
+  frontend_policies: [{Ref: 'CDOPolicy'}, {'Fn::ImportValue': 'IAM-SessionPermissions'}],
   frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
   frontend_volume_size: 64,
   ami_timeout: 'PT120M',
-  build_ami: erb_file(aws_dir('cloudformation/bootstrap_chef_stack.sh.erb'),
+  build_ami: erb_file(BOOTSTRAP_CHEF,
     resource_id: "AMICreate#{ami}",
     node_name: 'ami-$INSTANCE_ID',
     run_list: [CDO.chef_local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'],
@@ -178,14 +192,9 @@ Resources:
           Value: lb_cookie
         - Key: stickiness.lb_cookie.duration_seconds
           Value: 30
-<%   if !frontends && daemon_instance_id -%>
+<%   unless frontends -%>
       Targets:
-        - Id: <%=daemon_instance_id%>
-          Port: 80
-<%   elsif daemon %>
-      Targets:
-        - Id: !Ref <%=daemon%>
-          Port: 80
+        - {Id: !Ref <%=daemon%>, Port: 80}
 <%   end -%>
 <% end -%>
 
@@ -278,12 +287,17 @@ Resources:
                 Action:
                   - 'cloudformation:UpdateStack'
                   - 'cloudformation:DescribeStacks'
+                  - 'cloudformation:CreateChangeSet'
+                  - 'cloudformation:DescribeChangeSet'
+                  - 'cloudformation:ExecuteChangeSet'
+                  - 'cloudformation:DeleteChangeSet'
+                  - 'cloudformation:GetTemplateSummary'
                 Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
               - Effect: Allow
                 Action: iam:PassRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
 <% if rack_env?(:production) -%>
-        # Grant scheduled processes (Contact Rollups, Export to Redshift, etc.) permission to clone/delete RDS clusters.
+        # Grant scheduled processes (Export to Redshift, etc.) permission to clone/delete RDS clusters.
         - PolicyName: CloneDeleteRDSClusters
           PolicyDocument:
             Statement:
@@ -394,7 +408,9 @@ Resources:
                   - dms:StartReplicationTask
                 Resource: !Sub "arn:aws:dms:${AWS::Region}:${AWS::AccountId}:task:*"
 <% end -%>
-      ManagedPolicyArns: [!Ref CDOPolicy]
+      ManagedPolicyArns:
+        - !Ref CDOPolicy
+        - !ImportValue IAM-SessionPermissions
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   DaemonInstanceProfile:
     Type: AWS::IAM::InstanceProfile
@@ -402,26 +418,28 @@ Resources:
 <% if daemon -%>
   <%=daemon%>:
     Type: AWS::EC2::Instance
+<% unless rack_env?(:adhoc) -%>
+    DeletionPolicy: Retain
+<% end -%>
     CreationPolicy:
       ResourceSignal:
         Timeout: PT2H
     Properties:
       ImageId: <%=IMAGE_ID%>
-      InstanceType: !Ref InstanceType
+      InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
       IamInstanceProfile: !Ref DaemonInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
       Tags:
-      - Key: Name
-        Value: !Ref AWS::StackName
+        - {Key: Name, Value: <%=frontends ? "#{environment}-daemon" : "!Ref 'AWS::StackName'"%>}
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: 64
+            VolumeSize: <%= rack_env?(:production) ? 128 : 64 %>
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash -x
-          <%=indent(erb_file(aws_dir('cloudformation', 'bootstrap_chef_stack.sh.erb'),
+          <%=indent(erb_file(BOOTSTRAP_CHEF,
             resource_id: daemon,
             node_name: '$STACK',
             run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
@@ -437,9 +455,11 @@ Resources:
             --region $REGION \
             || true
       NetworkInterfaces:
-      - AssociatePublicIpAddress: true
-        DeviceIndex: 0
-        SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
+      - DeviceIndex: 0
+        SubnetId: <%=(frontends ? subnets : public_subnets).first.to_json%>
+<%  unless frontends -%>
+        AssociatePublicIpAddress: true
+<%  end -%>
         GroupSet:
           - !ImportValue VPC-FrontendSecurityGroup
           - !ImportValue VPC-DaemonSecurityGroup # SSH access to frontends
@@ -450,12 +470,61 @@ Resources:
     DependsOn: Aurora1
 <% end -%>
 <%end-%>
+<% if options.console -%>
+  Console:
+    Type: AWS::EC2::Instance
+    DeletionPolicy: Retain
+    CreationPolicy: {ResourceSignal: {Timeout: PT2H}}
+    Properties:
+      ImageId: <%=IMAGE_ID%>
+      InstanceType: !Ref ConsoleInstanceType
+      IamInstanceProfile: !Ref FrontendInstanceProfile
+      KeyName: <%=SSH_KEY_NAME%>
+      Tags:
+        - {Key: Name, Value: <%=environment%>-console}
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs: {VolumeSize: 64, VolumeType: gp2}
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash -x
+          <%=indent(erb_file(BOOTSTRAP_CHEF,
+            resource_id: 'Console',
+            node_name: '$ENVIRONMENT-console',
+            run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[console]'],
+            commit: nil, # track branch
+            daemon: false
+          ), 10)%>
+          # Signal CloudFormation resource.
+          aws cloudformation signal-resource \
+            --unique-id $INSTANCE_ID \
+            --stack-name $STACK \
+            --logical-resource-id $RESOURCE_ID \
+            --status $STATUS \
+            --region $REGION \
+            || true
+      NetworkInterfaces:
+        - DeviceIndex: 0
+          SubnetId: <%=subnets[1].to_json%>
+          GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
+<%   if database %>
+    DependsOn: Aurora1
+<%   end -%>
+<% end-%>
 <% if alarms-%>
 <%=  component 'alarms'%>
 <% end -%>
 <% if database-%>
 <%=  component 'database'%>
 <% end -%>
+  ChefConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: !Sub "Custom Chef attributes for ${AWS::StackName} CloudFormation stack"
+      Name: !Sub "CfnStack/${AWS::StackName}/chef"
+      # Update this secret manually after the stack is created to customize Chef configuration.
+      # The value should never be changed in the stack itself, since it would clobber all other changes.
+      SecretString: '{}'
 Outputs:
   DashboardURL:
     Value: "https://<%=studio_subdomain%>"

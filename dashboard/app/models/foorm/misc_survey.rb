@@ -15,17 +15,56 @@
 #  index_misc_survey_foorm_submissions_on_foorm_id  (foorm_submission_id) UNIQUE
 #
 
-class Foorm::MiscSurvey < ActiveRecord::Base
+class Foorm::MiscSurvey < ApplicationRecord
   belongs_to :foorm_submission, class_name: 'Foorm::Submission'
   belongs_to :user
 
   def self.all_form_data
     [
-      # Placeholder survey configuration
       {
-        form_name: 'surveys/pd/summer_workshop_daily_survey',
-        misc_form_path: 'csd_sample',
-        survey_data: {workshop_course: 'CS Discoveries'},
+        form_name: 'surveys/teachers/nps_survey',
+        misc_form_path: 'nps_survey',
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csf_post_course',
+        survey_data: {course: 'CS Fundamentals', pd: false},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csf_post_course_pd',
+        survey_data: {course: 'CS Fundamentals', pd: true},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csd_post_course',
+        survey_data: {course: 'CS Discoveries', pd: false},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csd_post_course_pd',
+        survey_data: {course: 'CS Discoveries', pd: true},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csp_post_course',
+        survey_data: {course: 'CS Principles', pd: false},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/teachers/teacher_end_of_year_survey',
+        misc_form_path: 'csp_post_course_pd',
+        survey_data: {course: 'CS Principles', pd: true},
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/pd/csd_csp_facilitator_post_survey',
+        misc_form_path: 'facilitator_post_survey',
         allow_multiple_submissions: true
       }
     ]
@@ -40,5 +79,10 @@ class Foorm::MiscSurvey < ActiveRecord::Base
       create_foorm_submission!(form_name: form_name, form_version: form_version, answers: answers)
       save!
     end
+  end
+
+  def self.form_disabled?(misc_form_path)
+    disabled_forms = DCDO.get('foorm_misc_survey_disabled', [])
+    disabled_forms && disabled_forms.include?(misc_form_path)
   end
 end

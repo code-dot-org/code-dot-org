@@ -279,7 +279,7 @@ class LibraryTable extends React.Component {
     );
 
     return (
-      <div>
+      <div className="ui-test-library-table">
         {hasLibraries && (
           <Table.Provider columns={columns} style={tableLayoutStyles.table}>
             <Table.Header />

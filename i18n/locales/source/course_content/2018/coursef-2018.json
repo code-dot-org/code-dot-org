@@ -1731,6 +1731,12 @@
       "moving west": "moving west",
       "patrolling": "patrolling",
       "swimming left and right": "swimming left and right"
+    },
+    "placeholder_texts": {
+      "cbada13e4c1e0a4ce8a6778941fb48de": "Get Coins. Don't Crash!",
+      "6b90c9823ff75e6a78aa63b392e7315a": "Score: ",
+      "e8a10c04d72b2f135dabe360c4bdd534": "You win!",
+      "498cd895eb5a102c5aeb977e2b928dee": "Thank you!"
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/25/puzzle/1": {

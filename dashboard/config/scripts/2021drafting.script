@@ -1,0 +1,61 @@
+teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"]]
+
+lesson_group 'introduction', display_name: 'Introduction'
+lesson_group_description 'Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!'
+lesson 'Course F Introduction', display_name: 'Introducing Sprite Lab'
+level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Video: Introducing Sprite Lab'
+level 'courseF_intro_apps', progression: 'Exploration: Sample Apps'
+level 'courseF_intro_birds_puzzle', progression: 'Exploration: Writing Code'
+
+lesson 'Making Sprites', display_name: 'Making Sprites'
+level 'courseF_sprites_predict', progression: 'Predict'
+level 'CourseEF_video_MakeSprite_2020', progression: 'Video: How to Make a Sprite'
+level 'courseF_sprites_make', progression: 'Skill Building'
+level 'courseF_sprites_positioning', progression: 'Skill Building'
+level 'courseF_sprites_moreSprites', progression: 'Skill Building'
+level 'courseF_sprites_properties', progression: 'Skill Building'
+level 'courseF_sprites_behaviors', progression: 'Skill Building'
+level 'courseF_sprites_practice', progression: 'Practice'
+level 'courseF_sprites_freeplay', progression: 'Free Play: Make a Scene'
+
+lesson 'Sprites in Action', display_name: 'Sprites in Action'
+level 'courseF_events_predict', progression: 'Predict'
+level 'CDEF_video_SpritesInAction_2020', progression: 'Video: Sprites in Action'
+
+lesson_group 'lessonGroup-3', display_name: 'Variables'
+lesson_group_description 'Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!'
+lesson 'lesson-1', display_name: 'Blank Space Variables'
+level 'EnvelopeVariables-Unplugged_2021', progression: 'Blank Space Variables'
+
+lesson 'lesson-2', display_name: 'Storing and Retrieving Text'
+
+lesson 'lesson-3', display_name: 'Create a Chat-Bot'
+
+lesson 'lesson-4', display_name: 'Counting with Variables'
+
+lesson 'lesson-5', display_name: 'Groups of Sprites'
+
+lesson 'lesson-6', display_name: 'Create a Collector Game'
+
+lesson_group 'outbreak', display_name: 'Outbreak Simulation'
+lesson 'Virus Simulation for Code Bytes', display_name: 'Coding a Simulation'
+level 'outbreak_story', progression: 'Welcome to Monster Town'
+level 'outbreak1', progression: 'Creating a Simulation'
+level 'outbreak2', progression: 'Programming with Events'
+level 'outbreak3', progression: 'Stopping the Outbreak with Masks'
+level 'outbreak_story2', progression: 'Learning from Simulations'
+level 'outbreak4', progression: 'More Monsters'
+level 'outbreak5', progression: 'Recovery'
+level 'outbreak6', progression: 'Chance', challenge: true
+level 'outbreak7', progression: 'Vaccines', challenge: true
+level 'outbreak8', progression: 'Share Your Message'
+level 'outbreak_freeplay_choice', progression: 'Free Play'
+
+lesson_group 'Toolbox Levels', display_name: 'Toolbox Levels'
+lesson 'Sprite Lab', display_name: 'Sprite Lab Blocks'
+level 'sprite lab - ask and answer', progression: 'Text Input'
+level 'anjali- Math Blocks', progression: 'Math Blocks'
+level '2020 new SL stuff', progression: 'New Sprite Animations'
+level 'symmetry', progression: 'Symmetry'
+level 'courseF_2021_template', progression: 'Full Toolbox and/or Template'
+

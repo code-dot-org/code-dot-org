@@ -2,6 +2,18 @@ import * as coreLibrary from '../coreLibrary';
 import {commands as behaviorCommands} from './behaviorCommands';
 
 export const commands = {
+  addTarget(spriteArg, targetCostume) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => {
+      if (!sprite.targetSet) {
+        sprite.targetSet = [];
+      }
+      if (!sprite.targetSet.includes(targetCostume)) {
+        sprite.targetSet.push(targetCostume);
+      }
+    });
+  },
+
   bounceOff(spriteArg, targetArg) {
     let sprites = coreLibrary.getSpriteArray(spriteArg);
     let targets = coreLibrary.getSpriteArray(targetArg);
@@ -49,6 +61,19 @@ export const commands = {
     let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => this.edges.displace(sprite));
   },
+
+  isCostumeEqual(spriteArg, costumeName) {
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    if (sprites.length === 0) {
+      return false;
+    }
+    return sprites.every(sprite => sprite.getAnimationLabel() === costumeName);
+  },
+
+  isKeyPressed(key) {
+    return this.keyDown(key);
+  },
+
   isTouchingEdges(spriteArg) {
     if (!this.edges) {
       this.createEdgeSprites();
@@ -137,6 +162,11 @@ export const commands = {
       }
     });
   },
+
+  setDefaultSpriteSize(size) {
+    coreLibrary.defaultSpriteSize = size;
+  },
+
   setProp(spriteArg, prop, val) {
     if (val === undefined) {
       return;

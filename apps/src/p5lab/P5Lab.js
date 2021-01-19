@@ -76,6 +76,7 @@ import {
 } from '@cdo/apps/util/exporter';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
+import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -273,7 +274,13 @@ P5Lab.prototype.init = function(config) {
       startLibraries = JSON.parse(config.level.startLibraries);
     }
     project.sourceHandler.setInitialLibrariesList(startLibraries);
-    getStore().dispatch(setInitialAnimationList(this.startAnimations));
+    getStore().dispatch(
+      setInitialAnimationList(
+        this.startAnimations,
+        false /* shouldRunV3Migration */,
+        this.isSpritelab
+      )
+    );
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -298,10 +305,17 @@ P5Lab.prototype.init = function(config) {
     }.bind(this)
   };
 
-  // Display CSF-style instructions when using Blockly. Otherwise provide a way
-  // for us to have top pane instructions disabled by default, but able to turn
-  // them on.
-  config.noInstructionsWhenCollapsed = !this.isSpritelab;
+  // Display CSF-style instructions when using Blockly (unless there are no
+  // instructions to display). Otherwise provide a way for us to have top pane
+  // instructions disabled by default, but able to turn them on.
+  config.noInstructionsWhenCollapsed =
+    !this.isSpritelab ||
+    (this.isSpritelab &&
+      !hasInstructions(
+        this.level.shortInstructions,
+        this.level.longInstructions,
+        config.hasContainedLevels
+      ));
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;
@@ -377,8 +391,10 @@ P5Lab.prototype.init = function(config) {
     (!config.hideSource &&
       !config.level.debuggerDisabled &&
       !config.level.iframeEmbedAppAndCode);
+  var showPauseButton = experiments.isEnabled(experiments.SPRITELAB_PAUSE);
   var showDebugConsole = config.level.editCode && !config.hideSource;
-  this.debuggerEnabled = showDebugButtons || showDebugConsole;
+  this.debuggerEnabled =
+    showDebugButtons || showPauseButton || showDebugConsole;
 
   if (this.debuggerEnabled) {
     getStore().dispatch(
@@ -426,7 +442,8 @@ P5Lab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
-    librariesEnabled: !!config.level.librariesEnabled
+    librariesEnabled: !!config.level.librariesEnabled,
+    validationEnabled: !!config.level.validationEnabled
   });
 
   if (startInAnimationTab(getStore().getState())) {
@@ -436,15 +453,20 @@ P5Lab.prototype.init = function(config) {
   // Push project-sourced animation metadata into store. Always use the
   // animations specified by the level definition for embed and contained
   // levels.
-  const initialAnimationList =
-    config.initialAnimationList && !config.embed && !config.hasContainedLevels
-      ? config.initialAnimationList
-      : this.startAnimations;
+  const useConfig =
+    config.initialAnimationList && !config.embed && !config.hasContainedLevels;
+  let initialAnimationList = useConfig
+    ? config.initialAnimationList
+    : this.startAnimations;
+  initialAnimationList = this.loadAnyMissingDefaultAnimations(
+    initialAnimationList
+  );
 
   getStore().dispatch(
     setInitialAnimationList(
       initialAnimationList,
-      this.isSpritelab /* shouldRunV3Migration */
+      this.isSpritelab /* shouldRunV3Migration */,
+      this.isSpritelab
     )
   );
 
@@ -472,6 +494,7 @@ P5Lab.prototype.init = function(config) {
           <P5LabView
             showFinishButton={finishButtonFirstLine && showFinishButton}
             onMount={onMount}
+            pauseHandler={this.onPause}
           />
         </Provider>,
         document.getElementById(config.containerId)
@@ -482,6 +505,47 @@ P5Lab.prototype.init = function(config) {
     return loader.catch(() => {});
   }
   return loader;
+};
+
+/**
+ * Load any necessary missing animations. For now, this is mainly for
+ * the "set background to" block, which needs to have backgrounds in the
+ * animation list at the start in order to look not broken.
+ * @param {Object} initialAnimationList
+ */
+P5Lab.prototype.loadAnyMissingDefaultAnimations = function(
+  initialAnimationList
+) {
+  if (!this.isSpritelab) {
+    return initialAnimationList;
+  }
+  let configDictionary = {};
+  initialAnimationList.orderedKeys.forEach(key => {
+    const name = initialAnimationList.propsByKey[key].name;
+    configDictionary[name] = key;
+  });
+  // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.json.
+  // This is primarily to handle pre existing levels that don't have animations in their list yet
+  const categoryCheck = initialAnimationList.orderedKeys.filter(key => {
+    const {categories} = initialAnimationList.propsByKey[key];
+    return categories && categories.includes('backgrounds');
+  });
+  const nameCheck = defaultSprites.orderedKeys.filter(key => {
+    return (
+      defaultSprites.propsByKey[key].categories.includes('backgrounds') &&
+      configDictionary[defaultSprites.propsByKey[key].name]
+    );
+  });
+  const hasBackgrounds = categoryCheck.length > 0 || nameCheck.length > 0;
+  if (!hasBackgrounds) {
+    defaultSprites.orderedKeys.forEach(key => {
+      if (defaultSprites.propsByKey[key].categories.includes('backgrounds')) {
+        initialAnimationList.orderedKeys.push(key);
+        initialAnimationList.propsByKey[key] = defaultSprites.propsByKey[key];
+      }
+    });
+  }
+  return initialAnimationList;
 };
 
 /**
@@ -585,6 +649,11 @@ P5Lab.prototype.setupReduxSubscribers = function(store) {
     }
   });
 };
+
+/**
+ * Override to change pause behavior.
+ */
+P5Lab.prototype.onPause = function() {};
 
 P5Lab.prototype.onIsRunningChange = function() {
   this.setCrosshairCursorForPlaySpace();
@@ -794,8 +863,11 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
   if (message && msg[message]) {
     this.message = msg[message]();
   }
+  const sourcesUnchanged = !this.studioApp_.validateCodeChanged();
   if (this.executionError) {
     this.result = ResultType.ERROR;
+  } else if (sourcesUnchanged) {
+    this.result = ResultType.FAILURE;
   } else {
     // In most cases, submit all results as success
     this.result = ResultType.SUCCESS;
@@ -810,6 +882,8 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
     });
   } else if (testResult) {
     this.testResults = testResult;
+  } else if (sourcesUnchanged) {
+    this.testResults = TestResults.FREE_PLAY_UNCHANGED_FAIL;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }

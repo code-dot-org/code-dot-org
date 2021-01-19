@@ -7,6 +7,7 @@ import Radium from 'radium';
 import React from 'react';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import color from '../util/color';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   dialog: {
@@ -58,6 +59,9 @@ const styles = {
   },
   primaryButton: {
     float: 'right'
+  },
+  primaryButtonRtl: {
+    float: 'left'
   },
   footer: {
     marginTop: 20,
@@ -113,6 +117,8 @@ class ChallengeDialog extends React.Component {
   }
 
   render() {
+    const isRtl = getStore().getState().isRtl;
+
     return (
       <BaseDialog
         isOpen={this.state.isOpen}
@@ -149,7 +155,7 @@ class ChallengeDialog extends React.Component {
         </LegacyButton>
         <LegacyButton
           type="primary"
-          style={styles.primaryButton}
+          style={isRtl ? styles.primaryButtonRtl : styles.primaryButton}
           onClick={this.handlePrimary}
           id="challengePrimaryButton"
         >

@@ -1,4 +1,3 @@
-tts true
 hidden false
 login_required true
 hideable_lessons true
@@ -12,17 +11,18 @@ version_year '2017'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
+tts true
 
 lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'
-lesson 'Exploring Websites'
+lesson 'Exploring Websites', display_name: 'Exploring Websites'
 level 'CSD U2 L1 Overview', named: true
 level 'CSD U2 Top Websites', named: true
 
-lesson 'Websites for Expression '
+lesson 'Websites for Expression ', display_name: 'Websites for Expression '
 level 'CSD U2 L2 Overview', named: true
 level 'CSD U2 Expression Exemplars', named: true
 
-lesson 'Intro to HTML'
+lesson 'Intro to HTML', display_name: 'Intro to HTML'
 level 'CSD U2 L3 Overview', named: true
 level 'CSDU2 - Type Anything', progression: 'Experiment with Web Lab'
 level 'Intro to Web Lab - Part 1', named: true
@@ -33,7 +33,7 @@ level 'CSD U2 HTML Adding Paragraphs', progression: 'Using HTML Tags'
 level 'CSD U2 HTML Adding Paragraphs pt 2', progression: 'Using HTML Tags'
 level 'CSD U2 HTML Debug Paragraphs', progression: 'Using HTML Tags'
 
-lesson 'Headings'
+lesson 'Headings', display_name: 'Headings'
 level 'CSD U2 L4 Overview', named: true
 level 'CSD U2 Pair Programming Video', named: true
 level 'CSD U2 Heading Demo', progression: 'Headings'
@@ -45,11 +45,11 @@ level 'CSD U2 PSP Programming', named: true
 level 'CSD U2 Design Project', progression: 'Your Personal Website'
 level 'CSD U2 Project Start', progression: 'Your Personal Website'
 
-lesson 'Digital Footprint'
+lesson 'Digital Footprint', display_name: 'Digital Footprint'
 level 'CSD U2 L5 Overview', named: true
 level 'Social Sleuth', named: true
 
-lesson 'Lists'
+lesson 'Lists', display_name: 'Lists'
 level 'CSD U2 L6 Overview', named: true
 level 'CSD U2 lists intro', progression: 'Lists'
 level 'CSD U2 ordered list', progression: 'Lists'
@@ -59,7 +59,7 @@ level 'CSD U2 lists map', named: true
 level 'CSD U2 expand project', progression: 'Expanding Your Website'
 level 'CSD U2 new page', progression: 'Expanding Personal Website'
 
-lesson 'Intellectual Property and Images'
+lesson 'Intellectual Property and Images', display_name: 'Intellectual Property and Images'
 level 'CSD U2 L7 Overview', named: true
 level 'CSD U2 images map', named: true
 level 'CSD U2 Image Tag 1', progression: 'Adding Images'
@@ -69,7 +69,7 @@ level 'CSD U2 CC Search Map', named: true
 level 'CSD U2 Image Tag Attribution', progression: 'Attribution'
 level 'CSD U2 Info Page Final Touches', progression: 'Attribution'
 
-lesson 'Clean Code and Debugging'
+lesson 'Clean Code and Debugging', display_name: 'Clean Code and Debugging'
 level 'CSD U2 Lesson 6 Overview', named: true
 level 'CSD U2 Debugging 1', progression: 'Debugging'
 level 'CSD U2 Debugging 2', progression: 'Debugging'
@@ -79,7 +79,7 @@ level 'CSD U2 commenting', progression: 'Debugging'
 level 'CSD U2 formatting map', named: true
 level 'CSD U2 challenge', progression: 'Challenge'
 
-lesson 'Project - Multi-Page Websites'
+lesson 'Project - Multi-Page Websites', display_name: 'Project - Multi-Page Websites'
 level 'CSD U2 Lesson 9 Overview', named: true
 level 'CSD U2 a tag map', named: true
 level 'CSD U2 link demo', progression: 'Linking Pages'
@@ -94,7 +94,7 @@ level 'CSD U2 project share', progression: 'Website Project'
 level 'csd-pulse-check-survey-1-levelgroup U2Ch1', progression: 'Reflection', assessment: true
 
 lesson_group 'csd2_2', display_name: 'Chapter 2: Styling and CSS'
-lesson 'Styling Text with CSS'
+lesson 'Styling Text with CSS', display_name: 'Styling Text with CSS'
 level 'Unit 2 Lesson 7 Overview', named: true
 level 'CSD U2 CSS explore CSS', named: true
 level 'Video: Intro to CSS', named: true
@@ -110,7 +110,7 @@ level 'Video: Intro to CSS Part 2', named: true
 level 'CSD U2 add file', progression: 'Styling your Website'
 level 'CSD U2 text style freeplay', progression: 'Styling your Website'
 
-lesson 'Styling Elements with CSS'
+lesson 'Styling Elements with CSS', display_name: 'Styling Elements with CSS'
 level 'Unit 2 Lesson 8 Overview', named: true
 level 'CSD U2 layout style sample', progression: 'Exploring more CSS'
 level 'CSD U2 layout style bgcolor', progression: 'Exploring more CSS'
@@ -124,10 +124,10 @@ level 'CSD U2 layout style margin', progression: 'Layout with CSS'
 level 'CSD U2 Layout Properties Map', named: true
 level 'CSD U2 layout style freeplay', progression: 'Styling your Website'
 
-lesson 'Sources and Search Engines'
+lesson 'Sources and Search Engines', display_name: 'Sources and Search Engines'
 level 'CSD U2 L12 Overview', named: true
 
-lesson 'RGB Colors and Classes'
+lesson 'RGB Colors and Classes', display_name: 'RGB Colors and Classes'
 level 'Unit 2 Lesson 10 Overview', named: true
 level 'CSD U2 RGB intro', named: true
 level 'CSD U2 RGB winter', progression: 'RGB Exploration'
@@ -140,11 +140,12 @@ level 'CSD U2 classes spring', progression: 'Styling with Classes'
 level 'CSD U2 classes summer', progression: 'Styling with Classes'
 level 'CSDU2 - PW - Class Style Personal Site', progression: 'Styling with Classes'
 
-lesson 'Project - Personal Portfolio Website'
+lesson 'Project - Personal Portfolio Website', display_name: 'Project - Personal Portfolio Website'
 level 'Unit 2 Lesson 16 Overview', named: true
 level 'Final Personal Website', named: true
 level 'csd-pulse-check-survey-1-levelgroup U2Ch2', progression: 'Reflection', assessment: true
 
 lesson_group 'csd_survey', display_name: 'Post-Course Survey'
-lesson 'CSD Post-Course Survey', lockable: true
+lesson 'CSD Post-Course Survey', display_name: 'CSD Post-Course Survey', lockable: true
 level 'csd-post-survey-2018-markdown-with-link-to-survey', assessment: true
+

@@ -1,8 +1,6 @@
 /** @file Board controller for Adafruit Circuit Playground */
-/* global SerialPort */ // Maybe provided by the Code.org Browser
 import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import ChromeSerialPort from 'chrome-serialport';
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import experiments from '@cdo/apps/util/experiments';
@@ -22,13 +20,10 @@ import {
   J5_CONSTANTS
 } from './PlaygroundConstants';
 import Led from './Led';
-import {
-  isNodeSerialAvailable,
-  ADAFRUIT_VID,
-  CIRCUIT_PLAYGROUND_EXPRESS_PID,
-  CIRCUIT_PLAYGROUND_PID
-} from '../../portScanning';
+import {isNodeSerialAvailable} from '../../portScanning';
 import PlaygroundButton from './Button';
+import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
+import {serialPortType} from '../../util/browserChecks';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -38,12 +33,6 @@ const SERIAL_BAUD = 57600;
 
 /** Maps the Circuit Playground Express pins to Circuit Playground Classic*/
 const pinMapping = {A0: 12, A1: 6, A2: 9, A3: 10, A4: 3, A5: 2, A6: 0, A7: 1};
-
-export const BOARD_TYPE = {
-  CLASSIC: 'classic',
-  EXPRESS: 'express',
-  OTHER: 'other'
-};
 
 /**
  * Controller interface for an Adafruit Circuit Playground board using
@@ -103,7 +92,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
-        this.boardType_ = this.detectBoardType();
+        this.boardType_ = detectBoardTypeFromPort(this.port_);
+        if (this.boardType_ === BOARD_TYPE.EXPRESS) {
+          this.fiveBoard_.isExpressBoard = true;
+        }
         if (experiments.isEnabled('detect-board')) {
           this.detectFirmwareVersion(playground);
         }
@@ -126,33 +118,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
           playground.firmware.version.minor
       );
     });
-  }
-
-  /**
-   * Detects the type of board plugged into the serial port
-   */
-  detectBoardType() {
-    const vendorId =
-      this.port_ && this.port_.vendorId
-        ? parseInt(this.port_.vendorId, 16)
-        : null;
-    const productId =
-      this.port_ && this.port_.productId
-        ? parseInt(this.port_.productId, 16)
-        : null;
-    let boardType = BOARD_TYPE.OTHER;
-    if (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) {
-      boardType = BOARD_TYPE.CLASSIC;
-    } else if (
-      vendorId === ADAFRUIT_VID &&
-      productId === CIRCUIT_PLAYGROUND_EXPRESS_PID
-    ) {
-      boardType = BOARD_TYPE.EXPRESS;
-      if (this.fiveBoard_) {
-        this.fiveBoard_.isExpressBoard = true;
-      }
-    }
-    return boardType;
   }
 
   /**
@@ -279,6 +244,15 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   reset() {
+    /*
+     * Clear send queue of any pending messages.
+     * Important to do this before calling cleanupCircuitPlaygroundComponents. That function
+     * resets the state on the various board components, which requires writing to the board.
+     * So if we clear the queue after we call cleanupCircuitPlaygroundComponents, but before
+     * all of the writes complete, the board will be left in a partially-reset state.
+     */
+    this.serialPort_.queue = [];
+
     cleanupCircuitPlaygroundComponents(
       this.prewiredComponents_,
       false /* shouldDestroyComponents */
@@ -373,49 +347,38 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
-    // A gotcha here: These two types of SerialPort provide similar, but not
-    // exactly equivalent, interfaces.  When making changes to construction
-    // here maker sure to test both paths:
-    //
-    // Code.org Browser case: Native Node SerialPort 6 is available on window.
-    //
-    // Code.org connector app case: ChromeSerialPort bridges through the Chrome
-    // app, implements SerialPort 3's interface.
-    const SerialPortType = isNodeSerialAvailable()
-      ? SerialPort
-      : ChromeSerialPort.SerialPort;
+    const SerialPortType = serialPortType();
 
     const port = new SerialPortType(portName, {
       baudRate: SERIAL_BAUD
     });
 
     if (isNodeSerialAvailable()) {
-      const queue = [];
+      port.queue = [];
       let sendPending = false;
       const oldWrite = port.write;
 
       const trySend = buffer => {
         if (buffer) {
-          queue.push(buffer);
+          port.queue.push(buffer);
         }
 
-        if (sendPending || queue.length === 0) {
+        if (sendPending || port.queue.length === 0) {
           // Exhausted pending send buffer.
           return;
         }
-
-        if (queue.length > 512) {
+        if (port.queue.length > 512) {
           throw new Error(
             'Send queue is full! More than 512 pending messages.'
           );
         }
 
-        const toSend = queue.shift();
+        const toSend = port.queue.shift();
         sendPending = true;
         oldWrite.call(port, toSend, 'binary', function() {
           sendPending = false;
 
-          if (queue.length !== 0) {
+          if (port.queue.length !== 0) {
             trySend();
           }
         });

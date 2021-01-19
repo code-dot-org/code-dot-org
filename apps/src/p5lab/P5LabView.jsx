@@ -18,9 +18,6 @@ import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker from './AnimationPicker/AnimationPicker';
-import animationLibrary from './gamelab/animationLibrary.json';
-import {AnimationCategories} from './gamelab/constants';
-import {CostumeCategories} from './spritelab/constants';
 
 /**
  * Top-level React wrapper for GameLab
@@ -42,7 +39,13 @@ class P5LabView extends React.Component {
     showVisualizationHeader: PropTypes.bool.isRequired,
     isIframeEmbed: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired
+    spriteLab: PropTypes.bool.isRequired,
+    isBackground: PropTypes.bool,
+    pauseHandler: PropTypes.func.isRequired
+  };
+
+  state = {
+    libraryManifest: {}
   };
 
   getChannelId() {
@@ -52,25 +55,23 @@ class P5LabView extends React.Component {
     return undefined;
   }
 
-  getLibraryManifest = () => {
-    return this.state.libraryManifest;
-  };
-
-  getCategories() {
-    return this.props.spriteLab ? CostumeCategories : AnimationCategories;
-  }
-
   componentDidMount() {
     this.props.onMount();
-    if (this.props.spriteLab) {
-      fetch('/api/v1/animation-library/manifest/spritelab')
-        .then(response => response.json())
-        .then(libraryManifest => {
-          this.setState({libraryManifest});
-        });
-    } else {
-      this.setState({libraryManifest: animationLibrary});
-    }
+    const locale = window.appOptions.locale;
+    const app = this.props.spriteLab ? 'spritelab' : 'gamelab';
+    fetch(`/api/v1/animation-library/manifest/${app}/${locale}`)
+      .then(response => response.json())
+      .then(libraryManifest => {
+        this.setState({libraryManifest});
+      });
+  }
+
+  // TODO(JillianK): Remove this function and all uses of it once new sprites have been added to the Spritelab animaion library.
+  // Jira context: https://codedotorg.atlassian.net/browse/STAR-1319
+  generateCategoryImagePathPrefix() {
+    return this.props.spriteLab
+      ? '/blockly/media/spritelab/animation-previews-spritelab/category_'
+      : '/blockly/media/gamelab/animation-previews-gamelab/category_';
   }
 
   renderCodeMode() {
@@ -96,7 +97,21 @@ class P5LabView extends React.Component {
       responsive: isResponsive,
       pin_bottom: !hideSource && pinWorkspaceToBottom
     });
-
+    let defaultQuery = {
+      categoryQuery: '',
+      searchQuery: ''
+    };
+    if (this.props.isBackground) {
+      defaultQuery.categoryQuery = 'backgrounds';
+    }
+    // we don't want them to be able to navigate to all categories if we're only showing backgrounds
+    const navigable = !this.props.isBackground;
+    // we don't want to show backgrounds if we're looking for sprites in spritelab
+    const hideBackgrounds = !this.props.isBackground && this.props.spriteLab;
+    // we don't want students to be able to draw their own backgrounds in spritelab so if we're showing
+    // backgrounds alone, we must be in spritelab and we should get rid of the draw your own option
+    const canDraw = !this.props.isBackground;
+    const categoryImagePathPrefix = this.generateCategoryImagePathPrefix();
     return (
       <div style={codeModeStyle}>
         <div
@@ -105,15 +120,22 @@ class P5LabView extends React.Component {
           style={visualizationColumnStyle}
         >
           {this.props.showVisualizationHeader && <P5LabVisualizationHeader />}
-          <P5LabVisualizationColumn finishButton={showFinishButton} />
+          <P5LabVisualizationColumn
+            finishButton={showFinishButton}
+            pauseHandler={this.props.pauseHandler}
+          />
           {this.getChannelId() && (
             <AnimationPicker
               channelId={this.getChannelId()}
               allowedExtensions=".png,.jpg,.jpeg"
-              getLibraryManifest={this.getLibraryManifest}
-              categories={this.getCategories()}
+              libraryManifest={this.state.libraryManifest}
               hideUploadOption={this.props.spriteLab}
               hideAnimationNames={this.props.spriteLab}
+              navigable={navigable}
+              defaultQuery={this.props.isBackground ? defaultQuery : undefined}
+              hideBackgrounds={hideBackgrounds}
+              canDraw={canDraw}
+              categoryImagePathPrefix={categoryImagePathPrefix}
             />
           )}
         </div>
@@ -135,14 +157,16 @@ class P5LabView extends React.Component {
 
   renderAnimationMode() {
     const {allowAnimationMode, interfaceMode} = this.props;
+    const categoryImagePathPrefix = this.generateCategoryImagePathPrefix();
     return allowAnimationMode &&
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
       <AnimationTab
         channelId={this.getChannelId()}
-        getLibraryManifest={this.getLibraryManifest}
-        categories={this.getCategories()}
+        libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.props.spriteLab}
         hideAnimationNames={this.props.spriteLab}
+        hideBackgrounds={this.props.spriteLab}
+        categoryImagePathPrefix={categoryImagePathPrefix}
       />
     ) : (
       undefined
@@ -169,5 +193,6 @@ export default connect(state => ({
   showVisualizationHeader: showVisualizationHeader(state),
   isRunning: state.runState.isRunning,
   isIframeEmbed: state.pageConstants.isIframeEmbed,
-  spriteLab: state.pageConstants.isBlockly
+  spriteLab: state.pageConstants.isBlockly,
+  isBackground: state.animationPicker.isBackground
 }))(P5LabView);

@@ -24,28 +24,31 @@
 
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
+require 'ruby-progressbar'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
 # A sequence of Levels
-class Script < ActiveRecord::Base
+class Script < ApplicationRecord
   include ScriptConstants
   include SharedConstants
   include Rails.application.routes.url_helpers
 
   include Seeded
+  has_many :lesson_groups, -> {order(:position)}, dependent: :destroy
+  has_many :lessons, through: :lesson_groups
+  has_many :script_levels, through: :lessons
+  has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
-  has_many :lesson_groups, -> {order('position ASC')}, dependent: :destroy
-  has_many :script_levels, -> {order('chapter ASC')}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ lessons, are ordered by chapter, see Script#add_script
-  has_many :lessons, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script, class_name: 'Lesson'
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
-  has_many :course_scripts
-  has_many :courses, through: :course_scripts
+  has_many :unit_group_units
+  has_many :unit_groups, through: :unit_group_units
+  has_one :course_version, as: :content_root
 
   scope :with_associated_models, -> do
     includes(
@@ -60,7 +63,32 @@ class Script < ActiveRecord::Base
         {
           lessons: [{script_levels: [:levels]}]
         },
-        :course_scripts
+        :unit_group_units
+      ]
+    )
+  end
+
+  # The set of models which may be touched by ScriptSeed
+  scope :with_seed_models, -> do
+    includes(
+      [
+        {
+          unit_group_units: {
+            unit_group: :course_version
+          }
+        },
+        :course_version,
+        :lesson_groups,
+        {
+          lessons: [
+            {lesson_activities: :activity_sections},
+            :resources,
+            :vocabularies,
+            :objectives
+          ]
+        },
+        :script_levels,
+        :levels
       ]
     )
   end
@@ -84,27 +112,41 @@ class Script < ActiveRecord::Base
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
+  validate :set_is_migrated_only_for_migrated_scripts
+
   include SerializedProperties
 
   after_save :generate_plc_objects
 
-  SCRIPT_DIRECTORY = 'config/scripts'.freeze
+  SCRIPT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
+
+  def set_is_migrated_only_for_migrated_scripts
+    if !!is_migrated && !hidden
+      errors.add(:is_migrated, "Can't be set on a course that is visible")
+    end
+  end
 
   def self.script_directory
     SCRIPT_DIRECTORY
   end
 
+  SCRIPT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+
+  def self.script_json_directory
+    SCRIPT_JSON_DIRECTORY
+  end
+
   def generate_plc_objects
     if professional_learning_course?
-      course = Course.find_by_name(professional_learning_course)
-      unless course
-        course = Course.new(name: professional_learning_course)
-        course.plc_course = Plc::Course.create!(course: course)
-        course.save!
+      unit_group = UnitGroup.find_by_name(professional_learning_course)
+      unless unit_group
+        unit_group = UnitGroup.new(name: professional_learning_course)
+        unit_group.plc_course = Plc::Course.create!(unit_group: unit_group)
+        unit_group.save!
       end
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
       unit.update!(
-        plc_course_id: course.plc_course.id,
+        plc_course_id: unit_group.plc_course.id,
         unit_name: I18n.t("data.script.name.#{name}.title"),
         unit_description: I18n.t("data.script.name.#{name}.description")
       )
@@ -121,6 +163,9 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # is_course - true if this Script/Unit is intended to be the root of a CourseOffering version. Used during seeding
+  #   to create the appropriate CourseVersion and CourseOffering objects. For example, this should be true for
+  #   CourseA-CourseF .script files.
   serialized_attrs %w(
     hideable_lessons
     peer_reviews_to_complete
@@ -134,7 +179,7 @@ class Script < ActiveRecord::Base
     has_verified_resources
     has_lesson_plan
     curriculum_path
-    script_announcements
+    announcements
     version_year
     is_stable
     supported_locales
@@ -143,6 +188,10 @@ class Script < ActiveRecord::Base
     project_sharing
     curriculum_umbrella
     tts
+    is_course
+    background
+    show_calendar
+    is_migrated
   )
 
   def self.twenty_hour_script
@@ -214,7 +263,7 @@ class Script < ActiveRecord::Base
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    has_any_course_experiments = Course.has_any_course_experiments?(user)
+    has_any_course_experiments = UnitGroup.has_any_course_experiments?(user)
     with_hidden = !has_any_course_experiments && user.hidden_script_access?
     scripts = with_hidden ? all_scripts : visible_scripts
 
@@ -226,25 +275,27 @@ class Script < ActiveRecord::Base
     end
 
     if !with_hidden && has_any_pilot_access?(user)
-      scripts = scripts.concat(all_scripts.select {|s| s.has_pilot_access?(user)})
+      scripts += all_scripts.select {|s| s.has_pilot_access?(user)}
     end
 
     scripts
   end
 
   class << self
-    private
-
     def all_scripts
-      Rails.cache.fetch('valid_scripts/all') do
-        Script.all
+      all_scripts = Rails.cache.fetch('valid_scripts/all') do
+        Script.all.to_a
       end
+      all_scripts.freeze
     end
 
+    private
+
     def visible_scripts
-      Rails.cache.fetch('valid_scripts/valid') do
-        Script.all.reject(&:hidden)
+      visible_scripts = Rails.cache.fetch('valid_scripts/valid') do
+        Script.all.reject(&:hidden).to_a
       end
+      visible_scripts.freeze
     end
   end
 
@@ -312,7 +363,7 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_cache
     [
-      ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly, CourseScript
+      ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly, UnitGroupUnit
     ].each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read SCRIPT_CACHE_KEY
   end
@@ -407,6 +458,8 @@ class Script < ActiveRecord::Base
     @@level_cache[level.id] = level if level && should_cache?
     @@level_cache[level.name] = level if level && should_cache?
     level
+  rescue => e
+    raise e, "Error finding level #{level_identifier}: #{e}"
   end
 
   def cached
@@ -467,6 +520,10 @@ class Script < ActiveRecord::Base
     end
   end
 
+  def self.remove_from_cache(script_name)
+    script_cache.delete(script_name) if script_cache
+  end
+
   def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
@@ -502,17 +559,20 @@ class Script < ActiveRecord::Base
 
   def self.log_redirect(old_script_name, new_script_name, request, event_name, user_type)
     FirehoseClient.instance.put_record(
-      study: 'script-family-redirect',
-      event: event_name,
-      data_string: request.path,
-      data_json: {
-        old_script_name: old_script_name,
-        new_script_name: new_script_name,
-        method: request.method,
-        url: request.url,
-        referer: request.referer,
-        user_type: user_type
-      }.to_json
+      :analysis,
+      {
+        study: 'script-family-redirect',
+        event: event_name,
+        data_string: request.path,
+        data_json: {
+          old_script_name: old_script_name,
+          new_script_name: new_script_name,
+          method: request.method,
+          url: request.url,
+          referer: request.referer,
+          user_type: user_type
+        }.to_json
+      }
     )
   end
 
@@ -528,13 +588,13 @@ class Script < ActiveRecord::Base
     # or the course it belongs to.
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
     # No redirect if script or its course are not versioned.
-    current_version_year = version_year || course&.version_year
+    current_version_year = version_year || unit_group&.version_year
     return nil unless current_version_year.present?
 
     # Redirect user to the latest assigned script in this family,
     # if one exists and it is newer than the current script.
     latest_assigned_version = Script.latest_assigned_version(family_name, user)
-    latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.course&.version_year
+    latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.unit_group&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > current_version_year
     latest_assigned_version.link
   end
@@ -562,7 +622,7 @@ class Script < ActiveRecord::Base
     return true unless user.student?
 
     # A student can view the script version if they have progress in it or the course it belongs to.
-    has_progress = user.scripts.include?(self) || course&.has_progress?(user)
+    has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)
     return true if has_progress
 
     # A student can view the script version if they are assigned to it.
@@ -684,7 +744,7 @@ class Script < ActiveRecord::Base
     Script.
       where("properties -> '$.curriculum_umbrella' = 'CSF'").
       where("properties -> '$.version_year' >= '2019'").
-      map {|script| [script.localized_title, script.name]}
+      map {|script| [script.title_for_display, script.name]}
   end
 
   def has_standards_associations?
@@ -760,16 +820,18 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_id(script_level_id)
-    script_levels.find {|sl| sl.id == script_level_id.to_i}
+    script_levels.find(id: script_level_id.to_i)
   end
 
   def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
     relative_position ||= 1
-    script_levels.to_a.find do |sl|
-      sl.lesson.lockable? == lockable &&
+    script_levels.find do |sl|
+      # make sure we are checking the native properties of the script level
+      # first, so we only have to load lesson if it's actually necessary.
+      sl.position == puzzle_position.to_i &&
+        !sl.bonus &&
         sl.lesson.relative_position == relative_position.to_i &&
-        sl.position == puzzle_position.to_i &&
-        !sl.bonus
+        sl.lesson.lockable? == lockable
     end
   end
 
@@ -803,11 +865,7 @@ class Script < ActiveRecord::Base
   end
 
   def hint_prompt_enabled?
-    [
-      Script::COURSE2_NAME,
-      Script::COURSE3_NAME,
-      Script::COURSE4_NAME
-    ].include?(name)
+    csf?
   end
 
   def hide_solutions?
@@ -879,304 +937,124 @@ class Script < ActiveRecord::Base
   # script file definitions. If new_suffix is specified, create a copy of the
   # script and any associated levels, appending new_suffix to the name when
   # copying. Any new_properties are merged into the properties of the new script.
-  def self.setup(custom_files, new_suffix: nil, new_properties: {})
-    transaction do
-      scripts_to_add = []
+  def self.setup(custom_files, new_suffix: nil, new_properties: {}, show_progress: false)
+    scripts_to_add = []
 
-      custom_i18n = {}
-      # Load custom scripts from Script DSL format
-      custom_files.map do |script|
-        name = File.basename(script, '.script')
-        base_name = Script.base_name(name)
-        name = "#{base_name}-#{new_suffix}" if new_suffix
-        script_data, i18n = ScriptDSL.parse_file(script, name)
+    custom_i18n = {}
+    # Load custom scripts from Script DSL format
+    custom_files.map do |script|
+      name = File.basename(script, '.script')
+      base_name = Script.base_name(name)
+      name = "#{base_name}-#{new_suffix}" if new_suffix
+      script_data, i18n =
+        begin
+          ScriptDSL.parse_file(script, name)
+        rescue => e
+          raise e, "Error parsing script file #{script}: #{e}"
+        end
 
-        lesson_groups = script_data[:lesson_groups]
-        lessons = script_data[:lessons]
-        custom_i18n.deep_merge!(i18n)
-        # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
-        scripts_to_add << [{
-          id: script_data[:id],
-          name: name,
-          hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
-          login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
-          wrapup_video: script_data[:wrapup_video],
-          new_name: script_data[:new_name],
-          family_name: script_data[:family_name],
-          properties: Script.build_property_hash(script_data).merge(new_properties)
-        }, lesson_groups, lessons]
-      end
-
-      # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups, raw_lessons|
-        add_script(options, raw_lesson_groups, raw_lessons, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
-      end
-      [added_scripts, custom_i18n]
+      lesson_groups = script_data[:lesson_groups]
+      custom_i18n.deep_merge!(i18n)
+      # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
+      scripts_to_add << [{
+        id: script_data[:id],
+        name: name,
+        hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
+        login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
+        wrapup_video: script_data[:wrapup_video],
+        new_name: script_data[:new_name],
+        family_name: script_data[:family_name],
+        properties: Script.build_property_hash(script_data).merge(new_properties)
+      }, lesson_groups]
     end
+
+    progressbar = ProgressBar.create(total: scripts_to_add.length, format: '%t (%c/%C): |%B|') if show_progress
+
+    # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
+    added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
+      added_script =
+        options[:properties][:is_migrated] == true ?
+          seed_from_json_file(options[:name]) :
+          add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      progressbar.increment if show_progress
+      added_script.name
+    rescue => e
+      raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
+    end
+    [added_script_names, custom_i18n]
   end
 
   # if new_suffix is specified, copy the script, hide it, and copy all its
   # levelbuilder-defined levels.
-  def self.add_script(options, raw_lesson_groups, raw_lessons, new_suffix: nil, editor_experiment: nil)
-    raw_script_levels = raw_lessons.map {|lesson| lesson[:scriptlevels]}.flatten
-    script = fetch_script(options)
-    script.update!(hidden: true) if new_suffix
-    chapter = 0
-    lesson_position = 0; script_level_position = Hash.new(0)
-    script_lessons = []
-    script_lesson_groups = []
-    script_levels_by_lesson = {}
-    levels_by_key = script.levels.index_by(&:key)
-    lockable_count = 0
-    non_lockable_count = 0
+  def self.add_script(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
+    transaction do
+      script = fetch_script(options)
+      script.update!(hidden: true) if new_suffix
 
-    unless raw_script_levels.empty?
-      if raw_lesson_groups.empty?
-        lesson_group = LessonGroup.find_or_create_by(
-          key: '',
-          script: script,
-          user_facing: false,
-          position: 1
-        )
+      script.prevent_duplicate_lesson_groups(raw_lesson_groups)
+      Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
-        script_lesson_groups << lesson_group
-      else
-        # Finds or creates Lesson Groups with the correct position.
-        # In addition it check for 3 things:
-        # 1. That all the lesson groups specified by the editor have a key and
-        # display name.
-        # 2. If the lesson group key is an existing key that the given display name
-        # for that key matches the already saved display name
-        # 3. PLC courses use certain lesson group keys for module types. We reserve those
-        # keys so they can only map to the display_name for their PLC purpose
-        raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
-          Plc::LearningModule::RESERVED_LESSON_GROUPS_FOR_PLC.each do |reserved_lesson_group|
-            if reserved_lesson_group[:key] == raw_lesson_group[:key] && reserved_lesson_group[:display_name] != raw_lesson_group[:display_name]
-              raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
-            end
-          end
-          if raw_lesson_group[:display_name].blank?
-            raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
-          end
+      temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
+      script.reload
+      script.lesson_groups = temp_lgs
+      script.save!
 
-          new_lesson_group = false
+      script.generate_plc_objects
 
-          lesson_group = LessonGroup.find_or_create_by(
-            key: raw_lesson_group[:key],
-            script: script,
-            user_facing: true
-          ) do
-            # if you got in here, this is a new lesson_group
-            new_lesson_group = true
-          end
+      CourseOffering.add_course_offering(script)
 
-          lesson_group.assign_attributes(position: index + 1)
-          lesson_group.save! if lesson_group.changed?
-
-          if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
-            raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
-          end
-
-          script_lesson_groups << lesson_group
-        end
-      end
-    end
-
-    script.lesson_groups = script_lesson_groups
-
-    # Overwrites current script levels
-    script.script_levels = raw_script_levels.map do |raw_script_level|
-      raw_script_level.symbolize_keys!
-
-      assessment = nil
-      named_level = nil
-      bonus = nil
-      lesson_group_key = nil
-      lockable = nil
-
-      levels = raw_script_level[:levels].map do |raw_level|
-        raw_level.symbolize_keys!
-
-        # Concepts are comma-separated, indexed by name
-        raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-          (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
-        end
-
-        raw_level_data = raw_level.dup
-        assessment = raw_level.delete(:assessment)
-        named_level = raw_level.delete(:named_level)
-        bonus = raw_level.delete(:bonus)
-        lesson_group_key = raw_level.delete(:lesson_group)
-        lockable = !!raw_level.delete(:lesson_lockable)
-
-        key = raw_level.delete(:name)
-
-        if raw_level[:level_num] && !key.starts_with?('blockly')
-          # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
-          key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
-        end
-
-        level =
-          if new_suffix && !key.starts_with?('blockly')
-            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", editor_experiment: editor_experiment)
-          else
-            levels_by_key[key] || Level.find_by_key(key)
-          end
-
-        if key.starts_with?('blockly')
-          # this level is defined in levels.js. find/create the reference to this level
-          level = Level.
-            create_with(name: 'blockly').
-            find_or_create_by!(Level.key_to_params(key))
-          level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
-          if level.video_key && !raw_level[:video_key]
-            raw_level[:video_key] = nil
-          end
-
-          level.update(raw_level)
-        elsif raw_level[:video_key]
-          level.update(video_key: raw_level[:video_key])
-        end
-
-        unless level
-          raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
-        end
-
-        level
-      end
-
-      lesson_name = raw_script_level.delete(:lesson)
-      properties = raw_script_level.delete(:properties) || {}
-
-      if new_suffix && properties[:variants]
-        properties[:variants] = properties[:variants].map do |old_level_name, value|
-          ["#{old_level_name}_#{new_suffix}", value]
-        end.to_h
-      end
-
-      script_level_attributes = {
-        script_id: script.id,
-        chapter: (chapter += 1),
-        named_level: named_level,
-        bonus: bonus,
-        assessment: assessment
-      }
-      script_level_attributes[:properties] = properties.with_indifferent_access
-      script_level = script.script_levels.detect do |sl|
-        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
-          sl.levels == levels
-      end || ScriptLevel.create!(script_level_attributes) do |sl|
-        sl.levels = levels
-      end
-
-      # Set/create Lesson containing custom ScriptLevel
-      if lesson_name
-        # We want a script to either have all of its lessons have lesson groups
-        # or none of the lessons have lesson groups. We know we have hit this case if
-        # there are lesson groups for a script but the lesson group key
-        # for this specific lesson is blank
-        if !lesson_group_key.present? && !raw_lesson_groups.empty?
-          raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{lesson_name} does not have a lesson group."
-        end
-        # find the lesson group for this lesson
-        lesson_group = LessonGroup.find_by!(
-          key: lesson_group_key.presence || "",
-          script: script,
-          user_facing: lesson_group_key.present?
-        )
-
-        # check if that lesson exists for the script otherwise create a new lesson
-        lesson = script.lessons.detect {|s| s.name == lesson_name} ||
-          Lesson.find_or_create_by(
-            name: lesson_name,
-            script: script
-          ) do |s|
-            s.relative_position = 0 # will be updated below, but cant be null
-          end
-
-        lesson.assign_attributes(lesson_group: lesson_group, lockable: lockable)
-        lesson.save! if lesson.changed?
-
-        script_level_attributes[:stage_id] = lesson.id
-        script_level_attributes[:position] = (script_level_position[lesson.id] += 1)
-        script_level.reload
-        script_level.assign_attributes(script_level_attributes)
-        script_level.save! if script_level.changed?
-        (script_levels_by_lesson[lesson.id] ||= []) << script_level
-        unless script_lessons.include?(lesson)
-          if lockable
-            lesson.assign_attributes(relative_position: (lockable_count += 1))
-          else
-            lesson.assign_attributes(relative_position: (non_lockable_count += 1))
-          end
-          lesson.assign_attributes(absolute_position: (lesson_position += 1))
-          lesson.save! if lesson.changed?
-          script_lessons << lesson
-        end
-      end
-      script_level.assign_attributes(script_level_attributes)
-      script_level.save! if script_level.changed?
-      script_level
-    end
-
-    script_lessons.each do |lesson|
-      # make sure we have an up to date view
-      lesson.reload
-      lesson.script_levels = script_levels_by_lesson[lesson.id]
-
-      # Go through all the script levels for this lesson, except the last one,
-      # and raise an exception if any of them are a multi-page assessment.
-      # (That's when the script level is marked assessment, and the level itself
-      # has a pages property and more than one page in that array.)
-      # This is because only the final level in a lesson can be a multi-page
-      # assessment.
-      lesson.script_levels.each do |script_level|
-        if !script_level.end_of_stage? && script_level.long_assessment?
-          raise "Only the final level in a lesson may be a multi-page assessment.  Script: #{script.name}"
-        end
-      end
-
-      if lesson.lockable && !lesson.script_levels.last.assessment?
-        raise 'Expect lockable lessons to have an assessment as their last level'
-      end
-
-      raw_lesson = raw_lessons.find {|rs| rs[:lesson].downcase == lesson.name.downcase}
-      lesson.visible_after = raw_lesson[:visible_after]
-      lesson.save! if lesson.changed?
-    end
-
-    Script.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
-    Script.prevent_lesson_group_with_no_lessons(script)
-
-    script.lessons = script_lessons
-    script.reload.lessons
-    script.generate_plc_objects
-
-    script
-  end
-
-  # All lesson groups should have lessons in them
-  def self.prevent_lesson_group_with_no_lessons(script)
-    script.lesson_groups.each do |lesson_group|
-      next if lesson_group.lessons.count > 0
-      raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons."
+      script
     end
   end
 
-  # Only consecutive lessons can have the same lesson group.
-  # Raise an error if non adjacent lessons have the same lesson
-  # group
-  def self.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
+  # If there is more than 1 lesson group then the key should never
+  # be nil because this means some lessons are in a lesson group
+  # and some are not
+  def self.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
+    return if raw_lesson_groups.length < 2
+
+    raw_lesson_groups.each do |lesson_group|
+      if lesson_group[:key].nil?
+        raise "Expect if one lesson has a lesson group all lessons have lesson groups."
+      end
+    end
+  end
+
+  # Lesson groups can only show up once in a script
+  def prevent_duplicate_lesson_groups(raw_lesson_groups)
     previous_lesson_groups = []
-    current_lesson_group = nil
-
-    script_lessons.each do |lesson|
-      next if lesson.lesson_group.key == current_lesson_group
-      if previous_lesson_groups.include?(lesson.lesson_group.key)
-        raise "Only consecutive lessons can have the same lesson group. Lesson Group #{lesson.lesson_group.key} is on two non-consecutive lessons."
+    raw_lesson_groups.each do |lesson_group|
+      if previous_lesson_groups.include?(lesson_group[:key])
+        raise "Duplicate Lesson Group. Lesson Group: #{lesson_group[:key]} is used twice in Script: #{name}."
       end
-      previous_lesson_groups.append(current_lesson_group)
-      current_lesson_group = lesson.lesson_group.key
+      previous_lesson_groups.append(lesson_group[:key])
+    end
+  end
+
+  # Script levels unfortunately have 3 position values:
+  # 1. chapter: position within the Script
+  # 2. position: position within the Lesson
+  # 3. activity_section_position: position within the ActivitySection.
+  # This method uses activity_section_position as the source of truth to set the
+  # values of position and chapter on all script levels in the script.
+  def fix_script_level_positions
+    reload
+    if script_levels.reject(&:activity_section).any?
+      raise "cannot fix position of legacy script levels"
+    end
+
+    chapter = 0
+    lessons.each do |lesson|
+      position = 0
+      lesson.lesson_activities.each do |activity|
+        activity.activity_sections.each do |section|
+          section.script_levels.each do |sl|
+            sl.chapter = (chapter += 1)
+            sl.position = (position += 1)
+            sl.save!
+          end
+        end
+      end
     end
   end
 
@@ -1194,13 +1072,15 @@ class Script < ActiveRecord::Base
     script_filename = "#{Script.script_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
-      script_announcements: nil
+      tts: false,
+      announcements: nil,
+      is_course: false
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
     end
-    scripts, _ = Script.setup([script_filename], new_suffix: new_suffix, new_properties: new_properties)
-    new_script = scripts.first
+    script_names, _ = Script.setup([script_filename], new_suffix: new_suffix, new_properties: new_properties)
+    new_script = Script.find_by!(name: script_names.first)
 
     # Make sure we don't modify any files in unit tests.
     if Rails.application.config.levelbuilder_mode
@@ -1225,9 +1105,9 @@ class Script < ActiveRecord::Base
   # Creates a copy of all translations associated with this script, and adds
   # them as translations for the script named new_name.
   def copy_and_write_i18n(new_name)
-    scripts_yml = File.expand_path('config/locales/scripts.en.yml')
+    scripts_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
-    i18n.deep_merge!(summarize_i18n_for_copy(new_name)) {|_, old, _| old}
+    i18n.deep_merge!(summarize_i18n_for_copy(new_name))
     File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml(line_width: -1))
   end
 
@@ -1273,8 +1153,7 @@ class Script < ActiveRecord::Base
             family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
             properties: Script.build_property_hash(general_params)
           },
-          script_data[:lesson_groups],
-          script_data[:lessons]
+          script_data[:lesson_groups]
         )
         if Rails.application.config.levelbuilder_mode
           Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
@@ -1287,15 +1166,30 @@ class Script < ActiveRecord::Base
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
     begin
       if Rails.application.config.levelbuilder_mode
-        # write script to file
-        filename = "config/scripts/#{script_params[:name]}.script"
-        ScriptDSL.serialize(Script.find_by_name(script_name), filename)
+        script = Script.find_by_name(script_name)
+        # Save in our custom Script DSL format. This is still what we're using currently to sync data
+        # across environments. The CPlat team is working on replacing it a new JSON-based approach.
+        script.write_script_dsl
+
+        # Also save in JSON format for "new seeding". This has not been launched yet, but as part of
+        # pre-launch testing, we'll start generating these files in addition to the old .script files.
+        script.write_script_json
       end
       true
     rescue StandardError => e
       errors.add(:base, e.to_s)
       return false
     end
+  end
+
+  def write_script_dsl
+    script_dsl_filepath = "#{Rails.root}/config/scripts/#{name}.script"
+    ScriptDSL.serialize(self, script_dsl_filepath)
+  end
+
+  def write_script_json
+    filepath = Script.script_json_filepath(name)
+    File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
 
   # @param types [Array<string>]
@@ -1326,7 +1220,7 @@ class Script < ActiveRecord::Base
   # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
   # 3. Stage descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
   def self.merge_and_write_i18n(lessons_i18n, script_name = '', metadata_i18n = {})
-    scripts_yml = File.expand_path('config/locales/scripts.en.yml')
+    scripts_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
 
     updated_i18n = update_i18n(i18n, lessons_i18n, script_name, metadata_i18n)
@@ -1336,10 +1230,6 @@ class Script < ActiveRecord::Base
   def self.update_i18n(existing_i18n, lessons_i18n, script_name = '', metadata_i18n = {})
     if metadata_i18n != {}
       stage_descriptions = metadata_i18n.delete(:stage_descriptions)
-      # temporarily include "stage" strings under both "stages" and "lessons"
-      # while we transition from the former term to the latter.
-      # TODO FND-1122
-      metadata_i18n['stages'] = {}
       metadata_i18n['lessons'] = {}
       unless stage_descriptions.nil?
         JSON.parse(stage_descriptions).each do |stage|
@@ -1348,7 +1238,6 @@ class Script < ActiveRecord::Base
             'description_student' => stage['descriptionStudent'],
             'description_teacher' => stage['descriptionTeacher']
           }
-          metadata_i18n['stages'][stage_name] = stage_data
           metadata_i18n['lessons'][stage_name] = stage_data
         end
       end
@@ -1356,7 +1245,7 @@ class Script < ActiveRecord::Base
     end
 
     lessons_i18n = {'en' => {'data' => {'script' => {'name' => lessons_i18n}}}}
-    existing_i18n.deep_merge(lessons_i18n) {|_, old, _| old}.deep_merge!(metadata_i18n)
+    existing_i18n.deep_merge(lessons_i18n).deep_merge!(metadata_i18n)
   end
 
   def hoc_finish_url
@@ -1408,7 +1297,7 @@ class Script < ActiveRecord::Base
       }
     end
 
-    has_older_course_progress = course.try(:has_older_version_progress?, user)
+    has_older_course_progress = unit_group.try(:has_older_version_progress?, user)
     has_older_script_progress = has_older_version_progress?(user)
     user_script = user && user_scripts.find_by(user: user)
 
@@ -1419,10 +1308,11 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
-      title: localized_title,
+      title: title_for_display,
       description: localized_description,
+      studentDescription: localized_student_description,
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
-      course_id: course.try(:id),
+      course_id: unit_group.try(:id),
       hidden: hidden,
       is_stable: is_stable,
       loginRequired: login_required,
@@ -1441,9 +1331,9 @@ class Script < ActiveRecord::Base
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
       curriculum_path: curriculum_path,
-      script_announcements: script_announcements,
+      announcements: announcements,
       age_13_required: logged_out_age_13_required?,
-      show_course_unit_version_warning: !course&.has_dismissed_version_warning?(user) && has_older_course_progress,
+      show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
       versions: summarize_versions(user),
       supported_locales: supported_locales,
@@ -1458,7 +1348,15 @@ class Script < ActiveRecord::Base
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
+      is_course: is_course?,
+      background: background,
+      is_migrated: is_migrated?,
+      scriptPath: script_path(self),
+      showCalendar: show_calendar
     }
+
+    #TODO: lessons should be summarized through lesson groups in the future
+    summary[:lessonGroups] = lesson_groups.map(&:summarize)
 
     # Filter out stages that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
@@ -1469,10 +1367,11 @@ class Script < ActiveRecord::Base
     summary
   end
 
-  def summarize_for_edit
+  def summarize_for_script_edit
     include_lessons = false
     summary = summarize(include_lessons)
-    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_edit)
+    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_script_edit)
+    summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
     summary
   end
 
@@ -1500,46 +1399,57 @@ class Script < ActiveRecord::Base
     }
   end
 
+  def summarize_for_lesson_show
+    {
+      displayName: localized_title,
+      link: link,
+      lessons: lessons.map(&:summarize_for_lesson_dropdown)
+    }
+  end
+
   # Creates an object representing all translations associated with this script
   # and its lessons, in a format that can be deep-merged with the contents of
   # scripts.en.yml.
   def summarize_i18n_for_copy(new_name)
-    data = %w(title description description_short description_audience).map do |key|
+    data = %w(title description student_description description_short description_audience).map do |key|
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
-    # temporarily include "stage" strings under both "stages" and "lessons"
-    # while we transition from the former term to the latter.
-    # TODO FND-1122
-    data['stages'] = {}
     data['lessons'] = {}
-    lessons.each do |stage|
-      stage_data = {
-        'name' => stage.name,
-        'description_student' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-        'description_teacher' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+    lessons.each do |lesson|
+      lesson_data = {
+        'key' => lesson.key,
+        'name' => lesson.name,
+        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_student", default: ''),
+        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_teacher", default: '')
       }
-      data['stages'][stage.name] = stage_data
-      data['lessons'][stage.name] = stage_data
+      data['lessons'][lesson.key] = lesson_data
     end
 
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
   end
 
-  def summarize_i18n(include_lessons=true)
-    data = %w(title description description_short description_audience).map do |key|
-      [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
+  def summarize_i18n_for_edit(include_lessons=true)
+    data = %w(title description student_description description_short description_audience).map do |key|
+      [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
     if include_lessons
-      data['stageDescriptions'] = lessons.map do |stage|
+      data[:stageDescriptions] = lessons.map do |lesson|
         {
-          name: stage.name,
-          descriptionStudent: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
-          descriptionTeacher: (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
+          key: lesson.key,
+          name: lesson.name,
+          descriptionStudent: (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_student", default: ''),
+          descriptionTeacher: (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_teacher", default: '')
         }
       end
     end
+    data
+  end
+
+  def summarize_i18n_for_display(include_lessons=true)
+    data = summarize_i18n_for_edit(include_lessons)
+    data[:title] = title_for_display
     data
   end
 
@@ -1547,7 +1457,7 @@ class Script < ActiveRecord::Base
   # sharing the family_name of this course, including this one.
   def summarize_versions(user = nil)
     return [] unless family_name
-    return [] unless courses.empty?
+    return [] unless unit_groups.empty?
     with_hidden = user&.hidden_script_access?
     scripts = Script.
       where(family_name: family_name).
@@ -1579,12 +1489,26 @@ class Script < ActiveRecord::Base
     I18n.t "data.script.name.#{name}.title"
   end
 
+  def title_for_display
+    title = localized_title
+    has_prefix = unit_group&.has_numbered_units
+    return title unless has_prefix
+
+    position = unit_group_units&.first&.position
+    prefix = I18n.t "unit_prefix", n: position
+    "#{prefix} - #{title}"
+  end
+
   def localized_assignment_family_title
-    I18n.t("data.script.name.#{name}.assignment_family_title", default: localized_title)
+    I18n.t("data.script.name.#{name}.assignment_family_title", default: title_for_display)
   end
 
   def localized_description
     I18n.t "data.script.name.#{name}.description"
+  end
+
+  def localized_student_description
+    I18n.t "data.script.name.#{name}.student_description"
   end
 
   def disable_post_milestone?
@@ -1606,19 +1530,23 @@ class Script < ActiveRecord::Base
       :project_widget_types,
       :lesson_extras_available,
       :curriculum_path,
-      :script_announcements,
+      :announcements,
       :version_year,
       :supported_locales,
       :pilot_experiment,
       :editor_experiment,
       :curriculum_umbrella,
+      :background,
     ]
     boolean_keys = [
       :has_verified_resources,
       :has_lesson_plan,
       :is_stable,
       :project_sharing,
-      :tts
+      :tts,
+      :is_course,
+      :show_calendar,
+      :is_migrated
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path
@@ -1636,31 +1564,39 @@ class Script < ActiveRecord::Base
 
   # A script is considered to have a matching course if there is exactly one
   # course for this script
-  def course
-    return nil if course_scripts.length != 1
-    Course.get_from_cache(course_scripts[0].course_id)
+  def unit_group
+    return nil if unit_group_units.length != 1
+    UnitGroup.get_from_cache(unit_group_units[0].course_id)
+  end
+
+  # If this unit is a standalone course, returns its CourseVersion. Otherwise,
+  # if this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion,
+  # if there is one.
+  # @return [CourseVersion]
+  def get_course_version
+    course_version || unit_group&.course_version
   end
 
   # @return {String|nil} path to the course overview page for this script if there
   #   is one.
   def course_link(section_id = nil)
-    return nil unless course
-    path = course_path(course)
+    return nil unless unit_group
+    path = course_path(unit_group)
     path += "?section_id=#{section_id}" if section_id
     path
   end
 
   def course_title
-    course.try(:localized_title)
+    unit_group.try(:localized_title)
   end
 
   # If there is an alternate version of this script which the user should be on
   # due to existing progress or a course experiment, return that script. Otherwise,
   # return nil.
   def alternate_script(user)
-    course_scripts.each do |cs|
-      alternate_cs = cs.course.select_course_script(user, cs)
-      return alternate_cs.script if cs != alternate_cs
+    unit_group_units.each do |ugu|
+      alternate_ugu = ugu.unit_group.select_unit_group_unit(user, ugu)
+      return alternate_ugu.script if ugu != alternate_ugu
     end
     nil
   end
@@ -1684,6 +1620,11 @@ class Script < ActiveRecord::Base
     if localized_description
       info[:description] = localized_description
     end
+
+    if localized_student_description
+      info[:student_description] = localized_student_description
+    end
+
     info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
@@ -1697,9 +1638,17 @@ class Script < ActiveRecord::Base
 
   def supported_locale_names
     locales = supported_locales || []
-    locales = locales.map {|l| Script.locale_english_name_map[l] || l}
-    locales += ['English']
-    locales.sort.uniq
+    locales += ['en-US']
+    locales = locales.sort
+    locales.map {|l| Script.locale_native_name_map[l] || l}.uniq
+  end
+
+  def self.locale_native_name_map
+    @@locale_native_name_map ||=
+      PEGASUS_DB[:cdo_languages].
+        select(:locale_s, :native_name_s).
+        map {|row| [row[:locale_s], row[:native_name_s]]}.
+        to_h
   end
 
   def self.locale_english_name_map
@@ -1810,6 +1759,40 @@ class Script < ActiveRecord::Base
   end
 
   def self.get_version_year_options
-    Course.get_version_year_options
+    UnitGroup.get_version_year_options
+  end
+
+  def all_descendant_levels
+    sublevels = levels.map(&:all_descendant_levels).flatten
+    levels + sublevels
+  end
+
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
+  # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
+  # the seeding_keys of those objects should be included as well.
+  # Ideally should correspond to a unique index for this model's table.
+  # See comments on ScriptSeed.seed_from_json for more context.
+  #
+  # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
+  # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
+  def seeding_key(seed_context)
+    {'script.name': name}.stringify_keys
+  end
+
+  # Wrapper for convenience
+  def serialize_seeding_json
+    Services::ScriptSeed.serialize_seeding_json(self)
+  end
+
+  # @param [String] script_name - name of the script to seed from .script_json
+  # @returns [Script] - the newly seeded script object
+  def self.seed_from_json_file(script_name)
+    filepath = script_json_filepath(script_name)
+    Services::ScriptSeed.seed_from_json_file(filepath) if File.exist?(filepath)
+  end
+
+  def self.script_json_filepath(script_name)
+    "#{script_json_directory}/#{script_name}.script_json"
   end
 end
