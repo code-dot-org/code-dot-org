@@ -330,14 +330,22 @@ class ActivitySectionCard extends Component {
     );
   };
 
-  appendResourceLink = resourceKey => {
+  appendMarkdownSyntax = strToAppend => {
     const currentText = this.props.activitySection.text;
     this.props.updateActivitySectionField(
       this.props.activityPosition,
       this.props.activitySection.position,
       'text',
-      currentText + `\n[r ${resourceKey}]`
+      currentText + `\n${strToAppend}`
     );
+  };
+
+  appendResourceLink = resourceKey => {
+    this.appendMarkdownSyntax(`[r ${resourceKey}]`);
+  };
+
+  appendVocabularyLink = vocabularyKey => {
+    this.appendMarkdownSyntax(`[v ${vocabularyKey}]`);
   };
 
   appendSlide = () => {
@@ -483,6 +491,7 @@ class ActivitySectionCard extends Component {
           addLevel={this.handleAddLevel}
           activityPosition={this.props.activityPosition}
           appendResourceLink={this.appendResourceLink}
+          appendVocabularyLink={this.appendVocabularyLink}
           appendSlide={this.appendSlide}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
