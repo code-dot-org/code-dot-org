@@ -195,7 +195,7 @@ class P5LabVisualizationColumn extends React.Component {
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
-          <SpritelabInput />
+          {spriteLab && <SpritelabInput />}
         </div>
 
         <GameButtons>
