@@ -13,6 +13,7 @@ import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
+import experiments from '@cdo/apps/util/experiments';
 
 const style = {
   iconContainer: {
@@ -75,6 +76,11 @@ class SettingsCog extends Component {
   manageLibraries = () => {
     this.close();
     this.setState({managingLibraries: true});
+  };
+
+  manageModels = () => {
+    this.close();
+    console.log('clicked');
   };
 
   toggleMakerToolkit = () => {
@@ -145,6 +151,9 @@ class SettingsCog extends Component {
           {this.areLibrariesEnabled() && (
             <ManageLibraries onClick={this.manageLibraries} />
           )}
+          {experiments.isEnabled(experiments.APPLAB_ML) && (
+            <ManageModels onClick={this.manageModels} />
+          )}
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
@@ -172,6 +181,10 @@ ManageAssets.propTypes = {
   first: PropTypes.bool,
   last: PropTypes.bool
 };
+
+export function ManageModels(props) {
+  return <PopUpMenu.Item {...props}>{'Manage Models'}</PopUpMenu.Item>;
+}
 
 export function ManageLibraries(props) {
   return <PopUpMenu.Item {...props}>{msg.manageLibraries()}</PopUpMenu.Item>;
