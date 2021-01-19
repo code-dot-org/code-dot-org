@@ -755,10 +755,6 @@ Dashboard::Application.routes.draw do
   get 'foorm/preview/:name', to: 'foorm_preview#name', constraints: {name: /.*/}
   get 'foorm/preview', to: 'foorm_preview#index'
 
-  get 'foorm/editor', to: 'foorm_form_editor#index'
-  get 'foorm/editor/forms', to: 'foorm_form_editor#index'
-  get 'foorm/editor/libraries', to: 'foorm_library_editor#index'
-
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
   get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'
@@ -779,6 +775,11 @@ Dashboard::Application.routes.draw do
         put :update_questions
         put :publish
       end
+      get :editor, on: :collection
+    end
+
+    resources :library_questions, only: [] do
+      get :editor, on: :collection
     end
   end
 end
