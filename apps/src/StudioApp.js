@@ -700,10 +700,19 @@ StudioApp.prototype.initTimeSpent = function() {
   );
 };
 
-StudioApp.prototype.initVersionHistoryUI = function(config) {
-  // Bind listener to 'Version History' button
+StudioApp.prototype.initVersionHistoryUI = function(config, hasStartedLevel) {
+  // Bind listener to 'Version History' button only if student viewing their own work
+  // or a teacher viewing student work when student already started level
   var versionsHeader = document.getElementById('versions-header');
-  if (versionsHeader) {
+  const {
+    isNotStartedLevel,
+    isReadOnlyWorkspace
+  } = getStore().getState().pageConstants;
+
+  if (
+    versionsHeader &&
+    (!isReadOnlyWorkspace || (isReadOnlyWorkspace && !isNotStartedLevel))
+  ) {
     dom.addClickTouchEvent(
       versionsHeader,
       this.getVersionHistoryHandler(config)

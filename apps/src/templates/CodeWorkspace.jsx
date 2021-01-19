@@ -197,6 +197,7 @@ class CodeWorkspace extends React.Component {
               id="versions-header"
               headerHasFocus={hasFocus}
               iconClass="fa fa-clock-o"
+              disabled={props.studentHasNotStartedLevel}
               label={i18n.showVersionsHeader()}
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}

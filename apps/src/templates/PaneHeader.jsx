@@ -78,6 +78,11 @@ const styles = {
   headerButtonNoLabel: {
     paddingRight: 0,
     paddingLeft: 0
+  },
+  disabled: {
+    backgroundColor: color.lighter_gray,
+    color: color.white,
+    pointerEvents: 'none'
   }
 };
 
@@ -143,6 +148,7 @@ export const PaneButton = Radium(function(props) {
     ...(props.isMinecraft && styles.headerButtonMinecraft),
     ...(props.isPressed && styles.headerButtonPressed),
     ...(!props.headerHasFocus && styles.headerButtonUnfocused),
+    ...(props.disabled && styles.disabled),
     ...props.style
   };
 
@@ -158,7 +164,11 @@ export const PaneButton = Radium(function(props) {
   }
 
   return (
-    <div id={props.id} style={divStyle} onClick={props.onClick}>
+    <div
+      id={props.id}
+      style={divStyle}
+      onClick={props.disabled ? null : props.onClick}
+    >
       <span style={styles.headerButtonSpan}>
         {props.hiddenImage}
         <i className={props.iconClass} style={iconStyle} />
@@ -179,7 +189,8 @@ PaneButton.propTypes = {
   hiddenImage: PropTypes.element,
   isMinecraft: PropTypes.bool,
   id: PropTypes.string,
-  style: PropTypes.object
+  style: PropTypes.object,
+  disabled: PropTypes.bool
 };
 
 export default Radium(PaneHeader);
