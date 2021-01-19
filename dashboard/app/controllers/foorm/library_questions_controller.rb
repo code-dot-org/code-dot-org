@@ -1,5 +1,5 @@
 module Foorm
-  # Foorm Library Editor is only available on levelbuilder or test, for those with levelbuilder permissions.
+  # Foorm Library Question Editor is only available on levelbuilder or test, for those with levelbuilder permissions.
   class LibraryQuestionsController < ApplicationController
     before_action :require_levelbuilder_mode_or_test_env
     before_action :authenticate_user!
@@ -18,7 +18,7 @@ module Foorm
         }.to_json
       }
 
-      render 'foorm/libraries_editor/index'
+      render 'foorm/library_questions/editor'
     end
   end
 end

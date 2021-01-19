@@ -711,8 +711,7 @@ describe('entry tests', () => {
 
     'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
     'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
-    'foorm/forms_editor/index':
-      './src/sites/studio/pages/foorm/forms_editor/index.js',
+    'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
     'foorm/misc_survey/new': './src/sites/studio/pages/foorm/misc_survey/new.js'
   };
 

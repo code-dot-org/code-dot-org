@@ -16,7 +16,7 @@ module Foorm
         }.to_json
       }
 
-      render 'foorm/forms_editor/index'
+      render 'foorm/forms/editor'
     end
 
     # PUT foorm/form/:id/update_questions
