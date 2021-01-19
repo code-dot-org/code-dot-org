@@ -37,7 +37,7 @@ module Foorm
       save_form(@form)
     end
 
-    # POST foorm/form
+    # POST foorm/forms
     def create
       form_name = params[:name]
       form_version = params[:version] || 0
