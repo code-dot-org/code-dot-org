@@ -4,6 +4,21 @@ module Foorm
     before_action :authenticate_user!
     load_and_authorize_resource
 
+    # GET '/foorm/forms/editor'
+    def editor
+      formatted_names_and_versions = Foorm::Form.all.map {|form| {name: form.name, version: form.version, id: form.id}}
+      categories = formatted_names_and_versions.map {|data| data[:name].slice(0, data[:name].rindex('/'))}.uniq
+
+      @script_data = {
+        props: {
+          formNamesAndVersions: formatted_names_and_versions,
+          formCategories: categories
+        }.to_json
+      }
+
+      render 'foorm/forms_editor/index'
+    end
+
     # PUT foorm/form/:id/update_questions
     def update_questions
       questions_json = get_questions
