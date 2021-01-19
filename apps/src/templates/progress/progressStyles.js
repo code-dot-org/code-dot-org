@@ -86,6 +86,7 @@ const levelStatusStyle = {
   },
   [LevelStatus.review_accepted]: {
     color: color.white,
+    borderColor: color.level_perfect,
     backgroundColor: color.level_perfect
   }
 };
