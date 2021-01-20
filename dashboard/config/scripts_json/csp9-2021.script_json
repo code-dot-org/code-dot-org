@@ -914,7 +914,8 @@
       "key": "fd1b4c8a-4e7d-47fd-8193-31abffdebe89",
       "position": 1,
       "properties": {
-        "name": "Exploring Metadata"
+        "name": "Exploring Metadata",
+        "progression_name": "Exploring Metadata"
       },
       "seeding_key": {
         "activity_section.key": "fd1b4c8a-4e7d-47fd-8193-31abffdebe89",
@@ -925,7 +926,8 @@
       "key": "0d0f2b60-cb65-44f8-9d2b-bcf27d68d86d",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0d0f2b60-cb65-44f8-9d2b-bcf27d68d86d",
@@ -1147,7 +1149,8 @@
       "key": "68b25eb9-47d6-4f47-ad5c-75346126e09e",
       "position": 1,
       "properties": {
-        "name": "Making Bar Charts and Histograms"
+        "name": "Making Bar Charts and Histograms",
+        "progression_name": "Making Bar Charts and Histograms"
       },
       "seeding_key": {
         "activity_section.key": "68b25eb9-47d6-4f47-ad5c-75346126e09e",
@@ -1158,7 +1161,8 @@
       "key": "4d45aa0c-a442-491c-8b23-2c846e8aa6fe",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "4d45aa0c-a442-491c-8b23-2c846e8aa6fe",
@@ -1402,7 +1406,8 @@
       "key": "fe9a381b-81b2-415c-8777-98a8364c734a",
       "position": 1,
       "properties": {
-        "name": "Cleaning Data"
+        "name": "Cleaning Data",
+        "progression_name": "Cleaning Data"
       },
       "seeding_key": {
         "activity_section.key": "fe9a381b-81b2-415c-8777-98a8364c734a",
@@ -1413,7 +1418,8 @@
       "key": "7d80aaf7-7424-4a35-a412-4945116208e2",
       "position": 2,
       "properties": {
-        "name": "Filtering Data"
+        "name": "Filtering Data",
+        "progression_name": "Filtering Data"
       },
       "seeding_key": {
         "activity_section.key": "7d80aaf7-7424-4a35-a412-4945116208e2",
@@ -1424,7 +1430,8 @@
       "key": "5c45128e-4ab3-4f67-8a0a-4392fc26a5b8",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "5c45128e-4ab3-4f67-8a0a-4392fc26a5b8",
@@ -1611,7 +1618,8 @@
       "key": "15416f54-0958-443c-a6a9-78ec30eacc14",
       "position": 1,
       "properties": {
-        "name": "Crosstab and Scatter Charts"
+        "name": "Crosstab and Scatter Charts",
+        "progression_name": "Crosstab and Scatter Charts"
       },
       "seeding_key": {
         "activity_section.key": "15416f54-0958-443c-a6a9-78ec30eacc14",
@@ -1622,7 +1630,8 @@
       "key": "84ec5f15-f8df-44d7-a219-cbba3b2a450b",
       "position": 2,
       "properties": {
-        "name": "What Type of Chart?"
+        "name": "What Type of Chart?",
+        "progression_name": "What Type of Chart?"
       },
       "seeding_key": {
         "activity_section.key": "84ec5f15-f8df-44d7-a219-cbba3b2a450b",
@@ -1633,7 +1642,8 @@
       "key": "7d22238f-29c6-4c55-b16e-ca2f296de0fb",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "7d22238f-29c6-4c55-b16e-ca2f296de0fb",
@@ -1988,7 +1998,8 @@
       "key": "e950a605-e656-4940-890b-6e3c5ad5ccaa",
       "position": 1,
       "properties": {
-        "name": "AI for Oceans - Machine Learning"
+        "name": "AI for Oceans - Machine Learning",
+        "progression_name": "AI for Oceans - Machine Learning"
       },
       "seeding_key": {
         "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa",
@@ -1999,7 +2010,8 @@
       "key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7",
       "position": 2,
       "properties": {
-        "name": "Check for Understanding"
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7",
@@ -2062,7 +2074,8 @@
       "key": "b010e276-ad46-497c-86d7-6c7a1f437e8e",
       "position": 1,
       "properties": {
-        "name": "Data Story Workspace"
+        "name": "Data Story Workspace",
+        "progression_name": "Data Story Workspace"
       },
       "seeding_key": {
         "activity_section.key": "b010e276-ad46-497c-86d7-6c7a1f437e8e",
@@ -2106,7 +2119,8 @@
       "key": "b94cfd0b-2256-41c8-b38f-e435a0239c86",
       "position": 1,
       "properties": {
-        "name": "Data Story Workspace"
+        "name": "Data Story Workspace",
+        "progression_name": "Data Story Workspace"
       },
       "seeding_key": {
         "activity_section.key": "b94cfd0b-2256-41c8-b38f-e435a0239c86",
@@ -2146,7 +2160,8 @@
       "key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8",
       "position": 1,
       "properties": {
-        "name": "Unit 9 Exam"
+        "name": "Unit 9 Exam",
+        "progression_name": "Unit 9 Exam"
       },
       "seeding_key": {
         "activity_section.key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8",

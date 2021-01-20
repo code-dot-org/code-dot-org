@@ -3396,7 +3396,8 @@
       "key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575",
       "position": 1,
       "properties": {
-        "name": "Reflection"
+        "name": "Reflection",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575",
@@ -4179,7 +4180,8 @@
       "key": "f40e6e67-338b-4084-b162-260aea98eb53",
       "position": 1,
       "properties": {
-        "name": "Demo Apps"
+        "name": "Demo Apps",
+        "progression_name": "Demo Apps"
       },
       "seeding_key": {
         "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53",
@@ -4576,7 +4578,8 @@
       "key": "c2cdafc0-8020-44f9-b76c-486536fc72e0",
       "position": 1,
       "properties": {
-        "name": "Build a Screen"
+        "name": "Build a Screen",
+        "progression_name": "Build a Screen"
       },
       "seeding_key": {
         "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0",
@@ -4587,7 +4590,8 @@
       "key": "f9300844-54d9-462e-8c91-e6d48d8b8785",
       "position": 2,
       "properties": {
-        "name": "Finish a Screen"
+        "name": "Finish a Screen",
+        "progression_name": "Finish a Screen"
       },
       "seeding_key": {
         "activity_section.key": "f9300844-54d9-462e-8c91-e6d48d8b8785",
@@ -4598,7 +4602,8 @@
       "key": "b69c41ba-48c0-41e2-86d9-91affd004f5b",
       "position": 3,
       "properties": {
-        "name": "App Project: Screen Design"
+        "name": "App Project: Screen Design",
+        "progression_name": "App Project: Screen Design"
       },
       "seeding_key": {
         "activity_section.key": "b69c41ba-48c0-41e2-86d9-91affd004f5b",
@@ -5073,7 +5078,8 @@
       "key": "7165d89d-fc5e-4e5f-8348-6db470c00639",
       "position": 1,
       "properties": {
-        "name": "Adding Screens"
+        "name": "Adding Screens",
+        "progression_name": "Adding Screens"
       },
       "seeding_key": {
         "activity_section.key": "7165d89d-fc5e-4e5f-8348-6db470c00639",
@@ -5084,7 +5090,8 @@
       "key": "632a936d-e43d-4328-b48e-779578389742",
       "position": 2,
       "properties": {
-        "name": "Events and Linking Screens"
+        "name": "Events and Linking Screens",
+        "progression_name": "Events and Linking Screens"
       },
       "seeding_key": {
         "activity_section.key": "632a936d-e43d-4328-b48e-779578389742",
@@ -5095,7 +5102,8 @@
       "key": "35f7c415-8e4d-4019-8aa4-c64690424212",
       "position": 3,
       "properties": {
-        "name": "Combining Projects"
+        "name": "Combining Projects",
+        "progression_name": "Combining Projects"
       },
       "seeding_key": {
         "activity_section.key": "35f7c415-8e4d-4019-8aa4-c64690424212",
@@ -5950,7 +5958,8 @@
       "key": "60f6d7d9-cd59-466e-a56c-a4312c29812f",
       "position": 1,
       "properties": {
-        "name": "Reflection"
+        "name": "Reflection",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "60f6d7d9-cd59-466e-a56c-a4312c29812f",
@@ -5985,10 +5994,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch1_2021"
-        ]
+        ],
+        "progression": "Reflection"
       },
       "named_level": null,
       "bonus": null,
@@ -6011,10 +6020,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
         "level_keys": [
           "Example App Types_2021"
-        ]
+        ],
+        "progression": "Demo Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -6037,10 +6046,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 Quiz App Demo_2021"
-        ]
+        ],
+        "progression": "Demo Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -6063,10 +6072,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 Decision App Demo_2021"
-        ]
+        ],
+        "progression": "Demo Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -6089,10 +6098,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 List App Demo_2021"
-        ]
+        ],
+        "progression": "Demo Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -6115,10 +6124,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 Crowdsource App Demo_2021"
-        ]
+        ],
+        "progression": "Demo Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -6141,10 +6150,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
         "level_keys": [
           "CSDU4 Design Mode Video_2021"
-        ]
+        ],
+        "progression": "Build a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6167,10 +6176,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 1_2021"
-        ]
+        ],
+        "progression": "Build a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6193,10 +6202,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 2_2021"
-        ]
+        ],
+        "progression": "Build a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6219,10 +6228,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 3_2021"
-        ]
+        ],
+        "progression": "Build a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6245,10 +6254,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 4_2021"
-        ]
+        ],
+        "progression": "Build a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6271,10 +6280,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Finish a Screen",
         "level_keys": [
           "U4 Model Design 5_2021"
-        ]
+        ],
+        "progression": "Finish a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6297,10 +6306,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Finish a Screen",
         "level_keys": [
           "U4 Model Design 6_2021"
-        ]
+        ],
+        "progression": "Finish a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6323,10 +6332,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Finish a Screen",
         "level_keys": [
           "U4 Model Design 7_2021"
-        ]
+        ],
+        "progression": "Finish a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6349,10 +6358,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App Project: Screen Design",
         "level_keys": [
           "Design a Screen for your App_2021"
-        ]
+        ],
+        "progression": "App Project: Screen Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6375,10 +6384,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "App Project: Screen Design",
         "level_keys": [
           "CSD U4 - Design Mode Project_2021"
-        ]
+        ],
+        "progression": "App Project: Screen Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6401,10 +6410,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 1_2021"
-        ]
+        ],
+        "progression": "Adding Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6427,10 +6436,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 1.5_2021"
-        ]
+        ],
+        "progression": "Adding Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6453,10 +6462,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 2_2021"
-        ]
+        ],
+        "progression": "Adding Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6479,10 +6488,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 2.5_2021"
-        ]
+        ],
+        "progression": "Adding Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6505,10 +6514,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Events and Linking Screens",
         "level_keys": [
           "U4 Model Program 3_2021"
-        ]
+        ],
+        "progression": "Events and Linking Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6531,10 +6540,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Events and Linking Screens",
         "level_keys": [
           "U4 Model Program 4_2021"
-        ]
+        ],
+        "progression": "Events and Linking Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6557,10 +6566,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Events and Linking Screens",
         "level_keys": [
           "U4 Model Program 5_2021"
-        ]
+        ],
+        "progression": "Events and Linking Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6583,10 +6592,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Combining Projects",
         "level_keys": [
           "CSDU4 Project Import_2021"
-        ]
+        ],
+        "progression": "Combining Projects"
       },
       "named_level": null,
       "bonus": null,
@@ -6609,10 +6618,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Combining Projects",
         "level_keys": [
           "CSDU4 Project Events_2021"
-        ]
+        ],
+        "progression": "Combining Projects"
       },
       "named_level": null,
       "bonus": null,
@@ -6660,10 +6669,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch2_2021"
-        ]
+        ],
+        "progression": "Reflection"
       },
       "named_level": null,
       "bonus": null,

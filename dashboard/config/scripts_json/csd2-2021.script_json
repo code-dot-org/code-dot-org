@@ -1886,7 +1886,8 @@
       "key": "0ca4137c-b4bf-45d3-af15-ff3800a98935",
       "position": 1,
       "properties": {
-        "name": "Sample Personal Web Pages"
+        "name": "Sample Personal Web Pages",
+        "progression_name": "Sample Personal Web Pages"
       },
       "seeding_key": {
         "activity_section.key": "0ca4137c-b4bf-45d3-af15-ff3800a98935",
@@ -2010,7 +2011,8 @@
       "key": "2ca0bf9a-5cd6-4beb-8b48-d788ad425fa7",
       "position": 3,
       "properties": {
-        "name": "Experiment with Web Lab"
+        "name": "Experiment with Web Lab",
+        "progression_name": "Experiment with Web Lab"
       },
       "seeding_key": {
         "activity_section.key": "2ca0bf9a-5cd6-4beb-8b48-d788ad425fa7",
@@ -2021,7 +2023,8 @@
       "key": "08e81098-b771-4c82-bb64-9108ece6c97c",
       "position": 4,
       "properties": {
-        "name": "Video: Intro to Web Lab - Part 1"
+        "name": "Video: Intro to Web Lab - Part 1",
+        "progression_name": "Video: Intro to Web Lab - Part 1"
       },
       "seeding_key": {
         "activity_section.key": "08e81098-b771-4c82-bb64-9108ece6c97c",
@@ -2032,7 +2035,8 @@
       "key": "693d5350-e425-4ae5-926e-85984858fb31",
       "position": 5,
       "properties": {
-        "name": "Explore HTML"
+        "name": "Explore HTML",
+        "progression_name": "Explore HTML"
       },
       "seeding_key": {
         "activity_section.key": "693d5350-e425-4ae5-926e-85984858fb31",
@@ -2043,7 +2047,8 @@
       "key": "470c3268-f70d-43ac-831f-b37c3103531b",
       "position": 6,
       "properties": {
-        "name": "Video: Intro to Web Lab - Part 2"
+        "name": "Video: Intro to Web Lab - Part 2",
+        "progression_name": "Video: Intro to Web Lab - Part 2"
       },
       "seeding_key": {
         "activity_section.key": "470c3268-f70d-43ac-831f-b37c3103531b",
@@ -2054,7 +2059,8 @@
       "key": "1d5ddfcc-e375-4d04-9822-019d51c5272d",
       "position": 7,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "1d5ddfcc-e375-4d04-9822-019d51c5272d",
@@ -2065,7 +2071,8 @@
       "key": "73435ea5-4c6f-4317-b21a-4fc9c732a4bf",
       "position": 8,
       "properties": {
-        "name": "Assessment"
+        "name": "Assessment",
+        "progression_name": "Assessment"
       },
       "seeding_key": {
         "activity_section.key": "73435ea5-4c6f-4317-b21a-4fc9c732a4bf",
@@ -2076,7 +2083,8 @@
       "key": "579df0b6-aebc-48d8-9ac3-427a2c04e61f",
       "position": 9,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "579df0b6-aebc-48d8-9ac3-427a2c04e61f",
@@ -2317,7 +2325,8 @@
       "key": "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1",
       "position": 7,
       "properties": {
-        "name": "Video: Pair Programming"
+        "name": "Video: Pair Programming",
+        "progression_name": "Video: Pair Programming"
       },
       "seeding_key": {
         "activity_section.key": "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1",
@@ -2328,7 +2337,8 @@
       "key": "27e7e382-bef2-4576-94b2-15f081c1c260",
       "position": 8,
       "properties": {
-        "name": "Skill Building"
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "27e7e382-bef2-4576-94b2-15f081c1c260",
@@ -2339,7 +2349,8 @@
       "key": "415a1a02-00ce-4eee-9af3-bcddf1369b79",
       "position": 9,
       "properties": {
-        "name": "Quick Check"
+        "name": "Quick Check",
+        "progression_name": "Quick Check"
       },
       "seeding_key": {
         "activity_section.key": "415a1a02-00ce-4eee-9af3-bcddf1369b79",
@@ -2350,7 +2361,8 @@
       "key": "f5c13deb-a9a7-4f04-9daa-ec92ec261b02",
       "position": 10,
       "properties": {
-        "name": "Video: Debugging"
+        "name": "Video: Debugging",
+        "progression_name": "Video: Debugging"
       },
       "seeding_key": {
         "activity_section.key": "f5c13deb-a9a7-4f04-9daa-ec92ec261b02",
@@ -2361,7 +2373,8 @@
       "key": "b9b617ce-f9b9-4d30-90ae-0ecb111821d7",
       "position": 11,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "b9b617ce-f9b9-4d30-90ae-0ecb111821d7",
@@ -2372,7 +2385,8 @@
       "key": "d3b01200-6f32-4a93-be82-df50df4e8221",
       "position": 12,
       "properties": {
-        "name": "Assessment"
+        "name": "Assessment",
+        "progression_name": "Assessment"
       },
       "seeding_key": {
         "activity_section.key": "d3b01200-6f32-4a93-be82-df50df4e8221",
@@ -2383,7 +2397,8 @@
       "key": "499a4b6c-eccd-4c51-a6db-17c2c9a0801a",
       "position": 13,
       "properties": {
-        "name": "Challenges"
+        "name": "Challenges",
+        "progression_name": "Challenges"
       },
       "seeding_key": {
         "activity_section.key": "499a4b6c-eccd-4c51-a6db-17c2c9a0801a",
@@ -2524,7 +2539,8 @@
       "key": "d30c88c0-ef5a-4b8a-9bd0-68123ecf6cb6",
       "position": 5,
       "properties": {
-        "name": "Review: HTML"
+        "name": "Review: HTML",
+        "progression_name": "Review: HTML"
       },
       "seeding_key": {
         "activity_section.key": "d30c88c0-ef5a-4b8a-9bd0-68123ecf6cb6",
@@ -2535,7 +2551,8 @@
       "key": "db6b9679-26c9-45e7-9f82-03b3a92d3abf",
       "position": 6,
       "properties": {
-        "name": "Challenge: Lists"
+        "name": "Challenge: Lists",
+        "progression_name": "Challenge: Lists"
       },
       "seeding_key": {
         "activity_section.key": "db6b9679-26c9-45e7-9f82-03b3a92d3abf",
@@ -2546,7 +2563,8 @@
       "key": "f1f2db2f-90f0-454f-a438-ad0ef1d6f27a",
       "position": 7,
       "properties": {
-        "name": "Code Your Page"
+        "name": "Code Your Page",
+        "progression_name": "Code Your Page"
       },
       "seeding_key": {
         "activity_section.key": "f1f2db2f-90f0-454f-a438-ad0ef1d6f27a",
@@ -2557,7 +2575,8 @@
       "key": "b8b06d7c-cb56-4412-85ad-c68fb0953dc0",
       "position": 8,
       "properties": {
-        "name": "Review Your Page"
+        "name": "Review Your Page",
+        "progression_name": "Review Your Page"
       },
       "seeding_key": {
         "activity_section.key": "b8b06d7c-cb56-4412-85ad-c68fb0953dc0",
@@ -2698,7 +2717,8 @@
       "key": "71a885a3-e705-4367-8d43-5711b5af7e8f",
       "position": 2,
       "properties": {
-        "name": "Social Sleuth"
+        "name": "Social Sleuth",
+        "progression_name": "Social Sleuth"
       },
       "seeding_key": {
         "activity_section.key": "71a885a3-e705-4367-8d43-5711b5af7e8f",
@@ -2860,7 +2880,8 @@
       "key": "9440d9cc-5d69-417b-837e-c143b30dab47",
       "position": 4,
       "properties": {
-        "name": "Sample Website"
+        "name": "Sample Website",
+        "progression_name": "Sample Website"
       },
       "seeding_key": {
         "activity_section.key": "9440d9cc-5d69-417b-837e-c143b30dab47",
@@ -2871,7 +2892,8 @@
       "key": "0fb9d1d3-097c-4ce5-b276-aa71c839c82f",
       "position": 5,
       "properties": {
-        "name": "Exploration"
+        "name": "Exploration",
+        "progression_name": "Exploration"
       },
       "seeding_key": {
         "activity_section.key": "0fb9d1d3-097c-4ce5-b276-aa71c839c82f",
@@ -2882,7 +2904,8 @@
       "key": "029f4c9c-3f40-458c-8480-b677aee2c5f5",
       "position": 6,
       "properties": {
-        "name": "Video: Intro to CSS - Part 1"
+        "name": "Video: Intro to CSS - Part 1",
+        "progression_name": "Video: Intro to CSS - Part 1"
       },
       "seeding_key": {
         "activity_section.key": "029f4c9c-3f40-458c-8480-b677aee2c5f5",
@@ -2893,7 +2916,8 @@
       "key": "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d",
       "position": 7,
       "properties": {
-        "name": "Skill Building"
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d",
@@ -2904,7 +2928,8 @@
       "key": "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9",
       "position": 8,
       "properties": {
-        "name": "Video: Intro to CSS - Part 2"
+        "name": "Video: Intro to CSS - Part 2",
+        "progression_name": "Video: Intro to CSS - Part 2"
       },
       "seeding_key": {
         "activity_section.key": "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9",
@@ -2915,7 +2940,8 @@
       "key": "d9a4b1da-84da-40b3-a256-bbd4223652cd",
       "position": 9,
       "properties": {
-        "name": "Skill Building"
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "d9a4b1da-84da-40b3-a256-bbd4223652cd",
@@ -2926,7 +2952,8 @@
       "key": "497dd6c0-f7ae-4c32-a6b2-086a26b849b6",
       "position": 10,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "497dd6c0-f7ae-4c32-a6b2-086a26b849b6",
@@ -2937,7 +2964,8 @@
       "key": "3d52ed72-b57b-4d05-902a-c9daceffadc6",
       "position": 11,
       "properties": {
-        "name": "Assessment"
+        "name": "Assessment",
+        "progression_name": "Assessment"
       },
       "seeding_key": {
         "activity_section.key": "3d52ed72-b57b-4d05-902a-c9daceffadc6",
@@ -2948,7 +2976,8 @@
       "key": "3a9a8696-72e3-4e6f-9812-59e180a16192",
       "position": 12,
       "properties": {
-        "name": "Challenges"
+        "name": "Challenges",
+        "progression_name": "Challenges"
       },
       "seeding_key": {
         "activity_section.key": "3a9a8696-72e3-4e6f-9812-59e180a16192",
@@ -3125,7 +3154,8 @@
       "key": "58f32e0f-f519-4eae-9c0c-a5cd428869b2",
       "position": 5,
       "properties": {
-        "name": "Review: CSS"
+        "name": "Review: CSS",
+        "progression_name": "Review: CSS"
       },
       "seeding_key": {
         "activity_section.key": "58f32e0f-f519-4eae-9c0c-a5cd428869b2",
@@ -3136,7 +3166,8 @@
       "key": "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc",
       "position": 6,
       "properties": {
-        "name": "Challenge: RGB Colors"
+        "name": "Challenge: RGB Colors",
+        "progression_name": "Challenge: RGB Colors"
       },
       "seeding_key": {
         "activity_section.key": "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc",
@@ -3147,7 +3178,8 @@
       "key": "81ab793a-d696-4167-a9db-9258e5f476b4",
       "position": 7,
       "properties": {
-        "name": "Add Content and Structure to Your Page"
+        "name": "Add Content and Structure to Your Page",
+        "progression_name": "Add Content and Structure to Your Page"
       },
       "seeding_key": {
         "activity_section.key": "81ab793a-d696-4167-a9db-9258e5f476b4",
@@ -3158,7 +3190,8 @@
       "key": "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9",
       "position": 8,
       "properties": {
-        "name": "Add Style to Your Page"
+        "name": "Add Style to Your Page",
+        "progression_name": "Add Style to Your Page"
       },
       "seeding_key": {
         "activity_section.key": "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9",
@@ -3169,7 +3202,8 @@
       "key": "30535418-4101-4313-b0f2-fb2afdde6b62",
       "position": 9,
       "properties": {
-        "name": "Review Your Page"
+        "name": "Review Your Page",
+        "progression_name": "Review Your Page"
       },
       "seeding_key": {
         "activity_section.key": "30535418-4101-4313-b0f2-fb2afdde6b62",
@@ -3563,7 +3597,8 @@
       "key": "f69595ea-98fa-4c39-9686-6916ab265ab4",
       "position": 2,
       "properties": {
-        "name": "Skill Building"
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "f69595ea-98fa-4c39-9686-6916ab265ab4",
@@ -3574,7 +3609,8 @@
       "key": "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52",
       "position": 3,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52",
@@ -3585,7 +3621,8 @@
       "key": "168bbc11-2203-44d6-88fc-e6be6c05180b",
       "position": 4,
       "properties": {
-        "name": "Assessment"
+        "name": "Assessment",
+        "progression_name": "Assessment"
       },
       "seeding_key": {
         "activity_section.key": "168bbc11-2203-44d6-88fc-e6be6c05180b",
@@ -3596,7 +3633,8 @@
       "key": "125e32e7-13c6-48a9-8fcb-b8635d079ecf",
       "position": 5,
       "properties": {
-        "name": "Challenges"
+        "name": "Challenges",
+        "progression_name": "Challenges"
       },
       "seeding_key": {
         "activity_section.key": "125e32e7-13c6-48a9-8fcb-b8635d079ecf",
@@ -3852,7 +3890,8 @@
       "key": "b4c291eb-30c6-4699-ac56-24df952ccb92",
       "position": 1,
       "properties": {
-        "name": "Sample Personal Websites"
+        "name": "Sample Personal Websites",
+        "progression_name": "Sample Personal Websites"
       },
       "seeding_key": {
         "activity_section.key": "b4c291eb-30c6-4699-ac56-24df952ccb92",
@@ -3935,7 +3974,8 @@
       "key": "5b7dc4f0-181c-44f8-af21-9dfd8a5edb26",
       "position": 2,
       "properties": {
-        "name": "Sample Website"
+        "name": "Sample Website",
+        "progression_name": "Sample Website"
       },
       "seeding_key": {
         "activity_section.key": "5b7dc4f0-181c-44f8-af21-9dfd8a5edb26",
@@ -3946,7 +3986,8 @@
       "key": "cbb6abd1-911a-4ea4-b133-78742425ccbc",
       "position": 3,
       "properties": {
-        "name": "Exploration"
+        "name": "Exploration",
+        "progression_name": "Exploration"
       },
       "seeding_key": {
         "activity_section.key": "cbb6abd1-911a-4ea4-b133-78742425ccbc",
@@ -3957,7 +3998,8 @@
       "key": "e26e14a3-6dad-4328-82ae-39649c0e2970",
       "position": 4,
       "properties": {
-        "name": "Skill Building"
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "e26e14a3-6dad-4328-82ae-39649c0e2970",
@@ -3968,7 +4010,8 @@
       "key": "6fd29f2b-af40-4cc1-89c1-1f25aab27647",
       "position": 5,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "6fd29f2b-af40-4cc1-89c1-1f25aab27647",
@@ -3979,7 +4022,8 @@
       "key": "60bf9811-2a1c-4ff5-8986-082f04512e85",
       "position": 6,
       "properties": {
-        "name": "Assessment"
+        "name": "Assessment",
+        "progression_name": "Assessment"
       },
       "seeding_key": {
         "activity_section.key": "60bf9811-2a1c-4ff5-8986-082f04512e85",
@@ -3990,7 +4034,8 @@
       "key": "fa81a49c-8be7-43ac-92fe-cbc509b0970c",
       "position": 7,
       "properties": {
-        "name": "Challenges"
+        "name": "Challenges",
+        "progression_name": "Challenges"
       },
       "seeding_key": {
         "activity_section.key": "fa81a49c-8be7-43ac-92fe-cbc509b0970c",
@@ -4302,7 +4347,8 @@
       "key": "75942ada-453d-4de7-870e-9ea233b7171d",
       "position": 1,
       "properties": {
-        "name": "Project Guide"
+        "name": "Project Guide",
+        "progression_name": "Project Guide"
       },
       "seeding_key": {
         "activity_section.key": "75942ada-453d-4de7-870e-9ea233b7171d",
@@ -4313,7 +4359,8 @@
       "key": "50e5a99a-962c-46c7-aa6d-884741f164de",
       "position": 2,
       "properties": {
-        "name": "Website Project"
+        "name": "Website Project",
+        "progression_name": "Website Project"
       },
       "seeding_key": {
         "activity_section.key": "50e5a99a-962c-46c7-aa6d-884741f164de",
@@ -4324,7 +4371,8 @@
       "key": "d8373943-01d1-45d5-b2e7-133c5d96159e",
       "position": 3,
       "properties": {
-        "name": "Video: Publishing Your Website"
+        "name": "Video: Publishing Your Website",
+        "progression_name": "Video: Publishing Your Website"
       },
       "seeding_key": {
         "activity_section.key": "d8373943-01d1-45d5-b2e7-133c5d96159e",
@@ -4335,7 +4383,8 @@
       "key": "0a28ee05-d0c2-43e8-b62e-31b5db4d1330",
       "position": 4,
       "properties": {
-        "name": "Publishing Your Website"
+        "name": "Publishing Your Website",
+        "progression_name": "Publishing Your Website"
       },
       "seeding_key": {
         "activity_section.key": "0a28ee05-d0c2-43e8-b62e-31b5db4d1330",
@@ -4346,7 +4395,8 @@
       "key": "53a14f3d-4c6c-4be2-b7f3-817a0b6ee9cd",
       "position": 5,
       "properties": {
-        "name": "Reflection"
+        "name": "Reflection",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "53a14f3d-4c6c-4be2-b7f3-817a0b6ee9cd",
@@ -4429,7 +4479,8 @@
       "key": "4e4b8bec-4263-4163-9bad-dee99822db2a",
       "position": 2,
       "properties": {
-        "name": "Top Websites"
+        "name": "Top Websites",
+        "progression_name": "Top Websites"
       },
       "seeding_key": {
         "activity_section.key": "4e4b8bec-4263-4163-9bad-dee99822db2a",
@@ -4779,7 +4830,8 @@
       "key": "3d200812-9df8-42ca-94f5-c1bbda254c45",
       "position": 1,
       "properties": {
-        "name": "Video: Teamwork"
+        "name": "Video: Teamwork",
+        "progression_name": "Video: Teamwork"
       },
       "seeding_key": {
         "activity_section.key": "3d200812-9df8-42ca-94f5-c1bbda254c45",
@@ -4790,7 +4842,8 @@
       "key": "80ca305a-9689-43f6-9086-222cf4a1e287",
       "position": 2,
       "properties": {
-        "name": "Video: Managing Disagreement"
+        "name": "Video: Managing Disagreement",
+        "progression_name": "Video: Managing Disagreement"
       },
       "seeding_key": {
         "activity_section.key": "80ca305a-9689-43f6-9086-222cf4a1e287",
@@ -5065,7 +5118,8 @@
       "key": "8d36fb80-6b63-4f51-a57c-76712a9d5d7d",
       "position": 2,
       "properties": {
-        "name": "Sample Web Page"
+        "name": "Sample Web Page",
+        "progression_name": "Sample Web Page"
       },
       "seeding_key": {
         "activity_section.key": "8d36fb80-6b63-4f51-a57c-76712a9d5d7d",
@@ -5076,7 +5130,8 @@
       "key": "39d43b4f-8e5c-4459-9592-b9a44cd41c4d",
       "position": 3,
       "properties": {
-        "name": "Exploration"
+        "name": "Exploration",
+        "progression_name": "Exploration"
       },
       "seeding_key": {
         "activity_section.key": "39d43b4f-8e5c-4459-9592-b9a44cd41c4d",
@@ -5087,7 +5142,8 @@
       "key": "6a056ff0-2cca-4983-bfe6-a78771cae232",
       "position": 4,
       "properties": {
-        "name": "Skill Building"
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "6a056ff0-2cca-4983-bfe6-a78771cae232",
@@ -5098,7 +5154,8 @@
       "key": "a7488505-0cbe-4c90-83cd-481891cac662",
       "position": 5,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "a7488505-0cbe-4c90-83cd-481891cac662",
@@ -5109,7 +5166,8 @@
       "key": "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a",
       "position": 6,
       "properties": {
-        "name": "Assessment"
+        "name": "Assessment",
+        "progression_name": "Assessment"
       },
       "seeding_key": {
         "activity_section.key": "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a",
@@ -5120,7 +5178,8 @@
       "key": "5aa91065-3f4e-409f-9f3e-14bd98649ef5",
       "position": 7,
       "properties": {
-        "name": "Challenges"
+        "name": "Challenges",
+        "progression_name": "Challenges"
       },
       "seeding_key": {
         "activity_section.key": "5aa91065-3f4e-409f-9f3e-14bd98649ef5",
@@ -5326,7 +5385,8 @@
       "key": "9e600819-184b-4958-801d-5466137f6fe0",
       "position": 1,
       "properties": {
-        "name": "Upload Your Images"
+        "name": "Upload Your Images",
+        "progression_name": "Upload Your Images"
       },
       "seeding_key": {
         "activity_section.key": "9e600819-184b-4958-801d-5466137f6fe0",
@@ -5413,7 +5473,8 @@
       "key": "01cbfd4f-3493-48d9-beb3-04018d4272f3",
       "position": 2,
       "properties": {
-        "name": "Exploration"
+        "name": "Exploration",
+        "progression_name": "Exploration"
       },
       "seeding_key": {
         "activity_section.key": "01cbfd4f-3493-48d9-beb3-04018d4272f3",
@@ -5424,7 +5485,8 @@
       "key": "850ba43d-59d1-4cf8-be6c-b2c33b4b4875",
       "position": 3,
       "properties": {
-        "name": "Skill Building"
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "850ba43d-59d1-4cf8-be6c-b2c33b4b4875",
@@ -5435,7 +5497,8 @@
       "key": "0a2cb9cf-e6bb-433b-aed9-61118385f936",
       "position": 4,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "0a2cb9cf-e6bb-433b-aed9-61118385f936",
@@ -5446,7 +5509,8 @@
       "key": "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81",
       "position": 5,
       "properties": {
-        "name": "Adding Pages"
+        "name": "Adding Pages",
+        "progression_name": "Adding Pages"
       },
       "seeding_key": {
         "activity_section.key": "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81",
@@ -5457,7 +5521,8 @@
       "key": "76186510-9804-44d1-8371-4aa2895fc16d",
       "position": 6,
       "properties": {
-        "name": "Challenges"
+        "name": "Challenges",
+        "progression_name": "Challenges"
       },
       "seeding_key": {
         "activity_section.key": "76186510-9804-44d1-8371-4aa2895fc16d",
@@ -5553,7 +5618,8 @@
       "key": "88207ae8-3b7d-4b0d-a2b7-7aeb01525bed",
       "position": 3,
       "properties": {
-        "name": "Your Team Project"
+        "name": "Your Team Project",
+        "progression_name": "Your Team Project"
       },
       "seeding_key": {
         "activity_section.key": "88207ae8-3b7d-4b0d-a2b7-7aeb01525bed",
@@ -5564,7 +5630,8 @@
       "key": "30c8efa1-9c2a-434b-8e72-474a8f38d93e",
       "position": 4,
       "properties": {
-        "name": "Add Content and HTML"
+        "name": "Add Content and HTML",
+        "progression_name": "Add Content and HTML"
       },
       "seeding_key": {
         "activity_section.key": "30c8efa1-9c2a-434b-8e72-474a8f38d93e",
@@ -5575,7 +5642,8 @@
       "key": "3c67e494-744f-4bc3-8068-56698fcc6c42",
       "position": 5,
       "properties": {
-        "name": "Share Your Pages"
+        "name": "Share Your Pages",
+        "progression_name": "Share Your Pages"
       },
       "seeding_key": {
         "activity_section.key": "3c67e494-744f-4bc3-8068-56698fcc6c42",
@@ -5586,7 +5654,8 @@
       "key": "61b38059-437b-4b5b-a71d-e94ff04f6ae6",
       "position": 6,
       "properties": {
-        "name": "Add Style"
+        "name": "Add Style",
+        "progression_name": "Add Style"
       },
       "seeding_key": {
         "activity_section.key": "61b38059-437b-4b5b-a71d-e94ff04f6ae6",
@@ -5597,7 +5666,8 @@
       "key": "3db737c5-d81b-44fc-a3b1-6dd08594ce19",
       "position": 7,
       "properties": {
-        "name": "Share Your Stylesheets"
+        "name": "Share Your Stylesheets",
+        "progression_name": "Share Your Stylesheets"
       },
       "seeding_key": {
         "activity_section.key": "3db737c5-d81b-44fc-a3b1-6dd08594ce19",
@@ -5608,7 +5678,8 @@
       "key": "f6c5624d-14b2-4344-86e9-2a2da40edf31",
       "position": 8,
       "properties": {
-        "name": "Check Your Work"
+        "name": "Check Your Work",
+        "progression_name": "Check Your Work"
       },
       "seeding_key": {
         "activity_section.key": "f6c5624d-14b2-4344-86e9-2a2da40edf31",
@@ -5755,7 +5826,8 @@
       "key": "d83f6313-db10-4296-b6da-6c1bba821159",
       "position": 1,
       "properties": {
-        "name": "Final Website"
+        "name": "Final Website",
+        "progression_name": "Final Website"
       },
       "seeding_key": {
         "activity_section.key": "d83f6313-db10-4296-b6da-6c1bba821159",
@@ -5766,7 +5838,8 @@
       "key": "0c6704fa-47c4-481a-bf57-5f7ec89a88bf",
       "position": 2,
       "properties": {
-        "name": "Reflection"
+        "name": "Reflection",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "0c6704fa-47c4-481a-bf57-5f7ec89a88bf",
@@ -5801,10 +5874,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Sample Personal Web Pages",
         "level_keys": [
           "CSD Web Sample Pages_2021"
-        ]
+        ],
+        "progression": "Sample Personal Web Pages"
       },
       "named_level": null,
       "bonus": null,
@@ -5827,10 +5900,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Experiment with Web Lab",
         "level_keys": [
           "CSDU2 - Type Anything_2021"
-        ]
+        ],
+        "progression": "Experiment with Web Lab"
       },
       "named_level": null,
       "bonus": null,
@@ -5853,10 +5926,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Intro to Web Lab - Part 1",
         "level_keys": [
           "Intro to Web Lab - Part 1_2021"
-        ]
+        ],
+        "progression": "Video: Intro to Web Lab - Part 1"
       },
       "named_level": null,
       "bonus": null,
@@ -5879,10 +5952,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Explore HTML",
         "level_keys": [
           "CSD U2 Inspector Warm Up_2021"
-        ]
+        ],
+        "progression": "Explore HTML"
       },
       "named_level": null,
       "bonus": null,
@@ -5905,10 +5978,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Intro to Web Lab - Part 2",
         "level_keys": [
           "Intro to Web Lab - Part 2_2021"
-        ]
+        ],
+        "progression": "Video: Intro to Web Lab - Part 2"
       },
       "named_level": null,
       "bonus": null,
@@ -5931,10 +6004,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CSD U2 HTML Adding Paragraphs_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5957,10 +6030,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment",
         "level_keys": [
           "CSD U2 HTML Adding Paragraphs pt 2_2021"
-        ]
+        ],
+        "progression": "Assessment"
       },
       "named_level": null,
       "bonus": null,
@@ -5983,10 +6056,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenge",
         "level_keys": [
           "CSD U2 HTML Debug Paragraphs_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -6009,10 +6082,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Pair Programming",
         "level_keys": [
           "CSD U2 Pair Programming Video_2021"
-        ]
+        ],
+        "progression": "Video: Pair Programming"
       },
       "named_level": null,
       "bonus": null,
@@ -6035,10 +6108,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Heading debug_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6061,10 +6134,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Heading Demo_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6087,10 +6160,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Heading Sizes_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6113,10 +6186,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Quick Check",
         "level_keys": [
           "CSD Header Size MC_2018_2019_pilot_2021"
-        ]
+        ],
+        "progression": "Quick Check"
       },
       "named_level": null,
       "bonus": null,
@@ -6139,10 +6212,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Debugging",
         "level_keys": [
           "CSD Web Debugging_2021"
-        ]
+        ],
+        "progression": "Video: Debugging"
       },
       "named_level": null,
       "bonus": null,
@@ -6165,10 +6238,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CSD Web Headings practice_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6191,10 +6264,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment",
         "level_keys": [
           "CSD U2 Heading Test_2021"
-        ]
+        ],
+        "progression": "Assessment"
       },
       "named_level": null,
       "bonus": null,
@@ -6217,10 +6290,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenges",
         "level_keys": [
           "CSD Web Headings challenge_2021"
-        ]
+        ],
+        "progression": "Challenges"
       },
       "named_level": null,
       "bonus": null,
@@ -6243,10 +6316,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Review: HTML",
         "level_keys": [
           "CSD HTML project Review_2021"
-        ]
+        ],
+        "progression": "Review: HTML"
       },
       "named_level": null,
       "bonus": null,
@@ -6269,10 +6342,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenge: Lists",
         "level_keys": [
           "CSD HTML project Lists_2021"
-        ]
+        ],
+        "progression": "Challenge: Lists"
       },
       "named_level": null,
       "bonus": null,
@@ -6295,10 +6368,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Code Your Page",
         "level_keys": [
           "CSD web HTML project HTML_2021"
-        ]
+        ],
+        "progression": "Code Your Page"
       },
       "named_level": null,
       "bonus": null,
@@ -6321,10 +6394,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Review Your Page",
         "level_keys": [
           "CSD web HTML project check_2021"
-        ]
+        ],
+        "progression": "Review Your Page"
       },
       "named_level": null,
       "bonus": null,
@@ -6347,10 +6420,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Social Sleuth",
         "level_keys": [
           "Social Sleuth_2018_2019_pilot_2021"
-        ]
+        ],
+        "progression": "Social Sleuth"
       },
       "named_level": null,
       "bonus": null,
@@ -6373,10 +6446,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Sample Website",
         "level_keys": [
           "CSD U2 Sample CSS text_2021"
-        ]
+        ],
+        "progression": "Sample Website"
       },
       "named_level": null,
       "bonus": null,
@@ -6399,10 +6472,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Exploration",
         "level_keys": [
           "CSD U2 CSS explore CSS_2021"
-        ]
+        ],
+        "progression": "Exploration"
       },
       "named_level": null,
       "bonus": null,
@@ -6425,10 +6498,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Intro to CSS - Part 1",
         "level_keys": [
           "Video: Intro to CSS_2021"
-        ]
+        ],
+        "progression": "Video: Intro to CSS - Part 1"
       },
       "named_level": null,
       "bonus": null,
@@ -6451,10 +6524,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 text style h1_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6477,10 +6550,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 text style h3_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6503,10 +6576,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 text style size_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6529,10 +6602,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Intro to CSS - Part 2",
         "level_keys": [
           "Video: Intro to CSS Part 2_2021"
-        ]
+        ],
+        "progression": "Video: Intro to CSS - Part 2"
       },
       "named_level": null,
       "bonus": null,
@@ -6555,10 +6628,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 add file_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6581,10 +6654,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CSD U2 CSS practice_pilot_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6607,10 +6680,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment",
         "level_keys": [
           "CSD Web CSS Assessment_2021"
-        ]
+        ],
+        "progression": "Assessment"
       },
       "named_level": null,
       "bonus": null,
@@ -6633,10 +6706,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenges",
         "level_keys": [
           "CSD U2 CSS challenge_pilot_2021"
-        ]
+        ],
+        "progression": "Challenges"
       },
       "named_level": null,
       "bonus": null,
@@ -6659,10 +6732,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Review: CSS",
         "level_keys": [
           "CSD CSS project Review_2021"
-        ]
+        ],
+        "progression": "Review: CSS"
       },
       "named_level": null,
       "bonus": null,
@@ -6685,10 +6758,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenge: RGB Colors",
         "level_keys": [
           "CSD CSS project RGB_2021"
-        ]
+        ],
+        "progression": "Challenge: RGB Colors"
       },
       "named_level": null,
       "bonus": null,
@@ -6711,10 +6784,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Add Content and Structure to Your Page",
         "level_keys": [
           "CSD web CSS project HTML_2021"
-        ]
+        ],
+        "progression": "Add Content and Structure to Your Page"
       },
       "named_level": null,
       "bonus": null,
@@ -6737,10 +6810,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Add Style to Your Page",
         "level_keys": [
           "CSD web CSS project CSS_2021"
-        ]
+        ],
+        "progression": "Add Style to Your Page"
       },
       "named_level": null,
       "bonus": null,
@@ -6763,10 +6836,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Review Your Page",
         "level_keys": [
           "CSD web CSS project check_2021"
-        ]
+        ],
+        "progression": "Review Your Page"
       },
       "named_level": null,
       "bonus": null,
@@ -6789,10 +6862,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Image Tag 1_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6815,10 +6888,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Image Credit_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6841,10 +6914,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Image Tag Debug_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6867,10 +6940,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Image choose name_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6893,10 +6966,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Image Tag 2_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6919,10 +6992,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CSD U2 Image practice_pilot_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6945,10 +7018,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment",
         "level_keys": [
           "CSD U2 Image assessment_2021"
-        ]
+        ],
+        "progression": "Assessment"
       },
       "named_level": null,
       "bonus": null,
@@ -6971,10 +7044,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenges",
         "level_keys": [
           "CSD U2 Image challenge_pilot_2021"
-        ]
+        ],
+        "progression": "Challenges"
       },
       "named_level": null,
       "bonus": null,
@@ -6997,10 +7070,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Sample Personal Websites",
         "level_keys": [
           "CSD U2 Expression Exemplars_2018_2019_pilot_2021"
-        ]
+        ],
+        "progression": "Sample Personal Websites"
       },
       "named_level": null,
       "bonus": null,
@@ -7023,10 +7096,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Sample Website",
         "level_keys": [
           "CSD U2 Sample CSS layout_2021"
-        ]
+        ],
+        "progression": "Sample Website"
       },
       "named_level": null,
       "bonus": null,
@@ -7049,10 +7122,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Exploration",
         "level_keys": [
           "CSD U2 layout style sample_2021"
-        ]
+        ],
+        "progression": "Exploration"
       },
       "named_level": null,
       "bonus": null,
@@ -7075,10 +7148,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 layout style bgcolor_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -7101,10 +7174,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 layout style body_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -7127,10 +7200,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 layout style float_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -7153,10 +7226,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 layout style width_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -7179,10 +7252,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CSD U2 layout style practice_pilot_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7205,10 +7278,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment",
         "level_keys": [
           "CSD U2 add style_2021"
-        ]
+        ],
+        "progression": "Assessment"
       },
       "named_level": null,
       "bonus": null,
@@ -7231,10 +7304,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenges",
         "level_keys": [
           "CSD U2 layout style challenge_pilot_2021"
-        ]
+        ],
+        "progression": "Challenges"
       },
       "named_level": null,
       "bonus": null,
@@ -7257,10 +7330,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Project Guide",
         "level_keys": [
           "CSD U2 project guide_2018_2019_pilot_2021"
-        ]
+        ],
+        "progression": "Project Guide"
       },
       "named_level": null,
       "bonus": null,
@@ -7283,10 +7356,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Website Project",
         "level_keys": [
           "CSD U2 upload images_2021"
-        ]
+        ],
+        "progression": "Website Project"
       },
       "named_level": null,
       "bonus": null,
@@ -7309,10 +7382,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Website Project",
         "level_keys": [
           "CSD U2 add content_2021"
-        ]
+        ],
+        "progression": "Website Project"
       },
       "named_level": null,
       "bonus": null,
@@ -7335,10 +7408,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Website Project",
         "level_keys": [
           "CSD U2 CSS_2021"
-        ]
+        ],
+        "progression": "Website Project"
       },
       "named_level": null,
       "bonus": null,
@@ -7361,10 +7434,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Website Project",
         "level_keys": [
           "CSD U2 project review_2021"
-        ]
+        ],
+        "progression": "Website Project"
       },
       "named_level": null,
       "bonus": null,
@@ -7387,10 +7460,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Publishing Your Website",
         "level_keys": [
           "CSD U2 publish video_2021"
-        ]
+        ],
+        "progression": "Video: Publishing Your Website"
       },
       "named_level": null,
       "bonus": null,
@@ -7413,10 +7486,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Publishing Your Website",
         "level_keys": [
           "CSD U2 project share_2021"
-        ]
+        ],
+        "progression": "Publishing Your Website"
       },
       "named_level": null,
       "bonus": null,
@@ -7439,10 +7512,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021"
-        ]
+        ],
+        "progression": "Reflection"
       },
       "named_level": null,
       "bonus": null,
@@ -7465,10 +7538,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Top Websites",
         "level_keys": [
           "CSD U2 Top Websites_2018_2019_pilot_2021"
-        ]
+        ],
+        "progression": "Top Websites"
       },
       "named_level": null,
       "bonus": null,
@@ -7491,10 +7564,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Teamwork",
         "level_keys": [
           "csd web teamwork video_2021"
-        ]
+        ],
+        "progression": "Video: Teamwork"
       },
       "named_level": null,
       "bonus": null,
@@ -7517,10 +7590,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Managing Disagreement",
         "level_keys": [
           "csd web disagreement video_2021"
-        ]
+        ],
+        "progression": "Video: Managing Disagreement"
       },
       "named_level": null,
       "bonus": null,
@@ -7543,10 +7616,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Sample Web Page",
         "level_keys": [
           "CSD U2 Sample classes_2021"
-        ]
+        ],
+        "progression": "Sample Web Page"
       },
       "named_level": null,
       "bonus": null,
@@ -7569,10 +7642,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Exploration",
         "level_keys": [
           "CSD U2 classes waterfalls_2021"
-        ]
+        ],
+        "progression": "Exploration"
       },
       "named_level": null,
       "bonus": null,
@@ -7595,10 +7668,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 classes humors_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -7621,10 +7694,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CSD web classes practice_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7647,10 +7720,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment",
         "level_keys": [
           "CSD U2 classes haikus_2021"
-        ]
+        ],
+        "progression": "Assessment"
       },
       "named_level": null,
       "bonus": null,
@@ -7673,10 +7746,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenges",
         "level_keys": [
           "CSD web classes challenge_2021"
-        ]
+        ],
+        "progression": "Challenges"
       },
       "named_level": null,
       "bonus": null,
@@ -7699,10 +7772,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Upload Your Images",
         "level_keys": [
           "CSD web upload images multi_2021"
-        ]
+        ],
+        "progression": "Upload Your Images"
       },
       "named_level": null,
       "bonus": null,
@@ -7725,10 +7798,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Exploration",
         "level_keys": [
           "CSD U2 link demo_2021"
-        ]
+        ],
+        "progression": "Exploration"
       },
       "named_level": null,
       "bonus": null,
@@ -7751,10 +7824,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 making links_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -7777,10 +7850,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 naming links_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -7803,10 +7876,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 naming pages_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -7829,10 +7902,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CSD U2 nav bar_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7855,10 +7928,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Adding Pages",
         "level_keys": [
           "CSD U2 adding pages_2021"
-        ]
+        ],
+        "progression": "Adding Pages"
       },
       "named_level": null,
       "bonus": null,
@@ -7881,10 +7954,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenges",
         "level_keys": [
           "CSD U2 links challenge_2021"
-        ]
+        ],
+        "progression": "Challenges"
       },
       "named_level": null,
       "bonus": null,
@@ -7907,10 +7980,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Your Team Project",
         "level_keys": [
           "CSD web create pages project_2021"
-        ]
+        ],
+        "progression": "Your Team Project"
       },
       "named_level": null,
       "bonus": null,
@@ -7933,10 +8006,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Add Content and HTML",
         "level_keys": [
           "CSD web add html_2021"
-        ]
+        ],
+        "progression": "Add Content and HTML"
       },
       "named_level": null,
       "bonus": null,
@@ -7959,10 +8032,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Share Your Pages",
         "level_keys": [
           "CSD web share html_2021"
-        ]
+        ],
+        "progression": "Share Your Pages"
       },
       "named_level": null,
       "bonus": null,
@@ -7985,10 +8058,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Add Style",
         "level_keys": [
           "CSD web add CSS_2021"
-        ]
+        ],
+        "progression": "Add Style"
       },
       "named_level": null,
       "bonus": null,
@@ -8011,10 +8084,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Share Your Stylesheets",
         "level_keys": [
           "CSD web share CSS_2021"
-        ]
+        ],
+        "progression": "Share Your Stylesheets"
       },
       "named_level": null,
       "bonus": null,
@@ -8037,10 +8110,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Check Your Work",
         "level_keys": [
           "CSD web check_2021"
-        ]
+        ],
+        "progression": "Check Your Work"
       },
       "named_level": null,
       "bonus": null,
@@ -8063,10 +8136,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Final Website",
         "level_keys": [
           "CSD Web incorporate feedback_2021"
-        ]
+        ],
+        "progression": "Final Website"
       },
       "named_level": null,
       "bonus": null,
@@ -8089,10 +8162,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021"
-        ]
+        ],
+        "progression": "Reflection"
       },
       "named_level": null,
       "bonus": null,
