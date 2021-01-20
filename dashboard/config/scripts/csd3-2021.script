@@ -15,17 +15,17 @@ lesson_group_big_questions '* What is a computer program?
 * How does programming enable creativity and individual expression?
 * What practices and strategies will help me as I write programs?
 '
-lesson 'Programming for Entertainment', display_name: 'Programming for Entertainment'
+lesson 'Programming for Entertainment', display_name: 'Programming for Entertainment', has_lesson_plan: true
 level 'CSD U3 Entertainment_2018_2019_pilot_2021', progression: 'Exploring CS in Entertainment'
 level 'CSD U3 Entertainment Sample 4_2021', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 3_2021', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 1_2021', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 2_2021', progression: 'Sample Programs'
 
-lesson 'Plotting Shapes', display_name: 'Plotting Shapes'
+lesson 'Plotting Shapes', display_name: 'Plotting Shapes', has_lesson_plan: true
 level 'CSD U3 Plotting Shapes Shape Lab_2021', progression: 'Drawing Shapes'
 
-lesson 'Drawing in Game Lab', display_name: 'Drawing in Game Lab'
+lesson 'Drawing in Game Lab', display_name: 'Drawing in Game Lab', has_lesson_plan: true
 level 'CSD U3 rect_2021', progression: 'Introduction to Game Lab'
 level 'CSD: Drawing in Game Lab 1_2021', progression: 'Video: Drawing in Game Lab - Part 1'
 level 'CSD U3 Drawing Squares to Corners_2021', progression: 'Using the Grid'
@@ -37,7 +37,7 @@ level 'CSD U3 drawing practice choice_2021', progression: 'Practice'
 level 'CSD U3 debug_2021', progression: 'Assessment', assessment: true
 level 'CSD U3 drawing challenges_2021', progression: 'Challenges'
 
-lesson 'Shapes and Parameters', display_name: 'Shapes and Parameters'
+lesson 'Shapes and Parameters', display_name: 'Shapes and Parameters', has_lesson_plan: true
 level 'CSD U3 Random Taller Rectangle_2021', progression: 'Skill Building'
 level 'CSD U3 Random Ellipse Behind_2021', progression: 'Skill Building'
 level 'CSD U3 Random background_2021', progression: 'Skill Building'
@@ -47,7 +47,7 @@ level 'CSD Games parameters practice_2021', progression: 'Practice'
 level 'CSD U3 Random Debug Cloud_2021', progression: 'Assessment', assessment: true
 level 'CSD Games Parameters challenge_2021', progression: 'Challenges'
 
-lesson 'Variables', display_name: 'Variables'
+lesson 'Variables', display_name: 'Variables', has_lesson_plan: true
 level 'CSD U3 Variables Predict Where X_2021', progression: 'Prediction'
 level 'Introduction to Variables - Part 1_2021', progression: 'Video: Introduction to Variables'
 level 'CSD U3 Variables Predict Where XY_2021', progression: 'Skill Building'
@@ -57,7 +57,7 @@ level 'CSD Games variables practice_2021', progression: 'Practice'
 level 'CSD U3 Variables assessment_2021', progression: 'Assessment', assessment: true
 level 'CSD Games variables challenge_2021', progression: 'Challenges'
 
-lesson 'Random Numbers', display_name: 'Random Numbers'
+lesson 'Random Numbers', display_name: 'Random Numbers', has_lesson_plan: true
 level 'CSD U3 Random random ellipse_2021', progression: 'Exploration'
 level 'CSD U3 Random random ellipse2_2021', progression: 'Skill Building'
 level 'CSD U3 Variables random with assignment_2021', progression: 'Skill Building'
@@ -66,7 +66,7 @@ level 'CSD games random practice_2021', progression: 'Practice'
 level 'CSD U3 Random rainbow snake_2021', progression: 'Assessment', assessment: true
 level 'CSD games random challenge_2021', progression: 'Challenges'
 
-lesson 'Sprites', display_name: 'Sprites'
+lesson 'Sprites', display_name: 'Sprites', has_lesson_plan: true
 level 'CSD U3 Sprites Exploration_2021', progression: 'Exploration'
 level 'CSD: Sprites in Game Lab_2021', progression: 'Video: Introduction to Sprites'
 level 'CSD U3 Sprites intro sprites_2021', progression: 'Skill Building'
@@ -79,7 +79,7 @@ level 'CSD Games Sprites practice_2021', progression: 'Practice'
 level 'CSD U3 Sprites assessment_2021', progression: 'Assessment', assessment: true
 level 'CSD Games Sprites Challenges_2021', progression: 'Challenges'
 
-lesson 'Sprite Properties', display_name: 'Sprite Properties'
+lesson 'Sprite Properties', display_name: 'Sprite Properties', has_lesson_plan: true
 level 'CSD Games properties predict_2021', progression: 'Prediction'
 level 'CSD Games properties xy_2021', progression: 'Skill Building'
 level 'CSD Games properties new_2021', progression: 'Skill Building'
@@ -87,7 +87,7 @@ level 'CSD Games Properties practice_2021', progression: 'Practice'
 level 'CSD Games properties assessment_2021', progression: 'Assessment', assessment: true
 level 'CSD Games Properties challenge_2021', progression: 'Challenges'
 
-lesson 'Text', display_name: 'Text'
+lesson 'Text', display_name: 'Text', has_lesson_plan: true
 level 'CSD web text explore_2021', progression: 'Prediction'
 level 'CSD U3 Sprites text_2021', progression: 'Skill Building'
 level 'CSD web text size_2021', progression: 'Skill Building'
@@ -95,14 +95,14 @@ level 'CSD web text practice choice_2021', progression: 'Practice'
 level 'CSD web text assessment_2021', progression: 'Assessment', assessment: true
 level 'CSD web text challenge choice_2021', progression: 'Challenges'
 
-lesson 'Mini-Project: Captioned Scenes', display_name: 'Mini-Project - Captioned Scenes'
+lesson 'Mini-Project: Captioned Scenes', display_name: 'Mini-Project - Captioned Scenes', has_lesson_plan: true
 level 'CSD U3 Scene Example_2021', progression: 'Sprite Scenes'
 level 'CSD U3 Sprites scene drawing_2021', progression: 'Create a Background'
 level 'CSD U3 Sprites scene sprites_2021', progression: 'Add Sprites'
 level 'CSD U3 Sprites scene text_2021', progression: 'Add Text'
 level 'CSD U3 Sprites scene challenge_2021', progression: 'Review Your Scene'
 
-lesson 'The Draw Loop', display_name: 'The Draw Loop'
+lesson 'The Draw Loop', display_name: 'The Draw Loop', has_lesson_plan: true
 level 'CSD: Introduction to the Draw Loop_2021', progression: 'Video: Introduction to the Draw Loop'
 level 'CSD U3 Draw Loop Plugged predict 1_2021', progression: 'Exploration'
 level 'CSD U3 Draw Loop Plugged orange and green_2021', progression: 'Skill Building'
@@ -113,7 +113,7 @@ level 'CSD web draw loop practice choice_2021', progression: 'Practice'
 level 'CSD U3 Draw Loop Plugged wiggle sprite y_2021', progression: 'Assessment', assessment: true
 level 'CSD web draw loop challenge choice_2021', progression: 'Challenges'
 
-lesson 'Sprite Movement', display_name: 'Sprite Movement'
+lesson 'Sprite Movement', display_name: 'Sprite Movement', has_lesson_plan: true
 level 'CSD U3 - Simple Counter Predict_2021', progression: 'Prediction'
 level 'CSD: Animating Sprite Movement_2021', progression: 'Video: Sprite Movement'
 level 'CSD U3 Sprite Movement Right_2021', progression: 'Skill Building'
@@ -124,7 +124,7 @@ level 'CSD web movement practice choice_2021', progression: 'Practice'
 level 'CSD U3 Movement Fish_2021', progression: 'Assessment', assessment: true
 level 'CSD web movement challenge choice_2021', progression: 'Challenges'
 
-lesson 'Mini-Project: Animation', display_name: 'Mini-Project - Animation'
+lesson 'Mini-Project: Animation', display_name: 'Mini-Project - Animation', has_lesson_plan: true
 level 'CSD web project animated example_2021', progression: 'Example Animated Scene'
 level 'CSD web project animated plan_2021', progression: 'Plan Your Scene'
 level 'CSD web project animated background_2021', progression: 'Draw a Background'
@@ -133,7 +133,7 @@ level 'CSD web project animated text_2021', progression: 'Add Text'
 level 'CSD web project animated movement_2021', progression: 'Add Movement'
 level 'CSD web project animated review_2021', progression: 'Review Your Animated Scene'
 
-lesson 'Conditionals', display_name: 'Conditionals'
+lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: true
 level 'CSD U3 Boolean Predict_2021', progression: 'Prediction'
 level 'CSD U3 - Booleans Video_2021', progression: 'Video: Booleans'
 level 'CSD U3 - conditionals - Matching_2018_2019_pilot_2021', progression: 'Quick Check'
@@ -145,7 +145,7 @@ level 'CSD web conditionals practice choice_2021', progression: 'Practice'
 level 'CSD web conditionals assessment_2021', progression: 'Assessment', assessment: true
 level 'CSD web conditionals challenge choice_2021', progression: 'Challenges'
 
-lesson 'Keyboard Input', display_name: 'Keyboard Input'
+lesson 'Keyboard Input', display_name: 'Keyboard Input', has_lesson_plan: true
 level 'CSD U3 Keypress Boolean_2021', progression: 'Prediction'
 level 'CSD U3 keydown conditional_2021', progression: 'Skill Building'
 level 'CSD U3 UP_ARROW_2021', progression: 'Skill Building'
@@ -154,7 +154,7 @@ level 'CSD web keyboard practice choice_2021', progression: 'Practice'
 level 'CSD U3 Direction Arrows_2021', progression: 'Assessment', assessment: true
 level 'CSD web keyboard challenge choice_2021', progression: 'Challenges'
 
-lesson 'Mouse Input', display_name: 'Mouse Input'
+lesson 'Mouse Input', display_name: 'Mouse Input', has_lesson_plan: true
 level 'CSD U3 if else predict_2021', progression: 'Prediction'
 level 'CSD U3 - Conditionals Video_2021', progression: 'Video: If/Else Statements'
 level 'CSD U3 Else_2021', progression: 'Skill Building'
@@ -165,7 +165,7 @@ level 'CSD web mouse practice choice_2021', progression: 'Practice'
 level 'CSD web mouse assessment_2021', progression: 'Assessment', assessment: true
 level 'CSD web mouse challenge choice_2021', progression: 'Challenges'
 
-lesson 'Project - Interactive Card', display_name: 'Project - Interactive Card'
+lesson 'Project - Interactive Card', display_name: 'Project - Interactive Card', has_lesson_plan: true
 level 'CSD U3 Interactive Card Exemplar_2021', progression: 'interactive Card'
 level 'CSD U3 Card Examples_2018_2019_pilot_2021', progression: 'Make an Interactive Card'
 level 'CSD U3 Interactive Card Background_2021', progression: 'Project Work'
@@ -180,7 +180,7 @@ lesson_group_description 'In this chapter students combine the constructs that t
 lesson_group_big_questions '* How do software developers manage complexity and scale?
 * How can programs be organized so that common problems only need to be solved once?
 * How can I build on previous solutions to create even more complex behavior?'
-lesson 'Velocity', display_name: 'Velocity'
+lesson 'Velocity', display_name: 'Velocity', has_lesson_plan: true
 level 'CSD U3 abstraction velocityX_2021', progression: 'Skill Building'
 level 'CSD: Sprite Velocity_2021', progression: 'Video: Velocity'
 level 'CSD U3 abstraction velocityY_2021', progression: 'Skill Building'
@@ -192,7 +192,7 @@ level 'CSD games velocity practice choice_2021', progression: 'Practice'
 level 'CSD U3 abstraction velocityX control_2021', progression: 'Assessment', assessment: true
 level 'CSD games velocity challenge choice_2021', progression: 'Challenges'
 
-lesson 'Collision Detection', display_name: 'Collision Detection'
+lesson 'Collision Detection', display_name: 'Collision Detection', has_lesson_plan: true
 level 'CSD U3 collisions car intro_2021', progression: 'Sample Game'
 level 'CSD U3 collisions build isTouching_2021', progression: 'Skill Building'
 level 'CSD U3 collisions isTouching intro_2021', progression: 'Skill Building'
@@ -202,7 +202,7 @@ level 'CSD games istouching practice choice_2021', progression: 'Practice'
 level 'CSD U3 collisions horse_2021', progression: 'Assessment', assessment: true
 level 'CSD games istouching challenge choice_2021', progression: 'Challenges'
 
-lesson 'Mini-Project: Side Scroller', display_name: 'Mini-Project - Side Scroller'
+lesson 'Mini-Project: Side Scroller', display_name: 'Mini-Project - Side Scroller', has_lesson_plan: true
 level 'CSD games side scroller demo_2021', progression: 'Intro to Side Scrollers'
 level 'CSD games sidescroll background_2021', progression: 'Draw Your Background'
 level 'CSD U3 abstraction tumbleweed_2021', progression: 'Create Your Sprites'
@@ -212,7 +212,7 @@ level 'CSD U3 collisions sidescroll2_2021', progression: 'Sprite Interactions'
 level 'CSD U3 collisions scoreboard_2021', progression: 'Scoring & Scoreboard'
 level 'CSD games sidescroll review_2021', progression: 'Review Your Game'
 
-lesson 'Complex Sprite Movement', display_name: 'Complex Sprite Movement'
+lesson 'Complex Sprite Movement', display_name: 'Complex Sprite Movement', has_lesson_plan: true
 level 'CSD U3 Complex Movement counter prediction gamelab_2021', progression: 'Prediction'
 level 'CSD U3 abstraction accelerateX_2021', progression: 'Skill Building'
 level 'CSD U3 abstraction accelerateY_2021', progression: 'Skill Building'
@@ -221,7 +221,7 @@ level 'CSD games movement2 practice choice_2021', progression: 'Practice'
 level 'CSD U3 abstraction decelerateY_2021', progression: 'Assessment', assessment: true
 level 'CSD games movement2 challenge choice_2021', progression: 'Challenges'
 
-lesson 'Collisions', display_name: 'Collisions'
+lesson 'Collisions', display_name: 'Collisions', has_lesson_plan: true
 level 'CSD U3 collisions predict set velocity code_2021', progression: 'Code Prediction'
 level 'CSD U3 collisions displace x_2021', progression: 'Skill Building'
 level 'CSD U3 collisions displace y_2021', progression: 'Skill Building'
@@ -231,7 +231,7 @@ level 'CSD games collisions practice choice_2021', progression: 'Practice'
 level 'CSD games collisions assessment_2021', progression: 'Assessment', assessment: true
 level 'CSD games collisions challenge choice_2021', progression: 'Challenges'
 
-lesson 'Mini-Project: Flyer Game', display_name: 'Mini-Project - Flyer Game'
+lesson 'Mini-Project: Flyer Game', display_name: 'Mini-Project - Flyer Game', has_lesson_plan: true
 level 'CSD games flyer demo_2021', progression: 'Intro to Flyer Game'
 level 'CSD U3 abstraction add coin_2021', progression: 'Make Your Sprites'
 level 'CSD U3 abstraction jumping_2021', progression: 'Player Controls'
@@ -241,7 +241,7 @@ level 'CSD U3 collisions flyman add obstacles_2021', progression: 'Sprite Moveme
 level 'CSD U3 abstraction reset coin_2021', progression: 'Sprite Interactions'
 level 'CSD U3 collisions flyman bounceOff_2021', progression: 'Review Your Game'
 
-lesson 'Functions', display_name: 'Functions'
+lesson 'Functions', display_name: 'Functions', has_lesson_plan: true
 level 'CSD U3 function video_2021', progression: 'Video: Functions'
 level 'CSD U3 Functions Call Function_2021', progression: 'Skill Building'
 level 'CSD U3 Functions Order Functions_2021', progression: 'Skill Building'
@@ -253,7 +253,7 @@ level 'CSD U3 Functions Add IsTouching_2021', progression: 'Collector Game'
 level 'CSD U3 Functions Add Change Background_2021', progression: 'Collector Game', assessment: true
 level 'CSD games functions challenge choice_2021', progression: 'Challenges'
 
-lesson 'The Game Design Process', display_name: 'The Game Design Process'
+lesson 'The Game Design Process', display_name: 'The Game Design Process', has_lesson_plan: true
 level 'CSD U3 AnimationsMulti Play Defender_2021', progression: 'Same Game'
 level 'CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021', progression: 'Plan Your Project'
 level 'CSD U3 AnimationsMulti defender animate cake enemies_2021', progression: 'Set Up Sprites'
@@ -268,7 +268,7 @@ level 'CSD U3 AnimationsMulti defender displace enemies_2021', progression: 'Spr
 level 'CSD U3 AnimationsMulti defender touch water_2021', progression: 'Sprite Interactions'
 level 'CSD games cake challenge choice_2021', progression: 'Challenges'
 
-lesson 'Using the Game Design Process', display_name: 'Using the Game Design Process'
+lesson 'Using the Game Design Process', display_name: 'Using the Game Design Process', has_lesson_plan: true
 level 'CSD U3 platform sample1_2021', progression: 'Sample Platform Jumper Game'
 level 'CSD U3 platform intro_2018_2019_pilot_2021', progression: 'Build a Platform Jumper'
 level 'CSD U3 platform background1_2021', progression: 'Platform Jumper - Background and Variables'
@@ -290,7 +290,7 @@ level 'CSD U3 platform sample2_2021', progression: 'Challenges'
 level 'CSD U3 platform sample3_2021', progression: 'Challenges'
 level 'CSD games platform challenge choice_2021', progression: 'Challenges'
 
-lesson 'Project - Design a Game', display_name: 'Project - Design a Game'
+lesson 'Project - Design a Game', display_name: 'Project - Design a Game', has_lesson_plan: true
 level 'CSD U3 game intro_2018_2019_pilot_2021', progression: 'Design Your Game'
 level 'CSD U3 game variables_2021', progression: 'Project - Background and Variables'
 level 'CSD U3 game backgrounds_2021', progression: 'Project - Background and Variables'
@@ -304,11 +304,11 @@ level 'CSD U3 game interactions_2021', progression: 'Project - Sprites and Inter
 level 'CSD games project review_2021', progression: 'Review Your Game'
 level 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021', progression: 'Reflection', assessment: true
 
-lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD Interactive Animations and Games Post-Project Test_pilot_2021', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true, has_lesson_plan: false
 level 'csd-post-survey-intro-2019_pilot_2021'
 level 'csd-post-survey-2017-levelgroup_2018_2019_pilot_2021', assessment: true
 

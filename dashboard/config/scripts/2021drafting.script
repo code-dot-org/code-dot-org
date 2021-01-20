@@ -2,12 +2,12 @@ teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1EO_WpYYv
 
 lesson_group 'introduction', display_name: 'Introduction'
 lesson_group_description 'Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!'
-lesson 'Course F Introduction', display_name: 'Introducing Sprite Lab'
+lesson 'Course F Introduction', display_name: 'Introducing Sprite Lab', has_lesson_plan: true
 level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Video: Introducing Sprite Lab'
 level 'courseF_intro_apps', progression: 'Exploration: Sample Apps'
 level 'courseF_intro_birds_puzzle', progression: 'Exploration: Writing Code'
 
-lesson 'Making Sprites', display_name: 'Making Sprites'
+lesson 'Making Sprites', display_name: 'Making Sprites', has_lesson_plan: true
 level 'courseF_sprites_predict', progression: 'Predict'
 level 'CourseEF_video_MakeSprite_2020', progression: 'Video: How to Make a Sprite'
 level 'courseF_sprites_make', progression: 'Skill Building'
@@ -18,7 +18,7 @@ level 'courseF_sprites_behaviors', progression: 'Skill Building'
 level 'courseF_sprites_practice', progression: 'Practice'
 level 'courseF_sprites_freeplay', progression: 'Free Play: Make a Scene'
 
-lesson 'Sprites in Action', display_name: 'Sprites in Action'
+lesson 'Sprites in Action', display_name: 'Sprites in Action', has_lesson_plan: true
 level 'courseF_events_predict', progression: 'Predict'
 level 'courseF_pilotVideo_events', progression: 'Video: Sprites in Action'
 level 'courseF_events_practice', progression: 'Practice'
@@ -26,21 +26,21 @@ level 'courseF_events_freeplay', progression: 'Free Play: Make a Scene'
 
 lesson_group 'lessonGroup-3', display_name: 'Variables'
 lesson_group_description 'Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!'
-lesson 'lesson-1', display_name: 'Blank Space Variables'
+lesson 'lesson-1', display_name: 'Blank Space Variables', has_lesson_plan: true
 level 'EnvelopeVariables-Unplugged_2021', progression: 'Blank Space Variables'
 
-lesson 'lesson-2', display_name: 'Storing and Retrieving Text'
+lesson 'lesson-2', display_name: 'Storing and Retrieving Text', has_lesson_plan: true
 
-lesson 'lesson-3', display_name: 'Create a Chat-Bot'
+lesson 'lesson-3', display_name: 'Create a Chat-Bot', has_lesson_plan: true
 
-lesson 'lesson-4', display_name: 'Counting with Variables'
+lesson 'lesson-4', display_name: 'Counting with Variables', has_lesson_plan: true
 
-lesson 'lesson-5', display_name: 'Groups of Sprites'
+lesson 'lesson-5', display_name: 'Groups of Sprites', has_lesson_plan: true
 
-lesson 'lesson-6', display_name: 'Create a Collector Game'
+lesson 'lesson-6', display_name: 'Create a Collector Game', has_lesson_plan: true
 
 lesson_group 'outbreak', display_name: 'Outbreak Simulation'
-lesson 'Virus Simulation for Code Bytes', display_name: 'Coding a Simulation'
+lesson 'Virus Simulation for Code Bytes', display_name: 'Coding a Simulation', has_lesson_plan: true
 level 'outbreak_story', progression: 'Welcome to Monster Town'
 level 'outbreak1', progression: 'Creating a Simulation'
 level 'outbreak2', progression: 'Programming with Events'
@@ -54,7 +54,7 @@ level 'outbreak8', progression: 'Share Your Message'
 level 'outbreak_freeplay_choice', progression: 'Free Play'
 
 lesson_group 'Toolbox Levels', display_name: 'Toolbox Levels'
-lesson 'Sprite Lab', display_name: 'Sprite Lab Blocks'
+lesson 'Sprite Lab', display_name: 'Sprite Lab Blocks', has_lesson_plan: true
 level 'sprite lab - ask and answer', progression: 'Text Input'
 level 'anjali- Math Blocks', progression: 'Math Blocks'
 level '2020 new SL stuff', progression: 'New Sprite Animations'
