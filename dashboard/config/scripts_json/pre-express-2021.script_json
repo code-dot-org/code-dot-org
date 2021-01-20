@@ -2603,10 +2603,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseA_maze_seq10_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": false,
@@ -2954,10 +2954,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseB_starWars_prog8_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": false,
@@ -3330,10 +3330,10 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseA_harvester_seq10_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": false,
@@ -3656,10 +3656,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseB_iceage_loops10_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": false,
@@ -3957,10 +3957,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseB_collector_loops8_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": false,
@@ -4358,10 +4358,10 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseA_artist_loops9_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": false,
@@ -4709,10 +4709,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseB_artist_loops7_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": false,
