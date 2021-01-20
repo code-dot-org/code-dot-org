@@ -48,6 +48,11 @@ class LessonsController < ApplicationController
       @lesson.update!(lesson_params.except(:resources, :objectives, :original_lesson_data))
       @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
+
+      if @lesson.lockable
+        msg = "The last level in a lockable lesson must be a LevelGroup and an assessment."
+        raise msg unless @lesson.script_levels.last.assessment && @lesson.script_levels.last.level.type == 'LevelGroup'
+      end
     end
 
     if Rails.application.config.levelbuilder_mode
