@@ -13,6 +13,17 @@ module Foorm
       @library_question.save
     end
 
+    def update_group
+      ActiveRecord::Base.transaction do
+        params[:update].each do |library_question|
+          library_question = Foorm::LibraryQuestion.find library_question[:id]
+          library_question.question = library_question[:question]
+          library_question.save
+          # need to rollback file system changes somehow if we roll back db changes?
+        end
+      end
+    end
+
     # GET '/foorm/library_questions/editor'
     def editor
       formatted_names_and_versions = Foorm::LibraryQuestion.all.map {|library_question| {name: library_question.library_name, version: library_question.library_version}}.uniq
