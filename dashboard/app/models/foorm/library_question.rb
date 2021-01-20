@@ -21,6 +21,8 @@ class Foorm::LibraryQuestion < ApplicationRecord
 
   validate :validate_library_question
 
+  after_save :write_library_to_file
+
   def self.setup
     Dir.glob('config/foorm/library/**/*.json').each do |path|
       # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
@@ -57,9 +59,45 @@ class Foorm::LibraryQuestion < ApplicationRecord
     end
   end
 
+  def other_questions_in_library
+    Foorm::LibraryQuestion.where(
+      library_name: library_name,
+      library_version: library_version
+    ).
+    where.not(id: id)
+  end
+
+  def library_formatted_as_json
+    # figure out which of these is necessary for valid SurveyJS
+    {}.tap do |library|
+      library['published'] = true
+      library['pages'] = [Hash.new]
+      library['pages']['name'] = 'page_1'
+      library['elements'] = [].tap do |elements|
+        # this needs work
+        elements << question.to_json
+        other_questions_in_library.each do |question|
+          elements << question.to_json
+        end
+      end
+    end
+  end
+
   def validate_library_question
     Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
   rescue StandardError => e
     errors.add(:question, e.message)
+  end
+
+  def write_library_to_file
+    if write_to_file? && saved_changes?
+
+      file_path = Rails.root.join("config/foorm/library/#{library_name}.#{version}.json")
+      puts file_path
+    end
+  end
+
+  def write_to_file?
+    Rails.application.config.levelbuilder_mode
   end
 end

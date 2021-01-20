@@ -5,6 +5,14 @@ module Foorm
     before_action :authenticate_user!
     authorize_resource
 
+    # PUT '/foorm/library_questions/:id'
+    def update
+      question = params[:question]
+      @library_question.question = question
+
+      @library_question.save
+    end
+
     # GET '/foorm/library_questions/editor'
     def editor
       formatted_names_and_versions = Foorm::LibraryQuestion.all.map {|library_question| {name: library_question.library_name, version: library_question.library_version}}.uniq
