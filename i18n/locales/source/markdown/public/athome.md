@@ -23,6 +23,8 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 * [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
 * And many [more tutorials](https://code.org/hourofcode/overview)!
 
+Limited or no internet access? Try our <a href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">unplugged Hour of Code activities</a>!
+
 <p><a href="#top">[Back to top]</a></p>
 
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
@@ -107,6 +109,18 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 ## Limited or no internet access? Check out these unplugged activities
+<div class="col-33">
+    <img src="/images/new-main.jpg" width="90%">
+</div>
+<div class="col-66" style="padding-left: 20px">
+<p>Looking for some great ways for your students to get “hands-on” with computer science? Check out our library of unplugged lessons you can do without a computer from our CS Fundamentals courses! <i>(for ages 4 and up)</i></p>
+<br>
+<a href="https://code.org/curriculum/unplugged" target="_blank"><button>View unplugged lessons</button></a>
+</div>
+<div style="clear: both; margin-bottom: 15px"></div>
+<br>
+
+Or view these unplugged options from other organizations:
 * [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
 * [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
 
