@@ -116,7 +116,7 @@
     },
     {
       "key": "lesson-1",
-      "name": "Envelope Variables",
+      "name": "Blank Space Variables",
       "absolute_position": 4,
       "lockable": false,
       "relative_position": 4,
@@ -240,7 +240,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Video: Introducing Sprite Lab"
+        "progression": "Video: Introducing Sprite Lab",
+        "level_keys": [
+          "CourseEF_video_IntroSpriteLab_2020"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -262,7 +265,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Exploration: Sample Apps"
+        "progression": "Exploration: Sample Apps",
+        "level_keys": [
+          "courseF_intro_apps"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -284,7 +290,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Exploration: Writing Code"
+        "progression": "Exploration: Writing Code",
+        "level_keys": [
+          "courseF_intro_birds_puzzle"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -306,7 +315,35 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "How to Make a Sprite"
+        "progression": "Predict",
+        "level_keys": [
+          "courseF_sprites_predict"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_predict"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_predict"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Video: How to Make a Sprite",
+        "level_keys": [
+          "CourseEF_video_MakeSprite_2020"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -323,12 +360,190 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_sprites_make"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_make"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_make"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_sprites_positioning"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_positioning"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_positioning"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_sprites_moreSprites"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_moreSprites"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_sprites_properties"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_properties"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_properties"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_sprites_behaviors"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_behaviors"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_behaviors"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_sprites_practice"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_practice"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_practice"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Free Play: Make a Scene",
+        "level_keys": [
+          "courseF_sprites_freeplay"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_freeplay"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_freeplay"
+      ]
+    },
+    {
+      "chapter": 13,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Prediction"
+        "progression": "Predict",
+        "level_keys": [
+          "courseF_events_predict"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -345,12 +560,15 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Video: Sprites in Action"
+        "progression": "Video: Sprites in Action",
+        "level_keys": [
+          "CDEF_video_SpritesInAction_2020"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -367,12 +585,40 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Welcome to Monster Town"
+        "progression": "Blank Space Variables",
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "EnvelopeVariables-Unplugged_2021"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Welcome to Monster Town",
+        "level_keys": [
+          "outbreak_story"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -389,12 +635,15 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Creating a Simulation"
+        "progression": "Creating a Simulation",
+        "level_keys": [
+          "outbreak1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -411,12 +660,15 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Programming with Events"
+        "progression": "Programming with Events",
+        "level_keys": [
+          "outbreak2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -433,12 +685,15 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Stopping the Outbreak with Masks"
+        "progression": "Stopping the Outbreak with Masks",
+        "level_keys": [
+          "outbreak3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -455,12 +710,15 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Learning from Simulations"
+        "progression": "Learning from Simulations",
+        "level_keys": [
+          "outbreak_story2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -477,12 +735,15 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "More Monsters"
+        "progression": "More Monsters",
+        "level_keys": [
+          "outbreak4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -499,12 +760,15 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 22,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Recovery"
+        "progression": "Recovery",
+        "level_keys": [
+          "outbreak5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -521,13 +785,16 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 23,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Chance",
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "outbreak6"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -544,13 +811,16 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 24,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Vaccines",
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "outbreak7"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -567,12 +837,15 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 25,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Share Your Message"
+        "progression": "Share Your Message",
+        "level_keys": [
+          "outbreak8"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -589,12 +862,15 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 26,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Free Play"
+        "progression": "Free Play",
+        "level_keys": [
+          "outbreak_freeplay_choice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -611,12 +887,15 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Text Input"
+        "progression": "Text Input",
+        "level_keys": [
+          "sprite lab - ask and answer"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -633,12 +912,15 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Math Blocks"
+        "progression": "Math Blocks",
+        "level_keys": [
+          "anjali- Math Blocks"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -655,12 +937,15 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "New Sprite Animations"
+        "progression": "New Sprite Animations",
+        "level_keys": [
+          "2020 new SL stuff"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -677,12 +962,15 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Symmetry"
+        "progression": "Symmetry",
+        "level_keys": [
+          "symmetry"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -699,12 +987,15 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Full Toolbox and/or Template"
+        "progression": "Full Toolbox and/or Template",
+        "level_keys": [
+          "courseF_2021_template"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -757,9 +1048,97 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseF_sprites_predict",
+        "script_level.level_keys": [
+          "courseF_sprites_predict"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CourseEF_video_MakeSprite_2020",
         "script_level.level_keys": [
           "CourseEF_video_MakeSprite_2020"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_make",
+        "script_level.level_keys": [
+          "courseF_sprites_make"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_positioning",
+        "script_level.level_keys": [
+          "courseF_sprites_positioning"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_moreSprites",
+        "script_level.level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_properties",
+        "script_level.level_keys": [
+          "courseF_sprites_properties"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_behaviors",
+        "script_level.level_keys": [
+          "courseF_sprites_behaviors"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_practice",
+        "script_level.level_keys": [
+          "courseF_sprites_practice"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_freeplay",
+        "script_level.level_keys": [
+          "courseF_sprites_freeplay"
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "introduction",
@@ -785,6 +1164,17 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "EnvelopeVariables-Unplugged_2021",
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "2021drafting"
       }
     },
@@ -969,6 +1359,12 @@
 
   ],
   "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
 
   ],
   "objectives": [

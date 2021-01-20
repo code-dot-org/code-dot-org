@@ -749,19 +749,6 @@
       }
     },
     {
-      "key": "e3529c30-fa2b-4054-91c6-4a0d83787f40",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e3529c30-fa2b-4054-91c6-4a0d83787f40",
-        "lesson.key": "Overflow and Rounding",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
       "key": "93ede618-3e5f-4adf-b72a-315289705034",
       "position": 1,
       "properties": {
@@ -908,19 +895,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "544f13a4-73fc-40e4-a1b2-410ca0568674",
-        "lesson.key": "Color Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "key": "2180a2b1-9a3d-45c3-b085-b0ed672e5b1c",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2180a2b1-9a3d-45c3-b085-b0ed672e5b1c",
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021"
@@ -2185,7 +2159,6 @@
         "description": "[slide]  **Prompt:** Imagine you work at a local store. In the register all you have are nine $10 bills, nine $1 bills, and nine dimes.\n\n* What’s the largest amount of change that you can give someone? \n* What’s the least? \n* What would you do if someone needed 7 cents in change?",
         "tips": [
           {
-            "key": "1",
             "type": "discussionGoal",
             "markdown": "Today we’re going to explore what happens when you don’t have the right “places” to store information. This can happen when you try to store very large numbers, very small ones, and everything in-between! The goal of the prompt is to understand the very real problem of making sure that enough place values are available to represent numbers. \n\n* The largest amount of change you can give someone is $99.90. \n* The least change you can give is $0.10. \n* You can’t give someone $0.07. You also can’t give someone $1.25 in change (because you have no nickels!) \n \nAt both extremes of the number range, large and small -- and in between numbers -- you are unable to build some numbers because you don’t have the place values to do so.\n"
           }
@@ -2211,15 +2184,6 @@
       "key": "ac4f114a-d4fd-4b82-931c-9c8ddafaa0f4",
       "position": 2,
       "properties": {
-        "description": "We will start exploring large place values to see what happens when a big number gets too big. Go to the Binary Odometer Widget on Level 2 of the lesson on Code Studio.This is a widget that simulates a car odometer - a device that tracks how far the car has driven (in miles or kilometers). Explore the odometer to understand how it works.",
-        "tips": [
-          {
-            "key": "2",
-            "type": "teachingTip",
-            "markdown": "Students will tackle the problem of “running out of place values” when counting to bigger and bigger numbers. They will play with a digital odometer widget to explore what happens when you add one to the largest number you can represent in a number system.\n"
-          }
-        ],
-        "remarks": true,
         "name": "Odometer Activity"
       },
       "seeding_key": {
@@ -2228,8 +2192,26 @@
       }
     },
     {
-      "key": "cae0af79-f7c4-48c9-b1e2-fc7935068662",
+      "key": "4138d22b-ca45-4ad2-bcda-31f4aa6d3dc1",
       "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "We will start exploring large place values to see what happens when a big number gets too big. Go to the Binary Odometer Widget on Level 2 of the lesson on Code Studio.This is a widget that simulates a car odometer - a device that tracks how far the car has driven (in miles or kilometers). Explore the odometer to understand how it works.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students will tackle the problem of “running out of place values” when counting to bigger and bigger numbers. They will play with a digital odometer widget to explore what happens when you add one to the largest number you can represent in a number system.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4138d22b-ca45-4ad2-bcda-31f4aa6d3dc1",
+        "lesson_activity.key": "6ce45546-2b83-44a0-91fa-37034bc87fab"
+      }
+    },
+    {
+      "key": "cae0af79-f7c4-48c9-b1e2-fc7935068662",
+      "position": 4,
       "properties": {
         "description": "[slide] **Do This:** Navigate to Level 2. Play with the odometer to figure out how it works. \n\n**Circulate:** Give students two to three minutes to explore the odometer."
       },
@@ -2240,7 +2222,7 @@
     },
     {
       "key": "44ad24a1-9a1d-41cd-b069-2cecb9c34742",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "Now I'm going to give you a challenge to tackle with the Binary Odometer. Write your response in your journals.",
         "remarks": true
@@ -2252,7 +2234,7 @@
     },
     {
       "key": "a8b1daed-0ee9-4dee-a06c-a85e915c6e3e",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "[slide] **Do This:** Set the binary odometer to the highest number possible. Then let it run!"
       },
@@ -2263,12 +2245,11 @@
     },
     {
       "key": "1067acf7-c8d4-43b7-a676-678d34db0a57",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "[slide]  **Discuss:**",
+        "description": "[slide]  **Discuss:**\n\n* What happens to the odometer reading?\n* Does the odometer still show the distance driven by the car?",
         "tips": [
           {
-            "key": "3",
             "type": "discussionGoal",
             "markdown": "When the odometer turns over -- exceeds the number of place values it can physically display -- the odometer reading correctly shows all but one number in its place value positions. \n\nFor example: \n\n![](https://curriculum.code.org/media/uploads/binary1.png)\n\nAfter the odometer turns over:\n\n![](https://curriculum.code.org/media/uploads/binary3.png)\n\nAs you can see, all the numbers should flip to 0 and the one of the left should flip to 1. But we are out of place values! So the numbers flip to 0, but nothing flips to 1. The number we are trying to represent does not fit in the number of bits we have available to accurately display it.\n\nLike a bathtub that has reached its maximum capacity for holding water and is now overflowing, the odometer has reached its maximum capacity and has reached **overflow**. \n"
           }
@@ -2280,21 +2261,10 @@
       }
     },
     {
-      "key": "0c503e18-925c-46a9-b065-c42da4c4082f",
-      "position": 7,
-      "properties": {
-        "description": "* What happens to the odometer reading?\n* Does the odometer still show the distance driven by the car?"
-      },
-      "seeding_key": {
-        "activity_section.key": "0c503e18-925c-46a9-b065-c42da4c4082f",
-        "lesson_activity.key": "6ce45546-2b83-44a0-91fa-37034bc87fab"
-      }
-    },
-    {
       "key": "a71aae55-6d99-498d-a6fa-4c729901e49e",
       "position": 8,
       "properties": {
-        "description": "Now that you have started thinking about place value and overflow, we are going to work on a different problem. What happens when there aren’t enough place values to represent a number? You will explore this with a new version of the Flippy Do, the Flippy Do Pro!",
+        "description": "Now that you have started thinking about place value and overflow, we are going to work on a different problem. What happens when there aren’t enough place values to represent a number? You will explore this with a new version of the Flippy Do, the Flippy Do Pro!\n[r flippy do pro]",
         "remarks": true,
         "name": "Flippy Do Pro"
       },
@@ -2321,7 +2291,6 @@
         "description": "[slide]  **Do This:** Cut and fold your Flippy Do Pro following the guidance on the slide. Fill out all the numbers if they are not already done.",
         "tips": [
           {
-            "key": "4",
             "type": "teachingTip",
             "markdown": "* The Flippy Do Pro is still using 8 bits to represent a number. But this time, the place value of each bit has been assigned in a different way than in the previous Flippy Do or on the Binary Odometer. The bits have been \"shifted\" to the right two times. The value 1 (2^0) is no longer the smallest place value. The value of a bit just to the right of 1 (2^0) is 0.5, which is 2^-1. The value to the right again is 0.25 which is 2^-2.\n\n* Students may struggle with negative exponents. What's more important than emphasizing the math is emphasizing the pattern of place values in the Flippy Do Pro. As you move left, the place value doubles. As you move right, the place value halves. \n\n* Help students see that using the Flippy Do Pro is similar to using the Flippy Do. To form a value, flip the flaps up or down at the bottom of the device to create a sequence of zeros and ones. Note that the range of place values is limited by the largest bit value, 2^5 which is 32, and the smallest bit value, 2^-2 which is 0.25. As with the Flippy Do, adding together all the values for each place value containing a \"1\" produces the total value represented on the Flippy Do Pro. \n\n"
           }
@@ -2339,7 +2308,6 @@
         "description": "The Flippy Do Pro is similar to the one you made before. But this time, the Flippy Do Pro is already filled with binary place values assigned in a different way -- they include fractions.When using the Flippy Do Pro, the numbers on the left-hand side of the line are whole numbers and those on the right-hand side of the line are fractional numbers.",
         "tips": [
           {
-            "key": "5",
             "type": "teachingTip",
             "markdown": "When referring to the Flippy Do Pro, we are using a vertical line to indicate the difference between the fractional part and the whole part of a number being represented.  Using language in a clear way can be tricky for this lesson because “decimal” can mean different things to students.  For example, students frequently refer to a number as a “decimal” if it isn’t a whole number (ex. Students may call “1.23” a “decimal”) but here we want to stick with students thinking as a decimal number to be a “base 10” number.  Therefore, we avoid using the word “decimal point” in the Flippy Do Pro and instead talk about the fractional part of the number and the whole part of the number.   The purpose of doing this is to maintain using \"decimal\" to only refer to a \"base 10\" number.  For your own personal knowledge, you can read more about \"decimal points\" and \"binary points\" on [Wikipedia](https://en.wikipedia.org/wiki/Radix_point).\n"
           }
@@ -2355,7 +2323,7 @@
       "key": "a559bf19-262b-4294-97b5-879389d5ced9",
       "position": 12,
       "properties": {
-        "description": "[slide] ** Challenge #1 - Smallest Non-Zero Number:** Produce the smallest non-zero binary number possible with the Flippy Do Pro.\n\n* [slide] The smallest binary number students produce is `000000.01` and this number has a decimal value of `0.25`.\n\n[slide] ** Challenge #2 - Next Value:** Increase the number made in Challenge #1 to the next possible value. \n\n* [slide] The binary number students produce is `000000.10` and this number has a decimal value of `0.50`.\n\n[slide] ** Challenge #3 - Got Quarters?** Make the values 0.25, 0.50, and 0.75 one after another. \n\n* [slide] The binary numbers students produce are `000000.01`, `000000.10`, `000000.11`. Note the pattern of changing a place value from 1 to 0 and then \"carrying\" the one. \n    \n[slide] ** Challenge #4 - Can't Make Change:** Make all the fractional possible in binary using the Flippy Do Pro. \n\n* [slide] There are no new values besides those made in Challenge #3 because there are no place values for representing other fractions. \n* Note, if students need a concrete example for Challenge #4, have them try to make 39 cents in binary. It can't be done with the values they have available in the Flippy Do Pro.\n\n[slide] **Challenge #5 - Largest Number:** What is the largest number (in decimal) you can make with the Flippy Do Pro?\n\n* [slide] With all of the bits flipped to 1, the largest number you can make is 63.75. Note that this is smaller than the largest you can make with a traditional Flippy Do, which is 255. This is because we have shifted two bits to represent smaller numbers (0.5 & 0.25). \n\n    \n[slide] **Challenge #6 - How Much Pie:**\n\nChallenge 6 contains a number of slides. Preview these slides before class to understand when to click through to the next slide. \n\nThis challenge is contained on a series of slides. Students use a Flippy Do Pro to determine how much pie is left at the end of dessert. With each slide, allow time for students to decide how to represent the amount of pie left as a binary number, then convert that to decimal and write it down in the journal. In this challenge it is expected that students will estimate and do some rounding when determining how much pie is left. \n\n* [slide] Add all the decimal numbers up together. Compare with a partner and discuss. \n* [slide] Show the example of one possible answer. Click to the next slide to show these totals added together.",
+        "description": "[slide] **Challenge #1 - Smallest Non-Zero Number:** Produce the smallest non-zero binary number possible with the Flippy Do Pro.\n\n* [slide] The smallest binary number students produce is `000000.01` and this number has a decimal value of `0.25`.\n\n[slide] **Challenge #2 - Next Value:** Increase the number made in Challenge #1 to the next possible value. \n\n* [slide] The binary number students produce is `000000.10` and this number has a decimal value of `0.50`.\n\n[slide] **Challenge #3 - Got Quarters?** Make the values 0.25, 0.50, and 0.75 one after another. \n\n* [slide] The binary numbers students produce are `000000.01`, `000000.10`, `000000.11`. Note the pattern of changing a place value from 1 to 0 and then \"carrying\" the one. \n    \n[slide] **Challenge #4 - Can't Make Change:** Make all the fractional possible in binary using the Flippy Do Pro. \n\n* [slide] There are no new values besides those made in Challenge #3 because there are no place values for representing other fractions. \n* Note, if students need a concrete example for Challenge #4, have them try to make 39 cents in binary. It can't be done with the values they have available in the Flippy Do Pro.\n\n[slide] **Challenge #5 - Largest Number:** What is the largest number (in decimal) you can make with the Flippy Do Pro?\n\n* [slide] With all of the bits flipped to 1, the largest number you can make is 63.75. Note that this is smaller than the largest you can make with a traditional Flippy Do, which is 255. This is because we have shifted two bits to represent smaller numbers (0.5 & 0.25). \n\n    \n[slide] **Challenge #6 - How Much Pie:**\n\nChallenge 6 contains a number of slides. Preview these slides before class to understand when to click through to the next slide. \n\nThis challenge is contained on a series of slides. Students use a Flippy Do Pro to determine how much pie is left at the end of dessert. With each slide, allow time for students to decide how to represent the amount of pie left as a binary number, then convert that to decimal and write it down in the journal. In this challenge it is expected that students will estimate and do some rounding when determining how much pie is left. \n\n* [slide] Add all the decimal numbers up together. Compare with a partner and discuss. \n* [slide] Show the example of one possible answer. Click to the next slide to show these totals added together.",
         "name": "Flippy Do Pro Challenges"
       },
       "seeding_key": {
@@ -2382,7 +2350,6 @@
         "description": "**Prompt:** Why is it a problem for a computer if your answers are different than others?",
         "tips": [
           {
-            "key": "6",
             "type": "discussionGoal",
             "markdown": "**Goal:** Computers rely on precision. Think of a calculator. We depend on 1+1 always equaling 2. Rounding is necessary because of the limits of bits, but can lead to errors.  \n"
           }
@@ -2398,7 +2365,13 @@
       "position": 1,
       "properties": {
         "description": "The most important takeaway from this lesson is to understand that bits can represent a limited amount of information.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "As students have seen, you can make “any number” in your head, but the tool you use to represent a number has limitations. It has a fixed number of place values it can show. The odometer keeps running after you move beyond its upper limit, but the largest place values cannot be displayed due to overflow error. \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "22b76b87-96ea-4081-866c-5c7e7f88f8db",
@@ -2406,25 +2379,8 @@
       }
     },
     {
-      "key": "420408f1-b000-421a-9bac-a4e6e0291ad7",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "key": "7",
-            "type": "discussionGoal",
-            "markdown": "As students have seen, you can make “any number” in your head, but the tool you use to represent a number has limitations. It has a fixed number of place values it can show. The odometer keeps running after you move beyond its upper limit, but the largest place values cannot be displayed due to overflow error. \r\n\r\nIn the Flippy Do Pro, you assigned some of the bits to fractions, but you saw that you still couldn’t represent certain “small” numbers -- you could only show a number that was “close to” your target number. This is roundoff error, an error that occurs when bit arrangements can’t represent numbers as intended.  \r\n\r\nUltimately, regardless of the size of our odometer or Flippy Do Pro, and how many bits we add to them, there’s going to be numbers that are too large, too small, or “in-between” the values we want to represent.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "420408f1-b000-421a-9bac-a4e6e0291ad7",
-        "lesson_activity.key": "37954a3f-a2d6-4a8c-a486-ae29352e1bf2"
-      }
-    },
-    {
       "key": "7af435e3-5798-4ca6-940b-e70afe0257e8",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "[slide] **Prompt:** \r\n\r\n* What does the binary odometer show about representing large numbers?\r\n* What does the Flippy Do Pro show about representing very small numbers?\r\n* If we had a big enough odometer or Flippy Do Pro, could we represent every possible number? \r\n\r\n[slide] **Journal:** Students add to their journals the definitions for: Overflow Error and Round-off Error. \r\n\r\n---"
       },
@@ -2434,11 +2390,21 @@
       }
     },
     {
+      "key": "a9aab21e-130f-483e-b631-f6711e6c0ffa",
+      "position": 3,
+      "properties": {
+        "name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9aab21e-130f-483e-b631-f6711e6c0ffa",
+        "lesson_activity.key": "37954a3f-a2d6-4a8c-a486-ae29352e1bf2"
+      }
+    },
+    {
       "key": "338e10b1-c620-4f78-8b4b-7bd5499e3992",
       "position": 4,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Modern car odometers record up to a million miles driven. What happens to the odometer reading when a car drives beyond its maximum reading?\r\n\r\n**Question:** When using bits to represent fractions of a number, can you create all possible fractions? Why or why not?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "338e10b1-c620-4f78-8b4b-7bd5499e3992",
@@ -2446,25 +2412,14 @@
       }
     },
     {
-      "key": "3c7569c3-efcc-48dc-a1a3-2a215d00a282",
-      "position": 1,
+      "key": "4e85ec77-32de-435a-b9e0-90532268827d",
+      "position": 5,
       "properties": {
-        "name": "Widget: Binary Odometer"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Modern car odometers record up to a million miles driven. What happens to the odometer reading when a car drives beyond its maximum reading?\n\n**Question:** When using bits to represent fractions of a number, can you create all possible fractions? Why or why not?"
       },
       "seeding_key": {
-        "activity_section.key": "3c7569c3-efcc-48dc-a1a3-2a215d00a282",
-        "lesson_activity.key": "e3529c30-fa2b-4054-91c6-4a0d83787f40"
-      }
-    },
-    {
-      "key": "50a79797-d891-40a3-87c9-7d11501afe82",
-      "position": 2,
-      "properties": {
-        "name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "50a79797-d891-40a3-87c9-7d11501afe82",
-        "lesson_activity.key": "e3529c30-fa2b-4054-91c6-4a0d83787f40"
+        "activity_section.key": "4e85ec77-32de-435a-b9e0-90532268827d",
+        "lesson_activity.key": "37954a3f-a2d6-4a8c-a486-ae29352e1bf2"
       }
     },
     {
@@ -2473,7 +2428,6 @@
       "properties": {
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Each item in the list represents a non-denominational holiday - New Years Day, Valentine’s Day, Independence Day, and Halloween. Students should be initially puzzled by what this list represents - it may be helpful to point out the format of the list (two numbers) and that this list happens throughout the year.\r\n\r\n**Alternate Discussion:** This example could be adapted to fit your classroom or school environment in order to better help your students predict what the list represents. For example: a list of room numbers in your school that students can relate to, or a list of street addresses that have meaning to students. If you decide to adapt this example, make sure it still addresses the larger concept that this warm-up introduces: that numbers can be used to represent different types of information.\r\n"
           }
@@ -2537,7 +2491,6 @@
         "description": "[slide]  **Do This:** Look at the samples on the screen. Using only numbers, you will need to communicate these samples to a partner. No letters or other characters (including spaces) allowed! Come up with a system that allows you to do this.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Most likely students will arrive at a system where they assigned each character to a corresponding number. \n\nFor example: a = 1, b = 2\n\nIf students are struggling, remind them to consider each character individually rather than the whole word at once.\n"
           }
@@ -2555,7 +2508,6 @@
         "description": "[slide]  **Do This:**",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "The four challenges are designed to test the limits of the students' systems. For each challenge, after one partner has put their head down, click through to reveal the challenge to the the other partner. \n\nAfter the partner has translated the message to numbers, they hand the sticky note to the other partner and put their head down. The other partner translates back to English. \n\nAfter the challenge is done, give students a few minutes to update their systems as needed. \n\nBe on the lookout for cheats in a system - students cannot use spaces (aside from between two numbers to differentiate that where one number stops and the other starts) or symbols - only numbers one after the other. \n\n"
           }
@@ -2632,7 +2584,6 @@
         "description": "**Discuss:** Have groups compare with each other, then move to a full group discussion. Ask groups to share out what they discussed about their systems.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "* There's many possible systems and there's usually not a \"right\" one so long as everyone agrees.\n* Adding more possibilities increases the risk of having too many characters to represent and not enough bits to do it. This is a practical example of the overflow and rounding issues from the previous lesson.\n"
           }
@@ -2663,7 +2614,6 @@
         "description": "[slide]  **Distribute:** Hand out copies of the [r ascii-reference-sheet] or project it. Quickly read the overview text at the beginning of the sheet.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**How familiar with ASCII?:** Students should be aware that ASCII exists and see how its development mirrors their own experiences in the previous activity, but they are not required to memorize the ASCII table. If your students are able to quickly recognize the point of the ASCII table feel free to move on to the wrap up.\n"
           }
@@ -2704,7 +2654,6 @@
         "description": "[slide]  **Prompt:**",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Answers:** \r\n\r\n* Students should identify they were trying to send text messages.\r\n\r\n* Students were using decimal numbers instead of binary numbers or AB patterns\r\n"
           }
@@ -2745,7 +2694,6 @@
         "description": "[slide]  **Prompt:** What is another example of an abstraction in your everyday life? Something where you don’t completely understand how it works but you can still use it with confidence?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Student answers will vary. Examples: driving a car, turning on the lights in your room, riding in an elevator, etc.\r\n"
           }
@@ -3078,7 +3026,6 @@
         "description": "[slide]  **Prompt:** How many different shades of the color blue can you name?  How many do you think there are in total?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Start with having students name shades, but quickly transition to how many they think exist altogether.  The goal here is to have students begin to wonder if computers can represent all of the vast number of shades of colors in our world.  This should be a quick discussion.  You can move on as soon as this point is made.\r\n"
           }
@@ -3119,9 +3066,8 @@
         "description": "**Note:** This lesson includes color images in a number of places. See the teaching tip on the right for some additional guidance that may be useful when supporting students who are color-blind.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "**In Levels 3, 5, and 6: ** The directions are written in so that students who are color-blind do not need to be able to distinguish between colors to be able to complete the task.  That being said, students who are color-blind may not be able to visually check their work in the same way as other students.  You can suggest that students who are color-blind ask a partner to check their work at the end of each of these levels.\r\n\r\n<div style=\"float:right;width:30%\">![](https://curriculum.code.org/media/uploads/BW_gradient.png)</div>\r\n\r\n**In Level 8: **It is recommended that students who are color-blind do the black and white gradient image which is the option in the lower right hand corner of the pop-up in Level 8, which looks like this:\r\n"
+            "markdown": "**In Levels 3, 5, and 6:** The directions are written in so that students who are color-blind do not need to be able to distinguish between colors to be able to complete the task.  That being said, students who are color-blind may not be able to visually check their work in the same way as other students.  You can suggest that students who are color-blind ask a partner to check their work at the end of each of these levels.\n\n**In Level 8:**It is recommended that students who are color-blind do the black and white gradient image which is the option in the lower right hand corner of the pop-up in Level 8, which looks like this:\n![](https://curriculum.code.org/media/uploads/BW_gradient.png)\n\n"
           }
         ]
       },
@@ -3137,7 +3083,6 @@
         "description": "Today, we’re going to see how this relationship between analog and digital plays out in the world of color.  You’re going to get a chance to play with the pixelation widget again, but this time you’ll be using it to make your own special color blends, or gradients.  After each level, I want you to check your work with your partner.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Each section of levels begins with a reference level before moving on to a widget level. Make sure the students carefully read the reference levels. \r\n\r\n**Reference Tabs:** Encourage students to keep the reference levels open in a second tab as they work with the widget.  They can do this by hovering over the circle of the level at the top of the screen, then right click and choose “open in a new tab”.\r\n\r\n**Counting in Binary:** Students who are struggling with the binary sequences should be encouraged to take out their Flippy-Do to help them count, especially on Challenge 3 and 4.\r\n\r\n**Sampling Support:** Students may become frustrated if they feel they cannot match the analog images.  Reassure them this is fine.  Remind them about the discussion from the warm up and ask if it’s possible that digital images ever look exactly like analog images.  You may also ask the students if their representation would be improved if they use more bits per pixel.\r\n\r\n"
           }
@@ -3161,30 +3106,107 @@
       }
     },
     {
-      "key": "dbb5962a-1fa3-4441-8356-05eacf439077",
+      "key": "60e5d35d-133d-4d2e-9293-d36ae5900c16",
       "position": 4,
       "properties": {
+        "description": "[slide] **Levels 1-2:** Students should type in a unique 3-bit code for each pixel, producing 8 different colors.  ",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "In the video on Level 2, metadata (data that explains other data) is explained - these are the pixels we now see at the beginning of the work space which represent the height, width, and bits of pixel of the image. These can be changed using the sliders.\r\n"
+            "markdown": "In the video on Level 1, metadata (data that explains other data) is explained - these are the pixels we now see at the beginning of the work space which represent the height, width, and bits of pixel of the image. These can be changed using the sliders."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "dbb5962a-1fa3-4441-8356-05eacf439077",
+        "activity_section.key": "60e5d35d-133d-4d2e-9293-d36ae5900c16",
         "lesson_activity.key": "97446980-7e70-4085-86d3-bfd67fb98f60"
       }
     },
     {
-      "key": "60e5d35d-133d-4d2e-9293-d36ae5900c16",
+      "key": "5ae1ef34-4cf6-4b0c-a311-5652c0149c2b",
       "position": 5,
       "properties": {
-        "description": "[slide] **Levels 2-3:** Students should type in a unique 3-bit code for each pixel, producing 8 different colors.  \r\n\r\n**Level 4-5**  Students make four different shades of blue, followed by four different shades of green, using 6 bits per pixel.  The red row is already done for them.\r\n\r\n**Level 6:**  This time, students use 9 bits per pixel.  They will make 8 different shades of green and 8 different shades of blue (the red row is done for them).\r\n\r\n[slide] **Do This:** Regroup the class for levels 7-8 and direct everyone to the images on the slides. **Levels 7-8:**  Level 7 contains samples of various color gradients. Students should choose a section from one of the images, try to take a sampling, and attempt to reproduce the sample gradient as best they can on Level 8."
+        "name": "RGB Color"
       },
       "seeding_key": {
-        "activity_section.key": "60e5d35d-133d-4d2e-9293-d36ae5900c16",
+        "activity_section.key": "5ae1ef34-4cf6-4b0c-a311-5652c0149c2b",
+        "lesson_activity.key": "97446980-7e70-4085-86d3-bfd67fb98f60"
+      }
+    },
+    {
+      "key": "df7315e5-de07-4c24-ae26-2c366d47287a",
+      "position": 6,
+      "properties": {
+        "name": "Pixelation Widget: Color"
+      },
+      "seeding_key": {
+        "activity_section.key": "df7315e5-de07-4c24-ae26-2c366d47287a",
+        "lesson_activity.key": "97446980-7e70-4085-86d3-bfd67fb98f60"
+      }
+    },
+    {
+      "key": "284c490c-23c1-4504-b012-32932a2555c5",
+      "position": 7,
+      "properties": {
+        "description": "**Level 3-4**  Students make four different shades of blue, followed by four different shades of green, using 6 bits per pixel.  The red row is already done for them.\n\n**Level 5:**  This time, students use 9 bits per pixel.  They will make 8 different shades of green and 8 different shades of blue (the red row is done for them)."
+      },
+      "seeding_key": {
+        "activity_section.key": "284c490c-23c1-4504-b012-32932a2555c5",
+        "lesson_activity.key": "97446980-7e70-4085-86d3-bfd67fb98f60"
+      }
+    },
+    {
+      "key": "d97f395e-2551-40d5-ba08-46e8d75ef9ce",
+      "position": 8,
+      "properties": {
+        "name": "More Shades of Color"
+      },
+      "seeding_key": {
+        "activity_section.key": "d97f395e-2551-40d5-ba08-46e8d75ef9ce",
+        "lesson_activity.key": "97446980-7e70-4085-86d3-bfd67fb98f60"
+      }
+    },
+    {
+      "key": "f41fa008-d6e2-4abd-b236-d20b19021d4e",
+      "position": 9,
+      "properties": {
+        "name": "Pixelation Widget: Color"
+      },
+      "seeding_key": {
+        "activity_section.key": "f41fa008-d6e2-4abd-b236-d20b19021d4e",
+        "lesson_activity.key": "97446980-7e70-4085-86d3-bfd67fb98f60"
+      }
+    },
+    {
+      "key": "9fa1cf22-38b9-41fb-8e92-d0200630962e",
+      "position": 10,
+      "properties": {
+        "description": "[slide] **Do This:** Regroup the class for levels 6-7 and direct everyone to the images on the slides. \n\n**Levels 6-7:**  Level 6 contains samples of various color gradients. Students should choose a section from one of the images, try to take a sampling, and attempt to reproduce the sample gradient as best they can on Level 7."
+      },
+      "seeding_key": {
+        "activity_section.key": "9fa1cf22-38b9-41fb-8e92-d0200630962e",
+        "lesson_activity.key": "97446980-7e70-4085-86d3-bfd67fb98f60"
+      }
+    },
+    {
+      "key": "58b93972-cb49-482a-bedf-93f3ef51e9f3",
+      "position": 11,
+      "properties": {
+        "name": "Color Sampling"
+      },
+      "seeding_key": {
+        "activity_section.key": "58b93972-cb49-482a-bedf-93f3ef51e9f3",
+        "lesson_activity.key": "97446980-7e70-4085-86d3-bfd67fb98f60"
+      }
+    },
+    {
+      "key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca",
+      "position": 12,
+      "properties": {
+        "name": "Pixelation Widget: Color"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca",
         "lesson_activity.key": "97446980-7e70-4085-86d3-bfd67fb98f60"
       }
     },
@@ -3207,7 +3229,6 @@
         "description": "[slide]  **Prompt:** How is an image represented on a computer?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should understand how sampling, pixels, and binary work together to make a digital approximation of an analog image.  They should also understand that while analog images are able to change color values smoothly and continuously, digital images rely on pixels to change from a fixed number of color values discretely using squares of equal size.\r\n"
           }
@@ -3245,7 +3266,7 @@
       "key": "beb390b2-6cd4-4db3-8ce9-c9b18e3ce55e",
       "position": 5,
       "properties": {
-        "description": "**Display:** [How Computers Work](https://www.youtube.com/watch?v=USCBCmwMCDA) Video\r\n\r\n---"
+        "description": "[slide] **Display:** [How Computers Work](https://www.youtube.com/watch?v=USCBCmwMCDA) Video\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "beb390b2-6cd4-4db3-8ce9-c9b18e3ce55e",
@@ -3262,83 +3283,6 @@
       "seeding_key": {
         "activity_section.key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653",
         "lesson_activity.key": "544f13a4-73fc-40e4-a1b2-410ca0568674"
-      }
-    },
-    {
-      "key": "5dac66bf-9a27-4561-b3c3-29458c22fc62",
-      "position": 1,
-      "properties": {
-        "name": "RGB Color"
-      },
-      "seeding_key": {
-        "activity_section.key": "5dac66bf-9a27-4561-b3c3-29458c22fc62",
-        "lesson_activity.key": "2180a2b1-9a3d-45c3-b085-b0ed672e5b1c"
-      }
-    },
-    {
-      "key": "de5b3bd8-c1e3-4566-9bbd-395edb60583d",
-      "position": 2,
-      "properties": {
-        "name": "Pixelation Widget: Color"
-      },
-      "seeding_key": {
-        "activity_section.key": "de5b3bd8-c1e3-4566-9bbd-395edb60583d",
-        "lesson_activity.key": "2180a2b1-9a3d-45c3-b085-b0ed672e5b1c"
-      }
-    },
-    {
-      "key": "85f5348d-830a-4269-9055-5a6f58a047de",
-      "position": 3,
-      "properties": {
-        "name": "More Shades of Color"
-      },
-      "seeding_key": {
-        "activity_section.key": "85f5348d-830a-4269-9055-5a6f58a047de",
-        "lesson_activity.key": "2180a2b1-9a3d-45c3-b085-b0ed672e5b1c"
-      }
-    },
-    {
-      "key": "c4869c6c-36ef-4bad-ab9c-f94d9e9f1f1f",
-      "position": 4,
-      "properties": {
-        "name": "Pixelation Widget: Color"
-      },
-      "seeding_key": {
-        "activity_section.key": "c4869c6c-36ef-4bad-ab9c-f94d9e9f1f1f",
-        "lesson_activity.key": "2180a2b1-9a3d-45c3-b085-b0ed672e5b1c"
-      }
-    },
-    {
-      "key": "5da4ce24-f53e-4f77-92cb-6425f7818e08",
-      "position": 5,
-      "properties": {
-        "name": "Color Sampling"
-      },
-      "seeding_key": {
-        "activity_section.key": "5da4ce24-f53e-4f77-92cb-6425f7818e08",
-        "lesson_activity.key": "2180a2b1-9a3d-45c3-b085-b0ed672e5b1c"
-      }
-    },
-    {
-      "key": "f5e97b21-8b5b-49fd-b52d-09f63d196525",
-      "position": 6,
-      "properties": {
-        "name": "Pixelation Widget: Color"
-      },
-      "seeding_key": {
-        "activity_section.key": "f5e97b21-8b5b-49fd-b52d-09f63d196525",
-        "lesson_activity.key": "2180a2b1-9a3d-45c3-b085-b0ed672e5b1c"
-      }
-    },
-    {
-      "key": "0b77fed7-c2fe-4db3-914f-d9f5a0fdc6b3",
-      "position": 7,
-      "properties": {
-        "name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "0b77fed7-c2fe-4db3-914f-d9f5a0fdc6b3",
-        "lesson_activity.key": "2180a2b1-9a3d-45c3-b085-b0ed672e5b1c"
       }
     },
     {
@@ -4712,6 +4656,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4734,7 +4681,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Computer Science is Changing Everything"
+        "progression": "Computer Science is Changing Everything",
+        "level_keys": [
+          "Computer Science is Changing Everything_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4757,7 +4707,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "csp_socialBelonging_control_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4780,7 +4733,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L3 CFU Sending Complex Messages_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4803,7 +4759,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "CSP U1L4 CYU3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4826,7 +4785,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L5 CFU how many bits_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4849,7 +4811,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L5 CFU adding bits_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4872,7 +4837,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L5 CFU bin dec similarities_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4893,12 +4861,15 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Widget: Binary Odometer"
+        "progression": "Odometer Activity",
+        "level_keys": [
+          "Widget: Binary Odometer_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Widget: Binary Odometer_2021"
@@ -4906,7 +4877,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "3c7569c3-efcc-48dc-a1a3-2a215d00a282"
+        "activity_section.key": "ac4f114a-d4fd-4b82-931c-9c8ddafaa0f4"
       },
       "level_keys": [
         "Widget: Binary Odometer_2021"
@@ -4918,10 +4889,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L6 CFU beyond odometer_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L6 CFU beyond odometer_2021"
@@ -4929,7 +4903,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "50a79797-d891-40a3-87c9-7d11501afe82"
+        "activity_section.key": "338e10b1-c620-4f78-8b4b-7bd5499e3992"
       },
       "level_keys": [
         "U1L6 CFU beyond odometer_2021"
@@ -4941,10 +4915,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L6 CFU representing fractions_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L6 CFU representing fractions_2021"
@@ -4952,7 +4929,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "50a79797-d891-40a3-87c9-7d11501afe82"
+        "activity_section.key": "338e10b1-c620-4f78-8b4b-7bd5499e3992"
       },
       "level_keys": [
         "U1L6 CFU representing fractions_2021"
@@ -4964,10 +4941,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L8 Reflection Multiple Representations CSP_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L8 Reflection Multiple Representations CSP_2021"
@@ -4987,7 +4967,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Intro to Pixelation Encoding B&W"
+        "progression": "Video: Intro to Pixelation Encoding B&W",
+        "level_keys": [
+          "U1 L9 Introduction to Pixelation_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5010,7 +4993,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5033,7 +5019,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5056,7 +5045,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5079,7 +5071,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5102,7 +5097,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5125,7 +5123,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L9 CFU pixel data_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5148,7 +5149,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5171,7 +5175,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L9 CFU Sampling_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5192,12 +5199,15 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "RGB Color"
+        "progression": "RGB Color",
+        "level_keys": [
+          "CSP U1L10 RGB_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 RGB_2021"
@@ -5205,7 +5215,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "5dac66bf-9a27-4561-b3c3-29458c22fc62"
+        "activity_section.key": "5ae1ef34-4cf6-4b0c-a311-5652c0149c2b"
       },
       "level_keys": [
         "CSP U1L10 RGB_2021"
@@ -5215,12 +5225,15 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 1_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 1_2021"
@@ -5228,7 +5241,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "de5b3bd8-c1e3-4566-9bbd-395edb60583d"
+        "activity_section.key": "df7315e5-de07-4c24-ae26-2c366d47287a"
       },
       "level_keys": [
         "CSP U1L10 Color Pixelation Widget 1_2021"
@@ -5238,12 +5251,15 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "More Shades of Color"
+        "progression": "More Shades of Color",
+        "level_keys": [
+          "CSP U1L10 More Shades of Color_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 More Shades of Color_2021"
@@ -5251,7 +5267,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "85f5348d-830a-4269-9055-5a6f58a047de"
+        "activity_section.key": "d97f395e-2551-40d5-ba08-46e8d75ef9ce"
       },
       "level_keys": [
         "CSP U1L10 More Shades of Color_2021"
@@ -5261,12 +5277,15 @@
       "chapter": 25,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 2_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 2_2021"
@@ -5274,7 +5293,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "c4869c6c-36ef-4bad-ab9c-f94d9e9f1f1f"
+        "activity_section.key": "f41fa008-d6e2-4abd-b236-d20b19021d4e"
       },
       "level_keys": [
         "CSP U1L10 Color Pixelation Widget 2_2021"
@@ -5284,12 +5303,15 @@
       "chapter": 26,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 3_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 3_2021"
@@ -5297,7 +5319,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "c4869c6c-36ef-4bad-ab9c-f94d9e9f1f1f"
+        "activity_section.key": "f41fa008-d6e2-4abd-b236-d20b19021d4e"
       },
       "level_keys": [
         "CSP U1L10 Color Pixelation Widget 3_2021"
@@ -5307,12 +5329,15 @@
       "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Color Sampling"
+        "progression": "Color Sampling",
+        "level_keys": [
+          "CSP U1L10 Color Sampling_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Sampling_2021"
@@ -5320,7 +5345,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "5da4ce24-f53e-4f77-92cb-6425f7818e08"
+        "activity_section.key": "58b93972-cb49-482a-bedf-93f3ef51e9f3"
       },
       "level_keys": [
         "CSP U1L10 Color Sampling_2021"
@@ -5330,12 +5355,15 @@
       "chapter": 28,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Pixelation Widget: Color",
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 4_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 4_2021"
@@ -5343,7 +5371,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "f5e97b21-8b5b-49fd-b52d-09f63d196525"
+        "activity_section.key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca"
       },
       "level_keys": [
         "CSP U1L10 Color Pixelation Widget 4_2021"
@@ -5355,10 +5383,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Assessment: Check For Understanding\r",
+        "level_keys": [
+          "U1L10 Multiple Choice analog vs digital_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L10 Multiple Choice analog vs digital_2021"
@@ -5366,7 +5397,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0b77fed7-c2fe-4db3-914f-d9f5a0fdc6b3"
+        "activity_section.key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653"
       },
       "level_keys": [
         "U1L10 Multiple Choice analog vs digital_2021"
@@ -5378,10 +5409,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Assessment: Check For Understanding\r",
+        "level_keys": [
+          "U1L10 CFU Sampling_2021"
+        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L10 CFU Sampling_2021"
@@ -5389,7 +5423,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0b77fed7-c2fe-4db3-914f-d9f5a0fdc6b3"
+        "activity_section.key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653"
       },
       "level_keys": [
         "U1L10 CFU Sampling_2021"
@@ -5401,7 +5435,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Widget: Text Compression"
+        "progression": "Widget: Text Compression",
+        "level_keys": [
+          "U1L11 Widget: Text Compression_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5424,7 +5461,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Text Compression Widget with Aloe Blacc"
+        "progression": "Video: Text Compression Widget with Aloe Blacc",
+        "level_keys": [
+          "U1 L11 Text Compression Widget Aloe Blacc_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5447,7 +5487,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5470,7 +5513,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L11 CFU Compression for Email_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5493,7 +5539,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Lossy Compression Widget"
+        "progression": "Lossy Compression Widget",
+        "level_keys": [
+          "U1 Lossy Compression Widget v1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5516,7 +5565,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Lossy Compression Widget"
+        "progression": "Lossy Compression Widget",
+        "level_keys": [
+          "U1 Lossy Compression Widget v2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5539,7 +5591,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5562,7 +5617,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L12 CFU Creative Commons_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5585,7 +5643,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L12 CFU Copyright_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5608,7 +5669,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L13 CFU Digital Representation_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5631,7 +5695,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L14 CSP CFU digital information_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5654,7 +5721,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 1 Exam"
+        "progression": "Unit 1 Exam",
+        "level_keys": [
+          "CSP Unit 1 AP-Style Assessment _2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5778,7 +5848,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "3c7569c3-efcc-48dc-a1a3-2a215d00a282"
+        "activity_section.key": "ac4f114a-d4fd-4b82-931c-9c8ddafaa0f4"
       }
     },
     {
@@ -5790,7 +5860,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "50a79797-d891-40a3-87c9-7d11501afe82"
+        "activity_section.key": "338e10b1-c620-4f78-8b4b-7bd5499e3992"
       }
     },
     {
@@ -5802,7 +5872,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "50a79797-d891-40a3-87c9-7d11501afe82"
+        "activity_section.key": "338e10b1-c620-4f78-8b4b-7bd5499e3992"
       }
     },
     {
@@ -5934,7 +6004,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "5dac66bf-9a27-4561-b3c3-29458c22fc62"
+        "activity_section.key": "5ae1ef34-4cf6-4b0c-a311-5652c0149c2b"
       }
     },
     {
@@ -5946,7 +6016,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "de5b3bd8-c1e3-4566-9bbd-395edb60583d"
+        "activity_section.key": "df7315e5-de07-4c24-ae26-2c366d47287a"
       }
     },
     {
@@ -5958,7 +6028,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "85f5348d-830a-4269-9055-5a6f58a047de"
+        "activity_section.key": "d97f395e-2551-40d5-ba08-46e8d75ef9ce"
       }
     },
     {
@@ -5970,7 +6040,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "c4869c6c-36ef-4bad-ab9c-f94d9e9f1f1f"
+        "activity_section.key": "f41fa008-d6e2-4abd-b236-d20b19021d4e"
       }
     },
     {
@@ -5982,7 +6052,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "c4869c6c-36ef-4bad-ab9c-f94d9e9f1f1f"
+        "activity_section.key": "f41fa008-d6e2-4abd-b236-d20b19021d4e"
       }
     },
     {
@@ -5994,7 +6064,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "5da4ce24-f53e-4f77-92cb-6425f7818e08"
+        "activity_section.key": "58b93972-cb49-482a-bedf-93f3ef51e9f3"
       }
     },
     {
@@ -6006,7 +6076,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "f5e97b21-8b5b-49fd-b52d-09f63d196525"
+        "activity_section.key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca"
       }
     },
     {
@@ -6018,7 +6088,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0b77fed7-c2fe-4db3-914f-d9f5a0fdc6b3"
+        "activity_section.key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653"
       }
     },
     {
@@ -6030,7 +6100,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0b77fed7-c2fe-4db3-914f-d9f5a0fdc6b3"
+        "activity_section.key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653"
       }
     },
     {
@@ -6821,6 +6891,12 @@
         "resource.key": "CSP Unit 1 Presentation"
       }
     }
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
   ],
   "objectives": [
     {

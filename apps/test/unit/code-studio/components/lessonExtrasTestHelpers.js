@@ -3,7 +3,7 @@ export const bonusLevels = [
     stageNumber: 1,
     levels: [
       {
-        id: 23222,
+        id: '23222',
         display_name: 'Bonus Level',
         description: 'A lovely description for this sublevel',
         thumbnail_url: '',
@@ -12,7 +12,7 @@ export const bonusLevels = [
         perfect: true
       },
       {
-        id: 23223,
+        id: '23223',
         display_name: '2nd Challenge',
         description: 'Sublevel 2 is lots of fun',
         thumbnail_url: 'some-fake.url/kittens.png',
@@ -26,7 +26,7 @@ export const bonusLevels = [
     stageNumber: 2,
     levels: [
       {
-        id: 23224,
+        id: '23224',
         display_name: 'Bonus Level',
         description: null,
         thumbnail_url:
@@ -36,7 +36,7 @@ export const bonusLevels = [
         perfect: true
       },
       {
-        id: 23225,
+        id: '23225',
         display_name: '2nd Challenge',
         description: null,
         thumbnail_url:
@@ -51,7 +51,7 @@ export const bonusLevels = [
     stageNumber: 3,
     levels: [
       {
-        id: 23226,
+        id: '23226',
         display_name: 'courseC_artist_prog_challenge1',
         description: null,
         thumbnail_url:
@@ -61,7 +61,7 @@ export const bonusLevels = [
         perfect: false
       },
       {
-        id: 23227,
+        id: '23227',
         display_name: 'courseB_maze_seq_challenge2',
         description: null,
         url:
@@ -70,7 +70,7 @@ export const bonusLevels = [
         perfect: true
       },
       {
-        id: 23228,
+        id: '23228',
         display_name: 'A challenge',
         description: null,
         url:

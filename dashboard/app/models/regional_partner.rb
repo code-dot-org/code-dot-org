@@ -194,7 +194,7 @@ class RegionalPartner < ApplicationRecord
             # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
             # See https://github.com/alexreisner/geocoder#error-handling
             Retryable.retryable(on: StandardError) do
-              state = Geocoder.search(zip_code).select {|result| result&.country_code&.downcase == "us"}&.first&.state_code
+              state = Geocoder.search(zip_code, params: {country: 'us'})&.first&.state_code
             end
           end
         rescue StandardError => e

@@ -83,6 +83,7 @@ class Script < ApplicationRecord
           lessons: [
             {lesson_activities: :activity_sections},
             :resources,
+            :vocabularies,
             :objectives
           ]
         },
@@ -1057,6 +1058,27 @@ class Script < ApplicationRecord
     end
   end
 
+  # Lessons unfortunately have 2 position values:
+  # 1. absolute_position: position within the script (used to order lessons with in lesson groups in correct order)
+  # 2. relative_position: position within the Script relative other lockable/non-lockable lessons
+  # This method updates the position values for all lessons in a script after
+  # a lesson is saved
+  def fix_lesson_positions
+    reload
+
+    total_count = 1
+    lockable_count = 1
+    non_lockable_count = 1
+    lessons.each do |lesson|
+      lesson.absolute_position = total_count
+      lesson.relative_position = lesson.lockable ? lockable_count : non_lockable_count
+      lesson.save!
+
+      total_count += 1
+      lesson.lockable ? (lockable_count += 1) : (non_lockable_count += 1)
+    end
+  end
+
   # Clone this script, appending a dash and the suffix to the name of this
   # script. Also clone all the levels in the script, appending an underscore and
   # the suffix to the name of each level. Mark the new script as hidden, and
@@ -1350,7 +1372,6 @@ class Script < ApplicationRecord
       is_course: is_course?,
       background: background,
       is_migrated: is_migrated?,
-      updatedAt: updated_at,
       scriptPath: script_path(self),
       showCalendar: show_calendar
     }

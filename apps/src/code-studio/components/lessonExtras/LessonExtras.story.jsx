@@ -35,7 +35,7 @@ export default storybook => {
               stageNumber: 1,
               levels: [
                 {
-                  id: 23222,
+                  id: '23222',
                   display_name: 'courseB_maze_seq_challenge1',
                   url:
                     'http://studio.code.org:3000/s/coursef-2019/stage/1/extras?level_name=courseC_artist_prog_challenge1',
@@ -59,7 +59,7 @@ export default storybook => {
                   }
                 },
                 {
-                  id: 23223,
+                  id: '23223',
                   display_name: 'courseB_maze_seq_challenge1',
                   url:
                     'http://studio.code.org:3000/s/coursef-2019/stage/1/extras?level_name=courseC_artist_prog_challenge1',
@@ -88,7 +88,7 @@ export default storybook => {
               stageNumber: 2,
               levels: [
                 {
-                  id: 23224,
+                  id: '23224',
                   display_name: 'courseC_artist_prog_challenge1',
                   url:
                     'http://studio.code.org:3000/s/coursef-2019/stage/1/extras?level_name=courseC_artist_prog_challenge1',
@@ -98,7 +98,7 @@ export default storybook => {
                   perfect: false
                 },
                 {
-                  id: 23225,
+                  id: '23225',
                   display_name: 'courseC_PlayLab_events_challenge1',
                   url:
                     'http://studio.code.org:3000/s/coursef-2019/stage/1/extras?level_name=courseC_artist_prog_challenge1',
@@ -113,7 +113,7 @@ export default storybook => {
               stageNumber: 3,
               levels: [
                 {
-                  id: 23226,
+                  id: '23226',
                   display_name: 'courseC_artist_prog_challenge1',
                   url:
                     'http://studio.code.org:3000/s/coursef-2019/stage/1/extras?level_name=courseC_artist_prog_challenge1',
@@ -123,7 +123,7 @@ export default storybook => {
                   perfect: false
                 },
                 {
-                  id: 23227,
+                  id: '23227',
                   display_name: 'courseB_maze_seq_challenge2',
                   url:
                     'http://studio.code.org:3000/s/coursef-2019/stage/1/extras?level_name=courseC_artist_prog_challenge1',
@@ -147,7 +147,7 @@ export default storybook => {
                   }
                 },
                 {
-                  id: 23228,
+                  id: '23228',
                   display_name: 'courseC_PlayLab_events_challenge1',
                   url:
                     'http://studio.code.org:3000/s/coursef-2019/stage/1/extras?level_name=courseC_artist_prog_challenge1',

@@ -13,6 +13,7 @@ import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnAction
 import i18n from '@cdo/locale';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import CensusMapReplacement from './CensusMapReplacement';
+import ProfessionalLearningApplyBanner from '../ProfessionalLearningApplyBanner';
 
 const styles = {
   heading: {
@@ -46,7 +47,8 @@ class YourSchool extends Component {
     alertUrl: PropTypes.string,
     prefillData: censusFormPrefillDataShape,
     hideMap: PropTypes.bool,
-    currentCensusYear: PropTypes.number
+    currentCensusYear: PropTypes.number,
+    showProfessionalLearningBanner: PropTypes.bool
   };
 
   state = {
@@ -123,6 +125,14 @@ class YourSchool extends Component {
           )}
         <h1 style={styles.heading}>{i18n.yourSchoolHeading()}</h1>
         <h3 style={styles.description}>{i18n.yourSchoolDescription()}</h3>
+        {this.props.showProfessionalLearningBanner && (
+          <ProfessionalLearningApplyBanner
+            nominated={false}
+            useSignUpText={false}
+            style={styles.banner}
+            linkSuffix={'middle-high'}
+          />
+        )}
         <YourSchoolResources />
         {!this.props.hideMap && (
           <div id="map">

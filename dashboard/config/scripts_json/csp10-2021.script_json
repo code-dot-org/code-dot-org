@@ -1803,7 +1803,6 @@
         "description": "[slide]  **Prompt:** Have you ever received an email or a text message that looked suspicious? Have you ever been unsure if you should open the message or click on a link? What are the things that made you suspicious?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal** In this discussion, we are previewing malicious links and common phishing attempts. If students do not have any of their own examples to offer up, try to be prepared with one of your own where you received an email that was clearly not wise to open. \r\n\r\nThings that might make you suspicious:\r\n\r\n* Mispellings of the person's name, email, or company\r\n* Something that seems to good to be true (\"Free Vacations for a year!\")\r\n* Asking for personal information\r\n* A flashy link they want you to click on\r\n\r\n"
           }
@@ -1845,7 +1844,6 @@
         "description": "[slide]  **Discuss (5 mins):** Bring the class back together and ask for a volunteer from each of the topics to share their slide with the class and give a one minute overview.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "It's ok if the student who presents information has some innacuracies in their reporting. Use this opportunity to correct misunderstandings and get everyone on the same page. \r\n\r\nOne thing that can come out of the discussion is the realization that Keylogging is a form of Malware. Malware is as broad category of malicious software that can collect information or exploit a system in many different ways. \r\n\r\n"
           }
@@ -4067,6 +4065,12 @@
       }
     }
   ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
   "objectives": [
     {
       "key": "bed95183-d47f-4c25-a980-501d390f4844",
@@ -4201,7 +4205,7 @@
     {
       "key": "ee17a65c-2330-413c-a56c-751befcb7568",
       "properties": {
-        "description": "Identify commons security risks: phishing, keylogging, rogue access points"
+        "description": "Identify commons security risks: phishing, keylogging, malware, rogue access points"
       },
       "seeding_key": {
         "lesson.key": "Security Risks Part 1",

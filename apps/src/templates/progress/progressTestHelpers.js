@@ -24,8 +24,9 @@ export const fakeLesson = (
 });
 
 export const fakeLevel = overrides => {
-  const levelNumber = overrides.levelNumber;
+  const levelNumber = overrides.levelNumber || 1;
   return {
+    id: levelNumber.toString(),
     status: LevelStatus.not_tried,
     url: `/level${levelNumber}`,
     name: `Level ${levelNumber}`,
