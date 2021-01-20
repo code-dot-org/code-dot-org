@@ -4,7 +4,6 @@ import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 import AddResourceDialog from './AddResourceDialog';
 import SearchBox from './SearchBox';
-import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {
@@ -41,6 +40,16 @@ const styles = {
     textAlign: 'center',
     width: '48%',
     lineHeight: '30px'
+  },
+  addButton: {
+    background: color.cyan,
+    borderRadius: 3,
+    color: color.white,
+    fontSize: 14,
+    padding: 7,
+    textAlign: 'center',
+    marginTop: 10,
+    marginLeft: 0
   }
 };
 
@@ -287,11 +296,13 @@ class ResourcesEditor extends Component {
             <Table.Header />
             <Table.Body rows={this.props.resources} rowKey="key" />
           </Table.Provider>
-          <Button
+          <button
             onClick={this.handleAddResourceClick}
-            text={'Add New Resource'}
-            color={color.blue}
-          />
+            style={styles.addButton}
+            type="button"
+          >
+            <i className="fa fa-plus" style={{marginRight: 7}} /> Resource
+          </button>
         </div>
       </div>
     );
