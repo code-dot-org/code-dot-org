@@ -23,6 +23,10 @@ const styles = {
     color: color.white,
     fontSize: 18
   },
+  arrowContainer: {
+    width: '100%',
+    ...progressStyles.flex
+  },
   line: {
     ...progressStyles.inlineBlock,
     width: '100%',
@@ -42,6 +46,15 @@ const styles = {
   icon: {
     paddingRight: 5
   }
+};
+
+const LessonArrow = () => {
+  return (
+    <span style={styles.arrowContainer}>
+      <span style={styles.line} />
+      <span style={styles.arrow} />
+    </span>
+  );
 };
 
 class ProgressTableLessonNumber extends React.Component {
@@ -90,11 +103,14 @@ class ProgressTableLessonNumber extends React.Component {
       >
         {this.renderTooltip()}
         {lockable ? <FontAwesome icon="lock" /> : number}
-        {includeArrow && <span style={styles.line} />}
-        {includeArrow && <span style={styles.arrow} />}
+        {includeArrow && <LessonArrow />}
       </div>
     );
   }
 }
+
+export const unitTestExports = {
+  LessonArrow
+};
 
 export default Radium(ProgressTableLessonNumber);
