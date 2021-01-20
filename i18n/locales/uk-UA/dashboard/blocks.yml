@@ -1012,6 +1012,7 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
             '"tint"': відтінок
+            '"speed"': швидкість
       gamelab_getThisSprite:
         text: "[CHOICE]спрайт[0]"
         options:
@@ -1153,6 +1154,8 @@ uk:
             '"West"': Захід
       gamelab_moveToward:
         text: переміститись на {SPRITE} пікселів {DISTANCE} до {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_patrollingUpDown:
@@ -1205,6 +1208,13 @@ uk:
             undefined: немає
       gamelab_setBackgroundImageAs:
         text: встановити фон {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': середньо
+            '100': large
       gamelab_setPrompt:
         text: запитати користувача {QUESTION} значення змінної {VAR}
       gamelab_setPromptWithChoices:
@@ -1218,6 +1228,7 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
+            '"speed"': швидкість
       gamelab_setSizes:
         text: встановити {SPRITE} властивість {PROPERTY} у {N}%
         options:
