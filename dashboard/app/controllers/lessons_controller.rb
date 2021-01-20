@@ -42,8 +42,13 @@ class LessonsController < ApplicationController
       end
     end
 
-    resources = (lesson_params['resources'] || []).map {|key| Resource.find_by_key(key)}
-    vocabularies = (lesson_params['vocabularies'] || []).map {|key| Vocabulary.find_by_key(key)}
+    resources = []
+    vocabularies = []
+    course_version = @lesson.script.get_course_version
+    if course_version
+      resources = (lesson_params['resources'] || []).map {|key| Resource.find_by(course_version_id: course_version.id, key: key)}
+      vocabularies = (lesson_params['vocabularies'] || []).map {|key| Vocabulary.find_by(course_version_id: course_version.id, key: key)}
+    end
     ActiveRecord::Base.transaction do
       @lesson.resources = resources.compact
       @lesson.vocabularies = vocabularies.compact

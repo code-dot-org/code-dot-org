@@ -90,11 +90,6 @@ class VocabulariesEditor extends Component {
             onConfirm={this.handleRemoveVocabularyConfirm}
           />
         )}
-        <input
-          type="hidden"
-          name="vocabularies"
-          value={JSON.stringify(this.props.vocabularies.map(v => v.key))}
-        />
         <div>
           Select a vocabulary word to add
           <SearchBox
