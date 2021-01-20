@@ -35,9 +35,11 @@ class ActivitySection < ApplicationRecord
 
   serialized_attrs %w(
     name
+    duration
     remarks
     description
     tips
+    progression_name
   )
 
   def summarize

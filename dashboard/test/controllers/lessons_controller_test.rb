@@ -16,6 +16,8 @@ class LessonsControllerTest < ActionController::TestCase
       script_id: @script.id,
       lesson_group: lesson_group,
       name: 'lesson display name',
+      absolute_position: 1,
+      relative_position: 1,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -26,7 +28,9 @@ class LessonsControllerTest < ActionController::TestCase
       :lesson,
       script_id: @script.id,
       lesson_group: lesson_group,
-      name: 'second lesson'
+      name: 'second lesson',
+      absolute_position: 2,
+      relative_position: 2
     )
 
     @script_title = 'Script Display Name'
@@ -249,6 +253,26 @@ class LessonsControllerTest < ActionController::TestCase
     ].to_json
     put :update, params: @update_params
     assert_response :forbidden
+  end
+
+  test 'updates lesson positions on lesson update' do
+    sign_in @levelbuilder
+
+    assert_equal 1, @lesson.relative_position
+    assert_equal 1, @lesson.absolute_position
+    assert_equal 2, @lesson2.relative_position
+    assert_equal 2, @lesson2.absolute_position
+
+    @update_params['lockable'] = true
+
+    put :update, params: @update_params
+
+    @lesson.reload
+    @lesson2.reload
+    assert_equal 1, @lesson.relative_position
+    assert_equal 1, @lesson.absolute_position
+    assert_equal 1, @lesson2.relative_position
+    assert_equal 2, @lesson2.absolute_position
   end
 
   test 'add activity via lesson update' do
@@ -597,7 +621,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     existing_summary = existing_script_level.summarize_for_lesson_edit
     assert_equal 1, existing_summary[:activitySectionPosition]
-    assert_equal existing_survey.id, existing_summary[:activeId]
+    assert_equal existing_survey.id.to_s, existing_summary[:activeId]
     existing_summary[:assessment] = false
 
     survey_to_add = create :level_group, name: 'survey-to-add'

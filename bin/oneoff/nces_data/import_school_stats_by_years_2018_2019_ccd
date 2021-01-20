@@ -1,0 +1,137 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+CDO.log = Logger.new(STDOUT)
+
+SURVEY_YEAR = '2018-2019'.freeze
+
+VIRTUAL_SCHOOL_MAP = {
+  'Full Virtual' => 'Yes',
+  'Missing' => nil,
+  'Not reported' => nil,
+  'Not Virtual' => 'No',
+  'Supplemental Virtual' => 'No',
+  'Virtual with face to face options' => 'Yes'
+}.freeze
+
+TITLE_I_MAP = {
+  'Title I targeted assistance eligible school-No program' => '1',
+  'Title I targeted assistance school' => '2',
+  'Title I schoolwide eligible-Title I targeted assistance program' => '3',
+  'Title I schoolwide eligible school-No program' => '4',
+  'Title I schoolwide school' => '5',
+  'Not a Title I school' => '6',
+  'Missing' => nil,
+  'Not reported' => nil
+}.freeze
+
+COMMUNITY_TYPE_MAP = {
+  '11' => 'city_large',
+  '12' => 'city_midsize',
+  '13' => 'city_small',
+  '21' => 'suburban_large',
+  '22' => 'suburban_midsize',
+  '23' => 'suburban_small',
+  '31' => 'town_fringe',
+  '32' => 'town_distant',
+  '33' => 'town_remote',
+  '41' => 'rural_fringe',
+  '42' => 'rural_distant',
+  '43' => 'rural_remote'
+}.freeze
+
+# @param unsanitized [String, nil] the unsanitized string
+# @returns [String, nil] the sanitized version of the string, with equal signs and double
+#   quotations removed. Returns nil on nil input, or if value is a dash (signifies missing in NCES data).
+def sanitize_string_for_db(unsanitized)
+  unsanitized = unsanitized == '-' ? nil : unsanitized
+  unsanitized&.tr('="', '')
+end
+
+# URL where source was found ("Flat and SAS Files" link under "Directory" in "Data File" column): https://nces.ed.gov/ccd/files.asp#Fiscal:2,LevelId:7,SchoolYearId:33,Page:1
+# Download link: https://nces.ed.gov/ccd/data/zip/ccd_sch_029_1819_w_1a_091019.zip
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_029_1819_w_1a_091019.csv") do |filename|
+  SchoolStatsByYear.transaction do
+    SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'ISO-8859-1:UTF-8'}) do |row|
+      {
+        school_id:          row['NCESSCH'].to_i.to_s,
+        school_year:        SURVEY_YEAR,
+        grades_offered_lo:  row['GSLO'],
+        grades_offered_hi:  row['GSHI'],
+        grade_pk_offered:   row['G_PK_OFFERED'] == 'Yes',
+        grade_kg_offered:   row['G_KG_OFFERED'] == 'Yes',
+        grade_01_offered:   row['G_1_OFFERED'] == 'Yes',
+        grade_02_offered:   row['G_2_OFFERED'] == 'Yes',
+        grade_03_offered:   row['G_3_OFFERED'] == 'Yes',
+        grade_04_offered:   row['G_4_OFFERED'] == 'Yes',
+        grade_05_offered:   row['G_5_OFFERED'] == 'Yes',
+        grade_06_offered:   row['G_6_OFFERED'] == 'Yes',
+        grade_07_offered:   row['G_7_OFFERED'] == 'Yes',
+        grade_08_offered:   row['G_8_OFFERED'] == 'Yes',
+        grade_09_offered:   row['G_9_OFFERED'] == 'Yes',
+        grade_10_offered:   row['G_10_OFFERED'] == 'Yes',
+        grade_11_offered:   row['G_11_OFFERED'] == 'Yes',
+        grade_12_offered:   row['G_12_OFFERED'] == 'Yes',
+        grade_13_offered:   row['G_13_OFFERED'] == 'Yes',
+      }
+    end
+  end
+end
+
+# URL where source was found ("Flat and SAS Files" link under "School Characteristics" in "Data File" column): https://nces.ed.gov/ccd/files.asp#Fiscal:2,LevelId:7,SchoolYearId:33,Page:1
+# Download link: https://nces.ed.gov/ccd/data/zip/ccd_sch_033_1819_l_1a_091019.zip
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_129_1819_w_1a_091019.csv") do |filename|
+  SchoolStatsByYear.transaction do
+    SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'ISO-8859-1:UTF-8'}) do |row|
+      {
+        school_id:      row['NCESSCH'].to_i.to_s,
+        school_year:    SURVEY_YEAR,
+        virtual_status: VIRTUAL_SCHOOL_MAP[row['VIRTUAL_TEXT']],
+        title_i_status: TITLE_I_MAP[row['TITLEI_STATUS_TEXT']]
+      }
+    end
+  end
+end
+
+# URL where source was found ("Public School File" under 2018-19 tab): https://nces.ed.gov/programs/edge/Geographic/SchoolLocations
+# Download link: https://nces.ed.gov/programs/edge/data/EDGE_GEOCODE_PUBLICSCH_1819.zip
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/EDGE_GEOCODE_PUBLICSCH_1819.csv") do |filename|
+  SchoolStatsByYear.transaction do
+    SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'ISO-8859-1:UTF-8'}) do |row|
+      {
+        school_id:      row['NCESSCH'].to_i.to_s,
+        school_year:    SURVEY_YEAR,
+        community_type: COMMUNITY_TYPE_MAP[row['LOCALE']]
+      }
+    end
+  end
+end
+
+# URL where source was found: https://nces.ed.gov/ccd/elsi/tableGenerator.aspx (NCES table generator)
+# Download link: N/A, manually generated -- see google doc here for details on which columns to export:
+# https://docs.google.com/document/d/1P4aTkzP1PVhYmAvmQ7oe_ffnbWuZDF8lNVrf3x2W3Mg/edit
+# Also requires a bit of manual cleaning before importing (deleted top couple of rows that contained metadata about the file)
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/School_lvl_demo.csv") do |filename|
+  SchoolStatsByYear.transaction do
+    SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00"}) do |row|
+      row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+
+      {
+        school_id:      row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
+        school_year:    SURVEY_YEAR,
+
+        students_total:     row['Total Students All Grades (Includes AE) [Public School] 2018-19'].presence.try {|v| v.to_i == 0 ? nil : v.to_i},
+        student_am_count:   row['American Indian/Alaska Native Students [Public School] 2018-19'].to_i,
+        student_as_count:   row['Asian or Asian/Pacific Islander Students [Public School] 2018-19'].to_i,
+        student_bl_count:   row['Black Students [Public School] 2018-19'].to_i,
+        student_hi_count:   row['Hispanic Students [Public School] 2018-19'].to_i,
+        student_wh_count:   row['White Students [Public School] 2018-19'].to_i,
+        student_hp_count:   row['Hawaiian Nat./Pacific Isl. Students [Public School] 2018-19'].to_i,
+        student_tr_count:   row['Two or More Races Students [Public School] 2018-19'].to_i,
+
+        frl_eligible_total: row['Free and Reduced Lunch Students [Public School] 2018-19'].to_i
+      }
+    end
+  end
+end

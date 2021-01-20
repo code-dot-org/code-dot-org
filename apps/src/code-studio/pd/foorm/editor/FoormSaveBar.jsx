@@ -40,8 +40,8 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-end'
   },
-  saveButton: {
-    margin: '10px 50px 10px 20px'
+  button: {
+    margin: '10px'
   },
   spinner: {
     fontSize: 25,
@@ -81,6 +81,24 @@ const publishedSaveWarning = (
   </div>
 );
 
+const aboutToPublishWarning = (
+  <div>
+    <span style={styles.warning}>Warning: </span>You are about to publish a new
+    survey. Once a survey is published, it may be put into active use.{' '}
+    <span style={styles.warning}>
+      A published survey cannot be returned to draft mode!
+    </span>
+    <br />
+    <br />
+    Are you sure you want to publish?
+  </div>
+);
+
+const confirmationDialogNames = {
+  save: 'save',
+  publish: 'publish'
+};
+
 class FoormSaveBar extends Component {
   static propTypes = {
     formCategories: PropTypes.array,
@@ -105,7 +123,7 @@ class FoormSaveBar extends Component {
     super(props);
 
     this.state = {
-      showSaveConfirmation: false,
+      confirmationDialogBeingShownName: null,
       isSaving: false,
       showNewFormSave: false,
       formName: null,
@@ -113,31 +131,46 @@ class FoormSaveBar extends Component {
     };
   }
 
+  updateQuestionsUrl = () =>
+    `/foorm/forms/${this.props.formId}/update_questions`;
+
+  publishUrl = () => `/foorm/forms/${this.props.formId}/publish`;
+
   handleSave = () => {
     this.setState({isSaving: true});
     this.props.setSaveError(null);
     if (this.props.isFormPublished) {
       // show a warning if in published mode
-      this.setState({showSaveConfirmation: true});
+      this.setState({
+        confirmationDialogBeingShownName: confirmationDialogNames.save
+      });
     } else if (this.props.formId === null || this.props.formId === undefined) {
       // if this is not an existing form, show new form save modal
       this.setState({showNewFormSave: true});
     } else {
-      this.save();
+      this.save(this.updateQuestionsUrl());
     }
   };
 
+  handlePublish = () => {
+    this.setState({
+      isSaving: true,
+      confirmationDialogBeingShownName: confirmationDialogNames.publish
+    });
+    this.props.setSaveError(null);
+  };
+
   handleSaveCancel = () => {
-    this.setState({showSaveConfirmation: false, isSaving: false});
+    this.setState({confirmationDialogBeingShownName: null, isSaving: false});
   };
 
   handleNewFormSaveCancel = () => {
     this.setState({showNewFormSave: false, isSaving: false});
   };
 
-  save = () => {
+  save = url => {
     $.ajax({
-      url: `/foorm/forms/${this.props.formId}/update_questions`,
+      url: url,
       type: 'put',
       contentType: 'application/json',
       processData: false,
@@ -148,13 +181,13 @@ class FoormSaveBar extends Component {
       .done(result => {
         this.handleSaveSuccess(result);
         this.setState({
-          showSaveConfirmation: false
+          confirmationDialogBeingShownName: null
         });
       })
       .fail(result => {
         this.handleSaveError(result);
         this.setState({
-          showSaveConfirmation: false
+          confirmationDialogBeingShownName: null
         });
       });
   };
@@ -218,6 +251,7 @@ class FoormSaveBar extends Component {
     this.setState({
       isSaving: false
     });
+
     this.props.setSaveError(
       (result.responseJSON && result.responseJSON.questions) ||
         result.responseText ||
@@ -324,10 +358,21 @@ class FoormSaveBar extends Component {
               <FontAwesome icon="spinner" className="fa-spin" />
             </div>
           )}
+          {!this.props.isFormPublished && (
+            <button
+              className="btn btn-danger"
+              type="button"
+              style={styles.button}
+              onClick={this.handlePublish}
+              disabled={this.state.isSaving || this.props.formHasError}
+            >
+              Publish
+            </button>
+          )}
           <button
             className="btn btn-primary"
             type="button"
-            style={styles.saveButton}
+            style={styles.button}
             onClick={this.handleSave}
             disabled={this.state.isSaving || this.props.formHasError}
           >
@@ -336,12 +381,30 @@ class FoormSaveBar extends Component {
         </div>
         {this.renderNewFormSaveModal()}
         <ConfirmationDialog
-          show={this.state.showSaveConfirmation}
-          onOk={this.save}
+          show={
+            this.state.confirmationDialogBeingShownName ===
+            confirmationDialogNames.save
+          }
+          onOk={() => {
+            this.save(this.updateQuestionsUrl());
+          }}
           okText={'Yes, save the form'}
           onCancel={this.handleSaveCancel}
           headerText="Save Form"
           bodyText={publishedSaveWarning}
+        />
+        <ConfirmationDialog
+          show={
+            this.state.confirmationDialogBeingShownName ===
+            confirmationDialogNames.publish
+          }
+          onOk={() => {
+            this.save(this.publishUrl());
+          }}
+          okText={'Yes, publish the form'}
+          onCancel={this.handleSaveCancel}
+          headerText="Publish Form"
+          bodyText={aboutToPublishWarning}
         />
       </div>
     );

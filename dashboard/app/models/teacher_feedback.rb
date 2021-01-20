@@ -16,6 +16,7 @@
 #  student_last_visited_at  :datetime
 #  script_level_id          :integer          not null
 #  seen_on_feedback_page_at :datetime
+#  script_id                :integer
 #
 # Indexes
 #

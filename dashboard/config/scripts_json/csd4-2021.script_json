@@ -5985,7 +5985,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection"
+        "progression": "Reflection",
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6008,7 +6011,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps"
+        "progression": "Demo Apps",
+        "level_keys": [
+          "Example App Types_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6031,7 +6037,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps"
+        "progression": "Demo Apps",
+        "level_keys": [
+          "CSDU4 Quiz App Demo_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6054,7 +6063,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps"
+        "progression": "Demo Apps",
+        "level_keys": [
+          "CSDU4 Decision App Demo_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6077,7 +6089,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps"
+        "progression": "Demo Apps",
+        "level_keys": [
+          "CSDU4 List App Demo_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6100,7 +6115,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps"
+        "progression": "Demo Apps",
+        "level_keys": [
+          "CSDU4 Crowdsource App Demo_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6123,7 +6141,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen"
+        "progression": "Build a Screen",
+        "level_keys": [
+          "CSDU4 Design Mode Video_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6146,7 +6167,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen"
+        "progression": "Build a Screen",
+        "level_keys": [
+          "U4 Model Design 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6169,7 +6193,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen"
+        "progression": "Build a Screen",
+        "level_keys": [
+          "U4 Model Design 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6192,7 +6219,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen"
+        "progression": "Build a Screen",
+        "level_keys": [
+          "U4 Model Design 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6215,7 +6245,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen"
+        "progression": "Build a Screen",
+        "level_keys": [
+          "U4 Model Design 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6238,7 +6271,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Finish a Screen"
+        "progression": "Finish a Screen",
+        "level_keys": [
+          "U4 Model Design 5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6261,7 +6297,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Finish a Screen"
+        "progression": "Finish a Screen",
+        "level_keys": [
+          "U4 Model Design 6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6284,7 +6323,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Finish a Screen"
+        "progression": "Finish a Screen",
+        "level_keys": [
+          "U4 Model Design 7_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6307,7 +6349,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App Project: Screen Design"
+        "progression": "App Project: Screen Design",
+        "level_keys": [
+          "Design a Screen for your App_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6330,7 +6375,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "App Project: Screen Design"
+        "progression": "App Project: Screen Design",
+        "level_keys": [
+          "CSD U4 - Design Mode Project_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6353,7 +6401,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens"
+        "progression": "Adding Screens",
+        "level_keys": [
+          "U4 Model Program 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6376,7 +6427,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens"
+        "progression": "Adding Screens",
+        "level_keys": [
+          "U4 Model Program 1.5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6399,7 +6453,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens"
+        "progression": "Adding Screens",
+        "level_keys": [
+          "U4 Model Program 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6422,7 +6479,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens"
+        "progression": "Adding Screens",
+        "level_keys": [
+          "U4 Model Program 2.5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6445,7 +6505,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Events and Linking Screens"
+        "progression": "Events and Linking Screens",
+        "level_keys": [
+          "U4 Model Program 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6468,7 +6531,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Events and Linking Screens"
+        "progression": "Events and Linking Screens",
+        "level_keys": [
+          "U4 Model Program 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6491,7 +6557,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Events and Linking Screens"
+        "progression": "Events and Linking Screens",
+        "level_keys": [
+          "U4 Model Program 5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6514,7 +6583,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Combining Projects"
+        "progression": "Combining Projects",
+        "level_keys": [
+          "CSDU4 Project Import_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6537,7 +6609,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Combining Projects"
+        "progression": "Combining Projects",
+        "level_keys": [
+          "CSDU4 Project Events_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6560,6 +6635,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Bug Feature_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6582,7 +6660,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection"
+        "progression": "Reflection",
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6605,6 +6686,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD User Centered Design Post-Project Test_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6627,6 +6711,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-intro-2019_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6649,6 +6736,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -8324,6 +8414,94 @@
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
         "resource.key": "app-presentation-exemplar"
+      }
+    }
+  ],
+  "vocabularies": [
+    {
+      "key": "Empathy",
+      "word": "Empathy",
+      "definition": "In design, paying attention to a user's feelings and needs when designing a product.",
+      "seeding_key": {
+        "vocabulary.key": "Empathy"
+      }
+    },
+    {
+      "key": "User",
+      "word": "User",
+      "definition": "Someone who uses an object, including software and hardware.",
+      "seeding_key": {
+        "vocabulary.key": "User"
+      }
+    },
+    {
+      "key": "Usability",
+      "word": "Usability",
+      "definition": "How easy, efficient, and satisfying it is to use a human-made object or device (including software).",
+      "seeding_key": {
+        "vocabulary.key": "Usability"
+      }
+    },
+    {
+      "key": "Prototype",
+      "word": "Prototype",
+      "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
+      "seeding_key": {
+        "vocabulary.key": "Prototype"
+      }
+    },
+    {
+      "key": "User Interface",
+      "word": "User Interface",
+      "definition": "The visual elements of a program through which a user controls or communicates with the application. Often abbreviated UI.",
+      "seeding_key": {
+        "vocabulary.key": "User Interface"
+      }
+    },
+    {
+      "key": "Prototype",
+      "word": "Prototype",
+      "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
+      "seeding_key": {
+        "vocabulary.key": "Prototype"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Analysis of Design",
+        "vocabulary.key": "Empathy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analysis of Design",
+        "vocabulary.key": "User"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "vocabulary.key": "Usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Interfaces",
+        "vocabulary.key": "Prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Interfaces",
+        "vocabulary.key": "User Interface"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "vocabulary.key": "Prototype"
       }
     }
   ],

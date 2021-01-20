@@ -34,7 +34,7 @@ class LessonsController < ApplicationController
   # PATCH/PUT /lessons/1
   def update
     if params[:originalLessonData]
-      current_lesson_data = JSON.generate(@lesson.summarize_for_lesson_edit.except(:updatedAt))
+      current_lesson_data = JSON.generate(@lesson.summarize_for_lesson_edit)
       old_lesson_data = params[:originalLessonData]
       if old_lesson_data != current_lesson_data
         msg = "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
@@ -51,6 +51,7 @@ class LessonsController < ApplicationController
     end
 
     if Rails.application.config.levelbuilder_mode
+      @lesson.script.fix_lesson_positions
       @lesson.script.reload
 
       # This endpoint will only be hit from the lesson edit page, which is only

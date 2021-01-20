@@ -607,7 +607,7 @@ class Level < ApplicationRecord
 
   def summarize
     {
-      level_id: id,
+      level_id: id.to_s,
       type: self.class.to_s,
       name: name,
       display_name: display_name
@@ -616,7 +616,7 @@ class Level < ApplicationRecord
 
   def summarize_for_edit
     {
-      id: id,
+      id: id.to_s,
       type: self.class.to_s,
       name: name,
       updated_at: updated_at.localtime.strftime("%D at %r"),

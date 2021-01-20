@@ -282,7 +282,7 @@ class ScriptEditor extends React.Component {
 
           this.props.init(lessonGroups, this.props.levelKeyList);
           this.setState({
-            lastSaved: data.updatedAt,
+            lastSaved: Date.now(),
             isSaving: false,
             oldScriptText: data.lessonLevelData
           });
