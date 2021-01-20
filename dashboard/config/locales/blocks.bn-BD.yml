@@ -141,6 +141,7 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"speed"': গতি
       gamelab_getTime:
         options:
           UNIT:
@@ -191,6 +192,7 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"speed"': গতি
       gamelab_setSizes:
         options:
           PROPERTY:

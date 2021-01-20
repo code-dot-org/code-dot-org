@@ -979,6 +979,7 @@ mi:
             '"rotation"': hurihuri
             '"direction"': aronga nekehanga
             '"tint"': tae
+            '"speed"': terenga
       gamelab_getTime:
         options:
           UNIT:
@@ -1059,6 +1060,8 @@ mi:
           DIRECTION:
             '"right"': matau
             '"left"': mauī
+      gamelab_newSpritePointer:
+        text: pāwhiria {SPRITE}
       gamelab_objectSpritePointer:
         text: pāwhiria {SPRITE}
       gamelab_randColor:
@@ -1079,12 +1082,20 @@ mi:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': kahukura
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': takerewai
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': hōtoke
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': wawaenga
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': te rahi
             '"rotation"': hurihuri
             '"direction"': aronga nekehanga
+            '"speed"': terenga
       gamelab_setSizes:
         options:
           PROPERTY:

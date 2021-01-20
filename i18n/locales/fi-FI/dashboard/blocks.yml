@@ -998,6 +998,7 @@ fi:
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
             '"tint"': sävy
+            '"speed"': nopeus
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1122,6 +1123,8 @@ fi:
             '"West"': Länsi
       gamelab_moveToward:
         text: siirry {SPRITE} kuvapistettä {DISTANCE} kohti {TARGET}
+      gamelab_newSpritePointer:
+        text: napsautti {SPRITE}
       gamelab_objectSpritePointer:
         text: napsautti {SPRITE}
       gamelab_playSound:
@@ -1172,6 +1175,13 @@ fi:
             undefined: Ei yhtään
       gamelab_setBackgroundImageAs:
         text: aseta tausta {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': keskipitkä
+            '100': large
       gamelab_setProp:
         text: aseta {SPRITE} {PROPERTY} arvoksi {VAL}
         options:
@@ -1181,6 +1191,7 @@ fi:
             '"x"': x:än paikka
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
+            '"speed"': nopeus
       gamelab_setSizes:
         text: aseta {SPRITE} {PROPERTY} – {N}%
         options:

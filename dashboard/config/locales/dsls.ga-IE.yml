@@ -2072,3 +2072,5 @@ ga-IE:
         - {}
       CSD U1 Test:
         title: 'Scrúdú Iarthionscadail: Ríomhairí agus Réiteach Fadhbanna'
+      outbreak_freeplay_choice:
+        display_name: Saorimirt

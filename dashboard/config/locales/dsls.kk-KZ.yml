@@ -1842,3 +1842,5 @@ kk-KZ:
         - {}
         questions:
         - {}
+      outbreak_freeplay_choice:
+        display_name: Тегін Ойнау

@@ -1001,6 +1001,7 @@ el:
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
             '"tint"': απόχρωση
+            '"speed"': ταχύτητα
       gamelab_getThisSprite:
         text: "{CHOICE} χαρακτήρας"
         options:
@@ -1125,6 +1126,8 @@ el:
             '"West"': Δυτικά
       gamelab_moveToward:
         text: κινήσου {SPRITE} απόσταση {DISTANCE} προς {TARGET}
+      gamelab_newSpritePointer:
+        text: έγινε κλικ στο {SPRITE}
       gamelab_objectSpritePointer:
         text: έγινε κλικ στο {SPRITE}
       gamelab_playSound:
@@ -1177,6 +1180,13 @@ el:
             undefined: Καμία
       gamelab_setBackgroundImageAs:
         text: Ορισμός φόντου σε {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': μεσαία
+            '100': large
       gamelab_setProp:
         text: "΄όρισε {SPRITE} {PROPERTY} σε {VAL}"
         options:
@@ -1186,6 +1196,7 @@ el:
             '"x"': θέση x
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
+            '"speed"': ταχύτητα
       gamelab_setSizes:
         text: όρισε* {SPRITE} {PROPERTY} στο {N}%
         options:
@@ -1282,6 +1293,8 @@ el:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": η ετικέτα μου
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": δεν είναι η ετικέτα
               μου
+      Mikelab_allSpritesWithAnimation:
+        text: aalab όλοι {ANIMATION}
       Mikelab_changePropBy:
         options:
           PROPERTY:

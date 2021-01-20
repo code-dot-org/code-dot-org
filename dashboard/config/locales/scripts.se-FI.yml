@@ -64,6 +64,11 @@ se:
               name: 'Speallan-lab: Ráhkat Muitalusa'
             The Big Event:
               name: Stuora Dáhpáhus
+          student_description: Álgge Kurssa 1:in ovdalaš lohkkiide. Oahppit galget
+            ráhkadit dihtorprográmmaid mat veahkehit sin oahppat ovttasbargat earáiguin.
+            Ovdánahttit čuolbmačoavdingálggaid, ja čađahit váddásit bargguid. Loahpas
+            kurssa oahppit ráhkadit alcces heivehuvvon spealu dahje muitalusa maid
+            sáhttet juogadit. Ávžžuhuvvo geavahuvvot mánáidskuvlla dásiide, guđajahkásaččaide.
         course2:
           title: Kursa 2
           description: Kursa 2 lea heivehuvvon ohppiide geat máhttet lohkat ja geain
@@ -106,6 +111,11 @@ se:
               name: Stuora Dáhpáhus
             Your Digital Footprint:
               name: Du Digitála Luodda
+          student_description: Kursa 2 lea heivehuvvon ohppiide geat máhttet lohkat
+            ja geain ii leat ovdalaččas prográmmeren hárjáneapmi. Dán kurssas galget
+            oahppit ráhkadit prográmmaid čoavdin dihte čuolmmaid, ja ovdánahttit interaktiiva
+            spealuid dahje muitalusaid maid sáhttet juogadit earáiguin. Evttohuvvon
+            2.-5 klássaide.
         course3:
           title: Kursa 3
           description: Kursa 3 lea ráhkaduvvon ohppiide geat leat čađahan Kursa 2.
@@ -154,6 +164,11 @@ se:
               name: 'Speallan-lab: Ráhkat Spealu'
             'Studio: Create a Story':
               name: 'Speallan-lab: Ráhkat Muitalusa'
+          student_description: Kursa 3 lea ráhkaduvvon ohppiide geat leat čađahan
+            Kursa 2. Oahppit čiekŋudit fáttáide mat leat ovddit kurssain leamaš ráhkadan
+            dihte fleksibelit čovdosiid kompleaksa čuolmmaide. Kurssa loahpas oahppit
+            ráhkadit interaktiiva muitalusaid ja spealuid maid sáhttet juogadit váikko
+            geainna. Ávžžuhuvvon 4.-5. klássaide.
         playlab:
           title: Speallan-lab
           description: Ráhkat muitalusa dahje ráhkat spealu Speallan-lab:ain!
@@ -161,6 +176,7 @@ se:
           lessons:
             Play Lab:
               name: Speallan-lab
+          student_description: Ráhkat muitalusa dahje ráhkat spealu Speallan-lab:ain!
         artist:
           title: Dáiddár
           description: Tevdne kulas govaid ja ráhkat daid Dáiddariin!
@@ -168,6 +184,7 @@ se:
           lessons:
             Artist:
               name: Dáiddár
+          student_description: Tevdne kulas govaid ja ráhkat daid Dáiddariin!
         hourofcode:
           title: Klassikalaš Labirynta
           description: Geahččal  dihtordiehtaga vuođđoáššiid mas geavahat figuraid
@@ -177,6 +194,8 @@ se:
           lessons:
             Maze:
               name: Labirynta
+          student_description: Geahččal  dihtordiehtaga vuođđoáššiid mas geavahat
+            figuraid Angy Bird:as, Šattut Zombiid vuostá, ja Scrat:a Jiekŋaáiggis.
         frozen:
           title: Kode Annain ja Elsain
           description: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid ja čábbodaga
@@ -185,6 +204,10 @@ se:
           lessons:
             Artist:
               name: Dáiddár
+          student_description: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid
+            ja čábbodaga Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid
+            luistiiguin ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit
+            iežat olbmaiguin!
         course4:
           title: Kursa 4
           description: Kursa 4 lea ráhkaduvvon ohppiide geat leat čađahan Kursa 2
@@ -242,6 +265,13 @@ se:
               name: 'Neahtahaga: Lávlagiid čállit Paramehteriiguin'
             'Unplugged: Tangrams':
               name: 'Neahtahaga: Tangrámmat'
+          student_description: Kursa 4 lea ráhkaduvvon ohppiide geat leat čađahan
+            Kursa 2 ja 3. Oahppit galget oahppat movt čoavdit bargobihtáid mat šaddet
+            váddáseappot ja váddáseappot seammás go ohppet ovttastahttit máŋga doahpaga
+            maiguin čoavdit juohke hástalusa. Go dán kurssa lea čađahan, de oahppit
+            galget máhttit ráhkadit prográmmaid mas sáhttet čájehit eanet gálggaid,
+            nu go mohkiid ja funkšuvnnaid main leat paramehterat. Evttohuvvon 4.-8.
+            klássaide.
         Course4pre:
           title: Kursa 4  Eavttut
           description: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai leat čađahan
@@ -267,6 +297,8 @@ se:
               name: 'Boanda: Geardduhit-mohkiid'
             'Maze: Sequence':
               name: 'Labirynta: Sekveansa'
+          student_description: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai
+            leat čađahan Kursa 2 ja 3.
         usability:
           lessons:
             Functions and Functions with Parameters:
@@ -319,6 +351,8 @@ se:
             Infinitiija figurat leat mielde.
           description_short: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas
             Disney Infinitiija figurat leat mielde.
+          student_description: Geavat Speallan-lab ráhkadit muitalusa dahje spealu
+            mas Disney Infinitiija figurat leat mielde.
         algebrademo:
           lessons:
             Defining Simple Functions:
@@ -397,6 +431,9 @@ se:
           description_short: Dát 20 diibmosaš kursa gokčá informatihka ja prográmmerema
             vuođđodoahpagiid kurssain 2-4.
           description_audience: Ahki 10-18
+          student_description: Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema
+            vuođđodoahpagiid kurssain 2-4. Kursa sáhttá geavahit agiin 10-18. Geahča
+            kurssaid 2-4 vai beasat oažžut ollislaš vásáhusa!
         edit-code:
           lessons:
             Applab:
@@ -416,6 +453,7 @@ se:
               name: Evaluere
             Studio:
               name: Studio
+          student_description: Dáhpáhusaid
         flappy:
           title: Flappy Koda
           description: Háliidat go čállit iežat spealu 10 minuvttas? Geahččal min
@@ -424,12 +462,16 @@ se:
           lessons:
             Flappy Code:
               name: Flappy Koda
+          student_description: Háliidat go čállit iežat spealu 10 minuvttas? Geahččal
+            min Flappy Koda neavvaga!
         jigsaw:
           description: Geahččal Bihttáspealu neavvaga.
           description_short: Geahččal Bihttáspealu neavvaga.
+          student_description: Geahččal Bihttáspealu neavvaga.
         step:
           description: Dásiid mielde neava
           description_short: Dásiid mielde neava
+          student_description: Dásiid mielde neava
         Hour of Code:
           title: Kodendiibmu 2013
           description: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat figuraid
@@ -439,6 +481,8 @@ se:
           lessons:
             Hour of Code 2013:
               name: Kodendiibmu 2013
+          student_description: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat figuraid
+            Angy Bird:as, Šattut Zombiid vuostá!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -1198,6 +1242,8 @@ se:
           lessons:
             Vigenere:
               name: Vigenere
+          student_description: Geavat Vigenere Cipher Widget suokkardallat dieđuid
+            krypteremiin ja dekryptermiin.
         algebraPD3a:
           lessons:
             Lesson Prep:
@@ -1422,6 +1468,7 @@ se:
           lessons:
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
+          student_description: Ráhkat muitalusa dahje spealu Jiekŋaáiggi Speallan-labbain
         CSPPD3-Unit3:
           lessons:
             Challenge Overview:
@@ -1485,6 +1532,7 @@ se:
           lessons:
             Gumball Play Lab:
               name: Gumball Speallan-lab
+          student_description: Ráhkat muitalusa dahje spealu Gumball Speallan-lab:in
         starwars:
           title: 'Náste Soahti: Hukse Kodain Galáksa'
           description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu
@@ -1494,6 +1542,8 @@ se:
           lessons:
             Hour of Code 2015:
               name: KodenDiibmu 2015
+          student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
+            spealu galaksii mii lea guhkkin, guhkkin eret.
         starwarsblocks:
           title: 'Náste Soahti: Hukse Kodain Galáksa'
           description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu
@@ -1503,6 +1553,8 @@ se:
           lessons:
             Hour of Code 2015:
               name: KodenDiibmu 2015
+          student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
+            spealu galaksii mii lea guhkkin, guhkkin eret.
         mc:
           description_short: Guorahala Minecraft máilmmi kodemiin.
           lessons:
@@ -1517,6 +1569,8 @@ se:
           lessons:
             Oceans:
               name: Mearat
+          student_description: Oahpa movt AI ja mašiidnaoahppan sáhttá geavahuvvot
+            čujuhit máilmmi váttisvuođaide.
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -1670,6 +1724,7 @@ se:
               name: 'Neahtahaga: Jođánis Funkšuvnnat'
             'Unplugged: The Design Recipe':
               name: 'Neahtahaga: Designa Ráhkadanneava'
+          student_description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
         AlgebraB:
           title: 'DihtorDiehta Algebra:s: Kursa B'
           description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
@@ -1697,6 +1752,7 @@ se:
               name: 'Neahtahaga: Eavttut ja Funkšuvnnat Bihtáidmielde'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Neahtahaga: Video Spealut ja Koordináhta Plánat'
+          student_description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
         gamelab-hackathon:
           lessons:
             Middle_School_Hackathon:
@@ -1879,6 +1935,12 @@ se:
               name: Válbmes CSP Kursa-Gasku Iskkadeami!
             Post-Course Survey:
               name: Maŋŋil Kurssa Iskkadeapmi
+          student_description: "Dát ovttadat láidesta prográmmerema vuođđodoahpagiidda,
+            mat rahpet vejolašvuođaid ráhkadit rikkis, interaktiiva app:id. Dát kursa
+            geavaha JavaScript prográmmerengiellan, ja App Lab prográmmerenbirasin
+            ráhkadit app;id, muhto doahpagat maid dáin lekšuvnnain oahpat gullet buot
+            prográmmerengielaide ja reaidduide. \r\n\r\nDát ovttadat lei ođasmahtton
+            Golggotmánu 30.beaivvi 2017. Loga eanet oahppoplánaođastemiid birra forum.code.org/c/csp/updates."
         csp4-2017:
           title: CSP Unit 4 - Stuora Data ja Personsuodjalus ('17-'18)
           description: "Datarikkis máilbmi mas mii eallit buktá máŋga kompleaksa jearaldaga
@@ -1932,6 +1994,13 @@ se:
               name: Maŋŋil Kurssa Iskkadeapmi
             Student Post-Course Survey:
               name: Oahppi Maŋŋil kurssa Iskkadeapmi
+          student_description: "Datarikkis máilbmi mas mii eallit buktá máŋga kompleaksa
+            jearaldaga mat gullet almmolaš politihkkii, lágaide, etihkkii ja servodatlaš
+            mearkkašumiide. Ulbmil dáinna ovttadagain lea ovdánahttit buriid ja balanserejuvvon
+            oainnuid dataide máilmmis, mas leat mielde sihke positiivva ja negatiivva
+            váikkuhusat dain, ja mas galget ipmirdit vuođu das movt modearna krypteren
+            doaibmá ja manne nu doaibmá.\r\n\r\nDát ovttadat lei ođasmahtton Skábmamánu
+            2017. Loga eanet oahppoplánaođastemiid birra forum.code.org/c/csp/updates.\n"
         csp5-2017:
           title: CSP Unit 5 - Hukse App:id ('17-'18)
           lesson_groups:
@@ -3445,6 +3514,7 @@ se:
           title: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
           description_short: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
           description: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
+          student_description: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -3849,6 +3919,8 @@ se:
             du iežat Minecraft-veršuvnnas.
           description: Programmere elliid dahje eará Minecraft heakkalaččaid du iežat
             Minecraft-veršuvnnas.
+          student_description: Programmere elliid dahje eará Minecraft heakkalaččaid
+            du iežat Minecraft-veršuvnnas.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -8762,3 +8834,388 @@ se:
               name: AI Mearaide
             visualizing:
               name: Visuálisere Dataid
+        csd1-2021:
+          lessons:
+            CS Discoveries Pre-survey:
+              key: CS Fuomášumiid Ovda-iskkadeapmi
+              name: CS Fuomášumiid Ovda-iskkadeapmi
+            Intro to Problem Solving:
+              key: Láidehus ČuolbmaČoavdimii
+              name: Láidehus ČuolbmaČoavdimii
+            Exploring Problem Solving:
+              key: Vásihit ČuolbmaČoavdima
+              name: Vásihit ČuolbmaČoavdima
+            Input and Output:
+              key: Input ja Output
+              name: Input ja Output
+            Processing:
+              key: Gieđahallan
+              name: Gieđahallan
+            Storage:
+              key: Vuorká
+              name: Vuorká
+            Project - Propose an App:
+              key: Prošeakta - Evttohit App:a
+              name: Prošeakta - Evttohit App:a
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+            csd1_1:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            csd1_2:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+        csd2-2021:
+          lessons:
+            Intro to HTML:
+              key: Láidehus HTML:ii
+              name: Láidehus HTML:ii
+            Headings:
+              key: Bajilčállagat
+              name: Bajilčállagat
+            Digital Footprint:
+              key: Digitála Luodda
+              name: Digitála Luodda
+            Styling Text with CSS:
+              key: Stylet Teavstta CSS:ain
+              name: Stylet Teavstta CSS:ain
+            'Websites for Expression ':
+              key: Neahttasiiddut Dadjamiidda
+              name: Neahttasiiddut Dadjamiidda
+            Styling Elements with CSS:
+              key: Stylet Elemeanttaid CSS:ain
+              name: Stylet Elemeanttaid CSS:ain
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd3-2021:
+          lessons:
+            Programming for Entertainment:
+              key: Programmere Guoimmuheami
+              name: Programmere Guoimmuheami
+            Plotting Shapes:
+              key: Plottet Hámiid
+              name: Plottet Hámiid
+            Drawing in Game Lab:
+              key: Tevdnet SpeallanLáb:as
+              name: Tevdnet SpeallanLáb:as
+            Sprites:
+              key: Sprite:at
+              name: Sprite:at
+            Sprite Movement:
+              key: Sprite Lihkadeapmi
+              name: Sprite Lihkadeapmi
+            Keyboard Input:
+              key: Boallobeavddi Input
+              name: Boallobeavddi Input
+            Project - Interactive Card:
+              key: Prošeakta  - Interaktiivva Koarta
+              name: Prošeakta  - Interaktiivva Koarta
+            Complex Sprite Movement:
+              key: Kompleaksa Sprite Lihkastagat
+              name: Kompleaksa Sprite Lihkastagat
+            Collisions:
+              key: Oktiibeaškkeheamit
+              name: Oktiibeaškkeheamit
+            The Game Design Process:
+              key: Spealu Designa Proseassa
+              name: Spealu Designa Proseassa
+            Using the Game Design Process:
+              key: Geavat Spealu Designa Proseassa
+              name: Geavat Spealu Designa Proseassa
+            Project - Design a Game:
+              key: Prošeakta  - Designe Spealu
+              name: Prošeakta  - Designe Spealu
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd4-2021:
+          lessons:
+            Analysis of Design:
+              key: Analyseret Designa
+              name: Analyseret Designa
+            Understanding Your User:
+              key: Ipmirdit Du Geavaheaddji
+              name: Ipmirdit Du Geavaheaddji
+            User-Centered Design Micro Activity:
+              key: GeavaheaddjeStivrejuvvon Designa Mikrodoaibma
+              name: GeavaheaddjeStivrejuvvon Designa Mikrodoaibma
+            Designing Apps for Good:
+              key: Designet App:aid Buorrin
+              name: Designet App:aid Buorrin
+            Market Research:
+              key: MárkanIskkadeapmi
+              name: MárkanIskkadeapmi
+            Paper Prototypes:
+              key: BáberPrototyhpat
+              name: BáberPrototyhpat
+            Prototype Testing:
+              key: Prototyhpa Teasten
+              name: Prototyhpa Teasten
+            Build a Paper Prototype:
+              name: BáberPrototyhpat
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd6-2021:
+          lessons:
+            'Project: Make a Game':
+              key: 'Prošeakta: Ráhkat Spealu'
+              name: 'Prošeakta: Ráhkat Spealu'
+            Making Music:
+              key: Ráhkat Musihka
+              name: Ráhkat Musihka
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp1-2021:
+          lessons:
+            CS Principles Pre-survey:
+              key: CS Prinsihpat Ovdal Iskkadeapmi
+              name: CS Prinsihpat Ovdal Iskkadeapmi
+            Binary Numbers:
+              key: Binára Nummarat
+              name: Binára Nummarat
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp2-2021:
+          lessons:
+            The Need for Addressing:
+              key: Dárbu Váldit oktavuođa
+              name: Dárbu Váldit oktavuođa
+            Routers and Redundancy:
+              key: Routarat ja Dárbbašmeahttumat
+              name: Routarat ja Dárbbašmeahttumat
+        csp8-2021:
+          lessons:
+            Create PT - Complete the Task:
+              key: Ráhkat PT - Válbme Barggu
+              name: Ráhkat PT - Válbme Barggu
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Movttegis Kárttat
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        courseb-2021:
+          lessons:
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
+            The Right App:
+              key: Dat Rievttes App:a
+              name: Dat Rievttes App:a
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binára Giehtabáttit
+              name: Binára Giehtabáttit
+            'Loops: My Loopy Robotic Friends':
+              key: 'Mohkit: Mu Mohkke Robota Olbmát'
+            Looking Ahead:
+              key: Geahča Ovddasguvlui
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+            Picturing Data:
+              key: Presenteret Dátaid
+              name: Presenteret Dátaid
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursed-2021:
+          lessons:
+            Build a Star Wars Game:
+              key: Ráhkat Náste Soahti Spealu
+              name: Ráhkat Náste Soahti Spealu
+            'Unplugged: Binary':
+              key: Neahtahaga - Binára
+              name: Binára Govat
+            Artist Binary:
+              key: Dáiddár Binára
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+        coursee-2021:
+          lessons:
+            Simon Says:
+              key: Simmon Sihtá
+              name: Simmon Sihtá
+            Private and Personal Information:
+              key: Priváhta ja Persovnnlaš Dieđut
+              name: Priváhta ja Persovnnlaš Dieđut
+            Digital Sharing:
+              key: Digitála Juohkin
+              name: Digitála Juohkin
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Konvoluhtta Variábelat
+              name: Konvoluhtta Variábelat
+            AI for Oceans:
+              key: AI Mearaide
+              name: AI Mearaide
+            Internet:
+              key: Interneahtta
+            For Loop Fun:
+              key: Suohttasat Mohkiid váste
+              name: Suohttasat Mohkiid váste
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_sprites:
+              display_name: Sprite:at
+        express-2021:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        csf-2021-pilot:
+          lesson_groups:
+            Sprites:
+              display_name: Sprite:at
+        csd4-preview-2021:
+          lessons:
+            Analysis of Design:
+              key: Analyseret Designa
+              name: Analyseret Designa
+              description_student: Klássa suokkardallá iešguđet lágan deadjalihtiid
+                designa árvvoštallat movt leat válljen designa ja manne. Go geavahit
+                deadjalihtti ovdamearkan, de klássa iská oktavuođaid gaskkal geavaheddjiid,
+                sin dárbbuid ja hábmema diŋggas maid geavahit.
+              description_teacher: Go galget álggahit ovttadaga mii lea čadnon joavkočuolbmačoavdimii
+                ja ovdánahttit buktagiid eará geavaheddjiide, oahppit iskagohtet iešguđet
+                deadjalihtiid hábmemiid. Oahppit analyserejit juohke deadjalihtti
+                ja geahččalit identifiseret movt earenoamáš geavaheaddjedárbu soaitá
+                váikkuhan designa. Árvvoštallat dáid designaválljemiid ja geahččalit
+                heivehit deadjalihtti vejolaš geavaheaddjái, sáhttet oahppit geahččagoahtit
+                movt geavaheaddjevuđot lahkoneapmi designat buktagiid (sihke fysalaš
+                ja digitála) sáhttá dahkat buktagiid ávkkáleabbon ja anolaččabun.
+                Loahpas doaimma, oahppit galget evttohit muhtun rievdadusaid ovtta
+                deadjalihttái dahkan dihte dan ávkkáleabbon ja anolaččabun.
+            Understanding Your User:
+              key: Ipmirdit Du Geavaheaddji
+              name: Ipmirdit Du Geavaheaddji
+              description_student: Geavahit geavaheaddjeprofiillaid, klássa fuomáša
+                movt iešguđet geavaheaddjit soitet reageret buktagiidda. Rollaspealuin,
+                neaktit leat eará persovdnan, mieláhttut klássas besset vásihit designa
+                earáid čalmmiid čađa.
+              description_teacher: "Designárat fertejit ipmirdit geavaheddjiid dárbbuid
+                go galget ráhkadit anolaš buktagiid. Dát lekšuvdna movttiida ohppiid
+                jurddašit movt sáhttet designet nuppi olbmui neaktit eará persovdnan
+                geavahettiin geavaheaddjeprofiilla ja buktit reakšuvnnaid buktagiidda.
+                Juohke oahppi oažžu geavaheaddjeprofiilla mii čilge persovnna, maid
+                de sáhttet geavahit válljet heivvolaš buktagiid, kritiseret buvttadesigna
+                ja evttohit buoridemiid designii.\r"
+            User-Centered Design Micro Activity:
+              key: GeavaheaddjeStivrejuvvon Designa Mikrodoaibma
+              name: GeavaheaddjeStivrejuvvon Designa Mikrodoaibma
+              description_student: Smávva joavkkuin geavaha klássa designaproseassa
+                oažžun dihte ideaid jierpmálaš biktasiidda. Jurddariđuin identifiserejit
+                geavaheddjiid geaidda evttohit designa. Dát lea ovttadaga vuosttaš
+                eanet vejolašvuođain hárjehallat designet čovdosa earáid dárbbuide.
+              description_teacher: Dát lekšuvdna láidesta ohppiid oaniduvvon designaproseassa
+                veršuvnna čađa mas oidnet olles ovttadaga. Jurddariđu vuođul oahppit
+                ráhkadit listtu mas leat vejolaš geavaheaddjit jierbmás biktasiidda.
+                Klássa juohká de dáid jurdagiid stuora kategoriijaide ja juohke joavku
+                vállje geavaheaddjekategoriija. Joavkkut geardduhit proseassa jurddariđuin
+                iskat geavaheddjiid dárbbuid ja fuolastumiid ja de vel loahpas kategoriseret
+                dáid dárbbuid ja válljejit ovtta maid deattuhit. De oahppit designejit
+                ovtta jierbmás biktasa geavahettiin earenoamáš dárbbuid ja fuolahusaid
+                maid ožžo jurddariđus mat de adnojit stivret mearrádusa. Loahpas klássa
+                juogada sin mearrádusproseassaid ja ožžot ruovttoluottadieđu das man
+                buorre sin buvtta lea geavaheddjiid dárbbuid ektui.
+            Designing Apps for Good:
+              key: Designet App:aid Buorrin
+              name: Designet App:aid Buorrin
+              description_student: Álggahan dihte app:a designaprošeavtta klássa organisere
+                iežas joavkkuide ja iskagoahtá app:a fáttaid. Eanet ovdamearkkat sosiála
+                váikkuhus app:ain doaibmá inspirašuvdnan prošektii.
+              description_teacher: Álggahan dihte app:a designaprošeavtta, mii bistá
+                ovttadaga lohppii, oahppit isket muhtun app:aid mat leat designejuvvon
+                sosiála váikkuhusaide maid eará oahppit leat ráhkadan. Klássa de čađaha
+                čuolbmáčoavdinproseassa dásiid čilget, ráhkkanahttit ja reflekteret
+                go ovdánahttet idea iežaset app:ii mas galgá leat sosiála váikkuhus.
+                Loahpas oahppit ráhkadit prošeaktajoavkkuid ja šihttet movt joavku
+                galgá doaibmat iežaset app:a ovdánahttima čađa.
+            Market Research:
+              key: MárkanIskkadeapmi
+              name: MárkanIskkadeapmi
+              description_student: Čiekŋut app:a ovdánahttimii guorahallamiin app:aid
+                mat gávdnojit ja mat sáhttet dákkár geavaheddjiid doarjut. Juohke
+                joavku identifisere muhtun app:aid mat guoskkahit fáttá mainna leat
+                bargame ja geavahit dáid app:aid ráddjet iežaset app:a ideaid maid
+                de čuvvot.
+              description_teacher: Dán lekšuvnnas oahppit isket app:aid mat sulastahttet
+                dan maid ieža áigot ráhkadit ipmirdan dihte geavaheddjiid dárbbuid.
+                Oahppit barget joavkkuin ohcat interneahtas eará app:aid ja de árvvoštallet
+                daid maid sin mielas leat miellagiddevaččat. Loahpas lekšuvnna juohke
+                joavku lea ožžon čielgasit idea makkár app:a áigot ráhkadit ja maid
+                ráddjen geavaheaddjejoavkku. Juohke joavku doalaha listtu mas leat
+                sitáhtat app:ain maid iske maid de sáhttet geavahit loahppa ovdanbuktimis.
+            Paper Prototypes:
+              key: BáberPrototyhpat
+              name: BáberPrototyhpat
+              description_student: Báberprototyhpat veahkehit ovdánahttiid iskat ideaid
+                ovdal go beare ollu áiggi bidjet kodaid čállimii. Dán lekšuvnnas joavku
+                guorahallá muhtun ovdamearkkaid app:ain mat leat ráhkaduvvon App Lab:as,
+                ja geavahit dáid app:aid informeret vuosttaš báberprototyhpaid.
+              description_teacher: "Ovdal go designegohtet app:aid fertet mii veahkehit
+                ohppiid loktet iežaset vuordámušaid. Danne go oahppit dáid app:aid
+                prototyhpejit App Lab:as, de sii leat eanet ráhkkanan jus sin ideat
+                heivejit app:iade mat leat prototyhpejuvvon App Lab:as. Joavkkut geahččagohtet
+                iešguđetlágán app:aid designejuvvon čájehan dihte app:aid mat leat
+                ráhkaduvvon App Lab:as. Joavkkut sáhttet válljet ovtta dahje moadde
+                app:aid vuođđun alcceseaset. Dalle joavkkuin lea veahá áigi digaštallat
+                iežas app:a vuođđofunkšunalitehta ovdal go geavahit 3x5 indeaksakoartta
+                ovdánahttit báberprototyhpaid.\r"
+            Prototype Testing:
+              key: Prototyhpa Teasten
+              name: Prototyhpa Teasten
+            Build a Paper Prototype:
+              name: BáberPrototyhpat
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            cspSurvey:
+              display_name: Iskkadeapmi
+            csdSurvey:
+              display_name: Iskkadeapmi
+        csd5-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi

@@ -157,11 +157,6 @@ class ResourcesEditor extends Component {
           />
         )}
         Resources
-        <input
-          type="hidden"
-          name="resources"
-          value={JSON.stringify(this.props.resources.map(r => r.key))}
-        />
         <div style={styles.resourceBox}>
           <div style={styles.resourceSearch}>
             <label>Select a resource to add</label>

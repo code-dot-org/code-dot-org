@@ -93,6 +93,7 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.contains('Remarks')).to.be.true;
+    expect(wrapper.contains('Progression Title:')).to.be.false;
   });
 
   it('renders activity section with levels', () => {
@@ -108,6 +109,7 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.contains('Progression Title:')).to.be.true;
   });
 
   it('edit activity section title', () => {
@@ -123,16 +125,47 @@ describe('ActivitySectionCard', () => {
     );
   });
 
+  it('edit activity section duration', () => {
+    const wrapper = shallow(<ActivitySectionCard {...defaultProps} />);
+
+    const durationInput = wrapper.find('input').at(1);
+    durationInput.simulate('change', {target: {value: '5'}});
+    expect(updateActivitySectionField).to.have.been.calledWith(
+      1,
+      1,
+      'duration',
+      '5'
+    );
+  });
+
   it('edit activity section remarks', () => {
     const wrapper = shallow(<ActivitySectionCard {...defaultProps} />);
 
-    const titleInput = wrapper.find('input').at(1);
-    titleInput.simulate('change', {target: {value: ''}});
+    const remarksInput = wrapper.find('input').at(2);
+    remarksInput.simulate('change', {target: {value: ''}});
     expect(updateActivitySectionField).to.have.been.calledWith(
       1,
       1,
       'remarks',
       false
+    );
+  });
+
+  it('edit activity section progressionName', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        activitySection={sampleActivities[0].activitySections[2]}
+      />
+    );
+
+    const progressionInput = wrapper.find('input').at(3);
+    progressionInput.simulate('change', {target: {value: 'Progression Name'}});
+    expect(updateActivitySectionField).to.have.been.calledWith(
+      1,
+      3,
+      'progressionName',
+      'Progression Name'
     );
   });
 

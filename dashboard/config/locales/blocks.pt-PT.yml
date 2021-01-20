@@ -1005,6 +1005,7 @@ pt:
             '"y"': posição y
             '"direction"': direção do movimento
             '"tint"': matiz
+            '"speed"': velocidade
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1131,6 +1132,8 @@ pt:
             '"West"': Ocidente
       gamelab_moveToward:
         text: Mover {SPRITE} Pixels {DISTANCE} Para {TARGET}
+      gamelab_newSpritePointer:
+        text: clicado {SPRITE}
       gamelab_objectSpritePointer:
         text: clicado {SPRITE}
       gamelab_playSound:
@@ -1183,6 +1186,13 @@ pt:
             undefined: nenhum
       gamelab_setBackgroundImageAs:
         text: definir fundo para {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': intermédio
+            '100': large
       gamelab_setProp:
         text: Definir {SPRITE} {PROPERTY} Para {VAL}
         options:
@@ -1192,6 +1202,7 @@ pt:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
+            '"speed"': velocidade
       gamelab_setSizes:
         text: Definir {SPRITE} {PROPERTY} Para {N}%
         options:
@@ -1289,6 +1300,8 @@ pt:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": não peixe
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": meu rótulo
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": não o meu rótulo
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

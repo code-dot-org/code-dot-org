@@ -848,7 +848,8 @@
       "key": "42556b6a-585c-4263-a2c0-0d7766b609c4",
       "position": 1,
       "properties": {
-        "name": "Tech Setup and Tools for Create PT"
+        "name": "Tech Setup and Tools for Create PT",
+        "progression_name": "Tech Setup and Tools for Create PT"
       },
       "seeding_key": {
         "activity_section.key": "42556b6a-585c-4263-a2c0-0d7766b609c4",
@@ -859,7 +860,8 @@
       "key": "dbcc15a6-a7a9-48aa-ba17-d0a9dc93ec3d",
       "position": 2,
       "properties": {
-        "name": "Create PT Coding Workspace"
+        "name": "Create PT Coding Workspace",
+        "progression_name": "Create PT Coding Workspace"
       },
       "seeding_key": {
         "activity_section.key": "dbcc15a6-a7a9-48aa-ba17-d0a9dc93ec3d",
