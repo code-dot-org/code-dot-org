@@ -14,7 +14,9 @@ export class VersionHistory extends React.Component {
   static propTypes = {
     handleClearPuzzle: PropTypes.func.isRequired,
     useFilesApi: PropTypes.bool.isRequired,
-    isTeacher: PropTypes.string
+    //Provided by Redux
+    isTeacher: PropTypes.string,
+    isReadOnlyWorkspace: PropTypes.bool
   };
 
   /**
@@ -53,7 +55,8 @@ export class VersionHistory extends React.Component {
     }
   }
 
-  viewedByTeacher = () => this.props.isTeacher === 'teacher';
+  teacherViewingStudentWork = () =>
+    this.props.isTeacher === 'teacher' && this.props.isReadOnlyWorkspace;
 
   /**
    * Called after the component mounts, when the server responds with the
@@ -173,7 +176,7 @@ export class VersionHistory extends React.Component {
               lastModified={new Date(version.lastModified)}
               isLatest={version.isLatest}
               onChoose={this.onChooseVersion.bind(this, version.versionId)}
-              isTeacher={this.viewedByTeacher()}
+              teacherViewingStudent={this.teacherViewingStudentWork()}
             />
           );
         }.bind(this)
@@ -185,7 +188,7 @@ export class VersionHistory extends React.Component {
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
-                {!this.viewedByTeacher && (
+                {!this.teacherViewingStudentWork && (
                   <tr>
                     <td>
                       <p>{i18n.versionHistory_initialVersion_label()}</p>
@@ -220,5 +223,6 @@ export class VersionHistory extends React.Component {
 }
 export const UnconnectedVersionHistory = VersionHistory;
 export default connect(state => ({
-  isTeacher: state.currentUser.userType
+  isTeacher: state.currentUser.userType,
+  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
 }))(VersionHistory);

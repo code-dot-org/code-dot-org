@@ -11,7 +11,7 @@ export default class VersionRow extends React.Component {
     lastModified: PropTypes.instanceOf(Date).isRequired,
     isLatest: PropTypes.bool,
     onChoose: PropTypes.func,
-    isTeacher: PropTypes.bool
+    teacherViewingStudent: PropTypes.bool
   };
 
   getLastModifiedTimestamp() {
@@ -36,13 +36,22 @@ export default class VersionRow extends React.Component {
         </button>
       );
     } else {
+      let searchParams;
+
+      //Need to specify user id if teacher viewing student version history
+      if (this.props.teacherViewingStudent) {
+        searchParams = location.search + '&version=';
+      } else {
+        searchParams = '?version=';
+      }
+
       button = [
         <a
           key={0}
           href={
             location.origin +
             location.pathname +
-            '?version=' +
+            searchParams +
             this.props.versionId
           }
           target="_blank"
@@ -53,7 +62,7 @@ export default class VersionRow extends React.Component {
           </button>
         </a>
       ];
-      if (!this.props.isTeacher) {
+      if (!this.props.teacherViewingStudent) {
         button.push(
           <button
             type="button"
