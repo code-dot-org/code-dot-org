@@ -1097,7 +1097,7 @@
         },
         "comment_intro_maze_2018": {
           "courseC_maze_programming4_a": "コメントは、あなたが書いたプログラムを 他の人が 理解する時に 役立ちます。",
-          "courseC_maze_programming4_b": "進む方向を変えるときにコメントを入れておきます。-もし、別の方向に 行ったら どうなるのか"
+          "courseC_maze_programming4_b": "進む方向を変えるときにコメントを入れておきます。-もし、別の方向に 行ったら どうなるのかな？"
         },
         "course1_artist_loops_challenge1": {
           "courseA_artist_loops_challenge1_a": "「くりかえし」をつかうと、こうやって家が作れる。ほかのブロックをつかって「くりかえし」のしくみをかくにんしてみよう。\n\n![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)\n\nじぶんの家を作ってみよう。![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) をおすと、いくつかのアイディアをあげます！",
@@ -1852,7 +1852,7 @@
         },
         "courseA_harvester_seq4": {
           "courseA_harvester_seq4_a": "トウモロコシまで なんブロック？ワークスペースにあるブロックは いくつ？",
-          "courseA_harvester_seq4_b": "`東` が 5つ と `ピック トウモロコシ`を 1つ つかいます。\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_b": "`東` を 5つ と `ピック トウモロコシ`を 1つ つかいます。\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq4_2019": {
           "courseA_harvester_seq4_a": "トウモロコシまで なんブロック？ワークスペースにあるブロックは いくつ？",
@@ -2723,7 +2723,7 @@
         "courseB_iceage_loops10": {
           "courseB_iceage_loops10_a": "こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。",
           "courseB_iceage_loops10_b": "ドングリまで いくみちを こえに だして いってみるか、かみに かいてみよう。パターンは みつかるかな？",
-          "courseB_iceage_loops10_c": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops10_c": "あかいせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops10_2019": {
           "courseB_iceage_loops10_a": "こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。",
@@ -2746,7 +2746,7 @@
         "courseB_iceage_loops2": {
           "courseB_iceage_loops2_a": "かどを まがる まえ と まがった あとに わけて かんがえよう。",
           "courseB_iceage_loops2_b": "わからないときは、どうやって いけばいいのか こえに出して いってみよう。",
-          "courseB_iceage_loops2_c": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops2_c": "あかいせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops2_2019": {
           "courseB_iceage_loops2_a": "かどを まがる まえ と まがった あとに わけて かんがえよう。",
@@ -2802,7 +2802,7 @@
         },
         "courseB_iceage_loops7": {
           "courseB_iceage_loops7_a": "うまく いかないときは、かみに どうやって いけばいいか かいてみよう。パターンはみつかった？",
-          "courseB_iceage_loops7_b": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops7_b": "あかいせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops7_2019": {
           "courseB_iceage_loops7_a": "うまく いかないときは、かみに どうやって いけばいいか かいてみよう。パターンはみつかった？",
@@ -5572,7 +5572,7 @@
         "courseD_bee_conditionals5_2018": {
           "courseD_bee_conditionals5_hintVid1": "わからないときは、ビデオを見てみよう！",
           "courseD_bee_conditionals5_a": "長方形の辺、1つ1つについて考えよう。くりかえしを入れ子にします。 外側のループは`くりかえし`、内側は `前に道がある間` を使います。花のある所をすべて通るには、いくつの辺を通ればいいかな？",
-          "courseD_bee_conditionals5_c": "花があるのは3つの辺なので、 `くりかえし 3 回`を使います。くり返しの中でハチは`前に道がある間`で道を進みます。道を進むには、`前に すすむ`を使います。道を進みながら、花があるか調べます。`もし 花で`あれば、`花のミツをとる`します。",
+          "courseD_bee_conditionals5_c": "花があるのは3つの辺なので、 `くりかえし 3 回`を使います。くり返しの中でハチは`前に道がある間`で道を進みます。道を進むには、`前に すすむ`を使います。道を進みながら、花があるか調べます。`もし 花があれば`、`花のミツをとる`をつかいます。",
           "courseD_bee_conditionals5_b": "`前に道がある間`の中で、前に進んで花があるか調べます。花があるか調べるには どうすればいいかな？花があったら何をしますか？",
           "courseD_bee_conditionals5_hintVid2": "ビデオを見てパズルをクリアしよう。"
         },
@@ -6367,17 +6367,17 @@
         "courseD_iceage_loops10": {
           "courseB_iceage_loops10_a": "こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。",
           "courseB_iceage_loops10_b": "ドングリまで いくみちを こえに だして いってみるか、かみに かいてみよう。パターンは みつかるかな？",
-          "courseB_iceage_loops10_c": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops10_c": "あかいせんのとおりに いってみよう。"
         },
         "courseD_iceage_loops10_2019": {
           "courseB_iceage_loops10_a": "こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。",
           "courseB_iceage_loops10_b": "ドングリまで いくみちを こえに だして いってみるか、かみに かいてみよう。パターンは みつかるかな？",
-          "courseB_iceage_loops10_c": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops10_c": "あかいせんのとおりに いってみよう。"
         },
         "courseD_iceage_loops10_2020": {
           "courseB_iceage_loops10_a": "こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。",
           "courseB_iceage_loops10_b": "ドングリまで いくみちを こえに だして いってみるか、かみに かいてみよう。パターンは みつかるかな？",
-          "courseB_iceage_loops10_c": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops10_c": "あかいせんのとおりに いってみよう。"
         },
         "courseD_iceage_loops1_2019": {
           "courseD_iceage_loops1_a": "こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。",
@@ -6390,17 +6390,17 @@
         "courseD_iceage_loops2": {
           "courseD_iceage_loops2_a": "かどを まがる まえ と まがった あとに わけて かんがえよう。",
           "courseD_iceage_loops2_b": "わからないときは、どうやって いけばいいのか こえに出して いってみよう。",
-          "courseD_iceage_loops2_c": "赤いせんのとおりに いってみよう。"
+          "courseD_iceage_loops2_c": "あかいせんのとおりに いってみよう。"
         },
         "courseD_iceage_loops2_2019": {
           "courseD_iceage_loops2_a": "かどを まがる まえ と まがった あとに わけて かんがえよう。",
           "courseD_iceage_loops2_b": "わからないときは、どうやって いけばいいのか こえに出して いってみよう。",
-          "courseD_iceage_loops2_c": "赤いせんのとおりに いってみよう。"
+          "courseD_iceage_loops2_c": "あかいせんのとおりに いってみよう。"
         },
         "courseD_iceage_loops2_2020": {
           "courseD_iceage_loops2_a": "かどを まがる まえ と まがった あとに わけて かんがえよう。",
           "courseD_iceage_loops2_b": "わからないときは、どうやって いけばいいのか こえに出して いってみよう。",
-          "courseD_iceage_loops2_c": "赤いせんのとおりに いってみよう。"
+          "courseD_iceage_loops2_c": "あかいせんのとおりに いってみよう。"
         },
         "courseD_iceage_loops3": {
           "courseB_iceage_loops3_a": "あたらしいブロックを つかってみよう！ <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
@@ -6446,15 +6446,15 @@
         },
         "courseD_iceage_loops7": {
           "courseB_iceage_loops7_a": "うまく いかないときは、かみに どうやって いけばいいか かいてみよう。パターンはみつかった？",
-          "courseB_iceage_loops7_b": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops7_b": "あかいせんのとおりに いってみよう。"
         },
         "courseD_iceage_loops7_2019": {
           "courseB_iceage_loops7_a": "うまく いかないときは、かみに どうやって いけばいいか かいてみよう。パターンはみつかった？",
-          "courseB_iceage_loops7_b": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops7_b": "あかいせんのとおりに いってみよう。"
         },
         "courseD_iceage_loops7_2020": {
           "courseB_iceage_loops7_a": "うまく いかないときは、かみに どうやって いけばいいか かいてみよう。パターンはみつかった？",
-          "courseB_iceage_loops7_b": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops7_b": "あかいせんのとおりに いってみよう。"
         },
         "courseD_iceage_loops8": {
           "courseD_iceage_loops8_a": "`まがる`のは右？ほかに変えるところは？",
