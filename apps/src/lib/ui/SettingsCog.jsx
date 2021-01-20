@@ -14,6 +14,7 @@ import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
 import experiments from '@cdo/apps/util/experiments';
+import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 
 const style = {
   iconContainer: {
@@ -56,7 +57,8 @@ class SettingsCog extends Component {
     open: false,
     canOpen: true,
     confirmingEnableMaker: false,
-    managingLibraries: false
+    managingLibraries: false,
+    managingModels: false
   };
 
   open = () => this.setState({open: true, canOpen: false});
@@ -80,7 +82,7 @@ class SettingsCog extends Component {
 
   manageModels = () => {
     this.close();
-    console.log('clicked');
+    this.setState({managingModels: true});
   };
 
   toggleMakerToolkit = () => {
@@ -103,6 +105,7 @@ class SettingsCog extends Component {
   showConfirmation = () => this.setState({confirmingEnableMaker: true});
   hideConfirmation = () => this.setState({confirmingEnableMaker: false});
   closeLibraryManager = () => this.setState({managingLibraries: false});
+  closeModelManager = () => this.setState({managingModels: false});
 
   setTargetPoint(icon) {
     if (!icon) {
@@ -158,6 +161,10 @@ class SettingsCog extends Component {
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
         </PopUpMenu>
+        <ModelManagerDialog
+          isOpen={this.state.managingModels}
+          onClose={this.closeModelManager}
+        />
         <ConfirmEnableMakerDialog
           isOpen={this.state.confirmingEnableMaker}
           handleConfirm={this.confirmEnableMaker}
