@@ -19,15 +19,6 @@ const styles = {
   resourceSearch: {
     paddingBottom: 10
   },
-  resourceBox: {
-    border: '1px solid ' + color.light_gray,
-    padding: 10,
-    marginTop: 10,
-    marginBottom: 10
-  },
-  oddRow: {
-    backgroundColor: color.lightest_gray
-  },
   actionsColumn: {
     display: 'flex',
     justifyContent: 'space-evenly',
@@ -39,7 +30,8 @@ const styles = {
     background: color.dark_red,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '48%'
+    width: '48%',
+    lineHeight: '30px'
   },
   edit: {
     fontSize: 14,
@@ -47,7 +39,8 @@ const styles = {
     background: color.default_blue,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '48%'
+    width: '48%',
+    lineHeight: '30px'
   }
 };
 
@@ -278,8 +271,7 @@ class ResourcesEditor extends Component {
             onConfirm={this.removeResource}
           />
         )}
-        Resources
-        <div style={styles.resourceBox}>
+        <div>
           <div style={styles.resourceSearch}>
             <label>Select a resource to add</label>
             <SearchBox
