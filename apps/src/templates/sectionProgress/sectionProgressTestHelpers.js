@@ -141,7 +141,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 16231,
+            id: '16231',
             url:
               'http://localhost-studio.code.org:3000/s/coursea-2020/stage/1/puzzle/1',
             kind: 'puzzle',
@@ -177,7 +177,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3226,
+            id: '3226',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/1/puzzle/1',
             progression: 'Lesson Overview',
@@ -191,7 +191,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 16010,
+            id: '16010',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/1/puzzle/2',
             progression: 'Exploring CS in Entertainment',
@@ -205,7 +205,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1785,
+            id: '1785',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/1/puzzle/3',
             progression: 'Sample Programs',
@@ -219,7 +219,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1779,
+            id: '1779',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/1/puzzle/4',
             progression: 'Sample Programs',
@@ -233,7 +233,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1767,
+            id: '1767',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/1/puzzle/5',
             progression: 'Sample Programs',
@@ -247,7 +247,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1773,
+            id: '1773',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/1/puzzle/6',
             progression: 'Sample Programs',
@@ -287,7 +287,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3231,
+            id: '3231',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/2/puzzle/1',
             progression: 'Lesson Overview',
@@ -301,7 +301,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2106,
+            id: '2106',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/2/puzzle/2',
             progression: 'Drawing Shapes',
@@ -341,7 +341,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3236,
+            id: '3236',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/1',
             progression: 'Lesson Overview',
@@ -355,7 +355,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3191,
+            id: '3191',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/2',
             progression: 'Introduction to Game Lab',
@@ -369,7 +369,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4477,
+            id: '4477',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/3',
             progression: 'Video: Drawing in Game Lab - Part 1',
@@ -383,7 +383,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1755,
+            id: '1755',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/4',
             progression: 'Using the Grid',
@@ -397,7 +397,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4483,
+            id: '4483',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/5',
             progression: 'Video: Drawing in Game Lab - Part 2',
@@ -411,7 +411,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2923,
+            id: '2923',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/6',
             progression: 'Skill Building',
@@ -425,7 +425,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3197,
+            id: '3197',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/7',
             progression: 'Skill Building',
@@ -439,7 +439,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2917,
+            id: '2917',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/8',
             progression: 'Skill Building',
@@ -453,7 +453,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21573,
+            id: '21573',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/9',
             progression: 'Practice',
@@ -467,7 +467,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2910,
+                id: '2910',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/9/sublevel/1',
                 name: 'CSD U3 drawing practice 1',
@@ -475,7 +475,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2911,
+                id: '2911',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/9/sublevel/2',
                 name: 'CSD U3 drawing practice 2',
@@ -483,7 +483,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2912,
+                id: '2912',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/9/sublevel/3',
                 name: 'CSD U3 drawing practice 3',
@@ -493,7 +493,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 2902,
+            id: '2902',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/10',
             progression: 'Assessment',
@@ -507,7 +507,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21570,
+            id: '21570',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11',
             progression: 'Challenges',
@@ -521,7 +521,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2906,
+                id: '2906',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/1',
                 name: 'CSD U3 drawing challenge 2',
@@ -529,7 +529,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2907,
+                id: '2907',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/2',
                 name: 'CSD U3 drawing challenge 3',
@@ -537,7 +537,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2909,
+                id: '2909',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/3',
                 name: 'CSD U3 drawing challenge no fill_pilot',
@@ -545,7 +545,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 3047,
+                id: '3047',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/4',
                 name: 'CSD U3 picture_pilot',
@@ -553,7 +553,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'd'
               },
               {
-                id: 2704,
+                id: '2704',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/5',
                 name: 'CSD U3 challenge face_pilot',
@@ -561,7 +561,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'e'
               },
               {
-                id: 2709,
+                id: '2709',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/6',
                 name: 'CSD U3 challenge new shape_pilot',
@@ -569,7 +569,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'f'
               },
               {
-                id: 2018,
+                id: '2018',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/7',
                 name: 'CSD U3 L3 Freeplay_pilot',
@@ -605,7 +605,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3241,
+            id: '3241',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/1',
             progression: 'Lesson Overview',
@@ -619,7 +619,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2147,
+            id: '2147',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/2',
             progression: 'Skill Building',
@@ -633,7 +633,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2132,
+            id: '2132',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/3',
             progression: 'Skill Building',
@@ -647,7 +647,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2162,
+            id: '2162',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/4',
             progression: 'Skill Building',
@@ -661,7 +661,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2157,
+            id: '2157',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/5',
             progression: 'Skill Building',
@@ -675,7 +675,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2125,
+            id: '2125',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/6',
             progression: 'Skill Building',
@@ -689,7 +689,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21516,
+            id: '21516',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/7',
             progression: 'Practice',
@@ -703,7 +703,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 3206,
+                id: '3206',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/7/sublevel/1',
                 name: 'CSD U3 shapes behind_pilot',
@@ -711,7 +711,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 3208,
+                id: '3208',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/7/sublevel/2',
                 name: 'CSD U3 shapes missing_pilot',
@@ -719,7 +719,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 3210,
+                id: '3210',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/7/sublevel/3',
                 name: 'CSD U3 shapes scene_pilot',
@@ -729,7 +729,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 2119,
+            id: '2119',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/8',
             progression: 'Assessment',
@@ -743,7 +743,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21513,
+            id: '21513',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/9',
             progression: 'Challenges',
@@ -757,7 +757,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 3209,
+                id: '3209',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/9/sublevel/1',
                 name: 'CSD U3 shapes polygon_pilot',
@@ -765,7 +765,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 3211,
+                id: '3211',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/9/sublevel/2',
                 name: 'CSD U3 shapes_pilot',
@@ -773,7 +773,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 3207,
+                id: '3207',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/9/sublevel/3',
                 name: 'CSD U3 shapes line_pilot',
@@ -781,7 +781,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 3205,
+                id: '3205',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/9/sublevel/4',
                 name: 'CSD U3 shapes arc_pilot',
@@ -789,7 +789,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'd'
               },
               {
-                id: 3042,
+                id: '3042',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/9/sublevel/5',
                 name: 'CSD U3 parameters shape scene_2020',
@@ -814,7 +814,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1559,
+        id: '1559',
         position: 5,
         relative_position: 5,
         name: 'Variables',
@@ -825,7 +825,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3246,
+            id: '3246',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/1',
             progression: 'Lesson Overview',
@@ -839,7 +839,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2419,
+            id: '2419',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/2',
             progression: 'Prediction',
@@ -853,7 +853,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 7593,
+            id: '7593',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/3',
             progression: 'Video: Introduction to Variables',
@@ -867,7 +867,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2414,
+            id: '2414',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/4',
             progression: 'Skill Building',
@@ -881,7 +881,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2453,
+            id: '2453',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/5',
             progression: 'Skill Building',
@@ -895,7 +895,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2392,
+            id: '2392',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/6',
             progression: 'Skill Building',
@@ -909,7 +909,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21542,
+            id: '21542',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/7',
             progression: 'Practice',
@@ -923,7 +923,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2437,
+                id: '2437',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/7/sublevel/1',
                 name: 'CSD U3 Variables change circle size_pilot',
@@ -931,7 +931,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2448,
+                id: '2448',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/7/sublevel/2',
                 name: 'CSD U3 Variables names_pilot',
@@ -939,7 +939,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2469,
+                id: '2469',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/7/sublevel/3',
                 name: 'CSD U3 Variables unused_pilot',
@@ -947,7 +947,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 2444,
+                id: '2444',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/7/sublevel/4',
                 name: 'CSD U3 Variables forbidden names_pilot',
@@ -957,7 +957,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 2432,
+            id: '2432',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/8',
             progression: 'Assessment',
@@ -971,7 +971,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21539,
+            id: '21539',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/9',
             progression: 'Challenges',
@@ -985,7 +985,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2387,
+                id: '2387',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/9/sublevel/1',
                 name: 'CSD U3 Variables Draw Challenge_pilot',
@@ -993,7 +993,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2382,
+                id: '2382',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/9/sublevel/2',
                 name: 'CSD U3 Variables Challenge_pilot',
@@ -1001,7 +1001,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2429,
+                id: '2429',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/9/sublevel/3',
                 name: 'CSD U3 Variables String Challenge_pilot',
@@ -1009,7 +1009,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 2028,
+                id: '2028',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/9/sublevel/4',
                 name: 'CSD U3 L5 Freeplay_pilot',
@@ -1034,7 +1034,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1560,
+        id: '1560',
         position: 6,
         relative_position: 6,
         name: 'Random Numbers',
@@ -1045,7 +1045,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3251,
+            id: '3251',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/1',
             progression: 'Lesson Overview',
@@ -1059,7 +1059,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2187,
+            id: '2187',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/2',
             progression: 'Exploration',
@@ -1073,7 +1073,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2182,
+            id: '2182',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/3',
             progression: 'Skill Building',
@@ -1087,7 +1087,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2466,
+            id: '2466',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/4',
             progression: 'Skill Building',
@@ -1101,7 +1101,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2461,
+            id: '2461',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/5',
             progression: 'Skill Building',
@@ -1115,7 +1115,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21530,
+            id: '21530',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/6',
             progression: 'Practice',
@@ -1129,7 +1129,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2168,
+                id: '2168',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/6/sublevel/1',
                 name: 'CSD U3 Random planets_pilot',
@@ -1137,7 +1137,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2192,
+                id: '2192',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/6/sublevel/2',
                 name: 'CSD U3 Random shape position_pilot',
@@ -1147,7 +1147,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 2173,
+            id: '2173',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/7',
             progression: 'Assessment',
@@ -1161,7 +1161,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21527,
+            id: '21527',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8',
             progression: 'Challenges',
@@ -1175,7 +1175,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2190,
+                id: '2190',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/1',
                 name: 'CSD U3 Random rgb_pilot',
@@ -1183,7 +1183,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2151,
+                id: '2151',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/2',
                 name: 'CSD U3 Random add_pilot',
@@ -1191,7 +1191,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2167,
+                id: '2167',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/3',
                 name: 'CSD U3 Random multiply_pilot',
@@ -1199,7 +1199,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 2166,
+                id: '2166',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/4',
                 name: 'CSD U3 Random line_pilot',
@@ -1207,7 +1207,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'd'
               },
               {
-                id: 2152,
+                id: '2152',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/5',
                 name: 'CSD U3 Random arc_pilot',
@@ -1215,7 +1215,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'e'
               },
               {
-                id: 2165,
+                id: '2165',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/6',
                 name: 'CSD U3 Random free play_pilot',
@@ -1240,7 +1240,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1561,
+        id: '1561',
         position: 7,
         relative_position: 7,
         name: 'Sprites',
@@ -1251,7 +1251,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3256,
+            id: '3256',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/1',
             progression: 'Lesson Overview',
@@ -1265,7 +1265,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2229,
+            id: '2229',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/2',
             progression: 'Exploration',
@@ -1279,7 +1279,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4510,
+            id: '4510',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/3',
             progression: 'Video: Introduction to Sprites',
@@ -1293,7 +1293,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2282,
+            id: '2282',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/4',
             progression: 'Skill Building',
@@ -1307,7 +1307,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2270,
+            id: '2270',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/5',
             progression: 'Skill Building',
@@ -1321,7 +1321,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2241,
+            id: '2241',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/6',
             progression: 'Skill Building',
@@ -1335,7 +1335,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4468,
+            id: '4468',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/7',
             progression: 'Video: The Animation Tab',
@@ -1349,7 +1349,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2328,
+            id: '2328',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/8',
             progression: 'Skill Building',
@@ -1363,7 +1363,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 18424,
+            id: '18424',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/9',
             progression: 'Skill Building',
@@ -1377,7 +1377,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21536,
+            id: '21536',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10',
             progression: 'Practice',
@@ -1391,7 +1391,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2287,
+                id: '2287',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/1',
                 name: 'CSD U3 Sprites missing_pilot',
@@ -1399,7 +1399,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2290,
+                id: '2290',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/2',
                 name: 'CSD U3 Sprites names_pilot',
@@ -1407,7 +1407,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2289,
+                id: '2289',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/3',
                 name: 'CSD U3 Sprites name sprite_pilot',
@@ -1415,7 +1415,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 2292,
+                id: '2292',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/4',
                 name: 'CSD U3 Sprites order_pilot',
@@ -1423,7 +1423,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'd'
               },
               {
-                id: 2266,
+                id: '2266',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/5',
                 name: 'CSD U3 Sprites fish_pilot',
@@ -1431,7 +1431,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'e'
               },
               {
-                id: 2332,
+                id: '2332',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/6',
                 name: 'CSD U3 Sprites sprite draw_pilot',
@@ -1441,7 +1441,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 2256,
+            id: '2256',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/11',
             progression: 'Assessment',
@@ -1455,7 +1455,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21533,
+            id: '21533',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/12',
             progression: 'Challenges',
@@ -1469,7 +1469,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2247,
+                id: '2247',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/12/sublevel/1',
                 name: 'CSD U3 Sprites anitab 2_pilot',
@@ -1477,7 +1477,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2264,
+                id: '2264',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/12/sublevel/2',
                 name: 'CSD U3 Sprites draw animation_pilot',
@@ -1485,7 +1485,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2258,
+                id: '2258',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/12/sublevel/3',
                 name: 'CSD U3 Sprites combine_pilot',
@@ -1508,7 +1508,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1562,
+        id: '1562',
         position: 8,
         relative_position: 8,
         name: 'Sprite Properties',
@@ -1519,7 +1519,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3261,
+            id: '3261',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/1',
             progression: 'Lesson Overview',
@@ -1533,7 +1533,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 725,
+            id: '725',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/2',
             progression: 'Prediction',
@@ -1547,7 +1547,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 729,
+            id: '729',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/3',
             progression: 'Skill Building',
@@ -1561,7 +1561,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 722,
+            id: '722',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/4',
             progression: 'Skill Building',
@@ -1575,7 +1575,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21524,
+            id: '21524',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/5',
             progression: 'Practice',
@@ -1589,7 +1589,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 715,
+                id: '715',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/5/sublevel/1',
                 name: 'CSD Games bubble choice properties scale',
@@ -1597,7 +1597,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 714,
+                id: '714',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/5/sublevel/2',
                 name: 'CSD Games bubble choice properties rotation',
@@ -1607,7 +1607,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 719,
+            id: '719',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/6',
             progression: 'Assessment',
@@ -1621,7 +1621,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21521,
+            id: '21521',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/7',
             progression: 'Challenges',
@@ -1635,7 +1635,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 3187,
+                id: '3187',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/7/sublevel/1',
                 name: 'CSD U3 properties tint_pilot',
@@ -1643,7 +1643,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 3185,
+                id: '3185',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/7/sublevel/2',
                 name: 'CSD U3 properties depth_pilot',
@@ -1668,7 +1668,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1563,
+        id: '1563',
         position: 9,
         relative_position: 9,
         name: 'Text',
@@ -1679,7 +1679,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3266,
+            id: '3266',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/1',
             progression: 'Lesson Overview',
@@ -1693,7 +1693,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4447,
+            id: '4447',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/2',
             progression: 'Prediction',
@@ -1707,7 +1707,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2344,
+            id: '2344',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/3',
             progression: 'Skill Building',
@@ -1721,7 +1721,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4448,
+            id: '4448',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/4',
             progression: 'Skill Building',
@@ -1735,7 +1735,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21594,
+            id: '21594',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/5',
             progression: 'Practice',
@@ -1749,7 +1749,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2338,
+                id: '2338',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/5/sublevel/1',
                 name: 'CSD U3 Sprites text debug_2018_2020',
@@ -1757,7 +1757,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 4396,
+                id: '4396',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/5/sublevel/2',
                 name: 'CSD games text debug quotes',
@@ -1767,7 +1767,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 4446,
+            id: '4446',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/6',
             progression: 'Assessment',
@@ -1781,7 +1781,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21593,
+            id: '21593',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/7',
             progression: 'Challenges',
@@ -1795,7 +1795,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 4449,
+                id: '4449',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/7/sublevel/1',
                 name: 'CSD web text stroke',
@@ -1803,7 +1803,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 4425,
+                id: '4425',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/7/sublevel/2',
                 name: 'CSD web challenge stroke',
@@ -1811,7 +1811,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 4426,
+                id: '4426',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/7/sublevel/3',
                 name: 'CSD web challenge wrap text',
@@ -1819,7 +1819,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 4397,
+                id: '4397',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/7/sublevel/4',
                 name: 'CSD games text freeplay',
@@ -1855,7 +1855,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3269,
+            id: '3269',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/10/puzzle/1',
             progression: 'Lesson Overview',
@@ -1869,7 +1869,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2198,
+            id: '2198',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/10/puzzle/2',
             progression: 'Sprite Scenes',
@@ -1883,7 +1883,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2306,
+            id: '2306',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/10/puzzle/3',
             progression: 'Create a Background',
@@ -1897,7 +1897,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2312,
+            id: '2312',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/10/puzzle/4',
             progression: 'Add Sprites',
@@ -1911,7 +1911,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2324,
+            id: '2324',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/10/puzzle/5',
             progression: 'Add Text',
@@ -1925,7 +1925,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2300,
+            id: '2300',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/10/puzzle/6',
             progression: 'Review Your Scene',
@@ -1965,7 +1965,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3271,
+            id: '3271',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/1',
             progression: 'Lesson Overview',
@@ -1979,7 +1979,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4496,
+            id: '4496',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/2',
             progression: 'Video: Introduction to the Draw Loop',
@@ -1993,7 +1993,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1713,
+            id: '1713',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/3',
             progression: 'Exploration',
@@ -2007,7 +2007,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1706,
+            id: '1706',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/4',
             progression: 'Skill Building',
@@ -2021,7 +2021,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1725,
+            id: '1725',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/5',
             progression: 'Prediction',
@@ -2035,7 +2035,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2896,
+            id: '2896',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/6',
             progression: 'Skill Building',
@@ -2049,7 +2049,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1743,
+            id: '1743',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/7',
             progression: 'Skill Building',
@@ -2063,7 +2063,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21580,
+            id: '21580',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/8',
             progression: 'Practice',
@@ -2077,7 +2077,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 1737,
+                id: '1737',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/8/sublevel/1',
                 name: 'CSD U3 Draw Loop Plugged wiggle sprite rotation_2020',
@@ -2085,7 +2085,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 4382,
+                id: '4382',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/8/sublevel/2',
                 name: 'CSD games draw debug blurry',
@@ -2093,7 +2093,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 4381,
+                id: '4381',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/8/sublevel/3',
                 name: 'CSD games draw debug afterimage',
@@ -2101,7 +2101,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 4383,
+                id: '4383',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/8/sublevel/4',
                 name: 'CSD games draw debug not moving',
@@ -2111,7 +2111,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 1749,
+            id: '1749',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/9',
             progression: 'Assessment',
@@ -2125,7 +2125,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21579,
+            id: '21579',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/10',
             progression: 'Challenges',
@@ -2139,7 +2139,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 1731,
+                id: '1731',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/10/sublevel/1',
                 name: 'CSD U3 Draw Loop Plugged update your scene_2020',
@@ -2147,7 +2147,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2038,
+                id: '2038',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/10/sublevel/2',
                 name: 'CSD U3 L7 Freeplay_2020',
@@ -2172,7 +2172,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1566,
+        id: '1566',
         position: 12,
         relative_position: 12,
         name: 'Sprite Movement',
@@ -2183,7 +2183,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3284,
+            id: '3284',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/1',
             progression: 'Lesson Overview',
@@ -2197,7 +2197,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1413,
+            id: '1413',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/2',
             progression: 'Prediction',
@@ -2211,7 +2211,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4461,
+            id: '4461',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/3',
             progression: 'Video: Sprite Movement',
@@ -2225,7 +2225,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2220,
+            id: '2220',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/4',
             progression: 'Skill Building',
@@ -2239,7 +2239,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2208,
+            id: '2208',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/5',
             progression: 'Skill Building',
@@ -2253,7 +2253,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1683,
+            id: '1683',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/6',
             progression: 'Skill Building',
@@ -2267,7 +2267,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2214,
+            id: '2214',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/7',
             progression: 'Skill Building',
@@ -2281,7 +2281,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21592,
+            id: '21592',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/8',
             progression: 'Practice',
@@ -2295,7 +2295,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2491,
+                id: '2491',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/8/sublevel/1',
                 name: 'CSD U3 Watcher Predict_2020',
@@ -2303,7 +2303,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2479,
+                id: '2479',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/8/sublevel/2',
                 name: 'CSD U3 Watcher Debug_2020',
@@ -2311,7 +2311,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2081,
+                id: '2081',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/8/sublevel/3',
                 name: 'CSD U3 Movement Gears_2020',
@@ -2321,7 +2321,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 2074,
+            id: '2074',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/9',
             progression: 'Assessment',
@@ -2335,7 +2335,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21591,
+            id: '21591',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/10',
             progression: 'Challenges',
@@ -2349,7 +2349,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2068,
+                id: '2068',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/10/sublevel/1',
                 name: 'CSD U3 Movement Fish challenge_2020',
@@ -2357,7 +2357,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2065,
+                id: '2065',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/10/sublevel/2',
                 name: 'CSD U3 Movement Fish challenge2_2020',
@@ -2365,7 +2365,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2044,
+                id: '2044',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/10/sublevel/3',
                 name: 'CSD U3 L9 Freeplay_2020',
@@ -2390,7 +2390,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1567,
+        id: '1567',
         position: 13,
         relative_position: 13,
         name: 'Mini-Project: Animation',
@@ -2401,7 +2401,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3289,
+            id: '3289',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/13/puzzle/1',
             progression: 'Lesson Overview',
@@ -2415,7 +2415,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4437,
+            id: '4437',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/13/puzzle/2',
             progression: 'Example Animated Scene',
@@ -2429,7 +2429,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4439,
+            id: '4439',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/13/puzzle/3',
             progression: 'Plan Your Scene',
@@ -2443,7 +2443,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4436,
+            id: '4436',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/13/puzzle/4',
             progression: 'Draw a Background',
@@ -2457,7 +2457,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4441,
+            id: '4441',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/13/puzzle/5',
             progression: 'Add Sprites',
@@ -2471,7 +2471,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4443,
+            id: '4443',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/13/puzzle/6',
             progression: 'Add Text',
@@ -2485,7 +2485,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4438,
+            id: '4438',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/13/puzzle/7',
             progression: 'Add Movement',
@@ -2499,7 +2499,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4440,
+            id: '4440',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/13/puzzle/8',
             progression: 'Review Your Animated Scene',
@@ -2528,7 +2528,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1568,
+        id: '1568',
         position: 14,
         relative_position: 14,
         name: 'Conditionals',
@@ -2539,7 +2539,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3294,
+            id: '3294',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/1',
             progression: 'Lesson Overview',
@@ -2553,7 +2553,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1621,
+            id: '1621',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/2',
             progression: 'Prediction',
@@ -2567,7 +2567,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1401,
+            id: '1401',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/3',
             progression: 'Video: Booleans',
@@ -2581,7 +2581,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 18416,
+            id: '18416',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/4',
             progression: 'Quick Check',
@@ -2595,7 +2595,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1463,
+            id: '1463',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/5',
             progression: 'Skill Building',
@@ -2609,7 +2609,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1456,
+            id: '1456',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/6',
             progression: 'Skill Building',
@@ -2623,7 +2623,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 14070,
+            id: '14070',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/7',
             progression: 'Video: Conditional Statements',
@@ -2637,7 +2637,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1649,
+            id: '1649',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/8',
             progression: 'Skill Building',
@@ -2651,7 +2651,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21578,
+            id: '21578',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/9',
             progression: 'Practice',
@@ -2665,7 +2665,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 1615,
+                id: '1615',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/9/sublevel/1',
                 name: 'CSD U3 Boolean Modify_2020',
@@ -2673,7 +2673,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 4379,
+                id: '4379',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/9/sublevel/2',
                 name: 'CSD games conditionals bowl',
@@ -2681,7 +2681,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 4380,
+                id: '4380',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/9/sublevel/3',
                 name: 'CSD games conditionals practice spaceship',
@@ -2691,7 +2691,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 4431,
+            id: '4431',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/10',
             progression: 'Assessment',
@@ -2705,7 +2705,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21577,
+            id: '21577',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/11',
             progression: 'Challenges',
@@ -2719,7 +2719,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 1450,
+                id: '1450',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/11/sublevel/1',
                 name: 'CSD U3 - conditionals - first conditional 2_2018_2020',
@@ -2727,7 +2727,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 1970,
+                id: '1970',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/11/sublevel/2',
                 name: 'CSD U3 L11 Freeplay_2020',
@@ -2752,7 +2752,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1569,
+        id: '1569',
         position: 15,
         relative_position: 15,
         name: 'Keyboard Input',
@@ -2763,7 +2763,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3299,
+            id: '3299',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/1',
             progression: 'Lesson Overview',
@@ -2777,7 +2777,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1952,
+            id: '1952',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/2',
             progression: 'Prediction',
@@ -2791,7 +2791,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3027,
+            id: '3027',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/3',
             progression: 'Skill Building',
@@ -2805,7 +2805,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2370,
+            id: '2370',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/4',
             progression: 'Skill Building',
@@ -2819,7 +2819,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1888,
+            id: '1888',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/5',
             progression: 'Skill Building',
@@ -2833,7 +2833,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21588,
+            id: '21588',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/6',
             progression: 'Practice',
@@ -2847,7 +2847,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 1882,
+                id: '1882',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/6/sublevel/1',
                 name: 'CSD U3 Input Fish_2020',
@@ -2855,7 +2855,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 4386,
+                id: '4386',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/6/sublevel/2',
                 name: 'CSD games input debug1',
@@ -2863,7 +2863,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 4387,
+                id: '4387',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/6/sublevel/3',
                 name: 'CSD games input debug2',
@@ -2873,7 +2873,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 1697,
+            id: '1697',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/7',
             progression: 'Assessment',
@@ -2887,7 +2887,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21587,
+            id: '21587',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/8',
             progression: 'Challenges',
@@ -2901,7 +2901,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 1429,
+                id: '1429',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/8/sublevel/1',
                 name: 'CSD U3 - complex - key up and down_2020',
@@ -2909,7 +2909,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 1690,
+                id: '1690',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/8/sublevel/2',
                 name: 'CSD U3 Direction Animations_2018_2020',
@@ -2917,7 +2917,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 1976,
+                id: '1976',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/8/sublevel/3',
                 name: 'CSD U3 L12 Freeplay_2020',
@@ -2942,7 +2942,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1570,
+        id: '1570',
         position: 16,
         relative_position: 16,
         name: 'Mouse Input',
@@ -2953,7 +2953,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3304,
+            id: '3304',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/1',
             progression: 'Lesson Overview',
@@ -2967,7 +2967,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3010,
+            id: '3010',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/2',
             progression: 'Prediction',
@@ -2981,7 +2981,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1407,
+            id: '1407',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/3',
             progression: 'Video: If/Else Statements',
@@ -2995,7 +2995,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1761,
+            id: '1761',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/4',
             progression: 'Skill Building',
@@ -3009,7 +3009,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4390,
+            id: '4390',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/5',
             progression: 'Skill Building',
@@ -3023,7 +3023,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1435,
+            id: '1435',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/6',
             progression: 'Skill Building',
@@ -3037,7 +3037,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1876,
+            id: '1876',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/7',
             progression: 'Skill Building',
@@ -3051,7 +3051,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21590,
+            id: '21590',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/8',
             progression: 'Practice',
@@ -3065,7 +3065,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 4388,
+                id: '4388',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/8/sublevel/1',
                 name: 'CSD games mouse mousey',
@@ -3073,7 +3073,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 4391,
+                id: '4391',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/8/sublevel/2',
                 name: 'CSD games practice move with mouse',
@@ -3083,7 +3083,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 4435,
+            id: '4435',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/9',
             progression: 'Assessment',
@@ -3097,7 +3097,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21589,
+            id: '21589',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/10',
             progression: 'Challenges',
@@ -3111,7 +3111,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 4389,
+                id: '4389',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/10/sublevel/1',
                 name: 'CSD games mouse scale',
@@ -3119,7 +3119,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2050,
+                id: '2050',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/10/sublevel/2',
                 name: 'CSD U3 Mouse Input Bee 1_2020',
@@ -3127,7 +3127,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2056,
+                id: '2056',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/10/sublevel/3',
                 name: 'CSD U3 Mouse Input Bee 2_2020',
@@ -3135,7 +3135,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 1441,
+                id: '1441',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/10/sublevel/4',
                 name: 'CSD U3 - complex - mouse move_2020',
@@ -3143,7 +3143,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'd'
               },
               {
-                id: 1982,
+                id: '1982',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/10/sublevel/5',
                 name: 'CSD U3 L13 Freeplay_2020',
@@ -3168,7 +3168,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1571,
+        id: '1571',
         position: 17,
         relative_position: 17,
         name: 'Project - Interactive Card',
@@ -3179,7 +3179,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3309,
+            id: '3309',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/17/puzzle/1',
             progression: 'Lesson Overview',
@@ -3193,7 +3193,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1900,
+            id: '1900',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/17/puzzle/2',
             progression: 'interactive Card',
@@ -3207,7 +3207,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 15983,
+            id: '15983',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/17/puzzle/3',
             progression: 'Make an Interactive Card',
@@ -3221,7 +3221,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1894,
+            id: '1894',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/17/puzzle/4',
             progression: 'Project Work',
@@ -3235,7 +3235,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1918,
+            id: '1918',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/17/puzzle/5',
             progression: 'Project Work',
@@ -3249,7 +3249,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1930,
+            id: '1930',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/17/puzzle/6',
             progression: 'Project Work',
@@ -3263,7 +3263,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1912,
+            id: '1912',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/17/puzzle/7',
             progression: 'Project Work',
@@ -3277,7 +3277,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1906,
+            id: '1906',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/17/puzzle/8',
             progression: 'Project Work',
@@ -3291,7 +3291,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21650,
+            id: '21650',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/17/puzzle/9/page/1',
             progression: 'Reflection',
@@ -3320,7 +3320,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1572,
+        id: '1572',
         position: 18,
         relative_position: 18,
         name: 'Velocity',
@@ -3331,7 +3331,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3314,
+            id: '3314',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/1',
             progression: 'Lesson Overview',
@@ -3345,7 +3345,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2673,
+            id: '2673',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/2',
             progression: 'Skill Building',
@@ -3359,7 +3359,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4504,
+            id: '4504',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/3',
             progression: 'Video: Velocity',
@@ -3373,7 +3373,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2686,
+            id: '2686',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/4',
             progression: 'Skill Building',
@@ -3387,7 +3387,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2620,
+            id: '2620',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/5',
             progression: 'Skill Building',
@@ -3401,7 +3401,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2614,
+            id: '2614',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/6',
             progression: 'Skill Building',
@@ -3415,7 +3415,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2666,
+            id: '2666',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/7',
             progression: 'Skill Building',
@@ -3429,7 +3429,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4401,
+            id: '4401',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/8',
             progression: 'Skill Building',
@@ -3443,7 +3443,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21545,
+            id: '21545',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/9',
             progression: 'Practice',
@@ -3457,7 +3457,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2680,
+                id: '2680',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/9/sublevel/1',
                 name: 'CSD U3 abstraction velocityY control_2020',
@@ -3465,7 +3465,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 4399,
+                id: '4399',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/9/sublevel/2',
                 name: 'CSD games velocity bee',
@@ -3475,7 +3475,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 2654,
+            id: '2654',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/10',
             progression: 'Assessment',
@@ -3489,7 +3489,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21544,
+            id: '21544',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/11',
             progression: 'Challenges',
@@ -3503,7 +3503,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 4398,
+                id: '4398',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/11/sublevel/1',
                 name: 'CSD games velocity 4 directions',
@@ -3511,7 +3511,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 1988,
+                id: '1988',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/11/sublevel/2',
                 name: 'CSD U3 L15 Freeplay_2020',
@@ -3536,7 +3536,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1573,
+        id: '1573',
         position: 19,
         relative_position: 19,
         name: 'Collision Detection',
@@ -3547,7 +3547,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3319,
+            id: '3319',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/1',
             progression: 'Lesson Overview',
@@ -3561,7 +3561,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2740,
+            id: '2740',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/2',
             progression: 'Sample Game',
@@ -3575,7 +3575,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2733,
+            id: '2733',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/3',
             progression: 'Skill Building',
@@ -3589,7 +3589,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2834,
+            id: '2834',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/4',
             progression: 'Skill Building',
@@ -3603,7 +3603,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2791,
+            id: '2791',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/5',
             progression: 'Skill Building',
@@ -3617,7 +3617,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2748,
+            id: '2748',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/6',
             progression: 'Skill Building',
@@ -3631,7 +3631,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21509,
+            id: '21509',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/7',
             progression: 'Practice',
@@ -3645,7 +3645,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2717,
+                id: '2717',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/7/sublevel/1',
                 name: 'CSD U3 collision detection practice debugistouching',
@@ -3653,7 +3653,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2713,
+                id: '2713',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/7/sublevel/2',
                 name: 'CSD U3 collision detection challenge collider circle',
@@ -3663,7 +3663,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 2828,
+            id: '2828',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/8',
             progression: 'Assessment',
@@ -3677,7 +3677,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21508,
+            id: '21508',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/9',
             progression: 'Challenges',
@@ -3691,7 +3691,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2712,
+                id: '2712',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/9/sublevel/1',
                 name: 'CSD U3 collision detection challenge collider angle',
@@ -3699,7 +3699,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2718,
+                id: '2718',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/9/sublevel/2',
                 name: 'CSD U3 collision detection practice debugpoints',
@@ -3707,7 +3707,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 1994,
+                id: '1994',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/9/sublevel/3',
                 name: 'CSD U3 L16 Freeplay_2020',
@@ -3732,7 +3732,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1574,
+        id: '1574',
         position: 20,
         relative_position: 20,
         name: 'Mini-Project: Side Scroller',
@@ -3743,7 +3743,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3322,
+            id: '3322',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/20/puzzle/1',
             progression: 'Lesson Overview',
@@ -3757,7 +3757,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4393,
+            id: '4393',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/20/puzzle/2',
             progression: 'Intro to Side Scrollers',
@@ -3771,7 +3771,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4394,
+            id: '4394',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/20/puzzle/3',
             progression: 'Draw Your Background',
@@ -3785,7 +3785,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2648,
+            id: '2648',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/20/puzzle/4',
             progression: 'Create Your Sprites',
@@ -3799,7 +3799,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2560,
+            id: '2560',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/20/puzzle/5',
             progression: 'Player Controls',
@@ -3813,7 +3813,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2593,
+            id: '2593',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/20/puzzle/6',
             progression: 'Looping',
@@ -3827,7 +3827,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2867,
+            id: '2867',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/20/puzzle/7',
             progression: 'Sprite Interactions',
@@ -3841,7 +3841,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2855,
+            id: '2855',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/20/puzzle/8',
             progression: 'Scoring & Scoreboard',
@@ -3855,7 +3855,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4395,
+            id: '4395',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/20/puzzle/9',
             progression: 'Review Your Game',
@@ -3884,7 +3884,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1575,
+        id: '1575',
         position: 21,
         relative_position: 21,
         name: 'Complex Sprite Movement',
@@ -3895,7 +3895,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3325,
+            id: '3325',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/1',
             progression: 'Lesson Overview',
@@ -3909,7 +3909,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1627,
+            id: '1627',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/2',
             progression: 'Prediction',
@@ -3923,7 +3923,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2502,
+            id: '2502',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/3',
             progression: 'Skill Building',
@@ -3937,7 +3937,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2514,
+            id: '2514',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/4',
             progression: 'Skill Building',
@@ -3951,7 +3951,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2538,
+            id: '2538',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/5',
             progression: 'Skill Building',
@@ -3965,7 +3965,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21511,
+            id: '21511',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/6',
             progression: 'Practice',
@@ -3979,7 +3979,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2508,
+                id: '2508',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/6/sublevel/1',
                 name: 'CSD U3 abstraction accelerateY up_2020',
@@ -3987,7 +3987,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 22354,
+                id: '22354',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/6/sublevel/2',
                 name: 'CSD U3 practice deceleration',
@@ -3997,7 +3997,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 2544,
+            id: '2544',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/7',
             progression: 'Assessment',
@@ -4011,7 +4011,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21510,
+            id: '21510',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/8',
             progression: 'Challenges',
@@ -4025,7 +4025,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2891,
+                id: '2891',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/8/sublevel/1',
                 name: 'CSD U3 complex sprite movement practice parabola',
@@ -4033,7 +4033,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2890,
+                id: '2890',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/8/sublevel/2',
                 name: 'CSD U3 complex sprite movement practice deceleration',
@@ -4041,7 +4041,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2000,
+                id: '2000',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/8/sublevel/3',
                 name: 'CSD U3 L17 Freeplay_2020',
@@ -4066,7 +4066,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1576,
+        id: '1576',
         position: 22,
         relative_position: 22,
         name: 'Collisions',
@@ -4077,7 +4077,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3330,
+            id: '3330',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/1',
             progression: 'Lesson Overview',
@@ -4091,7 +4091,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2848,
+            id: '2848',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/2',
             progression: 'Code Prediction',
@@ -4105,7 +4105,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2767,
+            id: '2767',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/3',
             progression: 'Skill Building',
@@ -4119,7 +4119,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2773,
+            id: '2773',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/4',
             progression: 'Skill Building',
@@ -4133,7 +4133,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2761,
+            id: '2761',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/5',
             progression: 'Skill Building',
@@ -4147,7 +4147,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2875,
+            id: '2875',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/6',
             progression: 'Skill Building',
@@ -4161,7 +4161,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21505,
+            id: '21505',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/7',
             progression: 'Practice',
@@ -4175,7 +4175,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2887,
+                id: '2887',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/7/sublevel/1',
                 name: 'CSD U3 collisions types_2020',
@@ -4183,7 +4183,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 22295,
+                id: '22295',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/7/sublevel/2',
                 name: 'CSD U3 collisions types2_2020',
@@ -4191,7 +4191,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 22297,
+                id: '22297',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/7/sublevel/3',
                 name: 'CSD U3 collisions types3_2020',
@@ -4199,7 +4199,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 22299,
+                id: '22299',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/7/sublevel/4',
                 name: 'CSD U3 collisions types4_2020',
@@ -4209,7 +4209,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 4378,
+            id: '4378',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/8',
             progression: 'Assessment',
@@ -4223,7 +4223,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21504,
+            id: '21504',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/9',
             progression: 'Challenges',
@@ -4237,7 +4237,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 2754,
+                id: '2754',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/9/sublevel/1',
                 name: 'CSD U3 collisions debug_2020',
@@ -4245,7 +4245,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2861,
+                id: '2861',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/9/sublevel/2',
                 name: 'CSD U3 collisions setCollider_2020',
@@ -4253,7 +4253,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 2727,
+                id: '2727',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/9/sublevel/3',
                 name: 'CSD U3 collisions bounciness_2020',
@@ -4261,7 +4261,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 2006,
+                id: '2006',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/9/sublevel/4',
                 name: 'CSD U3 L18 Freeplay_2020',
@@ -4286,7 +4286,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1577,
+        id: '1577',
         position: 23,
         relative_position: 23,
         name: 'Mini-Project: Flyer Game',
@@ -4297,7 +4297,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3338,
+            id: '3338',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/23/puzzle/1',
             progression: 'Lesson Overview',
@@ -4311,7 +4311,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4384,
+            id: '4384',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/23/puzzle/2',
             progression: 'Intro to Flyer Game',
@@ -4325,7 +4325,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2520,
+            id: '2520',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/23/puzzle/3',
             progression: 'Make Your Sprites',
@@ -4339,7 +4339,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2575,
+            id: '2575',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/23/puzzle/4',
             progression: 'Player Controls',
@@ -4353,7 +4353,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2587,
+            id: '2587',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/23/puzzle/5',
             progression: 'Player Controls',
@@ -4367,7 +4367,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2581,
+            id: '2581',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/23/puzzle/6',
             progression: 'Player Controls',
@@ -4381,7 +4381,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2797,
+            id: '2797',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/23/puzzle/7',
             progression: 'Sprite Movement',
@@ -4395,7 +4395,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2607,
+            id: '2607',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/23/puzzle/8',
             progression: 'Sprite Interactions',
@@ -4409,7 +4409,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2803,
+            id: '2803',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/23/puzzle/9',
             progression: 'Review Your Game',
@@ -4438,7 +4438,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1578,
+        id: '1578',
         position: 24,
         relative_position: 24,
         name: 'Functions',
@@ -4449,7 +4449,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3335,
+            id: '3335',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/1',
             progression: 'Lesson Overview',
@@ -4463,7 +4463,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2933,
+            id: '2933',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/2',
             progression: 'Video: Functions',
@@ -4477,7 +4477,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1812,
+            id: '1812',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/3',
             progression: 'Skill Building',
@@ -4491,7 +4491,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1825,
+            id: '1825',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/4',
             progression: 'Skill Building',
@@ -4505,7 +4505,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1832,
+            id: '1832',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/5',
             progression: 'Predict',
@@ -4519,7 +4519,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21507,
+            id: '21507',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/6',
             progression: 'Practice',
@@ -4533,7 +4533,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 1806,
+                id: '1806',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/6/sublevel/1',
                 name: 'CSD U3 Functions Call Draw Loop_2020',
@@ -4541,7 +4541,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 1844,
+                id: '1844',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/6/sublevel/2',
                 name: 'CSD U3 Functions Reset Sprite_2020',
@@ -4549,7 +4549,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 1838,
+                id: '1838',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/6/sublevel/3',
                 name: 'CSD U3 Functions Randomize Sprite_2020',
@@ -4557,7 +4557,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 1818,
+                id: '1818',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/6/sublevel/4',
                 name: 'CSD U3 Functions Create Function_2020',
@@ -4567,7 +4567,7 @@ function getScriptData(numLessons) {
             ]
           },
           {
-            id: 4385,
+            id: '4385',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/7',
             progression: 'Quick Check',
@@ -4581,7 +4581,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1856,
+            id: '1856',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/8',
             progression: 'Collector Game',
@@ -4595,7 +4595,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1800,
+            id: '1800',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/9',
             progression: 'Collector Game',
@@ -4609,7 +4609,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1794,
+            id: '1794',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/10',
             progression: 'Collector Game',
@@ -4623,7 +4623,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21506,
+            id: '21506',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/11',
             progression: 'Challenges',
@@ -4637,7 +4637,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 1866,
+                id: '1866',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/11/sublevel/1',
                 name: 'CSD U3 Functions challenge drawscene',
@@ -4645,7 +4645,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 2012,
+                id: '2012',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/11/sublevel/2',
                 name: 'CSD U3 L19 Freeplay_2020',
@@ -4670,7 +4670,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1579,
+        id: '1579',
         position: 25,
         relative_position: 25,
         name: 'The Game Design Process',
@@ -4681,7 +4681,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3339,
+            id: '3339',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/1',
             progression: 'Lesson Overview',
@@ -4695,7 +4695,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1503,
+            id: '1503',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/2',
             progression: 'Same Game',
@@ -4709,7 +4709,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 15976,
+            id: '15976',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/3',
             progression: 'Plan Your Project',
@@ -4723,7 +4723,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1510,
+            id: '1510',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/4',
             progression: 'Set Up Sprites',
@@ -4737,7 +4737,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1537,
+            id: '1537',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/5',
             progression: 'Set Up Sprites',
@@ -4751,7 +4751,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1561,
+            id: '1561',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/6',
             progression: 'Control Your Player',
@@ -4765,7 +4765,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1567,
+            id: '1567',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/7',
             progression: 'Control Your Player',
@@ -4779,7 +4779,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1516,
+            id: '1516',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/8',
             progression: 'Control Your Player',
@@ -4793,7 +4793,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1549,
+            id: '1549',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/9',
             progression: 'Sprite Interactions',
@@ -4807,7 +4807,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1543,
+            id: '1543',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/10',
             progression: 'Sprite Interactions',
@@ -4821,7 +4821,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1524,
+            id: '1524',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/11',
             progression: 'Sprite Interactions',
@@ -4835,7 +4835,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1530,
+            id: '1530',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/12',
             progression: 'Sprite Interactions',
@@ -4849,7 +4849,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 1580,
+            id: '1580',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/13',
             progression: 'Sprite Interactions',
@@ -4863,7 +4863,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21503,
+            id: '21503',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/14',
             progression: 'Challenges',
@@ -4877,7 +4877,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 1519,
+                id: '1519',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/14/sublevel/1',
                 name: 'CSD U3 AnimationsMulti defender background',
@@ -4885,7 +4885,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 1570,
+                id: '1570',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/14/sublevel/2',
                 name: 'CSD U3 AnimationsMulti defender randomizespeed',
@@ -4893,7 +4893,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 1520,
+                id: '1520',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/14/sublevel/3',
                 name: 'CSD U3 AnimationsMulti defender changevisuals',
@@ -4901,7 +4901,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 1533,
+                id: '1533',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/14/sublevel/4',
                 name: 'CSD U3 AnimationsMulti defender endgame',
@@ -4926,7 +4926,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1580,
+        id: '1580',
         position: 26,
         relative_position: 26,
         name: 'Using the Game Design Process',
@@ -4937,7 +4937,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3342,
+            id: '3342',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/1',
             progression: 'Lesson Overview',
@@ -4951,7 +4951,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3144,
+            id: '3144',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/2',
             progression: 'Sample Platform Jumper Game',
@@ -4965,7 +4965,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 16061,
+            id: '16061',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/3',
             progression: 'Build a Platform Jumper',
@@ -4979,7 +4979,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3052,
+            id: '3052',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/4',
             progression: 'Platform Jumper - Background and Variables',
@@ -4994,7 +4994,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3176,
+            id: '3176',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/5',
             progression: 'Platform Jumper - Background and Variables',
@@ -5009,7 +5009,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3058,
+            id: '3058',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/6',
             progression: 'Platform Jumper - Background and Variables',
@@ -5024,7 +5024,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3164,
+            id: '3164',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/7',
             progression: 'Platform Jumper - Background and Variables',
@@ -5039,7 +5039,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3099,
+            id: '3099',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/8',
             progression: 'Platform Jumper - Platforms',
@@ -5053,7 +5053,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3105,
+            id: '3105',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/9',
             progression: 'Platform Jumper - Platforms',
@@ -5067,7 +5067,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3111,
+            id: '3111',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/10',
             progression: 'Platform Jumper - Platforms',
@@ -5081,7 +5081,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3081,
+            id: '3081',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/11',
             progression: 'Platform Jumper - Items',
@@ -5095,7 +5095,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3087,
+            id: '3087',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/12',
             progression: 'Platform Jumper - Items',
@@ -5109,7 +5109,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3093,
+            id: '3093',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/13',
             progression: 'Platform Jumper - Items',
@@ -5123,7 +5123,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3117,
+            id: '3117',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/14',
             progression: 'Platform Jumper - Player',
@@ -5137,7 +5137,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3123,
+            id: '3123',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/15',
             progression: 'Platform Jumper - Player',
@@ -5151,7 +5151,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3130,
+            id: '3130',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/16',
             progression: 'Platform Jumper - Player',
@@ -5165,7 +5165,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3136,
+            id: '3136',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/17',
             progression: 'Platform Jumper - Player',
@@ -5179,7 +5179,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3139,
+            id: '3139',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/18',
             progression: 'Platform Jumper Review',
@@ -5193,7 +5193,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3151,
+            id: '3151',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/19',
             progression: 'Challenges',
@@ -5207,7 +5207,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3158,
+            id: '3158',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/20',
             progression: 'Challenges',
@@ -5221,7 +5221,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21518,
+            id: '21518',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/21',
             progression: 'Challenges',
@@ -5235,7 +5235,7 @@ function getScriptData(numLessons) {
             bonus: null,
             sublevels: [
               {
-                id: 3061,
+                id: '3061',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/21/sublevel/1',
                 name: 'CSD U3 platform challenge animationfacing',
@@ -5243,7 +5243,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'a'
               },
               {
-                id: 3067,
+                id: '3067',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/21/sublevel/2',
                 name: 'CSD U3 platform challenge lives',
@@ -5251,7 +5251,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'b'
               },
               {
-                id: 3064,
+                id: '3064',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/21/sublevel/3',
                 name: 'CSD U3 platform challenge differentitem',
@@ -5259,7 +5259,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'c'
               },
               {
-                id: 3068,
+                id: '3068',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/21/sublevel/4',
                 name: 'CSD U3 platform challenge sidewalls',
@@ -5267,7 +5267,7 @@ function getScriptData(numLessons) {
                 bubbleText: 'd'
               },
               {
-                id: 3062,
+                id: '3062',
                 url:
                   'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/21/sublevel/5',
                 name: 'CSD U3 platform challenge animations',
@@ -5292,7 +5292,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1581,
+        id: '1581',
         position: 27,
         relative_position: 27,
         name: 'Project - Design a Game',
@@ -5303,7 +5303,7 @@ function getScriptData(numLessons) {
         lockable: false,
         levels: [
           {
-            id: 3345,
+            id: '3345',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/1',
             progression: 'Lesson Overview',
@@ -5317,7 +5317,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 16021,
+            id: '16021',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/2',
             progression: 'Design Your Game',
@@ -5331,7 +5331,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 3000,
+            id: '3000',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/3',
             progression: 'Project - Background and Variables',
@@ -5345,7 +5345,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2952,
+            id: '2952',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/4',
             progression: 'Project - Background and Variables',
@@ -5359,7 +5359,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2970,
+            id: '2970',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/5',
             progression: 'Project - Background and Variables',
@@ -5373,7 +5373,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2958,
+            id: '2958',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/6',
             progression: 'Project - Background and Variables',
@@ -5387,7 +5387,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2946,
+            id: '2946',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/7',
             progression: 'Project - Sprites and Interactions',
@@ -5401,7 +5401,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2964,
+            id: '2964',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/8',
             progression: 'Project - Sprites and Interactions',
@@ -5415,7 +5415,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2982,
+            id: '2982',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/9',
             progression: 'Project - Sprites and Interactions',
@@ -5429,7 +5429,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2994,
+            id: '2994',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/10',
             progression: 'Project - Sprites and Interactions',
@@ -5443,7 +5443,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 2976,
+            id: '2976',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/11',
             progression: 'Project - Sprites and Interactions',
@@ -5457,7 +5457,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 4392,
+            id: '4392',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/12',
             progression: 'Review Your Game',
@@ -5471,7 +5471,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21657,
+            id: '21657',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/stage/27/puzzle/13/page/1',
             progression: 'Reflection',
@@ -5500,7 +5500,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1582,
+        id: '1582',
         position: 28,
         relative_position: 1,
         name: 'Post-Project Test',
@@ -5511,7 +5511,7 @@ function getScriptData(numLessons) {
         lockable: true,
         levels: [
           {
-            id: 21605,
+            id: '21605',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/lockable/1/puzzle/1/page/1',
             kind: 'assessment',
@@ -5533,7 +5533,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: 1583,
+        id: '1583',
         position: 29,
         relative_position: 2,
         name: 'CS Discoveries Post Course survey',
@@ -5544,7 +5544,7 @@ function getScriptData(numLessons) {
         lockable: true,
         levels: [
           {
-            id: 15855,
+            id: '15855',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/lockable/2/puzzle/1',
             kind: 'puzzle',
@@ -5556,7 +5556,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21614,
+            id: '21614',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/lockable/2/puzzle/2/page/1',
             kind: 'assessment',
@@ -5568,7 +5568,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21614,
+            id: '21614',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/lockable/2/puzzle/2/page/2',
             kind: 'assessment',
@@ -5580,7 +5580,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21614,
+            id: '21614',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/lockable/2/puzzle/2/page/3',
             kind: 'assessment',
@@ -5592,7 +5592,7 @@ function getScriptData(numLessons) {
             bonus: null
           },
           {
-            id: 21614,
+            id: '21614',
             url:
               'http://localhost-studio.code.org:3000/s/csd3-2020/lockable/2/puzzle/2/page/4',
             kind: 'assessment',

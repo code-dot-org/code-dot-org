@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import {levelTypeWithoutStatus} from '@cdo/apps/templates/progress/progressTypes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
@@ -21,7 +21,7 @@ const styles = {
 
 export default class ProgressTableLevelIcon extends React.Component {
   static propTypes = {
-    levels: PropTypes.arrayOf(levelType)
+    levels: PropTypes.arrayOf(levelTypeWithoutStatus)
   };
 
   render() {

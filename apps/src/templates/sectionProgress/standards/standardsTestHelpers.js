@@ -121,6 +121,7 @@ const scriptDataByScript = {
     id: scriptId,
     path: '//localhost-studio.code.org:3000/s/coursea-2019',
     title: 'Course A (2019)',
+    name: 'coursea-2019',
     stages: [
       {
         script_id: 92,

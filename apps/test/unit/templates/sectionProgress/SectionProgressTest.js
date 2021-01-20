@@ -35,16 +35,17 @@ describe('SectionProgress', () => {
         stages: [
           {
             id: 456,
-            levels: [{id: 789}]
+            levels: [{id: '789'}]
           }
         ],
         csf: true,
-        hasStandards: true
+        hasStandards: true,
+        name: 'myscript'
       },
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
       showStandardsIntroDialog: false,
-      studentTimestamps: {
+      studentLastUpdateByScript: {
         1: Date.now()
       }
     };
@@ -89,16 +90,5 @@ describe('SectionProgress', () => {
       />
     );
     expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
-  });
-
-  it('shows student timestamps', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
-    const tooltip = wrapper.find('#tooltipIdForStudent1');
-    expect(
-      tooltip
-        .children()
-        .first()
-        .text()
-    ).to.contain('Today');
   });
 });

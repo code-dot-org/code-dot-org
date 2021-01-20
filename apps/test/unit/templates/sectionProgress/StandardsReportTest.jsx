@@ -41,7 +41,8 @@ describe('StandardsReport', () => {
         excludeCsfColumnInLegend: false,
         title: 'Express Course (2019)',
         path: '//localhost-studio.code.org:3000/s/express-2019',
-        stages: []
+        stages: [],
+        name: 'express-2019'
       },
       scriptFriendlyName: 'Express Course (2019)'
     };
