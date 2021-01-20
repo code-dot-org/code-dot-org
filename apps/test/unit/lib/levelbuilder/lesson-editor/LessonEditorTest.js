@@ -14,6 +14,9 @@ import reducers, {
 import resourcesEditor, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import vocabulariesEditor, {
+  initVocabularies
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {sampleActivities, searchOptions} from './activitiesTestData';
 import resourceTestData from './resourceTestData';
 import {Provider} from 'react-redux';
@@ -25,11 +28,16 @@ describe('LessonEditor', () => {
   beforeEach(() => {
     sinon.stub(utils, 'navigateToHref');
     stubRedux();
-    registerReducers({...reducers, resources: resourcesEditor});
+    registerReducers({
+      ...reducers,
+      resources: resourcesEditor,
+      vocabularies: vocabulariesEditor
+    });
 
     store = getStore();
     store.dispatch(init(sampleActivities, searchOptions));
     store.dispatch(initResources(resourceTestData));
+    store.dispatch(initVocabularies([]));
     defaultProps = {
       relatedLessons: [],
       initialObjectives: [],
@@ -86,8 +94,9 @@ describe('LessonEditor', () => {
     expect(wrapper.find('input').length).to.equal(21);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
-    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
+    expect(wrapper.find('VocabulariesEditor').length).to.equal(1);
     expect(wrapper.find('SaveBar').length).to.equal(1);
   });
 
