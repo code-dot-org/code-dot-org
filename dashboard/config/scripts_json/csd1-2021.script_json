@@ -1891,7 +1891,8 @@
       "key": "378c86a4-82cb-405a-82a6-c9d595c05763",
       "position": 1,
       "properties": {
-        "name": "Video: Problem Solving Process"
+        "name": "Video: Problem Solving Process",
+        "progression_name": "Video: Problem Solving Process"
       },
       "seeding_key": {
         "activity_section.key": "378c86a4-82cb-405a-82a6-c9d595c05763",
@@ -2397,7 +2398,8 @@
       "key": "8fbba712-4509-4539-89c3-ac8a69f99409",
       "position": 1,
       "properties": {
-        "name": "Video: What Makes a Computer, a Computer?"
+        "name": "Video: What Makes a Computer, a Computer?",
+        "progression_name": "Video: What Makes a Computer, a Computer?"
       },
       "seeding_key": {
         "activity_section.key": "8fbba712-4509-4539-89c3-ac8a69f99409",
@@ -2650,7 +2652,8 @@
       "key": "156b62cb-0181-40f8-9f1d-5844aa1b1b0f",
       "position": 1,
       "properties": {
-        "name": "App: Pet Chooser"
+        "name": "App: Pet Chooser",
+        "progression_name": "App: Pet Chooser"
       },
       "seeding_key": {
         "activity_section.key": "156b62cb-0181-40f8-9f1d-5844aa1b1b0f",
@@ -2661,7 +2664,8 @@
       "key": "ef1a5fb5-1a9d-4a5e-bee4-f59bbe4e51e9",
       "position": 2,
       "properties": {
-        "name": "App: Story Creator"
+        "name": "App: Story Creator",
+        "progression_name": "App: Story Creator"
       },
       "seeding_key": {
         "activity_section.key": "ef1a5fb5-1a9d-4a5e-bee4-f59bbe4e51e9",
@@ -2672,7 +2676,8 @@
       "key": "1f2272c5-41fa-4388-adb5-2d8b5cd783d5",
       "position": 3,
       "properties": {
-        "name": "App: Improved Pet Chooser"
+        "name": "App: Improved Pet Chooser",
+        "progression_name": "App: Improved Pet Chooser"
       },
       "seeding_key": {
         "activity_section.key": "1f2272c5-41fa-4388-adb5-2d8b5cd783d5",
@@ -2937,7 +2942,8 @@
       "key": "00405d7e-34d2-4784-8f34-67a211b9e112",
       "position": 1,
       "properties": {
-        "name": "App: Is It Your Birthday?"
+        "name": "App: Is It Your Birthday?",
+        "progression_name": "App: Is It Your Birthday?"
       },
       "seeding_key": {
         "activity_section.key": "00405d7e-34d2-4784-8f34-67a211b9e112",
@@ -2948,7 +2954,8 @@
       "key": "d077e275-c2db-421d-962e-c684e04ae6fe",
       "position": 2,
       "properties": {
-        "name": "App: National Park Quiz"
+        "name": "App: National Park Quiz",
+        "progression_name": "App: National Park Quiz"
       },
       "seeding_key": {
         "activity_section.key": "d077e275-c2db-421d-962e-c684e04ae6fe",
@@ -2959,7 +2966,8 @@
       "key": "ef32a9d1-71ed-4d37-948e-6fac69e3abcc",
       "position": 3,
       "properties": {
-        "name": "App: How Many Countries..."
+        "name": "App: How Many Countries...",
+        "progression_name": "App: How Many Countries..."
       },
       "seeding_key": {
         "activity_section.key": "ef32a9d1-71ed-4d37-948e-6fac69e3abcc",
@@ -2970,7 +2978,8 @@
       "key": "416ac7dd-a043-4936-8f5c-3c55d0bd0a0a",
       "position": 4,
       "properties": {
-        "name": "App: My Famous Birthday"
+        "name": "App: My Famous Birthday",
+        "progression_name": "App: My Famous Birthday"
       },
       "seeding_key": {
         "activity_section.key": "416ac7dd-a043-4936-8f5c-3c55d0bd0a0a",
@@ -2981,7 +2990,8 @@
       "key": "9642adce-4c71-457e-a276-cc67ff166a2f",
       "position": 5,
       "properties": {
-        "name": "App: Stamp Notebook"
+        "name": "App: Stamp Notebook",
+        "progression_name": "App: Stamp Notebook"
       },
       "seeding_key": {
         "activity_section.key": "9642adce-4c71-457e-a276-cc67ff166a2f",
@@ -2992,7 +3002,8 @@
       "key": "98ce89ea-461e-49e4-845d-521a80a2a550",
       "position": 6,
       "properties": {
-        "name": "App: The Fastest Finger"
+        "name": "App: The Fastest Finger",
+        "progression_name": "App: The Fastest Finger"
       },
       "seeding_key": {
         "activity_section.key": "98ce89ea-461e-49e4-845d-521a80a2a550",
@@ -3003,7 +3014,8 @@
       "key": "2d8ce6da-027e-4a1c-944a-ce82c02f5f49",
       "position": 7,
       "properties": {
-        "name": "App: Guess the Number"
+        "name": "App: Guess the Number",
+        "progression_name": "App: Guess the Number"
       },
       "seeding_key": {
         "activity_section.key": "2d8ce6da-027e-4a1c-944a-ce82c02f5f49",
@@ -3014,7 +3026,8 @@
       "key": "9df0efaf-11d3-4c55-81ff-e928ed7838c7",
       "position": 8,
       "properties": {
-        "name": "App: Where Should I Live?"
+        "name": "App: Where Should I Live?",
+        "progression_name": "App: Where Should I Live?"
       },
       "seeding_key": {
         "activity_section.key": "9df0efaf-11d3-4c55-81ff-e928ed7838c7",
@@ -3297,7 +3310,8 @@
       "key": "b8451662-e6a7-4a63-a5d6-35cb805ccdd1",
       "position": 1,
       "properties": {
-        "name": "App: Outfit Picker"
+        "name": "App: Outfit Picker",
+        "progression_name": "App: Outfit Picker"
       },
       "seeding_key": {
         "activity_section.key": "b8451662-e6a7-4a63-a5d6-35cb805ccdd1",
@@ -3308,7 +3322,8 @@
       "key": "8ab43a96-555b-4367-8895-d30ecbfa31a9",
       "position": 2,
       "properties": {
-        "name": "App: Friend Finder"
+        "name": "App: Friend Finder",
+        "progression_name": "App: Friend Finder"
       },
       "seeding_key": {
         "activity_section.key": "8ab43a96-555b-4367-8895-d30ecbfa31a9",
@@ -3319,7 +3334,8 @@
       "key": "98f36c5e-6a24-4417-9b0c-d5398a67353c",
       "position": 3,
       "properties": {
-        "name": "App: Kids Movie Recommender"
+        "name": "App: Kids Movie Recommender",
+        "progression_name": "App: Kids Movie Recommender"
       },
       "seeding_key": {
         "activity_section.key": "98f36c5e-6a24-4417-9b0c-d5398a67353c",
@@ -3330,7 +3346,8 @@
       "key": "f9faa28b-a97a-41b5-9704-2f4558d058a8",
       "position": 4,
       "properties": {
-        "name": "Video: IOSP Model"
+        "name": "Video: IOSP Model",
+        "progression_name": "Video: IOSP Model"
       },
       "seeding_key": {
         "activity_section.key": "f9faa28b-a97a-41b5-9704-2f4558d058a8",
@@ -3529,7 +3546,8 @@
       "key": "fc812e5a-38cf-4bea-9942-dd9bf8f1b2b4",
       "position": 1,
       "properties": {
-        "name": "Reflection"
+        "name": "Reflection",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "fc812e5a-38cf-4bea-9942-dd9bf8f1b2b4",
@@ -5093,10 +5111,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Problem Solving Process",
         "level_keys": [
           "CSD Problem Solving Process Video_2021"
-        ]
+        ],
+        "progression": "Video: Problem Solving Process"
       },
       "named_level": null,
       "bonus": null,
@@ -5119,10 +5137,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: What Makes a Computer, a Computer?",
         "level_keys": [
           "CSD What Makes a Computer a Computer Video_2021"
-        ]
+        ],
+        "progression": "Video: What Makes a Computer, a Computer?"
       },
       "named_level": null,
       "bonus": null,
@@ -5145,10 +5163,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Pet Chooser",
         "level_keys": [
           "CSD U1 IO Pet Chooser_2021"
-        ]
+        ],
+        "progression": "App: Pet Chooser"
       },
       "named_level": null,
       "bonus": null,
@@ -5171,10 +5189,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Story Creator",
         "level_keys": [
           "CSD U1 IO Story_2021"
-        ]
+        ],
+        "progression": "App: Story Creator"
       },
       "named_level": null,
       "bonus": null,
@@ -5197,10 +5215,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Improved Pet Chooser",
         "level_keys": [
           "CSD U1 IO Pet Chooser 2_2021"
-        ]
+        ],
+        "progression": "App: Improved Pet Chooser"
       },
       "named_level": null,
       "bonus": null,
@@ -5223,10 +5241,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Is It Your Birthday?",
         "level_keys": [
           "CSD U1 processing bday_2021"
-        ]
+        ],
+        "progression": "App: Is It Your Birthday?"
       },
       "named_level": null,
       "bonus": false,
@@ -5249,10 +5267,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: National Park Quiz",
         "level_keys": [
           "CSD U1 processing npark_2021"
-        ]
+        ],
+        "progression": "App: National Park Quiz"
       },
       "named_level": null,
       "bonus": false,
@@ -5275,10 +5293,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: How Many Countries...",
         "level_keys": [
           "CSD U1 processing countries_2021"
-        ]
+        ],
+        "progression": "App: How Many Countries..."
       },
       "named_level": null,
       "bonus": false,
@@ -5301,10 +5319,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: My Famous Birthday",
         "level_keys": [
           "CSD U1 processing writers_2021"
-        ]
+        ],
+        "progression": "App: My Famous Birthday"
       },
       "named_level": null,
       "bonus": false,
@@ -5327,10 +5345,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Stamp Notebook",
         "level_keys": [
           "CSD U1 processing notebook_2021"
-        ]
+        ],
+        "progression": "App: Stamp Notebook"
       },
       "named_level": null,
       "bonus": false,
@@ -5353,10 +5371,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: The Fastest Finger",
         "level_keys": [
           "CSD U1 processing fastest_2021"
-        ]
+        ],
+        "progression": "App: The Fastest Finger"
       },
       "named_level": null,
       "bonus": false,
@@ -5379,10 +5397,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Guess the Number",
         "level_keys": [
           "CSD U1 processing guess_2021"
-        ]
+        ],
+        "progression": "App: Guess the Number"
       },
       "named_level": null,
       "bonus": false,
@@ -5405,10 +5423,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Where Should I Live?",
         "level_keys": [
           "CSD U1 processing live_2021"
-        ]
+        ],
+        "progression": "App: Where Should I Live?"
       },
       "named_level": null,
       "bonus": false,
@@ -5431,10 +5449,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Outfit Picker",
         "level_keys": [
           "CSD U1 storage outfit_2021"
-        ]
+        ],
+        "progression": "App: Outfit Picker"
       },
       "named_level": null,
       "bonus": null,
@@ -5457,10 +5475,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Friend Finder",
         "level_keys": [
           "CSD U1 storage friends_2021"
-        ]
+        ],
+        "progression": "App: Friend Finder"
       },
       "named_level": null,
       "bonus": null,
@@ -5483,10 +5501,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Kids Movie Recommender",
         "level_keys": [
           "CSD U1 storage movies_2021"
-        ]
+        ],
+        "progression": "App: Kids Movie Recommender"
       },
       "named_level": null,
       "bonus": null,
@@ -5509,10 +5527,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: IOSP Model",
         "level_keys": [
           "CSD U1 storage video_2021"
-        ]
+        ],
+        "progression": "Video: IOSP Model"
       },
       "named_level": null,
       "bonus": null,
@@ -5535,10 +5553,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U1Ch2_2021"
-        ]
+        ],
+        "progression": "Reflection"
       },
       "named_level": null,
       "bonus": null,
