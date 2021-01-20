@@ -1,7 +1,7 @@
-class Api::V1::Pd::FoormController < ApplicationController
+class Api::V1::Pd::Foorm::FormsController < ApplicationController
   include Api::CsvDownload
 
-  # POST api/v1/pd/foorm/form_with_library_items
+  # POST api/v1/pd/foorm/forms/form_with_library_items
   def fill_in_library_items
     form_questions = params[:form_questions].as_json
     begin
@@ -12,7 +12,7 @@ class Api::V1::Pd::FoormController < ApplicationController
     end
   end
 
-  # GET api/v1/pd/foorm/form/:id
+  # GET api/v1/pd/foorm/forms/:id
   def get_form_data
     form_data = Foorm::Form.find(params[:id])
     if form_data
@@ -29,7 +29,7 @@ class Api::V1::Pd::FoormController < ApplicationController
     end
   end
 
-  # GET api/v1/pd/foorm/form_names
+  # GET api/v1/pd/foorm/forms/form_names
   def get_form_names_and_versions
     forms = Foorm::Form.all.map do |form|
       {
@@ -41,7 +41,7 @@ class Api::V1::Pd::FoormController < ApplicationController
     render json: forms
   end
 
-  # GET api/v1/pd/foorm/submissions_csv
+  # GET api/v1/pd/foorm/forms/submissions_csv
   # Get all submissions for the given form as a csv. Only workshop admins can
   # get this data.
   def get_submissions_as_csv
@@ -65,7 +65,7 @@ class Api::V1::Pd::FoormController < ApplicationController
     send_csv_attachment(csv, filename)
   end
 
-  # POST api/v1/pd/foorm/validate_form
+  # POST api/v1/pd/foorm/forms/validate_form
   def validate_form
     authorize! :validate_form, :pd_foorm
 
