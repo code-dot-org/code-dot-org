@@ -4033,21 +4033,10 @@
       }
     },
     {
-      "key": "f98343a3-d68d-4f6e-80d7-7ff7b61ef6ab",
+      "key": "eefa3b88-16f2-48f7-8b9a-c37dcadc92bd",
       "position": 7,
       "properties": {
-        "description": "*"
-      },
-      "seeding_key": {
-        "activity_section.key": "f98343a3-d68d-4f6e-80d7-7ff7b61ef6ab",
-        "lesson_activity.key": "7c9d4a66-304f-418f-977e-a986e31cb20e"
-      }
-    },
-    {
-      "key": "eefa3b88-16f2-48f7-8b9a-c37dcadc92bd",
-      "position": 8,
-      "properties": {
-        "description": "[slide]  Video #1: [Copyright Overview](https://www.youtube.com/watch?v=GPNWvU_IphU) (2 minutes)\r\n* [slide] Video #2: [Copyright in Practice](https://www.youtube.com/watch?v=ITASCSxnBqw) (4 minutes)",
+        "description": "* [slide]  Video #1: [Copyright Overview](https://www.youtube.com/watch?v=GPNWvU_IphU) (2 minutes)\n* [slide] Video #2: [Copyright in Practice](https://www.youtube.com/watch?v=ITASCSxnBqw) (4 minutes)\n* [slide] Video #3: [Creative Commons Copyright](https://www.youtube.com/watch?v=wC-m23T7cPM) (3 minutes)",
         "tips": [
           {
             "key": "tip",
@@ -4062,19 +4051,8 @@
       }
     },
     {
-      "key": "e3b75598-932f-4e1a-9310-80f189e837a5",
-      "position": 9,
-      "properties": {
-        "description": "* [slide] Video #3: [Creative Commons Copyright](https://www.youtube.com/watch?v=wC-m23T7cPM) (3 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "e3b75598-932f-4e1a-9310-80f189e837a5",
-        "lesson_activity.key": "7c9d4a66-304f-418f-977e-a986e31cb20e"
-      }
-    },
-    {
       "key": "5cb93082-15f9-4eba-af5d-9d2b7523a058",
-      "position": 10,
+      "position": 8,
       "properties": {
         "description": "Now that we better understand the rules & controls of copyright, we're going to re-read this article to see if we can determine if current copyright policies are helping or hurting society",
         "remarks": true,
@@ -4087,7 +4065,7 @@
     },
     {
       "key": "251337d4-7046-41ff-a12c-7d4a02866fab",
-      "position": 11,
+      "position": 9,
       "properties": {
         "description": "**Display** the central question again: Are our current copyright policies helping society or hurting society?"
       },
@@ -4098,7 +4076,7 @@
     },
     {
       "key": "990d9cac-8d69-4e27-8d81-cd13613104a0",
-      "position": 12,
+      "position": 10,
       "properties": {
         "description": "[slide] **Do This:** Have students re-read the article in order to answer these questions:",
         "tips": [
@@ -4116,7 +4094,7 @@
     },
     {
       "key": "754cf8cd-ea45-401d-a6c3-a694639b4f79",
-      "position": 13,
+      "position": 11,
       "properties": {
         "description": "* What was digitized?\r\n* What was the goal or purpose of digitizing this thing?\r\n* Is someone benefiting from this situation? If so, who?\r\n* Is someone being harmed in this situation? If so, who?\r\n* Are these impacts intended or unintended? How do you know?\r\n\r\nStudents should continue to annotate the article by adding the following symbols:\r\n\r\n* Add a + next to sentences that show benefit\r\n* Add a - next to sentences that show harm\r\n* Add a face next to sentences that show impact\r\n\r\n[slide] **Prompt:** Share some of the sentences you annotated. Did everyone identify the same areas?"
       },
@@ -4159,7 +4137,7 @@
       "key": "585f05c3-807f-4df3-b278-362f2151ff54",
       "position": 3,
       "properties": {
-        "description": "* Distribute paper to each student. Have students fold the paper in half.\n* In the top section, complete this sentence stem: “I think copyright can [help / hurt] society because ________”\n* In the bottom section, provide a quote from the text that helps justify the sentence you wrote in the top\n\n**Circulate:** Check in with students and encourage them to use one of their highlighted sentences as evidence for their opinion. As students finish, they hang them in a public space edge-to-edge like a quilt to form a larger tapestry of opinions about copyright with evidence. This class artifact can hang in the classroom as a reference for the next few lessons."
+        "description": "* Distribute paper to each student. Have students fold the paper in half.\n* In the top section, complete this sentence stem: “I think copyright can [help / hurt] society because \\_\\_\\_\\_\\_\\_\\_\\_”\n* In the bottom section, provide a quote from the text that helps justify the sentence you wrote in the top\n\n**Circulate:** Check in with students and encourage them to use one of their highlighted sentences as evidence for their opinion. As students finish, they hang them in a public space edge-to-edge like a quilt to form a larger tapestry of opinions about copyright with evidence. This class artifact can hang in the classroom as a reference for the next few lessons."
       },
       "seeding_key": {
         "activity_section.key": "585f05c3-807f-4df3-b278-362f2151ff54",
