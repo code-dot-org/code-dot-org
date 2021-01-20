@@ -33,6 +33,7 @@ az:
               name: 'Labirint: Ardıcıllıq'
             'Studio: Create a Story':
               name: 'Oyun labı: Bir əhvalat düzəldin'
+          student_description: Oxumağa yeni başlayanlar üçün Kurs 1 ilə başla. Tələbələr kompyuter proqramlarını düzəldərkən başqaları ilə əməkdaşlıq etmək, məsələləri həll etmək bacarıqlarını inkişaf etdirmək və çətin tapşırıqlardan keçməyi öyrənəcəklər. Bu kursu tamamladıqda, tələbələr qeyri standtart oyun yaxud hekayə düzəldib, onu paylaşa bilirlər. Birinci sinif / 6 yaşlı üşaqlar üçün tövsiyyə olunur.
         course2:
           title: Kurs 2
           description: Kurs 2 oxumağı bacaran və heç bir ilkin proqramlaşdırma təcrübəsi olmayan şagirdlər üçün hazırlanıb. Bu kursda şagirdlər məsələləri həll etmək üçün proqramlar düzəldəcək və bölüşə biləcəkləri interaktiv oyun və ya əhvalatlar tərtib edəcəklər. 2-5-ci siniflər üçün tövsiyyə olunur.
@@ -67,6 +68,7 @@ az:
               name: Estafet proqramlaşdırması
             'Studio: Create a Story':
               name: 'Oyun labı: Bir əhvalat düzəldin'
+          student_description: Kurs 2 oxumağı bacaran və heç bir ilkin proqramlaşdırma təcrübəsi olmayan şagirdlər üçün hazırlanıb. Bu kursda şagirdlər məsələləri həll etmək üçün proqramlar düzəldəcək və bölüşə biləcəkləri interaktiv oyun və ya əhvalatlar tərtib edəcəklər. 2-5-ci siniflər üçün tövsiyyə olunur.
         course3:
           title: Kurs 3
           description_short: Kurs 3 Kurs 2-nin davamıdır.
@@ -103,6 +105,7 @@ az:
           lessons:
             Play Lab:
               name: Oyun labı
+          student_description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
         artist:
           title: Rəssam
           description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
@@ -110,6 +113,7 @@ az:
           lessons:
             Artist:
               name: Rəssam
+          student_description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
         hourofcode:
           title: Ənənəvi labirint
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə öyrənməyə cəhd edin!
@@ -123,6 +127,7 @@ az:
           lessons:
             Artist:
               name: Rəssam
+          student_description: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək. Buz üzərində sürüşərək siz qar dənəcikləri və naxışlar düzəldəcək, sonradan dostlarınızla bölüşə biləcəyiniz bir qış möcüzəsi quracaqsınız!
         course4:
           title: Kurs 4
           description_short: Kurs 4 üçün şagirdlər artıq Kurs 2 və 3-ü keçmiş olmalıdırlar.
@@ -221,6 +226,7 @@ az:
               name: Labirint
             Wrap-up:
               name: Yekun
+          student_description: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
         edit-code:
           title: Koda düzəliş et
           description: Koda düzəliş et
@@ -232,6 +238,7 @@ az:
               name: Rəssam
             The Maze:
               name: Labirint
+          student_description: Koda düzəliş et
         events:
           title: Hadisələr
           description: Hadisələr
@@ -245,12 +252,14 @@ az:
               name: Qiymət
             Studio:
               name: Studiya
+          student_description: Hadisələr
         flappy:
           title: Qanadlı Kod
           description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!
           lessons:
             Flappy Code:
               name: Qanadlı Kod
+          student_description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!
         jigsaw:
           title: Mozaika
           lessons:
@@ -401,14 +410,17 @@ az:
           title: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın'
           description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.
           description_short: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.
+          student_description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.
         starwarsblocks:
           title: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın'
           description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.
           description_short: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.
+          student_description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.
         mc:
           title: Maynkraft Kod Saatı
           description: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft dünyasında bir macəra yaşadın
           description_short: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
+          student_description: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft dünyasında bir macəra yaşadın.
         ScienceP3OLPT3:
           lessons:
             Wrap-Up:
@@ -1660,6 +1672,12 @@ az:
           lesson_groups:
             lg_1:
               display_name: Məzmun
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Giriş
+            lessonGroup-3:
+              display_name: dəyişənlər
         csd3-2021:
           lessons:
             Variables:
