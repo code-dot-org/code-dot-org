@@ -29,7 +29,7 @@ const styles = {
     background: color.dark_red,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '48%',
+    width: '50%',
     lineHeight: '30px'
   },
   edit: {
@@ -38,7 +38,7 @@ const styles = {
     background: color.default_blue,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '48%',
+    width: '50%',
     lineHeight: '30px'
   },
   addButton: {
@@ -86,7 +86,7 @@ class ResourcesEditor extends Component {
           className="unit-test-remove-resource"
           onMouseDown={() => this.handleRemoveResourceDialogOpen(rowData)}
         >
-          <i className="fa fa-times" />
+          <i className="fa fa-trash" />
         </div>
       </div>
     );
@@ -99,7 +99,7 @@ class ResourcesEditor extends Component {
         header: {
           label: 'Key',
           props: {
-            style: {width: '23%'}
+            style: {width: '20%'}
           }
         },
         cell: {
@@ -115,7 +115,7 @@ class ResourcesEditor extends Component {
         header: {
           label: 'Name',
           props: {
-            style: {width: '20%'}
+            style: {width: '15%'}
           }
         },
         cell: {
@@ -163,7 +163,7 @@ class ResourcesEditor extends Component {
         header: {
           label: 'URL',
           props: {
-            style: {width: '30%'}
+            style: {width: '35%'}
           }
         },
         cell: {

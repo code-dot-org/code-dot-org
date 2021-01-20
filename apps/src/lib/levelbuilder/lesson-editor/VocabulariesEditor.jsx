@@ -22,23 +22,14 @@ const styles = {
     justifyContent: 'space-evenly',
     backgroundColor: 'white'
   },
-  cell: {
-    border: '1px solid',
-    borderColor: color.border_light_gray,
-    padding: 5
-  },
-  actionsCell: {
-    border: '1px solid',
-    borderColor: color.border_light_gray,
-    padding: 0
-  },
   remove: {
     fontSize: 14,
     color: 'white',
     background: color.dark_red,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '98%'
+    width: '98%',
+    lineHeight: '30px'
   }
 };
 
@@ -66,7 +57,7 @@ class VocabulariesEditor extends Component {
             })
           }
         >
-          <i className="fa fa-times" />
+          <i className="fa fa-trash" />
         </div>
       </div>
     );
