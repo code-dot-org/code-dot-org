@@ -116,6 +116,12 @@ def get_i18n_strings(level)
     end
   end
 
+  if level.is_a? BubbleChoice
+    i18n_strings["sublevels"] = level.sublevels.map do |sublevel|
+      get_i18n_strings sublevel
+    end
+  end
+
   i18n_strings["contained levels"] = level.contained_levels.map do |contained_level|
     get_i18n_strings(contained_level)
   end
