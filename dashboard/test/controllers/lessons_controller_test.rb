@@ -455,7 +455,9 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'update lesson with new resources' do
-    resource = create :resource
+    course_version = create :course_version
+    resource = create :resource, course_version: course_version
+    @lesson.script.course_version = course_version
 
     sign_in @levelbuilder
     new_update_params = @update_params.merge({resources: [resource.key].to_json})
@@ -482,6 +484,25 @@ class LessonsControllerTest < ActionController::TestCase
     assert @lesson.resources.include?(resource_to_keep)
     assert @lesson.resources.include?(resource_to_add)
     refute @lesson.resources.include?(resource_to_remove)
+  end
+
+  test 'update lesson by removing and adding vocabularies' do
+    course_version = create :course_version
+    vocab_to_keep = create :vocabulary, course_version: course_version
+    vocab_to_remove = create :vocabulary, course_version: course_version
+    vocab_to_add = create :vocabulary, course_version: course_version
+    @lesson.script.course_version = course_version
+    @lesson.vocabularies = [vocab_to_keep, vocab_to_remove]
+
+    sign_in @levelbuilder
+    new_update_params = @update_params.merge({vocabularies: [vocab_to_keep.key, vocab_to_add.key].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+
+    assert_equal 2, @lesson.vocabularies.count
+    assert @lesson.vocabularies.include?(vocab_to_keep)
+    assert @lesson.vocabularies.include?(vocab_to_add)
+    refute @lesson.vocabularies.include?(vocab_to_remove)
   end
 
   test 'lesson is not partially updated if any data is bad' do
