@@ -605,7 +605,7 @@ export default {
 export const emptyActivitySection = {
   key: 'activitySection-1',
   displayName: '',
-  duration: 0,
+  duration: '',
   levels: [],
   tips: [],
   remarks: false,
@@ -619,6 +619,6 @@ export const emptyActivity = {
   key: 'activity-1',
   displayName: '',
   position: 1,
-  duration: 0,
+  duration: '',
   activitySections: [emptyActivitySection]
 };
