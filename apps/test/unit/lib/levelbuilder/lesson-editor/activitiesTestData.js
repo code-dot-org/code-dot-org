@@ -9,6 +9,7 @@ export const sampleActivities = [
         key: 'section-3',
         position: 1,
         displayName: 'Making programs',
+        duration: 10,
         remarks: true,
         scriptLevels: [],
         text: 'Simple text',
@@ -18,6 +19,7 @@ export const sampleActivities = [
         key: 'section-1',
         position: 2,
         displayName: '',
+        duration: 0,
         remarks: false,
         scriptLevels: [],
         text: 'Details about this section',
@@ -38,9 +40,11 @@ export const sampleActivities = [
         tips: [],
         key: 'progression-1',
         position: 3,
-        displayName: 'Programming Progression',
+        displayName: '',
+        duration: 0,
         remarks: false,
         text: 'This progression teaches you programming!',
+        progressionName: 'Programming Progression Name',
         scriptLevels: [
           {
             id: '10',
