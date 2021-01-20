@@ -738,7 +738,8 @@
       "key": "df4bd8b8-dcc9-466f-aac5-338f4cb65dfe",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "df4bd8b8-dcc9-466f-aac5-338f4cb65dfe",
@@ -1059,7 +1060,8 @@
       "key": "4956632b-4b5d-41a7-b096-d48ca12916f2",
       "position": 1,
       "properties": {
-        "name": "Widget: Ticket Generator"
+        "name": "Widget: Ticket Generator",
+        "progression_name": "Widget: Ticket Generator"
       },
       "seeding_key": {
         "activity_section.key": "4956632b-4b5d-41a7-b096-d48ca12916f2",
@@ -1070,7 +1072,8 @@
       "key": "4d15b77a-45fa-4118-a9c3-4b59d0870c99",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "4d15b77a-45fa-4118-a9c3-4b59d0870c99",
@@ -1321,7 +1324,8 @@
       "key": "54f355fa-0676-434b-afff-553540c71af3",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "54f355fa-0676-434b-afff-553540c71af3",
@@ -1539,7 +1543,8 @@
       "key": "1d88bbf9-572b-4ddb-aa62-60c6648da0f8",
       "position": 1,
       "properties": {
-        "name": "Widget: Traveling Salesman"
+        "name": "Widget: Traveling Salesman",
+        "progression_name": "Widget: Traveling Salesman"
       },
       "seeding_key": {
         "activity_section.key": "1d88bbf9-572b-4ddb-aa62-60c6648da0f8",
@@ -1550,7 +1555,8 @@
       "key": "036a57f4-8272-4af4-ab2f-400bb72360ac",
       "position": 2,
       "properties": {
-        "name": "Widget: Traveling Salesman - Random Nodes"
+        "name": "Widget: Traveling Salesman - Random Nodes",
+        "progression_name": "Widget: Traveling Salesman - Random Nodes"
       },
       "seeding_key": {
         "activity_section.key": "036a57f4-8272-4af4-ab2f-400bb72360ac",
@@ -1561,7 +1567,8 @@
       "key": "8facf313-a2a2-4fe3-82a9-506ba61f7e24",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "8facf313-a2a2-4fe3-82a9-506ba61f7e24",
@@ -1847,7 +1854,8 @@
       "key": "c9bbe50e-af43-431f-9018-236529a32380",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "c9bbe50e-af43-431f-9018-236529a32380",
@@ -1887,7 +1895,8 @@
       "key": "b165ef75-8c53-401f-8a22-27d1c0b7debc",
       "position": 1,
       "properties": {
-        "name": "Unit 6 Exam"
+        "name": "Unit 6 Exam",
+        "progression_name": "Unit 6 Exam"
       },
       "seeding_key": {
         "activity_section.key": "b165ef75-8c53-401f-8a22-27d1c0b7debc",
@@ -1902,10 +1911,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L01 Algorithms vs Problems_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -1928,10 +1937,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Widget: Ticket Generator",
         "level_keys": [
           "CSP U6L2 Ticket Generator_2021"
-        ]
+        ],
+        "progression": "Widget: Ticket Generator"
       },
       "named_level": null,
       "bonus": null,
@@ -1954,10 +1963,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6L2 CFU Binary Search Steps_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -1980,10 +1989,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6L2 CFU Efficiency and Algorithms_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2006,10 +2015,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6L3 CFU Reasonable vs Unreasonable_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2032,10 +2041,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L03 Evaluate Reasonable or Not_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2058,10 +2067,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Widget: Traveling Salesman",
         "level_keys": [
           "CSP U6L4 Traveling Salesman_2021"
-        ]
+        ],
+        "progression": "Widget: Traveling Salesman"
       },
       "named_level": null,
       "bonus": null,
@@ -2084,10 +2093,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Widget: Traveling Salesman - Random Nodes",
         "level_keys": [
           "CSP U6L4 Random Traveling Salesman_2021"
-        ]
+        ],
+        "progression": "Widget: Traveling Salesman - Random Nodes"
       },
       "named_level": null,
       "bonus": null,
@@ -2110,10 +2119,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6L4 CFU Reason for Heuristics_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2136,10 +2145,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L04 Unreasonable vs Undecidable_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2162,10 +2171,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6L5 CFU Calculate Speedup_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2188,10 +2197,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L05 Speedup Forever_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2214,10 +2223,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 6 Exam",
         "level_keys": [
           "CSP Unit 6 AP-Style Assessment _2021"
-        ]
+        ],
+        "progression": "Unit 6 Exam"
       },
       "named_level": null,
       "bonus": null,

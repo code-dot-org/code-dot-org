@@ -1601,7 +1601,8 @@
       "key": "90a84413-784a-4ca7-a981-ecce63251c90",
       "position": 1,
       "properties": {
-        "name": "Computer Science is Changing Everything"
+        "name": "Computer Science is Changing Everything",
+        "progression_name": "Computer Science is Changing Everything"
       },
       "seeding_key": {
         "activity_section.key": "90a84413-784a-4ca7-a981-ecce63251c90",
@@ -1612,7 +1613,8 @@
       "key": "00dae977-be6b-440f-8c56-4450be9b039e",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "00dae977-be6b-440f-8c56-4450be9b039e",
@@ -1824,7 +1826,8 @@
       "key": "f09a6214-7303-487c-ac8d-aa15166a159f",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "f09a6214-7303-487c-ac8d-aa15166a159f",
@@ -2024,7 +2027,8 @@
       "key": "906361f1-8032-4aec-bd5f-e2a0cd0254a8",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "906361f1-8032-4aec-bd5f-e2a0cd0254a8",
@@ -2145,7 +2149,8 @@
       "key": "0aa85546-def3-4106-b635-65b18b991671",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671",
@@ -2184,7 +2189,8 @@
       "key": "ac4f114a-d4fd-4b82-931c-9c8ddafaa0f4",
       "position": 2,
       "properties": {
-        "name": "Odometer Activity"
+        "name": "Odometer Activity",
+        "progression_name": "Odometer Activity"
       },
       "seeding_key": {
         "activity_section.key": "ac4f114a-d4fd-4b82-931c-9c8ddafaa0f4",
@@ -2404,7 +2410,8 @@
       "key": "338e10b1-c620-4f78-8b4b-7bd5499e3992",
       "position": 4,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "338e10b1-c620-4f78-8b4b-7bd5499e3992",
@@ -2731,7 +2738,8 @@
       "key": "af1432f2-3e68-4ae1-b085-c0458c4164f3",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "af1432f2-3e68-4ae1-b085-c0458c4164f3",
@@ -2990,7 +2998,8 @@
       "key": "a4196ef0-7423-47b0-b730-47a05a0e3b9d",
       "position": 1,
       "properties": {
-        "name": "Video: Intro to Pixelation Encoding B&W"
+        "name": "Video: Intro to Pixelation Encoding B&W",
+        "progression_name": "Video: Intro to Pixelation Encoding B&W"
       },
       "seeding_key": {
         "activity_section.key": "a4196ef0-7423-47b0-b730-47a05a0e3b9d",
@@ -3001,7 +3010,8 @@
       "key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe",
       "position": 2,
       "properties": {
-        "name": "Pixelation Widget: B&W"
+        "name": "Pixelation Widget: B&W",
+        "progression_name": "Pixelation Widget: B&W"
       },
       "seeding_key": {
         "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe",
@@ -3012,7 +3022,8 @@
       "key": "9380d11d-b550-40ef-be39-73fcfc7b1ad1",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9380d11d-b550-40ef-be39-73fcfc7b1ad1",
@@ -3126,7 +3137,8 @@
       "key": "5ae1ef34-4cf6-4b0c-a311-5652c0149c2b",
       "position": 5,
       "properties": {
-        "name": "RGB Color"
+        "name": "RGB Color",
+        "progression_name": "RGB Color"
       },
       "seeding_key": {
         "activity_section.key": "5ae1ef34-4cf6-4b0c-a311-5652c0149c2b",
@@ -3137,7 +3149,8 @@
       "key": "df7315e5-de07-4c24-ae26-2c366d47287a",
       "position": 6,
       "properties": {
-        "name": "Pixelation Widget: Color"
+        "name": "Pixelation Widget: Color",
+        "progression_name": "Pixelation Widget: Color"
       },
       "seeding_key": {
         "activity_section.key": "df7315e5-de07-4c24-ae26-2c366d47287a",
@@ -3159,7 +3172,8 @@
       "key": "d97f395e-2551-40d5-ba08-46e8d75ef9ce",
       "position": 8,
       "properties": {
-        "name": "More Shades of Color"
+        "name": "More Shades of Color",
+        "progression_name": "More Shades of Color"
       },
       "seeding_key": {
         "activity_section.key": "d97f395e-2551-40d5-ba08-46e8d75ef9ce",
@@ -3170,7 +3184,8 @@
       "key": "f41fa008-d6e2-4abd-b236-d20b19021d4e",
       "position": 9,
       "properties": {
-        "name": "Pixelation Widget: Color"
+        "name": "Pixelation Widget: Color",
+        "progression_name": "Pixelation Widget: Color"
       },
       "seeding_key": {
         "activity_section.key": "f41fa008-d6e2-4abd-b236-d20b19021d4e",
@@ -3192,7 +3207,8 @@
       "key": "58b93972-cb49-482a-bedf-93f3ef51e9f3",
       "position": 11,
       "properties": {
-        "name": "Color Sampling"
+        "name": "Color Sampling",
+        "progression_name": "Color Sampling"
       },
       "seeding_key": {
         "activity_section.key": "58b93972-cb49-482a-bedf-93f3ef51e9f3",
@@ -3203,7 +3219,8 @@
       "key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca",
       "position": 12,
       "properties": {
-        "name": "Pixelation Widget: Color"
+        "name": "Pixelation Widget: Color",
+        "progression_name": "Pixelation Widget: Color"
       },
       "seeding_key": {
         "activity_section.key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca",
@@ -3278,7 +3295,8 @@
       "position": 6,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Which statement about analog and digital images is true?\r\n\r\n**Question:** Describe how the process of sampling, RGB pixels, and binary sequences work together to display a digital color image.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Assessment: Check For Understanding\r"
       },
       "seeding_key": {
         "activity_section.key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653",
@@ -3584,7 +3602,8 @@
       "key": "7ef11c40-8ed8-4a42-9c5e-f6e20a956a0b",
       "position": 1,
       "properties": {
-        "name": "Widget: Text Compression"
+        "name": "Widget: Text Compression",
+        "progression_name": "Widget: Text Compression"
       },
       "seeding_key": {
         "activity_section.key": "7ef11c40-8ed8-4a42-9c5e-f6e20a956a0b",
@@ -3595,7 +3614,8 @@
       "key": "df5fa1f7-2056-4364-8095-e131cbf8ad4a",
       "position": 2,
       "properties": {
-        "name": "Video: Text Compression Widget with Aloe Blacc"
+        "name": "Video: Text Compression Widget with Aloe Blacc",
+        "progression_name": "Video: Text Compression Widget with Aloe Blacc"
       },
       "seeding_key": {
         "activity_section.key": "df5fa1f7-2056-4364-8095-e131cbf8ad4a",
@@ -3606,7 +3626,8 @@
       "key": "f53adf77-9f3d-420e-88ec-0f83bfa1c86b",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "f53adf77-9f3d-420e-88ec-0f83bfa1c86b",
@@ -3871,7 +3892,8 @@
       "key": "c2a9f003-def9-4e57-bbe9-001230a13694",
       "position": 1,
       "properties": {
-        "name": "Lossy Compression Widget"
+        "name": "Lossy Compression Widget",
+        "progression_name": "Lossy Compression Widget"
       },
       "seeding_key": {
         "activity_section.key": "c2a9f003-def9-4e57-bbe9-001230a13694",
@@ -3882,7 +3904,8 @@
       "key": "4ad16be2-78c3-4e07-b974-275ef24043eb",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "4ad16be2-78c3-4e07-b974-275ef24043eb",
@@ -4182,7 +4205,8 @@
       "key": "b7684656-3581-4d68-a76c-e7a85aa36f9c",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "b7684656-3581-4d68-a76c-e7a85aa36f9c",
@@ -4411,7 +4435,8 @@
       "key": "417f2541-3ff4-42fc-aeb3-937934d432e5",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "417f2541-3ff4-42fc-aeb3-937934d432e5",
@@ -4601,7 +4626,8 @@
       "key": "3f0a3710-59d0-41f5-8af9-54733f540be1",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "3f0a3710-59d0-41f5-8af9-54733f540be1",
@@ -4641,7 +4667,8 @@
       "key": "24ee63a2-c20b-45b6-a171-7b3a0f27fc5c",
       "position": 1,
       "properties": {
-        "name": "Unit 1 Exam"
+        "name": "Unit 1 Exam",
+        "progression_name": "Unit 1 Exam"
       },
       "seeding_key": {
         "activity_section.key": "24ee63a2-c20b-45b6-a171-7b3a0f27fc5c",
@@ -4863,10 +4890,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Odometer Activity",
         "level_keys": [
           "Widget: Binary Odometer_2021"
-        ]
+        ],
+        "progression": "Odometer Activity"
       },
       "named_level": null,
       "bonus": false,
@@ -4889,10 +4916,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U1L6 CFU beyond odometer_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": false,
@@ -4915,10 +4942,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U1L6 CFU representing fractions_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": false,
@@ -5201,10 +5228,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "RGB Color",
         "level_keys": [
           "CSP U1L10 RGB_2021"
-        ]
+        ],
+        "progression": "RGB Color"
       },
       "named_level": null,
       "bonus": false,
@@ -5227,10 +5254,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 1_2021"
-        ]
+        ],
+        "progression": "Pixelation Widget: Color"
       },
       "named_level": null,
       "bonus": false,
@@ -5253,10 +5280,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "More Shades of Color",
         "level_keys": [
           "CSP U1L10 More Shades of Color_2021"
-        ]
+        ],
+        "progression": "More Shades of Color"
       },
       "named_level": null,
       "bonus": false,
@@ -5279,10 +5306,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 2_2021"
-        ]
+        ],
+        "progression": "Pixelation Widget: Color"
       },
       "named_level": null,
       "bonus": false,
@@ -5305,10 +5332,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 3_2021"
-        ]
+        ],
+        "progression": "Pixelation Widget: Color"
       },
       "named_level": null,
       "bonus": false,
@@ -5331,10 +5358,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Color Sampling",
         "level_keys": [
           "CSP U1L10 Color Sampling_2021"
-        ]
+        ],
+        "progression": "Color Sampling"
       },
       "named_level": null,
       "bonus": false,
@@ -5357,10 +5384,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 4_2021"
-        ]
+        ],
+        "progression": "Pixelation Widget: Color"
       },
       "named_level": null,
       "bonus": false,
@@ -5383,10 +5410,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U1L10 Multiple Choice analog vs digital_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": null,
       "bonus": false,
@@ -5409,10 +5436,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U1L10 CFU Sampling_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": null,
       "bonus": false,
