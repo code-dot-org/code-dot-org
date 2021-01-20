@@ -47,10 +47,11 @@ ________________
 
 ## Supporting Resources
 - [Fundraising opportunities](https://code.org/educate/regional-partner/playbook/funding)
-- [Teacher Application Process Doc](https://docs.google.com/document/d/15Dv9OncMEYnVmDvgDRFj1seB8mj4y8wj7-GitVxtzGY/view) includes the teacher application questions and process FAQs
-   - Best fit for PD defined in the [rubric](https://drive.google.com/file/d/1070Jf9VKtuJLOQJTCaO7fxUWyLOEHBdK/view)
+- [Teacher Application Process Doc](https://docs.google.com/document/d/1g_r3tBzdjRq5UI_xMnzWytqRPBvWJnsgBhXYSkSC5hw/edit) includes the teacher application questions and process FAQs
+   - Teacher application [rubric](https://drive.google.com/file/d/1UAlJ8zuM8pPza1OPewFrWpnvRo3h8k5W/view)
+   - Teacher application [mapped to rubric](https://docs.google.com/document/d/1Eyu-tMWGpn5Src0pAMjSb3oMnVmelLvBx6RwlVYMlZg/edit#heading=h.x1dlbddln9x4)
    - Summer Workshop Doc - *coming soon*
-   - [Digital Welcome Kits](https://drive.google.com/drive/folders/15hxKPVotCLTy7yzneEbDpWLIlaDf4aq4)
-- [Teacher Recruitment Folder](https://drive.google.com/drive/folders/1LRbFgAVNjnLxWTQpYLkPPOuNr0EMWCa7) with resources from other partners that you can leverage
+   - Teacher Welcome Kits - *coming soon*
+- [Teacher Recruitment Folder](https://drive.google.com/drive/folders/1LRbFgAVNjnLxWTQpYLkPPOuNr0EMWCa7) with resources from other partners shared during 2020-21 recruitment that you can leverage
 
  
