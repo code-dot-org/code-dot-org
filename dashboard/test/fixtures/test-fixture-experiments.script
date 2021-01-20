@@ -1,4 +1,4 @@
-lesson 'lesson1', display_name: 'lesson1'
+lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: true
 variants
   level 'Level 1'
   level 'Level 2', active: false

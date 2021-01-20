@@ -45,7 +45,6 @@ scripts_map = {
 @script_levels = {}
 @levels = {}
 @level_concept_difficulty = {}
-@level_sources = {}
 @callouts = {}
 
 def handle_level(level)
@@ -64,14 +63,6 @@ def handle_level(level)
     lcd_attributes.delete('level_id')
     lcd_attributes = lcd_attributes.merge({"level" => "level_#{level.id}"})
     @level_concept_difficulty["level_concept_difficulty_#{level.id}"] = lcd_attributes
-  end
-
-  level_source = level.level_sources.first
-  if level_source
-    ls_attributes = level_source.attributes.clone
-    ls_attributes.delete('level_id')
-    ls_attributes = ls_attributes.merge({"level" => "level_#{level.id}"})
-    @level_sources["level_source_#{level.id}"] = ls_attributes
   end
 end
 
@@ -105,7 +96,12 @@ scripts_map.each do |_script_id, name|
 
   script.script_levels.to_a[0, 10000].each do |sl|
     key = "script_level_#{sl.script_id}_#{sl.level_id}"
-    @script_levels[key] = sl.attributes.merge({"levels" => "level_#{sl.level_id}"})
+    sl_attributes = sl.attributes.clone
+    sl_attributes.delete('seed_key')
+    sl_attributes.delete('activity_section_id')
+    sl_attributes.delete('activity_section_position')
+    sl_attributes.delete('properties')
+    @script_levels[key] = sl_attributes.merge({"levels" => "level_#{sl.level_id}"})
 
     sl.callouts.each do |c|
       @callouts["callout_#{c.id}"] = c.attributes
@@ -138,5 +134,4 @@ File.new("#{prefix}lesson.yml", 'w').write(yamlize(@lessons))
 File.new("#{prefix}script_level.yml", 'w').write(yamlize(@script_levels))
 File.new("#{prefix}level.yml", 'w').write(yamlize(@levels))
 File.new("#{prefix}level_concept_difficulty.yml", 'w').write(yamlize(@level_concept_difficulty))
-File.new("#{prefix}level_source.yml", 'w').write(yamlize(@level_sources))
 File.new("#{prefix}callout.yml", 'w').write(yamlize(@callouts))

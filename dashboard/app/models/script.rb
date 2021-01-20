@@ -338,7 +338,7 @@ class Script < ApplicationRecord
 
   # Find the lesson with or without lesson plan based on its relative position.
   # Raises `ActiveRecord::RecordNotFound` if no matching stage is found.
-  def stage_by_relative_position(position, has_lesson_plan = false)
+  def stage_by_relative_position(position, has_lesson_plan = true)
     lessons.where(has_lesson_plan: has_lesson_plan).find_by!(relative_position: position)
   end
 
