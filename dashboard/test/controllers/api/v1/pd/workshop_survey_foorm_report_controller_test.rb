@@ -249,7 +249,7 @@ module Api::V1::Pd
     end
 
     def create_survey_submission(survey_response)
-      submission = Foorm::Submission.create(
+      submission = ::Foorm::Submission.create(
         form_name: 'surveys/pd/summer_workshop_pre_survey_test',
         form_version: 0,
         answers: survey_response

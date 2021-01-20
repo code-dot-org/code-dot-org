@@ -35,9 +35,11 @@ class ActivitySection < ApplicationRecord
 
   serialized_attrs %w(
     name
+    duration
     remarks
     description
     tips
+    progression_name
   )
 
   def summarize
@@ -45,9 +47,11 @@ class ActivitySection < ApplicationRecord
       id: id,
       position: position,
       name: name,
+      duration: duration,
       remarks: remarks,
       description: description,
       tips: tips,
+      progressionName: progression_name
     }
   end
 
@@ -76,7 +80,7 @@ class ActivitySection < ApplicationRecord
         assessment: sl_data['assessment'] || sl.anonymous?,
         bonus: sl_data['bonus'],
         challenge: !!sl_data['challenge'],
-        progression: name.present? && name
+        progression: progression_name.present? && progression_name
       )
       # TODO(dave): check and update script level variants
       sl.update_levels(sl_data['levels'] || [])
