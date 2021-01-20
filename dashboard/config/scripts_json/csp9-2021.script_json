@@ -40,6 +40,7 @@
       "name": "Learning from Data",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "In this lesson students explore the Google Trends tool in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab. ",
@@ -68,6 +69,7 @@
       "name": "Exploring One Column",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts a bar chart, and a histogram. The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice reading a bar chart and review the kinds of questions it is and is not useful for answering. Afterwards they build different bar charts in the Data Visualizer and discuss why some are or are not useful. Afterwards they learn how to make histograms for building charts in instances where bar charts may not be useful. Students record their work on an activity guide. The lesson concludes with a brief review of what they learned.",
@@ -96,6 +98,7 @@
       "name": "Filtering and Cleaning Data",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "In this lesson, student explore the challenges of working with a messy dataset. First students learn how to identify issues using the Data Visualizer, and then manually clean the data. Following this, students learn about the filtering tools in the Data Visualizer, and use a guided activity to answer data questions that require filtering a dataset. ",
@@ -124,6 +127,7 @@
       "name": "Exploring Two Columns",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts, a cross tab, and a scatterplot. Students will practice reading each type of chart before learning to make them in the Data Visualizer. Students will track their work using a provided activity guide. The lesson concludes with a review of key takeaways.",
@@ -152,6 +156,7 @@
       "name": "Big, Open, and Crowdsourced Data",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "Students will complete a jigsaw of three different topics at the intersection of data, computing, and global impacts. These are topics, big data, crowdsourcing, and open data. Students will watch videos or listen to audio recordings about the different topics. Groups will each complete an activity guide about their topic before having individuals from each group share out their findings. The lesson concludes with a review of key points.",
@@ -180,6 +185,7 @@
       "name": "Machine Learning and Bias",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
@@ -208,6 +214,7 @@
       "name": "Project   Tell a Data Story Part 1",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "This is the first day of a project where students use the Data Analysis Process to tell a data story.  Students complete the first page of the Activity Guide for this project during this lesson.",
@@ -236,6 +243,7 @@
       "name": "Project   Tell a Data Story Part 2",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "This is the second day of a project where students use the Data Analysis Process to tell a data story.  Students complete the second page of the Activity Guide for this project during this lesson.",
@@ -264,6 +272,7 @@
       "name": "Assessment Day",
       "absolute_position": 9,
       "lockable": true,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students complete a multiple choice assessment which covers the unit topics. ",
