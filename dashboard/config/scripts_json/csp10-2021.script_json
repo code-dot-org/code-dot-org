@@ -1317,7 +1317,8 @@
       "key": "73736bf9-e6ec-4816-8fc9-a80f3123802c",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "73736bf9-e6ec-4816-8fc9-a80f3123802c",
@@ -1403,7 +1404,8 @@
       "key": "ca2f8fa0-1800-41c6-abc7-1831b1f901bd",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ca2f8fa0-1800-41c6-abc7-1831b1f901bd",
@@ -1545,7 +1547,8 @@
       "key": "0acb6af8-b6f2-441d-b5d6-48b68253e842",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0acb6af8-b6f2-441d-b5d6-48b68253e842",
@@ -1905,7 +1908,8 @@
       "key": "3c71371b-948b-437b-9929-420e76eddc2f",
       "position": 1,
       "properties": {
-        "name": "Keylogging"
+        "name": "Keylogging",
+        "progression_name": "Keylogging"
       },
       "seeding_key": {
         "activity_section.key": "3c71371b-948b-437b-9929-420e76eddc2f",
@@ -1916,7 +1920,8 @@
       "key": "ce2de65a-6e7d-4351-97cb-a6c4d9cae993",
       "position": 2,
       "properties": {
-        "name": "Phishing"
+        "name": "Phishing",
+        "progression_name": "Phishing"
       },
       "seeding_key": {
         "activity_section.key": "ce2de65a-6e7d-4351-97cb-a6c4d9cae993",
@@ -1927,7 +1932,8 @@
       "key": "c1cb13df-9873-415d-8335-c9288e3fa65f",
       "position": 3,
       "properties": {
-        "name": "Malware"
+        "name": "Malware",
+        "progression_name": "Malware"
       },
       "seeding_key": {
         "activity_section.key": "c1cb13df-9873-415d-8335-c9288e3fa65f",
@@ -1938,7 +1944,8 @@
       "key": "63be04fe-183f-4e14-beb7-7252e3b48a0e",
       "position": 4,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "63be04fe-183f-4e14-beb7-7252e3b48a0e",
@@ -2107,7 +2114,8 @@
       "key": "1f61d207-37f6-4024-bc10-5b3ff43f7876",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "1f61d207-37f6-4024-bc10-5b3ff43f7876",
@@ -2387,7 +2395,8 @@
       "key": "1ddd7f1a-a51a-4e95-b5d8-a02a1ef55921",
       "position": 1,
       "properties": {
-        "name": "Encryption Widgets"
+        "name": "Encryption Widgets",
+        "progression_name": "Encryption Widgets"
       },
       "seeding_key": {
         "activity_section.key": "1ddd7f1a-a51a-4e95-b5d8-a02a1ef55921",
@@ -2398,7 +2407,8 @@
       "key": "da8d003b-3f0c-4bcd-bfd9-4f524a8306ad",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "da8d003b-3f0c-4bcd-bfd9-4f524a8306ad",
@@ -2581,7 +2591,8 @@
       "key": "6321a809-abee-46c8-b13e-b71c68a9b3ce",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "6321a809-abee-46c8-b13e-b71c68a9b3ce",
@@ -2888,7 +2899,8 @@
       "key": "1541b0f8-9be5-4394-b851-be5a39cc6c5e",
       "position": 1,
       "properties": {
-        "name": "Unit 10 Exam"
+        "name": "Unit 10 Exam",
+        "progression_name": "Unit 10 Exam"
       },
       "seeding_key": {
         "activity_section.key": "1541b0f8-9be5-4394-b851-be5a39cc6c5e",
