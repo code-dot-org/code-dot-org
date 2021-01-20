@@ -66,7 +66,6 @@ class AnimationTab extends React.Component {
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
-    categoryImagePathPrefix: PropTypes.string,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -108,7 +107,6 @@ class AnimationTab extends React.Component {
             navigable={true}
             canDraw={true}
             hideBackgrounds={this.props.hideBackgrounds}
-            categoryImagePathPrefix={this.props.categoryImagePathPrefix}
           />
         )}
       </div>
