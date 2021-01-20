@@ -7525,10 +7525,10 @@ zh-CN:
           ## 你可以在网上分享什么信息？
       courseD_EOC_2020:
         description: 你已经完成了课程D！点击以创建项目。
-        display_name: 结课项目
+        display_name: 课程结束项目
       courseE_EOC_2020:
         description: 你已经完成了课程E！点击以创建项目。
-        display_name: 结课项目
+        display_name: 课程结束项目
       csf_digital_trails:
         markdown: |-
           # 顺着电子线索
@@ -7549,7 +7549,7 @@ zh-CN:
           ## 在有人在网上用攻击性的语言时，你应该做什么？
       courseF_EOC_2020:
         description: 你已经完成了课程F！点击以创建项目。
-        display_name: 结课项目
+        display_name: 课程结束项目
       OPD-K5 Outline_copy:
         markdown: "#课程大纲\n\n这个课程分为四个概念，每个概念有属于自己的课程。每个课程有几个不同的活动，这些活动对学生和老师来说是由圆圈，阶段或难题标注，这是你在这个课程会学到什么：\n\n##开始\n\n###第一课：欢迎到“教学计算机科学基础”（15分钟长）\n-
           回顾课程细节\n- 理解什么计算机科学及其与“编程”或“电脑科学”的不同\n- 理解教授和学习计算机科学的好处\n- 写属于你的教案\n\n###第二课：了解计算机科学基础课程（15到20分钟长）\n-
@@ -7574,7 +7574,7 @@ zh-CN:
           href=\"http://code.org/promote\" target=\"blank\"><button class=\"default\">探索研究结果>></button></a>\n\n<img
           src=\"https://images.code.org/1b213b6c2256c6992b899df3c62559a0-image-1571684948168.jpg\">"
       courseExpress_EOC_2020:
-        display_name: 结课项目
+        display_name: 课程结束项目
         description: 你已经完成了本课程！点击以创建项目。
       CSD Interactive Animations and Games Post-Project Test:
         title: 互动动画和游戏 项目后测试
@@ -7665,7 +7665,7 @@ zh-CN:
         title: 计算机科学发现学生课前问卷
       outbreak_story:
         content1: 描述
-        markdown: "# 大爆发：创建你自己的模拟\n\n## 欢迎到魔鬼镇！\n魔鬼镇通常是一个开心和健康的地方。魔鬼们喜欢探索和访问朋友。 \n\n<img
+        markdown: "# 大爆发：创建你自己的模拟\n\n## 欢迎到怪物镇！\n怪物镇通常是一个开心和健康的地方。怪物们喜欢探索和访问朋友。 \n\n<img
           src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -7677,7 +7677,7 @@ zh-CN:
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\n一天，一个魔鬼开始感觉不适。魔鬼接触了一个**病毒**！一个病毒是一个可以使你生病的东西。但是魔鬼们不是很担心。他们继续访问朋友。\n\n<img
+          style=\"width:8%\">\n\n一天，一个怪物开始感觉不适。怪物接触了一个**病毒**！一个病毒是一个可以使你生病的东西。但是怪物们不是很担心。他们继续访问朋友。\n\n<img
           src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -7689,7 +7689,7 @@ zh-CN:
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\n不久后，另外两个魔鬼病了。这是同一个病毒！他们好像从他们的朋友感染上了病毒。\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n不久后，另外两个怪物病了。这是同一个病毒！他们好像从他们的朋友感染上了病毒。\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -7700,7 +7700,7 @@ zh-CN:
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\n这个病毒逐渐的传播到了其他魔鬼身上。健康的魔鬼们开始担心他们全都会生病。病的魔鬼们担心他们会传播病毒到他人身上。\n\n<img
+          style=\"width:8%\">\n\n这个病毒逐渐的传播到了其他怪物身上。健康的怪物们开始担心他们全都会生病。生病的怪物们担心他们会传播病毒到他人身上。\n\n<img
           src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -7713,12 +7713,12 @@ zh-CN:
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
-          style=\"float:right; width:30%\">\n\n## 阻止传播\n幸运的是，在研究完病毒之后，魔鬼镇的邻居们发现戴上口罩会缓解病毒的传播。带上口罩后，病的魔鬼们会降低传播病毒的几率。\n\n<img
+          style=\"float:right; width:30%\">\n\n## 阻止传播\n幸运的是，在研究完病毒之后，怪物镇的邻居们发现戴上口罩会缓解病毒的传播。带上口罩后，生病的怪物们会降低传播病毒的几率。\n\n<img
           src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
           style=\"width:8%\"><img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
           style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
           16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
-          接下来会发生什么？\n\n今天，你们将会创造你自己的关于魔鬼镇病毒爆发的**模拟**。一个模拟是一个关于某物的计算机模型。学习编程并预算接下来会在魔鬼镇发生什么。\n\n<img
+          接下来会发生什么？\n\n今天，你们将会创造你自己的关于怪物镇病毒爆发的**模拟**。一个模拟是一个关于某物的计算机模型。学习编程并预算接下来会在怪物镇发生什么。\n\n<img
           src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
           style=\"float:right; width:15%\">\n\n* *病毒会传播多快？*\n\n* *人人都会生病吗？*\n\n当你完成时，向其他人分享你的模拟。分享你认为我们可以做什么以在有病毒时保护其他人的健康。 "
       outbreak_story2:

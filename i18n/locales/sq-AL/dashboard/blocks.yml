@@ -196,6 +196,7 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"speed"': shpejtësia
       gamelab_getTime:
         options:
           UNIT:
@@ -241,10 +242,18 @@ sq:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ylber
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': nën ujë
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': dimër
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mesatar
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"speed"': shpejtësia
       gamelab_setSizes:
         options:
           PROPERTY:

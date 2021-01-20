@@ -998,6 +998,7 @@ sv:
             '"y"': y-position
             '"direction"': rörelseriktning
             '"tint"': färgton
+            '"speed"': hastighet
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1120,6 +1121,8 @@ sv:
             '"West"': Väst
       gamelab_moveToward:
         text: Flytta {SPRITE} Pixlar {DISTANCE} Mot {TARGET}
+      gamelab_newSpritePointer:
+        text: klickade {SPRITE}
       gamelab_objectSpritePointer:
         text: klickade {SPRITE}
       gamelab_playSound:
@@ -1170,6 +1173,13 @@ sv:
             undefined: Ingen
       gamelab_setBackgroundImageAs:
         text: ställa in bakgrunden till {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medel
+            '100': large
       gamelab_setProp:
         text: ligger {SPRITE} {PROPERTY} Att {VAL}
         options:
@@ -1179,6 +1189,7 @@ sv:
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
+            '"speed"': hastighet
       gamelab_setSizes:
         text: ställ in {SPRITE} {PROPERTY} till {N} %
         options:

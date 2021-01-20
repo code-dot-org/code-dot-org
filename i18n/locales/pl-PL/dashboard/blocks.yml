@@ -983,6 +983,8 @@ pl:
             '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
+      gamelab_addTarget:
+        text: "{SPRITE} osiąga cel {TARGET}"
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -991,6 +993,8 @@ pl:
           UNIT:
             '"seconds"': sekundy
             '"frames"': ramki
+      gamelab_beginCollectingData:
+        text: rozpocznij zbierać dane {BREAK} wartości {VALUE} z etykietami {LABEL}
       gamelab_bounceOff:
         text: "{SPRITE} odbija się od {TARGET}"
       gamelab_changePropBy:
@@ -1026,6 +1030,8 @@ pl:
         text: będąc przeciągalnym
       gamelab_edgesDisplace:
         text: krawędzie bloku {SPRITE} z ruchu
+      gamelab_followingTargets:
+        text: idąc za celami
       gamelab_getAllSprites:
         text: wszystkie duszki
       gamelab_getProp:
@@ -1038,6 +1044,7 @@ pl:
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
             '"tint"': odcień
+            '"speed"': prędkość
       gamelab_getThisSprite:
         text: duszek {CHOICE}
         options:
@@ -1179,6 +1186,8 @@ pl:
             '"West"': Zachód
       gamelab_moveToward:
         text: przemieść {SPRITE} o {DISTANCE} pikseli w kierunku {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_patrollingUpDown:
@@ -1231,6 +1240,14 @@ pl:
             undefined: żaden
       gamelab_setBackgroundImageAs:
         text: ustaw tło na {IMG}
+      gamelab_setDefaultSpriteSize:
+        text: ustaw nowy domyślny rozmiar duszka na {SIZE}
+        options:
+          SIZE:
+            '25': ekstra mały
+            '50': mały
+            '75': średni
+            '100': duży
       gamelab_setPrompt:
         text: poproś użytkownika {QUESTION} o zmienne {VAR}
       gamelab_setPromptWithChoices:
@@ -1244,6 +1261,7 @@ pl:
             '"x"': współrzędna x
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
+            '"speed"': prędkość
       gamelab_setSizes:
         text: ustaw {SPRITE} {PROPERTY} na {N}%
         options:
@@ -1263,8 +1281,14 @@ pl:
           CONDITION:
             '"when"': kiedy
             '"while"': dopóki
+      gamelab_stopCollectingData:
+        text: zatrzymaj zbieranie danych
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: gimnastykowanie się
       gamelab_turn:
@@ -1296,6 +1320,8 @@ pl:
         text: gdy {VAR} uzyskała odpowiedź
       gamelab_whenRightArrow:
         text: po naciśnięciu strzałki w prawo
+      gamelab_whenSpriteCreated:
+        text: kiedy {SPRITE} utworzony
       gamelab_whenTouching:
         text: kiedy {SPRITE1} dotyka {SPRITE2}
       gamelab_whenUpArrow:

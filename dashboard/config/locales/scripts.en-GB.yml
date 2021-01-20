@@ -281,3 +281,59 @@ en-GB:
               name: Variables
             Text:
               name: Text
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+        csd3-2021:
+          lessons:
+            Variables:
+              key: Variables
+              name: Variables
+            Text:
+              key: Text
+              name: Text
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        coursea-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        courseb-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursef-2021:
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables

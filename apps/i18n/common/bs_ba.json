@@ -175,6 +175,8 @@
   "dropletBlock_mathAbs_description": "Uzima apsolutnu vrijednost od x",
   "dropletBlock_mathAbs_param0": "x",
   "dropletBlock_mathAbs_signatureOverride": "Math.Abs(x)",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathMax_description": "Uzima maksimalnu vrijednost of jedne ili više vrijednosti n1, n2,..., nX",
   "dropletBlock_mathMax_signatureOverride": "Math.Max (n1, n2,..., nX)",
   "dropletBlock_mathMin_description": "Uzima najmanju vrijednost jedne ili više vrijednosti n1, n2,..., nX",

@@ -729,6 +729,7 @@ ca:
             '"scale"': mida
             '"rotation"': rotació
             '"direction"': direcció del moviment
+            '"speed"': velocitat
       gamelab_getTime:
         options:
           UNIT:
@@ -785,6 +786,7 @@ ca:
             '"scale"': mida
             '"rotation"': rotació
             '"direction"': direcció del moviment
+            '"speed"': velocitat
       gamelab_setSizes:
         text: configurar {SPRITE} {PROPERTY} a {N}%
         options:
