@@ -47,7 +47,10 @@
 
 # PR Checklist:
 
-<!-- Change [ ] to [X] during creation to check boxes. -->
+<!--
+  The final step! Before you create your PR, double-check that everything is in order.
+  Change [ ] to [X] during creation to check boxes.
+-->
 
 - [ ] Tests provide adequate coverage
 - [ ] Privacy and Security impacts have been assessed
