@@ -256,7 +256,7 @@ ko:
             '"seconds"': "~초 기다리기"
       Dancelab_ifDanceIs:
         text: |-
-          만약 {SPRITE}이(가) {DANCE}을(를) 하고 있을 경우
+          만약 {SPRITE}가 {DANCE}를 하고 있으면
           {DO1} {DO2}
         options:
           DANCE:
@@ -979,7 +979,7 @@ ko:
         options:
           CONDITION:
             '"when"': "~할 때"
-            '"while"': '반복(~인 동안):'
+            '"while"': 동안
       gamelab_clickedOn:
         text: 때 {SPRITE} 클릭
       gamelab_clickedSpritePointer:
@@ -1010,6 +1010,7 @@ ko:
             '"y"': y 좌표
             '"direction"': 움직임 방향
             '"tint"': 색조
+            '"speed"': 스피드
       gamelab_getThisSprite:
         text: "{CHOICE} 스프라이트"
         options:
@@ -1026,7 +1027,7 @@ ko:
         text: 제목 화면 숨기기
       gamelab_ifVarEquals:
         text: |-
-          만약 {NUM} ={VAL}
+          만약 {NUM} ={VAL}이면
           {STATEMENT}
       gamelab_isCostumeEqual:
         text: "{SPRITE} 복장은 {COSTUME} 입니다"
@@ -1076,7 +1077,7 @@ ko:
         options:
           CONDITION:
             '"when"': "~할 때"
-            '"while"': '반복(~인 동안):'
+            '"while"': 동안
           KEY:
             '"up"': 위로
             '"down"': 아래로
@@ -1151,6 +1152,8 @@ ko:
             '"West"': 서쪽
       gamelab_moveToward:
         text: 이동 {SPRITE} 픽셀 {DISTANCE} 향해 {TARGET}
+      gamelab_newSpritePointer:
+        text: 클릭 {SPRITE}
       gamelab_objectSpritePointer:
         text: 클릭 {SPRITE}
       gamelab_patrollingUpDown:
@@ -1203,6 +1206,13 @@ ko:
             undefined: 없음
       gamelab_setBackgroundImageAs:
         text: 배경을 {IMG}으로 설정
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': 보통
+            '100': large
       gamelab_setPrompt:
         text: 변수 {VAR}를 위한 사용자 {QUESTION} 유도
       gamelab_setPromptWithChoices:
@@ -1216,6 +1226,7 @@ ko:
             '"x"': x 좌표
             '"y"': y 좌표
             '"direction"': 움직임 방향
+            '"speed"': 스피드
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY}을(를) {N}%로 설정"
         options:
@@ -1239,7 +1250,7 @@ ko:
         options:
           CONDITION:
             '"when"': "~할 때"
-            '"while"': '반복(~인 동안):'
+            '"while"': 동안
       gamelab_subjectSpritePointer:
         text: 클릭 {SPRITE}
       gamelab_tumbling:
@@ -1278,7 +1289,7 @@ ko:
       gamelab_whileDownArrow:
         text: 아래쪽 화살표를 누른 상태에서
       gamelab_whileKey:
-        text: 동안 {KEY} 누르면
+        text: "{KEY}를 누른동안"
         options:
           KEY:
             '"up"': 위로
@@ -1295,12 +1306,12 @@ ko:
       gamelab_whileRightArrow:
         text: 오른쪽 화살표를 누른 상태에서
       gamelab_whileTouching:
-        text: 동안 {SPRITE1} 만지고 있다 {SPRITE2}
+        text: "{SPRITE1}이 {SPRITE2}를 터치하는 동안"
       gamelab_whileUpArrow:
         text: 위쪽 화살표를 누른 상태에서
       gamelab_withPercentChance:
         text: |-
-          만약 {NUM}% 기회
+          만약 {NUM}% 기회이면
           {STATEMENT}
       gamelab_xLocationOf:
         text: x 좌표 {SPRITE}
@@ -1447,10 +1458,10 @@ ko:
       Mikelab_groupWhenXTouchesY:
         text: 때{COSTUME} 접촉 {COSTUME2}
       Mikelab_groupWhileClicked:
-        text: 를 클릭하는 동안 {COSTUME}을 클릭합니다.
+        text: "{COSTUME}을 클릭하는 동안"
       Mikelab_groupWhileTouchingAny:
         text: |-
-          동안{COSTUME} 만지고 있다 {COSTUME2}
+          {COSTUME}이 {COSTUME2}을 터치하는 동안
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} 현재 {BEHAVIOR}"
@@ -1462,7 +1473,7 @@ ko:
             fish: 물고기
       Mikelab_ifDanceIs:
         text: |-
-          만약 {SPRITE}이(가) {DANCE}을(를) 하고 있을 경우
+          만약 {SPRITE}가 {DANCE}를 하고 있으면
           {DO1} {DO2}
         options:
           DANCE:
@@ -1625,7 +1636,7 @@ ko:
       aalab_addBehaviorForDuration:
         text: 알라랩 스프라이트 {SPRITE} 시작 {BEHAVIOR} 에 대 한 {SECONDS} 초
       aalab_addBehaviorUntilBoolean:
-        text: 스프라이트 {SPRITE} 시작 {BEHAVIOR} 때 까지 {CONDITION}
+        text: 스프라이트 {SPRITE}는 {BEHAVIOR}을 {CONDITION}때까지 시작합니다.
       aalab_createNewSpriteAnonReturn2:
         text: 새 스프라이트 라는{SPRITE_NAME} 의상{ANIMATION_NAME} 현장에서{LOCATION}
       aalab_goToScene:
@@ -1785,11 +1796,11 @@ ko:
         text: 횃불 놓기
       craft_repeatUntilConduit:
         text: |-
-          컨딧이
-          {STATEMENT}을 완료할 때까지 반복합니다.
+          도관이 완료될 때까지 반복
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
-          목표까지 반복하기
+          목표까지 반복
           {STATEMENT}
       craft_spawnEntity:
         text: 산란 {ENTITY}

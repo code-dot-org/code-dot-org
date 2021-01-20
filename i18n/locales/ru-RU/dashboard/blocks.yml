@@ -1010,6 +1010,7 @@ ru:
             '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
             '"tint"': оттенок
+            '"speed"': скорость
       gamelab_getThisSprite:
         text: "{CHOICE} Спрайт"
         options:
@@ -1145,6 +1146,8 @@ ru:
             '"West"': Запад
       gamelab_moveToward:
         text: Переместить {SPRITE} Пикселей {DISTANCE} К {TARGET}
+      gamelab_newSpritePointer:
+        text: Нажал {SPRITE}
       gamelab_objectSpritePointer:
         text: Нажал {SPRITE}
       gamelab_patrollingUpDown:
@@ -1197,6 +1200,13 @@ ru:
             undefined: none
       gamelab_setBackgroundImageAs:
         text: установить фон для {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': средне
+            '100': large
       gamelab_setProp:
         text: установить {SPRITE} {PROPERTY} в {VAL}
         options:
@@ -1206,6 +1216,7 @@ ru:
             '"x"': позиция на оси абсцисс (x)
             '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
+            '"speed"': скорость
       gamelab_setSizes:
         text: установить {SPRITE} {PROPERTY} на {N}%
         options:

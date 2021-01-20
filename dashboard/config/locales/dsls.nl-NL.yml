@@ -1014,37 +1014,42 @@ nl-NL:
         questions:
         - text: Welke blokken tekenen het vierkant?
         title: Meerkeuze
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
       K-1 Artist 2 Match 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        content2: Koppel de vormen met elkaar gebaseerd op type.
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
+        content2: Koppel de vormen met elkaar gebaseerd op het type.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: Koppelen
       K-1 Bee 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
         questions:
         - text: Hoeveel nectar is dit?
         title: Meerkeuze
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
       K-1 Bee 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
         questions:
         - text: Hoeveel nectar is dit?
         title: Meerkeuze
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
       K-1 Bee Loops Match 1:
         answers:
         - {}
@@ -1088,14 +1093,15 @@ nl-NL:
         title: Meerkeuze
       K-1 Happy Maps Multi 1:
         answers:
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
         - text: "/script_assets/k_1_images/unplugged_images/down.png"
           correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
         questions:
         - text: Welke pijl brengt de Flurb bij de schat?
         title: Meerkeuze
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
       K-1 Keep it Private Multi 1:
         answers:
         - correct: true
@@ -1112,7 +1118,7 @@ nl-NL:
         - {}
         - {}
         questions:
-        - text: Welke keuze zou het laatste blok moeten zijn?
+        - text: Welke optie zou het laatste blok moeten zijn?
         title: Meerkeuze
       K-1 Maze Loops Multi 1:
         answers:
@@ -1122,6 +1128,7 @@ nl-NL:
         questions:
         - text: Welk herhaal blok is hetzelfde?
         title: Meerkeuze
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
       K-1 Maze Loops Multi 2:
         answers:
         - {}
@@ -1138,10 +1145,10 @@ nl-NL:
         - {}
         content2: Koppel de juiste puzzels aan de juiste blokken
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         title: Koppelen
       K-1 Maze Multiple Choice 2:
         answers:
@@ -1152,15 +1159,18 @@ nl-NL:
         questions:
         - text: Welk antwoord is de oplossing voor dit level?
         title: Doolhof
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
       K-1 Move It Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
         questions:
         - text: Welke algoritme leidt de Flurb naar de bloemen?
         title: Meerkeuze
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
       K-1 Plant a Seed Multi 1:
         answers:
         - {}
@@ -1187,12 +1197,12 @@ nl-NL:
         title: Meerkeuze
       K-1 Word Search Multi 3:
         answers:
-        - text: ZET
-        - text: VIERKANT
+        - text: SET
+        - text: SQUARE
           correct: true
-        - text: ZUID
+        - text: SOUTH
         questions:
-        - text: Welk woord wordt gespeld?
+        - text: Welk (engels) woord wordt gespeld?
         title: Meerkeuze
       Multi-Screen Apps:
         content1: beschrijving hier
@@ -1499,43 +1509,71 @@ nl-NL:
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         - text: '12'
           correct: true
           feedback: Juist!
         - text: '15'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         - text: Geen idee.
+          feedback: De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
+            verzamelen als je op `start` klikt?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         - text: '12'
           correct: true
           feedback: Juist!
         - text: '15'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         - text: Geen idee.
+          feedback: De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
+            verzamelen als je op `start` klikt?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         - text: '12'
           correct: true
           feedback: Juist!
         - text: '15'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         - text: Geen idee.
+          feedback: De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
+            verzamelen als je op `start` klikt?
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         - text: '12'
           correct: true
           feedback: Juist!
         - text: '15'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         - text: Geen idee.
+          feedback: De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
+            verzamelen als je op `start` klikt?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: Het programma zal niet mislukken. Scrat zal de eikel bereiken.

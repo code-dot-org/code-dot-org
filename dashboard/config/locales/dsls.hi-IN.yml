@@ -3030,6 +3030,78 @@ hi-IN:
         title: कंप्यूटर और प्रॉब्लम सॉल्विंग पोस्ट-प्रोजेक्ट टेस्ट
       outbreak_story:
         content1: यहां वर्णन करें
+        markdown: "# #आउटब्रेकः अपने खुद के सिम्युलेशन को कोड करें\n\n## मॉन्स्टर
+          टाउन में स्वागत है!\nमॉन्स्टर आमतौर पर एक खुशगवार और तंदुरुस्त स्थान था।
+          मॉन्स्टर टाउन के मॉन्स्टर्स को अपने दोस्तों से मिलने के लिए आसपास घूमना
+          पसंद था। \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nएक दिन, मॉन्स्टर्स में से एक ने बीमार महसूस करना
+          शुरू किया। मॉन्स्टर एक **वायरस** की चपेट में आ गया था! वायरस एक बहुत छोटा
+          जीवाणु होता है जो आपको बीमार कर सकता है। अन्य मॉन्स्टर्स बहुत अधिक चिंतित
+          नहीं थे। उन्होंने अपने दोस्तों से मिलना जारी रखा।\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nइसके बाद, दो और मॉन्स्टर बीमार हो गए। यह समान वायरस
+          था! ऐसा लग रहा था कि उनके दोस्त से उन्हें वायरस मिला है।\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nवायरस धीमी गति से उन अन्य मॉन्स्टर्स तक फैल गया जो
+          निकट थे। तंदुरुस्त मॉन्स्टर्स को यह चिंता होने लगी थी कि वे सभी बीमार होने
+          जा रहे हैं। बीमार मॉन्स्टर्स को यह चिंता होने लगी थी कि वे अन्यों को वायरस
+          देने जा रहे हैं।\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## फैलने को रोकना\nखुशकिस्मती से, वायरस
+          को स्टडी करने के बाद, मॉन्स्टर टाउन के पड़ोसियों ने एक महत्वपूर्ण खोज की।
+          उन्हें पता चला कि अगर वे अपने चेहरों पर मास्क पहनते हैं तो उनके वायरस को
+          फैलाने की आशंका कम है। चेहरे पर मास्क होने से, बीमार मॉन्स्टर्स के तंदुरुस्त
+          मॉन्स्टर्स को वायरस देने की कम आशंका थी।\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          आगे क्या होगा?\n\nअब आप मॉन्स्टर टाउन में वायरस आउटब्रेक का अपना खुद का
+          **सिम्युलेशन** बनाने और चलाने के लिए कोड लिखने जा रहे हैं।  सिम्युलेशन एक
+          प्रोसेस या सिस्टम का एक कंप्यूटर मॉडल है। कोड लिखना सीखें और मॉन्स्टर टाउन
+          के पड़ोसियों के साथ क्या होगा इसके पूर्वानुमान लगाएं।\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *वायरस कितनी तेजी से फैलेगा?*\n\n*
+          *क्या प्रत्येक व्यक्ति बीमार होगा?*\n\n* *फेस मास्क कैसे सहायता करेंगे?*\n\n\nइसे
+          पूरा करने के बाद, अपने सिम्युलेशन को अन्यों के साथ साझा करें। टाउन में एक
+          वायरस के आने पर अन्यों को तंदुरुस्त रखने के लिए हम क्या कर सकते हैं इस बारे
+          में अपनी सोच का मैसेज साझा करें। \n"
       outbreak_story2:
         content1: यहां वर्णन करें
         markdown: "# आउटब्रेकः एक वैज्ञानिक की तरह सोचना\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"

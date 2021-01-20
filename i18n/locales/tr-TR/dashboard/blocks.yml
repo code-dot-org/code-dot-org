@@ -1006,6 +1006,7 @@ tr:
             '"y"': y konumu
             '"direction"': hareket yönü
             '"tint"': renk tonu
+            '"speed"': hız
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1140,6 +1141,8 @@ tr:
             '"West"': Batı
       gamelab_moveToward:
         text: "{SPRITE} piksel {DISTANCE} doğru hareket {TARGET}"
+      gamelab_newSpritePointer:
+        text: tıklandığında {SPRITE}
       gamelab_objectSpritePointer:
         text: tıklandığında {SPRITE}
       gamelab_patrollingUpDown:
@@ -1192,6 +1195,13 @@ tr:
             undefined: hiçbiri
       gamelab_setBackgroundImageAs:
         text: arka planı {IMG} olarak ayarlayın
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': orta
+            '100': large
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY}’i {VAL} olarak ayarla "
         options:
@@ -1201,6 +1211,7 @@ tr:
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
+            '"speed"': hız
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY}‘yi % {N} olarak ayarla"
         options:

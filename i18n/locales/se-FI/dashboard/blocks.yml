@@ -1024,6 +1024,8 @@ se:
             '"West"': Oarji
       gamelab_moveToward:
         text: sirdde  {SPRITE} pixeliid {DISTANCE} {TARGET} guvlui
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_patrollingUpDown:

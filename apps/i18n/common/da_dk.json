@@ -403,6 +403,8 @@
   "dropletBlock_mathAbs_description": "Tager den absolutte værdi af x",
   "dropletBlock_mathAbs_param0": "x",
   "dropletBlock_mathAbs_signatureOverride": "Math.ABS(x)",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathMax_description": "Tager den maksimale værdi blandt en eller flere værdier n1, n2,..., nX",
   "dropletBlock_mathMax_signatureOverride": "Math.Max(n1, n2,..., nX)",
   "dropletBlock_mathMin_description": "Tager minimumsværdien blandt en eller flere værdier n1, n2,..., nX",
