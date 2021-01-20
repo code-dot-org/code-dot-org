@@ -188,7 +188,7 @@ export class VersionHistory extends React.Component {
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
-                {!this.teacherViewingStudentWork && (
+                {!this.teacherViewingStudentWork() && (
                   <tr>
                     <td>
                       <p>{i18n.versionHistory_initialVersion_label()}</p>
