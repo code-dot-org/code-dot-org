@@ -1001,6 +1001,7 @@ vi:
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
             '"tint"': sắc thái
+            '"speed"': tốc độ
       gamelab_getThisSprite:
         text: "[CHOICE][0] sprite"
         options:
@@ -1123,6 +1124,8 @@ vi:
             '"West"': Phía Tây
       gamelab_moveToward:
         text: di chuyển [SPRITE][0] pixel [DISTANCE][1] hướng [TARGET][2]
+      gamelab_newSpritePointer:
+        text: "nhấp [SPRITE][0]"
       gamelab_objectSpritePointer:
         text: "nhấp [SPRITE][0]"
       gamelab_playSound:
@@ -1173,6 +1176,13 @@ vi:
             undefined: không
       gamelab_setBackgroundImageAs:
         text: thiết lập nền để [IMG][0]
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': trung bình
+            '100': large
       gamelab_setProp:
         text: bộ [SPRITE][0] [PROPERTY]123_321[1] để [VAL][2]
         options:
@@ -1182,6 +1192,7 @@ vi:
             '"x"': hoành độ
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
+            '"speed"': tốc độ
       gamelab_setSizes:
         text: thiết lập {PROPERTY} {SPRITE} thành {N}%
         options:

@@ -1019,7 +1019,8 @@
       "key": "b1590232-9c6c-4281-a61d-f27176e0d798",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "b1590232-9c6c-4281-a61d-f27176e0d798",
@@ -1205,7 +1206,8 @@
       "key": "96e0ea29-dd28-4cfc-aca5-59fd98718323",
       "position": 1,
       "properties": {
-        "name": "App Investigation"
+        "name": "App Investigation",
+        "progression_name": "App Investigation"
       },
       "seeding_key": {
         "activity_section.key": "96e0ea29-dd28-4cfc-aca5-59fd98718323",
@@ -1216,7 +1218,8 @@
       "key": "fdc8cf7a-dde1-4afb-9b7e-d1da6d0925a4",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "fdc8cf7a-dde1-4afb-9b7e-d1da6d0925a4",
@@ -1386,7 +1389,8 @@
       "key": "18d4846a-851b-49ba-987c-0938b246ce15",
       "position": 1,
       "properties": {
-        "name": "console.log Practice"
+        "name": "console.log Practice",
+        "progression_name": "console.log Practice"
       },
       "seeding_key": {
         "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15",
@@ -1397,7 +1401,8 @@
       "key": "9a7bb7db-45f0-4e7b-a2f4-afe47d07e78f",
       "position": 2,
       "properties": {
-        "name": "App Practice"
+        "name": "App Practice",
+        "progression_name": "App Practice"
       },
       "seeding_key": {
         "activity_section.key": "9a7bb7db-45f0-4e7b-a2f4-afe47d07e78f",
@@ -1408,7 +1413,8 @@
       "key": "f0b189af-fd8d-40df-bb54-7e17afb6a1db",
       "position": 3,
       "properties": {
-        "name": "MOD Practice"
+        "name": "MOD Practice",
+        "progression_name": "MOD Practice"
       },
       "seeding_key": {
         "activity_section.key": "f0b189af-fd8d-40df-bb54-7e17afb6a1db",
@@ -1419,7 +1425,8 @@
       "key": "28deef60-4c89-411b-9e26-d9ec1ce7797d",
       "position": 4,
       "properties": {
-        "name": "Check For Understanding: AP Practice"
+        "name": "Check For Understanding: AP Practice",
+        "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
         "activity_section.key": "28deef60-4c89-411b-9e26-d9ec1ce7797d",
@@ -1563,7 +1570,8 @@
       "key": "0f09e960-a774-43a6-812e-5b8b3c3eb203",
       "position": 1,
       "properties": {
-        "name": "Try the Rock Paper Scissors App"
+        "name": "Try the Rock Paper Scissors App",
+        "progression_name": "Try the Rock Paper Scissors App"
       },
       "seeding_key": {
         "activity_section.key": "0f09e960-a774-43a6-812e-5b8b3c3eb203",
@@ -1574,7 +1582,8 @@
       "key": "f8bb6642-9926-444f-b88a-af5a1ac5e86c",
       "position": 2,
       "properties": {
-        "name": "Make the Rock Paper Scissors App"
+        "name": "Make the Rock Paper Scissors App",
+        "progression_name": "Make the Rock Paper Scissors App"
       },
       "seeding_key": {
         "activity_section.key": "f8bb6642-9926-444f-b88a-af5a1ac5e86c",
@@ -1696,7 +1705,8 @@
       "key": "0ab87823-cfee-4964-b0ab-9fea88c9924e",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0ab87823-cfee-4964-b0ab-9fea88c9924e",
@@ -1981,7 +1991,8 @@
       "key": "0822fa4e-83d6-45a7-99ec-06369789e031",
       "position": 1,
       "properties": {
-        "name": "States App"
+        "name": "States App",
+        "progression_name": "States App"
       },
       "seeding_key": {
         "activity_section.key": "0822fa4e-83d6-45a7-99ec-06369789e031",
@@ -1992,7 +2003,8 @@
       "key": "ef138a0c-5fc1-4cf6-a149-20adf0075afc",
       "position": 2,
       "properties": {
-        "name": "Pigify App"
+        "name": "Pigify App",
+        "progression_name": "Pigify App"
       },
       "seeding_key": {
         "activity_section.key": "ef138a0c-5fc1-4cf6-a149-20adf0075afc",
@@ -2003,7 +2015,8 @@
       "key": "130a98f1-9bfa-4cd2-bce9-a54e12238e3e",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "130a98f1-9bfa-4cd2-bce9-a54e12238e3e",
@@ -2173,7 +2186,8 @@
       "key": "5ae99147-5c63-48ed-8d2c-9632b76dda88",
       "position": 1,
       "properties": {
-        "name": "Using Libraries"
+        "name": "Using Libraries",
+        "progression_name": "Using Libraries"
       },
       "seeding_key": {
         "activity_section.key": "5ae99147-5c63-48ed-8d2c-9632b76dda88",
@@ -2184,7 +2198,8 @@
       "key": "13892d1f-76d4-47fd-bbb1-038fb0802405",
       "position": 2,
       "properties": {
-        "name": "Testing Libraries"
+        "name": "Testing Libraries",
+        "progression_name": "Testing Libraries"
       },
       "seeding_key": {
         "activity_section.key": "13892d1f-76d4-47fd-bbb1-038fb0802405",
@@ -2195,7 +2210,8 @@
       "key": "dbcdba62-d1f4-49d9-8343-c193b0325833",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "dbcdba62-d1f4-49d9-8343-c193b0325833",
@@ -2310,7 +2326,8 @@
       "key": "41af2f38-481c-4259-a9fc-91c10d69c295",
       "position": 1,
       "properties": {
-        "name": "Build Your Library"
+        "name": "Build Your Library",
+        "progression_name": "Build Your Library"
       },
       "seeding_key": {
         "activity_section.key": "41af2f38-481c-4259-a9fc-91c10d69c295",
@@ -2374,7 +2391,8 @@
       "key": "acf90e01-8d29-40d8-b514-233a4cdc4ea8",
       "position": 1,
       "properties": {
-        "name": "Build Your Library"
+        "name": "Build Your Library",
+        "progression_name": "Build Your Library"
       },
       "seeding_key": {
         "activity_section.key": "acf90e01-8d29-40d8-b514-233a4cdc4ea8",
@@ -2385,7 +2403,8 @@
       "key": "807e8eb9-bd96-4daf-8604-684d82c82dd4",
       "position": 2,
       "properties": {
-        "name": "Test a Classmate's Library"
+        "name": "Test a Classmate's Library",
+        "progression_name": "Test a Classmate's Library"
       },
       "seeding_key": {
         "activity_section.key": "807e8eb9-bd96-4daf-8604-684d82c82dd4",
@@ -2460,7 +2479,8 @@
       "key": "528258b4-d29a-4c24-b722-f40517c4de2a",
       "position": 1,
       "properties": {
-        "name": "Build Your Library"
+        "name": "Build Your Library",
+        "progression_name": "Build Your Library"
       },
       "seeding_key": {
         "activity_section.key": "528258b4-d29a-4c24-b722-f40517c4de2a",
@@ -2500,7 +2520,8 @@
       "key": "b05bab05-ef0f-49cb-8638-91636655706e",
       "position": 1,
       "properties": {
-        "name": "Unit 7 Exam"
+        "name": "Unit 7 Exam",
+        "progression_name": "Unit 7 Exam"
       },
       "seeding_key": {
         "activity_section.key": "b05bab05-ef0f-49cb-8638-91636655706e",

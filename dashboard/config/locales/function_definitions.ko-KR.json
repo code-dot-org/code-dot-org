@@ -113,11 +113,17 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "2-3 Artist Functions 4": {
@@ -355,6 +361,32 @@
           },
           "draw a house": {
             "name": "집 그리기"
+          },
+          "draw a door": {
+            "name": "문 그리기"
+          },
+          "draw grass": {
+            "name": "잔디 그리기"
+          },
+          "draw windows": {
+            "name": "창문 그리기"
+          },
+          "rectangle": {
+            "name": "직사각형",
+            "description": "lol"
+          },
+          "sun": {
+            "name": "태양"
+          },
+          "window": {
+            "name": "창문"
+          },
+          "triangle": {
+            "name": "삼각형"
+          },
+          "square": {
+            "name": "정사각형",
+            "description": "lol"
           }
         },
         "Geometric Sun_2018": {
@@ -363,35 +395,71 @@
           },
           "draw a house": {
             "name": "집 그리기"
+          },
+          "draw a door": {
+            "name": "문 그리기"
+          },
+          "draw grass": {
+            "name": "잔디 그리기"
+          },
+          "draw windows": {
+            "name": "창문 그리기"
+          },
+          "rectangle": {
+            "name": "직사각형",
+            "description": "lol"
+          },
+          "sun": {
+            "name": "태양"
+          },
+          "window": {
+            "name": "창문"
+          },
+          "triangle": {
+            "name": "삼각형"
+          },
+          "square": {
+            "name": "정사각형",
+            "description": "lol"
           }
         },
         "InspirationalArtwork": {
           "n-sided shape": {
             "parameters": {
               "length": "length"
-            }
+            },
+            "name": "n-면 도형",
+            "description": "도형은 현재 그것에 몇 개의 면이 있는냐를 기준으로 변경됩니다. 두 개의 매개변수, 길이와 면을 취합니다. 길이 "
           },
           "draw a loop": {
             "parameters": {
               "length": "length"
-            }
+            },
+            "name": "루프 그리기"
           },
           "draw spiral circle": {
             "parameters": {
               "size": "크기"
-            }
+            },
+            "name": "나선형 원 그리기"
           }
         },
         "InspirationalArtwork_2018": {
           "draw a loop": {
             "parameters": {
               "length": "length"
-            }
+            },
+            "name": "루프 그리기"
           },
           "draw spiral circle": {
             "parameters": {
               "size": "크기"
-            }
+            },
+            "name": "나선형 원 그리기"
+          },
+          "n-sided shape": {
+            "name": "n-면 도형",
+            "description": "도형은 현재 그것에 몇 개의 면이 있는냐를 기준으로 변경됩니다. 두 개의 매개변수, 길이와 면을 취합니다. 길이 "
           }
         },
         "MC_HOC_2017_07_Cole": {
@@ -780,11 +848,23 @@
         "Robot Doodle": {
           "draw head": {
             "name": "머리 그리기"
+          },
+          "25 pixel square": {
+            "name": "25 픽셀 정사각형"
+          },
+          "draw eye": {
+            "name": "눈 그리기"
           }
         },
         "Robot Doodle_2018": {
           "draw head": {
             "name": "머리 그리기"
+          },
+          "25 pixel square": {
+            "name": "25 픽셀 정사각형"
+          },
+          "draw eye": {
+            "name": "눈 그리기"
           }
         },
         "Standalone_Artist_7": {
@@ -850,28 +930,44 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "불꽃 그리기"
+          },
+          "draw fire": {
+            "name": "불 그리기"
           }
         },
         "courseC_artist_prog3_2018": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "불꽃 그리기"
+          },
+          "draw fire": {
+            "name": "불 그리기"
           }
         },
         "courseC_artist_prog3_2019": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "불꽃 그리기"
+          },
+          "draw fire": {
+            "name": "불 그리기"
           }
         },
         "courseC_artist_prog3_2020": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "불꽃 그리기"
+          },
+          "draw fire": {
+            "name": "불 그리기"
           }
         },
         "courseC_data wizard": {
@@ -940,26 +1036,41 @@
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -1221,26 +1332,41 @@
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
           }
         },
         "courseE_artist_functions_predict2": {
@@ -1623,26 +1749,35 @@
         "courseF_bee_variables_8_2018": {
           "collect": {
             "name": "모으세요."
+          },
+          "move and increment": {
+            "name": "이동 및 증가"
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
             "name": "모으세요."
+          },
+          "move and increment": {
+            "name": "이동 및 증가"
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "모으세요."
+          },
+          "move and increment": {
+            "name": "이동 및 증가"
           }
         },
         "courseE_bee_functions10": {
           "move and make honey": {
-            "name": "이도아고 꿀을 만드세요"
+            "name": "이동하고 꿀을 만드세요"
           }
         },
         "courseE_bee_functions11_predict1": {
           "move and make honey": {
-            "name": "이도아고 꿀을 만드세요"
+            "name": "이동하고 꿀을 만드세요"
           }
         },
         "courseE_bee_functions8": {
@@ -1667,7 +1802,7 @@
         },
         "courseE_farmer_functions10b": {
           "navigate": {
-            "name": "네비게이트"
+            "name": "탐색"
           }
         },
         "courseE_farmer_functions2ba": {
@@ -1697,12 +1832,12 @@
         },
         "courseE_farmer_functions8b": {
           "navigate": {
-            "name": "네비게이트"
+            "name": "탐색"
           }
         },
         "courseE_farmer_functions9b": {
           "navigate": {
-            "name": "네비게이트"
+            "name": "탐색"
           }
         },
         "courseE_farmer_functions11_predict": {
@@ -1718,12 +1853,12 @@
         },
         "courseF_bee_functions2": {
           "get only nectar": {
-            "name": "과즙 만 얻기"
+            "name": "과즙만 얻기"
           }
         },
         "courseF_bee_functions3": {
           "only make honey": {
-            "name": "꿀 만 만들기"
+            "name": "꿀만 만들기"
           }
         },
         "Choose Your Own Adventure": {
@@ -1743,6 +1878,144 @@
             "parameters": {
               "theGuess": "추측"
             }
+          }
+        },
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": "이어스템 그리기"
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"간단한\" 솔루션"
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": "부스터"
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": "부스터"
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": "부스터"
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": "부스터"
+          }
+        },
+        "courseE_Dogger_2": {
+          "stop_everything": {
+            "name": "모든 것_중단"
+          },
+          "lose": {
+            "name": "지다"
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "이어스템 그리기"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "이어스템 그리기"
+          }
+        },
+        "courseF_bee_variables_1_2018": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_1_2019": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_1_2020": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_2_2018": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_2_2019": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_2_2020": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_3_2018": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_3_2019": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_3_2020": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_4_2018": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_4_2019": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_4_2020": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_5_2018": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_5_2019": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_5_2020": {
+          "collect row": {
+            "name": "열 수집"
+          }
+        },
+        "courseF_bee_variables_6_2018": {
+          "collect stairs": {
+            "name": "계단 수집"
+          }
+        },
+        "courseF_bee_variables_6_2019": {
+          "collect stairs": {
+            "name": "계단 수집"
+          }
+        },
+        "courseF_bee_variables_6_2020": {
+          "collect stairs": {
+            "name": "계단 수집"
           }
         }
       }

@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import VocabulariesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -11,7 +12,8 @@ import RelatedLessons from './RelatedLessons';
 import {
   relatedLessonShape,
   activityShape,
-  resourceShape
+  resourceShape,
+  vocabularyShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import {connect} from 'react-redux';
@@ -54,6 +56,7 @@ class LessonEditor extends Component {
     // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
+    vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
     initActivities: PropTypes.func.isRequired
   };
 
@@ -106,6 +109,7 @@ class LessonEditor extends Component {
         objectives: JSON.stringify(this.state.objectives),
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
+        vocabularies: JSON.stringify(this.props.vocabularies.map(r => r.key)),
         announcements: JSON.stringify(this.state.announcements),
         originalLessonData: JSON.stringify(this.state.originalLessonData)
       })
@@ -329,6 +333,24 @@ class LessonEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
+          title="Vocabulary"
+          collapsed={true}
+          fullWidth={true}
+        >
+          {this.state.originalLessonData.courseVersionId ? (
+            <VocabulariesEditor
+              courseVersionId={this.state.originalLessonData.courseVersionId}
+            />
+          ) : (
+            <h4>
+              A unit must be in a course version, i.e. a unit must belong to a
+              course or have 'Is a Standalone Course' checked, in order to add
+              vocabulary.
+            </h4>
+          )}
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection
           title="Objectives"
           collapsed={true}
           fullWidth={true}
@@ -340,7 +362,7 @@ class LessonEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
-          <ActivitiesEditor />
+          <ActivitiesEditor hasLessonPlan={true} />
         </CollapsibleEditorSection>
 
         <SaveBar
@@ -359,7 +381,8 @@ export const UnconnectedLessonEditor = LessonEditor;
 export default connect(
   state => ({
     activities: state.activities,
-    resources: state.resources
+    resources: state.resources,
+    vocabularies: state.vocabularies
   }),
   {
     initActivities

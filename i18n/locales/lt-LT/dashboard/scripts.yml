@@ -49,6 +49,7 @@ lt:
               name: 'Žaidimų laboratorija: sukurk istoriją'
             The Big Event:
               name: Didelis įvykis
+          student_description: Kursas 1 yra skirtas dar tik pradedatiems skaityti.  Čia jie lavins sprendimo, bendradarbiavimo įgūdžius bei kantrybę :). Mokiniai ne tik spręs užduotis, bet ir sukurs savo istoriją ar žaidimą, kuriuo galės pasidalinti su kitais.
         course2:
           title: Kursas 2
           description: Kursas 2 yra skirtas tiems, kas jau išmoko skaityti, bet anksčiau niekada neprogramavo. Jo metu, mokiniai spręs programavimo galvosūkius, kurs  interaktyvius žaidimus ar istorijas. Rekomenduojama 2-5 klasėms.
@@ -93,6 +94,7 @@ lt:
               name: Didelis įvykis
             Your Digital Footprint:
               name: Virtualūs pirštų antspaudai
+          student_description: Kursas 2 yra skirtas tiems, kas jau išmoko skaityti, bet anksčiau niekada neprogramavo. Jo metu, mokiniai spręs programavimo galvosūkius, kurs  interaktyvius žaidimus ar istorijas. Rekomenduojama 2-5 klasėms.
         course3:
           title: Kursas 3
           description: 3 kursas yra skirtas mokiniams, kurie įveikė 2 kursą. Mokiniai pasiners giliau į programavimo temas, pristatytas praėjusiuose kursuose, ir sudarys lankstesnius sprendimus sudėtingesnėms problemoms. Iki kol kursas bus baigtas, mokiniai kurs interaktyvias istorijas ir žaidimus, kuriuos galės pasidalinti su visais. Rekomenduojama 4-5 klasių mokiniams.
@@ -141,6 +143,7 @@ lt:
               name: 'Laboratorija: sukurk žaidimą'
             'Studio: Create a Story':
               name: 'Žaidimų laboratorija: sukurk istoriją'
+          student_description: 3 kursas yra skirtas mokiniams, kurie įveikė 2 kursą. Mokiniai pasiners giliau į programavimo temas, pristatytas praėjusiuose kursuose, ir sudarys lankstesnius sprendimus sudėtingesnėms problemoms. Iki kol kursas bus baigtas, mokiniai kurs interaktyvias istorijas ir žaidimus, kuriuos galės pasidalinti su visais. Rekomenduojama 4-5 klasių mokiniams.
         playlab:
           title: Laboratorija
           description: Sukurk istoriją arba žaidimą!
@@ -148,6 +151,7 @@ lt:
           lessons:
             Play Lab:
               name: Laboratorija
+          student_description: Sukurk istoriją arba žaidimą!
         artist:
           title: Menininkas
           description: Nupiešk šaunius piešinius ir ornamentus su menininku!
@@ -155,6 +159,7 @@ lt:
           lessons:
             Artist:
               name: Menininkas
+          student_description: Nupiešk šaunius piešinius ir ornamentus su menininku!
         hourofcode:
           title: Klasikinis labirintas
           description: Išmėginkite programavimo pradmenis kartu su personažais iš Angry Birds, Plants vs. Zombies ir vovere iš Ledynmečio!
@@ -162,6 +167,7 @@ lt:
           lessons:
             Maze:
               name: Labirintas
+          student_description: Išmėginkite programavimo pradmenis kartu su personažais iš Angry Birds, Plants vs. Zombies ir vovere iš Ledynmečio!
         frozen:
           title: Programuokite kartu su Ana ir Elze
           description: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo grožį ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus. Savo kūriniais galėsite pasidalinti su draugais!
@@ -169,6 +175,7 @@ lt:
           lessons:
             Artist:
               name: Menininkas
+          student_description: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo grožį ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus. Savo kūriniais galėsite pasidalinti su draugais!
         course4:
           title: Kursas 4
           description: 4 kursas yra skirtas mokiniams, kurie įveikė 2 ir 3 kursus. Mokiniai mokysis spręsti sudėtingesnius galvosūkius, pritaikyti keletą idėjų sprendžiant kiekvieną uždavinį. Iki kol kursas bus baigtas, mokiniai kurs programas, kurios leis jiems pademonstruoti keletą įgūdžių, įskaitant ciklus, ir funkcijas su parametrais. Rekomenduojama 4-8 klasių mokiniams.
@@ -219,6 +226,7 @@ lt:
               name: 'Be kompiuterio: dainų rašymas pagal parametrus'
             'Unplugged: Tangrams':
               name: 'Be kompiuterio: tanagramos'
+          student_description: 4 kursas yra skirtas mokiniams, kurie įveikė 2 ir 3 kursus. Mokiniai mokysis spręsti sudėtingesnius galvosūkius, pritaikyti keletą idėjų sprendžiant kiekvieną uždavinį. Iki kol kursas bus baigtas, mokiniai kurs programas, kurios leis jiems pademonstruoti keletą įgūdžių, įskaitant ciklus, ir funkcijas su parametrais. Rekomenduojama 4-8 klasių mokiniams.
         Course4pre:
           title: 4 kursas - Prielaidos
           description: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
@@ -242,6 +250,7 @@ lt:
               name: 'Ūkininkas: kartojimas'
             'Maze: Sequence':
               name: 'Labirintas: seka'
+          student_description: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
         usability:
           lessons:
             Binary:
@@ -279,6 +288,7 @@ lt:
               name: 'Papildoma pamokėlė: Būlio kintamieji ir logika'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Papildoma pamokėlė: kompiuteriniai žaidimai ir koordinačių plokštuma'
+          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         infinity:
           title: Disnėjaus Infinity laboratorija
           description: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus Infinity personažai.
@@ -286,6 +296,7 @@ lt:
           lessons:
             Infinity:
               name: Begalybė
+          student_description: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus Infinity personažai.
         algebrademo:
           lessons:
             Defining Variables:
@@ -354,6 +365,7 @@ lt:
               name: Labirintas
             Wrap-up:
               name: Apibendrinimas
+          student_description: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.
         edit-code:
           title: Redaguoti kodą
           description: Redaguoti kodą
@@ -365,6 +377,7 @@ lt:
               name: Menininkas
             The Maze:
               name: Labirintas
+          student_description: Redaguoti kodą
         events:
           title: Įvykiai
           description: Įvykiai
@@ -378,6 +391,7 @@ lt:
               name: Įvert
             Studio:
               name: Studija
+          student_description: Įvykiai
         flappy:
           title: Flappy Kodas
           description: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!
@@ -385,6 +399,7 @@ lt:
           lessons:
             Flappy Code:
               name: Flappy Kodas
+          student_description: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!
         jigsaw:
           title: Dėlionės
           description: Išbandykite Dėlionės pamokėlę
@@ -392,6 +407,7 @@ lt:
           lessons:
             Jigsaw:
               name: Dėlionės
+          student_description: Išbandykite Dėlionės pamokėlę
         step:
           title: Žingsnis
           description: Žingsnio pamoka
@@ -399,6 +415,7 @@ lt:
           lessons:
             Step:
               name: Žingsnis
+          student_description: Žingsnio pamoka
         Hour of Code:
           title: Programavimo valanda 2013
           description: Išmėginkite programavimo pradmenis su personažais iš Angry Birds ir Plants vs. Zombies!
@@ -406,6 +423,7 @@ lt:
           lessons:
             Hour of Code 2013:
               name: Programavimo valanda 2013
+          student_description: Išmėginkite programavimo pradmenis su personažais iš Angry Birds ir Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           title: Kodavimo studijos galvosūkiai
           description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
@@ -413,6 +431,7 @@ lt:
           lessons:
             Puzzles:
               name: Galvosūkiai
+          student_description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Pamoka – Kodavimo studijos galvosūkiai
           description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
@@ -420,6 +439,7 @@ lt:
           lessons:
             Puzzles:
               name: Galvosūkiai
+          student_description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
         cspunit1:
           lessons:
             Binary Numbers:
@@ -437,6 +457,7 @@ lt:
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         algPDmiami:
           title: Informatika algebroje
           description: Algebros mokymas per funkcijų programavimą
@@ -456,6 +477,7 @@ lt:
               name: Tavo žaidimas – susidūrimo aptikimas
             Your Game - Player Movement:
               name: Tavo žaidimas – veikėjų judėjimas
+          student_description: Algebros mokymas per funkcijų programavimą
         CSPLessonSamples:
           lessons:
             Lesson 14:
@@ -465,9 +487,11 @@ lt:
         ECSPD:
           description: 'Išmokite programuoti funkcijas panaudojant algebrą'
           description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         sciencePD:
           description: 'Išmokite programuoti funkcijas panaudojant algebrą'
           description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         cspunit3:
           lessons:
             Creating Functions:
@@ -487,9 +511,11 @@ lt:
         ECSPD-NexTech:
           description: 'Išmokite programuoti funkcijas panaudojant algebrą'
           description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         ECSPD-iZone:
           description: 'Išmokite programuoti funkcijas panaudojant algebrą'
           description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         algebraPD-NexTech:
           title: Informatika algebroje
           description: 'Išmokite programuoti funkcijas panaudojant algebrą'
@@ -497,6 +523,7 @@ lt:
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         algebraPD-iZone:
           title: Informatika algebroje
           description: 'Išmokite programuoti funkcijas panaudojant algebrą'
@@ -504,12 +531,15 @@ lt:
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         sciencePD-NexTech:
           description: 'Išmokite programuoti funkcijas panaudojant algebrą'
           description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         sciencePD-iZone:
           description: 'Išmokite programuoti funkcijas panaudojant algebrą'
           description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         sciencePD2:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
@@ -518,6 +548,7 @@ lt:
               name: Sveiki atvykę!
             Wrap-Up:
               name: Apibendrinimas
+          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         cspunit2:
           lessons:
             The Internet:
@@ -535,6 +566,7 @@ lt:
               name: Šikšnosparnis Semas
             Strings and Images:
               name: Eilutės ir paveikslėliai
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         allthethings:
           lessons:
             Artist:
@@ -576,6 +608,7 @@ lt:
               name: Eilutės ir paveikslėliai
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         cspfacilitator:
           lessons:
             App Lab:
@@ -602,6 +635,7 @@ lt:
               name: Sveiki atvykę!
             Wrap-up:
               name: Apibendrinimas
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         algebraPD2:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
@@ -610,6 +644,7 @@ lt:
               name: Mokytojo prietaisų skydelis
             Welcome!:
               name: Sveiki atvykę!
+          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         sciencePD2b:
           description: 'Išmokite programuoti funkcijas panaudojant algebrą'
           description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
@@ -618,6 +653,7 @@ lt:
               name: Sveiki atvykę!
             Wrap-Up:
               name: Apibendrinimas
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         science-PD2:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
@@ -626,6 +662,7 @@ lt:
               name: Sveiki atvykę!
             Wrap-Up:
               name: Apibendrinimas
+          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         Equity-OnlinePD:
           lessons:
             Next Steps:
@@ -638,6 +675,7 @@ lt:
               name: Sveiki atvykę!
             Wrap-Up:
               name: Apibendrinimas
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         ECSPD2-iZone:
           description: 'Išmokite programuoti funkcijas panaudojant algebrą'
           description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
@@ -652,6 +690,7 @@ lt:
               name: Sveiki atvykę!
             Wrap-up:
               name: Apibendrinimas
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         ECSPD2-NexTech:
           description: 'Išmokite programuoti funkcijas panaudojant algebrą'
           description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
@@ -666,6 +705,7 @@ lt:
               name: Sveiki atvykę!
             Wrap-up:
               name: Apibendrinimas
+          student_description: 'Išmokite programuoti funkcijas panaudojant algebrą'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -707,6 +747,7 @@ lt:
           lessons:
             Ice Age Play Lab:
               name: Ledynmečio laboratorija
+          student_description: Sukurk istoriją arba žaidimą su Ledynmečio laboratorija!
         cspunit3temp:
           lessons:
             While Loops:
@@ -718,6 +759,7 @@ lt:
           lessons:
             Gumball Play Lab:
               name: Gumball laboratorija
+          student_description: Sukurk istoriją arba žaidimą su Gumball laboratorija!
         starwars:
           title: 'Žvaigždžių Karai: programuojame Galaktiką'
           description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
@@ -725,6 +767,7 @@ lt:
           lessons:
             Hour of Code 2015:
               name: Programavimo valanda 2015
+          student_description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
         starwarsblocks:
           title: 'Žvaigždžių Karai: programuojame Galaktiką'
           description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
@@ -732,6 +775,7 @@ lt:
           lessons:
             Hour of Code 2015:
               name: Programavimo valanda 2015
+          student_description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
         mc:
           title: Minecraft programavimo valanda
           description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius šiame Minecraft pasaulyje
@@ -739,6 +783,7 @@ lt:
           lessons:
             Hour of Code 2015:
               name: Programavimo valanda 2015
+          student_description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius šiame Minecraft pasaulyje
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -751,6 +796,7 @@ lt:
           lessons:
             'Play Lab: Defining Functions':
               name: 'Žaidimų laboratorija: komandų apibrėžimas'
+          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         AlgebraB:
           title: 'Informatika algebroje'
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -770,6 +816,7 @@ lt:
               name: 'Papildoma pamokėlė: susidūrimo aptikimas ir atstumo formulė'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Papildoma pamokėlė: kompiuteriniai žaidimai ir koordinačių plokštuma'
+          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         algebraPD1:
           title: Informatika algebroje
           description: Algebros mokymas per funkcijų programavimą
@@ -777,6 +824,7 @@ lt:
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
+          student_description: Algebros mokymas per funkcijų programavimą
         algebraPD3c:
           title: Informatika algebroje
         csp1-2017:
@@ -813,6 +861,7 @@ lt:
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
+          student_description: Algebros mokymas per funkcijų programavimą
         sciencePD1:
           description_short: 'Išmokite programuoti funkcijas panaudojant algebrą'
         cspunit1-support:
@@ -985,6 +1034,7 @@ lt:
               name: Mokytojo prietaisų skydelis
             Welcome!:
               name: Sveiki atvykę!
+          student_description: Algebros mokymas per funkcijų programavimą
         csp-online-test:
           lesson_groups:
             required:
@@ -1008,6 +1058,7 @@ lt:
           lessons:
             Bounce:
               name: Bounce
+          student_description: Sukurk kreipšinio žaidimą
         csd2-2017:
           lessons:
             Peer Review:
@@ -1029,6 +1080,7 @@ lt:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft „Programavimo valandos“ projektavimo aplinka
+          student_description: Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje Minecraft versijoje.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1114,6 +1166,7 @@ lt:
           lessons:
             Sports:
               name: Sportas
+          student_description: Sukurk savo sportą
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -2513,6 +2566,12 @@ lt:
           lesson_groups:
             lg_1:
               display_name: Turinys
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Įvadas
+            lessonGroup-3:
+              display_name: Kintamieji
         csd3-2021:
           lessons:
             Variables:

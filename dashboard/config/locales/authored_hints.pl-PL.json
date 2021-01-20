@@ -184,7 +184,7 @@
           "2-3_Maze_16_b": "Aby umieścić wiele bloków wewnątrz pętli 'powtórz', przeciągnij je do obszaru roboczego, a następnie połącz do bloku 'po uruchomieniu' i gotowe!"
         },
         "2-3 Maze 6": {
-          "2-3_Maze_6_a": "Istnieją dwa sposoby, aby rozwiązać ten problem!"
+          "2-3_Maze_6_a": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę!"
         },
         "2-3 Maze Loops 17": {
           "2-3_Maze_Loops_17_a": "Jeśli trudno Ci dostrzec wzorzec, spróbuj kodowania \"krok po kroku\", i dopiero wtedy zastąp elementy powtarzające się pętlą.",
@@ -1185,7 +1185,7 @@
           "courseD_bee_conditionals_challenge1_b": "W tej łamigłówce każde miejsce może mieścić kwiatek, plaster miodu lub nic. Oznacza to, że w każdym kwadracie możesz powtórzyć swoją sekwencję „jeśli/w przeciwnym razie”. "
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach 'jeśli na kwiatku', kod wewnątrz 'dopóki nektar > 0' będzie działał tylko, jeśli pszczółka jest na kwiatku. Główna różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzór:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach 'jeśli na kwiatku', kod wewnątrz 'dopóki nektar > 0' będzie działał tylko, jeśli pszczółka jest na kwiatku. Główna różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzór:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Oryginalny kod działałby świetnie - gdyby był tylko jeden skarb na każdym stosie!",
@@ -2953,7 +2953,7 @@
         },
         "courseC_PlayLab_events4": {
           "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
-          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać \\***\\*\\_\\_\\_\\*\\***mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
+          "courseC_PlayLab_events4_a": "Musisz dołączyć blok \"postać ****\\_\\_\\_****mówi\" do zdarzenia \"gdy postać dotknie\", aby rozwiązać tę łamigłówkę."
         },
         "courseC_PlayLab_events4_2018": {
           "courseC_PlayLab_events4_b": "Po kliknięciu przycisku \"Uruchom\", Jorge musi przemieścić się w prawo o  **100** pikseli, aby dojść do Kotki Oliwii.",
@@ -3644,7 +3644,7 @@
           "courseC_flappy_events5_a": "Musisz użyć bloku \"zdobądź punkt\", aby przejść ten poziom."
         },
         "courseC_flappy_events6": {
-          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami **\\*\\***\\_**\\*\\*** razy\" do wydarzenia \"Gdy klikniesz\"."
+          "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami ******\\_****** razy\" do wydarzenia \"Gdy klikniesz\"."
         },
         "courseC_flappy_events6_2018": {
           "courseC_flappy_events6_a": "Spróbuj dołączyć blok \"Machnij skrzydłami **\\*\\***\\_**\\*\\*** razy\" do wydarzenia \"Gdy klikniesz\"."
@@ -4131,7 +4131,7 @@
           "courseC_maze_programming5_c": "Rozwiązanie będzie miało dwa bloki „idź do przodu”, skręt, dwa kolejne bloki „idź do przodu”."
         },
         "courseC_maze_programming6": {
-          "courseC_maze_programming6_a": "Istnieją dwa sposoby, aby rozwiązać ten problem!",
+          "courseC_maze_programming6_a": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę!",
           "courseC_maze_programming6_b": "Podążaj za palcem od ptaka do świnki, jakie podjąłeś kroki?",
           "courseC_maze_programming6_c": "Pamiętaj, że musisz najpierw skręcić, ponieważ ptak stoi na przeciwko ściany.",
           "courseC_maze_programming6_d": "Czujesz, że utknąłeś? Spójrz na tę ścieżkę!"
@@ -4143,13 +4143,13 @@
           "courseC_maze_programming6_d": "Czujesz, że utknąłeś? Spójrz na tę ścieżkę!"
         },
         "courseC_maze_programming6_2019": {
-          "courseC_maze_programming6_a": "Istnieją dwa sposoby, aby rozwiązać ten problem!",
+          "courseC_maze_programming6_a": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę!",
           "courseC_maze_programming6_b": "Podążaj za palcem od ptaka do świnki, jakie podjąłeś kroki?",
           "courseC_maze_programming6_c": "Pamiętaj, że musisz najpierw skręcić, ponieważ ptak stoi na przeciwko ściany.",
           "courseC_maze_programming6_d": "Czujesz, że utknąłeś? Spójrz na tę ścieżkę!"
         },
         "courseC_maze_programming6_2020": {
-          "courseC_maze_programming6_a": "Istnieją dwa sposoby, aby rozwiązać ten problem!",
+          "courseC_maze_programming6_a": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę!",
           "courseC_maze_programming6_b": "Podążaj za palcem od ptaka do świnki, jakie podjąłeś kroki?",
           "courseC_maze_programming6_c": "Pamiętaj, że musisz najpierw skręcić, ponieważ ptak stoi na przeciwko ściany.",
           "courseC_maze_programming6_d": "Czujesz, że utknąłeś? Spójrz na tę ścieżkę!"
@@ -4813,7 +4813,7 @@
           "courseD_artist_project1a_b": "Te wzorce w dużym stopniu wyglądają jak kaskady z innych łamigłówek, ale używa się w nich innych kątów."
         },
         "courseD_artist_project2": {
-          "courseD_artist_project2_a": "Pamiętaj, że przy pomocy polecenia \"idź do przodu\" rysuje się linię, ale przy pomocy polecenia \"skocz do przodu\" już nie.",
+          "courseD_artist_project2_a": "Pamiętaj, że przy pomocy polecenia \"idź do przodu\" rysuje się linię, ale przy pomocy komendy \"skocz do przodu\" już nie.",
           "courseD_artist_project2_b": "Po narysowaniu i przemieszczeniu się po raz pierwszy możesz powtórzyć kod dodając pętlę wokół na zewnątrz."
         },
         "courseD_artist_project2_2018": {
@@ -5173,10 +5173,10 @@
           "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Zupełnie tak, jak w blokach \"jeśli na kwiatku\", kod wewnątrz \"dopóki nektar > 0\" będzie działał tylko, jeśli pszczółka jest na kwiatku. Różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzorzec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Dlaczego program działa w pierwszej połowie? Pomyśl dlaczego pszczółka musi poruszać się w tył. Ile nektaru zbiera pszczółka za każdym razem, gdy porusza się na kwiatem?",
@@ -5740,7 +5740,7 @@
         "courseD_maze_intro5a_2020": {
           "courseC_maze_programming5_a": "Spróbuj użyć bloku \"Krok\", aby uruchomić po jednym wierszu swojego kodu. Czy jesteś w stanie wymyślić, co musisz następnie zrobić?",
           "courseC_maze_programming5_c": "Nie obawiaj się popełnienia błędu! Spróbuj dodać bloki i uruchomić kod, aby zobaczyć co się dzieje, nawet jeśli nie wydaje Ci się, że rozwiązałeś tę łamigłówkę. ",
-          "courseC_maze_programming5_b": "Pamiętaj, że skręty wykonuje się są z perspektywy Reda."
+          "courseC_maze_programming5_b": "Pamiętaj, że skręty wykonuje się są z perspektywy Czerwonego."
         },
         "courseD_maze_nestedLoops3": {
           "courseD_maze_nestedLoops3_a": "W celu rozwiązania tej łamigłówki będziesz musiał \"zagnieździć\" jedną pętlę \"powtórz\" w innej pętli \"powtórz\".",
@@ -7612,7 +7612,7 @@
         "courseF_playlab_variables_challenge2": {
           "courseF_playlab_variables_challenge2_a": "Gdy sprite'y się zderzą, dodawaj i odejmuj punkty od zmiennej \"punkty\".",
           "courseF_playlab_variables_challenge2_b": "Teraz możesz zmienić odległość, na jaką możesz przemieścić swojego sprite'a za każdym razem, gdy naciśnie się jeden z klawiszy ze strzałkami.",
-          "courseF_playlab_variables_challenge2_c": "**Rozwiązanie:**\n<xml>\n<block type=\"studio_whenArrow\">\n\n<title name=\"VALUE\">up</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">1</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">down</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">4</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">left</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">8</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">right</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">2</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">1</title>\n<next>\n<block type=\"studio_setScore\" inline=\"false\">\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">ADD</title>\n<value name=\"A\">\n<block type=\"studio_getScore\"/>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">3</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">2</title>\n<next>\n<block type=\"studio_setScore\" inline=\"false\">\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">ADD</title>\n<value name=\"A\">\n<block type=\"studio_getScore\"/>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">3</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">2</title>\n<next>\n<block type=\"studio_setScore\" inline=\"false\">\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MINUS</title>\n<value name=\"A\">\n<block type=\"studio_getScore\"/>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</next>\n</block>\n</xml>"
+          "courseF_playlab_variables_challenge2_c": "**Rozwiązanie:**\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">MINUS</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "grade5_artist_variables_triangles1": {
           "grade5_artist_variables_triangles1_a": "Musisz pamiętać, że aby utworzyć wewnętrzny kąt o 60 stopniach w tym trójkącie artysta musi się obrócić o 120 stopni.",
@@ -7649,7 +7649,7 @@
           "iceage_hello2_a": "Aby rozwiązać tę łamigłówkę trzeba skłonić Sida, aby coś powiedział z wykorzystaniem bloku \"postać 1 mówi\". Trzeba również skłonić Manny'ego, aby coś powiedział przy pomocy bloku \"postać 2 mówi\". "
         },
         "iceage_move_events": {
-          "iceage_move_events_a": "Do każdego wydarzenia \"Gdy strzałka \\***\\*\\_\\*\\***\" będzie trzeba dołączyć komendę \"Przemieść postać 1\", aby rozwiązać tę łamigłówkę. "
+          "iceage_move_events_a": "Do każdego wydarzenia \"Gdy strzałka ****\\_****\" będzie trzeba dołączyć komendę \"Przemieść postać 1\", aby rozwiązać tę łamigłówkę. "
         },
         "iceage_move_to_actor": {
           "iceage_move_to_actor_a": "Jeśli chodzi o tę łamigłówkę, czy możesz albo przemieścić Diego na doł o 200 pikseli lub przemieścić Manny'ego do góry o 200 pikseli.",
@@ -7914,7 +7914,7 @@
           "courseC_starWars_loops5_a": "W najlepszym rozwiązaniu używa się pojedynczego \"przejdź do przodu\", następnie skrętu, a potem pętli."
         },
         "courseC_video_angles": {
-          "courseD_scrat_programming6_a": "Istnieją dwa sposoby, aby rozwiązać ten problem!",
+          "courseD_scrat_programming6_a": "Istnieją dwa sposoby, aby rozwiązać tę łamigłówkę!",
           "courseD_scrat_programming6_b": "Pamiętaj, aby najpierw skręcić, a dopiero potem się przemieszczać, ponieważ Scrat zmierza w niewłaściwym kierunku.",
           "courseD_scrat_programming6_c": "Nie obawiaj się popełnienia błędu! Spróbuj dodać bloki i uruchomić kod, aby zobaczyć co się dzieje, nawet jeśli nie wydaje Ci się, że rozwiązałeś tę łamigłówkę. "
         },

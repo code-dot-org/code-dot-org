@@ -850,6 +850,7 @@
         "description": "[slide] \r\n**Video:** Play \"What is the Internet\". Stop at 1:30.",
         "tips": [
           {
+            "key": "tip",
             "type": "teachingTip",
             "markdown": "Use the video to normalize students' misconceptions about how the Internet works. Over the course of the unit, we will work to address those points of confusion.\r\n\r\n"
           }
@@ -986,7 +987,8 @@
       "key": "ebc976e9-8938-43d0-98e3-d8c1b3f6f995",
       "position": 1,
       "properties": {
-        "name": "Widget: Internet Simulator"
+        "name": "Widget: Internet Simulator",
+        "progression_name": "Widget: Internet Simulator"
       },
       "seeding_key": {
         "activity_section.key": "ebc976e9-8938-43d0-98e3-d8c1b3f6f995",
@@ -997,7 +999,8 @@
       "key": "a5519a74-81b5-47c5-b6e0-2cd121cadfbb",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "a5519a74-81b5-47c5-b6e0-2cd121cadfbb",
@@ -1202,7 +1205,8 @@
       "key": "1edcd05d-b48c-498e-9c94-33388d74ddd5",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "1edcd05d-b48c-498e-9c94-33388d74ddd5",
@@ -1454,7 +1458,8 @@
       "key": "3e1eea6b-ec9d-4068-8a40-5893c7d5635a",
       "position": 1,
       "properties": {
-        "name": "Internet Simulator: Broadcast Mode"
+        "name": "Internet Simulator: Broadcast Mode",
+        "progression_name": "Internet Simulator: Broadcast Mode"
       },
       "seeding_key": {
         "activity_section.key": "3e1eea6b-ec9d-4068-8a40-5893c7d5635a",
@@ -1465,7 +1470,8 @@
       "key": "10315151-abd2-4010-9cea-178f33d51c4f",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f",
@@ -1726,7 +1732,8 @@
       "key": "e10bda55-fb32-4e14-82d7-0a3a70e27ea1",
       "position": 1,
       "properties": {
-        "name": "Internet Simulator: Routers"
+        "name": "Internet Simulator: Routers",
+        "progression_name": "Internet Simulator: Routers"
       },
       "seeding_key": {
         "activity_section.key": "e10bda55-fb32-4e14-82d7-0a3a70e27ea1",
@@ -1737,7 +1744,8 @@
       "key": "438af42b-36dc-49dd-8421-569a4b4ad488",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488",
@@ -1971,7 +1979,8 @@
       "key": "fe977819-7fba-4d53-9170-edb4ec353341",
       "position": 1,
       "properties": {
-        "name": "Internet Simulator: Packets"
+        "name": "Internet Simulator: Packets",
+        "progression_name": "Internet Simulator: Packets"
       },
       "seeding_key": {
         "activity_section.key": "fe977819-7fba-4d53-9170-edb4ec353341",
@@ -1982,7 +1991,8 @@
       "key": "da03a305-0e4c-4eba-8f09-e978f956b854",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "da03a305-0e4c-4eba-8f09-e978f956b854",
@@ -2277,7 +2287,8 @@
       "key": "e8f5f497-605a-4c67-8e42-874cb6c947ce",
       "position": 1,
       "properties": {
-        "name": "Internet Simulator: DNS"
+        "name": "Internet Simulator: DNS",
+        "progression_name": "Internet Simulator: DNS"
       },
       "seeding_key": {
         "activity_section.key": "e8f5f497-605a-4c67-8e42-874cb6c947ce",
@@ -2288,7 +2299,8 @@
       "key": "9fcda5f4-f31e-4ab3-91a2-373e5f52fa38",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9fcda5f4-f31e-4ab3-91a2-373e5f52fa38",
@@ -2545,7 +2557,8 @@
       "key": "6a6f8e8b-aed2-4b7d-9b9f-d85a2bd347c9",
       "position": 1,
       "properties": {
-        "name": "Unit 2 Exam"
+        "name": "Unit 2 Exam",
+        "progression_name": "Unit 2 Exam"
       },
       "seeding_key": {
         "activity_section.key": "6a6f8e8b-aed2-4b7d-9b9f-d85a2bd347c9",
@@ -2560,10 +2573,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Widget: Internet Simulator",
         "level_keys": [
           "CSP U2L1 Internet Simulator: Sending Text_2021"
-        ]
+        ],
+        "progression": "Widget: Internet Simulator"
       },
       "named_level": null,
       "bonus": null,
@@ -2586,10 +2599,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L1 CFU how use internet_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2612,10 +2625,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L1 CFU paths_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2638,10 +2651,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Internet Simulator: Broadcast Mode",
         "level_keys": [
           "U2L2 CSP Internet Simulator Broadcast_2021"
-        ]
+        ],
+        "progression": "Internet Simulator: Broadcast Mode"
       },
       "named_level": null,
       "bonus": null,
@@ -2664,10 +2677,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L2 CSP CFU IP Addresses_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2690,10 +2703,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L2 CSP CFU IP works_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2716,10 +2729,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Internet Simulator: Routers",
         "level_keys": [
           "U1L3 CSP Internet Simulator Routers_2021"
-        ]
+        ],
+        "progression": "Internet Simulator: Routers"
       },
       "named_level": null,
       "bonus": null,
@@ -2742,10 +2755,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L3 CSP CFU Routers_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2768,10 +2781,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L3 CSP CFU Redundancy_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2794,10 +2807,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Internet Simulator: Packets",
         "level_keys": [
           "U1L4 CSP Internet Simulator Packets 2_2021"
-        ]
+        ],
+        "progression": "Internet Simulator: Packets"
       },
       "named_level": null,
       "bonus": null,
@@ -2820,10 +2833,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L4 Multiple Choice packets_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2846,10 +2859,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L4 CSP CFU terms_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2872,10 +2885,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Internet Simulator: DNS",
         "level_keys": [
           "U1L5 CSP Internet Simulator DNS_2021"
-        ]
+        ],
+        "progression": "Internet Simulator: DNS"
       },
       "named_level": null,
       "bonus": null,
@@ -2898,10 +2911,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L4 CSP CFU scale_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2924,10 +2937,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L5 CSP CFU subgroups_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2950,10 +2963,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 2 Exam",
         "level_keys": [
           "CSP Unit 2 MC Assessment _2021"
-        ]
+        ],
+        "progression": "Unit 2 Exam"
       },
       "named_level": null,
       "bonus": null,

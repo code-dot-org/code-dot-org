@@ -1802,3 +1802,5 @@ bn-BD:
         - {}
         questions:
         - {}
+      outbreak_freeplay_choice:
+        display_name: বিনা পয়সায় খেলা

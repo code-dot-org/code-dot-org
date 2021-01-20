@@ -65,6 +65,8 @@ zh-TW:
               name: Play Lab - 創作一個故事
             The Big Event:
               name: 大事件
+          student_description: 課程 1 主要在讓初學者學習創建計算機程式，在這個過程中讓他們學習與他人合作、提高解決問題能力，並培養完成困難任務的毅力。在課程結束之後，學生就可以設計及分享自己的遊戲或故事。建議年級
+            K-1。
         course2:
           title: 課程 2
           description: 課程 2 適合有閱讀能力但沒有編程經驗的學生，在課程中，學生會學習建立程式以解決問題，開發並分享互動式的遊戲或故事。建議年級
@@ -110,6 +112,8 @@ zh-TW:
               name: 大事件
             Your Digital Footprint:
               name: 你的數位足跡
+          student_description: 課程 2 適合有閱讀能力但沒有編程經驗的學生，在課程中，學生會學習建立程式以解決問題，開發並分享互動式的遊戲或故事。建議年級
+            2-5。
         course3:
           title: 課程 3
           description: 課程 3 是為已完成課程 2 的學生設計的。學生將更深入理解到前面所學的編程主題，進而能夠用更靈活的方式來解決更複雜的問題。此課程完成時，學生將會創造出互動式的故事或遊戲，且可和任何人分享。建議
@@ -159,6 +163,8 @@ zh-TW:
               name: Play Lab - 設計一個遊戲
             'Studio: Create a Story':
               name: Play Lab - 創作一個故事
+          student_description: 課程 3 是為已完成課程 2 的學生設計的。學生將更深入理解到前面所學的編程主題，進而能夠用更靈活的方式來解決更複雜的問題。此課程完成時，學生將會創造出互動式的故事或遊戲，且可和任何人分享。建議
+            4-5 年級的學生學習。
         playlab:
           title: Play Lab
           description: 在 Play Lab 上創作故事或是遊戲！
@@ -166,6 +172,7 @@ zh-TW:
           lessons:
             Play Lab:
               name: Play Lab
+          student_description: 在 Play Lab 上創作故事或是遊戲！
         artist:
           title: 藝術家
           description: 和小藝術家一起畫出酷炫的圖案！
@@ -173,6 +180,7 @@ zh-TW:
           lessons:
             Artist:
               name: 藝術家
+          student_description: 和小藝術家一起畫出酷炫的圖案！
         hourofcode:
           title: 經典迷宮
           description: 和來自憤怒鳥、植物大戰殭屍、冰原歷險記的角色一起學習計算機科學的基礎知識！
@@ -180,6 +188,7 @@ zh-TW:
           lessons:
             Maze:
               name: 迷宮
+          student_description: 和來自憤怒鳥、植物大戰殭屍、冰原歷險記的角色一起學習計算機科學的基礎知識！
         frozen:
           title: 和安娜與艾莎一同玩程式
           description: 讓我們使用程式碼，與安娜和艾莎一同探索美麗且神奇的冰。你可以利用在雪上溜冰製造出雪花等圖案，然後打造一個冬季仙境並分享給你的朋友！
@@ -187,6 +196,7 @@ zh-TW:
           lessons:
             Artist:
               name: 藝術家
+          student_description: 讓我們使用程式碼，與安娜和艾莎一同探索美麗且神奇的冰。你可以利用在雪上溜冰製造出雪花等圖案，然後打造一個冬季仙境並分享給你的朋友！
         course4:
           title: 課程 4
           description: 課程 4 是設計給完成課程 2 和 3 的學生 。隨著難度增加，學生在解決關卡的問題時，也能夠學習結合多種概念。當完成本課程的時候，學生將創建能夠展示多種技能的程式，包括用於迴圈和帶參數的函式。建議
@@ -238,6 +248,8 @@ zh-TW:
               name: 不插電活動 - 用參數寫歌
             'Unplugged: Tangrams':
               name: 不插電活動 - 七巧版
+          student_description: 課程 4 是設計給完成課程 2 和 3 的學生 。隨著難度增加，學生在解決關卡的問題時，也能夠學習結合多種概念。當完成本課程的時候，學生將創建能夠展示多種技能的程式，包括用於迴圈和帶參數的函式。建議
+            4-8 年級的學生學習。
         Course4pre:
           title: 課程 4 前備能力
           description: 對沒有參與課程 2 和課程 3 的學生作的概念簡述。
@@ -261,6 +273,7 @@ zh-TW:
               name: 農夫 - 條件迴圈（While Loops）
             'Maze: Sequence':
               name: 迷宮 - 序列（Sequence）
+          student_description: 對沒有參與課程 2 和課程 3 的學生作的概念簡述。
         usability:
           title: 可用性測試
           description: 課程 4 級別的一個選項，用來測試可行性。
@@ -275,6 +288,7 @@ zh-TW:
               name: 簡介
             Variables:
               name: 變數
+          student_description: 課程 4 級別的一個選項，用來測試可行性。
         algebra:
           title: 代數裡的計算機科學
           lessons:
@@ -325,6 +339,7 @@ zh-TW:
           lessons:
             Infinity:
               name: 無限
+          student_description: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
         algebrademo:
           title: 代數演示
           description: 一些關卡以演示在 Code.org 中 CS 代數的環境和編程語言
@@ -340,6 +355,7 @@ zh-TW:
               name: 製作圖片
             The Design Recipe:
               name: 設計程序
+          student_description: 一些關卡以演示在 Code.org 中 CS 代數的環境和編程語言
         K5PD:
           description: K5 課程的專業發展
           lessons:
@@ -369,6 +385,7 @@ zh-TW:
               name: 編寫電腦程式
             new stage:
               name: 新舞台
+          student_description: K5 課程的專業發展
         netsim:
           title: 網路模擬器
           description: 學習有關網際網路的工作原理。
@@ -394,6 +411,7 @@ zh-TW:
               name: 點對點傳輸 - 發送數字
             Routers and addresses:
               name: 路由器和網路位址
+          student_description: 學習有關網際網路的工作原理。
         pixelation:
           description: 以 bits 與 bytes 創造圖像
           description_short: 以 bits 與 bytes 創造圖像
@@ -408,6 +426,7 @@ zh-TW:
               name: 色彩像素化自由探索
             Color Pixelation Tutorial:
               name: 色彩像素化教程
+          student_description: 以 bits 與 bytes 創造圖像
         20-hour:
           title: 計算機科學速成課程
           description: 這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。
@@ -454,6 +473,7 @@ zh-TW:
               name: 迷宮
             Wrap-up:
               name: 總結
+          student_description: 這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。
         edit-code:
           title: 編輯程式碼
           description: 編輯程式碼
@@ -469,6 +489,7 @@ zh-TW:
               name: 藝術家
             The Maze:
               name: 迷宮
+          student_description: 編輯程式碼
         events:
           title: 事件
           description: 事件
@@ -482,6 +503,7 @@ zh-TW:
               name: Eval
             Studio:
               name: 工作室
+          student_description: 事件
         flappy:
           title: 像素鳥程式
           description: 想要在 10 分鐘內寫個你自己的遊戲嗎？試試我們的像素鳥程式教程！
@@ -489,6 +511,7 @@ zh-TW:
           lessons:
             Flappy Code:
               name: 像素鳥程式
+          student_description: 想要在 10 分鐘內寫個你自己的遊戲嗎？試試我們的像素鳥程式教程！
         jigsaw:
           title: 拼圖
           description: 試試我們的拼圖教程。
@@ -496,6 +519,7 @@ zh-TW:
           lessons:
             Jigsaw:
               name: 拼圖
+          student_description: 試試我們的拼圖教程。
         step:
           title: 步進
           description: 步驟教程
@@ -503,6 +527,7 @@ zh-TW:
           lessons:
             Step:
               name: 步進
+          student_description: 步驟教程
         Hour of Code:
           title: 一小時玩程式 2013
           description: 跟著憤怒鳥、植物大戰殭屍的角色們一起進入計算機科學的世界吧！
@@ -510,18 +535,21 @@ zh-TW:
           lessons:
             Hour of Code 2013:
               name: 一小時玩程式 2013
+          student_description: 跟著憤怒鳥、植物大戰殭屍的角色們一起進入計算機科學的世界吧！
         CodeStudioPuzzleChallenge:
           description: 試試這些有趣的編碼拼圖。盡力 ！
           description_short: 挑戰自己 ！
           lessons:
             Puzzles:
               name: 所有關卡
+          student_description: 試試這些有趣的編碼拼圖。盡力 ！
         Tutorial Video - Code Studio Puzzle Challenge:
           description: 試試這些有趣的編碼拼圖。盡力 ！
           description_short: 挑戰自己 ！
           lessons:
             Puzzles:
               name: 所有關卡
+          student_description: 試試這些有趣的編碼拼圖。盡力 ！
         cspunit1:
           title: "（舊）計算機科學原理 單元 1 - 數位資訊"
           lessons:
@@ -576,6 +604,7 @@ zh-TW:
               name: 教師控制台
             Why Computer Science belongs in Algebra:
               name: 為什麼計算機科學屬於代數
+          student_description: 階段 1 線上介紹
         algPDmiami:
           title: 代數裡的計算機科學 PD
           description: 通過函數式程式設計教代數
@@ -603,6 +632,7 @@ zh-TW:
               name: 你的遊戲 - 碰撞檢測
             Your Game - Player Movement:
               name: 你的遊戲 - 角色移動
+          student_description: 通過函數式程式設計教代數
         text-compression:
           title: 文字壓縮
           lessons:
@@ -627,6 +657,7 @@ zh-TW:
               name: 教學策略
             What is CSP?:
               name: CSP 是什麼？
+          student_description: 階段 1 CSP 線上介紹
         CSPLessonSamples:
           lessons:
             Lesson 14:
@@ -650,6 +681,7 @@ zh-TW:
               name: 教學策略
             What is ECS?:
               name: ECS 是什麼？
+          student_description: 階段 1 線上介紹
         sciencePD:
           title: Science PD 裡的計算機科學
           description: 階段 1 線上介紹
@@ -679,6 +711,7 @@ zh-TW:
               name: 在課堂上使用模型
             What to Expect:
               name: 有什麼期待
+          student_description: 階段 1 線上介紹
         rbo-reference:
           lessons:
             reference:
@@ -787,6 +820,7 @@ zh-TW:
               name: 教學策略
             What is ECS?:
               name: ECS 是什麼？
+          student_description: 階段 1 線上介紹
         ECSPD-iZone:
           title: 計算機科學探索 PD
           description: 階段 1 線上介紹
@@ -804,6 +838,7 @@ zh-TW:
               name: 教學策略
             What is ECS?:
               name: ECS 是什麼？
+          student_description: 階段 1 線上介紹
         algebraPD-NexTech:
           title: 代數裡的計算機科學 PD
           description: 階段 1 線上介紹
@@ -822,6 +857,7 @@ zh-TW:
               name: 教師控制台
             Why Computer Science belongs in Algebra:
               name: 為什麼計算機科學屬於代數
+          student_description: 階段 1 線上介紹
         algebraPD-iZone:
           title: 代數裡的計算機科學 PD
           description: 階段 1 線上介紹
@@ -839,6 +875,7 @@ zh-TW:
               name: 教師控制台
             Why Computer Science belongs in Algebra:
               name: 為什麼計算機科學屬於代數
+          student_description: 階段 1 線上介紹
         sciencePD-NexTech:
           title: Science PD 裡的計算機科學
           description: 階段 1 線上介紹
@@ -869,6 +906,7 @@ zh-TW:
               name: 在課堂上使用模型
             What to Expect:
               name: 有什麼期待
+          student_description: 階段 1 線上介紹
         sciencePD-iZone:
           title: Science PD 裡的計算機科學
           description: 階段 1 線上介紹
@@ -898,6 +936,7 @@ zh-TW:
               name: 在課堂上使用模型
             What to Expect:
               name: 有什麼期待
+          student_description: 階段 1 線上介紹
         sciencePD2:
           description: 階段 2 暑假的線上混合式學習
           description_short: 階段 2 暑假的線上混合式學習
@@ -916,6 +955,7 @@ zh-TW:
               name: 歡迎！
             Wrap-Up:
               name: 總結
+          student_description: 階段 2 暑假的線上混合式學習
         sciencePD3:
           description: 學年支援 - 學期 1
           description_short: 學年支援 - 學期 1
@@ -926,6 +966,7 @@ zh-TW:
               name: 神秘模型
             Welcome Back!:
               name: 歡迎回來！
+          student_description: 學年支援 - 學期 1
         cspunit2:
           title: "（舊）計算機科學原理 單元 2 - 網際網路"
           lessons:
@@ -1002,6 +1043,7 @@ zh-TW:
               name: 字串和圖像
             The Design Recipe:
               name: 設計程序
+          student_description: 階段 2 暑假的線上混合式學習
         allthethings:
           title: 所有的東西！
           lessons:
@@ -1122,6 +1164,7 @@ zh-TW:
               name: 教師控制台
             Writing Contracts:
               name: 編寫契約
+          student_description: 階段 2 暑假的線上混合式學習
         cspfacilitator:
           title: '計算機科學原理輔導員工作坊 '
           lessons:
@@ -1190,6 +1233,7 @@ zh-TW:
               name: 總結
             Unit 1, Days 1-2 What Is a Computer?:
               name: 單元 1：第 1-2 日 - 什麼是電腦？
+          student_description: 階段 2 暑假的線上混合式學習
         equityPD:
           lessons:
             Equity PD:
@@ -1212,6 +1256,7 @@ zh-TW:
               name: 設計程序
             Welcome!:
               name: 歡迎！
+          student_description: 學年支援
         sciencePD2b:
           title: PD 階段 2b Science 裡的計算機科學
           description: 階段 2 暑假的線上混合式學習
@@ -1231,6 +1276,7 @@ zh-TW:
               name: 歡迎！
             Wrap-Up:
               name: 總結
+          student_description: 階段 2 暑假的線上混合式學習
         equity-pd:
           lessons:
             Code.org Equity PD:
@@ -1256,6 +1302,7 @@ zh-TW:
               name: 歡迎！
             Wrap-Up:
               name: 總結
+          student_description: 階段 2 暑假的線上混合式學習
         Equity-OnlinePD:
           lessons:
             Creating Equitable Learning Environments:
@@ -1285,6 +1332,7 @@ zh-TW:
               name: 歡迎！
             Wrap-Up:
               name: 總結
+          student_description: 階段 2 暑假的線上混合式學習
         ECSPD2-iZone:
           description: 階段 2 暑假的線上混合式學習
           description_short: 階段 2 暑假的線上混合式學習
@@ -1311,6 +1359,7 @@ zh-TW:
               name: 總結
             Unit 1, Days 1-2 What Is a Computer?:
               name: 單元 1：第 1-2 日 - 什麼是電腦？
+          student_description: 階段 2 暑假的線上混合式學習
         ECSPD2-NexTech:
           description: 階段 2 暑假的線上混合式學習
           description_short: 階段 2 暑假的線上混合式學習
@@ -1337,6 +1386,7 @@ zh-TW:
               name: 總結
             Unit 1, Days 1-2 What Is a Computer?:
               name: 單元 1：第 1-2 日 - 什麼是電腦？
+          student_description: 階段 2 暑假的線上混合式學習
         CSPPD2:
           title: 計算機科學原理專業發展：Blended Summer Study
           description: 為期五天的 8 小時的線上專業訓練幫助教師在新的學期準備課程。
@@ -1357,6 +1407,7 @@ zh-TW:
               name: 歡迎來到這個課程！
             Wrap Up and Next Steps:
               name: 總結與下一步
+          student_description: 為期五天的 8 小時的線上專業訓練幫助教師在新的學期準備課程。
         asUnplugged:
           description_audience: 年齡 6-13
           lessons:
@@ -1387,6 +1438,7 @@ zh-TW:
           lessons:
             Vigenere:
               name: 維吉尼亞密碼
+          student_description: 運用維吉尼亞密碼（Vigenere Cipher）小工具，瞭解如何使用維吉尼亞密碼加密與解密訊息。
         algebraPD3a:
           title: 代數裡的計算機科學 PD
           lessons:
@@ -1443,6 +1495,7 @@ zh-TW:
               name: 單元 3 挑戰
             Unit 3 Day-by-Day:
               name: 單元 3 每日活動
+          student_description: 學年發展
         ECSPD3-Unit4:
           description: 學年發展
           description_short: 學年發展
@@ -1459,6 +1512,7 @@ zh-TW:
               name: 單元 4 挑戰
             Unit 4 Day-by-Day:
               name: 單元 4 每日活動
+          student_description: 學年發展
         ECSPD3-Unit5:
           description: 學年發展
           description_short: 學年發展
@@ -1475,6 +1529,7 @@ zh-TW:
               name: 單元 5 概覽
             Unit 5 lessons:
               name: 單元 5 教學內容
+          student_description: 學年發展
         ECSPD3-Unit6:
           description: 學年發展
           description_short: 學年發展
@@ -1491,6 +1546,7 @@ zh-TW:
               name: 單元 6 概覽
             Unit 6 lessons:
               name: 單元 6 教學內容
+          student_description: 學年發展
         cspunit4draft:
           title: 計算機科學原理 單元 4 - 數據
           description_short: 數據
@@ -1626,6 +1682,7 @@ zh-TW:
           lessons:
             Ice Age Play Lab:
               name: 冰原歷險記 Play Lab
+          student_description: 用冰原歷險記的 Play Lab 來創作一個故事或遊戲!！
         CSPPD3-Unit3:
           title: 計算機科學原理：單元 3 專業發展
           lessons:
@@ -1694,6 +1751,7 @@ zh-TW:
           lessons:
             Gumball Play Lab:
               name: 陶阿甘的 Play Lab
+          student_description: 用陶阿甘的 Play Lab 來創作一個故事或遊戲！
         starwars:
           title: '星際大戰: 用程式建立一個銀河系'
           description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
@@ -1701,6 +1759,7 @@ zh-TW:
           lessons:
             Hour of Code 2015:
               name: 一小時玩程式 2015
+          student_description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
         starwarsblocks:
           title: '星際大戰: 用程式建立一個銀河系'
           description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
@@ -1708,6 +1767,7 @@ zh-TW:
           lessons:
             Hour of Code 2015:
               name: 一小時玩程式 2015
+          student_description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
         mc:
           title: 一小時玩 Minecraft
           description: 使用程式積木，讓 Steve 或 Alex 在 Minecraft 世界裡完成冒險。
@@ -1715,6 +1775,7 @@ zh-TW:
           lessons:
             Hour of Code 2015:
               name: 一小時玩程式 2015
+          student_description: 使用程式積木，幫助 Steve 或 Alex 在 Minecraft 裡完成探險。
         oceans:
           title: 在海洋中使用的 AI
           description: 瞭解 AI（人工智慧）和機器學習，可以怎樣用來解決全球問題。
@@ -1722,6 +1783,7 @@ zh-TW:
           lessons:
             Oceans:
               name: 海洋
+          student_description: 瞭解 AI（人工智慧）和機器學習，可以怎樣用來解決全球問題。
         CSPPD3-Unit3-pt2:
           title: 計算機科學原理：單元 3 專業發展挑戰
           lessons:
@@ -1743,6 +1805,7 @@ zh-TW:
               name: 歡迎！
             Wrap-Up:
               name: 總結
+          student_description: 階段 3 學年發展
         cspunit5:
           title: "（舊）計算機科學原理 單元 5 - 效能任務"
           lessons:
@@ -1887,6 +1950,7 @@ zh-TW:
               name: 不插電活動：快速函式
             'Unplugged: The Design Recipe':
               name: 不插電活動 - 設計流程
+          student_description: 以 Algebra 學習函式程式設計
         AlgebraB:
           title: 代數裡的計算機科學
           description: 以 Algebra 學習函式程式設計
@@ -1914,11 +1978,13 @@ zh-TW:
               name: 不插電活動：條件判斷和分段函式
             'Unplugged: Video Games and Coordinate Planes':
               name: 不插電活動 - 電視遊戲和座標平面
+          student_description: 以 Algebra 學習函式程式設計
         gamelab-hackathon:
           description: 在 Game Lab 裡把東西試驗出來的地方
           lessons:
             Middle_School_Hackathon:
               name: Middle_School_Hackathon
+          student_description: 在 Game Lab 裡把東西試驗出來的地方
         algebraPD1:
           description: 通過函數式程式設計教代數
           description_short: 階段 1 線上介紹
@@ -1935,6 +2001,7 @@ zh-TW:
               name: 教師控制台
             Why Computer Science belongs in Algebra:
               name: 為什麼計算機科學屬於代數
+          student_description: 通過函數式程式設計教代數
         algebraPD3c:
           title: 代數裡的計算機科學 PD
           lessons:
@@ -1998,6 +2065,7 @@ zh-TW:
               name: CSP 學生課後問卷調查
             Post-Course Survey:
               name: 課後調查
+          student_description: 本單元本旨在探索各項技術挑戰與問題，原因是我們有需要在電腦中表示數位資訊，並把資訊在人和運算裝置間來回傳輸。然後，本單元會探索網際網路的結構與設計，以及相關設定決定的意義所在。
         csp2-2017:
           title: CSP 單元 2 - 數位資訊 ('17-'18)
           description: 本單元會更深入地探討加密、表示與操控數位資訊的方法。能夠以數位方式操控資料、將資料視覺化並找出模式、趨勢與可能存在的意義，是電腦科學家每天都會做的重要實用技巧。瞭解資料來自哪裡、能夠直覺地知道可從中學習或擷取甚麼，以及能使用運算工具操控並傳達資料，是單元中注意的首要技巧。
@@ -2054,6 +2122,7 @@ zh-TW:
               name: PT 練習 - 把你的體驗編碼
             Post-Course Survey:
               name: 課後調查
+          student_description: 本單元會更深入地探討加密、表示與操控數位資訊的方法。能夠以數位方式操控資料、將資料視覺化並找出模式、趨勢與可能存在的意義，是電腦科學家每天都會做的重要實用技巧。瞭解資料來自哪裡、能夠直覺地知道可從中學習或擷取甚麼，以及能使用運算工具操控並傳達資料，是單元中注意的首要技巧。
         csp3-2017:
           title: CSP 單元 3 - 程式設計簡介 ('17-'18)
           description: "本單元介紹電腦運算的基礎概念，從而能夠製作內容豐富的互動應用程式。本課程使用 JavaScript 做為程式語言，並以
@@ -2108,6 +2177,9 @@ zh-TW:
               name: 請完成 CSP 課程中期問卷調查！
             Post-Course Survey:
               name: 課後調查
+          student_description: "本單元介紹電腦運算的基礎概念，從而能夠製作內容豐富的互動應用程式。本課程使用 JavaScript
+            做為程式語言，並以 App Lab 做為程式設計環境來製作應用程式，但這些課堂中學到的概念，適用於所有程式語言和工具。\r\n\r\n本單元的最後更新日期為
+            2017 年 10 月 30 日。請造訪 forum.code.org/c/csp/updates 閱讀更多課程更新資訊。"
         csp4-2017:
           title: CSP 單元 4 - 大數據與隱私 ('17-'18)
           description: "我們居住在這個資料豐富的世界，而我們會遇到許多複雜的問題，例如和公共政策、法律、道德與社會影響有關的問題。本單元的目標，是要讓學生對世界上的資料有全面且平衡的觀點，包括正面與負面影響，並瞭解在現代社會中為甚麼和怎樣使用加密的基礎。\r\n\r\n本單元的最後更新日期為
@@ -2159,6 +2231,8 @@ zh-TW:
               name: 課後調查
             Student Post-Course Survey:
               name: 課後問卷調查
+          student_description: "我們居住在這個資料豐富的世界，而我們會遇到許多複雜的問題，例如和公共政策、法律、道德與社會影響有關的問題。本單元的目標，是要讓學生對世界上的資料有全面且平衡的觀點，包括正面與負面影響，並瞭解在現代社會中為甚麼和怎樣使用加密的基礎。\r\n\r\n本單元的最後更新日期為
+            2017 年 11 月。請造訪 forum.code.org/c/csp/updates 閱讀更多課程更新資訊。"
         csp5-2017:
           title: CSP 單元 5 - 製作應用程式 ('17-'18)
           description: 本單元繼續介紹電腦運算的基礎概念，從而能夠製作內容豐富的互動應用程式。本課程使用 JavaScript 做為程式語言，並以
@@ -2278,6 +2352,8 @@ zh-TW:
               name: 布林值（Boolean）運算式與「如果」（If）陳述句
             Post-Course Survey:
               name: 課後調查
+          student_description: 本單元繼續介紹電腦運算的基礎概念，從而能夠製作內容豐富的互動應用程式。本課程使用 JavaScript
+            做為程式語言，並以 App Lab 做為程式設計環境來製作應用程式，但這些課堂中學到的概念，適用於所有程式語言和工具。
         csp6:
           lessons:
             Create PT:
@@ -2382,6 +2458,7 @@ zh-TW:
               name: 在課堂上使用模型
             What to Expect:
               name: 有什麼期待
+          student_description: 合作夥伴 Project GUTS
         TEMP CSD Unit 3:
           title: " TEMP CSD 單元 3 - 互動遊戲與動畫"
           description_short: 程式設計
@@ -2422,6 +2499,7 @@ zh-TW:
               name: 教師控制台
             Why Computer Science belongs in Algebra:
               name: 為什麼計算機科學屬於代數
+          student_description: 通過函數式程式設計教代數
         sciencePD1:
           description: 合作夥伴 Project GUTS
           description_short: 階段 1 線上介紹
@@ -2450,6 +2528,7 @@ zh-TW:
               name: 在課堂上使用模型
             What to Expect:
               name: 有什麼期待
+          student_description: 合作夥伴 Project GUTS
         cspoptional:
           title: 計算機科學原理選修單元
           description: 這裡列出了計算機科學原理課程中可選修的單元和內容
@@ -2474,6 +2553,7 @@ zh-TW:
               name: 單元 4 - 挑戰 - 旅行銷售員問題
             Unit 4 - One-Way Functions - The WiFi Hotspot Problem:
               name: 單元 4 - 單向函式 - WiFi 熱點問題
+          student_description: 這裡列出了計算機科學原理課程中可選修的單元和內容
         cspunit1-support:
           lesson_groups:
             required:
@@ -2546,6 +2626,7 @@ zh-TW:
               name: 事件（Evnets）的介紹
             Introduction to Text Compression:
               name: 文字壓縮介紹
+          student_description: 計算機科學原理課程的工具集成。這裡提供了我們在整個課程上使用到的工具概覽。
         cspassessment:
           title: "[Deprecated] 計算機科學原理總結評量"
           lessons:
@@ -2936,6 +3017,7 @@ zh-TW:
               name: 教學策略
             Unit 2 Challenge:
               name: 單元 2 挑戰
+          student_description: 單元 2：問題解決
         ecs-unit3:
           title: ECS 單元 3
           lessons:
@@ -3232,6 +3314,7 @@ zh-TW:
               name: 電腦科學探索學期結束問卷調查
             CSD Post-Course Survey:
               name: CSD 課後問卷調查
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
         grade2:
           title: 年級 2
           description_audience: 年齡 5-18
@@ -3324,6 +3407,7 @@ zh-TW:
               name: 設計程序
             Welcome!:
               name: 歡迎！
+          student_description: 通過函數式程式設計教代數
         csp-pre-survey:
           title: 計算機科學原理課前問卷調查
           lessons:
@@ -3416,6 +3500,7 @@ zh-TW:
               name: 電腦科學探索課前問卷調查
             CS Discoveries Rapid Survey:
               name: 電腦科學探索快速問卷調查
+          student_description: "\r\n單元 1 是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r\n"
         csp-online-test:
           lesson_groups:
             required:
@@ -3537,6 +3622,7 @@ zh-TW:
           lessons:
             Bounce:
               name: 彈跳
+          student_description: 選擇你的球隊，來場籃球比賽
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -3676,6 +3762,8 @@ zh-TW:
               description_teacher: 在本課堂中，學生會繼續使用 HTML 構築網頁上的文字，這次則會製作標題（heading）。學生會學習不同的標題元素在預設下如何顯示，並練習使用這些元素建立頁面與區域標題。然後，學生會開始決定如何在自己的網頁中組織內容。在最後一個關卡中，學生會開始製作專案，並會在整個單元中繼續製作。
             CSD Post-Course Survey:
               name: CSD 課後問卷調查
+          student_description: 在單元 2 中，你會學習如何在自己的網頁中製作並分享內容。決定你想與全世界分享哪些內容後，便會學習怎樣使用
+            HTML 與 CSS 構築自己的網頁。你也會練習各種寶貴的程式設計技巧，例如除錯與寫下註解。在單元結束時，你將可製作出屬於自己的個人網站，並可在網際網路上發佈。
         csp2-support:
           lesson_groups:
             required:
@@ -3830,6 +3918,8 @@ zh-TW:
               description_teacher: 這個時候，團隊已研究一項個人與社會重要性的主題、開發並測試紙上原型與數位原型，並開始製作初始應用程式迭代，以結合新的功能特色，以及執行錯誤修正。現在正是時候，讓學生檢閱自己完成的東西，整合成連貫的簡報展示創作的進展。團隊會使用提供的簡報範本，準備展示應用程式開發流程，包括開始解決的問題、他們在測試後以甚麼方式加入回饋意見，以及對未來的計畫。
             CSD Post-Course Survey:
               name: CSD 課後問卷調查
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
         minecraft:
           title: 一小時玩 Minecraft 設計師
           description_short: 在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。
@@ -3837,6 +3927,7 @@ zh-TW:
           lessons:
             Minecraft Hour of Code Designer:
               name: 一小時玩 Minecraft 設計師
+          student_description: 在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。
         flappy-impact-study:
           description_short: 在 10 分鐘內寫個你自己的像素鳥遊戲！
           description: 想要在 10 分鐘內寫出你自己的遊戲程式嗎？試試我們的「一小時玩 Flapply」教程！這個版本包含了課前和課後的問卷調查，以幫助我們持續改善一小時玩程式活動。麻煩要求你的班級在課堂結束前
@@ -3848,6 +3939,8 @@ zh-TW:
               name: 像素鳥程式
             Post Hour of Code Survey:
               name: 一小時玩程式 課後問卷
+          student_description: 想要在 10 分鐘內寫出你自己的遊戲程式嗎？試試我們的「一小時玩 Flapply」教程！這個版本包含了課前和課後的問卷調查，以幫助我們持續改善一小時玩程式活動。麻煩要求你的班級在課堂結束前
+            10 分鐘移到課後問卷頁面。
         coursea-draft:
           description_short: 給學齡前幼童的計算機科學介紹。
           lessons:
@@ -4130,6 +4223,8 @@ zh-TW:
               name: 一小時玩程式 2013
             Post Hour of Code Survey:
               name: 一小時玩程式 課後問卷
+          student_description: 試試我們的基礎計算機科學吧，和憤怒鳥和植物大戰殭屍的主角們一起！這個版本包含課前和課後的問卷調查，以幫助我們持續改善一小時玩程式活動。麻煩要求你的班級在課堂結束前
+            10 分鐘移到課後問卷頁面。
         sports:
           title: 編寫一個你自己的運動遊戲程式
           description_short: 搞個混搭的運動遊戲
@@ -4137,6 +4232,7 @@ zh-TW:
           lessons:
             Sports:
               name: 運動
+          student_description: 搞個混搭的運動遊戲
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -4206,6 +4302,7 @@ zh-TW:
               name: 衡量學生的學習
             AP Preparation and Support:
               name: AP 準備與支援
+          student_description: 這是一套線上支援，安排了 CSP 專業訓練課程，讓教師可以為教授單元 3 作準備。
         csdgraveyard:
           lessons:
             new stage:
@@ -4247,6 +4344,7 @@ zh-TW:
               name: 衡量學生的學習
             Unit 4 Overview:
               name: 單元 4 概覽
+          student_description: 這是一套線上支援，安排了 CSP 專業訓練課程，讓教師可以為教授單元 4 作準備。
         sciencepd4:
           description_short: 階段 3 學期反思研討會
           description: 階段 3 學期反思研討會
@@ -4259,6 +4357,7 @@ zh-TW:
               name: 思考如何實作
             Wrap-Up:
               name: 總結
+          student_description: 階段 3 學期反思研討會
         csp-ca-a:
           lessons:
             Commutative Assessment A:
@@ -4344,9 +4443,11 @@ zh-TW:
               name: 發現學習
             Measuring Student Learning:
               name: 衡量學生的學習
+          student_description: '即將推出：在 2 月中旬，這個頁面會辦理 CSP 單元 5 專業訓練課程。 '
         csp6-support:
           title: 單元 6 線上專業學習課程
           description: 即將推出：在 2 月中旬，這個頁面會有一系列提供給教師準備 AP 考試的資源。
+          student_description: 即將推出：在 2 月中旬，這個頁面會有一系列提供給教師準備 AP 考試的資源。
         csppostap-2017:
           title: CSP AP 後 - 資料庫和在應用程式中使用資料 ('17-'18)
           description_short: 學習在 App Lab 應用程式中收集與使用資料。
@@ -4548,6 +4649,7 @@ zh-TW:
               name: 逃出房間
             Extra:
               name: 額外的
+          student_description: 這個工作坊是要讓學生在一小時中學會 app lab 的基本操作。即便是不同的的計算機科學背景的學生也能夠參與其中創造樂趣。
         applab-2hour:
           title: App Lab 2 一小時工作坊
           description_audience: 國中和高中學生
@@ -4565,6 +4667,7 @@ zh-TW:
               name: 事件類型
             Getters and Setters:
               name: Getter 與 Setter
+          student_description: 這個工作坊是要讓學生在二小時中學會 app lab 的基本操作。即便是不同的的計算機科學背景的學生也能夠參與其中創造樂趣。
         coursed-ramp:
           title: CS 基本原理：課程 D
           lessons:
@@ -4585,6 +4688,8 @@ zh-TW:
               name: 實體輸入
             Analog Input:
               name: 模擬輸入
+          student_description: 這是要提供給 Maker 親自動手做的工作坊的階段規劃，不是工具使用或是計算機科學概念的教程，內容是介紹
+            App Lab 和 Maker Toolkit 的應用廣度。
         coursee-ramp:
           title: coursee-ramp
           lessons:
@@ -4835,6 +4940,7 @@ zh-TW:
                 Circuit Playground 上進行燈光表演。
             CSD Post-Course Survey:
               name: CSD 課後問卷調查
+          student_description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
         csd3-draft:
           title: CSD 單元 3 - 程式設計：動畫與遊戲
           description_short: 動畫和遊戲
@@ -4987,6 +5093,8 @@ zh-TW:
               description_teacher: 學生會討論個人資料的不同安全等級。整個班級都瞭解隱私有多重要後，他們便會學習加密資訊的流程：為同伴加密筆記，然後解密同伴的筆記。班級在課堂結束時，會討論實體與數位安全的重要性。
             CSD Post-Course Survey:
               name: CSD 課後問卷調查
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
         csd3-old:
           title: CSD 單元 3（已過時）
           description_short: 2016/2017 年 CSD 單元 3 草案
@@ -5029,6 +5137,8 @@ zh-TW:
               name: 使用遊戲設計流程
             'Project: Design a Game':
               name: 專案：設計一個遊戲
+          student_description: 這是 CSD 單元 3 的原始草案，在 2016 年秋季發行。除非你有學生目前正在使用本課程，否則你應轉為使用本單元的更新版本：studio.code.org/s/csd3
+            - 此原始版本將繼續保留至 2017 年 7 月 1 日。
         csd1-old:
           title: CSD 單元 1（已過時）
           description_short: 2016/2017 年 CSD 單元 1 草案
@@ -5053,6 +5163,8 @@ zh-TW:
               name: 以應用程式處理
             'Project: Apps and Problem Solving':
               name: 專案：App 與問題解決
+          student_description: 這是 CSD 單元 1 的原始版本，首次發佈日期為 2016 年秋季。此版本已由更新版單元取代：studio.code.org/s/csd1，並會繼續保留至
+            2017 年 7 月 1 日。
         csd2-draft:
           lessons:
             Text on the Web:
@@ -5225,6 +5337,8 @@ zh-TW:
               name: 2018 年 CSP 課後問卷調查集結
             CSP post-course survey:
               name: CSP 課後問卷調查
+          student_description: 歡迎來到 Code.org 電腦科學原理課後問卷調查。本問卷調查需要大約 15 分鐘完成。你的回覆將會保持私密與匿名
+            -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
         public-key-cryptography:
           title: 公開金鑰加密小工具
           lessons:
@@ -5345,6 +5459,7 @@ zh-TW:
               name: Play Lab 中的事件（Event）
               description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
                 Play Lab 創造出你的故事！
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         courseb-2017:
           title: 課程 B
           assignment_family_title: 課程 B
@@ -5380,6 +5495,7 @@ zh-TW:
               name: 更多的在迷宮中編程
             Programming with Rey and BB-8:
               name: 和 BB-8 與 Rey 一起寫程式
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         coursec-2017:
           title: 課程 C
           assignment_family_title: 課程 C
@@ -5419,6 +5535,7 @@ zh-TW:
               name: 藝術家中的迴圈（Loops）
             Loops with Rey and BB-8:
               name: 和 BB-8 與 Rey 一起練習迴圈（Loop）
+          student_description: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
         coursed-2017:
           title: 課程 D
           assignment_family_title: 課程 D
@@ -5505,6 +5622,7 @@ zh-TW:
               description_student: 在編寫程式時，你是否遇到過問題？在本課堂中，你會學習除錯的秘密。除錯是找出並解決程式碼問題的流程。
               description_teacher: 在這項線上活動中，學生會在「收藏家」環境中練習除錯。他們會練習閱讀與編輯程式碼，從而使用簡單的演算法、迴圈（loop）與巢狀迴圈（nested
                 loop），修正謎題中的錯誤。
+          student_description: 學習新的編程概念，包括演算法、巢狀迴圈、當迴圈、條件以及事件。在創建和分享自己的遊戲或故事之前，會先做個數位公民的介紹。
         coursee-2017:
           title: 課程 E
           assignment_family_title: 課程 E
@@ -5660,6 +5778,8 @@ zh-TW:
               name: 巢狀迴圈
             Functions in Harvester:
               name: 收割者遊戲中的函式（Function）
+          student_description: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
+            2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
         coursef-2017:
           title: 課程 F
           assignment_family_title: 課程 F
@@ -5793,6 +5913,8 @@ zh-TW:
               name: 蜜蜂/殭屍遊戲裡的巢狀迴圈（Nested Loop）
             Nested Loops with Frozen:
               name: 在冰雪奇緣中使用巢狀迴圈（Nested Loop）
+          student_description: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
+            2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
         csdnovice:
           title: 電腦科學探索 TeacherCon 新任輔導員
           description_audience: CSD 新任輔導員
@@ -5811,6 +5933,7 @@ zh-TW:
               name: 恭喜
             Wrap Up:
               name: 總結
+          student_description: 作為新任輔導員，這裡可記錄你在 TeacherCon 的反思內容。
         csp-explore-task:
           title: CSP 探索 PT 準備
           description_short: 這些課堂涵蓋準備與完成 CS 原理 AP 探索表現任務。
@@ -5866,6 +5989,7 @@ zh-TW:
               name: 探索 PT - 完成任務
             Participate in a longitudinal study!:
               name: 請參與縱貫研究吧！
+          student_description: 這些課堂用於指導學生準備並完成 AP 考試與表現任務。
         cspnovice:
           title: 電腦科學原理 TeacherCon 新任輔導員反思
           description_audience: CSP 新任輔導員
@@ -5887,6 +6011,7 @@ zh-TW:
               name: 星期四
             Wrap Up:
               name: 總結
+          student_description: 作為新任輔導員，這裡可記錄你在 TeacherCon 的反思內容。
         novice-view:
           title: 檢視新任人員回覆
           description_audience: brook, dani, mal
@@ -5905,6 +6030,7 @@ zh-TW:
               name: CSD 週三
             CSD Thursday:
               name: CSD 週四
+          student_description: NA
         csp1-dlp:
           title: CSP 單元 1 深入學習
           description_audience: 電腦科學原理受訓中輔導員
@@ -5923,6 +6049,8 @@ zh-TW:
               name: 完成你的深入學習
             Complete Unit 1 Deeper Learning Reflections:
               name: 完成單元 1 深入學習反思
+          student_description: 這是提供給 Code.org CSP 受訓中輔導員的深入學習計畫單元 1。你將可在這裡找到反思提示與指引，以表現出熟練
+            Code.org CSP 課程的單元 1。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csp2-dlp:
           title: CSP 單元 2 深入學習
           description_audience: 電腦科學原理受訓中輔導員
@@ -5941,6 +6069,8 @@ zh-TW:
               name: 完成單元 2 深入學習
             Complete Unit 2 Deeper Learning Reflections:
               name: 完成單元 2 深入學習反思
+          student_description: 這是提供給 Code.org CSP 受訓中輔導員的深入學習計畫單元 2。你將可在這裡找到反思提示與指引，以表現出熟練
+            Code.org CSP 課程的單元 2。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csp3-dlp:
           title: CSP 單元 3 深入學習
           description_audience: 電腦科學原理受訓中輔導員
@@ -5957,6 +6087,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 3 Deeper Learning Reflections:
               name: 完成單元 3 深入學習反思
+          student_description: 這是提供給 Code.org CSP 受訓中輔導員的深入學習計畫單元 3。你將可在這裡找到反思提示與指引，以表現出熟練
+            Code.org CSP 課程的單元 3。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csp4-dlp:
           title: CSP 單元 4 深入學習
           description_audience: 電腦科學原理受訓中輔導員
@@ -5973,6 +6105,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 4 Deeper Learning Reflections:
               name: 完成單元 4 深入學習反思
+          student_description: 這是提供給 Code.org CSP 受訓中輔導員的深入學習計畫單元 4。你將可在這裡找到反思提示與指引，以表現出熟練
+            Code.org CSP 課程的單元 4。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csp5-dlp:
           title: CSP 單元 5 深入學習
           description_audience: 電腦科學原理受訓中輔導員
@@ -5989,6 +6123,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 5 Deeper Learning Reflections:
               name: 完成單元 5 深入學習反思
+          student_description: 這是提供給 Code.org CSP 受訓中輔導員的深入學習計畫單元 5。你將可在這裡找到反思提示與指引，以表現出熟練
+            Code.org CSP 課程的單元 5。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd1-dlp:
           title: 電腦科學探索單元 1 深入學習
           description_audience: 電腦科學探索 - 受訓中輔導員
@@ -6005,6 +6141,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 1 Deeper Learning Reflections:
               name: 完成單元 1 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 1。你將可在這裡找到反思提示與指引，以表現出熟練
+            Code.org CS 探索課程的單元 1。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd6-dlp:
           title: 電腦科學探索單元 6 深入學習
           description_audience: 電腦科學探索 - 受訓中輔導員
@@ -6021,6 +6159,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 6 Deeper Learning Reflections:
               name: 完成單元 6 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 6。你將可在這裡找到反思提示與指引，以表現出熟練
+            Code.org CS 探索課程的單元 6。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd5-dlp:
           title: 電腦科學探索單元 5 深入學習
           description_audience: 電腦科學探索 - 受訓中輔導員
@@ -6037,6 +6177,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 5 Deeper Learning Reflections:
               name: 完成單元 5 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 5。你將可在這裡找到反思提示與指引，以表現出熟練
+            Code.org CS 探索課程的單元 5。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd4-dlp:
           title: 電腦科學探索單元 4 深入學習
           description_audience: 電腦科學探索 - 受訓中輔導員
@@ -6053,6 +6195,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 4 Deeper Learning Reflections:
               name: 完成單元 4 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 4。你將可在這裡找到反思提示與指引，以表現出熟練
+            Code.org CS 探索課程的單元 4。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd3-dlp:
           title: 電腦科學探索單元 3 深入學習
           description_audience: 電腦科學探索 - 受訓中輔導員
@@ -6069,6 +6213,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 3 Deeper Learning Reflections:
               name: 完成單元 3 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 3。你將可在這裡找到反思提示與指引，以表現出熟練
+            Code.org CS 探索課程的單元 3。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd2-dlp:
           title: 電腦科學探索單元 2 深入學習
           description_audience: 電腦科學探索 - 受訓中輔導員
@@ -6085,6 +6231,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 2 Deeper Learning Reflections:
               name: 完成單元 2 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 2。你將可在這裡找到反思提示與指引，以表現出熟練
+            Code.org CS 探索課程的單元 2。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         allthettsthings:
           lessons:
             TTS:
@@ -6201,6 +6349,7 @@ zh-TW:
               name: 收割者遊戲中的條件式（Conditional）與迴圈（Loop）
             Until Loops in Maze:
               name: 迷宮裡的 until（直到）迴圈
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         pre-express-2017:
           title: 學前預讀
           assignment_family_title: 學前兒童的速學課程
@@ -6236,6 +6385,7 @@ zh-TW:
               name: Play Lab 中的事件（Event）
             Spelling Bee:
               name: 拼字蜜蜂
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         subgoal-labels-opt-in:
           title: 選擇加入子目標標籤研究
           lessons:
@@ -6374,6 +6524,7 @@ zh-TW:
               name: App Lab 入門
             'Lesson 1: App Lab Intro':
               name: 課堂 1 ：App Lab 簡介
+          student_description: 用積木式或文字式的 JavaScript 編程工具，來創建一個你自己的 app。如果你已經會用積木寫了程式，那就進入下個階段。
         e-f-ramp:
           title: 課程 E & F（提升）
           lesson_groups:
@@ -6503,6 +6654,7 @@ zh-TW:
               name: 新舞台
             'CSP3A: Using Simple Commands':
               name: CSP3A：使用簡單命令
+          student_description: 本單元介紹電腦程式設計的基礎概念，對象為子目標 A 組學生。
         new-express:
           title: 新的 Express Script
           lesson_groups:
@@ -6769,6 +6921,8 @@ zh-TW:
               name: 用大數據解決問題
             Project - Solve a Data Problem:
               name: 專案 - 解決數據問題
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
         subgoals-assessment-staging:
           lessons:
             subgoal assessments:
@@ -6881,6 +7035,7 @@ zh-TW:
               name: PT 練習 - 設計數位場景
             Unit 3 Chapter 1 Assessment:
               name: 單元 3 第 1 章 評估
+          student_description: "這是 /s/csp3 中的上線關卡複本，已加入全新與修訂版本的舞台。請勿編輯上線關卡。\r\n"
         pwc:
           title: PwC「存取你的潛能」課程
           description: PwC 相信，所有學生都有潛質成為科技主導勞動力量的明日領袖。「存取你的潛能」是我們的承諾，協助拉近機會缺口，方法是讓年青人（尤其是弱勢社群人士）獲得所需的財務、科技與事業選擇技能，以改變他們的生活軌跡。做為我們承諾的一部分，我們很高興推出「存取你的潛能」國中科技與事業課程。
@@ -6919,6 +7074,7 @@ zh-TW:
               name: 智慧衣著設計
             Intro to App Lab (13+):
               name: App Lab 入門 (13+)
+          student_description: PwC 相信，所有學生都有潛質成為科技主導勞動力量的明日領袖。「存取你的潛能」是我們的承諾，協助拉近機會缺口，方法是讓年青人（尤其是弱勢社群人士）獲得所需的財務、科技與事業選擇技能，以改變他們的生活軌跡。做為我們承諾的一部分，我們很高興推出「存取你的潛能」國中科技與事業課程。
         allthesurveys:
           title: 所有問卷調查
           description_short: 放在舞台上，並測試 Code.org 問卷調查
@@ -6977,6 +7133,7 @@ zh-TW:
               name: Minecraft 英雄之旅 一小時玩程式
             Minecraft Hour of Code:
               name: 一小時玩 Minecraft
+          student_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
         applab-intro-staging:
           title: App Lab 入門集結
           lessons:
@@ -7022,6 +7179,9 @@ zh-TW:
               name: 設定：數位作品與其他工具
             Post-Course Survey:
               name: 課後調查
+          student_description: "這些課堂可協助你瞭解、準備與執行 AP 探索表現任務。每個「課堂」都含有實用文件的連結，讓你的老師可幫助你學習。注意：課堂
+            1 的第 2 個項目與探索 PT 沒有直接關係，但包含需要的一般技術設定與工具，以進行「探索」與「建立」任務的各個元素。\r\n\r\n本單元的最後更新日期為
+            2017 年 11 月。請造訪 forum.code.org/c/csp/updates 閱讀更多課程更新資訊。"
         csp-create-2017:
           title: 創建 - AP 效能任務準備 ('18-'19)
           description_short: 提供各種課堂與資源，協助學生準備並完成 AP 建立表現任務。
@@ -7044,6 +7204,9 @@ zh-TW:
               name: 建立 PT - 完成任務
             Post-Course Survey:
               name: 課後調查
+          student_description: "這些課堂可協助你瞭解、準備與執行 AP 建立表現任務。每個「課堂」都含有實用文件的連結，讓你的老師可幫助你學習。注意：課堂
+            1 的第 1 個項目與建立 PT 沒有直接關係，但包含需要的一般技術設定與工具，以進行「探索」與「建立」任務的各個元素。\r\n\r\n本單元的最後更新日期為
+            2017 年 12 月。請造訪 forum.code.org/c/csp/updates 閱讀更多課程更新資訊。"
         csp3-reovery:
           title: csp3 海底學生作品回復
           lessons:
@@ -7325,6 +7488,7 @@ zh-TW:
               name: 專案 - 設計一個遊戲
             CS Discoveries End of Semester Survey:
               name: 電腦科學探索學期結束問卷調查
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
         textbook:
           title: CSF 課本頁面
           lessons:
@@ -7468,6 +7632,7 @@ zh-TW:
               name: 電腦科學探索學期結束問卷調查
             CS Discoveries Post-Course Survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
         csd2-2018:
           title: CSD 單元 2 - Web 開發  ('18-'19)
           description: 在單元 2 中，你會學習如何在自己的網頁中製作並分享內容。決定你想與全世界分享哪些內容後，便會學習怎樣使用 HTML
@@ -7560,6 +7725,8 @@ zh-TW:
 '
             CS Discoveries Post-Course Survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 在單元 2 中，你會學習如何在自己的網頁中製作並分享內容。決定你想與全世界分享哪些內容後，便會學習怎樣使用
+            HTML 與 CSS 構築自己的網頁。你也會練習各種寶貴的程式設計技巧，例如除錯與寫下註解。在單元結束時，你將可製作出屬於自己的個人網站，並可在網際網路上發佈。
         coursea-2018:
           title: 課程 A（2018）
           assignment_family_title: 課程 A
@@ -7615,6 +7782,7 @@ zh-TW:
               name: 迷宮中的循序（Sequence）
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie 和 Big Project
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         express-2018:
           title: 速學課程
           assignment_family_title: 速學課程
@@ -7766,6 +7934,7 @@ zh-TW:
               name: 接力編程
             Graph Paper Programming:
               name: 方格紙編程
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         courseb-2018:
           title: 課程 B（2018）
           assignment_family_title: 課程 B
@@ -7809,6 +7978,7 @@ zh-TW:
               name: 移動它，移動它
             Copyright and Creativity:
               name: 以公平的方式製作與玩遊戲
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         coursed-2018:
           title: 課程 D（2018）
           assignment_family_title: 課程 D
@@ -7872,6 +8042,7 @@ zh-TW:
               name: 蜜蜂裡的巢狀迴圈（Nested Loop）
             Nested Loops in Maze:
               name: 迷宮裡的巢狀迴圈（Nested Loops）
+          student_description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
         jr-test:
           lessons:
             Programming with Behaviors:
@@ -7963,6 +8134,7 @@ zh-TW:
               name: 單元 5 評估 4 - 列出演算法、帶回傳值的函式
             Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
               name: 單元 5 評估 5 - 實踐 AP 虛擬碼問題（變數、程序、迴圈、條件式）
+          student_description: 本頁含有所有多選評估問題的副本，這些問題在課程單元 1-5 出現。學生可能需要接受這些小測試，做為多選題考試的練習。
         coursec-2018:
           title: 課程 C（2018）
           assignment_family_title: 課程 C
@@ -8002,6 +8174,7 @@ zh-TW:
               name: 二進制手環
             Looking Ahead:
               name: 與 Minecraft 一起展望未來
+          student_description: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
         csd6-2018:
           title: CSD 單元 6 - 物理運算 ('18-'19)
           description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
@@ -8080,6 +8253,7 @@ zh-TW:
               name: 專案：原型創新
             CS Discoveries Post-Course Survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
         coursee-2018:
           title: 課程 E（2018）
           assignment_family_title: 課程 E
@@ -8213,6 +8387,8 @@ zh-TW:
               name: 寵物長頸鹿
             Copyright and Creativity:
               name: 數位分享
+          student_description: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
+            2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
         coursef-2018:
           title: 課程 F（2018）
           assignment_family_title: 課程 F
@@ -8360,6 +8536,8 @@ zh-TW:
               name: 在 Minecraft 裡寫函式
             Conditionals in Farmer:
               name: 與農夫一起嘗試條件式（Conditional）
+          student_description: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
+            2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
         csp1-2018:
           title: CSP 單元 1 - 網際網路 ('18-'19)
           description: 本單元本旨在探索各項技術挑戰與問題，原因是我們有需要在電腦中表示數位資訊，並把資訊在人和運算裝置間來回傳輸。然後，本單元會探索網際網路的結構與設計，以及相關設定決定的意義所在。
@@ -8408,6 +8586,7 @@ zh-TW:
               name: 單元 1 第 2 節 評量
             Sending Text:
               name: 傳送文字
+          student_description: 本單元本旨在探索各項技術挑戰與問題，原因是我們有需要在電腦中表示數位資訊，並把資訊在人和運算裝置間來回傳輸。然後，本單元會探索網際網路的結構與設計，以及相關設定決定的意義所在。
         csd1-2018:
           title: CSD 單元 1 - 問題解決 ('18-'19)
           description: "\r\n單元 1 是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r\n"
@@ -8474,6 +8653,7 @@ zh-TW:
               description_student: 本課堂會講解電腦在輸入與輸出方面的內容，並會以與學生相關的熟悉方式：應用程式來說明。班級學生會評估一些網頁應用程式，從而分析這些程式設計用於解決的特定問題、程式需要處理的輸入內容，以及程式會向使用者提供的輸出內容。課堂結束時，學生會觀察這些應用程式，教師也會帶領討論應用程式對社會的影響。
               description_teacher: 本課堂會檢閱電腦在輸入、輸出、儲存與處理方面內容，並會以與學生相關的熟悉方式：應用程式來說明。學生會分為
                 2 人一組，評估一些智慧手機應用程式，從而分析這些程式設計用於解決的特定問題、程式需要處理的輸入內容、程式把輸入處理為所需輸出的處理程序，以及程式希望儲存留待日後使用的資訊。班級課堂結束時，學生會展開討論，把課堂和學生更熟悉的應用程式互相聯繫。
+          student_description: "\r\n單元 1 是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r\n"
         csd4-2018:
           title: CSD 單元 4 - 設計流程 ('18-'19)
           description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
@@ -8564,6 +8744,8 @@ zh-TW:
               description_teacher: 這個時候，團隊已研究一項個人與社會重要性的主題、開發並測試紙上原型與數位原型，並開始製作初始應用程式迭代，以結合新的功能特色，以及執行錯誤修正。現在正是時候，讓學生檢閱自己完成的東西，整合成連貫的簡報展示創作的進展。團隊會使用提供的簡報範本，準備展示應用程式開發流程，包括開始解決的問題、他們在測試後以甚麼方式加入回饋意見，以及對未來的計畫。
             CS Discoveries Post-Course Survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
         csd5-2018:
           title: CSD 單元 5 - 數據和社會
           description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
@@ -8648,6 +8830,8 @@ zh-TW:
               description_teacher: 本單元結束時，學生會依據同學提供並分析的資料，設計一個建議引擎。觀察一款建議引擎應用程式範例後，學生會遵從專案指南完成這項橫跨多天的活動。在最初的數個步驟中，學生會選擇希望協助使用者做出甚麼選擇、需要為建議引擎提供哪些資料、編寫問卷調查，以及收集同學選擇的資訊。然後，學生會詮釋資料，並使用學到的知識建立建議引擎。最後，他們會以自己的演算法向同學提出建議。學生會進行同儕審查，並對專案做出所有必要的更新，然後準備向全班展示的簡報。
             CS Discoveries Post-Course Survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
         csp2-2018:
           title: CSP 單元 2 - 數位資訊 ('18-'19)
           description: 本單元會更深入地探討加密、表示與操控數位資訊的方法。能夠以數位方式操控資料、將資料視覺化並找出模式、趨勢與可能存在的意義，是電腦科學家每天都會做的重要實用技巧。瞭解資料來自哪裡、能夠直覺地知道可從中學習或擷取甚麼，以及能使用運算工具操控並傳達資料，是單元中注意的首要技巧。
@@ -8700,6 +8884,7 @@ zh-TW:
               name: 有損與無損壓縮
             Unit 2 Assessment:
               name: 單元 2 評估
+          student_description: 本單元會更深入地探討加密、表示與操控數位資訊的方法。能夠以數位方式操控資料、將資料視覺化並找出模式、趨勢與可能存在的意義，是電腦科學家每天都會做的重要實用技巧。瞭解資料來自哪裡、能夠直覺地知道可從中學習或擷取甚麼，以及能使用運算工具操控並傳達資料，是單元中注意的首要技巧。
         csp3-2018:
           title: CSP 單元 3 - 程式設計簡介 ('18-'19)
           description_short: 以自上而下的設計方式，使用經典小海龜繪圖來學習 JavaScript 程式設計基礎。
@@ -8762,6 +8947,8 @@ zh-TW:
               name: 中年級問卷
             CS Principles Post-Course Survey:
               name: 電腦科學原理課後問卷調查
+          student_description: 這些課堂可協助你瞭解、準備與執行 AP 探索表現任務。每個「課堂」都含有實用文件的連結，讓你的老師可幫助你學習。注意：課堂
+            1 的第 2 個項目與探索 PT 沒有直接關係，但包含需要的一般技術設定與工具，以進行「探索」與「建立」任務的各個元素。
         csp-create-2018:
           title: 創建 - AP 效能任務準備 ('18-'19)
           description: 這些課堂可協助你瞭解、準備與執行 AP 建立表現任務。每個「課堂」都含有實用文件的連結，讓你的老師可幫助你學習。注意：課堂
@@ -8781,6 +8968,8 @@ zh-TW:
               name: 建立 PT - 完成任務
             CS Principles Post-Course Survey:
               name: 電腦科學原理課後問卷調查
+          student_description: 這些課堂可協助你瞭解、準備與執行 AP 建立表現任務。每個「課堂」都含有實用文件的連結，讓你的老師可幫助你學習。注意：課堂
+            1 的第 1 個項目與建立 PT 沒有直接關係，但包含需要的一般技術設定與工具，以進行「探索」與「建立」任務的各個元素。
         csp4-2018:
           title: CSP 單元 4 - 大數據與隱私 ('18-'19)
           description: 我們居住在這個資料豐富的世界，而我們會遇到許多複雜的問題，例如和公共政策、法律、道德與社會影響有關的問題。本單元的目標，是要讓學生對世界上的資料有全面且平衡的觀點，包括正面與負面影響，並瞭解在現代社會中為甚麼和怎樣使用加密的基礎。
@@ -8825,6 +9014,7 @@ zh-TW:
               name: 中年級問卷
             CS Principles Post-Course Survey:
               name: 電腦科學原理課後問卷調查
+          student_description: 我們居住在這個資料豐富的世界，而我們會遇到許多複雜的問題，例如和公共政策、法律、道德與社會影響有關的問題。本單元的目標，是要讓學生對世界上的資料有全面且平衡的觀點，包括正面與負面影響，並瞭解在現代社會中為甚麼和怎樣使用加密的基礎。
         csp5-2018:
           title: CSP 單元 5 - 製作應用程式 ('18-'19)
           description: 本單元繼續介紹電腦運算的基礎概念，從而能夠製作內容豐富的互動應用程式。本課程使用 JavaScript 做為程式語言，並以
@@ -8890,6 +9080,8 @@ zh-TW:
               name: 中年級問卷
             CS Principles Post-Course Survey:
               name: 電腦科學原理課後問卷調查
+          student_description: 本單元繼續介紹電腦運算的基礎概念，從而能夠製作內容豐富的互動應用程式。本課程使用 JavaScript
+            做為程式語言，並以 App Lab 做為程式設計環境來製作應用程式，但這些課堂中學到的概念，適用於所有程式語言和工具。
         csppostap-2018:
           title: AP 後 - 資料工具 ('18-'19)
           description: "在本單元的第 1 章，學生會瞭解各種技巧，以詮釋視覺化資料，並使用試算表與視覺化工具，製作自己的數位作品。學生會以製作中的專案「類別資料追蹤器」，學習怎樣收集與清理資料，以及使用一些常用工具運算匯總資料，並製作視覺化資料。\r\n\r\n第
@@ -8945,6 +9137,8 @@ zh-TW:
               name: 第 1 章評估
             CS Principles Post-Course Survey:
               name: 電腦科學原理課後問卷調查
+          student_description: "在本單元的第 1 章，學生會瞭解各種技巧，以詮釋視覺化資料，並使用試算表與視覺化工具，製作自己的數位作品。學生會以製作中的專案「類別資料追蹤器」，學習怎樣收集與清理資料，以及使用一些常用工具運算匯總資料，並製作視覺化資料。\r\n\r\n第
+            2 章會探索應用程式內資料的重要性。App Lab 提供多種工具，讓你可在自己的應用程式中收集並使用資料。第 2 章也會概述這些工具如何運作、提供可使用這些工具製作的範例專案樣本，並提供空間製作與提交期末專案。"
         spritelab:
           title: Sprite Lab 簡介（試行）
           description_audience: 課程 E/F 學生
@@ -8959,6 +9153,7 @@ zh-TW:
               name: 外星人舞蹈派對 - 輸入（Input）
             Virtual Pet - Interactions:
               name: 虛擬寵物 — 互動
+          student_description: 這是 Code.org 最新工具 Sprite Lab 的試行課程，用於課程 E 與 F
         csd1-dlp-18:
           title: 電腦科學探索單元 1 深入學習 2018-2019
           description_audience: CS Discoveries 輔導員培訓 2018-2019
@@ -8979,6 +9174,8 @@ zh-TW:
               name: 完成單元 2 深入學習反思
             Complete Unit 3 Deeper Learning Reflections:
               name: 完成單元 3 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 1。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 探索課程的單元 1。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd2-dlp-18:
           title: 電腦科學探索單元 2 深入學習 2018-2019
           description_audience: CS Discoveries 輔導員培訓 2018-2019
@@ -8995,6 +9192,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 2 Deeper Learning Reflections:
               name: 完成單元 2 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 2。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 探索課程的單元 2。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd3-dlp-18:
           title: 電腦科學探索單元 3 深入學習 2018-2019
           description_audience: CS Discoveries 輔導員培訓 2018-2019
@@ -9011,6 +9210,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 3 Deeper Learning Reflections:
               name: 完成單元 3 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 3。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 探索課程的單元 3。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd4-dlp-18:
           title: 電腦科學探索單元 4 深入學習 2018-2019
           description_audience: CS Discoveries 輔導員培訓 2018-2019
@@ -9029,6 +9230,8 @@ zh-TW:
               name: 完成單元 2 深入學習反思
             Complete Unit 4 Deeper Learning Reflections:
               name: 完成單元 4 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 4。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 探索課程的單元 4。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd5-dlp-18:
           title: 電腦科學探索單元 5 深入學習 2018-2019
           description_audience: CS Discoveries 輔導員培訓 2018-2019
@@ -9045,6 +9248,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 5 Deeper Learning Reflections:
               name: 完成單元 5 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 5。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 探索課程的單元 5。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd6-dlp-18:
           title: 電腦科學探索單元 6 深入學習 2018-2019
           description_audience: CS Discoveries 輔導員培訓 2018-2019
@@ -9063,6 +9268,8 @@ zh-TW:
               name: 完成單元 5 深入學習反思
             Complete Unit 6 Deeper Learning Reflections:
               name: 完成單元 6 深入學習反思
+          student_description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 6。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 探索課程的單元 6。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csp1-dlp-18:
           title: 電腦科學原理單元 1 深入學習 2018-2019
           description_audience: CS Principles 輔導員培訓 2018-2019
@@ -9079,6 +9286,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 1 Deeper Learning Reflections:
               name: 完成單元 1 深入學習反思
+          student_description: 這是提供給 Code.org CS 原理課程受訓中輔導員的深入學習計畫單元 1。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 原理課程的單元 1。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csp2-dlp-18:
           title: 電腦科學原理單元 2 深入學習 2018-2019
           description_audience: CS Principles 輔導員培訓 2018-2019
@@ -9095,6 +9304,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 2 Deeper Learning Reflections:
               name: 完成單元 2 深入學習反思
+          student_description: 這是提供給 Code.org CS 原理課程受訓中輔導員的深入學習計畫單元 2。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 原理課程的單元 2。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csp3-dlp-18:
           title: 電腦科學原理單元 3 深入學習 2018-2019
           description_audience: CS Principles 輔導員培訓 2018-2019
@@ -9111,6 +9322,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 3 Deeper Learning Reflections:
               name: 完成單元 3 深入學習反思
+          student_description: 這是提供給 Code.org CS 原理課程受訓中輔導員的深入學習計畫單元 3。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 原理課程的單元 3。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csp4-dlp-18:
           title: 電腦科學原理單元 4 深入學習 2018-2019
           description_audience: CS Principles 輔導員培訓 2018-2019
@@ -9129,6 +9342,8 @@ zh-TW:
               name: 完成單元 3 深入學習反思
             Complete Unit 4 Deeper Learning Reflections:
               name: 完成單元 4 深入學習反思
+          student_description: 這是提供給 Code.org CS 原理課程受訓中輔導員的深入學習計畫單元 4。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 原理課程的單元 4。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csp5-dlp-18:
           title: 電腦科學原理單元 5 深入學習 2018-2019
           description_audience: CS Principles 輔導員培訓 2018-2019
@@ -9145,6 +9360,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Unit 5 Deeper Learning Reflections:
               name: 完成單元 5 深入學習反思
+          student_description: 這是提供給 Code.org CS 原理課程受訓中輔導員的深入學習計畫單元 5。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 原理課程的單元 5。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csp-explore-dlp-18:
           title: 電腦科學原理探索深入學習 2018-2019
           description_audience: CS Principles 輔導員培訓 2018-2019
@@ -9165,6 +9382,8 @@ zh-TW:
               name: 完成探索 AP 單元深入學習反思
             Complete Explore Deeper Learning Reflections:
               name: 完成探索深入學習反思
+          student_description: 這是提供給 Code.org CS 原理課程受訓中輔導員的深入學習計畫探索 AP 單元。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 原理課程的探索 AP 單元。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csp-create-dlp-18:
           title: 電腦科學原理製作深入學習 2018-2019
           description_audience: CS Principles 輔導員培訓 2018-2019
@@ -9181,6 +9400,8 @@ zh-TW:
               name: 深度學習概覽
             Complete Create Deeper Learning Reflections:
               name: 完成製作深入學習反思
+          student_description: 這是提供給 Code.org CS 原理課程受訓中輔導員的深入學習計畫製作 AP 單元。你將可在這裡找到反思提示與指引，以表現出身為輔導員的你，已熟練
+            Code.org CS 原理課程的製作 AP 單元。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
         csd-post-survey:
           title: CSD 學生課後問卷調查 ('18-'19)
           description_audience: CSD 學生
@@ -9193,6 +9414,8 @@ zh-TW:
           lessons:
             CSD post-course survey:
               name: CSD 課後問卷調查
+          student_description: 歡迎來到 Code.org 電腦科學探索課後問卷調查。本問卷調查需要大約 15 分鐘完成。你的回覆將會保持私密與匿名
+            -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
         csd-novice-18:
           title: 電腦科學探索新手反思 2018-2019
           description_audience: CS Discoveries 輔導員培訓 2018-2019
@@ -9231,6 +9454,8 @@ zh-TW:
               name: 第 3 天
             Day 4:
               name: 第 4 天
+          student_description: 這是為 Code.org 電腦科學探索受訓中輔導員提供的新手反思套裝，用於輔導員的 5 天夏日工作坊。你將在這裡找到實體
+            5 天夏日工作坊的每日反思提示。這些問題將會是我們在輔導員培訓週末中執行工作的基礎。
         csd-apprentice-18:
           title: 電腦科學探索學徒反思 2018-2019
           description_audience: CS Discoveries 輔導員培訓 2018-2019
@@ -9263,6 +9488,8 @@ zh-TW:
               name: 第 3 天
             Day 4:
               name: 第 4 天
+          student_description: 這是為 Code.org 電腦科學探索受訓中輔導員提供的學徒反思套裝，用於輔導員的 5 天夏日工作坊。你將在這裡找到實體
+            5 天夏日工作坊的每日反思提示。這些問題將會是我們在輔導員培訓週末中執行工作的基礎。
         csp-novice-18:
           title: 電腦科學原理新手反思 2018-2019
           description_audience: CS Principles 輔導員培訓 2018-2019
@@ -9295,6 +9522,8 @@ zh-TW:
               name: 第 3 天
             Day 4:
               name: 第 4 天
+          student_description: 這是為 Code.org 電腦科學原理受訓中輔導員提供的新手反思套裝，用於輔導員的 5 天夏日工作坊。你將在這裡找到實體
+            5 天夏日工作坊的每日反思提示。這些問題將會是我們在輔導員培訓週末中執行工作的基礎。
         csp-apprentice-18:
           title: 電腦科學原理學徒反思 2018-2019
           description_audience: CS Principles 輔導員培訓 2018-2019
@@ -9327,6 +9556,8 @@ zh-TW:
               name: 第 3 天
             Day 4:
               name: 第 4 天
+          student_description: 這是為 Code.org 電腦科學原理受訓中輔導員提供的學徒反思套裝，用於輔導員的 5 天夏日工作坊。你將在這裡找到實體
+            5 天夏日工作坊的每日反思提示。這些問題將會是我們在輔導員培訓週末中執行工作的基礎。
         pre-express-2018:
           title: 學前兒童的速學課程（2018）
           assignment_family_title: 學前兒童的速學課程
@@ -9378,6 +9609,7 @@ zh-TW:
               name: 和鼠奎特一起學迴圈（Loop）
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie 和 Big Project
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         spritelab-validated:
           lessons:
             Fish Tank - Creating Sprites:
@@ -9412,6 +9644,7 @@ zh-TW:
               name: 深度學習概覽
             Complete Practice Question:
               name: 完整練習問題
+          student_description: 用於展示 PLC 課程如何運作。
         spritelab-simple:
           title: Sprite Lab 簡介（EE）
           description: 這是 Code.org 最新工具 Sprite Lab 的試行課程，用於課程 E 與 F
@@ -9424,6 +9657,7 @@ zh-TW:
               name: 外星人舞蹈派對 - 輸入（Input）
             Virtual Pet - Interactions:
               name: 虛擬寵物 — 互動
+          student_description: 這是 Code.org 最新工具 Sprite Lab 的試行課程，用於課程 E 與 F
         spritelab-ee:
           title: Sprite Lab 簡介（EE）
           lessons:
@@ -9458,6 +9692,7 @@ zh-TW:
               name: 新舞台
             Dance Party:
               name: 舞蹈派對
+          student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
         frozen-2018-test-b:
           title: 新冰雪奇緣腳本
           lessons:
@@ -9470,6 +9705,7 @@ zh-TW:
           lessons:
             Aquatic:
               name: 水上巡航
+          student_description: Minecraft 帶著新活動回來啦！拿出你的創造力和解決問題能力，一同用程式探索與打造水世界。
         sconyers:
           title: 翠絲的遊樂場
           lessons:
@@ -9559,6 +9795,7 @@ zh-TW:
           lessons:
             Dance Party - Go Further:
               name: 舞蹈派對 - 深入學習
+          student_description: 在一小時之後嘗試更多奇思妙想。
         coursef-2019:
           title: 課程 F（2019）
           description: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
@@ -9740,6 +9977,8 @@ zh-TW:
               name: 模擬實驗
               description_student: 在電腦上執行模擬，並實驗一下變更參數後的情況。
               description_teacher: 在 Sprite Lab 上執行簡單模擬，學生便會體驗到電腦運算可怎樣用來收集資料，從而找出各種趨勢與模式。多次執行模擬後，學生便會有機會預測一下，變更模擬中的變數可能會怎樣影響結果，然後再測試這個假設。
+          student_description: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
+            2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
         dance-low:
           title: 舞蹈派對（低網路頻寬）
           description_short: 編寫你自己的舞蹈派對，然後分享給好友！（此版本用於連線速度較慢的情況）
@@ -9848,6 +10087,7 @@ zh-TW:
               name: 舞蹈派對
               description_student: 現在是時候慶祝一下了！你會在本課堂中編寫程式，製作自己的互動舞蹈派對。
               description_teacher: 在本課堂中，學生會編寫程式，製作自己的互動舞蹈派對。這項活動需要使用音效，音效工具用來對音樂做出反應。
+          student_description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
         coursee-2019:
           title: 課程 E（2019）
           description: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
@@ -10029,6 +10269,8 @@ zh-TW:
               name: 以無障礙為目的設計程式
             Songwriting:
               name: 歌曲創作
+          student_description: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
+            2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
         express-2019:
           title: 速學課程（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -10158,6 +10400,7 @@ zh-TW:
               name: 'Minecraft 中的條件式：水上巡航 '
             Concept Practice with Minecraft:
               name: 與 Minecraft 一起展望未來
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         csd1-2019:
           title: CSD 單元 1 - 問題解決與運算 ('19-'20)
           description: "問題解決與運算是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
@@ -10216,6 +10459,7 @@ zh-TW:
                 2 人一組完成，但也可 1 人獨自完成。
             Post-Project Test:
               name: 專案後測驗
+          student_description: "問題解決與運算是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
         andrea-test:
           title: andrea-test
           description_audience: 6-12 受訓中輔導員
@@ -10263,6 +10507,8 @@ zh-TW:
               name: 第二部分
             part 3:
               name: 第三部分
+          name: andrea-test
+          student_description: 這段說明較長，我嘗試在製作一個課程…仍然在想概述與內容來自哪裡…
         dance-extras-gallery:
           title: 繼續跳舞
           description_short: 跳出一小時玩程式活動 - 參加這項 Code.org 舞蹈派對教程的跟進活動。
@@ -10270,6 +10516,7 @@ zh-TW:
           lessons:
             Dance Party - Go Further:
               name: 舞蹈派對 - 深入學習
+          student_description: 在一小時之後嘗試更多奇思妙想。
         coursec-2019:
           title: 課程 C（2019）
           description: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
@@ -10380,6 +10627,7 @@ zh-TW:
                 專案的資料，並使用不同類型的圖表將資料視覺化。
               description_teacher: 資料可用來幫助學生瞭解自己的世界，並解答有趣的問題。在本課堂中，學生會收集一個 Play Lab
                 專案的資料，並使用不同類型的圖表將資料視覺化。
+          student_description: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
         csp-mid-survey:
           title: CSP 學生年中問卷調查
           description_audience: CSP 學生
@@ -10392,6 +10640,8 @@ zh-TW:
           lessons:
             CSP Mid-year survey:
               name: CSP 年中問卷調查
+          student_description: 歡迎來到 Code.org 電腦科學原理年中問卷調查。本問卷調查需要大約 15 分鐘完成。你的回覆將會保持私密與匿名
+            -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
         gamelab:
           title: Game Lab
           description: 為教師提供的教程，用於在 Game Lab 中進行開發。這些教程會超出 CSD 中涵括的概念。
@@ -10400,6 +10650,7 @@ zh-TW:
               name: 開始與結束畫面
             Start and End Screens2:
               name: 開始與結束畫面2
+          student_description: 為教師提供的教程，用於在 Game Lab 中進行開發。這些教程會超出 CSD 中涵括的概念。
         coursea-2019:
           title: 課程 A（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -10474,6 +10725,7 @@ zh-TW:
               name: 和鼠奎特一起學序列
               description_student: 為鼠奎特設計程式，讓他能夠拿到橡樹果實。
               description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         courseb-2019:
           title: 課程 B（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -10556,6 +10808,7 @@ zh-TW:
               name: 迷宮中的循序（Sequence）
               description_student: 協助憤怒鳥在道路上移動至搗蛋豬的位置。
               description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         pre-express-2019:
           title: 學前兒童的速學課程（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -10613,6 +10866,7 @@ zh-TW:
               name: 以事件（Event）展開皇家大戰
             Ocean Scene with Loops:
               name: 海洋場景與迴圈（Loop）
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         removed19:
           title: 已從 2019 年 CSF 中移除
           lessons:
@@ -10720,6 +10974,8 @@ zh-TW:
               name: 專案後測驗
             CS Discoveries Post Course survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 在單元 2 中，你會學習如何在自己的網頁中製作並分享內容。決定你想與全世界分享哪些內容後，便會學習怎樣使用
+            HTML 與 CSS 構築自己的網頁。你也會練習各種寶貴的程式設計技巧，例如除錯與寫下註解。在單元結束時，你將可製作出屬於自己的個人網站，並可在網際網路上發佈。
         csd3-2019:
           title: CSD 單元 3 -互動式遊戲和動畫
           description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
@@ -10853,6 +11109,7 @@ zh-TW:
               name: 專案後測驗
             CS Discoveries Post Course survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
         csd4-2019:
           title: CSD 單元 4 - 設計流程 ('19-'20)
           description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
@@ -10947,6 +11204,8 @@ zh-TW:
               name: 電腦科學探索課後問卷調查
             Post-Project Test:
               name: 專案後測驗
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
         csd5-2019:
           title: CSD 單元 5 - 數據和社會
           description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
@@ -11033,6 +11292,8 @@ zh-TW:
               name: 專案後測驗
             CS Discoveries Post Course survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
         csd6-2019:
           title: CSD 單元 6 - 物理運算
           description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
@@ -11081,6 +11342,7 @@ zh-TW:
               name: 專案後測驗
             CS Discoveries Post Course survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
         csp4-pilot:
           title: CSP 單元 4 試行版 - 變數（Variable）、條件式（Conditional）與函式（Function）
           lesson_groups:
@@ -11217,6 +11479,7 @@ zh-TW:
               name: PT 練習 - 網際網路與社會
             Unit 1 Chapter 2 Assessment:
               name: 單元 1 第 2 節 評量
+          student_description: 本單元本旨在探索各項技術挑戰與問題，原因是我們有需要在電腦中表示數位資訊，並把資訊在人和運算裝置間來回傳輸。然後，本單元會探索網際網路的結構與設計，以及相關設定決定的意義所在。
         csp2-2019:
           title: CSP 單元 2 - 數位資訊 ('19-'20)
           description: 本單元會更深入地探討加密、表示與操控數位資訊的方法。能夠以數位方式操控資料、將資料視覺化並找出模式、趨勢與可能存在的意義，是電腦科學家每天都會做的重要實用技巧。瞭解資料來自哪裡、能夠直覺地知道可從中學習或擷取甚麼，以及能使用運算工具操控並傳達資料，是單元中注意的首要技巧。
@@ -11245,6 +11508,7 @@ zh-TW:
               name: 單元 2 評估
             CS Principles Post Course survey:
               name: 電腦科學原理課後問卷調查
+          student_description: 本單元會更深入地探討加密、表示與操控數位資訊的方法。能夠以數位方式操控資料、將資料視覺化並找出模式、趨勢與可能存在的意義，是電腦科學家每天都會做的重要實用技巧。瞭解資料來自哪裡、能夠直覺地知道可從中學習或擷取甚麼，以及能使用運算工具操控並傳達資料，是單元中注意的首要技巧。
         csp3-2019:
           title: CSP 單元 3 - 程式設計簡介 ('18-'19)
           description_short: 以自上而下的設計方式，使用經典小海龜繪圖來學習 JavaScript 程式設計基礎。
@@ -11322,6 +11586,7 @@ zh-TW:
               name: 可選：資料問題
             CS Principles Post Course survey:
               name: 電腦科學原理課後問卷調查
+          student_description: 我們居住在這個資料豐富的世界，而我們會遇到許多複雜的問題，例如和公共政策、法律、道德與社會影響有關的問題。本單元的目標，是要讓學生對世界上的資料有全面且平衡的觀點，包括正面與負面影響，並瞭解在現代社會中為甚麼和怎樣使用加密的基礎。
         csp5-2019:
           title: CSP 單元 5 - 製作應用程式 ('19-'20)
           description: 本單元繼續介紹電腦運算的基礎概念，從而能夠製作內容豐富的互動應用程式。本課程使用 JavaScript 做為程式語言，並以
@@ -11383,6 +11648,8 @@ zh-TW:
               name: 中年級問卷
             CS Principles Post Course survey:
               name: 電腦科學原理課後問卷調查
+          student_description: 本單元繼續介紹電腦運算的基礎概念，從而能夠製作內容豐富的互動應用程式。本課程使用 JavaScript
+            做為程式語言，並以 App Lab 做為程式設計環境來製作應用程式，但這些課堂中學到的概念，適用於所有程式語言和工具。
         csp-explore-2019:
           title: 探索 - AP 表現任務準備 ('19-'20)
           description: 這些課堂可協助你瞭解、準備與執行 AP 探索表現任務。每個「課堂」都含有實用文件的連結，讓你的老師可幫助你學習。注意：課堂
@@ -11404,6 +11671,8 @@ zh-TW:
               name: 中年級問卷
             CS Principles Post Course survey:
               name: 電腦科學原理課後問卷調查
+          student_description: 這些課堂可協助你瞭解、準備與執行 AP 探索表現任務。每個「課堂」都含有實用文件的連結，讓你的老師可幫助你學習。注意：課堂
+            1 的第 2 個項目與探索 PT 沒有直接關係，但包含需要的一般技術設定與工具，以進行「探索」與「建立」任務的各個元素。
         csp-create-2019:
           title: 創建 - AP 效能任務準備 ('18-'19)
           description: 這些課堂可協助你瞭解、準備與執行 AP 建立表現任務。每個「課堂」都含有實用文件的連結，讓你的老師可幫助你學習。注意：課堂
@@ -11423,6 +11692,8 @@ zh-TW:
               name: 建立 PT - 完成任務
             CS Principles Post Course survey:
               name: 電腦科學原理課後問卷調查
+          student_description: 這些課堂可協助你瞭解、準備與執行 AP 建立表現任務。每個「課堂」都含有實用文件的連結，讓你的老師可幫助你學習。注意：課堂
+            1 的第 1 個項目與建立 PT 沒有直接關係，但包含需要的一般技術設定與工具，以進行「探索」與「建立」任務的各個元素。
         csppostap-2019:
           title: AP 後 - 資料工具 ('19-'20)
           description: "在本單元的第 1 章，學生會瞭解各種技巧，以詮釋視覺化資料，並使用試算表與視覺化工具，製作自己的數位作品。學生會以製作中的專案「類別資料追蹤器」，學習怎樣收集與清理資料，以及使用一些常用工具運算匯總資料，並製作視覺化資料。\r\n\r\n第
@@ -11472,6 +11743,8 @@ zh-TW:
               name: 期末專案
             CS Principles Post Course survey:
               name: 電腦科學原理課後問卷調查
+          student_description: "在本單元的第 1 章，學生會瞭解各種技巧，以詮釋視覺化資料，並使用試算表與視覺化工具，製作自己的數位作品。學生會以製作中的專案「類別資料追蹤器」，學習怎樣收集與清理資料，以及使用一些常用工具運算匯總資料，並製作視覺化資料。\r\n\r\n第
+            2 章會探索應用程式內資料的重要性。App Lab 提供多種工具，讓你可在自己的應用程式中收集並使用資料。第 2 章也會概述這些工具如何運作、提供可使用這些工具製作的範例專案樣本，並提供空間製作與提交期末專案。"
         csp1-pilot:
           title: CSP 單元 1 試行版 - 數位資訊
           lesson_groups:
@@ -11590,6 +11863,7 @@ zh-TW:
               name: 資料與社會
             Physical Computing:
               name: 實體運算
+          student_description: 電腦科學探索的所有影片
         time4csdemo:
           title: Time4CS 佛羅里達州的多樣性
           description_audience: 四年級
@@ -11691,6 +11965,7 @@ zh-TW:
               name: 我遇上大麻煩了！
             I am in Big Trouble:
               name: 我遇上大麻煩了！
+          student_description: 本模組集中說明四年級學生的科學與社會科標準。在科學上，他們會檢視各種生態標準，範圍涵蓋棲息地、生態系統、原生物種與入侵物種。在社會學中，學生會以佛羅里達州政府部門做為思考對象，並思考日常生活中的市民可怎樣影響當地與州的政策。
         csp1-pilot-staging:
           title: 單元 1：位元與位元組
           lesson_groups:
@@ -12315,6 +12590,8 @@ zh-TW:
           lessons:
             CSD post-course survey:
               name: CSD 課後問卷調查
+          student_description: "電腦科學探索課後問卷調查是我們使用的重要工具，讓我們可取得你的回饋意見，並以此改善課程的品質。\r問卷調查將會保持私密與匿名
+            -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。"
         csp-post-survey-2018:
           title: CSP 學生課後問卷調查 ('18-'19)
           description_audience: CSP 學生
@@ -12327,6 +12604,8 @@ zh-TW:
           lessons:
             CSP post-course survey:
               name: CSP 課後問卷調查
+          student_description: 歡迎來到 Code.org 電腦科學原理課後問卷調查。本問卷調查需要大約 15 分鐘完成。你的回覆將會保持私密與匿名
+            -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
         csp5-pilot:
           title: CSP 單元 5 試行版 - 清單（List）、迴圈（Loop）與尋訪（Traversal）
           lesson_groups:
@@ -12458,6 +12737,8 @@ zh-TW:
               name: 第 4 天
             Wrap Up:
               name: 總結
+          student_description: 這是為 Code.org 受訓中輔導員提供的新手反思套裝，用於輔導員的 5 天夏日工作坊。你將在這裡找到實體
+            5 天夏日工作坊的每日反思提示。這些問題將會是我們在輔導員培訓工作坊中執行工作的基礎。
         csd-test-saving-state:
           title: 線上活動範例
           lessons:
@@ -12494,6 +12775,8 @@ zh-TW:
               name: 第 4 天
             Wrap Up:
               name: 總結
+          student_description: 這是為 Code.org 受訓中輔導員提供的學徒反思套裝，用於輔導員的 5 天夏日工作坊。你將在這裡找到實體
+            5 天夏日工作坊的每日反思提示。這些問題將會是我們在輔導員培訓工作坊中執行工作的基礎。
         csd-sample-online:
           title: 電腦科學探索線上活動範例
           lessons:
@@ -12559,6 +12842,7 @@ zh-TW:
                 2 人一組完成，但也可 1 人獨自完成。
             Post-Project Test:
               name: 專案後測驗
+          student_description: "問題解決與運算是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
         csd2-pilot:
           title: CSD 單元 2 - Web 開發 ('19-'20)
           description: 在單元 2 中，你會學習如何在自己的網頁中製作並分享內容。決定你想與全世界分享哪些內容後，便會學習怎樣使用 HTML
@@ -12683,6 +12967,8 @@ zh-TW:
               name: 同儕審查與最後修訂
             Project - Website for a Purpose:
               name: 專案 - 為達成目的而製作網站
+          student_description: 在單元 2 中，你會學習如何在自己的網頁中製作並分享內容。決定你想與全世界分享哪些內容後，便會學習怎樣使用
+            HTML 與 CSS 構築自己的網頁。你也會練習各種寶貴的程式設計技巧，例如除錯與寫下註解。在單元結束時，你將可製作出屬於自己的個人網站，並可在網際網路上發佈。
         csd3-pilot:
           title: CSD 單元 3 -互動式遊戲和動畫
           description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
@@ -12822,6 +13108,7 @@ zh-TW:
               name: 製作場景
             Text and Captioned Scenes:
               name: 文字與字幕場景
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
         csd-bugs:
           title: 程式錯誤範例（供 CSD 教師閱覽）
           lessons:
@@ -12916,6 +13203,8 @@ zh-TW:
               name: 瞭解課程
             Demonstrating Understanding:
               name: 表現出瞭解內容
+            Focus Area 1:
+              name: 課程
         dlp19-csp-mod-fit:
           title: 電腦科學原理深入學習 2019 受訓中輔導員（FiT）工作坊
           lesson_groups:
@@ -13283,6 +13572,7 @@ zh-TW:
           lessons:
             Dance Party:
               name: 舞蹈派對
+          student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
         k5-onlinepd-2019:
           title: 計算機科學基礎的教授
           description: 使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！
@@ -13368,6 +13658,7 @@ zh-TW:
               name: 檢閱你的反思
             End of Course projects:
               name: 課程結束專案
+          student_description: 使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！
         dance-extras-2019:
           title: 繼續跳舞 2019
           description: 在一小時之後嘗試更多奇思妙想。
@@ -13375,6 +13666,7 @@ zh-TW:
           lessons:
             Dance Party - Go Further:
               name: 舞蹈派對 - 深入學習
+          student_description: 在一小時之後嘗試更多奇思妙想。
         csp10-pilot:
           title: 網路安全與全球影響
           lessons:
@@ -13599,6 +13891,7 @@ zh-TW:
               name: 辯論- 蟒蛇影響原生物種數量
             Work on Project:
               name: 製作專案
+          student_description: "[加入說明]"
         time4cs-control-unit-1:
           title: Time4CS 控制單元 1
           lesson_groups:
@@ -13903,6 +14196,7 @@ zh-TW:
               name: HTML 專案
             CSS Project:
               name: CSS 專案
+          student_description: 暫存位置，以放置新的 CSD Web 開發迷你專案
         csp9-pilot:
           title: CSP 單元 9 試行版 - 資料
           lessons:
@@ -14108,6 +14402,12 @@ zh-TW:
               name: 鏈接頁面
             Using Images:
               name: 使用圖片
+          student_description: In Unit 2, you’ll learn how to create and share the
+            content on your own web pages. After deciding what content you want to
+            share with the world, you’ll learn how to structure and style your pages
+            using HTML and CSS. You’ll also practice valuable programming skills such
+            as debugging and commenting.  By the end of the unit, you’ll have a personal
+            website that you can publish to the Internet.
         csd1-2020:
           title: CSD 單元 1 - 問題解決 ('19-'20)
           description: "問題解決與運算是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
@@ -14299,6 +14599,7 @@ zh-TW:
               name: 探索解決問題（替代課程3：探索解決問題）
             Storage:
               name: 儲存
+          student_description: "問題解決與運算是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
         csd4-2020:
           title: CSD Unit 4 - The Design Process ('19-'20)
           description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
@@ -14393,6 +14694,8 @@ zh-TW:
               name: 專案後測驗
             CS Discoveries Post Course survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
         csd5-2020:
           title: CSD 單元 5 - 數據和社會
           description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
@@ -14479,6 +14782,8 @@ zh-TW:
               name: 專案後測驗
             CS Discoveries Post Course survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
         csd6-2020:
           title: CSD 單元 6 - 物理運算
           description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
@@ -14527,6 +14832,7 @@ zh-TW:
               name: 專案後測驗
             CS Discoveries Post Course survey:
               name: 電腦科學探索課後問卷調查
+          student_description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
         csd3-2020:
           title: CSD 單元 3 -互動式遊戲和動畫
           description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
@@ -14834,6 +15140,7 @@ zh-TW:
               name: 文字
             Sprites:
               name: 角色
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
         coursea-2020:
           title: 課程 A（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -14898,6 +15205,7 @@ zh-TW:
               description_student: 創作自己的遊戲或故事。
               description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
                 Play Lab 創造出你的故事！
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         courseb-2020:
           title: 課程 B（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -14968,6 +15276,7 @@ zh-TW:
                 Play Lab 創造出你的遊戲！
             Digital Trails:
               description_student: 瞭解自己的數位足跡，並學習怎樣在瀏覽網站時保持安全。
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         coursec-2020:
           title: 課程 C（2019）
           description: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
@@ -15070,6 +15379,7 @@ zh-TW:
                 - 從紙張上計畫到在我們的網站上編寫程式。此外，我們也提供多種構思，協助教師完成最終展示！
             Password Power-Up:
               description_student: 在本課堂中，你會瞭解密碼可怎樣保護你的資訊，以及怎樣才算是好的密碼。
+          student_description: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
         coursed-2020:
           title: 課程 D（2019）
           description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
@@ -15171,6 +15481,7 @@ zh-TW:
             End of Course Project:
               name: 課程結束專案
               description_student: 準備就緒，開始編寫大量程式！是時候開始製作你的專案了。
+          student_description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
         coursee-2020:
           title: 課程 E（2019）
           description: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
@@ -15280,6 +15591,8 @@ zh-TW:
               name: 以無障礙為目的設計程式
               description_student: 在本課堂中，學生會瞭解無障礙使用與同理心的價值所在，途徑為一起思考並設計無障礙解決方案，用於假想的應用程式中。
               description_teacher: 在本課堂中，學生會瞭解無障礙使用與同理心的價值所在，途徑為一起思考並設計無障礙解決方案，用於假想的應用程式中。
+          student_description: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
+            2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
         coursef-2020:
           title: 課程 F（2019）
           description: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
@@ -15390,6 +15703,8 @@ zh-TW:
                 Sprite Lab（或你方便提供的其他介面）中製作自己的專案（這可能是專案中最長的階段）。在測試與同儕審查後，學生會修訂自己的程式碼。最後，學生將能夠向同學展示自己的成品。"
             AI for Oceans:
               name: 在海洋中使用的 AI
+          student_description: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
+            2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
         express-2020:
           title: 速學課程（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -15515,6 +15830,7 @@ zh-TW:
               name: 外星人舞蹈派對
             Behaviors in Sprite Lab:
               name: Sprite Lab 的行為（Behavior）
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         pre-express-2020:
           title: 學前兒童的速學課程（2020）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -15575,6 +15891,7 @@ zh-TW:
               name: 讓事件活動起來
             A Royal Battle with Events:
               name: 以事件（Event）展開皇家大戰
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         csp1-2020:
           title: CSP 單元 1 - 數位資訊 ('20-'21)
           lesson_groups:
@@ -16051,6 +16368,7 @@ zh-TW:
               display_name: 深造：課程 E 和 F
             k5_next_steps_1:
               display_name: 下一步
+          student_description: 使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！
         dani-june-2020-test:
           lessons:
             CS Principles Pre-survey:
@@ -16413,6 +16731,22 @@ zh-TW:
           description_short: '使用精靈圖實驗室進行病毒爆發模擬程式設計。 '
           description: '使用精靈圖實驗室進行病毒爆發模擬程式設計。 '
           name: 疫情爆發
+          student_description: '使用精靈圖實驗室進行病毒爆發模擬程式設計。 '
+        2021drafting:
+          lessons:
+            Course F Introduction:
+              name: Sprite Lab 簡介
+            Virus Simulation for Code Bytes:
+              name: 編碼一個模擬
+            Sprites in Action:
+              name: 運行中的角色
+          lesson_groups:
+            introduction:
+              display_name: 介紹
+            lessonGroup-3:
+              display_name: 變數
+            outbreak:
+              display_name: 疫情爆發模擬
         csd1-2021:
           title: CSD 單元 1 - 問題解決 ('19-'20)
           description: "問題解決與運算是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
@@ -16457,6 +16791,7 @@ zh-TW:
               display_name: 第 2 章：計算機與問題解決能力
             csd1_3:
               display_name: 替代課程
+          student_description: "問題解決與運算是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
         csd2-2021:
           title: CSD 單元 2 - Web 開發
           description: In Unit 2, you’ll learn how to create and share the content
@@ -16540,6 +16875,12 @@ zh-TW:
               display_name: '第2章: 多網頁網站'
             cspSurvey:
               display_name: 問卷
+          student_description: In Unit 2, you’ll learn how to create and share the
+            content on your own web pages. After deciding what content you want to
+            share with the world, you’ll learn how to structure and style your pages
+            using HTML and CSS. You’ll also practice valuable programming skills such
+            as debugging and commenting.  By the end of the unit, you’ll have a personal
+            website that you can publish to the Internet.
         csd3-2021:
           title: CSD 單元 3 -互動式遊戲和動畫
           description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
@@ -16618,6 +16959,7 @@ zh-TW:
               display_name: 第 2 章：創建遊戲
             cspSurvey:
               display_name: 問卷
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
         csd4-2021:
           title: CSD Unit 4 - The Design Process ('19-'20)
           description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
@@ -16660,9 +17002,16 @@ zh-TW:
             Digital Design:
               key: 數位設計
               name: 數位設計
+              description_student: 在開發、測試與收集紙上原型的回饋意見後，團隊便會移至 App Lab，建立應用程式的下一個迭代。每個團隊成員都會使用拖放設計模式，為自己團隊的應用程式製作至少
+                1 頁的內容，以回應在前一個回合測試時收到的回饋意見。
+              description_teacher: 小組在協作開發應用程式的紙上原型後，便會以分治的方式，依據紙上原型來開始製作互動式數位版本。每位學生會各自使用
+                App Lab 的拖放設計模式，完成漸進式的技能訓練關卡，以學習怎樣製作紙上原型的數位版本。之後，每個小組成員都會在 App Lab
+                上，為自己的應用程式製作至少 1 頁內容，並在之後合併為單一個應用程式。
             Linking Screens:
               key: 連結不同畫面
               name: 連結不同畫面
+              description_student: 團隊會以前一個課堂中設計的不同畫面做為基礎，合併各畫面並加入單一個應用程式中。然後，學生可加入一些簡單的程式碼，使點擊按鈕後進入適當畫面。
+              description_teacher: 在本課堂中，團隊會把前一個課堂設計的各個畫面，合併為單一個應用程式，並使用程式碼互相連結起來。學生會繼續製作前一個課堂中開始製作的模型應用程式，從而學習基本的事件驅動程式設計。除了昨天學生設計的螢幕畫面外，學生也會學習怎樣製作額外的畫面，甚至匯入其他人製作的畫面。
             Testing the App:
               key: 測試應用程式
               name: 測試應用程式
@@ -16678,6 +17027,8 @@ zh-TW:
             CS Discoveries Post Course survey:
               key: 電腦科學探索課後問卷調查
               name: 電腦科學探索課後問卷調查
+            Build a Paper Prototype:
+              name: 紙上原型
           lesson_groups:
             csd4_1:
               display_name: 第 1 章：用戶為中心的設計
@@ -16687,6 +17038,8 @@ zh-TW:
               display_name: 第 2 章：解決數據問題
             cspSurvey:
               display_name: 問卷
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
         csd5-2021:
           title: CSD 單元 5 - 數據和社會
           description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
@@ -16748,6 +17101,8 @@ zh-TW:
               display_name: 第 2 章：解決數據問題
             cspSurvey:
               display_name: 問卷
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
         csd6-2021:
           title: CSD 單元 6 - 物理運算
           description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
@@ -16814,6 +17169,7 @@ zh-TW:
               display_name: 第 2 章：建立物理原型
             cspSurvey:
               display_name: 問卷
+          student_description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
         csp1-2021:
           title: CSP 單元 1 - 數位資訊 ('20-'21)
           lessons:
@@ -16861,7 +17217,7 @@ zh-TW:
               name: 專案 - 數位資訊困境 第 2 部分
             'Lesson 14: Assessment Day':
               key: 課堂 14：評估日
-              name: 課堂 14：評估日
+              name: 評估日
           lesson_groups:
             cspSurvey:
               display_name: 問卷
@@ -16896,7 +17252,7 @@ zh-TW:
               name: 專案 - 網際網路困境 第 2 部分
             'Lesson 9: Assessment Day':
               key: 課堂 9：評估日
-              name: 課堂 9：評估日
+              name: 評估日
           lesson_groups:
             csp_unit2_2020:
               display_name: "（舊）單元 2：網際網路"
@@ -16932,7 +17288,7 @@ zh-TW:
               name: 專案 - 設計應用程式 第 5 部分
             'Lesson 11: Assessment Day':
               key: 課堂 11：評估日
-              name: 課堂 11：評估日
+              name: 評估日
           lesson_groups:
             csp_unit3_2020:
               display_name: 單元 3：應用程式設計簡介
@@ -16983,7 +17339,7 @@ zh-TW:
               name: 專案 - 決策者應用程式 第 3 部分
             'Lesson 15: Assessment Day':
               key: 課堂 15：評估日
-              name: 課堂 15：評估日
+              name: 評估日
           lesson_groups:
             csp_variables:
               display_name: 變數
@@ -17049,7 +17405,7 @@ zh-TW:
               name: 學期黑客松 第 5 部分
             'Lesson 18: Assessment Day':
               key: 課堂 18：評估日
-              name: 課堂 18：評估日
+              name: 評估日
           lesson_groups:
             csp_lists:
               display_name: 清單
@@ -17079,7 +17435,7 @@ zh-TW:
               name: 平行與分散式演算法
             'Lesson 6: Assessment Day':
               key: 課堂 6：評估日
-              name: 課堂 6：評估日
+              name: 評估日
           lesson_groups:
             csp_unit6_2020:
               display_name: 單元 6：演算法
@@ -17117,7 +17473,7 @@ zh-TW:
               name: 專案 - 製作函式庫 第 3 部分
             'Lesson 11: Assessment Day':
               key: 課堂 11：評估日
-              name: 課堂 11：評估日
+              name: 評估日
           lesson_groups:
             csp_parameters_return_values:
               display_name: 參數及函數回傳值
@@ -17164,7 +17520,7 @@ zh-TW:
               name: 專案 - 訴說關於資料的故事 - 第 2 部分
             'Lesson 9: Assessment Day':
               key: 課堂 9：評估日
-              name: 課堂 9：評估日
+              name: 評估日
           lesson_groups:
             csp_unit9_2020:
               display_name: 單元 9：資料
@@ -17212,7 +17568,7 @@ zh-TW:
               name: 專案：創新模擬 第 7 部分
             'Lesson 14: Unit Assessment Day':
               key: 課堂 14：單元評估日
-              name: 課堂 14：單元評估日
+              name: 評估日
           lesson_groups:
             csp_unit10_2020:
               display_name: 單元 10：網路安全與全球影響
@@ -17264,6 +17620,7 @@ zh-TW:
               display_name: 迴圈
             csf_events:
               display_name: 事件
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         courseb-2021:
           title: 課程 B（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -17314,6 +17671,7 @@ zh-TW:
               display_name: 運算的影響
             csf_events:
               display_name: 事件
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         coursec-2021:
           title: 課程 C（2019）
           description: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
@@ -17382,6 +17740,7 @@ zh-TW:
               display_name: 數據
             end_of_course_project:
               display_name: 課程結束專案
+          student_description: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
         coursed-2021:
           title: 課程 D（2019）
           description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
@@ -17457,6 +17816,7 @@ zh-TW:
               display_name: 數位公民
             end_of_course_project:
               display_name: 課程結束專案
+          student_description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
         coursee-2021:
           title: 課程 E（2019）
           description: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
@@ -17536,6 +17896,8 @@ zh-TW:
               display_name: 運算的影響
             end_of_course_project:
               display_name: 課程結束專案
+          student_description: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
+            2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
         coursef-2021:
           title: 課程 F（2019）
           description: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
@@ -17613,6 +17975,8 @@ zh-TW:
               display_name: 角色
             end_of_course_project:
               display_name: 課程結束專案
+          student_description: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
+            2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
         express-2021:
           title: 速學課程（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -17646,6 +18010,8 @@ zh-TW:
             Snowflakes with Anna and Elsa:
               key: 和安娜與艾莎一同玩雪花
               name: 和安娜與艾莎一同玩雪花
+            'Looking Ahead with Minecraft ':
+              name: 與 Minecraft 一起展望未來
             If/Else with Bee:
               key: 與小蜜蜂一起嘗試 If/Else（如果/否則）
               name: 與小蜜蜂一起嘗試 If/Else（如果/否則）
@@ -17719,6 +18085,7 @@ zh-TW:
               display_name: 角色
             end_of_course_project:
               display_name: 課程結束專案
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         pre-express-2021:
           title: 學前兒童的速學課程（2020）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -17731,6 +18098,8 @@ zh-TW:
             Sequencing with Scrat:
               key: 和鼠奎特一起學序列
               name: 和鼠奎特一起學序列
+            Programming in with Angry Birds:
+              name: 與憤怒鳥一起編程
             Programming with Rey and BB-8:
               key: 和 BB-8 與 Rey 一起寫程式
               name: 和 BB-8 與 Rey 一起寫程式
@@ -17762,14 +18131,15 @@ zh-TW:
               display_name: 迴圈
             csf_events:
               display_name: 事件
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         csf-2021-pilot:
           lessons:
             Learning Sprites with Sprite Lab:
               name: Sprite Lab 中的游泳小魚
             Virus Simulation for Code Bytes:
               name: 編碼一個模擬
-            lesson-1:
-              name: 信封變數
+            Course F Introduction:
+              name: Sprite Lab 簡介
           lesson_groups:
             ramp_up:
               display_name: 介紹
@@ -17777,3 +18147,225 @@ zh-TW:
               display_name: 疫情爆發模擬
             lessonGroup-3:
               display_name: 變數
+            Sprites:
+              display_name: 角色
+        csd4-preview-2021:
+          description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
+          description_short: 學習如何設計程式，以符合使用者的需要。
+          lessons:
+            Analysis of Design:
+              key: 設計分析
+              name: 設計分析
+              description_student: 班級會瞭解多種不同的茶壺設計，以思考怎樣做出設計選擇，以及為甚麼做出這些選擇。班級同學會使用茶壺做為範例，瞭解使用者、使用者需要，以及他們使用的物件設計之間的關係。
+              description_teacher: 單元會集中把問題解決內容分組，並為其他使用者開發產品。在單元開始時，學生首先會研究不同茶壺的設計。然後學生會分析每款茶壺，嘗試找出特定使用者的需要可能怎樣在其設計中反映出來。學生思考這些設計選擇，並嘗試把每款茶壺與一位潛在使用者配對後，便可以開始觀察：以使用者為本的方式設計產品（包括實際與數位數產），如何能讓產品更實用和易用。活動結束時，會請學生提議對其中一個茶壺做一些變更，讓茶壺更實用或更易用。
+            Understanding Your User:
+              key: 瞭解您的使用者
+              name: 瞭解您的使用者
+              description_student: 班級學生會以使用者設定檔，瞭解不同的使用者如何可能對各種產品做出反應。每位學生都會扮演不同人物，從而以其他人的角度體驗各種設計。
+              description_teacher: "設計師需要瞭解使用者的需要，才可製作出實用的產品。本課堂鼓勵學生思考怎樣為其他人設計產品，方法是以使用者設定檔扮演其他人，並以扮演的角色對一系列產品做出反應。每位學生都會獲分配一個使用者設定檔，用於說明該角色，然後學生便會以該角色選擇恰當的產品、以批判方式評論產品設計，並建議設計上的改良。\r\n"
+            User-Centered Design Micro Activity:
+              key: 以使用者為中心的微型活動
+              name: 以使用者為中心的微型活動
+              description_student: 班級學生會分為各小組，然後使用設計流程獲得智慧衣著的構思。此活動是單元中提供的第一個練習機會，首先會集合思考，然後確定使用者，最後提出設計建議。本單元提供不同機會，讓學生練習設計解決方案，以解決其他人的需要。
+              description_teacher: 本課堂會引導學生完成簡化版本的設計流程，學生會在整個單元中瞭解這個流程。學生首先會一起思考並列出智慧衣著的潛在使用者清單。然後，所有學生一起把這些構想分組至較廣泛的類別，然後每組選擇一個使用者類別。小組會重複這個程序，一起思考他們的使用者有哪些需要或關注事項，接著把這些需要分為不同類別，並選擇集中工作的一個類別。最後，學生會設計一件智慧衣著，過程中會使用剛才想出來的特定需要與關注事項，從而引導他們做出決策。在班級課堂結束時，學生會快速分享自己的決策流程，並接收相關回饋意見，瞭解他們的產品有多能夠解決所選擇的使用者需要。
+            User Interfaces:
+              key: 使用者介面
+              name: 使用者介面
+              description_student: 看看紙上原型可怎樣在編寫程式碼前，用來測試軟體並取得回饋意見。為了協助開發人員實現他們的構思，班級同學會測試並提供應用程式的紙上原型。
+              description_teacher: 完成迷你設計專案後，學生會學習設計的下一個階段 - 製作產品原型，嘗試解決使用者的需要。學生會分為各自的團隊，研究稱為「Txt
+                Ur Grndkdz」的聊天應用程式紙上原型。使用這個紙上原型，學生便有機會瞭解，簡單的紙上原型可怎樣用來快速測試構思與假設，然後才真正使用電腦。「使用」提供的原型後，學生便會開始找出各種方式，以改善下一個迭代的版本。
+            Feedback and Testing:
+              key: 回饋與測試
+              name: 回饋與測試
+              description_student: 使用者一直在測試一款應用程式，他們會有大量回饋意見提供給開發人員。班級同學需要透徹瞭解他們的回饋意見、找出共同的主題與需要，然後開始修改原型，讓原型更能符合使用者的需要。
+              description_teacher: 在本課堂中，學生會使用前一個課堂中紙上原型應用程式的「使用者」回饋意見，從而改良紙上原型的使用者介面。課堂開始時，學生會反思：設計師需要把人類的需要，以科技轉化為對使用者介面（或「體驗」）做出的變更。然後，學生會依據前一個課堂中製作的應用程式，收集使用者的回饋意見與請求。學生會分組把回饋意見分類，並找出有哪些方式，讓回饋意見中表達的需要，能夠在變更應用程式介面後解決。之後，學生會分組實作其中一些變更，以滿足他們找到的其中一種需要。
+            Identifying User Needs:
+              key: 確定使用者需求
+              name: 確定使用者需求
+              description_student: 直到這個階段為止，班級學生研究的使用者都位於遠端地點，而來自使用者僅有的資訊，皆使用文字或角色扮演來代表。現在，學生會每
+                2 人一組，互相依賴對方做為潛在的使用者，並會互相訪問，以找出可開發應用程式解決的需要。
+              description_teacher: 直到這個階段為止，學生集中設計程式的使用者對象，某程度上都位於遠端地點。不論以集體思考、個人設定檔或是文字回饋意見交流，學生與最終使用者間一直都沒有直接的聯繫。設計這種距離感，是為了協助學生在思考使用者需要時跳出自己的思考框框；但是為了以更直接的方式取得實際使用者的資訊，學生便需要依賴同學。在本課堂中，學生會以
+                2 人一組，成為對方的使用者（與設計師），讓所有學生都可直接訪問最終使用者，並向對方提出問題，從而取得更多資訊瞭解自己的設計。每組學生會互相訪問對方，並嘗試找出一項能使用應用程式解決的特定需要。
+            Project - Paper Prototype:
+              key: 專案 - 紙上原型
+              name: 專案 - 紙上原型
+              description_student: 班級同學會使用前一個課堂的訪談資訊，想出一些應用程式構思，以解決他們的使用者之需要。要表達這些構思，以及測試構思的效用，每位同學將會建立並測試自己的紙上原型。
+              description_teacher: 每位學生會依據自己在前一個課堂的同伴訪談，想出一個解決使用者問題的應用程式構思。然後，學生會依據應用程式構思來開始製作紙上原型，在獨立的記事卡上繪畫「螢幕」。專案指南會引導學生完成流程，包括建立並由使用者測試應用程式，從而瞭解自製使用者介面的假設是否準確。
+            Designing Apps for Good:
+              key: 設計良好的應用程式
+              name: 設計良好的應用程式
+              description_student: 開始應用程式設計專案時，班級裡的同學會分為各自的團隊，然後開始探索應用程式主題。一些對社會影響深遠的範例應用程式，會用來做為專案的啟發工具。
+              description_teacher: 應用程式設計專案會持續到單元結束。開始專案時，學生首先會瞭解一些應用程式，這些程式由其他學生製作，設計用於對社會產生影響。然後，班級同學會複習問題解決流程中的定義、準備、嘗試和反思步驟，並制定對社會產生影響的應用程式之構思。最後，學生會組成專案團隊安排契約，指出團隊在開發應用程式時如何運作。
+            Market Research:
+              key: 市場研究
+              name: 市場研究
+              description_student: 瞭解可能為相似使用者服務的現存應用程式，從而加深瞭解應用程式開發。每個小組會找出一些類似的應用程式，主題與自己製作的程式相同，並使用那些應用程式，協助重新定義學生所追求的應用程式構思。
+              description_teacher: 在本課堂中，學生會研究一些應用程式，這些程式與他們打算製作的程式相似，從而更瞭解他們的使用者需要。學生會在團隊內工作、在線上搜尋其他應用程式，然後評估認為有趣的應用程式。在課堂結束時，每個團隊都會清楚瞭解自己想製作的應用程式類型，並進一步細分誰是他們的目標使用者。每個團隊會維護引用資訊清單，列出所有研究過的應用程式，並用於學生的期末專案展示中。
+            Paper Prototypes:
+              key: 紙上原型
+              name: 紙上原型
+              description_student: 紙上原型可讓開發人員快速測試自己的構思，然後再投放大量時間編寫程式。在本課堂中，各團隊會瞭解在
+                App Lab 中製作的一些範例應用程式，並使用那些應用程式中獲得的資訊，協助製作自己的應用程式紙上原型。
+              description_teacher: "開始設計應用程式前，我們需要幫助學生仔細瞭解自己的期望。因為學生最終會在 App Lab 中製作這些應用程式的原型，若他們的構思和
+                App Lab 中容易製作原型的應用程式類型相近，就能夠有更充足的準備。團隊在開始這項研究時，首先會觀察一些範例應用程式，這些程式用於展示可使用
+                App Lab 製作的應用程式。然後，團隊可選擇 1 款（或更多）應用程式，做為自己的應用程式之基礎，之後會有一些時間討論自己的應用程式有哪些基本功能，並使用
+                3 英吋 x 5 英吋的索引卡開發紙上原型。\r\n"
+            Prototype Testing:
+              key: 原型測試
+              name: 原型測試
+              description_student: 在本課堂中，團隊會與其他同學測試自己的紙上原型。1 位學生扮演電腦、1 位學生說出內容，餘下的學生則會觀察。此時團隊會立即就自己的應用程式獲得回饋意見，為下一個版本的應用程式原型提供實用資訊。
+              description_teacher: 開發紙上原型的首要目的是，這樣做可快速測試和迭代，然後才開始編寫程式碼。本課堂的重點在於，讓團隊有機會先測試自己的原型，然後再使用
+                App Lab。團隊會制定一套計畫，從而和使用者一起測試，之後與班級裡（也可能是班級外）的數個其他同學執行原型測試。為了讓使用者測試原型，學生必須在測試中分配角色（「解說員」、「電腦」與「觀察者」），並準備一些問題，讓使用者在測試結束時回答。
+            Digital Design:
+              key: 數位設計
+              name: 數位設計
+              description_student: 在開發、測試與收集紙上原型的回饋意見後，團隊便會移至 App Lab，建立應用程式的下一個迭代。每個團隊成員都會使用拖放設計模式，為自己團隊的應用程式製作至少
+                1 頁的內容，以回應在前一個回合測試時收到的回饋意見。
+              description_teacher: 小組在協作開發應用程式的紙上原型後，便會以分治的方式，依據紙上原型來開始製作互動式數位版本。每位學生會各自使用
+                App Lab 的拖放設計模式，完成漸進式的技能訓練關卡，以學習怎樣製作紙上原型的數位版本。之後，每個小組成員都會在 App Lab
+                上，為自己的應用程式製作至少 1 頁內容，並在之後合併為單一個應用程式。
+            Linking Screens:
+              key: 連結不同畫面
+              name: 連結不同畫面
+              description_student: 團隊會以前一個課堂中設計的不同畫面做為基礎，合併各畫面並加入單一個應用程式中。然後，學生可加入一些簡單的程式碼，使點擊按鈕後進入適當畫面。
+              description_teacher: 在本課堂中，團隊會把前一個課堂設計的各個畫面，合併為單一個應用程式，並使用程式碼互相連結起來。學生會繼續製作前一個課堂中開始製作的模型應用程式，從而學習基本的事件驅動程式設計。除了昨天學生設計的螢幕畫面外，學生也會學習怎樣製作額外的畫面，甚至匯入其他人製作的畫面。
+            Testing the App:
+              key: 測試應用程式
+              name: 測試應用程式
+              description_student: 團隊會執行下一回合的使用者測試，這次會使用他們的互動式原型進行。在這個回合中取得的回饋意見，將會做為應用程式原型最終迭代版本的有用資訊。
+              description_teacher: 在前一個課堂結束時，每個團隊都應製作了應用程式的最簡可行原型。本課堂之主要目的，是讓團隊與其他人實際測試應用程式，對象最好是應用程式預期的目標受眾，或是班級裡的其他團隊；至於團隊中的觀察者，則會在先前用於計畫階段的工作表上記錄結果。與測試紙上原型一樣，團隊首先會計畫用於特定情景，然後執行並觀察測試。
+            Improving and Iterating:
+              key: 改善和迭代
+              name: 改善和迭代
+              description_student: 團隊會使用前一回合測試的回饋意見實作變更，以解決使用者的需要。每個團隊都會記錄希望加入的功能特色並安排優先順序，以及記錄需要解決的程式錯誤。
+              description_teacher: 在這個階段中，團隊已開發了應用程式原型，並已經過多個迭代與多個回合的使用者測試。每位學生都有機會，依前一回合的使用者測試中取得的資訊與指導，計畫並實作團隊應用程式的改善內容。你可視可用時間與學生的興趣，執行恰當次數的測試與迭代週期。
+            Project - App Presentation:
+              key: 專案 - 應用程式簡報
+              name: 專案 - 應用程式簡報
+              description_student: 每個團隊都會準備一次簡報，以「投售」自己開發的應用程式。這時正是時候分享各種拼搏與勝利經驗，以及計畫未來。
+              description_teacher: 這個時候，團隊已研究一項個人與社會重要性的主題、開發並測試紙上原型與數位原型，並開始製作初始應用程式迭代，以結合新的功能特色，以及執行錯誤修正。現在正是時候，讓學生檢閱自己完成的東西，整合成連貫的簡報展示創作的進展。團隊會使用提供的簡報範本，準備展示應用程式開發流程，包括開始解決的問題、他們在測試後以甚麼方式加入回饋意見，以及對未來的計畫。
+            Post-Project Test:
+              key: 專案後測驗
+              name: 專案後測驗
+            CS Discoveries Post Course survey:
+              key: 電腦科學探索課後問卷調查
+              name: 電腦科學探索課後問卷調查
+            Build a Paper Prototype:
+              name: 紙上原型
+            Digital Mode in App Lab:
+              name: 數位設計
+            Linking Prototype Screens:
+              name: 連結不同畫面
+          lesson_groups:
+            csd4_1:
+              display_name: 第 1 章：用戶為中心的設計
+            csd4_2:
+              display_name: 第 2 章︰ 應用程式原型
+            csd5_2:
+              display_name: 第 2 章：解決數據問題
+            cspSurvey:
+              display_name: 問卷
+            csdSurvey:
+              display_name: 問卷
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
+        csd5-preview-2021:
+          description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
+          description_short: 瞭解大家怎樣使用電腦解決資料問題。
+          lessons:
+            Representation Matters:
+              key: 表示事項
+              name: 表示事項
+              description_student: 第一個課堂會概述甚麼是資料，以及資料怎樣用來解決問題。各小組會使用一套資料集，為不同要求的人製作一系列的餐點建議。之後，各小組會比較他們的回答，並討論以不同的方式表示餐點資料，會怎樣影響學生解決不同問題的能力。
+              description_teacher: 在資料單元的第一個課堂中，學生會大概瞭解甚麼是資料，以及資料怎樣用來解決問題。學生首先會展開簡短討論，從而普遍瞭解資料是甚麼。然後學生會分為各小組，並使用資料集為不同要求的人製作一系列的餐點建議。每個小組都可選擇以不同方式表示餐點（圖片、食譜、菜單、營養），從而讓不同方式有各自的優點。之後，各小組會比較他們的回答，並討論以不同的方式表示餐點資料，會怎樣影響學生解決不同問題的能力。
+            Patterns and Representation:
+              key: 模式和標記法
+              name: 模式和標記法
+              description_student: 本課堂會更深入瞭解需要以甚麼來建立表示系統。各小組會建立相關系統，從而能夠僅使用一疊卡片，便可表示字母表中的任何字母；然後，學生會使用這些系統建立訊息，並與其他小組交換，從而確保系統像預期般正常運作。之後，班級同學會討論不同工作系統間的共通點，同時瞭解有許多可能的實用解決方案。
+              description_teacher: 在本課堂中，學生會建立自己的系統，用於表示資訊。他們首先會一起想出目前用於表示「是-否」回覆的所有不同系統。然後，學生會分為小組工作建立系統，從而僅使用一疊卡片就可表示字母表中的任何字母。使用的卡片有
+                6 種不同的圖畫內容（6 種動物、6 種顏色等），而為了表示所有字母，學生將需要使用不同卡片的圖樣（pattern）表示每個字母。然後，學生會使用自己的系統建立訊息，並與其他小組交換，從而確保系統像預期般正常運作。在總結討論中，班級學生會檢閱不同系統的優點和缺點。他們會討論不同工作系統間的共通點，同時瞭解有許多可能的實用解決方案，而且重點是所有人都使用相同的任意系統互相通訊。
+            ASCII and Binary Representation:
+              key: ASCII 和 二進位表示法
+              name: ASCII 和 二進位表示法
+              description_student: 本課堂會介紹一款為資訊編碼的正式二進制系統 ASCII，用於表示字母與其他字元。課堂開始時，教師會介紹：電腦必須使用「開」或「關」表示資訊。然後，班級同學會學習
+                ASCII 系統，以二進制符號表示文字，並練習使用這個系統，之後再使用 ASCII 為自己的訊息編碼。
+              description_teacher: 在本課堂中，學生會學習第一款為資訊編碼的正式二進制系統 ASCII，用於表示字母與其他字元。課堂開始時，教師會介紹：電腦必須使用「開」或「關」表示資訊。然後，學生會學習
+                ASCII 系統，以二進制符號表示文字，並練習使用這個系統，之後再使用 ASCII 為自己的訊息編碼。課堂結束時會進行匯報對話，從而協助結合活動中的關鍵學習目標。
+            Representing Images:
+              key: 表示圖像
+              name: 表示圖像
+              description_student: 本課堂會繼續學習二進制表示系統，這次會使用圖像來說明。班級同學會學習把圖像分開為多個「正方形」或「像素」的概念，而這些像素可獨立開關，以構成整個圖像。使用圖像化小工具完成少許挑戰後，班級同學便會把圖像表示系統，和前一個課堂學到的文字表示系統互相聯繫起來。
+              description_teacher: 在本課堂中，學生會學習電腦怎樣表示圖像。課堂開始時，學生會思考一項挑戰：把所有複雜的圖像轉化為二進制圖樣。學生首先會看到一系列圖像，瞭解這個轉換過程，接著學習把圖像分開為多個正方形或「像素」的概念，而這些像素可獨立開關，以構成整個圖像。然後，學生會使用圖像化小工具完成少許挑戰，從而繪畫出黑白圖像。謎題中會提出一些挑戰，讓學生以這種方式表示圖像。在總結課堂時，學生會把圖像表示系統，和前一個課堂學到的文字表示系統互相聯繫起來。
+            Representing Numbers:
+              key: 數字表示法
+              name: 數字表示法
+              description_student: 本課堂介紹二進制數字系統。班級同學會收到一組卡片，這些卡片表示二進制（base-2）數字系統中的位值。然後，學生要上下翻轉卡片，以「開啟」或「關閉」卡片，並觀察不同圖樣的結果。最後，圖樣會延伸為通用的
+                4 位元系統。
+              description_teacher: 在本課堂中，學生會學習二進制數字系統。學生會收到一組卡片，這些卡片會以由點構成的組合，來表示二進制（base-2）數字系統中的位值。然後，學生要上下翻轉卡片，以「開啟」或「關閉」卡片，並觀察不同圖樣的結果。最後，學生需要把圖樣延伸為通用的
+                4 位元系統。
+            Keeping Data Secret:
+              key: 讓資料保密
+              name: 讓資料保密
+              description_student: 學生會討論個人資料的不同安全等級。整個班級都瞭解隱私有多重要後，他們便會學習加密資訊的流程：為同伴加密筆記，然後解密同伴的筆記。班級在課堂結束時，會討論實體與數位安全的重要性。
+              description_teacher: 學生會討論個人資料的不同安全等級。整個班級都瞭解隱私有多重要後，他們便會學習加密資訊的流程：為同伴加密筆記，然後解密同伴的筆記。班級在課堂結束時，會討論實體與數位安全的重要性。
+            Combining Representations:
+              key: 組合表示
+              name: 組合表示
+              description_student: 本課堂會合併全部 3 種類型的二進制表示系統（ASCII 字元、二進制數字和圖像），讓學生能夠在某項記錄中，為更複雜的資訊類型編碼。學生會觀察一系列位元，然後需要把位元解碼。在這個過程中，班級學生會學到一個概念：瞭解二進制資訊，就需要同時瞭解使用中的系統，以及加密後的資訊是甚麼意思。
+              description_teacher: 在本課堂中，學生會運用全部 3 種類型的二進制表示系統（ASCII 字元、二進制數字和圖像），從而為某項記錄解碼。學生會觀察一系列位元，然後需要把位元解碼。在這個過程中，學生會學到一個概念：為了明白二進制資訊，他們就必須同時瞭解使用中的系統，以及加密後的資訊是甚麼意思。之後，學生便會依據提供的結構，為表示寵物的記錄解碼。
+            Project - Create a Representation:
+              key: 專案 - 創建標記法
+              name: 專案 - 創建標記法
+              description_student: 學生會使用這一章所學到的二進制表示系統來設計結構，以表示他們度過的美好一天。在確定相關記錄應擷取哪些資訊後，班級同學便會決定一張儲存多個位元資訊的打孔卡，會以怎樣的方式詮釋，以表示裡面的資訊。之後，所有同學都會使用學到的
+                ASCII、二進制數字與圖像格式，來表示他們美好的一天，並嘗試解碼同伴美好的一天過得怎樣。
+              description_teacher: 在本課堂中，學生會使用這一章所學到的二進制表示系統來設計結構，以表示他們度過的美好一天。他們首先會寫下簡短說明，描述他們美好的一天，然後與同伴一起檢閱內容，找出他們認為電腦會擷取的關鍵資訊。同學會全班一起決定，一張儲存多個位元資訊的打孔卡，會以怎樣的方式詮釋，以表示裡面的資訊。接著，學生會使用學到的
+                ASCII、二進制數字與圖像格式，來表示他們美好的一天。之後學生會交換打孔卡，並嘗試解碼同伴美好的一天過得怎樣。課堂會以反思來結束。
+            Problem Solving and Data:
+              key: 問題解決與數據
+              name: 問題解決與數據
+              description_student: 本課堂會說明可怎樣量身制定問題解決流程，以處理特別是資料方面的問題。班級同學的任務，是決定某個城市最需要投放資源在哪個方面。他們必須找出並使用線上找到的資料支持這個決定。
+              description_teacher: 在本課堂中，學生會使用課程初期學到的問題解決流程，以解決資料問題。檢閱流程後，班級同學便要做出決定：某個城市應該建立圖書館、寵物庇護所還是消防局。學生會以團隊方式工作，從線上收集資訊，協助決定應建造甚麼，然後使用這些資訊撰寫理據，從而說服市議會接納他們的選擇。然後他們會把完成的事情，對映至整個課程中一直使用的問題解決流程中，並比較一般問題解決流程和專門應用至資料問題時有甚麼異同。
+            Problem Solving with Big Data:
+              key: 用大數據解決問題
+              name: 用大數據解決問題
+              description_student: 本課堂講解機構怎樣收集與使用資料，以解決現實世界的問題。班級同學會觀察 3 個可使用資料來解決的情景，並一起思考希望以哪些資料類型解決，以及他們可怎樣收集資料。每個情景也會包含一段影片，瞭解一項真實世界的服務，曾經以資料解決類似的問題。
+              description_teacher: 在本課堂中，學生會瞭解機構怎樣收集與使用資料，以解決現實世界的問題。課堂首會快速回顧前一個課堂中學到的資料問題解決流程。然後，學生會觀察
+                3 個可使用資料來解決的情景，並一起思考希望以哪些資料類型解決，以及他們可怎樣收集資料。每個問題的設計，都用於反映現實世界中存在的服務。集體思考後，學生會觀看一段影片，瞭解一項真實世界的服務，
+                然後寫下筆記，指出現實世界的服務會收集甚麼資料，還有怎樣使用這些資料。課堂結束時，學生會記錄資料由使用者主動提供、被動記錄下來，還是由感測器來收集。
+            Structuring Data:
+              key: 資料的建構
+              name: 資料的建構
+              description_student: 本課堂會更深入探討資料詮釋，包括原始資料集清理與視覺化。班級同學首先會瞭解，以不同方式展示資料，可怎樣協助受眾更易理解資料。學生觀察清理與視覺化可怎樣協助大眾做出更好的決定後，便會研究這個流程中的哪些部分可自動化，哪些部分需要人類介入。
+              description_teacher: 在本課堂中，學生會更深入探討資料收集與詮釋，包括資料清理與視覺化。學生首先會瞭解，以不同方式展示資料，可怎樣協助受眾更易理解資料，然後再讓自己的資料製作視覺化內容。學生必須使用首選薄餅配料的訪問結果，決定需要怎樣處理無法輕易加入所選視覺化方案的資料。最後，學生會研究這個流程中的哪些部分可由電腦自動化，哪些部分則需要人類做決定。
+            Making Decisions with Data:
+              key: 依數據來做決定
+              name: 依數據來做決定
+              description_student: 本課堂讓學生有機會練習前一個課堂介紹的資料問題解決流程。不是所有問題都有正確答案，而在某些情況下，班級同學可以並應該確定應收集更多資料。課堂結束時，會討論不同人可怎樣從相同的資料中得出不同的結論，或是收集不同的資料可能怎樣影響了他們做出的決定。
+              description_teacher: 在本課堂中，學生會練習依據某些問題使用資料去做決定，這些問題專門設計讓中學生感到熟悉。學生會分組工作，討論他們會怎樣使用收到的資料做出決定，然後全球討論他們的最後決定。不是所有問題都有正確答案，而在某些情況下，學生可以並應該確定應收集更多資料。課堂結束時，會討論不同人可怎樣從相同的資料中得出不同的結論，或是收集不同的資料可能怎樣影響了他們做出的決定。
+            Interpreting Data:
+              key: 解譯數據
+              name: 解譯數據
+              description_student: 課堂開始時，學生首先會瞭解一份蛋糕偏好問卷調查，讓受訪者指定一款蛋糕與一款糖霜。他們會討論：瞭解蛋糕和糖霜偏好間的關係，可怎樣幫助他們更能決定建議哪種組合。然後，學生會學習交叉表，讓他們可用圖表展示不同偏好間的關係。他們會運用這項技巧找出偏好問卷調查中的關係，然後一起思考這項流程有助解決哪些不同類型的問題。
+              description_teacher: 課堂開始時，學生首先會瞭解一份蛋糕偏好問卷調查，讓受訪者指定一款蛋糕與一款糖霜。他們會討論：瞭解蛋糕和糖霜偏好間的關係，可怎樣幫助他們更能決定建議哪種組合。然後，學生會學習交叉表，讓他們可用圖表展示不同偏好間的關係。他們會運用這項技巧找出偏好問卷調查中的關係，然後一起思考這項流程有助解決哪些不同類型的問題。
+            Automating Data Decisions:
+              key: 自動化數據決策
+              name: 自動化數據決策
+              description_student: 在本課堂中，學生會看看簡單範例，瞭解電腦可怎樣用來完成資料問題解決流程的決策步驗驟。學生需要完成的任務是：建立可建議度假地點的演算法。然後，學生會訂立規則或演算法，讓電腦可用來自動做決定。學生會分享各自的規則，以及他們的規則會以類別資料做出哪些選擇。然後，學生會使用自己的規則與同學的資料，測試他們的規則所做的決定是否與人類相同。本課堂結束時，會討論使用電腦把問題解決流程自動化有哪些優點和缺點。
+              description_teacher: 在本課堂中，學生會看看簡單範例，瞭解電腦可怎樣用來完成資料問題解決流程的決策步驗驟。學生需要完成的任務是：建立可建議度假地點的演算法。然後，學生會訂立規則或演算法，讓電腦可用來自動做決定。學生會分享各自的規則，以及他們的規則會以類別資料做出哪些選擇。然後，學生會使用自己的規則與同學的資料，測試他們的規則所做的決定是否與人類相同。本課堂結束時，會討論使用電腦把問題解決流程自動化有哪些優點和缺點。
+            Post-Project Test:
+              key: 專案後測驗
+              name: 專案後測驗
+            CS Discoveries Post Course survey:
+              key: 電腦科學探索課後問卷調查
+              name: 電腦科學探索課後問卷調查
+          lesson_groups:
+            csd5_1:
+              display_name: 第 1 章：表達信息
+            csd5_2:
+              display_name: 第 2 章：解決數據問題
+            cspSurvey:
+              display_name: 問卷
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。

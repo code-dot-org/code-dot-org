@@ -200,6 +200,7 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': greitis
       gamelab_getTime:
         options:
           UNIT:
@@ -246,12 +247,20 @@ lt:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': po
               vandeniu
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': žiema
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': šiek tiek
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': greitis
       gamelab_setSizes:
         options:
           PROPERTY:

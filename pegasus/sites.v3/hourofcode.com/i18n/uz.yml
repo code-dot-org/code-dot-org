@@ -55,10 +55,10 @@ uz:
   social_hoc2019_learn_computer_science: 'Informatika fanini o''rganing. Dunyoni o''zgartiring.
     #CSforGood #HourOfCode '
   social_hoc_is_coming: Dasturlash soati yaqinlashmoqda!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
-  social_hoc2019_coming_dates: Kodlar soati 2019 yil 9-15 dekabr kunlari keladi. Informatika
-    har bir talaba o'rganishi uchun asosdir.
+  social_hoc2019_hoc_is_about_csforgood: "#HourOfCode Dasturlash soati #CSforGood
+    uchun. Informatikani o‘rganing. Dunyoni o‘zgartiring."
+  social_hoc2019_coming_dates: Dasturlash soati 2019 yil 9-15 dekabr kunlari bo‘lib
+    o‘tadi. Informatika har bir talaba o‘rganishi uchun asosdir.
   social_hoc2019_dance: 'Keti Perri, Shoun Mendes, vahima! Diskoda Lil Nas X, Brothers
     Jonas, Nikki Minaj va yana 34 kishi! " oceans_landing_title: ''Okeanlar uchun
     sun''iy intellekt'
@@ -577,7 +577,7 @@ uz:
   social_hoc2018_global_movement: Dasturlash soati - bu o‘n millionlab talabalarni
     qamrab oluvchi global harakat. Barcha yoshdagilar uchun 45 soatdan ortiq tillarda
     bir soatlik darsliklar mavjud. "
-  map_title: Kod xaritasi soatlari "
+  map_title: Dasturlash soati xaritasi
   map_header: 'Dasturlash soatiga 2017 # ro‘yxatdan o‘tkazildi'
   map_header_count_year: "%{year_count} da ro‘yxatdan o‘tgan%{event_count} ta tadbir"
   see_all_events: Barcha tadbirlarni ko‘rish '

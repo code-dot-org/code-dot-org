@@ -55,7 +55,10 @@ export const activitySectionShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   position: PropTypes.number.isRequired,
   displayName: PropTypes.string.isRequired,
+  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])])
+    .isRequired,
   remarks: PropTypes.bool,
+  progressionName: PropTypes.string,
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape).isRequired
@@ -79,6 +82,12 @@ export const resourceShape = PropTypes.shape({
   assessment: PropTypes.bool,
   includeInPdf: PropTypes.bool,
   downloadUrl: PropTypes.string
+});
+
+export const vocabularyShape = PropTypes.shape({
+  key: PropTypes.string.isRequired,
+  word: PropTypes.string.isRequired,
+  definition: PropTypes.string.isRequired
 });
 
 export const levelShapeForScript = PropTypes.shape({

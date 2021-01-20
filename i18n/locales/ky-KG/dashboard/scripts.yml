@@ -78,6 +78,7 @@ ky:
           lessons:
             Artist:
               name: Сүрөтчү
+          student_description: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
         hourofcode:
           title: Классикалык лабиринт
           description: Angry Birds, Plants vs. Zombies каармандары жана "Муз доорундагы" Скрат менен компүтердик илимдин негиздерин ачкыла!
@@ -85,12 +86,14 @@ ky:
           lessons:
             Maze:
               name: Лабиринт
+          student_description: Angry Birds, Plants vs. Zombies каармандары жана "Муз доорундагы" Скрат менен компүтердик илимдин негиздерин ачкыла!
         frozen:
           title: Анна жана Элза менен код жазгыла
           description: Муз сыйкырын жана кооздугун изилдеген Анна менен Элзага кошулуу үчүн кодду колдонобуз. Коньки тээп, карчалардан жана аяз саймаларынан кереметтүү кыш өлкөсүн жаратып, досторуңар менен бөлүшкүлө!
           lessons:
             Artist:
               name: Сүрөтчү
+          student_description: Муз сыйкырын жана кооздугун изилдеген Анна менен Элзага кошулуу үчүн кодду колдонобуз. Коньки тээп, карчалардан жана аяз саймаларынан кереметтүү кыш өлкөсүн жаратып, досторуңар менен бөлүшкүлө!
         course4:
           title: Курс 4
           lessons:
@@ -133,6 +136,7 @@ ky:
           lessons:
             Infinity:
               name: Чексиздик
+          student_description: Play Lab колдонуп, Disney Infinity каармандары катышкан окуя же оюн түзгүлө.
         K5PD:
           lessons:
             Teacher Dashboard:
@@ -194,6 +198,7 @@ ky:
           lessons:
             Bounce:
               name: Bounce
+          student_description: Окуялар
         flappy:
           title: Flappy Code
           lessons:
@@ -216,6 +221,7 @@ ky:
           lessons:
             Hour of Code 2013:
               name: Код сааты 2013
+          student_description: Angry Birds, Plants vs. Zombies каармандары менен компүтердик илимдин негиздерин ачкыла!
         algebraPD:
           lessons:
             Teacher Dashboard:
@@ -415,6 +421,7 @@ ky:
               name: Flappy Code
             Post Hour of Code Survey:
               name: Код саатынан кийинки сурамжылоо
+          student_description: 10 мүнөттө өз оюнуңду жазгың келеби? Биздин Серпме кодубузду байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында ага чейин жана кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө 10 мүнөт калганда жыйыныктыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
         coursea-draft:
           lessons:
             Loops in Artist:
@@ -470,6 +477,7 @@ ky:
               name: Код сааты 2013
             Post Hour of Code Survey:
               name: Код саатынан кийинки сурамжылоо
+          student_description: Компүтердик илимдин негиздерин Angry Birds жана Plants vs. Zombies менен бирге ачкыла! Бул версияда Код саатын жакшыртуу максатында аг чейин жана кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөөрүнө 10 мүнөт калганда кийинки сурамжылоого убакыт бөлүшүн сурангыла.
         csf2harvey:
           lessons:
             Functions in Artist:
@@ -734,6 +742,7 @@ ky:
               name: 'Minecraft\: Код саатында баатырдын сапары'
             Minecraft Hour of Code:
               name: Minecraft код сааты
+          student_description: Minecraft Код саатына жаңы тапшырма менен кайтып келди! Код жазып Minecraft өткүлө.
         halloween:
           lessons:
             Halloween Artist:
@@ -1527,6 +1536,10 @@ ky:
           lessons:
             Lesson:
               name: Сабак
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Өзгөрмөлөр
         csd3-2021:
           lessons:
             Variables:

@@ -56,6 +56,7 @@ fil:
               name: 'Play Lab: Lumikha ng Kuwento'
             The Big Event:
               name: The Big Event
+          student_description: Magsimula sa Kursong 1 para sa mga baguhang magbasa. Ang mga estudyante ay lilikha ng kanilang mga programa sa kompyuter na makakatulong sa kanila na matutong makipagtulungan sa iba, magkaroon ng kakayahan sa paglutas ng problema, at magpumillit sa gitna ng mahihirap na mga gawain. Sa bandang huli ng kursong ito, ang mga estudyante ay lilikha ng kanilang sariling custom na laro o kuwento na maaari nilang ibahagi. Inirerekomenda para sa mga nasa baitang na K-1.
         course2:
           title: Kursong 2
           description: Magsimula sa Kursong 2 para sa mga estudyante na marunong magbasa at walang paunang karanasan sa pag-program. Sa kursong ito, ang mga estudyante ay lilikha ng mga program para lumutas ng mga problema at makagawa ng mga inter-aktib na mga laro o mga kuwento na maaari nilang ibahagi. Inirerekoment para sa gradong 2-5.
@@ -100,6 +101,7 @@ fil:
               name: The Big Event
             Your Digital Footprint:
               name: Ang Iyong Digital na Bakas
+          student_description: Magsimula sa Kursong 2 para sa mga estudyante na marunong magbasa at walang paunang karanasan sa pag-program. Sa kursong ito, ang mga estudyante ay lilikha ng mga program para lumutas ng mga problema at makagawa ng mga inter-aktib na mga laro o mga kuwento na maaari nilang ibahagi. Inirerekoment para sa gradong 2-5.
         course3:
           title: Kursong 3
           description: Ang kursong 3 ay dinesenyo para sa mga estudyante na nakakuha na ng Kursong 2. Ang mga estudyante ay susulong sa mas malalim na mga paksa sa pag-program na pinakilala sa mga nakaraang mga kurso para makalikha ng mga makunat na mga solusyon para sa mas kumplikadong mga problema. Sa bandang huli ng kursong ito, ang mga estudyante ay lilikha ng mga inter-aktib na mga kuwento at mga laro na maaari nilang ibahagi sa kahit na sino. Inirerekomenda sa mga nasa gradong 4-5.
@@ -148,6 +150,7 @@ fil:
               name: 'Play Lab: Lumikha ng Laro'
             'Studio: Create a Story':
               name: 'Play Lab: Lumikha ng Kuwento'
+          student_description: Ang kursong 3 ay dinesenyo para sa mga estudyante na nakakuha na ng Kursong 2. Ang mga estudyante ay susulong sa mas malalim na mga paksa sa pag-program na pinakilala sa mga nakaraang mga kurso para makalikha ng mga makunat na mga solusyon para sa mas kumplikadong mga problema. Sa bandang huli ng kursong ito, ang mga estudyante ay lilikha ng mga inter-aktib na mga kuwento at mga laro na maaari nilang ibahagi sa kahit na sino. Inirerekomenda sa mga nasa gradong 4-5.
         playlab:
           title: Play Lab
           description: Lumikha ng kuwento o gumawa ng laro sa Play Lab!
@@ -155,6 +158,7 @@ fil:
           lessons:
             Play Lab:
               name: Play Lab
+          student_description: Lumikha ng kuwento o gumawa ng laro sa Play Lab!
         artist:
           title: Artista
           description: Gumuhit ng magagandang larawan at mga disenyo gamit ang Artist!
@@ -162,6 +166,7 @@ fil:
           lessons:
             Artist:
               name: Artista
+          student_description: Gumuhit ng magagandang larawan at mga disenyo gamit ang Artist!
         hourofcode:
           title: Klasiko na Maze
           description: Subukan ang mga pangunahing kaalaman ng computer science gamit ang mga karakter mula sa Angry Birds, Plants vs. Zombies, at Scrat mula sa Ice Age!
@@ -169,6 +174,7 @@ fil:
           lessons:
             Maze:
               name: Maze
+          student_description: Subukan ang mga pangunahing kaalaman ng computer science gamit ang mga karakter mula sa Angry Birds, Plants vs. Zombies, at Scrat mula sa Ice Age!
         frozen:
           title: Mag-code kasama sina Anna at Elsa
           description: Gumamit tayo ng code para samahan sina Anna at Elsa sa kanilang pagtuklas sa mahika at kagandahan ng yelo. Ikaw ay lilikha ng mga niyebe at mga paterno habang ikaw ay nag-iceskate at gumawa ng isang kahanga-hangang lugar sa taglamig na maaari mong ibahagi sa iyong mga kaibigan!
@@ -176,6 +182,7 @@ fil:
           lessons:
             Artist:
               name: Artista
+          student_description: Gumamit tayo ng code para samahan sina Anna at Elsa sa kanilang pagtuklas sa mahika at kagandahan ng yelo. Ikaw ay lilikha ng mga niyebe at mga paterno habang ikaw ay nag-iceskate at gumawa ng isang kahanga-hangang lugar sa taglamig na maaari mong ibahagi sa iyong mga kaibigan!
         course4:
           title: Kursong 4
           description: Ang Kursong 4 ay dinisenyo para sa mga estudyante na nakakuha na ng Kursong 2 at 3. Ang mga estudyante ay matututo kung paano harapin ang mga palaisipan na may pataas na kasalimuutan habang sila ay natutong pagsamahin ang iilang mga konsepto habang naglulutas ng bawat hamon. Sa oras na matapos na ang Kursong ito, ang mga estudyante ay lilikha ng mga programa na magpapakita sa kanilang mga kakayahan, kalakip na ang mga loop at mga function na may mga parameter. Inirerekomenda para sa mga nasa gradong 4-8.
@@ -226,6 +233,7 @@ fil:
               name: 'Unplugged: Pagsulat ng mga Awit na may mga Parameter'
             'Unplugged: Tangrams':
               name: 'Unplugged: Mga Tangram'
+          student_description: Ang Kursong 4 ay dinisenyo para sa mga estudyante na nakakuha na ng Kursong 2 at 3. Ang mga estudyante ay matututo kung paano harapin ang mga palaisipan na may pataas na kasalimuutan habang sila ay natutong pagsamahin ang iilang mga konsepto habang naglulutas ng bawat hamon. Sa oras na matapos na ang Kursong ito, ang mga estudyante ay lilikha ng mga programa na magpapakita sa kanilang mga kakayahan, kalakip na ang mga loop at mga function na may mga parameter. Inirerekomenda para sa mga nasa gradong 4-8.
         Course4pre:
           title: Paghahanda sa Kursong 4
           description: Isang maikling pagpapakita ng mga konsepto para sa mga estudyante na hindi pa nakakuha ng Kursong 2 at 3.
@@ -249,6 +257,7 @@ fil:
               name: 'Magsasaka: While Loops'
             'Maze: Sequence':
               name: 'Maze: Sequence'
+          student_description: Isang maikling pagpapakita ng mga konsepto para sa mga estudyante na hindi pa nakakuha ng Kursong 2 at 3.
         usability:
           lessons:
             Binary:
@@ -310,6 +319,7 @@ fil:
           lessons:
             Infinity:
               name: Walang katapusan
+          student_description: Gamitin ang Play Lab para lumikha ng mga kuwento o laro na pinagbibidahan ng mga karakter sa Disney Infinity.
         algebrademo:
           lessons:
             Defining Simple Functions:
@@ -431,6 +441,7 @@ fil:
               name: The Maze
             Wrap-up:
               name: Wrap-up
+          student_description: Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang buod ng computer science at mga konsepto ng programming. Ang kursong ito ay ginawa para magamit sa loob ng silid-paaralan  ng mga baitang ng K-8, at para na rin sa lahat ng edad. 
         edit-code:
           lessons:
             Applab:
@@ -456,6 +467,7 @@ fil:
               name: Eval
             Studio:
               name: Studio
+          student_description: Mga event
         flappy:
           title: Flappy Code
           description: Gusto mong magsulat ng sarili mong laro sa loob ng hindi hihigit sa 10 minuto? Subukan ang aming Flappy Code na tutorial!
@@ -463,6 +475,7 @@ fil:
           lessons:
             Flappy Code:
               name: Flappy Code
+          student_description: Gusto mong magsulat ng sarili mong laro sa loob ng hindi hihigit sa 10 minuto? Subukan ang aming Flappy Code na tutorial!
         jigsaw:
           title: Jigsaw
           description: Subukan ang aming mga tutoryal sa jigsaw.
@@ -470,6 +483,7 @@ fil:
           lessons:
             Jigsaw:
               name: Jigsaw
+          student_description: Subukan ang aming mga tutoryal sa jigsaw.
         step:
           title: Hakbang
           description: Hakbang na Tutoryal
@@ -477,6 +491,7 @@ fil:
           lessons:
             Step:
               name: Hakbang
+          student_description: Hakbang na Tutoryal
         Hour of Code:
           title: Hour of Code 2013
           description: Subukan ang mga panguhahing kaalaman sa computer science gamit ang mga karakter mula sa Angry Birds at Plants vs. Zombies!
@@ -484,6 +499,7 @@ fil:
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
+          student_description: Subukan ang mga panguhahing kaalaman sa computer science gamit ang mga karakter mula sa Angry Birds at Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -697,6 +713,7 @@ fil:
               name: While Loops
             Creating Functions with Parameters:
               name: Paglikha ng mga Functions na may mga Parameter
+          student_description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -854,6 +871,7 @@ fil:
           lessons:
             Testing:
               name: Pagsubok
+          student_description: Pagsubok
         cspunit2:
           lessons:
             Algorithms Detour - Hard Problems TSP:
@@ -1272,6 +1290,7 @@ fil:
           lessons:
             Vigenere:
               name: Vigenere
+          student_description: Gamitin ang Vigenere Cipher na widget para tuklasin ang pag-encrypt at pag-decrypt ng mga mensahe gamit ang Vigenere Cipher.
         algebraPD3a:
           lessons:
             Lesson Prep:
@@ -1494,6 +1513,7 @@ fil:
           lessons:
             Ice Age Play Lab:
               name: Ice Age na Play Lab
+          student_description: Maglikha ng kuwento o gumawa ng laro gamit ang Ice Age na Play Lab!
         CSPPD3-Unit3:
           lessons:
             Challenge Overview:
@@ -1537,6 +1557,7 @@ fil:
               name: Processing na mga Array
             While Loops:
               name: While Loops
+          student_description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
         CSP-Unit3-Support:
           lessons:
             Chunk 1 Overview:
@@ -1560,6 +1581,7 @@ fil:
           lessons:
             Gumball Play Lab:
               name: Gumball na Play Lab
+          student_description: Maglikha ng kuwento o gumawa ng laro gamit ang Gumball na Play Lab!
         starwars:
           title: 'Star Wars: Paglikha ng Galaxy sa pamamagitan ng Code'
           description: Matutong mag-program ng mga droids, at lumikha ng sarili mong Star Wars na laro sa isang malayong malayo na kalawakan.
@@ -1567,6 +1589,7 @@ fil:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Matutong mag-program ng mga droids, at lumikha ng sarili mong Star Wars na laro sa isang malayong malayo na kalawakan.
         starwarsblocks:
           title: 'Star Wars: Paglikha ng Galaxy sa pamamagitan ng Code'
           description: Matutong mag-program ng mga droids, at lumikha ng sarili mong Star Wars na laro sa isang malayong malayo na kalawakan.
@@ -1574,6 +1597,7 @@ fil:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Matutong mag-program ng mga droids, at lumikha ng sarili mong Star Wars na laro sa isang malayong malayo na kalawakan.
         mc:
           title: Minecraft na Hour of Code
           description: Gamitin ang mga bloke ng code para madala sina Steve o Alex sa isang pakikipagsapalaran sa mundo ng Minecraft na ito.
@@ -1581,6 +1605,7 @@ fil:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Gamitin ang mga bloke ng code para madala sina Steve o Alex sa isang pakikipagsapalaran sa mundo ng Minecraft na ito.
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -1738,6 +1763,7 @@ fil:
               name: 'Unplugged: Mabilis na mga Functions'
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Ang Resipe ng Pagdisenyo'
+          student_description: Alamin ang Functional na Pag-Programa sa pamamagitan ng Algebra
         AlgebraB:
           description: Alamin ang Functional na Pag-Programa sa pamamagitan ng Algebra
           description_short: Alamin ang Functional na Pag-Programa sa pamamagitan ng Algebra
@@ -1764,6 +1790,7 @@ fil:
               name: 'Unplugged: Mga Kondisyonal at Piecewise na mga Functions'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Mga Video Games at ang mga Coordinate Planes'
+          student_description: Alamin ang Functional na Pag-Programa sa pamamagitan ng Algebra
         gamelab-hackathon:
           lessons:
             Middle_School_Hackathon:
@@ -1932,6 +1959,7 @@ fil:
               name: Kalagitnaang Kurso ng CSP na Surbey
             Please complete the CSP Mid-course survey!:
               name: Mangyaring kumpletohin ang surbey ng kalagitnaang kurso ng CSP!
+          student_description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp4-2017:
           lesson_groups:
             csp4_1:
@@ -3182,6 +3210,7 @@ fil:
           lessons:
             Bounce:
               name: Bounce
+          student_description: Pumili ng iyong grupo at gumawa ng isang basketbol na laro
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -3290,6 +3319,7 @@ fil:
               name: Mga Heading
               description_student: Ang araling ito ay nagpapatuloy sa introduksyon sa mga HTML na tag, ngayon ay tungkol sa mga header. Ang klase ay magsasanay sa paggamit ng mga header na tag para lumikha ng pahina at mga pamagat ng seksiyon at matututo kung paano ang iba't ibang mga elemento ng header ay naka-display ayon sa default. Sa sunod, ang klase ay magpaplano kung paano mag-organisa sa kanilang nilalaman sa personal na mga pahina sa web na gagawin sa loob ng yunit at nagsisimula sa unang pahina ng proyekto.
               description_teacher: Sa araling ito, ang mga estudyante ay patuloy na gagamit sa HTML para gumawa ng istraktura ng teksto sa mga web na pahina, ngayon ay may mga headings na. Ang mga estudyante ay matututo kung paano ang iba't ibang mga heading na elemento ay naka-display nang default at magsasanay sa paggamit ng mga ito para maglikha ng pahina at seksyon na mga pamagat. Ang mga estudyante ay pipili na din kung paano nila i-organisa ang kanilang nilalaman sa kanilang sariling personal na mga web na pahina. Sa huling antas, ang mga estudyante ay magsisimula sa proyekto na patuloy nilang gagawin sa buong yunit.
+          student_description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
         csp2-support:
           lesson_groups:
             required:
@@ -3416,6 +3446,7 @@ fil:
               name: Proyekto - Pagpapakita ng App
               description_student: Bawat koponan ay maghahanda ng isang pagtatanghal para "ipakita" ang app na nagawa nila. Ito ang panahon para ibahagi nilang ang kanilang mga paghihirap, tagumpay, at mga plano para sa hinaharap.
               description_teacher: Sa puntong ito ang mga koponan ay nakakapanaliksik na ng isang paksa na may personal at sosyal na kahalagahan, na ginawa at sinubukan pareho sa isang papel na prototype at sa isang digital ng prototype, at nai-iterate sa inisyal na app para maidagdag ang mga bagong katangian at pag-aayos sa mga bug. Ngayon ang oras para magbalik-aral sa kung ano ang nagawa nila at sama-samang buoin ang isang pagtatanghal para ipakita ang proseso ng paglikha. Gamit ang nabigay na pagtatanghal na template, ang mga koponan ay maghahandang ipakita ang tungkol sa kanilang proseso sa paggawa ng app, kalakip ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang mga plano para sa hinaharap.
+          student_description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
         minecraft:
           title: Minecraft Hour of Code na Taga-disenyo
           description_short: Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft.
@@ -3423,6 +3454,7 @@ fil:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code na Taga-disenyo
+          student_description: Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft.
         flappy-impact-study:
           lessons:
             Pre Hour of Code Survey:
@@ -3684,6 +3716,7 @@ fil:
           lessons:
             Sports:
               name: Mga Palakasan
+          student_description: Maghalo at magtugma sa iba't ibang palakasan
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -4058,6 +4091,7 @@ fil:
               name: Pagtakas sa Kuwarto
             Extra:
               name: Ekstra
+          student_description: Ang workshop na ito ay dinisenyo para magbigay sa mga estudyante ng pangunahing introduksiyon sa App Lab sa 1 oras. Ang mga estudyante ay dapat makakapasok mula sa iba't ibang mga pinaggalingan sa Computer Science at magsayang maglikha ng isang bagay.
         applab-2hour:
           title: App Lab 2 Oras na Workshop
           description_audience: Mga Estudyante sa Gitna at Mataas na Paaralan
@@ -4075,6 +4109,7 @@ fil:
               name: Mga Tipo ng Pangyayari
             Getters and Setters:
               name: Tagakuha at Taga-takda
+          student_description: Ang workshop na ito ay dinisenyo para magbigay sa mga estudyante ng pangunahing introduksyon sa App Lab sa loob ng 2 oras. Ang mga estudyante ay dapat makakapasok mula sa iba't ibang mga pinanggalingan sa Computer Science at masayang maglikha ng isang bagay.
         coursed-ramp:
           title: 'Mga Pundamental sa CS: Kursong D'
           lessons:
@@ -4094,6 +4129,7 @@ fil:
               name: Pisikal na Input
             Analog Input:
               name: Analog na Input
+          student_description: Ang antas ng pag-unlad na ito ay inilaan para isama sa personal na Maker Toolkit na Workshop. Ito ay hindi inilaan para ituro ang kagamitan o CS na mga konsepto, sa halip para sumuporta lang sa isang tagapangasiwa ng workshop para sa pagpapakilala sa mga dadalo sa lawak ng App Lab at ng Maker Toolkit.
         coursee-ramp:
           title: coursee-ramp
           lessons:
@@ -4205,6 +4241,7 @@ fil:
               name: 'Proyekto: Gumawa ng Laro'
             Arrays and Color LEDs__:
               name: Mga Array at mga LED na mga kulay
+          student_description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa parehong hardware na mga input at output na makikita mo sa mga smart na mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang isang basihan para sa pagbabago ng iyong sarling disenyo.
         csd3-draft:
           title: 'CSD Yunit 3 - Pag-program: Mga Animasyon at mga Laro'
           description_short: Mga Animasyon at Laro
@@ -4339,6 +4376,7 @@ fil:
               name: Pagiging Sekreto ng mga Datos
               description_student: Ang mga estudyante ay magkakaroon ng talakayan sa iba't ibang mga antas ng seguridad na gusto nila para sa kanilang mga personal na mga datos. Kapag ang klase ay nagkabuo ng pag-uunawa sa kahalagahan ng privacy, pagkatapos ay matutunan nila ang tungkol sa proseso ng pag-encrypt ng mga impormasyon sa pamamagitan ng pag-encipher ng nota para sa isang kasamahan at pag-decipher sa nota ng kasaman. Ang klase ay magtatapos sa isang diskusyon tungkol sa kahalagahan ng parehong pisikal at diginal na seguridad.
               description_teacher: Ang mga estudyante ay magkakaroon ng talakayan sa iba't ibang mga antas ng seguridad na gusto nila para sa kanilang mga personal na mga datos. Kapag ang klase ay nagkabuo ng pag-uunawa sa kahalagahan ng privacy, pagkatapos ay matutunan nila ang tungkol sa proseso ng pag-encrypt ng mga impormasyon sa pamamagitan ng pag-encipher ng nota para sa isang kasamahan at pag-decipher sa nota ng kasaman. Ang klase ay magtatapos sa isang diskusyon tungkol sa kahalagahan ng parehong pisikal at diginal na seguridad.
+          student_description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
         csd3-old:
           title: CSD Yunit 3 (LUMA NA)
           description_short: 2016/2017 Draft ng CSD Yunit 3
@@ -4380,6 +4418,7 @@ fil:
               name: Gamitin ang Proseso ng Pagdisenyo ng Laro
             'Project: Design a Game':
               name: 'Proyekto: Pagdisenyo ng Laro'
+          student_description: Ito ay ang orihinal na draft ng CSD Yunit 3, na inilabas noong taglagas ng 2016. Maliban nalang kung mayroon kang mga estudyante na kasalukuyang gumagamit sa kursong ito, dapat mong gamitin sa halip ang mas bagong bersyon ng unit na ito sa studio.code.org/s/csd3 - ang orihinal na draft na ito ay mananatiling magagamit lang hanggang sa ika-1 ng Hulyo, 2017.
         csd1-old:
           title: CSD Yunit 1 (LUMA NA)
           description_short: 2016/2017 Draft ng CSD Yunit 1
@@ -4403,6 +4442,7 @@ fil:
               name: Pagproseso gamit ang Apps
             'Project: Apps and Problem Solving':
               name: 'Proyekto: Mga Apps at Paglutas ng Problema'
+          student_description: Ito ang orihinal na draft ng CSD Yunit 1, orihinal na nailathala noong taglagas ng 2016. Ang bersyong ito ay pinaliktan ng nang mas bagong yunit sa studio.code.org/s/csd1 at mananatiling magagamit lang hanggang sa ika-1 ng Hulyo, 2017.
         csd2-draft:
           lessons:
             Text on the Web:
@@ -4570,6 +4610,7 @@ fil:
               name: Lumahok sa isang longhitudinal na pag-aaral!
             CSP Post-Course Survey:
               name: Surbey Pagkatapos ng Kursong CSP
+          student_description: Maligawang pagdating sa Code.org na Surbey Pagkatapos ng Kurso na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10 minuto para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.  
         public-key-cryptography:
           title: Publikong Key na mga Widget sa Cryptography
           lessons:
@@ -4677,6 +4718,7 @@ fil:
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
             Events in Play Lab:
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         courseb-2017:
           title: Kursong B
           assignment_family_title: Kursong B
@@ -4696,6 +4738,7 @@ fil:
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         coursec-2017:
           title: Kursong C
           assignment_family_title: Kursong C
@@ -4723,6 +4766,7 @@ fil:
               name: Bumuo ng Flappy na Laro
             Loops with Rey and BB-8:
               name: Mga Loops kasama sina Rey at BB-8
+          student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
         coursed-2017:
           title: Kursong D
           assignment_family_title: Kursong D
@@ -4877,6 +4921,7 @@ fil:
               name: Naka-Nest na mga Loops sa Frozen
             Nested Loops:
               name: Mga Loops na naka-nest
+          student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
         coursef-2017:
           title: Kursong F
           assignment_family_title: Kursong F
@@ -4983,6 +5028,7 @@ fil:
               name: Naka-Nest na mga Loops sa Bee/Zombie
             Nested Loops with Frozen:
               name: Naka-Nest na mga Loops sa Frozen
+          student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         csdnovice:
           title: Mga Baguhang Tagapangasiwa sa CS Discoveries na TeacherCon
           description_audience: Mga Baguhang Tagapangasiwa sa CSD
@@ -5001,6 +5047,7 @@ fil:
               name: Maligayang bati
             Wrap Up:
               name: Tapusin Na
+          student_description: 'Isang lugar para subaybayan ang iyong repleksyon mula sa TeacherCon bilang isang baguhan na tagapangasiwa. '
         csp-explore-task:
           title: Tuklasin ang PT Prep ng CSP
           description_short: Ang mga araling ito ay naglalakip sa paghahanda at pagtatapos ng mga Prinsipyo sa CS AP Explore Performance na Gawain.
@@ -5056,6 +5103,7 @@ fil:
               name: Pagtuklas sa PT - Kompletuhin ang Gawain
             Participate in a longitudinal study!:
               name: Lumahok sa isang longhitudinal na pag-aaral!
+          student_description: Ang mga aralin ay naggagabay sa mga estudyante na maghanda at makompleto ang pagsusulit sa AP at mga Performance Tasks.
         cspnovice:
           title: Repleksyon ng mga Prinsipyo sa CS para sa TeacherCon na mga Baguhang Tagapangasiwa
           description_audience: Mga Baguhang Tagapangasiwa sa CSP
@@ -5075,6 +5123,7 @@ fil:
               name: Huwebes
             Wrap Up:
               name: Tapusin Na
+          student_description: 'Isang lugar para subaybayan ang iyong repleksyon mula sa TeacherCon bilang isang baguhan na tagapangasiwa. '
         novice-view:
           title: tingnan ang mga sagot ng mga baguhan
           description_audience: brook, dani, mal
@@ -5093,6 +5142,7 @@ fil:
               name: CSD Miyerkules
             CSD Thursday:
               name: CSD Huwebes
+          student_description: NA
         csp1-dlp:
           title: CSP Yunit 1 Mas Malalim na Pag-aaral
           description_audience: Mga Prinsipyo sa CS Pagsasanay sa mga Tagapangasiwa
@@ -5108,6 +5158,7 @@ fil:
               name: Kumpletuhin ang iyong Mas Malalim na Pag-aaral
             Complete Unit 1 Deeper Learning Reflections:
               name: Kumpletong Yunit 1 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          student_description: 'Ito ang Yunit 1 ng Plano sa Mas Malalim na Pag-aaral para sa Code.org na mga nagsasanay na mga tagapasiwa sa CSP. Dito mahahap ang mga pagpapakita ng repleksyon at mga gabay para sa pagpapakita ng kahusayan sa Yunit 1 ng Code.org na CSP Kurikulum. Ang mga aytem para sa pagrepasu sa mga kasamahan ay makikita sa ibaba ng pahinang ito, kapag naisumite mo na ang iyong sariling mga repleksyon para sa yunit. '
         csp2-dlp:
           title: CSP Yunit 2 Mas Malalim na Pag-aaral
           description_audience: Mga Prinsipyo sa CS Pagsasanay sa mga Tagapangasiwa
@@ -5123,6 +5174,7 @@ fil:
               name: Kumpletong ang Yunit 2 Mas Malalim na Pag-aaral
             Complete Unit 2 Deeper Learning Reflections:
               name: Kumpletong Yunit 2 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          student_description: 'Ito ang Yunit 2 ng Plano sa Mas Malalim na Pag-aaral para sa Code.org na mga nagsasanay na mga tagapangasiwa ng CSP. Dito makikita mo ang mga repleksyon na mga prompt at mga gabay para sa pagpapakita ng kahusayan sa Yunit 2 ng Code.org na CSP Kurikulum. Ang mga aytem para sa pagrepasu sa mga kasamahan ay makikita sa ilalim ng pahinang ito, kapag naisumite mo na ang iyong sariling mga repleksyon para sa yunit. '
         csp3-dlp:
           title: CSP Yunit 3 Mas Malalim na Pag-aaral
           description_audience: Mga Prinsipyo sa CS Pagsasanay sa mga Tagapangasiwa
@@ -5136,6 +5188,7 @@ fil:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 3 Deeper Learning Reflections:
               name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          student_description: 'Ito ay ang Yunit 3 ng Plano sa Mas Malalim na Pag-aaral para sa Code.org na mga nagsasanay na mga tagapangasiwa ng CSP. Dito makikita mo ang mga repleksyon na mga prompt at mga gabay para sa pagpapakita ng kahusayan sa Yunit 3 ng Code.org na CSP Kurikulum. Ang mga aytem para sa pagtatasa sa mga kasamahan ay makikita sa ibaba ng pahinang ito, kapag naisumite mo na ang iyong sariling mga repleksyon para sa yunit. '
         csp4-dlp:
           title: CSP Yunit 4 Mas Malalim na Pag-aaral
           description_audience: Mga Prinsipyo sa CS Pagsasanay sa mga Tagapangasiwa
@@ -5149,6 +5202,7 @@ fil:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 4 Deeper Learning Reflections:
               name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          student_description: 'Ito ang Yunit 3 ng Plano sa Mas Malalim na Pag-aaral para sa Code.org na mga nagsasanay na mga tagapangasiwa ng CSP. Dito makikita mo ang mga repleksyon na mga prompt at ang mga gabay para sa pagpapakita ng kahusayan sa Yunit 4 ng Code.org na CSP Kurikulum. Ang mga aytem para sa pagtatasa sa mga kasamahan ay makikita sa ilalim ng pahinang ito, kapag naisumite mo na ang iyong sariling mga repleksyon para sa yunit. '
         csp5-dlp:
           title: CSP Yunit 5 Mas Malalim na Pag-aaral
           description_audience: Mga Prinsipyo sa CS Pagsasanay sa mga Tagapangasiwa
@@ -5162,6 +5216,7 @@ fil:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 5 Deeper Learning Reflections:
               name: Kompletong Yunit 5 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          student_description: 'Ito ang Yunit 5 na Plano sa Mas Malalim na Pag-aaral para sa mga nagsasanay ng mga tagapangasiwa sa CSP ng Code.org. Dito makikita mo ang mga repleksyon na mga prompt at mga gabay para sa pagpapakita ng kahusayan sa Yunit 5 ng Code.org na CSP Kurikulum. Ang mga aytem para sa pagtatasa ng mga kasamahan ay makikita sa ibaba ng pahinang ito, kapag naisumite mo na ang iyong sariling mga repleksyon para sa yunit. '
         csd1-dlp:
           title: Pagtutuklas sa CS Yunit 1 Mas Malalim na Pag-aaral
           description_audience: Mga Tagapangasiwa ng CS Discoveries na Nagsasanay
@@ -5175,6 +5230,7 @@ fil:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 1 Deeper Learning Reflections:
               name: Kumpletong Yunit 1 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          student_description: 'Ito ang Yunit 1 ng Plano sa Mas Malalim na Pag-aaral para sa mga nagsasanay na mga tagapangasiwa ng CS Discoveries ng Code.org. Dito makikita mo ang mga repleksyon na mga prompt at mga gabay para sa pagpapakita ng kahusayan sa Yunit 1 ng Code.org na CS Discoveries na Kurikulum. Ang mga aytem para sa pagtatasa sa mga kasamahan ay makikita sa ibaba ng pahinang ito, kapag naisumite mo na ang iyong sariling mga repleksyon para sa yunit. '
         csd6-dlp:
           title: CS Discoveries Yunit 6 Mas Malalim na Pag-aaral
           description_audience: Mga Tagapangasiwa ng CS Discoveries na Nagsasanay
@@ -5188,6 +5244,7 @@ fil:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 6 Deeper Learning Reflections:
               name: Kompletong Yunit 6 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          student_description: Ito ang Yunit 6 ng Plano sa Mas Malalim na Pag-aaral para sa mga nagsasanay na mga tagapangasiwa sa CS Discoveries ng Code.org. Dito makakahanap ka ng mga repleksyon na mga prompt at mga gabay para sa pagpapakita ng kahusayan sa Yunit 6 ng CS Discoveries na Kurikulum ng Code.org. Ang mga aytem para sa pagtatasa sa mga kasamahan ay makikita sa baba ng pahinang ito, kapag tapos ka nang magsumite ng iyong sariling mga repleksyon para sa yunit.
         csd5-dlp:
           title: CS Discoveries Yunit 5 Mas Malalim na Pag-aaral
           description_audience: Mga Tagapangasiwa ng CS Discoveries na Nagsasanay
@@ -5201,6 +5258,7 @@ fil:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 5 Deeper Learning Reflections:
               name: Kompletong Yunit 5 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          student_description: Ito ang Yunit 5 ng Plano sa Mas Malalim na Pag-aaral para sa mga nagsasanay na tagapangasiwa ng CS Discoveries ng Code.org. Dito ay mahahanap mo ang repleksyon na mga prompt at mga gabay para sa pagpapakita ng kahusayan sa Yunit 5 na CS Discoveries na Kurikulum ng Code.org. Ang mga aytem para sa pagtatasa sa mga kasamahay ay makikita sa baba ng pahinang ito, kapag tapos ka nang magsumite ng iyong sariling mga repleksyon para sa yunit.
         csd4-dlp:
           title: CS Discoveries Yunit 4 Mas Malalim na Pag-aaral
           description_audience: Mga Tagapangasiwa ng CS Discoveries na Nagsasanay
@@ -5214,6 +5272,7 @@ fil:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 4 Deeper Learning Reflections:
               name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          student_description: Ito ang Yunit 4 ng Plano sa Mas Malalim na Pag-aaral para sa mga nagsasanay na tagapangasiwa sa CS Discoveries ng Code.org. Dito ay mahahanap mo ang repleksyon na mga prompt at mga gabay para sa pagpapakita ng kahusayan sa Yunit 4 na CS Discoveries na Kurikulum ng Code.org. Ang mga aytem para sa pagtatasa sa mga kasamahay ay makikita sa baba ng pahinang ito, kapag tapos ka nang magsumite ng iyong sariling mga repleksyon para sa yunit.
         csd3-dlp:
           title: CS Discoveries Yunit 3 Mas Malalim na Pag-aaral
           description_audience: Mga Tagapangasiwa ng CS Discoveries na Nagsasanay
@@ -5227,6 +5286,7 @@ fil:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 3 Deeper Learning Reflections:
               name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          student_description: Ito ang Yunit 3 ng Plano sa Mas Malalim na Pag-aaral para sa mga nagsasanay na tagapangasiwa sa CS Discoveries ng Code.org. Dito ay mahahanap mo ang repleksyon na mga prompt at mga gabay para sa pagpapakita ng kahusayan sa Yunit 3 na CS Discoveries na Kurikulum ng Code.org. Ang mga aytem para sa pagtatasa sa mga kasamahay ay makikita sa baba ng pahinang ito, kapag tapos ka nang magsumite ng iyong sariling mga repleksyon para sa yunit.
         csd2-dlp:
           title: CS DIscoveries Yunit 2 Mas Malalim na Pag-aaral
           description_audience: Mga Tagapangasiwa ng CS Discoveries na Nagsasanay
@@ -5240,6 +5300,7 @@ fil:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 2 Deeper Learning Reflections:
               name: Kumpletong Yunit 2 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          student_description: Ito ang Yunit 2 ng Plano sa Mas Malalim na Pag-aaral para sa mga nagsasanay na tagapangasiwa sa CS Discoveries ng Code.org. Dito ay mahahanap mo ang repleksyon na mga prompt at mga gabay para sa pagpapakita ng kahusayan sa Yunit 2 na CS Discoveries na Kurikulum ng Code.org. Ang mga aytem para sa pagtatasa sa mga kasamahay ay makikita sa baba ng pahinang ito, kapag tapos ka nang magsumite ng iyong sariling mga repleksyon para sa yunit.
         allthettsthings:
           lessons:
             TTS:
@@ -5331,6 +5392,7 @@ fil:
               name: Mga Loops na naka-nest
             Conditionals & Loops in Harvester:
               name: Mga Kondisyonal & Mga Loop sa Harvester
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         pre-express-2017:
           title: Hindi Marunong Magbasa Express
           assignment_family_title: Hindi Marunong Magbasa Express
@@ -5352,6 +5414,7 @@ fil:
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             Spelling Bee:
               name: Spelling Bee
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         subgoal-labels-opt-in:
           title: Subgoals Mga Label Opt-In na Pag-aaral
           lessons:
@@ -5416,6 +5479,7 @@ fil:
               name: Kalagitnaang Kurso ng CSP na Surbey
             Please complete the CSP Mid-course survey:
               name: Mangyaring kumpletohin ang CSP Kalagitnaang-kurso na surbey
+          student_description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
         csd4-draft:
           title: CSD Yunit 4 Mga Rebisyon na Draft
           lesson_groups:
@@ -5488,6 +5552,7 @@ fil:
               name: Panimula sa App Lab
             'Lesson 1: App Lab Intro':
               name: 'Aralin 1: Panimula sa App Lab'
+          student_description: Lumikha ng iyong sariling app sa JavaScript gamit ang alinman sa pag-program na nakabase sa mga bloke o teksto. Kung nakagawa ka na ng ilang pag-program gamit ang mga bloke pahusayin pa ang iyong kakayahan.
         e-f-ramp:
           title: Kursong E & F na Rampa
           lesson_groups:
@@ -5609,6 +5674,7 @@ fil:
               name: bagong yugto
             'CSP3A: Using Simple Commands':
               name: 'CSP3A: Paggamit ng mga Simpleng Utos'
+          student_description: Ang yunit na ito ay nagpapakilala sa mga batayang konsepto ng pag-program sa kompyuter, para sa mga estudyante sa Subgoals na Grupong A.
         new-express:
           title: Bagong Mabilis na Iskript
           lessons:
@@ -5855,6 +5921,7 @@ fil:
               name: Paglutas ng Problema kasama ang Malalaking mga Datos
             Project - Solve a Data Problem:
               name: Proyekto - Paglutas ang Problema sa mga Datos
+          student_description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter nakakatulong sa prosesong ito. Ang unang kabanata ay tutuklas sa iba't ibang mga sistema na ginagamit para magrepresenta ng impormasyon sa isang kompyuter at ang mga hamon at mga kapalit nang paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ay ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong para i-automate ang prosesong ito. Ang kabanata ay nagtatapos sa pamamagitan ng pagbigay diin sa kung paano ang proseso ng paglutas ng mga problema sa datos ay maaaring gamitin sa bahagi na iyong napili.
         subgoals-assessment-staging:
           lessons:
             subgoal assessments:
@@ -5967,6 +6034,7 @@ fil:
               name: Pagsasanay sa PT - Pagdisenyo ng isang digital na tagpo
             Unit 3 Chapter 1 Assessment:
               name: Yunit 3 Kabanata 1 Pagtatasa
+          student_description: "Ito ay isang replika ng live na mga antas sa /s/csp3 na may mga bago at binagong mga yugto na idinagdag. HUWAG BAGUHIN ANG MGA LIVE NA MGA ANTAS.\\r\n"
         pwc:
           title: Ang Access ng mga Pwc sa Iyong Potensyal na Kurikulum
           description: Sa PwC, kami ay naniniwala na lahat ng mga estudyante ay may potensyal na maging mga lider sa hinaharap at maging isang pwersa ng mga manggagawa na naimpluwensyahan ng teknolohiya. Ang Access Your Potential ay ang aming pangako para makatulong na ipalapit ang puwang sa oportunidad sa pamamagitan ng pagbibigay ng kakayahan sa mga nakababata, lalo na ang mga iyon na nasa mahirap na mga komunidad, kasama ang pinansiyal, teknolohiya at pagpili ng mga kakayahan na kailangan nila para mabago ang landas ng kanilang mga buhay. Bilang bahagi ng aming tapat na pangako, kami ay sabik na ilunsad ang aming Access Your Potential na teknolohiya para sa gitnang paaralan at kurikulum ng mga propesyon.
@@ -6005,6 +6073,7 @@ fil:
               name: Smart Clothing na Disenyo
             Intro to App Lab (13+):
               name: Pambungad sa App Lab (13+)
+          student_description: Sa PwC, kami ay naniniwala na lahat ng mga estudyante ay may potensyal na maging mga lider sa hinaharap at maging isang pwersa ng mga manggagawa na naimpluwensyahan ng teknolohiya. Ang Access Your Potential ay ang aming pangako para makatulong na ipalapit ang puwang sa oportunidad sa pamamagitan ng pagbibigay ng kakayahan sa mga nakababata, lalo na ang mga iyon na nasa mahirap na mga komunidad, kasama ang pinansiyal, teknolohiya at pagpili ng mga kakayahan na kailangan nila para mabago ang landas ng kanilang mga buhay. Bilang bahagi ng aming tapat na pangako, kami ay sabik na ilunsad ang aming Access Your Potential na teknolohiya para sa gitnang paaralan at kurikulum ng mga propesyon.
         allthesurveys:
           title: Lahat ng mga surbey
           description_short: Lugar para i-stage at subukan ang mga surbey ng Code.org
@@ -6045,6 +6114,7 @@ fil:
               name: 'Minecraft: Ang Paglalakbay nv Bayani Oras ng Code'
             Minecraft Hour of Code:
               name: Minecraft na Hour of Code
+          student_description: Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code.
         applab-intro-staging:
           title: Pambungad sa Staging ng App Lab
           lessons:
@@ -6084,6 +6154,7 @@ fil:
               name: Pagtuklas sa PT - Kompletuhin ang Gawain
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech na Setup - Iyong AP Digital na Portfolio at Ibang mga Kagamitan
+          student_description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Explore Performance Task. Bawat \"aralin\" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\\r\n\\r\nAng yunit na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp-create-2017:
           title: Paglikha - Paghahanda sa AP Performance Task
           description_short: Mga aralin at mapagkukunan ng kaalaman para makatulong sa mga estudyante na maghanda at makumpleto ang AP na Paglikha ng mga Performance Task.
@@ -6102,6 +6173,7 @@ fil:
               name: Lumikha ng PT Prep - Paggawa ng Plano
             Create PT - Complete the Task:
               name: Lumkiha ng PT - Kompletuhin ang Gawain
+          student_description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Create Performance Task. Bawat \"aralin\" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Create PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\\r\n\\r\nAng yunit na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp3-reovery:
           title: 'csp3 sa ilalim ng dagat na pag-recover sa gawain ng estudyante '
           lessons:
@@ -6531,6 +6603,7 @@ fil:
               name: Proyekto - Personal na Portfolio na Website
               description_student: Sa huling iilang mga araw sa yunit, ang klase ay magtatapos sa kanilang mga personal na website, nagtatrabaho kasama ang kanilang mga kasamahan para makakuha ng feedback, pagrepasu sa rubric, at paglagay nang panghuling mga detalye sa site. Para tapusin ang yunit, ang lahat ay magbabahagi sa kanilang mga proyekto at kung paano nila ito nagawa.
               description_teacher: "Ang mga estudyante ay gumugol ng maraming oras sa buong yunit sa pagtatrabaho ng kanilang Personal na Website. Sa huling ilang mga araw, ang mga estudyante ay magtatapos sa kanilang mga website. Sila ay magtatrabaho kasama ang kanilang mga kasamahan para makakuha ng feedback, maglalagay ng mga panghuling detalye sa mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga proyekto at pati na rin ang isang pangkalahatang ideya sa proseso na ginawa nila para makuha ang pangwakas na disenyo.\\r\n"
+          student_description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
         coursea-2018:
           assignment_family_title: Kursong A
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -6571,6 +6644,7 @@ fil:
               name: Mga Loops sa Harvester
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie at ang Big Project
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         express-2018:
           title: Mabilis na Kurso
           assignment_family_title: Mabilis na Kurso
@@ -6700,6 +6774,7 @@ fil:
               name: Relay Programming
             Graph Paper Programming:
               name: Graph Paper Programming
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         courseb-2018:
           assignment_family_title: Kursong B
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -6725,6 +6800,7 @@ fil:
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             Move It, Move It:
               name: Galawin ito, Galawin ito
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         coursed-2018:
           title: Bagong Kursong D na Iskript
           assignment_family_title: Kursong D
@@ -6805,6 +6881,7 @@ fil:
               name: Binary na mga Pulseras
             Looking Ahead:
               name: Masdan ang Hinaharap
+          student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
         csd6-2018:
           title: CSD Yunit 6 - Pisikal na Pag-Compute
           description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa parehong hardware na mga input at output na makikita mo sa mga smart na mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang isang basihan para sa pagbabago ng iyong sarling disenyo.
@@ -6849,6 +6926,7 @@ fil:
               name: Mga Circuit at Pisikal na mga Prototype
             'Project: Prototype an Innovation':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
+          student_description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa parehong hardware na mga input at output na makikita mo sa mga smart na mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang isang basihan para sa pagbabago ng iyong sarling disenyo.
         coursee-2018:
           assignment_family_title: Kursong E
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
@@ -6947,6 +7025,7 @@ fil:
               name: Mga Conditional gamit ang mga Card
             Minecraft Hour of Code:
               name: Minecraft na Hour of Code
+          student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
         coursef-2018:
           assignment_family_title: Kursong F
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
@@ -7054,6 +7133,7 @@ fil:
               description_teacher: Sa loob ng limang mga aralin, ang mga estudyante ay bubuo hanggang sa maubo nila ang proyekto na sarili nilang disenyo gamit ang alinman sa Play Lab o Artist bilang kapaligiran sa kanilang pag-program. Sa wakas, ang mga estudyante ay maaaring makakapakita sa kanilang natapos na gawain sa kanilang mga kasamahan at sa mga mahal sa buhay gamit ang isang espesyal na link. Ang gabay ng aralin na nagpapakita sa lahat ng limang mga yugto ng proseso ay maaaring makita sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals with Cards:
               name: Mga Conditional gamit ang mga Card
+          student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         csp1-2018:
           lesson_groups:
             cspSurvey:
@@ -7221,6 +7301,7 @@ fil:
               name: Proyekto - Pagpapakita ng App
               description_student: Bawat koponan ay maghahanda ng isang pagtatanghal para "ipakita" ang app na nagawa nila. Ito ang panahon para ibahagi nilang ang kanilang mga paghihirap, tagumpay, at mga plano para sa hinaharap.
               description_teacher: Sa puntong ito ang mga koponan ay nakakapanaliksik na ng isang paksa na may personal at sosyal na kahalagahan, na ginawa at sinubukan pareho sa isang papel na prototype at sa isang digital ng prototype, at nai-iterate sa inisyal na app para maidagdag ang mga bagong katangian at pag-aayos sa mga bug. Ngayon ang oras para magbalik-aral sa kung ano ang nagawa nila at sama-samang buoin ang isang pagtatanghal para ipakita ang proseso ng paglikha. Gamit ang nabigay na pagtatanghal na template, ang mga koponan ay maghahandang ipakita ang tungkol sa kanilang proseso sa paggawa ng app, kalakip ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang mga plano para sa hinaharap.
+          student_description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
         csd5-2018:
           title: CSD Yunit 5 - Mga Datos at Lipunan
           description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
@@ -7293,6 +7374,7 @@ fil:
               name: Proyekto - Paglutas ang Problema sa mga Datos
               description_student: Para tapusin ang yunit na ito, ang klase ay magdidisenyo ng mga pamamaraan ng paggamit ng mga datos para makagawa ng mga rekomendasyon at mga prediksyon para makatulong sa paglutas ng problema. Sa unang iilang mga hakbang, ang klase ay nag-iisip ng mga problema, gumawa ng simpleng pananaliksik, at naglarawan sa problema na napili nila. Pagkatapos ay nagdesisyon sila kung anong klase ng mga datos ang gusto nilang ikolekta, paano nila ito kokolektahin, at kung paano ito magagamit, bago magpalitan ng mga feedback at magbigay ng huling presentasyon.
               description_teacher: Para tapusing ang yunit na ito, ang mga estudyante ay magdidisenyo ng isang makina na tagarekomenda ayon sa mga datos na nakolekta nila at nasuri mula sa kanilang mga kamag-aral. Pagkatapos tingnan ang isang halimbawa ng isang app na taga-rekomenda, ang mga estudyante ay susunod sa isang gabay sa proyekto para makompleto ang iilang araw na gawaing ito. Sa unang iilang mga hakbang, ang mga estudyante ay pipili kung ano ang opsyon na gusto nilang piliin ng gumagamit, kung anong mga datos ang kakailanganin nila para makabigay ng rekomendasyon, maglikha ng surbey, at magkolekta ng mga impormasyon tungkol sa mga napili ng kanilang mga kamag-aral. Pagkatapos ay susuriin nila ang mga datos at gamitin kung ano ang natutunan nila para maglikha ng algoritmo para sa rekomendasyon. Sa huli, gagamitin nila ang kanilang mga algoritmo para makagawa ng mga rekomendasyon sa iilang mga kamag-aral. Ang mga estudyante ay gagawa ng isang peer review at gagawa ng kahit anong kinakailangang mga pagbabago sa kanilang mga proyekto bago maghanda ng presentasyon sa klase.
+          student_description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
@@ -7366,6 +7448,7 @@ fil:
               name: Mangyaring kumpletohin ang surbey ng kalagitnaang kurso ng CSP!
             Creating Functions with Parameters:
               name: Paglikha ng mga Functions na may mga Parameter
+          student_description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp-explore-2018:
           title: Tuklasin - Paghahanda sa AP Performance Task
           description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Explore Performance Task. Bawat \"aralin\" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\\r\n\\r\nAng yunit na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates."
@@ -7382,6 +7465,7 @@ fil:
               name: Pagtuklas sa PT - Paggawa ng Plano
             Explore PT - Complete the Task:
               name: Pagtuklas sa PT - Kompletuhin ang Gawain
+          student_description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Explore Performance Task. Bawat \"aralin\" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\\r\n\\r\nAng yunit na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp-create-2018:
           title: Paglikha - Paghahanda sa AP Performance Task
           description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Create Performance Task. Bawat \"aralin\" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Create PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\\r\n\\r\nAng yunit na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates."
@@ -7398,6 +7482,7 @@ fil:
               name: Lumikha ng PT Prep - Paggawa ng Plano
             Create PT - Complete the Task:
               name: Lumkiha ng PT - Kompletuhin ang Gawain
+          student_description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Create Performance Task. Bawat \"aralin\" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Create PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\\r\n\\r\nAng yunit na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp4-2018:
           lesson_groups:
             cspAssessment:
@@ -7750,6 +7835,7 @@ fil:
               name: Pag-Program kasama sina Rey at BB-8
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie at ang Big Project
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         fit-test:
           lesson_groups:
             required:
@@ -7890,6 +7976,7 @@ fil:
               name: Pag-crowdsourcing
               description_student: Ang araling ito ay nagtuturo sa iyo tungkol sa crowdsourcing, ang proseso sa pagbuo ng isang proyekto sa isang pangkat.
               description_teacher: Sa computer science, makakaharap tayo ng iilang mga malalaki, nakakatakot na mga problema. Mga hamon gaya ng paghahanap sa pinakamalaking prime na numero o pagsunod-sunod sa DNA ay halos imposibleng magawa bilang isang indibidwal. Ang pagdadagdag ng kapangyarihan ng iba ay nagpapagawa sa gawaing mga ito na mapapamahalaan. Ang araling ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong ang pagtutulungan sa industriya ng computer science.
+          student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         dance-low:
           lessons:
             Dance Party:
@@ -8037,6 +8124,7 @@ fil:
               name: Mga Kondisyonal sa Minecraft
             Songwriting:
               name: Pagsusulat ng Awit
+          student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
         express-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
@@ -8129,6 +8217,7 @@ fil:
               name: Dance Party
             Concept Practice with Minecraft:
               name: Masdan ang Hinaharap
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         csd1-2019:
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter para lutasan ang mga problema."
           lesson_groups:
@@ -8228,6 +8317,7 @@ fil:
               name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+          student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
         csp-mid-survey:
           description_audience: CSP na mga Estudyante
           lesson_groups:
@@ -8275,6 +8365,7 @@ fil:
               name: Pag-Program kasama sina Rey at BB-8
             Sequencing with Scrat:
               description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         courseb-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_audience: 'Mga Edad: 5-8'
@@ -8308,6 +8399,7 @@ fil:
               name: Pag-Program sa Maze
             Sequencing in Maze:
               description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         pre-express-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
@@ -8336,6 +8428,7 @@ fil:
               name: Matutong Mag-Drag at Mag-Drop
             Programming in Maze:
               name: Pag-Program sa Maze
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         removed19:
           lessons:
             'Debugging: Unspotted Bugs':
@@ -8413,6 +8506,7 @@ fil:
               name: Proyekto - Personal na Portfolio na Website
               description_student: Sa huling iilang mga araw sa yunit, ang klase ay magtatapos sa kanilang mga personal na website, nagtatrabaho kasama ang kanilang mga kasamahan para makakuha ng feedback, pagrepasu sa rubric, at paglagay nang panghuling mga detalye sa site. Para tapusin ang yunit, ang lahat ay magbabahagi sa kanilang mga proyekto at kung paano nila ito nagawa.
               description_teacher: "Ang mga estudyante ay gumugol ng maraming oras sa buong yunit sa pagtatrabaho ng kanilang Personal na Website. Sa huling ilang mga araw, ang mga estudyante ay magtatapos sa kanilang mga website. Sila ay magtatrabaho kasama ang kanilang mga kasamahan para makakuha ng feedback, maglalagay ng mga panghuling detalye sa mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga proyekto at pati na rin ang isang pangkalahatang ideya sa proseso na ginawa nila para makuha ang pangwakas na disenyo.\\r\n"
+          student_description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
         csd3-2019:
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib na sining, at mga laro sa Game Lab."
           lesson_groups:
@@ -8592,6 +8686,7 @@ fil:
               name: Proyekto - Pagpapakita ng App
               description_student: Bawat koponan ay maghahanda ng isang pagtatanghal para "ipakita" ang app na nagawa nila. Ito ang panahon para ibahagi nilang ang kanilang mga paghihirap, tagumpay, at mga plano para sa hinaharap.
               description_teacher: Sa puntong ito ang mga koponan ay nakakapanaliksik na ng isang paksa na may personal at sosyal na kahalagahan, na ginawa at sinubukan pareho sa isang papel na prototype at sa isang digital ng prototype, at nai-iterate sa inisyal na app para maidagdag ang mga bagong katangian at pag-aayos sa mga bug. Ngayon ang oras para magbalik-aral sa kung ano ang nagawa nila at sama-samang buoin ang isang pagtatanghal para ipakita ang proseso ng paglikha. Gamit ang nabigay na pagtatanghal na template, ang mga koponan ay maghahandang ipakita ang tungkol sa kanilang proseso sa paggawa ng app, kalakip ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang mga plano para sa hinaharap.
+          student_description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
         csd5-2019:
           title: CSD Yunit 5 - Mga Datos at Lipunan
           description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
@@ -8664,6 +8759,7 @@ fil:
               name: Proyekto - Paglutas ang Problema sa mga Datos
               description_student: Para tapusin ang yunit na ito, ang klase ay magdidisenyo ng mga pamamaraan ng paggamit ng mga datos para makagawa ng mga rekomendasyon at mga prediksyon para makatulong sa paglutas ng problema. Sa unang iilang mga hakbang, ang klase ay nag-iisip ng mga problema, gumawa ng simpleng pananaliksik, at naglarawan sa problema na napili nila. Pagkatapos ay nagdesisyon sila kung anong klase ng mga datos ang gusto nilang ikolekta, paano nila ito kokolektahin, at kung paano ito magagamit, bago magpalitan ng mga feedback at magbigay ng huling presentasyon.
               description_teacher: Para tapusing ang yunit na ito, ang mga estudyante ay magdidisenyo ng isang makina na tagarekomenda ayon sa mga datos na nakolekta nila at nasuri mula sa kanilang mga kamag-aral. Pagkatapos tingnan ang isang halimbawa ng isang app na taga-rekomenda, ang mga estudyante ay susunod sa isang gabay sa proyekto para makompleto ang iilang araw na gawaing ito. Sa unang iilang mga hakbang, ang mga estudyante ay pipili kung ano ang opsyon na gusto nilang piliin ng gumagamit, kung anong mga datos ang kakailanganin nila para makabigay ng rekomendasyon, maglikha ng surbey, at magkolekta ng mga impormasyon tungkol sa mga napili ng kanilang mga kamag-aral. Pagkatapos ay susuriin nila ang mga datos at gamitin kung ano ang natutunan nila para maglikha ng algoritmo para sa rekomendasyon. Sa huli, gagamitin nila ang kanilang mga algoritmo para makagawa ng mga rekomendasyon sa iilang mga kamag-aral. Ang mga estudyante ay gagawa ng isang peer review at gagawa ng kahit anong kinakailangang mga pagbabago sa kanilang mga proyekto bago maghanda ng presentasyon sa klase.
+          student_description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
         csd6-2019:
           title: CSD Yunit 6 - Pisikal na Pag-Compute
           description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa parehong hardware na mga input at output na makikita mo sa mga smart na mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang isang basihan para sa pagbabago ng iyong sarling disenyo.
@@ -8708,6 +8804,7 @@ fil:
               name: Mga Circuit at Pisikal na mga Prototype
             'Project: Prototype an Innovation':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
+          student_description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa parehong hardware na mga input at output na makikita mo sa mga smart na mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang isang basihan para sa pagbabago ng iyong sarling disenyo.
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -8807,6 +8904,7 @@ fil:
               name: Pagsasanay sa PT - Pagdisenyo ng isang digital na tagpo
             Unit 3 Chapter 1 Assessment:
               name: Yunit 3 Kabanata 1 Pagtatasa
+          student_description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp4-2019:
           lesson_groups:
             cspAssessment:
@@ -8903,6 +9001,7 @@ fil:
               name: Pagtuklas sa PT - Paggawa ng Plano
             Explore PT - Complete the Task:
               name: Pagtuklas sa PT - Kompletuhin ang Gawain
+          student_description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Explore Performance Task. Bawat \"aralin\" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\\r\n\\r\nAng yunit na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp-create-2019:
           title: Paglikha - Paghahanda sa AP Performance Task
           description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Create Performance Task. Bawat \"aralin\" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Create PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\\r\n\\r\nAng yunit na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates."
@@ -8919,6 +9018,7 @@ fil:
               name: Lumikha ng PT Prep - Paggawa ng Plano
             Create PT - Complete the Task:
               name: Lumkiha ng PT - Kompletuhin ang Gawain
+          student_description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Create Performance Task. Bawat \"aralin\" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Create PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\\r\n\\r\nAng yunit na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates."
         csppostap-2019:
           description_short: Matutong mangolekta at gumamit ng mga datos sa mga app sa App Lab.
           lesson_groups:
@@ -9106,6 +9206,7 @@ fil:
           lesson_groups:
             cspSurvey:
               display_name: Pagsisiyasat
+          student_description: Maligawang pagdating sa Code.org na Surbey Pagkatapos ng Kurso na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10 minuto para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.  
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -9248,6 +9349,7 @@ fil:
               name: Intelektwal na Pag-aari
             Images:
               name: Mga Larawan
+          student_description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
         csd3-pilot:
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib na sining, at mga laro sa Game Lab."
           lesson_groups:
@@ -9378,6 +9480,8 @@ fil:
           lessons:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+            Focus Area 1:
+              name: Kurikulum
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -9699,6 +9803,7 @@ fil:
               name: Pag-istilo sa mga Elemento gamit ang CSS
               description_student: "Ang araling ito ay nagpapatuloy sa pagpapakilala sa mga katangian ng istilo ng CSS, ngayon ay mas bigyan nating pansin ang mga hindi-teksto na mga elemento. Ang klase ay magsisimula sa pamamagitan ng pag-imbestiga at pagbago sa mga bagong CSS na mga istilo sa Desserts of the World na pahina. Pagkatapos, lahat ay gagamit sa bagong kaalaman na ito sa kanilang mga personal na website."
               description_teacher: "Ang araling ito ay nagpapatuloy sa pagpapakilala sa mga katangian ng istilo ng CSS, ngayon ay mas bigyan nating pansin ang mga hindi-teksto na mga elemento. Ang mga estudyante ay magsisimula sa pamamagitan ng pagtingin sa isang website tungkol sa Desserts of the Worlds. Sila ay mag-imbestiga at mag-bago sa mga bagong CSS na mga istilo sa website na ito. Pagkatapos magtrabaho sa Desserts na pahina, ang mga estudyante ay gagamit sa kanilang kaalaman sa mga bagong katangian ng CSS para makagawa pa na ibang pag-istilo sa kanilang mga personal na website."
+          student_description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
         csd1-2020:
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter para lutasan ang mga problema."
           lesson_groups:
@@ -9820,6 +9925,7 @@ fil:
               name: Proyekto - Pagpapakita ng App
               description_student: Bawat koponan ay maghahanda ng isang pagtatanghal para "ipakita" ang app na nagawa nila. Ito ang panahon para ibahagi nilang ang kanilang mga paghihirap, tagumpay, at mga plano para sa hinaharap.
               description_teacher: Sa puntong ito ang mga koponan ay nakakapanaliksik na ng isang paksa na may personal at sosyal na kahalagahan, na ginawa at sinubukan pareho sa isang papel na prototype at sa isang digital ng prototype, at nai-iterate sa inisyal na app para maidagdag ang mga bagong katangian at pag-aayos sa mga bug. Ngayon ang oras para magbalik-aral sa kung ano ang nagawa nila at sama-samang buoin ang isang pagtatanghal para ipakita ang proseso ng paglikha. Gamit ang nabigay na pagtatanghal na template, ang mga koponan ay maghahandang ipakita ang tungkol sa kanilang proseso sa paggawa ng app, kalakip ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang mga plano para sa hinaharap.
+          student_description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
         csd5-2020:
           title: CSD Yunit 5 - Mga Datos at Lipunan
           description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
@@ -9892,6 +9998,7 @@ fil:
               name: Proyekto - Paglutas ang Problema sa mga Datos
               description_student: Para tapusin ang yunit na ito, ang klase ay magdidisenyo ng mga pamamaraan ng paggamit ng mga datos para makagawa ng mga rekomendasyon at mga prediksyon para makatulong sa paglutas ng problema. Sa unang iilang mga hakbang, ang klase ay nag-iisip ng mga problema, gumawa ng simpleng pananaliksik, at naglarawan sa problema na napili nila. Pagkatapos ay nagdesisyon sila kung anong klase ng mga datos ang gusto nilang ikolekta, paano nila ito kokolektahin, at kung paano ito magagamit, bago magpalitan ng mga feedback at magbigay ng huling presentasyon.
               description_teacher: Para tapusing ang yunit na ito, ang mga estudyante ay magdidisenyo ng isang makina na tagarekomenda ayon sa mga datos na nakolekta nila at nasuri mula sa kanilang mga kamag-aral. Pagkatapos tingnan ang isang halimbawa ng isang app na taga-rekomenda, ang mga estudyante ay susunod sa isang gabay sa proyekto para makompleto ang iilang araw na gawaing ito. Sa unang iilang mga hakbang, ang mga estudyante ay pipili kung ano ang opsyon na gusto nilang piliin ng gumagamit, kung anong mga datos ang kakailanganin nila para makabigay ng rekomendasyon, maglikha ng surbey, at magkolekta ng mga impormasyon tungkol sa mga napili ng kanilang mga kamag-aral. Pagkatapos ay susuriin nila ang mga datos at gamitin kung ano ang natutunan nila para maglikha ng algoritmo para sa rekomendasyon. Sa huli, gagamitin nila ang kanilang mga algoritmo para makagawa ng mga rekomendasyon sa iilang mga kamag-aral. Ang mga estudyante ay gagawa ng isang peer review at gagawa ng kahit anong kinakailangang mga pagbabago sa kanilang mga proyekto bago maghanda ng presentasyon sa klase.
+          student_description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
         csd6-2020:
           title: CSD Yunit 6 - Pisikal na Pag-Compute
           description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa parehong hardware na mga input at output na makikita mo sa mga smart na mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang isang basihan para sa pagbabago ng iyong sarling disenyo.
@@ -9936,6 +10043,7 @@ fil:
               name: Mga Circuit at Pisikal na mga Prototype
             'Project: Prototype an Innovation':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
+          student_description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa parehong hardware na mga input at output na makikita mo sa mga smart na mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang isang basihan para sa pagbabago ng iyong sarling disenyo.
         csd3-2020:
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib na sining, at mga laro sa Game Lab."
           lesson_groups:
@@ -10071,6 +10179,7 @@ fil:
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
             Events in Play Lab:
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         courseb-2020:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_audience: 'Mga Edad: 5-8'
@@ -10098,6 +10207,7 @@ fil:
               name: Mga Loops sa Harvester
             'Events: The Big Event':
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         coursec-2020:
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
@@ -10140,6 +10250,7 @@ fil:
               name: Bumuo ng Flappy na Laro
             'End of Course Project: Create a Play Lab Game':
               description_student: Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.
+          student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -10228,6 +10339,7 @@ fil:
               name: Mga Function sa Artist
               description_student: Gumawa ng kumplikadong mga drowing nang mas madali gamit ang mga function!
               description_teacher: Ang mga estudyante ay ipapakilala sa paggamit ng mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng mga function sa pamamagitan ng pagtawag ng isang function sa loob ng isa pa.
+          student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
         coursef-2020:
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
@@ -10281,6 +10393,7 @@ fil:
               name: Pag-crowdsourcing
               description_student: Ang araling ito ay nagtuturo sa iyo tungkol sa crowdsourcing, ang proseso sa pagbuo ng isang proyekto sa isang pangkat.
               description_teacher: Sa computer science, makakaharap tayo ng iilang mga malalaki, nakakatakot na mga problema. Mga hamon gaya ng paghahanap sa pinakamalaking prime na numero o pagsunod-sunod sa DNA ay halos imposibleng magawa bilang isang indibidwal. Ang pagdadagdag ng kapangyarihan ng iba ay nagpapagawa sa gawaing mga ito na mapapamahalaan. Ang araling ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong ang pagtutulungan sa industriya ng computer science.
+          student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         express-2020:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
@@ -10351,6 +10464,7 @@ fil:
               name: Mga For Loops sa Bee
             For Loops with Artist:
               name: Mga Loops sa Artist
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         pre-express-2020:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
@@ -10376,6 +10490,7 @@ fil:
               description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.
             Tell a Story in Play Lab:
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
@@ -10454,6 +10569,7 @@ fil:
               name: Pagsasanay sa PT - Pagdisenyo ng isang digital na tagpo
             Unit 3 Chapter 1 Assessment:
               name: Yunit 3 Kabanata 1 Pagtatasa
+          student_description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
         jess-test-script:
           lessons:
             new stage:
@@ -10737,6 +10853,18 @@ fil:
           description_short: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon mula sa isang lumitaw na virus. '
           description: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon mula sa isang lumitaw na virus. '
           name: pagsiklab
+          student_description: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon mula sa isang lumitaw na virus. '
+        2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Pag-coding ng isang Simulasyon
+          lesson_groups:
+            introduction:
+              display_name: Panimula
+            lessonGroup-3:
+              display_name: Mga variable
+            outbreak:
+              display_name: Simula ng Simulasyon
         csd1-2021:
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter para lutasan ang mga problema."
           lessons:
@@ -10795,13 +10923,14 @@ fil:
               name: Intelektwal na Pag-aari
             'Websites for Expression ':
               key: 'Mga Website para sa Pagpapahayag '
-              name: 'Mga Website para sa Pagpapahayag '
+              name: Mga Website para sa Pagpapahayag 
             Styling Elements with CSS:
               key: Pag-istilo sa mga Elemento gamit ang CSS
               name: Pag-istilo sa mga Elemento gamit ang CSS
           lesson_groups:
             cspSurvey:
               display_name: Pagsisiyasat
+          student_description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
         csd3-2021:
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib na sining, at mga laro sa Game Lab."
           lessons:
@@ -10908,9 +11037,13 @@ fil:
             Digital Design:
               key: Digital na Disenyo
               name: Digital na Disenyo
+              description_student: Pagkatapos mag-develop, mag-test at magtipon ng mga feedback sa isang papel na prototype, ang mga koponan ay lilipat na ngayon sa App Lab para mabuo ang sunod na iterasyon ng kanilang mga app. Ang paggamit ng drap-and-drop na Mode ng Pag-disenyo, bawat miyembro ng koponan ay bubuo ng hindi bababa sa isang pahina ng app ng kanilang koponan, na nagtugon sa mga feedback na natanggap sa huling ikot ng pag-test.
+              description_teacher: Pagkatapos makipagtulungang bumuo ng isang papel na prototype para sa kanilang mga app, ang mga grupo ay hahatiin at lulupig ngayon para magsimulang magtrabaho sa isang inter-aktib na digital na bersyon na nakabase sa papel na prototype. Gamit ang drag-and-drop na mode ng pag-disenyo sa App Lab, ang mga estudyante ay mag-isang magtrabaho sa isang pag-unlad ng pagbuo ng kakayahan na mga antas para matuto kung paano bubuo ng digital na mga bersyon ng isang papel na prototype. Mula doon, bawat miyembro ng grupo ay bubuo ng hindi bababa sa isang pahina ng kanilang app sa App Lab, para ipagsama mamaya sa isang app.
             Linking Screens:
               key: Pag-uugnay sa mga Screen
               name: Pag-uugnay sa mga Screen
+              description_student: Ang paggamit sa mga screen na dinisenyo ng klase sa nakaraang aralin, ang mga koponan ay magsama-sama sa mga screen sa isang app. Ang simpleng code ay maaari ring idagdag para makagawa ng mga button na mga click para maglipat sa angkop na screen.
+              description_teacher: Sa araling ito ang mga koponan ay pagsamahin ang mga screen na nadisenyo nila sa nakaraang aralin sa isang app, na kung saan ay maaari nilang sama-samang iugnay gamit ang code. Ang mga estudyante ay matuto sa mga pangunahing pag-program na pinatakbo ng mga event sa pamamagitan ng pagbuo ng mga modelong app na nasimulan nila sa nakaraang aralin. Bukod pa sa screen na dinisenyo ng mga estudyante kahapon, matutunan nila kung paano maglikha ng karagdagang mga screen at kahit na ang pag-import ng mga screen na ginawa ng iba.
             Testing the App:
               key: Pag-test ng App
               name: Pag-test ng App
@@ -10920,6 +11053,8 @@ fil:
             Project - App Presentation:
               key: Proyekto - Pagpapakita ng App
               name: Proyekto - Pagpapakita ng App
+            Build a Paper Prototype:
+              name: Papel na mga Prototype
           lesson_groups:
             csd4_1:
               display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
@@ -10929,6 +11064,7 @@ fil:
               display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
             cspSurvey:
               display_name: Pagsisiyasat
+          student_description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
         csd5-2021:
           title: CSD Yunit 5 - Mga Datos at Lipunan
           description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
@@ -10983,6 +11119,7 @@ fil:
               display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
             cspSurvey:
               display_name: Pagsisiyasat
+          student_description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
         csd6-2021:
           title: CSD Yunit 6 - Pisikal na Pag-Compute
           description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa parehong hardware na mga input at output na makikita mo sa mga smart na mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang isang basihan para sa pagbabago ng iyong sarling disenyo.
@@ -11043,6 +11180,7 @@ fil:
               display_name: 'Kabanata 2: Input ng Hardware'
             cspSurvey:
               display_name: Pagsisiyasat
+          student_description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa parehong hardware na mga input at output na makikita mo sa mga smart na mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang isang basihan para sa pagbabago ng iyong sarling disenyo.
         csp1-2021:
           lessons:
             CS Principles Pre-survey:
@@ -11115,6 +11253,7 @@ fil:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         courseb-2021:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_audience: 'Mga Edad: 5-8'
@@ -11140,6 +11279,7 @@ fil:
               display_name: Epekto ng Pag-Compute
             csf_events:
               display_name: Mga event
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         coursec-2021:
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
@@ -11189,6 +11329,7 @@ fil:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+          student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
         coursed-2021:
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -11281,6 +11422,7 @@ fil:
               display_name: Mga function
             csf_impacts:
               display_name: Epekto ng Pag-Compute
+          student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
         coursef-2021:
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
@@ -11317,6 +11459,7 @@ fil:
               display_name: For Loops
             csf_sprites:
               display_name: Mga Sprites
+          student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         express-2021:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
@@ -11346,6 +11489,8 @@ fil:
             Snowflakes with Anna and Elsa:
               key: Naka-nest na mga Loop sa Frozen
               name: Naka-nest na mga Loop sa Frozen
+            'Looking Ahead with Minecraft ':
+              name: Masdan ang Hinaharap
             If/Else with Bee:
               key: Mga Kondisyonal sa Bee
               name: Mga Kondisyonal sa Bee
@@ -11377,6 +11522,7 @@ fil:
               display_name: For Loops
             csf_sprites:
               display_name: Mga Sprites
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         pre-express-2021:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
@@ -11385,6 +11531,8 @@ fil:
             Learn to Drag and Drop:
               key: Matutong Mag-Drag at Mag-Drop
               name: Matutong Mag-Drag at Mag-Drop
+            Programming in with Angry Birds:
+              name: Pag-Program sa Maze
             Programming with Rey and BB-8:
               key: Pag-Program kasama sina Rey at BB-8
               name: Pag-Program kasama sina Rey at BB-8
@@ -11393,12 +11541,11 @@ fil:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         csf-2021-pilot:
           lessons:
             Virus Simulation for Code Bytes:
               name: Pag-coding ng isang Simulasyon
-            lesson-1:
-              name: Balot ng mga Variables
           lesson_groups:
             ramp_up:
               display_name: Panimula
@@ -11406,3 +11553,188 @@ fil:
               display_name: Simula ng Simulasyon
             lessonGroup-3:
               display_name: Mga variable
+            Sprites:
+              display_name: Mga Sprites
+        csd4-preview-2021:
+          description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
+          lessons:
+            Analysis of Design:
+              key: Pagsusuri ng Disenyo
+              name: Pagsusuri ng Disenyo
+              description_student: Ang klase ay tutuklas sa sari-saring iba't ibang mga disenyo ng tsarera para isaalang-alang kung paano ang mga pagpili ng disenyo o nagawa at bakit. Gamit ang mga tsarera isip halimbawa, ang klase ay tutuklas sa relasyon sa pagitan ng mga gumagamit, kanilang mga pangangailangan, at ang disenyo ng mga bagay na ginagamit nila.
+              description_teacher: Upang masimulan ang yunit na inilaan para sa grupong paglutas ng problema at paggamit ng mga produkto para sa ibang mga gumagamit, ang mga estudyante ay magsisimula sa pagsisiyasat sa disenyo ng sari-saring mga tsarera. Ang mga estudyante ay magsusuri sa bawat tsarera, magsusubok na matukoy kung paano ang partikular na pangangailangan ng gumagamit ang nagdikta sa disenyo nito. Sa pamamagitan ng pagsaalang-alang sa mga pagpipilian sa disenyo, ang pagsubok na itugma ang bawat teapot sa potensyal na gumagamit, ang mga estudyante ay magsimulang makita kung paano ang pagkuha ng paraan na naka-sentro sa gumagamit para makapag-disenyo ng mga produkto (pareho sa pisikal at sa digital) ay makakagawa sa mga produktong iyon para maging mas makabuluhan at mas magagamit. Para tapusin ang gawain, ang mga estudyante ay tatanungin na magmungkahi ng ilang mga pagbabago sa isa sa mga tsarera para maging mas kapaki-pakibang at mas magagamit pa ito.
+            Understanding Your User:
+              key: Pag-uunawa sa Iyong Gumagamit
+              name: Pag-uunawa sa Iyong Gumagamit
+              description_student: Gamit ang mga profile ng gumagamit, ang klase ay magtutuklas kung paano ang iba't ibang mga gumagamit ay maaaring tutugon sa sari-saring mga produkto. Ang pagganap bilang iba-ibang tao, ang bawat miyembro ng klase ay makakakuha ng karanasan sa mga disenyo sa pamamagitan ng mata ng ibang tao.
+              description_teacher: "Ang mga taga-disenyo ay kailangang makakaintindi sa pangangailangan ng kanilang mga gumagamit para makalikha ng mga kapaki-pakinabang na mga produkto. Ang araling ito ay naghihikayat sa mga estudyante na mag-isip kung paano magdisenyo para sa ibang tao sa pamamagitan ng pagsasadula isip ibang tao gamit ang profile ng gumagamit at pagtugon bilang gumagamit na iyon sa isang serye ng mga produkto. Bawat estudyante ay may nakatalagang profile ng gumagamit na naglalarawan sa tao, kung saan sila din ay pipili ng mga ankop na produkto, magbigay ng kritiko sa disenyo ng mga produkto, at magmunkahi ng mga pagpapahusay sa disenyo.\\r\n"
+            User-Centered Design Micro Activity:
+              key: Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit
+              name: Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit
+              description_student: Sa maliliit na mga grupo, ang klase ay gagamit ng proseso ng pagdisenyo para makabuo ng mga ideya para sa mahusay na pananamit. Mula sa pag-iisip, hanggang sa pagtukoy sa mga gumagamit, at sa huli ay pagmungkahi ng disenyo, ito ang una sa iilang pagkakataon sa yunit na ito para magsanay nang pagdisenyo ng isang solusyon para sa pangangailangan ng iba.
+              description_teacher: Ang araling ito ay naggagabay sa mga estudyante sa pamamagitan ng isang pinaikling bersyon ng proseso ng pagdisenyo na makikita nila sa buong yunit na ito. Ang mga estudyante ay unang mag-iisip ng isang listahan ng mga potensyal na mga gumagamit ng mahusay na pananamit. Bilang klase, sila ay maggrupo-grupo sa mga ideyang ito sa malawak na mga kategorya at bawat grupo ay pipili ng isang kategorya ng gumagamit. Ang mga grupo ay uulit sa proseso ng pag-iisip sa pangangailangan o hinanaing ng kanilang mga gumamit, kalaunan ay mag-uuri sa mga pangangailangang ito at pumili ng isa na bibigyan nila ng diin. Sa wakas, ang mga estudyante ay magdisenyo ng isang piraso ng mahusay na pananamit, gamit ang mga partikular na mga pangangailangan at mga hinaing na kanilang naisip para maggabay sa paggawa nila ng desisyon. Sa bandang huli ng klase, ang mga estudyante ay maikling magbabahagi ng kanilang proseso sa paggawa ng desisyon at kukuha sila ng feedback kung paano ang kanilang produkto nakatugon sa pangangailangan ng gumagamit na kanilang napili.
+            User Interfaces:
+              key: Mga interface ng Gumagamit
+              name: Mga interface ng Gumagamit
+              description_student: Tingnan kung paano ang papel na prototype ay maaaring gamitin para subukan at kumuha ng feedback sa software bago pa man isulat ang kahit anong code. Para makatulong sa isang developer tungkol sa kanilang mga ideya, ang klase at susubok at magbibigay ng prototype ng mga app na nagawa sa isang papel.
+              description_teacher: Ang pagsunod sa proyekto na maliit na pagdisenyo, ang mga estudyante ay tumitingin sa susunod na yugto sa pag-disenyo - pag-prototype ng isang produkto na susubok na bigyang kasagutan ang mga pangangailangan ng mga gumagamit. Sa isang koponan, ang mga estudyante ay susuri sa isang papel na prototype para sa isang chat na app na tinatawag na "Txt Ur Grndkdz". Sa pamamagitan ng paggamit ng papel na prototype na maaaring gamitin para madaliang pagsubok ng mga ideya at mga paniniwala bago tayo makapunta sa kompyuter. Pagkatapos "gamitin" ang binigay na mga prototype, ang mga estudyante ay magsimulang magtukoy ng mga pamamaraan para mapahusay ang sunod na mga iterasyon.
+            Feedback and Testing:
+              key: Feedback at Pagsubok
+              name: Feedback at Pagsubok
+              description_student: Ang mga gumagamit ay nagsusubok ng app, at sila ay nagkakaroon ng maraming mga feedback para sa developer. Ang klase ay nangangailangang titingin sa lahat ng mga feedback na ito, magtukoy sa mga karaniwang tema at mga pangangailangan, at magsimulang magbago ng prototype para mas maabot pa natin ang mga pangangailangan ng mga user.
+              description_teacher: Sa araling ito ang mga estudyante ay gagamit sa mga feedback mula sa mga "gumagamit" ng app na ginawang prototype sa papel mula sa nakaraang mga aralin para magawa ang mga pagpapahusay sa user na interface nang papel na prototype. Ang aralin ay magsisimula sa isang pag-iisip sa katotohanan ang mga taga-disenyo ay nangangailangan magsalin sa pangangailangan ng tao sa teknolohiya para sa mga pagbabago sa user interface o karanasan. Ang mga estudyante ay bibigyan ng isang koleksyon ng feedback at mga kahilingan mula sa mga gumagamit ng app mula sa nakaraang aralin. Sa isang grupo, ang mga estudyante ay mag-categorize sa mga feedback at tukuyin ang mga pamamaraan na kailangang ipahayag ang mga feedback ay maaaring maabot sa pamamagitan ng mga pagbabago sa interface ng app. Pagkatapos sa loob ng mga grupo, ang mga estudyante ay magpapatupad sa ilang mga pagbabago para maabot ang isa sa mga pangangailangan na natukoy.
+            Identifying User Needs:
+              key: Pagtukoy sa mga Pangangailangan ng Gumagamit
+              name: Pagtukoy sa mga Pangangailangan ng Gumagamit
+              description_student: Hanggang sa puntong ito ang mga gumagamit na binigyang pansin ng klase ay puro lahat nasa remote, at ang impormasyon lang mula sa mga gumagamit ay dumarating sa pamamagitan ng teksto o pagsasadula. Ngayon ang klase ay aasa sa bawat isa bilang potensyal na mga gumagamit, at ang mga pares ay gagawa ng panayam sa bawat isa para matukoy ang mga pangangailangan na maaaring sagutin sa pamamagitan ng paggawa ng isang app.
+              description_teacher: 'Hanggang sa puntong ito, ang mga estudyante ay nakadiin sa pag-disenyo para sa mga gumagamit kung saan, sa ilang pamantayan, malayo sa kanila. Maaring sa pamamagitan ng pag-iisip, mga profile, o mga teksto na feedback, ang koneksyon sa huling gumagamit ay hindi talaga direkta. Ang distansyang ito ay para makakatulong sa mga estudyante para makalabas sa kanilang pag-iisip habang nag-iisip tungkol sa ibang mga gumagamit, ngunit para makuha ang mga impormasyon ng mas direkta mula sa mga aktwal na gumagamit, ang mga estudyante ay kailangang umasa sa kanilang mga kamag-aral. Sa araling ito, ang mga estudyante ay magpares-pares para maging taga-gamit (at taga-disenyo) para sa bawat isa, na nagbibigay daan sa lahat para direktang gagawa ng panayam sa huling gumagamit at magtanong ng mga katanungan para mas mapahusay pa ang kanilang disenyo. Bawat pares ng estudyante ay gagawa ng panayam sa bawat isa, para subukang tukuyin ang partikular na pangangailangan na maaaring masagot sa pamamagitan ng app. '
+            Project - Paper Prototype:
+              key: Proyekto - Papel na Prototype
+              name: Proyekto - Papel na Prototype
+              description_student: Gamit ang impormasyon sa panayam mula sa nakaraang aralin, ang klase ay bubuo ng mga ideya ng app na sumasagot sa mga pangangailangan ng kanilang mga gumagamit. Para ipahayag ang mga ideyang iyon, at subukan ang kanilang pagkaepektibo, bawat estudyante ay bubuo at lilikha ng sariling mga papel na prototype.
+              description_teacher: Base sa mga panayam sa mga kasamahan mula sa nakaraang aralin, bawat estudyante ay bubuo ng ideya para sa isang app na sumasagot sa problema ng kanilang mga gumagamit. Ang mga estudyante ay lilikha din ng sarili nilang papel na prototype ng kanilang mga ideya sa app sa pamamagitan ng pagguhit ng mga "screens" sa mga indibidwal na mga notecards. Ang gabay ng proyekto ay para patnubayan ang mga estudyante sa proseso na naglakip ng pagbuo ng app at pagsubok nito kasama ang mga gumagamit para makita kung ang kanilang mga haka-haka tungkol sa mga interface ng gumagamit na nalikha nila ay tumpak ba.
+            Designing Apps for Good:
+              key: Pagdidisenyo ng mga App para sa Ikabubuti
+              name: Pagdidisenyo ng mga App para sa Ikabubuti
+              description_student: Para simulan ang proyekto sa pagdisenyo ng app, ang klase ay bubuo ng mga koponan at magsimulang tutuklas sa mga paksa ng app. Ang iilang mga halimbawang mga apps na lubhang nakaapekto sa lipunan ang magsisilbing inspirasyon para sa proyekto.
+              description_teacher: Para simulang ang proyekto sa pagdisenyo ng app na aabot hanggang sa katapusan ng yunit, ang mga estudyante ay unang tutuklas sa iilang mga app na dinisenyo para sa epekto sa lipunan na nilikha ng ibang mga estudyante. Ang klase ay magbabalik-aral din sa mga Pagbigay-Kahulugan, Paghahanda, Pagsubok, at Pag-iisip na mga hakbang sa proseso ng Paglutas ng Problema habang silay ay gumagawa ng isang ideya para sa sarili nilang app na may epekto sa lipunan. Sa wakas, ang mga estudyante ay bubuo ng mga koponan sa proyekto at gagawa ng kontrata kung paano ang koponan mag-function sa buong pag-unlad ng kanilang app.
+            Market Research:
+              key: Pananaliksik sa Merkado
+              name: Pananaliksik sa Merkado
+              description_student: Pumunta sa paggawa ng app sa pamamagitan ng pagtuklas sa mga umiiral na mga app na maaring naglingkod sa parehong mga gumagamit. Bawat grupo ay tutukoy sa ilang mga app na tumugon sa parehong paksa na gagawin nila, gagamitin ang mga apps na iyon para makatulong sa pagpahusay sa ideya ng app na gusto nilang gawin.
+              description_teacher: Sa araling ito ang mga estudyante ay mananaliksik ng mga apps na katulad sa balak nilang gawin upang mas maunawaan pa nila ang pangangailangan ng kanilang mga gumagamit. Ang mga estudyante ay magtatrabaho sa loob ng kanilang koponan para magsaliksik ng ibang mga app sa Internet, pagkatapos ay susuriin nila ang mga nakita nilang kawili-wili. Sa bandang huli ng araling ito, bawat koponan ay magkakaroon ng mas malinaw na ideya tungkol sa tipo ng app na gusto nilang ilikha at mas pahusayin pa kung sino ang kanilang mga target na mga gumagamit. Bawat koponan ay gagawa ng isang listahan ng pagbanggit sa lahat ng mga app na sinuri nila para gamitin sa kanilang huling presentasyon.
+            Paper Prototypes:
+              key: Papel na mga Prototype
+              name: Papel na mga Prototype
+              description_student: Ang mga papel na prototype ay nagbibigay daan sa mga developer para madaling masubukan ang mga ideya bago sila maglaan ng napakaraming oras sa pagsulat ng code. Sa araling ito, ang mga koponan ay tutuklas sa iilang mga halimbawang mga app na nalikha sa App Lab, gamit ang mga apps na iyon para makatulong sa paggawa ng unang papel na mga prototype ng kanilang mga app.
+              description_teacher: "Bago magsimulang magdisenyo ng mga app, kailangan nating tulungan ang mga estudyante na mas mabuti nilang malagyan ng lawak ang kanilang mga inaasahan. Dahil ang mga estudyante ay di-magtatagal mag-prototype sa mga app na ito sa App Lab, sila ay nasa mahusay na posisyon kung ang mga ideya nila ay nakalinya sa mga uri ng apps na madali lang i-prototype sa App Lab. Ang koponan ay magsisimula sa pagbigay ng lawak sa pamamagitan ng pagtingin sa iilang mga halibawang App na dinisenyo para ipakita ang mga app na maaaring ilikha gamit ang Apps Lab. Ang mga koponan rin ay pipili ng isa (o higit pa) sa mga apps bilang basehan para sa sarili nilang app. Mula dito, ang koponan ay magkakaroon ng oras para pag-usapan ang mga pangunahing functionality ng kanilang app bago gumagamit ng 3x5 na mga index card para gawin ang papel na mga prototype.\\r\n"
+            Prototype Testing:
+              key: Prototype na Pagsusuri
+              name: Prototype na Pagsusuri
+              description_student: Sa araling ito, ang mga koponan ay susubukan ang kanilang mga papel na prototype kasama ang ibang mga miyembro ng klase. Na may isang estudyante na gaganap ng isang papel ng kompyuter, may isang nagsasalaysay, at ang iba ay nagmamasid, ang mga koponan ay makakakuha din ng feedback agad tungkol sa kanilang mga disenyo ng app kung saan magiging basehan para sa susunod na bersyon ng kanilang app na mga prototype.
+              description_teacher: Ang pangunahing layunin ng paggawa ng mga papel na prototype ay para mabigyan sila ng madaling pagsubok at iterasyon bago maisulat ang anumang code. Ang araling ito ay nakatuon sa pagbigay sa mga koponan ng pagkakataon na subukan ang kanilang mga prototype bago pumunta sa App Lab. Ang mga koponan ay bubuo ng isang plano para subukan ito kasama ang mga gumagamit bago patakbuhin ang prototype kasama ang maraming ibang mga estudyante sa klase (at siguro sa labas ng klase). Para masubukan ang prototype sa mga gumagamit, ang mga estudyante ay kinakailangang magtakda ng mga papel sa pagsusubok (ang "tagasalaysay", ang "kompyuter" at ang mga "tagamasid") pati na rin ang pagkaroon ng iilang mga katanungang inihanda para sagutin ng mga gumagamit pagkatapos makompleto ang pagsubok.
+            Digital Design:
+              key: Digital na Disenyo
+              name: Digital na Disenyo
+              description_student: Pagkatapos mag-develop, mag-test at magtipon ng mga feedback sa isang papel na prototype, ang mga koponan ay lilipat na ngayon sa App Lab para mabuo ang sunod na iterasyon ng kanilang mga app. Ang paggamit ng drap-and-drop na Mode ng Pag-disenyo, bawat miyembro ng koponan ay bubuo ng hindi bababa sa isang pahina ng app ng kanilang koponan, na nagtugon sa mga feedback na natanggap sa huling ikot ng pag-test.
+              description_teacher: Pagkatapos makipagtulungang bumuo ng isang papel na prototype para sa kanilang mga app, ang mga grupo ay hahatiin at lulupig ngayon para magsimulang magtrabaho sa isang inter-aktib na digital na bersyon na nakabase sa papel na prototype. Gamit ang drag-and-drop na mode ng pag-disenyo sa App Lab, ang mga estudyante ay mag-isang magtrabaho sa isang pag-unlad ng pagbuo ng kakayahan na mga antas para matuto kung paano bubuo ng digital na mga bersyon ng isang papel na prototype. Mula doon, bawat miyembro ng grupo ay bubuo ng hindi bababa sa isang pahina ng kanilang app sa App Lab, para ipagsama mamaya sa isang app.
+            Linking Screens:
+              key: Pag-uugnay sa mga Screen
+              name: Pag-uugnay sa mga Screen
+              description_student: Ang paggamit sa mga screen na dinisenyo ng klase sa nakaraang aralin, ang mga koponan ay magsama-sama sa mga screen sa isang app. Ang simpleng code ay maaari ring idagdag para makagawa ng mga button na mga click para maglipat sa angkop na screen.
+              description_teacher: Sa araling ito ang mga koponan ay pagsamahin ang mga screen na nadisenyo nila sa nakaraang aralin sa isang app, na kung saan ay maaari nilang sama-samang iugnay gamit ang code. Ang mga estudyante ay matuto sa mga pangunahing pag-program na pinatakbo ng mga event sa pamamagitan ng pagbuo ng mga modelong app na nasimulan nila sa nakaraang aralin. Bukod pa sa screen na dinisenyo ng mga estudyante kahapon, matutunan nila kung paano maglikha ng karagdagang mga screen at kahit na ang pag-import ng mga screen na ginawa ng iba.
+            Testing the App:
+              key: Pag-test ng App
+              name: Pag-test ng App
+              description_student: Ang mga koponan ay gagawa ng isa pang ikot ng user na pag-test, ngayon gamit ang kanilang inter-aktib na prototype. Ang mga feedback na naipon mula sa round ng testing ay magpapaalam sa huling iterasyon ng mga prototype ng app.
+              description_teacher: 'Sa bandang huli ng nakaraang aralin, bawat koponan ay dapat magkakaroon ng pinakamaliit na maaaring prototype ng kanilang app. Ang pangunahing layunin ng araling ito ay para talagang masubukan ng koponan ang kanilang app kasama ang ibang mga tao, mas mainam kung mula sa napiling mga tagapakinig kung saan ang app ay ginawa para sa kanila, o mula sa ibang mga koponan sa klase habang ang mga nagmamasid mula sa koponan ay magtatala sa mga resulta sa mga worksheet na ginamit nila sa pagpaplano na yugto. Gaya ng pagsubok sa mga papel na mga prototype, ang mga koponan ay magsimulang magplano para sa partikular na mga sitwasyon bago magpatakbo at magmasid ng mga pagsubok. '
+            Improving and Iterating:
+              key: Pagpapahusay at pag-uulit
+              name: Pagpapahusay at pag-uulit
+              description_student: Gamit ang mga feedback mula sa huling yugto na pagsubok, ang mga koponan ay magsisimulang magpatupad sa mga pagbabago na tumutugon sa mga pangangailangan ng kanilang mga gumagamit. Bawat koponan ay sumubaybay at inuuna ang mga katangian na gusto nilang idagdag at ang mga bug na kailangan nilang ayusin.
+              description_teacher: Ang mga koponan sa puntong ito ay nakabuo na ng isang app na prototype na dumaan sa ilang mga iterasyon at mga pag-ikot ng pagsubok ng mga gumagamit. Dahil sa mga impormasyon at paggabay na nakuha mula sa huling ikot ng pagsubok ng mga gumagamit, bawat estudyante ay magkakaroon ng pagkakataaon na makapagplano at makapagpatupad ng mga pagpapahusay sa app ng koponan. Depende sa oras na mayroon pa kayo, at sa interes ng estudyante, maaari kang magpatakbo ng pag-ikot ng pagsubok at iterasyon nang maraming beses na nais mo.
+            Project - App Presentation:
+              key: Proyekto - Pagpapakita ng App
+              name: Proyekto - Pagpapakita ng App
+              description_student: Bawat koponan ay maghahanda ng isang pagtatanghal para "ipakita" ang app na nagawa nila. Ito ang panahon para ibahagi nilang ang kanilang mga paghihirap, tagumpay, at mga plano para sa hinaharap.
+              description_teacher: Sa puntong ito ang mga koponan ay nakakapanaliksik na ng isang paksa na may personal at sosyal na kahalagahan, na ginawa at sinubukan pareho sa isang papel na prototype at sa isang digital ng prototype, at nai-iterate sa inisyal na app para maidagdag ang mga bagong katangian at pag-aayos sa mga bug. Ngayon ang oras para magbalik-aral sa kung ano ang nagawa nila at sama-samang buoin ang isang pagtatanghal para ipakita ang proseso ng paglikha. Gamit ang nabigay na pagtatanghal na template, ang mga koponan ay maghahandang ipakita ang tungkol sa kanilang proseso sa paggawa ng app, kalakip ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang mga plano para sa hinaharap.
+            Build a Paper Prototype:
+              name: Papel na mga Prototype
+            Digital Mode in App Lab:
+              name: Digital na Disenyo
+            Linking Prototype Screens:
+              name: Pag-uugnay sa mga Screen
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
+            csd4_2:
+              display_name: 'Kabanata 2: Pag-Prototype ng App'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csdSurvey:
+              display_name: Pagsisiyasat
+          student_description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
+        csd5-preview-2021:
+          description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
+          description_short: Matututo kung paano ang mga tao gumamit ng mga kompyuter para malutas ang mga problem sa mga datos.
+          lessons:
+            Representation Matters:
+              key: Ang Representasyon ay Mahalaga
+              name: Ang Representasyon ay Mahalaga
+              description_student: Ang unang aralin na ito ay nagbibigay ng pangkalahatang ideya kung ano ang mga datos at kung paano ito ginagamit para maglutas ng mga problema. Ang mga grupo ay gagamit ng mga hanay ng datos para makagawa ng isang serye na mga rekomendasyon sa pagkain para sa mga tao gamit ang iba't ibang pamantayan. Pagkatapos, ang mga grupo ay maghahambing sa kanilang mga tugon, at pag-usapan ung paano ang iba't ibang representasyon ng mga pagkain na mga datos nakakaapekto sa kung paano ang estudyante nakakalutas sa mga iba't ibang mga problema.
+              description_teacher: Sa unang aralin ng yunit ng mga datos, ang mga estudyante ay makakakuha ng pangkalahatang pananaw kung ano ang mga datos at kung paano ginagamit ang mga ito para maglutas ng mga problema. Ang mga estudyante ay magsisimula sa mabilisang pag-uusap para makaabot sa karaniwang pag-uunawa tungkol sa mga datos. Sila ngayon ay hahatiin sa mga grupo at gagamit ng mga hanay ng mga datos para makagawa ng isang serye ng mga rekomendasyon sa pagkain para sa mga tao gamit ang iba't ibang mga pamantayan. Bawat grupo ay makakapili kung paano nila ipapakita ang pagkain sa iba't ibang pamamaraan (mga larawan, mga resipe, menu, nutrisyon) na nagbibigay ng kalamangan sa isa sa mga rekomendasyon. Pagkatapos, ang mga grupo ay maghahambing sa kanilang mga tugon at pag-usapan kung paano ang iba't ibang representasyon ng mga datos ng pagkain nakakaapekto sa kung paano nalutas ng mga estudyante ang iba't ibang mga problema.
+            Patterns and Representation:
+              key: Mga Pattern at Representasyon
+              name: Mga Pattern at Representasyon
+              description_student: Ang araling ito ay tumitingin ng mas malapitan sa kung ano ang kailangan para makalikha ng isang sistema ng representasyon. Ang mga grupo ay lilikha ng mga sistema na maaaring kumatawan sa kahit anong letra sa alpabeto gamit ang isang kahon ng mga baraha lang, pagkatapos lilikha ng mga mensahe gamit ang kanilang mga sistema at magpalitan sa ibang mga grupo para masiguro na ang sistema ay gumagana gaya ng inaasahan. Ang klase ay mag-uusap sa mga parehong bagay sa pagitan ng mga gumaganang mga sistema habang kinilala na mayroong maraming mga posibleng solusyon na gagana.
+              description_teacher: Sa araling ito ang mga estudyante ay lilikha ng kanilang sariling sistema para mag-representa ng impormasyon. Sila ay magsisimula sa pamamagitan ng pag-iisip sa lahat ng iba't ibang mga sistema na nagamit na nila para magrepresenta ng oo-hindi na mga tugon. Pagkatapos sila ay magtatrabaho sa maliliit ng pangkat para makalikha ng sistema na maaaring magrepresenta ng kahit anong letra sa alpabeto gamit ang isang kahon ng mga baraha. Ang mga baraha na nagamit ay mayroong isa sa 6 na iba't ibang posibleng mga drowing (6 na mga hayop, 6 na mga kulay, atbp.) at para mag-representa sa buong alpabeto, ang mga estudyante ay kakailanganing gumamit ng mga patterns ng iilang mga baraha para mairepresenta ang bawat letra. Ang mga estudyante ay lilikha ng mga mensahe sa kanilang mga sistema at magpalitan sa ibang mga grupo para masiguro na ang sistema ay gumagana gaya ng inaasahan. Sa patapos na diskusyon, ang klase ay magbalik-aral sa mga pros at cons ng iba't ibang mga sistema. Sila ay mag-uusap tungkol sa mga pagkakatulad sa pagitan ng gumaganang mga sistema at magkilala na mayroong maraming posibleng solusyon sa problemang ito at ang importante lang ay ang lahat ay gumagamit ng parehong sistema para makipag-usap.
+            ASCII and Binary Representation:
+              key: ASCII at Binary na Representasyon
+              name: ASCII at Binary na Representasyon
+              description_student: Ang araling ito ay nagpapakilala sa pormal na sistema ng binary para sa pag-encode ng impormasyon, ang ASCII na sistema para kumatawan sa mga letra at ibang mga karakter. Sa simula ng aralin, ang guro ay magpapakilala sa katotohanan na ang mga kompyuter ay dapat magrepresenta gamit ang aliman sa "on" o "off". Ang klase ay ipapakilala din sa ASCII na sistema para magrepresenta ng teksto gamit ang mga simbolo na binary at magsasanay gamit ang sistemang ito bago mag-encode ng kanilang sariling mga mensahe gamit ang ASCII.
+              description_teacher: Sa araling ito, ang mga estudyante ay matututo sa kanilang unang binary na sistema para sa pag-encode ng impormasyon, ang ASCII na sistema para sa pag-representa ng mga letra at ibang mga karakter. Sa simula ng aralin, ang guro ay magpapakilala sa katotohanan na ang mga kompyuter ay dapat kumatawan sa mga impormasyon gamit ang alinman sa "on" o "off". Pagkatapos ang mga estudyante ay ipapakilala sa ASCII na sistema para magrepresenta ng teksto gamit ang mga simbolo sa binary. Ang mga estudyante ay magsasanay gamit ang sistemang ito bago mag-encode ng sarili nilang mensahe gamit ang ASCII. Sa bandang huli ng aralin ang pagsiyasat na pag-uusap ay makakatulong para maproseso ang pangunahing mga pag-aaral na layunin ng gawain.
+            Representing Images:
+              key: Pagkakatawan sa mga Larawan
+              name: Pagkakatawan sa mga Larawan
+              description_student: Ang araling ito ay patuloy na nag-aaral sa mga sistema ng representasyon sa binary, sa panahong ito gamit ang mga larawan. Ang klase ay ipapakilala sa konsepto ng paghati-hati ng mga larawan sa mga parisukat o mga "pixels" na maaaring gawing on o off nang mag-isa para magawa ang buong larawan. Pagkatapos gumawa ng maikling hanay ng mga hamon gamit ang Pixelation na Widget, ang klase ay gagawa ng mga koneksyon sa pagitan ng sistema ng pagrepresenta ng mga larawan at sa sistema ng pag-representa ng teksto na natutunan nila sa nakaraang aralin.
+              description_teacher: Sa araling ito, ang mga estudyante ay matututo kung paano ang mga kompyuter nag-representa ng mga larawan. Para simulan ang aralin, sila ay magbibigay pansin sa hamon ng paggawa ng lahat ng mga kasalimuutan ng paningin sa isang pattern na binary. Sa pamamagitan ng isang serye ng mga larawan na nagpapakita kung paano ang transpormasyon na ito ay nagawa, ang mga estudyante ay ipapakilala sa konsepto ng paghati-hati ng mga larawan sa mga parisukat o mga "pixels" na maaaring gawing on o off nang mag-isa para magawa ang buong larawan. Ang mga estudyante ay gagawa ng isang maikling grupo ng mga hamon gamit ang Pixelation na Widget para makaguhit ng mga itim at puting mga larawan. Ang mga palaisipan ay dinisenyo para tumawag sa ilang mga hamon ng pagrerepresenta ng larawan sa ganitong pamamaraan. Sa katapusan, ang mga estudyante ay gagawa ng koneksyon sa pagitan ng mga sistema para sa pag-representa ng mga larawan at ang sistema para sa pagrepresenta ng teksto na natutunan nila sa nakaraang aralin.
+            Representing Numbers:
+              key: Pagrepresenta ng mga Numero
+              name: Pagrepresenta ng mga Numero
+              description_student: Ang araling ito ay nagpapakilala sa sistema ng binary na numero. Gamit ang isang kahon ng mga baraha na nagrerepresenta sa mga lugar ng mga halaga sa isang binary (base-2) na sistema ng numero, ang klase ay gagawa ng mga bits na "on" o "off" sa pamamagitan ng pag-ikot ng mga baraha ng patihaya o pabaling, pagkatapos ay pagmasdan ang mga numero na nagresulta mula sa iba't ibang mga pattern na ito. Sa kalaunan, ang pattern ay palawakin sa isang pangkalahatang 4-bit na sistema.
+              description_teacher: Sa araling ito, natutunan ng mga estudyante ang tungkol sa sistema ng numerong binary. Gamit ang isang kaha ng baraha na nagrepresenta sa mga lugar ng halaga sa isang binary (base-2) na sistema ng numero sa pamamagitan ng isang koleksyon ng mga tuldok, ang mga estudyante ay gagawin ang mga bits na "on" o "off" sa pamamagitan ng pagpatihaya o pagbaling sa mga baraha, pagkatapos ay pagmasdan ang mga numero na nagresulta mula sa iba't ibang mga pattern. Dahan-dahan, ang mga estudyante ay palawakin pa ang pattern sa isang pangkalahatang 4-bit na sistema.
+            Keeping Data Secret:
+              key: Pagiging Sekreto ng mga Datos
+              name: Pagiging Sekreto ng mga Datos
+              description_student: Ang mga estudyante ay magkakaroon ng talakayan sa iba't ibang mga antas ng seguridad na gusto nila para sa kanilang mga personal na mga datos. Kapag ang klase ay nagkabuo ng pag-uunawa sa kahalagahan ng privacy, pagkatapos ay matutunan nila ang tungkol sa proseso ng pag-encrypt ng mga impormasyon sa pamamagitan ng pag-encipher ng nota para sa isang kasamahan at pag-decipher sa nota ng kasaman. Ang klase ay magtatapos sa isang diskusyon tungkol sa kahalagahan ng parehong pisikal at diginal na seguridad.
+              description_teacher: Ang mga estudyante ay magkakaroon ng talakayan sa iba't ibang mga antas ng seguridad na gusto nila para sa kanilang mga personal na mga datos. Kapag ang klase ay nagkabuo ng pag-uunawa sa kahalagahan ng privacy, pagkatapos ay matutunan nila ang tungkol sa proseso ng pag-encrypt ng mga impormasyon sa pamamagitan ng pag-encipher ng nota para sa isang kasamahan at pag-decipher sa nota ng kasaman. Ang klase ay magtatapos sa isang diskusyon tungkol sa kahalagahan ng parehong pisikal at diginal na seguridad.
+            Combining Representations:
+              key: Pagsasama-sama ng mga Representasyon
+              name: Pagsasama-sama ng mga Representasyon
+              description_student: Ang araling ito ay pinagsama ang lahat ng tatlong tipo ng mga sistema ng representasyon sa binary (ASCII na mga karakter, numerong binary, at mga larawan) para magbigay-daan para sa pag-encode ng mas kumplikadong mga tipo ng impormasyon sa isang rekord. Pagkatapos makita ang isang serye ng mga bits at tanungin kung paano i-decode ang mga ito, ang klase ay ipapakilala sa isang ideya na ang pag-intindi ng mga binary na impormasyon ay nangangailangan ng pag-uunawa sa parehong sistemang ginagamit at ang kahulugan ng impormasyon na na-encode.
+              description_teacher: Sa araling ito, ang mga estudyante ay gagamit sa lahat ng tatlong mga tipo ng mga sistema sa pagrepresenta sa binary (ASCII na mga karakter, numero na binary, at mga larawan) para mag-decode ng impormasyon sa isang rekord. Pagkatapos makita ang isang serye ng mga bits at matanong sa pag-decode ng mga ito, ang mga estudyante ay ipapakilala sa ideya na para maintindihan nila ang mga impormasyon sa binary, dapat nilang maunawaan ang parehong sistema na ginagamit at ang kahulugan ng impormasyon na naka-encode. Sila ngayon ay mag-decode ng isang rekord na kumakatawan sa isang nakabase sa alaga ayon sa binigay na istraktura.
+            Project - Create a Representation:
+              key: Proyekto - Paglikha ng Representasyon
+              name: Proyekto - Paglikha ng Representasyon
+              description_student: Ang klase ay magdidisenyo ng isang istraktura para kumatawan sa kanilang perpektong araw ng paggamit nila sa mga sistema ng representasyon sa binary na natutunan nila sa kabanatang ito. Pagkatapos magdesisyon kung aling mga piraso ng impormasyon ang dapat i-capture ng rekord, ang klase ay magpapasya kung paano ang isang punch card ng mga bytes ng impormasyon ay isinalin para kumatawan sa mga piraso ng impormasyon na mga iyon. Pagkatapos, ang lahat ay gagamit ng ASCII, binary na numero, at mga pormat ng mga larawan na natutunan nila para mag-representa sa kanilang perpektong mga araw at subukang alamin kung ano ang perpektong araw ng kanilang kasama.
+              description_teacher: Sa araling ito ang mga estudyante ay magdidisenyo ng isang istraktura para kumatawan sa kanilang perpektong araw gamit ang binary na representasyon na mga sistema na natutunan nila sa nakaraang kabanata. Ang mga estudyante ay unang magsusulat ng maikling paglalarawan sa kanilang perpektong araw at pagktapos ay magbalik-aral kasama ang isang kasamahan para matukoy ang pangunahing piraso ng impormasyon na dapat makuha ng kompyuter. Bilang isang klase, ang mga estudyante ay magpapasya kung paano ang punch card na mga bytes ng impormasyon ay isinalin para kumatawan sa mga piraso ng impormasyon na mga iyon. Ang mga estudyante ay gagamit ng ASCII, binary na numero, at mga pormat ng larawan na natutunan nila para kumatawan sa kanilang mga perpektong mga araw. Ang mga estudyante ay magpapalitan ng mga punch cards at subukang alamin kung ano ang perpektong araw ng kanilang kasamahan. Ang aralin ay magtatapos sa pamamagitan ng isang pag-iisip.
+            Problem Solving and Data:
+              key: Paglutas ng mga Problema at mga Datos
+              name: Paglutas ng mga Problema at mga Datos
+              description_student: Ang araling nito ay sumasaklaw sa kung paano ang proseso ng paglutas ng problema maaaring ayusin para harapin ang mga problema sa mga datos, sa partikular. Ang klase ay aatasan sa pagdesisyon kung ano ang pinaka-pangangailangan ng isang siyudad na kailangan gastusan gamit ang kanilang mga yaman. Dapat silang makahanap at makagamit ng mga datos mula sa Internet para suportahan ang kanilang desisyon.
+              description_teacher: 'Sa araling ito, ang mga estudyante ay gagamit ng proseso sa paglutas ng mga problema mula sa nakaraang kurso para maglutas ng problema sa datos. Pagkatapos magbalik-aral sa proseso, ang klase ay papakitaan ng isang desisyon: kung ang siyudad ay dapat bang gagawa ng isang silid-aklatan, bahay ng mga alaga, o departamento para sa sunog. Ang mga estudyante ay magtatrabaho sa isang koponan para magkolekta ng mga impormasyon sa Internet para makatulong sa kanila na mag-desisyon kung ano dapat ang buoin, pagkatapos ay gagamitin nila ang impormasyong ito para makabuo ng argumento na makakakumbinsi sa konseho ng siyudad sa kanilang napili. Pagkatapos ay imapa nila ang kanilang nagawa sa proseso ng paglutas ng mga problema na ginamit nila sa buong kurso, at ihambing sa karaniwang mga proseso sa paglutas ng problema sa mga tiyak ng applikasyon sa mga problema sa mga datos.'
+            Problem Solving with Big Data:
+              key: Paglutas ng Problema kasama ang Malalaking mga Datos
+              name: Paglutas ng Problema kasama ang Malalaking mga Datos
+              description_student: Ang araling ito ay sumasaklaw sa kung paano ang mga datos kinolekta at ginamit ng isang organisasyon para maglutas sa mga problema sa tunay na mundo. Ang klase ay titingin sa tatlong mga sitwasyon na maaaring lutasin gamit ang mga datos at pag-iisip sa mga tipo ng mga datos na gusto nilang lutasin at kung paano nila maaaring ikolekta ang mga datos. Bawat sitwasyon ay naglalakip din ng isang video tungkol sa isang serbisyo sa tunay na mundo na talagang nakakalutas parehong problema sa mga datos.
+              description_teacher: Sa araling ito, ang mga estudyante ay titingin kung paano ang mga datos kinolekta at ginamit ng mga organisasyon para maglutas ng mga problema sa tunay na mundo. Ang aralin ay magsisimula sa isang madaliang pagbalik-aral sa proseso ng paglutas ng mga problema sa mga datos na natuklasan nila sa huling aralin. Pagkatapos ang mga estudyante ay papakitaan ng tatlong mga sitwasyon na maaaring lutasin gamit ang mga datos at ang pag-iisip sa mga tipo ng mga datos na gusto nilang lutasin nila at kung paano sila magkokolekta ng mga datos. Bawat problema ay dinisenyo para mag-isip sa mga serbisyo sa tunay na mundo na umiiral na. Pagkatapos ang pagtatalakay, ang mga estudyante ay titingin sa isang video tungkol sa isang serbisyo sa tunay na mundo at kukuha ng mga tala tungkol sa anong mga datos ang kinolekta ng serbisyo sa tunay na mundo na ito at kung paano ito ginamit. Sa katapusan ng aralin, ang mga estudyante ay magtatala kung ang mga datos na aktibong binagay ng mga gumagamit, ay pasibo bang naitala, o kinolekta sa pamamagitan ng mga sensor.
+            Structuring Data:
+              key: Pagsasaayos ng mga Datos
+              name: Pagsasaayos ng mga Datos
+              description_student: Ang araling ito ay nagpapailalim pa sa interpretasyon ng mga datos, kalakip ang paglilinis at pag-visualize ng mga grupo ng mga hilaw na mga datos. Ang klase ay unang titingin sa kung paano ang pag-presenta ng mga datos sa iba't ibang mga pamamaraan ang maaaring makatulong sa mga tao para mas maintindihan pa nila ito. Pagkatapos makita kung paano ang paglilinis at biswalisasyon ay maaaring makakatulong sa mga tao na makagawa ng mga magagandang mga desisyon, ang klase ay titingin sa kung anong bahagi ng prosesong ito ang maaaring i-automade, at kung ano ang nangangailangan ng tao.
+              description_teacher: Sa araling ito, ang mga estudyante ay mas malalim pang titingnan ang koleksyon at pag-iintindi ng mga datos, kalakip na ang paglinis at pag-visualize ng mga datos. Ang mga estudyante ay unang titingin sa kung paano ang pag-presenta ng mga datos sa iba't ibang mga pamamaran ang maaaring makatulong sa mga tao na mas maintindihan pa nila ito, at pagkatapos ay sila naman ang maglikha ng mga biswalisasyon sa kanilang sariling mga datos. Gamit ang mga resulta sa isang surbey sa mas nagustuhan na mga topping sa pizza, ang mga estudyante ay dapat makapag-desisyon kung ano ang gagawin nila sa mga datos na hindi madaling maikasya sa biswalisasyon na iskima na napili nila. Sa wakas, ang mga estudyante ay titingin sa kung aling mga parte ng prosesong ito ang maaaring i-automate ng isang kompyuter at kung alin ang nangangailangan ng tao para gumawa ng mga desisyon.
+            Making Decisions with Data:
+              key: Paggawa ng mga Desisyon na may mga Datos
+              name: Paggawa ng mga Desisyon na may mga Datos
+              description_student: Ang araling ito ay nagbibigay sa klase ng pagkakataon na magsanay sa proseso ng paglutas ng problema na ipinakilala sa huling aralin. Hindi lahat ng mga katanungan ay mayroong tamang mga sagot at sa iilang mga kaso ang klase ay maaari at dapat magdesisyon na sila ay dapat kokolekta ng mas marami pang mga datos. Ang aralin ay nagtatapos sa isang diskusyon sa kung paano ang iba't ibang mga tao makakabuo ng iba't ibang mga konklusyon mula sa parehong mga datos, o kung paano ang pagkolekta ng iba't ibang mga datos ay maaaring makakaapekto sa mga desisyon na gagawin nila.
+              description_teacher: Sa araling ito, ang mga estudyante ay magkakaroon ng pagkakataon na magsanay sa paggawa ng mga desisyon gamit ang mga datos ayon sa iilang mga problema na dinisenyo para maging pamilyar sa mga estudyante na nasa gitnang paaralan. Ang mga estudyante ay magtatrabaho sa isang koponan at mag-usap-usap kung paano nila gagamitin ang mga datos na ipinakita para makabuo ng isang desisyon bago ang klase mag-uusap sa kanilang mga huling mga napili. Hindi lahat ng mga katanungan ay mayroong tamang mga sagot, at sa iilang mga kaso, ang mga estudyante ay maaari at dapat gagawa ng desisyon na sila ay dapat kokolekta ng mas maraming mga datos. Ang aralin ay magtatapos sa isang diskusyon kung paano ang iba't ibang tao makakabuo ng iba't ibang konklusyon mula sa parehong mga datos, o kung paano ang pagkolekta ng iba't ibang mga datos ay maaaring makakaapekto sa mga desisyon na gagawin nila.
+            Interpreting Data:
+              key: Pag-intindi ng mga Datos
+              name: Pag-intindi ng mga Datos
+              description_student: Ang mga estudyante ay magsisimula sa aralin sa pamamagitan ng pagtingin sa surbey tungkol sa kagustuhan sa keyk na nagbibigay-daan sa mga sumagot para tukuyin ang parehong keyk at lasa ng icing. Sila ay mag-usap-usap kung paano ang pagkakaalam sa relasyon ng keyk at icing na kagustohan ay makakatulong sa kanila para mas mabuting makapag-desisyon kung aling kombinasyon ang kanilang irerekomenda. Pagkatapos sila ay ipapakilala sa isang cross na tabulasyon, na nagbibigay daan sa kanila na mai-graph ang mga relasyon sa iba't ibang mga kagustuhan. Gagamitin nila ang pamamaraang ito para maghanap ng mga relasyon sa isang surbey sa kagustuhan, pagkatapos ay mag-isip-isip sa iba't ibang mga tipo ng problema ang maaring lutasin ng prosesong ito.
+              description_teacher: Ang mga estudyante ay magsisimula sa aralin sa pamamagitan ng pagtingin sa surbey tungkol sa kagustuhan sa keyk na nagbibigay-daan sa mga sumagot para tukuyin ang parehong keyk at lasa ng icing. Sila ay mag-usap-usap kung paano ang pagkakaalam sa relasyon ng keyk at icing na kagustohan ay makakatulong sa kanila para mas mabuting makapag-desisyon kung aling kombinasyon ang kanilang irerekomenda. Pagkatapos sila ay ipapakilala sa isang cross na tabulasyon, na nagbibigay daan sa kanila na mai-graph ang mga relasyon sa iba't ibang mga kagustuhan. Gagamitin nila ang pamamaraang ito para maghanap ng mga relasyon sa isang surbey sa kagustuhan, pagkatapos ay mag-isip-isip sa iba't ibang mga tipo ng problema ang maaring lutasin ng prosesong ito.
+            Automating Data Decisions:
+              key: Pag-Automate ng mga Datos na mga Desisyon
+              name: Pag-Automate ng mga Datos na mga Desisyon
+              description_student: Sa araling ito, ang mga estudyante ay titingin sa isang simpleng halibawa kung paano ang kompyuter maaaring gamitin para makumpleto ang hakbang sa paggawa ng desisyon sa proseso ng paglutas ng mga problema sa mga datos. Ang mga estudyante ay bibigyan ng gawain sa paglikha ng algoritmo na magmumungkahi ng isang lugar na bakasyonan. Ang mga estudyante ay lilikha ng mga patakaran, o isang algorimo na maaaring gamitin ng kompyuter para awtomatikong gumawa ng desisyong ito. Ang mga estudyante ay magbabahagi sa mga patakarang ito at kung ano pagpipilian ng mga patakarang ito gamit ang mga datos ng klase. Pagkatapos sila ay gagamit sa mga patakarang ito sa mga datos mula sa kanilang mga kamag-aral para subukan kung ang kanilang mga patakaran ay gagawa ng parehong desisyon na gagawin ng tao. Ang araling ay magtatapos sa isang diskusyon tungkol sa mga benepisyo at problema ng paggamit ng mga kompyuter para mai-automate ang proseso ng paglutas ng problema sa mga datos.
+              description_teacher: Sa araling ito, ang mga estudyante ay titingin sa isang simpleng halibawa kung paano ang kompyuter maaaring gamitin para makumpleto ang hakbang sa paggawa ng desisyon sa proseso ng paglutas ng mga problema sa mga datos. Ang mga estudyante ay bibigyan ng gawain sa paglikha ng algoritmo na magmumungkahi ng isang lugar na bakasyonan. Ang mga estudyante ay lilikha ng mga patakaran, o isang algorimo na maaaring gamitin ng kompyuter para awtomatikong gumawa ng desisyong ito. Ang mga estudyante ay magbabahagi sa mga patakarang ito at kung ano pagpipilian ng mga patakarang ito gamit ang mga datos ng klase. Pagkatapos sila ay gagamit sa mga patakarang ito sa mga datos mula sa kanilang mga kamag-aral para subukan kung ang kanilang mga patakaran ay gagawa ng parehong desisyon na gagawin ng tao. Ang araling ay magtatapos sa isang diskusyon tungkol sa mga benepisyo at problema ng paggamit ng mga kompyuter para mai-automate ang proseso ng paglutas ng problema sa mga datos.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
+          student_description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
