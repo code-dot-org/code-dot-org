@@ -262,9 +262,9 @@ function renderFooterInSharedGame() {
   );
 }
 
-Applab.autogenerateML = function() {
+Applab.autogenerateML = function(modelId) {
   $.ajax({
-    url: '/api/v1/ml_models',
+    url: `/api/v1/ml_models/${modelId}`,
     method: 'GET'
   }).then(modelData => {
     var x = 20;
