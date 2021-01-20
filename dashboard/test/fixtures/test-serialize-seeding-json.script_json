@@ -36,7 +36,7 @@
       "name": "test-serialize-seeding-json-lg-1-l-1",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": null,
       "relative_position": 1,
       "properties": {
         "overview": "overview 1 1"
@@ -52,7 +52,7 @@
       "name": "test-serialize-seeding-json-lg-1-l-2",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": null,
       "relative_position": 2,
       "properties": {
         "overview": "overview 1 2"
