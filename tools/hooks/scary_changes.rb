@@ -49,7 +49,13 @@ class ScaryChangeDetector
 
         #{changes.join("\n")}
 
-        Please amend your commit message to include the tag [test all browsers] if you haven't already.
+        If you'd like Drone to test your changes across all browsers
+        (instead of only in Chrome, the default),
+        amend your commit message to include the tag [test all browsers] if you haven't already.
+
+        Note that (as of January 2020) Drone will not successfully run all tests across all browsers,
+        so you may need another commit without the [test all browsers] tag
+        if you'd like to see all tests (in Chrome) passing in Drone without manual inspection.
     EOS
   end
 
