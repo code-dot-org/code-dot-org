@@ -20449,7 +20449,7 @@ en:
             Course F Introduction:
               name: Introducing Sprite Lab
             lesson-1:
-              name: Blank Space Variables
+              name: Blank Space Variables - coming soon!
             lesson-2:
               name: Storing and Retrieving Text
             lesson-3:
@@ -20463,7 +20463,11 @@ en:
             Making Sprites:
               name: Making Sprites
             Sprites in Action:
-              name: Sprites in Action
+              name: Sprites in Action - coming soon!
+            variables-in-spritelab:
+              name: Storing and Retrieving Text - coming soon!
+            chatbot:
+              name: Create a Chat-Bot - coming soon!
           lesson_groups:
             ramp_up:
               display_name: Introduction
