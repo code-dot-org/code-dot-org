@@ -224,13 +224,11 @@ class ProgressTableLevelBubble extends React.PureComponent {
 
 export default Radium(ProgressTableLevelBubble);
 
-export const subComps = IN_UNIT_TEST
-  ? {
-      UnpluggedBubble,
-      SmallCircle,
-      LargeCircle,
-      LargeDiamond,
-      Content,
-      LinkWrapper
-    }
-  : {};
+export const unitTestExports = {
+  UnpluggedBubble,
+  SmallCircle,
+  LargeCircle,
+  LargeDiamond,
+  Content,
+  LinkWrapper
+};

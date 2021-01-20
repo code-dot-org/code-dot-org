@@ -2,7 +2,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import ProgressTableLevelBubble, {
-  subComps
+  unitTestExports
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -63,8 +63,8 @@ function bubbleContainerStyleForStatus(status, propOverrides = {}) {
     />
   );
   const bubbleType = propOverrides.concept
-    ? subComps.LargeDiamond
-    : subComps.LargeCircle;
+    ? unitTestExports.LargeDiamond
+    : unitTestExports.LargeCircle;
   return wrapper
     .find(bubbleType)
     .at(0)
@@ -75,46 +75,46 @@ function bubbleContainerStyleForStatus(status, propOverrides = {}) {
 describe('ProgressTableLevelBubble', () => {
   it('renders a link when enabled', () => {
     const wrapper = shallow(<ProgressTableLevelBubble {...defaultProps} />);
-    expect(wrapper.find(subComps.LinkWrapper)).to.have.lengthOf(1);
+    expect(wrapper.find(unitTestExports.LinkWrapper)).to.have.lengthOf(1);
   });
 
   it('does not render a link when disabled', () => {
     const wrapper = shallow(
       <ProgressTableLevelBubble {...defaultProps} disabled={true} />
     );
-    expect(wrapper.find(subComps.LinkWrapper)).to.have.lengthOf(0);
+    expect(wrapper.find(unitTestExports.LinkWrapper)).to.have.lengthOf(0);
   });
 
   it('shows correct text in unplugged bubble', () => {
     const wrapper = mount(
       <ProgressTableLevelBubble {...defaultProps} unplugged={true} />
     );
-    expect(wrapper.find(subComps.UnpluggedBubble)).to.have.lengthOf(1);
-    expect(wrapper.find(subComps.Content).text()).to.equal(
+    expect(wrapper.find(unitTestExports.UnpluggedBubble)).to.have.lengthOf(1);
+    expect(wrapper.find(unitTestExports.Content).text()).to.equal(
       i18n.unpluggedActivity()
     );
   });
 
   it('shows title in normal bubble', () => {
     const wrapper = mount(<ProgressTableLevelBubble {...defaultProps} />);
-    expect(wrapper.find(subComps.LargeCircle)).to.have.lengthOf(1);
-    expect(wrapper.find(subComps.Content).text()).to.equal(TITLE);
+    expect(wrapper.find(unitTestExports.LargeCircle)).to.have.lengthOf(1);
+    expect(wrapper.find(unitTestExports.Content).text()).to.equal(TITLE);
   });
 
   it('shows title in concept bubble', () => {
     const wrapper = mount(
       <ProgressTableLevelBubble {...defaultProps} concept={true} />
     );
-    expect(wrapper.find(subComps.LargeDiamond)).to.have.lengthOf(1);
-    expect(wrapper.find(subComps.Content).text()).to.equal(TITLE);
+    expect(wrapper.find(unitTestExports.LargeDiamond)).to.have.lengthOf(1);
+    expect(wrapper.find(unitTestExports.Content).text()).to.equal(TITLE);
   });
 
   it('shows title in small bubble', () => {
     const wrapper = mount(
       <ProgressTableLevelBubble {...defaultProps} smallBubble={true} />
     );
-    expect(wrapper.find(subComps.SmallCircle)).to.have.lengthOf(1);
-    expect(wrapper.find(subComps.Content).text()).to.equal(TITLE);
+    expect(wrapper.find(unitTestExports.SmallCircle)).to.have.lengthOf(1);
+    expect(wrapper.find(unitTestExports.Content).text()).to.equal(TITLE);
   });
 
   it('shows correct icon when locked', () => {
