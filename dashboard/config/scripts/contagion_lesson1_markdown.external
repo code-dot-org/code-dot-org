@@ -1,0 +1,19 @@
+name 'contagion_lesson1_markdown'
+title 'Outbreak: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 1: How Things Spread 
+
+
+<img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" >
+
+
+In this lesson, you'll learn how a virus spreads from one person to the next. 
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In this lesson, students will explore factors that contribute to a contagion, how things spread from one person to another. The activities in this lesson are designed to give students a hands-on experience to better understand how people can get infected through chains of interactions.
+MARKDOWN

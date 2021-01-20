@@ -1276,7 +1276,8 @@
       "position": 2,
       "properties": {
         "name": "Sample Apps",
-        "description": "[slide] **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 2-4). Students can explore one or more depending on time."
+        "description": "[slide] **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 2-4). Students can explore one or more depending on time.",
+        "progression_name": "Sample Apps"
       },
       "seeding_key": {
         "activity_section.key": "bbd31b65-9e49-4875-8d33-4868043f5a24",
@@ -1420,7 +1421,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What will the value of score be at the end of the program?\r\n\r\n```\r\nvar score\r\nscore <- 3\r\nscore <- score + 1\r\nscore <- \"The score is: \" + score\r\n```",
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "c053bf2e-bfac-4b36-a882-c3b3d8506eb7",
@@ -1481,7 +1483,8 @@
       "position": 2,
       "properties": {
         "description": "[slide] **Level 1: Thermostat App v.1:** This level introduces a new app for students to investigate. It represents a Thermostat App where the temperature can be changed up and down. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n[slide] **Level 2: Thermostat App v.1 Code:**  \n\n* Assign Code Sections: Assign half the pairs to investigate the first section on lines 1-12. The other half investigates the second half on lines 14-21. \n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so. \n* Explain Your Section: Have partners make a group with members of the other section and carefully explain how their section works line by line.",
-        "name": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
+        "name": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
+        "progression_name": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
       "seeding_key": {
         "activity_section.key": "c032d228-77cb-4be6-b527-13c756a145df",
@@ -1522,7 +1525,8 @@
       "position": 5,
       "properties": {
         "description": "[slide] **Level 3:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the `Math.round` command: Discuss with a partner how this command might work. Try deleting `Math.round` in lines 3, 15, and 28. What happens? Add it back in.",
-        "name": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
+        "name": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins",
+        "progression_name": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
       },
       "seeding_key": {
         "activity_section.key": "ac5c4280-580d-43e9-9210-675bf64c19c4",
@@ -1552,7 +1556,8 @@
       "position": 7,
       "properties": {
         "description": "[slide] **Level 4:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n[slide] **Level 5:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
-        "name": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
+        "name": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
+        "progression_name": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
       "seeding_key": {
         "activity_section.key": "99f96442-f5ae-4fa9-a1a7-04157d63e578",
@@ -1740,7 +1745,8 @@
       "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Explain in your own words the process of creating and updating a variable. How does the Counter Pattern with Event work?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Assessment: Check For Understanding\r"
       },
       "seeding_key": {
         "activity_section.key": "f5ef04e0-b85c-4885-ad0a-c109abdce40a",
@@ -1819,7 +1825,8 @@
       "position": 4,
       "properties": {
         "name": "Assigning Numbers and Strings",
-        "description": "**Levels 1-2 Assigning Numbers and Strings:** These levels only use the console.log() command which prints commands in the debug console. Some key points in these levels.\n\n* Students should practice using the \"Watch\" area to track how variables change over a program\n* Students are asked to discuss what they see with a partner\n* These levels heavily reinforce language around assigning and creating variables\n* Level 2 is a debugging-heavy level which introduces more rules about syntax.\n"
+        "description": "**Levels 1-2 Assigning Numbers and Strings:** These levels only use the console.log() command which prints commands in the debug console. Some key points in these levels.\n\n* Students should practice using the \"Watch\" area to track how variables change over a program\n* Students are asked to discuss what they see with a partner\n* These levels heavily reinforce language around assigning and creating variables\n* Level 2 is a debugging-heavy level which introduces more rules about syntax.\n",
+        "progression_name": "Assigning Numbers and Strings"
       },
       "seeding_key": {
         "activity_section.key": "2f2a1c92-597a-448b-85c8-d2538610f5a9",
@@ -1831,7 +1838,8 @@
       "position": 5,
       "properties": {
         "name": "Variables and Operators",
-        "description": "**Levels 3-7 Variables and Operators:** These levels have students practice writing more complex expressions and using operators. A few tricky things to look out for\n\n* These levels transition from using only `console.log` to using full apps with user interfaces.\n* Level 5 introduces `\\n`, the new line character\n* Students continue to be encouraged to discuss what they are learning with a neighbor\n* Levels 6 and 7 introduce the use of the counter pattern with numbers and strings. Students may need to consult the Help and Tips tab for support."
+        "description": "**Levels 3-7 Variables and Operators:** These levels have students practice writing more complex expressions and using operators. A few tricky things to look out for\n\n* These levels transition from using only `console.log` to using full apps with user interfaces.\n* Level 5 introduces `\\n`, the new line character\n* Students continue to be encouraged to discuss what they are learning with a neighbor\n* Levels 6 and 7 introduce the use of the counter pattern with numbers and strings. Students may need to consult the Help and Tips tab for support.",
+        "progression_name": "Variables and Operators"
       },
       "seeding_key": {
         "activity_section.key": "0aa444f3-dc71-4156-bd82-4dd9384a344f",
@@ -1872,7 +1880,8 @@
       "position": 8,
       "properties": {
         "name": "Debugging Scope Issues",
-        "description": "[slide] **Levels 8-9 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\n\n* Create variables once\n* Create variables at the top of your program\n* Don't create variables inside `onEvent()` or `function()` blocks"
+        "description": "[slide] **Levels 8-9 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\n\n* Create variables once\n* Create variables at the top of your program\n* Don't create variables inside `onEvent()` or `function()` blocks",
+        "progression_name": "Debugging Scope Issues"
       },
       "seeding_key": {
         "activity_section.key": "a732bd47-4ca3-4bed-abc9-8c322ee19f10",
@@ -1884,7 +1893,8 @@
       "position": 9,
       "properties": {
         "name": "Putting it Together",
-        "description": "[slide] **Level 10 Putting It All Together:** This level asks students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide."
+        "description": "[slide] **Level 10 Putting It All Together:** This level asks students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide.",
+        "progression_name": "Putting it Together"
       },
       "seeding_key": {
         "activity_section.key": "ee21e1af-4bbd-4689-9f14-40d7e9de55e5",
@@ -1949,7 +1959,8 @@
       "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What will be displayed after this code segment is run?\r\n\r\n![](https://images.code.org/7a23b0d66914dccc07c0818a5b459599-image-1568057423164.30.17 PM.png)",
-        "name": "Assessment: Check For Understanding: AP Practice\r"
+        "name": "Assessment: Check For Understanding: AP Practice\r",
+        "progression_name": "Assessment: Check For Understanding: AP Practice\r"
       },
       "seeding_key": {
         "activity_section.key": "af9415ac-6ed8-4707-9a7f-6e1fa9f1504a",
@@ -2139,7 +2150,8 @@
       "key": "95d8b436-3f5d-4cb2-adde-3adff90248fe",
       "position": 1,
       "properties": {
-        "name": "Try the Photo Liker App"
+        "name": "Try the Photo Liker App",
+        "progression_name": "Try the Photo Liker App"
       },
       "seeding_key": {
         "activity_section.key": "95d8b436-3f5d-4cb2-adde-3adff90248fe",
@@ -2150,7 +2162,8 @@
       "key": "4822c625-7738-41d5-83a5-a21aaa9fb5a2",
       "position": 2,
       "properties": {
-        "name": "Make the Photo Liker App"
+        "name": "Make the Photo Liker App",
+        "progression_name": "Make the Photo Liker App"
       },
       "seeding_key": {
         "activity_section.key": "4822c625-7738-41d5-83a5-a21aaa9fb5a2",
@@ -2242,7 +2255,8 @@
       "position": 1,
       "properties": {
         "name": "Conditionals: Boolean Expressions",
-        "description": "[slide]  **Video:** [r cs-principles-conditionals-part-1-boolean-expressions]\tAs a class watch the video on Boolean expressions. \n\n"
+        "description": "[slide]  **Video:** [r cs-principles-conditionals-part-1-boolean-expressions]\tAs a class watch the video on Boolean expressions. \n\n",
+        "progression_name": "Conditionals: Boolean Expressions"
       },
       "seeding_key": {
         "activity_section.key": "87a276e9-7f77-4cac-99cf-6d3f71dde6eb",
@@ -2265,7 +2279,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Can a computer evaluate an expression to something between true and false? Can you write an expression to deal with a \"maybe\" answer?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Assessment: Check For Understanding\r"
       },
       "seeding_key": {
         "activity_section.key": "e5fed8da-b44f-4082-8162-d59762fced56",
@@ -2500,7 +2515,8 @@
       "key": "e3c5af38-129a-4730-bc0f-bde730e53aaf",
       "position": 1,
       "properties": {
-        "name": "If-Statements"
+        "name": "If-Statements",
+        "progression_name": "If-Statements"
       },
       "seeding_key": {
         "activity_section.key": "e3c5af38-129a-4730-bc0f-bde730e53aaf",
@@ -2511,7 +2527,8 @@
       "key": "c38689e4-6723-452c-9220-dec39ab884fe",
       "position": 2,
       "properties": {
-        "name": "If-Else Statements"
+        "name": "If-Else Statements",
+        "progression_name": "If-Else Statements"
       },
       "seeding_key": {
         "activity_section.key": "c38689e4-6723-452c-9220-dec39ab884fe",
@@ -2522,7 +2539,8 @@
       "key": "bb1fd554-ce4a-48d2-9d55-8f8fcf27abb8",
       "position": 3,
       "properties": {
-        "name": "Logical Operators: AND OR"
+        "name": "Logical Operators: AND OR",
+        "progression_name": "Logical Operators: AND OR"
       },
       "seeding_key": {
         "activity_section.key": "bb1fd554-ce4a-48d2-9d55-8f8fcf27abb8",
@@ -2533,7 +2551,8 @@
       "key": "fec92834-073e-40ab-bd98-8872eb33b605",
       "position": 4,
       "properties": {
-        "name": "Patterns: If-else-if"
+        "name": "Patterns: If-else-if",
+        "progression_name": "Patterns: If-else-if"
       },
       "seeding_key": {
         "activity_section.key": "fec92834-073e-40ab-bd98-8872eb33b605",
@@ -2544,7 +2563,8 @@
       "key": "339ad923-2469-4391-8745-daa5572ef898",
       "position": 5,
       "properties": {
-        "name": "Check Your Understanding"
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
       },
       "seeding_key": {
         "activity_section.key": "339ad923-2469-4391-8745-daa5572ef898",
@@ -2681,7 +2701,8 @@
       "key": "2fb2aa68-08a5-4b1e-838c-b00e33899184",
       "position": 1,
       "properties": {
-        "name": "Boolean expressions"
+        "name": "Boolean expressions",
+        "progression_name": "Boolean expressions"
       },
       "seeding_key": {
         "activity_section.key": "2fb2aa68-08a5-4b1e-838c-b00e33899184",
@@ -2692,7 +2713,8 @@
       "key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a",
       "position": 2,
       "properties": {
-        "name": "If-Statements"
+        "name": "If-Statements",
+        "progression_name": "If-Statements"
       },
       "seeding_key": {
         "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a",
@@ -2703,7 +2725,8 @@
       "key": "1bed51ee-a430-43c0-9123-d0cea915b0df",
       "position": 3,
       "properties": {
-        "name": "Logical Operators"
+        "name": "Logical Operators",
+        "progression_name": "Logical Operators"
       },
       "seeding_key": {
         "activity_section.key": "1bed51ee-a430-43c0-9123-d0cea915b0df",
@@ -2714,7 +2737,8 @@
       "key": "58e36705-b18a-46da-8db4-1045e5f3e98c",
       "position": 4,
       "properties": {
-        "name": "Check For Understanding: AP Practice"
+        "name": "Check For Understanding: AP Practice",
+        "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
         "activity_section.key": "58e36705-b18a-46da-8db4-1045e5f3e98c",
@@ -2887,7 +2911,8 @@
       "key": "32544812-f64d-491f-bbeb-ed29a588a851",
       "position": 1,
       "properties": {
-        "name": "Try to the Museum Ticket Generator App"
+        "name": "Try to the Museum Ticket Generator App",
+        "progression_name": "Try to the Museum Ticket Generator App"
       },
       "seeding_key": {
         "activity_section.key": "32544812-f64d-491f-bbeb-ed29a588a851",
@@ -2898,7 +2923,8 @@
       "key": "b5b04759-a8f8-4488-8d31-75a3fe7d1c07",
       "position": 2,
       "properties": {
-        "name": "Make the Museum Ticket Generator App"
+        "name": "Make the Museum Ticket Generator App",
+        "progression_name": "Make the Museum Ticket Generator App"
       },
       "seeding_key": {
         "activity_section.key": "b5b04759-a8f8-4488-8d31-75a3fe7d1c07",
@@ -3050,7 +3076,8 @@
       "key": "a632448d-16fe-42b5-bb3f-e6468b9d67a0",
       "position": 1,
       "properties": {
-        "name": "Explore Functions"
+        "name": "Explore Functions",
+        "progression_name": "Explore Functions"
       },
       "seeding_key": {
         "activity_section.key": "a632448d-16fe-42b5-bb3f-e6468b9d67a0",
@@ -3061,7 +3088,8 @@
       "key": "38cde762-8ffd-4e29-ae16-3b8383917931",
       "position": 2,
       "properties": {
-        "name": "Declaring and Calling Functions"
+        "name": "Declaring and Calling Functions",
+        "progression_name": "Declaring and Calling Functions"
       },
       "seeding_key": {
         "activity_section.key": "38cde762-8ffd-4e29-ae16-3b8383917931",
@@ -3072,7 +3100,8 @@
       "key": "6b72e87f-1a2f-46cf-b9e2-72b735ec6ffd",
       "position": 3,
       "properties": {
-        "name": "Update Screen Pattern"
+        "name": "Update Screen Pattern",
+        "progression_name": "Update Screen Pattern"
       },
       "seeding_key": {
         "activity_section.key": "6b72e87f-1a2f-46cf-b9e2-72b735ec6ffd",
@@ -3083,7 +3112,8 @@
       "key": "a2239dc4-88d1-429c-8dfa-31141c774cad",
       "position": 4,
       "properties": {
-        "name": "Check Your Understanding"
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
       },
       "seeding_key": {
         "activity_section.key": "a2239dc4-88d1-429c-8dfa-31141c774cad",
@@ -3244,7 +3274,8 @@
       "key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655",
       "position": 1,
       "properties": {
-        "name": "Declare and Call Functions"
+        "name": "Declare and Call Functions",
+        "progression_name": "Declare and Call Functions"
       },
       "seeding_key": {
         "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655",
@@ -3255,7 +3286,8 @@
       "key": "58c11469-a657-4a96-9ef5-b12a401a698c",
       "position": 2,
       "properties": {
-        "name": "Function Scope"
+        "name": "Function Scope",
+        "progression_name": "Function Scope"
       },
       "seeding_key": {
         "activity_section.key": "58c11469-a657-4a96-9ef5-b12a401a698c",
@@ -3266,7 +3298,8 @@
       "key": "bf100286-051b-49cf-99f8-ec9baf6f8267",
       "position": 3,
       "properties": {
-        "name": "When to Declare Functions"
+        "name": "When to Declare Functions",
+        "progression_name": "When to Declare Functions"
       },
       "seeding_key": {
         "activity_section.key": "bf100286-051b-49cf-99f8-ec9baf6f8267",
@@ -3277,7 +3310,8 @@
       "key": "bbaa250e-e395-41c8-82dd-3909077f4abd",
       "position": 4,
       "properties": {
-        "name": "Check For Understanding: AP Practice"
+        "name": "Check For Understanding: AP Practice",
+        "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
         "activity_section.key": "bbaa250e-e395-41c8-82dd-3909077f4abd",
@@ -3450,7 +3484,8 @@
       "key": "71987f28-f741-4e00-acde-8e63c0e6cb23",
       "position": 1,
       "properties": {
-        "name": "Quote Maker App"
+        "name": "Quote Maker App",
+        "progression_name": "Quote Maker App"
       },
       "seeding_key": {
         "activity_section.key": "71987f28-f741-4e00-acde-8e63c0e6cb23",
@@ -3461,7 +3496,8 @@
       "key": "453b36a0-2d53-4f35-9e1a-244681a30898",
       "position": 2,
       "properties": {
-        "name": "Make the Quote Maker App"
+        "name": "Make the Quote Maker App",
+        "progression_name": "Make the Quote Maker App"
       },
       "seeding_key": {
         "activity_section.key": "453b36a0-2d53-4f35-9e1a-244681a30898",
@@ -3596,7 +3632,8 @@
       "key": "15bf5b80-7a1a-4d29-bd73-8b14c1b712a7",
       "position": 1,
       "properties": {
-        "name": "Sample Apps"
+        "name": "Sample Apps",
+        "progression_name": "Sample Apps"
       },
       "seeding_key": {
         "activity_section.key": "15bf5b80-7a1a-4d29-bd73-8b14c1b712a7",
@@ -3679,7 +3716,8 @@
       "key": "7de46787-93d6-42bf-b8a3-ab9dab48bdc2",
       "position": 1,
       "properties": {
-        "name": "Create the Screens"
+        "name": "Create the Screens",
+        "progression_name": "Create the Screens"
       },
       "seeding_key": {
         "activity_section.key": "7de46787-93d6-42bf-b8a3-ab9dab48bdc2",
@@ -3690,7 +3728,8 @@
       "key": "f7e1ea44-e78b-4d7d-935e-dcc791fc8490",
       "position": 2,
       "properties": {
-        "name": "Create the Variables"
+        "name": "Create the Variables",
+        "progression_name": "Create the Variables"
       },
       "seeding_key": {
         "activity_section.key": "f7e1ea44-e78b-4d7d-935e-dcc791fc8490",
@@ -3701,7 +3740,8 @@
       "key": "af523a11-2be5-482b-96b4-bb89ef5e5929",
       "position": 3,
       "properties": {
-        "name": "Create the Function"
+        "name": "Create the Function",
+        "progression_name": "Create the Function"
       },
       "seeding_key": {
         "activity_section.key": "af523a11-2be5-482b-96b4-bb89ef5e5929",
@@ -3712,7 +3752,8 @@
       "key": "14f66402-e4b0-419a-92d9-ff46e0680e40",
       "position": 4,
       "properties": {
-        "name": "Add onEvents"
+        "name": "Add onEvents",
+        "progression_name": "Add onEvents"
       },
       "seeding_key": {
         "activity_section.key": "14f66402-e4b0-419a-92d9-ff46e0680e40",
@@ -3819,7 +3860,8 @@
       "key": "8b7b5c39-938e-4ea6-84cc-ed3f919b41c0",
       "position": 1,
       "properties": {
-        "name": "Test Your Decision Maker App"
+        "name": "Test Your Decision Maker App",
+        "progression_name": "Test Your Decision Maker App"
       },
       "seeding_key": {
         "activity_section.key": "8b7b5c39-938e-4ea6-84cc-ed3f919b41c0",
@@ -3830,7 +3872,8 @@
       "key": "ec0ec9e1-1562-43e1-ad7d-0faa7105ce7c",
       "position": 2,
       "properties": {
-        "name": "Submit Your Decision Maker App"
+        "name": "Submit Your Decision Maker App",
+        "progression_name": "Submit Your Decision Maker App"
       },
       "seeding_key": {
         "activity_section.key": "ec0ec9e1-1562-43e1-ad7d-0faa7105ce7c",
@@ -3870,7 +3913,8 @@
       "key": "8221d39d-8fc3-4ee0-9eba-778354ade4e2",
       "position": 1,
       "properties": {
-        "name": "Unit 4 Exam"
+        "name": "Unit 4 Exam",
+        "progression_name": "Unit 4 Exam"
       },
       "seeding_key": {
         "activity_section.key": "8221d39d-8fc3-4ee0-9eba-778354ade4e2",
@@ -3885,10 +3929,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "CSP U4 My Pet Rock Example App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": false,
@@ -3911,10 +3955,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L01 Poetry App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": false,
@@ -3937,10 +3981,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L01 Thermostat App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": false,
@@ -3963,10 +4007,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U1 L02 CYU MC_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": false,
@@ -3989,10 +4033,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
           "U4 L02 Thermostat App v1_2021"
-        ]
+        ],
+        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
       "named_level": null,
       "bonus": null,
@@ -4015,10 +4059,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
           "U4 L02 Thermostat App v1 Code_2021"
-        ]
+        ],
+        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
       "named_level": null,
       "bonus": null,
@@ -4041,10 +4085,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins",
         "level_keys": [
           "U4 L02 Thermostat App v2_2021"
-        ]
+        ],
+        "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
       },
       "named_level": null,
       "bonus": null,
@@ -4067,10 +4111,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
           "U4 L02 Thermostat App v3_2021"
-        ]
+        ],
+        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
       "named_level": null,
       "bonus": null,
@@ -4093,10 +4137,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
           "U4 L02 Thermostat App v3 pt2_2021"
-        ]
+        ],
+        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
       "named_level": null,
       "bonus": null,
@@ -4119,10 +4163,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U4 L02 CYU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": null,
       "bonus": null,
@@ -4145,10 +4189,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Assigning Numbers and Strings",
         "level_keys": [
           "U4 L03 Variables numbers practice 1_2021"
-        ]
+        ],
+        "progression": "Assigning Numbers and Strings"
       },
       "named_level": null,
       "bonus": null,
@@ -4171,10 +4215,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Assigning Numbers and Strings",
         "level_keys": [
           "U4 L03 Variables numbers practice 4_2021"
-        ]
+        ],
+        "progression": "Assigning Numbers and Strings"
       },
       "named_level": null,
       "bonus": null,
@@ -4197,10 +4241,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 1_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -4223,10 +4267,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 3_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -4249,10 +4293,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 2_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -4275,10 +4319,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 5_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -4301,10 +4345,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 6_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -4327,10 +4371,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Debugging Scope Issues",
         "level_keys": [
           "U4 L03 Variable Scope: Local vs. Global_2021"
-        ]
+        ],
+        "progression": "Debugging Scope Issues"
       },
       "named_level": null,
       "bonus": null,
@@ -4353,10 +4397,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Debugging Scope Issues",
         "level_keys": [
           "U4 L03 Scope Issue_2021"
-        ]
+        ],
+        "progression": "Debugging Scope Issues"
       },
       "named_level": null,
       "bonus": null,
@@ -4379,10 +4423,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Putting it Together",
         "level_keys": [
           "U4 L03 Variables operator practice 4_2021"
-        ]
+        ],
+        "progression": "Putting it Together"
       },
       "named_level": null,
       "bonus": null,
@@ -4405,10 +4449,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding: AP Practice\r",
         "level_keys": [
           "U4L3 CFU Variables Psuedocode_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "named_level": null,
       "bonus": null,
@@ -4431,10 +4475,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding: AP Practice\r",
         "level_keys": [
           "U4L3 CFU Variables Randomness Psuedocode_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "named_level": null,
       "bonus": null,
@@ -4509,10 +4553,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Conditionals: Boolean Expressions",
         "level_keys": [
           "U4 L06 Introduction to Conditionals: Boolean Expressions_2021"
-        ]
+        ],
+        "progression": "Conditionals: Boolean Expressions"
       },
       "named_level": null,
       "bonus": null,
@@ -4535,10 +4579,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U4 L05 CYU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": null,
       "bonus": null,
