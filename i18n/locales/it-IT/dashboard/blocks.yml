@@ -1021,6 +1021,7 @@ it:
             '"y"': posizione y
             '"direction"': direzione del movimento
             '"tint"': tonalità
+            '"speed"': velocità
       gamelab_getThisSprite:
         text: "{CHOICE} personaggio"
         options:
@@ -1162,6 +1163,8 @@ it:
             '"West"': Ovest
       gamelab_moveToward:
         text: sposta {SPRITE} distanza {DISTANCE} verso {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE} cliccato"
       gamelab_objectSpritePointer:
         text: "{SPRITE} cliccato"
       gamelab_patrollingUpDown:
@@ -1214,6 +1217,13 @@ it:
             undefined: nessuno
       gamelab_setBackgroundImageAs:
         text: imposta lo sfondo {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mediamente
+            '100': large
       gamelab_setPrompt:
         text: "{QUESTION} rapida dell'utente per la variabile {VAR}"
       gamelab_setPromptWithChoices:
@@ -1227,6 +1237,7 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione del movimento
+            '"speed"': velocità
       gamelab_setSizes:
         text: imposta {SPRITE} {PROPERTY} al {N}%
         options:

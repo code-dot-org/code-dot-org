@@ -275,6 +275,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Kokeilee onko arvo pienempi tai yhtäsuuri kuin toinen arvo. Palauttaa tosi jos lausekkeen vasemmanpuoleinen arvo on pienempi tai yhtäsuuri kuin lausekkeen oikeanpuoleinen arvo.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Pienempi tai yhtäsuuri operaattori",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "Palauttaa satunnaisluvun. Luku valitaan nollan ja yhden väliltä, mutta kuitenkin niin että luku 1 ei kuulu lukualueeseen.",
   "dropletBlock_mathRandom_signatureOverride": "Math.random()",

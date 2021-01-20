@@ -845,7 +845,7 @@ vi-VN:
   text-compression_name: Nén văn bản
   applab_name: Phòng thí nghiệm ứng dụng
   gamelab_name: Kho Trò chơi
-  applab_gradelevel: Lứa tuổi 13 +
+  applab_gradelevel: 13 tuổi trở lên
   lightbot_gradelevel: Mọi lứa tuổi
   thinkersmith_gradelevel: Mọi lứa tuổi
   lightbotintl_gradelevel: Mọi lứa tuổi
@@ -960,7 +960,7 @@ vi-VN:
   header_my_dashboard: Bảng điều khiển của tôi
   header_courses: Các khóa học
   header_course_catalog: Danh mục khóa học
-  header_project_gallery: chương trình
+  header_project_gallery: Dự án
   header_sections: Mục
   header_professional_learning: Học tập nâng cao chuyên môn
   header_educate_overview: Tổng quát về Giáo dục
@@ -973,7 +973,7 @@ vi-VN:
   header_educate_inspire: Truyền cảm hứng cho Hssv
   header_educate_community: Cộng đồng trực tuyến
   header_educate_tools: Các công cụ và video
-  header_about_us: Thông tin
+  header_about_us: Về chúng tôi
   header_about_leadership: Khả năng lãnh đạo
   header_about_donors: Người tặng
   header_about_partners: Đối tác
@@ -996,7 +996,7 @@ vi-VN:
   user_header_label: Chào %{username}
   user_header_team: Nhóm
   user_header_my_projects: Chương trình của tôi
-  user_header_settings: Tài khoản của bạn
+  user_header_settings: Cài đặt tài khoản
   user_header_logout: Đăng xuất
   user_header_signin: Đăng nhập
   user_header_gamelab: Kho Trò chơi
@@ -1148,4 +1148,6 @@ vi-VN:
   hoc2018_mc_thank_microsoft: Cảm ơn Microsoft đã ủng hộ tầm nhìn và sứ mệnh của chúng
     tôi để giúp cho mọi trẻ em đều có cơ hội học khoa học máy tính cũng như các kỹ
     năng cần thiết để thành công trong thế kỷ 21.
-  footer_powered_by_aws: Được tài trợ bởi Amazon Web Services
+  footer_powered_by_aws: Amazon Web Services và biểu tượng “Được hỗ trợ bởi AWS” là
+    các nhãn hiệu của Amazon.com, Inc. hoặc các chi nhánh của Amazon tại Hoa Kỳ và
+    / hoặc các quốc gia khác.

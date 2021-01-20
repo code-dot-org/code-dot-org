@@ -49,6 +49,7 @@ lv:
               name: 'Spēļu laboratorija: izvedot stāstu'
             The Big Event:
               name: Lielais notikums
+          student_description: Kurss 1 ir radīts, lai ļautu jaunākiem lasītājiem radīt datorprogrammas, kas palīdzēs viņiem apgūt sadarbību ar kolēģiem, attīstīt problēmu risināšanas prasmes un neatlaisties no sarežģītiem uzdevumiem. Šī kursa beigās skolēni radīs paši savu spēli vai stāstu ar ko varēs dalīties vai publicēt. Ieteicams klasēm K-1.
         course2:
           title: Kurss 2
           description: 2. kurss ir veidots skolēniem, kuri prot lasīt un kuriem nav ieprieksējās programmēšnas pieredzes. Šajā kursā skolēni veidos programmas, kas risina problēmas, un radīs interaktīvas spēles vai stāstus ar kuriem var dalīties vai publicēt. Iteicams no 2.-5. klasei.
@@ -92,6 +93,7 @@ lv:
               name: Lielais notikums
             Your Digital Footprint:
               name: Tavs digitālais nospiedums
+          student_description: 2. kurss ir veidots skolēniem, kuri prot lasīt un kuriem nav ieprieksējās programmēšnas pieredzes. Šajā kursā skolēni veidos programmas, kas risina problēmas, un radīs interaktīvas spēles vai stāstus ar kuriem var dalīties vai publicēt. Iteicams no 2.-5. klasei.
         course3:
           title: Kurss 3
           description_short: 3. kurss seko 2. kursam.
@@ -146,6 +148,7 @@ lv:
           lessons:
             Play Lab:
               name: Spēles laboratorija
+          student_description: Izveidot stāstu vai spēli ar Spēles laboratoriju!
         artist:
           title: Mākslinieks
           description: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
@@ -153,12 +156,14 @@ lv:
           lessons:
             Artist:
               name: Mākslinieks
+          student_description: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
         hourofcode:
           description: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem putniem, augiem pret zombijiem un Skretu no Ledus laikmeta!
           description_short: Izmēģini datrzinību pamatus ar daudz jaukiem tēliem!
           lessons:
             Maze:
               name: Labirints
+          student_description: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem putniem, augiem pret zombijiem un Skretu no Ledus laikmeta!
         frozen:
           title: Programmē ar Annu un Elzu
           description: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
@@ -166,6 +171,7 @@ lv:
           lessons:
             Artist:
               name: Mākslinieks
+          student_description: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
         course4:
           title: 4. kurss
           description_short: Skolēniem, kas pilda 4. kursu vajadzēja pabeigt 2. un 3. kursu.
@@ -230,6 +236,7 @@ lv:
               name: 'Lauksaimnieks: Nosacījuma cikli'
             'Maze: Sequence':
               name: 'Labirints: secība'
+          student_description: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un 3. kursu.
         usability:
           title: lietojamības testēšana
           description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
@@ -244,6 +251,7 @@ lv:
               name: Ievads
             Variables:
               name: Mainīgie
+          student_description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
         algebra:
           lessons:
             'Eval: Conditionals':
@@ -312,6 +320,7 @@ lv:
               name: Labirints
             Wrap-up:
               name: Ietīt
+          student_description: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās prieku mācīties visos vecumos.
         edit-code:
           title: rediģēt kodu
           description: rediģēt kodu
@@ -323,6 +332,7 @@ lv:
               name: Mākslinieks
             The Maze:
               name: Labirints
+          student_description: rediģēt kodu
         events:
           title: Pasākumi
           description: Pasākumi
@@ -330,12 +340,14 @@ lv:
           lessons:
             Bounce:
               name: Atlekt
+          student_description: Pasākumi
         flappy:
           title: Flappy kods
           description: Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini Flappy koda apmācību!
           lessons:
             Flappy Code:
               name: Flappy kods
+          student_description: Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini Flappy koda apmācību!
         jigsaw:
           title: Puzle
           lessons:
@@ -1734,6 +1746,9 @@ lv:
           lesson_groups:
             required:
               display_name: Pārskats
+          lessons:
+            Focus Area 1:
+              name: Mācību programmas
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2054,6 +2069,12 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Ievads
+            lessonGroup-3:
+              display_name: Mainīgie
         csd3-2021:
           lessons:
             Variables:
@@ -2208,9 +2229,6 @@ lv:
             csf_events:
               display_name: Pasākumi
         csf-2021-pilot:
-          lessons:
-            lesson-1:
-              name: Aplokšņu mainīgie
           lesson_groups:
             ramp_up:
               display_name: Ievads

@@ -300,6 +300,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Kontrollib, kas väärtus on väiksem või võrdne teise väärtusega. Annab tõese tulemuse, kui väärtus avaldise vasakus servas on väiksem või võrdne väärtusega avaldise parempoolses servas.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Väiksem või võrdne sümbol",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "Tagastab juhusliku numbri alates 0-st (kaasa arvatud) kuni 1-ni (välja arvatud)",
   "dropletBlock_mathRandom_signatureOverride": "Math.random()",

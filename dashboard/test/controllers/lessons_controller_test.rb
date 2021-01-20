@@ -562,6 +562,8 @@ class LessonsControllerTest < ActionController::TestCase
             id: section.id,
             name: 'section name',
             position: 1,
+            duration: 10,
+            progressionName: 'progression name',
             scriptLevels: [
               activitySectionPosition: 1,
               activeId: level_to_add.id,
@@ -589,7 +591,7 @@ class LessonsControllerTest < ActionController::TestCase
     script_level = section.script_levels.first
     assert script_level.assessment
     refute script_level.bonus
-    assert_equal 'section name', script_level.progression
+    assert_equal 'progression name', script_level.progression
     assert_equal ['level-to-add'], script_level.levels.map(&:name)
   end
 

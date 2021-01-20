@@ -19,6 +19,7 @@
   petition_message: "Každý student v každé škole by měl mít možnost se naučit informatiku"
   petition_sign_message: 'Pokud souhlasíš, napiš své jméno. Přidej se mezi # dalších.'
   petition_join_others: 'Připoj se k # ostatním'
+  petition_join_others_num: "Připojte se k %{num} dalším"
   name: "Jméno"
   email: "Email"
   zipcode: "PSČ nebo země"

@@ -183,6 +183,7 @@ bn:
               name: শিল্পী
             The Maze:
               name: গোলকধাঁধা
+          student_description: কোড সম্পাদনা করুন
         events:
           title: ঘটনাবলী
           description: ঘটনাবলী
@@ -190,6 +191,7 @@ bn:
           lessons:
             Bounce:
               name: বল লাফানো
+          student_description: ঘটনাবলী
         flappy:
           title: ফ্লাপি কোড
           lessons:
@@ -207,6 +209,7 @@ bn:
           lessons:
             Step:
               name: ধাপ
+          student_description: ধাপ টিউটোরিয়াল
         cspunit1:
           description_short: প্রোগ্রামিং
         algebraPD:
@@ -367,12 +370,15 @@ bn:
         starwars:
           description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। 
           description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। 
+          student_description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। 
         starwarsblocks:
           description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। 
           description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। 
+          student_description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। 
         mc:
           title: মাইনক্র্যাফট এক ঘণ্টার কোড
           description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন। 
+          student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন। 
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1334,6 +1340,9 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
+          lessons:
+            Focus Area 1:
+              name: পাঠ্যক্রম
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -1619,6 +1628,12 @@ bn:
               name: কোর্স A
             Course B:
               name: কোর্স B
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: ভূমিকা
+            lessonGroup-3:
+              display_name: চলকগুলো
         csd3-2021:
           description_short: "প্রোগ্রামিং"
           lessons:
