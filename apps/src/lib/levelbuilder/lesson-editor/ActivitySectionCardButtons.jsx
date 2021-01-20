@@ -36,7 +36,8 @@ class ActivitySectionCardButtons extends Component {
     updateTip: PropTypes.func.isRequired,
     removeTip: PropTypes.func.isRequired,
     appendResourceLink: PropTypes.func.isRequired,
-    appendSlide: PropTypes.func.isRequired
+    appendSlide: PropTypes.func.isRequired,
+    hasLessonPlan: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -143,59 +144,68 @@ class ActivitySectionCardButtons extends Component {
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
               Level
             </button>
-            <button
-              onMouseDown={this.handleOpenAddTip}
-              className="btn"
-              style={styles.addButton}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Callout
-            </button>
-            <button
-              onMouseDown={this.handleOpenAddResource}
-              className="btn"
-              style={styles.addButton}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Resource Link
-            </button>
-            <button
-              onMouseDown={this.handleAddSlide}
-              className="btn"
-              style={styles.addButton}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Slide
-            </button>
+            {this.props.hasLessonPlan && (
+              <span>
+                <button
+                  onMouseDown={this.handleOpenAddTip}
+                  className="btn"
+                  style={styles.addButton}
+                  type="button"
+                >
+                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                  Callout
+                </button>
+                <button
+                  onMouseDown={this.handleOpenAddResource}
+                  className="btn"
+                  style={styles.addButton}
+                  type="button"
+                >
+                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                  Resource Link
+                </button>
+                <button
+                  onMouseDown={this.handleAddSlide}
+                  className="btn"
+                  style={styles.addButton}
+                  type="button"
+                >
+                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                  Slide
+                </button>
+              </span>
+            )}
           </span>
-          {this.props.activitySection.tips.length > 0 && (
-            <span>
-              {this.props.activitySection.tips.map(tip => (
-                <LessonTipIconWithTooltip
-                  tip={tip}
-                  key={tip.key}
-                  onClick={this.handleEditTip}
-                />
-              ))}
-            </span>
-          )}
+          {this.props.hasLessonPlan &&
+            this.props.activitySection.tips.length > 0 && (
+              <span>
+                {this.props.activitySection.tips.map(tip => (
+                  <LessonTipIconWithTooltip
+                    tip={tip}
+                    key={tip.key}
+                    onClick={this.handleEditTip}
+                  />
+                ))}
+              </span>
+            )}
         </div>
-        <FindResourceDialog
-          isOpen={this.state.addResourceOpen}
-          handleConfirm={this.handleCloseAddResource}
-          handleClose={() => this.setState({addResourceOpen: false})}
-        />
-        {/* Prevent dialog from trying to render when there is no tip to edit*/}
-        {this.state.tipToEdit && (
-          <EditTipDialog
-            isOpen={true}
-            handleConfirm={this.handleCloseAddTip}
-            tip={this.state.tipToEdit}
-            handleDelete={this.handleDeleteTip}
-          />
+        {this.props.hasLessonPlan && (
+          <div>
+            <FindResourceDialog
+              isOpen={this.state.addResourceOpen}
+              handleConfirm={this.handleCloseAddResource}
+              handleClose={() => this.setState({addResourceOpen: false})}
+            />
+            {/* Prevent dialog from trying to render when there is no tip to edit*/}
+            {this.state.tipToEdit && (
+              <EditTipDialog
+                isOpen={true}
+                handleConfirm={this.handleCloseAddTip}
+                tip={this.state.tipToEdit}
+                handleDelete={this.handleDeleteTip}
+              />
+            )}
+          </div>
         )}
         <AddLevelDialog
           isOpen={this.state.addLevelOpen}
