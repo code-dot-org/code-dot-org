@@ -991,6 +991,8 @@ en:
             '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
+      gamelab_addTarget:
+        text: "[SPRITE][0] gets target [TARGET][1]"
       gamelab_allSpritesWithAnimation:
         text: "[ANIMATION][0]"
       gamelab_atTime:
@@ -999,6 +1001,8 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_beginCollectingData:
+        text: begin collecting data [BREAK][0] value [VALUE][1] with label [LABEL][2]
       gamelab_bounceOff:
         text: "[SPRITE][0] bounces off [TARGET][1]"
       gamelab_changePropBy:
@@ -1034,6 +1038,8 @@ en:
         text: being draggable
       gamelab_edgesDisplace:
         text: edges block [SPRITE][0] from moving
+      gamelab_followingTargets:
+        text: following targets
       gamelab_getAllSprites:
         text: all sprites
       gamelab_getProp:
@@ -1046,6 +1052,7 @@ en:
             '"y"': y position
             '"direction"': movement direction
             '"tint"': tint
+            '"speed"': speed
       gamelab_getThisSprite:
         text: "[CHOICE][0] sprite"
         options:
@@ -1187,6 +1194,8 @@ en:
             '"West"': West
       gamelab_moveToward:
         text: move [SPRITE][0] pixels [DISTANCE][1] toward [TARGET][2]
+      gamelab_newSpritePointer:
+        text: "[SPRITE][0]"
       gamelab_objectSpritePointer:
         text: "[SPRITE][0]"
       gamelab_patrollingUpDown:
@@ -1257,6 +1266,14 @@ en:
             undefined: none
       gamelab_setBackgroundImageAs:
         text: set background to [IMG][0]
+      gamelab_setDefaultSpriteSize:
+        text: set new sprite default size to [SIZE][0]
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medium
+            '100': large
       gamelab_setPrompt:
         text: prompt user [QUESTION][0] for variable [VAR][1]
       gamelab_setPromptWithChoices:
@@ -1270,6 +1287,7 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+            '"speed"': speed
       gamelab_setSizes:
         text: set [SPRITE][0] [PROPERTY][1] to [N][2]%
         options:
@@ -1294,8 +1312,14 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_stopCollectingData:
+        text: stop collecting data
       gamelab_subjectSpritePointer:
         text: "[SPRITE][0]"
+      gamelab_textJoin:
+        text: "[LEFT_QUOTE][0][TEXT1][1][RIGHT_QUOTE][2][TEXT2][3]"
+      gamelab_textVariableJoin:
+        text: "[VAR][0][TEXT2][1]"
       gamelab_tumbling:
         text: tumbling
       gamelab_turn:
@@ -1327,6 +1351,8 @@ en:
         text: when [VAR][0] is answered
       gamelab_whenRightArrow:
         text: when right arrow pressed
+      gamelab_whenSpriteCreated:
+        text: when [SPRITE][0] created
       gamelab_whenTouching:
         text: when [SPRITE1][0] touches [SPRITE2][1]
       gamelab_whenUpArrow:
