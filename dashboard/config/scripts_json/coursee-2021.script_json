@@ -1601,7 +1601,8 @@
       "key": "d49bf109-2543-40ee-9fce-0c69e13ac185",
       "position": 3,
       "properties": {
-        "name": "Maze Intro: Programming with Blocks"
+        "name": "Maze Intro: Programming with Blocks",
+        "progression_name": "Maze Intro: Programming with Blocks"
       },
       "seeding_key": {
         "activity_section.key": "d49bf109-2543-40ee-9fce-0c69e13ac185",
@@ -1612,7 +1613,8 @@
       "key": "c1a101ad-d674-496e-978e-2fd7bf196022",
       "position": 4,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "c1a101ad-d674-496e-978e-2fd7bf196022",
@@ -1623,7 +1625,8 @@
       "key": "74868c8b-a655-4ea5-a493-d92849957afd",
       "position": 5,
       "properties": {
-        "name": "Debugging with the Step Button"
+        "name": "Debugging with the Step Button",
+        "progression_name": "Debugging with the Step Button"
       },
       "seeding_key": {
         "activity_section.key": "74868c8b-a655-4ea5-a493-d92849957afd",
@@ -1634,7 +1637,8 @@
       "key": "d64f7ad4-be48-428b-a27f-cb46015a444a",
       "position": 6,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "d64f7ad4-be48-428b-a27f-cb46015a444a",
@@ -1645,7 +1649,8 @@
       "key": "1823aca8-b31b-4700-a724-c3f295cdfcb5",
       "position": 7,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "1823aca8-b31b-4700-a724-c3f295cdfcb5",
@@ -1656,7 +1661,8 @@
       "key": "a7f1548f-2d8e-46cb-b3d6-35ef493eeef7",
       "position": 8,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "a7f1548f-2d8e-46cb-b3d6-35ef493eeef7",
@@ -1713,7 +1719,8 @@
       "key": "c0191294-55c5-47ec-a80d-76f9023bd84e",
       "position": 1,
       "properties": {
-        "name": "Artist Intro with JR Hildebrande"
+        "name": "Artist Intro with JR Hildebrande",
+        "progression_name": "Artist Intro with JR Hildebrande"
       },
       "seeding_key": {
         "activity_section.key": "c0191294-55c5-47ec-a80d-76f9023bd84e",
@@ -1724,7 +1731,8 @@
       "key": "257e3a1f-5cc5-444e-94e3-ee18c5d7169e",
       "position": 2,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "257e3a1f-5cc5-444e-94e3-ee18c5d7169e",
@@ -1735,7 +1743,8 @@
       "key": "feae9d15-9fcd-46f6-a25e-7cb50d4a776c",
       "position": 3,
       "properties": {
-        "name": "Loops with the Artist"
+        "name": "Loops with the Artist",
+        "progression_name": "Loops with the Artist"
       },
       "seeding_key": {
         "activity_section.key": "feae9d15-9fcd-46f6-a25e-7cb50d4a776c",
@@ -1746,7 +1755,8 @@
       "key": "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb",
       "position": 4,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb",
@@ -1757,7 +1767,8 @@
       "key": "f6df66e2-bc97-403d-a4e1-c015294d94ac",
       "position": 5,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "f6df66e2-bc97-403d-a4e1-c015294d94ac",
@@ -1768,7 +1779,8 @@
       "key": "9982dc06-ec1f-4b15-b4e8-16cc5663bf8c",
       "position": 6,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "9982dc06-ec1f-4b15-b4e8-16cc5663bf8c",
@@ -1779,7 +1791,8 @@
       "key": "9a64a3f8-16de-4001-82e3-01d9184a0650",
       "position": 7,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "9a64a3f8-16de-4001-82e3-01d9184a0650",
@@ -1836,7 +1849,8 @@
       "key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea",
       "position": 1,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea",
@@ -1894,7 +1908,8 @@
       "key": "a63ac211-7ad4-4c28-af4a-cfa489ec8a77",
       "position": 1,
       "properties": {
-        "name": "While Loops with the Farmer"
+        "name": "While Loops with the Farmer",
+        "progression_name": "While Loops with the Farmer"
       },
       "seeding_key": {
         "activity_section.key": "a63ac211-7ad4-4c28-af4a-cfa489ec8a77",
@@ -1905,7 +1920,8 @@
       "key": "22826fb5-5cdf-4918-970d-680d9ba82f88",
       "position": 2,
       "properties": {
-        "name": "Prediction"
+        "name": "Prediction",
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "22826fb5-5cdf-4918-970d-680d9ba82f88",
@@ -1916,7 +1932,8 @@
       "key": "af239dc4-fc39-4765-a761-8d1979ef5e11",
       "position": 3,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "af239dc4-fc39-4765-a761-8d1979ef5e11",
@@ -1927,7 +1944,8 @@
       "key": "c978158c-f26f-4fe2-ac61-4f383a2fe748",
       "position": 4,
       "properties": {
-        "name": "Repeat Unit Statements"
+        "name": "Repeat Unit Statements",
+        "progression_name": "Repeat Unit Statements"
       },
       "seeding_key": {
         "activity_section.key": "c978158c-f26f-4fe2-ac61-4f383a2fe748",
@@ -1938,7 +1956,8 @@
       "key": "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643",
       "position": 5,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643",
@@ -1949,7 +1968,8 @@
       "key": "37929d1a-a0f2-4700-96e9-7d207a70dc1e",
       "position": 6,
       "properties": {
-        "name": "\"If/Else\" with the Bee"
+        "name": "\"If/Else\" with the Bee",
+        "progression_name": "\"If/Else\" with the Bee"
       },
       "seeding_key": {
         "activity_section.key": "37929d1a-a0f2-4700-96e9-7d207a70dc1e",
@@ -1960,7 +1980,8 @@
       "key": "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17",
       "position": 7,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17",
@@ -1971,7 +1992,8 @@
       "key": "c6d24990-be45-4b52-b095-48004fcaca4a",
       "position": 8,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "c6d24990-be45-4b52-b095-48004fcaca4a",
@@ -2200,7 +2222,8 @@
       "key": "331e6451-5472-4491-bf96-d630d7f902a4",
       "position": 3,
       "properties": {
-        "name": "Introducing Sprite Lab"
+        "name": "Introducing Sprite Lab",
+        "progression_name": "Introducing Sprite Lab"
       },
       "seeding_key": {
         "activity_section.key": "331e6451-5472-4491-bf96-d630d7f902a4",
@@ -2211,7 +2234,8 @@
       "key": "75de5d52-becb-4805-82d8-5be30d0dca7d",
       "position": 4,
       "properties": {
-        "name": "Prediction"
+        "name": "Prediction",
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "75de5d52-becb-4805-82d8-5be30d0dca7d",
@@ -2222,7 +2246,8 @@
       "key": "56aebeea-5b5c-4acd-838c-2906fbf5700d",
       "position": 5,
       "properties": {
-        "name": "Mini-Project: Swimming Fish"
+        "name": "Mini-Project: Swimming Fish",
+        "progression_name": "Mini-Project: Swimming Fish"
       },
       "seeding_key": {
         "activity_section.key": "56aebeea-5b5c-4acd-838c-2906fbf5700d",
@@ -2233,7 +2258,8 @@
       "key": "d344a21b-2267-48e7-9b27-b3fe923209e9",
       "position": 6,
       "properties": {
-        "name": "How to Make a Sprite"
+        "name": "How to Make a Sprite",
+        "progression_name": "How to Make a Sprite"
       },
       "seeding_key": {
         "activity_section.key": "d344a21b-2267-48e7-9b27-b3fe923209e9",
@@ -2244,7 +2270,8 @@
       "key": "30997374-8929-4152-b55b-94e459e3ee58",
       "position": 7,
       "properties": {
-        "name": "Mini-Project: Swimming Fish (continued)"
+        "name": "Mini-Project: Swimming Fish (continued)",
+        "progression_name": "Mini-Project: Swimming Fish (continued)"
       },
       "seeding_key": {
         "activity_section.key": "30997374-8929-4152-b55b-94e459e3ee58",
@@ -2255,7 +2282,8 @@
       "key": "83778d93-2959-4776-94d0-e82985346914",
       "position": 8,
       "properties": {
-        "name": "Free Play"
+        "name": "Free Play",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "83778d93-2959-4776-94d0-e82985346914",
@@ -2330,7 +2358,8 @@
       "key": "96bbba0e-e5f3-443f-b2c6-f228953a7b98",
       "position": 3,
       "properties": {
-        "name": "Prediction"
+        "name": "Prediction",
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "96bbba0e-e5f3-443f-b2c6-f228953a7b98",
@@ -2341,7 +2370,8 @@
       "key": "1620d22b-10cf-4c91-bb52-cda64a75b666",
       "position": 4,
       "properties": {
-        "name": "Video"
+        "name": "Video",
+        "progression_name": "Video"
       },
       "seeding_key": {
         "activity_section.key": "1620d22b-10cf-4c91-bb52-cda64a75b666",
@@ -2352,7 +2382,8 @@
       "key": "5661328f-256c-4f27-988b-ea102fde1cbd",
       "position": 5,
       "properties": {
-        "name": "Mini-Project: Alien Dance Moves"
+        "name": "Mini-Project: Alien Dance Moves",
+        "progression_name": "Mini-Project: Alien Dance Moves"
       },
       "seeding_key": {
         "activity_section.key": "5661328f-256c-4f27-988b-ea102fde1cbd",
@@ -2363,7 +2394,8 @@
       "key": "dc08f2e2-dab1-43b0-8349-9ce3161eec83",
       "position": 6,
       "properties": {
-        "name": "Mini-Project: Alien Dance Party"
+        "name": "Mini-Project: Alien Dance Party",
+        "progression_name": "Mini-Project: Alien Dance Party"
       },
       "seeding_key": {
         "activity_section.key": "dc08f2e2-dab1-43b0-8349-9ce3161eec83",
@@ -2506,7 +2538,8 @@
       "key": "0b71a326-8b01-4631-8781-efedc2cd6d07",
       "position": 3,
       "properties": {
-        "name": "Free Play"
+        "name": "Free Play",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "0b71a326-8b01-4631-8781-efedc2cd6d07",
@@ -2517,7 +2550,8 @@
       "key": "2e6aa365-ef8d-4f04-8a5e-fcc6bb53bc1d",
       "position": 4,
       "properties": {
-        "name": "Mini-project: Interactive Poster"
+        "name": "Mini-project: Interactive Poster",
+        "progression_name": "Mini-project: Interactive Poster"
       },
       "seeding_key": {
         "activity_section.key": "2e6aa365-ef8d-4f04-8a5e-fcc6bb53bc1d",
@@ -2729,7 +2763,8 @@
       "key": "3d9b60e3-56ff-419b-bb36-52b543bb134a",
       "position": 2,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "3d9b60e3-56ff-419b-bb36-52b543bb134a",
@@ -2740,7 +2775,8 @@
       "key": "4cd63f16-e10a-4f83-b487-b53514dc407d",
       "position": 3,
       "properties": {
-        "name": "Nested Loops with the Bee"
+        "name": "Nested Loops with the Bee",
+        "progression_name": "Nested Loops with the Bee"
       },
       "seeding_key": {
         "activity_section.key": "4cd63f16-e10a-4f83-b487-b53514dc407d",
@@ -2751,7 +2787,8 @@
       "key": "65c86887-d12a-44cd-99f7-11ddf1e1342e",
       "position": 4,
       "properties": {
-        "name": "Prediction"
+        "name": "Prediction",
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "65c86887-d12a-44cd-99f7-11ddf1e1342e",
@@ -2762,7 +2799,8 @@
       "key": "93c6be45-2df2-4364-b3cc-6abaeecde230",
       "position": 5,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "93c6be45-2df2-4364-b3cc-6abaeecde230",
@@ -2773,7 +2811,8 @@
       "key": "f4f346fd-750e-46e7-baf0-abacdbed8784",
       "position": 6,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "f4f346fd-750e-46e7-baf0-abacdbed8784",
@@ -2784,7 +2823,8 @@
       "key": "6913dfff-a673-49e7-989f-343f096b2a57",
       "position": 7,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "6913dfff-a673-49e7-989f-343f096b2a57",
@@ -2795,7 +2835,8 @@
       "key": "b13ff577-ad80-4551-a69c-ff449d7133bb",
       "position": 8,
       "properties": {
-        "name": "Prediction"
+        "name": "Prediction",
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "b13ff577-ad80-4551-a69c-ff449d7133bb",
@@ -2869,7 +2910,8 @@
       "key": "35342825-ca7b-4305-b02a-365e6095e8f6",
       "position": 3,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "35342825-ca7b-4305-b02a-365e6095e8f6",
@@ -2880,7 +2922,8 @@
       "key": "1768d4b3-853f-4f6a-ba24-6a174b345dbf",
       "position": 4,
       "properties": {
-        "name": "Video"
+        "name": "Video",
+        "progression_name": "Video"
       },
       "seeding_key": {
         "activity_section.key": "1768d4b3-853f-4f6a-ba24-6a174b345dbf",
@@ -2891,7 +2934,8 @@
       "key": "7f4ec132-6df2-4a23-abe3-853efe35701d",
       "position": 5,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "7f4ec132-6df2-4a23-abe3-853efe35701d",
@@ -2902,7 +2946,8 @@
       "key": "70a7d0e6-caa1-439a-a18c-41e5af3daf6f",
       "position": 6,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "70a7d0e6-caa1-439a-a18c-41e5af3daf6f",
@@ -2913,7 +2958,8 @@
       "key": "b74deff4-5709-42c9-bd89-609b29df9368",
       "position": 7,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "b74deff4-5709-42c9-bd89-609b29df9368",
@@ -2924,7 +2970,8 @@
       "key": "dbdfa13e-a251-458a-b549-4143f4e77cde",
       "position": 8,
       "properties": {
-        "name": "Prediction"
+        "name": "Prediction",
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "dbdfa13e-a251-458a-b549-4143f4e77cde",
@@ -2935,7 +2982,8 @@
       "key": "a2a794ce-1af9-4258-84ad-352ee9f9f187",
       "position": 9,
       "properties": {
-        "name": "Free Play"
+        "name": "Free Play",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "a2a794ce-1af9-4258-84ad-352ee9f9f187",
@@ -3003,7 +3051,8 @@
       "key": "5d0e32d6-0d8a-4783-92f2-1e20fb8e5ea9",
       "position": 1,
       "properties": {
-        "name": "Mini-Project: Snowflake #1"
+        "name": "Mini-Project: Snowflake #1",
+        "progression_name": "Mini-Project: Snowflake #1"
       },
       "seeding_key": {
         "activity_section.key": "5d0e32d6-0d8a-4783-92f2-1e20fb8e5ea9",
@@ -3014,7 +3063,8 @@
       "key": "f508c803-c84b-4de9-8d54-88da404dbb4f",
       "position": 2,
       "properties": {
-        "name": "Mini-Project: Snowflake #2"
+        "name": "Mini-Project: Snowflake #2",
+        "progression_name": "Mini-Project: Snowflake #2"
       },
       "seeding_key": {
         "activity_section.key": "f508c803-c84b-4de9-8d54-88da404dbb4f",
@@ -3308,7 +3358,8 @@
       "key": "4130a39a-0232-45ed-b6c7-1f2badada9ee",
       "position": 1,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "4130a39a-0232-45ed-b6c7-1f2badada9ee",
@@ -3319,7 +3370,8 @@
       "key": "faa2f676-cf14-4bd7-b277-8e0a30245c0d",
       "position": 2,
       "properties": {
-        "name": "Free Play"
+        "name": "Free Play",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "faa2f676-cf14-4bd7-b277-8e0a30245c0d",
@@ -3366,7 +3418,8 @@
       "key": "24e49944-567b-4a1a-8f14-8e60585cb81f",
       "position": 1,
       "properties": {
-        "name": "The Harvester"
+        "name": "The Harvester",
+        "progression_name": "The Harvester"
       },
       "seeding_key": {
         "activity_section.key": "24e49944-567b-4a1a-8f14-8e60585cb81f",
@@ -3377,7 +3430,8 @@
       "key": "6da14073-1ba0-4603-989b-5b9c9758c047",
       "position": 2,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "6da14073-1ba0-4603-989b-5b9c9758c047",
@@ -3388,7 +3442,8 @@
       "key": "4380ffcc-d9bb-4d3a-a63c-799bbef83e6f",
       "position": 3,
       "properties": {
-        "name": "How to Create a Simple Function"
+        "name": "How to Create a Simple Function",
+        "progression_name": "How to Create a Simple Function"
       },
       "seeding_key": {
         "activity_section.key": "4380ffcc-d9bb-4d3a-a63c-799bbef83e6f",
@@ -3399,7 +3454,8 @@
       "key": "f7a673eb-5123-4e14-933b-892d39e91db4",
       "position": 4,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "f7a673eb-5123-4e14-933b-892d39e91db4",
@@ -3410,7 +3466,8 @@
       "key": "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5",
       "position": 5,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5",
@@ -3421,7 +3478,8 @@
       "key": "1fedc5de-50c7-478d-8173-e2d8ffd4d97a",
       "position": 6,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "1fedc5de-50c7-478d-8173-e2d8ffd4d97a",
@@ -3432,7 +3490,8 @@
       "key": "5d48d1a1-9a64-4085-871f-663991bdc117",
       "position": 7,
       "properties": {
-        "name": "Prediction"
+        "name": "Prediction",
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "5d48d1a1-9a64-4085-871f-663991bdc117",
@@ -3479,7 +3538,8 @@
       "key": "d1826ee5-4403-41a2-a804-3112c9da4cb1",
       "position": 1,
       "properties": {
-        "name": "Prediction"
+        "name": "Prediction",
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "d1826ee5-4403-41a2-a804-3112c9da4cb1",
@@ -3490,7 +3550,8 @@
       "key": "c8b7ed1a-7b68-48e5-bf78-c411d209179a",
       "position": 2,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "c8b7ed1a-7b68-48e5-bf78-c411d209179a",
@@ -3501,7 +3562,8 @@
       "key": "2be1256a-b8a6-4ec6-a54d-c1db662af71e",
       "position": 3,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "2be1256a-b8a6-4ec6-a54d-c1db662af71e",
@@ -3512,7 +3574,8 @@
       "key": "c29e178e-6a22-48e2-9df0-06269e2000b2",
       "position": 4,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "c29e178e-6a22-48e2-9df0-06269e2000b2",
@@ -3523,7 +3586,8 @@
       "key": "dd21a594-70a8-4577-9509-652bef04d3f7",
       "position": 5,
       "properties": {
-        "name": "Prediction"
+        "name": "Prediction",
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "dd21a594-70a8-4577-9509-652bef04d3f7",
@@ -3534,7 +3598,8 @@
       "key": "91444fab-14f5-48ec-993e-40f876eaff1d",
       "position": 6,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "91444fab-14f5-48ec-993e-40f876eaff1d",
@@ -3659,7 +3724,8 @@
       "key": "bc3611fe-1160-47c2-a928-c7c666478ecf",
       "position": 2,
       "properties": {
-        "name": "Example Projects"
+        "name": "Example Projects",
+        "progression_name": "Example Projects"
       },
       "seeding_key": {
         "activity_section.key": "bc3611fe-1160-47c2-a928-c7c666478ecf",
@@ -3670,7 +3736,8 @@
       "key": "f8b211c2-4c26-4946-ab95-74efdb7ca40a",
       "position": 3,
       "properties": {
-        "name": "Create your project"
+        "name": "Create your project",
+        "progression_name": "Create your project"
       },
       "seeding_key": {
         "activity_section.key": "f8b211c2-4c26-4946-ab95-74efdb7ca40a",
@@ -3829,10 +3896,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Maze Intro: Programming with Blocks",
         "level_keys": [
           "courseD_video_ramp1_2021"
-        ]
+        ],
+        "progression": "Maze Intro: Programming with Blocks"
       },
       "named_level": null,
       "bonus": false,
@@ -3855,10 +3922,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_ramp1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -3881,10 +3948,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_ramp2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -3907,10 +3974,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging9_copy_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -3933,10 +4000,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_ramp3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -3959,10 +4026,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Debugging with the Step Button",
         "level_keys": [
           "courseC_video_debugging_2021"
-        ]
+        ],
+        "progression": "Debugging with the Step Button"
       },
       "named_level": null,
       "bonus": false,
@@ -3985,10 +4052,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4011,10 +4078,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_ramp4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4037,10 +4104,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4063,10 +4130,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging6_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4089,11 +4156,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
-        "progression": "Challenge",
         "level_keys": [
           "courseC_maze_debugging7_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": false,
@@ -4116,10 +4183,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_ramp5a_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4142,10 +4209,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_ramp5c_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4168,10 +4235,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Artist Intro with JR Hildebrande",
         "level_keys": [
           "courseC_video_artist_2021"
-        ]
+        ],
+        "progression": "Artist Intro with JR Hildebrande"
       },
       "named_level": null,
       "bonus": false,
@@ -4194,10 +4261,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4220,10 +4287,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4246,10 +4313,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Loops with the Artist",
         "level_keys": [
           "ramp_video_loopsArtist_2021"
-        ]
+        ],
+        "progression": "Loops with the Artist"
       },
       "named_level": null,
       "bonus": false,
@@ -4272,10 +4339,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4298,10 +4365,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4324,11 +4391,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
-        "progression": "Challenge",
         "level_keys": [
           "courseC_artist_prog7_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": false,
@@ -4351,10 +4418,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "ramp_artist_loops4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4377,10 +4444,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "ramp_artist_loops5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4403,10 +4470,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "ramp_artist_loops6_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4429,11 +4496,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
-        "progression": "Challenge",
         "level_keys": [
           "ramp_artist_loops8_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": false,
@@ -4506,10 +4573,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CourseE_HOC 2018 Level_1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4532,10 +4599,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CourseE_HOC 2018 Level_2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4558,10 +4625,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CourseE_HOC 2018 Level_3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4584,10 +4651,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CourseE_HOC 2018 Level_4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4610,10 +4677,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CourseE_HOC 2018 Level_5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4636,10 +4703,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CourseE_HOC 2018 Level_6_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4662,10 +4729,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CourseE_HOC 2018 Level_7a_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4688,10 +4755,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CourseE_HOC 2018 Level_8_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4714,10 +4781,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CourseE_HOC 2018 Level_9b_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4740,10 +4807,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CourseE_HOC 2018 Level_10_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4766,10 +4833,10 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "CourseE_HOC 2018 Level_11_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4792,10 +4859,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "While Loops with the Farmer",
         "level_keys": [
           "courseD_video_whileIntro_2021"
-        ]
+        ],
+        "progression": "While Loops with the Farmer"
       },
       "named_level": null,
       "bonus": false,
@@ -4818,10 +4885,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseD_farmer_while4_predict1_2021"
-        ]
+        ],
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": false,
@@ -4844,10 +4911,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_ramp11a_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4870,10 +4937,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_ramp11b_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4896,10 +4963,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_ramp12b_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4922,10 +4989,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_ramp12_forswap_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -4948,10 +5015,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Repeat Unit Statements",
         "level_keys": [
           "courseD_video_repeatUntil_2021"
-        ]
+        ],
+        "progression": "Repeat Unit Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -4974,10 +5041,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_ramp12c_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -5000,10 +5067,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_ramp12d_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -5026,10 +5093,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_ramp12e_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -5052,10 +5119,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "\"If/Else\" with the Bee",
         "level_keys": [
           "courseE_video_BeeifElse_2021"
-        ]
+        ],
+        "progression": "\"If/Else\" with the Bee"
       },
       "named_level": null,
       "bonus": false,
@@ -5078,11 +5145,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
-        "progression": "Challenge",
         "level_keys": [
           "courseE_farmer_ramp12f_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": false,
@@ -5105,10 +5172,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_ramp12g_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -5156,10 +5223,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Introducing Sprite Lab",
         "level_keys": [
           "CourseEF_video_IntroSpriteLab_2021"
-        ]
+        ],
+        "progression": "Introducing Sprite Lab"
       },
       "named_level": null,
       "bonus": false,
@@ -5182,10 +5249,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "Fish Tank 1-validated_2021"
-        ]
+        ],
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": false,
@@ -5208,10 +5275,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
           "Fish Tank 2-validated_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Swimming Fish"
       },
       "named_level": null,
       "bonus": false,
@@ -5234,10 +5301,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
           "Fish Tank 3-validated_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Swimming Fish"
       },
       "named_level": null,
       "bonus": false,
@@ -5260,10 +5327,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
           "Fish Tank 4-validated_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Swimming Fish"
       },
       "named_level": null,
       "bonus": false,
@@ -5286,10 +5353,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "How to Make a Sprite",
         "level_keys": [
           "CourseEF_video_MakeSprite_2021"
-        ]
+        ],
+        "progression": "How to Make a Sprite"
       },
       "named_level": null,
       "bonus": false,
@@ -5312,10 +5379,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
           "Fish Tank 5-validated_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Swimming Fish (continued)"
       },
       "named_level": null,
       "bonus": false,
@@ -5338,10 +5405,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
           "Fish Tank 6-validated_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Swimming Fish (continued)"
       },
       "named_level": null,
       "bonus": false,
@@ -5364,10 +5431,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "Fish Tank 7-validated_2021"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": false,
@@ -5415,10 +5482,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "Dance Party 1-validated_2021"
-        ]
+        ],
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": false,
@@ -5441,10 +5508,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video",
         "level_keys": [
           "CDEF_video_SpritesInAction_2021"
-        ]
+        ],
+        "progression": "Video"
       },
       "named_level": null,
       "bonus": false,
@@ -5467,10 +5534,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
           "Dance Party 2_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
       },
       "named_level": null,
       "bonus": false,
@@ -5493,10 +5560,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
           "Dance Party 3_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
       },
       "named_level": null,
       "bonus": false,
@@ -5519,10 +5586,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
           "Dance Party 4_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
       },
       "named_level": null,
       "bonus": false,
@@ -5545,10 +5612,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
           "Dance Party 5_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
       },
       "named_level": null,
       "bonus": false,
@@ -5571,10 +5638,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
           "Dance Party 6_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Party"
       },
       "named_level": null,
       "bonus": false,
@@ -5597,10 +5664,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
           "Dance Party 7_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Party"
       },
       "named_level": null,
       "bonus": false,
@@ -5623,10 +5690,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
           "Dance Party Freeplay_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Party"
       },
       "named_level": null,
       "bonus": false,
@@ -5674,10 +5741,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "courseE_aboutme_1_2021"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": false,
@@ -5700,10 +5767,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Interactive Poster",
         "level_keys": [
           "courseE_aboutme_2_2021"
-        ]
+        ],
+        "progression": "Mini-project: Interactive Poster"
       },
       "named_level": null,
       "bonus": false,
@@ -5726,10 +5793,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Interactive Poster",
         "level_keys": [
           "courseE_aboutme_3_2021"
-        ]
+        ],
+        "progression": "Mini-project: Interactive Poster"
       },
       "named_level": null,
       "bonus": false,
@@ -5752,10 +5819,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Interactive Poster",
         "level_keys": [
           "courseE_aboutme_4_2021"
-        ]
+        ],
+        "progression": "Mini-project: Interactive Poster"
       },
       "named_level": null,
       "bonus": false,
@@ -5778,10 +5845,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Interactive Poster",
         "level_keys": [
           "courseE_aboutme_5_2021"
-        ]
+        ],
+        "progression": "Mini-project: Interactive Poster"
       },
       "named_level": null,
       "bonus": false,
@@ -5804,10 +5871,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Interactive Poster",
         "level_keys": [
           "courseE_aboutme_6_2021"
-        ]
+        ],
+        "progression": "Mini-project: Interactive Poster"
       },
       "named_level": null,
       "bonus": false,
@@ -5855,10 +5922,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_bee_nestedLoops1a_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -5881,10 +5948,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_bee_nestedLoops1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -5907,10 +5974,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Nested Loops with the Bee",
         "level_keys": [
           "courseD_video_nestedLoops_2021"
-        ]
+        ],
+        "progression": "Nested Loops with the Bee"
       },
       "named_level": null,
       "bonus": false,
@@ -5933,10 +6000,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseD_bee_nestedLoops2_predict1_2021"
-        ]
+        ],
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": false,
@@ -5959,10 +6026,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_bee_nestedLoops2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -5985,10 +6052,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_nestedLoops3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6011,10 +6078,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_nestedLoops4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6037,10 +6104,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_nestedLoops5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6063,10 +6130,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_nestedLoops6_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6089,11 +6156,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
-        "progression": "Challenge",
         "level_keys": [
           "courseD_bee_nestedLoops7_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": false,
@@ -6116,10 +6183,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_bee_nestedLoops8_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6142,10 +6209,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_bee_nestedLoops9_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6168,10 +6235,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseD_bee_nestedLoops9_predict2_2021"
-        ]
+        ],
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": false,
@@ -6244,10 +6311,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_artist_nestedLoops1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6270,10 +6337,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_artist_nestedLoops1a_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6296,10 +6363,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video",
         "level_keys": [
           "courseD_video_nestedLoopsArtist_2021"
-        ]
+        ],
+        "progression": "Video"
       },
       "named_level": null,
       "bonus": false,
@@ -6322,10 +6389,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_artist_nestedLoops2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6348,10 +6415,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_artist_nestedLoops3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6374,10 +6441,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_artist_nestedLoops4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6400,10 +6467,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_artist_nestedLoops5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6426,10 +6493,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_artist_nestedLoops7_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6452,10 +6519,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_artist_nestedLoops8_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6478,11 +6545,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
-        "progression": "Challenge",
         "level_keys": [
           "courseD_artist_nestedLoops9_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": false,
@@ -6505,10 +6572,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_artist_nestedLoops10_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6531,10 +6598,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseD_artist_nestedLoops9_predict1_2021"
-        ]
+        ],
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": false,
@@ -6557,10 +6624,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "courseD_artist_nestedLoopsFP_2021"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": false,
@@ -6633,10 +6700,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Snowflake #1",
         "level_keys": [
           "courseD_artist_project1_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Snowflake #1"
       },
       "named_level": null,
       "bonus": false,
@@ -6659,10 +6726,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Snowflake #1",
         "level_keys": [
           "courseD_artist_project2_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Snowflake #1"
       },
       "named_level": null,
       "bonus": false,
@@ -6685,10 +6752,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Snowflake #1",
         "level_keys": [
           "courseD_artist_project3_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Snowflake #1"
       },
       "named_level": null,
       "bonus": false,
@@ -6711,10 +6778,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Snowflake #1",
         "level_keys": [
           "courseD_artist_project4_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Snowflake #1"
       },
       "named_level": null,
       "bonus": false,
@@ -6737,10 +6804,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Snowflake #1",
         "level_keys": [
           "courseD_artist_project5_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Snowflake #1"
       },
       "named_level": null,
       "bonus": false,
@@ -6763,10 +6830,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Snowflake #2",
         "level_keys": [
           "courseD_artist_project1a_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Snowflake #2"
       },
       "named_level": null,
       "bonus": false,
@@ -6789,10 +6856,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Snowflake #2",
         "level_keys": [
           "courseD_artist_project2a_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Snowflake #2"
       },
       "named_level": null,
       "bonus": false,
@@ -6815,10 +6882,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Snowflake #2",
         "level_keys": [
           "courseD_artist_project3a_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Snowflake #2"
       },
       "named_level": null,
       "bonus": false,
@@ -6841,10 +6908,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Snowflake #2",
         "level_keys": [
           "courseD_artist_project4a_2021"
-        ]
+        ],
+        "progression": "Mini-Project: Snowflake #2"
       },
       "named_level": null,
       "bonus": false,
@@ -6892,10 +6959,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_01_RETRY_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6918,10 +6985,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_02_Cole_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6944,10 +7011,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_03_Cole_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6970,10 +7037,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_04_Cole_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -6996,10 +7063,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_04POINT5_RYAN_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7022,10 +7089,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_05_Cole_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7048,10 +7115,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_06_Cole_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7074,10 +7141,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Function intro Ryan_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7100,10 +7167,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_07_Cole_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7126,10 +7193,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_10_RETRY_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7152,10 +7219,10 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_Ali_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7178,10 +7245,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "MC_HOC_2017_FP20x20_2021"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": false,
@@ -7204,10 +7271,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The Harvester",
         "level_keys": [
           "harvester_skinOverview_video_2021"
-        ]
+        ],
+        "progression": "The Harvester"
       },
       "named_level": null,
       "bonus": false,
@@ -7230,10 +7297,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_functions1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7256,10 +7323,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_functions1a_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7282,10 +7349,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_functions2b_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7308,10 +7375,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_functions2ba_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7334,10 +7401,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_functions3c_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7360,10 +7427,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_functions3c1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7386,10 +7453,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "How to Create a Simple Function",
         "level_keys": [
           "courseE_video_createFunctions2_2021"
-        ]
+        ],
+        "progression": "How to Create a Simple Function"
       },
       "named_level": null,
       "bonus": false,
@@ -7412,10 +7479,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_functions7a1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7438,10 +7505,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_functions8a1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7464,10 +7531,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_functions9a1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7490,11 +7557,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
-        "progression": "Challenge",
         "level_keys": [
           "courseE_farmer_functions10a1_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": false,
@@ -7517,10 +7584,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_functions13_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7543,10 +7610,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseE_farmer_functions11_predict_2021"
-        ]
+        ],
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": false,
@@ -7569,10 +7636,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseE_artist_functions_predict1_2021"
-        ]
+        ],
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": false,
@@ -7595,10 +7662,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_artist_functions2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7621,10 +7688,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_artist_functions3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7647,10 +7714,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_artist_functions5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7673,10 +7740,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_artist_functions7_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7699,10 +7766,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_artist_functions8a_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7725,10 +7792,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_artist_functions8b_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7751,10 +7818,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_artist_functions8c_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7777,10 +7844,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_artist_functions8_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7803,11 +7870,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "challenge": true,
-        "progression": "Challenge",
         "level_keys": [
           "courseE_artist_functions9_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": false,
@@ -7830,10 +7897,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_artist_functions10_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7856,10 +7923,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseE_artist_functions_predict2_2021"
-        ]
+        ],
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": false,
@@ -7882,10 +7949,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_artist_functionsProj_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": false,
@@ -7983,10 +8050,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Example Projects",
         "level_keys": [
           "courseE_project_exemplars_2021"
-        ]
+        ],
+        "progression": "Example Projects"
       },
       "named_level": null,
       "bonus": false,
@@ -8009,10 +8076,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create your project",
         "level_keys": [
           "courseE_EOC_2021"
-        ]
+        ],
+        "progression": "Create your project"
       },
       "named_level": null,
       "bonus": false,
