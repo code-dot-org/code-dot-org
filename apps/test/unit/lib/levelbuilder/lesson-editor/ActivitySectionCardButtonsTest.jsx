@@ -12,6 +12,7 @@ describe('ActivitySectionCardButtons', () => {
     addLevel,
     removeTip,
     appendResourceLink,
+    appendVocabularyLink,
     appendSlide;
   beforeEach(() => {
     addTip = sinon.spy();
@@ -19,6 +20,7 @@ describe('ActivitySectionCardButtons', () => {
     addLevel = sinon.spy();
     removeTip = sinon.spy();
     appendResourceLink = sinon.spy();
+    appendVocabularyLink = sinon.spy();
     appendSlide = sinon.spy();
     defaultProps = {
       activitySection: sampleActivities[0].activitySections[1],
@@ -28,14 +30,16 @@ describe('ActivitySectionCardButtons', () => {
       addLevel,
       removeTip,
       appendResourceLink,
+      appendVocabularyLink,
       appendSlide
     };
   });
 
   it('renders default props', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(4);
+    expect(wrapper.find('button').length).to.equal(5);
     expect(wrapper.find('Connect(FindResourceDialog)').length).to.equal(1);
+    expect(wrapper.find('Connect(FindVocabularyDialog)').length).to.equal(1);
     expect(wrapper.find('AddLevelDialog').length).to.equal(1);
     expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(2);
     // Don't render this component until add tip button or tip icon are clicked
@@ -78,10 +82,19 @@ describe('ActivitySectionCardButtons', () => {
     expect(wrapper.state().addResourceOpen).to.equal(true);
   });
 
-  it('add slide pressed', () => {
+  it('add vocabulary link pressed', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
 
     const button = wrapper.find('button').at(3);
+    expect(button.text()).to.include('Vocabulary Link');
+    button.simulate('mouseDown');
+    expect(wrapper.state().addVocabularyOpen).to.equal(true);
+  });
+
+  it('add slide pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+
+    const button = wrapper.find('button').at(4);
     expect(button.text()).to.include('Slide');
     button.simulate('mouseDown');
     expect(appendSlide).to.have.been.calledOnce;

@@ -18,6 +18,9 @@ import reducers, {
 import resourcesEditor, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import vocabulariesEditor, {
+  initVocabularies
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 
 describe('ActivitySectionCard', () => {
   let defaultProps,
@@ -34,11 +37,16 @@ describe('ActivitySectionCard', () => {
     addLevel;
   beforeEach(() => {
     stubRedux();
-    registerReducers({...reducers, resources: resourcesEditor});
+    registerReducers({
+      ...reducers,
+      resources: resourcesEditor,
+      vocabularies: vocabulariesEditor
+    });
 
     store = getStore();
     store.dispatch(init(sampleActivities, searchOptions));
     store.dispatch(initResources(resourceTestData));
+    store.dispatch(initVocabularies([]));
 
     setTargetActivitySection = sinon.spy();
     updateTargetActivitySection = sinon.spy();
