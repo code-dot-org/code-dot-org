@@ -90,7 +90,9 @@ class AnimationPickerListItem extends React.Component {
       }
     ];
     const iconImageSrc = this.props.category
-      ? `/blockly/media/animation-previews/category_${this.props.category}.png`
+      ? `/blockly/media/p5lab/animation-previews/category_${
+          this.props.category
+        }.png`
       : '';
 
     return (
