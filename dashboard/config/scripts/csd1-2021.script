@@ -9,33 +9,33 @@ curriculum_umbrella 'CSD'
 is_migrated true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Pre-survey', display_name: 'CS Discoveries Pre-survey', lockable: true
+lesson 'CS Discoveries Pre-survey', display_name: 'CS Discoveries Pre-survey', lockable: true, has_lesson_plan: false
 level 'csd-pre-survey-levelgroup_2021', assessment: true
 
 lesson_group 'csd1_1', display_name: 'Chapter 1: The Problem Solving Process'
 lesson_group_description 'This chapter guides students to develop and adopt a more formal structured problem solving process by reflecting on problems they have problems they have encountered, both in the classroom and everyday life. By working through a diverse set of problems, such as logic puzzles, engineering challenges, and planning a trip, students learn to identify different classes of problems, decompose large problems, and develop their personal problem solving skills.'
 lesson_group_big_questions '* What strategies and processes can I use to become a more effective problem solver?'
-lesson 'Intro to Problem Solving', display_name: 'Intro to Problem Solving'
+lesson 'Intro to Problem Solving', display_name: 'Intro to Problem Solving', has_lesson_plan: true
 
-lesson 'The Problem Solving Process', display_name: 'The Problem Solving Process'
+lesson 'The Problem Solving Process', display_name: 'The Problem Solving Process', has_lesson_plan: true
 level 'CSD Problem Solving Process Video_2021', progression: 'Video: Problem Solving Process'
 
-lesson 'Exploring Problem Solving', display_name: 'Exploring Problem Solving'
+lesson 'Exploring Problem Solving', display_name: 'Exploring Problem Solving', has_lesson_plan: true
 
 lesson_group 'csd1_2', display_name: 'Chapter 2: Computers and Problem Solving'
 lesson_group_description 'This chapter presents computers as machines that solve information problems. Students begin by building a common definition for a computer that focuses on functionality instead of specific hardware. They then explore the ways that computers approach problems. For their final project, students propose an app that could be used to solve a problem of their choosing.'
 lesson_group_big_questions '* How do computers help people to solve problems?
 * How do people and computers approach problems differently?
 * What does a computer need from people in order to solve problems effectively?'
-lesson 'What is a Computer?', display_name: 'What is a Computer?'
+lesson 'What is a Computer?', display_name: 'What is a Computer?', has_lesson_plan: true
 level 'CSD What Makes a Computer a Computer Video_2021', progression: 'Video: What Makes a Computer, a Computer?'
 
-lesson 'Input and Output', display_name: 'Input and Output'
+lesson 'Input and Output', display_name: 'Input and Output', has_lesson_plan: true
 level 'CSD U1 IO Pet Chooser_2021', progression: 'App: Pet Chooser'
 level 'CSD U1 IO Story_2021', progression: 'App: Story Creator'
 level 'CSD U1 IO Pet Chooser 2_2021', progression: 'App: Improved Pet Chooser'
 
-lesson 'Processing', display_name: 'Processing'
+lesson 'Processing', display_name: 'Processing', has_lesson_plan: true
 level 'CSD U1 processing bday_2021', progression: 'App: Is It Your Birthday?'
 level 'CSD U1 processing npark_2021', progression: 'App: National Park Quiz'
 level 'CSD U1 processing countries_2021', progression: 'App: How Many Countries...'
@@ -45,27 +45,27 @@ level 'CSD U1 processing fastest_2021', progression: 'App: The Fastest Finger'
 level 'CSD U1 processing guess_2021', progression: 'App: Guess the Number'
 level 'CSD U1 processing live_2021', progression: 'App: Where Should I Live?'
 
-lesson 'Storage', display_name: 'Storage'
+lesson 'Storage', display_name: 'Storage', has_lesson_plan: true
 level 'CSD U1 storage outfit_2021', progression: 'App: Outfit Picker'
 level 'CSD U1 storage friends_2021', progression: 'App: Friend Finder'
 level 'CSD U1 storage movies_2021', progression: 'App: Kids Movie Recommender'
 level 'CSD U1 storage video_2021', progression: 'Video: IOSP Model'
 
-lesson 'Project - Propose an App', display_name: 'Project - Propose an App'
+lesson 'Project - Propose an App', display_name: 'Project - Propose an App', has_lesson_plan: true
 level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2021', progression: 'Reflection', assessment: true
 
-lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD U1 Test_2021', assessment: true
 
 lesson_group 'csd1_3', display_name: 'Alternate Lessons'
 lesson_group_description 'This chapter provides alternate lessons for this unit.  '
-lesson 'Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)'
+lesson 'Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)', has_lesson_plan: true
 
-lesson 'Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)'
+lesson 'Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)', has_lesson_plan: true
 
-lesson 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)'
+lesson 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)', display_name: 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)', has_lesson_plan: true
 
-lesson 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)', display_name: 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)'
+lesson 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)', display_name: 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)', has_lesson_plan: true
 
-lesson 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)', display_name: 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)'
+lesson 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)', display_name: 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)', has_lesson_plan: true
 
