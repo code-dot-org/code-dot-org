@@ -4,12 +4,12 @@ announcements [{"notice"=>"Attention pilot teachers!", "details"=>"Lesson plans 
 
 lesson_group 'Sprites', display_name: 'Sprites'
 lesson_group_description 'Learn the basics of coding with sprites!'
-lesson 'Course F Introduction', display_name: 'Introducing Sprite Lab'
+lesson 'Course F Introduction', display_name: 'Introducing Sprite Lab', has_lesson_plan: true
 level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Video: Introducing Sprite Lab'
 level 'courseF_intro_apps', progression: 'Exploration: Sample Apps'
 level 'courseF_intro_birds_puzzle', progression: 'Exploration: Writing Code'
 
-lesson 'Making Sprites', display_name: 'Making Sprites'
+lesson 'Making Sprites', display_name: 'Making Sprites', has_lesson_plan: true
 level 'courseF_sprites_predict', progression: 'Predict'
 level 'CourseEF_video_MakeSprite_2020', progression: 'Video: How to Make a Sprite'
 level 'courseF_sprites_make', progression: 'Skill Building'
@@ -20,13 +20,13 @@ level 'courseF_sprites_behaviors', progression: 'Skill Building'
 level 'courseF_sprites_practice', progression: 'Practice'
 level 'courseF_sprites_freeplay', progression: 'Free Play: Make a Scene'
 
-lesson 'Sprites in Action', display_name: 'Sprites in Action - coming soon!'
+lesson 'Sprites in Action', display_name: 'Sprites in Action - coming soon!', has_lesson_plan: true
 
 lesson_group 'lessonGroup-3', display_name: 'Variables'
 lesson_group_description 'Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!'
-lesson 'lesson-1', display_name: 'Blank Space Variables - coming soon!'
+lesson 'lesson-1', display_name: 'Blank Space Variables - coming soon!', has_lesson_plan: true
 
-lesson 'variables-in-spritelab', display_name: 'Storing and Retrieving Text - coming soon!'
+lesson 'variables-in-spritelab', display_name: 'Storing and Retrieving Text - coming soon!', has_lesson_plan: true
 
-lesson 'chatbot', display_name: 'Create a Chat-Bot - coming soon!'
+lesson 'chatbot', display_name: 'Create a Chat-Bot - coming soon!', has_lesson_plan: true
 
