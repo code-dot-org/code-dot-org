@@ -1,0 +1,123 @@
+#correlations are as follows:
+#{"Pepperoni": 0.9, "Anchovies": 0.2, "Broccoli": 0.7, "Bacon": 0.6, "Pineapple": 0.3,  "all": 0}
+data_descriptor_json = {
+  "defaultLabelColumn": "Liked", #the default label to be predicted
+  "fields": [
+    {
+      "id": "Pepperoni", #whatever the field contains
+      "type": "categorical", #or continuous, or binary
+      "values": {
+        #if categorical or binary
+        "categories": ["Yes", "No"],
+      }
+    },
+    {
+      "id": "Extra Cheese", #whatever the field contains
+      "type": "categorical", #or continuous, or binary
+      "values": {
+        #if categorical or binary
+        "categories": ["Yes", "No"],
+        #if countinuous:
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "Broccoli", #whatever the field contains
+      "type": "categorical", #or continuous, or binary
+      "values": {
+        #if categori cal or binary
+        "categories": ["Yes", "No"],
+        #if countinuous:
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "Olives", #whatever the field contains
+      "type": "categorical", #or continuous, or binary
+      "values": {
+        #if categorical or binary
+        "categories": ["Yes", "No"],
+        #if countinuous:
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "Sausage", #whatever the field contains
+      "type": "categorical", #or continuous, or binary
+      "values": {
+        #if categorical or binary
+        "categories": ["Yes", "No"],
+        #if countinuous:
+        "min": 0,
+        "max": 100
+      }
+            },
+         {
+      "id": "Anchovies", #whatever the field contains
+      "type": "categorical", #or continuous, or binary
+      "values": {
+        #if categorical or binary
+        "categories": ["Yes", "No"],
+      }
+    },
+    {
+      "id": "Fried Chicken", #whatever the field contains
+      "type": "categorical", #or continuous, or binary
+      "values": {
+        #if categorical or binary
+        "categories": ["Yes", "No"],
+        #if countinuous:
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "Peppers", #whatever the field contains
+      "type": "categorical", #or continuous, or binary
+      "values": {
+        #if categori cal or binary
+        "categories": ["Yes", "No"],
+        #if countinuous:
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "Ham", #whatever the field contains
+      "type": "categorical", #or continuous, or binary
+      "values": {
+        #if categorical or binary
+        "categories": ["Yes", "No"],
+        #if countinuous:
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "Bacon", #whatever the field contains
+      "type": "categorical", #or continuous, or binary
+      "values": {
+        #if categorical or binary
+        "categories": ["Yes", "No"],
+        #if countinuous:
+        "min": 0,
+        "max": 100
+      }
+            },
+        {
+      "id": "Liked", #whatever the field contains
+      "type": "categorical", #or continuous, or binary
+      "values": {
+        #if categorical or binary
+        "categories": ["Yes", "No"],
+        #if countinuous:
+        "min": 0,
+        "max": 100
+      }
+    }
+    ]
+      
+}
