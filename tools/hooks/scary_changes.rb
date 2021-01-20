@@ -53,7 +53,7 @@ class ScaryChangeDetector
         (instead of only in Chrome, the default),
         amend your commit message to include the tag [test all browsers] if you haven't already.
 
-        Note that (as of January 2020) Drone will not successfully run all tests across all browsers,
+        Note that (as of January 2021) Drone will not successfully run all tests across all browsers,
         so you may need another commit without the [test all browsers] tag
         if you'd like to see all tests (in Chrome) passing in Drone without manual inspection.
     EOS
