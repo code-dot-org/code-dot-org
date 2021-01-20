@@ -1080,13 +1080,16 @@
           "swimming left and right": "nuotata sinistra-destra"
         },
         "outbreak1": {
-          "wandering": "movimento casuale"
+          "wandering": "movimento casuale",
+          "recovering": "recupero"
         },
         "outbreak2": {
-          "wandering": "movimento casuale"
+          "wandering": "movimento casuale",
+          "recovering": "recupero"
         },
         "outbreak3": {
-          "wandering": "movimento casuale"
+          "wandering": "movimento casuale",
+          "recovering": "recupero"
         },
         "outbreak4": {
           "wandering": "movimento casuale",
@@ -1100,13 +1103,17 @@
           "moving north": "spostamento verso nord",
           "jittering": "pulsazione",
           "moving west": "spostamento verso ovest",
-          "patrolling": "pattugliamento"
+          "patrolling": "pattugliamento",
+          "recovering": "recupero",
+          "moving with arrow keys": "muovendosi con i tasti freccia"
         },
         "outbreak5": {
-          "wandering": "movimento casuale"
+          "wandering": "movimento casuale",
+          "recovering": "recupero"
         },
         "outbreak6": {
-          "wandering": "movimento casuale"
+          "wandering": "movimento casuale",
+          "recovering": "recupero"
         },
         "outbreak7": {
           "wandering": "movimento casuale",
@@ -1119,7 +1126,10 @@
           "moving north": "spostamento verso nord",
           "jittering": "pulsazione",
           "moving west": "spostamento verso ovest",
-          "patrolling": "pattugliamento"
+          "patrolling": "pattugliamento",
+          "recovering": "recupero",
+          "moving left and right": "spostarsi a sinistra e a destra",
+          "moving with arrow keys": "muovendosi con i tasti freccia"
         },
         "outbreak8": {
           "wandering": "movimento casuale",
@@ -1132,7 +1142,10 @@
           "moving north": "spostamento verso nord",
           "jittering": "pulsazione",
           "moving west": "spostamento verso ovest",
-          "patrolling": "pattugliamento"
+          "patrolling": "pattugliamento",
+          "recovering": "recupero",
+          "moving left and right": "spostarsi a sinistra e a destra",
+          "moving with arrow keys": "muovendosi con i tasti freccia"
         },
         "outbreak_freeplay": {
           "wandering": "movimento casuale",

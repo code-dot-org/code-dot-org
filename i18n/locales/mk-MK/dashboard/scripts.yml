@@ -255,6 +255,10 @@ mk:
               name: Променливи
             Text:
               name: Текст
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Променливи
         csd3-2021:
           lessons:
             Variables:

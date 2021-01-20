@@ -1029,6 +1029,7 @@ de:
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
             '"tint"': Farbton
+            '"speed"': Geschwindigkeit
       gamelab_getThisSprite:
         text: "{CHOICE} Sprite"
         options:
@@ -1170,6 +1171,8 @@ de:
             '"West"': West
       gamelab_moveToward:
         text: bewege {SPRITE} {DISTANCE} Pixel zu {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE} geklicked"
       gamelab_objectSpritePointer:
         text: "{SPRITE} geklicked"
       gamelab_patrollingUpDown:
@@ -1228,6 +1231,13 @@ de:
             undefined: leer
       gamelab_setBackgroundImageAs:
         text: setze Hintergund auf {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mittel
+            '100': large
       gamelab_setPrompt:
         text: Frage Benutzer {QUESTION} für Variable {VAR}
       gamelab_setPromptWithChoices:
@@ -1241,6 +1251,7 @@ de:
             '"x"': x-Position
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
+            '"speed"': Geschwindigkeit
       gamelab_setSizes:
         text: stellen Sie {SPRITE} {PROPERTY} auf {N}%
         options:

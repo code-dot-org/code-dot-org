@@ -842,6 +842,7 @@ bs:
             '"rotation"': rotacija
             '"direction"': smijer kretanja
             '"tint"': nijanse
+            '"speed"': brzina
       gamelab_getTime:
         options:
           UNIT:
@@ -937,6 +938,7 @@ bs:
             '"scale"': veličina
             '"rotation"': rotacija
             '"direction"': smijer kretanja
+            '"speed"': brzina
       gamelab_setSizes:
         options:
           PROPERTY:

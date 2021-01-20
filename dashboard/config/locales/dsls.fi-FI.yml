@@ -2103,3 +2103,5 @@ fi-FI:
         content1: Kuvaus tähän
       outbreak_story2:
         content1: Kuvaus tähän
+      outbreak_freeplay_choice:
+        display_name: Vapaata kokeilua

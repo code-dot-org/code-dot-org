@@ -46,6 +46,7 @@ he:
               name: 'מעבדת הצעצועים: צור סיפור'
             The Big Event:
               name: האירוע הגדול
+          student_description: התחל עם קורס 1 עבור קוראים מתחילים. התלמידים ייצרו תוכנות מחשב אשר יעזרו להם ללמוד איך לשתף פעולה עם אחרים, לפתח יכולות פתרון בעיות ולהתמיד לפתור בעיות קשות. עד סוף הקורס, התלמידים ייצרו משחק או סיפור משלהם אשר יהיה אפשר לשתף אותו עם אחרים. מומלץ עבור תלמידי כיתות א׳.
         course2:
           title: מסלול 2
           description: קורס 2 מתאים לסטונדטים קוראים ללא ניסיון קודם בתכנות. בקורס זה הסטונדטים יצרו תוכניות על מנת לפתור בעיות ויפתחו משחקים אינטראקטיביים וסיפורים אותם יוכלו לשתף. מומלץ לילדים בכיתה ב עד ה.
@@ -88,6 +89,7 @@ he:
               name: 'מעבדת הצעצועים: צור סיפור'
             The Big Event:
               name: האירוע הגדול
+          student_description: קורס 2 מתאים לסטונדטים קוראים ללא ניסיון קודם בתכנות. בקורס זה הסטונדטים יצרו תוכניות על מנת לפתור בעיות ויפתחו משחקים אינטראקטיביים וסיפורים אותם יוכלו לשתף. מומלץ לילדים בכיתה ב עד ה.
         course3:
           title: מסלול 3
           description: קורס 3 מיועד לתלמידים אשר למדור את קורס 2. תלמידים יצללו עמוק אל תוך נושאים בתכנות אשר הוצגו בקורסים הקודמים כדי ליצור פתרונות דינמיים לבעיות מורכבות עוד יותר. עד סוף הקורס, תלמידים יצרו סיפורים אינטראקטיביים ומשחקים אשר יכולים לשתף עם כולם. מומלץ כיתות ד-ה.
@@ -128,6 +130,7 @@ he:
               name: 'מעבדת הצעצועים: צור משחק'
             'Studio: Create a Story':
               name: 'מעבדת הצעצועים: צור סיפור'
+          student_description: קורס 3 מיועד לתלמידים אשר למדור את קורס 2. תלמידים יצללו עמוק אל תוך נושאים בתכנות אשר הוצגו בקורסים הקודמים כדי ליצור פתרונות דינמיים לבעיות מורכבות עוד יותר. עד סוף הקורס, תלמידים יצרו סיפורים אינטראקטיביים ומשחקים אשר יכולים לשתף עם כולם. מומלץ כיתות ד-ה.
         playlab:
           title: מעבדת הצעצועים
           description: צור סיפור או משחק בעזרת מעבדת הצעצועים!
@@ -136,6 +139,7 @@ he:
             Play Lab:
               name: מעבדת הצעצועים
           description_audience: ' '
+          student_description: צור סיפור או משחק בעזרת מעבדת הצעצועים!
         artist:
           title: אמן
           description: ציירו תמונות מגניבות ועיצובים עם האמן!
@@ -143,6 +147,7 @@ he:
           lessons:
             Artist:
               name: אמן
+          student_description: ציירו תמונות מגניבות ועיצובים עם האמן!
         hourofcode:
           title: מבוך קלאסי
           description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד זומבים וסקראט מעידן הקרח!
@@ -151,6 +156,7 @@ he:
           lessons:
             Maze:
               name: מבוך
+          student_description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד זומבים וסקראט מעידן הקרח!
         frozen:
           title: תכנתו עם אנה ואלזה
           description: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
@@ -158,6 +164,7 @@ he:
           lessons:
             Artist:
               name: אמן
+          student_description: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
         course4:
           title: מסלול 4
           description: קורס 4 מיועד עבור תלמידים אשר למדו את קורס 2 ו-3. תלמידים ילמדו לפתור חידות עם מורכבות מוגברת כאשר ילמדו איך לשלב מספר עקרונות כשפותרים כל אתגר. כאשר הקורס יסתיים, התלמידים יצרו תוכניות אשר יאפשרו להם לתרגל מספר מיומנויות הכוללים בין היתר לולאות ופונקציות עם פרמטרים. מומלץ לכיתות ד-ו.
@@ -194,6 +201,7 @@ he:
               name: אתגר מיוחד - משתנים
             'Unplugged: For Loop Fun':
               name: 'ללא מחשב: כיף עם לולאות עבור'
+          student_description: קורס 4 מיועד עבור תלמידים אשר למדו את קורס 2 ו-3. תלמידים ילמדו לפתור חידות עם מורכבות מוגברת כאשר ילמדו איך לשלב מספר עקרונות כשפותרים כל אתגר. כאשר הקורס יסתיים, התלמידים יצרו תוכניות אשר יאפשרו להם לתרגל מספר מיומנויות הכוללים בין היתר לולאות ופונקציות עם פרמטרים. מומלץ לכיתות ד-ו.
         Course4pre:
           description_audience: ' '
           lessons:
@@ -253,6 +261,7 @@ he:
           lessons:
             Infinity:
               name: אינסוף
+          student_description: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני.
         algebrademo:
           lessons:
             Defining Simple Functions:
@@ -326,6 +335,7 @@ he:
               name: המבוך
             Wrap-up:
               name: סיום
+          student_description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
         edit-code:
           title: עריכת קוד
           description: עריכת קוד
@@ -338,6 +348,7 @@ he:
               name: האמן
             The Maze:
               name: המבוך
+          student_description: עריכת קוד
         events:
           title: אירועים
           description: אירועים
@@ -348,6 +359,7 @@ he:
               name: להקפיץ
             Studio:
               name: סטודיו
+          student_description: אירועים
         flappy:
           title: קוד מתנופף
           description: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!
@@ -356,6 +368,7 @@ he:
           lessons:
             Flappy Code:
               name: קוד מתנופף
+          student_description: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!
         jigsaw:
           title: פאזל
           description_audience: ' '
@@ -669,6 +682,7 @@ he:
         Special Fun:
           description_audience: גילאי 10-18
           description: ' '
+          student_description: ' '
         SpecialSeries:
           description_audience: גילאי 10-18
         iceage:
@@ -679,6 +693,7 @@ he:
           lessons:
             Ice Age Play Lab:
               name: עידן הקרח Play Lab
+          student_description: צור סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
         cspunit3temp:
           description_audience: ' '
           lessons:
@@ -692,6 +707,7 @@ he:
             Gumball Play Lab:
               name: מעבדת הצעצועים עם גמבול
           description_audience: ' '
+          student_description: צור סיפור או משחק עם מעבדת הצעצועים גמבול!
         starwars:
           title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד'
           description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה...
@@ -700,6 +716,7 @@ he:
           lessons:
             Hour of Code 2015:
               name: שעת קוד 2015
+          student_description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה...
         starwarsblocks:
           title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד'
           description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה...
@@ -708,6 +725,7 @@ he:
           lessons:
             Hour of Code 2015:
               name: שעת קוד 2015
+          student_description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה...
         mc:
           title: 'שעת הקוד: גרסת מיינקראפט'
           description: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם של מיינקראפט
@@ -716,6 +734,7 @@ he:
           lessons:
             Hour of Code 2015:
               name: שעת קוד 2015
+          student_description: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם של מיינקראפט.
         oceans:
           description_audience: ' '
         ScienceP3OLPT3:
@@ -863,6 +882,7 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         allthehiddenthings:
           lessons:
             Game Lab:
@@ -897,6 +917,7 @@ he:
           lessons:
             'Bee: Conditionals':
               name: 'דבורה: התניות'
+          student_description: ' '
         gradeKinder:
           lessons:
             Events:
@@ -1018,6 +1039,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         k5concepts:
           description_audience: ' '
           description_short: ' '
@@ -1041,6 +1063,7 @@ he:
               name: משתנים
             While Loops:
               name: לולאות "כל עוד"
+          student_description: ' '
         algebrapdnext:
           description_audience: ' '
           lessons:
@@ -1054,6 +1077,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csd1-2017:
           description_audience: ' '
           lesson_groups:
@@ -1122,6 +1146,7 @@ he:
           lessons:
             Minecraft Hour of Code Designer:
               name: מעצבי מיינקראפט
+          student_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
         flappy-impact-study:
           description_audience: ' '
           lessons:
@@ -1226,6 +1251,7 @@ he:
               name: יוצר גרסה משלך את שלב 1 ושלב 2
             Wrap-Up:
               name: אריזה
+          student_description: ' '
         2016_sciencePD_phase2b:
           title: ' '
           description_audience: ' '
@@ -1238,11 +1264,13 @@ he:
               name: יוצר גרסה משלך את שלב 1 ושלב 2
             Wrap-Up:
               name: אריזה
+          student_description: ' '
         sciencepd3-2016:
           title: ' '
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csp3-support:
           description_audience: ' '
           lesson_groups:
@@ -1253,6 +1281,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csp4-support:
           description_audience: ' '
           lesson_groups:
@@ -1270,6 +1299,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         science-pd-ol-pt-5:
           title: ' '
           description_audience: ' '
@@ -1337,6 +1367,7 @@ he:
               name: מערכים ולולאות עבור
             Functions with Parameters:
               name: פונקציות ופרמטרים
+          student_description: ' '
         workshop-gamelab:
           lessons:
             Introduction:
@@ -1355,6 +1386,7 @@ he:
           lessons:
             ASCII and Binary Representation:
               name: ייצוג ASCII וייצוג בינארי
+          student_description: ' '
         applab-1hour:
           description_short: ' '
         applab-2hour:
@@ -1366,6 +1398,7 @@ he:
           lessons:
             Introduction:
               name: מבוא
+          student_description: ' '
         coursee-ramp:
           description_audience: ' '
           description_short: ' '
@@ -1375,6 +1408,7 @@ he:
               name: מבוא
             Conditionals:
               name: תנאים
+          student_description: ' '
         csd6-2017:
           description_audience: ' '
           lesson_groups:
@@ -1468,12 +1502,14 @@ he:
               name: מבוא
             Ice Age Play Lab:
               name: עידן הקרח Play Lab
+          student_description: ' '
         csppostsurvey-staging:
           description_audience: ' '
           description_short: ' '
         fmscsd3preview:
           description_short: ' '
           description: ' '
+          student_description: ' '
         csp-post-survey:
           lesson_groups:
             cspSurvey:
@@ -1482,9 +1518,11 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csd2-old:
           description_audience: ' '
           description: ' '
+          student_description: ' '
         artist-and-bb8:
           title: ' '
           description_audience: ' '
@@ -1495,6 +1533,7 @@ he:
               name: עידן הקרח Play Lab
             Bounce:
               name: להקפיץ
+          student_description: ' '
         coursea-2017:
           lessons:
             'Debugging: Unspotted Bugs':
@@ -1717,6 +1756,7 @@ he:
               name: תודה
             '':
               name: ' '
+          student_description: ' '
         csp-pre-survey-test-2017:
           title: ' '
           description_audience: ' '
@@ -1740,10 +1780,12 @@ he:
               display_name: 'פרק 1: עיצוב מכוון משתמש'
             csd4_2:
               display_name: 'פרק 2: תכנון אפליקציה'
+          student_description: ' '
         craft17:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         applab-intro:
           description_audience: ' '
         e-f-ramp:
@@ -1770,6 +1812,7 @@ he:
               name: אינטרנט
             Sequence in Maze:
               name: רצף במבוך
+          student_description: ' '
         new-d:
           title: קוד חדש לקורס ד'
           description_audience: ' '
@@ -1788,6 +1831,7 @@ he:
               name: אמן בינארי
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+          student_description: ' '
         csp3-a:
           description_audience: ' '
           lesson_groups:
@@ -1810,10 +1854,12 @@ he:
               name: לולאות עבור עם האמן
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
+          student_description: ' '
         new-stages-sept-2017:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         new-e:
           description_audience: ' '
           description_short: ' '
@@ -1836,6 +1882,7 @@ he:
               name: צור משחק במעבדת הצעצועים
             Internet:
               name: אינטרנט
+          student_description: ' '
         new-f:
           description_audience: ' '
           description_short: ' '
@@ -1862,6 +1909,7 @@ he:
               name: לולאות עבור עם האמן
             Songwriting with Parameters:
               name: כתיבת שירים
+          student_description: ' '
         csd5-old:
           description_audience: ' '
           lesson_groups:
@@ -1877,6 +1925,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         hocali:
           title: ' '
           description_audience: ' '
@@ -1886,11 +1935,13 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         craft17-kiki:
           title: ' '
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csd4-old:
           description_audience: ' '
           description: ' '
@@ -1899,6 +1950,7 @@ he:
               display_name: 'פרק 1: עיצוב מכוון משתמש'
             csd4_2:
               display_name: 'פרק 2: תכנון אפליקציה'
+          student_description: ' '
         csp3-staging:
           description_audience: ' '
           lesson_groups:
@@ -1912,10 +1964,12 @@ he:
         allthesurveys:
           description_audience: ' '
           description: ' '
+          student_description: ' '
         k1hoc2017:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         hero:
           title: 'מיינקראפט: המסע של הירו'
           description_audience: ' '
@@ -1926,6 +1980,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csp-explore-2017:
           description_audience: ' '
           lesson_groups:
@@ -1950,23 +2005,28 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         aws-demo:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         halloween:
           title: ' '
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         valentine:
           description_audience: ' '
           description: ' '
+          student_description: ' '
         colehoc17:
           title: ' '
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         course-e-2018:
           description_audience: ' '
           description_short: ' '
@@ -1991,6 +2051,7 @@ he:
               name: צור משחק במעבדת הצעצועים
             Internet:
               name: אינטרנט
+          student_description: ' '
         course-f-2018:
           description_audience: ' '
           description_short: ' '
@@ -2019,6 +2080,7 @@ he:
               name: לולאות עבור עם האמן
             Songwriting with Parameters:
               name: כתיבת שירים
+          student_description: ' '
         csd6-old:
           description_audience: ' '
           description_short: ' '
@@ -2033,6 +2095,7 @@ he:
               name: רשימות
             For Loops:
               name: בשביל לולאות
+          student_description: ' '
         unembeddedlevels:
           description_audience: ' '
           description_short: ' '
@@ -2063,10 +2126,12 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         glj-behavior-test:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csd3-2018:
           description_audience: ' '
           lesson_groups:
@@ -2403,16 +2468,19 @@ he:
               name: היכרות עם חידות מבוכים
             Nested Loops in Maze:
               name: לולאות מקוננות במבוך
+          student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
         jr-test:
           title: ' '
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         petgame:
           title: ' '
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csp-exam:
           description_audience: ' '
         coursec-2018:
@@ -3158,15 +3226,18 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         2018hoc-ab:
           title: ' '
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         deepdive-debugging:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         fit-test:
           lesson_groups:
             required:
@@ -3186,10 +3257,12 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         craft18:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         frozen-2018:
           description_audience: ' '
           description_short: ' '
@@ -3197,6 +3270,7 @@ he:
           lessons:
             Artist:
               name: אמן
+          student_description: ' '
         frozen-2018-test:
           description: ' '
           description_short: ' '
@@ -3206,6 +3280,7 @@ he:
               name: אמן
               description_student: ' '
               description_teacher: ' '
+          student_description: ' '
         dance:
           title: מסיבת ריקודים
           description_audience: ' '
@@ -3221,6 +3296,7 @@ he:
               name: אמן
               description_student: ' '
               description_teacher: ' '
+          student_description: ' '
         aquatic:
           title: 'מיינקראפט: מסע ימי'
           description_audience: ' '
@@ -3228,6 +3304,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         dance--draft:
           title: ' '
           description: ' '
@@ -3247,6 +3324,7 @@ he:
               name: מסיבת ריקודים
               description_student: ' '
               description_teacher: ' '
+          student_description: ' '
         cspplayground:
           description_audience: ' '
           description_short: ' '
@@ -3260,9 +3338,11 @@ he:
               display_name: פונקציות
             csp_project:
               display_name: פּרוֹיֶקט
+          student_description: ' '
         dance-extras:
           description_audience: ' '
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
+          student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         coursef-2019:
           lesson_groups:
             ramp_up:
@@ -3332,6 +3412,7 @@ he:
           lessons:
             Dance Party:
               name: מסיבת ריקודים
+          student_description: ' '
         coursed-2019:
           description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
           lesson_groups:
@@ -3379,6 +3460,7 @@ he:
               name: אמן בינארי
             Dance Party:
               name: מסיבת ריקודים
+          student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
         coursee-2019:
           lesson_groups:
             ramp_up:
@@ -3628,6 +3710,7 @@ he:
           title: המשיכו לרקוד
           description_audience: ' '
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
+          student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         coursec-2019:
           lesson_groups:
             csf_binary:
@@ -3794,6 +3877,7 @@ he:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
+          student_description: ' '
         dani-test-script:
           title: ' '
           description_audience: ' '
@@ -3938,6 +4022,7 @@ he:
               display_name: פּרוֹיֶקט
             required:
               display_name: סקירה
+          student_description: ' '
         csp1-2019:
           description_audience: ' '
           lesson_groups:
@@ -4303,10 +4388,12 @@ he:
               name: שליחת הודעות בינאריות
             Sending Binary Messages with the Internet Simulator:
               name: שליחת הודעות בינאריות עם סימולטור האינטרנט
+          student_description: ' '
         csd-tests:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csd-videos:
           description_audience: ' '
         time4csdemo:
@@ -4335,6 +4422,7 @@ he:
               display_name: פונקציות
             csp_project:
               display_name: פּרוֹיֶקט
+          student_description: ' '
         csp2-pilot-staging:
           description_audience: ' '
           description_short: ' '
@@ -4348,10 +4436,12 @@ he:
               display_name: פונקציות
             csp_project:
               display_name: פּרוֹיֶקט
+          student_description: ' '
         csp3-pilot-staging:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csp4-pilot-staging:
           description_audience: ' '
           description_short: ' '
@@ -4365,6 +4455,7 @@ he:
               display_name: פונקציות
             csp_project:
               display_name: פּרוֹיֶקט
+          student_description: ' '
         csp5-pilot-staging:
           description_audience: ' '
           description_short: ' '
@@ -4376,6 +4467,7 @@ he:
               display_name: חזרות
             csp_project:
               display_name: פּרוֹיֶקט
+          student_description: ' '
         csp6-pilot-staging:
           description_audience: ' '
           description_short: ' '
@@ -4389,10 +4481,12 @@ he:
               display_name: פונקציות
             csp_project:
               display_name: פּרוֹיֶקט
+          student_description: ' '
         csp7-pilot-staging:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csp8-pilot-staging:
           description_audience: ' '
           description_short: ' '
@@ -4406,6 +4500,7 @@ he:
               display_name: פונקציות
             csp_project:
               display_name: פּרוֹיֶקט
+          student_description: ' '
         csp9-pilot-staging:
           description_audience: ' '
           description_short: ' '
@@ -4419,6 +4514,7 @@ he:
               display_name: פונקציות
             csp_project:
               display_name: פּרוֹיֶקט
+          student_description: ' '
         csp10-pilot-staging:
           description_audience: ' '
           description_short: ' '
@@ -4432,10 +4528,12 @@ he:
               display_name: פונקציות
             csp_project:
               display_name: פּרוֹיֶקט
+          student_description: ' '
         pluralsight:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         express-2018-vn:
           description_audience: ' '
           lessons:
@@ -4464,6 +4562,7 @@ he:
               display_name: פּרוֹיֶקט
             required:
               display_name: סקירה
+          student_description: ' '
         fit2019-novice:
           lesson_groups:
             required:
@@ -4472,6 +4571,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         fit2019-apprentice:
           lesson_groups:
             required:
@@ -4480,6 +4580,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csd1-pilot:
           description_audience: ' '
           lesson_groups:
@@ -4552,6 +4653,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         maddie-test:
           title: ' '
           description_audience: ' '
@@ -4564,6 +4666,7 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -4580,66 +4683,81 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
+          lessons:
+            Focus Area 1:
+              name: תוכנית לימוד
+          student_description: ' '
         dlp19-csp-mod-fit:
           description_short: ' '
           description: ' '
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         pl-csd-bugs:
           description_audience: ' '
           description: ' '
+          student_description: ' '
         dlp19-csd-mod-w1:
           description: ' '
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         dlp19-csd-mod-w2:
           description_short: ' '
           description: ' '
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         dlp19-csd-mod-w3:
           description_short: ' '
           description: ' '
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         dlp19-csd-mod-w4:
           description_short: ' '
           description: ' '
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         dlp19-csp-mod-w1:
           description_short: ' '
           description: ' '
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         dlp19-csp-mod-w2:
           description_short: ' '
           description: ' '
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         dlp19-csp-mod-w3:
           description_short: ' '
           description: ' '
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         dlp19-csp-mod-w4:
           description_short: ' '
           description: ' '
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         csd-pilot:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csd4-pilot:
           description_audience: ' '
           description_short: ' '
@@ -4647,6 +4765,7 @@ he:
           lesson_groups:
             csd1_2:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
+          student_description: ' '
         csp2-pilot:
           description_audience: ' '
           description_short: ' '
@@ -4654,10 +4773,12 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         denny-science:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         peru-2019:
           description_audience: ' '
           description_short: ' '
@@ -4665,6 +4786,7 @@ he:
           lessons:
             Introduction:
               name: מבוא
+          student_description: ' '
         csp6-pilot:
           description_audience: ' '
           description_short: ' '
@@ -4672,6 +4794,7 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         denny-science-8:
           description: ' '
           description_short: ' '
@@ -4683,6 +4806,7 @@ he:
             'Earthquake Detector: Processing with Events':
               description_student: ' '
               description_teacher: ' '
+          student_description: ' '
         dance-2019:
           title: מסיבת ריקודים (2019)
           description_audience: ' '
@@ -4750,10 +4874,12 @@ he:
             Dance Party - Go Further:
               description_student: ' '
               description_teacher: ' '
+          student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         csp10-pilot:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csp4-preview:
           description_audience: ' '
           description_short: ' '
@@ -4767,6 +4893,7 @@ he:
               display_name: פונקציות
             csp_project:
               display_name: פּרוֹיֶקט
+          student_description: ' '
         time4cs-original-unit-1:
           description_audience: ' '
           description_short: ' '
@@ -4843,6 +4970,7 @@ he:
             Conditionals Review:
               description_student: ' '
               description_teacher: ' '
+          student_description: ' '
         time4cs-experiment-unit-1:
           description: ' '
           description_short: ' '
@@ -4896,6 +5024,7 @@ he:
             Conditionals Review:
               description_student: ' '
               description_teacher: ' '
+          student_description: ' '
         csp7-pilot:
           description_audience: ' '
           description_short: ' '
@@ -4903,10 +5032,12 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
+          student_description: ' '
         csp8-pilot:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csp4-2020:
           description_audience: ' '
           lesson_groups:
@@ -4936,6 +5067,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csd2-2020:
           description_audience: ' '
           lesson_groups:
@@ -5194,6 +5326,7 @@ he:
               name: אמן בינארי
             Dance Party:
               name: מסיבת ריקודים
+          student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
         coursee-2020:
           lesson_groups:
             ramp_up:
@@ -5446,6 +5579,7 @@ he:
           lessons:
             Tools:
               name: כלים
+          student_description: ' '
         csd2-virtual:
           description_audience: ' '
           lesson_groups:
@@ -5590,6 +5724,7 @@ he:
           lessons:
             Functions:
               name: פונקציות
+          student_description: ' '
         code-break:
           description_audience: ' '
           description_short: ' '
@@ -5602,10 +5737,12 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         code-break-younger-staging:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         code-break-younger:
           description_audience: ' '
           description_short: ' '
@@ -5683,6 +5820,7 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         csd3-virtual:
           description_audience: ' '
           lessons:
@@ -5727,21 +5865,26 @@ he:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         vpl-csd-2020:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         vpl-csp-2020:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         curriculum-sandbox-levels:
           description: ' '
+          student_description: ' '
         virustest:
           title: הדמיה של התפרצות
           description_audience: ' '
           description_short: 'השתמשו במעבדת הדמויות כדי ליצור סימולציה מתוך התפרצות וירוסים.'
           description: ' '
+          student_description: ' '
         ml-playground:
           description_audience: ' '
         outbreak:
@@ -5756,12 +5899,25 @@ he:
           description_short: 'השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.'
           description: 'השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.'
           name: התפרצות
+          student_description: 'השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.'
         apps-for-good:
           description_audience: ' '
           description_short: ' '
           description: ' '
+          student_description: ' '
         2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: קידוד של סימולציה
+          lesson_groups:
+            introduction:
+              display_name: מבוא
+            lessonGroup-3:
+              display_name: משתנים
+            outbreak:
+              display_name: סימולציית התפרצות
           description: ' '
+          student_description: ' '
         csd1-2021:
           description_audience: ' '
           lesson_groups:
@@ -5806,6 +5962,10 @@ he:
               display_name: סקר
         csd4-2021:
           description_audience: ' '
+          lessons:
+            CS Discoveries Post Course survey:
+              description_student: ' '
+              description_teacher: ' '
           lesson_groups:
             csd4_1:
               display_name: 'פרק 1: עיצוב מכוון משתמש'
@@ -5821,6 +5981,9 @@ he:
             ASCII and Binary Representation:
               key: ייצוג ASCII וייצוג בינארי
               name: ייצוג ASCII וייצוג בינארי
+            CS Discoveries Post Course survey:
+              description_student: ' '
+              description_teacher: ' '
           lesson_groups:
             csd5_1:
               display_name: 'פרק 1: ייצוג מידע'
@@ -5973,6 +6136,7 @@ he:
               display_name: תנאים
             csf_binary:
               display_name: בינארי
+          student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
         coursee-2021:
           lessons:
             Conditionals:
@@ -6029,8 +6193,6 @@ he:
               key: לולאות "עד" במבוך
               name: לולאות "עד" במבוך
           lesson_groups:
-            csf_warmup:
-              display_name: חימום
             csf_loops:
               display_name: חזרות
             csf_conditionals:
@@ -6045,6 +6207,8 @@ he:
               display_name: דמויות
         pre-express-2021:
           lessons:
+            Programming in with Angry Birds:
+              name: תכנות עם ציפורים כועסות
             Loops with Scrat:
               key: לולאות עם סקראט
               name: לולאות עם סקראט
@@ -6064,3 +6228,47 @@ he:
               display_name: סימולציית התפרצות
             lessonGroup-3:
               display_name: משתנים
+            Sprites:
+              display_name: דמויות
+        csd4-preview-2021:
+          description_audience: ' '
+          lessons:
+            Post-Project Test:
+              description_student: ' '
+              description_teacher: ' '
+            CS Discoveries Post Course survey:
+              description_student: ' '
+              description_teacher: ' '
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+            csdSurvey:
+              display_name: סקר
+        csd5-preview-2021:
+          description_audience: ' '
+          lessons:
+            ASCII and Binary Representation:
+              key: ייצוג ASCII וייצוג בינארי
+              name: ייצוג ASCII וייצוג בינארי
+            Project - Make a Recommendation:
+              description_student: ' '
+              description_teacher: ' '
+            Post-Project Test:
+              description_student: ' '
+              description_teacher: ' '
+            CS Discoveries Post Course survey:
+              description_student: ' '
+              description_teacher: ' '
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר

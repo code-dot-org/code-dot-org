@@ -1006,6 +1006,7 @@ sk:
             '"y"': pozícia y
             '"direction"': smeru pohybu
             '"tint"': sfarbenie
+            '"speed"': rýchlosť
       gamelab_getThisSprite:
         text: "{CHOICE} postava"
         options:
@@ -1134,6 +1135,8 @@ sk:
             '"West"': Západ
       gamelab_moveToward:
         text: pohni {SPRITE} o {DISTANCE} pixelov smerom k {TARGET}
+      gamelab_newSpritePointer:
+        text: klikla {SPRITE}
       gamelab_objectSpritePointer:
         text: klikla {SPRITE}
       gamelab_patrollingUpDown:
@@ -1186,6 +1189,13 @@ sk:
             undefined: žiadne
       gamelab_setBackgroundImageAs:
         text: nastav pozadie na {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': stredný
+            '100': large
       gamelab_setProp:
         text: nastav {SPRITE} {PROPERTY} na {VAL}
         options:
@@ -1195,6 +1205,7 @@ sk:
             '"x"': pozícia x
             '"y"': pozícia y
             '"direction"': smeru pohybu
+            '"speed"': rýchlosť
       gamelab_setSizes:
         text: nastav {SPRITE} {PROPERTY} na {N}%
         options:
