@@ -120,6 +120,7 @@
       "name": "Graph Paper Programming",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "By \"programming\" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. The class will start by having students use symbols to instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.  ",
@@ -139,6 +140,7 @@
       "name": "Introduction to Online Puzzles",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org's online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in maze. From there, students will see new types of puzzles like Collector, Artist, and Harvester when they learn the very basics of _loops_.",
@@ -158,6 +160,7 @@
       "name": "Relay Programming",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.",
@@ -177,6 +180,7 @@
       "name": "Debugging with Laurel",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "In this online activity, students will practice debugging in the \"collector\" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.",
@@ -196,6 +200,7 @@
       "name": "Events in Bounce",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.",
@@ -215,6 +220,7 @@
       "name": "Build a Star Wars Game",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "In this lesson, students will practice using events to build a game that they can share online. Featuring R2-D2 and other Star Wars characters, students will be guided through events, then given space to create their own game.",
@@ -234,6 +240,7 @@
       "name": "Dance Party",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.",
@@ -253,6 +260,7 @@
       "name": "Loops in Ice Age",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "As a quick update (or introduction) to using loops, this stage will have students using the `repeat` block to get Scrat to the acorn more efficiently.",
@@ -272,6 +280,7 @@
       "name": "Drawing Shapes with Loops",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
         "overview": "This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity doubles as a debugging exercise for extra problem-solving practice.",
@@ -291,6 +300,7 @@
       "name": "Nested Loops in Maze",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.",
@@ -310,6 +320,7 @@
       "name": "Conditionals with Cards",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
         "overview": "This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.\r\n\r\n",
@@ -329,6 +340,7 @@
       "name": "If/Else with Bee",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
         "overview": "Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
@@ -348,6 +360,7 @@
       "name": "While Loops in Farmer",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
         "overview": "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n_While loops_ are loops that continue to repeat commands while a condition is met. `While` loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat.",
@@ -367,6 +380,7 @@
       "name": "Until Loops in Maze",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
         "overview": "In this lesson, students will learn about `until` loops. Students will build programs that have the main character repeat actions `until` they reach their desired stopping point.",
@@ -386,6 +400,7 @@
       "name": "Harvesting with Conditionals",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
         "overview": "Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.",
@@ -405,6 +420,7 @@
       "name": "Binary Images",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
         "overview": "Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.",
@@ -424,6 +440,7 @@
       "name": "Binary Images with Artist",
       "absolute_position": 17,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
         "overview": "This series of online lessons will have students learning to make images using on and off.",
@@ -443,6 +460,7 @@
       "name": "Be A Super Digital Citizen",
       "absolute_position": 18,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
         "overview": "This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\r\n\r\nOnline tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.",
@@ -462,6 +480,7 @@
       "name": "End of Course Project",
       "absolute_position": 19,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
         "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! ",

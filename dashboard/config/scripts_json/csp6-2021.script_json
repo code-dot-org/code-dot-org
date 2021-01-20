@@ -41,6 +41,7 @@
       "name": "Algorithms Solve Problems",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students will complete two exploratory activities that introduce the concept of a problem and an algorithm. In the first students answer a series of questions about birthdates and names of their classmates. They then discuss the similarities and differences between the problems. In the second activity students are given six different algorithms and must analyze them to determine which they think are the same or different. At the end of the lesson they are introduced to the formal definitions of a problem and an algorithm.",
@@ -69,6 +70,7 @@
       "name": "Algorithm Efficiency",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "In this lesson students follow a demonstration of Linear Search before writing their own search algorithms. Following this, students are introduced to Binary Search after which they compare graphs of the search algorithms to determine which is most efficient. ",
@@ -97,6 +99,7 @@
       "name": "Unreasonable Time",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "Students investigate two different types of raffles that highlight the way seemingly small problems can quickly grow large. The first raffle asks students to hunt for pairs of tickets that add to a target value. The second raffle asks students to hunt for any group of tickets that adds to a target value. After trying out each raffle live students will try to figure out the patterns for how many total combinations need to be checked in each. At the end they discuss the difference between reasonable and unreasonable algorithms based on their experiences.",
@@ -125,6 +128,7 @@
       "name": "The Limits of Algorithms",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "Students explore the limits of what algorithms are able to compute. First they use a widget that exposes students to the Traveling Salesman Problem. After recognizing this problem can only be solved using an unreasonable time algorithm the develop their own good enough solutions that run more efficiently. Later in the lesson students watch a video about undecidable problems for which no algorithm can ever be developed to solve them.",
@@ -153,6 +157,7 @@
       "name": "Parallel and Distributed Algorithms",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "In this lesson students explore the benefits and limitations of parallel and distributed computing. First they discuss the way human problem solving changes when additional people lend a hand. Then they run a series of demonstrations that show how simple tasks like sorting cards get faster when more people help, but there is a limitation to the efficiency gains. Later in the lesson students watch a video about distributed computing that highlights the ways distributed computing can help tackle new kinds of problems. To conclude the lesson students record new vocabulary in their journals and discuss any open questions.",
@@ -181,6 +186,7 @@
       "name": "Assessment Day",
       "absolute_position": 6,
       "lockable": true,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",
