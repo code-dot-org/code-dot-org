@@ -78,7 +78,7 @@ const levelStatusStyle = {
     backgroundColor: color.level_submitted,
     color: color.white
   },
-  // Below three are used by peer reviews
+  // Below are used by peer reviews
   [LevelStatus.review_rejected]: {
     color: color.white,
     borderColor: color.level_review_rejected,
