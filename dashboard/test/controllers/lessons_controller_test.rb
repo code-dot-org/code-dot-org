@@ -431,7 +431,9 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'update lesson with new resources' do
-    resource = create :resource
+    course_version = create :course_version
+    resource = create :resource, course_version: course_version
+    @lesson.script.course_version = course_version
 
     sign_in @levelbuilder
     new_update_params = @update_params.merge({resources: [resource.key].to_json})
@@ -460,7 +462,7 @@ class LessonsControllerTest < ActionController::TestCase
     refute @lesson.resources.include?(resource_to_remove)
   end
 
-  test 'update less removing and adding vocabularies' do
+  test 'update lesson by removing and adding vocabularies' do
     course_version = create :course_version
     vocab_to_keep = create :vocabulary, course_version: course_version
     vocab_to_remove = create :vocabulary, course_version: course_version
