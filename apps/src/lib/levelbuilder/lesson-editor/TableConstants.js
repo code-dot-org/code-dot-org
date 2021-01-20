@@ -9,6 +9,7 @@ export const lessonEditorTableStyles = {
   actionsCell: {
     border: '1px solid',
     borderColor: color.border_light_gray,
-    padding: 0
+    padding: 0,
+    height: 30
   }
 };

@@ -14,8 +14,8 @@ import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
 
 const styles = {
-  oddRow: {
-    backgroundColor: color.lightest_gray
+  search: {
+    paddingBottom: 10
   },
   actionsColumn: {
     display: 'flex',
@@ -175,7 +175,7 @@ class VocabulariesEditor extends Component {
             onConfirm={this.handleRemoveVocabularyConfirm}
           />
         )}
-        <div>
+        <div style={styles.search}>
           Select a vocabulary word to add
           <SearchBox
             onSearchSelect={e => this.props.addVocabulary(e.vocabulary)}
