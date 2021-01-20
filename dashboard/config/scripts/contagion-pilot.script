@@ -1,0 +1,26 @@
+login_required true
+teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"]]
+
+lesson_group 'contagion', display_name: 'Contagion'
+lesson 'how things spread', display_name: 'How Things Spread'
+level 'contagion_lesson1_markdown', progression: 'How Things Spread'
+
+lesson 'contagion simulator setup', display_name: 'Contagion Simulator Setup'
+level 'contagion_story', progression: 'Welcome to Monster Town'
+level 'contagion_setup', progression: 'Creating a Simulation'
+level 'contagion_events', progression: 'Programming Our Rules'
+level 'contagion_masks', progression: 'Slowing the Contagion with Masks'
+level 'contagion_data', progression: 'Collecting Data'
+
+lesson 'sometimes but not always', display_name: 'Sometimes, but Not Always'
+level 'contagion_lesson1_markdown', progression: 'Sometimes, but Not Always'
+
+lesson 'modifying your model', display_name: 'Modifying Your model'
+level 'contagion_scientist', progression: 'Thinking Like a Scientist'
+level 'contagion_recovery', progression: 'Recovery'
+level 'contagion_chance', progression: 'Chance'
+level 'contagion_vaccine', progression: 'Vaccines'
+
+lesson 'telling a data story', display_name: 'Telling a Data Story'
+level 'contagion_lesson1_markdown', progression: 'Telling a Data Story'
+

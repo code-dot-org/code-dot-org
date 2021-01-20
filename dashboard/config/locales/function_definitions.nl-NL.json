@@ -1542,6 +1542,46 @@
           "navigate": {
             "name": "navigeer"
           }
+        },
+        "K-1 Artist2 3": {
+          "draw roof": {
+            "name": "teken dak"
+          }
+        },
+        "K-1 Artist2 4": {
+          "draw rectangle": {
+            "name": "teken rechthoek"
+          }
+        },
+        "K-1 Artist2 5": {
+          "draw rectangle": {
+            "name": "teken rechthoek"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"makkelijke\" oplossing"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "mogelijke oplossing"
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"makkelijke\" oplossing"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "mogelijke oplossing"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "mogelijke oplossing"
+          }
         }
       }
     }

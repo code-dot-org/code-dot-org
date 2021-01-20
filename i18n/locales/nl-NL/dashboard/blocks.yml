@@ -1003,6 +1003,7 @@ nl:
             '"y"': y positie
             '"direction"': bewegingsrichting
             '"tint"': tint
+            '"speed"': snelheid
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1130,6 +1131,8 @@ nl:
             '"West"': West
       gamelab_moveToward:
         text: verplaats {SPRITE} pixels {DISTANCE} richting {TARGET}
+      gamelab_newSpritePointer:
+        text: geklikt {SPRITE}
       gamelab_objectSpritePointer:
         text: geklikt {SPRITE}
       gamelab_playSound:
@@ -1180,6 +1183,13 @@ nl:
             undefined: Geen
       gamelab_setBackgroundImageAs:
         text: set achtergrond naar {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': middellang
+            '100': large
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} tot {VAL}
         options:
@@ -1189,6 +1199,7 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+            '"speed"': snelheid
       gamelab_setSizes:
         text: stel {SPRITE} {PROPERTY} in op {N}%
         options:

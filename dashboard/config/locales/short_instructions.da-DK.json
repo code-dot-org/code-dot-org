@@ -518,7 +518,15 @@
         "scrat 17": "OK, lad os prøve igen for øvelsens skyld - dette er ikke meget anderledes, men pas på væggen!",
         "scrat 18": "\"Hvis-ellers\" blokke kontrollerer en betingelse, og udfører derefter én ting eller en anden. Prøv at bruge denne nye blok for at få mig hen til agerne.",
         "scrat 19": "En mere øvelse med \"Hvis-Ellers\" blokken, kan du løse den i første forsøg?",
-        "scrat 20": "Kan du nøjes med at tilføje 3 blokke til at hjælpe mig med at løse en mere kompleks labyrint? Hvis du gør det rigtigt, kan jeg gå en vilkårlig kurvet vej, uanset længde. Skynd dig! Isen smelter!"
+        "scrat 20": "Kan du nøjes med at tilføje 3 blokke til at hjælpe mig med at løse en mere kompleks labyrint? Hvis du gør det rigtigt, kan jeg gå en vilkårlig kurvet vej, uanset længde. Skynd dig! Isen smelter!",
+        "outbreak1": "Opret 10 sunde figure og 1 syg figur. Skift størrelse og få dem til at vandre.",
+        "outbreak2": "Skift sunde monstre til syge monstre, når de rører ved hinanden.",
+        "outbreak3": "Skift monstre til monstre med ansigtsmasker, når du klikker på dem.",
+        "outbreak4": "Skift antal og størrelse af monster figure til din simulering.",
+        "outbreak5": "Få alle de syge monstre til at begynde at komme sig, når et sundt monster rører ved et syg monster.",
+        "outbreak6": "Tilføj en procent chance for, at monstre bliver syge, når sunde monstre rører ved syge monstre. Gør dette for alle kombinationer af monstre med og uden masker.",
+        "outbreak7": "Opret et nyt kostume til monstre med immunitet over for virussen, og brug det i din simulering.",
+        "outbreak8": "Del en besked med din simulering."
       }
     }
   }

@@ -579,6 +579,7 @@ eu:
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
             '"tint"': tinta
+            '"speed"': abiadura
       gamelab_getTime:
         options:
           UNIT:
@@ -633,6 +634,13 @@ eu:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ur
               azpian
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': negua
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': ertaina
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -641,6 +649,7 @@ eu:
             '"x"': x posizioa
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
+            '"speed"': abiadura
       gamelab_setSizes:
         options:
           PROPERTY:

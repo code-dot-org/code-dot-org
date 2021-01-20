@@ -998,6 +998,7 @@ hi:
             '"y"': y पोजीशन
             '"direction"': गतिविधि की दिशा
             '"tint"': रंगत
+            '"speed"': गति
       gamelab_getThisSprite:
         text: "{CHOICE} स्प्राइट"
         options:
@@ -1123,6 +1124,8 @@ hi:
             '"West"': पश्चिम
       gamelab_moveToward:
         text: "{SPRITE} पिक्सल्स {DISTANCE} को {TARGET} की ओर घुमाएं"
+      gamelab_newSpritePointer:
+        text: "{SPRITE} पर क्लिक किया"
       gamelab_objectSpritePointer:
         text: "{SPRITE} पर क्लिक किया"
       gamelab_playSound:
@@ -1177,6 +1180,13 @@ hi:
             undefined: कोई नहीं
       gamelab_setBackgroundImageAs:
         text: पृष्ठभूमि के तौर पर {IMG} सेट करें
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': मध्यम
+            '100': large
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY} को {VAL} पर सेट करें"
         options:
@@ -1186,6 +1196,7 @@ hi:
             '"x"': x पोजीशन
             '"y"': y पोजीशन
             '"direction"': गतिविधि की दिशा
+            '"speed"': गति
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} को {N}% पर सेट करें"
         options:
@@ -1282,6 +1293,8 @@ hi:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": मेरा लेबल
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": मेरा लेबल नहीं
               है
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

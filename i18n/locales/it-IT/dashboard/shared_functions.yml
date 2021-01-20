@@ -1,0 +1,16 @@
+it:
+  data:
+    shared_functions:
+      growing: crescita
+      jittering: pulsazione
+      moving east: spostamento verso est
+      moving north: spostamento verso nord
+      moving south: spostamento verso sud
+      moving west: spostamento verso ovest
+      moving with arrow keys: muovendosi con i tasti freccia
+      patrolling: pattugliamento
+      shrinking: contrazione
+      spinning left: rotazione anti-oraria
+      spinning right: rotazione oraria
+      swimming left and right: nuotata sinistra-destra
+      wandering: movimento casuale

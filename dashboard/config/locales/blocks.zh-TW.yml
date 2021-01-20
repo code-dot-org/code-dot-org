@@ -1029,6 +1029,7 @@ zh-TW:
             '"y"': y 座標
             '"direction"': 移動方向
             '"tint"': 色調
+            '"speed"': 速度
       gamelab_getThisSprite:
         text: "{CHOICE} 角色"
         options:
@@ -1164,6 +1165,8 @@ zh-TW:
             '"West"': 西
       gamelab_moveToward:
         text: 角色 {SPRITE} 面朝 {TARGET} 移動 {DISTANCE} 像素
+      gamelab_newSpritePointer:
+        text: 點擊 {SPRITE}
       gamelab_objectSpritePointer:
         text: 物件 {SPRITE}
       gamelab_patrollingUpDown:
@@ -1234,6 +1237,13 @@ zh-TW:
             undefined: 無
       gamelab_setBackgroundImageAs:
         text: 背景設為 {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': 中
+            '100': large
       gamelab_setProp:
         text: 角色 {SPRITE} {PROPERTY} 設為 {VAL}
         options:
@@ -1243,6 +1253,7 @@ zh-TW:
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
+            '"speed"': 速度
       gamelab_setSizes:
         text: 角色 {SPRITE} {PROPERTY} 設為 {N}%
         options:
