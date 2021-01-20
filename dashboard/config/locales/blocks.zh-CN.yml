@@ -1015,6 +1015,7 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
             '"tint"': 色调
+            '"speed"': 速度
       gamelab_getThisSprite:
         text: "{CHOICE} 精灵图"
         options:
@@ -1156,6 +1157,8 @@ zh-CN:
             '"West"': 西
       gamelab_moveToward:
         text: 朝 {TARGET} 移动 {SPRITE} 距离 {DISTANCE}
+      gamelab_newSpritePointer:
+        text: 点击 {SPRITE}
       gamelab_objectSpritePointer:
         text: 点击 {SPRITE}
       gamelab_patrollingUpDown:
@@ -1210,6 +1213,13 @@ zh-CN:
             undefined: 没有
       gamelab_setBackgroundImageAs:
         text: 设置背景为 {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': 中
+            '100': large
       gamelab_setProp:
         text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
@@ -1219,6 +1229,7 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
+            '"speed"': 速度
       gamelab_setSizes:
         text: 设置 {SPRITE} {PROPERTY} 为 {N}%
         options:
@@ -1272,6 +1283,8 @@ zh-CN:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 当按左方向键时
+      gamelab_whenPromptAnswered:
+        text: 当{VAR}被回答
       gamelab_whenRightArrow:
         text: 当按右方向键时
       gamelab_whenTouching:
@@ -1322,6 +1335,8 @@ zh-CN:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 不是鱼
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 我的标签
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 不是我的标签
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         text: 将 {PROPERTY} {SPRITE} 改为 {VAL}
         options:
