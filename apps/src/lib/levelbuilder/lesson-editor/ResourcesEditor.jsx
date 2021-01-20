@@ -12,6 +12,8 @@ import {
   editResource,
   removeResource
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import * as Table from 'reactabular-table';
+import {lessonEditorTableStyles} from './TableConstants';
 
 const styles = {
   resourceSearch: {
@@ -71,6 +73,125 @@ class ResourcesEditor extends Component {
     };
   }
 
+  actionsCellFormatter = (actions, {rowData}) => {
+    return (
+      <div style={styles.actionsColumn}>
+        <div style={styles.edit} onMouseDown={() => this.handleEdit(rowData)}>
+          <i className="fa fa-edit" />
+        </div>
+        <div
+          style={styles.remove}
+          className="unit-test-remove-resource"
+          onMouseDown={() => this.handleRemoveResourceDialogOpen(rowData)}
+        >
+          <i className="fa fa-times" />
+        </div>
+      </div>
+    );
+  };
+
+  getColumns() {
+    return [
+      {
+        property: 'key',
+        header: {
+          label: 'Key',
+          props: {
+            style: {width: '23%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'name',
+        header: {
+          label: 'Name',
+          props: {
+            style: {width: '20%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'type',
+        header: {
+          label: 'Type',
+          props: {
+            style: {width: '10%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'audience',
+        header: {
+          label: 'Audience',
+          props: {
+            style: {width: '7%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'url',
+        header: {
+          label: 'URL',
+          props: {
+            style: {width: '30%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'actions',
+        header: {
+          label: 'Actions',
+          props: {
+            style: {width: '10%'}
+          }
+        },
+        cell: {
+          formatters: [this.actionsCellFormatter],
+          props: {
+            style: {
+              ...lessonEditorTableStyles.actionsCell
+            }
+          }
+        }
+      }
+    ];
+  }
+
   onSearchSelect = e => {
     this.props.addResource(e.resource);
   };
@@ -127,6 +248,7 @@ class ResourcesEditor extends Component {
   };
 
   render() {
+    const columns = this.getColumns();
     return (
       <div>
         {this.state.newResourceDialogOpen && (
@@ -169,49 +291,10 @@ class ResourcesEditor extends Component {
               }}
             />
           </div>
-          <table style={{width: '100%'}}>
-            <thead>
-              <tr>
-                <th style={{width: '20%'}}>Key</th>
-                <th style={{width: '20%'}}>Name</th>
-                <th style={{width: '10%'}}>Type</th>
-                <th style={{width: '10%'}}>Audience</th>
-                <th style={{width: '30%'}}>URL</th>
-                <th style={{width: '10%'}}>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.props.resources.map((resource, index) => (
-                <tr
-                  key={resource.key}
-                  style={index % 2 === 1 ? styles.oddRow : {}}
-                >
-                  <td>{resource.key}</td>
-                  <td>{resource.name}</td>
-                  <td>{resource.type}</td>
-                  <td>{resource.audience}</td>
-                  <td>{resource.url}</td>
-                  <td style={styles.actionsColumn}>
-                    <div
-                      style={styles.edit}
-                      onMouseDown={() => this.handleEdit(resource)}
-                    >
-                      <i className="fa fa-edit" />
-                    </div>
-                    <div
-                      style={styles.remove}
-                      className="unit-test-remove-resource"
-                      onMouseDown={() =>
-                        this.handleRemoveResourceDialogOpen(resource)
-                      }
-                    >
-                      <i className="fa fa-times" />
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <Table.Provider columns={columns}>
+            <Table.Header />
+            <Table.Body rows={this.props.resources} rowKey="key" />
+          </Table.Provider>
           <Button
             onClick={this.handleAddResourceClick}
             text={'Add New Resource'}
