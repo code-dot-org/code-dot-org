@@ -398,7 +398,6 @@ class LessonEditor extends Component {
                 updateObjectives={this.handleUpdateObjectives}
               />
             </CollapsibleEditorSection>
-
           </div>
         )}
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
