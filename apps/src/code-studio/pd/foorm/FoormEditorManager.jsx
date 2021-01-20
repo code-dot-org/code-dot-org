@@ -81,7 +81,7 @@ class FoormEditorManager extends React.Component {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     $.ajax({
-      url: `/api/v1/pd/foorm/form/${formId}`,
+      url: `/api/v1/pd/foorm/forms/${formId}`,
       type: 'get'
     })
       .done(result => {

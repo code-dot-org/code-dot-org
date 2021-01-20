@@ -1,7 +1,7 @@
 require 'test_helper'
 
-module Api::V1::Pd
-  class FoormControllerTest < ::ActionController::TestCase
+module Api::V1::Pd::Foorm
+  class FormsControllerTest < ::ActionController::TestCase
     test_user_gets_response_for :validate_form, user: :student, method: :post, response: :forbidden
 
     test 'levelbuilder can validate form' do
