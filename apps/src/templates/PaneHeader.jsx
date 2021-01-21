@@ -80,7 +80,7 @@ const styles = {
     paddingLeft: 0
   },
   disabled: {
-    backgroundColor: color.lighter_gray,
+    opacity: 0.5,
     color: color.white,
     pointerEvents: 'none'
   }
