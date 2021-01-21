@@ -1,0 +1,14 @@
+name: Workflow to analyze i18n sync PRs
+on:
+  workflow_dispatch
+    inputs:
+      name:
+        description: 'a person'
+        required: true
+        default: 'ha nguyen'
+
+jobs:
+  say_hello
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Hello ${{ github.event.inputs.name }}!"
