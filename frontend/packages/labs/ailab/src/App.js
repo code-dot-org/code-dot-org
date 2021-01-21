@@ -41,7 +41,7 @@ class PanelTabs extends Component {
 
     return null;
 
-    return (
+    /*return (
       <div style={styles.tabContainer}>
         {panels.map(panel => {
           return (
@@ -55,7 +55,7 @@ class PanelTabs extends Component {
           );
         })}
       </div>
-    );
+    );*/
   }
 }
 
