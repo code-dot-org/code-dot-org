@@ -4,6 +4,7 @@ import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 import SearchBox from './SearchBox';
 import Dialog from '@cdo/apps/templates/Dialog';
+import AddVocabularyDialog from './AddVocabularyDialog';
 import {connect} from 'react-redux';
 import {
   addVocabulary,
@@ -125,8 +126,16 @@ class VocabulariesEditor extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {confirmRemovalDialogOpen: false, vocabularyForRemoval: null};
+    this.state = {
+      confirmRemovalDialogOpen: false,
+      vocabularyForRemoval: null,
+      newVocabularyDialogOpen: false
+    };
   }
+
+  handleAddVocabularyClick = () => {
+    this.setState({newVocabularyDialogOpen: true});
+  };
 
   constructSearchOptions = json => {
     const vocabKeysAdded = this.props.vocabularies.map(vocab => vocab.key);
@@ -152,6 +161,12 @@ class VocabulariesEditor extends Component {
     const columns = this.getColumns();
     return (
       <div>
+        {this.state.newVocabularyDialogOpen && (
+          <AddVocabularyDialog
+            handleClose={() => this.setState({newVocabularyDialogOpen: false})}
+            courseVersionId={this.props.courseVersionId}
+          />
+        )}
         {this.state.confirmRemovalDialogOpen && (
           <Dialog
             body={`Are you sure you want to remove the vocabulary "${
@@ -181,6 +196,13 @@ class VocabulariesEditor extends Component {
           <Table.Header />
           <Table.Body rows={this.props.vocabularies} rowKey="key" />
         </Table.Provider>
+        <button
+          onClick={this.handleAddVocabularyClick}
+          style={styles.addButton}
+          type="button"
+        >
+          <i className="fa fa-plus" style={{marginRight: 7}} /> Vocabulary
+        </button>
       </div>
     );
   }
