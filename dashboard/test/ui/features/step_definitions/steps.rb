@@ -1448,6 +1448,13 @@ And(/I type the section code into "([^"]*)"$/) do |selector|
   }
 end
 
+# press keys allows React to pick up on the changes
+And(/I enter the section code into "([^"]*)"$/) do |selector|
+  element = @browser.find_element(:css, selector)
+  section_code = @section_url.split('/').last
+  press_keys(element, section_code)
+end
+
 When(/^I sign out$/) do
   if @browser.current_url.include?('studio')
     browser_request(url: replace_hostname('/users/sign_out.json'), code: 204)
