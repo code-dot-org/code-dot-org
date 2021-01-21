@@ -1,20 +1,17 @@
-# What it does
+## What it does
 
 <!--
   A summary of the change, including any relevant background, motivation, and context.
   If relevant, include a description, screenshots, and/or video of the existing and new behavior.
 -->
 
-# Links
+## Links
 
 <!--
   Links to relevant external resources; ie, specification documents, Jira tickets, related PRs, Honeybadger errors, etc.
 -->
 
-- [spec]()
-- [Jira ticket]()
-
-# Testing story
+## Testing story
 
 <!--
   Does your change include appropriate tests?
@@ -24,28 +21,28 @@
 
 <!-- Other aspects to consider. Delete any sections that are not relevant to your change. -->
 
-# Privacy
+## Privacy
 
 <!--
   1.	Does this change involve the collection, use, or sharing of new Personal Data?
   2.	Does this change involve a new or changed use or sharing of existing Personal Data?
 -->
 
-# Security
+## Security
 
 <!-- Link to Jira task(s) where sensitive security issues are discussed privately. -->
 
-# Caching
+## Caching
 
-# Deployment strategy
+## Deployment strategy
 
-# Follow-up work
+## Follow-up work
 
 <!--
   List (ideally with Jira links) any clean-up or technical debt that will be addressed in future work.
 -->
 
-# PR Checklist:
+## PR Checklist:
 
 <!--
   The final step! Before you create your PR, double-check that everything is in order.
