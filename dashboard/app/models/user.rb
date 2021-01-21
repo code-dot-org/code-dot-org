@@ -114,6 +114,8 @@ class User < ApplicationRecord
     data_transfer_agreement_kind
     data_transfer_agreement_at
     parent_email_banner_dismissed
+    section_attempts
+    section_attempts_last_reset
   )
 
   # Include default devise modules. Others available are:
@@ -2262,21 +2264,22 @@ class User < ApplicationRecord
   end
 
   # Returns number of times a user has attempted to join a section in the last 24 hours
-  # Returns nil if no section join attempts
+  # Returns 0 if no section join attempts
   def num_section_attempts
-    properties['section_attempts'] || 0
+    section_attempts || 0
   end
 
   # There aare two possible states in which we would want to reset section attempts
   # 1) Initialize for the first time 2) 24 hours have passed since last attempt
   def reset_section_attempts?
-    !num_section_attempts || !properties['section_attempts_last_reset'] || num_section_attempts == 0 || (DateTime.now - DateTime.parse(properties['section_attempts_last_reset'])).to_i > 0
+    # subtracting DateTimes returns the difference of days as a floating point number
+    # By casting to an int, we can check whether at least a full day has passed.
+    !section_attempts_last_reset || num_section_attempts == 0 || (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
   end
 
   def reset_section_attempts
-    properties['section_attempts'] = 0
-    properties['section_attempts_last_reset'] = DateTime.now.to_s
-    save
+    self.section_attempts = 0
+    self.section_attempts_last_reset = DateTime.now.to_s
   end
 
   def reset_section_attempts_if_needed
@@ -2292,7 +2295,7 @@ class User < ApplicationRecord
   # Let's make sure we only hit this code when the user is already registered
   def increment_section_attempts
     reset_section_attempts_if_needed
-    properties.merge!({'section_attempts' => 1}) {|_, old_val, increment_val| old_val + increment_val}
+    self.section_attempts += 1
     save
   end
 
