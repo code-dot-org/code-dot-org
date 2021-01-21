@@ -9,8 +9,7 @@ require_relative 'i18n_script_utils'
 
 def sync_up
   I18nScriptUtils.with_synchronous_stdout do
-    puts "Beginning sync up"
-
+    puts "Sync up starting"
     CROWDIN_PROJECTS.each do |name, options|
       puts "Uploading source strings to #{name} project"
       command = "crowdin --config #{options[:config_file]} --identity #{options[:identity_file]} upload sources"
@@ -27,7 +26,10 @@ def sync_up
       end
     end
 
-    puts "Sync up complete"
+    puts "Sync up completed successfully"
+  rescue => e
+    puts "Sync up failed from the error: #{e}"
+    raise e
   end
 end
 
