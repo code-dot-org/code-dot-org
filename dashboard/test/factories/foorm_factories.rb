@@ -1135,4 +1135,17 @@ FactoryGirl.define do
     ]
   }'
   end
+
+  factory :foorm_library_question, class: 'Foorm::LibraryQuestion' do
+    sequence(:library_name) {|n| "LibraryName#{n}"}
+    library_version 0
+    sequence(:question_name) {|n| "LibraryQuestionName#{n}"}
+    sequence(:question) do |n|
+      "{
+        \"type\": \"comment\",
+        \"name\": \"what_supported#{n}\",
+        \"title\": \"What supported your learning the most today and why?\"
+      }"
+    end
+  end
 end
