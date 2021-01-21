@@ -46,7 +46,9 @@ class ProgressTableContainer extends React.Component {
     lessonOfInterest: PropTypes.number.isRequired,
     levelProgressByStudent: PropTypes.objectOf(
       PropTypes.objectOf(studentLevelProgressType)
-    ).isRequired
+    ).isRequired,
+    studentTimestamps: PropTypes.object.isRequired,
+    localeCode: PropTypes.string
   };
 
   constructor(props) {
@@ -116,6 +118,8 @@ class ProgressTableContainer extends React.Component {
     );
   }
 }
+
+export const UnconnectedProgressTableContainer = ProgressTableContainer;
 
 export default connect(state => ({
   section: state.sectionData.section,
