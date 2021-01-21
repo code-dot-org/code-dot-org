@@ -1,5 +1,3 @@
-## What it does
-
 <!--
   A summary of the change, including any relevant background, motivation, and context.
   If relevant, include a description, screenshots, and/or video of the existing and new behavior.
