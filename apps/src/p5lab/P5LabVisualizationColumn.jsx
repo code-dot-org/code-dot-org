@@ -202,7 +202,7 @@ class P5LabVisualizationColumn extends React.Component {
         </div>
 
         <GameButtons>
-          {this.spritelabPauseExperiment && (
+          {spriteLab && this.spritelabPauseExperiment && (
             <PauseButton pauseHandler={this.props.pauseHandler} />
           )}
           <ArrowButtons />
