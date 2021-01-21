@@ -21,6 +21,14 @@
 
 <!-- Other aspects to consider. Delete any sections that are not relevant to your change. -->
 
+## Deployment strategy
+
+## Follow-up work
+
+<!--
+  List (ideally with Jira links) any clean-up or technical debt that will be addressed in future work.
+-->
+
 ## Privacy
 
 <!--
@@ -33,14 +41,6 @@
 <!-- Link to Jira task(s) where sensitive security issues are discussed privately. -->
 
 ## Caching
-
-## Deployment strategy
-
-## Follow-up work
-
-<!--
-  List (ideally with Jira links) any clean-up or technical debt that will be addressed in future work.
--->
 
 ## PR Checklist:
 
