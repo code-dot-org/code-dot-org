@@ -778,8 +778,11 @@ Dashboard::Application.routes.draw do
       get :editor, on: :collection
     end
 
-    resources :library_questions, only: [:update] do
-      get :editor, on: :collection
+    resources :library_questions, only: [] do
+      collection do
+        get :editor
+        put :update_library
+      end
     end
   end
 end

@@ -5,25 +5,6 @@ module Foorm
     before_action :authenticate_user!
     authorize_resource
 
-    # PUT '/foorm/library_questions/:id'
-    def update
-      question = params[:question]
-      @library_question.question = question
-
-      @library_question.save
-    end
-
-    def update_group
-      ActiveRecord::Base.transaction do
-        params[:update].each do |library_question|
-          library_question = Foorm::LibraryQuestion.find library_question[:id]
-          library_question.question = library_question[:question]
-          library_question.save
-          # need to rollback file system changes somehow if we roll back db changes?
-        end
-      end
-    end
-
     # GET '/foorm/library_questions/editor'
     def editor
       formatted_names_and_versions = Foorm::LibraryQuestion.all.map {|library_question| {name: library_question.library_name, version: library_question.library_version}}.uniq
@@ -38,6 +19,21 @@ module Foorm
       }
 
       render 'foorm/library_questions/editor'
+    end
+
+    # PUT '/foorm/library_questions/update_library'
+    def update_library
+      params[:library_questions].each do |library_question|
+        db_record = Foorm::LibraryQuestion.find library_question[:id]
+        db_record.assign_attributes(
+          published: library_question[:published]
+          # others
+        )
+
+        # What to do if some saves are successful, and others fail?
+        library_question.question = library_question[:question]
+        library_question.save
+      end
     end
   end
 end

@@ -21,7 +21,11 @@ class Foorm::LibraryQuestion < ApplicationRecord
 
   validate :validate_library_question
 
-  after_save :write_library_to_file
+  # maybe this should be after update?
+  # but we want it to run on creation of a new question in the editor
+  # will be circular if coming from file?
+  # i like form pattern to keep everything in "questions" as what came from file
+  #after_save :write_library_to_file
 
   def self.setup
     Dir.glob('config/foorm/library/**/*.json').each do |path|
@@ -67,17 +71,15 @@ class Foorm::LibraryQuestion < ApplicationRecord
     where.not(id: id)
   end
 
-  def library_formatted_as_json
+  def library_formatted
     # figure out which of these is necessary for valid SurveyJS
     {}.tap do |library|
       library['published'] = true
       library['pages'] = [Hash.new]
-      library['pages']['name'] = 'page_1'
-      library['elements'] = [].tap do |elements|
-        # this needs work
-        elements << question.to_json
-        other_questions_in_library.each do |question|
-          elements << question.to_json
+      library['pages'].first['elements'] = [].tap do |elements|
+        elements << JSON.parse(question)
+        other_questions_in_library.each do |library_question|
+          elements << JSON.parse(library_question.question)
         end
       end
     end
@@ -91,9 +93,12 @@ class Foorm::LibraryQuestion < ApplicationRecord
 
   def write_library_to_file
     if write_to_file? && saved_changes?
-
-      file_path = Rails.root.join("config/foorm/library/#{library_name}.#{version}.json")
-      puts file_path
+      file_path = Rails.root.join("config/foorm/library/#{library_name}.#{library_version}.json")
+      file_directory = File.dirname(filepath)
+      unless Dir.exist?(file_directory)
+        FileUtils.mkdir_p(file_directory)
+      end
+      File.write(file_path, library_formatted_as_json)
     end
   end
 
