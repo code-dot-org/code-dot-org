@@ -3,10 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import {ImagePreview} from './AniGifPreview';
 import {connect} from 'react-redux';
 import {convertXmlToBlockly} from './utils';
 import {openDialog} from '@cdo/apps/redux/instructionsDialog';
+import {renderExpandableImages} from '../utils/expandableImages';
 
 import SafeMarkdown from '../SafeMarkdown';
 
@@ -94,20 +94,7 @@ class MarkdownInstructions extends React.Component {
       .find('img')
       .load(this.props.onResize);
 
-    const expandableImages = thisNode.querySelectorAll('.expandable-image');
-    for (let i = 0; i < expandableImages.length; i++) {
-      const expandableImg = expandableImages[i];
-      ReactDOM.render(
-        <ImagePreview
-          url={expandableImg.dataset.url}
-          noVisualization={false}
-          showInstructionsDialog={() =>
-            this.props.showImageDialog(expandableImg.dataset.url)
-          }
-        />,
-        expandableImg
-      );
-    }
+    renderExpandableImages(thisNode, this.props.showImageDialog);
   }
 
   render() {
