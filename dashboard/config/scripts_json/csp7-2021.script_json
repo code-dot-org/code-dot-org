@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
