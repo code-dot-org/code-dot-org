@@ -10,7 +10,7 @@
     - if display_captcha
       = recaptcha_tags callback: "onCaptchaCompletion"
     %br/
-    = submit_tag t('join_section.code.submit'), class: 'btn btn-primary', disabled: display_captcha, id: 'join_section'
+    = submit_tag t('join_section.code.submit'), class: 'btn btn-primary', disabled: display_captcha, id: 'join_new_section'
 - else
   %h2 Register to join section #{params[:section_code]}
   %p
@@ -83,7 +83,7 @@
                   = t('signup_form.gender')
                 = f.select :gender, gender_options
             %br/
-            = submit_tag 'Register', class: 'btn btn-primary', id: 'register_join_section'
+            = submit_tag 'Register', class: 'btn btn-primary'
 
         #student-terms
           != t('signup_form.student_terms_markdown', markdown: true)
@@ -128,6 +128,6 @@
   });
 
   function onCaptchaCompletion() {
-    $("#join_section").prop("disabled", false);
+    $("#join_new_section").prop("disabled", false);
   };
 

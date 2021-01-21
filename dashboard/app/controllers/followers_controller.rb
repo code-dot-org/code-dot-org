@@ -30,8 +30,7 @@ class FollowersController < ApplicationController
       flash[:alert] = I18n.t('follower.captcha_required')
       # Concatenate section code so user does not have to type section code again
       # Note that @section will always be defined due to validations in load_section
-      inputted_section_code = @section ? @section.code : ''
-      redirection = request.path + '/' + inputted_section_code
+      redirection = request.path + '/' + @section.code
       redirect_to redirection
       return
     else
@@ -75,9 +74,7 @@ class FollowersController < ApplicationController
     # Note that we treat the section as not being found if the section user
     # (i.e., the teacher) does not exist (possibly soft-deleted) or is not a teacher
     unless @section && @section.user&.teacher?
-      if current_user
-        current_user.increment_section_attempts
-      end
+      current_user.increment_section_attempts if current_user
       redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
       return
     end
