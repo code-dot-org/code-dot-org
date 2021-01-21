@@ -71,27 +71,31 @@ class ColumnInspector extends Component {
       <div id="column-inspector">
         {currentColumnData && (
           <div style={styles.validationMessagesLight}>
-            {/*
-            <div style={styles.largeText}>
-              Describe the data in each of your selected columns
-            </div>
-            <p>
-              Categorical columns contain a fixed number of possible values that
-              indicate a group. For example, the column "Size" might contain
-              categorical data such as "small", "medium" and "large".{" "}
-            </p>
-            <p>
-              Continuous columns contain a range of possible numerical values
-              that could fall anywhere on a continuum. For example, the column
-              "Height in inches" might contain continuous data such as "12",
-              "11.25" and "9.07".{" "}
-            </p>
-            <p>
-              If the column contains anything other than categorical or
-              continuous data, it's not going to work for training this type of
-              machine learning model.
-            </p>
-            */}
+
+            {currentColumnData.dataType === ColumnTypes.OTHER && (
+              <div>
+                <div style={styles.mediumText}>
+                  Describe the data in each of your selected columns
+                </div>
+                <div style={styles.smallText}>
+                  Categorical columns contain a fixed number of possible values that
+                  indicate a group. For example, the column "Size" might contain
+                  categorical data such as "small", "medium" and "large".{" "}
+                </div>
+                <div style={styles.smallText}>
+                  Continuous columns contain a range of possible numerical values
+                  that could fall anywhere on a continuum. For example, the column
+                  "Height in inches" might contain continuous data such as "12",
+                  "11.25" and "9.07".{" "}
+                </div>
+                <div style={styles.smallText}>
+                  If the column contains anything other than categorical or
+                  continuous data, it's not going to work for training this type of
+                  machine learning model.
+                </div>
+              </div>
+            )}
+
             <form>
               <div>
                 <label>
@@ -192,45 +196,49 @@ class ColumnInspector extends Component {
               </div>
             </form>
 
-            {!currentColumnIsSelectedLabel && !currentColumnIsSelectedFeature && (
+            {currentColumnData.dataType !== ColumnTypes.OTHER && (
               <div>
-                <button
-                  type="button"
-                  onClick={this.setPredictColumn}
-                  style={styles.predictButton}
-                >
-                  Predict this column
-                </button>
-                <br />
-                <button
-                  type="button"
-                  onClick={this.addFeature}
-                  style={styles.predictBasedButton}
-                >
-                  Predict based on this column
-                </button>
-                <br />
+                {!currentColumnIsSelectedLabel && !currentColumnIsSelectedFeature && (
+                  <div>
+                    <button
+                      type="button"
+                      onClick={this.setPredictColumn}
+                      style={styles.predictButton}
+                    >
+                      Predict this column
+                    </button>
+                    <br />
+                    <button
+                      type="button"
+                      onClick={this.addFeature}
+                      style={styles.predictBasedButton}
+                    >
+                      Predict based on this column
+                    </button>
+                    <br />
+                  </div>
+                )}
+
+                {currentColumnIsSelectedLabel && (
+                  <button
+                    type="button"
+                    onClick={this.removeLabel}
+                    style={styles.dontPredictButton}
+                  >
+                    Don't predict this column
+                  </button>
+                )}
+
+                {currentColumnIsSelectedFeature && (
+                  <button
+                    type="button"
+                    onClick={this.removeFeature}
+                    style={styles.dontPredictBasedButton}
+                  >
+                    Don't predict based on this column
+                  </button>
+                )}
               </div>
-            )}
-
-            {currentColumnIsSelectedLabel && (
-              <button
-                type="button"
-                onClick={this.removeLabel}
-                style={styles.dontPredictButton}
-              >
-                Don't predict this column
-              </button>
-            )}
-
-            {currentColumnIsSelectedFeature && (
-              <button
-                type="button"
-                onClick={this.removeFeature}
-                style={styles.dontPredictBasedButton}
-              >
-                Don't predict based on this column
-              </button>
             )}
           </div>
         )}

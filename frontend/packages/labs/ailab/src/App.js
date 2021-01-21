@@ -39,6 +39,8 @@ class PanelTabs extends Component {
   render() {
     const { panels, setCurrentPanel } = this.props;
 
+    return null;
+
     return (
       <div style={styles.tabContainer}>
         {panels.map(panel => {

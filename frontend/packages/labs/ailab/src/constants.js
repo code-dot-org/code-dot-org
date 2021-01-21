@@ -45,6 +45,11 @@ export const styles = {
     marginBottom: 8
   },
 
+  smallText: {
+    fontSize: 12,
+    marginBottom: 8
+  },
+
   panel: {
     padding: 20,
     backgroundColor: "rgb(230,230,230)",
