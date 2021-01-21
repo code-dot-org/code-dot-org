@@ -16,7 +16,6 @@ require_relative 'redact_restore_utils'
 require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_in
-  puts "Sync in starting"
   HocSyncUtils.sync_in
   localize_level_content
   localize_project_content
@@ -28,10 +27,6 @@ def sync_in
   redact_level_content
   redact_block_content
   localize_markdown_content
-  puts "Sync in completed successfully"
-rescue => e
-  puts "Sync in failed from the error: #{e}"
-  raise e
 end
 
 def get_i18n_strings(level)
