@@ -1,6 +1,6 @@
 hideable_lessons true
 
-lesson 'Anonymous student pre-survey', display_name: 'Anonymous student pre-survey', has_lesson_plan: true
+lesson 'Anonymous student pre-survey', display_name: 'Anonymous student pre-survey', has_lesson_plan: false
 level 'CSP pre-assessment survey', assessment: true
 
 lesson 'Unit 1 Chapter 1 Assessment', display_name: 'Unit 1 Chapter 1 Assessment', lockable: true, has_lesson_plan: false
@@ -18,6 +18,6 @@ level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group', assessment: true
 lesson 'Unit 4 Chapter 1 Assessment', display_name: 'Unit 4 Chapter 1 Assessment', lockable: true, has_lesson_plan: false
 level 'CSP Unit 4 Ch1 Cumulative Assessment MC', assessment: true
 
-lesson 'Anonymous student survey: Taking the AP exam', display_name: 'Anonymous student survey: Taking the AP exam', has_lesson_plan: true
+lesson 'Anonymous student survey: Taking the AP exam', display_name: 'Anonymous student survey: Taking the AP exam', has_lesson_plan: false
 level 'csp_ap_questions', assessment: true
 

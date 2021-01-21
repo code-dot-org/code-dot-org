@@ -19,7 +19,8 @@
       ],
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,

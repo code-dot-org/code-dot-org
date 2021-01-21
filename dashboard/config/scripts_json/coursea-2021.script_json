@@ -25,7 +25,8 @@
         ]
       ],
       "is_course": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": "coursea",
