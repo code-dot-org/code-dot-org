@@ -21,6 +21,7 @@ require_relative 'hoc_sync_utils'
 require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_out(upload_manifests=false)
+  puts "Sync out starting"
   rename_from_crowdin_name_to_locale
   restore_redacted_files
   distribute_translations(upload_manifests)
@@ -32,6 +33,10 @@ def sync_out(upload_manifests=false)
   I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
   end
+  puts "Sync out completed successfully"
+rescue => e
+  puts "Sync out failed from the error: #{e}"
+  raise e
 end
 
 # Return true iff the specified file in the specified locale had changes
