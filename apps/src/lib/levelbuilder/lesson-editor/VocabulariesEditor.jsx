@@ -165,6 +165,7 @@ class VocabulariesEditor extends Component {
           <AddVocabularyDialog
             handleClose={() => this.setState({newVocabularyDialogOpen: false})}
             courseVersionId={this.props.courseVersionId}
+            afterSave={this.props.addVocabulary}
           />
         )}
         {this.state.confirmRemovalDialogOpen && (

@@ -40,7 +40,7 @@ const styles = {
 
 export default class AddVocabularyDialog extends Component {
   static propTypes = {
-    onSave: PropTypes.func,
+    afterSave: PropTypes.func,
     handleClose: PropTypes.func,
     editingVocabulary: vocabularyShape,
     courseVersionId: PropTypes.number
@@ -50,7 +50,9 @@ export default class AddVocabularyDialog extends Component {
     super(props);
     this.state = {
       word: '',
-      definition: ''
+      definition: '',
+      isSaving: false,
+      error: ''
     };
   }
 
@@ -62,7 +64,34 @@ export default class AddVocabularyDialog extends Component {
     this.setState({definition: e.target.value});
   };
 
+  saveVocabulary = e => {
+    e.preventDefault();
+    this.setState({isSaving: true});
+    $.ajax({
+      url: `/vocabularies`,
+      method: 'POST',
+      dataType: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({
+        word: this.state.word,
+        definition: this.state.definition,
+        courseVersionId: this.props.courseVersionId
+      })
+    })
+      .done(data => {
+        this.props.afterSave(data);
+        this.props.handleClose();
+      })
+      .fail(error => {
+        this.setState({isSaving: false, error: error.responseText});
+      });
+  };
+
   render() {
+    const canSubmit =
+      !this.state.isSaving &&
+      this.state.word !== '' &&
+      this.state.definition !== '';
     return (
       <BaseDialog isOpen={true} handleClose={this.props.handleClose}>
         <label style={styles.inputAndLabel}>
@@ -86,12 +115,15 @@ export default class AddVocabularyDialog extends Component {
           />
         </label>
         <DialogFooter rightAlign>
-          <input
+          <button
             id="submit-button"
-            type="submit"
-            value="Close and Save"
+            type="button"
             style={styles.submitButton}
-          />
+            onClick={this.saveVocabulary}
+            disabled={!canSubmit}
+          >
+            "Close and Save"
+          </button>
         </DialogFooter>
       </BaseDialog>
     );

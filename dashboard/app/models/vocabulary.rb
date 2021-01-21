@@ -20,6 +20,8 @@ class Vocabulary < ApplicationRecord
   has_many :lessons_vocabularies
   belongs_to :course_version
 
+  before_validation :generate_key, on: :create
+
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated
@@ -41,8 +43,13 @@ class Vocabulary < ApplicationRecord
     {key: key, word: display_word, definition: display_definition}
   end
 
-  def summarize_for_edit
+  def summarize_for_lesson_edit
     {key: key, word: word, definition: definition}
+  end
+
+  def generate_key
+    return if key
+    self.key = generate_key_from_word
   end
 
   private
@@ -53,5 +60,19 @@ class Vocabulary < ApplicationRecord
 
   def display_definition
     definition
+  end
+
+  def generate_key_from_word
+    key_prefix = word.strip.downcase.gsub(/[^a-z0-9\-\_\.]+/, '_')
+    potential_clashes = Vocabulary.where(course_version_id: course_version_id)
+    potential_clashes = potential_clashes.where("vocabularies.key like '#{key_prefix}%'").pluck(:key)
+    return key_prefix unless potential_clashes.include?(key_prefix)
+    key_suffix_num = 1
+    new_key = "#{key_prefix}_#{key_suffix_num}"
+    while potential_clashes.include?(new_key)
+      key_suffix_num += 1
+      new_key = "#{key_prefix}_#{key_suffix_num}"
+    end
+    new_key
   end
 end
