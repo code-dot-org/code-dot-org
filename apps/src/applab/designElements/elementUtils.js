@@ -170,11 +170,7 @@ export function isIdAvailable(newId, options) {
 
   // Don't allow if any element outside of divApplab has this id.
   var element = document.getElementById(newId);
-  if (
-    element &&
-    !$('#divApplab').find(element)[0] &&
-    !options.allowAutoGenElements
-  ) {
+  if (element && !$('#divApplab').find(element)[0]) {
     return false;
   }
 
