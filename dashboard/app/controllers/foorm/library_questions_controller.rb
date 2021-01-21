@@ -25,13 +25,9 @@ module Foorm
     def update_library
       params[:library_questions].each do |library_question|
         db_record = Foorm::LibraryQuestion.find library_question[:id]
-        db_record.assign_attributes(
-          published: library_question[:published]
-          # others
-        )
+        db_record.question = library_question[:question]
 
         # What to do if some saves are successful, and others fail?
-        library_question.question = library_question[:question]
         library_question.save
       end
     end

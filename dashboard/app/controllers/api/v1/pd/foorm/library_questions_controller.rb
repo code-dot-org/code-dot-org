@@ -1,6 +1,4 @@
-class Api::V1::Pd::Foorm::FormsController < ApplicationController
-  include Api::CsvDownload
-
+class Api::V1::Pd::Foorm::LibraryQuestionsController < ApplicationController
   # GET api/v1/pd/foorm/library_questions/:library_name
   def get_library_questions_for_library
     library_questions = Foorm::Form.where(library_name: params[:library_name])
