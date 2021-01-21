@@ -46,8 +46,7 @@ const sampleModes = {
     hideSpecifyColumns: true,
     hideSelectTrainer: "knnClassify",
     hideChooseReserve: true,
-    hideModelCard: true,
-    hideSave: true
+    hideModelCard: true
   }
 };
 
@@ -55,5 +54,9 @@ const sampleModes = {
 let parameters = queryString.parse(location.search);
 const mode = parameters["mode"] ? sampleModes[parameters["mode"]] : null;
 
+function saveTrainedModelStub(data) {
+  console.log("This would save a trained model.", data);
+}
+
 // Initialize the app.
-initAll({ mode: mode });
+initAll({ mode: mode, saveTrainedModel: saveTrainedModelStub });

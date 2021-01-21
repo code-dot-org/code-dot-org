@@ -360,7 +360,6 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_MODEL_SIZE) {
     return {
       ...state,
-      currentPanel: "results",
       modelSize: action.modelSize
     };
   }
@@ -861,12 +860,27 @@ export function getPanelButtons(state) {
       isPanelVisible(state, "trainModel") && isPanelEnabled(state, "trainModel")
         ? { panel: "trainModel", text: "Train" }
         : null;
+  } else if (state.currentPanel === "trainModel") {
+    if (state.modelSize) {
+      prev = null;
+      next = { panel: "results", text: "Results" };
+    }
   } else if (state.currentPanel === "results") {
     prev = { panel: "dataDisplay", text: "Data" };
+    next = { panel: "predict", text: "Predict" };
+  } else if (state.currentPanel === "predict") {
+    prev = { panel: "results", text: "Results" };
+    next = { panel: "saveModel", text: "Save" };
+  } else if (state.currentPanel === "saveModel") {
+    prev = { panel: "predict", text: "Predict" };
     next = null;
   }
 
   return { prev, next };
+}
+
+export function getCurrentColumnIsSelectedLabel(state) {
+  return state.labelColumn === state.currentColumn;
 }
 
 export function getCurrentColumnIsSelectedFeature(state) {

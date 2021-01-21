@@ -30,7 +30,7 @@ export default class KNNTrainer {
 
     setTimeout(() => {
       store.dispatch(setModelSize(kiloBytes));
-    }, 2000);
+    }, 3000);
   }
 
   batchPredict(accuracyCheckExamples) {

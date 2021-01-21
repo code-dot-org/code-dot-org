@@ -81,7 +81,7 @@ export default class SVMTrainer {
 
     setTimeout(() => {
       store.dispatch(setModelSize(kiloBytes));
-    }, 2000);
+    }, 3000);
   }
 
   batchPredict(accuracyCheckExamples) {

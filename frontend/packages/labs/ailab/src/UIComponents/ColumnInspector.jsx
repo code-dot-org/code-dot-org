@@ -9,6 +9,7 @@ import {
   addSelectedFeature,
   removeSelectedFeature,
   getCurrentColumnIsSelectedFeature,
+  getCurrentColumnIsSelectedLabel,
   getRangesByColumn
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
@@ -22,6 +23,7 @@ class ColumnInspector extends Component {
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
     currentColumnIsSelectedFeature: PropTypes.bool,
+    currentColumnIsSelectedLabel: PropTypes.bool,
     rangesByColumn: PropTypes.object
   };
 
@@ -38,12 +40,20 @@ class ColumnInspector extends Component {
     this.props.addSelectedFeature(this.props.currentColumnData.id);
   };
 
+  removeLabel = () => {
+    this.props.setLabelColumn(null);
+  }
   removeFeature = () => {
     this.props.removeSelectedFeature(this.props.currentColumnData.id);
   };
 
   render() {
-    const { currentColumnData, currentColumnIsSelectedFeature, rangesByColumn } = this.props;
+    const {
+      currentColumnData,
+      currentColumnIsSelectedFeature,
+      currentColumnIsSelectedLabel,
+      rangesByColumn
+    } = this.props;
 
     let labels, data, options;
     if (
@@ -182,16 +192,16 @@ class ColumnInspector extends Component {
               </div>
             </form>
 
-            <button
-              type="button"
-              onClick={this.setPredictColumn}
-              style={styles.predictButton}
-            >
-              Predict this column
-            </button>
-            <br />
-            {!currentColumnIsSelectedFeature && (
+            {!currentColumnIsSelectedLabel && !currentColumnIsSelectedFeature && (
               <div>
+                <button
+                  type="button"
+                  onClick={this.setPredictColumn}
+                  style={styles.predictButton}
+                >
+                  Predict this column
+                </button>
+                <br />
                 <button
                   type="button"
                   onClick={this.addFeature}
@@ -202,6 +212,17 @@ class ColumnInspector extends Component {
                 <br />
               </div>
             )}
+
+            {currentColumnIsSelectedLabel && (
+              <button
+                type="button"
+                onClick={this.removeLabel}
+                style={styles.dontPredictButton}
+              >
+                Don't predict this column
+              </button>
+            )}
+
             {currentColumnIsSelectedFeature && (
               <button
                 type="button"
@@ -222,6 +243,7 @@ export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
     currentColumnIsSelectedFeature: getCurrentColumnIsSelectedFeature(state),
+    currentColumnIsSelectedLabel: getCurrentColumnIsSelectedLabel(state),
     rangesByColumn: getRangesByColumn(state)
   }),
   dispatch => ({

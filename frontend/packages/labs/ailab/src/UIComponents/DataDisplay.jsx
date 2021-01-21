@@ -39,27 +39,51 @@ class DataDisplay extends Component {
   };
 
   getColumnHeaderStyle = key => {
+    let style;
+
     if (key === this.props.currentColumn) {
-      return styles.dataDisplayHeaderCurrent;
-    } else if (key === this.props.labelColumn) {
-      return styles.dataDisplayHeaderLabel;
-    } else if (this.props.selectedFeatures.includes(key)) {
-      return styles.dataDisplayHeaderSelectedFeature;
+      if (key === this.props.labelColumn) {
+        style = styles.dataDisplayHeaderLabelSelected;
+      } else if (this.props.selectedFeatures.includes(key)) {
+        style = styles.dataDisplayHeaderFeatureSelected;
+      } else {
+        style = styles.dataDisplayHeaderSelected;
+      }
     } else {
-      return styles.dataDisplayHeader;
+      if (key === this.props.labelColumn) {
+        style = styles.dataDisplayHeaderLabelUnselected;
+      } else if (this.props.selectedFeatures.includes(key)) {
+        style = styles.dataDisplayHeaderFeatureUnselected;
+      } else {
+        style = styles.dataDisplayHeaderUnselected;
+      }
     }
+
+    return {...style, ...styles.dataDisplayHeader};
   };
 
   getColumnCellStyle = key => {
+    let style;
+
     if (key === this.props.currentColumn) {
-      return styles.dataDisplayCellCurrent;
-    } else if (key === this.props.labelColumn) {
-      return styles.dataDisplayCellLabel;
-    } else if (this.props.selectedFeatures.includes(key)) {
-      return styles.dataDisplayCellSelectedFeature;
+      if (key === this.props.labelColumn) {
+        style = styles.dataDisplayCellLabelSelected;
+      } else if (this.props.selectedFeatures.includes(key)) {
+        style = styles.dataDisplayCellFeatureSelected;
+      } else {
+        style = styles.dataDisplayCellSelected;
+      }
     } else {
-      return styles.dataDisplayCell;
+      if (key === this.props.labelColumn) {
+        style = styles.dataDisplayCellLabelUnselected;
+      } else if (this.props.selectedFeatures.includes(key)) {
+        style = styles.dataDisplayCellFeatureUnselected;
+      } else {
+        style = styles.dataDisplayCellUnselected;
+      }
     }
+
+    return {...style, ...styles.dataDisplayCell};
   };
 
   showSelectFeatures = mode => {
@@ -116,6 +140,7 @@ class DataDisplay extends Component {
                             <th
                               key={key}
                               style={this.getColumnHeaderStyle(key)}
+                              onClick={() => setCurrentColumn(key)}
                             >
                               {key}
                             </th>
