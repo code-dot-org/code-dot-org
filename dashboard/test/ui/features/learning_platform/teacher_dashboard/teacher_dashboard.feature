@@ -218,7 +218,7 @@ Feature: Using the teacher dashboard
   Scenario: Attempt to join a section you own redirects to dashboard with error message
     Given I am a teacher
     And I create a new section and go home
-    And I join the section I already own
+    And I attempt to join the section
     Then I wait until element "#flashes" is visible
     And element "div.alert" contains text matching "Sorry, you can't join your own section"
 
@@ -237,7 +237,7 @@ Feature: Using the teacher dashboard
     Given I am a teacher
     And I create a new section and go home
     And I wait until element "div.ui-test-join-section" is visible
-    And I press the keys of the section code into "input.ui-test-join-section"
+    And I enter the section code into "input.ui-test-join-section"
     And I click selector "div.ui-test-join-section"
     Then I wait until element ".announcement-notification" is visible
     And element ".announcement-notification" contains text matching "You are already the owner of section"

@@ -1402,14 +1402,6 @@ And(/^I join the section$/) do
   end
 end
 
-And(/^I join the section I already own$/) do
-  page_load(true) do
-    steps %Q{
-      Given I am on "#{@section_url}"
-    }
-  end
-end
-
 And(/^I attempt to join the section$/) do
   steps %Q{
     Given I am on "#{@section_url}"
@@ -1457,7 +1449,7 @@ And(/I type the section code into "([^"]*)"$/) do |selector|
 end
 
 # press keys allows React to pick up on the changes
-And(/I press the keys of the section code into "([^"]*)"$/) do |selector|
+And(/I enter the section code into "([^"]*)"$/) do |selector|
   element = @browser.find_element(:css, selector)
   section_code = @section_url.split('/').last
   press_keys(element, section_code)
