@@ -66,6 +66,11 @@
       "name": "Name"
     },
     {
+      "id": "thai_food",
+      "type": "categorical",
+      "name": "Name"
+    },
+    {
       "id": "persian_food",
       "type": "categorical",
       "name": "Name"

@@ -60,8 +60,8 @@ class ColumnInspector extends Component {
       currentColumnData &&
       currentColumnData.dataType === ColumnTypes.CATEGORICAL
     ) {
-      labels = Object.keys(currentColumnData.uniqueOptions);
-      data = Object.keys(currentColumnData.uniqueOptions).map(option => {
+      labels = Object.values(currentColumnData.uniqueOptions);
+      data = labels.map(option => {
         return currentColumnData.frequencies[option];
       });
       options = { fillColor: "#000", strokeColor: "#000" };
