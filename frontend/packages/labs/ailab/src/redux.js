@@ -33,6 +33,8 @@ const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
 const SET_K_VALUE = "SET_K_VALUE";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
+const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
+const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
 const SET_PERCENT_DATA_TO_RESERVE = "SET_PERCENT_DATA_TO_RESERVE";
@@ -48,6 +50,7 @@ const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
 const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
+const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 
 // Action creators
 export function setMode(mode) {
@@ -74,7 +77,7 @@ export function setSelectedTrainer(selectedTrainer) {
   return { type: SET_SELECTED_TRAINER, selectedTrainer };
 }
 
-export function setKValue (kValue) {
+export function setKValue(kValue) {
   return { type: SET_K_VALUE, kValue };
 }
 
@@ -86,6 +89,14 @@ export const setColumnsByDataType = (column, dataType) => ({
 
 export function setSelectedFeatures(selectedFeatures) {
   return { type: SET_SELECTED_FEATURES, selectedFeatures };
+}
+
+export function addSelectedFeature(selectedFeature) {
+  return { type: ADD_SELECTED_FEATURE, selectedFeature };
+}
+
+export function removeSelectedFeature(selectedFeature) {
+  return { type: REMOVE_SELECTED_FEATURE, selectedFeature };
 }
 
 export function setLabelColumn(labelColumn) {
@@ -163,6 +174,10 @@ export function setCurrentPanel(currentPanel) {
   return { type: SET_CURRENT_PANEL, currentPanel };
 }
 
+export function setCurrentColumn(currentColumn) {
+  return { type: SET_CURRENT_COLUMN, currentColumn };
+}
+
 const initialState = {
   csvfile: undefined,
   jsonfile: undefined,
@@ -185,7 +200,8 @@ const initialState = {
   modelSize: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
-  currentPanel: "selectDataset"
+  currentPanel: "selectDataset",
+  currentColumn: undefined
 };
 
 // Reducer
@@ -258,6 +274,23 @@ export default function rootReducer(state = initialState, action) {
       selectedFeatures: action.selectedFeatures
     };
   }
+
+  if (action.type === ADD_SELECTED_FEATURE) {
+    return {
+      ...state,
+      selectedFeatures: [...state.selectedFeatures, action.selectedFeature]
+    };
+  }
+
+  if (action.type === REMOVE_SELECTED_FEATURE) {
+    return {
+      ...state,
+      selectedFeatures: state.selectedFeatures.filter(
+        item => item !== action.selectedFeature
+      )
+    };
+  }
+
   if (action.type === SET_LABEL_COLUMN) {
     return {
       ...state,
@@ -348,6 +381,19 @@ export default function rootReducer(state = initialState, action) {
       currentPanel: action.currentPanel
     };
   }
+  if (action.type === SET_CURRENT_COLUMN) {
+    if (state.currentColumn === action.currentColumn) {
+      return {
+        ...state,
+        currentColumn: undefined
+      };
+    } else {
+      return {
+        ...state,
+        currentColumn: action.currentColumn
+      };
+    }
+  }
   return state;
 }
 
@@ -383,6 +429,21 @@ export function getSelectedColumns(state) {
     .map(columnId => {
       return { id: columnId, readOnly: isColumnReadOnly(state, columnId) };
     });
+}
+
+export function getCurrentColumnData(state) {
+  if (!state.currentColumn) {
+    return null;
+  }
+
+  return {
+    id: state.currentColumn,
+    readOnly: isColumnReadOnly(state, state.currentColumn),
+    dataType: state.columnsByDataType[state.currentColumn],
+    uniqueOptions: getUniqueOptions(state, state.currentColumn),
+    range: getRange(state, state.currentColumn),
+    frequencies: getOptionFrequencies(state, state.currentColumn)
+  };
 }
 
 export function getSelectedCategoricalColumns(state) {
@@ -462,7 +523,7 @@ export function getUniqueOptionsByColumn(state) {
 
 export function getRangesByColumn(state) {
   let rangesByColumn = {};
-  getSelectedContinuousColumns(state).map(
+  getContinuousColumns(state).map(
     column => (rangesByColumn[column] = getRange(state, column))
   );
   return rangesByColumn;
@@ -685,8 +746,6 @@ export function getShowChooseReserve(state) {
 const panelList = [
   { id: "selectDataset", label: "Import" },
   { id: "dataDisplay", label: "Data" },
-  { id: "selectFeatures", label: "Features" },
-  { id: "columnInspector", label: "Columns" },
   { id: "selectTrainer", label: "Trainer" },
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
@@ -709,6 +768,11 @@ function isPanelVisible(state, panelId) {
     }
   }
 
+  if (panelId === "selectTrainer") {
+    if (mode && mode.hideSelectTrainer) {
+      return false;
+    }
+  }
   return true;
 }
 
@@ -758,9 +822,67 @@ function isPanelEnabled(state, panelId) {
 export function getPanels(state) {
   return panelList
     .filter(panel => {
-      return isPanelVisible(panel.id);
+      return isPanelVisible(state, panel.id);
     })
     .map(panel => {
       return { ...panel, enabled: isPanelEnabled(state, panel.id) };
     });
+}
+
+// Given the current panel, return the appropriate previous & next buttons.
+export function getPanelButtons(state) {
+  let prev, next;
+
+  if (state.currentPanel === "selectDataset") {
+    prev = null;
+    next =
+      isPanelVisible(state, "dataDisplay") &&
+      isPanelEnabled(state, "dataDisplay")
+        ? { panel: "dataDisplay", text: "Data" }
+        : null;
+  } else if (state.currentPanel === "dataDisplay") {
+    prev =
+      isPanelVisible(state, "selectDataset") &&
+      isPanelEnabled(state, "selectDataset")
+        ? { panel: "selectDataset", text: "Import" }
+        : null;
+    next =
+      isPanelVisible(state, "selectTrainer") &&
+      isPanelEnabled(state, "selectTrainer")
+        ? { panel: "selectTrainer", text: "Trainer" }
+        : isPanelVisible(state, "trainModel") &&
+          isPanelEnabled(state, "trainModel")
+        ? { panel: "trainModel", text: "Train" }
+        : null;
+  } else if (state.currentPanel === "selectTrainer") {
+    prev = { panel: "dataDisplay", text: "Data" };
+    next =
+      isPanelVisible(state, "trainModel") && isPanelEnabled(state, "trainModel")
+        ? { panel: "trainModel", text: "Train" }
+        : null;
+  } else if (state.currentPanel === "trainModel") {
+    if (state.modelSize) {
+      prev = null;
+      next = { panel: "results", text: "Results" };
+    }
+  } else if (state.currentPanel === "results") {
+    prev = { panel: "dataDisplay", text: "Data" };
+    next = { panel: "predict", text: "Predict" };
+  } else if (state.currentPanel === "predict") {
+    prev = { panel: "results", text: "Results" };
+    next = { panel: "saveModel", text: "Save" };
+  } else if (state.currentPanel === "saveModel") {
+    prev = { panel: "predict", text: "Predict" };
+    next = null;
+  }
+
+  return { prev, next };
+}
+
+export function getCurrentColumnIsSelectedLabel(state) {
+  return state.labelColumn === state.currentColumn;
+}
+
+export function getCurrentColumnIsSelectedFeature(state) {
+  return state.selectedFeatures.includes(state.currentColumn);
 }

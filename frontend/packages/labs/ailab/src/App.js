@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
-import SelectFeatures from "./UIComponents/SelectFeatures";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import SelectTrainer from "./UIComponents/SelectTrainer";
 import TrainModel from "./UIComponents/TrainModel";
@@ -11,9 +10,12 @@ import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
 import { connect } from "react-redux";
-import { getPanels, setCurrentPanel, validationMessages } from "./redux";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquare, faCheckSquare } from "@fortawesome/free-regular-svg-icons";
+import {
+  getPanels,
+  getPanelButtons,
+  setCurrentPanel,
+  validationMessages
+} from "./redux";
 
 class PanelTabs extends Component {
   static propTypes = {
@@ -55,6 +57,49 @@ class PanelTabs extends Component {
   }
 }
 
+class PanelButtons extends Component {
+  static propTypes = {
+    panels: PropTypes.arrayOf(PropTypes.object),
+    panelButtons: PropTypes.object,
+    currentPanel: PropTypes.string,
+    setCurrentPanel: PropTypes.func
+  };
+
+  render() {
+    const { panelButtons, setCurrentPanel } = this.props;
+
+    return (
+      <div>
+        {panelButtons.prev && (
+          <div style={styles.previousButton}>
+            <button
+              type="button"
+              style={styles.navButton}
+              onClick={() => setCurrentPanel(panelButtons.prev.panel)}
+            >
+              &#9664; &nbsp;
+              {panelButtons.prev.text}
+            </button>
+          </div>
+        )}
+
+        {panelButtons.next && (
+          <div style={styles.nextButton}>
+            <button
+              type="button"
+              style={styles.navButton}
+              onClick={() => setCurrentPanel(panelButtons.next.panel)}
+            >
+              {panelButtons.next.text}
+              &nbsp; &#9654;
+            </button>
+          </div>
+        )}
+      </div>
+    );
+  }
+}
+
 class Panels extends Component {
   static propTypes = {
     currentPanel: PropTypes.string,
@@ -68,8 +113,6 @@ class Panels extends Component {
       <div style={styles.panelContainer}>
         {currentPanel === "selectDataset" && <SelectDataset />}
         {currentPanel === "dataDisplay" && <DataDisplay />}
-        {currentPanel === "selectFeatures" && <SelectFeatures />}
-        {currentPanel === "columnInspector" && <ColumnInspector />}
         {currentPanel === "selectTrainer" && <SelectTrainer />}
         {currentPanel === "trainModel" && <TrainModel />}
         {currentPanel === "results" && <Results />}
@@ -82,6 +125,7 @@ class Panels extends Component {
   }
 }
 
+/*
 class ValidationMessages extends Component {
   static propTypes = {
     currentPanel: PropTypes.string,
@@ -119,10 +163,12 @@ class ValidationMessages extends Component {
     );
   }
 }
+*/
 
 class App extends Component {
   static propTypes = {
     panels: PropTypes.arrayOf(PropTypes.object),
+    panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
     validationMessages: PropTypes.object,
@@ -132,9 +178,9 @@ class App extends Component {
   render() {
     const {
       panels,
+      panelButtons,
       currentPanel,
       setCurrentPanel,
-      validationMessages,
       saveTrainedModel
     } = this.props;
 
@@ -150,9 +196,12 @@ class App extends Component {
             currentPanel={currentPanel}
             saveTrainedModel={saveTrainedModel}
           />
-          <ValidationMessages
+          {currentPanel === "dataDisplay" && <ColumnInspector />}
+          <PanelButtons
+            panels={panels}
+            panelButtons={panelButtons}
             currentPanel={currentPanel}
-            validationMessages={validationMessages}
+            setCurrentPanel={setCurrentPanel}
           />
         </div>
       </div>
@@ -163,6 +212,7 @@ class App extends Component {
 export default connect(
   state => ({
     panels: getPanels(state),
+    panelButtons: getPanelButtons(state),
     currentPanel: state.currentPanel,
     validationMessages: validationMessages(state)
   }),

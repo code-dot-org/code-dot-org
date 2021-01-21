@@ -39,12 +39,24 @@ const sampleModes = {
     datasets: ["candy", "titanic", "foods"]
   },
 
-  level_7_6: {}
+  level_7_6: {},
+
+  minimal: {
+    datasets: ["candy"],
+    hideSpecifyColumns: true,
+    hideSelectTrainer: "knnClassify",
+    hideChooseReserve: true,
+    hideModelCard: true
+  }
 };
 
 // Look for a ?mode= parameter on the URL
 let parameters = queryString.parse(location.search);
 const mode = parameters["mode"] ? sampleModes[parameters["mode"]] : null;
 
+function saveTrainedModelStub(data) {
+  console.log("This would save a trained model.", data);
+}
+
 // Initialize the app.
-initAll({ mode: mode });
+initAll({ mode: mode, saveTrainedModel: saveTrainedModelStub });

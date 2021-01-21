@@ -3,12 +3,10 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import train, { availableTrainers } from "../train";
-import {
-  setPercentDataToReserve,
-  readyToTrain,
-  getShowChooseReserve
-} from "../redux";
-import { TRAINING_DATA_PERCENTS, styles } from "../constants";
+import { readyToTrain } from "../redux";
+import { styles } from "../constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 class TrainModel extends Component {
   static propTypes = {
@@ -17,14 +15,12 @@ class TrainModel extends Component {
     readyToTrain: PropTypes.bool,
     selectedTrainer: PropTypes.string,
     percentDataToReserve: PropTypes.number,
-    setPercentDataToReserve: PropTypes.func,
-    modelSize: PropTypes.number,
-    showChooseReseve: PropTypes.bool
+    modelSize: PropTypes.number
   };
 
-  handleChange = event => {
-    this.props.setPercentDataToReserve(parseInt(event.target.value));
-  };
+  componentDidMount() {
+    this.onClickTrainModel();
+  }
 
   onClickTrainModel = () => {
     train.init();
@@ -32,38 +28,8 @@ class TrainModel extends Component {
   };
 
   render() {
-    const { showChooseReseve } = this.props;
-
     return (
       <div id="train-model" style={styles.panel}>
-        {showChooseReseve && (
-          <div>
-            <div style={styles.largeText}>
-              Are you ready to train the model?
-            </div>
-
-            <div>
-              How much of the data would you like to reserve for testing?
-            </div>
-            <form>
-              <label>
-                Percent of dataset to reserve:{" "}
-                <select
-                  value={this.props.percentDataToReserve}
-                  onChange={this.handleChange}
-                >
-                  {TRAINING_DATA_PERCENTS.map((percent, index) => {
-                    return (
-                      <option key={index} value={percent}>
-                        {percent}
-                      </option>
-                    );
-                  })}
-                </select>
-              </label>
-            </form>
-          </div>
-        )}
         {this.props.readyToTrain && (
           <div>
             <p />
@@ -75,9 +41,12 @@ class TrainModel extends Component {
               {this.props.selectedFeatures.join(", ")} that might help predict
               the values of the label: {this.props.labelColumn}.
             </p>
-            <button type="button" onClick={this.onClickTrainModel}>
+            {/*<button type="button" onClick={this.onClickTrainModel}>
               Train model
-            </button>
+            </button>*/}
+            {!this.props.modelSize && (
+              <FontAwesomeIcon icon={faSpinner} />
+            )}
             {this.props.modelSize && (
               <p>The trained model is {this.props.modelSize} KB big.</p>
             )}
@@ -88,19 +57,10 @@ class TrainModel extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    selectedFeatures: state.selectedFeatures,
-    labelColumn: state.labelColumn,
-    selectedTrainer: state.selectedTrainer,
-    readyToTrain: readyToTrain(state),
-    percentDataToReserve: state.percentDataToReserve,
-    modelSize: state.modelSize,
-    showChooseReseve: getShowChooseReserve(state)
-  }),
-  dispatch => ({
-    setPercentDataToReserve(percentDataToReserve) {
-      dispatch(setPercentDataToReserve(percentDataToReserve));
-    }
-  })
-)(TrainModel);
+export default connect(state => ({
+  selectedFeatures: state.selectedFeatures,
+  labelColumn: state.labelColumn,
+  selectedTrainer: state.selectedTrainer,
+  readyToTrain: readyToTrain(state),
+  modelSize: state.modelSize
+}))(TrainModel);

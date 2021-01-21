@@ -20,7 +20,8 @@ export const styles = {
     color: "#e51f68"
   },
   ready: {
-    color: "#73be73"
+    color: "#73be73",
+    backgroundColor: "white"
   },
 
   panelContainer: {
@@ -49,7 +50,13 @@ export const styles = {
     backgroundColor: "rgb(230,230,230)",
     borderRadius: 5,
     xwidth: "calc(70% - 100px)",
-    border: "solid 1px black"
+    border: "solid 1px black",
+    overflow: "hidden"
+  },
+
+  panelContentLeft: {
+    float: "left",
+    width: "80%"
   },
 
   subPanel: {
@@ -81,11 +88,13 @@ export const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 18,
     boxSizing: "border-box",
-    overflow: "scroll"
+    overflow: "scroll",
+    marginTop: 59
   },
 
   dataDisplayTable: {
-    whiteSpace: "nowrap"
+    whiteSpace: "nowrap",
+    borderSpacing: 0
   },
 
   finePrint: {
@@ -101,16 +110,55 @@ export const styles = {
   },
 
   dataDisplayHeader: {
-    display: "inline-block",
-    width: 120,
-    backgroundColor: "black",
-    color: "white",
+    paddingLeft: 20,
     textAlign: "right"
   },
+  dataDisplayHeaderLabelSelected: {
+    backgroundColor: "rgba(186, 168, 70)",
+    color: "yellow",
+  },
+  dataDisplayHeaderFeatureSelected: {
+    backgroundColor: "rgb(70, 186, 168)",
+    color: "yellow",
+  },
+  dataDisplayHeaderSelected: {
+    color: "yellow",
+    backgroundColor: "black"
+  },
+  dataDisplayHeaderLabelUnselected: {
+    backgroundColor: "rgba(186, 168, 70)",
+  },
+  dataDisplayHeaderFeatureUnselected: {
+    backgroundColor: "rgb(70, 186, 168)",
+  },
+  dataDisplayHeaderUnselected: {
+    backgroundColor: "black",
+    color: "white"
+  },
+
   dataDisplayCell: {
-    display: "inline-block",
-    width: 120,
+    paddingLeft: 20,
     textAlign: "right"
+  },
+  dataDisplayCellLabelSelected: {
+    backgroundColor: "rgba(186, 168, 70, 0.4)",
+    color: "yellow",
+  },
+  dataDisplayCellFeatureSelected: {
+    backgroundColor: "rgb(70, 186, 168)",
+    color: "yellow",
+  },
+  dataDisplayCellSelected: {
+    color: "yellow",
+    backgroundColor: "grey"
+  },
+  dataDisplayCellLabelUnselected: {
+    backgroundColor: "rgba(186, 168, 70, 0.4)",
+  },
+  dataDisplayCellFeatureUnselected: {
+    backgroundColor: "rgb(70, 186, 168)",
+  },
+  dataDisplayCellUnselected: {
   },
 
   tabContainer: {
@@ -157,5 +205,70 @@ export const styles = {
     bottom: 20,
     fontSize: 30,
     cursor: "pointer"
+  },
+
+  navButton: {
+    backgroundColor: "black",
+    color: "white",
+    borderRadius: 5,
+    fontSize: 24,
+    border: "initial",
+    padding: "10px 20px 10px 20px",
+    cursor: "pointer"
+  },
+
+  predictButton: {
+    backgroundColor: "rgb(186, 168, 70)"
+  },
+  predictBasedButton: {
+    backgroundColor: "rgb(70, 186, 168)"
+  },
+  dontPredictButton: {
+    backgroundColor: "rgb(186, 168, 70)"
+  },
+  dontPredictBasedButton: {
+    backgroundColor: "rgb(70, 186, 168)"
+  },
+
+  statement: {
+    fontSize: 36
+  },
+
+  statementLabel: {
+    color: "rgb(186, 168, 70)",
+    border: "dotted 1px grey",
+    paddingLeft: 4,
+    paddingRight: 4
+  },
+
+  statementFeature: {
+    color: "rgb(70, 186, 168)",
+    border: "dotted 1px grey",
+    paddingLeft: 4,
+    paddingRight: 4
+  },
+
+  selectLabelPopup: {
+    position: "absolute",
+    marginLeft: 160
+  },
+
+  selectFeaturesPopup: {
+    position: "absolute",
+    marginLeft: 440
+  },
+
+  selectFeaturesPopupClose: {
+    position: "absolute",
+    right: 20
+  },
+
+  selectLabelText: {
+    color: "rgb(186, 168, 70)"
+  },
+
+  selectFeaturesText: {
+    color: "rgb(70, 186, 168)"
   }
+
 };

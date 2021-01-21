@@ -42,7 +42,7 @@
   		"type": "categorical"
   	},
   	{
-  		"id": "type_sports?",
+  		"id": "type_sports",
   		"type": "categorical"
   	},
     {
@@ -62,6 +62,11 @@
     },
     {
       "id": "Greek_food",
+      "type": "categorical",
+      "name": "Name"
+    },
+    {
+      "id": "thai_food",
       "type": "categorical",
       "name": "Name"
     },
