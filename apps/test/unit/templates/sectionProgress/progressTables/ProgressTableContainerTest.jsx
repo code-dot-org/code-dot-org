@@ -104,35 +104,31 @@ describe('ProgressTableContainer', () => {
       .map((x, i) => ({id: i, name: `student-${i}`}));
 
     const wrapper = setUp({section: {id: 1, students: students}});
-    expect(wrapper.find(ProgressTableContentView).props().needsGutter).to.equal(
-      true
-    );
+    expect(wrapper.find(ProgressTableContentView).props().needsGutter).to.be
+      .true;
   });
 
   it('passes needsGutter false to the ProgressTableContentView when the student row height is less than the body height', () => {
     // 2 students will not exceed max height (default props)
     const wrapper = setUp();
-    expect(wrapper.find(ProgressTableContentView).props().needsGutter).to.equal(
-      false
-    );
+    expect(wrapper.find(ProgressTableContentView).props().needsGutter).to.be
+      .false;
   });
 
   it('passes needsGutter true to the ProgressTableStudentList when the width of the stages exceeds the content view width', () => {
     // 2000px will exceed with content view width
     const getTableWidth = () => 2000;
     const wrapper = setUp({getTableWidth});
-    expect(wrapper.find(ProgressTableStudentList).props().needsGutter).to.equal(
-      true
-    );
+    expect(wrapper.find(ProgressTableStudentList).props().needsGutter).to.be
+      .true;
   });
 
   it('passes needsGutter false to the ProgressTableStudentList when the width of the stages is less than the content view width', () => {
     // 20px will be less than the content view width
     const getTableWidth = () => 20;
     const wrapper = setUp({getTableWidth});
-    expect(wrapper.find(ProgressTableStudentList).props().needsGutter).to.equal(
-      false
-    );
+    expect(wrapper.find(ProgressTableStudentList).props().needsGutter).to.be
+      .false;
   });
 
   it('passes extraHeaderLabels to the ProgressTableStudentList', () => {
