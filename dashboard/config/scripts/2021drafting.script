@@ -20,7 +20,12 @@ level 'courseF_sprites_freeplay', progression: 'Free Play: Make a Scene'
 
 lesson 'Sprites in Action', display_name: 'Sprites in Action', has_lesson_plan: false
 level 'courseF_events_predict', progression: 'Predict'
-level 'CDEF_video_SpritesInAction_2020', progression: 'Video: Sprites in Action'
+level 'courseF_pilotVideo_events', progression: 'Video: Sprites in Action'
+level 'courseF_events_time', progression: 'Skill Building'
+level 'courseF_events_key', progression: 'Skill Building'
+level 'courseF_events_conflict', progression: 'Skill Building'
+level 'courseF_events_practice', progression: 'Practice'
+level 'courseF_events_freeplay', progression: 'Free Play: Make a Scene'
 
 lesson_group 'lessonGroup-3', display_name: 'Variables'
 lesson_group_description 'Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!'

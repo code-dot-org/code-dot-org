@@ -2707,7 +2707,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. \r\n"
           }
@@ -2722,7 +2721,7 @@
       "key": "1dbd2493-2844-4113-89d8-7c3e708ca9bb",
       "position": 2,
       "properties": {
-        "description": "For the past few days, we've learned a lot about using lists to help apps keep track of information. In today's Make Project you'll be practicing using lists and programming patterns with loops to create a functioning Reminders app.",
+        "description": "For the past few days, we've learned a lot about using lists to help apps keep track of information. In today's Make Project you'll be practicing using lists and programming patterns with loops to create a functioning Lock Screen app.",
         "remarks": true,
         "name": "Intro the Project\r"
       },
@@ -2750,7 +2749,6 @@
         "description": "[slide] **Prompt:**",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Discussion Goals:**\r\n\r\nWhere (if at all) do you think this app is using a list?\r\n\r\n   \t* It's more important that students justify their answers. However, students may reconize that the different icons are likely being chosen from a list.\r\n\r\nWhere (if at all) do you think this app is using a loop?  \t\r\n  \t\r\n  \t* Students will hopefully recognize that with 20 different icons to be updated by each button there is almost certainly a loop being used by each of those button.\r\n"
           }
@@ -2791,7 +2789,6 @@
         "description": "**Distribute:** Give students copies of [r loops-make-activity-guide] if you will be using it during the class.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Supporting Students:** While students are working on their apps, circulate the room and check in with students who need a little help. Encourage students to collaborate and discuss bugs with each other.  \r\n\r\n**Debugging:** Review with students steps they can use to debug if they get stuck:\r\n\r\n* Build small parts of the program at a time and test them to make sure they work\r\n* Run the code on turtle mode\r\n* Add the variables to the watcher\r\n* Explain the code to a friend and clarify the differences between what they expect to happen and what is actually happening in \r\n"
           }
@@ -2820,7 +2817,6 @@
         "description": "[slide] Awesome work today! Make sure to submit your project when you're done with it!",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity. \r\n\r\n"
           }
@@ -5053,7 +5049,7 @@
       "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "U5 Loops Make Wallpaper App Example 2020_2021"
