@@ -37,6 +37,9 @@ class PanelTabs extends Component {
   }
 
   render() {
+    return null;
+
+    /*
     const { panels, setCurrentPanel } = this.props;
 
     return (
@@ -54,6 +57,7 @@ class PanelTabs extends Component {
         })}
       </div>
     );
+    */
   }
 }
 

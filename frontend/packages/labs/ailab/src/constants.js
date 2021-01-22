@@ -45,6 +45,11 @@ export const styles = {
     marginBottom: 8
   },
 
+  smallText: {
+    fontSize: 12,
+    marginBottom: 8
+  },
+
   panel: {
     padding: 20,
     backgroundColor: "rgb(230,230,230)",
@@ -127,9 +132,11 @@ export const styles = {
   },
   dataDisplayHeaderLabelUnselected: {
     backgroundColor: "rgba(186, 168, 70)",
+    color: "white"
   },
   dataDisplayHeaderFeatureUnselected: {
     backgroundColor: "rgb(70, 186, 168)",
+    color: "white"
   },
   dataDisplayHeaderUnselected: {
     backgroundColor: "black",
