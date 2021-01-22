@@ -193,6 +193,63 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'new student overview', JSON.parse(@response.body)['studentOverview']
   end
 
+  test 'cannot update lockable if last level is not a levelgroup and an assessment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+
+    error = assert_raises RuntimeError do
+      post :update, params: {
+        id: lesson.id,
+        name: lesson.name,
+        lockable: true
+      }
+    end
+
+    assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup and an assessment."
+  end
+
+  test 'can update lockable if last level is levelgroup and assessment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      assessment: true,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:level_group, name: 'levelgroup 1')]
+    )
+
+    post :update, params: {
+      id: lesson.id,
+      name: lesson.name,
+      lockable: true
+    }
+
+    assert_response :success
+  end
+
   test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -257,6 +314,19 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'updates lesson positions on lesson update' do
     sign_in @levelbuilder
+
+    # Make sure the last level in @lesson is an assessment and levelgroup
+    lesson_activity = create :lesson_activity, lesson: @lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: @script,
+      assessment: true,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: @lesson,
+      levels: [create(:level_group, name: 'levelgroup 1')]
+    )
 
     assert_equal 1, @lesson.relative_position
     assert_equal 1, @lesson.absolute_position

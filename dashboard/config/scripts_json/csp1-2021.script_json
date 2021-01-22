@@ -18,7 +18,8 @@
           "/link/to/curriculum"
         ]
       ],
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -1296,7 +1297,6 @@
         "description": "[slide]  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\r\n\t* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join.",
         "tips": [
           {
-            "key": "29",
             "type": "teachingTip",
             "markdown": "The slide icon [slide] indicates that there is a slide in the unit slide deck that corresponds to this activity or prompt. \r\n"
           }
@@ -1373,7 +1373,6 @@
       "properties": {
         "tips": [
           {
-            "key": "30",
             "type": "teachingTip",
             "markdown": "If students need help coming up with ideas, share these tips:\r\n\r\n* This doesn’t have to be a subject in school - it very well might not be.  \r\n\r\n \t* As a person, as an individual who is living and breathing in this world, there is something that you probably know a lot about - maybe you feel like you know more about than most people. What is that thing?\r\n\r\n"
           }
@@ -1391,7 +1390,6 @@
         "description": "[slide]  **Prompt:** What’s something that you know a lot about? Something that you could teach somebody?\"",
         "tips": [
           {
-            "key": "31",
             "type": "teachingTip",
             "markdown": "**\"Why do the pre-course survey?\"**\r\n\r\n* A major goal of CS Principles is to broaden participation in computer science.  \r\n* It is *crucial* therefore to have insight into students' attitidues and beliefs about computer science *before* the course so that we can measure the amount of change that occured *after* the course is over.\r\n\r\n* Please note that this survey is **anonymous for students**\r\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\r\n   \r\nPlease help by having your students contribute to this vital dataset.  Their voices make the difference!\r\n\r\n**How much time does it take?**\r\n\r\n* The survey is roughly 40 quick response items. We expect it to take 5-10 minutes to complete.   You might consider administering it on an admin day at school, or as an early homework.\r\n* Because it is a pre-course survey it is important that students take it as early in the course as possible, before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.\r\n\r\nThank you!\r\n\r\n-- The Code.org Team\r\n"
           }
@@ -1408,7 +1406,6 @@
       "properties": {
         "tips": [
           {
-            "key": "32",
             "type": "teachingTip",
             "markdown": "What you’re trying to do here is get students to state something that they are interested in, but also know a lot about - something they might have insights into.  \r\n\r\nA big part of students’ enthusiasm for sharing will come from your enthusiasm and genuine interest in getting to know them.  \r\n\r\nStudents might need prodding: there is something that makes them interesting and unique.  Something they like to do, have interest in, read about, have some expertise in, a hidden talent.\r\n"
           }
@@ -1483,7 +1480,6 @@
       "properties": {
         "tips": [
           {
-            "key": "33",
             "type": "teachingTip",
             "markdown": "Keep things quick.  If a group is worried about not being innovative enough, remind them that very small ideas can have big consequences.  People once thought it was ridiculous that you would want to send a short text message to another person over a phone.  \r\n\r\nAlternatively, a group may have a great idea that they want to spend more time on.  They can do that later.  For now, just remind them it’s a rapid prototype.\r\n"
           }
@@ -1536,7 +1532,6 @@
       "properties": {
         "tips": [
           {
-            "key": "34",
             "type": "teachingTip",
             "markdown": "Take this opportunity to explain the importance of bringing individual interests and perspectives to this course. From day one, students should be thinking about how to apply the principles they learn to their own lives, and hopefully they will be excited to do so.\r\n"
           }
@@ -1578,7 +1573,6 @@
         "description": "[slide]  **Prompt:** What are you excited to learn about in this course?",
         "tips": [
           {
-            "key": "35",
             "type": "discussionGoal",
             "markdown": "Students can discuss in small groups and then share out with the whole class. It's ok if at this point students don't have an answer to this prompt. \r\n\r\n"
           }
@@ -4721,7 +4715,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Computer Science is Changing Everything",
         "level_keys": [
@@ -6292,6 +6286,19 @@
   ],
   "resources": [
     {
+      "name": "Computer Science is Changing Everything",
+      "url": "https://youtu.be/1x54GqfL3UY",
+      "key": "innovation-video-1-1",
+      "properties": {
+        "type": "Video",
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4"
+      },
+      "seeding_key": {
+        "resource.key": "innovation-video-1-1"
+      }
+    },
+    {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
       "key": "CSP Unit 1 Presentation",
@@ -6325,19 +6332,6 @@
       },
       "seeding_key": {
         "resource.key": "personal-innovations-1"
-      }
-    },
-    {
-      "name": "Computer Science is Changing Everything",
-      "url": "https://youtu.be/1x54GqfL3UY",
-      "key": "innovation-video-1-1",
-      "properties": {
-        "type": "Video",
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "innovation-video-1-1"
       }
     },
     {
@@ -6726,6 +6720,12 @@
     {
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
+        "resource.key": "innovation-video-1-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
         "resource.key": "CSP Unit 1 Presentation"
       }
     },
@@ -6739,12 +6739,6 @@
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
         "resource.key": "personal-innovations-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "innovation-video-1-1"
       }
     },
     {
