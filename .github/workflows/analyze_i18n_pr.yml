@@ -16,3 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo "Hello ${{ github.event.inputs.name }}!"
+  run_my_action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: My first step
+        uses: ./.github/actions/my_action
