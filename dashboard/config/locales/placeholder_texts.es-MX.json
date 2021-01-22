@@ -27,10 +27,16 @@
           "ed076287532e86365e841e92bfc50d8c": "¡Hola mundo!"
         },
         "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "azul"
+          "48d6215903dff56238e52e8891380c8f": "azul",
+          "f59f10539890569d3b1deb0e4352ab84": "Hoy, llevo puesto mi",
+          "810f7026db2f96c4e654f4664e44be04": "jersey!"
         },
         "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "rojo"
+          "bda9643ac6601722a28f238714274da4": "rojo",
+          "ff800dc7251afead2cdf9c569ff5c9bc": "Es bastante",
+          "c30c9d9f51c03a6d42d66cea54206abd": "hoy, ¿no?",
+          "b92274a5b4513e80f4bd6a8136581578": "Esa es la sombra más extraña de",
+          "f54929e86cc7510907895070d8b05979": "¡Yo alguna vez vi!"
         },
         "courseF_project_1": {
           "e8a10c04d72b2f135dabe360c4bdd534": "¡Ganaste!",
@@ -46,6 +52,52 @@
         },
         "Find the Wizard": {
           "22b45b2cf2d4a2a3d7b3faa522013b26": "¡Cuenta hasta 3 y desapareceré! ¡Adivina un número entre 1 y 400 para encontrarme!"
+        },
+        "Choose Your Own Adventure": {
+          "fe724bc07d1e8b57e53ebfd03c0ec4f5": "¡Ah, no te preocupes! Estoy seguro de que puedo encontrarlo.",
+          "9360086c2f9d62ba563c6fcbfbd9b402": "¡Me iré a buscarlo ahora! ¡Adiós!",
+          "6d411b45e39818da535ba9f8a2cf58e2": "¡Me convirtió en una bruja!",
+          "73af7ec7b0065fb5eb15d6c0ca695ed3": "¡Realmente debería encontrar al dueño de esta varita!",
+          "c332bf82ea63d21d1d1b701a07ab9afd": "Gracias por tu ayuda, pero ahora debo irme",
+          "ba57bb6df12b81e80f79eef5b1ca8fc7": "¡Oye, encontré una varita!",
+          "c7323ea29d98d5cad8e0828f3f52ef0c": "¡Oh no! ¡Es una varita de bruja!",
+          "2cef5d66c57efe3994c85f4e1f312849": "¡Ah-ja! ¡Encontré dos varitas! ¡Por tu ayuda, toma la segunda!",
+          "24a124016e7eec7a8fef5bc228541533": "¡Ah, no te preocupes! Estoy seguro de que puedo encontrarlo"
+        },
+        "FoodFight": {
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "Puntuación",
+          "cc2ecba4e56986752892c0e68c8e32e0": "Nivel"
+        },
+        "Guess The Number": {
+          "015c8ae47c8964d793ddc123b7ba6b81": "Nadie vivo es tan joven.",
+          "56582da5c99c1bb46ab5dcda003f8c27": "Muy joven.",
+          "781b7711244d030e4ed6e1bfa883364e": "¡Ni siquiera tengo 20 años todavía!",
+          "01bab55de9d3319f27c5213b4661c79f": "¡No tan viejo!",
+          "5c95950acb6c51d88cc8869eb31f2bdf": "¡lo tienes!",
+          "214e809e9d24f40cc42fa2f04f59a1cf": "¡Adivina cuántos años tengo antes de tragarme este pingüino!"
+        },
+        "courseF_playlab_variables1a": {
+          "ea904c9d18bd602705f598372988aaa8": "¿Qué debería gritar?",
+          "97a97de7add5e8dcd9f70a407d56968e": "¡Objetivo!"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "88789b154a4ffbbd84108b0c80f8c464": "¿Cuántos años tienes, Brian?",
+          "662722f1029078dad7a3683c64d8b922": "¡Guau! yo",
+          "ae096fbf24d913754b01a1601672bf62": "también!"
+        },
+        "courseF_playlab_variables4b": {
+          "2e1749915d40abd8f43fc2b9dd13649c": "Será un placer,",
+          "ecb2903fb054395baf72ea1da127be32": "Eres bastante alto para un",
+          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": "años,"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "d065635d5fffcb3739555ae93006081c": "Es un placer conocerte,"
+        },
+        "courseF_playlab_variables8c": {
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Felicidades",
+          "cd0d7bbbbb604e524bfc25effa78095d": ", estaba pensando en el color",
+          "8460ae10541cf8ded22a4e899ddfc0bb": "¡Lo siento!",
+          "8622f69e8cf70458a82fc22d8e46372f": ", no estaba pensando en el color"
         }
       }
     }

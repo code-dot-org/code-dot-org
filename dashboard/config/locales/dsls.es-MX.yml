@@ -7470,6 +7470,8 @@ es-MX:
             dibuja una línea más larga y más gruesa.
         questions:
         - text: ¿Qué sucederá si haces clic en "Ejecutar"?
+        markdown: Hemos usado el contador de nuestro bucle ´desde´´ para cambiar el
+          ancho de nuestro pincel en este dibujo.
       courseF_multi_artist_for10_predict1_2018:
         answers:
         - text: El artista dibujará una línea recta que aumenta su grosor de un lado
@@ -7684,6 +7686,7 @@ es-MX:
             correcta de néctar, pero solo llegará a 4 flores.
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
@@ -8028,10 +8031,10 @@ es-MX:
       outbreak_story:
         content1: descripción aquí
         markdown: |
-          # Brote: codifica tu propia simulación
+          # Epidemia: Codifica Tu Propia Simulación.
 
-          ## ¡Bienvenido a Pueblo de monstruos!
-          Pueblo de monstruos solía ser un lugar feliz y saludable. A los monstruos de Pueblo de monstruos les encantaba pasear para visitar a sus amigos.
+          ## ¡Bienvenido a la Ciudad de Monstruos!
+          La Ciudad de Monstruos solía ser un lugar feliz y saludable. A los monstruos de la Ciudad de Monstruos les encantaba pasear para visitar a sus amigos.
 
           <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
 
@@ -8045,7 +8048,7 @@ es-MX:
 
           <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
 
-          ## ¡Brote!
+          ## ¡Epidemia!
           El virus se propagó lentamente a otros monstruos que estaban cerca. Los monstruos sanos comenzaron a preocuparse de que todos se enfermarían. Los monstruos enfermos comenzaron a preocuparse de que pudieran contagiar el virus a todos los demás.
 
           <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
@@ -8055,7 +8058,7 @@ es-MX:
           <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
 
           ## Cómo detener la propagación
-          Afortunadamente, después de estudiar el virus, los vecinos de Pueblo de monstruos hicieron un descubrimiento importante. Se dieron cuenta de que era menos probable que transmitieran el virus si usaban máscaras sobre la boca. Con máscaras faciales puestas, los monstruos enfermos tenían menos probabilidades de transmitir el virus a los monstruos sanos.
+          Afortunadamente, después de estudiar el virus, los vecinos de la Ciudad de Monstruos hicieron un descubrimiento importante. Se dieron cuenta de que era menos probable que transmitieran el virus si usaban máscaras sobre la boca. Con máscaras faciales puestas, los monstruos enfermos tenían menos probabilidades de transmitir el virus a los monstruos sanos.
 
           <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
 
@@ -8079,11 +8082,11 @@ es-MX:
       outbreak_story2:
         content1: descripción aquí
         markdown: |
-          # Brote: Pensando como un científico
+          # Epidemia: Pensando como un científico
 
           <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
 
-          Las simulaciones son una excelente manera de aprender cosas que pueden ser difíciles de observar en el mundo real. Ayudan a los científicos a resolver problemas y probar nuevas ideas de forma segura y eficiente. Tu simulación es una forma de mostrar cómo podría verse un brote de virus en Pueblo de monstruos.
+          Las simulaciones son una excelente manera de aprender cosas que pueden ser difíciles de observar en el mundo real. Ayudan a los científicos a resolver problemas y probar nuevas ideas de forma segura y eficiente. Tu simulación es una forma de mostrar cómo podría verse un brote de virus en la Ciudad de monstruos.
 
           ## ¡Reiniciar y reproducir!
           Incluso cuando escribes el código tú mismo, es imposible saber exactamente qué sucederá cuando presiones Ejecutar. Los monstruos deambulan aleatoriamente, por lo que no sabes si el virus se propagará rápido o lento. Siempre que cambies tu código, asegúrate de ejecutar tu simulación más de una vez. ¡Las cosas no sucederán de la misma manera dos veces!
@@ -8098,14 +8101,14 @@ es-MX:
 
           <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
 
-          ## ¿Pueblo de monstruos como el mundo real?
+          ## ¿Es la Ciudad de Monstruos como el mundo real?
           Hay un límite en el grado de realismo que puede alcanzar cualquier modelo.
           * ¿Qué tiene en común la simulación de un brote con los brotes de virus del mundo real?
           * ¿Cuáles son las diferencias?
           Cuando termine esta actividad, ¡discute estas preguntas con los docentes o con tu familia!
 
           ## ¿Qué más podemos modelar?
-          Ya has creado un modelo funcional del brote en Pueblo de monstruos. ¿Cuáles son las cosas que tu simulación no puede hacer o mostrar que te gustaría que pudiera hacer? Presiona continuar para continuar y aprender a modelar aún más:
+          Ya has creado un modelo funcional del brote en la Ciudad de Monstruos. ¿Cuáles son las cosas que tu simulación no puede hacer o mostrar que te gustaría que pudiera hacer? Presiona continuar para continuar y aprender a modelar aún más:
           * Incrementar el número de monstruos en la simulación.
           * Ayudar a los monstruos a recuperarse del virus
           * ¡Probabilidad, inmunidad, vacunas y más!

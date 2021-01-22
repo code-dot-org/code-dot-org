@@ -16921,3 +16921,7 @@ es-MX:
             cspSurvey:
               display_name: Encuesta
           student_description: La Unidad 5 trata sobre la importancia de los datos a la hora de resolver problemas y resalta cómo las computadoras pueden ayudar en este proceso. El primer capítulo explora los diferentes sistemas utilizados para representar información en una computadora, y los desafíos y concesiones planteados al usarlos. En el segundo capítulo, aprenderá cómo se utilizan las colecciones de datos para resolver problemas y cómo las computadoras ayudan a automatizar los pasos de este proceso. Al final del capítulo, se considera cómo se puede aplicar el proceso de resolución de problemas de datos a un área de tu elección.
+        contagion-pilot:
+          description_short: 'Utiliza el Laboratorio de sprites para programar una simulación de un brote de virus.'
+          description: 'Utiliza el Laboratorio de sprites para programar una simulación de un brote de virus.'
+          student_description: 'Utiliza el Laboratorio de sprites para programar una simulación de un brote de virus.'

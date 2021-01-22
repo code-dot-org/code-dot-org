@@ -1010,6 +1010,7 @@ es-MX:
             '"y"': posición y
             '"direction"': dirección de movimiento
             '"tint"': tinte
+            '"speed"': velocidad
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1144,6 +1145,8 @@ es-MX:
             '"West"': Oeste
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_patrollingUpDown:
@@ -1199,6 +1202,13 @@ es-MX:
             undefined: ninguno
       gamelab_setBackgroundImageAs:
         text: establecer fondo a {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mediano
+            '100': large
       gamelab_setProp:
         text: establecer {SPRITE} {PROPERTY} a {VAL}
         options:
@@ -1208,6 +1218,7 @@ es-MX:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección de movimiento
+            '"speed"': velocidad
       gamelab_setSizes:
         text: definir {SPRITE} {PROPERTY} a {N}%
         options:
@@ -1290,6 +1301,10 @@ es-MX:
         text: mientras {SPRITE1} está tocando {SPRITE2}
       gamelab_whileUpArrow:
         text: mientras se presiona la flecha arriba
+      gamelab_withPercentChance:
+        text: |-
+          Si hay {NUM}% de probabilidad
+          {STATEMENT}
       gamelab_xLocationOf:
         text: coordenada x de {SPRITE}
       gamelab_yLocationOf:
@@ -1307,6 +1322,8 @@ es-MX:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": sin pez
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mi-etiqueta
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": no es mi-etiqueta
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
