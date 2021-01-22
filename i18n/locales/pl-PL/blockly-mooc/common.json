@@ -1089,7 +1089,6 @@
   "manageLinkedAccounts_microsoft": "Konto Microsoft",
   "manageLinkedAccounts_notConnected": "Brak połączenia",
   "manageLinkedAccounts_rosteredSectionTooltip": "Nie możesz odłączyć się od tego połączonego konta, ponieważ jest ono powiązane z jedną z twoich sekcji.",
-  "manageLinkedAccounts_makerAuthError": "Tego działania nie można wykonać z poziomu aplikacji Maker App. Wróć do swojej domyślnej przeglądarki i spróbuj ponownie.",
   "manageStudents": "Zarządzaj uczniami",
   "manageStudentsNotificationFailure": "Coś poszło nie tak.",
   "manageStudentsNotificationCannotAdd": "Nie możesz dodać {numStudents, plural, one {1 ucznia} other {# uczniów}} do swojej sekcji. Spróbuj ponownie lub odśwież stronę.",
