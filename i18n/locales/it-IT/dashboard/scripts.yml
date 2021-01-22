@@ -8303,3 +8303,7 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+        contagion-pilot:
+          description_short: 'Usa Sprite Lab per programmare la simulazione di un''epidemia di virus.'
+          description: 'Usa Sprite Lab per programmare la simulazione di un''epidemia di virus.'
+          student_description: 'Usa Sprite Lab per programmare la simulazione di un''epidemia di virus.'
