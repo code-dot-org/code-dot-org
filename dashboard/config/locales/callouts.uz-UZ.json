@@ -17,15 +17,15 @@
         },
         "Overworld Move to Sheep": {
           "craft_drag_block_callout": "\"move forward\" bo‘lagini olib boshqa bo‘laklar pastiga biriktiring.",
-          "craft_run_button_callout": "Dasturingizni sinab ko'rish uchun \"Ishga tushirish\" tugmachasini bosing"
+          "craft_run_button_callout": "Dasturingizni sinab ko‘rish uchun \"Ishga tushirish\" tugmachasini bosing"
         },
         "Overworld Move to Sheep_2019": {
           "craft_drag_block_callout": "\"move forward\" bo‘lagini olib boshqa bo‘laklar pastiga biriktiring.",
-          "craft_run_button_callout": "Dasturingizni sinab ko'rish uchun \"Ishga tushirish\" tugmachasini bosing"
+          "craft_run_button_callout": "Dasturingizni sinab ko‘rish uchun \"Ishga tushirish\" tugmachasini bosing"
         },
         "Overworld Move to Sheep_2020": {
           "craft_drag_block_callout": "\"move forward\" bo‘lagini olib boshqa bo‘laklar pastiga biriktiring.",
-          "craft_run_button_callout": "Dasturingizni sinab ko'rish uchun \"Ishga tushirish\" tugmachasini bosing"
+          "craft_run_button_callout": "Dasturingizni sinab ko‘rish uchun \"Ishga tushirish\" tugmachasini bosing"
         },
         "course4_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_callout1": "Bu funksiya makkajo‘xori ekini bilan yaxshi ishlaydi, ammo boshqa sabzavot ekinlari bilanchi?"
@@ -726,7 +726,7 @@
           "courseD_playLab_condFP_1": "sizga ko'proq kod berish uchun bloklarni toifalarga ajratdik! Hamma narsa qayerga ketganini ko'rish uchun shu yerni bosing."
         },
         "coursea_maze_ramp1_2018": {
-          "grade2_CaringForNewPet_0_1": "Barcha blokklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
+          "grade2_CaringForNewPet_0_1": "Barcha bloklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Ishga tushirish\" tugmachasini bosing."
         },
         "coursea_maze_ramp1_2019": {
           "grade2_CaringForNewPet_0_1": "Barcha blokklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
@@ -747,40 +747,40 @@
           "courseC_collector_prog1_1": "Asboblar qutisidagi ba'zi yangi bloklarni ko'ryapsizmi? Xavotir olmang, biz ularni boshqa darsda qanday ishlatishni ko'rsatamiz."
         },
         "Course 4 Artist 4": {
-          "repeat_full_circle": "To'liq aylana qilish uchun zombi necha marta harakatlanishi kerakligini kiriting"
+          "repeat_full_circle": "To‘liq aylana qilish uchun zombi necha marta harakatlanishi kerakligini kiriting"
         },
         "Course 4 Artist 7": {
-          "repeat_blocks": "\"Takrorlash\" blokidan foydalaning va ish joyidagi bloklarni u bilan o'rang"
+          "repeat_blocks": "\"Takrorlash\" blokidan foydalaning va ish joyidagi bloklarni u bilan o‘rang"
         },
         "Course 4 Artist For Loops 4": {
-          "place_counter_variable": "Hisoblagich o'zgaruvchisini ushbu blok ichiga torting"
+          "place_counter_variable": "Hisoblagich o‘zgaruvchisini ushbu blok ichiga torting"
         },
         "Course 4 Artist Vars 1": {
-          "repeat_blocks": "\"Takrorlash\" blokidan foydalaning va ish joyidagi bloklarni u bilan o'rang"
+          "repeat_blocks": "\"Takrorlash\" blokidan foydalaning va ish joyidagi bloklarni u bilan o‘rang"
         },
         "Course 4 Artist Vars 12": {
-          "set_length": "\"Uzunlik\"ni to'g'ri qiymatga o'rnatish uchun ushbu blokdan foydalaning."
+          "set_length": "\"Uzunlik\"ni to‘g‘ri qiymatga o‘rnatish uchun ushbu blokdan foydalaning."
         },
         "Course 4 Artist Vars 2": {
-          "set_length": "\"Uzunlik\"ni to'g'ri qiymatga o'rnatish uchun ushbu blokdan foydalaning."
+          "set_length": "\"Uzunlik\"ni to‘g‘ri qiymatga o‘rnatish uchun ushbu blokdan foydalaning."
         },
         "Course 4 Artist Vars 6": {
-          "degrees_per_side": "Har bir burchak o'lchamini gradusda olish uchun 360 ni tomonlar soniga bo'ling."
+          "degrees_per_side": "Har bir burchak o‘lchamini gradusda olish uchun 360 ni tomonlar soniga bo‘ling."
         },
         "Course 4 Bee Params 2": {
-          "edit_get_nectar": "Funksiyani tahrirlash va ari nektar olish uchun yo'nalishni o'zgartirish uchun ushbu tugmani ishlating."
+          "edit_get_nectar": "Funksiyani tahrirlash va ari nektar olish uchun yo‘nalishni o‘zgartirish uchun ushbu tugmani ishlating."
         },
         "Course 4 Maze 4": {
-          "repeat": "Buyruqlarni takrorlash uchun sikl ichiga bloklar qo'ying"
+          "repeat": "Buyruqlarni takrorlash uchun sikl ichiga bloklar qo‘ying"
         },
         "Course 4 Play Lab Params 3": {
           "edit_function": "Funksiyani tahrirlash uchun shu yerni bosing."
         },
         "Course 4 Play Lab Params 6": {
-          "edit_add_parameter": "Funksiyangizga parametr qo'shish uchun tahrirlash tugmachasini bosing"
+          "edit_add_parameter": "Funksiyangizga parametr qo‘shish uchun tahrirlash tugmachasini bosing"
         },
         "Course 4 Play Lab Vars 1": {
-          "arrows_move_actor": "Aktyorni harakatga keltirish uchun o'qlardan foydalaning"
+          "arrows_move_actor": "Aktyorni harakatga keltirish uchun o‘qlardan foydalaning"
         },
         "Infinity_move_collide": {
           "Infinity_move_collide_callout": "Ushbu hodisa yuz berganda tovush chiqsin."
@@ -802,17 +802,17 @@
           "edit_function": "Funksiyani tahrirlash uchun shu yerni bosing."
         },
         "NEW Course 4 Artist Params 10": {
-          "create_function": "\"Funksiyalar\" oynasini ochish uchun bu yerni bosing, so'ng \"Funksiya yaratish\" tugmasini bosing."
+          "create_function": "\"Funksiyalar\" oynasini ochish uchun bu yerni bosing, so‘ng \"Funksiya yaratish\" tugmasini bosing."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Funksiyangizga parametr qo'shish uchun tahrirlash tugmachasini bosing",
-          "add_and_drag_parameter": "Parametr nomini bu yerda yozing, qo'shish tugmachasini bosing va keyin uni funksiya ta'rifiga torting"
+          "edit_add_parameter": "Funksiyangizga parametr qo‘shish uchun tahrirlash tugmachasini bosing",
+          "add_and_drag_parameter": "Parametr nomini bu yerda yozing, qo‘shish tugmachasini bosing va keyin uni funksiya ta'rifiga torting"
         },
         "NEW Course 4 Artist Vars 6": {
-          "place_length_variable": "Savol belgilarini almashtirish uchun uzunlik o'zgaruvchisini bu yerga torting"
+          "place_length_variable": "Savol belgilarini almashtirish uchun uzunlik o‘zgaruvchisini bu yerga torting"
         },
         "NEW Course 4 Bee For Loops 5": {
-          "actions_category": "Asboblar qutisi yangi ko'rinishga ega bo'ldi! \"Amallar\" bloklari ham endi shu yerda."
+          "actions_category": "Asboblar qutisi yangi ko‘rinishga ega bo‘ldi! \"Amallar\" bloklari ham endi shu yerda."
         },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Sizga boshlash uchun bu yerga bir nechta bloklarni oldindan joylashtirdik"
@@ -842,13 +842,13 @@
           "craft_inside_repeat": "Bloklarni bu yerga joylashtirish orqali amallarni takrorlang"
         },
         "Underground Avoiding Lava": {
-          "craft_callout_moveforward": "Ushbu kod lavani tekshiradi, oldinga siljish uchun buyruq qo'sha olasizmi?"
+          "craft_callout_moveforward": "Ushbu kod lavani tekshiradi, oldinga siljish uchun buyruq qo‘sha olasizmi?"
         },
         "Underground Avoiding Lava_2019": {
-          "craft_callout_moveforward": "Ushbu kod lavani tekshiradi, oldinga siljish uchun buyruq qo'sha olasizmi?"
+          "craft_callout_moveforward": "Ushbu kod lavani tekshiradi, oldinga siljish uchun buyruq qo‘sha olasizmi?"
         },
         "Underground Avoiding Lava_2020": {
-          "craft_callout_moveforward": "Ushbu kod lavani tekshiradi, oldinga siljish uchun buyruq qo'sha olasizmi?"
+          "craft_callout_moveforward": "Ushbu kod lavani tekshiradi, oldinga siljish uchun buyruq qo‘sha olasizmi?"
         },
         "Underground Iron": {
           "craft_what_is_iron": "Bu temirni qazib oling!"
@@ -1178,8 +1178,8 @@
           "courseD_farmer_while7_2018_PathAhead": "Ushbu jumboqni yechish uchun siz \"oldinda yo'l bo'lguncha\" blokidan foydalanishingiz kerak."
         },
         "course4_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
-          "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
+          "courseE_artist_functions_challenge2_callout1": "Pastga qo'shimcha kod qo'shish orqali ushbu dasturni davom eting.",
+          "courseE_artist_functions_challenge2_callout2": "Agar sizga ushbu dizayn yoqmasa, uni xohlagan narsangizga o'zgartiring!"
         },
         "4-5 Artist Patterns Free Play": {
           "4-5_Artist_Patterns_Free_Play_1": "Sizning barcha sevimli bloklaringiz endi toifalarga ajratilgan. Hamma narsa qayerga ketganini bilish uchun ushbu so'zlarni bosing!"
@@ -1203,12 +1203,12 @@
           "MC_HOC_2017_04_Cole_a": "Agent suv ustida suzib yurishi mumkin, ammo o'yinchi bunga qodir emas!"
         },
         "course3_artist_functions_challenge1": {
-          "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
-          "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
+          "courseE_artist_functions_challenge1_callout1": "Pastga qo'shimcha kod qo'shish orqali ushbu dasturni davom eting.",
+          "courseE_artist_functions_challenge1_callout2": "Agar sizga ushbu dizayn yoqmasa, uni xohlagan narsangizga o'zgartiring!"
         },
         "course3_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
-          "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
+          "courseE_artist_functions_challenge2_callout1": "Pastga qo'shimcha kod qo'shish orqali ushbu dasturni davom eting.",
+          "courseE_artist_functions_challenge2_callout2": "Agar sizga ushbu dizayn yoqmasa, uni xohlagan narsangizga o'zgartiring!"
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Ushbu kichik ko'rsatma kompyuterga bir xil nomli katta kod qismini ish maydonida ishlashini aytadi."

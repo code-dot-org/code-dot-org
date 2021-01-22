@@ -2455,7 +2455,7 @@ uz-UZ:
           feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
             sakrash mavjud.
         questions:
-        - text: '"Run" tugamsini bosganingizda nima bo‘ladi?'
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       courseF_bee_variables_8a_2018:
         answers:
         - text: Asalari nektar yig'maydi, chunki o'zgaruvchi nomi "yig'ish" emas.
@@ -3419,7 +3419,7 @@ uz-UZ:
 
 
           Tugatgandan so'ng, simulyatsiyangizni boshqalar bilan ulashing. Virus shaharga kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida xabaringizni ulashing.
-        content1: description here
+        content1: tafsilotlar bu yerda
       outbreak_story2:
         markdown: |-
           # Kasallik: Olim kabi fikrlash
@@ -3454,7 +3454,7 @@ uz-UZ:
           * Ehtimollar, immunitet, vaksinalar va boshqalar!
 
           Siz simulyatsiya modelingizni boshqalar bilan ulashishingiz yoki shaharga virus kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida dikr almashishingiz mumkin.
-        content1: description here
+        content1: tafsilotlar bu yerda
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Erishuvchanlik (Accessibility) uchun dizayn
@@ -4781,7 +4781,7 @@ uz-UZ:
       courseD_EOC_2020:
         display_name: End of Course Project
       csf_be_a_super_digital_citizen:
-        content1: description here
+        content1: tafsilotlar bu yerda
       BinaryImages-Unplugged:
         markdown: |-
           # Binar rasmlar
@@ -4875,3 +4875,142 @@ uz-UZ:
         content1: Test Markdown darslik sahifasi
       courseF_project_exemplars_2019_2020:
         content1: Test Markdown darslik sahifasi
+      CSD U2 Design Project:
+        content1: tafsilotlar bu yerda
+      CSD U2 Design Project_2018:
+        content1: tafsilotlar bu yerda
+      CSD U2 Design Project_2018_2019:
+        content1: tafsilotlar bu yerda
+      CSD U2 L1 Overview:
+        content1: tafsilotlar bu yerda
+      CSD U2 L2 Overview:
+        content1: tafsilotlar bu yerda
+      CSD U2 L3 Overview:
+        content1: tafsilotlar bu yerda
+      CSD U2 L4 Overview:
+        content1: tafsilotlar bu yerda
+      CSD U2 L5 Overview:
+        content1: tafsilotlar bu yerda
+      CSD U2 L6 Overview:
+        content1: tafsilotlar bu yerda
+      CSD U2 Lesson 6 Overview:
+        content1: tafsilotlar bu yerda
+      CSD U2 expand project:
+        content1: tafsilotlar bu yerda
+      CSD U2 expand project_2018:
+        content1: tafsilotlar bu yerda
+      CSD U2 expand project_2018_2019:
+        content1: tafsilotlar bu yerda
+      CSD U2 project guide:
+        content1: tafsilotlar bu yerda
+      CSD U2 project guide_2018:
+        content1: tafsilotlar bu yerda
+      CSD U2 project guide_2018_2019:
+        content1: tafsilotlar bu yerda
+      CSD U3 Card Examples_2018:
+        content1: tafsilotlar bu yerda
+      CSD U3 Card Examples_2018_2019:
+        content1: tafsilotlar bu yerda
+      CSD U3 game intro:
+        content1: tafsilotlar bu yerda
+      CSD U3 game intro_2018:
+        content1: tafsilotlar bu yerda
+      CSD U3 game intro_2018_2019:
+        content1: tafsilotlar bu yerda
+      CSD U3 platform intro:
+        content1: tafsilotlar bu yerda
+      CSD U3 platform intro_2018:
+        content1: tafsilotlar bu yerda
+      CSD U3 platform intro_2018_2019:
+        content1: tafsilotlar bu yerda
+      CSD U6 LED create intro:
+        content1: tafsilotlar bu yerda
+      CSD U6 LED create intro_2018:
+        content1: tafsilotlar bu yerda
+      CSD U6 LED create intro_2018_2019:
+        content1: tafsilotlar bu yerda
+      CSD U6 final intro:
+        content1: tafsilotlar bu yerda
+      CSD U6 final intro_2018:
+        content1: tafsilotlar bu yerda
+      CSD U6 final intro_2018_2019:
+        content1: tafsilotlar bu yerda
+      New Challenge Introduction:
+        content1: tafsilotlar bu yerda
+        markdown: "### Yangi Chellenge: tasodifiy almashtirish shifrini ... yangi
+          vidjet bilan buzish\n\nAgar biz butun alifboni almashtirish o'rniga alfavitning
+          har bir harfini tasodifiy alfavitning boshqa harfiga almashtirsak nima bo'ladi?
+          Bu usul ** tasodifiy almashtirish shifri deb ataladi. **\n\n! [] (https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nEndi
+          oddiy alifbo siljishi bilan kodlangan maxfiy xabar o'rniga ** tasodifiy
+          almashtirish ** bilan kodlangan xabarlarni ko'ramiz.\n\nBuni buzish juda
+          qiyin va buning uchun yanada murakkab vosita kerak, shuning uchun ...\n\n\"Davom
+          etish\" tugmasini bosganingizda, sizga turli xil narsalarni ko'rsatadigan
+          ** shifrlash vositasining yangi, yanada murakkab versiyasini ko'rasiz.\n\nAmmo
+          bu nimani anglatishi biroz sir bo'lib qoladi!\n\n### Sizning vazifangiz:\n\n
+          * Vositaning ushbu yangi versiyasida nimalar bo'layotganini aniqlang\n *
+          Sizga qanday ma'lumotlar taqdim etilmoqda?\n * Vosita sizga nima qilishga
+          imkon beishini aniqlang\n * Odatdagidek: dastlab siz uni buzolmaysiz. Bunda
+          u yoq, bu yoqni bosib ko'ring, atrofni titkilang.\n * Agar uni tushunsangiz,
+          tasodifiy almashtirish bilan shiafrlangan xabarni buzishingiz mumkin bo'ladi.\n
+          \n### Maslahat\n\n* ** E ** ingliz tilida ishlatiladigan eng keng tarqalgan
+          harf ekanligini bilasizmi?\n\n### Qayta yig'ilib muhokama qiling\n Biroz
+          vaqt u bilan o'ynaganingizdan so'ng, topgan narsalaringizni muhokama qilishingiz,
+          nima bo'layotganini va ushbu vositadan foydalanishning turli usullarini
+          bilishingizni tasdiqlash uchun siz kimdir bilan - sherik, kichik guruh yoki
+          butun sinf bilan uchrashishingiz kerak."
+      'Technique: Frequency Analysis':
+        content1: tafsilotlar bu yerda
+        markdown: |-
+          # O'rin almashtirish shifrlashni buzish
+
+          Tasodifiy o'rin almashtirish shifrini yorish uchun eng yaxshi usul ** chastotalar tahlili ** deb nomlanadi.
+
+          Qayta ishlangan: [wikipedia] (https://en.wikipedia.org/wiki/Frequency_analysis)
+
+          * ** Chastotalarni tahlil qilish ** - bu ba'zi harflarning ingliz tilida boshqalar bilan taqqoslashda * tez-tez * uchrashiga asoslangan usul.
+          * Masalan, ingliz tilidagi matn parchasida * E *, * T *, * A * va * O * eng keng tarqalgan, * Z *, * Q * va * X * esa kam uchraydi. Xuddi shunday, * TH *, * ER *, * ON * va * AN * harflari bir-birining yonida paydo bo'ladigan eng keng tarqalgan juft juftliklardir.
+          * Aslida, inglizcha matnlarning deyarli *barcha* namunalari uchun harflarning taqsimoti taxminan bir xil.
+
+
+          Oldingi sahifadagi vidjetning versiyasi **almashtirish shifrlashini** chastota tahlili orqali yorib o'tishda yordam berish uchun mo'ljallangan.
+
+          Shifrlangan xabardagi harflarning chastotasini ingliz nasrining odatiy asaridagi harflarning chastotasi bilan taqqoslaganda tahlil qilib, siz asl mumkin bo'lgan harf variantlarini qisqartirishni boshlashingiz mumkin.
+
+          Ushbu vosita sizga shifrlangan matndagi harflar chastotasi (to'q sariq) odatdagi inglizcha (ko'k) chastotalar bilan nisbatini ko'rsatadi.
+
+          ### Maslahat: Qayerdan boshlash kerak?
+
+          1. Qisqa so'zlarni toping va avval ularni "yorib qo'ying". Qancha bitta harfli so'zlarni bilasiz? ("a"). Juda keng tarqalgan 3 harfli so'z "the" dir.
+          2. Buni amalga oshirgandan so'ng, sizda eng keng tarqalgan harflar nima bilan almashtirilganini bilib olasiz. Ushbu qisman "yechilgan" so'zlarni ko'rib chiqish va yaxshi taxminlar qilish uchun siz intuitsiyangizni ishlatishingiz kerak.
+          3. Murakkab bo'lgan bir nechta harfni topganingizdan so'ng, qolganlari tezda "topiladi".
+          4. Harflarning chastotalarini taqqoslash oqilona taxminlar qilish uchun yaxshi tushuncha beradi.
+
+          ### Buni sinab ko'ring:
+          Quyidagi animatsiyada kimdir ishni boshlayotgani ko'rsatilgan. Mana ular nimani sinab ko'rishdi
+
+          * Dastlab belgilarni chastota bo'yicha saralash.
+          * "The" so'ziga mos keladigan belgilar guruhini aniqlang.
+          Bu yaxshi boshlanish!
+
+          ! [] (https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
+
+          ## Tasodifiy almashtirish yaxshimi?
+          * Biroz mashq qilgandan so'ng, tasodifiy almashtirish shifrini yorish uchun qancha vaqt ketadi?
+          * Bu usul yaxshimi yoki yo'qmi?
+      Terminology Recap:
+        content1: tafsilotlar bu yerda
+        markdown: |-
+          # To'xtash va takrorlash
+
+          ** Sezar shifri ** bilan shifrlangan xabarlarni tiklash juda oson, ayniqsa hisoblash vositasi yordamida. Ayniqsa, siz alfavitli shift shifrini krek qilish bilan shug'ullanganingizdan so'ng (juda oson, ha?) Qiyinroq narsani sinab ko'raylik.
+
+          ** Terminologiyani takrorlang: **
+
+          * ** Shifrlash ** - xabarlarni faqat "vakolatli" tomonlar o'qishi mumkin qilish uchun (sir tutish uchun) ularni kodlash jarayoni.
+          * ** Shifrni yechish ** - shifrlashni qaytarish, maxfiy xabarni olish va asl matnni tiklash jarayoni.
+          * ** Cipher ** - shifrlashni amalga oshiradigan texnikaning (yoki algoritmning) umumiy atamasi
+          * ** Sezar shifrlari ** - alifboni bir nechta belgilar soniga surib shifrlash texnikasi.
+          * ** Cracking ** - Shifrning barcha xususiyatlarini bilmasdan * maxfiy xabarni tiklashga urinayotganda, siz shifrlashni ** krek qilishga ** harakat qilgan bo'lasiz.
+
+
+          ** Keyingi Topshiriq **ni ko'rish uchun Davom etish tugmasini bosing ...
