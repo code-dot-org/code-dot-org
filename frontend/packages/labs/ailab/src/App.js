@@ -37,11 +37,12 @@ class PanelTabs extends Component {
   }
 
   render() {
-    const { panels, setCurrentPanel } = this.props;
-
     return null;
 
-    /*return (
+    /*
+    const { panels, setCurrentPanel } = this.props;
+
+    return (
       <div style={styles.tabContainer}>
         {panels.map(panel => {
           return (
@@ -55,7 +56,8 @@ class PanelTabs extends Component {
           );
         })}
       </div>
-    );*/
+    );
+    */
   }
 }
 
