@@ -3,6 +3,7 @@ on:
   push:
     paths:
     - '.github/workflows/**'
+    - '.github/actions/**'
     - 'bin/i18n/analyze_pr.rb'
   workflow_dispatch:
     inputs:
