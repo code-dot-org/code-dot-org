@@ -23,13 +23,22 @@ const styles = {
     justifyContent: 'space-evenly',
     backgroundColor: 'white'
   },
+  edit: {
+    fontSize: 14,
+    color: 'white',
+    background: color.default_blue,
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: '50%',
+    lineHeight: '30px'
+  },
   remove: {
     fontSize: 14,
     color: 'white',
     background: color.dark_red,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '98%',
+    width: '50%',
     lineHeight: '30px'
   }
 };
@@ -45,9 +54,30 @@ class VocabulariesEditor extends Component {
     removeVocabulary: PropTypes.func.isRequired
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      confirmRemovalDialogOpen: false,
+      vocabularyForRemoval: null,
+      newVocabularyDialogOpen: false,
+      vocabularyForEdit: null
+    };
+  }
+
   actionsCellFormatter = (actions, {rowData}) => {
     return (
       <div style={styles.actionsColumn}>
+        <div
+          style={styles.edit}
+          onMouseDown={() =>
+            this.setState({
+              newVocabularyDialogOpen: true,
+              vocabularyForEdit: rowData
+            })
+          }
+        >
+          <i className="fa fa-edit" />
+        </div>
         <div
           style={styles.remove}
           className="unit-test-remove-vocabulary"
@@ -124,14 +154,13 @@ class VocabulariesEditor extends Component {
     vocabulary
   });
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      confirmRemovalDialogOpen: false,
-      vocabularyForRemoval: null,
-      newVocabularyDialogOpen: false
-    };
-  }
+  afterVocabularySave = vocabulary => {
+    if (this.state.vocabularyForEdit) {
+      this.props.editVocabulary(vocabulary);
+    } else {
+      this.props.addVocabulary(vocabulary);
+    }
+  };
 
   handleAddVocabularyClick = () => {
     this.setState({newVocabularyDialogOpen: true});
@@ -165,7 +194,8 @@ class VocabulariesEditor extends Component {
           <AddVocabularyDialog
             handleClose={() => this.setState({newVocabularyDialogOpen: false})}
             courseVersionId={this.props.courseVersionId}
-            afterSave={this.props.addVocabulary}
+            afterSave={this.afterVocabularySave}
+            editingVocabulary={this.state.vocabularyForEdit}
           />
         )}
         {this.state.confirmRemovalDialogOpen && (

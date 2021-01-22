@@ -48,12 +48,21 @@ export default class AddVocabularyDialog extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      word: '',
-      definition: '',
-      isSaving: false,
-      error: ''
-    };
+    console.log(props);
+    if (this.props.editingVocabulary) {
+      this.state = {
+        ...this.props.editingVocabulary,
+        isSaving: false,
+        error: ''
+      };
+    } else {
+      this.state = {
+        word: '',
+        definition: '',
+        isSaving: false,
+        error: ''
+      };
+    }
   }
 
   handleWordChange = e => {
@@ -67,16 +76,24 @@ export default class AddVocabularyDialog extends Component {
   saveVocabulary = e => {
     e.preventDefault();
     this.setState({isSaving: true});
+    const url = this.props.editingVocabulary
+      ? `/vocabularies/${this.props.editingVocabulary.id}`
+      : '/vocabularies';
+    const method = this.props.editingVocabulary ? 'PATCH' : 'POST';
+    const data = {
+      word: this.state.word,
+      definition: this.state.definition,
+      courseVersionId: this.props.courseVersionId
+    };
+    if (this.props.editingVocabulary) {
+      data['key'] = this.props.editingVocabulary.key;
+    }
     $.ajax({
-      url: `/vocabularies`,
-      method: 'POST',
+      url: url,
+      method: method,
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({
-        word: this.state.word,
-        definition: this.state.definition,
-        courseVersionId: this.props.courseVersionId
-      })
+      data: JSON.stringify(data)
     })
       .done(data => {
         this.props.afterSave(data);
@@ -88,6 +105,7 @@ export default class AddVocabularyDialog extends Component {
   };
 
   render() {
+    console.log(this.state);
     const canSubmit =
       !this.state.isSaving &&
       this.state.word !== '' &&
@@ -122,7 +140,7 @@ export default class AddVocabularyDialog extends Component {
             onClick={this.saveVocabulary}
             disabled={!canSubmit}
           >
-            "Close and Save"
+            Close and Save
           </button>
         </DialogFooter>
       </BaseDialog>

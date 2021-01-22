@@ -44,7 +44,7 @@ class Vocabulary < ApplicationRecord
   end
 
   def summarize_for_lesson_edit
-    {key: key, word: word, definition: definition}
+    {id: id, key: key, word: word, definition: definition}
   end
 
   def generate_key
