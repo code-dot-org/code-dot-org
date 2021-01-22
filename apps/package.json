@@ -226,7 +226,6 @@
     "jshint": "^2.9.5",
     "jszip": "3.0.0",
     "memoize-one": "^5.1.1",
-    "microsoft-cognitiveservices-speech-sdk": "^1.12.0",
     "ml-knn": "^3.0.0",
     "node-sass": "^4.13.0",
     "object-fit-images": "^3.2.3",
