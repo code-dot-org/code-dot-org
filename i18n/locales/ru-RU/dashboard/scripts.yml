@@ -5659,3 +5659,7 @@ ru:
               display_name: 'Глава 2: Решение информационных проблем'
             cspSurvey:
               display_name: Опрос
+        contagion-pilot:
+          description_short: 'Используйте Sprite Lab для программирования симулятора эпидемии вируса.'
+          description: 'Используйте Sprite Lab для программирования симулятора эпидемии вируса.'
+          student_description: 'Используйте Sprite Lab для программирования симулятора эпидемии вируса.'
