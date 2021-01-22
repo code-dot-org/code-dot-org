@@ -3297,3 +3297,7 @@ sv:
             Automating Data Decisions:
               key: Automatisera databeslut
               name: Automatisera databeslut
+        contagion-pilot:
+          description_short: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
+          description: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
+          student_description: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'

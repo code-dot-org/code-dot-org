@@ -476,7 +476,15 @@
         "scrat 17": "OK, låt oss göra att igen för att öva - detta inte är så olikt, men se upp för väggen!",
         "scrat 18": "\"om-annars\" blocken kontrollerar ett villkor, och utför sedan en sak eller en annan. För att få mig till ekollonet, försök att använda detta nya block.",
         "scrat 19": "Mer träning med \"Om/annars\"-blocket, kan du få det rätt på första försöket?",
-        "scrat 20": "Kan du lägga till bara 3 block för att hjälpa mig att lösa en mer komplex labyrint? Om du gör det rätt, kan jag gå vilken kurvig väg som helst oavsett längd. Skynda! Isen smälter!"
+        "scrat 20": "Kan du lägga till bara 3 block för att hjälpa mig att lösa en mer komplex labyrint? Om du gör det rätt, kan jag gå vilken kurvig väg som helst oavsett längd. Skynda! Isen smälter!",
+        "outbreak1": "Skapa 10 friska sprites och 1 sjuk sprite. Ändra storlek på dem och få dem att vandra.",
+        "outbreak2": "Gör friska monster sjuka när de rör vid varandra.",
+        "outbreak3": "Ändra monster till monster med munskydd när du klickar på dem.",
+        "outbreak4": "Ändra antalet och storleken på monster-sprites i din simulering.",
+        "outbreak5": "Gör så att alla sjuka monster börjar återhämta sig när ett friskt monster rör vid ett sjukt monster.",
+        "outbreak6": "Lägg till en viss procentandels chans att monster blir sjuka när friska monster rör vid sjuka monster. Gör detta för alla kombinationer av monster med och utan munskydd.",
+        "outbreak7": "Skapa en ny dräkt för monster med immunitet mot viruset och använd den i din simulering.",
+        "outbreak8": "Dela ett meddelande med din simulering."
       }
     }
   }
