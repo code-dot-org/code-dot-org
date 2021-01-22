@@ -129,7 +129,7 @@ class Script < ApplicationRecord
   end
 
   def prevent_course_version_change?
-    lessons.any? {|l| l.resources.count > 0} || lessons.any? {|l| l.resources.count > 0}
+    lessons.any? {|l| l.resources.count > 0 ||  l.vocabularies.count > 0}
   end
 
   def course_version_not_changed
