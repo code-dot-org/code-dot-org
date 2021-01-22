@@ -700,3 +700,7 @@ ur:
               display_name: وباء کی سیمولیشن
             lessonGroup-3:
               display_name: متغیرات
+        contagion-pilot:
+          description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          student_description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
