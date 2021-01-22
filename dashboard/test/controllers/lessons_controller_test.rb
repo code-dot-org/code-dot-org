@@ -18,6 +18,7 @@ class LessonsControllerTest < ActionController::TestCase
       name: 'lesson display name',
       absolute_position: 1,
       relative_position: 1,
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -29,6 +30,7 @@ class LessonsControllerTest < ActionController::TestCase
       script_id: @script.id,
       lesson_group: lesson_group,
       name: 'second lesson',
+      has_lesson_plan: true,
       absolute_position: 2,
       relative_position: 2
     )
@@ -333,7 +335,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 2, @lesson2.relative_position
     assert_equal 2, @lesson2.absolute_position
 
-    @update_params['has_lesson_plan'] = true
+    @update_params['has_lesson_plan'] = false
     @update_params['lockable'] = true
 
     put :update, params: @update_params
