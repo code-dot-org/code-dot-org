@@ -1,24 +1,24 @@
 module Foorm
-  # Foorm Library Question Editor is only available on levelbuilder or test, for those with levelbuilder permissions.
-  class LibraryQuestionsController < ApplicationController
+  # Foorm Library Editor is only available on levelbuilder or test, for those with levelbuilder permissions.
+  class LibrariesController < ApplicationController
     before_action :require_levelbuilder_mode_or_test_env
     before_action :authenticate_user!
     authorize_resource
 
-    # GET '/foorm/library_questions/editor'
-    def editor
-      formatted_names_and_versions = Foorm::LibraryQuestion.all.map {|library_question| {name: library_question.library_name, version: library_question.library_version}}.uniq
-      formatted_names_and_versions.sort_by! {|library| library[:name]}
-      categories = formatted_names_and_versions.map {|data| data[:name].slice(0, data[:name].rindex('/'))}.uniq
+    def show
+      # Maybe update this to only return certain parts of the question?
+      render json: @library_question.to_json
+    end
 
-      @script_data = {
-        props: {
-          libraryNamesAndVersions: formatted_names_and_versions,
-          libraryCategories: categories
-        }.to_json
-      }
+    def update
+      @library_question.question = params[:question].to_json
 
-      render 'foorm/library_questions/editor'
+      if @library_question.save
+        # Maybe update this to only return the question content?
+        return render json: @library_question
+      else
+        return render status: :bad_request, json: @library_question.errors
+      end
     end
   end
 end
