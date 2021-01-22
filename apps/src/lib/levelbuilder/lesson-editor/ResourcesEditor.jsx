@@ -4,7 +4,6 @@ import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 import AddResourceDialog from './AddResourceDialog';
 import SearchBox from './SearchBox';
-import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {
@@ -12,19 +11,12 @@ import {
   editResource,
   removeResource
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import * as Table from 'reactabular-table';
+import {lessonEditorTableStyles} from './TableConstants';
 
 const styles = {
   resourceSearch: {
     paddingBottom: 10
-  },
-  resourceBox: {
-    border: '1px solid ' + color.light_gray,
-    padding: 10,
-    marginTop: 10,
-    marginBottom: 10
-  },
-  oddRow: {
-    backgroundColor: color.lightest_gray
   },
   actionsColumn: {
     display: 'flex',
@@ -37,7 +29,8 @@ const styles = {
     background: color.dark_red,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '48%'
+    width: '50%',
+    lineHeight: '30px'
   },
   edit: {
     fontSize: 14,
@@ -45,7 +38,18 @@ const styles = {
     background: color.default_blue,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '48%'
+    width: '50%',
+    lineHeight: '30px'
+  },
+  addButton: {
+    background: color.cyan,
+    borderRadius: 3,
+    color: color.white,
+    fontSize: 14,
+    padding: 7,
+    textAlign: 'center',
+    marginTop: 10,
+    marginLeft: 0
   }
 };
 
@@ -69,6 +73,125 @@ class ResourcesEditor extends Component {
       newResourceDialogOpen: false,
       confirmRemovalDialogOpen: false
     };
+  }
+
+  actionsCellFormatter = (actions, {rowData}) => {
+    return (
+      <div style={styles.actionsColumn}>
+        <div style={styles.edit} onMouseDown={() => this.handleEdit(rowData)}>
+          <i className="fa fa-edit" />
+        </div>
+        <div
+          style={styles.remove}
+          className="unit-test-remove-resource"
+          onMouseDown={() => this.handleRemoveResourceDialogOpen(rowData)}
+        >
+          <i className="fa fa-trash" />
+        </div>
+      </div>
+    );
+  };
+
+  getColumns() {
+    return [
+      {
+        property: 'key',
+        header: {
+          label: 'Key',
+          props: {
+            style: {width: '20%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'name',
+        header: {
+          label: 'Name',
+          props: {
+            style: {width: '15%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'type',
+        header: {
+          label: 'Type',
+          props: {
+            style: {width: '10%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'audience',
+        header: {
+          label: 'Audience',
+          props: {
+            style: {width: '7%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'url',
+        header: {
+          label: 'URL',
+          props: {
+            style: {width: '35%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'actions',
+        header: {
+          label: 'Actions',
+          props: {
+            style: {width: '10%'}
+          }
+        },
+        cell: {
+          formatters: [this.actionsCellFormatter],
+          props: {
+            style: {
+              ...lessonEditorTableStyles.actionsCell
+            }
+          }
+        }
+      }
+    ];
   }
 
   onSearchSelect = e => {
@@ -127,6 +250,7 @@ class ResourcesEditor extends Component {
   };
 
   render() {
+    const columns = this.getColumns();
     return (
       <div>
         {this.state.newResourceDialogOpen && (
@@ -156,13 +280,7 @@ class ResourcesEditor extends Component {
             onConfirm={this.removeResource}
           />
         )}
-        Resources
-        <input
-          type="hidden"
-          name="resources"
-          value={JSON.stringify(this.props.resources.map(r => r.key))}
-        />
-        <div style={styles.resourceBox}>
+        <div>
           <div style={styles.resourceSearch}>
             <label>Select a resource to add</label>
             <SearchBox
@@ -174,54 +292,17 @@ class ResourcesEditor extends Component {
               }}
             />
           </div>
-          <table style={{width: '100%'}}>
-            <thead>
-              <tr>
-                <th style={{width: '20%'}}>Key</th>
-                <th style={{width: '20%'}}>Name</th>
-                <th style={{width: '10%'}}>Type</th>
-                <th style={{width: '10%'}}>Audience</th>
-                <th style={{width: '30%'}}>URL</th>
-                <th style={{width: '10%'}}>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.props.resources.map((resource, index) => (
-                <tr
-                  key={resource.key}
-                  style={index % 2 === 1 ? styles.oddRow : {}}
-                >
-                  <td>{resource.key}</td>
-                  <td>{resource.name}</td>
-                  <td>{resource.type}</td>
-                  <td>{resource.audience}</td>
-                  <td>{resource.url}</td>
-                  <td style={styles.actionsColumn}>
-                    <div
-                      style={styles.edit}
-                      onMouseDown={() => this.handleEdit(resource)}
-                    >
-                      <i className="fa fa-edit" />
-                    </div>
-                    <div
-                      style={styles.remove}
-                      className="unit-test-remove-resource"
-                      onMouseDown={() =>
-                        this.handleRemoveResourceDialogOpen(resource)
-                      }
-                    >
-                      <i className="fa fa-times" />
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <Button
+          <Table.Provider columns={columns}>
+            <Table.Header />
+            <Table.Body rows={this.props.resources} rowKey="key" />
+          </Table.Provider>
+          <button
             onClick={this.handleAddResourceClick}
-            text={'Add New Resource'}
-            color={color.blue}
-          />
+            style={styles.addButton}
+            type="button"
+          >
+            <i className="fa fa-plus" style={{marginRight: 7}} /> Resource
+          </button>
         </div>
       </div>
     );

@@ -460,7 +460,13 @@
         "CSD U5 Amazon Data Video_2019": "Come Amazon Usa i Dati",
         "CSD U5 Netflix Data Video_2019": "Come Netflix Usa i Dati",
         "CSD U5 Waze Data Video_2019": "Come Waze Usa i Dati",
-        "outbreak7": "Immunità e Vaccini"
+        "outbreak7": "Immunità e Vaccini",
+        "outbreak1": "Simulazione del virus",
+        "outbreak2": "Simulazione del virus",
+        "outbreak3": "Simulazione del virus",
+        "outbreak4": "Modifica la tua simulazione",
+        "outbreak6": "Possibilità casuale",
+        "outbreak8": "Condividi un messaggio"
       }
     }
   }

@@ -2510,39 +2510,39 @@ ja-JP:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - text: ゾンビは行ったり来たりをくり返す。
+        - text: ゾンビは行ったり来たりをくり返します。
           correct: true
           feedback: せいかい！
         - text: ゾンビは、ひまわりに たどり着ける。
-          feedback: 不正解、ゾンビは行ったり来たりをくり返す。
+          feedback: 不正解、ゾンビは行ったり来たりをくり返します。
         - text: ゾンビは、右に曲がったら、その一角を回りつづける。
-          feedback: 不正解、ゾンビは行ったり来たりをくり返す。
+          feedback: 不正解、ゾンビは行ったり来たりをくり返します。
         - text: わかりません
           feedback: このプログラムでは、ゾンビは行ったり来たりをくり返します。
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - text: ゾンビは行ったり来たりをくり返す。
+        - text: ゾンビは行ったり来たりをくり返します。
           correct: true
           feedback: せいかい！
         - text: ゾンビは、ひまわりに たどり着ける。
-          feedback: 不正解、ゾンビは行ったり来たりをくり返す。
+          feedback: 不正解、ゾンビは行ったり来たりをくり返します。
         - text: ゾンビは、右に曲がったら、その一角を回りつづける。
-          feedback: 不正解、ゾンビは行ったり来たりをくり返す。
+          feedback: 不正解、ゾンビは行ったり来たりをくり返します。
         - text: わかりません
           feedback: このプログラムでは、ゾンビは行ったり来たりをくり返します。
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
-        - text: ゾンビは行ったり来たりをくり返す。
+        - text: ゾンビは行ったり来たりをくり返します。
           correct: true
           feedback: せいかい！
         - text: ゾンビは、ひまわりに たどり着ける。
-          feedback: 不正解、ゾンビは行ったり来たりをくり返す。
+          feedback: 不正解、ゾンビは行ったり来たりをくり返します。
         - text: ゾンビは、右に曲がったら、その一角を回りつづける。
-          feedback: 不正解、ゾンビは行ったり来たりをくり返す。
+          feedback: 不正解、ゾンビは行ったり来たりをくり返します。
         - text: わかりません
           feedback: このプログラムでは、ゾンビは行ったり来たりをくり返します。
         questions:
@@ -3522,3 +3522,11 @@ ja-JP:
         content1: 説明
       outbreak_story2:
         content1: 説明
+      courseD_EOC_2020:
+        display_name: コース最後のプロジェクト
+      courseE_EOC_2020:
+        display_name: コース最後のプロジェクト
+      courseExpress_EOC_2020:
+        display_name: コース最後のプロジェクト
+      courseF_EOC_2020:
+        display_name: コース最後のプロジェクト

@@ -1,0 +1,465 @@
+in:
+  data:
+    unplugged:
+      Unplug1:
+        title: crwdns3986:0crwdne3986:0
+        desc: crwdns4137:0crwdne4137:0
+        pdfs:
+          - crwdns3989:0crwdne3989:0
+        video: crwdns6405:0crwdne6405:0
+      Unplug2:
+        title: crwdns3990:0crwdne3990:0
+        desc: crwdns4138:0crwdne4138:0
+        pdfs:
+          - crwdns4140:0crwdne4140:0
+        video: crwdns6406:0crwdne6406:0
+      Unplug3:
+        title: crwdns3992:0crwdne3992:0
+        desc: crwdns3993:0crwdne3993:0
+        pdfs:
+          - crwdns4142:0crwdne4142:0
+        video: crwdns6407:0crwdne6407:0
+      Unplug4:
+        title: crwdns3995:0crwdne3995:0
+        desc: crwdns3996:0crwdne3996:0
+        pdfs:
+          - crwdns4144:0crwdne4144:0
+        video: crwdns6408:0crwdne6408:0
+      Unplug5:
+        title: crwdns4145:0crwdne4145:0
+        desc: crwdns3999:0crwdne3999:0
+        pdfs:
+          - crwdns4147:0crwdne4147:0
+        video: crwdns6409:0crwdne6409:0
+      Unplug6:
+        title: crwdns4001:0crwdne4001:0
+        desc: crwdns4002:0crwdne4002:0
+        pdfs:
+          - crwdns4149:0crwdne4149:0
+        video: crwdns6410:0crwdne6410:0
+      Unplug7:
+        title: crwdns4004:0crwdne4004:0
+        desc: crwdns4005:0crwdne4005:0
+        pdfs:
+          - crwdns4151:0crwdne4151:0
+        video: crwdns6411:0crwdne6411:0
+      Unplug8:
+        title: crwdns4007:0crwdne4007:0
+        desc: crwdns4850:0crwdne4850:0
+        pdfs:
+          - crwdns4153:0crwdne4153:0
+        video: crwdns6412:0crwdne6412:0
+      Unplug9:
+        title: crwdns4010:0crwdne4010:0
+        desc: crwdns4011:0crwdne4011:0
+        pdfs:
+          - crwdns4155:0crwdne4155:0
+        video: crwdns6413:0crwdne6413:0
+      Unplug10:
+        title: crwdns4013:0crwdne4013:0
+        desc: crwdns4014:0crwdne4014:0
+        pdfs:
+          - crwdns4157:0crwdne4157:0
+        video: crwdns6414:0crwdne6414:0
+      Unplug11:
+        title: crwdns4016:0crwdne4016:0
+        desc: crwdns4017:0crwdne4017:0
+        pdfs:
+          - crwdns4159:0crwdne4159:0
+        video: crwdns6415:0crwdne6415:0
+      UnplugHappyMaps:
+        title: crwdns6416:0crwdne6416:0
+        desc: crwdns6417:0crwdne6417:0
+      MoveIt:
+        title: crwdns6420:0crwdne6420:0
+        desc: crwdns6421:0crwdne6421:0
+      PlantASeed:
+        title: 'crwdns6424:0crwdne6424:0'
+        desc: crwdns6425:0crwdne6425:0
+      BuildingAFoundation:
+        title: crwdns6428:0crwdne6428:0
+        desc: crwdns6429:0crwdne6429:0
+      GettingLoopy:
+        title: crwdns6432:0crwdne6432:0
+        desc: crwdns6433:0crwdne6433:0
+      RelayProgramming:
+        title: crwdns6436:0crwdne6436:0
+        desc: crwdns6437:0crwdne6437:0
+      Conditionals:
+        title: crwdns6440:0crwdne6440:0
+        desc: crwdns6441:0crwdne6441:0
+      BigEvent:
+        title: crwdns6444:0crwdne6444:0
+        desc: crwdns6445:0crwdne6445:0
+      GoingPlacesSafely:
+        title: crwdns6448:0crwdne6448:0
+        desc: crwdns6449:0crwdne6449:0
+      GraphPaperProgramming:
+        title: crwdns6452:0crwdne6452:0
+        desc: crwdns6453:0crwdne6453:0
+      PaperPlanes:
+        title: 'crwdns6456:0crwdne6456:0'
+        desc: crwdns6457:0crwdne6457:0
+      BinaryBracelets:
+        title: crwdns6460:0crwdne6460:0
+        desc: crwdns6461:0crwdne6461:0
+      DigitalFootprint:
+        title: crwdns6464:0crwdne6464:0
+        desc: crwdns6465:0crwdne6465:0
+      ComputationalThinking:
+        title: crwdns6468:0crwdne6468:0
+        desc: crwdns6469:0crwdne6469:0
+      FunctionalSuncatchers:
+        title: crwdns6472:0crwdne6472:0
+        desc: crwdns6473:0crwdne6473:0
+      SongwritingParameters:
+        title: crwdns6476:0crwdne6476:0
+        desc: crwdns6477:0crwdne6477:0
+      DiceRace:
+        title: 'crwdns6480:0crwdne6480:0'
+        desc: crwdns6481:0crwdne6481:0
+      Internet:
+        title: crwdns6484:0crwdne6484:0
+        desc: crwdns6485:0crwdne6485:0
+      Crowdsourcing:
+        title: crwdns6488:0crwdne6488:0
+        desc: crwdns21455:0crwdne21455:0
+      DigitalCitizenship:
+        title: crwdns6492:0crwdne6492:0
+        desc: crwdns6493:0crwdne6493:0
+      TangramAlgorithms:
+        title: crwdns22265:0crwdne22265:0
+        desc: crwdns22266:0crwdne22266:0
+      EnvelopeVariables:
+        title: crwdns22267:0crwdne22267:0
+        desc: crwdns22268:0crwdne22268:0
+      MadGlibs:
+        title: crwdns22269:0crwdne22269:0
+        desc: crwdns22270:0crwdne22270:0
+      ForLoopFun:
+        title: crwdns22271:0crwdne22271:0
+        desc: crwdns22272:0crwdne22272:0
+      SongwritingWithParameters:
+        title: crwdns22273:0crwdne22273:0
+        desc: 'crwdns22274:0crwdne22274:0'
+      BinaryImages:
+        title: crwdns22275:0crwdne22275:0
+        desc: crwdns22276:0crwdne22276:0
+      VideoGamesCoordinatePlanes:
+        title: crwdns23715:0crwdne23715:0
+        desc: crwdns35442:0crwdne35442:0
+      Contracts:
+        title: crwdns35443:0crwdne35443:0
+        desc: crwdns35444:0crwdne35444:0
+      DesignRecipe:
+        title: crwdns23719:0crwdne23719:0
+        desc: crwdns35445:0crwdne35445:0
+      Booleans:
+        title: crwdns35446:0crwdne35446:0
+        desc: crwdns35447:0crwdne35447:0
+      ConditionalsPiecewiseFunctions:
+        title: crwdns23723:0crwdne23723:0
+        desc: crwdns35448:0crwdne35448:0
+      CollisionDetection:
+        title: crwdns35449:0crwdne35449:0
+        desc: crwdns35450:0crwdne35450:0
+      courseA_unplugged_loops:
+        title: crwdns84657:0crwdne84657:0
+        desc: crwdns84658:0crwdne84658:0
+      courseB_unplugged_MRF:
+        title: crwdns84659:0crwdne84659:0
+        desc: crwdns84660:0crwdne84660:0
+      courseB_unplugged_loopyMRF:
+        title: crwdns84661:0crwdne84661:0
+        desc: crwdns84662:0crwdne84662:0
+      courseC_Unplugged_ScreenOutTheMean:
+        title: crwdns84663:0crwdne84663:0
+        desc: crwdns84664:0crwdne84664:0
+      courseD_unplugged_digitalCitizenship:
+        title: crwdns84665:0crwdne84665:0
+        desc: crwdns84666:0crwdne84666:0
+      courseE_unplugged_privateInformation:
+        title: 'crwdns84667:0crwdne84667:0'
+        desc: crwdns84668:0crwdne84668:0
+      courseF_unplugged_powerOfWords:
+        title: crwdns84669:0crwdne84669:0
+        desc: crwdns84670:0crwdne84670:0
+      deeper learning description:
+        title: 'crwdns85737:0crwdne85737:0'
+        desc: 'crwdns85738:0crwdne85738:0'
+      courseAB_unplugged_plantASeed:
+        title: 'crwdns88632:0crwdne88632:0'
+        desc: crwdns88633:0crwdne88633:0
+      courseA_unplugged_happyMaps:
+        title: crwdns88634:0crwdne88634:0
+        desc: crwdns88635:0crwdne88635:0
+      courseA_unplugged_goingPlacesSafely:
+        title: crwdns88636:0crwdne88636:0
+        desc: crwdns88637:0crwdne88637:0
+      courseABC_unplugged_bigEvent:
+        title: crwdns88638:0crwdne88638:0
+        desc: crwdns88639:0crwdne88639:0
+      courseB_unplugged_digitalFootprint:
+        title: crwdns88640:0crwdne88640:0
+        desc: crwdns88641:0crwdne88641:0
+      courseC_unplugged_buildingAFoundation:
+        title: crwdns88642:0crwdne88642:0
+        desc: crwdns88643:0crwdne88643:0
+      courseC_unplugged_paperPlanes:
+        title: 'crwdns88644:0crwdne88644:0'
+        desc: crwdns88645:0crwdne88645:0
+      courseC_unplugged_gettingLoopy:
+        title: crwdns88646:0crwdne88646:0
+        desc: crwdns88647:0crwdne88647:0
+      courseC_unplugged_binaryBracelets:
+        title: crwdns88648:0crwdne88648:0
+        desc: crwdns88649:0crwdne88649:0
+      courseD_unplugged_graphPaperProgramming:
+        title: crwdns88650:0crwdne88650:0
+        desc: crwdns88651:0crwdne88651:0
+      courseD_unplugged_relayProgramming:
+        title: crwdns88652:0crwdne88652:0
+        desc: crwdns88653:0crwdne88653:0
+      courseD_unplugged_conditionalsCards:
+        title: crwdns88654:0crwdne88654:0
+        desc: crwdns88655:0crwdne88655:0
+      courseD_unplugged_binaryImages:
+        title: crwdns88656:0crwdne88656:0
+        desc: crwdns88657:0crwdne88657:0
+      courseE_unplugged_diceRace:
+        title: 'crwdns88658:0crwdne88658:0'
+        desc: crwdns88659:0crwdne88659:0
+      courseE_unplugged_songwritingParameters:
+        title: crwdns88660:0crwdne88660:0
+        desc: crwdns88661:0crwdne88661:0
+      courseE_unplugged_internet:
+        title: crwdns88662:0crwdne88662:0
+        desc: crwdns88663:0crwdne88663:0
+      courseE_unplugged_crowdsourcing:
+        title: crwdns88664:0crwdne88664:0
+        desc: crwdns88665:0crwdne88665:0
+      courseE_unplugged_songwriting:
+        title: crwdns88666:0crwdne88666:0
+        desc: crwdns88667:0crwdne88667:0
+      courseF_unplugged_tangrams:
+        title: crwdns88668:0crwdne88668:0
+        desc: crwdns88669:0crwdne88669:0
+      courseF_unplugged_envelopeVariables:
+        title: crwdns88670:0crwdne88670:0
+        desc: crwdns88671:0crwdne88671:0
+      courseF_unplugged_forLoopFun:
+        title: crwdns88672:0crwdne88672:0
+        desc: crwdns88673:0crwdne88673:0
+      courseF_unplugged_songwritingParameters:
+        title: crwdns88674:0crwdne88674:0
+        desc: 'crwdns88675:0crwdne88675:0'
+      swipeRightPassThrough:
+        title: crwdns93141:0crwdne93141:0
+        desc: "crwdns93142:0crwdne93142:0"
+      swipeRightPassThrough-test123:
+        title: crwdns93143:0crwdne93143:0
+        desc: "crwdns93144:0crwdne93144:0"
+      brad-repro-bug-000:
+        title: crwdns93145:0crwdne93145:0
+        desc: "crwdns93146:0crwdne93146:0"
+      courseB_unplugged_MRF_2018:
+        title: crwdns112003:0crwdne112003:0
+        desc: crwdns112004:0crwdne112004:0
+      BuildingAFoundation_2018:
+        title: crwdns112005:0crwdne112005:0
+        desc: crwdns112006:0crwdne112006:0
+      courseB_unplugged_loopyMRF_2018:
+        title: crwdns112007:0crwdne112007:0
+        desc: crwdns112008:0crwdne112008:0
+      DiceRace_2018:
+        title: crwdns112009:0crwdne112009:0
+        desc: crwdns112010:0crwdne112010:0
+      courseE_unplugged_privateInformation_2018:
+        title: crwdns112011:0crwdne112011:0
+        desc: crwdns112012:0crwdne112012:0
+      SongwritingParameters_2018:
+        title: crwdns112013:0crwdne112013:0
+        desc: crwdns112014:0crwdne112014:0
+      Internet_2018:
+        title: crwdns112015:0crwdne112015:0
+        desc: crwdns112016:0crwdne112016:0
+      Crowdsourcing_2018:
+        title: crwdns112017:0crwdne112017:0
+        desc: crwdns112018:0crwdne112018:0
+      TangramAlgorithms_2018:
+        title: crwdns112019:0crwdne112019:0
+        desc: crwdns112020:0crwdne112020:0
+      courseF_unplugged_powerOfWords_2018:
+        title: crwdns112021:0crwdne112021:0
+        desc: crwdns112022:0crwdne112022:0
+      EnvelopeVariables_2018:
+        title: crwdns112023:0crwdne112023:0
+        desc: crwdns112024:0crwdne112024:0
+      ForLoopFun_2018:
+        title: crwdns112025:0crwdne112025:0
+        desc: crwdns112026:0crwdne112026:0
+      SongwritingWithParameters_2018:
+        title: crwdns112027:0crwdne112027:0
+        desc: crwdns112028:0crwdne112028:0
+      PlantASeed_2018:
+        title: 'crwdns116042:0crwdne116042:0'
+        desc: crwdns116043:0crwdne116043:0
+      UnplugHappyMaps_2018:
+        title: crwdns116044:0crwdne116044:0
+        desc: crwdns116045:0crwdne116045:0
+      GoingPlacesSafely_2018:
+        title: crwdns116046:0crwdne116046:0
+        desc: crwdns116047:0crwdne116047:0
+      courseA_unplugged_loops_2018:
+        title: crwdns116048:0crwdne116048:0
+        desc: crwdns116049:0crwdne116049:0
+      BigEvent_2018:
+        title: crwdns116050:0crwdne116050:0
+        desc: crwdns116051:0crwdne116051:0
+      GraphPaperProgramming_2018:
+        title: crwdns116869:0crwdne116869:0
+        desc: crwdns116870:0crwdne116870:0
+      courseD_unplugged_digitalCitizenship_2018:
+        title: crwdns116871:0crwdne116871:0
+        desc: crwdns116872:0crwdne116872:0
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: crwdns116873:0crwdne116873:0
+        desc: crwdns116874:0crwdne116874:0
+      Conditionals_2018:
+        title: crwdns116875:0crwdne116875:0
+        desc: crwdns116876:0crwdne116876:0
+      DigitalFootprint_2018:
+        title: crwdns116877:0crwdne116877:0
+        desc: crwdns116878:0crwdne116878:0
+      BinaryImages_2018:
+        title: crwdns116879:0crwdne116879:0
+        desc: crwdns116880:0crwdne116880:0
+      PaperPlanes_2018:
+        title: 'crwdns118096:0crwdne118096:0'
+        desc: crwdns118097:0crwdne118097:0
+      GettingLoopy_2018:
+        title: crwdns118098:0crwdne118098:0
+        desc: crwdns118099:0crwdne118099:0
+      BinaryBracelets_2018:
+        title: crwdns118100:0crwdne118100:0
+        desc: crwdns118101:0crwdne118101:0
+      MoveItMoveIt_2018:
+        title: crwdns118102:0crwdne118102:0
+        desc: 'crwdns118103:0crwdne118103:0'
+      courseB_unplugged_CnC_2018:
+        title: crwdns134483:0crwdne134483:0
+        desc: crwdns134484:0crwdne134484:0
+      courseE_unplugged_CnC_2018:
+        title: crwdns134485:0crwdne134485:0
+        desc: crwdns134486:0crwdne134486:0
+      RelayProgramming_2018:
+        title: crwdns134772:0crwdne134772:0
+        desc: crwdns134773:0crwdne134773:0
+      courseB_unplugged_MRF_2019:
+        title: crwdns304912:0crwdne304912:0
+        desc: crwdns304914:0crwdne304914:0
+      BuildingAFoundation_2019:
+        title: 'crwdns304916:0crwdne304916:0'
+        desc: 'crwdns304918:0crwdne304918:0'
+      courseB_unplugged_loopyMRF_2019:
+        title: crwdns304920:0crwdne304920:0
+        desc: 'crwdns304922:0crwdne304922:0'
+      Conditionals_2019:
+        title: crwdns304924:0crwdne304924:0
+        desc: crwdns304926:0crwdne304926:0
+      courseF_unplugged_powerOfWords_2019:
+        title: 'crwdns304928:0crwdne304928:0'
+        desc: 'crwdns304930:0crwdne304930:0'
+      EnvelopeVariables_2019:
+        title: 'crwdns304932:0crwdne304932:0'
+        desc: 'crwdns304934:0crwdne304934:0'
+      ForLoopFun_2019:
+        title: 'crwdns304936:0crwdne304936:0'
+        desc: 'crwdns304938:0crwdne304938:0'
+      GraphPaperProgramming_2019:
+        title: crwdns331694:0crwdne331694:0
+        desc: crwdns331696:0crwdne331696:0
+      RelayProgramming_2018_2019:
+        title: crwdns331698:0crwdne331698:0
+        desc: crwdns331700:0crwdne331700:0
+      courseD_unplugged_digitalCitizenship_2019:
+        title: crwdns331702:0crwdne331702:0
+        desc: crwdns331704:0crwdne331704:0
+      BinaryImages_2019:
+        title: crwdns331706:0crwdne331706:0
+        desc: crwdns331708:0crwdne331708:0
+      courseE_unplugged_privateInformation_2019:
+        title: crwdns331710:0crwdne331710:0
+        desc: crwdns331712:0crwdne331712:0
+      SongwritingParameters_2019:
+        title: 'crwdns331714:0crwdne331714:0'
+        desc: 'crwdns331716:0crwdne331716:0'
+      courseE_unplugged_CnC_2019:
+        title: crwdns331718:0crwdne331718:0
+        desc: crwdns331720:0crwdne331720:0
+      Internet_2019:
+        title: 'crwdns331722:0crwdne331722:0'
+        desc: 'crwdns331724:0crwdne331724:0'
+      Crowdsourcing_2019:
+        title: 'crwdns331726:0crwdne331726:0'
+        desc: 'crwdns331728:0crwdne331728:0'
+      GettingLoopy_2019:
+        title: crwdns331730:0crwdne331730:0
+        desc: crwdns331732:0crwdne331732:0
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: crwdns331734:0crwdne331734:0
+        desc: crwdns331736:0crwdne331736:0
+      BigEvent_2019:
+        title: crwdns331738:0crwdne331738:0
+        desc: crwdns331740:0crwdne331740:0
+      BinaryBracelets_2019:
+        title: crwdns331742:0crwdne331742:0
+        desc: crwdns331744:0crwdne331744:0
+      PaperPlanes_2019:
+        title: 'crwdns390774:0crwdne390774:0'
+        desc: crwdns390776:0crwdne390776:0
+      test-uid-passthrough:
+        title: 'crwdns391584:0crwdne391584:0'
+        desc: "crwdns391586:0crwdne391586:0"
+      PlantASeed_2019:
+        title: 'crwdns394102:0crwdne394102:0'
+        desc: crwdns394104:0crwdne394104:0
+      UnplugHappyMaps_2019:
+        title: crwdns394106:0crwdne394106:0
+        desc: crwdns394108:0crwdne394108:0
+      GoingPlacesSafely_2019:
+        title: crwdns394110:0crwdne394110:0
+        desc: crwdns394112:0crwdne394112:0
+      courseA_unplugged_loops_2019:
+        title: crwdns394114:0crwdne394114:0
+        desc: crwdns394116:0crwdne394116:0
+      MoveItMoveIt_2019:
+        title: crwdns394118:0crwdne394118:0
+        desc: 'crwdns394120:0crwdne394120:0'
+      DigitalFootprint_2019:
+        title: crwdns394122:0crwdne394122:0
+        desc: crwdns394124:0crwdne394124:0
+      courseB_unplugged_CnC_2019:
+        title: crwdns394126:0crwdne394126:0
+        desc: crwdns394128:0crwdne394128:0
+      GraphingData_2019:
+        title: crwdns395898:0crwdne395898:0
+        desc: crwdns395900:0crwdne395900:0
+      courseE_unplugged_accessAbility_2019:
+        title: crwdns400946:0crwdne400946:0
+        desc: crwdns400948:0crwdne400948:0
+      courseE_simon_says_2019:
+        title: crwdns403862:0crwdne403862:0
+        desc: "crwdns403864:0crwdne403864:0"
+      courseB_unplugged_passwords_2019:
+        title: crwdns404068:0crwdne404068:0
+        desc: crwdns404070:0crwdne404070:0
+      timeforcs_demo_crowdsourcing:
+        title: crwdns404338:0crwdne404338:0
+        desc: 'crwdns404340:0crwdne404340:0'
+      timeforcs_demo_conditionals:
+        title: crwdns404342:0crwdne404342:0
+        desc: crwdns404344:0crwdne404344:0
+      TheRightApp_2019:
+        title: crwdns404346:0crwdne404346:0
+        desc: "crwdns404348:0crwdne404348:0"

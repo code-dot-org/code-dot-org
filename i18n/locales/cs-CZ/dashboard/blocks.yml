@@ -1011,6 +1011,7 @@ cs:
             '"y"': souřadnice Y
             '"direction"': směr pohybu
             '"tint"': odstín
+            '"speed"': rychlost
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1146,6 +1147,8 @@ cs:
             '"West"': západ
       gamelab_moveToward:
         text: pohni {SPRITE} o {DISTANCE} pixelů směrem k {TARGET}
+      gamelab_newSpritePointer:
+        text: klik na {SPRITE}
       gamelab_objectSpritePointer:
         text: klik na {SPRITE}
       gamelab_patrollingUpDown:
@@ -1198,6 +1201,13 @@ cs:
             undefined: žádný
       gamelab_setBackgroundImageAs:
         text: nastav pozadí na {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': středně
+            '100': large
       gamelab_setProp:
         text: nastav {SPRITE} {PROPERTY} na {VAL}
         options:
@@ -1207,6 +1217,7 @@ cs:
             '"x"': souřadnice X
             '"y"': souřadnice Y
             '"direction"': směr pohybu
+            '"speed"': rychlost
       gamelab_setSizes:
         text: nastavit {SPRITE} {PROPERTY} na {N}%
         options:

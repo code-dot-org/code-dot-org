@@ -1659,7 +1659,7 @@
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "W partnerstwie z: "
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* to kompleksowy program \"od dzieciństwa do kariery\", który inspiruje, kształci i szkoli dzieci i młodzież o niskich dochodach i innych przeciwnościach, aby kontynuowały rozwój kariery w dziedzinie informatyki. <a href='%{amazon_future_engineer_link}' target='_blank'> Dowiedz się więcej </a>"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* to kompleksowy program od dzieciństwa do kariery, który inspiruje, kształci i szkoli dzieci i młodzież z rodzin o niskich dochodach i pokrzywdzonych w inny sposób, aby kontynuowały zdobywanie zawodu w dziedzinie informatyki. [Więcej informacji](%{amazon_future_engineer_link})"
-  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "Jeśli jesteś uczniem lub nauczycielem we Francji, wypróbuj [Amazon Future Engineer - France](%{amazon_future_engineer_france_link})"
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "Jeśli jesteś uczniem lub nauczycielem we Francji, odwiedź [Amazon Future Engineer - France](%{amazon_future_engineer_france_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Dowiedz się więcej o programie Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "O programie Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_description: "Dowiedz się o programie od przedszkola do kariery firmy Amazon, aby zwiększyć dostęp do edukacji informatycznej. Znajdź informacje o tym, jak wziąć udział w naszych obozach letnich, lekcjach informatyki w szkołach średnich, stypendiach i stażach."
@@ -1696,7 +1696,7 @@
   hoc2019_mc_mee_description1: 'Nowy samouczek dla Minecraftu w ramach Godziny Kodowania jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac i iPad. Naucz się podstaw programowania i odkrywaj sztuczną inteligencję ze swoimi uczniami!'
   hoc2019_mc_mee_description2: "Uzyskaj dostęp do bezpłatnych zasobów, w tym: planu lekcji, filmów, programu informatyki i szkoleń dla nauczycieli."
   hoc2019_mc_more_coding_resources: "Więcej zasobów do kodowania"
-  hoc2019_dance_previous_versions: "Czy szukasz poprzedniej wersji Potańcówki?  \nKliknij tutaj, aby zacząć [Część 1](%{dance_2018_link}) i [Część  2](%{dance_extras_2018_link}) z ostatniego roku."
+  hoc2019_dance_previous_versions: "Czy szukasz poprzedniej wersji Potańcówki?  \nKliknij tutaj, aby zacząć [Część 1](%{dance_2018_link}) i [Część  2](%{dance_extras_2018_link}) z 2018."
   homepage_slot_text_title_at_home: "Ucz się w domu"
   homepage_slot_text_blurb_at_home: "Dzięki tym materiałom to jest proste"
   homepage_slot_text_link_code_break: "Przejdź do Code Brake"
@@ -1709,7 +1709,7 @@
   hoc2020_mc_available_mee: 'Dostępne w Minecrafcie: Education Edition'
   hoc2020_mc_mee_title: "Opowieść Minecrafta o dwóch wioskach"
   hoc2020_mc_mee_description: 'Nowy samouczek Godziny Kodowania dla Minecrafta jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac, Chromebooka i iPada. Naucz się podstaw kodowania i poznaj różnorodność i integrację ze swoimi uczniami! Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli.'
-  footer_powered_by_aws: "Zasilany przez Amazon Web Services"
+  footer_powered_by_aws: "Amazon Web Services i logo “Powered by AWS” są znakami towarowymi Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych krajach.\n"
   footer_built_on_github: "Oparty na GitHub firmy Microsoft"
   codebytes_skinny_banner_title: "Dołącz do nas 7-11 grudnia do naszych mini-lekcjach na żywo z CodeBytes!"
   codebytes_skinny_banner_description: 'Dołącz do nas każdego dnia Tygodnia Edukacji Informatycznej z CodeBytes, na 20-minutowe interaktywne lekcje informatyki. Transmisja na żywo dwa razy dziennie, CodeBytes to dla uczniów świetny sposób na udział w wirtualnej #HourOfCode!'

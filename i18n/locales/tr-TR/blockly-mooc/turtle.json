@@ -48,7 +48,7 @@
   "jumpForward": "İleri atla",
   "jumpToOverDown": "%2'den %1'e zıpla",
   "jumpToPosition": "%1 konumuna zıpla",
-  "jumpByDirection": "%1'i %2 piksel hareket ettir",
+  "jumpByDirection": "%1'i %2 piksel zipla ettir",
   "jumpTooltip": "Sanatçıyı, hiç iz bırakmadan taşır.",
   "jumpEastTooltip": "Sanatçıyı doğuya hiç iz bırakmadan taşır.",
   "jumpNorthTooltip": "Sanatçıyı kuzeye hiç iz bırakmadan taşır.",

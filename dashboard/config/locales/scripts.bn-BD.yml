@@ -184,6 +184,7 @@ bn:
               name: শিল্পী
             The Maze:
               name: গোলকধাঁধা
+          student_description: কোড সম্পাদনা করুন
         events:
           title: ঘটনাবলী
           description: ঘটনাবলী
@@ -191,6 +192,7 @@ bn:
           lessons:
             Bounce:
               name: বল লাফানো
+          student_description: ঘটনাবলী
         flappy:
           title: ফ্লাপি কোড
           lessons:
@@ -208,6 +210,7 @@ bn:
           lessons:
             Step:
               name: ধাপ
+          student_description: ধাপ টিউটোরিয়াল
         cspunit1:
           description_short: প্রোগ্রামিং
         algebraPD:
@@ -370,15 +373,21 @@ bn:
             তারকা যুদ্ধ খেলা তৈরি করি।
           description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
             নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
+          student_description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
+            নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
         starwarsblocks:
           description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব
             তারকা যুদ্ধ খেলা তৈরি করি।
           description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
             নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
+          student_description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
+            নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
         mc:
           title: মাইনক্র্যাফট এক ঘণ্টার কোড
           description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে
             যেতে কোড ব্লকগুলি ব্যবহার করুন।
+          student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের
+            নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1340,6 +1349,9 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
+          lessons:
+            Focus Area 1:
+              name: পাঠ্যক্রম
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -1625,7 +1637,142 @@ bn:
               name: কোর্স A
             Course B:
               name: কোর্স B
-        ml-playground:
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: ভূমিকা
+            lessonGroup-3:
+              display_name: চলকগুলো
+        csd3-2021:
+          description_short: প্রোগ্রামিং
           lessons:
-            intro:
-              name: ভূমিকা
+            Variables:
+              key: চলকগুলো
+              name: চলকগুলো
+            Text:
+              key: পাঠ
+              name: পাঠ
+            Conditionals:
+              key: শর্তযুক্ত
+              name: শর্তযুক্ত
+            Functions:
+              key: ফাংশনগুলি
+              name: ফাংশনগুলি
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
+              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
+        csp1-2021:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: তালিকা
+            csp_loops:
+              display_name: চক্র
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: আনন্দের মানচিত্র
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        courseb-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        coursec-2021:
+          lessons:
+            'Events: The Big Event':
+              name: বড় ঘটনা
+          lesson_groups:
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: ছক-কাগজে প্রোগ্রামিং
+            Relay Programming:
+              key: রিলে-স্যুইচ প্রোগ্রামিং
+              name: রিলে-স্যুইচ প্রোগ্রামিং
+            Conditionals with Cards:
+              key: কার্ড সঙ্গে শর্ত
+              name: কার্ড সঙ্গে শর্ত
+            'Unplugged: Binary':
+              name: দ্বিমিক ছবি
+            Artist Binary:
+              key: শিল্পী দ্বিমিক
+              name: শিল্পী দ্বিমিক
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: শর্তযুক্ত
+            'Functions: Songwriting':
+              name: গান লিখা
+          lesson_groups:
+            csf_nested_loops:
+              display_name: নেষ্টেড লুপ
+            csf_functions:
+              display_name: ফাংশনগুলি
+        coursef-2021:
+          lessons:
+            Internet:
+              key: ইন্টারনেট
+              name: ইন্টারনেট
+          lesson_groups:
+            csf_variables:
+              display_name: চলকগুলো
+            csf_for_loops:
+              display_name: ফর লুপ
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_variables:
+              display_name: চলকগুলো
+            csf_for_loops:
+              display_name: ফর লুপ
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: ভূমিকা
+            lessonGroup-3:
+              display_name: চলকগুলো

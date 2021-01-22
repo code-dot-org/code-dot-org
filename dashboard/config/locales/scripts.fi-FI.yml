@@ -54,6 +54,12 @@ fi:
               name: 'Pelilabra: Luo tarina'
             The Big Event:
               name: Suuri tapahtuma
+          student_description: Kurssi 1 on suunniteltu juuri lukemaan oppineille lapsille.
+            Kurssin tavoitteina on opettaa lapsille taitoja, joita tarvitaan tietokoneohjelmien
+            tekemisessä. Näitä taitoja ovat mm. yhteistyö, ongelmanratkaisutaito ja
+            vaikeiden tehtävien ratkaisemisessa tarvittava sinnikkyys. Kurssin aikana
+            oppilaat luovat oman pelin tai tarinan, jonka he voivat jakaa. Suositellaan
+            esikoululaisille ja ekaluokkalaisille.
         course2:
           title: Kurssi 2
           description: Kurssi 2 on tarkoitettu oppilaille, jotka osaavat jo lukea
@@ -101,6 +107,10 @@ fi:
               name: Suuri tapahtuma
             Your Digital Footprint:
               name: Digitaalinen jalanjälkesi
+          student_description: Kurssi 2 on tarkoitettu oppilaille, jotka osaavat jo
+            lukea ja joilla on jo aiempaa ohjelmointikokemusta. Tällä kurssilla oppilaat
+            luovat ohjelmia, jotka ratkaisevat pulmia, ja kehittävät vuorovaikutteisia
+            pelejä ja tarinoita, joita he voivat jakaa. Suositellaan luokille 2-5.
         course3:
           title: Kurssi 3
           description: Kurssi 3 on suunniteltu opiskelijoille, jotka ovat käyneet
@@ -153,6 +163,11 @@ fi:
               name: 'Pelilabra: Luo peli'
             'Studio: Create a Story':
               name: 'Pelilabra: Luo tarina'
+          student_description: Kurssi 3 on suunniteltu opiskelijoille, jotka ovat
+            käyneet kurssin 2. Opiskelijat kaivautuvat syvemmälle ohjelmointiin liittyviin
+            monimutkaisempiin ongelmiin, jotka on tuttuja aikaisempien kurssien pohjalta.
+            Kurssin loppuun mennessä oppilaat luovat interaktiivisia tarinoita ja
+            pelejä, joita he voivat jakaa muiden kanssa. Suositeltu luokkataso 4-5.
         playlab:
           title: Pelilabra
           description: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
@@ -160,6 +175,7 @@ fi:
           lessons:
             Play Lab:
               name: Pelilabra
+          student_description: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
         artist:
           title: Taiteilija
           description: Tee hienoja piirrustuksia ja kuvioita Taiteilijan kanssa!
@@ -167,6 +183,7 @@ fi:
           lessons:
             Artist:
               name: Taiteilija
+          student_description: Tee hienoja piirrustuksia ja kuvioita Taiteilijan kanssa!
         hourofcode:
           title: Klassinen sokkelo
           description: Kokeile tietotekniikan perusteita peleistä tuttujen hahmojen
@@ -177,6 +194,9 @@ fi:
           lessons:
             Maze:
               name: Sokkelo
+          student_description: Kokeile tietotekniikan perusteita peleistä tuttujen
+            hahmojen kanssa. Mukana mm. Angry Birds, Plants vs. Zombies sekä Scrat
+            elokuvasta Ice Age!
         frozen:
           title: Koodaa Annan ja Elsan kanssa
           description: Koodataan Annan ja Elsan kanssa kun he tutkivat jään kauneutta
@@ -187,6 +207,9 @@ fi:
           lessons:
             Artist:
               name: Taiteilija
+          student_description: Koodataan Annan ja Elsan kanssa kun he tutkivat jään
+            kauneutta ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen
+            ja luot taianomaisen lumimaan, jonka voit myös jakaa ystäviesi kanssa!
         course4:
           title: Kurssi 4
           description_short: Suosittelemme kurssien 2 ja 3 suorittamista ennen kurssia
@@ -262,6 +285,8 @@ fi:
               name: 'Maanviljelijä: "niin kauan kuin" -silmukka'
             'Maze: Sequence':
               name: 'Sokkelo: komentosarja'
+          student_description: Lyhyt kertaus käsitteistä oppilaille, jotka eivät ole
+            käyneet kursseja 2 ja 3.
         usability:
           title: Käytettävyystestaus
           description: Valikoima kurssin 4 tasoista käytettävyystestaukseen.
@@ -276,6 +301,7 @@ fi:
               name: Johdanto
             Variables:
               name: Muuttujat
+          student_description: Valikoima kurssin 4 tasoista käytettävyystestaukseen.
         algebra:
           title: Tietotekniikka algebrassa
           description: Opi funktionaalista ohjelmointia algebran avulla
@@ -309,6 +335,7 @@ fi:
               name: 'Tietokoneeton tekeminen: suunnitteluresepti'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Tietokoneeton tekeminen: videopelit ja koordinaattitasot'
+          student_description: Opi funktionaalista ohjelmointia algebran avulla
         infinity:
           title: Disneyn Infinity-Pelilabra
           description: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat Disneyn
@@ -318,6 +345,8 @@ fi:
           lessons:
             Infinity:
               name: Ääretön
+          student_description: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat
+            Disneyn Infinity-hahmot.
         algebrademo:
           title: Algebran esittely
           description: Kourallinen palapelejä esittämään ympäristöä ja ohjelmointikieltä,
@@ -335,6 +364,8 @@ fi:
               name: Kuvia tekemässä
             The Design Recipe:
               name: Suunnitteluresepti
+          student_description: Kourallinen palapelejä esittämään ympäristöä ja ohjelmointikieltä,
+            jota käytetään algebran Code.org CS :ssä
         K5PD:
           lessons:
             Computer Science Pedagogy:
@@ -353,6 +384,7 @@ fi:
           title: Pikselöityminen
           description: Luo kuvia biteillä ja tavuilla.
           description_short: Luo kuvia biteillä ja tavuilla.
+          student_description: Luo kuvia biteillä ja tavuilla.
         20-hour:
           title: Nopeutettu tietojenkäsittelyn johdantokurssi
           description: Tämä 20 tunnin kurssi esittelee kurssien 2-4 keskeiset tietotekniikan
@@ -402,6 +434,9 @@ fi:
               name: Sokkelo
             Wrap-up:
               name: Yhteenveto
+          student_description: Tämä 20 tunnin kurssi esittelee kurssien 2-4 keskeiset
+            tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi
+            10-18 vuotiaiden kanssa. Löydä täysi kokemus kursseissa 2-4!
         edit-code:
           title: Muokkaa koodia
           description: Muokkaa koodia
@@ -413,6 +448,7 @@ fi:
               name: Taiteilija
             The Maze:
               name: Sokkelo
+          student_description: Muokkaa koodia
         events:
           title: Tapahtumat
           description: Tapahtumat
@@ -420,6 +456,7 @@ fi:
           lessons:
             Bounce:
               name: Bounce
+          student_description: Tapahtumat
         flappy:
           title: Flappy Code
           description: Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile
@@ -428,6 +465,8 @@ fi:
           lessons:
             Flappy Code:
               name: Flappy Code
+          student_description: Haluatko kirjoittaa oman pelin alle 10 minuutissa?
+            Kokeile Flappy Code -oppituntia!
         jigsaw:
           title: Palapeli
           description: Kokeile "Palapeli"-aloitusohjettamme
@@ -435,6 +474,7 @@ fi:
           lessons:
             Jigsaw:
               name: Palapeli
+          student_description: Kokeile "Palapeli"-aloitusohjettamme
         step:
           title: Askel
           description: Vaiheittainen oppitunti
@@ -442,6 +482,7 @@ fi:
           lessons:
             Step:
               name: Askel
+          student_description: Vaiheittainen oppitunti
         Hour of Code:
           title: Kooditunti 2013
           description: Kokeile tietotekniikan perusteita Angry Birds ja Plants vs.
@@ -451,6 +492,8 @@ fi:
           lessons:
             Hour of Code 2013:
               name: Kooditunti 2013
+          student_description: Kokeile tietotekniikan perusteita Angry Birds ja Plants
+            vs. Zombies -pelien hahmoilla!
         algebraPD:
           lessons:
             Evaluation Blocks:
@@ -539,6 +582,7 @@ fi:
               name: Tervetuloa!
             Wrap-Up:
               name: Yhteenveto
+          student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
         cspunit2:
           lessons:
             The Internet:
@@ -561,6 +605,7 @@ fi:
               name: Merkkijonoja ja kuvia
             The Design Recipe:
               name: Suunnitteluresepti
+          student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
         allthethings:
           lessons:
             Artist:
@@ -607,6 +652,7 @@ fi:
               name: Opettajan päänäyttö
             Writing Contracts:
               name: Sopimusten kirjoittaminen
+          student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
         cspfacilitator:
           lessons:
             App Lab:
@@ -633,6 +679,7 @@ fi:
               name: Tervetuloa!
             Wrap-up:
               name: Yhteenveto
+          student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
         algebraPD2:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
@@ -643,6 +690,7 @@ fi:
               name: Suunnitteluresepti
             Welcome!:
               name: Tervetuloa!
+          student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
         sciencePD2b:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
@@ -651,6 +699,7 @@ fi:
               name: Tervetuloa!
             Wrap-Up:
               name: Yhteenveto
+          student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
         science-PD2:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
@@ -659,6 +708,7 @@ fi:
               name: Tervetuloa!
             Wrap-Up:
               name: Yhteenveto
+          student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
         sciencePD2b-iZone:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
@@ -667,6 +717,7 @@ fi:
               name: Tervetuloa!
             Wrap-Up:
               name: Yhteenveto
+          student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
         ECSPD2-iZone:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
@@ -681,6 +732,7 @@ fi:
               name: Tervetuloa!
             Wrap-up:
               name: Yhteenveto
+          student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
         ECSPD2-NexTech:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
@@ -695,6 +747,7 @@ fi:
               name: Tervetuloa!
             Wrap-up:
               name: Yhteenveto
+          student_description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -732,6 +785,7 @@ fi:
           lessons:
             Ice Age Play Lab:
               name: Ice Age Pelilabra
+          student_description: Luo tarina tai rakenna peli käyttäen Ice Age Pelilabraa!
         cspunit3temp:
           lessons:
             While Loops:
@@ -743,6 +797,7 @@ fi:
           lessons:
             Gumball Play Lab:
               name: Gumball Pelilabra
+          student_description: Luo tarina tai rakenna peli käyttäen Gumball Pelilabraa!
         starwars:
           title: 'Tähtien sota: Rakenna galaksi koodaten'
           description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
@@ -752,6 +807,8 @@ fi:
           lessons:
             Hour of Code 2015:
               name: Kooditunti 2015
+          student_description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
+            ikioma Tähtien Sota -pelisi.
         starwarsblocks:
           title: 'Tähtien sota: Rakenna galaksi koodaten'
           description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
@@ -761,6 +818,8 @@ fi:
           lessons:
             Hour of Code 2015:
               name: Kooditunti 2015
+          student_description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
+            ikioma Tähtien Sota -pelisi.
         mc:
           title: Minecraft Koodaustunti
           description: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
@@ -769,6 +828,8 @@ fi:
           lessons:
             Hour of Code 2015:
               name: Kooditunti 2015
+          student_description: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
+            läpi Minecraft-maailman
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -791,6 +852,7 @@ fi:
               name: 'Tietokoneeton tekeminen: sopimukset'
             'Unplugged: The Design Recipe':
               name: 'Tietokoneeton tekeminen: suunnitteluresepti'
+          student_description: Opi funktionaalista ohjelmointia algebran avulla
         AlgebraB:
           title: Tietotekniikka algebrassa
           description: Opi funktionaalista ohjelmointia algebran avulla
@@ -818,6 +880,7 @@ fi:
               name: 'Tietokoneeton tekeminen: ehtolauseet ja paloittaiset funktiot'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Tietokoneeton tekeminen: videopelit ja koordinaattitasot'
+          student_description: Opi funktionaalista ohjelmointia algebran avulla
         algebraPD1:
           lessons:
             Evaluation Blocks:
@@ -1084,6 +1147,8 @@ fi:
           lessons:
             Minecraft Hour of Code Designer:
               name: Koodaustunti Minecraft Suunnittelija
+          student_description: Koodaa eläimiä ja muita Minecraft otuksia omalla Minecraft
+            versiollasi.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1533,6 +1598,8 @@ fi:
           lessons:
             Minecraft Hour of Code:
               name: Minecraft Koodaustunti
+          student_description: Minecraft on palannut takaisin Hour of Code -tunnille
+            täysin uudella toiminnolla! Matka Minecraftin läpi koodilla.
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -1928,6 +1995,8 @@ fi:
           lessons:
             Dance Party:
               name: Tanssibileet
+          student_description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi
+            kanssa!
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -1957,6 +2026,8 @@ fi:
               display_name: Funktiot
         dance-extras:
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
+          student_description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla
+            projekti-ideoilla.
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -2087,6 +2158,8 @@ fi:
         dance-extras-gallery:
           title: Jatka tanssimista
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
+          student_description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla
+            projekti-ideoilla.
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2420,6 +2493,9 @@ fi:
           lesson_groups:
             required:
               display_name: Yleiskatsaus
+          lessons:
+            Focus Area 1:
+              name: Opetussuunnitelma
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2479,6 +2555,8 @@ fi:
           lessons:
             Dance Party:
               name: Tanssibileet
+          student_description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi
+            kanssa!
         k5-onlinepd-2019:
           lessons:
             Computer Science Fundamentals:
@@ -2497,6 +2575,8 @@ fi:
               name: Silmukat
         dance-extras-2019:
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
+          student_description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla
+            projekti-ideoilla.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -2823,7 +2903,243 @@ fi:
               name: Nopeus
             Functions:
               name: Funktiot
-        ml-playground:
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Johdanto
+            lessonGroup-3:
+              display_name: Muuttujat
+        csd1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+            csd1_1:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            csd1_2:
+              display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+        csd3-2021:
           lessons:
-            intro:
-              name: Johdanto
+            Variables:
+              key: Muuttujat
+              name: Muuttujat
+            Text:
+              key: teksti
+              name: teksti
+            Conditionals:
+              key: Ehtolausekkeet
+              name: Ehtolausekkeet
+            Velocity:
+              key: Nopeus
+              name: Nopeus
+            Functions:
+              key: Funktiot
+              name: Funktiot
+          lesson_groups:
+            csd3_1:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            csd3_2:
+              display_name: 'Luku 2: Pelien rakentaminen'
+            cspSurvey:
+              display_name: Kysely
+        csd4-2021:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            csd4_2:
+              display_name: 'Luku 2: Apsin prototypointi'
+            csd5_2:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+            cspSurvey:
+              display_name: Kysely
+        csd5-2021:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            csd5_2:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+            cspSurvey:
+              display_name: Kysely
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Parametrilliset funktiot
+              name: Parametrilliset funktiot
+          lesson_groups:
+            csd6_1:
+              display_name: 'Luku 1: Laitteiston palaute'
+            csd6_2:
+              display_name: 'Luku 2: Laitteiston syöte'
+            cspSurvey:
+              display_name: Kysely
+        csp1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Muuttujat
+            csp_conditionals:
+              display_name: Ehtolausekkeet
+            csp_functions:
+              display_name: Funktiot
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: Silmukat
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Iloiset kartat
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Liikuta, liikuta
+              name: Liikuta, liikuta
+            'Loops: Getting Loopy':
+              name: Mennään silmukoille
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binäärikorut
+              name: Binäärikorut
+            'Events: The Big Event':
+              name: Suuri tapahtuma
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_binary:
+              display_name: Binääri
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Ruutupaperiohjelmointi
+            Relay Programming:
+              key: Releohjelmointi
+              name: Releohjelmointi
+            Dance Party:
+              key: Tanssibileet
+              name: Tanssibileet
+            Conditionals with Cards:
+              key: Ehtolauseet pelikorteilla
+              name: Ehtolauseet pelikorteilla
+            'Unplugged: Binary':
+              key: 'Tietokoneeton tekeminen: binääri'
+              name: Binäärikuvat
+            Artist Binary:
+              key: 'Taiteilija: binääri'
+              name: 'Taiteilija: binääri'
+          lesson_groups:
+            csf_events:
+              display_name: Tapahtumat
+            csf_loops:
+              display_name: Silmukat
+            csf_conditionals:
+              display_name: Ehtolausekkeet
+            csf_binary:
+              display_name: Binääri
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Ehtolausekkeet
+            'Functions: Songwriting':
+              name: Säveltäminen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_nested_loops:
+              display_name: Sisäkkäiset silmukat
+            csf_functions:
+              display_name: Funktiot
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Kirjekuorimuuttujat
+              name: Kirjekuorimuuttujat
+            Internet:
+              key: Internet
+              name: Internetti
+            For Loop Fun:
+              key: Silmukkahupia
+              name: Silmukkahupia
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_variables:
+              display_name: Muuttujat
+            csf_for_loops:
+              display_name: Silmukat
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Tanssibileet
+              name: Tanssibileet
+          lesson_groups:
+            csf_loops:
+              display_name: Silmukat
+            csf_conditionals:
+              display_name: Ehtolausekkeet
+            csf_functions:
+              display_name: Funktiot
+            csf_variables:
+              display_name: Muuttujat
+            csf_for_loops:
+              display_name: Silmukat
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Johdanto
+            lessonGroup-3:
+              display_name: Muuttujat
+        csd4-preview-2021:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            csd4_2:
+              display_name: 'Luku 2: Apsin prototypointi'
+            csd5_2:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+            cspSurvey:
+              display_name: Kysely
+            csdSurvey:
+              display_name: Kysely
+        csd5-preview-2021:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            csd5_2:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+            cspSurvey:
+              display_name: Kysely

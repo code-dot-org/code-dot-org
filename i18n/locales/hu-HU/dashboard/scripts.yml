@@ -52,6 +52,7 @@ hu:
               name: 'Játéklabor: hozz létre egy történetet'
             The Big Event:
               name: A nagy esemény
+          student_description: Az 1. tanfolyam a olvasással épp hogy csak ismerkedő korosztály számára készült számítógépes programok elkészítése céljából, amely segít számukra megtanulni a másokkal való együttműködést, fejleszteni a problémamegoldó készségeket és legyőzni a nehézségeket. A tanfolyam végére a tanulók létrehoznak egy egyedi saját játékot vagy egy történetet, amit majd meg tudnak osztani. 1. osztályosok számára ajánlott.
         course2:
           title: 2. tanfolyam
           description: A 2. tanfolyam a már olvasni tudó és előzetes programozási tapasztalattal bíró tanulók számára készült. Ezen a tanfolyamon a tanulók programokat készítenek majd bizonyos problémák megoldására, továbbá interaktív játékokat fognak fejleszteni vagy történetek fognak létrehozni, amelyeket majd megtudnak osztani. 2.-5. osztályosok számára ajánlott.
@@ -96,6 +97,7 @@ hu:
               name: A nagy esemény
             Your Digital Footprint:
               name: A digitális lábnyomod
+          student_description: A 2. tanfolyam a már olvasni tudó és előzetes programozási tapasztalattal bíró tanulók számára készült. Ezen a tanfolyamon a tanulók programokat készítenek majd bizonyos problémák megoldására, továbbá interaktív játékokat fognak fejleszteni vagy történetek fognak létrehozni, amelyeket majd megtudnak osztani. 2.-5. osztályosok számára ajánlott.
         course3:
           title: 3. tanfolyam
           description: A 3. tanfolyam azoknak a tanulóknak ajánlott, akik már elvégezték a 2. tanfolyamot. A tanulók mélyebbre hatóan fogják tanulmányozni az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók interaktív történeteket és játékokat hoznak létre, amiket bárkivel megoszthatnak. 4.-5. osztályosok számára ajánlott.
@@ -144,6 +146,7 @@ hu:
               name: 'Játéklabor: Hozz létre egy játékot!'
             'Studio: Create a Story':
               name: 'Játéklabor: hozz létre egy történetet'
+          student_description: A 3. tanfolyam azoknak a tanulóknak ajánlott, akik már elvégezték a 2. tanfolyamot. A tanulók mélyebbre hatóan fogják tanulmányozni az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók interaktív történeteket és játékokat hoznak létre, amiket bárkivel megoszthatnak. 4.-5. osztályosok számára ajánlott.
         playlab:
           title: Játéklabor
           description: Hozz létre egy történetet vagy készíts egy játékot a Játéklaborral!
@@ -151,6 +154,7 @@ hu:
           lessons:
             Play Lab:
               name: Játéklabor
+          student_description: Hozz létre egy történetet vagy készíts egy játékot a Játéklaborral!
         artist:
           title: Művész
           description: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
@@ -158,6 +162,7 @@ hu:
           lessons:
             Artist:
               name: Művész
+          student_description: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
         hourofcode:
           title: Hagyományos Útvesztö
           description: Ismerd meg a számítástechnika alapjait közösen az Angry Birds, Plants vs. Zombies karaktereivel valamint Motkányal a Jégkorszakból!
@@ -165,6 +170,7 @@ hu:
           lessons:
             Maze:
               name: Labirintus
+          student_description: Ismerd meg a számítástechnika alapjait közösen az Angry Birds, Plants vs. Zombies karaktereivel valamint Motkányal a Jégkorszakból!
         frozen:
           title: Kódolás Annával és Elsával
           description: Használjuk a programozást, hogy csatlakozzunk Annához és Elsához, ahogy felfedezik a jég varázsát és szépségét. Hópihéket fogsz készíteni és mintákat ahogy jégkorcsolyázol, és így egy téli csodaországot készítesz, amelyet majd megoszthatsz a barátaiddal!
@@ -172,6 +178,7 @@ hu:
           lessons:
             Artist:
               name: Művész
+          student_description: Használjuk a programozást, hogy csatlakozzunk Annához és Elsához, ahogy felfedezik a jég varázsát és szépségét. Hópihéket fogsz készíteni és mintákat ahogy jégkorcsolyázol, és így egy téli csodaországot készítesz, amelyet majd megoszthatsz a barátaiddal!
         course4:
           title: 4. tanfolyam
           description: 4. tanfolyam célja a diákok akik teljesítették a 2. és 3. tanfolyamot megtanulják, hogyan boldoguljanak a növekvő bonyolultságú feladványokkal és hogyan alkalmazzanak több koncepciót a feladvány megoldásához. A tanfolyam befejezése után a diákok az általuk létrehozott programokkal demonstrálhatják a ciklusok, függvények használatát paraméterekkel. 4-8 évfolyamnak ajánlott.
@@ -222,6 +229,7 @@ hu:
               name: 'Gép nélküli feladatok: Dalszerzés paraméterekkel'
             'Unplugged: Tangrams':
               name: 'Gép nélküli feladatok: Tangram'
+          student_description: 4. tanfolyam célja a diákok akik teljesítették a 2. és 3. tanfolyamot megtanulják, hogyan boldoguljanak a növekvő bonyolultságú feladványokkal és hogyan alkalmazzanak több koncepciót a feladvány megoldásához. A tanfolyam befejezése után a diákok az általuk létrehozott programokkal demonstrálhatják a ciklusok, függvények használatát paraméterekkel. 4-8 évfolyamnak ajánlott.
         Course4pre:
           title: A 4. tanfolyam előfeltétel
           description: A fogalmak egy rövid összefoglalása azon tanulók számára, akik nem vettek részt a 2. és 3. tanfolyamon.
@@ -245,6 +253,7 @@ hu:
               name: 'Farmer: feltételes ciklusok'
             'Maze: Sequence':
               name: 'Labirintus: sorozat'
+          student_description: A fogalmak egy rövid összefoglalása azon tanulók számára, akik nem vettek részt a 2. és 3. tanfolyamon.
         usability:
           title: Használhatóság tesztelése
           description: Válogatás a 4. tanfolyam szakaszaiból a használhatósági teszthez.
@@ -259,6 +268,7 @@ hu:
               name: Bevezető
             Variables:
               name: változók
+          student_description: Válogatás a 4. tanfolyam szakaszaiból a használhatósági teszthez.
         algebra:
           lessons:
             'Eval: Conditionals':
@@ -278,6 +288,7 @@ hu:
           lessons:
             Infinity:
               name: Végtelen
+          student_description: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel.
         algebrademo:
           lessons:
             Defining Variables:
@@ -296,6 +307,7 @@ hu:
               name: Tanári nyitólap
             Unplugged lessons:
               name: Offline tanórák
+          student_description: 'Szakmai fejlődés alsó tagozatos kurzusokhoz'
         netsim:
           title: Internet szimulátor
         20-hour:
@@ -344,6 +356,7 @@ hu:
               name: A labirintus
             Wrap-up:
               name: Összefoglaló
+          student_description: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.
         edit-code:
           title: Kód szerkesztése
           description: Kód szerkesztése
@@ -357,6 +370,7 @@ hu:
               name: A művész
             The Maze:
               name: A labirintus
+          student_description: Kód szerkesztése
         events:
           title: Események
           description: Események
@@ -370,6 +384,7 @@ hu:
               name: Kiértékel
             Studio:
               name: Studio
+          student_description: Események
         flappy:
           title: Flappy kód
           description: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld ki a Flappy kód gyakorlatot!
@@ -377,6 +392,7 @@ hu:
           lessons:
             Flappy Code:
               name: Flappy kód
+          student_description: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld ki a Flappy kód gyakorlatot!
         jigsaw:
           title: Kirakós játék
           description: Próbáld ki a kirakós játék bemutatóját
@@ -384,6 +400,7 @@ hu:
           lessons:
             Jigsaw:
               name: Kirakós játék
+          student_description: Próbáld ki a kirakós játék bemutatóját
         step:
           title: Lépés
           description: Lépésről-lépésre bemutató
@@ -391,6 +408,7 @@ hu:
           lessons:
             Step:
               name: Lépés
+          student_description: Lépésről-lépésre bemutató
         Hour of Code:
           title: Kódolás órája 2013
           description: Próbáld ki az alapszintű számítástechnikát az Angry Birds, Plants vs. Zombies karaktereivel!
@@ -398,6 +416,7 @@ hu:
           lessons:
             Hour of Code 2013:
               name: Kódolás órája 2013
+          student_description: Próbáld ki az alapszintű számítástechnikát az Angry Birds, Plants vs. Zombies karaktereivel!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -501,6 +520,7 @@ hu:
               name: Üdvözlünk!
             Wrap-Up:
               name: Összegzés
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         cspunit2:
           description_short: Programozás
           lessons:
@@ -522,6 +542,7 @@ hu:
               name: Húrok és Képek
             The Design Recipe:
               name: A dizájn receptje
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         allthethings:
           lessons:
             AppLab:
@@ -578,6 +599,7 @@ hu:
               name: Húrok és Képek
             Teacher Dashboard:
               name: Tanári nyitólap
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         cspfacilitator:
           lessons:
             App Lab:
@@ -606,6 +628,7 @@ hu:
               name: Üdvözlünk!
             Wrap-up:
               name: Összefoglaló
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         algebraPD2:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
@@ -618,6 +641,7 @@ hu:
               name: A dizájn receptje
             Welcome!:
               name: Üdvözlünk!
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         sciencePD2b:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
@@ -626,6 +650,7 @@ hu:
               name: Üdvözlünk!
             Wrap-Up:
               name: Összegzés
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         science-PD2:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
@@ -634,6 +659,7 @@ hu:
               name: Üdvözlünk!
             Wrap-Up:
               name: Összegzés
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         Equity-OnlinePD:
           lessons:
             Getting Started:
@@ -646,6 +672,7 @@ hu:
               name: Üdvözlünk!
             Wrap-Up:
               name: Összegzés
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         ECSPD2-iZone:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
@@ -660,6 +687,7 @@ hu:
               name: Üdvözlünk!
             Wrap-up:
               name: Összefoglaló
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         ECSPD2-NexTech:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
@@ -674,6 +702,7 @@ hu:
               name: Üdvözlünk!
             Wrap-up:
               name: Összefoglaló
+          student_description: '2. Fázis: Online összetett nyári tanulmány'
         CSPPD2:
           lessons:
             Getting Started:
@@ -753,6 +782,7 @@ hu:
           lessons:
             Ice Age Play Lab:
               name: Jégkorszak játéklabor
+          student_description: Mesélj el egy történetet vagy készíts egy játékot a Jégkorszak játéklaborral!
         CSPPD3-Unit3:
           lessons:
             Getting Started:
@@ -769,6 +799,7 @@ hu:
           lessons:
             Gumball Play Lab:
               name: Gumball Játéklabor
+          student_description: írj egy történetet vagy készíts egy játékot a Gumball Játéklaborban!
         starwars:
           title: 'Star Wars: A galaxis építése kóddal'
           description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
@@ -776,6 +807,7 @@ hu:
           lessons:
             Hour of Code 2015:
               name: A kódolás órája 2015
+          student_description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
         starwarsblocks:
           title: 'Star Wars: A galaxis építése kóddal'
           description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
@@ -783,6 +815,7 @@ hu:
           lessons:
             Hour of Code 2015:
               name: A kódolás órája 2015
+          student_description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
         mc:
           title: Minecraft Kódolás Órája
           description: Használj blokkokat a programozáshoz és kalandozz el Steve-vel vagy Alexszel a Minecraft világába
@@ -790,6 +823,7 @@ hu:
           lessons:
             Hour of Code 2015:
               name: A kódolás órája 2015
+          student_description: Használj blokkokat a programozáshoz és kalandozz el Steve-vel vagy Alexszel a Minecraft világába
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1216,6 +1250,7 @@ hu:
           lessons:
             Bounce:
               name: Ugrál
+          student_description: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
         csd2-2017:
           lessons:
             Lists:
@@ -1235,6 +1270,7 @@ hu:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Kódolás órája tervező
+          student_description: Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1323,6 +1359,7 @@ hu:
           title: Kódold le a saját sportjátékodat
           description_short: Kombinálj össze különböző sportágakat
           description: Kombinálj össze különböző sportágakat
+          student_description: Kombinálj össze különböző sportágakat
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1768,6 +1805,7 @@ hu:
           lessons:
             Minecraft Hour of Code:
               name: Minecraft Kódolás Órája
+          student_description: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -2224,6 +2262,7 @@ hu:
           lessons:
             Dance Party:
               name: Táncos buli
+          student_description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -2252,6 +2291,7 @@ hu:
               display_name: funkciók
         dance-extras:
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
+          student_description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -2414,6 +2454,7 @@ hu:
         dance-extras-gallery:
           title: Táncolj tovább
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
+          student_description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2801,6 +2842,9 @@ hu:
               display_name: Összefoglaló
             content:
               display_name: Tartalom
+          lessons:
+            Focus Area 1:
+              name: Tanterv
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2885,6 +2929,7 @@ hu:
           lessons:
             Dance Party:
               name: Táncos buli
+          student_description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
         k5-onlinepd-2019:
           lesson_groups:
             k5_getting_started:
@@ -2910,6 +2955,7 @@ hu:
               name: Számláló ciklusok
         dance-extras-2019:
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
+          student_description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -3356,6 +3402,12 @@ hu:
           lesson_groups:
             lg_1:
               display_name: Tartalom
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Bevezető
+            lessonGroup-3:
+              display_name: változók
         csd1-2021:
           description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a számítógépek a problémák megoldásában."
           lessons:
@@ -3609,11 +3661,20 @@ hu:
             csf_events:
               display_name: Események
         csf-2021-pilot:
-          lessons:
-            lesson-1:
-              name: Boríték változók
           lesson_groups:
             ramp_up:
               display_name: Bevezető
             lessonGroup-3:
               display_name: változók
+            Sprites:
+              display_name: Sprite-ok
+        csd4-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csdSurvey:
+              display_name: Kérdőív
+        csd5-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív

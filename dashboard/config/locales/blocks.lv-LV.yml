@@ -216,6 +216,7 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
+            '"speed"': ātrums
       gamelab_getTime:
         options:
           UNIT:
@@ -277,6 +278,7 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
+            '"speed"': ātrums
       gamelab_setSizes:
         options:
           PROPERTY:

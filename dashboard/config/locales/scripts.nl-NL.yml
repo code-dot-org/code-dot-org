@@ -59,6 +59,12 @@ nl:
               name: 'Speel Lab: Maak een Verhaal'
             The Big Event:
               name: De grote gebeurtenis
+          student_description: Cursus 1 is ontwikkeld om het voor vroege lezers mogelijk
+            te maken om computerprogramma's te maken die ze helpen met het omgaan
+            met anderen, met het ontwikkelen van probleemoplossende vaardigheden en
+            vol te houden in moeilijke taken. Aan het eind van de cursus maakt de
+            student een zelfgemaakte spel of verhaal die ze kunnen delen. aanbevolen
+            voor groep 1 - groep 3.
         course2:
           title: Cursus 2
           description: Les 2 is ontwikkeld voor studenten die kunnen lezen en geen
@@ -106,6 +112,10 @@ nl:
               name: De grote gebeurtenis
             Your Digital Footprint:
               name: Jouw Digitale Voetafdruk
+          student_description: Les 2 is ontwikkeld voor studenten die kunnen lezen
+            en geen eerdere programeerervaring hebben. In deze les maken studenten
+            programma's om problemen op te lossen en ontwikkelen ze interactieve spellen
+            en verhalen die ze kunnen delen. Aanbevolen voor graad 2-5.
         course3:
           title: Cursus 3
           description: Cursus 3 is ontwikkeld voor studenten die Cursus 2 hebben gevolgd.
@@ -159,6 +169,12 @@ nl:
               name: Speel Lab - Maak een Spel
             'Studio: Create a Story':
               name: 'Speel Lab: Maak een Verhaal'
+          student_description: Cursus 3 is ontwikkeld voor studenten die Cursus 2
+            hebben gevolgd. Studenten zullen dieper ingaan op de programmeeronderwerpen
+            die geïntroduceerd zijn in vorige cursussen om flexibele oplossingen te
+            maken om moeilijkere problemen op te lossen. Aan het einde van deze cursus
+            kunnen leerlingen interactieve verhalen en spellen maken die ze met iedereen
+            kunnen delen. Aanbevolen voor rangen 4-5.
         playlab:
           title: Speel Lab
           description: Maak een verhaal of een spel met Speel Lab!
@@ -166,6 +182,7 @@ nl:
           lessons:
             Play Lab:
               name: Speel Lab
+          student_description: Maak een verhaal of een spel met Speel Lab!
         artist:
           title: Kunstenaar
           description: Teken coole plaatjes en ontwerpen met de Kunstenaar!
@@ -173,6 +190,7 @@ nl:
           lessons:
             Artist:
               name: Kunstenaar
+          student_description: Teken coole plaatjes en ontwerpen met de Kunstenaar!
         hourofcode:
           title: Klassiek doolhof
           description: Probeer de grondbeginselen van de informatica met figuren uit
@@ -182,6 +200,8 @@ nl:
           lessons:
             Maze:
               name: Doolhof
+          student_description: Probeer de grondbeginselen van de informatica met figuren
+            uit angry Birds, Plant vs. Zombies en Scrat van Ice Age!
         frozen:
           title: Code met Anna en Elsa
           description: laten we code gebruiken om Anna en Elsa te helpen bij het ontdekken
@@ -193,6 +213,10 @@ nl:
           lessons:
             Artist:
               name: Kunstenaar
+          student_description: laten we code gebruiken om Anna en Elsa te helpen bij
+            het ontdekken van de magie en schoonheid van ijs. Je zal leren sneeuwvlokken
+            en patronen te maken terwijl je schaatst en een een mooi winterlandschap
+            maken dat je kan delen met je vrienden!
         course4:
           title: Cursus 4
           description: Cursus 4 is bedoeld voor leerlingen die Cursus 2 en 3 hebben
@@ -249,6 +273,12 @@ nl:
               name: 'Unplugged: Liedjes schrijven met Parameters'
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrams'
+          student_description: Cursus 4 is bedoeld voor leerlingen die Cursus 2 en
+            3 hebben afgerond. Door verschillende concepten te combineren bij het
+            oplossen van de problemen leren de leerlingen om te gaan met moeilijkere
+            opdrachten. Tegen de tijd dat deze Cursus is afgerond kunnen leerlingen
+            programma's schrijven die verschillende vaardigheden vragen, waaronder
+            for loops en functies met parameters. Geschikt voor groep 6 t/m klas 2.
         Course4pre:
           title: Vereisten voor cursus 4
           description: Een korte samenvatting van concepten voor leerlingen die cursus
@@ -274,6 +304,8 @@ nl:
               name: 'Boer: Zolang-lussen'
             'Maze: Sequence':
               name: 'Doolhof: Nummering'
+          student_description: Een korte samenvatting van concepten voor leerlingen
+            die cursus 2 en 3 niet hebben afgewerkt.
         usability:
           title: Gebruiksvriendelijkheid testen
           description: Een selectie van cursus 4 puzzels voor gebruiksvriendelijkheidstesten.
@@ -288,6 +320,7 @@ nl:
               name: Introductie
             Variables:
               name: Variabelen
+          student_description: Een selectie van cursus 4 puzzels voor gebruiksvriendelijkheidstesten.
         algebra:
           title: Informatica in Algebra
           description: Leer functioneel programmeren door Algebra
@@ -311,6 +344,7 @@ nl:
               name: 'Unplugged: Het ontwerp recept'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
+          student_description: Leer functioneel programmeren door Algebra
         infinity:
           title: Disney Infinity Play Lab
           description: Gebruik Play Lab om een verhaal of spel te maken met Disney
@@ -320,6 +354,8 @@ nl:
           lessons:
             Infinity:
               name: Oneindig
+          student_description: Gebruik Play Lab om een verhaal of spel te maken met
+            Disney Infinity figuren in de hoofdrol.
         algebrademo:
           title: Algebra Demo
           description: Een handvol puzzels om de programmeertaal en omgeving te tonen
@@ -337,6 +373,8 @@ nl:
               name: Foto's maken
             The Design Recipe:
               name: Het ontwerp Recept
+          student_description: Een handvol puzzels om de programmeertaal en omgeving
+            te tonen die gebruikt is in Code.org CS in Algebra
         K5PD:
           lessons:
             Introduction to PD:
@@ -370,10 +408,12 @@ nl:
               name: Peer to Peer - Verzend Getallen
             Routers and addresses:
               name: Routers en Adressen
+          student_description: Leer hoe het internet werkt
         pixelation:
           title: Pixelachtig
           description: Maak afbeeldingen met bits en bytes.
           description_short: Maak afbeeldingen met bits en bytes.
+          student_description: Maak afbeeldingen met bits en bytes.
         20-hour:
           title: 20-uur Intro cursus
           description: Deze cursus van 20 uur introduceert basisbegrippen voor informatica
@@ -423,6 +463,9 @@ nl:
               name: Het Doolhof
             Wrap-up:
               name: Einde
+          student_description: Deze cursus van 20 uur introduceert basisbegrippen
+            voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen,
+            maar is voor alle leeftijden leuk om te leren.
         edit-code:
           title: Bewerk de code
           description: Bewerk de code
@@ -436,6 +479,7 @@ nl:
               name: De Artiest
             The Maze:
               name: Het Doolhof
+          student_description: Bewerk de code
         events:
           title: Gebeurtenissen
           description: Gebeurtenissen
@@ -449,6 +493,7 @@ nl:
               name: Evalueer
             Studio:
               name: Studio
+          student_description: Gebeurtenissen
         flappy:
           title: Flappy Code
           description: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer
@@ -457,6 +502,8 @@ nl:
           lessons:
             Flappy Code:
               name: Flappy Code
+          student_description: Wil je ook binnen 10 minuten je eigen spel schrijven?
+            Probeer onze Flappy Code opdracht!
         jigsaw:
           title: Legpuzzel
           description: probeer onze legpuzzelcursus
@@ -464,6 +511,7 @@ nl:
           lessons:
             Jigsaw:
               name: Legpuzzel
+          student_description: probeer onze legpuzzelcursus
         step:
           title: Stap
           description: stapcursus
@@ -471,6 +519,7 @@ nl:
           lessons:
             Step:
               name: Stap
+          student_description: stapcursus
         Hour of Code:
           title: Uur van Code 2013
           description: Probeer de basis van de informatica met figuren van Angry Birds
@@ -480,18 +529,22 @@ nl:
           lessons:
             Hour of Code 2013:
               name: Uur van Code 2013
+          student_description: Probeer de basis van de informatica met figuren van
+            Angry Birds an Plants vs Zombies!
         CodeStudioPuzzleChallenge:
           description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
           description_short: Daag jezelf uit!
           lessons:
             Puzzles:
               name: Puzzels
+          student_description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
         Tutorial Video - Code Studio Puzzle Challenge:
           description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
           description_short: Daag jezelf uit!
           lessons:
             Puzzles:
               name: Puzzels
+          student_description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
         cspunit1:
           description_short: Programmeren
           lessons:
@@ -687,6 +740,7 @@ nl:
               name: Welkom!
             Wrap-Up:
               name: Terugblik
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         sciencePD3:
           lessons:
             Mystery Model:
@@ -738,6 +792,7 @@ nl:
               name: Woorden en afbeeldingen
             The Design Recipe:
               name: Het ontwerp Recept
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         allthethings:
           title: Alle dingen!
           description: Alle de level types voor UI testing
@@ -793,6 +848,7 @@ nl:
               name: Alleenstaande video
             ML Fish:
               name: ML Vis
+          student_description: Alle de level types voor UI testing
         algebraPD2b:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -817,6 +873,7 @@ nl:
               name: Woorden en afbeeldingen
             Teacher Dashboard:
               name: Dashboard Leerkrachten
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         cspfacilitator:
           lessons:
             App Lab:
@@ -853,6 +910,7 @@ nl:
               name: Welkom!
             Wrap-up:
               name: Einde
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         algebraPD2:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -863,6 +921,7 @@ nl:
               name: Het ontwerp Recept
             Welcome!:
               name: Welkom!
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         sciencePD2b:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -871,6 +930,7 @@ nl:
               name: Welkom!
             Wrap-Up:
               name: Terugblik
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         science-PD2:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -879,6 +939,7 @@ nl:
               name: Welkom!
             Wrap-Up:
               name: Terugblik
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         Equity-OnlinePD:
           lessons:
             Next Steps:
@@ -891,6 +952,7 @@ nl:
               name: Welkom!
             Wrap-Up:
               name: Terugblik
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         ECSPD2-iZone:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -905,6 +967,7 @@ nl:
               name: Welkom!
             Wrap-up:
               name: Einde
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         ECSPD2-NexTech:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -919,6 +982,7 @@ nl:
               name: Welkom!
             Wrap-up:
               name: Einde
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         CSPPD2:
           lessons:
             Welcome to the Course!:
@@ -974,6 +1038,8 @@ nl:
           lessons:
             Ice Age Play Lab:
               name: Ijs tijd Speel Lab
+          student_description: Maken een verhaal of een spel met de ijs tijd Speel
+            Lab!
         cspunit3temp:
           description_short: Programmeren
           lessons:
@@ -992,6 +1058,8 @@ nl:
           lessons:
             Gumball Play Lab:
               name: Kauwgom Speel Lab
+          student_description: Maken een verhaal of een spel met de Kauwgom Speel
+            Lab!
         starwars:
           title: 'Star Wars: Bouw een Heelal met Code'
           description: Leer hoe je droids moet programmeren en maak je eigen Star
@@ -1001,6 +1069,8 @@ nl:
           lessons:
             Hour of Code 2015:
               name: Uur van Code 2015
+          student_description: Leer hoe je droids moet programmeren en maak je eigen
+            Star Wars-spel in een Melkweg heel, heel ver hier vandaan.
         starwarsblocks:
           title: 'Star Wars: Bouw een Heelal met Code'
           description: Leer hoe je droids moet programmeren en maak je eigen Star
@@ -1010,6 +1080,8 @@ nl:
           lessons:
             Hour of Code 2015:
               name: Uur van Code 2015
+          student_description: Leer hoe je droids moet programmeren en maak je eigen
+            Star Wars-spel in een Melkweg heel, heel ver hier vandaan.
         mc:
           title: Minecraft programmeer uur
           description: Gebruik blokken code om Steve of Alex mee te nemen op avontuur
@@ -1018,6 +1090,8 @@ nl:
           lessons:
             Hour of Code 2015:
               name: Uur van Code 2015
+          student_description: Gebruik blokken code om Steve of Alex te helpen op
+            hun avontuur door deze Minecraft-wereld.
         oceans:
           lessons:
             Oceans:
@@ -1054,6 +1128,7 @@ nl:
               name: 'Unplugged: Functies ontwerpen'
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Het ontwerp recept'
+          student_description: Leer functioneel programmeren door Algebra
         AlgebraB:
           title: Informatica in Algebra
           description: Leer functioneel programmeren door Algebra
@@ -1081,6 +1156,7 @@ nl:
               name: 'Unplugged: Conditionals en stuksgewijze functies'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
+          student_description: Leer functioneel programmeren door Algebra
         algebraPD1:
           lessons:
             Course Overview:
@@ -1150,6 +1226,13 @@ nl:
               name: De Nood Aan Programmeertalen
             Using Simple Commands:
               name: Simpele Commando's Gebruiken
+          student_description: "Deze module introduceert de basisconcepten van programmeren.
+            Dit biedt de mogelijkheid om rijke, interactieve apps te maken. Deze cursus
+            gebruikt JavaScript als programmeertaal en App Lab als programmeeromgeving
+            om apps te bouwen, maar de concepten die in deze lessen worden geleerd,
+            zijn van toepassing op alle programmeertalen en tools.\r\n\r\nDeze module
+            is voor het laatst bijgewerkt op 30 oktober 2017. Lees meer over curriculumupdates
+            op forum.code.org/c/csp/updates."
         csp4-2017:
           lesson_groups:
             cspSurvey:
@@ -1179,6 +1262,12 @@ nl:
               name: Variabelen Gebruiken In Apps
             While Loops:
               name: Zolang-lussen
+          student_description: Deze module vervolgt de introductie van de basisconcepten
+            van programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps
+            te maken. Deze cursus gebruikt JavaScript als programmeertaal en App Lab
+            als programmeeromgeving om apps te bouwen, maar de concepten die in deze
+            lessen worden geleerd, zijn van toepassing op alle programmeertalen en
+            tools.
         CSDU3-Draft:
           description_short: Programmeren
           lessons:
@@ -1531,6 +1620,8 @@ nl:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Code Uur Code Ontwerper
+          student_description: Ga dieren en andere Minecraft wezens programmeren in
+            je eigen Minecraft omgeving.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -2241,6 +2332,8 @@ nl:
               name: 'Minecraft\: Heldenreis Uur Code'
             Minecraft Hour of Code:
               name: Minecraft programmeer uur
+          student_description: Minecraft is terug bij Uur Code met een gloednieuwe
+            activiteit! Programmeer om door Minecraft te reizen.
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -2628,6 +2721,12 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+          student_description: Deze module vervolgt de introductie van de basisconcepten
+            van programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps
+            te maken. Deze cursus gebruikt JavaScript als programmeertaal en App Lab
+            als programmeeromgeving om apps te bouwen, maar de concepten die in deze
+            lessen worden geleerd, zijn van toepassing op alle programmeertalen en
+            tools.
         csppostap-2018:
           lesson_groups:
             cspSurvey:
@@ -2843,6 +2942,7 @@ nl:
               name: nieuw niveau
             Dance Party:
               name: Dansfeest
+          student_description: Programmeer je eigen dansfeest om te delen met je vrienden!
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -2899,6 +2999,8 @@ nl:
               name: Functies Maak
         dance-extras:
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
+          student_description: Breid de kennis van het eerste uur uit met uitgebreide
+            projectideeën.
         coursef-2019:
           description_audience: 'Leeftijden: 9-13'
           lesson_groups:
@@ -3065,6 +3167,8 @@ nl:
         dance-extras-gallery:
           title: Blijf dansen
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
+          student_description: Breid de kennis van het eerste uur uit met uitgebreide
+            projectideeën.
         coursec-2019:
           description_audience: 'Leeftijden: 6-10'
           lesson_groups:
@@ -3310,6 +3414,12 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+          student_description: Deze module vervolgt de introductie van de basisconcepten
+            van programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps
+            te maken. Deze cursus gebruikt JavaScript als programmeertaal en App Lab
+            als programmeeromgeving om apps te bouwen, maar de concepten die in deze
+            lessen worden geleerd, zijn van toepassing op alle programmeertalen en
+            tools.
         csp-explore-2019:
           lesson_groups:
             cspSurvey:
@@ -3909,6 +4019,9 @@ nl:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            Focus Area 1:
+              name: Lesprogramma
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -4030,6 +4143,7 @@ nl:
           lessons:
             Dance Party:
               name: Dansfeest
+          student_description: Programmeer je eigen dansfeest om te delen met je vrienden!
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
@@ -4059,6 +4173,8 @@ nl:
               name: For-lussen
         dance-extras-2019:
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
+          student_description: Breid de kennis van het eerste uur uit met uitgebreide
+            projectideeën.
         csp10-pilot:
           lessons:
             new stage:
@@ -4698,6 +4814,8 @@ nl:
           lessons:
             new stage:
               name: nieuw niveau
+            Tools:
+              name: Hulpmiddelen
             Debugging:
               name: Foutopsporing
             Module 1:
@@ -4746,6 +4864,12 @@ nl:
               name: Variabelen
             Keep Going:
               name: Blijven gaan
+          student_description: Deze module - die je in je eigen tempo kan volgen -
+            introduceert fundamentele concepten van programmeren. Dit biedt de mogelijkheid
+            om rijke, interactieve apps te maken. Deze cursus gebruikt JavaScript
+            als programmeertaal en App Lab als programmeeromgeving om apps te bouwen,
+            maar de concepten die in deze lessen worden geleerd, zijn van toepassing
+            op alle programmeertalen en tools.
         virtual-holding-place:
           lesson_groups:
             content:
@@ -4784,6 +4908,12 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+          student_description: Deze module introduceert fundamentele concepten van
+            programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps te
+            maken. Deze cursus gebruikt JavaScript als programmeertaal en App Lab
+            als programmeeromgeving om apps te bouwen, maar de concepten die in deze
+            lessen worden geleerd, zijn van toepassing op alle programmeertalen en
+            tools.
         k5-onlinepd-2020:
           lessons:
             Loops:
@@ -4956,7 +5086,19 @@ nl:
           description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te
             simuleren.
           name: uitbraak
+          student_description: Gebruik Sprite Lab om een simulatie van een virusuitbraak
+            te simuleren.
         2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Een simulatie programmeren
+          lesson_groups:
+            introduction:
+              display_name: Introductie
+            lessonGroup-3:
+              display_name: Variabelen
+            outbreak:
+              display_name: Uitbraaksimulatie
           description_audience: Intern
           description_short: Intern
         csd1-2021:
@@ -5417,7 +5559,7 @@ nl:
               name: Dansfeest
           lesson_groups:
             csf_warmup:
-              display_name: Opwarming
+              display_name: Opwarmen
             csf_loops:
               display_name: Lussen
             csf_conditionals:
@@ -5441,8 +5583,6 @@ nl:
           lessons:
             Virus Simulation for Code Bytes:
               name: Een simulatie programmeren
-            lesson-1:
-              name: Envelop variabelen
           lesson_groups:
             ramp_up:
               display_name: Introductie
@@ -5450,3 +5590,24 @@ nl:
               display_name: Uitbraaksimulatie
             lessonGroup-3:
               display_name: Variabelen
+            Sprites:
+              display_name: Sprites
+        csd4-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+            csdSurvey:
+              display_name: Vragenlijst
+        csd5-preview-2021:
+          lessons:
+            Representing Images:
+              key: Het voorstellen van afbeeldingen
+              name: Het voorstellen van afbeeldingen
+            Representing Numbers:
+              key: Het voorstellen van getallen
+              name: Het voorstellen van getallen
+          lesson_groups:
+            csd5_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+            cspSurvey:
+              display_name: Vragenlijst

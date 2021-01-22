@@ -54,6 +54,11 @@ et:
               name: 'Play Lab: Kirjuta lugu'
             The Big Event:
               name: Suursündmus
+          student_description: Kui oled aeglane lugeja, siis alusta 1. kursusega.
+            Õpilased loovad arvutiprogramme, mis aitavad neil õppida teistega koostööd
+            tegema, arendada probleemi lahendamise oskust ning vastupidavust raskete
+            ülesannete lahendamisel. Selle kursuse lõpuks loovad õpilased päris oma
+            mängu või loo, mida nad saavad jagada. Soovitatav 5-8-aastastele.
         course2:
           title: Kursus 2
           description: Kui oskad lugeda ja sul ei ole eelnevad programmeerimise kogemust,
@@ -102,6 +107,10 @@ et:
               name: Suursündmus
             Your Digital Footprint:
               name: Sinu digitaalne jalajälg
+          student_description: Kui oskad lugeda ja sul ei ole eelnevad programmeerimise
+            kogemust, siis alusta kursus 2-ga. Selles kursuses õpilased moodustavad
+            programme probleemide lahendamiseks ja arendavad interaktiivseid mänge
+            või lugusid, mida nad saavad jagada. Soovitav 2. klassist kuni 5. klassini.
         course3:
           title: Kursus 3
           description: Kursus 3 on loodud õpilastele, kes on läbinud kursuse 2. Õpilane
@@ -155,6 +164,11 @@ et:
               name: 'Play Lab: Loo mäng'
             'Studio: Create a Story':
               name: 'Play Lab: Kirjuta lugu'
+          student_description: Kursus 3 on loodud õpilastele, kes on läbinud kursuse
+            2. Õpilane läheb sügavamale programmeerimise teemadesse, mida eelmises
+            kursuses tutvustati, ning loovad paindlike lahendusi veelgi keerulisematele
+            probleemidele. Kursuse lõpuks loovad õpilased interaktiivseid lugusid
+            ja mänge, mida nad saavad kõigiga jagada. Soovitatav 4.-5. klassile.
         playlab:
           title: Play Lab
           description: Loo lugu või mäng "Play Lab"iga!
@@ -162,6 +176,7 @@ et:
           lessons:
             Play Lab:
               name: Play Lab
+          student_description: Loo lugu või mäng "Play Lab"iga!
         artist:
           title: Kunstnik
           description: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
@@ -169,6 +184,7 @@ et:
           lessons:
             Artist:
               name: Kunstnik
+          student_description: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
         hourofcode:
           title: Klassikaline labürint
           description: Proovi programmeerimise põhitõdesid Angry Birds, Plants vs.
@@ -178,6 +194,8 @@ et:
           lessons:
             Maze:
               name: Labürint
+          student_description: Proovi programmeerimise põhitõdesid Angry Birds, Plants
+            vs. Zombies tegelaste ja Scratiga Jää-ajast!
         frozen:
           title: Kirjuta koodi Anna ja Elsa'ga
           description: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega avastada
@@ -188,6 +206,10 @@ et:
           lessons:
             Artist:
               name: Kunstnik
+          student_description: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega
+            avastada jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid
+            uisutamise ajal ning moodustad talvekuningriigi, mida saad jagada kõigi
+            oma sõpradega!
         course4:
           title: Kursus 4
           description: 4. kursus on mõeldud õpilastele, kes on läbinud kursused 2
@@ -244,6 +266,12 @@ et:
               name: 'Unplugged: Laulukirjutamine parameetritega'
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrammid'
+          student_description: 4. kursus on mõeldud õpilastele, kes on läbinud kursused
+            2 ja 3. Õpilased õpivad, kuidas lahendada järjest keerulisemaid probleeme
+            ning nad õpivad iga ülesande lahendamisel, kuidas kombineerida mitut erinevat
+            kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad
+            neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada
+            tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
         Course4pre:
           title: Kursuse 4 Ettevalmistus
           description: Väike kokkuvõte Kursuse 2 ja 3 põhimõtetest, õpilastele kes
@@ -269,6 +297,8 @@ et:
               name: 'Talunik: Kui Tsükkel'
             'Maze: Sequence':
               name: 'Labürint: Jada'
+          student_description: Väike kokkuvõte Kursuse 2 ja 3 põhimõtetest, õpilastele
+            kes pole neid võtnud veel.
         usability:
           lessons:
             Binary:
@@ -303,6 +333,8 @@ et:
           lessons:
             Infinity:
               name: Lõpmatus
+          student_description: Kasuta Play Labi, et luua lugu või mäng, kus peaosa
+            mängivad Disney Infinity tegelased.
         algebrademo:
           lessons:
             Defining Variables:
@@ -377,6 +409,9 @@ et:
               name: Labürint
             Wrap-up:
               name: Kokkuvõte
+          student_description: See 20-tunnine kursus käsitleb peamisi arvutiteaduse
+            ja programmeerimise kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks
+            vanuses 10-18 aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
         edit-code:
           title: Muuda koodi
           description: Muuda koodi
@@ -392,6 +427,7 @@ et:
               name: Kunstnik
             The Maze:
               name: Labürint
+          student_description: Muuda koodi
         events:
           title: Sündmused
           description: Sündmused
@@ -405,6 +441,7 @@ et:
               name: Hinda
             Studio:
               name: Stuudio
+          student_description: Sündmused
         flappy:
           title: Flappy kood
           description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi
@@ -413,6 +450,8 @@ et:
           lessons:
             Flappy Code:
               name: Flappy kood
+          student_description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga?
+            Proovi meie Flappy Code õpetusvideot!
         jigsaw:
           title: Pusle
           description: Proovi meie pusle juhendajat
@@ -420,6 +459,7 @@ et:
           lessons:
             Jigsaw:
               name: Pusle
+          student_description: Proovi meie pusle juhendajat
         step:
           title: samm
           description: Samm-sammult juhendi
@@ -427,6 +467,7 @@ et:
           lessons:
             Step:
               name: samm
+          student_description: Samm-sammult juhendi
         Hour of Code:
           title: KoodiTund 2013
           description: Proovi arvutiteadust Angry Birds and Plants vs Zombies tegelastega!
@@ -435,6 +476,8 @@ et:
           lessons:
             Hour of Code 2013:
               name: KoodiTund 2013
+          student_description: Proovi arvutiteadust Angry Birds and Plants vs Zombies
+            tegelastega!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -563,6 +606,7 @@ et:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+          student_description: 'Faas 2 online: Blended Summer Study'
         sciencePD3:
           lessons:
             Welcome Back!:
@@ -591,6 +635,7 @@ et:
               name: Sõned ja kujutised
             The Design Recipe:
               name: Disaini retsept
+          student_description: 'Faas 2 online: Blended Summer Study'
         allthethings:
           lessons:
             Artist:
@@ -633,6 +678,7 @@ et:
               name: Sõned ja kujutised
             Teacher Dashboard:
               name: Õpetaja töölaud
+          student_description: 'Faas 2 online: Blended Summer Study'
         cspfacilitator:
           lessons:
             App Lab:
@@ -659,6 +705,7 @@ et:
               name: Tere tulemast!
             Wrap-up:
               name: Kokkuvõte
+          student_description: 'Faas 2 online: Blended Summer Study'
         algebraPD2:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
@@ -669,6 +716,7 @@ et:
               name: Disaini retsept
             Welcome!:
               name: Tere tulemast!
+          student_description: 'Faas 2 online: Blended Summer Study'
         sciencePD2b:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
@@ -677,6 +725,7 @@ et:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+          student_description: 'Faas 2 online: Blended Summer Study'
         science-PD2:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
@@ -685,6 +734,7 @@ et:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+          student_description: 'Faas 2 online: Blended Summer Study'
         Equity-OnlinePD:
           lessons:
             Next Steps:
@@ -697,6 +747,7 @@ et:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+          student_description: 'Faas 2 online: Blended Summer Study'
         ECSPD2-iZone:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
@@ -711,6 +762,7 @@ et:
               name: Tere tulemast!
             Wrap-up:
               name: Kokkuvõte
+          student_description: 'Faas 2 online: Blended Summer Study'
         ECSPD2-NexTech:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
@@ -725,6 +777,7 @@ et:
               name: Tere tulemast!
             Wrap-up:
               name: Kokkuvõte
+          student_description: 'Faas 2 online: Blended Summer Study'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -790,6 +843,7 @@ et:
           lessons:
             Ice Age Play Lab:
               name: Jääaja Play Lab
+          student_description: Loo lugu või mäng Jääaja Play Labiga!
         cspunit3temp:
           lessons:
             While Loops:
@@ -801,6 +855,7 @@ et:
           lessons:
             Gumball Play Lab:
               name: Gumballi Play Lab
+          student_description: Loo lugu või mäng Gumballi Play Labiga!
         starwars:
           title: 'Star Wars: galaktika loomine koodiga'
           description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
@@ -810,6 +865,8 @@ et:
           lessons:
             Hour of Code 2015:
               name: Kooditund 2015
+          student_description: Õpi programmeerima roboteid ja loo oma Star Wars’i
+            mäng kauges, kauges galaktikas.
         starwarsblocks:
           title: 'Star Wars: galaktika loomine koodiga'
           description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
@@ -819,6 +876,8 @@ et:
           lessons:
             Hour of Code 2015:
               name: Kooditund 2015
+          student_description: Õpi programmeerima roboteid ja loo oma Star Wars’i
+            mäng kauges, kauges galaktikas.
         mc:
           title: Minecrafti KoodiTund
           description: Kasuta koodi plokke, et viia Steve või Alex seiklusele läbi
@@ -827,6 +886,8 @@ et:
           lessons:
             Hour of Code 2015:
               name: Kooditund 2015
+          student_description: Kasuta koodi plokke, et viia Steve või Alex seiklusele
+            läbi selle Minecrafti maailma.
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1164,6 +1225,7 @@ et:
           lessons:
             Bounce:
               name: Põrkama
+          student_description: Vali oma meeskond ja tee korvpallimäng
         csd2-2017:
           lessons:
             Peer Review:
@@ -1187,6 +1249,8 @@ et:
           lessons:
             Minecraft Hour of Code Designer:
               name: KoodiTund Minecraft Designer
+          student_description: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda
+            Minecrafti versioonis.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1275,6 +1339,7 @@ et:
           title: Tee oma spordimäng
           description_short: Sega omavahel ja sobita kokku erinevaid spordialasid
           description: Sega omavahel ja sobita kokku erinevaid spordialasid
+          student_description: Sega omavahel ja sobita kokku erinevaid spordialasid
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1661,6 +1726,8 @@ et:
               name: 'Minecraft\: Kangelase teekond KoodiTund'
             Minecraft Hour of Code:
               name: Minecrafti KoodiTund
+          student_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
+            Teekond läbi Minecrafti koos koodiga.
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -2089,6 +2156,8 @@ et:
               display_name: Funktsioonid
         dance-extras:
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
+          student_description: Mine põhjalikumate projjektiideedega esimesest tunnist
+            edasi.
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -2219,6 +2288,8 @@ et:
         dance-extras-gallery:
           title: Tantsi edasi
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
+          student_description: Mine põhjalikumate projjektiideedega esimesest tunnist
+            edasi.
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2536,6 +2607,9 @@ et:
               display_name: Ülevaade
             content:
               display_name: Sisu
+          lessons:
+            Focus Area 1:
+              name: Õppekava
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2633,6 +2707,8 @@ et:
               name: For tsükkel
         dance-extras-2019:
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
+          student_description: Mine põhjalikumate projjektiideedega esimesest tunnist
+            edasi.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -2960,7 +3036,220 @@ et:
           lesson_groups:
             lg_1:
               display_name: Sisu
-        ml-playground:
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Sissejuhatus
+            lessonGroup-3:
+              display_name: Muutujad
+        csd1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd3-2021:
           lessons:
-            intro:
-              name: Sissejuhatus
+            Variables:
+              key: Muutujad
+              name: Muutujad
+            Text:
+              key: Tekst
+              name: Tekst
+            Conditionals:
+              key: Tingimuslaused
+              name: Tingimuslaused
+            Velocity:
+              key: Velocity
+              name: Velocity
+            Functions:
+              key: Funktsioonid
+              name: Funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd4-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Parameetritega funktsioonid
+              name: Parameetritega funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Binaararvud
+              name: Binaararvud
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Loendid
+            csp_loops:
+              display_name: Tsüklid
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Happy Maps
+            Loops in Ice Age:
+              key: Tsüklik - Jääaeg
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Liiguta, liiguta
+              name: Liiguta, liiguta
+            'Loops: Getting Loopy':
+              name: Muutub tsükliliseks
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binaarsed käevõrud
+              name: Binaarsed käevõrud
+            'Events: The Big Event':
+              name: Suursündmus
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_binary:
+              display_name: Binaarne
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Millimeetripaberi programmeerimine
+            Relay Programming:
+              key: Relee programmeerimine
+              name: Relee programmeerimine
+            Dance Party:
+              key: Tantsuõhtu
+              name: Tantsuõhtu
+            Loops in Ice Age:
+              key: Tsüklik - Jääaeg
+              name: Tsüklik - Jääaeg
+            Conditionals with Cards:
+              key: Tingimuslaused kaartidel
+              name: Tingimuslaused kaartidel
+            'Unplugged: Binary':
+              key: 'Unplugged: Binaar'
+              name: Binaarsed pildid
+            Artist Binary:
+              key: Kunstnik Binaar
+              name: Kunstnik Binaar
+          lesson_groups:
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_binary:
+              display_name: Binaarne
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Tingimuslaused
+            'Functions: Songwriting':
+              name: Laulude kirjutamine
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_nested_loops:
+              display_name: Korduvad tsüklid
+            csf_functions:
+              display_name: Funktsioonid
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Ümbriku muutujad
+              name: Ümbriku muutujad
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: For Loop Fun
+              name: For Loop Fun
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_variables:
+              display_name: Muutujad
+            csf_for_loops:
+              display_name: For tsükkel
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Tantsuõhtu
+              name: Tantsuõhtu
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_functions:
+              display_name: Funktsioonid
+            csf_variables:
+              display_name: Muutujad
+            csf_for_loops:
+              display_name: For tsükkel
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Sissejuhatus
+            lessonGroup-3:
+              display_name: Muutujad
+        csd4-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+            csdSurvey:
+              display_name: Uuring
+        csd5-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
