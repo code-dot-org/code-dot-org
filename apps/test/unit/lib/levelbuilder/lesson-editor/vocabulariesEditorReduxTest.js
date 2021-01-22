@@ -8,11 +8,13 @@ import _ from 'lodash';
 
 const getInitialState = () => [
   {
+    id: 1,
     key: 'vocabulary-1',
     word: 'vocabulary-1',
     definition: 'definition1'
   },
   {
+    id: 2,
     key: 'vocabulary-2',
     word: 'vocabulary-2',
     definition: 'definition2'
@@ -27,6 +29,7 @@ describe('vocabulariesEditorRedux reducer tests', () => {
     const nextState = vocabularyEditor(
       initialState,
       addVocabulary({
+        id: 3,
         key: 'new-word',
         word: 'new-word',
         definition: 'new-definition'

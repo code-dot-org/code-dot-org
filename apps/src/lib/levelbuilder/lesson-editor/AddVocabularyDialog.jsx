@@ -121,7 +121,11 @@ export default class AddVocabularyDialog extends Component {
       this.state.definition !== '';
     return (
       <BaseDialog isOpen={true} handleClose={this.onClose}>
-        {this.state.error && <h2>{this.state.error}</h2>}
+        <h2>
+          {this.props.editingVocabulary ? 'Edit Vocabulary' : 'Add Vocabulary'}
+        </h2>
+
+        {this.state.error && <h3>{this.state.error}</h3>}
         <label style={styles.inputAndLabel}>
           Word
           <input

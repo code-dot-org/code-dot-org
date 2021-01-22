@@ -12,8 +12,8 @@ describe('VocabulariesEditor', () => {
     removeVocabulary = sinon.spy();
     defaultProps = {
       vocabularies: [
-        {key: '1', word: 'word1', definition: 'def1'},
-        {key: '2', word: 'word2', definition: 'def2'}
+        {id: 1, key: '1', word: 'word1', definition: 'def1'},
+        {id: 2, key: '2', word: 'word2', definition: 'def2'}
       ],
       addVocabulary,
       editVocabulary,
