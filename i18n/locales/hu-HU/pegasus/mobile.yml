@@ -1130,7 +1130,7 @@
   header_about_donors: "Adományozók"
   header_about_partners: "Partnerek"
   header_about_team: "Teljes csapat"
-  header_about_news: "Sajtósarok"
+  header_about_news: "Hírszoba"
   header_about_evaluation: "Értékelés"
   header_about_jobs: "Állás"
   header_about_contact: "Kapcsolat"
@@ -1148,7 +1148,7 @@
   header_documentation: "Dokumentáció"
   user_header_label: "Üdv %{username}"
   user_header_team: "Csapat"
-  user_header_settings: "Profilom"
+  user_header_settings: "Fiók beállítások"
   user_header_logout: "Kijelentkezés"
   user_header_signin: "Bejelentkezés"
   user_header_create: 'Alkoss '
