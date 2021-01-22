@@ -4455,3 +4455,7 @@ cs:
           lesson_groups:
             csd5_2:
               display_name: 'Kapitola 2: Řešení datových problémů'
+        contagion-pilot:
+          description_short: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
+          description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
+          student_description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
