@@ -5,6 +5,11 @@ import Radium from 'radium';
 import {progressStyles} from './multiGridConstants';
 import FontAwesome from '../FontAwesome';
 
+/**
+ * Note: this component is being deprecated in favor of
+ * ProgressTableLessonNumber and will be removed soon.
+ */
+
 class SectionProgressLessonNumberCell extends Component {
   static propTypes = {
     // Sequence number counting all stage types in order
