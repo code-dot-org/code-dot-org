@@ -2269,7 +2269,7 @@ class User < ApplicationRecord
     section_attempts || 0
   end
 
-  # There aare two possible states in which we would want to reset section attempts
+  # There are two possible states in which we would want to reset section attempts
   # 1) Initialize for the first time 2) 24 hours have passed since last attempt
   def reset_section_attempts?
     # subtracting DateTimes returns the difference of days as a floating point number
