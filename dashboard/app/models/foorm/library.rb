@@ -5,7 +5,7 @@
 #  id         :bigint           not null, primary key
 #  name       :string(255)      not null
 #  version    :integer          not null
-#  published  :boolean          default(TRUE), not null
+#  published  :boolean          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -17,6 +17,8 @@ class Foorm::Library < ApplicationRecord
   include Seeded
 
   has_many :library_questions, primary_key: [:name, :version], foreign_key: [:library_name, :library_version]
+
+  after_save :write_library_to_file
 
   def self.setup
     Dir.glob('config/foorm/library/**/*.json').each do |path|
@@ -58,5 +60,31 @@ class Foorm::Library < ApplicationRecord
         raise format('failed to parse %s', full_name)
       end
     end
+  end
+
+  def formatted_for_file
+    elements = library_questions.map {|library_question| JSON.parse(library_question.question)}
+
+    {
+      'published' => published,
+      'pages' => [
+        {'elements' => elements}
+      ]
+    }
+  end
+
+  def write_library_to_file
+    if write_to_file?
+      file_path = Rails.root.join("config/foorm/library/#{name}.#{version}.json")
+      file_directory = File.dirname(file_path)
+      unless Dir.exist?(file_directory)
+        FileUtils.mkdir_p(file_directory)
+      end
+      File.write(file_path, formatted_for_file)
+    end
+  end
+
+  def write_to_file?
+    Rails.application.config.levelbuilder_mode
   end
 end
