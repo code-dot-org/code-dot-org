@@ -10,7 +10,7 @@ class BackfillScriptIdInTeacherFeedbacks < ActiveRecord::Migration[5.2]
     unless Rails.env.production?
       # Do not batch, because we do not expect many of these to exist in
       # non-production environments.
-      TeacherFeedback.where(script_id: nil).find_each do |teacher_feedback|
+      TeacherFeedback.with_deleted.where(script_id: nil).find_each do |teacher_feedback|
         script_id = teacher_feedback.script_level.script_id
         teacher_feedback.update!(script_id: script_id)
       end
