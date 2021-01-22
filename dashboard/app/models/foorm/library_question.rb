@@ -17,6 +17,8 @@
 #
 
 class Foorm::LibraryQuestion < ApplicationRecord
+  include Seeded
+
   belongs_to :library, primary_key: [:library_name, :library_version], foreign_key: [:library_name, :library_version]
 
   validate :validate_library_question
