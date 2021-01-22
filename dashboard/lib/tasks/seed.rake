@@ -48,7 +48,7 @@ namespace :seed do
   end
 
   timed_task foorm_libraries: :environment do
-    Foorm::LibraryQuestion.setup
+    Foorm::Library.setup
   end
 
   timed_task foorm_forms: :environment do
