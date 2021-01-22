@@ -149,6 +149,7 @@ class Foorm::Form < ApplicationRecord
 
   # Checks that the element name is not in element_names and the choices/rows/columns are unique and all have
   # value/text parameters. If any of the above are not true, will raise an InvalidFoormConfigurationError.
+  # Note that this method is also used to validate library_questions.
   def self.validate_element(element_data, element_names)
     return unless PANEL_TYPES.include?(element_data[:type]) || QUESTION_TYPES.include?(element_data[:type])
     unless element_data[:name]
