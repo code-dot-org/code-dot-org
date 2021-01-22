@@ -1706,7 +1706,7 @@
       "key": "6782e4c9-60f9-44fa-ab5a-ca9ebb38b021",
       "position": 2,
       "properties": {
-        "description": "**Distribute: ** Give each pair a copy of the [r big-data-citizen-science-machine-learning-activity-guide]",
+        "description": "**Distribute:** Give each pair a copy of the [r big-data-citizen-science-machine-learning-activity-guide]",
         "tips": [
           {
             "key": "tip",
@@ -1724,7 +1724,7 @@
       "key": "3541aa8a-3c4c-4f57-aa10-f423bb64a577",
       "position": 3,
       "properties": {
-        "description": "[slide] **Prompt:** With a partner\r\n* Choose one of the topics\r\n* Watch the related videos / listen to the podcasts\r\n* Take notes and be ready to share responses to the questions on your activity guide\r\n\r\n[slide] **Discuss:** Have members from each topic share the conclusions from their watching and research. Make sure that students from each group have time to share\r\n\r\n* What the topic is\r\n* The key vocabulary they were responsible for researching\r\n* How this concept uses or modifies the data analysis process\r\n* Examples of the problems this technique is being used to solve"
+        "description": "[slide] **Prompt:** With a partner\n\n* Choose one of the topics\n* Watch the related videos / listen to the podcasts\n* Take notes and be ready to share responses to the questions on your activity guide\n\n[slide] **Discuss:** Have members from each topic share the conclusions from their watching and research. Make sure that students from each group have time to share\n\n* What the topic is\n* The key vocabulary they were responsible for researching\n* How this concept uses or modifies the data analysis process\n* Examples of the problems this technique is being used to solve"
       },
       "seeding_key": {
         "activity_section.key": "3541aa8a-3c4c-4f57-aa10-f423bb64a577",
