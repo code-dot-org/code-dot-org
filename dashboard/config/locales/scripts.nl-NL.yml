@@ -5611,3 +5611,10 @@ nl:
               display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
             cspSurvey:
               display_name: Vragenlijst
+        contagion-pilot:
+          description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak
+            te simuleren.
+          description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te
+            simuleren.
+          student_description: Gebruik Sprite Lab om een simulatie van een virusuitbraak
+            te simuleren.
