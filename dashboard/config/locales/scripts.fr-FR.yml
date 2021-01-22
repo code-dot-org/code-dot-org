@@ -26817,3 +26817,10 @@ fr:
             les étapes de ce processus. Le chapitre conclut en examinant comment le
             processus de résolution de problèmes de données peut être appliqué à une
             zone de ton choix.
+        contagion-pilot:
+          description_short: 'Utilisez Sprite Lab pour programmer la simulation d''une
+            épidémie de virus. '
+          description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie
+            de virus. '
+          student_description: 'Utilisez Sprite Lab pour programmer la simulation
+            d''une épidémie de virus. '

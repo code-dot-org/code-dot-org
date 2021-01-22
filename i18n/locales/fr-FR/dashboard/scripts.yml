@@ -16581,3 +16581,7 @@ fr:
             cspSurvey:
               display_name: Enquête
           student_description: L'Unité 5 traite de l'importance des données dans la résolution des problèmes et met en évidence la façon dont les ordinateurs peuvent aider dans ce processus. Le premier chapitre explore les différents systèmes utilisés pour représenter l'information dans un ordinateur et les défis et les compromis posés par leur utilisation. Dans le deuxième chapitre, tu apprendras comment les données collectées sont utilisées pour résoudre les problèmes et comment les ordinateurs aident à automatiser les étapes de ce processus. Le chapitre conclut en examinant comment le processus de résolution de problèmes de données peut être appliqué à une zone de ton choix.
+        contagion-pilot:
+          description_short: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
+          description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
+          student_description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie de virus. '
