@@ -146,7 +146,9 @@ class UserLevel < ApplicationRecord
   def locked?(stage)
     return false unless stage.lockable?
     return false if user.authorized_teacher?
-    submitted? && !readonly_answers? || has_autolocked?(stage)
+    return false if readonly_answers
+    return true unless unlocked_at
+    return has_autolocked(stage)
   end
 
   # First ScriptLevel in this Script containing this Level.
