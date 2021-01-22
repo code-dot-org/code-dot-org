@@ -38,6 +38,13 @@ const styles = {
   }
 };
 
+const initialState = {
+  word: '',
+  definition: '',
+  isSaving: false,
+  error: ''
+};
+
 export default class AddVocabularyDialog extends Component {
   static propTypes = {
     afterSave: PropTypes.func,
@@ -48,7 +55,6 @@ export default class AddVocabularyDialog extends Component {
 
   constructor(props) {
     super(props);
-    console.log(props);
     if (this.props.editingVocabulary) {
       this.state = {
         ...this.props.editingVocabulary,
@@ -56,12 +62,7 @@ export default class AddVocabularyDialog extends Component {
         error: ''
       };
     } else {
-      this.state = {
-        word: '',
-        definition: '',
-        isSaving: false,
-        error: ''
-      };
+      this.state = {...initialState};
     }
   }
 
@@ -71,6 +72,15 @@ export default class AddVocabularyDialog extends Component {
 
   handleDefinitionChange = e => {
     this.setState({definition: e.target.value});
+  };
+
+  resetState = () => {
+    this.setState(initialState);
+  };
+
+  onClose = () => {
+    this.resetState();
+    this.props.handleClose();
   };
 
   saveVocabulary = e => {
@@ -97,7 +107,7 @@ export default class AddVocabularyDialog extends Component {
     })
       .done(data => {
         this.props.afterSave(data);
-        this.props.handleClose();
+        this.onClose();
       })
       .fail(error => {
         this.setState({isSaving: false, error: error.responseText});
@@ -105,13 +115,13 @@ export default class AddVocabularyDialog extends Component {
   };
 
   render() {
-    console.log(this.state);
     const canSubmit =
       !this.state.isSaving &&
       this.state.word !== '' &&
       this.state.definition !== '';
     return (
-      <BaseDialog isOpen={true} handleClose={this.props.handleClose}>
+      <BaseDialog isOpen={true} handleClose={this.onClose}>
+        {this.state.error && <h2>{this.state.error}</h2>}
         <label style={styles.inputAndLabel}>
           Word
           <input
