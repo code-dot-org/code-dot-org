@@ -69,6 +69,7 @@ describe('ActivitySectionCard', () => {
       updateActivitySectionMetrics,
       setTargetActivitySection,
       targetActivitySectionPos: 1,
+      hasLessonPlan: true,
 
       //redux
       moveActivitySection,
@@ -108,6 +109,23 @@ describe('ActivitySectionCard', () => {
     );
     expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
     expect(wrapper.find('textarea').length).to.equal(1);
+    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.contains('Progression Title:')).to.be.true;
+  });
+
+  it('renders activity section with levels for lesson with lesson plan', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        activitySection={sampleActivities[0].activitySections[2]}
+        hasLessonPlan={false}
+      />
+    );
+    expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).to.equal(
+      1
+    );
+    expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
+    expect(wrapper.find('textarea').length).to.equal(0);
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.contains('Progression Title:')).to.be.true;
   });

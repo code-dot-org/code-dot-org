@@ -109,6 +109,7 @@ class ActivitySectionCard extends Component {
     targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     updateActivitySectionMetrics: PropTypes.func.isRequired,
+    hasLessonPlan: PropTypes.bool.isRequired,
 
     //redux
     moveActivitySection: PropTypes.func.isRequired,
@@ -430,7 +431,8 @@ class ActivitySectionCard extends Component {
       activitySection,
       targetActivityPos,
       targetActivitySectionPos,
-      activityPosition
+      activityPosition,
+      hasLessonPlan
     } = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetActivitySection =
@@ -446,18 +448,22 @@ class ActivitySectionCard extends Component {
       >
         <div style={styles.activitySectionCardHeader}>
           <label>
-            <span style={styles.title}>Title:</span>
-            <input
-              style={styles.titleInput}
-              value={this.props.activitySection.displayName}
-              onChange={this.handleChangeDisplayName}
-            />
-            <span style={styles.title}>Duration:</span>
-            <input
-              style={styles.durationInput}
-              value={this.props.activitySection.duration}
-              onChange={this.handleChangeDuration}
-            />
+            {hasLessonPlan && (
+              <span>
+                <span style={styles.title}>Title:</span>
+                <input
+                  style={styles.titleInput}
+                  value={this.props.activitySection.displayName}
+                  onChange={this.handleChangeDisplayName}
+                />
+                <span style={styles.title}>Duration:</span>
+                <input
+                  style={styles.durationInput}
+                  value={this.props.activitySection.duration}
+                  onChange={this.handleChangeDuration}
+                />
+              </span>
+            )}
             <OrderControls
               name={
                 this.props.activitySection.displayName ||
@@ -469,29 +475,33 @@ class ActivitySectionCard extends Component {
               itemType={'activitySection'}
             />
           </label>
-          <div style={styles.checkboxesAndButtons}>
-            <span style={styles.checkboxes}>
-              <label style={styles.labelAndCheckbox}>
-                Remarks
-                <input
-                  checked={this.props.activitySection.remarks}
-                  onChange={this.toggleRemarks}
-                  type="checkbox"
-                  style={styles.checkbox}
-                />
-              </label>
-            </span>
-          </div>
-        </div>
-        <textarea
-          value={this.props.activitySection.text}
-          rows={Math.max(
-            this.props.activitySection.text.split(/\r\n|\r|\n/).length + 1,
-            2
+          {hasLessonPlan && (
+            <div style={styles.checkboxesAndButtons}>
+              <span style={styles.checkboxes}>
+                <label style={styles.labelAndCheckbox}>
+                  Remarks
+                  <input
+                    checked={this.props.activitySection.remarks}
+                    onChange={this.toggleRemarks}
+                    type="checkbox"
+                    style={styles.checkbox}
+                  />
+                </label>
+              </span>
+            </div>
           )}
-          style={styles.input}
-          onChange={this.handleChangeText}
-        />
+        </div>
+        {hasLessonPlan && (
+          <textarea
+            value={this.props.activitySection.text}
+            rows={Math.max(
+              this.props.activitySection.text.split(/\r\n|\r|\n/).length + 1,
+              2
+            )}
+            style={styles.input}
+            onChange={this.handleChangeText}
+          />
+        )}
         {this.props.activitySection.scriptLevels.length > 0 && (
           <div>
             <label>
@@ -534,6 +544,7 @@ class ActivitySectionCard extends Component {
           appendResourceLink={this.appendResourceLink}
           appendVocabularyLink={this.appendVocabularyLink}
           appendSlide={this.appendSlide}
+          hasLessonPlan={hasLessonPlan}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}

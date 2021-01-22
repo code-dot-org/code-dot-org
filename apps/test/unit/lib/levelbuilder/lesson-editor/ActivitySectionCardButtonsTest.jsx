@@ -31,7 +31,8 @@ describe('ActivitySectionCardButtons', () => {
       removeTip,
       appendResourceLink,
       appendVocabularyLink,
-      appendSlide
+      appendSlide,
+      hasLessonPlan: true
     };
   });
 
@@ -43,6 +44,17 @@ describe('ActivitySectionCardButtons', () => {
     expect(wrapper.find('AddLevelDialog').length).to.equal(1);
     expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(2);
     // Don't render this component until add tip button or tip icon are clicked
+    expect(wrapper.find('EditTipDialog').length).to.equal(0);
+  });
+
+  it('renders only level button when hasLessonPlan false', () => {
+    const wrapper = shallow(
+      <ActivitySectionCardButtons {...defaultProps} hasLessonPlan={false} />
+    );
+    expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.find('Connect(FindResourceDialog)').length).to.equal(0);
+    expect(wrapper.find('AddLevelDialog').length).to.equal(1);
+    expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(0);
     expect(wrapper.find('EditTipDialog').length).to.equal(0);
   });
 
