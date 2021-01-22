@@ -2707,7 +2707,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. \r\n"
           }
