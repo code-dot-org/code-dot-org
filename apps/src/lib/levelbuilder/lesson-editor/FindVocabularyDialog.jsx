@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
-import {connect} from 'react-redux';
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
@@ -15,7 +14,7 @@ const styles = {
   }
 };
 
-class FindVocabularyDialog extends Component {
+export default class FindVocabularyDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
@@ -71,9 +70,3 @@ class FindVocabularyDialog extends Component {
     );
   }
 }
-
-export const UnconnectedFindVocabularyDialog = FindVocabularyDialog;
-
-export default connect(state => ({
-  vocabularies: state.vocabularies
-}))(FindVocabularyDialog);
