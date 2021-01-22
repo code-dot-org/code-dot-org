@@ -52,6 +52,7 @@ pt:
               name: 'Laboratório do Jogo: Criar uma História'
             The Big Event:
               name: O Grande Evento
+          student_description: O Curso 1 tem como propósito ensinar estudantes que estão começando a ler a criar programas de computador, o que os ajudará a aprender a colaborar com outras pessoas, desenvolver habilidades de resolução de problemas e persistir na execução de tarefas difíceis. No final do curso, os estudantes criam seu próprio jogo ou história personalizados que eles podem compartilhar com outras pessoas. Este curso é recomendado para crianças da pré-escola até 1º ano.
         course2:
           title: Curso 2
           description: O Curso 2 é voltado para estudantes que já sabem ler e não têm experiência em programação. Aqui, os alunos criarão programas para resolver problemas e desenvolver histórias ou jogos interativos que podem compartilhar com outras pessoas. Este curso é recomendado para alunos de 2º-5º ano.
@@ -96,6 +97,7 @@ pt:
               name: O Grande Evento
             Your Digital Footprint:
               name: A tua Pegada Digital
+          student_description: O Curso 2 é voltado para estudantes que já sabem ler e não têm experiência em programação. Aqui, os alunos criarão programas para resolver problemas e desenvolver histórias ou jogos interativos que podem compartilhar com outras pessoas. Este curso é recomendado para alunos de 2º-5º ano.
         course3:
           title: Curso 3
           description: O Curso 3 foi desenvolvido para estudantes que já fizeram o Curso 2. Os estudantes se aprofundarão nos tópicos de programação introduzidos nos cursos anteriores, buscando soluções flexíveis para problemas mais complexos. No final deste curso, os estudantes criam histórias e jogos interativos que podem compartilhar com qualquer pessoa. Este curso é recomendado para alunos de 4º-5º ano.
@@ -144,6 +146,7 @@ pt:
               name: 'Laboratório do Jogo: Criar Um jogo'
             'Studio: Create a Story':
               name: 'Laboratório do Jogo: Criar uma História'
+          student_description: O Curso 3 foi desenvolvido para estudantes que já fizeram o Curso 2. Os estudantes se aprofundarão nos tópicos de programação introduzidos nos cursos anteriores, buscando soluções flexíveis para problemas mais complexos. No final deste curso, os estudantes criam histórias e jogos interativos que podem compartilhar com qualquer pessoa. Este curso é recomendado para alunos de 4º-5º ano.
         playlab:
           title: Laboratório
           description: Crie uma história ou um jogo no Laboratório!
@@ -151,6 +154,7 @@ pt:
           lessons:
             Play Lab:
               name: Laboratório
+          student_description: Crie uma história ou um jogo no Laboratório!
         artist:
           title: Artista
           description: Faça desenhos e figuras legais com o Artista!
@@ -158,6 +162,7 @@ pt:
           lessons:
             Artist:
               name: Artista
+          student_description: Faça desenhos e figuras legais com o Artista!
         hourofcode:
           title: Labirinto clássico
           description: Conheça os conceitos básicos da ciência da computação com os personagens do Angry Birds, Plants vs. Zombies e com o Scrat, da Era do Gelo!
@@ -165,6 +170,7 @@ pt:
           lessons:
             Maze:
               name: Labirinto
+          student_description: Conheça os conceitos básicos da ciência da computação com os personagens do Angry Birds, Plants vs. Zombies e com o Scrat, da Era do Gelo!
         frozen:
           title: Programa com a Anna e com a Elsa
           description: Vamos usar programação para explorar a magia e a beleza do gelo com a Anna e com a Elsa. Vais criar flocos de neve e padrões enquanto patinas no gelo, e ainda conseguirás construir a ilha encantada do inverno que poderás partilhar com os teus amigos!
@@ -172,6 +178,7 @@ pt:
           lessons:
             Artist:
               name: Artista
+          student_description: Vamos usar programação para explorar a magia e a beleza do gelo com a Anna e com a Elsa. Vais criar flocos de neve e padrões enquanto patinas no gelo, e ainda conseguirás construir a ilha encantada do inverno que poderás partilhar com os teus amigos!
         course4:
           title: Curso 4
           description: Curso 4 foi projetado para estudantes que concluíram os Cursos 2 e 3. Os alunos aprenderão a resolver quebra-cabeças com maior complexidade e combinar vários conceitos, enquanto resolvem cada desafio. Após concluírem este curso, os alunos terão criado programas que mostram habilidades múltiplas, incluindo ciclos e funções com parâmetros. Recomendado para alunos do 4° ao 8° ano.
@@ -222,6 +229,7 @@ pt:
               name: 'Offline: escrever músicas com parâmetros'
             'Unplugged: Tangrams':
               name: 'Offline: tangrams'
+          student_description: Curso 4 foi projetado para estudantes que concluíram os Cursos 2 e 3. Os alunos aprenderão a resolver quebra-cabeças com maior complexidade e combinar vários conceitos, enquanto resolvem cada desafio. Após concluírem este curso, os alunos terão criado programas que mostram habilidades múltiplas, incluindo ciclos e funções com parâmetros. Recomendado para alunos do 4° ao 8° ano.
         Course4pre:
           title: Pré-requisitos do curso 4
           description: Uma breve revisão dos conceitos para os alunos que não fizeram os cursos 2 e 3.
@@ -245,6 +253,7 @@ pt:
               name: 'Fazendeira: Laços Enquanto'
             'Maze: Sequence':
               name: 'Labirinto: Sequência'
+          student_description: Uma breve revisão dos conceitos para os alunos que não fizeram os cursos 2 e 3.
         usability:
           lessons:
             Binary:
@@ -284,6 +293,7 @@ pt:
           lessons:
             Infinity:
               name: Infinito
+          student_description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
         algebrademo:
           lessons:
             Defining Variables:
@@ -359,6 +369,7 @@ pt:
               name: O Labirinto
             Wrap-up:
               name: Resumo
+          student_description: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
         edit-code:
           title: Editar código
           description: Editar código
@@ -372,6 +383,7 @@ pt:
               name: O Artista
             The Maze:
               name: O Labirinto
+          student_description: Editar código
         events:
           title: Eventos
           description: Eventos
@@ -381,6 +393,7 @@ pt:
               name: Bounce
             Calc:
               name: Calc
+          student_description: Eventos
         flappy:
           title: Flappy Bird
           description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!
@@ -388,6 +401,7 @@ pt:
           lessons:
             Flappy Code:
               name: Flappy Bird
+          student_description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!
         jigsaw:
           title: Quebra-cabeças
           description: Experimente nosso tutorial sobre quebra-cabeça
@@ -395,6 +409,7 @@ pt:
           lessons:
             Jigsaw:
               name: Quebra-cabeças
+          student_description: Experimente nosso tutorial sobre quebra-cabeça
         step:
           title: Avançar
           description: Etapa do tutorial
@@ -402,6 +417,7 @@ pt:
           lessons:
             Step:
               name: Avançar
+          student_description: Etapa do tutorial
         Hour of Code:
           title: Hora de Código 2013
           description: Conheça as noções básicas de ciência da computação com personagens de Angry Birds e Plants vs. Zombies!
@@ -409,6 +425,7 @@ pt:
           lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
+          student_description: Conheça as noções básicas de ciência da computação com personagens de Angry Birds e Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -534,6 +551,7 @@ pt:
               name: Olá!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 Online: combinado de estudos de verão'
         cspunit2:
           description_short: Programação
           lessons:
@@ -557,6 +575,7 @@ pt:
               name: Cadeias de caracteres e imagens
             The Design Recipe:
               name: A receita do design
+          student_description: 'Fase 2 Online: combinado de estudos de verão'
         allthethings:
           title: Todas as coisas!
           lessons:
@@ -608,6 +627,7 @@ pt:
               name: Painel do Professor
             Writing Contracts:
               name: Escrever Contratos
+          student_description: 'Fase 2 Online: combinado de estudos de verão'
         cspfacilitator:
           lessons:
             App Lab:
@@ -634,6 +654,7 @@ pt:
               name: Olá!
             Wrap-up:
               name: Resumo
+          student_description: 'Fase 2 Online: combinado de estudos de verão'
         algebraPD2:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -644,6 +665,7 @@ pt:
               name: A receita do design
             Welcome!:
               name: Olá!
+          student_description: 'Fase 2 Online: combinado de estudos de verão'
         sciencePD2b:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -652,6 +674,7 @@ pt:
               name: Olá!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 Online: combinado de estudos de verão'
         science-PD2:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -660,6 +683,7 @@ pt:
               name: Olá!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 Online: combinado de estudos de verão'
         Equity-OnlinePD:
           lessons:
             Next Steps:
@@ -672,6 +696,7 @@ pt:
               name: Olá!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 Online: combinado de estudos de verão'
         ECSPD2-iZone:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -686,6 +711,7 @@ pt:
               name: Olá!
             Wrap-up:
               name: Resumo
+          student_description: 'Fase 2 Online: combinado de estudos de verão'
         ECSPD2-NexTech:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -700,6 +726,7 @@ pt:
               name: Olá!
             Wrap-up:
               name: Resumo
+          student_description: 'Fase 2 Online: combinado de estudos de verão'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -737,6 +764,7 @@ pt:
           lessons:
             Ice Age Play Lab:
               name: Laboratório de brincadeiras da Idade do gelo
+          student_description: Criar uma história ou faz um jogo com o Laboratório de Jogar da Era do Gelo!
         cspunit3temp:
           description_short: Programação
           lessons:
@@ -749,6 +777,7 @@ pt:
           lessons:
             Gumball Play Lab:
               name: Laboratório de jogo Gumball
+          student_description: Criar uma história ou faz um jogo com o Laboratório de jogo Gumball!
         starwars:
           title: 'Star Wars: Construir uma Galáxia com Código'
           description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
@@ -756,6 +785,7 @@ pt:
           lessons:
             Hour of Code 2015:
               name: Hora de Código 2015
+          student_description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
         starwarsblocks:
           title: 'Star Wars: Construir uma Galáxia com Código'
           description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
@@ -763,6 +793,7 @@ pt:
           lessons:
             Hour of Code 2015:
               name: Hora de Código 2015
+          student_description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
         mc:
           title: Hora do Código de Minecraft
           description: Utiliza blocos de código para levares o Steve ou a Alex numa aventura através deste mundo Minecraft
@@ -770,6 +801,7 @@ pt:
           lessons:
             Hour of Code 2015:
               name: Hora de Código 2015
+          student_description: Use blocos de código para levar o Steve ou a Alex numa aventura por este mundo Minecraft.
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1148,6 +1180,7 @@ pt:
           lessons:
             Minecraft Hour of Code Designer:
               name: Desginer da Hora do Código de Minecraft
+          student_description: Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas, ovelhas, Creepers, mortos-vivos e muito mais.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -2766,6 +2799,9 @@ pt:
               display_name: Visão geral
             content:
               display_name: Conteúdo
+          lessons:
+            Focus Area 1:
+              name: Currículo
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -3347,6 +3383,12 @@ pt:
               name: Curso A
             Course B:
               name: Curso B
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Introdução
+            lessonGroup-3:
+              display_name: Variáveis
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -3568,8 +3610,6 @@ pt:
               key: Festa da Dança
               name: Festa da Dança
           lesson_groups:
-            csf_warmup:
-              display_name: Aquecimento
             csf_sequencing:
               display_name: Sequenciação
             csf_loops:
@@ -3591,11 +3631,18 @@ pt:
             csf_events:
               display_name: Eventos
         csf-2021-pilot:
-          lessons:
-            lesson-1:
-              name: Variáveis do envelope
           lesson_groups:
             ramp_up:
               display_name: Introdução
             lessonGroup-3:
               display_name: Variáveis
+        csd4-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Inquérito
+            csdSurvey:
+              display_name: Inquérito
+        csd5-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Inquérito

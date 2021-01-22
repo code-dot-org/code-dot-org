@@ -48,10 +48,10 @@
           "MC_HOC_2017_08_RY_1": "ជំនួយការអាចដើរឆ្លងកាត់កំអែភ្នំភ្លើងបាន តែ Steve និង Alex មិនអាចទេ!  "
         },
         "courseA_maze_seq1": {
-          "courseA_maze_seq1_1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ"
+          "courseA_maze_seq1_1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ!"
         },
         "courseA_maze_seq1_2018": {
-          "courseA_maze_seq1_1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ"
+          "courseA_maze_seq1_1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ!"
         },
         "courseA_maze_seq1_2019": {
           "courseA_maze_seq1_1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ"
@@ -60,10 +60,10 @@
           "courseA_maze_seq1_1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ"
         },
         "courseB_maze_seq1": {
-          "courseB_maze_seq1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ"
+          "courseB_maze_seq1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ!"
         },
         "courseB_maze_seq1_2018": {
-          "courseB_maze_seq1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ"
+          "courseB_maze_seq1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ!"
         },
         "courseB_maze_seq1_2019": {
           "courseB_maze_seq1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ"
@@ -72,10 +72,10 @@
           "courseB_maze_seq1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ"
         },
         "courseA_maze_seq2": {
-          "courseA_maze_seqA_callout1": "ប្រើប៊ូតុងជំហាននៅក្នុងកម្មវិធីដើម្បីដំនើរការមួយជំហានម្តងៗ។ វានឹងជួយអ្នកឱ្យរកឃើញនៅកំហុស!"
+          "courseA_maze_seqA_callout1": "ប្រើប៊ូតុងជំហាននៅក្នុងកម្មវិធី ដើម្បីដំណើរការមួយជំហានម្តងៗ។ វានឹងជួយអ្នកឲ្យរកឃើញនូវកំហុស!"
         },
         "courseB_maze_seq2": {
-          "courseB_maze_seq2_callout1": "ប្រើប៊ូតុងជំហាននៅក្នុងកម្មវិធីដើម្បីដំនើរការមួយជំហានម្តងៗ។ វានឹងជួយអ្នកឱ្យរកឃើញនៅកំហុស!"
+          "courseB_maze_seq2_callout1": "ប្រើប៊ូតុងជំហាននៅក្នុងកម្មវិធី ដើម្បីដំណើរការមួយជំហានម្តងៗ។ វានឹងជួយអ្នកឲ្យរកឃើញនូវកំហុស!"
         },
         "courseC_maze_programming3": {
           "courseC_maze_programming3_3": "របងទាំងនេះសុទ្ធតែជាថ្ម វាមិនអាចបំបែកបានទេ។",
@@ -462,6 +462,290 @@
         },
         "CSD U3 Sprites intro sprites_2019": {
           "": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite"
+        },
+        "4-5 Artist Patterns Free Play": {
+          "4-5_Artist_Patterns_Free_Play_1": "ប្លុកដែលអ្នកចូលចិត្តទាំងអស់ឥឡូវនេះត្រូវបានរៀបចំជាប្រភេទ។ ចុចលើពាក្យទាំងនេះដើម្បីដឹងពីកន្លែងដែលអ្វីៗបានទៅ!"
+        },
+        "CSD U3 Sprites anitab 1": {
+          "": "ចុចទីនេះដើម្បីបើកផ្ទាំងរូបភាពគំនូរជីវចល។"
+        },
+        "CSD U3 Sprites anitab 1_2018": {
+          "": "ចុចទីនេះដើម្បីបើកផ្ទាំងរូបភាពគំនូរជីវចល។"
+        },
+        "CSD U3 Sprites anitab 1_2019": {
+          "": "ចុចទីនេះដើម្បីបើកផ្ទាំងរូបភាពគំនូរជីវចល។"
+        },
+        "CSD U3 Sprites text": {
+          "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
+        },
+        "CSD U3 Sprites text_2018": {
+          "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
+        },
+        "CSD U3 Sprites text_2019": {
+          "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
+        },
+        "CSD U3 abstraction accelerateX": {
+          "CSD_U3_L11_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction accelerateX_2018": {
+          "CSD_U3_L11_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction accelerateX_2019": {
+          "CSD_U3_L11_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction accelerateY": {
+          "CSD_U3_L11_S7_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction accelerateY_2018": {
+          "CSD_U3_L11_S7_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction accelerateY_2019": {
+          "CSD_U3_L11_S7_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction jump": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់",
+          "CSD_U3_L11_S17_C2": "បញ្ជូនកង្កែបត្រឡប់មកវិញនៅទីនេះ"
+        },
+        "CSD U3 abstraction jump_2018": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់",
+          "CSD_U3_L11_S17_C2": "បញ្ជូនកង្កែបត្រឡប់មកវិញនៅទីនេះ"
+        },
+        "CSD U3 abstraction jump_2018_2019": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់",
+          "CSD_U3_L11_S17_C2": "បញ្ជូនកង្កែបត្រឡប់មកវិញនៅទីនេះ"
+        },
+        "CSD U3 abstraction jumping": {
+          "CSD_U3_L13_S8_C1": "កំណត់ល្បឿននៅទីនេះ"
+        },
+        "CSD U3 abstraction jumping_2018": {
+          "CSD_U3_L13_S8_C1": "កំណត់ល្បឿននៅទីនេះ"
+        },
+        "CSD U3 abstraction jumping_2019": {
+          "CSD_U3_L13_S8_C1": "កំណត់ល្បឿននៅទីនេះ"
+        },
+        "CSD U3 abstraction looping": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
+        "CSD U3 abstraction looping_2018": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
+        "CSD U3 abstraction looping_2019": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
+        "CSD U3 abstraction rotation": {
+          "CSD_U3_L11_S4_C1": "ប្រើប្លុក rotationSpeed នៅទីនេះ"
+        },
+        "CSD U3 abstraction rotation control": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction rotation control_2018": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction rotation control_2019": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction rotation_2018": {
+          "CSD_U3_L11_S4_C1": "ប្រើប្លុក rotationSpeed នៅទីនេះ"
+        },
+        "CSD U3 abstraction rotation_2019": {
+          "CSD_U3_L11_S4_C1": "ប្រើប្លុក rotationSpeed នៅទីនេះ"
+        },
+        "CSD U3 abstraction tumbleweed": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
+        "CSD U3 abstraction tumbleweed_2018": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
+        "CSD U3 abstraction tumbleweed_2019": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
+        "CSD U3 abstraction velocityX": {
+          "CSD_U3_L11_S4_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction velocityX control": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityX control_2018": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityX control_2019": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityX if-statements": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityX if-statements_2018": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityX if-statements_2019": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityX_2018": {
+          "CSD_U3_L11_S4_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction velocityX_2019": {
+          "CSD_U3_L11_S4_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction velocityY": {
+          "CSD_U3_L11_S5_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction velocityY control": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityY control_2018": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityY control_2019": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityY_2018": {
+          "CSD_U3_L11_S5_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction velocityY_2019": {
+          "CSD_U3_L11_S5_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions isTouching intro": {
+          "CSD_U3_L12_S2_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions isTouching intro_2018": {
+          "CSD_U3_L12_S2_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions isTouching intro_2019": {
+          "CSD_U3_L12_S2_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions scoreboard": {
+          "CSD_U3_L12_S8_C1": "ប្លុកទាំងនេះបង្ហាញពីពិន្ទុ។",
+          "CSD_U3_L12_S8_C2": "បណ្តុំប្លុកដែលកំណត់ថាតើទន្សាយបានចាប់យកការ៉ុតទៅទីនេះ។"
+        },
+        "CSD U3 collisions scoreboard_2018": {
+          "CSD_U3_L12_S8_C1": "ប្លុកទាំងនេះបង្ហាញពីពិន្ទុ។",
+          "CSD_U3_L12_S8_C2": "បណ្តុំប្លុកដែលកំណត់ថាតើទន្សាយបានចាប់យកការ៉ុតទៅទីនេះ។"
+        },
+        "CSD U3 collisions scoreboard_2019": {
+          "CSD_U3_L12_S8_C1": "ប្លុកទាំងនេះបង្ហាញពីពិន្ទុ។",
+          "CSD_U3_L12_S8_C2": "បណ្តុំប្លុកដែលកំណត់ថាតើទន្សាយបានចាប់យកការ៉ុតទៅទីនេះ។"
+        },
+        "CSD U3 collisions types": {
+          "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions types_2018": {
+          "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions types_2019": {
+          "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 game variables": {
+          "CSD_U3_L18_S3_C2": "ទីតាំងអថេរ"
+        },
+        "CSD U3 game variables_2018": {
+          "CSD_U3_L18_S3_C2": "ទីតាំងអថេរ"
+        },
+        "CSD U3 game variables_2019": {
+          "CSD_U3_L18_S3_C2": "ទីតាំងអថេរ"
+        },
+        "CSD U3 platform scoreboard": {
+          "CSD_U3_L17_S7_C1": "ពិន្ទុត្រូវបានបង្ហាញនៅទីនេះ។"
+        },
+        "CSD U3 platform scoreboard_2018": {
+          "CSD_U3_L17_S7_C1": "ពិន្ទុត្រូវបានបង្ហាញនៅទីនេះ។"
+        },
+        "CSD U3 platform scoreboard_2019": {
+          "CSD_U3_L17_S7_C1": "ពិន្ទុត្រូវបានបង្ហាញនៅទីនេះ។"
+        },
+        "CSD U6 getProperty input": {
+          "CSD_U6L06P03": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U6 getProperty input_2018": {
+          "CSD_U6L06P03": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U6 getProperty input_2019": {
+          "CSD_U6L06P03": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "Geometric Sun": {
+          "4-5_Artist_Patterns_Free_Play_1": "ប្លុកដែលអ្នកចូលចិត្តទាំងអស់ឥឡូវនេះត្រូវបានរៀបចំជាប្រភេទ។ ចុចលើពាក្យទាំងនេះដើម្បីដឹងពីកន្លែងដែលអ្វីៗបានទៅ!"
+        },
+        "Geometric Sun_2018": {
+          "4-5_Artist_Patterns_Free_Play_1": "ប្លុកដែលអ្នកចូលចិត្តទាំងអស់ឥឡូវនេះត្រូវបានរៀបចំជាប្រភេទ។ ចុចលើពាក្យទាំងនេះដើម្បីដឹងពីកន្លែងដែលអ្វីៗបានទៅ!"
+        },
+        "OPD-K5-projects-4": {
+          "courseE_playLab_scaffold3_1": "ដាក់តួអង្គនឺងទង់ជាតិដើម្បីផ្លាស់ប្តូរទៅកម្រិតបន្ទាប់។"
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "នេះគឺជាប្រអប់ឧបករណ៍។ វាជាកន្លែងដែលអ្នកនឹងរកឃើញប្លុកបន្ថែមដើម្បីបញ្ចប់បញ្ហា។"
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "បន្ទាប់ពីភ្ជាប់ប្លុកទាំងអស់រួចហើយ ចុច \"រត់\" ដើម្បីចាប់ផ្តើមកម្មវិធីរបស់អ្នក។"
+        },
+        "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "ដាក់តួអង្គនឺងទង់ជាតិដើម្បីផ្លាស់ប្តូរទៅកម្រិតបន្ទាប់។"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "courseE_playLab_scaffold3_1": "ដាក់តួអង្គនឺងទង់ជាតិដើម្បីផ្លាស់ប្តូរទៅកម្រិតបន្ទាប់។"
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "នេះគឺជាហ្គេមសាកល្បងទីមួយរបស់អ្នក។ វាគឺពិបាក ហើយនឹងអាចតម្រូវឲ្យព្យាយាមជាច្រើនសារ។",
+          "courseC_maze_programming7_2": "ប្លុកទាំងអស់នេះធ្វេីពីថ្ម ហេីយមិនអាចបោះវាចោលបានទេ។"
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_1": "នេះគឺជាហ្គេមសាកល្បងទីមួយរបស់អ្នក។ វាគឺពិបាក ហើយនឹងអាចតម្រូវឲ្យព្យាយាមជាច្រើនសារ។",
+          "courseC_maze_programming7_2": "ប្លុកទាំងអស់នេះធ្វេីពីថ្ម ហេីយមិនអាចបោះវាចោលបានទេ។"
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_1": "នេះគឺជាហ្គេមសាកល្បងទីមួយរបស់អ្នក។ វាគឺពិបាក ហើយនឹងអាចតម្រូវឲ្យព្យាយាមជាច្រើនសារ។",
+          "courseC_maze_programming7_2": "ប្លុកទាំងអស់នេះធ្វេីពីថ្ម ហេីយមិនអាចបោះវាចោលបានទេ។"
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_1": "នេះគឺជាហ្គេមសាកល្បងទីមួយរបស់អ្នក។ វាគឺពិបាក ហើយនឹងអាចតម្រូវឲ្យព្យាយាមជាច្រើនសារ។",
+          "courseC_maze_programming7_2": "ប្លុកទាំងអស់នេះធ្វេីពីថ្ម ហេីយមិនអាចបោះវាចោលបានទេ។"
+        },
+        "courseD_artist_ramp11": {
+          "courseD_artist_ramp11_1": "អ្នកអាចកែលេខនេះបាន។",
+          "courseD_artist_ramp11_2": "ចុចទីនេះដើម្បីវាយបញ្ចូលចំនួនដែលអ្នកចង់អោយកូដរបស់អ្នកធ្វើឡើងវិញ។"
+        },
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_1": "ប្រើប្លុកនេះដើម្បីជីកយកកំណប់មួយដុំ។"
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_1": "នេះគឺជាហ្គេមសាកល្បងទីមួយរបស់អ្នក។ វាគឺពិបាក ហើយនឹងអាចតម្រូវឲ្យព្យាយាមជាច្រើនសារ។"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "អ្នកអាចកែលេខនេះបាន។",
+          "courseE_artist_ramp8_2": "ចុចទីនេះដើម្បីវាយបញ្ចូលចំនួនដែលអ្នកចង់អោយកូដរបស់អ្នកធ្វើឡើងវិញ។"
+        },
+        "courseE_artist_ramp8": {
+          "courseE_artist_ramp8_1": "អ្នកអាចកែលេខនេះបាន។",
+          "courseE_artist_ramp8_2": "ចុចទីនេះដើម្បីវាយបញ្ចូលចំនួនដែលអ្នកចង់អោយកូដរបស់អ្នកធ្វើឡើងវិញ។"
+        },
+        "courseE_artist_ramp8_2": {
+          "courseE_artist_ramp8_1": "អ្នកអាចកែលេខនេះបាន។",
+          "courseE_artist_ramp8_2": "ចុចទីនេះដើម្បីវាយបញ្ចូលចំនួនដែលអ្នកចង់អោយកូដរបស់អ្នកធ្វើឡើងវិញ។"
+        },
+        "courseE_playLab_scaffold3": {
+          "courseE_playLab_scaffold3_1": "ដាក់តួអង្គនឺងទង់ជាតិដើម្បីផ្លាស់ប្តូរទៅកម្រិតបន្ទាប់។"
+        },
+        "courseF_artist_variables6": {
+          "courseF_artist_variables6_1": "អថេរអាចមានប្រយោជន៍នៅពេលអ្នកត្រូវផ្លាស់ប្តូរលេខដូចៗគ្នាជាច្រើន។"
+        },
+        "courseF_artist_variables6_2018": {
+          "courseF_artist_variables6_1": "អថេរអាចមានប្រយោជន៍នៅពេលអ្នកត្រូវផ្លាស់ប្តូរលេខដូចៗគ្នាជាច្រើន។"
+        },
+        "courseF_artist_variables6_2019": {
+          "courseF_artist_variables6_1": "អថេរអាចមានប្រយោជន៍នៅពេលអ្នកត្រូវផ្លាស់ប្តូរលេខដូចៗគ្នាជាច្រើន។"
+        },
+        "courseF_artist_variables6_2020": {
+          "courseF_artist_variables6_1": "អថេរអាចមានប្រយោជន៍នៅពេលអ្នកត្រូវផ្លាស់ប្តូរលេខដូចៗគ្នាជាច្រើន។"
+        },
+        "courseF_artist_variables6a": {
+          "courseF_artist_variables6a_1": "អថេរអាចមានប្រយោជន៍នៅពេលអ្នកត្រូវផ្លាស់ប្តូរលេខដូចៗគ្នាជាច្រើន។"
+        },
+        "courseF_artist_variables6a_2018": {
+          "courseF_artist_variables6a_1": "អថេរអាចមានប្រយោជន៍នៅពេលអ្នកត្រូវផ្លាស់ប្តូរលេខដូចៗគ្នាជាច្រើន។"
+        },
+        "courseF_artist_variables6a_2019": {
+          "courseF_artist_variables6a_1": "អថេរអាចមានប្រយោជន៍នៅពេលអ្នកត្រូវផ្លាស់ប្តូរលេខដូចៗគ្នាជាច្រើន។"
+        },
+        "courseF_artist_variables6a_2020": {
+          "courseF_artist_variables6a_1": "អថេរអាចមានប្រយោជន៍នៅពេលអ្នកត្រូវផ្លាស់ប្តូរលេខដូចៗគ្នាជាច្រើន។"
         }
       }
     }

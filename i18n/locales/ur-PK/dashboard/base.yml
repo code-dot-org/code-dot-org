@@ -222,6 +222,7 @@ ur:
     races:
       other: "دیگر"
     submit: "جمع کرائیں"
+    decline: "بند"
   project:
     projects: "پروجیکٹس"
     project_gallery: "پروجیکٹس"

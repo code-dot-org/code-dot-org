@@ -1004,6 +1004,7 @@ fil:
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
             '"tint"': tint
+            '"speed"': bilis
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1129,6 +1130,8 @@ fil:
             '"West"': West
       gamelab_moveToward:
         text: ilipat {SPRITE} pixels {DISTANCE} sa {TARGET}
+      gamelab_newSpritePointer:
+        text: nag-click {SPRITE}
       gamelab_objectSpritePointer:
         text: nag-click {SPRITE}
       gamelab_playSound:
@@ -1179,6 +1182,13 @@ fil:
             undefined: wala
       gamelab_setBackgroundImageAs:
         text: Itakda ang background sa {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': katamtaman
+            '100': large
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} sa {VAL}
         options:
@@ -1188,6 +1198,7 @@ fil:
             '"x"': x na posisyon
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
+            '"speed"': bilis
       gamelab_setSizes:
         text: set {SPRITE} {PROPERTY} sa {N}%
         options:

@@ -752,7 +752,6 @@
         "description": "[slide]    **Prompt:**  We’ve learned to represent images, text, and sound digitally - but, we haven’t discussed what we do with all this digital data. How do you see people sharing this kind of data in the real world? Who do they want to share it with and why?”",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This discussion can be open-ended and feel like a brainstorm to help setup the transition from Unit 1 into Unit 2. It is important to draw on students’ personal experiences with sharing data on the internet, social media websites & apps, and connected devices. \r\n\r\nThinking about this unit as a whole, it is helpful to validate ideas that consider the motivations and consequences of how digital information is shared. These can be important points to return to at the end of the unit when introducing the Internet Dilemma’s project.\r\n"
           }
@@ -782,7 +781,6 @@
         "description": "[slide] \r\n**Prompt (10 mins):** Answer each of these prompts in your journal:",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Give students 10 minutes to write in their journals. It's ok if there are some awkward silences. We want students to have the time to really think deeply about what they know and don't know.\r\n\r\nIf students are struggling to come up with things to write down, consider asking the following:\r\n\r\n* When you enter a web address in a browser and hit enter, what happens? At some point you see the web page in the browser, but what happens in between? What are all the steps?\r\n* Write down the series of things that you think (or have heard) happen right after you hit Enter. What happens first, second, third and so on. \r\n* Don’t worry if you don’t know all the pieces or how they all fit together. If you don't know a step, or you are fuzzy on some details, or there's a gap, that's okay. Just write down the parts that you know.\r\n\r\n"
           }
@@ -812,7 +810,6 @@
         "description": "**Discuss:** Ask a few students to share their answers with the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Ask for a few volunteers to share what they know about the Internet. It's ok if answers are light or even incorrect! This is the starting place for the unit. \r\n\r\n"
           }
@@ -918,7 +915,6 @@
         "description": "**Prompt:** How is the Internet Simulator similar to the Internet? How is it different?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Encourage students to speak from their own experience of using the Internet. Here are some things they may bring up:\r\n\r\n* Similar to the Internet:\r\n\t* I can send information to another person\r\n\t* It all comes back to zeroes and ones\r\n\r\n* Different from the Internet:\r\n    * I can only send text \r\n    * It takes a couple seconds to send a text instead of instantly\r\n"
           }
@@ -956,7 +952,7 @@
       "key": "d80460ab-af44-4e1d-b913-bc5861050d8f",
       "position": 2,
       "properties": {
-        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\r\n\r\nAt the end of this unit you will do a project focusing on a societal issues. As you go through these lessons keep you ears and eyes open for how things work.\r\n\r\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols late in this unit. \r\n\r\nFor example there are two major issues to think about:\r\n\r\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\r\n\r\n* Internet Censorship is the attempt to control or suppress of what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\r\n\r\nTo have an informed opinion though it helps to understand the technical underpinnings of how the internet works.\r\n\r\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
+        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\n\nAt the end of this unit you will do a project focusing on a societal issues. As you go through these lessons keep you ears and eyes open for how things work.\n\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols late in this unit. \n\nFor example there are two major issues to think about:\n\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\n\n* Internet Censorship is the attempt to control or suppress of what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\n\nTo have an informed opinion though it helps to understand the technical underpinnings of how the internet works.\n\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.\n",
         "remarks": true
       },
       "seeding_key": {
@@ -991,7 +987,8 @@
       "key": "ebc976e9-8938-43d0-98e3-d8c1b3f6f995",
       "position": 1,
       "properties": {
-        "name": "Widget: Internet Simulator"
+        "name": "Widget: Internet Simulator",
+        "progression_name": "Widget: Internet Simulator"
       },
       "seeding_key": {
         "activity_section.key": "ebc976e9-8938-43d0-98e3-d8c1b3f6f995",
@@ -1002,7 +999,8 @@
       "key": "a5519a74-81b5-47c5-b6e0-2cd121cadfbb",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "a5519a74-81b5-47c5-b6e0-2cd121cadfbb",
@@ -1207,7 +1205,8 @@
       "key": "1edcd05d-b48c-498e-9c94-33388d74ddd5",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "1edcd05d-b48c-498e-9c94-33388d74ddd5",
@@ -1459,7 +1458,8 @@
       "key": "3e1eea6b-ec9d-4068-8a40-5893c7d5635a",
       "position": 1,
       "properties": {
-        "name": "Internet Simulator: Broadcast Mode"
+        "name": "Internet Simulator: Broadcast Mode",
+        "progression_name": "Internet Simulator: Broadcast Mode"
       },
       "seeding_key": {
         "activity_section.key": "3e1eea6b-ec9d-4068-8a40-5893c7d5635a",
@@ -1470,7 +1470,8 @@
       "key": "10315151-abd2-4010-9cea-178f33d51c4f",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f",
@@ -1731,7 +1732,8 @@
       "key": "e10bda55-fb32-4e14-82d7-0a3a70e27ea1",
       "position": 1,
       "properties": {
-        "name": "Internet Simulator: Routers"
+        "name": "Internet Simulator: Routers",
+        "progression_name": "Internet Simulator: Routers"
       },
       "seeding_key": {
         "activity_section.key": "e10bda55-fb32-4e14-82d7-0a3a70e27ea1",
@@ -1742,7 +1744,8 @@
       "key": "438af42b-36dc-49dd-8421-569a4b4ad488",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488",
@@ -1976,7 +1979,8 @@
       "key": "fe977819-7fba-4d53-9170-edb4ec353341",
       "position": 1,
       "properties": {
-        "name": "Internet Simulator: Packets"
+        "name": "Internet Simulator: Packets",
+        "progression_name": "Internet Simulator: Packets"
       },
       "seeding_key": {
         "activity_section.key": "fe977819-7fba-4d53-9170-edb4ec353341",
@@ -1987,7 +1991,8 @@
       "key": "da03a305-0e4c-4eba-8f09-e978f956b854",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "da03a305-0e4c-4eba-8f09-e978f956b854",
@@ -2282,7 +2287,8 @@
       "key": "e8f5f497-605a-4c67-8e42-874cb6c947ce",
       "position": 1,
       "properties": {
-        "name": "Internet Simulator: DNS"
+        "name": "Internet Simulator: DNS",
+        "progression_name": "Internet Simulator: DNS"
       },
       "seeding_key": {
         "activity_section.key": "e8f5f497-605a-4c67-8e42-874cb6c947ce",
@@ -2293,7 +2299,8 @@
       "key": "9fcda5f4-f31e-4ab3-91a2-373e5f52fa38",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9fcda5f4-f31e-4ab3-91a2-373e5f52fa38",
@@ -2550,7 +2557,8 @@
       "key": "6a6f8e8b-aed2-4b7d-9b9f-d85a2bd347c9",
       "position": 1,
       "properties": {
-        "name": "Unit 2 Exam"
+        "name": "Unit 2 Exam",
+        "progression_name": "Unit 2 Exam"
       },
       "seeding_key": {
         "activity_section.key": "6a6f8e8b-aed2-4b7d-9b9f-d85a2bd347c9",
@@ -2563,12 +2571,12 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Widget: Internet Simulator",
         "level_keys": [
           "CSP U2L1 Internet Simulator: Sending Text_2021"
-        ]
+        ],
+        "progression": "Widget: Internet Simulator"
       },
       "named_level": null,
       "bonus": null,
@@ -2591,10 +2599,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L1 CFU how use internet_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2617,10 +2625,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L1 CFU paths_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2643,10 +2651,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Internet Simulator: Broadcast Mode",
         "level_keys": [
           "U2L2 CSP Internet Simulator Broadcast_2021"
-        ]
+        ],
+        "progression": "Internet Simulator: Broadcast Mode"
       },
       "named_level": null,
       "bonus": null,
@@ -2669,10 +2677,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L2 CSP CFU IP Addresses_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2695,10 +2703,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L2 CSP CFU IP works_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2721,10 +2729,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Internet Simulator: Routers",
         "level_keys": [
           "U1L3 CSP Internet Simulator Routers_2021"
-        ]
+        ],
+        "progression": "Internet Simulator: Routers"
       },
       "named_level": null,
       "bonus": null,
@@ -2747,10 +2755,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L3 CSP CFU Routers_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2773,10 +2781,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L3 CSP CFU Redundancy_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2799,10 +2807,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Internet Simulator: Packets",
         "level_keys": [
           "U1L4 CSP Internet Simulator Packets 2_2021"
-        ]
+        ],
+        "progression": "Internet Simulator: Packets"
       },
       "named_level": null,
       "bonus": null,
@@ -2825,10 +2833,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L4 Multiple Choice packets_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2851,10 +2859,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L4 CSP CFU terms_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2877,10 +2885,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Internet Simulator: DNS",
         "level_keys": [
           "U1L5 CSP Internet Simulator DNS_2021"
-        ]
+        ],
+        "progression": "Internet Simulator: DNS"
       },
       "named_level": null,
       "bonus": null,
@@ -2903,10 +2911,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L4 CSP CFU scale_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2929,10 +2937,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L5 CSP CFU subgroups_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2955,10 +2963,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 2 Exam",
         "level_keys": [
           "CSP Unit 2 MC Assessment _2021"
-        ]
+        ],
+        "progression": "Unit 2 Exam"
       },
       "named_level": null,
       "bonus": null,

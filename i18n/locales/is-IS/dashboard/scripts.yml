@@ -63,6 +63,7 @@ is:
               name: 'Leikjasmiðja: Búa til sögu'
             The Big Event:
               name: Stórviðburður
+          student_description: Byrjaðu með Námskeið 1 fyrir byrjendur í lestri. Nemendur búa til tölvuforrit sem munu hjálpa þeim að læra að vinna með öðrum, þróa hæfni til að leysa verkefni og gefast ekki upp þó verkefni séu erfið. Við lok námskeiðsins búa nemendur til sinn eiginn sérhannaða leik eða sögu sem þeir geta svo deilt. Er stílað inn á aldurshópinn 5 - 6 ára (K-1).
         course2:
           title: Námskeið 2
           description: Byrja með Námskeið 2 fyrir nemendur sem geta lesið og hafa enga reynslu af forritun. Á þessu námskeiði munu nemendur búa til forrit til að leysa verkefni og þróa gagnvirka leiki eða sögur sem þeir geta deilt. Mælt með fyrir 2. - 5. bekk.
@@ -107,6 +108,7 @@ is:
               name: Stórviðburður
             Your Digital Footprint:
               name: Stafræna fótsporið þitt
+          student_description: Byrja með Námskeið 2 fyrir nemendur sem geta lesið og hafa enga reynslu af forritun. Á þessu námskeiði munu nemendur búa til forrit til að leysa verkefni og þróa gagnvirka leiki eða sögur sem þeir geta deilt. Mælt með fyrir 2. - 5. bekk.
         course3:
           title: Námskeið 3
           description: Námskeið 3 er ætlað nemendum sem hafa lokið Námskeiði 2. Nemendur munu kafa dýpra í efni sem var kynnt á fyrri forritunarnámskeiðum til að geta beitt sveigjanlegri lausnum á flóknari verkefni. Í lok þessa námskeiðs búa nemendur til gagnvirkar sögur og leiki sem þeir geta svo deilt með öðrum. Mælt með fyrir 4. - 5. bekk.
@@ -155,6 +157,7 @@ is:
               name: 'Leikjasmiðja: Búa til leik'
             'Studio: Create a Story':
               name: 'Leikjasmiðja: Búa til sögu'
+          student_description: Námskeið 3 er ætlað nemendum sem hafa lokið Námskeiði 2. Nemendur munu kafa dýpra í efni sem var kynnt á fyrri forritunarnámskeiðum til að geta beitt sveigjanlegri lausnum á flóknari verkefni. Í lok þessa námskeiðs búa nemendur til gagnvirkar sögur og leiki sem þeir geta svo deilt með öðrum. Mælt með fyrir 4. - 5. bekk.
         playlab:
           title: Leikjasmiðjan
           description: Búðu til sögu eða leik með Leikjasmiðjunni!
@@ -162,6 +165,7 @@ is:
           lessons:
             Play Lab:
               name: Leikjasmiðjan
+          student_description: Búðu til sögu eða leik með Leikjasmiðjunni!
         artist:
           title: Listamaður
           description: Teiknaðu flottar myndir og mynstur með Listamanninum!
@@ -169,6 +173,7 @@ is:
           lessons:
             Artist:
               name: Listamaður
+          student_description: Teiknaðu flottar myndir og mynstur með Listamanninum!
         hourofcode:
           title: Völundarhús
           description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
@@ -176,6 +181,7 @@ is:
           lessons:
             Maze:
               name: Völundarhús
+          student_description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
         frozen:
           title: Kóðaðu með Önnu og Elsu
           description: Notum kóða til að fylgja Önnu og Elsu þegar þær kanna töfra og fegurð íssins. Þú munt búa til snjókorn og mynstur með því að láta þær skauta um ísinn og svo getur þú búið til eigin vetrarveröld til að deila með vinum!
@@ -183,6 +189,7 @@ is:
           lessons:
             Artist:
               name: Listamaður
+          student_description: Notum kóða til að fylgja Önnu og Elsu þegar þær kanna töfra og fegurð íssins. Þú munt búa til snjókorn og mynstur með því að láta þær skauta um ísinn og svo getur þú búið til eigin vetrarveröld til að deila með vinum!
         course4:
           title: Námskeið 4
           description: Námskeið 4 er ætlað nemendum sem hafa lokið námskeiðum 2 og 3. Nemendur læra að fást við þrautir sem verða æ flóknari en læra um leið að samnýta ýmiss hugtök við lausn þrautanna. Í lok námskeiðsins munu nemendur hafa búið til forrit sem sýna margvíslega færni þeirra svo sem notkun "frá" lykkja og falla með stikum. Hentar 4 - 8 bekk.
@@ -233,6 +240,7 @@ is:
               name: 'Verkefni án tölvu: Lagasmíð með stikum'
             'Unplugged: Tangrams':
               name: 'Verkefni án tölvu: Tangram'
+          student_description: Námskeið 4 er ætlað nemendum sem hafa lokið námskeiðum 2 og 3. Nemendur læra að fást við þrautir sem verða æ flóknari en læra um leið að samnýta ýmiss hugtök við lausn þrautanna. Í lok námskeiðsins munu nemendur hafa búið til forrit sem sýna margvíslega færni þeirra svo sem notkun "frá" lykkja og falla með stikum. Hentar 4 - 8 bekk.
         Course4pre:
           title: Forkröfur Námskeiðs 4
           description: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki farið á Námskeið 2 og 3.
@@ -256,6 +264,7 @@ is:
               name: 'Bóndi: Meðan lykkjur'
             'Maze: Sequence':
               name: 'Völundarhús: Röð'
+          student_description: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki farið á Námskeið 2 og 3.
         usability:
           title: Notkunarprófun
           description: Valdir áfangar úr Námskeiði 4 til notkunarprófunar.
@@ -270,6 +279,7 @@ is:
               name: Kynning
             Variables:
               name: Breytur
+          student_description: Valdir áfangar úr Námskeiði 4 til notkunarprófunar.
         algebra:
           title: Tölvunarfræði í algebru
           description: Læra fallmiðaða forritun í gegnum algebru
@@ -315,6 +325,7 @@ is:
               name: 'Verkefni án tölvu: Hönnunaruppskriftin'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Verkefni án tölvu: Tölvuleikir og hnitakerfi'
+          student_description: Læra fallmiðaða forritun í gegnum algebru
         infinity:
           title: Disney Infinity leikjasmiðja
           description: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
@@ -322,6 +333,7 @@ is:
           lessons:
             Infinity:
               name: Óendanleiki
+          student_description: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
         algebrademo:
           title: Dæmi með Algebru
           description: Nokkrar þrautir til að sýna umhverfið og forritunarmálið sem Code.org notar í Tölvunarfræði í Algebru
@@ -337,6 +349,7 @@ is:
               name: Gerð mynda
             The Design Recipe:
               name: Hönnunaruppskriftin
+          student_description: Nokkrar þrautir til að sýna umhverfið og forritunarmálið sem Code.org notar í Tölvunarfræði í Algebru
         K5PD:
           title: Fagmenntun kennara 5 - 11 ára (K-5)
           description: 'Fagmenntun kennara fyrir 5 - 11 ára námskeið'
@@ -367,6 +380,7 @@ is:
               name: Skrifa tölvuforrit
             new stage:
               name: nýr áfangi
+          student_description: 'Fagmenntun kennara fyrir 5 - 11 ára námskeið'
         netsim:
           title: Internet hermir
           lessons:
@@ -405,6 +419,7 @@ is:
               name: Lituð dílamynstur - frjáls æfing
             Color Pixelation Tutorial:
               name: Lituð dílamynstur - kennslustund
+          student_description: Búa til myndir með bitum og bætum.
         20-hour:
           title: Kynning á tölvunarfræði, hraðnámskeið
           description: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.
@@ -451,6 +466,7 @@ is:
               name: Völundarhúsið
             Wrap-up:
               name: Samantekt
+          student_description: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.
         edit-code:
           title: Breyta kóða
           description: Breyta kóða
@@ -466,6 +482,7 @@ is:
               name: Listamaðurinn
             The Maze:
               name: Völundarhúsið
+          student_description: Breyta kóða
         events:
           title: Atvik
           description: Atvik
@@ -479,6 +496,7 @@ is:
               name: Mat
             Studio:
               name: Stúdíó
+          student_description: Atvik
         flappy:
           title: Flappy kóði
           description: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna með Flappy kóða!
@@ -486,6 +504,7 @@ is:
           lessons:
             Flappy Code:
               name: Flappy kóði
+          student_description: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna með Flappy kóða!
         jigsaw:
           title: Púsl
           description: Prófaðu Jigsaw kennsluefnið okkar
@@ -493,6 +512,7 @@ is:
           lessons:
             Jigsaw:
               name: Púsl
+          student_description: Prófaðu Jigsaw kennsluefnið okkar
         step:
           title: Þrep
           description: Kennsla í skrefum
@@ -500,6 +520,7 @@ is:
           lessons:
             Step:
               name: Þrep
+          student_description: Kennsla í skrefum
         Hour of Code:
           title: Klukkustund kóðunar 2013
           description: Prófaðu undirstöðuatriði tölvunarfræði með leikverum úr Angry Birds og Plants vs. Zombies!
@@ -507,6 +528,7 @@ is:
           lessons:
             Hour of Code 2013:
               name: Klukkustund kóðunar 2013
+          student_description: Prófaðu undirstöðuatriði tölvunarfræði með leikverum úr Angry Birds og Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           title: Áskorun - Þraut í kóðastúdíói
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
@@ -514,6 +536,7 @@ is:
           lessons:
             Puzzles:
               name: Þrautir
+          student_description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Leiðsögn - Þrautaáskorun í kóðastúdíói
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
@@ -521,6 +544,7 @@ is:
           lessons:
             Puzzles:
               name: Þrautir
+          student_description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
         cspunit1:
           title: "(gamalt) CSP Kafli1 - Stafrænar upplýsingar"
           description: Þessi kafli kannar þær tæknilegu áskoranir og spurningar sem koma upp út frá þörfinni fyrir að setja stafrænar upplýsingar fram í tölvum og flytja þær milli manna og tölvutækja. Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
@@ -560,6 +584,7 @@ is:
               name: Sending talna
             Text Compression:
               name: Þjöppun texta
+          student_description: Þessi kafli kannar þær tæknilegu áskoranir og spurningar sem koma upp út frá þörfinni fyrir að setja stafrænar upplýsingar fram í tölvum og flytja þær milli manna og tölvutækja. Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
         algebraPD:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '1. áfangi: Netkynning'
@@ -577,6 +602,7 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
+          student_description: '1. áfangi: Netkynning'
         algPDmiami:
           title: Tölvunarfræði í algebru - fagmenntun
           description: Kenna algebru með fallmiðaðri forritun
@@ -604,6 +630,7 @@ is:
               name: Leikur þinn - skynjun árekstra
             Your Game - Player Movement:
               name: Leikur þinn - hreyfing leikmanna
+          student_description: Kenna algebru með fallmiðaðri forritun
         text-compression:
           title: Þjöppun texta
           description: Þjappa texta með því að greina endurtekin mynstur.
@@ -611,6 +638,7 @@ is:
           lessons:
             Text Compression:
               name: Þjöppun texta
+          student_description: Þjappa texta með því að greina endurtekin mynstur.
         CSPPD:
           title: Grundvöllur Tölvunarfræði (GT)- fagmenntun
           description: '1. áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
@@ -630,6 +658,7 @@ is:
               name: Kennslunálganir
             What is CSP?:
               name: Hvað er átt við með Grundvelli Tölvunarfræði (GT)?
+          student_description: '1. áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
         CSPLessonSamples:
           title: Sýnishorn GT kennslustunda
           lessons:
@@ -653,6 +682,7 @@ is:
               name: Kennslunálganir
             What is ECS?:
               name: Hvað er ECS?
+          student_description: '1. áfangi: Netkynning'
         sciencePD:
           description: '1. áfangi: Netkynning'
           description_short: '1. áfangi: Netkynning'
@@ -671,6 +701,7 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
+          student_description: '1. áfangi: Netkynning'
         rbo-reference:
           lessons:
             reference:
@@ -774,6 +805,7 @@ is:
               name: Kennslunálganir
             What is ECS?:
               name: Hvað er ECS?
+          student_description: '1. áfangi: Netkynning'
         ECSPD-iZone:
           description: '1. áfangi: Netkynning'
           description_short: '1. áfangi: Netkynning'
@@ -790,6 +822,7 @@ is:
               name: Kennslunálganir
             What is ECS?:
               name: Hvað er ECS?
+          student_description: '1. áfangi: Netkynning'
         algebraPD-NexTech:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '1. áfangi: Netkynning'
@@ -807,6 +840,7 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
+          student_description: '1. áfangi: Netkynning'
         algebraPD-iZone:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '1. áfangi: Netkynning'
@@ -824,6 +858,7 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
+          student_description: '1. áfangi: Netkynning'
         sciencePD-NexTech:
           description: '1. áfangi: Netkynning'
           description_short: '1. áfangi: Netkynning'
@@ -842,6 +877,7 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
+          student_description: '1. áfangi: Netkynning'
         sciencePD-iZone:
           description: '1. áfangi: Netkynning'
           description_short: '1. áfangi: Netkynning'
@@ -860,6 +896,7 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
+          student_description: '1. áfangi: Netkynning'
         sciencePD2:
           description: '2. áfangi á neti: Blandað sumarnám'
           description_short: '2. áfangi á neti: Blandað sumarnám'
@@ -878,6 +915,7 @@ is:
               name: Velkomin!
             Wrap-Up:
               name: Samantekt
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         sciencePD3:
           lessons:
             Decode and Share:
@@ -946,6 +984,7 @@ is:
               name: Strengir og myndir
             The Design Recipe:
               name: Hönnunaruppskriftin
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         allthethings:
           title: All þetta!
           description: Allar gerðir borða fyrir prófun á notendaviðmóti (UI). Vinsamlegast skráðu þig inn til að prófa borð í applab (applab borð virka aðeins eftir innskráningu. Venjulega látum við fólk skrá sig inn, en það er aðeins hægt að framfylgja því fyrir heila skriftu og væri hvimleitt að þurfa að gera fyrir þessa skriftu).
@@ -1015,6 +1054,7 @@ is:
               name: Kvikasmiðjan
             Dance Lab:
               name: Danssmiðja
+          student_description: Allar gerðir borða fyrir prófun á notendaviðmóti (UI). Vinsamlegast skráðu þig inn til að prófa borð í applab (applab borð virka aðeins eftir innskráningu. Venjulega látum við fólk skrá sig inn, en það er aðeins hægt að framfylgja því fyrir heila skriftu og væri hvimleitt að þurfa að gera fyrir þessa skriftu).
         algebraPD2b:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '2. áfangi á neti: Blandað sumarnám'
@@ -1044,6 +1084,7 @@ is:
               name: Stjórnborð kennara
             Writing Contracts:
               name: Ritun samninga
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         cspfacilitator:
           lessons:
             App Lab:
@@ -1110,6 +1151,7 @@ is:
               name: Velkomin!
             Wrap-up:
               name: Samantekt
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         equityPD:
           lessons:
             Equity PD:
@@ -1132,6 +1174,7 @@ is:
               name: Hönnunaruppskriftin
             Welcome!:
               name: Velkomin!
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         sciencePD2b:
           description: '2. áfangi á neti: Blandað sumarnám'
           description_short: '2. áfangi á neti: Blandað sumarnám'
@@ -1150,6 +1193,7 @@ is:
               name: Velkomin!
             Wrap-Up:
               name: Samantekt
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         equity-pd:
           lessons:
             Code.org Equity PD:
@@ -1174,6 +1218,7 @@ is:
               name: Velkomin!
             Wrap-Up:
               name: Samantekt
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         Equity-OnlinePD:
           lessons:
             Creating Equitable Learning Environments:
@@ -1202,6 +1247,7 @@ is:
               name: Velkomin!
             Wrap-Up:
               name: Samantekt
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         ECSPD2-iZone:
           description: '2. áfangi á neti: Blandað sumarnám'
           description_short: '2. áfangi á neti: Blandað sumarnám'
@@ -1228,6 +1274,7 @@ is:
               name: Velkomin!
             Wrap-up:
               name: Samantekt
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         ECSPD2-NexTech:
           description: '2. áfangi á neti: Blandað sumarnám'
           description_short: '2. áfangi á neti: Blandað sumarnám'
@@ -1254,6 +1301,7 @@ is:
               name: Velkomin!
             Wrap-up:
               name: Samantekt
+          student_description: '2. áfangi á neti: Blandað sumarnám'
         CSPPD2:
           lessons:
             Getting Started:
@@ -1288,6 +1336,7 @@ is:
           lessons:
             Vigenere:
               name: Vigenere
+          student_description: Nota Vigenere Cipher græjuna til að kanna dulkóðun og afkóðun skilaboða með Vigenere Cipher dulmáli.
         algebraPD3a:
           title: Tölvunarfræði í algebru - fagmenntun
           lessons:
@@ -1486,6 +1535,7 @@ is:
           lessons:
             Ice Age Play Lab:
               name: Ice Age Leikjasmiðja
+          student_description: Búðu til sögu eða leik með Ice Age Leikjasmiðju!
         CSPPD3-Unit3:
           lessons:
             Challenge Overview:
@@ -1528,6 +1578,7 @@ is:
           lessons:
             Gumball Play Lab:
               name: Gumball Leikjasmiðja
+          student_description: Búðu til sögu eða leik með Gumball Leikjasmiðju!
         starwars:
           title: 'Star Wars: Gerð Vetrarbrautar með Kóða'
           description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
@@ -1535,6 +1586,7 @@ is:
           lessons:
             Hour of Code 2015:
               name: Klukkustund kóðunar 2015
+          student_description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
         starwarsblocks:
           title: 'Star Wars: Gerð Vetrarbrautar með Kóða'
           description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
@@ -1542,6 +1594,7 @@ is:
           lessons:
             Hour of Code 2015:
               name: Klukkustund kóðunar 2015
+          student_description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
         mc:
           title: Klukkustund kóðunar með Minecraft
           description: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim
@@ -1549,6 +1602,7 @@ is:
           lessons:
             Hour of Code 2015:
               name: Klukkustund kóðunar 2015
+          student_description: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -1676,6 +1730,7 @@ is:
               name: 'Án tölvu: Fljót föll'
             'Unplugged: The Design Recipe':
               name: 'Verkefni án tölvu: Hönnunaruppskriftin'
+          student_description: Læra fallmiðaða forritun í gegnum algebru
         AlgebraB:
           title: 'Tölvunarfræði í algebru'
           description: Læra fallmiðaða forritun í gegnum algebru
@@ -1703,6 +1758,7 @@ is:
               name: 'Verkefni án tölvu: Skilyrði og Piecewise föll'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Verkefni án tölvu: Tölvuleikir og hnitakerfi'
+          student_description: Læra fallmiðaða forritun í gegnum algebru
         algebraPD1:
           title: Tölvunarfræði í algebru - fagmenntun
           description: Kenna algebru með fallmiðaðri forritun
@@ -1720,6 +1776,7 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
+          student_description: Kenna algebru með fallmiðaðri forritun
         algebraPD3c:
           title: Tölvunarfræði í algebru - fagmenntun
           lessons:
@@ -1997,6 +2054,7 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
+          student_description: Kenna algebru með fallmiðaðri forritun
         sciencePD1:
           description_short: '1. áfangi: Netkynning'
           lessons:
@@ -2517,6 +2575,7 @@ is:
               name: Hönnunaruppskriftin
             Welcome!:
               name: Velkomin!
+          student_description: Kenna algebru með fallmiðaðri forritun
         csp-pre-survey:
           lessons:
             Anonymous student pre-survey:
@@ -2582,6 +2641,7 @@ is:
           lessons:
             Bounce:
               name: Skopp
+          student_description: Velja lið og búa til körfuboltaleik
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -2665,6 +2725,7 @@ is:
           lessons:
             Minecraft Hour of Code Designer:
               name: Klukkustund kóðunar - Minecraft Hönnuður
+          student_description: Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -2796,6 +2857,7 @@ is:
           lessons:
             Sports:
               name: Íþróttir
+          student_description: Blandaðu saman íþróttum
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -3097,6 +3159,7 @@ is:
               description_teacher: Í þessari kennslustund læra nemendur hvernig tölvur geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget). Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu um síðast.
             8-bit Numbers:
               name: 8-bita Tölur
+          student_description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
         csd3-old:
           lessons:
             Drawing in Game Lab:
@@ -3252,6 +3315,7 @@ is:
               name: 'Algrím úr raunheimi: Sá fræi'
             'Loops: Happy Loops':
               description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         courseb-2017:
           title: Námskeið B
           assignment_family_title: Námskeið B
@@ -3262,6 +3326,7 @@ is:
               name: 'Kembing: Ófundnir böggar'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algrím úr raunheimi: Sá fræi'
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         coursec-2017:
           title: Námskeið C
           assignment_family_title: Námskeið C
@@ -3472,6 +3537,7 @@ is:
               name: Að byggja grunn
             Nested Loops:
               name: Innri lykkjur
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         pre-express-2017:
           title: Hraðnámskeið ólæsra
           description_short: 'Kynning á tölvunarfræði fyrir þá sem ekki eru byrjaðir að lesa: sameinar það besta úr námskeiðum okkar fyrir leikskóla og fyrsta bekk.'
@@ -3483,6 +3549,7 @@ is:
               name: 'Algrím úr raunheimi: Sá fræi'
             Spelling Bee:
               name: Stafsetning
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         subgoal-labels-opt-in:
           lessons:
             other:
@@ -3662,6 +3729,7 @@ is:
           lessons:
             8-bit Numbers:
               name: 8-bita Tölur
+          student_description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
         hocali:
           lessons:
             new stage:
@@ -3709,6 +3777,7 @@ is:
           lessons:
             Minecraft Hour of Code:
               name: Klukkustund kóðunar með Minecraft
+          student_description: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
         csp-explore-2017:
           lesson_groups:
             csp_ap_2:
@@ -3959,6 +4028,7 @@ is:
               name: Röð aðgerða með Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og Stóra verkefnið
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         express-2018:
           assignment_family_title: Hraðnámskeið
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
@@ -4011,6 +4081,7 @@ is:
               name: Boðhlaupsforritun
             Graph Paper Programming:
               name: Forritun rúðublaða
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         courseb-2018:
           assignment_family_title: Námskeið B
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
@@ -4025,6 +4096,7 @@ is:
               name: Lykkjur með Láru
             Move It, Move It:
               name: Hreyfa sig, hreyfa sig
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         coursed-2018:
           assignment_family_title: Námskeið D
           description_audience: 'Aldur: 7-11'
@@ -4231,6 +4303,7 @@ is:
             Representing Images:
               description_student: Í þessari kennslustund læra nemendur hvernig tölvur geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget). Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu um síðast.
               description_teacher: Í þessari kennslustund læra nemendur hvernig tölvur geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget). Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu um síðast.
+          student_description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
@@ -4518,6 +4591,7 @@ is:
               name: Stafræna fótsporið þitt
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og Stóra verkefnið
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         fit-test:
           lesson_groups:
             required:
@@ -4566,6 +4640,7 @@ is:
               display_name: Verkefni
         dance-extras:
           description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
+          student_description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         coursef-2019:
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 9-13'
@@ -4718,6 +4793,7 @@ is:
               name: Danspartý
             Concept Practice with Minecraft:
               name: Horft fram á við
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         csd1-2019:
           description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
           lesson_groups:
@@ -4750,6 +4826,7 @@ is:
         dance-extras-gallery:
           title: Halda áfram að dansa
           description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
+          student_description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         coursec-2019:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 6-10'
@@ -4809,6 +4886,7 @@ is:
               description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.
             Loops in Collector:
               name: Lykkjur með Láru
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         courseb-2019:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           lesson_groups:
@@ -4837,6 +4915,7 @@ is:
               name: Forritun með Hirðinum
             Sequencing in Maze:
               name: Röð aðgerða með Angry Birds
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         pre-express-2019:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           lesson_groups:
@@ -4859,6 +4938,7 @@ is:
               name: Stafsetning
             Programming in Harvester:
               name: Forritun með Hirðinum
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         removed19:
           lessons:
             'Debugging: Unspotted Bugs':
@@ -4986,6 +5066,7 @@ is:
             Representing Images:
               description_student: Í þessari kennslustund læra nemendur hvernig tölvur geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget). Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu um síðast.
               description_teacher: Í þessari kennslustund læra nemendur hvernig tölvur geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget). Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu um síðast.
+          student_description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
         csd6-2019:
           lesson_groups:
             csd6_1:
@@ -5496,6 +5577,9 @@ is:
               display_name: Yfirlit
             content:
               display_name: Innihald
+          lessons:
+            Focus Area 1:
+              name: Námskrá
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -5648,6 +5732,7 @@ is:
               name: Frá lykkjur
         dance-extras-2019:
           description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
+          student_description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         csp10-pilot:
           lessons:
             new stage:
@@ -5855,6 +5940,7 @@ is:
             Representing Images:
               description_student: Í þessari kennslustund læra nemendur hvernig tölvur geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget). Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu um síðast.
               description_teacher: Í þessari kennslustund læra nemendur hvernig tölvur geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget). Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu um síðast.
+          student_description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
         csd6-2020:
           lesson_groups:
             csd6_1:
@@ -5951,6 +6037,7 @@ is:
               description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.
             Loops in Collector:
               name: Lykkjur með Láru
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         courseb-2020:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           lesson_groups:
@@ -5977,6 +6064,7 @@ is:
               name: Lykkjur með Hirðinum
             Loops in Collector:
               name: Lykkjur með Láru
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         coursec-2020:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 6-10'
@@ -6104,6 +6192,7 @@ is:
               name: Frá-lykkjur með Býflugu
             For Loops in Artist:
               name: Frá-lykkjur með Listamanni
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         pre-express-2020:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           lesson_groups:
@@ -6122,6 +6211,7 @@ is:
               name: Lykkjur í Ísöld
             Loops with Laurel:
               name: Lykkjur með Láru
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
@@ -6418,6 +6508,17 @@ is:
           lessons:
             visualizing:
               name: Sjóngerving gagna
+        2021drafting:
+          lessons:
+            Course F Introduction:
+              name: Kynning á Kvikasmiðjunni
+            Sprites in Action:
+              name: Kvikar í verki
+          lesson_groups:
+            introduction:
+              display_name: Kynning
+            lessonGroup-3:
+              display_name: Breytur
         csd1-2021:
           description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
           lessons:
@@ -6527,6 +6628,7 @@ is:
               display_name: 'Kafli 2: Lausn vandamála með gögn'
             cspSurvey:
               display_name: Könnun
+          student_description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
         csd6-2021:
           lessons:
             Making Music:
@@ -6621,6 +6723,7 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         courseb-2021:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           lessons:
@@ -6648,6 +6751,7 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         coursec-2021:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 6-10'
@@ -6766,9 +6870,9 @@ is:
             Dance Party:
               key: Danspartý
               name: Danspartý
+            'Looking Ahead with Minecraft ':
+              name: Horft fram á við
           lesson_groups:
-            csf_warmup:
-              display_name: Upphitun
             csf_sequencing:
               display_name: Skipanaröð
             csf_loops:
@@ -6783,6 +6887,7 @@ is:
               display_name: Frá lykkjur
             csf_sprites:
               display_name: Kvikar
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         pre-express-2021:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           lessons:
@@ -6799,12 +6904,55 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         csf-2021-pilot:
           lessons:
-            lesson-1:
-              name: Umslagabreytur
+            Course F Introduction:
+              name: Kynning á Kvikasmiðjunni
           lesson_groups:
             ramp_up:
               display_name: Kynning
             lessonGroup-3:
               display_name: Breytur
+            Sprites:
+              display_name: Kvikar
+        csd4-preview-2021:
+          lessons:
+            Identifying User Needs:
+              key: Greining á þörfum notenda
+              name: Greining á þörfum notenda
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kafli 1: Notendamiðuð hönnun'
+            csd4_2:
+              display_name: 'Kafli 2: Frumgerðir appa'
+            csd5_2:
+              display_name: 'Kafli 2: Lausn vandamála með gögn'
+            cspSurvey:
+              display_name: Könnun
+            csdSurvey:
+              display_name: Könnun
+        csd5-preview-2021:
+          description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
+          description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál með gögn.
+          lessons:
+            Representation Matters:
+              description_student: Í fyrstu kennslustund gagnaeiningarinnar fá nemendur kynningu á því hvað gögn eru og hvernig þau eru notuð við lausn verkefna. Nemendur byrja á stuttum umræðum til að samræma skilning sinn á gögnum. Þeir skiptast svo í hópa og nota gagnasafn til að koma með tillögur að máltíðum fyrir fólk með mismunandi kröfur. Í hverjum hópi eru valkostir máltíðanna birtir á mismunandi hátt (myndir, uppskriftir, matseðill, næringarefni) sem dregur fram einn valkostinn. Á eftir bera hóparnir saman svörin og ræða hvernig mismunandi framsetning máltíðagagnanna hafði áhrif á það hvernig nemendur gátu leyst hin ýmsu vandamál.
+              description_teacher: Í fyrstu kennslustund gagnaeiningarinnar fá nemendur kynningu á því hvað gögn eru og hvernig þau eru notuð við lausn verkefna. Nemendur byrja á stuttum umræðum til að samræma skilning sinn á gögnum. Þeir skiptast svo í hópa og nota gagnasafn til að koma með tillögur að máltíðum fyrir fólk með mismunandi kröfur. Í hverjum hópi eru valkostir máltíðanna birtir á mismunandi hátt (myndir, uppskriftir, matseðill, næringarefni) sem dregur fram einn valkostinn. Á eftir bera hóparnir saman svörin og ræða hvernig mismunandi framsetning máltíðagagnanna hafði áhrif á það hvernig nemendur gátu leyst hin ýmsu vandamál.
+            Patterns and Representation:
+              description_student: Í þessari kennslustund búa nemendur til sitt eigið kerfi til að geyma upplýsingar. Þeir byrja á hugarflugi um öll þau mismunandi kerfi sem þeir nota nú þegar til að geyma já-nei svör. Þeir vinna síðan í litlum hópum við að búa til kerfi sem getur geymt hvaða staf stafrófsins sem er með aðeins einum bunka af spjöldum. Á hverju spjaldi er ein af 6 mögulegum teikningum (6 dýr, 6 litir, o. s. frv.) þannig að nemendur verða að nota fleiri en eitt spjald til að tákna hvern staf stafrófsins. Nemendur búa til skilaboð með kerfi sínu og prófa með öðrum hópum til að tryggja að kerfið virki eins og til er ætlast. Í samantekt ræða nemendur um kosti og galla hvers kerfis. Þeir ræða hvað er sameiginlegt með kerfum sem virkuðu og uppgötva að það eru margar mögulegar lausnir á þessu verkefni og að það sem skiptir máli er ekki endilega kerfið sjálft heldur að allir noti sama kerfið til að skiptast á boðum.
+              description_teacher: Í þessari kennslustund búa nemendur til sitt eigið kerfi til að geyma upplýsingar. Þeir byrja á hugarflugi um öll þau mismunandi kerfi sem þeir nota nú þegar til að geyma já-nei svör. Þeir vinna síðan í litlum hópum við að búa til kerfi sem getur geymt hvaða staf stafrófsins sem er með aðeins einum bunka af spjöldum. Á hverju spjaldi er ein af 6 mögulegum teikningum (6 dýr, 6 litir, o. s. frv.) þannig að nemendur verða að nota fleiri en eitt spjald til að tákna hvern staf stafrófsins. Nemendur búa til skilaboð með kerfi sínu og prófa með öðrum hópum til að tryggja að kerfið virki eins og til er ætlast. Í samantekt ræða nemendur um kosti og galla hvers kerfis. Þeir ræða hvað er sameiginlegt með kerfum sem virkuðu og uppgötva að það eru margar mögulegar lausnir á þessu verkefni og að það sem skiptir máli er ekki endilega kerfið sjálft heldur að allir noti sama kerfið til að skiptast á boðum.
+            ASCII and Binary Representation:
+              description_student: Í þessari kennslustund læra nemendur í fyrsta sinn að nota tvíundarkerfi til að kóða gögn, ASCII kerfið fyrir bókstafi og önnur stafatákn. Í upphafi kynnir kennarinn þá staðreynd að tölvur verða að geyma upplýsingar með "á" eða "af". Síðan fá nemendur kynningu á ASCII kerfinu til að tákna texta með tvíundartáknum. Nemendur æfa að nota þetta kerfi áður en þeir kóða sín eigin skilaboð með ASCII. Í lokin er spjall til að rifja upp og draga saman helstu námsmarkmið æfingarinnar.
+              description_teacher: Í þessari kennslustund læra nemendur í fyrsta sinn að nota tvíundarkerfi til að kóða gögn, ASCII kerfið fyrir bókstafi og önnur stafatákn. Í upphafi kynnir kennarinn þá staðreynd að tölvur verða að geyma upplýsingar með "á" eða "af". Síðan fá nemendur kynningu á ASCII kerfinu til að tákna texta með tvíundartáknum. Nemendur æfa að nota þetta kerfi áður en þeir kóða sín eigin skilaboð með ASCII. Í lokin er spjall til að rifja upp og draga saman helstu námsmarkmið æfingarinnar.
+            Representing Images:
+              description_student: Í þessari kennslustund læra nemendur hvernig tölvur geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget). Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu um síðast.
+              description_teacher: Í þessari kennslustund læra nemendur hvernig tölvur geyma myndir. Þeir byrja á að hugleiða þá áskorun sem felst í að umbreyta hinum flókna sýnilega heimi í tvíundarmynstur. Með röð mynda sem sýna hvernig þessi umbreyting fer fram eru nemendur kynntir fyrir þeirri hugmynd að skipta mynd upp í ferninga eða "díla" sem síðan er hægt að kveikja eða slökkva á til að skapa myndina. Nemendur glíma síðan við að teikna svart-hvítar með dílamynstursgræjunni (Pixelation Widget). Þrautirnar eru hannaðar til að draga fram nokkrar áskoranir við það að tákna myndir á þennan hátt. Í samantektinni tengja nemendur þetta kerfi til að tákna myndir og kerfið til að tákna texta sem þeir lærðu um síðast.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kafli 1: Kóðun upplýsinga'
+            csd5_2:
+              display_name: 'Kafli 2: Lausn vandamála með gögn'
+            cspSurvey:
+              display_name: Könnun
+          student_description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.

@@ -2,7 +2,7 @@ uz:
   data:
     block_categories:
       Actions: Harakatlar
-      Advanced: Rivojlangan
+      Advanced: Chuqurlashtirilgan
       Behaviors: Xatti-harakatlar
       Brushes: Choʻtkalar
       Color: Rang
@@ -13,16 +13,16 @@ uz:
       Default: Standart
       Events: Hodisalar
       Functions: Funksiyalar
-      'Functions ': 'Vazifalar '
-      Game/Score: O'yin/Hisob
-      Games/Score: O'yin/Hisob
+      'Functions ': 'Funksiyalar '
+      Game/Score: O‘yin/Hisob
+      Games/Score: O‘yinlar/Hisob
       Groups: Guruhlar
       Input: Kiritish
-      Locations: Manzil
+      Locations: Joylashuvlar
       Logic: Mantiq
       Loops: Sikllar
       Math: Matematik
-      Numbers: Raqamlar
+      Numbers: Sonlar
       Properties: Xususiyatlar
       Sprites: Spraytlar
       Text: Matn

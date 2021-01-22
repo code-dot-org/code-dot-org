@@ -959,6 +959,7 @@ nn:
             '"y"': y-posisjon
             '"direction"': retninga til rørsla
             '"tint"': farge
+            '"speed"': fart
       gamelab_getThisSprite:
         options:
           CHOICE:
@@ -1077,6 +1078,8 @@ nn:
             '"West"': Vest
       gamelab_moveToward:
         text: flytt {SPRITE} piksler {DISTANCE} mot {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_playSound:
@@ -1115,6 +1118,13 @@ nn:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnboge
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': undervass
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': middels
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -1123,6 +1133,7 @@ nn:
             '"x"': x-posisjon
             '"y"': y-posisjon
             '"direction"': retninga til rørsla
+            '"speed"': fart
       gamelab_setSizes:
         text: sett {SPRITE} {PROPERTY} til {N} %
         options:
@@ -1195,6 +1206,8 @@ nn:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": ikkje fisk
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mitt-merke
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ikkje mitt-merke
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

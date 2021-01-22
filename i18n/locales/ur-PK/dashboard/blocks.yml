@@ -1099,6 +1099,8 @@ ur:
             '"West"': مغرب
       gamelab_moveToward:
         text: اقدام {SPRITE} پکسلز {DISTANCE} کی طرف {TARGET}
+      gamelab_newSpritePointer:
+        text: کلک کیا {SPRITE}
       gamelab_objectSpritePointer:
         text: کلک کیا {SPRITE}
       gamelab_playSound:
