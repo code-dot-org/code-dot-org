@@ -1,5 +1,9 @@
 name: Workflow to analyze i18n sync PRs
 on:
+  push:
+    paths:
+    - '.github/workflows/**'
+    - 'bin/i18n/analyze_pr.rb'
   workflow_dispatch:
     inputs:
       name:
