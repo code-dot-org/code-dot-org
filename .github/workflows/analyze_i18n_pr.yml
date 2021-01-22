@@ -19,5 +19,12 @@ jobs:
   run_my_action:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: My first step
+        id: my_action
         uses: ./.github/actions/my_action
+        with:
+          who-to-greet: 'ha nguyen'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.my_action.outputs.time }}"
