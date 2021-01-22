@@ -27274,3 +27274,8 @@ id:
             kumpulan data untuk memecahkan masalah, dan cara komputer membantu mengotomatiskan
             langkah-langkah dari proses ini. Bab ini diakhiri dengan mempertimbangkan
             cara menerapkan proses pemecahan masalah data dalam bidang yang Anda pilih.
+        contagion-pilot:
+          description_short: Gunakan Sprite Lab untuk memprogram simulasi wabah virus.
+          description: Gunakan Sprite Lab untuk memprogram simulasi wabah virus.
+          student_description: Gunakan Sprite Lab untuk memprogram simulasi wabah
+            virus.
