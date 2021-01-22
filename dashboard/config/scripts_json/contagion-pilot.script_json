@@ -3,15 +3,15 @@
     "name": "contagion-pilot",
     "wrapup_video_id": null,
     "hidden": true,
-    "login_required": true,
+    "login_required": false,
     "properties": {
-      "peer_reviews_to_complete": 0,
       "teacher_resources": [
         [
           "lessonPlans",
           "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"
         ]
-      ]
+      ],
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
