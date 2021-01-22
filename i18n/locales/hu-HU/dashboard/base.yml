@@ -15,7 +15,7 @@ hu:
     messages:
       not_saved: 'Kérjük, javítsd a következő hibákat:'
       too_young: 'Erre a tartalomra életkori korlátozás van érvényben, és nem elérhető fiatalabb diákok számára.'
-      teacher_must_accept_terms: 'Ez a tartalom életkor korlátozással rendelkezik, és fiatalabb diákok számára nem elérhető. Kérje tanárát, hogy fogadja el a frissített Általános Szerződési Feltételeket, hogy hozzáférjen ehhez a tartalomhoz. A tanár ezt megteheti, ha bejelentkezik a Kód Stúdióba, ha rákattint a Kódex stúdió kezdőlapjának tetején található "Felülvizsgálat frissítések" gombra.'
+      teacher_must_accept_terms: 'Ez a tartalom fiatal diákok számára nem elérhető. Kérd meg tanárodat, hogy fogadja el a frissített Általános Szerződési Feltételeket, hogy hozzáférj ehhez a tartalomhoz. A tanár ezt megteheti, ha bejelentkezik a Kód Stúdióba, ha rákattint a Kód Stúdió kezdőlapjának tetején található "Felülvizsgálat frissítések" gombra.'
       pair_programmer: 'Jelenleg párban programozol egy olyan diáktársaddal, aki ehhez a tartalomhoz nem férhet hozzá. Hogy elérd ezt a tartalmat, állítsd le a páros programozást, és próbáld újra.'
   activerecord:
     errors:
@@ -23,7 +23,7 @@ hu:
         user:
           attributes:
             reset_password_token:
-              invalid: "nem érvényes. Minden link csak egyszer használható fel arra, hogy megváltoztasd a jelszavadat, és csak a legutlóljára elküldött link fog működni."
+              invalid: "nem érvényes. Minden link csak egyszer használható fel arra, hogy megváltoztasd a jelszavadat, és csak a legutoljára elküldött link fog működni."
       messages:
         blank: "szükséges"
         blank_plural: "szükségesek"
@@ -35,8 +35,8 @@ hu:
         name_example: 'Megjelenítendő név (pl. Menő Kódoló)'
         email: 'Email'
         parent_email: 'Szülő/gondviselő e-mail'
-        personal_email: "Személyes elektronikus levél cím <a href=\"%{url}\">(kattintson ide, ha nem rendelkezik e-mail címmel)</a>"
-        personal_email_markdown: "Személyes elektronikus levél cím [(kattintson ide, ha nem rendelkezik e-mail címmel)](%{url})"
+        personal_email: "Személyes e-mail cím <a href=\"%{url}\">(kattints ide, ha nem rendelkezel e-mail címmel)</a>"
+        personal_email_markdown: "Személyes e-mail cím [(kattints ide, ha nem rendelkezel e-mail címmel)](%{url})"
         username: 'felhasználónév'
         password: 'Jelszó'
         password_confirmation: 'Jelszó megerősítése'
@@ -71,15 +71,15 @@ hu:
     code:
       title: 'Csatlakozz egy csoporthoz a Code.org-on'
       placeholder: "Szakasz kód (ABCDEF)"
-      instructions: "Légyszives üsd be a 6 betűből álló kódot, amit a tanárod osztott meg veled (például: \"ABCDEF\"), hogy csatlakozhass a csoporthoz."
+      instructions: "Kérlek, írd be a tanárod által megadott 6 betűs kódot (például: \"ABCDEF\"), hogy csatlakozhass a csoporthoz."
       instructions_short: "Add meg a 6 karakteres szakasz kódod"
       submit: 'Csatlakozás'
   add_hint_form:
     placeholder: 'Kérjük, írd ide a javaslatod'
-    submit: 'Írja le a véleményét'
+    submit: 'Adj tanácsot'
   appname: "Code.org"
   stage: "szakasz"
-  stage_number: "%{number}. Lecke"
+  stage_number: "%{number}. lecke"
   puzzle: "Kirakós"
   trophies: "trófeák"
   courses: 'tanfolyamok'
@@ -91,8 +91,8 @@ hu:
   more: "TÖBB"
   less: "KEVESEBB"
   try_hoc: "Próbáld ki a Kódolás Óráját, kattints ide >> "
-  try_k8intro: "Próbáld ki az általános iskolás Bevezető számítógép-tudományi tanfolyamot (15-25 óra)"
-  k8intro: "K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)"
+  try_k8intro: "Próbáld ki az általános iskolások szóló, számítógép-tudományba bevezető tanfolyamot (15-25 óra)"
+  k8intro: "A számítógép-tudományba bevető tanfolyam általános iskolások számára (15-25 óra)"
   already_started: "Már elkezdted? Folytasd itt >>"
   demos: "Admin: Minden demó"
   continue: 'Tovább'
@@ -103,7 +103,7 @@ hu:
     sign_in_with: 'Bejelentkezés ezzel a fiókkal:  %{provider}'
     signed_in: 'Bejelentkezve!'
     signed_out_markdown: '### Kijelentkeztél innen: [Code.org](%{url}).'
-    sign_out_of_markdown: '#### Te a %{provider}on keresztül léptél be. [Kattints ide,](%{url}) hogy kijelentkezz %{provider}ból.'
+    sign_out_of_markdown: '#### Te a %{provider} segítségével léptél be. [Kattints ide,](%{url}) hogy kijelentkezz a %{provider} szolgáltatásból.'
     already_signedup: 'Már regisztráltál?'
     notyet_signedup: "Még nem csatlakoztál?"
     google_oauth2: 'Google fiók'
@@ -116,35 +116,35 @@ hu:
     forgot_password: 'Elfelejtette jelszavát?'
     migration_success: 'Sikeresen frissítettél az új felhasználói élményeinkhez.'
     demigration_success: 'Az új felhasználói élmények nem elérhetők a fiókodban.'
-    need_confirmation: "Nem kapta meg a megerősítő instrukciókat?"
-    need_unlock: "Nem kaptál a zárolás megszüntetéséhez útmutatót?"
-    not_linked: "Sajnáljuk, de Code.org-fiókja nem kapcsolódik a %{provider}. Úgy kell bejelentkezned, hogy beírod a jelszavad."
-    use_clever: "Sajnáljuk, de Code.org-fiókja nem kapcsolódik a %{provider}. Kérjük jelentkezzen be a okos portálon keresztül."
-    invalid_provider: "Sajnálom, %{provider} felhasználói fiókot nem lehet társítani a Code.org fiókhoz."
+    need_confirmation: "Nem kaptad meg a megerősítő utasításokat?"
+    need_unlock: "Nem kaptad meg az útmutatót a zárolás megszüntetéséhez?"
+    not_linked: "Sajnáljuk, de Code.org-fiókod nem kapcsolódik a %{provider} fiókhoz. Úgy kell bejelentkezned, hogy beírod a jelszavad."
+    use_clever: "Sajnáljuk, de Code.org-fiókod nem kapcsolódik a %{provider} szolgáltatáshoz. Kérjük, jelentkezz be az Okos Portálon keresztül."
+    invalid_provider: "Sajnos a %{provider} felhasználói fiókot nem lehet társítani a Code.org fiókhoz."
     migration_required: "Sajnálom, nem lehet fel- vagy lecsatlakoztatni fiókokat, amíg a régi felhasználói környezetet használod. Kérlek frissíts az újra."
-    unable_to_connect_provider: "Nem lehet összekötni Code.org-fiókját, a %{provider}. Kérjük, próbálja meg újra."
+    unable_to_connect_provider: "Nem lehet összekötni Code.org-fiókod, a %{provider} szolgáltatással. Kérjük, próbálja meg újra!"
     disconnect_successful: "Siker! Szétkapcsoltuk a külső fiókodat a Code.org fiókodtól."
     already_in_use: "A %{provider} fiókodat már korábban összekapcsoltuk egy másik Code.org fiókkal."
     already_linked: "A %{provider} fiókodat már korábban összekapcsoltuk egy másik Code.org fiókkal."
     existing_account:
       account_exists: "Jó hírek! Már van egy Code.org fiókod, ami a(z) %{email} email címet használja."
-      sign_in: "Kérlek lépj be a már meglévő fiókodba. Utána hozzá tudod kötni a %{provider} profilodat a Fiók Beállítások oldalon."
+      sign_in: "Kérlek, lépj be a már meglévő fiókodba. Utána hozzá tudod kötni a %{provider} profilodat a Fiók Beállítások oldalon."
       sign_up: "Nem a saját email címed? Szeretnél egy új fiókot egy másik email címmel? Bejelentkezés után összekötheted a %{provider} profilodat a Fiók Beállítások oldalon, hogyha új fiókot készítessz."
   signup_form:
     email_signup: 'Regisztrálj az e-mail címeddel'
     student_count: '%{count} tanuló iratkozott már fel.'
     teacher_count: '%{count} tanár iratkozott már fel.'
-    overview: 'Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy egy osztály irányíts. <a href="/">Böngészhetsz a különböző szintek és puzzlek között</a> fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.'
-    overview_markdown: 'Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy egy osztály irányíts. [Böngészhetsz a különböző szintek és puzzlek között](/) fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.'
+    overview: 'Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy irányíthass egy osztályt. <a href="/">Böngészhetsz a különböző szintek és feladványok között</a> fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.'
+    overview_markdown: 'Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy egy osztályt irányíthass. [Böngészhetsz a különböző szintek és feladványok között](/) fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.'
     hoc_already_signed_up_heading: 'Kezdés bejelentkezés nélkül'
-    hoc_already_signed_up_content: 'Sikeresen bejelentkeztél a Kódolás Órájába! Neked és a tanáraidnak nem kell bejelentkezned a Kód Stúdióba a kihívások eléréséhez. A kezdéshez <a href="%{learn_url}">válassz ki egy feladatot az osztályodnak,és oszd meg a linket.<br/><br/>Ha élvezted a Kódolás Óráját,akkor állíts be magadnak egy jelszót,és csinálj egy Kód Stúdió fiókot,hogy felvedd a tanáraidat egy<a href="%{educate_url}">kurzusra.'
-    hoc_already_signed_up_content_post_hoc: 'Köszönjük, hogy otthont adott egy Kódolás Órájá-nak. A Code Studio szolgáltatásba való bejelentkezéshez jelszót kell beállítania fiókjához. Ezzel elmentheti a haladását és kezelheti az osztálytermét. A hallgatókhoz kurzusokat rendelhet, és nyomon követheti azok előrehaladását. <a href="%{studio_url}"> Továbbra is folytathatja a különböző szakaszok és rejtvények böngészését </a> fiók létrehozása nélkül.'
-    hoc_already_signed_up_content_post_hoc_markdown: 'Köszönjük, hogy otthont adott egy Kódolás Órájá-nak. A Code Studio szolgáltatásba való bejelentkezéshez jelszót kell beállítania fiókjához. Ezzel elmentheti a haladását és kezelheti az osztálytermét. A hallgatókhoz kurzusokat rendelhet, és nyomon követheti azok előrehaladását. [Továbbra is folytathatja a különböző szakaszok és rejtvények böngészését](%{studio_url}) fiók létrehozása nélkül.'
-    teacher_educator_guide: 'Lásd a tanító segítségét'
+    hoc_already_signed_up_content: 'Sikeresen bejelentkeztél a Kódolás Órájába! Neked és a diákjaidnak nem kell bejelentkezned a Kód Stúdióba, hogy részt vehess az eseményen. A kezdéshez <a href="%{learn_url}"> válassz ki egy feladatot az osztályodnak, és oszd meg a linket.<br/><br/> Ha élvezted a Kódolás Óráját, akkor állíts be magadnak egy jelszót, és csinálj egy Kód Stúdió fiókot, hogy felvedd a diákjaidat egy <a href="%{educate_url}"> kurzusra.'
+    hoc_already_signed_up_content_post_hoc: 'Köszönjük, hogy otthont adsz egy Kódolás Órájának. A Code Studio szolgáltatásba való bejelentkezéshez jelszót kell beállítanod a fiókodhoz. Ezzel elmentheted a haladásod és kezelheted az osztályodat. A tanulókhoz kurzusokat rendelhetsz, és nyomon követheted előrehaladásukat. <a href="%{studio_url}"> Továbbra is folytathatod a különböző szakaszok és feladványok böngészését </a> fiók létrehozása nélkül.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Köszönjük, hogy otthont adsz egy Kódolás Órájának. A Code Studio szolgáltatásba való bejelentkezéshez jelszót kell beállítanod a fiókodhoz. Ezzel elmentheted a haladásod és kezelheted az osztályodat. A tanulókhoz kurzusokat rendelhetsz, és nyomon követheted előrehaladásukat.  Továbbra is folytathatod a különböző szakaszok és feladványok böngészését (%{studio_url}) fiók létrehozása nélkül.'
+    teacher_educator_guide: 'Nézd meg a tanári útmutatót'
     title: "Regisztrálj a Code.org-ba"
     school_name: 'Iskola neve (nem kötelező)'
     school_address: 'Iskola címe (nem kötelező)'
-    address_placeholder: 'cím, város, állam(megye), irányítószám'
+    address_placeholder: 'cím, város, állam (megye), irányítószám'
     gender: 'Nem (nem kötelező)'
     birthday: 'Születésnap (nem kötelező)'
     age: 'Kor'
@@ -153,7 +153,7 @@ hu:
     go_to_account: 'A fiókomhoz'
     teacher: 'Tanár vagy?'
     valid_username: "Elérhető!"
-    invalid_username: "Felhasználónév minimum 5 karakter hosszú"
+    invalid_username: "A felhasználónév legyen legalább 5 karakter hosszú"
     taken_username: "Felhasználónév már foglalt"
     valid_password: "Érvényes jelszó!"
     invalid_password: "A jelszónak legalább 6 karakter hosszúnak kell lennie"
@@ -311,7 +311,7 @@ hu:
       about_donors: "Adományozók"
       about_partners: "Partnerek"
       about_team: "Teljes csapat"
-      about_news: "Sajtósarok"
+      about_news: "Hírszoba"
       about_evaluation: "Értékelés"
       about_jobs: "Állás"
       about_contact: "Kapcsolat"
@@ -326,11 +326,11 @@ hu:
       classroom: 'Tanári kezdőlap'
       district_dashboard: 'Tankerületi munkafelület'
       label: 'Üdv %{username}'
-      stats: 'Kód stúdió'
-      settings: 'Profilom'
+      stats: 'Kód Stúdió'
+      settings: 'Fiók beállítások'
       logout: 'Kijelentkezés'
       signin: 'Bejelentkezés'
-      signup: 'Regisztrálj'
+      signup: 'Hozzon létre egy fiókot'
       already_registered: 'Már regisztráltál?'
       pair_programming: 'Páros programozás'
       team: 'Csapat'
@@ -365,28 +365,28 @@ hu:
       view_all: 'Nézd meg az összes projektet...'
     popup:
       progress_for_user: "%{name} fejlődése"
-      progress: 'Fejlődése'
+      progress: 'Haladásod'
       lines: 'A kód teljes hossza: %{lines} sor'
       close: 'BEZÁRÁS'
       mastery: 'Fogalmak'
       puzzle_map: 'Szakaszok'
-      prizes: 'Gyűjtse össze az összes %{total_trophies} trófeát, és nyerjen díjakat!'
-      prize_earned: 'Az összes  %{total_trophies}  trófeát  összegyűjtötte. Megnyerte a díjat!'
+      prizes: 'Gyűjtsd össze az összes %{total_trophies} trófeát, és nyerj díjakat!'
+      prize_earned: 'Az összes  %{total_trophies}  trófeát  összegyűjtötted. Megnyerted a díjat!'
       prize_us_only: '(Kizárólag U.S. Diákoknak)'
       prizes_link: 'További információk'
   teacher:
     answer: Válasz
     for_teachers_only: Csak tanároknak
     title:
-      one: 'A tanára:'
+      one: 'A tanárod:'
       other: 'A tanáraid:'
     remove: '(tanár eltávolítása)'
     confirm:
-      remove: 'Biztosan el szeretné bocsátani ezt a tanárt?'
+      remove: 'Biztosan el szeretnéd távolítani ezt a tanárt?'
     students:
-      dashboard: 'Vissza a Tanári Nyitólapra'
+      dashboard: 'Vissza a Tanári Vezérlőpultra'
     user_not_found: 'Ez a tanár nem található.'
-    student_teacher_disassociated: 'Eltávolítottad %{teacher_name} a tanáraid közül.'
+    student_teacher_disassociated: 'Elhagytad a %{teacher_name} tanárod %{section_code} szakaszát.'
     panel:
       answer_viewer: 'Tanár Panel'
       student: 'Diák'
@@ -394,14 +394,14 @@ hu:
       try_it_yourself: 'Próbáld ki magad'
       section: 'Csoport'
       example: 'Példa a megoldásra'
-      example_with_number: 'Példa a megoldásra %{solution_number}'
+      example_with_number: '%{solution_number}. példa a megoldásra '
       submitted_on: 'Benyújtva ekkor: %{date}'
       unsubmit: 'Visszavon'
-      worked_with: 'Dolgozott'
+      worked_with: 'dolgozott vele'
       clear_response: 'Válasz törlése'
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
-    email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
+    email_confirm_needed_required: 'A %{email} e-mail cím nincs megerősítve:'
     email_confirm_wrong_email: '(Helytelen e-mail cím?)'
     email_resend_confirm: 'Megerősítés újraküldése'
     new_email_hint: '(győződj meg róla, hogy hozzáférsz az erre az e-mail címre érkező e-mailekhez)'

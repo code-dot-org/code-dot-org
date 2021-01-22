@@ -224,7 +224,8 @@ hu-HU:
         - {}
         - {}
         questions:
-        - text: Válaszd ki a legmegfelelőbb blokkokat!
+        - text: Válaszd ki a legmegfelelőbb blokkokat! A lila virágokban 0 vagy 1
+            nektár van.
       2-3 bee loops multi 1:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
