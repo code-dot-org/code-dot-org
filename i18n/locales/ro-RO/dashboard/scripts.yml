@@ -7278,3 +7278,7 @@ ro:
               display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
             cspSurvey:
               display_name: Sondaj
+        contagion-pilot:
+          description_short: 'Utilizează Laboratorul Sprite pentru a programa simularea unei epidemii dintr-un virus'
+          description: 'Utilizează Laboratorul Sprite pentru a programa simularea unei epidemii dintr-un virus'
+          student_description: 'Utilizează Laboratorul Sprite pentru a programa simularea unei epidemii dintr-un virus'
