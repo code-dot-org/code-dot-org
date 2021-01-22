@@ -25,11 +25,21 @@ class VocabulariesController < ApplicationController
     end
   end
 
+  def update
+    puts vocabulary_params
+    vocabulary = Vocabulary.find_by_id(vocabulary_params[:id])
+    if vocabulary && vocabulary.update!(vocabulary_params)
+      render json: vocabulary.summarize_for_lesson_edit
+    else
+      render json: {status: 404, error: "Vocabulary #{vocabulary_params[:id]} not found"}
+    end
+  end
+
   private
 
   def vocabulary_params
     vp = params.transform_keys(&:underscore)
-    vp = vp.permit(:word, :definition, :course_version_id)
+    vp = vp.permit(:id, :key, :word, :definition, :course_version_id)
     vp
   end
 end
