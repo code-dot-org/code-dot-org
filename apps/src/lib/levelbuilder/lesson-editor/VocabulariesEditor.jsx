@@ -40,6 +40,16 @@ const styles = {
     textAlign: 'center',
     width: '50%',
     lineHeight: '30px'
+  },
+  addButton: {
+    background: color.cyan,
+    borderRadius: 3,
+    color: color.white,
+    fontSize: 14,
+    padding: 7,
+    textAlign: 'center',
+    marginTop: 10,
+    marginLeft: 0
   }
 };
 
