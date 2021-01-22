@@ -44,8 +44,8 @@ describe('ProgressTableStudentList', () => {
   it('displays a ProgressTableStudentName for each student', () => {
     const wrapper = mount(<ProgressTableStudentList {...DEFAULT_PROPS} />);
     expect(wrapper.find(ProgressTableStudentName)).to.have.length(2);
-    expect(wrapper.contains('Joe')).to.equal(true);
-    expect(wrapper.contains('Jamie')).to.equal(true);
+    expect(wrapper.contains('Joe')).to.be.true;
+    expect(wrapper.contains('Jamie')).to.be.true;
   });
 
   it('displays body with overflow scroll if needsGutter is true', () => {

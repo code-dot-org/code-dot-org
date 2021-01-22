@@ -40,7 +40,7 @@ describe('ProgressTableLessonNumber', () => {
   it('renders the name in the tooltip', () => {
     const wrapper = setUp();
     const tooltipComponent = wrapper.find(ReactTooltip);
-    expect(tooltipComponent.contains(DEFAULT_PROPS.name)).to.equal(true);
+    expect(tooltipComponent.contains(DEFAULT_PROPS.name)).to.be.true;
   });
 
   it('calls onClick when clicked', () => {
@@ -70,6 +70,6 @@ describe('ProgressTableLessonNumber', () => {
     const wrapper = setUp({lockable: false});
     const lockIcon = wrapper.find(FontAwesome).find({icon: 'lock'});
     expect(lockIcon).to.have.length(0);
-    expect(wrapper.contains(DEFAULT_PROPS.number)).to.equal(true);
+    expect(wrapper.contains(DEFAULT_PROPS.number)).to.be.true;
   });
 });
