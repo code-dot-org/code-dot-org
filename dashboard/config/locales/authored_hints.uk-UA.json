@@ -800,7 +800,8 @@
           "courseC_maze_programming4_b": "Додайте коментар, коли ви зміните маршрути - що б сталося, якщо ви повернули інший шлях?"
         },
         "course1_maze_seq_challenge2": {
-          "courseB_maze_seq_challenge1_a": "Найкращий шлях може не працювати на цей раз."
+          "courseB_maze_seq_challenge1_a": "Найкращий шлях може не працювати на цей раз.",
+          "courseB_maze_seq_challenge1_b": "Спробуйте рухати на захід, щоб розпочати"
         },
         "course2_artist_nestedLoops_challenge1": {
           "courseD_artist_nestedLoops_challenge1_b": "Додайте код, щоб намалювати трикутник всередині вкладеного циклу. Використовуйте 120 градусів для вашого трикутника."
@@ -1441,19 +1442,19 @@
           "courseC_starWars_loops1_b": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
         },
         "courseC_starWars_loops10": {
-          "courseC_starWars_loops10_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `repeat` іншим! Це називається \\*\\* вкладена петля \\*\\*.",
+          "courseC_starWars_loops10_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*.",
           "courseC_starWars_loops10_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
         },
         "courseC_starWars_loops10_2018": {
-          "courseC_starWars_loops10_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `repeat` іншим! Це називається \\*\\* вкладена петля \\*\\*.",
+          "courseC_starWars_loops10_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*.",
           "courseC_starWars_loops10_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
         },
         "courseC_starWars_loops10_2019": {
-          "courseC_starWars_loops10_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `repeat` іншим! Це називається \\*\\* вкладена петля \\*\\*.",
+          "courseC_starWars_loops10_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*.",
           "courseC_starWars_loops10_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
         },
         "courseC_starWars_loops10_2020": {
-          "courseC_starWars_loops10_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `repeat` іншим! Це називається \\*\\* вкладена петля \\*\\*.",
+          "courseC_starWars_loops10_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*.",
           "courseC_starWars_loops10_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
         },
         "courseC_starWars_loops1_2018": {
@@ -1466,19 +1467,19 @@
           "courseC_starWars_loops1_b": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
         },
         "courseC_starWars_loops6": {
-          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `repeat` іншим! Це називається \\*\\* вкладена петля \\*\\*."
+          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*."
         },
         "courseC_starWars_loops6_2018": {
-          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `repeat` іншим! Це називається \\*\\* вкладена петля \\*\\*."
+          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*."
         },
         "courseC_starWars_loops6_2019": {
-          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `repeat` іншим! Це називається \\*\\* вкладена петля \\*\\*."
+          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*."
         },
         "courseC_starWars_loops6_2020": {
-          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `repeat` іншим! Це називається \\*\\* вкладена петля \\*\\*."
+          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*."
         },
         "courseC_starWars_loops6_copy": {
-          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `repeat` іншим! Це називається \\*\\* вкладена петля \\*\\*."
+          "courseC_starWars_loops6_b": "Якщо ви хочете використовувати менше коду, ви можете помістити один цикл `повтор` в інший! Це називається \\*\\* вкладений цикл \\*\\*."
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
@@ -2124,6 +2125,45 @@
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "Існує два способи вирішити цю загадку!",
           "courseD_scrat_programming6_c": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться, навіть якщо ви не думаєте, що ви вирішили головоломку ще."
+        },
+        "course1_artist_loops_challenge2": {
+          "harvey_tictactoe": "Ви можете використовувати блок 'стрибок', щоб рухатись до інших космосів."
+        },
+        "course1_artist_loops_challenge3": {
+          "courseA_artist_loops_challenge2_b": "Коли Ви закінчите з будинком для пташок, \"перейдіть\" до наступного",
+          "courseA_artist_loops_challenge2_c": "Вам потрібно буде БАГАТО блоків всередині циклу для цього завдання"
+        },
+        "course1_collector_loops_challenge3": {
+          "courseB_collector_loops_challenge1_b": "Розпочати зацикливши команду \"рухати на південь\" та \"отримати скарб\""
+        },
+        "course1_maze_debugging_challenge1": {
+          "courseA_maze_seq_challenge1_a": "Деякі шляхи приведуть до вибухівки, якщо Ви зайдете занадто далеко"
+        },
+        "outbreak1": {
+          "step1": "Використайте ці блоки для створення спрайтів:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n    <xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nЦей блок можна знайти у категорії **Спрайти** панелі інструментів.",
+          "step2": "Змініть розмір спрайтів цим блоком: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nЙого можна знайти у категорії **Дії** панелі інструментів.",
+          "step3": "Нехай всі спрайти починають бродити: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nЦей блок знаходиться у категорії **Дії** панелі інструментів."
+        },
+        "outbreak2": {
+          "hint1": "Клацніть кнопку `+` на блоці події. Заповніть порожній простір блоку  `змінити костюм` блоком `суб'єкт` що знаходиться всередині.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "outbreak3": {
+          "hint1": "Щоб одягнути маску на монстра, використайте блок `змінити костюм` з подією `коли клацнули` :\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nНе забудьте перетягнути малий червоний блок  `клацнули` !",
+          "hint2": "Новий блок цього рівня має виглядати так:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "outbreak4": {
+          "challenge": "## Хочете чогось складнішого?\n\nМонстри можуть рухатись повільніше чи швидше.\n\n1.  Клацніть `редагувати` у цьому блоці <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Збільшіть чи зменшіть число у цьому блоці: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nЩоб монстри рухались повільніше, оберіть дробове число, наприклад  `0.5` чи`0.25`. Щоб вони рухались швидше, оберіть будь-яке число, більше 1."
+        },
+        "outbreak5": {
+          "solution2": "Новий код має виглядати так:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_subjectSpritePointer\"></block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "outbreak6": {
+          "hint2": "Переконайтесь, що розмістили блоки \"дій\" всередині блоку `якщо ймовірність`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": "Вам потрібно додати ще 3 події `коли торкається` щоб перевірити всі можливі комбінації `торкань` здорових та хворих спрайтів.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block>\\<block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "outbreak7": {
+          "whenclicked": "## Вакцини\n\nВи можете симулювати вакцинацію монстрів при клацанні по них. Щоб це зробити, використайте блок `змінити костюм` у цій події:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "Застрягли? Завжди можна скасувати зміни, клацаючи `Історія версій` внизу, коли обираєте \"Почати знову\"."
         }
       }
     }

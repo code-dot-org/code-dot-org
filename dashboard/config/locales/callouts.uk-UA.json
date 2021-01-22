@@ -508,6 +508,13 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Скористайтесь розкривним списком, щоб змінити \"???\" на число"
+        },
+        "outbreak2": {
+          "minitoolbox": "Клацніть тут, щоб розгорнути блок.",
+          "pointerlocation": "Перетягніть блок суб'єкта сюди."
+        },
+        "outbreak7": {
+          "costumes_callout": "Клацніть, щоб створити новий костюм"
         }
       }
     }

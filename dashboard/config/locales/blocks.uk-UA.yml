@@ -987,7 +987,7 @@ uk:
       gamelab_clickedOn:
         text: коли клацнули {SPRITE}
       gamelab_clickedSpritePointer:
-        text: натиснув {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'коментар: {COMMENT}'
       gamelab_countByAnimation:
@@ -1013,6 +1013,7 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
             '"tint"': відтінок
+            '"speed"': швидкість
       gamelab_getThisSprite:
         text: "[CHOICE]спрайт[0]"
         options:
@@ -1075,7 +1076,7 @@ uk:
       gamelab_jumpTo:
         text: "{SPRITE} стрибає до {LOCATION}"
       gamelab_keyPressed:
-        text: "{CONDITION} {KEY} Натиснута"
+        text: "{CONDITION} {KEY} натиснуто"
         options:
           CONDITION:
             '"when"': коли
@@ -1154,8 +1155,10 @@ uk:
             '"West"': Захід
       gamelab_moveToward:
         text: переміститись на {SPRITE} пікселів {DISTANCE} до {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: натиснув {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: патрулювання вгору та вниз
       gamelab_playSound:
@@ -1206,6 +1209,13 @@ uk:
             undefined: немає
       gamelab_setBackgroundImageAs:
         text: встановити фон {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': середньо
+            '100': large
       gamelab_setPrompt:
         text: запитати користувача {QUESTION} значення змінної {VAR}
       gamelab_setPromptWithChoices:
@@ -1220,6 +1230,7 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
+            '"speed"': швидкість
       gamelab_setSizes:
         text: встановити {SPRITE} властивість {PROPERTY} у {N}%
         options:
@@ -1239,13 +1250,13 @@ uk:
       gamelab_showTitleScreen:
         text: Показати титульний екран {BREAK} Заголовок {TITLE} Текст {SUBTITLE}
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} Натиснув"
+        text: "{CONDITION} {SPRITE} натиснуто"
         options:
           CONDITION:
             '"when"': коли
             '"while"': поки
       gamelab_subjectSpritePointer:
-        text: натиснув {SPRITE}
+        text: "{SPRITE}"
       gamelab_tumbling:
         text: спотикатись
       gamelab_turn:
@@ -1284,7 +1295,7 @@ uk:
       gamelab_whileDownArrow:
         text: при натисканні стрілки вниз
       gamelab_whileKey:
-        text: в той час як [KEY]натиснув[0]
+        text: в той час як [KEY]натиснуто[0]
         options:
           KEY:
             '"up"': вгору
@@ -1325,6 +1336,11 @@ uk:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": не риба
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": мітка
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": не мітка
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: запитати користувача {QUESTION} значення змінної {VAR} з варіантами
+          {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1445,7 +1461,7 @@ uk:
             '"all"': усі
             '"this"': це
       Mikelab_groupWhenClickedOn:
-        text: коли натиснув {COSTUME}
+        text: коли натиснуто {COSTUME}
       Mikelab_groupWhenXTouchesY:
         text: коли{COSTUME} торкається{COSTUME2}
       Mikelab_groupWhileClicked:
@@ -1575,7 +1591,7 @@ uk:
       Mikelab_whenMouseClicked:
         text: при натисканні миші
       Mikelab_whenYesNoClicked:
-        text: коли натиснув {KEY}
+        text: коли натиснуто {KEY}
         options:
           KEY:
             '"yes"': так
@@ -1662,7 +1678,7 @@ uk:
           OPTION:
             '"random"': випадковий
       binary_drawBin:
-        text: залучити двійковий {BIN}
+        text: малювати двійково {BIN}
       binary_drawBinScreen:
         text: |-
           намалювати екран
@@ -1675,16 +1691,16 @@ uk:
           {B7}
           {B8}
       binary_drawDec:
-        text: розіграш десяткового {DEC}
+        text: малювати десятково {DEC}
       binary_drawPixelHere:
-        text: набір пікселів {VAL}
+        text: встановити піксел {VAL}
         options:
           VAL:
             '0': вимкнено
             '1': далі
             '"toggle"': перемикач
       binary_drawString:
-        text: намалювати рядок {STR}
+        text: малювати рядок {STR}
       binary_goTo:
         text: перейти до {LOC}
       binary_goToHome:

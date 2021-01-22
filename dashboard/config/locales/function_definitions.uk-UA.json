@@ -1605,6 +1605,51 @@
           "collect": {
             "name": "збирати"
           }
+        },
+        "K-1 Artist2 4": {
+          "draw rectangle": {
+            "name": "намалюйте прямокутник"
+          }
+        },
+        "K-1 Artist2 5": {
+          "draw rectangle": {
+            "name": "намалюйте прямокутник"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"просте\" рішення"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "потенційне рішення"
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"просте\" рішення"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "потенційне рішення"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "потенційне рішення"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "потенційне рішення"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "потенційне рішення"
+          }
         }
       }
     }

@@ -4542,3 +4542,7 @@ uk:
               display_name: 'Глава 2: Вирішення проблем із даними'
             cspSurvey:
               display_name: Опитування
+        contagion-pilot:
+          description_short: 'Запрограмуйте симуляцію спалаху вірусу за допомогою Sprite Lab.'
+          description: 'Запрограмуйте симуляцію спалаху вірусу за допомогою Sprite Lab.'
+          student_description: 'Запрограмуйте симуляцію спалаху вірусу за допомогою Sprite Lab.'
