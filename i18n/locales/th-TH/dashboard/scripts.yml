@@ -3294,3 +3294,7 @@ th:
           lesson_groups:
             cspSurvey:
               display_name: แบบสำรวจ
+        contagion-pilot:
+          description_short: 'ใช้แลปสไปรท์เพื่อจำลองสถานการณ์การระบาดของไวรัส '
+          description: 'ใช้แลปสไปรท์เพื่อจำลองสถานการณ์การระบาดของไวรัส '
+          student_description: 'ใช้แลปสไปรท์เพื่อจำลองสถานการณ์การระบาดของไวรัส '
