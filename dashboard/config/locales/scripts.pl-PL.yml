@@ -28245,3 +28245,9 @@ pl:
             w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem,
             jak proces rozwiązywania problemu z danym może być stosowany w wybranym
             przez siebie obszarze.
+        contagion-pilot:
+          description_short: Użyj Sprite Lab, aby zaprogramować symulację epidemii
+            wirusa.
+          description: Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.
+          student_description: Użyj Sprite Lab, aby zaprogramować symulację epidemii
+            wirusa.

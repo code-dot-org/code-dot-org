@@ -17669,3 +17669,7 @@ pl:
               display_name: Ankieta
           name: csd5-preview-2021
           student_description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie danych są używane do rozwiązywania problemów i jak komputery pomagają w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem, jak proces rozwiązywania problemu z danym może być stosowany w wybranym przez siebie obszarze.
+        contagion-pilot:
+          description_short: 'Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.'
+          description: 'Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.'
+          student_description: 'Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.'

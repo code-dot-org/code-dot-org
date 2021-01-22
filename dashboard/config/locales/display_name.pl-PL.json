@@ -10,7 +10,7 @@
         "App Lab Intro 8 - Video Share Your App": "Filmik: Udostępnij swoją aplikację",
         "AppLab Intro 7 - Change Screen Color": "Zmień kolor ekranu",
         "AppLab Intro 7 - Change Text 2": "Zmień tekst",
-        "AppLab Intro 7 - Full Text": "Dwa Przyciski",
+        "AppLab Intro 7 - Full Text": "Dwa przyciski",
         "AppLab Intro 7 - onEvent intro": "Zrób tak, by przyciski działały",
         "AppLab Intro 7 - onEvent twoButtons": "Więcej treningu onEvent",
         "AppLab Intro 7 - playSound": "Używanie playSound",
@@ -391,7 +391,7 @@
         "spritelab_extras_repeat": "Wiele duszków!",
         "Video: Intro to CSS_2018": "Wideo: Wstęp do CSS",
         "Video: Intro to CSS_2019": "Wideo: Wstęp do CSS",
-        "App Lab Intro 8 - Video Make It Interactive": "Wideo: Nadaj mu interaktywnego charakteru",
+        "App Lab Intro 8 - Video Make It Interactive": "Wideo: Nadaj mu interaktywny charakter",
         "Course F: Artist Project - Revise_2018": "Zaktualizuj \"Projekt artysty\"",
         "Course F: Artist Project_2018": "Kurs F \"Projekt artysty\"",
         "Course F: Artist Project_2019": "Kurs F \"Projekt artysty\"",
@@ -450,10 +450,11 @@
         "outbreak2": "Symulacja wirusów",
         "outbreak3": "Symulacja wirusów",
         "outbreak4": "Modyfikuj swoją symuację",
-        "outbreak5": "Odporność i szczepionki",
+        "outbreak5": "Odzyskiwanie",
         "outbreak6": "Losowe szanse",
         "outbreak8": "Udostępnij wiadomość",
-        "courseF_extras_sim": "Twoja własna symulacja!"
+        "courseF_extras_sim": "Twoja własna symulacja!",
+        "outbreak7": "Odporność i szczepionki"
       }
     }
   }

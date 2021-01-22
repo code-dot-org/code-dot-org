@@ -95,6 +95,8 @@ pl:
       Motorcycle: Motocykl
       Orientation: Orientacja
       Pair Programming: Programowanie w parach
+      Practice: Ćwiczenia
+      Prediction: Przewidywanie
       Programming with Events: Programowanie ze zdarzeniami
       Programming with Rey and BB-8: Programowanie z Reyem i BB-8
       Programs that Repeat: Programy, które Powtarzają
@@ -125,8 +127,11 @@ pl:
       Sprite Lab Project: Projekt Sprite Lab
       Stopping the Outbreak with Masks: Powstrzymanie epidemii za pomocą masek
       The Artist in Code Studio: Artysta w Code Studio
+      The Collector: Zbieracz
       The Harvester: Kombajn
+      UI Element Properties: Właściwości elementu interface'u graficznego
       User Interface: Interfejs użytkownika
+      Using Getters and Setters: Używanie getterów i setterów
       Using HTML Tags: Stosując Tagi HTML
       Using Random Numbers: Stosując Losowe Liczby
       Using the LED: Stosując LED

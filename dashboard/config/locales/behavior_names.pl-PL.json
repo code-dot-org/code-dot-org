@@ -1158,6 +1158,10 @@
           "recovering": "wyzdrowieć",
           "moving left and right": "poruszając się w lewo i w prawo",
           "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek"
+        },
+        "courseF_extras_sim": {
+          "wandering 2": "wędrówka 2",
+          "wandering 1": "wędrówka 1"
         }
       }
     }

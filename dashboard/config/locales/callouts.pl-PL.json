@@ -18,7 +18,7 @@
           "applab_hoc_finish": "Czy ekran stał się zielony? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
         },
         "AppLab Intro 7 - thisOrThatAddButton": {
-          "AppLabHoCFinal11": "Teraz jesteś w Trybie Projektowania."
+          "AppLabHoCFinal11": "Teraz jesteś w trybie projektowania."
         },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "Zmień liczbę tutaj"
@@ -698,7 +698,7 @@
           "courseB_maze_seq2_callout1": "Użyj przycisku Krok, by przejść przez program krok po kroku. Pomoże ci to znaleźć błąd!"
         },
         "courseB_maze_seq3": {
-          "courseB_maze_seq3_1": "Szare bloki są z kamienia i nie mogą być wyrzucane."
+          "courseB_maze_seq3_1": "Szare bloki są z kamienia i nie można ich wyrzucić."
         },
         "courseB_playlab_events6": {
           "courseB_playlab_events6_a": "Użyj zielonej strzałki w dół, by zmieniać kierunki."
