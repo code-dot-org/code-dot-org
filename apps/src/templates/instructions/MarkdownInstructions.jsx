@@ -5,10 +5,8 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import {convertXmlToBlockly} from './utils';
-import {openDialog} from '@cdo/apps/redux/instructionsDialog';
-import {renderExpandableImages} from '../utils/expandableImages';
 
-import SafeMarkdown from '../SafeMarkdown';
+import EnhancedSafeMarkdown from '../EnhancedSafeMarkdown';
 
 const styles = {
   standard: {
@@ -93,8 +91,6 @@ class MarkdownInstructions extends React.Component {
     $(thisNode)
       .find('img')
       .load(this.props.onResize);
-
-    renderExpandableImages(thisNode, this.props.showImageDialog);
   }
 
   render() {
@@ -110,42 +106,14 @@ class MarkdownInstructions extends React.Component {
           inTopPane && canCollapse && styles.inTopPaneCanCollapse
         ]}
       >
-        <SafeMarkdown markdown={markdown} />
+        <EnhancedSafeMarkdown markdown={markdown} expandableImages={true} />
       </div>
     );
   }
 }
 
 export const StatelessMarkdownInstructions = Radium(MarkdownInstructions);
-export default connect(
-  state => ({
-    isBlockly: state.pageConstants.isBlockly,
-    noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed
-  }),
-  dispatch => ({
-    showImageDialog(imgUrl) {
-      dispatch(
-        /*
-         * TODO: Using the 'DialogInstructions' component to display the
-         * "expanded image" dialog generates the following warning:
-         *
-         * > Warning: Failed prop type: The prop `shortInstructions` is marked as
-         * > required in `DialogInstructions`, but its value is `undefined`.
-         * >     in DialogInstructions (created by Connect(DialogInstructions))
-         * >     in Connect(DialogInstructions)
-         * >     in Provider
-         *
-         * We should either update the existing DialogInstructions component to
-         * make it more compatible with non-instructions content, or create a
-         * separate Dialog component specifically for these images.
-         */
-        openDialog({
-          autoClose: false,
-          imgOnly: true,
-          hintsOnly: false,
-          imgUrl
-        })
-      );
-    }
-  })
-)(Radium(MarkdownInstructions));
+export default connect(state => ({
+  isBlockly: state.pageConstants.isBlockly,
+  noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed
+}))(Radium(MarkdownInstructions));
