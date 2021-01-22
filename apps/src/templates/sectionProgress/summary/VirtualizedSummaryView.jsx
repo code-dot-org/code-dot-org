@@ -88,6 +88,7 @@ class VirtualizedSummaryView extends Component {
             position={stageData.position}
             relativePosition={stageData.relative_position}
             lockable={stageData.lockable}
+            hasLessonPlan={stageData.hasLessonPlan}
             tooltipId={tooltipIdForLessonNumber(columnIndex)}
             onSelectDetailView={() =>
               this.props.jumpToLessonDetails(stageData.position)
