@@ -338,8 +338,12 @@ class Script < ApplicationRecord
 
   # Find the lesson based on its relative position.
   # Raises `ActiveRecord::RecordNotFound` if no matching lesson is found.
-  def stage_by_relative_position(position, lockable = true, has_lesson_plan = false)
-    lessons.where(lockable: lockable, has_lesson_plan: has_lesson_plan).find_by!(relative_position: position)
+  # Note: (dmcavoy) Only used to summarize lessons for Curriculum Builder and CSP 20-21 is the
+  # only course that has lockable lessons with lesson plans and those lessons
+  # don't use the code studio pull through so leaving this as is. This should be removed
+  # when we deprecate curriculum builder
+  def stage_by_relative_position(position, lockable = true)
+    lessons.where(lockable: lockable).find_by!(relative_position: position)
   end
 
   # For all scripts, cache all related information (levels, etc),
@@ -823,7 +827,7 @@ class Script < ApplicationRecord
     script_levels.find(id: script_level_id.to_i)
   end
 
-  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable, has_lesson_plan)
+  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
     relative_position ||= 1
     script_levels.find do |sl|
       # make sure we are checking the native properties of the script level
@@ -831,8 +835,7 @@ class Script < ApplicationRecord
       sl.position == puzzle_position.to_i &&
         !sl.bonus &&
         sl.lesson.relative_position == relative_position.to_i &&
-        sl.lesson.lockable? == lockable &&
-        sl.lesson.has_lesson_plan? == has_lesson_plan
+        sl.lesson.lockable? == lockable
     end
   end
 
