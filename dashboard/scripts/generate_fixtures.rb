@@ -96,12 +96,7 @@ scripts_map.each do |_script_id, name|
 
   script.script_levels.to_a[0, 10000].each do |sl|
     key = "script_level_#{sl.script_id}_#{sl.level_id}"
-    sl_attributes = sl.attributes.clone
-    sl_attributes.delete('seed_key')
-    sl_attributes.delete('activity_section_id')
-    sl_attributes.delete('activity_section_position')
-    sl_attributes.delete('properties')
-    @script_levels[key] = sl_attributes.merge({"levels" => "level_#{sl.level_id}"})
+    @script_levels[key] = sl.attributes.merge({"levels" => "level_#{sl.level_id}"})
 
     sl.callouts.each do |c|
       @callouts["callout_#{c.id}"] = c.attributes

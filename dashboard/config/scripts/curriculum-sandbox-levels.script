@@ -1,22 +1,22 @@
 lesson_group 'lesson group', display_name: 'display name'
-lesson 'Course A', display_name: 'Course A', has_lesson_plan: true
+lesson 'Course A', display_name: 'Course A', has_lesson_plan: false
 level 'courseB_maze_seq10_predict1_2018'
 level 'courseB_maze_seq1_predict1_2018'
 level 'courseA_collector_loops3_predict1'
 level 'courseA_collector_loops11_predict2'
 level 'courseA_artist_loops11_predict2'
 
-lesson 'Course B', display_name: 'Course B', has_lesson_plan: true
+lesson 'Course B', display_name: 'Course B', has_lesson_plan: false
 level 'courseA_maze_seq2_predict1'
 level 'courseA_maze_seq12_predict2'
 level 'courseB_collector_loops3_predict1'
 level 'courseB_artist_loops8_predict1'
 
-lesson 'Course E/F', display_name: 'Course E/F', has_lesson_plan: true
+lesson 'Course E/F', display_name: 'Course E/F', has_lesson_plan: false
 level 'teacherSandboxFish'
 level 'Swimming Fish Teacher Sandbox'
 
-lesson 'CS Discoveries', display_name: 'CS Discoveries', has_lesson_plan: true
+lesson 'CS Discoveries', display_name: 'CS Discoveries', has_lesson_plan: false
 level 'csd digital unplugged PSP word search big'
 level 'csd digital unplugged PSP seating big'
 

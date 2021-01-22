@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -417,7 +418,7 @@
       "absolute_position": 14,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 1,
+      "relative_position": 14,
       "properties": {
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",
         "student_overview": "Assessment day to conclude the unit.",

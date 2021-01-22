@@ -13,7 +13,8 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -331,7 +332,7 @@
       "absolute_position": 11,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 1,
+      "relative_position": 11,
       "properties": {
         "overview": "Students complete the Unit Assessment and then spend the rest of class sharing their projects. ",
         "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app.",

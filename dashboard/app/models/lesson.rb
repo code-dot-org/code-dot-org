@@ -63,8 +63,9 @@ class Lesson < ApplicationRecord
   )
 
   # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
-  # only accounts for other lessons that have the same has_lesson_plan setting, so if we have two lessons with lesson plans followed
-  # by a lesson without a lesson plan, the third lesson will have an absolute_position of 3 but a relative_position of 1
+  # numbers the lessons in order in two groups 1. lessons that are lockable and don't have lesson plans (aka surveys)
+  # 2. lessons that are not lockable so if we have two lessons without lesson plans that are lockable followed by a
+  # lesson that is not lockable, the third lesson will have an absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
   validates_uniqueness_of :key, scope: :script_id
@@ -94,7 +95,7 @@ class Lesson < ApplicationRecord
         lockable: !!raw_lesson[:lockable],
         has_lesson_plan: !!raw_lesson[:has_lesson_plan],
         visible_after: raw_lesson[:visible_after],
-        relative_position: !!raw_lesson[:has_lesson_plan] ? (counters.lesson_plan_count += 1) : (counters.non_lesson_plan_count += 1)
+        relative_position: !!raw_lesson[:has_lesson_plan] || !raw_lesson[:lockable] ? (counters.lesson_count += 1) : (counters.survey_count += 1)
       )
       lesson.save! if lesson.changed?
 

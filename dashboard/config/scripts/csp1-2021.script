@@ -3,6 +3,7 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["curriculum", "/link/to/curriculum"]]
 has_verified_resources true
+has_lesson_plan true
 version_year '2021'
 curriculum_umbrella 'CSP'
 is_migrated true

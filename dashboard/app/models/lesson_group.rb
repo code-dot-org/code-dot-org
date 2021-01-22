@@ -40,7 +40,7 @@ class LessonGroup < ApplicationRecord
     big_questions
   )
 
-  Counters = Struct.new(:lesson_plan_count, :non_lesson_plan_count, :lesson_position, :chapter)
+  Counters = Struct.new(:lesson_count, :survey_count, :lesson_position, :chapter)
 
   # Finds or creates Lesson Groups with the correct position.
   # In addition it check for 3 things:
