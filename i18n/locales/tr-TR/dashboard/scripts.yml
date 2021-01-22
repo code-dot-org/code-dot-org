@@ -17472,3 +17472,7 @@ tr:
             cspSurvey:
               display_name: Anket
           student_description: 5. ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların bu sürece nasıl yardımcı olabileceğini vurgulamaktadır. Birinci kısım bir bilgisayarda bilgiyi temsil etmek için kullanılan farklı sistemleri ve bunları kullanmanın getirdiği zorlukları, artılarını ve eksilerini araştırır. İkinci kısımda problem çözmek için kullanılan verilerin nasıl toplandığını ve bilgisayarların bu işlemin adımlarını otamatikleştirmede nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
+        contagion-pilot:
+          description_short: 'Bir virüs salgınının simülasyonunu programlamak için Sprite Lab''ı kullanın.'
+          description: 'Bir virüs salgınının simülasyonunu programlamak için Sprite Lab''ı kullanın.'
+          student_description: 'Bir virüs salgınının simülasyonunu programlamak için Sprite Lab''ı kullanın.'

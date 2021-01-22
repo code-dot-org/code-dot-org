@@ -2180,15 +2180,15 @@ tr-TR:
         - text: Bir tahminde bulunun! Uydu galaksiye hangi yöne doğru hareket edecek?
       courseC_multi_artist_prog6_predict1:
         answers:
-        - text: Sanatçı, üç eşit kenara sahip bir üçgen çizecek.
-          feedback: Yanlış. Sanatçı bir kare çiziyor.
-        - text: Sanatçı tek bir çizgi çizecek.
-          feedback: Yanlış. Sanatçı bir kare çiziyor.
-        - text: Sanatçı bir kare çiziyor.
+        - text: Artist, üç eşit kenara sahip bir üçgen çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - text: Artist tek bir çizgi çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - text: Artist bir kare çiziyor.
           correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
-          feedback: Sanatçı bir kare çiziyor.
+          feedback: Artist bir kare çiziyor.
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
       courseC_multi_artist_prog6_predict1_2018:
@@ -2367,6 +2367,7 @@ tr-TR:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: Kuş, domuza bir adım kala duracak.
+          correct: true
           feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
         - text: Kuş, domuza ulaşmayı başaracak.
           correct: true
