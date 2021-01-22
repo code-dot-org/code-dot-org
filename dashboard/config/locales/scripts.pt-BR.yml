@@ -25894,3 +25894,10 @@ pt:
             a automatizar as etapas desse processo. O capítulo conclui considerando
             como o processo de solução de problemas de dados pode ser aplicado a uma
             área de sua escolha.
+        contagion-pilot:
+          description_short: 'Use o Sprite Lab para programar uma simulação de epidemia
+            de vírus. '
+          description: 'Use o Sprite Lab para programar uma simulação de epidemia
+            de vírus. '
+          student_description: 'Use o Sprite Lab para programar uma simulação de epidemia
+            de vírus. '

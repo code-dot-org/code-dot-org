@@ -16843,3 +16843,7 @@ pt:
             cspSurvey:
               display_name: Questionário
           student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
+        contagion-pilot:
+          description_short: 'Use o Sprite Lab para programar uma simulação de epidemia de vírus. '
+          description: 'Use o Sprite Lab para programar uma simulação de epidemia de vírus. '
+          student_description: 'Use o Sprite Lab para programar uma simulação de epidemia de vírus. '
