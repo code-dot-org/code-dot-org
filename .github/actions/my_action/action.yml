@@ -10,4 +10,4 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'node12'
-  main: './.github/actions/my_action/index.js'
+  main: 'index.js'
