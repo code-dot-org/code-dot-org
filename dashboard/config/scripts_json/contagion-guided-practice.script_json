@@ -3,15 +3,15 @@
     "name": "contagion-guided-practice",
     "wrapup_video_id": null,
     "hidden": false,
-    "login_required": true,
+    "login_required": false,
     "properties": {
-      "peer_reviews_to_complete": 0,
       "teacher_resources": [
         [
           "lessonPlans",
           "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"
         ]
-      ]
+      ],
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -62,7 +62,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "How Things Spread",
+        "progression": "Lesson 2: Bridging Activity",
         "level_keys": [
           "contagion_teachers"
         ]
@@ -80,6 +80,31 @@
       "level_keys": [
         "contagion_teachers"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson 4: Collecting Data",
+        "level_keys": [
+          "contagion_teachers2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_teachers2"
+        ],
+        "lesson.key": "how things spread gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      },
+      "level_keys": [
+        "contagion_teachers2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -88,6 +113,17 @@
         "level.key": "contagion_teachers",
         "script_level.level_keys": [
           "contagion_teachers"
+        ],
+        "lesson.key": "how things spread gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_teachers2",
+        "script_level.level_keys": [
+          "contagion_teachers2"
         ],
         "lesson.key": "how things spread gp",
         "lesson_group.key": "lesson group",
