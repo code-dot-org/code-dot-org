@@ -130,12 +130,10 @@ class LessonOverview extends Component {
           />
         )}
         <h1>
-          {lesson.hasLessonPlan
-            ? lesson.displayName
-            : i18n.lessonNumbered({
-                lessonNumber: lesson.position,
-                lessonName: lesson.displayName
-              })}
+          {i18n.lessonNumbered({
+            lessonNumber: lesson.position,
+            lessonName: lesson.displayName
+          })}
         </h1>
 
         <div style={styles.frontPage}>

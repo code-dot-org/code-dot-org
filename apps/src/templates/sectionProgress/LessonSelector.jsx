@@ -39,7 +39,9 @@ class LessonSelector extends Component {
         >
           {lessons.map(lesson => (
             <option value={lesson.position} key={lesson.id}>
-              {lesson.hasLessonPlan ? `${lesson.relative_position}:` : '--'}{' '}
+              {!lesson.lockable || lesson.hasLessonPlan
+                ? `${lesson.relative_position}:`
+                : '--'}{' '}
               {lesson.name}
             </option>
           ))}
