@@ -14,7 +14,7 @@ import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels
 } from "./redux";
-import { ColumnTypes, MLTypes } from "./constants.js";
+import { ColumnTypes, MLTypes, TestDataLocations } from "./constants.js";
 
 export const availableTrainers = {
   binarySvm: {
@@ -179,21 +179,32 @@ const prepareTrainingData = () => {
   const trainingLabels = updatedState.data
     .map(row => extractLabel(updatedState, row))
     .filter(label => label !== undefined && label !== "" && !isNaN(label));
-  // Randomly select 10% of examples and corresponding labels from the training // set to reserve for a post-training accuracy calculation. The accuracy check
-  // examples and labels are excluded from the training set when the model is
-  // trained and saved to state separately to test the model's accuracy.
-  const accuracyCheckExamples = [];
-  const accuracyCheckLabels = [];
+  /*
+  Randomly select 10% (default) of examples and corresponding labels from the training set to reserve for a post-training accuracy calculation. The accuracy check examples and labels are excluded from the training set when the model is trained and saved to state separately to test the model's accuracy.
+  */
   const percent = updatedState.percentDataToReserve / 100;
   const numToReserve = parseInt(trainingExamples.length * percent);
-  let numReserved = 0;
-  while (numReserved < numToReserve) {
-    let randomIndex = getRandomInt(trainingExamples.length - 1);
-    accuracyCheckExamples.push(trainingExamples[randomIndex]);
-    trainingExamples.splice(randomIndex, 1);
-    accuracyCheckLabels.push(trainingLabels[randomIndex]);
-    trainingLabels.splice(randomIndex, 1);
-    numReserved++;
+  let accuracyCheckExamples = [];
+  let accuracyCheckLabels = [];
+  if (updatedState.reserveLocation === TestDataLocations.BEGINNING) {
+    accuracyCheckExamples = trainingExamples.slice(numToReserve);
+    accuracyCheckLabels = trainingLabels.slice(numToReserve);
+  }
+  if (updatedState.reserveLocation === TestDataLocations.END) {
+    const index = -1 * numToReserve;
+    accuracyCheckExamples = trainingExamples.slice(index);
+    accuracyCheckLabels = trainingLabels.slice(index);
+  }
+  if (updatedState.reserveLocation === TestDataLocations.RANDOM) {
+    let numReserved = 0;
+    while (numReserved < numToReserve) {
+      let randomIndex = getRandomInt(trainingExamples.length - 1);
+      accuracyCheckExamples.push(trainingExamples[randomIndex]);
+      trainingExamples.splice(randomIndex, 1);
+      accuracyCheckLabels.push(trainingLabels[randomIndex]);
+      trainingLabels.splice(randomIndex, 1);
+      numReserved++;
+    }
   }
   store.dispatch(setTrainingExamples(trainingExamples));
   store.dispatch(setTrainingLabels(trainingLabels));

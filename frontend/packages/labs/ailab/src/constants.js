@@ -9,7 +9,13 @@ export const MLTypes = {
   REGRESSION: "regression"
 };
 
-export const TRAINING_DATA_PERCENTS = [0, 5, 10, 15, 20];
+export const TEST_DATA_PERCENTS = [0, 5, 10, 15, 20];
+
+export const TestDataLocations = {
+  BEGINNING: "beginnning",
+  END: "end",
+  RANDOM: "random"
+};
 
 export const styles = {
   app: {
@@ -120,11 +126,11 @@ export const styles = {
   },
   dataDisplayHeaderLabelSelected: {
     backgroundColor: "rgba(186, 168, 70)",
-    color: "yellow",
+    color: "yellow"
   },
   dataDisplayHeaderFeatureSelected: {
     backgroundColor: "rgb(70, 186, 168)",
-    color: "yellow",
+    color: "yellow"
   },
   dataDisplayHeaderSelected: {
     color: "yellow",
@@ -149,24 +155,23 @@ export const styles = {
   },
   dataDisplayCellLabelSelected: {
     backgroundColor: "rgba(186, 168, 70, 0.4)",
-    color: "yellow",
+    color: "yellow"
   },
   dataDisplayCellFeatureSelected: {
     backgroundColor: "rgb(70, 186, 168)",
-    color: "yellow",
+    color: "yellow"
   },
   dataDisplayCellSelected: {
     color: "yellow",
     backgroundColor: "grey"
   },
   dataDisplayCellLabelUnselected: {
-    backgroundColor: "rgba(186, 168, 70, 0.4)",
+    backgroundColor: "rgba(186, 168, 70, 0.4)"
   },
   dataDisplayCellFeatureUnselected: {
-    backgroundColor: "rgb(70, 186, 168)",
+    backgroundColor: "rgb(70, 186, 168)"
   },
-  dataDisplayCellUnselected: {
-  },
+  dataDisplayCellUnselected: {},
 
   tabContainer: {
     overflow: "hidden",
@@ -277,5 +282,4 @@ export const styles = {
   selectFeaturesText: {
     color: "rgb(70, 186, 168)"
   }
-
 };
