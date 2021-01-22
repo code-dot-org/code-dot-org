@@ -20449,7 +20449,7 @@ en:
             Course F Introduction:
               name: Introducing Sprite Lab
             lesson-1:
-              name: Blank Space Variables
+              name: Blank Space Variables - coming soon!
             lesson-2:
               name: Storing and Retrieving Text
             lesson-3:
@@ -20463,7 +20463,11 @@ en:
             Making Sprites:
               name: Making Sprites
             Sprites in Action:
-              name: Sprites in Action
+              name: Sprites in Action - coming soon!
+            variables-in-spritelab:
+              name: Storing and Retrieving Text - coming soon!
+            chatbot:
+              name: Create a Chat-Bot - coming soon!
           lesson_groups:
             ramp_up:
               display_name: Introduction
@@ -20720,3 +20724,28 @@ en:
         testtess:
           lessons: {}
           lesson_groups: {}
+        contagion-pilot:
+          lessons:
+            new lesson:
+              name: lesson display name
+            how things spread:
+              name: How Things Spread
+            contagion simulator setup:
+              name: Contagion Simulator Setup
+            sometimes but not always:
+              name: Sometimes, but Not Always
+            modifying your model:
+              name: Modifying Your model
+            telling a data story:
+              name: Telling a Data Story
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+            contagion:
+              display_name: Contagion
+          name: contagion-pilot
+          title: 'Contagion Simulator '
+          description_audience: Grade 5
+          description_short: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+          description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+          student_description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '

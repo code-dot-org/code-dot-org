@@ -1665,7 +1665,7 @@ StudioApp.prototype.displayFeedback = function(options) {
     );
   }
 
-  if (experiments.isEnabled('bubbleDialog')) {
+  if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
     // Track whether this experiment is in use. If not, delete this and similar
     // sections of code. If it is, create a non-experiment flag.
     trackEvent(
@@ -2068,7 +2068,12 @@ StudioApp.prototype.setConfigValues_ = function(config) {
 
   this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
-  getStore().dispatch(setBlockLimit(this.IDEAL_BLOCK_NUM));
+  if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
+    // This seems to break levels that start in the animation/costume tab.
+    // If this feature comes out from behind the experiment, make sure not to
+    // regress those levels.
+    getStore().dispatch(setBlockLimit(this.IDEAL_BLOCK_NUM));
+  }
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
