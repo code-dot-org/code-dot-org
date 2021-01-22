@@ -18,9 +18,8 @@ Feature: Using the Lesson Edit Page
 
     And I click "button[type='submit']" to load a new page
 
-    # For now it loads to the lesson plan page. This will be updated
-    And I wait until element "#show-container" is visible
-    And element "h2" contains text "Agenda"
+    # Navigates to script overview page
+    And I wait until element "#script-title" is visible
 
     And I delete the temp script and lesson
 
