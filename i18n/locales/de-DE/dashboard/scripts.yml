@@ -19269,3 +19269,8 @@ de:
             cspSurvey:
               display_name: Umfrage
           student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        contagion-pilot:
+          description_audience: 5. Klasse
+          description_short: 'Programmiere mit Sprite Lab die Simulation eines Virenausbruchs. '
+          description: 'Programmiere mit Sprite Lab die Simulation eines Virenausbruchs. '
+          student_description: 'Programmiere mit Sprite Lab die Simulation eines Virenausbruchs. '
