@@ -32,15 +32,15 @@ describe('ActivitySectionCardButtons', () => {
       appendResourceLink,
       appendVocabularyLink,
       appendSlide,
-      hasLessonPlan: true
+      hasLessonPlan: true,
+      vocabularies: []
     };
   });
 
   it('renders default props', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(5);
+    expect(wrapper.find('button').length).to.equal(4);
     expect(wrapper.find('Connect(FindResourceDialog)').length).to.equal(1);
-    expect(wrapper.find('Connect(FindVocabularyDialog)').length).to.equal(1);
     expect(wrapper.find('AddLevelDialog').length).to.equal(1);
     expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(2);
     // Don't render this component until add tip button or tip icon are clicked
@@ -89,16 +89,23 @@ describe('ActivitySectionCardButtons', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
 
     const button = wrapper.find('button').at(2);
-    expect(button.text()).to.include('Resource Link');
+    expect(button.text()).to.include('Resource');
     button.simulate('mouseDown');
     expect(wrapper.state().addResourceOpen).to.equal(true);
   });
 
   it('add vocabulary link pressed', () => {
-    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+    const wrapper = shallow(
+      <ActivitySectionCardButtons
+        {...defaultProps}
+        vocabularies={[
+          {id: 1, key: 'word1', word: 'word1', definition: 'definition1'}
+        ]}
+      />
+    );
 
     const button = wrapper.find('button').at(3);
-    expect(button.text()).to.include('Vocabulary Link');
+    expect(button.text()).to.include('Vocab');
     button.simulate('mouseDown');
     expect(wrapper.state().addVocabularyOpen).to.equal(true);
   });
@@ -106,7 +113,7 @@ describe('ActivitySectionCardButtons', () => {
   it('add slide pressed', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
 
-    const button = wrapper.find('button').at(4);
+    const button = wrapper.find('button').at(3);
     expect(button.text()).to.include('Slide');
     button.simulate('mouseDown');
     expect(appendSlide).to.have.been.calledOnce;

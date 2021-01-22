@@ -5,7 +5,10 @@ import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/L
 import FindResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
 import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
-import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {
+  activitySectionShape,
+  vocabularyShape
+} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
 import {
   addTip,
@@ -39,7 +42,8 @@ class ActivitySectionCardButtons extends Component {
     appendResourceLink: PropTypes.func.isRequired,
     appendVocabularyLink: PropTypes.func.isRequired,
     appendSlide: PropTypes.func.isRequired,
-    hasLessonPlan: PropTypes.bool.isRequired
+    hasLessonPlan: PropTypes.bool.isRequired,
+    vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired
   };
 
   constructor(props) {
@@ -176,17 +180,19 @@ class ActivitySectionCardButtons extends Component {
                   type="button"
                 >
                   <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                  Resource Link
+                  Resource
                 </button>
-                <button
-                  onMouseDown={this.handleOpenAddVocabulary}
-                  className="btn"
-                  style={styles.addButton}
-                  type="button"
-                >
-                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                  Vocabulary Link
-                </button>
+                {this.props.vocabularies.length > 0 && (
+                  <button
+                    onMouseDown={this.handleOpenAddVocabulary}
+                    className="btn"
+                    style={styles.addButton}
+                    type="button"
+                  >
+                    <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                    Vocab
+                  </button>
+                )}
 
                 <button
                   onMouseDown={this.handleAddSlide}
@@ -224,6 +230,7 @@ class ActivitySectionCardButtons extends Component {
               isOpen={this.state.addVocabularyOpen}
               handleConfirm={this.handleCloseAddVocabulary}
               handleClose={() => this.setState({addVocabularyOpen: false})}
+              vocabularies={this.props.vocabularies}
             />
             {/* Prevent dialog from trying to render when there is no tip to edit*/}
             {this.state.tipToEdit && (
@@ -251,7 +258,9 @@ class ActivitySectionCardButtons extends Component {
 export const UnconnectedActivitySectionCardButtons = ActivitySectionCardButtons;
 
 export default connect(
-  state => ({}),
+  state => ({
+    vocabularies: state.vocabularies
+  }),
   {
     addTip,
     updateTip,

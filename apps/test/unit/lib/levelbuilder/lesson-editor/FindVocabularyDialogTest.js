@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedFindVocabularyDialog as FindVocabularyDialog} from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
+import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
 import sinon from 'sinon';
 
 describe('FindVocabularyDialog', () => {
