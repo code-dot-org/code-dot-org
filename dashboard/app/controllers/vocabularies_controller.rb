@@ -18,15 +18,15 @@ class VocabulariesController < ApplicationController
       definition: vocabulary_params[:definition]
     )
     vocabulary.course_version = course_version
-    if vocabulary.save
+    begin
+      vocabulary.save
       render json: vocabulary.summarize_for_lesson_edit
-    else
-      render status: 400, json: {error: vocabulary.errors.full_message.to_json}
+    rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => e
+      render status: 400, json: {error: e.message.to_json}
     end
   end
 
   def update
-    puts vocabulary_params
     vocabulary = Vocabulary.find_by_id(vocabulary_params[:id])
     if vocabulary && vocabulary.update!(vocabulary_params)
       render json: vocabulary.summarize_for_lesson_edit

@@ -49,7 +49,7 @@ class Vocabulary < ApplicationRecord
 
   def generate_key
     return if key
-    self.key = generate_key_from_word
+    self.key = word
   end
 
   private
@@ -60,19 +60,5 @@ class Vocabulary < ApplicationRecord
 
   def display_definition
     definition
-  end
-
-  def generate_key_from_word
-    key_prefix = word.strip.downcase.gsub(/[^a-z0-9\-\_\.]+/, '_')
-    potential_clashes = Vocabulary.where(course_version_id: course_version_id)
-    potential_clashes = potential_clashes.where("vocabularies.key like '#{key_prefix}%'").pluck(:key)
-    return key_prefix unless potential_clashes.include?(key_prefix)
-    key_suffix_num = 1
-    new_key = "#{key_prefix}_#{key_suffix_num}"
-    while potential_clashes.include?(new_key)
-      key_suffix_num += 1
-      new_key = "#{key_prefix}_#{key_suffix_num}"
-    end
-    new_key
   end
 end
