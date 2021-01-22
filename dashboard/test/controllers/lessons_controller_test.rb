@@ -18,6 +18,7 @@ class LessonsControllerTest < ActionController::TestCase
       name: 'lesson display name',
       absolute_position: 1,
       relative_position: 1,
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -75,6 +76,7 @@ class LessonsControllerTest < ActionController::TestCase
     @solo_lesson_in_script = create(
       :lesson,
       name: 'lesson display name',
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
