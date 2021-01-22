@@ -20488,3 +20488,10 @@ fil:
             sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos
             sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema
             sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
+        contagion-pilot:
+          description_short: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon
+            mula sa isang lumitaw na virus. '
+          description: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon
+            mula sa isang lumitaw na virus. '
+          student_description: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon
+            mula sa isang lumitaw na virus. '

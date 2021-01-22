@@ -11738,3 +11738,7 @@ fil:
             cspSurvey:
               display_name: Pagsisiyasat
           student_description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
+        contagion-pilot:
+          description_short: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon mula sa isang lumitaw na virus. '
+          description: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon mula sa isang lumitaw na virus. '
+          student_description: 'Gumamit ng Sprite Lab upang iprograma ang isang simulasyon mula sa isang lumitaw na virus. '
