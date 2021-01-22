@@ -134,7 +134,7 @@
           "2-3_Bee_Functions_6_a": "អ្នកមិនចាំបាច់ប្រើប្រាស់ការធ្វើច្រើនដងជាមួយអនុគមន៍នោះទេ ។ ព្យាយាមរផ្លសា់ទី ប្រើអនុគមន៍ រួចហើយផ្លាស់ទីនិងប្រើប្រាស់អនុគមន៍ម្តងទៀត ។"
         },
         "2-3 Bee Functions 8": {
-          "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n \\!\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
+          "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n !\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
         },
         "2-3 Bee Functions 9": {
           "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន ។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត ។ មិនយូទេអ្នកនឹងបានជោគជ័យ !",
@@ -422,10 +422,14 @@
           "courseB_maze_seq8_c": "មិនដឹងទៅផ្លូវណាមែនទេ? សាកល្បងផ្លូវនេះ!"
         },
         "courseB_maze_seq8_2019": {
-          "courseB_maze_seq8_b": "មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។"
+          "courseB_maze_seq8_b": "មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។",
+          "courseB_maze_seq8_a": "ព្យាយាមបន្ថែមប្លុកម្តងមួយ រហូតដល់អ្នកដោះស្រាយបញ្ហាហើយ។",
+          "courseB_maze_seq8_c": "មិនដឹងទៅផ្លូវណាមែនទេ? សាកល្បងផ្លូវនេះ!"
         },
         "courseB_maze_seq8_2020": {
-          "courseB_maze_seq8_b": "មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។"
+          "courseB_maze_seq8_b": "មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។",
+          "courseB_maze_seq8_a": "ព្យាយាមបន្ថែមប្លុកម្តងមួយ រហូតដល់អ្នកដោះស្រាយបញ្ហាហើយ។",
+          "courseB_maze_seq8_c": "មិនដឹងទៅផ្លូវណាមែនទេ? សាកល្បងផ្លូវនេះ!"
         },
         "courseC_maze_programming6": {
           "courseC_maze_programming6_a": "មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយបញ្ហានេះ!",
@@ -519,7 +523,7 @@
           "courseD_artist_functions2_c": "ប្រើប្លុក`draw a square`ពណ៌បៃតង ដើម្បី \"ហៅ\" អនុគមន៍របស់អ្នក ក្រោមប្លុក `when run` ។ បើមិនដូច្នោះទេកូដនឹងមិនដំណើរការទេ។\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>"
         },
         "courseE_bee_functions6": {
-          "courseE_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n \\!\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)",
+          "courseE_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n !\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)",
           "courseE_bee_functions6_b": "ប្លុក`ផ្លាស់ទី`ក្នុងករណីនេះអាចជួយរំកិលខាងក្នុងអនុគមន៍, ប៉ុន្តែអ្នកមិនត្រូវការវានៅទីនោះទាំងអស់ទេ។"
         },
         "courseE_bee_functions7": {
@@ -533,7 +537,7 @@
           "courseE_bee_functions_challenge1_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន ។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត ។ មិនយូទេអ្នកនឹងបានជោគជ័យ !"
         },
         "courseF_bee_functions6": {
-          "courseF_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n \\!\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
+          "courseF_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n !\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
         },
         "courseF_bee_functions8a": {
           "courseF_bee_functions8a_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន ។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត ។ មិនយូទេអ្នកនឹងបានជោគជ័យ !"
@@ -587,13 +591,13 @@
         },
         "courseB_collector_loops_challenge2a_2019": {
           "courseB_collector_loops_challenge2a_a": "ប្រសិនបើមានអ្វីខុស ព្យាយាមកែលម្អវាទៅ។ កុំបោះបង់!",
-          "courseB_collector_loops_challenge2a_b": "ក្រឡេកមើលទៅជម្រើសដើម្បីអាចចូលទៅផ្នែកនៃហ្គេម។​ តើអ្នកអាចមើលឃើញពីគម្រូដែលអ្នកនឹងអាចលេងម្តងទៀតទេ?",
-          "courseB_collector_loops_challenge2a_c": "ដើម្បីទាញយកកំណប់ទាំងនេះ​​ អ្នកអាចដាក់បន្ថែមរបងពីរខាងក្នុងរង្វង់ដែនសីមាឬក៏ដាក់របងខាងក្នុងនៃរបងដែលបានដាក់រួច។​"
+          "courseB_collector_loops_challenge2a_b": "សូមមើលជម្រើសមួយនេះ ដើម្បីអាចចូលទៅកាន់ផ្នែកនៃហ្គេម។​ តើអ្នកអាចមើលឃើញពីគម្រូដែលអ្នកនឹងអាចលេងម្តងទៀតទេ?",
+          "courseB_collector_loops_challenge2a_c": "ដើម្បីទាញយកកំណប់ទាំងអស់​ អ្នកនឹងត្រូវដាក់បន្ថែម <xml> <block type=\"collector_collect\"/></xml>  ចំនួនពីរនៅក្នុងloopរបស់អ្នក ឬក៏ដាក់ប្លុកនៅខាងក្នុង `repeat` ប្លុក តែម្តង។​"
         },
         "courseB_collector_loops_challenge2a_2020": {
           "courseB_collector_loops_challenge2a_a": "ប្រសិនបើមានអ្វីខុស ព្យាយាមកែលម្អវាទៅ។ កុំបោះបង់!",
-          "courseB_collector_loops_challenge2a_b": "ក្រឡេកមើលទៅជម្រើសដើម្បីអាចចូលទៅផ្នែកនៃហ្គេម។​ តើអ្នកអាចមើលឃើញពីគម្រូដែលអ្នកនឹងអាចលេងម្តងទៀតទេ?",
-          "courseB_collector_loops_challenge2a_c": "ដើម្បីទាញយកកំណប់ទាំងនេះ​​ អ្នកអាចដាក់បន្ថែមរបងពីរខាងក្នុងរង្វង់ដែនសីមាឬក៏ដាក់របងខាងក្នុងនៃរបងដែលបានដាក់រួច។​"
+          "courseB_collector_loops_challenge2a_b": "សូមមើលជម្រើសមួយនេះ ដើម្បីអាចចូលទៅកាន់ផ្នែកនៃហ្គេម។​ តើអ្នកអាចមើលឃើញពីគម្រូដែលអ្នកនឹងអាចលេងម្តងទៀតទេ?",
+          "courseB_collector_loops_challenge2a_c": "ដើម្បីទាញយកកំណប់ទាំងអស់​ អ្នកនឹងត្រូវដាក់បន្ថែម <xml> <block type=\"collector_collect\"/></xml>  ចំនួនពីរនៅក្នុងloopរបស់អ្នក ឬក៏ដាក់ប្លុកនៅខាងក្នុង `repeat` ប្លុក តែម្តង។​"
         },
         "courseC_maze_programming1": {
           "courseC_maze_programming1_0": "ដើម្បីឲ្យប្រាកដថារបងទាំងអស់ត្រូវបានបំបែកជាមួួយគ្នា បន្តមកចុចពាក្យ \"រត់\" ម្តងទៀត។​"
@@ -818,10 +822,10 @@
           "courseB_maze_seq6_b": "ប្រសិនបើអ្នកជាប់គាំង ព្យាយាមដោះស្រាយបញ្ហាជាពីរផ្នែក មួយនៅចំហៀង និង មួយទៀតពីលើចុះក្រោម។"
         },
         "courseB_maze_seq6_2019": {
-          "courseB_maze_seq6_b": "ប្រសិនបើអ្នកជាប់គាំង ព្យាយាមដោះស្រាយ puzzle ជាពីរផ្នែក ម្ខាងចំហៀងនិង ម្ខាងចុះឡើង។"
+          "courseB_maze_seq6_b": "ប្រសិនបើអ្នកជាប់គាំង ព្យាយាមដោះស្រាយបញ្ហាជាពីរផ្នែក មួយនៅចំហៀង និង មួយទៀតពីលើចុះក្រោម។"
         },
         "courseB_maze_seq6_2020": {
-          "courseB_maze_seq6_b": "ប្រសិនបើអ្នកជាប់គាំង ព្យាយាមដោះស្រាយ puzzle ជាពីរផ្នែក ម្ខាងចំហៀងនិង ម្ខាងចុះឡើង។"
+          "courseB_maze_seq6_b": "ប្រសិនបើអ្នកជាប់គាំង ព្យាយាមដោះស្រាយបញ្ហាជាពីរផ្នែក មួយនៅចំហៀង និង មួយទៀតពីលើចុះក្រោម។"
         },
         "course3_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "ហេតុអ្វីបានជាពាក់កណ្តាលដំបូងនៃកម្មវិធីនេះដំណើរការ? គិតអំពីមូលហេតុដែលសត្វឃ្មុំត្រូវការដើរថយក្រោយ។ តើឃ្មុំប្រមូលទឹកដមផ្កាបានប៉ុន្មាន រាល់ពេលដែលវាផ្លាស់ទីលើផ្កាមួយ?",
@@ -829,7 +833,7 @@
           "courseD_bee_debugging_challenge1_c": "បន្ទាប់ពីឃ្មុំធ្វើឱ្យវាស្ថិតនៅជួរខាងក្រោម សូមឱ្យវាធ្វើម្តងទៀតនូវពាក្យបញ្ជាទាំងនេះ:\n\n-   ធ្វើឡើងវិញ ២ ដង:\n    -   ទៅមុខ\n    -   ធ្វើទឹកឃ្មុំ ៣\n-   រំកិលថយក្រោយ"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "ចុងបញ្ចប់ ប្រមូលកំណប់ដែលនៅសល់។ បន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "នេះគឺជាដំណោះស្រាយពេញលេញសម្រាប់បញ្ហានេះ។\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1335,8 +1339,8 @@
           "courseD_bee_nestedLoops7_c": "សំបុកប្លុកបីជ្រៅដូចនេះ៖\n\n-   ធ្វើម្តងទៀត ៤\n    -   ធ្វើម្តងទៀត ៣\n        -   ធ្វើម្តងទៀត 12\n            -   ទទួលទឹកដម\n        -   ទៅមុខ\n    -   បត់​ស្តាំ"
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "ចាប់ផ្តើមដោយការប្រមូលត្បូង **ពីរ** ពីគំនរ​​ **ពីរ**​ មុនគេ​នៃគំនរនីមួយៗ។\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nប្រើប្លុកទាំងនេះ។\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "ចាប់ផ្តើមដោយការប្រមូលត្បូង **ពីរ** ពីគំនរ​​ **ពីរ**​ មុនគេ​នៃគំនរនីមួយៗ។\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nប្រើប្លុកទាំងនេះ។\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "ចុងបញ្ចប់ ប្រមូលកំណប់ដែលនៅសល់។ បន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "នេះគឺជាដំណោះស្រាយពេញលេញសម្រាប់បញ្ហានេះ។\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -2002,10 +2006,12 @@
         },
         "courseB_maze_seq7": {
           "courseB_maze_seq7_b": "ព្យាយាមដំណើរការកូដ ដែលបានផ្តល់ឲ្យ ហើយពិនិត្យមើលកន្លែងដែលអ្នកទៅ​ដល់ចុងក្រោយ។",
-          "courseB_maze_seq7_c": "មិនអាចទៅ​ដល់តួអង្គជ្រូកបានមែនទេ? សាកល្បងផ្លូវនេះ!  "
+          "courseB_maze_seq7_c": "មិនអាចទៅ​ដល់តួអង្គជ្រូកបានមែនទេ? សាកល្បងផ្លូវនេះ!  ",
+          "courseB_maze_seq7_a": "បន្ថែម១ប្លុកដើម្បីនាំបក្សីទៅកាន់តួអង្គជ្រូក។"
         },
         "courseB_maze_seq9": {
-          "courseB_maze_seq9_a": "ព្យាយាមសរសេរ រាល់ជំហាននៅលើសន្លឹកក្រដាសមួយជាមុនសិន។"
+          "courseB_maze_seq9_a": "ព្យាយាមសរសេរ រាល់ជំហាននៅលើសន្លឹកក្រដាសមួយជាមុនសិន។",
+          "courseB_maze_seq9_d": "ទាល់? សាកល្បងផ្លូវនេះវិញ!"
         },
         "courseC_collector_prog2": {
           "courseC_collector_prog2_b": "កុំមានភាពភ័យខ្លាចក្នុងការធ្វើខុស! ព្យាយាមបន្ថែមប្លុក និងដំណើរការកូដ ដើម្បីមើលថាមានអ្វីកើតឡើង បើទោះបីជាអ្នកមិនទាន់គិតថាអ្នកបានដោះស្រាយបញ្ហានេះក៏ដោយ។"
@@ -2165,21 +2171,21 @@
           "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
           "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
           "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
-          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n -ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
           "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
         },
         "courseE_artist_functions9_2019": {
           "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
           "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
           "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
-          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n -ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
           "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
         },
         "courseE_artist_functions9_2020": {
           "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
           "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
           "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
-          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n -ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
           "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
         },
         "courseD_farmer_while2": {
@@ -2246,7 +2252,7 @@
           "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
           "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
           "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
-          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n -ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
           "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
         },
         "courseE_bee_functions4": {
@@ -2378,7 +2384,8 @@
           "courseB_maze_seq7_b": "ព្យាយាមដំណើរការកូដ ដែលបានផ្តល់ឲ្យ ហើយពិនិត្យមើលកន្លែងដែលអ្នកទៅ​ដល់ចុងក្រោយ។"
         },
         "courseB_maze_seq9_2018": {
-          "courseB_maze_seq9_a": "ព្យាយាមសរសេរ រាល់ជំហាននៅលើសន្លឹកក្រដាសមួយជាមុនសិន។"
+          "courseB_maze_seq9_a": "ព្យាយាមសរសេរ រាល់ជំហាននៅលើសន្លឹកក្រដាសមួយជាមុនសិន។",
+          "courseB_maze_seq9_d": "ទាល់? សាកល្បងផ្លូវនេះវិញ!"
         },
         "courseB_starWars_prog8": {
           "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់កំណត់នៃប្រលោះដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
@@ -2597,6 +2604,83 @@
         "courseF_artist_variables6a_2020": {
           "courseF_artist_variables6a_a": "ចងចាំថាត្រូវប្រើអថេរ\"ប្រវែង\" ជាជាងការប្រើប្រាស់លេខពិតប្រាកដដើម្បីដោះស្រាយបញ្ហានេះ។",
           "courseF_artist_variables6a_b": "លេខកូដនេះនឹងស្រដៀងនឹងកូដត្រីកោណរបស់អ្នក គ្រាន់តែមានរាងផ្សេងគ្នាប៉ុណ្ណោះ!"
+        },
+        "course1_maze_debugging_challenge2": {
+          "courseB_maze_seq_challenge2_a": "អ្នកមិនចាំបាច់បន្ថែមឬបន្ថយប្លុកដើម្បដោះស្រាយបញ្ញានេះទេ។"
+        },
+        "course1_maze_seq_challenge2": {
+          "courseB_maze_seq_challenge1_a": "ពេលនេះផ្លូវដែលខ្លីជាងគេប្រហែលប្រើការមិនបានទេ។"
+        },
+        "courseB_collector_loops5_2019": {
+          "courseB_collector_loops5_a": "ប្រើរង្វិលជុំដដែលៗឲ្យលើសពីមួយដង ដើម្បីសម្រេចការងារ។",
+          "courseB_collector_loops5_b": "ព្យាយាមដំណើរការកូដពីរបីដង ដើម្បីមើលថាមានអ្វីកើតឡើង។"
+        },
+        "courseB_collector_loops5_2020": {
+          "courseB_collector_loops5_a": "ប្រើរង្វិលជុំដដែលៗឲ្យលើសពីមួយដង ដើម្បីសម្រេចការងារ។",
+          "courseB_collector_loops5_b": "ព្យាយាមដំណើរការកូដពីរបីដង ដើម្បីមើលថាមានអ្វីកើតឡើង។"
+        },
+        "courseB_maze_seq11": {
+          "courseB_maze_seq11_b": "ដោះស្រាយបញ្ហាជា២ផ្នែក: ដំបូងគឺមុនទៅដល់ជ្រុង ហើយមួយទៀតបន្ទាប់ពីពេលទៅដល់ជ្រុង"
+        },
+        "courseB_maze_seq4_2019": {
+          "courseB_maze_seq4_b": "អ្នកអាចនឹងត្រូវប្រើប្លុក <xml><block type=\"maze_moveEast\"/></xml> ដើម្បីដោះស្រាយបញ្ហានេះ។"
+        },
+        "courseB_maze_seq4_2020": {
+          "courseB_maze_seq4_b": "អ្នកអាចនឹងត្រូវប្រើប្លុក <xml><block type=\"maze_moveEast\"/></xml> ដើម្បីដោះស្រាយបញ្ហានេះ។"
+        },
+        "courseB_maze_seq7_2019": {
+          "courseB_maze_seq7_b": "ព្យាយាមដំណើរការកូដ ដែលបានផ្តល់ឲ្យ ហើយពិនិត្យមើលកន្លែងដែលអ្នកទៅ​ដល់ចុងក្រោយ។"
+        },
+        "courseB_maze_seq7_2020": {
+          "courseB_maze_seq7_b": "ព្យាយាមដំណើរការកូដ ដែលបានផ្តល់ឲ្យ ហើយពិនិត្យមើលកន្លែងដែលអ្នកទៅ​ដល់ចុងក្រោយ។"
+        },
+        "courseB_maze_seq9_2019": {
+          "courseB_maze_seq9_a": "ព្យាយាមសរសេរ រាល់ជំហាននៅលើសន្លឹកក្រដាសមួយជាមុនសិន។",
+          "courseB_maze_seq9_d": "ទាល់? សាកល្បងផ្លូវនេះវិញ!"
+        },
+        "courseB_maze_seq9_2020": {
+          "courseB_maze_seq9_a": "ព្យាយាមសរសេរ រាល់ជំហាននៅលើសន្លឹកក្រដាសមួយជាមុនសិន។",
+          "courseB_maze_seq9_d": "ទាល់? សាកល្បងផ្លូវនេះវិញ!"
+        },
+        "courseB_maze_seq_challenge1": {
+          "courseB_maze_seq_challenge1_a": "ពេលនេះផ្លូវដែលខ្លីជាងគេប្រហែលប្រើការមិនបានទេ។",
+          "courseB_maze_seq_challenge1_b": "ព្យាយាមប្រើប្រាស់ <xml><block type=\"maze_moveWest\"/></xml> ប្លុកដើម្បីចាប់ផ្ដើម។"
+        },
+        "courseB_maze_seq_challenge1_2018": {
+          "courseB_maze_seq_challenge1_a": "ពេលនេះផ្លូវដែលខ្លីជាងគេប្រហែលប្រើការមិនបានទេ។",
+          "courseB_maze_seq_challenge1_b": "ព្យាយាមប្រើប្រាស់ <xml><block type=\"maze_moveWest\"/></xml> ប្លុកដើម្បីចាប់ផ្ដើម។"
+        },
+        "courseB_maze_seq_challenge1_2019": {
+          "courseB_maze_seq_challenge1_a": "ពេលនេះផ្លូវដែលខ្លីជាងគេប្រហែលប្រើការមិនបានទេ។",
+          "courseB_maze_seq_challenge1_b": "ព្យាយាមប្រើប្រាស់ <xml><block type=\"maze_moveWest\"/></xml> ប្លុកដើម្បីចាប់ផ្ដើម។"
+        },
+        "courseB_maze_seq_challenge1_2020": {
+          "courseB_maze_seq_challenge1_a": "ពេលនេះផ្លូវដែលខ្លីជាងគេប្រហែលប្រើការមិនបានទេ។",
+          "courseB_maze_seq_challenge1_b": "ព្យាយាមប្រើប្រាស់ <xml><block type=\"maze_moveWest\"/></xml> ប្លុកដើម្បីចាប់ផ្ដើម។"
+        },
+        "courseB_maze_seq_challenge2": {
+          "courseB_maze_seq_challenge2_a": "អ្នកមិនចាំបាច់បន្ថែមឬបន្ថយប្លុកដើម្បដោះស្រាយបញ្ញានេះទេ។",
+          "courseB_maze_seq_challenge2_b": "រៀបចំប្លុកសារជាថ្មីហើយដើរតាមផ្លូវរាងជណ្ដើរ"
+        },
+        "courseB_maze_seq_challenge2_2018": {
+          "courseB_maze_seq_challenge2_a": "អ្នកមិនចាំបាច់បន្ថែមឬបន្ថយប្លុកដើម្បដោះស្រាយបញ្ញានេះទេ។",
+          "courseB_maze_seq_challenge2_b": "រៀបចំប្លុកសារជាថ្មីហើយដើរតាមផ្លូវរាងជណ្ដើរ"
+        },
+        "courseB_maze_seq_challenge2_2019": {
+          "courseB_maze_seq_challenge2_a": "អ្នកមិនចាំបាច់បន្ថែមឬបន្ថយប្លុកដើម្បដោះស្រាយបញ្ញានេះទេ។",
+          "courseB_maze_seq_challenge2_b": "រៀបចំប្លុកសារជាថ្មីហើយដើរតាមផ្លូវរាងជណ្ដើរ"
+        },
+        "courseB_maze_seq_challenge2_2020": {
+          "courseB_maze_seq_challenge2_a": "អ្នកមិនចាំបាច់បន្ថែមឬបន្ថយប្លុកដើម្បដោះស្រាយបញ្ញានេះទេ។",
+          "courseB_maze_seq_challenge2_b": "រៀបចំប្លុកសារជាថ្មីហើយដើរតាមផ្លូវរាងជណ្ដើរ"
+        },
+        "courseB_starWars_prog8_2019": {
+          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយរំលងកំណត់ប្រលោះដែលអ្នកបានឆ្លងកាត់រួចហើយ",
+          "courseB_starWars_prog8_b": "ព្យាយាមប្រើប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលដំណើរការលើកូដដែលអ្នកបានដាក់ចូល។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog8_2020": {
+          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយរំលងកំណត់ប្រលោះដែលអ្នកបានឆ្លងកាត់រួចហើយ",
+          "courseB_starWars_prog8_b": "ព្យាយាមប្រើប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលដំណើរការលើកូដដែលអ្នកបានដាក់ចូល។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         }
       }
     }
