@@ -3,7 +3,7 @@ class CreateFoormLibraries < ActiveRecord::Migration[5.2]
     create_table :foorm_libraries do |t|
       t.string :name, null: false
       t.integer :version, null: false
-      t.boolean :published, default: true, null: false
+      t.boolean :published, null: false
 
       t.timestamps
 
