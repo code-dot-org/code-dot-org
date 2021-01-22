@@ -5090,7 +5090,7 @@
       "key": "b2ad1d43-99f9-40fa-9f88-d8b42f8c723e",
       "position": 7,
       "properties": {
-        "description": "Using the rubric, students should assess their own project before submitting it.\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "Using the rubric, students should assess their own project before submitting it.\n\n&fa-desktop; Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflect\r"
       },
       "seeding_key": {
