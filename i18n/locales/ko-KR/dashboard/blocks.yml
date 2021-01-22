@@ -955,6 +955,8 @@ ko:
         text: 설정
       gamelab_addBehaviorSimple:
         text: 스프라이트 {SPRITE} 시작 {BEHAVIOR}
+      gamelab_addTarget:
+        text: "{SPRITE}가 목표물 {TARGET}을 얻습니다"
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -963,6 +965,8 @@ ko:
           UNIT:
             '"seconds"': "~초 기다리기"
             '"frames"': 프레임
+      gamelab_beginCollectingData:
+        text: 데이터 {BREAK} 값 {VALUE}을 라벨 {LABEL}로 수집하기 시작합니다
       gamelab_bounceOff:
         text: "{SPRITE}가 {TARGET}에서 벗어나 튕겨집니다"
       gamelab_changePropBy:
@@ -998,6 +1002,8 @@ ko:
         text: 드래그 가능
       gamelab_edgesDisplace:
         text: 모서리 이동에서 블록 {SPRITE}
+      gamelab_followingTargets:
+        text: 다음 목표물
       gamelab_getAllSprites:
         text: 모든 스프라이트
       gamelab_getProp:
@@ -1207,12 +1213,13 @@ ko:
       gamelab_setBackgroundImageAs:
         text: 배경을 {IMG}으로 설정
       gamelab_setDefaultSpriteSize:
+        text: 새 스프라이트 기본 크기를 {SIZE}에 설정합니다
         options:
           SIZE:
-            '25': extra small
-            '50': small
+            '25': 매우 작음
+            '50': 작음
             '75': 보통
-            '100': large
+            '100': 큰
       gamelab_setPrompt:
         text: 변수 {VAR}를 위한 사용자 {QUESTION} 유도
       gamelab_setPromptWithChoices:
@@ -1251,8 +1258,14 @@ ko:
           CONDITION:
             '"when"': "~할 때"
             '"while"': 동안
+      gamelab_stopCollectingData:
+        text: 데이터 수집 중지
       gamelab_subjectSpritePointer:
         text: 클릭 {SPRITE}
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: 텀블링
       gamelab_turn:
@@ -1280,8 +1293,12 @@ ko:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 왼쪽 화살표를 눌렀을 때
+      gamelab_whenPromptAnswered:
+        text: "{VAR}이란 답이 나올 때"
       gamelab_whenRightArrow:
         text: 오른쪽 화살표를 눌렀을 때
+      gamelab_whenSpriteCreated:
+        text: "{SPRITE}가 만들어질 때"
       gamelab_whenTouching:
         text: 때 {SPRITE1} 접촉 {SPRITE2}
       gamelab_whenUpArrow:
@@ -1418,7 +1435,7 @@ ko:
             '"y"': y 좌표
             '"direction"': 움직임 방향
       Mikelab_groupRemoveAllBehaviors:
-        text: 중지 {SELECT} {COSTUME} 동작
+        text: "{SELECT} {COSTUME} 동작 중지"
         options:
           SELECT:
             '"all"': 모두
@@ -1512,6 +1529,8 @@ ko:
           DANCE:
             MOVES.ClapHigh: 물고기
             MOVES.Clown: 내 라벨이 아님
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: '위치 x: {X} Y: {Y}'
       Mikelab_location_picker:

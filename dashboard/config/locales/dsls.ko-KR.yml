@@ -1492,6 +1492,22 @@ ko-KR:
         content1: 설명 입력
       New Challenge Introduction:
         content1: 설명 입력
+        markdown: "### 새 도전: 임의적 치환 암호를...새 위젯으로 풀기\n\n전체 영문자를 다른 글자로 바꾸는 대신 영문자의
+          각 글자를 다른 글자로 임의로 매핑하면 어떻게 될까요? 이것은 **임의적 치환 암호**라고 부릅니다.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\n이제,
+          비밀 메시지를 단순한 영문자 시프트로 암호화하는 대신, **임의적 치환**으로 암호화된 메시지를 보게 될 것입니다.  \n\n\n\nThis
+          is much harder to crack and requires a more sophisticated tool, so...\n\nWhen
+          you click continue, you'll see a **new, more sophisticated version of the
+          encryption tool** that shows you lots of different stuff.\n\nBut what it
+          does is a bit of a mystery!  \n\n### Your Task:\n\n * Figure out what is
+          going on in this new version of the tool\n * What information is being presented
+          to you?\n * Figure out what the tool lets you do\n * As usual: you can't
+          break it.  So click on things, poke around.\n * If you figure it out you
+          might be able to crack a message encoded with random substitution.\n \n###
+          Hint\n\n* Did you know that **E** is the most common letter used in English?\n\n###
+          Reconvene and Discuss\n After some time playing with it, you should get
+          together with someone - partner, small group, whole class - to discuss what
+          you found and verify that you know what's going on and the various ways
+          you can use the tool.\n\n\n"
       OPD-K5 Reviewing Reflections:
         content1: 설명 입력
         markdown: "# 개요: 성찰 검토\n\n축하합니다! 여러분은 기초 코딩 개념에 익숙해졌고 그러한 개념을 연습할 기회를 가졌습니다.
@@ -1932,8 +1948,32 @@ ko-KR:
           프로젝트를 발표할 시간입니다! 교사가 작품을 학급원에게 발표할 때 어떻게 해야 하는지에 관한 더 자세한 내용을 제공할 것입니다.
       'Technique: Frequency Analysis':
         content1: 설명 입력
+        markdown: "# 치환 암호 풀기\n\n임의적 치환 암호를 풀기 위한 최고의 기법은 **빈도 분석**입니다. \n\n다음에서 다른
+          말로 바꿔 표현함: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          **빈도 분석**은 영어 대 다른 것에서 일정 글자가 얼마나 *자주* 나오는지에 기초하는 기법입니다.\n* 예를 들어, 주어진 영어
+          텍스트 섹션에서 *E*, *T*, *A*, *O*가 가장 흔하게 나오는 반면 *Z*, *Q*, *X*는 가장 드물게 나옵니다. 마찬가지로,
+          *TH*, *ER*, *ON*, *AN*은 서로 나란히 나오는 글자 짝 중 가장 흔합니다.\n* 사실, 글자 분포는 거의 모든 영어
+          텍스트 샘플에서 거의 동일합니다. \n\n\n이전 페이지의 위젯 버전은 빈도 분석을 통해 치환 암호를 **푸는데 도움을 주려는 의도를
+          갖고 있습니다.\n\n암호화된 메시지에서 글자 빈도를 전형적인 영어 산문에서 글자 빈도와 비교하고 분석함으로써, 글자 일부가 무엇과
+          매핑되는지 좁혀 나가기 시작할 수 있습니다. \n\n툴은 암호화된 텍스트 (주황색) 내 글자 빈도가 전형적 영어 (파란색)에서의
+          빈도와 비교되는 방식을 보여줍니다.\n\n### 힌트: 어디에서 시작해야 할까요?\n\n1. 짧은 단어를 찾고 먼저 그것을 \"풉니다\".
+          한 글자 단어를 몇 개 알고 있어요? (\"a\"). 매우 흔한 세 글자 단어는 \"the\"입니다.\n2. 일단 그렇게 했으면,
+          가장 흔한 단어의 일부를 치환합니다. 직관을 이용해 이러한 부분적 치환으로 다른 글자를 보고, 추측을 잘해야 합니다.\n3. 단지
+          처음 몇 개의 글자만 힘들게 찾아내고 나면, 나머지는 비교적 빠르게 풀 수 있습니다.\n4. 글자의 빈도 비교는 이치에 맞는 추측을
+          하는데 좋은 아이디어를 줍니다.\n\n### 다음을 해 보세요:\n아래 에니메이션은 누군가 시작하려는 모습을 보여줍니다. 여기서
+          그들은 다음을 시도하고 있습니다.\n\n* 먼저 문자를 빈도별로 정렬합니다. \n* 단어 `the`에 매핑할 수 있는 문자 그룹을
+          식별합니다.  \n훌륭한 시작 방법입니다!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          임의적 치환을 잘했습니까?\n* 약간의 연습 후, 임의적 치환 암호를 푸는데 얼마나 걸립니까?\n* 이것은 잘한 것입니까 그렇지
+          않습니까?\n\n\n"
       Terminology Recap:
         content1: 설명 입력
+        markdown: "# 잠시 중단하고 정리\n\n**시저 암호**로 암호화된 메시지는 풀기 쉬우며 특히 컴퓨팅 툴이 있으면 더 쉽습니다.
+          \ 이제 영문자 시프트 암호를 푸는 연습을 했으니 (정말 쉽죠?), 더 어려운 걸 시도해 봐요.\n\n**용어 정리:**\n\n*
+          **암호화** - 메시지를 비밀로 유지하여 \"허가된\" 이들만 읽을 수 있게 암호화하는 프로세스.\n* **해독** - 암호화의
+          반대 프로세스로 비밀 메시지를 원래의 평문으로 다시 만듭니다.\n* **암호** - 암호화를 수행하는 기법 (알고리즘)을 지칭하는
+          용어\n* **시저 암호** - 영문자를 문자의 일정 수 만큼 자리를 바꿔 암호화하는 기법.\n* **암호화 풀기** - 암호의
+          모든 세부사항을 알지 *못하고* 비밀 메시지를 해독하려 할 때, 그들은 암호화를 **풀려고** 시도하는 것입니다. \n\n\n**다음
+          도전**을 보려면 계속을 클릭하세요...\n\n \n"
       Unit 1 Lesson 2 Overview:
         markdown: |
           # Overview
@@ -3666,7 +3706,9 @@ ko-KR:
         questions:
         - text: 이 코드는 주의 깊게 보세요. 프로그램이 "실행"되면 무슨 일이 벌어질거라 생각하세요?
       gradek1_activity_beNice:
-        markdown: "# 컴퓨터 실습실에서의 동작"
+        markdown: "# # 컴퓨터 랩에서의 행동\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\n레슨 플랜으로 가기\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">계속</a>\n"
       Unit 1 Lesson 1 Overview:
         markdown: |
           # Overview

@@ -16,17 +16,17 @@ ko:
           version_title: "' 17-18"
           description_student: 컴퓨터 과학 발견 (CS 발견)은 학생에게 진품을 만들고 창의성과 소통, 문제 해결, 재미를 위한 매체로서 컴퓨터 과학에 참여하도록 힘을 실어 주는 컴퓨터 과학 입문 과정입니다.
           description_teacher: 컴퓨터 과학 발견 (CS 발견)은 학생에게 진품을 만들고 창의성과 소통, 문제 해결, 재미를 위한 매체로서 컴퓨터 과학에 참여하도록 힘을 실어 주는 컴퓨터 과학 입문 과정입니다.
-          description_short: 학생에게 진품을 만들도록 힘을 실어 주는 컴퓨터 과학 입문 과정
+          description_short: 학생에게 진정한 작품을 만들도록 힘을 실어 주는 컴퓨터 과학 입문 과정
         allthethingscourse:
-          title: 모든 것을 포함한 코스
-          description_short: 이 코스는 모든것을 위한 것입니다.
-          description_student: 이 코스는 모든것을 위한 것이며 학생들을 위해 좀 더 긴 설명이 있습니다.
-          description_teacher: 이 코스는 모든것을 위한 것이며 선생님들을 위해 좀 더 긴 설명이 있습니다.
+          title: 모든 것을 포함한 과정
+          description_short: 이 과정은 모든것을 위한 것입니다.
+          description_student: 이 과정은 모든것을 위한 것이며 학생들을 위해 좀 더 긴 설명이 있습니다.
+          description_teacher: 이 과정은 모든것을 위한 것이며 선생님들을 위해 좀 더 긴 설명이 있습니다.
         csd-2018:
           assignment_family_title: 컴퓨터 과학 발견
           title: 컴퓨터 과학 발견 ('18-19)
           version_title: "' 18-' 19"
-          description_short: 학생에게 진품을 만들도록 힘을 실어 주는 컴퓨터 과학 입문 과정
+          description_short: 학생에게 진정한 작품을 만들도록 힘을 실어 주는 컴퓨터 과학 입문 과정
           description_student: 컴퓨터 과학 발견 (CS 발견)은 학생에게 진품을 만들고 창의성과 소통, 문제 해결, 재미를 위한 매체로서 컴퓨터 과학에 참여하도록 힘을 실어 주는 컴퓨터 과학 입문 과정입니다.
           description_teacher: 컴퓨터 과학 발견 (CS 발견)은 학생에게 진품을 만들고 창의성과 소통, 문제 해결, 재미를 위한 매체로서 컴퓨터 과학에 참여하도록 힘을 실어 주는 컴퓨터 과학 입문 과정입니다.
         csp-2018:
@@ -45,6 +45,6 @@ ko:
         csd-2019:
           title: 컴퓨터 과학 발견 ('19-'20)
           version_title: "'19-'20"
-          description_short: 학생에게 진품을 만들도록 힘을 실어 주는 컴퓨터 과학 입문 과정
+          description_short: 학생에게 진정한 작품을 만들도록 힘을 실어 주는 컴퓨터 과학 입문 과정
           description_student: 컴퓨터 과학 발견 (CS 발견)은 학생에게 진품을 만들고 창의성과 소통, 문제 해결, 재미를 위한 매체로서 컴퓨터 과학에 참여하도록 힘을 실어 주는 컴퓨터 과학 입문 과정입니다.
           description_teacher: 컴퓨터 과학 발견 (CS 발견)은 학생에게 진품을 만들고 창의성과 소통, 문제 해결, 재미를 위한 매체로서 컴퓨터 과학에 참여하도록 힘을 실어 주는 컴퓨터 과학 입문 과정입니다.
