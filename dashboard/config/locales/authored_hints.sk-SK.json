@@ -80,7 +80,7 @@
           "Course_4_Artist_Binary_Free_Play_2b_d": "**Riešenie:**\n\n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\"><next><block type=\"controls_for_counter\" inline=\"true\"><mutation counter=\"counter\"></mutation><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">8</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MINUS</title><value name=\"A\"><block type=\"math_number\"><title name=\"NUM\">16</title></block></value><value name=\"B\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MULTIPLY</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">0</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement></block></next></block></next></block></statement><next><block type=\"controls_for_counter\" inline=\"true\"><mutation counter=\"counter\"></mutation><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">8</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MINUS</title><value name=\"A\"><block type=\"math_number\"><title name=\"NUM\">16</title></block></value><value name=\"B\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MULTIPLY</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">0</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></xml>"
         },
         "Course 4 Artist For Loops 4": {
-          "Course_4_Artist_For_Loops_4_a": "**Aké je najmenšíe čislo, ktoré potrebuješ?\\\nAké je najväčšie číslo?\\\nAký veľký je prírastok v každom kroku?**\n\nToto sú otázky, ktoré potrebuješ zodpovedať, aby si vyplnil prázdne miesta v cykle `for`."
+          "Course_4_Artist_For_Loops_4_a": "**Aké je najmenšie číslo, ktoré potrebuješ?\\\nAké je najväčšie číslo?\\\nAký veľký je prírastok v každom kroku?**\n\nToto sú otázky, ktoré potrebuješ zodpovedať, keď chceš vyplniť prázdne miesta v cykle `for`."
         },
         "Course 4 Artist For Loops inspire": {
           "Course_4_Artist_For_Loops_inspire_d": "**Riešenie:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_arithmetic\" inline=\"true\">\n                <title name=\"OP\">MINUS</title>\n                <value name=\"A\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <value name=\"B\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">1</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">40</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">360</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">1</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">40</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">360</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -238,7 +238,7 @@
           "validation": "**Ako prejdem túto úroveň?**\n\n-   Použi blok `keď hore stlačený` nato, aby Robot urobil tanečný krok, keď stlačíš šípku hore.\n\n_Táto úroveň končí po 7 taktoch._"
         },
         "CourseE_HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "Vidíš **Morské lampáše** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ako ich môžeš použiť v podmienke a dostať sa tak s nimi k oceánskemu monumentu?  "
+          "voyage_aquatic_10a": "Vidíš **Morské lampáše** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ako ich môžeš použiť v podmienke a dostať sa tak s nimi k Oceánskemu monumentu?  "
         },
         "CourseE_HOC 2018 Level_10_2020": {
           "voyage_aquatic_10a": "Vidíš **Morské lampáše** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ako ich môžeš použiť v podmienke a dostať sa tak s nimi k Oceánskemu monumentu?  "
@@ -513,7 +513,7 @@
           "NEW_Course_4_Bee_For_Loops_7_a": "Skús spraviť nejaké výpočty s premennou počítadlo.\n\nČo musíš spraviť s počítadlom na každom kvete, aby sa to rovnalo množstvu nektáru, ktoré potrebuješ pozbierať?"
         },
         "NEW Course 4 Bee For Loops 8": {
-          "NEW_Course_4_Bee_For_Loops_8_a": "Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.\n\nKoľko potrebuješ zakaždým pridať, aby si sa dostal k ďalšiemu množstvu nektárov?"
+          "NEW_Course_4_Bee_For_Loops_8_a": "Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo. \n\nKoľko potrebuješ zakaždým pridať, keď sa chceš dostať k ďalšiemu množstvu nektárov?"
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "Skús pomocou agenta vybudovať mosty, aby sa Alex alebo Steve mohli prechádzať za okrajmi mapy."
@@ -532,17 +532,17 @@
           "courseC_flappy_events5_a": "Na prejdenie tohto levelu potrebuješ použiť blok `pridaj bod`."
         },
         "OPD-K5-forloops-1": {
-          "courseF_bee_for1_a": "Potiahni fialový čiselný blok do prázdneho miesta v cykle `opakuj`, aby si povedal, koľko krát sa má opakovať.",
-          "courseF_bee_for1_b": "Potrebuješ dva bloky v tvojom cykle ’opkauj’, aby si pozbieral všetok nektár."
+          "courseF_bee_for1_a": "Potiahni fialový čiselný blok do prázdneho miesta v cykle `opakuj` a povedz tak, koľkokrát sa má opakovať.",
+          "courseF_bee_for1_b": "Na pozbieranie všetkého nektáru potrebuješ dva bloky v tvojom cykle ’opakuj’."
         },
         "OPD-K5-forloops-2": {
-          "courseF_bee_for2_a": "Ak si zmätený, tak pracuj vždy len na jednom kvete a často testuj.",
-          "courseF_bee_for2_b": "Nezabudni sa posunúť dopredu medzi každým cyklom, takže sa dostaneš ku kaźdému kvetu."
+          "courseF_bee_for2_a": "Ak nevieš, čo máš robiť, tak pracuj vždy len na jednom kvete a často testuj.",
+          "courseF_bee_for2_b": "Nezabudni sa posunúť dopredu medzi každým cyklom, takže sa dostaneš ku každému kvetu."
         },
         "OPD-K5-forloops-5": {
           "courseF_bee_for4_a": "Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide od 1 do 7 so zvyšovaním o 1.",
           "courseF_bee_for4_b": "Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu` a cyklus na pozbieranie nektáru.",
-          "courseF_bee_for4_c": "Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom cykle `opakuj`, aby si pozbieral nektár!"
+          "courseF_bee_for4_c": "Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom cykle `opakuj` a pozbieraj tak nektár!"
         },
         "OPD-K5-forloops-6": {
           "courseF_bee_for6_a": "Nezabudni použiť premennú `počítadlo` vo vnútri tvojho cyklu `opakuj`.",
@@ -556,12 +556,12 @@
         },
         "OPD-K5-variables-1": {
           "grade5_artist_variables_triangles1_a": "Pamätaj, že musíš otočiť umelca o 120 stupňov, aby si spravil vnútorný uhol 60 stupňov v trojuholníku.",
-          "grade5_artist_variables_triangles1_b": "Použi cyklus `opakuj`, aby si skrátil tvoj kód.",
+          "grade5_artist_variables_triangles1_b": "Použi cyklus `opakuj` a skráť si tak svoj kód.",
           "grade5_artist_variables_triangles1_c": "Vo vnútri tvojho cyklu sa chceš pohnúť dopredu o 50 pixelov, a potom otočiť doľava o 120 stupňov."
         },
         "OPD-K5-variables-2": {
           "courseF_artist_variables2_a": "Nezabudni sa pohnúť dopredu po nakreslení každého trojuholníka.",
-          "courseF_artist_variables2_b": "Tvoj nový cyklus bude obsahovať cyklus pre tvoj trojuholník a potom príkaz `posuň sa dopredu`."
+          "courseF_artist_variables2_b": "Tvoj nový cyklus bude obsahovať cyklus pre tvoj trojuholník a potom príkaz `posuň dopredu`."
         },
         "OPD-K5-variables-5": {
           "courseF_artist_variables3_a": "Premenná `dĺžka` bude použitá na dvoch miestach v tvojom kóde: V dĺžke strany tvojho trojuholníka a vo veľkosti, o koľko sa posunieš medzi trojuholníkmi.",
@@ -574,8 +574,8 @@
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "Druhá polovica tvojho kódu by mala vyzerať takmer rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať, a potom otáčať _vpravo_.",
-          "courseF_artist_variables5_b": "Prvá polovica tvojho kóud nakreslí prvé tri trojuholníky a druhá polovica nakreslí zvyšné tri.",
-          "courseF_artist_variables5_c": "Začni zduplikovaním kódu z prvej polovice tvojho programu, potom ho uprav, aby si vyrobil daný vzor.",
+          "courseF_artist_variables5_b": "Prvá polovica tvojho kódu nakreslí prvé tri trojuholníky a druhá polovica nakreslí zvyšné tri.",
+          "courseF_artist_variables5_c": "Začni zduplikovaním kódu z prvej polovice tvojho programu, potom ho uprav a vyrob si daný vzor.",
           "courseF_artist_variables5_d": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "Overworld Avoid Monsters": {
@@ -6530,14 +6530,14 @@
           "courseF_artist_for1_a": "Vieš nakresliť niečo takéto?\n\n![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)"
         },
         "courseF_artist_for10": {
-          "courseF_artist_for10_a": "Nareslený obrázok bol vytvorený s použitím počítadla pre `nastav alfa` a `počítadlo` / 10 pre šírku štetca.",
+          "courseF_artist_for10_a": "Nakreslený obrázok bol vytvorený s použitím počítadla pre `nastav alfa` a `počítadlo` / 10 pre šírku štetca.",
           "courseF_artist_for10_b": "Nakreslený obrázok používa otočenie o 61 stupňov.",
-          "courseF_artist_for10_c": "Chceš vedieť ako bol obrázok vytvorený?\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_for10_c": "Chceš vedieť, ako bol obrázok vytvorený?\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_for10_2018": {
-          "courseF_artist_for10_a": "Nareslený obrázok bol vytvorený s použitím počítadla pre `nastav alfa` a `počítadlo` / 10 pre šírku štetca.",
+          "courseF_artist_for10_a": "Nakreslený obrázok bol vytvorený s použitím počítadla pre `nastav alfa` a `počítadlo` / 10 pre šírku štetca.",
           "courseF_artist_for10_b": "Nakreslený obrázok používa otočenie o 61 stupňov.",
-          "courseF_artist_for10_c": "Chceš vedieť ako bol obrázok vytvorený?\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_for10_c": "Chceš vedieť, ako bol obrázok vytvorený?\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_for10_2019": {
           "courseF_artist_for10_a": "Nakreslený obrázok bol vytvorený s použitím počítadla pre `nastav alfa` a `počítadlo` / 10 pre šírku štetca.",
@@ -6595,13 +6595,13 @@
           "courseF_artist_for3_b": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "courseF_artist_for4": {
-          "courseF_artist_for4_a": "**Aké je najmenšíe čislo, ktoré potrebuješ?\\\nAké je najväčšie číslo?\\\nAký veľký je prírastok v každom kroku?**\n\nToto sú otázky, ktoré potrebuješ zodpovedať, aby si vyplnil prázdne miesta v cykle `for`.",
-          "courseF_artist_for4_b": "Tvoj kód bude veľmi podobný tomu, čo si napísal v predošlej úlohe, ale tentokrát nezabudni nakresliť štvorec!",
+          "courseF_artist_for4_a": "**Aké je najmenšie číslo, ktoré potrebuješ?\\\nAké je najväčšie číslo?\\\nAký veľký je prírastok v každom kroku?**\n\nToto sú otázky, ktoré potrebuješ zodpovedať, keď chceš vyplniť prázdne miesta v cykle `for`.",
+          "courseF_artist_for4_b": "Tvoj kód bude veľmi podobný tomu z predošlej úlohy, ale tentokrát nezabudni nakresliť štvorec!",
           "courseF_artist_for4_c": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "courseF_artist_for4_2018": {
-          "courseF_artist_for4_a": "**Aké je najmenšíe čislo, ktoré potrebuješ?\\\nAké je najväčšie číslo?\\\nAký veľký je prírastok v každom kroku?**\n\nToto sú otázky, ktoré potrebuješ zodpovedať, aby si vyplnil prázdne miesta v cykle `for`.",
-          "courseF_artist_for4_b": "Tvoj kód bude veľmi podobný tomu, čo si napísal v predošlej úlohe, ale tentokrát nezabudni nakresliť štvorec!",
+          "courseF_artist_for4_a": "**Aké je najmenšie číslo, ktoré potrebuješ?\\\nAké je najväčšie číslo?\\\nAký veľký je prírastok v každom kroku?**\n\nToto sú otázky, ktoré potrebuješ zodpovedať, keď chceš vyplniť prázdne miesta v cykle `for`.",
+          "courseF_artist_for4_b": "Tvoj kód bude veľmi podobný tomu z predošlej úlohy, ale tentokrát nezabudni nakresliť štvorec!",
           "courseF_artist_for4_c": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "courseF_artist_for4_2019": {
@@ -6651,14 +6651,14 @@
           "courseF_artist_for6_c": "Všetko, čo musíš zmeniť, je počet stupňov v bloku `otoč sa`."
         },
         "courseF_artist_for7": {
-          "courseF_artist_for7_a": "Pero v tejto úlohe je užšie. Potrebuješ ho nastaviť na `1` predtým než začneš.",
-          "courseF_artist_for7_b": "Všimni si, že táto špirála sa toči doprava namiesto doľava!",
+          "courseF_artist_for7_a": "Pero v tejto úlohe je užšie. Potrebuješ ho nastaviť na `1` predtým, než začneš.",
+          "courseF_artist_for7_b": "Všimni si, že táto špirála sa točí doprava namiesto doľava!",
           "courseF_artist_for7_c": "Cyklus `for` v tejto úlohe ide od 15 do 300 po 2.",
           "courseF_artist_for7_d": "Tento obrázok je spravený otáčaním o 89 stupňov."
         },
         "courseF_artist_for7_2018": {
-          "courseF_artist_for7_a": "Pero v tejto úlohe je užšie. Potrebuješ ho nastaviť na `1` predtým než začneš.",
-          "courseF_artist_for7_b": "Všimni si, že táto špirála sa toči doprava namiesto doľava!",
+          "courseF_artist_for7_a": "Pero v tejto úlohe je užšie. Potrebuješ ho nastaviť na `1` predtým, než začneš.",
+          "courseF_artist_for7_b": "Všimni si, že táto špirála sa točí doprava namiesto doľava!",
           "courseF_artist_for7_c": "Cyklus `for` v tejto úlohe ide od 15 do 300 po 2.",
           "courseF_artist_for7_d": "Tento obrázok je spravený otáčaním o 89 stupňov."
         },
@@ -6675,11 +6675,11 @@
           "courseF_artist_for7_d": "Tento obrázok je spravený otáčaním o 89 stupňov."
         },
         "courseF_artist_for8": {
-          "courseF_artist_for8_a": "Všetko ostatné nechaj rovnaké v tvojom kóde, iba uhol otočenia sa musí zmeniť.",
+          "courseF_artist_for8_a": "Všetko ostatné vo svojom kóde nechaj rovnaké, zmeniť sa musí iba uhol otočenia.",
           "courseF_artist_for8_b": "Ak chceš, tak si môžeš vybrať inú farbu pre tvoju špirálu!"
         },
         "courseF_artist_for8_2018": {
-          "courseF_artist_for8_a": "Všetko ostatné nechaj rovnaké v tvojom kóde, iba uhol otočenia sa musí zmeniť.",
+          "courseF_artist_for8_a": "Všetko ostatné vo svojom kóde nechaj rovnaké, zmeniť sa musí iba uhol otočenia.",
           "courseF_artist_for8_b": "Ak chceš, tak si môžeš vybrať inú farbu pre tvoju špirálu!"
         },
         "courseF_artist_for8_2019": {
@@ -6759,11 +6759,11 @@
         },
         "courseF_artist_variables10": {
           "courseF_artist_variables10_a": "Zabav sa v tomto leveli! Sleduj, čo dokážu spraviť malé zmeny v tvojom kóde.",
-          "courseF_artist_variables10_b": "Môžeš vyskúšať viacero vecí a spustiť tvoj kód viac krát."
+          "courseF_artist_variables10_b": "Môžeš vyskúšať viacero vecí a spustiť svoj kód viackrát."
         },
         "courseF_artist_variables10_2018": {
           "courseF_artist_variables10_a": "Zabav sa v tomto leveli! Sleduj, čo dokážu spraviť malé zmeny v tvojom kóde.",
-          "courseF_artist_variables10_b": "Môžeš vyskúšať viacero vecí a spustiť tvoj kód viac krát."
+          "courseF_artist_variables10_b": "Môžeš vyskúšať viacero vecí a spustiť svoj kód viackrát."
         },
         "courseF_artist_variables10_2019": {
           "courseF_artist_variables10_a": "Zabav sa v tomto leveli! Sleduj, čo dokážu spraviť malé zmeny v tvojom kóde.",
@@ -6775,11 +6775,11 @@
         },
         "courseF_artist_variables2": {
           "courseF_artist_variables2_a": "Nezabudni sa pohnúť dopredu po nakreslení každého trojuholníka.",
-          "courseF_artist_variables2_b": "Tvoj nový cyklus bude obsahovať cyklus pre tvoj trojuholník a potom príkaz `posuň sa dopredu`."
+          "courseF_artist_variables2_b": "Tvoj nový cyklus bude obsahovať cyklus pre tvoj trojuholník a potom príkaz `posuň dopredu`."
         },
         "courseF_artist_variables2_2018": {
           "courseF_artist_variables2_a": "Nezabudni sa pohnúť dopredu po nakreslení každého trojuholníka.",
-          "courseF_artist_variables2_b": "Tvoj nový cyklus bude obsahovať cyklus pre tvoj trojuholník a potom príkaz `posuň sa dopredu`."
+          "courseF_artist_variables2_b": "Tvoj nový cyklus bude obsahovať cyklus pre tvoj trojuholník a potom príkaz `posuň dopredu`."
         },
         "courseF_artist_variables2_2019": {
           "courseF_artist_variables2_a": "Nezabudni sa pohnúť dopredu po nakreslení každého trojuholníka.",
@@ -6826,14 +6826,14 @@
         },
         "courseF_artist_variables5": {
           "courseF_artist_variables5_a": "Druhá polovica tvojho kódu by mala vyzerať takmer rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať, a potom otáčať _vpravo_.",
-          "courseF_artist_variables5_b": "Prvá polovica tvojho kóud nakreslí prvé tri trojuholníky a druhá polovica nakreslí zvyšné tri.",
-          "courseF_artist_variables5_c": "Začni zduplikovaním kódu z prvej polovice tvojho programu, potom ho uprav, aby si vyrobil daný vzor.",
+          "courseF_artist_variables5_b": "Prvá polovica tvojho kódu nakreslí prvé tri trojuholníky a druhá polovica nakreslí zvyšné tri.",
+          "courseF_artist_variables5_c": "Začni zduplikovaním kódu z prvej polovice tvojho programu, potom ho uprav a vyrob si daný vzor.",
           "courseF_artist_variables5_d": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "courseF_artist_variables5_2018": {
           "courseF_artist_variables5_a": "Druhá polovica tvojho kódu by mala vyzerať takmer rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať, a potom otáčať _vpravo_.",
-          "courseF_artist_variables5_b": "Prvá polovica tvojho kóud nakreslí prvé tri trojuholníky a druhá polovica nakreslí zvyšné tri.",
-          "courseF_artist_variables5_c": "Začni zduplikovaním kódu z prvej polovice tvojho programu, potom ho uprav, aby si vyrobil daný vzor.",
+          "courseF_artist_variables5_b": "Prvá polovica tvojho kódu nakreslí prvé tri trojuholníky a druhá polovica nakreslí zvyšné tri.",
+          "courseF_artist_variables5_c": "Začni zduplikovaním kódu z prvej polovice tvojho programu, potom ho uprav a vyrob si daný vzor.",
           "courseF_artist_variables5_d": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "courseF_artist_variables5_2019": {
@@ -6849,11 +6849,11 @@
           "courseF_artist_variables5_d": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "courseF_artist_variables6": {
-          "courseF_artist_variables6_a": "Vďaka premenným, potrebuješ zmeniť iba jedno číslo navrchu, aby to fungovalo.",
+          "courseF_artist_variables6_a": "Vďaka premenným potrebuješ zmeniť iba jedno číslo navrchu, aby to fungovalo.",
           "courseF_artist_variables6_b": "Potrebuješ editovať číselný blok s hodnotou 50, ale nič iné v kóde sa nemusí zmeniť."
         },
         "courseF_artist_variables6_2018": {
-          "courseF_artist_variables6_a": "Vďaka premenným, potrebuješ zmeniť iba jedno číslo navrchu, aby to fungovalo.",
+          "courseF_artist_variables6_a": "Vďaka premenným potrebuješ zmeniť iba jedno číslo navrchu, aby to fungovalo.",
           "courseF_artist_variables6_b": "Potrebuješ editovať číselný blok s hodnotou 50, ale nič iné v kóde sa nemusí zmeniť."
         },
         "courseF_artist_variables6_2019": {
@@ -6867,12 +6867,14 @@
         "courseF_artist_variables6a": {
           "courseF_artist_variables6a_b": "Tento kód bude veľmi podobný tvôjmu trojuholníkovému kódu, iba s rozdielnym útvarom!",
           "courseF_artist_variables6a_c": "Najskôr napíš kód pre jeden štvorec, potom pridaj kód na pohyb medzi štvorcami. Nakoniec pridaj cyklus okolo všetkého!",
-          "courseF_artist_variables6a_d": "Toto je vzor, ktorého sa budeš držať!\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
+          "courseF_artist_variables6a_d": "Toto je vzor, ktorého sa budeš držať!\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)",
+          "courseF_artist_variables6a_a": "Nazabudni použiť pemennú `dĺžka` namiesto konkrétneho čísla na vyriešenie tejto úlohy. "
         },
         "courseF_artist_variables6a_2018": {
           "courseF_artist_variables6a_b": "Tento kód bude veľmi podobný tvôjmu trojuholníkovému kódu, iba s rozdielnym útvarom!",
           "courseF_artist_variables6a_c": "Najskôr napíš kód pre jeden štvorec, potom pridaj kód na pohyb medzi štvorcami. Nakoniec pridaj cyklus okolo všetkého!",
-          "courseF_artist_variables6a_d": "Toto je vzor, ktorého sa budeš držať!\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
+          "courseF_artist_variables6a_d": "Toto je vzor, ktorého sa budeš držať!\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)",
+          "courseF_artist_variables6a_a": "Nazabudni použiť pemennú `dĺžka` namiesto konkrétneho čísla na vyriešenie tejto úlohy. "
         },
         "courseF_artist_variables6a_2019": {
           "courseF_artist_variables6a_b": "Tento kód bude veľmi podobný tvôjmu trojuholníkovému kódu, iba s rozdielnym útvarom!",
@@ -6889,12 +6891,12 @@
         "courseF_artist_variables7": {
           "courseF_artist_variables7_a": "Tvoj kód začni pomocou bloku `nastav dĺžku (length)`. Nastav premennú dĺžka na 150.",
           "courseF_artist_variables7_b": "Môžeš použiť cyklus `opakuj`, aby bol tvoj kód pre trojuholník jednoduchší.",
-          "courseF_artist_variables7_c": "Chceš sa otočiť doľava o 120 stupňov, aby si spravil vrcholy trojuholníka."
+          "courseF_artist_variables7_c": "Chceš sa otočiť doľava o 120 stupňov a spraviť tak vrcholy trojuholníka."
         },
         "courseF_artist_variables7_2018": {
           "courseF_artist_variables7_a": "Tvoj kód začni pomocou bloku `nastav dĺžku (length)`. Nastav premennú dĺžka na 150.",
           "courseF_artist_variables7_b": "Môžeš použiť cyklus `opakuj`, aby bol tvoj kód pre trojuholník jednoduchší.",
-          "courseF_artist_variables7_c": "Chceš sa otočiť doľava o 120 stupňov, aby si spravil vrcholy trojuholníka."
+          "courseF_artist_variables7_c": "Chceš sa otočiť doľava o 120 stupňov a spraviť tak vrcholy trojuholníka."
         },
         "courseF_artist_variables7_2019": {
           "courseF_artist_variables7_a": "Tvoj kód začni pomocou bloku `nastav dĺžku (length)`. Nastav premennú dĺžka na 150.",
@@ -6927,11 +6929,11 @@
           "courseF_artist_variables8_a": "Vyskúšaj použiť tieto bloky \n\n<xml>\n<block type=\"variables_set\" inline=\"false\">\n                        <title name=\"VAR\">length</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">ADD</title>\n                            <value name=\"A\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">10</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n</xml>\n\n na konci tela tvojho cyklu."
         },
         "courseF_artist_variables9": {
-          "courseF_artist_variables9_a": "Všetko, čo musíš spraviť v tejto úlohe, je zmeniť, koľko krát sa cyklus opakuje.",
+          "courseF_artist_variables9_a": "Všetko, čo musíš spraviť v tejto úlohe, je zmeniť, koľkokrát sa cyklus opakuje.",
           "courseF_artist_variables9_b": "Uisti sa, že bloky, ktoré zvyšujú `dĺžka`, sú v tvojom cykle, takže čiary sú vždy dlhšie a dlhšie."
         },
         "courseF_artist_variables9_2018": {
-          "courseF_artist_variables9_a": "Všetko, čo musíš spraviť v tejto úlohe, je zmeniť, koľko krát sa cyklus opakuje.",
+          "courseF_artist_variables9_a": "Všetko, čo musíš spraviť v tejto úlohe, je zmeniť, koľkokrát sa cyklus opakuje.",
           "courseF_artist_variables9_b": "Uisti sa, že bloky, ktoré zvyšujú `dĺžka`, sú v tvojom cykle, takže čiary sú vždy dlhšie a dlhšie."
         },
         "courseF_artist_variables9_2019": {
@@ -6981,18 +6983,18 @@
           "courseF_bee_conditionals8_b": "Táto úloha je komplikovaná, lebo nemôžeš skontrolovať prázdne polia, nektár _a_ med len jednou jedinou podmienkou.\n\nSkontroluj nektár a med až na konci svojej cesty."
         },
         "courseF_bee_for1": {
-          "courseF_bee_for1_a": "Potiahni fialový čiselný blok do prázdneho miesta v cykle `opakuj`, aby si povedal, koľko krát sa má opakovať.",
-          "courseF_bee_for1_b": "Potrebuješ dva bloky v tvojom cykle ’opkauj’, aby si pozbieral všetok nektár."
+          "courseF_bee_for1_a": "Potiahni fialový čiselný blok do prázdneho miesta v cykle `opakuj` a povedz tak, koľkokrát sa má opakovať.",
+          "courseF_bee_for1_b": "Na pozbieranie všetkého nektáru potrebuješ dva bloky v tvojom cykle ’opakuj’."
         },
         "courseF_bee_for10": {
           "courseF_bee_for10_a": "Dokážeš nájsť vzťah medzi počtom krokov, ktoré potrebuješ prejsť, a počtom nektárov, ktoré musíš pozbierať?",
-          "courseF_bee_for10_b": "Prvá skupina kvetov ma dokopy **14 kvetov**. Aby sa včela dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo 14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela prejsť, aby sa k nim dostala?",
+          "courseF_bee_for10_b": "Prvá skupina kvetov má dokopy **14 kvetov**. Aby sa včela dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo 14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela prejsť, aby sa k nim dostala?",
           "courseF_bee_for10_c": "V úlohe má prvá skupina kvetov **14** kvetov, druhá skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov, **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nAko súvisia tieto čísla?",
           "courseF_bee_for10_d": "Potrebuješ použiť 2 opakovania, jedno použije matematický blok."
         },
         "courseF_bee_for10_2018": {
           "courseF_bee_for10_a": "Dokážeš nájsť vzťah medzi počtom krokov, ktoré potrebuješ prejsť, a počtom nektárov, ktoré musíš pozbierať?",
-          "courseF_bee_for10_b": "Prvá skupina kvetov ma dokopy **14 kvetov**. Aby sa včela dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo 14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela prejsť, aby sa k nim dostala?",
+          "courseF_bee_for10_b": "Prvá skupina kvetov má dokopy **14 kvetov**. Aby sa včela dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo 14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela prejsť, aby sa k nim dostala?",
           "courseF_bee_for10_c": "V úlohe má prvá skupina kvetov **14** kvetov, druhá skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov, **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nAko súvisia tieto čísla?",
           "courseF_bee_for10_d": "Potrebuješ použiť 2 opakovania, jedno použije matematický blok."
         },
@@ -7009,8 +7011,8 @@
           "courseF_bee_for10_d": "Potrebuješ použiť 2 opakovania, jedno použije matematický blok."
         },
         "courseF_bee_for1_2018": {
-          "courseF_bee_for1_a": "Potiahni fialový čiselný blok do prázdneho miesta v cykle `opakuj`, aby si povedal, koľko krát sa má opakovať.",
-          "courseF_bee_for1_b": "Potrebuješ dva bloky v tvojom cykle ’opkauj’, aby si pozbieral všetok nektár."
+          "courseF_bee_for1_a": "Potiahni fialový čiselný blok do prázdneho miesta v cykle `opakuj` a povedz tak, koľkokrát sa má opakovať.",
+          "courseF_bee_for1_b": "Na pozbieranie všetkého nektáru potrebuješ dva bloky v tvojom cykle ’opakuj’."
         },
         "courseF_bee_for1_2019": {
           "courseF_bee_for1_a": "Potiahni fialový čiselný blok do prázdneho miesta v cykle `opakuj` a povedz tak, koľkokrát sa má opakovať.",
@@ -7021,12 +7023,12 @@
           "courseF_bee_for1_b": "Na pozbieranie všetkého nektáru potrebuješ dva bloky v tvojom cykle ’opakuj’."
         },
         "courseF_bee_for2": {
-          "courseF_bee_for2_a": "Ak si zmätený, tak pracuj vždy len na jednom kvete a často testuj.",
-          "courseF_bee_for2_b": "Nezabudni sa posunúť dopredu medzi každým cyklom, takže sa dostaneš ku kaźdému kvetu."
+          "courseF_bee_for2_a": "Ak nevieš, čo máš robiť, tak pracuj vždy len na jednom kvete a často testuj.",
+          "courseF_bee_for2_b": "Nezabudni sa posunúť dopredu medzi každým cyklom, takže sa dostaneš ku každému kvetu."
         },
         "courseF_bee_for2_2018": {
-          "courseF_bee_for2_a": "Ak si zmätený, tak pracuj vždy len na jednom kvete a často testuj.",
-          "courseF_bee_for2_b": "Nezabudni sa posunúť dopredu medzi každým cyklom, takže sa dostaneš ku kaźdému kvetu."
+          "courseF_bee_for2_a": "Ak nevieš, čo máš robiť, tak pracuj vždy len na jednom kvete a často testuj.",
+          "courseF_bee_for2_b": "Nezabudni sa posunúť dopredu medzi každým cyklom, takže sa dostaneš ku každému kvetu."
         },
         "courseF_bee_for2_2019": {
           "courseF_bee_for2_a": "Ak nevieš, čo máš robiť, tak pracuj vždy len na jednom kvete a často testuj.",
@@ -7039,12 +7041,12 @@
         "courseF_bee_for4": {
           "courseF_bee_for4_a": "Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide od 1 do 7 so zvyšovaním o 1.",
           "courseF_bee_for4_b": "Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu` a cyklus na pozbieranie nektáru.",
-          "courseF_bee_for4_c": "Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom cykle `opakuj`, aby si pozbieral nektár!"
+          "courseF_bee_for4_c": "Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom cykle `opakuj` a pozbieraj tak nektár!"
         },
         "courseF_bee_for4_2018": {
           "courseF_bee_for4_a": "Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide od 1 do 7 so zvyšovaním o 1.",
           "courseF_bee_for4_b": "Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu` a cyklus na pozbieranie nektáru.",
-          "courseF_bee_for4_c": "Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom cykle `opakuj`, aby si pozbieral nektár!"
+          "courseF_bee_for4_c": "Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom cykle `opakuj` a pozbieraj tak nektár!"
         },
         "courseF_bee_for4_2019": {
           "courseF_bee_for4_a": "Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide od 1 do 7 so zvyšovaním o 1.",
@@ -7117,13 +7119,13 @@
           "courseF_bee_for7_c": "Nezabudni použiť premennú `počítadlo` v tvojom cykle `opakuj`."
         },
         "courseF_bee_for8": {
-          "courseF_bee_for8_a": "Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.\n\nKoľko potrebuješ zakaždým pridať, aby si sa dostal k ďalšiemu množstvu nektárov?",
-          "courseF_bee_for8_b": "V tejto úlohe sa potrebuješ pohybovať schodiskovým vzorom, aby si sa dostal ku kvetom.",
+          "courseF_bee_for8_a": "Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.\n\nKoľko potrebuješ zakaždým pridať, keď sa chceš dostať k ďalšiemu množstvu nektárov?",
+          "courseF_bee_for8_b": "V tejto úlohe sa potrebuješ pohybovať schodiskovým vzorom a potom sa dostaneš ku kvetom.",
           "courseF_bee_for8_c": "Tvoj cyklus bude počítať _od 3 do 15_ s nejakým prírastkom. Aký to bude?"
         },
         "courseF_bee_for8_2018": {
-          "courseF_bee_for8_a": "Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.\n\nKoľko potrebuješ zakaždým pridať, aby si sa dostal k ďalšiemu množstvu nektárov?",
-          "courseF_bee_for8_b": "V tejto úlohe sa potrebuješ pohybovať schodiskovým vzorom, aby si sa dostal ku kvetom.",
+          "courseF_bee_for8_a": "Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.\n\nKoľko potrebuješ zakaždým pridať, keď sa chceš dostať k ďalšiemu množstvu nektárov?",
+          "courseF_bee_for8_b": "V tejto úlohe sa potrebuješ pohybovať schodiskovým vzorom a potom sa dostaneš ku kvetom.",
           "courseF_bee_for8_c": "Tvoj cyklus bude počítať _od 3 do 15_ s nejakým prírastkom. Aký to bude?"
         },
         "courseF_bee_for8_2019": {
@@ -7209,12 +7211,12 @@
         },
         "grade5_artist_variables_triangles1": {
           "grade5_artist_variables_triangles1_a": "Pamätaj, že musíš otočiť umelca o 120 stupňov, aby si spravil vnútorný uhol 60 stupňov v trojuholníku.",
-          "grade5_artist_variables_triangles1_b": "Použi cyklus `opakuj`, aby si skrátil tvoj kód.",
+          "grade5_artist_variables_triangles1_b": "Použi cyklus `opakuj` a skráť si tak svoj kód.",
           "grade5_artist_variables_triangles1_c": "Vo vnútri tvojho cyklu sa chceš pohnúť dopredu o 50 pixelov, a potom otočiť doľava o 120 stupňov."
         },
         "grade5_artist_variables_triangles1_2018": {
           "grade5_artist_variables_triangles1_a": "Pamätaj, že musíš otočiť umelca o 120 stupňov, aby si spravil vnútorný uhol 60 stupňov v trojuholníku.",
-          "grade5_artist_variables_triangles1_b": "Použi cyklus `opakuj`, aby si skrátil tvoj kód.",
+          "grade5_artist_variables_triangles1_b": "Použi cyklus `opakuj` a skráť si tak svoj kód.",
           "grade5_artist_variables_triangles1_c": "Vo vnútri tvojho cyklu sa chceš pohnúť dopredu o 50 pixelov, a potom otočiť doľava o 120 stupňov."
         },
         "grade5_artist_variables_triangles1_2019": {
@@ -7413,30 +7415,36 @@
           "courseF_bee_for11_a": "O koľko menej je 12 ako 15?\\\nO koľko menej je 9 ako 12?\n\nVidíš nejaký vzor?"
         },
         "outbreak1": {
-          "step1": "Pomocou týchto blokov vytvorte svoje príšerky:\n\n[blokovaný blok][0]\n\n[blokovaný blok][1]\n\nTento blok sa nachádza v kategórii **Príšerky** na paneli nástrojov.",
-          "step2": "Zmeňte veľkosť príšeriek pomocou tohto bloku: [blockly block][0].\n\nNachádza sa v kategórii **Akcie** na paneli nástrojov.",
-          "step3": "Nechajte všetkým príšerkám voľnosť pohybu  pomocou tohto bloku: [blockly block][0].\n\nBlok sa nachádza v kategórii **Akcie** na paneli nástrojov."
+          "step1": "Pomocou týchto blokov vytvorte svoje príšerky:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nTento blok sa nachádza v kategórii **Príšerky** na paneli nástrojov.",
+          "step2": "Zmeňte veľkosť príšeriek pomocou tohto bloku: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nNachádza sa v kategórii **Akcie** na paneli nástrojov.",
+          "step3": "Nechajte všetkým príšerkám voľnosť pohybu  pomocou tohto bloku: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nBlok sa nachádza v kategórii **Akcie** na paneli nástrojov."
         },
         "outbreak2": {
-          "hint1": "Kliknite na tlačidlo \"+\" v bloku udalosti. Vyplňte prázdne miesto v bloku „zmeniť kostým“ tak, aby sa vo vnútri nachádzal blok „predmetu“.\n\n[blockly block][0]"
+          "hint1": "Kliknite na tlačidlo \"+\" v bloku udalosti. Vyplňte prázdne miesto v bloku „zmeniť kostým“ tak, aby sa vo vnútri nachádzal blok „predmetu“.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak3": {
-          "hint1": "Ak chcete dať príšerám masky, použite blok \"zmeniť kostým\" spolu s udalosťou \"pri kliknutí\":\n\n[blockly block][0]\n\nNezabudnite tiež potiahnuť malý červený blok „kliknutý“!",
-          "hint2": "Nový kód pre túto úroveň by mal vyzerať takto:\n\n[blockly block][0]"
+          "hint1": "Ak chcete dať príšerám masky, použite blok \"zmeniť kostým\" spolu s udalosťou \"pri kliknutí\":\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nNezabudnite tiež potiahnuť malý červený blok „kliknutý“!",
+          "hint2": "Nový kód pre túto úroveň by mal vyzerať takto:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak4": {
-          "challenge": "## Hľadáte ďalšiu výzvu?\n\nMôžete tiež dosiahnuť, aby sa príšery pohybovali rýchlejšie alebo pomalšie.\n\n1. Kliknite na položku „Upraviť“ v tomto bloku [blockly block][0]\n2. Zvýšte alebo znížte počet v tomto bloku:\n\n[blockly block][1]\n\nAk chcete, aby sa príšery pohybovali pomalšie, zvoľte desatinné číslo napr. \"0,5\" alebo \"0,25\". Ak chcete, aby sa pohybovali rýchlejšie, vyberte akékoľvek číslo vyššie ako 1."
+          "challenge": "## Hľadáte ďalšiu výzvu?\n\nMôžete tiež dosiahnuť, aby sa príšery pohybovali rýchlejšie alebo pomalšie.\n\n1.  Kliknite na položku „Upraviť“ v tomto bloku <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>\n2.  Zvýšte alebo znížte počet v tomto bloku:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nAk chcete, aby sa príšery pohybovali pomalšie, zvoľte desatinné číslo napr. \"0,5\" alebo \"0,25\". Ak chcete, aby sa pohybovali rýchlejšie, vyberte akékoľvek číslo vyššie ako 1."
         },
         "outbreak5": {
-          "solution2": "Váš nový kód by mal vyzerať takto:\n\n[blockly block][0]"
+          "solution2": "Váš nový kód by mal vyzerať takto:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_subjectSpritePointer\"></block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "outbreak6": {
-          "hint2": "Uistite sa, že ste presunuli ďalšie bloky „akcia“ do vnútra bloku „ak je to možné“:\n\n[blockly block][0]\n",
-          "hint1": "Budete musieť pridať ďalšie 3 udalosti „pri dotyku“, aby ste skontrolovali všetky možné kombinácie \"dotykov\" medzi zdravými a infikovanými príšerkami.\n\n[blockly block][0]"
+          "hint2": "Uistite sa, že ste presunuli ďalšie bloky „akcia“ do vnútra bloku „ak je to možné“:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": "Budete musieť pridať ďalšie 3 udalosti „pri dotyku“, aby ste skontrolovali všetky možné kombinácie \"dotykov\" medzi zdravými a infikovanými príšerkami.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block>\\<block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "outbreak7": {
-          "whenclicked": "## Vakcíny\n\nSimulujte podávanie vakcíny príšerám, keď na ne kliknete. Ak to chcete urobiť, použite blok „zmeniť kostým“ s  touto udalosťou:\n\n[blockly block][0]",
+          "whenclicked": "## Vakcíny\n\nSimulujte podávanie vakcíny príšerám, keď na ne kliknete. Ak to chcete urobiť, použite blok „zmeniť kostým“ s  touto udalosťou:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Zasekli ste sa? Svoj kód môžete kedykoľvek resetovať kliknutím na položku „História verzií“ nižšie a výberom možnosti „Začať odznova“."
+        },
+        "courseF_bee_for11": {
+          "courseF_bee_for11_a": "O koľko menej je 12 ako 15?\\\nO koľko menej je 9 ako 12?\n\nVidíš nejaký vzor?"
+        },
+        "courseF_bee_for11_2018": {
+          "courseF_bee_for11_a": "O koľko menej je 12 ako 15?\\\nO koľko menej je 9 ako 12?\n\nVidíš nejaký vzor?"
         }
       }
     }

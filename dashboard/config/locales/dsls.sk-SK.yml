@@ -3622,30 +3622,38 @@ sk-SK:
           ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
       courseF_multi_artist_for10_predict1:
         answers:
-        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
+        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku, ako ide z
             jednej strany hracej plochy ku druhej.
         - text: 'Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak
-            čiara bude dlhšia a tenšía. '
+            čiara bude dlhšia a tenšia. '
+          feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
+            ktorá je tiež hrubšia.
         - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
             bude dlhšia a hrubšia.
           correct: true
           feedback: Správne!
         - text: Neviem.
+          feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
+            ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
           `for` cyklu.  '
         questions:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_for10_predict1_2018:
         answers:
-        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
+        - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku, ako ide z
             jednej strany hracej plochy ku druhej.
         - text: 'Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak
-            čiara bude dlhšia a tenšía. '
+            čiara bude dlhšia a tenšia. '
+          feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
+            ktorá je tiež hrubšia.
         - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
             bude dlhšia a hrubšia.
           correct: true
           feedback: Správne!
         - text: Neviem.
+          feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
+            ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
           `for` cyklu.  '
         questions:
@@ -3705,6 +3713,8 @@ sk-SK:
         - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
         - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
         - text: Neviem.
+          feedback: Premenná `dĺžka` je nastavená na 50 a používa sa v bloku `posuň
+            dopredu o`, takže umelec nakreslí trojuholník so stranami dlhými 50 pixelov.
         questions:
         - text: Nastavili sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
       courseF_multi_artist_variables3a_predict1_2018:
@@ -3715,6 +3725,8 @@ sk-SK:
         - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
         - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
         - text: Neviem.
+          feedback: Premenná `dĺžka` je nastavená na 50 a používa sa v bloku `posuň
+            dopredu o`, takže umelec nakreslí trojuholník so stranami dlhými 50 pixelov.
         questions:
         - text: Nastavili sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
       courseF_multi_artist_variables3a_predict1_2018_2019:
@@ -4432,3 +4444,50 @@ sk-SK:
           Našťastie po skúmaní vírusu sa obyvateľom susedného mesta podaril dôležitý objav. Uvedomili si, že šírenie vírusu sa môže spomaliť, ak si budú ústa zakrývať maskou. Vďaka týmto tvárovým maskám sa znížila pravdepodobnosť, že by choré príšerky mohli vírusom nakaziť zdravé príšerky.
 
           <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+      New Challenge Introduction:
+        markdown: "### Nová výzva: Rozlúšti náhodnú substitučnú šifru...s novým widgetom
+          \n\nČo ak by sme namiesto posunutia celej abecedy namapovali každé písmeno
+          abecedy na iné náhodné písmeno abecedy? Toto sa nazýva ** náhodná substitučná
+          šifra. ** \n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nTeraz,
+          namiesto toho, aby bola tajná správa kódovaná jednoduchým abecedným posunom,
+          budeš čeliť správam kódovaným pomocou ** náhodnéj substitučnej šifry**.
+          \ \n\n\n\nJe to oveľa viac náročnejšie na rozlúštenie a vyžaduje si to sofistikovanejší
+          nástroj, takže...\n\nKeď klikneš na pokračovať, uvidíš **nová, sofistikovanejšia
+          verzia šifrovacieho nástroja**, ktorá ti ukáže množstvo rôznych vecí. \n\nČo
+          to však robí, je trochu záhadou!\n\n### Tvoja úloha:\n\n * Zisti čo sa deje
+          v tejto novej verzii nástroja\n * Aké informácie sa ti predkladajú?\n *
+          Zisti čo ti nástroj umožní\n * Ako obvykle: nemôžeš to prelomiť. Takže klikaj
+          na veci naokolo.\n * Ak sa ti to podarí rozlúštiť, môžeš prelomiť správu
+          zakódovanú náhodnou substitučnou šifrou.\n \n### Nápoveda\n\n* Vedel si,
+          že **E** je najpoužívanejším písmenom v angličtine?\n\n### Zíďte sa znovu
+          a diskutujte\n Po určitom čase hrania by si sa mal s niekým - partnerom,
+          malou skupinou alebo celou triedou - stretnúť, porozprávať o tom, čo ste
+          našli, a overiť si, že viete, čo sa deje a poznáte rôzne spôsoby, ako môžete
+          tento nástroj použiť.\n"
+      'Technique: Frequency Analysis':
+        markdown: "# Prelomenie substitučných šifier\n\nNajlepšia metóda na prelomenie
+          náhodných substitučných šifier je známa ako **frekvenčná analýza** \n\nParafrázované
+          z: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n* **Frekvenčná
+          analýza** je metóda založená na tom, ako *často* sa určité písmená vyskytujú
+          v angličtine oproti iným.\n* Napríklad, vzhľadom na časť anglického textu,
+          *E*, *T*, *A* a *O* sa vyskytujú najčastejšie, zatiaľ čo *Z*, *Q* a *X*
+          zriedkavo. Rovnako, *TH*, *ER*, *ON*, a *AN* sú najčastejšie páry písmen,
+          ktoré sa vyskytujú vedľa seba.\n* Distribúcia písmen je v skutočnosti zhruba
+          rovnaká pre takmer *všetky* vzory anglického textu. \n\n\nVerzia widgetu
+          na predchádzajúcej strane by ti mala pomôcť **prelomiť substitučnú šifru
+          pomocou frekvenčnej analýzy**.\n\nAnalýzou frekvencie písmen v šifrovanej
+          správe v porovnaní s frekvenciou písmen v typickej anglickom texte môžeš
+          začať zužovať, čo by mohli byť niektoré mapovania písmen.\n\nTento nástroj
+          ukazuje, ako je porovnaná frekvencia písmen v šifrovanom texte (oranžová)
+          s frekvenciami typickými v angličtine (modrá).\n\n### Nápoveda: Kde začať?\n\n1.
+          Nájdi najskôr krátke slová a \"prelom\" tie.  Koľko jedno-písmenových slov
+          poznáš? (\"a\").  Časté troj-písmenové slovo je \"the\".\n2. Ak to urobíš,
+          máš náhradu za najbežnejšie písmená. Mal by si byť schopný používať intuíciu,
+          aby si sa pozrel na iné slová s týmito čiastočnými substitúciami a dosiahol
+          dobrý odhad.\n3. Po nájdení pár náročných písmen bude zbytok rýchly.\n4.
+          Porovnanie frekvencií písmen poskytuje dobrý prehľad pre uskutočnenie rozumných
+          odhadov.\n\n### Skús toto:\nAnimácia nižšie ukazuje ako niekto začína. Toto
+          skúsili\n\n* Najskôr roztrieď znaky podľa frekvencie. \n* Identifikuj skupinu
+          znakov, ktoré môžu byť namapované na slovo `the`.  \nDobrý začiatok!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Je náhodná substitúcia dobrá? \n* Ako dlho ti trvá po krátkej praxi, prelomiť
+          náhodnú substitučnú šifru?\n* Je to dobre alebo zle?"

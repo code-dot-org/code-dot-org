@@ -74,6 +74,11 @@ sk:
               name: 'Play Lab: Vytvor príbeh'
             The Big Event:
               name: Veľká udalosť
+          student_description: Na úvod začni Kurzom 1. Študenti vytvoria svoje prvé
+            programy, ktoré ich naučia spolupracovať s ostatnými a rozvinú ich schopnosť
+            riešiť problémy a vytrvať pri ťažkých úlohách. Na konci tohoto kurzu je
+            študent schopný tvoriť vlastné hry alebo príbehy, ktoré môže zdielať.
+            Odporúčné pre predškolákov a prvý ročník.
         course2:
           title: Kurz 2
           description: Kurz 2 doporučujeme ako prvý kurz pre študentov, ktorí už vedia
@@ -121,6 +126,11 @@ sk:
               name: Veľká udalosť
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+          student_description: Kurz 2 doporučujeme ako prvý kurz pre študentov, ktorí
+            už vedia čítať, ale nemajú predchádzajúce skúseností s programovaním.
+            V tomto kurze budú študenti vytváraním programov riešiť úlohy a vyvinú
+            interaktívne hry alebo príbehy, ktoré vedia zdieľať. Doporučené pre 2.
+            až 5. ročník.
         course3:
           title: Kurz 3
           description: Kurz 3 je určený pre študentov, ktorí absolvovali Kurz 2. Študenti
@@ -175,6 +185,12 @@ sk:
               name: 'Play Lab: Vytvor hru'
             'Studio: Create a Story':
               name: 'Play Lab: Vytvor príbeh'
+          student_description: Kurz 3 je určený pre študentov, ktorí absolvovali Kurz
+            2. Študenti hlbšie preniknú do programovacích konceptov predstavených
+            v predchádzajúcich kurzoch, s cieľom vytvoriť flexibilné riešenie komplexnejších
+            problémov. Po absolvovaní kurzu bude študent schopný vytvoriť interaktívne
+            príbehy a hry, ktoré môže zdieľať s kýmkoľvek. Kurz doporučujeme pre žiakov
+            4. a 5. ročníka.
         playlab:
           title: Play Lab
           description: Vytvor príbeh alebo hru s Play Labom!
@@ -182,6 +198,7 @@ sk:
           lessons:
             Play Lab:
               name: Play Lab
+          student_description: Vytvor príbeh alebo hru s Play Labom!
         artist:
           title: Umelec
           description: Nakresli skvelé obrázky a vzory s Umelcom!
@@ -189,6 +206,7 @@ sk:
           lessons:
             Artist:
               name: Umelec
+          student_description: Nakresli skvelé obrázky a vzory s Umelcom!
         hourofcode:
           title: Klasické bludisko
           description: Vyskúšaj si základy informatiky s postavičkami ako sú Angry
@@ -197,6 +215,8 @@ sk:
           lessons:
             Maze:
               name: Bludisko
+          student_description: Vyskúšaj si základy informatiky s postavičkami ako
+            sú Angry Birds, Plants vs Zombies a Scrat z Doby ľadovej!
         frozen:
           title: Programuj s Annou a Elsou
           description: Pomocou programovania sa pripojme k Anne a Else a preskúmajme
@@ -208,6 +228,10 @@ sk:
           lessons:
             Artist:
               name: Umelec
+          student_description: Pomocou programovania sa pripojme k Anne a Else a preskúmajme
+            spoločne kúzlo a krásu ľadu. Korčuľovaním v ľade vykreslíš snehové vločky
+            a krásne vzory a vytvoríš tak zázračnú zimnú krajinu, ktorú môžeš zdieľať
+            s priateľmi!
         course4:
           title: Kurz 4
           description: Kurz 4 je určený pre študentov, ktorí absolvovali Kurzy 2 a
@@ -264,6 +288,12 @@ sk:
               name: 'Bez počítača: Písanie pesničiek s parametrami'
             'Unplugged: Tangrams':
               name: 'Bez počítača: Tangramy'
+          student_description: Kurz 4 je určený pre študentov, ktorí absolvovali Kurzy
+            2 a 3. Študenti sa naučia riešiť úlohy zvyšujúcej sa náročnosti a budú
+            v nich musieť skombinovať viacero naučených konceptov. Po dokončení kurzu
+            vie študent vytvárať programy, ktoré mu umožnia demonštrovať viac zručností,
+            vrátane cyklov s podmienkami pre konkrétne hodnoty či funkcií s parametrami.
+            Doporučené pre ročník 4 až 8.
         Course4pre:
           title: Kurz 4 - nevyhnutné predpoklady
           description: Rýchle zhrnutie konceptov pre študentov, ktorí neabsolvovali
@@ -289,6 +319,8 @@ sk:
               name: 'Farmárka: Cykly typu "Pokiaľ"'
             'Maze: Sequence':
               name: 'Bludisko: Postupnosť'
+          student_description: Rýchle zhrnutie konceptov pre študentov, ktorí neabsolvovali
+            kurzy 2 a 3.
         usability:
           lessons:
             Binary:
@@ -350,6 +382,7 @@ sk:
           lessons:
             Infinity:
               name: nekonečne
+          student_description: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
         algebrademo:
           lessons:
             Defining Simple Functions:
@@ -472,6 +505,9 @@ sk:
               name: Bludisko
             Wrap-up:
               name: Zhrnutie
+          student_description: Tento 20-hodinový kurz pokrýva základné koncepty informatiky
+            a programovania obsiahnuté v kurzoch 2-4. Kurz je určený pre žiakov vo
+            veku 10 - 18 rokov, ale určite pobaví študentov všetkých vekových kategórií!
         edit-code:
           title: Upraviť kód
           description: Upraviť kód
@@ -487,6 +523,7 @@ sk:
               name: Umelec
             The Maze:
               name: Bludisko
+          student_description: Upraviť kód
         events:
           title: Udalosti
           description: Udalosti
@@ -500,6 +537,7 @@ sk:
               name: Vyhodnoť
             Studio:
               name: Štúdio
+          student_description: Udalosti
         flappy:
           title: Flappy kód
           description: Chceš napísať vlastnú hru za menej než 10 minút? Vyskúšaj náš
@@ -508,6 +546,8 @@ sk:
           lessons:
             Flappy Code:
               name: Flappy kód
+          student_description: Chceš napísať vlastnú hru za menej než 10 minút? Vyskúšaj
+            náš Flappy kód!
         jigsaw:
           title: Skladačka
           description: Vyskúšaj si Skladačku.
@@ -515,6 +555,7 @@ sk:
           lessons:
             Jigsaw:
               name: Skladačka
+          student_description: Vyskúšaj si Skladačku.
         step:
           title: Krok
           description: Návod po krokoch
@@ -522,6 +563,7 @@ sk:
           lessons:
             Step:
               name: Krok
+          student_description: Návod po krokoch
         Hour of Code:
           title: Hodina Kódu 2013
           description: Vyskúšaj si základy informatiky s postavami z Angry Birds a
@@ -530,6 +572,8 @@ sk:
           lessons:
             Hour of Code 2013:
               name: Hodina Kódu 2013
+          student_description: Vyskúšaj si základy informatiky s postavami z Angry
+            Birds a Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -1060,6 +1104,7 @@ sk:
           lessons:
             Ice Age Play Lab:
               name: Play Lab Doba ľadová
+          student_description: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
         CSPPD3-Unit3:
           lessons:
             Getting Started:
@@ -1083,6 +1128,7 @@ sk:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+          student_description: Vytvor príbeh alebo hru s Gumball Play Labom!
         starwars:
           title: 'Star Wars: Budovanie galaxie pomocou Kódu'
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars
@@ -1092,6 +1138,8 @@ sk:
           lessons:
             Hour of Code 2015:
               name: Hodina kódu 2015
+          student_description: Nauč sa programovať droidy a vytvor si vlastnú hru
+            Star Wars v ďalekej galaxii.
         starwarsblocks:
           title: 'Star Wars: Budovanie galaxie pomocou Kódu'
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars
@@ -1101,6 +1149,8 @@ sk:
           lessons:
             Hour of Code 2015:
               name: Hodina kódu 2015
+          student_description: Nauč sa programovať droidy a vytvor si vlastnú hru
+            Star Wars v ďalekej galaxii.
         mc:
           title: Minecraft Hodina Kódu
           description: Použi bloky kódu, aby si vzal Steva alebo Alexa na dobrodužstvo
@@ -1109,6 +1159,8 @@ sk:
           lessons:
             Hour of Code 2015:
               name: Hodina kódu 2015
+          student_description: Použi bloky kódov, aby si vzal Steva alebo Alex na
+            dobrodružstvo po svete Minecraftu.
         oceans:
           title: AI pomáha oceánom
         ScienceP3OLPT3:
@@ -2003,6 +2055,7 @@ sk:
           lessons:
             Bounce:
               name: Bounce
+          student_description: Vyber si tím a priprav basketbalový zápas
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -2071,6 +2124,8 @@ sk:
           lessons:
             Minecraft Hour of Code Designer:
               name: Hodina kódu Minecraft dizajnér
+          student_description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú
+            verziu hry Minecraft.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -2310,6 +2365,7 @@ sk:
           lessons:
             Sports:
               name: Športy
+          student_description: Pomiešaj športy
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -2763,6 +2819,9 @@ sk:
                 v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
                 všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         courseb-2017:
           title: Kurz B
           assignment_family_title: Kurz B
@@ -2797,6 +2856,9 @@ sk:
               name: Ďalšie programovanie v bludisku
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         coursec-2017:
           title: Kurz C
           assignment_family_title: Kurz C
@@ -2838,6 +2900,10 @@ sk:
               name: Cykly s Umelcom
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
+          student_description: Vytvor programy s postupnosťami, cyklami a udalosťami.
+            Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia
+            problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš
+            svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
         coursed-2017:
           title: Kurz D
           assignment_family_title: Kurz D
@@ -2939,6 +3005,10 @@ sk:
                 ladenie v prostredí „zberateľov“. Študenti sa naučia čítať a editovať
                 kód a opravovať hádanky jednoduchými algoritmami, slučkami a vnorenými
                 slučkami."'
+          student_description: Nauč sa nové programátorské koncepty ako vnorené cykly,
+            cykly s podmienkou "pokiaľ", podmienky, či udalosti. Oboznám sa s konceptom
+            digitálneho občianstva a vytvor si vlastnú hru či príbeh, ktoré môžeš
+            zdieľať s kamarátmi.
         coursee-2017:
           title: Kurz E
           assignment_family_title: Kurz E
@@ -3133,6 +3203,10 @@ sk:
               name: Vnorené cykly
             Functions in Harvester:
               name: Funkcie so Záhradníčkou
+          student_description: Začneš programovať s algoritmami, cyklami, podmienkami
+            a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
+            nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi
+            a rodinou.
         coursef-2017:
           title: Kurz F
           assignment_family_title: Kurz F
@@ -3477,6 +3551,9 @@ sk:
               name: Podmienky a cykly so Záhradníčkou
             Until Loops in Maze:
               name: Cykly "dovtedy kým" v bludisku
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         pre-express-2017:
           title: Zrýchlený kurz pre predškolákov
           assignment_family_title: Zrýchlený kurz pre predškolákov
@@ -3509,6 +3586,9 @@ sk:
               name: 'Udalosti: Veľká udalosť'
             Spelling Bee:
               name: Včela Hláskovanie
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         subgoal-labels-opt-in:
           lessons:
             Thanks:
@@ -3546,6 +3626,9 @@ sk:
           lessons:
             Intro to App Lab:
               name: Úvod do App Labu
+          student_description: Vytvor si svoju vlastnú aplikáciu v JavaScripte pomocou
+            blokového programovania alebo textu. Ak máš už nejaké programovanie s
+            blokmi za sebou, posuň svoje zručnosti na ďalšiu úroveň.
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -3896,6 +3979,8 @@ sk:
               name: 'Minecraft\: Cesta Hrdinu v Hodine Kódu'
             Minecraft Hour of Code:
               name: Minecraft Hodina Kódu
+          student_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou!
+            Prejdi sa po Minecrafte s kódom.
         applab-intro-staging:
           lessons:
             Intro to App Lab:
@@ -4491,6 +4576,9 @@ sk:
               name: Postupnosť krokov s Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie a jej veľký projekt
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         express-2018:
           title: Zrýchlený kurz
           assignment_family_title: Zrýchlený kurz
@@ -4631,6 +4719,9 @@ sk:
               name: Štafetové programovanie
             Graph Paper Programming:
               name: Programovanie na štvorčekový papier
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         courseb-2018:
           title: Kurz B (2018)
           assignment_family_title: Kurz B
@@ -4675,6 +4766,9 @@ sk:
               name: Pohni sa, pohni sa
             Copyright and Creativity:
               name: Je skvelé tvoriť a hrať férovo
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         coursed-2018:
           title: Kurz D (2018)
           assignment_family_title: Kurz D
@@ -4739,6 +4833,9 @@ sk:
               name: Vnorené cykly s včelou
             Nested Loops in Maze:
               name: Vnorené cykly v bludisku
+          student_description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov
+            s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania
+            sa oboznámia aj s významom pojmu "digitálne občianstvo".
         jr-test:
           lessons:
             Alien Dance Party - Input:
@@ -4786,6 +4883,10 @@ sk:
               name: Binárne náramky
             Looking Ahead:
               name: Pohľad do budúcnosti s Minecraftom
+          student_description: Vytvor programy s postupnosťami, cyklami a udalosťami.
+            Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia
+            problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš
+            svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
         csd6-2018:
           lesson_groups:
             csd6_1:
@@ -4981,6 +5082,10 @@ sk:
               name: Moja malá žirafa
             Copyright and Creativity:
               name: Digitálne zdieľanie
+          student_description: Začneš programovať s algoritmami, cyklami, podmienkami
+            a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
+            nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi
+            a rodinou.
         coursef-2018:
           title: Kurz F (2018)
           assignment_family_title: Kurz F
@@ -5456,6 +5561,11 @@ sk:
           lesson_groups:
             csd_survey:
               display_name: Hodnotenie kurzu
+          student_description: Vitaj v záverečnom dotazníku kurzu Objavujeme informatiku.
+            Tento dotazník by ti mal zabrať asi 15 minút. Tvoje odpovede sú anonymné  -
+            tvoj učiteľ uvidí len anonymné a agregované výsledky za celú triedu.  Výsledky
+            sú pre tvojho učiteľa/učiteľku a pre Code.org dôležité na to, aby mohli
+            tento kurz ďalej vylepšovať. Ďakujeme za tvoj čas a pozornosť.
         csd-novice-18:
           lesson_groups:
             required:
@@ -5544,6 +5654,9 @@ sk:
               name: Cykly so Scratom
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie a jej veľký projekt
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         spritelab-validated:
           lessons:
             Alien Dance Party - Input:
@@ -5581,6 +5694,7 @@ sk:
           lessons:
             Dance Party:
               name: Tanečná Párty
+          student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         frozen-2018-test-b:
           title: Nový Frozen Skript
           lessons:
@@ -5593,6 +5707,9 @@ sk:
           description: Minecraft je späť s úplne novou aktivitou! Použi tvoju kreativitu,
             schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval podvodný
             svet.
+          student_description: Minecraft je späť s úplne novou aktivitou! Použi tvoju
+            kreativitu, schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval
+            podvodný svet.
         sconyers:
           lessons:
             Digital Design:
@@ -5623,6 +5740,8 @@ sk:
           lessons:
             Dance Party - Go Further:
               name: Tanečná párty - Pokračuj ďalej
+          student_description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie
+            projekty.
         coursef-2019:
           title: Kurz F (2019)
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a
@@ -5922,6 +6041,9 @@ sk:
                 a potom im ponechajú priestor na vytvorenie vlastnej hry.
             Dance Party:
               name: Tanečná Párty
+          student_description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov
+            s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania
+            sa oboznámia aj s významom pojmu "digitálne občianstvo".
         coursee-2019:
           title: Kurz E (2019)
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami
@@ -6169,6 +6291,10 @@ sk:
               name: Plávajúca ryba so Sprite Labom
             Songwriting:
               name: Písanie pesničiek
+          student_description: Začneš programovať s algoritmami, cyklami, podmienkami
+            a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
+            nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi
+            a rodinou.
         express-2019:
           title: Zrýchlený kurz (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -6299,6 +6425,9 @@ sk:
               name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
             Concept Practice with Minecraft:
               name: Pohľad do budúcnosti s Minecraftom
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         csd1-2019:
           description: Riešenie problémov a výpočtová technika je vysoko interaktívny
             a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte
@@ -6381,6 +6510,13 @@ sk:
               name: Spracovanie
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+          student_description: Riešenie problémov a výpočtová technika je vysoko interaktívny
+            a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte
+            riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie
+            viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte
+            ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie,
+            ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom
+            navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu.
         andrea-test:
           title: andrea-test
           description_short: toto je na otestovanie mojich schopností vytvoriť kurz
@@ -6414,6 +6550,7 @@ sk:
               name: andrea-test-fáza2
             andrea-test-stage3:
               name: andrea-test-fáza3
+          name: andrea-test
         dance-extras-gallery:
           title: Pokračuj v tancovaní
           description_short: Pokračuj za hranice Hodiny Kódu s touto aktivitou nadväzujúcou
@@ -6422,6 +6559,8 @@ sk:
           lessons:
             Dance Party - Go Further:
               name: Tanečná párty - Pokračuj ďalej
+          student_description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie
+            projekty.
         coursec-2019:
           title: Kurz C (2019)
           description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož
@@ -6511,6 +6650,10 @@ sk:
                 pre portfólio, či ako ukážku pre rodičov.
             Picturing Data:
               name: Zobrazenie dát v grafoch
+          student_description: Vytvor programy s postupnosťami, cyklami a udalosťami.
+            Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia
+            problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš
+            svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
         csp-mid-survey:
           title: INF študentský polročný prieskum
           description_short: INF študentský polročný prieskum
@@ -6618,6 +6761,9 @@ sk:
                 čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
                 diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
                 a potom pokročia k používaniu počítača na dokončenie online úloh.
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         courseb-2019:
           title: Kurz B (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -6712,6 +6858,9 @@ sk:
                 čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
                 diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
                 a potom pokročia k používaniu počítača na dokončenie online úloh.
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         pre-express-2019:
           title: Zrýchlený kurz pre predškolákov (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -6770,6 +6919,9 @@ sk:
               name: Kráľovská bitka s udalosťami
             Ocean Scene with Loops:
               name: Na mori s cyklami
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         removed19:
           lessons:
             'Debugging: Unspotted Bugs':
@@ -7408,6 +7560,12 @@ sk:
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
+          student_description: "Záverečný dotazník pre kurz Objavujeme informatiku
+            je dôležitým nástrojom, ktorý nám pomáha zbierať spätnú väzbu a na jej
+            základe vylepšovať náš kurz. \r\n Tento dotazník je anonymný - tvoj učiteľ
+            uvidí len anonymné a agregované výsledky za celú triedu.  Výsledky sú
+            pre tvojho učiteľa/učiteľku a pre Code.org dôležité na to, aby mohli tento
+            kurz ďalej vylepšovať. Ďakujeme za tvoj čas a pozornosť. "
         csp-post-survey-2018:
           lesson_groups:
             cspSurvey:
@@ -7530,6 +7688,13 @@ sk:
               name: Spracovanie
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+          student_description: Riešenie problémov a výpočtová technika je vysoko interaktívny
+            a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte
+            riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie
+            viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte
+            ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie,
+            ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom
+            navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu.
         csd2-pilot:
           lesson_groups:
             csd2_1:
@@ -7859,6 +8024,9 @@ sk:
               display_name: Prehľad
             content:
               display_name: Obsah
+          lessons:
+            Focus Area 1:
+              name: Osnovy
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -7959,6 +8127,7 @@ sk:
           lessons:
             Dance Party:
               name: Tanečná Párty
+          student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         k5-onlinepd-2019:
           lesson_groups:
             k5_getting_started:
@@ -8007,6 +8176,8 @@ sk:
           lessons:
             Dance Party - Go Further:
               name: Tanečná párty - Pokračuj ďalej
+          student_description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie
+            projekty.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -8447,6 +8618,13 @@ sk:
                 na druhú hodinu."
             Storage:
               name: Pamäť
+          student_description: Riešenie problémov a výpočtová technika je vysoko interaktívny
+            a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte
+            riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie
+            viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte
+            ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie,
+            ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom
+            navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu.
         csd4-2020:
           lesson_groups:
             csd4_1:
@@ -8843,6 +9021,9 @@ sk:
                 v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
                 všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         courseb-2020:
           title: Kurz B (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -8923,6 +9104,9 @@ sk:
                 momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               name: Kráľovská bitka s udalosťami
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         coursec-2020:
           title: Kurz C (2019)
           description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož
@@ -9002,6 +9186,10 @@ sk:
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
                 tvoj projekt.
+          student_description: Vytvor programy s postupnosťami, cyklami a udalosťami.
+            Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia
+            problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš
+            svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
         coursed-2020:
           title: Kurz D (2019)
           description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou
@@ -9095,6 +9283,9 @@ sk:
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
                 tvoj projekt.
+          student_description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov
+            s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania
+            sa oboznámia aj s významom pojmu "digitálne občianstvo".
         coursee-2020:
           title: Kurz E (2019)
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami
@@ -9243,6 +9434,10 @@ sk:
                 prostredie. Študenti by mali byť vedení k dodržiavaniu autorských
                 práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho
                 občana.
+          student_description: Začneš programovať s algoritmami, cyklami, podmienkami
+            a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
+            nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi
+            a rodinou.
         coursef-2020:
           title: Kurz F (2019)
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a
@@ -9471,6 +9666,9 @@ sk:
               name: Mimozemská tanečná párty
             Behaviors in Sprite Lab:
               name: Správania v Sprite Labe
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         pre-express-2020:
           title: Zrýchlený kurz pre predškolákov (2020)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -9543,6 +9741,9 @@ sk:
               name: Udalosti v pohybe
             A Royal Battle with Events:
               name: Kráľovská bitka s udalosťami
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
@@ -9977,6 +10178,23 @@ sk:
           description: Pomocou programu Sprite Lab naprogramujte simuláciu nákazy
             vírusom.
           name: nákaza
+          student_description: Pomocou programu Sprite Lab naprogramujte simuláciu
+            nákazy vírusom.
+        2021drafting:
+          lessons:
+            Course F Introduction:
+              name: Predstavenie Sprite Labu
+            Virus Simulation for Code Bytes:
+              name: Kódovanie nákazy
+            Sprites in Action:
+              name: Postavy v akcii
+          lesson_groups:
+            introduction:
+              display_name: Úvod
+            lessonGroup-3:
+              display_name: Premenné
+            outbreak:
+              display_name: Simulácia napadnutia
         csd1-2021:
           title: CSD Kapitola 1 - Riešenie problémov a výpočtová technika ('20-'21)
           description: Riešenie problémov a výpočtová technika je vysoko interaktívny
@@ -10026,6 +10244,13 @@ sk:
               display_name: 'Kapitola 1: Proces riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          student_description: Riešenie problémov a výpočtová technika je vysoko interaktívny
+            a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte
+            riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie
+            viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte
+            ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie,
+            ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom
+            navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu.
         csd2-2021:
           lessons:
             Digital Footprint:
@@ -10244,6 +10469,9 @@ sk:
               display_name: Cykly
             csf_events:
               display_name: Udalosti
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         courseb-2021:
           title: Kurz B (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -10294,6 +10522,9 @@ sk:
               display_name: Vplyv Informatiky
             csf_events:
               display_name: Udalosti
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         coursec-2021:
           title: Kurz C (2019)
           description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož
@@ -10362,6 +10593,10 @@ sk:
               display_name: Udalosti
             end_of_course_project:
               display_name: Záverečný projekt
+          student_description: Vytvor programy s postupnosťami, cyklami a udalosťami.
+            Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia
+            problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš
+            svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
         coursed-2021:
           title: Kurz D (2019)
           description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou
@@ -10440,6 +10675,9 @@ sk:
               display_name: Digitálne občianstvo
             end_of_course_project:
               display_name: Záverečný projekt
+          student_description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov
+            s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania
+            sa oboznámia aj s významom pojmu "digitálne občianstvo".
         coursee-2021:
           title: Kurz E (2019)
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami
@@ -10515,6 +10753,10 @@ sk:
               display_name: Vplyv Informatiky
             end_of_course_project:
               display_name: Záverečný projekt
+          student_description: Začneš programovať s algoritmami, cyklami, podmienkami
+            a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
+            nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi
+            a rodinou.
         coursef-2021:
           title: Kurz F (2019)
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a
@@ -10617,6 +10859,8 @@ sk:
             Snowflakes with Anna and Elsa:
               key: Snehové vločky s Annou a Elsou
               name: Snehové vločky s Annou a Elsou
+            'Looking Ahead with Minecraft ':
+              name: Pohľad do budúcnosti s Minecraftom
             If/Else with Bee:
               key: Podmienky "ak/inak" s včelou
               name: Podmienky "ak/inak" s včelou
@@ -10672,8 +10916,6 @@ sk:
               key: Záverečný projekt
               name: Záverečný projekt
           lesson_groups:
-            csf_warmup:
-              display_name: Úvodná aktivita
             csf_sequencing:
               display_name: Postupnosť
             csf_loops:
@@ -10690,6 +10932,9 @@ sk:
               display_name: Objekt "sprite"
             end_of_course_project:
               display_name: Záverečný projekt
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         pre-express-2021:
           title: Zrýchlený kurz pre predškolákov (2020)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -10705,9 +10950,13 @@ sk:
             Sequencing with Scrat:
               key: Postupnosť krokov so Scratom
               name: Postupnosť krokov so Scratom
+            Programming in with Angry Birds:
+              name: Programovanie s Angry Birds
             Programming with Rey and BB-8:
               key: Programovanie s Rey a BB-8
               name: Programovanie s Rey a BB-8
+            Programming in Harvester:
+              name: Programovanie so Záhradníčkou
             Loops with Scrat:
               key: Cykly so Scratom
               name: Cykly so Scratom
@@ -10733,14 +10982,17 @@ sk:
               display_name: Cykly
             csf_events:
               display_name: Udalosti
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
         csf-2021-pilot:
           lessons:
             Learning Sprites with Sprite Lab:
               name: Plávajúca ryba so Sprite Labom
             Virus Simulation for Code Bytes:
               name: Kódovanie nákazy
-            lesson-1:
-              name: Premenné v obálkach
+            Course F Introduction:
+              name: Predstavenie Sprite Labu
           lesson_groups:
             ramp_up:
               display_name: Úvod
@@ -10748,3 +11000,48 @@ sk:
               display_name: Simulácia napadnutia
             lessonGroup-3:
               display_name: Premenné
+            Sprites:
+              display_name: Objekt "sprite"
+        csd4-preview-2021:
+          lessons:
+            Analysis of Design:
+              key: Analýza dizajnu
+              name: Analýza dizajnu
+            Digital Design:
+              key: Digitálny dizajn
+              name: Digitálny dizajn
+            CS Discoveries Post Course survey:
+              key: 'Objavujeme informatiku: Záverečný dotazník'
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+            Digital Mode in App Lab:
+              name: Digitálny dizajn
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
+            csd4_2:
+              display_name: 'Kapitola 2: Prototypovanie aplikácií'
+            csd5_2:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+            cspSurvey:
+              display_name: Dotazník
+            csdSurvey:
+              display_name: Dotazník
+        csd5-preview-2021:
+          lessons:
+            CS Discoveries Post Course survey:
+              key: 'Objavujeme informatiku: Záverečný dotazník'
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            csd5_2:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+            cspSurvey:
+              display_name: Dotazník
+        contagion-pilot:
+          description_short: Pomocou programu Sprite Lab naprogramujte simuláciu nákazy
+            vírusom.
+          description: Pomocou programu Sprite Lab naprogramujte simuláciu nákazy
+            vírusom.
+          student_description: Pomocou programu Sprite Lab naprogramujte simuláciu
+            nákazy vírusom.
