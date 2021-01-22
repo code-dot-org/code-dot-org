@@ -16,7 +16,6 @@
 class Foorm::Library < ApplicationRecord
   include Seeded
 
-  #to do: make these name and version instead of library_name and library_version
   has_many :library_questions, primary_key: [:name, :version], foreign_key: [:library_name, :library_version]
 
   def self.setup
