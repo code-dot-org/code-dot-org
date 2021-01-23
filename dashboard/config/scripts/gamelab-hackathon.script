@@ -1,6 +1,6 @@
 login_required true
 
-lesson 'Middle_School_Hackathon', display_name: 'Middle_School_Hackathon'
+lesson 'Middle_School_Hackathon', display_name: 'Middle_School_Hackathon', has_lesson_plan: false
 level 'Middle School Hackathon Pt 1'
 level 'Middle School Hackathon Pt 2'
 

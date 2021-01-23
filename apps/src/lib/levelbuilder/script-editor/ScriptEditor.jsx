@@ -134,7 +134,7 @@ class ScriptEditor extends React.Component {
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
       lessonLevelData:
         this.props.initialLessonLevelData ||
-        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name'\n",
+        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n",
       hasVerifiedResources: this.props.initialHasVerifiedResources,
       hasLessonPlan: this.props.initialHasLessonPlan,
       curriculumPath: this.props.initialCurriculumPath,

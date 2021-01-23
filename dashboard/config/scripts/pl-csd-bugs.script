@@ -1,6 +1,6 @@
 login_required true
 
-lesson 'CSD Workshop 1 Bugs', display_name: 'CSD Workshop 1 Bugs'
+lesson 'CSD Workshop 1 Bugs', display_name: 'CSD Workshop 1 Bugs', has_lesson_plan: false
 level 'CSD-PL AYWS1 Debugging Intro', named: true
 level 'CSD U3 drawing practice 1'
 level 'CSD U3 drawing practice 3'
