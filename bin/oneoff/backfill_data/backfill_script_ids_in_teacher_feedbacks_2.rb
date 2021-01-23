@@ -32,20 +32,22 @@ def update_script_ids
   puts "starting backfilling script_ids"
   feedbacks_without_script_id.find_in_batches(batch_size: 1000) do |batch|
     print '.'
-    ActiveRecord::Base.transaction do
-      batch.each do |teacher_feedback|
-        level = teacher_feedback.level
-        # if the level appears in only one stable script, set its script id to
-        # point to that script.
-        stable_scripts = level.script_levels.map(&:script).select(&:is_stable)
-        if stable_scripts.count == 1
-          script = stable_scripts.first
-          teacher_feedback.update!(script_id: script.id)
+    batch.each do |teacher_feedback|
+      ActiveRecord::Base.transaction do
+        begin
+          level = teacher_feedback.level
+          # if the level appears in only one stable script, set its script id to
+          # point to that script.
+          stable_scripts = level.script_levels.map(&:script).select(&:is_stable)
+          if stable_scripts.count == 1
+            script = stable_scripts.first
+            teacher_feedback.update!(script_id: script.id)
+          end
+        rescue => e
+          puts "Error updating teacher feedback id #{teacher_feedback.id}: #{e}"
         end
-      rescue => e
-        puts "Error updating teacher feedback id #{teacher_feedback.id}: #{e}"
+        raise ActiveRecord::Rollback unless $options[:actually_update]
       end
-      raise ActiveRecord::Rollback unless $options[:actually_update]
     end
   end
   puts "finished backfilling script_ids!"
