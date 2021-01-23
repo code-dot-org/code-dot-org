@@ -5061,7 +5061,7 @@
       "key": "98d19496-66aa-42da-b213-0041a105222f",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share their observations and analyses of the program. \r\n\r\nEncourage the class to consider that there are multiple approaches to programming anything, but that there may be clues as to how something was created. In particular, when they are sharing their thoughts ask them to specify the following :\r\n\r\n* Clues that suggest a sprite was used\r\n* Clues that suggest a conditional was used\r\n* Clues that suggest an iterator pattern was used\r\n\r\n**Display:** Show students the rubric.  Review the different components of the rubric with them to make sure they understand the components of the project.\r\n\r\n\r\n**Question of the Day:  What skills and practices are important when creating an interactive program?**"
+        "description": "**Discuss:** Have students share their observations and analyses of the program. \n\nEncourage the class to consider that there are multiple approaches to programming anything, but that there may be clues as to how something was created. In particular, when they are sharing their thoughts ask them to specify the following:\n\n* Clues that suggest a sprite was used\n* Clues that suggest a conditional was used\n* Clues that suggest an iterator pattern was used\n\n**Display:** Show students the rubric.  Review the different components of the rubric with them to make sure they understand the components of the project.\n\n\n**Question of the Day:  What skills and practices are important when creating an interactive program?**"
       },
       "seeding_key": {
         "activity_section.key": "98d19496-66aa-42da-b213-0041a105222f",
@@ -5084,7 +5084,7 @@
       "key": "9ba73a20-ba7f-42ae-9360-0b5607bd0498",
       "position": 4,
       "properties": {
-        "description": "&fa-desktop; **Transition: **Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.",
+        "description": "&fa-desktop; **Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.",
         "name": " Levels: Implementing Interactive Card (Level 3 - 7)\r"
       },
       "seeding_key": {
@@ -5120,7 +5120,7 @@
       "key": "b2ad1d43-99f9-40fa-9f88-d8b42f8c723e",
       "position": 7,
       "properties": {
-        "description": "Using the rubric, students should assess their own project before submitting it.\r\n\r\n\r\n&fa-desktop; Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "Using the rubric, students should assess their own project before submitting it.\n\n&fa-desktop; Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflect\r"
       },
       "seeding_key": {
