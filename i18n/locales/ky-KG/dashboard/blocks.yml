@@ -252,6 +252,7 @@ ky:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
+            '"speed"': ылдамдык
       gamelab_getTime:
         options:
           UNIT:
@@ -299,12 +300,20 @@ ky:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': көк желе
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': суу алдында
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': кыш
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': орто
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
+            '"speed"': ылдамдык
       gamelab_setSizes:
         options:
           PROPERTY:

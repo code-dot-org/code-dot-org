@@ -52,6 +52,7 @@ my:
         mc:
           title: Minecraft Hour of Code
           description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
+          student_description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
         algebraPD1:
           lessons:
             Teacher Dashboard:
@@ -117,6 +118,7 @@ my:
               name: 'Minecraft\: လူစွမ်းကောင်း၏ ခရီးစဉ် Hour of Code'
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+          student_description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်
         csd6-old:
           lessons:
             Lists:
@@ -321,6 +323,10 @@ my:
               name: Variables
             Text:
               name: စာ
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
         csd3-2021:
           lessons:
             Variables:

@@ -3,44 +3,44 @@ peer_reviews_to_complete 5
 login_required true
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Introduction to Teachercon', display_name: 'Introduction to Teachercon'
+lesson 'Introduction to Teachercon', display_name: 'Introduction to Teachercon', has_lesson_plan: false
 level 'Welcome to TeacherCon!', named: true
 level 'TeacherCon Agenda', named: true
 level 'TeacherCon Self-Assessment', named: true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Lesson 1,4', display_name: 'Lesson 1,4'
+lesson 'Lesson 1,4', display_name: 'Lesson 1,4', has_lesson_plan: false
 level 'U1L4 Lesson Overview', named: true
 
-lesson 'Lesson 1,6', display_name: 'Lesson 1,6'
+lesson 'Lesson 1,6', display_name: 'Lesson 1,6', has_lesson_plan: false
 level 'U1L6 Lesson Overview', named: true
 
-lesson 'Lesson 1,9', display_name: 'Lesson 1,9'
+lesson 'Lesson 1,9', display_name: 'Lesson 1,9', has_lesson_plan: false
 level 'U1L9 Lesson Overview', named: true
 
-lesson 'Lesson 1,10', display_name: 'Lesson 1,10'
+lesson 'Lesson 1,10', display_name: 'Lesson 1,10', has_lesson_plan: false
 level 'U1L10 Lesson Overview', named: true
 
-lesson 'Lesson 1,11', display_name: 'Lesson 1,11'
+lesson 'Lesson 1,11', display_name: 'Lesson 1,11', has_lesson_plan: false
 level 'U1L11 Lesson Overview', named: true
 
-lesson 'Lesson 2,2', display_name: 'Lesson 2,2'
+lesson 'Lesson 2,2', display_name: 'Lesson 2,2', has_lesson_plan: false
 level 'U2L2 Lesson Overview', named: true
 
-lesson 'Lesson 2,3', display_name: 'Lesson 2,3'
+lesson 'Lesson 2,3', display_name: 'Lesson 2,3', has_lesson_plan: false
 level 'U2L3 Lesson Overview', named: true
 
-lesson 'Lesson 2,10', display_name: 'Lesson 2,10'
+lesson 'Lesson 2,10', display_name: 'Lesson 2,10', has_lesson_plan: false
 level 'U2L10 Lesson Overview', named: true
 
-lesson 'Test stage with bubbles', display_name: 'Test stage with bubbles'
+lesson 'Test stage with bubbles', display_name: 'Test stage with bubbles', has_lesson_plan: false
 level 'cspu5_assess1_eventprograms'
 level 'cspu5_assess1_elementid'
 level 'cspu5_assess1_debugging'
 level 'cspu5_assess1_codevalues'
 
 lesson_group 'practice', display_name: 'Teaching Practices'
-lesson 'Group Work and Peer Learning', display_name: 'Group Work and Peer Learning'
+lesson 'Group Work and Peer Learning', display_name: 'Group Work and Peer Learning', has_lesson_plan: false
 level 'Exploring Practices and Strategies during TeacherCon', named: true
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Collaborative Learning and Group Work: Description and Strategies', named: true
@@ -50,7 +50,7 @@ level 'Wednesday Report: Balancing Teachers and Tools in Unit 1', named: true
 level 'Peer Review Level 1 - Tuesday Report', named: true
 level 'Peer Review Level 2 - Wednesday Report', named: true
 
-lesson 'Balancing Teachers and Tools', display_name: 'Balancing Teachers and Tools'
+lesson 'Balancing Teachers and Tools', display_name: 'Balancing Teachers and Tools', has_lesson_plan: false
 level 'Exploring Practices and Strategies during TeacherCon', named: true
 level 'Overview: Balancing Teachers and Tools', named: true
 level 'Peer Review Level 1 - Tuesday Report', named: true

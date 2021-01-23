@@ -2,7 +2,7 @@ login_required true
 version_year '2020'
 
 lesson_group 'k5_getting_started_1', display_name: 'Getting Started'
-lesson 'Welcome to "Teaching Computer Science Fundamentals"', display_name: 'Welcome to "Teaching Computer Science Fundamentals"'
+lesson 'Welcome to "Teaching Computer Science Fundamentals"', display_name: 'Welcome to "Teaching Computer Science Fundamentals"', has_lesson_plan: false
 level 'OPD-K5 About_copy_2020'
 level 'OPD-K5 WhatIsCS_2020'
 level 'OPD-K5 Why teach CS_copy_2020'
@@ -11,7 +11,7 @@ level 'OPD-K5 CS Tips_copy_2020'
 level 'OPD-K5 Participation_copy_2020'
 level 'OPD-K5 whats your plan_2020'
 
-lesson 'Understanding the Computer Science Fundamentals Courses', display_name: 'Understanding the Computer Science Fundamentals Courses'
+lesson 'Understanding the Computer Science Fundamentals Courses', display_name: 'Understanding the Computer Science Fundamentals Courses', has_lesson_plan: false
 level 'OPD-K5 CS Video_copy_2020'
 level 'OPD-K5 Welcome 2_copy_2020'
 level 'OPD-K5 role_of_teacher_2020'
@@ -22,7 +22,7 @@ level 'OPD-K5 What is Mastery_copy_2020'
 level 'OPD-K5 Stage2Go_copy_2020'
 
 lesson_group 'k5_basic_concepts_1', display_name: 'Basic Coding Concepts and Teaching Practices'
-lesson 'Sequencing', display_name: 'Sequencing'
+lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
 level 'OPD-K5 Stage3Start_copy_2020'
 level 'OPD-K5 sequencing introduced_2020'
 level 'OPD-K5 Stage3aGo_copy_2020'
@@ -36,7 +36,7 @@ level 'OPD-K5 using lesson plans_2020'
 level 'OPD-K5 lesson implementation planning_2020'
 level 'OPD-K5 sequencing free response_2020'
 
-lesson 'Loops', display_name: 'Loops'
+lesson 'Loops', display_name: 'Loops', has_lesson_plan: false
 level 'OPD-K5 Stage4Start_copy_2020'
 level 'OPD-K5 loops introduced_2020'
 level 'OPD-K5 Stage4Go_copy_2020'
@@ -50,7 +50,7 @@ level 'courseC_starWars_loops8_2020', challenge: true
 level 'OPD-K5 Pair_copy_2020'
 level 'OPD-K5 loops free response_2020'
 
-lesson 'Events', display_name: 'Events'
+lesson 'Events', display_name: 'Events', has_lesson_plan: false
 level 'OPD-K5 Stage7Start_copy_2020'
 level 'OPD-K5 events introduced_2020'
 level 'OPD-K5 Stage7Go_copy_2020'
@@ -63,7 +63,7 @@ level 'OPD-K5-events-6_2020'
 level 'OPD-K5 debugging_2020'
 level 'OPD-K5 events free response_2020'
 
-lesson 'Conditionals', display_name: 'Conditionals'
+lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: false
 level 'OPD-K5 Stage5Start_copy_2020'
 level 'OPD-K5 conditionals introduced_2020'
 level 'OPD-K5 Stage5Go_copy_2020'
@@ -76,7 +76,7 @@ level 'courseD_bee_conditionals5_2020', challenge: true
 level 'OPD-K5 journaling_2020'
 level 'OPD-K5 conditionals free response_2020'
 
-lesson 'End of Course projects', display_name: 'End of Course projects'
+lesson 'End of Course projects', display_name: 'End of Course projects', has_lesson_plan: false
 level 'OPD-K5 project_2020'
 level 'OPD-K5 projects introduction_2020'
 level 'OPD-K5-projects-1_2020'
@@ -90,7 +90,7 @@ level 'OPD-K5 projects free response_2020'
 level 'OPD-K5 where to next_2020'
 
 lesson_group 'k5_diving_deeper_1', display_name: 'Diving Deeper: Courses E and F'
-lesson 'Functions', display_name: 'Functions'
+lesson 'Functions', display_name: 'Functions', has_lesson_plan: false
 level 'OPD-K5 diving deeper intro_2020'
 level 'OPD-K5 Stage6Start_copy_2020'
 level 'OPD-K5 functions introduced_2020'
@@ -104,7 +104,7 @@ level 'courseE_artist_functions4_2020'
 level 'courseE_artist_functions5_2020'
 level 'OPD-K5 functions free response_2020'
 
-lesson 'Variables', display_name: 'Variables'
+lesson 'Variables', display_name: 'Variables', has_lesson_plan: false
 level 'OPD-K5 variables_2020'
 level 'OPD-K5 variables introduction_2020'
 level 'OPD-K5 variables unplugged_2020'
@@ -117,7 +117,7 @@ level 'OPD-K5-variables-6_2020'
 level 'OPD-K5-variables-7_2020'
 level 'OPD-K5 variables free response_2020'
 
-lesson 'For Loops', display_name: 'For Loops'
+lesson 'For Loops', display_name: 'For Loops', has_lesson_plan: false
 level 'OPD-K5 for loops intro_2020'
 level 'OPD-K5 for loops introduction_2020'
 level 'OPD-K5 for loops_2020'
@@ -130,7 +130,7 @@ level 'OPD-K5-forloops-6_2020'
 level 'OPD-K5-forloops-7_2020'
 level 'OPD-K5 for loops free response_2020'
 
-lesson 'Sprite Lab', display_name: 'Sprite Lab'
+lesson 'Sprite Lab', display_name: 'Sprite Lab', has_lesson_plan: false
 level 'OPD-K5 sprite lab_2020'
 level 'OPD-K5 sprite lab introduction_2020'
 level 'OPD-K5 sprite lab unplugged_2020'
@@ -145,7 +145,7 @@ level 'OPD-K5-spritelab-7_2020'
 level 'OPD-K5 sprite lab free response_2020'
 
 lesson_group 'k5_next_steps_1', display_name: 'Next Steps'
-lesson 'Reviewing your reflections', display_name: 'Reviewing your reflections'
+lesson 'Reviewing your reflections', display_name: 'Reviewing your reflections', has_lesson_plan: false
 level 'OPD-K5 Reviewing Reflections_2020'
 level 'OPD-K5 whats your plan_2020'
 level 'OPD-K5 sequencing free response_2020'
@@ -158,7 +158,7 @@ level 'OPD-K5 for loops free response_2020'
 level 'OPD-K5 sprite lab free response_2020'
 level 'OPD-K5 projects free response_2020'
 
-lesson 'Next steps', display_name: 'Next steps'
+lesson 'Next steps', display_name: 'Next steps', has_lesson_plan: false
 level 'OPD-K5 Stage10Start_copy_2020'
 level 'OPD-K5 Stage9Start_copy_2020'
 level 'OPD-K5 CS Courses_copy_2020'

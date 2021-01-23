@@ -9,22 +9,22 @@ nl:
         options:
           GROUP:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           MOVE1:
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Dab: Dar
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
@@ -36,7 +36,7 @@ nl:
           MOVE2:
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Dab: Dar
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
@@ -63,16 +63,16 @@ nl:
         options:
           GROUP:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': alle eenhoorns
           MOVE:
@@ -81,7 +81,7 @@ nl:
             '"rand"': "(Willekeurig)"
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Dab: Dar
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
@@ -99,7 +99,7 @@ nl:
             '"rand"': "(Willekeurig)"
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Dab: Dar
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
@@ -123,16 +123,16 @@ nl:
         options:
           GROUP:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           PROPERTY:
@@ -147,25 +147,25 @@ nl:
         options:
           GROUP:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           MOVE:
             '"rand"': "(Willekeurig)"
-            MOVES.XBend: Buigen
+            MOVES.XBend: Buig
             MOVES.Roll: Body Roll
-            MOVES.XClapSide: Klappen
+            MOVES.XClapSide: Klap
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Dab: Dar
+            MOVES.Dab: Dab
             MOVES.XFever: Disco
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
@@ -174,7 +174,7 @@ nl:
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Hoofd + Heupen
             MOVES.XHop: Hop
-            MOVES.XHighKick: Schop
+            MOVES.XHighKick: Trap
             MOVES.XKnee: Knie
             MOVES.XKneel: Kniel
             MOVES.XOle: Ole
@@ -189,11 +189,11 @@ nl:
         options:
           MOVE:
             '"rand"': "(Willekeurig)"
-            MOVES.XBend: Buigen
+            MOVES.XBend: Buig
             MOVES.Roll: Body Roll
-            MOVES.XClapSide: Klappen
+            MOVES.XClapSide: Klap
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Dab: Dar
+            MOVES.Dab: Dab
             MOVES.XFever: Disco
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
@@ -202,7 +202,7 @@ nl:
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Hoofd + Heupen
             MOVES.XHop: Hop
-            MOVES.XHighKick: Schop
+            MOVES.XHighKick: Trap
             MOVES.XKnee: Knie
             MOVES.XKneel: Kniel
             MOVES.XOle: Ole
@@ -264,7 +264,7 @@ nl:
           DANCE:
             MOVES.ClapHigh: Hoog klappen
             MOVES.Clown: Gangnam
-            MOVES.Dab: Dar
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
@@ -302,16 +302,16 @@ nl:
         options:
           GROUP:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           LOCATION:
@@ -330,16 +330,16 @@ nl:
         options:
           GROUP:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           FORMAT:
@@ -367,7 +367,7 @@ nl:
             '"DOG"': hond
             '"DUCK"': eend
             '"FROG"': Kikker
-            '"MOOSE"': alle elanden
+            '"MOOSE"': elanden
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
             '"SHARK"': Haai
@@ -447,7 +447,7 @@ nl:
             '"FROG"': Kikkers
             '"MOOSE"': Eland
             '"PINEAPPLE"': Ananassen
-            '"ROBOT"': alle robots
+            '"ROBOT"': robots
             '"SHARK"': Haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
@@ -568,16 +568,16 @@ nl:
         options:
           GROUP:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           SPEED:
@@ -642,16 +642,16 @@ nl:
         options:
           GROUP:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           PROPERTY:
@@ -678,16 +678,16 @@ nl:
         options:
           GROUP:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           PROPERTY:
@@ -705,16 +705,16 @@ nl:
         options:
           THIS:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
       Dancelab_setTintEachInline:
@@ -722,16 +722,16 @@ nl:
         options:
           THIS:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
       Dancelab_setTintInline:
@@ -747,16 +747,16 @@ nl:
         options:
           THIS:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           VISIBILITY:
@@ -782,16 +782,16 @@ nl:
         options:
           GROUP:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           PROPERTY:
@@ -827,16 +827,16 @@ nl:
         options:
           GROUP:
             sprites: alle
-            '"ALIEN"': alle buitenaardse wezens
-            '"BEAR"': alle beren
-            '"CAT"': alle katten
-            '"DOG"': alle honden
-            '"DUCK"': alle eenden
-            '"FROG"': alle kikkers
-            '"MOOSE"': alle elanden
-            '"PINEAPPLE"': alle ananassen
-            '"ROBOT"': alle robots
-            '"SHARK"': alle haaien
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           PROPERTY:
@@ -1004,6 +1004,7 @@ nl:
             '"y"': y positie
             '"direction"': bewegingsrichting
             '"tint"': tint
+            '"speed"': snelheid
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1131,6 +1132,8 @@ nl:
             '"West"': West
       gamelab_moveToward:
         text: verplaats {SPRITE} pixels {DISTANCE} richting {TARGET}
+      gamelab_newSpritePointer:
+        text: geklikt {SPRITE}
       gamelab_objectSpritePointer:
         text: geklikt {SPRITE}
       gamelab_playSound:
@@ -1182,6 +1185,13 @@ nl:
             undefined: Geen
       gamelab_setBackgroundImageAs:
         text: set achtergrond naar {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': middellang
+            '100': large
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} tot {VAL}
         options:
@@ -1191,6 +1201,7 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+            '"speed"': snelheid
       gamelab_setSizes:
         text: stel {SPRITE} {PROPERTY} in op {N}%
         options:
@@ -1288,6 +1299,8 @@ nl:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": geen vis
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mijn-label
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": niet mijn-label
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1433,7 +1446,7 @@ nl:
           DANCE:
             MOVES.ClapHigh: Hoog klappen
             MOVES.Clown: Gangnam
-            MOVES.Dab: Dar
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss

@@ -10,23 +10,42 @@ import resourcesEditor, {
 import {Provider} from 'react-redux';
 import {
   sampleActivities,
+  sampleActivityForLessonWithoutLessonPlan,
   searchOptions
 } from '../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 
-const createStore = () => {
+const createStoreWithLessonPlan = () => {
   registerReducers({...reducers, resources: resourcesEditor});
   const store = createStoreWithReducers();
   store.dispatch(init(sampleActivities, searchOptions));
   store.dispatch(initResources([]));
   return store;
 };
+
+const createStoreWithoutLessonPlan = () => {
+  registerReducers({...reducers, resources: resourcesEditor});
+  const store = createStoreWithReducers();
+  store.dispatch(
+    init([sampleActivityForLessonWithoutLessonPlan], searchOptions)
+  );
+  store.dispatch(initResources([]));
+  return store;
+};
 export default storybook => {
   storybook.storiesOf('ActivitiesEditor', module).addStoryTable([
     {
-      name: 'ActivitiesEditor',
+      name: 'ActivitiesEditor For Lesson With Lesson Plan',
       story: () => (
-        <Provider store={createStore()}>
-          <ActivitiesEditor />
+        <Provider store={createStoreWithLessonPlan()}>
+          <ActivitiesEditor hasLessonPlan={true} />
+        </Provider>
+      )
+    },
+    {
+      name: 'ActivitiesEditor For Lesson Without Lesson Plan',
+      story: () => (
+        <Provider store={createStoreWithoutLessonPlan()}>
+          <ActivitiesEditor hasLessonPlan={false} />
         </Provider>
       )
     }

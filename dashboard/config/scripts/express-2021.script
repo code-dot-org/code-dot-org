@@ -1,6 +1,7 @@
 hideable_lessons true
 teacher_resources [["teacherForum", "https://forum.code.org/c/csf"]]
 lesson_extras_available true
+has_lesson_plan true
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'express'
@@ -10,7 +11,7 @@ is_course true
 is_migrated true
 
 lesson_group 'csf_warmup', display_name: 'Warm Up'
-lesson 'Dance Party', display_name: 'Dance Party'
+lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: true
 level 'CourseD_Dance_2020_vid1_2021'
 level 'CourseD_Dance_2020_01_2021'
 level 'CourseD_Dance_2020_vid2_2021'
@@ -30,7 +31,7 @@ bonus 'CourseD_Dance_2020_bonus1_2021'
 bonus 'CourseD_Dance_2020_bonus3_2021'
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
-lesson 'Programming with Angry Birds', display_name: 'Programming with Angry Birds'
+lesson 'Programming with Angry Birds', display_name: 'Programming with Angry Birds', has_lesson_plan: true
 level 'courseC_video_maze_2021'
 level 'courseC_maze_programming1_2021'
 level 'courseC_maze_programming2_2021'
@@ -45,7 +46,7 @@ level 'courseC_maze_programming9_2021'
 bonus 'courseC_maze_programming_challenge1_2021'
 bonus 'courseC_maze_programming_challenge2_2021'
 
-lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat'
+lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat', has_lesson_plan: true
 level 'courseC_video_debugging_2021'
 level 'courseC_maze_debugging1_2021'
 level 'courseC_maze_debugging2_2021'
@@ -59,7 +60,7 @@ level 'express_maze_debugging9_2021'
 bonus 'courseC_maze_debugging_challenge1_2021'
 bonus 'courseC_maze_debugging_challenge2_2021'
 
-lesson 'Collecting Treasure with Laurel', display_name: 'Collecting Treasure with Laurel'
+lesson 'Collecting Treasure with Laurel', display_name: 'Collecting Treasure with Laurel', has_lesson_plan: true
 level 'courseC_video_collector_2021'
 level 'courseC_collector_prog1_2021'
 level 'courseC_collector_prog2_2021'
@@ -76,7 +77,7 @@ level 'grade2_collector_10_2021'
 bonus 'courseC_collector_prog_challenge1_2021'
 bonus 'courseC_collector_prog_challenge2_2021'
 
-lesson 'Creating Art with Code', display_name: 'Creating Art with Code'
+lesson 'Creating Art with Code', display_name: 'Creating Art with Code', has_lesson_plan: true
 level 'courseC_video_artist_2021'
 level 'courseC_artist_prog1_2021'
 level 'courseC_artist_prog2_2021'
@@ -91,7 +92,7 @@ bonus 'courseC_artist_prog_challenge1_2021'
 bonus 'courseC_artist_prog_challenge2a_2021'
 
 lesson_group 'csf_loops', display_name: 'Loops'
-lesson 'Loops with Rey and BB-8', display_name: 'Loops with Rey and BB-8'
+lesson 'Loops with Rey and BB-8', display_name: 'Loops with Rey and BB-8', has_lesson_plan: true
 level 'bb8_skinOverview_C-F_video_2021'
 level 'courseC_starWars_loops1_2021'
 level 'courseC_starWars_loops1_predict1_2021'
@@ -109,7 +110,7 @@ level 'courseC_starWars_loops11_2021'
 bonus 'courseC_maze_loops_challenge1a_2021'
 bonus 'courseC_collector_loops_challenge2_2021'
 
-lesson 'Sticker Art with Loops', display_name: 'Sticker Art with Loops'
+lesson 'Sticker Art with Loops', display_name: 'Sticker Art with Loops', has_lesson_plan: true
 level 'courseC_artist_loopsPrePre1a_2021'
 level 'courseC_artist_loopsPre1a_2021'
 level 'courseC_artist_loop1_2021'
@@ -123,7 +124,7 @@ level 'courseC_artist_loops6a_2021'
 level 'courseC_artist_loops7a_2021'
 level 'courseC_artist_loops8a_2021'
 
-lesson 'Nested Loops in Maze', display_name: 'Nested Loops in Maze'
+lesson 'Nested Loops in Maze', display_name: 'Nested Loops in Maze', has_lesson_plan: true
 level 'courseD_bee_nestedLoops1a_2021'
 level 'courseD_bee_nestedLoops1_2021'
 level 'courseD_video_nestedLoops_2021'
@@ -140,7 +141,7 @@ level 'courseD_bee_nestedLoops9_predict2_2021'
 bonus 'courseD_harvester_nested_loops_challenge1_2021'
 bonus 'courseD_collector_nested_loops_challenge2_2021'
 
-lesson 'Snowflakes with Anna and Elsa', display_name: 'Snowflakes with Anna and Elsa'
+lesson 'Snowflakes with Anna and Elsa', display_name: 'Snowflakes with Anna and Elsa', has_lesson_plan: true
 level 'courseD_artist_1_2021'
 level 'courseD_artist_2_2021'
 level 'courseD_artist_3_2021'
@@ -148,7 +149,7 @@ level 'courseD_artist_4_2021'
 level 'courseD_artist_5_2021'
 level 'courseD_artist_6_2021'
 
-lesson 'Looking Ahead with Minecraft ', display_name: 'Looking Ahead with Minecraft'
+lesson 'Looking Ahead with Minecraft ', display_name: 'Looking Ahead with Minecraft', has_lesson_plan: true
 level 'Overworld Move to Sheep_2021'
 level 'Overworld Chop Tree_2021'
 level 'Overworld Shear Sheep_2021'
@@ -165,7 +166,7 @@ level 'Overworld Powered Minecart_2021'
 level 'Overworld Free Play 20x20_2021'
 
 lesson_group 'csf_conditionals', display_name: 'Conditionals'
-lesson 'If/Else with Bee', display_name: 'If/Else with Bee'
+lesson 'If/Else with Bee', display_name: 'If/Else with Bee', has_lesson_plan: true
 level 'courseD_bee_conditionalsVid1_2021'
 level 'courseD_bee_conditionals1_predict1_2021'
 level 'courseD_bee_conditionals2_2021'
@@ -182,7 +183,7 @@ level 'courseD_bee_conditionals10_2021'
 bonus 'courseD_bee_conditionals_challenge1_2021'
 bonus 'courseD_bee_conditionals_challenge2_2021'
 
-lesson 'While Loops with the Farmer', display_name: 'While Loops with the Farmer'
+lesson 'While Loops with the Farmer', display_name: 'While Loops with the Farmer', has_lesson_plan: true
 level 'courseD_farmer_while1_2021'
 level 'courseD_farmer_while2_2021'
 level 'courseD_farmer_while3_2021'
@@ -198,7 +199,7 @@ level 'courseD_farmer_while10_2021'
 level 'courseD_farmer_while10_predict2_2021'
 bonus 'courseD_farmer_while_challenge1_2021'
 
-lesson 'Conditionals in Minecraft: Voyage Aquatic', display_name: 'Conditionals in Minecraft: Voyage Aquatic'
+lesson 'Conditionals in Minecraft: Voyage Aquatic', display_name: 'Conditionals in Minecraft: Voyage Aquatic', has_lesson_plan: true
 level 'CourseE_HOC 2018 Level_1_2021'
 level 'CourseE_HOC 2018 Level_2_2021'
 level 'CourseE_HOC 2018 Level_3_2021'
@@ -211,7 +212,7 @@ level 'CourseE_HOC 2018 Level_9b_2021'
 level 'CourseE_HOC 2018 Level_10_2021'
 level 'CourseE_HOC 2018 Level_11_2021'
 
-lesson 'Until Loops in Maze', display_name: 'Until Loops in Maze'
+lesson 'Until Loops in Maze', display_name: 'Until Loops in Maze', has_lesson_plan: true
 level 'courseD_maze_until1_2021'
 level 'courseD_video_repeatUntil_2021'
 level 'courseD_maze_until2_predict1_2021'
@@ -224,7 +225,7 @@ level 'courseD_maze_until9_2021', challenge: true
 level 'courseD_maze_until10_2021'
 level 'courseD_maze_until10_predict2_2021'
 
-lesson 'Harvesting with Conditionals', display_name: 'Harvesting with Conditionals'
+lesson 'Harvesting with Conditionals', display_name: 'Harvesting with Conditionals', has_lesson_plan: true
 level 'harvester_skinOverview_video_2021'
 level 'courseD_farmer_condLoops1_2021'
 level 'courseD_farmer_condLoops2_2021'
@@ -240,7 +241,7 @@ bonus 'courseD_farmer_condLoops_challenge1_2021'
 bonus 'courseD_farmer_condLoops_challenge2_2021'
 
 lesson_group 'csf_functions', display_name: 'Functions'
-lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft'
+lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft', has_lesson_plan: true
 level 'MC_HOC_2017_01_RETRY_2021'
 level 'MC_HOC_2017_02_Cole_2021'
 level 'MC_HOC_2017_03_Cole_2021'
@@ -254,7 +255,7 @@ level 'MC_HOC_2017_10_RETRY_2021'
 level 'MC_HOC_2017_Ali_2021'
 level 'MC_HOC_2017_FP20x20_2021'
 
-lesson 'Functions with Harvester', display_name: 'Functions with Harvester'
+lesson 'Functions with Harvester', display_name: 'Functions with Harvester', has_lesson_plan: true
 level 'harvester_skinOverview_video_2021'
 level 'courseE_farmer_functions1_2021'
 level 'courseE_farmer_functions1a_2021'
@@ -270,7 +271,7 @@ level 'courseE_farmer_functions10a1_2021', challenge: true
 level 'courseE_farmer_functions13_2021'
 level 'courseE_farmer_functions11_predict_2021'
 
-lesson 'Functions with Artist', display_name: 'Functions with Artist'
+lesson 'Functions with Artist', display_name: 'Functions with Artist', has_lesson_plan: true
 level 'courseE_artist_functions_predict1_2021'
 level 'courseE_artist_functions2_2021'
 level 'courseE_artist_functions3_2021'
@@ -288,7 +289,7 @@ bonus 'courseE_artist_functions_challenge1_2021'
 bonus 'courseE_artist_functions_challenge2_2021'
 
 lesson_group 'csf_variables', display_name: 'Variables'
-lesson 'Variables with Artist', display_name: 'Variables with Artist'
+lesson 'Variables with Artist', display_name: 'Variables with Artist', has_lesson_plan: true
 level 'grade5_artist_variables_triangles1_2021'
 level 'courseF_artist_variables2_2021'
 level 'courseF_markdown_variables_intro_2021'
@@ -301,7 +302,7 @@ level 'courseF_artist_variables6_2021'
 level 'courseF_artist_variables6a_2021'
 level 'courseF_external_variableConstant_2021'
 
-lesson 'Changing Variables with Bee', display_name: 'Changing Variables with Bee'
+lesson 'Changing Variables with Bee', display_name: 'Changing Variables with Bee', has_lesson_plan: true
 level 'courseF_bee_variables_1_2021'
 level 'courseF_bee_variables_2_2021'
 level 'courseF_bee_variables_3_2021'
@@ -311,7 +312,7 @@ level 'courseF_bee_variables_6_2021', challenge: true
 level 'courseF_bee_variables_7_2021'
 level 'courseF_bee_variables_8_2021'
 
-lesson 'Changing Variables with Artist', display_name: 'Changing Variables with Artist'
+lesson 'Changing Variables with Artist', display_name: 'Changing Variables with Artist', has_lesson_plan: true
 level 'courseF_artist_variables7_2021'
 level 'courseF_artist_variables8_2021'
 level 'courseF_artist_variables9_2021'
@@ -322,7 +323,7 @@ bonus 'courseF_artist_variables_challenge1_2021'
 bonus 'courseF_artist_variables_challenge2_2021'
 
 lesson_group 'csf_for_loops', display_name: 'For Loops'
-lesson 'For Loops with Bee', display_name: 'For Loops with Bee'
+lesson 'For Loops with Bee', display_name: 'For Loops with Bee', has_lesson_plan: true
 level 'courseF_bee_for1_2021'
 level 'courseF_bee_for2_2021'
 level 'courseF_markdown_forloops_intro_2021'
@@ -340,7 +341,7 @@ level 'courseF_markdown_forloops_end_2021'
 bonus 'courseF_bee_for_challenge1_2021'
 bonus 'courseF_bee_for_challenge2_2021'
 
-lesson 'For Loops with Artist', display_name: 'For Loops with Artist'
+lesson 'For Loops with Artist', display_name: 'For Loops with Artist', has_lesson_plan: true
 level 'courseF_video_forArtist_2021'
 level 'courseF_artist_for1_2021'
 level 'courseF_artist_for2_2021'
@@ -357,7 +358,7 @@ bonus 'courseF_artist_for_challenge1_2021'
 bonus 'courseF_artist_for_challenge2_2021'
 
 lesson_group 'csf_sprites', display_name: 'Sprites'
-lesson 'Swimming Fish in Sprite Lab', display_name: 'Swimming Fish in Sprite Lab'
+lesson 'Swimming Fish in Sprite Lab', display_name: 'Swimming Fish in Sprite Lab', has_lesson_plan: true
 level 'CourseEF_video_IntroSpriteLab_2021'
 level 'Fish Tank 1-validated_2021'
 level 'Fish Tank 2-validated_2021'
@@ -369,7 +370,7 @@ level 'Fish Tank 6-validated_2021'
 level 'Fish Tank 7-validated_2021'
 bonus 'spritelab_extras_repeat_2021'
 
-lesson 'Alien Dance Party', display_name: 'Alien Dance Party'
+lesson 'Alien Dance Party', display_name: 'Alien Dance Party', has_lesson_plan: true
 level 'Dance Party 1-validated_2021'
 level 'CDEF_video_SpritesInAction_2021'
 level 'Dance Party 2_2021'
@@ -380,7 +381,7 @@ level 'Dance Party 6_2021'
 level 'Dance Party 7_2021'
 level 'Dance Party Freeplay_2021'
 
-lesson 'Behaviors in Sprite Lab', display_name: 'Behaviors in Sprite Lab'
+lesson 'Behaviors in Sprite Lab', display_name: 'Behaviors in Sprite Lab', has_lesson_plan: true
 level 'behaviors 1_2021'
 level 'behaviors 2_2021'
 level 'behaviors 3_2021'
@@ -391,7 +392,7 @@ level 'behaviors free play_2021'
 bonus 'behaviors 6_2021'
 bonus 'behaviors 7_2021'
 
-lesson 'Virtual Pet with Sprite Lab', display_name: 'Virtual Pet with Sprite Lab'
+lesson 'Virtual Pet with Sprite Lab', display_name: 'Virtual Pet with Sprite Lab', has_lesson_plan: true
 level 'Virtual Pet 1_2021'
 level 'Virtual Pet 2_2021'
 level 'Virtual Pet 3_2021'
@@ -402,7 +403,7 @@ level 'Virtual Pet 7_2021'
 level 'Virtual Pet 8_2021'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-lesson 'End of Course Project', display_name: 'End of Course Project'
+lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: true
 level 'courseExpress_project_exemplars_2021', progression: 'Example Projects'
 level 'courseExpress_EOC_2021', progression: 'Create your project'
 

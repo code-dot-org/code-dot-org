@@ -10,6 +10,9 @@ import reducers, {
 import resourcesEditor, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import vocabulariesEditor, {
+  initVocabularies
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {Provider} from 'react-redux';
 
 $(document).ready(function() {
@@ -20,11 +23,16 @@ $(document).ready(function() {
   const activities = mapActivityDataForEditor(lessonData.activities);
   const objectives = lessonData.objectives || [];
 
-  registerReducers({...reducers, resources: resourcesEditor});
+  registerReducers({
+    ...reducers,
+    resources: resourcesEditor,
+    vocabularies: vocabulariesEditor
+  });
   const store = getStore();
 
   store.dispatch(init(activities, searchOptions));
   store.dispatch(initResources(lessonData.resources || []));
+  store.dispatch(initVocabularies(lessonData.vocabularies || []));
 
   ReactDOM.render(
     <Provider store={store}>

@@ -1011,6 +1011,7 @@ is:
             '"y"': y staða
             '"direction"': stefna hreyfingar
             '"tint"': litur
+            '"speed"': hraða
       gamelab_getThisSprite:
         text: "{CHOICE} vera"
         options:
@@ -1152,6 +1153,8 @@ is:
             '"West"': vestur
       gamelab_moveToward:
         text: færa {SPRITE} vegalengd {DISTANCE} til {TARGET}
+      gamelab_newSpritePointer:
+        text: ásmellt vera
       gamelab_objectSpritePointer:
         text: ásmellt vera
       gamelab_patrollingUpDown:
@@ -1204,6 +1207,13 @@ is:
             undefined: ekkert
       gamelab_setBackgroundImageAs:
         text: stilla bakgrunn á {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': miðlungs
+            '100': large
       gamelab_setPrompt:
         text: biðja notanda {QUESTION} um breytu {VAR}
       gamelab_setPromptWithChoices:
@@ -1217,6 +1227,7 @@ is:
             '"x"': x staða
             '"y"': y staða
             '"direction"': stefna hreyfingar
+            '"speed"': hraða
       gamelab_setSizes:
         text: stilla {SPRITE} {PROPERTY} á {N}%
         options:

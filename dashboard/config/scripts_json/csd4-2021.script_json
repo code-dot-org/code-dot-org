@@ -19,7 +19,8 @@
       ],
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -87,6 +88,7 @@
       "name": "Analysis of Design",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "To kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various teapots. Students analyze each teapot, attempting to identify how specific user needs might have informed its design. By considering these design choices, and attempting to match each teapot with a potential user, students can begin to see how taking a user-centered approach to designing products (both physical and digital) can make those products more useful and usable. To conclude the activity, students are asked to propose some changes to one of the teapots that would make it more useful or usable.",
@@ -116,6 +118,7 @@
       "name": "Understanding Your User",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "**Question of the Day: How can we make sure a product is meeting the needs of a user?**\r\n\r\nDesigners need to understand their users' needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r\n",
@@ -136,6 +139,7 @@
       "name": "User Centered Design   Define and Prepare",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "**Question of the Day: How can we design for people other than ourselves?**\r\n\r\nThis is the first part of a two-day lesson where students are guided through an abbreviated version of the design process they will be seeing throughout this unit. This lesson focuses on the Define and Prepare steps of the process. Students first brainstorm a list of potential users of smart clothing. As a class, they then group these ideas into broad categories and each group will choose one category of user. Groups repeat this process to brainstorm needs or concerns of their user, eventually categorizing these needs and choosing one to focus on. In the next lesson, students will complete the Try and Reflect steps of the design process.\r\n",
@@ -156,6 +160,7 @@
       "name": "User Centered Design   Try and Reflect",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "**Question of the Day: How can we design a product to meet a user's needs?**\r\n \r\nThis is the second part of a two-day lesson where students are guided through an abbreviated version of the design process they will be seeing throughout this unit. Yesterday students completed the Define and Prepare steps of the design process. Today, they complete the Try and Reflect portions. Students continue their work from yesterday by designing a piece of smart clothing, using the specific needs and concerns they brainstormed to guide their decision making. Students have a chance to share their decision-making process and get feedback on how well their product addresses the user needs they selected.\r\n",
@@ -176,6 +181,7 @@
       "name": "User Interfaces",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "**Question of the Day:** How can we test an app to make sure it meets a user's needs?\r\n \r\nFollowing the mini design project, students look towards the next phase of design - prototyping a product that attempts to address user needs. In teams, students examine a paper prototype for a chat app called \"Txt Ur Grndkdz\". Through using this paper prototype, students get a chance to see how a simple paper prototype can be used to quickly test ideas and assumptions before we ever get to the computer. After \"using\" the provided prototype students begin to identify ways to improve the next iteration.\r\n",
@@ -196,6 +202,7 @@
       "name": "Feedback and Testing",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "**Question of the Day:** How can we use feedback to improve an app?\r\n\r\nIn this lesson students use feedback from \"users\" of the paper-prototyped app from the previous lesson in order to develop improvements to the user interface of that paper prototype. The lesson begins with a reflection on the fact that designers need to translate human needs with technology into changes to the user interface or experience. Students are then given a collection of feedback and requests from users of the app from the previous lesson. In groups students categorize the feedback and identify ways the needs expressed in the feedback could be met by changes to the interface of the app. Then in groups students will implement some of these changes to meet one of the needs they identified.",
@@ -216,6 +223,7 @@
       "name": "Identifying User Needs",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "**Question of the Day:** How can user interviews help us create apps to meet the needs of a user?\r\n\r\nIn this lesson students interpret user interviews to determine the needs & interests of a user. They then speculate on the barriers these users are facing or the opportunities that are available for each user. In a group, they share these barriers & opportunities and brainstorm different apps that could be used to address these issues. By the end of the lesson, students will have decided on an app idea that addresses a barrier or opportunity for a user.",
@@ -236,6 +244,7 @@
       "name": "Project - Paper Prototype",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "**Question of the Day:** How can I develop an app prototype for a user?\r\n\r\nBased on user interview from the previous lesson, each student comes up with an idea for an app that will address their user's problem. Students then get to create their own paper prototype of their app ideas by drawing \"screens\" on individual notecards. A project guide directs students through the process including building the paper prototype and testing it with their user to see if their assumptions about the user interfaces they created are accurate.\r\n\r\nThis is a two-day lesson, with specific timings outlined in the lesson plan below",
@@ -256,6 +265,7 @@
       "name": "Designing Apps for Good",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
         "overview": "**Question of the Day:** What is an App for Good we want to create?\r\n \r\nThis lesson starts an app design project that lasts through the end of the unit. Students first explore a number of apps designed for social impact that have been created by other students. Students form project teams and lay out a contract for how the team will function throughout the development of their app. Finally, they brainstorm a team name, a topic for their app, and potential users.\r\n",
@@ -276,6 +286,7 @@
       "name": "Market Research",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "In this lesson students research apps similar to the one they intend on creating to better understand the needs of their users. Students work within their teams to search the Internet for other apps, then evaluate the ones they find interesting. By the end of the lesson, each team will have a clearer idea about the type of app they want to create and further refine who their target users are. Each team will maintain a list of citations for all the apps they examined for use in their final presentation.",
@@ -296,6 +307,7 @@
       "name": "Exploring UI Elements",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
         "overview": "Before starting to design apps, we need to help students scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that can be made using AppLab’s tools. Today focuses on having teams look at several example apps made in AppLab and identifying the components of the user interface. They then make a plan for which features could use which components in their app.",
@@ -316,6 +328,7 @@
       "name": "Build a Paper Prototype",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
         "overview": "Students work in their teams to create paper prototypes for the apps they’ve been developing. They begin by making a plan for each screen, then assigning different team members to work on each screen so the task can be completed in time. They can use 3x5 index cards to develop their paper prototypes, or the Paper Prototype template.",
@@ -336,6 +349,7 @@
       "name": "Prototype Testing",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
         "overview": "**Question of the Day:** How does our prototype work when tested by real users?\r\n\r\nThe primary purpose of developing paper prototypes is that they allow for quick testing and iteration before any code is written. This lesson is focused on giving teams a chance to test their prototypes before moving to App Lab. Teams develop a plan to test with users before running prototype tests with multiple other students in the class (and potentially outside the class). In order to test the prototype with the users, the students will have to assign roles in the testing (the “narrator”, the “computer” and the “observers”) as well as have some questions prepared for the user to answer after the test is complete.",
@@ -356,6 +370,7 @@
       "name": "Design Mode in App Lab",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
         "overview": "**Question of the Day:** How can we use App Lab and Design Mode to create apps?\r\n \r\nStudents are introduced to the App Lab programming environment that they will use to build their apps. Students work through a progression of skill-building levels to learn how to use the drag-and-drop design mode of App Lab. They end the lesson by making a plan to adapt one of their Paper Prototype screens into App Lab, focusing on having unique IDs for each element.\r\n",
@@ -376,6 +391,7 @@
       "name": "Build a Digital Prototype",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
         "overview": "**Question of the Day:** How can I design a digital prototype from a paper prototype?\r\n\r\nHaving collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin work on an interactive digital version based on the paper prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital versions of a paper prototype. From there, each group member builds out at least one page of their app in App Lab, to be later combined into a single app.",
@@ -396,6 +412,7 @@
       "name": "Events in AppLab",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
         "overview": "**Question of the Day:** How can I use events to create an app?\r\n \r\nIn this lesson students learn how to add screens to their apps, how to import screens created by other students, and how to program events to navigate between screens. Students learn basic event driven programming by building up the model app that they started in the previous lesson. At the end of the lesson, students make a plan for how they will stay organized when importing each other’s screens in tomorrow’s lesson.\r\n",
@@ -415,6 +432,7 @@
       "name": "Linking Prototype Screens",
       "absolute_position": 17,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
         "overview": "**Question of the Day:** How can I combine screens to create a complete digital prototype?\r\n \r\nIn this lesson teams combine their digital prototype screens into a single app, which they can then link together using code. They share their project’s import URLs with each other, then import each teammate’s screen into their own app. Each student works independently to add events to their code to link the screens together, completing their digital prototype.\r\n",
@@ -434,6 +452,7 @@
       "name": "Testing the App",
       "absolute_position": 18,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
         "overview": "**Question of the Day:** How does our digital prototype work when tested by real users?\r\n \r\nBy the end of the previous lesson each team should have a working prototype of their app. The primary purpose of this lesson is to have the team actually test the app with other people, preferably from the target audience the app is intended for, or from different teams in the class while observers from the team will record the results. As with testing the paper prototypes, teams will start by planning for the specific scenarios before running and observing tests.\r\n",
@@ -454,6 +473,7 @@
       "name": "Bugs and Features",
       "absolute_position": 19,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
         "overview": "**Question of the Day:** How can we create a plan to address bugs and features in our prototype?\r\n \r\nTeams have at this point developed an app prototype that has gone through multiple iterations and rounds of user testing. With the information and guidance gained from the last round of user testing, each student has the opportunity to plan for and implement improvements to the team app. Depending on the time you have available, and student interest, you can run the cycle of testing and iteration as many times as you see fit.\r\n",
@@ -474,6 +494,7 @@
       "name": "Updating Your Prototype",
       "absolute_position": 20,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
         "overview": "**Question of the Day:** How can I track my work while we make updates to our app?\r\n \r\nTeams make a decision about how they will incorporate updates to their app, then they begin updating their app based on their post-its from yesterday’s lesson. They use a “To Do / Doing / Done” chart to organize their work and track their progress. Teams spend the majority of the class working on updating their app, with time at the end to re-combine into a single app if necessary.\r\n",
@@ -494,6 +515,7 @@
       "name": "Project - App Presentation",
       "absolute_position": 21,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
         "overview": "**Question of the Day:** How can I present the steps in our design process to people outside of our team?\r\n \r\nAt this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.\r\n",
@@ -514,6 +536,7 @@
       "name": "Post-Project Test",
       "absolute_position": 22,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -528,6 +551,7 @@
       "name": "CS Discoveries Post Course survey",
       "absolute_position": 23,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -3396,7 +3420,8 @@
       "key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575",
       "position": 1,
       "properties": {
-        "name": "Reflection"
+        "name": "Reflection",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575",
@@ -4179,7 +4204,8 @@
       "key": "f40e6e67-338b-4084-b162-260aea98eb53",
       "position": 1,
       "properties": {
-        "name": "Demo Apps"
+        "name": "Demo Apps",
+        "progression_name": "Demo Apps"
       },
       "seeding_key": {
         "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53",
@@ -4576,7 +4602,8 @@
       "key": "c2cdafc0-8020-44f9-b76c-486536fc72e0",
       "position": 1,
       "properties": {
-        "name": "Build a Screen"
+        "name": "Build a Screen",
+        "progression_name": "Build a Screen"
       },
       "seeding_key": {
         "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0",
@@ -4587,7 +4614,8 @@
       "key": "f9300844-54d9-462e-8c91-e6d48d8b8785",
       "position": 2,
       "properties": {
-        "name": "Finish a Screen"
+        "name": "Finish a Screen",
+        "progression_name": "Finish a Screen"
       },
       "seeding_key": {
         "activity_section.key": "f9300844-54d9-462e-8c91-e6d48d8b8785",
@@ -4598,7 +4626,8 @@
       "key": "b69c41ba-48c0-41e2-86d9-91affd004f5b",
       "position": 3,
       "properties": {
-        "name": "App Project: Screen Design"
+        "name": "App Project: Screen Design",
+        "progression_name": "App Project: Screen Design"
       },
       "seeding_key": {
         "activity_section.key": "b69c41ba-48c0-41e2-86d9-91affd004f5b",
@@ -5073,7 +5102,8 @@
       "key": "7165d89d-fc5e-4e5f-8348-6db470c00639",
       "position": 1,
       "properties": {
-        "name": "Adding Screens"
+        "name": "Adding Screens",
+        "progression_name": "Adding Screens"
       },
       "seeding_key": {
         "activity_section.key": "7165d89d-fc5e-4e5f-8348-6db470c00639",
@@ -5084,7 +5114,8 @@
       "key": "632a936d-e43d-4328-b48e-779578389742",
       "position": 2,
       "properties": {
-        "name": "Events and Linking Screens"
+        "name": "Events and Linking Screens",
+        "progression_name": "Events and Linking Screens"
       },
       "seeding_key": {
         "activity_section.key": "632a936d-e43d-4328-b48e-779578389742",
@@ -5095,7 +5126,8 @@
       "key": "35f7c415-8e4d-4019-8aa4-c64690424212",
       "position": 3,
       "properties": {
-        "name": "Combining Projects"
+        "name": "Combining Projects",
+        "progression_name": "Combining Projects"
       },
       "seeding_key": {
         "activity_section.key": "35f7c415-8e4d-4019-8aa4-c64690424212",
@@ -5950,7 +5982,8 @@
       "key": "60f6d7d9-cd59-466e-a56c-a4312c29812f",
       "position": 1,
       "properties": {
-        "name": "Reflection"
+        "name": "Reflection",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "60f6d7d9-cd59-466e-a56c-a4312c29812f",
@@ -5985,10 +6018,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch1_2021"
-        ]
+        ],
+        "progression": "Reflection"
       },
       "named_level": null,
       "bonus": null,
@@ -6011,10 +6044,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
         "level_keys": [
           "Example App Types_2021"
-        ]
+        ],
+        "progression": "Demo Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -6037,10 +6070,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 Quiz App Demo_2021"
-        ]
+        ],
+        "progression": "Demo Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -6063,10 +6096,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 Decision App Demo_2021"
-        ]
+        ],
+        "progression": "Demo Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -6089,10 +6122,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 List App Demo_2021"
-        ]
+        ],
+        "progression": "Demo Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -6115,10 +6148,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 Crowdsource App Demo_2021"
-        ]
+        ],
+        "progression": "Demo Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -6141,10 +6174,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
         "level_keys": [
           "CSDU4 Design Mode Video_2021"
-        ]
+        ],
+        "progression": "Build a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6167,10 +6200,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 1_2021"
-        ]
+        ],
+        "progression": "Build a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6193,10 +6226,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 2_2021"
-        ]
+        ],
+        "progression": "Build a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6219,10 +6252,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 3_2021"
-        ]
+        ],
+        "progression": "Build a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6245,10 +6278,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 4_2021"
-        ]
+        ],
+        "progression": "Build a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6271,10 +6304,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Finish a Screen",
         "level_keys": [
           "U4 Model Design 5_2021"
-        ]
+        ],
+        "progression": "Finish a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6297,10 +6330,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Finish a Screen",
         "level_keys": [
           "U4 Model Design 6_2021"
-        ]
+        ],
+        "progression": "Finish a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6323,10 +6356,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Finish a Screen",
         "level_keys": [
           "U4 Model Design 7_2021"
-        ]
+        ],
+        "progression": "Finish a Screen"
       },
       "named_level": null,
       "bonus": null,
@@ -6349,10 +6382,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App Project: Screen Design",
         "level_keys": [
           "Design a Screen for your App_2021"
-        ]
+        ],
+        "progression": "App Project: Screen Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6375,10 +6408,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "App Project: Screen Design",
         "level_keys": [
           "CSD U4 - Design Mode Project_2021"
-        ]
+        ],
+        "progression": "App Project: Screen Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6401,10 +6434,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 1_2021"
-        ]
+        ],
+        "progression": "Adding Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6427,10 +6460,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 1.5_2021"
-        ]
+        ],
+        "progression": "Adding Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6453,10 +6486,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 2_2021"
-        ]
+        ],
+        "progression": "Adding Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6479,10 +6512,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 2.5_2021"
-        ]
+        ],
+        "progression": "Adding Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6505,10 +6538,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Events and Linking Screens",
         "level_keys": [
           "U4 Model Program 3_2021"
-        ]
+        ],
+        "progression": "Events and Linking Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6531,10 +6564,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Events and Linking Screens",
         "level_keys": [
           "U4 Model Program 4_2021"
-        ]
+        ],
+        "progression": "Events and Linking Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6557,10 +6590,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Events and Linking Screens",
         "level_keys": [
           "U4 Model Program 5_2021"
-        ]
+        ],
+        "progression": "Events and Linking Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -6583,10 +6616,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Combining Projects",
         "level_keys": [
           "CSDU4 Project Import_2021"
-        ]
+        ],
+        "progression": "Combining Projects"
       },
       "named_level": null,
       "bonus": null,
@@ -6609,10 +6642,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Combining Projects",
         "level_keys": [
           "CSDU4 Project Events_2021"
-        ]
+        ],
+        "progression": "Combining Projects"
       },
       "named_level": null,
       "bonus": null,
@@ -6660,10 +6693,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch2_2021"
-        ]
+        ],
+        "progression": "Reflection"
       },
       "named_level": null,
       "bonus": null,

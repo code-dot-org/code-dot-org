@@ -134,15 +134,14 @@ fr:
       vous identifier en tapant votre mot de passe, ci-dessous.
     use_clever: Désolé, votre compte Code.org n'est pas lié à %{provider}. Merci de
       vous connecter via Clever Portal.
-    invalid_provider: Désolé, les comptes %{provider} ne pas peuvent être liés à des
-      comptes Code.org.
-    migration_required: Désolé, nous ne pouvons pas connecter ou déconnecter des comptes
-      qui utilisent encore l'ancienne mouture des comptes. Veuillez mettre à jour
-      vers la nouvelle mouture de comptes.
+    invalid_provider: Désolé, les comptes %{provider} ne peuvent être liés aux comptes
+      Code.org.
+    migration_required: Désolé, pas d'affinité avec les comptes qui usent de l'expérience
+      de compte périmé. Veuillez mettre à jour vers l'expérience de compte inédite.
     unable_to_connect_provider: Impossible de connecter votre compte Code.org à votre
       compte %{provider}. Veuillez réessayer.
-    disconnect_successful: Opération réussie! Nous avons déconnecté le compte externe
-      de votre compte Code.org.
+    disconnect_successful: Succès! Nous avons déconnecté le compte externe de votre
+      compte Code.org.
     already_in_use: Votre compte %{provider} est déjà connecté à un autre compte Code.org.
     already_linked: Votre compte %{provider} est déjà lié à votre compte de Code.org.
     existing_account:
@@ -246,12 +245,12 @@ fr:
   school_info:
     title: Informations de l’école (facultatif)
     school_country: Pays de l’École
-    select_school_type: Type d'École
+    select_school_type: Type d'école
     charter: Charte
     private: Privé
     public: Public
-    homeschool: École à Domicile
-    after_school: Après l’École
+    homeschool: École à domicile
+    after_school: Après l’école
     other: Autre
     state: État
     district: Quartier

@@ -355,7 +355,7 @@ cs:
         studio_c3_game_6: Dokážeš přidat blok, který změní pozadí a Waddlesovu rychlost,
           a pak s ním pohybovat dokud nezískáš bod?
         studio_c3_game_7: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni na
-          Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
+          Dokončit, aby si ji tví přátelé mohli vyzkoušet na svých telefonech.
         studio_playlab_1: Waddles chce říct "Ahoj" - můžeš mu pomoci?
         studio_playlab_2: Jeskynní chlapec (aktér1) a Jasmine (aktéř 2) by rádi si
           řekli navzájem "Ahoj". Můžeš jim pomoci tím, že použiješ blok "say" dvakrát?
@@ -376,7 +376,7 @@ cs:
           rychleji dostat mimozemšťana tak, že změníš jeho rychlost. Pomocí šipek
           jej přesuň k mimozemšťanovi a varuj všechny ostatní.
         studio_playlab_10: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni na
-          Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
+          Dokončit, aby si ji tví přátelé mohli vyzkoušet na svých telefonech.
         studio_iceage_hello1: Sid chce shromáždit všechny na nové dobrodružství. Pomůžeš
           mu říci "Hello" přetažením bloku 'say' do pracovního prostoru a zadáním
           slova "hello" dovnitř?
@@ -449,7 +449,7 @@ cs:
           klepni na tlačítko Finish, aby si přátele zkusili tvou hru na jejich mobilech,
           tabletech nebo počítačích!
         studio_full_sandbox: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni
-          na Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
+          na Dokončit, aby si ji tví přátelé mohli vyzkoušet na svých telefonech.
         studio_k1_1: Umíš udělat, aby tento pes řekl "hello world"?
         studio_k1_2: Umíš udělat, aby pes něco řekl a následně kočka řekla něco potom?
         studio_k1_3: Můžeš napsat program, aby se pes přesunul ke kočce?
@@ -480,7 +480,7 @@ cs:
           nápadů: panáček, vločka nebo spirála. Také si můžeš vyzkoušet nový blok
           "nastav tloušťku". Pobav se!'
         studio_ec_sandbox: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni na
-          Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
+          Dokončit, aby si ji tví přátelé mohli vyzkoušet na svých telefonech.
     video:
       name:
         maze_intro: Úvod Bludiště
@@ -640,6 +640,7 @@ cs:
         mc_2016_events: Hodina kódu s Minecraftem - Události
         mc_2016_spawn: Hodina kódu s Minecraftem - Tvoření
         mc_2016_congrats: Hodina kódu s Minecraftem - Gratulujeme
+        applab_hoc_designmode: Hodina kódu s App Labem - Dizajnový mód
         mc_2017_agent_intro: Hodina kódu s Minecraftem - Agent
         mc_2017_repeat: Hodina kódu s Minecraftem - Cykly
         mc_2017_functions: Hodina kódu s Minecraftem - Funkce
@@ -649,6 +650,9 @@ cs:
         mc_2017_puzzle_8: Hodina kódu s Minecraftem - Funkce
         mc_2017_puzzle_12: Hodina kódu s Minecraftem - Volná hra
         applab_intro_welcome: App Lab - začínáme
+        applab_intro_sounds: App Lab - Obrázky a zvuky
+        applab_intro_designmode: App Lab - Dizajnový mód
+        applab_intro_share: App Lab - Sdílej svou appku
         CSF_skinOverview_Harvester: Zahradnice
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
@@ -665,10 +669,12 @@ cs:
         what_is_cs: Co je informatika?
         lesson_planning: Plánování hodiny
         writing_first_program: Psaní svého prvního počítačového programu
+        csd_applab_designmode: 'Objevujeme informatiku: App Lab - Dizajnový mód'
         csd_pair_programming: Párové programování
         csd_applab_parameters: Funkce s Parametry
         CSF_Going_Places_Safely: Mé online sousedství
         csd_debugging: Ladění
+        csd_applab_designmode_short: App Lab  - Dizajnový mód
         csp-pd-welcome: Vítej v rodině!
         oceans_machine_learning: Strojové učení
         hoc_dance_congrats_2019: Dance Party 2019 - Jedeme dál!

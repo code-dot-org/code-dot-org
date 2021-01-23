@@ -967,6 +967,7 @@ ms:
             '"rotation"': putaran
             '"direction"': arah pergerakan
             '"tint"': warna
+            '"speed"': kelajuan
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1089,6 +1090,8 @@ ms:
             '"West"': Barat
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} ke arah {TARGET}
+      gamelab_newSpritePointer:
+        text: mengklik {SPRITE}
       gamelab_objectSpritePointer:
         text: mengklik {SPRITE}
       gamelab_playSound:
@@ -1144,6 +1147,7 @@ ms:
             '"scale"': saiz
             '"rotation"': putaran
             '"direction"': arah pergerakan
+            '"speed"': kelajuan
       gamelab_setSizes:
         text: Set {SPRITE} {PROPERTY} Untuk {N}%
         options:
