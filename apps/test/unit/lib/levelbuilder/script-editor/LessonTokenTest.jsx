@@ -25,7 +25,8 @@ describe('LessonToken', () => {
         relative_position: 1,
         lockable: false,
         unplugged: false,
-        assessment: false
+        assessment: true,
+        hasLessonPlan: true
       },
       lessonGroupPosition: 1
     };
@@ -37,6 +38,7 @@ describe('LessonToken', () => {
     expect(wrapper.contains('Lesson 1')).to.be.true;
     expect(wrapper.find('i').length).to.equal(3);
     expect(wrapper.find('.fa-pencil').length).to.equal(1);
+    expect(wrapper.contains('assessment')).to.be.true;
   });
 
   it('renders newly added lesson without edit button', () => {

@@ -25,7 +25,8 @@
         ]
       ],
       "is_course": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": "coursec",
@@ -125,6 +126,7 @@
       "name": "Putting a STOP to Online Meanness",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\r\n\r\nThe internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.",
@@ -144,6 +146,7 @@
       "name": "Password Power-Up",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\r\n\r\nStronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.",
@@ -163,6 +166,7 @@
       "name": "My Robotic Friends Jr.",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "Using a set of symbols in place of code, students will design algorithms to instruct a \"robot\" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.",
@@ -182,6 +186,7 @@
       "name": "Programming with Angry Birds",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
@@ -201,6 +206,7 @@
       "name": "Debugging in Maze",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "Debugging is an essential element of learning to program. In this lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
@@ -220,6 +226,7 @@
       "name": "Collecting Treasure with Laurel",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "In this series of puzzles, students will continue to develop their understanding of algorithms and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.",
@@ -239,6 +246,7 @@
       "name": "Creating Art with Code",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using new blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.",
@@ -258,6 +266,7 @@
       "name": "Binary Bracelets",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.",
@@ -277,6 +286,7 @@
       "name": "My Loopy Robotic Friends Jr.",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
         "overview": "Building on the initial \"My Robotic Friends\" activity, students tackle larger and more complicated designs. In order to program their \"robots\" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.",
@@ -296,6 +306,7 @@
       "name": "Loops with Rey and BB-8",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "Building on the concept of repeating instructions from \"Getting Loopy,\" this stage will have students using loops to help BB-8 traverse a maze more efficiently than before.",
@@ -315,6 +326,7 @@
       "name": "Harvesting Crops with Loops",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
         "overview": "Students loop new actions in order to help the harvester collect multiple veggies growing in large bunches.",
@@ -334,6 +346,7 @@
       "name": "Looking Ahead with Minecraft",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
         "overview": "This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!",
@@ -353,6 +366,7 @@
       "name": "Sticker Art with Loops",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
         "overview": "Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
@@ -372,6 +386,7 @@
       "name": "The Big Event",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
         "overview": "Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. Events can make your program more interesting and interactive.",
@@ -391,6 +406,7 @@
       "name": "Build a Flappy Game",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
         "overview": "In this special stage, students get to build their own Flappy Bird game by using event handlers to detect mouse clicks and object collisions. At the end of the level, students will be able to customize their game by changing the visuals or rules.",
@@ -410,6 +426,7 @@
       "name": "Chase Game with Events",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
         "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!",
@@ -429,6 +446,7 @@
       "name": "Picturing Data",
       "absolute_position": 17,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
         "overview": "Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.",
@@ -448,6 +466,7 @@
       "name": "End of Course Project",
       "absolute_position": 18,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
         "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! ",
@@ -1373,8 +1392,7 @@
       "key": "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4",
@@ -1914,7 +1932,7 @@
       "key": "ccbf325b-05d5-4e4a-b009-1576cdfce4a4",
       "position": 1,
       "properties": {
-        "description": "This short activity will help students relate the ideas of persistence and debugging to the puzzles that they are about to complete online.\r\n\r\n**Display:** Project a copy of the **Course C, Lesson 2 Maze Bridging Page - Puzzle Manipulative (PDF)** for the class to see.  Make sure that you have pre-placed the movement blocks in the workspace using **Unplugged Maze Blocks - Manipulatives** in a configuration like the one below:\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-03-12-21.47.39.png){: style='width:150px;'}\r\n\r\n**Model:**  Tell students that you have this workspace on display that looks just like the area that they will see when they start to do the Code.org puzzles online.  As the teacher, let them know that you are SO SMART that you already put all of the code in that you are going to need to solve this puzzle, then ask them to watch you \"Run\" it by moving your finger (or a penny, or some other indicator) along the path.\r\n\r\nIt won't be long before you run into a block of TNT.  Feign frustration.\r\n\r\n**Discuss:** \r\n- What am I feeling right now, do you think?\r\n- Should I quit?\r\n- Should I throw all of the code away and start over?\r\n\r\n**Think:** How can I fix this program so that I don't run into the TNT?\r\n\r\n**Pair:** Have students work on solutions to get the bird around the TNT. Depending on your classroom, you might want to either have them fix each mistake one at a time (with demos in between) or students might feel comfortable working together to fix the entire program.\r\n\r\n**Share:** Have volunteers come up to help move the blocks into the right location.  \"Run\" the program over and over as a class, fixing bugs, until the bird does what it is supposed to.  Continue to point out experiences that relate to persistence, frustration, and debugging.\r\n\r\nWhen your class reaches the pig, celebrate not only their achievements, but their persistence!",
+        "description": "This short activity will help students relate the ideas of persistence and debugging to the puzzles that they are about to complete online.\n\n**Display:** Project a copy of the **Course C, Lesson 2 Maze Bridging Page - Puzzle Manipulative (PDF)** for the class to see.  Make sure that you have pre-placed the movement blocks in the workspace using **Unplugged Maze Blocks - Manipulatives** in a configuration like the one below:\n\n![](https://images.code.org/ac052e9d25e77dd800fbf18871bc5fcf-image-1611178828427.47.39.png)\n\n**Model:**  Tell students that you have this workspace on display that looks just like the area that they will see when they start to do the Code.org puzzles online.  As the teacher, let them know that you are SO SMART that you already put all of the code in that you are going to need to solve this puzzle, then ask them to watch you \"Run\" it by moving your finger (or a penny, or some other indicator) along the path.\n\nIt won't be long before you run into a block of TNT.  Feign frustration.\n\n**Discuss:**\n\n- What am I feeling right now, do you think?\n- Should I quit?\n- Should I throw all of the code away and start over?\n\n**Think:** How can I fix this program so that I don't run into the TNT?\n\n**Pair:** Have students work on solutions to get the bird around the TNT. Depending on your classroom, you might want to either have them fix each mistake one at a time (with demos in between) or students might feel comfortable working together to fix the entire program.\n\n**Share:** Have volunteers come up to help move the blocks into the right location.  \"Run\" the program over and over as a class, fixing bugs, until the bird does what it is supposed to.  Continue to point out experiences that relate to persistence, frustration, and debugging.\n\nWhen your class reaches the pig, celebrate not only their achievements, but their persistence!",
         "name": "Transitioning from Unplugged to Online\r"
       },
       "seeding_key": {
@@ -1982,7 +2000,8 @@
       "key": "1141cba9-b65b-47c7-ac7d-59d2f06b5318",
       "position": 2,
       "properties": {
-        "name": "Maze Intro: Programming with Blocks"
+        "name": "Maze Intro: Programming with Blocks",
+        "progression_name": "Maze Intro: Programming with Blocks"
       },
       "seeding_key": {
         "activity_section.key": "1141cba9-b65b-47c7-ac7d-59d2f06b5318",
@@ -1993,7 +2012,8 @@
       "key": "1ebd42df-a302-418a-be1e-6bbca930cedf",
       "position": 3,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "1ebd42df-a302-418a-be1e-6bbca930cedf",
@@ -2004,7 +2024,8 @@
       "key": "e7df62bb-065d-4eaf-b96a-9726c8c8510a",
       "position": 4,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "e7df62bb-065d-4eaf-b96a-9726c8c8510a",
@@ -2015,7 +2036,8 @@
       "key": "b879045d-ce26-4812-a901-bba02e97e846",
       "position": 5,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "b879045d-ce26-4812-a901-bba02e97e846",
@@ -2026,7 +2048,8 @@
       "key": "6a716058-0d11-476d-b424-ce121a6fe866",
       "position": 6,
       "properties": {
-        "name": "Predict"
+        "name": "Predict",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "6a716058-0d11-476d-b424-ce121a6fe866",
@@ -2037,7 +2060,8 @@
       "key": "4ace8805-4a5d-4288-830b-efba847a6be2",
       "position": 7,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "4ace8805-4a5d-4288-830b-efba847a6be2",
@@ -2129,7 +2153,8 @@
       "key": "572ba4a8-86d4-4aca-9398-b1d9c44ae669",
       "position": 2,
       "properties": {
-        "name": "Debugging with the Step Button"
+        "name": "Debugging with the Step Button",
+        "progression_name": "Debugging with the Step Button"
       },
       "seeding_key": {
         "activity_section.key": "572ba4a8-86d4-4aca-9398-b1d9c44ae669",
@@ -2140,7 +2165,8 @@
       "key": "9b6832e5-f80f-4baa-9049-48d9526443ba",
       "position": 3,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "9b6832e5-f80f-4baa-9049-48d9526443ba",
@@ -2151,7 +2177,8 @@
       "key": "a7458755-70c4-4b60-b6ad-729468af507f",
       "position": 4,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "a7458755-70c4-4b60-b6ad-729468af507f",
@@ -2162,7 +2189,8 @@
       "key": "fa8dd0db-5da9-43b3-8150-d3618c14ac77",
       "position": 5,
       "properties": {
-        "name": "Predict"
+        "name": "Predict",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "fa8dd0db-5da9-43b3-8150-d3618c14ac77",
@@ -2173,7 +2201,8 @@
       "key": "cc8916f2-7e82-4c1b-9e24-a5ce8ed5c3af",
       "position": 6,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "cc8916f2-7e82-4c1b-9e24-a5ce8ed5c3af",
@@ -2263,7 +2292,8 @@
       "key": "1cecd624-a69a-4e47-9a4b-066f9b8ff31d",
       "position": 2,
       "properties": {
-        "name": "The Collector"
+        "name": "The Collector",
+        "progression_name": "The Collector"
       },
       "seeding_key": {
         "activity_section.key": "1cecd624-a69a-4e47-9a4b-066f9b8ff31d",
@@ -2274,7 +2304,8 @@
       "key": "e79bc3de-623c-4238-bdd7-6a6128f79ff8",
       "position": 3,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "e79bc3de-623c-4238-bdd7-6a6128f79ff8",
@@ -2285,7 +2316,8 @@
       "key": "e7869029-e0e5-4e0d-a6a8-b73fc0b01246",
       "position": 4,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "e7869029-e0e5-4e0d-a6a8-b73fc0b01246",
@@ -2296,7 +2328,8 @@
       "key": "1237bc98-b3bd-45ac-8c6f-51bd8cc988e4",
       "position": 5,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "1237bc98-b3bd-45ac-8c6f-51bd8cc988e4",
@@ -2307,7 +2340,8 @@
       "key": "711fc36a-64ca-4fcc-b528-bbf00ed53da1",
       "position": 6,
       "properties": {
-        "name": "Predict"
+        "name": "Predict",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "711fc36a-64ca-4fcc-b528-bbf00ed53da1",
@@ -2318,7 +2352,8 @@
       "key": "f56c1539-ed6d-4fcc-8ed4-1da5bf04d648",
       "position": 7,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "f56c1539-ed6d-4fcc-8ed4-1da5bf04d648",
@@ -2329,7 +2364,8 @@
       "key": "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1",
       "position": 8,
       "properties": {
-        "name": "Lesson Extras"
+        "name": "Lesson Extras",
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1",
@@ -2376,7 +2412,8 @@
       "key": "e054a7d9-9c28-49d4-886f-e9fd771d378e",
       "position": 2,
       "properties": {
-        "name": "Artist Intro with JR Hildebrand"
+        "name": "Artist Intro with JR Hildebrand",
+        "progression_name": "Artist Intro with JR Hildebrand"
       },
       "seeding_key": {
         "activity_section.key": "e054a7d9-9c28-49d4-886f-e9fd771d378e",
@@ -2387,7 +2424,8 @@
       "key": "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65",
       "position": 3,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65",
@@ -2398,7 +2436,8 @@
       "key": "16e320f6-0c67-4992-87a4-0ae6396a1080",
       "position": 4,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "16e320f6-0c67-4992-87a4-0ae6396a1080",
@@ -2409,7 +2448,8 @@
       "key": "2809e1fd-ca35-479d-b5d0-a183be995d73",
       "position": 5,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "2809e1fd-ca35-479d-b5d0-a183be995d73",
@@ -2420,7 +2460,8 @@
       "key": "a8b57be6-571d-451e-a6d2-5733d5b67bb4",
       "position": 6,
       "properties": {
-        "name": "Predict"
+        "name": "Predict",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "a8b57be6-571d-451e-a6d2-5733d5b67bb4",
@@ -2756,7 +2797,8 @@
       "key": "16139473-0792-46d6-b8f8-77c79ceead5c",
       "position": 1,
       "properties": {
-        "name": "Programming with Rey and BB-8"
+        "name": "Programming with Rey and BB-8",
+        "progression_name": "Programming with Rey and BB-8"
       },
       "seeding_key": {
         "activity_section.key": "16139473-0792-46d6-b8f8-77c79ceead5c",
@@ -2767,7 +2809,8 @@
       "key": "aadcbed9-b15e-4fcb-b277-fd1c8156270e",
       "position": 2,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "aadcbed9-b15e-4fcb-b277-fd1c8156270e",
@@ -2778,7 +2821,8 @@
       "key": "cc9ef036-2cca-4863-b922-284a995c38b7",
       "position": 3,
       "properties": {
-        "name": "Predict"
+        "name": "Predict",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "cc9ef036-2cca-4863-b922-284a995c38b7",
@@ -2789,7 +2833,8 @@
       "key": "adc69f16-8ed9-4265-b368-4a8e99c56aa5",
       "position": 4,
       "properties": {
-        "name": "Repeat Blocks with BB-8"
+        "name": "Repeat Blocks with BB-8",
+        "progression_name": "Repeat Blocks with BB-8"
       },
       "seeding_key": {
         "activity_section.key": "adc69f16-8ed9-4265-b368-4a8e99c56aa5",
@@ -2800,7 +2845,8 @@
       "key": "6fed6081-6c4a-4a1a-8db9-69ab9fd41513",
       "position": 5,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "6fed6081-6c4a-4a1a-8db9-69ab9fd41513",
@@ -2811,7 +2857,8 @@
       "key": "922cabb8-e8e7-4f94-a72a-c173f9084db9",
       "position": 6,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "922cabb8-e8e7-4f94-a72a-c173f9084db9",
@@ -2822,7 +2869,8 @@
       "key": "069243e5-22ac-469d-afdd-0908f118d8fc",
       "position": 7,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "069243e5-22ac-469d-afdd-0908f118d8fc",
@@ -2833,7 +2881,8 @@
       "key": "b47fba65-ebc7-463d-af20-207aafbaac11",
       "position": 8,
       "properties": {
-        "name": "Predict"
+        "name": "Predict",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "b47fba65-ebc7-463d-af20-207aafbaac11",
@@ -2844,7 +2893,8 @@
       "key": "5bf6ad3e-3f64-4131-9604-04de80516931",
       "position": 9,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "5bf6ad3e-3f64-4131-9604-04de80516931",
@@ -2912,7 +2962,8 @@
       "key": "61416522-3272-4f4f-9fa9-6ab21de140ad",
       "position": 1,
       "properties": {
-        "name": "The Harvester"
+        "name": "The Harvester",
+        "progression_name": "The Harvester"
       },
       "seeding_key": {
         "activity_section.key": "61416522-3272-4f4f-9fa9-6ab21de140ad",
@@ -2923,7 +2974,8 @@
       "key": "2f87a826-1460-4d5c-9db3-47911c77a56a",
       "position": 2,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "2f87a826-1460-4d5c-9db3-47911c77a56a",
@@ -2934,7 +2986,8 @@
       "key": "d65f83fb-25b6-45bb-8ca8-1b230b146b66",
       "position": 3,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "d65f83fb-25b6-45bb-8ca8-1b230b146b66",
@@ -2945,7 +2998,8 @@
       "key": "c80e175c-a3f8-4155-9900-0c6ab5829a4e",
       "position": 4,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "c80e175c-a3f8-4155-9900-0c6ab5829a4e",
@@ -2956,7 +3010,8 @@
       "key": "d54c4a19-6f07-4206-aeee-fc496fcda2f8",
       "position": 5,
       "properties": {
-        "name": "Predict"
+        "name": "Predict",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "d54c4a19-6f07-4206-aeee-fc496fcda2f8",
@@ -3024,7 +3079,8 @@
       "key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf",
       "position": 1,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf",
@@ -3035,7 +3091,8 @@
       "key": "05fb6b2e-8946-4909-a662-a74aaa704845",
       "position": 2,
       "properties": {
-        "name": "Challenge"
+        "name": "Challenge",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "05fb6b2e-8946-4909-a662-a74aaa704845",
@@ -3046,7 +3103,8 @@
       "key": "3f248b6a-67d8-4160-9fa6-b4edb2ea628f",
       "position": 3,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "3f248b6a-67d8-4160-9fa6-b4edb2ea628f",
@@ -3057,7 +3115,8 @@
       "key": "53e8b0f2-6328-4403-9ec7-11cd53e02bba",
       "position": 4,
       "properties": {
-        "name": "Free Play"
+        "name": "Free Play",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "53e8b0f2-6328-4403-9ec7-11cd53e02bba",
@@ -3134,7 +3193,8 @@
       "key": "0e769463-817e-4432-be93-87047256d015",
       "position": 2,
       "properties": {
-        "name": "Mini-project: Sticker Design"
+        "name": "Mini-project: Sticker Design",
+        "progression_name": "Mini-project: Sticker Design"
       },
       "seeding_key": {
         "activity_section.key": "0e769463-817e-4432-be93-87047256d015",
@@ -3145,7 +3205,8 @@
       "key": "9af30f82-82cd-4807-9609-900519e17c43",
       "position": 3,
       "properties": {
-        "name": "Free Play"
+        "name": "Free Play",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "9af30f82-82cd-4807-9609-900519e17c43",
@@ -3191,7 +3252,7 @@
       "key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
       "position": 2,
       "properties": {
-        "description": "- Prep your class to answer a question:\r\n\t- \"I'm going to ask you a question. I want you to raise your hand if you want me to call on you for the answer.\"\r\n\t- Ask a simple question that most of your students should be able to answer, such as:\r\n\t\t- How many thumbs do I have?\r\n\t\t- What is bigger, a bird or a horse?\r\n\t- Call on a student who has their hand raised and let them give their answer.\r\n\t- Upon finishing that display, ask the class how you knew that the student wanted you to call on them.\r\n\t\t- Your class will likely mention the raising of the hand.\r\n\t- Explain to everyone that when students raise their hand, it is an \"event\" that causes you to know that they want to be called on. \r\n- Ask the class if they can think of any other events that give signals.\r\n\t- You may need to remind them that you're not talking about an event like a birthday party or a field trip.\r\n\t- If they have trouble, you can remind them that an event is an action that causes something to happen.\r\n\t\t- What about an alarm clock going off? What does that make happen?\r\n\t\t- What about pressing \"Start\" on the microwave? What does that do?\r\n\t\t- What about pressing the power button on your tv remote?\r\n- Today, we're going to practice changing programs by introducing events.",
+        "description": "Let’s see if we can find a pattern here:\n\n- When you flip a switch, the lights turn on.\n- When you tap on a device, an app starts.\n- When the alarm goes off, you get out of bed.\n- When *(event)*, *(action)*.\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is “event”.    Normally when we hear “event” we think of:\n- Field trip\n- Competition\n- Birthday Party\n\nWe’re learning a new meaning for the word event today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.\n",
         "name": "A Series of Events\r"
       },
       "seeding_key": {
@@ -3205,7 +3266,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If your students seem confused, talk about their favorite games and all of the ways that they let the characters know what they're supposed to do. Point out how the game would be really boring if it ran from start to finish without any events required.\r\n"
           }
@@ -3220,7 +3280,7 @@
       "key": "69aeb015-b7ba-46c1-a176-5289f7de9a92",
       "position": 2,
       "properties": {
-        "description": "- Do you remember guiding Red from Angry Birds to the pig in the Maze puzzles?\r\n\t- In that exercise, you knew in advance exactly where you wanted Red to go, so you could make a program that took Red from start to finish without any interruptions.\r\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\r\n\t\t- Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\r\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\r\n\r\nIn earlier lessons, we created algorithms that allowed us to control a friend or other character for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\r\n\r\n\r\n**Directions:**\r\n\r\n- Project the Event Controller onto your classroom screen.\r\n\r\n![](csf/c2_TheBigEvent1.png)\r\n\r\n- Decide with your class what each button does. We suggest:\r\n\t- Pink Button -> Say “Wooooo!”\r\n\t- Teal Button -> “Yeah!”\r\n\t- Purple Dial -> “Boom!”\r\n\t- Green Button -> Clap\r\n\t- Orange Dial -> Stomp\r\n- Practice tapping the buttons on the overhead and having your class react.\r\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\r\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\r\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\r\n\t- Counting to 10\r\n\t- Singing “Old MacDonald”\r\n- Once their plan is underway, interject button presses sporadically.\r\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
+        "description": "- Do you remember guiding Red from Angry Birds to the pig in the Maze puzzles?\n\t- In that exercise, you knew in advance exactly where you wanted Red to go, so you could make a program that took Red from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n\nIn earlier lessons, we created algorithms that allowed us to control a friend or other character for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- Project the Event Controller onto your classroom screen.\n\n![](csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the overhead and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
       },
       "seeding_key": {
         "activity_section.key": "69aeb015-b7ba-46c1-a176-5289f7de9a92",
@@ -3231,8 +3291,13 @@
       "key": "abca79b2-6a21-4f74-b06d-07ea956d12bc",
       "position": 1,
       "properties": {
-        "description": "- Why do we need to be able to handle events in a program?\r\n- What are some other kinds of events that you can think of?",
-        "name": "Flash Chat: What did we learn?\r"
+        "description": "**Prompts:**\n- What did we learn?\n- What are some examples of events?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Students should demonstrate understanding that events are something that can cause other actions to happen. Refer back to earlier examples from the lesson or encourage students to come up with their own."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "abca79b2-6a21-4f74-b06d-07ea956d12bc",
@@ -3254,7 +3319,7 @@
       "key": "3308de52-3ab5-4909-bcf5-c43c71617303",
       "position": 1,
       "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\r\n\r\n**One Person's Event is Another One's Reaction**\r\n\r\n- Assign each student an event to watch out for, and an appropriate reaction to that event. Chain the actions so that each child's reaction becomes an event that triggers the reaction of another student. Keep assigning until everyone has something to do and everyone makes someone react.\r\n\r\n**Eventopalooza**\r\n\r\n- Break the class up into groups. Using the Events Controller, assign each group a different reaction to the same button. Do this for all three buttons, then watch the chaos!"
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n**One Person's Event is Another One's Action**\n\n- Assign each student an event to watch out for, and an appropriate reaction to that event. Chain the actions so that each child's action becomes an event that triggers the reaction of another student. Keep assigning until everyone has something to do and everyone makes someone react.\n\n**Eventopalooza**\n\n- Break the class up into groups. Using the Events Controller, assign each group a different reaction to the same button. Do this for all three buttons, then watch the chaos!"
       },
       "seeding_key": {
         "activity_section.key": "3308de52-3ab5-4909-bcf5-c43c71617303",
@@ -3339,7 +3404,8 @@
       "key": "64988ef3-1287-4486-9d41-cd475637575b",
       "position": 1,
       "properties": {
-        "name": "Code Your Own Flappy Game"
+        "name": "Code Your Own Flappy Game",
+        "progression_name": "Code Your Own Flappy Game"
       },
       "seeding_key": {
         "activity_section.key": "64988ef3-1287-4486-9d41-cd475637575b",
@@ -3350,7 +3416,8 @@
       "key": "3344bb9f-6bfa-40f1-b21a-26a077f975a5",
       "position": 2,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "3344bb9f-6bfa-40f1-b21a-26a077f975a5",
@@ -3361,7 +3428,8 @@
       "key": "b6624ca7-5ffe-462e-ad60-5580ffb87066",
       "position": 3,
       "properties": {
-        "name": "Mini-project: Flappy Game"
+        "name": "Mini-project: Flappy Game",
+        "progression_name": "Mini-project: Flappy Game"
       },
       "seeding_key": {
         "activity_section.key": "b6624ca7-5ffe-462e-ad60-5580ffb87066",
@@ -3465,7 +3533,8 @@
       "key": "55ade85d-fedf-4c9d-9046-4d1e6d813638",
       "position": 3,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "55ade85d-fedf-4c9d-9046-4d1e6d813638",
@@ -3476,7 +3545,8 @@
       "key": "a0c869e7-3fa2-4bec-8fa4-56daf0261d2d",
       "position": 4,
       "properties": {
-        "name": "Mini-project: Chase Game"
+        "name": "Mini-project: Chase Game",
+        "progression_name": "Mini-project: Chase Game"
       },
       "seeding_key": {
         "activity_section.key": "a0c869e7-3fa2-4bec-8fa4-56daf0261d2d",
@@ -3487,7 +3557,8 @@
       "key": "a7a8c0ca-7507-4a7a-84da-2763a0e562a7",
       "position": 5,
       "properties": {
-        "name": "Free Play"
+        "name": "Free Play",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "a7a8c0ca-7507-4a7a-84da-2763a0e562a7",
@@ -3708,7 +3779,8 @@
       "key": "8bc8bad1-8150-46ce-bf97-0d368dafd6ef",
       "position": 2,
       "properties": {
-        "name": "Project"
+        "name": "Project",
+        "progression_name": "Project"
       },
       "seeding_key": {
         "activity_section.key": "8bc8bad1-8150-46ce-bf97-0d368dafd6ef",

@@ -1,0 +1,66 @@
+@import 'color';
+@import 'style-constants';
+
+$row-height: 42px;
+$max-height: 680px;
+$student-list-width: 170px;
+$content-view-width: $content-width - $student-list-width;
+
+.progress-table {
+  table {
+    border: 1px solid;
+    border-color: $border-gray;
+  }
+  th {
+    background-color: $table-header;
+    border-width: 0px 1px 2px 0px;
+    border-color: $border-gray;
+    height: 100%;
+  }
+  th,
+  td {
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  tr:nth-child(even) {
+    background-color: $background_gray;
+  }
+  .student-list {
+    table {
+      width: $student-list-width;
+    }
+    td,
+    th {
+      width: $student-list-width;
+      border-right: 0px;
+    }
+    th {
+      background-color: $table-header;
+      color: $charcoal;
+    }
+  }
+  .content-view {
+    thead,
+    tbody {
+      max-width: $content-view-width;
+    }
+    tr {
+      height: $row-height;
+    }
+    th,
+    td {
+      border-right: 1px solid;
+      border-color: $border-gray;
+      &:last-child {
+        border-right: 0px;
+      }
+    }
+  }
+}
+
+:export {
+  MAX_BODY_HEIGHT: $max-height / 1px;
+  STUDENT_LIST_WIDTH: $student-list-width / 1px;
+  CONTENT_VIEW_WIDTH: $content-view-width / 1px;
+  ROW_HEIGHT: $row-height / 1px;
+}

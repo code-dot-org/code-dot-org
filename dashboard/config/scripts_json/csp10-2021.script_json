@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -40,6 +41,7 @@
       "name": "Project   Innovation Simulation Part 1",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "The class begins a simulation which will continue on at different points throughout the unit. In this simulation, students take on the roles of different stakeholders in school communities converging at a convention where they eventually will deliver a proposal on the best computing innovation for the Future School. In this lesson, students explore what a computing innovation is, do a brainstorm activity, reflect on their character role, and finally learn how to research an innovation. ",
@@ -68,6 +70,7 @@
       "name": "Project   Innovation Simulation Part 2",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "Today is focused on researching three different computing innovations and discussing these innovations with team members. ",
@@ -96,6 +99,7 @@
       "name": "Data Policies and Privacy",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "Students learn that the apps, websites, and other computing innovations they use every day require a lot of data to run, much of which they might consider to be private or personal. In the warm up students discuss which of a list of possible information types they consider private. Then students read the data policies from a website or service they use or know about. This investigation focuses on the kinds of data that are being collected, the way it's being used, and any potential privacy concerns that arise. A brief second activity reveals that even data that may not seem private, like a birthdate or zipcode, can be combined to uniquely identify them. To conclude the lesson students prepare for a discussion in the following class about the pros and cons of sharing all this data by journaling about their current thoughts on whether the harms of giving up this privacy are outweighed by the benefits of the technology they power.",
@@ -124,6 +128,7 @@
       "name": "The Value of Privacy",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "Students develop their own opinions on the privacy tradeoffs inherent in many modern computing innovations. At the beginning of the lesson students watch a video on facial recognition technology that presents the tradeoffs between convenience and privacy and asks them to determine whether they think the tradeoff is worth it. Students respond to two videos that look at different tradeoffs between privacy, security, and convenience. Students then evaluate the website or app they investigated in the previous lesson to determine if they think the benefits of the service outweigh the privacy risks. At the end of the class students discuss whether they generally think convenience outweighs privacy concerns.",
@@ -152,6 +157,7 @@
       "name": "Project   Innovation Simulation Part 3",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "Students make further projects on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose.",
@@ -180,6 +186,7 @@
       "name": "Security Risks Part 1",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "Students investigate three different common security risks (phishing, keylogging, malware) in a jigsaw activity. In groups, students create Public Service Announcement slides warning of the dangers of their assigned security risk. Then students are grouped with students who investigated other security risks and are instructed to share their slide and give a voice over. The activity ends with the class coming together to discuss the security risks as a whole. ",
@@ -208,6 +215,7 @@
       "name": "Security Risks Part 2",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "The lesson begins with a review of security risks by watching a video on Cybersecurity & Crime. Following this, the class does an investigation into the Equifax breach, and what went wrong. The class ends with a Kahoot quiz to review security risks. ",
@@ -236,6 +244,7 @@
       "name": "Project   Innovation Simulation Part 4",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "This lesson is primarily a work day for students to complete their innovation 1-pagers. Students should work close to their teammates in case they want to discuss ways to make their proposals more aligned around a cohesive vision for the Future School. Otherwise students should have the entire class period to work independently.",
@@ -263,6 +272,7 @@
       "name": "Protecting Data Part 1",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
         "overview": "In this lesson students explore two different encryption widgets: The Caesar Cipher Widget and the Random Substitution Cipher. Afterwards, students watch a video that reviews these types of encryption and introduces a new concept: public key encryption. ",
@@ -291,6 +301,7 @@
       "name": "Protecting Data Part 2",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "This lesson is a guided tour of multifactor authentication and software updates that students can use to protect their data. Following these discussions, students are introduced to a stimulus question where they will apply their knowledge gained throughout the unit to answer questions about an innovations data, benefits and harms, effects, and security or privacy concerns. ",
@@ -319,6 +330,7 @@
       "name": "Project   Innovation Simulation Part 5",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
         "overview": "Students meet with their groups to develop a shared artifact or presentation that presents their collective vision for the Future School. ",
@@ -347,6 +359,7 @@
       "name": "Project   Innovation Simulation Part 6",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
         "overview": "Students will get feedback on their group innovation proposal from one other group. They will then have the remainder of the class to finalize their group presentation and individual proposals which will be presented and submitted in the following class",
@@ -375,6 +388,7 @@
       "name": "Project   Innovation Simulation Part 7",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
         "overview": "Students present the group Innovation Proposal they have been working on throughout the units. After each group does a brief presentation students do a gallery walk of their classmates' projects, asking questions and reviewing any materials. Students then vote for the unified project and overall innovation they found most compelling. At the end of the lesson students will submit their projects for grading. ",
@@ -403,6 +417,7 @@
       "name": "Assessment Day",
       "absolute_position": 14,
       "lockable": true,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",
@@ -1317,7 +1332,8 @@
       "key": "73736bf9-e6ec-4816-8fc9-a80f3123802c",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "73736bf9-e6ec-4816-8fc9-a80f3123802c",
@@ -1403,7 +1419,8 @@
       "key": "ca2f8fa0-1800-41c6-abc7-1831b1f901bd",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ca2f8fa0-1800-41c6-abc7-1831b1f901bd",
@@ -1545,7 +1562,8 @@
       "key": "0acb6af8-b6f2-441d-b5d6-48b68253e842",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0acb6af8-b6f2-441d-b5d6-48b68253e842",
@@ -1905,7 +1923,8 @@
       "key": "3c71371b-948b-437b-9929-420e76eddc2f",
       "position": 1,
       "properties": {
-        "name": "Keylogging"
+        "name": "Keylogging",
+        "progression_name": "Keylogging"
       },
       "seeding_key": {
         "activity_section.key": "3c71371b-948b-437b-9929-420e76eddc2f",
@@ -1916,7 +1935,8 @@
       "key": "ce2de65a-6e7d-4351-97cb-a6c4d9cae993",
       "position": 2,
       "properties": {
-        "name": "Phishing"
+        "name": "Phishing",
+        "progression_name": "Phishing"
       },
       "seeding_key": {
         "activity_section.key": "ce2de65a-6e7d-4351-97cb-a6c4d9cae993",
@@ -1927,7 +1947,8 @@
       "key": "c1cb13df-9873-415d-8335-c9288e3fa65f",
       "position": 3,
       "properties": {
-        "name": "Malware"
+        "name": "Malware",
+        "progression_name": "Malware"
       },
       "seeding_key": {
         "activity_section.key": "c1cb13df-9873-415d-8335-c9288e3fa65f",
@@ -1938,7 +1959,8 @@
       "key": "63be04fe-183f-4e14-beb7-7252e3b48a0e",
       "position": 4,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "63be04fe-183f-4e14-beb7-7252e3b48a0e",
@@ -2107,7 +2129,8 @@
       "key": "1f61d207-37f6-4024-bc10-5b3ff43f7876",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "1f61d207-37f6-4024-bc10-5b3ff43f7876",
@@ -2387,7 +2410,8 @@
       "key": "1ddd7f1a-a51a-4e95-b5d8-a02a1ef55921",
       "position": 1,
       "properties": {
-        "name": "Encryption Widgets"
+        "name": "Encryption Widgets",
+        "progression_name": "Encryption Widgets"
       },
       "seeding_key": {
         "activity_section.key": "1ddd7f1a-a51a-4e95-b5d8-a02a1ef55921",
@@ -2398,7 +2422,8 @@
       "key": "da8d003b-3f0c-4bcd-bfd9-4f524a8306ad",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "da8d003b-3f0c-4bcd-bfd9-4f524a8306ad",
@@ -2581,7 +2606,8 @@
       "key": "6321a809-abee-46c8-b13e-b71c68a9b3ce",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "6321a809-abee-46c8-b13e-b71c68a9b3ce",
@@ -2888,7 +2914,8 @@
       "key": "1541b0f8-9be5-4394-b851-be5a39cc6c5e",
       "position": 1,
       "properties": {
-        "name": "Unit 10 Exam"
+        "name": "Unit 10 Exam",
+        "progression_name": "Unit 10 Exam"
       },
       "seeding_key": {
         "activity_section.key": "1541b0f8-9be5-4394-b851-be5a39cc6c5e",

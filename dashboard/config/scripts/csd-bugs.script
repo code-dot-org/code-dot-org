@@ -1,11 +1,11 @@
-lesson 'Game Lab Bugs', display_name: 'Game Lab Bugs'
+lesson 'Game Lab Bugs', display_name: 'Game Lab Bugs', has_lesson_plan: false
 level 'gamelab bug declare sprite in loop'
 level 'gamelab bug text behind sprites'
 level 'gamelab bug infinity mouse 1'
 level 'gamelab bug infinity mouse 2'
 level 'gamelab bug not a function'
 
-lesson 'Immovable Crab', display_name: 'Immovable Crab'
+lesson 'Immovable Crab', display_name: 'Immovable Crab', has_lesson_plan: false
 level 'gamelab bug declare sprite in loop'
 level 'gamelab bug declare sprite in loop 1'
 level 'gamelab bug declare sprite in loop 2'

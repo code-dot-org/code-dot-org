@@ -13,7 +13,8 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -41,6 +42,7 @@
       "name": "Algorithms Solve Problems",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students will complete two exploratory activities that introduce the concept of a problem and an algorithm. In the first students answer a series of questions about birthdates and names of their classmates. They then discuss the similarities and differences between the problems. In the second activity students are given six different algorithms and must analyze them to determine which they think are the same or different. At the end of the lesson they are introduced to the formal definitions of a problem and an algorithm.",
@@ -69,6 +71,7 @@
       "name": "Algorithm Efficiency",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "In this lesson students follow a demonstration of Linear Search before writing their own search algorithms. Following this, students are introduced to Binary Search after which they compare graphs of the search algorithms to determine which is most efficient. ",
@@ -97,6 +100,7 @@
       "name": "Unreasonable Time",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "Students investigate two different types of raffles that highlight the way seemingly small problems can quickly grow large. The first raffle asks students to hunt for pairs of tickets that add to a target value. The second raffle asks students to hunt for any group of tickets that adds to a target value. After trying out each raffle live students will try to figure out the patterns for how many total combinations need to be checked in each. At the end they discuss the difference between reasonable and unreasonable algorithms based on their experiences.",
@@ -125,6 +129,7 @@
       "name": "The Limits of Algorithms",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "Students explore the limits of what algorithms are able to compute. First they use a widget that exposes students to the Traveling Salesman Problem. After recognizing this problem can only be solved using an unreasonable time algorithm the develop their own good enough solutions that run more efficiently. Later in the lesson students watch a video about undecidable problems for which no algorithm can ever be developed to solve them.",
@@ -153,6 +158,7 @@
       "name": "Parallel and Distributed Algorithms",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "In this lesson students explore the benefits and limitations of parallel and distributed computing. First they discuss the way human problem solving changes when additional people lend a hand. Then they run a series of demonstrations that show how simple tasks like sorting cards get faster when more people help, but there is a limitation to the efficiency gains. Later in the lesson students watch a video about distributed computing that highlights the ways distributed computing can help tackle new kinds of problems. To conclude the lesson students record new vocabulary in their journals and discuss any open questions.",
@@ -181,6 +187,7 @@
       "name": "Assessment Day",
       "absolute_position": 6,
       "lockable": true,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",
@@ -738,7 +745,8 @@
       "key": "df4bd8b8-dcc9-466f-aac5-338f4cb65dfe",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "df4bd8b8-dcc9-466f-aac5-338f4cb65dfe",
@@ -1059,7 +1067,8 @@
       "key": "4956632b-4b5d-41a7-b096-d48ca12916f2",
       "position": 1,
       "properties": {
-        "name": "Widget: Ticket Generator"
+        "name": "Widget: Ticket Generator",
+        "progression_name": "Widget: Ticket Generator"
       },
       "seeding_key": {
         "activity_section.key": "4956632b-4b5d-41a7-b096-d48ca12916f2",
@@ -1070,7 +1079,8 @@
       "key": "4d15b77a-45fa-4118-a9c3-4b59d0870c99",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "4d15b77a-45fa-4118-a9c3-4b59d0870c99",
@@ -1321,7 +1331,8 @@
       "key": "54f355fa-0676-434b-afff-553540c71af3",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "54f355fa-0676-434b-afff-553540c71af3",
@@ -1539,7 +1550,8 @@
       "key": "1d88bbf9-572b-4ddb-aa62-60c6648da0f8",
       "position": 1,
       "properties": {
-        "name": "Widget: Traveling Salesman"
+        "name": "Widget: Traveling Salesman",
+        "progression_name": "Widget: Traveling Salesman"
       },
       "seeding_key": {
         "activity_section.key": "1d88bbf9-572b-4ddb-aa62-60c6648da0f8",
@@ -1550,7 +1562,8 @@
       "key": "036a57f4-8272-4af4-ab2f-400bb72360ac",
       "position": 2,
       "properties": {
-        "name": "Widget: Traveling Salesman - Random Nodes"
+        "name": "Widget: Traveling Salesman - Random Nodes",
+        "progression_name": "Widget: Traveling Salesman - Random Nodes"
       },
       "seeding_key": {
         "activity_section.key": "036a57f4-8272-4af4-ab2f-400bb72360ac",
@@ -1561,7 +1574,8 @@
       "key": "8facf313-a2a2-4fe3-82a9-506ba61f7e24",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "8facf313-a2a2-4fe3-82a9-506ba61f7e24",
@@ -1847,7 +1861,8 @@
       "key": "c9bbe50e-af43-431f-9018-236529a32380",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "c9bbe50e-af43-431f-9018-236529a32380",
@@ -1887,7 +1902,8 @@
       "key": "b165ef75-8c53-401f-8a22-27d1c0b7debc",
       "position": 1,
       "properties": {
-        "name": "Unit 6 Exam"
+        "name": "Unit 6 Exam",
+        "progression_name": "Unit 6 Exam"
       },
       "seeding_key": {
         "activity_section.key": "b165ef75-8c53-401f-8a22-27d1c0b7debc",
@@ -1902,10 +1918,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L01 Algorithms vs Problems_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -1928,10 +1944,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Widget: Ticket Generator",
         "level_keys": [
           "CSP U6L2 Ticket Generator_2021"
-        ]
+        ],
+        "progression": "Widget: Ticket Generator"
       },
       "named_level": null,
       "bonus": null,
@@ -1954,10 +1970,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6L2 CFU Binary Search Steps_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -1980,10 +1996,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6L2 CFU Efficiency and Algorithms_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2006,10 +2022,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6L3 CFU Reasonable vs Unreasonable_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2032,10 +2048,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L03 Evaluate Reasonable or Not_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2058,10 +2074,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Widget: Traveling Salesman",
         "level_keys": [
           "CSP U6L4 Traveling Salesman_2021"
-        ]
+        ],
+        "progression": "Widget: Traveling Salesman"
       },
       "named_level": null,
       "bonus": null,
@@ -2084,10 +2100,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Widget: Traveling Salesman - Random Nodes",
         "level_keys": [
           "CSP U6L4 Random Traveling Salesman_2021"
-        ]
+        ],
+        "progression": "Widget: Traveling Salesman - Random Nodes"
       },
       "named_level": null,
       "bonus": null,
@@ -2110,10 +2126,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6L4 CFU Reason for Heuristics_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2136,10 +2152,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L04 Unreasonable vs Undecidable_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2162,10 +2178,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6L5 CFU Calculate Speedup_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2188,10 +2204,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L05 Speedup Forever_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2214,10 +2230,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 6 Exam",
         "level_keys": [
           "CSP Unit 6 AP-Style Assessment _2021"
-        ]
+        ],
+        "progression": "Unit 6 Exam"
       },
       "named_level": null,
       "bonus": null,

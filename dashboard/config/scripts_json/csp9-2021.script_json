@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -40,6 +41,7 @@
       "name": "Learning from Data",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "In this lesson students explore the Google Trends tool in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab. ",
@@ -68,6 +70,7 @@
       "name": "Exploring One Column",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts a bar chart, and a histogram. The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice reading a bar chart and review the kinds of questions it is and is not useful for answering. Afterwards they build different bar charts in the Data Visualizer and discuss why some are or are not useful. Afterwards they learn how to make histograms for building charts in instances where bar charts may not be useful. Students record their work on an activity guide. The lesson concludes with a brief review of what they learned.",
@@ -96,6 +99,7 @@
       "name": "Filtering and Cleaning Data",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "In this lesson, student explore the challenges of working with a messy dataset. First students learn how to identify issues using the Data Visualizer, and then manually clean the data. Following this, students learn about the filtering tools in the Data Visualizer, and use a guided activity to answer data questions that require filtering a dataset. ",
@@ -124,6 +128,7 @@
       "name": "Exploring Two Columns",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to make create two different kinds of charts, a cross tab, and a scatterplot. Students will practice reading each type of chart before learning to make them in the Data Visualizer. Students will track their work using a provided activity guide. The lesson concludes with a review of key takeaways.",
@@ -152,6 +157,7 @@
       "name": "Big, Open, and Crowdsourced Data",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "Students will complete a jigsaw of three different topics at the intersection of data, computing, and global impacts. These are topics, big data, crowdsourcing, and open data. Students will watch videos or listen to audio recordings about the different topics. Groups will each complete an activity guide about their topic before having individuals from each group share out their findings. The lesson concludes with a review of key points.",
@@ -180,6 +186,7 @@
       "name": "Machine Learning and Bias",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
@@ -208,6 +215,7 @@
       "name": "Project   Tell a Data Story Part 1",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "This is the first day of a project where students use the Data Analysis Process to tell a data story.  Students complete the first page of the Activity Guide for this project during this lesson.",
@@ -236,6 +244,7 @@
       "name": "Project   Tell a Data Story Part 2",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "This is the second day of a project where students use the Data Analysis Process to tell a data story.  Students complete the second page of the Activity Guide for this project during this lesson.",
@@ -264,6 +273,7 @@
       "name": "Assessment Day",
       "absolute_position": 9,
       "lockable": true,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students complete a multiple choice assessment which covers the unit topics. ",
@@ -914,7 +924,8 @@
       "key": "fd1b4c8a-4e7d-47fd-8193-31abffdebe89",
       "position": 1,
       "properties": {
-        "name": "Exploring Metadata"
+        "name": "Exploring Metadata",
+        "progression_name": "Exploring Metadata"
       },
       "seeding_key": {
         "activity_section.key": "fd1b4c8a-4e7d-47fd-8193-31abffdebe89",
@@ -925,7 +936,8 @@
       "key": "0d0f2b60-cb65-44f8-9d2b-bcf27d68d86d",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0d0f2b60-cb65-44f8-9d2b-bcf27d68d86d",
@@ -1147,7 +1159,8 @@
       "key": "68b25eb9-47d6-4f47-ad5c-75346126e09e",
       "position": 1,
       "properties": {
-        "name": "Making Bar Charts and Histograms"
+        "name": "Making Bar Charts and Histograms",
+        "progression_name": "Making Bar Charts and Histograms"
       },
       "seeding_key": {
         "activity_section.key": "68b25eb9-47d6-4f47-ad5c-75346126e09e",
@@ -1158,7 +1171,8 @@
       "key": "4d45aa0c-a442-491c-8b23-2c846e8aa6fe",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "4d45aa0c-a442-491c-8b23-2c846e8aa6fe",
@@ -1402,7 +1416,8 @@
       "key": "fe9a381b-81b2-415c-8777-98a8364c734a",
       "position": 1,
       "properties": {
-        "name": "Cleaning Data"
+        "name": "Cleaning Data",
+        "progression_name": "Cleaning Data"
       },
       "seeding_key": {
         "activity_section.key": "fe9a381b-81b2-415c-8777-98a8364c734a",
@@ -1413,7 +1428,8 @@
       "key": "7d80aaf7-7424-4a35-a412-4945116208e2",
       "position": 2,
       "properties": {
-        "name": "Filtering Data"
+        "name": "Filtering Data",
+        "progression_name": "Filtering Data"
       },
       "seeding_key": {
         "activity_section.key": "7d80aaf7-7424-4a35-a412-4945116208e2",
@@ -1424,7 +1440,8 @@
       "key": "5c45128e-4ab3-4f67-8a0a-4392fc26a5b8",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "5c45128e-4ab3-4f67-8a0a-4392fc26a5b8",
@@ -1611,7 +1628,8 @@
       "key": "15416f54-0958-443c-a6a9-78ec30eacc14",
       "position": 1,
       "properties": {
-        "name": "Crosstab and Scatter Charts"
+        "name": "Crosstab and Scatter Charts",
+        "progression_name": "Crosstab and Scatter Charts"
       },
       "seeding_key": {
         "activity_section.key": "15416f54-0958-443c-a6a9-78ec30eacc14",
@@ -1622,7 +1640,8 @@
       "key": "84ec5f15-f8df-44d7-a219-cbba3b2a450b",
       "position": 2,
       "properties": {
-        "name": "What Type of Chart?"
+        "name": "What Type of Chart?",
+        "progression_name": "What Type of Chart?"
       },
       "seeding_key": {
         "activity_section.key": "84ec5f15-f8df-44d7-a219-cbba3b2a450b",
@@ -1633,7 +1652,8 @@
       "key": "7d22238f-29c6-4c55-b16e-ca2f296de0fb",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "7d22238f-29c6-4c55-b16e-ca2f296de0fb",
@@ -1696,7 +1716,7 @@
       "key": "6782e4c9-60f9-44fa-ab5a-ca9ebb38b021",
       "position": 2,
       "properties": {
-        "description": "**Distribute: ** Give each pair a copy of the [r big-data-citizen-science-machine-learning-activity-guide]",
+        "description": "**Distribute:** Give each pair a copy of the [r big-data-citizen-science-machine-learning-activity-guide]",
         "tips": [
           {
             "key": "tip",
@@ -1714,7 +1734,7 @@
       "key": "3541aa8a-3c4c-4f57-aa10-f423bb64a577",
       "position": 3,
       "properties": {
-        "description": "[slide] **Prompt:** With a partner\r\n* Choose one of the topics\r\n* Watch the related videos / listen to the podcasts\r\n* Take notes and be ready to share responses to the questions on your activity guide\r\n\r\n[slide] **Discuss:** Have members from each topic share the conclusions from their watching and research. Make sure that students from each group have time to share\r\n\r\n* What the topic is\r\n* The key vocabulary they were responsible for researching\r\n* How this concept uses or modifies the data analysis process\r\n* Examples of the problems this technique is being used to solve"
+        "description": "[slide] **Prompt:** With a partner\n\n* Choose one of the topics\n* Watch the related videos / listen to the podcasts\n* Take notes and be ready to share responses to the questions on your activity guide\n\n[slide] **Discuss:** Have members from each topic share the conclusions from their watching and research. Make sure that students from each group have time to share\n\n* What the topic is\n* The key vocabulary they were responsible for researching\n* How this concept uses or modifies the data analysis process\n* Examples of the problems this technique is being used to solve"
       },
       "seeding_key": {
         "activity_section.key": "3541aa8a-3c4c-4f57-aa10-f423bb64a577",
@@ -1988,7 +2008,8 @@
       "key": "e950a605-e656-4940-890b-6e3c5ad5ccaa",
       "position": 1,
       "properties": {
-        "name": "AI for Oceans - Machine Learning"
+        "name": "AI for Oceans - Machine Learning",
+        "progression_name": "AI for Oceans - Machine Learning"
       },
       "seeding_key": {
         "activity_section.key": "e950a605-e656-4940-890b-6e3c5ad5ccaa",
@@ -1999,7 +2020,8 @@
       "key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7",
       "position": 2,
       "properties": {
-        "name": "Check for Understanding"
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7",
@@ -2062,7 +2084,8 @@
       "key": "b010e276-ad46-497c-86d7-6c7a1f437e8e",
       "position": 1,
       "properties": {
-        "name": "Data Story Workspace"
+        "name": "Data Story Workspace",
+        "progression_name": "Data Story Workspace"
       },
       "seeding_key": {
         "activity_section.key": "b010e276-ad46-497c-86d7-6c7a1f437e8e",
@@ -2106,7 +2129,8 @@
       "key": "b94cfd0b-2256-41c8-b38f-e435a0239c86",
       "position": 1,
       "properties": {
-        "name": "Data Story Workspace"
+        "name": "Data Story Workspace",
+        "progression_name": "Data Story Workspace"
       },
       "seeding_key": {
         "activity_section.key": "b94cfd0b-2256-41c8-b38f-e435a0239c86",
@@ -2146,7 +2170,8 @@
       "key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8",
       "position": 1,
       "properties": {
-        "name": "Unit 9 Exam"
+        "name": "Unit 9 Exam",
+        "progression_name": "Unit 9 Exam"
       },
       "seeding_key": {
         "activity_section.key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8",
