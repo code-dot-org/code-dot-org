@@ -1456,7 +1456,7 @@
           {
             "key": "tip-1",
             "type": "teachingTip",
-            "markdown": "This is the first official \"Investigate\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Investigate Lessons:\n**Overview:** Students investigate two or three sample programs that use the new concept.\n\n* Close-reading of working programs\n* Teacher-led discussions\n* Tasks to modify apps\n\n**Goal:** Students become comfortable reading and modifying programs that use the new concept. \n\n![](https://curriculum.code.org/media/uploads/investigate.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Investigate Lessons](https://www.youtube.com/watch?v=jC85CeXs3ds)\n"
+            "markdown": "This is the first official \"Investigate\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Investigate Lessons:\n\n**Overview:** Students investigate two or three sample programs that use the new concept.\n\n* Close-reading of working programs\n* Teacher-led discussions\n* Tasks to modify apps\n\n**Goal:** Students become comfortable reading and modifying programs that use the new concept. \n\n![](https://curriculum.code.org/media/uploads/investigate.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Investigate Lessons](https://www.youtube.com/watch?v=jC85CeXs3ds)\n"
           }
         ]
       },
@@ -1516,7 +1516,7 @@
           {
             "key": "3",
             "type": "discussionGoal",
-            "markdown": "Here are some points that students are likely to bring up while discussing their code:\r\n\r\n**Lines 1-12:** \r\n   \r\n   \t* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\r\n   \t* On line 7, an `onEvent` is created for when the `downButton` is clicked. \r\n   \t* When the down button is clicked, the `temp` variable decreases by one.\r\n   \t* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\r\n   \t* The text on the screen is set to dispay the value stored in the variable `tempF`\r\n   \t* A sound is played.\r\n\r\n**Lines 14-21**\r\n\r\n* On line 16, an `onEvent` is created for when the `upButton` is clicked.\r\n* When the up button is clicked, the `temp` variable is increased by one.\r\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\r\n   \t* The text on the screen is set to dispay the value stored in the variable `tempF`\r\n   \t* A sound is played\r\n\r\n"
+            "markdown": "Here are some points that students are likely to bring up while discussing their code:\n\n**Lines 1-12:**\n* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\n* On line 7, an `onEvent` is created for when the `downButton` is clicked.\n* When the down button is clicked, the `temp` variable decreases by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played.\n\n**Lines 14-21**\n\n* On line 16, an `onEvent` is created for when the `upButton` is clicked.\n* When the up button is clicked, the `temp` variable is increased by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played"
           }
         ]
       },
@@ -1724,7 +1724,7 @@
           {
             "key": "8",
             "type": "discussionGoal",
-            "markdown": "**Answers:** \r\nWhat can be stored in a variable?\r\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \r\n\t* Numbers\r\n\t* Strings\r\n\t\t* Including concatenated strings (`temp + \" F\"`)\r\n\r\nWhy is using a meaningful name for the variable important?\r\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\r\n* It also helps readers predict what values may be stored in the variables. \r\n\r\n"
+            "markdown": "**Answers:** What can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
           }
         ]
       },

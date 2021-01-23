@@ -5,3 +5,5 @@ description 'Great work so far! Choose your next activity. Complete as many as y
 
 sublevels
 level 'courseF_events_ship'
+level 'courseF_events_choice_pufferfish'
+level 'courseF_events_practice_reorder'

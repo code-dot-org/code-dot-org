@@ -20749,3 +20749,16 @@ en:
           description_short: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
           description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
           student_description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+        contagion-guided-practice:
+          lessons:
+            how things spread gp:
+              name: How Things Spread Guided Practice
+          lesson_groups:
+            lesson group:
+              display_name: Contagion-Guided-Practice
+          name: contagion-guided-practice
+          title: Contagion Guided Practice [Teacher only]
+          description_audience: 5th grade
+          description_short: These levels are for teachers to use when demonstrating CS and science concepts in the Contagion Simulator levels
+          description: These levels are for teachers to use when demonstrating CS and science concepts in the Contagion Simulator levels
+          student_description: ''
