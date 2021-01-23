@@ -197,7 +197,7 @@ endvariants
     level3 = create :maze, name: 'maze 3', level_num: 'custom'
     script = create :script, hidden: true
     lesson_group = create :lesson_group, key: "", script: script, user_facing: false
-    lesson = create :lesson, name: 'Lesson 1', key: 'Lesson 1', script: script, lesson_group: lesson_group
+    lesson = create :lesson, name: 'Lesson 1', key: 'Lesson 1', script: script, lesson_group: lesson_group, has_lesson_plan: true
     script_level = create(
       :script_level,
       levels: [level, level2, level3],
@@ -212,7 +212,7 @@ endvariants
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson 'Lesson 1', display_name: 'Lesson 1'
+      lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true
       variants
         level 'maze 1'
         level 'maze 2', experiments: ["testExperiment"]
@@ -248,6 +248,46 @@ endvariants
             {
               key: "Lesson2",
               name: "Lesson2",
+              script_levels: [
+                {levels: [{name: "Level 2"}]},
+              ]
+            }
+          ]
+        ]
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
+  test 'test Script DSL property has_lesson_plan as property hash' do
+    input_dsl = <<~DSL
+      lesson 'Lesson1', display_name: 'Lesson1',
+        has_lesson_plan: true
+      level 'Level 1'
+      lesson 'Lesson2', display_name: 'Lesson2',
+        has_lesson_plan: false
+      level 'Level 2'
+    DSL
+    expected = DEFAULT_PROPS.merge(
+      {
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              key: "Lesson1",
+              name: "Lesson1",
+              has_lesson_plan: true,
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+              ]
+            },
+            {
+              key: "Lesson2",
+              name: "Lesson2",
+              has_lesson_plan: false,
               script_levels: [
                 {levels: [{name: "Level 2"}]},
               ]
@@ -581,11 +621,11 @@ level 'Level 3'
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
     lesson_group = create :lesson_group, key: "", script: script, user_facing: false
-    lesson = create :lesson, name: 'Lesson 1', key: 'Lesson 1', script: script, lesson_group: lesson_group, visible_after: '2020-04-01 08:00:00 -0800'
+    lesson = create :lesson, name: 'Lesson 1', key: 'Lesson 1', script: script, lesson_group: lesson_group, visible_after: '2020-04-01 08:00:00 -0800', has_lesson_plan: true
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson 'Lesson 1', display_name: 'Lesson 1', visible_after: '2020-04-01 08:00:00 -0800'
+      lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true, visible_after: '2020-04-01 08:00:00 -0800'
       level 'maze 1'
 
     SCRIPT
@@ -631,12 +671,12 @@ level 'Level 3'
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
     lesson_group = create :lesson_group, key: 'content', script: script, properties: {display_name: "Content"}
-    lesson = create :lesson, name: 'lesson 1', key: 'L1', script: script, lesson_group: lesson_group
+    lesson = create :lesson, name: 'lesson 1', key: 'L1', script: script, lesson_group: lesson_group, has_lesson_plan: true
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
       lesson_group 'content', display_name: 'Content'
-      lesson 'L1', display_name: 'lesson 1'
+      lesson 'L1', display_name: 'lesson 1', has_lesson_plan: true
       level 'maze 1'
 
     SCRIPT
@@ -649,11 +689,11 @@ level 'Level 3'
     lesson_group = create :lesson_group, key: '', script: script, user_facing: false
     create :lesson_group, key: 'required', script: script
     create :lesson_group, key: 'practice', script: script
-    lesson = create :lesson, name: 'lesson 1', key: 'lesson 1', script: script, lesson_group: lesson_group
+    lesson = create :lesson, name: 'lesson 1', key: 'lesson 1', script: script, lesson_group: lesson_group, has_lesson_plan: true
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson 'lesson 1', display_name: 'lesson 1'
+      lesson 'lesson 1', display_name: 'lesson 1', has_lesson_plan: true
       level 'maze 1'
 
     SCRIPT
@@ -670,19 +710,19 @@ level 'Level 3'
     lesson_group2 = create :lesson_group, key: 'content2', script: script, position: 2, properties: {display_name: "Content2"}
     lesson_group1 = create :lesson_group, key: 'content1', script: script, position: 1, properties: {display_name: "Content1"}
 
-    lesson1 = create :lesson, name: 'lesson 1', key: 'lesson 1', script: script, lesson_group: lesson_group1
-    lesson2 = create :lesson, name: 'lesson 2', key: 'lesson 2', script: script, lesson_group: lesson_group2
+    lesson1 = create :lesson, name: 'lesson 1', key: 'lesson 1', script: script, lesson_group: lesson_group1, has_lesson_plan: true
+    lesson2 = create :lesson, name: 'lesson 2', key: 'lesson 2', script: script, lesson_group: lesson_group2, has_lesson_plan: true
 
     create :script_level, levels: [level1], lesson: lesson1, script: script
     script_level2 = create :script_level, levels: [level2], lesson: lesson2, script: script
     script_text = ScriptDSL.serialize_to_string(script_level2.script)
     expected = <<~SCRIPT
       lesson_group 'content1', display_name: 'Content1'
-      lesson 'lesson 1', display_name: 'lesson 1'
+      lesson 'lesson 1', display_name: 'lesson 1', has_lesson_plan: true
       level 'maze 1'
 
       lesson_group 'content2', display_name: 'Content2'
-      lesson 'lesson 2', display_name: 'lesson 2'
+      lesson 'lesson 2', display_name: 'lesson 2', has_lesson_plan: true
       level 'maze 2'
 
     SCRIPT
@@ -826,7 +866,7 @@ level 'Level 3'
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
     lesson_group = create :lesson_group, key: "", script: script, user_facing: false
-    lesson = create :lesson, name: 'Lesson 1', key: 'Lesson 1', script: script, lesson_group: lesson_group
+    lesson = create :lesson, name: 'Lesson 1', key: 'Lesson 1', script: script, lesson_group: lesson_group, has_lesson_plan: true
     script_level = create(
       :script_level,
       levels: [level],
@@ -837,7 +877,7 @@ level 'Level 3'
 
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson 'Lesson 1', display_name: 'Lesson 1'
+      lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true
       level 'maze 1', named: true
 
     SCRIPT
@@ -873,7 +913,7 @@ level 'Level 3'
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
     lesson_group = create :lesson_group, key: "", script: script, user_facing: false
-    lesson = create :lesson, name: 'Lesson 1', key: 'Lesson 1', script: script, lesson_group: lesson_group
+    lesson = create :lesson, name: 'Lesson 1', key: 'Lesson 1', script: script, lesson_group: lesson_group, has_lesson_plan: true
     script_level = create(
       :script_level,
       levels: [level],
@@ -884,7 +924,7 @@ level 'Level 3'
 
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson 'Lesson 1', display_name: 'Lesson 1'
+      lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true
       level 'maze 1', assessment: true
 
     SCRIPT
@@ -975,7 +1015,7 @@ level 'Level 3'
   test 'serialize lesson group and properties' do
     script = create :script, hidden: true
     lesson_group = create :lesson_group, key: 'content1', script: script, position: 1, properties: {display_name: "Content", description: 'This is a description', big_questions: 'Q1 Q2'}
-    lesson1 = create :lesson, key: 'l-1', name: 'lesson 1', script: script, lesson_group: lesson_group, absolute_position: 1
+    lesson1 = create :lesson, key: 'l-1', name: 'lesson 1', script: script, lesson_group: lesson_group, absolute_position: 1, has_lesson_plan: true
     level1 = create :maze, name: 'maze 1', level_num: 'custom'
     create :script_level, levels: [level1], lesson: lesson1, script: script
 
@@ -984,7 +1024,7 @@ level 'Level 3'
       lesson_group 'content1', display_name: 'Content'
       lesson_group_description 'This is a description'
       lesson_group_big_questions 'Q1 Q2'
-      lesson 'l-1', display_name: 'lesson 1'
+      lesson 'l-1', display_name: 'lesson 1', has_lesson_plan: true
       level 'maze 1'
 
     SCRIPT
@@ -1000,18 +1040,18 @@ level 'Level 3'
     lesson_group = create :lesson_group, key: 'content1', script: script, position: 1, properties: {display_name: "Content"}
 
     # intentionally made in the opposite order of how we want them to show to test
-    lesson2 = create :lesson, name: 'lesson 2', key: 'lesson 2', script: script, lesson_group: lesson_group, absolute_position: 2
-    lesson1 = create :lesson, name: 'lesson 1', key: 'lesson 1', script: script, lesson_group: lesson_group, absolute_position: 1
+    lesson2 = create :lesson, name: 'lesson 2', key: 'lesson 2', script: script, lesson_group: lesson_group, absolute_position: 2, has_lesson_plan: true
+    lesson1 = create :lesson, name: 'lesson 1', key: 'lesson 1', script: script, lesson_group: lesson_group, absolute_position: 1, has_lesson_plan: true
 
     create :script_level, levels: [level1], lesson: lesson1, script: script
     script_level2 = create :script_level, levels: [level2], lesson: lesson2, script: script
     script_text = ScriptDSL.serialize_to_string(script_level2.script)
     expected = <<~SCRIPT
       lesson_group 'content1', display_name: 'Content'
-      lesson 'lesson 1', display_name: 'lesson 1'
+      lesson 'lesson 1', display_name: 'lesson 1', has_lesson_plan: true
       level 'maze 1'
 
-      lesson 'lesson 2', display_name: 'lesson 2'
+      lesson 'lesson 2', display_name: 'lesson 2', has_lesson_plan: true
       level 'maze 2'
 
     SCRIPT

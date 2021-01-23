@@ -1,6 +1,6 @@
 hidden false
 
-lesson 'Simple Encryption', display_name: 'Simple Encryption'
+lesson 'Simple Encryption', display_name: 'Simple Encryption', has_lesson_plan: false
 level 'Crack a Caesar Cipher', named: true
 level 'Terminology Recap', named: true
 level 'New Challenge Introduction', named: true

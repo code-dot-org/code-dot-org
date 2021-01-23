@@ -1,17 +1,17 @@
 login_required true
 
-lesson 'Finding Trends with Visualizations', display_name: 'Finding Trends with Visualizations'
+lesson 'Finding Trends with Visualizations', display_name: 'Finding Trends with Visualizations', has_lesson_plan: false
 level 'U4L02v2 - Finding Trends'
 
-lesson 'Good and Bad Data Visualizations', display_name: 'Good and Bad Data Visualizations'
+lesson 'Good and Bad Data Visualizations', display_name: 'Good and Bad Data Visualizations', has_lesson_plan: false
 level 'U4L04v2 - Student Introduction'
 level 'GoodBadVisualizations_v1'
 level 'GoodBadVisualizations_v2'
 
-lesson 'Check Your Assumptions', display_name: 'Check Your Assumptions'
+lesson 'Check Your Assumptions', display_name: 'Check Your Assumptions', has_lesson_plan: false
 level 'U4L03v2 - Student Introduction'
 
-lesson 'Making Data Visualizations', display_name: 'Making Data Visualizations'
+lesson 'Making Data Visualizations', display_name: 'Making Data Visualizations', has_lesson_plan: false
 level 'U4 - Making Data Visualizations - Student Introduction'
 level 'U4 - Making Data Visualizations - Getting Started'
 level 'U4 - Making Data Visualizations - Scatter Plot'
@@ -19,10 +19,10 @@ level 'U4 - Making Data Visualizations - Line Chart'
 level 'U4 - Making Data Visualizations - Bar Chart'
 level 'U4 - Making Data Visualizations - Free Play'
 
-lesson 'Discover a Data Story', display_name: 'Discover a Data Story'
+lesson 'Discover a Data Story', display_name: 'Discover a Data Story', has_lesson_plan: false
 level 'U4L06v2 Student Lesson Introduction'
 
-lesson 'Cleaning Data', display_name: 'Cleaning Data'
+lesson 'Cleaning Data', display_name: 'Cleaning Data', has_lesson_plan: false
 level 'U4L16 Student Lesson Introduction'
 level 'U4 - Cleaning Data - Activity Guide'
 level 'U4 Cleaning Data Activity Guide Pt2'
@@ -31,22 +31,22 @@ level 'U4L16 Free Response', assessment: true
 level 'U4L16 Choose 2', assessment: true
 level 'U4L16 Multiple Choice', assessment: true
 
-lesson 'Creating Summary Tables', display_name: 'Creating Summary Tables'
+lesson 'Creating Summary Tables', display_name: 'Creating Summary Tables', has_lesson_plan: false
 level 'U4L08v2 Student Intro'
 level 'U4L08v2 Making Pivot Tables'
 level 'U4L08v2 Making Pivot Tables Part 2'
 level 'U4L08v2 Making Pivot Tables Part 3'
 
-lesson 'Rapid Research - Data Innovations', display_name: 'Rapid Research - Data Innovations'
+lesson 'Rapid Research - Data Innovations', display_name: 'Rapid Research - Data Innovations', has_lesson_plan: false
 level 'U4L12 - Student Introduction'
 
-lesson 'Why Make Apps?', display_name: 'Why Make Apps?'
+lesson 'Why Make Apps?', display_name: 'Why Make Apps?', has_lesson_plan: false
 level 'U4L01 Student Lesson Introduction'
 level 'U4L01 Free Response', assessment: true
 level 'U4L01 Choose 2', assessment: true
 level 'U4L01 Multiple Choice', assessment: true
 
-lesson 'Creating Javascript Objects', display_name: 'Creating Javascript Objects'
+lesson 'Creating Javascript Objects', display_name: 'Creating Javascript Objects', has_lesson_plan: false
 level 'U4L02 Student Lesson Introduction Video'
 level 'U4 - Objects - eventParameter'
 level 'U4 - Objects - dotNotation'
@@ -67,7 +67,7 @@ level 'U4L02 Free Response', assessment: true
 level 'U4L02 Choose 2', assessment: true
 level 'U4L02 Multiple Choice', assessment: true
 
-lesson 'Permanent Data Storage', display_name: 'Permanent Data Storage'
+lesson 'Permanent Data Storage', display_name: 'Permanent Data Storage', has_lesson_plan: false
 level 'U4L03 Student Lesson Introduction'
 level 'U4 - CreateRecord - 1'
 level 'U4 - CreateRecord - 2'
@@ -82,7 +82,7 @@ level 'U4 - add createRecord to contacts App'
 level 'U4 - fix contacts by hand in data table'
 level 'U4 - last stage test adding contcts'
 
-lesson 'Reading Records', display_name: 'Reading Records'
+lesson 'Reading Records', display_name: 'Reading Records', has_lesson_plan: false
 level 'U4L04 Student Lesson Introduction'
 level 'U4 - Read Record - 1'
 level 'U4 - Read Record - 1.2'
@@ -102,19 +102,19 @@ level 'U4 - ReadRecords - Contacts App 3'
 level 'U4 - ReadRecords - Contacts App 4'
 level 'U4 - ReadRecords - Contacts App 5 make delete work'
 
-lesson 'Search Terms', display_name: 'Search Terms'
+lesson 'Search Terms', display_name: 'Search Terms', has_lesson_plan: false
 level 'U4L05 Student Lesson Introduction'
 level 'U4L05 Free Response', assessment: true
 level 'U4L05 Choose 2', assessment: true
 level 'U4L05 Multiple Choice', assessment: true
 
-lesson 'Unique IDs, Delete and Update Records', display_name: 'Unique IDs, Delete and Update Records'
+lesson 'Unique IDs, Delete and Update Records', display_name: 'Unique IDs, Delete and Update Records', has_lesson_plan: false
 level 'U4L06 Student Lesson Introduction'
 level 'U4L06 Free Response', assessment: true
 level 'U4L06 Choose 2', assessment: true
 level 'U4L06 Multiple Choice', assessment: true
 
-lesson 'Import, Export, and Visualize Data', display_name: 'Import, Export, and Visualize Data'
+lesson 'Import, Export, and Visualize Data', display_name: 'Import, Export, and Visualize Data', has_lesson_plan: false
 level 'U4L07 Student Lesson Introduction'
 level 'U4 - Charts - Import Data 1'
 level 'U4 - Charts - Import Data 2'
@@ -130,78 +130,78 @@ level 'U4L07 Free Response', assessment: true
 level 'U4L07 Choose 2', assessment: true
 level 'U4L07 Multiple Choice', assessment: true
 
-lesson 'Interpreting Data Visualizations', display_name: 'Interpreting Data Visualizations'
+lesson 'Interpreting Data Visualizations', display_name: 'Interpreting Data Visualizations', has_lesson_plan: false
 level 'U4L08 Student Lesson Introduction'
 level 'U4L08 Free Response', assessment: true
 level 'U4L08 Choose 2', assessment: true
 level 'U4L08 Multiple Choice', assessment: true
 
-lesson 'How is Data Collected?', display_name: 'How is Data Collected?'
+lesson 'How is Data Collected?', display_name: 'How is Data Collected?', has_lesson_plan: false
 level 'U4L09 Student Lesson Introduction'
 level 'U4L09 Free Response', assessment: true
 level 'U4L09 Choose 2', assessment: true
 level 'U4L09 Multiple Choice', assessment: true
 
-lesson 'Using Data in the Real World', display_name: 'Using Data in the Real World'
+lesson 'Using Data in the Real World', display_name: 'Using Data in the Real World', has_lesson_plan: false
 level 'U4L10 Student Lesson Introduction'
 level 'U4L10 Free Response', assessment: true
 level 'U4L10 Choose 2', assessment: true
 level 'U4L10 Multiple Choice', assessment: true
 
-lesson 'Web Requests and APIs', display_name: 'Web Requests and APIs'
+lesson 'Web Requests and APIs', display_name: 'Web Requests and APIs', has_lesson_plan: false
 level 'U4L11 Student Lesson Introduction'
 level 'U4L11 Free Response', assessment: true
 level 'U4L11 Choose 2', assessment: true
 level 'U4L11 Multiple Choice', assessment: true
 
-lesson 'Data, Security, and Privacy', display_name: 'Data, Security, and Privacy'
+lesson 'Data, Security, and Privacy', display_name: 'Data, Security, and Privacy', has_lesson_plan: false
 level 'U4L12 Student Lesson Introduction'
 level 'U4L12 Free Response', assessment: true
 level 'U4L12 Choose 2', assessment: true
 level 'U4L12 Multiple Choice', assessment: true
 
-lesson 'Privacy vs Utility', display_name: 'Privacy vs Utility'
+lesson 'Privacy vs Utility', display_name: 'Privacy vs Utility', has_lesson_plan: false
 level 'U4L13 Student Lesson Introduction'
 level 'U4L13 Free Response', assessment: true
 level 'U4L13 Choose 2', assessment: true
 level 'U4L13 Multiple Choice', assessment: true
 
-lesson 'Privacy in a Digital World', display_name: 'Privacy in a Digital World'
+lesson 'Privacy in a Digital World', display_name: 'Privacy in a Digital World', has_lesson_plan: false
 level 'U4L14 Student Lesson Introduction'
 level 'U4L14 Free Response', assessment: true
 level 'U4L14 Choose 2', assessment: true
 level 'U4L14 Multiple Choice', assessment: true
 
-lesson 'Compiling Data', display_name: 'Compiling Data'
+lesson 'Compiling Data', display_name: 'Compiling Data', has_lesson_plan: false
 level 'U4L15 Student Lesson Introduction'
 level 'U4L15 Free Response', assessment: true
 level 'U4L15 Choose 2', assessment: true
 level 'U4L15 Multiple Choice', assessment: true
 
-lesson 'Designing Data Collection', display_name: 'Designing Data Collection'
+lesson 'Designing Data Collection', display_name: 'Designing Data Collection', has_lesson_plan: false
 level 'U4L17 Student Lesson Introduction'
 level 'U4L17 Free Response', assessment: true
 level 'U4L17 Choose 2', assessment: true
 level 'U4L17 Multiple Choice', assessment: true
 
-lesson 'Designing for Your User', display_name: 'Designing for Your User'
+lesson 'Designing for Your User', display_name: 'Designing for Your User', has_lesson_plan: false
 level 'U4L18 Student Lesson Introduction'
 level 'U4L18 Free Response', assessment: true
 level 'U4L18 Choose 2', assessment: true
 level 'U4L18 Multiple Choice', assessment: true
 
-lesson 'Practice Create PT: Data App', display_name: 'Practice Create PT: Data App'
+lesson 'Practice Create PT: Data App', display_name: 'Practice Create PT: Data App', has_lesson_plan: false
 level 'U4L19 Student Lesson Introduction'
 level 'U4L19 Free Response', assessment: true
 level 'U4L19 Choose 2', assessment: true
 level 'U4L19 Multiple Choice', assessment: true
 
-lesson 'What Data Can Tell Us', display_name: 'What Data Can Tell Us'
+lesson 'What Data Can Tell Us', display_name: 'What Data Can Tell Us', has_lesson_plan: false
 level 'CSP Data Unit -Counting Records - Hard Way'
 level 'CSP Data Unit -Counting Records - Easy Way'
 level 'CSP Data Unit - Counting Multiple Things'
 
-lesson 'Permanent Data Storage and Clicker Completion', display_name: 'Permanent Data Storage and Clicker Completion'
+lesson 'Permanent Data Storage and Clicker Completion', display_name: 'Permanent Data Storage and Clicker Completion', has_lesson_plan: false
 level 'U3L22 Student Lesson Introduction'
 level 'U3L17 - introKeyValue'
 level 'U3L17 - setKeyValue'

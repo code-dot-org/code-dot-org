@@ -3,30 +3,30 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Novice Reflection Overview', display_name: 'Novice Reflection Overview'
+lesson 'Novice Reflection Overview', display_name: 'Novice Reflection Overview', has_lesson_plan: false
 level 'welcome-novice-18', named: true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Day 1', display_name: 'Day 1'
+lesson 'Day 1', display_name: 'Day 1', has_lesson_plan: false
 level 'novice-monday-1'
 level 'novice-monday-2'
 level 'csd-pushDL-unit1'
 
-lesson 'Day 2', display_name: 'Day 2'
+lesson 'Day 2', display_name: 'Day 2', has_lesson_plan: false
 level 'novice-tuesday-1'
 level 'novice-tuesday-2'
 level 'csd-pushDL-unit2'
 
-lesson 'Day 3', display_name: 'Day 3'
+lesson 'Day 3', display_name: 'Day 3', has_lesson_plan: false
 level 'novice-wednesday-1'
 level 'novice-wednesday-2'
 level 'csd-pushDL-unit2'
 
-lesson 'Day 4', display_name: 'Day 4'
+lesson 'Day 4', display_name: 'Day 4', has_lesson_plan: false
 level 'novice-thursday-1'
 level 'novice-thursday-2'
 level 'csd-pushDL-unit3'
 
-lesson 'Wrap Up', display_name: 'Wrap Up'
+lesson 'Wrap Up', display_name: 'Wrap Up', has_lesson_plan: false
 level 'novice-congrats', named: true
 

@@ -1,13 +1,13 @@
 professional_learning_course 'Equity Support'
 login_required true
 
-lesson 'Necessary Background', display_name: 'Necessary Background'
+lesson 'Necessary Background', display_name: 'Necessary Background', has_lesson_plan: false
 level 'equity Intro'
 level 'equity v equality'
 level 'equity is more'
 level 'equity in CS'
 
-lesson 'Equity PD', display_name: 'Equity PD'
+lesson 'Equity PD', display_name: 'Equity PD', has_lesson_plan: false
 level 'equity lead 1'
 level 'equity activity'
 level 'equity vids'
