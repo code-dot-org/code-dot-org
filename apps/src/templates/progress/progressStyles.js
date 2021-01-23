@@ -13,14 +13,10 @@ export const BUBBLE_BORDER_WIDTH = 2;
 // Two pixels on each side for margin, plus 2 x border width
 export const BUBBLE_CONTAINER_WIDTH = DOT_SIZE + 4 + 2 * BUBBLE_BORDER_WIDTH;
 
-export const LETTER_BUBBLE_SIZE = 12;
+export const LETTER_BUBBLE_SIZE = 13;
 export const LETTER_BUBBLE_MARGIN = 3;
-export const LETTER_BUBBLE_PAD = 1;
 export const LETTER_BUBBLE_CONTAINER_WIDTH =
-  LETTER_BUBBLE_SIZE +
-  2 * LETTER_BUBBLE_MARGIN +
-  LETTER_BUBBLE_PAD +
-  2 * BUBBLE_BORDER_WIDTH;
+  LETTER_BUBBLE_SIZE + 2 * LETTER_BUBBLE_MARGIN + 2 * BUBBLE_BORDER_WIDTH;
 
 export const flex = {
   display: 'flex',
