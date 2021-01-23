@@ -2316,7 +2316,7 @@
       "key": "b5c73127-81e0-4658-9e0e-440a67548712",
       "position": 2,
       "properties": {
-        "description": "[slide]  tip!!!tip-0<!-- place where you'd like the icon -->\n **Prompt:** The first app we are going to investigate uses a loops in a simulation. What is a simulation? Why are they useful?",
+        "description": "[slide]\n**Prompt:** The first app we are going to investigate uses a loops in a simulation. What is a simulation? Why are they useful?",
         "tips": [
           {
             "key": "discussion",
@@ -2334,7 +2334,7 @@
       "key": "b5761658-1d3b-45ac-97ad-6dd0f4635846",
       "position": 3,
       "properties": {
-        "description": "Thanks for sharing your thoughts on simulations! Other examples of simulations are flight simulators which allows you to practice flying without damaging yourself or a real plane or a city building game where you can play with tweaking multiple values in the economy without real consequences.\n\nThese examples demonstrate the process of developing an abstract simulation where the specific details have been removed, or the functionality simplified. \n   \n   \tWhile simulations are a useful way to model the real-world, we also need to be constantly on the lookout for bias in the real-world elements that are actually included in the simulation.\n\nToday, we are going to look at a simple simulation.\n\nSimulations can be helpful to run when it would take a long time or it would be too impractical to do something physically. For example, what if we wanted to see the results of a coin flip that we flipped a million times? That would take a long time to perform ourselves, but a computer can run that simulation much quicker. Let's look at an app that does just that.",
+        "description": "Thanks for sharing your thoughts on simulations! Other examples of simulations are flight simulators which allows you to practice flying without damaging yourself or a real plane or a city building game where you can play with tweaking multiple values in the economy without real consequences.\n\nThese examples demonstrate the process of developing an abstract simulation where the specific details have been removed, or the functionality simplified. \n   \nWhile simulations are a useful way to model the real-world, we also need to be constantly on the lookout for bias in the real-world elements that are actually included in the simulation.\n\nToday, we are going to look at a simple simulation.\n\nSimulations can be helpful to run when it would take a long time or it would be too impractical to do something physically. For example, what if we wanted to see the results of a coin flip that we flipped a million times? That would take a long time to perform ourselves, but a computer can run that simulation much quicker. Let's look at an app that does just that.",
         "remarks": true
       },
       "seeding_key": {
@@ -2750,7 +2750,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "**Discussion Goals:**\r\n\r\nWhere (if at all) do you think this app is using a list?\r\n\r\n   \t* It's more important that students justify their answers. However, students may reconize that the different icons are likely being chosen from a list.\r\n\r\nWhere (if at all) do you think this app is using a loop?  \t\r\n  \t\r\n  \t* Students will hopefully recognize that with 20 different icons to be updated by each button there is almost certainly a loop being used by each of those button.\r\n"
+            "markdown": "**Discussion Goals:**\n\nWhere (if at all) do you think this app is using a list?\n\n* It's more important that students justify their answers. However, students may reconize that the different icons are likely being chosen from a list.\n\nWhere (if at all) do you think this app is using a loop?\n\n* Students will hopefully recognize that with 20 different icons to be updated by each button there is almost certainly a loop being used by each of those button.\n"
           }
         ]
       },

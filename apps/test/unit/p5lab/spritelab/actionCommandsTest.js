@@ -139,19 +139,32 @@ describe('Action Commands', () => {
     expect(spriteCommands.getProp({name: spriteName}, 'y')).to.equal(400);
   });
 
-  it('moveToward', () => {
-    makeSprite({name: spriteName, location: {x: 0, y: 50}});
+  describe('moveToward', () => {
+    it('moves the sprite towards the target', () => {
+      makeSprite({name: spriteName, location: {x: 0, y: 50}});
 
-    commands.moveToward({name: spriteName}, 100, {x: 123, y: 321});
-    expect(spriteCommands.getProp({name: spriteName}, 'x')).to.be.within(
-      41.3,
-      41.4
-    );
-    let expectedY = 400 - (50 + 91.1);
-    expect(spriteCommands.getProp({name: spriteName}, 'y')).to.be.within(
-      expectedY,
-      expectedY + 0.1
-    );
+      commands.moveToward({name: spriteName}, 100, {x: 123, y: 321});
+      expect(spriteCommands.getProp({name: spriteName}, 'x')).to.be.within(
+        41.3,
+        41.4
+      );
+      let expectedY = 400 - (50 + 91.1);
+      expect(spriteCommands.getProp({name: spriteName}, 'y')).to.be.within(
+        expectedY,
+        expectedY + 0.1
+      );
+    });
+
+    it('does not overshoot the target', () => {
+      makeSprite({name: spriteName, location: {x: 100, y: 100}});
+      const target = {x: 110, y: 120};
+      commands.moveToward({name: spriteName}, 100, target);
+      expect(spriteCommands.getProp({name: spriteName}, 'x')).to.equal(110);
+      const expectedY = 400 - target.y;
+      expect(spriteCommands.getProp({name: spriteName}, 'y')).to.equal(
+        expectedY
+      );
+    });
   });
 
   describe('setProp', () => {
