@@ -4,7 +4,10 @@ import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {PUZZLE_PAGE_NONE} from './progressTypes';
 import {TestResults} from '@cdo/apps/constants';
-import {activityCssClass} from '@cdo/apps/code-studio/activityUtils';
+import {
+  activityCssClass,
+  resultFromStatus
+} from '@cdo/apps/code-studio/activityUtils';
 import _ from 'lodash';
 
 /**
@@ -260,7 +263,7 @@ const getLevelResult = serverProgress => {
     return TestResults.SUBMITTED_RESULT;
   }
 
-  return serverProgress.result || TestResults.NO_TESTS_RUN;
+  return serverProgress.result || resultFromStatus(serverProgress.status);
 };
 
 /**
