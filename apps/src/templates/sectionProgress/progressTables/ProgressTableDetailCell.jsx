@@ -197,3 +197,7 @@ function getUnpluggedWidth() {
 
   return width;
 }
+
+export const unitTestExports = {
+  getUnpluggedWidth
+};
