@@ -117,8 +117,9 @@ def get_i18n_strings(level)
   end
 
   if level.is_a? BubbleChoice
-    i18n_strings["sublevels"] = level.sublevels.map do |sublevel|
-      get_i18n_strings sublevel
+    i18n_strings["sublevels"] = {}
+    level.sublevels.map do |sublevel|
+      i18n_strings["sublevels"][sublevel.name] = get_i18n_strings sublevel
     end
   end
 
