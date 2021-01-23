@@ -786,6 +786,49 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
   end
 
+  test 'google_oauth2: on successful google login, it redirects to user_return_to if it is present' do
+    # Given I have a Google-Code.org account
+    user = create :student, :google_sso_provider
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: user.primary_contact_info.authentication_id
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    session[:user_return_to] = "/maker/display_google_oauth_code"
+    CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I am signed in
+    user.reload
+    assert_equal user.id, signed_in_user_id
+    # Then I go to the display google oauth page to get my code
+    assert_redirected_to 'http://test.host/maker/display_google_oauth_code'
+  end
+
+  test 'google_oauth2: redirects to maker/display_google_oauth_code if present as user_return_to on unsuccessful google login' do
+    # Given I do not have a Code.org account
+    uid = "nonexistent-google-oauth2"
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '' # Google doesn't provider user_type
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    session[:user_return_to] = "/maker/display_google_oauth_code"
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I go to the display google oauth page to see an error message
+    assert_redirected_to 'http://test.host/maker/display_google_oauth_code'
+  end
+
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'

@@ -473,6 +473,54 @@ class MakerControllerTest < ActionController::TestCase
     assert_equal 1, CircuitPlaygroundDiscountApplication.where(user_id: @teacher.id).length
   end
 
+  test "confirm_login redirects to maker_display_google_oauth_code_path when a google user is signed in" do
+    @student = create :student, :google_sso_provider
+    CDO.stubs(:properties_encryption_key).returns(SecureRandom.base64(Encryption::KEY_LENGTH / 8))
+    sign_in @student
+
+    get :confirm_login, params: {user_return_to: '/maker/display_google_oauth_code'}
+    assert_redirected_to '/maker/display_google_oauth_code'
+  end
+
+  test "confirm_login redirects to maker_display_google_oauth_code_path when a non google user is signed in" do
+    sign_in @student
+
+    get :confirm_login, params: {user_return_to: '/maker/display_google_oauth_code'}
+
+    assert_redirected_to '/maker/display_google_oauth_code'
+  end
+
+  test "confirm_login does not redirect when no user is signed in" do
+    get :confirm_login, params: {user_return_to: '/maker/display_google_oauth_code'}
+    assert_response :success
+    assert_template :confirm_login
+  end
+
+  test "display_code shows a code when a google user is signed in" do
+    @student = create :student, :google_sso_provider
+    CDO.stubs(:properties_encryption_key).returns(SecureRandom.base64(Encryption::KEY_LENGTH / 8))
+    sign_in @student
+    get :display_code
+    assert_response :success
+    assert_select '#btn-copy'
+    assert_select '#maker_code' do
+      assert_select ":match('value', ?)", /.+/
+    end
+  end
+
+  test "display_code does not show a code when a non google user is signed in" do
+    sign_in @student
+    get :display_code
+    assert_response :success
+    assert_select '#btn-copy', false
+  end
+
+  test "display_code does not show a code when no user is signed in" do
+    get :display_code
+    assert_response :success
+    assert_select '#btn-copy', false
+  end
+
   private
 
   def ensure_script(script_name, version_year, is_stable=true)
