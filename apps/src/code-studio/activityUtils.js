@@ -42,6 +42,40 @@ export const activityCssClass = result => {
 };
 
 /**
+ * Inverse of the above function.
+ * Given a status string, returns a result value.
+ * @param {string} status
+ * @return {number}
+ */
+export const resultFromStatus = status => {
+  if (status === LevelStatus.review_accepted) {
+    return TestResults.REVIEW_ACCEPTED_RESULT;
+  }
+  if (status === LevelStatus.review_rejected) {
+    return TestResults.REVIEW_REJECTED_RESULT;
+  }
+  if (status === LevelStatus.submitted) {
+    return TestResults.SUBMITTED_RESULT;
+  }
+  if (status === LevelStatus.locked) {
+    return TestResults.LOCKED_RESULT;
+  }
+  if (status === LevelStatus.readonly) {
+    return TestResults.READONLY_SUBMISSION_RESULT;
+  }
+  if (status === LevelStatus.free_play_complete) {
+    return TestResults.FREE_PLAY;
+  }
+  if (status === LevelStatus.perfect) {
+    return TestResults.ALL_PASS;
+  }
+  if (status === LevelStatus.passed) {
+    return TestResults.MINIMUM_PASS_RESULT;
+  }
+  return TestResults.NO_TESTS_RUN;
+};
+
+/**
  * Returns the "best" of the two results, as defined in apps/src/constants.js.
  * Note that there are negative results that count as an attempt, so we can't
  * just take the maximum.
