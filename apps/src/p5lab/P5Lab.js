@@ -359,6 +359,10 @@ P5Lab.prototype.init = function(config) {
 
     this.studioApp_.init(config);
 
+    if (startInAnimationTab(getStore().getState())) {
+      getStore().dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
+    }
+
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(false));
@@ -445,10 +449,6 @@ P5Lab.prototype.init = function(config) {
     librariesEnabled: !!config.level.librariesEnabled,
     validationEnabled: !!config.level.validationEnabled
   });
-
-  if (startInAnimationTab(getStore().getState())) {
-    getStore().dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
-  }
 
   // Push project-sourced animation metadata into store. Always use the
   // animations specified by the level definition for embed and contained
