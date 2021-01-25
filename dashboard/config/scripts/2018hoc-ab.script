@@ -1,4 +1,4 @@
-lesson 'Labyrinth', display_name: 'Labyrinth'
+lesson 'Labyrinth', display_name: 'Labyrinth', has_lesson_plan: false
 level 'HoCAB_labyrinth1'
 level 'HoCAB_labyrinth2'
 
