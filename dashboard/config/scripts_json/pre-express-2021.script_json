@@ -21,7 +21,8 @@
         ]
       ],
       "is_course": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": "pre-express",
@@ -73,6 +74,7 @@
       "name": "Learn to Drag and Drop",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.",
@@ -91,6 +93,7 @@
       "name": "Sequencing with Scrat",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.",
@@ -109,6 +112,7 @@
       "name": "Programming with Angry Birds",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.",
@@ -127,6 +131,7 @@
       "name": "Programming with Rey and BB-8",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "In this lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.",
@@ -145,6 +150,7 @@
       "name": "Programming with Harvester",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. ",
@@ -163,6 +169,7 @@
       "name": "Loops with Scrat",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "Building on the concept of repeating instructions from \"My Loopy Robotic Friends,\" this stage will have students using loops to get to the acorn more efficiently on Code.org.",
@@ -181,6 +188,7 @@
       "name": "Loops with Laurel",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.",
@@ -199,6 +207,7 @@
       "name": "Ocean Scene with Loops",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.",
@@ -217,6 +226,7 @@
       "name": "Drawing Gardens with Loops",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
         "overview": "Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.",
@@ -235,6 +245,7 @@
       "name": "On the Move with Events",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
@@ -253,6 +264,7 @@
       "name": "A Royal Battle with Events",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
         "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!",
@@ -2603,10 +2615,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "challenge": true,
         "level_keys": [
           "courseA_maze_seq10_2021"
-        ],
-        "challenge": true
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2954,10 +2966,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "challenge": true,
         "level_keys": [
           "courseB_starWars_prog8_2021"
-        ],
-        "challenge": true
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3330,10 +3342,10 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "challenge": true,
         "level_keys": [
           "courseA_harvester_seq10_2021"
-        ],
-        "challenge": true
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3656,10 +3668,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "challenge": true,
         "level_keys": [
           "courseB_iceage_loops10_2021"
-        ],
-        "challenge": true
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3957,10 +3969,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "challenge": true,
         "level_keys": [
           "courseB_collector_loops8_2021"
-        ],
-        "challenge": true
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4358,10 +4370,10 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "challenge": true,
         "level_keys": [
           "courseA_artist_loops9_2021"
-        ],
-        "challenge": true
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4709,10 +4721,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "challenge": true,
         "level_keys": [
           "courseB_artist_loops7_2021"
-        ],
-        "challenge": true
+        ]
       },
       "named_level": null,
       "bonus": false,

@@ -1,19 +1,19 @@
 professional_learning_course 'ECS Support Legacy'
 login_required true
 
-lesson 'Welcome to Phase 1!', display_name: 'Welcome to Phase 1!'
+lesson 'Welcome to Phase 1!', display_name: 'Welcome to Phase 1!', has_lesson_plan: false
 level 'PDECS Welcome Video'
 level 'PDECS tour'
 level 'ECSPD1 professional learning program phases'
 level 'ECS Matching Program Commitment'
 
-lesson 'Background and Context', display_name: 'Background and Context'
+lesson 'Background and Context', display_name: 'Background and Context', has_lesson_plan: false
 level 'ECSPD1 cs is about'
 level 'ECSPD1 dikjstra'
 level 'ECSPD1 equity in cs education'
 level 'ECSPD1 background reflection'
 
-lesson 'ECS Curriculum', display_name: 'ECS Curriculum'
+lesson 'ECS Curriculum', display_name: 'ECS Curriculum', has_lesson_plan: false
 level 'ECSPD1 curriculum design'
 level 'ECSPD1 unit overviews'
 level 'ECSPD1 Matching Unit Descriptions and Numbers'
@@ -22,13 +22,13 @@ level 'ECSPD1 unit 2 overview'
 level 'ECSPD1 curriculum connections'
 level 'ECSPD1 computational thinker'
 
-lesson 'Classroom and workshop style ', display_name: 'Classroom and workshop style '
+lesson 'Classroom and workshop style ', display_name: 'Classroom and workshop style ', has_lesson_plan: false
 level 'ECSPD1 unifying themes'
 level 'ECS PD1 classroom culture'
 level 'ECSPD1 your role'
 level 'ECSPD1 student centered learning'
 
-lesson 'Wrap Up', display_name: 'Wrap Up'
+lesson 'Wrap Up', display_name: 'Wrap Up', has_lesson_plan: false
 level 'ECSPD1 Forum'
 level 'ECSPD1 post survey'
 level 'ECSPD1 congratulations end'
