@@ -1,6 +1,6 @@
 hidden false
 
-lesson 'Gumball Play Lab', display_name: 'Gumball Play Lab'
+lesson 'Gumball Play Lab', display_name: 'Gumball Play Lab', has_lesson_plan: false
 skin 'gumball'
 video_key_for_next_level 'gumball_intro'
 level 'blockly:Studio:gumball_hello1'

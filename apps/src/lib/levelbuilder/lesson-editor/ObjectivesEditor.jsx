@@ -4,9 +4,6 @@ import color from '@cdo/apps/util/color';
 import ObjectiveLine from './ObjectiveLine';
 
 const styles = {
-  oddRow: {
-    backgroundColor: color.lightest_gray
-  },
   addButton: {
     background: color.cyan,
     borderRadius: 3,
@@ -129,7 +126,6 @@ export default class ObjectivesEditor extends Component {
                 <ObjectiveLine
                   key={objective.key}
                   description={objective.description}
-                  lineStyle={index % 2 === 1 ? styles.oddRow : {}}
                   onSave={this.handleSave}
                   onEditCancel={this.handleCancel}
                   onEditClick={() => this.handleEdit(index)}

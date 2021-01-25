@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import DebugConsole from '@cdo/apps/lib/tools/jsdebugger/DebugConsole';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
@@ -14,8 +14,23 @@ import {
 import {KeyCodes} from '@cdo/apps/constants';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
+const newJSInterpreter = () => {
+  let interpreter = new JSInterpreter({
+    shouldRunAtMaxSpeed: () => false,
+    studioApp: {hideSource: true}
+  });
+  const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
+  interpreter.calculateCodeInfo({code});
+  interpreter.parse({code});
+  interpreter.paused = true;
+  interpreter.nextStep = JSInterpreter.StepType.IN;
+  interpreter.executeInterpreter(true);
+
+  return interpreter;
+};
+
 describe('The DebugConsole component when the console is enabled', () => {
-  let root;
+  let root, jumpToBottomSpy;
 
   beforeEach(() => {
     stubRedux();
@@ -26,6 +41,8 @@ describe('The DebugConsole component when the console is enabled', () => {
         <DebugConsole debugConsoleDisabled={false} />
       </Provider>
     );
+    const debugConsoleInstance = root.find('DebugConsole').instance();
+    jumpToBottomSpy = sinon.spy(debugConsoleInstance, 'jumpToBottom');
   });
 
   afterEach(() => {
@@ -42,6 +59,14 @@ describe('The DebugConsole component when the console is enabled', () => {
 
   it('renders a debug input div', () => {
     expect(debugInput()).to.exist;
+  });
+
+  it('jumps to bottom on componentDidUpdate if log output has changed', () => {
+    expect(jumpToBottomSpy).not.to.have.been.called;
+    getStore().dispatch(actions.attach(newJSInterpreter()));
+    expect(jumpToBottomSpy).not.to.have.been.called;
+    getStore().dispatch(actions.appendLog({output: 1 + 1}));
+    expect(jumpToBottomSpy).to.have.been.calledOnce;
   });
 
   function typeKey(keyCode) {
@@ -136,21 +161,10 @@ describe('The DebugConsole component when the console is enabled', () => {
 
   describe('After an interpreter has been attached', () => {
     beforeEach(() => {
-      let interpreter = new JSInterpreter({
-        shouldRunAtMaxSpeed: () => false,
-        studioApp: {hideSource: true}
-      });
-      const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
-      interpreter.calculateCodeInfo({code});
-      interpreter.parse({code});
-      interpreter.paused = true;
-      interpreter.nextStep = JSInterpreter.StepType.IN;
-      interpreter.executeInterpreter(true);
-
-      getStore().dispatch(actions.attach(interpreter));
+      getStore().dispatch(actions.attach(newJSInterpreter()));
     });
 
-    describe('When typing into the text input and pressing enter,', () => {
+    describe('when typing into the text input and pressing enter,', () => {
       beforeEach(() => submit('1+1;'));
 
       it('the text gets appended to the output', () => {
@@ -273,7 +287,7 @@ describe('The DebugConsole component when the console is enabled', () => {
       });
     });
 
-    describe('When typing bad code into the text input and pressing enter,', () => {
+    describe('when typing bad code into the text input and pressing enter,', () => {
       beforeEach(() => submit('a+b;'));
 
       it('the text gets appended to the output', () => {
@@ -346,6 +360,7 @@ describe('The DebugConsole component when the console is enabled', () => {
     });
   });
 });
+
 describe('The DebugConsole component when the debug console is disabled', () => {
   let root;
 
@@ -397,18 +412,7 @@ describe('The DebugConsole component when the debug console is disabled', () => 
 
   describe('After an interpreter has been attached', () => {
     beforeEach(() => {
-      let interpreter = new JSInterpreter({
-        shouldRunAtMaxSpeed: () => false,
-        studioApp: {hideSource: true}
-      });
-      const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
-      interpreter.calculateCodeInfo({code});
-      interpreter.parse({code});
-      interpreter.paused = true;
-      interpreter.nextStep = JSInterpreter.StepType.IN;
-      interpreter.executeInterpreter(true);
-
-      getStore().dispatch(actions.attach(interpreter));
+      getStore().dispatch(actions.attach(newJSInterpreter()));
     });
 
     describe('When typing into the text input and pressing enter,', () => {
