@@ -1,6 +1,6 @@
 hidden false
 
-lesson 'Hour of Code 2015', display_name: 'Hour of Code 2015'
+lesson 'Hour of Code 2015', display_name: 'Hour of Code 2015', has_lesson_plan: false
 skin 'hoc2015x'
 video_key_for_next_level 'starwars_intro'
 level 'blockly:StudioEC:js_hoc2015_move_right'

@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -39,6 +40,7 @@
       "name": "Create PT   Review the Task",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "This lesson contains a series of activities you can use to help students familiarize themselves with Create Performance Task, how it is scored, and some example tasks created by Code.org.\r\n\r\nStudents review the Submission Requirements and Scoring Guidelines for the Create PT. Subsequently they review three example scored Create PT submissions with commentary to better understand how the Submission Requirements and Scoring Guidelines are used together. In a wrap-up conversation they identify a piece of advice, a \"gotcha\", and a remaining question they have about the Create PT.",
@@ -58,6 +60,7 @@
       "name": "Create PT   Make a Plan",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.\r\n\r\nThe lesson concludes by providing students with resources to make a plan to complete the task staring in the next lesson.",
@@ -86,6 +89,7 @@
       "name": "Create PT - Complete the Task (12 hrs)",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "It is finally time for students to take on the Create Performance Task. For a total of 12 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\r\n\r\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 12 hours of class time.  At the end, students will submit their program code, program video, and written responses through their AP digital portfolio.",

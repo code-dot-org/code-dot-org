@@ -19,7 +19,8 @@
       ],
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -75,6 +76,7 @@
       "name": "Programming for Entertainment",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "**Question of the Day: How is computer science used in entertainment?**\r\n\r\nStudents are asked to consider the \"problems\" of boredom and self expression, and to reflect on how they approach those problems in their own lives. From there, students will explore how computer science in general, and programming specifically, plays a role in either a specific form of entertainment or as a vehicle for self expression.",
@@ -104,6 +106,7 @@
       "name": "Plotting Shapes",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "**Question of the Day: How can we clearly communicate how to draw something on a screen?**\r\n\r\nStudents explore the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab. The warm up activity quickly demonstrates the challenges of communicating position without some shared reference point. In the main activity, students explore a Game Lab tool that allows students to interactively place shapes on Game Lab's 400 by 400 grid. They then take turns instructing a partner how to draw a hidden image using this tool, accounting for many challenges students will encounter when programming in Game Lab. Students optionally create their own image to communicate before a debrief discussion.\r\n",
@@ -132,6 +135,7 @@
       "name": "Drawing in Game Lab",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "**Question of the Day: How can we communicate to a computer how to draw shapes on the screen?**\r\n\r\nStudents are introduced to Game Lab, the programming environment for this unit, and begin to use it to position shapes on the screen. They learn the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students will be able to program images like the ones they made with the drawing tool in the previous lesson.",
@@ -161,6 +165,7 @@
       "name": "Shapes and Parameters",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "**Question of the Day:  How can we use parameters to give the computer more specific instructions?**\r\n\r\nIn this lesson students continue to develop their familiarity with Game Lab by manipulating the width and height of the shapes they use to draw. The lesson kicks off with a discussion that connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or \"parameters\". Students learn to draw with versions of `ellipse()` and `rect()` that include width and height parameters. They also learn to use the `background()` block.",
@@ -190,6 +195,7 @@
       "name": "Variables",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "**Question of the Day:  How can we use variables to store information in our programs?**\r\n\r\nIn this lesson students learn how to use variables to label a number. Students begin the lesson with a very basic description of the purpose of a variable within the context of the storage component of the input-output-storage-processing model. Students then complete a level progression that reinforces the model of a variable as a way to label or name a number.",
@@ -219,6 +225,7 @@
       "name": "Random Numbers",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs. They then learn how to update variables during a program.  Combining all of these skills, students draw randomized images.",
@@ -248,6 +255,7 @@
       "name": "Sprites",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\r\n\r\nIn order to create more interesting and detailed images, students are introduced to the sprite object. The lesson starts with a discussion of the various information that programs must keep track of, then presents sprites as a way to keep track of that information. Students then learn how to assign each sprite an image, which will greatly increase the complexity of what they can draw on the screen.",
@@ -277,6 +285,7 @@
       "name": "Sprite Properties",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "**Question of the Day: How can we use sprite properties to change their appearance on the screen?**\r\n\r\nStudents extend their understanding of sprites by interacting with sprite properties.  Students start with a review of what a sprite is, then move on to Game Lab to practice more with sprites, using their properties to change their appearance. They then reflect on the connections between properties and variables.",
@@ -305,6 +314,7 @@
       "name": "Text",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
         "overview": "**Question of the Day: How can we use text to improve our scenes and animations?**\r\n\r\nThis lesson introduces Game Lab's text commands, giving students more practice using the coordinate plane and parameters. At the beginning of the lesson, students are asked to caption a cartoon created in Game Lab. They then move onto Code Studio where they practice placing text on the screen and controlling other text properties, such as size.  Students who complete the assessment early may go on to learn more challenging blocks related to text properties. ",
@@ -332,6 +342,7 @@
       "name": "Mini-Project - Captioned Scenes",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "**Question of the Day: How can we use Game Lab to express our creativity?**\r\n\r\nAfter a quick review of the code they have learned so far, students are introduced to their first creative project of the unit. Using the problem-solving process as a model, students define the scene that they want to create, prepare by thinking of the different code they will need, try their plan in Game Lab, then reflect on what they have created. They also have a chance to share their creations with their peers.",
@@ -359,6 +370,7 @@
       "name": "The Draw Loop",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
         "overview": "**Question of the Day: How can we animate our images in Game Lab?**\r\n\r\nIn this lesson students are introduced to the draw loop, one of the core programming paradigms in Game Lab. To begin the lesson students look at some physical flipbooks to see that having many frames with different images creates the impression of motion. Students then watch a video explaining how the draw loop in Game Lab helps to create this same impression in their programs. Students combine the draw loop with random numbers to manipulate some simple animations with dots and then with sprites.",
@@ -388,6 +400,7 @@
       "name": "Sprite Movement",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
         "overview": "**Question of the Day: How can we control sprite movement in Game Lab?**\r\n\r\nIn this lesson, students learn how to control sprite movement using a construct called the counter pattern, which incrementally changes a sprite's properties. Students first brainstorm different ways that they could animate sprites by controlling their properties, then explore the counter pattern in Code Studio. After examining working code, students try using the counter pattern to create various types of sprite movements.",
@@ -416,6 +429,7 @@
       "name": "Mini-Project - Animation",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
         "overview": "**Question of the Day: How can we combine different programming patterns to make a complete animation?**\r\n\r\nIn this lesson, students are asked to combine different methods that they have learned to create an animated scene. Students first review the types of movement and animation that they have learned, and brainstorm what types of scenes might need that movement. They then begin to plan out their own animated scenes, which they create in Game Lab.",
@@ -443,6 +457,7 @@
       "name": "Conditionals",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
         "overview": "**Question of the Day:  How can programs react to changes as they are running?**\r\n\r\nThis lesson introduces booleans and conditionals, which allow a program to run differently depending on whether a condition is true. Students start by playing a short game in which they respond according to whether particular conditions are met. They then move to Code Studio, where they learn how the computer evaluates Boolean expressions, and how they can be used to structure a program.",
@@ -471,6 +486,7 @@
       "name": "Keyboard Input",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
         "overview": "**Question of the Day: How can our programs react to user input?**\r\n\r\nFollowing the introduction to booleans and _if_ statements in the previous lesson, students are introduced to a new block called `keyDown()` which returns a boolean and can be used in conditionals statements to move sprites around the screen. By the end of this lesson, students will have written programs that take keyboard input from the user to control sprites on the screen.",
@@ -499,6 +515,7 @@
       "name": "Mouse Input",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
         "overview": "**Question of the Day: What are more ways that the computer can react to user input?**\r\n\r\nIn this lesson students continue to explore ways to use conditional statements to take user input. In addition to the keyboard commands learned yesterday, students will learn about several ways to take mouse input. They will also expand their understanding of conditionals to include `else`, which allows for the computer to run a certain section of code when a condition is true, and a different section of code when it is not.",
@@ -527,6 +544,7 @@
       "name": "Project - Interactive Card",
       "absolute_position": 17,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
         "overview": "**Question of the Day:  What skills and practices are important when creating an interactive program?**\r\n\r\nIn this culminating project for Chapter 1, students plan for and develop an interactive greeting card using all of the programming techniques they've learned to this point.",
@@ -556,6 +574,7 @@
       "name": "Velocity",
       "absolute_position": 18,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
         "overview": "**Question of the Day:  How can programming languages hide complicated patterns so that it is easier to program?**\r\n\r\nAfter a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the idea of hiding those patterns in a single block.  Students then head to Code Studio to try out new blocks that set a sprite's velocity directly, and look at various ways that they are able to code more complex behaviors in their sprites.  ",
@@ -584,6 +603,7 @@
       "name": "Collision Detection",
       "absolute_position": 19,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
         "overview": "**Question of the Day: How can programming help make complicated problems more simple?**\r\n\r\nStudents learn about collision detection on the computer. Working in pairs, they explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching. They then use the `isTouching()` block to create different effects when sprites collide, and practice using the block to model various interactions.",
@@ -613,6 +633,7 @@
       "name": "Mini-Project - Side Scroller",
       "absolute_position": 20,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
         "overview": "**Question of the Day:  How can the new types of sprite movement and collision detection be used to create a game?**\r\n\r\nStudents use what they have learned about collision detection and setting velocity to create a simple side scroller game. After looking at a sample side scroller game, students brainstorm what sort of side scroller they would like to make, then use a structured process to program the game in Code Studio.",
@@ -640,6 +661,7 @@
       "name": "Complex Sprite Movement",
       "absolute_position": 21,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
         "overview": "**Question of the Day: How can previous blocks be combined in new patterns to make interesting movements?**\r\n\r\nStudents learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. After reviewing the two concepts, they explore various scenarios in which velocity is used in the counter pattern, and observe the different types of movement that result. In particular, students learn how to simulate gravity. They then reflect on how they were able to get new behaviors by combining blocks and patterns that they already knew.",
@@ -668,6 +690,7 @@
       "name": "Collisions",
       "absolute_position": 22,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 22,
       "properties": {
         "overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\nIn this lessson, students program their sprites to interact in new ways. After a brief review of how they used the `isTouching` block, students brainstorm other ways that two sprites could interact. They then use `isTouching` to make one sprite push another across the screen before practicing with the four collision blocks (`collide`, `displace`, `bounce`, and `bounceOff`).",
@@ -696,6 +719,7 @@
       "name": "Mini-Project - Flyer Game",
       "absolute_position": 23,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 23,
       "properties": {
         "overview": "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**\r\n\r\nStudents use what they have learned about simulating gravity and the different types of collisions to create simple flyer games. After looking at a sample flyer game, students brainstorm what sort of flyer games they would like, then use a structured process to program the game in Code Studio.",
@@ -723,6 +747,7 @@
       "name": "Functions",
       "absolute_position": 24,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 24,
       "properties": {
         "overview": "**Question of the Day: How can programmers use functions to create their own abstractions?**\r\n\r\nStudents learn how to create functions to organize their code, make it more readable, and remove repeated blocks of code. Students first think about what sorts of new blocks they would like in Game Lab, and what code those blocks would contain inside. Afterwards students learn to create functions in Game Lab. They will use functions to remove long blocks of code from their draw loop and to replace repeated pieces of code with a single function.",
@@ -751,6 +776,7 @@
       "name": "The Game Design Process",
       "absolute_position": 25,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 25,
       "properties": {
         "overview": "**Question of the Day:  How does having a plan help to make a large project easier?**\r\n\r\nThis lesson introduces students to the process they will use to design games for the remainder of the unit. This process is centered around a project guide which asks students to define their sprites, variables, and functions before they begin programming their game. In this lesson students begin by playing a game on Game Lab where the code is hidden. They discuss what they think the sprites, variables, and functions would need to be to make the game. They are then given a completed project guide which shows one way to implement the game. Students are then walked through this process through a series of levels. At the end of the lesson, students have an opportunity to make improvements to the game to make it their own.",
@@ -780,6 +806,7 @@
       "name": "Using the Game Design Process",
       "absolute_position": 26,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 26,
       "properties": {
         "overview": "**Question of the Day:  How can the problem solving process help programmers to manage large projects?**\r\n\r\nIn this multi-day lesson, students use the problem solving process from Unit 1 to create a platform jumper game. They start by looking at an example of a platform jumper, then define what their games will look like. Next, they use a structured process to plan the backgrounds, variables, sprites, and functions they will need to implement their game. After writing the code for the game, students will reflect on how the game could be improved, and implement those changes.",
@@ -809,6 +836,7 @@
       "name": "Project - Design a Game",
       "absolute_position": 27,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 27,
       "properties": {
         "overview": "**Question of the Day: How can the five CS practices (problem solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?**\r\n\r\nStudents will plan and build their own game using the project guide from the previous two lessons. Working individually or in pairs, students will first decide on the type of game they'd like to build, taking as inspiration a set of sample games. They will then complete a blank project guide where they will describe the game's behavior and scope out the variables, sprites, and functions they'll need to build. In Code Studio, a series of levels prompts them on a general sequence they can use to implement this plan. Partway through the process, students will share their projects for peer review and will incorporate feedback as they finish their game. At the end of the lesson, students will share their completed games with their classmates. This project will span multiple classes and can easily take anywhere from 3-5 class periods.",
@@ -838,6 +866,7 @@
       "name": "Post-Project Test",
       "absolute_position": 28,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -852,6 +881,7 @@
       "name": "CS Discoveries Post Course survey",
       "absolute_position": 29,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },

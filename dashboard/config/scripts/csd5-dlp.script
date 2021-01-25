@@ -4,14 +4,14 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview'
+lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview', has_lesson_plan: false
 level 'deeper learning', progression: 'Background'
 level 'csd deeper learning timeline', progression: 'Deadlines and Payment'
 level 'deeper learning recommendations- csd', progression: 'Resource Recommendations'
 level 'peer review recommendations', progression: 'Guidelines For Peer Review'
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Complete Unit 5 Deeper Learning Reflections', display_name: 'Complete Unit 5 Deeper Learning Reflections'
+lesson 'Complete Unit 5 Deeper Learning Reflections', display_name: 'Complete Unit 5 Deeper Learning Reflections', has_lesson_plan: false
 level 'csd5dlp-lessons', progression: 'Lesson Connections and Philosophy'
 level 'csd5dlp-tools', progression: 'Tool Philosophy and Use'
 level 'csd5dlp-assessment', progression: 'Assessment'

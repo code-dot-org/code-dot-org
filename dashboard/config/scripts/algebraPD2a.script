@@ -1,7 +1,7 @@
 professional_learning_course 'CS in Algebra Legacy'
 login_required true
 
-lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks'
+lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks', has_lesson_plan: false
 level 'Calc Circles of Eval .1'
 level 'Calc Circles of Eval .2'
 level 'Calc Circles of Eval .3'
@@ -13,7 +13,7 @@ level 'Blocks to Math 1'
 level 'Blocks to Math 3'
 level 'Calc Circles of Eval Free Play'
 
-lesson 'Strings and Images', display_name: 'Strings and Images'
+lesson 'Strings and Images', display_name: 'Strings and Images', has_lesson_plan: false
 level 'Eval Strings Images .1'
 level 'Eval Strings Images .2'
 level 'Eval Strings Images 1'
@@ -22,20 +22,20 @@ level 'Eval Strings Images 3'
 level 'Eval Strings Images 4'
 level 'Eval Strings Images Free Play'
 
-lesson 'Defining Variables', display_name: 'Defining Variables'
+lesson 'Defining Variables', display_name: 'Defining Variables', has_lesson_plan: false
 level 'MSM Defining Vars 1'
 level 'MSM Defining Vars 2'
 level 'MSM Defining Vars 3'
 level 'MSM Defining Vars 4'
 level 'Eval Defining Vars Free Play 1'
 
-lesson 'Big Game - Variables', display_name: 'Big Game - Variables'
+lesson 'Big Game - Variables', display_name: 'Big Game - Variables', has_lesson_plan: false
 level 'Big Game Vars 1'
 level 'Big Game Vars 2'
 level 'Big Game Vars 3'
 level 'Big Game Vars 4'
 
-lesson 'Rocket-Height', display_name: 'Rocket-Height'
+lesson 'Rocket-Height', display_name: 'Rocket-Height', has_lesson_plan: false
 level 'Play Lab Rocket 1'
 level 'Rocket Contract 1'
 level 'Calc Rocket 1'
@@ -44,20 +44,20 @@ level 'Play Lab Rocket 2'
 level 'Play Lab Rocket 3'
 level 'Play Lab Rocket Free Play'
 
-lesson 'The Design Recipe', display_name: 'The Design Recipe'
+lesson 'The Design Recipe', display_name: 'The Design Recipe', has_lesson_plan: false
 level 'Eval Design Recipe .1'
 level 'Eval Design Recipe 3'
 level 'Eval Design Recipe 4'
 level 'Eval Design Recipe 5'
 level 'Eval Design Recipe Free Play'
 
-lesson 'Big Game - Animation', display_name: 'Big Game - Animation'
+lesson 'Big Game - Animation', display_name: 'Big Game - Animation', has_lesson_plan: false
 level 'Big Game Animation 1'
 level 'Big Game Animation 2'
 level 'Big Game Animation 3'
 level 'Big Game Animation 4'
 
-lesson 'Booleans', display_name: 'Booleans'
+lesson 'Booleans', display_name: 'Booleans', has_lesson_plan: false
 level 'Eval Booleans 1'
 level 'Eval Booleans 2'
 level 'Eval Booleans 3'
@@ -66,37 +66,37 @@ level 'Eval Booleans 5'
 level 'Eval Booleans 6'
 level 'Eval Booleans Free Play'
 
-lesson 'Sam the Bat', display_name: 'Sam the Bat'
+lesson 'Sam the Bat', display_name: 'Sam the Bat', has_lesson_plan: false
 level 'Sam the Butterfly 1'
 level 'Sam the Butterfly 2'
 level 'Sam the Butterfly 3'
 level 'Sam the Butterfly 4'
 level 'Sam the Butterfly 5'
 
-lesson 'Big Game - Booleans', display_name: 'Big Game - Booleans'
+lesson 'Big Game - Booleans', display_name: 'Big Game - Booleans', has_lesson_plan: false
 level 'Big Game Booleans 1'
 level 'Big Game Booleans 4'
 level 'Big Game Booleans 2'
 level 'Big Game Booleans 3'
 level 'Big Game Booleans 5'
 
-lesson 'Luigi\'s Pizza', display_name: 'Luigi\'s Pizza'
+lesson 'Luigi\'s Pizza', display_name: 'Luigi\'s Pizza', has_lesson_plan: false
 level 'Luigi\'s Pizza 1'
 level 'Luigi\'s Pizza 2'
 level 'Luigi\'s Pizza 3'
 level 'Luigi\'s Pizza 4'
 
-lesson 'Big Game - Player Movement', display_name: 'Big Game - Player Movement'
+lesson 'Big Game - Player Movement', display_name: 'Big Game - Player Movement', has_lesson_plan: false
 level 'Big Game Player 1'
 level 'Big Game Player 2'
 
-lesson 'Big Game - Collision Detection', display_name: 'Big Game - Collision Detection'
+lesson 'Big Game - Collision Detection', display_name: 'Big Game - Collision Detection', has_lesson_plan: false
 level 'Big Game Collision 1'
 level 'Big Game Collision 4'
 level 'Big Game Collision 3'
 level 'Big Game Final'
 
-lesson 'Free Play', display_name: 'Free Play'
+lesson 'Free Play', display_name: 'Free Play', has_lesson_plan: false
 level 'Calc Free Play'
 level 'Eval Free Play'
 

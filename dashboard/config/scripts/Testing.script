@@ -1,4 +1,4 @@
-lesson 'Testing', display_name: 'Testing'
+lesson 'Testing', display_name: 'Testing', has_lesson_plan: false
 level 'K-1 Maze 2'
 level '2-3 Maze 1'
 

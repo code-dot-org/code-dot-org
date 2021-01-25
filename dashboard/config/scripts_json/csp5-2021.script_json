@@ -13,7 +13,8 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -77,6 +78,7 @@
       "name": "Lists Explore",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students will learn the ways that lists are created, accessed, and changed through a teacher-guided activity using plastic baggies and pieces of paper. The lesson begins with a brief reflection on the value of lists. Students then complete the main activity which introduces the syntax to use lists and the ways they can be used. To wrap up students watch two short videos on lists and record the main concepts in their journals.",
@@ -105,6 +107,7 @@
       "name": "Lists Investigate",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "In this lesson students work with partners to investigate three different apps that use lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. To conclude the lesson, students review and discuss common programming patterns with conditionals.",
@@ -133,6 +136,7 @@
       "name": "Lists Practice",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "Practice the basics of lists including creating lists and accessing, inserting, and removing elements from lists. ",
@@ -161,6 +165,7 @@
       "name": "Lists Make",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Reminder app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
@@ -188,6 +193,7 @@
       "name": "Loops Explore",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "Students begin the lesson by discussing the purpose of loops before completing the unplugged activity. This activity involves moving a \"robot\" around a game board while practicing tracing blocks of code by hand. To conclude, the lesson is wrapped up with a vocabulary discussion and a video.  ",
@@ -216,6 +222,7 @@
       "name": "Loops Investigate",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "Students practice using the for loop in order to repeatedly run pieces of code. The lesson begins with a quick investigation of an app that flips coins. After that code investigation students complete another investigation with an app that uses loops to update screen elements. ",
@@ -244,6 +251,7 @@
       "name": "Loops Practice",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "Students practice the basics of loops including using while loops, for loops, and updating multiple screen elements with a for loop. Along the way students develop debugging practices with loops.",
@@ -272,6 +280,7 @@
       "name": "Loops Make",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Lock Screen Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with minimal starting code. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
@@ -299,6 +308,7 @@
       "name": "Traversals Explore",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
         "overview": "The lesson begins with a quick review of lists and loops before moving into the main activity. Here students explore the concept with the Traversal Machine, a physical model of traversal using a for loop. ",
@@ -327,6 +337,7 @@
       "name": "Traversals Investigate",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "In this lesson students work with partners to investigate three different apps that use traversal to access items in a lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. To conclude the lesson, students review and discuss common programming patterns with traversals.",
@@ -354,6 +365,7 @@
       "name": "Traversals Practice",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
         "overview": "Students practice traversing lists, filtering and reducing lists, and using the data import tools. Along the way students develop debugging practices with traversals.",
@@ -382,6 +394,7 @@
       "name": "Traversals Make",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Random Forecaster app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
@@ -410,6 +423,7 @@
       "name": "Project   Hackathon Part 1",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
         "overview": "This is the first day of a five-day unit project. Students begin the project by choosing a partner, determining a dataset to design the app around, and creating a paper prototype. ",
@@ -438,6 +452,7 @@
       "name": "Project   Hackathon Part 2",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
         "overview": "This is the second day of a five-day unit project. Students continue to plan for the project by filling out tables of information on element IDs and programming constructs before each tackling a different role in the project as a designer or a programmer. ",
@@ -466,6 +481,7 @@
       "name": "Project   Hackathon Part 3",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
         "overview": "This is the third day of a five-day unit project. Students continue to build their apps. ",
@@ -494,6 +510,7 @@
       "name": "Project   Hackathon Part 4",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
         "overview": "This is the fourth day of a five-day unit project. Students continue to build their apps. ",
@@ -522,6 +539,7 @@
       "name": "Project   Hackathon Part 5",
       "absolute_position": 17,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
         "overview": "This is the final day of a five-day unit project. Students complete a Written Response, individually answering prompts about the project. Students then share their apps during a gallery walk. ",
@@ -550,6 +568,7 @@
       "name": "Assessment Day",
       "absolute_position": 18,
       "lockable": true,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",

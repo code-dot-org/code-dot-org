@@ -1,6 +1,6 @@
 hidden false
 
-lesson 'Hour of Code 2015', display_name: 'Hour of Code 2015'
+lesson 'Hour of Code 2015', display_name: 'Hour of Code 2015', has_lesson_plan: false
 level 'Overworld Move to Sheep'
 level 'Overworld Chop Tree'
 level 'Overworld Shear Sheep'

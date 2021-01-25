@@ -1,37 +1,37 @@
 lesson_group 'required', display_name: 'Overview'
-lesson 'test Unit 1 required reading', display_name: 'test Unit 1 required reading'
+lesson 'test Unit 1 required reading', display_name: 'test Unit 1 required reading', has_lesson_plan: false
 level 'CSPPD Welcome Video'
 level 'PDECS tour'
 level 'PDECS commitment'
 
 lesson_group 'content', display_name: 'Content'
-lesson 'test Unit 1 content module Alpha', display_name: 'test Unit 1 content module Alpha'
+lesson 'test Unit 1 content module Alpha', display_name: 'test Unit 1 content module Alpha', has_lesson_plan: false
 level 'CSPPD2 chunk 1'
 level 'CSPPD2 chunk 1 lessons'
 level 'CSPPD2 PIvideo'
 
-lesson 'test Unit 1 content module Bravo', display_name: 'test Unit 1 content module Bravo'
+lesson 'test Unit 1 content module Bravo', display_name: 'test Unit 1 content module Bravo', has_lesson_plan: false
 level 'CSPPD2 chunk 2'
 level 'CSPPD2 chunk 2 lessons'
 level 'CSPPD2 chunk 2 reflection'
 
-lesson 'test Unit 1 content module Charlie', display_name: 'test Unit 1 content module Charlie'
+lesson 'test Unit 1 content module Charlie', display_name: 'test Unit 1 content module Charlie', has_lesson_plan: false
 level 'CSPPD2 chunk 3'
 level 'CSPPD2 chunk 3 lessons'
 level 'CSPPD2 share protocol'
 
 lesson_group 'practice', display_name: 'Teaching Practices'
-lesson 'test Unit 1 practice module Delta', display_name: 'test Unit 1 practice module Delta'
+lesson 'test Unit 1 practice module Delta', display_name: 'test Unit 1 practice module Delta', has_lesson_plan: false
 level 'CSPPD2 chunk 4'
 level 'CSPPD2 chunk 4 lessons'
 level 'CSPPD2 share compression'
 
-lesson 'test Unit 1 practice module Echo', display_name: 'test Unit 1 practice module Echo'
+lesson 'test Unit 1 practice module Echo', display_name: 'test Unit 1 practice module Echo', has_lesson_plan: false
 level 'CSPPD2 PT'
 level 'CSPPD2 PT activity'
 level 'CSPPD2 PT forum'
 
-lesson 'test Unit 1 practice module Foxtrot', display_name: 'test Unit 1 practice module Foxtrot'
+lesson 'test Unit 1 practice module Foxtrot', display_name: 'test Unit 1 practice module Foxtrot', has_lesson_plan: false
 level 'CSPPD2 congrats'
 level 'CSPPD2 next step announcements'
 

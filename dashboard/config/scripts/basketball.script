@@ -1,7 +1,7 @@
 hidden false
 tts true
 
-lesson 'Bounce', display_name: 'Bounce'
+lesson 'Bounce', display_name: 'Bounce', has_lesson_plan: false
 level 'bounce_1_basketball'
 level 'bounce_2_basketball'
 level 'bounce_5_basketball'
