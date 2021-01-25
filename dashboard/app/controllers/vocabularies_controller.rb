@@ -26,6 +26,7 @@ class VocabulariesController < ApplicationController
     end
   end
 
+  # PUT/PATCH /vocabularies
   def update
     vocabulary = Vocabulary.find_by_id(vocabulary_params[:id])
     if vocabulary && vocabulary.update!(vocabulary_params)
