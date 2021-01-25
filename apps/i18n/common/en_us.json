@@ -1421,6 +1421,8 @@
   "projectTypePlaylabPreReader": "Play Lab (Pre-reader)",
   "projectTypeStarwars": "Star Wars",
   "projectTypeStarwarsBlocks": "Star Wars (Blocks)",
+  "projectTypeSpecialTopic": "Special Topic",
+  "projectTypeSpecialTopicViewMore": "View more Special Topic projects",
   "projectTypeSpriteLab": "Sprite Lab",
   "projectTypeSports": "Sports",
   "projectTypeWeblab": "Web Lab",
