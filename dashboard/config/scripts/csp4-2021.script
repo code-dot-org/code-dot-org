@@ -2,19 +2,20 @@ login_required true
 hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
+has_lesson_plan true
 version_year '2021'
 project_sharing true
 curriculum_umbrella 'CSP'
 is_migrated true
 
 lesson_group 'csp_variables', display_name: 'Variables'
-lesson 'Variables Explore', display_name: 'Variables Explore'
+lesson 'Variables Explore', display_name: 'Variables Explore', has_lesson_plan: true
 level 'CSP U4 My Pet Rock Example App_2021', progression: 'Sample Apps'
 level 'U4 L01 Poetry App_2021', progression: 'Sample Apps'
 level 'U4 L01 Thermostat App_2021', progression: 'Sample Apps'
 level 'U1 L02 CYU MC_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Variables Investigate', display_name: 'Variables Investigate'
+lesson 'Variables Investigate', display_name: 'Variables Investigate', has_lesson_plan: true
 level 'U4 L02 Thermostat App v1_2021', progression: 'Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins'
 level 'U4 L02 Thermostat App v1 Code_2021', progression: 'Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins'
 level 'U4 L02 Thermostat App v2_2021', progression: 'Investigation #2: Thermostat App v.2 (Level 3) - 10 mins'
@@ -22,7 +23,7 @@ level 'U4 L02 Thermostat App v3_2021', progression: 'Investigation #3: Thermosta
 level 'U4 L02 Thermostat App v3 pt2_2021', progression: 'Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins'
 level 'U4 L02 CYU Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
 
-lesson 'Variables Practice', display_name: 'Variables Practice'
+lesson 'Variables Practice', display_name: 'Variables Practice', has_lesson_plan: true
 level 'U4 L03 Variables numbers practice 1_2021', progression: 'Assigning Numbers and Strings'
 level 'U4 L03 Variables numbers practice 4_2021', progression: 'Assigning Numbers and Strings'
 level 'U4 L03 Variables operator practice 1_2021', progression: 'Variables and Operators'
@@ -36,16 +37,16 @@ level 'U4 L03 Variables operator practice 4_2021', progression: 'Putting it Toge
 level 'U4L3 CFU Variables Psuedocode_2021', progression: 'Assessment: Check For Understanding: AP Practice', assessment: true
 level 'U4L3 CFU Variables Randomness Psuedocode_2021', progression: 'Assessment: Check For Understanding: AP Practice', assessment: true
 
-lesson 'Variables Make', display_name: 'Variables Make'
+lesson 'Variables Make', display_name: 'Variables Make', has_lesson_plan: true
 level 'U4 L04 Variables Make Project_2021', progression: 'Try the Photo Liker App'
 level 'U4 L04 Variables Make Project Submit_2021', progression: 'Make the Photo Liker App', assessment: true
 
 lesson_group 'csp_conditionals', display_name: 'Conditionals'
-lesson 'Conditionals Explore', display_name: 'Conditionals Explore'
+lesson 'Conditionals Explore', display_name: 'Conditionals Explore', has_lesson_plan: true
 level 'U4 L06 Introduction to Conditionals: Boolean Expressions_2021', progression: 'Conditionals: Boolean Expressions'
 level 'U4 L05 CYU Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
 
-lesson 'Conditionals Investigate', display_name: 'Conditionals Investigate'
+lesson 'Conditionals Investigate', display_name: 'Conditionals Investigate', has_lesson_plan: true
 level 'U4L06 Introduction to Conditionals: if Statements_2021', progression: 'If-Statements'
 level 'U4 L06 Lemon Hunter App v1 Code_2021', progression: 'If-Statements'
 level 'U4L06 Introduction to Conditionals: if-else Statements_2021', progression: 'If-Else Statements'
@@ -56,7 +57,7 @@ level 'U4 L06 Lemon Hunter App v3 Code_2021', progression: 'Logical Operators: A
 level 'Checking Multiple Conditions with If-elseif_2021', progression: 'Patterns: If-else-if'
 level 'U4 L06 CYU Exit Ticket_2021', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Conditionals Practice', display_name: 'Conditionals Practice'
+lesson 'Conditionals Practice', display_name: 'Conditionals Practice', has_lesson_plan: true
 level 'U4 L07 Conditionals Practice 1_2021', progression: 'Boolean expressions'
 level 'U4 L07 Conditionals Practice 2_2021', progression: 'Boolean expressions'
 level 'U4 L07 Conditionals Practice 3_2021', progression: 'Boolean expressions'
@@ -70,12 +71,12 @@ level 'U4 L07 Conditionals Practice 8_2021', progression: 'Logical Operators'
 level 'U4L10 CFU Conditionals Psuedocode_2021', progression: 'Check For Understanding: AP Practice', assessment: true
 level 'U4L10 CFU Conditionals Psuedocode 2_2021', progression: 'Check For Understanding: AP Practice', assessment: true
 
-lesson 'Conditional Make', display_name: 'Conditionals Make'
+lesson 'Conditional Make', display_name: 'Conditionals Make', has_lesson_plan: true
 level 'U4 L08 Conditionals Make Project Sample_2021', progression: 'Try to the Museum Ticket Generator App'
 level 'U4L08 Museum Ticket Generator_2021', progression: 'Make the Museum Ticket Generator App', assessment: true
 
 lesson_group 'csp_functions', display_name: 'Functions'
-lesson 'Functions Explore / Investigate', display_name: 'Functions Explore / Investigate'
+lesson 'Functions Explore / Investigate', display_name: 'Functions Explore / Investigate', has_lesson_plan: true
 level 'U4 L09 Functions Song_2021', progression: 'Explore Functions'
 level 'U4L09 Intro to Functions Video_2021', progression: 'Declaring and Calling Functions'
 level 'U4 L09 Score Clicker Investigate_2021', progression: 'Declaring and Calling Functions'
@@ -83,7 +84,7 @@ level 'U4 L09 Thermostat App v7_2021', progression: 'Declaring and Calling Funct
 level 'updateScreen Pattern_2021', progression: 'Update Screen Pattern'
 level 'CSP U4 L09 CFU Exit Ticket_2021', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Functions Practice', display_name: 'Functions Practice'
+lesson 'Functions Practice', display_name: 'Functions Practice', has_lesson_plan: true
 level 'U4 L10 Functions Practice Calling Functions 1_2021', progression: 'Declare and Call Functions'
 level 'U4 L10 Functions Practice 1_2021', progression: 'Declare and Call Functions'
 level 'U4 L10 Functions Practice 2_2021', progression: 'Declare and Call Functions'
@@ -95,25 +96,25 @@ level 'When to Make Functions Map_2021', progression: 'When to Declare Functions
 level 'U4 L10 Making Functions Practice_2021', progression: 'When to Declare Functions'
 level 'U4L10 CFU Functions Psuedocode_2021', progression: 'Check For Understanding: AP Practice', assessment: true
 
-lesson 'Functions Make', display_name: 'Functions Make'
+lesson 'Functions Make', display_name: 'Functions Make', has_lesson_plan: true
 level 'U4 L11 Functions Make 1 2020_2021', progression: 'Quote Maker App'
 level 'U4 L11 Functions Make 2020_2021', progression: 'Make the Quote Maker App', assessment: true
 
 lesson_group 'csp_project', display_name: 'Project'
-lesson 'Project - Decision Maker App Part 1', display_name: 'Project   Decision Maker App Part 1'
+lesson 'Project - Decision Maker App Part 1', display_name: 'Project   Decision Maker App Part 1', has_lesson_plan: true
 level 'U4 L12 Practice PT 1_2021', progression: 'Sample Apps'
 level 'U4 L12 Practice PT 2_2021', progression: 'Sample Apps'
 
-lesson 'Project - Decision Maker App Part 2', display_name: 'Project   Decision Maker App Part 2'
+lesson 'Project - Decision Maker App Part 2', display_name: 'Project   Decision Maker App Part 2', has_lesson_plan: true
 level 'U4 L13 Practice PT 1_2021', progression: 'Create the Screens'
 level 'U4 L13 Practice PT 2_2021', progression: 'Create the Variables'
 level 'U4 L13 Practice PT 3_2021', progression: 'Create the Function'
 level 'U4 L13 Practice PT 4_2021', progression: 'Add onEvents'
 
-lesson 'Project - Decision Maker App Part 3', display_name: 'Project   Decision Maker App Part 3'
+lesson 'Project - Decision Maker App Part 3', display_name: 'Project   Decision Maker App Part 3', has_lesson_plan: true
 level 'U4 L14 Practice PT 1_2021', progression: 'Test Your Decision Maker App'
 level 'U4 L14 Practice PT 2_2021', progression: 'Submit Your Decision Maker App', assessment: true
 
-lesson 'Lesson 15: Assessment Day', display_name: 'Assessment Day', lockable: true
+lesson 'Lesson 15: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP 20-21 Unit 4 Assessment_2021', progression: 'Unit 4 Exam', assessment: true
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedVocabulariesEditor as VocabulariesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
@@ -22,7 +22,7 @@ describe('VocabulariesEditor', () => {
   });
 
   it('renders default props', () => {
-    const wrapper = shallow(<VocabulariesEditor {...defaultProps} />);
+    const wrapper = mount(<VocabulariesEditor {...defaultProps} />);
     expect(wrapper.find('tr').length).to.equal(3);
   });
 

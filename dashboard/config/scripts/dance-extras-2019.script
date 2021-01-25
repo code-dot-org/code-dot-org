@@ -1,7 +1,7 @@
 hidden false
 tts true
 
-lesson 'Dance Party - Go Further', display_name: 'Dance Party - Go Further'
+lesson 'Dance Party - Go Further', display_name: 'Dance Party - Go Further', has_lesson_plan: false
 level 'Dance_Party_extras_intro_2019', named: true
 level 'Dance_Party_extras_alternate_2019', named: true
 level 'Dance_Party_extras_mixed_2019', named: true

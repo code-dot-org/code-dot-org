@@ -1,11 +1,11 @@
 hidden false
 
-lesson 'Debugging for AB Educators', display_name: 'Debugging for AB Educators'
+lesson 'Debugging for AB Educators', display_name: 'Debugging for AB Educators', has_lesson_plan: false
 level 'AB_debug_Laurel1'
 level 'AB_Debug_Artist1'
 level 'AB_Debug_PlayLab3'
 
-lesson 'Debugging for CDEF Educators', display_name: 'Debugging for CDEF Educators'
+lesson 'Debugging for CDEF Educators', display_name: 'Debugging for CDEF Educators', has_lesson_plan: false
 level 'CDEF_debugging_farmer1'
 level 'CDEF_debugging_Artist1'
 level 'CDEF_debugging_flappy2'
