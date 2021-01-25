@@ -3,13 +3,15 @@ title 'Outbreak: Code a Simulation'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 1: How Things Spread 
+# Contagion Simulator
 
 
 <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" >
 
+<br/>
 
-In this lesson, you'll learn how a virus spreads from one person to the next. 
+Simulations are a great way to learn things that can be hard to observe in the real world. They help scientists solve problems and test new ideas safely and efficiently. Your simulation is a way to show how a virus outbreak in Monster Town might look.
+
 
 
 MARKDOWN

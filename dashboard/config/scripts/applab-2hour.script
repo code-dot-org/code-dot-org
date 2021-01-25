@@ -1,6 +1,6 @@
 login_required true
 
-lesson 'Digital Design', display_name: 'Digital Design'
+lesson 'Digital Design', display_name: 'Digital Design', has_lesson_plan: false
 level 'Building a UI with Design Mode', named: true
 level 'CSDU4 Design Mode Video'
 level 'CSDU4 - Design Mode - 15'
@@ -12,7 +12,7 @@ level 'CSDU4 - Design Mode - 21'
 level 'CSDU4 - Design Mode Icons'
 level 'CSDU4 - Design Mode - 18'
 
-lesson 'Event Driven Programming', display_name: 'Event Driven Programming'
+lesson 'Event Driven Programming', display_name: 'Event Driven Programming', has_lesson_plan: false
 level 'Responding to User Input', named: true
 level 'CSDU4 - Design Mode - 16'
 level 'CSDU4 - Design Mode - 3'
@@ -23,10 +23,10 @@ level 'CSDU4 - Design Mode - 20'
 level 'CSDU4 Connecting Screens'
 level 'CSDU4 Connecting Screens Getting Back'
 
-lesson 'Basic App Functionality', display_name: 'Basic App Functionality'
+lesson 'Basic App Functionality', display_name: 'Basic App Functionality', has_lesson_plan: false
 level 'CSDU4 Functionality visible'
 
-lesson 'Getters and Setters', display_name: 'Getters and Setters'
+lesson 'Getters and Setters', display_name: 'Getters and Setters', has_lesson_plan: false
 level 'CSD - Getters and Setters', named: true
 level 'CSDU6 - UI and Inputs - setScreen', progression: 'Using Getters and Setters'
 level 'CSDU6 - UI and Inputs - setText', progression: 'Using Getters and Setters'
