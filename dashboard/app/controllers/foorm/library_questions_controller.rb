@@ -7,7 +7,6 @@ module Foorm
 
     # GET /foorm/library_questions/:id
     def show
-      # Maybe update this to only return certain parts of the question?
       render json: @library_question.to_json
     end
 
@@ -16,7 +15,6 @@ module Foorm
       @library_question.question = params[:question].to_json
 
       if @library_question.save
-        # Maybe update this to only return the question content?
         return render json: @library_question
       else
         return render status: :bad_request, json: @library_question.errors
