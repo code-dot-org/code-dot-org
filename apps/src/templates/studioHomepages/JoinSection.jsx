@@ -120,14 +120,20 @@ export default class JoinSection extends React.Component {
 
   close = () => this.setState({displayCaptcha: false});
 
-  joinSection = () => {
+  //reCaptcha token will be undefined is the user isn't required to complete a captcha
+  //captcha is only required for users that attempt to join 3 or more sections in 24 hours
+  joinSection = recaptchaToken => {
     const sectionCode = this.state.sectionCode;
     const normalizedSectionCode = sectionCode.trim().toUpperCase();
 
-    this.setState(INITIAL_STATE);
+    //Reset the form after a request is made and close captcha dialog if necessary
+    this.setState({sectionCode: '', displayCaptcha: false});
 
-    $.post({
+    $.ajax({
       url: `/api/v1/sections/${normalizedSectionCode}/join`,
+      method: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({recaptchaToken}),
       dataType: 'json'
     })
       .done(data => {
@@ -199,7 +205,7 @@ export default class JoinSection extends React.Component {
               isOpen={this.state.displayCaptcha}
               handleSubmit={this.joinSection}
               handleCancel={this.close}
-              submitText={i18n.verifyNotBot()}
+              submitText={i18n.joinSection()}
               siteKey={this.state.key}
             />
           )}

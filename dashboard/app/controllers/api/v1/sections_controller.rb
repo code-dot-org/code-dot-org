@@ -1,3 +1,7 @@
+require 'net/http'
+require 'open-uri'
+require 'json'
+
 class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
@@ -115,6 +119,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   # POST /api/v1/sections/<id>/join
   def join
+    # recaptcha_token = params[:recaptchaToken]
     unless current_user
       render_404
       return
