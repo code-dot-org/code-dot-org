@@ -125,6 +125,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       return
     end
     result = @section.add_student current_user
+    # add_student returns 'failure' when id of current user is owner of @section
+    if result == 'failure'
+      render json: {
+        result: 'section_owned'
+      }, status: :bad_request
+      return
+    end
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
       result: result

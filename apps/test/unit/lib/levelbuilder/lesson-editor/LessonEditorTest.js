@@ -21,7 +21,7 @@ import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 
 describe('LessonEditor', () => {
-  let defaultProps, store;
+  let defaultProps, store, clock;
   beforeEach(() => {
     sinon.stub(utils, 'navigateToHref');
     stubRedux();
@@ -54,6 +54,10 @@ describe('LessonEditor', () => {
   afterEach(() => {
     restoreRedux();
     utils.navigateToHref.restore();
+    if (clock) {
+      clock.restore();
+      clock = undefined;
+    }
   });
 
   const createWrapper = overrideProps => {
@@ -120,7 +124,7 @@ describe('LessonEditor', () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
-    let returnData = {updatedAt: '2020-11-06T21:33:32.000Z', activities: []};
+    let returnData = {activities: []};
     let server = sinon.fakeServer.create();
     server.respondWith('PUT', `/lessons/1`, [
       200,
@@ -139,11 +143,15 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(lessonEditor.state().isSaving).to.equal(true);
 
+    clock = sinon.useFakeTimers(new Date('2020-12-01'));
+    const expectedLastSaved = Date.now();
     server.respond();
+    clock.tick(50);
+
     lessonEditor.update();
     expect(utils.navigateToHref).to.not.have.been.called;
     expect(lessonEditor.state().isSaving).to.equal(false);
-    expect(lessonEditor.state().lastSaved).to.equal('2020-11-06T21:33:32.000Z');
+    expect(lessonEditor.state().lastSaved).to.equal(expectedLastSaved);
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     //check that last saved message is showing
     expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
@@ -189,7 +197,7 @@ describe('LessonEditor', () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
-    let returnData = {updatedAt: '2020-11-06T21:33:32.000Z', activities: []};
+    let returnData = {activities: []};
     let server = sinon.fakeServer.create();
     server.respondWith('PUT', `/lessons/1`, [
       200,
