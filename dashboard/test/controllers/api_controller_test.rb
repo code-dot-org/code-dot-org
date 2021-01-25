@@ -592,9 +592,9 @@ class ApiControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
     assert_equal 2, body['linesOfCode']
     script_level = script.script_levels[1]
-    level_id = script_level.level.id
-    assert_equal 'perfect', body['levels'][level_id.to_s]['status']
-    assert_equal 100, body['levels'][level_id.to_s]['result']
+    level_id = script_level.level.id.to_s
+    assert_equal 'perfect', body['progress'][level_id]['status']
+    assert_equal 100, body['progress'][level_id]['result']
   end
 
   test "should get user progress for lesson" do
