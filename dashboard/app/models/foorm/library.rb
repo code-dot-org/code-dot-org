@@ -39,6 +39,8 @@ class Foorm::Library < ApplicationRecord
         source_questions = JSON.parse(File.read(path))
         # if published is not provided, default to true
         published = source_questions['published'].nil? ? true : source_questions['published']
+
+        library.published = published
         library.save! if library.changed?
 
         source_questions["pages"].map do |page|
