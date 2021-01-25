@@ -49,7 +49,7 @@
   "outbreakSuccess": "You've finished the level. When you are ready for the next challenge, press Continue.",
   "noSprites": "You need to make a sprite.",
   "noBehavior": "Your sprite needs a behavior.",
-  "noNewBehavior": "Your sprite need didn't begin a new behavior.",
+  "noNewBehavior": "Your sprite didn't begin a new behavior.",
   "genericSuccess": "You've finished the level! Press Continue to go on.",
   "genericReplay": "Make sure to replay your program multiple times before continuing!",
   "genericExplore": "Good! Click \"Keep Playing\" to make changes to your code and run it again. Press Continue when you are ready for the next challenge.",
