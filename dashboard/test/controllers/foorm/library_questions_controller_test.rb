@@ -10,21 +10,25 @@ module Foorm
       @library_question_id = @library.library_questions.first.id
     end
 
-    # need to figure out why these don't work
-    test_user_gets_response_for :show,
-      user: :student,
-      method: :get,
-      params: {id: @library_question_id},
-      response: :forbidden
+    test 'test test' do
+      # this passes if you specify the correct ID in params
+      Foorm::LibraryQuestionsControllerTest.test_user_gets_response_for :show,
+        user: :student,
+        method: :get,
+        params: {id: @library_question_id},
+        response: :forbidden
 
-    # need to figure out why these don't work
-    test_user_gets_response_for :update,
-      user: :student,
-      method: :put,
-      params: {id: @library_question_id},
-      response: :forbidden
+      # need to figure out why these don't work
+      Foorm::LibraryQuestionsControllerTest.test_user_gets_response_for :update,
+        user: :student,
+        method: :put,
+        params: {id: @library_question_id},
+        response: :forbidden
+    end
 
     test 'update succeeds on existing library' do
+      puts "#{@library_question_id} in update succeeds test"
+
       sign_in @levelbuilder
 
       put :update, params: {
