@@ -88,3 +88,65 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     }
   });
 };
+
+const randomNumberUpTo100 = () => {
+  return Math.floor(Math.random() * 100);
+};
+
+export const fakeLessonWithLevels = (overrideFields = {}) => {
+  const position = overrideFields.position || randomNumberUpTo100();
+  return {
+    name: `Lesson - ${position}`,
+    lockable: false,
+    relative_position: position,
+    position: position,
+    levels: fakeLevels(1),
+    ...overrideFields
+  };
+};
+
+export const fakeSection = students => {
+  return {
+    id: randomNumberUpTo100(),
+    students
+  };
+};
+
+export const fakeStudents = studentCount => {
+  return Array(studentCount)
+    .fill()
+    .map((_, i) => ({
+      id: i,
+      name: `student-${i}`
+    }));
+};
+
+export const fakeScriptData = (overrideFields = {}) => {
+  return {
+    id: 1,
+    name: 'csd1-2020',
+    title: 'CSD Unit 1 - Problem Solving and Computing (20-21)',
+    stages: [],
+    ...overrideFields
+  };
+};
+
+export const fakeStudentLevelProgress = (levels, students) => {
+  const progressOnLessons = fakeProgressForLevels(levels);
+
+  const studentProgress = {};
+  students.forEach(student => {
+    studentProgress[student.id] = progressOnLessons;
+  });
+
+  return studentProgress;
+};
+
+export const fakeStudentLastUpdateByScript = (scriptData, students) => {
+  const studentLastUpdate = {};
+  students.forEach(student => {
+    studentLastUpdate[student.id] = Date.now();
+  });
+
+  return {[scriptData.id]: studentLastUpdate};
+};
