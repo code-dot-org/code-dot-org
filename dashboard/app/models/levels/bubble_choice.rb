@@ -73,8 +73,9 @@ class BubbleChoice < DSLDefined
   # previous/next levels, and script will be included in the summary.
   # @param [Integer] user_id. Optional. If provided, the "perfect" field will be calculated
   # in the sublevel summary.
+  # @param [Boolean] should_localize If true, translate the summary.
   # @return [Hash]
-  def summarize(script_level: nil, user: nil)
+  def summarize(script_level: nil, user: nil, should_localize: false)
     user_id = user ? user.id : nil
     summary = {
       id: id.to_s,
@@ -83,7 +84,7 @@ class BubbleChoice < DSLDefined
       name: name,
       type: type,
       teacher_markdown: teacher_markdown,
-      sublevels: summarize_sublevels(script_level: script_level, user_id: user_id)
+      sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize)
     }
 
     if script_level
@@ -99,6 +100,15 @@ class BubbleChoice < DSLDefined
       )
     end
 
+    if should_localize
+      set_unless_nil summary,
+        :display_name,
+        I18n.t(:display_name, scope: [:data, :dsls, name], default: nil, smart: true)
+      set_unless_nil summary,
+        :description,
+        I18n.t(:description, scope: [:data, :dsls, name], default: nil, smart: true)
+    end
+
     summary
   end
 
@@ -106,11 +116,12 @@ class BubbleChoice < DSLDefined
   # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels
   # will be included in the summary.
   # @param [Integer] user_id. Optional. If provided, "perfect" field will be calculated for sublevels.
-  # @return [Hash[]]
-  def summarize_sublevels(script_level: nil, user_id: nil)
+  # @param [Boolean] should_localize If true, translate the summary.
+  # @return [Array]
+  def summarize_sublevels(script_level: nil, user_id: nil, should_localize: false)
     summary = []
     sublevels.each_with_index do |level, index|
-      level_info = level.summary_for_lesson_plans
+      level_info = level.summary_for_lesson_plans.symbolize_keys
 
       alphabet = ('a'..'z').to_a
 
@@ -141,6 +152,18 @@ class BubbleChoice < DSLDefined
         level_info[:status] = SharedConstants::LEVEL_STATUS.not_tried
       end
 
+      if should_localize
+        set_unless_nil level_info,
+          :display_name,
+          I18n.t(level.name, scope: [:data, :display_name], default: nil, smart: true)
+        set_unless_nil level_info,
+          :short_instructions,
+          I18n.t(level.name, scope: [:data, :short_instructions], default: nil, smart: true)
+        set_unless_nil level_info,
+          :long_instructions,
+          I18n.t(level.name, scope: [:data, :long_instructions], default: nil, smart: true)
+      end
+
       summary << level_info
     end
 
@@ -160,6 +183,10 @@ class BubbleChoice < DSLDefined
   # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
   def self.parent_levels(level_name)
     where("properties -> '$.sublevels' LIKE ?", "%\"#{level_name}\"%")
+  end
+
+  def set_unless_nil(hash, key, value)
+    hash[key] = value unless value.nil?
   end
 
   def supports_markdown?
