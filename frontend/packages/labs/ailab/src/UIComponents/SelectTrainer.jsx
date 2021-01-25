@@ -5,17 +5,20 @@ import { connect } from "react-redux";
 import {
   getShowChooseReserve,
   setPercentDataToReserve,
+  setReserveLocation,
   setSelectedTrainer,
   getCompatibleTrainers,
   setKValue
 } from "../redux";
-import { styles, TRAINING_DATA_PERCENTS } from "../constants";
+import { styles, TEST_DATA_PERCENTS, TestDataLocations } from "../constants";
 
 class SelectTrainer extends Component {
   static propTypes = {
     showChooseReserve: PropTypes.bool,
     percentDataToReserve: PropTypes.number,
     setPercentDataToReserve: PropTypes.func,
+    reserveLocation: PropTypes.string,
+    setReserveLocation: PropTypes.func,
     selectedTrainer: PropTypes.string,
     setSelectedTrainer: PropTypes.func,
     compatibleTrainers: PropTypes.object,
@@ -27,11 +30,14 @@ class SelectTrainer extends Component {
     this.props.setPercentDataToReserve(parseInt(event.target.value));
   };
 
+  handleChangeReserveLocation = event => {
+    this.props.setReserveLocation(event.target.value);
+  };
+
   handleChangeSelectTrainer = event => {
     this.props.setSelectedTrainer(event.target.value);
   };
 
-  /* add event handler -> handleChangeInput Function */
   handleChangeKValue = event => {
     this.props.setKValue(parseInt(event.target.value));
   };
@@ -39,10 +45,12 @@ class SelectTrainer extends Component {
   render() {
     const {
       showChooseReserve,
+      reserveLocation,
       percentDataToReserve,
       compatibleTrainers,
       selectedTrainer
     } = this.props;
+
     return (
       <div id="select-trainer" style={styles.panel}>
         {showChooseReserve && (
@@ -50,7 +58,6 @@ class SelectTrainer extends Component {
             <div style={styles.largeText}>
               Are you ready to train the model?
             </div>
-
             <div>
               How much of the data would you like to reserve for testing?
             </div>
@@ -61,7 +68,7 @@ class SelectTrainer extends Component {
                   value={percentDataToReserve}
                   onChange={this.handleChangePercentReserve}
                 >
-                  {TRAINING_DATA_PERCENTS.map((percent, index) => {
+                  {TEST_DATA_PERCENTS.map((percent, index) => {
                     return (
                       <option key={index} value={percent}>
                         {percent}
@@ -70,10 +77,31 @@ class SelectTrainer extends Component {
                   })}
                 </select>
               </label>
+              <br />
+              <br />
+              {percentDataToReserve > 0 && (
+                <label>
+                  Where in the dataset would you like to pull the test data
+                  from?{" "}
+                  <select
+                    value={reserveLocation}
+                    onChange={this.handleChangeReserveLocation}
+                  >
+                    {Object.keys(TestDataLocations).map((location, index) => {
+                      return (
+                        <option key={index} value={TestDataLocations[location]}>
+                          {TestDataLocations[location]}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </label>
+              )}
             </form>
           </div>
         )}
-
+        <br />
+        <br />
         <div style={styles.largeText}>Pick an Algorithm</div>
         <form>
           <label>
@@ -123,7 +151,7 @@ export default connect(
   state => ({
     showChooseReserve: getShowChooseReserve(state),
     percentDataToReserve: state.percentDataToReserve,
-
+    reserveLocation: state.reserveLocation,
     selectedTrainer: state.selectedTrainer,
     compatibleTrainers: getCompatibleTrainers(state),
     kValue: state.kValue
@@ -131,6 +159,9 @@ export default connect(
   dispatch => ({
     setPercentDataToReserve(percentDataToReserve) {
       dispatch(setPercentDataToReserve(percentDataToReserve));
+    },
+    setReserveLocation(reserveLocation) {
+      dispatch(setReserveLocation(reserveLocation));
     },
     setSelectedTrainer(selectedTrainer) {
       dispatch(setSelectedTrainer(selectedTrainer));
