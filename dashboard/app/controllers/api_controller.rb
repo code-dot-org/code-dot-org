@@ -431,7 +431,7 @@ class ApiController < ApplicationController
       level_source = user_level.try(:level_source).try(:data)
 
       # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
-      response[:progress] = summarize_user_progress(script, current_user)[:levels]
+      response[:progress] = summarize_user_progress(script, current_user)[:progress]
 
       if user_level
         response[:lastAttempt] = {

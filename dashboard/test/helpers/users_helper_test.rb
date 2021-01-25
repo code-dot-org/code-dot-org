@@ -15,7 +15,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCode: 42,
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
-        levels: {},
+        progress: {},
         # second stage because first is unplugged
         current_stage: script.lessons[1].id,
         completed: false,
@@ -32,7 +32,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCode: 42,
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
-        levels: {
+        progress: {
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
         },
@@ -106,7 +106,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCode: 42,
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
-        levels: {
+        progress: {
           ul.level_id => {
             status: LEVEL_STATUS.perfect,
             result: ActivityConstants::BEST_PASS_RESULT,
@@ -141,7 +141,7 @@ class UsersHelperTest < ActionView::TestCase
       linesOfCode: 150,
       linesOfCodeText: 'Total lines of code: 150',
       lockableAuthorized: false,
-      levels: {
+      progress: {
         # BubbleChoice levels return status/result using the sublevel with the highest best_result.
         level.id => {
           status: LEVEL_STATUS.perfect,
@@ -182,7 +182,7 @@ class UsersHelperTest < ActionView::TestCase
     assert UserLevel.find_by(user: user, level: level).nil?
     assert_equal(
       {level.id => {status: LEVEL_STATUS.locked}},
-      summarize_user_progress(script, user)[:levels]
+      summarize_user_progress(script, user)[:progress]
     )
 
     # Now "unlock" it by creating a non-submitted UserLevel
@@ -287,7 +287,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # No user level exists, no progress
     assert UserLevel.find_by(user: user, level: level).nil?
-    assert_equal({}, summarize_user_progress(script, user)[:levels])
+    assert_equal({}, summarize_user_progress(script, user)[:progress])
 
     # now create a non-submitted user level
     user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: nil, submitted: false
