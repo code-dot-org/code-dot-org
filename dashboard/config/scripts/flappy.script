@@ -1,7 +1,7 @@
 id '6'
 hidden false
 
-lesson 'Flappy Code', display_name: 'Flappy Code'
+lesson 'Flappy Code', display_name: 'Flappy Code', has_lesson_plan: false
 level 'flappy_1'
 level 'flappy_2'
 level 'flappy_3'

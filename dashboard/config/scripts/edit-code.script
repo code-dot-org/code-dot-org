@@ -1,7 +1,7 @@
 id '3'
 wrapup_video 'hoc_wrapup'
 
-lesson 'The Maze', display_name: 'The Maze'
+lesson 'The Maze', display_name: 'The Maze', has_lesson_plan: false
 skin 'birds'
 concepts 'sequence'
 level 'blockly:MazeEC:3_1'
@@ -15,12 +15,12 @@ skin 'birds'
 concepts 'sequence'
 level 'blockly:MazeEC:3_4'
 
-lesson 'Applab', display_name: 'Applab'
+lesson 'Applab', display_name: 'Applab', has_lesson_plan: false
 skin 'applab'
 concepts 'sequence'
 level 'blockly:Applab:ec_simple'
 
-lesson 'The Artist', display_name: 'The Artist'
+lesson 'The Artist', display_name: 'The Artist', has_lesson_plan: false
 skin 'artist'
 concepts 'sequence'
 level 'blockly:ArtistEC:ec_1_2'
@@ -28,12 +28,12 @@ skin 'artist'
 concepts 'sequence'
 level 'blockly:ArtistEC:ec_1_10'
 
-lesson 'Play Lab', display_name: 'Play Lab'
+lesson 'Play Lab', display_name: 'Play Lab', has_lesson_plan: false
 skin 'studio'
 concepts 'sequence'
 level 'blockly:StudioEC:ec_sandbox'
 
-lesson 'Hoc2015 Blockly', display_name: 'Hoc2015 Blockly'
+lesson 'Hoc2015 Blockly', display_name: 'Hoc2015 Blockly', has_lesson_plan: false
 skin 'hoc2015x'
 video_key_for_next_level 'starwars_blocks_intro'
 concepts 'sequence'

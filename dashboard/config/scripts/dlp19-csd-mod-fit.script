@@ -4,7 +4,7 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview'
+lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview', has_lesson_plan: false
 level 'dlp19_overview1', progression: 'Background'
 level 'dlp19_overview2', progression: 'Process'
 level 'dlp19_overview3', progression: 'Preparation'
@@ -12,11 +12,11 @@ level 'dlp19_overview4', progression: 'Evaluation'
 level 'dlp19_overview5', progression: 'Due Dates'
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Focus Area 1', display_name: 'Curriculum'
+lesson 'Focus Area 1', display_name: 'Curriculum', has_lesson_plan: false
 level 'dlp19_csd_prework-fit_content1'
 level 'dlp19_csd_prework-fit-prompt'
 
-lesson 'Focus Area 2', display_name: 'Learning Platform'
+lesson 'Focus Area 2', display_name: 'Learning Platform', has_lesson_plan: false
 level 'dlp19_csd_prework-fit_content1'
 level 'dlp19_csd_prework-fit-prompt'
 

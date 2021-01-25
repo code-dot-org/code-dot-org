@@ -1,4 +1,4 @@
-lesson 'Artist', display_name: 'Artist'
+lesson 'Artist', display_name: 'Artist', has_lesson_plan: false
 level 'frozen line'
 level 'frozen perpendicular'
 level 'frozen square iterative'
