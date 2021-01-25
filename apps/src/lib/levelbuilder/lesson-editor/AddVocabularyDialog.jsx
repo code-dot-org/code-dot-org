@@ -4,6 +4,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import $ from 'jquery';
 
 const styles = {
   dialog: {
@@ -47,10 +48,10 @@ const initialState = {
 
 export default class AddVocabularyDialog extends Component {
   static propTypes = {
-    afterSave: PropTypes.func,
-    handleClose: PropTypes.func,
+    afterSave: PropTypes.func.isRequired,
+    handleClose: PropTypes.func.isRequired,
     editingVocabulary: vocabularyShape,
-    courseVersionId: PropTypes.number
+    courseVersionId: PropTypes.number.isRequired
   };
 
   constructor(props) {
@@ -84,7 +85,6 @@ export default class AddVocabularyDialog extends Component {
   };
 
   saveVocabulary = e => {
-    e.preventDefault();
     this.setState({isSaving: true});
     const url = this.props.editingVocabulary
       ? `/vocabularies/${this.props.editingVocabulary.id}`

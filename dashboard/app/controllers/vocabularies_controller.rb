@@ -19,7 +19,7 @@ class VocabulariesController < ApplicationController
     )
     vocabulary.course_version = course_version
     begin
-      vocabulary.save
+      vocabulary.save!
       render json: vocabulary.summarize_for_lesson_edit
     rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => e
       render status: 400, json: {error: e.message.to_json}
