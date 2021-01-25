@@ -10,24 +10,26 @@ import {
   editVocabulary,
   removeVocabulary
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+import * as Table from 'reactabular-table';
+import {lessonEditorTableStyles} from './TableConstants';
 
 const styles = {
-  oddRow: {
-    backgroundColor: color.lightest_gray
+  search: {
+    paddingBottom: 10
   },
   actionsColumn: {
     display: 'flex',
     justifyContent: 'space-evenly',
     backgroundColor: 'white'
   },
-
   remove: {
     fontSize: 14,
     color: 'white',
     background: color.dark_red,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '98%'
+    width: '98%',
+    lineHeight: '30px'
   }
 };
 
@@ -41,6 +43,79 @@ class VocabulariesEditor extends Component {
     editVocabulary: PropTypes.func.isRequired,
     removeVocabulary: PropTypes.func.isRequired
   };
+
+  actionsCellFormatter = (actions, {rowData}) => {
+    return (
+      <div style={styles.actionsColumn}>
+        <div
+          style={styles.remove}
+          className="unit-test-remove-vocabulary"
+          onMouseDown={() =>
+            this.setState({
+              confirmRemovalDialogOpen: true,
+              vocabularyForRemoval: rowData
+            })
+          }
+        >
+          <i className="fa fa-trash" />
+        </div>
+      </div>
+    );
+  };
+
+  getColumns() {
+    return [
+      {
+        property: 'word',
+        header: {
+          label: 'Word',
+          props: {
+            style: {width: '20%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'definition',
+        header: {
+          label: 'Definition',
+          props: {
+            style: {width: '70%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'actions',
+        header: {
+          label: 'Actions',
+          props: {
+            style: {width: '10%'}
+          }
+        },
+        cell: {
+          formatters: [this.actionsCellFormatter],
+          props: {
+            style: {
+              ...lessonEditorTableStyles.actionsCell
+            }
+          }
+        }
+      }
+    ];
+  }
 
   constructVocabularyOption = vocabulary => ({
     value: vocabulary.key,
@@ -74,6 +149,7 @@ class VocabulariesEditor extends Component {
   };
 
   render() {
+    const columns = this.getColumns();
     return (
       <div>
         {this.state.confirmRemovalDialogOpen && (
@@ -90,7 +166,7 @@ class VocabulariesEditor extends Component {
             onConfirm={this.handleRemoveVocabularyConfirm}
           />
         )}
-        <div>
+        <div style={styles.search}>
           Select a vocabulary word to add
           <SearchBox
             onSearchSelect={e => this.props.addVocabulary(e.vocabulary)}
@@ -101,42 +177,10 @@ class VocabulariesEditor extends Component {
             constructOptions={this.constructSearchOptions}
           />
         </div>
-        <div>
-          <table style={{width: '100%'}}>
-            <thead>
-              <tr>
-                <th style={{width: '20%'}}>Word</th>
-                <th style={{width: '70%'}}>Definition</th>
-                <th style={{width: '10%'}}>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.props.vocabularies.map((vocab, index) => (
-                <tr
-                  key={vocab.key}
-                  style={index % 2 === 1 ? styles.oddRow : {}}
-                >
-                  <td>{vocab.word}</td>
-                  <td>{vocab.definition}</td>
-                  <td style={styles.actionsColumn}>
-                    <div
-                      style={styles.remove}
-                      className={'unit-test-remove-vocabulary'}
-                      onMouseDown={() =>
-                        this.setState({
-                          confirmRemovalDialogOpen: true,
-                          vocabularyForRemoval: vocab
-                        })
-                      }
-                    >
-                      <i className="fa fa-times" />
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <Table.Provider columns={columns} style={{width: '100%'}}>
+          <Table.Header />
+          <Table.Body rows={this.props.vocabularies} rowKey="key" />
+        </Table.Provider>
       </div>
     );
   }

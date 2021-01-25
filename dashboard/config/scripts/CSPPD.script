@@ -1,7 +1,7 @@
 professional_learning_course 'CS Principles Support'
 login_required true
 
-lesson 'Introduction to PD', display_name: 'Introduction to PD'
+lesson 'Introduction to PD', display_name: 'Introduction to PD', has_lesson_plan: false
 level 'CSPPD presurvey'
 level 'Welcome to the Family!'
 level 'PDECS tour'
@@ -10,7 +10,7 @@ level 'PDECS commitment match'
 level 'PDECS attendance commitment'
 level 'ECSPD pause'
 
-lesson 'What is CSP?', display_name: 'What is CSP?'
+lesson 'What is CSP?', display_name: 'What is CSP?', has_lesson_plan: false
 level 'CSPPD program overview'
 level 'CSPPD curriculum overview'
 level 'CSPPD unit matching'
@@ -23,30 +23,30 @@ level 'CSPPD phase matching'
 level 'CSPPD PD goals'
 level 'CSPPD program overlap'
 
-lesson 'Exploring CSP Instructional Materials', display_name: 'Exploring CSP Instructional Materials'
+lesson 'Exploring CSP Instructional Materials', display_name: 'Exploring CSP Instructional Materials', has_lesson_plan: false
 level 'CSPPD instructional materials'
 level 'CSPPD materials overview'
 level 'CSPPD materials question1'
 
-lesson 'Impact of Computer Science', display_name: 'Impact of Computer Science'
+lesson 'Impact of Computer Science', display_name: 'Impact of Computer Science', has_lesson_plan: false
 level 'CSPPD impact of CS'
 level 'ECSPD impact vid1'
 level 'ECSPD impact vid2'
 level 'ECSPD impact vid2 question'
 level 'CSPPD impact in program'
 
-lesson 'Growth Mindset', display_name: 'Growth Mindset'
+lesson 'Growth Mindset', display_name: 'Growth Mindset', has_lesson_plan: false
 level 'ECSPD what is growth mindset'
 level 'ECSPD growth mindset in the classroom'
 level 'ECSPD growth mindset question'
 level 'ECSPD growth mindset strategies'
 level 'CSPPD strategies'
 
-lesson 'Teaching Strategies', display_name: 'Teaching Strategies'
+lesson 'Teaching Strategies', display_name: 'Teaching Strategies', has_lesson_plan: false
 level 'CSPPD teaching strategies video'
 level 'CSPPD strategies'
 
-lesson 'Preparing for in-person PD', display_name: 'Preparing for in-person PD'
+lesson 'Preparing for in-person PD', display_name: 'Preparing for in-person PD', has_lesson_plan: false
 level 'CSPPD facilitators'
 level 'CSPPD forum introduction'
 level 'ECSPD PD details'

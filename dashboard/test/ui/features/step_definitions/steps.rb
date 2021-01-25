@@ -1014,10 +1014,9 @@ Given(/^I create a temp script and lesson$/) do
   data = JSON.parse(response)
   @temp_script_name = data['script_name']
   @temp_lesson_id = data['lesson_id']
-  puts "created temp script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
 end
 
-Given(/^I create a temp migrated script and lesson$/) do
+Given(/^I create a temp migrated script with lessons$/) do
   response = browser_request(
     url: '/api/test/create_migrated_script',
     method: 'POST'
@@ -1025,7 +1024,7 @@ Given(/^I create a temp migrated script and lesson$/) do
   data = JSON.parse(response)
   @temp_script_name = data['script_name']
   @temp_lesson_id = data['lesson_id']
-  puts "created temp migrated script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
+  @temp_lesson_without_lesson_plan_id = data['lesson_without_lesson_plan_id']
 end
 
 Given(/^I view the temp script overview page$/) do
@@ -1055,6 +1054,13 @@ Given(/^I view the temp lesson edit page$/) do
   }
 end
 
+Given(/^I view the temp lesson edit page for lesson without lesson plan$/) do
+  steps %{
+    Given I am on "http://studio.code.org/lessons/#{@temp_lesson_without_lesson_plan_id}/edit"
+    And I wait until element "#edit-container" is visible
+  }
+end
+
 Given (/^I remove the temp script from the cache$/) do
   browser_request(
     url: '/api/test/invalidate_script',
@@ -1062,8 +1068,7 @@ Given (/^I remove the temp script from the cache$/) do
     body: {script_name: @temp_script_name}
   )
 end
-
-Given(/^I delete the temp script and lesson$/) do
+Given(/^I delete the temp script with lessons$/) do
   browser_request(
     url: '/api/test/destroy_script',
     method: 'POST',

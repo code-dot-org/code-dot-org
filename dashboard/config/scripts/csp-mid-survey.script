@@ -3,6 +3,6 @@ login_required true
 has_verified_resources true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CSP Mid-year survey', display_name: 'CSP Mid-year survey'
+lesson 'CSP Mid-year survey', display_name: 'CSP Mid-year survey', has_lesson_plan: false
 level 'csp-post-survey-2017-levelgroup_2018', progression: 'CS Principles Mid-year Survey', assessment: true
 

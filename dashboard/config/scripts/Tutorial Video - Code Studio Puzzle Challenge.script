@@ -1,4 +1,4 @@
-lesson 'Puzzles', display_name: 'Puzzles'
+lesson 'Puzzles', display_name: 'Puzzles', has_lesson_plan: false
 level 'Code Studio Puzzle Challenge Artist Screencast'
 level 'Code Studio Puzzle Challenge Artist Screencast 2'
 level 'Code Studio Puzzle Challenge Bee Screencast'

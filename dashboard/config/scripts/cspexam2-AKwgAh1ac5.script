@@ -1,6 +1,6 @@
 login_required true
 
-lesson 'CS Principles Culminating Assessment Part 2', display_name: 'CS Principles Culminating Assessment Part 2'
+lesson 'CS Principles Culminating Assessment Part 2', display_name: 'CS Principles Culminating Assessment Part 2', has_lesson_plan: false
 level 'CSP_Final_instructions'
 level 'Part 2 - CSP Culminating Assessment', assessment: true
 
