@@ -3,63 +3,44 @@ import sinon from 'sinon';
 import {shallow, mount} from 'enzyme';
 
 import * as expandableImages from '@cdo/apps/templates/utils/expandableImages';
-import {StatelessEnhancedSafeMarkdown as EnhancedSafeMarkdown} from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import EnhancedSafeMarkdown, {
+  ExpandableImagesWrapper,
+  UnconnectedExpandableImagesWrapper
+} from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {expect} from '../../util/deprecatedChai';
 
 describe('EnhancedSafeMarkdown', () => {
-  describe('markdownPostRenderHook', () => {
-    let wrapper, hookSpy;
-
-    beforeEach(() => {
-      wrapper = shallow(<EnhancedSafeMarkdown markdown="test" />);
-      hookSpy = sinon.spy(wrapper.instance(), 'markdownPostRenderHook');
-    });
-
-    afterEach(() => {
-      hookSpy.restore();
-    });
-
-    it('calls the post render hook after updating markdown', () => {
-      expect(hookSpy).not.to.have.been.calledOnce;
-      wrapper.setProps({markdown: 'update'});
-      expect(hookSpy).to.have.been.calledOnce;
-    });
-
-    it('does not call the post render hook if non-markdown props change', () => {
-      expect(hookSpy).not.to.have.been.calledOnce;
-      wrapper.setProps({openExternalLinksInNewTab: true});
-      expect(hookSpy).not.to.have.been.calledOnce;
-    });
+  it('renders SafeMarkdown by default', () => {
+    const wrapper = shallow(<EnhancedSafeMarkdown markdown="test" />);
+    expect(wrapper.equals(<SafeMarkdown markdown="test" />)).to.equal(true);
   });
 
-  describe('expandable images', () => {
-    let renderSpy;
+  it('wraps output in enhancements as specified', () => {
+    const wrapper = shallow(
+      <EnhancedSafeMarkdown markdown="test" expandableImages={true} />
+    );
+    expect(
+      wrapper.equals(
+        <ExpandableImagesWrapper>
+          <SafeMarkdown markdown="test" />
+        </ExpandableImagesWrapper>
+      )
+    ).to.equal(true);
+  });
 
-    beforeEach(() => {
-      renderSpy = sinon.spy(expandableImages, 'renderExpandableImages');
-    });
-
-    afterEach(() => {
-      renderSpy.restore();
-    });
-
-    it('does not attempt to render expandable images unless explicitly told to do so', () => {
-      shallow(<EnhancedSafeMarkdown markdown="test" />);
-      expect(renderSpy).not.to.have.been.calledOnce;
-    });
-
-    it('attempts to render expandable images if told to do so', () => {
-      // we use mount here because `renderExpandableImages` wants an actual DOM
-      // node. We could alternatively mock the method if we for some reason
-      // decide that mount is undesirable
+  describe('ExpandableImagesWrapper', () => {
+    it('renders expandable images', () => {
+      const renderSpy = sinon.spy(expandableImages, 'renderExpandableImages');
+      // We use mount rather than shallow here because renderExpandableImages
+      // expects an actual node as an argument
       mount(
-        <EnhancedSafeMarkdown
-          markdown="test"
-          expandableImages={true}
-          showImageDialog={() => {}}
-        />
+        <UnconnectedExpandableImagesWrapper showImageDialog={() => {}}>
+          <span className="expandable-image" />
+        </UnconnectedExpandableImagesWrapper>
       );
       expect(renderSpy).to.have.been.calledOnce;
+      renderSpy.restore();
     });
   });
 });
