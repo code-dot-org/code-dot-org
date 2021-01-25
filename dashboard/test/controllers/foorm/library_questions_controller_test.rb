@@ -2,37 +2,34 @@ require 'test_helper'
 
 module Foorm
   class LibraryQuestionsControllerTest < ActionController::TestCase
-    setup_all do
-      @levelbuilder = create :levelbuilder
+    generate_library_question_id = proc do
+      library = create :foorm_library, :with_questions
+      library_question_id = library.library_questions.first.id
 
-      @library = create :foorm_library, :with_questions
-      puts "library question: #{@library.library_questions.first.id}"
-      @library_question_id = @library.library_questions.first.id
+      {id: library_question_id}
     end
 
-    test 'test test' do
-      # this passes if you specify the correct ID in params
-      Foorm::LibraryQuestionsControllerTest.test_user_gets_response_for :show,
-        user: :student,
-        method: :get,
-        params: {id: @library_question_id},
-        response: :forbidden
+    test_user_gets_response_for :show,
+      user: :student,
+      method: :get,
+      params: generate_library_question_id,
+      response: :forbidden
 
-      # need to figure out why these don't work
-      Foorm::LibraryQuestionsControllerTest.test_user_gets_response_for :update,
-        user: :student,
-        method: :put,
-        params: {id: @library_question_id},
-        response: :forbidden
-    end
+    test_user_gets_response_for :update,
+      user: :student,
+      method: :get,
+      params: generate_library_question_id,
+      response: :forbidden
 
     test 'update succeeds on existing library' do
-      puts "#{@library_question_id} in update succeeds test"
+      library = create :foorm_library, :with_questions
+      library_question_id = library.library_questions.first.id
 
-      sign_in @levelbuilder
+      levelbuilder = create :levelbuilder
+      sign_in levelbuilder
 
       put :update, params: {
-        id: @library_question_id,
+        id: library_question_id,
         question: {pages: [{elements: [{name: "test"}]}]}
       }
 
