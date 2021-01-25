@@ -1,9 +1,9 @@
 login_required true
 pilot_experiment 'csd-noaccess'
 
-lesson 'HTML  Project', display_name: 'HTML  Project'
+lesson 'HTML  Project', display_name: 'HTML  Project', has_lesson_plan: false
 level 'CSD U2 HTML miniproject choices'
 
-lesson 'CSS Project', display_name: 'CSS Project'
+lesson 'CSS Project', display_name: 'CSS Project', has_lesson_plan: false
 level 'CSD U2 CSS miniproject choices'
 

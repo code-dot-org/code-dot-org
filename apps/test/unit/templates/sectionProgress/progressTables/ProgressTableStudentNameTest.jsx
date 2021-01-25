@@ -18,16 +18,16 @@ describe('ProgressTableStudentName', () => {
     const props = {...DEFAULT_PROPS, lastTimestamp: null};
     const wrapper = shallow(<ProgressTableStudentName {...props} />);
     const tooltip = wrapper.find('#tooltipIdForStudent1');
-    expect(tooltip.contains('Last Progress:')).to.equal(true);
-    expect(tooltip.contains('None')).to.equal(true);
+    expect(tooltip.contains('Last Progress:')).to.be.true;
+    expect(tooltip.contains('None')).to.be.true;
   });
 
   it('renders tooltip with timestamp when lastTimeStamp is present', () => {
     const props = {...DEFAULT_PROPS, lastTimestamp: 1578646800000};
     const wrapper = shallow(<ProgressTableStudentName {...props} />);
     const tooltip = wrapper.find('#tooltipIdForStudent1');
-    expect(tooltip.contains('Last Progress:')).to.equal(true);
-    expect(tooltip.contains('01/10/2020')).to.equal(true);
+    expect(tooltip.contains('Last Progress:')).to.be.true;
+    expect(tooltip.contains('01/10/2020')).to.be.true;
   });
 
   it('renders tooltip with timestamp in correct locale when lastTimeStamp and localeCode are present', () => {
@@ -38,14 +38,14 @@ describe('ProgressTableStudentName', () => {
     };
     const wrapper = shallow(<ProgressTableStudentName {...props} />);
     const tooltip = wrapper.find('#tooltipIdForStudent1');
-    expect(tooltip.contains('Last Progress:')).to.equal(true);
-    expect(tooltip.contains('10/01/2020')).to.equal(true);
+    expect(tooltip.contains('Last Progress:')).to.be.true;
+    expect(tooltip.contains('10/01/2020')).to.be.true;
   });
 
   it('renders name as a link to studentUrl', () => {
     const wrapper = shallow(<ProgressTableStudentName {...DEFAULT_PROPS} />);
     const link = wrapper.find('a[href="/student-link"]');
     expect(link).to.have.lengthOf(1);
-    expect(link.contains(DEFAULT_PROPS.name)).to.equal(true);
+    expect(link.contains(DEFAULT_PROPS.name)).to.be.true;
   });
 });

@@ -1,7 +1,7 @@
 hidden false
 tts true
 
-lesson 'Sports', display_name: 'Sports'
+lesson 'Sports', display_name: 'Sports', has_lesson_plan: false
 level 'bounce_1_sports'
 level 'bounce_2_sports'
 level 'bounce_5_sports'
