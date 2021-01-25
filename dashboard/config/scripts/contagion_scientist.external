@@ -3,7 +3,7 @@ title 'Outbreak: Code a Simulation'
 description 'description here'
 
 markdown <<MARKDOWN
-# Outbreak: Thinking Like a Scientist
+# Thinking Like a Scientist
 
 <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
 
@@ -14,8 +14,7 @@ Even when you write the code yourself, it's impossible to know exactly what will
 
 ## Collecting Data
 Try writing down your observations as you run your simulation. You can use the data collection block to count the number of monsters that get sick or use a timer to see how fast things happen. For example, how long does it usually take for all monsters to get sick if none have masks? 
-
-<xml><block type="gamelab_beginCollectingData"><value name="VALUE"><block type="gamelab_countByAnimation"><value name="SPRITE"><block type="gamelab_allSpritesWithAnimation"><title name="ANIMATION">"sick"</title></block></value></block></value><value name="LABEL"><block type="text"><title name="TEXT">sick</title></block></value></block></xml>
+![](https://images.code.org/c2bd788f349ae9d08412a13120c12006-image-1611357393151.16.05 PM.png)
 
 ## Making Predictions
 If you understand your model, you can use it to make predictions. You can even change how your simulation runs and guess what will happen differently. For example:
@@ -37,4 +36,5 @@ There is a limit to how realistic any model can get.
 When you finish this activity, discuss these questions with teachers or your family!
 
 You can also share your simulation model with others, or share a message about what you think we can do to help keep others healthy when a virus comes to town. 
+
 MARKDOWN
