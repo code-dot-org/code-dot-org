@@ -1,4 +1,4 @@
-lesson 'Loops in Artist', display_name: 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: false
 level 'ramp_video_artistIntro'
 level 'ramp_artist_loops1'
 level 'ramp_artist_loops2'
@@ -11,7 +11,7 @@ level 'ramp_artist_loops7'
 level 'ramp_artist_loops8', challenge: true
 level 'ramp_artist_loops9'
 
-lesson 'Sequences with Scrat', display_name: 'Sequences with Scrat'
+lesson 'Sequences with Scrat', display_name: 'Sequences with Scrat', has_lesson_plan: false
 level 'courseE_video_ramp1'
 level 'courseD_scrat_ramp1'
 level 'courseD_scrat_ramp2'
@@ -28,7 +28,7 @@ level 'courseE_artist_ramp8'
 level 'courseC_video_angles'
 level 'courseE_artist_ramp9'
 
-lesson 'Testing Template', display_name: 'Testing Template'
+lesson 'Testing Template', display_name: 'Testing Template', has_lesson_plan: false
 level 'courseC_artist_loops1a'
 level 'courseC_artist_loops6a'
 

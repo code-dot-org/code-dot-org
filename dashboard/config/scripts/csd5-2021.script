@@ -3,6 +3,7 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["teacherForum", "https://forum.code.org/c/csd"]]
 has_verified_resources true
+has_lesson_plan true
 version_year '2021'
 project_sharing true
 curriculum_umbrella 'CSD'
@@ -15,20 +16,20 @@ lesson_group_big_questions '* Why is representation important in problem solving
 * What is necessary to create usable binary representation systems?
 * How can we combine systems together to get more complex information?
 '
-lesson 'Representation Matters', display_name: 'Representation Matters'
+lesson 'Representation Matters', display_name: 'Representation Matters', has_lesson_plan: true
 
-lesson 'Patterns and Representation', display_name: 'Patterns and Representation'
+lesson 'Patterns and Representation', display_name: 'Patterns and Representation', has_lesson_plan: true
 
-lesson 'ASCII and Binary Representation', display_name: 'ASCII and Binary Representation'
+lesson 'ASCII and Binary Representation', display_name: 'ASCII and Binary Representation', has_lesson_plan: true
 
-lesson 'Representing Images', display_name: 'Representing Images'
+lesson 'Representing Images', display_name: 'Representing Images', has_lesson_plan: true
 level 'CSD U5 black white images pixelation_2021', progression: 'Representing Images'
 level 'CSD U5 black white images pixelation 2_2021', progression: 'Representing Images'
 level 'CSD U5 black white images pixelation 3_2021', progression: 'Representing Images'
 level 'CSD U5 black white images pixelation 4_2021', progression: 'Representing Images'
 level 'CSD U5 black white images pixelation 5_2021', progression: 'Representing Images'
 
-lesson 'Representing Numbers', display_name: 'Representing Numbers'
+lesson 'Representing Numbers', display_name: 'Representing Numbers', has_lesson_plan: true
 level 'CSD U5 binary 1_2021', progression: 'Binary Numbers'
 level 'CSD U5 binary 2_2021', progression: 'Binary Numbers'
 level 'CSD U5 binary 4-new_2021', progression: 'Binary Numbers'
@@ -37,15 +38,15 @@ level 'CSD U5 binary 6-new_2021', progression: 'Binary Numbers'
 level 'CSD U5 binary 7-new_2021', progression: 'Binary Numbers'
 level 'CSD U5 binary video_2021', progression: 'Binary and Data'
 
-lesson 'Combining Representations', display_name: 'Combining Representations'
+lesson 'Combining Representations', display_name: 'Combining Representations', has_lesson_plan: true
 level 'CSD U3 combining rep_2021', progression: 'Combining Representations'
 level 'CSD U5 student record_2021', progression: 'Combining Representations'
 
-lesson 'Keeping Data Secret', display_name: 'Keeping Data Secret'
+lesson 'Keeping Data Secret', display_name: 'Keeping Data Secret', has_lesson_plan: true
 level 'CSD U5 Encryption 2_2021', progression: 'Keeping Data Secret'
 level 'CSD U5 Encryption 1_2021', progression: 'Keeping Data Secret'
 
-lesson 'Project - Create a Representation', display_name: 'Create a Representation'
+lesson 'Project - Create a Representation', display_name: 'Create a Representation', has_lesson_plan: true
 level 'csd-pulse-check-survey-1-levelgroup U5Ch1_2021', progression: 'Reflection', assessment: true
 
 lesson_group 'csd5_2', display_name: 'Chapter 2: Solving Data Problems'
@@ -54,36 +55,36 @@ lesson_group_big_questions '* How does data help us to solve problems?
 * How do computers and humans use data differently?
 * What parts of the data problem solving process can be automated?
 * What kinds of problems do computers use data to solve in the real world?'
-lesson 'Problem Solving and Data', display_name: 'Problem Solving and Data'
+lesson 'Problem Solving and Data', display_name: 'Problem Solving and Data', has_lesson_plan: true
 
-lesson 'Structuring Data', display_name: 'Structuring Data'
+lesson 'Structuring Data', display_name: 'Structuring Data', has_lesson_plan: true
 level 'CSD U5 data visualization_2021', progression: 'Data Visualization'
 level 'CSD U5 Pizza_2021', progression: 'Data Visualization'
 level 'CSD U5 Pizza 2_2021', progression: 'Data Visualization'
 
-lesson 'Interpreting Data', display_name: 'Interpreting Data'
+lesson 'Interpreting Data', display_name: 'Interpreting Data', has_lesson_plan: true
 level 'CSD U5 crosstab warmup_2021', progression: 'Cake Survey'
 
-lesson 'Making Decisions with Data', display_name: 'Making Decisions with Data'
+lesson 'Making Decisions with Data', display_name: 'Making Decisions with Data', has_lesson_plan: true
 
-lesson 'Automating Data Decisions', display_name: 'Automating Data Decisions'
+lesson 'Automating Data Decisions', display_name: 'Automating Data Decisions', has_lesson_plan: true
 
-lesson 'Problem Solving with Big Data', display_name: 'Problem Solving with Big Data'
+lesson 'Problem Solving with Big Data', display_name: 'Problem Solving with Big Data', has_lesson_plan: true
 level 'CSD U5 Netflix Data Video_2021', progression: 'Problem Solving'
 level 'CSD U5 Waze Data Video_2021', progression: 'Problem Solving'
 level 'CSD U5 Amazon Data Video_2021', progression: 'Problem Solving'
 
-lesson 'Data and Machine Learning', display_name: 'Data and Machine Learning'
+lesson 'Data and Machine Learning', display_name: 'Data and Machine Learning', has_lesson_plan: true
 
-lesson 'Project - Make a Recommendation', display_name: 'Project - Make a Recommendation'
+lesson 'Project - Make a Recommendation', display_name: 'Project - Make a Recommendation', has_lesson_plan: true
 level 'csd u5 recommender sample_2021', progression: 'Sample App'
 level 'csd-pulse-check-survey-1-levelgroup U5Ch2_2021', progression: 'Reflection', assessment: true
 
-lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD U5 test_2021', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true, has_lesson_plan: false
 level 'csd-post-survey-intro-2019_2021'
 level 'csd-post-survey-levelgroup_2021', assessment: true
 

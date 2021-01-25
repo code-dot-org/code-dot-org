@@ -138,6 +138,7 @@ function lessonGroups(state = [], action) {
       lessons.push({
         key: action.lessonKey,
         name: action.lessonName,
+        hasLessonPlan: true,
         levels: []
       });
       updateLessonPositions(newState);
@@ -265,6 +266,7 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
           lockable: lesson.lockable,
           assessment: lesson.assessment,
           unplugged: lesson.unplugged,
+          hasLessonPlan: lesson.hasLessonPlan,
           name: lesson.name,
           /*
            * NOTE: The Script Edit GUI no longer includes the editing of levels
@@ -347,6 +349,7 @@ const serializeLesson = (lesson, levelKeyList) => {
   if (lesson.lockable) {
     t += ', lockable: true';
   }
+  t += `, has_lesson_plan: ${lesson.hasLessonPlan}`;
   if (lesson.visible_after) {
     t += ', visible_after: true';
   }
