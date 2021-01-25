@@ -169,7 +169,7 @@ class UserLevel < ApplicationRecord
     return if !user_level.persisted? && locked
 
     user_level.assign_attributes(
-      submitted: locked || readonly_answers,
+      submitted: readonly_answers,
       readonly_answers: !locked && readonly_answers,
       unlocked_at: locked ? nil : Time.now,
       # level_group, which is the only levels that we lock, always sets best_result to 100 when complete
