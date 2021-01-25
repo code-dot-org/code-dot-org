@@ -5,7 +5,7 @@
 #  id         :bigint           not null, primary key
 #  name       :string(255)      not null
 #  version    :integer          not null
-#  published  :boolean          default(TRUE), not null
+#  published  :boolean          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
