@@ -212,6 +212,14 @@ end
 def serialize_i18n_strings(level, strings)
   result = Hash.new
 
+  if strings.key? "sublevels"
+    sublevel_content = strings.delete("sublevels")
+    sublevel_content.each do |sublevel_name, sublevel_strings|
+      sublevel = Level.find_by_name sublevel_name
+      result.deep_merge! serialize_i18n_strings(sublevel, sublevel_strings)
+    end
+  end
+
   if strings.key? "contained levels"
     contained_strings = strings.delete("contained levels")
     unless contained_strings.blank?
