@@ -39,16 +39,21 @@ export default class ReCaptchaDialog extends React.Component {
     this.onCaptchaExpiration = this.onCaptchaExpiration.bind(this);
   }
 
-  componentDidMount() {
-    //Add reCaptcha and associated callbacks.
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js';
-    script.id = 'captcha';
-    script.async = true;
-    window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
-    window.onCaptchaExpired = () => this.onCaptchaExpiration();
-    document.head.appendChild(script);
-    script.onload = () => this.setState({loadedCaptcha: true});
+  componentDidUpdate(prevProps) {
+    // If the dialog goes from unopen to open, load the script
+    if (this.props.isOpen && !prevProps.isOpen) {
+      //Add reCaptcha script and associated callbacks.
+      const script = document.createElement('script');
+      script.src = 'https://www.google.com/recaptcha/api.js';
+      script.id = 'captcha';
+      script.async = true;
+      window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
+      window.onCaptchaExpired = () => this.onCaptchaExpiration();
+      document.head.appendChild(script);
+      script.onload = () => {
+        this.setState({loadedCaptcha: true});
+      };
+    }
   }
 
   componentWillUnmount() {

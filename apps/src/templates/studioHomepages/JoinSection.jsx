@@ -163,7 +163,6 @@ export default class JoinSection extends React.Component {
     if (!isLoaded) {
       return <Spinner size="large" style={styles.spinner} />;
     }
-
     return (
       <div
         style={{
