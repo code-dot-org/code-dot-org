@@ -1,6 +1,7 @@
 hideable_lessons true
 teacher_resources [["teacherForum", "https://forum.code.org/c/csf"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 lesson_extras_available true
+has_lesson_plan true
 family_name 'coursed'
 version_year '2021'
 curriculum_umbrella 'CSF'
@@ -8,10 +9,10 @@ is_course true
 is_migrated true
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
-lesson 'Algorithms: Graph Paper Programming', display_name: 'Graph Paper Programming'
+lesson 'Algorithms: Graph Paper Programming', display_name: 'Graph Paper Programming', has_lesson_plan: true
 level 'GraphPaperProgramming-Unplugged_2021'
 
-lesson 'Introduction to Online Puzzles', display_name: 'Introduction to Online Puzzles'
+lesson 'Introduction to Online Puzzles', display_name: 'Introduction to Online Puzzles', has_lesson_plan: true
 level 'courseD_video_ramp1_2021', progression: 'Maze Intro: Programming with Blocks'
 level 'courseD_maze_ramp1_2021', progression: 'Practice'
 level 'courseD_maze_ramp2_2021', progression: 'Practice'
@@ -23,10 +24,10 @@ level 'courseD_maze_ramp5b_2021', progression: 'Challenge', challenge: true
 level 'courseD_maze_intro5c_2021', progression: 'Practice'
 level 'courseD_maze_ramp5d_2021', progression: 'Practice'
 
-lesson 'Relay Programming', display_name: 'Relay Programming'
+lesson 'Relay Programming', display_name: 'Relay Programming', has_lesson_plan: true
 level 'RelayProgramming-Unplugged_2021'
 
-lesson 'Debugging in Collector', display_name: 'Debugging with Laurel'
+lesson 'Debugging in Collector', display_name: 'Debugging with Laurel', has_lesson_plan: true
 level 'courseD_video_debugging_2021', progression: 'De-bugging with the Step Button'
 level 'courseD_collector_debugging1a_2021', progression: 'Practice'
 level 'courseD_collector_debugging2a_2021', progression: 'Practice'
@@ -38,7 +39,7 @@ level 'courseD_collector_debugging8a_2021', progression: 'Practice'
 level 'courseD_collector_debugging9a_2021', progression: 'Practice'
 
 lesson_group 'csf_events', display_name: 'Events'
-lesson 'Events in Bounce', display_name: 'Events in Bounce'
+lesson 'Events in Bounce', display_name: 'Events in Bounce', has_lesson_plan: true
 level 'courseD_bounce_events1s_2021', progression: 'Practice'
 level 'courseD_bounce_events2s_2021', progression: 'Practice'
 level 'courseD_bounce_events5s_2021', progression: 'Practice'
@@ -48,7 +49,7 @@ level 'courseD_bounce_events10s_2021', progression: 'Practice'
 level 'courseD_bounce_events11s_2021', progression: 'Practice'
 level 'courseD_bounce_events12s_2021', progression: 'Free Play'
 
-lesson 'Build a Star Wars Game', display_name: 'Build a Star Wars Game'
+lesson 'Build a Star Wars Game', display_name: 'Build a Star Wars Game', has_lesson_plan: true
 level 'courseE_video_StarWarsProject_2021', progression: 'Practice'
 skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_7_no_video', progression: 'Practice'
@@ -78,7 +79,7 @@ video_key_for_next_level 'starwars_blocks_congrats'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_15', progression: 'Free Play'
 
-lesson 'Dance Party', display_name: 'Dance Party'
+lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: true
 level 'CourseD_Dance_2020_vid1_2021', progression: 'Warm Up'
 level 'CourseD_Dance_2020_01_2021', progression: 'Practice'
 level 'CourseD_Dance_2020_vid2_2021', progression: 'Events'
@@ -98,7 +99,7 @@ bonus 'CourseD_Dance_2020_bonus1_2021'
 bonus 'CourseD_Dance_2020_bonus3_2021'
 
 lesson_group 'csf_loops', display_name: 'Loops'
-lesson 'Loops in Ice Age', display_name: 'Loops in Ice Age'
+lesson 'Loops in Ice Age', display_name: 'Loops in Ice Age', has_lesson_plan: true
 level 'courseD_iceage_loops1_2021', progression: 'Practice'
 level 'courseD_iceage_loops2_2021', progression: 'Practice'
 level 'scrat_loops_C-F_video_2021', progression: 'Using the Repeat Block'
@@ -112,7 +113,7 @@ level 'courseD_iceage_loops10_2021', progression: 'Challenge', challenge: true
 level 'courseD_iceage_loops11_2021', progression: 'Practice'
 level 'courseD_iceage_loops12_2021', progression: 'Practice'
 
-lesson 'Loops in Artist', display_name: 'Drawing Shapes with Loops'
+lesson 'Loops in Artist', display_name: 'Drawing Shapes with Loops', has_lesson_plan: true
 level 'ramp_video_artistIntro_2021', progression: 'Artist Intro with JR Hildebrand'
 level 'ramp_artist_loops1_2021', progression: 'Practice'
 level 'ramp_artist_loops2_2021', progression: 'Practice'
@@ -125,7 +126,7 @@ level 'ramp_artist_loops7_2021', progression: 'Practice'
 level 'ramp_artist_loops8_2021', progression: 'Challenge', challenge: true
 level 'ramp_artist_loops9_2021', progression: 'Practice'
 
-lesson 'Nested Loops in Bee', display_name: 'Nested Loops in Maze'
+lesson 'Nested Loops in Bee', display_name: 'Nested Loops in Maze', has_lesson_plan: true
 level 'courseD_bee_nestedLoops1a_2021', progression: 'Practice'
 level 'courseD_bee_nestedLoops1_2021', progression: 'Practice'
 level 'courseD_video_nestedLoops_2021', progression: 'Nested Loops with the Bee'
@@ -143,10 +144,10 @@ bonus 'courseD_harvester_nested_loops_challenge1_2021'
 bonus 'courseD_collector_nested_loops_challenge2_2021'
 
 lesson_group 'csf_conditionals', display_name: 'Conditionals'
-lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards'
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true
 level 'ConditionalsWithCards-Unplugged_2021'
 
-lesson 'Conditionals in Bee', display_name: 'If/Else with Bee'
+lesson 'Conditionals in Bee', display_name: 'If/Else with Bee', has_lesson_plan: true
 level 'courseD_bee_conditionalsVid1_2021', progression: 'Conditionals: If Statements'
 level 'courseD_bee_conditionals1_predict1_2021', progression: 'Prediction'
 level 'courseD_bee_conditionals2_2021', progression: 'Practice'
@@ -163,7 +164,7 @@ level 'courseD_bee_conditionals10_2021', progression: 'Practice'
 bonus 'courseD_bee_conditionals_challenge1_2021'
 bonus 'courseD_bee_conditionals_challenge2_2021'
 
-lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer'
+lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer', has_lesson_plan: true
 level 'courseD_farmer_while1_2021', progression: 'Practice'
 level 'courseD_farmer_while2_2021', progression: 'Practice'
 level 'courseD_farmer_while3_2021', progression: 'Practice'
@@ -179,7 +180,7 @@ level 'courseD_farmer_while10_2021', progression: 'Practice'
 level 'courseD_farmer_while10_predict2_2021', progression: 'Prediction'
 bonus 'courseD_farmer_while_challenge1_2021'
 
-lesson 'Until Loops in Maze', display_name: 'Until Loops in Maze'
+lesson 'Until Loops in Maze', display_name: 'Until Loops in Maze', has_lesson_plan: true
 level 'courseD_maze_until1_2021', progression: 'Practice'
 level 'courseD_video_repeatUntil_2021', progression: 'Repeat Until Statements'
 level 'courseD_maze_until2_predict1_2021', progression: 'Prediction'
@@ -192,7 +193,7 @@ level 'courseD_maze_until9_2021', progression: 'Challenge', challenge: true
 level 'courseD_maze_until10_2021', progression: 'Practice'
 level 'courseD_maze_until10_predict2_2021', progression: 'Prediction'
 
-lesson 'Conditionals & Loops in Harvester', display_name: 'Harvesting with Conditionals'
+lesson 'Conditionals & Loops in Harvester', display_name: 'Harvesting with Conditionals', has_lesson_plan: true
 level 'harvester_skinOverview_video_2021', progression: 'The Harvester'
 level 'courseD_farmer_condLoops1_2021', progression: 'Practice'
 level 'courseD_farmer_condLoops2_2021', progression: 'Practice'
@@ -208,10 +209,10 @@ bonus 'courseD_farmer_condLoops_challenge1_2021'
 bonus 'courseD_farmer_condLoops_challenge2_2021'
 
 lesson_group 'csf_binary', display_name: 'Binary'
-lesson 'Unplugged: Binary', display_name: 'Binary Images'
+lesson 'Unplugged: Binary', display_name: 'Binary Images', has_lesson_plan: true
 level 'BinaryImages-Unplugged_2021'
 
-lesson 'Artist Binary', display_name: 'Binary Images with Artist'
+lesson 'Artist Binary', display_name: 'Binary Images with Artist', has_lesson_plan: true
 level 'courseD_external_binary1_2021', progression: 'Practice'
 level 'courseD_artist_binary1_2021', progression: 'Practice'
 level 'courseD_artist_binary2_2021', progression: 'Practice'
@@ -227,11 +228,11 @@ bonus 'courseD_artist_binary_challenge1_2021'
 bonus 'courseD_artist_binary_challenge2_2021'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'Be A Super Digital Citizen', display_name: 'Be A Super Digital Citizen'
+lesson 'Be A Super Digital Citizen', display_name: 'Be A Super Digital Citizen', has_lesson_plan: true
 level 'csf_be_a_super_digital_citizen_2021'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-lesson 'End of Course Project', display_name: 'End of Course Project'
+lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: true
 level 'courseD_project_exemplars_2021', progression: 'Example projects'
 level 'courseD_EOC_2021', progression: 'Create your project'
 

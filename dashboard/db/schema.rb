@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_08_224326) do
+ActiveRecord::Schema.define(version: 2021_01_21_195951) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -462,6 +462,15 @@ ActiveRecord::Schema.define(version: 2021_01_08_224326) do
     t.datetime "updated_at", null: false
     t.boolean "published", default: true, null: false
     t.index ["name", "version"], name: "index_foorm_forms_on_name_and_version", unique: true
+  end
+
+  create_table "foorm_libraries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "version", null: false
+    t.boolean "published", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name", "version"], name: "index_foorm_libraries_on_multiple_fields", unique: true
   end
 
   create_table "foorm_library_questions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

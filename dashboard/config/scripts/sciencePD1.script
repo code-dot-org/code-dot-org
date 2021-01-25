@@ -1,69 +1,69 @@
 professional_learning_course 'CS in Science Support'
 login_required true
 
-lesson 'Introduction to PD', display_name: 'Introduction to PD'
+lesson 'Introduction to PD', display_name: 'Introduction to PD', has_lesson_plan: false
 level 'sciPD Intro'
 level 'PDECS tour'
 level 'PDSci commitment'
 level 'sciPD commitment match'
 
-lesson 'What to Expect', display_name: 'What to Expect'
+lesson 'What to Expect', display_name: 'What to Expect', has_lesson_plan: false
 level 'sciPD what to expect'
 level 'sciPD intro video'
 level 'sciPD expectations'
 level 'sciPD meet and greet'
 level 'AlgPD Break'
 
-lesson 'Introduction to Complex Adaptive Systems', display_name: 'Introduction to Complex Adaptive Systems'
+lesson 'Introduction to Complex Adaptive Systems', display_name: 'Introduction to Complex Adaptive Systems', has_lesson_plan: false
 level 'sciPD complex adaptive video'
 level 'sciPD complex adaptive 1'
 level 'sciPD complex adaptive 2'
 level 'sciPD complex adaptive forum'
 
-lesson 'Introduction to Computational Science', display_name: 'Introduction to Computational Science'
+lesson 'Introduction to Computational Science', display_name: 'Introduction to Computational Science', has_lesson_plan: false
 level 'sciPD intro to CS video'
 level 'sciPD intro to CS 1'
 level 'sciPD intro to CS 2'
 level 'sciPD intro to CS forum'
 
-lesson 'Agent Based Modeling of Complex Adaptive Systems', display_name: 'Agent Based Modeling of Complex Adaptive Systems'
+lesson 'Agent Based Modeling of Complex Adaptive Systems', display_name: 'Agent Based Modeling of Complex Adaptive Systems', has_lesson_plan: false
 level 'sciPD agent based video'
 level 'sciPD agent based 1'
 level 'sciPD agent based 2'
 level 'sciPD agent based forum'
 
-lesson 'Using Computer Models in Science', display_name: 'Using Computer Models in Science'
+lesson 'Using Computer Models in Science', display_name: 'Using Computer Models in Science', has_lesson_plan: false
 level 'sciPD computer models video'
 level 'sciPD computer models 1'
 level 'sciPD computer models 2'
 level 'sciPD computer models forum'
 
-lesson 'Using Models in the Classroom', display_name: 'Using Models in the Classroom'
+lesson 'Using Models in the Classroom', display_name: 'Using Models in the Classroom', has_lesson_plan: false
 level 'sciPD class models video'
 level 'sciPD class models 1'
 level 'sciPD class models 2'
 level 'sciPD class models forum'
 
-lesson 'Dispositions and Classroom Culture', display_name: 'Dispositions and Classroom Culture'
+lesson 'Dispositions and Classroom Culture', display_name: 'Dispositions and Classroom Culture', has_lesson_plan: false
 level 'sciPD culture video'
 level 'sciPD culture 1'
 level 'sciPD culture 2'
 level 'sciPD culture forum'
 
-lesson 'Computational Thinking And The Framework For K-12 Science Education', display_name: 'Computational Thinking And The Framework For K-12 Science Education'
+lesson 'Computational Thinking And The Framework For K-12 Science Education', display_name: 'Computational Thinking And The Framework For K-12 Science Education', has_lesson_plan: false
 level 'sciPD framework video'
 level 'sciPD framework 1'
 level 'sciPD framework 2'
 level 'sciPD framework forum'
 
-lesson 'Introduction to StarLogo Nova', display_name: 'Introduction to StarLogo Nova'
+lesson 'Introduction to StarLogo Nova', display_name: 'Introduction to StarLogo Nova', has_lesson_plan: false
 level 'sciPD StarLogo intro video'
 level 'sciPD StarLogo intro 1'
 level 'sciPD StarLogo intro 2'
 level 'sciPD StarLogo intro 3'
 level 'sciPD StarLogo intro 4'
 
-lesson 'The Tutorial', display_name: 'The Tutorial'
+lesson 'The Tutorial', display_name: 'The Tutorial', has_lesson_plan: false
 level 'sciPD StarLogo tutorial 1'
 level 'sciPD StarLogo tutorial 2'
 level 'sciPD StarLogo tutorial 3'
@@ -73,7 +73,7 @@ level 'sciPD StarLogo tutorial 6'
 level 'sciPD StarLogo tutorial 7'
 level 'sciPD StarLogo tutorial 8'
 
-lesson 'Post-Survey', display_name: 'Post-Survey'
+lesson 'Post-Survey', display_name: 'Post-Survey', has_lesson_plan: false
 level 'sciPD survey1'
 level 'sciPD finish'
 

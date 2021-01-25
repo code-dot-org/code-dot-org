@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2020-02-18T17:58:04.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -120,7 +116,8 @@
       "callMyFunction_n": null,
       "return": null,
       "comment": null,
-      "stopSound": null
+      "stopSound": null,
+      "createEdgeSprites": null
     },
     "all_animations_single_frame": "false",
     "start_in_animation_tab": "false",
@@ -131,10 +128,22 @@
     "expand_debugger": "false",
     "parent_level_id": 18705,
     "name_suffix": "_2020",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "validation_enabled": "false",
+    "libraries_enabled": "false"
   },
+  "game_id": 50,
   "published": true,
-  "notes": ""
+  "created_at": "2020-02-18T17:58:04.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-01-25 18:12:54 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

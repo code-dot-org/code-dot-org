@@ -1,5 +1,5 @@
 lesson_group 'csf_data', display_name: 'Virus Simulation for Code Bytes'
-lesson 'Virus Simulation for Code Bytes', display_name: 'Virus Simulation for Code Bytes'
+lesson 'Virus Simulation for Code Bytes', display_name: 'Virus Simulation for Code Bytes', has_lesson_plan: false
 level 'virus_1_codebytes', progression: 'Create your sprites'
 level 'virus_2_codebytes', progression: 'Simulating an outbreak'
 level 'virus_3_codebytes', progression: 'Simulating masks'

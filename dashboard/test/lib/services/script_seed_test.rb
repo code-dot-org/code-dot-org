@@ -704,7 +704,7 @@ module Services
       script.lesson_groups.each_with_index do |lg, m|
         num_lessons_per_group.times do |n|
           name = "#{name_prefix}-lg-#{m + 1}-l-#{n + 1}"
-          create :lesson, lesson_group: lg, script: script, name: name, key: name, overview: "overview #{m + 1} #{n + 1}"
+          create :lesson, lesson_group: lg, script: script, name: name, key: name, overview: "overview #{m + 1} #{n + 1}", has_lesson_plan: true
         end
       end
 

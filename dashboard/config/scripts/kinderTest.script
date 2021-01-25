@@ -1,4 +1,4 @@
-lesson 'Bee: Conditionals', display_name: 'Bee: Conditionals'
+lesson 'Bee: Conditionals', display_name: 'Bee: Conditionals', has_lesson_plan: false
 level 'grade4_bee_conditionals_ifvid'
 level 'grade4_bee_conditionals_quantum1'
 level 'grade4_bee_conditionals_quantum2'
@@ -13,7 +13,7 @@ level 'grade4_bee_conditionals_new3a'
 level 'grade4_bee_conditionals_new3b'
 level 'grade4_bee_conditionals_new3c'
 
-lesson 'Kindergarten Stage 1', display_name: 'Kindergarten Stage 1'
+lesson 'Kindergarten Stage 1', display_name: 'Kindergarten Stage 1', has_lesson_plan: false
 level 'KTest1'
 level 'KTest2'
 level 'testArtistForTestK'
