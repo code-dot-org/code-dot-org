@@ -5,10 +5,10 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedVocabulariesEditor as VocabulariesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 
 describe('VocabulariesEditor', () => {
-  let defaultProps, addVocabulary, editVocabulary, removeVocabulary;
+  let defaultProps, addVocabulary, updateVocabulary, removeVocabulary;
   beforeEach(() => {
     addVocabulary = sinon.spy();
-    editVocabulary = sinon.spy();
+    updateVocabulary = sinon.spy();
     removeVocabulary = sinon.spy();
     defaultProps = {
       vocabularies: [
@@ -16,7 +16,7 @@ describe('VocabulariesEditor', () => {
         {id: 2, key: '2', word: 'word2', definition: 'def2'}
       ],
       addVocabulary,
-      editVocabulary,
+      updateVocabulary,
       removeVocabulary
     };
   });

@@ -8,7 +8,7 @@ import AddVocabularyDialog from './AddVocabularyDialog';
 import {connect} from 'react-redux';
 import {
   addVocabulary,
-  editVocabulary,
+  updateVocabulary,
   removeVocabulary
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import * as Table from 'reactabular-table';
@@ -60,7 +60,7 @@ class VocabulariesEditor extends Component {
     // Provided by redux
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
     addVocabulary: PropTypes.func.isRequired,
-    editVocabulary: PropTypes.func.isRequired,
+    updateVocabulary: PropTypes.func.isRequired,
     removeVocabulary: PropTypes.func.isRequired
   };
 
@@ -166,7 +166,7 @@ class VocabulariesEditor extends Component {
 
   afterVocabularySave = vocabulary => {
     if (this.state.vocabularyForEdit) {
-      this.props.editVocabulary(vocabulary);
+      this.props.updateVocabulary(vocabulary);
     } else {
       this.props.addVocabulary(vocabulary);
     }
@@ -262,7 +262,7 @@ export default connect(
   }),
   {
     addVocabulary,
-    editVocabulary,
+    updateVocabulary,
     removeVocabulary
   }
 )(VocabulariesEditor);
