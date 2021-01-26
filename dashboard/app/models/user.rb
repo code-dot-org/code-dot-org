@@ -2270,7 +2270,7 @@ class User < ApplicationRecord
   end
 
   # There are two possible states in which we would want to reset section attempts
-  # 1) Initialize for the first time 2) 24 hours have passed since last attempt
+  # 1) Initialize for the first time 2) 24 hours have passed since last reset
   def reset_section_attempts?
     # subtracting DateTimes returns the difference of days as a floating point number
     # By casting to an int, we can check whether at least a full day has passed.
@@ -2278,7 +2278,7 @@ class User < ApplicationRecord
   end
 
   def display_captcha?
-    # If 24 hours has passed since last section attempt, return false.
+    # If 24 hours has passed since last reset, return false.
     if section_attempts_last_reset && (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
       return false
     else
@@ -2286,14 +2286,14 @@ class User < ApplicationRecord
     end
   end
 
-  # Let's make sure we only hit this code when the user is already registered
   def increment_section_attempts
     if reset_section_attempts?
       self.section_attempts = 0
       self.section_attempts_last_reset = DateTime.now.to_s
     end
     self.section_attempts += 1
-    # only save if user has already been persisted to the database
+    # users can register while joining a section,
+    # so we should not save section attempts if new user hasn't been persisted
     save if persisted?
   end
 
