@@ -40,8 +40,9 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    // If the dialog goes from unopen to open, load the script
+    // If the dialog goes from unopen to open, load the script and disabled submit button
     if (this.props.isOpen && !prevProps.isOpen) {
+      this.setState({submitButtonEnabled: false});
       //Add reCaptcha script and associated callbacks.
       const script = document.createElement('script');
       script.src = 'https://www.google.com/recaptcha/api.js';

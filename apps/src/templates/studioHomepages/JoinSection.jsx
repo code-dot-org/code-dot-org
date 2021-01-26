@@ -118,7 +118,14 @@ export default class JoinSection extends React.Component {
     }
   };
 
-  close = () => this.setState({displayCaptcha: false});
+  close = () => {
+    //Remove the recaptcha script from DOM if necessary
+    const captchaScript = document.getElementById('captcha');
+    if (captchaScript) {
+      captchaScript.remove();
+    }
+    this.setState({displayCaptcha: false});
+  };
 
   //reCaptcha token will be undefined is the user isn't required to complete a captcha
   //captcha is only required for users that attempt to join 3 or more sections in 24 hours
@@ -127,7 +134,8 @@ export default class JoinSection extends React.Component {
     const normalizedSectionCode = sectionCode.trim().toUpperCase();
 
     //Reset the form after a request is made and close captcha dialog if necessary
-    this.setState({sectionCode: '', displayCaptcha: false});
+    this.setState({sectionCode: ''});
+    this.close();
 
     $.ajax({
       url: `/api/v1/sections/${normalizedSectionCode}/join`,
