@@ -2277,26 +2277,24 @@ class User < ApplicationRecord
     !section_attempts_last_reset || num_section_attempts == 0 || (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
   end
 
-  def reset_section_attempts
-    self.section_attempts = 0
-    self.section_attempts_last_reset = DateTime.now.to_s
-  end
-
-  def reset_section_attempts_if_needed
-    # Failed section attempts reset after 24 hours
-    reset_section_attempts if reset_section_attempts?
-  end
-
   def display_captcha?
-    reset_section_attempts_if_needed
-    num_section_attempts >= 3
+    # If 24 hours has passed since last section attempt, return false.
+    if (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
+      return false
+    else
+      return num_section_attempts >= 3
+    end
   end
 
   # Let's make sure we only hit this code when the user is already registered
   def increment_section_attempts
-    reset_section_attempts_if_needed
+    if reset_section_attempts?
+      self.section_attempts = 0
+      self.section_attempts_last_reset = DateTime.now.to_s
+    end
     self.section_attempts += 1
-    save
+    # only save if user has already been persisted to the database
+    save if persisted?
   end
 
   private
