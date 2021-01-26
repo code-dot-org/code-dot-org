@@ -1067,15 +1067,15 @@ class Script < ApplicationRecord
     reload
 
     total_count = 1
-    lockable_count = 1
-    non_lockable_count = 1
+    lesson_count = 1
+    survey_count = 1
     lessons.each do |lesson|
       lesson.absolute_position = total_count
-      lesson.relative_position = lesson.lockable ? lockable_count : non_lockable_count
+      lesson.relative_position = (lesson.has_lesson_plan || !lesson.lockable) ? lesson_count : survey_count
       lesson.save!
 
       total_count += 1
-      lesson.lockable ? (lockable_count += 1) : (non_lockable_count += 1)
+      lesson.has_lesson_plan || !lesson.lockable ? (lesson_count += 1) : (survey_count += 1)
     end
   end
 
