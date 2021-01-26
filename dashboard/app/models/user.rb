@@ -2279,7 +2279,7 @@ class User < ApplicationRecord
 
   def display_captcha?
     # If 24 hours has passed since last section attempt, return false.
-    if (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
+    if section_attempts_last_reset && (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
       return false
     else
       return num_section_attempts >= 3
