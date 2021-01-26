@@ -120,9 +120,16 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       render_404
       return
     end
-    if params[:recaptchaToken] #TODO: add and display captcha call
-      recaptcha_token = params[:recaptchaToken]
+    #TODO: this should probably just be displayCaptcha? b/c hacker wont send token at all
+    if params[:recaptchaToken]
+      recaptcha_token = params[:recaptchaToken] # maybe add || ""
       is_verified = verify_recaptcha_token(recaptcha_token)
+      unless is_verified
+        render json: {
+          result: 'captcha_failed'
+        }, status: :bad_request
+        return
+      end
       puts is_verified
     end
     # TODO: add increment section attempts

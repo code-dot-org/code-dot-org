@@ -19,6 +19,8 @@ export default function JoinSectionNotifications({action, result, name, id}) {
     return <JoinSectionExistsNotification sectionName={name} />;
   } else if (action === 'join' && result === 'section_owned') {
     return <JoinSectionOwnedNotification sectionId={id} />;
+  } else if (action === 'join' && result === 'captcha_failed') {
+    return <JoinSectionCaptchaNotification sectionId={id} />;
   }
   return null;
 }
@@ -84,6 +86,17 @@ const JoinSectionOwnedNotification = ({sectionId}) => (
   />
 );
 JoinSectionOwnedNotification.propTypes =
+  JoinSectionNotFoundNotification.propTypes;
+
+const JoinSectionCaptchaNotification = ({sectionId}) => (
+  <Notification
+    type="failure"
+    notice={i18n.sectionsNotificationFailure()}
+    details={i18n.sectionsNotificationCaptchaFailed({sectionId})}
+    dismissible={true}
+  />
+);
+JoinSectionCaptchaNotification.propTypes =
   JoinSectionNotFoundNotification.propTypes;
 
 const JoinSectionExistsNotification = ({sectionName}) => (
