@@ -30,7 +30,7 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
     end
     assert_equal TeacherFeedback.all.count, 5
     sign_in student
-    assert_queries 18 do
+    assert_queries 20 do
       get :index
       assert_response :success
     end
