@@ -35,6 +35,7 @@ export const fakeLevel = (overrides = {}) => {
     bubbleText: levelNumber.toString(),
     url: `/level${levelNumber}`,
     name: `Level ${levelNumber}`,
+    isUnplugged: false,
     ...overrides
   };
 };
@@ -93,14 +94,14 @@ const randomNumberUpTo100 = () => {
   return Math.floor(Math.random() * 100);
 };
 
-export const fakeLessonWithLevels = (overrideFields = {}) => {
+export const fakeLessonWithLevels = (overrideFields = {}, levelCount = 1) => {
   const position = overrideFields.position || randomNumberUpTo100();
   return {
     name: `Lesson - ${position}`,
     lockable: false,
     relative_position: position,
     position: position,
-    levels: fakeLevels(1),
+    levels: fakeLevels(levelCount),
     ...overrideFields
   };
 };
@@ -142,11 +143,14 @@ export const fakeStudentLevelProgress = (levels, students) => {
   return studentProgress;
 };
 
-export const fakeStudentLastUpdateByScript = (scriptData, students) => {
+export const fakeStudentLastUpdate = students => {
   const studentLastUpdate = {};
   students.forEach(student => {
     studentLastUpdate[student.id] = Date.now();
   });
+  return studentLastUpdate;
+};
 
-  return {[scriptData.id]: studentLastUpdate};
+export const fakeStudentLastUpdateByScript = (scriptData, students) => {
+  return {[scriptData.id]: fakeStudentLastUpdate(students)};
 };
