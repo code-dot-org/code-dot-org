@@ -827,7 +827,7 @@ class Script < ApplicationRecord
     script_levels.find(id: script_level_id.to_i)
   end
 
-  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable, has_lesson_plan)
+  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, survey)
     relative_position ||= 1
     script_levels.find do |sl|
       # make sure we are checking the native properties of the script level
@@ -835,8 +835,7 @@ class Script < ApplicationRecord
       sl.position == puzzle_position.to_i &&
         !sl.bonus &&
         sl.lesson.relative_position == relative_position.to_i &&
-        sl.lesson.lockable? == lockable &&
-        sl.lesson.has_lesson_plan? == has_lesson_plan
+        (survey ? sl.lesson.lockable? == true && sl.lesson.has_lesson_plan? == false : sl.lesson.lockable? == false || sl.lesson.has_lesson_plan? == true)
     end
   end
 
