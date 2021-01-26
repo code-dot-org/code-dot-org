@@ -38,7 +38,8 @@ export default class ActivityCardAndPreview extends Component {
     targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     activitySectionMetrics: PropTypes.array.isRequired,
-    updateActivitySectionMetrics: PropTypes.func.isRequired
+    updateActivitySectionMetrics: PropTypes.func.isRequired,
+    hasLessonPlan: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -74,6 +75,7 @@ export default class ActivityCardAndPreview extends Component {
             }
             handleCollapse={this.handleCollapse}
             collapsed={this.state.collapsed}
+            hasLessonPlan={this.props.hasLessonPlan}
           />
         </div>
         <div style={styles.preview}>

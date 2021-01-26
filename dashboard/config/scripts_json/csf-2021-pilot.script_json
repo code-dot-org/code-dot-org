@@ -87,7 +87,7 @@
     },
     {
       "key": "Sprites in Action",
-      "name": "Sprites in Action",
+      "name": "Sprites in Action - coming soon!",
       "absolute_position": 3,
       "lockable": false,
       "relative_position": 3,
@@ -101,7 +101,7 @@
     },
     {
       "key": "lesson-1",
-      "name": "Blank Space Variables",
+      "name": "Blank Space Variables - coming soon!",
       "absolute_position": 4,
       "lockable": false,
       "relative_position": 4,
@@ -109,6 +109,34 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "key": "variables-in-spritelab",
+      "name": "Storing and Retrieving Text - coming soon!",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "variables-in-spritelab",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "key": "chatbot",
+      "name": "Create a Chat-Bot - coming soon!",
+      "absolute_position": 6,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "chatbot",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2021-pilot"
       }
@@ -420,81 +448,6 @@
       "level_keys": [
         "courseF_sprites_freeplay"
       ]
-    },
-    {
-      "chapter": 13,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Predict",
-        "level_keys": [
-          "courseF_events_predict"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_events_predict"
-        ],
-        "lesson.key": "Sprites in Action",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      },
-      "level_keys": [
-        "courseF_events_predict"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Video: Sprites in Action",
-        "level_keys": [
-          "CDEF_video_SpritesInAction_2020"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CDEF_video_SpritesInAction_2020"
-        ],
-        "lesson.key": "Sprites in Action",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      },
-      "level_keys": [
-        "CDEF_video_SpritesInAction_2020"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Blank Space Variables",
-        "level_keys": [
-          "EnvelopeVariables-Unplugged_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "EnvelopeVariables-Unplugged_2021"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csf-2021-pilot"
-      },
-      "level_keys": [
-        "EnvelopeVariables-Unplugged_2021"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -627,39 +580,6 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_events_predict",
-        "script_level.level_keys": [
-          "courseF_events_predict"
-        ],
-        "lesson.key": "Sprites in Action",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CDEF_video_SpritesInAction_2020",
-        "script_level.level_keys": [
-          "CDEF_video_SpritesInAction_2020"
-        ],
-        "lesson.key": "Sprites in Action",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "EnvelopeVariables-Unplugged_2021",
-        "script_level.level_keys": [
-          "EnvelopeVariables-Unplugged_2021"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2021-pilot"
       }
     }

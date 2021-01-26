@@ -180,6 +180,10 @@ export const processedLevel = level => {
     icon: level.icon,
     isUnplugged: level.display_as_unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
+    bubbleText:
+      level.kind === LevelKind.unplugged
+        ? undefined
+        : level.letter || level.title.toString(),
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus,
     pageNumber:

@@ -1,25 +1,25 @@
 professional_learning_course 'CS in Algebra Support'
 login_required true
 
-lesson 'Introduction to PD', display_name: 'Introduction to PD'
+lesson 'Introduction to PD', display_name: 'Introduction to PD', has_lesson_plan: false
 level 'PDAlg Intro'
 level 'PDECS tour'
 level 'PDAlg commitment'
 level 'PDAlg commitment match'
 level 'PDAlg Teacher Introduction'
 
-lesson 'Course Overview', display_name: 'Course Overview'
+lesson 'Course Overview', display_name: 'Course Overview', has_lesson_plan: false
 level 'PDAlg Scope'
 level 'PDAlg implementation'
 level 'PDAlg course goals'
 level 'AlgPD Break'
 
-lesson 'Why Computer Science belongs in Algebra', display_name: 'Why Computer Science belongs in Algebra'
+lesson 'Why Computer Science belongs in Algebra', display_name: 'Why Computer Science belongs in Algebra', has_lesson_plan: false
 level 'PDAlg functions'
 level 'PDAlg hard video'
 level 'PDAlg functional'
 
-lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks'
+lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks', has_lesson_plan: false
 level 'PDAlg Blocks Video'
 level 'Calc Circles of Eval 1'
 level 'Calc Circles of Eval 2'
@@ -31,12 +31,12 @@ level 'Calc Circles of Eval 8'
 level 'Calc Circles of Eval 9'
 level 'Calc Circles of Eval Free Play'
 
-lesson 'Teacher Dashboard', display_name: 'Teacher Dashboard'
+lesson 'Teacher Dashboard', display_name: 'Teacher Dashboard', has_lesson_plan: false
 level 'PDK5 Teacher Dashboard 1'
 level 'PDK5 Teacher Dashboard 2'
 level 'PDAlg Teacher Dashboard'
 
-lesson 'Preparing for in-person PD', display_name: 'Preparing for in-person PD'
+lesson 'Preparing for in-person PD', display_name: 'Preparing for in-person PD', has_lesson_plan: false
 level 'PDAlg End of P1'
 level 'PDAlg Post Survey'
 

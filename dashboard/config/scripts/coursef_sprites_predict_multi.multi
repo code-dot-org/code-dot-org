@@ -1,6 +1,6 @@
 name 'courseF_sprites_predict_multi'
 question 'Read the code, then make a prediction.'
-wrong 'Both planes will move one space along the grid.', feedback: 'Incorrect. These sprites have "behaviors" which keep running until they are told to stop.'
+wrong 'Both planes will move one space along the grid, then stop.', feedback: 'Incorrect. These sprites have "behaviors" which keep running until they are told to stop.'
 right 'Both planes will start moving and not stop.', feedback: 'Correct! These behaviors tell the planes to start moving and keep going.'
 wrong 'One plane will move first, and the other plane will move later.', feedback: 'Incorrect. Each block of code in Sprite Lab runs instantly after the next.'
 wrong 'The planes will crash.', feedback: 'Incorrect. The planes are not positioned in a way that will make them touch.'

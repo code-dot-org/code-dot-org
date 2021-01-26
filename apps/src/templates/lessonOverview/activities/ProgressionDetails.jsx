@@ -21,7 +21,7 @@ const styles = {
 
 export default class ProgressionDetails extends Component {
   static propTypes = {
-    progression: PropTypes.object
+    section: PropTypes.object
   };
 
   convertScriptLevelForProgression = scriptLevel => {
@@ -36,7 +36,9 @@ export default class ProgressionDetails extends Component {
       id: activeLevel.id,
       status: LevelStatus.not_tried,
       url: scriptLevel.url,
-      name: activeLevel.name,
+      name: this.props.section.progressionName
+        ? this.props.section.progressionName
+        : activeLevel.name,
       kind: scriptLevel.kind,
       icon: activeLevel.icon,
       isConceptLevel: activeLevel.isConceptLevel,
@@ -47,13 +49,13 @@ export default class ProgressionDetails extends Component {
   };
 
   render() {
-    const {progression} = this.props;
+    const {section} = this.props;
 
     return (
       <div style={styles.progressionBox}>
         <ProgressLevelSet
-          name={progression.displayName}
-          levels={progression.scriptLevels.map(scriptLevel =>
+          name={section.progressionName}
+          levels={section.scriptLevels.map(scriptLevel =>
             this.convertScriptLevelForProgression(scriptLevel)
           )}
           disabled={false}

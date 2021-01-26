@@ -19,7 +19,8 @@
       ],
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -88,6 +89,7 @@
       "name": "CS Discoveries Pre-survey",
       "absolute_position": 1,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -102,6 +104,7 @@
       "name": "Intro to Problem Solving",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\r\n\r\nIn this lesson, students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\r\n\r\n**Alternate versions of this lesson are also available.** \r\n\r\n* [Newspaper Table](../9/)\r\n* [Spaghetti Bridge](../10/)\r\n* [Paper Tower](../11/)",
@@ -131,6 +134,7 @@
       "name": "The Problem Solving Process",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "**Question of the Day: What are some common steps we can use to solve many different types of problems?**\r\n\r\nThis lesson introduces the formal problem solving process that students will use over the course of the year, Define - Prepare - Try - Reflect. The lesson begins by asking students to brainstorm all the different types of problems that they encounter in everyday life. Students are then shown the four steps of the problem solving process and work together to relate these abstract steps to their actual experiences solving problems. First students relate these steps to the problem activities from the previous lesson, then a problem they are good at solving, then a problem they want to improve at solving. At the end of the lesson the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year.",
@@ -160,6 +164,7 @@
       "name": "Exploring Problem Solving",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and redesign a classroom. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\r\n\r\n\r\n**Alternate versions of this lesson are also available.** \r\n\r\n* [Animal Theme](../12/)\r\n* [Games Theme](../13/)",
@@ -189,6 +194,7 @@
       "name": "What is a Computer?",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "**Question of the Day: What is a computer?**\r\n\r\nIn this lesson students develop a preliminary definition of a computer. To begin the lesson, the class will brainstorm possible definitions for a computer and place the results of this brainstorm on the board. Next, students will work in groups to sort pictures into “is a computer” or “is not a computer” on poster paper. Groups will place their posters around the room and briefly explain their motivations for choosing some of their most difficult categorizations.  The teacher will then introduce a definition of the computer and allow students to revise their posters according to the new definition.\r\n",
@@ -218,6 +224,7 @@
       "name": "Input and Output",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "**Question of the Day: How do computers use input and output to get and give the information that they need to solve problems?**\r\n\r\nIn this lesson students consider how computers get and give information to the user through inputs and outputs.  Students first consider what information they would need to solve a \"thinking problem\", then use that information to produce a recommendation.  They then identify the inputs and outputs to that process.  Afterwards, students consider an app that engages in the same process and determine how that app inputs and outputs information.  Last, they consider other types of inputs and outputs that computers can use to help solve problems.",
@@ -247,6 +254,7 @@
       "name": "Processing",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "**Question of the Day: What are the different ways computers can process information?**\r\n\r\nThis lesson introduces students to four common types of processing: if/then (conditionals), finding a match (searching), counting, and comparing.  Students are first introduced to the types of processing through several sample apps.  They then investigate more apps to determine what sorts of processing each uses.  They then think of their own app and decide what types of processing it would need to work.  Finally, they brainstorm other types of processing that may be useful but were not included in the main lesson.",
@@ -274,6 +282,7 @@
       "name": "Storage",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "**Question of the Day: Why is storage an important part of the computing process?**\n\nThis lesson introduces the final component of the unit's model of computing: storage.  After trying out an \"outfit picker\" app, students discuss what information should be stored in the app versus input every time the app is run.  They then look at a series of apps and use their decisions about what should be stored to create guidelines for deciding what information to store.  They then review the four components of this chapter's model of computing: input, output, storage, and processing.  Afterwards, they have one last opportunity to revise their decisions about which items should be classified as a \"computer\" from earlier in the chapter.  The lesson ends with a reflection on their own app ideas and how storage could be used.",
@@ -303,6 +312,7 @@
       "name": "Project - Propose an App",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "**Question of the Day:  How can the IOSP model help us to design an app that solves a problem?**\r\n\r\nTo conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.",
@@ -332,6 +342,7 @@
       "name": "Post-Project Test",
       "absolute_position": 10,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -346,6 +357,7 @@
       "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
         "overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\r\n\r\n\r\nIn this lesson, students work in groups to design newspaper tables that will hold as many books as possible. Groups have two rounds to work on their tables, with the goal of trying to hold more books than they did in the first round. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\r\n\r\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](../1/)**",
@@ -375,6 +387,7 @@
       "name": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\r\n\r\n\r\nIn this lesson, students work in groups to design spaghetti bridges that will support as many books as possible. Groups have two rounds to work on their bridges, with the goal of trying to hold more books than they did in Round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\r\n\r\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](../1/)**",
@@ -404,6 +417,7 @@
       "name": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
         "overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\r\n\r\n\r\nIn this lesson, students work in groups to design paper towers that can stand as high as possible. Groups have two rounds to work on their towers, with the goal of trying to go higher than they did in Round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\r\n\r\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](../1/)**",
@@ -433,6 +447,7 @@
       "name": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
         "overview": "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve tangrams, choose a pet for several people, and plan a pet adoption event. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.",
@@ -462,6 +477,7 @@
       "name": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
         "overview": "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a maze, organizing a team to race as fast as possible, and design a game. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.",
@@ -1891,7 +1907,8 @@
       "key": "378c86a4-82cb-405a-82a6-c9d595c05763",
       "position": 1,
       "properties": {
-        "name": "Video: Problem Solving Process"
+        "name": "Video: Problem Solving Process",
+        "progression_name": "Video: Problem Solving Process"
       },
       "seeding_key": {
         "activity_section.key": "378c86a4-82cb-405a-82a6-c9d595c05763",
@@ -2397,7 +2414,8 @@
       "key": "8fbba712-4509-4539-89c3-ac8a69f99409",
       "position": 1,
       "properties": {
-        "name": "Video: What Makes a Computer, a Computer?"
+        "name": "Video: What Makes a Computer, a Computer?",
+        "progression_name": "Video: What Makes a Computer, a Computer?"
       },
       "seeding_key": {
         "activity_section.key": "8fbba712-4509-4539-89c3-ac8a69f99409",
@@ -2650,7 +2668,8 @@
       "key": "156b62cb-0181-40f8-9f1d-5844aa1b1b0f",
       "position": 1,
       "properties": {
-        "name": "App: Pet Chooser"
+        "name": "App: Pet Chooser",
+        "progression_name": "App: Pet Chooser"
       },
       "seeding_key": {
         "activity_section.key": "156b62cb-0181-40f8-9f1d-5844aa1b1b0f",
@@ -2661,7 +2680,8 @@
       "key": "ef1a5fb5-1a9d-4a5e-bee4-f59bbe4e51e9",
       "position": 2,
       "properties": {
-        "name": "App: Story Creator"
+        "name": "App: Story Creator",
+        "progression_name": "App: Story Creator"
       },
       "seeding_key": {
         "activity_section.key": "ef1a5fb5-1a9d-4a5e-bee4-f59bbe4e51e9",
@@ -2672,7 +2692,8 @@
       "key": "1f2272c5-41fa-4388-adb5-2d8b5cd783d5",
       "position": 3,
       "properties": {
-        "name": "App: Improved Pet Chooser"
+        "name": "App: Improved Pet Chooser",
+        "progression_name": "App: Improved Pet Chooser"
       },
       "seeding_key": {
         "activity_section.key": "1f2272c5-41fa-4388-adb5-2d8b5cd783d5",
@@ -2937,7 +2958,8 @@
       "key": "00405d7e-34d2-4784-8f34-67a211b9e112",
       "position": 1,
       "properties": {
-        "name": "App: Is It Your Birthday?"
+        "name": "App: Is It Your Birthday?",
+        "progression_name": "App: Is It Your Birthday?"
       },
       "seeding_key": {
         "activity_section.key": "00405d7e-34d2-4784-8f34-67a211b9e112",
@@ -2948,7 +2970,8 @@
       "key": "d077e275-c2db-421d-962e-c684e04ae6fe",
       "position": 2,
       "properties": {
-        "name": "App: National Park Quiz"
+        "name": "App: National Park Quiz",
+        "progression_name": "App: National Park Quiz"
       },
       "seeding_key": {
         "activity_section.key": "d077e275-c2db-421d-962e-c684e04ae6fe",
@@ -2959,7 +2982,8 @@
       "key": "ef32a9d1-71ed-4d37-948e-6fac69e3abcc",
       "position": 3,
       "properties": {
-        "name": "App: How Many Countries..."
+        "name": "App: How Many Countries...",
+        "progression_name": "App: How Many Countries..."
       },
       "seeding_key": {
         "activity_section.key": "ef32a9d1-71ed-4d37-948e-6fac69e3abcc",
@@ -2970,7 +2994,8 @@
       "key": "416ac7dd-a043-4936-8f5c-3c55d0bd0a0a",
       "position": 4,
       "properties": {
-        "name": "App: My Famous Birthday"
+        "name": "App: My Famous Birthday",
+        "progression_name": "App: My Famous Birthday"
       },
       "seeding_key": {
         "activity_section.key": "416ac7dd-a043-4936-8f5c-3c55d0bd0a0a",
@@ -2981,7 +3006,8 @@
       "key": "9642adce-4c71-457e-a276-cc67ff166a2f",
       "position": 5,
       "properties": {
-        "name": "App: Stamp Notebook"
+        "name": "App: Stamp Notebook",
+        "progression_name": "App: Stamp Notebook"
       },
       "seeding_key": {
         "activity_section.key": "9642adce-4c71-457e-a276-cc67ff166a2f",
@@ -2992,7 +3018,8 @@
       "key": "98ce89ea-461e-49e4-845d-521a80a2a550",
       "position": 6,
       "properties": {
-        "name": "App: The Fastest Finger"
+        "name": "App: The Fastest Finger",
+        "progression_name": "App: The Fastest Finger"
       },
       "seeding_key": {
         "activity_section.key": "98ce89ea-461e-49e4-845d-521a80a2a550",
@@ -3003,7 +3030,8 @@
       "key": "2d8ce6da-027e-4a1c-944a-ce82c02f5f49",
       "position": 7,
       "properties": {
-        "name": "App: Guess the Number"
+        "name": "App: Guess the Number",
+        "progression_name": "App: Guess the Number"
       },
       "seeding_key": {
         "activity_section.key": "2d8ce6da-027e-4a1c-944a-ce82c02f5f49",
@@ -3014,7 +3042,8 @@
       "key": "9df0efaf-11d3-4c55-81ff-e928ed7838c7",
       "position": 8,
       "properties": {
-        "name": "App: Where Should I Live?"
+        "name": "App: Where Should I Live?",
+        "progression_name": "App: Where Should I Live?"
       },
       "seeding_key": {
         "activity_section.key": "9df0efaf-11d3-4c55-81ff-e928ed7838c7",
@@ -3297,7 +3326,8 @@
       "key": "b8451662-e6a7-4a63-a5d6-35cb805ccdd1",
       "position": 1,
       "properties": {
-        "name": "App: Outfit Picker"
+        "name": "App: Outfit Picker",
+        "progression_name": "App: Outfit Picker"
       },
       "seeding_key": {
         "activity_section.key": "b8451662-e6a7-4a63-a5d6-35cb805ccdd1",
@@ -3308,7 +3338,8 @@
       "key": "8ab43a96-555b-4367-8895-d30ecbfa31a9",
       "position": 2,
       "properties": {
-        "name": "App: Friend Finder"
+        "name": "App: Friend Finder",
+        "progression_name": "App: Friend Finder"
       },
       "seeding_key": {
         "activity_section.key": "8ab43a96-555b-4367-8895-d30ecbfa31a9",
@@ -3319,7 +3350,8 @@
       "key": "98f36c5e-6a24-4417-9b0c-d5398a67353c",
       "position": 3,
       "properties": {
-        "name": "App: Kids Movie Recommender"
+        "name": "App: Kids Movie Recommender",
+        "progression_name": "App: Kids Movie Recommender"
       },
       "seeding_key": {
         "activity_section.key": "98f36c5e-6a24-4417-9b0c-d5398a67353c",
@@ -3330,7 +3362,8 @@
       "key": "f9faa28b-a97a-41b5-9704-2f4558d058a8",
       "position": 4,
       "properties": {
-        "name": "Video: IOSP Model"
+        "name": "Video: IOSP Model",
+        "progression_name": "Video: IOSP Model"
       },
       "seeding_key": {
         "activity_section.key": "f9faa28b-a97a-41b5-9704-2f4558d058a8",
@@ -3529,7 +3562,8 @@
       "key": "fc812e5a-38cf-4bea-9942-dd9bf8f1b2b4",
       "position": 1,
       "properties": {
-        "name": "Reflection"
+        "name": "Reflection",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "fc812e5a-38cf-4bea-9942-dd9bf8f1b2b4",
@@ -5093,10 +5127,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: Problem Solving Process",
         "level_keys": [
           "CSD Problem Solving Process Video_2021"
-        ]
+        ],
+        "progression": "Video: Problem Solving Process"
       },
       "named_level": null,
       "bonus": null,
@@ -5119,10 +5153,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: What Makes a Computer, a Computer?",
         "level_keys": [
           "CSD What Makes a Computer a Computer Video_2021"
-        ]
+        ],
+        "progression": "Video: What Makes a Computer, a Computer?"
       },
       "named_level": null,
       "bonus": null,
@@ -5145,10 +5179,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Pet Chooser",
         "level_keys": [
           "CSD U1 IO Pet Chooser_2021"
-        ]
+        ],
+        "progression": "App: Pet Chooser"
       },
       "named_level": null,
       "bonus": null,
@@ -5171,10 +5205,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Story Creator",
         "level_keys": [
           "CSD U1 IO Story_2021"
-        ]
+        ],
+        "progression": "App: Story Creator"
       },
       "named_level": null,
       "bonus": null,
@@ -5197,10 +5231,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Improved Pet Chooser",
         "level_keys": [
           "CSD U1 IO Pet Chooser 2_2021"
-        ]
+        ],
+        "progression": "App: Improved Pet Chooser"
       },
       "named_level": null,
       "bonus": null,
@@ -5223,10 +5257,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Is It Your Birthday?",
         "level_keys": [
           "CSD U1 processing bday_2021"
-        ]
+        ],
+        "progression": "App: Is It Your Birthday?"
       },
       "named_level": null,
       "bonus": false,
@@ -5249,10 +5283,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: National Park Quiz",
         "level_keys": [
           "CSD U1 processing npark_2021"
-        ]
+        ],
+        "progression": "App: National Park Quiz"
       },
       "named_level": null,
       "bonus": false,
@@ -5275,10 +5309,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: How Many Countries...",
         "level_keys": [
           "CSD U1 processing countries_2021"
-        ]
+        ],
+        "progression": "App: How Many Countries..."
       },
       "named_level": null,
       "bonus": false,
@@ -5301,10 +5335,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: My Famous Birthday",
         "level_keys": [
           "CSD U1 processing writers_2021"
-        ]
+        ],
+        "progression": "App: My Famous Birthday"
       },
       "named_level": null,
       "bonus": false,
@@ -5327,10 +5361,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Stamp Notebook",
         "level_keys": [
           "CSD U1 processing notebook_2021"
-        ]
+        ],
+        "progression": "App: Stamp Notebook"
       },
       "named_level": null,
       "bonus": false,
@@ -5353,10 +5387,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: The Fastest Finger",
         "level_keys": [
           "CSD U1 processing fastest_2021"
-        ]
+        ],
+        "progression": "App: The Fastest Finger"
       },
       "named_level": null,
       "bonus": false,
@@ -5379,10 +5413,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Guess the Number",
         "level_keys": [
           "CSD U1 processing guess_2021"
-        ]
+        ],
+        "progression": "App: Guess the Number"
       },
       "named_level": null,
       "bonus": false,
@@ -5405,10 +5439,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App: Where Should I Live?",
         "level_keys": [
           "CSD U1 processing live_2021"
-        ]
+        ],
+        "progression": "App: Where Should I Live?"
       },
       "named_level": null,
       "bonus": false,
@@ -5431,10 +5465,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Outfit Picker",
         "level_keys": [
           "CSD U1 storage outfit_2021"
-        ]
+        ],
+        "progression": "App: Outfit Picker"
       },
       "named_level": null,
       "bonus": null,
@@ -5457,10 +5491,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Friend Finder",
         "level_keys": [
           "CSD U1 storage friends_2021"
-        ]
+        ],
+        "progression": "App: Friend Finder"
       },
       "named_level": null,
       "bonus": null,
@@ -5483,10 +5517,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "App: Kids Movie Recommender",
         "level_keys": [
           "CSD U1 storage movies_2021"
-        ]
+        ],
+        "progression": "App: Kids Movie Recommender"
       },
       "named_level": null,
       "bonus": null,
@@ -5509,10 +5543,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Video: IOSP Model",
         "level_keys": [
           "CSD U1 storage video_2021"
-        ]
+        ],
+        "progression": "Video: IOSP Model"
       },
       "named_level": null,
       "bonus": null,
@@ -5535,10 +5569,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U1Ch2_2021"
-        ]
+        ],
+        "progression": "Reflection"
       },
       "named_level": null,
       "bonus": null,

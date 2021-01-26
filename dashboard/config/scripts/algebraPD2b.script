@@ -1,7 +1,7 @@
 professional_learning_course 'CS in Algebra Legacy'
 login_required true
 
-lesson 'Course Overview', display_name: 'Course Overview'
+lesson 'Course Overview', display_name: 'Course Overview', has_lesson_plan: false
 level 'K5PD tour'
 level 'PDAlg circles to blocks'
 level 'PDAlg block match'
@@ -9,19 +9,19 @@ level 'PDAlg Scope'
 level 'PDAlg implementation'
 level 'PDAlg course goals'
 
-lesson 'Best Practices for Teaching Computer Science', display_name: 'Best Practices for Teaching Computer Science'
+lesson 'Best Practices for Teaching Computer Science', display_name: 'Best Practices for Teaching Computer Science', has_lesson_plan: false
 level 'PDAlg Culture'
 level 'OPD-K5 Pair'
 level 'PDK5 Pair programming match'
 level 'OPD-K5 Problem Solving Video'
 level 'PDAlg Strategy Reflection'
 
-lesson 'Teacher Dashboard', display_name: 'Teacher Dashboard'
+lesson 'Teacher Dashboard', display_name: 'Teacher Dashboard', has_lesson_plan: false
 level 'PDK5 Teacher Dashboard 1'
 level 'PDK5 Teacher Dashboard 2'
 level 'PDAlg Teacher Dashboard'
 
-lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks'
+lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks', has_lesson_plan: false
 level 'PDAlg Blocks Video'
 level 'Calc Circles of Eval .4'
 level 'Calc Circles of Eval 1'
@@ -36,7 +36,7 @@ level 'Blocks to Math 6'
 level 'Blocks to Math 7'
 level 'Calc Circles of Eval Free Play'
 
-lesson 'Strings and Images', display_name: 'Strings and Images'
+lesson 'Strings and Images', display_name: 'Strings and Images', has_lesson_plan: false
 level 'PDAlg Types Video'
 level 'Eval Strings Images 5'
 level 'Eval Strings Images 6'
@@ -45,7 +45,7 @@ level 'Eval Strings Images 8'
 level 'Multi Strings Images 1'
 level 'Eval Strings Images Free Play'
 
-lesson 'Writing Contracts', display_name: 'Writing Contracts'
+lesson 'Writing Contracts', display_name: 'Writing Contracts', has_lesson_plan: false
 level 'Eval Contracts A'
 level 'Eval Contracts B'
 level 'Eval Contracts C'
@@ -55,7 +55,7 @@ level 'Eval Contracts F'
 level 'Eval Contracts 4'
 level 'Eval Contracts 4 B'
 
-lesson 'Defining Variables', display_name: 'Defining Variables'
+lesson 'Defining Variables', display_name: 'Defining Variables', has_lesson_plan: false
 level 'Calc Vars 1'
 level 'Calc Vars 1.1'
 level 'Calc Vars 3'
@@ -69,7 +69,7 @@ level 'msm variables multi 4'
 level 'msm variables multi 5'
 level 'msm variables multi 6'
 
-lesson 'Defining Functions', display_name: 'Defining Functions'
+lesson 'Defining Functions', display_name: 'Defining Functions', has_lesson_plan: false
 level 'Eval Define Funcs 1'
 level 'Eval Define Funcs 2'
 level 'Eval Define Funcs 3'
@@ -86,7 +86,7 @@ level 'msm variables multi 10'
 level 'msm variables multi 11'
 level 'msm variables multi 13'
 
-lesson 'Rocket-Height', display_name: 'Rocket-Height'
+lesson 'Rocket-Height', display_name: 'Rocket-Height', has_lesson_plan: false
 level 'PDAlg Design Recipe Video'
 level 'Play Lab Rocket 3'
 level 'Play Lab Rocket 4'
@@ -96,7 +96,7 @@ level 'Play Lab Rocket 7'
 level 'Play Lab Rocket 8'
 level 'Play Lab Rocket Free Play'
 
-lesson 'Booleans', display_name: 'Booleans'
+lesson 'Booleans', display_name: 'Booleans', has_lesson_plan: false
 level 'Eval Booleans 1'
 level 'Eval Booleans 2'
 level 'Eval Booleans 3'
@@ -109,7 +109,7 @@ level 'Blocks to Bools 3'
 level 'Blocks to Bools 4'
 level 'Eval Booleans Free Play'
 
-lesson 'Eval: Conditionals', display_name: 'Eval: Conditionals'
+lesson 'Eval: Conditionals', display_name: 'Eval: Conditionals', has_lesson_plan: false
 level 'Eval Cond 1'
 level 'Eval Cond 2'
 level 'Eval Cond 3'
@@ -119,7 +119,7 @@ level 'Eval Cond 6'
 level 'Eval Cond 7'
 level 'Eval Cond 8'
 
-lesson 'Next Steps', display_name: 'Next Steps'
+lesson 'Next Steps', display_name: 'Next Steps', has_lesson_plan: false
 level 'PDAlg end of P3'
 level 'PDAlg whats next'
 
