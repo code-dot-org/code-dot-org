@@ -20,10 +20,17 @@ describe('JoinSection', () => {
     server.restore();
   });
 
+  it('renders spinner while asynchronoous request is finishing', () => {
+    const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
+    expect(wrapper.find('Spinner')).to.have.lengthOf(1);
+    expect(wrapper.prop('style')).to.include({marginTop: '10px'});
+  });
+
   it('renders with a dashed border when not enrolled in a section', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={false} />
     );
+    wrapper.setState({isLoaded: true});
     expect(wrapper.prop('style')).to.include({borderStyle: 'dashed'});
   });
 
@@ -31,11 +38,13 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={true} />
     );
+    wrapper.setState({isLoaded: true});
     expect(wrapper.prop('style')).to.include({borderStyle: 'solid'});
   });
 
   it('renders with disabled button when input is empty', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
+    wrapper.setState({isLoaded: true});
     expect(wrapper.find('Button').prop('disabled')).to.be.true;
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     expect(wrapper.find('Button').prop('disabled')).to.be.false;
@@ -43,8 +52,9 @@ describe('JoinSection', () => {
 
   it('updates state when typing', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
+    wrapper.setState({isLoaded: true});
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
-    expect(wrapper.state()).to.deep.equal({sectionCode: 'ABCDEF'});
+    expect(wrapper.state('sectionCode')).to.equal('ABCDEF');
     expect(wrapper.find('input').prop('value')).to.equal('ABCDEF');
   });
 
@@ -59,7 +69,7 @@ describe('JoinSection', () => {
     ]);
 
     const updateSections = sinon.spy(function() {
-      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+      expect(wrapper.state('sectionCode')).to.equal('');
       expect(wrapper.find('input').prop('value')).to.equal('');
 
       expect(updateSections).to.have.been.calledOnce;
@@ -70,6 +80,7 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
     );
+    wrapper.setState({isLoaded: true});
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     wrapper.find('Button').simulate('click');
     server.respond();
@@ -86,7 +97,7 @@ describe('JoinSection', () => {
     ]);
 
     const updateSections = sinon.spy(function() {
-      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+      expect(wrapper.state('sectionCode')).to.equal('');
       expect(wrapper.find('input').prop('value')).to.equal('');
 
       expect(updateSections).to.have.been.calledOnce;
@@ -97,6 +108,7 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
     );
+    wrapper.setState({isLoaded: true});
     wrapper.find('input').simulate('change', {target: {value: ' aBcDeF  '}});
     wrapper.find('Button').simulate('click');
     server.respond();
@@ -113,7 +125,7 @@ describe('JoinSection', () => {
     ]);
 
     const updateSections = sinon.spy(function() {
-      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+      expect(wrapper.state('sectionCode')).to.equal('');
       expect(wrapper.find('input').prop('value')).to.equal('');
 
       expect(updateSections).to.have.been.calledOnce;
@@ -124,6 +136,7 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
     );
+    wrapper.setState({isLoaded: true});
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     wrapper.find('input').simulate('keyup', {key: 'Enter'});
     server.respond();
@@ -131,19 +144,19 @@ describe('JoinSection', () => {
 
   it('escape key clears input', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
+    wrapper.setState({isLoaded: true});
     wrapper.setState({sectionCode: 'ABCDEF'});
-
     wrapper.find('input').simulate('keyup', {key: 'Escape'});
-    expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+    expect(wrapper.state('sectionCode')).to.equal('');
     expect(wrapper.find('input').prop('value')).to.equal('');
   });
 
   it('ignores other keyup events gracefully', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     wrapper.setState({sectionCode: 'ABC'});
-
+    wrapper.setState({isLoaded: true});
     wrapper.find('input').simulate('keyup', {key: 'Z'});
-    expect(wrapper.state()).to.deep.equal({sectionCode: 'ABC'});
+    expect(wrapper.state('sectionCode')).to.equal('ABC');
     expect(wrapper.find('input').prop('value')).to.equal('ABC');
   });
 
@@ -158,7 +171,7 @@ describe('JoinSection', () => {
     ]);
 
     const updateSectionsResult = sinon.spy(function() {
-      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+      expect(wrapper.state('sectionCode')).to.equal('');
       expect(wrapper.find('input').prop('value')).to.equal('');
 
       expect(updateSectionsResult).to.have.been.calledOnce;
@@ -172,6 +185,7 @@ describe('JoinSection', () => {
         updateSectionsResult={updateSectionsResult}
       />
     );
+    wrapper.setState({isLoaded: true});
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     wrapper.find('Button').simulate('click');
     server.respond();
@@ -185,7 +199,7 @@ describe('JoinSection', () => {
     ]);
 
     const updateSectionsResult = sinon.spy(function() {
-      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+      expect(wrapper.state('sectionCode')).to.equal('');
       expect(wrapper.find('input').prop('value')).to.equal('');
 
       expect(updateSectionsResult).to.have.been.calledOnce;
@@ -199,6 +213,7 @@ describe('JoinSection', () => {
         updateSectionsResult={updateSectionsResult}
       />
     );
+    wrapper.setState({isLoaded: true});
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     wrapper.find('Button').simulate('click');
     server.respond();

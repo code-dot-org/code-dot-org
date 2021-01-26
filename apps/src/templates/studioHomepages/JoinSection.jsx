@@ -105,7 +105,7 @@ export default class JoinSection extends React.Component {
     if (event.key === 'Enter') {
       this.validateRecaptcha();
     } else if (event.key === 'Escape') {
-      this.setState(INITIAL_STATE);
+      this.setState({sectionCode: '', displayCaptcha: false});
     }
   };
 
