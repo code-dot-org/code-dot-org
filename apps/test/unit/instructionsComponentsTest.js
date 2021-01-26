@@ -1,8 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import testUtils from '../util/testUtils';
 import {expect} from '../util/reconfiguredChai';
+import {setExternalGlobals} from '../util/testUtils';
 
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import NonMarkdownInstructions from '@cdo/apps/templates/instructions/NonMarkdownInstructions';
@@ -10,7 +10,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {StatelessMarkdownInstructions} from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
 describe('instructions components', () => {
-  testUtils.setExternalGlobals();
+  setExternalGlobals();
 
   describe('MarkdownInstructions', function() {
     it('standard case had top padding and no left margin', function() {
