@@ -8,7 +8,7 @@ import EnhancedSafeMarkdown, {
   UnconnectedExpandableImagesWrapper
 } from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 
 describe('EnhancedSafeMarkdown', () => {
   it('renders SafeMarkdown by default', () => {
