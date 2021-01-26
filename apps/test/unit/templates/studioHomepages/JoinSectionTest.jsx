@@ -211,4 +211,30 @@ describe('JoinSection', () => {
     instance.componentDidMount();
     expect(fetchCaptchaSpy).to.have.been.calledOnce;
   });
+
+  it('only renders captcha dialog after asynchronous request is finished', () => {
+    let wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
+    expect(wrapper.state('isLoaded')).to.equal(false);
+    expect(wrapper.find('ReCaptchaDialog')).to.have.lengthOf(0);
+    wrapper.setState({isLoaded: true, requireCaptcha: true, key: 'testKey'});
+    expect(wrapper.find('ReCaptchaDialog')).to.have.lengthOf(1);
+  });
+
+  it('only opens recaptcha dialog if display captcha is true', () => {
+    let wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
+    wrapper.setState({isLoaded: true, requireCaptcha: true, key: 'testKey'});
+    expect(
+      wrapper
+        .find('ReCaptchaDialog')
+        .at(0)
+        .props().isOpen
+    ).to.equal(false);
+    wrapper.setState({displayCaptcha: true});
+    expect(
+      wrapper
+        .find('ReCaptchaDialog')
+        .at(0)
+        .props().isOpen
+    ).to.equal(true);
+  });
 });
