@@ -338,8 +338,12 @@ class Script < ApplicationRecord
 
   # Find the lesson based on its relative position, lockable value, and if it has a lesson plan.
   # Raises `ActiveRecord::RecordNotFound` if no matching lesson is found.
-  def lesson_by_relative_position(position, lockable = false, has_lesson_plan = false)
-    lessons.where(lockable: lockable, has_lesson_plan: has_lesson_plan).find_by!(relative_position: position)
+  def lesson_by_relative_position(position, survey = false)
+    if survey
+      lessons.where(lockable: true, has_lesson_plan: false).find_by!(relative_position: position)
+    else
+      lessons.where(lockable: false).or(lessons.where(has_lesson_plan: true)).find_by!(relative_position: position)
+    end
   end
 
   # For all scripts, cache all related information (levels, etc),
