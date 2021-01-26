@@ -64,6 +64,7 @@ var ALLOWED_KEYS = new Set([
   'nextLevelUrl',
   'showProjectTemplateWorkspaceIcon',
   'serverLevelId',
+  'serverScriptId',
   'serverScriptLevelId',
   'exportApp',
   'expoGenerateApk',

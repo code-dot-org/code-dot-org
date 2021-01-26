@@ -30,15 +30,28 @@
   },
   "lesson_groups": [
     {
-      "key": "introduction",
+      "key": "Sprites",
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Introduction to Sprite Lab",
-        "description": "Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!"
+        "display_name": "Sprites",
+        "description": "Learn the basics of coding with sprites!"
       },
       "seeding_key": {
-        "lesson_group.key": "introduction",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Variables",
+        "description": "Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2021-pilot"
       }
     }
@@ -46,7 +59,7 @@
   "lessons": [
     {
       "key": "Course F Introduction",
-      "name": "Introduction to Course F",
+      "name": "Introducing Sprite Lab",
       "absolute_position": 1,
       "lockable": false,
       "relative_position": 1,
@@ -54,7 +67,77 @@
       },
       "seeding_key": {
         "lesson.key": "Course F Introduction",
-        "lesson_group.key": "introduction",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "key": "Making Sprites",
+      "name": "Making Sprites",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "key": "Sprites in Action",
+      "name": "Sprites in Action - coming soon!",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Blank Space Variables - coming soon!",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "key": "variables-in-spritelab",
+      "name": "Storing and Retrieving Text - coming soon!",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "variables-in-spritelab",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "key": "chatbot",
+      "name": "Create a Chat-Bot - coming soon!",
+      "absolute_position": 6,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "chatbot",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2021-pilot"
       }
     }
@@ -72,7 +155,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Introducing Sprite Lab"
+        "progression": "Video: Introducing Sprite Lab",
+        "level_keys": [
+          "CourseEF_video_IntroSpriteLab_2020"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -81,7 +167,7 @@
           "CourseEF_video_IntroSpriteLab_2020"
         ],
         "lesson.key": "Course F Introduction",
-        "lesson_group.key": "introduction",
+        "lesson_group.key": "Sprites",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
@@ -94,7 +180,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Exploration: Sample Apps"
+        "progression": "Exploration: Sample Apps",
+        "level_keys": [
+          "courseF_intro_apps"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -103,7 +192,7 @@
           "courseF_intro_apps"
         ],
         "lesson.key": "Course F Introduction",
-        "lesson_group.key": "introduction",
+        "lesson_group.key": "Sprites",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
@@ -116,7 +205,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Exploration: Code"
+        "progression": "Exploration: Writing Code",
+        "level_keys": [
+          "courseF_intro_birds_puzzle"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -125,11 +217,236 @@
           "courseF_intro_birds_puzzle"
         ],
         "lesson.key": "Course F Introduction",
-        "lesson_group.key": "introduction",
+        "lesson_group.key": "Sprites",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_intro_birds_puzzle"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Predict",
+        "level_keys": [
+          "courseF_sprites_predict"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_predict"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_sprites_predict"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Video: How to Make a Sprite",
+        "level_keys": [
+          "CourseEF_video_MakeSprite_2020"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2020"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "CourseEF_video_MakeSprite_2020"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_sprites_make"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_make"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_sprites_make"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_sprites_positioning"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_positioning"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_sprites_positioning"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_sprites_moreSprites"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_sprites_moreSprites"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_sprites_properties"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_properties"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_sprites_properties"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_sprites_behaviors"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_behaviors"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_sprites_behaviors"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_sprites_practice"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_practice"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_sprites_practice"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Free Play: Make a Scene",
+        "level_keys": [
+          "courseF_sprites_freeplay"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_freeplay"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_sprites_freeplay"
       ]
     }
   ],
@@ -141,7 +458,7 @@
           "CourseEF_video_IntroSpriteLab_2020"
         ],
         "lesson.key": "Course F Introduction",
-        "lesson_group.key": "introduction",
+        "lesson_group.key": "Sprites",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -152,7 +469,7 @@
           "courseF_intro_apps"
         ],
         "lesson.key": "Course F Introduction",
-        "lesson_group.key": "introduction",
+        "lesson_group.key": "Sprites",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -163,9 +480,123 @@
           "courseF_intro_birds_puzzle"
         ],
         "lesson.key": "Course F Introduction",
-        "lesson_group.key": "introduction",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_predict",
+        "script_level.level_keys": [
+          "courseF_sprites_predict"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_MakeSprite_2020",
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2020"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_make",
+        "script_level.level_keys": [
+          "courseF_sprites_make"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_positioning",
+        "script_level.level_keys": [
+          "courseF_sprites_positioning"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_moreSprites",
+        "script_level.level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_properties",
+        "script_level.level_keys": [
+          "courseF_sprites_properties"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_behaviors",
+        "script_level.level_keys": [
+          "courseF_sprites_behaviors"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_practice",
+        "script_level.level_keys": [
+          "courseF_sprites_practice"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_freeplay",
+        "script_level.level_keys": [
+          "courseF_sprites_freeplay"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
         "script.name": "csf-2021-pilot"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
   ]
 }

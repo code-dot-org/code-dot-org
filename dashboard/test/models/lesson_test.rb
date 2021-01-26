@@ -82,7 +82,7 @@ class LessonTest < ActiveSupport::TestCase
 
     summary = lesson.summarize(true)
     assert_equal 1, summary[:levels].length
-    assert_equal [level.id], summary[:levels].first[:ids]
+    assert_equal [level.id.to_s], summary[:levels].first[:ids]
   end
 
   test "summary of levels for lesson plan" do
@@ -100,7 +100,7 @@ class LessonTest < ActiveSupport::TestCase
         assessment: script_level.assessment,
         progression: script_level.progression,
         path: script_level.path,
-        level_id: level.id,
+        level_id: level.id.to_s,
         type: level.class.to_s,
         name: level.name,
         display_name: level.display_name

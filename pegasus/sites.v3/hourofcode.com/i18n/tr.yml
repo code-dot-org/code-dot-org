@@ -1,16 +1,16 @@
 ---
 tr:
-  site_name: HOUR of CODE
+  site_name: KOD SAATİ
   hour_of_code: Hour of Code
   language: İngilizce
-  front_title: Tarihteki en yaygın eğitim etkinliğine sen de katıl, 7-13 Aralık 2015
+  front_title: Tarihteki ben büyük eğitim etkinliğine katıl, %{campaign_date}
   coming_soon: Çok Yakında
   campaign_date_start_short: 7 Ara.
   campaign_date_start_long: 7 Aralık
   campaign_date_short: 7-13 Aralık
   campaign_date_full: 7-13 Aralık
   campaign_date_year: '2020'
-  campaign_date_full_year: 7-13 Aralık, 2020
+  campaign_date_full_year: 7-13 Aralık 2020
   latam_campaign_date_start_short: 1 Eki.
   latam_campaign_date_start_long: 1 Ekim
   latam_campaign_date_short: 1 Eki. - 18 Ara.
@@ -29,11 +29,11 @@ tr:
   africa_campaign_date_full: 1-31 Ekim
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: 1-31 Ekim 2020
-  hoc2020_header: Bugün öğrenin, daha parlak bir gelecek oluşturun.
+  hoc2020_header: Bugün öğrenin, daha parlak bir gelecek inşa edin
   hoc2020_header_with_line_break_markdown: Bugün öğrenin, daha parlak bir gelecek
-    oluşturun.
-  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
-    we want. #CSforGood'
+    inşa edin
+  social_hoc2020_cs_important: 'Bilgisayar bilimleri her zamankinden daha önemli.
+    Haydi birlikte geleceği inşa edelim. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: "#HourOfCode #İyilikiçinBilgisayarBilimi
     ile ilgilidir. Bugün öğrenin, daha parlak bir gelecek oluşturun."
   social_hoc2020_global_movement: Hour of Code, on milyonlarca öğrenciye ulaşan küresel
@@ -141,10 +141,10 @@ tr:
     öğretme yolculuğunda Code.org'un ilk adımının keyfini çıkarın.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
-  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
-    of all ages and abilities, including those without computers, are welcome. Join
-    our mailing list to receive recordings of the episodes and resources to continue
-    learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_sign_up_message: "Özel misafirle birlikte gerçek zamanlı olarak öğrenin!
+    Tüm yaştaki ve yetenekteki hatta bilgisayarı olmayan öğrenciler de davetlidir.
+    \nEvde öğrenmeye devam etmek için bölümlerin ve kaynakların kayıtlarını almak
+    için posta listemize katılın.  Geçmiş bölümlere göz atın [here](%{episodes_url})."
   hoc_live_join_us: Bize katılın
   hoc_overview_oceans_tutorial_header: Okyanuslar için Yapay Zeka
   hoc_overview_oceans_tutorial_desc: Etik meseleleri ve dünya problemlerini ele almada
@@ -236,8 +236,7 @@ tr:
     bilgisayarınızda veya cihazınızda çerezlerin saklanmasını kabul etmiş olursunuz.
   cookie_banner_more_information: Code.org'un Gizlilik Politikasına bakın.
   cookie_banner_accept: Kabul ediyorum
-  front_header_banner: Tarihteki en yaygın eğitim etkinliğine sen de katıl, 7-13 Aralık
-    2015
+  front_header_banner: Tarihteki ben büyük eğitim etkinliğine katıl, %{campaign_date}
   front_intro_default: Hour of Code 180'den fazla ülkede gerçekleşen 10 milyonlarca
     öğrenciye ulaşmış küresel bir harekettir. Herkes dünyanın herhangi bir yerinde
     herhangi bir Hour of Code etkinliğini organize edebilir. Bir saatlik dersler 30'dan
@@ -956,8 +955,8 @@ tr:
   highlights_title: Önemli Anlar
   highlights_header: Hour of Code Önemli Noktalar
   highlights_description: Hour of Code kampanyamızdaki bazı favori anlarımız.
-  highlights_previous: Highlights from previous years
-  highlights_see_more: See more highlights
+  highlights_previous: Önceki yıllardan önemli anlar
+  highlights_see_more: Daha fazla önemli anlara bak
   highlights_readmore: Daha fazla oku
   highlights_watchvideo: Video İzleyin
   highlights_facebook: Facebook'ta Paylaş
@@ -1590,43 +1589,43 @@ tr:
   tutorial_allcancodeapps_name: 'Allcancode Platformu: Blockly''de web ve mobil uygulamaları
     yapın'
   tutorial_n2y_name: Bitt Bott Dünyayı Keşfediyor
-  tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
+  tutorial_microsoftarcade_name: 'Retro Arcade Oyunları Oyna, Tasarla ve Kodla '
   tutorial_csfirstunplugged_name: CS First Unplugged
   tutorial_toxicodepython_name: Silent Teacher ile Python'u keşfedin
-  tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
-  tutorial_vidcodedate_name: Climate Clock
-  tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
-  tutorial_codespeakhappy_name: Code a Happy Place Meditation App
-  tutorial_grokimage_name: Image Magic with Python
-  tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: Support My Cause
+  tutorial_codecombatozaria_name: 'Ozaria: Seyahatin Başlıyor'
+  tutorial_vidcodedate_name: İklim Saati
+  tutorial_codemonkeyspace_name: 'Uzay Macerası: Kod Yaz ve Muzları Yakala!'
+  tutorial_codespeakhappy_name: Mutlu Yer Meditasyon Uygulaması Kodlayın
+  tutorial_grokimage_name: Python ile Resim Büyüsü
+  tutorial_icomputelearn_name: İCompute ile Kodlamayı Öğrenin
+  tutorial_rpstress_name: Stres topu
+  tutorial_bsdcause_name: Sebebimi Destekle
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
-  tutorial_bsdinspire_name: People who Inspire Me
+  tutorial_bsdinspire_name: Bana İlham Veren İnsanlar
   tutorial_tttractor_name: Tractor Traversal
-  tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
-    Mickey'
+  tutorial_codeillusionmickey_name: 'Disney Codeillusion: Mickey ile Medya Sanatı
+    Macerası'
   tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
-  tutorial_codespeakbreathe_name: Code a Meditation Breathing App
+  tutorial_codespeakbreathe_name: Bir Meditasyon Nefes Uygulaması Kodlayın
   tutorial_vidcodeface_name: Facetracking
-  tutorial_educodemaze_name: Design Your Own Maze!
-  tutorial_educoderace_name: Code your own racing game!
+  tutorial_educodemaze_name: Kendi Labirentinizi Tasarlayın!
+  tutorial_educoderace_name: Kendi yarış oyununuzu kodlayın!
   tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
-  tutorial_gamefrootgames_name: 'Games Industry Activity: Code a Platformer game '
-  tutorial_codespeakgrandparent_name: Code a Grandparent Card in Scratch
-  tutorial_educodekingdom_name: Defend the Kingdom!
-  tutorial_codehsdata_name: Coding with Data Visualizations
-  tutorial_educodecake_name: Bake a Cake With HTML!
-  tutorial_ttsecond_name: Second Team
+  tutorial_gamefrootgames_name: 'Oyun Sektörü Etkinliği: Bir Platform oyunu kodlayın'
+  tutorial_codespeakgrandparent_name: Scratch'te Büyükbaba Kartı Kodlayın
+  tutorial_educodekingdom_name: Krallığı Savun!
+  tutorial_codehsdata_name: Veri Görselleştirmeleriyle Kodlama
+  tutorial_educodecake_name: HTML ile Pasta Yapın!
+  tutorial_ttsecond_name: İkinci Takım
   tutorial_bsdtrivia_name: Trivia Game Maker
-  tutorial_csfirstdialogue_name: Dialogue
+  tutorial_csfirstdialogue_name: Diyalog
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
   tutorial_vidcodemagices_name: SFX Magic
-  tutorial_codespeakmeal_name: Code a Healthy Meal App
+  tutorial_codespeakmeal_name: Sağlıklı Yemek Uygulaması Kodlayın
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
   tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
@@ -1634,79 +1633,79 @@ tr:
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
   tutorial_ttrace_name: Race Condition
   tutorial_plethora_name: 'Plethora: Cause and Effect'
-  tutorial_educodesecret_name: Uncover the Agency's Secrets!
+  tutorial_educodesecret_name: Ajansın Sırlarını Ortaya Çıkarın!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
-  tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_codeguppytext_name: Metin tabanlı kodlamaya giriş
   tutorial_vidcodeplastiche_name: Plastik Kirliliği Kamu Spotu
-  tutorial_educativechatbot_name: Build your own chatbot in Python
-  tutorial_educodebasics_name: Learn the Basics!
-  tutorial_codehsdesign_name: Supporting Artists with Code
+  tutorial_educativechatbot_name: Python'da kendi sohbet robotunuzu oluşturun
+  tutorial_educodebasics_name: Temelleri Öğren!
+  tutorial_codehsdesign_name: Sanatçıları Kod ile Destekleme
   tutorial_htmlacademyphp_name: 'Intro to PHP: Create an Online Store from Scratch'
-  tutorial_gamefrootdistance_name: 'COVID-19 Simulator: Learn about social distancing
-    through computer science.'
+  tutorial_gamefrootdistance_name: 'COVID-19 Simülatörü: Bilgisayar bilimi yoluyla
+    sosyal mesafe hakkında bilgi edinin.'
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
-  tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: Jokes and Riddles
-  tutorial_rptree_name: Tree life simulator
+  tutorial_cuttle_name: Hesaplamalı Düşünme ve Programlama Zorluğu
+  tutorial_bsdjokes_name: Şakalar ve Bilmeceler
+  tutorial_rptree_name: Ağaç yaşam simülatörü
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
   tutorial_breakoutlock_name: 'Haspy and Lockit: Code Buddies'
-  tutorial_thunkablemask_name: Beaver in a Mask
-  tutorial_cafarming_name: Old MacDonald hacked a farm. AI, AI drone!
+  tutorial_thunkablemask_name: Maskeli Kunduz
+  tutorial_cafarming_name: Yaşlı MacDonald bir çiftliği hack'ledi. AI, AI drone!
   tutorial_blocksmithyeti_name: Don't Yeet the Yeti
   tutorial_codecapture_name: Learn Programming With JavaScript​ In A Jiffy​
   tutorial_codehslitter_name: Coding for a Litter-Free Community
-  tutorial_bsdocean_name: Life Below Water
+  tutorial_bsdocean_name: Suyun Altındaki Yaşam
   tutorial_itchplatformer_name: 'iTCHcode: Scratch 3.0 Platformer Tutorial'
   tutorial_codejika_name: 'CodeJIKA: 5 Minute Website'
-  tutorial_gamefrootclicker_name: Learn Variables. Code your own Clicker Game.
+  tutorial_gamefrootclicker_name: Değişkenleri Öğrenin. Kendi Clicker Oyununuzu kodlayın.
   tutorial_rmagicequity_name: Equity vs. Equality
-  tutorial_ttfreestyle_name: Functional Freestyle
-  tutorial_ozobotcolor2_name: 'Introduction to Color Codes 02:  Drawing Color Codes'
-  tutorial_ozobotcolor3_name: 'Introduction to Color Codes 03: Directionality'
-  tutorial_clcarbon_name: Build Your Own Carbon Calculator
+  tutorial_ttfreestyle_name: Fonksiyonel Serbest Stil
+  tutorial_ozobotcolor2_name: 'Renk Kodlarına Giriş 02: Renk Kodlarının Çizilmesi'
+  tutorial_ozobotcolor3_name: 'Renk Kodlarına Giriş 03: Yönlülük'
+  tutorial_clcarbon_name: Kendi Karbon Hesaplayıcınızı Oluşturun
   tutorial_kodablebasics_name: 'Coding Basics: Unplugged'
   tutorial_scigirlscc_name: 'SciGirls: Code Creators'
   tutorial_irobotpicture_name: 'Seeing the Whole Picture: Coded Messages'
-  tutorial_kcjmyself_name: Let me introduce myself!
-  tutorial_nearpodalgorithms_name: 'Coding: Algorithms '
+  tutorial_kcjmyself_name: Kendimi tanıtayım!
+  tutorial_nearpodalgorithms_name: 'Kodlama: Algoritmalar'
   tutorial_kibodrop_name: KIBO Craft and Build Drop Test
-  tutorial_ozobotcolor1_name: 'Introduction to Color Codes 01: Line Following'
+  tutorial_ozobotcolor1_name: 'Renk Kodlarına Giriş 01: Çizgi İzleme'
   tutorial_scigirlspixels_name: 'SciGirls: Passion for Pixels'
-  tutorial_kcjheroines_name: Our Heroines
+  tutorial_kcjheroines_name: Kahramanlarımız
   tutorial_ozobotvalue_name: What's My Value?
   tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
   tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
   tutorial_ai4all_name: AI & Drawing
-  tutorial_cldata_name: Welcome to Data Superpower
+  tutorial_cldata_name: Veri Süper Gücü'ne Hoşgeldiniz
   tutorial_spheroinputs_name: Inputs and Outputs Unplugged
   tutorial_edisoncount_name: Teach Edison to count to 9
   tutorial_spheroloops_name: Loops Unplugged
-  tutorial_kiboprogram_name: Let's Program Each Other
-  tutorial_hellorubycsin60_name: Computer Science in 60 seconds
-  tutorial_clfashion1_name: Fashionistas of Data Science - Class 1
-  tutorial_irobottraffic_name: 'Traffic Bot: Code Your Own Traffic Signal'
-  tutorial_edisonmystery_name: Edison and the mystery line
-  tutorial_microbitseaturtles_name: Saving Sea Turtles
-  tutorial_ozobotknow_name: 'Introduction to Ozobot: Get to Know Evo'
-  tutorial_imagilabs_name: 'Imagine it. Code it. Wear it. '
+  tutorial_kiboprogram_name: Birbirimizi Programlayalım
+  tutorial_hellorubycsin60_name: 60 saniyede Bilgisayar Bilimi
+  tutorial_clfashion1_name: Veri Biliminin Modacıları - 1. Sınıf
+  tutorial_irobottraffic_name: 'Trafik RoBotu: Kendi Trafik Sinyalinizi Kodlayın'
+  tutorial_edisonmystery_name: Edison ve gizemli çizgi
+  tutorial_microbitseaturtles_name: Deniz Kaplumbağalarını Kurtarma
+  tutorial_ozobotknow_name: 'Ozobot''a Giriş: Evo''yu Tanıyın'
+  tutorial_imagilabs_name: Hayal et. Kodla. Tak.
   tutorial_irobotsimulator_name: Simulator Code Break
   tutorial_irobotkind_name: 'Robot Feelings: The Kind Playground'
   tutorial_firiavirtual_name: 'CodeSpace: Virtual Robotics with Python'
-  tutorial_irobotguesscode_name: Guess the Code
+  tutorial_irobotguesscode_name: Kodu tahmin et
   tutorial_ozobotnouns_name: Picking Out Irregular Plural Nouns
   tutorial_nasa3d_name: 'Universe in 3D:  modeling and printing cosmic objects'
   tutorial_blupants_name: 'BluPants: Learn Coding with Real Robots'
   tutorial_legodance_name: Break Dance
   tutorial_nearpodcoding_name: 'Topic Spark: Coding '
   tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
-  tutorial_legojourney_name: Create a Journey with LEGO Education
+  tutorial_legojourney_name: LEGO Education ile Yolculuk Oluşturun
   tutorial_legohopper_name: Hopper Race
   tutorial_catrobatembroidery_name: Kodlu Nakış
   tutorial_irobotphone_name: Telephone Drawing
-  tutorial_codeguppydraw_name: Draw with code
-  tutorial_codejumper_name: 'Networks: Messages of Kindness'
+  tutorial_codeguppydraw_name: Kodla çizin
+  tutorial_codejumper_name: 'Bilgisayar Ağları: İyilik Mesajları'
   tutorial_meeempathy_name: İki Köylü Bir Minecraft Masalı
   tutorial_danceparty_shortdescription: Arkadaşlarınızla paylaşmak için bir Dans Partisi
     kodlayın. Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ve 25 kişi daha!
@@ -5544,233 +5543,240 @@ tr:
     PRIME® koleksiyonundan alınan sembollerle desteklenen basit talimatlar vardır.
     Bu semboller, okuryazar olmayanlara ve okumaya yeni başlayanlara talimatları anlamalarında
     ve takip etmelerinde yardımcı olur.
-  tutorial_microsoftarcade_longdescription: Play fun arcade games, design your own
-    sprites, and learn the basics of coding your own game with MakeCode Arcade.
-  tutorial_csfirstunplugged_longdescription: No computer or internet? No problem.
-    Try the CS First Unplugged activities to explore how computer science can solve
-    problems like helping people stay connected while apart. 'Plugged in' Scratch
-    activities are available too!
+  tutorial_microsoftarcade_longdescription: MakeCode Arcade ile eğlenceli atari oyunları
+    oynayın, kendi sprite'larınızı tasarlayın ve kendi oyununuzu kodlamanın temellerini
+    öğrenin.
+  tutorial_csfirstunplugged_longdescription: Bilgisayar veya internet yok mu? Sorun
+    değil. Bilgisayar bilimlerinin, insanların birbirlerinden uzaktayken iletişimde
+    kalmalarına yardımcı olması gibi problemleri nasıl çözebileceğini keşfetmek için
+    CS First Unplugged etkinliklerini deneyin. 'Bilgisayarlı' Scratch etkinlikleri
+    de mevcuttur!
   tutorial_toxicodepython_longdescription: Herhangi bir kelime veya açıklama olmadan
     Python'un temellerini keşfedin. Sessiz öğretmenimiz size bazı kuralları tahmin
     etmenize ve kendi hatalarınızdan ders çıkarmanıza yol açacak çeşitli zorluklar
     sunacak.
-  tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
-    a hero in an epic adventure. You must use the power of coding to defeat a darkness
-    that has taken over the world! Along the way, you'll meet interesting characters
-    and travel to different lands, practicing coding concepts like sequences, loops,
-    debugging, and decomposition. In the end, you'll design a playable game that you
-    can share with your friends!
-  tutorial_vidcodedate_longdescription: 'The Climate Clock project is a culturally
-    relevant intersection of math, environmental science, and computer science. In
-    this Hour of Code activity, students will be guided through the construction of
-    their own climate clock. They will engage with objects, properties, variables,
-    functions, and loops, and customize their message to convey their message for
-    the world and their hopes for the future. '
-  tutorial_codemonkeyspace_longdescription: 'Write real code to help the monkey astronaut
-    catch bananas in space! '
-  tutorial_codespeakhappy_longdescription: Learn to program a meditation app that
-    transports you to your 'happy place.'
-  tutorial_grokimage_longdescription: Use the programming language Python to make
-    speedy changes to images. Make fun image editing programs and make your own image
-    filter!
-  tutorial_icomputelearn_longdescription: When you learn to code with iCompute you
-    program your own fantastic interactive stories, games, and animations. Following
-    our creative, fun, activities means that you will develop computational thinking
-    as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
-  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them. They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript. They are guided
-    with video tutorials, live coding and access to the code glossary. The Support
-    My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favorite cause. #codeisyourvoice'
+  tutorial_codecombatozaria_longdescription: Destansı bir macerada kahraman olacağınız
+    Ozaria dünyasına girin. Dünyayı ele geçirmiş bir karanlık gücü yenmek için kodlamanın
+    gücünü kullanmalısınız! Yol boyunca, ilginç karakterlerle tanışacak ve farklı
+    diyarlara seyahat edecek; diziler, döngüler, hata ayıklama ve ayrıştırma gibi
+    kodlama kavramlarını uygulayacaksınız. Sonunda, arkadaşlarınızla paylaşabileceğiniz
+    oynanabilir bir oyun tasarlayacaksınız!
+  tutorial_vidcodedate_longdescription: İklim Saati projesi matematik, çevre bilimi
+    ve bilgisayar biliminin kültürel açıdan kesişimidir. Bu Kodlama Saati etkinliğinde,
+    öğrencilere kendi iklim saatlerini oluşturma konusunda rehberlik edilecektir.
+    Nesneler, özellikler, değişkenler, işlevler ve döngülerle ilgilenecekler ve dünyaya
+    yönelik mesajlarını ve geleceğe yönelik umutlarını iletmek için mesajlarını özelleştirecekler.
+  tutorial_codemonkeyspace_longdescription: Maymun astronotun uzayda muz yakalamasına
+    yardımcı olmak için gerçek kod yazın!
+  tutorial_codespeakhappy_longdescription: Sizi 'mutlu yerinize' taşıyan bir meditasyon
+    uygulaması programlamayı öğrenin.
+  tutorial_grokimage_longdescription: Görüntülerde hızlı değişiklikler yapmak için
+    Python programlama dilini kullanın. Eğlenceli resim düzenleme programları yapın
+    ve kendi resim filtrenizi yapın!
+  tutorial_icomputelearn_longdescription: İCompute ile kodlamayı öğrendiğinizde, kendi
+    fantastik etkileşimli hikayelerinizi, oyunlarınızı ve animasyonlarınızı programlarsınız.
+    Yaratıcı, eğlenceli aktivitelerimizi takip etmek, kodlama becerilerinin yanı sıra
+    hesaplamalı düşünme de geliştireceğiniz anlamına gelir!
+  tutorial_rpstress_longdescription: Ezebileceğiniz bir stres topu oluşturmak için
+    Scratch'i kullanın!
+  tutorial_bsdcause_longdescription: 'Bu kurs öğrencilerin kodu kendileri için önemli
+    olan veya ilginç olanı paylaşmanın bir yolu olarak kullanmalarına olanak tanır.
+    Dersi takip edebilir veya HTML, CSS ve JavaScript öğrenirken eşsiz projeler oluşturabilirler.
+    Video eğitimleri, canlı kodlama ve kod sözlüğüne erişim ile rehberlik yapılır.
+    ''Amacımı Destekleyin'', favori amacınızın destekçilerinden veri toplayacak bir
+    açılış sayfası tasarlamaya ve kodlamaya odaklanır. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
   tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
     causing an emoji to animate through multiple options.
-  tutorial_bsdinspire_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript. They are guided
-    with video tutorials, live coding and access to the code glossary. The People
-    Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. #codeisyourvoice'
-  tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
-    down on his luck, and his fields have become a mess. But he's just obtained a
-    fancy new tractor with a repeating code system using loops that just might save
-    everything. Help learn how the tractor works to water all the crops in his fields.
-  tutorial_codeillusionmickey_longdescription: Embark on a magical coding adventure
-    with Mickey! Learn how to draw, color, and move shapes as you master the introduction
-    to Media Art using JavaScript.
-  tutorial_scigirlsquest_longdescription: 'In this online coding adventure, youth
-    take Subby the submarine through underwater challenges, using code to find various
-    items and collect scientific data on the ocean floor. '
-  tutorial_codespeakbreathe_longdescription: Learn to program meditation app that
-    will guide users through a mindful breathing exercise.
+  tutorial_bsdinspire_longdescription: 'Bu kurs, öğrencilerin kodu kendileri için
+    önemli veya ilginç olanı paylaşmanın bir yolu olarak kullanmalarına olanak tanır.
+    HTML, CSS ve JavaScript öğrenirken dersi takip edebilir veya eşsiz projeler oluşturabilirler.
+    Video eğitimleri, canlı kodlama ve kod sözlüğüne erişim ile rehberlik yapılır.
+    ''Bana İlham Veren Kişiler'', size ilham veren ilk 3 kişiyi tanıtmak için bir
+    web sayfası oluşturmaya odaklanır. #codeisyourvoice'
+  tutorial_tttractor_longdescription: Tarlaları hayata döndürmeye yardım edin. Çiftçi
+    Hayao şansını kaybetti ve tarlaları darmadağın oldu. Ancak, her şeyi kurtarabilecek
+    döngüleri kullanan, tekrar eden bir kod sistemine sahip yeni ve şık bir traktör
+    sahibi oldu. Traktörün tarlasındaki tüm ekinleri sulamak için nasıl çalıştığını
+    öğrenmeye yardımcı olun.
+  tutorial_codeillusionmickey_longdescription: Mickey ile büyülü bir kodlama macerasına
+    atılın! JavaScript kullanarak Media Art'a girişte ustalaşırken şekilleri nasıl
+    çizeceğinizi, renklendireceğinizi ve taşıyacağınızı öğrenin.
+  tutorial_scigirlsquest_longdescription: Bu çevrimiçi kodlama macerasında, gençler
+    çeşitli öğeleri bulmak ve okyanus tabanındaki bilimsel verileri toplamak için
+    kod kullanarak Subby'yi denizaltına götürüyor.
+  tutorial_codespeakbreathe_longdescription: Kullanıcılara bilinçli bir nefes egzersizi
+    boyunca rehberlik edecek meditasyon uygulamasını programlamayı öğrenin.
   tutorial_vidcodeface_longdescription: Use a facetracking library to code your own
     custom face filter, like the ones you use on social media.
-  tutorial_educodemaze_longdescription: Design a maze, complete with monsters and
-    locked passages. Use variables, loops, and strings to help your hero navigate
-    the world you've created.
-  tutorial_educoderace_longdescription: Learn computer science as you unleash the
-    racer in you! Invent and customize your very own car, all while gaining a deeper
-    understanding of objects and how video games are made.
-  tutorial_codespeakchatbot_longdescription: Learn how to code a chatbot, a computer
-    program you can have a conversation with, while learning about the famous women
-    pioneers of computer science.
-  tutorial_gamefrootgames_longdescription: Learn to code a real game like Super Mario
-    Bros. Students that are ready to go beyond Scratch and Tynker will be introduced
-    to real games industry practice, creative coding concepts, how to publish their
-    own unique game and start working towards a career in the games industry. The
-    tutorial is all about level design, choosing a character, animating and coding
-    your character to move around.
-  tutorial_codespeakgrandparent_longdescription: Learn to code a digital card to spread
-    joy to someone special in your life.
-  tutorial_educodekingdom_longdescription: The Kingdom is under attack! Plan powerful
-    defenses to help repel the invaders. Master the power of arrays in order to create
-    your very own wave of monsters in your own tower defense game!
-  tutorial_codehsdata_longdescription: Learn about the power of using data visualizations
-    to display data in meaningful and easy to understand ways. Use our graph generator
-    to create visually appealing graphs and learn how coding is used to create beautiful
-    data.
-  tutorial_educodecake_longdescription: Learn HTML as you bake a cake with chef Roland.
-    Shape and style your custom creation with your newfound knowledge of tags and
-    classes.
-  tutorial_ttsecond_longdescription: Can you deliver the Open Protocol? You've snuck
-    aboard the capital ship, and now you must evade the security drones long enough
-    to open access for all. Quickly examine conditional statements to find out whether
-    you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them. They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript. They are guided
-    with video tutorials, live coding and access to the code glossary. The Trivia
-    Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions. #codeisyourvoice'
-  tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
-    Get creative while communicating with code in Scratch with CS First!
-  tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
-    into this beaver's natural habitat with a fun-packed coding activity that will
-    jump-start your coding education. Beavers can swim, collect wood, and build dams.
-    This little beaver needs your help. Use the simple blocks of code to complete
-    the dam in the lake so the water remains calm, build a house, and make smoothies!
-  tutorial_codestersdistance_longdescription: Learn the basics of coding in Python,
-    then create a program that calculates the distance between two sprites to make
-    sure they are social distancing or need to wear a mask.
-  tutorial_itchspace_longdescription: This tutorial takes you through the creation
-    of a classic Space Invaders game using the Scratch MIT programming language. Subscribe
-    to the RokCoder YouTube channel for more Scratch-based videos and tutorials! Each
-    video is a bite-sized tutorial (approximately ten minutes in length) that contains
-    its own specific end goals. The final result is a high quality Scratch arcade
-    game.
-  tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
-    using a loop.
-  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
-    screen using a loop.
-  tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
-    healthy food decisions.
+  tutorial_educodemaze_longdescription: Canavarlar ve kilitli geçitlerle tamamlanmış
+    bir labirent tasarlayın. Kahramanınızı yarattığınız dünyada yönlendirmeye yardımcı
+    olmak için değişkenler, döngüler ve dizeler kullanın.
+  tutorial_educoderace_longdescription: İçinizdeki yarışçıyı ortaya çıkarırken bilgisayar
+    bilimini öğrenin! Kendi arabanızı icat edin ve özelleştirin, aynı zamanda nesneler
+    ve video oyunlarının nasıl yapıldığına dair daha derin bir anlayış kazanın.
+  tutorial_codespeakchatbot_longdescription: Bilgisayar biliminin ünlü kadın öncülerini
+    hakkında öğrenirken sohbet edebileceğiniz bir bilgisayar programı olan chatbot'u
+    nasıl kodlayacağınızı öğrenin.
+  tutorial_gamefrootgames_longdescription: Super Mario Bros gibi gerçek bir oyunu
+    kodlamayı öğrenin. Scratch ve Tynker'ın ötesine geçmeye hazır öğrenciler, gerçek
+    oyun endüstrisi uygulamaları, yaratıcı kodlama kavramları, kendi benzersiz oyunlarını
+    nasıl yayınlayacakları ve oyun sektöründe nasıl bir kariyer için çalışmaya başlayacakları
+    tanıtılır. Eğitim tamamen seviye tasarımı, bir karakter seçme, karakterinizi hareket
+    ettirmek için canlandırma ve kodlama ile ilgilidir.
+  tutorial_codespeakgrandparent_longdescription: Hayatınızdaki özel birini neşelendirmek
+    için dijital bir kart kodlamayı öğrenin.
+  tutorial_educodekingdom_longdescription: Krallık saldırı altında! İstilacıları püskürtmek
+    için güçlü savunmalar planlayın. Senin kule savunma oyununda kendi canavar dalganızı
+    yaratmak için dizilerin gücünde ustalaşın!
+  tutorial_codehsdata_longdescription: Verileri anlamlı ve anlaşılması kolay yollarla
+    görüntülemek için veri görselleştirmelerini kullanmanın gücü hakkında bilgi edinin.
+    Görsel olarak çekici grafikler oluşturmak için grafik oluşturucumuzu kullanın
+    ve güzel veriler oluşturmak için kodlamanın nasıl kullanıldığını öğrenin.
+  tutorial_educodecake_longdescription: Şef Roland ile pasta pişirirken HTML öğrenin.
+    Yeni keşfettiğin etiket ve sınıf bilginle özel tasarımını şekillendir ve biçimlendir
+  tutorial_ttsecond_longdescription: Açık Protokolü teslim edebilir misiniz? Başkent
+    gemisine gizlice girdiniz ve şimdi güvenlik drone'larından herkese açık erişim
+    sağlayacak kadar uzun süre kaçmanız gerekiyor. Korkunç siber vizyondan güvende
+    olup olmadığınızı öğrenmek için koşullu ifadeleri hızla inceleyin. Değilse, hava
+    kilidine!
+  tutorial_bsdtrivia_longdescription: 'Bu kurs, öğrencilerin kodu kendileri için önemli
+    veya ilginç olan şeyi paylaşmanın bir yolu olarak kullanmalarına olanak tanır.
+    Dersi takip edebilir veya HTML, CSS ve JavaScript öğrenirken eşsiz projeler oluşturabilirler.
+    Video eğitimleri, canlı kodlama ve kod sözlüğüne erişim ile rehberlik edilir.
+    The Trivia Game Maker, trivia sorularını da bulabileceğiniz etkileşimli bir trivia
+    oyunu oluşturmaya odaklanır. #codeisyourvoice'
+  tutorial_csfirstdialogue_longdescription: İki sprite arasında bir konuşma programlayın.
+    B.B. Başlangıç ile Scratch'teki kodla iletişim kurarken yaratıcı olun!
+  tutorial_codemonkeybeaver_longdescription: Bir Kunduzun hedeflerine ulaşmasına yardım
+    edin! Kodlama eğitiminizi hemen başlatacak eğlenceli bir kodlama etkinliğiyle
+    bu kunduzun doğal yaşam alanına dalın. Kunduzlar yüzebilir, odun toplayabilir
+    ve barajlar inşa edebilir. Bu küçük kunduzun yardımına ihtiyacı var. Göldeki barajı
+    tamamlamak için basit kod bloklarını kullanın, böylece su sakinleşir, bir ev inşa
+    edin ve tatlılar yapın!
+  tutorial_codestersdistance_longdescription: Python'da kodlamanın temellerini öğrenin,
+    ardından sosyal mesafeli olduklarından veya maske takmaları gerektiğinden emin
+    olmak için iki sprite arasındaki mesafeyi hesaplayan bir program oluşturun.
+  tutorial_itchspace_longdescription: Bu eğitim, Scratch MIT programlama dilini kullanarak
+    klasik bir Space Invaders oyunu oluşturmanıza yardımcı olur. Daha fazla Scratch
+    tabanlı video ve kursu için RokCoder YouTube kanalına abone olun! Her video, kendi
+    özel son hedeflerini içeren kısa bir eğitimdir (yaklaşık on dakika uzunluğunda).
+    Nihai sonuç, yüksek kaliteli bir Scratch arcade oyunudur.
+  tutorial_vidcodemagic_longdescription: Bir döngü kullanarak ekranın etrafında rastgele
+    yanıp sönmeler yapın.
+  tutorial_vidcodemagices_longdescription: Bir döngü kullanarak ekranın etrafında
+    rastgele yanıp sönmeler yapın.
+  tutorial_codespeakmeal_longdescription: Kullanıcıların sağlıklı yiyecek kararları
+    vermesine yardımcı olan bir uygulamayı kodlamayı öğrenin.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
-  tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them. They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript. They are guided
-    with video tutorials, live coding and access to the code glossary. ''The My Favourites
-    Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. #codeisyourvoice'
-  tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
-    to record and reflect on your life right now.
-  tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
-    own augmented reality virtual space.
-  tutorial_itchball_longdescription: Get a ball to bounce around the screen. Learn
-    about loops and conditionals within loops
-  tutorial_ttrace_longdescription: By calling functions and designing classes, players
-    program their own race car to be fast, nimble, and powerful; during races, they
-    can then hack their competitors' vehicles to scramble their controls.
-  tutorial_plethora_longdescription: 'In this Plethora activity you will solve visual
-    fun challenges and learn the concepts of cause and effect and user interaction. '
-  tutorial_educodesecret_longdescription: Explore the worlds of secrets with Agent
-    Smith as you dive deeper into learning if statements, strings, for-in loops. Help
-    Agent Smith find the culprits and configure the Agency's operating system for
-    their new users with Python.
-  tutorial_itchshapes_longdescription: Learn how to draw shapes in Scratch. You will
-    also learn how to calculate how much you need to turn for any shape.
-  tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
-    creating your first program in an online coding editor
+  tutorial_bsdwebsite_longdescription: 'Bu kurs, öğrencilerin kodu kendileri için
+    önemli veya ilginç olan şeyi paylaşmanın bir yolu olarak kullanmalarına olanak
+    tanır. Dersi takip edebilir veya HTML, CSS ve JavaScript öğrenirken eşsiz projeler
+    oluşturabilirler. Video eğitimleri, canlı kodlama ve kod sözlüğüne erişim ile
+    rehberlik edilir. ''Favoril Web Sitem'', ilgilendiğiniz veya yapmayı sevdiğiniz
+    ilk 3 şeyin bir web sayfasını oluşturmaya odaklanır. #codeisyourvoice'
+  tutorial_codespeaktime_longdescription: Hemen şimdi hayatınızı kaydetmek ve yansıtmak
+    için dijital bir zaman kapsülünü nasıl kodlayacağınızı öğrenin.
+  tutorial_itchwebcam_longdescription: Artırılmış gerçeklik hakkında bilgi edinin
+    ve kendi artırılmış gerçeklik sanal alanınızı oluşturun.
+  tutorial_itchball_longdescription: Ekranda zıplamak için bir top alın. Döngüler
+    ve döngüler içindeki koşullarla ilgili bilgi edinin
+  tutorial_ttrace_longdescription: Oyuncular, işlevleri çağırarak ve sınıfları tasarlayarak
+    kendi yarış arabalarını hızlı, çevik ve güçlü olacak şekilde programlar; Yarış
+    esnasında, rakiplerinin araçlarını hack'leyerek kontrollerini karıştırabilirler.
+  tutorial_plethora_longdescription: Bu Plethora etkinliğinde görsel eğlenceli sorunları
+    çözecek ve neden-sonuç ile kullanıcı etkileşimi kavramlarını öğreneceksiniz.
+  tutorial_educodesecret_longdescription: İfadeleri, dizeleri ve giriş döngülerini
+    öğrenip daha derine dalarken Ajan Smith ile sırların dünyalarını keşfedin. Ajan
+    Smith'in suçluları bulmasına yardım edin ve Ajansın işletim sistemini Python ile
+    yeni kullanıcıları için yapılandırın.
+  tutorial_itchshapes_longdescription: Scratch'te nasıl şekil çizeceğinizi öğrenin.
+    Ayrıca herhangi bir şekil için ne kadar çevirmeniz gerektiğini nasıl hesaplayacağınızı
+    da öğreneceksiniz.
+  tutorial_codeguppytext_longdescription: İlk programınızı bir çevrimiçi kodlama düzenleyicide
+    oluşturarak metin tabanlı kodlamanın temellerini öğrenin
   tutorial_vidcodeplastiche_longdescription: Okyanuslarımızı dolduran plastik problemi
     gittikçe kötüleşiyor. Neyse ki Plastik Kirliliği Kamu Spotu yardımıyla kodlama
     ile sesinizi duyurabilirsiniz. JavaScript kullanarak plastik kirliliği üzerine
     bir Kamu Spotu kodladıktan sonra, önemsediğiniz herhangi bir konu hakkında ikinci
     bir video üretebilirsiniz! Özgün bir proje yaratmak için döngüler, sinüs dalgaları
     ve kişiselleştirilmiş emojiler kullanmayı öğrenin.
-  tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
-    and Machine Learning, as well as programing your own chatbot!
-  tutorial_educodebasics_longdescription: Learn some programming fundamentals and
-    create your own game in the process!
-  tutorial_codehsdesign_longdescription: 'Coders will learn how programming can support
-    artists and build their own Online Shop mockup, using HTML. '
-  tutorial_htmlacademyphp_longdescription: Meet Dumpo the Little Elephant, a senior
-    programmer at a web design studio, who is developing an online store. Together
-    you will learn the basics of PHP in an engaging way. You will work with web scripts
-    and learn the variables, add PHP-scripts into the layout and interact with databases
-    while creating a true-to-life web project.
-  tutorial_gamefrootdistance_longdescription: 'In COVID-19: Stop the Spread, you can
-    modify the ''Staying home'' factor and code a simple news clicker. The activity
-    illustrates how social distancing has a direct impact on how fast a virus like
-    COVID-19 can spread. Students and teachers will gain a small insight into virus
-    science, the effects a virus can have on society, and at the same time level up
-    their digital fluency skills.'
-  tutorial_codesterscovid_longdescription: Learn the basics of coding in Python while
-    creating your own PSA about how we can stop the spread of COVID-19. Design your
-    own animated interactive PSA to share critical information about the importance
-    of social distancing, wearing a mask, quarantining, and other measures.
+  tutorial_educativechatbot_longdescription: Yapay Zeka ve Makine Öğrenimi dünyasının
+    yanı sıra kendi sohbet robotunuzu programlama hakkında bilgi edinin!
+  tutorial_educodebasics_longdescription: Bazı programlama temellerini öğrenin ve
+    bu süreçte kendi oyununuzu oluşturun!
+  tutorial_codehsdesign_longdescription: Kodlayıcılar, programlamanın sanatçıları
+    nasıl destekleyebileceğini ve HTML kullanarak kendi Çevrimiçi Mağaza modellerini
+    nasıl oluşturabileceğini öğrenecekler.
+  tutorial_htmlacademyphp_longdescription: Bir internet site tasarım stüdyosunda çevrimiçi
+    bir mağaza geliştiren kıdemli bir programcı olan Küçük Fil Dumpo ile tanışın.
+    Birlikte PHP'nin temellerini ilgi çekici bir şekilde öğreneceksiniz. Gerçeğe yakın
+    bir internet sitesi projesi oluştururken internet site betikleri ile çalışacak
+    ve değişkenleri öğrenecek, mizanpaja PHP betikleri ekleyecek ve gerçeğe yakın
+    bir internet projesi oluştururken veritabanlarıyla etkileşime gireceksiniz.
+  tutorial_gamefrootdistance_longdescription: 'COVID-19''da: Yayılmayı Durdurun, ''Evde
+    Kalma'' faktörünü değiştirebilir ve basit bir haber tıklayıcısı kodlayabilirsiniz.
+    Etkinlik, sosyal mesafenin COVID-19 gibi bir virüsün ne kadar hızlı yayılabileceği
+    üzerinde nasıl doğrudan bir etkisi olduğunu gösteriyor. Öğrenciler ve öğretmenler;
+    virüs bilimi, bir virüsün toplum üzerindeki etkileri hakkında küçük bir fikir
+    edinecek ve aynı zamanda dijital akıcılık becerilerini geliştirecekler.'
+  tutorial_codesterscovid_longdescription: COVID-19'un yayılmasını nasıl durdurabileceğimiz
+    hakkında kendi PSA'nızı oluştururken Python'da kodlamanın temellerini öğrenin.
+    Sosyal mesafenin önemi, maske takma, karantina ve diğer önlemlerle ilgili kritik
+    bilgileri paylaşmak için kendi animasyonlu etkileşimli PSA'nızı tasarlayın.
   tutorial_ttbunker_longdescription: You found The Bunker, and all its secrets will
     be yours, once you crack its encryption. An army approaches, and you must hold
     the perimeter using the power of programming. Code individual towers, setting
     range, damage, and more special powers by adding new lines of code and changing
     values. Survive long enough to learn how classes and instances can make you even
     more powerful.
-  tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
-    tasks and learn all about computational thinking.
-  tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them. They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript. They are guided
-    with video tutorials, live coding and access to the code glossary. The Jokes and
-    Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! #codeisyourvoice'
-  tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
-    varying the health of a forest and levels of deforestation impact trees, wildlife
-    and the amount of CO2 absorbed. You should already know how Scratch coordinates
-    and variables work.
-  tutorial_codestersunity_longdescription: Learn the basics of coding in Python including
-    lists, loops, and sprites. Then create a mural using a loop to access each sprite
-    stored in a list.
-  tutorial_codesterssoccer_longdescription: Learn the basics of coding in Python,
-    then create a program that shoots a soccer ball into the goal. To aim your shot
-    you'll first need to estimate the slope of the line. Good luck!
-  tutorial_breakoutlock_longdescription: 'Haspy the Robot needs your help! She needs
-    your knowledge of loops, algorithms, and coding to help her fix Lockit''s code
-    and reboot her system. '
-  tutorial_thunkablemask_longdescription: Learn how to build a mobile app that gives
-    you points for knowing how to wear your mask correctly!
-  tutorial_cafarming_longdescription: Computer science can help feed a hungry world.
-    Farmers are using technology to grow food in smarter and more sustainable ways.
-    Agribots and drones can monitor, water, and spray crops, and even tackle those
-    pesky weeds! Learn about how AI, Computer Vision, and the Internet of Things are
-    used on the farm.
-  tutorial_blocksmithyeti_longdescription: Oh no! Someone trapped the Yeti! Only YOU
-    and your programmable smart cannon can save the Yeti and feed their friends. Students
-    will use JavaScript to save the Yeti with this fun interactive self-paced lesson.
+  tutorial_cuttle_longdescription: Bu eğlenceli ve etkileşimli görevlerle kendinize
+    meydan okuyun ve bilgisayar gibi düşünme hakkında her şeyi öğrenin.
+  tutorial_bsdjokes_longdescription: 'Bu kurs; öğrencilerin kodu, kendileri için önemli
+    veya ilginç olanı paylaşmanın bir yolu olarak kullanmalarına olanak tanır. Dersi
+    takip edebilir veya HTML, CSS ve JavaScript öğrenirken eşsiz projeler oluşturabilirler.
+    Video eğitimleri, canlı kodlama ve kod sözlüğüne erişim ile rehberlik edilirler.
+    ''Şakalar ve Bilmeceler'' en sevdiğiniz şakaları, bilmeceleri ve cevapları içeren
+    bir dizi etkileşimli kart oluşturmaya odaklanır! #codeisyourvoice'
+  tutorial_rptree_longdescription: Bir ormanın sağlığının ve ormansızlaşma seviyelerinin
+    değişmesinin ağaçları, vahşi yaşamı ve emilen CO2 miktarını nasıl etkilediğini
+    gösteren bir simülasyon oluşturmak için Scratch'i kullanın. Scratch koordinatlarının
+    ve değişkenlerinin nasıl çalıştığını zaten bilmelisiniz.
+  tutorial_codestersunity_longdescription: Listeler, döngüler ve sprite dahil Python'da
+    kodlamanın temellerini öğrenin. Ardından, listede depolanan her hareketli grafiğe
+    erişmek için bir döngü kullanarak bir duvar resmi oluşturun.
+  tutorial_codesterssoccer_longdescription: Python'da kodlamanın temellerini öğrenin,
+    ardından kaleye bir futbol topu fırlatan bir program oluşturun. Atışınızı hedeflemek
+    için önce çizginin eğimini tahmin etmeniz gerekir. İyi şanslar!
+  tutorial_breakoutlock_longdescription: Robot Haspy'nin yardımınıza ihtiyacı var!
+    Lockit'in kodunu düzeltmesine ve sistemini yeniden başlatmasına yardımcı olması
+    için döngüler, algoritmalar ve kodlama bilginize ihtiyacı var.
+  tutorial_thunkablemask_longdescription: Maskenizi doğru şekilde nasıl takacağınızı
+    bilmeniz için size puan veren bir mobil uygulamayı nasıl oluşturacağınızı öğrenin!
+  tutorial_cafarming_longdescription: Bilgisayar bilimi, aç bir dünyayı doyurmaya
+    yardımcı olabilir. Çiftçiler, gıdaları daha akıllı ve daha sürdürülebilir yollarla
+    yetiştirmek için teknolojiyi kullanıyor. Tarım robotları ve dronlar ekinleri izleyebilir,
+    sulayabilir ve püskürtebilir ve hatta bu sinir bozucu otlarla mücadele edebilir!
+    Çiftlikte Yapay Zeka, Bilgisayar Görüşü ve Nesnelerin İnterneti'nin nasıl kullanıldığını
+    öğrenin.
+  tutorial_blocksmithyeti_longdescription: Eyvah! Biri Yeti'yi tuzağa düşürdü! Sadece
+    SİZ ve programlanabilir akıllı topunuz Yeti'yi kurtarabilir ve arkadaşlarını besleyebilir.
+    Öğrenciler, bu eğlenceli interaktif, kendi kendine ilerleyen dersle Yeti'yi kurtarmak
+    için JavaScript kullanacaklar.
   tutorial_codecapture_longdescription: 'Take your first steps into the world of programming
     with JavaScript, using just pen-and-paper and your mobile phone! '
-  tutorial_codehslitter_longdescription: 'Learn how you can use programming to help
-    solve one of the world''s biggest problems: litter and waste! In this Choose-Your-Own-Adventure
-    Hour of Code, you have the choice between the basics of Python or the basics of
-    Web Design. Whichever you choose, you will explore how you can use computer science
-    to decrease the amount of litter in your community.'
-  tutorial_bsdocean_longdescription: Life below Water sheds light on a pressing issue
-    that we face nowadays - our environment. This project focuses on guiding you to
-    code your very own webpage on protecting our waters.
-  tutorial_itchplatformer_longdescription: An easy to follow tutorial for how to create
-    a simple platformer game using Scratch.
+  tutorial_codehslitter_longdescription: 'Dünyanın en büyük sorunlarından birini çözmek
+    için programlamayı nasıl kullanabileceğinizi öğrenin: çöp ve atık! Bu ''Kendi
+    Maceranı Seç'' Kod Saati''nde, Python''un temelleri veya Web Tasarımının temelleri
+    arasında seçim yapabilirsiniz. Hangisini seçerseniz seçin, toplumunuzdaki atık
+    miktarını azaltmak için bilgisayar bilimini nasıl kullanabileceğinizi keşfedeceksiniz.'
+  tutorial_bsdocean_longdescription: Suyun Altında Yaşam, günümüzde karşı karşıya
+    olduğumuz acil bir konu olan çevremize ışık tutuyor. Bu proje, sularımızı korumak
+    için kendi web sayfanızı kodlamanız için size rehberlik etmeye odaklanmaktadır.
+  tutorial_itchplatformer_longdescription: Scratch kullanarak basit bir platform oyunu
+    oluşturmaya yönelik takip etmesi kolay bir öğretici.
   tutorial_codejika_longdescription: A great introduction to coding using HTML and
     CSS. Code a few lines, see immediate output without getting caught up in the Hows
     and Whys by creating a nice landing page with a two-color gradient background,
@@ -5784,33 +5790,36 @@ tr:
   tutorial_rmagicequity_longdescription: 'Explore concepts related to reducing inequality
     with code: limited resources, equality, equity and liberation. Use variables and
     functions in a self guided block environment. Finish by animating the 3D actors.'
-  tutorial_ttfreestyle_longdescription: You're the choreographer and director of a
-    new music video! Type real code to place and control dancers, scenery, and more.
-    Just make sure to capitalize and punctuate correctly, otherwise the whole thing
-    will just be static.
-  tutorial_ozobotcolor2_longdescription: Students will learn the basic functionality
-    of Ozobot. Students will learn how to draw Color Codes Ozobot can read.
-  tutorial_ozobotcolor3_longdescription: Students will learn how to program the bot
-    to travel left, right, and straight with Color Codes.
-  tutorial_clcarbon_longdescription: A python lesson plan that will teach students
-    how to make a carbon footprint calculator that calculates footprint based on a
-    short quiz about daily life, then gives comparison metrics (ie this is the same
-    amount of carbon as xxxx), and suggests ways to be more eco-friendly.
-  tutorial_kodablebasics_longdescription: No computer? No problem! Learn basic programming
-    skills and practice using core coding commands without the use of a device.
-  tutorial_scigirlscc_longdescription: Help your students learn to write pseudocode!
-    Computer programmers often start projects by using everyday language to write
-    out what they want to happen in their code–this is called pseudocode.Youth will
-    work in groups to write pseudocode for a simple movement or dance move.
-  tutorial_irobotpicture_longdescription: Robots have lots of sensors that work together
-    to help the robot understand everything around it. Just like sensors, our friends
-    can often see, hear, feel or understand things that we cannot. In this activity,
-    work together to help decode secret messages and crack the code!
-  tutorial_kcjmyself_longdescription: In this activity, you'll learn how to use Scratch
-    to code an animation all about you! Design a custom character to represent yourself,
-    make it move around, and add different backdrops to show off your hometown. This
-    project is simple enough for kids to complete by themselves or with support from
-    a grown up.
+  tutorial_ttfreestyle_longdescription: Yeni bir müzik videosunun koreografı ve yönetmenisiniz!
+    Dansçıları, manzarayı ve daha fazlasını yerleştirmek ve kontrol etmek için gerçek
+    kod yazın. Sadece büyük harf yazdığınızdan ve doğru şekilde noktaladığınızdan
+    emin olun, aksi takdirde her şey durağan olacaktır.
+  tutorial_ozobotcolor2_longdescription: Öğrenciler Ozobot'un temel işlevlerini öğrenecekler.
+    Öğrenciler Ozobot'un okuyabileceği Renk Kodlarının nasıl çizileceğini öğrenecekler.
+  tutorial_ozobotcolor3_longdescription: Öğrenciler robotu Renk Kodları ile sola,
+    sağa ve düz hareket edecek şekilde nasıl programlayacaklarını öğrenecekler.
+  tutorial_clcarbon_longdescription: Öğrencilere, günlük yaşamla ilgili kısa bir sınava
+    dayanarak ayak izini hesaplayan bir karbon ayak izi hesaplayıcısının nasıl yapılacağını
+    öğretecek, ardından karşılaştırma ölçütleri veren (yani, bu, xxxx ile aynı miktarda
+    karbon) ve daha çevre dostu olma yollarını önerecek bir python ders planı.
+  tutorial_kodablebasics_longdescription: Bilgisayar yok mu? Sorun değil! Temel programlama
+    becerilerini öğrenin ve bir cihaz kullanmadan temel kodlama komutlarını kullanma
+    alıştırması yapın.
+  tutorial_scigirlscc_longdescription: Öğrencilerinizin sözel kod yazmayı öğrenmelerine
+    yardımcı olun! Bilgisayar programcıları projelerine genellikle kodlarında ne olmasını
+    istediklerini yazmak için günlük dili kullanarak başlar - buna sözel kod denir.
+    Gençler, basit bir hareket veya dans hareketi için sözel kod yazmak için gruplar
+    halinde çalışacaktır.
+  tutorial_irobotpicture_longdescription: Robotlar, etrafındaki her şeyi anlamasına
+    yardımcı olmak için birlikte çalışan bir çok sensöre sahiptir. Tıpkı sensörler
+    gibi, arkadaşlarımız da bizim göremediğimiz şeyleri görebilir, duyabilir, hissedebilir
+    veya anlayabilir. Bu aktivitede, gizli mesajların kodunu çözmek ve kodu kırmak
+    için birlikte çalışın!
+  tutorial_kcjmyself_longdescription: Bu aktivitede, kendinizle ilgili bir animasyonu
+    kodlamak için Scratch'i nasıl kullanacağınızı öğreneceksiniz! Kendinizi temsil
+    edecek özel bir karakter tasarlayın, onu hareket ettirin ve memleketinizi göstermek
+    için farklı arka planlar ekleyin. Bu proje, çocukların kendi başlarına veya yetişkinlerin
+    desteğiyle tamamlamaları için yeterince basittir.
   tutorial_nearpodalgorithms_longdescription: 'In this Nearpod lesson, students identify
     an algorithm as a set of step-by-step directions. Students learn to create, test,
     and fix an algorithm to complete a specific task. '
@@ -5952,8 +5961,8 @@ tr:
     after the classic game of Telephone, students will receive, remix, and pass along
     code down the telephone chain. Will your team fulfill the Picture Goal by the
     time you reach the end?
-  tutorial_codeguppydraw_longdescription: Quick introduction to text-based coding
-    using fun and engaging type-in JavaScript programs
+  tutorial_codeguppydraw_longdescription: Eğlenceli ve ilgi çekici yazım JavaScript
+    programları kullanarak metin tabanlı kodlamaya hızlı giriş
   tutorial_codejumper_longdescription: In this lesson from the Code Jumper curriculum,
     learners explore networks in a hands-on unplugged experience using typical materials
     found in a classroom. The theme for this lesson is around messages of kindness
@@ -6658,41 +6667,42 @@ tr:
     estonca, fransızca, almanca, endonezya dili, italyanca, diğer, lehçe, portekizce
     (Brezilya), portekizce (Portekiz), romence, ispanyolca (İspanya), ispanyolca (Meksika)
     ), isveççe, türkçe
-  tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
-    Spanish (Spain), Spanish (Mexico)
+  tutorial_codecombatozaria_language: İngilizce, İngilizce (İngiltere), Çince (Basitleştirilmiş),
+    İspanyolca (İspanya), İspanyolca (Meksika)
   tutorial_vidcodedate_language: İngilizce
-  tutorial_codemonkeyspace_language: English, English (UK), Hebrew
+  tutorial_codemonkeyspace_language: İngilizce, İngilizce (İngiltere), İbranice
   tutorial_codespeakhappy_language: İngilizce
-  tutorial_grokimage_language: English, English (UK)
+  tutorial_grokimage_language: İngilizce, İngilizce (İngiltere)
   tutorial_icomputelearn_language: İngilizce
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: Arapça, Felemenkçe, İngilizce, İngilizce (İngiltere),
+    Fransızca, İspanyolca (Meksika)
   tutorial_bsdcause_language: İngilizce
-  tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimoji_language: İngilizce, İspanyolca (İspanya), İspanyolca (Meksika)
+  tutorial_vidcodeanimojies_language: İngilizce, İspanyolca (İspanya), İspanyolca
+    (Meksika)
   tutorial_bsdinspire_language: İngilizce
   tutorial_tttractor_language: İngilizce
   tutorial_codeillusionmickey_language: İngilizce
   tutorial_scigirlsquest_language: İngilizce
   tutorial_codespeakbreathe_language: İngilizce
   tutorial_vidcodeface_language: İngilizce
-  tutorial_educodemaze_language: English, English (UK)
-  tutorial_educoderace_language: English, English (UK)
+  tutorial_educodemaze_language: İngilizce, İngilizce (İngiltere)
+  tutorial_educoderace_language: İngilizce, İngilizce (İngiltere)
   tutorial_codespeakchatbot_language: İngilizce
   tutorial_gamefrootgames_language: İngilizce
   tutorial_codespeakgrandparent_language: İngilizce
-  tutorial_educodekingdom_language: English, English (UK)
+  tutorial_educodekingdom_language: İngilizce, İngilizce (İngiltere)
   tutorial_codehsdata_language: İngilizce
-  tutorial_educodecake_language: English, English (UK)
+  tutorial_educodecake_language: İngilizce, İngilizce (İngiltere)
   tutorial_ttsecond_language: İngilizce
   tutorial_bsdtrivia_language: İngilizce
   tutorial_csfirstdialogue_language: İngilizce, İspanyolca (Meksika)
-  tutorial_codemonkeybeaver_language: Arabic, Chinese (Simplified), English, Hebrew,
-    Japanese, Spanish (Spain), Spanish (Mexico)
+  tutorial_codemonkeybeaver_language: Arapça, Çince (Basitleştirilmiş), İngilizce,
+    İbranice, Japonca, İspanyolca (İspanya), İspanyolca (Meksika)
   tutorial_codestersdistance_language: İngilizce
   tutorial_itchspace_language: İngilizce
-  tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagic_language: İngilizce, İspanyolca (İspanya), İspanyolca (Meksika)
+  tutorial_vidcodemagices_language: İngilizce, İspanyolca (İspanya), İspanyolca (Meksika)
   tutorial_codespeakmeal_language: İngilizce
   tutorial_itchfish_language: İngilizce
   tutorial_bsdwebsite_language: İngilizce
@@ -6700,14 +6710,14 @@ tr:
   tutorial_itchwebcam_language: İngilizce
   tutorial_itchball_language: İngilizce
   tutorial_ttrace_language: İngilizce
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
-    Portuguese (Brazil), Spanish
-  tutorial_educodesecret_language: English, English (UK)
+  tutorial_plethora_language: Arapça, Çince (Basitleştirilmiş), İngilizce, Fransızca,
+    İbranice, Portekizce (Brezilya), İspanyolca
+  tutorial_educodesecret_language: İngilizce, İngilizce (İngiltere)
   tutorial_itchshapes_language: İngilizce
   tutorial_codeguppytext_language: İngilizce
   tutorial_vidcodeplastiche_language: İngilizce, İbranice
   tutorial_educativechatbot_language: İngilizce
-  tutorial_educodebasics_language: English, English (UK)
+  tutorial_educodebasics_language: İngilizce, İngilizce (İngiltere)
   tutorial_codehsdesign_language: İngilizce
   tutorial_htmlacademyphp_language: İngilizce
   tutorial_gamefrootdistance_language: İngilizce
@@ -6715,53 +6725,53 @@ tr:
   tutorial_ttbunker_language: İngilizce
   tutorial_cuttle_language: İngilizce
   tutorial_bsdjokes_language: İngilizce
-  tutorial_rptree_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rptree_language: Arapça, Felemenkçe, İngilizce, İngilizce (İngiltere),
+    Fransızca, İspanyolca (Meksika)
   tutorial_codestersunity_language: İngilizce
   tutorial_codesterssoccer_language: İngilizce
   tutorial_breakoutlock_language: İngilizce
   tutorial_thunkablemask_language: İngilizce
   tutorial_cafarming_language: İngilizce
   tutorial_blocksmithyeti_language: İngilizce
-  tutorial_codecapture_language: English, English (UK)
-  tutorial_codehslitter_language: English, English (UK)
+  tutorial_codecapture_language: İngilizce, İngilizce (İngiltere)
+  tutorial_codehslitter_language: İngilizce, İngilizce (İngiltere)
   tutorial_bsdocean_language: İngilizce
   tutorial_itchplatformer_language: İngilizce
-  tutorial_codejika_language: English, English (UK)
+  tutorial_codejika_language: İngilizce, İngilizce (İngiltere)
   tutorial_gamefrootclicker_language: İngilizce
-  tutorial_rmagicequity_language: English, English (UK)
+  tutorial_rmagicequity_language: İngilizce, İngilizce (İngiltere)
   tutorial_ttfreestyle_language: İngilizce
   tutorial_ozobotcolor2_language: İngilizce
   tutorial_ozobotcolor3_language: İngilizce
-  tutorial_clcarbon_language: English, English (UK)
+  tutorial_clcarbon_language: İngilizce, İngilizce (İngiltere)
   tutorial_kodablebasics_language: İngilizce
   tutorial_scigirlscc_language: İngilizce, İspanyolca (Meksika)
   tutorial_irobotpicture_language: İngilizce
   tutorial_kcjmyself_language: İngilizce, Fransızca
   tutorial_nearpodalgorithms_language: İngilizce
-  tutorial_kibodrop_language: English, English (UK)
+  tutorial_kibodrop_language: İngilizce, İngilizce (İngiltere)
   tutorial_ozobotcolor1_language: İngilizce
   tutorial_scigirlspixels_language: İngilizce, İspanyolca (Meksika)
   tutorial_kcjheroines_language: İngilizce, Fransızca
   tutorial_ozobotvalue_language: İngilizce
   tutorial_icodebytes_language: İngilizce
-  tutorial_clfashion2_language: English, English (UK)
+  tutorial_clfashion2_language: İngilizce, İngilizce (İngiltere)
   tutorial_ai4all_language: İngilizce
-  tutorial_cldata_language: English, English (UK)
+  tutorial_cldata_language: İngilizce, İngilizce (İngiltere)
   tutorial_spheroinputs_language: İngilizce
   tutorial_edisoncount_language: İngilizce
   tutorial_spheroloops_language: İngilizce
-  tutorial_kiboprogram_language: English, English (UK)
-  tutorial_hellorubycsin60_language: English, English (UK)
-  tutorial_clfashion1_language: English, English (UK)
+  tutorial_kiboprogram_language: İngilizce, İngilizce (İngiltere)
+  tutorial_hellorubycsin60_language: İngilizce, İngilizce (İngiltere)
+  tutorial_clfashion1_language: İngilizce, İngilizce (İngiltere)
   tutorial_irobottraffic_language: İngilizce
   tutorial_edisonmystery_language: İngilizce
-  tutorial_microbitseaturtles_language: English, English (UK)
+  tutorial_microbitseaturtles_language: İngilizce, İngilizce (İngiltere)
   tutorial_ozobotknow_language: İngilizce
-  tutorial_imagilabs_language: English, English (UK)
+  tutorial_imagilabs_language: İngilizce, İngilizce (İngiltere)
   tutorial_irobotsimulator_language: İngilizce
-  tutorial_irobotkind_language: English, English (UK)
-  tutorial_firiavirtual_language: English, English (UK)
+  tutorial_irobotkind_language: İngilizce, İngilizce (İngiltere)
+  tutorial_firiavirtual_language: İngilizce, İngilizce (İngiltere)
   tutorial_irobotguesscode_language: İngilizce
   tutorial_ozobotnouns_language: İngilizce
   tutorial_nasa3d_language: İngilizce
@@ -6777,8 +6787,8 @@ tr:
     Portekizce (Brezilya), Portekizce ( Portekiz), Rusça, Sırpça (Kiril), Sırpça (Latin),
     Slovakça, İspanyolca (İspanya, Meksika), Swahili, İsveççe, Tamilce, Tayca, Türkçe,
     Urduca (Pakistan), Vietnamca
-  tutorial_irobotphone_language: English, English (UK)
-  tutorial_codeguppydraw_language: English, English (UK)
+  tutorial_irobotphone_language: İngilizce, İngilizce (İngiltere)
+  tutorial_codeguppydraw_language: İngilizce, İngilizce (İngiltere)
   tutorial_codejumper_language: İngilizce
   tutorial_meeempathy_language: Çince, Danca, Felemenkçe, İngilizce, Fransızca, İtalyanca,
     Japonca, Korece, Norveççe, Portekizce, İspanyolca, İsveççe, Türkçe
@@ -7413,7 +7423,7 @@ tr:
   tutorial_codehsdesign_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_htmlacademyphp_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_gamefrootdistance_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
+  tutorial_codesterscovid_string_detail_grades: 6.- 8. Sınıflar
   tutorial_ttbunker_string_detail_grades: 6-8. Sınıflar
   tutorial_cuttle_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_bsdjokes_string_detail_grades: 6-8. Sınıflar
@@ -8246,8 +8256,8 @@ tr:
   tutorial_educodemaze_string_platforms: Bütün modern tarayıcılar
   tutorial_educoderace_string_platforms: Bütün modern tarayıcılar
   tutorial_codespeakchatbot_string_platforms: Chrome, Firefox
-  tutorial_gamefrootgames_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone
+  tutorial_gamefrootgames_string_platforms: Tüm modern tarayıcılar, Android tablet,
+    iPad, Windows telefon
   tutorial_codespeakgrandparent_string_platforms: Chrome, Firefox
   tutorial_educodekingdom_string_platforms: Bütün modern tarayıcılar
   tutorial_codehsdata_string_platforms: Bütün modern tarayıcılar, Android tablet,
@@ -8298,7 +8308,8 @@ tr:
   tutorial_thunkablemask_string_platforms: Bütün modern tarayıcılar
   tutorial_cafarming_string_platforms: Chrome, Firefox
   tutorial_blocksmithyeti_string_platforms: Bütün modern tarayıcılar
-  tutorial_codecapture_string_platforms: All modern browsers, Android phone, iPhone
+  tutorial_codecapture_string_platforms: Tüm modern tarayıcılar, Android telefon,
+    iPhone
   tutorial_codehslitter_string_platforms: Tüm modern tarayıcılar, Android tablet,
     iPad, Windows telefon, Android telefon, iPhone
   tutorial_bsdocean_string_platforms: Chrome
@@ -8306,8 +8317,8 @@ tr:
   tutorial_codejika_string_platforms: Tüm modern tarayıcılar, Android tablet, iPad,
     Windows telefon, Android telefon, iPhone
   tutorial_gamefrootclicker_string_platforms: Tüm modern tarayıcılar, iPad
-  tutorial_rmagicequity_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone, Game console app
+  tutorial_rmagicequity_string_platforms: Tüm modern tarayıcılar, Android tablet,
+    iPad, Windows telefon, Android telefon, iPhone, Oyun konsolu uygulaması
   tutorial_ttfreestyle_string_platforms: Chrome
   tutorial_ozobotcolor2_string_platforms: Bütün modern tarayıcılar
   tutorial_ozobotcolor3_string_platforms: Bütün modern tarayıcılar
@@ -8333,7 +8344,7 @@ tr:
   tutorial_kiboprogram_string_platforms: İnternetsiz
   tutorial_hellorubycsin60_string_platforms: İnternetsiz
   tutorial_clfashion1_string_platforms: Bütün modern tarayıcılar
-  tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
+  tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android telefon
   tutorial_edisonmystery_string_platforms: Bütün modern tarayıcılar, Android tablet,
     Ipad
   tutorial_microbitseaturtles_string_platforms: Tüm modern tarayıcılar, Android tablet,
@@ -8344,7 +8355,7 @@ tr:
     iPad, Windows telefon, Android telefon, iPhone
   tutorial_irobotkind_string_platforms: Bütün modern tarayıcılar
   tutorial_firiavirtual_string_platforms: Microsoft Edge, Chrome
-  tutorial_irobotguesscode_string_platforms: Chrome, Android tablet, Android phone
+  tutorial_irobotguesscode_string_platforms: Chrome, Android tablet, Android telefon
   tutorial_ozobotnouns_string_platforms: Bütün modern tarayıcılar
   tutorial_nasa3d_string_platforms: Bütün modern tarayıcılar
   tutorial_blupants_string_platforms: Bütün modern tarayıcılar
@@ -8353,7 +8364,7 @@ tr:
   tutorial_kcjplastic_string_platforms: Bütün modern tarayıcılar
   tutorial_legojourney_string_platforms: Bütün modern tarayıcılar
   tutorial_legohopper_string_platforms: Bütün modern tarayıcılar
-  tutorial_catrobatembroidery_string_platforms: Android phone, Screen reader
+  tutorial_catrobatembroidery_string_platforms: Android telefon, Ekran okuyucu
   tutorial_irobotphone_string_platforms: Bütün modern tarayıcılar
   tutorial_codeguppydraw_string_platforms: Bütün modern tarayıcılar
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
@@ -9735,8 +9746,8 @@ tr:
   tutorial_ozobotcolor2_string_detail_programming_languages: Ozobot Color Codes
   tutorial_ozobotcolor3_string_detail_programming_languages: Ozobot Color Codes
   tutorial_clcarbon_string_detail_programming_languages: Python
-  tutorial_kodablebasics_string_detail_programming_languages: Blocks, JavaScript,
-    Language independent (can be taught in multiple languages)
+  tutorial_kodablebasics_string_detail_programming_languages: Bloklar, JavaScript,
+    Dilden bağımsız (birden çok dilde öğretilebilir)
   tutorial_scigirlscc_string_detail_programming_languages: Dile bağlı değil (birden
     çok dilde öğretilebilir)
   tutorial_irobotpicture_string_detail_programming_languages: No specific programming

@@ -37,6 +37,12 @@ az:
               name: 'Labirint: Ardıcıllıq'
             'Studio: Create a Story':
               name: 'Oyun labı: Bir əhvalat düzəldin'
+          student_description: Oxumağa yeni başlayanlar üçün Kurs 1 ilə başla. Tələbələr
+            kompyuter proqramlarını düzəldərkən başqaları ilə əməkdaşlıq etmək, məsələləri
+            həll etmək bacarıqlarını inkişaf etdirmək və çətin tapşırıqlardan keçməyi
+            öyrənəcəklər. Bu kursu tamamladıqda, tələbələr qeyri standtart oyun yaxud
+            hekayə düzəldib, onu paylaşa bilirlər. Birinci sinif / 6 yaşlı üşaqlar
+            üçün tövsiyyə olunur.
         course2:
           title: Kurs 2
           description: Kurs 2 oxumağı bacaran və heç bir ilkin proqramlaşdırma təcrübəsi
@@ -74,6 +80,11 @@ az:
               name: Estafet proqramlaşdırması
             'Studio: Create a Story':
               name: 'Oyun labı: Bir əhvalat düzəldin'
+          student_description: Kurs 2 oxumağı bacaran və heç bir ilkin proqramlaşdırma
+            təcrübəsi olmayan şagirdlər üçün hazırlanıb. Bu kursda şagirdlər məsələləri
+            həll etmək üçün proqramlar düzəldəcək və bölüşə biləcəkləri interaktiv
+            oyun və ya əhvalatlar tərtib edəcəklər. 2-5-ci siniflər üçün tövsiyyə
+            olunur.
         course3:
           title: Kurs 3
           description_short: Kurs 3 Kurs 2-nin davamıdır.
@@ -110,6 +121,7 @@ az:
           lessons:
             Play Lab:
               name: Oyun labı
+          student_description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
         artist:
           title: Rəssam
           description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
@@ -117,6 +129,7 @@ az:
           lessons:
             Artist:
               name: Rəssam
+          student_description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
         hourofcode:
           title: Ənənəvi labirint
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
@@ -135,6 +148,10 @@ az:
           lessons:
             Artist:
               name: Rəssam
+          student_description: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna
+            və Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək. Buz üzərində
+            sürüşərək siz qar dənəcikləri və naxışlar düzəldəcək, sonradan dostlarınızla
+            bölüşə biləcəyiniz bir qış möcüzəsi quracaqsınız!
         course4:
           title: Kurs 4
           description_short: Kurs 4 üçün şagirdlər artıq Kurs 2 və 3-ü keçmiş olmalıdırlar.
@@ -237,6 +254,10 @@ az:
               name: Labirint
             Wrap-up:
               name: Yekun
+          student_description: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın
+            əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar)
+            olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda
+            əyləncəlidir.
         edit-code:
           title: Koda düzəliş et
           description: Koda düzəliş et
@@ -248,6 +269,7 @@ az:
               name: Rəssam
             The Maze:
               name: Labirint
+          student_description: Koda düzəliş et
         events:
           title: Hadisələr
           description: Hadisələr
@@ -261,6 +283,7 @@ az:
               name: Qiymət
             Studio:
               name: Studiya
+          student_description: Hadisələr
         flappy:
           title: Qanadlı Kod
           description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz?
@@ -268,6 +291,8 @@ az:
           lessons:
             Flappy Code:
               name: Qanadlı Kod
+          student_description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz?
+            Qanadlı Kod dərsliyimizi sınayın!
         jigsaw:
           title: Mozaika
           lessons:
@@ -421,17 +446,23 @@ az:
             Ulduz Müharibələri oyunu düzəldin.
           description_short: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
             Ulduz Müharibələri oyunu düzəldin.
+          student_description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
+            Ulduz Müharibələri oyunu düzəldin.
         starwarsblocks:
           title: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın'
           description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
             Ulduz Müharibələri oyunu düzəldin.
           description_short: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
             Ulduz Müharibələri oyunu düzəldin.
+          student_description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
+            Ulduz Müharibələri oyunu düzəldin.
         mc:
           title: Maynkraft Kod Saatı
           description: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft
             dünyasında bir macəra yaşadın
           description_short: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
+          student_description: Kod bloklarından istifadə edərək Stiv və ya Aleksə
+            bu Maynkraft dünyasında bir macəra yaşadın.
         ScienceP3OLPT3:
           lessons:
             Wrap-Up:
@@ -1685,7 +1716,127 @@ az:
           lesson_groups:
             lg_1:
               display_name: Məzmun
-        ml-playground:
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Giriş
+            lessonGroup-3:
+              display_name: dəyişənlər
+        csd3-2021:
           lessons:
-            intro:
-              name: Giriş
+            Variables:
+              key: dəyişənlər
+              name: dəyişənlər
+            Text:
+              key: mətn
+              name: mətn
+            Conditionals:
+              key: Şərti ifadələr
+              name: Şərti ifadələr
+            Functions:
+              key: Funksiyalar
+              name: Funksiyalar
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Parametrli funksiyalar
+              name: Parametrli funksiyalar
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: dəyişənlər
+            csp_conditionals:
+              display_name: Şərti ifadələr
+            csp_functions:
+              display_name: Funksiyalar
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Siyahılar
+            csp_loops:
+              display_name: dövrlər
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Şən xəritələr
+          lesson_groups:
+            csf_loops:
+              display_name: dövrlər
+            csf_events:
+              display_name: Hadisələr
+        courseb-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: dövrlər
+            csf_events:
+              display_name: Hadisələr
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: İkilik
+            csf_loops:
+              display_name: dövrlər
+            csf_events:
+              display_name: Hadisələr
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Millimetrlik kağızda proqramlaşdırma
+            Relay Programming:
+              key: Estafet proqramlaşdırması
+              name: Estafet proqramlaşdırması
+            Dance Party:
+              key: Rəqs şənliyi
+              name: Rəqs şənliyi
+            'Unplugged: Binary':
+              name: İkilik təsvirlər
+          lesson_groups:
+            csf_events:
+              display_name: Hadisələr
+            csf_loops:
+              display_name: dövrlər
+            csf_conditionals:
+              display_name: Şərti ifadələr
+            csf_binary:
+              display_name: İkilik
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Şərti ifadələr
+          lesson_groups:
+            csf_functions:
+              display_name: Funksiyalar
+        coursef-2021:
+          lessons:
+            Internet:
+              key: İnternet
+              name: İnternet
+          lesson_groups:
+            csf_variables:
+              display_name: dəyişənlər
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Rəqs şənliyi
+              name: Rəqs şənliyi
+          lesson_groups:
+            csf_loops:
+              display_name: dövrlər
+            csf_conditionals:
+              display_name: Şərti ifadələr
+            csf_functions:
+              display_name: Funksiyalar
+            csf_variables:
+              display_name: dəyişənlər
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: dövrlər
+            csf_events:
+              display_name: Hadisələr
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Giriş
+            lessonGroup-3:
+              display_name: dəyişənlər

@@ -4,7 +4,7 @@ Blockly.Msg.ADD_COMMENT = "تبصرہ شامل کریں";
 Blockly.Msg.ADD_PARAMETER = "پیرامیٹر کا اضافہ کرنا";
 Blockly.Msg.CANCEL = "منسوخ کریں";
 Blockly.Msg.CHANGE_VALUE_TITLE = "قیمت تبدیل کریں:";
-Blockly.Msg.CLOSE = "Close";
+Blockly.Msg.CLOSE = "بند";
 Blockly.Msg.COLLAPSE_ALL = "بلاکس کھولیں";
 Blockly.Msg.COLLAPSE_BLOCK = "بلاک کھولیں";
 Blockly.Msg.COLOUR_BLEND_COLOUR1 = "رنگ 1";
@@ -26,7 +26,7 @@ Blockly.Msg.COLOUR_RGB_TITLE = "رنگ کے ساتھ";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "سرخ، سبز اور نیلے رنگ کی مخصوص مقدار کے ساتھ ایک رنگ تخلیق کریں ۔  تمام اقدار 0 اور 100 کے درمیان ہونا چاہیے ۔";
 Blockly.Msg.CONFIRM_CREATE_VARIABLE = "بنائیں";
 Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE = "انتباہ! آپ کو یقین ہے کہ آپ %1 کو ختم کرنا چاہتے ہیں؟";
-Blockly.Msg.CONFIRM_RENAME_VARIABLE = "Rename";
+Blockly.Msg.CONFIRM_RENAME_VARIABLE = "تبدیل کریں";
 Blockly.Msg.CONTRACT_EDITOR_HEADER = "ڈیزائن کے ریسپی";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "لوپ سے نکل جائیں";
@@ -304,10 +304,10 @@ Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "وارننگ: یہ بلاک صرف ف
 Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "اِن-پُٹ کا نام:";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "اِن-پُٹس";
 Blockly.Msg.REMOVE_COMMENT = "کمنٹ ہٹائیں";
-Blockly.Msg.RENAME_ALL = "Rename all %1";
+Blockly.Msg.RENAME_ALL = "سب %1 کا نام تبدیل کریں";
 Blockly.Msg.RENAME_PARAMETER = "پیرامیٹر ری-نیم کریں۔۔۔";
 Blockly.Msg.RENAME_PARAMETER_TITLE = "تمام '%1' پیرامیٹرز کو ری-نیم کریں:";
-Blockly.Msg.RENAME_THIS = "Rename this %1";
+Blockly.Msg.RENAME_THIS = "اس %1کا نام تبدیل کریں";
 Blockly.Msg.RENAME_VARIABLE = "ویری-ایبل کو ری-نیم کریں۔۔۔";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "تمام '%1' ویری-ایبلز کو ری-نیم کریں:";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "اپینڈ ٹیکسٹ";
@@ -369,7 +369,7 @@ Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "لیفٹ سائڈ سے اسپیسز ٹر�
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "رائٹ سائڈ سے اسپیسز ٹزم کریں";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "ایک یا دونوں جانب سے اسپیسز نکال کر ٹیسکٹ کی ایک کاپی ریٹرن کریں۔";
 Blockly.Msg.UNUSED_CODE = "غیر استعمال شدہ ضابطہ";
-Blockly.Msg.VARIABLE = "variable";
+Blockly.Msg.VARIABLE = "متغیر";
 Blockly.Msg.VARIABLES_DEFAULT_NAME = "آئیٹم";
 Blockly.Msg.VARIABLES_GET_CREATE_SET = "'set %1' کری-ایٹ کریں";
 Blockly.Msg.VARIABLES_GET_HELPURL = "http://code.google.com/p/blockly/wiki/Variables#Get";

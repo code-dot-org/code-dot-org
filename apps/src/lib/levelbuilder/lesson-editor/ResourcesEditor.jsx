@@ -1,12 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import _ from 'lodash';
-import Select from 'react-select';
-import 'react-select/dist/react-select.css';
 import color from '@cdo/apps/util/color';
 import AddResourceDialog from './AddResourceDialog';
-import Button from '@cdo/apps/templates/Button';
+import SearchBox from './SearchBox';
 import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {
@@ -14,19 +11,12 @@ import {
   editResource,
   removeResource
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import * as Table from 'reactabular-table';
+import {lessonEditorTableStyles} from './TableConstants';
 
 const styles = {
   resourceSearch: {
     paddingBottom: 10
-  },
-  resourceBox: {
-    border: '1px solid ' + color.light_gray,
-    padding: 10,
-    marginTop: 10,
-    marginBottom: 10
-  },
-  oddRow: {
-    backgroundColor: color.lightest_gray
   },
   actionsColumn: {
     display: 'flex',
@@ -39,7 +29,8 @@ const styles = {
     background: color.dark_red,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '48%'
+    width: '50%',
+    lineHeight: '30px'
   },
   edit: {
     fontSize: 14,
@@ -47,7 +38,18 @@ const styles = {
     background: color.default_blue,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '48%'
+    width: '50%',
+    lineHeight: '30px'
+  },
+  addButton: {
+    background: color.cyan,
+    borderRadius: 3,
+    color: color.white,
+    fontSize: 14,
+    padding: 7,
+    textAlign: 'center',
+    marginTop: 10,
+    marginLeft: 0
   }
 };
 
@@ -73,74 +75,134 @@ class ResourcesEditor extends Component {
     };
   }
 
+  actionsCellFormatter = (actions, {rowData}) => {
+    return (
+      <div style={styles.actionsColumn}>
+        <div style={styles.edit} onMouseDown={() => this.handleEdit(rowData)}>
+          <i className="fa fa-edit" />
+        </div>
+        <div
+          style={styles.remove}
+          className="unit-test-remove-resource"
+          onMouseDown={() => this.handleRemoveResourceDialogOpen(rowData)}
+        >
+          <i className="fa fa-trash" />
+        </div>
+      </div>
+    );
+  };
+
+  getColumns() {
+    return [
+      {
+        property: 'key',
+        header: {
+          label: 'Key',
+          props: {
+            style: {width: '20%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'name',
+        header: {
+          label: 'Name',
+          props: {
+            style: {width: '15%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'type',
+        header: {
+          label: 'Type',
+          props: {
+            style: {width: '10%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'audience',
+        header: {
+          label: 'Audience',
+          props: {
+            style: {width: '7%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'url',
+        header: {
+          label: 'URL',
+          props: {
+            style: {width: '35%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'actions',
+        header: {
+          label: 'Actions',
+          props: {
+            style: {width: '10%'}
+          }
+        },
+        cell: {
+          formatters: [this.actionsCellFormatter],
+          props: {
+            style: {
+              ...lessonEditorTableStyles.actionsCell
+            }
+          }
+        }
+      }
+    ];
+  }
+
+  onSearchSelect = e => {
+    this.props.addResource(e.resource);
+  };
+
   constructResourceOption = resource => ({
     value: resource.key.toString(),
     label: `${resource.name} - ${resource.url}`,
     resource: resource
   });
-
-  /**
-   * Debounced function that will request resource search results from the server.
-   * Because this function is debounced it is not guaranteed to execute
-   * when it is called - there may be a delay of up to 200ms.
-   * @param {string} q - Search query
-   * @param {function(err, result)} callback - Function called when the server
-   *   returns results or a request error occurs.
-   */
-  debouncedSearch = _.debounce((q, callback) => {
-    const searchLimit = 7;
-    const params = {
-      query: encodeURIComponent(q),
-      limit: searchLimit
-    };
-    if (this.props.courseVersionId) {
-      params['courseVersionId'] = this.props.courseVersionId;
-    }
-    const query_params = Object.keys(params)
-      .map(key => `${key}=${params[key]}`)
-      .join('&');
-    const searchUrl = `/resourcesearch?${query_params}`;
-    // Note, we don't return the fetch promise chain because in a debounced
-    // function we're not guaranteed to return anything, and it's not a great
-    // interface to sometimes return undefined when there's still async work
-    // going on.
-    //
-    // We are including the X-Requested-With header to avoid getting a 403
-    // returned by Rack::Protection::JsonCsrf in some environments
-    fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
-      .then(response => (response.ok ? response.json() : []))
-      .then(json => {
-        const resourceKeysAdded = this.props.resources.map(
-          resource => resource.key
-        );
-        const resources = json
-          .map(resource => this.constructResourceOption(resource))
-          // Filter any that are already added to lesson
-          .filter(resource => resourceKeysAdded.indexOf(resource.value) === -1);
-        return {options: resources};
-      })
-      .then(result => callback(null, result))
-      .catch(err => callback(err, null));
-  }, 200);
-
-  getOptions = q => {
-    // Only search if there are at least 3 characters
-    if (q.length < 3) {
-      return Promise.resolve();
-    }
-
-    // Wrap the debounced call in a Promise so we _always_ return a promise
-    // from this function, which resolves whenever results come back.
-    return new Promise((resolve, reject) => {
-      this.debouncedSearch(q, (err, result) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(result);
-        }
-      });
-    });
-  };
 
   addResource = resource => {
     this.props.addResource(resource);
@@ -176,7 +238,19 @@ class ResourcesEditor extends Component {
     this.setState({newResourceDialogOpen: false, editingResource: null});
   };
 
+  constructSearchOptions = json => {
+    const resourceKeysAdded = this.props.resources.map(
+      resource => resource.key
+    );
+    const resources = json
+      .map(resource => this.constructResourceOption(resource))
+      // Filter any that are already added to lesson
+      .filter(resource => resourceKeysAdded.indexOf(resource.value) === -1);
+    return {options: resources};
+  };
+
   render() {
+    const columns = this.getColumns();
     return (
       <div>
         {this.state.newResourceDialogOpen && (
@@ -206,73 +280,29 @@ class ResourcesEditor extends Component {
             onConfirm={this.removeResource}
           />
         )}
-        Resources
-        <input
-          type="hidden"
-          name="resources"
-          value={JSON.stringify(this.props.resources.map(r => r.key))}
-        />
-        <div style={styles.resourceBox}>
+        <div>
           <div style={styles.resourceSearch}>
             <label>Select a resource to add</label>
-            <Select.Async
-              id="resource_search"
-              name="resource_search"
-              loadOptions={this.getOptions}
-              value={this.state.searchValue}
-              onChange={e => this.addResource(e.resource)}
-              onValueClick={this.addResource}
-              placeholder={''}
+            <SearchBox
+              onSearchSelect={this.onSearchSelect}
+              searchUrl={'resourcesearch'}
+              constructOptions={this.constructSearchOptions}
+              additionalQueryParams={{
+                courseVersionId: this.props.courseVersionId
+              }}
             />
           </div>
-          <table style={{width: '100%'}}>
-            <thead>
-              <tr>
-                <th style={{width: '20%'}}>Key</th>
-                <th style={{width: '20%'}}>Name</th>
-                <th style={{width: '10%'}}>Type</th>
-                <th style={{width: '10%'}}>Audience</th>
-                <th style={{width: '30%'}}>URL</th>
-                <th style={{width: '10%'}}>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.props.resources.map((resource, index) => (
-                <tr
-                  key={resource.key}
-                  style={index % 2 === 1 ? styles.oddRow : {}}
-                >
-                  <td>{resource.key}</td>
-                  <td>{resource.name}</td>
-                  <td>{resource.type}</td>
-                  <td>{resource.audience}</td>
-                  <td>{resource.url}</td>
-                  <td style={styles.actionsColumn}>
-                    <div
-                      style={styles.edit}
-                      onMouseDown={() => this.handleEdit(resource)}
-                    >
-                      <i className="fa fa-edit" />
-                    </div>
-                    <div
-                      style={styles.remove}
-                      className="unit-test-remove-resource"
-                      onMouseDown={() =>
-                        this.handleRemoveResourceDialogOpen(resource)
-                      }
-                    >
-                      <i className="fa fa-times" />
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <Button
+          <Table.Provider columns={columns}>
+            <Table.Header />
+            <Table.Body rows={this.props.resources} rowKey="key" />
+          </Table.Provider>
+          <button
             onClick={this.handleAddResourceClick}
-            text={'Add New Resource'}
-            color={color.blue}
-          />
+            style={styles.addButton}
+            type="button"
+          >
+            <i className="fa fa-plus" style={{marginRight: 7}} /> Resource
+          </button>
         </div>
       </div>
     );

@@ -67,9 +67,11 @@ class LessonActivity < ApplicationRecord
       activity_section.update!(
         position: section['position'],
         name: section['name'],
+        duration: section['duration'],
         remarks: section['remarks'],
         description: section['description'],
-        tips: section['tips']
+        tips: section['tips'],
+        progression_name: section['progressionName']
       )
       activity_section.update_script_levels(section['scriptLevels'] || [])
       activity_section

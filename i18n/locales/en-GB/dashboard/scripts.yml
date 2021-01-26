@@ -281,6 +281,10 @@ en-GB:
               name: Variables
             Text:
               name: Text
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
         csd3-2021:
           lessons:
             Variables:

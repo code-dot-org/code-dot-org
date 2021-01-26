@@ -1025,6 +1025,8 @@ se:
             '"West"': Oarji
       gamelab_moveToward:
         text: sirdde  {SPRITE} pixeliid {DISTANCE} {TARGET} guvlui
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_patrollingUpDown:
@@ -1151,6 +1153,8 @@ se:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": Ii leat guolli
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mu-gilkor
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ii leat mu-gilkor
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

@@ -254,6 +254,7 @@ module LevelsHelper
       end
 
     if @script_level && @level.can_have_feedback?
+      @app_options[:serverScriptId] = @script.id
       @app_options[:serverScriptLevelId] = @script_level.id
       @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
     end

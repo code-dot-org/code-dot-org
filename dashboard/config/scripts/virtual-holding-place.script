@@ -1,12 +1,12 @@
 hideable_lessons true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Example Projects', display_name: 'Example Projects'
+lesson 'Example Projects', display_name: 'Example Projects', has_lesson_plan: false
 level 'CSD U3 Entertainment Sample 1_virtual', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 2_virtual', progression: 'Sample Programs'
 
 lesson_group 'csd3_2', display_name: 'Chapter 2: Building Games'
-lesson 'Velocity', display_name: 'Velocity'
+lesson 'Velocity', display_name: 'Velocity', has_lesson_plan: false
 level 'CSD: Sprite Velocity_virtual', named: true
 level 'CSD U3 abstraction velocityX_virtual', progression: 'Velocity'
 level 'CSD U3 abstraction velocityY_virtual', progression: 'Velocity'
@@ -20,7 +20,7 @@ level 'CSD U3 abstraction tumbleweed_virtual', progression: 'Side Scroller'
 level 'CSD U3 abstraction looping_virtual', progression: 'Side Scroller'
 level 'CSD U3 L15 Freeplay_virtual', progression: 'Challenge'
 
-lesson 'Collision Detection', display_name: 'Collision Detection'
+lesson 'Collision Detection', display_name: 'Collision Detection', has_lesson_plan: false
 level 'CSD U3 collisions car intro_virtual', named: true
 level 'CSD U3 collisions build isTouching_virtual', named: true
 level 'CSD U3 collisions isTouching intro_virtual', progression: 'isTouching'
@@ -32,7 +32,7 @@ level 'CSD U3 collisions scoreboard_virtual', progression: 'Collisions in Games'
 level 'CSD U3 collisions sidescroll2_virtual', progression: 'Collisions in Games'
 level 'CSD U3 L16 Freeplay_virtual', progression: 'Challenge'
 
-lesson 'Complex Sprite Movement', display_name: 'Complex Sprite Movement'
+lesson 'Complex Sprite Movement', display_name: 'Complex Sprite Movement', has_lesson_plan: false
 level 'CSD U3 Complex Movement counter prediction gamelab_virtual', named: true
 level 'CSD U3 abstraction accelerateX_virtual', progression: 'Velocity and the Counter Pattern'
 level 'CSD U3 abstraction accelerateY_virtual', progression: 'Velocity and the Counter Pattern'
@@ -47,7 +47,7 @@ level 'CSD U3 abstraction reset coin_virtual', progression: 'Flyer Game'
 level 'CSD U3 abstraction make it your own_virtual', progression: 'Flyer Game'
 level 'CSD U3 L17 Freeplay_virtual', progression: 'Challenge'
 
-lesson 'Collisions', display_name: 'Collisions'
+lesson 'Collisions', display_name: 'Collisions', has_lesson_plan: false
 level 'CSD U3 collisions predict set velocity code_virtual', named: true
 level 'CSD U3 collisions displace x_virtual', progression: 'Collisions'
 level 'CSD U3 collisions displace y_virtual', progression: 'Collisions'
@@ -65,7 +65,7 @@ level 'CSD U3 collisions flyman change colliders_virtual', progression: 'Flyer G
 level 'CSD U3 collisions flyman make it your own_virtual', progression: 'Flyer Game', assessment: true
 level 'CSD U3 L18 Freeplay_virtual', progression: 'Challenge'
 
-lesson 'Functions', display_name: 'Functions'
+lesson 'Functions', display_name: 'Functions', has_lesson_plan: false
 level 'CSD U3 function video_virtual', named: true
 level 'CSD U3 Functions Call Function_virtual', progression: 'Functions'
 level 'CSD U3 Functions Order Functions_virtual', progression: 'Functions'
@@ -80,7 +80,7 @@ level 'CSD U3 Functions Add Change Background_virtual', progression: 'Collector 
 level 'CSD U3 functions review_virtual', named: true
 level 'CSD U3 L19 Freeplay_virtual', progression: 'Challenge'
 
-lesson 'The Game Design Process', display_name: 'The Game Design Process'
+lesson 'The Game Design Process', display_name: 'The Game Design Process', has_lesson_plan: false
 level 'CSD U3 AnimationsMulti Play Defender_virtual', named: true
 level 'CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2020_virtual', named: true
 level 'CSD U3 AnimationsMulti introducing multiframe_virtual', progression: 'Multiframe Animations'
@@ -98,7 +98,7 @@ level 'CSD U3 AnimationsMulti defender displace enemies_virtual', progression: '
 level 'CSD U3 AnimationsMulti defender touch water_virtual', progression: 'Cake Defender'
 level 'CSD U3 AnimationsMulti defender make it your own_virtual', progression: 'Cake Defender'
 
-lesson 'Using the Game Design Process', display_name: 'Using the Game Design Process'
+lesson 'Using the Game Design Process', display_name: 'Using the Game Design Process', has_lesson_plan: false
 level 'CSD U3 platform sample1_virtual', named: true
 level 'CSD U3 platform intro_2018_2019_pilot_2020_virtual', named: true
 level 'CSD U3 platform background1_virtual', progression: 'Platform Jumper - Background and Variables'
@@ -119,7 +119,7 @@ level 'CSD U3 platform sample2_virtual', named: true
 level 'CSD U3 platform sample3_virtual', named: true
 level 'CSD U3 platform challenge_virtual', assessment: true
 
-lesson 'Project - Design a Game', display_name: 'Project - Design a Game'
+lesson 'Project - Design a Game', display_name: 'Project - Design a Game', has_lesson_plan: false
 level 'CSD U3 game intro_2018_2019_pilot_2020_virtual', named: true
 level 'CSD U3 game variables_virtual', progression: 'Project - Background and Variables'
 level 'CSD U3 game backgrounds_virtual', progression: 'Project - Background and Variables'

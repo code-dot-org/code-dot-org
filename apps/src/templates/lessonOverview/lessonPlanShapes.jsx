@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export const levelShape = PropTypes.shape({
   // id of level
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   //name of level
   name: PropTypes.string.isRequired,
 
@@ -20,11 +20,11 @@ export const levelShape = PropTypes.shape({
 
 export const scriptLevelShape = PropTypes.shape({
   // script level id
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 
   // if only one level the id for that level
   // if multiple variants the level id for the active variant
-  activeId: PropTypes.number.isRequired,
+  activeId: PropTypes.string.isRequired,
   // all variants of this level
   levels: PropTypes.arrayOf(levelShape).isRequired,
 
@@ -50,7 +50,10 @@ export const activitySectionShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   position: PropTypes.number.isRequired,
   displayName: PropTypes.string.isRequired,
+  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])])
+    .isRequired,
   remarks: PropTypes.bool,
+  progressionName: PropTypes.string,
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape).isRequired

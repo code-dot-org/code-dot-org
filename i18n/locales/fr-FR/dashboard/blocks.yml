@@ -1007,6 +1007,7 @@ fr:
             '"y"': position y
             '"direction"': direction du mouvement
             '"tint"': nuance
+            '"speed"': vitesse
       gamelab_getThisSprite:
         text: "{CHOICE} lutin"
         options:
@@ -1132,6 +1133,8 @@ fr:
             '"West"': L’Ouest
       gamelab_moveToward:
         text: déplacer {SPRITE} de {DISTANCE} pixels vers {TARGET}
+      gamelab_newSpritePointer:
+        text: cliqué {SPRITE}
       gamelab_objectSpritePointer:
         text: cliqué {SPRITE}
       gamelab_playSound:
@@ -1182,8 +1185,15 @@ fr:
             undefined: aucun
       gamelab_setBackgroundImageAs:
         text: établir {IMG} comme arrière-plan
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': intermédiaire
+            '100': large
       gamelab_setProp:
-        text: établir [PROPERTY] de {SPRITE} [1] à {VAL}
+        text: établir {PROPERTY} de {SPRITE} à {VAL}
         options:
           PROPERTY:
             '"scale"': taille
@@ -1191,6 +1201,7 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
+            '"speed"': vitesse
       gamelab_setSizes:
         text: établir {PROPERTY} de {SPRITE}  à {N} %
         options:

@@ -4,7 +4,7 @@ title: Kamu görevlileri için rehber
 
 {{ signup_button }}
 
-# Butun cevremi nasil bu ise baslatirim
+# Bütün okul çevresini bu işe nasıl dahil ederim
 
 ### Bilgisayar bilimine sorumluluk geregi ulkeni, semtini, veya sehrini goster
 
@@ -24,7 +24,7 @@ Soldan sağa: *Hour of Code'a katılan Arkansas, Kuzey Carolina ve Arizona valil
 
 ### 1. Tek sayfalık dokümanımızı okuyun
 
-See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
+[Bilgisayar bilimlerinin neden önemli olduğuna]({{ localized_files/hoc_one_pager }}) ve Kodlama Saati'ne destek vererek bu çabaya nasıl yardım edebileceğinize bakın.
 
 ### 2. Yerel okulları ve bölgeleri dahil edin
 

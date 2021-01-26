@@ -49,6 +49,7 @@ fa:
               name: 'آزمایشگاه بازی: یک داستان بنویس'
             The Big Event:
               name: رویداد بزرگ
+          student_description: دورۀ 1 طوری طراحی شده که به کسانی که خواندن نمیدانند اجازه دهد برنامه های کامپیوتری بسازند؛ برنامههایی که به آنها کمک خواهد کرد یاد بگیرند با دیگران همکاری کنند، مهارت های حل مسئله کسب کنند، و برای تکمیل امور دشوار پافشاری کنند. با پایان این دوره دانش آموزان بازیهای سفارشی مخصوص خودشان یا داستانهایشان را میسازند که میتوانند آنها را به اشتراک بگذارند. توصیه شده برای اول دبستانیها (ک1).
         course2:
           title: دوره 2
           description: دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه برنامه نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی برای حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5).
@@ -92,6 +93,7 @@ fa:
               name: رویداد بزرگ
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
+          student_description: دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه برنامه نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی برای حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5).
         course3:
           title: دورۀ 3
           description_short: دوره 3 ادامه دوره 2 است.
@@ -146,6 +148,7 @@ fa:
           lessons:
             Play Lab:
               name: آزمایشگاه بازی
+          student_description: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
         artist:
           title: هنرمند
           description: با نقاش چند عکس و طرح باحال بکش!
@@ -153,6 +156,7 @@ fa:
           lessons:
             Artist:
               name: هنرمند
+          student_description: با نقاش چند عکس و طرح باحال بکش!
         hourofcode:
           title: هزارتوی کلاسیک
           description: اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!
@@ -160,6 +164,7 @@ fa:
           lessons:
             Maze:
               name: پیچ و خم
+          student_description: اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!
         frozen:
           title: کدنویسی با آنا و السا
           description: بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف و الگوهایی را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می توانی با دوستان خود به اشتراک بگذاری!
@@ -167,6 +172,7 @@ fa:
           lessons:
             Artist:
               name: هنرمند
+          student_description: بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف و الگوهایی را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می توانی با دوستان خود به اشتراک بگذاری!
         course4:
           title: دوره 4
           description_short: دانش آموزانی که دوره 4 را گرفته اند باید تا به حال دوره های 2 و 3 را گرفته باشند.
@@ -239,6 +245,7 @@ fa:
               name: 'کشاورز: حلقه‌های "در حالیکه"'
             'Maze: Sequence':
               name: 'هزارتو: دنباله'
+          student_description: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2 و 3 را نگذرانده اند.
         usability:
           title: امتحان قابل استفاده بودن
           description: منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده.
@@ -253,6 +260,7 @@ fa:
               name: مقدمه
             Variables:
               name: متغیرها
+          student_description: منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده.
         algebra:
           title: علوم کامپیوتر در جبر
           description: یادگیری برنامه نویسی تابعی از طریق جبر
@@ -268,6 +276,7 @@ fa:
               name: 'بدون دستگاه: دستور العمل طرح'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
+          student_description: یادگیری برنامه نویسی تابعی از طریق جبر
         infinity:
           title: آزمایشگاه بازی بی نهایت دیزنی
           description: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
@@ -275,6 +284,7 @@ fa:
           lessons:
             Infinity:
               name: بی نهایت
+          student_description: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
         algebrademo:
           title: نسخه ی نمایشی جبر
           description: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده در علوم کامپیوتر در جبرِ Code.org
@@ -290,6 +300,7 @@ fa:
               name: ساخت تصاویر
             The Design Recipe:
               name: دستور العمل طراحی
+          student_description: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده در علوم کامپیوتر در جبرِ Code.org
         K5PD:
           lessons:
             Introduction to PD:
@@ -340,6 +351,7 @@ fa:
               name: مارپیچ
             Wrap-up:
               name: خلاصه
+          student_description: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر نیز جالب باشد.
         edit-code:
           title: ویرایش کد
           description: ویرایش کد
@@ -351,6 +363,7 @@ fa:
               name: هنرمند
             The Maze:
               name: مارپیچ
+          student_description: ویرایش کد
         events:
           title: رویدادها
           description: رویدادها
@@ -360,6 +373,7 @@ fa:
               name: پریدن
             Studio:
               name: استودیو
+          student_description: رویدادها
         flappy:
           title: کدنویسی Flappy
           description: می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی Flappy ما را امتحان کن!
@@ -367,6 +381,7 @@ fa:
           lessons:
             Flappy Code:
               name: کدنویسی Flappy
+          student_description: می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی Flappy ما را امتحان کن!
         jigsaw:
           title: جورچین
           lessons:
@@ -379,6 +394,7 @@ fa:
           lessons:
             Step:
               name: مرحله
+          student_description: آموزش مرحله
         Hour of Code:
           title: ساعت کد نویسی سال 2013
           description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان عصبانی را امتحان کنید!
@@ -386,6 +402,7 @@ fa:
           lessons:
             Hour of Code 2013:
               name: ساعت کد نویسی سال 2013
+          student_description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان عصبانی را امتحان کنید!
         cspunit1:
           description_short: برنامه نویسی
         algebraPD:
@@ -477,6 +494,7 @@ fa:
               name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
+          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         cspunit2:
           description_short: برنامه نویسی
           lessons:
@@ -498,6 +516,7 @@ fa:
               name: رشته ها و تصاویر
             The Design Recipe:
               name: دستور العمل طراحی
+          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         allthethings:
           lessons:
             Artist:
@@ -536,6 +555,7 @@ fa:
               name: بلوک های ارزیابی
             Strings and Images:
               name: رشته ها و تصاویر
+          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         cspfacilitator:
           lessons:
             App Lab:
@@ -562,6 +582,7 @@ fa:
               name: خوش آمدی!
             Wrap-up:
               name: خلاصه
+          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         algebraPD2:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -570,6 +591,7 @@ fa:
               name: دستور العمل طراحی
             Welcome!:
               name: خوش آمدی!
+          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         sciencePD2b:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -578,6 +600,7 @@ fa:
               name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
+          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         science-PD2:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -586,6 +609,7 @@ fa:
               name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
+          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         sciencePD2b-iZone:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -594,6 +618,7 @@ fa:
               name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
+          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         ECSPD2-iZone:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -608,6 +633,7 @@ fa:
               name: خوش آمدی!
             Wrap-up:
               name: خلاصه
+          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         ECSPD2-NexTech:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -622,6 +648,7 @@ fa:
               name: خوش آمدی!
             Wrap-up:
               name: خلاصه
+          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -659,6 +686,7 @@ fa:
           lessons:
             Ice Age Play Lab:
               name: آزمایشگاه بازی عصر یخبندان
+          student_description: یک داستان یا یک بازی با آزمایشگاه عصر یخبندان بساز!
         cspunit3temp:
           description_short: برنامه نویسی
           lessons:
@@ -685,6 +713,7 @@ fa:
           lessons:
             Hour of Code 2015:
               name: ساعت کدنویسی 2015
+          student_description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -711,6 +740,7 @@ fa:
               name: 'بدون دستگاه: قراردادها'
             'Unplugged: The Design Recipe':
               name: 'بدون دستگاه: دستور العمل طرح'
+          student_description: یادگیری برنامه نویسی تابعی از طریق جبر
         AlgebraB:
           title: 'علوم کامپیوتر در جبر'
           description: یادگیری برنامه نویسی تابعی از طریق جبر
@@ -738,6 +768,7 @@ fa:
               name: 'بدون دستگاه: شرطی ها و توابع چند ضابطه ای'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
+          student_description: یادگیری برنامه نویسی تابعی از طریق جبر
         algebraPD1:
           title: CS در جبر قسمت 1
           lessons:
@@ -1330,6 +1361,7 @@ fa:
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'ماینکرافت\: سفر قهرمانان ساعتی با کد'
+          student_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -1975,6 +2007,9 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
+          lessons:
+            Focus Area 1:
+              name: برنامه آموزشی
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2303,6 +2338,12 @@ fa:
               name: شرطی ها
             Functions:
               name: توابع
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: مقدمه
+            lessonGroup-3:
+              display_name: متغیرها
         csd3-2021:
           description_short: "برنامه نویسی"
           lessons:
@@ -2462,9 +2503,6 @@ fa:
             csf_events:
               display_name: رویدادها
         csf-2021-pilot:
-          lessons:
-            lesson-1:
-              name: متغیرهای پاکت
           lesson_groups:
             ramp_up:
               display_name: مقدمه

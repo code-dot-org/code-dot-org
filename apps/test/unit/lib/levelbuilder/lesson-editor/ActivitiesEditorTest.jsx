@@ -11,6 +11,7 @@ describe('ActivitiesEditor', () => {
     addActivity = sinon.spy();
     defaultProps = {
       activities: sampleActivities,
+      hasLessonPlan: true,
       addActivity
     };
   });
@@ -18,6 +19,17 @@ describe('ActivitiesEditor', () => {
   it('renders default props', () => {
     const wrapper = shallow(<ActivitiesEditor {...defaultProps} />);
     expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.find('ActivityCardAndPreview').length).to.equal(1);
+
+    const hiddenInputs = wrapper.find('input[type="hidden"]');
+    expect(hiddenInputs.length, 'hidden input').to.equal(1);
+  });
+
+  it('renders without button if hasLessonPlan false', () => {
+    const wrapper = shallow(
+      <ActivitiesEditor {...defaultProps} hasLessonPlan={false} />
+    );
+    expect(wrapper.find('button').length).to.equal(0);
     expect(wrapper.find('ActivityCardAndPreview').length).to.equal(1);
 
     const hiddenInputs = wrapper.find('input[type="hidden"]');

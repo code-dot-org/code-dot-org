@@ -1124,7 +1124,7 @@ class ScriptTest < ActiveSupport::TestCase
     response = script.summarize(true, nil, true)
     assert_equal 1, response[:lessons].length
     assert_equal 1, response[:lessons].first[:levels].length
-    assert_equal [level.id], response[:lessons].first[:levels].first[:ids]
+    assert_equal [level.id.to_s], response[:lessons].first[:levels].first[:ids]
   end
 
   test 'should generate PLC objects' do
@@ -1752,7 +1752,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal expected_level_names, actual_level_names
 
     new_dsl = <<~SCRIPT
-      lesson 'lesson1', display_name: 'lesson1'
+      lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: false
       level 'Level 1_copy'
       level 'Level 4_copy'
       level 'Level 5_copy'

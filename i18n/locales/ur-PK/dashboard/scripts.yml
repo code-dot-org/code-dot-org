@@ -15,6 +15,7 @@ ur:
           title: اینا اور ایلسا کے ساتھ کوڈ
           description: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی دکھا سکیں گے۔
           description_short: آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن کرسکیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
+          student_description: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی دکھا سکیں گے۔
         usability:
           lessons:
             Variables:
@@ -53,6 +54,7 @@ ur:
           title: ایونٹس/واقعات
           description: ایونٹس/واقعات
           description_short: ایونٹس/واقعات
+          student_description: ایونٹس/واقعات
         step:
           title: اسٹیپ
           lessons:
@@ -594,6 +596,16 @@ ur:
           description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
           description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
           name: وباء کا پھیلنا
+          student_description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+        2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: ایک سیمولیشن کا کوڈ لکھنا
+          lesson_groups:
+            lessonGroup-3:
+              display_name: متغیرات
+            outbreak:
+              display_name: وباء کی سیمولیشن
         csd3-2021:
           lessons:
             Variables:
@@ -683,8 +695,6 @@ ur:
           lessons:
             Virus Simulation for Code Bytes:
               name: ایک سیمولیشن کا کوڈ لکھنا
-            lesson-1:
-              name: لفافہ متغیرات
           lesson_groups:
             outbreak:
               display_name: وباء کی سیمولیشن

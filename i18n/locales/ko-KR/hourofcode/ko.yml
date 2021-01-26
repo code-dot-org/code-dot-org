@@ -34,14 +34,13 @@ ko:
     지금 배워서,
 
     보다 밝은 미래를 건설하세요.
-  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
-    we want. #CSforGood'
+  social_hoc2020_cs_important: 'CS는 그 어느 때보다도 더 중요합니다. 우리가 원하는 미래를 함께 건설해 봅시다. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: "#HourOfCode는 #CSforGood에 관한 것입니다. 지금 배워서
     보다 밝은 미래를 건설하세요."
   social_hoc2020_global_movement: 아워오브코드는 수 천만 명의 학생들과 함께 하는 전 세계적인 운동입니다. 모든 연령을
     위한 한 시간 분량의 튜토리얼이 45개 이상의 언어로 제공됩니다.
-  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
-    science is foundational for every student to learn.
+  social_hoc2020_coming_dates: 아워오브코드는 2020년 12월 7~13일에 열립니다. 컴퓨터 과학은 모든 학생들의 학습에  기초가
+    됩니다.
   hoc2020_ai_subheader: 아워오브코드 2020이 다가오고 있습니다!
   hoc2020_ai_header: 인공 지능 탐구
   hoc2020_ai_description: AI와 머신 러닝이 우리 전 세계에 영향을 미치고 있습니다. 새로운 비디오 시리즈에서 AI를 탐구하고,
@@ -790,8 +789,8 @@ ko:
   highlights_title: 하이라이트
   highlights_header: Hour of Code의 하이라이트
   highlights_description: Hour of Code 캠페인에서 우리가 가장 좋아하는 순간들
-  highlights_previous: Highlights from previous years
-  highlights_see_more: See more highlights
+  highlights_previous: 이전 연도에서 강조된 하이라이트
+  highlights_see_more: 더 많은 하이라이트 참조
   highlights_readmore: 자세히 보기
   highlights_watchvideo: 동영상 보기
   highlights_facebook: 페이스북에 공유
@@ -814,7 +813,7 @@ ko:
   highlights_constant_athletes_short_heading: 스스로 한계에 도전하세요.
   footer_copyright_message: Copyright 2015 Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™와 Hora del Código®는 Code.org의 상표입니다.
-  footer_built_on_github: Built on GitHub from Microsoft
+  footer_built_on_github: Microsoft의 GitHub 위에 구축
   footer_menu_partners: 파트너
   footer_menu_contact: Contact us
   footer_menu_support: Support
@@ -1410,123 +1409,121 @@ ko:
   tutorial_duckrace_name: 큰 오리 경주
   tutorial_allcancodeapps_name: 'Allcancode 플랫폼: 블록리로 웹과 모바일 앱 만들기'
   tutorial_n2y_name: 비트 보트 지구를 탐구하다.
-  tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
-  tutorial_csfirstunplugged_name: CS First Unplugged
-  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_microsoftarcade_name: 오락실 게임 플레이 및 설계, 코딩
+  tutorial_csfirstunplugged_name: CS 첫 번째 언플러그드
+  tutorial_toxicodepython_name: 말을 하지 않는 교사와 함께 파이썬 발견
   tutorial_codecombatozaria_name: '奥佳睿: 冒险启程'
-  tutorial_vidcodedate_name: Climate Clock
-  tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
-  tutorial_codespeakhappy_name: Code a Happy Place Meditation App
-  tutorial_grokimage_name: Image Magic with Python
-  tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: Support My Cause
-  tutorial_vidcodeanimoji_name: Animoji
-  tutorial_vidcodeanimojies_name: Animoji
-  tutorial_bsdinspire_name: People who Inspire Me
-  tutorial_tttractor_name: Tractor Traversal
-  tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
-    Mickey'
-  tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
-  tutorial_codespeakbreathe_name: Code a Meditation Breathing App
-  tutorial_vidcodeface_name: Facetracking
-  tutorial_educodemaze_name: Design Your Own Maze!
-  tutorial_educoderace_name: Code your own racing game!
-  tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
-  tutorial_gamefrootgames_name: 'Games Industry Activity: Code a Platformer game '
-  tutorial_codespeakgrandparent_name: Code a Grandparent Card in Scratch
-  tutorial_educodekingdom_name: Defend the Kingdom!
-  tutorial_codehsdata_name: Coding with Data Visualizations
-  tutorial_educodecake_name: Bake a Cake With HTML!
-  tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: Trivia Game Maker
-  tutorial_csfirstdialogue_name: Dialogue
-  tutorial_codemonkeybeaver_name: Beaver Achiever
-  tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
-  tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
+  tutorial_vidcodedate_name: 기후 시계
+  tutorial_codemonkeyspace_name: '스페이스 어드벤쳐: 코드를 작성하고 바나나를 잡으세요!'
+  tutorial_codespeakhappy_name: 행복한 장소 명상 앱 코딩
+  tutorial_grokimage_name: 이미지 매직과 파이썬
+  tutorial_icomputelearn_name: iCompute로 코딩 배우기
+  tutorial_rpstress_name: 스트레스 볼
+  tutorial_bsdcause_name: 내 원인 지지
+  tutorial_vidcodeanimoji_name: 애니모지
+  tutorial_vidcodeanimojies_name: 애니모지
+  tutorial_bsdinspire_name: 나에게 영감을 주는 사람
+  tutorial_tttractor_name: 횡단 트랙터
+  tutorial_codeillusionmickey_name: '디즈니 코드일루젼: 미디어 아트 어드벤처와 미키'
+  tutorial_scigirlsquest_name: 'SciGirls: 코드 퀘스트'
+  tutorial_codespeakbreathe_name: 명상 호흡 앱 코딩
+  tutorial_vidcodeface_name: 페이스 트래킹
+  tutorial_educodemaze_name: 나만의 미로 디자인!
+  tutorial_educoderace_name: 레이싱 게임 코딩!
+  tutorial_codespeakchatbot_name: 챗봇과 여성 CS 개척자 코딩
+  tutorial_gamefrootgames_name: '게임 산업 활동: 플랫포머 게임 코딩'
+  tutorial_codespeakgrandparent_name: 스크래치로 할아버지 카드 코딩
+  tutorial_educodekingdom_name: 왕국을 지키세요!
+  tutorial_codehsdata_name: 데이터 시각화로 코딩
+  tutorial_educodecake_name: HTML로 케이크 만들기!
+  tutorial_ttsecond_name: 두 번째 팀
+  tutorial_bsdtrivia_name: 트리비아 게임 메이커
+  tutorial_csfirstdialogue_name: 대화
+  tutorial_codemonkeybeaver_name: 비버 성취자
+  tutorial_codestersdistance_name: 'Codesters: 사회적 거리두기 스프라이트'
+  tutorial_itchspace_name: 'iTCHcode: 우주 침입자 - RokCoder'
   tutorial_vidcodemagic_name: SFX 매직
   tutorial_vidcodemagices_name: SFX 매직
   tutorial_codespeakmeal_name: 건강한 식사 앱 코딩
-  tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: My Favorites Website
-  tutorial_codespeaktime_name: Code a Time Capsule in Scratch
-  tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
+  tutorial_itchfish_name: 'iTCHcode: 피쉬 스크래치 게임'
+  tutorial_bsdwebsite_name: 즐겨찾는 웹사이트
+  tutorial_codespeaktime_name: 스크래치로 타임 캡슐 코딩
+  tutorial_itchwebcam_name: 'iTCHcode: 웹캠 증강현실'
   tutorial_itchball_name: 'iTCHcode: 바운싱 볼'
   tutorial_ttrace_name: 레이스 조건
-  tutorial_plethora_name: 'Plethora: Cause and Effect'
-  tutorial_educodesecret_name: Uncover the Agency's Secrets!
-  tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
-  tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_plethora_name: '플레토라: 원인과 결과'
+  tutorial_educodesecret_name: 기관의 비밀을 적발하세요!
+  tutorial_itchshapes_name: 'iTCHcode: 도형 및 각도'
+  tutorial_codeguppytext_name: 텍스트 기반 코딩 소개
   tutorial_vidcodeplastiche_name: 플라스틱 공해 PSA
-  tutorial_educativechatbot_name: Build your own chatbot in Python
-  tutorial_educodebasics_name: Learn the Basics!
-  tutorial_codehsdesign_name: Supporting Artists with Code
-  tutorial_htmlacademyphp_name: 'Intro to PHP: Create an Online Store from Scratch'
-  tutorial_gamefrootdistance_name: 'COVID-19 Simulator: Learn about social distancing
-    through computer science.'
-  tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
-  tutorial_ttbunker_name: The Bunker
-  tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: Jokes and Riddles
-  tutorial_rptree_name: Tree life simulator
-  tutorial_codestersunity_name: 'Codesters: Unity Mural'
-  tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
-  tutorial_breakoutlock_name: 'Haspy and Lockit: Code Buddies'
-  tutorial_thunkablemask_name: Beaver in a Mask
-  tutorial_cafarming_name: Old MacDonald hacked a farm. AI, AI drone!
-  tutorial_blocksmithyeti_name: Don't Yeet the Yeti
-  tutorial_codecapture_name: Learn Programming With JavaScript​ In A Jiffy​
-  tutorial_codehslitter_name: Coding for a Litter-Free Community
-  tutorial_bsdocean_name: Life Below Water
-  tutorial_itchplatformer_name: 'iTCHcode: Scratch 3.0 Platformer Tutorial'
-  tutorial_codejika_name: 'CodeJIKA: 5 Minute Website'
-  tutorial_gamefrootclicker_name: Learn Variables. Code your own Clicker Game.
-  tutorial_rmagicequity_name: Equity vs. Equality
-  tutorial_ttfreestyle_name: Functional Freestyle
-  tutorial_ozobotcolor2_name: 'Introduction to Color Codes 02:  Drawing Color Codes'
-  tutorial_ozobotcolor3_name: 'Introduction to Color Codes 03: Directionality'
-  tutorial_clcarbon_name: Build Your Own Carbon Calculator
-  tutorial_kodablebasics_name: 'Coding Basics: Unplugged'
-  tutorial_scigirlscc_name: 'SciGirls: Code Creators'
-  tutorial_irobotpicture_name: 'Seeing the Whole Picture: Coded Messages'
-  tutorial_kcjmyself_name: Let me introduce myself!
-  tutorial_nearpodalgorithms_name: 'Coding: Algorithms '
-  tutorial_kibodrop_name: KIBO Craft and Build Drop Test
-  tutorial_ozobotcolor1_name: 'Introduction to Color Codes 01: Line Following'
-  tutorial_scigirlspixels_name: 'SciGirls: Passion for Pixels'
-  tutorial_kcjheroines_name: Our Heroines
-  tutorial_ozobotvalue_name: What's My Value?
-  tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
-  tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
-  tutorial_ai4all_name: AI & Drawing
-  tutorial_cldata_name: Welcome to Data Superpower
-  tutorial_spheroinputs_name: Inputs and Outputs Unplugged
-  tutorial_edisoncount_name: Teach Edison to count to 9
-  tutorial_spheroloops_name: Loops Unplugged
-  tutorial_kiboprogram_name: Let's Program Each Other
-  tutorial_hellorubycsin60_name: Computer Science in 60 seconds
-  tutorial_clfashion1_name: Fashionistas of Data Science - Class 1
-  tutorial_irobottraffic_name: 'Traffic Bot: Code Your Own Traffic Signal'
-  tutorial_edisonmystery_name: Edison and the mystery line
-  tutorial_microbitseaturtles_name: Saving Sea Turtles
-  tutorial_ozobotknow_name: 'Introduction to Ozobot: Get to Know Evo'
-  tutorial_imagilabs_name: 'Imagine it. Code it. Wear it. '
-  tutorial_irobotsimulator_name: Simulator Code Break
-  tutorial_irobotkind_name: 'Robot Feelings: The Kind Playground'
-  tutorial_firiavirtual_name: 'CodeSpace: Virtual Robotics with Python'
-  tutorial_irobotguesscode_name: Guess the Code
-  tutorial_ozobotnouns_name: Picking Out Irregular Plural Nouns
-  tutorial_nasa3d_name: 'Universe in 3D:  modeling and printing cosmic objects'
-  tutorial_blupants_name: 'BluPants: Learn Coding with Real Robots'
-  tutorial_legodance_name: Break Dance
-  tutorial_nearpodcoding_name: 'Topic Spark: Coding '
-  tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
-  tutorial_legojourney_name: Create a Journey with LEGO Education
-  tutorial_legohopper_name: Hopper Race
+  tutorial_educativechatbot_name: 파이썬으로 챗봇 제작.
+  tutorial_educodebasics_name: 기초 배우기!
+  tutorial_codehsdesign_name: 아티스트를 코드로 지원
+  tutorial_htmlacademyphp_name: 'PHP 소개: 스크래치로 온라인 스토어 제작'
+  tutorial_gamefrootdistance_name: '코비드-19 시뮬레이터: 컴퓨터 과학을 통해 사회적 거리두기에 관해 배웁니다.'
+  tutorial_codesterscovid_name: 'Codesters: 코비드 PSA를 멈추게 할 수 있습니다.'
+  tutorial_ttbunker_name: 벙커
+  tutorial_cuttle_name: 컴퓨팅 사고와 프로그래밍 도전
+  tutorial_bsdjokes_name: 수수께끼
+  tutorial_rptree_name: 나무의 일생 시뮬레이션
+  tutorial_codestersunity_name: 'Codesters: 유니티 벽화'
+  tutorial_codesterssoccer_name: 'Codesters: 축구 슛'
+  tutorial_breakoutlock_name: '해스피와 로킷: 코드 버디'
+  tutorial_thunkablemask_name: 마스크 쓴 비버
+  tutorial_cafarming_name: 맥도널드 노인이 농장을 해킹했어요.  AI, AI 드론!
+  tutorial_blocksmithyeti_name: 예티를 흥분시키지 마세요.
+  tutorial_codecapture_name: 당장 자바스크립트로 프로그래밍을 배우세요
+  tutorial_codehslitter_name: 쓰레기 없는 커뮤니티를 위한 코딩
+  tutorial_bsdocean_name: 수중 생물
+  tutorial_itchplatformer_name: 'iTCHcode: 스크리채 3.0 플랫포머 튜토리얼'
+  tutorial_codejika_name: 'CodeJIKA: 5 분 웹사이트'
+  tutorial_gamefrootclicker_name: 변수에 관해 배우기. 클리커 게임 코딩.
+  tutorial_rmagicequity_name: 평등 대 공평
+  tutorial_ttfreestyle_name: 기능 프리스타일
+  tutorial_ozobotcolor2_name: '컬러 코드 02 소개:  컬러 코드 그리기'
+  tutorial_ozobotcolor3_name: '컬러 코드 03 소개:  방향성'
+  tutorial_clcarbon_name: 탄소 계산기 제작
+  tutorial_kodablebasics_name: '코딩 기초: 언플러그드'
+  tutorial_scigirlscc_name: 'SciGirls: 코드 크리에이터'
+  tutorial_irobotpicture_name: '전체 그림 보기: 암호 메시지'
+  tutorial_kcjmyself_name: 제 소개를 하겠습니다!
+  tutorial_nearpodalgorithms_name: '코딩: 알고리즘 '
+  tutorial_kibodrop_name: KIBO 크래프트 및 빌드 드롭 테스트
+  tutorial_ozobotcolor1_name: '컬러 코드 01 소개: 라인 따라가기'
+  tutorial_scigirlspixels_name: 'SciGirls: 픽셀에 대한 열정'
+  tutorial_kcjheroines_name: 우리의 여성 영웅
+  tutorial_ozobotvalue_name: 나의 가치는 무엇입니까?
+  tutorial_icodebytes_name: 'iCompute 바이트: 언플러그드'
+  tutorial_clfashion2_name: 데이터 과학의 패션 리더 -수업 2
+  tutorial_ai4all_name: AI & 그림
+  tutorial_cldata_name: 데이터 수퍼파워에 오신 걸 환영합니다
+  tutorial_spheroinputs_name: 인풋 및 아웃풋 언플러그드
+  tutorial_edisoncount_name: 에디슨에게 9까지 숫자세기 가르치기
+  tutorial_spheroloops_name: 루프 언플러그드
+  tutorial_kiboprogram_name: 서로 프로그래밍해요
+  tutorial_hellorubycsin60_name: 60초 내 컴퓨터 과학
+  tutorial_clfashion1_name: 데이터 과학의 패션 리더 -수업 1
+  tutorial_irobottraffic_name: '트래픽 봇: 신호등 코딩'
+  tutorial_edisonmystery_name: 에디슨과 미스터리 라인
+  tutorial_microbitseaturtles_name: 바다 거북 구하기
+  tutorial_ozobotknow_name: '오조봇 소개: 이보에 대해 배우기'
+  tutorial_imagilabs_name: 상상하고 코딩하고 입어보세요.
+  tutorial_irobotsimulator_name: 시뮬레이터 코드 브레이크
+  tutorial_irobotkind_name: '로봇 감정: 친절한 운동장'
+  tutorial_firiavirtual_name: 'CodeSpace: 가상 로봇공학과 파이썬'
+  tutorial_irobotguesscode_name: 코드 알아맞추기
+  tutorial_ozobotnouns_name: 불규칙 복수 명사 선택
+  tutorial_nasa3d_name: '3D 우주:  우주 객체 모델링 및 인쇄'
+  tutorial_blupants_name: 'BluPants: 실제 로봇으로 코딩하는 법 배우기'
+  tutorial_legodance_name: 브레이크 댄스
+  tutorial_nearpodcoding_name: '토픽 스파크: 코딩'
+  tutorial_kcjplastic_name: "#kids2030 플라스틱 도전"
+  tutorial_legojourney_name: LEGO Education으로 여정 만들기
+  tutorial_legohopper_name: 호퍼 레이스
   tutorial_catrobatembroidery_name: 코드 자수
-  tutorial_irobotphone_name: Telephone Drawing
-  tutorial_codeguppydraw_name: Draw with code
-  tutorial_codejumper_name: 'Networks: Messages of Kindness'
+  tutorial_irobotphone_name: 전화기 그림
+  tutorial_codeguppydraw_name: 코드로 그리기
+  tutorial_codejumper_name: '네트워크: 친절한 메시지'
   tutorial_meeempathy_name: 두 마을의 Minecraft 이야기
   tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
@@ -3887,412 +3884,279 @@ ko:
     탐구하도록 도와 줍니다. 학생들은 적절한 방향 화살표를 선택하고 회전시켜 비트 보트에게 간단하게 지시를 내립니다. 각각의 6개 활동에는 n2y®
     SymbolStix PRIME® 컬렉션에서 나오는 기호로 지원되는 간단한 지시사항이 포함되어 있습니다. 기호는 읽을 줄 모르거나 또는 처음
     읽기를 배우는 아동에게 지시 사항을 이해하고 그에 따르게 하는데 도움을 줍니다.  '
-  tutorial_microsoftarcade_longdescription: Play fun arcade games, design your own
-    sprites, and learn the basics of coding your own game with MakeCode Arcade.
-  tutorial_csfirstunplugged_longdescription: No computer or internet? No problem.
-    Try the CS First Unplugged activities to explore how computer science can solve
-    problems like helping people stay connected while apart. 'Plugged in' Scratch
-    activities are available too!
-  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
-    word or explanation. Our silent teacher will give you several series of challenges
-    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_microsoftarcade_longdescription: 'MakeCode Arcade로 재미있는 오락실 게임을 하고 스프라이트를
+    디자인하며 게임 코딩의 기초를 배우세요. '
+  tutorial_csfirstunplugged_longdescription: 컴퓨터 또는 인터넷이 없어요? 괜찮아요. CS 첫 번째 언플러그드
+    활동을 해 보며 비록 서로 떨어져 있어도 서로 연결된 상태를 유지하도록 돕는 등 컴퓨터 과학이 어떻게 문제를 해결하는지 탐구합니다. '플러그드
+    인' 스크래치 활동 역시 할 수 있습니다!
+  tutorial_toxicodepython_longdescription: 단어 또는 설명 없이 파이쎤의 기초를 발견합니다. 우리의 소리를 내지
+    않는 선생님이 그 과정에서 일부 규칙을 추측하고 실수를 통해 배울 수 있게 하는 몇 가지 어려운 질문을 낼 거예요.
   tutorial_codecombatozaria_longdescription: 在奥佳睿世界里，你将成为一个在史诗故事里冒险的英雄。你需要使用编程魔法打败统治世界的黑暗之力。在冒险旅程中，你会遇到很多有趣的人物角色，去往不同的魔法领地，学习和练习使用编程概念，例如序列、循环、调试、分解问题等。最后，你会设计出一个好玩的游戏，分享给你的朋友和同学。
-  tutorial_vidcodedate_longdescription: 'The Climate Clock project is a culturally
-    relevant intersection of math, environmental science, and computer science. In
-    this Hour of Code activity, students will be guided through the construction of
-    their own climate clock. They will engage with objects, properties, variables,
-    functions, and loops, and customize their message to convey their message for
-    the world and their hopes for the future. '
-  tutorial_codemonkeyspace_longdescription: 'Write real code to help the monkey astronaut
-    catch bananas in space! '
-  tutorial_codespeakhappy_longdescription: Learn to program a meditation app that
-    transports you to your 'happy place.'
-  tutorial_grokimage_longdescription: Use the programming language Python to make
-    speedy changes to images. Make fun image editing programs and make your own image
-    filter!
-  tutorial_icomputelearn_longdescription: When you learn to code with iCompute you
-    program your own fantastic interactive stories, games, and animations. Following
-    our creative, fun, activities means that you will develop computational thinking
-    as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
-  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them. They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript. They are guided
-    with video tutorials, live coding and access to the code glossary. The Support
-    My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favorite cause. #codeisyourvoice'
-  tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
-    an emoji to animate through multiple options.
-  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
-    causing an emoji to animate through multiple options.
-  tutorial_bsdinspire_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript. They are guided
-    with video tutorials, live coding and access to the code glossary. The People
-    Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. #codeisyourvoice'
-  tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
-    down on his luck, and his fields have become a mess. But he's just obtained a
-    fancy new tractor with a repeating code system using loops that just might save
-    everything. Help learn how the tractor works to water all the crops in his fields.
-  tutorial_codeillusionmickey_longdescription: Embark on a magical coding adventure
-    with Mickey! Learn how to draw, color, and move shapes as you master the introduction
-    to Media Art using JavaScript.
-  tutorial_scigirlsquest_longdescription: 'In this online coding adventure, youth
-    take Subby the submarine through underwater challenges, using code to find various
-    items and collect scientific data on the ocean floor. '
-  tutorial_codespeakbreathe_longdescription: Learn to program meditation app that
-    will guide users through a mindful breathing exercise.
-  tutorial_vidcodeface_longdescription: Use a facetracking library to code your own
-    custom face filter, like the ones you use on social media.
-  tutorial_educodemaze_longdescription: Design a maze, complete with monsters and
-    locked passages. Use variables, loops, and strings to help your hero navigate
-    the world you've created.
-  tutorial_educoderace_longdescription: Learn computer science as you unleash the
-    racer in you! Invent and customize your very own car, all while gaining a deeper
-    understanding of objects and how video games are made.
-  tutorial_codespeakchatbot_longdescription: Learn how to code a chatbot, a computer
-    program you can have a conversation with, while learning about the famous women
-    pioneers of computer science.
-  tutorial_gamefrootgames_longdescription: Learn to code a real game like Super Mario
-    Bros. Students that are ready to go beyond Scratch and Tynker will be introduced
-    to real games industry practice, creative coding concepts, how to publish their
-    own unique game and start working towards a career in the games industry. The
-    tutorial is all about level design, choosing a character, animating and coding
-    your character to move around.
-  tutorial_codespeakgrandparent_longdescription: Learn to code a digital card to spread
-    joy to someone special in your life.
-  tutorial_educodekingdom_longdescription: The Kingdom is under attack! Plan powerful
-    defenses to help repel the invaders. Master the power of arrays in order to create
-    your very own wave of monsters in your own tower defense game!
-  tutorial_codehsdata_longdescription: Learn about the power of using data visualizations
-    to display data in meaningful and easy to understand ways. Use our graph generator
-    to create visually appealing graphs and learn how coding is used to create beautiful
-    data.
-  tutorial_educodecake_longdescription: Learn HTML as you bake a cake with chef Roland.
-    Shape and style your custom creation with your newfound knowledge of tags and
-    classes.
-  tutorial_ttsecond_longdescription: Can you deliver the Open Protocol? You've snuck
-    aboard the capital ship, and now you must evade the security drones long enough
-    to open access for all. Quickly examine conditional statements to find out whether
-    you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them. They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript. They are guided
-    with video tutorials, live coding and access to the code glossary. The Trivia
-    Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions. #codeisyourvoice'
-  tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
-    Get creative while communicating with code in Scratch with CS First!
-  tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
-    into this beaver's natural habitat with a fun-packed coding activity that will
-    jump-start your coding education. Beavers can swim, collect wood, and build dams.
-    This little beaver needs your help. Use the simple blocks of code to complete
-    the dam in the lake so the water remains calm, build a house, and make smoothies!
-  tutorial_codestersdistance_longdescription: Learn the basics of coding in Python,
-    then create a program that calculates the distance between two sprites to make
-    sure they are social distancing or need to wear a mask.
-  tutorial_itchspace_longdescription: This tutorial takes you through the creation
-    of a classic Space Invaders game using the Scratch MIT programming language. Subscribe
-    to the RokCoder YouTube channel for more Scratch-based videos and tutorials! Each
-    video is a bite-sized tutorial (approximately ten minutes in length) that contains
-    its own specific end goals. The final result is a high quality Scratch arcade
-    game.
-  tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
-    using a loop.
-  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
-    screen using a loop.
+  tutorial_vidcodedate_longdescription: '기후 시계 프로젝트는 수학과 환경학, 컴퓨터 과학이 문화적으로 적절하게 교차됩습니다.
+    이 아워오브코드 활동에서, 학생들은 자신의 기후 시계를 만들 것입니다. 객체와 속성, 변수, 함수, 루프를 다루고 세상을 위한 메시지와 미래를
+    위한 희망을 전달하기 위해 그들의 메시지를 그들의 기호에 맞게 구성할 것입니다. '
+  tutorial_codemonkeyspace_longdescription: 실제 코드를 작성하여 원숭이 우주인이 우주에서 바나나를 잡을 수 있게
+    도와주세요!
+  tutorial_codespeakhappy_longdescription: "'행복한 장소'로 가게 해 줄 명상 앱 프로그래밍 방법을 배워보세요."
+  tutorial_grokimage_longdescription: 프로그래밍 언어 파이썬을 사용하여 이미지를 빠르게 변경시키세요. 재미있는 자신만의
+    이미지 편집 프로그램과 이미지 필터를 만드세요!
+  tutorial_icomputelearn_longdescription: iCompute로 코딩하는 법을 배울 때, 여러분은 여러분 자신의 환상적인
+    인터랙티브 스토리와 게임, 애니메이션을 프로그래밍하게 됩니다. 창의적이고 재미있는 활동을 따라하다 보면, 컴퓨팅 사고는 물론 코딩 기술 역시
+    개발될 것입니다!
+  tutorial_rpstress_longdescription: 스크래치를 사용하여 눌러 찌그러 뜨릴 수 있는 스트레스 볼을 만드세요!
+  tutorial_bsdcause_longdescription: 이 과정을 통해 학생들을 코드를 그들에게 중요하고 흥미있는 것을 공유하는 수단으로서
+    사용할 수 있습니다. 그들은 레슨을 따라 하거나 또는 고유 프로젝트를 하며 HTML, CSS, 자바스크립트를 배웁니다. '내 원인 지지'는
+    좋아하는 원인의 지지자로부터 데이터를 수집할 랜딩 페이지를 디자인 및 코딩하는 데 중점을 둡니다.#codeisyourvoice
+  tutorial_vidcodeanimoji_longdescription: 루프를 사용하여 배열을 계속 반복하게 하고, 복수의 옵션을 통해 이모티콘을
+    만화처럼 움직이게 만드세요.
+  tutorial_vidcodeanimojies_longdescription: 루프를 사용하여 배열을 계속 반복하게 하고, 복수의 옵션을 통해 이모티콘을
+    만화처럼 움직이게 만드세요.
+  tutorial_bsdinspire_longdescription: 이 과정을 통해 학생들을 코드를 그들에게 중요하고 흥미있는 것을 공유하는 수단으로서
+    사용할 수 있습니다. 그들은 레슨을 따라 하거나 또는 고유 프로젝트를 하며 HTML, CSS, 자바스크립트를 배웁니다. '나에게 영감을 준
+    사람'은 여러분에게 영감을 준 사람 중 가장 큰 영감을 준 세 명을 소개하는 웹사이트를 만드는 데 중점을 둡니다.#codeisyourvoice
+  tutorial_tttractor_longdescription: '밭을 다시 살릴 수 있게 도와 주세요. 농부 하야오는 운세가 기울었으며 밭은
+    엉망진창이 되었습니다. 하지만, 루프를 사용하여 반복하는 코드 시스템을 가진 새 트랙터를 얻게 되었으며 그로써 모든 걸 구할 수 있게 되었습니다.
+    밭에 있는 작물에 물을 주기 위해 트랙터를 어떻게 작동시켜야 하는지 알 수 있게 도와 주세요.  '
+  tutorial_codeillusionmickey_longdescription: 미키와 함께 마법같은 코딩 어드벤처를 시작하세요! 도형을 그리고
+    색칠하며 움직이는 방법을 배우고 자바스크립트를 사용하여 숙달되게 미디어 아트 소개하세요.
+  tutorial_scigirlsquest_longdescription: 이 온라인 코딩 어드벤처에서는 잠수함 서비가 바닷 속을 탐구하며 코드를
+    사용해 다양한 아이템을 찾고 해저에 관한 과학 데이터를 수집합니다.
+  tutorial_codespeakbreathe_longdescription: 의식적 호흡 연습을 통해 사용자를 안내해 줄 명상 앱 프로그래밍 방법을
+    배우세요
+  tutorial_vidcodeface_longdescription: '페이스 트래킹 라이브러리를 사용하여 소셜 미디어에서 사용하는 것과 같은 페이스
+    필터를 필요에 맞게 맞춤형으로 코딩합니다. '
+  tutorial_educodemaze_longdescription: 미로를 설계하고 괴물과 잠겨져 있는 통로가 있는 미로를 완성하세요. 변수와
+    루프, 문자열을 사용하여 히어로가 여러분이 만든 세계를 탐색할 수 있게 도와 주세요.
+  tutorial_educoderace_longdescription: '잠들어 있던 레이서 본능을 깨우며 컴퓨터 과학에 관해 배우세요! 직접 자동차를
+    발명하고 필요에 맞게 개조하는 한편 객체와 비디어 게임이 만들어지는 방식에 대한 더 깊이 있는 이해를 얻습니다.  '
+  tutorial_codespeakchatbot_longdescription: 유명한 여성 컴퓨터 과학 개척자에 관해 배우며, 사람과 대화하는 컴퓨터
+    프로그램인 챗봇 코딩법을 배우세요.
+  tutorial_gamefrootgames_longdescription: '수퍼 마리오 브라더스와 같은 실제 게임을 코딩하는 법을 배우세요. 스크래치와
+    팅커를 너머 더 나아갈 준비가 된 학생들에게 실제 게임 산업의 관행과 창의적인 코딩 개념, 고유 게임 발표 방식, 게임 산업에서 커리어를 추구하기
+    위해 시작해야 할 일 등을 소개할 것입니다. 튜토리얼은 모두 레벨 설계와 캐릭터 선택, 캐릭터를 이동하게 만드는 애니메이팅과 코딩에 관한 것입니다. '
+  tutorial_codespeakgrandparent_longdescription: 여러분 삶에서 특별한 이들에게 즐거움을 확산시키는 디지털 카드를
+    코딩하는 법을 배우세요.
+  tutorial_educodekingdom_longdescription: 왕국이 공격 받고 있습니다! 강력한 방어 계획을 수립하여 침입자들을 쫓아
+    내세요. 타워 방어 게임에서 물결처럼 몰려 오는 괴물들을 만들기 위해 배열의 힘을 완벽하게 익히세요.
+  tutorial_codehsdata_longdescription: '데이터를 의미 있고 쉽게 이해할 수 있는 방식으로 표시하기 위해 데이터 시각화를
+    사용하는 방법을 배우세요. 그래픽 생성자를 사용하여 시각적으로 흥미로운 그래픽을 만들고, 아름다운 데이터를 만들기 위해 코딩을 어떻게 사용하는지
+    배우세요.   '
+  tutorial_educodecake_longdescription: '롤랜드 요리사와 함께 케이크를 구우며 HTML을 배우세요. 새로 배운 태그와
+    클래스에 관한 지식을 활용하여 자신의 창작품의 형태와 스타일을 원하는대로 만드세요. '
+  tutorial_ttsecond_longdescription: 오픈 프로토콜을 전달해 줄 수 있어요? 여러분은 최대급 군함에 몰래 탔으며 이제
+    보안 드론을 피해 멀리 있는 열린 진입로까지 가야합니다. 여러분이 사이버 감시망으로부터 안전한지 그렇지 않은지 알아내기 위해 조건문을 빠르게
+    확인하세요. 안전하지 않으면, 에어로크가 됩니다!
+  tutorial_bsdtrivia_longdescription: 이 과정을 통해 학생들을 코드를 그들에게 중요하고 흥미있는 것을 공유하는 수단으로서
+    사용할 수 있습니다. 그들은 레슨을 따라 하거나 또는 고유 프로젝트를 하며 HTML, CSS, 자바스크립트를 배웁니다. '일반상식 게임 메이커'는
+    사용자 역시 일반상식 질문을 만들수 있는 인터랙티브 일반상식 게임을 제작하는 데 중점을 둡니다.#codeisyourvoice
+  tutorial_csfirstdialogue_longdescription: 두 스프라이트 간의 대화를 프로그래밍하세요. 창의력을 발휘하여 CS
+    First와 스크래치 코드를 사용해 소통하세요.
+  tutorial_codemonkeybeaver_longdescription: '비버가 목표를 달성하게 도와 주세요! 이 비버의 자연 서식지로 뛰어
+    들어가 코딩 교육의 멋진 출발이 될 수 있는 재미있는 코딩 활동을 하세요. 비버는 헤어쳐서 나무를 모아 댐을 건설할 수 있습니다. 이 작은
+    비버는 여러분의 도움을 필요로 합니다. 간단한 코드 블록을 사용하여 호수에 건설 중인 댐을 완성하여 물을 잔잔해 지게 하고 집을 짓고 스무디를
+    만드세요. '
+  tutorial_codestersdistance_longdescription: 파이썬 코딩의 기초를 배우고, 두 개의 스프라이트 사이의 거리를
+    계산하는 프로그램을 만들어 그들이 사회적 거리를 두고 있는지 또는 마스크를 써야 하는지 확인하세요.
+  tutorial_itchspace_longdescription: 이 튜토리얼은 스크래치 MIT 프로그래밍 언어를 사용하여 클래식 스페이스 인베이더
+    게임을 만드는 튜토리얼입니다. 더 많은 스크래치 기반 동영상과 튜토리얼은 RokCoder YouTube 채널을 구독하세요! 각 동영상은 비트
+    크기 튜토리얼 (약 10분 분량)로 특정 최종 목표를 담고 있습니다.
+  tutorial_vidcodemagic_longdescription: 루프를 사용하여 화면에 무작위로 플래시가 나오게 만드세요.
+  tutorial_vidcodemagices_longdescription: 루프를 사용하여 화면에 무작위로 플래시가 나오게 만드세요.
   tutorial_codespeakmeal_longdescription: 사용자에게 건강한 식습관을 갖도록 돕는 앱 코딩 방법 배우기.
-  tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
-    shark chasing and eating fish disrupted when a diver is eaten accidentally.
-  tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them. They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript. They are guided
-    with video tutorials, live coding and access to the code glossary. ''The My Favourites
-    Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. #codeisyourvoice'
-  tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
-    to record and reflect on your life right now.
-  tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
-    own augmented reality virtual space.
-  tutorial_itchball_longdescription: Get a ball to bounce around the screen. Learn
-    about loops and conditionals within loops
-  tutorial_ttrace_longdescription: By calling functions and designing classes, players
-    program their own race car to be fast, nimble, and powerful; during races, they
-    can then hack their competitors' vehicles to scramble their controls.
-  tutorial_plethora_longdescription: 'In this Plethora activity you will solve visual
-    fun challenges and learn the concepts of cause and effect and user interaction. '
-  tutorial_educodesecret_longdescription: Explore the worlds of secrets with Agent
-    Smith as you dive deeper into learning if statements, strings, for-in loops. Help
-    Agent Smith find the culprits and configure the Agency's operating system for
-    their new users with Python.
-  tutorial_itchshapes_longdescription: Learn how to draw shapes in Scratch. You will
-    also learn how to calculate how much you need to turn for any shape.
-  tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
-    creating your first program in an online coding editor
+  tutorial_itchfish_longdescription: 상어가 물고기를 추적하여 잡아 먹는 게임을 다이버가 사고로 잡혀 먹혔을 때 중단되게
+    만들기 위한 스크래치 3.0 튜토리얼.
+  tutorial_bsdwebsite_longdescription: 이 과정을 통해 학생들을 코드를 그들에게 중요하고 흥미있는 것을 공유하는 수단으로서
+    사용할 수 있습니다. 그들은 레슨을 따라 하거나 또는 고유 프로젝트를 하며 HTML, CSS, 자바스크립트를 배웁니다. '내 즐겨찾기 웹사이트'는
+    여러분이 가장 관심을 갖는 또는 가장 하고 싶어하는 세 가지 일에 관한 웹사이트를 만드는 데 중점을 둡니다.#codeisyourvoice
+  tutorial_codespeaktime_longdescription: 자신의 삶을 기록하고 성찰하기 위한 디지털 타임 캡슐 코딩법을 지금 당장
+    배우세요.
+  tutorial_itchwebcam_longdescription: 증강현실에 대해 배우고 증강현실 가상 공간을 만드세요.
+  tutorial_itchball_longdescription: 화면 여기저기로 튕겨지는 공을 얻으세요. 루프와 루프 내 조건문에 관해 배우세요.
+  tutorial_ttrace_longdescription: 함수를 호출하고 클래스를 설계함으로써, 플레이어는 자신의 레이스 카를 빠르고, 날렵하고,
+    강력하게 프로그래밍하고 또한 그들은 경쟁자의 자동차를 해킹하여 그 자동차의 컨트롤을 교란시킬 수 있습니다.
+  tutorial_plethora_longdescription: 이 플레토라 활동에서, 여러분은 시각적으로 재미있는 어려운 문제를 풀고 원인과 결과
+    개념 및 사용자 인터랙션을 배울 것입니다.
+  tutorial_educodesecret_longdescription: If 문과 문자열, for-in 루프를 배우며 학습의 깊이를 더해 갈 때,
+    에이전트 스미스로 비밀의 세계를 탐구하세요. 에이전트 스미스가 범인을 찾고 파이썬으로 새로운 사용자를 위한 에이전트 운영시스템을 구성하도록
+    도와 주세요.
+  tutorial_itchshapes_longdescription: 스크래치로 도형 그리는 법을 배우세요. 또한 도형을 그리기 위해 어느 정도 회전해야
+    하는지 계산법을 배울 것입니다.
+  tutorial_codeguppytext_longdescription: 온라인 코딩 에디터로 생애 최초의 프로그램을 만들며 텍스트 기반 코딩의
+    기초를 배우세요.
   tutorial_vidcodeplastiche_longdescription: 플라스틱으로 가득 찬 바다의 문제는 계속해서 심해지고 있습니다. 다행히,
     플라스틱 오염 PSA를 통해 코드로 여러분의 목소리를 세상에 낼 수 있습니다. 플라스틱 오염에 관한 PSA를 자바스크립트를 사용하여 코딩한
     다음에는, 다른 관심 있는 주제로 두 번째 동영상을 만들 수 있습니다! 루프와 정현파, 맞춤형 이모티콘의 사용법을 배워 독창적인 프로젝트를
     만드세요.
-  tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
-    and Machine Learning, as well as programing your own chatbot!
-  tutorial_educodebasics_longdescription: Learn some programming fundamentals and
-    create your own game in the process!
-  tutorial_codehsdesign_longdescription: 'Coders will learn how programming can support
-    artists and build their own Online Shop mockup, using HTML. '
-  tutorial_htmlacademyphp_longdescription: Meet Dumpo the Little Elephant, a senior
-    programmer at a web design studio, who is developing an online store. Together
-    you will learn the basics of PHP in an engaging way. You will work with web scripts
-    and learn the variables, add PHP-scripts into the layout and interact with databases
-    while creating a true-to-life web project.
-  tutorial_gamefrootdistance_longdescription: 'In COVID-19: Stop the Spread, you can
-    modify the ''Staying home'' factor and code a simple news clicker. The activity
-    illustrates how social distancing has a direct impact on how fast a virus like
-    COVID-19 can spread. Students and teachers will gain a small insight into virus
-    science, the effects a virus can have on society, and at the same time level up
-    their digital fluency skills.'
-  tutorial_codesterscovid_longdescription: Learn the basics of coding in Python while
-    creating your own PSA about how we can stop the spread of COVID-19. Design your
-    own animated interactive PSA to share critical information about the importance
-    of social distancing, wearing a mask, quarantining, and other measures.
-  tutorial_ttbunker_longdescription: You found The Bunker, and all its secrets will
-    be yours, once you crack its encryption. An army approaches, and you must hold
-    the perimeter using the power of programming. Code individual towers, setting
-    range, damage, and more special powers by adding new lines of code and changing
-    values. Survive long enough to learn how classes and instances can make you even
-    more powerful.
-  tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
-    tasks and learn all about computational thinking.
-  tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them. They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript. They are guided
-    with video tutorials, live coding and access to the code glossary. The Jokes and
-    Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! #codeisyourvoice'
-  tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
-    varying the health of a forest and levels of deforestation impact trees, wildlife
-    and the amount of CO2 absorbed. You should already know how Scratch coordinates
-    and variables work.
-  tutorial_codestersunity_longdescription: Learn the basics of coding in Python including
-    lists, loops, and sprites. Then create a mural using a loop to access each sprite
-    stored in a list.
-  tutorial_codesterssoccer_longdescription: Learn the basics of coding in Python,
-    then create a program that shoots a soccer ball into the goal. To aim your shot
-    you'll first need to estimate the slope of the line. Good luck!
-  tutorial_breakoutlock_longdescription: 'Haspy the Robot needs your help! She needs
-    your knowledge of loops, algorithms, and coding to help her fix Lockit''s code
-    and reboot her system. '
-  tutorial_thunkablemask_longdescription: Learn how to build a mobile app that gives
-    you points for knowing how to wear your mask correctly!
-  tutorial_cafarming_longdescription: Computer science can help feed a hungry world.
-    Farmers are using technology to grow food in smarter and more sustainable ways.
-    Agribots and drones can monitor, water, and spray crops, and even tackle those
-    pesky weeds! Learn about how AI, Computer Vision, and the Internet of Things are
-    used on the farm.
-  tutorial_blocksmithyeti_longdescription: Oh no! Someone trapped the Yeti! Only YOU
-    and your programmable smart cannon can save the Yeti and feed their friends. Students
-    will use JavaScript to save the Yeti with this fun interactive self-paced lesson.
-  tutorial_codecapture_longdescription: 'Take your first steps into the world of programming
-    with JavaScript, using just pen-and-paper and your mobile phone! '
-  tutorial_codehslitter_longdescription: 'Learn how you can use programming to help
-    solve one of the world''s biggest problems: litter and waste! In this Choose-Your-Own-Adventure
-    Hour of Code, you have the choice between the basics of Python or the basics of
-    Web Design. Whichever you choose, you will explore how you can use computer science
-    to decrease the amount of litter in your community.'
-  tutorial_bsdocean_longdescription: Life below Water sheds light on a pressing issue
-    that we face nowadays - our environment. This project focuses on guiding you to
-    code your very own webpage on protecting our waters.
-  tutorial_itchplatformer_longdescription: An easy to follow tutorial for how to create
-    a simple platformer game using Scratch.
-  tutorial_codejika_longdescription: A great introduction to coding using HTML and
-    CSS. Code a few lines, see immediate output without getting caught up in the Hows
-    and Whys by creating a nice landing page with a two-color gradient background,
-    name and website launch date.
-  tutorial_gamefrootclicker_longdescription: Learners code their own Clicker Game
-    and in the process learn about variables, different data types, conditional logic,
-    comparative operators, and gain some valuable insights into how professional game
-    developers design and make real games. By the end of the tutorial you will have
-    coded different variable types, published a game, and engaged with computer science
-    in an indigenous context.
-  tutorial_rmagicequity_longdescription: 'Explore concepts related to reducing inequality
-    with code: limited resources, equality, equity and liberation. Use variables and
-    functions in a self guided block environment. Finish by animating the 3D actors.'
-  tutorial_ttfreestyle_longdescription: You're the choreographer and director of a
-    new music video! Type real code to place and control dancers, scenery, and more.
-    Just make sure to capitalize and punctuate correctly, otherwise the whole thing
-    will just be static.
-  tutorial_ozobotcolor2_longdescription: Students will learn the basic functionality
-    of Ozobot. Students will learn how to draw Color Codes Ozobot can read.
-  tutorial_ozobotcolor3_longdescription: Students will learn how to program the bot
-    to travel left, right, and straight with Color Codes.
-  tutorial_clcarbon_longdescription: A python lesson plan that will teach students
-    how to make a carbon footprint calculator that calculates footprint based on a
-    short quiz about daily life, then gives comparison metrics (ie this is the same
-    amount of carbon as xxxx), and suggests ways to be more eco-friendly.
-  tutorial_kodablebasics_longdescription: No computer? No problem! Learn basic programming
-    skills and practice using core coding commands without the use of a device.
-  tutorial_scigirlscc_longdescription: Help your students learn to write pseudocode!
-    Computer programmers often start projects by using everyday language to write
-    out what they want to happen in their code–this is called pseudocode.Youth will
-    work in groups to write pseudocode for a simple movement or dance move.
-  tutorial_irobotpicture_longdescription: Robots have lots of sensors that work together
-    to help the robot understand everything around it. Just like sensors, our friends
-    can often see, hear, feel or understand things that we cannot. In this activity,
-    work together to help decode secret messages and crack the code!
-  tutorial_kcjmyself_longdescription: In this activity, you'll learn how to use Scratch
-    to code an animation all about you! Design a custom character to represent yourself,
-    make it move around, and add different backdrops to show off your hometown. This
-    project is simple enough for kids to complete by themselves or with support from
-    a grown up.
-  tutorial_nearpodalgorithms_longdescription: 'In this Nearpod lesson, students identify
-    an algorithm as a set of step-by-step directions. Students learn to create, test,
-    and fix an algorithm to complete a specific task. '
-  tutorial_kibodrop_longdescription: Engineering is about persistence and grit. Today
-    the students will become engineers, learning the steps of the Engineering Design
-    Process. They will create models out of craft and recycled materials, then they
-    will test the sturdiness of their models by dropping them from ankle height. This
-    is an unplugged activity; KIBO robots are optional.
-  tutorial_ozobotcolor1_longdescription: Students will learn the basic functionality
-    of Ozobot, including how to calibrate the bot's sensors, and how to draw lines
-    for the bot to follow.
-  tutorial_scigirlspixels_longdescription: 'In this unplugged activity, you will learn
-    what a pixel is and how to send a simple black and white image to a friend! '
-  tutorial_kcjheroines_longdescription: In this activity, you'll learn about different
-    Canadian women who have made history. Using Scratch, you'll learn how to code
-    a video game celebrating their lives and accomplishments. Choose a heroine, customize
-    their costume and backdrop, code movements and goals for your game, and keep score.
-    This project is simple enough for kids to complete by themselves or with support
-    from a grown up.
-  tutorial_ozobotvalue_longdescription: Students will use their Ozobot to randomly
-    select a place value, identify the same place value in a three-digit number, and
-    write out the number.
-  tutorial_icodebytes_longdescription: Learn computer science without tech! Fun unplugged
-    computing activities for children aged 5-7 to do in class or at home with their
-    families. The activities help develop computational thinking skills in a really
-    fun way. Divided into the fundamental principles of computer science, and involve
-    creating algorithms, thinking logically, spotting patterns and finding or making
-    rules.
-  tutorial_clfashion2_longdescription: Are you a fashion conscious data scientist
-    with an interest in code? Join in the Fashionista of Data Science classes to learn
-    how coding & fashion go hand-in-hand! We will use SQL code along with data science
-    to investigate marketing, line styles, and store operations.
-  tutorial_ai4all_longdescription: 'This Byte of AI is meant to be a quick and fun
-    teacher-facilitated way to begin to become familiar with some core ideas of modern
-    AI including: how data becomes output in an AI model, how human biases enter datasets,
-    and how AI can be used in diverse fields including art and creativity. Students
-    learn these things by exploring drawing in Google Quick, Draw!'
-  tutorial_cldata_longdescription: 'Discover data science, one of the most valuable
-    skills, and see the world! Does data science sound dry and scary, like math? Fear
-    not. This introductory class will show you that you are already experts of data
-    and data science is full of fun and interesting insights related to topics such
-    as soccer, music, art, and your favorite books. Materials ready for in person
-    or remote learning settings. '
-  tutorial_spheroinputs_longdescription: 'This activity will get you thinking about
-    the common computer science coding concept of inputs and outputs and how this
-    idea relates to using computer science for good. '
-  tutorial_edisoncount_longdescription: 'Introduce the key computational concepts
-    of inputs and outputs using Edison robots and the block-based programming language
-    EdBlocks in this student led activity. Utilize the Edison robot''s drive function
-    through a set of progressive programming tasks. Creating programs for the robot
-    to ''trace'' requires the application of sequential thinking and an understanding
-    of the input-process-output cycle. '
-  tutorial_spheroloops_longdescription: 'This activity will get you thinking about
-    the common computer science coding concept of loops and how this concept relates
-    to using computer science for good. '
-  tutorial_kiboprogram_longdescription: In this lesson, children will learn about
-    sequencing in programming and about the symbols that make up a programming language
-    like KIBO's. Students will create their own programming symbols and act out programs
-    with their own movement. Finally, they can translate these movement programs into
-    programs for KIBO.
-  tutorial_hellorubycsin60_longdescription: 'Have you ever wondered what travels inside
-    the wires of your computer? Or why computer parts look like a tiny city? Or what
-    really is an algorithm? These 30 self-paced one minute videos are aimed for 5-9
-    year olds, followed by an activity the kids can complete at home. Topics include
-    code, hardware, networks, AI and other interesting ideas. '
-  tutorial_clfashion1_longdescription: Are you a fashion conscious data scientist
-    with an interest in code? Join in the Fashionista of Data Science classes to learn
-    how coding & fashion go hand-in-hand! We will use SQL code along with data science
-    to investigate marketing, line styles, and store operations.
-  tutorial_irobottraffic_longdescription: Traffic signals are a staple of safety in
-    our everyday lives. Code your own traffic light with the Root robot and learn
-    about the inventor!
-  tutorial_edisonmystery_longdescription: Kick-start student's exploration of using
-    Edison's line tracker using Edison robots and the Scratch-based programming language
-    EdScratch in this student led activity. Students first become familiar with the
-    Edison robot's line tracking sensor technology and experiment with the red LED
-    on different colored surfaces. They will then move on to mastering a mystery line
-    using the concept of algorithms.
-  tutorial_microbitseaturtles_longdescription: Create a prototype of a low-power,
-    red LED beach light that can be used for lighting on beach paths which is also
-    safe for sea turtles.
-  tutorial_ozobotknow_longdescription: In this lesson, students will be introduced
-    to the hardware and robotics components of Ozobot Evo.
-  tutorial_imagilabs_longdescription: 'Program a blinking heart, a rocketship taking
-    off, your name, or anything your imagination comes up with! To start off, we''ll
-    teach you how to program a heart in your favourite color and then make it blink
-    to the rhythm of your favorite song. Join our community of imagiCoders to share
-    and exchange designs. Upload your creations on your imagiCharm so you can proudly
-    wear your code wherever you go! '
-  tutorial_irobotsimulator_longdescription: Learn how to create and download coding
-    projects with this activity packet! Solve all puzzles with the Root simbot in
-    the virtual arena to reveal the secret message at the end!
-  tutorial_irobotkind_longdescription: Our robot is still learning how to make kind
-    choices when playing with friends. In this game, help Root practice by making
-    four kind decisions in a row. If Root makes a bad choice, it has to start all
-    the way at the beginning again! Let's play together!
-  tutorial_firiavirtual_longdescription: Learn Python programming with a powerful
-    3D robotics simulator. You'll complete challenging missions in a virtual environment
-    with realistic physics. Missions teach you the code to control motors, LEDs, and
-    other peripherals on CodeBot. And Sandbox mode lets you get creative with unlimited
-    Python coding possibilities. It's easy to get started with CodeSpace Simulation!
-  tutorial_irobotguesscode_longdescription: Put a new spin on Pictionary through code!
-    Students can use code to make predictions about what pictures, songs, or words
-    the Root SimBot will create. Code your own Pictionary creation, too!
-  tutorial_ozobotnouns_longdescription: In this lesson, students will identify the
-    correct way to spell and use irregular plural nouns and use Color Codes to program
-    their Ozobot to move to the correct irregular plural nouns by either turning left
-    or right and use the noun in a sentence.
-  tutorial_nasa3d_longdescription: Learn about exploding stars, 3D models and codeblocks!  This
-    spacey activity takes you through the basics of 3D modeling in astronomy using
-    the free browser-based Tinkercad. Students can progress from creating simple 3D
-    shapes to working with actual NASA data on exploded stars, testing in augmented
-    reality, and using loops and time-based changes with codeblocks.
-  tutorial_blupants_longdescription: Train a real autonomous robot to pick up blocks
-    and deploy them to the goal by navigating through an obstacle course. Start with
-    drag-and-drop interface, and advance to Python as you get more experienced.
-  tutorial_legodance_longdescription: Synchronize motor movements of a break dancer
-    to keep in rhythm with light and beats.
-  tutorial_nearpodcoding_longdescription: In this 25-30 minute Nearpod featuring Flocabulary
-    topic spark, students are introduced to coding through a hip hop video and Nearpod's
-    signature interactive features. This lesson features the Flocabulary video Coding.
-  tutorial_kcjplastic_longdescription: We're challenging you to use data visualization
-    to develop a plastic pollution solution! Discover where plastic waste comes from
-    and why it has become a global problem. Then reflect on your own plastic use,
-    estimate how much waste you could reduce over time, and design an invention or
-    alternative that could help. Kids can complete this project by themselves or with
-    support from a grown up.
-  tutorial_legojourney_longdescription: 'Journeys are exciting!  Challenge students
-    to remix our Grasshopper Journey project in order to create a new journey and
-    find different ways for a SPIKE Prime inspired virtual grasshopper to move using
-    Scratch 3.0! In addition to CS skills, this teacher facilitated activity can also
-    be used to support areas such as language arts, science and the arts. '
-  tutorial_legohopper_longdescription: Design multiple prototypes to find the most
-    effective way to move a robot without using wheels.
+  tutorial_educativechatbot_longdescription: 인공지능과 머신 러닝의 세계는 물론 챗봇 프로그래밍 방법에 관해 배웁니다!
+  tutorial_educodebasics_longdescription: 프로그래밍 기초를 배우고 프로세스 내에서 자신의 게임을 만듭니다!
+  tutorial_codehsdesign_longdescription: '코더는 프로그래밍으로 아티스트를 지원하는 방법과 HTML을 사용하여 그들
+    자신의 온라인 숍 모형을 제작하는 방법을 배울 것입니다. '
+  tutorial_htmlacademyphp_longdescription: 웹 디자인 스튜디오에서 온라인 스토어를 개발하고 있는 선임 프로그래머
+    작은 코끼리 덤보를 만나세요. 여러분의 함께 참여적인 방식으로 PHP의 기초에 대해 배울 것입니다. 웹 스크립트를 작성해 보고 변수를 배우며
+    PHP 스크립트를 레이아웃에 추가하고 데이터 베이스와 상호작용하며 그러는 과정에서 진짜에 가까운 웹 프로젝트를 만들 것입니다.
+  tutorial_gamefrootdistance_longdescription: "'COVID-19: 확산 차단'에서는 '재택' 요소를 수정하고
+    간단한 뉴스 클릭커를 코딩할 수 있습니다. 이 활동은 사회적 거리두기가 COVID-19와 같은 바이러의 확산속도에 어떤 직접적인 영향을 미치는지
+    보여줍니다. 학생들과 교사는 바이러스 과학과 바이러스가 사회에 미치는 영향에 관한 통찰력을 얻게 되며 동시에 그들의 디지털 능숙도 기량이 한
+    단계 높아 질 것입니다."
+  tutorial_codesterscovid_longdescription: COVID-19 확산을 차단할 수 있는 방법에 관한 PSA를 만들며 파이쎤
+    코딩의 기초를 배웁니다. 사회적 거리 두기와 마스크 착용, 격리, 기타 조치의 중요성에 관한 매우 중요한 정보를 공유하기 위해 애니메이션 인터액티브
+    PAS를 직접 설계하세요.
+  tutorial_ttbunker_longdescription: 여러분은 벙커를 찾았으며 일단 암호를 풀면 그것의 비밀 모두를 알게 될 것입니다.
+    군인들이 가까이 다가 오고 있고 여러분은 프로그래밍의 힘을 사용하여 경계선을 지켜야 합니다. 새로운 코딩 라인을 추가하고 값을 변경하여 각각의
+    탑과 설정 범위, 손상, 더 특별한 힘을 코딩하세요. 클래스와 인스턴스가 어떻게 여러분을 심지어 더 강력하게 만들 수 있는지 알게될 정도로
+    충분히 길게 생존하세요.
+  tutorial_cuttle_longdescription: '이러한 재미있고 인터랙티브한 과제로 자신에게 도전해 보고 컴퓨팅 사고에 관한 모든
+    것을 배우세요. '
+  tutorial_bsdjokes_longdescription: 이 과정을 통해 학생들을 코드를 그들에게 중요하고 흥미있는 것을 공유하는 수단으로서
+    사용할 수 있습니다. 그들은 레슨을 따라 하거나 또는 고유 프로젝트를 하며 HTML, CSS, 자바스크립트를 배웁니다. '수수께끼'는 여러분이
+    가장 관심을 갖는 또는 가장 하고 싶어하는 세 가지 일에 관한 웹사이트를 만드는 데 중점을 둡니다.#codeisyourvoice
+  tutorial_rptree_longdescription: 스크래치를 사용하여 숲의 건강과 삼림 벌채 수준의 변화가 나무와 야생 생물, 이산화탄소
+    흡수량에 미치는 영향을 보여주는 시뮬레이션을 만드세요. 여러분은 이미 스크래치 좌표와 변수가 작동하는 방식을 알고 있어야 합니다.
+  tutorial_codestersunity_longdescription: '목록과 루프, 스프라이트를 포함하여 파이썬 코딩의 기초를 배우세요.
+    그 다음, 목록에 저장된 각 스프라이트에 접근하기 위해 루프를 사용하여 벽화를 만드세요. '
+  tutorial_codesterssoccer_longdescription: '파이썬 코딩의 기초를 배우고 그 다음, 축구 공을 차서 골대에 넣는
+    프로그램을 만드세요. 슈팅을 조준하기 위해 먼저 선의 기울기를 예측해야 합니다. 행운을 빌어요! '
+  tutorial_breakoutlock_longdescription: '로봇 해스피는 여러분의 도움이 필요합니다!  그녀가 로킷의 코드를 고치고
+    시스템을 리부팅하는데 루프와 알고리즘, 코딩에 관한 여러분의 지식이 필요합니다. '
+  tutorial_thunkablemask_longdescription: 올바른 마스크 착용법을 알면 포인트를 주는 모바일 앱 제작 방법을 배우세요!
+  tutorial_cafarming_longdescription: 컴퓨터 과학은 배고픈 세상에 먹거리를 제공하는데 도움을 줄 수 있습니다. 농부는
+    기술을 사용하여 식품을 더 스마트하고 더 지속가능한 방식으로 재배합니다. 애그리봇과 드론이 작물을 모니터링하고 물을 뿌려 주며 심지어 성가신
+    잡초도 처리해 줄 수 있습니다! AI와 컴퓨터 비전, 사물인터넷이 농장에서 어떻게 사용되고 있는지 배워 보세요.
+  tutorial_blocksmithyeti_longdescription: 오 안돼요! 누군가 예티를 가두고 있어요! 여러분과 여러분의 프로그램
+    가능한 스마트 대포가 예티를 구하고 친구들에게 먹을 거리를 줄 수 있어요. 학생들은 자바스크립트를 사용하여 예티를 이 재미있는 인터랙티브 자기
+    맞춤형 레슨으로 구할 것입니다.
+  tutorial_codecapture_longdescription: 단지 펜과 종이, 모바일 폰 만을 사용하여 자바스크립트 프로그래밍 세계로 첫
+    발을 내딛으세요!
+  tutorial_codehslitter_longdescription: '세상에서 가장 큰 문제점 중 하나인 쓰레기 문제를 풀기 위해 프로그래밍을
+    사용하는 방법을 배우세요! 이 ''모험을 선택하세요'' 아워오브코드에서는 파이썬의 기초와 웹 설계의 기초 중 하나를 선택해야 합니다. 어느
+    것을 선택하든, 지역사회에서 쓰레기 양을 줄이기 위해 컴퓨터 과학을 어떻게 활용하는지 탐구할 것입니다.  '
+  tutorial_bsdocean_longdescription: '수중 생물은 오늘날 우리가 당면하고 있는 긴급한 문제인 환경 문제에 초점을 맞춥니다.
+    이 프로젝트는 수자원을 보호하기 위한 웹페이지를 코딩하는 법을 안내합니다. '
+  tutorial_itchplatformer_longdescription: 스크래치를 사용하여 간단한 플랫포머 게임을 만드는 법을 위한 쉽게 따라할
+    수 있는 튜토리얼.
+  tutorial_codejika_longdescription: 'HTML 및 CSS를 사용하는 코딩을 소개합니다. 몇 줄을 코딩하고 두 개 색상의
+    그라데이션 배경과 이름, 웹사이트 시작 일이 담긴 랜딩 페이지를 만들어 어떻게와 왜에 얽매이지 않고 즉시 결과물을 보세요. '
+  tutorial_gamefrootclicker_longdescription: 학습자는 자신의 클리커 게임을 코딩하고, 프로세스 중 변수와 여러
+    날짜 유형, 조건문 로직, 비교 연산자에 관해 배우며, 전문 개발 개발자가 실제 게임을 설계하고 제작하는 방식에 관한 가치 있는 통찰력을 얻습니다.
+    튜토리얼을 마치면, 여러분은 여러 변수 유형을 코딩하고 게임을 발표하며 고유한 맥락 내에서 컴퓨터 과학에 관여하게 될 것입니다.
+  tutorial_rmagicequity_longdescription: '코드로 불평등 감소와 관련된 개념: 제한된 자원, 평등, 공평, 해방 등을
+    탐구합니다. 자기 주도적 블록 환경에서 변수와 함수를 사용하세요. 3D 액터를 애니메이션화하는 것으로 끝냅니다.'
+  tutorial_ttfreestyle_longdescription: 여러분은 새 뮤직 비디오의 안문가이자 감독입니다! 댄서와 장면 등을 위치를
+    정하고 컨트롤하기 위해 실제 코드를 입력하세요. 대소문자와 구두점을 정확하게 구분하여 사용해야 하며 그렇지 않으면 전체가 정지 상태가 될 것입니다.
+  tutorial_ozobotcolor2_longdescription: '학생들은 오조봇의 기본적인 기능을 배울 것입니다. 학생들은 오조봇이 읽을
+    수 있는 색상 코드 그리는 법을 배울 것입니다. '
+  tutorial_ozobotcolor3_longdescription: '학생들은 봇이 색상 코드로 왼쪽과 오른쪽, 똑바로 이동하도록 프로그래밍
+    하는 법을 배울 것입니다. '
+  tutorial_clcarbon_longdescription: '일상에 기초한 짧은 퀴즈에 기초하여 탄소 발자국을 계산하고 비교 미터법(즉, 이것은
+    xxxx와 동일한 탄소량이 입니다)을 제공하며 더 환경친화적이 되는 방법을 제안하는 탄소 발자국 계산기 만드는 법을 학생들에게 가르쳐 줄 파이썬
+    레슨. '
+  tutorial_kodablebasics_longdescription: 컴퓨터가 없어요? 괜찮아요! 기기 없이 핵심 코딩 명령어를 사용하여 기초
+    프로그래밍 스킬을 배우고 연습하세요.
+  tutorial_scigirlscc_longdescription: 학생들이 유사부호 작성법을 배울 수 있게 도와 주세요! 컴퓨터 프로그래머는 종종
+    일상의 언어를 사용하여 코드에 일어났으면 원하는 바를 작성하며 프로젝트를 시작하는데 그것을 유사부호라고 부릅니다. 어린 학생들은 그룹을 이뤄
+    간단한 움직임 또는 댄스 동작을 위한 유사부호를 작성할 것입니다.
+  tutorial_irobotpicture_longdescription: '로봇에는 로봇이 주위에 있는 모든 것을 이해하도록 돕기 위해 함께 일하는
+    많은 센서가 들어 있습니다. 센서와 마찬가지로 친구들은 사물을 보거나 듣고 느끼고 이해할 수 있지만 우리는 그럴 수 없습니다. 이 활동에서는
+    함께 비밀 메시지를 해독하고 코드를 풀어 보세요. '
+  tutorial_kcjmyself_longdescription: 이 활동에서 여러분은 스크래치 사용법을 배워 여러분 자신에 관한 애니메이션을 코딩할
+    것입니다. 여러분 자신을 나타내는 맞춤형 캐릭터를 디자인하고 그것을 이러저리 이동하게 만들며 다른 백드롭을 추가하여 살고 있는 동네를 나타내세요.
+    이 프로젝트는 아동이 스스로 완료하거나 또는 성인의 도움을 받아 완료할 정도로 충분히 간단합니다.
+  tutorial_nearpodalgorithms_longdescription: 이 니어팟 레슨에서, 학생들은 알고리즘을 단계별 지시사항으로서 식별합니다.
+    학생들은 특정 과제를 완료하기 위해 알고리즘을 만들고 테스트하며 고치는 법을 배웁니다.
+  tutorial_kibodrop_longdescription: 엔지니어링은 끈기와 투지에 관한 것입니다. 오늘 학생들은 엔지니어가 되어 볼 것이며
+    엔지니어링 설계 프로세스의 각 단계를 배울 것입니다. 수공예품과 재활용 재료로 모형을 만들고 그 다음, 발목 높이에서 모형을 떨어 뜨려 모형의
+    견고함을 테스트할 것입니다. 이것은 언플러그드 활동이며 키보 로봇은 선택사항입니다.
+  tutorial_ozobotcolor1_longdescription: 학생들은 봇의 센서 보정법과 봇이 따라갈 선 그리는 법을 포함하여 오조봇의
+    기본적인 기능을 배울 것입니다.
+  tutorial_scigirlspixels_longdescription: 이 언플러그드 활동에서, 여러분은 픽셀에 대해 또한 간단한 흑백이미지를
+    친구에게 전송하는 법을 배울 것입니다.
+  tutorial_kcjheroines_longdescription: '이 활동에서, 여러분은 역사를 만든 여러 캐나다 여성에 관해 배울 것입니다.
+    그들의 삶과 업적을 기념하는 비디오 게임 코딩법을 스크래치를 사용하여 배울 것입니다. 그 중 한 명을 선택하고 의상과 백드롭을 지정하고 움직임과
+    게임 목표를 코딩하고 점수를 기록합니다. 이 프로젝트는 아동이 스스로 완료하거나 또는 성인의 도움을 받아 완료할 정도로 충분히 간단합니다.   '
+  tutorial_ozobotvalue_longdescription: '학생들은 오조봇을 사용하여 무작위로 장소 값을 선택하고 세자리 수로 동일
+    장소 값을 식별하고 그 번호를 쓸 것입니다. '
+  tutorial_icodebytes_longdescription: '테크놀로지 없이 컴퓨터 과학에 대해 배우세요! 학급에서 또는 가정에서 가족과
+    함께 즐길 수 있는 5-7세 아동을 위한 재미있는 언플러그드 컴퓨팅 활동. 활동은 정말 재미있는 방식으로 컴퓨팅 사고력을 키우는데 도움을 줍니다.
+    컴퓨터 과학의 기초 원리로 나눠져 있으며 알고리즘 만들기와 논리적 사고, 패턴 알아 맞추기, 규칙 찾기 또는 만들기를 합니다. '
+  tutorial_clfashion2_longdescription: 코드에 관심이 있는 유행에 민감한 데이터 과학자입니까? 데이터 과학 패션 리더
+    수업을 신청하여 코딩과 패션의 관련성에 관해 배우세요. SQL 코드를 데이터 과학과 함께 사용하여 마케팅과 라인 스타일, 스토어 운영에 관해
+    조사할 것입니다.
+  tutorial_ai4all_longdescription: '이 AI 바이트는 데이터가 어떻게 AI 모델의 아웃풋이 되는지, 인간의 편견이 어떻게
+    데이터세트에 주입되는지, 예술 및 창의성 등을 포함하여 다양한 영역에서 AI가 어떻게 사용되는지를 포함하여 모던 AI의 핵심 아이디어에 익숙해
+    지게 하기 위한  빠르고 재미있는  교사 진행 방식으로 의도되었습니다. 학생들은 Google Quick, Draw로 그리기를 탐구함으로써 이와
+    같은 내용을 배웁니다. '
+  tutorial_cldata_longdescription: 가장 가치있는 기량 중 하나인 데이터 과학을 발견하고 세상을 보십시오! 데이터 과학이
+    수학처럼 건조하고 무섭게 들리세요? 두려워 마세요. 이 입문 교실은 여러분이 이미 데이터 전문가이며 데이터는 축구와 미술, 좋아하는 책과 같은
+    주제와 관련된 재미와 흥미로운 내용으로 가득 차 있음을 보여줄 것입니다. 대면 또는 원격 학습 설정용으로 준비된 교재.
+  tutorial_spheroinputs_longdescription: '이 활동은 인풋과 아웃풋이라는 컴퓨터 과학의 코딩 개념과 이 아이디어가
+    선의를 위한 컴퓨터 과학 사용과의 관련성에 관해 생각해 보게 할 것입니다. '
+  tutorial_edisoncount_longdescription: '에디슨 로봇과 블록 기반 프로그래밍 언어인 EdBlocks을 이 학생 주도
+    활동에서 사용하여 인풋과 아웃풋이라는 주요 컴퓨팅 개념을 소개합니다. 일련의 프로그래밍 과제를 통해 에디슨 로봇의 운전 기능을 활용하세요.
+    로봇이 ''추적''하도록 프로그램을 제작하려면 인풋-프로세스-아웃풋 사이클을 순차적으로 생각하고 이해할 수 있어야 합니다.  '
+  tutorial_spheroloops_longdescription: '이 활동은 루프라는 컴퓨터 과학의 코딩 개념과 이 아이디어가 선의를 위한
+    컴퓨터 과학 사용과의 관련성에 관해 생각해 보게 할 것입니다. '
+  tutorial_kiboprogram_longdescription: 이 레슨에서, 아동은 프로그래밍에서 시퀸싱과 키보의 언어와 같은 프로그래밍
+    언어를 구성하는 기호에 관해 배울 것입니다. 학생들은 그들 자신의 프로그래밍 기호를 만들고 그들 자신의 이동으로 구성된 프로그램을 제작할 것입니다.
+    마지막으로 그들은 그러한 이동 프로그램을 키보를 위한 프로그램으로 변환할 수 있습니다.
+  tutorial_hellorubycsin60_longdescription: '컴퓨터 전선 안에서 무엇이 이동하고 있는지 궁금해 본 적 있어요?
+    또는 왜 컴퓨터 부품이 작은 도시처럼 보일까요? 또는 알고리즘은 정말 무엇인가요? 이러한 30편의 1분 분량의 동영상은 5-9세 아동용이며,  아동이
+    가정에서 쉽게 할 수 있는 활동이 그 뒤에 이어집니다. 주제에는 코드와 하드웨어, 네트워크, AI, 기타 흥미로운 아이디어가 포함됩니다. '
+  tutorial_clfashion1_longdescription: 코드에 관심이 있는 유행에 민감한 데이터 과학자입니까? 데이터 과학 패션 리더
+    수업을 신청하여 코딩과 패션의 관련성에 관해 배우세요. SQL 코드를 데이터 과학과 함께 사용하여 마케팅과 라인 스타일, 스토어 운영에 관해
+    조사할 것입니다.
+  tutorial_irobottraffic_longdescription: 신호등은 우리 일상에서 안전의 필수 요소입니다. 루트 로봇으로 자신만의
+    신호등을 코딩하고 그 발명가에 관해 배우세요.
+  tutorial_edisonmystery_longdescription: 이 학생 주도 활동에서 에디슨 로봇과 스크래치 기반 프로그래밍 언어 EdScratch를
+    사용하여 에디슨의 라인 트랙커 사용에 관한 탐구를 빠르게 시작하세요. 학생들은 먼저 에디슨 로봇의 라인 추적 센서 기술에 익숙해 지고 다른
+    색상 표면 위에서 빨간색 LED로 실험합니다. 그 다음, 알고리즘 개념을 사용하여 미스터리 선을 완전히 파악하는 단계로 이동할 것입니다.
+  tutorial_microbitseaturtles_longdescription: 바다 거북이의 안전을 위해 해변 통로에 빛을 비추는 데 사용하는
+    저전력 빨간색 해변 조명의 원형을 만듭니다.
+  tutorial_ozobotknow_longdescription: 이 레슨에서 학생들은 오조봇 에보의 하드웨어와 로봇공학 구성요소를 소개 받습니다.
+  tutorial_imagilabs_longdescription: '깜박이는 하트와 로켓 우주선 발사, 이름 또는 상상할 수 있는 아무거나 프로그래밍하세요!
+    시작하기 위해, 우리는 여러분에게 하트를 좋아하는 색상으로 칠하고 그 다음 좋아하는 음악의 리듬에 맞쳐 깜박이게 만드는 프로그래밍 방법을 가르쳐
+    줄 거예요. 우리의 imagiCoders 커뮤니티에 가입하여 디자인을 공유하고 교환하세요. 작품을 imagiCharm에 업로드하여 어디를 가든
+    여러분이 작성한 코드를 자랑스럽게 입고 다닐 수 있습니다! '
+  tutorial_irobotsimulator_longdescription: '이 프로젝트 팩킷으로 코딩 프로젝트를 만들고 다운로드하는 법을 배우세요!
+    모든 퍼즐을 루트 심봇과 함께 가상 경기장 안에서 풀고 끝에서 비밀 메시지를 밝혀 보세요!  '
+  tutorial_irobotkind_longdescription: '우리의 로봇은 친구와 놀 때 친절한 선택을 하는 법을  여전히 배우고 있습니다.
+    이 게임에서 루트가 네 가지 결정을 연속으로 내리며 연습할 수 있게 도와 주세요. 루트가 잘못 선택하면, 처음부터 다시 시작해야 합니다! 함께
+    플레이해요!  '
+  tutorial_firiavirtual_longdescription: '파이썬 프로그래밍을 강력한 3D 로봇 시뮬레이터로 학습하세요. 여러분은
+    가상 환경에서 현실적인 물리학으로 어려운 미션을 완수할 것입니다. 이 미션은 여러분에게 모터와 LED, 코드봇 상의 다른 주변기기를 컨트롤하기
+    위한 코드를 가르쳐 줍니다. 또한 샌드박스 모델은 여러분이 한계가 없는 파이썬 코딩의 가능성으로 창의적이 되게 해 줍니다! '
+  tutorial_irobotguesscode_longdescription: '코드를 통해 픽셔너리에 새로운 회전을 넣으세요! 학생들은 코드를 사용해
+    루트 심봇이 어떤 그림 또는 노래, 단어를 만들지 추측할 수 있습니다. 자신의 픽셔너리 창작품 역시 코딩하세요! '
+  tutorial_ozobotnouns_longdescription: 이 레슨에서 학생들은 불규칙 복수 명사의 철자를 바르게 쓰고 사용하는 법을
+    식별하며 컬러 코드를 사용하여 오조봇을 좌우로 회전하게 하여 맞는 불규칙 복수 명사로 이동하게 하고 문장 안에서 명사를 사용하도록 프로그래밍할
+    것입니다.
+  tutorial_nasa3d_longdescription: '폭발하는 항성과 3D 모델, 코드블록에 관해 배우세요! 이 우주 활동은 무료 브라우저
+    기반 팅커캐드를 사용하는 천문학 3D 모델링의 기초를 소개합니다. 학생들은 간단한 3D 도형 만들기부터 시작하여 폭발한 항성에 관한 실제 NASA
+    데이터로 작업하고 증강현실에서 테스트하고 루프 사용과 코드블록에 의한 시간 기반 변화 사용까지로 실력을 키울 수 있습니다.  '
+  tutorial_blupants_longdescription: '블록을 집어 올리고 장애물 코스를 통과해 목적지까지 운반하도록  실제 자율 로봇을
+    교육시키세요. 드롭 앤 드롭 인터페이스로 시작하고 더 경험이 쌓이면 더 높은 단계인 파이썬을 시도해 보세요. '
+  tutorial_legodance_longdescription: 브레이크 댄서의 모터 동작을 동기화하여 조명과 박자로 리듬을 유지하세요.
+  tutorial_nearpodcoding_longdescription: Flocabulary의 주제 스파크가 나오는 이 25-30분 니어팟에서,
+    학생들은 힙합 비디오와 니어팟의 시그니쳐 인터랙티브 특징을 통해 코딩에 관한 소개를 받습니다. 이 레슨은 Flocabulary 동영상 코딩으로
+    이루어졌습니다.
+  tutorial_kcjplastic_longdescription: 우리는 여러분에게 데이터 시각화를 사용하여 플라스틱 오염 해결책을 개발하도록
+    요구할 것입니다. 플라스틱 폐기물이 어디서 오고 왜 전 세계적 문제가 되고 있는지 알아 내세요. 그 다음, 자신의 플라스틱 사용법을 성찰하고
+    시간이 지나며 쓰레기량을 얼마나 줄일 수 있는지 예측하고 도움이 될 수 있는 발명품 또는 대체품을 설계하세요. 아동은 이 프로젝트를 스스로
+    또는 성인의 도움을 받아 완료할 수 있습니다.
+  tutorial_legojourney_longdescription: '여정은 흥미진진합니다! 학생들에게 메뚜기 여정 프로젝트를 리믹스하여 새로운
+    여정을 만들고 스파이크 프라임에게 영감을 받은 가상 메뚜기가 스크래치 3.0을 사용하여 이동할 수 있는 다른 방법  찾아내게 하세요! CS
+    기량 외에 이 교사 진행 활동은 또한 언어와 과학, 미술 등과 같은 영역을 지원하는데 사용될 수 있습니다. '
+  tutorial_legohopper_longdescription: '원형을 여러 개 설계하여 로봇이 바퀴 없이도 이동할 수 있는 가장 효과적인
+    방법을 찾아 내세요. '
   tutorial_catrobatembroidery_longdescription: Android 휴대 전화에서 디자인을 코딩하고 티셔츠, 바지,
     체육관 가방 또는 신발에 꿰매세요!
-  tutorial_irobotphone_longdescription: In this coding challenge, students will work
-    together remotely to create a collective program that draws a picture. Modeled
-    after the classic game of Telephone, students will receive, remix, and pass along
-    code down the telephone chain. Will your team fulfill the Picture Goal by the
-    time you reach the end?
-  tutorial_codeguppydraw_longdescription: Quick introduction to text-based coding
-    using fun and engaging type-in JavaScript programs
-  tutorial_codejumper_longdescription: In this lesson from the Code Jumper curriculum,
-    learners explore networks in a hands-on unplugged experience using typical materials
-    found in a classroom. The theme for this lesson is around messages of kindness
-    to others. This lesson has been specifically designed to be accessible for students
-    with visual impairments.
+  tutorial_irobotphone_longdescription: '이 코딩 챌린지에서, 학생들은 원격으로 함께 그림을 그리는 집단 프로그램을
+    만들 것입니다. 전화기라는 클래식 게임을 모델로 삼아, 학생들은 코드를 받고 리믹스하여 전화기 체인을 따라 그것을 전달할 것입니다. 여러분의
+    팀이 여러분이 끝에 도달하는 시점까지 그림 목표를 달성할 수 있을까요? '
+  tutorial_codeguppydraw_longdescription: 자바스크립트로 입력하는 재미있고 매력적인 프로그램을 사용하여 텍스트 기반
+    코딩을 빠르게 소개.
+  tutorial_codejumper_longdescription: '코드 점퍼 커리큘럼의 이 레슨에서, 학습자는 교실에서 흔히 찾을 수 있는 재료로
+    직접 해보는 언플러그드 경험을 통해 네트워크에 대해 탐구합니다. 이 레슨의 주제는 타인에게 친철한 메시지에 관한 것입니다. 이 레슨은 특별히
+    시각장애가 잇는 학생들이 접근할 수 있게 설계되었습니다. '
   tutorial_meeempathy_longdescription: 주민들과 우민들은 수백 년 동안 같은 곳에 살면서도 서로 교류하는 일이 별로
     없었습니다. 이제 여러분은 코딩의 힘으로 두 마을을 하나로 묶어줄 수 있습니다. 플레이어들은 이웃들에 대한 동정과 사랑을 경험하고, 협동과
     포용에 대해 배우고, 우리 모두를 개성적으로 만들어주는 다양성을 받아들이게 될 것입니다.
@@ -4946,43 +4810,42 @@ ko:
   tutorial_n2y_language: 한국어
   tutorial_microsoftarcade_language: 한국어
   tutorial_csfirstunplugged_language: 영어, 스페인어 (멕시코)
-  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
-    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
-    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_toxicodepython_language: 덴마크어, 네덜란드어, 영어, 영어 (영국), 에스토니아어, 프랑스어, 독일어, 인도네시아어,
+    이탈리아어, 기타, 폴란드어, 포르투갈어 (브라질), 포르투갈어 (포르투갈), 루마니아어, 스페인어 (스페인), 스페인어 (멕시코), 스웨덴어,
+    터키어
   tutorial_codecombatozaria_language: 简体中文，英语，英语（英国），西班牙文（西班牙，墨西哥）
   tutorial_vidcodedate_language: 한국어
-  tutorial_codemonkeyspace_language: English, English (UK), Hebrew
+  tutorial_codemonkeyspace_language: 영어, 영어 (영국), 히브리어
   tutorial_codespeakhappy_language: 한국어
-  tutorial_grokimage_language: English, English (UK)
+  tutorial_grokimage_language: 영어, 영어 (영국)
   tutorial_icomputelearn_language: 한국어
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: 아랍어, 네덜란드어, 영어, 영어 (영국), 프랑스어, 스페인어 (멕시코)
   tutorial_bsdcause_language: 한국어
-  tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimoji_language: 영어, 스페인어 (스페인), 스페인어 (멕시코)
+  tutorial_vidcodeanimojies_language: 영어, 스페인어 (스페인), 스페인어 (멕시코)
   tutorial_bsdinspire_language: 한국어
   tutorial_tttractor_language: 한국어
   tutorial_codeillusionmickey_language: 한국어
   tutorial_scigirlsquest_language: 한국어
   tutorial_codespeakbreathe_language: 한국어
   tutorial_vidcodeface_language: 한국어
-  tutorial_educodemaze_language: English, English (UK)
-  tutorial_educoderace_language: English, English (UK)
+  tutorial_educodemaze_language: 영어, 영어 (영국)
+  tutorial_educoderace_language: 영어, 영어 (영국)
   tutorial_codespeakchatbot_language: 한국어
   tutorial_gamefrootgames_language: 한국어
   tutorial_codespeakgrandparent_language: 한국어
-  tutorial_educodekingdom_language: English, English (UK)
+  tutorial_educodekingdom_language: 영어, 영어 (영국)
   tutorial_codehsdata_language: 한국어
-  tutorial_educodecake_language: English, English (UK)
+  tutorial_educodecake_language: 영어, 영어 (영국)
   tutorial_ttsecond_language: 한국어
   tutorial_bsdtrivia_language: 한국어
   tutorial_csfirstdialogue_language: 영어, 스페인어 (멕시코)
-  tutorial_codemonkeybeaver_language: Arabic, Chinese (Simplified), English, Hebrew,
-    Japanese, Spanish (Spain), Spanish (Mexico)
+  tutorial_codemonkeybeaver_language: 아랍어, 중국어 (간체), 영어, 히브리어, 일본어, 스페인어(스페인), 스페인어
+    (멕시코)
   tutorial_codestersdistance_language: 한국어
   tutorial_itchspace_language: 한국어
-  tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagic_language: 영어, 스페인어 (스페인), 스페인어 (멕시코)
+  tutorial_vidcodemagices_language: 영어, 스페인어 (스페인), 스페인어 (멕시코)
   tutorial_codespeakmeal_language: 한국어
   tutorial_itchfish_language: 한국어
   tutorial_bsdwebsite_language: 한국어
@@ -4990,14 +4853,13 @@ ko:
   tutorial_itchwebcam_language: 한국어
   tutorial_itchball_language: 한국어
   tutorial_ttrace_language: 한국어
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
-    Portuguese (Brazil), Spanish
-  tutorial_educodesecret_language: English, English (UK)
+  tutorial_plethora_language: 아랍어, 중국어 (간체), 영어, 프랑스어, 히브리어,  포르투갈어(브라질), 스페인어
+  tutorial_educodesecret_language: 영어, 영어 (영국)
   tutorial_itchshapes_language: 한국어
   tutorial_codeguppytext_language: 한국어
   tutorial_vidcodeplastiche_language: 영어, 히브리어
   tutorial_educativechatbot_language: 한국어
-  tutorial_educodebasics_language: English, English (UK)
+  tutorial_educodebasics_language: 영어, 영어 (영국)
   tutorial_codehsdesign_language: 한국어
   tutorial_htmlacademyphp_language: 한국어
   tutorial_gamefrootdistance_language: 한국어
@@ -5005,53 +4867,52 @@ ko:
   tutorial_ttbunker_language: 한국어
   tutorial_cuttle_language: 한국어
   tutorial_bsdjokes_language: 한국어
-  tutorial_rptree_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rptree_language: 아랍어, 네덜란드어, 영어, 영어 (영국), 프랑스어, 스페인어 (멕시코)
   tutorial_codestersunity_language: 한국어
   tutorial_codesterssoccer_language: 한국어
   tutorial_breakoutlock_language: 한국어
   tutorial_thunkablemask_language: 한국어
   tutorial_cafarming_language: 한국어
   tutorial_blocksmithyeti_language: 한국어
-  tutorial_codecapture_language: English, English (UK)
-  tutorial_codehslitter_language: English, English (UK)
+  tutorial_codecapture_language: 영어, 영어 (영국)
+  tutorial_codehslitter_language: 영어, 영어 (영국)
   tutorial_bsdocean_language: 한국어
   tutorial_itchplatformer_language: 한국어
-  tutorial_codejika_language: English, English (UK)
+  tutorial_codejika_language: 영어, 영어 (영국)
   tutorial_gamefrootclicker_language: 한국어
-  tutorial_rmagicequity_language: English, English (UK)
+  tutorial_rmagicequity_language: 영어, 영어 (영국)
   tutorial_ttfreestyle_language: 한국어
   tutorial_ozobotcolor2_language: 한국어
   tutorial_ozobotcolor3_language: 한국어
-  tutorial_clcarbon_language: English, English (UK)
+  tutorial_clcarbon_language: 영어, 영어 (영국)
   tutorial_kodablebasics_language: 한국어
   tutorial_scigirlscc_language: 영어, 스페인어 (멕시코)
   tutorial_irobotpicture_language: 한국어
   tutorial_kcjmyself_language: 영어, 프랑스어
   tutorial_nearpodalgorithms_language: 한국어
-  tutorial_kibodrop_language: English, English (UK)
+  tutorial_kibodrop_language: 영어, 영어 (영국)
   tutorial_ozobotcolor1_language: 한국어
   tutorial_scigirlspixels_language: 영어, 스페인어 (멕시코)
   tutorial_kcjheroines_language: 영어, 프랑스어
   tutorial_ozobotvalue_language: 한국어
   tutorial_icodebytes_language: 한국어
-  tutorial_clfashion2_language: English, English (UK)
+  tutorial_clfashion2_language: 영어, 영어 (영국)
   tutorial_ai4all_language: 한국어
-  tutorial_cldata_language: English, English (UK)
+  tutorial_cldata_language: 영어, 영어 (영국)
   tutorial_spheroinputs_language: 한국어
   tutorial_edisoncount_language: 한국어
   tutorial_spheroloops_language: 한국어
-  tutorial_kiboprogram_language: English, English (UK)
-  tutorial_hellorubycsin60_language: English, English (UK)
-  tutorial_clfashion1_language: English, English (UK)
+  tutorial_kiboprogram_language: 영어, 영어 (영국)
+  tutorial_hellorubycsin60_language: 영어, 영어 (영국)
+  tutorial_clfashion1_language: 영어, 영어 (영국)
   tutorial_irobottraffic_language: 한국어
   tutorial_edisonmystery_language: 한국어
-  tutorial_microbitseaturtles_language: English, English (UK)
+  tutorial_microbitseaturtles_language: 영어, 영어 (영국)
   tutorial_ozobotknow_language: 한국어
-  tutorial_imagilabs_language: English, English (UK)
+  tutorial_imagilabs_language: 영어, 영어 (영국)
   tutorial_irobotsimulator_language: 한국어
-  tutorial_irobotkind_language: English, English (UK)
-  tutorial_firiavirtual_language: English, English (UK)
+  tutorial_irobotkind_language: 영어, 영어 (영국)
+  tutorial_firiavirtual_language: 영어, 영어 (영국)
   tutorial_irobotguesscode_language: 한국어
   tutorial_ozobotnouns_language: 한국어
   tutorial_nasa3d_language: 한국어
@@ -5065,8 +4926,8 @@ ko:
     영어 (영국), 프랑스어, 독일어, 힌디어, 인도네시아어, 이탈리아어, 일본어, 한국어, 노르웨이어 (니 노르 스크), 기타, 폴란드어, 포르투갈어
     (브라질), 포르투갈어 ( 포르투갈), 러시아어, 세르비아어 (키릴 자모), 세르비아어 (라틴 문자), 슬로바키아어, 스페인어 (스페인, 멕시코),
     스와힐리어, 스웨덴어, 타밀어, 태국어, 터키어, 우르두어 (파키스탄), 베트남어
-  tutorial_irobotphone_language: English, English (UK)
-  tutorial_codeguppydraw_language: English, English (UK)
+  tutorial_irobotphone_language: 영어, 영어 (영국)
+  tutorial_codeguppydraw_language: 영어, 영어 (영국)
   tutorial_codejumper_language: 한국어
   tutorial_meeempathy_language: 중국어, 덴마크어, 네덜란드어, 영어, 프랑스어, 이탈리아어, 일본어, 한국어, 노르웨이어,
     포르투갈어, 스페인어, 스웨덴어, 터키어
@@ -5701,7 +5562,7 @@ ko:
   tutorial_codehsdesign_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_htmlacademyphp_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_gamefrootdistance_string_detail_grades: 초등 2학년 이상
-  tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
+  tutorial_codesterscovid_string_detail_grades: 6-8 학년
   tutorial_ttbunker_string_detail_grades: 6-8 학년
   tutorial_cuttle_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_bsdjokes_string_detail_grades: 6-8 학년
@@ -6421,8 +6282,7 @@ ko:
   tutorial_educodemaze_string_platforms: 최신 웹 브라우저
   tutorial_educoderace_string_platforms: 최신 웹 브라우저
   tutorial_codespeakchatbot_string_platforms: 크롬, 파이어폭스
-  tutorial_gamefrootgames_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone
+  tutorial_gamefrootgames_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 안드로이드 폰
   tutorial_codespeakgrandparent_string_platforms: 크롬, 파이어폭스
   tutorial_educodekingdom_string_platforms: 최신 웹 브라우저
   tutorial_codehsdata_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
@@ -6465,7 +6325,7 @@ ko:
   tutorial_thunkablemask_string_platforms: 최신 웹 브라우저
   tutorial_cafarming_string_platforms: 크롬, 파이어폭스
   tutorial_blocksmithyeti_string_platforms: 최신 웹 브라우저
-  tutorial_codecapture_string_platforms: All modern browsers, Android phone, iPhone
+  tutorial_codecapture_string_platforms: 모든 최신 브라우저, 안드로이드 폰, 아이패드
   tutorial_codehslitter_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드
     폰, 아이폰
   tutorial_bsdocean_string_platforms: 크롬
@@ -6473,8 +6333,8 @@ ko:
   tutorial_codejika_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드 폰,
     아이폰
   tutorial_gamefrootclicker_string_platforms: 모든 브라우저, iPad, 무선 장치
-  tutorial_rmagicequity_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone, Game console app
+  tutorial_rmagicequity_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드
+    폰, 아이폰, 게임 콘솔 앱
   tutorial_ttfreestyle_string_platforms: 크롬
   tutorial_ozobotcolor2_string_platforms: 최신 웹 브라우저
   tutorial_ozobotcolor3_string_platforms: 최신 웹 브라우저
@@ -6499,17 +6359,17 @@ ko:
   tutorial_kiboprogram_string_platforms: 언플러그드
   tutorial_hellorubycsin60_string_platforms: 언플러그드
   tutorial_clfashion1_string_platforms: 최신 웹 브라우저
-  tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
+  tutorial_irobottraffic_string_platforms: 크롬, 안드로이드 태블릿, 안드로이드 폰
   tutorial_edisonmystery_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
   tutorial_microbitseaturtles_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈
     폰, 안드로이드 폰, 아이폰
   tutorial_ozobotknow_string_platforms: 최신 웹 브라우저
-  tutorial_imagilabs_string_platforms: Android phone, iPhone, Unplugged
+  tutorial_imagilabs_string_platforms: 안드로이드 폰, 아이폰, 언플러그드
   tutorial_irobotsimulator_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰,
     안드로이드 폰, 아이폰
   tutorial_irobotkind_string_platforms: 최신 웹 브라우저
-  tutorial_firiavirtual_string_platforms: Microsoft Edge, Chrome
-  tutorial_irobotguesscode_string_platforms: Chrome, Android tablet, Android phone
+  tutorial_firiavirtual_string_platforms: 마이크로소프트 에지, 크롬
+  tutorial_irobotguesscode_string_platforms: 크롬, 안드로이드 태블릿, 안드로이드 폰
   tutorial_ozobotnouns_string_platforms: 최신 웹 브라우저
   tutorial_nasa3d_string_platforms: 최신 웹 브라우저
   tutorial_blupants_string_platforms: 최신 웹 브라우저
@@ -6521,7 +6381,7 @@ ko:
   tutorial_catrobatembroidery_string_platforms: 기계적 인조 인간
   tutorial_irobotphone_string_platforms: 최신 웹 브라우저
   tutorial_codeguppydraw_string_platforms: 최신 웹 브라우저
-  tutorial_codejumper_string_platforms: Unplugged, Sreen reader
+  tutorial_codejumper_string_platforms: 언플러그드, 스크린 리더
   tutorial_meeempathy_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
@@ -7173,19 +7033,19 @@ ko:
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
   tutorial_ttfreestyle_string_detail_platforms: ''
-  tutorial_ozobotcolor2_string_detail_platforms: 'Ozobot Evo  '
-  tutorial_ozobotcolor3_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_ozobotcolor2_string_detail_platforms: '오조봇 이보  '
+  tutorial_ozobotcolor3_string_detail_platforms: '오조봇 이보  '
   tutorial_clcarbon_string_detail_platforms: ''
   tutorial_kodablebasics_string_detail_platforms: ''
   tutorial_scigirlscc_string_detail_platforms: ''
   tutorial_irobotpicture_string_detail_platforms: ''
   tutorial_kcjmyself_string_detail_platforms: ''
   tutorial_nearpodalgorithms_string_detail_platforms: ''
-  tutorial_kibodrop_string_detail_platforms: KIBO Robot Kit (optional)
-  tutorial_ozobotcolor1_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_kibodrop_string_detail_platforms: 키보 로봇 키트 (선택사항)
+  tutorial_ozobotcolor1_string_detail_platforms: '오조봇 이보  '
   tutorial_scigirlspixels_string_detail_platforms: ''
   tutorial_kcjheroines_string_detail_platforms: ''
-  tutorial_ozobotvalue_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_ozobotvalue_string_detail_platforms: '오조봇 이보  '
   tutorial_icodebytes_string_detail_platforms: ''
   tutorial_clfashion2_string_detail_platforms: ''
   tutorial_ai4all_string_detail_platforms: ''
@@ -7193,31 +7053,30 @@ ko:
   tutorial_spheroinputs_string_detail_platforms: ''
   tutorial_edisoncount_string_detail_platforms: ''
   tutorial_spheroloops_string_detail_platforms: ''
-  tutorial_kiboprogram_string_detail_platforms: KIBO Robot Kit (optional)
+  tutorial_kiboprogram_string_detail_platforms: 키보 로봇 키트 (선택사항)
   tutorial_hellorubycsin60_string_detail_platforms: ''
   tutorial_clfashion1_string_detail_platforms: ''
   tutorial_irobottraffic_string_detail_platforms: 루트 로봇
   tutorial_edisonmystery_string_detail_platforms: ''
   tutorial_microbitseaturtles_string_detail_platforms: ''
-  tutorial_ozobotknow_string_detail_platforms: Ozobot Evo (optional)
+  tutorial_ozobotknow_string_detail_platforms: 오조봇 이보 (선택사항)
   tutorial_imagilabs_string_detail_platforms: imagiCharm
   tutorial_irobotsimulator_string_detail_platforms: ''
-  tutorial_irobotkind_string_detail_platforms: Root robot (optional)
+  tutorial_irobotkind_string_detail_platforms: 루트 로봇 (선택사항)
   tutorial_firiavirtual_string_detail_platforms: ''
   tutorial_irobotguesscode_string_detail_platforms: 루트 로봇
-  tutorial_ozobotnouns_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_ozobotnouns_string_detail_platforms: '오조봇 이보  '
   tutorial_nasa3d_string_detail_platforms: ''
   tutorial_blupants_string_detail_platforms: Lego Ev3, Alphabot2, DIY Raspberry Pi
-    robot or DIY Beaglebone Blue robot
-  tutorial_legodance_string_detail_platforms: LEGO Education SPIKE Prime
+    로봇 또는 DIY Beaglebone Blue 로봇
+  tutorial_legodance_string_detail_platforms: LEGO 에듀케이션 SPIKE 프라임
   tutorial_nearpodcoding_string_detail_platforms: ''
   tutorial_kcjplastic_string_detail_platforms: ''
   tutorial_legojourney_string_detail_platforms: ''
-  tutorial_legohopper_string_detail_platforms: LEGO Education SPIKE Prime robot
-  tutorial_catrobatembroidery_string_detail_platforms: Embroidery machine for stitching
-    and USB or network port, plus support of the DST format (standard embroidery file
-    format).
-  tutorial_irobotphone_string_detail_platforms: Root robot (optional)
+  tutorial_legohopper_string_detail_platforms: LEGO 에듀케이션 SPIKE 프라임 로봇
+  tutorial_catrobatembroidery_string_detail_platforms: 스티칭 및 USB 또는 네트워크 포트용 자수 머신,
+    또한 DST 포맷 지원 (표준 자수 파일 포맷).
+  tutorial_irobotphone_string_detail_platforms: 루트 로봇 (선택사항)
   tutorial_codeguppydraw_string_detail_platforms: ''
   tutorial_codejumper_string_detail_platforms: ''
   tutorial_meeempathy_string_detail_platforms: ''
@@ -7809,8 +7668,7 @@ ko:
   tutorial_allcancodeapps_string_detail_programming_languages: 블록
   tutorial_n2y_string_detail_programming_languages: ''
   tutorial_microsoftarcade_string_detail_programming_languages: 블록
-  tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
-    Scratch
+  tutorial_csfirstunplugged_string_detail_programming_languages: 블록, 언플러그드, 스크래치
   tutorial_toxicodepython_string_detail_programming_languages: 파이썬
   tutorial_codecombatozaria_string_detail_programming_languages: 자바 스크립트, 파이썬, 루아,
     커피 스크립트
@@ -7818,8 +7676,7 @@ ko:
   tutorial_codemonkeyspace_string_detail_programming_languages: 커피 스크립트
   tutorial_codespeakhappy_string_detail_programming_languages: 블록
   tutorial_grokimage_string_detail_programming_languages: 파이썬
-  tutorial_icomputelearn_string_detail_programming_languages: Blocks, JavaScript,
-    Scratch
+  tutorial_icomputelearn_string_detail_programming_languages: 블록, 자바스크립트, 스크래치
   tutorial_rpstress_string_detail_programming_languages: 블록
   tutorial_bsdcause_string_detail_programming_languages: 자바 스크립트, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: 자바스크립트
@@ -7873,35 +7730,33 @@ ko:
   tutorial_breakoutlock_string_detail_programming_languages: 블록, 언어와 무관 (복수 언어로 가르칠
     수 있음)
   tutorial_thunkablemask_string_detail_programming_languages: 블록
-  tutorial_cafarming_string_detail_programming_languages: Theory course on impacts
-    of computing.
+  tutorial_cafarming_string_detail_programming_languages: 컴퓨팅의 영향에 관한 이론 과정.
   tutorial_blocksmithyeti_string_detail_programming_languages: 자바스크립트
   tutorial_codecapture_string_detail_programming_languages: 자바스크립트
-  tutorial_codehslitter_string_detail_programming_languages: Python, HTML
+  tutorial_codehslitter_string_detail_programming_languages: 파이썬, HTML
   tutorial_bsdocean_string_detail_programming_languages: 자바 스크립트, HTML, CSS
   tutorial_itchplatformer_string_detail_programming_languages: 블록
   tutorial_codejika_string_detail_programming_languages: 자바 스크립트, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: 블록
   tutorial_rmagicequity_string_detail_programming_languages: 블록, 자바스크립트
   tutorial_ttfreestyle_string_detail_programming_languages: 자바스크립트
-  tutorial_ozobotcolor2_string_detail_programming_languages: Ozobot Color Codes
-  tutorial_ozobotcolor3_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_ozobotcolor2_string_detail_programming_languages: 오조봇 컬러 코드
+  tutorial_ozobotcolor3_string_detail_programming_languages: 오조봇 컬러 코드
   tutorial_clcarbon_string_detail_programming_languages: 파이썬
-  tutorial_kodablebasics_string_detail_programming_languages: Blocks, JavaScript,
-    Language independent (can be taught in multiple languages)
+  tutorial_kodablebasics_string_detail_programming_languages: 블록, 자바스크립트, 언어와 무관 (복수
+    언어로 가르칠 수 있음)
   tutorial_scigirlscc_string_detail_programming_languages: 언어와 무관 (복수 언어로 가르칠 수 있음)
-  tutorial_irobotpicture_string_detail_programming_languages: No specific programming
-    languages required; unplugged decoding activity with words/phrases
+  tutorial_irobotpicture_string_detail_programming_languages: 요구되는 특정 프로그래밍 언어 없음,
+    단어/구문을 사용하는 언플러그드 디코딩 활동
   tutorial_kcjmyself_string_detail_programming_languages: 블록
   tutorial_nearpodalgorithms_string_detail_programming_languages: 언어와 무관 (복수 언어로 가르칠
     수 있음)
   tutorial_kibodrop_string_detail_programming_languages: 블록
-  tutorial_ozobotcolor1_string_detail_programming_languages: Ozobot Line Following
-    and Color Codes
+  tutorial_ozobotcolor1_string_detail_programming_languages: 오조봇 라인 따라가기 및 컬러 코드
   tutorial_scigirlspixels_string_detail_programming_languages: 언어와 무관 (복수 언어로 가르칠
     수 있음)
   tutorial_kcjheroines_string_detail_programming_languages: 블록
-  tutorial_ozobotvalue_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_ozobotvalue_string_detail_programming_languages: 오조봇 컬러 코드
   tutorial_icodebytes_string_detail_programming_languages: 언어와 무관 (복수 언어로 가르칠 수 있음)
   tutorial_clfashion2_string_detail_programming_languages: SQL
   tutorial_ai4all_string_detail_programming_languages: 언어와 무관 (복수 언어로 가르칠 수 있음)
@@ -7913,7 +7768,7 @@ ko:
   tutorial_hellorubycsin60_string_detail_programming_languages: 언어와 무관 (복수 언어로 가르칠
     수 있음)
   tutorial_clfashion1_string_detail_programming_languages: SQL
-  tutorial_irobottraffic_string_detail_programming_languages: Blocks, iOS/Swift
+  tutorial_irobottraffic_string_detail_programming_languages: 블록, iOS/Swift
   tutorial_edisonmystery_string_detail_programming_languages: 블록
   tutorial_microbitseaturtles_string_detail_programming_languages: 블록, 자바 스크립트, 파이썬
   tutorial_ozobotknow_string_detail_programming_languages: 언어와 무관 (복수 언어로 가르칠 수 있음)
@@ -7921,19 +7776,18 @@ ko:
   tutorial_irobotsimulator_string_detail_programming_languages: 블록
   tutorial_irobotkind_string_detail_programming_languages: 블록
   tutorial_firiavirtual_string_detail_programming_languages: 파이썬
-  tutorial_irobotguesscode_string_detail_programming_languages: Blocks, iOS/Swift
-  tutorial_ozobotnouns_string_detail_programming_languages: Ozobot Color Codes
-  tutorial_nasa3d_string_detail_programming_languages: Tinkercad Codeblocks
+  tutorial_irobotguesscode_string_detail_programming_languages: 블록, iOS/Swift
+  tutorial_ozobotnouns_string_detail_programming_languages: 오조봇 컬러 코드
+  tutorial_nasa3d_string_detail_programming_languages: 팅커캐드 코드블록
   tutorial_blupants_string_detail_programming_languages: 블록, 파이썬
   tutorial_legodance_string_detail_programming_languages: 블록
   tutorial_nearpodcoding_string_detail_programming_languages: 언어와 무관 (복수 언어로 가르칠 수
     있음)
-  tutorial_kcjplastic_string_detail_programming_languages: Blocks, Also has use of
-    a spreadsheet.
+  tutorial_kcjplastic_string_detail_programming_languages: 블록, 또한 스프레드시트의 유용성을 가짐.
   tutorial_legojourney_string_detail_programming_languages: 블록
   tutorial_legohopper_string_detail_programming_languages: 블록
   tutorial_catrobatembroidery_string_detail_programming_languages: 블록
-  tutorial_irobotphone_string_detail_programming_languages: Blocks, iOS/Swift
+  tutorial_irobotphone_string_detail_programming_languages: 블록, iOS/Swift
   tutorial_codeguppydraw_string_detail_programming_languages: 자바스크립트
   tutorial_codejumper_string_detail_programming_languages: 언플러그드
   tutorial_meeempathy_string_detail_programming_languages: 블록, 파이썬
@@ -8022,9 +7876,9 @@ ko:
   tutorial_microbit15_name: '마이크로비트: 글로벌 목표 15, 육상 생태계를 향해 코딩'
   tutorial_unity_name: '유니티 게임 개발 크리에이터 키트: 초급 코드'
   tutorial_blockscadtarget_name: 변환 표적 연습
-  tutorial_tcadicicles_name: '팅거카드 코드블록으로 고드름 디자인 '
+  tutorial_tcadicicles_name: '팅커캐드 코드블록으로 고드름 디자인 '
   tutorial_blockscadscale_name: 스케일 시티
-  tutorial_tcadloops_name: 팅거카드에서 루크를 사용하여  코드블록으로 터지는 별 설계
+  tutorial_tcadloops_name: 팅커캐드에서 루크를 사용하여  코드블록으로 터지는 별 설계
   tutorial_phidgets_name: " 피젯 테레민과 프로세싱"
   tutorial_kcjmerry_name: 메리 마이크로비트
   tutorial_modvariables_name: 큐브렛을 사용하여 변수와 블록 값 조사

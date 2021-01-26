@@ -2986,7 +2986,15 @@
         "courseF_bee_conditionals1_predict1": "Vedi se c'è un fiore sotto la nuvola. Se c'è un fiore, prendi il nettare.",
         "courseF_video_createFunctions": "Non abbiamo ancora un video per creare le funzioni. Questo è un segnaposto.",
         "ramp_artist_loops4_2019": "Crea questo schema della stella con un ciclo continuo di una sequenza di blocchi \"vai avanti\" e \"gira a destra di 144 gradi\".",
-        "ramp_artist_loops4_2020": "Crea questo schema della stella con un ciclo continuo di una sequenza di blocchi \"vai avanti\" e \"gira a destra di 144 gradi\"."
+        "ramp_artist_loops4_2020": "Crea questo schema della stella con un ciclo continuo di una sequenza di blocchi \"vai avanti\" e \"gira a destra di 144 gradi\".",
+        "outbreak1": "Crea 10 personaggi sani e 1 personaggio malato. Cambia le loro dimensioni e falli vagare.",
+        "outbreak2": "Trasforma i mostri sani in mostri malati quando si toccano.",
+        "outbreak3": "Cambia i mostri in mostri con le mascherine quando fai clic su di essi.",
+        "outbreak4": "Cambia il numero e la dimensione dei personaggi mostri per la tua simulazione.",
+        "outbreak5": "Fai in modo che tutti i mostri malati inizino a riprendersi quando un mostro sano tocca un mostro malato.",
+        "outbreak6": "Aggiungi una percentuale di possibilità che i mostri si ammalino ogni volta che i mostri sani toccano i mostri malati. Fallo per tutte le combinazioni di mostri con e senza mascherina.",
+        "outbreak7": "Crea un nuovo costume per i mostri con immunità al virus e usalo nella tua simulazione.",
+        "outbreak8": "Condividi un messaggio con la tua simulazione."
       }
     }
   }

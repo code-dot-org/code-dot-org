@@ -13,7 +13,8 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -41,6 +42,7 @@
       "name": "Introduction to Apps",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students explore and investigate what makes an app an app. They begin by looking at and discussing five different apps. Following this, students watch a video explaining the basics of how computers work. Finally students return to the apps and consider the various inputs and outputs.",
@@ -69,6 +71,7 @@
       "name": "Introduction to Design Mode",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "Students work through a progression of levels to build an understanding of how to use Design Mode to layout an app. The final level has students setting up the screen of an app by attempting to copy an image of an app. ",
@@ -97,6 +100,7 @@
       "name": "Project   Designing an App Part 1",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "This is the first in a series of lessons where students will make progress on building their own functional app. In this lesson, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab. ",
@@ -125,6 +129,7 @@
       "name": "Project   Designing an App Part 2",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "Students continue working on the unit projects in this lesson that is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
@@ -152,6 +157,7 @@
       "name": "The Need for Programming Languages",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "In this lesson students explore the challenges of clearly communicating instructions. They build a small arrangement of blocks (LEGO® pieces or paper cutouts) and then create text instructions a classmate could follow to construct the same arrangement. Groups then trade instructions to see if they were clear enough to allow reconstruction of the original arrangement. The wrap-up discussion is used to highlight the inherent ambiguities of human language and call out the need for the creation of a programming language which leaves no room for interpretation.",
@@ -180,6 +186,7 @@
       "name": "Intro to Programming",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "Students use and modify a series of simple apps to get familiar with a small set of programming commands. They observe the way the code runs by slowing down the code and compare programs that run all at once to those that respond to user actions like buttons clicks. At the end of the lesson students discuss what they observed and are introduced to some key vocabulary for describing the running of programs.",
@@ -208,6 +215,7 @@
       "name": "Debugging",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "In this lesson students practice using the different programming concepts that they were introduced to in the last lesson. To begin, however, they are introduced to the concept of debugging and are encouraged to use and reflect on this practice throughout the lesson. At the end of the lesson students share their experiences debugging as well as an new realizations about programming.",
@@ -236,6 +244,7 @@
       "name": "Project   Designing an App Part 3",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "Student learn about Pair Programming by watching a video and then practicing it themselves while working on their project apps. At this stage, students are adding their first lines of code to their app using debugging skills from the previous lesson. ",
@@ -264,6 +273,7 @@
       "name": "Project   Designing an App Part 4",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
         "overview": "Students continue working on their apps. Halfway through class the focus of the lesson shifts to getting feedback. Students watch other groups test their apps and collect feedback that will be used to make updates.  ",
@@ -292,6 +302,7 @@
       "name": "Project   Designing an App Part 5",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "Students complete their apps, making any final adjustments based on feedback from their peers. Students spend some time reviewing other apps that classmates made and then complete a short set of reflection prompts before submitting their projects.",
@@ -320,6 +331,7 @@
       "name": "Assessment Day",
       "absolute_position": 11,
       "lockable": true,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students complete the Unit Assessment and then spend the rest of class sharing their projects. ",
@@ -1127,7 +1139,8 @@
       "key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10",
       "position": 1,
       "properties": {
-        "name": "App Exploration"
+        "name": "App Exploration",
+        "progression_name": "App Exploration"
       },
       "seeding_key": {
         "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10",
@@ -1138,7 +1151,8 @@
       "key": "8962f49a-768b-425f-9cdb-9d52032055b3",
       "position": 2,
       "properties": {
-        "name": "How Computers Work"
+        "name": "How Computers Work",
+        "progression_name": "How Computers Work"
       },
       "seeding_key": {
         "activity_section.key": "8962f49a-768b-425f-9cdb-9d52032055b3",
@@ -1149,7 +1163,8 @@
       "key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d",
       "position": 3,
       "properties": {
-        "name": "App Investigation"
+        "name": "App Investigation",
+        "progression_name": "App Investigation"
       },
       "seeding_key": {
         "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d",
@@ -1160,7 +1175,8 @@
       "key": "2205e89c-4fca-46c1-95e4-ad99bdffa417",
       "position": 4,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "2205e89c-4fca-46c1-95e4-ad99bdffa417",
@@ -1241,7 +1257,8 @@
       "key": "359f5bbe-4f8b-4418-9a32-b053587cda3e",
       "position": 3,
       "properties": {
-        "name": "Design Mode Exploration"
+        "name": "Design Mode Exploration",
+        "progression_name": "Design Mode Exploration"
       },
       "seeding_key": {
         "activity_section.key": "359f5bbe-4f8b-4418-9a32-b053587cda3e",
@@ -1252,7 +1269,8 @@
       "key": "2d35ff13-f24c-4db9-972a-0a9ff1702a76",
       "position": 4,
       "properties": {
-        "name": "Copy an App"
+        "name": "Copy an App",
+        "progression_name": "Copy an App"
       },
       "seeding_key": {
         "activity_section.key": "2d35ff13-f24c-4db9-972a-0a9ff1702a76",
@@ -1263,7 +1281,8 @@
       "key": "4540ba32-cc73-4946-b03b-3a29d424a159",
       "position": 5,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "4540ba32-cc73-4946-b03b-3a29d424a159",
@@ -1611,7 +1630,8 @@
       "key": "83aece13-4f10-484f-ac74-15c2e14b87f4",
       "position": 1,
       "properties": {
-        "name": "Sample Prototype"
+        "name": "Sample Prototype",
+        "progression_name": "Sample Prototype"
       },
       "seeding_key": {
         "activity_section.key": "83aece13-4f10-484f-ac74-15c2e14b87f4",
@@ -1622,7 +1642,8 @@
       "key": "1eef7133-a270-40b9-98a6-6beb32dcb82d",
       "position": 2,
       "properties": {
-        "name": "Build Your Screens"
+        "name": "Build Your Screens",
+        "progression_name": "Build Your Screens"
       },
       "seeding_key": {
         "activity_section.key": "1eef7133-a270-40b9-98a6-6beb32dcb82d",
@@ -1790,7 +1811,8 @@
       "key": "2ff24c3f-78f1-4f19-be89-4dc94b1bdea6",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "2ff24c3f-78f1-4f19-be89-4dc94b1bdea6",
@@ -1933,7 +1955,8 @@
       "key": "667a4ec2-3e0b-467f-b512-61a6b3070444",
       "position": 1,
       "properties": {
-        "name": "Code Investigation"
+        "name": "Code Investigation",
+        "progression_name": "Code Investigation"
       },
       "seeding_key": {
         "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444",
@@ -1944,7 +1967,8 @@
       "key": "08fc8c26-bc4e-499f-9143-706a35c36502",
       "position": 2,
       "properties": {
-        "name": "Check for Understanding"
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "08fc8c26-bc4e-499f-9143-706a35c36502",
@@ -2108,7 +2132,8 @@
       "key": "6de7b314-236b-45f3-b683-c62b683f4a36",
       "position": 1,
       "properties": {
-        "name": "Debugging"
+        "name": "Debugging",
+        "progression_name": "Debugging"
       },
       "seeding_key": {
         "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36",
@@ -2119,7 +2144,8 @@
       "key": "964fb0e1-e9c6-4024-9c29-b19c6aec1901",
       "position": 2,
       "properties": {
-        "name": "Check for Understanding"
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "964fb0e1-e9c6-4024-9c29-b19c6aec1901",
@@ -2255,7 +2281,8 @@
       "key": "6d927c4d-8362-41de-8a87-ffd137debc94",
       "position": 1,
       "properties": {
-        "name": "Pair Programming"
+        "name": "Pair Programming",
+        "progression_name": "Pair Programming"
       },
       "seeding_key": {
         "activity_section.key": "6d927c4d-8362-41de-8a87-ffd137debc94",
@@ -2266,7 +2293,8 @@
       "key": "107fa015-fbcb-40ef-842c-51bec9241878",
       "position": 2,
       "properties": {
-        "name": "Add Code"
+        "name": "Add Code",
+        "progression_name": "Add Code"
       },
       "seeding_key": {
         "activity_section.key": "107fa015-fbcb-40ef-842c-51bec9241878",
@@ -2414,7 +2442,8 @@
       "key": "f23af48b-bcc7-4c42-abb5-17a0b4329759",
       "position": 1,
       "properties": {
-        "name": "Add More Code"
+        "name": "Add More Code",
+        "progression_name": "Add More Code"
       },
       "seeding_key": {
         "activity_section.key": "f23af48b-bcc7-4c42-abb5-17a0b4329759",
@@ -2502,7 +2531,8 @@
       "key": "16a77829-202c-4084-a788-264dbe5fc421",
       "position": 1,
       "properties": {
-        "name": "Submit Your App"
+        "name": "Submit Your App",
+        "progression_name": "Submit Your App"
       },
       "seeding_key": {
         "activity_section.key": "16a77829-202c-4084-a788-264dbe5fc421",
@@ -2583,7 +2613,8 @@
       "key": "fac09528-ff55-4d72-b85b-2326ccbe16f9",
       "position": 1,
       "properties": {
-        "name": "Unit 3 Exam"
+        "name": "Unit 3 Exam",
+        "progression_name": "Unit 3 Exam"
       },
       "seeding_key": {
         "activity_section.key": "fac09528-ff55-4d72-b85b-2326ccbe16f9",
@@ -2598,6 +2629,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App_2021"
+        ],
         "progression": "App Exploration"
       },
       "named_level": null,
@@ -2621,6 +2655,9 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App_2021"
+        ],
         "progression": "App Exploration"
       },
       "named_level": null,
@@ -2644,6 +2681,9 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App_2021"
+        ],
         "progression": "App Exploration"
       },
       "named_level": null,
@@ -2667,6 +2707,9 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App_2021"
+        ],
         "progression": "App Exploration"
       },
       "named_level": null,
@@ -2690,6 +2733,9 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App_2021"
+        ],
         "progression": "App Exploration"
       },
       "named_level": null,
@@ -2713,6 +2759,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "How Computers Work part 1 CSP_2021"
+        ],
         "progression": "How Computers Work"
       },
       "named_level": null,
@@ -2736,6 +2785,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App Investigate_2021"
+        ],
         "progression": "App Investigation"
       },
       "named_level": null,
@@ -2759,6 +2811,9 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App Investigation_2021"
+        ],
         "progression": "App Investigation"
       },
       "named_level": null,
@@ -2782,6 +2837,9 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App Investigation_2021"
+        ],
         "progression": "App Investigation"
       },
       "named_level": null,
@@ -2805,6 +2863,9 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App Investigation_2021"
+        ],
         "progression": "App Investigation"
       },
       "named_level": null,
@@ -2828,6 +2889,9 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App Investigation_2021"
+        ],
         "progression": "App Investigation"
       },
       "named_level": null,
@@ -2851,6 +2915,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L1 Input Output Matching_2021"
+        ],
         "progression": "Check For Understanding"
       },
       "named_level": null,
@@ -2874,6 +2941,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township Design Mode_2021"
+        ],
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
@@ -2897,6 +2967,9 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Themes_2021"
+        ],
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
@@ -2920,6 +2993,9 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Colors_2021"
+        ],
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
@@ -2943,6 +3019,9 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Images_2021"
+        ],
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
@@ -2966,6 +3045,9 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Icons_2021"
+        ],
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
@@ -2989,6 +3071,9 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode ids_2021"
+        ],
         "progression": "Design Mode Exploration"
       },
       "named_level": null,
@@ -3012,6 +3097,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Copy an App_2021"
+        ],
         "progression": "Copy an App"
       },
       "named_level": null,
@@ -3035,6 +3123,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L2 CSP CFU ID names_2021"
+        ],
         "progression": "Check For Understanding"
       },
       "named_level": null,
@@ -3058,6 +3149,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz Storyboard_2021"
+        ],
         "progression": "Sample Prototype"
       },
       "named_level": null,
@@ -3081,6 +3175,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Design Screens_2021"
+        ],
         "progression": "Build Your Screens"
       },
       "named_level": null,
@@ -3104,6 +3201,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L5 CSP CFU natural language_2021"
+        ],
         "progression": "Check For Understanding"
       },
       "named_level": null,
@@ -3127,6 +3227,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 1_2021"
+        ],
         "progression": "Code Investigation"
       },
       "named_level": null,
@@ -3150,6 +3253,9 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 2_2021"
+        ],
         "progression": "Code Investigation"
       },
       "named_level": null,
@@ -3173,6 +3279,9 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 1_2021"
+        ],
         "progression": "Code Investigation"
       },
       "named_level": null,
@@ -3196,6 +3305,9 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 2_2021"
+        ],
         "progression": "Code Investigation"
       },
       "named_level": null,
@@ -3219,6 +3331,9 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 3_2021"
+        ],
         "progression": "Code Investigation"
       },
       "named_level": null,
@@ -3242,6 +3357,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L6 CSP CFU Sequential vs Event Driven_2021"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": null,
@@ -3265,6 +3383,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 1_2021"
+        ],
         "progression": "Debugging"
       },
       "named_level": null,
@@ -3288,6 +3409,9 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 2_2021"
+        ],
         "progression": "Debugging"
       },
       "named_level": null,
@@ -3311,6 +3435,9 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 3_2021"
+        ],
         "progression": "Debugging"
       },
       "named_level": null,
@@ -3334,6 +3461,9 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 4_2021"
+        ],
         "progression": "Debugging"
       },
       "named_level": null,
@@ -3357,6 +3487,9 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 5_2021"
+        ],
         "progression": "Debugging"
       },
       "named_level": null,
@@ -3380,6 +3513,9 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 6_2021"
+        ],
         "progression": "Debugging"
       },
       "named_level": null,
@@ -3403,6 +3539,9 @@
       "activity_section_position": 7,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 8_2021"
+        ],
         "progression": "Debugging"
       },
       "named_level": null,
@@ -3426,6 +3565,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L7 CSP CFU What was confusing_2021"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": null,
@@ -3449,6 +3591,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3 L08 Pair Programming Video_2021"
+        ],
         "progression": "Pair Programming"
       },
       "named_level": null,
@@ -3472,6 +3617,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Add Code_2021"
+        ],
         "progression": "Add Code"
       },
       "named_level": null,
@@ -3495,6 +3643,9 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "CSP U3 L9 Add More Code_2021"
+        ],
         "progression": "Add More Code"
       },
       "named_level": null,
@@ -3518,6 +3669,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L10 Submit App_2021"
+        ],
         "progression": "Submit Your App"
       },
       "named_level": null,
@@ -3541,6 +3695,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 3 MC Assessment _2021"
+        ],
         "progression": "Unit 3 Exam"
       },
       "named_level": null,
@@ -4398,6 +4555,12 @@
         "resource.key": "csp app dev planning guide"
       }
     }
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
   ],
   "objectives": [
     {

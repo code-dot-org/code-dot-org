@@ -2364,20 +2364,23 @@
             "parameters": {
               "points": "punkty",
               "length": "długość"
-            }
+            },
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości"
           },
           "draw a circle": {
             "name": "narysuj okrąg",
             "parameters": {
               "radius": "promień"
-            }
+            },
+            "description": "narysuj okrąg o danym promieniu"
           },
           "draw a pinwheel": {
             "parameters": {
               "sides": "boki",
               "length": "długość",
               "repeat": "powtarzaj"
-            }
+            },
+            "name": "narysuj rozetę"
           },
           "draw a triangle": {
             "name": "narysuj trójkąt",
@@ -2389,7 +2392,8 @@
             "parameters": {
               "sides": "boki",
               "length": "długość"
-            }
+            },
+            "name": "narysuj wielokąt foremny"
           },
           "draw a house": {
             "name": "narysuj dom",
@@ -3068,6 +3072,22 @@
         "courseE_farmer_functions9a1_2020": {
           "garden square": {
             "name": "pole ogrodu"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": "funkcja 1"
+          },
+          "function 2": {
+            "name": "funkcja 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "funkcja 1"
+          },
+          "function 2": {
+            "name": "funkcja 2"
           }
         }
       }

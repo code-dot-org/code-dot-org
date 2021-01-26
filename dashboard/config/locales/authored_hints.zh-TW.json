@@ -951,7 +951,7 @@
           "courseF_artist_variables2_b": "您的新迴圈將包含幫助您畫三角形的迴圈，然後是一個「move forward」指令。"
         },
         "OPD-K5-variables-5": {
-          "courseF_artist_variables3_a": "「length」（長度）變量將在您代碼中的兩個地方被使用到：在您三角形的邊長中，以及在您在三角形之間向前移動的數量上。",
+          "courseF_artist_variables3_a": "「length」（長度）變量將在您程式碼中的兩個地方被使用到：在您三角形的邊長中，以及在您在三角形之間向前移動的數量上。",
           "courseF_artist_variables3_b": "數值為 50 的數字積木只能放在一個位置：`設定長度`積木之後。"
         },
         "OPD-K5-variables-6": {
@@ -960,25 +960,25 @@
           "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "OPD-K5-variables-7": {
-          "courseF_artist_variables5_a": "除了您將要向_左_轉，跳躍，然後向_右_轉之外，代碼的後半部分應與前半部分幾乎相同。",
-          "courseF_artist_variables5_b": "您代碼的前半部分將繪製三個三角形，後半部分將繪製另外三個三角形。",
-          "courseF_artist_variables5_c": "首先複製程式的前半部分代碼，然後對其進行更改，將設計呈現出來。",
+          "courseF_artist_variables5_a": "除了您將要向_左_轉，跳躍，然後向_右_轉之外，程式碼的後半部分應與前半部分幾乎相同。",
+          "courseF_artist_variables5_b": "您程式碼的前半部分將繪製三個三角形，後半部分將繪製另外三個三角形。",
+          "courseF_artist_variables5_c": "首先複製程式的前半部分程式碼，然後對其進行更改，將設計呈現出來。",
           "courseF_artist_variables5_d": "這是您的小藝術家將遵循的規律：\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "您可以走幾條路。哪條路是最短的？",
           "mc_8_b": "使用`重複`迴圈來簡化程式。",
-          "mc_8_c": "您的目標是進入屏幕頂端的房子門口。"
+          "mc_8_c": "您的目標是進入螢幕頂端的房子門口。"
         },
         "Overworld Avoid Monsters_2019": {
           "mc_8_a": "您可以走幾條路。哪條路是最短的？",
           "mc_8_b": "使用`重複`迴圈來簡化程式。",
-          "mc_8_c": "您的目標是進入屏幕頂端的房子門口。"
+          "mc_8_c": "您的目標是進入螢幕頂端的房子門口。"
         },
         "Overworld Avoid Monsters_2020": {
           "mc_8_a": "您可以走幾條路。哪條路是最短的？",
           "mc_8_b": "使用`重複`迴圈來簡化程式。",
-          "mc_8_c": "您的目標是進入屏幕頂端的房子門口。"
+          "mc_8_c": "您的目標是進入螢幕頂端的房子門口。"
         },
         "Overworld Chop Tree": {
           "mc_2_a": "您需要「move forward」兩次才能站在樹前。",
@@ -1006,17 +1006,17 @@
         },
         "Overworld House Frame Chosen": {
           "mc_6_a": "點擊 `放置` 積木上的下拉選單，選擇你要放置的東西。",
-          "mc_6_b": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。",
+          "mc_6_b": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。",
           "mc_6_c": "你可以在`重複`積木裡頭放入多個程式積木。"
         },
         "Overworld House Frame Chosen_2019": {
           "mc_6_a": "點擊 `放置` 積木上的下拉選單，選擇你要放置的東西。",
-          "mc_6_b": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。",
+          "mc_6_b": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。",
           "mc_6_c": "你可以在`重複`積木裡頭放入多個程式積木。"
         },
         "Overworld House Frame Chosen_2020": {
           "mc_6_a": "點擊 `放置` 積木上的下拉選單，選擇你要放置的東西。",
-          "mc_6_b": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。",
+          "mc_6_b": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。",
           "mc_6_c": "你可以在`重複`積木裡頭放入多個程式積木。"
         },
         "Overworld Move to Sheep": {
@@ -1034,17 +1034,17 @@
         "Overworld Place Wall": {
           "mc_5_a": "先使用「place」積木，然後使用「move」積木。",
           "mc_5_b": "確保兩個積木都在`重複`積木裡頭，這樣才可以執行程式多次。",
-          "mc_5_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "mc_5_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "Overworld Place Wall_2019": {
           "mc_5_a": "先使用「place」積木，然後使用「move」積木。",
           "mc_5_b": "確保兩個積木都在`重複`積木裡頭，這樣才可以執行程式多次。",
-          "mc_5_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "mc_5_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "Overworld Place Wall_2020": {
           "mc_5_a": "先使用「place」積木，然後使用「move」積木。",
           "mc_5_b": "確保兩個積木都在`重複`積木裡頭，這樣才可以執行程式多次。",
-          "mc_5_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "mc_5_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "Overworld Plant Crops": {
           "mc_7_a": "使用「plant crop」（種植作物）積木在您站立的地方種植作物。",
@@ -1076,17 +1076,17 @@
         "Overworld Shear Sheep": {
           "mc_3_a": "「shear」積木會把羊放在您的前面。您面對著羊了嗎?",
           "mc_3_b": "如果您需要改變面對羊的方式，就使用一個「turn」積木。",
-          "mc_3_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "mc_3_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "Overworld Shear Sheep_2019": {
           "mc_3_a": "「shear」積木會把羊放在您的前面。您面對著羊了嗎?",
           "mc_3_b": "如果您需要改變面對羊的方式，就使用一個「turn」積木。",
-          "mc_3_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "mc_3_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "Overworld Shear Sheep_2020": {
           "mc_3_a": "「shear」積木會把羊放在您的前面。您面對著羊了嗎?",
           "mc_3_b": "如果您需要改變面對羊的方式，就使用一個「turn」積木。",
-          "mc_3_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "mc_3_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "Underground Avoiding Lava": {
           "mc_11_a": "所有用於檢查熔岩並處理它的程式已經就緒。您所要做的就是添加一個積木來移動。",
@@ -1118,17 +1118,17 @@
         "Underground Iron": {
           "mc_10_a": "鐵塊是火炬後面的斑點空間！您打算如何前往？",
           "mc_10_b": "當您站在熔岩邊緣的時候，使用「place cobblestone ahead」（將鵝卵石放在前面）就能鋪出一條安全的路。然後，您就可以走過去了！",
-          "mc_10_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "mc_10_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "Underground Iron_2019": {
           "mc_10_a": "鐵塊是火炬後面的斑點空間！您打算如何前往？",
           "mc_10_b": "當您站在熔岩邊緣的時候，使用「place cobblestone ahead」（將鵝卵石放在前面）就能鋪出一條安全的路。然後，您就可以走過去了！",
-          "mc_10_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "mc_10_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "Underground Iron_2020": {
           "mc_10_a": "鐵塊是火炬後面的斑點空間！您打算如何前往？",
           "mc_10_b": "當您站在熔岩邊緣的時候，使用「place cobblestone ahead」（將鵝卵石放在前面）就能鋪出一條安全的路。然後，您就可以走過去了！",
-          "mc_10_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "mc_10_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "Underground Mining Coal": {
           "mc_9_a": "您面對的是正確的道路嗎？「destroy block」會炸毀您面前的積木。",
@@ -3406,12 +3406,12 @@
           "courseB_starWars_prog8_b": "嘗試使用「repeat」積木，看看在裡頭放些程式，會發生什麼。\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9": {
-          "courseB_starWars_prog9_a": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。",
+          "courseB_starWars_prog9_a": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。",
           "courseB_starWars_prog9_b": "有很多方法可以完成這個關卡。",
           "courseB_starWars_prog9_c": "`重複`迴圈應該會有幫助？"
         },
         "courseB_starWars_prog9_2018": {
-          "courseB_starWars_prog9_a": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。",
+          "courseB_starWars_prog9_a": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。",
           "courseB_starWars_prog9_b": "有很多方法可以完成這個關卡。",
           "courseB_starWars_prog9_c": "用一個`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> 迴圈在這裡有幫助嗎？"
         },
@@ -4802,36 +4802,36 @@
         "courseC_starWars_loops10": {
           "courseC_starWars_loops10_a": "這種規律看起來像不像是一大堆階梯式步驟嗎？你試試看能不能用之前關卡中學到的知識來完成所有的任務。",
           "courseC_starWars_loops10_b": "如果要使用更少的程式碼，可以將一個`重複`迴圈放在另一個迴圈中！\\\n這叫做**巢狀迴圈**。",
-          "courseC_starWars_loops10_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "courseC_starWars_loops10_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "courseC_starWars_loops10_2018": {
           "courseC_starWars_loops10_a": "這種規律看起來像不像是一大堆階梯式步驟嗎？你試試看能不能用之前關卡中學到的知識來完成所有的任務。",
           "courseC_starWars_loops10_b": "如果要使用更少的程式碼，可以將一個`重複`迴圈放在另一個迴圈中！\\\n這叫做**巢狀迴圈**。",
-          "courseC_starWars_loops10_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "courseC_starWars_loops10_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "courseC_starWars_loops10_2019": {
           "courseC_starWars_loops10_a": "這種規律看起來像不像是一大堆階梯式步驟嗎？你試試看能不能用之前關卡中學到的知識來完成所有的任務。",
           "courseC_starWars_loops10_b": "如果要使用更少的程式碼，可以將一個`重複`迴圈放在另一個迴圈中！\\\n這叫做**巢狀迴圈**。",
-          "courseC_starWars_loops10_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "courseC_starWars_loops10_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "courseC_starWars_loops10_2020": {
           "courseC_starWars_loops10_a": "這種規律看起來像不像是一大堆階梯式步驟嗎？你試試看能不能用之前關卡中學到的知識來完成所有的任務。",
           "courseC_starWars_loops10_b": "如果要使用更少的程式碼，可以將一個`重複`迴圈放在另一個迴圈中！\\\n這叫做**巢狀迴圈**。",
-          "courseC_starWars_loops10_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "courseC_starWars_loops10_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "courseC_starWars_loops1_2018": {
           "courseC_starWars_loops1_a": "當 BB-8 滾過廢金屬時，他會自動將其撿起。",
-          "courseC_starWars_loops1_b": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。",
+          "courseC_starWars_loops1_b": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。",
           "courseC_starWars_loops1_c": "你將需要`移動-向前`五次來通過這個關卡。"
         },
         "courseC_starWars_loops1_2019": {
           "courseC_starWars_loops1_a": "當 BB-8 滾過廢金屬時，他會自動將其撿起。",
-          "courseC_starWars_loops1_b": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。",
+          "courseC_starWars_loops1_b": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。",
           "courseC_starWars_loops1_c": "你將需要`移動-向前`五次來通過這個關卡。"
         },
         "courseC_starWars_loops1_2020": {
           "courseC_starWars_loops1_a": "當 BB-8 滾過廢金屬時，他會自動將其撿起。",
-          "courseC_starWars_loops1_b": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。",
+          "courseC_starWars_loops1_b": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。",
           "courseC_starWars_loops1_c": "你將需要`移動-向前`五次來通過這個關卡。"
         },
         "courseC_starWars_loops2": {
@@ -4914,27 +4914,27 @@
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "這種規律看起來比實際更難！從簡單的階梯式步驟開始吧。能覆蓋到所有廢金屬嗎？",
           "courseC_starWars_loops7_b": "如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。",
-          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "courseC_starWars_loops7_2018": {
           "courseC_starWars_loops7_a": "這種規律看起來比實際更難！從簡單的階梯式步驟開始吧。能覆蓋到所有廢金屬嗎？",
           "courseC_starWars_loops7_b": "如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。",
-          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "courseC_starWars_loops7_2019": {
           "courseC_starWars_loops7_a": "這種規律看起來比實際更難！從簡單的階梯式步驟開始吧。能覆蓋到所有廢金屬嗎？",
           "courseC_starWars_loops7_b": "如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。",
-          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "courseC_starWars_loops7_2020": {
           "courseC_starWars_loops7_a": "這種規律看起來比實際更難！從簡單的階梯式步驟開始吧。能覆蓋到所有廢金屬嗎？",
           "courseC_starWars_loops7_b": "如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。",
-          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "courseC_starWars_loops7_copy": {
           "courseC_starWars_loops7_a": "這種規律看起來比實際更難！從簡單的階梯式步驟開始吧。能覆蓋到所有廢金屬嗎？",
           "courseC_starWars_loops7_b": "如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。",
-          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。"
+          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
         },
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！",
@@ -5436,16 +5436,16 @@
           "courseD_artist_project2_b": "在您第一次畫和移動之後，您可以透過在外圍添加一個迴圈來重複程式。"
         },
         "courseD_artist_project2a": {
-          "courseD_artist_project2a_a": "這個圖樣是透過嵌套一個4個樓梯的迴圈和一個「turn right 180 degrees」（向右轉180度）的積木到一個「repeat 2 times」（重複2次）積木內繪製而成。\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+          "courseD_artist_project2a_a": "這個圖樣是透過嵌套一個4個樓梯的迴圈和一個`轉向-右邊180度`的積木到一個`重複2次`積木內繪製而成。\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
         },
         "courseD_artist_project2a_2018": {
-          "courseD_artist_project2a_a": "這個圖樣是透過嵌套一個4個樓梯的迴圈和一個「turn right 180 degrees」（向右轉180度）的積木到一個「repeat 2 times」（重複2次）積木內繪製而成。\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+          "courseD_artist_project2a_a": "這個圖樣是透過嵌套一個4個樓梯的迴圈和一個`轉向-右邊180度`的積木到一個`重複2次`積木內繪製而成。\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
         },
         "courseD_artist_project2a_2019": {
-          "courseD_artist_project2a_a": "這個圖樣是透過嵌套一個4個樓梯的迴圈和一個「turn right 180 degrees」（向右轉180度）的積木到一個「repeat 2 times」（重複2次）積木內繪製而成。\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+          "courseD_artist_project2a_a": "這個圖樣是透過嵌套一個4個樓梯的迴圈和一個`轉向-右邊180度`的積木到一個`重複2次`積木內繪製而成。\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
         },
         "courseD_artist_project2a_2020": {
-          "courseD_artist_project2a_a": "這個圖樣是透過嵌套一個4個樓梯的迴圈和一個「turn right 180 degrees」（向右轉180度）的積木到一個「repeat 2 times」（重複2次）積木內繪製而成。\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+          "courseD_artist_project2a_a": "這個圖樣是透過嵌套一個4個樓梯的迴圈和一個`轉向-右邊180度`的積木到一個`重複2次`積木內繪製而成。\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
         },
         "courseD_artist_project3": {
           "courseD_artist_project3_a": "使用`轉向`程式積木積木上的下拉菜單，選擇您所需要的角度！",
@@ -5476,44 +5476,44 @@
           "courseD_artist_project3a_a": "您可以選擇不同的次數來旋轉您的形狀！圖形之間以20度轉角旋轉18次怎麼樣？"
         },
         "courseD_artist_project4": {
-          "courseD_artist_project4_a": "這是在一片三角形雪花前旋轉36度的五角形雪花： \n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\n這是一組帶有正方形的六邊形：\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_a": "在一片三角形雪花上旋轉36度的五角形雪花： \n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\n這是一組帶有正方形的六邊形：\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
           "courseD_artist_project4_b": "若想嘗試畫出這種雪花，請先畫出第一片雪花，旋轉，然後畫第二片雪花。"
         },
         "courseD_artist_project4_2018": {
-          "courseD_artist_project4_a": "這是在一片三角形雪花前旋轉36度的五角形雪花： \n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\n這是一組帶有正方形的六邊形：\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_a": "在一片三角形雪花上旋轉36度的五角形雪花： \n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\n這是一組帶有正方形的六邊形：\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
           "courseD_artist_project4_b": "若想嘗試畫出這種雪花，請先畫出第一片雪花，旋轉，然後畫第二片雪花。"
         },
         "courseD_artist_project4_2019": {
-          "courseD_artist_project4_a": "這是在一片三角形雪花前旋轉36度的五角形雪花： \n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\n這是一組帶有正方形的六邊形：\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_a": "在一片三角形雪花上旋轉36度的五角形雪花： \n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\n這是一組帶有正方形的六邊形：\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
           "courseD_artist_project4_b": "若想嘗試畫出這種雪花，請先畫出第一片雪花，旋轉，然後畫第二片雪花。"
         },
         "courseD_artist_project4_2020": {
-          "courseD_artist_project4_a": "這是在一片三角形雪花前旋轉36度的五角形雪花： \n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\n這是一組帶有正方形的六邊形：\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_a": "在一片三角形雪花上旋轉36度的五角形雪花： \n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\n這是一組帶有正方形的六邊形：\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
           "courseD_artist_project4_b": "若想嘗試畫出這種雪花，請先畫出第一片雪花，旋轉，然後畫第二片雪花。"
         },
         "courseD_artist_project4a": {
-          "courseD_artist_project4a_a": "這是兩片不同長度的雪花，是一片雪花疊加另一片雪花繪製而成的（雪花之間30度旋轉。）\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+          "courseD_artist_project4a_a": "這是兩片不同長度的雪花，是一片雪花疊加另一片雪花繪製而成的（雪花之間旋轉30度。）\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
         },
         "courseD_artist_project4a_2018": {
-          "courseD_artist_project4a_a": "這是兩片不同長度的雪花，是一片雪花疊加另一片雪花繪製而成的（雪花之間30度旋轉。）\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+          "courseD_artist_project4a_a": "這是兩片不同長度的雪花，是一片雪花疊加另一片雪花繪製而成的（雪花之間旋轉30度。）\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
         },
         "courseD_artist_project4a_2019": {
-          "courseD_artist_project4a_a": "這是兩片不同長度的雪花，是一片雪花疊加另一片雪花繪製而成的（雪花之間30度旋轉。）\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+          "courseD_artist_project4a_a": "這是兩片不同長度的雪花，是一片雪花疊加另一片雪花繪製而成的（雪花之間旋轉30度。）\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
         },
         "courseD_artist_project4a_2020": {
-          "courseD_artist_project4a_a": "這是兩片不同長度的雪花，是一片雪花疊加另一片雪花繪製而成的（雪花之間30度旋轉。）\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+          "courseD_artist_project4a_a": "這是兩片不同長度的雪花，是一片雪花疊加另一片雪花繪製而成的（雪花之間旋轉30度。）\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
         },
         "courseD_artist_project5": {
-          "courseD_artist_project4_a": "擁有2個六邊形和4個三角形的行：\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "以2個六邊形和4個三角形排列而成的形狀：\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_project5_2018": {
-          "courseD_artist_project4_a": "擁有2個六邊形和4個三角形的行：\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "以2個六邊形和4個三角形排列而成的形狀：\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_project5_2019": {
-          "courseD_artist_project4_a": "擁有2個六邊形和4個三角形的行：\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "以2個六邊形和4個三角形排列而成的形狀：\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_project5_2020": {
-          "courseD_artist_project4_a": "擁有2個六邊形和4個三角形的行：\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+          "courseD_artist_project4_a": "以2個六邊形和4個三角形排列而成的形狀：\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11a": "若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。",
@@ -5571,29 +5571,29 @@
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "不知道怎麼開始？看看這個影片！",
-          "courseD_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的代碼在兩種情況下都運行，請確保使用「if」語句。",
+          "courseD_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的程式碼在兩種情況下都運行，請確保使用「if」語句。",
           "courseD_bee_conditionals2_b": "你可以使用`重複`迴圈或`重複 判斷 有沒有路`來穿越這個迷宮。",
           "courseD_bee_conditionals2_c": "你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。",
           "courseD_bee_conditionals2_hintVid2": "觀看影片以幫你完成關卡。"
         },
         "courseD_bee_conditionals2_2018": {
           "courseD_bee_conditionals2_hintVid1": "不知道怎麼開始？看看這個影片！",
-          "courseD_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的代碼在兩種情況下都運行，請確保使用「if」語句。",
+          "courseD_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的程式碼在兩種情況下都運行，請確保使用「if」語句。",
           "courseD_bee_conditionals2_b": "你可以使用`重複`迴圈或`重複 判斷 有沒有路`來穿越這個迷宮。",
           "courseD_bee_conditionals2_c": "你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。",
           "courseD_bee_conditionals2_hintVid2": "觀看影片以幫你完成關卡。"
         },
         "courseD_bee_conditionals2_2019": {
-          "courseD_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的代碼在兩種情況下都運行，請確保使用「if」語句。",
+          "courseD_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的程式碼在兩種情況下都運行，請確保使用「if」語句。",
           "courseD_bee_conditionals2_c": "你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。"
         },
         "courseD_bee_conditionals2_2020": {
-          "courseD_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的代碼在兩種情況下都運行，請確保使用「if」語句。",
+          "courseD_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的程式碼在兩種情況下都運行，請確保使用「if」語句。",
           "courseD_bee_conditionals2_c": "你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。"
         },
         "courseD_bee_conditionals2_copy": {
           "courseD_bee_conditionals2_hintVid1": "不知道怎麼開始？看看這個影片！",
-          "courseD_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的代碼在兩種情況下都運行，請確保使用「if」語句。",
+          "courseD_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的程式碼在兩種情況下都運行，請確保使用「if」語句。",
           "courseD_bee_conditionals2_b": "你可以使用`重複`迴圈或`重複 判斷 有沒有路`來穿越這個迷宮。",
           "courseD_bee_conditionals2_c": "你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。",
           "courseD_bee_conditionals2_hintVid2": "觀看影片以幫你完成關卡。"
@@ -6172,22 +6172,22 @@
         },
         "courseD_farmer_condLoops4": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4": "沒有人知道每顆芽上會長出多少棵生菜。使用一個「當有生菜時」迴圈來繼續採摘，直到每棵生菜都被採集。",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "「while」迴圈還能夠處理空的空間！如果沒有生菜，它就不會採摘並讓代碼繼續執行。",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "「while」迴圈還能夠處理空的空間！如果沒有生菜，它就不會採摘並讓程式碼繼續執行。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "您可以使用一個「while path ahead」迴圈或一個「repeat」迴圈來檢查所有的作物。"
         },
         "courseD_farmer_condLoops4_2018": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4": "沒有人知道每顆芽上會長出多少棵生菜。使用一個「當有生菜時」迴圈來繼續採摘，直到每棵生菜都被採集。",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "「while」迴圈還能夠處理空的空間！如果沒有生菜，它就不會採摘並讓代碼繼續執行。",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "「while」迴圈還能夠處理空的空間！如果沒有生菜，它就不會採摘並讓程式碼繼續執行。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "您可以使用一個「while path ahead」迴圈或一個「repeat」迴圈來檢查所有的作物。"
         },
         "courseD_farmer_condLoops4_2019": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4": "沒有人知道每顆芽上會長出多少棵生菜。使用一個「當有生菜時」迴圈來繼續採摘，直到每棵生菜都被採集。",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "「while」迴圈還能夠處理空的空間！如果沒有生菜，它就不會採摘並讓代碼繼續執行。",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "「while」迴圈還能夠處理空的空間！如果沒有生菜，它就不會採摘並讓程式碼繼續執行。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "您可以使用一個「while path ahead」迴圈或一個「repeat」迴圈來檢查所有的作物。"
         },
         "courseD_farmer_condLoops4_2020": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4": "沒有人知道每顆芽上會長出多少棵生菜。使用一個「當有生菜時」迴圈來繼續採摘，直到每棵生菜都被採集。",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "「while」迴圈還能夠處理空的空間！如果沒有生菜，它就不會採摘並讓代碼繼續執行。",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "「while」迴圈還能夠處理空的空間！如果沒有生菜，它就不會採摘並讓程式碼繼續執行。",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "您可以使用一個「while path ahead」迴圈或一個「repeat」迴圈來檢查所有的作物。"
         },
         "courseD_farmer_condLoops5": {
@@ -6238,19 +6238,19 @@
           "courseD_farmer_condLoops7_b": "使用`重複 判斷 前面有路`來保持收割機移動正確的步數。"
         },
         "courseD_farmer_condLoops_challenge1": {
-          "courseD_farmer_condLoops_challenge1_a": "「步驟」鍵在這一挑戰中會很有用。",
+          "courseD_farmer_condLoops_challenge1_a": "「步進」鍵在這一挑戰中會很有用。",
           "courseD_farmer_condLoops_challenge1_b": "一般來說，如果您在一個南瓜上就只需要「pick pumpkin」（採摘南瓜）。如果您在一個南瓜上，您還需要做其他什麼？"
         },
         "courseD_farmer_condLoops_challenge1_2018": {
-          "courseD_farmer_condLoops_challenge1_a": "「步驟」鍵在這一挑戰中會很有用。",
+          "courseD_farmer_condLoops_challenge1_a": "「步進」鍵在這一挑戰中會很有用。",
           "courseD_farmer_condLoops_challenge1_b": "一般來說，如果您在一個南瓜上就只需要「pick pumpkin」（採摘南瓜）。如果您在一個南瓜上，您還需要做其他什麼？"
         },
         "courseD_farmer_condLoops_challenge1_2019": {
-          "courseD_farmer_condLoops_challenge1_a": "「步驟」鍵在這一挑戰中會很有用。",
+          "courseD_farmer_condLoops_challenge1_a": "「步進」鍵在這一挑戰中會很有用。",
           "courseD_farmer_condLoops_challenge1_b": "一般來說，如果您在一個南瓜上就只需要「pick pumpkin」（採摘南瓜）。如果您在一個南瓜上，您還需要做其他什麼？"
         },
         "courseD_farmer_condLoops_challenge1_2020": {
-          "courseD_farmer_condLoops_challenge1_a": "「步驟」鍵在這一挑戰中會很有用。",
+          "courseD_farmer_condLoops_challenge1_a": "「步進」鍵在這一挑戰中會很有用。",
           "courseD_farmer_condLoops_challenge1_b": "一般來說，如果您在一個南瓜上就只需要「pick pumpkin」（採摘南瓜）。如果您在一個南瓜上，您還需要做其他什麼？"
         },
         "courseD_farmer_condLoops_challenge2": {
@@ -6266,86 +6266,86 @@
           "courseD_farmer_condLoops_challenge2_a": "每個空間中每種蔬菜的數量都可能會變化。「while」迴圈可以幫忙！"
         },
         "courseD_farmer_while1": {
-          "courseD_farmer_while1_a": "您需要向前移動4次以到達土堆。您能使用一個「repeat」迴圈就做到嗎？",
-          "courseD_farmer_while1_b": "當您站在土堆上時，使用「remove 1」積木來清除它。"
+          "courseD_farmer_while1_a": "您需要向前移動4次以到達土堆。您能使用一個`重複`迴圈就做到嗎？",
+          "courseD_farmer_while1_b": "當您站在土堆上時，使用`移除 1`積木來清除它。"
         },
         "courseD_farmer_while1_2018": {
-          "courseD_farmer_while1_a": "您需要向前移動4次以到達土堆。您能使用一個「repeat」迴圈就做到嗎？",
-          "courseD_farmer_while1_b": "當您站在土堆上時，使用「remove 1」積木來清除它。"
+          "courseD_farmer_while1_a": "您需要向前移動4次以到達土堆。您能使用一個`重複`迴圈就做到嗎？",
+          "courseD_farmer_while1_b": "當您站在土堆上時，使用`移除 1`積木來清除它。"
         },
         "courseD_farmer_while1_2019": {
-          "courseD_farmer_while1_a": "您需要向前移動4次以到達土堆。您能使用一個「repeat」迴圈就做到嗎？",
-          "courseD_farmer_while1_b": "當您站在土堆上時，使用「remove 1」積木來清除它。"
+          "courseD_farmer_while1_a": "您需要向前移動4次以到達土堆。您能使用一個`重複`迴圈就做到嗎？",
+          "courseD_farmer_while1_b": "當您站在土堆上時，使用`移除 1`積木來清除它。"
         },
         "courseD_farmer_while1_2020": {
-          "courseD_farmer_while1_a": "您需要向前移動4次以到達土堆。您能使用一個「repeat」迴圈就做到嗎？",
-          "courseD_farmer_while1_b": "當您站在土堆上時，使用「remove 1」積木來清除它。"
+          "courseD_farmer_while1_a": "您需要向前移動4次以到達土堆。您能使用一個`重複`迴圈就做到嗎？",
+          "courseD_farmer_while1_b": "當您站在土堆上時，使用`移除 1`積木來清除它。"
         },
         "courseD_farmer_while2": {
           "courseD_farmer_while2_a": "你只需移動一次就能到達坑垌的位置。",
-          "courseD_farmer_while2_b": "您將需要使用「remove 1」積木6次。您能使用迴圈來讓這個操作變得更簡單嗎？"
+          "courseD_farmer_while2_b": "您將需要使用`移除 1`積木6次。您能使用迴圈來讓這個操作變得更簡單嗎？"
         },
         "courseD_farmer_while2_2018": {
           "courseD_farmer_while2_a": "你只需移動一次就能到達坑垌的位置。",
-          "courseD_farmer_while2_b": "您將需要使用「remove 1」積木6次。您能使用迴圈來讓這個操作變得更簡單嗎？"
+          "courseD_farmer_while2_b": "您將需要使用`移除 1`積木6次。您能使用迴圈來讓這個操作變得更簡單嗎？"
         },
         "courseD_farmer_while2_2019": {
           "courseD_farmer_while2_a": "你只需移動一次就能到達坑垌的位置。",
-          "courseD_farmer_while2_b": "您將需要使用「remove 1」積木6次。您能使用迴圈來讓這個操作變得更簡單嗎？"
+          "courseD_farmer_while2_b": "您將需要使用`移除 1`積木6次。您能使用迴圈來讓這個操作變得更簡單嗎？"
         },
         "courseD_farmer_while2_2020": {
           "courseD_farmer_while2_a": "你只需移動一次就能到達坑垌的位置。",
-          "courseD_farmer_while2_b": "您將需要使用「remove 1」積木6次。您能使用迴圈來讓這個操作變得更簡單嗎？"
+          "courseD_farmer_while2_b": "您將需要使用`移除 1`積木6次。您能使用迴圈來讓這個操作變得更簡單嗎？"
         },
         "courseD_farmer_while3": {
           "courseD_farmer_while3_a": "迴圈能幫助你簡化這兒的程式。",
-          "courseD_farmer_while3_b": "您應該不需要任何「turn」（轉彎）積木來到達土堆處。"
+          "courseD_farmer_while3_b": "您應該不需要任何`轉向`積木來到達土堆處。"
         },
         "courseD_farmer_while3_2018": {
           "courseD_farmer_while3_a": "迴圈能幫助你簡化這兒的程式。",
-          "courseD_farmer_while3_b": "您應該不需要任何「turn」（轉彎）積木來到達土堆處。"
+          "courseD_farmer_while3_b": "您應該不需要任何`轉向`積木來到達土堆處。"
         },
         "courseD_farmer_while3_2019": {
           "courseD_farmer_while3_a": "迴圈能幫助你簡化這兒的程式。",
-          "courseD_farmer_while3_b": "您應該不需要任何「turn」（轉彎）積木來到達土堆處。"
+          "courseD_farmer_while3_b": "您應該不需要任何`轉向`積木來到達土堆處。"
         },
         "courseD_farmer_while3_2020": {
           "courseD_farmer_while3_a": "迴圈能幫助你簡化這兒的程式。",
-          "courseD_farmer_while3_b": "您應該不需要任何「turn」（轉彎）積木來到達土堆處。"
+          "courseD_farmer_while3_b": "您應該不需要任何`轉向`積木來到達土堆處。"
         },
         "courseD_farmer_while4": {
-          "courseD_farmer_conditionals4_a": "使用一個「while」迴圈而非「repeat」迴圈來讓農夫一直挖下去，直至土堆消失。",
+          "courseD_farmer_conditionals4_a": "使用一個`重複判斷`迴圈而非`重複 次`迴圈來讓農夫一直挖下去，直至土堆消失。",
           "courseD_farmer_conditionals4_b": "這與之前的關卡非常相似，唯一的不同之處在於您需要哪一種迴圈。"
         },
         "courseD_farmer_while4_2018": {
-          "courseD_farmer_conditionals4_a": "使用一個「while」迴圈而非「repeat」迴圈來讓農夫一直挖下去，直至土堆消失。",
+          "courseD_farmer_conditionals4_a": "使用一個`重複判斷`迴圈而非`重複 次`迴圈來讓農夫一直挖下去，直至土堆消失。",
           "courseD_farmer_conditionals4_b": "這與之前的關卡非常相似，唯一的不同之處在於您需要哪一種迴圈。"
         },
         "courseD_farmer_while4_2019": {
-          "courseD_farmer_conditionals4_a": "使用一個「while」迴圈而非「repeat」迴圈來讓農夫一直挖下去，直至土堆消失。",
+          "courseD_farmer_conditionals4_a": "使用一個`重複判斷`迴圈而非`重複 次`迴圈來讓農夫一直挖下去，直至土堆消失。",
           "courseD_farmer_conditionals4_b": "這與之前的關卡非常相似，唯一的不同之處在於您需要哪一種迴圈。"
         },
         "courseD_farmer_while4_2020": {
-          "courseD_farmer_conditionals4_a": "使用一個「while」迴圈而非「repeat」迴圈來讓農夫一直挖下去，直至土堆消失。",
+          "courseD_farmer_conditionals4_a": "使用一個`重複判斷`迴圈而非`重複 次`迴圈來讓農夫一直挖下去，直至土堆消失。",
           "courseD_farmer_conditionals4_b": "這與之前的關卡非常相似，唯一的不同之處在於您需要哪一種迴圈。"
         },
         "courseD_farmer_while5": {
-          "courseD_farmer_conditionals5a_a": "嘗試在一個「repeat」迴圈內嵌套一個「while」迴圈。",
+          "courseD_farmer_conditionals5a_a": "嘗試在一個`重複`迴圈內嵌套一個`重複判斷`迴圈。",
           "courseD_farmer_conditionals5a_b": "農夫需要向前移動5次才能到達終點。農夫還需要做些什麼？",
           "courseD_farmer_conditionals5a_c": "向前移動 5 次，每次移動時，用 `重複 判斷` 積木來移除土堆。"
         },
         "courseD_farmer_while5_2018": {
-          "courseD_farmer_conditionals5a_a": "嘗試在一個「repeat」迴圈內嵌套一個「while」迴圈。",
+          "courseD_farmer_conditionals5a_a": "嘗試在一個`重複`迴圈內嵌套一個`重複判斷`迴圈。",
           "courseD_farmer_conditionals5a_b": "農夫需要向前移動5次才能到達終點。農夫還需要做些什麼？",
           "courseD_farmer_conditionals5a_c": "向前移動 5 次，每次移動時，用 `重複 判斷` 積木來移除土堆。"
         },
         "courseD_farmer_while5_2019": {
-          "courseD_farmer_conditionals5a_a": "嘗試在一個「repeat」迴圈內嵌套一個「while」迴圈。",
+          "courseD_farmer_conditionals5a_a": "嘗試在一個`重複`迴圈內嵌套一個`重複判斷`迴圈。",
           "courseD_farmer_conditionals5a_b": "農夫需要向前移動5次才能到達終點。農夫還需要做些什麼？",
           "courseD_farmer_conditionals5a_c": "向前移動 5 次，每次移動時，用 `重複 判斷` 積木來移除土堆。"
         },
         "courseD_farmer_while5_2020": {
-          "courseD_farmer_conditionals5a_a": "嘗試在一個「repeat」迴圈內嵌套一個「while」迴圈。",
+          "courseD_farmer_conditionals5a_a": "嘗試在一個`重複`迴圈內嵌套一個`重複判斷`迴圈。",
           "courseD_farmer_conditionals5a_b": "農夫需要向前移動5次才能到達終點。農夫還需要做些什麼？",
           "courseD_farmer_conditionals5a_c": "向前移動 5 次，每次移動時，用 `重複 判斷` 積木來移除土堆。"
         },
@@ -6370,69 +6370,69 @@
           "courseD_farmer_conditionals6_c": "要通過階梯樣式的路徑會用到像這樣的程式規律\n\n-   移動-向前\n-   填充\n-   轉向-右方\n-   移動-向前\n-   填充\n-   轉向-左方\n\n你知道要重複這個規律幾次嗎？\n\n記得要確定你有使用 `重複 判斷 有沒有坑洞` 積木來填滿坑洞。"
         },
         "courseD_farmer_while7": {
-          "courseD_farmer_conditionals8_a": "「while path ahead」（當前方有路）路積木會讓您一直前進，即使您不知道一條路上有多少個正方形。",
-          "courseD_farmer_conditionals8_b": "將一個「while path ahead」迴圈放進一個重複迴圈能在本關幫助到您。",
+          "courseD_farmer_conditionals8_a": "`重複判斷 有沒有路`積木會讓您一直前進，即使您不知道一條路上有多少個格子。",
+          "courseD_farmer_conditionals8_b": "將一個`重複判斷 有沒有路`迴圈放進一個重複迴圈能在本關幫助到您。",
           "courseD_farmer_conditionals8_c": "在每個路徑的後面，你需要做什麼呢？"
         },
         "courseD_farmer_while7_2018": {
-          "courseD_farmer_conditionals8_a": "「while path ahead」（當前方有路）路積木會讓您一直前進，即使您不知道一條路上有多少個正方形。",
-          "courseD_farmer_conditionals8_b": "將一個「while path ahead」迴圈放進一個重複迴圈能在本關幫助到您。",
+          "courseD_farmer_conditionals8_a": "`重複判斷 有沒有路`積木會讓您一直前進，即使您不知道一條路上有多少個格子。",
+          "courseD_farmer_conditionals8_b": "將一個`重複判斷 有沒有路`迴圈放進一個重複迴圈能在本關幫助到您。",
           "courseD_farmer_conditionals8_c": "在每個路徑的後面，你需要做什麼呢？"
         },
         "courseD_farmer_while7_2019": {
-          "courseD_farmer_conditionals8_a": "「while path ahead」（當前方有路）路積木會讓您一直前進，即使您不知道一條路上有多少個正方形。",
-          "courseD_farmer_conditionals8_b": "將一個「while path ahead」迴圈放進一個重複迴圈能在本關幫助到您。",
+          "courseD_farmer_conditionals8_a": "`重複判斷 有沒有路`積木會讓您一直前進，即使您不知道一條路上有多少個格子。",
+          "courseD_farmer_conditionals8_b": "將一個`重複判斷 有沒有路`迴圈放進一個重複迴圈能在本關幫助到您。",
           "courseD_farmer_conditionals8_c": "在每個路徑的後面，你需要做什麼呢？"
         },
         "courseD_farmer_while7_2020": {
-          "courseD_farmer_conditionals8_a": "「while path ahead」（當前方有路）路積木會讓您一直前進，即使您不知道一條路上有多少個正方形。",
-          "courseD_farmer_conditionals8_b": "將一個「while path ahead」迴圈放進一個重複迴圈能在本關幫助到您。",
+          "courseD_farmer_conditionals8_a": "`重複判斷 有沒有路`積木會讓您一直前進，即使您不知道一條路上有多少個格子。",
+          "courseD_farmer_conditionals8_b": "將一個`重複判斷 有沒有路`迴圈放進一個重複迴圈能在本關幫助到您。",
           "courseD_farmer_conditionals8_c": "在每個路徑的後面，你需要做什麼呢？"
         },
         "courseD_farmer_while8": {
-          "courseD_farmer_conditionals8_a": "您將需要使用多個「while」迴圈。",
+          "courseD_farmer_conditionals8_a": "您將需要使用多個`重複`迴圈。",
           "courseD_farmer_conditionals8_b": "在走到路的盡頭時才會有坑洞，所以在使用 `重複 判斷 有沒有坑洞` 之前，記得先用 `重複 判斷 有沒有路` 積木。",
           "courseD_farmer_conditionals8_c": "注意，你需要使用 `重複 判斷 有沒有路` 與 `重複 判斷 有沒有坑洞` 積木，共重複 6 次。"
         },
         "courseD_farmer_while8_2018": {
-          "courseD_farmer_conditionals8_a": "您將需要使用多個「while」迴圈。",
+          "courseD_farmer_conditionals8_a": "您將需要使用多個`重複`迴圈。",
           "courseD_farmer_conditionals8_b": "在走到路的盡頭時才會有坑洞，所以在使用 `重複 判斷 有沒有坑洞` 之前，記得先用 `重複 判斷 有沒有路` 積木。",
           "courseD_farmer_conditionals8_c": "注意，你需要使用 `重複 判斷 有沒有路` 與 `重複 判斷 有沒有坑洞` 積木，共重複 6 次。"
         },
         "courseD_farmer_while8_2019": {
-          "courseD_farmer_conditionals8_a": "您將需要使用多個「while」迴圈。",
+          "courseD_farmer_conditionals8_a": "您將需要使用多個`重複`迴圈。",
           "courseD_farmer_conditionals8_b": "在走到路的盡頭時才會有坑洞，所以在使用 `重複 判斷 有沒有坑洞` 之前，記得先用 `重複 判斷 有沒有路` 積木。",
           "courseD_farmer_conditionals8_c": "注意，你需要使用 `重複 判斷 有沒有路` 與 `重複 判斷 有沒有坑洞` 積木，共重複 6 次。"
         },
         "courseD_farmer_while8_2020": {
-          "courseD_farmer_conditionals8_a": "您將需要使用多個「while」迴圈。",
+          "courseD_farmer_conditionals8_a": "您將需要使用多個`重複`迴圈。",
           "courseD_farmer_conditionals8_b": "在走到路的盡頭時才會有坑洞，所以在使用 `重複 判斷 有沒有坑洞` 之前，記得先用 `重複 判斷 有沒有路` 積木。",
           "courseD_farmer_conditionals8_c": "注意，你需要使用 `重複 判斷 有沒有路` 與 `重複 判斷 有沒有坑洞` 積木，共重複 6 次。"
         },
         "courseD_farmer_while_challenge1": {
-          "courseD_farmer_while_challenge1_a": "每個洞或土堆都位於一個來自路徑末端的**向後**空間。",
+          "courseD_farmer_while_challenge1_a": "每個洞或土堆都位於一個來自路徑末端的**前一個**空格。",
           "courseD_farmer_while_challenge1_b": "如果你使用 `重複 判斷` 迴圈，就可以讓農夫知道什麼時候要移除土堆，什麼時候要填滿坑洞。",
-          "courseD_farmer_conditionals8_c": "不使用任何「repeat」迴圈也有可能通過本關。要想達到這個目的，您需要使用4個「while」迴圈。"
+          "courseD_farmer_conditionals8_c": "不使用任何`重複`迴圈也有可能通過本關。要想達到這個目的，您需要使用4個`重複直到`迴圈。"
         },
         "courseD_farmer_while_challenge1_2018": {
-          "courseD_farmer_while_challenge1_a": "每個洞或土堆都位於一個來自路徑末端的**向後**空間。",
+          "courseD_farmer_while_challenge1_a": "每個洞或土堆都位於一個來自路徑末端的**前一個**空格。",
           "courseD_farmer_while_challenge1_b": "如果你使用 `重複 判斷` 迴圈，就可以讓農夫知道什麼時候要移除土堆，什麼時候要填滿坑洞。",
-          "courseD_farmer_conditionals8_c": "不使用任何「repeat」迴圈也有可能通過本關。要想達到這個目的，您需要使用4個「while」迴圈。"
+          "courseD_farmer_conditionals8_c": "不使用任何`重複`迴圈也有可能通過本關。要想達到這個目的，您需要使用4個`重複直到`迴圈。"
         },
         "courseD_farmer_while_challenge1_2019": {
-          "courseD_farmer_while_challenge1_a": "每個洞或土堆都位於一個來自路徑末端的**向後**空間。",
+          "courseD_farmer_while_challenge1_a": "每個洞或土堆都位於一個來自路徑末端的**前一個**空格。",
           "courseD_farmer_while_challenge1_b": "如果你使用 `重複 判斷` 迴圈，就可以讓農夫知道什麼時候要移除土堆，什麼時候要填滿坑洞。",
-          "courseD_farmer_conditionals8_c": "不使用任何「repeat」迴圈也有可能通過本關。要想達到這個目的，您需要使用4個「while」迴圈。"
+          "courseD_farmer_conditionals8_c": "不使用任何`重複`迴圈也有可能通過本關。要想達到這個目的，您需要使用4個`重複直到`迴圈。"
         },
         "courseD_farmer_while_challenge1_2020": {
-          "courseD_farmer_while_challenge1_a": "每個洞或土堆都位於一個來自路徑末端的**向後**空間。",
+          "courseD_farmer_while_challenge1_a": "每個洞或土堆都位於一個來自路徑末端的**前一個**空格。",
           "courseD_farmer_while_challenge1_b": "如果你使用 `重複 判斷` 迴圈，就可以讓農夫知道什麼時候要移除土堆，什麼時候要填滿坑洞。",
-          "courseD_farmer_conditionals8_c": "不使用任何「repeat」迴圈也有可能通過本關。要想達到這個目的，您需要使用4個「while」迴圈。"
+          "courseD_farmer_conditionals8_c": "不使用任何`重複`迴圈也有可能通過本關。要想達到這個目的，您需要使用4個`重複直到`迴圈。"
         },
         "courseD_farmer_while_challenge2": {
-          "courseD_farmer_while_challenge1_a": "每個洞或土堆都位於一個來自路徑末端的**向後**空間。",
+          "courseD_farmer_while_challenge1_a": "每個洞或土堆都位於一個來自路徑末端的**前一個**空格。",
           "courseD_farmer_while_challenge1_b": "如果你使用 `重複 判斷` 迴圈，就可以讓農夫知道什麼時候要移除土堆，什麼時候要填滿坑洞。",
-          "courseD_farmer_conditionals8_c": "不使用任何「repeat」迴圈也有可能通過本關。要想達到這個目的，您需要使用4個「while」迴圈。"
+          "courseD_farmer_conditionals8_c": "不使用任何`重複`迴圈也有可能通過本關。要想達到這個目的，您需要使用4個`重複直到`迴圈。"
         },
         "courseD_harvester_nested_loops_challenge1": {
           "courseD_harvester_nested_loops_challenge1_a": "嘗試沿著這條路走，到達所有的玉米處！",
@@ -6805,128 +6805,128 @@
           "courseD_maze_ramp7_c": "如果要簡化程式，可以將一個重複迴圈放在另一個迴圈之中！這叫做「巢狀迴圈」。"
         },
         "courseD_maze_until1": {
-          "courseD_maze_until1_a": "有沒有您可以迴圈的序列來讓您的程式更簡短？",
+          "courseD_maze_until1_a": "有沒有可以重複的序列來讓您的程式更簡短？",
           "courseD_maze_until1_b": "試著用巢狀迴圈來完成這個關卡。"
         },
         "courseD_maze_until1_2018": {
-          "courseD_maze_until1_a": "有沒有您可以迴圈的序列來讓您的程式更簡短？",
+          "courseD_maze_until1_a": "有沒有可以重複的序列來讓您的程式更簡短？",
           "courseD_maze_until1_b": "試著用巢狀迴圈來完成這個關卡。"
         },
         "courseD_maze_until1_2019": {
-          "courseD_maze_until1_a": "有沒有您可以迴圈的序列來讓您的程式更簡短？",
+          "courseD_maze_until1_a": "有沒有可以重複的序列來讓您的程式更簡短？",
           "courseD_maze_until1_b": "試著用巢狀迴圈來完成這個關卡。"
         },
         "courseD_maze_until1_2020": {
-          "courseD_maze_until1_a": "有沒有您可以迴圈的序列來讓您的程式更簡短？",
+          "courseD_maze_until1_a": "有沒有可以重複的序列來讓您的程式更簡短？",
           "courseD_maze_until1_b": "試著用巢狀迴圈來完成這個關卡。"
         },
         "courseD_maze_until3": {
           "courseD_maze_until3_a": "-   你的程式做了什麼？\n-   你的程式應該要做什麼？\n-   那告訴你什麼？",
           "courseD_maze_until3_b": "如果您被卡在某一步，嘗試將步驟寫在一張紙上，並尋找它們重複的地方。",
           "courseD_maze_until3_c": "有沒有您可以採用的階梯模式來通過本關？",
-          "courseD_maze_until3_d": "別忘記使用「repeat until」（重複直到）積木來讓您的程式更簡短。"
+          "courseD_maze_until3_d": "別忘記使用`重複直到`積木來讓您的程式更簡短。"
         },
         "courseD_maze_until3_2018": {
           "courseD_maze_until3_a": "-   你的程式做了什麼？\n-   你的程式應該要做什麼？\n-   那告訴你什麼？",
           "courseD_maze_until3_b": "如果您被卡在某一步，嘗試將步驟寫在一張紙上，並尋找它們重複的地方。",
           "courseD_maze_until3_c": "有沒有您可以採用的階梯模式來通過本關？",
-          "courseD_maze_until3_d": "別忘記使用「repeat until」（重複直到）積木來讓您的程式更簡短。"
+          "courseD_maze_until3_d": "別忘記使用`重複直到`積木來讓您的程式更簡短。"
         },
         "courseD_maze_until3_2019": {
           "courseD_maze_until3_a": "-   你的程式做了什麼？\n-   你的程式應該要做什麼？\n-   那告訴你什麼？",
           "courseD_maze_until3_b": "如果您被卡在某一步，嘗試將步驟寫在一張紙上，並尋找它們重複的地方。",
           "courseD_maze_until3_c": "有沒有您可以採用的階梯模式來通過本關？",
-          "courseD_maze_until3_d": "別忘記使用「repeat until」（重複直到）積木來讓您的程式更簡短。"
+          "courseD_maze_until3_d": "別忘記使用`重複直到`積木來讓您的程式更簡短。"
         },
         "courseD_maze_until3_2020": {
           "courseD_maze_until3_a": "-   你的程式做了什麼？\n-   你的程式應該要做什麼？\n-   那告訴你什麼？",
           "courseD_maze_until3_b": "如果您被卡在某一步，嘗試將步驟寫在一張紙上，並尋找它們重複的地方。",
           "courseD_maze_until3_c": "有沒有您可以採用的階梯模式來通過本關？",
-          "courseD_maze_until3_d": "別忘記使用「repeat until」（重複直到）積木來讓您的程式更簡短。"
+          "courseD_maze_until3_d": "別忘記使用`重複直到`積木來讓您的程式更簡短。"
         },
         "courseD_maze_until4": {
           "courseD_maze_until4_a": "使用「步驟」鍵逐行檢查您的程式。\n\n-   第一步一切運行正常嗎？\n-   第二步一切運行正常嗎？\n-   哪裡出錯了？",
           "courseD_maze_until4_b": "有沒有您可以採用的階梯模式來通過本關？",
-          "courseD_maze_until4_c": "別忘記使用「repeat until」（重複直到）積木來讓您的程式更簡短。"
+          "courseD_maze_until4_c": "別忘記使用`重複直到`積木來讓您的程式更簡短。"
         },
         "courseD_maze_until4_2018": {
           "courseD_maze_until4_a": "使用「步驟」鍵逐行檢查您的程式。\n\n-   第一步一切運行正常嗎？\n-   第二步一切運行正常嗎？\n-   哪裡出錯了？",
           "courseD_maze_until4_b": "有沒有您可以採用的階梯模式來通過本關？",
-          "courseD_maze_until4_c": "別忘記使用「repeat until」（重複直到）積木來讓您的程式更簡短。"
+          "courseD_maze_until4_c": "別忘記使用`重複直到`積木來讓您的程式更簡短。"
         },
         "courseD_maze_until4_2019": {
           "courseD_maze_until4_a": "使用「步驟」鍵逐行檢查您的程式。\n\n-   第一步一切運行正常嗎？\n-   第二步一切運行正常嗎？\n-   哪裡出錯了？",
           "courseD_maze_until4_b": "有沒有您可以採用的階梯模式來通過本關？",
-          "courseD_maze_until4_c": "別忘記使用「repeat until」（重複直到）積木來讓您的程式更簡短。"
+          "courseD_maze_until4_c": "別忘記使用`重複直到`積木來讓您的程式更簡短。"
         },
         "courseD_maze_until4_2020": {
           "courseD_maze_until4_a": "使用「步驟」鍵逐行檢查您的程式。\n\n-   第一步一切運行正常嗎？\n-   第二步一切運行正常嗎？\n-   哪裡出錯了？",
           "courseD_maze_until4_b": "有沒有您可以採用的階梯模式來通過本關？",
-          "courseD_maze_until4_c": "別忘記使用「repeat until」（重複直到）積木來讓您的程式更簡短。"
+          "courseD_maze_until4_c": "別忘記使用`重複直到`積木來讓您的程式更簡短。"
         },
         "courseD_maze_until5": {
-          "courseD_maze_until5_a": "別忘記使用「if path to the left」（如果路徑向左）來讓僵屍確認一個轉彎的地方。",
-          "courseD_maze_until5_b": "僅使用一個「move forward」，將它放進「repeat until sunflower」（重複直到向日葵）積木中。",
+          "courseD_maze_until5_a": "別忘記使用`如果左邊有路`來讓僵屍找到一個該轉彎的地方。",
+          "courseD_maze_until5_b": "僅使用一個`移動-向前`，將它放進`重複直到 向日葵`積木中。",
           "courseD_maze_until5_c": "每一步之後，僵屍都需確認是否有左轉的路徑。如果它找到一條左轉的路徑，它應該怎麼做？"
         },
         "courseD_maze_until5_2018": {
-          "courseD_maze_until5_b": "僅使用一個「move forward」，將它放進「repeat until sunflower」（重複直到向日葵）積木中。"
+          "courseD_maze_until5_b": "僅使用一個`移動-向前`，將它放進`重複直到 向日葵`積木中。"
         },
         "courseD_maze_until5_2019": {
-          "courseD_maze_until5_b": "僅使用一個「move forward」，將它放進「repeat until sunflower」（重複直到向日葵）積木中。"
+          "courseD_maze_until5_b": "僅使用一個`移動-向前`，將它放進`重複直到 向日葵`積木中。"
         },
         "courseD_maze_until5_2020": {
-          "courseD_maze_until5_b": "僅使用一個「move forward」，將它放進「repeat until sunflower」（重複直到向日葵）積木中。"
+          "courseD_maze_until5_b": "僅使用一個`移動-向前`，將它放進`重複直到 向日葵`積木中。"
         },
         "courseD_maze_until6": {
           "courseD_maze_until6_a": "這次，試試用 `如果右邊有路` 積木來讓殭屍保持前進。",
-          "courseD_maze_until6_b": "僅使用一個「move forward」，將它放進「repeat until sunflower」（重複直到向日葵）積木中。",
-          "courseD_maze_until6_c": "雖然與上一關相比，這裡有更多的轉彎，但是因為「repeat until」積木，您的程式幾乎是相同的！"
+          "courseD_maze_until6_b": "僅使用一個`移動-向前`，將它放進`重複直到 向日葵`積木中。",
+          "courseD_maze_until6_c": "雖然與上一關相比，這裡有更多的轉彎，但是因為`重複直到`積木，您的程式幾乎是相同的！"
         },
         "courseD_maze_until6_2018": {
-          "courseD_maze_until6_b": "僅使用一個「move forward」，將它放進「repeat until sunflower」（重複直到向日葵）積木中。"
+          "courseD_maze_until6_b": "僅使用一個`移動-向前`，將它放進`重複直到 向日葵`積木中。"
         },
         "courseD_maze_until6_2019": {
-          "courseD_maze_until6_b": "僅使用一個「move forward」，將它放進「repeat until sunflower」（重複直到向日葵）積木中。"
+          "courseD_maze_until6_b": "僅使用一個`移動-向前`，將它放進`重複直到 向日葵`積木中。"
         },
         "courseD_maze_until6_2020": {
-          "courseD_maze_until6_b": "僅使用一個「move forward」，將它放進「repeat until sunflower」（重複直到向日葵）積木中。"
+          "courseD_maze_until6_b": "僅使用一個`移動-向前`，將它放進`重複直到 向日葵`積木中。"
         },
         "courseD_maze_until7": {
           "courseD_maze_until7_a": "您的程式不需要比上次更長，只有迷宮更長！",
-          "courseD_maze_until7_b": "雖然與上一關相比，這裡有更多的轉彎，但是因為「repeat until」積木，您的程式幾乎是相同的！",
-          "courseD_maze_until7_c": "記住確認左轉的路徑，因為右轉會帶您走上錯誤的路徑！"
+          "courseD_maze_until7_b": "雖然與上一關相比，這裡有更多的轉彎，但是因為`重複直到`積木，您的程式幾乎是相同的！",
+          "courseD_maze_until7_c": "記住是要檢查向左轉的路徑，因為右轉會帶您走上錯誤的路徑！"
         },
         "courseD_maze_until7_2018": {
           "courseD_maze_until7_a": "您的程式不需要比上次更長，只有迷宮更長！",
-          "courseD_maze_until7_b": "雖然與上一關相比，這裡有更多的轉彎，但是因為「repeat until」積木，您的程式幾乎是相同的！"
+          "courseD_maze_until7_b": "雖然與上一關相比，這裡有更多的轉彎，但是因為`重複直到`積木，您的程式幾乎是相同的！"
         },
         "courseD_maze_until7_2019": {
           "courseD_maze_until7_a": "您的程式不需要比上次更長，只有迷宮更長！",
-          "courseD_maze_until7_b": "雖然與上一關相比，這裡有更多的轉彎，但是因為「repeat until」積木，您的程式幾乎是相同的！"
+          "courseD_maze_until7_b": "雖然與上一關相比，這裡有更多的轉彎，但是因為`重複直到`積木，您的程式幾乎是相同的！"
         },
         "courseD_maze_until7_2020": {
           "courseD_maze_until7_a": "您的程式不需要比上次更長，只有迷宮更長！",
-          "courseD_maze_until7_b": "雖然與上一關相比，這裡有更多的轉彎，但是因為「repeat until」積木，您的程式幾乎是相同的！"
+          "courseD_maze_until7_b": "雖然與上一關相比，這裡有更多的轉彎，但是因為`重複直到`積木，您的程式幾乎是相同的！"
         },
         "courseD_maze_until8": {
-          "courseD_maze_until8_a": "確保您使用了「if/else」（如果/否則）積木來保證僵屍走向正確的方向。",
+          "courseD_maze_until8_a": "確保您使用了`如果 否則`積木來讓僵屍走向正確的方向。",
           "courseD_maze_until8_b": "利用 `如果 否則` 積木：如果前面有一條路，你應該怎麼做？",
-          "courseD_maze_until8_c": "利用「if/else」積木：如果前方沒有路，您應該轉向哪一條路呢？"
+          "courseD_maze_until8_c": "利用`如果 否則`積木：如果前方沒有路，您應該轉向哪一條路呢？"
         },
         "courseD_maze_until9": {
-          "courseD_maze_until8_a": "使用「if path ahead」（如果前方有路）會讓您在可能的任何時候一直向前走，幫助您避開有僵屍的路徑。",
+          "courseD_maze_until8_a": "使用`如果前面有路`會讓您在前方有路的時候一直向前走，幫助您避開有僵屍的路徑。",
           "courseD_maze_until8_b": "如果前面沒有路，你要轉向哪一邊？",
-          "courseD_maze_until8_c": "記住使用「repeat until」積木來讓您到達向日葵的位置！"
+          "courseD_maze_until8_c": "記住使用`重複直到`積木來讓您到達向日葵的位置！"
         },
         "courseD_maze_until9_2018": {
-          "courseD_maze_until8_c": "記住使用「repeat until」積木來讓您到達向日葵的位置！"
+          "courseD_maze_until8_c": "記住使用`重複直到`積木來讓您到達向日葵的位置！"
         },
         "courseD_maze_until9_2019": {
-          "courseD_maze_until8_c": "記住使用「repeat until」積木來讓您到達向日葵的位置！"
+          "courseD_maze_until8_c": "記住使用`重複直到`積木來讓您到達向日葵的位置！"
         },
         "courseD_maze_until9_2020": {
-          "courseD_maze_until8_c": "記住使用「repeat until」積木來讓您到達向日葵的位置！"
+          "courseD_maze_until8_c": "記住使用`重複直到`積木來讓您到達向日葵的位置！"
         },
         "courseD_playLab_cond1": {
           "courseD_playLab_cond1_a": "要解決這個挑戰，請將`角色 1 向上移動`積木添加到`當按向上鍵時`事件，然後對其他移動方向的積木執行相同操作。",
@@ -7443,12 +7443,12 @@
           "courseE_farmer_concept2_c": "你的主程式可以使用綠色的`做點什麼`積木來呼叫此函式。"
         },
         "courseE_farmer_concept3": {
-          "grade3_robotFarmer_ConditionalsIntro_8_a": "「while path ahead」（當前方有路）路積木會讓您一直前進，即使您不知道一條路上有多少個正方形。",
+          "grade3_robotFarmer_ConditionalsIntro_8_a": "`重複判斷 有沒有路`積木會讓您一直前進，即使您不知道一條路上有多少個格子。",
           "grade3_robotFarmer_ConditionalsIntro_8_b": "到達路徑盡頭的時候該怎麼辦？",
           "grade3_robotFarmer_ConditionalsIntro_8_c": "使用`重複`迴圈對每個直路徑運行多次代碼。"
         },
         "courseE_farmer_concept3_2018": {
-          "grade3_robotFarmer_ConditionalsIntro_8_a": "「while path ahead」（當前方有路）路積木會讓您一直前進，即使您不知道一條路上有多少個正方形。",
+          "grade3_robotFarmer_ConditionalsIntro_8_a": "`重複判斷 有沒有路`積木會讓您一直前進，即使您不知道一條路上有多少個格子。",
           "grade3_robotFarmer_ConditionalsIntro_8_b": "到達路徑盡頭的時候該怎麼辦？",
           "grade3_robotFarmer_ConditionalsIntro_8_c": "使用`重複`迴圈對每個直路徑運行多次代碼。"
         },
@@ -7796,38 +7796,38 @@
         },
         "courseF_artist_for4": {
           "courseF_artist_for4_a": "**需要的數字至少要是多少？\\\n最大的數字又是多少？\\\n每迴圈一次要增加多少？**\n\n這些問題是您每次在使用「for」迴圈要思考的。",
-          "courseF_artist_for4_b": "您的代碼將與您在上個關卡中編寫的代碼非常相似，但請記住這次要畫一個正方形！",
+          "courseF_artist_for4_b": "您的程式碼將與您在上個關卡中編寫的程式碼非常相似，但請記住這次要畫一個正方形！",
           "courseF_artist_for4_c": "不要害怕犯錯！嘗試添加積木並運行程式，看看會發生什麼，即使您還沒有解決這個關卡。"
         },
         "courseF_artist_for4_2018": {
           "courseF_artist_for4_a": "**需要的數字至少要是多少？\\\n最大的數字又是多少？\\\n每迴圈一次要增加多少？**\n\n這些問題是您每次在使用「for」迴圈要思考的。",
-          "courseF_artist_for4_b": "您的代碼將與您在上個關卡中編寫的代碼非常相似，但請記住這次要畫一個正方形！",
+          "courseF_artist_for4_b": "您的程式碼將與您在上個關卡中編寫的程式碼非常相似，但請記住這次要畫一個正方形！",
           "courseF_artist_for4_c": "不要害怕犯錯！嘗試添加積木並運行程式，看看會發生什麼，即使您還沒有解決這個關卡。"
         },
         "courseF_artist_for4_2019": {
           "courseF_artist_for4_a": "**需要的數字至少要是多少？\\\n最大的數字又是多少？\\\n每迴圈一次要增加多少？**\n\n這些問題是您每次在使用「for」迴圈要思考的。",
-          "courseF_artist_for4_b": "您的代碼將與您在上個關卡中編寫的代碼非常相似，但請記住這次要畫一個正方形！",
+          "courseF_artist_for4_b": "您的程式碼將與您在上個關卡中編寫的程式碼非常相似，但請記住這次要畫一個正方形！",
           "courseF_artist_for4_c": "不要害怕犯錯！嘗試添加積木並運行程式，看看會發生什麼，即使您還沒有解決這個關卡。"
         },
         "courseF_artist_for4_2020": {
           "courseF_artist_for4_a": "**需要的數字至少要是多少？\\\n最大的數字又是多少？\\\n每迴圈一次要增加多少？**\n\n這些問題是您每次在使用「for」迴圈要思考的。",
-          "courseF_artist_for4_b": "您的代碼將與您在上個關卡中編寫的代碼非常相似，但請記住這次要畫一個正方形！",
+          "courseF_artist_for4_b": "您的程式碼將與您在上個關卡中編寫的程式碼非常相似，但請記住這次要畫一個正方形！",
           "courseF_artist_for4_c": "不要害怕犯錯！嘗試添加積木並運行程式，看看會發生什麼，即使您還沒有解決這個關卡。"
         },
         "courseF_artist_for5": {
-          "courseF_artist_for5_a": "形成螺旋圖時，代碼裡不需要「repeat」迴圈！",
+          "courseF_artist_for5_a": "形成螺旋圖時，程式碼裡不需要「repeat」迴圈！",
           "courseF_artist_for5_b": "您的「for」迴圈、移動和轉彎積木可以保持完全相同。"
         },
         "courseF_artist_for5_2018": {
-          "courseF_artist_for5_a": "形成螺旋圖時，代碼裡不需要「repeat」迴圈！",
+          "courseF_artist_for5_a": "形成螺旋圖時，程式碼裡不需要「repeat」迴圈！",
           "courseF_artist_for5_b": "您的「for」迴圈、移動和轉彎積木可以保持完全相同。"
         },
         "courseF_artist_for5_2019": {
-          "courseF_artist_for5_a": "形成螺旋圖時，代碼裡不需要「repeat」迴圈！",
+          "courseF_artist_for5_a": "形成螺旋圖時，程式碼裡不需要「repeat」迴圈！",
           "courseF_artist_for5_b": "您的「for」迴圈、移動和轉彎積木可以保持完全相同。"
         },
         "courseF_artist_for5_2020": {
-          "courseF_artist_for5_a": "形成螺旋圖時，代碼裡不需要「repeat」迴圈！",
+          "courseF_artist_for5_a": "形成螺旋圖時，程式碼裡不需要「repeat」迴圈！",
           "courseF_artist_for5_b": "您的「for」迴圈、移動和轉彎積木可以保持完全相同。"
         },
         "courseF_artist_for6": {
@@ -7875,19 +7875,19 @@
           "courseF_artist_for7_d": "這個圖案是用轉向 89 度做出來的。"
         },
         "courseF_artist_for8": {
-          "courseF_artist_for8_a": "在代碼中保持其他所有內容不變，只需要改變轉動角度。",
+          "courseF_artist_for8_a": "在程式碼中保持其他所有內容不變，只需要改變轉動角度。",
           "courseF_artist_for8_b": "如果您願意的話，可以為螺旋圖選擇其他顏色！"
         },
         "courseF_artist_for8_2018": {
-          "courseF_artist_for8_a": "在代碼中保持其他所有內容不變，只需要改變轉動角度。",
+          "courseF_artist_for8_a": "在程式碼中保持其他所有內容不變，只需要改變轉動角度。",
           "courseF_artist_for8_b": "如果您願意的話，可以為螺旋圖選擇其他顏色！"
         },
         "courseF_artist_for8_2019": {
-          "courseF_artist_for8_a": "在代碼中保持其他所有內容不變，只需要改變轉動角度。",
+          "courseF_artist_for8_a": "在程式碼中保持其他所有內容不變，只需要改變轉動角度。",
           "courseF_artist_for8_b": "如果您願意的話，可以為螺旋圖選擇其他顏色！"
         },
         "courseF_artist_for8_2020": {
-          "courseF_artist_for8_a": "在代碼中保持其他所有內容不變，只需要改變轉動角度。",
+          "courseF_artist_for8_a": "在程式碼中保持其他所有內容不變，只需要改變轉動角度。",
           "courseF_artist_for8_b": "如果您願意的話，可以為螺旋圖選擇其他顏色！"
         },
         "courseF_artist_for9": {
@@ -7955,13 +7955,13 @@
           "courseF_artist_for_challenge2_d": "\\*\\*解決方案：\n\n\\*\\*<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
         },
         "courseF_artist_fwp1": {
-          "courseF_artist_fwp1_c": "將所有用於繪製正方形的代碼放入函式編輯器中。",
+          "courseF_artist_fwp1_c": "將所有用於繪製正方形的程式碼放入函式編輯器中。",
           "courseF_artist_fwp1_a": "提醒你，要轉 90 度才能畫出正方形。",
           "courseF_artist_fwp1_b": "您只需要重複一個正方形的邊數即可。"
         },
         "courseF_artist_fwp2": {
           "courseF_artist_fwp2_a": "您需要點選「edit」鍵才能進入該函式。進入函式後，添加一個「length」參數，並在「move forward」積木內使用！",
-          "courseF_artist_fwp2_b": "調用函式時，請使用「for」迴圈，以獲得最佳代碼！"
+          "courseF_artist_fwp2_b": "調用函式時，請使用「for」迴圈，以獲得最佳程式碼！"
         },
         "courseF_artist_fwp3": {
           "courseF_artist_fwp3_a": "如果將其全部放入「for」迴圈中，那麼變得更加容易。",
@@ -7979,7 +7979,7 @@
         },
         "courseF_artist_fwp6": {
           "courseF_artist_fwp6_a": "可以多次運行該程式，以弄清楚此函式如何使用不同的參數運行。",
-          "courseF_artist_fwp6_b": "您無需添加任何「move」或「turn」積木即可完成此代碼。"
+          "courseF_artist_fwp6_b": "您無需添加任何「move」或「turn」積木即可完成此程式碼。"
         },
         "courseF_artist_fwp7": {
           "courseF_artist_fwp7_a": "嘗試了幾種想法後是否感覺困惑？嘗試點選右上角的「Start over」（重新開始）鍵。",
@@ -8005,20 +8005,20 @@
           "courseF_artist_fwp_challenge1_f": "**解決方案：**\n\n![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)"
         },
         "courseF_artist_variables10": {
-          "courseF_artist_variables10_a": "享受這一關吧！看看可以對您的代碼做出哪些小變動。",
-          "courseF_artist_variables10_b": "您可以嘗試多種方法，並且可以多次運行您的代碼。"
+          "courseF_artist_variables10_a": "享受這一關吧！看看可以對您的程式碼做出哪些小變動。",
+          "courseF_artist_variables10_b": "您可以嘗試多種方法，並且可以多次運行您的程式碼。"
         },
         "courseF_artist_variables10_2018": {
-          "courseF_artist_variables10_a": "享受這一關吧！看看可以對您的代碼做出哪些小變動。",
-          "courseF_artist_variables10_b": "您可以嘗試多種方法，並且可以多次運行您的代碼。"
+          "courseF_artist_variables10_a": "享受這一關吧！看看可以對您的程式碼做出哪些小變動。",
+          "courseF_artist_variables10_b": "您可以嘗試多種方法，並且可以多次運行您的程式碼。"
         },
         "courseF_artist_variables10_2019": {
-          "courseF_artist_variables10_a": "享受這一關吧！看看可以對您的代碼做出哪些小變動。",
-          "courseF_artist_variables10_b": "您可以嘗試多種方法，並且可以多次運行您的代碼。"
+          "courseF_artist_variables10_a": "享受這一關吧！看看可以對您的程式碼做出哪些小變動。",
+          "courseF_artist_variables10_b": "您可以嘗試多種方法，並且可以多次運行您的程式碼。"
         },
         "courseF_artist_variables10_2020": {
-          "courseF_artist_variables10_a": "享受這一關吧！看看可以對您的代碼做出哪些小變動。",
-          "courseF_artist_variables10_b": "您可以嘗試多種方法，並且可以多次運行您的代碼。"
+          "courseF_artist_variables10_a": "享受這一關吧！看看可以對您的程式碼做出哪些小變動。",
+          "courseF_artist_variables10_b": "您可以嘗試多種方法，並且可以多次運行您的程式碼。"
         },
         "courseF_artist_variables2": {
           "courseF_artist_variables2_a": "記住在畫完每一個三角形之後向前移動。",
@@ -8037,23 +8037,23 @@
           "courseF_artist_variables2_b": "您的新迴圈將包含幫助您畫三角形的迴圈，然後是一個「move forward」指令。"
         },
         "courseF_artist_variables3": {
-          "courseF_artist_variables3_a": "「length」（長度）變量將在您代碼中的兩個地方被使用到：在您三角形的邊長中，以及在您在三角形之間向前移動的數量上。",
+          "courseF_artist_variables3_a": "「length」（長度）變量將在您程式碼中的兩個地方被使用到：在您三角形的邊長中，以及在您在三角形之間向前移動的數量上。",
           "courseF_artist_variables3_b": "含數值50的數字積木只能出現在一個地方：「set variable length」（設定變量長度）積木之後。"
         },
         "courseF_artist_variables3_2018": {
-          "courseF_artist_variables3_a": "「length」（長度）變量將在您代碼中的兩個地方被使用到：在您三角形的邊長中，以及在您在三角形之間向前移動的數量上。",
+          "courseF_artist_variables3_a": "「length」（長度）變量將在您程式碼中的兩個地方被使用到：在您三角形的邊長中，以及在您在三角形之間向前移動的數量上。",
           "courseF_artist_variables3_b": "數值為 50 的數字積木只能放在一個位置：`設定長度`積木之後。"
         },
         "courseF_artist_variables3_2019": {
-          "courseF_artist_variables3_a": "「length」（長度）變量將在您代碼中的兩個地方被使用到：在您三角形的邊長中，以及在您在三角形之間向前移動的數量上。",
+          "courseF_artist_variables3_a": "「length」（長度）變量將在您程式碼中的兩個地方被使用到：在您三角形的邊長中，以及在您在三角形之間向前移動的數量上。",
           "courseF_artist_variables3_b": "數值為 50 的數字積木只能放在一個位置：`設定長度`積木之後。"
         },
         "courseF_artist_variables3_2020": {
-          "courseF_artist_variables3_a": "「length」（長度）變量將在您代碼中的兩個地方被使用到：在您三角形的邊長中，以及在您在三角形之間向前移動的數量上。",
+          "courseF_artist_variables3_a": "「length」（長度）變量將在您程式碼中的兩個地方被使用到：在您三角形的邊長中，以及在您在三角形之間向前移動的數量上。",
           "courseF_artist_variables3_b": "數值為 50 的數字積木只能放在一個位置：`設定長度`積木之後。"
         },
         "courseF_artist_variables4": {
-          "courseF_artist_variables4_a": "您的代碼與上個關卡沒有太大不同，只不過您需要先讓小藝術家跳下來，然後再讓他轉身，準備再次向前跳。",
+          "courseF_artist_variables4_a": "您的程式碼與上個關卡沒有太大不同，只不過您需要先讓小藝術家跳下來，然後再讓他轉身，準備再次向前跳。",
           "courseF_artist_variables4_c": "這是您的小藝術家將遵循的規律：\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
           "courseF_artist_variables4_b": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
         },
@@ -8073,106 +8073,106 @@
           "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_variables5": {
-          "courseF_artist_variables5_a": "除了您將要向_左_轉，跳躍，然後向_右_轉之外，代碼的後半部分應與前半部分幾乎相同。",
-          "courseF_artist_variables5_b": "您代碼的前半部分將繪製三個三角形，後半部分將繪製另外三個三角形。",
-          "courseF_artist_variables5_c": "首先複製程式的前半部分代碼，然後對其進行更改，將設計呈現出來。",
+          "courseF_artist_variables5_a": "除了您將要向_左_轉，跳躍，然後向_右_轉之外，程式碼的後半部分應與前半部分幾乎相同。",
+          "courseF_artist_variables5_b": "您程式碼的前半部分將繪製三個三角形，後半部分將繪製另外三個三角形。",
+          "courseF_artist_variables5_c": "首先複製程式的前半部分程式碼，然後對其進行更改，將設計呈現出來。",
           "courseF_artist_variables5_d": "這是您的小藝術家將遵循的規律：\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "courseF_artist_variables5_2018": {
-          "courseF_artist_variables5_a": "除了您將要向_左_轉，跳躍，然後向_右_轉之外，代碼的後半部分應與前半部分幾乎相同。",
-          "courseF_artist_variables5_b": "您代碼的前半部分將繪製三個三角形，後半部分將繪製另外三個三角形。",
-          "courseF_artist_variables5_c": "首先複製程式的前半部分代碼，然後對其進行更改，將設計呈現出來。",
+          "courseF_artist_variables5_a": "除了您將要向_左_轉，跳躍，然後向_右_轉之外，程式碼的後半部分應與前半部分幾乎相同。",
+          "courseF_artist_variables5_b": "您程式碼的前半部分將繪製三個三角形，後半部分將繪製另外三個三角形。",
+          "courseF_artist_variables5_c": "首先複製程式的前半部分程式碼，然後對其進行更改，將設計呈現出來。",
           "courseF_artist_variables5_d": "這是您的小藝術家將遵循的規律：\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "courseF_artist_variables5_2019": {
-          "courseF_artist_variables5_a": "除了您將要向_左_轉，跳躍，然後向_右_轉之外，代碼的後半部分應與前半部分幾乎相同。",
-          "courseF_artist_variables5_b": "您代碼的前半部分將繪製三個三角形，後半部分將繪製另外三個三角形。",
-          "courseF_artist_variables5_c": "首先複製程式的前半部分代碼，然後對其進行更改，將設計呈現出來。",
+          "courseF_artist_variables5_a": "除了您將要向_左_轉，跳躍，然後向_右_轉之外，程式碼的後半部分應與前半部分幾乎相同。",
+          "courseF_artist_variables5_b": "您程式碼的前半部分將繪製三個三角形，後半部分將繪製另外三個三角形。",
+          "courseF_artist_variables5_c": "首先複製程式的前半部分程式碼，然後對其進行更改，將設計呈現出來。",
           "courseF_artist_variables5_d": "這是您的小藝術家將遵循的規律：\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "courseF_artist_variables5_2020": {
-          "courseF_artist_variables5_a": "除了您將要向_左_轉，跳躍，然後向_右_轉之外，代碼的後半部分應與前半部分幾乎相同。",
-          "courseF_artist_variables5_b": "您代碼的前半部分將繪製三個三角形，後半部分將繪製另外三個三角形。",
-          "courseF_artist_variables5_c": "首先複製程式的前半部分代碼，然後對其進行更改，將設計呈現出來。",
+          "courseF_artist_variables5_a": "除了您將要向_左_轉，跳躍，然後向_右_轉之外，程式碼的後半部分應與前半部分幾乎相同。",
+          "courseF_artist_variables5_b": "您程式碼的前半部分將繪製三個三角形，後半部分將繪製另外三個三角形。",
+          "courseF_artist_variables5_c": "首先複製程式的前半部分程式碼，然後對其進行更改，將設計呈現出來。",
           "courseF_artist_variables5_d": "這是您的小藝術家將遵循的規律：\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
         },
         "courseF_artist_variables6": {
           "courseF_artist_variables6_a": "辛虧有變數，您只需更改頂部的一個數字就能讓其運作。",
-          "courseF_artist_variables6_b": "您將需要編輯數值為50的數字積木，而代碼中的其他內容都無需更改。"
+          "courseF_artist_variables6_b": "您將需要編輯數值為50的數字積木，而程式碼中的其他內容都無需更改。"
         },
         "courseF_artist_variables6_2018": {
           "courseF_artist_variables6_a": "辛虧有變數，您只需更改頂部的一個數字就能讓其運作。",
-          "courseF_artist_variables6_b": "您將需要編輯數值為50的數字積木，而代碼中的其他內容都無需更改。"
+          "courseF_artist_variables6_b": "您將需要編輯數值為50的數字積木，而程式碼中的其他內容都無需更改。"
         },
         "courseF_artist_variables6_2019": {
           "courseF_artist_variables6_a": "辛虧有變數，您只需更改頂部的一個數字就能讓其運作。",
-          "courseF_artist_variables6_b": "您將需要編輯數值為50的數字積木，而代碼中的其他內容都無需更改。"
+          "courseF_artist_variables6_b": "您將需要編輯數值為50的數字積木，而程式碼中的其他內容都無需更改。"
         },
         "courseF_artist_variables6_2020": {
           "courseF_artist_variables6_a": "辛虧有變數，您只需更改頂部的一個數字就能讓其運作。",
-          "courseF_artist_variables6_b": "您將需要編輯數值為50的數字積木，而代碼中的其他內容都無需更改。"
+          "courseF_artist_variables6_b": "您將需要編輯數值為50的數字積木，而程式碼中的其他內容都無需更改。"
         },
         "courseF_artist_variables6a": {
           "courseF_artist_variables6a_a": "請記住使用「length」（長度）變數而不是實際數字來解決這個關卡。",
-          "courseF_artist_variables6a_b": "此代碼將與您的三角形代碼十分相似，只不過形狀不同哦！",
-          "courseF_artist_variables6a_c": "首先，為一個正方形編寫代碼，然後，添加代碼以在兩個正方形之間移動。最後，對所有內容添加一個迴圈！",
+          "courseF_artist_variables6a_b": "此程式碼將與您的三角形程式碼十分相似，只不過形狀不同哦！",
+          "courseF_artist_variables6a_c": "首先，為一個正方形編寫程式碼，然後，添加程式碼以在兩個正方形之間移動。最後，對所有內容添加一個迴圈！",
           "courseF_artist_variables6a_d": "這是您將遵循的規律！\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
         },
         "courseF_artist_variables6a_2018": {
           "courseF_artist_variables6a_a": "請記住使用「length」（長度）變數而不是實際數字來解決這個關卡。",
-          "courseF_artist_variables6a_b": "此代碼將與您的三角形代碼十分相似，只不過形狀不同哦！",
-          "courseF_artist_variables6a_c": "首先，為一個正方形編寫代碼，然後，添加代碼以在兩個正方形之間移動。最後，對所有內容添加一個迴圈！",
+          "courseF_artist_variables6a_b": "此程式碼將與您的三角形程式碼十分相似，只不過形狀不同哦！",
+          "courseF_artist_variables6a_c": "首先，為一個正方形編寫程式碼，然後，添加程式碼以在兩個正方形之間移動。最後，對所有內容添加一個迴圈！",
           "courseF_artist_variables6a_d": "這是您將遵循的規律！\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
         },
         "courseF_artist_variables6a_2019": {
           "courseF_artist_variables6a_a": "請記住使用「length」（長度）變數而不是實際數字來解決這個關卡。",
-          "courseF_artist_variables6a_b": "此代碼將與您的三角形代碼十分相似，只不過形狀不同哦！",
-          "courseF_artist_variables6a_c": "首先，為一個正方形編寫代碼，然後，添加代碼以在兩個正方形之間移動。最後，對所有內容添加一個迴圈！",
+          "courseF_artist_variables6a_b": "此程式碼將與您的三角形程式碼十分相似，只不過形狀不同哦！",
+          "courseF_artist_variables6a_c": "首先，為一個正方形編寫程式碼，然後，添加程式碼以在兩個正方形之間移動。最後，對所有內容添加一個迴圈！",
           "courseF_artist_variables6a_d": "這是您將遵循的規律！\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
         },
         "courseF_artist_variables6a_2020": {
           "courseF_artist_variables6a_a": "請記住使用「length」（長度）變數而不是實際數字來解決這個關卡。",
-          "courseF_artist_variables6a_b": "此代碼將與您的三角形代碼十分相似，只不過形狀不同哦！",
-          "courseF_artist_variables6a_c": "首先，為一個正方形編寫代碼，然後，添加代碼以在兩個正方形之間移動。最後，對所有內容添加一個迴圈！",
+          "courseF_artist_variables6a_b": "此程式碼將與您的三角形程式碼十分相似，只不過形狀不同哦！",
+          "courseF_artist_variables6a_c": "首先，為一個正方形編寫程式碼，然後，添加程式碼以在兩個正方形之間移動。最後，對所有內容添加一個迴圈！",
           "courseF_artist_variables6a_d": "這是您將遵循的規律！\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
         },
         "courseF_artist_variables7": {
           "courseF_artist_variables7_a": "使用「set length」（設定長度）積木開始編碼。將長度變數設定為 150。",
-          "courseF_artist_variables7_b": "您可以使用「repeat」迴圈來簡化三角形代碼。",
+          "courseF_artist_variables7_b": "您可以使用「repeat」迴圈來簡化三角形程式碼。",
           "courseF_artist_variables7_c": "要左轉 120 度才能做出三角形的角。"
         },
         "courseF_artist_variables7_2018": {
           "courseF_artist_variables7_a": "使用「set length」（設定長度）積木開始編碼。將長度變數設定為 150。",
-          "courseF_artist_variables7_b": "您可以使用「repeat」迴圈來簡化三角形代碼。",
+          "courseF_artist_variables7_b": "您可以使用「repeat」迴圈來簡化三角形程式碼。",
           "courseF_artist_variables7_c": "要左轉 120 度才能做出三角形的角。"
         },
         "courseF_artist_variables7_2019": {
           "courseF_artist_variables7_a": "使用「set length」（設定長度）積木開始編碼。將長度變數設定為 150。",
-          "courseF_artist_variables7_b": "您可以使用「repeat」迴圈來簡化三角形代碼。",
+          "courseF_artist_variables7_b": "您可以使用「repeat」迴圈來簡化三角形程式碼。",
           "courseF_artist_variables7_c": "要左轉 120 度才能做出三角形的角。"
         },
         "courseF_artist_variables7_2020": {
           "courseF_artist_variables7_a": "使用「set length」（設定長度）積木開始編碼。將長度變數設定為 150。",
-          "courseF_artist_variables7_b": "您可以使用「repeat」迴圈來簡化三角形代碼。",
+          "courseF_artist_variables7_b": "您可以使用「repeat」迴圈來簡化三角形程式碼。",
           "courseF_artist_variables7_c": "要左轉 120 度才能做出三角形的角。"
         },
         "courseF_artist_variables8": {
-          "courseF_artist_variables8_b": "請記住以「set length」積木開始編寫三角形代碼，並將其設定為150畫素。",
+          "courseF_artist_variables8_b": "請記住以「set length」積木開始編寫三角形程式碼，並將其設定為150畫素。",
           "courseF_artist_variables8_c": "確保使用「repeat」迴圈繪製三角形。",
           "courseF_artist_variables8_a": "嘗試在最後將\\[\n\nblockly block] [0]\n\n積木組放入迴圈中。"
         },
         "courseF_artist_variables8_2018": {
-          "courseF_artist_variables8_b": "請記住以「set length」積木開始編寫三角形代碼，並將其設定為150畫素。",
+          "courseF_artist_variables8_b": "請記住以「set length」積木開始編寫三角形程式碼，並將其設定為150畫素。",
           "courseF_artist_variables8_c": "確保使用「repeat」迴圈繪製三角形。",
           "courseF_artist_variables8_a": "嘗試在最後將\\[\n\nblockly block] [0]\n\n積木組放入迴圈中。"
         },
         "courseF_artist_variables8_2019": {
-          "courseF_artist_variables8_b": "請記住以「set length」積木開始編寫三角形代碼，並將其設定為150畫素。",
+          "courseF_artist_variables8_b": "請記住以「set length」積木開始編寫三角形程式碼，並將其設定為150畫素。",
           "courseF_artist_variables8_c": "確保使用「repeat」迴圈繪製三角形。",
           "courseF_artist_variables8_a": "嘗試在最後將\\[\n\nblockly block] [0]\n\n積木組放入迴圈中。"
         },
         "courseF_artist_variables8_2020": {
-          "courseF_artist_variables8_b": "請記住以「set length」積木開始編寫三角形代碼，並將其設定為150畫素。",
+          "courseF_artist_variables8_b": "請記住以「set length」積木開始編寫三角形程式碼，並將其設定為150畫素。",
           "courseF_artist_variables8_c": "確保使用「repeat」迴圈繪製三角形。",
           "courseF_artist_variables8_a": "嘗試在最後將\\[\n\nblockly block] [0]\n\n積木組放入迴圈中。"
         },
@@ -8253,18 +8253,18 @@
           "courseF_artist_variables_challenge2_d": "**解決方案：**\n\n ![Solution](https://images.code.org/1236e605d55d8cc9beafbca5425c8f75-image-1543523947735.png)"
         },
         "courseF_bee_conditionals10": {
-          "courseF_bee_conditionals10_a": "想象每處都有云。這對您簡化代碼有幫助嗎？",
+          "courseF_bee_conditionals10_a": "想象每處都有云。這對您簡化程式碼有幫助嗎？",
           "courseF_bee_conditionals10_b": "使用「if/else」積木檢查每個空間是否有花蜜或蜂蜜。",
           "courseF_bee_conditionals10_c": "「while」迴圈是否可以幫助走到這條路徑的盡頭？"
         },
         "courseF_bee_conditionals2": {
-          "courseF_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的代碼在兩種情況下都運行，請確保使用「if」語句。",
+          "courseF_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的程式碼在兩種情況下都運行，請確保使用「if」語句。",
           "courseF_bee_conditionals2_b": "嘗試編寫序列，讓您可以到達所有空間，然後添加「if」語句。"
         },
         "courseF_bee_conditionals3": {
           "courseF_bee_conditionals3_a": "確保使用「if」語句檢查每個空間是否有花。",
           "courseF_bee_conditionals3_b": "一個「repeat」迴圈將對您很有用，從而您只需要使用一個「if」積木。",
-          "courseF_bee_conditionals3_c": "嘗試編寫代碼以檢查第一朵雲。您可以迴圈檢查所有雲朵嗎？"
+          "courseF_bee_conditionals3_c": "嘗試編寫程式碼以檢查第一朵雲。您可以迴圈檢查所有雲朵嗎？"
         },
         "courseF_bee_conditionals4": {
           "courseD_bee_conditionals4_a": "即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。",
@@ -8274,7 +8274,7 @@
         "courseF_bee_conditionals5": {
           "courseF_bee_conditionals5_a": "將矩形路徑的每條邊都視為一條路徑。設定一個嵌套迴圈，其外部有一個「repeat」積木，內部有一個「while there is a path ahead」積木。 如果蜜蜂需要嗡嗡飛過花的每一側，那麼蜜蜂需要嗡嗡飛過多少條路徑？",
           "courseF_bee_conditionals5_b": "在「while there is a path ahead」積木內，您將要向前移動並檢查是否有花。您如何檢查是否有花？如果有花您怎樣？",
-          "courseF_bee_conditionals5_c": "矩形的3條邊上有花，因此代碼需要「repeat 3 times」（重複3次）。 在每一次重複中，「while there is a path ahead」，蜜蜂都需要沿著這條路徑繼續前進。",
+          "courseF_bee_conditionals5_c": "矩形的3條邊上有花，因此程式碼需要「repeat 3 times」（重複3次）。 在每一次重複中，「while there is a path ahead」，蜜蜂都需要沿著這條路徑繼續前進。",
           "courseF_bee_conditionals5_d": "為了繼續前進，蜜蜂將需要「move forward」。在路上時，蜜蜂需要檢查是否有花。如果有花，蜜蜂應該怎樣？"
         },
         "courseF_bee_conditionals8": {
@@ -8528,11 +8528,11 @@
         },
         "courseF_bee_functions8a": {
           "courseF_bee_functions8a_a": "如果碰到了難度很高的關卡，試著花些時間建構出函式來利用。\n\n添加一些積木到裡頭，然後試試看，接著再添加一些，再試試，最後，你就可以找到答案！",
-          "courseF_bee_functions8a_b": "記住要在函式編輯器中建立代碼。"
+          "courseF_bee_functions8a_b": "記住要在函式編輯器中建立程式碼。"
         },
         "courseF_bee_functionsPre7": {
           "courseF_bee_functions7_a": "如果碰到了難度很高的關卡，試著花些時間建構出函式來利用。\n\n添加一些積木到裡頭，然後試試看，接著再添加一些，再試試，最後，你就可以找到答案！",
-          "courseF_bee_functions7_b": "記住要在綠色函式積木內建立代碼。\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n    </statement>\n  </block>\n</xml>",
+          "courseF_bee_functions7_b": "記住要在綠色函式積木內建立程式碼。\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n    </statement>\n  </block>\n</xml>",
           "courseF_bee_functions7_c": "如果有蜂窩，您應該轉向哪條路徑？如果有花呢？如果什麼都沒有怎麼辦？"
         },
         "courseF_bee_functions_challenge1": {
@@ -8547,7 +8547,7 @@
           "courseF_bee_fwp1_b": "使用「repeat」積木沿路徑繼續。確保您使用的是「move forward」積木，並使用「if」語句檢查是否有花。"
         },
         "courseF_bee_fwp2": {
-          "courseF_bee_fwp2_a": "要將其轉換爲函式，只需將代碼拖放到現有的函式積木中。\n\n![](https://images.code.org/4d918c677ecb9f1618c1556566805b32-image-1477621874625.gif)",
+          "courseF_bee_fwp2_a": "要將其轉換爲函式，只需將程式碼拖放到現有的函式積木中。\n\n![](https://images.code.org/4d918c677ecb9f1618c1556566805b32-image-1477621874625.gif)",
           "courseF_bee_fwp2_b": "不要忘了將「rowOfNectar」積木連接到「when run」，以調用您剛構建的函式。"
         },
         "courseF_bee_fwp3": {
@@ -8620,7 +8620,7 @@
         },
         "courseF_playlab_variables5c": {
           "courseF_playlab_variables5c_a": "在工具箱的「Variables」（變數）下找到一個「answer」變數積木。",
-          "courseF_playlab_variables5c_b": "測試您的代碼！嘗試輸入「red」（紅色）以及其他顏色，以查看會發生什麼。"
+          "courseF_playlab_variables5c_b": "測試您的程式碼！嘗試輸入「red」（紅色）以及其他顏色，以查看會發生什麼。"
         },
         "courseF_playlab_variables6c": {
           "courseF_playlab_variables6c_a": "在「Input」（輸入）部分下，使用「ask」積木從用戶處獲取輸入。"

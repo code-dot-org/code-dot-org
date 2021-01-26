@@ -168,14 +168,10 @@ export const commands = {
     }
 
     const azureTTS = AzureTextToSpeech.getSingleton();
-    // Voices from the server used to have a "languageCode" key, which has been renamed
-    // to "locale". Voices are cached, so allow for either key for backwards compatibility.
-    // This can be removed a couple of days after this code has been deployed.
-    const locale = voices[language].locale || voices[language].languageCode;
     const promise = azureTTS.createSoundPromise({
       text,
       gender,
-      locale,
+      locale: voices[language].locale,
       authenticityToken,
       onFailure: message => outputWarning(message + '\n')
     });

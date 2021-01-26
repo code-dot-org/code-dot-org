@@ -991,6 +991,7 @@ da:
             '"y"': y-position
             '"direction"': bevægelses retning
             '"tint"': toning
+            '"speed"': hastighed
       gamelab_getThisSprite:
         text: "{CHOICE} figur"
       gamelab_getTime:
@@ -1112,6 +1113,8 @@ da:
             '"West"': Vest
       gamelab_moveToward:
         text: flyt {SPRITE} pixels {DISTANCE} imod {TARGET}
+      gamelab_newSpritePointer:
+        text: klikket {SPRITE}
       gamelab_objectSpritePointer:
         text: klikket {SPRITE}
       gamelab_playSound:
@@ -1162,6 +1165,13 @@ da:
             undefined: ingen
       gamelab_setBackgroundImageAs:
         text: sæt baggrund til {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mellem
+            '100': large
       gamelab_setProp:
         text: skift {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -1171,6 +1181,7 @@ da:
             '"x"': x-position
             '"y"': y-position
             '"direction"': bevægelses retning
+            '"speed"': hastighed
       gamelab_setSizes:
         options:
           PROPERTY:
