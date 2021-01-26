@@ -26,7 +26,6 @@ class FollowersController < ApplicationController
     end
 
     if current_user && current_user.display_captcha? && !verify_recaptcha
-      current_user.increment_section_attempts
       flash[:alert] = I18n.t('follower.captcha_required')
       # Concatenate section code so user does not have to type section code again
       # Note that @section will always be defined due to validations in load_section
