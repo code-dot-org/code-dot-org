@@ -1,8 +1,5 @@
-require 'net/http'
-require 'open-uri'
-require 'json'
-
 class Api::V1::SectionsController < Api::V1::JsonApiController
+  include GoogleRecaptchaHelper
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update, :require_captcha]
@@ -119,11 +116,16 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   # POST /api/v1/sections/<id>/join
   def join
-    # recaptcha_token = params[:recaptchaToken]
     unless current_user
       render_404
       return
     end
+    if params[:recaptchaToken] #TODO: add and display captcha call
+      recaptcha_token = params[:recaptchaToken]
+      is_verified = verify_recaptcha_token(recaptcha_token)
+      puts is_verified
+    end
+    # TODO: add increment section attempts
     result = @section.add_student current_user
     # add_student returns 'failure' when id of current user is owner of @section
     if result == 'failure'
