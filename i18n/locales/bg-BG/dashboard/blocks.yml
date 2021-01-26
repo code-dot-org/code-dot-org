@@ -675,6 +675,7 @@ bg:
             '"y"': y позиция
             '"direction"': посока на движение
             '"tint"': оттенък
+            '"speed"': скорост
       gamelab_getTime:
         options:
           UNIT:
@@ -737,6 +738,13 @@ bg:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': дъга
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': под вода
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': средно
+            '100': large
       gamelab_setProp:
         text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
@@ -746,6 +754,7 @@ bg:
             '"x"': x позиция
             '"y"': y позиция
             '"direction"': посока на движение
+            '"speed"': скорост
       gamelab_setSizes:
         options:
           PROPERTY:

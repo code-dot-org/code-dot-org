@@ -424,6 +424,7 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+            '"speed"': брзина
       gamelab_getTime:
         options:
           UNIT:
@@ -471,10 +472,18 @@ sr:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': Дуга
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Под водом
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Зима
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': средње
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': величина
+            '"speed"': брзина
       gamelab_setSizes:
         options:
           PROPERTY:

@@ -1308,6 +1308,11 @@
           "get all nectar": {
             "name": "យកទឹកដមផ្កាទាំងអស់"
           }
+        },
+        "Alien Defender": {
+          "game has been won": {
+            "name": "ហ្គេមត្រូវបានឈ្នះ"
+          }
         }
       }
     }

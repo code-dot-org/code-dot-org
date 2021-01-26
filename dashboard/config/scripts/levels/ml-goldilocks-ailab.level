@@ -4,7 +4,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "short_instructions": "Here are some short instructions for this test AI Lab level.",
-    "mode": "{ \"id\": \"load_dataset\", \"setId\": \"foods\" }",
+    "mode": "{}",
     "parent_level_id": 24642,
     "long_instructions": "# Prepare: Goldilocks Principles\r\n\r\nThis is a level."
   },

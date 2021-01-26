@@ -61,6 +61,12 @@ cs:
               name: 'Hravá laboratoř: Vytvoř příběh'
             The Big Event:
               name: Velká událost
+          student_description: Kurz 1 je navržen tak, aby umožnil čerstvým čtenářům
+            vytvářet počítačové programy, které jim pomohou se naučit spolupráci s
+            ostatními, rozvinout dovednosti potřebné k řešení problémů a překonávání
+            obtížných úkolů. Na konci tohoto kurzu studenti vytvoří jejich vlastní
+            hru nebo příběh, který mohou sdílet. Doporučeno pro první třídu základní
+            školy.
         course2:
           title: Kurz 2
           description: Kurz 2 je vhodný pro studenty, kteří umí číst a nemají předchozí
@@ -108,6 +114,10 @@ cs:
               name: Velká událost
             Your Digital Footprint:
               name: Tvá digitální stopa
+          student_description: Kurz 2 je vhodný pro studenty, kteří umí číst a nemají
+            předchozí zkušenosti s programováním. V tomto kurzu studenti vytváří programy,
+            aby vyřešili problémy a vyvinuli interaktivní hry nebo příběhy, které
+            mohou sdílet. Doporučeno pro 2. - 5. třídu.
         course3:
           title: Kurz 3
           description: Kurz 3 je určen pro studenty, kteří prošli kurzem 2. Studenti
@@ -161,6 +171,11 @@ cs:
               name: 'Play Lab: Vytvoření hry'
             'Studio: Create a Story':
               name: 'Hravá laboratoř: Vytvoř příběh'
+          student_description: Kurz 3 je určen pro studenty, kteří prošli kurzem 2.
+            Studenti se hlouběji ponoří do programovacích témat z předchozích kurzů
+            a budou hledat vhodná řešení složitějších problémů. Na konci tohoto kurzu
+            studenti vytvoří interaktivní příběhy a hry, které mohou s kýmkoli sdílet.
+            Vhodné pro 4.-5. ročník ZŠ.
         playlab:
           title: Play Lab
           description: Vytvoř příběh nebo udělej hru s Play Lab!
@@ -168,6 +183,7 @@ cs:
           lessons:
             Play Lab:
               name: Play Lab
+          student_description: Vytvoř příběh nebo udělej hru s Play Lab!
         artist:
           title: Umělec
           description: Nakresli úžasné obrázky a vzory s umělcem!
@@ -175,6 +191,7 @@ cs:
           lessons:
             Artist:
               name: Umělec
+          student_description: Nakresli úžasné obrázky a vzory s umělcem!
         hourofcode:
           title: Klasické bludiště
           description: Vyzkoušejte základy informatiky s postavičkami z Angy Birds,
@@ -183,6 +200,8 @@ cs:
           lessons:
             Maze:
               name: Bludiště
+          student_description: Vyzkoušejte základy informatiky s postavičkami z Angy
+            Birds, Plants vs. Zombies a Scratem z Doby ledové!
         frozen:
           title: Kóduj s Annou a Elsou
           description: Pojďme spojit Anna a Elsu, jak ony prozkoumávají pomocí kódu
@@ -193,6 +212,9 @@ cs:
           lessons:
             Artist:
               name: Umělec
+          student_description: Pojďme spojit Anna a Elsu, jak ony prozkoumávají pomocí
+            kódu kouzlo a krásu ledu. Sněhové vločky a vzory se vytváří při bruslení
+            a udělají zimní říši divů, kterou pak můžete sdílet se svými přáteli!
         course4:
           title: Kurz 4
           description: Kurz 4 je určen pro studenty, kteří prošli Kurzem 2 a 3. Studenti
@@ -248,6 +270,11 @@ cs:
               name: 'Nezapojené: Psaní písniček s parametry'
             'Unplugged: Tangrams':
               name: 'Nezapojené: Tangramy'
+          student_description: Kurz 4 je určen pro studenty, kteří prošli Kurzem 2
+            a 3. Studenti se naučí řešit úlohy s narůstající složitostí, když se při
+            řešení každé výzvy učí zkombinovat několik konceptů. Než tento kurz dokončí,
+            budou studenti vytvářet programy, pomocí nichž předvedou různé dovednosti
+            včetně cyklů a funkcí s parametry. Doporučeno pro 4. - 8. třídu.
         Course4pre:
           title: Kurz 4 předpoklady
           description: Krátký rozjezd konceptů pro studenty, kteří nevzali kurz 2
@@ -273,6 +300,8 @@ cs:
               name: Farmářka - pokud (while) cykly
             'Maze: Sequence':
               name: 'Bludiště: posloupnost'
+          student_description: Krátký rozjezd konceptů pro studenty, kteří nevzali
+            kurz 2 a 3.
         usability:
           lessons:
             Binary:
@@ -306,6 +335,8 @@ cs:
           lessons:
             Infinity:
               name: Nekonečno
+          student_description: Použij Play Lab k vytvoření příběhu nebo hry s Disney
+            Infinity postavami.
         algebrademo:
           lessons:
             Defining Variables:
@@ -371,6 +402,10 @@ cs:
               name: Bludiště
             Wrap-up:
               name: Shrnutí
+          student_description: Tento 20-ti hodinový kurz pokrývá základní koncepty
+            informatiky a programování obsáhnuté v kurzích 2-4. Kurz je navrhnut pro
+            žáky staré 10 - 18 let. Pokud máš zájem o detailnejší kurz, vyzkoušej
+            kurzy 2-4!
         edit-code:
           title: Upravit kód
           description: Upravit kód
@@ -382,6 +417,7 @@ cs:
               name: Umělec
             The Maze:
               name: Bludiště
+          student_description: Upravit kód
         events:
           title: Události
           description: Události
@@ -391,6 +427,7 @@ cs:
               name: Bounce
             Studio:
               name: Studio
+          student_description: Události
         flappy:
           title: Flappy
           description: Chcete napsat vlastní hru za méně než 10 minut? Vyzkoušejte
@@ -399,6 +436,8 @@ cs:
           lessons:
             Flappy Code:
               name: Flappy
+          student_description: Chcete napsat vlastní hru za méně než 10 minut? Vyzkoušejte
+            náš návod na hru Flappy Bird!
         jigsaw:
           title: Skládačka
           description: Vyzkoušej náš kurz na skládačky
@@ -406,6 +445,7 @@ cs:
           lessons:
             Jigsaw:
               name: Skládačka
+          student_description: Vyzkoušej náš kurz na skládačky
         step:
           title: Krok
           description: Krokový výukový kurz
@@ -413,6 +453,7 @@ cs:
           lessons:
             Step:
               name: Krok
+          student_description: Krokový výukový kurz
         Hour of Code:
           title: Hodina kódu 2013
           description: Zkus základy informatiky s postavičkami z Angry birds a Plants
@@ -421,6 +462,8 @@ cs:
           lessons:
             Hour of Code 2013:
               name: Hodina kódu 2013
+          student_description: Zkus základy informatiky s postavičkami z Angry birds
+            a Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -502,6 +545,7 @@ cs:
               name: Vítejte!
             Wrap-Up:
               name: Rekapitulace
+          student_description: 'Fáze 2 Online: Promíchané letní studium'
         cspunit2:
           description_short: Programování
           lessons:
@@ -523,6 +567,7 @@ cs:
               name: Řetězce a obrázky
             The Design Recipe:
               name: Návrhový předpis
+          student_description: 'Fáze 2 Online: Promíchané letní studium'
         allthethings:
           lessons:
             Artist:
@@ -569,6 +614,7 @@ cs:
               name: Řetězce a obrázky
             Teacher Dashboard:
               name: Katedra učitele
+          student_description: 'Fáze 2 Online: Promíchané letní studium'
         cspfacilitator:
           lessons:
             App Lab:
@@ -599,6 +645,7 @@ cs:
               name: Vítejte!
             Wrap-up:
               name: Shrnutí
+          student_description: 'Fáze 2 Online: Promíchané letní studium'
         algebraPD2:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
@@ -609,6 +656,7 @@ cs:
               name: Návrhový předpis
             Welcome!:
               name: Vítejte!
+          student_description: 'Fáze 2 Online: Promíchané letní studium'
         sciencePD2b:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
@@ -617,6 +665,7 @@ cs:
               name: Vítejte!
             Wrap-Up:
               name: Rekapitulace
+          student_description: 'Fáze 2 Online: Promíchané letní studium'
         science-PD2:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
@@ -625,6 +674,7 @@ cs:
               name: Vítejte!
             Wrap-Up:
               name: Rekapitulace
+          student_description: 'Fáze 2 Online: Promíchané letní studium'
         Equity-OnlinePD:
           lessons:
             Getting Started:
@@ -637,6 +687,7 @@ cs:
               name: Vítejte!
             Wrap-Up:
               name: Rekapitulace
+          student_description: 'Fáze 2 Online: Promíchané letní studium'
         ECSPD2-iZone:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
@@ -651,6 +702,7 @@ cs:
               name: Vítejte!
             Wrap-up:
               name: Shrnutí
+          student_description: 'Fáze 2 Online: Promíchané letní studium'
         ECSPD2-NexTech:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
@@ -665,6 +717,7 @@ cs:
               name: Vítejte!
             Wrap-up:
               name: Shrnutí
+          student_description: 'Fáze 2 Online: Promíchané letní studium'
         CSPPD2:
           lessons:
             Getting Started:
@@ -734,6 +787,7 @@ cs:
           lessons:
             Ice Age Play Lab:
               name: Doba ledová Play Lab
+          student_description: Vytvoř příběh nebo udělej hru s ledovou Play Labem!
         CSPPD3-Unit3:
           lessons:
             Getting Started:
@@ -750,6 +804,7 @@ cs:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+          student_description: Vytvoř si příběh nebo hru s Gumball Play Labem!
         starwars:
           title: 'Hvězdné války: Budování galaxie s kódem'
           description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars
@@ -759,6 +814,8 @@ cs:
           lessons:
             Hour of Code 2015:
               name: Hodina kódu 2013
+          student_description: Nauč se programovat droidy a vytvoř si vlastní hru
+            Star Wars ve vzdálené galaxii.
         starwarsblocks:
           title: 'Hvězdné války: Budování galaxie s kódem'
           description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars
@@ -768,6 +825,8 @@ cs:
           lessons:
             Hour of Code 2015:
               name: Hodina kódu 2013
+          student_description: Nauč se programovat droidy a vytvoř si vlastní hru
+            Star Wars ve vzdálené galaxii.
         mc:
           title: Hodina kódu s Minecraftem
           description: Používej bloky kódu, abys vzal Steva nebo Alex na dobrodružství
@@ -776,6 +835,8 @@ cs:
           lessons:
             Hour of Code 2015:
               name: Hodina kódu 2013
+          student_description: Vezmi pomocí kódu Steva nebo Alex za dobrodružstvím
+            po světě Minecraft.
         oceans:
           title: AI pomáhá oceánům
         ScienceP3OLPT3:
@@ -1147,6 +1208,7 @@ cs:
           lessons:
             Bounce:
               name: Bounce
+          student_description: Vytvoř basketbalovou hru
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1183,6 +1245,8 @@ cs:
           lessons:
             Minecraft Hour of Code Designer:
               name: Hodina kódu Minecraft Designer
+          student_description: Naprogramuj zvířata a další postavy, vytvoř si svojí
+            vlastní verzi Minecraftu.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1877,6 +1941,8 @@ cs:
           lessons:
             Minecraft Hour of Code:
               name: Hodina kódu s Minecraftem
+          student_description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou!
+            Procestuj Minecraft s kódem.
         course-e-2018:
           lessons:
             'Programming: My Robotic Friends':
@@ -2115,6 +2181,9 @@ cs:
               name: Události s Bounce
             Nested Loops in Maze:
               name: Vnořené cykly v bludišti
+          student_description: Studenti se naučí chápat vnořené cykly, while (dokud)
+            cykly, podmínky a události (events). Kromě programování se studenti naučí
+            o digitálním občanství.
         coursec-2018:
           assignment_family_title: Kurz C
           lessons:
@@ -2417,6 +2486,8 @@ cs:
           lessons:
             Dance Party:
               name: Taneční večírek
+          student_description: Vytvoř si svůj vlastní taneční večírek a sdílej ho
+            s kamarády!
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -2445,6 +2516,8 @@ cs:
               display_name: Funkce
         dance-extras:
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
+          student_description: Pokračuj i po první hodině kódu rozšířením nápadů ve
+            svém projektu.
         coursef-2019:
           title: Kurz F (2019)
           lesson_groups:
@@ -2633,6 +2706,8 @@ cs:
               description_teacher: V této lekci studenti naprogramují svůj vlastní
                 interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože
                 tento nástroj byl vytvořený tak, aby reagoval na hudbu.
+          student_description: Studenti se naučí chápat cykly, podmínky a události
+            (events). Kromě programování se studenti naučí o digitálním občanství.
         coursee-2019:
           title: Kurz E (2019)
           lesson_groups:
@@ -2780,6 +2855,8 @@ cs:
         dance-extras-gallery:
           title: Nepřestávej tančit
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
+          student_description: Pokračuj i po první hodině kódu rozšířením nápadů ve
+            svém projektu.
         coursec-2019:
           title: Kurz C (2019)
           lesson_groups:
@@ -3197,6 +3274,9 @@ cs:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Focus Area 1:
+              name: Obsah kurzu
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -3281,6 +3361,8 @@ cs:
           lessons:
             Dance Party:
               name: Taneční večírek
+          student_description: Vytvoř si svůj vlastní taneční večírek a sdílej ho
+            s kamarády!
         k5-onlinepd-2019:
           lesson_groups:
             k5_getting_started:
@@ -3310,6 +3392,8 @@ cs:
               name: Projekty k ukončení kurzu
         dance-extras-2019:
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
+          student_description: Pokračuj i po první hodině kódu rozšířením nápadů ve
+            svém projektu.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -3687,6 +3771,8 @@ cs:
               description_teacher: V této lekci studenti naprogramují svůj vlastní
                 interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože
                 tento nástroj byl vytvořený tak, aby reagoval na hudbu.
+          student_description: Studenti se naučí chápat cykly, podmínky a události
+            (events). Kromě programování se studenti naučí o digitálním občanství.
         coursee-2020:
           title: Kurz E (2019)
           lesson_groups:
@@ -3971,6 +4057,18 @@ cs:
           description_short: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
           description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
           name: šíření
+          student_description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
+        2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Kódování simulace
+          lesson_groups:
+            introduction:
+              display_name: Úvod
+            lessonGroup-3:
+              display_name: Proměnné
+            outbreak:
+              display_name: Simulace šíření
         csd1-2021:
           lesson_groups:
             csd1_1:
@@ -4205,6 +4303,8 @@ cs:
               display_name: Binární
             csf_digcit:
               display_name: Digitální občanství
+          student_description: Studenti se naučí chápat cykly, podmínky a události
+            (events). Kromě programování se studenti naučí o digitálním občanství.
         coursee-2021:
           title: Kurz E (2019)
           lessons:
@@ -4286,6 +4386,8 @@ cs:
             Snowflakes with Anna and Elsa:
               key: Vločky s Annou a Elsou
               name: Vločky s Annou a Elsou
+            'Looking Ahead with Minecraft ':
+              name: Pohled do budoucna s Minecraftem
             If/Else with Bee:
               key: Pokud/jinak se včelkou
               name: Pokud/jinak se včelkou
@@ -4318,6 +4420,8 @@ cs:
               display_name: Postavy
         pre-express-2021:
           lessons:
+            Programming in with Angry Birds:
+              name: Programujeme s Angry Birds
             Programming with Rey and BB-8:
               key: Programování s Rey a BB-8
               name: Programování s Rey a BB-8
@@ -4332,8 +4436,6 @@ cs:
           lessons:
             Virus Simulation for Code Bytes:
               name: Kódování simulace
-            lesson-1:
-              name: Obálkové proměnné
           lesson_groups:
             ramp_up:
               display_name: Úvod
@@ -4341,3 +4443,15 @@ cs:
               display_name: Simulace šíření
             lessonGroup-3:
               display_name: Proměnné
+            Sprites:
+              display_name: Postavy
+        csd4-preview-2021:
+          lesson_groups:
+            csd4_2:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        csd5-preview-2021:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'

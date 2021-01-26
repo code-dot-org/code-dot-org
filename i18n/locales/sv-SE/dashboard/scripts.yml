@@ -49,6 +49,7 @@ sv:
               name: 'Spel-labb - skapa en berättelse'
             The Big Event:
               name: Den stora händelsen
+          student_description: Börja med Kurs 1 för dem som börjat lära sig läsa. Eleverna kommer att skapa datorprogram som hjälper dem att lära sig att samarbeta med andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra uppgifter. I slutet av kursen skapar eleverna ett eget spel eller en berättelse som de kan dela med andra. Rekommenderas för förskolan-årskurs 1.
         course2:
           title: Kurs 2
           description: Kurs 2 är utformad för elever som kan läsa och inte har tidigare erfarenhet av programmering. I kursen kommer eleverna skapa program för att lösa problem och utveckla interaktiva spel eller berättelser som de kan dela. Rekommenderas för årskurserna 2-5.
@@ -93,6 +94,7 @@ sv:
               name: Den stora händelsen
             Your Digital Footprint:
               name: Ditt digitala fotavtryck
+          student_description: Kurs 2 är utformad för elever som kan läsa och inte har tidigare erfarenhet av programmering. I kursen kommer eleverna skapa program för att lösa problem och utveckla interaktiva spel eller berättelser som de kan dela. Rekommenderas för årskurserna 2-5.
         course3:
           title: Kurs 3
           description: Kurs 3 är utformad för elever som har gått kurs 2. Eleverna kommer att fördjupa sig i de programmeringsområden som introducerats i föregående kurser för att skapa flexibla lösningar till mer komplexa problem. I slutet av kursen skapar eleverna interaktiva berättelser och spel som de kan dela. Rekommenderas för årskurs 4-5.
@@ -141,6 +143,7 @@ sv:
               name: 'Spel-labbet: skapa ett spel'
             'Studio: Create a Story':
               name: 'Spel-labb - skapa en berättelse'
+          student_description: Kurs 3 är utformad för elever som har gått kurs 2. Eleverna kommer att fördjupa sig i de programmeringsområden som introducerats i föregående kurser för att skapa flexibla lösningar till mer komplexa problem. I slutet av kursen skapar eleverna interaktiva berättelser och spel som de kan dela. Rekommenderas för årskurs 4-5.
         playlab:
           title: Spel-labb
           description: Skapa en berättelse eller gör ett spel med Spel-labbet!
@@ -148,6 +151,7 @@ sv:
           lessons:
             Play Lab:
               name: Spel-labb
+          student_description: Skapa en berättelse eller gör ett spel med Spel-labbet!
         artist:
           title: Konstnären
           description: Rita häftiga bilder och mönster med konstnären!
@@ -155,6 +159,7 @@ sv:
           lessons:
             Artist:
               name: Konstnären
+          student_description: Rita häftiga bilder och mönster med konstnären!
         hourofcode:
           title: Klassisk labyrint
           description: Prova grunderna i datavetenskap med figurer från Angry Birds, Plants vs. Zombies och Scrat från Ice Age!
@@ -162,6 +167,7 @@ sv:
           lessons:
             Maze:
               name: Labyrint
+          student_description: Prova grunderna i datavetenskap med figurer från Angry Birds, Plants vs. Zombies och Scrat från Ice Age!
         frozen:
           title: Koda med Anna och Elsa
           description: Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom skridskoåkning och skapa ett underbart vinterland som du kan dela med dina vänner!
@@ -169,6 +175,7 @@ sv:
           lessons:
             Artist:
               name: Konstnären
+          student_description: Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom skridskoåkning och skapa ett underbart vinterland som du kan dela med dina vänner!
         course4:
           title: Kurs 4
           description: Kurs 4 är utformad för elever som har gjort kurserna 2 och 3. Eleverna lär sig att ta itu med pussel med ökad komplexitet medan de lär sig hur man kombinerar flera begrepp genom att lösa varje utmaning. När kursen är klar, kommer eleverna att skapa program som låter dem visa upp flera färdigheter, inklusive för loopar och funktioner med parametrar. Rekommenderas för årskurs 4-8.
@@ -219,6 +226,7 @@ sv:
               name: 'Ouppkopplad: Skriva låtar med parametrar'
             'Unplugged: Tangrams':
               name: 'Ouppkopplad: Tangram'
+          student_description: Kurs 4 är utformad för elever som har gjort kurserna 2 och 3. Eleverna lär sig att ta itu med pussel med ökad komplexitet medan de lär sig hur man kombinerar flera begrepp genom att lösa varje utmaning. När kursen är klar, kommer eleverna att skapa program som låter dem visa upp flera färdigheter, inklusive för loopar och funktioner med parametrar. Rekommenderas för årskurs 4-8.
         Course4pre:
           title: Kurs 4 förutsättning
           description: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
@@ -242,6 +250,7 @@ sv:
               name: 'Bonde: ''medan''-slingor'
             'Maze: Sequence':
               name: 'Labyrint: Sekvens'
+          student_description: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
         usability:
           title: Användbarhetstest
           description: Ett urval av kurs 4 nivåer för användartester.
@@ -256,6 +265,7 @@ sv:
               name: Introduktion
             Variables:
               name: variabler
+          student_description: Ett urval av kurs 4 nivåer för användartester.
         algebra:
           title: Datavetenskap i Algebra
           description: Lär dig funktionell programmering genom algebra
@@ -301,6 +311,7 @@ sv:
               name: 'Ouppkopplad: Design recept'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Ouppkopplad: videospel och koordinat-plan'
+          student_description: Lär dig funktionell programmering genom algebra
         infinity:
           title: Disney Infinity Play Lab
           description: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
@@ -308,6 +319,7 @@ sv:
           lessons:
             Infinity:
               name: Oändligt
+          student_description: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
         algebrademo:
           title: Algebra Demo
           description: En handfull pussel för att demonstrera miljön och programmeringsspråket som används i Code.org CS i Algebra
@@ -323,6 +335,7 @@ sv:
               name: Att göra bilder
             The Design Recipe:
               name: Design recept
+          student_description: En handfull pussel för att demonstrera miljön och programmeringsspråket som används i Code.org CS i Algebra
         K5PD:
           title: K5 Professionell utveckling
           description: 'Professionell utveckling för K5 kurser'
@@ -341,6 +354,7 @@ sv:
               name: Unplugged lektioner
             Writing computer programs:
               name: Skriva datorprogram
+          student_description: 'Professionell utveckling för K5 kurser'
         netsim:
           title: Internet Simulator
         pixelation:
@@ -391,6 +405,7 @@ sv:
               name: Labyrinten
             Wrap-up:
               name: Gör klart
+          student_description: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.
         edit-code:
           title: Redigera kod
           description: Redigera kod
@@ -404,6 +419,7 @@ sv:
               name: Konstnären
             The Maze:
               name: Labyrinten
+          student_description: Redigera kod
         events:
           title: Händelser
           description: Händelser
@@ -417,6 +433,7 @@ sv:
               name: Eval
             Studio:
               name: Studio
+          student_description: Händelser
         flappy:
           title: Flappy kod
           description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!
@@ -424,6 +441,7 @@ sv:
           lessons:
             Flappy Code:
               name: Flappy kod
+          student_description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!
         jigsaw:
           title: Pussel
           description: Prova vår Jigsaw handledning
@@ -431,6 +449,7 @@ sv:
           lessons:
             Jigsaw:
               name: Pussel
+          student_description: Prova vår Jigsaw handledning
         step:
           title: Steg
           description: Steg handledning
@@ -438,6 +457,7 @@ sv:
           lessons:
             Step:
               name: Steg
+          student_description: Steg handledning
         Hour of Code:
           title: Timme av Kod 2013
           description: Prova grunderna i datavetenskap med karaktärerna från Angry Birds och Plants vs. Zombies!
@@ -445,6 +465,7 @@ sv:
           lessons:
             Hour of Code 2013:
               name: Timme av Kod 2013
+          student_description: Prova grunderna i datavetenskap med karaktärerna från Angry Birds och Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           title: Kod Studio pussel utmaning
           description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
@@ -452,6 +473,7 @@ sv:
           lessons:
             Puzzles:
               name: Pussel
+          student_description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Kod Studio pussel utmaning
           description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
@@ -459,6 +481,7 @@ sv:
           lessons:
             Puzzles:
               name: Pussel
+          student_description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
         cspunit1:
           title: "CSP enhet 1 - Digital Information"
           description: Denna enhet utforskar de tekniska utmaningar och frågor som uppkommer av behovet att representera digital information i datorer och överföra det mellan människor och data- enheter.
@@ -474,6 +497,7 @@ sv:
               name: Skicka bitar i den verkliga världen
             Text Compression:
               name: Text komprimering
+          student_description: Denna enhet utforskar de tekniska utmaningar och frågor som uppkommer av behovet att representera digital information i datorer och överföra det mellan människor och data- enheter.
         algebraPD:
           title: Datavetenskap i Algebra PD
           description: 'Lär ut funktionell programmering genom algebra'
@@ -485,6 +509,7 @@ sv:
               name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
+          student_description: 'Lär ut funktionell programmering genom algebra'
         algPDmiami:
           title: Datavetenskap i Algebra PD
           description: Undervisa i algebra genom funktionell programmering
@@ -512,6 +537,7 @@ sv:
               name: Ditt spel - kollisionsdetektion
             Your Game - Player Movement:
               name: Ditt spel - spelarrörelse
+          student_description: Undervisa i algebra genom funktionell programmering
         text-compression:
           title: Text komprimering
           description: Komprimera text genom att identifiera upprepade mönster.
@@ -519,6 +545,7 @@ sv:
           lessons:
             Text Compression:
               name: Text komprimering
+          student_description: Komprimera text genom att identifiera upprepade mönster.
         CSPPD:
           lessons:
             Introduction to PD:
@@ -536,12 +563,14 @@ sv:
           lessons:
             Introduction to PD:
               name: Introduktion till PD
+          student_description: 'Lär ut funktionell programmering genom algebra'
         sciencePD:
           description: 'Lär ut funktionell programmering genom algebra'
           description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
             Introduction to PD:
               name: Introduktion till PD
+          student_description: 'Lär ut funktionell programmering genom algebra'
         cspunit3:
           description_short: Utforska hur digital information är representerad och överförd
           lessons:
@@ -569,12 +598,14 @@ sv:
           lessons:
             Introduction to PD:
               name: Introduktion till PD
+          student_description: 'Lär ut funktionell programmering genom algebra'
         ECSPD-iZone:
           description: 'Lär ut funktionell programmering genom algebra'
           description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
             Introduction to PD:
               name: Introduktion till PD
+          student_description: 'Lär ut funktionell programmering genom algebra'
         algebraPD-NexTech:
           title: Datavetenskap i Algebra PD
           description: 'Lär ut funktionell programmering genom algebra'
@@ -586,6 +617,7 @@ sv:
               name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
+          student_description: 'Lär ut funktionell programmering genom algebra'
         algebraPD-iZone:
           title: Datavetenskap i Algebra PD
           description: 'Lär ut funktionell programmering genom algebra'
@@ -597,18 +629,21 @@ sv:
               name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
+          student_description: 'Lär ut funktionell programmering genom algebra'
         sciencePD-NexTech:
           description: 'Lär ut funktionell programmering genom algebra'
           description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
             Introduction to PD:
               name: Introduktion till PD
+          student_description: 'Lär ut funktionell programmering genom algebra'
         sciencePD-iZone:
           description: 'Lär ut funktionell programmering genom algebra'
           description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
             Introduction to PD:
               name: Introduktion till PD
+          student_description: 'Lär ut funktionell programmering genom algebra'
         sciencePD2:
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
@@ -617,6 +652,7 @@ sv:
               name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
+          student_description: Lär ut funktionell programmering genom algebra
         cspunit2:
           description_short: Utforska hur digital information är representerad och överförd
           lessons:
@@ -645,6 +681,7 @@ sv:
               name: Strängar och bilder
             The Design Recipe:
               name: Design recept
+          student_description: 'Lär ut funktionell programmering genom algebra'
         allthethings:
           title: Allt!
           description: Alla typer av nivå för UI-tester
@@ -682,6 +719,7 @@ sv:
               name: Text komprimering
             Web Lab:
               name: Web Lab
+          student_description: Alla typer av nivå för UI-tester
         algebraPD2b:
           title: Datavetenskap i Algebra PD
           description: 'Lär ut funktionell programmering genom algebra'
@@ -707,6 +745,7 @@ sv:
               name: Lärare Dashboard
             Writing Contracts:
               name: Skriva kontrakt
+          student_description: 'Lär ut funktionell programmering genom algebra'
         cspfacilitator:
           lessons:
             App Lab:
@@ -733,6 +772,7 @@ sv:
               name: Välkommen!
             Wrap-up:
               name: Gör klart
+          student_description: 'Lär ut funktionell programmering genom algebra'
         algebraPD2:
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
@@ -743,6 +783,7 @@ sv:
               name: Design recept
             Welcome!:
               name: Välkommen!
+          student_description: Lär ut funktionell programmering genom algebra
         sciencePD2b:
           description: 'Lär ut funktionell programmering genom algebra'
           description_short: 'Lär ut funktionell programmering genom algebra'
@@ -751,6 +792,7 @@ sv:
               name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
+          student_description: 'Lär ut funktionell programmering genom algebra'
         science-PD2:
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
@@ -759,6 +801,7 @@ sv:
               name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
+          student_description: Lär ut funktionell programmering genom algebra
         Equity-OnlinePD:
           lessons:
             Next Steps:
@@ -771,6 +814,7 @@ sv:
               name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
+          student_description: 'Lär ut funktionell programmering genom algebra'
         ECSPD2-iZone:
           description: 'Lär ut funktionell programmering genom algebra'
           description_short: 'Lär ut funktionell programmering genom algebra'
@@ -785,6 +829,7 @@ sv:
               name: Välkommen!
             Wrap-up:
               name: Gör klart
+          student_description: 'Lär ut funktionell programmering genom algebra'
         ECSPD2-NexTech:
           description: 'Lär ut funktionell programmering genom algebra'
           description_short: 'Lär ut funktionell programmering genom algebra'
@@ -799,6 +844,7 @@ sv:
               name: Välkommen!
             Wrap-up:
               name: Gör klart
+          student_description: 'Lär ut funktionell programmering genom algebra'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -840,6 +886,7 @@ sv:
           lessons:
             Ice Age Play Lab:
               name: Ice Age Play Lab
+          student_description: Skapa en berättelse eller gör ett spel med Ice Age Play Lab!
         cspunit3temp:
           description_short: Utforska hur digital information är representerad och överförd
           lessons:
@@ -852,6 +899,7 @@ sv:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+          student_description: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
         starwars:
           title: 'Star Wars: Bygg en galax med kod'
           description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
@@ -859,6 +907,7 @@ sv:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
         starwarsblocks:
           title: 'Star Wars: Bygg en galax med kod'
           description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
@@ -866,6 +915,7 @@ sv:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
         mc:
           title: Minecraft Hour of Code
           description: Använd block med kod för att ta med Steve eller Alex på ett äventyr genom denna Minecraft-värld
@@ -873,6 +923,7 @@ sv:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft-värld.
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -905,6 +956,7 @@ sv:
               name: 'Ouppkopplad: kontrakt'
             'Unplugged: The Design Recipe':
               name: 'Ouppkopplad: Design recept'
+          student_description: Lär dig funktionell programmering genom algebra
         AlgebraB:
           title: 'Datavetenskap i Algebra'
           description: Lär dig funktionell programmering genom algebra
@@ -932,6 +984,7 @@ sv:
               name: 'Ouppkopplad: Villkorssatser och styckevis funktioner'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Ouppkopplad: videospel och koordinat-plan'
+          student_description: Lär dig funktionell programmering genom algebra
         algebraPD1:
           title: Datavetenskap i Algebra PD
           description: Undervisa i algebra genom funktionell programmering
@@ -943,6 +996,7 @@ sv:
               name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
+          student_description: Undervisa i algebra genom funktionell programmering
         algebraPD3c:
           title: Datavetenskap i Algebra PD
         csp1-2017:
@@ -992,6 +1046,7 @@ sv:
               name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
+          student_description: Undervisa i algebra genom funktionell programmering
         sciencePD1:
           description_short: 'Lär ut funktionell programmering genom algebra'
           lessons:
@@ -1168,6 +1223,7 @@ sv:
               name: Design recept
             Welcome!:
               name: Välkommen!
+          student_description: Undervisa i algebra genom funktionell programmering
         csd1-2017:
           lesson_groups:
             csd1_1:
@@ -1197,6 +1253,7 @@ sv:
           lessons:
             Bounce:
               name: Studsa
+          student_description: Göra en basketmatch
         csd2-2017:
           lessons:
             Peer Review:
@@ -1218,6 +1275,7 @@ sv:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code Designer
+          student_description: Programmera djur och andra Minecraft varelser i din egen version av Minecraft.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1307,6 +1365,7 @@ sv:
           lessons:
             Sports:
               name: Sport
+          student_description: Koda din egen sport
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1720,6 +1779,7 @@ sv:
           lessons:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+          student_description: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden.
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -2082,6 +2142,7 @@ sv:
           lessons:
             Dance Party:
               name: Dansparty
+          student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -2112,6 +2173,7 @@ sv:
               display_name: Projekt
         dance-extras:
           description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
+          student_description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -2244,6 +2306,7 @@ sv:
         dance-extras-gallery:
           title: Fortsätt att dansa
           description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
+          student_description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2550,6 +2613,9 @@ sv:
               display_name: Översikt
             content:
               display_name: Innehåll
+          lessons:
+            Focus Area 1:
+              name: Läroplan
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2631,6 +2697,7 @@ sv:
           lessons:
             Dance Party:
               name: Dansparty
+          student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
@@ -2652,6 +2719,7 @@ sv:
               name: '''För'' loopar'
         dance-extras-2019:
           description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
+          student_description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -3003,6 +3071,18 @@ sv:
           description_short: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
           description: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
           name: utbrott
+          student_description: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
+        2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Koda en simulering
+          lesson_groups:
+            introduction:
+              display_name: Introduktion
+            lessonGroup-3:
+              display_name: variabler
+            outbreak:
+              display_name: Utbrottssimulering
         csd1-2021:
           lesson_groups:
             csd1_1:
@@ -3179,8 +3259,6 @@ sv:
               key: Dansparty
               name: Dansparty
           lesson_groups:
-            csf_warmup:
-              display_name: Uppvärmning
             csf_loops:
               display_name: loopar
             csf_conditionals:
@@ -3201,8 +3279,6 @@ sv:
           lessons:
             Virus Simulation for Code Bytes:
               name: Koda en simulering
-            lesson-1:
-              name: Envelope variabler
           lesson_groups:
             ramp_up:
               display_name: Introduktion
@@ -3210,3 +3286,14 @@ sv:
               display_name: Utbrottssimulering
             lessonGroup-3:
               display_name: variabler
+        csd5-preview-2021:
+          lessons:
+            Representing Images:
+              key: Representerar bilder
+              name: Representerar bilder
+            Problem Solving and Data:
+              key: Problemlösning och data
+              name: Problemlösning och data
+            Automating Data Decisions:
+              key: Automatisera databeslut
+              name: Automatisera databeslut

@@ -145,6 +145,13 @@ my:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:
         text: ကျဘန်းအရောင်
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': အလယ်အလတ်
+            '100': large
       gamelab_spriteClicked:
         options:
           CONDITION:

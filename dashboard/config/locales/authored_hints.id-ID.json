@@ -2408,7 +2408,7 @@
           "courseB_artist_loops3_b": "Artis itu ingin pindah ke Selatan untuk menggambar garis ini."
         },
         "courseB_artist_loops3_2018": {
-          "courseB_artist_loops3_a": "Ingatlah untuk menggunakan loop `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> untuk kode yang lebih baik!",
+          "courseB_artist_loops3_a": "Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!",
           "courseB_artist_loops3_b": "Artis itu ingin pindah ke Selatan untuk menggambar garis ini."
         },
         "courseB_artist_loops3_2019": {
@@ -2443,7 +2443,7 @@
           "courseB_artist_loops5_a": "Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?"
         },
         "courseB_artist_loops5_2018": {
-          "courseB_artist_loops5_a": "Pindahkan loop <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `repeat` keluar, lalu letakkan blok lain ke dalamnya. Berapa kali Anda perlu mengulanginya?"
+          "courseB_artist_loops5_a": "Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?"
         },
         "courseB_artist_loops5_2019": {
           "courseB_artist_loops5_a": "Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?"
@@ -2623,7 +2623,7 @@
         "courseB_collector_loops4_2018": {
           "courseB_collector_loops4_a": "Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.",
           "courseB_collector_loops4_b": "Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali loop nya berjalan.",
-          "courseB_collector_loops4_c": "Laurel harus berjalan dan mengumpulkan harta karun setelah menyelesaikan loop `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+          "courseB_collector_loops4_c": "Laurel perlu berjalan dan mengumpulkan harta setelah ia selesai dengan `ulangi` loop!"
         },
         "courseB_collector_loops4_2019": {
           "courseB_collector_loops4_a": "Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.",
@@ -2660,7 +2660,7 @@
         "courseB_collector_loops6_2018": {
           "courseB_collector_loops6_a": "Bingung di mana titik awal kesalahannya? Gunakan tombol \"step\" untuk menjalankan program Anda satu blok setiap kalinya.",
           "courseB_collector_loops6_b": "Anda dapat mengubah frekuensi putaran Repeat loop dengan mengklik \"3\" dan memilih sebuah angka berbeda.",
-          "courseB_collector_loops6_c": "Anda harus menggunakan 3 loop <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `repeat` untuk memecahkan puzzle ini.",
+          "courseB_collector_loops6_c": "Anda akan ingin menggunakan 3 `ulangi` lopp untuk memecahkan ini puzzle.",
           "courseB_collector_loops6_d": "Jika kamu bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian."
         },
         "courseB_collector_loops6_2019": {
@@ -2809,7 +2809,7 @@
         },
         "courseB_iceage_loops3": {
           "courseB_iceage_loops3_a": "Gunakan blok baru ini! <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Untuk mengulang kode, pindahkan loop `repeat` keluar,\n\n<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>\n\nlalu letakkan blok yang Anda inginkan ke dalamnya."
+          "courseB_iceage_loops3_b": "Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya."
         },
         "courseB_iceage_loops3_2019": {
           "courseB_iceage_loops3_a": "Gunakan blok baru ini!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
@@ -3368,7 +3368,7 @@
         "courseB_starWars_prog9_2018": {
           "courseB_starWars_prog9_a": "Jangan takut melakukan kesalahan! Jalankan kode untuk melihat hasil yang muncul meskipun Anda belum memecahkan puzzle itu.",
           "courseB_starWars_prog9_b": "Terdapat banyak cara untuk memecahkan teka-teki ini.",
-          "courseB_starWars_prog9_c": "Apakah loop `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> bisa membantu di sini?"
+          "courseB_starWars_prog9_c": "Bisakah sebuah loop `ulangi` membantu di sini?"
         },
         "courseB_starWars_prog9_2019": {
           "courseB_starWars_prog9_a": "Jangan takut melakukan kesalahan! Jalankan kode untuk melihat hasil yang muncul meskipun Anda belum memecahkan puzzle itu.",
@@ -8686,29 +8686,29 @@
           "courseE_farmer_ramp12e_b": "Solusi untuk puzzle ini akan sangat mirip dengan solusi untuk puzzle terakhir, tetapi berbalik ke arah yang lain."
         },
         "outbreak1": {
-          "step1": "Gunakan blok ini untuk membuat sprite Anda:\n\n[blockly block][0]\n\n[blockly block][1]\n\nBlok ini terletak pada kategori **Sprites** toolbox.",
-          "step2": "Ubah ukuran sprite dengan blok ini: [blockly block][0].\n\nTerletak pada kategori **Actions** toolbox.",
-          "step3": "Buat semua sprite mulai keliling dengan ini: [blockly block][0].\n\nBlok ini terletak pada kategori **Actions** toolbox."
+          "step1": "Gunakan blok ini untuk membuat sprite Anda:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nBlok ini terletak pada kategori **Sprites** toolbox.",
+          "step2": "Ubah ukuran sprite dengan blok ini: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nTerletak pada kategori **Actions** toolbox.",
+          "step3": "Buat semua sprite mulai keliling dengan ini: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nBlok ini terletak pada kategori **Actions** toolbox."
         },
         "outbreak2": {
-          "hint1": "Klik tombol `+` pada blok event. Isi tempat yang kosong pada blok `change costume` dengan blok `subject` yang ada di dalamnya.\n\n[blockly block][0]"
+          "hint1": "Klik tombol `+` pada blok event. Isi tempat yang kosong pada blok `change costume` dengan blok `subject` yang ada di dalamnya.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak3": {
-          "hint1": "Untuk memberikan masker kepada monster, gunakan blok `change costume` dengan event `when clicked`:\n\n[blockly block][0]\n\nPastikan pula untuk menarik blok `clicked` kecil yang berwarna merah!",
-          "hint2": "Kode baru untuk level ini akan terlihat seperti ini:\n\n[blockly block][0]"
+          "hint1": "Untuk memberikan masker kepada monster, gunakan blok `change costume` dengan event `when clicked`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nPastikan pula untuk menarik blok `clicked` kecil yang berwarna merah!",
+          "hint2": "Kode baru untuk level ini akan terlihat seperti ini:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak4": {
-          "challenge": "## Mencari tantangan ekstra?\n\nAnda juga dapat membuat monster bergerak lebih cepat atau lebih lambat.\n\n1.  Klik `Edit` pada blok ini [blockly block][0] \n2.  Naikkan atau turunkan jumlahnya pada blok ini: \n\n[blockly block][1]\n\nUntuk membuat monsternya bergerak lebih lambat, pilih angka desimal seperti `0,5` atau `0,25`. Agar bergerak lebih cepat, pilih angka yang lebih besar dari 1."
+          "challenge": "## Mencari tantangan ekstra?\n\nAnda juga dapat membuat monster bergerak lebih cepat atau lebih lambat.\n\n1.  Klik `Edit` pada blok ini <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Naikkan atau turunkan jumlahnya pada blok ini: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nUntuk membuat monsternya bergerak lebih lambat, pilih angka desimal seperti `0,5` atau `0,25`. Agar bergerak lebih cepat, pilih angka yang lebih besar dari 1."
         },
         "outbreak5": {
-          "solution2": "Kode baru Anda akan terlihat seperti ini:\n\n[blockly block][0]"
+          "solution2": "Kode baru Anda akan terlihat seperti ini:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_subjectSpritePointer\"></block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "outbreak6": {
-          "hint2": "Pastikan untuk menggerakkan blok \"action\" lainnya ke bagian dalam blok `if chance`:\n\n[blockly block][0]",
-          "hint1": "Anda harus menambahkan 3 event `when touches` lagi untuk memeriksa semua potensi kombinasi `touches` antara sprite yang sehat dan yang terinfeksi.\n\n[blockly block][0]"
+          "hint2": "Pastikan untuk menggerakkan blok \"action\" lainnya ke bagian dalam blok `if chance`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": "Anda harus menambahkan 3 event `when touches` lagi untuk memeriksa semua potensi kombinasi `touches` antara sprite yang sehat dan yang terinfeksi.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "outbreak7": {
-          "whenclicked": "## Vaksin\n\nAnda dapat mensimulasikan pemberian vaksin kepada monster saat mengklik mereka. Untuk melakukannya, gunakan blok `change costume` dengan event ini:\n\n[blockly block][0]",
+          "whenclicked": "## Vaksin\n\nAnda dapat mensimulasikan pemberian vaksin kepada monster saat mengklik mereka. Untuk melakukannya, gunakan blok `change costume` dengan event ini:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Merasa kehabisan akal? Anda dapat me-reset kode Anda dengan mengklik `Version History` di bawah ini, lalu memilih \"Start Over\"."
         }
       }

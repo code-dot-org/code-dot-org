@@ -26,6 +26,7 @@ const levelWithoutStatusShape = {
   id: PropTypes.string.isRequired,
   url: PropTypes.string,
   name: PropTypes.string,
+  bubbleText: PropTypes.string,
   icon: PropTypes.string,
   isUnplugged: PropTypes.bool,
   levelNumber: PropTypes.number,

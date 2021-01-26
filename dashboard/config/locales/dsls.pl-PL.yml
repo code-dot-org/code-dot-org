@@ -2031,12 +2031,25 @@ pl-PL:
             program przestanie działać?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Scrat dotrze do żołędzia. Nie ma żadnych błędów w kodzie.
+          feedback: Źle. Najpierw Scrat skręca w złą stronę, a następnie Scrat nie
+            idzie w przód odpowiednią ilość razy by dotrzeć do żołędzia
+        - text: Scrat nie dotrze do żołędzia, bo skręca w złą stronę.
+          correct: true
+          feedback: Brawo! Najpierw Scrat skręca w złą stronę, a następnie Scrat nie
+            idzie w przód odpowiednią ilość razy by dotrzeć do żołędzia
+        - text: Scrat nie dotrze do żołędzia bo nie ma wystarczającej ilości bloczków
+            `idź w przód`.
+          correct: true
+          feedback: Brawo! Najpierw Scrat skręca w złą stronę, a następnie Scrat nie
+            idzie w przód odpowiednią ilość razy by dotrzeć do żołędzia
         - text: Nie wiem.
+          feedback: Są dwa błędy w tym kodzie. Najpierw Scrat skręca w złą stronę,
+            a następnie Scrat nie idzie w przód odpowiednią ilość razy by dotrzeć
+            do żołędzia
         questions:
-        - {}
+        - text: Poszukaj błędów w tym kodzie. Czy Scrat dotrze do żołędzia czy będzie
+            miał z tym problem?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Ptak znajdzie się o krok od świnki.
@@ -3895,8 +3908,10 @@ pl-PL:
           class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
       courseD_EOC_2020:
         display_name: Koniec projektu kursu
+        description: Dotarłeś do ostatniej lekcji Kursu D! Wybierz projekt do utworzenia.
       courseExpress_EOC_2020:
         display_name: Koniec projektu kursu
+        description: 'Dotarłeś do końca Kursu Ekspresowego! Wybierz projekt do utworzenia. '
       BigEvent-Unplugged:
         markdown: |-
           # Ważne zdarzenie
@@ -4003,9 +4018,9 @@ pl-PL:
           Napisz algorytmy, których Twoi koledzy z pracy mogą użyć, aby rysować obrazki.
       GraphPaperProgramming-Unplugged_2020:
         markdown: |-
-          # Programowanie w formie wykresów na papierze
+          # Programowanie na papierze do rysowania
 
-          Napisz algorytmy, których Twoi koledzy z pracy mogą użyć, aby rysować obrazki.
+          Napisz algorytmy, których mog użyć Twoi koledzy z klasy do rysowania obrazków.
       Internet-Unplugged:
         markdown: |-
           # Internet

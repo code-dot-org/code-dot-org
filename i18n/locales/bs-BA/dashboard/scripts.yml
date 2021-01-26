@@ -49,6 +49,7 @@ bs:
               name: 'Laboratorij Igara: Napravi Priču'
             The Big Event:
               name: Veliki Događaj
+          student_description: Kurs 1 pomaže učenicima koji su tek naučili čitati pri stvaranju kompjuterskih programa koji će im pomoći pri surađivanju s drugima, razvijanju sposobnosti rješavanja problema i ustrajavanju kroz teške zadatke. Do kraja ovog kursa, učenici će stvoriti vlastitu igru ili priču koju mogu podijeliti. Preporučuje se za uzrast do 1. razreda.
         course2:
           title: Kurs 2
           description: Početi sa Kurs 2 za učenike koji znaju čitati i bez prethodnog iskustva u programiranju. U ovam kursu učenici će napraviti programe za rješavanje problema i razvoj interaktivnih igara ili priča koje mogu dijeliti. Preporučuje se za uzrast 2.-5. razreda.
@@ -92,6 +93,7 @@ bs:
               name: Veliki Događaj
             Your Digital Footprint:
               name: Digitalni otisak stopala
+          student_description: Početi sa Kurs 2 za učenike koji znaju čitati i bez prethodnog iskustva u programiranju. U ovam kursu učenici će napraviti programe za rješavanje problema i razvoj interaktivnih igara ili priča koje mogu dijeliti. Preporučuje se za uzrast 2.-5. razreda.
         course3:
           title: Kurs 3
           description_short: Kurs 3 je nastavak Kursa 2.
@@ -146,6 +148,7 @@ bs:
           lessons:
             Play Lab:
               name: Play Lab
+          student_description: Napisati priču ili napraviti igru s Play Lab!
         artist:
           title: Umjetnik
           description: Crtanje cool slike i dizajn s Umjetnikom!
@@ -153,12 +156,14 @@ bs:
           lessons:
             Artist:
               name: Umjetnik
+          student_description: Crtanje cool slike i dizajn s Umjetnikom!
         hourofcode:
           description: Isprobaj osnove računarstva sa karakterima kao što su Angry Birds, Plants vs. Zombies i Scrat iz Ice Age!
           description_short: Pokušaj osnove računarstva sa mnogim zabavnim karakterima!
           lessons:
             Maze:
               name: Labirint
+          student_description: Isprobaj osnove računarstva sa karakterima kao što su Angry Birds, Plants vs. Zombies i Scrat iz Ice Age!
         frozen:
           title: Programiraj sa Anna i Elsa
           description: Hajde da programiramo sa Anna-om i Elsom pri njihovom istraživanju magičnog i predivnog leda. Napraviti ćeš pahulje snijega dok se kližeš i praviš zimsku idilu koju možeš onda podijeliti sa svojim prijateljima!
@@ -166,6 +171,7 @@ bs:
           lessons:
             Artist:
               name: Umjetnik
+          student_description: Hajde da programiramo sa Anna-om i Elsom pri njihovom istraživanju magičnog i predivnog leda. Napraviti ćeš pahulje snijega dok se kližeš i praviš zimsku idilu koju možeš onda podijeliti sa svojim prijateljima!
         course4:
           title: Kurs 4
           description_short: Učenici koji uzimaju Kurs 4 bi trebali prvo odraditi Kurseve 2 i 3.
@@ -238,6 +244,7 @@ bs:
               name: 'Farmer: Dok Petlje'
             'Maze: Sequence':
               name: 'Labirint: Dio'
+          student_description: Kratko objašnjenje pojmova za učenike koji nisu prošli Kurseve 2 i 3.
         usability:
           title: Testiranje Upotrebljivosti
           description: Izbor nivoa iz Kursa 4 za testiranje upotrebljivosti.
@@ -252,6 +259,7 @@ bs:
               name: Uvod
             Variables:
               name: Varijable
+          student_description: Izbor nivoa iz Kursa 4 za testiranje upotrebljivosti.
         algebra:
           title: Računarstvo u Algebri
           description: Nauči Funkcionalno Programiranje kroz Algebru
@@ -297,6 +305,7 @@ bs:
               name: 'Izvanmređno: Dizajn recept'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Izvanmrežno: Video Igrice i Koordinatne Ravni'
+          student_description: Nauči Funkcionalno Programiranje kroz Algebru
         infinity:
           title: Disney Beskonačni Laboratorij Igranja
           description: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj igraju karakteri Disney Beskonačnost.
@@ -304,6 +313,7 @@ bs:
           lessons:
             Infinity:
               name: Beskonačnost
+          student_description: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj igraju karakteri Disney Beskonačnost.
         algebrademo:
           title: Algebra Demo
           description: Evo nekoliko zadataka za demonstraciju okruženja i programskog jezika korištenog u Code.org Računarstvo za Algebru
@@ -319,6 +329,7 @@ bs:
               name: Pravljenje Slika
             The Design Recipe:
               name: Recept za Dizajn
+          student_description: Evo nekoliko zadataka za demonstraciju okruženja i programskog jezika korištenog u Code.org Računarstvo za Algebru
         K5PD:
           title: Profesionalni Razvoj za 5-11 dob
           description: 'Profesionalni razvoj za Kurseve za dob 5-11'
@@ -337,6 +348,7 @@ bs:
               name: Izvanmrežne lekcije
             Writing computer programs:
               name: Pisanje kompjuterskih programa
+          student_description: 'Profesionalni razvoj za Kurseve za dob 5-11'
         netsim:
           title: Internet Simulator
         pixelation:
@@ -387,6 +399,7 @@ bs:
               name: Labirint
             Wrap-up:
               name: Zamotavanje
+          student_description: Ovaj 20-satni kurs objašnjava osnovne koncepte programiranja i nformatike. Kurs je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.
         edit-code:
           title: Uredi kôd
           description: Uredi kôd
@@ -400,6 +413,7 @@ bs:
               name: Umjetnik
             The Maze:
               name: Labirint
+          student_description: Uredi kôd
         events:
           title: Događaji
           description: Događaji
@@ -413,6 +427,7 @@ bs:
               name: Eval
             Studio:
               name: Studio
+          student_description: Događaji
         flappy:
           title: Flappy kôd
           description: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš tutorijal izrade Flappy kôda!
@@ -420,6 +435,7 @@ bs:
           lessons:
             Flappy Code:
               name: Flappy kôd
+          student_description: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš tutorijal izrade Flappy kôda!
         jigsaw:
           title: Slagalica
           description: Probaj naše Jigsaw upute
@@ -427,6 +443,7 @@ bs:
           lessons:
             Jigsaw:
               name: Slagalica
+          student_description: Probaj naše Jigsaw upute
         step:
           title: Korak
           description: Upute korak po korak
@@ -434,6 +451,7 @@ bs:
           lessons:
             Step:
               name: Korak
+          student_description: Upute korak po korak
         Hour of Code:
           title: Sat Kodiranja 2013
           description: Pokušajte osnove informatike s likovima iz Angry Birds i Plants vs. Zombies!
@@ -441,6 +459,7 @@ bs:
           lessons:
             Hour of Code 2013:
               name: Sat Kodiranja 2013
+          student_description: Pokušajte osnove informatike s likovima iz Angry Birds i Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           title: Izazov Studija Kodiranja
           description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
@@ -448,6 +467,7 @@ bs:
           lessons:
             Puzzles:
               name: Zadaci
+          student_description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Izazov Studija Kodiranja
           description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
@@ -455,6 +475,7 @@ bs:
           lessons:
             Puzzles:
               name: Zadaci
+          student_description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
         cspunit1:
           title: "SK Jedinica 1 - Digitalna Informacija"
           description: Ova jedinica istražuje neke tehničke izazove i pitanja koja se pojave pri potrebi da se predstavi digitalna informacija u kompjuterima i da se ona prenese imeđu ljudi i uređaja.
@@ -470,6 +491,7 @@ bs:
               name: Slanje Bita u Stvarnom Svijetu
             Sending Numbers:
               name: Slanje brojeva
+          student_description: Ova jedinica istražuje neke tehničke izazove i pitanja koja se pojave pri potrebi da se predstavi digitalna informacija u kompjuterima i da se ona prenese imeđu ljudi i uređaja.
         algebraPD:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: 'Predaji Funkcionalno Programiranje kroz Algebru'
@@ -481,6 +503,7 @@ bs:
               name: Uvod u Profesionalni Razvoj
             Teacher Dashboard:
               name: Nadzorna Ploča za Nastavnike
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         algPDmiami:
           title: Računarstvo u Algebri Profesionalni Razvoj
           lessons:
@@ -515,12 +538,14 @@ bs:
               name: Uvod u Profesionalni Razvoj
             Teaching Strategies:
               name: Strategije predavanja
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         sciencePD:
           description: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           lessons:
             Introduction to PD:
               name: Uvod u Profesionalni Razvoj
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         cspunit3:
           description_short: Istraži kako je digitalna informacija predstavljena i prenešena
           lessons:
@@ -550,6 +575,7 @@ bs:
               name: Uvod u Profesionalni Razvoj
             Teaching Strategies:
               name: Strategije predavanja
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         ECSPD-iZone:
           description: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
@@ -558,6 +584,7 @@ bs:
               name: Uvod u Profesionalni Razvoj
             Teaching Strategies:
               name: Strategije predavanja
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         algebraPD-NexTech:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: 'Predaji Funkcionalno Programiranje kroz Algebru'
@@ -569,6 +596,7 @@ bs:
               name: Uvod u Profesionalni Razvoj
             Teacher Dashboard:
               name: Nadzorna Ploča za Nastavnike
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         algebraPD-iZone:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: 'Predaji Funkcionalno Programiranje kroz Algebru'
@@ -580,24 +608,28 @@ bs:
               name: Uvod u Profesionalni Razvoj
             Teacher Dashboard:
               name: Nadzorna Ploča za Nastavnike
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         sciencePD-NexTech:
           description: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           lessons:
             Introduction to PD:
               name: Uvod u Profesionalni Razvoj
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         sciencePD-iZone:
           description: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           lessons:
             Introduction to PD:
               name: Uvod u Profesionalni Razvoj
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         sciencePD2:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           lessons:
             Welcome!:
               name: Dobrodošli!
+          student_description: Predaji Funkcionalno Programiranje kroz Algebru
         cspunit2:
           description_short: Istraži kako je digitalna informacija predstavljena i prenešena
           lessons:
@@ -622,6 +654,7 @@ bs:
               name: Nizovi Karaktera i Slike
             The Design Recipe:
               name: Recept za Dizajn
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         allthethings:
           lessons:
             Artist:
@@ -667,6 +700,7 @@ bs:
               name: Nadzorna Ploča za Nastavnike
             Writing Contracts:
               name: Pisanje Ugovora
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         cspfacilitator:
           lessons:
             App Lab:
@@ -695,6 +729,7 @@ bs:
               name: Dobrodošli!
             Wrap-up:
               name: Zamotavanje
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         algebraPD2:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
@@ -705,18 +740,21 @@ bs:
               name: Recept za Dizajn
             Welcome!:
               name: Dobrodošli!
+          student_description: Predaji Funkcionalno Programiranje kroz Algebru
         sciencePD2b:
           description: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           lessons:
             Welcome!:
               name: Dobrodošli!
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         science-PD2:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           lessons:
             Welcome!:
               name: Dobrodošli!
+          student_description: Predaji Funkcionalno Programiranje kroz Algebru
         Equity-OnlinePD:
           lessons:
             Next Steps:
@@ -727,6 +765,7 @@ bs:
           lessons:
             Welcome!:
               name: Dobrodošli!
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         ECSPD2-iZone:
           description: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
@@ -741,6 +780,7 @@ bs:
               name: Dobrodošli!
             Wrap-up:
               name: Zamotavanje
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         ECSPD2-NexTech:
           description: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
@@ -755,6 +795,7 @@ bs:
               name: Dobrodošli!
             Wrap-up:
               name: Zamotavanje
+          student_description: 'Predaji Funkcionalno Programiranje kroz Algebru'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -840,6 +881,7 @@ bs:
           lessons:
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
+          student_description: Napisati priču ili napraviti igru s Ice Age Play Lab!
         CSPPD3-Unit3:
           lessons:
             Challenge Overview:
@@ -858,6 +900,7 @@ bs:
           lessons:
             Gumball Play Lab:
               name: Slatkiši Play Lab
+          student_description: Napisati priču ili napraviti igru s Gumball Play Lab!
         starwars:
           title: 'Ratovi Zvijezda: Gradimo Galaksiju sa Kôdom'
           description: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
@@ -865,6 +908,7 @@ bs:
           lessons:
             Hour of Code 2015:
               name: Sat Kodiranja 2015
+          student_description: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
         starwarsblocks:
           title: 'Ratovi Zvijezda: Gradimo Galaksiju sa Kôdom'
           description: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
@@ -872,6 +916,7 @@ bs:
           lessons:
             Hour of Code 2015:
               name: Sat Kodiranja 2015
+          student_description: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
         mc:
           title: Sata Kodiranja Minecraft-a
           description: Koristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet
@@ -879,6 +924,7 @@ bs:
           lessons:
             Hour of Code 2015:
               name: Sat Kodiranja 2015
+          student_description: Koristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -950,6 +996,7 @@ bs:
               name: 'Izvanmređno: Ugovori'
             'Unplugged: The Design Recipe':
               name: 'Izvanmređno: Dizajn recept'
+          student_description: Nauči Funkcionalno Programiranje kroz Algebru
         AlgebraB:
           title: 'Računarstvo u Algebri'
           description: Nauči Funkcionalno Programiranje kroz Algebru
@@ -977,6 +1024,7 @@ bs:
               name: 'Unplugged: Uslovna i izvedena funkcija'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Izvanmrežno: Video Igrice i Koordinatne Ravni'
+          student_description: Nauči Funkcionalno Programiranje kroz Algebru
         algebraPD1:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
@@ -1515,6 +1563,7 @@ bs:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             'Programming: Happy Maps':
               description_teacher: Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         courseb-2017:
           title: Kurs B
           assignment_family_title: Kurs B
@@ -1522,6 +1571,7 @@ bs:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         coursec-2017:
           lessons:
             'Real-life Algorithms: Paper Planes':
@@ -1626,6 +1676,7 @@ bs:
               name: Izrada Temelja
             Nested Loops:
               name: Ugniježdene Petlje
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         pre-express-2017:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lessons:
@@ -1633,6 +1684,7 @@ bs:
               name: 'Algoritmi u stvarnom životu: Posadi sjeme'
             Spelling Bee:
               name: Spelovanje
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         subgoal-labels-opt-in:
           lessons:
             Thanks:
@@ -1813,6 +1865,7 @@ bs:
               name: Sigurna Putovanja
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stivi i veliki projekat
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         express-2018:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lessons:
@@ -1848,6 +1901,7 @@ bs:
               name: Prijenos programiranja
             Graph Paper Programming:
               name: Papirno Programiranje Grafikona
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         courseb-2018:
           assignment_family_title: Kurs B
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -1858,6 +1912,7 @@ bs:
               name: Digitalni otisak stopala
             Move It, Move It:
               name: Pomakni, Pomakni
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         coursed-2018:
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -2066,6 +2121,7 @@ bs:
               name: Digitalni otisak stopala
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stivi i veliki projekat
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         fit-test:
           lesson_groups:
             required:
@@ -2105,6 +2161,7 @@ bs:
               display_name: Funkcije
         dance-extras:
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
+          student_description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -2220,6 +2277,7 @@ bs:
               name: Crowdsourcing
             Dance Party:
               name: Plesna zabava
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         andrea-test:
           lesson_groups:
             required:
@@ -2230,6 +2288,7 @@ bs:
         dance-extras-gallery:
           title: Nastavite plesati
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
+          student_description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2266,6 +2325,7 @@ bs:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             Sequencing with Scrat:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         courseb-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lesson_groups:
@@ -2284,6 +2344,7 @@ bs:
               name: Zapetljavanje
             Sequencing in Maze:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         pre-express-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lesson_groups:
@@ -2298,6 +2359,7 @@ bs:
               name: Digitalni otisak stopala
             Spelling Bee:
               name: Spelovanje
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         removed19:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -2508,6 +2570,9 @@ bs:
           lesson_groups:
             required:
               display_name: Pregled
+          lessons:
+            Focus Area 1:
+              name: Nastavni plan
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2585,6 +2650,7 @@ bs:
               name: Od-Do-Za Petlje
         dance-extras-2019:
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
+          student_description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -2706,6 +2772,7 @@ bs:
               description_teacher: 'Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.'
             Sequencing with Scrat:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         courseb-2020:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lesson_groups:
@@ -2724,6 +2791,7 @@ bs:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             'Loops: Getting Loopy':
               name: Zapetljavanje
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         coursec-2020:
           lesson_groups:
             csf_digcit:
@@ -2804,6 +2872,7 @@ bs:
           lessons:
             Dance Party:
               name: Plesna zabava
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         pre-express-2020:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lesson_groups:
@@ -2818,6 +2887,7 @@ bs:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             Spelling Bee:
               name: Spelovanje
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         csp1-2020:
           lessons:
             Binary Numbers:
@@ -2891,6 +2961,12 @@ bs:
               name: Kurs A
             Course B:
               name: Kurs B
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Uvod
+            lessonGroup-3:
+              display_name: Varijable
         csd3-2021:
           lessons:
             Variables:
@@ -2956,6 +3032,7 @@ bs:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         courseb-2021:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lessons:
@@ -2971,6 +3048,7 @@ bs:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         coursec-2021:
           lessons:
             Binary Bracelets:
@@ -3058,6 +3136,7 @@ bs:
               display_name: Varijable
             csf_for_loops:
               display_name: Od-Do-Za Petlje
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         pre-express-2021:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lesson_groups:
@@ -3065,9 +3144,19 @@ bs:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+          student_description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         csf-2021-pilot:
           lesson_groups:
             ramp_up:
               display_name: Uvod
             lessonGroup-3:
               display_name: Varijable
+        csd4-preview-2021:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+        csd5-preview-2021:
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'

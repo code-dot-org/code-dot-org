@@ -7,64 +7,64 @@ uz:
   slides:
     maze_intro:
       1:
-        text: "Kodlashingizning birinchi soatiga xush kelibsiz! Keling, birinchi dasturlashingizni boshlaylik."
+        text: "Birinchi dasturlash soatingizga xush kelibsiz! Keling, dasturlashni boshlaylik."
       2:
-        text: "Kod yozish uchun Blocky deb nomlangan bloklarni surib ko'chiradigan vizual dasturlash tilidan foydalanamiz."
+        text: "Kod yozish uchun Blocky deb nomlangan bloklar surib ko‘chiriladigan vizual dasturlash tilidan foydalanamiz."
       3:
-        text: "Ko'pgina kodlar yoziladi, Blockly esa vizual tildir. Har bir blok \"haqiqiy\" kod qatoriga keladi."
+        text: "Kod asosan yoziladi, Blockly esa vizual tildir. Har bir blok \"haqiqiy\" kod qatoriga mos keladi."
       4:
-        text: "Siz kompyuter fanlari asoslarini, ilova yasashdan tortib to Mars roverini boshqarishga qadar ishlatadigan konsepsiyalarini bilib olasiz."
+        text: "Siz kompyuter fanlari asoslarini, ilova yasashdan tortib to Mars roverini boshqarishga qadar ishlatiladigan konsepsiyalarini bilib olasiz."
       5:
-        text: "Dastur - bu sizning kompyuteringiz bajarishi kerak bo'lgan ko'rsatmalar to'plamidir."
+        text: "Dastur - bu sizning kompyuteringiz bajarishi kerak bo‘lgan ko‘rsatmalar to‘plamidir."
       6:
-        text: "Birinchi dasturingizning maqsadi - Yashil Cho'chqani yengish uchun Angry Birdni labirint orqali olib o'tishdir."
+        text: "Birinchi dasturingizning maqsadi - Yashil Cho‘chqani yengish uchun Angry Birdni labirint orqali olib o‘tishdir."
       7:
-        text: "Chap tomoni - dasturingiz ishlaydigan labirint. Har bir jumboq uchun ko'rsatmalar labirint ostida joylashgan."
+        text: "Chap tomoni - dasturingiz ishlaydigan labirint. Har bir jumboq uchun ko‘rsatmalar labirint ostida joylashgan."
       8:
-        text: "O'rta panelida Angry Bird uchun buyruqlar mavjud. Siz ulardan kod yaratish uchun foydalanasz."
+        text: "O‘rta panelda Angry Bird uchun buyruqlar mavjud. Siz ulardan kod yaratish uchun foydalanasiz."
       9:
-        text: "O'ng tomonda sizning ish joyingiz, u yerda siz dasturni yaratish uchun paneldan bloklarni ko'chirib olib o'tasiz. Blokni o'chirib tashlash uchun uni burchakdagi chelakka tortib o'ting."
+        text: "O‘ng tomonda sizning ish maydoningiz, u yerda siz dasturni yaratish uchun paneldan bloklarni ko‘chirib olib o‘tasiz. Blokni o‘chirib tashlash uchun uni burchakdagi chelakka tortib o‘ting."
       10:
-        text: "Har bir blokda bitta ko'rsatma bor. Agar siz  \"move forward\" blokini ko'chirib olib o'tib, \"Run Program\" tugmachasini bossangiz, qush labirintda bitta bo'sh joyni harakatga keltiradi."
+        text: "Har bir blokda bitta ko‘rsatma bor. Agar siz  \"move forward\" blokini ko‘chirib olib o‘tib, \"Run Program\" - ishga tushirish tugmachasini bossangiz, qush labirintda bitta bo‘sh joyga siljiydi."
       11:
-        text: "Bir nechta amallarni bajarish uchun siz bloklarni ish joyiga ko'chirib olib borishingiz va ularni bir-biriga ulashingiz mumkin. Qush yuqoridan pastga qarab buyruqlarni bajaradi."
+        text: "Bir nechta amallarni bajarish uchun siz bloklarni ish joyiga ko‘chirib olib borishingiz va ularni bir-biriga ulashingiz mumkin. Qush yuqoridan pastga qarab buyruqlarni bajaradi."
       12:
-        text: "Agar siz dasturni ishga tushirsangiz va tuzatmoqchi bo'lib qaytadan urinmoqchi bo'lsangiz  \"Reset\" tugmasini bosing."
+        text: "Agar siz dasturni ishga tushirsangiz va tuzatmoqchi bo‘lib qaytadan urinmoqchi bo‘lsangiz  \"Reset\" tugmasini bosing."
       13:
-        text: "Cho'chqachalarning ortidan boraylik!"
+        text: "Cho‘chqachalarning ortidan boraylik!"
     artist_intro:
       1:
-        text: "Salom men JR-man! Har bir poyga jamoasi g'alaba qozonishi uchun kompyuter olimlari kerak. Ular tezroq borishi uchun avtomobil orqali ma'lumotlarni tahlil qilishadi."
+        text: "Salom men JR-man! Har bir poyga jamoasi g‘alaba qozonishi uchun kompyuter olimlari kerak. Ular tezroq borishi uchun avtomobil orqali ma'lumotlarni tahlil qilishadi."
       2:
-        text: "Ushbu jumboqlarda siz u qayerga uchsa, ularning izidan chiziq chizadigan ijrochi bo'lasiz."
+        text: "Ushbu jumboqlarda siz ular qayerga uchsa, ularning izidan chiziq chizadigan rassom bo‘lasiz."
       3:
-        text: "Ushbu blokda  \"100 piksel oldinga siljish deyilgan.\" Piksellar - bu sizning ekraningizdagi kichik nuqtalar."
+        text: "Ushbu blokda \"100 piksel oldinga siljish\" deyilgan. Piksellar - bu sizning ekraningizdagi kichik nuqtachalar."
       4:
         text: "Ushbu blokda  \"o'ng tomonga 90 daraja buriling deyilgan.\" Bu amal labirintdagi jumboqning buriluvchi \"turn\" bloklaridek sizning ijrochingizni ham aylantiradi."
       5:
-        text: "Ijrochingiz oldiga siljitish yoki burish uchun bloklardan biridagi o'qni bosing. Yangi bloklarni tekshirish uchun shartlar bilan ishlang."
+        text: "Rassomni oldiga siljitish yoki burish uchun bloklardan biridagi o‘qni bosing. Yangi bloklarni tekshirish uchun shartlar bilan ishlang."
     farmer_intro:
       1:
-        text: "Salom, men Paolaman! Bu jumboqda siz xuddi ekin ekishni boshlash uchun o'z maydonini to'liq tekislashi kerak bo'lgan dehqon kabi bo'lasiz."
+        text: "Salom, men Paolaman! Bu jumboqda siz ekin uchun maydonini to‘liq tekislamoqchi bo‘lgan dehqon bo‘lasiz."
       2:
-        text: "Siz unga barcha uyumlarni yig'ishtirishda va teshiklarni to'ldirishda yordam berishingiz kerak."
+        text: "Siz unga barcha uyumlarni tekislashda va chuqurlarni to‘ldirishda yordam berishingiz kerak."
       3:
-        text: "Yangi bloklar qoziqdagi 1 belkurakni olib tashlab, 1 belkurakni chuqurga to'ldiradi."
+        text: "Yangi bloklar uyumdan 1 belkurak loyni olib tashlab, chuqurni 1 belkurak loy bilan to‘ldiradi."
       4:
-        text: "Qoziq va chuqurlarning o'lchamlari har xil, shuning uchun siz fermerga qancha belkurak ishlatishini aytib berishingiz kerak."
+        text: "Uyum va chuqurlarning o‘lchamlari har xil, shuning uchun siz fermerga qancha belkurak ishlatishini aytib berishingiz kerak."
     flappy_intro:
       1:
-        text: "Salom, Men Ketiman! Kompyuter fanining eng ajabtovur jihatlaridan biri bu kompyuter dasturining interaktiv bo'lishidir."
+        text: "Salom, Men Ketiman! Kompyuter fanining eng ajabtovur jihatlaridan biri bu kompyuter dasturining interaktiv bo‘lishidir."
       2:
         text: "Har safar kimdir kompyuter yoki telefonni ishlatganda, u qandaydir hodisa hosil qiladi va ba'zi kod paydo bo'ladi."
       3:
-        text: "Masalan, sizda \"sichqoncha tugmachasi bosilganda, ovoz eshtiladi\" degan hodisa ishlovchisi bo'lishi mumkin."
+        text: "Masalan, sizda \"sichqoncha tugmachasi bosilganda, ovoz eshitiladi\" degan hodisa ishlovchisi bo‘lishi mumkin."
       4:
-        text: " FlappyBird o'yini haqida hech eshtiganmisiz? Hodisalar ishlovchilardan foydalanib, biz FlappyBirdning o'z versiyangizni dasturlashni o'rganamiz!"
+        text: "FlappyBird o‘yini haqida hech eshitganmisiz? Hodisa ishlovchilaridan foydalanib, biz FlappyBird o‘yinining o‘z versiyamizni dasturlashni o‘rganamiz!"
       5:
         text: "Siz yozgan kod kompyuterga buyruqlarni, bloklarni ko'chirib olib tashlashni o'z ichiga oladi. Umuman olganda, bloklarning har biri haqiqiy kod bilan ifodalanadi."
       6:
-        text: "Agar siz ish paneliga nazar tashlasangiz, unda siz uchun bir nechta yashil katakchalar to'ldirilgan \"hodisa ishlovchilari\" bloklari bor."
+        text: "Agar siz ish paneliga nazar tashlasangiz, unda siz uchun to‘ldirilgan bir nechta yashil katakchalar - \"hodisa ishlovchilari\" bor."
       7:
         text: "Agar siz bosganingizda qush qanot qoqishini xohlasngiz, buni tegishli hodisa ishlovchisiga\"FLAP\" blokini qo'shib qo'yishingiz mumkin va sizning o'yiningizda qush qanot qoqib ketadi."
       8:
@@ -1706,29 +1706,29 @@ uz:
     writing_first_program:
       1:
         image: 'notes/writing_first_program_1.png'
-        text: "Code.org Blockly deb nomlangan inglizchada Drag and drop (bosib, sudrab olib borish) dasturlash tilidan foydalanadi. Blockly dasturlarni yaratish va jumboqlarni yechish uchun bloklar deb nomlangan rang-barang ko'rsatmalardan foydalanadi."
+        text: "Code.org Blockly deb nomlangan inglizchada Drag and drop (bosib, sudrab olib borish) dasturlash tilidan foydalanadi. Blockly dasturlarni yaratish va jumboqlarni yechish uchun bloklar deb nomlangan rang-barang ko‘rsatmalardan foydalanadi."
       2:
         image: 'notes/writing_first_program_2.png'
-        text: "Har bir jumboq to'rt qismdan iborat."
+        text: "Har bir jumboq to‘rt qismdan iborat."
       3:
         image: 'notes/writing_first_program_3.png'
-        text: "O'yin maydoni chap tomonda joylashgan, u yerda sizning dasturingiz ishlaydi."
+        text: "O‘yin maydoni chap tomonda joylashgan, u yerda sizning dasturingiz ishlaydi."
       4:
         image: 'notes/writing_first_program_4.png'
-        text: "Markazda sizga kerakli barcha bloklar mavjud bo'lgan uskunalar paneli maydoni mavjud."
+        text: "Markazda sizga kerakli barcha bloklar mavjud bo‘lgan uskunalar paneli mavjud."
       5:
         image: 'notes/writing_first_program_5.png'
-        text: "O'ng tomonda o'zingizning dasturingizni yaratish uchun bloklarni sudrab olib boradigan ish maydoni mavjud."
+        text: "O‘ng tomonda dasturingizni yaratish uchun bloklarni sudrab olib boradigan ish maydoni mavjud."
       6:
         image: 'notes/writing_first_program_6.png'
-        text: "Ish joyining yuqorisida har bir jumboq uchun ko'rsatmalar mavjud."
+        text: "Ish maydonining yuqorisida har bir jumboq uchun ko‘rsatmalar mavjud."
       7:
         image: 'notes/writing_first_program_7.png'
-        text: "Agar siz uskunalar panelidan juda ko'p bloklarni sudrab borsangiz, shunchaki qo'shimcha blokni uskunalar paneliga qaytarishingiz kerak. Dasturingizni sinab ko'rish uchun Run tugmachasini bosing va qaytadan urinib ko'ring."
+        text: "Agar siz uskunalar panelidan o‘ta ko‘p bloklarni sudrab borsangiz, shunchaki ortiqcha blokni uskunalar paneliga qaytarishingiz kerak. Dasturingizni sinab ko‘rish uchun Run tugmachasini bosing va qaytadan urinib ko‘rish uchun Reset tugmasini bosing."
     repeat_block:
       1:
         image: 'notes/repeat_block.png'
-        text: "Takroriy blok sizga kodni siz aytganingizcha ko'p marta aylantirishga imkon beradi."
+        text: "Takrorlash bloki sizga kodni siz xohlagancha marta takroran bajarishga imkon beradi."
     what_is_an_event:
       1:
         image: 'notes/what_is_an_event.png'
@@ -1736,36 +1736,36 @@ uz:
     lesson_planning:
       1:
         image: 'notes/lesson_planning_1.png'
-        text: "Kompyuter ilmi asoslari darslari dars nimani qamrab olishini bilish uchun obzorlardan boshlanadi."
+        text: "Kompyuter fanlari asoslari darslari dars nimani qamrab olishini bilish uchun umulashmalardan boshlanadi."
       2:
         image: 'notes/lesson_planning_2.png'
         text: "Darslarda qizib, mashg'ulotlar va xulosalar mavjud. Agar siz o'zingizning dars rejalaringizni yaratmoqchi bo'lsangiz, ushbu maslahatlarni yodda tutishingiz mumkin."
       3:
         image: 'notes/lesson_planning_3.png'
-        text: "1. Spiralli o'quv rejasi dizaynidan foydalanishga harakat qiling. Tushunchalarni bir marta kiriting va keyin ularni qayta ko'rib chiqing."
+        text: "1. Spiralli o‘quv rejasi dizaynidan foydalanishga harakat qiling. Tushunchalarni bir marta kiriting va keyin ularni qayta ko‘rib chiqing."
       4:
         image: 'notes/lesson_planning_4.png'
-        text: "2. Onlayn darslarni mustaqil darslar bilan birlashtirib aralash o'quv tajribasini yarating."
+        text: "2. Onlayn darslarni mustaqil darslar bilan birlashtirib aralash o‘quv tajribasini yarating."
       5:
         image: 'notes/lesson_planning_5.png'
-        text: "3. O'quv dasturingizni kichikroq qismlarga ajratib oling."
+        text: "3. O‘quv dasturingizni kichikroq qismlarga ajratib oling."
       6:
         image: 'notes/lesson_planning_6.png'
-        text: "4. Mahalliy standartlar, kollej va kasbga tayyor bo'lish ko'nikmalariga mos kelishingizga ishonch hosil qiling."
+        text: "4. Mahalliy standartlar, kollej va kasbga tayyor bo‘lish ko‘nikmalariga mos kelishingizga ishonch hosil qiling."
     opd_closing:
       1:
         image: 'notes/opd_closing_1.png'
-        text: "Tabriklaymiz! Siz Informatika asoslarini o'qitish onlayn-kursini tugatdingiz. Siz endi o'z o'quvchilarini kelajakka tayyorlaydigan tobora ko'payib borayotgan o'qituvchilar jamoasining bir qismisiz."
+        text: "Tabriklaymiz! Siz Informatika asoslarini o‘qitish onlayn-kursini tugatdingiz. Siz endi o‘z o‘quvchilarini kelajakka tayyorlaydigan tobora ko‘payib borayotgan o‘qituvchilar jamoasining bir qismisiz."
       2:
         image: 'notes/opd_closing_2.png'
-        text: "Agar sizga ko'proq yordam kerak bo'lsa, ushbu manbalarni ko'rib chiqing: 1. forum.code.org 2. Twitterdagi @teachcode 3. studio.code.org "
+        text: "Agar sizga ko‘proq yordam kerak bo‘lsa, ushbu manbalarni ko‘rib chiqing: 1. forum.code.org 2. Twitterdagi @teachcode 3. studio.code.org "
     hoc_dance_warmup_2019:
       1:
         text: "Kod soati | Raqs kechasi: isinish"
       2:
         text: "Salom! Mening ismim Miral Kotb va men raqqosa, dasturiy ta'minot ishlab chiqaruvchisi va iLuminate yaratuvchisiman."
       3:
-        text: "Kompyuter fanlari ijodkorlik bilan ko'p jihatdan bog'liq. Haqiqatan ham u cheksizdir. Dasturiy ta'minotni yozish qobiliyatiga ega bo'lgandan so'ng, har qanday narsaga g'oyalarni kiritishingiz mumkin. Men buni yengil kostyumlar bilan qilaman. Dasturiy ta'minotni yozish vositalariga ega bo'lgandan so'ng, siz juda ko'p narsani qila olasiz va imkoniyatlar haqiqatan ham cheksizdir."
+        text: "Kompyuter fanlari ijodkorlik bilan ko‘p jihatdan bog‘liq. Haqiqatan ham u cheksizdir. Dasturiy ta'minotni yozish qobiliyatiga ega bo'lgandan so‘ng, har qanday narsaga g‘oyalarni kiritishingiz mumkin. Men buni chiroqli kostyumlar bilan qilganman. Dasturiy ta'minotni yozish vositalariga ega bo‘lgandan so'ng, siz juda ko‘p narsani qila olasiz va imkoniyatlaringiz haqiqatan ham cheksiz bo‘ladi."
       4:
         text: "Keyingi soat ichida siz o'zingizning raqs partiyangizni dasturlash orqali kompyuter fanidan boshlaysiz! Biz sizlar uchun xit musiqa va ajoyib raqqoslar jamoasini to'pladik."
       5:
@@ -1776,7 +1776,7 @@ uz:
         text: "Sizning ekraningiz uchta asosiy qismga bo'linganligini ko'rasiz. Chap tomonda o'yin maydoni mavjud. Bu yerda sizning raqqoslaringiz paydo bo'ladi."
       7:
         image: 'notes/hoc_dance_warmup_2019_7.png'
-        text: "O'rta maydon - bu uskunalar paneli. Darslardan o'tayotganda ushbu maydonda yangi kod bloklari mavjud bo'ladi."
+        text: "O‘rtadagi maydon - bu uskunalar paneli. Darslardan o‘tish jarayonida ushbu maydonda yangi kod bloklari paydo bo‘lib boradi."
       8:
         image: 'notes/hoc_dance_warmup_2019_8.png'
         text: "O'ngdagi bo'sh joy ish joyidir. Dasturingizni yaratish uchun bloklarni uskunalar panelidan va ish joyiga sudrab borishingiz mumkin."
@@ -1785,7 +1785,7 @@ uz:
         text: "Har bir darajadagi ko'rsatmalar ekranning yuqori qismida joylashgan bo'ladi. Agar sizga maslahat kerak bo'lsa, shunchaki lampochkani bosing."
       10:
         image: 'notes/hoc_dance_warmup_2019_10.png'
-        text: "Boshlash uchun ushbu qizil blok bilan yangi raqqosa qilaylik. Dastlab, uni uskunalar panelidan tortib olib, ushbu to'q sariq rangli \"setup\" bloki ostiga qo'ying. Bu raqqosa - mushuk."
+        text: "Boshlash uchun ushbu qizil blok bilan yangi raqqos yarataylik. Dastlab, uni uskunalar panelidan tortib olib, ushbu to‘q sariq rangli \"setup\" bloki ostiga qo‘ying. Bu raqqos - mushuk."
       11:
         image: 'notes/hoc_dance_warmup_2019_11.png'
         text: "Bu bilan siz raqs tushadigan joyni o'zgartirishingiz mumkin."
@@ -1799,38 +1799,38 @@ uz:
         text: "Kod soati | Raqs partiyasi: hodisalar"
       2:
         image: 'notes/hoc_dance_events_2019_2.png'
-        text: "Mening ismim Erin va men bu yerda Code.org da dasturiy ta'minot muhandisiman va Dance Party-ni qurishda yordam berdim."
+        text: "Mening ismim Erin, men Code.org dasturiy ta'minot muhandisiman. Men Dance Party-ni qurishda qatnashganman."
       3:
         image: 'notes/hoc_dance_events_2019_3.png'
-        text: "Turli xil raqs harakatlarini o'z vaqtida musiqa bilan amalga oshirish uchun siz hodisalar deb nomlangan narsadan foydalanishingiz mumkin. Hodisa sizning dasturingizga biron bir voqea sodir bo'lishini \"listen\" ni aytadi va keyin darhol javob beradi."
+        text: "Turli xil raqs harakatlarini o‘z vaqtida musiqa bilan amalga oshirish uchun siz hodisalar deb nomlangan narsadan foydalanishingiz mumkin. Hodisa sizning dasturingizga biron bir voqea sodir bo‘lishini \"listen\" - tinglashni va sodir bo‘lganda darhol nima javob qilishni aytadi."
       4:
         image: 'notes/hoc_dance_events_2019_4.png'
         text: "Hodisalarning ba'zi nir misollari sichqonchani, o'q tugmachasini bosish yoki ekranga tegishni eshtishtir."
       5:
         image: 'notes/hoc_dance_events_2019_5.png'
-        text: "Bu yerda biz ekrandagi ko'rsatkich tugmachalarini yoki klaviaturadagi tugmachalarni bosganingizda harakatni amalga oshirish uchun raqqosni dasturlashtiramiz."
+        text: "Bu yerda biz ekrandagi ko'rsatkich tugmachalari yoki klaviaturadagi tugmachalar bosilganda harakatlarni amalga oshirishi uchun raqqosni dasturlashtiramiz."
       6:
         image: 'notes/hoc_dance_events_2019_6.png'
-        text: "Biz \"when up arow\" hodisalar blokini ishlatamiz va unga \"do once\" blokini ulashimiz mumkin. Kimdir yuqoriga ko'rsatkich tugmachasini bosganda, \"when up arrow\" blokiga biriktirilgan kod ishlaydi. Qaysi raqs harakatini tanlaysiz?"
+        text: "Biz \"when up arrow\" hodisalar blokini ishlatamiz va unga \"do once\" blokini ulashimiz mumkin. Kimdir yuqoriga ko‘rsatkich tugmachasini bosganda, \"when up arrow\" blokiga biriktirilgan kod ishlaydi. Qaysi raqs harakatini tanlaysiz?"
       7:
         image: 'notes/hoc_dance_events_2019_7.png'
-        text: "Siz tanlagan raqqos turingiz \"setup\" blokida yaratgan raqqosalardan biriga mos kelishiga ishonch hosil qiling, aks holda siz hech narsa sodir bo'lmasligini ko'rishingiz mumkin."
+        text: "Siz tanlagan raqqos turingiz \"setup\" blokida yaratgan raqqosalardan biriga mos kelishiga ishonch hosil qiling, aks holda siz hech narsa sodir bo‘lmasligini ko‘rishingiz mumkin."
       8:
         image: 'notes/hoc_dance_events_2019_8.png'
-        text: "Oxir oqibat, siz raqqoslaringizni har bir tugma bilan har xil harakatlarni amalga oshirishi uchun shunga o'xshash tadbirlarni yaratishingiz mumkin. Buni sinab ko'ring va bir nechta kod satrlari bilan siz o'zingizning interaktiv raqsingizni qilishingiz mumkin."
+        text: "Nihoyat, siz raqqoslaringizni har bir tugma bilan har xil harakatlarni amalga oshirishi uchun shunga o‘xshash hodisalarni yaratishingiz mumkin. Buni sinab ko‘ring va bir nechta kod satrlari bilan siz o‘z interaktiv raqsingizni yaratishingiz mumkin."
     hoc_dance_measures_2019:
       1:
         image: 'notes/hoc_dance_measures_2019_1.png'
-        text: "Kod soati | Raqs partiyasi: Tadbirlar"
+        text: "Kod soati | Raqs bazmi: O‘lchovlar"
       2:
         image: 'notes/hoc_dance_measures_2019_2.png'
         text: "Men Aloe Blakman. Men qo'shiqchi, qo'shiq muallifi va ko'ngil ochuvchiman. Menimcha, kompyuter fanini o'rganish haqiqatan ham muhim, chunki kompyuter fanlari kelajakdir va odamlar o'z hayotlarini tom ma'noda boshqaradigan texnologiyalarni nazorat qilishlari kerak deb o'ylayman."
       3:
         image: 'notes/hoc_dance_measures_2019_3.png'
-        text: "Hozir foydalanadigan hodisamiz qo'shiqdagi o'zgarishlarni tinglaydi. Ushbu o'zgarish sizni raqqosani yangi raqsga tushishga undaydi."
+        text: "Hozir foydalanadigan hodisamiz qo‘shiqdagi o‘zgarishlarni tinglaydi. Ushbu o‘zgarish raqqosingizni yangi raqsga tushishga undaydi."
       4:
         image: 'notes/hoc_dance_measures_2019_4.png'
-        text: "Professional raqqoslar o'zlarining xoreografiyasini qo'shiqning zarbalarini hisoblash bilan mashq qiladilar. Musiqada o'lchov ma'lum miqdordagi urishni anglatadi. Eng mashhur qo'shiqlarda o'lchov to'rt martadan iborat."
+        text: "Professional raqqoslar raqs harakatlarini qo‘shiqning zarbalarini hisoblash bilan mashq qiladilar. Musiqada o‘lchov zarbalar sonini anglatadi. Ko‘p mashhur qo‘shiqlarda o‘lchov to‘rt zarba uzunligida bo‘ladi."
       5:
         image: 'notes/hoc_dance_measures_2019_5.png'
         text: "Raqslaringizni bo'shashishiga imkon berish uchun sizga hodisa yashil bloki kerak. Ushbu tadbir blokida \"after 4 measures\" deyilgan\"."
@@ -1851,23 +1851,23 @@ uz:
       3:
         text: "Men kompyuter fanlarini yaxshi ko'raman, chunki u muammolarni hal qilish va tanqidiy fikrlashni o'z ichiga oladi va bir necha soatlik ishni sarflaganingizdan so'ng, siz undan juda ajoyib va foydali narsalarni olishingiz mumkin."
       4:
-        text: "Hozirgacha sizda turli xil raqqosalar o'ynash imkoniyati bo'lgan va siz ularni har xil raqs harakatlarini amalga oshirishni dasturlashtirgansiz. Ammo bu harakatlar haqiqatan ham qanday ishlaydi?"
+        text: "Hozirgacha sizda turli xil raqqoslarni o'ynatish imkoniyati bo‘lgan va siz ularni har xil raqs harakatlarini amalga oshirishi uchun dasturlashtirgansiz. Ammo bu harakatlar aslida qanday ishlaydi?"
       5:
         text: "Har qanday raqs harakati kadrlar deb nomlangan bir qator tasvirlardan iborat. Har bir kadr oldingisidan bir oz farq qiladi. Sizning dasturingiz ishga tushganda, kompyuter bir-birining orqasidan boshqasini ko'rsatadi. Ularga shunchalik tez ko'rsatiladiki, raqqosa harakat qilayotganga o'xshaydi. Bu barcha animatsiyalarning siridir."
       6:
         text: "Siz nafaqat raqqosangizning harakatlarini, balki raqqosning xususiyatlarini ham o'zgartirishingiz mumkin. Xususiyatlar raqqosning ekrandagi mavqei, raqqosning kattaligi va rangi kabi narsalarni tavsiflaydi."
       7:
         image: 'notes/hoc_dance_properties_2019_7.png'
-        text: "Raqqosaning xususiyatlarini o'zgartirish uchun siz o'rnatilgan blokdan foydalanasiz. Raqqoslarimizni kichikroq qilib ko'rsatish uchun o'rnatilgan blokdan foydalanamiz. Dastlab, o'rnatilgan blokni dasturingizga torting."
+        text: "Raqqosaning xususiyatlarini o‘zgartirish uchun siz \"Set\" * sozlash blokidan foydalanasiz. Raqqoslarimizni kichikroq qilib ko‘rsatish uchun sozlash blokidan foydalanamiz. Dastlab, sozlash blokini dasturingizga tortib oling."
       8:
         image: 'notes/hoc_dance_properties_2019_8.png'
-        text: "Keyin o'zgartirmoqchi bo'lgan raqqosani tanlang va ular ekranda paydo bo'ladigan hajmni kiriting. To'liq o'lcham 100. Agar siz pastroq raqamni tanlasangiz, bu raqqosni kichraytiradi. Raqqos qanchalik kichik bo'lsa, u shunchalik uzoqroq ko'rinishga ega."
+        text: "Keyin o‘zgartirmoqchi bo‘lgan raqqosni tanlang va ular ekranda paydo bo‘ladigan o‘lchamni kiriting. To‘liq o‘lcham 100. Agar siz kichikroq sonni tanlasangiz, raqqos kichrayadi. Raqqos qanchalik kichik bo‘lsa, u shunchalik uzoqroq ko‘rinadi."
       9:
         image: 'notes/hoc_dance_properties_2019_9.png'
-        text: "O'rnatilgan blok yordamida siz raqqosning o'lchamlarini, aylanishini, holatini va rangini o'zgartirishingiz mumkin. Ushbu xususiyatlar atrofida o'ynash orqali siz har qanday o'zgarishlarni amalga oshirishingiz va ularni qo'shiqning turli qismlariga bog'lashingiz mumkin."
+        text: "Sozlash bloki yordamida siz raqqosning o‘lchamlarini, aylanishini, holatini va rangini o‘zgartirishingiz mumkin. Ushbu xususiyatlar bilan o‘ynab siz har qanday o‘zgarishlarni amalga oshirishingiz va ularni qo‘shiqning turli qismlariga bog‘lashingiz mumkin."
       10:
         image: 'notes/hoc_dance_properties_2019_10.png'
-        text: "Esingizda bo'lsin, siz faqat mavjud bo'lgan raqqosaning xususiyatlarini o'rnatishingiz mumkin. O'rnatilgan blokingiz \"Make a new dancer\" blokidan keyin kelishiga ishonch hosil qiling. O'zingizni sinab ko'ring, ijodiy yondashing va zavqlaning!"
+        text: "Esingizda bo‘lsin, siz faqat mavjud bo‘lgan raqqosning xususiyatlarini sozlashingiz mumkin. Sozlash blokingiz \"Make a new dancer\" -yangi raqqos yaratish blokidan keyin kelishiga ishonch hosil qiling. O‘zingizni sinab ko‘ring, ijodiy yondashing va zavqlaning!"
     hoc_dance_congrats_2019:
       1:
         text: "Kod soati | Raqs bazmu: Bazm avjida!"

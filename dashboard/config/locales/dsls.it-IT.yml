@@ -882,11 +882,16 @@ it-IT:
         content1: descrizione qui
       CSD U2 image debug match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
         content1: Abbina il codice HTML buggato con la descrizione del suo bug.
         questions:
         - text: L'attributo 'src' è scritto in modo scorretto.
@@ -894,6 +899,11 @@ it-IT:
         - text: L'estensione file (.jpg) è mancante dall'indirizzo immagine
         - text: L'indirizzo immagine non è dato come attributo 'src'
         - text: C'è uno spazio nel nome del file
+        teacher_markdown: Sebbene questa lezione possa essere utilizzata per valutare
+          la comprensione da parte degli studenti della sintassi del tag `<img>`,
+          il suo scopo principale è quello di rendere gli studenti consapevoli dei
+          tipi più comuni di bug che possono incontrare quando aggiungono immagini
+          alle pagine web.
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -6911,19 +6921,52 @@ it-IT:
           style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
           style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
           16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
-          Cosa succederà dopo?\n\nOggi scriverete il codice per creare ed eseguire
+          Cosa succederà dopo?\n\nOggi scriverai il codice per creare ed eseguire
           una **simulazione** dell'epidemia di virus a Monster Town. Una simulazione
           è un modello al computer di un processo o sistema. Impariamo a programmare
           e fare previsioni su ciò che accadrà ai vicini di Monster Town.\n\n<img
           src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
           style=\"float:right; width:15%\">\n\n* *Con che velocità si diffonderà il
           virus?*\n\n* *Si ammaleranno tutti?*\n\n* *In che modo le maschere per il
-          viso saranno d'aiuto?*\n\n\nUna volta terminato, condividete la vostra simulazione
-          con gli altri. Condividete il vostro messaggio su cosa pensate che possiamo
-          fare per aiutare a mantenere gli altri in buona salute quando un virus arriva
+          viso saranno d'aiuto?*\n\n\nUna volta terminato, condividi la tua simulazione
+          con gli altri. Condividi il tuo messaggio su cosa pensi che possiamo fare
+          per aiutare a mantenere gli altri in buona salute quando un virus arriva
           in città. "
       outbreak_story2:
         content1: descrizione qui
+        markdown: "# Epidemia: Pensare come uno scienziato\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nLe simulazioni sono un ottimo modo
+          per imparare cose che possono essere difficili da osservare nel mondo reale.
+          Aiutano gli scienziati a risolvere problemi e testare nuove idee in modo
+          sicuro ed efficiente. La tua simulazione è un modo per mostrare come potrebbe
+          apparire un'epidemia da virus a Monster Town.\n\n## Ripristina e riproduci!\nAnche
+          quando scrivi tu stesso il codice, è impossibile sapere esattamente cosa
+          succederà quando premi esegui. I mostri vagano in modo casuale, quindi non
+          sai se il virus si diffonderà velocemente o lentamente. Ogni volta che modifichi
+          il codice, assicurati di eseguire la simulazione più di una volta. Le cose
+          non succederanno due volte allo stesso modo!\n\n## Raccolta dati\nProva
+          a scrivere le tue osservazioni mentre esegui la simulazione. Puoi contare
+          il numero di mostri che si ammalano o utilizzare un timer per vedere quanto
+          velocemente accadono le cose. Ad esempio, quanto tempo ci vuole di solito
+          perché tutti i mostri si ammalino se nessuno ha la mascherina? \n\n## Fare
+          previsioni\nSe comprendi il tuo modello, puoi usarlo per fare previsioni.
+          Puoi persino modificare il modo in cui viene eseguita la simulazione e indovinare
+          cosa accadrà diversamente. Per esempio:\n* Cosa succederebbe se ci fossero
+          il doppio dei mostri?\n* Cosa succederebbe se i mostri si muovessero a metà
+          della velocità?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Monster Town è come il mondo reale?\nC'è un
+          limite al grado di realismo di qualsiasi modello. \n* Che cosa ha in comune
+          la simulazione dell'epidemia con le epidemie di virus nel mondo reale?\n*
+          Quali sono le differenze?\nDopo aver completato questa attività, discuti
+          queste domande con gli insegnanti o con la tua famiglia!\n\n## Cos'altro
+          possiamo rappresentare?\nHai già creato un modello funzionante dell'epidemia
+          a Monster Town. Quali cose non è possibile riprodurre o mostrare nella simulazione
+          che vorresti fosse possibile? Premi Continua per andare avanti e imparare
+          ancora di più a  rappresentare:\n* Aumentare il numero di mostri nella simulazione\n*
+          Aiutare i mostri a riprendersi dal virus\n* Probabilità, immunità, vaccini
+          e altro!\n\nPuoi anche condividere il tuo modello di simulazione con altri
+          o condividere un messaggio su ciò che pensi che possiamo fare per aiutare
+          a mantenere gli altri in buona salute quando un virus arriva in città. "
       BigEvent-Unplugged:
         markdown: |-
           # Il Grande Evento
@@ -7140,3 +7183,6 @@ it-IT:
         title: Test Post-Progetto sui Dati e la Società
       outbreak_freeplay_choice:
         display_name: Tempo di giocare
+        description: Hai completato l'esercitazione! Continua ad apportare modifiche
+          o miglioramenti al tuo progetto. Puoi scegliere di continuare a lavorare
+          con gli stessi blocchi o provare una casetta degli attrezzi ampliata.

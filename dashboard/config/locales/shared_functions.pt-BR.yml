@@ -1,0 +1,17 @@
+---
+pt:
+  data:
+    shared_functions:
+      growing: crescendo
+      jittering: tremendo
+      moving east: movendo para o leste
+      moving north: movendo para o norte
+      moving south: movendo para o sul
+      moving west: movendo para o oeste
+      moving with arrow keys: utilizando as setas
+      patrolling: patrulhando
+      shrinking: encolhendo
+      spinning left: girando para a esquerda
+      spinning right: girando para a direita
+      swimming left and right: nadando para a esquerda e para a direita
+      wandering: vagando

@@ -1004,6 +1004,7 @@ ro:
             '"y"': poziţia y
             '"direction"': direcţie de mişcare
             '"tint"': tentă
+            '"speed"': viteză
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1128,6 +1129,8 @@ ro:
             '"West"': Vest
       gamelab_moveToward:
         text: mută {SPRITE} pixeli {DISTANCE} spre {TARGET}
+      gamelab_newSpritePointer:
+        text: a făcut clic pe {SPRITE}
       gamelab_objectSpritePointer:
         text: a făcut clic pe {SPRITE}
       gamelab_playSound:
@@ -1178,6 +1181,13 @@ ro:
             undefined: nici unul
       gamelab_setBackgroundImageAs:
         text: setează fundalul cu {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mediu
+            '100': large
       gamelab_setProp:
         text: setează {SPRITE} {PROPERTY} la {VAL}
         options:
@@ -1187,6 +1197,7 @@ ro:
             '"x"': poziţia x
             '"y"': poziţia y
             '"direction"': direcţie de mişcare
+            '"speed"': viteză
       gamelab_setSizes:
         text: setează {SPRITE} {PROPERTY} la {N}%
         options:

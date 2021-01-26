@@ -1011,6 +1011,7 @@ hu:
             '"y"': y-pozíció
             '"direction"': mozgás iránya
             '"tint"': árnyalat
+            '"speed"': sebesség
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1136,6 +1137,8 @@ hu:
             '"West"': Nyugat
       gamelab_moveToward:
         text: "{SPRITE} menj {DISTANCE} távolságot {TARGET} felé"
+      gamelab_newSpritePointer:
+        text: kattintott {SPRITE}
       gamelab_objectSpritePointer:
         text: kattintott {SPRITE}
       gamelab_playSound:
@@ -1186,6 +1189,13 @@ hu:
             undefined: Semennyit
       gamelab_setBackgroundImageAs:
         text: háttér beállítása {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': közepes
+            '100': large
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY} tulajdonságának beállítása: {VAL}"
         options:
@@ -1195,6 +1205,7 @@ hu:
             '"x"': x pozíció
             '"y"': y-pozíció
             '"direction"': mozgás iránya
+            '"speed"': sebesség
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} beállítása erre: {N}%"
         options:
@@ -1290,6 +1301,8 @@ hu:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": nem hal
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-címke
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": nem a címkeimet
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

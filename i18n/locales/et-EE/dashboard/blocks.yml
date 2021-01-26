@@ -786,6 +786,7 @@ et:
             '"y"': y asukoht
             '"direction"': liikumise suund
             '"tint"': toon
+            '"speed"': kiirus
       gamelab_getTime:
         options:
           UNIT:
@@ -870,6 +871,13 @@ et:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': vikerkaar
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': veealune
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': talv
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': keskmine
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -878,6 +886,7 @@ et:
             '"x"': x asukoht
             '"y"': y asukoht
             '"direction"': liikumise suund
+            '"speed"': kiirus
       gamelab_setSizes:
         options:
           PROPERTY:

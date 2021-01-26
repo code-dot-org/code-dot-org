@@ -693,7 +693,11 @@ pl:
       towarowym &copy; %{current_year} Cartoon Network.
     code_from_html: Code.org używa p5.play, który ma licencję <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
-    powered_by_aws: Zasilany przez Amazon Web Services
+    powered_by_aws: 'Amazon Web Services i logo “Powered by AWS” są znakami towarowymi
+      Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub
+      innych krajach.
+
+'
     built_on_github: Oparty na GitHub firmy Microsoft
     google_copyright: "&Kopiuj; Google Inc. wykorzystane za zgodą. Google Classroom
       to znak towarowy firmy Google Inc."

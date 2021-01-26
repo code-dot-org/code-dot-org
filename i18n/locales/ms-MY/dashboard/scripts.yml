@@ -109,6 +109,7 @@ ms:
               name: Simpang Siur
             Wrap-up:
               name: Wrap-up
+          student_description: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
         edit-code:
           title: Edit kod
           description: Edit kod
@@ -118,6 +119,7 @@ ms:
               name: Pelukis
             The Maze:
               name: Simpang Siur
+          student_description: Edit kod
         events:
           title: Acara-acara
           description: Acara-acara
@@ -125,12 +127,14 @@ ms:
           lessons:
             Bounce:
               name: Lantunan
+          student_description: Acara-acara
         flappy:
           title: Kod Flappy
           description: ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit? Cuba tutorial kod Flappy kami!
           lessons:
             Flappy Code:
               name: Kod Flappy
+          student_description: ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit? Cuba tutorial kod Flappy kami!
         cspunit1:
           lessons:
             Sending Numbers:
@@ -894,6 +898,16 @@ ms:
           description_short: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
           description: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
           name: wabak
+          student_description: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
+        2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Mengekod Simulasi
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pembolehubah
+            outbreak:
+              display_name: Simulasi Wabak
         csd3-2021:
           lessons:
             Variables:
@@ -1018,3 +1032,5 @@ ms:
               display_name: Simulasi Wabak
             lessonGroup-3:
               display_name: Pembolehubah
+            Sprites:
+              display_name: Jin

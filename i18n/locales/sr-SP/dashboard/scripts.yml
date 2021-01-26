@@ -47,6 +47,7 @@ sr:
               name: 'Студио: Направи причу'
             The Big Event:
               name: Велики догађај
+          student_description: Почни са првим курсем за ученике који су тек научили да читају. Препоручујемо за узраст до првог разреда.
         course2:
           title: Курс 2
           description: Курс 2 могу да раде ученици који знају да читају и немају искуства са програмирањем. У овом курсу ученици ће писати програме који решавају проблеме и развијати интерактивне игре и приче које могу да деле са другима. Препоручено за ученике до петог разреда.
@@ -90,6 +91,7 @@ sr:
               name: Велики догађај
             Your Digital Footprint:
               name: Твој дигитални траг
+          student_description: Курс 2 могу да раде ученици који знају да читају и немају искуства са програмирањем. У овом курсу ученици ће писати програме који решавају проблеме и развијати интерактивне игре и приче које могу да деле са другима. Препоручено за ученике до петог разреда.
         course3:
           title: Курс 3
           description_short: Курс 3 је наставак курса 2.
@@ -142,6 +144,7 @@ sr:
           lessons:
             Play Lab:
               name: Играоница
+          student_description: Направи причу или игру у Играоници!
         artist:
           title: Уметник
           description: Цртај слике са уметником!
@@ -149,12 +152,14 @@ sr:
           lessons:
             Artist:
               name: Уметник
+          student_description: Цртај слике са уметником!
         hourofcode:
           description: Испробај основе рачунарских наука са љутим птичицама, цвећем против зомбија, и Скречом из леденог доба!
           description_short: Try the basics of computer science with many fun characters!
           lessons:
             Maze:
               name: Лавиринт
+          student_description: Испробај основе рачунарских наука са љутим птичицама, цвећем против зомбија, и Скречом из леденог доба!
         frozen:
           title: Програмирај са Аном и Елзом
           description: Хајде да искористимо програмирање да би се придружили Ани и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце док клижете по леду и направићете зимску чаролију коју можете поделити са својим пријатељима!
@@ -162,6 +167,7 @@ sr:
           lessons:
             Artist:
               name: Уметник
+          student_description: Хајде да искористимо програмирање да би се придружили Ани и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце док клижете по леду и направићете зимску чаролију коју можете поделити са својим пријатељима!
         course4:
           title: Course 4
           description: Курс 4 је направљен за ученике који су прошли курсеве 2 и 3. Ученици ће научити како да решавају сложеније проблеме док уче како да комбинују различите наредбе којима могу да решавају различите проблеме. Када заврше курс 4, ученици ће бити способни да праве програме са понављањима (петљама), функцијама са параметрима, итд. Препоручено за ученике од 4. до 8. разреда.
@@ -212,6 +218,7 @@ sr:
               name: 'Unplugged: Songwriting with Parameters'
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrams'
+          student_description: Курс 4 је направљен за ученике који су прошли курсеве 2 и 3. Ученици ће научити како да решавају сложеније проблеме док уче како да комбинују различите наредбе којима могу да решавају различите проблеме. Када заврше курс 4, ученици ће бити способни да праве програме са понављањима (петљама), функцијама са параметрима, итд. Препоручено за ученике од 4. до 8. разреда.
         Course4pre:
           title: Предуслови за курс 4
           description: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -235,6 +242,7 @@ sr:
               name: 'Фармер: Условне петље'
             'Maze: Sequence':
               name: 'Лавиринт: Линијски програми'
+          student_description: A brief rampup of concepts for students who have not taken Course 2 and 3.
         usability:
           lessons:
             For Loops:
@@ -264,6 +272,7 @@ sr:
           lessons:
             Infinity:
               name: Бесконачно
+          student_description: Креирај приче и игре са Дизнијевим ликовима у Играоници.
         algebrademo:
           lessons:
             Defining Variables:
@@ -320,6 +329,7 @@ sr:
               name: Лавиринт
             Wrap-up:
               name: Замотај-Умотај
+          student_description: Овај 20-часовни  курс представља срж компјутерских наука и програмерских основа. Курс је дизајниран за употребу у учионицама за разреде К-8, али је забавно учити у било којем животном периоду.
         edit-code:
           title: Уреди код
           description: Уреди код
@@ -331,6 +341,7 @@ sr:
               name: Уметник
             The Maze:
               name: Лавиринт
+          student_description: Уреди код
         events:
           title: Догађаји
           description: Догађаји
@@ -338,6 +349,7 @@ sr:
           lessons:
             Bounce:
               name: одбиј се
+          student_description: Догађаји
         flappy:
           description_short: Направи своју Флапи игру за мање од 10 минута!
         jigsaw:
@@ -347,6 +359,7 @@ sr:
           lessons:
             Jigsaw:
               name: Слагалица
+          student_description: Пробај нашу слагалицу
         step:
           title: Корак
           description: Step tutorial
@@ -354,9 +367,11 @@ sr:
           lessons:
             Step:
               name: Корак
+          student_description: Step tutorial
         Hour of Code:
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
+          student_description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
         cspunit1:
           description_short: Programming
         algebraPD:
@@ -420,6 +435,7 @@ sr:
           lessons:
             Welcome!:
               name: Welcome!
+          student_description: 'Phase 2 Online: Blended Summer Study'
         cspunit2:
           description_short: Programming
           lessons:
@@ -439,6 +455,7 @@ sr:
               name: Free Play
             Strings and Images:
               name: Strings and Images
+          student_description: 'Phase 2 Online: Blended Summer Study'
         allthethings:
           lessons:
             Artist:
@@ -471,6 +488,7 @@ sr:
               name: Strings and Images
             Teacher Dashboard:
               name: Контролна табла за наставнике
+          student_description: 'Phase 2 Online: Blended Summer Study'
         cspfacilitator:
           lessons:
             Welcome!:
@@ -489,6 +507,7 @@ sr:
               name: Welcome!
             Wrap-up:
               name: Замотај-Умотај
+          student_description: 'Phase 2 Online: Blended Summer Study'
         algebraPD2:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -497,24 +516,28 @@ sr:
               name: Контролна табла за наставнике
             Welcome!:
               name: Welcome!
+          student_description: 'Phase 2 Online: Blended Summer Study'
         sciencePD2b:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
             Welcome!:
               name: Welcome!
+          student_description: 'Phase 2 Online: Blended Summer Study'
         science-PD2:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
             Welcome!:
               name: Welcome!
+          student_description: 'Phase 2 Online: Blended Summer Study'
         sciencePD2b-iZone:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
             Welcome!:
               name: Welcome!
+          student_description: 'Phase 2 Online: Blended Summer Study'
         ECSPD2-iZone:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -529,6 +552,7 @@ sr:
               name: Welcome!
             Wrap-up:
               name: Замотај-Умотај
+          student_description: 'Phase 2 Online: Blended Summer Study'
         ECSPD2-NexTech:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -543,6 +567,7 @@ sr:
               name: Welcome!
             Wrap-up:
               name: Замотај-Умотај
+          student_description: 'Phase 2 Online: Blended Summer Study'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -576,6 +601,7 @@ sr:
           lessons:
             Ice Age Play Lab:
               name: Ледено доба - Играоница
+          student_description: Create a story or make a game with Ice Age Играоница!
         cspunit3temp:
           description_short: Programming
           lessons:
@@ -588,6 +614,7 @@ sr:
           lessons:
             Gumball Play Lab:
               name: Gumball Играоница
+          student_description: Create a story or make a game with Gumball Играоница!
         starwars:
           title: 'Ратови Звезда: Изгради галаксије кôдом'
           description: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
@@ -595,6 +622,7 @@ sr:
           lessons:
             Hour of Code 2015:
               name: Час кода 2015
+          student_description: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
         starwarsblocks:
           title: 'Ратови Звезда: Изгради галаксије кôдом'
           description: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
@@ -602,6 +630,7 @@ sr:
           lessons:
             Hour of Code 2015:
               name: Час кода 2015
+          student_description: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
         mc:
           title: Мајнкрафт час програмирања
           description: Користите блокове кода да поведете Стива или Алекс у авантуру кроз овај Мајнкрафт свет
@@ -609,6 +638,7 @@ sr:
           lessons:
             Hour of Code 2015:
               name: Час кода 2015
+          student_description: Користите блокове кода да поведете Стива или Алекс у авантуру кроз овај Мајнкрафт свет.
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -852,6 +882,7 @@ sr:
           lessons:
             Minecraft Hour of Code Designer:
               name: Мајнкрафт дизајнер - час програмирања
+          student_description: Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а.
         coursea-draft:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -1705,6 +1736,9 @@ sr:
           lesson_groups:
             required:
               display_name: Преглед
+          lessons:
+            Focus Area 1:
+              name: Наставни план
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2004,6 +2038,10 @@ sr:
               name: Брзина
             Functions:
               name: Функције
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Променљиве
         csd3-2021:
           description_short: "Programming"
           lessons:

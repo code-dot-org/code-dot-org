@@ -49,6 +49,7 @@ eu:
               name: 'Jolas laborategia: sortu istorioa'
             The Big Event:
               name: Gertaera Handia
+          student_description: Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago. Ikasleek programazioko oinarrizko kontzeptuak ulertuko dituzte, beste batrzuekin lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak eta lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute, eta elkarbanatu.
         course2:
           title: 2. Kurtsoa
           description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
@@ -93,6 +94,7 @@ eu:
               name: Gertaera Handia
             Your Digital Footprint:
               name: Zure aztarna digitala
+          student_description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
         course3:
           title: 3. Kurtsoa
           description: Hirugarren maila, bigarren maila egin duten ikasleentzat dago dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.
@@ -141,6 +143,7 @@ eu:
               name: 'Joku laborategia: sortu joku bat'
             'Studio: Create a Story':
               name: 'Jolas laborategia: sortu istorioa'
+          student_description: Hirugarren maila, bigarren maila egin duten ikasleentzat dago dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.
         playlab:
           title: Jolas Laborategia
           description: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
@@ -148,6 +151,7 @@ eu:
           lessons:
             Play Lab:
               name: Jolas Laborategia
+          student_description: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
         artist:
           title: Artista
           description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
@@ -155,6 +159,7 @@ eu:
           lessons:
             Artist:
               name: Artista
+          student_description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
         hourofcode:
           title: Labirinto klasikoa
           description: Informatikaren oinarriak ikasi itzazu Angry Birds, Plants vs Zombies eta Ice Age-ko Scrat-ekin!
@@ -162,6 +167,7 @@ eu:
           lessons:
             Maze:
               name: Labirintoa
+          student_description: Informatikaren oinarriak ikasi itzazu Angry Birds, Plants vs Zombies eta Ice Age-ko Scrat-ekin!
         frozen:
           title: Anna eta Elsarekin programatu
           description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!
@@ -169,6 +175,7 @@ eu:
           lessons:
             Artist:
               name: Artista
+          student_description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!
         course4:
           title: 4. Kurtsoa
           description_short: 4. kurtsoa egin ahal izateko, ikasleek 2, eta 3. kurtsoak eginda izan behar dituzte.
@@ -241,6 +248,7 @@ eu:
               name: 'Nekazaria: While begiztak'
             'Maze: Sequence':
               name: 'Labirintoa: Sekuentzia'
+          student_description: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
         usability:
           lessons:
             Binary:
@@ -273,6 +281,7 @@ eu:
           lessons:
             Infinity:
               name: Infinitu
+          student_description: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko
         algebrademo:
           lessons:
             Defining Variables:
@@ -333,6 +342,7 @@ eu:
               name: labirintoa
             Wrap-up:
               name: Ixtea
+          student_description: "20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.\nGehiago ikasteko ikusi maila bereko gure ikastaroak!"
         edit-code:
           title: Editatu kodea
           description: Editatu kodea
@@ -344,6 +354,7 @@ eu:
               name: Artista
             The Maze:
               name: labirintoa
+          student_description: Editatu kodea
         events:
           title: Gertaerak
           description: Gertaerak
@@ -355,6 +366,7 @@ eu:
               name: Kalk
             Eval:
               name: Ebal
+          student_description: Gertaerak
         flappy:
           title: Flappy Code
           description: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy Code tutoriala!
@@ -362,6 +374,7 @@ eu:
           lessons:
             Flappy Code:
               name: Flappy Code
+          student_description: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy Code tutoriala!
         jigsaw:
           title: Buruhaustea
           description: Proba ezazu gure buruhauste tutoriala!!!
@@ -369,6 +382,7 @@ eu:
           lessons:
             Jigsaw:
               name: Buruhaustea
+          student_description: Proba ezazu gure buruhauste tutoriala!!!
         step:
           title: Pauso
           description: Pausokako tutoriala
@@ -376,6 +390,7 @@ eu:
           lessons:
             Step:
               name: Pauso
+          student_description: Pausokako tutoriala
         Hour of Code:
           title: Kodearen ordua 2013
           description: Murgildu konputagailu zientziaren oinarrietan Angry Birds eta Plants vs. Zombiesen pertsonaien laguntzaz!
@@ -383,6 +398,7 @@ eu:
           lessons:
             Hour of Code 2013:
               name: Kodearen ordua 2013
+          student_description: Murgildu konputagailu zientziaren oinarrietan Angry Birds eta Plants vs. Zombiesen pertsonaien laguntzaz!
         algebraPD:
           lessons:
             Evaluation Blocks:
@@ -433,6 +449,7 @@ eu:
               name: Ongi etorri!
             Wrap-Up:
               name: Itxi
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         cspunit2:
           lessons:
             The Internet:
@@ -453,6 +470,7 @@ eu:
               name: Karaktere-kateak eta irudiak
             The Design Recipe:
               name: Diseinuaren errezeta
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         allthethings:
           lessons:
             Artist:
@@ -493,6 +511,7 @@ eu:
               name: Karaktere-kateak eta irudiak
             Teacher Dashboard:
               name: Irakaslearen arbela
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         cspfacilitator:
           lessons:
             App Lab:
@@ -515,6 +534,7 @@ eu:
               name: Ongi etorri!
             Wrap-up:
               name: Ixtea
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         algebraPD2:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -525,6 +545,7 @@ eu:
               name: Diseinuaren errezeta
             Welcome!:
               name: Ongi etorri!
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         sciencePD2b:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -533,6 +554,7 @@ eu:
               name: Ongi etorri!
             Wrap-Up:
               name: Itxi
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         science-PD2:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -541,6 +563,7 @@ eu:
               name: Ongi etorri!
             Wrap-Up:
               name: Itxi
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         sciencePD2b-iZone:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -549,6 +572,7 @@ eu:
               name: Ongi etorri!
             Wrap-Up:
               name: Itxi
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         ECSPD2-iZone:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -563,6 +587,7 @@ eu:
               name: Ongi etorri!
             Wrap-up:
               name: Ixtea
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         ECSPD2-NexTech:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -577,6 +602,7 @@ eu:
               name: Ongi etorri!
             Wrap-up:
               name: Ixtea
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -616,6 +642,7 @@ eu:
           lessons:
             Ice Age Play Lab:
               name: Ice Age joku laborategia
+          student_description: Ice Age joku laborategiarekin sortu istorio bat edo egin joku bat!
         cspunit3temp:
           lessons:
             While Loops:
@@ -627,6 +654,7 @@ eu:
           lessons:
             Gumball Play Lab:
               name: Gumball joko laborategia
+          student_description: Gumball joku laborategiarekin sortu istorio bat edo egin joku bat!
         starwars:
           title: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen'
           description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
@@ -634,6 +662,7 @@ eu:
           lessons:
             Hour of Code 2015:
               name: 2015 Code ordua
+          student_description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
         starwarsblocks:
           title: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen'
           description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
@@ -641,6 +670,7 @@ eu:
           lessons:
             Hour of Code 2015:
               name: 2015 Code ordua
+          student_description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
         mc:
           title: Minecraft Kode Ordua
           description: Erabili kode-blokeak Steve edo Alex abentura batera eramateko Minecraft mundu honetan
@@ -648,6 +678,7 @@ eu:
           lessons:
             Hour of Code 2015:
               name: 2015 Code ordua
+          student_description: Erabili kode blokeak Steve edo Alex eramateko abentura batera Minecraft mundu honetan.
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1895,6 +1926,9 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
+          lessons:
+            Focus Area 1:
+              name: Kurrikuluma
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2217,6 +2251,12 @@ eu:
               name: Baldintzak
             Functions:
               name: Funtzioak
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Sarrera
+            lessonGroup-3:
+              display_name: Aldagaiak
         csd3-2021:
           lessons:
             Variables:
@@ -2375,9 +2415,6 @@ eu:
             csf_events:
               display_name: Gertaerak
         csf-2021-pilot:
-          lessons:
-            lesson-1:
-              name: Gutun-azaleko aldagarriak
           lesson_groups:
             ramp_up:
               display_name: Sarrera

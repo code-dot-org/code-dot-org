@@ -54,6 +54,12 @@ sq:
               name: 'Play Lab: Krijo një Histori'
             The Big Event:
               name: Eventi i Madh
+          student_description: Kursi 1 është dizenjuar për të lejuar lexuesit të krijojnë
+            programe kompjuerike që do i ndihmojnë ata të mësojnë të bashkëpunojnë
+            me të tjerët, të zhvillojnë aftësitë për zgjidhjen e problemeve, dhe të
+            këmbëngulin në detyra të vështira. Në fund të këtij kursi, studentët krijojnë
+            lojën e tyre ose ngjarjen që ata mund ta shpërndajnë. Rekomanduar për
+            klasën e parë.
         course2:
           title: Kursi 2
           description: Kursi 2 është dizenjuar për studentët që mund të lexojnë dhe
@@ -101,6 +107,10 @@ sq:
               name: Eventi i Madh
             Your Digital Footprint:
               name: Gjurmët e Tua Dixhitale
+          student_description: Kursi 2 është dizenjuar për studentët që mund të lexojnë
+            dhe nuk kanë si prioritet programimin. Në këtë kurs, studentët do të krijojnë
+            programe për të zgjidhur problemet dhe të zhvillojnë lojëra interaktive
+            ose ngjarje që ata të mund ti shpërndajnë. Rekomanduar për klasat 2-5.
         course3:
           title: Kursi 3
           description: Kursi 3 është dizenjuar për studentët, të cilët kanë marrë
@@ -154,6 +164,12 @@ sq:
               name: Play Lab - Krijo një Lojë
             'Studio: Create a Story':
               name: 'Play Lab: Krijo një Histori'
+          student_description: Kursi 3 është dizenjuar për studentët, të cilët kanë
+            marrë Kursin 2. Studentët do futen më thellë në temat e programimit, që
+            janë prezantuar në kurset e mëparshme, për të krijuar zgjidhje fleksibile
+            për problemet më të ndërlikuara. Në fund të këtij kursi, studentët krijojnë
+            histori interaktive dhe lojëra që mund ti shpërndajnë me këdo. Rekomanduar
+            për klasën 4-5.
         playlab:
           title: Play Lab
           description: Krijo një histori ose bëj një lojë me Play Lab!
@@ -161,6 +177,7 @@ sq:
           lessons:
             Play Lab:
               name: Play Lab
+          student_description: Krijo një histori ose bëj një lojë me Play Lab!
         artist:
           title: Artisti
           description: Vizato figura të hatashme dhe dizenjo me Artistin!
@@ -168,6 +185,7 @@ sq:
           lessons:
             Artist:
               name: Artisti
+          student_description: Vizato figura të hatashme dhe dizenjo me Artistin!
         hourofcode:
           title: Labirint Klasik
           description: Provo bazat e shkencës kompjuterike me karaktere nga Angry
@@ -177,6 +195,8 @@ sq:
           lessons:
             Maze:
               name: Labirint
+          student_description: Provo bazat e shkencës kompjuterike me karaktere nga
+            Angry Birds, Plants vs. Zombies dhe Ketrit nga Ice Age!
         frozen:
           title: Kodo me Ann-en dhe Elsa-n
           description: Le të përdorim kodin për të lidhur Anën dhe Elsën ndërsa ato
@@ -188,6 +208,10 @@ sq:
           lessons:
             Artist:
               name: Artisti
+          student_description: Le të përdorim kodin për të lidhur Anën dhe Elsën ndërsa
+            ato eksplorojnë magjinë dhe bukurinë e akullit. Ti do të krijosh flokë
+            dëbore dhe modele ndërkohë që bën patinazh në akull dhe bën një magji
+            dimërore që mund ta ndash me shokët e tu!
         course4:
           title: Kursi 4
           description: Kursi 4 është dizejnuar për studentët të cilët kanë marrë Kursin
@@ -246,6 +270,12 @@ sq:
               name: 'Unplugged: Tangrams
 
 '
+          student_description: Kursi 4 është dizejnuar për studentët të cilët kanë
+            marrë Kursin 2 dhe 3. Nxënësit do të mësojnë se si të merren me puzzles
+            me rritjen e kompleksitetit që ata të mësojnë si të kombinojnë disa koncepte,
+            kur bëjnë çdo sfidë. Në kohën kur ky kurs është përfunduar, studentët
+            do të  krijojnë programe që lejojnë ata të shfaqin aftësi të shumta,  përfshirë
+            ciklet dhe funksionet me parametra. Rekomandohet për klasat 4-8.
         Course4pre:
           title: Kushtet paraprake të Kursit 4
           description: Një përmbledhje e shkurtër e koncepteve për studentët që nuk
@@ -271,6 +301,8 @@ sq:
               name: 'Fermeri: Ciklet While'
             'Maze: Sequence':
               name: 'Labirinti: Sekuencë'
+          student_description: Një përmbledhje e shkurtër e koncepteve për studentët
+            që nuk kanë bërë Kurset 2 dhe 3.
         usability:
           title: Testimi i përdorueshmërisë
           description: Një përzgjedhje e niveleve të Kursit 4 për testimin e përdorueshmërisë.
@@ -285,6 +317,8 @@ sq:
               name: Hyrje
             Variables:
               name: variabla
+          student_description: Një përzgjedhje e niveleve të Kursit 4 për testimin
+            e përdorueshmërisë.
         algebra:
           title: Shkenëa Kompjuterike në Algjebër
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
@@ -304,6 +338,7 @@ sq:
               name: 'Unplugged: Receta e Dizenjimit'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Lojërat dhe Planet e Koordinuar'
+          student_description: Mëso Programimin Funksional nëpërmjet Algjebrës
         infinity:
           title: Larmishmeria e lojrave ne laboratorin e Disney
           description: Perdorni laboratorin e lojrave per te krijuar nje histori ose
@@ -313,6 +348,8 @@ sq:
           lessons:
             Infinity:
               name: Pafundësi
+          student_description: Perdorni laboratorin e lojrave per te krijuar nje histori
+            ose pafundesi personazhesh Disney.
         algebrademo:
           title: Demo e Algjebrës
           description: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën
@@ -330,6 +367,8 @@ sq:
               name: Të bërit Figura
             The Design Recipe:
               name: Receta e Dizenjimit
+          student_description: Një dorë puzzle-ash për të demonstruar mjedisin dhe
+            gjuhën e programimit të përdorur në Code.org CS në Algjebër
         K5PD:
           lessons:
             Computer Science Pedagogy:
@@ -358,6 +397,7 @@ sq:
           title: Pixelation
           description: Krijo imazhe me bite dhe bajte.
           description_short: Krijo imazhe me bite dhe bajte.
+          student_description: Krijo imazhe me bite dhe bajte.
         20-hour:
           title: Hyrje e pershpejtuar ne kurset e shkencave kompjuterike
           description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike
@@ -407,6 +447,10 @@ sq:
               name: Labirinti
             Wrap-up:
               name: Mbështjell
+          student_description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës
+            kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret
+            nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha
+            moshat.
         edit-code:
           title: Ndrysho kodin
           description: Ndrysho kodin
@@ -418,6 +462,7 @@ sq:
               name: Artisti
             The Maze:
               name: Labirinti
+          student_description: Ndrysho kodin
         events:
           title: Ngjarje
           description: Ngjarje
@@ -431,6 +476,7 @@ sq:
               name: Vlerëso
             Studio:
               name: Studio
+          student_description: Ngjarje
         flappy:
           title: Kodi Flappy
           description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo
@@ -439,6 +485,8 @@ sq:
           lessons:
             Flappy Code:
               name: Kodi Flappy
+          student_description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta?
+            Provo tutorialin tonë Flappy Code!
         jigsaw:
           title: Jigsaw
           description: Provoni tutorialet tona Jigsaw
@@ -446,6 +494,7 @@ sq:
           lessons:
             Jigsaw:
               name: Jigsaw
+          student_description: Provoni tutorialet tona Jigsaw
         step:
           title: Një hap
           description: Pasoje tutorialin
@@ -453,6 +502,7 @@ sq:
           lessons:
             Step:
               name: Një hap
+          student_description: Pasoje tutorialin
         Hour of Code:
           title: Ora e Kodit 2013
           description: Provoni elementet baze te shkencave kompjuterike me personazhe
@@ -462,6 +512,8 @@ sq:
           lessons:
             Hour of Code 2013:
               name: Ora e Kodit 2013
+          student_description: Provoni elementet baze te shkencave kompjuterike me
+            personazhe nga Angry Birds dhe Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -572,6 +624,7 @@ sq:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         cspunit2:
           lessons:
             The Internet:
@@ -592,6 +645,7 @@ sq:
               name: Stringet dhe Figurat
             The Design Recipe:
               name: Receta e Dizenjimit
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         allthethings:
           lessons:
             Artist:
@@ -636,6 +690,7 @@ sq:
               name: Stringet dhe Figurat
             Teacher Dashboard:
               name: Dërrasa e zezë
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         cspfacilitator:
           lessons:
             App Lab:
@@ -662,6 +717,7 @@ sq:
               name: Mirë se vini!
             Wrap-up:
               name: Mbështjell
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         algebraPD2:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -672,6 +728,7 @@ sq:
               name: Receta e Dizenjimit
             Welcome!:
               name: Mirë se vini!
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         sciencePD2b:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -680,6 +737,7 @@ sq:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         science-PD2:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -688,6 +746,7 @@ sq:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         Equity-OnlinePD:
           lessons:
             Next Steps:
@@ -700,6 +759,7 @@ sq:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         ECSPD2-iZone:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -714,6 +774,7 @@ sq:
               name: Mirë se vini!
             Wrap-up:
               name: Mbështjell
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         ECSPD2-NexTech:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -728,6 +789,7 @@ sq:
               name: Mirë se vini!
             Wrap-up:
               name: Mbështjell
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -768,6 +830,8 @@ sq:
           lessons:
             Ice Age Play Lab:
               name: Laboratori i lojës Epoka e Akullnajave
+          student_description: Krijo një histori ose një lojë me laboratorin e Epokës
+            së Akullnajave!
         cspunit3temp:
           lessons:
             While Loops:
@@ -779,6 +843,7 @@ sq:
           lessons:
             Gumball Play Lab:
               name: Laboratori i Lojës Gumball
+          student_description: Krijo një histori ose një lojë me laboratorin e Gumball!
         starwars:
           title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars
@@ -788,6 +853,8 @@ sq:
           lessons:
             Hour of Code 2015:
               name: Ora e Kodimit 2015
+          student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj
+            Star Wars në një galaksi shumë, shumë larg.
         starwarsblocks:
           title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars
@@ -797,6 +864,8 @@ sq:
           lessons:
             Hour of Code 2015:
               name: Ora e Kodimit 2015
+          student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj
+            Star Wars në një galaksi shumë, shumë larg.
         mc:
           title: Ora e Kodimit Minecraft
           description: Përdorini blloqe kodi për të dërguar Steve ose Alex në një
@@ -805,6 +874,8 @@ sq:
           lessons:
             Hour of Code 2015:
               name: Ora e Kodimit 2015
+          student_description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex
+            në një aventurë nëpër këtë botë Minecraft.
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -827,6 +898,7 @@ sq:
               name: 'Unplugged: Kontratat'
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Receta e Dizenjimit'
+          student_description: Mëso Programimin Funksional nëpërmjet Algjebrës
         AlgebraB:
           title: Shkenëa Kompjuterike në Algjebër
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
@@ -854,6 +926,7 @@ sq:
               name: 'Unplugged: Kushtet dhe Funksionet Piecewise'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Lojërat dhe Planet e Koordinuar'
+          student_description: Mëso Programimin Funksional nëpërmjet Algjebrës
         algebraPD1:
           lessons:
             Evaluation Blocks:
@@ -1087,6 +1160,7 @@ sq:
           lessons:
             Bounce:
               name: Hidhu
+          student_description: Realizo një lojë basketbolli
         csd2-2017:
           lessons:
             Peer Review:
@@ -1110,6 +1184,8 @@ sq:
           lessons:
             Minecraft Hour of Code Designer:
               name: Dizenjo Minecraft-in e Orës së Kodimit
+          student_description: Kafshët e programit dhe krijesa të tjera Minecraft
+            në versionin tuaj të Minecraft.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1198,6 +1274,7 @@ sq:
           title: Krijo lojën tënde sportive
           description_short: Përziej dhe përshtat sportet
           description: Përziej dhe përshtat sportet
+          student_description: Përziej dhe përshtat sportet
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -2237,6 +2314,9 @@ sq:
               display_name: Përmbledhja
             content:
               display_name: Përmbajtja
+          lessons:
+            Focus Area 1:
+              name: Plani mësimor
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2611,7 +2691,169 @@ sq:
           lesson_groups:
             lg_1:
               display_name: Përmbajtja
-        ml-playground:
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Hyrja
+            lessonGroup-3:
+              display_name: variabla
+        csd3-2021:
           lessons:
-            intro:
-              name: Hyrja
+            Variables:
+              key: variabla
+              name: variabla
+            Text:
+              key: Tekst
+              name: Tekst
+            Conditionals:
+              key: Kushtet
+              name: Kushtet
+            Functions:
+              key: funksione
+              name: funksione
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funksionet me parametra
+              name: Funksionet me parametra
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: cikle
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Hartat e Gëzuara
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Lëvize atë, lëvize atë
+              name: Lëvize atë, lëvize atë
+            'Loops: Getting Loopy':
+              name: Duke u Çmëndur
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Byzylykët Binarë
+              name: Byzylykët Binarë
+            'Events: The Big Event':
+              name: Eventi i Madh
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_binary:
+              display_name: Binare
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+            csf_data:
+              display_name: të dhëna
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programimi Grafik me Letër
+            Relay Programming:
+              key: Programimi i Besuar
+              name: Programimi i Besuar
+            Conditionals with Cards:
+              key: Kushtoret me Karta
+              name: Kushtoret me Karta
+            'Unplugged: Binary':
+              key: 'Unplugged: Binare'
+              name: Imazhet Binare
+            Artist Binary:
+              key: Artist Binar
+              name: Artist Binar
+          lesson_groups:
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_conditionals:
+              display_name: Kushtet
+            csf_binary:
+              display_name: Binare
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Kushtet
+            'Functions: Songwriting':
+              name: Të shkruarit e Këngëve
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_nested_loops:
+              display_name: Përsëritjet e Mbivendosura
+            csf_functions:
+              display_name: funksione
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Variablat Zarf
+              name: Variablat Zarf
+            Internet:
+              key: Internet
+              name: Interneti
+            For Loop Fun:
+              key: Qef me Ciklet For
+              name: Qef me Ciklet For
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_variables:
+              display_name: variabla
+            csf_data:
+              display_name: të dhëna
+            csf_for_loops:
+              display_name: Për Ciklet
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: cikle
+            csf_conditionals:
+              display_name: Kushtet
+            csf_functions:
+              display_name: funksione
+            csf_variables:
+              display_name: variabla
+            csf_for_loops:
+              display_name: Për Ciklet
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: cikle
+            csf_events:
+              display_name: Ngjarje
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Hyrja
+            lessonGroup-3:
+              display_name: variabla

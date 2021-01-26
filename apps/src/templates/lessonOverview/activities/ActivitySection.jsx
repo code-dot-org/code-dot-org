@@ -63,7 +63,16 @@ export default class ActivitySection extends Component {
 
     return (
       <div>
-        <h3 id={`activity-section-${section.key}`}>{section.displayName}</h3>
+        <h3 id={`activity-section-${section.key}`}>
+          {section.displayName}
+          {section.duration > 0 && (
+            <span>
+              {i18n.activityHeaderTime({
+                activityDuration: section.duration
+              })}
+            </span>
+          )}
+        </h3>
         <div
           style={{
             ...styles.activitySection,
@@ -120,7 +129,7 @@ export default class ActivitySection extends Component {
           </div>
         </div>
         {section.scriptLevels.length > 0 && (
-          <ProgressionDetails progression={section} />
+          <ProgressionDetails section={section} />
         )}
       </div>
     );
