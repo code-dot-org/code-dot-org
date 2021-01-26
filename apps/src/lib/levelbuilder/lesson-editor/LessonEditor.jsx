@@ -123,11 +123,19 @@ class LessonEditor extends Component {
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(
-            `/lessons/${this.state.originalLessonData.id}${
-              window.location.search
-            }`
-          );
+          if (data.hasLessonPlan) {
+            navigateToHref(
+              `/lessons/${this.state.originalLessonData.id}${
+                window.location.search
+              }`
+            );
+          } else {
+            navigateToHref(
+              `${this.state.originalLessonData.scriptPath}${
+                window.location.search
+              }`
+            );
+          }
         } else {
           const activities = mapActivityDataForEditor(data.activities);
 
