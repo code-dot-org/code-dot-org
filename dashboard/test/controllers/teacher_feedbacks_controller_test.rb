@@ -22,4 +22,17 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
     get :index
     assert_response :success
   end
+
+  test 'index returns many feedbacks' do
+    student = create :student
+    5.times do
+      create :teacher_feedback, student: student
+    end
+    assert_equal TeacherFeedback.all.count, 5
+    sign_in student
+    assert_queries 18 do
+      get :index
+      assert_response :success
+    end
+  end
 end
