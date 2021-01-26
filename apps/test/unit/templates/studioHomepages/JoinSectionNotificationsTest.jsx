@@ -40,6 +40,12 @@ const ALREADY_OWNED = {
   id: 'ABCDEF'
 };
 
+const CAPTCHA_FAILED = {
+  action: 'join',
+  result: 'captcha_failed',
+  id: 'ABCDEF'
+};
+
 describe('JoinSectionNotifications', () => {
   it('renders correct component when successfully join a section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...SUCCESSFUL_JOIN} />);
@@ -71,5 +77,10 @@ describe('JoinSectionNotifications', () => {
   it('renders correct component when teacher already owns the section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...ALREADY_OWNED} />);
     expect(wrapper.find('JoinSectionOwnedNotification')).to.have.lengthOf(1);
+  });
+
+  it('renders correct component when joining a section without necessary captcha validation', () => {
+    let wrapper = shallow(<JoinSectionNotifications {...CAPTCHA_FAILED} />);
+    expect(wrapper.find('JoinSectionCaptchaNotification')).to.have.lengthOf(1);
   });
 });
