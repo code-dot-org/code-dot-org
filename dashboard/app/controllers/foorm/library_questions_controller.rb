@@ -12,7 +12,7 @@ module Foorm
 
     # PUT /foorm/library_questions/:id/update
     def update
-      @library_question.question = JSON.pretty_generate(questions_json)
+      @library_question.question = JSON.pretty_generate(params[:question].as_json)
 
       if @library_question.save
         return render json: @library_question
