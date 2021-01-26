@@ -7,6 +7,9 @@ import reducers, {
 import resourcesEditor, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import vocabulariesEditor, {
+  initVocabularies
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {Provider} from 'react-redux';
 import {
   sampleActivities,
@@ -15,20 +18,30 @@ import {
 } from '../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 
 const createStoreWithLessonPlan = () => {
-  registerReducers({...reducers, resources: resourcesEditor});
+  registerReducers({
+    ...reducers,
+    resources: resourcesEditor,
+    vocabularies: vocabulariesEditor
+  });
   const store = createStoreWithReducers();
   store.dispatch(init(sampleActivities, searchOptions));
   store.dispatch(initResources([]));
+  store.dispatch(initVocabularies([]));
   return store;
 };
 
 const createStoreWithoutLessonPlan = () => {
-  registerReducers({...reducers, resources: resourcesEditor});
+  registerReducers({
+    ...reducers,
+    resources: resourcesEditor,
+    vocabularies: vocabulariesEditor
+  });
   const store = createStoreWithReducers();
   store.dispatch(
     init([sampleActivityForLessonWithoutLessonPlan], searchOptions)
   );
   store.dispatch(initResources([]));
+  store.dispatch(initVocabularies([]));
   return store;
 };
 export default storybook => {
