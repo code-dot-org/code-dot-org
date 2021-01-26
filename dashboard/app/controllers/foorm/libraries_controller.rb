@@ -3,7 +3,7 @@ module Foorm
   class LibrariesController < ApplicationController
     before_action :require_levelbuilder_mode_or_test_env
     before_action :authenticate_user!
-    authorize_resource
+    load_and_authorize_resource
 
     # GET '/foorm/libraries/editor'
     def editor
@@ -17,7 +17,7 @@ module Foorm
 
       library_names_and_versions.sort_by! {|library| library[:name]}
 
-      categories = formatted_names_and_versions.map {|data| data[:name].slice(0, data[:name].rindex('/'))}.uniq
+      categories = library_names_and_versions.map {|data| data[:name].slice(0, data[:name].rindex('/'))}.uniq
 
       @script_data = {
         props: {

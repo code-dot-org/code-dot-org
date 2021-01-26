@@ -1137,9 +1137,9 @@ FactoryGirl.define do
   end
 
   factory :foorm_library_question, class: 'Foorm::LibraryQuestion' do
-    sequence(:library_name) {|n| "LibraryName#{n}"}
+    sequence(:library_name) {|n| "surveys/pd/library_name#{n}"}
     library_version 0
-    sequence(:question_name) {|n| "LibraryQuestionName#{n}"}
+    sequence(:question_name) {|n| "library_question_name#{n}"}
     sequence(:question) do |n|
       "{
         \"type\": \"comment\",
@@ -1150,7 +1150,7 @@ FactoryGirl.define do
   end
 
   factory :foorm_library, class: 'Foorm::Library' do
-    sequence(:name) {|n| "LibraryName#{n}"}
+    sequence(:name) {|n| "surveys/pd/library_name#{n}"}
     version 0
     published true
 
