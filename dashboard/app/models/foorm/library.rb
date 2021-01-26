@@ -65,12 +65,14 @@ class Foorm::Library < ApplicationRecord
   def formatted_for_file
     elements = library_questions.map {|library_question| JSON.parse(library_question.question)}
 
-    {
-      'published' => published,
-      'pages' => [
-        {'elements' => elements}
-      ]
-    }
+    JSON.pretty_generate(
+      {
+        'published' => published,
+        'pages' => [
+          {'elements' => elements}
+        ]
+      }
+    )
   end
 
   def write_library_to_file
