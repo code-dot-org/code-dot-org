@@ -600,7 +600,7 @@ class Blockly < Level
 
     localize_placeholder_texts(block_xml, 'text', ['TEXT'])
     localize_placeholder_texts(block_xml, 'studio_ask', ['TEXT'])
-    localize_placeholder_texts(block_xml, 'studio_showTitleScreen', %w[TEXT TITLE])
+    localize_placeholder_texts(block_xml, 'studio_showTitleScreen', %w(TEXT TITLE))
 
     block_xml.serialize(save_with: XML_OPTIONS).strip
   end
