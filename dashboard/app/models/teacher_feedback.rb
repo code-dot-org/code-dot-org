@@ -33,7 +33,7 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :level
   belongs_to :script_level
   belongs_to :teacher, class_name: 'User'
-  validate :validate_script_and_script_level
+  validate :validate_script_and_script_level, on: :create
 
   def validate_script_and_script_level
     if script_level.script_id != script_id
