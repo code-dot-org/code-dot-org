@@ -1,3 +1,11 @@
+.jobs-header {
+  padding: 24px 0;
+  border: 1px solid;
+  border-left: 0;
+  border-right: 0;
+  border-color: rgba(0, 173, 178, 0.25); /* gives the illusion of < 1px */
+}
+
 .jobs__banner {
   background: #00adbc;
   background-image: url('/images/jobs/jobs-banner.jpg');
