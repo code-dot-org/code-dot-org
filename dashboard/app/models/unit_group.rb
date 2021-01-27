@@ -169,8 +169,15 @@ class UnitGroup < ApplicationRecord
     scripts_to_delete -= alternate_scripts.map {|hash| hash['alternate_script']}
 
     if scripts_to_delete.any? {|s| Script.find_by_name!(s).prevent_course_version_change?}
-      errors.add(:base, 'Cannot delete scripts that have resources or vocabulary')
-      return false
+      raise 'Cannot remove scripts that have resources or vocabulary'
+    end
+
+    puts new_scripts.inspect
+    if new_scripts.any? do |s|
+      scr = Script.find_by_name!(s)
+      scr.unit_group != self && scr.prevent_course_version_change?
+    end
+      raise 'Cannot add scripts that have resources or vocabulary'
     end
 
     new_scripts.each_with_index do |script_name, index|
