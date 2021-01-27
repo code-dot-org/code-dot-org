@@ -10,4 +10,11 @@
 #  updated_at :datetime         not null
 #
 class Lab < ApplicationRecord
+  include SerializedProperties
+
+  serialized_attrs %w(
+    language_type
+    image
+    description
+  )
 end
