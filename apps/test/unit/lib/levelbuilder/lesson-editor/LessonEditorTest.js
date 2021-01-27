@@ -55,7 +55,8 @@ describe('LessonEditor', () => {
         preparation: '- One',
         announcements: [],
         assessmentOpportunities: 'Assessment Opportunities',
-        courseVersionId: 1
+        courseVersionId: 1,
+        scriptPath: '/s/my-script/'
       }
     };
   });
@@ -236,11 +237,11 @@ describe('LessonEditor', () => {
     server.restore();
   });
 
-  it('can save and close', () => {
+  it('can save and close lesson with lesson plan', () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
-    let returnData = {activities: []};
+    let returnData = {activities: [], hasLessonPlan: true};
     let server = sinon.fakeServer.create();
     server.respondWith('PUT', `/lessons/1`, [
       200,
@@ -262,6 +263,38 @@ describe('LessonEditor', () => {
     lessonEditor.update();
     expect(utils.navigateToHref).to.have.been.calledWith(
       `/lessons/1${window.location.search}`
+    );
+
+    server.restore();
+  });
+
+  it('can save and close lesson without lesson plan', () => {
+    const wrapper = createWrapper({});
+    const lessonEditor = wrapper.find('LessonEditor');
+
+    let returnData = {activities: [], hasLessonPlan: false};
+    let server = sinon.fakeServer.create();
+    server.respondWith('PUT', `/lessons/1`, [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(returnData)
+    ]);
+
+    const saveBar = wrapper.find('SaveBar');
+
+    const saveAndCloseButton = saveBar.find('button').at(1);
+    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+    saveAndCloseButton.simulate('click');
+
+    // check the the spinner is showing
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(lessonEditor.state().isSaving).to.equal(true);
+
+    server.respond();
+    lessonEditor.update();
+    // navigates to the script overview page
+    expect(utils.navigateToHref).to.have.been.calledWith(
+      `/s/my-script/${window.location.search}`
     );
 
     server.restore();
