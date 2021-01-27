@@ -95,6 +95,7 @@ class ProjectCardGrid extends Component {
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideWithoutThumbnails={true}
+              showSpecialTopic={true}
             />
             <ProjectAppTypeArea
               labKey="dance"
