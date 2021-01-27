@@ -582,8 +582,13 @@ export function getConvertedAccuracyCheckExamples(state) {
 }
 
 export function getConvertedLabel(state, rawLabel) {
-  if (state.labelColumn) {
-    getConvertedValue(state, rawLabel, state.labelColumn);
+  if (state.labelColumn && !isEmpty(state.featureNumberKey)) {
+    const convertedLabel = getCategoricalColumns(state).includes(
+      state.labelColumn
+    )
+      ? getKeyByValue(state.featureNumberKey[state.labelColumn], rawLabel)
+      : rawLabel;
+    return convertedLabel;
   }
 }
 
