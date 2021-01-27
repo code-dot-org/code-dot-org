@@ -125,7 +125,7 @@ class LessonEditor extends Component {
         if (shouldCloseAfterSave) {
           if (data.hasLessonPlan) {
             navigateToHref(
-              `/lessons/${this.state.originalLessonData.id}${
+              `${this.state.originalLessonData.lessonPath}${
                 window.location.search
               }`
             );
