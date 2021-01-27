@@ -873,6 +873,7 @@ class ScriptTest < ActiveSupport::TestCase
       script: script,
       name: 'Lesson 1',
       key: 'lesson-1',
+      has_lesson_plan: true,
       relative_position: 1,
       absolute_position: 1
     )
