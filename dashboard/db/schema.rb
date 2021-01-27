@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_27_022422) do
+ActiveRecord::Schema.define(version: 2021_01_27_023859) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -706,6 +706,15 @@ ActiveRecord::Schema.define(version: 2021_01_27_022422) do
     t.datetime "updated_at", null: false
     t.index ["driver_user_level_id"], name: "index_paired_user_levels_on_driver_user_level_id"
     t.index ["navigator_user_level_id"], name: "index_paired_user_levels_on_navigator_user_level_id"
+  end
+
+  create_table "palette_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "name", null: false
+    t.string "color", null: false
+    t.integer "lab_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "parent_levels_child_levels", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
