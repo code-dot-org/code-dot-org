@@ -6,11 +6,10 @@ import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
-//import experiments from '@cdo/apps/util/experiments';
+import experiments from '@cdo/apps/util/experiments';
 
 const NUM_PROJECTS_ON_PREVIEW = 4;
 const NUM_PROJECTS_IN_APP_VIEW = 12;
-//const showSpecialTopic = experiments.isEnabled(experiments.special_topic);
 
 const styles = {
   grid: {
@@ -77,6 +76,7 @@ class ProjectCardGrid extends Component {
 
   render() {
     const {projectLists} = this.props;
+    const showSpecialTopic = experiments.isEnabled(experiments.special_topic);
     const numProjects = this.state.showAll
       ? NUM_PROJECTS_ON_PREVIEW
       : NUM_PROJECTS_IN_APP_VIEW;
@@ -202,19 +202,18 @@ class ProjectCardGrid extends Component {
 
         {!this.state.showAll && (
           <div>
-            {this.state.showApp === 'special_topic' &&
-              this.showSpecialTopic && (
-                <ProjectAppTypeArea
-                  labKey="special_topic"
-                  labName={i18n.projectTypeSpecialTopic()}
-                  labViewMoreString={i18n.projectsViewAll()}
-                  projectList={projectLists.special_topic}
-                  numProjectsToShow={numProjects}
-                  galleryType={this.props.galleryType}
-                  navigateFunction={this.viewAllProjects}
-                  isDetailView={false}
-                />
-              )}
+            {this.state.showApp === 'special_topic' && showSpecialTopic && (
+              <ProjectAppTypeArea
+                labKey="special_topic"
+                labName={i18n.projectTypeSpecialTopic()}
+                labViewMoreString={i18n.projectsViewAll()}
+                projectList={projectLists.special_topic}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+                isDetailView={false}
+              />
+            )}
             {this.state.showApp === 'dance' && (
               <ProjectAppTypeArea
                 labKey="dance"
