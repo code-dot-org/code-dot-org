@@ -4,9 +4,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../util/reconfiguredChai';
 import {setExternalGlobals} from '../util/testUtils';
 
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import NonMarkdownInstructions from '@cdo/apps/templates/instructions/NonMarkdownInstructions';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {StatelessMarkdownInstructions} from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
 describe('instructions components', () => {
@@ -22,11 +20,14 @@ describe('instructions components', () => {
           noInstructionsWhenCollapsed={true}
         />
       );
-      const element = wrapper.find('.instructions-markdown').first();
-      expect(element).to.equal(<EnhancedSafeMarkdown markdown="md" />);
-      expect(element.props().style.paddingTop).to.equal(19);
-      expect(element.props().style.marginBottom).to.equal(35);
-      expect(element.props().style.marginLeft).to.equal(undefined);
+
+      const containerElement = wrapper.find('.instructions-markdown').first();
+      expect(containerElement.props().style.paddingTop).to.equal(19);
+      expect(containerElement.props().style.marginBottom).to.equal(35);
+      expect(containerElement.props().style.marginLeft).to.equal(undefined);
+
+      const markdownElement = wrapper.find('EnhancedSafeMarkdown').first();
+      expect(markdownElement.props().markdown).to.equal('md');
     });
 
     it('inTopPane has no top padding', function() {
@@ -56,8 +57,11 @@ describe('instructions components', () => {
         .children();
       expect(elements.length).to.equal(2);
       expect(elements.first().text()).to.equal('title');
-      expect(elements.last()).to.equal(
-        <SafeMarkdown markdown="instructions" />
+
+      const markdownElements = wrapper.find('SafeMarkdown');
+      expect(markdownElements.length).to.equal(1);
+      expect(markdownElements.first().props().markdown).to.equal(
+        'instructions'
       );
     });
 
@@ -75,11 +79,14 @@ describe('instructions components', () => {
         .children();
       expect(elements.length).to.equal(3);
       expect(elements.at(0).text()).to.equal('title');
-      expect(elements.at(1)).to.equal(
-        <SafeMarkdown markdown="short instructions" />
+
+      const markdownElements = wrapper.find('SafeMarkdown');
+      expect(markdownElements.length).to.equal(2);
+      expect(markdownElements.first().props().markdown).to.equal(
+        'short instructions'
       );
-      expect(elements.at(2)).to.equal(
-        <SafeMarkdown markdown="long instructions" />
+      expect(markdownElements.last().props().markdown).to.equal(
+        'long instructions'
       );
     });
   });
