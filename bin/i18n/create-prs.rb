@@ -89,6 +89,7 @@ class CreateI18nPullRequests
     I18nScriptUtils.git_add_and_commit(
       [
         "pegasus/sites.v3/code.org/i18n",
+        "i18n/locales/*-*/codeorg-markdown",
       ],
       "pegasus i18n markdown updates"
     )
