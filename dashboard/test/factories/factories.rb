@@ -838,6 +838,11 @@ FactoryGirl.define do
     level_source {create :level_source, level: level}
   end
 
+  factory :lab do
+    sequence(:key) {|n| "lab-#{n}"}
+    sequence(:name) {|n| "Fake Lab #{n}"}
+  end
+
   factory :concept do
     sequence(:name) {|n| "Algorithm #{n}"}
     trait :with_video do
