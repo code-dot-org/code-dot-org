@@ -174,8 +174,8 @@ class Lesson < ApplicationRecord
 
   def localized_title
     # The standard case for localized_title is something like "Lesson 1: Maze".
-    # In the case of lockable lessons, we don't want to include the Lesson 1
-    return localized_name if lockable
+    # In the case of lockable lessons without lesson plans, we don't want to include the Lesson 1
+    return localized_name if lockable && !has_lesson_plan
 
     if script.lessons.to_a.many?
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
@@ -257,7 +257,7 @@ class Lesson < ApplicationRecord
       end
 
       # Don't want lesson plans for lockable levels
-      if !lockable && script.has_lesson_plan?
+      if has_lesson_plan
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
       end
