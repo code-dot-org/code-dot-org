@@ -6,7 +6,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
-import FoormEditor from './FoormEditor';
+import FoormLibraryEditor from './FoormLibraryEditor';
 import {
   resetAvailableForms,
   setLastSaved,
@@ -14,7 +14,7 @@ import {
   setFormData,
   setHasError,
   setLastSavedQuestions
-} from './editor/foormEditorRedux';
+} from './library_editor/foormLibraryEditorRedux';
 
 const styles = {
   loadError: {
@@ -23,7 +23,7 @@ const styles = {
   }
 };
 
-class FoormEditorManager extends React.Component {
+class FoormLibraryEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
@@ -81,7 +81,7 @@ class FoormEditorManager extends React.Component {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     $.ajax({
-      url: `/api/v1/pd/foorm/forms/${formId}`,
+      url: `/api/v1/pd/foorm/libraries/${formId}`,
       type: 'get'
     })
       .done(result => {
@@ -157,7 +157,7 @@ class FoormEditorManager extends React.Component {
           <div style={styles.loadError}>Could not load the selected form.</div>
         )}
         {this.state.showCodeMirror && (
-          <FoormEditor
+          <FoormLibraryEditor
             populateCodeMirror={this.props.populateCodeMirror}
             formCategories={this.props.formCategories}
             resetCodeMirror={this.props.resetCodeMirror}
@@ -183,4 +183,4 @@ export default connect(
     setLastSavedQuestions: formQuestions =>
       dispatch(setLastSavedQuestions(formQuestions))
   })
-)(FoormEditorManager);
+)(FoormLibraryEditorManager);
