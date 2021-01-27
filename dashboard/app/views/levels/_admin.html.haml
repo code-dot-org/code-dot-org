@@ -129,10 +129,14 @@
                   %tt= link_to channel[0,7], "/projects/#{params[:key]}/#{channel}"
 
       #feature_project{'style' => ('display: none;' unless !exists || !currently_featured)}
+        %div
+          special topic:
+          %input{id: "special-topic", value: project.topic}
         %button{id: "feature", class: "btn btn-default btn-sm"}
           Feature in gallery
 
       #unfeature_project{'style' => ('display: none;' unless currently_featured)}
+        %div= "special topic: #{project.topic}"
         %button{id: "feature", class: "btn btn-default btn-sm"}
           Stop featuring in gallery
 

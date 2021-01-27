@@ -40,14 +40,15 @@ export default project => {
   }
 
   if ($('#feature_project').length && project.isProjectLevel()) {
-    $('#feature_project').click(function() {
+    $('#feature').click(function() {
+      const topic = $('#special-topic').val();
       var url = `/featured_projects/${project.getCurrentId()}/feature`;
       $.ajax({
         url: url,
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json;charset=UTF-8',
-        data: JSON.stringify({topic: 'environment'}),
+        data: JSON.stringify({topic: topic}),
         success: function(data) {
           $('#unfeature_project').show();
           $('#feature_project').hide();
