@@ -1,0 +1,48 @@
+{
+  "defaultLabelColumn": "Liked",
+  "fields": [
+    {
+      "id": "Ground Beef",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Chicken",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Hot Sauce",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Sour Cream",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Cheese",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Liked",
+      "type": "categorical"
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    }
+    ]
+
+}
