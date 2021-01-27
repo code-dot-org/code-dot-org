@@ -58,6 +58,10 @@ const styles = {
     width: 720,
     marginLeft: -360
   },
+  shareOnTikTok: {
+    margin: 6,
+    marginLeft: 0
+  },
   abuseStyle: {
     border: '1px solid',
     borderRadius: 10,
@@ -183,6 +187,7 @@ class ShareAllowedDialog extends React.Component {
 
   state = {
     showSendToPhone: false,
+    showSendToTikTok: false,
     showAdvancedOptions: false,
     exporting: false,
     exportError: null,
@@ -233,6 +238,16 @@ class ShareAllowedDialog extends React.Component {
   showSendToPhone = event => {
     this.setState({
       showSendToPhone: true,
+      showSendToTikTok: false,
+      showAdvancedOptions: false
+    });
+    event.preventDefault();
+  };
+
+  showSendToTikTok = event => {
+    this.setState({
+      showSendToTikTok: true,
+      showSendToPhone: false,
       showAdvancedOptions: false
     });
     event.preventDefault();
@@ -246,6 +261,7 @@ class ShareAllowedDialog extends React.Component {
   showAdvancedOptions = () => {
     this.setState({
       showSendToPhone: false,
+      showSendToTikTok: false,
       showAdvancedOptions: true
     });
   };
@@ -308,7 +324,7 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: p5labConstants.APP_WIDTH + 32
       };
     }
-    const {canPrint, canPublish, isPublished} = this.props;
+    const {canPrint, canPublish, isPublished, selectedSong} = this.props;
     return (
       <div>
         <BaseDialog
@@ -459,9 +475,24 @@ class ShareAllowedDialog extends React.Component {
                       )}
                     </span>
                   )}
+                  {selectedSong && (
+                    <a
+                      id="sharing-tiktok"
+                      href=""
+                      style={styles.shareOnTikTok}
+                      onClick={wrapShareClick(
+                        this.showSendToTikTok.bind(this),
+                        'send-to-tiktok'
+                      )}
+                    >
+                      <i className="fa fa-music" style={{fontSize: 25}} />
+                      <span>Share on TikTok</span>
+                    </a>
+                  )}
                 </div>
                 {this.state.showSendToPhone && (
                   <div>
+                    <h2>Send to Phone</h2>
                     <div style={styles.sendToPhoneContainer}>
                       <div style={styles.sendToPhoneLeft}>
                         <SendToPhone
@@ -475,6 +506,21 @@ class ShareAllowedDialog extends React.Component {
                         <QRCode
                           value={this.props.shareUrl + '?qr=true'}
                           size={90}
+                        />
+                      </div>
+                    </div>
+                    <div style={{clear: 'both'}} />
+                  </div>
+                )}
+                {this.state.showSendToTikTok && (
+                  <div>
+                    <h2>Share on TikTok</h2>
+                    <div style={styles.sendToPhoneContainer}>
+                      <div style={styles.sendToPhoneLeft}>
+                        <SendToPhone
+                          channelId={this.props.channelId}
+                          appType={this.props.appType}
+                          isLegacyShare={false}
                         />
                       </div>
                     </div>
