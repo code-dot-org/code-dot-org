@@ -76,7 +76,7 @@ class ProjectCardGrid extends Component {
 
   render() {
     const {projectLists} = this.props;
-    const showSpecialTopic = experiments.isEnabled(experiments.special_topic);
+    const showSpecialTopic = experiments.isEnabled(experiments.SPECIAL_TOPIC);
     const numProjects = this.state.showAll
       ? NUM_PROJECTS_ON_PREVIEW
       : NUM_PROJECTS_IN_APP_VIEW;
