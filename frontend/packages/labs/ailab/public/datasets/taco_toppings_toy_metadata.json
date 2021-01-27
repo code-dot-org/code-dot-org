@@ -38,7 +38,7 @@
     },
     {
       "id": "Liked",
-      "type": "categorical"
+      "type": "categorical",
       "values": {
         "categories": ["Yes", "No"]
       }

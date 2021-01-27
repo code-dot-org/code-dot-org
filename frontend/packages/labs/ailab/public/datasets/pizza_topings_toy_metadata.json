@@ -1,9 +1,9 @@
 {
-  "defaultLabelColumn": "Liked"
+  "defaultLabelColumn": "Liked",
   "fields": [
     {
-      "id": "Pepperoni"
-      "type": "categorical"
+      "id": "Pepperoni",
+      "type": "categorical",
       "values": {
         "categories": ["Yes", "No"]
       }
