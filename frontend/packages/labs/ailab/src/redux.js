@@ -556,14 +556,34 @@ function isEmpty(object) {
   return Object.keys(object).length === 0;
 }
 
+export function getConvertedValue(state, rawValue, column) {
+  if (!isEmpty(state.featureNumberKey)) {
+    const convertedValue = getCategoricalColumns(state).includes(column)
+      ? getKeyByValue(state.featureNumberKey[column], rawValue)
+      : rawValue;
+    return convertedValue;
+  }
+}
+
+export function getConvertedAccuracyCheckExamples(state) {
+  const convertedAccuracyCheckExamples = [];
+  var example;
+  for (example of state.accuracyCheckExamples) {
+    let convertedAccuracyCheckExample = [];
+    var i;
+    for (i = 0; i < state.selectedFeatures.length; i++) {
+      convertedAccuracyCheckExample.push(
+        getConvertedValue(state, example[i], state.selectedFeatures[i])
+      );
+    }
+    convertedAccuracyCheckExamples.push(convertedAccuracyCheckExample);
+  }
+  return convertedAccuracyCheckExamples;
+}
+
 export function getConvertedLabel(state, rawLabel) {
-  if (state.labelColumn && !isEmpty(state.featureNumberKey)) {
-    const convertedLabel = getCategoricalColumns(state).includes(
-      state.labelColumn
-    )
-      ? getKeyByValue(state.featureNumberKey[state.labelColumn], rawLabel)
-      : rawLabel;
-    return convertedLabel;
+  if (state.labelColumn) {
+    getConvertedValue(state, rawLabel, state.labelColumn);
   }
 }
 
