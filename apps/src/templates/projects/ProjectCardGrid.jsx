@@ -85,18 +85,19 @@ class ProjectCardGrid extends Component {
       <div id="projectCardGrid" style={styles.grid}>
         {this.state.showAll && (
           <div>
-            <ProjectAppTypeArea
-              labKey="special_topic"
-              labName={i18n.projectTypeSpecialTopic()}
-              labViewMoreString={i18n.projectTypeSpecialTopicViewMore()}
-              projectList={projectLists.special_topic}
-              numProjectsToShow={numProjects}
-              galleryType={this.props.galleryType}
-              navigateFunction={this.onSelectApp}
-              isDetailView={false}
-              hideWithoutThumbnails={true}
-              showSpecialTopic={true}
-            />
+            {showSpecialTopic && (
+              <ProjectAppTypeArea
+                labKey="special_topic"
+                labName={i18n.projectTypeSpecialTopic()}
+                labViewMoreString={i18n.projectTypeSpecialTopicViewMore()}
+                projectList={projectLists.special_topic}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.onSelectApp}
+                isDetailView={false}
+                hideWithoutThumbnails={true}
+              />
+            )}
             <ProjectAppTypeArea
               labKey="dance"
               labName={i18n.projectTypeDance()}
