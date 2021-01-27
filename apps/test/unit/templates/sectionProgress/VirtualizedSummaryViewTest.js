@@ -52,6 +52,7 @@ describe('VirtualizedSummaryView', () => {
             position: 1,
             relative_position: 2,
             lockable: true,
+            hasLessonPlan: false,
             levels: [{id: 789}]
           }
         ]
