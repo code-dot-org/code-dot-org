@@ -1,5 +1,5 @@
 {
-  "category": "Actions",
+  "category": "Sprites",
   "config": {
     "func": "edgesDisplace",
     "blockText": "edges block {SPRITE} from moving",

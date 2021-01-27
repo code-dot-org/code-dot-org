@@ -1,5 +1,5 @@
 {
-  "category": "Sprites",
+  "category": "Behaviors",
   "config": {
     "func": "addBehaviorSimple",
     "blockText": "sprite {SPRITE} begins {BEHAVIOR}",
