@@ -1,5 +1,5 @@
 {
-  "category": "Text",
+  "category": "World",
   "config": {
     "func": "textJoin",
     "blockText": "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}",
