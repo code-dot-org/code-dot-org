@@ -134,7 +134,7 @@ export default connect(
     appendLog: actions.appendLog
   },
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(
   class DebugConsole extends React.Component {
     static propTypes = {
