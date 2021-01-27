@@ -36,7 +36,7 @@ class SmsController < ApplicationController
     # tie-ing up all puma worker threads waiting for the Twilio API to respond by switching a Gatekeeper flag.
     return head :ok unless Gatekeeper.allows('twilio', default: true)
 
-    http_client = Twilio::HTTP::Client.new(timeout: DCDO.get('webpurify_http_read_timeout', 10))
+    http_client = Twilio::HTTP::Client.new(timeout: DCDO.get('twilio_http_read_timeout', 10))
     @client = Twilio::REST::Client.new CDO.twilio_sid, CDO.twilio_auth, nil, nil, http_client
     @client.messages.create(
       messaging_service_sid: CDO.twilio_messaging_service,
