@@ -843,6 +843,13 @@ FactoryGirl.define do
     sequence(:name) {|n| "Fake Lab #{n}"}
   end
 
+  factory :palette_category do
+    sequence(:key) {|n| "palette-#{n}"}
+    sequence(:name) {|n| "palette #{n}"}
+    color '#000000'
+    lab
+  end
+
   factory :concept do
     sequence(:name) {|n| "Algorithm #{n}"}
     trait :with_video do

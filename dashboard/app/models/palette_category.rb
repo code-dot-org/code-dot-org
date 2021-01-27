@@ -1,22 +1,15 @@
 # == Schema Information
 #
-# Table name: labs
+# Table name: palette_categories
 #
 #  id         :bigint           not null, primary key
 #  key        :string(255)      not null
 #  name       :string(255)      not null
-#  properties :text(65535)
+#  color      :string(255)      not null
+#  lab_id     :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class Lab < ApplicationRecord
-  include SerializedProperties
-
-  has_many :palette_categories, dependent: :destroy
-
-  serialized_attrs %w(
-    language_type
-    image
-    description
-  )
+class PaletteCategory < ApplicationRecord
+  belongs_to :lab
 end
