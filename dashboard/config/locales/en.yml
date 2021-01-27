@@ -1166,3 +1166,4 @@ en:
   behaviors:
     this_sprite: "this sprite"
   unit_prefix: "Unit %{n}"
+  code_org_logo_alt: "Code.org Home"
