@@ -69,7 +69,7 @@ export default connect(
   }),
   undefined,
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(CodeWorkspaceContainer);
 
 const styles = {

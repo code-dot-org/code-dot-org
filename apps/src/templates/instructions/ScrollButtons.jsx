@@ -212,6 +212,6 @@ export default connect(
   undefined,
   undefined,
   {
-    withRef: true
+    forwardRef: true
   }
 )(Radium(ScrollButtons));
