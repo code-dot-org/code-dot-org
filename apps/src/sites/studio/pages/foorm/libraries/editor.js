@@ -4,11 +4,11 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import FoormEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormEditorManager';
+import FoormLibraryEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormLibraryEditorManager';
 import foorm, {
   setFormQuestions,
   setHasError
-} from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
+} from '@cdo/apps/code-studio/pd/foorm/library_editor/foormLibraryEditorRedux';
 import _ from 'lodash';
 
 import 'survey-react/survey.css';
@@ -20,7 +20,7 @@ $(document).ready(function() {
   const store = getStore();
   ReactDOM.render(
     <Provider store={store}>
-      <FoormEditorManager
+      <FoormLibraryEditorManager
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
         {...getScriptData('props')}
