@@ -570,8 +570,7 @@ export function getConvertedAccuracyCheckExamples(state) {
   var example;
   for (example of state.accuracyCheckExamples) {
     let convertedAccuracyCheckExample = [];
-    var i;
-    for (i = 0; i < state.selectedFeatures.length; i++) {
+    for (var i = 0; i < state.selectedFeatures.length; i++) {
       convertedAccuracyCheckExample.push(
         getConvertedValue(state, example[i], state.selectedFeatures[i])
       );
