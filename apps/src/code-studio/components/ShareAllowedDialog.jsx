@@ -55,12 +55,17 @@ function select(event) {
 
 const styles = {
   modal: {
-    width: 720,
-    marginLeft: -360
+    width: 750,
+    marginLeft: -375
   },
   shareOnTikTok: {
     margin: 6,
-    marginLeft: 0
+    marginLeft: 0,
+    width: 45,
+    height: 45,
+    backgroundImage: `url('/blockly/media/dance/tiktok.png')`,
+    backgroundSize: 'cover',
+    borderRadius: 5
   },
   abuseStyle: {
     border: '1px solid',
@@ -89,8 +94,7 @@ const styles = {
     marginTop: 0,
     marginBottom: 0,
     marginLeft: 0,
-    marginRight: 8,
-    verticalAlign: 'top'
+    marginRight: 8
   },
   buttonDisabled: {
     backgroundColor: color.gray,
@@ -387,7 +391,7 @@ class ShareAllowedDialog extends React.Component {
                       onClick={select}
                       readOnly="true"
                       value={this.props.shareUrl}
-                      style={{cursor: 'copy', width: 500}}
+                      style={{cursor: 'copy', width: 530}}
                     />
                   </div>
                 </div>
@@ -476,7 +480,8 @@ class ShareAllowedDialog extends React.Component {
                     </span>
                   )}
                   {selectedSong && (
-                    <a
+                    <button
+                      type="button"
                       id="sharing-tiktok"
                       href=""
                       style={styles.shareOnTikTok}
@@ -484,10 +489,7 @@ class ShareAllowedDialog extends React.Component {
                         this.showSendToTikTok.bind(this),
                         'send-to-tiktok'
                       )}
-                    >
-                      <i className="fa fa-music" style={{fontSize: 25}} />
-                      <span>Share on TikTok</span>
-                    </a>
+                    />
                   )}
                 </div>
                 {this.state.showSendToPhone && (
