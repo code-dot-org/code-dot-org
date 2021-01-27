@@ -155,7 +155,7 @@ class VirtualizedDetailView extends Component {
               data-tip
               data-for={tooltipIdForLessonNumber(columnIndex)}
             >
-              {stageData.lockable ? (
+              {stageData.lockable && !stageData.hasLessonPlan ? (
                 <FontAwesome icon="lock" />
               ) : (
                 stageData.relative_position
