@@ -61,8 +61,8 @@ const styles = {
   shareOnTikTok: {
     margin: 6,
     marginLeft: 0,
-    width: 45,
-    height: 45,
+    width: 46,
+    height: 46,
     backgroundImage: `url('/blockly/media/dance/tiktok.png')`,
     backgroundSize: 'cover',
     borderRadius: 5
