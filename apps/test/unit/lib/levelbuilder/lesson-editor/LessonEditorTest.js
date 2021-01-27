@@ -56,7 +56,8 @@ describe('LessonEditor', () => {
         announcements: [],
         assessmentOpportunities: 'Assessment Opportunities',
         courseVersionId: 1,
-        scriptPath: '/s/my-script/'
+        scriptPath: '/s/my-script/',
+        lessonPath: '/lessons/1'
       }
     };
   });
