@@ -89,7 +89,9 @@ module ProjectsList
       end
       if project_group == 'all'
         raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
-        return include_featured(limit: limit)
+        projects = include_featured(limit: limit)
+        projects[:special] = fetch_special_topics_featured_projects
+        return projects
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
       fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
@@ -188,6 +190,7 @@ module ProjectsList
         :storage_apps__published_at___published_at,
         :featured_projects__featured_at___featured_at,
         :featured_projects__unfeatured_at___unfeatured_at,
+        :featured_projects__topic___topic,
         :users__name___name,
         :users__birthday___birthday,
         :users__properties___properties,
@@ -212,6 +215,23 @@ module ProjectsList
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 
+    def fetch_special_topics_featured_projects
+      storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
+      user_storage_ids = "#{CDO.pegasus_db_name}__user_storage_ids".to_sym
+      project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
+        select(*project_and_featured_project_and_user_fields).
+        join(storage_apps, id: :storage_app_id).
+        join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
+        join(:users, id: Sequel[:user_storage_ids][:user_id]).
+        where(
+          unfeatured_at: nil,
+          state: 'active'
+        ).
+        exclude(published_at: nil, topic: nil).
+        order(Sequel.desc(:published_at)).limit(8).all.shuffle!
+      extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
+    end
+
     def extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
       data_for_featured_project_cards = []
       project_featured_project_user_combo_data.each do |project_details|
@@ -225,7 +245,8 @@ module ProjectsList
           "publishedAt" => project_details[:published_at],
           "studentName" => UserHelpers.initial(project_details[:name]),
           "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday]),
-          "isFeatured" => true
+          "isFeatured" => true,
+          "topic" => project_details[:topic]
         }
         data_for_featured_project_cards << data_for_featured_project_card
       end
