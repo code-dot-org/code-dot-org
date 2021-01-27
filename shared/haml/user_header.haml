@@ -142,18 +142,20 @@
       $(document).off('click', hideCreateOptions);
     }
     $(document).ready(function() {
-      $('.create_menu').click(function (e) {
-        if ($('.create_options').is(':hidden')) {
-          e.stopPropagation();
-          $('.create_options').slideDown();
-          $('.create_menu_arrow_down').hide();
-          $('.create_menu_arrow_up').show();
-          $(document).on('click', hideCreateOptions);
-          hideUserOptions()
-          $("#hamburger-icon").removeClass('active');
-          $("#help-icon").removeClass('active');
-          $('#hamburger #hamburger-contents').slideUp();
-          $('#help-button #help-contents').slideUp();
+      $('.create_menu').on("keypress click", function(e) {
+        if ((e.type === "keypress" && e.which === 13) || (e.type === "click")) {
+          if ($('.create_options').is(':hidden')) {
+            e.stopPropagation();
+            $('.create_options').slideDown();
+            $('.create_menu_arrow_down').hide();
+            $('.create_menu_arrow_up').show();
+            $(document).on('click', hideCreateOptions);
+            hideUserOptions()
+            $("#hamburger-icon").removeClass('active');
+            $("#help-icon").removeClass('active');
+            $('#hamburger #hamburger-contents').slideUp();
+            $('#help-button #help-contents').slideUp();
+          }
         }
       });
       $('.create_options').click(function (e) {
