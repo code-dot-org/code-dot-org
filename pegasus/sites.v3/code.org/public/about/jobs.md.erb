@@ -6,26 +6,27 @@ theme: responsive
 ---
 <link rel="stylesheet" type="text/css" rel= "stylesheet" href="/css/jobs.css" />
 
-# Job Openings at Code.org
-
-<div class="col-50" style="padding-right: 10px">
-
-<% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
-<% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
-
-
-<%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
-
+<div class="jobs__banner">
+ <h1>Help us Change the World, One Student at a Time</h1>
 </div>
 
-[col-50]
+<div>
 
-Code.org&reg; is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science as part of their core K-12 education. The leading provider of K-12 computer science curriculum in the largest school districts in the United States, Code.org also created the annual <a href="http://hourofcode.com/">Hour of Code</a> campaign, which has engaged more than 15% of all students in the world. Code.org is supported by generous donors including Microsoft, Facebook, Amazon, the Infosys Foundation, Google and <a href="https://code.org/about/donors">many more</a>.
+  <div class="col-50" style="padding-right: 18px">
+    <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
+    <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+    <%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
+  </div>
 
-[/col-50]
+  <div class="col-50 jobs__intro-text">
+    <p>Our vision is that every student in every school should have the opportunity to learn Computer Science.</p>
+    <p>We are especially focused on increasing participation among women and underrepresented students of color. Come join our team to help make this vision a reality!</p>
+    <button class="jobs__explore-button">Explore Roles</button>
+  </div>
 
-<br/>
-**[Working at Code.org](#info)**
+  <div style="clear: both;"></div>
+
+</div>
 
 **We are currently hiring for:**
 <div id='lever-jobs-container'></div>

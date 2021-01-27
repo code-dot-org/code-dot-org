@@ -1,3 +1,36 @@
+.jobs__banner {
+  background: #00adbc;
+  background-image: url('/images/jobs/jobs-banner.jpg');
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 32px;
+  padding: 18px 24px;
+}
+
+.jobs__banner h1 {
+  color: #ffffff;
+  margin: 0;
+  width: 60%;
+}
+
+.jobs__intro-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.jobs__intro-text p {
+  color: #000000;
+  font-weight: bold;
+}
+
+.jobs__explore-button {
+  align-self: center;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 6px 24px;
+}
+
 .lever-job-tag {
   margin-left: 10px;
 }
