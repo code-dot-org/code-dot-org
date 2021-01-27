@@ -5,7 +5,7 @@ class FeaturedProjectsController < ApplicationController
     _, storage_app_id = storage_decrypt_channel_id(params[:project_id])
     return render_404 unless storage_app_id
     @featured_project = FeaturedProject.find_or_create_by!(storage_app_id: storage_app_id)
-    @featured_project.update! unfeatured_at: nil, featured_at: DateTime.now
+    @featured_project.update! unfeatured_at: nil, featured_at: DateTime.now, topic: params[:topic]
     buffer_abuse_score
   end
 

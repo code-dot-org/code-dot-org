@@ -44,8 +44,10 @@ export default project => {
       var url = `/featured_projects/${project.getCurrentId()}/feature`;
       $.ajax({
         url: url,
-        type: 'PUT',
+        type: 'POST',
         dataType: 'json',
+        contentType: 'application/json;charset=UTF-8',
+        data: JSON.stringify({topic: 'environment'}),
         success: function(data) {
           $('#unfeature_project').show();
           $('#feature_project').hide();

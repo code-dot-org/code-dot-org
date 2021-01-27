@@ -188,7 +188,7 @@ Dashboard::Application.routes.draw do
 
   get 'projects/featured', to: 'projects#featured'
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
-  put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
+  post '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
   resources :projects, path: '/projects/', only: [:index] do
     collection do
