@@ -251,8 +251,8 @@ describe('JoinSection', () => {
     ).to.equal(true);
   });
 
-  it.only('increments section attempts on section join attempt', () => {
-    const wrapper = shallow(<JoinSection{...DEFAULT_PROPS}/>);
+  it('increments section attempts on section join attempt', () => {
+    const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     wrapper.setState({isLoaded: true});
     expect(wrapper.state('sectionAttempts')).to.equal(0);
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
