@@ -18,6 +18,7 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1
   def show
+    raise CanCan::AccessDenied.new("cannot view lesson #{@lesson.id} because it does not have a lesson plan") unless @lesson.has_lesson_plan
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
