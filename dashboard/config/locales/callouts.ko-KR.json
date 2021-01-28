@@ -151,7 +151,7 @@
           "dance_party_11_5_groups": "“모든 오리” 블록은 여기에서 찾으세요"
         },
         "Dance_2019_01": {
-          "dance_callout_01": "이 블록을 프로그램에 추가하세요!"
+          "dance_callout_01": "여기에서 댄서 유형을 선택하세요!"
         },
         "Dance_2019_02": {
           "dance_callout_11_a": "이 블록을 프로그램에 추가합니다.",
@@ -161,7 +161,7 @@
           "dance_callout_02": "이 블록을 프로그램에 추가하세요!"
         },
         "Dance_2019_05": {
-          "dance_callout_05": "프로그램에 새로운 이벤트를 추가하십시오."
+          "dance_callout_05": "새 이벤트를 프로그램에 추가하십시오."
         },
         "Dance_2019_06": {
           "dance_party_11_5_groups": "새 블록!"
@@ -394,7 +394,7 @@
           "replace_questions": "\"???\" 부분에 수를 입력하면 됩니다."
         },
         "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "준비 되었을때 \"실행\"버튼을 눌러 당신의 프로그램을 시도해 보세요"
+          "craft2_run_button_callout": "준비 되었을때 \"실행\"버튼을 눌러 프로그램을 시도해 보세요"
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_1": "힌트가 필요하면 전구를 클릭하세요!"
@@ -1292,7 +1292,7 @@
         "behaviors 3a": {
           "behavior_callout": "이 행동이 중간 별에는 왜 작동하지 않을까요?",
           "star2_callout": "이 의상 블록을 제거하고 대신 \"이 스프라이트\" 블록을 사용하세요.",
-          "this_sprite_callout": "이래 의상 블록을 이것으로 교체하세요."
+          "this_sprite_callout": "아래 의상 블록을 이것으로 교체하세요."
         },
         "behaviors 3a_2020": {
           "behavior_callout": "이 행동이 중간 별에는 왜 작동하지 않을까요?",
@@ -1373,6 +1373,15 @@
         },
         "express_maze_debugging9_2020": {
           "express_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "화면이 녹색으로 바꿨어요? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "이제 설계 모드에 있습니다."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "\"실행\"을 눌러 이동을 시작하세요."
         }
       }
     }
