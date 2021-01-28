@@ -802,9 +802,9 @@ describe('The CustomMarshalingInterpreter', () => {
       });
 
       it('will skip the inherits and trigger properties if present', () => {
-        expect(nativeFunc.inherits).to.be.defined;
+        expect(nativeFunc.inherits).to.not.be.undefined;
         value.assert(`assert(value.inherits === undefined)`);
-        expect(nativeFunc.trigger).to.be.defined;
+        expect(nativeFunc.trigger).to.not.be.undefined;
         value.assert(`assert(value.trigger === undefined)`);
       });
     });
