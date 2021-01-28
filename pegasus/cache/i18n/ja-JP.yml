@@ -391,7 +391,7 @@ ja-JP:
   homepage_slot_text_link_donate: 寄付します
   homepage_slot_text_link_shop: T シャツ、帽子、その他
   homepage_slot_text_link_administrators: あなたの学校にコンピューター サイエンスを取り入れましょう
-  homepage_gallery_header: これまでに %{Project_count} 百万以上のCode.orgプロジェクトが作成されました
+  homepage_gallery_header: これまでに %{project_count} 百万以上のCode.orgプロジェクトが作成されました
   homepage_header_donors: Code.orgは支援者の皆様に感謝します。
   homepage_donors_seall: すべてを見る
   homepage_donors_donate: 寄付する
