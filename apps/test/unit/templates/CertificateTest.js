@@ -6,10 +6,6 @@ import Certificate from '@cdo/apps/templates/Certificate';
 import {combineReducers, createStore} from 'redux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import {
-  allowConsoleErrors,
-  allowConsoleWarnings
-} from '../../util/throwOnConsole';
 
 const store = createStore(combineReducers({responsive, isRtl}));
 
@@ -22,9 +18,6 @@ function wrapperWithTutorial(tutorial) {
 }
 
 describe('Certificate', () => {
-  allowConsoleErrors();
-  allowConsoleWarnings();
-
   let storedWindowDashboard;
 
   beforeEach(() => {
