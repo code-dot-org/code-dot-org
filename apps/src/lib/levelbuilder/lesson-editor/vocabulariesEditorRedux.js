@@ -45,12 +45,10 @@ export default function vocabularies(state = [], action) {
   switch (action.type) {
     case INIT:
       validateVocabularyList(action.vocabularies, action.type);
-      return _.sortBy(action.vocabularies, v => v.word.toLowerCase());
+      return action.vocabularies;
     case ADD_VOCABULARY: {
       validateVocabulary(action.newVocabulary, action.type);
-      newState = _.sortBy(newState.concat([action.newVocabulary]), v =>
-        v.word.toLowerCase()
-      );
+      newState = newState.concat([action.newVocabulary]);
       break;
     }
     case EDIT_VOCABULARY: {
@@ -59,7 +57,6 @@ export default function vocabularies(state = [], action) {
         vocabulary => vocabulary.key === action.updatedVocabulary.key
       );
       Object.assign(vocabularyToEdit, action.updatedVocabulary);
-      newState = _.sortBy(newState, v => v.word.toLowerCase());
       break;
     }
     case REMOVE_VOCABULARY: {
