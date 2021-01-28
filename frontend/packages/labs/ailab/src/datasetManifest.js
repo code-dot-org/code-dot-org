@@ -29,6 +29,24 @@ export const allDatasets = [
     name: "Videogame sales",
     path: "datasets/videogame_sales.csv",
     metadataPath: "datasets/videogame_sales.json"
+  },
+  {
+    id: "tacos_toy",
+    name: "Tacos (Toy)",
+    path: "datasets/taco_toppings_toy.csv",
+    metadataPath: "datasets/taco_toppings_toy_metadata.json"
+  },
+  {
+    id: "icecream_toy",
+    name: "Ice Cream (Toy)",
+    path: "datasets/icecream_toppings_toy.csv",
+    metadataPath: "datasets/icecream_toppings_toy_metadata.json"
+  },
+  {
+    id: "pizza_toy",
+    name: "Pizza (Toy)",
+    path: "datasets/pizza_toppings_toy.csv",
+    metadataPath: "datasets/pizza_toppings_toy_metadata.json"
   }
 ];
 

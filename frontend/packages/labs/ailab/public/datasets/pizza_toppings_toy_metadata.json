@@ -1,0 +1,82 @@
+{
+  "defaultLabelColumn": "Liked",
+  "fields": [
+    {
+      "id": "Pepperoni",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Extra Cheese",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Broccoli",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Olives",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Sausage",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Anchovies",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Fried Chicken",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Peppers",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Ham",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Bacon",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    },
+    {
+      "id": "Liked",
+      "type": "categorical",
+      "values": {
+        "categories": ["Yes", "No"]
+      }
+    }
+  ]
+}
