@@ -307,7 +307,8 @@ export function processedStages(lessons, isPlc) {
 
   return lessons.map(lesson => {
     let stageNumber;
-    if (!isPlc && (!lesson.lockable || lesson.hasLessonPlan)) {
+    let useSurveyUrl = lesson.lockable && !lesson.hasLessonPlan;
+    if (!isPlc && !useSurveyUrl) {
       numLessonsWithLessonPlan++;
       stageNumber = numLessonsWithLessonPlan;
     }
