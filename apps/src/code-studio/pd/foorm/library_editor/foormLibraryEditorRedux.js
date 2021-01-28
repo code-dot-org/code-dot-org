@@ -1,7 +1,8 @@
 const SET_FORM_QUESTIONS = 'foormEditor/SET_FORM_QUESTIONS';
 const SET_HAS_ERROR = 'foormEditor/SET_HAS_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
-const RESET_AVAILABLE_FORMS = 'foormEditor/RESET_AVAILABLE_FORMS';
+const RESET_AVAILABLE_LIBRARIES =
+  'foormLibraryEditor/RESET_AVAILABLE_LIBRARIES';
 const ADD_AVAILABLE_FORM = 'foormEditor/ADD_AVAILABLE_FORMS';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
@@ -27,9 +28,9 @@ export const setHasError = hasError => ({
   hasError
 });
 
-export const resetAvailableForms = formsMetadata => ({
-  type: RESET_AVAILABLE_FORMS,
-  formsMetadata
+export const resetAvailableLibraries = librariesMetadata => ({
+  type: RESET_AVAILABLE_LIBRARIES,
+  librariesMetadata
 });
 
 export const addAvilableForm = formMetadata => ({
@@ -59,7 +60,7 @@ const initialState = {
   formName: null,
   formVersion: null,
   formId: null,
-  availableForms: [],
+  availableLibraries: [],
   saveError: null,
   lastSaved: null,
   lastSavedFormQuestions: ''
@@ -88,10 +89,10 @@ export default function foormEditorRedux(state = initialState, action) {
       formId: action.formData['id']
     };
   }
-  if (action.type === RESET_AVAILABLE_FORMS) {
+  if (action.type === RESET_AVAILABLE_LIBRARIES) {
     return {
       ...state,
-      availableForms: action.formsMetadata
+      availableLibraries: action.librariesMetadata
     };
   }
   if (action.type === ADD_AVAILABLE_FORM) {
