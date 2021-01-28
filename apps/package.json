@@ -161,7 +161,7 @@
     "radium": "^0.25.2",
     "raw-loader": "^0.5.1",
     "react": "^16.13.0",
-    "react-bootstrap": "^0.32.4",
+    "react-bootstrap": "^0.33.1",
     "react-color": "^2.17.3",
     "react-datepicker": "1.6.0",
     "react-dom": "^16.13.0",
