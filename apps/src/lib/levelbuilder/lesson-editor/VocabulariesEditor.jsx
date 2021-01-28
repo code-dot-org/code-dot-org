@@ -4,10 +4,11 @@ import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 import SearchBox from './SearchBox';
 import Dialog from '@cdo/apps/templates/Dialog';
+import AddVocabularyDialog from './AddVocabularyDialog';
 import {connect} from 'react-redux';
 import {
   addVocabulary,
-  editVocabulary,
+  updateVocabulary,
   removeVocabulary
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import * as Table from 'reactabular-table';
@@ -22,14 +23,33 @@ const styles = {
     justifyContent: 'space-evenly',
     backgroundColor: 'white'
   },
+  edit: {
+    fontSize: 14,
+    color: 'white',
+    background: color.default_blue,
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: '50%',
+    lineHeight: '30px'
+  },
   remove: {
     fontSize: 14,
     color: 'white',
     background: color.dark_red,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '98%',
+    width: '50%',
     lineHeight: '30px'
+  },
+  addButton: {
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
+    fontSize: 14,
+    padding: 7,
+    textAlign: 'center',
+    marginTop: 10,
+    marginLeft: 0
   }
 };
 
@@ -40,13 +60,34 @@ class VocabulariesEditor extends Component {
     // Provided by redux
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
     addVocabulary: PropTypes.func.isRequired,
-    editVocabulary: PropTypes.func.isRequired,
+    updateVocabulary: PropTypes.func.isRequired,
     removeVocabulary: PropTypes.func.isRequired
   };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      confirmRemovalDialogOpen: false,
+      vocabularyForRemoval: null,
+      newVocabularyDialogOpen: false,
+      vocabularyForEdit: null
+    };
+  }
 
   actionsCellFormatter = (actions, {rowData}) => {
     return (
       <div style={styles.actionsColumn}>
+        <div
+          style={styles.edit}
+          onMouseDown={() =>
+            this.setState({
+              newVocabularyDialogOpen: true,
+              vocabularyForEdit: rowData
+            })
+          }
+        >
+          <i className="fa fa-edit" />
+        </div>
         <div
           style={styles.remove}
           className="unit-test-remove-vocabulary"
@@ -123,10 +164,17 @@ class VocabulariesEditor extends Component {
     vocabulary
   });
 
-  constructor(props) {
-    super(props);
-    this.state = {confirmRemovalDialogOpen: false, vocabularyForRemoval: null};
-  }
+  afterVocabularySave = vocabulary => {
+    if (this.state.vocabularyForEdit) {
+      this.props.updateVocabulary(vocabulary);
+    } else {
+      this.props.addVocabulary(vocabulary);
+    }
+  };
+
+  handleAddVocabularyClick = () => {
+    this.setState({newVocabularyDialogOpen: true});
+  };
 
   constructSearchOptions = json => {
     const vocabKeysAdded = this.props.vocabularies.map(vocab => vocab.key);
@@ -152,6 +200,19 @@ class VocabulariesEditor extends Component {
     const columns = this.getColumns();
     return (
       <div>
+        {this.state.newVocabularyDialogOpen && (
+          <AddVocabularyDialog
+            handleClose={() =>
+              this.setState({
+                newVocabularyDialogOpen: false,
+                vocabularyForEdit: null
+              })
+            }
+            courseVersionId={this.props.courseVersionId}
+            afterSave={this.afterVocabularySave}
+            editingVocabulary={this.state.vocabularyForEdit}
+          />
+        )}
         {this.state.confirmRemovalDialogOpen && (
           <Dialog
             body={`Are you sure you want to remove the vocabulary "${
@@ -167,7 +228,9 @@ class VocabulariesEditor extends Component {
           />
         )}
         <div style={styles.search}>
-          Select a vocabulary word to add
+          <label>
+            <strong>Select a vocabulary word to add</strong>
+          </label>
           <SearchBox
             onSearchSelect={e => this.props.addVocabulary(e.vocabulary)}
             additionalQueryParams={{
@@ -181,6 +244,14 @@ class VocabulariesEditor extends Component {
           <Table.Header />
           <Table.Body rows={this.props.vocabularies} rowKey="key" />
         </Table.Provider>
+        <button
+          onClick={this.handleAddVocabularyClick}
+          style={styles.addButton}
+          type="button"
+        >
+          <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
+          Vocabulary
+        </button>
       </div>
     );
   }
@@ -194,7 +265,7 @@ export default connect(
   }),
   {
     addVocabulary,
-    editVocabulary,
+    updateVocabulary,
     removeVocabulary
   }
 )(VocabulariesEditor);
