@@ -85,7 +85,6 @@ export const resourceShape = PropTypes.shape({
 });
 
 export const vocabularyShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   word: PropTypes.string.isRequired,
   definition: PropTypes.string.isRequired
