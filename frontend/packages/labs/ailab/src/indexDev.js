@@ -47,6 +47,10 @@ const sampleModes = {
     hideSelectTrainer: "knnClassify",
     hideChooseReserve: true,
     hideModelCard: true
+  },
+
+  preload_metadata: {
+    hideSpecifyColumns: true
   }
 };
 
