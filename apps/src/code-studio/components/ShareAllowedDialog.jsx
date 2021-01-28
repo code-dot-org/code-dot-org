@@ -523,6 +523,7 @@ class ShareAllowedDialog extends React.Component {
                           channelId={this.props.channelId}
                           appType={this.props.appType}
                           isLegacyShare={false}
+                          selectedSong={this.props.selectedSong}
                         />
                       </div>
                     </div>

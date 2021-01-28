@@ -4,14 +4,10 @@ class SmsController < ApplicationController
 
   # set up a client to talk to the Twilio REST API
   def send_to_phone
-    #if params[:song]
-    if true
-      #open_tik_tok_url = params[:song]
-      open_tik_tok_url = 'https://www.tiktok.com/music/Level-Up-6580213968705424134?lang=en&is_copy_url=1'
-      #video_url = "https://dance-api.code.org/videos/video-#{params[:channel_id]}.mp4"
-      video_url = 'https://dance-api.code.org/videos/video-h4sxJYdlWGggroG0DRR9ug.mp4'
+    if params[:song]
+      open_tik_tok_url = params[:song]
+      video_url = "https://dance-api.code.org/videos/video-#{params[:channel_id]}.mp4"
       message_body = "Here's your Dance Party video! Save this video and open in TikTok here to upload: #{open_tik_tok_url}"
-
       send_sms(message_body, params[:phone], video_url)
     elsif params[:level_source] && !params[:level_source].empty? && params[:phone] && (level_source = LevelSource.find(params[:level_source]))
       send_sms_link(level_source_url(level_source), params[:phone])
