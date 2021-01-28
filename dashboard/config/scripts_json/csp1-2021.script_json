@@ -4882,15 +4882,15 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Odometer Activity",
         "level_keys": [
           "Widget: Binary Odometer_2021"
-        ],
-        "progression": "Odometer Activity"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Widget: Binary Odometer_2021"
@@ -4910,13 +4910,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L6 CFU beyond odometer_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L6 CFU beyond odometer_2021"
@@ -4936,13 +4936,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L6 CFU representing fractions_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L6 CFU representing fractions_2021"
@@ -4968,7 +4968,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L8 Reflection Multiple Representations CSP_2021"
@@ -5220,15 +5220,15 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "RGB Color",
         "level_keys": [
           "CSP U1L10 RGB_2021"
-        ],
-        "progression": "RGB Color"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 RGB_2021"
@@ -5246,15 +5246,15 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 1_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 1_2021"
@@ -5272,15 +5272,15 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "More Shades of Color",
         "level_keys": [
           "CSP U1L10 More Shades of Color_2021"
-        ],
-        "progression": "More Shades of Color"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 More Shades of Color_2021"
@@ -5298,15 +5298,15 @@
       "chapter": 25,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 2_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 2_2021"
@@ -5324,15 +5324,15 @@
       "chapter": 26,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 3_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 3_2021"
@@ -5350,15 +5350,15 @@
       "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Color Sampling",
         "level_keys": [
           "CSP U1L10 Color Sampling_2021"
-        ],
-        "progression": "Color Sampling"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Sampling_2021"
@@ -5376,15 +5376,15 @@
       "chapter": 28,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 4_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 4_2021"
@@ -5404,13 +5404,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U1L10 Multiple Choice analog vs digital_2021"
-        ],
-        "progression": "Assessment: Check For Understanding\r"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L10 Multiple Choice analog vs digital_2021"
@@ -5430,13 +5430,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U1L10 CFU Sampling_2021"
-        ],
-        "progression": "Assessment: Check For Understanding\r"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L10 CFU Sampling_2021"
