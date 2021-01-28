@@ -131,12 +131,12 @@
       #feature_project{'style' => ('display: none;' unless !exists || !currently_featured)}
         %div
           special topic:
-          %input{id: "special-topic", value: project.topic}
+          %input{id: "special-topic", value: project.try(:topic)}
         %button{id: "feature", class: "btn btn-default btn-sm"}
           Feature in gallery
 
       #unfeature_project{'style' => ('display: none;' unless currently_featured)}
-        %div= "special topic: #{project.topic}"
+        %div= "special topic: #{project.try(:topic)}"
         %button{id: "feature", class: "btn btn-default btn-sm"}
           Stop featuring in gallery
 
