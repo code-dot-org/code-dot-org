@@ -1,18 +1,20 @@
 import {assert} from 'chai';
 import vocabularyEditor, {
   addVocabulary,
-  editVocabulary,
+  updateVocabulary,
   removeVocabulary
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import _ from 'lodash';
 
 const getInitialState = () => [
   {
+    id: 1,
     key: 'vocabulary-1',
     word: 'vocabulary-1',
     definition: 'definition1'
   },
   {
+    id: 2,
     key: 'vocabulary-2',
     word: 'vocabulary-2',
     definition: 'definition2'
@@ -27,6 +29,7 @@ describe('vocabulariesEditorRedux reducer tests', () => {
     const nextState = vocabularyEditor(
       initialState,
       addVocabulary({
+        id: 3,
         key: 'new-word',
         word: 'new-word',
         definition: 'new-definition'
@@ -44,7 +47,7 @@ describe('vocabulariesEditorRedux reducer tests', () => {
     editedVocabulary.word = 'new word';
     const nextState = vocabularyEditor(
       initialState,
-      editVocabulary(editedVocabulary)
+      updateVocabulary(editedVocabulary)
     );
     assert.deepEqual(nextState.map(r => r.word), ['new word', 'vocabulary-2']);
   });
