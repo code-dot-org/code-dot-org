@@ -450,7 +450,7 @@ ko-KR:
         content1: 설명 입력
         markdown: "# 설계 프로세스\n소프트웨어 설계는 많은 작은 문제를 항상 푸는 것을 의미합니다. 소프트웨어 설계에서 주요 문제는
           우선 무엇을 만들지 입니다.\n\n이 프로세스는 모든 종류의 일에서 유용하지만 우리는 웹 설계를 위한 이 프로세스의 사용에 집중할
-          것입니다.\n\n<!-- 용어 \"정의\", \"준비\", \"시도\", \"반영\"을 번역하고 글자 크기와 위치를 필요 시 변경하세요
+          것입니다.\n\n<!-- 용어 \"정의\", \"준비\", \"시도\", \"성찰\"을 번역하고 글자 크기와 위치를 필요 시 변경하세요
           -->\n<div style=\"position: relative; text-align: center; font-size: 1em\">\n
           \ <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
           alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
@@ -459,23 +459,23 @@ ko-KR:
           transform: translateX(-61%); font-weight: bold;\">준비</div>\n  <div style=\"position:
           absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight:
           bold;\">시도</div>\n  <div style=\"position: absolute; top: 52%; left: 39%;
-          transform: translateX(-39%); font-weight: bold;\">반영</div>\n</div>\n\n*
+          transform: translateX(-39%); font-weight: bold;\">성찰</div>\n</div>\n\n*
           **정의**\n  * 어떤 종류의 앱을 만들고 싶어요?\n  * 어떤 제약을 갖고 있습니까?\n  * 성공하면 그것은 어떤 모습을
           지닙니까?\n* **준비**\n  * 브레인스토밍 / 가능한 요소에 대해 조사\n  * 장단점 비교\n  * 계획 수립\n* **시도**\n
-          \ * 계획을 실천에 옮김\n* **반영**\n  * 결과를 앱 정의 시 설정한 목표와 어떻게 비교합니까?\n  * 여기서 무엇을
+          \ * 계획을 실천에 옮김\n* **성찰**\n  * 결과를 앱 정의 시 설정한 목표와 어떻게 비교합니까?\n  * 여기서 무엇을
           배웠으며 또한 다음에 더 잘하기 위해 무엇을 해야 합니까?\n  * 발견한 새로운 문제는 무엇입니까?\n\n# 어떤 모습입니까\n다음
           몇 주 동안 이어질 과정에서, 여러분은 기존 게임을 실험해 보고 배운 내용에 기초하여 여러분 자신의 게임을 설계할 기회를 갖게 됩니다.
           게임을 만든 후, 다른 이들 앞에서 발표하고 피드백을 받을 것입니다. 이러한 단계 모두는 소프트웨어 산업에서 매우 중요하며 여러
           설계 프로세스 요소로 연습할 기회를 얻음으로써 더 나은 제품을 더 효율적으로 만드는데 도움이 될 것입니다.  \n\n다음은 다가오는
           주 동안 설계 프로세스에 대해 배우며 하게 될 활동입니다:\n\n1. **정의와 준비**\n   * 기존 게임을 플레이 하고 아이디어를
           얻고 제약에 대해 이해\n   * 새로운 또는 수정한 앱을 브레인스토밍 및 계획\n1. **시도**\n   * 앱 구축 계획을 따름\n1.
-          **반영 및 편집**\n   * 앱을 다른 그룹과 교환하여 프로젝트를 개선하는 데 도움을 얻습니다.\n1. **발표**\n   *
+          **성찰 및 편집**\n   * 앱을 다른 그룹과 교환하여 프로젝트를 개선하는 데 도움을 얻습니다.\n1. **발표**\n   *
           최종 제품 소개!\n"
       Begin planning your project_2018:
         content1: 설명 입력
         markdown: "# 설계 프로세스\n소프트웨어 설계는 많은 작은 문제를 항상 푸는 것을 의미합니다. 소프트웨어 설계에서 주요 문제는
           우선 무엇을 만들지 입니다.\n\n이 프로세스는 모든 종류의 일에서 유용하지만 우리는 웹 설계를 위한 이 프로세스의 사용에 집중할
-          것입니다.\n\n<!-- 용어 \"정의\", \"준비\", \"시도\", \"반영\"을 번역하고 글자 크기와 위치를 필요 시 변경하세요
+          것입니다.\n\n<!-- 용어 \"정의\", \"준비\", \"시도\", \"성찰\"을 번역하고 글자 크기와 위치를 필요 시 변경하세요
           -->\n<div style=\"position: relative; text-align: center; font-size: 1em\">\n
           \ <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
           alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
@@ -484,17 +484,17 @@ ko-KR:
           transform: translateX(-61%); font-weight: bold;\">준비</div>\n  <div style=\"position:
           absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight:
           bold;\">시도</div>\n  <div style=\"position: absolute; top: 52%; left: 39%;
-          transform: translateX(-39%); font-weight: bold;\">반영</div>\n</div>\n\n*
+          transform: translateX(-39%); font-weight: bold;\">성찰</div>\n</div>\n\n*
           **정의**\n  * 어떤 종류의 앱을 만들고 싶어요?\n  * 어떤 제약을 갖고 있습니까?\n  * 성공하면 그것은 어떤 모습을
           지닙니까?\n* **준비**\n  * 브레인스토밍 / 가능한 요소에 대해 조사\n  * 장단점 비교\n  * 계획 수립\n* **시도**\n
-          \ * 계획을 실천에 옮김\n* **반영**\n  * 결과를 앱 정의 시 설정한 목표와 어떻게 비교합니까?\n  * 여기서 무엇을
+          \ * 계획을 실천에 옮김\n* **성찰**\n  * 결과를 앱 정의 시 설정한 목표와 어떻게 비교합니까?\n  * 여기서 무엇을
           배웠으며 또한 다음에 더 잘하기 위해 무엇을 해야 합니까?\n  * 발견한 새로운 문제는 무엇입니까?\n\n# 어떤 모습입니까\n다음
           몇 주 동안 이어질 과정에서, 여러분은 기존 게임을 실험해 보고 배운 내용에 기초하여 여러분 자신의 게임을 설계할 기회를 갖게 됩니다.
           게임을 만든 후, 다른 이들 앞에서 발표하고 피드백을 받을 것입니다. 이러한 단계 모두는 소프트웨어 산업에서 매우 중요하며 여러
           설계 프로세스 요소로 연습할 기회를 얻음으로써 더 나은 제품을 더 효율적으로 만드는데 도움이 될 것입니다.  \n\n다음은 다가오는
           주 동안 설계 프로세스에 대해 배우며 하게 될 활동입니다:\n\n1. **정의와 준비**\n   * 기존 게임을 플레이 하고 아이디어를
           얻고 제약에 대해 이해\n   * 새로운 또는 수정한 앱을 브레인스토밍 및 계획\n1. **시도**\n   * 앱 구축 계획을 따름\n1.
-          **반영 및 편집**\n   * 앱을 다른 그룹과 교환하여 프로젝트를 개선하는 데 도움을 얻습니다.\n1. **발표**\n   *
+          **성찰 및 편집**\n   * 앱을 다른 그룹과 교환하여 프로젝트를 개선하는 데 도움을 얻습니다.\n1. **발표**\n   *
           최종 제품 소개!\n"
       Begin planning your project_2018_2019:
         content1: 설명 입력
@@ -1492,6 +1492,22 @@ ko-KR:
         content1: 설명 입력
       New Challenge Introduction:
         content1: 설명 입력
+        markdown: "### 새 도전: 임의적 치환 암호를...새 위젯으로 풀기\n\n전체 영문자를 다른 글자로 바꾸는 대신 영문자의
+          각 글자를 다른 글자로 임의로 매핑하면 어떻게 될까요? 이것은 **임의적 치환 암호**라고 부릅니다.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\n이제,
+          비밀 메시지를 단순한 영문자 시프트로 암호화하는 대신, **임의적 치환**으로 암호화된 메시지를 보게 될 것입니다.  \n\n\n\nThis
+          is much harder to crack and requires a more sophisticated tool, so...\n\nWhen
+          you click continue, you'll see a **new, more sophisticated version of the
+          encryption tool** that shows you lots of different stuff.\n\nBut what it
+          does is a bit of a mystery!  \n\n### Your Task:\n\n * Figure out what is
+          going on in this new version of the tool\n * What information is being presented
+          to you?\n * Figure out what the tool lets you do\n * As usual: you can't
+          break it.  So click on things, poke around.\n * If you figure it out you
+          might be able to crack a message encoded with random substitution.\n \n###
+          Hint\n\n* Did you know that **E** is the most common letter used in English?\n\n###
+          Reconvene and Discuss\n After some time playing with it, you should get
+          together with someone - partner, small group, whole class - to discuss what
+          you found and verify that you know what's going on and the various ways
+          you can use the tool.\n\n\n"
       OPD-K5 Reviewing Reflections:
         content1: 설명 입력
         markdown: "# 개요: 성찰 검토\n\n축하합니다! 여러분은 기초 코딩 개념에 익숙해졌고 그러한 개념을 연습할 기회를 가졌습니다.
@@ -1932,8 +1948,32 @@ ko-KR:
           프로젝트를 발표할 시간입니다! 교사가 작품을 학급원에게 발표할 때 어떻게 해야 하는지에 관한 더 자세한 내용을 제공할 것입니다.
       'Technique: Frequency Analysis':
         content1: 설명 입력
+        markdown: "# 치환 암호 풀기\n\n임의적 치환 암호를 풀기 위한 최고의 기법은 **빈도 분석**입니다. \n\n다음에서 다른
+          말로 바꿔 표현함: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          **빈도 분석**은 영어 대 다른 것에서 일정 글자가 얼마나 *자주* 나오는지에 기초하는 기법입니다.\n* 예를 들어, 주어진 영어
+          텍스트 섹션에서 *E*, *T*, *A*, *O*가 가장 흔하게 나오는 반면 *Z*, *Q*, *X*는 가장 드물게 나옵니다. 마찬가지로,
+          *TH*, *ER*, *ON*, *AN*은 서로 나란히 나오는 글자 짝 중 가장 흔합니다.\n* 사실, 글자 분포는 거의 모든 영어
+          텍스트 샘플에서 거의 동일합니다. \n\n\n이전 페이지의 위젯 버전은 빈도 분석을 통해 치환 암호를 **푸는데 도움을 주려는 의도를
+          갖고 있습니다.\n\n암호화된 메시지에서 글자 빈도를 전형적인 영어 산문에서 글자 빈도와 비교하고 분석함으로써, 글자 일부가 무엇과
+          매핑되는지 좁혀 나가기 시작할 수 있습니다. \n\n툴은 암호화된 텍스트 (주황색) 내 글자 빈도가 전형적 영어 (파란색)에서의
+          빈도와 비교되는 방식을 보여줍니다.\n\n### 힌트: 어디에서 시작해야 할까요?\n\n1. 짧은 단어를 찾고 먼저 그것을 \"풉니다\".
+          한 글자 단어를 몇 개 알고 있어요? (\"a\"). 매우 흔한 세 글자 단어는 \"the\"입니다.\n2. 일단 그렇게 했으면,
+          가장 흔한 단어의 일부를 치환합니다. 직관을 이용해 이러한 부분적 치환으로 다른 글자를 보고, 추측을 잘해야 합니다.\n3. 단지
+          처음 몇 개의 글자만 힘들게 찾아내고 나면, 나머지는 비교적 빠르게 풀 수 있습니다.\n4. 글자의 빈도 비교는 이치에 맞는 추측을
+          하는데 좋은 아이디어를 줍니다.\n\n### 다음을 해 보세요:\n아래 에니메이션은 누군가 시작하려는 모습을 보여줍니다. 여기서
+          그들은 다음을 시도하고 있습니다.\n\n* 먼저 문자를 빈도별로 정렬합니다. \n* 단어 `the`에 매핑할 수 있는 문자 그룹을
+          식별합니다.  \n훌륭한 시작 방법입니다!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          임의적 치환을 잘했습니까?\n* 약간의 연습 후, 임의적 치환 암호를 푸는데 얼마나 걸립니까?\n* 이것은 잘한 것입니까 그렇지
+          않습니까?\n\n\n"
       Terminology Recap:
         content1: 설명 입력
+        markdown: "# 잠시 중단하고 정리\n\n**시저 암호**로 암호화된 메시지는 풀기 쉬우며 특히 컴퓨팅 툴이 있으면 더 쉽습니다.
+          \ 이제 영문자 시프트 암호를 푸는 연습을 했으니 (정말 쉽죠?), 더 어려운 걸 시도해 봐요.\n\n**용어 정리:**\n\n*
+          **암호화** - 메시지를 비밀로 유지하여 \"허가된\" 이들만 읽을 수 있게 암호화하는 프로세스.\n* **해독** - 암호화의
+          반대 프로세스로 비밀 메시지를 원래의 평문으로 다시 만듭니다.\n* **암호** - 암호화를 수행하는 기법 (알고리즘)을 지칭하는
+          용어\n* **시저 암호** - 영문자를 문자의 일정 수 만큼 자리를 바꿔 암호화하는 기법.\n* **암호화 풀기** - 암호의
+          모든 세부사항을 알지 *못하고* 비밀 메시지를 해독하려 할 때, 그들은 암호화를 **풀려고** 시도하는 것입니다. \n\n\n**다음
+          도전**을 보려면 계속을 클릭하세요...\n\n \n"
       Unit 1 Lesson 2 Overview:
         markdown: |
           # Overview
@@ -2980,9 +3020,9 @@ ko-KR:
           correct: true
           feedback: 맞습니다!
         - text: 좀비는 해바라기로 갈 것입니다.
-          feedback: 틀립니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
+          feedback: 틀렸습니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         - text: 좀비가 첫 번째 경로에서 우회전하여 영원히 빙빙 돌 것입니다.
-          feedback: 틀립니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
+          feedback: 틀렸습니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         - text: 잘 모르겠음.
           feedback: 이 코드에서 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         questions:
@@ -2993,9 +3033,9 @@ ko-KR:
           correct: true
           feedback: 맞습니다!
         - text: 좀비는 해바라기로 갈 것입니다.
-          feedback: 틀립니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
+          feedback: 틀렸습니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         - text: 좀비가 첫 번째 경로에서 우회전하여 영원히 빙빙 돌 것입니다.
-          feedback: 틀립니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
+          feedback: 틀렸습니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         - text: 잘 모르겠음.
           feedback: 이 코드에서 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         questions:
@@ -3006,9 +3046,9 @@ ko-KR:
           correct: true
           feedback: 맞습니다!
         - text: 좀비는 해바라기로 갈 것입니다.
-          feedback: 틀립니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
+          feedback: 틀렸습니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         - text: 좀비가 첫 번째 경로에서 우회전하여 영원히 빙빙 돌 것입니다.
-          feedback: 틀립니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
+          feedback: 틀렸습니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         - text: 잘 모르겠음.
           feedback: 이 코드에서 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         questions:
@@ -3666,7 +3706,9 @@ ko-KR:
         questions:
         - text: 이 코드는 주의 깊게 보세요. 프로그램이 "실행"되면 무슨 일이 벌어질거라 생각하세요?
       gradek1_activity_beNice:
-        markdown: "# 컴퓨터 실습실에서의 동작"
+        markdown: "# # 컴퓨터 랩에서의 행동\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\n레슨 플랜으로 가기\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">계속</a>\n"
       Unit 1 Lesson 1 Overview:
         markdown: |
           # Overview
@@ -4646,9 +4688,9 @@ ko-KR:
           float=\"left\"/><h3>이 단계에서, 우리는 세심히 살펴보고 일정 사각형에서 회전을 하여 디자인을 만들 수 있는 \"픽셀\"
           그리드를 제공합니다!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_project_exemplars_2020_2021:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
       courseE_project_exemplars_2019:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: |+
           # 프로젝트 예
 
@@ -4669,9 +4711,9 @@ ko-KR:
           | 중첩 루프로 창의성을 발휘해 봅시다! | 함수로 창의성을 발휘해 봅시다! |
 
       courseE_project_exemplars_2019_2020:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
       courseExpress_project_exemplars_2019_2020:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
       courseF_external_variableConstant_2018:
         markdown: "<h2>변수에 관한 더 많은 내용</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>이제 막 변수를
@@ -4691,14 +4733,14 @@ ko-KR:
           다음, 클릭한 후에 그 *동일한* 값을 프로그램 안에서 변경하지 않고 여러 번 사용합니다.  </h3>\n<br/><hr/>\n<h3>다음
           시리즈 부분에서는 프로그램 내에서  *변경 되는* 변수로 코드를 작성할 것입니다.</h3>\n\n"
       courseF_markdown_algorithms_end:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이제 막 \"알고리즘\"에 대해 배웠습니다!**  \n\n\n\n### **알고리즘은 일을 마치기 위한 단계
           목록입니다**. 알고리즘에서 재미있는 일은 여러분이 무슨 일이 일어날지 단계별로 결정해야 한다는 것입니다.  \n\n### 머신을
           위해 알고리즘을 작성할 때, 그것을 **프로그램**이라 부릅니다.  \n\n---\n\n## **알아야 할 어휘**\n\n* ###
           **알고리즘** - 일을 마치기 위한 단계 목록\n\n* ### **프로그램** - 머신에 의해 실행될 수 있는 무엇인가로 코딩된
           알고리즘"
       courseF_markdown_algorithms_intro:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: |
           # **이 레슨에서는...**
 
@@ -4716,19 +4758,19 @@ ko-KR:
 
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_markdown_conditionals_end:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이제 막 \"조건문\"에 대해 배웠습니다!**\n\n### 조건문은 컴퓨터 과학에서 매우 유용합니다. 좋아하는
           웹사이트에 로그인하고 비밀번호를 입력한다고 상상해 보세요. 웹사이트는 입력된 비밀번호가 그 웹사이트에 저장된 사용자 이름에 해당하는
           비밀번호와 일치하는지(if) 확인하기 위해 조건문을 사용해야 합니다. \n\n### 일치'하면 (If)` 로그인합니다! \n\n###
           `그렇지 않으면 (Else)`, 사용자에게 오류 메시지를 줍니다.  \n\n---\n\n## **알아야 할 어휘**\n\n* ###
           **조건** - 프로그램이 동작을 허용하기 전 확인하는 무엇\n\n* ### **조건문** - 일정 조건 하에서만 실행되는 진술\n\n"
       courseF_markdown_conditionals_intro:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이 레슨에서는...**\n\n### **조건**은 참일수도 거짓일 수도 있는 무엇입니다. \n\n### 무엇인가가
           참인 `동안(while)` 또는 참일`때까지(until)`, 참`이면(if)` 무엇을 일어나게 만들기 위해 프로그램에서 조건을 사용하는
           방법을 배울 것입니다!\n---\n\n## **알아야 할 블록**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n\n\n"
       courseF_markdown_debugging_end:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: |
           # **"디버깅"에 대해 배웠습니다!**
 
@@ -4746,34 +4788,34 @@ ko-KR:
 
           * ### **끈기** - 포기하지 않음
       courseF_markdown_debugging_intro:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이 레슨에서는...**\n\n### 버그에 대해 생각할 때 무슨 생각을 하세요?\n\n### 대부분의 사람들이
           버그를 생각할 때, 그들은 오싹하게 하는 기어다니는 존재를 생각합니다. 컴퓨터 과학에서 버그는 살아 있지 않지만 여전히 까다로울
           수 있습니다.\n\n### 이 레슨에서 퍼즐은 이미 여러분을 위해 풀어져 있습니다! 하지만 그렇게 빠르지는 않습니다- 퍼즐이 아직
           제대로 되고 있어 보이지 않습니다. 이것 뒤에 버그가 있습니까? \n\n---\n\n## **알아야 할 블록**\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)"
       courseF_markdown_forloops_end:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이제 막 \"for 루프\"에 대해 배웠습니다!**\n\n### **For 루프는 여러분이 시작과 종료 값을
           설정하는 루프입니다.**\n\n### 이 새로운 종류의 `반복` 루프는 사용자에게 루프를 시작할 때, 루프를 끝낼 때, 실행 시
           마다 루프가 증가시켜야 할 것에 대한 더 많은 통제력을 줍니다.\n\n### 더 많은 통제력이란 퍼즐을 훨씬 더 빠르게 풀 수 있다는
           의미입니다! \n\n---\n\n## **알아야 할 어휘**\n\n### **For 루프** - For 루프는 시작 및 종료, 증가
           (단계 간격)가 사전에 결정되는 루프입니다.\n"
       courseF_markdown_forloops_end_2019:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이제 막 \"for 루프\"에 대해 배웠습니다!**\n\n### **For 루프는 여러분이 시작과 종료 값을
           설정하는 루프입니다.**\n\n### 이 새로운 종류의 `반복` 루프는 사용자에게 루프를 시작할 때, 루프를 끝낼 때, 실행 시
           마다 루프가 증가시켜야 할 것에 대한 더 많은 통제력을 줍니다.\n\n### 더 많은 통제력이란 퍼즐을 훨씬 더 빠르게 풀 수 있다는
           의미입니다! \n\n---\n\n## **알아야 할 어휘**\n\n### **For 루프** - For 루프는 시작 및 종료, 증가
           (단계 간격)가 사전에 결정되는 루프입니다.\n"
       courseF_markdown_forloops_end_2019_2020:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이제 막 \"for 루프\"에 대해 배웠습니다!**\n\n### **For 루프는 여러분이 시작과 종료 값을
           설정하는 루프입니다.**\n\n### 이 새로운 종류의 `반복` 루프는 사용자에게 루프를 시작할 때, 루프를 끝낼 때, 실행 시
           마다 루프가 증가시켜야 할 것에 대한 더 많은 통제력을 줍니다.\n\n### 더 많은 통제력이란 퍼즐을 훨씬 더 빠르게 풀 수 있다는
           의미입니다! \n\n---\n\n## **알아야 할 어휘**\n\n### **For 루프** - For 루프는 시작 및 종료, 증가
           (단계 간격)가 사전에 결정되는 루프입니다.\n"
       courseF_markdown_forloops_intro:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: |+
           # **이 레슨에서...**
 
@@ -4786,7 +4828,7 @@ ko-KR:
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
       courseF_markdown_forloops_intro_2019:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: |+
           # **이 레슨에서...**
 
@@ -4799,7 +4841,7 @@ ko-KR:
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
       courseF_markdown_forloops_intro_2019_2020:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: |+
           # **이 레슨에서...**
 
@@ -4812,46 +4854,46 @@ ko-KR:
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
       courseF_markdown_loops_end:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이제 막 \"루프\"에 대해 배웠습니다!**  \n\n### **루프는 뭔가를 계속 다시 하는 동작입니다.**
           뭔가를 다시 하는 것의 또 다른 단어는 반복입니다.\n\n### 루프는 패턴을 반복할 때 정말 유용합니다. 먼저 루프 없이 프로그램을
           작성하고 그 다음 패턴을 찾아 보는 것이 도움이 될 수 있습니다. \n\n### 패턴을 보면, 그 패턴을 `반복` 블록에 붙입니다!\n\n---\n\n##
           **알아야 할 어휘**\n\n* ### **루프** - 뭔가를 계속 다시 하는 동작\n\n* ### **반복** - 뭔가를 다시
           함\n"
       courseF_markdown_loops_intro:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# 이 레슨에서는...\n\n### 캐릭터를 앞으로 **5** 회 이동하길 원한다고 상상하세요. 이것은 상당히 쉬울
           것입니다. 그냥 **5**개의 앞으로 이동 블록을 드래그하면 됩니다. 이제, 캐릭터를 **5,000**회 이동하길 원한다고 상상하세요!
           \n\n### **5,000**개의 블록을 드래그하려면 얼마나 걸릴까요? \n\n### 이를 위한 쉬운 방법이 있길 희망하세요?
           있습니다!\n\n---\n\n## 알아야 할 블록\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\n"
       courseF_markdown_nestedloops_end:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이제 막 \"중첩 루프\"에 대해 배웠습니다\"!**\n\n### **중첩 루프는 루프 안에 있는 루프입니다.**
           그것을 그 안에 편안하고 아늑하게 중첩되어 있는 또 다른 루프를 가진 바깥 쪽 루프와 바슷하다고 생각하세요. \n\n### 중첩
           루프는 패턴의 반복 패턴에 좋습니다. 올바르게 사용되면 매우 강력할 수 있습니다!\n\n---\n\n## **알아야 할 어휘**\n\n###
           __중첩 루프__ - 루프 안에 있는 루프\n\n"
       courseF_markdown_nestedloops_intro:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이 레슨에서...**\n\n### 루프를 *또 다른 루프의 안*에 넣으면 어떻게 될지 궁금해 한 적 있어요?
           \n\n### 그것은 그냥 여러분을 미치게 만들 수 있습니다!\n\n### 정상 루프가 패턴 반복을 잘하면, 또 다른 루프 안에
           있는 루프는 무엇을 잘할거라고 생각해요? 함께 찾아봐요!\n\n---\n\n## **알아야 할 블록**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
       courseF_markdown_variables_end:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이제 막 \"변수\"에 대해 배웠습니다!**\n\n### 변수를 사용하기 위해서는 이름과 값이 필요합니다.
           이름은 변하지 않지만 값은 변할 수 있습니다. 그래서 변수의 이름을 프로그램에서 원하는 위치 어디서든 자리 표시자로 사용할 수 있습니다!
           \n\n---\n\n## **알아야 할 어휘**\n\n### **변수** - 변할 수 있는 정보 부분을 위한 자리 표시자\n\n"
       courseF_markdown_variables_end_2019:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이제 막 \"변수\"에 대해 배웠습니다!**\n\n### 변수를 사용하기 위해서는 이름과 값이 필요합니다.
           이름은 변하지 않지만 값은 변할 수 있습니다. 그래서 변수의 이름을 프로그램에서 원하는 위치 어디서든 자리 표시자로 사용할 수 있습니다!
           \n\n---\n\n## **알아야 할 어휘**\n\n### **변수** - 변할 수 있는 정보 부분을 위한 자리 표시자\n\n"
       courseF_markdown_variables_end_2019_2020:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: "# **이제 막 \"변수\"에 대해 배웠습니다!**\n\n### 변수를 사용하기 위해서는 이름과 값이 필요합니다.
           이름은 변하지 않지만 값은 변할 수 있습니다. 그래서 변수의 이름을 프로그램에서 원하는 위치 어디서든 자리 표시자로 사용할 수 있습니다!
           \n\n---\n\n## **알아야 할 어휘**\n\n### **변수** - 변할 수 있는 정보 부분을 위한 자리 표시자\n\n"
       courseF_markdown_variables_intro:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: |+
           # **이 레슨에서...**
 
@@ -4866,7 +4908,7 @@ ko-KR:
 
 
       courseF_markdown_variables_intro_2019:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: |+
           # **이 레슨에서...**
 
@@ -4881,7 +4923,7 @@ ko-KR:
 
 
       courseF_markdown_variables_intro_2019_2020:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: |+
           # **이 레슨에서...**
 
@@ -4896,7 +4938,7 @@ ko-KR:
 
 
       courseF_project_exemplars_2019:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
         markdown: |+
           # 프로젝트 예
 
@@ -4917,6 +4959,80 @@ ko-KR:
           | 변수로 창의성을 발휘해 봅시다! | For 루프로 창의성을 발휘해 봅시다! |
 
       courseF_project_exemplars_2019_2020:
-        content1: 테스트 마크다운 교과서 페이지
+        content1: '마크다운 교과서 페이지 테스트 '
       outbreak_freeplay_choice:
         display_name: 자유 플레이
+      DigitalFootprint-Unplugged:
+        markdown: |
+          # 디지털 발자국
+
+          자신에 관한 정보를 온라인에 올릴 때 디지털 발자국이 생깁니다.
+      GettingLoopy-Unplugged:
+        markdown: |
+          # 게팅 루피 (Getting Loopy)
+
+          이 레슨은 댄스 활동을 통해 루프의 프로그래밍 개념을 소개합니다.
+      GettingLoopy-Unplugged_2020:
+        markdown: |
+          # 게팅 루피 (Getting Loopy)
+
+          이 레슨은 댄스 활동을 통해 루프의 프로그래밍 개념을 소개합니다.
+      GoingPlacesSafely-unplugged:
+        markdown: |
+          # 안전하게 장소로 가기
+
+          인터넷은 강력하지만 종종 위험한 장소입니다. 인터넷을 탐색하는 동안 안전을 유지하세요!
+
+          <p align=center>
+      HappyLoops-Unplugged:
+        markdown: |
+          # 해피 루프
+
+          이 레슨에서는 루프에 대해 배울 것입니다!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyLoops-Unplugged_2020:
+        markdown: |
+          # 해피 루프
+
+          이 레슨에서는 루프에 대해 배울 것입니다!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |
+          # 해피 맵
+
+          캐릭터를 미로 여기저기로 움직이게 만드는 알고리즘을 만드세요.
+      HappyMaps-Unplugged_2020:
+        markdown: |
+          # 해피 맵
+
+          캐릭터를 미로 여기저기로 움직이게 만드는 알고리즘을 만드세요.
+      MoveItMoveIt-Unplugged:
+        markdown: |
+          # 이동, 이동
+
+          지도를 사용하고 코멘트를 제공해 목표에 도달합니다.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |
+          # 이동, 이동
+
+          지도를 사용하고 코멘트를 제공해 목표에 도달합니다.
+      TheRightAppMarkdownLevel_2019:
+        markdown: |-
+          # 올바른 앱
+
+          * 오늘날 누구나 컴퓨터, 특히 스마트폰을 사용합니다.
+          * 스마트폰 앱은 친구와 말하기 또는 음악 감상, 쇼핑, 그저 웹 탐구 등과 같은 일을 하는데 도움을 줍니다.
+          * 프로그래머가 타인의 필요를 이해하고 그것을 염두해 두고 설계를 하는 것이 중요합니다!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: |-
+          # 올바른 앱
+
+          * 오늘날 누구나 컴퓨터, 특히 스마트폰을 사용합니다.
+          * 스마트폰 앱은 친구와 말하기 또는 음악 감상, 쇼핑, 그저 웹 탐구 등과 같은 일을 하는데 도움을 줍니다.
+          * 프로그래머가 타인의 필요를 이해하고 그것을 염두해 두고 설계를 하는 것이 중요합니다!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
