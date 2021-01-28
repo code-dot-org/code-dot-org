@@ -347,8 +347,7 @@ class Lesson < ApplicationRecord
       key: key,
       displayName: localized_name,
       link: lesson_path(id: id),
-      position: relative_position,
-      lockable: lockable
+      position: relative_position
     }
   end
 
