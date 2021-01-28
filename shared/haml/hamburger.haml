@@ -2,7 +2,7 @@
   options = { level: level, script_level: script_level, language: language, user_type: user_type, loc_prefix: loc_prefix, request: request }
   contents = Hamburger.get_hamburger_contents(options)
 
-#hamburger{class: contents[:visibility], tabindex: "0", alt: "Menu"}
+#hamburger{class: contents[:visibility], tabindex: "0", 'aria-label': I18n.t('header_screen_reader_hamburger')}
   #hamburger-contents.hide-responsive-menu
     - contents[:entries].each do |entry|
       - if entry[:type] == "divider"
