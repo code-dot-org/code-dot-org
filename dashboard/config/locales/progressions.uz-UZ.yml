@@ -13,14 +13,17 @@ uz:
       'Artist: Variables': 'Rassom: O''zgaruvchilar'
       Attribution: Atributlar
       Basic Conditionals: Shartli bayonorlar asoslari
+      Binary Numbers: Binary Numbers
+      Board Events: Board Events
       Board Input and Output: Kirish va chiqish
       Boolean Comparison: Mantiqiy solishtirish
       Build a Screen: Ekran qurish
       Building an App: Ilova yaratis
+      CS Discoveries Post-Course Survey: CS Discoveries Post-Course Survey
       CS Discoveries Post-course Survey: Informatika kashfiyotlari kursidan keyingi
         so'rovnoma
       Cake Defender: Tort himoyachisi
-      Challenge: Chaqiriq (Chelenj)
+      Challenge: Chaqiriq (Challenge)
       Challenge Levels: Chaqiriq bosqichlari
       Challenges: Chaqiriqlar
       Chance: Shans
@@ -28,9 +31,11 @@ uz:
       Checking for a Winner: G'olibni tekshirish
       Code Your Own Flappy Game: O'z Flappy o'yiningizni yasang
       Collector Game: Kollektor o'yini
+      Collisions: Collisions
       Collisions in Games: O'yinlarda to'qnashuvlar
       Color LEDs: LED ranglar
       Combining Projects: Loyihalarni birlashtirish
+      Combining Representations: Combining Representations
       'Conditionals: If Statements': 'Shartli bayonotlar: If bayonoti'
       'Conditionals: If and If/Else Statements': 'Shartli bayonotlar: If va If/Else
         bayonoti'
@@ -40,9 +45,10 @@ uz:
       Creating a Simulation: Simulyatsiya yaratish
       Data Visualization: Ma'lumotlar Vizualizatsiyasi
       De-bugging with the Step Button: Step tugmasi bilan De-bugging
-      Debugging: Debugging
+      Debugging: Nosozliklarni bartaraf etish (Debugging)
       Debugging with the Step Button: Step tugmasi bilan De-bugging
       Demo Apps: Demo ilovalar
+      Design Mode: Design Mode
       Drawing: Rasm chizish
       Events: Hodisalar
       Events and Linking Screens: Hodisalar va bog'langan ekranlar
@@ -64,6 +70,8 @@ uz:
       For Loops and Repeat Blocks: For sikllari va Repeat bloki
       Functions: Funksiyalar
       Functions with Parameters: Funksiyalar (parameterlari bilan)
+      Getting Properties: Getting Properties
+      Headings: Headings
       How to Create a Simple Function: Oddiy funksiya qanday yasaladi
       How to Make a Sprite: Sprite qanday qilinadi
       Ice Age Loops: Muzlik asri bilan sikllar
@@ -76,11 +84,14 @@ uz:
       Introducing Sprite Lab: Sprite laboratoriyasi bilan tanishish
       Introduction to Arrays: Massivlar bilan tanishish
       Iteration and Parameters: Iteratsiya va Parametrlar
+      Keeping Data Secret: Keeping Data Secret
+      Keyboard Input: Keyboard Input
       LED Apps: LED ilovalar
       Layout with CSS: CSS bilan ko'rinishlar (layout)
       Learning from Simulations: Simulyatsiya yordamida o'rganish
       Lesson Extras: Dars qo‘shimchalari
       Light Show: Chiroqlar shousi
+      Linking Screens: Linking Screens
       Lists: Ro‘yxatlar
       Loops with the Artist: Rassom bilan sikllar
       Make it Interactive: Interfaollik qo'shish
@@ -124,7 +135,9 @@ uz:
       Practice: Amaliyot
       Prediction: Oldindan ko'rish
       Programming with Events: Hodisalar bilan dasturlash
+      Programming with Rey and BB-8: Rey va BB-8 bilan dasturlash
       Programs that Repeat: Takrorlanadigan dasturlar
+      Project: Loyiha
       Project - Background and Variables: Loyiha - Fon va o'zgaruvchilar
       Project - Sprites and Interactions: Loyiha - Spraytlar va interfaollik
       Project Work: Loyiha ishi
@@ -132,11 +145,13 @@ uz:
       RGB Exploration: RGB bilan tanishish
       Reading Sensors: Sensorlarni o'qish
       Recovery: Tiklash
+      Reflection: Reflection
       Repeat Blocks: Repeat bloklari
       Repeat Blocks with BB-8: BB-8 bilan Repeat bloklari
       Repeat Blocks with the Artist: Rassom bilan Repeat bloklari
       Repeat Unit Statements: Repeat Unit bayonoti
       Repeat Until Statements: Repeat Until bayonoti
+      Representing Images: Representing Images
       Run a simulation: Simulyatorni ishga tushurish
       Sample Programs: Dastur shabloni
       Screen Design: Ekran dizayni
@@ -160,7 +175,7 @@ uz:
       The Artist in Code Studio: '"Code Studio"da Rassom'
       The Buzzer: Buzzer
       The Collector: Kollektor
-      The Harvester: Hosil yig'uvchi (Harvester)
+      The Harvester: Terimchi (Harvester)
       UI Element Properties: UI element xususiyatlari
       User Interface: UI - Foydalanuvchi interfeysi
       Using Getters and Setters: Getters va Setterlardan foydalanish
@@ -175,6 +190,7 @@ uz:
       Warm Up: Qizdirish
       Website Project: Veb-sayt loyihasi
       Welcome to Monster Town: Monster Town-ga xush kelibsiz!
+      While Loops with the Farmer: While Loops with the Farmer
       Wrap-up: Yakun
       Your Personal Website: O'z shaxsiy veb-saytingiz
       isTouching: isTouching
