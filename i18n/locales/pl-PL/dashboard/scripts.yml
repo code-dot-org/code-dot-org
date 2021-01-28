@@ -17669,3 +17669,38 @@ pl:
               display_name: Ankieta
           name: csd5-preview-2021
           student_description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie danych są używane do rozwiązywania problemów i jak komputery pomagają w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem, jak proces rozwiązywania problemu z danym może być stosowany w wybranym przez siebie obszarze.
+        contagion-pilot:
+          lessons:
+            new lesson:
+              name: wyświetlana nazwa lekcji
+            how things spread:
+              name: Jak się rozprzestrzeniają
+            contagion simulator setup:
+              name: Konfiguracja symulatora zakażeń
+            sometimes but not always:
+              name: Czasem, ale nie zawsze
+            modifying your model:
+              name: Modyfikujc Twój model
+            telling a data story:
+              name: Opowiadanie historii o danych
+          lesson_groups:
+            lesson group:
+              display_name: wyświetlana nazwa grupy lekcji
+            contagion:
+              display_name: Zakażenie
+          name: pilotaż zakażenia
+          title: 'Symulator zakażeń'
+          description_short: 'Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.'
+          description: 'Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.'
+          student_description: 'Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.'
+        ai-unit-pilot:
+          lessons:
+            new lesson:
+              name: wyświetlana nazwa lekcji
+            lesson14:
+              name: Lekcja 14
+            lesson15:
+              name: Lekcja 15
+          lesson_groups:
+            lesson group:
+              display_name: wyświetlana nazwa grupy lekcji
