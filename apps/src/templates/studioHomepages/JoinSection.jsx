@@ -73,7 +73,8 @@ const styles = {
 const INITIAL_STATE = {
   sectionCode: '',
   isLoaded: false,
-  displayCaptcha: false
+  displayCaptcha: false,
+  sectionAttempts: 0
 };
 
 export default class JoinSection extends React.Component {
@@ -135,7 +136,10 @@ export default class JoinSection extends React.Component {
     const normalizedSectionCode = sectionCode.trim().toUpperCase();
 
     //Reset the form after a request is made and close captcha dialog if necessary
-    this.setState({sectionCode: ''});
+    this.setState({
+      sectionCode: '',
+      sectionAttempts: this.state.sectionAttempts + 1
+    });
     this.close();
 
     $.ajax({
@@ -156,7 +160,6 @@ export default class JoinSection extends React.Component {
           sectionName,
           sectionCode
         );
-        this.setState({sectionAttempts: this.state.sectionAttempts + 1});
       })
       .fail(data => {
         const result =
@@ -169,7 +172,6 @@ export default class JoinSection extends React.Component {
           null,
           normalizedSectionCode
         );
-        this.setState({sectionAttempts: this.state.sectionAttempts + 1});
       });
   };
 
