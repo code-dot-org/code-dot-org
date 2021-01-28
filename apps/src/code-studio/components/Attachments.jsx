@@ -33,7 +33,7 @@ export default class Attachments extends React.Component {
 
   state = {loaded: false};
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     assetsApi.getFiles(this.onAssetListReceived);
   }
 

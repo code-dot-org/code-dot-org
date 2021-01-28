@@ -34,7 +34,7 @@ export default class WorkshopAssignmentLoader extends React.Component {
     loading: true
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.load();
   }
 

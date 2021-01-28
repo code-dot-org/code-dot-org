@@ -90,7 +90,7 @@ class ProjectAppTypeArea extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({
       maxNumProjects: nextProps.projectList ? nextProps.projectList.length : 0
     });
