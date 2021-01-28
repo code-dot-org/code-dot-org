@@ -338,8 +338,8 @@ class Script < ApplicationRecord
 
   # Find the lesson based on its relative position, lockable value, and if it has a lesson plan.
   # Raises `ActiveRecord::RecordNotFound` if no matching lesson is found.
-  def lesson_by_relative_position(position, survey = false)
-    if survey
+  def lesson_by_relative_position(position, use_survey_url = false)
+    if use_survey_url
       lessons.where(lockable: true, has_lesson_plan: false).find_by!(relative_position: position)
     else
       lessons.where(lockable: false).or(lessons.where(has_lesson_plan: true)).find_by!(relative_position: position)
@@ -830,12 +830,14 @@ class Script < ApplicationRecord
   def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, survey)
     relative_position ||= 1
     script_levels.find do |sl|
+      use_survey_url = sl.lesson.lockable? && !sl.lesson.has_lesson_plan?
+
       # make sure we are checking the native properties of the script level
       # first, so we only have to load lesson if it's actually necessary.
       sl.position == puzzle_position.to_i &&
         !sl.bonus &&
         sl.lesson.relative_position == relative_position.to_i &&
-        (survey ? sl.lesson.lockable? == true && sl.lesson.has_lesson_plan? == false : sl.lesson.lockable? == false || sl.lesson.has_lesson_plan? == true)
+        (survey ? use_survey_url : !use_survey_url)
     end
   end
 
