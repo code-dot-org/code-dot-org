@@ -4,13 +4,13 @@ import ProjectCard from './ProjectCard';
 
 const projectProp = PropTypes.shape({
   channel: PropTypes.string.isRequired,
-
   thumbnailUrl: PropTypes.string,
   name: PropTypes.string,
   publishedAt: PropTypes.date,
   studentAgeRange: PropTypes.string,
   studentName: PropTypes.string,
   type: PropTypes.string,
+  topic: PropTypes.string,
   updatedAt: PropTypes.date
 });
 

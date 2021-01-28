@@ -1855,6 +1855,7 @@
   "topCourseLessonIntro": "You are currently working on {lessonName}.",
   "topLeft": "top left",
   "topRight": "top right",
+  "topic": "Topic: {topic}",
   "tos": "Terms of Service",
   "tosLong": "This project has been reported for violating Code.org's [Terms of Service]({url}) and cannot be shared with others.",
   "totalNumLinesOfCodeWritten": "All-time total: {numLines, plural, one {1 line} other {# lines}} of code.",

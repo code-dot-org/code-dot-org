@@ -101,8 +101,14 @@ export default class ProjectCard extends React.Component {
     }
 
     const shouldShowPublicDetails =
-      isPublicGallery && isDetailView && projectData.publishedAt;
+      isPublicGallery &&
+      (isDetailView || projectData.topic) &&
+      projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
+    const topic = projectData.topic;
+    const featuredDetails = topic
+      ? i18n.topic({topic})
+      : i18n.featuredProject();
 
     return (
       <div className="project_card">
@@ -156,7 +162,7 @@ export default class ProjectCard extends React.Component {
           )}
           {shouldShowPublicDetails && projectData.isFeatured && (
             <div style={styles.lastEdit}>
-              <span style={styles.bold}>{i18n.featuredProject()}</span>
+              <span style={styles.bold}>{featuredDetails}</span>
             </div>
           )}
           {isPersonalGallery && projectData.updatedAt && (

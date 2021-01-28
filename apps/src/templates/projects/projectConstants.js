@@ -7,6 +7,7 @@ export const projectDataPropType = PropTypes.shape({
   studentAgeRange: PropTypes.string,
   thumbnailUrl: PropTypes.string,
   type: PropTypes.string.isRequired,
+  topic: PropTypes.string,
   publishedAt: PropTypes.string.isRequired,
   publishedToPublic: PropTypes.bool.isRequired
 });
