@@ -88,4 +88,4 @@ Scenario: Can See Special Topics and View More with Experiment enabled
   Then I wait until element ".ui-project-app-type-area" is in the DOM
   And the project gallery contains 10 project types
   And the project gallery contains 10 view more links
-  And element ".ui-special_topic" contains text "View more Special Topic projects"
+  And element ".ui-special_topic" contains text "View more Featured Topics projects"
