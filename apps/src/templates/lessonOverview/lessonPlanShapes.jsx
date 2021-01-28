@@ -77,8 +77,7 @@ export const lessonShape = PropTypes.shape({
         key: PropTypes.string.isRequired,
         position: PropTypes.number.isRequired,
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        lockable: PropTypes.bool.isRequired
+        link: PropTypes.string.isRequired
       })
     ).isRequired
   }).isRequired,
