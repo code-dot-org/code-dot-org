@@ -2,6 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import trackEvent from '../../util/trackEvent';
+import {songTikTokLinks} from '../../dance/constants';
 
 // Similar UI exists in sharing.html.ejs. At some point int he future, it may
 // make sense to see if we can get rid of the stuff in the .ejs file
@@ -44,6 +45,7 @@ export default class SendToPhone extends React.Component {
     channelId: PropTypes.string,
     downloadUrl: PropTypes.string,
     appType: PropTypes.string.isRequired,
+    selectedSong: PropTypes.string,
     styles: PropTypes.shape({
       label: PropTypes.object,
       div: PropTypes.object
@@ -74,7 +76,13 @@ export default class SendToPhone extends React.Component {
   }
 
   handleSubmit = () => {
-    const {appType, channelId, isLegacyShare, downloadUrl} = this.props;
+    const {
+      appType,
+      channelId,
+      isLegacyShare,
+      downloadUrl,
+      selectedSong
+    } = this.props;
     // Do nothing if we aren't in a state where we can send.
     if (this.state.sendState !== SendState.canSubmit) {
       return;
@@ -93,6 +101,10 @@ export default class SendToPhone extends React.Component {
       params.url = downloadUrl;
     } else {
       params.channel_id = channelId;
+    }
+
+    if (selectedSong) {
+      params.song = songTikTokLinks[selectedSong].link;
     }
 
     const apiUrl = downloadUrl ? '/sms/send_download' : '/sms/send';
