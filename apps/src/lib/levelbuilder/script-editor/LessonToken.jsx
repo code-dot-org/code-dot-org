@@ -162,7 +162,7 @@ export default class LessonToken extends Component {
                 onClick={() => {
                   window.lessonEditorOpened = true;
                   const win = window.open(
-                    `/lessons/${this.props.lesson.id}/edit`,
+                    `${this.props.lesson.lessonEditPath}`,
                     '_blank'
                   );
                   win.focus();
