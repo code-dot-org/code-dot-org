@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LessonTip, {
   tipTypes
@@ -114,7 +114,10 @@ export default class ActivitySection extends Component {
                 })
               }}
             >
-              <SafeMarkdown markdown={section.text} />
+              <EnhancedSafeMarkdown
+                markdown={section.text}
+                expandableImages={true}
+              />
             </div>
           </div>
           <div
