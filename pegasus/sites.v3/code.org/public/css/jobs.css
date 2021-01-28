@@ -7,7 +7,6 @@
 }
 
 .jobs__banner {
-  background: #00adbc;
   background-image: url('/images/jobs/jobs-banner.jpg');
   background-position-x: right;
   background-repeat: no-repeat;
@@ -45,7 +44,7 @@
   padding-bottom: 5px;
 }
 
-.jobs__values-container {
+.jobs__section-container {
   min-height: 100px;
   overflow: hidden;
 }
@@ -58,11 +57,91 @@
   float: left;
   height: 250px;
   width: 116px;
-  background: teal;
-  display: block;
   color: white;
   margin: 0 8px;
   padding: 10px;
+  background: linear-gradient(
+    18deg,
+    rgba(0, 0, 0, 0.26) 0%,
+    rgba(255, 255, 255, 0) 34.9%
+  );
+}
+
+.jobs__benefits-container {
+  min-height: 100px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.jobs__benefits-tile {
+  color: white;
+  float: left;
+  font-weight: 900;
+  font-size: 17px;
+  width: 293px;
+  height: 80px;
+  margin: 5px;
+  padding: 19px;
+}
+
+.jobs__benefits-decorator {
+  color: white;
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  padding: 15px;
+  position: relative;
+}
+
+.jobs__benefits-icon {
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.jobs__benefits-left {
+  margin-left: 0px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(243, 243, 243, 0) 100%
+  );
+}
+
+.jobs__benefits-right {
+  margin-right: 0px;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(243, 243, 243, 0) 100%
+  );
+}
+
+.jobs__teal {
+  background-color: #00adbc;
+}
+
+.jobs__purple {
+  background-color: #7665a0;
+}
+
+.jobs__orange {
+  background-color: #ffa400;
+}
+
+.jobs__cyan {
+  background-color: #0094ca;
+}
+
+.jobs__green {
+  background-color: #b9bf15;
+}
+
+.jobs__dark-gray {
+  background-color: #4d575f;
 }
 
 .jobs__left {
