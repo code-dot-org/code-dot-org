@@ -1,5 +1,5 @@
 {
-  "category": "Location",
+  "category": "Sprites",
   "config": {
     "func": "locationOf",
     "blockText": "location of {SPRITE}",

@@ -244,7 +244,8 @@ class Lesson < ApplicationRecord
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
-        unplugged: display_as_unplugged # TODO: Update to use unplugged property
+        unplugged: display_as_unplugged, # TODO: Update to use unplugged property
+        lessonEditPath: edit_lesson_path(id: id)
       }
 
       # Use to_a here so that we get access to the cached script_levels.
@@ -323,7 +324,8 @@ class Lesson < ApplicationRecord
       vocabularies: vocabularies.map(&:summarize_for_edit),
       objectives: objectives.map(&:summarize_for_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
-      scriptPath: script_path(script)
+      scriptPath: script_path(script),
+      lessonPath: lesson_path(id: id)
     }
   end
 
