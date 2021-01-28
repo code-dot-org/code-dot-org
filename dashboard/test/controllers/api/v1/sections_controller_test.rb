@@ -963,11 +963,11 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   # TODO: Update once captcha logic in user model is inserted
-  test "require_captcha: returns object with recaptcha site key" do
+  test "require_captcha: returns object with recaptcha site key and number of section attempts" do
     user = create(:user)
     sign_in user
     get :require_captcha
-    expected_response = {key: Recaptcha.configuration.site_key}.as_json
+    expected_response = {key: Recaptcha.configuration.site_key, sectionAttempts: 0}.as_json
     assert_equal(expected_response, json_response)
   end
 
@@ -980,5 +980,18 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in user
     get :require_captcha
     assert_equal(json_response["key"], GOOGLE_PROVIDED_TEST_KEY)
+  end
+
+  test "require_captcha serves dynamic value for number of section attempts" do
+    user = create(:user)
+    sign_in user
+    3.times do
+      post :student_register, params: {section_code: 'ABCDEF'}
+    end
+    get :require_captcha
+    assert_equal(json_response["sectionAttempts"], "3")
+    post :student_register, params: {section_code: 'ABCDEF'}
+    get :require_captcha
+    assert_equal(json_response["sectionAttempts"], "4")
   end
 end

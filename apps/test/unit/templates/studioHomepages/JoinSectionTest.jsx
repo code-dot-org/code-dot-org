@@ -197,11 +197,9 @@ describe('JoinSection', () => {
       {'Content-Type': 'application/json'},
       ''
     ]);
-
     const updateSectionsResult = sinon.spy(function() {
       expect(wrapper.state('sectionCode')).to.equal('');
       expect(wrapper.find('input').prop('value')).to.equal('');
-
       expect(updateSectionsResult).to.have.been.calledOnce;
 
       done();
@@ -251,5 +249,14 @@ describe('JoinSection', () => {
         .at(0)
         .props().isOpen
     ).to.equal(true);
+  });
+
+  it.only('increments section attempts on section join attempt', () => {
+    const wrapper = shallow(<JoinSection{...DEFAULT_PROPS}/>);
+    wrapper.setState({isLoaded: true});
+    expect(wrapper.state('sectionAttempts')).to.equal(0);
+    wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
+    wrapper.find('Button').simulate('click');
+    expect(wrapper.state('sectionAttempts')).to.equal(1);
   });
 });
