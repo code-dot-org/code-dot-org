@@ -827,17 +827,17 @@ class Script < ApplicationRecord
     script_levels.find(id: script_level_id.to_i)
   end
 
-  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, survey)
+  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, use_survey_url)
     relative_position ||= 1
     script_levels.find do |sl|
-      use_survey_url = sl.lesson.lockable? && !sl.lesson.has_lesson_plan?
+      use_survey_url_conditions = sl.lesson.lockable? && !sl.lesson.has_lesson_plan?
 
       # make sure we are checking the native properties of the script level
       # first, so we only have to load lesson if it's actually necessary.
       sl.position == puzzle_position.to_i &&
         !sl.bonus &&
         sl.lesson.relative_position == relative_position.to_i &&
-        (survey ? use_survey_url : !use_survey_url)
+        (use_survey_url ? use_survey_url_conditions : !use_survey_url_conditions)
     end
   end
 
