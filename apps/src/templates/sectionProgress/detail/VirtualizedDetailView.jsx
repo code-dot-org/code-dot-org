@@ -91,7 +91,7 @@ class VirtualizedDetailView extends Component {
     this.setDetailViewRef = this.setDetailViewRef.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     // When we replace the script, re-compute the column widths
     if (this.props.scriptData.id !== nextProps.scriptData.id) {
       this.detailView.recomputeGridSize();

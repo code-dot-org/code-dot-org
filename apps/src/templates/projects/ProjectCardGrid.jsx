@@ -49,7 +49,7 @@ class ProjectCardGrid extends Component {
     limitedGallery: PropTypes.bool
   };
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (
       nextProps.selectedGallery !== this.props.selectedGallery &&
       nextProps.selectedGallery === Galleries.PUBLIC

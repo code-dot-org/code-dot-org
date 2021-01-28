@@ -50,7 +50,7 @@ class SectionProjectsList extends Component {
     this.setState({selectedStudent});
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const studentNames = SectionProjectsList.getStudentNames(
       nextProps.projectsData
     );
