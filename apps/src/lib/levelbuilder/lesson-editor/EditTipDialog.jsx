@@ -1,23 +1,19 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import _ from 'lodash';
+
 import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import LessonTip, {
   tipTypes
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
-import _ from 'lodash';
+import i18n from '@cdo/locale';
 import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
+
 import ConfirmDeleteButton from '../../../storage/dataBrowser/ConfirmDeleteButton';
+import LessonEditorDialog from './LessonEditorDialog';
 
 const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingBottom: 20,
-    paddingRight: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  },
   dialogContent: {
     display: 'flex',
     flexDirection: 'column'
@@ -76,11 +72,9 @@ export default class EditTipDialog extends Component {
 
   render() {
     return (
-      <BaseDialog
+      <LessonEditorDialog
         isOpen={this.props.isOpen}
         handleClose={this.handleClose}
-        useUpdatedStyles
-        style={styles.dialog}
       >
         <div style={styles.dialogContent}>
           <h2>Add Callout</h2>
@@ -123,7 +117,7 @@ export default class EditTipDialog extends Component {
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>
-      </BaseDialog>
+      </LessonEditorDialog>
     );
   }
 }
