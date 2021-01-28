@@ -87,8 +87,7 @@ class VirtualizedSummaryView extends Component {
           <SectionProgressLessonNumberCell
             position={stageData.position}
             relativePosition={stageData.relative_position}
-            lockable={stageData.lockable}
-            hasLessonPlan={stageData.hasLessonPlan}
+            numberedLesson={stageData.numberedLesson}
             tooltipId={tooltipIdForLessonNumber(columnIndex)}
             onSelectDetailView={() =>
               this.props.jumpToLessonDetails(stageData.position)

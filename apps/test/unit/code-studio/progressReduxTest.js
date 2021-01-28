@@ -1160,31 +1160,27 @@ describe('progressReduxTest', () => {
       assert.strictEqual(processed[1].hidden, undefined);
     });
 
-    it('adds stageNumber to lesson, not to survey (lockable: true and has_lesson_plan: false)', () => {
+    it('adds stageNumber to numbered lessons', () => {
       const stages = [
         {
           name: 'lesson1',
           id: 123,
-          lockable: true,
-          hasLessonPlan: true
+          numberedLesson: true
         },
         {
           name: 'lesson2',
           id: 124,
-          lockable: false,
-          hasLessonPlan: true
+          numberedLesson: true
         },
         {
           name: 'survey1',
           id: 125,
-          lockable: true,
-          hasLessonPlan: false
+          numberedLesson: false
         },
         {
           name: 'lesson3',
           id: 126,
-          lockable: false,
-          hasLessonPlan: false
+          numberedLesson: true
         }
       ];
 

@@ -182,7 +182,7 @@ class Lesson < ApplicationRecord
   def localized_title
     # The standard case for localized_title is something like "Lesson 1: Maze".
     # In the case of lockable lessons without lesson plans, we don't want to include the Lesson 1
-    return localized_name if lockable && !has_lesson_plan
+    return localized_name unless numbered_lesson?
 
     if script.lessons.to_a.many?
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
@@ -241,6 +241,7 @@ class Lesson < ApplicationRecord
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
         hasLessonPlan: has_lesson_plan,
+        numberedLesson: numbered_lesson?,
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
