@@ -82,7 +82,6 @@ export const lessonShape = PropTypes.shape({
     ).isRequired
   }).isRequired,
   position: PropTypes.number.isRequired,
-  lockable: PropTypes.bool.isRequired,
   key: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
