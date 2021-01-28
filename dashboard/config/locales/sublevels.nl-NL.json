@@ -1,0 +1,199 @@
+{
+  "nl-NL": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Acties",
+              "Events": "Gebeurtenissen",
+              "Loops": "Lussen",
+              "Math": "wiskundige",
+              "Logic": "Logica",
+              "Games/Score": "Spellen/Score"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Wereld",
+              "Dancers": "Dansers",
+              "Properties": "Eigenschappen",
+              "Events": "Gebeurtenissen",
+              "Numbers": "Getallen",
+              "Logic": "Logica"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "teken een ster",
+                "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+                "parameters": {
+                  "points": "punten",
+                  "length": "lengte"
+                }
+              },
+              "draw a circle": {
+                "name": "teken een cirkel",
+                "description": "teken een cirkel met gegeven straal",
+                "parameters": {
+                  "radius": "straal"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "teken een windmolen",
+                "parameters": {
+                  "sides": "zijden",
+                  "length": "lengte",
+                  "repeat": "herhaal"
+                }
+              },
+              "draw a triangle": {
+                "name": "teken een driehoek",
+                "parameters": {
+                  "length": "lengte"
+                }
+              },
+              "draw a shape": {
+                "name": "teken een vorm",
+                "parameters": {
+                  "sides": "zijden",
+                  "length": "lengte"
+                }
+              },
+              "draw a house": {
+                "name": "teken een huis",
+                "parameters": {
+                  "length": "lengte"
+                }
+              },
+              "draw a square": {
+                "name": "teken een vierkant",
+                "parameters": {
+                  "length": "lengte"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Wereld",
+              "Sprites": "Sprites",
+              "Actions": "Acties",
+              "Events": "Gebeurtenissen",
+              "Behaviors": "Gedrag"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Wereld",
+              "Dancers": "Dansers",
+              "Properties": "Eigenschappen",
+              "Events": "Gebeurtenissen",
+              "Numbers": "Getallen",
+              "Logic": "Logica"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Acties",
+              "Brushes": "Borstels",
+              "Loops": "Lussen",
+              "Math": "wiskundige",
+              "Logic": "Logica",
+              "Functions": "Functies",
+              "Variables": "Variabelen"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Wereld",
+              "Sprites": "Sprites",
+              "Locations": "Plaatsen",
+              "Actions": "Acties",
+              "Events": "Gebeurtenissen",
+              "Behaviors": "Gedrag",
+              "Variables": "Variabelen",
+              "Math": "wiskundige",
+              "Logic": "Logica",
+              "Functions": "Functies",
+              "Text": "Tekst",
+              "Comments": "Opmerkingen"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Wereld",
+              "Sprites": "Sprites",
+              "Locations": "Plaatsen",
+              "Actions": "Acties",
+              "Events": "Gebeurtenissen",
+              "Behaviors": "Gedrag",
+              "Variables": "Variabelen",
+              "Math": "wiskundige",
+              "Logic": "Logica",
+              "Functions": "Functies",
+              "Text": "Tekst",
+              "Comments": "Opmerkingen"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Acties",
+              "Brushes": "Borstels",
+              "Loops": "Lussen",
+              "Math": "wiskundige",
+              "Logic": "Logica",
+              "Functions": "Functies",
+              "Variables": "Variabelen"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Wereld",
+              "Sprites": "Sprites",
+              "Actions": "Acties",
+              "Events": "Gebeurtenissen",
+              "Logic": "Logica",
+              "Math": "wiskundige"
+            },
+            "behavior_names": {
+              "recovering": "herstellend",
+              "moving left and right": "links en rechts bewegen",
+              "moving with arrow keys": "bewegen met de pijtjestoetsen"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Wereld",
+              "Sprites": "Sprites",
+              "Actions": "Acties",
+              "Behaviors": "Gedrag",
+              "Events": "Gebeurtenissen",
+              "Locations": "Plaatsen",
+              "Logic": "Logica",
+              "Loops": "Lussen",
+              "Math": "wiskundige",
+              "Variables": "Variabelen",
+              "Functions": "Functies",
+              "Comments": "Opmerkingen"
+            },
+            "behavior_names": {
+              "recovering": "herstellend",
+              "moving left and right": "links en rechts bewegen",
+              "moving with arrow keys": "bewegen met de pijtjestoetsen"
+            }
+          }
+        }
+      }
+    }
+  }
+}
