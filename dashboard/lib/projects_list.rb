@@ -16,9 +16,11 @@ module ProjectsList
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance'],
-    library: ['applab', 'gamelab'],
-    special: ['special']
+    library: ['applab', 'gamelab']
   }.freeze
+
+  SPECIAL = {special: ['special']}.freeze
+  PUBLISHED_PROJECT_TYPE_GROUPS_WITH_SPECIAL = PUBLISHED_PROJECT_TYPE_GROUPS.merge(SPECIAL).freeze
 
   # Sharing of advanced project types to the public gallery is restricted for
   # young students unless sharing is explciitly enabled by the student's

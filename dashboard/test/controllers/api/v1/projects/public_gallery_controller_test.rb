@@ -125,7 +125,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     assert_equal "max-age=5, public", @response.headers["Cache-Control"]
     categories_list = JSON.parse(@response.body)
 
-    assert_equal ProjectsList::PUBLISHED_PROJECT_TYPE_GROUPS.keys.map(&:to_s).sort, categories_list.keys.sort
+    assert_equal ProjectsList::PUBLISHED_PROJECT_TYPE_GROUPS_WITH_SPECIAL.keys.map(&:to_s).sort, categories_list.keys.sort
     assert_equal 1, categories_list['applab'].length
     assert_empty categories_list['gamelab']
     assert_empty categories_list['playlab']
