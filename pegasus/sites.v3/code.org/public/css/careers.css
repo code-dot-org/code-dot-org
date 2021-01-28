@@ -219,3 +219,19 @@ ul li:before {
 .careers__future {
   margin: 10px 0 30px 0;
 }
+
+.careers__team-photos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 24px 0;
+}
+
+.careers__team-photos img {
+  max-height: 198px;
+  max-width: 100%;
+  margin: 12px 0;
+}
+
+.careers__team-photos img:first-of-type {
+  margin-right: 12px;
+}
