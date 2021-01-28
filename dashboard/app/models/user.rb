@@ -2294,7 +2294,7 @@ class User < ApplicationRecord
     self.section_attempts += 1
     # users can register while joining a section,
     # so we should not save section attempts if new user hasn't been persisted
-    save if persisted?
+    save! if persisted?
   end
 
   private
