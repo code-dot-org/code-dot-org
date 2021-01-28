@@ -217,7 +217,8 @@ ul li:before {
 }
 
 .careers__future {
-  margin: 10px 0 30px 0;
+  margin: 10px 0;
+  margin-bottom: 0;
 }
 
 .careers__team-photos {
