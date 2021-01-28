@@ -174,6 +174,11 @@ class Lesson < ApplicationRecord
     script_levels.first.oldest_active_level.spelling_bee?
   end
 
+  # We number lessons that either have lesson plans or are not lockable
+  def numbered_lesson?
+    has_lesson_plan || !lockable
+  end
+
   def localized_title
     # The standard case for localized_title is something like "Lesson 1: Maze".
     # In the case of lockable lessons, we don't want to include the Lesson 1
