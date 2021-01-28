@@ -90,7 +90,7 @@ class ProjectCardGrid extends Component {
                 labKey="special_topic"
                 labName={i18n.projectTypeSpecialTopic()}
                 labViewMoreString={i18n.projectTypeSpecialTopicViewMore()}
-                projectList={projectLists.special_topic}
+                projectList={projectLists.special}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
                 navigateFunction={this.onSelectApp}
