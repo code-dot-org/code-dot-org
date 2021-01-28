@@ -1,5 +1,5 @@
 {
-  "category": "Unused",
+  "category": "Location",
   "config": {
     "expression": "{x: World.mouseX, y: World.mouseY}",
     "name": "mouseLocation",

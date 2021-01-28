@@ -37,6 +37,7 @@ class PublicGallery extends Component {
 
     // Provided by Redux
     projectLists: PropTypes.shape({
+      special_topic: PropTypes.arrayOf(publishedProjectPropType),
       applab: PropTypes.arrayOf(publishedProjectPropType),
       spritelab: PropTypes.arrayOf(publishedProjectPropType),
       gamelab: PropTypes.arrayOf(publishedProjectPropType),
