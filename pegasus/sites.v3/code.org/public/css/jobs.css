@@ -46,7 +46,8 @@
 }
 
 .jobs__values-container {
-  height: 250px;
+  min-height: 100px;
+  overflow: hidden;
 }
 
 .jobs__values-tile {
