@@ -1,19 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import _ from 'lodash';
+
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import color from '@cdo/apps/util/color';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import _ from 'lodash';
+
+import LessonEditorDialog from './LessonEditorDialog';
 
 const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  },
   container: {
     display: 'flex',
     flexDirection: 'column'
@@ -171,11 +167,9 @@ export default class AddResourceDialog extends Component {
 
   render() {
     return (
-      <BaseDialog
+      <LessonEditorDialog
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
-        useUpdatedStyles
-        style={styles.dialog}
       >
         <h2>
           {this.props.existingResource ? 'Edit Resource' : 'Add Resource'}
@@ -291,7 +285,7 @@ export default class AddResourceDialog extends Component {
             />
           </DialogFooter>
         </form>
-      </BaseDialog>
+      </LessonEditorDialog>
     );
   }
 }
