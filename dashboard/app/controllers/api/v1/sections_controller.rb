@@ -127,11 +127,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     if current_user.display_captcha?
       recaptcha_token = params[:recaptchaToken] || ""
       is_verified = verify_recaptcha_token(recaptcha_token)
+      current_user.increment_section_attempts
       unless is_verified
         render json: {
           result: 'captcha_failed'
         }, status: :bad_request
-        return
       end
     end
 
@@ -142,7 +142,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       render json: {
         result: 'section_owned'
       }, status: :bad_request
-      return
     end
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
