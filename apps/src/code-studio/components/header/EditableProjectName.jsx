@@ -17,6 +17,9 @@ const styles = {
   buttonWrapper: {
     float: 'left',
     display: 'flex'
+  },
+  button: {
+    margin: 0
   }
 };
 
@@ -35,12 +38,14 @@ class UnconnectedDisplayProjectName extends React.Component {
           </div>
           <ProjectUpdatedAt />
         </div>
-        <div
+        <button
+          type="button"
           className="project_edit header_button header_button_light"
+          style={styles.button}
           onClick={this.props.beginEdit}
         >
           {i18n.rename()}
-        </div>
+        </button>
       </div>
     );
   }
