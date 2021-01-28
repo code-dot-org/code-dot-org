@@ -88,6 +88,8 @@ class Lesson < ApplicationRecord
           l.has_lesson_plan = true # will be reset below if specified
         end
 
+      use_survey_url = !raw_lesson[:has_lesson_plan] && !!raw_lesson[:lockable]
+
       lesson.assign_attributes(
         name: raw_lesson[:name],
         absolute_position: (counters.lesson_position += 1),
@@ -95,7 +97,7 @@ class Lesson < ApplicationRecord
         lockable: !!raw_lesson[:lockable],
         has_lesson_plan: !!raw_lesson[:has_lesson_plan],
         visible_after: raw_lesson[:visible_after],
-        relative_position: !!raw_lesson[:has_lesson_plan] || !raw_lesson[:lockable] ? (counters.lesson_count += 1) : (counters.survey_count += 1)
+        relative_position: use_survey_url ? (counters.survey_count += 1) : (counters.lesson_count += 1)
       )
       lesson.save! if lesson.changed?
 
