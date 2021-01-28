@@ -10123,7 +10123,7 @@ columns:
     name: script_id
     table_name: teacher_feedbacks
     sql_type_metadata: *3
-    'null': true
+    'null': false
     default: 
     default_function: 
     collation: 

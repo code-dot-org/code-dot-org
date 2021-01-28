@@ -114,6 +114,8 @@ class User < ApplicationRecord
     data_transfer_agreement_kind
     data_transfer_agreement_at
     parent_email_banner_dismissed
+    section_attempts
+    section_attempts_last_reset
   )
 
   # Include default devise modules. Others available are:
@@ -2259,6 +2261,40 @@ class User < ApplicationRecord
     else
       [provider]
     end
+  end
+
+  # Returns number of times a user has attempted to join a section in the last 24 hours
+  # Returns 0 if no section join attempts
+  def num_section_attempts
+    section_attempts || 0
+  end
+
+  # There are two possible states in which we would want to reset section attempts
+  # 1) Initialize for the first time 2) 24 hours have passed since last reset
+  def reset_section_attempts?
+    # subtracting DateTimes returns the difference of days as a floating point number
+    # By casting to an int, we can check whether at least a full day has passed.
+    !section_attempts_last_reset || num_section_attempts == 0 || (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
+  end
+
+  def display_captcha?
+    # If 24 hours has passed since last reset, return false.
+    if section_attempts_last_reset && (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
+      return false
+    else
+      return num_section_attempts >= 3
+    end
+  end
+
+  def increment_section_attempts
+    if reset_section_attempts?
+      self.section_attempts = 0
+      self.section_attempts_last_reset = DateTime.now.to_s
+    end
+    self.section_attempts += 1
+    # users can register while joining a section,
+    # so we should not save section attempts if new user hasn't been persisted
+    save! if persisted?
   end
 
   private
