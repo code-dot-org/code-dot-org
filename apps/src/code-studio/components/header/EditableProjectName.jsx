@@ -19,7 +19,8 @@ const styles = {
     display: 'flex'
   },
   button: {
-    margin: 0
+    marginTop: 0,
+    marginBottom: 0
   }
 };
 
@@ -118,13 +119,15 @@ class UnconnectedEditProjectName extends React.Component {
             }}
           />
         </div>
-        <div
+        <button
+          type="button"
           className="project_save header_button header_button_light"
           onClick={this.saveNameChange}
           disabled={this.state.savingName}
+          style={styles.button}
         >
           {i18n.save()}
-        </div>
+        </button>
         <NameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
