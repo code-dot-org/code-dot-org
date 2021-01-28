@@ -16,7 +16,8 @@ module ProjectsList
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance'],
-    library: ['applab', 'gamelab']
+    library: ['applab', 'gamelab'],
+    special: ['special']
   }.freeze
 
   # Sharing of advanced project types to the public gallery is restricted for
