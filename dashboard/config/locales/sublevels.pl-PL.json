@@ -21,7 +21,10 @@
               "Events": "Zdarzenia",
               "Numbers": "Liczby",
               "Logic": "Logika"
-            }
+            },
+            "display_name": "Twórz taniec",
+            "short_instructions": "Twórz własny taniec!",
+            "long_instructions": "Twórz własny taniec!"
           },
           "CourseD_EOC_artist": {
             "function_definitions": {
@@ -73,7 +76,10 @@
                   "length": "długość"
                 }
               }
-            }
+            },
+            "display_name": "Twórz obraz",
+            "short_instructions": "Twórz własną ilustrację!",
+            "long_instructions": "Twórz własną ilustrację!"
           }
         },
         "courseE_EOC_2020": {
@@ -110,7 +116,10 @@
               "Events": "Zdarzenia",
               "Numbers": "Liczby",
               "Logic": "Logika"
-            }
+            },
+            "display_name": "Twórz taniec",
+            "short_instructions": "Twórz własny taniec!",
+            "long_instructions": "Twórz własny taniec!"
           },
           "Course F: Artist Project_2020": {
             "block_categories": {
@@ -222,7 +231,9 @@
               "moving west": "przechodzenie na zachód",
               "patrolling": "patrolowanie",
               "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek"
-            }
+            },
+            "display_name": "Standardowy przybornik",
+            "short_instructions": "Wprowadź dowolne zmiany lub ulepszenia w swoim projekcie, jakie tylko chcesz."
           },
           "outbreak_freeplay": {
             "block_categories": {
@@ -254,7 +265,9 @@
               "moving west": "przechodzenie na zachód",
               "patrolling": "patrolowanie",
               "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek"
-            }
+            },
+            "display_name": "Powiększony przybornik",
+            "short_instructions": "Wprowadź dowolne zmiany lub ulepszenia w swoim projekcie, jakie tylko chcesz."
           }
         }
       }

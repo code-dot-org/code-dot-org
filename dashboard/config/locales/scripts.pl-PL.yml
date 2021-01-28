@@ -20344,6 +20344,7 @@ pl:
               name: Projekt - Aplikacja dla decydenta - Część 3
             'Lesson 15: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+          name: csp4-2020
         csp5-2020:
           title: CSP Jednostka 5 - Listy, pętle i połączenia ('20-'21)
           lesson_groups:
@@ -20396,6 +20397,7 @@ pl:
               name: Jednostka  5 Ankieta dla UCZNIA
             Unit 5 TEACHER Survey:
               name: Jednostka  5 Ankieta dla NAUCZYCIELA
+          name: csp5-2020
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
@@ -24108,6 +24110,7 @@ pl:
               name: 'Lekcja 14: Dzień sprawdzianu'
             CS Principles Pre-survey:
               name: Ankieta wstępna dotyczące zasad informatyki
+          name: csp1-2020
         csp2-2020:
           title: CSP Jednostka 2 - Internet ('20-'21)
           lesson_groups:
@@ -24134,6 +24137,7 @@ pl:
               name: Projekt - Dylematy z Internetem Część 2
             'Lesson 9: Assessment Day':
               name: 'Lekcja 9: Dzień sprawdzianu'
+          name: csp2-2020
         csp3-2020:
           title: Część 3 CSP - Wprowadzenie do projektowania aplikacji ('20-'21)
           lesson_groups:
@@ -24195,6 +24199,7 @@ pl:
               name: Utwórz PT - Sporządź plan
             Create PT - Complete the Task:
               name: Utwórz PT - Wykonaj zadanie
+          name: csp8-2020
         csp9-2020:
           title: CSP Jednostka 9 - Dane ('20-'21)
           lesson_groups:
@@ -24221,6 +24226,7 @@ pl:
               name: Projekt - Opowiedz historię o danych - Część 2
             'Lesson 9: Assessment Day':
               name: 'Lekcja 9: Dzień sprawdzianu'
+          name: csp9-2020
         csp10-2020:
           title: CSP Jednostka 10 - Cyberbezpieczeństwo i oddziaływanie globalne ('20-'21)
           lesson_groups:
@@ -24263,6 +24269,7 @@ pl:
               name: 'Projekt: Symulacja innowacji Część 7'
             'Lesson 14: Unit Assessment Day':
               name: 'Lekcja 14: Dzień sprawdzianu Jednostki'
+          name: csp10-2020
         csp-march-virtual:
           title: Zasady informatyki 20-21 Szkolenie dotyczące programu nauczania dla
             prowadzących
@@ -28271,14 +28278,54 @@ pl:
           description: Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.
           student_description: Użyj Sprite Lab, aby zaprogramować symulację epidemii
             wirusa.
+        contagion-guided-practice:
+          description_audience: 5. klasa
         ai-unit-pilot:
           lessons:
             new lesson:
               name: wyświetlana nazwa lekcji
+            intro:
+              name: Lekcja 1
+            lesson1:
+              name: Lekcja 1
+            lesson2:
+              name: Lekcja 2
+            lesson3:
+              name: Lekcja 3
+            lesson4:
+              name: Lekcja 4
+            lesson5:
+              name: Lekcja 5
+            lesson6:
+              name: Lekcja 6
+            lesson7:
+              name: Lekcja 7
+            lesson8:
+              name: Lekcja 8
+            lesson9:
+              name: Lekcja 9
+            lesson10:
+              name: Lekcja 10
+            lesson11:
+              name: Lekcja 11
+            lesson12:
+              name: Lekcja 12
+            lesson13:
+              name: Lekcja 13
             lesson14:
               name: Lekcja 14
             lesson15:
               name: Lekcja 15
+            lesson16:
+              name: Lekcja 16
+            lesson17:
+              name: Lekcja 17
+            lesson18:
+              name: Lekcja 18
+            lesson19:
+              name: Lekcja 19
+            lesson20:
+              name: Lekcja 20
           lesson_groups:
             lesson group:
               display_name: wyświetlana nazwa grupy lekcji
