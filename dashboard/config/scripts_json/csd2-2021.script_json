@@ -2188,7 +2188,7 @@
           {
             "key": "tip",
             "type": "teachingTip",
-            "markdown": "![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/20170510_080450.jpg){style=\"float:right; width:200px\"}\r\n\r\n**Anchor Chart / Poster:** Throughout this unit students will be keeping track of the tags they learn. This warm-up prompts students to record the HTML tags that they learn by writing them in their journals. If you wish, you can also keep track of the same information on a shared class poster or anchor chart that you update after each lesson. Prompts throughout the unit will tell you when students should update their journals, and updating the anchor chart may provide reinforcement of that process.\r\n"
+            "markdown": "[pull-right]\n\n![](https://images.code.org/e1dad1fb71c33b94f0b455ac5c116494-image-1611863995429.jpg)\n\n[/pull-right]\n\n**Anchor Chart / Poster:** Throughout this unit students will be keeping track of the tags they learn. This warm-up prompts students to record the HTML tags that they learn by writing them in their journals. If you wish, you can also keep track of the same information on a shared class poster or anchor chart that you update after each lesson. Prompts throughout the unit will tell you when students should update their journals, and updating the anchor chart may provide reinforcement of that process.\n"
           }
         ],
         "name": "Tags Poster\r"
