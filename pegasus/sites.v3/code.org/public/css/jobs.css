@@ -39,6 +39,39 @@
   padding: 6px 24px;
 }
 
+.jobs__values-icon {
+  height: 65px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.jobs__values-container {
+  height: 250px;
+}
+
+.jobs__values-tile {
+  line-height: 20px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 900;
+  float: left;
+  height: 250px;
+  width: 116px;
+  background: teal;
+  display: block;
+  color: white;
+  margin: 0 8px;
+  padding: 10px;
+}
+
+.jobs__left {
+  margin-left: 0px;
+}
+
+.jobs__right {
+  margin-right: 0px;
+}
+
 .lever-job-tag {
   margin-left: 10px;
 }
