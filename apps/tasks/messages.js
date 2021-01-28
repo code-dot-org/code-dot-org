@@ -30,8 +30,8 @@ module.exports = function(grunt) {
             // pseudo-translation in an unexpected way and we cannot process it. This catches that error and skips the
             // problem file. The english strings will be used instead and translators will have to go to the Crowdin
             // website in order to translate the strings for that file.
-            let errorMsg = `Error processing Crowdin in-context localization file. Using the in-context translation tool will not work for strings in ${src}: ${e}`;
-            grunt.log.warn(errorMsg);
+            let msg = `Error processing Crowdin in-context localization file. Using the in-context translation tool will not work for strings in ${src}: ${e}`;
+            grunt.log.debug(msg);
           } else {
             let errorMsg = `Error processing localization file ${src}: ${e}`;
             if (grunt.option('force')) {
