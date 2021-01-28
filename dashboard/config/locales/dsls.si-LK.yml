@@ -826,8 +826,8 @@ si-LK:
         title: බහුවරණ
       K-1 Happy Maps Multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
         - {}
         - {}
         questions:
@@ -1841,3 +1841,5 @@ si-LK:
         - {}
         questions:
         - {}
+      outbreak_freeplay_choice:
+        display_name: නොමිලේ ක්‍රීඩා කිරීම

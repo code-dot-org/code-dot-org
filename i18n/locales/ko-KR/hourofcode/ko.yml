@@ -43,8 +43,8 @@ ko:
     됩니다.
   hoc2020_ai_subheader: 아워오브코드 2020이 다가오고 있습니다!
   hoc2020_ai_header: 인공 지능 탐구
-  hoc2020_ai_description: AI와 머신 러닝이 우리 전 세계에 영향을 미치고 있습니다. 새로운 비디오 시리즈에서 AI를 탐구하고,
-    25개 언어로 AI를 Oceans에 대해서 훈련시키고, 윤리와 AI에 대해 논의하는 등, 많은 것을 저희와 함께 하십시오...
+  hoc2020_ai_description: AI와 머신 러닝이 우리 전 세계에 영향을 미치고 있습니다. 저희와 함께 새 비디오 시리즈로 AI를
+    탐구하고, 25개 언어로 바다환경을 위한 AI를 교육하며, 윤리와 AI에 관해 토론하세요...
   hoc2019_header: 컴퓨터 과학을 배우세요. 세상을 바꾸세요.
   hoc2019_header_line1_mobile: 컴퓨터 과학을 배우세요.
   hoc2019_header_line2_mobile: 세상을 바꾸세요.
@@ -54,22 +54,21 @@ ko:
   social_hoc_is_coming: 아워오브코드가 다가오고 있습니다!
   social_hoc2019_hoc_is_about_csforgood: "#HourOfCode는 #CSforGood에 관한 것입니다. 컴퓨터 과학을
     배우세요. 세상을 바꾸세요. "
-  social_hoc2019_coming_dates: 아워 오브 코드는 2019년 12월 9~15일에 찾아옵니다. 컴퓨터 과학은 모든 학생의 배움에
-    기초가 됩니다.
-  social_hoc2019_dance: Katy Perry, Shawn Mendes, Panic가 나옵니다! Disco, Lil Nas X, Jonas
-    Brothers, Nicki Minaj 등  34개 이상!
+  social_hoc2019_coming_dates: 아워오브코드는 2020년 12월 9~15일에 열립니다. 컴퓨터 과학은 모든 학생들의 학습에  기초가
+    됩니다.
+  social_hoc2019_dance: Katy Perry, Shawn Mendes, Panic가 나옵니다! Disco에서, Lil Nas X,
+    Jonas Brothers, Nicki Minaj 등  34개 이상의 팀이 함께 합니다!
   oceans_landing_title: 바다환경을 위한 AI
   oceans_landing_description: 머신 러닝과 AI의 윤리적 사용에 관해 배우세요.
   cs_for_good_hashtag: "#CSforGood"
   oceans_landing_specs: 25개 이상 언어로 지원 |  3학년 이상
   oceans_landing_explanation: 컴퓨터 과학은 코딩 그 이상의 것에 관한 학문입니다! 인공지능 (AI)과 머신러닝, 트레이닝
     데이터, 편견에 관해 배우는 한편 윤리 문제를 탐구하고 AI로 세계적 문제를 어떻게 해결할지 알아보세요. AI에 관한 더 많은 내용을 가르치기
-    위한 새로운 여정에서 Code.org의 제일보를 즐기세요. 바다환경을 위한 AI 활동은 사용할 때, 실제 머신러닝 모델을 훈련시키게 될 것입니다.
-    <a href='#behind-the-scenes'>더보기</a>.
+    위한 새로운 여정에서 Code.org의 제일보를 즐기세요. 바다환경을 위한 AI 활동은 사용할 때, 실제 머신러닝 모델을 교육시킵니다. <a
+    href='#behind-the-scenes'>더보기</a>.
   oceans_landing_explanation_markdown: 컴퓨터 과학은 코딩 그 이상의 것에 관한 학문입니다! 인공지능 (AI)과 머신러닝,
     트레이닝 데이터, 편견에 관해 배우는 한편 윤리 문제를 탐구하고 AI로 세계적 문제를 어떻게 해결할지 알아보세요. AI에 관한 더 많은 내용을
-    가르치기 위한 새로운 여정에서 Code.org의 제일보를 즐기세요. 바다환경을 위한 AI 활동은 사용할 때, 실제 머신러닝 모델을 훈련시키게
-    될 것입니다.  [더보기](#behind-the-scenes).
+    가르치기 위한 새로운 여정에서 Code.org의 제일보를 즐기세요. 바다환경을 위한 AI 활동은 사용할 때, 실제 머신러닝 모델을 교육시킵니다.  [더보기](#behind-the-scenes).
   oceans_landing_teacher_resources: 교사 자료
   oceans_landing_teacher_resources_desc: AI와 머신러닝, 트레이닝 데이터, 편견을 가르치는 한편 윤리 문제를 탐구할
     때 도움이 되는 강의 플랜 및 활동.
@@ -95,7 +94,7 @@ ko:
     훈련되었습니다. 이 모델을 학생이 이 활동에서 생성한 분류된 트레이닝 데이터로 사용자 지정으로 구성하기 위해, 우리는 [전이학습(Transfer
     Learning)](https://en.wikipedia.org/wiki/Transfer_learning)이라 부르는 기법을 사용합니다. 트레이닝
     데이터세트 내 각 이미지는 적용될 가능성이 가장 높은 주석 목록을 얻기 픽셀로서 MobileNet에 공급됩니다. 그 다음, 새로운 이미지를
-    위해, 우리는 이를  MobileNet에 공급하고 주석 결과 목록을 트레이닝 데이터세트의 목록과 비교합니다. 우리는 동일한 레벨 ("물고기"
+    위해, 우리는 이를 MobileNet에 공급하고 주석 결과 목록을 트레이닝 데이터세트의 목록과 비교합니다. 우리는 동일한 레벨 ("물고기"
     또는 "물고기 아님" 등과 같은)이 붙은 새로운 이미지를 가장 유사한 결과를 가진 트레이닝 세트의 이미지로서 분류합니다. '
   oceans_behind_the_scenes_2: 레벨 6-8은 <a href="https://en.wikipedia.org/wiki/Support-vector_machine">
     서포트 벡터 머신</a> (SVM)을 사용합니다. 우리는 물고기의 각 요소 (눈, 입, 몸통)를 보고 구성요소의 메타데이터 (치아 수, 몸통
@@ -124,21 +123,21 @@ ko:
   ai_video_title_ml_big_small_prickly: '머신러닝: 크고 작은 그리고 골치 아픈 문제 해결'
   ai_video_title_ethics_of_ai: AI의 윤리
   ai_video_title_ml_human_bias: 머신러닝과 인간의 편견
-  ai_video_title_seeing_ai: 'Seeing AI: 시각적 세계를 더 접근가능하게 만들기'
+  ai_video_title_seeing_ai: '시잉 AI: 시각적 세계를 더 접근가능하게 만들기'
   activity: 활동
   name: 이름
   description: 설명
   audience: 관객
   ai_resource_header: AI에 관해 가르치고 배우기
-  ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: '강의 플랜과 비디오, 컴퓨터 과학 커리큘럼을 포함한 무료 자료 액세스 및 교사 트레이닝 (마인크래프트:
+  ai_resource_minecraft: 선의를 위한 마인크래프트 AI
+  ai_resource_minecraft_desc: '레슨 플랜과 비디오, 컴퓨터 과학 커리큘럼, 교사 트레이닝을 포함한 무료 리소스에 액세스 (마인크래프트:
     교육 에디션 필요)'
   ai_resource_ml_for_kids: 아동을 위한 머신러닝
   ai_resource_ml_for_kids_desc: 머신러닝 모델을 텍스트 또는 숫자, 이미지로 교육시켜 스크래치에서 게임을 만드는데 사용.
   ai_resource_ibm_ml_for_kids: 'IBM: 아동을 위한 머신러닝'
   ai_resouce_ibm_ml_for_kids_desc: 게임과 인터랙티브 프로젝트를 통해 간단한 머신러닝 모델을 학생들에게 소개하는 체험 활동.
   ai_resource_ecs: 'ECS: 인공지능 (AI)'
-  ai_resource_ecs_desc: 컴퓨터 과학 탐구 (ECS) 커리큘럼을 위한 새로운 대안 커리큘럼 유니트 .
+  ai_resource_ecs_desc: 컴퓨터 과학 탐구 (ECS) 커리큘럼을 위한 새로운 대안 커리큘럼 단원.
   ai_resource_elements_ai: AI의 요소
   ai_resource_elements_ai_desc: Reaktor와 헬싱키 대학이 만든 무료 온라인 과정  시리즈 .
   ai_resource_cognimates: 코그니메이츠
@@ -146,8 +145,8 @@ ko:
   ai_audience_k12: K-12 (읽기 요구됨)
   ai_audience_hs: 고등학교
   ai_activity_header: AI 및 ML에 의한 활동
-  ai_activity_seeing_ai: Seeing AI
-  ai_activity_seeing_ai_desc: 주변의 상황을 다양한 언어로 말해주는 무료 앱
+  ai_activity_seeing_ai: 시잉 AI
+  ai_activity_seeing_ai_desc: 주변의 상황을 다양한 언어로 말로 묘사해주는 무료 앱
   ai_activity_quick_draw: 빨리, 그리세요!
   ai_activity_quick_draw_desc: 신경망이 두들링을 인식하는 법을 배울 수 있습니까?
   ai_activity_teachable: 잘 배우는 머신
@@ -166,27 +165,26 @@ ko:
   codeorg_homepage_hoc2018_header_line2_mobile: 무엇을 만들어 보시겠어요?
   codeorg_homepage_hoc2018_header_line3: '상상의 나래를 펴고 혁신을 일으키세요. 아워오브코드와 무엇이든, 자신의
     창의성으로 시작해보세요. '
-  codeorg_homepage_hoc2018_musician_before: 구성
+  codeorg_homepage_hoc2018_musician_before: 출연
   codeorg_homepage_hoc2018_musician_after: 그 이상!
-  codeorg_homepage_hoc2018_video: 비디오 보기
+  codeorg_homepage_hoc2018_video: 비디오 시청
   hourofcode_homepage_hoc2018_header_line1: 누구든지 어디에서나 아워오브코드 행사를 개최할 수 있습니다. 한 시간
-    분량의 튜토리얼이 45개 이상의 언어로 제공됩니다. 사전 학습이 필요하지 않습니다.
+    분량의 튜토리얼이 45개 이상의 언어로 제공됩니다. 사전 경험이 필요하지 않습니다.
   hourofcode_homepage_hoc2018_header_line2: 4세부터 104세까지 사용할 수 있습니다.
-  hoc2018_tutorial_mchoc_description: 코드 블록을 사용해 알렉스나 스티브가 마인크래프트 세계에서 모험을 펼치게 하세요.
-  codeorg_homepage_hoc2019_dance_heading: 새 <span class="highlight-word">Dance&nbsp;Party</span>
+  hoc2018_tutorial_mchoc_description: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코드로 마인크래프트를
+    여행하세요.
+  codeorg_homepage_hoc2019_dance_heading: 새 <span class="highlight-word">댄스&nbsp;파티</span>
     를 해보세요!
-  codeorg_homepage_hoc2019_dance_heading_markdown: 새 **댄스&nbsp;파티를 즐겨 보세요!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: 새 **댄스&nbsp;파티를 해보세요!**
   codeorg_homepage_special2020_body1: 학교 패쇄를 겪고 있는 학부모와 교사를 위한 지원
   codeorg_homepage_special2020_body2: 당사가 제안하는 학습 자료를 참조하세요.
-  codeorg_homepage_special2020_body: '올 여름 중단 없이 계속 학습하세요! 가정에서의 학습을 위한 당사의 자료를 살펴
-    보세요. '
-  codeorg_homepage_remote2020_body: 이번 학기에 원격으로 또는 사회적 거리두기 교실에서 가르치고 계세요? 당사 자료 보기.
+  codeorg_homepage_special2020_body: '올 여름 중단 없이 계속 학습하세요! 가정에서의 학습을 위한 자료를 살펴 보세요. '
+  codeorg_homepage_remote2020_body: 이번 학기에 원격으로 또는 사회적 거리두기 교실에서 가르치고 계세요? 자료 보기.
   codeorg_homepage_special2020_link_text: 시작하기
-  codeorg_homepage_code_break_body: 'Code Break를 해보세요! 매주 동기 부여, 커뮤니티 및 컴퓨터 사이언스를
-    할 수 있습니다. '
+  codeorg_homepage_code_break_body: '코드 브레이크를 해보세요! 매주 동기 부여, 커뮤니티 및 컴퓨터 과학. '
   codeorg_homepage_code_break_link_text: 더보기
-  cookie_banner_message: 당사 사이트를 계속 둘러 보거나 또는 "동의함"을 클릭하면, 쿠키가 컴퓨터 또는 기기 상에 저장되는 데
-    동의하는 것입니다.
+  cookie_banner_message: 사이트를 계속 둘러 보거나 또는 "동의함"에 클릭하면, 쿠키가 컴퓨터 또는 기기 상에 저장되는 데 동의하는
+    것입니다.
   cookie_banner_more_information: Code.org의 개인정보 보호정책 참조
   cookie_banner_accept: 동의합니다
   front_header_banner: 역사상 가장 큰 학습 이벤트에 참여하세요. %{campaign_date}
@@ -206,16 +204,16 @@ ko:
   not_found_title: 페이지를 찾을 수 없습니다.
   not_found_desc: 요청한 페이지를 찾을 수 없습니다. 주소를 정확히 입력했는지 확인해보세요.
   not_found_instructions: 웹 주소를 확인 하 고 다시 제출 또는 아래 목록에서 링크를 선택하십시오.
-  company_4-H: 4-H Youth Development
-  company_asa: Afterschool Alliance
+  company_4-H: 4-H 클럽
+  company_asa: 사교육 연합
   company_asos: ASOS
   company_bgca: Boys and Girls Club of America
-  company_bsusa: Boy Scouts of America
+  company_bsusa: 미국 보이 스카우트
   company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
+  company_gsusa: 미국 걸 스카우트
   company_khanacademy: 칸 아카데미(Khan Academy)
   company_kipp: KIPP
-  company_mesa: 수학+공학+과학적 성취
+  company_mesa: MESC
   company_napcs: National Alliance of Public Charter Schools
   company_ngcp: National Girls Collaborative Project
   company_teachforall: 모두를 위해 가르쳐보세요.
@@ -223,7 +221,7 @@ ko:
   company_tntp: TNTP
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
-  company_afterschool: 방과후
+  company_afterschool: 방과후 학교
   company_laalliance: Alliance College Ready Public Schools
   company_asd: Arlington Public Schools
   company_arlingtonpublicschools: Arlington Public Schools
@@ -319,7 +317,7 @@ ko:
   company_shorelineschools: Shoreline School District
   company_sjusd: San Juan 교육청 참여함
   company_sky: Sky
-  company_spokaneschools: Spokane Public Schools
+  company_spokaneschools: 스포캔 공립학교
   company_StaffordCountyPublicSchools: 스태포드 카운티 공립학교
   company_strongnet: 스트롱스빌 학군
   company_TukwilaSchoolDistrict: 투퀼라 학군
@@ -372,12 +370,12 @@ ko:
   front_what_is_hoc: Hour of Code 란?
   front_join_us_header: 누구나 기초/개념/원리들을 배울 수 있고, 재미있게 할 수 있습니다!
   front_join_us_volunteer_header: Hour of Code 자원봉사자
-  front_join_us_tutorials: 올해의 새로나온 튜토리얼을 따라해보세요.
-  front_join_us_tutorials_link: 필터링 및 <i>200 개 이상의 튜토리얼 및 수업 계획의</i> 확장된 목록을 탐색하십시오!
-    다른 분야, 다양한 하드웨어 요구사항, 그리고 모든 경험 수준에서 학생들에 대한 활동을 찾을 수 있습니다.
-  front_join_us_robotics: 로봇이 있다면?
-  front_join_us_robotics_link: 아워오브코드를 지원하는 아래의 로보틱스 파트너들께 감사를 전합니다. 만약 여러분의 교실에 로봇이
-    있다면 로봇과 관련된 활동 목록을 찾기 위한 로고들을 클릭하십시오.
+  front_join_us_tutorials: 아워오브코드 튜토리얼을 선택하세요!
+  front_join_us_tutorials_link: "<i>200 개 이상의 튜토리얼 및 레슨 플랜</i> 을 필터링 및 검색하십시오! 여러
+    과목 영역과 하드웨어 필요, 학생의 경험 수준에 맞는 활동을 찾으세요."
+  front_join_us_robotics: 로봇 또는 써킷이 이겼습니다!
+  front_join_us_robotics_link: 학생들과 함께 로봇이나 물리적 컴퓨팅 키트를 사용하고 싶으세요? 우리의 파트너가 75개 교실에
+    기증할 것입니다! 참가하려면 아워오브코드에 가입하세요. (교실은 Code.org가 선정, 미국 만 해당).
   front_join_us_teacher: 선생님이신가요?
   front_join_us_inspire: 학생들의 열정을 자극해 주세요.
   front_join_us_inspire_link: 교실 수업에서의 Hour of Code
@@ -424,13 +422,13 @@ ko:
   signup_email_label: 이메일
   signup_email_error: 이메일은 필수기재항목입니다
   signup_invalid_email_error: 입력하신 이메일 주소가 맞지 않습니다.
-  signup_organization_name_label: 학교명/소속
-  signup_organization_name_error: 조직명은 필수기재항목입니다.
+  signup_organization_name_label: 기관명
+  signup_organization_name_error: 기관명은 필수기재항목입니다.
   signup_event_type_label: 이벤트형태
   signup_event_type_error: 이벤트 유형은 필수기재항목입니다.
   signup_event_entire_school_label: 우리 학교는 전체가 참여합니다.
-  signup_event_location_label: 행사 장소(선택적)
-  signup_event_location_error: 이벤트 위치는 필수기재항목입니다.
+  signup_event_location_label: 이벤트 장소
+  signup_event_location_error: 이벤트 장소는 필수기재항목입니다.
   signup_special_event_flag_label: 내 스페셜 이벤트 강조하기
   signup_special_event_details_label: 스페셜 이벤트 상세사항
   signup_send_posters_flag_label: 이 <a href= "/resources/promote#posters"> 포스터들을</a>
@@ -446,8 +444,8 @@ ko:
   signup_email_preference_yes: 예
   signup_email_preference_no: 아니오.
   signup_email_preference_error: 이메일 선호는 필수입력사항입니다.
-  signup_multiple_event_warning: 여러 개의 이벤트를 운영하시면, 하나의 이름과 이메일로 등록해 주세요. 이름과 이메일 조합을
-    하나로 카운팅합니다.
+  signup_multiple_event_warning: 등록을 하면 학교 이름과 도시가 맵에 나옵니다. 복수의 이벤트를 개최하려 하면, 이벤트
+    별 고유 이름 또는 이메일을 제출해 주십시오. 이름과 이메일 조합 당 한 개의 이벤트만 카운팅합니다.
   signup_registration_deadline: 아워오브코드 등록은 12월 13일에 종료됩니다.
   signup_name_placeholder: 이름
   signup_email_placeholder: you@example.com
@@ -459,8 +457,8 @@ ko:
     (이 정보는 지도에 핀으로 나타내기 위해 사용합니다.)
   signup_special_event_details_placeholder: 이 스페셜 이벤트에 대해서 자세히 설명해주세요.
   signup_send_posters_address_placeholder: 이 주소가 지도에 나타나지는 않습니다.
-  signup_event_type_in_school: 학교에서
-  signup_event_type_out_of_school: 학교 이외에서
+  signup_event_type_in_school: 학교
+  signup_event_type_out_of_school: 기관/회사
   signup_event_type_at_home: 홈
   signup_submit_census_label: 제출
   signup_submit_census_error_message: 죄송합니다. 오류가 발생했습니다. 다시 양식을 제출해 주십시오.
@@ -474,8 +472,8 @@ ko:
   social_hoc2018_creativity_in_are_you: "#HourOfCode는 창의력에 관한 것입니다. 저는 참가합니다! 어떻게
     하실거예요?"
   social_hoc2018_dance_party: '아워오브코드: 댄스 파티'
-  social_hoc2018_dance_what_create: Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
-    Ciara 등 25팀과 함께합니다!
+  social_hoc2018_dance_what_create: 케이티 페리, 마돈나, J 발빈, 시아, 키스 어번, 시애라 외 25명 이상의 가수들이
+    출연!
   social_hoc2018_every_student: 모든 학생들은 컴퓨터 과학으로 창의력을 표현할 기회를 마땅히 가져야 합니다.
   social_hoc2018_every_student_try_what_create: 모든 학생들은 컴퓨터 과학으로 창의력을 표현할 기회를 마땅히
     가져야 합니다. 새로운 튜토리얼을 시도 해보세요. 무엇을 만들어 보시겠어요?
@@ -488,11 +486,11 @@ ko:
   social_hoc2018_what_create: 무엇을 만들어 보시겠어요?
   social_hoc2018_global_movement: 아워오브코드는 수 천만 명의 학생들과 함께 하는 전 세계적인 운동입니다. 모든 연령을
     위한 한 시간 분량의 튜토리얼이 45개 이상의 언어로 제공됩니다.
-  map_title: 아워오브코드 참여지역
-  map_header: "# 전세계적으로 운영되는 아워오브코드 이벤트들"
-  map_header_count_year: "%{event_count} 개의 이벤트가  %{year}년에 등록되었습니다. "
+  map_title: 아워오브코드 맵
+  map_header: "# 아워오브코드 2017에 등록된 이벤트"
+  map_header_count_year: "%{year}년에 등록됭 %{event_count}개의 이벤트. "
   see_all_events: 모든 이벤트 살펴보기
-  map_header_company: "# 개의 회사들이 행사를 조직/운영하고 있습니다."
+  map_header_company: "# 회사 조직 위원이 운영하고 있습니다."
   map_header_country: "# %{country}에서"
   map_search_placeholder: Hour of Code 행사 검색
   map_search_search: 검색
@@ -509,14 +507,14 @@ ko:
   meta_tag_twitter_description: Hour of Code 는 180개 이상의 나라에서 30개 이상의 언어로, 4세부터 104세까지
     수천만 명의 학생들과 함께하려는 전세계적 운동입니다.
   twitter_default_text: '저는 이번 #HourOfCode 행사에 참여합니다. 여러분은요? @codeorg'
-  twitter_donor_text: '올해의 #HourOfCode는 창의성을 다룹니다. 저는 참가합니다! 여러분은요? (  %{random_donor}
-    지원해 주셔서 감사합니다. @codeorg)'
+  twitter_donor_text: '올해의 #HourOfCode는 창의성을 다룹니다. 저는 참가합니다! 여러분은요? (@codeorg를 지원해
+    주신 %{random_donor}에게 감사 드립니다.)'
   twitter_donor_text_2019: '올해의 #HourOfCode는 #CSforGood을 다룹니다. 저는 참가합니다! 여러분은요? (
-    %{random_donor} 지원해 주셔서 감사합니다. @codeorg)'
+    @codeorg를 지원해 주신 %{random_donor}에게 감사 드립니다.)'
   hoc_faq_title: FAQs
   hoc_faq_what_is_hoc_q: Hour of Code 란?
-  hoc_faq_what_is_hoc_a: 아워오브코드는 1시간 짜리 컴퓨터과학 소개 과정으로, 어려울 것 같은 코드에 대해 쉽게 이해하고, 설명하고,
-    누구나 컴퓨터 과학의 기본을 배우고 참여를 확대할 수 있다는 것을 보여주도록 설계되었습니다. 1시간 분량의 코딩 활동이지만 모든 종류의 커뮤니티
+  hoc_faq_what_is_hoc_a: 아워오브코드는 1시간 분량의 컴퓨터과학 소개 과정으로, 어려울 것 같은 코드에 대해 쉽게 이해하고, 설명하고,
+    누구나 컴퓨터 과학의 기본을 배우고 참여를 확대할 수 있다는 것을 보여주도록 설계되었습니다. 1시간 동안의 코딩 활동이지만 모든 종류의 커뮤니티
     노력으로 확대됨으로써 컴퓨터 과학을 기리는 전 세계의 노력으로 성장했습니다. <a href='%{tutorials}'>튜토리얼과 활동</a>을
     확인해 보세요. 이 풀뿌리 캠페인은 전세계  <a href='%{partners}'>400곳 이상의 파트너</a>와 200,000명의 교육자들이
     지원합니다.
@@ -528,12 +526,12 @@ ko:
   hoc_faq_when_is_hoc_q: Hour of Code 행사일?
   hoc_faq_when_is_hoc_a: 아워오브코드는 매년 <a href='%{csedweek_url}'>컴퓨터 과학 교육 주간</a> 중에
     실시됩니다. %{campaign_date_year} 컴퓨터 과학 교육 주간은 %{campaign_date_full}이지만, 연중 아무 때나
-    아워오브코드를 주최할 수 있습니다. 컴퓨터 과학 교육 주간은 매년 컴퓨팅의 개척자인 <a href='%{grace_hopper}'>Admiral
-    Grace Murray Hopper</a>의 생일(1906년 12월 9일)을 기리기 위해 개최됩니다 .
+    아워오브코드를 주최할 수 있습니다. 컴퓨터 과학 교육 주간은 매년 컴퓨팅의 개척자인 <a href='%{grace_hopper}'>그레이스
+    머레이 호퍼 제독</a>의 생일(1906년 12월 9일)을 기리기 위해 개최됩니다 .
   hoc_faq_when_is_hoc_a_markdown: 아워오브코드는 매년 [컴퓨터 과학 교육주간](%{csedweek_url}) 동안 열립니다.
     %{campaign_date_year} 컴퓨터 과학 교육주간은 %{campaign_date_full}이지만 일년 내내 언제든 아워오브코드를
-    개최할 수 있습니다. 컴퓨터 과학 교육주간은 컴퓨팅 개척자 [Admiral Grace Murray Hopper](%{grace_hopper})의
-    생일 (December 9, 1906)을 기념하여 매년 열립니다.
+    개최할 수 있습니다. 컴퓨터 과학 교육주간은 컴퓨팅 개척자 [그레이스 머레이 호퍼 제독](%{grace_hopper})의 생일 (December
+    9, 1906)을 기념하여 매년 열립니다.
   hoc_faq_why_cs_q: 왜 하필이면 컴퓨터과학(정보과학) 인가요?
   hoc_faq_why_cs_a: "<i>모든</i> 학생은 컴퓨터과학(정보과학) 을 배울 기회를 얻을 수 있도록 해야합니다. 컴퓨터과학(정보과학)
     을 통해 현실에서의 문제 해결 능력, 논리와 창의성을 키워줍니다. 쉽게 시작하게 됨으로서 학생들은 21세기의 생활과 진로탐색에 있어서 새로운
@@ -546,13 +544,13 @@ ko:
   hoc_faq_how_participate_a: "<a href='/how-to'>계획 시작하기</a> 를 통해 How-to 가이드를 살펴보세요.
     여러분의 학교나 커뮤니티에서 Hour of Code 이벤트 행사를 조직하고 운영할 수 있습니다. &mdash; 특별활동 모임이나, 비영리 직업
     모임. 아니면 %{campaign_date} 에 직접 도전해 볼 수도 있습니다."
-  hoc_faq_how_participate_a_markdown: "[여기서 계획 시작](%{howto}) 하우 투 가이드를 검토하여, 아워오브코드를
-    학교 또는 방과 후 클럽 또는 비영리, 직장 등과 같은 지역사회에서 실시할 수 있습니다. 또는 %{campaign_date} 이 될 때, 직접
-    시도해 보세요."
+  hoc_faq_how_participate_a_markdown: 하우 투 가이드를 검토하며 [여기서 계획을 시작](%{howto})하세요. 아워오브코드를
+    학교 또는 방과 후 클럽 또는 비영리, 직장 등과 같은 지역사회에서 실시할 수 있습니다. 또는 %{campaign_date}이 될 때, 직접
+    해 보세요.
   hoc_faq_behind_hoc_q: Hour of Code 주관/후원은 누가하나요?
   hoc_faq_behind_hoc_a: 아워오브코드는 아워오브코드 및 컴퓨터 과학 교육 주간 <a href='%{partner_url}'>자문
     및 검토 위원회</a> 뿐만 아니라 &mdash; Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America, College Board 등 아워오브코드를 지원하기 위해 힘을 합친 전례 없는 파트너 연합이 주도합니다.
+    America, College Board 등 아워오브코드를 지원하기 위해 힘을 합친 전례 없는 파트너 연합에 의해 추진됩니다.
   hoc_faq_behind_hoc_a_markdown: 아워오브코드는 아워오브코드와 컴퓨터 과학 교육주간 [자문 및 검토 위원회](%{partner_url})
     은 물론 Microsoft, Apple, Amazon, Boys and Girls Clubs of America, College Board를
     포함하여 아워오브코드를 지원하기 위해 함께 모인 전례가 없는 파트너 연합에 의해 추진됩니다.
@@ -607,7 +605,7 @@ ko:
     를 찾아보세요.
   hoc_faq_account_a_markdown: 아니요. 아워오브코드에 반드시 가입하거나 로그인 할 필요는 없습니다. 하지만 대부분의 [후속
     과정](%{codeorg_url}/learn/beyond)은 학생들의 진도를 기록/저장하기 위해 계정을 만들어야 합니다. 또한 아워오브코드에
-    가입 시, Code Studio 계정도 같이 생기는 것은 아닙니다. 학생 계정을 만들고 싶으시면, 다음의 [instructions](https://youtu.be/_smelV_KISE)을
+    가입 시, 코드 스튜디오 계정도 같이 생기는 것은 아닙니다. 학생 계정을 만들고 싶으시면, 다음의 [instructions](https://youtu.be/_smelV_KISE)을
     따르세요.
   hoc_faq_high_school_q: 고등학생들에게는 어떤 활동들이 적당할까요?
   hoc_faq_high_school_a: 스타워즈와 마인크래프트은 초등학생 이상의 학생들에게 매우 적합합니다. 특히, 자바스크립트 버전의 스타워즈와
@@ -626,16 +624,16 @@ ko:
     잘 못하는 사람들을 위한)을 사용해 보세요. <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     에 있는 튜토리얼을 살펴보시면, 아이패드에서도 동작하는 튜토리얼들을 - Code.org, Tynker, Lightbot, CodeSpark에서
     찾아보실 수 있습니다.
-  hoc_faq_scratch_a_markdown: 스크래치는 태블릿에서는 실행되지 않습니다. 학생이 어리다면, 스크래치주니어(ScratchJR)
+  hoc_faq_scratch_a_markdown: 스크래치는 태블릿에서는 실행되지 않습니다. 학생이 어리면, 스크래치주니어(ScratchJR)
     아이패드 앱(읽기를 잘 못하는 아동을 위한)을 사용해 보세요.  [%{partner_url}/learn](%{codeorg_url}/learn)에
-    있는 튜토리얼을 살펴보면, 아이패드에서도 되는 Code.org, Tynker, Lightbot, CodeSpark의 다른 튜토리얼들을 찾을
-    수 있습니다.
+    있는 튜토리얼을 살펴보면, 아이패드에서도 되는 Code.org, Tynker, Lightbot, CodeSpark의 다른 튜토리얼을 찾을 수
+    있습니다.
   hoc_faq_count_hoc_q: Hour of Code 행사들은 어떻게 카운트 하나요?
   hoc_faq_map_q: 왜 내가 지도에 나타나지 않나요?
-  hoc_faq_map_a: 아워오브코드 맵에서 귀하의 이벤트가 보이지 않아 죄송합니다. 수 만 명이 이벤트를 준비하고 있기 때문에, 맵은 서너
-    개 이벤트의 데이터를 집계하여 한 지점을 보여줍니다. 맵 아래  <a href='%{events_url}'>이벤트 페이지</a>를 클릭하면
-    주별 전체 이벤트 목록으로 가게 되고 거기에 나열된 귀하의 이벤트를 찾을 수 있습니다. 추가적으로, 수 천 명의 사람들이 아워오브코드를 신청하기
-    때문에 맵과 이벤트 목록은 업데이트되는 데 보통 48시간이 걸립니다. 며칠 후에 다시 확인해 주십시오!
+  hoc_faq_map_a: 아워오브코드 맵에 귀하의 이벤트가 표시 되어 있지 않아 죄송합니다. 수 만 명이 이벤트를 준비하고 있기 때문에, 맵에는
+    데이터를 집계하여 서너 개 이벤트를 어느 한 지점으로 나타냅니다. 맵 아래  <a href='%{events_url}'>이벤트 페이지</a>를
+    클릭하면 주별 전체 이벤트 목록으로 가게 되고 거기에 나열된 귀하의 이벤트를 찾을 수 있습니다. 추가적으로, 수 천 명의 사람들이 아워오브코드를
+    신청하기 때문에 맵과 이벤트 목록은 업데이트되는 데 보통 48시간이 걸립니다. 며칠 후에 다시 확인해 주십시오!
   hoc_faq_map_a_markdown: 아워오브코드 맵에서 귀하의 이벤트가 보이지 않아 죄송합니다. 수 만 명이 이벤트를 준비하고 있기 때문에,
     맵은 서너 개 이벤트의 데이터를 집계하여 한 지점을 보여줍니다. 맵 아래 [이벤트 페이지](%{events_url})를 클릭하면 주별 전체
     이벤트 목록으로 가게 되고 거기서 나열된 귀하의 이벤트를 찾을 수 있을 것입니다. 추가적으로, 수 천 명의 사람들이 아워오브코드를 신청하기
@@ -675,11 +673,11 @@ ko:
   hoc_faq_more_questions_a_markdown: "  [서포트 포럼](http://support.code.org)에서 답을 찾아보세요."
   hoc_faq_keep_learning_q: 1시간 짜리 Hour of Code 를 마치면, 그 다음에는 무엇을 어떻게 배워야 하나요?
   hoc_faq_keep_learning_a: 누구든 언제나 아워오브코드를 주최하실 수 있습니다. 튜토리얼은 연중 내내 제공됩니다. 모든 튜토리얼과
-    교육과정들은 본 사이트에서 계속 운영됩니다. 다음 <a href='/promote'>각종 자료</a>를 통해 여러분의 아워오브코드 행사를 성공적으로
+    교육과정들은 본 사이트에서 계속 운영됩니다. 다음 <a href='/promote'>리소스</a>를 통해 여러분의 아워오브코드 행사를 성공적으로
     운영하는데 도움이 되는 하우투 가이드와 여러 자료들을 살펴보세요.
   hoc_faq_keep_learning_a_markdown: 누구나 언제나 아워오브코드를 주최할 수 있습니다. 튜토리얼은 연중 내내 제공됩니다.
     모든 튜토리얼과 커리큘럼은 본 사이트에서 계속 제공될 것입니다. 이벤트 하우 투 가이드와 아워오브코드 이벤트를 성공적이게 만드는 데 유용한
-    기타 자료는 [our resources](%{promote})에서 찾을 수 있습니다.
+    기타 자료는 [리소스](%{promote})에서 찾을 수 있습니다.
   hoc_faq_certificates_q: 학생들 인증서를 어디서 출력할 수 있나요?
   hoc_faq_certificates_a: "<a href='%{codeorg_url}/certificates'>인증서 페이지</a> 에서 전체
     학급에 대한 인증서를 출력할 수 있습니다. 마인크래프트 튜토리얼에 대한 특별 인증서는 <a href='%{codeorg_url}/certificates?course=mc'>여기서
@@ -688,10 +686,10 @@ ko:
     전체 학급을 위한 증명서를 프린트하세요. 마인크래프트 튜토리얼을 하는 학생을 위한 [특별 인증서](%{codeorg_url}/certificates?course=mc)
     역시 프린트할 수 있습니다."
   hoc_faq_logo_q: 아워오브코드 로고나 명칭을 사용함에 있어 제한사항이 있나요?
-  hoc_faq_logo_a: 아워오브코드는 등록된 상표입니다. 이 상표의 사용을 금지하고 싶지 않으며, 사용 시 반드시 몇 가지 제한사항을 준수하길
+  hoc_faq_logo_a: 아워오브코드는 등록된 상표입니다. 이 상표의 사용을 금지하지는 않지만 사용 시 반드시 몇 가지 제한사항을 준수하길
     바랍니다. <a href='%{logo_url}'>이 사용 가이드라인</a>을 확인해 주십시오.
-  hoc_faq_logo_a_markdown: 아워오브코드는 등록된 상표입니다. 이 상표의 사용을 금지하고 싶지 않으며, 사용 시 반드시 몇 가지
-    제한사항을 준수하길 바랍니다. [사용 가이드라인](%{logo_url})을 확인해 주십시오.
+  hoc_faq_logo_a_markdown: 아워오브코드는 등록된 상표입니다. 이 상표의 사용을 금지하지는 않지만 사용 시 반드시 몇 가지 제한사항을
+    준수하길 바랍니다. [사용 가이드라인](%{logo_url})을 확인해 주십시오.
   stats_hoc_2013_image_alt: Hour of Code 2013 부터의 통계들
   stats_growth: 가장 빠르게 1천5백만 사용자에 도달하였습니다.
   stats_i18n: 학생들은 40개 언어로 공부하고 있습니다.
@@ -820,19 +818,19 @@ ko:
   footer_menu_terms: 이용약관
   footer_menu_privacy: Privacy Policy(개인정보보호정책)
   learn_banner_heading: HOUR of CODE
-  learn_banner_blurb: 45개 이상의 언어로 작성된, 모든 연령대를 위한 한 시간 분량의 자습서를 사용해보세요.  코딩의 시간을 시작하여
-    180개 이상의 국가에 사는 학생과 선생님 수백만 명과 함께하세요.
-  learn_banner_beyond: 더 배우고 싶으세요? <a id='learn_banner_beyond'>한 시간 이상 이용해 보세요</a>
-  learn_banner_beyond_markdown: 계속 배우고 싶으세요? [한 시간 이후 학습](%{url})
-  learn_banner_teachers: '교사: <a id=''teacher_banner_host''>한 시간 호스팅을 하거나</a> 혹은 <a
-    id=''teacher_banner_howto''>사용 안내서를 읽어보세요</a>'
+  learn_banner_blurb: 45개 이상의 언어로 제공되는 모든 연령대를 위한 한 시간 분량의 튜토리얼을 사용해보세요. 180개 이상의
+    국가에서 수 백만 명의 학생과 교사가 가입하여 아워오브코드로 시작하고 있습니다.
+  learn_banner_beyond: 계속 배우고 싶으세요? <a id='learn_banner_beyond'>한 시간을 너머 그 이상으로 가기</a>
+  learn_banner_beyond_markdown: 계속 배우고 싶으세요? [한 시간을 너머 그 이상으로 가기](%{url})
+  learn_banner_teachers: '교사: <a id=''teacher_banner_host''>한 시간 수업</a> 혹은 <a id=''teacher_banner_howto''>하우
+    투 가이드 읽기</a>'
   learn_banner_teachers_markdown: '교사: [한 시간 수업](%{host_url}) 또는 [하우 투 가이드 읽기](%{howto_url})'
-  learn_robotics_banner_heading: 로보틱스
-  learn_robotics_banner_blurb: 로봇이 있으세요? 로봇을 아래 활동에 활용하여 모든 연령대 학생들에게 직접 체험할 수 있는
-    코딩의 시간을 만들어 주세요!
+  learn_robotics_banner_heading: 로봇 공학 및 써킷
+  learn_robotics_banner_blurb: 로봇 또는 물리적 컴퓨팅 키트가 있어요? 그것들을 아래 활동에서 사용하여 모든 연령대 학생들을
+    위한 실재하는 아워오브코드를 만드세요!  일부 활동은 심지어 시뮬레이터를 제공하여 하드웨어 없이도 시작할 수 있습니다.
   tutorial_dance2019_name: 댄스 파티 2019
   tutorial_danceparty_name: 댄스 파티
-  tutorial_chibitronics_name: '치비트로닉스: Illuminated Story'
+  tutorial_chibitronics_name: '치비트로닉스: 일러스트 스토리'
   tutorial_athlete_name: 나만의 스포츠 게임을 코딩하세요
   tutorial_moana_name: '모아나: 코드로 방법 찾기'
   tutorial_star-wars_name: '스타워즈: 코드로 은하계 건설하기'
@@ -849,14 +847,14 @@ ko:
   tutorial_textcomp_name: 텍스트 압축
   tutorial_encryption_name: 간단한 암호화
   tutorial_kanopixel_name: 카노 픽셀 해크
-  tutorial_foos_name: 코드 스파크 아카데미와 함께 The Foos
+  tutorial_foos_name: 코드 스파크 아카데미와 Foos
   tutorial_tynkerdd_name: '드래곤 대시 '
   tutorial_tynkerana_name: 아날로그 시계 STEM 키트
   tutorial_vidcard_name: '비드코드: 베스티 카드'
   tutorial_spritebox_name: 스프라이트박스  코딩
   tutorial_tynkerch_name: 카운터 해크
   tutorial_lightbot_name: 라이트봇
-  tutorial_hoc_name: 새로운 code.org/hoc를 위한 플레이스홀더
+  tutorial_hoc_name: 새로운 code.org/hoc를 위한 자리 표시자
   tutorial_code_name: 생애 최초 컴퓨터 프로그램을 직접 만들어 보세요
   tutorial_tinspire_name: TI-Nspire CX를 위한 10분 코드
   tutorial_itchbounceball_name: ITCH 바운싱 볼 (스크래치)
@@ -895,7 +893,7 @@ ko:
   tutorial_tynkercm_name: 코드 몬스터
   tutorial_codesterswintergreet_name: 겨울 인사
   tutorial_codestersc_name: 좌표면
-  tutorial_codestersturtle_name: 터틀 그리기
+  tutorial_codestersturtle_name: 거북이 그리기
   tutorial_penjee_name: 펭귄 펜지와 함께 파이썬 배우기
   tutorial_trinket_name: 트링킷의 파이썬 시간
   tutorial_frogger_name: 나만의 3D 프로거 게임을 만드세요.
@@ -904,7 +902,7 @@ ko:
   tutorial_khan_name: '칸 아카데미: 코드로 그림 그리기'
   tutorial_tynkerd_name: 디버거
   tutorial_cdmy_name: 코드아카데미
-  tutorial_codestersdance_name: Dance Moves
+  tutorial_codestersdance_name: 댄스 동작
   tutorial_codestersbasketball_name: 농구
   tutorial_nclkarel_name: '로봇 카렐과 함께 코딩법 배우기 '
   tutorial_buildpong_name: AI로 퐁 구축
@@ -925,16 +923,16 @@ ko:
   tutorial_soccharater_name: 캐릭터 만들기
   tutorial_silent_name: 사일런트 티쳐
   tutorial_robomesh_name: 블록리로 VEX IQ 로봇 프로그램
-  tutorial_amaze_name: 재미 있는 미로
+  tutorial_amaze_name: 재미있는 미로
   tutorial_codestersds_name: 드림 시퀸스
   tutorial_knodtext_name: 텍스트 어드벤쳐:파이썬
   tutorial_alicegar_name: 엘리스와 가필드로 애니메이팅
   tutorial_codesterstransform_name: 변환 퍼즐
   tutorial_flexfrog_name: '플렉스박스 프로기 '
   tutorial_codemoji_name: 코드모지
-  tutorial_robobii_name: 로보블록리로 코딩 배우기
+  tutorial_robobii_name: RoboBlockly로 코딩 배우기
   tutorial_robobm_name: RoboBlockly로 수학 배우기
-  tutorial_codingrobots_name: RoboBlockly로 원 아워 코딩 배우기
+  tutorial_codingrobots_name: RoboBlockly로 한 시간 코딩 배우기
   tutorial_robob_name: RoboBlockly로 로봇공학 배우기
   tutorial_coders_name: '코더 스트라이크 백: 봇 프로그래밍 소개'
   tutorial_tynkerhw_name: 핫 휠로 코딩 배우기
@@ -946,17 +944,17 @@ ko:
   tutorial_scratchg_name: 스크래치로 게임 프로그래밍
   tutorial_roboticfriends_name: 내 로봇 친구
   tutorial_sjforest_name: 'ScratchJr: 스푸키 포레스트를 만들어도 될까요?'
-  tutorial_sjgreet_name: 'ScratchJr: 내 캐랙터들에게 서로 인사하게 만들어도 될가요?'
+  tutorial_sjgreet_name: 'ScratchJr: 캐랙터에게 서로에게 인사하게 만들 수 있어요?'
   tutorial_sjsunset_name: 'ScratchJr: 저녁 노을을 만들어도 될까요?'
   tutorial_fufafrenz_name: fuzzFamily 프렌지
   tutorial_bbcgeo_name: 비츠박스 코딩 +  기하학
   tutorial_chspixel_name: CodeHS 픽셀 아트
   tutorial_hummingbird_name: 허밍버드로 게임 만들기
-  tutorial_recoloring_name: 우주를 다시 칠하기
+  tutorial_recoloring_name: 우주 다시 색칠하기
   tutorial_bbcchem_name: 비츠박스 코딩 +  화학
-  tutorial_floalgo_name: '코딩: 알고리즘 강의 플랜'
-  tutorial_flocond_name: '코딩: 조건문 강의 플랜'
-  tutorial_floloops_name: '코딩: For 루프 강의 플랜'
+  tutorial_floalgo_name: '코딩: 알고리즘 레슨 플랜'
+  tutorial_flocond_name: '코딩: 조건문 레슨 플랜'
+  tutorial_floloops_name: '코딩: For 루프 레슨 플랜'
   tutorial_pgts_name: 가위, 바위, 보
   tutorial_ozo_name: OzoBlockly 튜토리얼
   tutorial_bbcla_name: 비츠박스 코딩 +  언어
@@ -973,7 +971,7 @@ ko:
   tutorial_box_name: 박스 아일랜드
   tutorial_hopgame_name: Hopscotch 게임 설계 워크숍
   tutorial_icontrol_name: iControl
-  tutorial_cocomteach_name: '코드컴뱃: 니콜라스 시스코'
+  tutorial_cocomteach_name: '코드컴뱃: 교사 주도 활동'
   tutorial_bbcmathii_name: 비츠박스 코딩 +  수학 (K-2)
   tutorial_bbcphys_name: 비츠박스 코딩 +  물리
   tutorial_bitsbox_name: '비츠박스로 크레이지 앱 구축 '
@@ -1026,7 +1024,7 @@ ko:
   tutorial_scratchfly_name: 스크래치로 날아가게 만들기
   tutorial_tynkerarc_name: 해저 아케이드 게임 키트
   tutorial_grokffpython_name: 프로즌 프랙탈 (파이썬 터틀)
-  tutorial_grokffblock_name: 프로즌 프랙탈 (블록리 터틀)
+  tutorial_grokffblock_name: 프로즌 프랙탈 (블러클리 터틀)
   tutorial_grokeliza_name: 엘리자는 인간입니까? (파이썬)
   tutorial_tynkercan_name: 피직스 캐논 2-플레이어 게임 키트
   tutorial_grokflags_name: 세계 깃발 (파이썬 터틀)
@@ -1040,7 +1038,7 @@ ko:
   tutorial_kfr_name: JavaScript 소개
   tutorial_app-inventor_name: 앱인벤터 아워오브코드
   tutorial_bits_name: 비트와 블록
-  tutorial_blockly_name: 블록리 게임 오프라인
+  tutorial_blockly_name: 블러클리 게임 오프라인
   tutorial_tynker_name: 나만의 게임 만들기
   tutorial_baypt_name: 코드 베이맥스
   tutorial_code-combat_name: 코드컴뱃
@@ -1074,18 +1072,18 @@ ko:
   tutorial_swb_name: '스타워즈: 코드로 은하계 건설하기'
   tutorial_build-a-galaxy_name: '스타워즈: 코드로 은하계 건설하기'
   tutorial_alicesims_name: 앨리스 및 심즈와 함께 하는 스토리보딩 및 프로그래밍
-  tutorial_tchr_name: 교사 주도 강의 플랜
+  tutorial_tchr_name: 교사 주도 레슨 플랜
   tutorial_robogame_name: 로봇 게임
   tutorial_tap_name: 태블릿 상의 팅커
   tutorial_cintl_name: 생애 최초 컴퓨터 프로그램을 직접 만들어 보세요
   tutorial_itchstop_name: ITCH 스톱 프레임 애니메이션 (스크래치)
   tutorial_tynkerpn_name: 'Peep: 자연관찰 산책'
   tutorial_tynkerpd_name: 'Peep: 친구와 댄스'
-  tutorial_persistence_name: '인내력: 기초 구축'
-  tutorial_getloopy_name: 루프 만들기
+  tutorial_persistence_name: '끈기: 기초 구축'
+  tutorial_getloopy_name: 게팅 루피 (Getting Loopy)
   tutorial_createface_name: 면 생성
-  tutorial_happymaps_name: 즐거운 맵
-  tutorial_moveit_name: 움직여, 움직여!
+  tutorial_happymaps_name: 해피 맵
+  tutorial_moveit_name: 이동, 이동
   tutorial_bigevent_name: 빅 이벤트
   tutorial_gpp_name: 모눈종이 프로그래밍
   tutorial_foosgame_name: codeSpark 아카데미와 Foos - GameMaker
@@ -1099,7 +1097,7 @@ ko:
   tutorial_wolframsph_name: 구 그리기
   tutorial_wolframp_name: 다각형 그리기
   tutorial_wolframn_name: 닌자 이름 생성기
-  tutorial_soloweb_name: 아워 내 여러분의 첫 번째 웹페이지
+  tutorial_soloweb_name: 한 시간 내에 생애 최초 웹페이지 만들기!
   tutorial_khanweb_name: '칸 아카데미: 웹페이지'
   tutorial_khandata_name: '칸 아카데미: 데이터베이스'
   tutorial_robomeshiq_name: 블록리로 VEX IQ 로봇 프로그램
@@ -1119,7 +1117,7 @@ ko:
   tutorial_grokem_name: 이모티콘 광기
   tutorial_kodmaze_name: 미로 메이커 챌린지
   tutorial_codestersa_name: 소행성 닷지
-  tutorial_cmdodo_name: 도도매쓰
+  tutorial_cmdodo_name: 도도 수학
   tutorial_tynkerspace_name: 스페이스 퀘스트
   tutorial_gfbloons_name: 블룬스 삼각법 디펜스
   tutorial_raspipong_name: HAT 퐁 감지
@@ -1138,20 +1136,20 @@ ko:
   tutorial_switchglitch_name: '스위치와 글리치: 로봇 어드벤쳐'
   tutorial_codecar_name: 코드 카 시뮬레이터
   tutorial_codesterscp_name: 좌표면
-  tutorial_grokpetblock_name: '가상 펫 (마이크로: 비트 블록리)'
+  tutorial_grokpetblock_name: '가상 펫 (마이크로: 비트 블러클리)'
   tutorial_techbim_name: 기본 이미지 조작
   tutorial_techfpp_name: 파이썬으로 함수형 프로그래밍 소개
   tutorial_codesterscr_name: 루틴 응원
   tutorial_grokdisease_name: 전염병
-  tutorial_techec_name: 폐쇄를 JS를 설명
+  tutorial_techec_name: 폐쇄를 JS로 설명
   tutorial_rgbegin_name: RoboGarden 코딩- 초보자
   tutorial_myradream_name: 'Actimator: 마이러의 꿈'
   tutorial_thinkfun_name: '로봇 수리: 로봇의 두뇌를 고칠 수 있으세요?'
   tutorial_hopfireworks_name: iPad/iPhone에서 불꽃 앱 만들기
-  tutorial_grokspace_name: 공간 (블록리)
+  tutorial_grokspace_name: 스페이스 (블러클리)
   tutorial_codehspython_name: CodeHS로 파이썬 코딩
   tutorial_codehsjava_name: CodeHS로 자바 코딩
-  tutorial_techioda_name: 가장 짧은 경로와 Dijkstra'의 알고리즘
+  tutorial_techioda_name: 가장 짧은 경로와 Dijkstra의 알고리즘
   tutorial_grokmonster_name: 몬스터 메이커!
   tutorial_techmjs_name: 모던 자바스크립트 포용- ES6 이상
   tutorial_techga_name: 유전 알고리즘
@@ -1201,19 +1199,19 @@ ko:
   tutorial_cslscratchjr_name: ScratchJr 새끼 고양이와 같이 놀아요! 활동 팩
   tutorial_floevents_name: 이벤트 작성 및 통역
   tutorial_florobot_name: 로봇 설계
-  tutorial_isavesanta_name: iSave Santa!
+  tutorial_isavesanta_name: iSave 산타!
   tutorial_iorder_name: iOrder
   tutorial_ianimate_name: iAnimate
   tutorial_iloveada_name: iLove Ada
-  tutorial_kodflash_name: 플래시이면, 박수 치세요!
-  tutorial_kodchoose_name: 자신만을 위한 (퍼지) 모험을 선택하세요
-  tutorial_kodpizzapre_name: 피자 파티! (미취학 아동)
+  tutorial_kodflash_name: 번쩍이면, 박수를 치세요!
+  tutorial_kodchoose_name: 자신만의 (퍼지) 모험 선택!
+  tutorial_kodpizzapre_name: 피자 파티! (프리 리더)
   tutorial_kodpizza_name: 피자 파티!
   tutorial_kodwomen_name: 테크에서의 여성
   tutorial_tfunplug_name: '로봇 수리: 로봇의 두뇌를 고칠 수 있으세요? (언플러그드)'
   tutorial_lbvariables_name: 변수와 리틀비츠
   tutorial_lbfunctions_name: '함수와 리틀비츠로 즐기는 재미 '
-  tutorial_lblogic_name: 리틀비츠를 사용한 로직 강의
+  tutorial_lblogic_name: 리틀비츠를 사용한 로직 레슨
   tutorial_lbworld_name: '리틀비츠: 세상을 바꾸다 아케이드 챌린지'
   tutorial_lbloops_name: 리틀비츠로 루프로 도약
   tutorial_lbtug_name: '리틀비츠: 줄다리기'
@@ -1224,9 +1222,9 @@ ko:
   tutorial_woncue_name: 큐의 초보자 가이드
   tutorial_wonzoo_name: 페팅 동물원 도트 (B2)
   tutorial_wontrip_name: 대시의 로드 트립 (F2)
-  tutorial_woncollect_name: 컬렉터 대시 (B1)
+  tutorial_woncollect_name: 수집가 대시 (B1)
   tutorial_wonsecret_name: 큐의 비밀 메시지
-  tutorial_hsscience_name: 'Hopscotch: 아이패드/아이폰 상에서 인터랙티브 과학 모델 만들기!'
+  tutorial_hsscience_name: '사방치기: 아이패드/아이폰 상에서 인터랙티브 과학 모델 만들기!'
   tutorial_popculture_name: '팝컬처 데이터 과학 '
   tutorial_legorobust_name: 탄탄한 구조 – LEGO® 에듀케이션 WeDo 2.0
   tutorial_legoplants_name: 식물과 꽃가루 매개자 – LEGO® 에듀케이션 WeDo 2.0
@@ -1241,7 +1239,7 @@ ko:
   tutorial_cajump_name: 점핑 잼
   tutorial_carest_name: 로보-레스토랑 퍼즐러
   tutorial_accai_name: 액센츄어 지능 공간 탐구
-  tutorial_vceclipse_name: 이클립스 코딩
+  tutorial_vceclipse_name: 일식 코딩
   tutorial_pmzero_name: 팩맨 제로
   tutorial_hsela_name: '텔링 스토리: ELA + 코딩'
   tutorial_ticklear_name: AR이란?
@@ -1250,10 +1248,10 @@ ko:
   tutorial_ifly_name: iFly
   tutorial_idowedo_name: iDo WeDo
   tutorial_diggindwarf_name: 디깅 드워프
-  tutorial_rmedr_name: 구글 블록리를 사용한 시뮬레이션된 VEX EDR V5 로봇 프로그램
+  tutorial_rmedr_name: 구글 블러클리를 사용한 시뮬레이션된 VEX EDR V5 로봇 프로그램
   tutorial_spheroit_name: '블록 2: If/Then Else'
   tutorial_gameofcodes_name: 코드 게임
-  tutorial_blocklygames_name: 블록리 게임
+  tutorial_blocklygames_name: 블러클리 게임
   tutorial_spherohello_name: '텍스트 1: 헬로 월드'
   tutorial_spheroarcade_name: 스피로 아케이드 플레이그라운드
   tutorial_bcpy1_name: 파이썬의 세계
@@ -1263,7 +1261,7 @@ ko:
   tutorial_3dbearmars_name: 화성 개척자
   tutorial_alexaskill_name: '알렉사 청사진: 알렉사 스킬 만들기'
   tutorial_bitsboxyak_name: 약어택! 타입드 코드로 카드 만들기
-  tutorial_blockscadbargraphs_name: 바 그래프
+  tutorial_blockscadbargraphs_name: 막대 그래프
   tutorial_blockscadbirdhouses_name: 버드하우스
   tutorial_blockscadclock_name: 아날로그 시계
   tutorial_blockscaddinner_name: 디너 로봇
@@ -1281,8 +1279,8 @@ ko:
   tutorial_bpmathvid_name: '수학: 곱셈 (비드코드)'
   tutorial_bpmlkscratch_name: '사회: 마틴 루터 킹 주니어 (스크레치)'
   tutorial_bpmlkvid_name: '사회: 마틴 루터 킹 주니어 (비드코드)'
-  tutorial_bpsafetyscratch_name: '디지털 시민권: 온라인 안전(스크래치)'
-  tutorial_bpsafetyvid_name: '디지털 시민권: 온라인 안전(비드코드)'
+  tutorial_bpsafetyscratch_name: '디지털 시민의식: 온라인 안전(스크래치)'
+  tutorial_bpsafetyvid_name: '디지털 시민의식: 온라인 안전(비드코드)'
   tutorial_bpsciencescratch_name: '과학: 먹이 사슬 (스크래치)'
   tutorial_bpsciencevid_name: '과학: 먹이 사슬 (비드코드)'
   tutorial_bptechscratch_name: '엔지니어링 및 테크: 컴퓨터 프로그래밍 (스크래치)'
@@ -1294,7 +1292,7 @@ ko:
   tutorial_cashield_name: 쉴드 디자인 쇼다운
   tutorial_ccwslimer_name: '슈퍼 슬리머: 어드벤처 코딩'
   tutorial_codinggalaxy_name: 코딩 갤럭시 -어드벤쳐 플래넛
-  tutorial_boatrace_name: 보트 경주
+  tutorial_boatrace_name: 보트 레이스
   tutorial_ccplay_name: '코드컴뱃: 코드, 플레이, 만들기'
   tutorial_grinch_name: '그린치: 코드로 크리스마스 구하기'
   tutorial_codehsart_name: 코드로 아트 창작
@@ -1368,7 +1366,7 @@ ko:
   tutorial_scratchjrtwinkle_name: 반짝 반짝 작은별 학급 협업
   tutorial_spherocomm_name: 커뮤니케이션
   tutorial_spherocommunity_name: 커뮤니티
-  tutorial_spherofunctions_name: 재미 있는 함수
+  tutorial_spherofunctions_name: 재미있는 함수
   tutorial_spheroinfrared_name: '볼트: 적외선'
   tutorial_spherolightsensor_name: '볼트: 빛 센서'
   tutorial_spheromansion_name: '쥬라기 코드: 맨션 메이헴'
@@ -1380,9 +1378,9 @@ ko:
   tutorial_stempiday_name: Pi 날입니다!
   tutorial_stemplanetoids_name: 미행성과 달 하강
   tutorial_stempong_name: Pong & Bonk.io
-  tutorial_algobot_name: '알고봇: 코딩 액션'
+  tutorial_algobot_name: '알고봇: 액션 코딩'
   tutorial_thunkableapps_name: 썬커블로 나만의 앱 구축
-  tutorial_toxicodedot_name: 리틀 도트 어드벤셔
+  tutorial_toxicodedot_name: 리틀 도트 어드벤쳐
   tutorial_gcactions_name: '게임코드: 비디오 게임에서 액션'
   tutorial_gccomparators_name: '게임코드: 비디오 게임에서 비교기와 로직'
   tutorial_gcconditions_name: '게임코드: 비디오 게임에서 조건'
@@ -1403,16 +1401,16 @@ ko:
   tutorial_washustorm_name: 폭풍우 과학
   tutorial_activitypackets_name: 원더 워크샵 활동 패킷
   tutorial_googlerookie_name: 루키 콜라주
-  tutorial_tommyturtle_name: '토미 터틀: 코딩 배우기'
+  tutorial_tommyturtle_name: '거북이 토미: 코딩 배우기'
   tutorial_mazyad_name: Mazyad의 어드벤쳐
   tutorial_gamemaker_name: 게임 메이커
-  tutorial_duckrace_name: 큰 오리 경주
-  tutorial_allcancodeapps_name: 'Allcancode 플랫폼: 블록리로 웹과 모바일 앱 만들기'
+  tutorial_duckrace_name: 큰 오리 레이스
+  tutorial_allcancodeapps_name: 'Allcancode 플랫폼: 블러클리로 웹과 모바일 앱 만들기'
   tutorial_n2y_name: 비트 보트 지구를 탐구하다.
   tutorial_microsoftarcade_name: 오락실 게임 플레이 및 설계, 코딩
-  tutorial_csfirstunplugged_name: CS 첫 번째 언플러그드
+  tutorial_csfirstunplugged_name: CS 퍼스트 언플러그드
   tutorial_toxicodepython_name: 말을 하지 않는 교사와 함께 파이썬 발견
-  tutorial_codecombatozaria_name: '奥佳睿: 冒险启程'
+  tutorial_codecombatozaria_name: 'Ozaria: 여정이 시작되었습니다'
   tutorial_vidcodedate_name: 기후 시계
   tutorial_codemonkeyspace_name: '스페이스 어드벤쳐: 코드를 작성하고 바나나를 잡으세요!'
   tutorial_codespeakhappy_name: 행복한 장소 명상 앱 코딩
@@ -1424,7 +1422,7 @@ ko:
   tutorial_vidcodeanimojies_name: 애니모지
   tutorial_bsdinspire_name: 나에게 영감을 주는 사람
   tutorial_tttractor_name: 횡단 트랙터
-  tutorial_codeillusionmickey_name: '디즈니 코드일루젼: 미디어 아트 어드벤처와 미키'
+  tutorial_codeillusionmickey_name: '디즈니 코드일루젼: 미디어 아트 어드벤쳐와 미키'
   tutorial_scigirlsquest_name: 'SciGirls: 코드 퀘스트'
   tutorial_codespeakbreathe_name: 명상 호흡 앱 코딩
   tutorial_vidcodeface_name: 페이스 트래킹
@@ -1496,7 +1494,7 @@ ko:
   tutorial_icodebytes_name: 'iCompute 바이트: 언플러그드'
   tutorial_clfashion2_name: 데이터 과학의 패션 리더 -수업 2
   tutorial_ai4all_name: AI & 그림
-  tutorial_cldata_name: 데이터 수퍼파워에 오신 걸 환영합니다
+  tutorial_cldata_name: 데이터 슈퍼파워에 오신 걸 환영합니다
   tutorial_spheroinputs_name: 인풋 및 아웃풋 언플러그드
   tutorial_edisoncount_name: 에디슨에게 9까지 숫자세기 가르치기
   tutorial_spheroloops_name: 루프 언플러그드
@@ -1518,22 +1516,23 @@ ko:
   tutorial_legodance_name: 브레이크 댄스
   tutorial_nearpodcoding_name: '토픽 스파크: 코딩'
   tutorial_kcjplastic_name: "#kids2030 플라스틱 도전"
-  tutorial_legojourney_name: LEGO Education으로 여정 만들기
+  tutorial_legojourney_name: LEGO 에듀케이션으로 여정 만들기
   tutorial_legohopper_name: 호퍼 레이스
   tutorial_catrobatembroidery_name: 코드 자수
   tutorial_irobotphone_name: 전화기 그림
   tutorial_codeguppydraw_name: 코드로 그리기
   tutorial_codejumper_name: '네트워크: 친절한 메시지'
-  tutorial_meeempathy_name: 두 마을의 Minecraft 이야기
-  tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
-  tutorial_chibitronics_shortdescription: 스토리를 밝혀주는 종이 회로 프로그램.
+  tutorial_meeempathy_name: 마인크래프트 두 마을 이야기
+  tutorial_danceparty_shortdescription: 댄스 파티를 코딩해서 친구들과 공유하세요. 케이티 페리, 마돈나, J 발빈,
+    시아, 키스 어번, 시애라 외 25명 이상의 가수들이 출연!!
+  tutorial_chibitronics_shortdescription: 스토리를 빛내주는 종이 회로 프로그램.
   tutorial_athlete_shortdescription: 농구 게임과 다양한 스포츠의 믹스 앤 매치 중 선택하세요!
   tutorial_moana_shortdescription: '모아나는 용감하고 두려움이 없으며 자신의 길을 찾기로 굳게 다짐합니다. '
   tutorial_star-wars_shortdescription: 드로이드를 프로그램하는 법을 배워보고, 머나먼 은하계에서 나만의 스타워즈 게임을
     만들어보세요.
   tutorial_gumadventure_shortdescription: 코드를 사용하여 검볼의 놀라운 세상 에피소드를 계속합니다.
-  tutorial_mchoc_shortdescription: 코드 블록을 사용해 알렉스나 스티브가 마인크래프트 세계에서 모험을 펼치게 하세요.
+  tutorial_mchoc_shortdescription: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코드로 마인크래프트를
+    여행하세요.
   tutorial_vidnews_shortdescription: 테크와 다양성, 아동, 코딩에 관한 새로운 스토리를 만들기 위한 효과와 그래픽 코딩.
   tutorial_kodable-pre_shortdescription: 컴퓨터 프로그래밍 개념을 가르치는 재미있는 게임
   tutorial_highseas_shortdescription: 이 활동에서는 공해에서 벌어지는 두 캐릭터의 어드벤쳐 스토리를 만들 것입니다.
@@ -1554,11 +1553,11 @@ ko:
     도달하세요! 시퀸스와 디버깅, 루프에 대해 배우고  Swift 및 Java로 또는 아이콘을 사용하여 코딩합니다. '
   tutorial_tynkerch_shortdescription: 바이러스를 무찌르며 자바스크리트를 배우세요!
   tutorial_lightbot_shortdescription: 프로시져(함수)와 반복을 이용해 퍼즐을 푸는 라이트봇 프로그램!
-  tutorial_hoc_shortdescription: 새로운 code.org/hoc를 위한 플레이스홀더
+  tutorial_hoc_shortdescription: 새로운 code.org/hoc를 위한 자리 표시자
   tutorial_code_shortdescription: 마크 저커버그, 앵그리 버드와 함께 코드 배우기!
-  tutorial_tinspire_shortdescription: '학생에게 한 번에 10분 만 TI-Nspire CX handhelds 상에서
-    코딩을 시작하게 하세요. '
-  tutorial_itchbounceball_shortdescription: 비디오 강의과 통합된 ITCH-스크래치를 사용하여 나만의 바운싱 볼
+  tutorial_tinspire_shortdescription: '학생에게 한 번에 10분 동안만 TI-Nspire CX handhelds 상에서
+    코딩을 하게 하세요. '
+  tutorial_itchbounceball_shortdescription: 비디오 레슨과 통합된 ITCH-스크래치를 사용하여 나만의 바운싱 볼
     프로젝트 만들기
   tutorial_vidclim_shortdescription: CS와 환경 과학을 결합하고 기후에 관한 비디오 기록.
   tutorial_matlab_shortdescription: MATLAB을 사용하여 친구를 만날 가장 가까운 위치 찾기!
@@ -1571,7 +1570,7 @@ ko:
   tutorial_processfound_shortdescription: 시각 예술의 맥락 안에서 프로그래밍 보기
   tutorial_tynkerhomo_shortdescription: 동음이의어에 관한 스토리텔링 게임 만들기
   tutorial_art_shortdescription: 아티스트를 이용해 멋진 그림과 디자인을 그려보세요!
-  tutorial_tynkerbrick_shortdescription: '이 아케이드 클래식을 나만의 버전으로 만들기. '
+  tutorial_tynkerbrick_shortdescription: '이 오락실 게임을 나만의 버전으로 만들기. '
   tutorial_itchbio_shortdescription: 'ITCH (수업용 스크래치)으로 세포 각 부분에  이름을 지어주는 게임 만들기 '
   tutorial_itchj_shortdescription: ITCH (교사용 스크래치)으로 캐릭터를 점프하고 플랫폼 위에 착륙하게 만드는 법 배우기
   tutorial_tickleo_shortdescription: 사용자 친화적 코딩 앱인 Tickle로, 코딩 블록을 드레그 드롭하여 명령어를 만들어
@@ -1581,7 +1580,7 @@ ko:
   tutorial_monster_shortdescription: 아동을 위한 컬러풀 자기주도 프로그래밍 모험
   tutorial_tynkerapp_shortdescription: 좋아하는 게임을 맞춤형 버전으로 프로그램하세요!
   tutorial_tynkerpup_shortdescription: 강아지 픽셀이 집을 찾아 가도록 도와주세요!
-  tutorial_livecode_shortdescription: 소리를 만들어 보세요!
+  tutorial_livecode_shortdescription: 소음을 만들어 보세요!
   tutorial_cocomgame_shortdescription: 파이썬과 자바스크립트 스킬 수준을 높여 나만의 게임을 만드세요!
   tutorial_tynkerspin_shortdescription: '회전하는 이미지를 그리는 재미 있는 펜 만들기 '
   tutorial_code-avengers_shortdescription: 웹 브라우저에서 "자바스크립트" 프로그래밍 배우기
@@ -1591,14 +1590,14 @@ ko:
   tutorial_qrm_shortdescription: 생물학 실험실에서 Quorum을 배우는 메리의 첫 번째 프로그램 주간에 참여하세요.
   tutorial_texas-instruments_shortdescription: TI-84™ Plus 계산기를 사용하여 기본 코딩 배우기
   tutorial_cajava_shortdescription: 자바스크립트로 깃발을 그리며 모형과 좌표, 색상에 관해 배우기
-  tutorial_codehs_shortdescription: 재미 있고 시각적으로 프로그래밍을 소개하는 강아지 카렐로 코딩 시작.
-  tutorial_hopemo_shortdescription: 좋아하는 이모트콘으로 아름다운 작품을 만드는 드로잉 앱 코딩.
+  tutorial_codehs_shortdescription: 재미있고 시각적으로 프로그래밍을 소개하는 강아지 카렐로 코딩 시작.
+  tutorial_hopemo_shortdescription: 좋아하는 이모트콘으로 아름다운 작품을 만드는 그리기 앱 코딩.
   tutorial_tynkercm_shortdescription: 몬스터를 수집 및 훈련, 배틀!
   tutorial_codesterswintergreet_shortdescription: 겨울을 맞이하여 나만의 연하장을 만드세요!
   tutorial_codestersc_shortdescription: 코드로 좌표면 네비게이션 방법을 배우세요!
   tutorial_codestersturtle_shortdescription: 거북이를 미로 밖으로 나오도록 안내하고 나선 에술 작품을 만드세요!
   tutorial_penjee_shortdescription: '펭귄을 아이스 월드 여기저기로 움직이게 하여 파이썬에 대해 시각적으로 배우기. '
-  tutorial_trinket_shortdescription: 강의과 챌린지, 튜토리얼로 파이썬의 기초를 배우세요!
+  tutorial_trinket_shortdescription: 레슨과 챌린지, 튜토리얼로 파이썬의 기초를 배우세요!
   tutorial_frogger_shortdescription: '3D 게임을 만들고 공유하기 '
   tutorial_tynkereco_shortdescription: 인터랙티브 생태 피라미드 코딩
   tutorial_mitedarc_shortdescription: 스프라이트에게 코인을 수집하여 포인트를 얻게 합니다.
@@ -1610,7 +1609,7 @@ ko:
     하세요!
   tutorial_codestersbasketball_shortdescription: '농구 게임을 만드세요! '
   tutorial_nclkarel_shortdescription: 함께 문제를 풀며 세계 여행을 할 때 로봇 카렐로 코딩을 배우세요.
-  tutorial_buildpong_shortdescription: 아케이드 클래식을 만들고 컴퓨터에 인공지능을 부여하여 함께 시합하세요.
+  tutorial_buildpong_shortdescription: 오락실 게임을 만들고 컴퓨터에 인공지능을 부여하여 함께 시합하세요.
   tutorial_tynkerdrones_shortdescription: 로봇 또는 드론을 위한 컨트롤러 프로그램.
   tutorial_carla_shortdescription: 칼라라 부르는 말하는 가상 로봇을 프로그래밍하여 코드에 관해 배우세요!
   tutorial_zulama_shortdescription: MakeQuest로 가세요! 코드를 수정하여 게임에서 이기고 그 다음 나만의 게임을
@@ -1626,10 +1625,11 @@ ko:
   tutorial_bamboo_shortdescription: '뱀부 JS 활동은 Codemoji가 학생들에게 자바스크립트 기초 개념을 가르치기
     위해 만들었습니다.  '
   tutorial_robojav_shortdescription: '화면 상에 시뮬레이션되는 로봇과 생명체를 위한 작은 세계를 구축. '
-  tutorial_roboba_shortdescription: 로보블록리는 로봇을 사용하여 대수학 1을 블록리로 배우기 위한 초보자용으로 설계되었습니다.
-  tutorial_knodsnake_shortdescription: '자바스크립트으로 스네이크 게임을 만드는 법을 배우세요! '
+  tutorial_roboba_shortdescription: RoboBlockly는 로봇을 사용하여 대수학 1을 블러클리로 배우기 위한 초보자용으로
+    설계되었습니다.
+  tutorial_knodsnake_shortdescription: '자바스크립트로 스네이크 게임을 만드는 법을 배우세요! '
   tutorial_soccharater_shortdescription: HTML, CSS, 자바스크립트를 사용하여 픽셀 캐릭터 코딩.
-  tutorial_silent_shortdescription: '단어 또는 설명없이 프로그래밍의 기본 개념 발견.  '
+  tutorial_silent_shortdescription: '단어 또는 설명없이 프로그래밍의 기초 개념 발견.  '
   tutorial_robomesh_shortdescription: 가상 온라인 로봇 또는 실제 VEX IQ 로봇 프로그램.
   tutorial_amaze_shortdescription: '크레이지 물리학 장애물과 대상으로 구성된 흥미로운 미로 게임을 만들고 사용자 지정으로
     구성하세요!  '
@@ -1642,18 +1642,21 @@ ko:
   tutorial_flexfrog_shortdescription: CSS 플렉스박스를 배우기 위한 게임
   tutorial_codemoji_shortdescription: 'Codemoji는 학생들을 계속 집중하게 만들고 진짜 코딩 개념을 배우게 하는
     키로서 이모티콘을 사용하여 기초 웹사이트 설계 및 코딩 개념을 가르칩니다. '
-  tutorial_robobii_shortdescription: 로보블록리는 로봇을 사용하여 코딩을 블록리로 배우기 위한 초보자용으로 설계되었습니다.
-  tutorial_robobm_shortdescription: 로보블록리는 로봇을 사용하여 수학을 블록리로 배우기 위한 초보자용으로 설계되었습니다.
-  tutorial_codingrobots_shortdescription: 로보블록리는 로봇을 사용하여 코딩과 수학을 배우기 위한 초보자용으로 설계되었습니다.
-  tutorial_robob_shortdescription: 로보블록리는 로봇 공학을 블록리로 배우기 위한 초보자용으로 설계되었습니다.
-  tutorial_coders_shortdescription: 스타십 레이스 게임을 통해 봇 프로그래밍을 발견하세요! (14살 이상)
-  tutorial_tynkerhw_shortdescription: 핫 휠 자동차를 조정하여 자동차 경주에서 이기기 위해 재미 있는 코딩 퍼즐을 푸세요!
-  tutorial_tynkermh_shortdescription: 몬스터 하이의 굴스로 재미 있는 코딩 퍼즐 풀기.
+  tutorial_robobii_shortdescription: RoboBlockly는 로봇을 사용하여 코딩을 블러클리로 배우기 위한 초보자용으로
+    설계되었습니다.
+  tutorial_robobm_shortdescription: RoboBlockly는 로봇을 사용하여 수학을 블러클리로 배우기 위한 초보자용으로
+    설계되었습니다.
+  tutorial_codingrobots_shortdescription: RoboBlockly는 로봇을 사용하여 코딩과 수학을 배우기 위한 초보자용으로
+    설계되었습니다.
+  tutorial_robob_shortdescription: RoboBlockly는 로봇 공학을 블러클리로 배우기 위한 초보자용으로 설계되었습니다.
+  tutorial_coders_shortdescription: 스타십 레이스 게임을 통해 봇 프로그래밍을 발견하세요! (14세 이상)
+  tutorial_tynkerhw_shortdescription: 핫 휠 자동차를 조정하여 자동차 경주에서 이기기 위해 재미있는 코딩 퍼즐을 푸세요!
+  tutorial_tynkermh_shortdescription: 몬스터 하이의 굴스로 재미있는 코딩 퍼즐 풀기.
   tutorial_caphoto_shortdescription: '스티커와 필터로 사진을 꾸미는 앱 만들기.  '
   tutorial_mozillahw_shortdescription: 학습자는 자바스크립트 코드를 리믹스하여 웹사이트 상의 단어를 변경할 것입니다.
   tutorial_ticklep_shortdescription: 사용자 친화적 코딩 앱인 Tickle로, 코딩 블록을 드레그 드롭하여 명령어를 만들어
     쉽게 패롯 드론을 다양한 방식으로 수영하게 프로그램할 수 있습니다.
-  tutorial_bbot_shortdescription: 재미 있고 쉬운 방식으로 학생 (7세 이상)에게 프로그래밍을 가르치세요. 프로그래밍 사전
+  tutorial_bbot_shortdescription: 재미있고 쉬운 방식으로 학생 (7세 이상)에게 프로그래밍을 가르치세요. 프로그래밍 사전
     지식 또는 경험은 필요 없습니다!
   tutorial_scratchg_shortdescription: 스크래치로 게임을 프로그래밍 하는 방법 배우기
   tutorial_roboticfriends_shortdescription: '장비가 없는 그룹을 위한 언플러그드 튜토리얼 '
@@ -1664,66 +1667,66 @@ ko:
   tutorial_sjsunset_shortdescription: ScratchJr 프로그래밍 앱을 사용하여 도시 풍광 속에서 해지는 모습을 나타내는
     프로그램 만들기.
   tutorial_fufafrenz_shortdescription: '시퀸스를 배워 "로봇"을 프로그램하세요! '
-  tutorial_bbcgeo_shortdescription: '레벨 6-10을 위한 표준 기반 강의 플랜. '
-  tutorial_chspixel_shortdescription: 이 오프라인 강의 플랜은 컴퓨터 그래픽의 기초를 다룹니다.
+  tutorial_bbcgeo_shortdescription: '레벨 6-10을 위한 표준 기반 레슨 플랜. '
+  tutorial_chspixel_shortdescription: 이 오프라인 레슨 플랜은 컴퓨터 그래픽의 기초를 다룹니다.
   tutorial_hummingbird_shortdescription: 마이크로컨트롤러와 센서, 조명으로 게임을 만드세요!
   tutorial_recoloring_shortdescription: '유니버스 리컬러링은 통합 코딩이 어떻게 우주에 관한 학습을 추구하는지 보여주는데
     도움이 됩니다.  '
-  tutorial_bbcchem_shortdescription: '레벨 K-5를 위한 표준 기반 강의 플랜. '
-  tutorial_floalgo_shortdescription: '학생이 알고리즘을 교육적 힙합으로 작성할 수 있게 하는 강의 플랜. '
-  tutorial_flocond_shortdescription: 이 교육적 힙합 비디오와 강의 플랜으로 조건문 코딩 개념을 가르침.
-  tutorial_floloops_shortdescription: 이 교육적 힙합 비디오와 강의 플랜으로 루프 코딩 개념을 가르침.
+  tutorial_bbcchem_shortdescription: '레벨 K-5를 위한 표준 기반 레슨 플랜. '
+  tutorial_floalgo_shortdescription: '학생이 알고리즘을 교육적 힙합으로 작성할 수 있게 하는 레슨 플랜. '
+  tutorial_flocond_shortdescription: 이 교육적 힙합 비디오와 레슨 플랜으로 조건문 코딩 개념을 가르침.
+  tutorial_floloops_shortdescription: 이 교육적 힙합 비디오와 레슨 플랜으로 루프 코딩 개념을 가르침.
   tutorial_pgts_shortdescription: 가위/바위/보를 이용해 모델링과 시뮬레이션을 경험해 보세요.
   tutorial_ozo_shortdescription: '오조봇 게임을 프로그램 가능한 로봇 오조봇으로 플레이하여 학생에게 코딩 소개. '
-  tutorial_bbcla_shortdescription: '레벨 K-5를 위한 표준 기반 강의 플랜. '
-  tutorial_bbcsci_shortdescription: '레벨 K-5를 위한 표준 기반 강의 플랜. '
+  tutorial_bbcla_shortdescription: '레벨 K-5를 위한 표준 기반 레슨 플랜. '
+  tutorial_bbcsci_shortdescription: '레벨 K-5를 위한 표준 기반 레슨 플랜. '
   tutorial_tlctour_shortdescription: '관광객이 호텔에서 나와 시티 관광지 그리고 다시 호텔로 돌아가는 투어 고안. '
-  tutorial_codesterstj_shortdescription: 디지털 시민권에 대해 배우세요!  책임 있는 디지털 시민이 되는 법을 친구들에게
+  tutorial_codesterstj_shortdescription: 디지털 시민의식에 대해 배우세요!  책임 있는 디지털 시민이 되는 법을 친구들에게
     가르쳐 주세요!
   tutorial_tlclocked_shortdescription: 감금 증후군을 가진 이에게 남들과 소통하게 만드는 알고리즘 설계를 탐구.
-  tutorial_baubles_shortdescription: 컴퓨터가 어덯게 1과 0만을 사용하여 정보를 나타내는지 배우기.
-  tutorial_bbcart_shortdescription: '레벨 K-5를 위한 표준 기반 강의 플랜. '
+  tutorial_baubles_shortdescription: 컴퓨터의 1과 0만을 사용한 정보 표현 방법 배우기.
+  tutorial_bbcart_shortdescription: '레벨 K-5를 위한 표준 기반 레슨 플랜. '
   tutorial_tlcknight_shortdescription: '기사가 보드 위 모든 정사각형에 정확히 한 번 만 방문하도록 만드는 방법을
     찾아내는 퍼즐 풀기. '
-  tutorial_fufafit_shortdescription: fuzzFamily가 내구력을 키우도록 돕는 코드를 짧게 만드는 함수를 사용하세요!
+  tutorial_fufafit_shortdescription: fuzzFamily가 힘을 키우도록 돕는 코드를 짧게 만드는 함수를 사용하세요!
   tutorial_ozodance_shortdescription: '오조봇이 춤추는 법을 배우도록 도와주세요! 오조봇 로봇을 위한 댄스 루틴을 만들고
     프로그램. '
   tutorial_codingrobotics_shortdescription: 커뮤니케이션은 프로그래밍과 관련이 있기 때문에 학생은 커뮤니케이션에
     중점을 둘 것입니다.
   tutorial_box_shortdescription: 용감한 히어로와 함께 박스 아일랜드로 코딩 여행을 가세요.
-  tutorial_hopgame_shortdescription: 이 6 강의 가이드로 코딩 워크숍 또는 클럽, 해커톤 행사 주도.
+  tutorial_hopgame_shortdescription: 이 6개 레슨 가이드로 코딩 워크숍 또는 클럽, 해커톤 행사 주도.
   tutorial_icontrol_shortdescription: iPads와 Sphero로 물리 시스템 프로그래밍.
   tutorial_cocomteach_shortdescription: 코드컴뱃의 입문 커리큘럼으로 학생에게 성공적으로 프로그래밍했을 때의 기쁨을
     맛보게 하세요!
-  tutorial_bbcmathii_shortdescription: '레벨 K-2를 위한 표준 기반 강의 플랜. '
-  tutorial_bbcphys_shortdescription: '레벨 K-5를 위한 표준 기반 강의 플랜. '
+  tutorial_bbcmathii_shortdescription: '레벨 K-2를 위한 표준 기반 레슨 플랜. '
+  tutorial_bbcphys_shortdescription: '레벨 K-5를 위한 표준 기반 레슨 플랜. '
   tutorial_bitsbox_shortdescription: 진짜 타입드 자바스크립트로 5개의 미니 앱을 코딩하세요! 초보자도 환영합니다.
   tutorial_tlcemo_shortdescription: 여러 감정을 연달아 보여주는 카드 로봇 얼굴 프로그램.
   tutorial_crd_shortdescription: 카드 한 벌로 알고리즘 배우기
-  tutorial_bbcbio_shortdescription: '레벨 K-5를 위한 표준 기반 강의 플랜. '
+  tutorial_bbcbio_shortdescription: '레벨 K-5를 위한 표준 기반 레슨 플랜. '
   tutorial_ticklebb8_shortdescription: 사용자 친화적 코딩 앱인 Tickle로, 코딩 블록을 드레그 드롭하여 명령어를
     만들어 쉽게 BB-8을 다양한 방식으로 움직이게 프로그램할 수 있습니다.
   tutorial_grok_shortdescription: 파이썬으로 깃발 그리기 또는 눈송이 만들기 또는 로봇 제작.
   tutorial_ijournalist_shortdescription: '기초 HTML/CSS를 사용하여 학교에서 발생한 허구의 강도사건에 관한
     온라인 뉴스 리포트를 작성. '
-  tutorial_bbcmusic_shortdescription: '레벨 K-5를 위한 표준 기반 강의 플랜. '
+  tutorial_bbcmusic_shortdescription: '레벨 K-5를 위한 표준 기반 레슨 플랜. '
   tutorial_secretcodes_shortdescription: 세상을 구하는 데 기여하는 컴퓨터의 역할에 관해 배우기.
   tutorial_tlchex_shortdescription: 컴퓨팅과 컴퓨팅 사고, 그것이 어떤 도움을 주는 지에 관해 배우는 동안 플렉사곤을
     만들고 탐구.
   tutorial_tickles_shortdescription: '스피로와 한 팀이 되어 멋지게 달리세요! 움직이고 회전하며 몇 개의 라운드를 통과하세요.
-    Tickle 앱에서 그냥 몇 개의 코드 블럭을 조합하여 스피로를 원하는 방향으로 달리게 하세요. '
+    Tickle 앱에서 그냥 몇 개의 코드 블록을 조합하여 스피로를 원하는 방향으로 달리게 하세요. '
   tutorial_ozogame_shortdescription: 오조봇 게임을 하고 프로그램 가능한 로봇 오조봇으로 자신에게 맞는 게임 레벨을 만들게
     하여 학생에게 코딩을 소개.
-  tutorial_vidcodeio_shortdescription: 자바스크립트 함수를 수학 및 실세계 문제와 연결.
+  tutorial_vidcodeio_shortdescription: 자바스크립트 함수를 수학 및 현실 문제와 연결.
   tutorial_besttech_shortdescription: 학생은 지난 몇 십년 동안의 중요한 기술적 발명에 관해 배우고 토론할 것입니다.
   tutorial_tlcbrain_shortdescription: 'Snap을 플레이하는 학생의 신경세포 컴퓨터 모델을 만들어 인간의 두뇌가 어떻게
     작동하는지 탐구.  '
-  tutorial_hopquiz_shortdescription: 친구의 특정 과목에서의 지식을 테스트하기 위해 선다형 문제 퀴즈를 코딩
+  tutorial_hopquiz_shortdescription: 친구의 특정 과목에서의 지식을 테스트하기 위해 객관식 문제 퀴즈를 코딩
   tutorial_unfortunate_shortdescription: 주위에서 일어나는 이벤트에 대응하기 위해 대시와 도트를 가르치세요.
   tutorial_cha_shortdescription: 컴퓨터 역사에서 일부 주요 이벤트에 관해 배우기
   tutorial_elaseq_shortdescription: '학생은 그것이 읽기 및 쓰기와 관련이 있기 때문에, 가장 기본적인 프로그래밍 개념인
     시퀸스에 관해 배울 것입니다. '
-  tutorial_bbcmathi_shortdescription: '레벨 3-5를 위한 표준 기반 강의 플랜. '
+  tutorial_bbcmathi_shortdescription: '레벨 3-5를 위한 표준 기반 레슨 플랜. '
   tutorial_tlcpixel_shortdescription: '간단한 색상과 숫자, 논리적 사고 퍼즐을 풀며 이미지 표현과 압축에 관한 더
     깊이 있는 이해력을 얻습니다. '
   tutorial_arduino_shortdescription: 기본 회로 만들기와 조명을 깜박이게  만드는 법 배우기.
@@ -1763,7 +1766,7 @@ ko:
     프로그램. '
   tutorial_tlcmagic_shortdescription: 단어에 관한 아주 흥미로운 계산 특성에 기초하여 마법 속임수를 탐구.
   tutorial_scratchmus_shortdescription: 악기를 선택하고, 소리를 추가하며, 음악 연주를 위한 키를 누르세요.
-  tutorial_scratchanim_shortdescription: 이름에 생명을 불어넣으세요! 스크래치로 코딩하여 글자를 움직이게 하세요.
+  tutorial_scratchanim_shortdescription: 이름에 생동감을 주세요! 스크래치로 코딩하여 글자를 움직이게 하세요.
   tutorial_scratchfly_shortdescription: 캐랙터를 선택하고 날아가는 애니메이션을 만드세요!
   tutorial_tynkerarc_shortdescription: 톱다운 아케이드 슈터 게임 제작.
   tutorial_grokffpython_shortdescription: 프로그래밍 언어 파이썬을 사용하고 코드로 거북이를 조정하여 환상적인 눈송이를
@@ -1786,7 +1789,7 @@ ko:
   tutorial_app-inventor_shortdescription: 앱 만들기 (안드로이드 만)
   tutorial_bits_shortdescription: 조금씩 움직이세요!
   tutorial_blockly_shortdescription: 오프라인 학습을 위해 ZIP 파일 다운로드.
-  tutorial_tynker_shortdescription: 재미있는 퍼즐을 풀어 코드를 배우고 나 만의  게임을 만들기.
+  tutorial_tynker_shortdescription: 재미있는 퍼즐을 풀어 코드를 배우고 나만의  게임을 만들기.
   tutorial_baypt_shortdescription: 코드 베이맥스
   tutorial_code-combat_shortdescription: 이 에픽 프로그래밍 게임에서 괴물을 물리치며 파이썬이나 자바스크립트를 배우세요!
   tutorial_mky_shortdescription: 학생들은 원숭이가 바나나들을 잡도록하는 프로그래밍을 합니다.
@@ -1823,7 +1826,7 @@ ko:
   tutorial_build-a-galaxy_shortdescription: 드로이드를 프로그램하는 법을 배워보고, 머나먼 은하계에서 나만의 스타워즈
     게임을 만들어보세요.
   tutorial_alicesims_shortdescription: '창의력을 발휘하여 스토리를 말하는 한편 코딩 배우기. '
-  tutorial_tchr_shortdescription: 이 강의 플랜을 참조하여 여러분의 아워오브코드 이벤트를 설계해 보세요.
+  tutorial_tchr_shortdescription: 이 레슨 플랜을 참조하여 여러분의 아워오브코드 이벤트를 설계해 보세요.
   tutorial_robogame_shortdescription: 그릿, 게임, 재미!
   tutorial_tap_shortdescription: '재미있는 코딩 퍼즐을 풀며 프로그램을 배워보세요. '
   tutorial_cintl_shortdescription: 마크 저커버그, 앵그리 버드와 함께 코드 배우기!
@@ -1857,12 +1860,12 @@ ko:
   tutorial_wolframp_shortdescription: 놀라운 다각형 모양 만들기를 탐구하세요!
   tutorial_wolframn_shortdescription: 여러분의 닌자 이름은 뭐예요?
   tutorial_soloweb_shortdescription: 좋아하는 농담으로 웹페이지를 만들고 공유하세요!
-  tutorial_khanweb_shortdescription: 'HTML 태그와 CSS으로 웹페이지 만드는 법을 배우고, 인사 카드를 만들어 과정을
+  tutorial_khanweb_shortdescription: 'HTML 태그와 CSS로 웹페이지 만드는 법을 배우고, 인사 카드를 만들어 과정을
     마치세요. '
-  tutorial_khandata_shortdescription: 데이터로 놀고 싶으세요? 데이터베이스의 데이터를 조작하고 나만의 커스텀 스토어를
+  tutorial_khandata_shortdescription: 데이터로 놀고 싶으세요? 데이터베이스의 데이터를 조작하고 나만의 맞춤형 스토어를
     만드는 법 배우기.
-  tutorial_robomeshiq_shortdescription: 학생은 구글 블록리 코드를 작성하여 인기 있는 VEX IQ 로봇을 제어합니다.
-  tutorial_googlelogo_shortdescription: 상상력과 코드 비트로 구글 로고에 생기를 불어 넣어 줍니다.
+  tutorial_robomeshiq_shortdescription: 학생은 구글 블러클리 코드를 작성하여 인기 있는 VEX IQ 로봇을 제어합니다.
+  tutorial_googlelogo_shortdescription: 상상력과 코드 비트로 구글 로고에 생동감을 줍니다.
   tutorial_playtune_shortdescription: 코딩 스킬을 사용하여 음악 퍼즐을 풀고 Android 앱 만들기.
   tutorial_computeit_shortdescription: 이번에는 여러분이 컴퓨터가 됩니다! 프로그램을 해석하여 경로를 찾으세요.
   tutorial_codesterssj_shortdescription: 공유할 수 있는 인터랙티브 조크 텔러를 만드세요!
@@ -1876,7 +1879,7 @@ ko:
   tutorial_ccbinary_shortdescription: 노래 음을 무대 위에서 스크롤 다운하며 재생시키는 스크래치 게임 만들기.
   tutorial_codehsturtle_shortdescription: 거북이 트레이시로 예술 작품을 만들기 위한 프로그램을 작성하세요!
   tutorial_grokhd_shortdescription: 이 활동은 프로그램 시 분기 결정을 소개하도록 설계되었습니다. 파이썬과 거북이 모듈의
-    블록리 버전을 사용하여 수국을 그리고 색칠하세요!
+    블러클리 버전을 사용하여 수국을 그리고 색칠하세요!
   tutorial_grokem_shortdescription: 이 활동은 처음 프로그래밍을 경험해 본 이들을 위해 설계되었으며, 특히 아워오브코드를
     위해 설계되었습니다. 프로그래밍 언어인 파이썬을 사용하여 이모티콘과 텍스트 조작을 탐구해 보세요.
   tutorial_kodmaze_shortdescription: 미로를 만들어 풀어보고 친구에게도 풀어보게 하세요!
@@ -1889,7 +1892,7 @@ ko:
   tutorial_codesterstp_shortdescription: 모양을 좌표면 위 여기저기로 안내하며 변환에 관해 배우세요!
   tutorial_codestersbb_shortdescription: '농구 게임을 프로그래밍 하세요! '
   tutorial_gfcrossyroad_shortdescription: 크로시 로드  미니 게임을 코딩하고 컴퓨터 처럼 생각하는 법 배우기.
-  tutorial_googleww_shortdescription: 원더 우먼과 함께 하는 모험에서 자신의 코딩 수퍼파워 발견
+  tutorial_googleww_shortdescription: 원더 우먼과 함께 하는 모험에서 자신의 코딩 슈퍼파워 발견
   tutorial_codehsjsapp_shortdescription: 자바스크립트로 여러분의 첫 번째 실제 앱을 코딩해 보세요!
   tutorial_gfmihi_shortdescription: '미니 게임을 코딩하고 마오리어 (뉴질랜드의 언어)로 자기소개하는 법 배우기 '
   tutorial_hopdropphone_shortdescription: iPad/iPhone으로 "전화기를 떨어 뜨리지 마세요" 만들기
@@ -1899,7 +1902,7 @@ ko:
   tutorial_hopcrossyroad_shortdescription: iPad/iPhone에서 크로시 로드 만들기
   tutorial_switchglitch_shortdescription: 우주를 구해 줄 귀여운 로봇을 프로그래밍하세요!
   tutorial_codecar_shortdescription: '입력된 코드를 사용하여 시뮬레이션된 코드 카의 조명과 버튼을 콘트롤하세요! '
-  tutorial_codesterscp_shortdescription: 스프라이트에게 잃어버린 겨울 옷을 모두 가져오게 보내 좌표면에 관해 배우세요!
+  tutorial_codesterscp_shortdescription: 스프라이트에게 잃어버린 겨울 옷을 모두 가져오도록 보내며 좌표면에 관해 배우세요!
   tutorial_grokpetblock_shortdescription: 이 활동은 친근한 블록을 사용하여 내장형 프로그래밍을 소개하도록 설계되었으며
     특별히 아워오브코드를 위해 설계되었습니다. 블록과 마이크로 비트를 사용하여 사료를 주고 같이 놀아줄 애완동물을 만드세요. BBC 마이크로 비트가
     없으세요? 괜찮습니다! 이 과정에 마이크로비트 시뮬레이터가 포함되어 있어 실제 마이크로비트가 하는 모든 것을 할 수 있습니다!
@@ -1912,15 +1915,15 @@ ko:
   tutorial_rgbegin_shortdescription: 로보가든에서 우리는 학습자에게 교육에서 적극적인 역할을 할 기회를 주는 것이 중요하다고
     믿습니다.
   tutorial_myradream_shortdescription: '코드 블록을 사용하여 여행 중인 마이러가 그녀의 꿈을 다시 찾도록 도와주세요. '
-  tutorial_thinkfun_shortdescription: 불 논리 개념을 가르치는 이 재미 있는 CS 활동을 즐깁니다.
+  tutorial_thinkfun_shortdescription: 불 논리 개념을 가르치는 이 재미있는 CS 활동을 즐깁니다.
   tutorial_hopfireworks_shortdescription: iPad/iPhone에서 불꽃 앱 만들기
   tutorial_grokspace_shortdescription: 이 활동은 프로그래밍을 처음 경험해 본 이들을 위해 설계되었으며, 특히 아워오브코드를
-    위해 설계되었습니다. 프로그래밍 언어인 블록리를 사용하여 우주를 조사하고 별에 손을 뻣어 보세요.
+    위해 설계되었습니다. 프로그래밍 언어인 블러클리를 사용하여 우주를 조사하고 별에 손을 뻣어 보세요.
   tutorial_codehspython_shortdescription: 파이썬으로 프로그램을 코딩하세요!
   tutorial_codehsjava_shortdescription: 자바로 프로그램을 코딩하세요!
   tutorial_techioda_shortdescription: Dijkstra의 알고리즘을 사용하여 그래프에서 가장 짧은 경로를 계산
   tutorial_grokmonster_shortdescription: 특별히 아워오브코드를 위해 설계된 이 친근한 과정으로 아동에게 코딩에 대해
-    배우게 하세요! 드래그 앤 드롭 블록을 사용하여 프로그램을 작성하고, 시퀸스와 배열에 관해 배우고 재미 있는 몬스터 캐릭터를 만드세요!
+    배우게 하세요! 드래그 앤 드롭 블록을 사용하여 프로그램을 작성하고, 시퀸스와 배열에 관해 배우고 재미있는 몬스터 캐릭터를 만드세요!
   tutorial_techmjs_shortdescription: JS 코드를 개선할 모던 자바스크립트 특징
   tutorial_techga_shortdescription: 유전 알고리즘 소개
   tutorial_techioan_shortdescription: Null 패턴 때문에 더 이상 자바에서 막히지 마세요!
@@ -1961,7 +1964,7 @@ ko:
   tutorial_ozoevo_shortdescription: 오조봇 이보의 힘의 장을 사용하여 플레이 하고, 그 다음 멋진 게임을 만드세요.
   tutorial_ozoexped_shortdescription: 우주까지 가는 방법을 코딩하여 색칠하세요!
   tutorial_ozojourney_shortdescription: 오조봇 로봇이 세계일주를 하도록 프로그램.
-  tutorial_ozocodes_shortdescription: '미취학 아동은 자신의 이름이 그려진 그림 위에 오조코드를 논리적으로 올려 놓아
+  tutorial_ozocodes_shortdescription: '프리 리더는 자신의 이름이 그려진 그림 위에 오조코드를 논리적으로 올려 놓아
     오조봇 로봇이 왼쪽에서 오른쪽으로 걸을 수 있게 합니다. '
   tutorial_ozoeclipse_shortdescription: 오조 로봇으로 궤도를 도는 천체들, 일식월식, 달의 변화 모델링.
   tutorial_ozosimulator_shortdescription: 마커와 종이를 사용하여 프로그래밍 언어 배우기.
@@ -1974,7 +1977,7 @@ ko:
   tutorial_codesnoopy_shortdescription: 스누피 눈싸움에서 이기기 위한 코딩- 누가 마지막 스카우트 스탠딩이 될까요?
   tutorial_applabintro_shortdescription: 블록 또는 텍스트를 사용해서 자바스크립으로된 앱 만들기.
   tutorial_cslartist_shortdescription: K-4학년 학생을 위한 재미로 가득 찬 코딩 + 아트 챌린지
-  tutorial_cslscratchjr_shortdescription: '워크시트와 팔로우 업 코딩 프로젝트로 미취학 아동을 위해 소리 내 읽는
+  tutorial_cslscratchjr_shortdescription: '워크시트와 팔로우 업 코딩 프로젝트로 프리 리더를 위해 소리 내 읽는
     코딩 이야기  '
   tutorial_floevents_shortdescription: 이벤트에 관한 힙합 비디오 시청. 그 다음, 직접 작성하고 실연합니다!
   tutorial_florobot_shortdescription: 로봇에 관한 힙합 비디오를 시청하고 관련 내용을 읽고 직접 설계하세요!
@@ -2353,9 +2356,9 @@ ko:
   tutorial_n2y_shortdescription: 비트 보트가 방향 화살표를 사용하여 지구를 탐구하도록 도와줍니다.
   tutorial_dance2019_longdescription: 댄스 파티를 코딩해서 친구들과 공유하세요. Katy Perry, Shawn Mendes,
     Lil Nas X, Panic으로 구성됩니다! 디스크에는 Jonas Brothers 등 많은 이들이 함께 합니다!
-  tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
-  tutorial_chibitronics_longdescription: 스토리를 밝혀주는 종이 회로 프로그램.
+  tutorial_danceparty_longdescription: 댄스 파티를 코딩해서 친구들과 공유하세요. 케이티 페리, 마돈나, J 발빈,
+    시아, 키스 어번, 시애라 외 25명 이상의 가수들이 출연!!
+  tutorial_chibitronics_longdescription: 스토리를 빛내주는 종이 회로 프로그램.
   tutorial_athlete_longdescription: 농구 게임과 다양한 스포츠의 믹스 앤 매치 중 선택하세요!
   tutorial_moana_longdescription: 새 디즈니 아워오브코드 튜토리얼에서는 학생들이 비주얼 블록을 간단히 드래그하고 드롭하여
     코드를 작성하고, 블록을 사용하는 비주얼 프로그래밍 언어를 사용합니다. 비주얼 프로그래밍은 코딩의 논리를 가르치기 위한 재미 있고 쉽게 이해되는
@@ -2366,7 +2369,8 @@ ko:
     만들어보세요.
   tutorial_gumadventure_longdescription: 어메이징 오브 검볼 에피소드인 "더 시그널"에서 글리치는 캐릭터간 연관성에
     영향을 미칩니다. 이 활동에서, 글리치를 표시하고 검볼과 그의 친구가 이에 어떻게 반응하는지 상상하며 이야기를 이어 만듭니다.
-  tutorial_mchoc_longdescription: 코드 블록을 사용해 알렉스나 스티브가 마인크래프트 세계에서 모험을 펼치게 하세요.
+  tutorial_mchoc_longdescription: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코드로 마인크래프트를
+    여행하세요.
   tutorial_vidnews_longdescription: 'HOC 뉴스입니다! 비디오와 그래픽은 모두 테크와 다양성, 아동, 코딩에 관한 내용입니다.
     완료된 프로젝트는 학교 웹사이트에 HOC 보고서로서 업로딩할 수 있습니다. 교사는 학생에게 뉴스를 사용하여 학교를 위해 배운 내용 또는 통계를
     보고하도록 권할 수 있습니다. "브레이킹 뉴스: 루즈벨트에서 400명의 학생이 아워오브코드에 참여합니다."'
@@ -2415,7 +2419,7 @@ ko:
   tutorial_lightbot_longdescription: 라이트봇은 플레이어가 프로그래밍 로직을 사용하여 퍼즐을 푸는 게임입니다! 각 레벨에서
     모든 파란색 타일에 불이 껴도록 라이트봇을 안내하며 기초 코딩 개념을 실질적으로 이해합니다. 이 자기주도 활동에서 순차적 명령실행과 함수(프로시져)
     작성, 반복 활용 방법에 관해 배웁니다. 연령과 게임 능력 레벨에 상관 없이 누구나 할 수 있습니다.
-  tutorial_hoc_longdescription: 새로운 code.org/hoc를 위한 플레이스홀더
+  tutorial_hoc_longdescription: 새로운 code.org/hoc를 위한 자리 표시자
   tutorial_code_longdescription: 드래그 앤드 드롭 프로그래밍으로 컴퓨터 과학의 기본 개념을 학습하세요. 이것은 게임과 유사한
     자기 주도 튜토리얼로, 빌 게이츠, 마크 저커버그, 앵그리 버드, 좀비 대 식물 등의 동영상 강의가 포함됩니다.  반복 루프, 조건문, 기본
     알고리즘을 배우세요. 37개 언어로 제공.
@@ -2602,7 +2606,7 @@ ko:
     간단한 그래픽입니다.  '
   tutorial_roboba_longdescription: "로보블록리는 초보자를 위해 설계되었으며 로봇과 함께 블록리로 수학을 배웁니다. 대수학
     1 활동은 자기 주도형입니다. \n로보블록리는 학생들에게 C/C++으로 프로그램할 준비가 되도록 대비시킵니다.\n"
-  tutorial_knodsnake_longdescription: '자바스크립트으로 스네이크 게임을 만드는 법을 배우세요! '
+  tutorial_knodsnake_longdescription: '자바스크립트로 스네이크 게임을 만드는 법을 배우세요! '
   tutorial_soccharater_longdescription: 픽셀 캐릭터를 코딩하세요! HTML를 사용하여 캐릭터를 만들고 CSS로 캐릭터의
     스타일을 꾸미며 자바스크립트로 여러분의 귀여운 픽셀 캐릭터를 사람처럼 움직이게 하세요. 직접 코딩하거나 또는 친구를 초대해 함께 코딩하며 팀
     코딩 게임을 즐기세요.
@@ -2783,7 +2787,7 @@ ko:
   tutorial_tlchex_longdescription: '다양한 색상의 줄을 특별한 방식으로 접고 풀로 붙여 빨간색과 노란색의 육각형을 만듭니다.
     일단 만들었으면 그것을 탐구합니다. 접었다 펼쳤다 하면, 육각형 색상이 바뀌고 그때 마다 마법처럼 새로운 면이 드러납니다. '
   tutorial_tickles_longdescription: '스피로와 한 팀이 되어 멋지게 달리세요! 움직이고 회전하며 몇 개의 라운드를 통과하세요.
-    Tickle 앱에서 그냥 몇 개의 코드 블럭을 조합하여 스피로를 원하는 방향으로 달리게 하세요. '
+    Tickle 앱에서 그냥 몇 개의 코드 블록을 조합하여 스피로를 원하는 방향으로 달리게 하세요. '
   tutorial_ozogame_longdescription: "이 교사 주도 튜토리얼은 작은 프로그램 가능 로봇인 오조봇의 도움으로 학생들에게
     코딩의 개념을 소개합니다. 학생들은 모양 추적이라 부르는 오조봇 게임을 하며 코딩 방법을 배우게 됩니다. 오조봇 비트 또는 이보 로봇이 없어도
     시뮬레이션 버전으로 게임을 할 수 있습니다. 오조봇 게임은 학생들에게 블록리에 기초한 시각적 프로그래밍 언어인 오조블록리로 코딩하는 방법을
@@ -3198,7 +3202,7 @@ ko:
     사랑받고 있습니다. 이 자기 주도형 비디오 튜토리얼은 8세 이상의 아동에게 프로그래밍의 기초를 가르치는 한편 아동은 인터랙티브 불꽃 놀이를
     자신의 버전으로 코딩합니다. '
   tutorial_grokspace_longdescription: 이 활동은 프로그래밍을 처음 경험해 본 이들을 위해 설계되었으며, 특히 아워오브코드를
-    위해 설계되었습니다. 프로그래밍 언어인 블록리를 사용하여 우주를 조사하고 별에 손을 뻣어 보세요.
+    위해 설계되었습니다. 프로그래밍 언어인 블러클리를 사용하여 우주를 조사하고 별에 손을 뻣어 보세요.
   tutorial_codehspython_longdescription: 상호 작용할 수 있는 프로그램을 작성하여 파이썬 프로그래밍 언어로 코딩의
     기초를 배우세요! 이 시간은 인쇄하기와 변수, 수학, 사용자에게서 정보 얻기로 채워집니다. 사용자에게서 데이터를 얻어 저장하고 독특한 반응으로
     되돌려 주는 프로그램을 작성하세요.
@@ -3206,7 +3210,7 @@ ko:
   tutorial_techioda_longdescription: 이 유용한 튜토리얼은 다익스트라 알고리즘 덕분에 그래픽 위 두 노드 사이의 가장
     짧은 경로를 미리 계산하는 방법을 대화식으로 가르쳐 줍니다.
   tutorial_grokmonster_longdescription: 특별히 아워오브코드를 위해 설계된 이 친근한 과정으로 아동에게 코딩에 대해
-    배우게 하세요! 드래그 앤 드롭 블록을 사용하여 프로그램을 작성하고, 시퀸스와 배열에 관해 배우고 재미 있는 몬스터 캐릭터를 만드세요!
+    배우게 하세요! 드래그 앤 드롭 블록을 사용하여 프로그램을 작성하고, 시퀸스와 배열에 관해 배우고 재미있는 몬스터 캐릭터를 만드세요!
   tutorial_techmjs_longdescription: 자바스크립트는 1997년 이래로 국제 표준이었습니다. 이 인터랙티브 튜토리얼에서 우리는
     코드를 더 탄탄하고 간략하며 더 쉽게 읽혀지게 만들 언어의 최신 기능을 탐구할 것입니다.
   tutorial_techga_longdescription: '유전 알고리즘은 결정론적 알고리즘으로 풀기에는 너무 많은 비용이 드는 트래블링 세일즈맨과

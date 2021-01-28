@@ -2994,7 +2994,18 @@
         "outbreak5": "Fai in modo che tutti i mostri malati inizino a riprendersi quando un mostro sano tocca un mostro malato.",
         "outbreak6": "Aggiungi una percentuale di possibilità che i mostri si ammalino ogni volta che i mostri sani toccano i mostri malati. Fallo per tutte le combinazioni di mostri con e senza mascherina.",
         "outbreak7": "Crea un nuovo costume per i mostri con immunità al virus e usalo nella tua simulazione.",
-        "outbreak8": "Condividi un messaggio con la tua simulazione."
+        "outbreak8": "Condividi un messaggio con la tua simulazione.",
+        "behaviors 7": "Guida verso l'orizzonte!",
+        "behaviors 7_2020": "Guida verso l'orizzonte!",
+        "courseA_collector_preLoops1": "Questo è l'Avventuriero! \n\nPremi \"Esegui\" per vederlo camminare verso il tesoro e raccoglierlo.",
+        "courseA_maze_ramp3b_2019": "Rimuovi l'ultimo blocco nella sequenza trascinandolo agli strumenti, poi clicca \"Esegui\".",
+        "courseA_maze_ramp3b_2020": "Rimuovi l'ultimo blocco nella sequenza trascinandolo agli strumenti, poi clicca \"Esegui\".",
+        "courseA_playLab_events3_2019": "Connetti il blocco 'move left' al blocco dell'evento 'when left' che è già nell'area di lavoro. Usa i tasti freccia o premi i pulsanti freccia per spostare il cane alla bandiera e finire il livello!",
+        "courseA_playLab_events4_2019": "Ora, aggiungi un altro blocco evento che porti il cane a spostarsi a destra al click del pulsante della freccia destra. Usa i tasti freccia o premi i pulsanti freccia per spostare il cane verso entrambe le bandiere e concludere il livello!",
+        "courseA_playLab_events5_2019": "Aggiungi eventi affinché il cane si muova in su e giù alla pressione dei pulsanti 'up' e 'down'. Fai raccogliere le bandiere al cane per finire il livello!",
+        "courseA_playLab_events5_2020": "Aggiungi eventi affinché il cane si muova in su e giù alla pressione dei pulsanti 'up' e 'down'. Fai raccogliere le bandiere al cane per finire il livello!",
+        "courseA_playLab_events6_2019": "Rendilo più interessante cambiando lo sfondo e riproducendo un suono casuale quando il cane viene cliccato. Quando il tuo codice è pronto, clicca sul cane per provarlo!",
+        "courseA_playLab_events6_2020": "Rendilo più interessante cambiando lo sfondo e riproducendo un suono casuale quando il cane viene cliccato. Quando il tuo codice è pronto, clicca sul cane per provarlo!"
       }
     }
   }

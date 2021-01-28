@@ -14419,3 +14419,9 @@ uz:
               display_name: 'Chapter 2: Solving Data Problems'
             cspSurvey:
               display_name: Survey
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: 14-Dars
+            lesson15:
+              name: 15-Dars
