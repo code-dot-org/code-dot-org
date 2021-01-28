@@ -18,6 +18,7 @@ class LessonsControllerTest < ActionController::TestCase
       name: 'lesson display name',
       absolute_position: 1,
       relative_position: 1,
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -29,6 +30,7 @@ class LessonsControllerTest < ActionController::TestCase
       script_id: @script.id,
       lesson_group: lesson_group,
       name: 'second lesson',
+      has_lesson_plan: false,
       absolute_position: 2,
       relative_position: 2
     )
@@ -65,16 +67,23 @@ class LessonsControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
   end
 
-  # anyone can show lesson
+  # anyone can show lesson with lesson plan
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: nil, response: :success
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :student, response: :success
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
 
+  # no one can access a lesson without lesson plan
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :levelbuilder, response: :forbidden
+
   test 'show lesson when lesson is the only lesson in script' do
     @solo_lesson_in_script = create(
       :lesson,
       name: 'lesson display name',
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
