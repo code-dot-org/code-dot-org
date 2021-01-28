@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "World",
   "config": {
     "func": "setPrompt",
     "inline": false,
