@@ -8309,7 +8309,45 @@ it:
           student_description: 'Usa Sprite Lab per programmare la simulazione di un''epidemia di virus.'
         ai-unit-pilot:
           lessons:
+            intro:
+              name: Lezione 1
+            lesson1:
+              name: Lezione 1
+            lesson2:
+              name: Lezione 2
+            lesson3:
+              name: Lezione 3
+            lesson4:
+              name: Lezione 4
+            lesson5:
+              name: Lezione 5
+            lesson6:
+              name: Lezione 6
+            lesson7:
+              name: Lezione 7
+            lesson8:
+              name: Lezione 8
+            lesson9:
+              name: Lezione 9
+            lesson10:
+              name: Lezione 10
+            lesson11:
+              name: Lezione 11
+            lesson12:
+              name: Lezione 12
+            lesson13:
+              name: Lezione 13
             lesson14:
               name: Lezione 14
             lesson15:
               name: Lezione 15
+            lesson16:
+              name: Lezione 16
+            lesson17:
+              name: Lezione 17
+            lesson18:
+              name: Lezione 18
+            lesson19:
+              name: Lezione 19
+            lesson20:
+              name: Lezione 20
