@@ -55,8 +55,17 @@ function select(event) {
 
 const styles = {
   modal: {
-    width: 720,
-    marginLeft: -360
+    width: 750,
+    marginLeft: -375
+  },
+  shareOnTikTok: {
+    margin: 6,
+    marginLeft: 0,
+    width: 46,
+    height: 46,
+    backgroundImage: `url('/blockly/media/dance/tiktok.png')`,
+    backgroundSize: 'cover',
+    borderRadius: 5
   },
   abuseStyle: {
     border: '1px solid',
@@ -85,8 +94,7 @@ const styles = {
     marginTop: 0,
     marginBottom: 0,
     marginLeft: 0,
-    marginRight: 8,
-    verticalAlign: 'top'
+    marginRight: 8
   },
   buttonDisabled: {
     backgroundColor: color.gray,
@@ -183,6 +191,7 @@ class ShareAllowedDialog extends React.Component {
 
   state = {
     showSendToPhone: false,
+    showSendToTikTok: false,
     showAdvancedOptions: false,
     exporting: false,
     exportError: null,
@@ -233,6 +242,16 @@ class ShareAllowedDialog extends React.Component {
   showSendToPhone = event => {
     this.setState({
       showSendToPhone: true,
+      showSendToTikTok: false,
+      showAdvancedOptions: false
+    });
+    event.preventDefault();
+  };
+
+  showSendToTikTok = event => {
+    this.setState({
+      showSendToTikTok: true,
+      showSendToPhone: false,
       showAdvancedOptions: false
     });
     event.preventDefault();
@@ -246,6 +265,7 @@ class ShareAllowedDialog extends React.Component {
   showAdvancedOptions = () => {
     this.setState({
       showSendToPhone: false,
+      showSendToTikTok: false,
       showAdvancedOptions: true
     });
   };
@@ -308,7 +328,7 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: p5labConstants.APP_WIDTH + 32
       };
     }
-    const {canPrint, canPublish, isPublished} = this.props;
+    const {canPrint, canPublish, isPublished, selectedSong} = this.props;
     return (
       <div>
         <BaseDialog
@@ -371,7 +391,7 @@ class ShareAllowedDialog extends React.Component {
                       onClick={select}
                       readOnly="true"
                       value={this.props.shareUrl}
-                      style={{cursor: 'copy', width: 500}}
+                      style={{cursor: 'copy', width: 530}}
                     />
                   </div>
                 </div>
@@ -459,9 +479,22 @@ class ShareAllowedDialog extends React.Component {
                       )}
                     </span>
                   )}
+                  {selectedSong && (
+                    <button
+                      type="button"
+                      id="sharing-tiktok"
+                      href=""
+                      style={styles.shareOnTikTok}
+                      onClick={wrapShareClick(
+                        this.showSendToTikTok.bind(this),
+                        'send-to-tiktok'
+                      )}
+                    />
+                  )}
                 </div>
                 {this.state.showSendToPhone && (
                   <div>
+                    <h2>Send to Phone</h2>
                     <div style={styles.sendToPhoneContainer}>
                       <div style={styles.sendToPhoneLeft}>
                         <SendToPhone
@@ -475,6 +508,21 @@ class ShareAllowedDialog extends React.Component {
                         <QRCode
                           value={this.props.shareUrl + '?qr=true'}
                           size={90}
+                        />
+                      </div>
+                    </div>
+                    <div style={{clear: 'both'}} />
+                  </div>
+                )}
+                {this.state.showSendToTikTok && (
+                  <div>
+                    <h2>Share on TikTok</h2>
+                    <div style={styles.sendToPhoneContainer}>
+                      <div style={styles.sendToPhoneLeft}>
+                        <SendToPhone
+                          channelId={this.props.channelId}
+                          appType={this.props.appType}
+                          isLegacyShare={false}
                         />
                       </div>
                     </div>
