@@ -4,28 +4,18 @@ import {shallow} from 'enzyme';
 import ProgressTableLevelIcon from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIcon';
 import {LETTER_BUBBLE_CONTAINER_WIDTH} from '@cdo/apps/templates/progress/progressStyles';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
+
+const levelWithSublevels = {
+  id: '123',
+  levelNumber: 1,
+  sublevels: [{id: '1'}, {id: '2'}],
+  kind: 'assessment'
+};
+const otherLevels = fakeLevels(2);
 
 const DEFAULT_PROPS = {
-  levels: [
-    {
-      id: '123',
-      levelNumber: 1,
-      sublevels: [{id: '1'}, {id: '2'}],
-      kind: 'assessment'
-    },
-    {
-      id: '456',
-      levelNumber: 2,
-      sublevels: undefined,
-      isUnplugged: true
-    },
-    {
-      id: '789',
-      levelNumber: 3,
-      sublevels: undefined,
-      bonus: true
-    }
-  ]
+  levels: [levelWithSublevels, ...otherLevels]
 };
 
 describe('ProgressTableLevelIcon', () => {

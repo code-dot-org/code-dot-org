@@ -4,46 +4,16 @@ import {mount} from 'enzyme';
 import {UnconnectedProgressTableContainer as ProgressTableContainer} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
+import {
+  fakeLessonWithLevels,
+  fakeStudents,
+  fakeStudentLevelProgress,
+  fakeStudentLastUpdate
+} from '@cdo/apps/templates/progress/progressTestHelpers';
 
-const LESSON_1 = {
-  name: 'CS Discoveries Pre-survey',
-  relative_position: 1,
-  lockable: false,
-  position: 1,
-  levels: [
-    {
-      id: 22484,
-      url: '/s/csd1-2020/lockable/1/puzzle/1/page/1',
-      kind: 'assessment',
-      icon: 'fa fa-list-ul',
-      isUnplugged: false,
-      levelNumber: 1,
-      bubbleText: '1',
-      isConceptLevel: false,
-      bonus: null
-    }
-  ]
-};
-
-const LESSON_2 = {
-  name: 'Intro to Problem Solving',
-  relative_position: 2,
-  lockable: false,
-  position: 2,
-  levels: [
-    {
-      id: 12345,
-      url: '/s/csd1-2020/lockable/1/puzzle/1/page/1',
-      kind: 'assessment',
-      icon: 'fa fa-list-ul',
-      isUnplugged: false,
-      levelNumber: 1,
-      bubbleText: '1',
-      isConceptLevel: false,
-      bonus: null
-    }
-  ]
-};
+const LESSON_1 = fakeLessonWithLevels({position: 1});
+const LESSON_2 = fakeLessonWithLevels({position: 2});
+const STUDENTS = fakeStudents(2);
 
 const DEFAULT_PROPS = {
   onClickLesson: () => {},
@@ -53,7 +23,7 @@ const DEFAULT_PROPS = {
   extraHeaderFormatters: [],
   extraHeaderLabels: [],
   children: <div />,
-  section: {id: 1, students: [{id: 1, name: 'joey'}, {id: 2, name: 'rachael'}]},
+  section: {id: 1, students: STUDENTS},
   scriptData: {
     id: 1,
     name: 'csd1-2020',
@@ -61,23 +31,8 @@ const DEFAULT_PROPS = {
     stages: [LESSON_1, LESSON_2]
   },
   lessonOfInterest: 1,
-  levelProgressByStudent: {
-    1: {
-      1: {
-        status: 'perfect',
-        result: 100,
-        paired: false
-      }
-    },
-    2: {
-      1: {
-        status: 'perfect',
-        result: 100,
-        paired: false
-      }
-    }
-  },
-  studentTimestamps: {1: 0, 2: 0},
+  levelProgressByStudent: fakeStudentLevelProgress(LESSON_1.levels, STUDENTS),
+  studentTimestamps: fakeStudentLastUpdate(STUDENTS),
   localeCode: 'en-US'
 };
 
