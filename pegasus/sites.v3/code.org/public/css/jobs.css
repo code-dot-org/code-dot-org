@@ -1,25 +1,36 @@
 .jobs-header {
-  padding: 24px 0;
-  border: 1px solid;
-  border-left: 0;
+  border: 1px solid rgba(0, 173, 178, 0.25); /* gives the illusion of < 1px */
+  border-left: 0; 
   border-right: 0;
-  border-color: rgba(0, 173, 178, 0.25); /* gives the illusion of < 1px */
+  padding: 24px 0;
 }
 
 .jobs__banner {
-  background: #00adbc;
-  background-image: url('/images/jobs/jobs-banner.jpg');
-  background-position-x: right;
-  background-repeat: no-repeat;
-  background-size: contain;
+  align-items: center;
+  background: url('/images/jobs/jobs-banner.jpg') top right/contain no-repeat #00adbc;
+  display: flex;
   margin-bottom: 32px;
   padding: 18px 24px;
 }
 
-.jobs__banner h1 {
+.jobs__banner h1,
+.jobs__banner h2,
+.jobs__banner h3 {
   color: #ffffff;
   margin: 0;
-  width: 60%;
+  width: 70%;
+}
+
+.jobs__banner a:link,
+.jobs__banner a:visited {
+  color: #ffffff;
+  font-family: 'Gotham 4r', sans-serif;
+}
+
+.jobs__banner i {
+  color: #ffffff;
+  font-size: 72px;
+  padding-right: 24px;
 }
 
 .jobs__intro-text {
@@ -32,17 +43,65 @@
   font-weight: bold;
 }
 
-.jobs__explore-button {
+.jobs__explore {
   align-self: center;
+}
+
+.jobs__explore-button {
+  font-family: 'Gotham 7r', sans-serif;
   font-size: 16px;
-  font-weight: 700;
   padding: 6px 24px;
 }
 
+#lever-jobs-container {
+  columns: 2;
+  column-width: auto;
+}
+
+.lever-team {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.lever-team:nth-of-type(1n) .lever-team-title { color: #0094CA; }
+.lever-team:nth-of-type(2n) .lever-team-title { color: #B9BF15; }
+.lever-team:nth-of-type(3n) .lever-team-title { color: #01AEBC; }
+.lever-team:nth-of-type(4n) .lever-team-title { color: #FFA400; }
+
+.lever-team[data-team="Future Openings"] {
+  display: none;
+}
+
+.lever-team ul {
+  margin: 0;
+}
+
+ul.lever-team li {
+  padding-left: 0;
+  text-indent: 0;
+}
+
+.lever-team-title {
+  font-size: 18px;
+}
+
+.lever-job {
+  padding-left: 0;
+  text-indent: 0;
+  padding: 10px 0;
+}
+
 .lever-job-tag {
-  margin-left: 10px;
+  color: #737373;
+  display: block;
 }
 
 ul li:before {
   content: "";
+}
+
+.jobs__future {
+  margin: 10px 0 30px 0;
 }
