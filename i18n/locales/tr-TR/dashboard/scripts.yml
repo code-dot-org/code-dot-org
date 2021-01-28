@@ -12427,7 +12427,7 @@ tr:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
             Understanding the Curriculum:
-              name: 'Müfredatı Anlama'
+              name: 'Müfredatı Anlama: Ön Çalışma'
             Demonstrating Understanding:
               name: Anlayış Gösterme
             Focus Area 1:
@@ -13420,7 +13420,7 @@ tr:
               name: HTML Projesi
             CSS Project:
               name: CSS Projesi
-          student_description: CSD Ağ Geliştirme için yeni mini-projeleri tutacak geçici yer
+          student_description: CSD Web Geliştirme için yeni mini-projeleri tutacak geçici yer
         csp9-pilot:
           title: "CSP Ünite 9 Pilot - Veri\n"
           lessons:
@@ -14935,7 +14935,7 @@ tr:
             new stage:
               name: yeni kademe
             Algorithms Solve Problems:
-              name: Algoritmalar, Prblemleri Çözer
+              name: Algoritmalar, Problemleri Çözer
             Algorithm Efficiency:
               name: Algoritma Verimliliği
             Unreasonable Time:
@@ -15766,7 +15766,7 @@ tr:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: 'Modül 1'
+              name: 'Modül 1: Ünite 4''e Giriş ve programlamayı öğretmeye yönelik yeni pedagoji'
             Module 2:
               name: 'Modül 2'
             Module 3:
@@ -15897,7 +15897,7 @@ tr:
               display_name: Alternatif Dersler
           student_description: "Problem Çözme ve Bilişim, daha geniş problem çözme arayışında çerçevelendiği üzere, bilgisayar bilimi alanına yüksek derecede etkileşimli ve işbirlikçi bir giriştir. Bir dizi bulmaca, zorluk ve gerçek dünya senaryolarını yönlendirmek için bir problem çözme sürecini kullanmayı pratik edeceksiniz. Sonra, insanların problemlerini çözmede yardım etmek için bilgisayarların bilgiyi nasıl girdiğini, çıkardığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir problemi çözmede yardım eden bir uygulama tasarladığınız bir proje ile sonlanır.\\r"
         csd2-2021:
-          title: CSD Ünite 2 - Ağ Geliştirme ('20-'21)
+          title: CSD Ünite 2 - Web Geliştirme ('21-'22)
           description: " 2. Ünitede, kendi web sayfanızda nasıl içerik oluşturacağınız ve paylaşacağınızı öğreneceksiniz. Dünyayla ne tür içerik paylaşacağınıza karar verdikten sonra, web sayfanızı HTML ve CSS kullanarak nasıl yapılandıracağınızı ve biçimlendireceğinizi öğreneceksiniz. Aynı zamanda hata ayıklama (debugging) ve yorumlama (commenting) gibi önemli programlama becerilerini uygulayacaksınız. Ünitenin sonunda, İnternette yayınlanabilecek kişisel bir web siteniz olacak."
           description_short: "  Web Lab'da kendi web siteni oluşturmayı öğren."
           lessons:
@@ -16533,8 +16533,8 @@ tr:
           title: CSP Ünite 6 -Algoritmalar ('20-'21)
           lessons:
             Algorithms Solve Problems:
-              key: Algoritmalar, Prblemleri Çözer
-              name: Algoritmalar, Prblemleri Çözer
+              key: Algoritmalar, Problemleri Çözer
+              name: Algoritmalar, Problemleri Çözer
             Algorithm Efficiency:
               key: Algoritma Verimliliği
               name: Algoritma Verimliliği
@@ -17472,3 +17472,13 @@ tr:
             cspSurvey:
               display_name: Anket
           student_description: 5. ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların bu sürece nasıl yardımcı olabileceğini vurgulamaktadır. Birinci kısım bir bilgisayarda bilgiyi temsil etmek için kullanılan farklı sistemleri ve bunları kullanmanın getirdiği zorlukları, artılarını ve eksilerini araştırır. İkinci kısımda problem çözmek için kullanılan verilerin nasıl toplandığını ve bilgisayarların bu işlemin adımlarını otamatikleştirmede nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
+        contagion-pilot:
+          description_short: 'Bir virüs salgınının simülasyonunu programlamak için Sprite Lab''ı kullanın.'
+          description: 'Bir virüs salgınının simülasyonunu programlamak için Sprite Lab''ı kullanın.'
+          student_description: 'Bir virüs salgınının simülasyonunu programlamak için Sprite Lab''ı kullanın.'
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Ders 14
+            lesson15:
+              name: Ders 15

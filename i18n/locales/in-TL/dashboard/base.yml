@@ -1137,6 +1137,7 @@ in:
       copy_code: 'crwdns2363144:0crwdne2363144:0'
       error_token_expired: 'crwdns2364136:0crwdne2364136:0'
       error_wrong_provider: 'crwdns2364138:0crwdne2364138:0'
+      error_no_linked_google: 'crwdns2480912:0crwdne2480912:0'
       error_invalid_user: 'crwdns2364140:0crwdne2364140:0'
       error_no_code: 'crwdns2364142:0crwdne2364142:0'
       confirm_login: 'crwdns2477266:0crwdne2477266:0'

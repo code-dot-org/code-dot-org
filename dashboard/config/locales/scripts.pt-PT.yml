@@ -3757,3 +3757,9 @@ pt:
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Lição 14
+            lesson15:
+              name: Lição 15
