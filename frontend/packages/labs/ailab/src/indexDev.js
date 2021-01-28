@@ -4,43 +4,6 @@ import queryString from "query-string";
 
 // A list of sample modes.  Should match the dropdown in index.html.
 const sampleModes = {
-  load_foods: { datasets: ["foods"] },
-
-  level_3_1: {
-    datasets: ["candy", "titanic", "foods"],
-    hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
-    hideModelCard: true,
-    hideSave: true
-  },
-
-  level_3_3: {
-    datasets: ["candy", "titanic", "foods"],
-    hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
-    hideModelCard: true
-  },
-
-  level_4_1: {
-    datasets: ["candy"],
-    hideChooseReserve: true,
-    hideModelCard: true
-  },
-
-  level_4_3: {
-    datasets: ["candy", "titanic", "foods"],
-    hideChooseReserve: true,
-    hideModelCard: true
-  },
-
-  level_5_3: {
-    datasets: ["candy", "titanic", "foods"]
-  },
-
-  level_7_6: {},
-
   minimal: {
     datasets: ["candy"],
     hideSpecifyColumns: true,
@@ -49,9 +12,46 @@ const sampleModes = {
     hideModelCard: true
   },
 
-  preload_metadata: {
+  "preload-metadata": {
     hideSpecifyColumns: true
-  }
+  },
+
+  "load-foods": { datasets: ["foods"] },
+
+  "ml-knn-train": {
+    datasets: ["candy", "titanic", "foods"],
+    hideSelectLabel: true,
+    hideSpecifyColumns: true,
+    hideChooseReserve: true,
+    hideModelCard: true,
+    hideSave: true
+  },
+
+  "ml-knn-ailab": {
+    datasets: ["candy", "titanic", "foods"],
+    hideSelectLabel: true,
+    hideSpecifyColumns: true,
+    hideChooseReserve: true,
+    hideModelCard: true
+  },
+
+  "ml-svm-train": {
+    datasets: ["candy"],
+    hideChooseReserve: true,
+    hideModelCard: true
+  },
+
+  "ml-svm-ailab": {
+    datasets: ["candy", "titanic", "foods"],
+    hideChooseReserve: true,
+    hideModelCard: true
+  },
+
+  "ml-mini-project-ailab": {
+    datasets: ["candy", "titanic", "foods"]
+  },
+
+  "ml-final-project-ailab": {}
 };
 
 // Look for a ?mode= parameter on the URL

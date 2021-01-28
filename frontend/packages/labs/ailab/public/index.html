@@ -9,16 +9,17 @@
   <body>
     <select onchange="location = '?mode=' + this.options[this.selectedIndex].value">
       <option disabled selected value="/">Jump to mode...</option>
-      <option value="">Default</option>
-      <option value="load_foods">Load Foods</option>
-      <option value="preload_metadata">Preload Metadata</option>
-      <option value="level_3_1">3/1</option>
-      <option value="level_3_3">3/3</option>
-      <option value="level_4_1">4/1</option>
-      <option value="level_4_3">4/3</option>
-      <option value="level_5_3">5/3</option>
-      <option value="level_7_6">7/6</option>
+      <option value="">default</option>
       <option value="minimal">minimal</option>
+      <option value="load-foods">load foods</option>
+      <option value="preload-metadata">preload metadata</option>
+      <option value="ml-knn-train">ml-knn-train</option>
+      <option value="ml-knn-ailab">ml-knn-ailab</option>
+      <option value="ml-svm-train">ml-svm-train</option>
+      <option value="ml-svm-ailab">ml-svm-ailab</option>
+      <option value="ml-mini-project-ailab">ml-mini-project-ailab</option>
+      <option value="ml-final-project-ailab">ml-final-project-ailab</option>
+
     </select>
 
     <div id="root"></div>
