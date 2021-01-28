@@ -898,3 +898,80 @@ export function getCurrentColumnIsSelectedLabel(state) {
 export function getCurrentColumnIsSelectedFeature(state) {
   return state.selectedFeatures.includes(state.currentColumn);
 }
+
+export function getCrossTabData(state) {
+  if (!state.labelColumn || state.selectedFeatures.length <= 0) {
+    return null;
+  }
+
+  var results = [];
+
+  for (let row of state.data) {
+    var featureValues = [];
+    for (let selectedFeature of state.selectedFeatures) {
+      featureValues.push(row[selectedFeature]);
+    }
+
+    var existingEntry = results.find(result => {
+      return areArraysEqual(result.featureValues, featureValues);
+    });
+
+    if (!existingEntry) {
+      existingEntry = {
+        featureValues,
+        labelCounts: { [row[state.labelColumn]]: 1 }
+      };
+      results.push(existingEntry);
+    } else {
+      if (!existingEntry.labelCounts[row[state.labelColumn]]) {
+        existingEntry.labelCounts[row[state.labelColumn]] = 1;
+      } else {
+        existingEntry.labelCounts[row[state.labelColumn]]++;
+      }
+    }
+  }
+
+  for (let result of results) {
+    let totalCount = 0;
+    for (let labelCount of Object.values(result.labelCounts)) {
+      totalCount += labelCount;
+    }
+    result.labelPercents = {};
+    for (let key of Object.keys(result.labelCounts)) {
+      result.labelPercents[key] = Math.round(
+        (result.labelCounts[key] / totalCount) * 100
+      );
+    }
+  }
+
+  var uniqueLabelValues = [];
+  for (let result of results) {
+    var labelValues = Object.keys(result.labelCounts);
+    for (let labelValue of labelValues) {
+      if (
+        !uniqueLabelValues.find(uniqueLabelValue => {
+          return uniqueLabelValue === labelValue;
+        })
+      ) {
+        uniqueLabelValues.push(labelValue);
+      }
+    }
+  }
+
+  console.log(results, uniqueLabelValues);
+  return {
+    results,
+    uniqueLabelValues,
+    featureNames: state.selectedFeatures,
+    labelName: state.labelColumn
+  };
+}
+
+function areArraysEqual(array1, array2) {
+  return (
+    array1.length === array2.length &&
+    array1.every(function(value, index) {
+      return value === array2[index];
+    })
+  );
+}

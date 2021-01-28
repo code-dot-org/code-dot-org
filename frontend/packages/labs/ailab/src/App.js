@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
+import CrossTab from "./UIComponents/CrossTab";
 import SelectTrainer from "./UIComponents/SelectTrainer";
 import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
@@ -201,6 +202,7 @@ class App extends Component {
             saveTrainedModel={saveTrainedModel}
           />
           {currentPanel === "dataDisplay" && <ColumnInspector />}
+          {currentPanel === "dataDisplay" && <CrossTab />}
           <PanelButtons
             panels={panels}
             panelButtons={panelButtons}

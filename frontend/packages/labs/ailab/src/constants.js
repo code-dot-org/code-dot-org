@@ -178,6 +178,25 @@ export const styles = {
     marginTop: 10
   },
 
+  crossTabCell0: {
+    backgroundColor: "rgba(255,100,100, 0)"
+  },
+  crossTabCell1: {
+    backgroundColor: "rgba(255,100,100, 0.2)"
+  },
+  crossTabCell2: {
+    backgroundColor: "rgba(255,100,100, 0.4)"
+  },
+  crossTabCell3: {
+    backgroundColor: "rgba(255,100,100, 0.6)"
+  },
+  crossTabCell4: {
+    backgroundColor: "rgba(255,100,100, 0.8)"
+  },
+  crossTabCell5: {
+    backgroundColor: "rgba(255,100,100, 1)"
+  },
+
   tab: {
     float: "left",
     backgroundColor: "rgba(0,0,0,0.8)",
