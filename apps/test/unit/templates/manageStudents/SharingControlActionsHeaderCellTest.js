@@ -19,8 +19,8 @@ describe('SharingControlActionsHeaderCell', () => {
     const enableAllString = i18n.projectSharingEnableAll();
     const disableAllString = i18n.projectSharingDisableAll();
     const learnMoreString = i18n.learnMore();
-    expect(wrapper.find(enableAllString)).to.exist;
-    expect(wrapper.find(disableAllString)).to.exist;
-    expect(wrapper.find(learnMoreString)).to.exist;
+    expect(wrapper.find(enableAllString).exists);
+    expect(wrapper.find(disableAllString).exists);
+    expect(wrapper.find(learnMoreString).exists);
   });
 });
