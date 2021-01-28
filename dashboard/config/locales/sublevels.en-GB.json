@@ -1,0 +1,117 @@
+{
+  "en-GB": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Loops": "Loops",
+              "Math": "Mathematics",
+              "Logic": "Logic"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Logic": "Logic"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "dibuja una estrella"
+              },
+              "draw a circle": {
+                "name": "dibujar un circulo"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "repeat": "repeat"
+                }
+              },
+              "draw a triangle": {
+                "name": "dibuja un triangulo"
+              },
+              "draw a house": {
+                "name": "dibuja una casa"
+              },
+              "draw a square": {
+                "name": "dibuja un cuadrado"
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Actions"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Logic": "Logic"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Loops": "Loops",
+              "Math": "Mathematics",
+              "Logic": "Logic",
+              "Variables": "Variables"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Variables": "Variables",
+              "Math": "Mathematics",
+              "Logic": "Logic",
+              "Text": "Text"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Variables": "Variables",
+              "Math": "Mathematics",
+              "Logic": "Logic",
+              "Text": "Text"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Loops": "Loops",
+              "Math": "Mathematics",
+              "Logic": "Logic",
+              "Variables": "Variables"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Logic": "Logic",
+              "Math": "Mathematics"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Logic": "Logic",
+              "Loops": "Loops",
+              "Math": "Mathematics",
+              "Variables": "Variables"
+            }
+          }
+        }
+      }
+    }
+  }
+}
