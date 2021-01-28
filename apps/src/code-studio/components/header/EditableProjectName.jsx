@@ -20,7 +20,9 @@ const styles = {
   },
   button: {
     marginTop: 0,
-    marginBottom: 0
+    marginBottom: 0,
+    marginLeft: 10,
+    marginRight: 0
   }
 };
 
