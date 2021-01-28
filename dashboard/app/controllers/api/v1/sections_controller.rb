@@ -8,6 +8,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   rescue_from ActiveRecord::RecordNotFound do |e|
     if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
+      if current_user&.persisted? && request.filtered_parameters['action'] == 'join'
+        current_user.increment_section_attempts
+      end
       render json: {
         result: 'section_notfound'
       }, status: :bad_request
@@ -120,9 +123,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       render_404
       return
     end
-    #TODO: this should probably just be displayCaptcha? b/c hacker wont send token at all
-    if params[:recaptchaToken]
-      recaptcha_token = params[:recaptchaToken] # maybe add || ""
+    # If user exceeded 3 section attempts in 24 hours, check for captcha verification
+    if current_user.display_captcha?
+      recaptcha_token = params[:recaptchaToken] || ""
       is_verified = verify_recaptcha_token(recaptcha_token)
       unless is_verified
         render json: {
@@ -130,10 +133,10 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         }, status: :bad_request
         return
       end
-      puts is_verified
     end
-    # TODO: add increment section attempts
+
     result = @section.add_student current_user
+    current_user.increment_section_attempts
     # add_student returns 'failure' when id of current user is owner of @section
     if result == 'failure'
       render json: {
@@ -190,8 +193,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def require_captcha
     return head :forbidden unless current_user
     site_key = CDO.recaptcha_site_key
-    # TODO: change this back to dynamic value once you had changes in
-    render json: {key: site_key, requireCaptcha: true}
+    render json: {key: site_key, sectionAttempts: current_user.num_section_attempts}
   end
 
   private
