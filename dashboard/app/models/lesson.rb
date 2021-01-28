@@ -63,8 +63,9 @@ class Lesson < ApplicationRecord
   )
 
   # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
-  # numbers the lessons in order in two groups 1. lessons that are lockable and don't have lesson plans (aka surveys)
-  # 2. lessons that are not lockable so if we have two lessons without lesson plans that are lockable followed by a
+  # numbers the lessons in order in two groups 1. lessons that are numbered (lockable false OR has_lesson_plan true)
+  # 2. lessons that are not numbered (lockable true AND has_lesson_plan false)
+  # if we have two lessons without lesson plans that are lockable followed by a
   # lesson that is not lockable, the third lesson will have an absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
@@ -88,7 +89,7 @@ class Lesson < ApplicationRecord
           l.has_lesson_plan = true # will be reset below if specified
         end
 
-      use_survey_url = !raw_lesson[:has_lesson_plan] && !!raw_lesson[:lockable]
+      numbered_lesson = !!raw_lesson[:has_lesson_plan] || !raw_lesson[:lockable]
 
       lesson.assign_attributes(
         name: raw_lesson[:name],
@@ -97,7 +98,7 @@ class Lesson < ApplicationRecord
         lockable: !!raw_lesson[:lockable],
         has_lesson_plan: !!raw_lesson[:has_lesson_plan],
         visible_after: raw_lesson[:visible_after],
-        relative_position: use_survey_url ? (counters.survey_count += 1) : (counters.lesson_count += 1)
+        relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
       )
       lesson.save! if lesson.changed?
 
@@ -245,7 +246,8 @@ class Lesson < ApplicationRecord
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
-        unplugged: display_as_unplugged # TODO: Update to use unplugged property
+        unplugged: display_as_unplugged, # TODO: Update to use unplugged property
+        lessonEditPath: edit_lesson_path(id: id)
       }
 
       # Use to_a here so that we get access to the cached script_levels.
@@ -324,7 +326,8 @@ class Lesson < ApplicationRecord
       vocabularies: vocabularies.map(&:summarize_for_edit),
       objectives: objectives.map(&:summarize_for_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
-      scriptPath: script_path(script)
+      scriptPath: script_path(script),
+      lessonPath: lesson_path(id: id)
     }
   end
 
