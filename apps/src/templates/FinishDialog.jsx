@@ -240,7 +240,7 @@ export class UnconnectedFinishDialog extends Component {
     feedbackImage: PropTypes.string
   };
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.isOpen && !nextProps.isOpen) {
       // Reset state when closing the dialog
       this.setState(DEFAULT_STATE);

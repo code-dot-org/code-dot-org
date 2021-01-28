@@ -80,7 +80,7 @@ export class SessionAttendance extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.sessionId !== this.props.sessionId) {
       this.load(nextProps);
       this.startRefreshInterval();

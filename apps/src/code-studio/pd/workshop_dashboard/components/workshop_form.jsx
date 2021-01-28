@@ -178,7 +178,7 @@ export class WorkshopForm extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.readOnly && !this.props.readOnly) {
       this.setState(this.computeInitialState(this.props));
     }
