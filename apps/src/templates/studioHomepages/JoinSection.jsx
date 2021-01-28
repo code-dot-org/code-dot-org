@@ -90,8 +90,8 @@ export default class JoinSection extends React.Component {
       url: '/api/v1/sections/require_captcha',
       dataType: 'json'
     }).done(data => {
-      const {key, requireCaptcha} = data;
-      this.setState({key, requireCaptcha, isLoaded: true});
+      const {key, sectionAttempts} = data;
+      this.setState({key, sectionAttempts, isLoaded: true});
     });
   };
 
@@ -110,7 +110,8 @@ export default class JoinSection extends React.Component {
   };
 
   validateRecaptcha = () => {
-    const {requireCaptcha} = this.state;
+    const {sectionAttempts} = this.state;
+    const requireCaptcha = sectionAttempts >= 3;
     if (requireCaptcha) {
       this.setState({displayCaptcha: true});
     } else {
@@ -155,6 +156,7 @@ export default class JoinSection extends React.Component {
           sectionName,
           sectionCode
         );
+        this.setState({sectionAttempts: this.state.sectionAttempts + 1});
       })
       .fail(data => {
         const result =
@@ -167,12 +169,16 @@ export default class JoinSection extends React.Component {
           null,
           normalizedSectionCode
         );
+        this.setState({sectionAttempts: this.state.sectionAttempts + 1});
       });
   };
 
   render() {
     const {enrolledInASection} = this.props;
-    const {isLoaded, requireCaptcha} = this.state;
+    const {isLoaded, sectionAttempts} = this.state;
+
+    //captcha verification required when more than 3 section attempts in 24 hours
+    const requireCaptcha = sectionAttempts >= 3;
 
     if (!isLoaded) {
       return <Spinner size="large" style={styles.spinner} />;
