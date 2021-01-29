@@ -5,22 +5,12 @@
     "hidden": false,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit9/{LESSON}",
-      "script_announcements": [
-        {
-          "notice": "",
-          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
-          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
       "curriculum_umbrella": "CSP",
+      "student_detail_progress_view": true,
       "has_verified_resources": true,
-      "is_stable": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit9/{LESSON}",
       "project_sharing": true,
+      "hideable_lessons": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -30,6 +20,16 @@
           "standardMappings",
           "https://curriculum.code.org/csp-20/unit9/standards/"
         ]
+      ],
+      "is_stable": true,
+      "script_announcements": [
+        {
+          "notice": "",
+          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
+          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
       ],
       "announcements": [
         {
@@ -46,7 +46,8 @@
           "type": "bullhorn",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
