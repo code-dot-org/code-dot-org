@@ -5,7 +5,7 @@
       "id": "Hot Fudge",
       "type": "categorical",
       "values": {
-        "categories": ["Yes", "No"],
+        "categories": ["Yes", "No"]
       }
     },
     {
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "M&Ms",
+      "id": "Cherry",
       "type": "categorical",
       "values": {
         "categories": ["Yes", "No"]
@@ -35,14 +35,13 @@
       "values": {
         "categories": ["Yes", "No"]
       }
-            },
-        {
+    },
+    {
       "id": "Liked",
       "type": "categorical",
       "values": {
         "categories": ["Yes", "No"]
       }
     }
-    ]
-
+  ]
 }
