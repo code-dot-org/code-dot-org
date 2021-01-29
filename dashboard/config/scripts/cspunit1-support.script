@@ -1,18 +1,18 @@
 login_required true
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Intro to the Unit', display_name: 'Intro to the Unit'
+lesson 'Intro to the Unit', display_name: 'Intro to the Unit', has_lesson_plan: false
 level 'Sample Free Response', named: true
 level 'U1L5 How the Internet Works - Video', named: true
 level 'Sample External Resource', named: true
 
-lesson 'Chapter Overviews', display_name: 'Chapter Overviews'
+lesson 'Chapter Overviews', display_name: 'Chapter Overviews', has_lesson_plan: false
 level 'Empty Markdown Level', named: true
 
-lesson 'Tool Talk: Intro to Netsim', display_name: 'Tool Talk: Intro to Netsim'
+lesson 'Tool Talk: Intro to Netsim', display_name: 'Tool Talk: Intro to Netsim', has_lesson_plan: false
 level 'Sample CSP Assessment'
 
 lesson_group 'practice', display_name: 'Teaching Practices'
-lesson 'Supporting Peer Learning', display_name: 'Supporting Peer Learning'
+lesson 'Supporting Peer Learning', display_name: 'Supporting Peer Learning', has_lesson_plan: false
 level 'U3L2 Free Response Reflection', named: true
 

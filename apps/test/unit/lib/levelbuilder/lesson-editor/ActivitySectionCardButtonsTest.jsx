@@ -12,6 +12,7 @@ describe('ActivitySectionCardButtons', () => {
     addLevel,
     removeTip,
     appendResourceLink,
+    appendVocabularyLink,
     appendSlide;
   beforeEach(() => {
     addTip = sinon.spy();
@@ -19,6 +20,7 @@ describe('ActivitySectionCardButtons', () => {
     addLevel = sinon.spy();
     removeTip = sinon.spy();
     appendResourceLink = sinon.spy();
+    appendVocabularyLink = sinon.spy();
     appendSlide = sinon.spy();
     defaultProps = {
       activitySection: sampleActivities[0].activitySections[1],
@@ -28,8 +30,10 @@ describe('ActivitySectionCardButtons', () => {
       addLevel,
       removeTip,
       appendResourceLink,
+      appendVocabularyLink,
       appendSlide,
-      hasLessonPlan: true
+      hasLessonPlan: true,
+      vocabularies: []
     };
   });
 
@@ -85,9 +89,25 @@ describe('ActivitySectionCardButtons', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
 
     const button = wrapper.find('button').at(2);
-    expect(button.text()).to.include('Resource Link');
+    expect(button.text()).to.include('Resource');
     button.simulate('mouseDown');
     expect(wrapper.state().addResourceOpen).to.equal(true);
+  });
+
+  it('add vocabulary link pressed', () => {
+    const wrapper = shallow(
+      <ActivitySectionCardButtons
+        {...defaultProps}
+        vocabularies={[
+          {id: 1, key: 'word1', word: 'word1', definition: 'definition1'}
+        ]}
+      />
+    );
+
+    const button = wrapper.find('button').at(3);
+    expect(button.text()).to.include('Vocab');
+    button.simulate('mouseDown');
+    expect(wrapper.state().addVocabularyOpen).to.equal(true);
   });
 
   it('add slide pressed', () => {

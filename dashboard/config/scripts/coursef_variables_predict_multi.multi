@@ -1,0 +1,6 @@
+name 'courseF_variables_predict_multi'
+question 'The <xml><block type=\"gamelab_printText\" block-text="print"></block></xml> `print` block shows text on the screen. Make a prediction: What text will it show at 1 second?'
+wrong 'Hi, I\'m name!', feedback: 'Incorrect. "Talia" is used in place of the name block.'
+right 'Hi, I\'m Talia!', feedback: 'Correct! "Talia" is used in place of the name block.'
+wrong 'Hi, I\'m !', feedback: 'Incorrect. "Talia" is used in place of the name block.'
+wrong 'Hi, I\'m name Talia!', feedback: 'Incorrect. "Talia" is used in place of the name block.'

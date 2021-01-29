@@ -8,6 +8,8 @@ class SessionsController < Devise::SessionsController
   def new
     session[:user_return_to] ||= params[:user_return_to]
     if params[:maker]
+      # Deprecated: this was used by an earlier version of the maker app for google auth.
+      # Later versions send users directly to maker_google_oauth_confirm_login_path
       redirect_to maker_google_oauth_confirm_login_path
       return
     end
