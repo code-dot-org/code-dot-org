@@ -18,7 +18,7 @@ describe('CapacitiveTouchSensor', function() {
       'isPressed'
     );
     expect(isPressedDescriptor.set).to.be.undefined;
-    expect(isPressedDescriptor.get).to.be.defined;
+    expect(isPressedDescriptor.get).to.not.be.undefined;
   });
 
   describe(`start() and stop()`, () => {
