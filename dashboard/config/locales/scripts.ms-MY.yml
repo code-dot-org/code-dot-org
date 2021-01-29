@@ -1044,3 +1044,9 @@ ms:
               display_name: Pembolehubah
             Sprites:
               display_name: Jin
+        contagion-pilot:
+          description_short: Gunakan Makmal Jin untuk memprogramkan simulasi wabak
+            virus.
+          description: Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.
+          student_description: Gunakan Makmal Jin untuk memprogramkan simulasi wabak
+            virus.

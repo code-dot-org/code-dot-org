@@ -22,6 +22,7 @@ import resourceTestData from './resourceTestData';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import _ from 'lodash';
 
 describe('LessonEditor', () => {
   let defaultProps, store, clock;
@@ -57,7 +58,8 @@ describe('LessonEditor', () => {
         assessmentOpportunities: 'Assessment Opportunities',
         courseVersionId: 1,
         scriptPath: '/s/my-script/',
-        lessonPath: '/lessons/1'
+        lessonPath: '/lessons/1',
+        scriptIsVisible: false
       }
     };
   });
@@ -95,12 +97,42 @@ describe('LessonEditor', () => {
     expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
     expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(5);
     expect(wrapper.find('input').length).to.equal(22);
+    expect(
+      wrapper
+        .find('input')
+        .at(1)
+        .props().disabled
+    ).to.equal(false);
+    expect(
+      wrapper
+        .find('input')
+        .at(2)
+        .props().disabled
+    ).to.equal(false);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
     expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
     expect(wrapper.find('VocabulariesEditor').length).to.equal(1);
     expect(wrapper.find('SaveBar').length).to.equal(1);
+  });
+
+  it('disables editing of lockable and has lesson plan for visible script', () => {
+    let initialLessonDataCopy = _.cloneDeep(defaultProps.initialLessonData);
+    initialLessonDataCopy.scriptIsVisible = true;
+    const wrapper = createWrapper({initialLessonData: initialLessonDataCopy});
+    expect(
+      wrapper
+        .find('input')
+        .at(1)
+        .props().disabled
+    ).to.equal(true);
+    expect(
+      wrapper
+        .find('input')
+        .at(2)
+        .props().disabled
+    ).to.equal(true);
   });
 
   it('renders lesson editor for lesson without lesson plan', () => {

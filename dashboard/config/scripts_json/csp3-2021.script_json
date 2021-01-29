@@ -332,7 +332,7 @@
       "absolute_position": 11,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 1,
+      "relative_position": 11,
       "properties": {
         "overview": "Students complete the Unit Assessment and then spend the rest of class sharing their projects. ",
         "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app.",
@@ -2203,7 +2203,7 @@
           {
             "key": "tip",
             "type": "teachingTip",
-            "markdown": "**Taking on the Blank Screen:** This is the first time students are adding code to a blank screen. Some students may need assistance. Direct them back to their Planning Guides to help students understand the `onEvent` blocks they need to add to their project. \r\n\r\n**Supporting Pair Programming:** Your biggest role in supporting pair programming will be encouraging students to use it early on and helping enforce the switching. Run the timer in the slides and have left and right partners switch roles. You may opt to increase the time to longer periods as time goes on.\r\n\r\n![](https://curriculum.code.org/media/uploads/pair.PNG){: style=\"height:200px\"}\r\n\r\n**Debugging Practices:** Students learned a lot of debugging practices in the previous lesson. Encourage students to use these and record bugs they find as they program today. Continue to normalize and celebrate debugging as a normal and fun part of programming.\r\n\r\n\r\n"
+            "markdown": "**Taking on the Blank Screen:** This is the first time students are adding code to a blank screen. Some students may need assistance. Direct them back to their Planning Guides to help students understand the `onEvent` blocks they need to add to their project. \n\n**Supporting Pair Programming:** Your biggest role in supporting pair programming will be encouraging students to use it early on and helping enforce the switching. Run the timer in the slides and have left and right partners switch roles. You may opt to increase the time to longer periods as time goes on.\n\n![](https://images.code.org/13423c034671a6010f9124a8edc60b1a-image-1611868356240.PNG)\n\n**Debugging Practices:** Students learned a lot of debugging practices in the previous lesson. Encourage students to use these and record bugs they find as they program today. Continue to normalize and celebrate debugging as a normal and fun part of programming.\n\n\n"
           }
         ],
         "name": "Using Pair Programming\r"
@@ -2388,7 +2388,7 @@
       "key": "e84b5ead-1284-4ddc-84bb-020dd6ee80b1",
       "position": 4,
       "properties": {
-        "description": "[slide] **Distribute:** Direct students back to the [r csp app dev planning guide].\r\n\r\n[slide] **Step 6:** Groups swap apps and gather feedback. It is ok to move ahead to this section even if students are not done with their apps yet. \r\n\r\nHere's what you should observe:\r\n\r\n* Group A lets Group B test their app. \r\n* Group A watches Group B use the app, and writes down improvements that come to mind.\r\n* Group A interviews Group B asking for specific improvements Group A can make. This may be different than what Group A came up with during the observation. These improvements are written down in the Activity Guide. \r\n* Group A and B swap and now Group A tests Group B's app while Group B watches. \r\n* After this, mix up the group pairings and repeat the steps above. \r\n\r\n![](https://curriculum.code.org/media/uploads/groupwork.png){: style=\"height:200px\"}",
+        "description": "[slide] **Distribute:** Direct students back to the [r csp app dev planning guide].\n\n[slide] **Step 6:** Groups swap apps and gather feedback. It is ok to move ahead to this section even if students are not done with their apps yet. \n\nHere's what you should observe:\n\n* Group A lets Group B test their app. \n* Group A watches Group B use the app, and writes down improvements that come to mind.\n* Group A interviews Group B asking for specific improvements Group A can make. This may be different than what Group A came up with during the observation. These improvements are written down in the Activity Guide. \n* Group A and B swap and now Group A tests Group B's app while Group B watches. \n* After this, mix up the group pairings and repeat the steps above. \n\n![](https://images.code.org/c1047cb72698ab39e2bdf1f6f1ba6613-image-1611868434888.png)",
         "name": "Testing and Feedback - 10 mins\r"
       },
       "seeding_key": {

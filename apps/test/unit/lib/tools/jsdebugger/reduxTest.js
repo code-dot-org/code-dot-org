@@ -66,7 +66,7 @@ describe('The JSDebugger redux duck', () => {
   }
 
   it('exposes state on the jsdebugger key', () => {
-    expect(store.getState().jsdebugger).to.be.defined;
+    expect(store.getState().jsdebugger).to.not.be.undefined;
   });
 
   it('the state can be accesed via the getRoot selector', () => {

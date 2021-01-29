@@ -1,0 +1,263 @@
+{
+  "de-DE": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Aktionen",
+              "Events": "Ereignisse",
+              "Loops": "Schleifen",
+              "Math": "Mathematik",
+              "Logic": "Logik",
+              "Games/Score": "Spiele/Punktzahl"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Welt",
+              "Dancers": "Tänzer",
+              "Properties": "Eigenschaften",
+              "Events": "Ereignisse",
+              "Numbers": "Zahlen",
+              "Logic": "Logik"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "zeichne einen Stern",
+                "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge",
+                "parameters": {
+                  "points": "Punkte",
+                  "length": "Länge"
+                }
+              },
+              "draw a circle": {
+                "name": "Zeichne einen Kreis",
+                "description": "zeichne einen Kreis mit vorgegebenem Radius",
+                "parameters": {
+                  "radius": "Radius"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "zeichne ein Windrad",
+                "parameters": {
+                  "sides": "Kanten",
+                  "length": "Länge",
+                  "repeat": "wiederhole"
+                }
+              },
+              "draw a triangle": {
+                "name": "zeichne ein Dreieck",
+                "parameters": {
+                  "length": "Länge"
+                }
+              },
+              "draw a shape": {
+                "name": "zeichne eine Form",
+                "parameters": {
+                  "sides": "Kanten",
+                  "length": "Länge"
+                }
+              },
+              "draw a house": {
+                "name": "Zeichne ein Haus",
+                "parameters": {
+                  "length": "Länge"
+                }
+              },
+              "draw a square": {
+                "name": "zeichne ein Quadrat",
+                "parameters": {
+                  "length": "Länge"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Welt",
+              "Sprites": "Sprites",
+              "Actions": "Aktionen",
+              "Events": "Ereignisse",
+              "Behaviors": "Verhaltensweisen"
+            },
+            "behavior_names": {
+              "wandering": "wandernd",
+              "moving east": "nach Osten gehend",
+              "spinning left": "linksdrehend",
+              "spinning right": "rechtsdrehend",
+              "shrinking": "schrumpfend",
+              "growing": "wachsend",
+              "moving south": "nach Süden gehend",
+              "swimming left and right": "links und rechts schwimmend",
+              "moving north": "nach Norden gehend",
+              "jittering": "zitternd",
+              "moving west": "nach Westen gehend",
+              "patrolling": "patrouillierend"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Welt",
+              "Dancers": "Tänzer",
+              "Properties": "Eigenschaften",
+              "Events": "Ereignisse",
+              "Numbers": "Zahlen",
+              "Logic": "Logik"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Aktionen",
+              "Brushes": "Pinsel",
+              "Loops": "Schleifen",
+              "Math": "Mathematik",
+              "Logic": "Logik",
+              "Functions": "Funktionen",
+              "Variables": "Variablen"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Welt",
+              "Sprites": "Sprites",
+              "Locations": "Orte",
+              "Actions": "Aktionen",
+              "Events": "Ereignisse",
+              "Behaviors": "Verhaltensweisen",
+              "Variables": "Variablen",
+              "Math": "Mathematik",
+              "Logic": "Logik",
+              "Functions": "Funktionen",
+              "Text": "Text",
+              "Comments": "Kommentare"
+            },
+            "behavior_names": {
+              "moving east": "nach Osten gehend",
+              "spinning left": "linksdrehend",
+              "spinning right": "rechtsdrehend",
+              "shrinking": "schrumpfend",
+              "growing": "wachsend",
+              "moving south": "nach Süden gehend",
+              "swimming left and right": "links und rechts schwimmend",
+              "moving north": "nach Norden gehend",
+              "jittering": "zitternd",
+              "moving west": "nach Westen gehend",
+              "patrolling": "patrouillierend",
+              "wandering": "wandernd"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Welt",
+              "Sprites": "Sprites",
+              "Locations": "Orte",
+              "Actions": "Aktionen",
+              "Events": "Ereignisse",
+              "Behaviors": "Verhaltensweisen",
+              "Variables": "Variablen",
+              "Math": "Mathematik",
+              "Logic": "Logik",
+              "Functions": "Funktionen",
+              "Text": "Text",
+              "Comments": "Kommentare"
+            },
+            "behavior_names": {
+              "moving east": "nach Osten gehend",
+              "spinning left": "linksdrehend",
+              "spinning right": "rechtsdrehend",
+              "shrinking": "schrumpfend",
+              "growing": "wachsend",
+              "moving south": "nach Süden gehend",
+              "swimming left and right": "links und rechts schwimmend",
+              "moving north": "nach Norden gehend",
+              "jittering": "zitternd",
+              "moving west": "nach Westen gehend",
+              "patrolling": "patrouillierend",
+              "wandering": "wandernd"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Aktionen",
+              "Brushes": "Pinsel",
+              "Loops": "Schleifen",
+              "Math": "Mathematik",
+              "Logic": "Logik",
+              "Functions": "Funktionen",
+              "Variables": "Variablen"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Welt",
+              "Sprites": "Sprites",
+              "Actions": "Aktionen",
+              "Events": "Ereignisse",
+              "Logic": "Logik",
+              "Math": "Mathematik"
+            },
+            "behavior_names": {
+              "recovering": "Wiederherstellen",
+              "wandering": "wandernd",
+              "moving east": "nach Osten gehend",
+              "spinning left": "linksdrehend",
+              "spinning right": "rechtsdrehend",
+              "shrinking": "schrumpfend",
+              "growing": "wachsend",
+              "moving south": "nach Süden gehend",
+              "moving left and right": "rechts und links bewegen",
+              "moving north": "nach Norden gehend",
+              "jittering": "zitternd",
+              "moving west": "nach Westen gehend",
+              "patrolling": "patrouillierend",
+              "moving with arrow keys": "Scrollen mit Pfeiltasten"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Welt",
+              "Sprites": "Sprites",
+              "Actions": "Aktionen",
+              "Behaviors": "Verhaltensweisen",
+              "Events": "Ereignisse",
+              "Locations": "Orte",
+              "Logic": "Logik",
+              "Loops": "Schleifen",
+              "Math": "Mathematik",
+              "Variables": "Variablen",
+              "Functions": "Funktionen",
+              "Comments": "Kommentare"
+            },
+            "behavior_names": {
+              "recovering": "Wiederherstellen",
+              "wandering": "wandernd",
+              "moving east": "nach Osten gehend",
+              "spinning left": "linksdrehend",
+              "spinning right": "rechtsdrehend",
+              "shrinking": "schrumpfend",
+              "growing": "wachsend",
+              "moving south": "nach Süden gehend",
+              "moving left and right": "rechts und links bewegen",
+              "moving north": "nach Norden gehend",
+              "jittering": "zitternd",
+              "moving west": "nach Westen gehend",
+              "patrolling": "patrouillierend",
+              "moving with arrow keys": "Scrollen mit Pfeiltasten"
+            }
+          }
+        }
+      }
+    }
+  }
+}
