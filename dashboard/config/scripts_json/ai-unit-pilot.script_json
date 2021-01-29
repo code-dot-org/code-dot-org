@@ -45,7 +45,7 @@
   "lessons": [
     {
       "key": "lesson1",
-      "name": "Lesson 1",
+      "name": "Lesson 1A: AI for Oceans",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -357,6 +357,181 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Data and Machine Learning",
+        "level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "Oceans_Video_Machine_Learning"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Data and Machine Learning",
+        "level_keys": [
+          "Oceans_FishVTrash"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_FishVTrash"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "Oceans_FishVTrash"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Data and Machine Learning",
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "Oceans_CreaturesVTrashDemo"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Data and Machine Learning",
+        "level_keys": [
+          "Oceans_CreaturesVTrash"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrash"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "Oceans_CreaturesVTrash"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Data and Machine Learning",
+        "level_keys": [
+          "Oceans_Video_Training_Data"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Training_Data"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "Oceans_Video_Training_Data"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Data and Machine Learning",
+        "level_keys": [
+          "Oceans_Short"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Short"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "Oceans_Short"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Data and Machine Learning",
+        "level_keys": [
+          "Oceans_Long"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Long"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "Oceans_Long"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Shoe Recommender",
         "level_keys": [
           "ml-models-shoes random"
@@ -377,7 +552,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -402,7 +577,57 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Ultimate Shoe Recommender",
+        "level_keys": [
+          "ml-models-shoes data"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models-shoes data"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-models-shoes data"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Ultimate Shoe Recommender",
+        "level_keys": [
+          "ml-models-shoes points"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models-shoes points"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-models-shoes points"
+      ]
+    },
+    {
+      "chapter": 12,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -427,7 +652,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -452,7 +677,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -480,6 +705,83 @@
   "levels_script_levels": [
     {
       "seeding_key": {
+        "level.key": "Oceans_Video_Machine_Learning",
+        "script_level.level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_FishVTrash",
+        "script_level.level_keys": [
+          "Oceans_FishVTrash"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_CreaturesVTrashDemo",
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_CreaturesVTrash",
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrash"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Video_Training_Data",
+        "script_level.level_keys": [
+          "Oceans_Video_Training_Data"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Short",
+        "script_level.level_keys": [
+          "Oceans_Short"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Long",
+        "script_level.level_keys": [
+          "Oceans_Long"
+        ],
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-models-shoes random",
         "script_level.level_keys": [
           "ml-models-shoes random"
@@ -494,6 +796,28 @@
         "level.key": "ml-models-shoes decision tree",
         "script_level.level_keys": [
           "ml-models-shoes decision tree"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-models-shoes data",
+        "script_level.level_keys": [
+          "ml-models-shoes data"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-models-shoes points",
+        "script_level.level_keys": [
+          "ml-models-shoes points"
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",

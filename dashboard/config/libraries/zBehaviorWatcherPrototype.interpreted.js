@@ -14,6 +14,9 @@ function spriteDebugPanels(){
 	    textSize(textScaler);
       
       var behaviorList=getBehaviorsForSpriteId(spriteIds[i]);
+      if(behaviorList.length===0){
+        behaviorList.push("-none-");
+      }
 	  behaviorList.unshift("Behaviors on this sprite:");
       var minWidth=0;
       for(var j=0;j<behaviorList.length;j++){
