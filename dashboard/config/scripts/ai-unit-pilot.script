@@ -11,9 +11,14 @@ lesson 'lesson3', display_name: 'Lesson 3', has_lesson_plan: true
 
 lesson 'lesson4', display_name: 'Lesson 4', has_lesson_plan: true
 
-lesson 'lesson5', display_name: 'Lesson 5', has_lesson_plan: true
+lesson 'lesson5', display_name: 'Models and Data', has_lesson_plan: true
+level 'ml-models-shoes random', progression: 'Shoe Recommender'
+level 'ml-models-shoes decision tree', progression: 'Improved Shoe Recommender'
 
-lesson 'lesson6', display_name: 'Lesson 6', has_lesson_plan: true
+lesson 'lesson6', display_name: 'Introduction to AI Lab', has_lesson_plan: true
+level 'ml-intro categorical-tacos', progression: 'Dataset #1: Tacos'
+level 'ml-intro categorical-ice cream', progression: 'Dataset #2: Ice Cream'
+level 'ml-intro categorical-pizza', progression: 'Dataset #3: Pizza'
 
 lesson 'lesson7', display_name: 'Lesson 7', has_lesson_plan: true
 
