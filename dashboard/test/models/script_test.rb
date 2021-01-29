@@ -874,12 +874,26 @@ class ScriptTest < ActiveSupport::TestCase
       name: 'Lesson 1',
       key: 'lesson-1',
       has_lesson_plan: true,
+      lockable: false,
       relative_position: 1,
       absolute_position: 1
+    )
+    create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 2',
+      key: 'lesson-2',
+      has_lesson_plan: false,
+      lockable: false,
+      relative_position: 2,
+      absolute_position: 2
     )
 
     summary = script.summarize_for_lesson_show
     assert_equal '/s/my-script', summary[:link]
+    # only includes lessons with lesson plans
+    assert_equal 1, summary[:lessons].count
     assert_equal 'lesson-1', summary[:lessons][0][:key]
   end
 

@@ -2684,3 +2684,10 @@ da:
               display_name: Variabler
             Sprites:
               display_name: figure
+        contagion-pilot:
+          description_short: 'Brug Sprite Lab til at programmere en simulation ud
+            af et virusudbrud. '
+          description: 'Brug Sprite Lab til at programmere en simulation ud af et
+            virusudbrud. '
+          student_description: 'Brug Sprite Lab til at programmere en simulation ud
+            af et virusudbrud. '

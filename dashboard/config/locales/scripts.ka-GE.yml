@@ -9048,3 +9048,9 @@ ka:
               display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
             cspSurvey:
               display_name: გამოკითხვა
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: გაკვეთილი 14
+            lesson15:
+              name: გაკვეთილი 15
