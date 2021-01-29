@@ -9391,7 +9391,7 @@
   "resources": [
     {
       "name": "Exploring Web Pages",
-      "url": "https://studio.code.org/s/csd2-2020/stage/1/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/1/puzzle/1/",
       "key": "exploring-web-pages-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -9464,7 +9464,7 @@
     },
     {
       "name": "Project Guide - HTML Project",
-      "url": "https://studio.code.org/s/csd2-2020/stage/4/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/4/puzzle/1/",
       "key": "project-guide-html-project-2020",
       "properties": {
         "type": "Exemplar",
@@ -9476,7 +9476,7 @@
     },
     {
       "name": "Peer Review - HTML Web Page",
-      "url": "https://studio.code.org/s/csd2-2020/stage/4/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/4/puzzle/1/",
       "key": "peer-review-html-web-page-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -9551,7 +9551,7 @@
     },
     {
       "name": "Social Sleuth",
-      "url": "https://studio.code.org/s/csd2-2020/stage/5/puzzle/1",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/5/puzzle/1",
       "key": "social-sleuth-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -9588,7 +9588,7 @@
     },
     {
       "name": "Project Guide - Your Personal Style",
-      "url": "https://studio.code.org/s/csd2-2020/stage/7/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/7/puzzle/1/",
       "key": "project-guide-your-personal-style-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -9600,7 +9600,7 @@
     },
     {
       "name": "Peer Review - Your Personal Style",
-      "url": "https://studio.code.org/s/csd2-2020/stage/7/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/7/puzzle/1/",
       "key": "peer-review-your-personal-style-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -9663,7 +9663,7 @@
     },
     {
       "name": "Licensing Your Work",
-      "url": "https://studio.code.org/s/csd2-2020/stage/8/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/8/puzzle/1/",
       "key": "licensing-your-work-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -9724,7 +9724,7 @@
     },
     {
       "name": "Define Your Webpage",
-      "url": "https://studio.code.org/s/csd2-2020/stage/10/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/10/puzzle/1/",
       "key": "define-your-webpage-2020",
       "properties": {
         "type": "Exemplar",
@@ -9797,7 +9797,7 @@
     },
     {
       "name": "Project Guide - Personal Web Page - Prepare",
-      "url": "https://studio.code.org/s/csd2-2020/stage/12/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/12/puzzle/1/",
       "key": "project-guide-personal-web-page-prepare-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -9847,7 +9847,7 @@
     },
     {
       "name": "Practices Reflection",
-      "url": "https://studio.code.org/s/csd2-2020/stage/13/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/13/puzzle/1/",
       "key": "practices-reflection-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -9859,7 +9859,7 @@
     },
     {
       "name": "Project Guide - Personal Web Page - Reflect",
-      "url": "https://studio.code.org/s/csd2-2020/stage/13/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/13/puzzle/1/",
       "key": "project-guide-personal-web-page-reflect-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -9871,7 +9871,7 @@
     },
     {
       "name": "Peer Review - Personal Website",
-      "url": "https://studio.code.org/s/csd2-2020/stage/13/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/13/puzzle/1/",
       "key": "peer-review-personal-website-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -9934,7 +9934,7 @@
     },
     {
       "name": "Websites for a Purpose",
-      "url": "https://studio.code.org/s/csd2-2020/stage/14/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/14/puzzle/1/",
       "key": "websites-for-a-purpose-2020",
       "properties": {
         "type": "Exemplar",
@@ -9971,7 +9971,7 @@
     },
     {
       "name": "Website Team Plan",
-      "url": "https://studio.code.org/s/csd2-2020/stage/15/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/15/puzzle/1/",
       "key": "website-team-plan-2020",
       "properties": {
         "type": "Exemplar",
@@ -10046,7 +10046,7 @@
     },
     {
       "name": "Links and Research",
-      "url": "https://studio.code.org/s/csd2-2020/stage/16/puzzle/1",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/16/puzzle/1",
       "key": "links-and-research-1",
       "properties": {
         "type": "Exemplar",
@@ -10109,7 +10109,7 @@
     },
     {
       "name": "Project Guide - Website for a Purpose - Prepare",
-      "url": "https://studio.code.org/s/csd2-2020/stage/18/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/18/puzzle/1/",
       "key": "project-guide-website-for-a-purpose-prepare-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -10222,7 +10222,7 @@
     },
     {
       "name": "Practices Reflection (2020)",
-      "url": "https://studio.code.org/s/csd2-2020/stage/21/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/21/puzzle/1/",
       "key": "practices-reflection-l21-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -10234,7 +10234,7 @@
     },
     {
       "name": "Project Guide - Website for a Purpose - Reflect",
-      "url": "https://studio.code.org/s/csd2-2020/stage/21/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/21/puzzle/1/",
       "key": "project-guide-website-for-a-purpose-reflect-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -10246,7 +10246,7 @@
     },
     {
       "name": "Peer Review - Final Personal Website",
-      "url": "https://studio.code.org/s/csd2-2020/stage/21/puzzle/1/",
+      "url": "https://studio.code.org/s/csd2-2020/lesson/21/puzzle/1/",
       "key": "peer-review-final-personal-website-exemplar-2020",
       "properties": {
         "type": "Exemplar",

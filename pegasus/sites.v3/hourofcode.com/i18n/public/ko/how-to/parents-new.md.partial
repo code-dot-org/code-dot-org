@@ -25,7 +25,7 @@ title: 학부모들을 위한 활용 가이드
 모든 활동은 문제 해결 및 비판적 사고를 재미와 창의성에 통합시키지만 일부 학생이 좋아하는 것은 다음과 같습니다.
 
 - 노는 것을 좋아하는 아동:<a href="https://code.org/minecraft">마인크래프트</a> 또는<a href="https://code.org/dance">댄스 파티</a>
-- 디즈니를 좋아하는 아동: <a href="https://code.org/starwars">스타 워즈</a>,  <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">겨울 왕국</a> 또는  <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">모아나</a>
+- 디즈니를 좋아하는 아동: <a href="https://code.org/starwars">스타 워즈</a>,  <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">겨울 왕국</a> 또는  <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">모아나</a>
 - 배우는 걸 좋아하는 아동: <a href="https://code.org/oceans">바다환경을 위한 AI</a> 또는<a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">스크래치로 음악 만들기</a>
 
 <h3>기술이 부족 또는 아예 없습니까?</h3>

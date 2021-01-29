@@ -25,7 +25,7 @@ Há inúmeras <a href="https://hourofcode.com/us/learn">atividades da Hora do C�
 Todas as nossas atividades agregam pensamento crítico e solução de problemas com diversão e criatividade. Mas, para alguns alunos, estas são as melhores:
 
 - Para crianças que adoram brincar: <a href="https://code.org/minecraft">Minecraft</a> ou <a href="https://code.org/dance">Dance Party</a>
-- Para crianças que adoram a Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a> ou <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+- Para crianças que adoram a Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a> ou <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
 - Para crianças que adoram aprender: <a href="https://code.org/oceans">AI for Oceans</a> ou <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>
 
 <h3>Pouca ou nenhuma tecnologia?</h3>
