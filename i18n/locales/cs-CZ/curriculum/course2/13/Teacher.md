@@ -65,7 +65,7 @@ Now we're going to use conditionals with our bee to help us deal with some myste
 
 ## Aktivita
 
-### <a name="Activity"></a> [Bee: Conditionals](http://learn.code.org/s/course2/stage/13/puzzle/1)
+### <a name="Activity"></a> [Bee: Conditionals](http://learn.code.org/s/course2/lesson/13/puzzle/1)
 
 [/ dohromady]
 

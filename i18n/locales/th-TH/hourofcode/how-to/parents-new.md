@@ -25,7 +25,7 @@ title: How-to guide for parents
 กิจกรรมทั้งหมดได้ผนวกรวมขั้นตอนการแก้ไขปัญหาและการคิดวิเคราะห์ไว้ด้วยความสนุกและความคิดสร้างสรรค์ แต่สิ่งที่ผู้เรียนบางคนชื่นชอบคือ:
 
 - สำหรับเด็กที่รักการเล่น: <a href="https://code.org/minecraft">Minecraft</a> หรือ <a href="https://code.org/dance">Dance Party</a>  
-- สำหรับเด็กที่รักดิสนีย์: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a> หรือ <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>  
+- สำหรับเด็กที่รักดิสนีย์: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a> หรือ <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>  
 - สำหรับเด็กที่รักการเรียนรู้: <a href="https://code.org/oceans">AI for Oceans</a> หรือ <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>  
 
 <h3>  ไม่เก่งเรื่องเทคนิคหรือไม่รู้เรื่องเทคนิคเลย  </h3>

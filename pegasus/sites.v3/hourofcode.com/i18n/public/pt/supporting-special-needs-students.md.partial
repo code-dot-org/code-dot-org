@@ -8,7 +8,7 @@ Anyone can try an Hour of Code during Computer Science Education Week. Frequente
 
 ## Atenda as várias necessidades com tutoriais online e offline
 
-Ao buscar a atividade adequada para cada aluno de sua turma, considere tanto opções online quanto "desconectadas" que não precisam de computadores. Atividades desconectadas permitem que alunos exercitem conceitos da ciência da computação. O [Grande Evento](https://studio.code.org/s/course1/stage/15/puzzle/1) coloca os professores no controle das ações dos estudantes, permitindo uma ótima oportunidade para adequar o conteúdo às habilidades de cada aluno.
+Ao buscar a atividade adequada para cada aluno de sua turma, considere tanto opções online quanto "desconectadas" que não precisam de computadores. Atividades desconectadas permitem que alunos exercitem conceitos da ciência da computação. O [Grande Evento](https://studio.code.org/s/course1/lesson/15/puzzle/1) coloca os professores no controle das ações dos estudantes, permitindo uma ótima oportunidade para adequar o conteúdo às habilidades de cada aluno.
 
 Para outros alunos, as acomodações disponíveis no computador podem permitir uma participação melhor do que uma atividade desconectada. Por exemplo, alunos com deficiências auditivas podem participar plenamente nos tutoriais online.
 

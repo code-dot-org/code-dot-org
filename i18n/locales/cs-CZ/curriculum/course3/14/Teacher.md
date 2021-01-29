@@ -64,7 +64,7 @@ Zeptejte se studentů o problémech, které řeší v každodenním životě.
 
 ## Aktivita
 
-### <a name="Activity"></a> [Bee: Debugging](http://learn.code.org/s/course3/stage/14/puzzle/1)
+### <a name="Activity"></a> [Bee: Debugging](http://learn.code.org/s/course3/lesson/14/puzzle/1)
 
 Jak vaši studenti pracují prostřednictvím hádanek, pozorujte, jak hledají chyby. Určete různé používané strategie a požádejte studenty, aby se o to podělili s celou třídou. To pomáhá studentům pochopit, že existuje mnoho způsobů, jak přistupovat k těmto problémům. Have students follow the path described by the code with their fingers to find potential bugs.
 

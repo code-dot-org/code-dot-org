@@ -62,7 +62,7 @@ Zopakujte se studenty aktivitu zacyklování:
 
 ## Aktivita
 
-### <a name="Activity"></a> [Bludiště: smyčky](http://learn.code.org/s/course1/stage/13/puzzle/1)
+### <a name="Activity"></a> [Bludiště: smyčky](http://learn.code.org/s/course1/lesson/13/puzzle/1)
 
 Jak studenti pracují na hádankách, vidíte, jestli umí vyřešit, jak méně bloků používají s cyklem ve srovnání bez cyklů.
 

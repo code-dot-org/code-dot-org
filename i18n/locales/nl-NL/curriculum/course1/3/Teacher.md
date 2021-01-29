@@ -65,7 +65,7 @@ Vraag de leerlingen of ze eerder wel eens een computermuis hebben gebruikt (of t
 
 ## Activiteit
 
-### <a name="Activity"></a>[Jigsaw: Learn to drag and drop](http://learn.code.org/s/course1/stage/3/puzzle/1)
+### <a name="Activity"></a>[Jigsaw: Learn to drag and drop](http://learn.code.org/s/course1/lesson/3/puzzle/1)
 
 Pair Programming werkt het beste met twee leerlingen achter een computer, waar het duidelijk is wie de bestuurder en wie de navigator is. Je zou een visuele herkenning kunnen maken, zoals hoedjes of kettingen, om de bestuurder en de navigator te identificeren.
 

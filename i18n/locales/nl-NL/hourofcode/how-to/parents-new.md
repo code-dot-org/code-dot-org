@@ -25,7 +25,7 @@ Er zijn talloze <a href="https://hourofcode.com/us/learn">Hour of Code-activitei
 Al onze activiteiten integreren probleemoplossing en kritisch denken met plezier en creativiteit, maar hier zijn enkele leerlingfavorieten:
 
 - Voor het kind dat graag speelt: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Dance Party</a>  
-- Voor het kind dat van Disney houdt: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>  
+- Voor het kind dat van Disney houdt: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>  
 - Voor het kind dat graag leert: <a href="https://code.org/oceans">AI for Oceans</a> of <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Muziek maken met Scratch</a>  
 
 <h3>  Low-tech of no-tech?  </h3>

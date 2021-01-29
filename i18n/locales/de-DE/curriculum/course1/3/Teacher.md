@@ -65,7 +65,7 @@ Fragen sie die Schüler ob sie je eine Maus benutzt haben(oder ein Trackpad, ode
 
 ## Aufgabe
 
-### <a name="Activity"></a>[Jigsaw: ziehen und ablegen lernen](http://learn.code.org/s/course1/stage/3/puzzle/1)
+### <a name="Activity"></a>[Jigsaw: ziehen und ablegen lernen](http://learn.code.org/s/course1/lesson/3/puzzle/1)
 
 Paar Programmierung funktioniert am besten mit zwei Sülern an einen Computer und klare Absprache wer der Fahrer und wer der Navigator ist. Sie können eine visuelle Erinnerung, wie Hüte oder Schärpen, zum Identifizieren der Fahrer und der Navigatoren erstellen.
 

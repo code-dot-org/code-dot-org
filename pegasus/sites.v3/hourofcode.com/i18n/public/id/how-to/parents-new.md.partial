@@ -25,7 +25,7 @@ Banyak <a href="https://hourofcode.com/us/learn">kegiatan Hour of Code</a> yang 
 Semua kegiatan kami memadukan penyelesaian masalah dan pemikiran kritis dengan keseruan dan kreativitas, namun berikut adalah beberapa yang difavoritkan oleh para siswa:
 
 - Bagi anak yang senang bermain: <a href="https://code.org/minecraft">Minecraft</a> atau <a href="https://code.org/dance">Dance Party</a>
-- Bagi anak yang menyukai Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, atau <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+- Bagi anak yang menyukai Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a>, atau <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
 - Bagi anak yang senang belajar: <a href="https://code.org/oceans">AI for Oceans</a> atau <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>
 
 <h3>Teknologi rendah atau tanpa teknologi?</h3>

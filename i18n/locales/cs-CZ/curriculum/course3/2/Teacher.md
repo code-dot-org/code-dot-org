@@ -62,7 +62,7 @@ Review with students the basic maze navigation, particularly:
 
 ## Aktivita
 
-### <a name="Activity"></a> [Maze](http://learn.code.org/s/course3/stage/2/puzzle/1)
+### <a name="Activity"></a> [Maze](http://learn.code.org/s/course3/lesson/2/puzzle/1)
 
 As your students work through the puzzles, observe how they plan the path for the zombie. Určete různé používané strategie a požádejte studenty, aby se o to podělili s celou třídou. To pomáhá studentům pochopit, že existuje mnoho způsobů, jak přistupovat k těmto problémům. Možná budete chtít projít pár hádanek na projektoru. Přitom můžete požádat jednoho studenta, aby sledoval cestu na obrazovce, zatímco jiný píše pokyny na tabuli.
 

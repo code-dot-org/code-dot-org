@@ -62,7 +62,7 @@ Antes de começar a aula, os alunos devem ter um conhecimento básico sobre quad
 
 ## Atividade
 
-### <a name="Activity"></a> [Artista: formas](http://learn.code.org/s/course1/stage/10/puzzle/1)
+### <a name="Activity"></a> [Artista: formas](http://learn.code.org/s/course1/lesson/10/puzzle/1)
 
 Se os alunos tiverem dificuldades para usar o número correto de blocos para desenhar uma reta, mostre que todo segmento de reta tem um ponto em cada extremidade.
 

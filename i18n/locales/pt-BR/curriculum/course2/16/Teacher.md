@@ -69,7 +69,7 @@ Os alunos terão a oportunidade de compartilhar o resultado da atividade por mei
 
 ## Atividade
 
-### <a name="Activity"></a> [Flappy](http://learn.code.org/s/course2/stage/16/puzzle/1)
+### <a name="Activity"></a> [Flappy](http://learn.code.org/s/course2/lesson/16/puzzle/1)
 
 Na etapa final desta aula, os alunos estarão aptos a personalizar seu jogo para torná-lo único - incentive-os a ver como eles podem criar jogos diferentes dentro dos limites fornecidos.
 

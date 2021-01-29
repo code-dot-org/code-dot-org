@@ -65,7 +65,7 @@ Zeptejte se studentů, zda již používali počítačovou myš (nebo dotykovou 
 
 ## Aktivita
 
-### <a name="Activity"></a>[Puzzle: Naučte se přetahovat](http://learn.code.org/s/course1/stage/3/puzzle/1)
+### <a name="Activity"></a>[Puzzle: Naučte se přetahovat](http://learn.code.org/s/course1/lesson/3/puzzle/1)
 
 Párové programování funguje nejlépe se dvěma studenty k počítači s jasným očekáváním, kdo je řidič a kdo je navigátor. Asi budete chtít vytvořit vizuální připomenutí,jako klobouky, nebo šerpy, k identifikaci řidiče a navigátora.
 

@@ -25,7 +25,7 @@ title: 給家長的活動指引
 我們所有的活動都將解決問題和批判性思維與趣味性和創造性結合在一起，而這裡是一些學生最喜歡的活動：
 
 - 給愛玩耍的孩子：<a href="https://code.org/minecraft">我的世界</a>或者<a href="https://code.org/dance">舞蹈派對</a>  
-- 給喜歡迪士尼的孩子：<a href="https://code.org/starwars">星球大戰</a>,<a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">冰雪奇緣</a>, 或<a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">莫娜</a>  
+- 給喜歡迪士尼的孩子：<a href="https://code.org/starwars">星球大戰</a>,<a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">冰雪奇緣</a>, 或<a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">莫娜</a>  
 - 給愛學習的孩子：<a href="https://code.org/oceans">保護海洋的人工智慧</a>或<a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">從零開始做音樂</a>  
 
 <h3>  設備有限或者無設備？  </h3>

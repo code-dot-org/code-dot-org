@@ -70,7 +70,7 @@ Povzbuzujte studenty, aby i nadále používali metody programování ve dvojic�
 
 ## Aktivita
 
-### <a name="Activity"></a> [Bludiště: sekvence](http://learn.code.org/s/course1/stage/4/puzzle/1)
+### <a name="Activity"></a> [Bludiště: sekvence](http://learn.code.org/s/course1/lesson/4/puzzle/1)
 
 Jak studenti pracují prostřednictvím hádanek, pozorujte, jak si plánují cestu pro ptáka. Určete různé používané strategie a požádejte studenty, aby se o to podělili s celou třídou. To pomáhá studentům pochopit, že existuje mnoho způsobů, jak přistupovat k těmto problémům. Možná budete chtít projít pár hádanek na projektoru. Přitom můžete požádat jednoho studenta, aby sledoval cestu na obrazovce, zatímco jiný píše pokyny na tabuli.
 

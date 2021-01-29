@@ -63,7 +63,7 @@ Ask students to think about problems they have to solve in everyday life.
 
 ## Aktivita
 
-### <a name="Activity"></a> [Bee: Debugging](http://learn.code.org/s/course2/stage/10/puzzle/1)
+### <a name="Activity"></a> [Bee: Debugging](http://learn.code.org/s/course2/lesson/10/puzzle/1)
 
 Jak vaši studenti pracují prostřednictvím hádanek, pozorujte, jak hledají chyby. Určete různé používané strategie a požádejte studenty, aby se o to podělili s celou třídou. To pomáhá studentům pochopit, že existuje mnoho způsobů, jak přistupovat k těmto problémům. Have students follow the path described by the code with their fingers to find potential bugs.
 

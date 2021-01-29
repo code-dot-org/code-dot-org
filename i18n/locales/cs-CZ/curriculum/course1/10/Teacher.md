@@ -62,7 +62,7 @@ Před zahájením této lekce, studenti by měli mít základní znalosti o čtv
 
 ## Aktivita
 
-### <a name="Activity"></a> [Umělec: tvary](http://learn.code.org/s/course1/stage/10/puzzle/1)
+### <a name="Activity"></a> [Umělec: tvary](http://learn.code.org/s/course1/lesson/10/puzzle/1)
 
 Pokud studenti bojují s použitím správného počtu bloků k nakreslení čáry, připomeňte, že každý segment čáry má bod na obou koncích.
 

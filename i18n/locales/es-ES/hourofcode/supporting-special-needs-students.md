@@ -8,7 +8,7 @@ Cualquiera puede probar una Hora del Código durante la Semana por la Educación
 
 ## Adáptate a distintas necesidades con tutoriales sin conexión y en línea
 
-Para encontrar la actividad adecuada para todos en tu clase, considera la opción en línea, así como las actividades "sin conexión" que no requieren computadoras. A través de las actividades sin conexión, los estudiantes pueden entender los conceptos de las ciencias de la computación. El [Gran Evento](https://studio.code.org/s/course1/stage/15/puzzle/1) les da a los docentes la oportunidad de controlar las acciones de los estudiantes y adaptar el contenido a las habilidades de cada uno de ellos.
+Para encontrar la actividad adecuada para todos en tu clase, considera la opción en línea, así como las actividades "sin conexión" que no requieren computadoras. A través de las actividades sin conexión, los estudiantes pueden entender los conceptos de las ciencias de la computación. El [Gran Evento](https://studio.code.org/s/course1/lesson/15/puzzle/1) les da a los docentes la oportunidad de controlar las acciones de los estudiantes y adaptar el contenido a las habilidades de cada uno de ellos.
 
 Para otros estudiantes, las adaptaciones disponibles en la computadora les permiten participar mejor que una opción sin conexión. Por ejemplo, los estudiantes sordos o con dificultades auditivos pueden participar sin problemas de los tutoriales en línea.
 

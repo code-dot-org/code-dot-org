@@ -62,7 +62,7 @@ Zopakujte se studenty aktivitu zacyklování:
 
 ## Aktivita
 
-### <a name="Activity"></a> [Maze: Loops](http://learn.code.org/s/course2/stage/6/puzzle/1)
+### <a name="Activity"></a> [Maze: Loops](http://learn.code.org/s/course2/lesson/6/puzzle/1)
 
 Jak studenti pracují na hádankách, vidíte, jestli umí vyřešit, jak méně bloků používají s cyklem ve srovnání bez cyklů.
 

@@ -54,7 +54,7 @@ Studenten nutzen die Bee-Umwelt zum Schreiben von Programmen, mit verschachtelte
 
 ## Aufgabe
 
-### <a name="Activity"></a> [Bee: verschachtelte Schleifen](http://learn.code.org/s/course3/stage/13/puzzle/1)
+### <a name="Activity"></a> [Bee: verschachtelte Schleifen](http://learn.code.org/s/course3/lesson/13/puzzle/1)
 
 [/together]
 

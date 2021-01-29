@@ -61,7 +61,7 @@ Os alunos usam o ambiente do artista para escrever programas que têm laços den
 
 ## Atividade
 
-### <a name="Activity"></a> [Artista: laços aninhados](http://learn.code.org/s/course3/stage/11/puzzle/1)
+### <a name="Activity"></a> [Artista: laços aninhados](http://learn.code.org/s/course3/lesson/11/puzzle/1)
 
 [/together]
 

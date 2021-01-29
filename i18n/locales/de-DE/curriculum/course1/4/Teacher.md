@@ -70,7 +70,7 @@ Ermutigen Sie die Schüler weiterhin mit dem Paar Programmierung-Methode, die si
 
 ## Aufgabe
 
-### <a name="Activity"></a> [Labyrinth: Sequenz](http://learn.code.org/s/course1/stage/4/puzzle/1)
+### <a name="Activity"></a> [Labyrinth: Sequenz](http://learn.code.org/s/course1/lesson/4/puzzle/1)
 
 Wenn Ihre Schüler sich durch das Puzzel arbeiten beobachten Sie wie sie den Pfad des Vogels planen. Identifizieren sie verschiedene Strategienen und fragen sie Ihre Schüler diese vor der Klasse vorzustellen. Dies hilft den Schülern zu erkennen, dass es viele Möglichkeiten gibt, sich diesen Problemen zu nähern. Vielleicht möchten Sie ein paar Rätsel auf den Projektor durchgehen. Dabei können Sie eine Schüler fragen, ob er den Pfad anzeichnen kann, während ein anderer die Richtungen an die Tafel schreibt.
 

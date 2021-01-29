@@ -25,7 +25,7 @@ title: الدليل الإرشادي لأولياء الأمور
 تدمج جميع أنشطتنا حل المشكلات والتفكير النقدي بالمرح والابتكار، ولكن إليك بعض تفضيلات الطلاب:
 
 - للطفل الذي يحب أن يلعب:<a href="https://code.org/minecraft">ماينكرافت</a> أو <a href="https://code.org/dance">حفلة رقص</a>
-- للطفل الذي يحب ديزني: <a href="https://code.org/starwars">حرب النجوم</a> أو <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">ملكة الثلج</a> أو <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">موانا</a>
+- للطفل الذي يحب ديزني: <a href="https://code.org/starwars">حرب النجوم</a> أو <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">ملكة الثلج</a> أو <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">موانا</a>
 - للطفل الذي يحب أن يتعلَّم: <a href="https://code.org/oceans">الذكاء الاصطناعي للمحيطات</a> أو <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">صنع الموسيقى بلغة سكراتش</a>
 
 <h3>ضعف التقنيات أو عدم توفرها؟</h3>

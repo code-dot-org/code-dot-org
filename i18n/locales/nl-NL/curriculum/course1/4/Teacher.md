@@ -70,7 +70,7 @@ Moedig de leerlingen aan om door te gaan met de Pair Programmining methode die z
 
 ## Activiteit
 
-### <a name="Activity"></a> [Maze: Sequence](http://learn.code.org/s/course1/stage/4/puzzle/1)
+### <a name="Activity"></a> [Maze: Sequence](http://learn.code.org/s/course1/lesson/4/puzzle/1)
 
 Als uw leerlingen de puzzel oplossen, kijk hoe ze te werk gaan. Identificeer verschillende strategieën die worden gebruikt en vraag uw leerlingen deze met de klas te delen. Dit helpt leerlingen te herkennen dat er veel manieren zijn om een probleem op te lossen. Je zou door een paar andere puzzels kunnen gaan op de projector. Terwijl je dit doet, kun je een leerling vragen om de route op het scherm te volgen, terwijl iemand anders de richtingen op het whiteboard schrijft.
 

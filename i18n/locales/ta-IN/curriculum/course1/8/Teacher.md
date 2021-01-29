@@ -61,7 +61,7 @@ Brainstorm with students ways to tell someone else how to draw a picture:
 
 ## Activity
 
-### <a name="Activity"></a> [Artist: Sequence](http://learn.code.org/s/course1/stage/8/puzzle/1)
+### <a name="Activity"></a> [Artist: Sequence](http://learn.code.org/s/course1/lesson/8/puzzle/1)
 
 If students struggle to use the correct number of blocks to draw a line, point out that each line segment has a dot on both ends.
 

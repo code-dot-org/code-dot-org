@@ -68,7 +68,7 @@ Parte quebra-cabeça, parte caça-palavras, o Soletrando pede aos alunos para pr
 
 ## Atividade
 
-### <a name="Activity"></a> [Soletrando](http://learn.code.org/s/course1/stage/11/puzzle/1)
+### <a name="Activity"></a> [Soletrando](http://learn.code.org/s/course1/lesson/11/puzzle/1)
 
 Alunos muito novos, ou com dificuldade para ler, podem precisar de ajuda para encontrar as palavras - o uso de elementos de manipulação (como peças) pode ajudá-los a ver como as palavras ficam em direções diferentes.
 
