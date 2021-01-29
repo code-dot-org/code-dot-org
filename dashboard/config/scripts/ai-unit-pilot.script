@@ -1,0 +1,45 @@
+login_required true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/ai-unit-pilot/ai-unit/"], ["vocabulary", "https://curriculum.code.org/ai-unit-pilot/ai-unit/vocab"], ["standardMappings", "https://curriculum.code.org/ai-unit-pilot/ai-unit/standards"]]
+has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}'
+
+lesson 'lesson1', display_name: 'Lesson 1', has_lesson_plan: true
+
+lesson 'lesson2', display_name: 'Lesson 2', has_lesson_plan: true
+
+lesson 'lesson3', display_name: 'Lesson 3', has_lesson_plan: true
+
+lesson 'lesson4', display_name: 'Lesson 4', has_lesson_plan: true
+
+lesson 'lesson5', display_name: 'Lesson 5', has_lesson_plan: true
+
+lesson 'lesson6', display_name: 'Lesson 6', has_lesson_plan: true
+
+lesson 'lesson7', display_name: 'Lesson 7', has_lesson_plan: true
+
+lesson 'lesson8', display_name: 'Lesson 8', has_lesson_plan: true
+
+lesson 'lesson9', display_name: 'Lesson 9', has_lesson_plan: true
+
+lesson 'lesson10', display_name: 'Lesson 10', has_lesson_plan: true
+
+lesson 'lesson11', display_name: 'Lesson 11', has_lesson_plan: true
+
+lesson 'lesson12', display_name: 'Lesson 12', has_lesson_plan: true
+
+lesson 'lesson13', display_name: 'Lesson 13', has_lesson_plan: true
+
+lesson 'lesson14', display_name: 'Lesson 14', has_lesson_plan: true
+
+lesson 'lesson15', display_name: 'Lesson 15', has_lesson_plan: true
+
+lesson 'lesson16', display_name: 'Lesson 16', has_lesson_plan: true
+
+lesson 'lesson17', display_name: 'Lesson 17', has_lesson_plan: true
+
+lesson 'lesson18', display_name: 'Lesson 18', has_lesson_plan: true
+
+lesson 'lesson19', display_name: 'Lesson 19', has_lesson_plan: true
+
+lesson 'lesson20', display_name: 'Lesson 20', has_lesson_plan: true
+
