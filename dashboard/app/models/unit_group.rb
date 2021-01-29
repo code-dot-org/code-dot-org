@@ -172,7 +172,6 @@ class UnitGroup < ApplicationRecord
       raise 'Cannot remove scripts that have resources or vocabulary'
     end
 
-    puts new_scripts.inspect
     if new_scripts.any? do |s|
       scr = Script.find_by_name!(s)
       scr.unit_group != self && scr.prevent_course_version_change?
