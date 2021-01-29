@@ -137,11 +137,12 @@ class ExpiredDeletedAccountPurger
 
   def report_results
     review_queue_depth = QueuedAccountPurge.count
-    metrics = build_metrics review_queue_depth
+    manual_reviews_needed = QueuedAccountPurge.needing_manual_review.count
+
+    metrics = build_metrics review_queue_depth, manual_reviews_needed
     log_metrics metrics
 
-    manual_reviews_needed = QueuedAccountPurge.needing_manual_review.count
-    summary = build_summary manual_reviews_needed
+    summary = build_summary review_queue_depth, manual_reviews_needed
     @log.puts summary
 
     log_link = upload_activity_log
@@ -156,14 +157,16 @@ class ExpiredDeletedAccountPurger
     upload_metrics metrics unless @dry_run
   end
 
-  def build_metrics(review_queue_depth)
+  def build_metrics(review_queue_depth, manual_reviews_needed)
     {
       # Number of accounts purged during this run
       AccountsPurged: @num_accounts_purged,
       # Number of accounts queued for manual review during this run
       AccountsQueued: @num_accounts_queued,
       # Depth of review queue after this run (may include auto-retryable entries)
-      ManualReviewQueueDepth: review_queue_depth,
+      ReviewQueueDepth: review_queue_depth,
+      # Total number of accounts needs manual review (including accounts from previous runs)
+      ManualReviewQueueDepth: manual_reviews_needed
     }
   end
 
@@ -190,12 +193,13 @@ class ExpiredDeletedAccountPurger
     Cdo::Metrics.push('DeletedAccountPurger', aws_metrics)
   end
 
-  def build_summary(manual_reviews_needed)
+  def build_summary(review_queue_depth, manual_reviews_needed)
     formatted_duration = Time.at(Time.now.to_i - @start_time.to_i).utc.strftime("%H:%M:%S")
 
     summary = purged_accounts_summary
     summary += "\n" + queued_accounts_summary if @num_accounts_queued > 0
-    summary += "\n#{manual_reviews_needed} account(s) require review." if manual_reviews_needed > 0
+    summary += "\n#{review_queue_depth} account(s) in the review queue." if review_queue_depth > 0
+    summary += "\n#{manual_reviews_needed} account(s) require manual review." if manual_reviews_needed > 0
     summary + "\n🕐 #{formatted_duration}"
   end
 

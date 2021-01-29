@@ -2508,3 +2508,9 @@ fa:
               display_name: مقدمه
             lessonGroup-3:
               display_name: متغیرها
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: درس 14
+            lesson15:
+              name: درس 15

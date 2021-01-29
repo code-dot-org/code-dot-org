@@ -3748,3 +3748,9 @@ bg:
           lesson_groups:
             cspSurvey:
               display_name: Проучване
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Урок 14
+            lesson15:
+              name: Урок 15

@@ -18,6 +18,9 @@ import reducers, {
 import resourcesEditor, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import vocabulariesEditor, {
+  initVocabularies
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 
 describe('ActivitySectionCard', () => {
   let defaultProps,
@@ -34,11 +37,16 @@ describe('ActivitySectionCard', () => {
     addLevel;
   beforeEach(() => {
     stubRedux();
-    registerReducers({...reducers, resources: resourcesEditor});
+    registerReducers({
+      ...reducers,
+      resources: resourcesEditor,
+      vocabularies: vocabulariesEditor
+    });
 
     store = getStore();
     store.dispatch(init(sampleActivities, searchOptions));
     store.dispatch(initResources(resourceTestData));
+    store.dispatch(initVocabularies([]));
 
     setTargetActivitySection = sinon.spy();
     updateTargetActivitySection = sinon.spy();
@@ -61,6 +69,7 @@ describe('ActivitySectionCard', () => {
       updateActivitySectionMetrics,
       setTargetActivitySection,
       targetActivitySectionPos: 1,
+      hasLessonPlan: true,
 
       //redux
       moveActivitySection,
@@ -100,6 +109,23 @@ describe('ActivitySectionCard', () => {
     );
     expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
     expect(wrapper.find('textarea').length).to.equal(1);
+    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.contains('Progression Title:')).to.be.true;
+  });
+
+  it('renders activity section with levels for lesson with lesson plan', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        activitySection={sampleActivities[0].activitySections[2]}
+        hasLessonPlan={false}
+      />
+    );
+    expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).to.equal(
+      1
+    );
+    expect(wrapper.find('Connect(LevelToken)').length).to.equal(2);
+    expect(wrapper.find('textarea').length).to.equal(0);
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.contains('Progression Title:')).to.be.true;
   });

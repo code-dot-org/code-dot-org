@@ -18,6 +18,7 @@ class LessonsControllerTest < ActionController::TestCase
       name: 'lesson display name',
       absolute_position: 1,
       relative_position: 1,
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -29,6 +30,7 @@ class LessonsControllerTest < ActionController::TestCase
       script_id: @script.id,
       lesson_group: lesson_group,
       name: 'second lesson',
+      has_lesson_plan: false,
       absolute_position: 2,
       relative_position: 2
     )
@@ -65,16 +67,23 @@ class LessonsControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
   end
 
-  # anyone can show lesson
+  # anyone can show lesson with lesson plan
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: nil, response: :success
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :student, response: :success
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
 
+  # no one can access a lesson without lesson plan
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :levelbuilder, response: :forbidden
+
   test 'show lesson when lesson is the only lesson in script' do
     @solo_lesson_in_script = create(
       :lesson,
       name: 'lesson display name',
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -193,6 +202,63 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'new student overview', JSON.parse(@response.body)['studentOverview']
   end
 
+  test 'cannot update lockable if last level is not a levelgroup and an assessment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+
+    error = assert_raises RuntimeError do
+      post :update, params: {
+        id: lesson.id,
+        name: lesson.name,
+        lockable: true
+      }
+    end
+
+    assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup and an assessment."
+  end
+
+  test 'can update lockable if last level is levelgroup and assessment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      assessment: true,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:level_group, name: 'levelgroup 1')]
+    )
+
+    post :update, params: {
+      id: lesson.id,
+      name: lesson.name,
+      lockable: true
+    }
+
+    assert_response :success
+  end
+
   test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -257,6 +323,19 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'updates lesson positions on lesson update' do
     sign_in @levelbuilder
+
+    # Make sure the last level in @lesson is an assessment and levelgroup
+    lesson_activity = create :lesson_activity, lesson: @lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: @script,
+      assessment: true,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: @lesson,
+      levels: [create(:level_group, name: 'levelgroup 1')]
+    )
 
     assert_equal 1, @lesson.relative_position
     assert_equal 1, @lesson.absolute_position
