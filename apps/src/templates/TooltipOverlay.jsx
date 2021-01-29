@@ -137,7 +137,7 @@ export default class TooltipOverlay extends React.Component {
     ) {
       return null;
     }
-    return <g className="tooltip-overlay">{this.renderTooltips()}</g>;
+    return <svg className="tooltip-overlay">{this.renderTooltips()}</svg>;
   }
 }
 
