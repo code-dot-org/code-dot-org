@@ -65,7 +65,7 @@ Pregunte a los estudiantes si han usado antes un ratón de comptadora (o trackpa
 
 ## Actividad
 
-### <a name="Activity"></a>[Rompecabezas: Aprende a arrastrar y soltar](http://learn.code.org/s/course1/stage/3/puzzle/1)
+### <a name="Activity"></a>[Rompecabezas: Aprende a arrastrar y soltar](http://learn.code.org/s/course1/lesson/3/puzzle/1)
 
 La programación en parejas fuciona mejor con dos estudiantes por computadora y una definición clara de quién es el conductor y quién el navegante. Podrías usar recordatorios visuales, como sombreros o fajas, para identificar al conductor y al navegante.
 

@@ -69,7 +69,7 @@ Os alunos terão a oportunidade de compartilhar o resultado da atividade por mei
 
 ## Atividade
 
-### <a name="Activity"></a> [Laboratório: Crie uma história](http://learn.code.org/s/course2/stage/17/puzzle/1)
+### <a name="Activity"></a> [Laboratório: Crie uma história](http://learn.code.org/s/course2/lesson/17/puzzle/1)
 
 Essa é a atividade mais livre do curso. Na última etapa, os alunos têm a liberdade de criar sua própria história. Você pode fornecer diretrizes sobre que tipo de história escrever, principalmente para alunos que estão em dúvida entre muitas opções.
 

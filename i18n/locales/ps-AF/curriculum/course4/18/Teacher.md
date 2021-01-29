@@ -62,7 +62,7 @@ To begin, it can be helpful to review the previous lesson, specifically differen
 
 ## Activity
 
-### <a name="Activity"></a> [Artist: Binary](http://learn.code.org/s/course4/stage/18/puzzle/1)
+### <a name="Activity"></a> [Artist: Binary](http://learn.code.org/s/course4/lesson/18/puzzle/1)
 
 [/together]
 

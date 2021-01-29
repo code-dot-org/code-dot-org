@@ -62,7 +62,7 @@ Reflita com os alunos sobre a atividade dos caça-sóis
 
 ## Atividade
 
-### <a name="Activity"></a> [Artista: funções](http://learn.code.org/s/course3/stage/5/puzzle/1)
+### <a name="Activity"></a> [Artista: funções](http://learn.code.org/s/course3/lesson/5/puzzle/1)
 
 Alguns alunos podem ter dificuldades com a diferença entre a definição de função (o código real da função) e a chamada da função (usada quando queremos que uma função seja executada). Como uma ajuda visual, colocamos a definição de função dentro de uma caixa cinza - você pode comparar isso à folha separada que eles usaram para escrever as funções do caça-sol.
 

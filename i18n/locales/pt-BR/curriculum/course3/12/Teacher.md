@@ -54,7 +54,7 @@ Usando laços, os estudantes movem a pá da fazendeira para encher os buracos e 
 
 ## Atividade
 
-### <a name="Activity"></a> [Fazendeira: laços enquanto (while)](http://learn.code.org/s/course3/stage/12/puzzle/1)
+### <a name="Activity"></a> [Fazendeira: laços enquanto (while)](http://learn.code.org/s/course3/lesson/12/puzzle/1)
 
 [/together]
 

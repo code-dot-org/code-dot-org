@@ -25,7 +25,7 @@ title: '"Πώς να" οδηγός για τους γονείς'
 Όλες οι δραστηριότητες που διαθέτουμε συνδυάζουν την επίλυση προβλημάτων και την κριτική σκέψη με διασκέδαση και δημιουργικότητα, αλλά σας παραθέτουμε εδώ κάποιες από τις αγαπημένες δραστηριότητες των μαθητών:
 
 - Για παιδιά που τους αρέσει να παίζουν:<a href="https://code.org/minecraft">Ναρκαλιευτής</a> ή <a href="https://code.org/dance">Πάρτι Χορού</a>
-- Για τα παιδιά που τους αρέσει ο Ντίσνεϊ:<a href="https://code.org/starwars">Ο Πόλεμος των Άστρων</a><a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Ψυχρά και Ανάποδα</a> ή <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Μοάνα</a>
+- Για τα παιδιά που τους αρέσει ο Ντίσνεϊ:<a href="https://code.org/starwars">Ο Πόλεμος των Άστρων</a><a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Ψυχρά και Ανάποδα</a> ή <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Μοάνα</a>
 - Για το παιδί που του αρέσει να μαθαίνει:<a href="https://code.org/oceans">Al για τους Ωκεανούς<a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Φτιάξτε Μουσική από το μηδέν</a></li> </ul> 
   
   <p spaces-before="0">

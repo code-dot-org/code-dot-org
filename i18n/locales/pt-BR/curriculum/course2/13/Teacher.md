@@ -65,7 +65,7 @@ Agora vamos usar condicionais com nossa abelha para que ela nos ajude a lidar co
 
 ## Atividade
 
-### <a name="Activity"></a> [Abelha: Condicionais](http://learn.code.org/s/course2/stage/13/puzzle/1)
+### <a name="Activity"></a> [Abelha: Condicionais](http://learn.code.org/s/course2/lesson/13/puzzle/1)
 
 [/together]
 

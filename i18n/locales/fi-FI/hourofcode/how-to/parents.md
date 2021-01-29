@@ -29,7 +29,7 @@ There are countless [Hour of Code activities](https://hourofcode.com/us/learn) a
 Integroimme ongelmanratkaisua ja kriittistä ajattelua hauskanpidon ja luovuuden avulla, mutta tässä on joitain opiskelijoiden suosikkeja:
 
 - For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
-- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lesson/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - Lapselle, joka rakastaa uuden oppimista: [AI for Oceans](https://code.org/oceans) tai [Luo Musiikkia](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg), Make Music with Scratchin avulla
 
 <h3>Low-tech vai no-tech?</h3>

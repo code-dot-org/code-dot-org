@@ -55,7 +55,7 @@ Usando o ambiente de abelha, os alunos usam e modificam funções para ajudar a 
 
 ## Atividade
 
-### <a name="Activity"></a> [Abelha: funções](http://learn.code.org/s/course3/stage/6/puzzle/1)
+### <a name="Activity"></a> [Abelha: funções](http://learn.code.org/s/course3/lesson/6/puzzle/1)
 
 [/together]
 

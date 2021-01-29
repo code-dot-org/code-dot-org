@@ -72,7 +72,7 @@ Some students may struggle with turning their bird in the correct direction, par
 
 ## Aktivita
 
-### <a name="Activity"></a> [Maze: Sequence](http://learn.code.org/s/course2/stage/3/puzzle/1)
+### <a name="Activity"></a> [Maze: Sequence](http://learn.code.org/s/course2/lesson/3/puzzle/1)
 
 Jak studenti pracují prostřednictvím hádanek, pozorujte, jak si plánují cestu pro ptáka. Určete různé používané strategie a požádejte studenty, aby se o to podělili s celou třídou. To pomáhá studentům pochopit, že existuje mnoho způsobů, jak přistupovat k těmto problémům. Možná budete chtít projít pár hádanek na projektoru. While doing this you can ask one student to trace the path on the screen while another writes the directions on a whiteboard.
 

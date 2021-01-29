@@ -60,7 +60,7 @@ Até este momento, os alunos usaram laços nos níveis do Labirinto e do Artista
 
 ## Atividade
 
-### <a name="Activity"></a> [Abelha: laços](http://learn.code.org/s/course2/stage/8/puzzle/1)
+### <a name="Activity"></a> [Abelha: laços](http://learn.code.org/s/course2/lesson/8/puzzle/1)
 
 Quando os alunos forem usar laços para repetir uma ação (como coletar néctar), incentive-os a pensar nos movimentos antes e após a ação. Eles podem ser usados com um laço também?
 

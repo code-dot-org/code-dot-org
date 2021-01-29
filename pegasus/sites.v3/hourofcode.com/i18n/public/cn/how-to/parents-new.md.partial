@@ -25,7 +25,7 @@ title: 家长操作指南
 我们所有的活动都将解决问题和批判性思维与趣味性和创造性结合在一起，而这里是一些学生最喜欢的活动：
 
 - 给爱玩耍的孩子：<a href="https://code.org/minecraft">我的世界</a>或者<a href="https://code.org/dance">舞蹈派对</a>
-- 给喜欢迪斯尼的孩子：<a href="https://code.org/starwars">星球大战</a>,<a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">冰雪奇缘</a>, 或<a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">莫娜</a>
+- 给喜欢迪斯尼的孩子：<a href="https://code.org/starwars">星球大战</a>,<a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">冰雪奇缘</a>, 或<a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">莫娜</a>
 - 给爱学习的孩子：<a href="https://code.org/oceans">保护海洋的人工智能</a>或<a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">从零开始做音乐</a>
 
 <h3>  设备有限或者无设备？</h3>

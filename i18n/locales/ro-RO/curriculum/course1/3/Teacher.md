@@ -65,7 +65,7 @@ title: "Jigsaw: Learn to drag and drop" view: page_curriculum theme: none
 
 ## Activitate
 
-### <a name="Activity"></a>[Puzzle: Învaţă să glisezi şi să fixezi](http://learn.code.org/s/course1/stage/3/puzzle/1)
+### <a name="Activity"></a>[Puzzle: Învaţă să glisezi şi să fixezi](http://learn.code.org/s/course1/lesson/3/puzzle/1)
 
 Programarea în pereche funcţionează cel mai bine atunci când avem doi elevi la un calculator cu expectanţe clare legat de cine este şofer şi cine este navigator. Poţi crea şi anumite semnale vizuale care să reamintească rolul fiecăruia dintre copii, gen pălării sau banderole.
 

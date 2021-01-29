@@ -58,7 +58,7 @@ Students use the Artist environment to write programs with for loops, similar to
 
 ## Activity
 
-### <a name="Activity"></a> [Artist: For Loops](http://learn.code.org/s/course4/stage/10/puzzle/1)
+### <a name="Activity"></a> [Artist: For Loops](http://learn.code.org/s/course4/lesson/10/puzzle/1)
 
 [/together]
 

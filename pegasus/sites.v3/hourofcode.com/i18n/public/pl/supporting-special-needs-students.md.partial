@@ -8,7 +8,7 @@ Każdy może spróbować Godziny Kodowania podczas Tygodnia Edukacji Informatycz
 
 ## Dopasuj samouczki w trybie "unplugged" - bez komputera- i online do szeregu potrzeb
 
-Do znalezienia odpowiednich zajęć dla każdej osoby w klasie, rozważ zarówno opcje online jak i "unplugged", które nie wymagają komputerów. Zajęcia w trybie "unplugged" - bez komputera - pozwalają uczniom "dotknąć" koncepcji informatycznych. [Ważne wydarzenie](https://studio.code.org/s/course1/stage/15/puzzle/1) daje nauczycielom kontrolę nad działaniami uczniów dając im doskonałą okazję do kształtowania istoty umiejętności każdego ucznia.
+Do znalezienia odpowiednich zajęć dla każdej osoby w klasie, rozważ zarówno opcje online jak i "unplugged", które nie wymagają komputerów. Zajęcia w trybie "unplugged" - bez komputera - pozwalają uczniom "dotknąć" koncepcji informatycznych. [Ważne wydarzenie](https://studio.code.org/s/course1/lesson/15/puzzle/1) daje nauczycielom kontrolę nad działaniami uczniów dając im doskonałą okazję do kształtowania istoty umiejętności każdego ucznia.
 
 Dla każdego ucznia udogodnienia dostępne na komputerze mogą pozwolić im uczestniczyć lepiej niż wybór trybu "unplugged" - bez komputera. Na przykład uczniowie, którzy są niesłyszący lub niedosłyszący, mogą w pełni uczestniczyć w samouczkach online.
 

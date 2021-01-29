@@ -65,7 +65,7 @@ Pergunte aos alunos se eles já usaram um mouse antes (ou trackpad, touchscreen,
 
 ## Atividade
 
-### <a name="Activity"></a>[Quebra-cabeça: aprenda a arrastar e soltar](http://learn.code.org/s/course1/stage/3/puzzle/1)
+### <a name="Activity"></a>[Quebra-cabeça: aprenda a arrastar e soltar](http://learn.code.org/s/course1/lesson/3/puzzle/1)
 
 A programação em dupla funciona melhor com dois alunos por computador, e com as expectativas claras sobre quem é o piloto e quem é o navegador. Você pode criar meios visuais, como chapéus ou faixas, para identificar o piloto e o navegador.
 

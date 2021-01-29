@@ -25,7 +25,7 @@ May napakaraming <a href="https://hourofcode.com/us/learn">mga aktibidad ng Hour
 Pinagsasama ng lahat ng aming mga aktibidad ang paglutas ng problema at kritikal na pag-iisip sa saya at pagiging malikhain, ngunit narito ang ilan sa mga paborito ng mga estudyante:
 
 - Para sa batang gustong-gustong maglaro: <a href="https://code.org/minecraft">Minecraft</a> o <a href="https://code.org/dance">Dance Party</a>  
-- Para sa batang gustong-gusto ang Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, o <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>  
+- Para sa batang gustong-gusto ang Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a>, o <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>  
 - Para sa batang gustong-gusto na matuto: <a href="https://code.org/oceans">AI para sa mga Karagatan</a> o <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Gumawa ng Musika mula sa Pinaka-umpisa</a>  
 
 <h3>  Mahina sa teknolohiya o walang teknolohiya?  </h3>

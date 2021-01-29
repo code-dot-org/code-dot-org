@@ -8,7 +8,7 @@ Bilgisayar bilimi eğitimi haftasında herkes bir saatlik kodlama saati etkinli�
 
 ## Çeşitli ihtiyaçları bağımsız ve çevrimiçi eğitim içerikleriyle karşılayın
 
-Sınıfınızdaki her bir öğrenciye uygun aktiviteyi bulmak için, hem çevrimiçi seçenekleri hem de bilgisayar gerektirmeyen "bağımsız" seçenekleri göz önünde bulundurun. Bağımsız aktiviteler öğrencilerin bilgisayar bilimi kavramlarıyla çalışmalarına olanak sağlar. [Big Event](https://studio.code.org/s/course1/stage/15/puzzle/1) isimli bulmaca, öğretmenlerin, öğrenci davranışları üzerinde kontrol sağlayabilmesi yoluyla, içeriği her bir öğrencinin yetenekleri doğrultusunda belirlemeleri için mükemmel bir fırsat sunar.
+Sınıfınızdaki her bir öğrenciye uygun aktiviteyi bulmak için, hem çevrimiçi seçenekleri hem de bilgisayar gerektirmeyen "bağımsız" seçenekleri göz önünde bulundurun. Bağımsız aktiviteler öğrencilerin bilgisayar bilimi kavramlarıyla çalışmalarına olanak sağlar. [Big Event](https://studio.code.org/s/course1/lesson/15/puzzle/1) isimli bulmaca, öğretmenlerin, öğrenci davranışları üzerinde kontrol sağlayabilmesi yoluyla, içeriği her bir öğrencinin yetenekleri doğrultusunda belirlemeleri için mükemmel bir fırsat sunar.
 
 Diğer öğrenciler için ise, doğrudan bilgisayarda çalışmak, bağımsız seçeneğe oranla daha fazla katılım sağlamalarına olanak tanıyabilir. Örneğin işitme yetersizliği olan öğrenciler, çevrimiçi eğitim içeriklerinde tam bir katılım gösterebilirler.
 
