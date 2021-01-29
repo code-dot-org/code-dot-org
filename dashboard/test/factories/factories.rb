@@ -790,7 +790,8 @@ FactoryGirl.define do
     end
 
     # relative_position is actually the same as absolute_position in our factory
-    # (i.e. it doesnt try to count lockable lesson without lesson plan/all other lessons)
+    # i.e. it doesn't try to count lockable lessons without lesson plans separately
+    # from all other lessons, which is what we normally do for relative position.
     relative_position do |lesson|
       ((lesson.script.lessons.maximum(:absolute_position) || 0) + 1).to_s
     end
