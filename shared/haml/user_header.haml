@@ -135,11 +135,13 @@
       });
     });
 
-    function hideCreateOptions() {
-      $('.create_options').slideUp();
-      $('.create_menu_arrow_down').show();
-      $('.create_menu_arrow_up').hide();
-      $(document).off('click', hideCreateOptions);
+    function hideCreateOptions(event) {
+      if ((event.type === "keypress" && event.which === 13) || (event.type === "click")) {
+        $('.create_options').slideUp();
+        $('.create_menu_arrow_down').show();
+        $('.create_menu_arrow_up').hide();
+        $(document).off('click', hideCreateOptions);
+      }
     }
     $(document).ready(function() {
       $('.create_menu').on("keypress click", function(e) {
@@ -149,7 +151,7 @@
             $('.create_options').slideDown();
             $('.create_menu_arrow_down').hide();
             $('.create_menu_arrow_up').show();
-            $(document).on('click', hideCreateOptions);
+            $(document).on('keypress click', (e) => hideCreateOptions(e));
             hideUserOptions()
             $("#hamburger-icon").removeClass('active');
             $("#help-icon").removeClass('active');
