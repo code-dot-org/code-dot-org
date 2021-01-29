@@ -63,8 +63,8 @@ class Lesson < ApplicationRecord
   )
 
   # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
-  # numbers the lessons in order in two groups 1. lessons that are numbered (lockable false OR has_lesson_plan true)
-  # 2. lessons that are not numbered (lockable true AND has_lesson_plan false)
+  # numbers the lessons in order in two groups 1. lessons that are numbered on the script overview page (lockable false OR has_lesson_plan true)
+  # 2. lessons that are not numbered on the script overview page (lockable true AND has_lesson_plan false)
   # if we have two lessons without lesson plans that are lockable followed by a
   # lesson that is not lockable, the third lesson will have an absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
@@ -177,7 +177,7 @@ class Lesson < ApplicationRecord
 
   # We number lessons that either have lesson plans or are not lockable
   def numbered_lesson?
-    has_lesson_plan || !lockable
+    !!has_lesson_plan || !lockable
   end
 
   def localized_title
