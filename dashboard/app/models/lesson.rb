@@ -316,6 +316,7 @@ class Lesson < ApplicationRecord
       vocabularies: vocabularies.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
+      scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
       lessonPath: lesson_path(id: id)
     }
