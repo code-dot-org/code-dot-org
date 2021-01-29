@@ -69,7 +69,7 @@ Studenti budou mít příležitost sdílet své finální práce odkazem. To je 
 
 ## Aktivita
 
-### <a name="Activity"></a> [Play Lab: Create a Story](http://learn.code.org/s/course3/stage/16/puzzle/1)
+### <a name="Activity"></a> [Play Lab: Create a Story](http://learn.code.org/s/course3/lesson/16/puzzle/1)
 
 This is one of the most free-form plugged activities of the course. V Na závěr studenti mají volno k vytvoření vlastního příběhu. Možná budete chtít poskytnout strukturované pokyny kolem na jaký druh příběh psát, zejména pro studenty zahlcené příliš mnoha možnostmi.
 

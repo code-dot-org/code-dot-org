@@ -1842,10 +1842,14 @@ ko-KR:
           축하합니다! 여러분은 이 온라인 전문성 개발 과정 중 기본 코딩 개념 부분을 완료했습니다! 그래서 다음은 어디일까요?
 
           ## 과정 E와 F를 가르칠 계획이면
+<<<<<<< HEAD
           과정 E와 F를 가르칠 계획이면 (또는 그냥 더 고급 코딩 개념에 익숙해 지길 원하면),  <a href="https://studio.code.org/s/k5-onlinepd-2019/stage/8/puzzle/1" target="blank">다음 개념 청크</a>로 계속하길 권하며, 그 부분은 특별히 다음 과정에서 소개될 개념을 다룹니다.
+=======
+          과정 E와 F를 가르칠 계획이면 (또는 그냥 더 고급 코딩 개념에 익숙해 지길 원하면), we recommend you continue onto the <a href="https://studio.code.org/s/k5-onlinepd-2019/lesson/8/puzzle/1" target="blank">다음 개념 청크</a>로 계속하길 권하며, 그 부분은 특별히 다음 과정에서 소개될 개념을 다룹니다.
+>>>>>>> Update all references to /stage or /lockable in code base
 
           ## 과정 E와 F를 가르칠 계획이 없으면
-          과정 E와 F를 가르칠 계획이 없으면, <a href="https://studio.code.org/s/k5-onlinepd-2019/stage/12/puzzle/1" target="blank">"다음 단계" 개념 청크로 건너 뛸 수 있습니다.</a>
+          과정 E와 F를 가르칠 계획이 없으면, <a href="https://studio.code.org/s/k5-onlinepd-2019/lesson/12/puzzle/1" target="blank">"다음 단계" 개념 청크로 건너 뛸 수 있습니다.</a>
       OPD-K5-projects-1:
         content1: 설명 입력
         markdown: |+

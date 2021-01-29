@@ -61,7 +61,7 @@ Na última etapa, os alunos usaram laços para repetir movimentos simples. Agora
 
 ## Atividade
 
-### <a name="Activity"></a> [Abelha: Laços](http://learn.code.org/s/course1/stage/14/puzzle/1)
+### <a name="Activity"></a> [Abelha: Laços](http://learn.code.org/s/course1/lesson/14/puzzle/1)
 
 [/together]
 

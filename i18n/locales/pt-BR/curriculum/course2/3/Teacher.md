@@ -72,7 +72,7 @@ Alguns alunos podem ter dificuldade para colocar o pássaro na direção correta
 
 ## Atividade
 
-### <a name="Activity"></a> [Labirinto: sequência](http://learn.code.org/s/course2/stage/3/puzzle/1)
+### <a name="Activity"></a> [Labirinto: sequência](http://learn.code.org/s/course2/lesson/3/puzzle/1)
 
 Conforme seus alunos trabalham nos desafios, observe como eles planejam o caminho do pássaro. Identifique estratégias diferentes e peça a eles que as compartilhem com toda a turma. Isso ajuda os alunos a reconhecer que existem muitas formas de abordar esses problemas. Você pode passar alguns desafios no projetor. Enquanto você faz isso, peça para que um aluno exiba o caminho na tela, enquanto outro escreve as direções em uma lousa.
 

@@ -25,7 +25,7 @@ Istnieją niezliczone  <a href="https://hourofcode.com/us/learn"> zajęcia w ram
 Wszystkie nasze zajęcia obejmują zagadnienia rozwiązywania problemów i krytycznego myślenia w sposób atrakcyjny i kreatywny, a tutaj podajemy kilka ulubionych przez uczniów:
 
 - Dla dziecka, które uwielbia się bawić: <a href="https://code.org/minecraft">Minecraft</a> lub <a href="https://code.org/dance">Potańcówka</a>
-- Dla dziecka, które uwielbia Disneya: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+- Dla dziecka, które uwielbia Disneya: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
 - Dla dziecka, które uwielbia się uczyć: <a href="https://code.org/oceans">AI dla oceanów "</a> lub <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Twórz muzykę ze Scratchem</a>
 
 <h3>Niski poziom technologii lub brak technologii?</h3>

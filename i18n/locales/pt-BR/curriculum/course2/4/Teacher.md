@@ -68,7 +68,7 @@ Pense, junto com os alunos, em formas de dizer a alguém como desenhar uma figur
 
 ## Atividade
 
-### <a name="Activity"></a> [Sequência do artista](http://learn.code.org/s/course2/stage/4/puzzle/1)
+### <a name="Activity"></a> [Sequência do artista](http://learn.code.org/s/course2/lesson/4/puzzle/1)
 
 Nos níveis do Artista, os alunos não estarão mais restritos a ângulos de 90 graus. O uso do transferidor poderá ajudar os alunos a visualizar melhor os ângulos de que eles precisam.
 

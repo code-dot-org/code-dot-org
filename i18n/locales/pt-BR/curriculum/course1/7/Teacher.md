@@ -65,7 +65,7 @@ Nesta aula os alunos vão ajudar suas abelhas a coletar néctar das flores e pro
 
 ## Atividade
 
-### <a name="Activity"></a> [Abelha: sequência](http://learn.code.org/s/course1/stage/7/puzzle/1)
+### <a name="Activity"></a> [Abelha: sequência](http://learn.code.org/s/course1/lesson/7/puzzle/1)
 
 Mostre aos alunos que cada flor e cada colmeia tem um pequeno número ao lado delas. Esse número informa quanto néctar coletar, ou quanto mel produzir.
 

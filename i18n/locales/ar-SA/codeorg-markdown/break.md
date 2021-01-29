@@ -48,11 +48,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="http://studio.code.org/s/code-break-younger/stage/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="http://studio.code.org/s/code-break-younger/lesson/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="http://studio.code.org/s/code-break/stage/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="http://studio.code.org/s/code-break/lesson/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>
@@ -68,11 +68,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/2/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lesson/2/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break/stage/2/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="https://studio.code.org/s/code-break/lesson/2/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>
@@ -89,11 +89,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/3/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lesson/3/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break/stage/3/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="https://studio.code.org/s/code-break/lesson/3/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>
@@ -113,11 +113,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/4/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lesson/4/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break/stage/4/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="https://studio.code.org/s/code-break/lesson/4/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>
@@ -136,11 +136,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lesson/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break/stage/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="https://studio.code.org/s/code-break/lesson/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>
@@ -159,11 +159,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/6/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lesson/6/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break/stage/6/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="https://studio.code.org/s/code-break/lesson/6/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>
@@ -182,11 +182,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/7/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lesson/7/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break/stage/7/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="https://studio.code.org/s/code-break/lesson/7/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>
@@ -203,11 +203,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/8/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lesson/8/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break/stage/8/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="https://studio.code.org/s/code-break/lesson/8/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>
@@ -224,11 +224,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/9/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lesson/9/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break/stage/9/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="https://studio.code.org/s/code-break/lesson/9/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>
@@ -245,11 +245,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/10/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lesson/10/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break/stage/10/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="https://studio.code.org/s/code-break/lesson/10/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>
@@ -266,11 +266,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/11/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lesson/11/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break/stage/11/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="https://studio.code.org/s/code-break/lesson/11/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>
@@ -287,11 +287,11 @@ title: خذ استراحة من البرمجة
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/12/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lesson/12/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من 6 إلى 12 عامًا)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأكبر سنًا:</span> يتطلب تسجيل الدخول</p>
-<a href="https://studio.code.org/s/code-break/stage/12/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
+<a href="https://studio.code.org/s/code-break/lesson/12/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">الذهاب (من سن 13 فما فوق)</button></a>
 </div>
 
 </div>

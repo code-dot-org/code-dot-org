@@ -25,7 +25,7 @@ Jestliže budete pracovat na počítači s přístupem na internet, budete mít 
 Všechny naše aktivity propojují řešení problémů a kritické myšlení se zábavou a tvořivostí, avšak tady je několik věcí, které si studenti obzvlášť oblíbili:
 
 - Pro dítě, které si rádo hraje: <a href="https://code.org/minecraft">Minecraft</a> nebo <a href="https://code.org/dance">Taneční party</a>
-- Pro dítě, které má rádo Disney: <a href="https://code.org/starwars">Hvězdné války</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, nebo <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+- Pro dítě, které má rádo Disney: <a href="https://code.org/starwars">Hvězdné války</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a>, nebo <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
 - Pro dítě, které se rádo učí:  <a href="https://code.org/oceans">Umělá inteligence pro oceány</a> nebo <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Dělejte hudbu škrábáním</a>
 
 <h3>Primitivní nebo žádná technika?</h3>

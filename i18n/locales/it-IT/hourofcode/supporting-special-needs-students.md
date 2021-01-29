@@ -8,7 +8,7 @@ Chiunque può provare un'ora del codice durante la settimana dell'educazione inf
 
 ## Soddisfa una varietà di esigenze con le esercitazioni online e tradizionnali
 
-Nel trovare l'attività giusta per tutti nella tua classe, considera sia le opzioni online che quelle "tradizionali" che non richiedono un computer. Le attività tradizionali consentono agli studenti di mettere le mani sui concetti di informatica. Il [Grande Evento](https://studio.code.org/s/course1/stage/15/puzzle/1) permette agli insegnanti di controllare le azioni degli studenti, offrendo una grande opportunità per adattare il contenuto alle capacità di ogni studente.
+Nel trovare l'attività giusta per tutti nella tua classe, considera sia le opzioni online che quelle "tradizionali" che non richiedono un computer. Le attività tradizionali consentono agli studenti di mettere le mani sui concetti di informatica. Il [Grande Evento](https://studio.code.org/s/course1/lesson/15/puzzle/1) permette agli insegnanti di controllare le azioni degli studenti, offrendo una grande opportunità per adattare il contenuto alle capacità di ogni studente.
 
 Per altri studenti, le postazioni disponibili sul computer possono consentirgli di partecipare meglio che in un'attività tradizionale. Ad esempio, gli studenti non udenti o ipo-udenti possono partecipare pienamente alle esercitazioni online.
 

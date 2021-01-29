@@ -46,7 +46,7 @@ Algunos consejos:
 
 Estas actividades se diseñaron para que los estudiantes las sigan a su propio ritmo a través de un tutorial. No requieren demasiadas instrucciones o trabajo de preparación de un profesor.
 
-**Lección facilitada por el profesor ([ejemplo](https://studio.code.org/s/course1/stage/2/puzzle/1), [plantilla](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Lección facilitada por el profesor ([ejemplo](https://studio.code.org/s/course1/lesson/2/puzzle/1), [plantilla](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Ahora que decenas de miles de educadores han participado en la Hora del Código, muchas aulas están preparadas para actividades más creativas que enseñan los conceptos básicos de las ciencias de la computación. Para ayudar a los docentes a encontrar inspiración, nos gustaría seleccionar lecciones "dirigidas por docentes" y planes de actividades para veteranos de la Hora del Código.
 

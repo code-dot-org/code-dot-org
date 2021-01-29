@@ -25,7 +25,7 @@ Der er utallige <a href="https://hourofcode.com/us/learn">Hour of code aktivitet
 Alle vores aktiviteter integrerer problemløsning og kritisk tænkning med sjove opgaver og kreativitet, men her er nogle af studerendes favoritter:
 
 - Til barnet, der elsker at lege: <a href="https://code.org/minecraft">Minecraft</a> eller <a href="https://code.org/dance">Dansefest</a>
-- Til barnet, der elsker Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+- Til barnet, der elsker Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
 - Til barnet, der elsker at lære: <a href="https://code.org/oceans">AI for Oceans</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Lav musik med scratching</a>
 
 <h3>Lavteknologi eller ingen teknologi?</h3>

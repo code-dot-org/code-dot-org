@@ -61,7 +61,7 @@ While the students will have had some experience creating functions with paramet
 
 ## Activity
 
-### <a name="Activity"></a> [Play Lab: Functions with Parameters](http://learn.code.org/s/course4/stage/15/puzzle/1)
+### <a name="Activity"></a> [Play Lab: Functions with Parameters](http://learn.code.org/s/course4/lesson/15/puzzle/1)
 
 [/together]
 

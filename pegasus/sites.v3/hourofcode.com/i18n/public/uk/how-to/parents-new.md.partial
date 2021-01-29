@@ -25,7 +25,7 @@ Hour of Code – це простий і захоплюючий спосіб по
 У всіх наших заходах вирішення проблем і критичне мислення поєднуються з веселощами і творчістю. Нижче представлені деякі з улюблених занять учнів:
 
 - Для дитини, яка любить грати: <a href="https://code.org/minecraft">Minecraft</a> або <a href="https://code.org/dance">Танцювальна вечірка</a>
-- Для дитини, яка любить Disney: <a href="https://code.org/starwars">Зоряні війни</a>,<a href="https://studio.code.org/s/frozen/stage/1/puzzle/1"> Холодне серце</a> або <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Моана</a>
+- Для дитини, яка любить Disney: <a href="https://code.org/starwars">Зоряні війни</a>,<a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1"> Холодне серце</a> або <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Моана</a>
 - Для дитини, яка любить вчитися: <a href="https://code.org/oceans">Штучний інтелект для океанів</a> або <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Створення музики з нуля</a>
 
 <h3>Доступ до технологій обмежений або відсутній?</h3>

@@ -60,7 +60,7 @@ Returning to the artist, students learn to draw more complex images by looping s
 
 ## Activity
 
-### <a name="Activity"></a> [Artist: Loops](http://learn.code.org/s/course2/stage/7/puzzle/1)
+### <a name="Activity"></a> [Artist: Loops](http://learn.code.org/s/course2/lesson/7/puzzle/1)
 
 In the Artist levels students will no longer be constrained to 90 degree angles. Having protractors available can be help students better visualize the angles they need.
 

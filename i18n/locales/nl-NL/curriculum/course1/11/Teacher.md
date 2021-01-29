@@ -68,7 +68,7 @@ Deels puzzel, deels woordzoeker, Spelling Bee vraagt leerlingen om een bij te pr
 
 ## Activiteit
 
-### <a name="Activity"></a> [Spelling Bee](http://learn.code.org/s/course1/stage/11/puzzle/1)
+### <a name="Activity"></a> [Spelling Bee](http://learn.code.org/s/course1/lesson/11/puzzle/1)
 
 zeer jonge leerlingen of leerlingen die moeite hebben met lezen hebben mogelijk bijkomende hulp nodig om de woorden te vinden - gebruik te maken van Scrabblesteentjes kan leerlingen helpen om te zien hoe woorden er uit zien in verschillende richtingen.
 

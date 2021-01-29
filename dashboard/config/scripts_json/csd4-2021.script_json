@@ -7166,7 +7166,7 @@
     },
     {
       "name": "Determine the User",
-      "url": "https://studio.code.org/s/csd4-2019/stage/1/puzzle/1",
+      "url": "https://studio.code.org/s/csd4-2019/lesson/1/puzzle/1",
       "key": "determine-user-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -7215,7 +7215,7 @@
     },
     {
       "name": "Reacting as Your User",
-      "url": "https://studio.code.org/s/csd4-2019/stage/2/puzzle/1",
+      "url": "https://studio.code.org/s/csd4-2019/lesson/2/puzzle/1",
       "key": "reacting-as-your-user-exemplar-19",
       "properties": {
         "type": "Exemplar",
@@ -7329,7 +7329,7 @@
     },
     {
       "name": "User Centered Design",
-      "url": "https://studio.code.org/s/csd4-2019/stage/3/puzzle/1",
+      "url": "https://studio.code.org/s/csd4-2019/lesson/3/puzzle/1",
       "key": "user-centered-design-exemplar-19",
       "properties": {
         "type": "Exemplar",
@@ -7353,7 +7353,7 @@
     },
     {
       "name": "User Centered Design",
-      "url": "https://studio.code.org/s/csd4-2019/stage/3/puzzle/1",
+      "url": "https://studio.code.org/s/csd4-2019/lesson/3/puzzle/1",
       "key": "user-centered-design-exemplar-19",
       "properties": {
         "type": "Exemplar",
@@ -7454,7 +7454,7 @@
     },
     {
       "name": "Improve a Screen",
-      "url": "https://studio.code.org/s/csd4-2019/stage/5/puzzle/1",
+      "url": "https://studio.code.org/s/csd4-2019/lesson/5/puzzle/1",
       "key": "improve-a-screen-exemplar-19",
       "properties": {
         "type": "Exemplar",
@@ -7568,7 +7568,7 @@
     },
     {
       "name": "Paper Prototypes",
-      "url": "https://studio.code.org/s/csd4-2019/stage/7/puzzle/1",
+      "url": "https://studio.code.org/s/csd4-2019/lesson/7/puzzle/1",
       "key": "paper-prototype-exemplars",
       "properties": {
         "type": "Exemplars",
@@ -7981,7 +7981,7 @@
     },
     {
       "name": "App Presentation - Exemplars",
-      "url": "https://studio.code.org/s/csd4-2019/stage/16/puzzle/1",
+      "url": "https://studio.code.org/s/csd4-2019/lesson/16/puzzle/1",
       "key": "app-presentation-exemplars",
       "properties": {
         "audience": "Teacher"

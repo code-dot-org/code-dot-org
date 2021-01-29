@@ -62,7 +62,7 @@ Revisar a atividade de laços com os alunos:
 
 ## Atividade
 
-### <a name="Activity"></a> [Laços do labirinto](http://learn.code.org/s/course2/stage/6/puzzle/1)
+### <a name="Activity"></a> [Laços do labirinto](http://learn.code.org/s/course2/lesson/6/puzzle/1)
 
 Conforme os alunos trabalham nos desafios, veja se eles conseguem descobrir quantos blocos a menos eles precisam ao usar um laço do que quando não usam um laço.
 
