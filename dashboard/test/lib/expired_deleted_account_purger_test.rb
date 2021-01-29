@@ -225,6 +225,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       includes_metrics(
         AccountsPurged: 2,
         AccountsQueued: 0,
+        ReviewQueueDepth: is_a(Integer),
         ManualReviewQueueDepth: is_a(Integer)
       )
     )
@@ -249,7 +250,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{student_c.id}
       AccountsPurged: 2
       AccountsQueued: 0
-      ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Purged 2 account(s).
       🕐 00:00:00
     LOG
@@ -295,6 +297,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       includes_metrics(
         AccountsPurged: 1,
         AccountsQueued: 2,
+        ReviewQueueDepth: is_a(Integer),
         ManualReviewQueueDepth: is_a(Integer)
       )
     )
@@ -307,6 +310,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     assert_includes purged, student_succeeds
     refute_includes purged, student_needs_review
 
+    review_queue_depth = QueuedAccountPurge.count
+    manual_reviews_needed = QueuedAccountPurge.needing_manual_review.count
     assert_equal <<~LOG, edap.log.string
       Starting purge_expired_deleted_accounts!
       deleted_after: #{4.days.ago}
@@ -319,10 +324,12 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purging user_id #{student_autoretryable.id}
       AccountsPurged: 1
       AccountsQueued: 2
-      ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      ReviewQueueDepth: #{review_queue_depth}
+      ManualReviewQueueDepth: #{manual_reviews_needed}
       Purged 1 account(s).
       Queued 2 account(s) for retry or review.
-      #{QueuedAccountPurge.needing_manual_review.count} account(s) require review.
+      #{review_queue_depth} account(s) in the review queue.
+      #{manual_reviews_needed} account(s) require manual review.
       🕐 00:00:00
     LOG
   end
@@ -353,7 +360,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{student_c.id} (dry-run)
       AccountsPurged: 2
       AccountsQueued: 0
-      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Would have purged 2 account(s).
       🕐 00:00:00
     LOG
@@ -392,7 +400,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purging user_id #{student_b.id} (dry-run)
       AccountsPurged: 1
       AccountsQueued: 1
-      ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Would have purged 1 account(s).
       Would have queued 1 account(s) for retry or review.
       🕐 00:00:00
@@ -416,6 +425,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       includes_metrics(
         AccountsPurged: 0,
         AccountsQueued: 0,
+        ReviewQueueDepth: is_a(Integer),
         ManualReviewQueueDepth: is_a(Integer),
       )
     )
@@ -436,7 +446,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Found 6 teachers to purge, which exceeds the configured limit of 5. Abandoning run.
       AccountsPurged: 0
       AccountsQueued: 0
-      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Purged 0 account(s).
       🕐 00:00:00
     LOG
@@ -455,6 +466,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       includes_metrics(
         AccountsPurged: 6,
         AccountsQueued: 0,
+        ReviewQueueDepth: is_a(Integer),
         ManualReviewQueueDepth: is_a(Integer),
       )
     )
@@ -481,7 +493,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{students[5].id}
       AccountsPurged: 6
       AccountsQueued: 0
-      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Purged 6 account(s).
       🕐 00:00:00
     LOG
@@ -504,6 +517,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       includes_metrics(
         AccountsPurged: 0,
         AccountsQueued: 0,
+        ReviewQueueDepth: is_a(Integer),
         ManualReviewQueueDepth: is_a(Integer),
       )
     )
@@ -524,7 +538,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Found 6 accounts to purge, which exceeds the configured limit of 5. Abandoning run.
       AccountsPurged: 0
       AccountsQueued: 0
-      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      ReviewQueueDepth: #{QueuedAccountPurge.count}
+      ManualReviewQueueDepth: #{QueuedAccountPurge.needing_manual_review.count}
       Purged 0 account(s).
       🕐 00:00:00
     LOG

@@ -21,7 +21,7 @@ require_relative '../../../dashboard/config/environment'
 $stdout.sync = true
 
 def feedbacks_without_script_id
-  TeacherFeedback.where(script_id: nil)
+  TeacherFeedback.with_deleted.where(script_id: nil)
 end
 
 def puts_count

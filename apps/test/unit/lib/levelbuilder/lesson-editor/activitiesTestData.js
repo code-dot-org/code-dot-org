@@ -114,6 +114,52 @@ export const sampleActivities = [
   }
 ];
 
+export const sampleActivityForLessonWithoutLessonPlan = {
+  key: 'activity-1',
+  displayName: '',
+  position: 1,
+  duration: 0,
+  activitySections: [
+    {
+      tips: [],
+      key: 'progression-1',
+      position: 1,
+      displayName: '',
+      duration: 0,
+      remarks: false,
+      text: '',
+      progressionName: 'Programming Progression Name',
+      scriptLevels: [
+        {
+          id: '10',
+          levels: [
+            {
+              name: 'LevelGroup 1',
+              id: '1',
+              url: 'levels/598/edit',
+              icon: 'fa-desktop',
+              isUnplugged: false,
+              isConceptLevel: false,
+              skin: null,
+              videoKey: null,
+              concepts: '',
+              conceptDifficulty: ''
+            }
+          ],
+          position: 1,
+          levelNumber: 1,
+          activeId: '1',
+          kind: 'puzzle',
+          bonus: false,
+          assessment: true,
+          challenge: false,
+          expand: false
+        }
+      ]
+    }
+  ]
+};
+
 export const searchOptions = {
   levelOptions: [
     ['All types', ''],

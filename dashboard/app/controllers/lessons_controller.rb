@@ -18,6 +18,7 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1
   def show
+    raise CanCan::AccessDenied.new("cannot view lesson #{@lesson.id} because it does not have a lesson plan") unless @lesson.has_lesson_plan
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
@@ -55,6 +56,11 @@ class LessonsController < ApplicationController
       @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :original_lesson_data))
       @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
+
+      if @lesson.lockable
+        msg = "The last level in a lockable lesson must be a LevelGroup and an assessment."
+        raise msg unless @lesson.script_levels.last.assessment && @lesson.script_levels.last.level.type == 'LevelGroup'
+      end
     end
 
     if Rails.application.config.levelbuilder_mode
@@ -95,6 +101,7 @@ class LessonsController < ApplicationController
       :unplugged,
       :creative_commons_license,
       :lockable,
+      :has_lesson_plan,
       :purpose,
       :preparation,
       :announcements,

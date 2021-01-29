@@ -161,4 +161,16 @@ describe('ScriptOverviewHeader', () => {
       '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
   });
+
+  it('has correct unit description for student', () => {
+    const wrapper = shallow(
+      <ScriptOverviewHeader {...defaultProps} viewAs={ViewType.Student} />,
+      {
+        disableLifecycleMethods: true
+      }
+    );
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+      '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+    );
+  });
 });

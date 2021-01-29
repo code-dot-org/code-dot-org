@@ -156,6 +156,7 @@ export default class JoinSection extends React.Component {
           <input
             type="text"
             name="sectionCode"
+            className="ui-test-join-section"
             value={this.state.sectionCode}
             onChange={this.handleChange}
             onKeyUp={this.handleKeyUp}
@@ -165,6 +166,7 @@ export default class JoinSection extends React.Component {
           <Button
             __useDeprecatedTag
             onClick={this.joinSection}
+            className="ui-test-join-section"
             color={Button.ButtonColor.gray}
             disabled={this.state.sectionCode.length === 0}
             text={i18n.joinSection()}

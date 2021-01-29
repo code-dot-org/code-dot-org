@@ -42,9 +42,9 @@ const styles = {
     lineHeight: '30px'
   },
   addButton: {
-    background: color.cyan,
-    borderRadius: 3,
-    color: color.white,
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
     fontSize: 14,
     padding: 7,
     textAlign: 'center',
@@ -228,7 +228,9 @@ class VocabulariesEditor extends Component {
           />
         )}
         <div style={styles.search}>
-          Select a vocabulary word to add
+          <label>
+            <strong>Select a vocabulary word to add</strong>
+          </label>
           <SearchBox
             onSearchSelect={e => this.props.addVocabulary(e.vocabulary)}
             additionalQueryParams={{
@@ -247,7 +249,8 @@ class VocabulariesEditor extends Component {
           style={styles.addButton}
           type="button"
         >
-          <i className="fa fa-plus" style={{marginRight: 7}} /> Vocabulary
+          <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
+          Vocabulary
         </button>
       </div>
     );
