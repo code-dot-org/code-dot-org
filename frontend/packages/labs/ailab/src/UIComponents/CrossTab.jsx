@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getCrossTabData } from "../redux";
-import { ColumnTypes, styles } from "../constants.js";
+import { styles } from "../constants.js";
 
 class CrossTab extends Component {
   static propTypes = {
