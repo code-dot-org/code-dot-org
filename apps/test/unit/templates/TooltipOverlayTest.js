@@ -1,4 +1,4 @@
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import {mount, shallow} from 'enzyme';
 import React from 'react';
 import TooltipOverlay, {
@@ -10,15 +10,8 @@ import TooltipOverlay, {
   TEXT_RECT_RADIUS,
   BETWEEN_RECT_MARGIN
 } from '@cdo/apps/templates/TooltipOverlay';
-import {
-  allowConsoleErrors,
-  allowConsoleWarnings
-} from '../../util/throwOnConsole';
 
 describe('TooltipOverlay', () => {
-  allowConsoleErrors();
-  allowConsoleWarnings();
-
   const TEST_APP_WIDTH = 300,
     TEST_APP_HEIGHT = 200;
   const FAKE_TOOLTIP_TEXT = 'fake-text';
