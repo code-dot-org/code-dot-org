@@ -33,12 +33,12 @@ export default class UploadImageDialog extends React.Component {
     formData.append('file', e.target.files[0]);
 
     // POST
+    const csrfContainer = document.querySelector('meta[name="csrf-token"]');
     fetch('/level_assets/upload', {
       method: 'post',
       body: formData,
       headers: {
-        'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]')
-          .content
+        'X-CSRF-Token': csrfContainer && csrfContainer.content
       }
     })
       .then(response => response.json())
@@ -66,11 +66,11 @@ export default class UploadImageDialog extends React.Component {
   };
 
   handleCloseAndSave = () => {
-    this.handleClose();
-
     if (this.state.imgUrl) {
       this.props.uploadImage(this.state.imgUrl);
     }
+
+    this.handleClose();
   };
 
   render() {
