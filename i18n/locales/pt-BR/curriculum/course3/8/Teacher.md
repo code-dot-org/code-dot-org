@@ -60,7 +60,7 @@ Semelhante à última fase de condicionais, só que desta vez estamos ajudando o
 
 ## Atividade
 
-### <a name="Activity"></a> [Labirinto: condicionais](http://learn.code.org/s/course3/lesson/8/puzzle/1)
+### <a name="Activity"></a> [Labirinto: condicionais](http://learn.code.org/s/course3/stage/8/puzzle/1)
 
 Nesta fase, os condicionais se referem a haver ou não um caminho disponível à direita, à esquerda, ou à frente. Se houver uma planta carnívora no caminho, a condicional relatará que não há nenhum caminho disponível naquela direção.
 

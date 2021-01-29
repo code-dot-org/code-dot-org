@@ -64,7 +64,7 @@ In this stage, students will explore how nesting loops several levels deep can a
 
 ## Activity
 
-### <a name="Activity"></a> [Artist: Patterns](http://learn.code.org/s/course3/lesson/21/puzzle/1)
+### <a name="Activity"></a> [Artist: Patterns](http://learn.code.org/s/course3/stage/21/puzzle/1)
 
 [/together]
 

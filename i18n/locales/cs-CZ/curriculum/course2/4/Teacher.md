@@ -68,7 +68,7 @@ Prodiskutujte se studenty způsoby, jak někomu říct, jak nakreslit obrázek:
 
 ## Aktivita
 
-### <a name="Activity"></a> [Artist: Sequence](http://learn.code.org/s/course2/lesson/4/puzzle/1)
+### <a name="Activity"></a> [Artist: Sequence](http://learn.code.org/s/course2/stage/4/puzzle/1)
 
 In the Artist levels students will no longer be constrained to 90 degree angles. Having protractors available can be help students better visualize the angles they need.
 

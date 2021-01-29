@@ -25,7 +25,7 @@ title: Инструкция для родителей
 Все наши занятия соединяют в себе решение задач и развитие критического мышления с весельем и творчеством, при этом некоторые из них особенно популярны среди школьников:
 
 - если ребенок любит игры: <a href="https://code.org/minecraft" или <a href="https://code.org/dance">Танцевальная вечеринка</a>;
-- если ребенок любит мультфильмы: <a href="https://code.org/starwars">Звездные войны</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Ледяное сердце</a>или <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Моана</a>;
+- если ребенок любит мультфильмы: <a href="https://code.org/starwars">Звездные войны</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Ледяное сердце</a>или <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Моана</a>;
 - если ребенок любит учиться: <a href="https://code.org/oceans">ИИ для океанов</a> или <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Сочини музыку со Scratch</a>.
 
 <h3>Не подходит техника или ее нет вообще?</h3>

@@ -25,7 +25,7 @@ Det finns oräkneliga <a href="https://hourofcode.com/us/learn">Hour of Code-akt
 Alla våra aktiviteter blandar problemlösning och kritiskt tänkande med nöje och kreativitet, men några favoriter är:
 
 - För de barn som tycker om att spela: <a href="https://code.org/minecraft">Minecraft</a> eller <a href="https://code.org/dance">Dansparty</a>  
-- För de barn som tycker om Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a>, eller <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>  
+- För de barn som tycker om Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, eller <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>  
 - För de barn som tycker om att lära sig något nytt:<a href="https://code.org/oceans">AI för haven</a> eller <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Skapa musik med Scratch</a>  
 
 <h3>  Låg eller hög tekniknivå?  </h3>

@@ -63,7 +63,7 @@ Students will have the opportunity to share their final product with a link. Thi
 
 ## Δραστηριότητα
 
-### <a name="Activity"></a> [Play Lab: Create a Game](http://learn.code.org/s/course3/lesson/17/puzzle/1)
+### <a name="Activity"></a> [Play Lab: Create a Game](http://learn.code.org/s/course3/stage/17/puzzle/1)
 
 Designing a game that is fun to play yet challenging enough to avoid boredom is a tough task. Encourage students to consider how their programming choices make different aspects of their game harder, easier, frustrating, and fun.
 

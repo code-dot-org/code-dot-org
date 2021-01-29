@@ -61,7 +61,7 @@ Prodiskutujte se studenty způsoby, jak někomu říct, jak nakreslit obrázek:
 
 ## Aktivita
 
-### <a name="Activity"></a> [Umělec: Sekvence](http://learn.code.org/s/course1/lesson/8/puzzle/1)
+### <a name="Activity"></a> [Umělec: Sekvence](http://learn.code.org/s/course1/stage/8/puzzle/1)
 
 Pokud studenti bojují s použitím správného počtu bloků k nakreslení čáry, připomeňte, že každý segment čáry má bod na obou koncích.
 

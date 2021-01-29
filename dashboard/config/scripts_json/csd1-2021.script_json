@@ -5818,7 +5818,7 @@
   "resources": [
     {
       "name": "Aluminum Boats",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/1/puzzle/1",
+      "url": "https://studio.code.org/s/csd1-2020/stage/1/puzzle/1",
       "key": "aluminum-boats-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -5866,7 +5866,7 @@
     },
     {
       "name": "Problem Solving Process",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/2/puzzle/1/",
+      "url": "https://studio.code.org/s/csd1-2020/stage/2/puzzle/1/",
       "key": "problem-solving-process-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -5940,7 +5940,7 @@
     },
     {
       "name": "Solving Problems",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/3/puzzle/1",
+      "url": "https://studio.code.org/s/csd1-2020/stage/3/puzzle/1",
       "key": "solving-problems-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -5965,7 +5965,7 @@
     },
     {
       "name": "What is a Computer?",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/4/puzzle/1/",
+      "url": "https://studio.code.org/s/csd1-2020/stage/4/puzzle/1/",
       "key": "what-is-a-computer-2020",
       "properties": {
         "type": "Exemplar",
@@ -6028,7 +6028,7 @@
     },
     {
       "name": "Input and Output",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/5/puzzle/1/",
+      "url": "https://studio.code.org/s/csd1-2020/stage/5/puzzle/1/",
       "key": "input-and-output-2020",
       "properties": {
         "type": "Exemplar",
@@ -6065,7 +6065,7 @@
     },
     {
       "name": "Processing",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/6/puzzle/1/",
+      "url": "https://studio.code.org/s/csd1-2020/stage/6/puzzle/1/",
       "key": "processing-2020",
       "properties": {
         "type": "Exemplar",
@@ -6127,7 +6127,7 @@
     },
     {
       "name": "Storage",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/7/puzzle/1",
+      "url": "https://studio.code.org/s/csd1-2020/stage/7/puzzle/1",
       "key": "storage-1",
       "properties": {
         "type": "Exemplar",
@@ -6164,7 +6164,7 @@
     },
     {
       "name": "Project - Propose an App",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/8/puzzle/1",
+      "url": "https://studio.code.org/s/csd1-2020/stage/8/puzzle/1",
       "key": "project-propose-an-app-2020",
       "properties": {
         "type": "Project Guide Exemplar",
@@ -6228,7 +6228,7 @@
     },
     {
       "name": "Apps and Problem Solving",
-      "url": "https://studio.code.org/s/csd1-2019/lesson/8/puzzle/1",
+      "url": "https://studio.code.org/s/csd1-2019/stage/8/puzzle/1",
       "key": "apps-and-problem-solving-marked-rubrics",
       "properties": {
         "type": "Sample Marked Rubrics",
@@ -6251,7 +6251,7 @@
     },
     {
       "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/9/puzzle/1/",
+      "url": "https://studio.code.org/s/csd1-2020/stage/9/puzzle/1/",
       "key": "intro-to-problem-solving-newspaper-table-2020",
       "properties": {
         "type": "Exemplar",
@@ -6299,7 +6299,7 @@
     },
     {
       "name": "Intro to Problem Solving - Spaghetti Bridge",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/10/puzzle/1/",
+      "url": "https://studio.code.org/s/csd1-2020/stage/10/puzzle/1/",
       "key": "intro-to-problem-solving-spaghetti-bridge-2020",
       "properties": {
         "type": "Exemplar",
@@ -6335,7 +6335,7 @@
     },
     {
       "name": "Intro to Problem Solving - Paper Tower",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/11/puzzle/1/",
+      "url": "https://studio.code.org/s/csd1-2020/stage/11/puzzle/1/",
       "key": "intro-to-problem-solving-paper-tower-2020",
       "properties": {
         "type": "Exemplar",
@@ -6383,7 +6383,7 @@
     },
     {
       "name": "Exploring Problem Solving - Animal Theme",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/12/puzzle/1/",
+      "url": "https://studio.code.org/s/csd1-2020/stage/12/puzzle/1/",
       "key": "exploring-problem-solving-animal-theme-2020",
       "properties": {
         "type": "Exemplar",
@@ -6433,7 +6433,7 @@
     },
     {
       "name": "Exploring Problem Solving - Games Theme",
-      "url": "https://studio.code.org/s/csd1-2020/lesson/13/puzzle/1/",
+      "url": "https://studio.code.org/s/csd1-2020/stage/13/puzzle/1/",
       "key": "exploring-problem-solving-games-theme-2020",
       "properties": {
         "type": "Exemplar",

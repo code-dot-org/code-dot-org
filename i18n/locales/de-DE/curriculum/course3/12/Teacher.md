@@ -54,7 +54,7 @@ Using while loops, students control a farmer shovel dirt into holes until theyâ€
 
 ## Activity
 
-### <a name="Activity"></a> [Farmer: While Loops](http://learn.code.org/s/course3/lesson/12/puzzle/1)
+### <a name="Activity"></a> [Farmer: While Loops](http://learn.code.org/s/course3/stage/12/puzzle/1)
 
 [/together]
 

@@ -50,8 +50,7 @@ const stageData = [
         kind: LevelKind.unplugged,
         icon: null,
         title: 'Unplugged Activity',
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lesson/1/puzzle/1',
+        url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1',
         previous: false,
         is_concept_level: false,
         bonus: false,
@@ -66,8 +65,7 @@ const stageData = [
         kind: LevelKind.assessment,
         icon: null,
         title: 1,
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lesson/1/puzzle/2',
+        url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -81,8 +79,7 @@ const stageData = [
         kind: LevelKind.assessment,
         icon: null,
         title: 2,
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lesson/1/puzzle/3',
+        url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3',
         next: [2, 1],
         is_concept_level: false,
         bonus: true,
@@ -114,8 +111,7 @@ const stageData = [
         kind: LevelKind.puzzle,
         icon: null,
         title: 1,
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lesson/2/puzzle/1',
+        url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1',
         previous: [1, 3],
         is_concept_level: false,
         bonus: false,
@@ -129,8 +125,7 @@ const stageData = [
         kind: LevelKind.puzzle,
         icon: null,
         title: 2,
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lesson/2/puzzle/2',
+        url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -143,8 +138,7 @@ const stageData = [
         kind: LevelKind.puzzle,
         icon: null,
         title: 3,
-        url:
-          'http://localhost-studio.code.org:3000/s/course3/lesson/2/puzzle/3',
+        url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3',
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
@@ -156,7 +150,7 @@ const stageData = [
     lesson_plan_pdf_url:
       '//localhost.code.org:3000/curriculum/course3/2/Teacher.pdf',
     lesson_extras_level_url:
-      '//localhost.code.org:3000/s/course3/lesson/2/extras'
+      '//localhost.code.org:3000/s/course3/stage/2/extras'
   }
 ];
 
@@ -640,7 +634,7 @@ describe('progressReduxTest', () => {
             id: '2106',
             status: 'not_tried',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lesson/1/puzzle/1',
+              'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -661,7 +655,7 @@ describe('progressReduxTest', () => {
             id: '323',
             status: 'not_tried',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lesson/1/puzzle/2',
+              'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -682,7 +676,7 @@ describe('progressReduxTest', () => {
             id: '322',
             status: 'not_tried',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lesson/1/puzzle/3',
+              'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -705,7 +699,7 @@ describe('progressReduxTest', () => {
             id: '330',
             status: 'not_tried',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lesson/2/puzzle/1',
+              'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -726,7 +720,7 @@ describe('progressReduxTest', () => {
             id: '339',
             status: 'perfect',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lesson/2/puzzle/2',
+              'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -747,7 +741,7 @@ describe('progressReduxTest', () => {
             id: '341',
             status: 'attempted',
             url:
-              'http://localhost-studio.code.org:3000/s/course3/lesson/2/puzzle/3',
+              'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3',
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
@@ -1208,7 +1202,7 @@ describe('progressReduxTest', () => {
 
       assert.strictEqual(
         lessonExtrasUrl(state, state.stages[0].id),
-        '//localhost.code.org:3000/s/course3/lesson/2/extras'
+        '//localhost.code.org:3000/s/course3/stage/2/extras'
       );
     });
   });

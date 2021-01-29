@@ -25,7 +25,7 @@ title: رہنمائی کیسے کریں – ڈسٹرکٹس
 ہماری تمام سرگرمیاں تفریح اور تخلیقی صلاحیتوں کو مسائل حل کرنے کی مہارت اور تنقیدی سوچ سے مربوط کرتیں ہیں، لیکن یہاں طلباء کے کچھ پسندیدہ انتخاب ہیں:
 
 - اس بچے کے لئے جو کھیلنا پسند کرتا ہے: <a href="https://code.org/minecraft">Minecraft</a>یا<a href="https://code.org/dance">Dance Party</a>
-- اس بچے کے لئے جو ڈزنی سے محبت کرتا ہے: <a href="https://code.org/starwars">Star Wars</a>،<a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a>، یا<a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+- اس بچے کے لئے جو ڈزنی سے محبت کرتا ہے: <a href="https://code.org/starwars">Star Wars</a>،<a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>، یا<a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
 - سیکھنے سے محبت کرنے والے بچے کے لئے:<a href="https://code.org/oceans">سمندروں کے لئے مصنوعی ذہانت</a>یا<a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Scratch کے ذریعے موسیقی بنائیں</a>
 
 <h3>کم ٹکنالوجی یا ٹیکنالوجی کے بغیر؟</h3>

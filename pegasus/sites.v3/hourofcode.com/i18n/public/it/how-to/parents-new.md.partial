@@ -25,7 +25,7 @@ Ci sono innumerevoli <a href="https://hourofcode.com/us/learn">attività dell'Or
 Tutte le nostre attività integrano la risoluzione dei problemi e il pensiero critico con il divertimento e la creatività, ma ecco alcune preferite dagli studenti:
 
 - Per il bambino che ama giocare: <a href="https://code.org/minecraft">Minecraft</a> o <a href="https://code.org/dance">Dance Party</a>
-- Per il bambino che ama la Disney: <a href="https://code.org/starwars">Guerre stellari</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a>, o <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Oceania</a>
+- Per il bambino che ama la Disney: <a href="https://code.org/starwars">Guerre stellari</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, o <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Oceania</a>
 - Per un bambino che ama imparare: <a href="https://code.org/oceans">L'Intelligenza Artificiale per il mare</a> o <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Crea musica con Scratch</a>
 
 <h3>Poca o nessuna tecnologia?</h3>

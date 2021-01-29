@@ -61,7 +61,7 @@ Discuta com os alunos todas as possíveis formas de dizer a alguém como desenha
 
 ## Atividade
 
-### <a name="Activity"></a> [Artista: sequência](http://learn.code.org/s/course1/lesson/8/puzzle/1)
+### <a name="Activity"></a> [Artista: sequência](http://learn.code.org/s/course1/stage/8/puzzle/1)
 
 Se os alunos tiverem dificuldades para usar o número correto de blocos para desenhar uma reta, mostre que todo segmento de reta tem um ponto em cada extremidade.
 

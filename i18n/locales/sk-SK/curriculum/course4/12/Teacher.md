@@ -62,7 +62,7 @@ In this stage, students will walk from using repetitive instructions into learni
 
 ## Activity
 
-### <a name="Activity"></a> [Artist: Functions](http://learn.code.org/s/course4/lesson/12/puzzle/1)
+### <a name="Activity"></a> [Artist: Functions](http://learn.code.org/s/course4/stage/12/puzzle/1)
 
 [/together]
 

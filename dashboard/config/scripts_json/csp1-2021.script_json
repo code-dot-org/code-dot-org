@@ -167,7 +167,7 @@
         "overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "student_overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
-        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r FlippyDo Template]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2020/lesson/4/puzzle/1)",
+        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r FlippyDo Template]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2020/stage/4/puzzle/1)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -254,7 +254,7 @@
         "overview": "Students explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.",
         "student_overview": "Learn how computers represent black and white images using bits.",
         "purpose": "Throughout this unit, students gradually discover how to use bits to represent more complex data types. In this case, students work on representing images using sampling. Students quickly realize that very tiny sample squares are needed to approximate an image’s curves and small details. The smaller we make each sample, the more bits are needed. Students must also wrestle with deciding whether each square should be a 0 or 1, as many squares have both white and black in the same square. They will have more control over the representation of each bit in the next lesson.\r\n",
-        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r bw sampling activity guide] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2020/lesson/7/puzzle/1)",
+        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r bw sampling activity guide] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2020/stage/7/puzzle/1)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {

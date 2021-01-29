@@ -2791,12 +2791,12 @@ it-IT:
           lezione tradizionale \"Happy Maps\"**\n<br/>\n\n[![](https://images.code.org/ab93b99493bfe68acc24aaaaf66d4129-image-1571253013543.10.01
           PM.png)](https://youtube.com/watch?v=En6Bshuqljg)\n\n<br/>\n\n\n**4. Guarda
           altre lezioni tradizionali che introducono il concetto di sequenza di istruzioni:**\n\n-
-          Corso A (Scuola dell'infanzia): [Pianta un seme](https://studio.code.org/s/coursea-2018/lesson/3/puzzle/1/lang/it)\n-
-          Corso B (Classe 1): [Muovilo, muovilo](https://studio.code.org/s/courseb-2018/lesson/1/puzzle/1/lang/it),
-          [I miei amici robotici](https://studio.code.org/s/courseb-2018/lesson/4/puzzle/1/lang/it)\n-
-          Corso C (Classe 2): [Aeroplani di carta](https://studio.code.org/s/coursec-2018/lesson/4/puzzle/1/lang/it)\n-
-          Corso D (Classe 3): [Programmazione su carta a quadretti](https://studio.code.org/s/coursed-2018/lesson/1/puzzle/1/lang/it)\n-
-          Corso E, Corso F (Classi 4 e 5): [I miei amici robotici](https://studio.code.org/s/coursee-2018/lesson/1/puzzle/1/lang/it)\n\n\n---\n\n\n>
+          Corso A (Scuola dell'infanzia): [Pianta un seme](https://studio.code.org/s/coursea-2018/stage/3/puzzle/1/lang/it)\n-
+          Corso B (Classe 1): [Muovilo, muovilo](https://studio.code.org/s/courseb-2018/stage/1/puzzle/1/lang/it),
+          [I miei amici robotici](https://studio.code.org/s/courseb-2018/stage/4/puzzle/1/lang/it)\n-
+          Corso C (Classe 2): [Aeroplani di carta](https://studio.code.org/s/coursec-2018/stage/4/puzzle/1/lang/it)\n-
+          Corso D (Classe 3): [Programmazione su carta a quadretti](https://studio.code.org/s/coursed-2018/stage/1/puzzle/1/lang/it)\n-
+          Corso E, Corso F (Classi 4 e 5): [I miei amici robotici](https://studio.code.org/s/coursee-2018/stage/1/puzzle/1/lang/it)\n\n\n---\n\n\n>
           ## Riflessioni\n> Come spiegheresti il concetto di programmazione (sequenze
           di istruzioni e algoritmi inclusi) ai tuoi alunni? <a href=\"https://programmailfuturo.it/forum/corso-online-per-l-insegnamento\">Condividi
           i tuoi pensieri nel forum di Programma il Futuro</a>.\n\n> <a href=\"https://programmailfuturo.it/forum/corso-online-per-l-insegnamento\"
@@ -3685,7 +3685,7 @@ it-IT:
           di completare le seguenti lezioni. Se invece la tua classe non è ancora
           pronta per questi corsi e non ti interessa familiarizzare con alcuni concetti
           più avanzati, puoi saltare questo blocco concettuale ed andare direttamente
-          ai <a href=\"https://studio.code.org/s/k5-onlinepd-2019/lesson/12/puzzle/1\"
+          ai <a href=\"https://studio.code.org/s/k5-onlinepd-2019/stage/12/puzzle/1\"
           target=\"blank\">Passi successivi.</a>\n\n## Cosa troverai in questo blocco
           concettuale?\nIn questo blocco concettuale tratteremo:\n- concetti di programmazione
           più avanzati: funzioni, variabili e istruzioni di ripetizione avanzate (cicli
@@ -4095,10 +4095,10 @@ it-IT:
           Complimenti! Hai completato la parte del corso sui concetti base dell'informatica! Quindi, come procedere?
 
           ## Se hai intenzione di insegnare i corsi E ed F
-          Se pensi che i corsi E ed F siano adatti al livello della tua classe o se vuoi semplicemente familiarizzare con alcuni concetti più avanzati, ti consigliamo di continuare con il <a href="https://studio.code.org/s/k5-onlinepd-2019/lesson/8/puzzle/1" target="blank">prossimo blocco concettuale</a>, che copre specificatamente i concetti introdotti in questi corsi.
+          Se pensi che i corsi E ed F siano adatti al livello della tua classe o se vuoi semplicemente familiarizzare con alcuni concetti più avanzati, ti consigliamo di continuare con il <a href="https://studio.code.org/s/k5-onlinepd-2019/stage/8/puzzle/1" target="blank">prossimo blocco concettuale</a>, che copre specificatamente i concetti introdotti in questi corsi.
 
           ## Se non hai intenzione di insegnare i corsi E ed F
-          Se la tua classe non è ancora pronta per i corsi E ed F e non ti interessa familiarizzare con alcuni concetti più avanzati, puoi saltare direttamente al <a href="https://studio.code.org/s/k5-onlinepd-2019/lesson/12/puzzle/1" target="blank">blocco concettuale "Passi successivi".</a>
+          Se la tua classe non è ancora pronta per i corsi E ed F e non ti interessa familiarizzare con alcuni concetti più avanzati, puoi saltare direttamente al <a href="https://studio.code.org/s/k5-onlinepd-2019/stage/12/puzzle/1" target="blank">blocco concettuale "Passi successivi".</a>
       OPD-K5-projects-1:
         content1: descrizione qui
         markdown: |-

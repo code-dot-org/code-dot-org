@@ -427,13 +427,13 @@ hi-IN:
       CSD U2 image debug match:
         answers:
         - text: "https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
-            PM.png\n \nhttps://studio.code.org/s/csd2-2019/lesson/7/puzzle/4 -> dsls
+            PM.png\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4 -> dsls
             -> answers -> 0 -> text"
         - text: "https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
-            PM.png\n \nhttps://studio.code.org/s/csd2-2019/lesson/7/puzzle/4 -> dsls
+            PM.png\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4 -> dsls
             -> answers -> 1 -> text"
         - text: "https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
-            PM.png\n \nhttps://studio.code.org/s/csd2-2019/lesson/7/puzzle/4 -> dsls
+            PM.png\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4 -> dsls
             -> उत्तर -> 2 -> टेक्स्ट"
         - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
             PM.png
@@ -442,17 +442,17 @@ hi-IN:
         content1: |-
           अपने बग के विवरण के साथ HTML के त्रुटियुक्त कोड का मिलान करें।
 
-          https://studio. code. org/s/csd2-2019/lesson/7/puzzle/4 -> dsls -> content1
+          https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> content1
         questions:
         - text: |-
             `src` विशेषता (एट्रिब्युट) को गलत तरीके से लिखा गया है।
 
-            https://studio. code. org/s/csd2-2019/lesson/7/puzzle/4 -> dsls -> questions -> 0 -> text
+            https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> questions -> 0 -> text
         - text: |-
             `src` और` alt` विशेषताएँ (एट्रिब्युटस) स्विच की गयी हैं
 
-            https://studio. code. org/s/csd2-2019/lesson/7/puzzle/4 -> dsls -> questions -> 1 -> text
-        - text: "फ़ाइल एक्सटेंशन (.jpg) छवि पते (इमेज एड्रेस) से गायब है\n \nhttps://studio.code.org/s/csd2-2019/lesson/7/puzzle/4
+            https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> questions -> 1 -> text
+        - text: "फ़ाइल एक्सटेंशन (.jpg) छवि पते (इमेज एड्रेस) से गायब है\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4
             -> dsls -> questions -> 2 -> text"
         - text: छवि पता (इमेज एड्रेस) एक `src` विशेषता (एट्रिब्युट) के रूप में नहीं
             दिया गया है

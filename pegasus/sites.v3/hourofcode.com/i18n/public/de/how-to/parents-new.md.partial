@@ -25,7 +25,7 @@ Es gibt unzählige <a href="https://hourofcode.com/us/learn">Hour of Code Aktivi
 Alle unsere Aktivitäten verbinden das Lösen von Aufgaben und kritisches Denken mit Spaß und Kreativität, aber hier sehen Sie einige, die bei den SchülerInnen besonders beliebt sind:
 
 - Für Kinder, die gerne spielen: <a href="https://code.org/minecraft">Minecraft</a> oder <a href="https://code.org/dance">Tanzparty</a>
-- Für Kinder, die Disney lieben: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Die Eiskönigin</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+- Für Kinder, die Disney lieben: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Die Eiskönigin</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
 - Für Kind, die Spaß am Lernen haben: <a href="https://code.org/oceans">KI für Ozeane</a> oder <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Musizieren mit Scratch</a>
 
 <h3>Low-Tech oder No-Tech?</h3>

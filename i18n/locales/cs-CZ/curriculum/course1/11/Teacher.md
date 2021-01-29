@@ -68,7 +68,7 @@ Z části puzzle, z části hledání slova, hláskovací včelka požádá stud
 
 ## Aktivita
 
-### <a name="Activity"></a> [Hláskovací včelka](http://learn.code.org/s/course1/lesson/11/puzzle/1)
+### <a name="Activity"></a> [Hláskovací včelka](http://learn.code.org/s/course1/stage/11/puzzle/1)
 
 Velmi mladí studenty nebo těžce zápasící čtenáři mohou potřebovat dodatečnou podporu při hledání slova - pomocí pomůcek (jako Scrabble skládačky) můžete pomoci studentům vidět, jak slova vypadají v různých směrech.
 

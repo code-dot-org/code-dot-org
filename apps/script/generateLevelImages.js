@@ -3,26 +3,25 @@
 var system = require('system');
 var args = system.args;
 
-if (args.indexOf('--help') !== -1 || args.indexOf('-h') !== -1) {
-  console.log('USAGE:');
-  console.log('\tphantomjs generateLevelImages [options] [scriptName=course1]');
-  console.log('');
-  console.log('Options:');
-  console.log('\t-h, --help\tprint this usage message');
-  console.log(
-    '\t--visualization-only\tgenerate only level visualization images for only those levels that have them'
-  );
+if (args.indexOf("--help") !== -1 || args.indexOf("-h") !== -1) {
+  console.log("USAGE:");
+  console.log("\tphantomjs generateLevelImages [options] [scriptName=course1]");
+  console.log("");
+  console.log("Options:");
+  console.log("\t-h, --help\tprint this usage message");
+  console.log("\t--visualization-only\tgenerate only level visualization images for only those levels that have them");
   phantom.exit();
 }
 
 var VISUALIZATION_ONLY = false;
-if (args.indexOf('--visualization-only') !== -1) {
+if (args.indexOf("--visualization-only") !== -1) {
   VISUALIZATION_ONLY = true;
-  args.splice(args.indexOf('--visualization-only'), 1);
+  args.splice(args.indexOf("--visualization-only"), 1);
 }
 
 var COURSE = args[1] || 'course1';
 
+var webpage = require('webpage');
 var page = require('webpage').create();
 
 // viewportSize being the actual size of the headless browser
@@ -46,9 +45,9 @@ page.clipRect = {
  * @param {function} checker
  * @param {function} cb
  */
-var waitUntil = function(checker, cb) {
+var waitUntil = function (checker, cb) {
   var loaded = false;
-  var interval = setInterval(function() {
+  var interval = setInterval(function () {
     loaded = checker();
     if (loaded) {
       cb(loaded);
@@ -57,27 +56,23 @@ var waitUntil = function(checker, cb) {
     }
   }, 100);
 
-  var timeout = setTimeout(function() {
+  var timeout = setTimeout(function () {
     clearInterval(interval);
     cb();
   }, 5000);
 };
 
-var closeDialog = function(p, cb) {
-  waitUntil(dialogIsVisible.bind(p), function(rect) {
+var closeDialog = function (p, cb) {
+  waitUntil(dialogIsVisible.bind(p), function (rect) {
     if (rect) {
-      p.sendEvent(
-        'click',
-        rect.left + rect.width / 2,
-        rect.top + rect.height / 2
-      );
+      p.sendEvent('click', rect.left + (rect.width / 2), rect.top + (rect.height / 2));
     }
     cb();
   });
 };
 
-var dialogIsVisible = function() {
-  return this.evaluate(function(s) {
+var dialogIsVisible = function () {
+  return this.evaluate(function (s) {
     var element = document.querySelector(s);
     if (element) {
       return element.getBoundingClientRect();
@@ -85,64 +80,88 @@ var dialogIsVisible = function() {
   }, '.x-close');
 };
 
-var dialogIsGone = function() {
-  return this.evaluate(function(s) {
+var dialogIsGone = function () {
+  return this.evaluate(function (s) {
     return !document.querySelector(s);
   }, '.x-close');
 };
 
-var extractTitle = function(page) {
-  return page.evaluate(function() {
-    var titleRegex = /\/s\/([^\/]*)\/lesson\/(\d*)\/puzzle\/(\d*)/;
-    // location.pathname should look something like
-    // '/s/course1/lesson/2/puzzle/3'
-    var matches = titleRegex.exec(location.pathname);
-
-    var course = matches[1],
-      stageNum = matches[2],
-      puzzleNum = matches[3];
-
-    // left-pad numbers so filenames are correctly ordered
-    if (stageNum.length < 2) {
-      stageNum = '0' + stageNum;
+var calloutsAreVisible = function () {
+  return this.evaluate(function (s) {
+    var elements = document.querySelectorAll(s);
+    if (elements) {
+      return Array.prototype.map.call(elements, function (e) {
+        return e.getBoundingClientRect();
+      });
     }
-    if (puzzleNum.length < 2) {
-      puzzleNum = '0' + puzzleNum;
-    }
+  }, '.tooltip-x-close');
+};
 
-    return course + '_stage_' + stageNum + '_puzzle_' + puzzleNum;
+var calloutsAreGone = function () {
+  return this.evaluate(function (s) {
+    var elements = document.querySelectorAll(s);
+    return Array.prototype.every.call(elements, function (e) {
+      return e.getBoundingClientRect().width === 0 && e.getBoundingClientRect().height === 0;
+    });
+  }, '.tooltip-x-close');
+};
+
+var closeCallouts = function (p, cb) {
+  waitUntil(calloutsAreVisible.bind(p), function (rects) {
+    if (rects) {
+      rects.forEach(function (rect) {
+        p.sendEvent('click', rect.left + (rect.width / 2), rect.top + (rect.height / 2));
+      });
+    }
+    cb();
   });
 };
 
-var drawGridLines = function(page) {
-  page.evaluate(function() {
+var extractTitle = function (page) {
+  return page.evaluate(function () {
+    var titleRegex = /\/s\/([^\/]*)\/stage\/(\d*)\/puzzle\/(\d*)/;
+    // location.pathname should look something like
+    // '/s/course1/stage/2/puzzle/3'
+    var matches = titleRegex.exec(location.pathname);
+
+    var course = matches[1],
+        stageNum = matches[2],
+        puzzleNum = matches[3];
+
+    // left-pad numbers so filenames are correctly ordered
+    if (stageNum.length < 2) {
+      stageNum = "0" + stageNum;
+    }
+    if (puzzleNum.length < 2) {
+      puzzleNum = "0" + puzzleNum;
+    }
+
+    return course + "_stage_" + stageNum + "_puzzle_" + puzzleNum;
+  });
+};
+
+var drawGridLines = function (page) {
+  page.evaluate(function () {
     var vis = document.getElementById('visualization');
     var svg = document.getElementById('svgMaze');
     var pegman = document.getElementById('pegman');
     if (vis && svg && pegman) {
-      Array.prototype.filter
-        .call(vis.getElementsByTagName('clipPath'), function(clipPath) {
-          return (
-            clipPath.id &&
-            clipPath.id.startsWith('tile') &&
-            clipPath.childNodes.length
-          );
-        })
-        .map(function(tile) {
-          return tile.childNodes[0].cloneNode();
-        })
-        .forEach(function(rect) {
-          rect.setAttribute('stroke', 'white');
-          rect.setAttribute('fill-opacity', 0);
-          svg.insertBefore(rect, pegman);
-        });
+      Array.prototype.filter.call(vis.getElementsByTagName('clipPath'), function (clipPath) {
+        return (clipPath.id && clipPath.id.startsWith('tile') && clipPath.childNodes.length);
+      }).map(function (tile) {
+        return tile.childNodes[0].cloneNode();
+      }).forEach(function (rect) {
+        rect.setAttribute('stroke', "white");
+        rect.setAttribute('fill-opacity', 0);
+        svg.insertBefore(rect, pegman);
+      });
     }
   });
 };
 
-var generateClipRect = function(page) {
+var generateClipRect = function (page) {
   if (VISUALIZATION_ONLY) {
-    var clipRect = page.evaluate(function() {
+    var clipRect = page.evaluate(function () {
       var vis = document.getElementById('visualization');
       if (vis) {
         return vis.getBoundingClientRect();
@@ -161,12 +180,12 @@ var generateClipRect = function(page) {
   }
 };
 
-var screenshot = function(url, cb) {
-  page.open(url, function() {
+var screenshot = function (url, cb) {
+  page.open(url, function () {
     var title = extractTitle(page);
     console.log(title);
-    closeDialog(page, function() {
-      waitUntil(dialogIsGone.bind(page), function() {
+    closeDialog(page, function () {
+      waitUntil(dialogIsGone.bind(page), function () {
         var clipRect = generateClipRect(page);
         if (clipRect && clipRect.height && clipRect.width) {
           page.clipRect = clipRect;
@@ -181,26 +200,23 @@ var screenshot = function(url, cb) {
 };
 
 // Main method:
-page.open('https://levelbuilder-studio.code.org/s/' + COURSE, function() {
-  var pages = page.evaluate(function() {
-    return Array.prototype.map.call(
-      document.querySelectorAll('.react_stage a'),
-      function(a) {
-        return a.href;
-      }
-    );
+page.open('https://levelbuilder-studio.code.org/s/' + COURSE, function () {
+  var pages = page.evaluate(function () {
+    return Array.prototype.map.call(document.querySelectorAll('.react_stage a'), function (a) {
+      return a.href;
+    });
   });
 
   var finished = 0;
   var total = pages.length;
 
-  var next = function() {
+  var next = function () {
     if (finished === total) {
       phantom.exit();
     }
-    screenshot(pages[finished] + '?noautoplay=true', function() {
+    screenshot(pages[finished] + "?noautoplay=true", function () {
       finished++;
-      console.log(finished + '/' + total);
+      console.log(finished + "/" + total);
       next();
     });
   };

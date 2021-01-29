@@ -62,7 +62,7 @@ Agora, os alunos devem estar se sentindo confortáveis na busca por erros. Essa 
 
 ## Atividade
 
-### <a name="Activity"></a> [Artista: Depuração](http://learn.code.org/s/course1/lesson/11/puzzle/1)
+### <a name="Activity"></a> [Artista: Depuração](http://learn.code.org/s/course1/stage/11/puzzle/1)
 
 Alguns alunos relutam em executar um programa até que o tenham consertado. Às vezes, o caminho mais fácil para descobrir o que está errado em um programa é assistir ao erro, então não há nada de errado em executar um programa antes de terminar de consertá-lo. A única vez que é importante que eles acertem de primeira é nos níveis de avaliação.
 

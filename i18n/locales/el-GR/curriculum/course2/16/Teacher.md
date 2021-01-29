@@ -69,7 +69,7 @@ Students will have the opportunity to share their final product with a link. Thi
 
 ## Δραστηριότητα
 
-### <a name="Activity"></a> [Flappy](http://learn.code.org/s/course2/lesson/16/puzzle/1)
+### <a name="Activity"></a> [Flappy](http://learn.code.org/s/course2/stage/16/puzzle/1)
 
 In the final stage of this lesson students are able to tweak their game to make it unique - encourage them to see how different they can make each game within the constraints provided.
 

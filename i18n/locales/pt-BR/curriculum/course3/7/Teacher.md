@@ -64,7 +64,7 @@ Reveja comandos condicionais com os alunos.
 
 ## Atividade
 
-### <a name="Activity"></a> [Abelha: condicionais](http://learn.code.org/s/course3/lesson/7/puzzle/1)
+### <a name="Activity"></a> [Abelha: condicionais](http://learn.code.org/s/course3/stage/7/puzzle/1)
 
 No Curso 2 - Abelha: condicionais, estudamos apenas condicionais simples, chamadas "instruções se", tais como: "se há néctar, pegue-o". Basicamente, se uma afirmação for verdadeira, faça alguma coisa. Nesta etapa vamos aprender que quando a afirmação *não* é verdadeira, chamamos as instruções "se, senão".
 

@@ -62,7 +62,7 @@ Vooraleer u begint met deze les, moeten de leerlingen een basiskennis hebben ove
 
 ## Activiteit
 
-### <a name="Activity"></a> [Artist: Shapes](http://learn.code.org/s/course1/lesson/10/puzzle/1)
+### <a name="Activity"></a> [Artist: Shapes](http://learn.code.org/s/course1/stage/10/puzzle/1)
 
 Als een leerling moeite heeft met het inschatten van de lengte, wijs ze er dan op dat elke lijn aan het begin en het eind een punt heeft.
 

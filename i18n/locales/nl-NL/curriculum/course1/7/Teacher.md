@@ -65,7 +65,7 @@ In deze les zullen studenten bijen helpen nectar te verzamelen uit bloemen en ho
 
 ## Activiteit
 
-### <a name="Activity"></a> [Bee: Sequence](http://learn.code.org/s/course1/lesson/7/puzzle/1)
+### <a name="Activity"></a> [Bee: Sequence](http://learn.code.org/s/course1/stage/7/puzzle/1)
 
 Wijs de leerlingen erop dat naast elke bloem en honingraat een kleine nummer staat. Dat nummer vertelt hoeveel honing er gemaakt moet worden, of hoeveel nectar er moet worden verzameld.
 
