@@ -14,10 +14,12 @@ import foorm, {
   setFormData
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
 import sinon from 'sinon';
+import {allowConsoleWarnings} from '../../../../util/testUtils';
 
 global.$ = require('jquery');
 
 describe('FoormEditor', () => {
+  allowConsoleWarnings();
   let defaultProps, store, server;
   beforeEach(() => {
     stubRedux();

@@ -2,6 +2,7 @@ import React from 'react';
 import {mount, shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
+import {allowConsoleErrors} from '../../../util/testUtils';
 
 const ROW_DATA = [
   {id: 1, name: 'itemb'},
@@ -23,6 +24,7 @@ const DEFAULT_PROPS = {
 };
 
 describe('SortedTableSelect', () => {
+  allowConsoleErrors();
   it('renders an empty option as default', () => {
     const wrapper = shallow(<SortedTableSelect {...DEFAULT_PROPS} />);
     const options = wrapper.find('option');
