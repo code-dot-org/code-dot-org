@@ -34,8 +34,13 @@ lesson 'lesson-1', display_name: 'Blank Space Variables', has_lesson_plan: false
 level 'EnvelopeVariables-Unplugged_2021', progression: 'Blank Space Variables'
 
 lesson 'lesson-2', display_name: 'Storing and Retrieving Text', has_lesson_plan: false
+level 'courseF_variables_predict', progression: 'Prediction'
 
 lesson 'lesson-3', display_name: 'Create a Chat-Bot', has_lesson_plan: false
+
+lesson 'lesson-3-ci', display_name: 'Create a Haiku Bot', has_lesson_plan: false
+level 'haiku_prototype_exemplar', progression: 'Exemplar'
+level 'haiku_prototype', progression: 'Project'
 
 lesson 'lesson-4', display_name: 'Counting with Variables', has_lesson_plan: false
 

@@ -1160,22 +1160,20 @@ class Script < ApplicationRecord
   def update_text(script_params, script_text, metadata_i18n, general_params)
     script_name = script_params[:name]
     begin
-      transaction do
-        script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
-        Script.add_script(
-          {
-            name: script_name,
-            hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
-            login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
-            wrapup_video: general_params[:wrapup_video],
-            family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-            properties: Script.build_property_hash(general_params)
-          },
-          script_data[:lesson_groups]
-        )
-        if Rails.application.config.levelbuilder_mode
-          Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
-        end
+      script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
+      Script.add_script(
+        {
+          name: script_name,
+          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
+          login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
+          wrapup_video: general_params[:wrapup_video],
+          family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
+          properties: Script.build_property_hash(general_params)
+        },
+        script_data[:lesson_groups]
+      )
+      if Rails.application.config.levelbuilder_mode
+        Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
