@@ -40,7 +40,7 @@ class LessonGroup < ApplicationRecord
     big_questions
   )
 
-  Counters = Struct.new(:lockable_count, :non_lockable_count, :lesson_position, :chapter)
+  Counters = Struct.new(:numbered_lesson_count, :unnumbered_lesson_count, :lesson_position, :chapter)
 
   # Finds or creates Lesson Groups with the correct position.
   # In addition it check for 3 things:

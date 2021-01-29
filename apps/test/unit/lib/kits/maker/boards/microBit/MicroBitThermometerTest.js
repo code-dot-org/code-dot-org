@@ -19,7 +19,7 @@ describe('MicroBitThermometer', function() {
     attributes.forEach(attr => {
       descriptor = Object.getOwnPropertyDescriptor(thermometer, attr);
       expect(descriptor.set).to.be.undefined;
-      expect(descriptor.get).to.be.defined;
+      expect(descriptor.get).to.not.be.undefined;
     });
   });
 
