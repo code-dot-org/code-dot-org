@@ -105,7 +105,8 @@ export const styles = {
 
   dataDisplayTable: {
     whiteSpace: "nowrap",
-    borderSpacing: 0
+    borderSpacing: 0,
+    width: "100%"
   },
 
   finePrint: {

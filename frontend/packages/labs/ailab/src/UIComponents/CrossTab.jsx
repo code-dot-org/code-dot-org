@@ -25,9 +25,9 @@ class CrossTab extends Component {
 
     return (
       <div id="cross-tab">
-        {!currentColumn && (
+        {!currentColumn && crossTabData && (
           <div style={styles.validationMessagesLight}>
-            {crossTabData && (
+            <div style={styles.subPanel}>
               <table>
                 <thead>
                   <tr>
@@ -83,7 +83,7 @@ class CrossTab extends Component {
                   })}
                 </tbody>
               </table>
-            )}
+            </div>
           </div>
         )}
       </div>
