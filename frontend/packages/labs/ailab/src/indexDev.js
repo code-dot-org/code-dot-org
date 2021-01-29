@@ -12,6 +12,10 @@ const sampleModes = {
     hideModelCard: true
   },
 
+  "preload-metadata": {
+    hideSpecifyColumns: true
+  },
+
   "load-foods": { datasets: ["foods"] },
 
   "ml-knn-train": {
