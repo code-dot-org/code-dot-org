@@ -5860,9 +5860,10 @@ es-ES:
             en "Ejecutar"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
-        - text: La cosechadora recogerá todos los cultivos.
+        - text: La granjera recogerá todos los cultivos.
           feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
-        - text: La cosechadora no recogerá cultivos en el camino que está tomando.
+        - text: La granjera no recogerá ninguna de las cosechas con el camino que
+            está tomando.
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -5881,9 +5882,10 @@ es-ES:
             en "Ejecutar"?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
-        - text: La cosechadora recogerá todos los cultivos.
+        - text: La granjera recogerá todos los cultivos.
           feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
-        - text: La cosechadora no recogerá cultivos en el camino que está tomando.
+        - text: La granjera no recogerá ninguna de las cosechas con el camino que
+            está tomando.
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -5902,9 +5904,10 @@ es-ES:
             en "Ejecutar"?
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
-        - text: La cosechadora recogerá todos los cultivos.
+        - text: La granjera recogerá todos los cultivos.
           feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
-        - text: La cosechadora no recogerá cultivos en el camino que está tomando.
+        - text: La granjera no recogerá ninguna de las cosechas con el camino que
+            está tomando.
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -7166,3 +7169,5 @@ es-ES:
 
           Acabas de aprender una manera genial de usar una variable... ¡como una constante! Cuando usas una variable como una constante, estás fijando su valor una vez y luego usando ese "igual" valor multitud de veces en tu programa sin cambiarlo tras hacer click en "Ejecutar".
           En la siguiente parte de la serie, escribirás código con variables que "sí" cambian dentro del programa.
+      outbreak_freeplay_choice:
+        display_name: Juego libre

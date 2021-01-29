@@ -1,0 +1,177 @@
+{
+  "ja-JP": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "うごき",
+              "Events": "イベント",
+              "Loops": "くりかえし",
+              "Math": "計算(けいさん)",
+              "Logic": "ロジック",
+              "Games/Score": "ゲーム/スコア"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "世界",
+              "Dancers": "ダンサー",
+              "Properties": "プロパティ",
+              "Events": "イベント",
+              "Numbers": "数 (かず) ",
+              "Logic": "ロジック"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "星形 を かく",
+                "parameters": {
+                  "points": "ポイント",
+                  "length": "長さ"
+                }
+              },
+              "draw a circle": {
+                "name": "円 を かく"
+              },
+              "draw a pinwheel": {
+                "name": "風車をかく",
+                "parameters": {
+                  "length": "長さ",
+                  "repeat": "くりかえし"
+                }
+              },
+              "draw a triangle": {
+                "name": "三角形を描画します。",
+                "parameters": {
+                  "length": "長さ"
+                }
+              },
+              "draw a shape": {
+                "name": "図形をかく",
+                "parameters": {
+                  "length": "長さ"
+                }
+              },
+              "draw a house": {
+                "name": "家 を かく",
+                "parameters": {
+                  "length": "長さ"
+                }
+              },
+              "draw a square": {
+                "name": "正方形 を かく",
+                "parameters": {
+                  "length": "長さ"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "世界",
+              "Actions": "うごき",
+              "Events": "イベント",
+              "Behaviors": "行動"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "世界",
+              "Dancers": "ダンサー",
+              "Properties": "プロパティ",
+              "Events": "イベント",
+              "Numbers": "数 (かず) ",
+              "Logic": "ロジック"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "うごき",
+              "Brushes": "ブラシ",
+              "Loops": "くりかえし",
+              "Math": "計算(けいさん)",
+              "Logic": "ロジック",
+              "Functions": "関数(かんすう) ",
+              "Variables": "変数（へんすう）"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "世界",
+              "Locations": "場所",
+              "Actions": "うごき",
+              "Events": "イベント",
+              "Behaviors": "行動",
+              "Variables": "変数（へんすう）",
+              "Math": "計算(けいさん)",
+              "Logic": "ロジック",
+              "Functions": "関数(かんすう) ",
+              "Text": "テキスト",
+              "Comments": "コメント"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "世界",
+              "Locations": "場所",
+              "Actions": "うごき",
+              "Events": "イベント",
+              "Behaviors": "行動",
+              "Variables": "変数（へんすう）",
+              "Math": "計算(けいさん)",
+              "Logic": "ロジック",
+              "Functions": "関数(かんすう) ",
+              "Text": "テキスト",
+              "Comments": "コメント"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "うごき",
+              "Brushes": "ブラシ",
+              "Loops": "くりかえし",
+              "Math": "計算(けいさん)",
+              "Logic": "ロジック",
+              "Functions": "関数(かんすう) ",
+              "Variables": "変数（へんすう）"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "世界",
+              "Actions": "うごき",
+              "Events": "イベント",
+              "Logic": "ロジック",
+              "Math": "計算(けいさん)"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "世界",
+              "Actions": "うごき",
+              "Behaviors": "行動",
+              "Events": "イベント",
+              "Locations": "場所",
+              "Logic": "ロジック",
+              "Loops": "くりかえし",
+              "Math": "計算(けいさん)",
+              "Variables": "変数（へんすう）",
+              "Functions": "関数(かんすう) ",
+              "Comments": "コメント"
+            }
+          }
+        }
+      }
+    }
+  }
+}

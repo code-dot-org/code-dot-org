@@ -9219,3 +9219,9 @@ se:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Lekšuvdna 14
+            lesson15:
+              name: Lekšuvdna 15
