@@ -49,7 +49,8 @@ class FoormLibraryEditorManager extends React.Component {
       formPreviewQuestions: null,
       showCodeMirror: false,
       hasLoadError: false,
-      selectedLibraryId: null
+      selectedLibraryId: null,
+      libraryQuestionsFromSelectedLibrary: null
     };
 
     this.props.resetAvailableLibraries(this.props.libraryNamesAndVersions);
@@ -80,20 +81,39 @@ class FoormLibraryEditorManager extends React.Component {
     });
   }
 
+  getFormattedLibraryQuestionDropdownOptions() {
+    return this.state.libraryQuestionsFromSelectedLibrary.map(
+      (libraryQuestionAndType, i) => {
+        const libraryQuestionName = libraryQuestionAndType['name'];
+        const libraryQuestionType = libraryQuestionAndType['type'];
+        const libraryQuestionId = libraryQuestionAndType['id'];
+        return (
+          <MenuItem
+            key={i}
+            eventKey={i}
+            onClick={() => this.loadConfiguration(libraryQuestionId)}
+          >
+            {`${libraryQuestionName} (${libraryQuestionType})`}
+          </MenuItem>
+        );
+      }
+    );
+  }
+
   loadConfiguration(formId) {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     $.ajax({
-      url: `/api/v1/pd/foorm/libraries/${formId}`,
+      url: `/foorm/libraries/${formId}/question_names`,
       type: 'get'
     })
       .done(result => {
         this.updateFormData(result);
-        this.loadLibraryQuestionsForLibrary;
         this.setState({
           showCodeMirror: true,
           hasLoadError: false,
-          selectedLibraryId: formId
+          selectedLibraryId: formId,
+          libraryQuestionsFromSelectedLibrary: result
         });
       })
       .fail(() => {
@@ -110,13 +130,6 @@ class FoormLibraryEditorManager extends React.Component {
           selectedLibraryId: null
         });
       });
-  }
-
-  loadLibraryQuestionsForLibrary(libraryId) {
-    $.ajax({
-      url: `/foorm/libraries/${libraryId}/question_names`,
-      type: 'get'
-    }).done(result => {});
   }
 
   // on select of library:
@@ -169,24 +182,20 @@ class FoormLibraryEditorManager extends React.Component {
             New Form
           </Button>
         </div>
-        {this.state.selectedLibraryId && (
-          <div>
+        {this.state.selectedLibraryId &&
+          this.state.libraryQuestionsFromSelectedLibrary && (
             <DropdownButton
               id="load_config"
-              title="Load Form..."
+              title="Load Library Question..."
               className="btn"
             >
-              {this.getFormattedConfigurationDropdownOptions()}
+              {this.getFormattedLibraryQuestionDropdownOptions()}
             </DropdownButton>
-            <Button onClick={this.initializeEmptyCodeMirror} className="btn">
-              New Form
-            </Button>
-          </div>
-        )}
+          )}
         {this.state.hasLoadError && (
           <div style={styles.loadError}>Could not load the selected form.</div>
         )}
-        {this.state.showCodeMirror && (
+        {false && (
           <FoormLibraryEditor
             populateCodeMirror={this.props.populateCodeMirror}
             formCategories={this.props.formCategories}
