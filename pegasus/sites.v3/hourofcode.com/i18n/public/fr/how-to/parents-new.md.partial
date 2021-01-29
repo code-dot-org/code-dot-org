@@ -25,7 +25,7 @@ D'innombrables <a href = "https://hourofcode.com/us/learn" mark= "crwd-mark">act
 Toutes nos activités intègrent la résolution de problèmes et la pensée critique, de manières amusante et créative, mais voici ce que les étudiants préfèrent :
 
 - Pour l'enfant qui aime jouer : <a href="https://code.org/minecraft">Minecraft</a> ou <a href="https://code.org/dance">Soirée dansante</a>
-- Pour l'enfant qui aime Disney: <a href="https://code.org/starwars" marque="crwd-marque">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1" marque="crwd-marque">La Reine des Neiges</a>, ou <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C" marque="crwd-marque">Vaiana</a>
+- Pour l'enfant qui aime Disney: <a href="https://code.org/starwars" marque="crwd-marque">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1" marque="crwd-marque">La Reine des Neiges</a>, ou <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C" marque="crwd-marque">Vaiana</a>
 - Pour l'enfant qui aime apprendre : <a href="https://code.org/oceans" marque="crwd-marque">IA pour les océans</a> ou <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg" marque="crwd-marque">Faire de la musique avec Scratch</a>
 
 <h3>Peu ou pas de technologie ?</h3>

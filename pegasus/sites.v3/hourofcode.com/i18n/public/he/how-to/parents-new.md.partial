@@ -25,7 +25,7 @@ Hour of Code היא פעילות פשוטה לביצוע - אפילו למתחי
 כל הפעילויות שלנו משלבות תהליכי פתרון בעיות וחשיבה ביקורתית עם הנאה ויצירתיות, אולם הנה כמה דוגמאות לפעילויות החביבות במיוחד על התלמידים:
 
 - לילד/ה שאוהב/ת לשחק:<a href="https://code.org/minecraft">מיינקראפט</a> או <a href="https://code.org/dance">מסיבת ריקודים</a>
-- לילד/ה שאוהב/ת את סרטי דיסני: <a href="https://code.org/starwars">מלחמת הכוכבים</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1"> פרוזן</a>, או <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">מואנה</a>
+- לילד/ה שאוהב/ת את סרטי דיסני: <a href="https://code.org/starwars">מלחמת הכוכבים</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1"> פרוזן</a>, או <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">מואנה</a>
 - לילד/ה שאוהב/ת ללמוד: <a href="https://code.org/oceans">בינה מלאכותית למען האוקיינוסים והימים</a> או <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">צרו מוזיקה באמצעות סקראץ'</a>
 
 <h3>טכנולוגיה פשוטה או בלי טכנולוגיה?</h3>

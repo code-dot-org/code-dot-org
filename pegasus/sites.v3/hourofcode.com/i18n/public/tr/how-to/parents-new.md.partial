@@ -31,7 +31,7 @@ Kodlama Saatini bir bilgisayar, tablet veya akıllı telefon ile veya tamamen ba
     Oyun oynamayı seven çocuklar için:<a href="https://code.org/minecraft">Minecraft</a> veya <a href="https://code.org/dance"> Dance Party</a>
   </li>
   <li>
-    Disney'i seven çocuklar için: <a href="https://code.org/starwars">Yıldız Savaşları</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a>, veya <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+    Disney'i seven çocuklar için: <a href="https://code.org/starwars">Yıldız Savaşları</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, veya <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
   </li>
   <li>
     Öğrenmeyi seven çock,uklar için: <a href="https://code.org/oceans">Okyanuslar için Yapay Zeka</a> veya <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Scratch ile Müzik Yap</a>

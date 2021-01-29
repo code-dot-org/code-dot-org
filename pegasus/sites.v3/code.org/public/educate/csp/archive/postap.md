@@ -80,7 +80,7 @@ For more information about how to teach this material, please refer to this <a h
         		<a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">Teacher Reference</a>
         	</li>
         	<li>
-        		<a href="https://studio.code.org/s/cspunit6/lesson/1/puzzle/1" target="_blank">View in Code Studio</a>
+        		<a href="https://studio.code.org/s/cspunit6/stage/1/puzzle/1" target="_blank">View in Code Studio</a>
         	</li>
         </ul>
       </td>
@@ -101,7 +101,7 @@ For more information about how to teach this material, please refer to this <a h
         		<a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">Teacher Reference</a>
         	</li>
         	<li>
-        		<a href="https://studio.code.org/s/cspunit6/lesson/2/puzzle/1" target="_blank">View in Code Studio</a>
+        		<a href="https://studio.code.org/s/cspunit6/stage/2/puzzle/1" target="_blank">View in Code Studio</a>
         	</li>
         </ul>
       </td>
@@ -131,7 +131,7 @@ For more information about how to teach this material, please refer to this <a h
         		<a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">Teacher Reference</a>
         	</li>
         	<li>
-        		<a href="https://studio.code.org/s/cspunit6/lesson/3/puzzle/1" target="_blank">View in Code Studio</a>
+        		<a href="https://studio.code.org/s/cspunit6/stage/3/puzzle/1" target="_blank">View in Code Studio</a>
         	</li>
         </ul>
       </td>
@@ -156,7 +156,7 @@ For more information about how to teach this material, please refer to this <a h
         		<a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">Teacher Reference</a>
         	</li>
         	<li>
-        		<a href="https://studio.code.org/s/cspunit6/lesson/4/puzzle/1" target="_blank">View in Code Studio</a>
+        		<a href="https://studio.code.org/s/cspunit6/stage/4/puzzle/1" target="_blank">View in Code Studio</a>
         	</li>
         </ul>
       </td>
@@ -181,7 +181,7 @@ For more information about how to teach this material, please refer to this <a h
         		<a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">Teacher Reference</a>
         	</li>
         	<li>
-        		<a href="https://studio.code.org/s/cspunit6/lesson/5/puzzle/1" target="_blank">View in Code Studio</a>
+        		<a href="https://studio.code.org/s/cspunit6/stage/5/puzzle/1" target="_blank">View in Code Studio</a>
         	</li>
         </ul>
       </td>
@@ -206,7 +206,7 @@ For more information about how to teach this material, please refer to this <a h
         		<a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">Teacher Reference</a>
         	</li>
         	<li>
-        		<a href="https://studio.code.org/s/cspunit6/lesson/6/puzzle/1" target="_blank">View in Code Studio</a>
+        		<a href="https://studio.code.org/s/cspunit6/stage/6/puzzle/1" target="_blank">View in Code Studio</a>
         	</li>
         </ul>
       </td>
@@ -224,7 +224,7 @@ For more information about how to teach this material, please refer to this <a h
         		<a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">Teacher Reference</a>
         	</li>
         	<li>
-        		<a href="https://studio.code.org/s/cspunit6/lesson/7/puzzle/1" target="_blank">View in Code Studio</a>
+        		<a href="https://studio.code.org/s/cspunit6/stage/7/puzzle/1" target="_blank">View in Code Studio</a>
         	</li>
         </ul>
       </td>
@@ -249,7 +249,7 @@ For more information about how to teach this material, please refer to this <a h
         		<a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">Teacher Reference</a>
         	</li>
         	<li>
-        		<a href="https://studio.code.org/s/cspunit6/lesson/8/puzzle/1" target="_blank">View in Code Studio</a>
+        		<a href="https://studio.code.org/s/cspunit6/stage/8/puzzle/1" target="_blank">View in Code Studio</a>
         	</li>
         </ul>
       </td>
@@ -274,7 +274,7 @@ For more information about how to teach this material, please refer to this <a h
         		<a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">Teacher Reference</a>
         	</li>
         	<li>
-        		<a href="https://studio.code.org/s/cspunit6/lesson/9/puzzle/1" target="_blank">View in Code Studio</a>
+        		<a href="https://studio.code.org/s/cspunit6/stage/9/puzzle/1" target="_blank">View in Code Studio</a>
         	</li>
         </ul>
       </td>
