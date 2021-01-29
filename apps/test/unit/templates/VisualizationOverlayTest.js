@@ -1,17 +1,10 @@
 import React from 'react';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import {VisualizationOverlay} from '@cdo/apps/templates/VisualizationOverlay';
 import {mount} from 'enzyme';
 import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
-import {
-  allowConsoleErrors,
-  allowConsoleWarnings
-} from '../../util/throwOnConsole';
 
 describe('VisualizationOverlay', () => {
-  allowConsoleErrors();
-  allowConsoleWarnings();
-
   const TEST_APP_WIDTH = 300,
     TEST_APP_HEIGHT = 200;
 
