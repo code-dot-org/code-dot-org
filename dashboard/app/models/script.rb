@@ -177,7 +177,6 @@ class Script < ApplicationRecord
     teacher_resources
     lesson_extras_available
     has_verified_resources
-    has_lesson_plan
     curriculum_path
     announcements
     version_year
@@ -882,12 +881,6 @@ class Script < ApplicationRecord
     end
   end
 
-  def has_lesson_pdf?
-    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
-
-    has_lesson_plan?
-  end
-
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
     return true if csf_international?
@@ -1354,7 +1347,6 @@ class Script < ApplicationRecord
       teacher_resources: teacher_resources,
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
-      has_lesson_plan: has_lesson_plan?,
       curriculum_path: curriculum_path,
       announcements: announcements,
       age_13_required: logged_out_age_13_required?,
@@ -1565,7 +1557,6 @@ class Script < ApplicationRecord
     ]
     boolean_keys = [
       :has_verified_resources,
-      :has_lesson_plan,
       :is_stable,
       :project_sharing,
       :tts,
