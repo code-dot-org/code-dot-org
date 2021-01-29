@@ -93,6 +93,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+      text-align: left;
 
       &:last-of-type {
         border-bottom: none;
@@ -224,6 +225,10 @@
 }
 
 #hamburger {
+  background-color: $teal;
+  border: none;
+  margin: 0;
+
   #hamburger-icon {
     padding: 10px 28px 16px 0;
     float: right;

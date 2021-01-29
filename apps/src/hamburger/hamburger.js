@@ -7,29 +7,18 @@ import {
 
 export const initHamburger = function() {
   $(function() {
-    $('#hamburger').on('keypress click', function(e) {
-      if (
-        (e.type === 'keypress' &&
-          e.which === 13 &&
-          e.target.className !== 'hamburger-expandable-item item') ||
-        e.type === 'click'
-      ) {
-        $(this).toggleClass('active');
-        $('#hamburger #hamburger-contents').slideToggle();
-        e.preventDefault();
-      }
+    $('#hamburger').click(function(e) {
+      $(this).toggleClass('active');
+      $('#hamburger #hamburger-contents').slideToggle();
+      e.preventDefault();
     });
 
-    $(document).on('keypress click', function(e) {
+    $(document).on('click', function(e) {
       var hamburger = $('#hamburger');
 
       // If we didn't click the hamburger itself, and also nothing inside it,
       // then hide it.
-      if (
-        !hamburger.is(e.target) &&
-        hamburger.has(e.target).length === 0 &&
-        e.target.className !== 'hamburger-expandable-item item'
-      ) {
+      if (!hamburger.is(e.target) && hamburger.has(e.target).length === 0) {
         hamburger.children('#hamburger-contents').slideUp();
         $('#hamburger-icon').removeClass('active');
       }
@@ -59,14 +48,10 @@ export const initHamburger = function() {
       });
     });
 
-    // allows users to toggle help menu by pressing return
-    // while tabbing through elements
-    $('#help-button').on('keypress click', function(e) {
-      if ((e.type === 'keypress' && e.which === 13) || e.type === 'click') {
-        $(this).toggleClass('active');
-        $('#help-button #help-contents').slideToggle();
-        e.preventDefault();
-      }
+    $('#help-button').click(function(e) {
+      $(this).toggleClass('active');
+      $('#help-button #help-contents').slideToggle();
+      e.preventDefault();
     });
 
     $('#help-icon #report-bug').click(function() {

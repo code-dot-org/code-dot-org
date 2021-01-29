@@ -80,8 +80,10 @@
 }
 
 .help_button {
-  padding-left: 16px;
-  padding-top: 4px;
+  background-color: $teal;
+  border: none;
+  margin: 0;
+  padding-bottom: 40px;
 
   &.hide-mobile {
     display: block;
