@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '@cdo/apps/util/color';
 import ObjectiveLine from './ObjectiveLine';
 
 const styles = {
   addButton: {
-    background: color.cyan,
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
     borderRadius: 3,
-    color: color.white,
     fontSize: 14,
     padding: 7,
     textAlign: 'center',
@@ -141,7 +141,8 @@ export default class ObjectivesEditor extends Component {
           style={styles.addButton}
           type="button"
         >
-          <i className="fa fa-plus" style={{marginRight: 7}} /> Objective
+          <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
+          Objective
         </button>
       </div>
     );

@@ -27,7 +27,7 @@ hu:
             'Bee: Sequence':
               name: 'Méh: sorozat'
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Getting Loopy:
               name: Ciklikusság
             Going Places Safely:
@@ -164,7 +164,7 @@ hu:
               name: Művész
           student_description: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
         hourofcode:
-          title: Hagyományos Útvesztö
+          title: Hagyományos labirintus
           description: Ismerd meg a számítástechnika alapjait közösen az Angry Birds, Plants vs. Zombies karaktereivel valamint Motkányal a Jégkorszakból!
           description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok szórakoztató karakterrel!
           lessons:
@@ -335,13 +335,13 @@ hu:
             Song Writing:
               name: Dal iras
             The Artist:
-              name: A művész
+              name: A Művész
             The Artist 2:
-              name: A művész 2
+              name: A Művész 2
             The Artist 3:
-              name: A művész 3
+              name: A Művész 3
             The Artist 4:
-              name: A művész 4
+              name: A Művész 4
             The Artist 5:
               name: A Művész 5
             The Farmer:
@@ -367,7 +367,7 @@ hu:
             Play Lab:
               name: Játéklabor
             The Artist:
-              name: A művész
+              name: A Művész
             The Maze:
               name: A labirintus
           student_description: Kód szerkesztése
@@ -712,7 +712,7 @@ hu:
             Binary Bracelets:
               name: Bináris karkötők
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Getting Loopy:
               name: Ciklikusság
             Graph Paper Programming:
@@ -1147,7 +1147,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: Sprite-ok
+              name: manók
             Conditionals:
               name: Feltételek
         grade2:
@@ -1296,7 +1296,7 @@ hu:
             Your Digital Footprint:
               name: A digitális lábnyomod
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
         coursed-draft:
           lessons:
             Conditionals with Cards:
@@ -1440,7 +1440,7 @@ hu:
             Introduction:
               name: Bevezető
             Sprites:
-              name: Sprite-ok
+              name: manók
             Input:
               name: Bemenet
         coursed-ramp:
@@ -1474,7 +1474,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: Sprite-ok
+              name: manók
             Conditionals:
               name: Feltételek
             Functions:
@@ -1518,7 +1518,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: Sprite-ok
+              name: manók
             Conditionals:
               name: Feltételek
             Functions:
@@ -1576,13 +1576,13 @@ hu:
             Songwriting with Parameters:
               name: Dalszerzés paraméterekkel
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Nested Loops:
               name: Egymásba ágyazott ciklusok
         coursef-2017:
           lessons:
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
         cspnovice:
           lesson_groups:
             required:
@@ -1675,7 +1675,7 @@ hu:
             Songwriting with Parameters:
               name: Dalszerzés paraméterekkel
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Nested Loops:
               name: Egymásba ágyazott ciklusok
         pre-express-2017:
@@ -1713,7 +1713,7 @@ hu:
         e-f-ramp:
           lessons:
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Nested Loops:
               name: Egymásba ágyazott ciklusok
             Conditionals:
@@ -1739,7 +1739,7 @@ hu:
             Artist Binary:
               name: 'Művész: a kettes számrendszer'
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
         csp3-a:
           lesson_groups:
             csp3_1:
@@ -1752,13 +1752,13 @@ hu:
             Introduction:
               name: Bevezető
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Nested Loops:
               name: Egymásba ágyazott ciklusok
         new-e:
           lessons:
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Conditionals:
               name: Feltételek
             Private and Personal Information:
@@ -1770,7 +1770,7 @@ hu:
         new-f:
           lessons:
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Ice Age Play Lab:
               name: Jégkorszak játéklabor
             Envelope Variables:
@@ -1817,7 +1817,7 @@ hu:
         course-e-2018:
           lessons:
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Nested Loops:
               name: Egymásba ágyazott ciklusok
             Introduction:
@@ -1833,7 +1833,7 @@ hu:
         course-f-2018:
           lessons:
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Introduction:
               name: Bevezető
             Ice Age Play Lab:
@@ -1859,7 +1859,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: Sprite-ok
+              name: manók
             Conditionals:
               name: Feltételek
             Functions:
@@ -1877,7 +1877,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: Sprite-ok
+              name: manók
             Conditionals:
               name: Feltételek
             Functions:
@@ -1902,7 +1902,7 @@ hu:
             Introduction:
               name: Bevezető
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Nested Loops:
               name: Egymásba ágyazott ciklusok
             'Events: The Big Event':
@@ -1952,7 +1952,7 @@ hu:
             Introduction:
               name: Bevezető
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Conditionals with Cards:
               name: Feltételek kártyákkal
             Digital Citizenship:
@@ -1972,7 +1972,7 @@ hu:
         coursec-2018:
           lessons:
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             'Loops: Getting Loopy':
               name: Ciklikusság
             Loops with Rey and BB-8:
@@ -1993,7 +1993,7 @@ hu:
             'Programming: My Robotic Friends':
               name: A robot barátaim
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             'Loops: My Loopy Robotic Friends':
               name: Ciklusos robot barátim
             Introduction:
@@ -2017,7 +2017,7 @@ hu:
             'Programming: My Robotic Friends':
               name: A robot barátaim
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             'Loops: My Loopy Robotic Friends':
               name: Ciklusos robot barátim
             Introduction:
@@ -2301,12 +2301,12 @@ hu:
             csf_internet:
               display_name: Internet
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
           lessons:
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Conditionals with Cards:
               name: Feltételek kártyákkal
             Envelope Variables:
@@ -2314,7 +2314,7 @@ hu:
             For Loop Fun:
               name: Szórakozás a For ciklussal
             The Artist:
-              name: A művész
+              name: A Művész
             Sprite Lab Behaviors:
               name: Sprite labor viselkedések
             Internet:
@@ -2358,7 +2358,7 @@ hu:
         coursee-2019:
           lesson_groups:
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
@@ -2367,7 +2367,7 @@ hu:
               display_name: funkciók
           lessons:
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
             Nested Loops:
               name: Egymásba ágyazott ciklusok
             Conditionals with Cards:
@@ -2399,7 +2399,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
           lessons:
             Relay Programming:
               name: Váltó programozás
@@ -2557,7 +2557,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: Sprite-ok
+              name: manók
             Conditionals:
               name: Feltételek
             Functions:
@@ -2667,14 +2667,14 @@ hu:
         time4csdemo:
           lesson_groups:
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
           lessons:
             Crowdsourcing:
               name: Csoportos megoldás
             Conditionals with Cards:
               name: Feltételek kártyákkal
             Building a Foundation:
-              name: Alapozás
+              name: Az alap megépítése
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2812,7 +2812,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: Sprite-ok
+              name: manók
             Conditionals:
               name: Feltételek
             Functions:
@@ -2998,7 +2998,7 @@ hu:
             csf_events:
               display_name: Események
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
           lessons:
@@ -3019,7 +3019,7 @@ hu:
             csf_events:
               display_name: Események
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
           lessons:
@@ -3110,7 +3110,7 @@ hu:
             Text:
               name: szöveg
             Sprites:
-              name: Sprite-ok
+              name: manók
         coursea-2020:
           lesson_groups:
             csf_digcit:
@@ -3199,7 +3199,7 @@ hu:
         coursee-2020:
           lesson_groups:
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
@@ -3224,7 +3224,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
           lessons:
             Envelope Variables:
               name: Boríték változók
@@ -3249,7 +3249,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
           lessons:
             Dance Party:
               name: Táncos buli
@@ -3358,7 +3358,7 @@ hu:
             Random Numbers:
               name: Véletlen számok
             Sprites:
-              name: Sprite-ok
+              name: manók
             Sprite Properties:
               name: Sprite tulajdonságok
             Text:
@@ -3445,8 +3445,8 @@ hu:
               key: Véletlen számok
               name: Véletlen számok
             Sprites:
-              key: Sprite-ok
-              name: Sprite-ok
+              key: manók
+              name: manók
             Sprite Properties:
               key: Sprite tulajdonságok
               name: Sprite tulajdonságok
@@ -3602,7 +3602,7 @@ hu:
               name: Dalszerzés paraméterekkel
           lesson_groups:
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
@@ -3628,7 +3628,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
         express-2021:
           lessons:
             Dance Party:
@@ -3649,7 +3649,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: Sprite-ok
+              display_name: manók
         pre-express-2021:
           lessons:
             Programming with Rey and BB-8:
@@ -3667,7 +3667,7 @@ hu:
             lessonGroup-3:
               display_name: változók
             Sprites:
-              display_name: Sprite-ok
+              display_name: manók
         csd4-preview-2021:
           lesson_groups:
             cspSurvey:
@@ -3678,3 +3678,9 @@ hu:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Lecke 14
+            lesson15:
+              name: Lecke 15
