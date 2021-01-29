@@ -979,20 +979,6 @@ class ScriptTest < ActiveSupport::TestCase
     refute summary[:has_verified_resources]
   end
 
-  test 'summarize includes has_lesson_plan' do
-    script = create(:script, name: 'resources-script')
-
-    script.has_lesson_plan = true
-    assert script.has_lesson_plan
-    summary = script.summarize
-    assert summary[:has_lesson_plan]
-
-    script.has_lesson_plan = false
-    refute script.has_lesson_plan
-    summary = script.summarize
-    refute summary[:has_lesson_plan]
-  end
-
   test 'summarize includes show_course_unit_version_warning' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
@@ -1609,11 +1595,10 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can set custom curriculum path' do
     l = create :level
     dsl = <<-SCRIPT
-      has_lesson_plan true
       curriculum_path '//example.com/{LOCALE}/foo/{LESSON}'
-      lesson 'Lesson1', display_name: 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1', has_lesson_plan: true
       level '#{l.name}'
-      lesson 'Lesson2', display_name: 'Lesson2'
+      lesson 'Lesson2', display_name: 'Lesson2', has_lesson_plan: true
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(dsl, 'a filename')
@@ -1700,7 +1685,6 @@ class ScriptTest < ActiveSupport::TestCase
 
     # some properties that should not change
     assert script.curriculum_path
-    assert script.has_lesson_plan
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
@@ -1714,7 +1698,6 @@ class ScriptTest < ActiveSupport::TestCase
 
     # some properties that should not change
     assert script_copy.curriculum_path
-    assert script_copy.has_lesson_plan
   end
 
   test 'clone versioned script with suffix' do
