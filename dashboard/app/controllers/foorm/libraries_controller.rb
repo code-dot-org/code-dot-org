@@ -34,8 +34,8 @@ module Foorm
       question_names = @library.library_questions.map do |library_question|
         {
           id: library_question.id,
-          question_name: library_question.question_name,
-          type: JSON.parse(library_question.question)[:type]
+          name: library_question.question_name,
+          type: JSON.parse(library_question.question)['type']
         }
       end
 
