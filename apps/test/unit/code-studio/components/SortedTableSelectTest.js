@@ -49,7 +49,6 @@ describe('SortedTableSelect', () => {
   it('areAllSelected returns false on initial render', () => {
     const wrapper = shallow(<SortedTableSelect {...DEFAULT_PROPS} />);
     expect(wrapper.instance().areAllSelected()).to.be.false;
-    expect(wrapper.state().rowsChecked).to.be.empty;
   });
 
   it('areAllSelected returns true when all rows are checked', () => {

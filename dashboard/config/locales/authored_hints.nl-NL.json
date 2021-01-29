@@ -2727,16 +2727,16 @@
           "courseD_bee_conditionals_challenge1_b": "In deze puzzle kan elke plek een bloem bevatten, of een honingraat, of niets.  Dat betekent dat je je `als/anders`-blok op elke plek moet herhalen."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_playLab_cond1": {
           "courseD_playLab_cond1_a": "Om deze puzzle op te lossen, moet je het `verplaats speler 1 omhoog`-blok vastmaken aan de `wanneer pijltje naar boven`-gebeurtenis. En daarna moet je hetzelfde doen voor alle andere richtingen.",
@@ -3693,6 +3693,12 @@
         "courseC_maze_loops_challenge1a_2020": {
           "courseC_maze_loops_challenge1_a": "Beschouw dit pad als twee opeenvolgende routes, Elke route heeft een patroon dat je kunt herhalen.",
           "courseC_maze_loops_challenge1_b": "Weet je nog hoe je lussen kon gebruiken om een trap-patroon te herhalen?"
+        },
+        "courseA_harvester_loops6_2019": {
+          "courseA_harvester_loops6_a": "Als je vast loopt, schrijf dan eens de stappen uit op een stuk papier en kijk of je er een herhalend patroon in ziet."
+        },
+        "courseA_harvester_loops6_2020": {
+          "courseA_harvester_loops6_a": "Als je vast loopt, schrijf dan eens de stappen uit op een stuk papier en kijk of je er een herhalend patroon in ziet."
         }
       }
     }

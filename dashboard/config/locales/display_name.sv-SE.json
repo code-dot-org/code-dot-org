@@ -80,7 +80,14 @@
         "Oceans_Video_Machine_Learning": "Video: maskininlärning",
         "Oceans_Video_Societal_Implications": "Video: påverkan på samhället",
         "Oceans_Video_Training_Data": "Video: träningsdata",
-        "outbreak_freeplay": "Fri lek"
+        "outbreak_freeplay": "Fri lek",
+        "outbreak1": "Virussimulering",
+        "outbreak2": "Virussimulering",
+        "outbreak3": "Virussimulering",
+        "outbreak4": "Ändra din simulering",
+        "outbreak6": "Slumpartad chans",
+        "outbreak7": "Immunitet och vaccin",
+        "outbreak8": "Dela ett meddelande"
       }
     }
   }

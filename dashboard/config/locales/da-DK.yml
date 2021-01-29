@@ -618,7 +618,7 @@ da:
   gender:
     male: Mand
     female: Kvinde
-    non_binary: Ikke-binært
+    non_binary: Ikke-binær
     none: Foretrækker ikke at svare
   user_type:
     student: studerende
@@ -915,7 +915,7 @@ da:
     uten å logge på eller be ein forelder eller lærer om å kontakte oss for deg.
   progress:
     not_started: ikke startet
-    in_progress: i gang
+    in_progress: igangværende
     completed_too_many_blocks: afsluttet, for mange blokke
     completed_perfect: Afsluttet, perfekt
     furthest_level_attempted: længst opnåede niveau
@@ -1069,7 +1069,7 @@ da:
       gender:
         male: Mand
         female: Kvinde
-        non_binary: Ikke-binært
+        non_binary: Ikke-binær
         none: Foretrækker ikke at svare
       school_country:
         canada: Canada

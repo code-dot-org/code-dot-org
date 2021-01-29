@@ -1313,6 +1313,51 @@
           "game has been won": {
             "name": "ហ្គេមត្រូវបានឈ្នះ"
           }
+        },
+        "courseE_bee_concept4": {
+          "honey nectar": {
+            "name": "\nទឹកដមរបស់​ទឹកឃ្មុំ"
+          }
+        },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+            "name": "រុករក"
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+            "name": "ពោតនិងល្ពៅ"
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+            "name": "ពោតនិងល្ពៅ"
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+            "name": "ពោតនិងល្ពៅ"
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+            "name": "ពោតនិងល្ពៅ"
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+            "name": "ពោតនិងល្ពៅ"
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+            "name": "រុករក"
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+            "name": "រុករក"
+          }
         }
       }
     }

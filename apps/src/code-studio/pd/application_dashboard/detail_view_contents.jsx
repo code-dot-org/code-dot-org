@@ -499,10 +499,11 @@ export class DetailViewContents extends React.Component {
     return (
       <Button
         title={
-          !statusIsLockable &&
-          `Can only lock if status is one of ${ApplicationFinalStatuses.join(
-            ', '
-          )}`
+          !statusIsLockable
+            ? `Can only lock if status is one of ${ApplicationFinalStatuses.join(
+                ', '
+              )}`
+            : undefined
         }
         disabled={!(this.state.editing && statusIsLockable)}
         onClick={this.handleLockClick}
@@ -670,8 +671,9 @@ export class DetailViewContents extends React.Component {
           componentClass="select"
           disabled={this.state.locked || !this.state.editing}
           title={
-            this.state.locked &&
-            'The status of this application has been locked'
+            this.state.locked
+              ? 'The status of this application has been locked'
+              : undefined
           }
           value={this.state.status}
           onChange={this.handleStatusChange}
