@@ -19,9 +19,8 @@
       ],
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "is_stable": true,
       "project_sharing": true,
+      "is_stable": true,
       "teacher_resources": [
         [
           "lessonPlans",

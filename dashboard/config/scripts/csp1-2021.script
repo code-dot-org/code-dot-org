@@ -3,7 +3,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["curriculum", "/link/to/curriculum"]]
 has_verified_resources true
-has_lesson_plan true
 version_year '2021'
 curriculum_umbrella 'CSP'
 is_migrated true
@@ -55,8 +54,10 @@ level 'CSP U1L10 Color Pixelation Widget 2_2021', progression: 'Pixelation Widge
 level 'CSP U1L10 Color Pixelation Widget 3_2021', progression: 'Pixelation Widget: Color'
 level 'CSP U1L10 Color Sampling_2021', progression: 'Color Sampling'
 level 'CSP U1L10 Color Pixelation Widget 4_2021', progression: 'Pixelation Widget: Color'
-level 'U1L10 Multiple Choice analog vs digital_2021', progression: 'Assessment: Check For Understanding', assessment: true
-level 'U1L10 CFU Sampling_2021', progression: 'Assessment: Check For Understanding', assessment: true
+level 'U1L10 Multiple Choice analog vs digital_2021', progression: 'Assessment: Check For Understanding
+', assessment: true
+level 'U1L10 CFU Sampling_2021', progression: 'Assessment: Check For Understanding
+', assessment: true
 
 lesson 'Lossless Compression', display_name: 'Lossless Compression', has_lesson_plan: true
 level 'U1L11 Widget: Text Compression_2021', progression: 'Widget: Text Compression'
