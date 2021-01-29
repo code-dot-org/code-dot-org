@@ -17,7 +17,7 @@ export const addVocabulary = newVocabulary => ({
   newVocabulary
 });
 
-export const editVocabulary = updatedVocabulary => ({
+export const updateVocabulary = updatedVocabulary => ({
   type: EDIT_VOCABULARY,
   updatedVocabulary
 });
