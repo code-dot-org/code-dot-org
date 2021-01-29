@@ -155,10 +155,13 @@ class VirtualizedDetailView extends Component {
               data-tip
               data-for={tooltipIdForLessonNumber(columnIndex)}
             >
-              {stageData.numberedLesson ? (
+              {stageData.lockable && (
+                <span style={{...stageData.numberedLesson && {marginRight: 5}}}>
+                  <FontAwesome icon="lock" />
+                </span>
+              )}
+              {stageData.numberedLesson && (
                 stageData.relative_position
-              ) : (
-                <FontAwesome icon="lock" />
               )}
             </div>
             {columnWidths[columnIndex] > MAX_COLUMN_WITHOUT_ARROW && (
