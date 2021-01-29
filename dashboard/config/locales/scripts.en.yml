@@ -18789,6 +18789,8 @@ en:
               name: Final project
             appendix:
               name: Appendix
+            intro-categorical:
+              name: Introduction to AI Lab
           lesson_groups: {}
           title: ML/AI Unit - CSD
           description_audience: ''
@@ -20786,9 +20788,9 @@ en:
             lesson4:
               name: Lesson 4
             lesson5:
-              name: Lesson 5
+              name: Models and Data
             lesson6:
-              name: Lesson 6
+              name: Introduction to AI Lab
             lesson7:
               name: Lesson 7
             lesson8:
