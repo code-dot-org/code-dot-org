@@ -120,10 +120,13 @@ header.build = function(
       </Provider>,
       document.querySelector('.header_level')
     );
-    ReactDOM.render(
-      <SignInCallout />,
-      document.querySelector('.signin_callout')
-    );
+    // Only render sign in callout if the course is CSF
+    if (scriptData.is_csf) {
+      ReactDOM.render(
+        <SignInCallout />,
+        document.querySelector('.signin_callout')
+      );
+    }
   });
 };
 
