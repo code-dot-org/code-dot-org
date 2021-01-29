@@ -147,6 +147,7 @@ class ScriptDSL < BaseDSL
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
       lesson_extras_available: @lesson_extras_available,
+      has_verified_resources: @has_verified_resources,
       curriculum_path: @curriculum_path,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
