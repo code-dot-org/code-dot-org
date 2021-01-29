@@ -989,19 +989,7 @@ export function getCrossTabData(state) {
   // Take inventory of all unique label values we have seen, which allows us to
   // generate the header at the top of the CrossTab UI.
 
-  var uniqueLabelValues = [];
-  for (let result of results) {
-    var labelValues = Object.keys(result.labelCounts);
-    for (let labelValue of labelValues) {
-      if (
-        !uniqueLabelValues.find(uniqueLabelValue => {
-          return uniqueLabelValue === labelValue;
-        })
-      ) {
-        uniqueLabelValues.push(labelValue);
-      }
-    }
-  }
+  const uniqueLabelValues = getUniqueOptions(state, state.labelColumn);
 
   return {
     results,
