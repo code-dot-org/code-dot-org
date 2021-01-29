@@ -13,12 +13,12 @@ import {
 import NameFailureDialog from '../NameFailureDialog';
 import NameFailureError from '../../NameFailureError';
 
-const styles = {
+export const styles = {
   buttonWrapper: {
     float: 'left',
     display: 'flex'
   },
-  button: {
+  buttonSpacing: {
     marginTop: 0,
     marginBottom: 0,
     marginLeft: 10,
@@ -44,7 +44,7 @@ class UnconnectedDisplayProjectName extends React.Component {
         <button
           type="button"
           className="project_edit header_button header_button_light"
-          style={styles.button}
+          style={styles.buttonSpacing}
           onClick={this.props.beginEdit}
         >
           {i18n.rename()}
@@ -126,7 +126,7 @@ class UnconnectedEditProjectName extends React.Component {
           className="project_save header_button header_button_light"
           onClick={this.saveNameChange}
           disabled={this.state.savingName}
-          style={styles.button}
+          style={styles.buttonSpacing}
         >
           {i18n.save()}
         </button>
