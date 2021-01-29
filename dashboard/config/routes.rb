@@ -274,6 +274,17 @@ Dashboard::Application.routes.draw do
   # Redirects from old /stage url to new /lesson url
   get '/s/:script_name/stage/:position(*all)', to: redirect(path: '/s/%{script_name}/lesson/%{position}%{all}')
 
+  # CSP 20-21 lockable lessons with lesson plan redirects
+  get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lesson/14%{all}')
+  get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/lesson/9%{all}')
+  get '/s/csp3-2020/lockable/1(*all)', to: redirect(path: '/s/csp3-2020/lesson/11%{all}')
+  get '/s/csp4-2020/lockable/1(*all)', to: redirect(path: '/s/csp4-2020/lesson/15%{all}')
+  get '/s/csp5-2020/lockable/1(*all)', to: redirect(path: '/s/csp5-2020/lesson/18%{all}')
+  get '/s/csp6-2020/lockable/1(*all)', to: redirect(path: '/s/csp6-2020/lesson/6%{all}')
+  get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/lesson/11%{all}')
+  get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lesson/9%{all}')
+  get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lesson/14%{all}')
+
   # Redirects from old /lockable url to new /survey url
   get '/s/:script_name/lockable/:position(*all)', to: redirect(path: '/s/%{script_name}/survey/%{position}%{all}')
 
