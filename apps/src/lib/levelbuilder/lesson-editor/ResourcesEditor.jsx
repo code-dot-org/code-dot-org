@@ -42,9 +42,10 @@ const styles = {
     lineHeight: '30px'
   },
   addButton: {
-    background: color.cyan,
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
     borderRadius: 3,
-    color: color.white,
     fontSize: 14,
     padding: 7,
     textAlign: 'center',
@@ -282,7 +283,9 @@ class ResourcesEditor extends Component {
         )}
         <div>
           <div style={styles.resourceSearch}>
-            <label>Select a resource to add</label>
+            <label>
+              <strong>Select a resource to add</strong>
+            </label>
             <SearchBox
               onSearchSelect={this.onSearchSelect}
               searchUrl={'resourcesearch'}
@@ -301,7 +304,8 @@ class ResourcesEditor extends Component {
             style={styles.addButton}
             type="button"
           >
-            <i className="fa fa-plus" style={{marginRight: 7}} /> Resource
+            <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
+            Resource
           </button>
         </div>
       </div>

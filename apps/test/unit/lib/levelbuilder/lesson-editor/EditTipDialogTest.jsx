@@ -27,7 +27,7 @@ describe('EditTipDialog', () => {
     expect(wrapper.find('LessonTip').length).to.equal(1);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('textarea').length).to.equal(1);
-    expect(wrapper.find('BaseDialog').length).to.equal(1);
+    expect(wrapper.find('LessonEditorDialog').length).to.equal(1);
   });
 
   it('edit tip values', () => {
