@@ -22,6 +22,7 @@ import resourceTestData from './resourceTestData';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import _ from 'lodash';
 
 describe('LessonEditor', () => {
   let defaultProps, store, clock;
@@ -48,13 +49,17 @@ describe('LessonEditor', () => {
         studentOverview: 'Overview of the lesson for students',
         unplugged: false,
         lockable: false,
+        hasLessonPlan: true,
         assessment: false,
         creativeCommonsLicense: 'Creative Commons BY-NC-SA',
         purpose: 'The purpose of the lesson is for people to learn',
         preparation: '- One',
         announcements: [],
         assessmentOpportunities: 'Assessment Opportunities',
-        courseVersionId: 1
+        courseVersionId: 1,
+        scriptPath: '/s/my-script/',
+        lessonPath: '/lessons/1',
+        scriptIsVisible: false
       }
     };
   });
@@ -91,12 +96,75 @@ describe('LessonEditor', () => {
     ).to.be.true;
     expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
     expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(5);
-    expect(wrapper.find('input').length).to.equal(21);
+    expect(wrapper.find('input').length).to.equal(22);
+    expect(
+      wrapper
+        .find('input')
+        .at(1)
+        .props().disabled
+    ).to.equal(false);
+    expect(
+      wrapper
+        .find('input')
+        .at(2)
+        .props().disabled
+    ).to.equal(false);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
     expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
     expect(wrapper.find('VocabulariesEditor').length).to.equal(1);
+    expect(wrapper.find('SaveBar').length).to.equal(1);
+  });
+
+  it('disables editing of lockable and has lesson plan for visible script', () => {
+    let initialLessonDataCopy = _.cloneDeep(defaultProps.initialLessonData);
+    initialLessonDataCopy.scriptIsVisible = true;
+    const wrapper = createWrapper({initialLessonData: initialLessonDataCopy});
+    expect(
+      wrapper
+        .find('input')
+        .at(1)
+        .props().disabled
+    ).to.equal(true);
+    expect(
+      wrapper
+        .find('input')
+        .at(2)
+        .props().disabled
+    ).to.equal(true);
+  });
+
+  it('renders lesson editor for lesson without lesson plan', () => {
+    const wrapper = createWrapper({
+      initialLessonData: {
+        id: 1,
+        name: 'Survey Name',
+        overview: 'Survey Overview',
+        studentOverview: 'Student survey overview',
+        unplugged: false,
+        lockable: true,
+        hasLessonPlan: false,
+        assessment: false,
+        creativeCommonsLicense: 'Creative Commons BY-NC-SA',
+        purpose: '',
+        preparation: '',
+        announcements: [],
+        assessmentOpportunities: '',
+        courseVersionId: 1
+      }
+    });
+    expect(wrapper.contains('Survey Name'), 'Lesson Name').to.be.true;
+    expect(wrapper.contains('Survey Overview'), 'Lesson Overview').to.be.true;
+    expect(wrapper.contains('Student survey overview'), 'student overview').to
+      .be.true;
+    expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
+    expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
+    expect(wrapper.find('input').length).to.equal(7);
+    expect(wrapper.find('select').length).to.equal(1);
+    expect(wrapper.find('AnnouncementsEditor').length).to.equal(0);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(3);
+    expect(wrapper.find('ResourcesEditor').length).to.equal(0);
     expect(wrapper.find('SaveBar').length).to.equal(1);
   });
 
@@ -202,11 +270,11 @@ describe('LessonEditor', () => {
     server.restore();
   });
 
-  it('can save and close', () => {
+  it('can save and close lesson with lesson plan', () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
-    let returnData = {activities: []};
+    let returnData = {activities: [], hasLessonPlan: true};
     let server = sinon.fakeServer.create();
     server.respondWith('PUT', `/lessons/1`, [
       200,
@@ -228,6 +296,38 @@ describe('LessonEditor', () => {
     lessonEditor.update();
     expect(utils.navigateToHref).to.have.been.calledWith(
       `/lessons/1${window.location.search}`
+    );
+
+    server.restore();
+  });
+
+  it('can save and close lesson without lesson plan', () => {
+    const wrapper = createWrapper({});
+    const lessonEditor = wrapper.find('LessonEditor');
+
+    let returnData = {activities: [], hasLessonPlan: false};
+    let server = sinon.fakeServer.create();
+    server.respondWith('PUT', `/lessons/1`, [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(returnData)
+    ]);
+
+    const saveBar = wrapper.find('SaveBar');
+
+    const saveAndCloseButton = saveBar.find('button').at(1);
+    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+    saveAndCloseButton.simulate('click');
+
+    // check the the spinner is showing
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(lessonEditor.state().isSaving).to.equal(true);
+
+    server.respond();
+    lessonEditor.update();
+    // navigates to the script overview page
+    expect(utils.navigateToHref).to.have.been.calledWith(
+      `/s/my-script/${window.location.search}`
     );
 
     server.restore();

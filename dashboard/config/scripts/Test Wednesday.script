@@ -1,3 +1,3 @@
-lesson 'PDK5 Intro', display_name: 'PDK5 Intro'
+lesson 'PDK5 Intro', display_name: 'PDK5 Intro', has_lesson_plan: false
 level 'PDK5 Intro'
 

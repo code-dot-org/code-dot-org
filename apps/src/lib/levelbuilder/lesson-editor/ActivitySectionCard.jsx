@@ -353,24 +353,26 @@ class ActivitySectionCard extends Component {
     );
   };
 
-  appendResourceLink = resourceKey => {
+  appendMarkdownSyntax = strToAppend => {
     const currentText = this.props.activitySection.text;
     this.props.updateActivitySectionField(
       this.props.activityPosition,
       this.props.activitySection.position,
       'text',
-      currentText + `\n[r ${resourceKey}]`
+      currentText + strToAppend
     );
   };
 
+  appendResourceLink = resourceKey => {
+    this.appendMarkdownSyntax(`\n[r ${resourceKey}]`);
+  };
+
+  appendVocabularyLink = vocabularyKey => {
+    this.appendMarkdownSyntax(`\n[v ${vocabularyKey}]`);
+  };
+
   appendSlide = () => {
-    const currentText = this.props.activitySection.text;
-    this.props.updateActivitySectionField(
-      this.props.activityPosition,
-      this.props.activitySection.position,
-      'text',
-      currentText + ` [slide]`
-    );
+    this.appendMarkdownSyntax(' [slide]');
   };
 
   handleRemoveLevel = levelPos => {
@@ -534,6 +536,7 @@ class ActivitySectionCard extends Component {
           addLevel={this.handleAddLevel}
           activityPosition={this.props.activityPosition}
           appendResourceLink={this.appendResourceLink}
+          appendVocabularyLink={this.appendVocabularyLink}
           appendSlide={this.appendSlide}
           hasLessonPlan={hasLessonPlan}
         />

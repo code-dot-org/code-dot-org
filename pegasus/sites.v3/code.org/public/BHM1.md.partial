@@ -1,0 +1,45 @@
+---
+title: Code.org celebrates Black History Month
+video_player: true
+theme: responsive
+style_min: true
+social:
+  "og:title": "Code.org celebrates Black History Month"
+  "og:description": "Celebrating Black pioneers in computer science and lifting up Black voices"
+  "og:image": "code.org/images/oceans/oceans-overview.png"
+  "og:image:width": 485
+  "og:image:height": 235
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+<link href="/css/tools.css" rel="stylesheet">
+<link href="/css/ai-videos.css" rel="stylesheet">
+
+<div style="background-image: url('images/bhm/black-voices.png'); background-color:#685c91; background-position: right bottom; background-repeat:no-repeat; padding:20px 0; color:white; margin-bottom: 25px">
+  <div class="col-20" style="padding: 0 20px;">
+    <img style="max-width:100%;" src="images/bhm/bhm-logo.png"/>
+  </div>
+  <div class="col-80" style="padding: 35px 20px;">
+    <h3  style="color:#1d1731;">Code.org celebrates</h3>
+    <h1 style="color:#1d1731;margin:10px 0 20px;">BLACK HISTORY MONTH</h1>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<h2>Black voices in computer science </h2>
+<p style="margin-bottom: 25px">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="col-50" style="float: left; padding: 10px; padding-left: 0; margin-bottom: 40px">
+
+{{ athome_vid_howcomputers }}
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px; padding-right: 0; margin-bottom: 40px">
+
+{{ vid_whyicode }}
+
+</div>
+
+<div style="clear: both"></div>

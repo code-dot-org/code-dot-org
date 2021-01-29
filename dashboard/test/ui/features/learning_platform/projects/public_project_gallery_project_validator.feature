@@ -81,3 +81,11 @@ Scenario: Can See App Lab/Game Lab View More Links
   And the project gallery contains 9 view more links
   And element ".ui-applab" contains text "View more App Lab projects"
   And element ".ui-gamelab" contains text "View more Game Lab projects"
+
+Scenario: Can See Special Topics and View More with Experiment enabled
+  Given I am on "http://studio.code.org/projects/public/?enableExperiments=special-topic"
+  And I wait until element "#projects-page" is visible
+  Then I wait until element ".ui-project-app-type-area" is in the DOM
+  And the project gallery contains 10 project types
+  And the project gallery contains 10 view more links
+  And element ".ui-special_topic" contains text "View more Featured Topics projects"

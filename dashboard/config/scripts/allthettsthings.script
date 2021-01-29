@@ -1,6 +1,6 @@
 tts true
 
-lesson 'TTS', display_name: 'TTS'
+lesson 'TTS', display_name: 'TTS', has_lesson_plan: false
 level 'allthethings_ttscsf contained'
 level 'allthethings_ttscsd'
 level 'allthethings_ttscsp contained'

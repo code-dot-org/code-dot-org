@@ -8,6 +8,7 @@ import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
 import CdoPathObject from '@cdo/apps/blocklyAddons/cdoPathObject';
 import CdoScrollbar from '@cdo/apps/blocklyAddons/cdoScrollbar';
 import CdoTheme from '@cdo/apps/blocklyAddons/cdoTheme';
+import initializeTouch from '@cdo/apps/blocklyAddons/cdoTouch';
 import CdoTrashcan from '@cdo/apps/blocklyAddons/cdoTrashcan';
 import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
 import initializeBlocklyXml from '@cdo/apps/blocklyAddons/cdoXml';
@@ -119,6 +120,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('utils');
+  blocklyWrapper.wrapReadOnlyProperty('Touch');
   blocklyWrapper.wrapReadOnlyProperty('Trashcan');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
@@ -270,6 +272,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   initializeBlocklyXml(blocklyWrapper);
+  initializeTouch(blocklyWrapper);
 
   return blocklyWrapper;
 }
