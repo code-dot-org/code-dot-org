@@ -1,0 +1,191 @@
+{
+  "cs-CZ": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Akce",
+              "Events": "Události",
+              "Loops": "Cykly",
+              "Math": "Matematické",
+              "Logic": "Logické",
+              "Games/Score": "Hry/Skóre"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Prostředí",
+              "Dancers": "Tanečníci",
+              "Properties": "Vlastnosti",
+              "Events": "Události",
+              "Numbers": "Čísla",
+              "Logic": "Logické"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "nakresli hvězdu",
+                "parameters": {
+                  "points": "body",
+                  "length": "délka"
+                }
+              },
+              "draw a circle": {
+                "name": "nakresli kružnici"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "délka",
+                  "repeat": "opakuj"
+                }
+              },
+              "draw a triangle": {
+                "name": "nakresli trojúhelník",
+                "parameters": {
+                  "length": "délka"
+                }
+              },
+              "draw a shape": {
+                "name": "nakresli tvar",
+                "parameters": {
+                  "length": "délka"
+                }
+              },
+              "draw a house": {
+                "name": "nakresli dům",
+                "parameters": {
+                  "length": "délka"
+                }
+              },
+              "draw a square": {
+                "name": "nakresli čtverec",
+                "parameters": {
+                  "length": "délka"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Prostředí",
+              "Sprites": "Postavy",
+              "Actions": "Akce",
+              "Events": "Události",
+              "Behaviors": "Chování"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Prostředí",
+              "Dancers": "Tanečníci",
+              "Properties": "Vlastnosti",
+              "Events": "Události",
+              "Numbers": "Čísla",
+              "Logic": "Logické"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Akce",
+              "Brushes": "Štětce",
+              "Loops": "Cykly",
+              "Math": "Matematické",
+              "Logic": "Logické",
+              "Functions": "Funkce",
+              "Variables": "Proměnné"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Prostředí",
+              "Sprites": "Postavy",
+              "Locations": "Umístění",
+              "Actions": "Akce",
+              "Events": "Události",
+              "Behaviors": "Chování",
+              "Variables": "Proměnné",
+              "Math": "Matematické",
+              "Logic": "Logické",
+              "Functions": "Funkce",
+              "Text": "Text",
+              "Comments": "Komentáře"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Prostředí",
+              "Sprites": "Postavy",
+              "Locations": "Umístění",
+              "Actions": "Akce",
+              "Events": "Události",
+              "Behaviors": "Chování",
+              "Variables": "Proměnné",
+              "Math": "Matematické",
+              "Logic": "Logické",
+              "Functions": "Funkce",
+              "Text": "Text",
+              "Comments": "Komentáře"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Akce",
+              "Brushes": "Štětce",
+              "Loops": "Cykly",
+              "Math": "Matematické",
+              "Logic": "Logické",
+              "Functions": "Funkce",
+              "Variables": "Proměnné"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Prostředí",
+              "Sprites": "Postavy",
+              "Actions": "Akce",
+              "Events": "Události",
+              "Logic": "Logické",
+              "Math": "Matematické"
+            },
+            "behavior_names": {
+              "recovering": "zotavuje se",
+              "moving left and right": "posun doleva a doprava",
+              "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Prostředí",
+              "Sprites": "Postavy",
+              "Actions": "Akce",
+              "Behaviors": "Chování",
+              "Events": "Události",
+              "Locations": "Umístění",
+              "Logic": "Logické",
+              "Loops": "Cykly",
+              "Math": "Matematické",
+              "Variables": "Proměnné",
+              "Functions": "Funkce",
+              "Comments": "Komentáře"
+            },
+            "behavior_names": {
+              "recovering": "zotavuje se",
+              "moving left and right": "posun doleva a doprava",
+              "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+            }
+          }
+        }
+      }
+    }
+  }
+}

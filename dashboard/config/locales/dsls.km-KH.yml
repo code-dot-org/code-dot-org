@@ -1518,11 +1518,19 @@ km-KH:
       courseE_multi_bee_functions_predict1:
         answers:
         - text: ប្រូក្រាមដូច​គ្នាអាចធ្វើការដោះស្រាយនូវបញ្ហានេះបានផងដែរ។
+          feedback: ត្រឹមត្រូវហើយ! វាមិនមានបញ្ហាទេថាមានបរិមាណទឹកឃ្មុំខុសគ្នា។ មុខងារត្រូវបានរៀបចំឡើងដើម្បីដោះស្រាយបញ្ហានោះ។
         - text: ឃ្មុំនឹងមិនបង្កើតទឹកឃ្មុំគ្រប់គ្រាន់ទេ។
-        - {}
+          feedback: មិន​ត្រឹមត្រូវ។ មុខងារត្រូវបានរៀបចំឡើងដើម្បីគ្រប់គ្រងបរិមាណទឹកឃ្មុំលើស
+            ០ ។
+        - text: សត្វឃ្មុំនឹងព្យាយាមធ្វើឱ្យទឹកឃ្មុំច្រើនពេក។
+          feedback: មិន​ត្រឹមត្រូវ។ មុខងារត្រូវបានរៀបចំឡើងដើម្បីគ្រប់គ្រងបរិមាណទឹកឃ្មុំលើស
+            ០ ។
         - text: ខ្ញុំមិនដឹងទេ។
+          feedback: កម្មវិធីនេះនឹងធ្វើការដោះស្រាយនូវល្បែងផ្គុំរូបនេះផងដែរ។ វាត្រូវបានរៀបចំកម្មវិធីដើម្បីគ្រប់គ្រងបរិមាណទឹកឃ្មុំលើសពី
+            ០ ។
         questions:
-        - {}
+        - text: នេះគឺជាកម្មវិធីដូចគ្នាពីល្បែងផ្គុំរូបចុងក្រោយប៉ុន្តែបរិមាណទឹកឃ្មុំដើម្បីប្រមូលក្នុងរូបផ្គុំនេះបានផ្លាស់ប្តូរ។
+            តើនឹងមានអ្វីកើតឡើងនៅពេលអ្នកចុច "រត់"?
       courseE_multi_farmer_functions11_predict:
         answers:
         - {}
@@ -2445,3 +2453,150 @@ km-KH:
         content1: ការណែនាំ​ នៅទីនេះ
       outbreak_story2:
         content1: ការណែនាំ​ នៅទីនេះ
+      CSD U3 combining rep:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U3 combining rep_2018:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U3 combining rep_2018_2019:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 Encryption 1:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 Encryption 1_2018:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 Encryption 1_2018_2019:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 Encryption 2:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 Encryption 2_2018:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 Encryption 2_2018_2019:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 crosstab warmup:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 crosstab warmup_2018:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 crosstab warmup_2018_2019:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 data visualization:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 data visualization_2018:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 data visualization_2018_2019:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 student record:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 student record_2018:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U5 student record_2018_2019:
+        content1: ការណែនាំ​ នៅទីនេះ
+      Dance_Party_extras_intro_2019:
+        markdown: |-
+          # កុំទាន់អាលឈប់!
+
+          សម្រាប់ផ្នែកទី២នេះអ្នកនឹងត្រូវបង្កើតគម្រោងការសម្ដែងមួយដោយខ្លូនឯង។ នៅទីនេះគ្មានចំណោទបញ្ហាអោយអ្នកដោះស្រាយទេ តែគឺមានវគ្គមួយកំភ្លុះសម្រាប់បង្រៀនអ្នកពីក្បាច់ផ្សេងៗដើម្បីបង្កើតការសម្ដែងដែលមានភាពកាន់តែស្មុគស្មាញជាញមុនទៅទៀត។
+
+          វគ្គទាំងនេះ _មិនតម្រូវអោយអ្នករៀនតាមលំដាប់នោះទេ_។ អ្នកអាចផ្លោះពីមួយវគ្គទៅមួយវគ្គទៀតដើម្បីមើលរបៀបប្រើក្បាច់ណាមួយឡើងវិញ ឬក៏អាចយកផ្នែកផ្សេងៗនៃវគ្គផ្សេងគ្នាមកផ្គុំចូលគ្នាក៏បាន។ សាកល្បងអោយបានគ្រប់វគ្គទៅ ហើយរើសយកផ្នែកដែលអ្នកពេញចិត្តមកដាក់ចូលក្នុងគម្រោងការសម្ដែងរបស់អ្នកដើម្បីបង្ហាញចំណូលចិត្តផ្ទាល់ខ្លួនរបស់អ្នក។
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">បន្ទាប់</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          ទៅហើយមកវិញ
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          ប៊ូតុងបន្ថែម
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          សម្រាក! ប្រុង! តម្រង់ជួរ!</h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          គេនាំគ្នាទៅណាអស់ហើយ?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          ក្រុមរាំ
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          រង្វាស់ ១ ភាគ ៤
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          ទាប កណ្ដាល ខ្ពស់
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          ជាន់ហ្គែរ ចាប់ហ្វ្រាំង
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+      Internet Simulator Setup:
+        content1: ការណែនាំ​ នៅទីនេះ
+      Internet Simulator Setup 2:
+        content1: ការណែនាំ​ នៅទីនេះ
+      Internet Simulator Setup 3:
+        content1: ការណែនាំ​ នៅទីនេះ
+      Multi-Screen Apps:
+        content1: ការណែនាំ​ នៅទីនេះ
+      New Challenge Introduction:
+        content1: ការណែនាំ​ នៅទីនេះ
+      'Technique: Frequency Analysis':
+        content1: ការណែនាំ​ នៅទីនេះ
+      Terminology Recap:
+        content1: ការណែនាំ​ នៅទីនេះ
+      csd-pre-survey-2017-levelgroup:
+        title: CS ស្វែងយល់ពីការស្ទង់មតិមុនវគ្គសិក្សារបស់និស្សិត
+      csd-pre-survey-2017-levelgroup_2018:
+        title: CS ស្វែងយល់ពីការស្ទង់មតិមុនវគ្គសិក្សារបស់និស្សិត
+      csd-pre-survey-levelgroup_2019:
+        title: CS ស្វែងយល់ពីការស្ទង់មតិមុនវគ្គសិក្សារបស់និស្សិត

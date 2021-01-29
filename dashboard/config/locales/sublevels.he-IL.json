@@ -1,0 +1,256 @@
+{
+  "he-IL": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "פעולות",
+              "Events": "אירועים",
+              "Loops": "חזרות",
+              "Math": "מתמטיקה",
+              "Logic": "לוגיקה",
+              "Games/Score": "משחקים/נקודות"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "עולם",
+              "Dancers": "רקדנים",
+              "Properties": "מאפיינים",
+              "Events": "אירועים",
+              "Numbers": "מספרים",
+              "Logic": "לוגיקה"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "צייר כוכב",
+                "parameters": {
+                  "points": "נקודות",
+                  "length": "אורך"
+                }
+              },
+              "draw a circle": {
+                "name": "צייר מעגל"
+              },
+              "draw a pinwheel": {
+                "name": "צייר גלגל רוח",
+                "parameters": {
+                  "length": "אורך",
+                  "repeat": "חזור שוב"
+                }
+              },
+              "draw a triangle": {
+                "name": "צייר משולש",
+                "parameters": {
+                  "length": "אורך"
+                }
+              },
+              "draw a shape": {
+                "name": "צייר צורה",
+                "parameters": {
+                  "length": "אורך"
+                }
+              },
+              "draw a house": {
+                "name": "צייר בית",
+                "parameters": {
+                  "length": "אורך"
+                }
+              },
+              "draw a square": {
+                "name": "צייר ריבוע",
+                "parameters": {
+                  "length": "אורך"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "עולם",
+              "Sprites": "דמויות",
+              "Actions": "פעולות",
+              "Events": "אירועים",
+              "Behaviors": "התנהגויות"
+            },
+            "behavior_names": {
+              "wandering": "לשוטט",
+              "moving east": "לנוע מזרחה",
+              "spinning left": "להסתובב שמאלה",
+              "spinning right": "להסתובב ימינה",
+              "shrinking": "להתכווץ",
+              "growing": "לגדול",
+              "moving south": "לנוע דרומה",
+              "swimming left and right": "לשחות שמאלה וימינה",
+              "moving north": "לנוע צפונה",
+              "jittering": "לרעוד",
+              "moving west": "לנוע מערבה",
+              "patrolling": "לסייר"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "עולם",
+              "Dancers": "רקדנים",
+              "Properties": "מאפיינים",
+              "Events": "אירועים",
+              "Numbers": "מספרים",
+              "Logic": "לוגיקה"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "פעולות",
+              "Brushes": "מברשות",
+              "Loops": "חזרות",
+              "Math": "מתמטיקה",
+              "Logic": "לוגיקה",
+              "Functions": "פונקציות",
+              "Variables": "משתנים"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "עולם",
+              "Sprites": "דמויות",
+              "Locations": "מיקומים",
+              "Actions": "פעולות",
+              "Events": "אירועים",
+              "Behaviors": "התנהגויות",
+              "Variables": "משתנים",
+              "Math": "מתמטיקה",
+              "Logic": "לוגיקה",
+              "Functions": "פונקציות",
+              "Text": "טקסט",
+              "Comments": "תגובות"
+            },
+            "behavior_names": {
+              "moving east": "לנוע מזרחה",
+              "spinning left": "להסתובב שמאלה",
+              "spinning right": "להסתובב ימינה",
+              "shrinking": "להתכווץ",
+              "growing": "לגדול",
+              "moving south": "לנוע דרומה",
+              "swimming left and right": "לשחות שמאלה וימינה",
+              "moving north": "לנוע צפונה",
+              "jittering": "לרעוד",
+              "moving west": "לנוע מערבה",
+              "patrolling": "לסייר",
+              "wandering": "לשוטט"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "עולם",
+              "Sprites": "דמויות",
+              "Locations": "מיקומים",
+              "Actions": "פעולות",
+              "Events": "אירועים",
+              "Behaviors": "התנהגויות",
+              "Variables": "משתנים",
+              "Math": "מתמטיקה",
+              "Logic": "לוגיקה",
+              "Functions": "פונקציות",
+              "Text": "טקסט",
+              "Comments": "תגובות"
+            },
+            "behavior_names": {
+              "moving east": "לנוע מזרחה",
+              "spinning left": "להסתובב שמאלה",
+              "spinning right": "להסתובב ימינה",
+              "shrinking": "להתכווץ",
+              "growing": "לגדול",
+              "moving south": "לנוע דרומה",
+              "swimming left and right": "לשחות שמאלה וימינה",
+              "moving north": "לנוע צפונה",
+              "jittering": "לרעוד",
+              "moving west": "לנוע מערבה",
+              "patrolling": "לסייר",
+              "wandering": "לשוטט"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "פעולות",
+              "Brushes": "מברשות",
+              "Loops": "חזרות",
+              "Math": "מתמטיקה",
+              "Logic": "לוגיקה",
+              "Functions": "פונקציות",
+              "Variables": "משתנים"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "עולם",
+              "Sprites": "דמויות",
+              "Actions": "פעולות",
+              "Events": "אירועים",
+              "Logic": "לוגיקה",
+              "Math": "מתמטיקה"
+            },
+            "behavior_names": {
+              "recovering": "להחלים",
+              "wandering": "לשוטט",
+              "moving east": "לנוע מזרחה",
+              "spinning left": "להסתובב שמאלה",
+              "spinning right": "להסתובב ימינה",
+              "shrinking": "להתכווץ",
+              "growing": "לגדול",
+              "moving south": "לנוע דרומה",
+              "moving left and right": "לנוע שמאלה וימינה",
+              "moving north": "לנוע צפונה",
+              "jittering": "לרעוד",
+              "moving west": "לנוע מערבה",
+              "patrolling": "לסייר",
+              "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "עולם",
+              "Sprites": "דמויות",
+              "Actions": "פעולות",
+              "Behaviors": "התנהגויות",
+              "Events": "אירועים",
+              "Locations": "מיקומים",
+              "Logic": "לוגיקה",
+              "Loops": "חזרות",
+              "Math": "מתמטיקה",
+              "Variables": "משתנים",
+              "Functions": "פונקציות",
+              "Comments": "תגובות"
+            },
+            "behavior_names": {
+              "recovering": "להחלים",
+              "wandering": "לשוטט",
+              "moving east": "לנוע מזרחה",
+              "spinning left": "להסתובב שמאלה",
+              "spinning right": "להסתובב ימינה",
+              "shrinking": "להתכווץ",
+              "growing": "לגדול",
+              "moving south": "לנוע דרומה",
+              "moving left and right": "לנוע שמאלה וימינה",
+              "moving north": "לנוע צפונה",
+              "jittering": "לרעוד",
+              "moving west": "לנוע מערבה",
+              "patrolling": "לסייר",
+              "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+            }
+          }
+        }
+      }
+    }
+  }
+}

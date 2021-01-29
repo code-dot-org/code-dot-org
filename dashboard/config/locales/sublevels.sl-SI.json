@@ -1,0 +1,175 @@
+{
+  "sl-SI": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Dejanja",
+              "Events": "Dogodki",
+              "Loops": "Zanke",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Games/Score": "Igra/rezultat"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Svet",
+              "Dancers": "Plesalci",
+              "Properties": "Lastnosti",
+              "Events": "Dogodki",
+              "Numbers": "Številke",
+              "Logic": "Logika"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "nariši zvezdo",
+                "parameters": {
+                  "points": "točk",
+                  "length": "dolžina"
+                }
+              },
+              "draw a circle": {
+                "name": "nariši krog"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "dolžina",
+                  "repeat": "ponovi"
+                }
+              },
+              "draw a triangle": {
+                "name": "nariši trikotnik",
+                "parameters": {
+                  "length": "dolžina"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "dolžina"
+                }
+              },
+              "draw a house": {
+                "name": "nariši hišo",
+                "parameters": {
+                  "length": "dolžina"
+                }
+              },
+              "draw a square": {
+                "name": "nariši kvadrat",
+                "parameters": {
+                  "length": "dolžina"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Svet",
+              "Actions": "Dejanja",
+              "Events": "Dogodki",
+              "Behaviors": "Vedenje"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Svet",
+              "Dancers": "Plesalci",
+              "Properties": "Lastnosti",
+              "Events": "Dogodki",
+              "Numbers": "Številke",
+              "Logic": "Logika"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Dejanja",
+              "Brushes": "Čopiči",
+              "Loops": "Zanke",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funkcije",
+              "Variables": "Spremenljivke"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Svet",
+              "Locations": "Lokacije",
+              "Actions": "Dejanja",
+              "Events": "Dogodki",
+              "Behaviors": "Vedenje",
+              "Variables": "Spremenljivke",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funkcije",
+              "Text": "Besedilo",
+              "Comments": "Komentarji"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Svet",
+              "Locations": "Lokacije",
+              "Actions": "Dejanja",
+              "Events": "Dogodki",
+              "Behaviors": "Vedenje",
+              "Variables": "Spremenljivke",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funkcije",
+              "Text": "Besedilo",
+              "Comments": "Komentarji"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Dejanja",
+              "Brushes": "Čopiči",
+              "Loops": "Zanke",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funkcije",
+              "Variables": "Spremenljivke"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Svet",
+              "Actions": "Dejanja",
+              "Events": "Dogodki",
+              "Logic": "Logika",
+              "Math": "Matematika"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Svet",
+              "Actions": "Dejanja",
+              "Behaviors": "Vedenje",
+              "Events": "Dogodki",
+              "Locations": "Lokacije",
+              "Logic": "Logika",
+              "Loops": "Zanke",
+              "Math": "Matematika",
+              "Variables": "Spremenljivke",
+              "Functions": "Funkcije",
+              "Comments": "Komentarji"
+            }
+          }
+        }
+      }
+    }
+  }
+}

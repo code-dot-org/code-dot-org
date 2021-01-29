@@ -3175,3 +3175,9 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Õppetund 14
+            lesson15:
+              name: Õppetund 15
