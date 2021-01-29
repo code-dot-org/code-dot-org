@@ -25,7 +25,7 @@ Există nenumărate <a href="https://hourofcode.com/us/learn">activități Hour 
 Toate activitățile noastre integrează rezolvarea problemelor și gândirea critică cu distracția și creativitatea, dar aici sunt câteva preferințe ale elevilor:
 
 - Pentru copilul căruia îi place să joace:<a href="https://code.org/minecraft">Minecraft</a>sau<a href="https://code.org/dance">Dance Party</a>
-- Pentru copilul căruia îi place Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a>, sau <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+- Pentru copilul căruia îi place Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, sau <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
 - Pentru copilul căruia îi place să învețe: <a href="https://code.org/oceans">IA pentru Oceane</a> sau <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Compune Muzică cu Scratch</a>
 
 <h3>Tehnologie simplă sau fără tehnologie?</h3>

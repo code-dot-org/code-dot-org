@@ -63,7 +63,7 @@ Os alunos terão a oportunidade de compartilhar o resultado da atividade por mei
 
 ## Atividade
 
-### <a name="Activity"></a> [Pingue-pongue](http://learn.code.org/s/course3/lesson/15/puzzle/1)
+### <a name="Activity"></a> [Pingue-pongue](http://learn.code.org/s/course3/stage/15/puzzle/1)
 
 Na etapa final desta aula, os alunos estarão aptos a personalizar seu jogo para torná-lo único - incentive-os a ver como eles podem criar jogos diferentes dentro dos limites fornecidos.
 

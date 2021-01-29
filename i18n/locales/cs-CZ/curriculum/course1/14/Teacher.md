@@ -61,7 +61,7 @@ V poslední fázi studenti si zvyknou používat cykly pro opakování jednoduch
 
 ## Aktivita
 
-### <a name="Activity"></a> [Včelka: Cykly](http://learn.code.org/s/course1/lesson/14/puzzle/1)
+### <a name="Activity"></a> [Včelka: Cykly](http://learn.code.org/s/course1/stage/14/puzzle/1)
 
 [/ dohromady]
 

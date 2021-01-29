@@ -64,7 +64,7 @@ Reveja com os alunos a navegação básica do labirinto, principalmente:
 
 ## Atividade
 
-### <a name="Activity"></a> [Artista](http://learn.code.org/s/course3/lesson/3/puzzle/1)
+### <a name="Activity"></a> [Artista](http://learn.code.org/s/course3/stage/3/puzzle/1)
 
 Nos níveis do artista, os alunos não estão restritos a ângulos de 90 graus. Ter transferidores disponíveis pode ajudar os alunos a visualizar melhor os ângulos que eles precisam.
 

@@ -60,7 +60,7 @@ De volta ao artista, aqui os alunos aprenderão a desenhar imagens mais complexa
 
 ## Atividade
 
-### <a name="Activity"></a> [Artista: laços](http://learn.code.org/s/course2/lesson/7/puzzle/1)
+### <a name="Activity"></a> [Artista: laços](http://learn.code.org/s/course2/stage/7/puzzle/1)
 
 Nos níveis do Artista, os alunos não estarão mais restritos a ângulos de 90 graus. O uso do transferidor poderá ajudar os alunos a visualizar melhor os ângulos de que eles precisam.
 

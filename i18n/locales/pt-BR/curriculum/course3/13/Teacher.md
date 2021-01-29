@@ -54,7 +54,7 @@ Os alunos usam o ambiente da abelha para escrever programas usando laços aninha
 
 ## Atividade
 
-### <a name="Activity"></a> [Abelha: laços aninhados](http://learn.code.org/s/course3/lesson/13/puzzle/1)
+### <a name="Activity"></a> [Abelha: laços aninhados](http://learn.code.org/s/course3/stage/13/puzzle/1)
 
 [/together]
 

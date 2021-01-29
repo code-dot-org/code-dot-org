@@ -25,7 +25,7 @@ Hour of Codeをパソコン、タブレット、スマートフォンで、も�
 私たちの活動はすべて、問題解決と批判的思考を楽しく創造性をもって統合したものですが、ここでは学生のお気に入りのものをいくつかご紹介します。
 
 - 遊ぶことが大好きなお子さんのために<a href="https://code.org/minecraft">マインクラフト</a> または <a href="https://code.org/dance">ダンスパーティー</a>。
-- ディズニーが大好きなお子さんのために<a href="https://code.org/starwars">スター・ウォーズ</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">アナと雪の女王</a>, または <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">モアナ</a>。
+- ディズニーが大好きなお子さんのために<a href="https://code.org/starwars">スター・ウォーズ</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">アナと雪の女王</a>, または <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">モアナ</a>。
 - 学ぶことが大好きなお子さんのために[AI for Oceans](https://code.org/oceans) や [Make Music with Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg) などがあります。
 
 <h3>  ローテクかノーテクか？  </h3>

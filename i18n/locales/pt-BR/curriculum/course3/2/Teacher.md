@@ -62,7 +62,7 @@ Reveja com os alunos a navegação básica do labirinto, principalmente:
 
 ## Atividade
 
-### <a name="Activity"></a> [Labirinto](http://learn.code.org/s/course3/lesson/2/puzzle/1)
+### <a name="Activity"></a> [Labirinto](http://learn.code.org/s/course3/stage/2/puzzle/1)
 
 Conforme seus alunos trabalham nos desafios, observe como eles planejam o caminho do zumbi. Identifique estratégias diferentes e peça a eles que as compartilhem com toda a turma. Isso ajuda os alunos a reconhecer que existem muitas formas de abordar esses problemas. Você pode passar alguns desafios no projetor. Enquanto você faz isso, peça para que um aluno exiba o caminho na tela, enquanto outro escreve as instruções na lousa.
 

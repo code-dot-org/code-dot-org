@@ -63,7 +63,7 @@ Peça para os alunos pensarem sobre problemas que eles precisam resolver em seu 
 
 ## Atividade
 
-### <a name="Activity"></a> [Abelha: Depuração](http://learn.code.org/s/course2/lesson/10/puzzle/1)
+### <a name="Activity"></a> [Abelha: Depuração](http://learn.code.org/s/course2/stage/10/puzzle/1)
 
 Conforme seus alunos trabalham nos desafios, observe como eles procuram por erros. Identifique estratégias diferentes e peça que eles as compartilhem com toda a turma. Isso ajuda os alunos a reconhecer que existem muitas formas de abordar esses problemas. Peça para que os alunos sigam o caminho descrito pelo código com os dedos, para encontrar erros em potencial.
 

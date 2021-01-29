@@ -2653,7 +2653,7 @@
             "markdown": "You can share these stories with your class to help them see how AI will impact the future.\n\n* [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n* [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n* [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n* [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n* [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n* [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n* [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)\n"
           }
         ],
-        "name": "Level 1 - [Machine Learning](https://studio.code.org/s/oceans/lesson/1/puzzle/1)"
+        "name": "Level 1 - [Machine Learning](https://studio.code.org/s/oceans/stage/1/puzzle/1)"
       },
       "seeding_key": {
         "activity_section.key": "daee1c13-09e4-4f2f-88c8-d3841869bfcb",
@@ -2712,7 +2712,7 @@
             "markdown": "Every image in this part of the tutorial is fed into a neural network that has been pre-trained on a huge set of data called [ImageNet](http://www.image-net.org/). The database contains over 14 million hand-annotated images. ImageNet contains more than 20,000 categories with a typical category, such as \"balloon\" or \"strawberry\", consisting of several hundred images. When A.I. is scanning new images and making its own predictions in the tutorial, it is actually comparing the possible categories for the new image with the patterns it found in the training dataset. \n"
           }
         ],
-        "name": "Levels 2-4 - [Train AI to Clean the Ocean](https://studio.code.org/s/oceans/lesson/1/puzzle/2)"
+        "name": "Levels 2-4 - [Train AI to Clean the Ocean](https://studio.code.org/s/oceans/stage/1/puzzle/2)"
       },
       "seeding_key": {
         "activity_section.key": "0c9dc510-4ea6-468e-9742-679a423e5d43",
@@ -2724,7 +2724,7 @@
       "position": 7,
       "properties": {
         "description": "**Quick Share-out:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n**Video**: [r ai-training]",
-        "name": "Level 5 - [Training Data & Bias](https://studio.code.org/s/oceans/lesson/1/puzzle/5)"
+        "name": "Level 5 - [Training Data & Bias](https://studio.code.org/s/oceans/stage/1/puzzle/5)"
       },
       "seeding_key": {
         "activity_section.key": "b10ef3bc-5288-4c55-b69e-6fb33ebc2119",
@@ -2772,7 +2772,7 @@
             "markdown": "The fish in this tutorial are randomly generated based on some pre-defined components, including mouths, tails, eyes, scales, and fins, with a randomly chosen body color, shape, and size. Rather than looking at the actual image data, A.I. is now looking for patterns in these components based on how the student classifies each fish. It will be more likely to label a fish the same way the student would have if it has matching traits.\n"
           }
         ],
-        "name": "Level 6 - [Using Training Data](https://studio.code.org/s/oceans/lesson/1/puzzle/6)"
+        "name": "Level 6 - [Using Training Data](https://studio.code.org/s/oceans/stage/1/puzzle/6)"
       },
       "seeding_key": {
         "activity_section.key": "85ec3108-13e9-4784-98f4-752a933ca338",
@@ -2784,7 +2784,7 @@
       "position": 11,
       "properties": {
         "description": "**Video**: [r ai-societal]\n\n**Say:** Artificial intelligence systems learn from the data we give it, but sometimes we might not give it enough data or we might give it data that makes it act strangely.",
-        "name": "Level 7 - [Impacts on Society](https://studio.code.org/s/oceans/lesson/1/puzzle/7)"
+        "name": "Level 7 - [Impacts on Society](https://studio.code.org/s/oceans/stage/1/puzzle/7)"
       },
       "seeding_key": {
         "activity_section.key": "abecbbe6-7273-4017-8638-463a018e54d4",
@@ -2836,7 +2836,7 @@
       "position": 15,
       "properties": {
         "description": "Here, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed.",
-        "name": "Level 8 - [Teach A.I. a new word](https://studio.code.org/s/oceans/lesson/1/puzzle/8)"
+        "name": "Level 8 - [Teach A.I. a new word](https://studio.code.org/s/oceans/stage/1/puzzle/8)"
       },
       "seeding_key": {
         "activity_section.key": "b0a42852-7651-4072-bbac-90667d3ec936",

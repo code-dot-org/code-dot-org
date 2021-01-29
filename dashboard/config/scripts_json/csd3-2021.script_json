@@ -16045,7 +16045,7 @@
   "resources": [
     {
       "name": "CS in Entertainment",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/1/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/1/puzzle/1/",
       "key": "cs-in-entertainment- 2020",
       "properties": {
         "type": "Exemplar",
@@ -16082,7 +16082,7 @@
     },
     {
       "name": "Drawing Shapes",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/2/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/2/puzzle/1/",
       "key": "drawing-shapes-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -16241,7 +16241,7 @@
     },
     {
       "name": "Mini Project - Captioned Scenes",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/10/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/10/puzzle/1/",
       "key": "mini-project-captioned-scenes-2020",
       "properties": {
         "type": "Exemplar",
@@ -16364,7 +16364,7 @@
     },
     {
       "name": "Animated Scene Planning",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/13/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/13/puzzle/1/",
       "key": "animated-scene-planning-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -16463,7 +16463,7 @@
     },
     {
       "name": "Interactive Card",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/17/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/17/puzzle/1/",
       "key": "interactive-card-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -16475,7 +16475,7 @@
     },
     {
       "name": "Interactive Card - Marked Rubrics",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/17/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/17/puzzle/1/",
       "key": "interactive-card-marked-rubrics",
       "properties": {
         "type": "Exemplar",
@@ -16550,7 +16550,7 @@
     },
     {
       "name": "Collision Detection",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/19/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/19/puzzle/1/",
       "key": "collision-detection-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -16600,7 +16600,7 @@
     },
     {
       "name": "Mini-Project Guide - Side Scroller",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/20/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/20/puzzle/1/",
       "key": "mini-project-guide-side-scroller-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -16674,7 +16674,7 @@
     },
     {
       "name": "Flyer Game - Project Guide",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/23/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/23/puzzle/1/",
       "key": "flyer-game-project-guide-exemplar",
       "properties": {
         "type": "Exemplar",
@@ -16761,7 +16761,7 @@
     },
     {
       "name": "Planning Your Platform Game",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/26/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/26/puzzle/1/",
       "key": "planning-your-platform-game-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -16811,7 +16811,7 @@
     },
     {
       "name": "Make Your Own Game ",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/27/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/27/puzzle/1/",
       "key": "make-your-own-game-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -16823,7 +16823,7 @@
     },
     {
       "name": "Make Your Own Game - Sample Marked Rubrics",
-      "url": "https://studio.code.org/s/csd3-2020/lesson/27/puzzle/1/",
+      "url": "https://studio.code.org/s/csd3-2020/stage/27/puzzle/1/",
       "key": "make-your-own-game-sample-marked-rubrics",
       "properties": {
         "type": "Exemplar",

@@ -46,7 +46,7 @@ Code.org는 다양한 아워오브코드™ 활동과 강의, 비디오를 Code.
 
 이러한 활동은 튜토리얼을 통해 스스로 학습하도록 설계되었습니다. 교사의 지도 또는 교사의 준비 작업이 많이 요구되지 않습니다.
 
-**교사 주도 강의 ([예](https://studio.code.org/s/course1/lesson/2/puzzle/1), [템플릿](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**교사 주도 강의 ([예](https://studio.code.org/s/course1/stage/2/puzzle/1), [템플릿](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 지금 수 만명의 교육자가 아워오브코드를 시도해 보았으며, 많은 학급이 컴퓨터 과학의 기초를 가르치는 더 창의적인 활동을 할 준비가 되었습니다. 이 분야에서서 더 높은 수준의 지식을 보유한 교사를 위해 아워오브코드 베테랑을 위한 "교사 지도" 강의 및 활동 플랜을 수집 및 안내하고 있습니다. 
 

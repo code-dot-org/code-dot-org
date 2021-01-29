@@ -6381,7 +6381,7 @@
     },
     {
       "name": "Representation Matters",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/1/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/1/puzzle/1",
       "key": "representation-matters-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6393,7 +6393,7 @@
     },
     {
       "name": "Meals Data",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/1/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/1/puzzle/1",
       "key": "meals-data-resource-2019",
       "properties": {
         "type": "Resource",
@@ -6443,7 +6443,7 @@
     },
     {
       "name": "Representing Information",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/2/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/2/puzzle/1",
       "key": "representing-information-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6480,7 +6480,7 @@
     },
     {
       "name": "ASCII",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/3/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/3/puzzle/1",
       "key": "ascii-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6580,7 +6580,7 @@
     },
     {
       "name": "Representing Numbers",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/5/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/5/puzzle/1",
       "key": "representing-numbers-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6617,7 +6617,7 @@
     },
     {
       "name": "Pet Records",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/7/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/7/puzzle/1",
       "key": "pet-records-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6655,7 +6655,7 @@
     },
     {
       "name": "Keeping Data Secret",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/6/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/6/puzzle/1",
       "key": "keeping-data-secret-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6693,7 +6693,7 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/8/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/8/puzzle/1",
       "key": "create-a-representation-exemplar-2019",
       "properties": {
         "type": "Exemplars",
@@ -6743,7 +6743,7 @@
     },
     {
       "name": "Problem Solving with Data",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/9/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/9/puzzle/1",
       "key": "problem-solving-with-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6793,7 +6793,7 @@
     },
     {
       "name": "Structuring Data",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/11/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/11/puzzle/1",
       "key": "structuring-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6817,7 +6817,7 @@
     },
     {
       "name": "Interpreting Data",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/13/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/13/puzzle/1",
       "key": "interpreting-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6867,7 +6867,7 @@
     },
     {
       "name": "Making Decisions With Data",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/12/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/12/puzzle/1",
       "key": "making-decisions-with-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6917,7 +6917,7 @@
     },
     {
       "name": "Automating Data Decisions",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/14/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/14/puzzle/1",
       "key": "automating-data-decisions-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -7006,7 +7006,7 @@
     },
     {
       "name": "Data in the Real World",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/10/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/10/puzzle/1",
       "key": "data-in-the-real-world-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -7082,7 +7082,7 @@
     },
     {
       "name": "Make a Recommendation",
-      "url": "https://studio.code.org/s/csd5-2019/lesson/15/puzzle/1",
+      "url": "https://studio.code.org/s/csd5-2019/stage/15/puzzle/1",
       "key": "make-a-recommendation-exemplars-2019",
       "properties": {
         "type": "Exemplars",

@@ -55,7 +55,7 @@ Using the Bee environment, students use and modify functions to help the bee col
 
 ## Activity
 
-### <a name="Activity"></a> [Bee: Functions](http://learn.code.org/s/course3/lesson/6/puzzle/1)
+### <a name="Activity"></a> [Bee: Functions](http://learn.code.org/s/course3/stage/6/puzzle/1)
 
 [/juntos]
 

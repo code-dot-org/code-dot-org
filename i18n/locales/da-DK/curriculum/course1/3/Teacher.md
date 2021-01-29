@@ -65,7 +65,7 @@ Spørg eleverne, om de nogensinde har brugt en computer mus før (eller pegefelt
 
 ## Aktivivtet
 
-### <a name="Activity"></a>[Puslespil: Lær at trække og slippe](http://learn.code.org/s/course1/lesson/3/puzzle/1)
+### <a name="Activity"></a>[Puslespil: Lær at trække og slippe](http://learn.code.org/s/course1/stage/3/puzzle/1)
 
 Parprogrammering fungerer bedst med to elever om en computer og klar aftale om hvem, der er køreren, og hvem der er navigatør. Kan være en god ide at lave en visuel påmindelse, som hatte eller vinger, til at identificere køreren og navigatør.
 

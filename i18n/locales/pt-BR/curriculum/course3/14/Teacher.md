@@ -64,7 +64,7 @@ Pergunte aos alunos sobre problemas que eles resolvem no cotidiano.
 
 ## Atividade
 
-### <a name="Activity"></a> [Abelha: depuração](http://learn.code.org/s/course3/lesson/14/puzzle/1)
+### <a name="Activity"></a> [Abelha: depuração](http://learn.code.org/s/course3/stage/14/puzzle/1)
 
 Conforme seus alunos trabalham nos desafios, observe como eles procuram por erros. Identifique estratégias diferentes e peça a eles que as compartilhem com toda a turma. Isso ajuda os alunos a reconhecer que existem muitas formas de abordar esses problemas. Peça para que os alunos sigam o caminho descrito pelo código com os dedos, para encontrar erros em potencial.
 

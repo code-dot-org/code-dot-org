@@ -3649,8 +3649,8 @@ zh-CN:
         content1: 描述
         markdown: "# Code.org 的互联网模拟器\n\n_注意：本教程中列出的说明，是为需要单独使用互联网模拟器，而不使用 Code.org
           计算机科学原理教案的教师准备的。如果计划将此活动用于 Code.org 计算机科学原理教案的一部分，可访问[计算机科学原理教案页面](https://code.org/educate/csp)。_\n\n###
-          内容\n这里包含 3 部分背景信息：\n\n* 什么是网络模拟器？概述（见下文）\n* [设置说明](/s/netsim/lesson/1/puzzle/2)\n*
-          [常见问答](/s/netsim/lesson/1/puzzle/3)\n \n### 什么是网络模拟器？概述：\n\n互联网模拟器是由 Code.org
+          内容\n这里包含 3 部分背景信息：\n\n* 什么是网络模拟器？概述（见下文）\n* [设置说明](/s/netsim/stage/1/puzzle/2)\n*
+          [常见问答](/s/netsim/stage/1/puzzle/3)\n \n### 什么是网络模拟器？概述：\n\n互联网模拟器是由 Code.org
           为新的高中[计算机科学原理](https://code.org/educate/csp) 课程开发的工具。该工具旨在让学生获得尝试（和解决）与网络计算机相关的各种问题的经验。在教案的第
           1、2 单元的多节课中都使用了互联网模拟器，成功的构建了互联网的不同层次。 \n\n如果考虑在课堂上使用该工具进行自己设计的活动，建议通过[课程计划](https://curriculum.code.org/csp/unit1)来熟悉它。
           下一页的 **设置说明** 适用于希望独立于 Code.org 计算机科学原理教案，来使用互联网模拟器的教师。 \n\n本工具本身不会 _教授_
@@ -7343,7 +7343,7 @@ zh-CN:
 
           非常感谢花时间来帮助计算机科学发现变得更好！
 
-          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2018/lesson/1/puzzle/1/page/1" target="top">点击这里完成计算机科学发现课后问卷！！！</a>
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2018/stage/1/puzzle/1/page/1" target="top">点击这里完成计算机科学发现课后问卷！！！</a>
 
           (在新窗口中打开)
 
@@ -7600,7 +7600,7 @@ zh-CN:
 
           非常感谢花时间来帮助计算机科学发现变得更好！
 
-          <a class="btn btn-large btn-success" href="/s/csd-post-survey/lesson/1/puzzle/1/page/1" target="top">点击这里完成计算机科学发现课后问卷！！！</a>
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/stage/1/puzzle/1/page/1" target="top">点击这里完成计算机科学发现课后问卷！！！</a>
 
           (在新窗口中打开)
 

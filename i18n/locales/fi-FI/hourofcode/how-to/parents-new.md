@@ -25,7 +25,7 @@ Voit käyttää lukemattomia <a href="https://hourofcode.com/us/learn"> Hour of 
 Integroimme ongelmanratkaisua ja kriittistä ajattelua hauskanpidon ja luovuuden avulla, mutta tässä on joitain opiskelijoiden suosikkeja:
 
 - Pelaamista ragastavalle lapselle: <a href="https://code.org/minecraft">Minecraft</a> tai <a href="https://code.org/dance">Dance Party</a>
-- Disney-fanille: <a href="https://code.org/starwars">Star Wars</a>,<a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Froze</a> tai <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+- Disney-fanille: <a href="https://code.org/starwars">Star Wars</a>,<a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Froze</a> tai <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
 - Lapselle, joka rakastaa uuden oppimista: <a href="https://code.org/oceans">AI for Oceans</a> tai <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Luo Musiikkia</a>, Make Music with Scratchin avulla
 
 <h3>Low-tech vai no-tech?</h3>

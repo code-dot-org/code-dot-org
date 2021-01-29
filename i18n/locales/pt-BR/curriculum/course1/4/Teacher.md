@@ -70,7 +70,7 @@ Incentive os alunos a continuar usando o método de programação em duplas que 
 
 ## Atividade
 
-### <a name="Activity"></a> [Labirinto: sequência](http://learn.code.org/s/course1/lesson/4/puzzle/1)
+### <a name="Activity"></a> [Labirinto: sequência](http://learn.code.org/s/course1/stage/4/puzzle/1)
 
 Conforme seus alunos trabalham nos desafios, observe como eles planejam o caminho do pássaro. Identifique estratégias diferentes e peça que eles as compartilhem com toda a turma. Isso ajuda os alunos a reconhecer que existem muitas formas de abordar esses problemas. Você pode mostrar alguns desafios no projetor. Enquanto você faz isso, peça para que um aluno exiba o caminho na tela, enquanto outro escreve as instruções na lousa.
 

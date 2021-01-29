@@ -62,7 +62,7 @@ Pergunte aos alunos sobre problemas que eles resolvem no cotidiano.
 
 ## Atividade
 
-### <a name="Activity"></a> [Labirinto: depuração](http://learn.code.org/s/course1/lesson/5/puzzle/1)
+### <a name="Activity"></a> [Labirinto: depuração](http://learn.code.org/s/course1/stage/5/puzzle/1)
 
 Conforme seus alunos trabalham nos desafios, observe como eles procuram por erros. Identifique estratégias diferentes e peça a eles que as compartilhem com toda a turma. Isso ajuda os alunos a reconhecer que existem muitas formas de abordar esses problemas.
 

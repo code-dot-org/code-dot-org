@@ -47,7 +47,7 @@ Tham gia Hour of Code rất dễ dàng – ngay cả với người mới bắt 
     Dành cho trẻ thích chơi: <a href="https://code.org/minecraft">Minecraft</a> hoặc <a href="https://code.org/dance">Tiệc Khiêu Vũ</a>
   </li>
   <li>
-    Dành cho trẻ thích Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/lesson/1/puzzle/1">Frozen</a> hoặc <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+    Dành cho trẻ thích Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a> hoặc <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
   </li>
   <li>
     Dành cho trẻ muốn học: <a href="https://code.org/oceans">Trí Tuệ Nhân Tạo cho Đại Dương</a> hoặc <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Sáng tác nhạc từ con số 0</a>

@@ -61,7 +61,7 @@ Students use the Artist environment to write programs that have looped statement
 
 ## Activity
 
-### <a name="Activity"></a> [Artist: Nested Loops](http://learn.code.org/s/course3/lesson/11/puzzle/1)
+### <a name="Activity"></a> [Artist: Nested Loops](http://learn.code.org/s/course3/stage/11/puzzle/1)
 
 [/together]
 

@@ -61,7 +61,7 @@ Brainstorm met je leerlingen de manieren om iemand te vertellen hoe je een afbee
 
 ## Activiteit
 
-### <a name="Activity"></a> [Artist: Sequence](http://learn.code.org/s/course1/lesson/8/puzzle/1)
+### <a name="Activity"></a> [Artist: Sequence](http://learn.code.org/s/course1/stage/8/puzzle/1)
 
 Als een leerling moeite heeft met het inschatten van de lengte, wijs ze er dan op dat elke lijn aan het begin en het eind een punt heeft.
 

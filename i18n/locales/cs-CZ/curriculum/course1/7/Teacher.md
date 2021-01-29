@@ -65,7 +65,7 @@ V této lekci studenti pomohou včelám sbírat nektar z květů a vytvářet me
 
 ## Aktivita
 
-### <a name="Activity"></a> [Včele: Sekvence](http://learn.code.org/s/course1/lesson/7/puzzle/1)
+### <a name="Activity"></a> [Včele: Sekvence](http://learn.code.org/s/course1/stage/7/puzzle/1)
 
 Upozorněte studenty, že každý květ a plástev má vedle malé číslo. Toto číslo uvádí, kolik nektaru lze sbírat nebo medu vyrobit.
 

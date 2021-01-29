@@ -62,7 +62,7 @@ Vraag de studenten over het oplossen van alledaagse problemen.
 
 ## Activiteit
 
-### <a name="Activity"></a> [Maze: Debugging](http://learn.code.org/s/course1/lesson/5/puzzle/1)
+### <a name="Activity"></a> [Maze: Debugging](http://learn.code.org/s/course1/stage/5/puzzle/1)
 
 Vraag je leerlingen de puzzels te verbeteren en bestudeer hoe ze de fouten oplossen. Identificeer verschillende strategieën die worden gebruikt en vraag uw leerlingen deze met de klas te delen. Dit helpt leerlingen te herkennen dat er veel manieren zijn om een probleem op te lossen.
 

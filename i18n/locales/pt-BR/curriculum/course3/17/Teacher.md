@@ -63,7 +63,7 @@ Os alunos terão a oportunidade de compartilhar o resultado da atividade por mei
 
 ## Atividade
 
-### <a name="Activity"></a> [Laboratório: crie um jogo](http://learn.code.org/s/course3/lesson/17/puzzle/1)
+### <a name="Activity"></a> [Laboratório: crie um jogo](http://learn.code.org/s/course3/stage/17/puzzle/1)
 
 Projetar um jogo divertido, mas desafiador, para evitar que o jogador fique entediado, é uma tarefa difícil. Incentive seus alunos a refletir sobre como suas escolhas em programação tornam diferentes aspectos do jogo mais difíceis, fáceis, frustrantes e divertidos.
 
