@@ -1,0 +1,189 @@
+{
+  "is-IS": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Aðgerðir",
+              "Events": "Atvik",
+              "Loops": "Lykkjur",
+              "Math": "Reikningur",
+              "Logic": "Rökvísi",
+              "Games/Score": "Leikir/skor"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Heimur",
+              "Dancers": "Dansarar",
+              "Properties": "Eiginleikar",
+              "Events": "Atvik",
+              "Numbers": "Tölur",
+              "Logic": "Rökvísi"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "teikna stjörnu",
+                "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd",
+                "parameters": {
+                  "points": "stig",
+                  "length": "lengd"
+                }
+              },
+              "draw a circle": {
+                "name": "teikna hring",
+                "description": "teikna hring með tiltekinn radíus",
+                "parameters": {
+                  "radius": "radius"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "teikna rellu",
+                "parameters": {
+                  "sides": "hliðar",
+                  "length": "lengd",
+                  "repeat": "endurtaka"
+                }
+              },
+              "draw a triangle": {
+                "name": "teikna þríhyrning",
+                "parameters": {
+                  "length": "lengd"
+                }
+              },
+              "draw a shape": {
+                "name": "teikna form",
+                "parameters": {
+                  "sides": "hliðar",
+                  "length": "lengd"
+                }
+              },
+              "draw a house": {
+                "name": "teikna hús",
+                "parameters": {
+                  "length": "lengd"
+                }
+              },
+              "draw a square": {
+                "name": "teikna ferning",
+                "parameters": {
+                  "length": "lengd"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Heimur",
+              "Sprites": "Kvikar",
+              "Actions": "Aðgerðir",
+              "Events": "Atvik",
+              "Behaviors": "Hegðun"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Heimur",
+              "Dancers": "Dansarar",
+              "Properties": "Eiginleikar",
+              "Events": "Atvik",
+              "Numbers": "Tölur",
+              "Logic": "Rökvísi"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Aðgerðir",
+              "Brushes": "Penslar",
+              "Loops": "Lykkjur",
+              "Math": "Reikningur",
+              "Logic": "Rökvísi",
+              "Functions": "Föll",
+              "Variables": "Breytur"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Heimur",
+              "Sprites": "Kvikar",
+              "Locations": "Staðir",
+              "Actions": "Aðgerðir",
+              "Events": "Atvik",
+              "Behaviors": "Hegðun",
+              "Variables": "Breytur",
+              "Math": "Reikningur",
+              "Logic": "Rökvísi",
+              "Functions": "Föll",
+              "Text": "texti",
+              "Comments": "Athugasemdir"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Heimur",
+              "Sprites": "Kvikar",
+              "Locations": "Staðir",
+              "Actions": "Aðgerðir",
+              "Events": "Atvik",
+              "Behaviors": "Hegðun",
+              "Variables": "Breytur",
+              "Math": "Reikningur",
+              "Logic": "Rökvísi",
+              "Functions": "Föll",
+              "Text": "texti",
+              "Comments": "Athugasemdir"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Aðgerðir",
+              "Brushes": "Penslar",
+              "Loops": "Lykkjur",
+              "Math": "Reikningur",
+              "Logic": "Rökvísi",
+              "Functions": "Föll",
+              "Variables": "Breytur"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Heimur",
+              "Sprites": "Kvikar",
+              "Actions": "Aðgerðir",
+              "Events": "Atvik",
+              "Logic": "Rökvísi",
+              "Math": "Reikningur"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Heimur",
+              "Sprites": "Kvikar",
+              "Actions": "Aðgerðir",
+              "Behaviors": "Hegðun",
+              "Events": "Atvik",
+              "Locations": "Staðir",
+              "Logic": "Rökvísi",
+              "Loops": "Lykkjur",
+              "Math": "Reikningur",
+              "Variables": "Breytur",
+              "Functions": "Föll",
+              "Comments": "Athugasemdir"
+            }
+          }
+        }
+      }
+    }
+  }
+}

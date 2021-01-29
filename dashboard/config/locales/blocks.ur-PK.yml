@@ -1100,6 +1100,8 @@ ur:
             '"West"': مغرب
       gamelab_moveToward:
         text: اقدام {SPRITE} پکسلز {DISTANCE} کی طرف {TARGET}
+      gamelab_newSpritePointer:
+        text: کلک کیا {SPRITE}
       gamelab_objectSpritePointer:
         text: کلک کیا {SPRITE}
       gamelab_playSound:
@@ -1252,6 +1254,8 @@ ur:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": مچھلی نہیں
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": میرا لیبل
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": میرا لیبل نہیں
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

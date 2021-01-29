@@ -285,7 +285,7 @@
         "Standalone_Artist_1": "Velkommen til Artist! Lad os starte med at lave en enkel firkant ved at bruge \"drej til højre\"-blokken og \"flyt fremad\"-blokken. Hver side skal være 100 pixel lang.",
         "Standalone_Artist_2": "Tegn denne diamant med 120 og 60 graders vinkler og 150 pixel lange sider.",
         "Standalone_Artist_3": "Kan du tegne denne sekskant med 100 pixel lange sider og 60 graders drejninger?",
-        "Standalone_Artist_4": "Nu har du fået en ny blok at lege med, \"gentag\". Den vil gentage et sæt af kommandoer. Hvad sker der hvis du \"gentag\"-er disse kommandoer 6 gange?",
+        "Standalone_Artist_4": "Nu har du fået en ny blok at lege med, \"loop\". Den vil gentage et sæt af kommandoer. Hvad sker der hvis du \"gentag\"-er disse kommandoer 6 gange?",
         "Standalone_Artist_5": "Hvor mange gange skal du gentage denne diamant for at tegne blomsten?",
         "Standalone_Artist_5.5": "Bemærk hvordan vi forenklede diamantkoden ved at bruge en løkke eller \"gentag\"-blok. Du kan gentage hele sekvensen 12 gange for at tegne blomsten. Tip: Du skal dreje 30 grader efter din diamant-løkke, så du ikke bliver ved med at tegne oveni den samme diamant.",
         "Standalone_Artist_6": "Gentag sekskant-koden seks gang for at tegne mønsteret. Hvor mange grader skal du mon dreje hver gang? Tip: del antallet af grader i en cirkel med det antal gentagelser du udfører.",
