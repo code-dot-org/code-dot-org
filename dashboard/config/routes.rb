@@ -272,14 +272,10 @@ Dashboard::Application.routes.draw do
   end
 
   # Redirects from old /stage url to new /lesson url
-  get '/s/:script_name/stage/:position', to: redirect('/s/%{script_name}/lesson/%{position}')
-  get '/s/:script_name/stage/:position/puzzle/:number', to: redirect('/s/%{script_name}/lesson/%{position}/puzzle/%{number}')
-  get '/s/:script_name/stage/:position/puzzle/:number/page/:page_number', to: redirect('/s/%{script_name}/lesson/%{position}/puzzle/%{number}/page/%{page_number}')
-  get '/s/:script_name/stage/:position/puzzle/:number/sublevel/:sublevel_number', to: redirect('/s/%{script_name}/lesson/%{position}/puzzle/%{number}/sublevel/%{sublevel_number}')
+  get '/s/:script_name/stage/:position(*all)', to: redirect(path: '/s/%{script_name}/lesson/%{position}%{all}')
 
   # Redirects from old /lockable url to new /survey url
-  get '/s/:script_name/lockable/:position', to: redirect('/s/%{script_name}/survey/%{position}')
-  get '/s/:script_name/lockable/:position/puzzle/:number/page/:page_number', to: redirect('/s/%{script_name}/survey/%{position}/puzzle/%{number}/page/%{page_number}')
+  get '/s/:script_name/lockable/:position(*all)', to: redirect(path: '/s/%{script_name}/survey/%{position}%{all}')
 
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
