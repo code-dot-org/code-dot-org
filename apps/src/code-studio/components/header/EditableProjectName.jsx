@@ -22,7 +22,8 @@ export const styles = {
     marginTop: 0,
     marginBottom: 0,
     marginLeft: 10,
-    marginRight: 0
+    marginRight: 0,
+    boxShadow: 'none'
   }
 };
 
