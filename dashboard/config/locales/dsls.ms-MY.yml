@@ -2023,3 +2023,36 @@ ms-MY:
         description: Anda telah menyelesaikan bimbingan! Terus membuat perubahan atau
           penambahbaikan kepada projek anda. Anda boleh memilih untuk terus bekerja
           dengan blok yang sama atau cuba kotak alatan yang diperluas.
+      'Technique: Frequency Analysis':
+        markdown: "\n# Cracking Substitution Ciphers\n\nTeknik terbaik untuk meguraikan
+          cipher yang rawak  adalah  **frequency  analysis**\n\nRingkasan dari : [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          **Frequency analysis** adalah technique berdasarkan berapa kerap abjap tertentu
+          akan digunakan dalam english berbanding dengan bahasa lain. \nContoh: \nDalam
+          perkataan english, *E*, *T*,*A* and *O* akan kerap digunakan, manakala *Z*,*O*
+          dan *X* jarang digunakan . *TH*, *ER*, *ON* dan *AN* adalah abjab passangan
+          biasa yang akan digunakan bersama. \n\n* Sebenarnya, semua kekerapan pengunaan
+          huruf adalah lebih kurang sama dalam \"semua\" dalam text contoh dalam bahasa
+          english. \n\nVersi widget pada halaman sebelumnya bertujuan untuk membantu
+          anda ** memecahkan pengganti pengganti melalui analisis frekuensi **\n\nDengan
+          menganalisis kekerapan huruf dalam mesej sulit berbanding dengan kekerapan
+          huruf dalam perkataan dalam bahasa English, anda boleh tepat meneka  pemetaan
+          huruf yang betul . \n\n(Program ini akan memaparkan kekerapan huruf  dalam
+          tex mesej sulit (warna oren)  berbanding  dengan text biasa (warna biru)
+          dalam bahasa english)\n\n### Tip: Bagaimana bermula? \n\n1. Cari perkataan
+          yang pendek untuk meneka huruf yang  berkenaan.  Berapa perkataan yang menggunakan
+          satu huruf yang anda tahu? \"a\". Perkataan yang kerap digunnakan dan mengandungi
+          3 huruf adalah \"the\". \n2. Selepas anda mengantikan perkataan yang biasa
+          digunakan seperti\"a\" and \"the\", anda boleh lebih senang untuk menekakan
+          perkataan/huruf yang lain. \n3. Selepas dapat menekakan dengan betul dengan
+          lebih banyak perkataan/huruf yang betul, perkataan/huruf yang lain akan
+          senang diteka. \n4. Dengan membandingkan kekerapaan huruf akan membolehkan
+          anda membuat penekaan yang lebih tepat dengan senang. \n\n### Cubakan ini:\nAnimasi
+          di bawah  memaparkan bagaimana seseorang bermula dan langkah yang digunakan\n\n*
+          Pertama, aturkan huruf mengikut kekerpan huruf yang digunakan. \n* Carikan
+          huruf yang boleh digunakan dalam'the'\nIt's a good start!. Ini adalah langkah
+          permulaan yang baik!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Adakah teknik pengantian huruf dengan cara rawak baik?\n* After a little
+          practice, how long does it take you to crack a random substitution cipher?
+          Setelah berlatih beberapa kali,  berapa lama kah anda perlu untuk meneka
+          kata laluan dengan betul dengan mengantikan huruf dengan rawak?\n* Is this
+          good or not  Adakah teknik ini sesuai digunakan?"
