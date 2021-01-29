@@ -271,6 +271,16 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  # Redirects from old /stage url to new /lesson url
+  get '/s/:script_name/stage/:position', to: redirect('/s/%{script_name}/lesson/%{position}')
+  get '/s/:script_name/stage/:position/puzzle/:number', to: redirect('/s/%{script_name}/lesson/%{position}/puzzle/%{number}')
+  get '/s/:script_name/stage/:position/puzzle/:number/page/:page_number', to: redirect('/s/%{script_name}/lesson/%{position}/puzzle/%{number}/page/%{page_number}')
+  get '/s/:script_name/stage/:position/puzzle/:number/sublevel/:sublevel_number', to: redirect('/s/%{script_name}/lesson/%{position}/puzzle/%{number}/sublevel/%{sublevel_number}')
+
+  # Redirects from old /lockable url to new /survey url
+  get '/s/:script_name/lockable/:position', to: redirect('/s/%{script_name}/survey/%{position}')
+  get '/s/:script_name/lockable/:position/puzzle/:number/page/:page_number', to: redirect('/s/%{script_name}/survey/%{position}/puzzle/%{number}/page/%{page_number}')
+
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
@@ -280,26 +290,26 @@ Dashboard::Application.routes.draw do
 
     get 'instructions', to: 'scripts#instructions'
 
-    # /s/xxx/stage/yyy/puzzle/zzz
-    resources :stages, only: [], path: "/stage", param: 'position', format: false do
+    # /s/xxx/lesson/yyy/puzzle/zzz
+    resources :stages, only: [], path: "/lesson", param: 'position', format: false do
       get 'extras', to: 'script_levels#stage_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
-          # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
+          # /s/xxx/lesson/yyy/puzzle/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
-          # /s/xxx/stage/yyy/puzzle/zzz/sublevel/sss
+          # /s/xxx/lesson/yyy/puzzle/zzz/sublevel/sss
           get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
         end
       end
     end
 
-    # /s/xxx/lockable/yyy/puzzle/zzz
-    resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
+    # /s/xxx/survey/yyy/puzzle/zzz
+    resources :lockable_stages, only: [], path: "/survey", param: 'position', format: false do
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
-          # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
+          # /s/xxx/survey/yyy/puzzle/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
         end
       end
