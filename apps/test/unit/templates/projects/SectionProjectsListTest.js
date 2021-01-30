@@ -6,10 +6,6 @@ import {
 } from '@cdo/apps/templates/projects/ProjectsList';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import {
-  allowConsoleErrors,
-  allowConsoleWarnings
-} from '../../../util/throwOnConsole';
 
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';
 
@@ -48,9 +44,6 @@ const STUB_PROJECTS_DATA = [
 const STUDIO_URL_PREFIX = '//foo-studio.code.org';
 
 describe('SectionProjectsList', () => {
-  allowConsoleErrors();
-  allowConsoleWarnings();
-
   let root;
 
   beforeEach(() => {
