@@ -14,10 +14,9 @@ class SectionProgressLessonNumberCell extends Component {
   static propTypes = {
     // Sequence number counting all stage types in order
     position: PropTypes.number.isRequired,
-    // Sequence number which counts lockable and non-lockable stages separately,
-    // explained further in Stage#summarize
+    // Sequence number which counts lockable lessons without lesson plans and all other lessons separately,
     relativePosition: PropTypes.number.isRequired,
-    lockable: PropTypes.bool.isRequired,
+    numberedLesson: PropTypes.bool.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     tooltipId: PropTypes.string.isRequired,
     onSelectDetailView: PropTypes.func.isRequired
@@ -27,7 +26,7 @@ class SectionProgressLessonNumberCell extends Component {
     const {
       position,
       relativePosition,
-      lockable,
+      numberedLesson,
       lessonOfInterest,
       tooltipId
     } = this.props;
@@ -47,7 +46,7 @@ class SectionProgressLessonNumberCell extends Component {
         data-tip
         data-for={tooltipId}
       >
-        {lockable ? <FontAwesome icon="lock" /> : relativePosition}
+        {numberedLesson ? relativePosition : <FontAwesome icon="lock" />}
       </div>
     );
   }
