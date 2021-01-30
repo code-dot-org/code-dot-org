@@ -1,7 +1,7 @@
 Feature: Blocks can be dragged from popouts
 
 Background:
-  Given I am on "http://studio.code.org/s/20-hour/stage/11/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/lesson/11/puzzle/1?noautoplay=true"
   And I wait for the page to fully load
 
 Scenario: Connect two blocks from toolbox

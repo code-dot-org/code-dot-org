@@ -6,7 +6,7 @@ Background:
 
 Scenario:
   When I open my eyes to test "bounce game"
-  And I am on "http://studio.code.org/s/events/stage/1/puzzle/1?noautoplay=true"
+  And I am on "http://studio.code.org/s/events/lesson/1/puzzle/1?noautoplay=true"
   When I rotate to landscape
   And I wait for the page to fully load
   And I see no difference for "initial load"

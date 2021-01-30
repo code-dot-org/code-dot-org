@@ -5,7 +5,7 @@ Feature: Hour of Code 2015 tutorial is completable
   Scenario: Solving puzzle 1 in block mode
     Given I am on "http://studio.code.org/s/starwars/reset"
     And execute JavaScript expression "window.localStorage.clear()"
-    And I am on "http://studio.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
+    And I am on "http://studio.code.org/s/starwars/lesson/1/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     When I drag droplet block "moveRight" to line 2
