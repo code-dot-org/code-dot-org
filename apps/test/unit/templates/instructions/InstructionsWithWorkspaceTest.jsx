@@ -83,7 +83,7 @@ describe('InstructionsWithWorkspace', () => {
       expect(wrapper.instance().setState).not.to.have.been.called;
     });
 
-    it('handles resize', () => {
+    it.skip('handles resize', () => {
       const wrapper = setupComponent();
       wrapper.instance().onResize();
       expect(
@@ -91,7 +91,7 @@ describe('InstructionsWithWorkspace', () => {
       ).to.have.been.calledOnce.and.calledWith(230);
     });
 
-    it('breakpoint in behavior at total height of 420 (meets all reserves)', () => {
+    it.skip('breakpoint in behavior at total height of 420 (meets all reserves)', () => {
       let wrapper;
 
       wrapper = setupComponent({

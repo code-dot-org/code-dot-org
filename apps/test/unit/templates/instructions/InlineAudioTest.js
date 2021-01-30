@@ -105,7 +105,7 @@ describe('InlineAudio', function() {
     );
   });
 
-  it('renders controls if text-to-speech is enabled and sound is loaded', function() {
+  it.skip('renders controls if text-to-speech is enabled and sound is loaded', function() {
     const component = getComponent(
       <StatelessInlineAudio {...DEFAULT_PROPS} textToSpeechEnabled />
     );
@@ -165,7 +165,7 @@ describe('InlineAudio', function() {
     expect(window.Audio).to.have.been.calledOnce;
   });
 
-  it('handles source update gracefully, stopping audio', function() {
+  it.skip('handles source update gracefully, stopping audio', function() {
     const component = getComponent(<StatelessInlineAudio {...DEFAULT_PROPS} />);
     component.instance().playAudio();
 
