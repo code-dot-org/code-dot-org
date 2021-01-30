@@ -12,13 +12,9 @@ import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDia
 import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
-import {
-  allowConsoleErrors,
-  allowConsoleWarnings
-} from '../../../util/throwOnConsole';
+import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('PersonalProjectsTable', () => {
-  allowConsoleErrors();
   allowConsoleWarnings();
 
   beforeEach(() => {
