@@ -10,6 +10,8 @@ import {
   getSelectableLabels
 } from "../redux";
 import { styles } from "../constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 class SelectFeatures extends Component {
   static propTypes = {
@@ -54,8 +56,8 @@ class SelectFeatures extends Component {
         style={popupStyle}
       >
         <div style={{ width: "initial", ...styles.panel }}>
-          <div onClick={onClose} style={styles.selectFeaturesPopupClose}>
-            X
+          <div onClick={onClose} style={styles.popupClose}>
+            <FontAwesomeIcon icon={faTimes} />
           </div>
           {mode === "label" && showSelectLabels && (
             <form style={styles.panelContentLeft}>

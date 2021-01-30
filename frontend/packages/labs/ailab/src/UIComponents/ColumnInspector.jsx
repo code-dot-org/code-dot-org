@@ -10,10 +10,13 @@ import {
   removeSelectedFeature,
   getCurrentColumnIsSelectedFeature,
   getCurrentColumnIsSelectedLabel,
-  getRangesByColumn
+  getRangesByColumn,
+  setCurrentColumn
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
 import Histogram from "react-chart-histogram";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 class ColumnInspector extends Component {
   static propTypes = {
@@ -24,7 +27,8 @@ class ColumnInspector extends Component {
     removeSelectedFeature: PropTypes.func.isRequired,
     currentColumnIsSelectedFeature: PropTypes.bool,
     currentColumnIsSelectedLabel: PropTypes.bool,
-    rangesByColumn: PropTypes.object
+    rangesByColumn: PropTypes.object,
+    setCurrentColumn: PropTypes.func
   };
 
   handleChangeDataType = (event, feature) => {
@@ -43,9 +47,14 @@ class ColumnInspector extends Component {
   removeLabel = () => {
     this.props.setLabelColumn(null);
   }
+
   removeFeature = () => {
     this.props.removeSelectedFeature(this.props.currentColumnData.id);
   };
+
+  onClose = () => {
+    this.props.setCurrentColumn(undefined);
+  }
 
   render() {
     const {
@@ -71,6 +80,9 @@ class ColumnInspector extends Component {
       <div id="column-inspector">
         {currentColumnData && (
           <div style={styles.validationMessagesLight}>
+            <div onClick={this.onClose} style={styles.popupClose}>
+              <FontAwesomeIcon icon={faTimes} />
+            </div>
 
             {currentColumnData.dataType === ColumnTypes.OTHER && (
               <div>
@@ -234,6 +246,9 @@ export default connect(
     },
     removeSelectedFeature(labelColumn) {
       dispatch(removeSelectedFeature(labelColumn));
+    },
+    setCurrentColumn(column) {
+      dispatch(setCurrentColumn(column));
     }
   })
 )(ColumnInspector);
