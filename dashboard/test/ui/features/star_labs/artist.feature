@@ -1,7 +1,7 @@
 Feature: Playing the Artist Game
 
 Background:
-  Given I am on "http://studio.code.org/s/20-hour/stage/5/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/lesson/5/puzzle/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element "#runButton" is visible
@@ -18,7 +18,7 @@ Scenario: Winning the first level
   And element "#resetButton" is visible
   And I wait until element ".congrats" is visible
   And I press "continue-button"
-  And I wait until I am on "http://studio.code.org/s/20-hour/stage/5/puzzle/2"
+  And I wait until I am on "http://studio.code.org/s/20-hour/lesson/5/puzzle/2"
 
 Scenario: Losing the first level
   Then I drag block "2" to block "4"

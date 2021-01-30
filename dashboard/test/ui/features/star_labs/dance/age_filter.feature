@@ -112,7 +112,7 @@ Feature: Dance Lab Age Filter
     And I sign out
 
   Scenario: Song selector is hidden when initializing with teacher flag on for signed in student
-    Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true&songfilter=on"
+    Given I am on "http://studio.code.org/s/allthethings/lesson/37/puzzle/1?noautoplay=true&songfilter=on"
     And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
