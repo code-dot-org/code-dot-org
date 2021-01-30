@@ -22,7 +22,7 @@ describe('FindVocabularyDialog', () => {
   it('renders default props', () => {
     const wrapper = shallow(<FindVocabularyDialog {...defaultProps} />);
     expect(wrapper.contains('Add Vocabulary')).to.be.true;
-    expect(wrapper.find('BaseDialog').length).to.equal(1);
+    expect(wrapper.find('LessonEditorDialog').length).to.equal(1);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('option').length).to.equal(2);
     expect(wrapper.find('Button').length).to.equal(1);

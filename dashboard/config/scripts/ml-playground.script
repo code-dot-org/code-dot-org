@@ -1,5 +1,10 @@
 login_required true
 
+lesson 'intro-categorical', display_name: 'Introduction to AI Lab', has_lesson_plan: false
+level 'ml-intro categorical-tacos', progression: 'Dataset #1: Tacos'
+level 'ml-intro categorical-ice cream', progression: 'Dataset #2: Ice Cream'
+level 'ml-intro categorical-pizza', progression: 'Dataset #3: Pizza'
+
 lesson 'oceans', display_name: 'Machine Learning with AI for Oceans', has_lesson_plan: false
 
 lesson 'intro', display_name: 'Introduction to Machine Learning', has_lesson_plan: false
