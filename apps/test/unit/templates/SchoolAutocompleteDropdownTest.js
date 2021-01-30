@@ -4,13 +4,9 @@ import {assert, expect} from 'chai';
 import sinon from 'sinon';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import _ from 'lodash';
-import {
-  allowConsoleErrors,
-  allowConsoleWarnings
-} from '../../util/throwOnConsole';
+import {allowConsoleWarnings} from '../../util/throwOnConsole';
 
 describe('SchoolAutocompleteDropdown', () => {
-  allowConsoleErrors();
   allowConsoleWarnings();
 
   let fetchStub;

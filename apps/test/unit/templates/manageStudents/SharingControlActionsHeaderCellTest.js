@@ -6,13 +6,9 @@ import i18n from '@cdo/locale';
 import {combineReducers, createStore} from 'redux';
 import reducer from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SharingControlActionsHeaderCell from '@cdo/apps/templates/manageStudents/SharingControlActionsHeaderCell';
-import {
-  allowConsoleErrors,
-  allowConsoleWarnings
-} from '../../../util/throwOnConsole';
+import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('SharingControlActionsHeaderCell', () => {
-  allowConsoleErrors();
   allowConsoleWarnings();
 
   const store = createStore(combineReducers({manageStudents: reducer}));
