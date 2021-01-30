@@ -100,7 +100,7 @@ describe('ProjectAppTypeArea', () => {
       expect(stubNavigate).to.have.been.called;
     });
 
-    it('displays more projects when View More is pressed', () => {
+    it.skip('displays more projects when View More is pressed', () => {
       // some of the most useful selectors like [text="View more"] don't work
       // with mount(). see: https://github.com/airbnb/enzyme/issues/534
       const wrapper = wrapped(
