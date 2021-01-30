@@ -2,10 +2,6 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
 import TextResponsesTable from '@cdo/apps/templates/textResponses/TextResponsesTable';
-import {
-  allowConsoleErrors,
-  allowConsoleWarnings
-} from '../../../util/throwOnConsole';
 
 const responses = [
   {
@@ -39,9 +35,6 @@ const responses = [
 const sectionId = 1;
 
 describe('TextResponsesTable', () => {
-  allowConsoleErrors();
-  allowConsoleWarnings();
-
   it('renders a table', () => {
     const wrapper = mount(
       <TextResponsesTable responses={responses} sectionId={sectionId} />
