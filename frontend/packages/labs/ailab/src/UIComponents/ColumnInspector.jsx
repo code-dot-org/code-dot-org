@@ -139,38 +139,6 @@ class ColumnInspector extends Component {
                   </div>
                 )}
 
-                {/*currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
-                  <div>
-                    <p>
-                      {Object.keys(currentColumnData.uniqueOptions).length}{" "}
-                      unique values for {currentColumnData.id}:{" "}
-                    </p>
-                    <div style={styles.subPanel}>
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Option</th>
-                            <th>Frequency</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {Object.keys(currentColumnData.uniqueOptions)
-                            .sort()
-                            .map((option, index) => {
-                              return (
-                                <tr key={index}>
-                                  <td>{option}</td>
-                                  <td>
-                                    {currentColumnData.frequencies[option]}
-                                  </td>
-                                </tr>
-                              );
-                            })}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                )*/}
                 {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
                   <div>
                     {currentColumnData.range && (
