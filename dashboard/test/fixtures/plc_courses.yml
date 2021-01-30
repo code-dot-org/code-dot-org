@@ -1,12 +1,12 @@
 ECS Support Legacy:
   id: 3
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &1 2020-02-21 16:29:07.000000000 Z
+    utc: &1 2020-09-11 00:59:30.000000000 Z
     zone: &2 !ruby/object:ActiveSupport::TimeZone
       name: Etc/UTC
     time: *1
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &3 2020-02-21 16:29:07.000000000 Z
+    utc: &3 2020-09-11 00:59:30.000000000 Z
     zone: *2
     time: *3
   course_id: 3
