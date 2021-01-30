@@ -20,7 +20,6 @@ class ScriptDslTest < ActiveSupport::TestCase
     teacher_resources: [],
     lesson_extras_available: false,
     has_verified_resources: false,
-    has_lesson_plan: false,
     curriculum_path: nil,
     project_widget_visible: false,
     project_widget_types: [],
@@ -338,19 +337,6 @@ endvariants
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:has_verified_resources]
-  end
-
-  test 'can set has_lesson_plan' do
-    input_dsl = <<~DSL
-      has_lesson_plan 'true'
-
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level 'Level 1'
-      lesson 'Lesson2', display_name: 'Lesson2'
-      level 'Level 2'
-    DSL
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal true, output[:has_lesson_plan]
   end
 
   test 'can set tts' do
