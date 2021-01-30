@@ -22,7 +22,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "freeplay artist sharing"
-  And I am on "http://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
+  And I am on "http://studio.code.org/s/course3/lesson/21/puzzle/15?noautoplay=true"
   When I rotate to landscape
   And I wait for the page to fully load
   And I see no difference for "initial load"
@@ -35,7 +35,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "freeplay playlab sharing"
-  And I am on "http://studio.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true"
+  And I am on "http://studio.code.org/s/playlab/lesson/1/puzzle/10?noautoplay=true"
   When I rotate to landscape
   And I wait for the page to fully load
   And I see no difference for "initial load"

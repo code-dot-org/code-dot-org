@@ -77,7 +77,7 @@ Scenario: Changing Parameter names
   And "evaluate" refers to block "10"
 
   When I open my eyes to test "changing contract parameters"
-  Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lesson/13/puzzle/11?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And I press the first "#modalEditorClose > .blocklyText" element
