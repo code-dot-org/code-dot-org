@@ -949,6 +949,7 @@ lesson_557:
     zone: *2
     time: *107
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2118
