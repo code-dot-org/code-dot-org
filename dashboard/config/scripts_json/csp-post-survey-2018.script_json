@@ -7,7 +7,6 @@
     "properties": {
       "exclude_csf_column_in_legend": true,
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "hideable_lessons": true
     },
     "new_name": null,
