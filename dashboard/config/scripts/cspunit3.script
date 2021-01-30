@@ -1,5 +1,4 @@
 login_required true
-has_lesson_plan true
 
 lesson 'The Need For Programming Languages', display_name: 'The Need For Programming Languages', has_lesson_plan: true
 level 'U3L01 Student Lesson Introduction'

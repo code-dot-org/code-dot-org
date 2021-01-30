@@ -5,7 +5,6 @@
     "hidden": false,
     "login_required": true,
     "properties": {
-      "has_lesson_plan": true,
       "hideable_lessons": true
     },
     "new_name": null,
