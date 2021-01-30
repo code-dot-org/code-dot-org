@@ -8,10 +8,6 @@ import {sources as sourcesApi, files as filesApi} from '@cdo/apps/clientApi';
 import * as utils from '@cdo/apps/utils';
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {
-  allowConsoleErrors,
-  allowConsoleWarnings
-} from '../../util/throwOnConsole';
 
 const FAKE_CURRENT_VERSION = 'current-version-id';
 const FAKE_PREVIOUS_VERSION = 'previous-version-id';
@@ -31,8 +27,6 @@ const FAKE_VERSION_LIST_RESPONSE = {
 };
 
 describe('VersionHistory', () => {
-  allowConsoleErrors();
-  allowConsoleWarnings();
   let wrapper;
 
   beforeEach(() => {
