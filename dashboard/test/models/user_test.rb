@@ -4464,4 +4464,10 @@ class UserTest < ActiveSupport::TestCase
     user.increment_section_attempts
     assert_equal 1, user.properties['section_attempts']
   end
+
+  test 'section attempts in last 24 hours returns 0 if timestamp more than 1 day ago' do
+    user = create :user
+    user.properties = {'section_attempts': 5, 'section_attempts_last_reset': DateTime.now - 1}
+    assert_equal 0, user.section_attempts_last_24_hours
+  end
 end

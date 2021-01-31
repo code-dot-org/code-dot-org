@@ -2272,14 +2272,12 @@ class User < ApplicationRecord
   # There are two possible states in which we would want to reset section attempts
   # 1) Initialize for the first time 2) 24 hours have passed since last reset
   def reset_section_attempts?
-    # subtracting DateTimes returns the difference of days as a floating point number
-    # By casting to an int, we can check whether at least a full day has passed.
-    !section_attempts_last_reset || num_section_attempts == 0 || (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
+    !section_attempts_last_reset || num_section_attempts == 0 || DateTime.parse(section_attempts_last_reset) <= 1.day.ago
   end
 
   def display_captcha?
     # If 24 hours has passed since last reset, return false.
-    if section_attempts_last_reset && (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
+    if section_attempts_last_reset && DateTime.parse(section_attempts_last_reset) <= 1.day.ago
       return false
     else
       return num_section_attempts >= 3
@@ -2295,6 +2293,14 @@ class User < ApplicationRecord
     # users can register while joining a section,
     # so we should not save section attempts if new user hasn't been persisted
     save! if persisted?
+  end
+
+  # This value is sent to frontend in sections_controller.rb
+  def section_attempts_last_24_hours
+    if section_attempts_last_reset && DateTime.parse(section_attempts_last_reset) <= 1.day.ago
+      return 0
+    end
+    num_section_attempts
   end
 
   private
