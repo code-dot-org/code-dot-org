@@ -120,22 +120,16 @@ export default class JoinSection extends React.Component {
     }
   };
 
-  close = () => {
-    //Remove the recaptcha script from DOM if necessary
-    const captchaScript = document.getElementById('captcha');
-    if (captchaScript) {
-      captchaScript.remove();
-    }
-    this.setState({displayCaptcha: false});
-  };
+  close = () => this.setState({displayCaptcha: false});
 
-  //reCaptcha token will be undefined is the user isn't required to complete a captcha
+  //reCaptcha token will be undefined if the user isn't required to complete a captcha
   //captcha is only required for users that attempt to join 3 or more sections in 24 hours
   joinSection = recaptchaToken => {
     const sectionCode = this.state.sectionCode;
     const normalizedSectionCode = sectionCode.trim().toUpperCase();
 
     //Reset the form after a request is made and close captcha dialog if necessary
+    //Also increment number of section attempts to keep state in line with value in the db
     this.setState({
       sectionCode: '',
       sectionAttempts: this.state.sectionAttempts + 1

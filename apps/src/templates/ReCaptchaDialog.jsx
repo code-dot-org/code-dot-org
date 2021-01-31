@@ -14,6 +14,11 @@ const styles = {
   }
 };
 
+const INITIAL_STATE = {
+  submitButtonEnabled: false,
+  loadedCaptcha: false
+};
+
 /*
 Note that the version of reCAPTCHA supported by this dialog (v2 - I am not a robot)
 can be difficult for young users to solve. Thus, it should be used sparingly across the site.
@@ -29,20 +34,18 @@ export default class ReCaptchaDialog extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      submitButtonEnabled: false,
-      loadedCaptcha: false
-    };
+    this.state = {...INITIAL_STATE};
     this.token = '';
     this.onCaptchaVerification = this.onCaptchaVerification.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onCaptchaExpiration = this.onCaptchaExpiration.bind(this);
+    this.onCloseCleaup = this.onCloseCleaup.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
   }
 
   componentDidUpdate(prevProps) {
-    // If the dialog goes from unopen to open, load the script and disabled submit button
+    // If the dialog goes from unopen to open, load the script and disable submit button
     if (this.props.isOpen && !prevProps.isOpen) {
-      this.setState({submitButtonEnabled: false});
       //Add reCaptcha script and associated callbacks.
       const script = document.createElement('script');
       script.src = 'https://www.google.com/recaptcha/api.js';
@@ -71,15 +74,33 @@ export default class ReCaptchaDialog extends React.Component {
     this.setState({submitButtonEnabled: false});
   }
 
+  // Clean up the DOM from updates in componentDidUpdate
+  onCloseCleaup() {
+    //Remove the recaptcha script from DOM if necessary
+    const captchaScript = document.getElementById('captcha');
+    if (captchaScript) {
+      captchaScript.remove();
+      delete window['onCaptchaSubmit'];
+      delete window['onCaptchaExpired'];
+      this.setState({...INITIAL_STATE});
+    }
+  }
+
   // Function passed as props must then send token to the Rails backend immediately
   // for verification.
-  // Must submit a POST request per documentation here: https://developers.google.com/recaptcha/docs/verify
+  // Use google_recaptcha_helper.rb on backend to make POST request to google API
   handleSubmit() {
+    this.onCloseCleaup();
     this.props.handleSubmit(this.token);
   }
 
+  handleCancel() {
+    this.onCloseCleaup();
+    this.props.handleCancel();
+  }
+
   render() {
-    const {siteKey, isOpen, handleCancel, submitText} = this.props;
+    const {siteKey, isOpen, submitText} = this.props;
     return (
       <div>
         <BaseDialog
@@ -99,7 +120,7 @@ export default class ReCaptchaDialog extends React.Component {
           />
           <DialogFooter>
             <Button
-              onClick={handleCancel}
+              onClick={this.handleCancel}
               text={i18n.dialogCancel()}
               color={Button.ButtonColor.gray}
             />
