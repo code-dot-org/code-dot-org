@@ -92,7 +92,7 @@ export const styles = {
     float: "left",
     marginLeft: 10,
     width: "calc(30% - 20px)",
-    padding: 10,
+    padding: 20,
     backgroundColor: "rgb(230,230,230)",
     border: "solid 1px black",
     borderRadius: 5,
@@ -100,7 +100,8 @@ export const styles = {
     fontSize: 18,
     boxSizing: "border-box",
     overflow: "scroll",
-    marginTop: 59
+    marginTop: 59,
+    position: "relative"
   },
 
   dataDisplayTable: {
@@ -270,14 +271,16 @@ export const styles = {
     color: "rgb(186, 168, 70)",
     border: "dotted 1px grey",
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
+    cursor: "pointer"
   },
 
   statementFeature: {
     color: "rgb(70, 186, 168)",
     border: "dotted 1px grey",
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
+    cursor: "pointer"
   },
 
   selectLabelPopup: {
@@ -290,9 +293,10 @@ export const styles = {
     marginLeft: 440
   },
 
-  selectFeaturesPopupClose: {
+  popupClose: {
     position: "absolute",
-    right: 20
+    right: 20,
+    cursor: "pointer"
   },
 
   selectLabelText: {
