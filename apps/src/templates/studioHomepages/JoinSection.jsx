@@ -104,13 +104,13 @@ export default class JoinSection extends React.Component {
 
   handleKeyUp = event => {
     if (event.key === 'Enter') {
-      this.validateRecaptcha();
+      this.joinSectionWithoutCaptcha();
     } else if (event.key === 'Escape') {
       this.setState({sectionCode: '', displayCaptcha: false});
     }
   };
 
-  validateRecaptcha = () => {
+  joinSectionWithoutCaptcha = () => {
     const {sectionAttempts} = this.state;
     //captcha verification required when more than 3 section attempts in 24 hours
     const requireCaptcha = sectionAttempts >= 3;
@@ -201,7 +201,7 @@ export default class JoinSection extends React.Component {
           />
           <Button
             __useDeprecatedTag
-            onClick={this.validateRecaptcha}
+            onClick={this.joinSectionWithoutCaptcha}
             className="ui-test-join-section"
             color={Button.ButtonColor.gray}
             disabled={this.state.sectionCode.length === 0}

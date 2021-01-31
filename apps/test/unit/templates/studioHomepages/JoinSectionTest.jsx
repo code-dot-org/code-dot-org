@@ -228,7 +228,7 @@ describe('JoinSection', () => {
   it('checks to see if captcha validation is necessary before joining section', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     const instance = wrapper.instance();
-    const joinSectionSpy = sinon.spy(instance, 'validateRecaptcha');
+    const joinSectionSpy = sinon.spy(instance, 'joinSectionWithoutCaptcha');
     wrapper.setState({isLoaded: true, key: 'testKey'});
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     wrapper.find('input').simulate('keyup', {key: 'Enter'});
