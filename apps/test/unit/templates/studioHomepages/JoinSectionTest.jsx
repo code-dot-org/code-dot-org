@@ -229,13 +229,13 @@ describe('JoinSection', () => {
     let wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     expect(wrapper.state('isLoaded')).to.equal(false);
     expect(wrapper.find('ReCaptchaDialog')).to.have.lengthOf(0);
-    wrapper.setState({isLoaded: true, requireCaptcha: true, key: 'testKey'});
+    wrapper.setState({isLoaded: true, sectionAttempts: 3, key: 'testKey'});
     expect(wrapper.find('ReCaptchaDialog')).to.have.lengthOf(1);
   });
 
   it('only opens recaptcha dialog if display captcha is true', () => {
     let wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
-    wrapper.setState({isLoaded: true, requireCaptcha: true, key: 'testKey'});
+    wrapper.setState({isLoaded: true, sectionAttempts: 3, key: 'testKey'});
     expect(
       wrapper
         .find('ReCaptchaDialog')
