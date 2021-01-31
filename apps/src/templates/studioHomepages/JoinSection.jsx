@@ -112,6 +112,7 @@ export default class JoinSection extends React.Component {
 
   validateRecaptcha = () => {
     const {sectionAttempts} = this.state;
+    //captcha verification required when more than 3 section attempts in 24 hours
     const requireCaptcha = sectionAttempts >= 3;
     if (requireCaptcha) {
       this.setState({displayCaptcha: true});
@@ -171,10 +172,7 @@ export default class JoinSection extends React.Component {
 
   render() {
     const {enrolledInASection} = this.props;
-    const {isLoaded, sectionAttempts} = this.state;
-
-    //captcha verification required when more than 3 section attempts in 24 hours
-    const requireCaptcha = sectionAttempts >= 3;
+    const {isLoaded, displayCaptcha} = this.state;
 
     if (!isLoaded) {
       return <Spinner size="large" style={styles.spinner} />;
@@ -212,9 +210,9 @@ export default class JoinSection extends React.Component {
           />
         </div>
         <div>
-          {isLoaded && requireCaptcha && (
+          {isLoaded && (
             <ReCaptchaDialog
-              isOpen={this.state.displayCaptcha}
+              isOpen={displayCaptcha}
               handleSubmit={this.joinSection}
               handleCancel={this.close}
               submitText={i18n.joinSection()}

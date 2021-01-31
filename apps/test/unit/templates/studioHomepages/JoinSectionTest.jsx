@@ -30,7 +30,7 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={false} />
     );
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     expect(wrapper.prop('style')).to.include({borderStyle: 'dashed'});
   });
 
@@ -38,13 +38,13 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={true} />
     );
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     expect(wrapper.prop('style')).to.include({borderStyle: 'solid'});
   });
 
   it('renders with disabled button when input is empty', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     expect(wrapper.find('Button').prop('disabled')).to.be.true;
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     expect(wrapper.find('Button').prop('disabled')).to.be.false;
@@ -52,7 +52,7 @@ describe('JoinSection', () => {
 
   it('updates state when typing', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     expect(wrapper.state('sectionCode')).to.equal('ABCDEF');
     expect(wrapper.find('input').prop('value')).to.equal('ABCDEF');
@@ -80,7 +80,7 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
     );
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     wrapper.find('Button').simulate('click');
     server.respond();
@@ -108,7 +108,7 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
     );
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     wrapper.find('input').simulate('change', {target: {value: ' aBcDeF  '}});
     wrapper.find('Button').simulate('click');
     server.respond();
@@ -136,7 +136,7 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
     );
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     wrapper.find('input').simulate('keyup', {key: 'Enter'});
     server.respond();
@@ -144,7 +144,7 @@ describe('JoinSection', () => {
 
   it('escape key clears input', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     wrapper.setState({sectionCode: 'ABCDEF'});
     wrapper.find('input').simulate('keyup', {key: 'Escape'});
     expect(wrapper.state('sectionCode')).to.equal('');
@@ -154,7 +154,7 @@ describe('JoinSection', () => {
   it('ignores other keyup events gracefully', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     wrapper.setState({sectionCode: 'ABC'});
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     wrapper.find('input').simulate('keyup', {key: 'Z'});
     expect(wrapper.state('sectionCode')).to.equal('ABC');
     expect(wrapper.find('input').prop('value')).to.equal('ABC');
@@ -185,7 +185,7 @@ describe('JoinSection', () => {
         updateSectionsResult={updateSectionsResult}
       />
     );
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     wrapper.find('Button').simulate('click');
     server.respond();
@@ -211,7 +211,7 @@ describe('JoinSection', () => {
         updateSectionsResult={updateSectionsResult}
       />
     );
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     wrapper.find('Button').simulate('click');
     server.respond();
@@ -225,17 +225,27 @@ describe('JoinSection', () => {
     expect(fetchCaptchaSpy).to.have.been.calledOnce;
   });
 
+  it('checks to see if captcha validation is necessary before joining section', () => {
+    const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
+    const instance = wrapper.instance();
+    const joinSectionSpy = sinon.spy(instance, 'validateRecaptcha');
+    wrapper.setState({isLoaded: true, key: 'testKey'});
+    wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
+    wrapper.find('input').simulate('keyup', {key: 'Enter'});
+    expect(joinSectionSpy).to.have.been.calledOnce;
+  });
+
   it('only renders captcha dialog after asynchronous request is finished', () => {
     let wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     expect(wrapper.state('isLoaded')).to.equal(false);
     expect(wrapper.find('ReCaptchaDialog')).to.have.lengthOf(0);
-    wrapper.setState({isLoaded: true, sectionAttempts: 3, key: 'testKey'});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     expect(wrapper.find('ReCaptchaDialog')).to.have.lengthOf(1);
   });
 
   it('only opens recaptcha dialog if display captcha is true', () => {
     let wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
-    wrapper.setState({isLoaded: true, sectionAttempts: 3, key: 'testKey'});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     expect(
       wrapper
         .find('ReCaptchaDialog')
@@ -253,7 +263,7 @@ describe('JoinSection', () => {
 
   it('increments section attempts on section join attempt', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
-    wrapper.setState({isLoaded: true});
+    wrapper.setState({isLoaded: true, key: 'testKey'});
     expect(wrapper.state('sectionAttempts')).to.equal(0);
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     wrapper.find('Button').simulate('click');
