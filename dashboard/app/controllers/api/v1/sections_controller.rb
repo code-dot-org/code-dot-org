@@ -8,7 +8,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   rescue_from ActiveRecord::RecordNotFound do |e|
     if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
-      if current_user&.persisted? && request.filtered_parameters['action'] == 'join'
+      if current_user && request.filtered_parameters['action'] == 'join'
         current_user.increment_section_attempts
       end
       render json: {
@@ -132,9 +132,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         render json: {
           result: 'captcha_failed'
         }, status: :bad_request
+        return
       end
     end
-
     result = @section.add_student current_user
     current_user.increment_section_attempts
     # add_student returns 'failure' when id of current user is owner of @section
@@ -142,6 +142,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       render json: {
         result: 'section_owned'
       }, status: :bad_request
+      return
     end
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
@@ -192,7 +193,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def require_captcha
     return head :forbidden unless current_user
     site_key = CDO.recaptcha_site_key
-    render json: {key: site_key, sectionAttempts: current_user.num_section_attempts}
+    render json: {key: site_key, sectionAttempts: current_user.section_attempts_last_24_hours}
   end
 
   private
