@@ -285,6 +285,8 @@ export const levelProgressFromServer = serverProgress => {
     result: getLevelResult(serverProgress),
     paired: serverProgress.paired || false,
     timeSpent: serverProgress.time_spent || 0,
+    // `pages` is used by multi-page assessments, and its presence
+    // (or absence) is how we distinguish those from single-page assessments
     pages:
       serverProgress.pages_completed &&
       serverProgress.pages_completed.length > 1

@@ -21,6 +21,7 @@ export const PUZZLE_PAGE_NONE = -1;
  * @property {string} kind
  * @property {number} pageNumber The page number of the level if
  *   this is a multi-page level, or PUZZLE_PAGE_NONE
+ * @property {array} sublevels An optional array of recursive sublevel objects
  */
 const levelWithoutStatusShape = {
   id: PropTypes.string.isRequired,
@@ -34,8 +35,8 @@ const levelWithoutStatusShape = {
   isConceptLevel: PropTypes.bool,
   kind: PropTypes.string,
   pageNumber: PropTypes.number
+  /** sublevels: PropTypes.array */ // See below
 };
-
 // Avoid recursive definition
 levelWithoutStatusShape.sublevels = PropTypes.arrayOf(
   PropTypes.shape(levelWithoutStatusShape)
@@ -69,14 +70,15 @@ export const levelType = PropTypes.shape({
  * @property {number} timeSpent
  * An optional value indicating the time a student spent on a level.
  * @property {array} pages
- * Array of StudentLevelProgress objects representing progress on individual
- * pages of a multi-page assessment
+ * An optional array of recursive progress objects representing progress on
+ * individual pages of a multi-page assessment
  */
 const studentLevelProgressShape = {
   status: PropTypes.string.isRequired,
   result: PropTypes.number.isRequired,
   paired: PropTypes.bool.isRequired,
   timeSpent: PropTypes.number
+  /** pages: PropTypes.array */ // See below
 };
 // Avoid recursive definition
 studentLevelProgressShape.pages = PropTypes.arrayOf(
