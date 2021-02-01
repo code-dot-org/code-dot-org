@@ -187,7 +187,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # Now "unlock" it by creating a non-submitted UserLevel
     user_level = create :user_level, user: user, best_result: nil, level: level, script: script, unlocked_at: Time.now, readonly_answers: false, submitted: false
-    assert_equal({}, summarize_user_progress(script, user)[:levels], 'No level progress since we dont have a result')
+    assert_equal({}, summarize_user_progress(script, user)[:progress], 'No level progress since we dont have a result')
 
     # put in in "view answers" mode
     user_level.delete
@@ -198,7 +198,7 @@ class UsersHelperTest < ActionView::TestCase
         "#{level.id}_0" => {submitted: true, readonly_answers: true},
         "#{level.id}_1" => {submitted: true, readonly_answers: true}
       },
-      summarize_user_progress(script, user)[:levels], 'level shows as locked again'
+      summarize_user_progress(script, user)[:progress], 'level shows as locked again'
     )
 
     # now submit it (the student ui will display this as locked)
@@ -216,7 +216,7 @@ class UsersHelperTest < ActionView::TestCase
         "#{level.id}_0" => {submitted: true},
         "#{level.id}_1" => {submitted: true}
       },
-      summarize_user_progress(script, user)[:levels],
+      summarize_user_progress(script, user)[:progress],
       'level shows as locked again'
     )
 
@@ -230,7 +230,7 @@ class UsersHelperTest < ActionView::TestCase
         "#{level.id}_0" => {},
         "#{level.id}_1" => {}
       },
-      summarize_user_progress(script, user)[:levels],
+      summarize_user_progress(script, user)[:progress],
       'level still shows as locked'
     )
 
@@ -243,7 +243,7 @@ class UsersHelperTest < ActionView::TestCase
         "#{level.id}_0" => {},
         "#{level.id}_1" => {}
       },
-      summarize_user_progress(script, user)[:levels],
+      summarize_user_progress(script, user)[:progress],
       'level shows attempted now'
     )
 
@@ -263,7 +263,7 @@ class UsersHelperTest < ActionView::TestCase
         "#{level.id}_0" => {submitted: true, readonly_answers: true},
         "#{level.id}_1" => {submitted: true, readonly_answers: true}
       },
-      summarize_user_progress(script, user)[:levels],
+      summarize_user_progress(script, user)[:progress],
       'level shows as submitted'
     )
   end
@@ -297,7 +297,7 @@ class UsersHelperTest < ActionView::TestCase
         "#{level.id}_0" => {},
         "#{level.id}_1" => {}
       },
-      summarize_user_progress(script, user)[:levels]
+      summarize_user_progress(script, user)[:progress]
     )
 
     # now create a submitted user level
@@ -309,7 +309,7 @@ class UsersHelperTest < ActionView::TestCase
         "#{level.id}_0" => {submitted: true},
         "#{level.id}_1" => {submitted: true}
       },
-      summarize_user_progress(script, user)[:levels]
+      summarize_user_progress(script, user)[:progress]
     )
   end
 
