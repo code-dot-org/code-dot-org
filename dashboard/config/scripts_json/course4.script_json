@@ -5,7 +5,6 @@
     "hidden": false,
     "login_required": false,
     "properties": {
-      "has_lesson_plan": true,
       "curriculum_path": "https://code.org/curriculum/course4/{LESSON}/Teacher",
       "curriculum_umbrella": "CSF",
       "tts": true,

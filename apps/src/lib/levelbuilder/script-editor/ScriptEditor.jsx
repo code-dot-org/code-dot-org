@@ -75,7 +75,6 @@ class ScriptEditor extends React.Component {
     initialLessonExtrasAvailable: PropTypes.bool,
     initialLessonLevelData: PropTypes.string,
     initialHasVerifiedResources: PropTypes.bool,
-    initialHasLessonPlan: PropTypes.bool,
     initialCurriculumPath: PropTypes.string,
     initialPilotExperiment: PropTypes.string,
     initialEditorExperiment: PropTypes.string,
@@ -136,7 +135,6 @@ class ScriptEditor extends React.Component {
         this.props.initialLessonLevelData ||
         "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n",
       hasVerifiedResources: this.props.initialHasVerifiedResources,
-      hasLessonPlan: this.props.initialHasLessonPlan,
       curriculumPath: this.props.initialCurriculumPath,
       pilotExperiment: this.props.initialPilotExperiment,
       editorExperiment: this.props.initialEditorExperiment,
@@ -245,7 +243,6 @@ class ScriptEditor extends React.Component {
         : this.state.lessonLevelData,
       old_script_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
-      has_lesson_plan: this.state.hasLessonPlan,
       curriculum_path: this.state.curriculumPath,
       pilot_experiment: this.state.pilotExperiment,
       editor_experiment: this.state.editorExperiment,
@@ -690,23 +687,6 @@ class ScriptEditor extends React.Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
-          <label>
-            Show Lesson Plan Links
-            <input
-              type="checkbox"
-              checked={this.state.hasLessonPlan}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({hasLessonPlan: !this.state.hasLessonPlan})
-              }
-            />
-            <HelpTip>
-              <p>
-                Check if this script has lesson plans (on Curriculum Builder or
-                in PDF form) that we should provide links to.
-              </p>
-            </HelpTip>
-          </label>
           {!this.props.isMigrated && (
             <label>
               Curriculum Path

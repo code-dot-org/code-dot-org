@@ -133,7 +133,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert(@response.body.include?(@lesson.overview))
     assert(@response.body.include?(@script.link))
     assert(@response.body.include?(lesson_path(id: @lesson.id)))
-    assert(@response.body.include?(lesson_path(id: @lesson2.id)))
+    refute(@response.body.include?(lesson_path(id: @lesson2.id)))
   end
 
   test 'show lesson with activities' do

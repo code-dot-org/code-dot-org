@@ -5,7 +5,6 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit3/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-19/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit3/code/"]]
 lesson_extras_available true
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-19/unit3/{LESSON}'
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
