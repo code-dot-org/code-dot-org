@@ -509,39 +509,39 @@
         },
         "CourseD_Dance_2020_01": {
           "validation": "**이 레벨은 어떻게 통과하나요?**\n\n-   댄서가 화면에 나오게 하세요.\n\n_이 레벨은 4 마디 이후에 끝납니다._",
-          "challenges": "**선택 과제**\n\n-   다른 노래를 골라 재생하세요.\n-   댄서를 다른 위치로 옮기세요.\n-   댄서를 한 명 이상 만드세요."
+          "challenges": "\\*\\* 선택 도전\\*\\*\n\n-   다른 노래를 선택하여 재생하세요.\n-   댄서를 새 위치로 이동하세요.\n-   댄서를 한 명 이상 만드세요."
         },
         "CourseD_Dance_2020_02": {
-          "validation": "**이 레벨은 어떻게 통과하죠?**\n\n-   댄서가 동작을 수행해야 합니다.\n-   화살표 키를 눌러야 합니다.\n\n_이 레벨은 4마디 이후에 끝납니다._",
-          "challenges": "**선택 과제**\n\n<xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> 블록을 한 개 이상 사용하세요."
+          "validation": "**이 레벨은 어떻게 통과하나요?**\n\n-   댄서가 동작을 수행해야 합니다.\n-   화살표 키를 눌러야 합니다.\n\n_이 레벨은 4마디 이후에 끝납니다._",
+          "challenges": "**선택 도전**\n\n<xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> 블록을 한 개 이상 사용하세요."
         },
         "CourseD_Dance_2020_03": {
-          "validation": "**이 레벨은 어떻게 통과하죠?**\n\n-   두 댄서 모두 동작을 수행해야 합니다.\n-   화살표 키를 눌러야 합니다.\n\n_이 레벨은 4마디 이후에 끝납니다._",
-          "challenges": "**선택 과제**\n\n-   댄서가 왼쪽, 오른쪽 화살표 키에 반응하게 하세요."
+          "validation": "**이 레벨은 어떻게 통과하나요?**\n\n-   두 댄서 모두 동작을 수행해야 합니다.\n-   화살표 키를 눌러야 합니다.\n\n_이 레벨은 6 마디 이후에 끝납니다._",
+          "challenges": "**선택 도전**\n\n-   댄서가 왼쪽, 오른쪽 화살표 키에 반응하게 하세요."
         },
         "CourseD_Dance_2020_04": {
           "validation": "**이 레벨은 어떻게 통과하나요?**\n\n-   댄서는 4 마디 다음에 새 동작으로 바꿔야 합니다.\n\n_이 레벨은 7 마디 이후에 끝납니다._"
         },
         "CourseD_Dance_2020_05": {
           "validation": "**이 레벨은 어떻게 통과하나요?**\n\n-   6마디 후 댄서는 4 마디 후 추었던 춤과 다른 춤을 추고 있어야 합니다.\n\n_이 레벨은 11 마디 이후에 끝납니다._",
-          "challenges": "**선택 과제**\n\n-   댄서들이 동작을 전환할 때마다 배경을 바꿉니다."
+          "challenges": "**선택 도전**\n\n-   댄서의 동작이 바뀔 때마다 배경을 바꿉니다."
         },
         "CourseD_Dance_2020_06": {
-          "validation": "**이 레벨은 어떻게 통과하죠?**\n\n-   리드 댄서 한 명과 백업 댄서 여럿을 생성해세요.\n\n_이 레벨은 7마디 이후에 끝납니다._",
-          "challenges": "**선택 과제**\n\n-   다수의 백업 댄서 그룹을 생성하세요."
+          "validation": "**이 레벨은 어떻게 통과하나요?**\n\n-   리드 댄서 한 명과 백업 댄서 그룹을 노래의 첫 번째 4 마디 내에서 생성하세요.\n\n_이 레벨은 7마디 이후에 끝납니다._",
+          "challenges": "**선택 도전**\n\n-   다수의 백업 댄서 그룹을 생성하세요."
         },
         "CourseD_Dance_2020_07": {
-          "validation": "**이 레벨은 어떻게 통과하죠?**\n\n-   음악이 시작되고 최소 한 댄서의 크기를 변경하세요.\n\n_이 레벨은 6마디 이후에 끝납니다._",
-          "challenges": "**선택 과제**\n\n-   다른 속성(너비, 높이, 회전 등)을 변경하여 실험해보세요."
+          "validation": "**이 레벨은 어떻게 통과하나요?**\n\n-   최소 한 명의 댄서 크기를 변경하세요.\n\n_이 레벨은 6마디 이후에 끝납니다._",
+          "challenges": "**선택 도전**\n\n-   너비 또는 회전 등과 같이 다른 속성으로 변경하여 실험해 보세요."
         },
         "CourseD_Dance_2020_08": {
-          "validation": "**이 레벨은 어떻게 통과하죠?**\n\n-   최소 한 댄서의 색조를 변경하세요.\n\n_이 레벨은 6마디 이후에 끝납니다._",
-          "tint_hint": "고른 색과 똑같이 댄서의 색이 바뀌지 않는 거 눈치채셨나요? **색조**는 사용자가 고른 색과 댄서의 색을 혼합하기 때문입니다."
+          "validation": "**이 레벨은 어떻게 통과하나요?**\n\n-   최소 한 명의 댄서 색조를 변경하세요.\n\n_이 레벨은 6마디 이후에 끝납니다._",
+          "tint_hint": "댄서의 색이 선택한 색으로 정확히 똑같지 바뀌지 않았다는 걸 눈치채셨나요? **색조**는 선택한 색과 댄서의 원래의 색이 혼합되기 때문입니다."
         },
         "CourseD_Dance_2020_09": {
           "validation": "**이 레벨은 어떻게 통과하죠?**\n\n-   “마침” 단추를 누르면 됩니다!",
-          "repeat_every_ideas": "**아이디어가 필요하세요?**\n\n-   댄서가 커지도록 계속 크기를 변경하세요.\n-   댄서가 돌 수 있도록 계속 회전을 변경하세요.\n-   댄서가 화면을 가로질러 움직이도록 수평 또는 수직 위치를 계속 변경하세요.\n\n_반대되는 효과가 나타나도록 음수를 사용할 수도 있습니다!_",
-          "next_previous": "**선택 과제**\n\n-   이 새 이벤트 블록을 사용하면 `(Random)`, `(Next)`, `(Previous)`으로 동작을 설정하는 식으로 댄스 동작 목록을 반복하게 할 수도 있습니다.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "repeat_every_ideas": "**아이디어가 필요하세요?**\n\n-   댄서가 커지도록 반복해서 댄서의 크기를 변경하세요.\n-   댄서가 돌 수 있도록 반복해서 댄서의 회전을 변경하세요.\n\n_반대되는 효과가 나오도록 음수를 사용할 수도 있습니다!_",
+          "next_previous": "**선택 도전**\n\n-   이 새 이벤트 블록을 사용하여 동작을 `(무작위)`, `(다음)`, `(이전)`으로 설정하여 댄스 동작 목록을 반복할 수 있습니다.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "교대 블록은 “댄서” 카테고리에 있습니다."
@@ -1062,19 +1062,19 @@
           "behavior hint": "행동을 편집해 보세요!\n\n-   어느 값이 각 스프라이트의 속도를 조절하고 있나요?"
         },
         "behaviors 3_2020": {
-          "behavior hint": "잘 생각해 보세요!\n\\*어떤 값이 각 개체의 속도를 조절하나요?"
+          "behavior hint": "행동을 편집해 보세요!\n\n-   어느 값이 각 스프라이트의 속도를 조절하고 있나요?"
         },
         "behaviors 3a": {
           "behavior hint": "행동을 편집해 보세요!\n\n-   어느 값이 각 스프라이트의 속도를 조절하고 있나요?"
         },
         "behaviors 3a_2020": {
-          "behavior hint": "잘 생각해 보세요!\n\\*어떤 값이 각 개체의 속도를 조절하나요?"
+          "behavior hint": "행동을 편집해 보세요!\n\n-   어느 값이 각 스프라이트의 속도를 조절하고 있나요?"
         },
         "behaviors 6": {
           "behavior hint": "행동을 편집해 보세요!\n\n-   어느 값이 각 스프라이트의 속도를 조절하고 있나요?"
         },
         "behaviors 6_2020": {
-          "behavior hint": "잘 생각해 보세요!\n\\*어떤 값이 각 개체의 속도를 조절하나요?"
+          "behavior hint": "행동을 편집해 보세요!\n\n-   어느 값이 각 스프라이트의 속도를 조절하고 있나요?"
         },
         "course1_artist_loops_challenge1": {
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)",
@@ -4052,16 +4052,16 @@
           "courseD_bee_conditionals_challenge1_b": "이 퍼즐에서 각 공간에는 꽃 또는 벌집이 있거나 아무 것도 없을 수 있습니다. 각 사각형에서 'if/else' 조건문을 반복할 수 있다는 의미입니다."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_playLab_cond1": {
           "courseD_playLab_cond1_a": "이 도전을 풀기 위해,  `액터 1 위로 이동` 블록을  `위 화살표일 때`이벤트에 부착하고, 그 다음 모든 다른 방향과 동일하게 행동하세요.",
@@ -5388,7 +5388,7 @@
           "courseD_bee_debugging_challenge1_c": "벌이 하단 열까지 온 후, 다음 명령을 반복하게 하세요:\n\n-   2번 반복:\n    -   앞으로 이동\n    -   꿀 3개 만들기\n-   뒤로 이동"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "다음, 이 열에서 나머지 보석을 모으세요.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\n블록을 프로그램에 추가하세요.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml> ",
+          "courseD_collector_debugging_challenge2_b": "다음, 이 열에서 나머지 보석을 모으세요.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\n블록을 프로그램에 추가하세요.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml> ",
           "courseD_collector_debugging_challenge2_c": "마지막으로, 나머지 보물을 모으세요. 블록을 프로그램에 추가하세요.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml> ",
           "courseD_collector_debugging_challenge2_d": "이 퍼즐을 위한 완전한 솔루션이 여기에 있습니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -5943,8 +5943,8 @@
           "courseD_bee_debugging_challenge1_c": "벌이 하단 열까지 온 후, 다음 명령을 반복하게 하세요:\n\n-   2번 반복:\n    -   앞으로 이동\n    -   꿀 3개 만들기\n-   뒤로 이동"
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "처음 **두** 개의 더미에서 보석 **두** 개만 모으는 걸로 시작하세요.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n다음 블록을 사용하세요.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "다음, 이 열에서 나머지 보석을 모으세요.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\n블록을 프로그램에 추가하세요.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml> ",
+          "courseD_collector_debugging_challenge2_a": "처음 **두** 개의 더미에서 보석 **두** 개만 모으는 걸로 시작하세요.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n다음 블록을 사용하세요.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "다음, 이 열에서 나머지 보석을 모으세요.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\n블록을 프로그램에 추가하세요.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml> ",
           "courseD_collector_debugging_challenge2_c": "마지막으로, 나머지 보물을 모으세요. 블록을 프로그램에 추가하세요.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml> ",
           "courseD_collector_debugging_challenge2_d": "이 퍼즐을 위한 완전한 솔루션이 여기에 있습니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -6823,7 +6823,7 @@
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_c": "이것은 아티스트가 따르게 될 패턴입니다:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_a": "아티스트를 회전하고 아래로 점프하고 그 다음, 뒤돌아 다음 삼각형을 그릴 준비를 하게 하는 것을 제외하고, 코드는 마지막 퍼즐의 코드와 크게 다를지 않을 것입니다. ",
+          "courseF_artist_variables4_a": "아티스트를 회전하고 아래로 점프하고 그 다음, 뒤돌아 다음 삼각형을 그릴 준비를 하게 하는 것을 제외하고, 코드는 마지막 퍼즐의 코드와 크게 다르지 않을 것입니다.",
           "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "OPD-K5-variables-7": {
@@ -6876,7 +6876,7 @@
         },
         "courseF_artist_variables4_2020": {
           "courseF_artist_variables4_c": "이것은 아티스트가 따르게 될 패턴입니다:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_a": "아티스트를 회전하고 아래로 점프하고 그 다음, 뒤돌아 다음 삼각형을 그릴 준비를 하게 하는 것을 제외하고, 코드는 마지막 퍼즐의 코드와 크게 다를지 않을 것입니다. ",
+          "courseF_artist_variables4_a": "아티스트를 회전하고 아래로 점프하고 그 다음, 뒤돌아 다음 삼각형을 그릴 준비를 하게 하는 것을 제외하고, 코드는 마지막 퍼즐의 코드와 크게 다르지 않을 것입니다.",
           "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_variables5": {
