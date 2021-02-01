@@ -109,7 +109,7 @@
           "arrows_move_actor": "캐릭터를 움직이기 위해 방향키를 사용하세요."
         },
         "CourseD_Dance_2020_01": {
-          "dance_callout_01": "이 블록을 프로그램에 추가하세요!"
+          "dance_callout_01": "여기에서 댄서 유형을 선택하세요!"
         },
         "CourseD_Dance_2020_02": {
           "dance_callout_11_a": "이 블록을 프로그램에 추가합니다.",
@@ -119,7 +119,7 @@
           "dance_callout_02": "이 블록을 프로그램에 추가하세요!"
         },
         "CourseD_Dance_2020_05": {
-          "dance_callout_05": "프로그램에 새로운 이벤트를 추가하십시오."
+          "dance_callout_05": "새 이벤트를 프로그램에 추가하십시오."
         },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "새 블록!"
@@ -1297,7 +1297,7 @@
         "behaviors 3a_2020": {
           "behavior_callout": "이 행동이 중간 별에는 왜 작동하지 않을까요?",
           "star2_callout": "이 의상 블록을 제거하고 대신 \"이 스프라이트\" 블록을 사용하세요.",
-          "this_sprite_callout": "이래 의상 블록을 이것으로 교체하세요."
+          "this_sprite_callout": "아래 의상 블록을 이것으로 교체하세요."
         },
         "behaviors 4": {
           "behaviors_edit": "이 행동의 작동방식을 보려면 여기를 클릭하세요."

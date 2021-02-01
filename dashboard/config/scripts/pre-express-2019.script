@@ -1,7 +1,6 @@
 hidden false
 hideable_lessons true
 lesson_extras_available true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/pre-express/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]

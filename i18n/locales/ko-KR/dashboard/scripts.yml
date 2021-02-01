@@ -15190,27 +15190,27 @@ ko:
             Events:
               name: 이벤트
             'Episode 1: Algorithms with Hill Harper':
-              name: '에피소드 1 - 힐 하퍼 알고리즘'
+              name: '에피소드 1: 힐 하퍼와 함께 하는 알고리즘'
             'Episode 2: Events with Ciara':
-              name: '에피소드 2: 시아라 이벤트'
+              name: '에피소드 2: 시아라와 함께 하는 이벤트'
             Episode 1 - Algorithms with Hill Harper:
-              name: 에피소드 1 - 힐 하퍼 알고리즘
+              name: 에피소드 1 - 힐 하퍼와 함께 하는 알고리즘
             Episode 2 - Placeholder:
               name: 에피소드 2- 자리 표시자
             Episode 2 - Coming Soon!:
               name: 에피소드 2 - 예정!
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
-              name: 에피소드 2 - 마크 큐반 및 린제이 스콧 물건 만들기
+              name: 에피소드 2 - 마크 큐반 및 린제이 스콧과 함께 하는 물건 만들기
             Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
-              name: 에피소드 2 - 마크 큐반 및 린제이 스콧 프로토타입
+              name: 에피소드 2 - 마크 큐반 및 린제이 스콧과 함께 하는 프로토타입
             Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner:
-              name: '에피소드 3: 애쉬튼 커쳐와 미아 길 엡손 암호화'
+              name: '에피소드 3: 애쉬튼 커쳐와 미아 길 엡손와 함께 하는 암호화'
             Episode 4 - Digital Information with Alice Keeler & Mike Krieger:
-              name: 에피소드 4 - 앨리스 켈러 및 마이크 크리거 디지털 정보
+              name: 에피소드 4 - 앨리스 켈러 및 마이크 크리거와 함께 하는 디지털 정보
             Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
-              name: 에피소드 4 - 마이크 크리거와 앨리스 켈러 디지털 정보
+              name: 에피소드 4 - 마이크 크리거와 앨리스 켈러와 함께 하는 디지털 정보
             Episode 5 - Simulations & Data with Bill Gates:
-              name: 에피소드 5 - 빌 게이츠 시뮬레이션과 데이터
+              name: 에피소드 5 - 빌 게이츠와 함께 하는 시뮬레이션과 데이터
             The Internet with Keegan-Michael Key & Vint Cerf:
               name: 키건 마이클 키와 빈트 서프 인터넷
             Conditionals with Sal Khan and Flo Vaughn:
@@ -15235,25 +15235,25 @@ ko:
           title: 코드 브레이크 대기
           lessons:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
-              name: 에피소드 2 - 마크 큐반 및 린제이 스콧 물건 만들기
+              name: 에피소드 2 - 마크 큐반 및 린제이 스콧과 함께 하는 물건 만들기
             Episode 1 - Algorithms with Hill Harper:
-              name: 에피소드 1 - 힐 하퍼 알고리즘
+              name: 에피소드 1 - 힐 하퍼와 함께 하는 알고리즘
             Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
-              name: 에피소드 2 - 마크 큐반 및 린제이 스콧 프로토타입
+              name: 에피소드 2 - 마크 큐반 및 린제이 스콧과 함께 하는 프로토타입
             Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epson:
-              name: 에피소드 3 - 애쉬튼 커쳐와 미아 길 엡손 암호화
+              name: 에피소드 3 - 애쉬튼 커쳐와 미아 길 엡손과 함께 하는 암호화
             Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner:
-              name: '에피소드 3: 애쉬튼 커쳐와 미아 길 엡손 암호화'
+              name: '에피소드 3: 애쉬튼 커쳐와 미아 길 엡손와 함께 하는 암호화'
             Episode 4 - Digital Information with Alice Keeler & Mike Krieger:
-              name: 에피소드 4 - 앨리스 켈러 및 마이크 크리거 디지털 정보
+              name: 에피소드 4 - 앨리스 켈러 및 마이크 크리거와 함께 하는 디지털 정보
             Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
-              name: 에피소드 4 - 마이크 크리거와 앨리스 켈러 디지털 정보
+              name: 에피소드 4 - 마이크 크리거와 앨리스 켈러와 함께 하는 디지털 정보
             Episode 5 - Simulations & Data with Bill Gates:
-              name: 에피소드 5 - 빌 게이츠 시뮬레이션과 데이터
+              name: 에피소드 5 - 빌 게이츠와 함께 하는 시뮬레이션과 데이터
             Episode 6 - The Internet with Vint Cerf and Keegan-Michael Key:
-              name: 에피소드 6 - 빈트 서프와 키건 마이클 키 인터넷
+              name: 에피소드 6 - 빈트 서프와 키건 마이클 키과 함께 하는 인터넷
             Episode 6 - The Internet with Keegan-Michael Key & Vint Cerf:
-              name: 에피소드 6 - 키건 마이클 키와 빈트 서프 인터넷
+              name: 에피소드 6 - 키건 마이클 키와 빈트 서프와 함께 하는 인터넷
             Algorithms with Hill Harper:
               name: 힐 하퍼 알고리즘
             Prototypes with Mark Cuban & Lyndsey Scott:
@@ -15284,19 +15284,19 @@ ko:
           title: 저학년 학생용 코드 브레이크 대기
           lessons:
             Episode 1 - Algorithms with Hill Harper:
-              name: 에피소드 1 - 힐 하퍼 알고리즘
+              name: 에피소드 1 - 힐 하퍼와 함께 하는 알고리즘
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
-              name: 에피소드 2 - 마크 큐반 및 린제이 스콧 물건 만들기
+              name: 에피소드 2 - 마크 큐반 및 린제이 스콧과 함께 하는 물건 만들기
             Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
-              name: 에피소드 2 - 마크 큐반 및 린제이 스콧 프로토타입
+              name: 에피소드 2 - 마크 큐반 및 린제이 스콧과 함께 하는 프로토타입
             Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner:
-              name: '에피소드 3: 애쉬튼 커쳐와 미아 길 엡손 암호화'
+              name: '에피소드 3: 애쉬튼 커쳐와 미아 길 엡손와 함께 하는 암호화'
             Episode 4 - Digital Information with Alice Keeler & Mike Krieger:
-              name: 에피소드 4 - 앨리스 켈러 및 마이크 크리거 디지털 정보
+              name: 에피소드 4 - 앨리스 켈러 및 마이크 크리거와 함께 하는 디지털 정보
             Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
-              name: 에피소드 4 - 마이크 크리거와 앨리스 켈러 디지털 정보
+              name: 에피소드 4 - 마이크 크리거와 앨리스 켈러와 함께 하는 디지털 정보
             Episode 5 - Simulations & Data with Bill Gates:
-              name: 에피소드 5 - 빌 게이츠 시뮬레이션과 데이터
+              name: 에피소드 5 - 빌 게이츠와 함께 하는 시뮬레이션과 데이터
             The Internet with Keegan-Michael Key & Vint Cerf:
               name: 키건 마이클 키와 빈트 서프 인터넷
             Conditionals with Sal Khan and Flo Vaughn:
@@ -15314,21 +15314,21 @@ ko:
           description: '학교는 휴교하고 수천만 명의 학생들이 집에 머물러 있는 상황에서, Code.org는 코드 브레이크를 시작했습니다. 이 주간 라이브 인터랙티브 교실에서는 우리 팀이 휴교 기간 동안 가정에 있는 아동을 가르치며 이 주간 활동에는 모든 학생이 심지어  컴퓨터가 없이도 참가할 수 있습니다. 더 자세한 정보는 Code.org/break에서 찾으세요. 6-12세. '
           lessons:
             Episode 1 - Algorithms with Hill Harper:
-              name: 에피소드 1 - 힐 하퍼 알고리즘
+              name: 에피소드 1 - 힐 하퍼와 함께 하는 알고리즘
             Episode 2 - Coming Soon!:
               name: 에피소드 2 - 예정!
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
-              name: 에피소드 2 - 마크 큐반 및 린제이 스콧 물건 만들기
+              name: 에피소드 2 - 마크 큐반 및 린제이 스콧과 함께 하는 물건 만들기
             Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
-              name: 에피소드 2 - 마크 큐반 및 린제이 스콧 프로토타입
+              name: 에피소드 2 - 마크 큐반 및 린제이 스콧과 함께 하는 프로토타입
             Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner:
-              name: '에피소드 3: 애쉬튼 커쳐와 미아 길 엡손 암호화'
+              name: '에피소드 3: 애쉬튼 커쳐와 미아 길 엡손와 함께 하는 암호화'
             Episode 4 - Digital Information with Alice Keeler & Mike Krieger:
-              name: 에피소드 4 - 앨리스 켈러 및 마이크 크리거 디지털 정보
+              name: 에피소드 4 - 앨리스 켈러 및 마이크 크리거와 함께 하는 디지털 정보
             Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
-              name: 에피소드 4 - 마이크 크리거와 앨리스 켈러 디지털 정보
+              name: 에피소드 4 - 마이크 크리거와 앨리스 켈러와 함께 하는 디지털 정보
             Episode 5 - Simulations & Data with Bill Gates:
-              name: 에피소드 5 - 빌 게이츠 시뮬레이션과 데이터
+              name: 에피소드 5 - 빌 게이츠와 함께 하는 시뮬레이션과 데이터
             The Internet with Keegan-Michael Key & Vint Cerf:
               name: 키건 마이클 키와 빈트 서프 인터넷
             Conditionals with Sal Khan and Flo Vaughn:
