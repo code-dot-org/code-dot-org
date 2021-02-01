@@ -147,19 +147,6 @@ export default class AddVocabularyDialog extends Component {
 
         {this.state.error && <h3>{this.state.error}</h3>}
 
-        {this.props.selectableLessons && (
-          <label>
-            Lessons this vocabulary is in
-            <Select
-              closeMenuOnSelect={false}
-              options={selectableLessonOptions}
-              multi={true}
-              value={this.state.lessons}
-              onChange={this.handleLessonSelectChange}
-            />
-          </label>
-        )}
-
         <label style={styles.inputAndLabel}>
           Word
           <input
@@ -180,6 +167,20 @@ export default class AddVocabularyDialog extends Component {
             style={styles.textInput}
           />
         </label>
+        {this.props.selectableLessons && (
+          <label>
+            Lessons this vocabulary is in
+            <Select
+              closeMenuOnSelect={false}
+              options={selectableLessonOptions}
+              multi={true}
+              value={this.state.lessons}
+              onChange={this.handleLessonSelectChange}
+              className={'lessons-dropdown'}
+            />
+          </label>
+        )}
+
         <DialogFooter rightAlign>
           <button
             id="submit-button"
