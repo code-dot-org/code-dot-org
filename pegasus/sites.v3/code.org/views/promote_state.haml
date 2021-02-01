@@ -48,7 +48,9 @@
       .fact-text
         Dedicated state funding for CS PD
     - elsif data[:pd_funding_s] == "Other"
-      %i.fa.fa-check-circle
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         = data[:pd_funding_exception_s]
   .fact.icon-fact
@@ -63,7 +65,9 @@
       .fact-text
         Requires all high schools to offer CS
     - elsif data[:require_hs_s] == "Other"
-      %i.fa.fa-check-circle
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         = data[:require_hs_exception_s]
 
@@ -79,7 +83,9 @@
       .fact-text
         K-12 CS curriculum standards
     - elsif data[:cs_standards_s] == "Other"
-      %i.fa.fa-check-circle
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         = data[:cs_standards_exception_s]
 
