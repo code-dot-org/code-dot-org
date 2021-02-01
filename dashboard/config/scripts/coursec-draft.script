@@ -1,4 +1,3 @@
-has_lesson_plan true
 
 lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true
 level 'BuildingAFoundation'
