@@ -41,7 +41,7 @@ class ProjectCardGrid extends Component {
       events: PropTypes.arrayOf(projectPropType),
       k1: PropTypes.arrayOf(projectPropType),
       dance: PropTypes.arrayOf(projectPropType),
-      special_topic: PropTypes.arrayOf(projectPropType)
+      special: PropTypes.arrayOf(projectPropType)
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired,
@@ -87,7 +87,7 @@ class ProjectCardGrid extends Component {
           <div>
             {showSpecialTopic && (
               <ProjectAppTypeArea
-                labKey="special_topic"
+                labKey="special"
                 labName={i18n.projectTypeSpecialTopic()}
                 labViewMoreString={i18n.projectTypeSpecialTopicViewMore()}
                 projectList={projectLists.special}
@@ -204,16 +204,16 @@ class ProjectCardGrid extends Component {
 
         {!this.state.showAll && (
           <div>
-            {this.state.showApp === 'special_topic' && showSpecialTopic && (
+            {this.state.showApp === 'special' && showSpecialTopic && (
               <ProjectAppTypeArea
-                labKey="special_topic"
+                labKey="special"
                 labName={i18n.projectTypeSpecialTopic()}
                 labViewMoreString={i18n.projectsViewAll()}
-                projectList={projectLists.special_topic}
+                projectList={projectLists.special}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
-                isDetailView={false}
+                isDetailView={true}
               />
             )}
             {this.state.showApp === 'dance' && (

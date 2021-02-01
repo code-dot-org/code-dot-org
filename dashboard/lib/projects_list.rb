@@ -96,6 +96,9 @@ module ProjectsList
         projects[:special] = fetch_special_topics_featured_projects
         return projects
       end
+      if project_group == 'special'
+        return fetch_special_topics_featured_projects
+      end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
       fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
     end
@@ -232,7 +235,7 @@ module ProjectsList
         ).
         exclude(published_at: nil, topic: nil).
         exclude(topic: '').
-        order(Sequel.desc(:published_at)).limit(8).all.shuffle!
+        order(Sequel.desc(:published_at)).all
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 

@@ -55,9 +55,7 @@ class ProjectAppTypeArea extends React.Component {
     labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,
     labViewMoreString: PropTypes.string.isRequired,
-    // Ability to hide link for Applab and Gamelab
-    // TODO (Erin B.) remove when we have enough featured projects and a solid profanity filter
-    // that we can ensure there won't be inappropriate projects.
+    // Ability to hide link for Applab and Gamelab.
     hideViewMoreLink: PropTypes.bool,
     projectList: PropTypes.arrayOf(projectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
@@ -151,7 +149,6 @@ class ProjectAppTypeArea extends React.Component {
     const oldestProject = projectList[projectList.length - 1];
     const oldestPublishedAt =
       oldestProject && oldestProject.projectData.publishedAt;
-
     return $.ajax({
       method: 'GET',
       url: `/api/v1/projects/gallery/public/${projectType}/${MAX_PROJECTS_PER_CATEGORY}/${oldestPublishedAt}`,
