@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_08_224326) do
+ActiveRecord::Schema.define(version: 2021_01_26_021131) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -441,7 +441,9 @@ ActiveRecord::Schema.define(version: 2021_01_08_224326) do
     t.integer "storage_app_id"
     t.datetime "featured_at"
     t.datetime "unfeatured_at"
+    t.string "topic"
     t.index ["storage_app_id"], name: "index_featured_projects_on_storage_app_id", unique: true
+    t.index ["topic"], name: "index_featured_projects_on_topic"
   end
 
   create_table "followers", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -462,6 +464,15 @@ ActiveRecord::Schema.define(version: 2021_01_08_224326) do
     t.datetime "updated_at", null: false
     t.boolean "published", default: true, null: false
     t.index ["name", "version"], name: "index_foorm_forms_on_name_and_version", unique: true
+  end
+
+  create_table "foorm_libraries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "version", null: false
+    t.boolean "published", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name", "version"], name: "index_foorm_libraries_on_multiple_fields", unique: true
   end
 
   create_table "foorm_library_questions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1611,7 +1622,7 @@ ActiveRecord::Schema.define(version: 2021_01_08_224326) do
     t.datetime "student_last_visited_at"
     t.integer "script_level_id", null: false
     t.datetime "seen_on_feedback_page_at"
-    t.integer "script_id"
+    t.integer "script_id", null: false
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id"
     t.index ["teacher_id"], name: "index_teacher_feedbacks_on_teacher_id"
   end
