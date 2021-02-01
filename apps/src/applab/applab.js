@@ -269,14 +269,15 @@ Applab.autogenerateML = function(modelId) {
   }).then(modelData => {
     var x = 20;
     var y = 20;
+    var SPACE = 20;
     designMode.onInsertEvent(`var testValues = {};`);
     modelData.selectedFeatures.forEach(feature => {
-      y = y + 20;
+      y = y + SPACE;
       var label = designMode.createElement('LABEL', x, y);
       label.textContent = feature + ':';
       label.id = 'design_' + feature + '_label';
       label.style.width = '300px';
-      y = y + 20;
+      y = y + SPACE;
       if (Object.keys(modelData.featureNumberKey).includes(feature)) {
         var selectId = feature + '_dropdown';
         var select = designMode.createElement('DROPDOWN', x, y);
@@ -296,17 +297,17 @@ Applab.autogenerateML = function(modelId) {
       var addFeature = `testValues.${feature} = getText("${selectId}");`;
       designMode.onInsertEvent(addFeature);
     });
-    y = y + 40;
+    y = y + 2 * SPACE;
     var label = designMode.createElement('LABEL', x, y);
     label.textContent = modelData.labelColumn;
     // TODO: this could be problematic if the name isn't formatted appropriately
     label.id = 'design_' + modelData.name + '_label';
     label.style.width = '300px';
-    y = y + 20;
+    y = y + SPACE;
     var predictionId = modelData.name + '_prediction';
     var prediction = designMode.createElement('TEXT_INPUT', x, y);
     prediction.id = 'design_' + predictionId;
-    y = y + 40;
+    y = y + 2 * SPACE;
     var predictButton = designMode.createElement('BUTTON', x, y);
     predictButton.textContent = 'Predict';
     var predictButtonId = modelData.name + '_predict';
