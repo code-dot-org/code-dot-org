@@ -19,12 +19,18 @@ class FoormEditorPreview extends Component {
   static propTypes = {
     libraryError: PropTypes.bool,
     libraryErrorMessage: PropTypes.string,
-    formPreviewQuestions: PropTypes.object,
+    libraryQuestionPreviewQuestion: PropTypes.object,
     formKey: PropTypes.number,
     surveyData: PropTypes.object,
 
     // Populated by Redux
     formHasError: PropTypes.bool
+  };
+
+  wrapLibraryQuestionPreviewQuestion = () => {
+    return {
+      elements: [this.props.libraryQuestionPreviewQuestion]
+    };
   };
 
   render() {
@@ -46,12 +52,12 @@ class FoormEditorPreview extends Component {
               }`}
             </div>
           )}
-          {this.props.formPreviewQuestions &&
+          {this.props.libraryQuestionPreviewQuestion &&
             !this.props.formHasError &&
             !this.props.libraryError && (
               // key allows us to force re-render when preview is called
               <Foorm
-                formQuestions={this.props.formPreviewQuestions}
+                formQuestions={this.wrapLibraryQuestionPreviewQuestion()}
                 formName={'preview'}
                 formVersion={0}
                 submitApi={'/none'}
