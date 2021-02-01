@@ -15,12 +15,12 @@
         .hamburger-expandable-items{id: "#{entry[:id]}-items"}
           - entry[:subentries].each do |subentry|
             .item
-              %a{id: subentry[:id], href: subentry[:url], tabindex: "0"}= subentry[:title]
+              %a{id: subentry[:id], href: subentry[:url]}= subentry[:title]
       - else
         %div{class: entry[:class]}
           .item
             - target = entry[:target] ? entry[:target] : "_self"
-            %a{id: entry[:id], href: entry[:url], target: target, rel: entry[:rel], tabindex: "0"}= entry[:title]
+            %a{id: entry[:id], href: entry[:url], target: target, rel: entry[:rel]}= entry[:title]
 
   #hamburger-icon.clicktag{class: contents[:visibility]}
     %span{style: "pointer-events: none"}
