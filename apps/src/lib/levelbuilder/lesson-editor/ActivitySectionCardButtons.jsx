@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
+import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
 import FindResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
 import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
@@ -37,6 +38,7 @@ class ActivitySectionCardButtons extends Component {
     activityPosition: PropTypes.number.isRequired,
     addTip: PropTypes.func.isRequired,
     addLevel: PropTypes.func.isRequired,
+    uploadImage: PropTypes.func.isRequired,
     updateTip: PropTypes.func.isRequired,
     removeTip: PropTypes.func.isRequired,
     appendResourceLink: PropTypes.func.isRequired,
@@ -54,6 +56,7 @@ class ActivitySectionCardButtons extends Component {
       addResourceOpen: false,
       addVocabularyOpen: false,
       addLevelOpen: false,
+      uploadImageOpen: false,
       tipToEdit: null
     };
   }
@@ -64,6 +67,14 @@ class ActivitySectionCardButtons extends Component {
 
   handleCloseAddLevel = () => {
     this.setState({addLevelOpen: false});
+  };
+
+  handleOpenUploadImage = () => {
+    this.setState({uploadImageOpen: true});
+  };
+
+  handleCloseUploadImage = () => {
+    this.setState({uploadImageOpen: false});
   };
 
   handleEditTip = tip => {
@@ -203,6 +214,16 @@ class ActivitySectionCardButtons extends Component {
                   <i style={{marginRight: 7}} className="fa fa-plus-circle" />
                   Slide
                 </button>
+
+                <button
+                  onMouseDown={this.handleOpenUploadImage}
+                  className="btn"
+                  style={styles.addButton}
+                  type="button"
+                >
+                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                  Image
+                </button>
               </span>
             )}
           </span>
@@ -243,12 +264,19 @@ class ActivitySectionCardButtons extends Component {
             )}
           </div>
         )}
+
         <AddLevelDialog
           isOpen={this.state.addLevelOpen}
           handleConfirm={this.handleCloseAddLevel}
           addLevel={this.props.addLevel}
           activitySection={this.props.activitySection}
           activityPosition={this.props.activityPosition}
+        />
+
+        <UploadImageDialog
+          isOpen={this.state.uploadImageOpen}
+          handleClose={this.handleCloseUploadImage}
+          uploadImage={this.props.uploadImage}
         />
       </div>
     );
