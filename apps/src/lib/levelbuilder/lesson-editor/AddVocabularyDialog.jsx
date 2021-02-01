@@ -148,13 +148,16 @@ export default class AddVocabularyDialog extends Component {
         {this.state.error && <h3>{this.state.error}</h3>}
 
         {this.props.selectableLessons && (
-          <Select
-            closeMenuOnSelect={false}
-            options={selectableLessonOptions}
-            multi={true}
-            value={this.state.lessons}
-            onChange={this.handleLessonSelectChange}
-          />
+          <label>
+            Lessons this vocabulary is in
+            <Select
+              closeMenuOnSelect={false}
+              options={selectableLessonOptions}
+              multi={true}
+              value={this.state.lessons}
+              onChange={this.handleLessonSelectChange}
+            />
+          </label>
         )}
 
         <label style={styles.inputAndLabel}>
