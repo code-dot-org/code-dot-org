@@ -307,7 +307,7 @@ module UsersHelper
     summary = summarize_user_progress(script, user)
     levels = script.script_levels.map(&:level)
     completed = levels.count do |l|
-      sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])
+      sum = summary[:progress][l.id]; sum && %w(perfect passed).include?(sum[:status])
     end
     (100.0 * completed / levels.count).round(2)
   end
