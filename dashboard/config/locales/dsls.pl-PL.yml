@@ -68,6 +68,14 @@ pl-PL:
         - text: Który zestaw kart został ułożony zgodnie z zasadami gry?
         title: Test wielokrotnego wyboru
         content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
+        teacher_markdown: |-
+          ## Nauczyciele:
+
+          Uczniowie mogą opierać się czasem na błędnych przekonaniach, więc warto je w tym miejscu wyjaśnić. Jeżeli uczniowie uważają, że w tym zadaniu *nie* ma poprawnej odpowiedzi, najprawdopodobniej błędnie zrozumieli polecenia warunkowe.
+
+          Poniższy film może pomóc w zrozumieniu zadania:
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
