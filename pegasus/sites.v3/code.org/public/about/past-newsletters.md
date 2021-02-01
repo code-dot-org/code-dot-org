@@ -1,5 +1,5 @@
 ---
-title: Stay in touch with Code.org
+title: Past Updates from Code.org
 nav: about_nav
 theme: responsive
 style_min: true
@@ -7,7 +7,7 @@ style_min: true
 
 <div style="background-color: #FFFFFF; padding: 10px; margin-top:50px;"><img src="/images/marketing/past-updates-4Q9A5313.jpg" style="max-width: 100%"/></div>
 
-# <a name="previous"></a>Previous Newsletters from Code.org
+# <a name="previous"></a>Past Newsletters from Code.org
 
 ### 2020
 - <a href="http://go.pardot.com/webmail/153401/715783320/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">December 2020</a>
