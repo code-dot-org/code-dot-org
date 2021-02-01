@@ -1,4 +1,4 @@
-const SET_FORM_QUESTIONS = 'foormEditor/SET_FORM_QUESTIONS';
+const SET_LIBRARY_QUESTION = 'foormLibraryEditor/SET_LIBRARY_QUESTION';
 const SET_HAS_ERROR = 'foormLibraryEditor/SET_HAS_ERROR';
 const SET_LIBRARY_QUESTION_DATA =
   'foormLibraryEditor/SET_LIBRARY_QUESTION_DATA';
@@ -11,9 +11,9 @@ const SET_LAST_SAVED_QUESTION = 'foormLibraryEditor/SET_LAST_SAVED_QUESTION';
 
 // formQuestions is an object in surveyJS format that represents
 // a single survey
-export const setFormQuestions = formQuestions => ({
-  type: SET_FORM_QUESTIONS,
-  formQuestions
+export const setLibraryQuestion = libraryQuestion => ({
+  type: SET_LIBRARY_QUESTION,
+  libraryQuestion
 });
 
 // need to confirm shape of this object returned from controller
@@ -69,10 +69,10 @@ const initialState = {
 };
 
 export default function foormLibraryEditorRedux(state = initialState, action) {
-  if (action.type === SET_FORM_QUESTIONS) {
+  if (action.type === SET_LIBRARY_QUESTION) {
     return {
       ...state,
-      formQuestions: action.formQuestions
+      libraryQuestion: action.libraryQuestion
     };
   }
   if (action.type === SET_HAS_ERROR) {

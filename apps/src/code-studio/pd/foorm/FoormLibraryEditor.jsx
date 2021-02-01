@@ -60,7 +60,7 @@ class FoormLibraryEditor extends React.Component {
     this.state = {
       livePreviewStatus: PREVIEW_ON,
       formKey: 0,
-      formPreviewQuestions: null,
+      libraryQuestionPreviewQuestion: this.props.libraryQuestion,
       num_facilitators: 2,
       workshop_course: 'CS Principles',
       workshop_subject: '5-day Summer',
@@ -95,11 +95,9 @@ class FoormLibraryEditor extends React.Component {
     // call preview form if we got new form questions or we have switched
     // on live preview.
     if (
-      PREVIEW_OFF ||
-      PREVIEW_ON
-      // prevProps.formQuestions !== this.props.formQuestions ||
-      // (prevState.livePreviewStatus === PREVIEW_OFF &&
-      //   this.state.livePreviewStatus === PREVIEW_ON)
+      prevProps.libraryQuestion !== this.props.libraryQuestion ||
+      (prevState.livePreviewStatus === PREVIEW_OFF &&
+        this.state.livePreviewStatus === PREVIEW_ON)
     ) {
       this.previewFoorm();
     }
@@ -133,30 +131,11 @@ class FoormLibraryEditor extends React.Component {
   // use debounce to only call once per second
   fillFormWithLibraryItems = _.debounce(
     function() {
-      $.ajax({
-        url: '/api/v1/pd/foorm/forms/form_with_library_items',
-        type: 'post',
-        contentType: 'application/json',
-        processData: false,
-        data: JSON.stringify({
-          //form_questions: this.props.formQuestions
-        })
-      })
-        .done(result => {
-          this.setState({
-            formKey: this.state.formKey + 1,
-            formPreviewQuestions: result,
-            libraryError: false,
-            libraryErrorMessage: null
-          });
-        })
-        .fail(result => {
-          this.setState({
-            libraryError: true,
-            libraryErrorMessage:
-              (result.responseJSON && result.responseJSON.error) || 'unknown'
-          });
-        });
+      this.setState({
+        formKey: this.state.formKey + 1,
+        libraryError: false,
+        libraryErrorMessage: null
+      });
     },
     1000,
     {leading: true}
@@ -296,7 +275,9 @@ class FoormLibraryEditor extends React.Component {
               <FoormLibraryEditorPreview
                 libraryError={this.state.libraryError}
                 libraryErrorMessage={this.state.libraryErrorMessage}
-                formPreviewQuestions={this.state.formPreviewQuestions}
+                libraryQuestionPreviewQuestion={
+                  this.state.libraryQuestionPreviewQuestion
+                }
                 formKey={this.state.formKey}
                 surveyData={{
                   facilitators: this.state.facilitators,
