@@ -32,8 +32,8 @@ describe('gamelabReducer', function() {
 
   it('has expected default state', function() {
     expect(initialState.interfaceMode).to.equal(CODE);
-    expect(initialState.pageConstants).to.be.an.object;
-    expect(initialState.pageConstants.assetUrl).to.be.a.function;
+    expect(initialState.pageConstants).to.be.an('object');
+    expect(initialState.pageConstants.assetUrl).to.be.a('function');
     expect(initialState.pageConstants.isEmbedView).to.be.undefined;
     expect(initialState.pageConstants.isShareView).to.be.undefined;
     expect(initialState.textConsole).to.be.empty;
