@@ -36,11 +36,25 @@ class VocabulariesController < ApplicationController
     end
   end
 
+  # GET /courses/:course_name/vocab/edit
+  def edit
+    @course_version = find_matching_course_version
+    @vocabularies = @course_version.vocabularies.order(:word)
+  end
+
   private
 
   def vocabulary_params
     vp = params.transform_keys(&:underscore)
     vp = vp.permit(:id, :key, :word, :definition, :course_version_id)
     vp
+  end
+
+  def find_matching_course_version
+    matching_unit_group = UnitGroup.find_by_name(params[:course_name])
+    return matching_unit_group.course_version if matching_unit_group
+    matching_standalone_course = Script.find_by_name(params[:course_name])
+    return matching_standalone_course.course_version if matching_standalone_course&.is_course
+    return nil
   end
 end
