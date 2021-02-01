@@ -7,9 +7,9 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Tabs, Tab} from 'react-bootstrap';
 import _ from 'lodash';
-import FoormSaveBar from './editor/FoormSaveBar';
-import FoormEditorPreview from './editor/FoormEditorPreview';
-import FoormEditorHeader from './editor/FoormEditorHeader';
+import FoormLibrarySaveBar from './editor/FoormSaveBar';
+import FoormLibraryEditorPreview from './library_editor/FoormLibraryEditorPreview';
+import FoormLibraryEditorHeader from './library_editor/FoormLibraryEditorHeader';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
@@ -39,13 +39,14 @@ const styles = {
 const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
 
-class FoormEditor extends React.Component {
+class FoormLibraryEditor extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func.isRequired,
     resetCodeMirror: PropTypes.func.isRequired,
     formCategories: PropTypes.array,
+
     // populated by redux
-    formQuestions: PropTypes.object,
+    libraryQuestion: PropTypes.object,
     formHasError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
     formName: PropTypes.string,
@@ -94,9 +95,11 @@ class FoormEditor extends React.Component {
     // call preview form if we got new form questions or we have switched
     // on live preview.
     if (
-      prevProps.formQuestions !== this.props.formQuestions ||
-      (prevState.livePreviewStatus === PREVIEW_OFF &&
-        this.state.livePreviewStatus === PREVIEW_ON)
+      PREVIEW_OFF ||
+      PREVIEW_ON
+      // prevProps.formQuestions !== this.props.formQuestions ||
+      // (prevState.livePreviewStatus === PREVIEW_OFF &&
+      //   this.state.livePreviewStatus === PREVIEW_ON)
     ) {
       this.previewFoorm();
     }
@@ -136,7 +139,7 @@ class FoormEditor extends React.Component {
         contentType: 'application/json',
         processData: false,
         data: JSON.stringify({
-          form_questions: this.props.formQuestions
+          //form_questions: this.props.formQuestions
         })
       })
         .done(result => {
@@ -254,7 +257,7 @@ class FoormEditor extends React.Component {
   render() {
     return (
       <div>
-        <FoormEditorHeader
+        <FoormLibraryEditorHeader
           formName={this.props.formName}
           formVersion={this.props.formVersion}
           livePreviewToggled={this.livePreviewToggled}
@@ -274,7 +277,7 @@ class FoormEditor extends React.Component {
                   // 3rd parameter specifies number of spaces to insert
                   // into the output JSON string for readability purposes.
                   // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
-                  value={JSON.stringify(this.props.formQuestions, null, 2)}
+                  value={JSON.stringify(this.props.libraryQuestion, null, 2)}
                   // Change handler is required for this element, but changes will be handled by the code mirror.
                   onChange={() => {}}
                 />
@@ -290,7 +293,7 @@ class FoormEditor extends React.Component {
             id="preview-tabs"
           >
             <Tab eventKey={'preview'} title={'Preview'}>
-              <FoormEditorPreview
+              <FoormLibraryEditorPreview
                 libraryError={this.state.libraryError}
                 libraryErrorMessage={this.state.libraryErrorMessage}
                 formPreviewQuestions={this.state.formPreviewQuestions}
@@ -310,20 +313,22 @@ class FoormEditor extends React.Component {
             </Tab>
           </Tabs>
         </div>
-        <FoormSaveBar
-          formCategories={this.props.formCategories}
-          resetCodeMirror={this.props.resetCodeMirror}
-        />
+        {false && (
+          <FoormLibrarySaveBar
+            formCategories={this.props.formCategories}
+            resetCodeMirror={this.props.resetCodeMirror}
+          />
+        )}
       </div>
     );
   }
 }
 
 export default connect(state => ({
-  formQuestions: state.foorm.formQuestions || {},
+  libraryQuestion: state.foorm.libraryQuestion || {},
   isFormPublished: state.foorm.isFormPublished,
   formHasError: state.foorm.hasError,
   formName: state.foorm.formName,
   formVersion: state.foorm.formVersion,
   formId: state.foorm.formId
-}))(FoormEditor);
+}))(FoormLibraryEditor);
