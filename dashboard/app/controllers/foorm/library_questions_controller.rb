@@ -7,7 +7,17 @@ module Foorm
 
     # GET /foorm/library_questions/:id
     def show
-      render json: @library_question.to_json
+      if @library_question
+        data_to_return = {
+          id: @library_question.id,
+          name: @library_question.question_name,
+          question: JSON.parse(@library_question.question),
+          published: @library_question.published
+        }
+        render json: data_to_return
+      else
+        render json: {}
+      end
     end
 
     # PUT /foorm/library_questions/:id/update
