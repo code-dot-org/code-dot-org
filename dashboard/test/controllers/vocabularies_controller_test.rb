@@ -44,7 +44,7 @@ class VocabulariesControllerTest < ActionController::TestCase
     assert_equal 'definition', vocabulary.definition
   end
 
-  test "can load edit page of unit group course version" do
+  test "can load vocab edit page of unit group course version" do
     sign_in @levelbuilder
     course_version = create :course_version
     unit_group = create :unit_group, name: 'fake-course-2021', course_version: course_version
@@ -56,7 +56,7 @@ class VocabulariesControllerTest < ActionController::TestCase
     assert_equal assigns(:vocabularies), [vocabulary]
   end
 
-  test "can load edit page of standalone script course version" do
+  test "can load vocab edit page of standalone script course version" do
     sign_in @levelbuilder
     course_version = create :course_version
     script = create :script, name: 'fake-standalone-script-2021', is_course: true, course_version: course_version
