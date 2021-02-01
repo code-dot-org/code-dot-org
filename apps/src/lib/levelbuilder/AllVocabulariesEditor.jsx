@@ -166,8 +166,8 @@ class AllVocabulariesEditor extends Component {
             style={styles.addButton}
             type="button"
           >
-            <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
-            Vocabulary
+            <i className="fa fa-plus" style={{marginRight: 7}} />
+            Create New Vocabulary
           </a>
         </div>
         {this.state.addVocabularyDialogOpen && (

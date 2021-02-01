@@ -54,7 +54,7 @@ class VocabulariesController < ApplicationController
     matching_unit_group = UnitGroup.find_by_name(params[:course_name])
     return matching_unit_group.course_version if matching_unit_group
     matching_standalone_course = Script.find_by_name(params[:course_name])
-    return matching_standalone_course&.get_course_version if matching_standalone_course&.is_course
+    return matching_standalone_course.course_version if matching_standalone_course&.is_course
     return nil
   end
 end
