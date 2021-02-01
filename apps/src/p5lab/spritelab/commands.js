@@ -99,6 +99,10 @@ export const commands = {
     actionCommands.setProp(spriteArg, 'tint', null);
   },
 
+  setDefaultSpriteSize(size) {
+    actionCommands.setDefaultSpriteSize(size);
+  },
+
   setProp(spriteArg, prop, val) {
     actionCommands.setProp.apply(this, [spriteArg, prop, val]);
   },
@@ -183,6 +187,10 @@ export const commands = {
 
   spriteClicked(condition, spriteArg, callback) {
     eventCommands.spriteClicked(condition, spriteArg, callback);
+  },
+
+  whenSpriteCreated(spriteArg, callback) {
+    eventCommands.whenSpriteCreated(spriteArg, callback);
   },
 
   whenPromptAnswered(variableName, callback) {

@@ -95,6 +95,9 @@
           },
           "draw left leg": {
             "name": "narysuj lewą nogę"
+          },
+          "draw head": {
+            "name": "narysuj głowę"
           }
         },
         "2-3 Artist Debugging 7": {
@@ -433,20 +436,25 @@
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "patrol": {
+            "name": "patroluj"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
               "actor": "postać"
-            }
+            },
+            "name": "patroluj"
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
               "actor": "postać"
-            }
+            },
+            "name": "patroluj"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -454,7 +462,8 @@
             "parameters": {
               "actor": "postać",
               "speed": "prędkość"
-            }
+            },
+            "name": "patroluj"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -462,7 +471,8 @@
             "parameters": {
               "actor": "postać",
               "speed": "prędkość"
-            }
+            },
+            "name": "patroluj"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -826,20 +836,23 @@
             "parameters": {
               "points": "punkty",
               "length": "długość"
-            }
+            },
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości"
           },
           "draw a circle": {
             "name": "narysuj okrąg",
             "parameters": {
               "radius": "promień"
-            }
+            },
+            "description": "narysuj okrąg o danym promieniu"
           },
           "draw a pinwheel": {
             "parameters": {
               "sides": "boki",
               "length": "długość",
               "repeat": "powtarzaj"
-            }
+            },
+            "name": "narysuj rozetę"
           },
           "draw a triangle": {
             "name": "narysuj trójkąt",
@@ -851,7 +864,8 @@
             "parameters": {
               "sides": "boki",
               "length": "długość"
-            }
+            },
+            "name": "narysuj wielokąt foremny"
           },
           "draw a house": {
             "name": "narysuj dom",
@@ -960,13 +974,15 @@
             "parameters": {
               "height": "wysokość",
               "actor": "postać"
-            }
+            },
+            "description": "blok funkcji skoku z parametrami wysokości i aktora"
           },
           "patrol": {
             "parameters": {
               "actor": "postać",
               "speed": "prędkość"
-            }
+            },
+            "name": "patroluj"
           }
         },
         "New Artist Project": {
@@ -2364,20 +2380,23 @@
             "parameters": {
               "points": "punkty",
               "length": "długość"
-            }
+            },
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości"
           },
           "draw a circle": {
             "name": "narysuj okrąg",
             "parameters": {
               "radius": "promień"
-            }
+            },
+            "description": "narysuj okrąg o danym promieniu"
           },
           "draw a pinwheel": {
             "parameters": {
               "sides": "boki",
               "length": "długość",
               "repeat": "powtarzaj"
-            }
+            },
+            "name": "narysuj rozetę"
           },
           "draw a triangle": {
             "name": "narysuj trójkąt",
@@ -2389,7 +2408,8 @@
             "parameters": {
               "sides": "boki",
               "length": "długość"
-            }
+            },
+            "name": "narysuj wielokąt foremny"
           },
           "draw a house": {
             "name": "narysuj dom",
@@ -2650,6 +2670,9 @@
           },
           "draw eye": {
             "name": "narysuj oko"
+          },
+          "draw head": {
+            "name": "narysuj głowę"
           }
         },
         "Robot Doodle_2018": {
@@ -2658,6 +2681,9 @@
           },
           "draw eye": {
             "name": "narysuj oko"
+          },
+          "draw head": {
+            "name": "narysuj głowę"
           }
         },
         "courseC_artist_prog4": {
@@ -2793,13 +2819,13 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           }
         },
         "courseE_farmer_functions10a1_2019": {
@@ -2807,13 +2833,13 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           }
         },
         "courseE_farmer_functions10a1_2020": {
@@ -2821,13 +2847,13 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           }
         },
         "courseE_farmer_functions11_predict_2018": {
@@ -2835,10 +2861,10 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get produce": {
             "name": "zbierz plon"
@@ -2852,10 +2878,10 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get produce": {
             "name": "zbierz plon"
@@ -2869,10 +2895,10 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get produce": {
             "name": "zbierz plon"
@@ -2886,10 +2912,13 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę"
           },
           "corn rectangle": {
-            "name": "kukurydza"
+            "name": "trójkąt z kukurydzą"
+          },
+          "lettuce stairs": {
+            "name": "schody z sałaty"
           }
         },
         "courseE_farmer_functions13_2019": {
@@ -2897,10 +2926,13 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę"
           },
           "corn rectangle": {
-            "name": "kukurydza"
+            "name": "trójkąt z kukurydzą"
+          },
+          "lettuce stairs": {
+            "name": "schody z sałaty"
           }
         },
         "courseE_farmer_functions13_2020": {
@@ -2908,45 +2940,48 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę"
           },
           "corn rectangle": {
-            "name": "kukurydza"
+            "name": "trójkąt z kukurydzą"
+          },
+          "lettuce stairs": {
+            "name": "schody z sałaty"
           }
         },
         "courseE_farmer_functions1a_2018": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions1a_2019": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions1a_2020": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions2b_2018": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions2b_2019": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions2b_2020": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions2ba_2018": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -2954,7 +2989,7 @@
         },
         "courseE_farmer_functions2ba_2019": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -2962,7 +2997,7 @@
         },
         "courseE_farmer_functions2ba_2020": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -2973,7 +3008,7 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -2984,7 +3019,7 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -2995,7 +3030,7 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -3003,7 +3038,7 @@
         },
         "courseE_farmer_functions3c_2018": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -3011,7 +3046,7 @@
         },
         "courseE_farmer_functions3c_2019": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -3019,7 +3054,7 @@
         },
         "courseE_farmer_functions3c_2020": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -3027,47 +3062,76 @@
         },
         "courseE_farmer_functions7a1_2018": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions7a1_2019": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions7a1_2020": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions8a1_2018": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions8a1_2019": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions8a1_2020": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions9a1_2018": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions9a1_2019": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions9a1_2020": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": "funkcja 1"
+          },
+          "function 2": {
+            "name": "funkcja 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "funkcja 1"
+          },
+          "function 2": {
+            "name": "funkcja 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "funkcja 1"
+          },
+          "function 2": {
+            "name": "funkcja 2"
+          }
+        },
+        "Standalone_Artist_8": {
+          "draw a shape": {
+            "name": "narysuj wielokąt foremny"
           }
         }
       }

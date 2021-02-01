@@ -29,7 +29,7 @@ const MOVE_LEVEL_TO_ACTIVITY_SECTION =
 const SET_SCRIPT_LEVEL_FIELD = 'activitiesEditor/SET_SCRIPT_LEVEL_FIELD';
 const TOGGLE_EXPAND = 'activitiesEditor/TOGGLE_EXPAND';
 
-export const NEW_LEVEL_ID = -1;
+export const NEW_LEVEL_ID = '-1';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
@@ -502,6 +502,11 @@ export const getSerializedActivities = rawActivities => {
         delete scriptLevel.position;
         delete scriptLevel.levelNumber;
       });
+
+      activitySection.tips.forEach(tip => {
+        // Key is just used in the react UI
+        delete tip.key;
+      });
     });
   });
 
@@ -537,6 +542,10 @@ export const mapActivityDataForEditor = rawActivities => {
 
       activitySection.text = activitySection.description || '';
       delete activitySection.description;
+
+      activitySection.duration = activitySection.duration || '';
+
+      activitySection.progressionName = activitySection.progressionName || '';
 
       activitySection.scriptLevels = activitySection.scriptLevels || [];
       activitySection.scriptLevels.forEach(scriptLevel => {
@@ -596,18 +605,20 @@ export default {
 export const emptyActivitySection = {
   key: 'activitySection-1',
   displayName: '',
+  duration: '',
   levels: [],
   tips: [],
   remarks: false,
   text: '',
   scriptLevels: [],
-  position: 1
+  position: 1,
+  progressionName: ''
 };
 
 export const emptyActivity = {
   key: 'activity-1',
   displayName: '',
   position: 1,
-  duration: 0,
+  duration: '',
   activitySections: [emptyActivitySection]
 };

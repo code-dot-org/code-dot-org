@@ -255,13 +255,6 @@ describe('entry tests', () => {
           src: ['**'],
           dest: 'build/package/js/piskel/'
         },
-        // Bramble must not be minified or digested in order to work properly.
-        {
-          expand: true,
-          cwd: './node_modules/@code-dot-org/bramble/dist',
-          src: ['**'],
-          dest: 'build/package/js/bramble/'
-        },
         {
           expand: true,
           cwd: 'lib/droplet',
@@ -340,6 +333,7 @@ describe('entry tests', () => {
             'build/package/css/code-studio.css',
             'style/code-studio/code-studio.scss'
           ],
+          ['build/package/css/lessons.css', 'style/lessons.scss'],
           [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
@@ -718,7 +712,7 @@ describe('entry tests', () => {
 
     'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
     'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
-    'foorm/editor/index': './src/sites/studio/pages/foorm/editor/index.js',
+    'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
     'foorm/misc_survey/new': './src/sites/studio/pages/foorm/misc_survey/new.js'
   };
 

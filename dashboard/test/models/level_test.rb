@@ -143,7 +143,7 @@ class LevelTest < ActiveSupport::TestCase
 
   test "summarize returns object with expected fields" do
     summary = @level.summarize
-    assert_equal(summary[:level_id], @level.id)
+    assert_equal(summary[:level_id], @level.id.to_s)
     assert_equal(summary[:type], 'Maze')
     assert_equal(summary[:name], '__bob4')
     assert_nil(summary[:display_name])
@@ -155,7 +155,7 @@ class LevelTest < ActiveSupport::TestCase
 
     summary = level.summarize_for_edit
 
-    assert_equal(summary[:id], level.id)
+    assert_equal(summary[:id], level.id.to_s)
     assert_equal(summary[:type], 'Maze')
     assert_equal(summary[:name], 'test_level')
     assert_equal(summary[:owner], 'Best Curriculum Writer')

@@ -1921,3 +1921,94 @@ fil-PH:
           na mailalagay rito nang hindi ito lulubog. \nMatapos ang leksyon, magbibigay
           ng kepleksyon ang bawat grupo ayon sa kanilang eksperiensya sa nagdaang
           gawain at maiugnay ito sa mga susunod na takdang gawain. "
+      outbreak_freeplay_choice:
+        display_name: Libreng Laro
+        description: Natapos mo na ang tutorial! Patuloy na gumawa ng mga pagbabago
+          o pagpapabuti sa iyong proyekto. Maaari mong piliing mapanatili ang pagtatrabaho
+          sa parehong mga bloke o subukan ang isang pinalawak na toolbox.
+      outbreak_story2:
+        markdown: "# Pagsiklab: Nag-iisip Tulad ng isang Siyentista\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nAng simulasyon ay isang mahusay na
+          paraan upang malaman ang mga bagay na maaaring mahirap obserbahan sa totoong
+          mundo. Tinutulungan nila ang mga siyentista na malutas ang mga problema
+          at subukan ang mga bagong ideya nang ligtas at mahusay. Ang iyong simulasyon
+          ay isang paraan upang maipakita kung ano ang hitsura ng isang pagsiklab
+          ng virus sa Monster Town.\n\n## I-reset at I-replay!\nKahit ikaw ang nagsulat
+          ng code mo, imposibleng eksaktong malaman kung ano ang mangyayari kapag
+          pagaganahin mo ito. Ang mga halimaw ay random na gumagala, kaya hindi mo
+          alam kung kakalat ang virus nang mabilis o mabagal. Kapag binago mo ang
+          code mo, tiyaking paganahin ang simulasyon mo nang higit sa isang beses.
+          Hindi mangyayari ang mga bagay sa parehong paraan nang dalawang beses!\n\n##
+          Nangongolekta ng data\nSubukang isulat ang iyong mga naobserbahan habang
+          pinapagana ang iyong simulasyon. Maaari mong bilangin ang mga halimaw na
+          nagkakasakit o gumamit ng isang timer upang makita kung gaano kabilis mangyari
+          ang mga bagay. Halimbawa, gaano katagal upang magkasakit ang lahat ng mga
+          halimaw kung wala silang mga mask? \n\n## Paggawa ng Mga Prediksiyon\nKung
+          naiintindihan mo ang iyong modelo, maaari mo itong gamitin upang makagawa
+          ng mga prediksiyon. Maaari mo ring baguhin kung paano gumana ang simulasyon
+          mo at hulaan kung ano ang ibang mangyayari. Halimbawa:\n* Ano ang mangyayari
+          kung merong mas maraming mga halimaw?\n* Ano ang mangyayari kung ang mga
+          halimaw ay gumalaw sa kalahating bilis?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Ang Monster Town ba ay tulad ng totoong mundo?\nMerong
+          limitasyon sa anumang modelo sa kung gaano ito maaring maging makatotohanan.
+          \n* Ano ang pagkakatulad ng iyong simulasyon ng pagsiklab sa mga totoong
+          paglaganap ng virus sa mundo?\n* Ano ang mga pagkakaiba?\nKapag natapos
+          mo ang aktibidad na ito, talakayin ang mga katanungang ito sa mga guro o
+          sa iyong pamilya!\n\n## Ano pa ang maaari nating i-model?\nNakalikha ka
+          na ng isang gumaganang modelo ng pagsiklab sa Monster Town. Ano ang mga
+          bagay na hindi maaaring gawin o maipakita ng simulation mo na nais mong
+          magawa nito? Pindutin ang magpatuloy at matutong mag-modelo ng higit pa:\n*
+          Ang pagdaragdag ng bilang ng mga halimaw sa simulasyon\n* Pagtulong sa mga
+          halimaw na makabawi mula sa virus\n* Ang probabilidad, kaligtasan sa sakit,
+          bakuna, at marami pa!\n\nMaaari mo ring ibahagi ang iyong modelo ng simulasyon
+          sa iba, o magbahagi ng isang mensahe tungkol sa kung ano sa tingin mo ang
+          maaari naming gawin upang matulungan ang iba na maging malusog pagdating
+          ng isang virus sa bayan."
+      outbreak_story:
+        markdown: |-
+          # Paglaganap: I-code ang Iyong Sariling Simulasyon
+
+          ## Maligayang pagdating sa Monster Town!
+          Ang Monster Town ay karaniwang isang masaya at malusog na lugar. Ang mga halimaw ng Monster town ay gustong maglibot upang bisitahin ang kanilang mga kaibigan.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Isang araw, isa sa mga halimaw ay nagsimulang sumama ang pakiramdam. Ang halimaw ay nakakuha ng **virus**! Ang virus ay isang maliit na mikrobyo na maaaring magdulot ng sakit sa'yo. Ang iba pang mga halimaw ay hindi masyadong nag-alala. Patuloy silang bumibisita sa kanilang mga kaibigan.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Hindi nagtagal, dalawa pang halimaw ang nagkasakit. Ito ay ang parehong virus! Mukhang nakuha nila ang virus mula sa kanilang kaibigan.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Ang virus ay dahan-dahang kumalat sa iba pang mga halimaw na nasa malapit. Ang malulusog na halimaw ay nagsimulang mag-alala na lahat sila ay magkakasakit. Ang mga may sakit na halimaw ay nagsimulang mag-alala na mahahawaan nila ng virus ang iba pa.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Pinipigilan ang pagkalat
+          Mabuti na lang, matapos pag-aralan ang virus, ang mga kapit-bahay ng Monster Town ay gumawa ng isang mahalagang pagtuklas. Napagtanto nilang mas malamang na hindi kumalat ang virus kung magsusuot sila ng mask sa kanilang mga bibig. Suot ang mask sa mukha, ang mga may sakit na halimaw ay mas mababa ang tsansa nilang magbigay ng virus sa mga malulusog na halimaw.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Ano ang susunod na mangyayari?
+
+          Ngayon, magsusulat ka ng code upang lumikha at magpatakbo ng iyong sariling **simulasyon** ng pagsiklab ng virus sa Monster Town. Ang simulation ay isang modelo ng computer ng isang proseso o system. Matutong mag-code at gumawa ng mga prediksiyon tungkol sa kung ano ang mangyayari sa mga kapit-bahay ng Monster Town.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *Gaano kabilis ang pagkalat ng virus?*
+
+          * *Magkakasakit ba lahat?*
+
+          * *Paano makakatulong ang mga mask sa mukha?*
+
+
+          Kapag tapos ka na, ibahagi ang iyong simulasyon sa iba. Ibahagi ang iyong mensahe tungkol sa kung ano sa palagay mo ang maaaring gawin upang matulungan ang iba na maging malusog pagdating ng isang virus sa bayan.

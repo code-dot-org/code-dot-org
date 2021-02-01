@@ -139,6 +139,8 @@
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "විශාල හෝ සමාන කර්මය",
   "dropletBlock_mathAbs_param0": "x",
   "dropletBlock_mathAbs_signatureOverride": "Math.abs(x)",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "0(ඇතුලුව) වේ සිට ඉහලට අහඹු සංඛ්‍යාවක් return කරන්න නමුත් 1(ඇතුලත් නැති) ඇතුලත් නොවිය යුතුය",
   "dropletBlock_mathRandom_signatureOverride": "Math.random()",

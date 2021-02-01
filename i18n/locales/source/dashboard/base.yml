@@ -831,7 +831,7 @@ en:
     save: "Save"
   race_interstitial:
     title: "Optional: Help us track our progress toward improving diversity in computer science"
-    message: "Please tell us your race (check all that apply)"
+    message: "Please tell us your race or ethnicity (check all that apply)"
     races:
       white: "White"
       black: "Black or African American"
@@ -1147,6 +1147,7 @@ en:
   page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
   page_not_found_button: "Return home"
   copy: 'Copy'
+  confirm: 'Confirm'
   maker:
     google_oauth:
       login_with_google: 'Login to the Maker App with Google'
@@ -1154,8 +1155,10 @@ en:
       copy_code: 'Please copy and paste this code into the Maker App to login to Code.org.'
       error_token_expired: 'Token has expired. Please log in again for a new token.'
       error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
+      error_no_linked_google: 'Please go back to the Maker App and use the "Sign in" button in the top right to log in or click the back button to log in with a different Google account'
       error_invalid_user: 'Invalid user id. Please try logging in again.'
       error_no_code: 'Please enter your login code.'
+      confirm_login: 'Select "Confirm" to log in with your Google account.'
   parent_email_banner:
     text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
     link_your_email: "Link your email"

@@ -1,0 +1,199 @@
+{
+  "fr-FR": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Events": "Événements",
+              "Loops": "boucles",
+              "Math": "Math",
+              "Logic": "Logique",
+              "Games/Score": "Jeux/Score"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Monde",
+              "Dancers": "Danseurs",
+              "Properties": "Propriétés",
+              "Events": "Événements",
+              "Numbers": "Nombres",
+              "Logic": "Logique"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "dessine une étoile",
+                "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+                "parameters": {
+                  "points": "points",
+                  "length": "longueur"
+                }
+              },
+              "draw a circle": {
+                "name": "dessine un cercle",
+                "description": "Dessine un cercle en respectant le rayon indiqué",
+                "parameters": {
+                  "radius": "rayon"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "dessiner une girouette",
+                "parameters": {
+                  "sides": "côtés",
+                  "length": "longueur",
+                  "repeat": "répéter"
+                }
+              },
+              "draw a triangle": {
+                "name": "dessine un triangle",
+                "parameters": {
+                  "length": "longueur"
+                }
+              },
+              "draw a shape": {
+                "name": "dessiner une forme",
+                "parameters": {
+                  "sides": "côtés",
+                  "length": "longueur"
+                }
+              },
+              "draw a house": {
+                "name": "dessine une maison",
+                "parameters": {
+                  "length": "longueur"
+                }
+              },
+              "draw a square": {
+                "name": "dessine un carré",
+                "parameters": {
+                  "length": "longueur"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Monde",
+              "Sprites": "Les Lutins",
+              "Actions": "Actions",
+              "Events": "Événements",
+              "Behaviors": "Comportements"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Monde",
+              "Dancers": "Danseurs",
+              "Properties": "Propriétés",
+              "Events": "Événements",
+              "Numbers": "Nombres",
+              "Logic": "Logique"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Brushes": "Pinceaux",
+              "Loops": "boucles",
+              "Math": "Math",
+              "Logic": "Logique",
+              "Functions": "fonctions",
+              "Variables": "variables"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Monde",
+              "Sprites": "Les Lutins",
+              "Locations": "Emplacements",
+              "Actions": "Actions",
+              "Events": "Événements",
+              "Behaviors": "Comportements",
+              "Variables": "variables",
+              "Math": "Math",
+              "Logic": "Logique",
+              "Functions": "fonctions",
+              "Text": "Texte",
+              "Comments": "Commentaires"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Monde",
+              "Sprites": "Les Lutins",
+              "Locations": "Emplacements",
+              "Actions": "Actions",
+              "Events": "Événements",
+              "Behaviors": "Comportements",
+              "Variables": "variables",
+              "Math": "Math",
+              "Logic": "Logique",
+              "Functions": "fonctions",
+              "Text": "Texte",
+              "Comments": "Commentaires"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Brushes": "Pinceaux",
+              "Loops": "boucles",
+              "Math": "Math",
+              "Logic": "Logique",
+              "Functions": "fonctions",
+              "Variables": "variables"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Monde",
+              "Sprites": "Les Lutins",
+              "Actions": "Actions",
+              "Events": "Événements",
+              "Logic": "Logique",
+              "Math": "Math"
+            },
+            "behavior_names": {
+              "recovering": "récupération",
+              "moving left and right": "déplacer à gauche et à droite",
+              "moving with arrow keys": "se déplacer avec les touches de direction"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Monde",
+              "Sprites": "Les Lutins",
+              "Actions": "Actions",
+              "Behaviors": "Comportements",
+              "Events": "Événements",
+              "Locations": "Emplacements",
+              "Logic": "Logique",
+              "Loops": "boucles",
+              "Math": "Math",
+              "Variables": "variables",
+              "Functions": "fonctions",
+              "Comments": "Commentaires"
+            },
+            "behavior_names": {
+              "recovering": "récupération",
+              "moving left and right": "déplacer à gauche et à droite",
+              "moving with arrow keys": "se déplacer avec les touches de direction"
+            }
+          }
+        }
+      }
+    }
+  }
+}

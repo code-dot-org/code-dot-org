@@ -160,6 +160,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = create_script_level_with_ancestors({levels: [bubble_choice]})
 
     expected_summary = {
+      id: bubble_choice.id.to_s,
       contained: false,
       submitLevel: false,
       paired: nil,
@@ -237,7 +238,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     student = create :student
     script_level = create_script_level_with_ancestors({bonus: true})
 
-    summary = ScriptLevel.summarize_as_bonus_for_teacher_panel(script_level.script, script_level.id, student)
+    summary = ScriptLevel.summarize_as_bonus_for_teacher_panel(script_level.script, [script_level.id], student)
     assert_equal true, summary[:bonus]
     assert_equal LEVEL_STATUS.not_tried, summary[:status]
     assert_equal false, summary[:passed]

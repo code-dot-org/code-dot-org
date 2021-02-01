@@ -830,7 +830,15 @@
         "scrat 17": "OK, haideți să exersăm din nou - nu este foarte diferit, dar fiți atenți la perete!",
         "scrat 18": "Blocurile \"dacă-altfel\" verifică o condiţie şi apoi execută un lucru SAU altul. Pentru a mă duce la ghindă încercaţi să utilizaţi acest bloc nou.",
         "scrat 19": "Încă un exercițiu de practică cu blocul \"dacă-altfel\", poate reușești chiar prima încercare?",
-        "scrat 20": "Puteți să mai adăugați doar 3 blocuri pentru a mă ajuta să rezolv un labirint mai complex? Dacă o faceți bine, voi putea să merg pe orice traseu curbat, indiferent de lungime. Uraaa! Gheața se topește!"
+        "scrat 20": "Puteți să mai adăugați doar 3 blocuri pentru a mă ajuta să rezolv un labirint mai complex? Dacă o faceți bine, voi putea să merg pe orice traseu curbat, indiferent de lungime. Uraaa! Gheața se topește!",
+        "outbreak1": "Creează 10 spirite sănătoase și 1 spirit bolnav. Schimbă-le dimensiunea și fa-i să cutreiere.",
+        "outbreak2": "Schimbă monștrii sănătoși în monștrii bolnavi atunci când sunt atinși.",
+        "outbreak3": "Schimbă monștrii în monștri cu mască facială atunci când apeși pe ei.",
+        "outbreak4": "Schimbă numărul și dimensiunea monștrilor pentru simularea ta.",
+        "outbreak5": "Fă ca toți monștrii bolnavi să înceapă să se vindece atunci când un monstru sănătos atinge un monstru bolnav.",
+        "outbreak6": "Adaugă un procent de șansă ca monștrii să se îmbolnăvească oricând monștrii sănătoți se atingde monștrii bolnavi. Fă asta pentru toate combinațiile e monștrii cu și fără măști.",
+        "outbreak7": "Creează un nou costum pentru monștrii cu imunitate la virus și utilizează-l pentru simularea ta.",
+        "outbreak8": "Distribuie un mesaj cu simularea ta."
       }
     }
   }

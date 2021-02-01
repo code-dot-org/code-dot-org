@@ -1468,6 +1468,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Это число можно изменить.",
           "courseE_artist_ramp8_2": "Нажми здесь, чтобы указать количество раз повтора кода."
+        },
+        "outbreak7": {
+          "costumes_callout": "Нажмите для создания нового костюма"
+        },
+        "outbreak2": {
+          "minitoolbox": "Нажмите здесь, чтобы развернуть блок.",
+          "pointerlocation": "Перетащите блок субъекта сюда."
         }
       }
     }

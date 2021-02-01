@@ -52,7 +52,7 @@ namespace :build do
 
         # Update the schema cache file, except for production which always uses the cache.
         unless rack_env?(:production)
-          schema_cache_file = dashboard_dir('db/schema_cache.dump')
+          schema_cache_file = dashboard_dir('db/schema_cache.yml')
           RakeUtils.rake 'db:schema:cache:dump'
           if GitUtils.file_changed_from_git?(schema_cache_file)
             # Staging is responsible for committing the authoritative schema cache dump.

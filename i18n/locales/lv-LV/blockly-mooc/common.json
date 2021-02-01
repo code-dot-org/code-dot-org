@@ -124,6 +124,8 @@
   "dropletBlock_greaterThanOrEqualOperator_signatureOverride": "Operators \"lielāks vai vienāds\"",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Operators \"mazāks vai vienāds\"",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "Atgriež gadījuma skaitli robežās no 0 (ieskaitot) līdz 1 (neieskaitot)",
   "dropletBlock_mathRandom_signatureOverride": "Matemātika.nejauša secība()",

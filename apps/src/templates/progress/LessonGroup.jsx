@@ -14,6 +14,7 @@ import color from '@cdo/apps/util/color';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {lessonIsVisible} from './progressHelpers';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const styles = {
   main: {
@@ -65,7 +66,8 @@ class LessonGroup extends React.Component {
 
     // redux provided
     scriptId: PropTypes.number,
-    lessonIsVisible: PropTypes.func.isRequired
+    lessonIsVisible: PropTypes.func.isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired
   };
 
   state = {
@@ -112,7 +114,8 @@ class LessonGroup extends React.Component {
       levelsByLesson,
       isSummaryView,
       isPlc,
-      lessonIsVisible
+      lessonIsVisible,
+      viewAs
     } = this.props;
 
     const TableType = isSummaryView
@@ -121,7 +124,7 @@ class LessonGroup extends React.Component {
 
     const hasVisibleLesson = lessons.some(lesson => lessonIsVisible(lesson));
 
-    if (!hasVisibleLesson) {
+    if (!hasVisibleLesson && viewAs === ViewType.Student) {
       return null;
     }
 
@@ -174,5 +177,6 @@ export const UnconnectedLessonGroup = LessonGroup;
 
 export default connect(state => ({
   scriptId: state.progress.scriptId,
-  lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs)
+  lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs),
+  viewAs: state.viewAs
 }))(Radium(LessonGroup));

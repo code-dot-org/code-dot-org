@@ -7,7 +7,7 @@ nav: how_to_nav
 {{ signup_button }}
 
 # "Hour of Code" - dasturlash soatini kompaniyangizga qanday olib kelish mumkin
-### Find out how you and your employees can inspire students to try computer science!
+### Siz va xodimlaringiz o‘quvchilarni kompyuter fanini o‘rganishga qanday ilhomlantirishi mumkinligini bilib oling!
 
 ***
 
@@ -29,7 +29,7 @@ Xodimlarni rag‘batlantirish va xodimlaringizni sinf xonalari bilan bog‘lash 
 
 # Talabalar bilan "Kodlash soati" tadbirini qanday o‘tkazish kerak
 
-## 1. Promote your Hour of Code
+## 1. "Kod soati"ngizni targ‘ib qiling
 - [Hour of Code]({{ urls/promote }}) tadbiringizni targ‘ib qiling va boshqalarni mezbon bo‘lishga undang.
 - Kompaniyangiz dasturiy ta'minot muhandislarini bir soatlik kod soatini boshqarishda yordam berish va o‘quvchilarni kompyuter fanlarini o‘rganishga ilhomlantirish uchun mahalliy sinfga tashrif buyurishga chorlang. Ular sinf bilan bog‘lanish uchun [ro‘yxatdan o‘tishi]({{ urls/volunteer_engineer }}) mumkin.
 

@@ -16,6 +16,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
       name: 'lesson display name',
       relative_position: 1,
       absolute_position: 1,
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -28,7 +29,8 @@ class LessonsTest < ActionDispatch::IntegrationTest
       lesson_group: lesson_group,
       name: 'second lesson',
       relative_position: 2,
-      absolute_position: 2
+      absolute_position: 2,
+      has_lesson_plan: true
     )
 
     @activity = create(
@@ -104,11 +106,11 @@ class LessonsTest < ActionDispatch::IntegrationTest
     assert script_level_data['challenge']
     refute script_level_data['assessment']
     refute script_level_data['bonus']
-    assert_equal @level.id, script_level_data['activeId']
+    assert_equal @level.id.to_s, script_level_data['activeId']
     assert_equal 1, script_level_data['levels'].count
     level_data = script_level_data['levels'].first
     assert_equal @level.name, level_data['name']
-    assert_equal @level.id, level_data['id']
+    assert_equal @level.id.to_s, level_data['id']
   end
 
   test 'update lesson using data from edit page' do
@@ -163,6 +165,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
 
     @script_level.reload
     assert @script_level.assessment
+    assert_equal nil, @script_level.bonus
     refute @script_level.challenge
     assert_equal 1, @script_level.levels.count
     assert_equal [@level], @script_level.levels.all

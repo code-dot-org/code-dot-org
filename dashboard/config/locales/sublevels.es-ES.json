@@ -1,0 +1,189 @@
+{
+  "es-ES": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Acciones",
+              "Events": "Eventos",
+              "Loops": "Bucles",
+              "Math": "Matemáticas",
+              "Logic": "Lógica",
+              "Games/Score": "Juegos/Puntaje"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Mundo",
+              "Dancers": "Bailarines",
+              "Properties": "Propiedades",
+              "Events": "Eventos",
+              "Numbers": "Numeros",
+              "Logic": "Lógica"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "dibujar una estrella",
+                "description": "Dibuja una estrella especificando sus puntos y la longitud de sus lados ",
+                "parameters": {
+                  "points": "puntos",
+                  "length": "longitud"
+                }
+              },
+              "draw a circle": {
+                "name": "dibujar un círculo",
+                "description": "Dibuja un circulo especificando su radio",
+                "parameters": {
+                  "radius": "radio"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "dibujar un molinete",
+                "parameters": {
+                  "sides": "lados",
+                  "length": "longitud",
+                  "repeat": "repetir"
+                }
+              },
+              "draw a triangle": {
+                "name": "dibujar un triángulo",
+                "parameters": {
+                  "length": "longitud"
+                }
+              },
+              "draw a shape": {
+                "name": "dibujar una forma",
+                "parameters": {
+                  "sides": "lados",
+                  "length": "longitud"
+                }
+              },
+              "draw a house": {
+                "name": "dibujar una casa",
+                "parameters": {
+                  "length": "longitud"
+                }
+              },
+              "draw a square": {
+                "name": "Dibuja un cuadrado",
+                "parameters": {
+                  "length": "longitud"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Sprites",
+              "Actions": "Acciones",
+              "Events": "Eventos",
+              "Behaviors": "Comportamientos"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Mundo",
+              "Dancers": "Bailarines",
+              "Properties": "Propiedades",
+              "Events": "Eventos",
+              "Numbers": "Numeros",
+              "Logic": "Lógica"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Acciones",
+              "Brushes": "Pinceles",
+              "Loops": "Bucles",
+              "Math": "Matemáticas",
+              "Logic": "Lógica",
+              "Functions": "Funciones",
+              "Variables": "Variables"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Sprites",
+              "Locations": "Ubicaciones",
+              "Actions": "Acciones",
+              "Events": "Eventos",
+              "Behaviors": "Comportamientos",
+              "Variables": "Variables",
+              "Math": "Matemáticas",
+              "Logic": "Lógica",
+              "Functions": "Funciones",
+              "Text": "Texto",
+              "Comments": "Comentario"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Sprites",
+              "Locations": "Ubicaciones",
+              "Actions": "Acciones",
+              "Events": "Eventos",
+              "Behaviors": "Comportamientos",
+              "Variables": "Variables",
+              "Math": "Matemáticas",
+              "Logic": "Lógica",
+              "Functions": "Funciones",
+              "Text": "Texto",
+              "Comments": "Comentario"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Acciones",
+              "Brushes": "Pinceles",
+              "Loops": "Bucles",
+              "Math": "Matemáticas",
+              "Logic": "Lógica",
+              "Functions": "Funciones",
+              "Variables": "Variables"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Sprites",
+              "Actions": "Acciones",
+              "Events": "Eventos",
+              "Logic": "Lógica",
+              "Math": "Matemáticas"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Sprites",
+              "Actions": "Acciones",
+              "Behaviors": "Comportamientos",
+              "Events": "Eventos",
+              "Locations": "Ubicaciones",
+              "Logic": "Lógica",
+              "Loops": "Bucles",
+              "Math": "Matemáticas",
+              "Variables": "Variables",
+              "Functions": "Funciones",
+              "Comments": "Comentario"
+            }
+          }
+        }
+      }
+    }
+  }
+}

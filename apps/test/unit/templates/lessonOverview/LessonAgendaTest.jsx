@@ -58,7 +58,7 @@ describe('LessonAgenda', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<LessonAgenda {...defaultProps} />);
-    expect(wrapper.find('a').length).to.equal(5);
+    expect(wrapper.find('a').length).to.equal(6);
 
     expect(
       wrapper
@@ -103,6 +103,13 @@ describe('LessonAgenda', () => {
       wrapper
         .find('a')
         .at(4)
+        .props().href
+    ).to.equal('#activity-section-section-4');
+
+    expect(
+      wrapper
+        .find('a')
+        .at(5)
         .props().href
     ).to.equal('#activity-section-section-6');
   });

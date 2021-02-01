@@ -1846,3 +1846,5 @@ eu-ES:
         - {}
         questions:
         - {}
+      outbreak_freeplay_choice:
+        display_name: Joku askea

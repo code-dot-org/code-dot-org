@@ -46,7 +46,7 @@ describe('AzureTextToSpeech', () => {
           soundPromise = azureTTS.createSoundPromise({
             text: `hi ${badWord}`,
             gender: 'female',
-            languageCode: 'en-US',
+            locale: 'en-US',
             onFailure: onFailureSpy
           });
         });
@@ -78,7 +78,7 @@ describe('AzureTextToSpeech', () => {
           soundPromise = azureTTS.createSoundPromise({
             text: 'hi',
             gender: 'female',
-            languageCode: 'en-US',
+            locale: 'en-US',
             onFailure: onFailureSpy
           });
         });
@@ -120,7 +120,7 @@ describe('AzureTextToSpeech', () => {
           options = {
             text: badWord,
             gender: 'female',
-            languageCode: 'en-US',
+            locale: 'en-US',
             onFailure: onFailureSpy
           };
           soundPromise = azureTTS.createSoundPromise(options);
@@ -138,7 +138,7 @@ describe('AzureTextToSpeech', () => {
         it('caches the response', async () => {
           await soundPromise();
           const actualResponse = azureTTS.getCachedSound_(
-            options.languageCode,
+            options.locale,
             options.gender,
             options.text
           );
@@ -171,7 +171,7 @@ describe('AzureTextToSpeech', () => {
             options = {
               text: 'hello',
               gender: 'male',
-              languageCode: 'es-MX'
+              locale: 'es-MX'
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
@@ -183,7 +183,7 @@ describe('AzureTextToSpeech', () => {
           it('caches the response', async () => {
             await soundPromise();
             const actualResponse = azureTTS.getCachedSound_(
-              options.languageCode,
+              options.locale,
               options.gender,
               options.text
             );
@@ -205,7 +205,7 @@ describe('AzureTextToSpeech', () => {
             options = {
               text: 'hello',
               gender: 'male',
-              languageCode: 'es-MX',
+              locale: 'es-MX',
               onFailure: onFailureSpy
             };
             soundPromise = azureTTS.createSoundPromise(options);
@@ -219,7 +219,7 @@ describe('AzureTextToSpeech', () => {
             await soundPromise();
             expect(
               azureTTS.getCachedSound_(
-                options.languageCode,
+                options.locale,
                 options.gender,
                 options.text
               )

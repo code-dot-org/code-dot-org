@@ -87,6 +87,7 @@ class FoormEditor extends React.Component {
 
   componentDidMount() {
     this.props.populateCodeMirror();
+    this.previewFoorm();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -130,7 +131,7 @@ class FoormEditor extends React.Component {
   fillFormWithLibraryItems = _.debounce(
     function() {
       $.ajax({
-        url: '/api/v1/pd/foorm/form_with_library_items',
+        url: '/api/v1/pd/foorm/forms/form_with_library_items',
         type: 'post',
         contentType: 'application/json',
         processData: false,
@@ -149,7 +150,8 @@ class FoormEditor extends React.Component {
         .fail(result => {
           this.setState({
             libraryError: true,
-            libraryErrorMessage: result.responseJSON.error
+            libraryErrorMessage:
+              (result.responseJSON && result.responseJSON.error) || 'unknown'
           });
         });
     },

@@ -9,7 +9,7 @@ fr-FR:
     8, 9 et 10. Merci de passer à un navigateur moderne.
   upgrade_ie_message_csedweek: CSEdWeek.org supprimera bientôt son support pour Internet
     Explorer 8, 9 et 10. Merci de passer à un navigateur récent.
-  upgrade_ie_link: Pour en savoir plus
+  upgrade_ie_link: En savoir plus
   en: Informatique/Sciences informatiques
   computer_science_edweek: Semaine de l'enseignement de l’informatique
   csedweek_dates: Du 3 au 9 décembre 2018
@@ -44,7 +44,7 @@ fr-FR:
   twentyhours_text: Première Heure de Code complétée&#160;? Découvrez les concepts
     de l’informatique et de la programmation avec ce cours d’approfondissement.
   og_title: Chaque enfant mérite une opportunité
-  og_title_soon: Hour of Code arrive
+  og_title_soon: L'Heure de Code est en cours de préparation...
   og_title_here: Hour of Code est arrivée !
   og_description: Chaque élève de chaque école mérite une opportunité d'étudier l'informatique.
   og_description_celeb: Essaie les nouveaux tutoriels. Gagne une conversation vidéo
@@ -366,13 +366,14 @@ fr-FR:
   studiobar_donate_body: Un enfant apprend pour chaque dollar que vous donnez.
   studiobar_shop_title: Boutique
   studiobar_shop_body: Casse les stéréotypes. Porte fièrement notre logo.
-  homepage_stats_students: d'élèves américains ont un compte sur Code.org
-  homepage_stats_female: de nos élèves sont des femmes
-  homepage_stats_teachers: professeurs utilisent Code.org
-  homepage_stats_hourofcodde: des élèves dans le monde ont essayé Hour of Code
-  homepage_stats_policy: états ont changé leur politique pour favoriser l'étude de
-    l'informatique
-  homepage_stats_title: Nous faisons la différence
+  homepage_stats_students: Des étudiants américains ont plusieurs comptes sur Code.org
+  homepage_stats_female: de nos élèves sont du sexe féminin
+  homepage_stats_teachers: Les enseignants utilisent Code.org
+  homepage_stats_hourofcodde: Des millions d'étudiants dans le monde ont essayé l'Heure
+    de Code
+  homepage_stats_policy: Les états ont changé leurs méthodes pour rendre accessible
+    l'informatique.
+  homepage_stats_title: Nous changeons le monde
   homepage_hero_text_malala: "« Je mets au défi toutes les filles de tous les pays
     d'apprendre une Heure de Code » Malala, lauréat du prix Nobel de la Paix"
   homepage_hero_text_susan: "«&#160;Si vous pouvez changer la technologie, vous pouvez
@@ -383,8 +384,8 @@ fr-FR:
     d'apprendre l'informatique. » Sheryl, Directrice des Opérations, Facebook"
   homepage_hero_text_satya: "«&#160;L'informatique peut vous apporter les meilleures
     opportunités du monde.&#160;» Satya, PDG de Microsoft"
-  homepage_hero_text_satya_new: "« L'informatique permet aux étudiants de créer le
-    monde de demain. » Satya, CEO de Microsoft"
+  homepage_hero_text_satya_new: "&ldquo;L'informatique renforce l'influence \ndes
+    étudiants pour  créer le monde de demain.&rdquo;\nSatya, CEO of Microsoft"
   homepage_hero_text_bosh: "«&#160;Si vous codez, vous pouvez choisir le déroulement
     de votre vie.&#160;» Chris Bosh"
   homepage_hero_text_student1: "«&#160;Ces compétences ont changé mon avenir. Sans
@@ -402,13 +403,11 @@ fr-FR:
     enseignante"
   homepage_hero_text_teacher2: "«&#160;Ce programme à été soutenu par mes élèves qui
     se sont engagés et impliqués à 100%.&#160;» Adam, enseignant"
-  homepage_hero_text_stat_loc: 2,5 millions de filles sont inscrites pour apprendre
-    sur Code.org
-  homepage_hero_text_stat_students: "#student_count comptes d'élèves sur Code.org"
-  homepage_hero_text_stat_served: 'L’Heure de Code: #served servisHour of Code: #served
-    données'
-  homepage_hero_hoc_is_coming: Hour of Code arrive
-  homepage_hero_hoc_is_here: Hour of Code est là
+  homepage_hero_text_stat_loc: 8,5 millions de jeunes filles sont inscrites sur Code.org
+  homepage_hero_text_stat_students: "#student_count Comptes d'étudiants sur Code.org"
+  homepage_hero_text_stat_served: 'L''Heure de Code : "#served exact nombre exact'
+  homepage_hero_hoc_is_coming: L'Heure de Code est en cours de préparation...
+  homepage_hero_hoc_is_here: Clique ici pour faire l'Heure de Code
   homepage_slot_text_hoc: L'Heure de Code
   homepage_slot_text_frozen: La reine des neige avec Anna et Elsa
   homepage_slot_text_teacher: Tableau de bord enseignant
@@ -418,74 +417,76 @@ fr-FR:
   homepage_slot_text_flappy: Flappy l'oiseau
   homepage_action_text_hoc: Une Heure de Code pour chaque élève.
   homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: Rejoignez-nous
+  homepage_action_text_join_us: Rejoins-nous
   homepage_action_text_sign_up: Inscription
   homepage_action_text_try_it: Participez
-  homepage_action_text_volunteers: Bénévoles techniques recherchés
+  homepage_action_text_volunteers: Nous  recherchons des bénévoles avec une large
+    variété de compétences en informatique.
   homepage_action_text_codevideo: Voir la vidéo
   homepage_action_text_teachervideo: Voir la vidéo
   homepage_action_text_watchvideo: Voir la vidéo
-  homepage_action_text_girlvideo: Donner de l’inspiration à une fille
-  homepage_action_text_learn: Commencer à apprendre
+  homepage_action_text_girlvideo: Donner l'envie d'apprendre aux jeunes filles
+  homepage_action_text_learn: Commencer la leçon
   homepage_action_text_signpetition: Signez la pétition
-  homepage_action_text_wincelebritychat: Gagne une conversation avec une célébrité
+  homepage_action_text_wincelebritychat: Gagne une conversation vidéo avec une célébrité
   homepage_signpetition_dropdown: Je suis d'accord ▾
   homepage_signpetition_dropdown_text: J'accepte
   homepage_diversity_pledge: Prendre l'engagement de diversité
   homepage_banner_text_prizes: L’Heure de Code revient du 7 au 13 décembre.
   homepage_banner_link_prizes: Rejoins le plus grand évènement d'apprentissage de
     l’histoire.
-  homepage_banner_text_main: Code.org et le College Board s’associent pour améliorer
-    la diversité en informatique.
-  homepage_banner_text_link: Pour en savoir plus
+  homepage_banner_text_main: Code.org et le College Board s'associent pour apporter
+    plus de diversité dans le monde informatique.
+  homepage_banner_text_link: En savoir plus
   homepage_banner_privacy_link: Pour en savoir plus
   homepage_banner_20k_teachers: 20 000 enseignants formés enseignant maintenant l'informatique
     dans les classes.
-  homepage_banner_20k_teachers_link: Pour en savoir plus
+  homepage_banner_20k_teachers_link: En savoir plus
   homepage_banner_congress: Les leaders de l’Amérique font appel au Congrès pour financer
     le programme d'informatique K-12.
   homepage_banner_congress_link: Ajouter votre support
-  homepage_banner_emailprivacy: Nous apportons un changement majeur dans notre manière
-    de soutenir la confidentialité des étudiants.
+  homepage_banner_emailprivacy: Nous mettons beaucoup d'effort à la protection de
+    vos données.
   homepage_banner_emailprivacy_link: Lire la suite
-  homepage_banner_40k_teachers_link: Pour en savoir plus
+  homepage_banner_40k_teachers_link: En savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
   homepage_slot_text_link_hoc: Essayer l'Heure de Code
-  homepage_slot_text_link_about_hoc: À propos de Hour of Code
+  homepage_slot_text_link_about_hoc: À propos de l'Heure de Code
   homepage_slot_text_link_host: Héberger une Heure de Code
   homepage_slot_text_link_hocserved: "# servi"
-  homepage_solot_text_link_volunteer: Devenez bénévole pour Hour of Code
+  homepage_solot_text_link_volunteer: Devenir bénévole pour l'Heure de Code
   homepage_slot_text_title_students: Élèves
   homepage_slot_text_blurb_students: Découvrez l'ensemble de nos tutoriels
   homepage_slot_text_blurb_students_courses: Explorer nos cours
   homepage_slot_text_link_codestudio: Essaie Code Studio
   homepage_slot_text_link_local: Trouvez un cours près de chez vous
   homepage_slot_text_link_othercourses: Autres cours en ligne
-  homepage_slot_text_title_educators: Éducateurs
+  homepage_slot_text_title_educators: Enseignants
   homepage_slot_text_blurb_educators: Enseignez à vos élèves
   homepage_slot_text_link_elementary: École primaire
   homepage_slot_text_link_middle: Collège
   homepage_slot_text_link_high: Lycée
-  homepage_slot_text_link_k5: Cours pour les niveaux de la Maternelle au CM2
+  homepage_slot_text_link_k5: Cours de la petite section à la CM2
   homepage_slot_text_link_fullcurriculum: Consulter notre programme complet
-  homepage_slot_text_link_pd: Perfectionnement professionnel
-  homepage_slot_text_title_advocates: Défenseurs
+  homepage_slot_text_link_pd: Développement professionnel
+  homepage_slot_text_title_advocates: Les enseignants, les contributeurs dans le domaine
+    de l'informatique.
   homepage_slot_text_blurb_advocates: Soutenir la diversité dans l’informatique
   homepage_slot_text_link_stats: Afficher les statistiques
-  homepage_slot_text_link_buy: S'impliquer
+  homepage_slot_text_link_buy: S'investir
   homepage_slot_text_link_donate: Faire un don
-  homepage_slot_text_link_shop: T-shirts, chapeaux et plus
-  homepage_slot_text_link_administrators: Amener l'informatique dans votre école
-  homepage_gallery_header: Plus de %{project_count} millions de projets créés sur
-    Code.org
+  homepage_slot_text_link_shop: T-shirts, casquettes & plus
+  homepage_slot_text_link_administrators: Créer une classe d'informatique dans votre
+    école
+  homepage_gallery_header: Des %{project_count} millions de projets créés sur Code.org
   homepage_header_donors: Code.org remercie tout ceux qui l'ont soutenu
   homepage_donors_seall: Tout afficher
   homepage_donors_donate: Faire un don
-  homepage_below_hero_announcement_text: La protection de votre vie privée est importante
-    pour nous et nous faisons quelques mises à jour dans notre politique de confidentialité,
-    qui entreront en vigueur le 25 mai.
-  homepage_below_hero_announcement_link_text: Pour en savoir plus
+  homepage_below_hero_announcement_text: La protection de votre vie privée est l'une
+    de nos priorités et nous faisons réguliérement des mises à jour de notre politique
+    de confidentialité, appliquée depuis le 25 Mai.
+  homepage_below_hero_announcement_link_text: En savoir plus
   contact_form_topic_student: Je suis un élève
   contact_form_topic_parent: Je suis un parent
   contact_form_topic_teacher: Je suis enseignant/éducateur
@@ -659,7 +660,7 @@ fr-FR:
     les Mavericks de Dallas
   watch_inspirational_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
   video_title_cs_is_everything: L'informatique est en Train de Tout Changer
-  video_title_inspire_girl: Donner de l’inspiration à une fille
+  video_title_inspire_girl: Donner l'envie d'apprendre aux jeunes filles
   video_title_cs_intro: Introduction à la science de l'informatique
   video_title_schools_dont_teach: Ce que la plupart des écoles n'enseignent pas
   video_title_obama: Le président Obama à propos de l'informatique
@@ -810,7 +811,7 @@ fr-FR:
   dashboard_announce_hoc_scaling_progress: Oups ! Il y a une forte affluence sur Hour
     of Code. Nous ne pouvons rien enregistrer, cette semaine, mais les enregistrements
     réalisés avant cette semaine sont toujours en sécurité.
-  dashboard_announce_learn_more_button: Pour en savoir plus
+  dashboard_announce_learn_more_button: En savoir plus
   dashboard_landing_title: Page d'accueil de l'enseignant
   dashboard_landing_welcome: Bienvenue dans la nouvelle version améliorée du tableau
     de bord des enseignants.
@@ -2321,9 +2322,9 @@ fr-FR:
   hoc2018_creativity_create: Créer
   hoc2018_creativity_hoc_coming: Hour of Code approche…
   hoc2018_creativity_what_will_you_create: Qu'allez-vous créer ?
-  hoc2018_creativity_homepage: Donne des ailes à ton imagination et naissance à l’innovation.
-    Commence avec Hour of Code et ta propre touche créative, quelle qu’elle soit.
-    Regarde notre vidéo.
+  hoc2018_creativity_homepage: Imagines plus loin et apprends à laisser parler tes
+    idées. Commences avec une Heure de Code et ta propre touche de créativité, sans
+    te prendre la tête. Regardes notre vidéo.
   hoc2018_creativity_hoc_about: 'Cette année, Hour of Code est centrée sur la créativité. '
   hoc2018_creativity_social_media: 'Cette année, #HourOfCode est centrée sur la créativité.
     J''y participe ! Et toi ?'
@@ -2332,8 +2333,8 @@ fr-FR:
   hoc2018_creativity_courses: Aller plus loin avec les cours Code.org
   hoc2018_creativity_courses_link: Aller plus loin avec les <a href="https://studio.code.org/courses">cours
     Code.org</a>
-  hoc2018_homepage: Inscrivez votre classe pour qu’elle essaie une des 150 et plus
-    NOUVELLES activités pour Hour of Code (du 3 au 9 décembre) !
+  hoc2018_homepage: Inscrivez votre classe pour réaliser l'une de nos 150  NOUVELLES
+    activités pour l'Heure de Code (Dec 3-9)!
   hoc2018_mc_page_title: Minecraft heure de Code tutoriels
   hoc2018_mc_details: Beaucoup de langues | Les navigateurs modernes et comprimés
     | Grades 2 +
@@ -2389,7 +2390,7 @@ fr-FR:
   hoc2018_mc_video_title_steph_curry: Hour of Code avec Steph Curry
   hoc2018_mc_video_title_sports: Persévère. Tout le monde peut apprendre.
   hoc2018_mc_video_title_cs_is_everything: L'informatique est en Train de Tout Changer
-  hoc2018_mc_video_title_inspire_girl: Donner de l’inspiration à une fille
+  hoc2018_mc_video_title_inspire_girl: Donner l'envie d'apprendre aux jeunes filles
   hoc2018_mc_video_title_cs_intro: Introduction à la science de l'informatique
   hoc2018_mc_video_title_schools_dont_teach: Ce que la plupart des écoles n'enseignent
     pas
@@ -2398,13 +2399,13 @@ fr-FR:
     apprendre
   hoc2018_mc_video_title_anybody_can_learn: Tout le monde peut apprendre
   hoc2018_mc_video_title_my_name_is_aracely: Je m’appelle Aracely
-  hoc2018_mc_homepage_hoc_coming: L’Heure de code va arriver...
+  hoc2018_mc_homepage_hoc_coming: Chargement de l'Heure de Code...
   hoc2018_mc_homepage_what_create: Qu'allez-vous créer ?
-  hoc2018_mc_homepage_give_flight: Donne des ailes à ton imagination et naissance
-    à l’innovation. Commence avec une Hour of Code et ta propre touche créative, quelle
-    qu’elle soit.
-  hoc2018_mc_homepage_watch_video: Regardez notre vidéo
-  hoc2018_mc_homepage_join_us: Rejoignez-nous
+  hoc2018_mc_homepage_give_flight: Imagines plus loin et apprends à laisser parler
+    tes idées. Commences avec une Heure de Code et ta propre touche de créativité
+    sans te prendre la tête.
+  hoc2018_mc_homepage_watch_video: Regardes notre vidéo
+  hoc2018_mc_homepage_join_us: Rejoins-nous
   hoc2018_mc_homepage_try_it: Participez
   hoc2018_mc_back: Minecraft est de retour pour une toute nouvelle activité de l'Heure
     de Code!
@@ -2469,7 +2470,7 @@ fr-FR:
     à l’enseignement informatique. Trouvez des informations sur la manière de vous
     impliquer dans nos camps d’été, nos classes d’informatique au secondaire, nos
     bourses d’études et nos stages.
-  hoc2018_dance_amazon_about_future_engineer_button: Pour en savoir plus
+  hoc2018_dance_amazon_about_future_engineer_button: En savoir plus
   hoc2018_dance_amazon_try_coding_this_summer_title: Essayez de coder cet été
   hoc2018_dance_amazon_try_coding_this_summer_description: Participez aux camps d'informatique
     gratuits, amusants et inclusifs d'Amazon Future Engineer ! Les camps d'été sont
@@ -2507,8 +2508,8 @@ fr-FR:
   hoc2018_dance_video4: Soirée Dansante - Félicitations
   page_not_found_title: Page Introuvable
   page_not_found_header: '404 : Page Introuvable'
-  page_not_found_description: La page recherchée n’existe pas à cette adresse. Vérifiez
-    l’adresse Web et réessayez, ou retournez à notre page d’accueil.
+  page_not_found_description: La page recherchée n'existe pas à cette adresse. Vérifie
+    l'adresse du site internet et réessaie. Sinon, retourne sur la page d'accueil.
   page_not_found_button: Retourner à la page d’accueil
   hoc2018_mc_with_microsoft: En partenariat avec
   hoc2018_mc_thank_microsoft: Nous remercions Microsoft du soutien accordé à notre
@@ -2525,7 +2526,11 @@ fr-FR:
   hoc2019_dance_previous_versions: Vous cherchez une version antérieure de Soirée
     Dansante ?  Cliquez ici pour commencer [Partie 1](%{dance_2018_link}) et [Partie
     2](%{dance_extras_2018_link}) qui datent de l'année dernière.
-  homepage_slot_text_title_at_home: Apprendre à la maison
+  homepage_slot_text_title_at_home: 'Cours disponible à la Maison '
+  homepage_slot_text_blurb_at_home: Apprends facilement avec ces cours
+  homepage_slot_text_link_code_break: Prends une Pause de Code
+  homepage_slot_text_link_do_hoc: Fais une Heure de Code
+  homepage_slot_text_link_express_course: Essaies  un cours express
   page_not_available_button: Retourner à la page d’accueil
   footer_powered_by_aws: Fourni par Amazon Web Services
   codebytes_skinny_banner_english_only: Seulement en anglais

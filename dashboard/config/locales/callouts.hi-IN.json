@@ -1144,6 +1144,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "आप यह संख्या बदल सकते हैं।",
           "courseE_artist_ramp8_2": "अपने कोड को दोहराने की संख्या टाइप करने के लिए यहां क्लिक करें।"
+        },
+        "outbreak2": {
+          "minitoolbox": "ब्लॉक को एक्सपैंड करने के लिए यहां क्लिक करें।",
+          "pointerlocation": "यहां एक सब्जेक्ट ब्लॉक ड्रैग करें।"
+        },
+        "outbreak7": {
+          "costumes_callout": "एक नई कॉस्ट्यूम बनाने के लिए क्लिक करें"
         }
       }
     }

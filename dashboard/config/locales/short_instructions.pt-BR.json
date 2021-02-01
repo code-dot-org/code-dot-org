@@ -3091,7 +3091,17 @@
         "scrat 17": "Ok, vamos fazer novamente para praticar - este não é muito diferente, mas tome cuidado com a parede!",
         "scrat 18": "Os blocos \"se-senão\" verificam uma condição e, em seguida, fazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco.",
         "scrat 19": "Vamos praticar o uso do bloco \"se-senão\" mais uma vez. Você consegue\nacertar na primeira tentativa?",
-        "scrat 20": "Você consegue adicionar apenas 3 blocos para me ajudar a percorrer um labirinto mais complexo? Se você acertar, eu posso andar por qualquer caminho cheio de curvas, não importa o comprimento. Rápido! O gelo está derretendo!"
+        "scrat 20": "Você consegue adicionar apenas 3 blocos para me ajudar a percorrer um labirinto mais complexo? Se você acertar, eu posso andar por qualquer caminho cheio de curvas, não importa o comprimento. Rápido! O gelo está derretendo!",
+        "outbreak1": "Crie 10 espectros saudáveis e 1 espectro doente. Mude o tamanho deles e movimente-os.",
+        "outbreak2": "Mude monstros saudáveis para monstros doentes quando se tocarem.",
+        "outbreak3": "Transforme monstros em monstros com máscara facial quando clicar neles.",
+        "outbreak4": "Mude o número e o tamanho dos espectros de monstros na sua simulação.",
+        "outbreak5": "Faça com que todos os monstros comecem a se recuperar quando um monstro saudável toca em um monstro doente.",
+        "outbreak6": "Adicione uma chance percentual de o monstro adoecer sempre que um monstro saudável tocar em um monstro doente. Faça isto para todas as combinações de monstros, com e sem máscara.",
+        "outbreak7": "Crie um novo traje para monstros com imunidade ao vírus e use-o na sua simulação.",
+        "outbreak8": "Compartilhe uma mensagem com a sua simulação.",
+        "courseA_maze_ramp3b_2019": "Remova o último bloco da sequência arrastando-o para a caixa de ferramentas. Em seguida clique em \"Executar\".",
+        "courseA_maze_ramp3b_2020": "Remova o último bloco da sequência arrastando-o para a caixa de ferramentas. Em seguida clique em \"Executar\"."
       }
     }
   }

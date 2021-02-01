@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_03_234601) do
+ActiveRecord::Schema.define(version: 2021_01_26_021131) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -441,7 +441,9 @@ ActiveRecord::Schema.define(version: 2021_01_03_234601) do
     t.integer "storage_app_id"
     t.datetime "featured_at"
     t.datetime "unfeatured_at"
+    t.string "topic"
     t.index ["storage_app_id"], name: "index_featured_projects_on_storage_app_id", unique: true
+    t.index ["topic"], name: "index_featured_projects_on_topic"
   end
 
   create_table "followers", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -462,6 +464,15 @@ ActiveRecord::Schema.define(version: 2021_01_03_234601) do
     t.datetime "updated_at", null: false
     t.boolean "published", default: true, null: false
     t.index ["name", "version"], name: "index_foorm_forms_on_name_and_version", unique: true
+  end
+
+  create_table "foorm_libraries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "version", null: false
+    t.boolean "published", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name", "version"], name: "index_foorm_libraries_on_multiple_fields", unique: true
   end
 
   create_table "foorm_library_questions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -559,6 +570,13 @@ ActiveRecord::Schema.define(version: 2021_01_03_234601) do
     t.integer "resource_id", null: false
     t.index ["lesson_id", "resource_id"], name: "index_lessons_resources_on_lesson_id_and_resource_id", unique: true
     t.index ["resource_id", "lesson_id"], name: "index_lessons_resources_on_resource_id_and_lesson_id"
+  end
+
+  create_table "lessons_vocabularies", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "lesson_id", null: false
+    t.bigint "vocabulary_id", null: false
+    t.index ["lesson_id", "vocabulary_id"], name: "index_lessons_vocabularies_on_lesson_id_and_vocabulary_id", unique: true
+    t.index ["vocabulary_id", "lesson_id"], name: "index_lessons_vocabularies_on_vocabulary_id_and_lesson_id"
   end
 
   create_table "level_concept_difficulties", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1520,6 +1538,7 @@ ActiveRecord::Schema.define(version: 2021_01_03_234601) do
     t.text "properties"
     t.integer "lesson_group_id"
     t.string "key", null: false
+    t.boolean "has_lesson_plan"
     t.index ["lesson_group_id", "key"], name: "index_stages_on_lesson_group_id_and_key", unique: true
     t.index ["script_id", "key"], name: "index_stages_on_script_id_and_key", unique: true
   end
@@ -1603,6 +1622,7 @@ ActiveRecord::Schema.define(version: 2021_01_03_234601) do
     t.datetime "student_last_visited_at"
     t.integer "script_level_id", null: false
     t.datetime "seen_on_feedback_page_at"
+    t.integer "script_id", null: false
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id"
     t.index ["teacher_id"], name: "index_teacher_feedbacks_on_teacher_id"
   end
@@ -1854,6 +1874,17 @@ ActiveRecord::Schema.define(version: 2021_01_03_234601) do
     t.string "download"
     t.string "locale", default: "en-US", null: false
     t.index ["key", "locale"], name: "index_videos_on_key_and_locale", unique: true
+  end
+
+  create_table "vocabularies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "word", null: false
+    t.text "definition", null: false
+    t.integer "course_version_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key", "course_version_id"], name: "index_vocabularies_on_key_and_course_version_id", unique: true
+    t.index ["word", "definition"], name: "index_vocabularies_on_word_and_definition", type: :fulltext
   end
 
   add_foreign_key "ap_school_codes", "schools"

@@ -83,6 +83,7 @@ class Script < ApplicationRecord
           lessons: [
             {lesson_activities: :activity_sections},
             :resources,
+            :vocabularies,
             :objectives
           ]
         },
@@ -335,10 +336,14 @@ class Script < ApplicationRecord
     candidate_level
   end
 
-  # Find the lockable or non-locakble stage based on its relative position.
-  # Raises `ActiveRecord::RecordNotFound` if no matching stage is found.
-  def stage_by_relative_position(position, lockable = false)
-    lessons.where(lockable: lockable).find_by!(relative_position: position)
+  # Find the lesson based on its relative position, lockable value, and if it has a lesson plan.
+  # Raises `ActiveRecord::RecordNotFound` if no matching lesson is found.
+  def lesson_by_relative_position(position, unnumbered_lesson = false)
+    if unnumbered_lesson
+      lessons.where(lockable: true, has_lesson_plan: false).find_by!(relative_position: position)
+    else
+      lessons.where(lockable: false).or(lessons.where(has_lesson_plan: true)).find_by!(relative_position: position)
+    end
   end
 
   # For all scripts, cache all related information (levels, etc),
@@ -822,7 +827,7 @@ class Script < ApplicationRecord
     script_levels.find(id: script_level_id.to_i)
   end
 
-  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
+  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, unnumbered_lesson)
     relative_position ||= 1
     script_levels.find do |sl|
       # make sure we are checking the native properties of the script level
@@ -830,7 +835,7 @@ class Script < ApplicationRecord
       sl.position == puzzle_position.to_i &&
         !sl.bonus &&
         sl.lesson.relative_position == relative_position.to_i &&
-        sl.lesson.lockable? == lockable
+        (unnumbered_lesson == !sl.lesson.numbered_lesson?)
     end
   end
 
@@ -1057,6 +1062,27 @@ class Script < ApplicationRecord
     end
   end
 
+  # Lessons unfortunately have 2 position values:
+  # 1. absolute_position: position within the script (used to order lessons with in lesson groups in correct order)
+  # 2. relative_position: position within the Script relative other numbered/unnumbered lessons
+  # This method updates the position values for all lessons in a script after
+  # a lesson is saved
+  def fix_lesson_positions
+    reload
+
+    total_count = 1
+    numbered_lesson_count = 1
+    unnumbered_lesson_count = 1
+    lessons.each do |lesson|
+      lesson.absolute_position = total_count
+      lesson.relative_position = lesson.numbered_lesson? ? numbered_lesson_count : unnumbered_lesson_count
+      lesson.save!
+
+      total_count += 1
+      lesson.numbered_lesson? ? (numbered_lesson_count += 1) : (unnumbered_lesson_count += 1)
+    end
+  end
+
   # Clone this script, appending a dash and the suffix to the name of this
   # script. Also clone all the levels in the script, appending an underscore and
   # the suffix to the name of each level. Mark the new script as hidden, and
@@ -1141,22 +1167,20 @@ class Script < ApplicationRecord
   def update_text(script_params, script_text, metadata_i18n, general_params)
     script_name = script_params[:name]
     begin
-      transaction do
-        script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
-        Script.add_script(
-          {
-            name: script_name,
-            hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
-            login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
-            wrapup_video: general_params[:wrapup_video],
-            family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-            properties: Script.build_property_hash(general_params)
-          },
-          script_data[:lesson_groups]
-        )
-        if Rails.application.config.levelbuilder_mode
-          Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
-        end
+      script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
+      Script.add_script(
+        {
+          name: script_name,
+          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
+          login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
+          wrapup_video: general_params[:wrapup_video],
+          family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
+          properties: Script.build_property_hash(general_params)
+        },
+        script_data[:lesson_groups]
+      )
+      if Rails.application.config.levelbuilder_mode
+        Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -1309,6 +1333,7 @@ class Script < ApplicationRecord
       name: name,
       title: title_for_display,
       description: localized_description,
+      studentDescription: localized_student_description,
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       hidden: hidden,
@@ -1349,7 +1374,6 @@ class Script < ApplicationRecord
       is_course: is_course?,
       background: background,
       is_migrated: is_migrated?,
-      updatedAt: updated_at,
       scriptPath: script_path(self),
       showCalendar: show_calendar
     }
@@ -1402,7 +1426,7 @@ class Script < ApplicationRecord
     {
       displayName: localized_title,
       link: link,
-      lessons: lessons.map(&:summarize_for_lesson_dropdown)
+      lessons: lessons.select(&:has_lesson_plan).map(&:summarize_for_lesson_dropdown)
     }
   end
 
@@ -1410,7 +1434,7 @@ class Script < ApplicationRecord
   # and its lessons, in a format that can be deep-merged with the contents of
   # scripts.en.yml.
   def summarize_i18n_for_copy(new_name)
-    data = %w(title description description_short description_audience).map do |key|
+    data = %w(title description student_description description_short description_audience).map do |key|
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
@@ -1429,7 +1453,7 @@ class Script < ApplicationRecord
   end
 
   def summarize_i18n_for_edit(include_lessons=true)
-    data = %w(title description description_short description_audience).map do |key|
+    data = %w(title description student_description description_short description_audience).map do |key|
       [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
@@ -1504,6 +1528,10 @@ class Script < ApplicationRecord
 
   def localized_description
     I18n.t "data.script.name.#{name}.description"
+  end
+
+  def localized_student_description
+    I18n.t "data.script.name.#{name}.student_description"
   end
 
   def disable_post_milestone?
@@ -1615,6 +1643,11 @@ class Script < ApplicationRecord
     if localized_description
       info[:description] = localized_description
     end
+
+    if localized_student_description
+      info[:student_description] = localized_student_description
+    end
+
     info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])

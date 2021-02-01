@@ -39,6 +39,16 @@ export const commands = {
     }
   },
 
+  whenSpriteCreated(spriteArg, callback) {
+    if (spriteArg && spriteArg.costume) {
+      coreLibrary.addEvent(
+        'whenSpriteCreated',
+        {costume: spriteArg.costume},
+        callback
+      );
+    }
+  },
+
   whenPromptAnswered(variableName, callback) {
     coreLibrary.registerPromptAnswerCallback(variableName, callback);
   }

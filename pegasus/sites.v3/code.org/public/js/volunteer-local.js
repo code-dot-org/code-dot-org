@@ -488,6 +488,10 @@ function createMapEntryDetail(elements) {
   return div;
 }
 
+function hasContent(value) {
+  return value && value !== "null";
+}
+
 function compileHTML(index, location) {
   let html = createHTMLElement("div");
 
@@ -497,13 +501,13 @@ function compileHTML(index, location) {
     ])
   );
 
-  if (location.company_s) {
+  if (hasContent(location.company_s)) {
     html.appendChild(
       createMapEntryDetail([document.createTextNode(location.company_s)])
     );
   }
 
-  if (location.experience_s) {
+  if (hasContent(location.experience_s)) {
     html.appendChild(
       createMapEntryDetail([
         createHTMLElement("strong", null, "Experience:"),
@@ -512,7 +516,7 @@ function compileHTML(index, location) {
     );
   }
 
-  if (location.location_flexibility_ss) {
+  if (hasContent(location.location_flexibility_ss)) {
     location.location_flexibility_ss.forEach(function(field, index) {
       location.location_flexibility_ss[index] = i18n("location_" + field);
     });
@@ -527,7 +531,7 @@ function compileHTML(index, location) {
     );
   }
 
-  if (location.description_s) {
+  if (hasContent(location.description_s)) {
     html.appendChild(
       createMapEntryDetail([
         createHTMLElement("strong", null, "About me:"),
@@ -536,7 +540,7 @@ function compileHTML(index, location) {
     );
   }
 
-  if (location.linkedin_s) {
+  if (hasContent(location.linkedin_s)) {
     if (!location.linkedin_s.match(/^https?:\/\//i)) {
       location.linkedin_s = "http://" + location.linkedin_s;
     }
@@ -549,7 +553,7 @@ function compileHTML(index, location) {
     );
   }
 
-  if (location.facebook_s) {
+  if (hasContent(location.facebook_s)) {
     if (!location.facebook_s.match(/^https?:\/\//i)) {
       location.facebook_s = "http://" + location.facebook_s;
     }

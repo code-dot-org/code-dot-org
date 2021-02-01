@@ -40,7 +40,7 @@ de:
       update_needs_confirmation: "Du hast dein Konto erfolgreich aktualisiert, aber wir müssen noch deine neue E-Mail-Adresse überprüfen. Bitte überprüfe deinen Posteingang und klicke auf den Bestätigungs-Link, um deine neue E-Mail-Adresse zu bestätigen."
       updated: "Du hast dein Konto erfolgreich aktualisiert."
     sessions:
-      signed_in: "[empty string]"
+      signed_in: " "
       signed_out: "Erfolgreich abgemeldet."
     unlocks:
       send_instructions: "Du wirst in wenigen Minuten eine E-Mail mit Anweisungen zum Entsperren deines Kontos erhalten."

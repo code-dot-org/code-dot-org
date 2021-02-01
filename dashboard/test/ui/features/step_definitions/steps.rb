@@ -1014,10 +1014,9 @@ Given(/^I create a temp script and lesson$/) do
   data = JSON.parse(response)
   @temp_script_name = data['script_name']
   @temp_lesson_id = data['lesson_id']
-  puts "created temp script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
 end
 
-Given(/^I create a temp migrated script and lesson$/) do
+Given(/^I create a temp migrated script with lessons$/) do
   response = browser_request(
     url: '/api/test/create_migrated_script',
     method: 'POST'
@@ -1025,7 +1024,7 @@ Given(/^I create a temp migrated script and lesson$/) do
   data = JSON.parse(response)
   @temp_script_name = data['script_name']
   @temp_lesson_id = data['lesson_id']
-  puts "created temp migrated script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
+  @temp_lesson_without_lesson_plan_id = data['lesson_without_lesson_plan_id']
 end
 
 Given(/^I view the temp script overview page$/) do
@@ -1055,6 +1054,13 @@ Given(/^I view the temp lesson edit page$/) do
   }
 end
 
+Given(/^I view the temp lesson edit page for lesson without lesson plan$/) do
+  steps %{
+    Given I am on "http://studio.code.org/lessons/#{@temp_lesson_without_lesson_plan_id}/edit"
+    And I wait until element "#edit-container" is visible
+  }
+end
+
 Given (/^I remove the temp script from the cache$/) do
   browser_request(
     url: '/api/test/invalidate_script',
@@ -1062,8 +1068,7 @@ Given (/^I remove the temp script from the cache$/) do
     body: {script_name: @temp_script_name}
   )
 end
-
-Given(/^I delete the temp script and lesson$/) do
+Given(/^I delete the temp script with lessons$/) do
   browser_request(
     url: '/api/test/destroy_script',
     method: 'POST',
@@ -1402,6 +1407,26 @@ And(/^I join the section$/) do
   end
 end
 
+And(/^I attempt to join the section$/) do
+  steps %Q{
+    Given I am on "#{@section_url}"
+  }
+end
+
+And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |invalid, name|
+  password = invalid ? 'Short' : 'ExtraLong'
+  email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+  age = "10"
+  steps %Q{
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "#{age}" option in dropdown "user_age"
+    And I click ".btn.btn-primary" to load a new page
+  }
+end
+
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
@@ -1426,6 +1451,13 @@ And(/I type the section code into "([^"]*)"$/) do |selector|
   steps %Q{
     And I type "#{section_code}" into "#{selector}"
   }
+end
+
+# press keys allows React to pick up on the changes
+And(/I enter the section code into "([^"]*)"$/) do |selector|
+  element = @browser.find_element(:css, selector)
+  section_code = @section_url.split('/').last
+  press_keys(element, section_code)
 end
 
 When(/^I sign out$/) do

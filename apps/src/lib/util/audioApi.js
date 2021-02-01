@@ -137,7 +137,7 @@ export const commands = {
       opts.gender,
       'string'
     );
-    if (!validText || !validGender) {
+    if (!validText || opts.text.length === 0 || !validGender) {
       return;
     }
     apiValidateType(
@@ -171,7 +171,7 @@ export const commands = {
     const promise = azureTTS.createSoundPromise({
       text,
       gender,
-      languageCode: voices[language].languageCode,
+      locale: voices[language].locale,
       authenticityToken,
       onFailure: message => outputWarning(message + '\n')
     });

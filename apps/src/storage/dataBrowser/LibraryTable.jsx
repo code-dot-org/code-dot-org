@@ -107,7 +107,7 @@ class LibraryTable extends React.Component {
             <div style={styles.tableDescription}>
               {datasetInfo.lastUpdated && (
                 <span style={styles.lastUpdated}>
-                  {msg.lastUpdated({
+                  {msg.lastUpdatedWithTime({
                     time: moment(datasetInfo.lastUpdated).fromNow()
                   })}
                 </span>

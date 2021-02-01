@@ -6497,3 +6497,40 @@ de-DE:
           Das Virus breitete sich langsam auf andere Monster in der Nähe aus. Die gesunde Monster begannen sich Sorgen zu machen, dass sie alle krank werden würden. Die kranken Monster begannen sich Sorgen zu machen, dass sie das Virus an alle anderen weitergeben würden.
       outbreak_story2:
         content1: hier die Beschreibung
+        markdown: "# Ausbruch: Denke wie ein Wissenschaftler\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulationen sind eine tolle Sache,
+          um etwas zu erfahren, was sich in der realen Welt nicht beobachtet werden
+          kann. Wissenschaftler lösen damit Probleme und testen gefahrlos und effizient
+          neue Ideen. Mit deiner Simulation kannst du zeigen, wie ein Virenausbruch
+          in Monster Town ablaufen könnte.\n\n## Zurücksetzen und noch einmal spielen!\nAuch
+          wenn du deinen Code selbst schreibst, kannst du nie genau wissen, was passiert,
+          wenn du auf Ausführen klickst. Die Monster bewegen sich willkürlich, deshalb
+          weißt du nicht, ob sich das Virus schnell oder langsam ausbreitet. Immer
+          wenn du deinen Code änderst, solltest du die Simulation mehrmals ausführen.
+          Das Spiel ist nie dasselbe!\n\n## Sammle Daten\nSchreibe deine Beobachtungen
+          auf, wenn du die Simulation ausführst. Zähle beispielsweise die Monster,
+          die krank werden oder beobachte mit dem Timer, wie schnell es geht. Wie
+          lange dauert es gewöhnlich, bis alle Monster krank sind, wenn sie keine
+          Maske tragen. \n\n## Wage eine Prognose\nWenn du dein Modell gut kennst,
+          kannst du Prognosen aufstellen. Du kannst sogar die Ausführungen deiner
+          Simulation ändern und erraten, was diesmal anders sein wird. Zum Beispiel:\n*
+          Was würde passieren, wenn es doppelt so viele Monster sind?\n* Was würde
+          passieren, wenn sich die Monster halb so schnell bewegen?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Ist Monster Town wie die richtige Welt?\nEin
+          Modell kann nicht zu hundert Prozent realistisch sein. \n* Was haben deine
+          Ausbruchssimulation und Virenausbrüche in der realen Welt gemeinsam?\n*
+          Was unterscheidet sie?\nSpreche mit deinen Lehrern oder deiner Familie darüber,
+          wenn du diese Aktivität beendet hast!\n\n## Was könntest du noch simulieren?\nDu
+          hast jetzt ein funktionierendes Arbeitsmodell eines Ausbruchs in Monster
+          Town. Was kann deine Simulation nicht modellieren oder zeigen, was du gerne
+          zeigen würdest? Klicke auf Fortfahren und lerne noch mehr zu modellieren:\n*
+          Erhöhe die Anzahl der Monster der Simulation\n* Hilf Monstern gesund zu
+          werden\n* Wahrscheinlichkeit, Immunität, Impfungen und mehr!\n\nDu kannst
+          deine Simulation auch mit anderen teilen oder eine Nachricht, was wir tun
+          könnten, damit andere gesund bleiben, wenn der Virus in die Stadt gelangt
+          ist. \n"
+      outbreak_freeplay_choice:
+        display_name: Freies Spiel
+        description: Du hast das Tutorial abgeschlossen! Arbeite weiter an deinem
+          Projekt, ändere und verbessere es. Du kannst dieselben Blöcke verwenden
+          oder es mit einer erweiterten Toolbox versuchen.

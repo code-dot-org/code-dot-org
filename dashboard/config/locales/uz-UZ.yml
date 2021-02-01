@@ -30,22 +30,22 @@ uz:
         invalid_plural: yaroqsiz
     attributes:
       user:
-        name: Ismni ko`rsatish
+        name: Ko‘rsatiladigan ism
         name_example: Ko‘rsatiladigan ism (masalan, Cool Coder yoki Jeyn S.)
         email: E-mail
         parent_email: Ota-ona/Vasiy emaili
         personal_email: Shaxsiy elektron pochta manzili <a href="%{url}"> (elektron
-          pochta manzilingiz bo'lmasa, shu yerni bosing) </a>
+          pochta manzilingiz bo‘lmasa, shu yerni bosing) </a>
         personal_email_markdown: 'Shaxsiy elektron pochta manzili [(elektron pochta
-          manzilingiz bo''lmasa, shu yerni bosing)](%{url}) '
-        username: Foydalanuvchi nomi
-        password: Kalit so`z
-        password_confirmation: Kalitni so`zni tasdiqlash
-        current_password: Joriy kalit so`z
+          manzilingiz bo‘lmasa, shu yerni bosing)](%{url}) '
+        username: Foydalanuvchi ismi
+        password: Kalit so‘z
+        password_confirmation: Kalitni so‘zni tasdiqlash
+        current_password: Joriy kalit so‘z
         locale: Til
         age: Yoshi
         gender: Jinsi
-        edit_header: Foydalanuvchi ma'lumotlarini tahrir qilish
+        edit_header: Foydalanuvchi ma'lumotlarini tahrirlash
         finish_sign_up_header: Hisob qaydnomangizni yaratishni yakunlang
         finish_sign_up_subheader: "<strong>%{email} </strong> uchun Code.org hisob
           qaydnomasini yaratishni tugatish uchun quyidagi ma'lumotlarni to'ldiring."
@@ -64,7 +64,7 @@ uz:
   hello: Salom Dunyo
   welcome_back: Qayta tashrifingiz bilan, %{name}
   your_professional_learning_plan: Sizning kasbiy ta'lim rejangiz
-  see_your_learning_plan: Kasbiy ta'lim rejangizni ko'irng
+  see_your_learning_plan: Kasbiy ta'lim rejangizni ko‘ring
   submit: Taqdim qilmoq
   unsubmit: Bekor qilish
   previous_page: Oldingi sahifa
@@ -265,7 +265,7 @@ uz:
     title: Hisobingiz bormi? Tizimga kiring
     login: E-mail
     login_username: Email yoki foydalanuvchi nomi
-    password: Kalit so`z
+    password: Kalit so‘z
     remember: Meni eslab qolish
     submit: Kirish
   signin:
@@ -389,10 +389,17 @@ uz:
       sections: Boʻlimlar
       help_support: Yordam va qo‘llab-quvvatlash
       report_bug: Muammo haqida xabar berish
+      report_abuse: Report abuse
       teacher_community: O‘qituvchilar hamjamiyati
       professional_learning: Kasbiy ta'lim
       documentation: Hujjatlar
       tutorials: Qo‘llanmalar
+      app_lab_documentation: App Lab Documentation
+      app_lab_tutorials: App Lab Tutorials
+      game_lab_documentation: Game Lab Documentation
+      game_lab_tutorials: Game Lab Tutorials
+      sprite_lab_documentation: Sprite Lab Documentation
+      sprite_lab_tutorials: Sprite Lab Tutorials
       web_lab_documentation: Web Lab hujjatlari
       educate_overview: Pedagog muxtasari
       educate_elementary: Boshlang'ich maktab
@@ -415,9 +422,11 @@ uz:
       about_contact: Biz bilan bog'laning
       about_faqs: Ko‘p beriladigan savollar
       learn: Oʻrganish
+      stats: Statistika
       help_us: Bizga yordam bering
       teach: O'qiting
       about: Biz haqimizda
+      legal: Privacy & Legal
       legal_privacy: Maxfiylik siyosati
       legal_tos: Xizmat shartlari
     user:
@@ -425,6 +434,7 @@ uz:
       district_dashboard: Tuman paneli
       label: Salom %{username}
       stats: Dasturlash studiyasi
+      my_projects: My projects
       settings: Akkaunt sozlamalari
       logout: Chiqish
       signin: Kirish
@@ -442,11 +452,13 @@ uz:
       basketball: Basketbol
       bounce: Sakrash
       calc: Calc
+      dance: Dance Party
       eval: Eval
       flappy: Flappy
       frozen: Muzlagan (Frozen)
       gamelab: O‘yin laboratoriyasi
       gamelab_jr: O‘yin laboratoriyasi (beta)
+      gumball: The Amazing World of Gumball
       iceage: Muzlik davri
       infinity: Cheksizlik
       makerlab: Maker asboblar to‘plami
@@ -459,7 +471,10 @@ uz:
       playlab_k1: Play Lab (Maktabgacha)
       scratch: Scratch
       sports: Sport
+      spritelab: Sprite Lab
       starwars: Yulduzlar urushi
+      starwarsblocks: Star Wars (Blocks)
+      starwarsblocks_hour: Star Wars (Blocks)
       weblab: Web Lab
       view_all: Barcha loyihalarni ko‘rish...
     popup:
@@ -492,6 +507,7 @@ uz:
       student: O‘quvchi
       viewing_solution: Yechimni ko'rish
       try_it_yourself: Oʻzingiz urinib koʻring
+      section: Section
       example: Misol yechimi
       example_with_number: Misol yechimi %{solution_number}
       submitted_on: 'Yoqilgan:'
@@ -633,6 +649,8 @@ uz:
     no_primary_course: Dasturlash studiyasi boshqa kursini sinab ko‘ring
     choose_next_course: Quyidagi birini tanlab Code Studio kursini sinab ko'ring
     print_certificate: Sertifikatni chop etish
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
   move_students:
     new_section_dne: Kechirasiz, lekin %{new_section_code} bo'lim mavjud emas. Boshqa
       bo'lim kodini kiriting.
@@ -692,6 +710,7 @@ uz:
       GNU LGPL 2.1 </a> ostida litsenziyalangan.
     powered_by_aws: Amazon Web Services va "Powered by AWS" logotipi Amazon.com, Inc
       yoki uning AQSh va/yoki boshqa mamlakatlardagi filiallarining savdo belgilaridir.
+    built_on_github: Microsoft-dan GitHub-da yaratilgan
     google_copyright: "&copy; Google Inc. ruxsati bilan ishlatilgan. Google Classroom
       - Google Inc savdo belgisi."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipi va
@@ -794,6 +813,10 @@ uz:
         chiqing, keyin uni bir necha soniya ichida ulashing.
       audience: 13+ yosh
       cta: Qanday qilishni o‘rganing
+    dance:
+      title: Dance Party
+    dance-2019:
+      title: Dance Party
     hoc:
       title: Klassik labirint
       body: Informatika asoslari bilan tanishib ko‘ring. Millionlar buni uddalashdi.
@@ -803,6 +826,9 @@ uz:
         darsimizni sinab ko‘ring!
     20-hour:
       title: Tezlashtirilgan kurs
+      body: This 20-hour course covers the core computer science and programming concepts
+        in courses 2-4. The course is designed for use with ages 10-18. Check out
+        courses 2-4 for a more complete experience!
       body_short: 2-4-kurslarning tezlashtirilgan versiyasida asosiy kompyuter fanlarini
         o'rganing.
     hoc2014:
@@ -1091,7 +1117,7 @@ uz:
     advanced_share: Kengaytirilgan variantlarni ko'rsatish
     no_projects: Sizda hozirda hech qanday loyiha yo'q. Loyihani boshlash uchun yuqoridagi
       tugmachalardan birini bosing.
-    name: Ismi
+    name: Ismingiz
     updated: Yangilangan
     project_type: Loyiha turi
     help_text: Yangi loyihani boshlash uchun quyida <strong> Ilova yaratish </strong>
@@ -1329,11 +1355,13 @@ uz:
         codecademy: CodeCademy
         csfirst: Google CS First
         khan: Xon Akademiyasi
+        kodable: Kodable
         scratch: Scratch
         tynker: Tynker
         other: 'Boshqa:'
       robotics:
         grok: Grok Learning
+        kodable: Kodable
         lego: LEGO Education
         microbit: Microbit
         ozobot: Ozobot
@@ -1395,6 +1423,11 @@ uz:
       rozilik bildirasiz.
     more_information: Code.org Maxfiylik siyosati bilan tanishing
     accept: Roziman
+  page_not_found_title: Sahifa topilmadi
+  page_not_found_header: '404: Sahifa topilmadi'
+  page_not_found_description: Siz izlayotgan sahifa ushbu manzilda mavjud emas. Veb-manzilni
+    tekshiring va qayta yuboring. Yoki, bizning bosh sahifamizga qayting.
+  page_not_found_button: Bosh sahifaga qaytish
   copy: Nusxalash
   maker:
     google_oauth:

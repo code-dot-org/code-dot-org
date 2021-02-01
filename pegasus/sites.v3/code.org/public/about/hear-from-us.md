@@ -11,11 +11,15 @@ Interested in learning more about the work we do? Take a peek under the hood and
 
 ## Sign-up information
 
-<iframe src="http://go.pardot.com/l/153401/2018-01-08/k4krw5" width="100%" height="405" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+<iframe src="http://go.pardot.com/l/153401/2018-01-08/k4krw5" width="100%" height="430" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
 
 ## <a name="previous"></a>Previous updates
 
 ### 2020
+- <a href="http://go.pardot.com/webmail/153401/715783320/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">December 2020</a>
+- <a href="http://go.pardot.com/webmail/153401/715783332/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">November 2020</a>
+- <a href="http://go.pardot.com/webmail/153401/715783310/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">October 2020</a>
+- <a href="http://go.pardot.com/webmail/153401/677517466/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">September 2020</a>
 - <a href="http://go.pardot.com/webmail/153401/651763306/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">April/May 2020</a>
 - <a href="http://go.pardot.com/webmail/153401/651763298/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">March 2020</a>
 - <a href="http://go.pardot.com/webmail/153401/612870524/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">January/February 2020</a>

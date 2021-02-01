@@ -18,7 +18,9 @@ describe('the level builder page init script', () => {
       i18n: {
         stageDescriptions: [],
         description:
-          '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+          '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
+        studentDescription:
+          '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       },
       beta: false,
       locales: [['English', 'en-US'], ['French', 'fr-FR']],

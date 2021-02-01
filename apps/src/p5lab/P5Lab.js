@@ -359,6 +359,10 @@ P5Lab.prototype.init = function(config) {
 
     this.studioApp_.init(config);
 
+    if (startInAnimationTab(getStore().getState())) {
+      getStore().dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
+    }
+
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(false));
@@ -391,8 +395,10 @@ P5Lab.prototype.init = function(config) {
     (!config.hideSource &&
       !config.level.debuggerDisabled &&
       !config.level.iframeEmbedAppAndCode);
+  var showPauseButton = experiments.isEnabled(experiments.SPRITELAB_PAUSE);
   var showDebugConsole = config.level.editCode && !config.hideSource;
-  this.debuggerEnabled = showDebugButtons || showDebugConsole;
+  this.debuggerEnabled =
+    showDebugButtons || showPauseButton || showDebugConsole;
 
   if (this.debuggerEnabled) {
     getStore().dispatch(
@@ -444,10 +450,6 @@ P5Lab.prototype.init = function(config) {
     validationEnabled: !!config.level.validationEnabled
   });
 
-  if (startInAnimationTab(getStore().getState())) {
-    getStore().dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
-  }
-
   // Push project-sourced animation metadata into store. Always use the
   // animations specified by the level definition for embed and contained
   // levels.
@@ -492,6 +494,7 @@ P5Lab.prototype.init = function(config) {
           <P5LabView
             showFinishButton={finishButtonFirstLine && showFinishButton}
             onMount={onMount}
+            pauseHandler={this.onPause}
           />
         </Provider>,
         document.getElementById(config.containerId)
@@ -646,6 +649,11 @@ P5Lab.prototype.setupReduxSubscribers = function(store) {
     }
   });
 };
+
+/**
+ * Override to change pause behavior.
+ */
+P5Lab.prototype.onPause = function() {};
 
 P5Lab.prototype.onIsRunningChange = function() {
   this.setCrosshairCursorForPlaySpace();

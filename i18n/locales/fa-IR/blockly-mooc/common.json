@@ -314,6 +314,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "بررسی میکند که آیا یک مقدار کوچکتر یا مساوی یک مقدار دیگر است. اگر مقدار سمت چپی عبارت کوچکتر یا مساوی مقدار سمت راست عبارت است، عبارت \"درست\" را نشان میدهد.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "عامل کمتر یا مساوی",
   "dropletBlock_mathAbs_param0": "طول (x)",
+  "dropletBlock_mathIncrement_param0": "طول (x)",
+  "dropletBlock_mathDecrement_param0": "طول (x)",
   "dropletBlock_mathPow_param0": "طول (x)",
   "dropletBlock_mathRandom_description": "یک عدد تصادفی بین صفر و یک بر می گرداند ( که شامل صفر می تواند باشد ولی یک نمی تواند باشد)",
   "dropletBlock_mathRandom_signatureOverride": "ریاضیات.تصادفی()",

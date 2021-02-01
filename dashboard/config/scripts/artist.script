@@ -1,7 +1,7 @@
 hidden false
 tts true
 
-lesson 'Artist', display_name: 'Artist'
+lesson 'Artist', display_name: 'Artist', has_lesson_plan: false
 level 'Standalone_Artist_1'
 level 'Standalone_Artist_2'
 level 'Standalone_Artist_3'

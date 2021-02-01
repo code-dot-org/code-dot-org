@@ -1076,13 +1076,16 @@
           "swimming left and right": "плавание налево и направо"
         },
         "outbreak1": {
-          "wandering": "блуждание"
+          "wandering": "блуждание",
+          "recovering": "выздоровление"
         },
         "outbreak2": {
-          "wandering": "блуждание"
+          "wandering": "блуждание",
+          "recovering": "выздоровление"
         },
         "outbreak3": {
-          "wandering": "блуждание"
+          "wandering": "блуждание",
+          "recovering": "выздоровление"
         },
         "outbreak4": {
           "wandering": "блуждание",
@@ -1096,13 +1099,17 @@
           "moving north": "движение на север",
           "jittering": "дрожание",
           "moving west": "движение на запад",
-          "patrolling": "патрулирование"
+          "patrolling": "патрулирование",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "recovering": "выздоровление"
         },
         "outbreak5": {
-          "wandering": "блуждание"
+          "wandering": "блуждание",
+          "recovering": "выздоровление"
         },
         "outbreak6": {
-          "wandering": "блуждание"
+          "wandering": "блуждание",
+          "recovering": "выздоровление"
         },
         "outbreak7": {
           "wandering": "блуждание",
@@ -1115,7 +1122,10 @@
           "moving north": "движение на север",
           "jittering": "дрожание",
           "moving west": "движение на запад",
-          "patrolling": "патрулирование"
+          "patrolling": "патрулирование",
+          "moving left and right": "перемещение влево и вправо",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "recovering": "выздоровление"
         },
         "outbreak8": {
           "wandering": "блуждание",
@@ -1128,7 +1138,10 @@
           "moving north": "движение на север",
           "jittering": "дрожание",
           "moving west": "движение на запад",
-          "patrolling": "патрулирование"
+          "patrolling": "патрулирование",
+          "moving left and right": "перемещение влево и вправо",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "recovering": "выздоровление"
         },
         "outbreak_freeplay": {
           "wandering": "блуждание",

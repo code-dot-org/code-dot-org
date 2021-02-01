@@ -106,7 +106,7 @@ describe('Audio API', function() {
     });
 
     describe('block functionality', function() {
-      let outputWarningSpy, azureTTSStub, appOptions, options;
+      let outputWarningSpy, azureTTSStub, options;
 
       beforeEach(function() {
         outputWarningSpy = sinon.spy();
@@ -116,12 +116,11 @@ describe('Audio API', function() {
           enqueueAndPlay: sinon.spy()
         };
         sinon.stub(AzureTextToSpeech, 'getSingleton').returns(azureTTSStub);
-        appOptions = {
+        setAppOptions({
           azureSpeechServiceVoices: {
-            English: {female: 'en-female', languageCode: 'en-US'}
+            English: {female: 'en-female', locale: 'en-US'}
           }
-        };
-        setAppOptions(appOptions);
+        });
         options = {
           text: 'hello world',
           gender: 'female',
@@ -154,7 +153,7 @@ describe('Audio API', function() {
         expect(azureTTSStub.createSoundPromise).to.have.been.calledOnce;
         const args = azureTTSStub.createSoundPromise.firstCall.args[0];
         expect(args.gender).to.equal('female');
-        expect(args.languageCode).to.equal('en-US');
+        expect(args.locale).to.equal('en-US');
         expect(azureTTSStub.enqueueAndPlay).to.have.been.calledOnce;
       });
 
@@ -166,7 +165,7 @@ describe('Audio API', function() {
         const args = azureTTSStub.createSoundPromise.firstCall.args[0];
         expect(args.text).to.equal('hello world');
         expect(args.gender).to.equal('female');
-        expect(args.languageCode).to.equal('en-US');
+        expect(args.locale).to.equal('en-US');
         expect(azureTTSStub.enqueueAndPlay).to.have.been.calledOnce;
       });
     });

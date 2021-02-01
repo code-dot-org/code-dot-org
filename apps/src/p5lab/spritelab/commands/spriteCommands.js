@@ -65,6 +65,7 @@ export const commands = {
     }
     var sprite = this.createSprite(location.x, location.y);
     sprite.direction = 0;
+    sprite.speed = 5;
     sprite.baseScale = 1;
     sprite.setScale = function(scale) {
       sprite.scale = scale * sprite.baseScale;
@@ -72,7 +73,7 @@ export const commands = {
     sprite.getScale = function() {
       return sprite.scale / sprite.baseScale;
     };
-    let spriteArg = coreLibrary.addSprite(sprite, name);
+    let spriteArg = coreLibrary.addSprite(sprite, name, animation);
     if (animation) {
       sprite.setAnimation(animation);
       sprite.scale /= sprite.baseScale;
@@ -85,6 +86,7 @@ export const commands = {
         );
       sprite.scale *= sprite.baseScale;
     }
+    sprite.setScale(coreLibrary.defaultSpriteSize / 100);
     return spriteArg;
   },
 

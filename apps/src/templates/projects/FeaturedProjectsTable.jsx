@@ -176,6 +176,10 @@ const typeFormatter = type => {
   return FEATURED_PROJECT_TYPE_MAP[type];
 };
 
+const topicFormatter = topic => {
+  return topic;
+};
+
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
     projectList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
@@ -266,6 +270,23 @@ class FeaturedProjectsTable extends React.Component {
         },
         cell: {
           formatters: [typeFormatter],
+          props: {
+            style: {
+              ...styles.cellType,
+              ...tableLayoutStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'topic',
+        header: {
+          label: 'Topic',
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable]
+        },
+        cell: {
+          formatters: [topicFormatter],
           props: {
             style: {
               ...styles.cellType,

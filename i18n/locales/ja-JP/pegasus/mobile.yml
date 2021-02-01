@@ -373,7 +373,7 @@
   homepage_slot_text_link_donate: "寄付します"
   homepage_slot_text_link_shop: "T シャツ、帽子、その他"
   homepage_slot_text_link_administrators: "あなたの学校にコンピューター サイエンスを取り入れましょう"
-  homepage_gallery_header: "これまでに %{Project_count} 百万以上のCode.orgプロジェクトが作成されました"
+  homepage_gallery_header: "これまでに %{project_count} 百万以上のCode.orgプロジェクトが作成されました"
   homepage_header_donors: "Code.orgは支援者の皆様に感謝します。"
   homepage_donors_seall: "すべてを見る"
   homepage_donors_donate: "寄付する"
@@ -957,11 +957,16 @@
   coursed-2017_name: コース D (2017)
   coursee-2017_name: コース E (2017)
   coursef-2017_name: コース F (2017)
+  coursea-2018_name: コース A (2018)
   courseb-2018_name: コース B (2018)
+  coursec-2018_name: コース C (2018)
+  coursed-2018_name: コース D (2018)
+  coursee-2018_name: コース E (2018)
   coursef-2018_name: コース F (2018)
   coursea-2019_name: コース A (2019)
   courseb-2019_name: コース B (2019)
   coursec-2019_name: コース C (2019)
+  coursed-2019_name: コース D (2019)
   coursee-2019_name: コース E (2019)
   coursef-2019_name: コース F (2019)
   coursea-2020_name: コース A (2020)
@@ -972,6 +977,7 @@
   coursef-2020_name: コース F (2020)
   express-2018_name: エクスプレスコース (2018)
   pre-express-2018_name: 就学前エクスプレスコース (2018)
+  express-2019_name: エクスプレスコース (2019)
   pre-express-2019_name: 就学前エクスプレスコース (2019)
   express-2020_name: エクスプレスコース (2020)
   pre-express-2020_name: 就学前エクスプレスコース (2020)
@@ -1516,6 +1522,7 @@
   syncing_students: "生徒リストを同期しています"
   syncing_students_instructions: 'Code.orgセクションで使うGoogle Classroomの生徒リストを更新したい場合は、[生徒を管理] タブの [Google Classroomから生徒を同期] ボタンをクリックしてください:'
   google_sign_in_instruct: 'ここでは、[Googleアカウントでサインイン] のオプションを選ぶ必要があります。'
+  hero_name: 'マインクラフト: ヒーローの旅'
   applab-intro_name: アプリラボの紹介
   applab_tile_title: "アプリラボの紹介 (13歳以上)"
   applab_tile_subtitle: "ブロックベースのプログラミングを使ってJavaScriptで自分のアプリを作成しましょう。または、テキストベースのプログラミングで能力を向上させましょう。 (英語のみ)"

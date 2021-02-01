@@ -129,7 +129,7 @@ class ScriptsController < ApplicationController
       @script.reload
       render json: @script.summarize_for_script_edit
     else
-      render json: @script.errors
+      render(status: :not_acceptable, json: @script.errors)
     end
   end
 
@@ -224,6 +224,7 @@ class ScriptsController < ApplicationController
       :description_audience,
       :description_short,
       :description,
+      :student_description,
       :stage_descriptions
     ).to_h
   end

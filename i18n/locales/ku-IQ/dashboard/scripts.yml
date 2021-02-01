@@ -687,3 +687,99 @@ ku:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: گۆڕاوەکان
+        csd3-2021:
+          lessons:
+            Variables:
+              key: گۆڕاوەکان
+              name: گۆڕاوەکان
+            Text:
+              key: دەق
+              name: دەق
+            Conditionals:
+              key: مەرجیەکان
+              name: مەرجیەکان
+            Functions:
+              key: فرمانەکان
+              name: فرمانەکان
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: فەرمانی بە پێوەر
+              name: فەرمانی بە پێوەر
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: لیستەکان
+            csp_loops:
+              display_name: گرێکان
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: نەخشەی دڵخۆش
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        courseb-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        coursec-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
+            Relay Programming:
+              key: بەرنامەڕێژی بە پێشبڕکێ
+              name: بەرنامەڕێژی بە پێشبڕکێ
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: مەرجیەکان
+          lesson_groups:
+            csf_functions:
+              display_name: فرمانەکان
+        coursef-2021:
+          lessons:
+            Internet:
+              name: ئینتەرنێت
+          lesson_groups:
+            csf_variables:
+              display_name: گۆڕاوەکان
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+            csf_functions:
+              display_name: فرمانەکان
+            csf_variables:
+              display_name: گۆڕاوەکان
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: گۆڕاوەکان

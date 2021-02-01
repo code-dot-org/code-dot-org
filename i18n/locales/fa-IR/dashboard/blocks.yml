@@ -189,6 +189,7 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+            '"speed"': سرعت
       gamelab_getTime:
         options:
           UNIT:
@@ -234,10 +235,18 @@ fa:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': رنگین کمان
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': زیر آب
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': زمستان
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': متوسط
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': اندازه
+            '"speed"': سرعت
       gamelab_setSizes:
         options:
           PROPERTY:

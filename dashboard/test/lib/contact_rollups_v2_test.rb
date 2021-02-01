@@ -94,6 +94,9 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     ContactRollupsPardotMemory.expects(:save_accepted_submissions).never
     ContactRollupsPardotMemory.expects(:save_rejected_submissions).never
 
+    # Called when deleting Pardot prospects
+    PardotV2.expects(:delete_prospects_by_email).never
+
     # Called when downloading Pardot ID-email mappings
     PardotV2.expects(:post_with_auth_retry).never
 

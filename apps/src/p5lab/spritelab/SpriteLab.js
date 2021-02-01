@@ -50,3 +50,12 @@ SpriteLab.prototype.reset = function() {
   getStore().dispatch(clearPrompts());
   this.preview();
 };
+
+SpriteLab.prototype.onPause = function(isPaused) {
+  const current = new Date().getTime();
+  if (isPaused) {
+    coreLibrary.endPause(current);
+  } else {
+    coreLibrary.startPause(current);
+  }
+};

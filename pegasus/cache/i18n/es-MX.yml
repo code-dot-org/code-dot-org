@@ -2208,6 +2208,7 @@ es-MX:
   compatibility_unsupported_browser_markdown: Tu navegador no es compatible. Actualiza
     tu navegador a [uno de nuestros navegadores compatibles](%{supported_browsers_url})
     Puedes tratar de ver la página, pero la funcionalidad podría verse afectada.
+  starwars_shortcode: estrella
   mc_shortcode: mc
   flappy_shortcode: aletear
   header_home: Inicio

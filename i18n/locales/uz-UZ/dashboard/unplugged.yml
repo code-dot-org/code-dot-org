@@ -36,10 +36,10 @@ uz:
         desc: Dastlabki 20 soatlik seriya bo'yicha xulosa darsi sinfga barcha sevimli daqiqalarini qayta tiklashga yordam beradi, shu bilan birga, agar ular kompyuter fanlari safarisi davom etishini xohlashsa, o'zlari bajarishi mumkin bo'lgan keyingi qadamlarni ko'rsatadi.
       UnplugHappyMaps:
         title: Xursand Xaritalar
-        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o'tkazish uchun oddiy algoritmlarni (ko'rsatmalar to'plamini) yaratadilar.
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
       MoveIt:
         title: Move It, Move It (Harakatlan)
-        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o'tkazish uchun oddiy algoritmlarni (ko'rsatmalar to'plamini) yaratadilar.
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
       PlantASeed:
         title: 'Hayotiy algoritmlar: Urug‘ ekish'
         desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini eslatadi, bunga urug' ekish jarayonini misol qilib keltiramiz. Shuningdek, unda kompyuter fanining kengroq tushunishga va algoritmlarning muhim rol o'ynashiga e'tibor qaratadi.
@@ -107,7 +107,7 @@ uz:
         title: Zavqli For sikli
         desc: Biz bilamizki,sikllar bizga narsalarni qayta-qayta bajarishga imkon beradi, ammo endi biz qo'shimcha tuzilishga ega sikllardan qanday foydalanishni o'rganamiz.
       SongwritingWithParameters:
-        title: Parametrlar bilan qo'shiq yozish
+        title: Parametrlar bilan qo‘shiq yozish
         desc: 'Informatika dunyosidagi eng ajoyib tuzilmalardan biri bu funksiya. Funksiyalar (ba''zida protsedura deb ham yuritiladi) - bu kichik dastur bo''lib, undan kattaroq dasturning ichida qayta-qayta foydalanishingiz mumkin. Ushbu dars talabalarga intuitiv ravishda nima uchun ekanligini va kod qismlarini funksiyalarga birlashtirish qanchalik foydali amaliyot bo''lishi mumkinligiтш ga yordam tushunishga beradi.'
       BinaryImages:
         title: Ikkilik Rasmlar
@@ -158,7 +158,7 @@ uz:
         desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini eslatadi, bunga urug' ekish jarayonini misol qilib keltiramiz. Shuningdek, unda kompyuter fanining kengroq tushunishga va algoritmlarning muhim rol o'ynashiga e'tibor qaratadi.
       courseA_unplugged_happyMaps:
         title: Xursand Xaritalar
-        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o'tkazish uchun oddiy algoritmlarni (ko'rsatmalar to'plamini) yaratadilar.
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
       courseA_unplugged_goingPlacesSafely:
         title: Joylarga xavfsiz borish
         desc: Internet qiziqarli, ammo shu bilan birga ba'zida xavfli joy hamdir. O'qituvchilar Internetdan foydalanishda xavfsizlikni saqlash qoidalari bilan tanishtiradilar.
@@ -187,6 +187,7 @@ uz:
         title: Estafetali dasturlash
         desc: Talabalar estafeta poygasida qatnashadilar, u yerda "Katak qog'ozli dasturlash" tasviriga asoslanib algoritm yozish uchun hovli bo'ylab yuguradilar. Ular bir vaqtning o'zida bitta ko'rsatma yozishlari mumkin va agar biror joyda xato bo'lsa, hamma narsani shu nuqtagacha o'chirib tashlashlari kerak.
       courseD_unplugged_conditionalsCards:
+        title: Conditionals with Cards
         desc: Shartli bayonotlar to'g'risida ma'lumot olish uchun talabalar karta o'yini o'ynaydilar va "Agar men qizil karta olsam, men ball olaman" va "agar men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
       courseD_unplugged_binaryImages:
         title: Ikkilik Rasmlar
@@ -195,7 +196,7 @@ uz:
         title: 'Hayotiy Algoritmlar: Zar bilan poyga'
         desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini taklif qiladi. Buning bir qismi sifatida talabalar zarlar poygasi o'yinining algoritmini aniqlaydilar va yozadilar.
       courseE_unplugged_songwritingParameters:
-        title: Parametrlar bilan qo'shiq yozish
+        title: Parametrlar bilan qo‘shiq yozish
         desc: Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish uchun qo'shiqdagi xor tushunchasidan foydalanadilar.
       courseE_unplugged_internet:
         title: Internet
@@ -216,7 +217,7 @@ uz:
         title: Zavqli For sikli
         desc: Biz bilamizki,sikllar bizga narsalarni qayta-qayta bajarishga imkon beradi, ammo endi biz qo'shimcha tuzilishga ega sikllardan qanday foydalanishni o'rganamiz.
       courseF_unplugged_songwritingParameters:
-        title: Parametrlar bilan qo'shiq yozish
+        title: Parametrlar bilan qo‘shiq yozish
         desc: 'Informatika dunyosidagi eng ajoyib tuzilmalardan biri bu funksiya. Funksiyalar (ba''zida protsedura deb ham yuritiladi) - bu kichik dastur bo''lib, undan kattaroq dasturning ichida qayta-qayta foydalanishingiz mumkin. Ushbu dars talabalarga intuitiv ravishda nima uchun ekanligini va kod qismlarini funksiyalarga birlashtirish qanchalik foydali amaliyot bo''lishi mumkinligiтш ga yordam tushunishga beradi.'
       swipeRightPassThrough:
         title: Ishga qabul qilish senariylari sessiyasi
@@ -227,13 +228,14 @@ uz:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
+        title: My Robotic Friends
         desc: Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
       PlantASeed_2018:
         title: 'Hayotiy algoritmlar: Urug‘ ekish'
         desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini eslatadi, bunga urug' ekish jarayonini misol qilib keltiramiz. Shuningdek, unda kompyuter fanining kengroq tushunishga va algoritmlarning muhim rol o'ynashiga e'tibor qaratadi.
       UnplugHappyMaps_2018:
         title: Xursand Xaritalar
-        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o'tkazish uchun oddiy algoritmlarni (ko'rsatmalar to'plamini) yaratadilar.
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
       GoingPlacesSafely_2018:
         title: Joylarga xavfsiz borish
         desc: Internet qiziqarli, ammo shu bilan birga ba'zida xavfli joy hamdir. O'qituvchilar Internetdan foydalanishda xavfsizlikni saqlash qoidalari bilan tanishtiradilar.
@@ -282,6 +284,7 @@ uz:
         title: Estafetali dasturlash
         desc: Ushbu mashg'ulotda disk sozlamasi  va qat'iyatlilik bo'yicha qisqa dars bilan boshlanadi, so'ngra talabalar jamoalarga bo'linib, birgalikda birma-bir ko'rsatma yozish uchun birgalikda harakat qilishlari bilan tezda soat poygasiga o'tishadi.
       courseB_unplugged_MRF_2019:
+        title: My Robotic Friends
         desc: Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
       BuildingAFoundation_2019:
         title: 'tarjima qilinmagan: en-US.data.unplugged.BuildingAFoundation_2018.title'
@@ -349,7 +352,7 @@ uz:
         desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini eslatadi, bunga urug' ekish jarayonini misol qilib keltiramiz. Shuningdek, unda kompyuter fanining kengroq tushunishga va algoritmlarning muhim rol o'ynashiga e'tibor qaratadi.
       UnplugHappyMaps_2019:
         title: Xursand Xaritalar
-        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o'tkazish uchun oddiy algoritmlarni (ko'rsatmalar to'plamini) yaratadilar.
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
       GoingPlacesSafely_2019:
         title: Joylarga xavfsiz borish
         desc: Internet qiziqarli, ammo shu bilan birga ba'zida xavfli joy hamdir. O'qituvchilar Internetdan foydalanishda xavfsizlikni saqlash qoidalari bilan tanishtiradilar.
