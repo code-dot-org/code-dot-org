@@ -42,4 +42,12 @@ describe('AllVocabulariesEditor', () => {
     deleteButton.simulate('click');
     expect(removeVocabulary).to.have.been.calledOnce;
   });
+
+  it('can add a vocabulary', () => {
+    const wrapper = mount(<AllVocabulariesEditor {...defaultProps} />);
+    const addVocabularyButton = wrapper.find('a');
+    expect(addVocabularyButton.contains('Create New Vocabulary')).to.be.true;
+    addVocabularyButton.simulate('click');
+    expect(wrapper.find('AddVocabularyDialog').length).to.equal(1);
+  });
 });
