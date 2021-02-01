@@ -15,6 +15,8 @@ import foorm, {
 
 import 'survey-react/survey.css';
 
+let codeMirror = null;
+
 $(document).ready(function() {
   registerReducers({foorm});
   const store = getStore();
