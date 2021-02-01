@@ -6,7 +6,7 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# Hour of Code를 방과후 수업에서 가르치는 방법
+# 방과후 수업과 클럽에서 아워오브코드를 가르치는 방법
 
 ### 이 운동에 참여하고 다음의 단계로 컴퓨터 과학을 학생들에게 소개해 보세요.
 
@@ -28,7 +28,7 @@ nav: how_to_nav
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**방과후 수업을 위한 아워오브코드 강의 계획 필요하세요?**이 [템플릿](/files/AfterschoolEducatorLessonPlanOutline.docx)을 확인해 보세요!
+**방과후 수업을 위한 아워오브코드 레슨 플랜이 필요하세요?**이 [템플릿](/files/AfterschoolEducatorLessonPlanOutline.docx)을 확인해 보세요!
 
 ## 3. 아워오브코드 홍보
 
@@ -44,7 +44,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 **기기가 충분하지 않습니까?**[페어 프로그래밍](https://www.youtube.com/watch?v=vgkahOzFH2Q)을 활용하세요. 학생들을 짝 지어주면, 선생님보다 서로 서로 도움을 주고 받을 수 있도록 할 수 있습니다. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
 
-## 5. 여러분에게 영감을 주는 비디오를 보며 여러분의 Hour of code를 시작하세요.
+## 5. 여러분에게 영감을 주는 비디오를 보며 여러분의 아워오브코드를 시작하세요.
 
 참가자들을 격려하는 것으로부터 여러분의 Hour of Code를 시작하세요. 그리고 컴퓨터 과학이 우리의 삶의 모든 부분에 어떻게 영향을 주는지 토론해보세요.
 
@@ -61,7 +61,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 - 일상생활에서 코드가 사용되는 것들을 나열하세요.
 - 여학생에게 컴퓨터 과학에 관심을 가지게 하는 팀은 [여기]({{ urls/girls }})에서 보세요.
 
-**추가로 가이드가 필요하신가요?**이 탬플렛 강의 플랜 [을 다운받으세요](/files/AfterschoolEducatorLessonPlanOutline.docx)
+**추가로 가이드가 필요하신가요?**이 탬플렛 레슨 플랜 [을 다운받으세요](/files/AfterschoolEducatorLessonPlanOutline.docx)
 
 ## 6. 코딩하기!
 
@@ -78,7 +78,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 - [참가자를 위한 티 셔츠](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) 를 주문하세요.
 - 소셜 미디어에 여러분의 Hour of Code 이벤트 사진이나 동영상을 공유하세요. #HourOfCode 와 @codeorg를 이용하면 우리도 여러분의 성공을 강조할 수 있어요.
 
-## 교육자들을 위한 추가적인 Hour of Code 리소스들
+## 교육자를 위한 기타 아워오브 리소스
 
 - 과거 아워오브코드 조직자의 [모범 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) 를 확인합니다.
 - 다음 [교육자의 워오브코드 웹비나 가이드](https://youtu.be/EJeMeSW2-Mw)녹화본을 보세요
