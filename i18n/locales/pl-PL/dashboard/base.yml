@@ -814,7 +814,7 @@ pl:
     save: "Zapisz"
   race_interstitial:
     title: "Opcjonalnie: Pomóż nam śledzić nasze postępy na drodze do poprawy różnorodności w informatyce"
-    message: "Określ swoja przynależność rasową (zaznacz wszystko, co dotyczy Ciebie)"
+    message: "Podaj nam swoją rasę lub pochodzenie etniczne (zaznacz wszystkie pasujące odpowiedzi) "
     races:
       white: "Biały"
       black: "Murzyn lub Afroamerykanin"
@@ -1093,6 +1093,7 @@ pl:
       copy_code: 'Prosimy o skopiowanie i wklejenie tego kodu do Maker App, aby zalogować się na Code.org.'
       error_token_expired: 'Token wygasł. Prosimy o ponowne zalogowanie, aby uzyskać nowy token.'
       error_wrong_provider: 'Niewłaściwy dostawca. Prosimy sprawdzić, czy logujesz się za pośrednictwem Google.'
+      error_no_linked_google: 'Wróć do aplikacji Maker App i użyj przycisku „Zaloguj się” w prawym górnym rogu, aby się zalogować, lub kliknij przycisk Wstecz, aby zalogować się z innym kontem Google '
       error_invalid_user: 'Nieważny identyfikator użytkownika. Prosimy spróbować zalogować się ponownie.'
       error_no_code: 'Prosimy wpisać swój kod logowania.'
       confirm_login: "Wybierz Potwierdź, aby zalogować się ze swoim kontem Google.\n"
