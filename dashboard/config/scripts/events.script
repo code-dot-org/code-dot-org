@@ -1,6 +1,6 @@
 id '4'
 
-lesson 'Bounce', display_name: 'Bounce'
+lesson 'Bounce', display_name: 'Bounce', has_lesson_plan: false
 level 'bounce_1'
 level 'bounce_2'
 level 'bounce_3'
@@ -12,17 +12,17 @@ level 'bounce_10'
 level 'bounce_11'
 level 'bounce_12'
 
-lesson 'Studio', display_name: 'Studio'
+lesson 'Studio', display_name: 'Studio', has_lesson_plan: false
 skin 'studio'
 level 'blockly:Studio:full_sandbox'
 skin 'infinity'
 level 'blockly:Studio:full_sandbox_infinity'
 
-lesson 'Calc', display_name: 'Calc'
+lesson 'Calc', display_name: 'Calc', has_lesson_plan: false
 skin 'calc'
 level 'blockly:Calc:example1'
 
-lesson 'Eval', display_name: 'Eval'
+lesson 'Eval', display_name: 'Eval', has_lesson_plan: false
 skin 'eval'
 level 'blockly:Eval:eval1'
 

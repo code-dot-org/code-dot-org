@@ -1,11 +1,13 @@
 {
   "pages": {
-    "/projects": "home-learning-2020"
+    "/projects": "home-learning-2020",
+    "/home": "teacher-apps-open-2021",
+    "/courses": "teacher-apps-open-2021"
   },
 
   "banners": {
     "teacher-apps-open-2021": {
-      "image": "/images/professional-learning-2019-3.png",
+      "image": "/images/fill-970x562/professional-learning-2021-1.jpg",
       "title": "Sign up for Professional Learning",
       "body": "98% of participating teachers recommend our engaging, highly supportive program. Join our hands-on workshops with other teachers from your area. Scholarships and discounts available in most areas.",
       "buttonText": "Join us",

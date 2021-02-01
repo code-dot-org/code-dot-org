@@ -9,6 +9,7 @@ import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 import {toggleExpand} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import _ from 'lodash';
 
 const styles = {
   levelToken: {
@@ -119,7 +120,7 @@ class LevelToken extends Component {
   };
 
   scriptLevelForProgressBubble = activeLevel => {
-    let progressBubbleLevel = activeLevel;
+    let progressBubbleLevel = _.cloneDeep(activeLevel);
 
     progressBubbleLevel['isCurrentLevel'] = false;
     progressBubbleLevel['status'] = LevelStatus.not_tried;

@@ -171,7 +171,7 @@ export const commands = {
     const promise = azureTTS.createSoundPromise({
       text,
       gender,
-      languageCode: voices[language].languageCode,
+      locale: voices[language].locale,
       authenticityToken,
       onFailure: message => outputWarning(message + '\n')
     });

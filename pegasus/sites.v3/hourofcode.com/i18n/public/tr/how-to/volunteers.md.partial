@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Gönüllüler için Nasıl Yapılır? Rehberi
+title: Gönüllüler için Kodlama Saati Nasıl Yapılır? Rehberi
 layout: wide
 nav: how_to_nav
 ---
@@ -14,7 +14,7 @@ nav: how_to_nav
 
 Bilişimsel düşünme, problem çözme becerilerini, mantığı ve yaratıcılığı geliştirmeye yardımcı olur. Teknoloji de gezegendeki her sanayiyi dönüştürüyor. Bugün öğrenciler teknolojiyi kullanmakla kalmayıp onu nasıl üretebileceğini de öğrenmeliler.
 
-Hour of Code, "kod"un gizemini çözmek, temel bilgileri herkesin öğrenebileceğini kanıtlamak ve bilgisayar bilimi alanına katılımı artırmak için tasarlanmış, bilgisayar bilimine giriş niteliğinde bir saatlik bir etkinliktir. Bilgisayar bilimi hareketinde farkındalık yaratmaya yardımcı ve daha fazla insana, özellikle de genç kadınlara ve tarih boyunca ötekileştirilmiş ırk ve etnik gruplardan olan öğrencilere bilgisayar bilimini deneme konusunda ilham vermeye gönüllü olabilirsiniz.
+Kodlama Saati, "kod"un gizemini çözmek, temel bilgileri herkesin öğrenebileceğini kanıtlamak ve bilgisayar bilimi alanına katılımı artırmak için tasarlanmış, bilgisayar bilimine giriş niteliğinde bir saatlik bir etkinliktir. Bilgisayar bilimi hareketindeki ve gönüllülerindeki farkındalığın uyanmasına daha çok öğrenciyi - özellikle tarihsel açıdan ötekileştirilmiş ırksal ve etnik gruplardan öğrencileri ve kadınları- bilgisayar bilimini denemeleri için yüreklendirerek yardımcı olabilirsiniz.
 
 - [Kim gönüllü olabilir?](#who-can-volunteer)
 - [Neden gönüllü olunmalı?](#why-volunteer)
@@ -22,11 +22,11 @@ Hour of Code, "kod"un gizemini çözmek, temel bilgileri herkesin öğrenebilece
 - [Belirli bir okula gönüllü olmak istersem?](#choose-a-school)
 - [Hazırlık](#how-to-prepare)
 - [Etkinlik düzenlediğinizde](#hosting-an-event)
-- [Hour of Code'u başkalarına duyurun](#promote-hour-of-code)
+- [Kodlama Saati'ni başkalarına duyurun](#promote-hour-of-code)
 - [Hour of Code'u desteklemenin diğer yolları](#support-hour-of-code)
 - [Gönüllü SSS](#faq)
 
-İster sanal olarak, ister bizzat isterse şirketinizle gönüllü olun, çabalarınız öğrencilerin bilgisayar bilimlerine ve kendi potansiyellerine bakış açısında büyük bir etki yaratabilir. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
+İster sanal olarak, ister bizzat isterse şirketinizle gönüllü olun, çabalarınız öğrencilerin bilgisayar bilimlerine ve kendi potansiyellerine bakış açısında büyük bir etki yaratabilir. Hâlâ sorularınız varsa [gönüllü araç kitimize göz atabilirsiniz](https://hourofcode.com/files/hoc-volunteer-toolkit.pdf).
 
 * * *
 
@@ -182,7 +182,7 @@ Etkinliğiniz için belirli bir yol haritanız olduğunda, öğrencileri, bir ok
 
 <a id="promote-hour-of-code"></a>
 
-## Hour of Code'u başkalarına duyurun
+## Kodlama Saati'ni başkalarına duyurun
 
 Yardım etmenin en iyi yollarından biri, Hour of Code'u duyurmak ve tanıtmaktır.
 
@@ -234,7 +234,7 @@ Posterler, videolar, çıkartmalar ve etkinliğinizi topluluğunuza tanıtmanın
 - Her öğrencinin, bilgisayar bilimini öğrenme fırsatına sahip olduğundan emin olmak için [bu dilekçeyi imzalayın](https://code.org/promote). 
 - Eğitim kaynaklarımızın ücretsiz ve herkesin erişimine açık olmaya devam edebilmesi için Code.org'a [bağışta bulunun](https://code.org/donate). 
 
-Code.org'u ve Hour of Code'u nasıl destekleyebileceğiniz ile ilgili daha fazla öneri için[Code.org/Help](https://code.org/help) adresini ziyaret edin
+Code.org'u ve Kodlama Saati'ni nasıl destekleyebileceğiniz ile ilgili daha fazla öneri için[Code.org/Help](https://code.org/help) adresini ziyaret edin
 
 * * *
 

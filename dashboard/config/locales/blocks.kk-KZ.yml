@@ -144,6 +144,7 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+            '"speed"': жылдамдық
       gamelab_getTime:
         options:
           UNIT:
@@ -190,10 +191,18 @@ kk:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': су
               асты
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': қыс
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': орта
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': шама
+            '"speed"': жылдамдық
       gamelab_setSizes:
         options:
           PROPERTY:

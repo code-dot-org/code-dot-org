@@ -1,7 +1,7 @@
 professional_learning_course 'CS in Algebra Legacy'
 login_required true
 
-lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks'
+lesson 'Evaluation Blocks', display_name: 'Evaluation Blocks', has_lesson_plan: false
 level 'Calc Circles of Eval 1'
 level 'Calc Circles of Eval 2'
 level 'Calc Circles of Eval 3'
@@ -12,7 +12,7 @@ level 'Calc Circles of Eval 8'
 level 'Calc Circles of Eval 9'
 level 'Calc Circles of Eval Free Play'
 
-lesson 'Strings and Images', display_name: 'Strings and Images'
+lesson 'Strings and Images', display_name: 'Strings and Images', has_lesson_plan: false
 level 'Eval Strings Images .1'
 level 'Eval Strings Images .2'
 level 'Eval Strings Images 1'
@@ -26,7 +26,7 @@ level 'Eval Strings Images 8'
 level 'Multi Strings Images 1'
 level 'Eval Strings Images Free Play'
 
-lesson 'Rocket-Height', display_name: 'Rocket-Height'
+lesson 'Rocket-Height', display_name: 'Rocket-Height', has_lesson_plan: false
 level 'Play Lab Rocket 1'
 level 'Play Lab Rocket 2B'
 level 'Play Lab Rocket 3'
@@ -34,7 +34,7 @@ level 'Play Lab Rocket 4'
 level 'Play Lab Rocket 5'
 level 'Play Lab Rocket Free Play'
 
-lesson 'Design Recipe Practice', display_name: 'Design Recipe Practice'
+lesson 'Design Recipe Practice', display_name: 'Design Recipe Practice', has_lesson_plan: false
 level 'Eval Design Recipe .1'
 level 'Eval Design Recipe 3'
 level 'Eval Design Recipe 4'
@@ -45,13 +45,13 @@ level 'Calc Design Recipe 2'
 level 'Calc Design Recipe 3'
 level 'Calc Design Recipe 4'
 
-lesson 'Your Game - Animation', display_name: 'Your Game - Animation'
+lesson 'Your Game - Animation', display_name: 'Your Game - Animation', has_lesson_plan: false
 level 'Big Game Animation 1'
 level 'Big Game Animation 2'
 level 'Big Game Animation 3'
 level 'Big Game Animation 4'
 
-lesson 'Booleans', display_name: 'Booleans'
+lesson 'Booleans', display_name: 'Booleans', has_lesson_plan: false
 level 'Eval Booleans 1'
 level 'Eval Booleans 2'
 level 'Eval Booleans 3'
@@ -63,31 +63,31 @@ level 'Blocks to Bools 2'
 level 'Blocks to Bools 3'
 level 'Blocks to Bools 4'
 
-lesson 'Sam the Bat', display_name: 'Sam the Bat'
+lesson 'Sam the Bat', display_name: 'Sam the Bat', has_lesson_plan: false
 level 'Sam the Butterfly 1'
 level 'Sam the Butterfly 2'
 level 'Sam the Butterfly 3'
 level 'Sam the Butterfly 4'
 level 'Sam the Butterfly 5'
 
-lesson 'Your Game - Booleans', display_name: 'Your Game - Booleans'
+lesson 'Your Game - Booleans', display_name: 'Your Game - Booleans', has_lesson_plan: false
 level 'Big Game Booleans 1'
 level 'Big Game Booleans 2'
 level 'Big Game Booleans 3'
 level 'Big Game Booleans 4'
 level 'Big Game Booleans 5'
 
-lesson 'Luigi\'s Pizza', display_name: 'Luigi\'s Pizza'
+lesson 'Luigi\'s Pizza', display_name: 'Luigi\'s Pizza', has_lesson_plan: false
 level 'Luigi\'s Pizza 1'
 level 'Luigi\'s Pizza 2'
 level 'Luigi\'s Pizza 3'
 level 'Luigi\'s Pizza 4'
 
-lesson 'Your Game - Player Movement', display_name: 'Your Game - Player Movement'
+lesson 'Your Game - Player Movement', display_name: 'Your Game - Player Movement', has_lesson_plan: false
 level 'Big Game Collision 1'
 level 'Big Game Collision 2'
 
-lesson 'Your Game - Collision Detection', display_name: 'Your Game - Collision Detection'
+lesson 'Your Game - Collision Detection', display_name: 'Your Game - Collision Detection', has_lesson_plan: false
 level 'Big Game Collision 3'
 level 'Big Game Collision 4'
 level 'Big Game Final'

@@ -1007,6 +1007,7 @@ he:
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
             '"tint"': גוון
+            '"speed"': מהירות
       gamelab_getThisSprite:
         text: "{CHOICE} דמות"
         options:
@@ -1141,6 +1142,8 @@ he:
             '"West"': מערבה
       gamelab_moveToward:
         text: הזז {SPRITE} פיקסלים {DISTANCE} לכיוון {TARGET}
+      gamelab_newSpritePointer:
+        text: לחץ {SPRITE}
       gamelab_objectSpritePointer:
         text: לחץ {SPRITE}
       gamelab_playSound:
@@ -1191,6 +1194,13 @@ he:
             undefined: אף אחד
       gamelab_setBackgroundImageAs:
         text: להגדיר רקע ל {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': בינוני
+            '100': large
       gamelab_setProp:
         text: הגדיר {SPRITE} {PROPERTY} כדי {VAL}
         options:
@@ -1200,6 +1210,7 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
+            '"speed"': מהירות
       gamelab_setSizes:
         text: הגדר  {PROPERTY} של  {SPRITE}  ל {N}%
         options:

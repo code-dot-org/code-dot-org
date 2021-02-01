@@ -943,6 +943,8 @@ ku:
             '"West"': ڕۆژئاوا
       gamelab_moveToward:
         text: "{SPRITE} وێنەخاڵ بجوڵێنە {DISTANCE} بە ئاڕاستەی {TARGET}"
+      gamelab_newSpritePointer:
+        text: کرتە کرا {SPRITE}
       gamelab_objectSpritePointer:
         text: کرتە کرا {SPRITE}
       gamelab_playSound:
@@ -1062,6 +1064,8 @@ ku:
         text: پۆتانی yی {SPRITE}
       Mikelab_addBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

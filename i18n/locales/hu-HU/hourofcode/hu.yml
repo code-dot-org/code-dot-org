@@ -524,7 +524,7 @@ hu:
   signup_send_posters_address_placeholder: Ez a cím nem jelenik meg a térképen
   signup_event_type_in_school: Iskolában
   signup_event_type_out_of_school: Iskolán kívül
-  signup_event_type_at_home: Home
+  signup_event_type_at_home: Főmenü
   signup_submit_census_label: Beküldés
   signup_submit_census_error_message: Sajnáljuk, de hiba történt. Próbáld meg még
     egyszer!
@@ -792,7 +792,7 @@ hu:
   hoc_faq_more_questions_q: További kérdéseid vannak?
   hoc_faq_more_questions_a: Nézz körül a <a href='http://support.code.org'>fórumban</a>,
     hátha megtalálod a kérdéseire a válaszokat.
-  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
+  hoc_faq_more_questions_a_markdown: Próbáld megtalálni a választ a [fórumon](http://support.code.org).
   hoc_faq_keep_learning_q: Hogyan tanuljak tovább a Kódolás Órája után?
   hoc_faq_keep_learning_a: Bárki, bármikor tarthat Kódolás Óráját. A segédanyagok
     elérhetőek egész évben. Biztos lehetsz benne, hogy az összes segédanyagunk és
@@ -818,9 +818,9 @@ hu:
   hoc_faq_logo_a: A Kódolás Órája szabadalom alatt áll. Nem akarjuk megakadályozni
     a használatát, azonban szeretnénk, ha csak bizonyos keretek között lenne használva.
     Lesd meg az <a href='%{logo_url}'>ezzel kapcsolatos irányelveinket</a>.
-  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
-    usage, but we want to make sure its usage fits within a few limits. Please see
-    [these guidelines for usage](%{logo_url}).
+  hoc_faq_logo_a_markdown: A Kódolás Órája szabadalom alatt áll. Nem akarjuk megakadályozni
+    a használatát, azonban szeretnénk, ha csak bizonyos keretek között lenne felhasználva.
+    Tekintsd meg az <a href='%{logo_url}'>ezzel kapcsolatos irányelveinket</a>.
   stats_hoc_2013_image_alt: A 2013-as Kódolás Órája statisztikája
   stats_growth: 15 millió felhasználó elérése a legrövidebb idő alatt.
   stats_i18n: A tanulók több, mint 45 különböző nyelven tanulnak
@@ -836,8 +836,7 @@ hu:
   stats_females: A nők aránya mindössze 20-25% a számítástechnikai gimnáziumi és egyetemi
     képzésekben és a munkaerőpiacon.
   stats_females_more: A Kódolás Órája során a <b>résztvevők 50%-a</b> nő!
-  stats_females_more_markdown: During the Hour of Code, female students make up **50%
-    of all participants**!
+  stats_females_more_markdown: A Kódolás Órája során a <b>résztvevők 50%-a</b> nő!
   stats_nina: "„Minden egyes napo ugyanazzal az eredménnyel&mdash; 100%-os elkötelezettség.”
     - Nina Nichols Peery, tanár"
   stats_student: "„Tudtam, hogy ez egy <b>egyszeri</b> lehetőség.” - Mariana Alzate,
@@ -925,8 +924,8 @@ hu:
   highlights_title: Kiemelt tartalmak
   highlights_header: Kódolás Órája kiemelt tartalmak
   highlights_description: A kedvenc pillanataink a Kódolás Órája kampányból.
-  highlights_previous: Highlights from previous years
-  highlights_see_more: See more highlights
+  highlights_previous: A korábbi évek kiemelt tartalmai
+  highlights_see_more: Több kiemelt tartalom
   highlights_readmore: Továbbiak
   highlights_watchvideo: Nézd meg a videót
   highlights_facebook: Megosztás Facebookon
@@ -951,7 +950,7 @@ hu:
   highlights_constant_athletes_short_heading: Haladj előre
   footer_copyright_message: Copyright 2015 Code.org. Minden jog fenntartva.
   footer_trademark_message: Hour of Code™ a Code.org bejegyzett védjegye.
-  footer_built_on_github: Built on GitHub from Microsoft
+  footer_built_on_github: A Microsoft GitHub-jára épült
   footer_menu_partners: Partnerek
   footer_menu_contact: Lépj velünk kapcsolatba
   footer_menu_support: Támogatás
@@ -999,7 +998,7 @@ hu:
   tutorial_lightbot_name: Lightbot
   tutorial_hoc_name: Az új code.org/hoc helyőrzője
   tutorial_code_name: Írd meg az első számítógépes programodat
-  tutorial_tinspire_name: 10 Minutes of Code for the TI-Nspire CX
+  tutorial_tinspire_name: 10 perc kód a TI-Nspire CX-hez
   tutorial_itchbounceball_name: ITCH Pattogó Labda (Scratch-ben)
   tutorial_vidclim_name: 'Vidcode: Klíma-tudomány és Kódolás'
   tutorial_matlab_name: Tanulj meg MATLAB-al kódolni
@@ -1565,7 +1564,7 @@ hu:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: Stressz labda
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -1586,7 +1585,7 @@ hu:
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
   tutorial_bsdtrivia_name: Trivia Game Maker
-  tutorial_csfirstdialogue_name: Dialogue
+  tutorial_csfirstdialogue_name: Párbeszéd
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
@@ -1654,7 +1653,7 @@ hu:
   tutorial_clfashion1_name: Fashionistas of Data Science - Class 1
   tutorial_irobottraffic_name: 'Traffic Bot: Code Your Own Traffic Signal'
   tutorial_edisonmystery_name: Edison and the mystery line
-  tutorial_microbitseaturtles_name: Saving Sea Turtles
+  tutorial_microbitseaturtles_name: Tengeri teknősök megmentése
   tutorial_ozobotknow_name: 'Introduction to Ozobot: Get to Know Evo'
   tutorial_imagilabs_name: 'Imagine it. Code it. Wear it. '
   tutorial_irobotsimulator_name: Simulator Code Break
@@ -1671,7 +1670,7 @@ hu:
   tutorial_legohopper_name: Hopper Race
   tutorial_catrobatembroidery_name: Coded Embroidery
   tutorial_irobotphone_name: Telephone Drawing
-  tutorial_codeguppydraw_name: Draw with code
+  tutorial_codeguppydraw_name: Rajzolj kóddal
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
   tutorial_meeempathy_name: A Minecraft Tale of Two Villages
   tutorial_danceparty_shortdescription: Kódolj egy táncpartit és oszd meg a barátaiddal.
@@ -1796,7 +1795,7 @@ hu:
     és oktatóanyagokkal!
   tutorial_frogger_shortdescription: 'Készítsd el és oszd meg saját 3D játékod '
   tutorial_tynkereco_shortdescription: Kódolj le egy interaktív ökológiai piramist.
-  tutorial_mitedarc_shortdescription: Have your sprite collect coins and get points.
+  tutorial_mitedarc_shortdescription: A koboldod gyűjtsön érméket és szerezzen pontokat.
   tutorial_khan_shortdescription: 'Khan Akadémia: a rajzolva kódolás megtanítja hogyan
     programozz JavaScriptben, miközben megtervezed a te saját hóembered'
   tutorial_tynkerd_shortdescription: Harcolj a hibákkal, hogy megmentsd az alaplapot!
@@ -1812,8 +1811,8 @@ hu:
   tutorial_tynkerdrones_shortdescription: Programozz vezérlőt a robotodhoz vagy drónodhoz.
   tutorial_carla_shortdescription: Tanulj kódolni miközben a beszélő, virtuális robotot,
     Carla-t programozod!
-  tutorial_zulama_shortdescription: Go on a MakeQuest! Modify code to beat our game,
-    then build your own!
+  tutorial_zulama_shortdescription: Menj egy MakeQuest-re! Módosítsd a kódot a játékunk
+    legyőzéséhez, majd készítsd el a sajátodat!
   tutorial_capost_shortdescription: Használj kódot, hogy jól kinéző ünnepi vagy születésnapi
     képeslapot készíts.
   tutorial_marco_shortdescription: Egy lebilincselő játék, ahol Marco-t irányíthatod
@@ -1849,7 +1848,7 @@ hu:
     kódolni tanulsz. '
   tutorial_codesterstransform_shortdescription: Ebben a matekos projektben felfedezheted
     és kipróbálhatod a koordináta geometriai transzformációkat.
-  tutorial_flexfrog_shortdescription: A game for learning CSS flexbox
+  tutorial_flexfrog_shortdescription: Egy játék a CSS flexbox elsajátításához
   tutorial_codemoji_shortdescription: 'Ez a feladat megtanítja a gyerekeknek az alapvető
     weboldal tervezést, és ehhez kapcsolódó programozási koncepciókat hangulatjelekkel,
     hogy a tanulók végig aktívan részt vegyenek, és észrevtlenül tanuljanak programozni. '
@@ -1890,10 +1889,10 @@ hu:
     hogy készíts egy olyan programot, amiben a nap lenyugszik egy városi táj felett.
   tutorial_fufafrenz_shortdescription: 'Learn sequence to program a "robot"! '
   tutorial_bbcgeo_shortdescription: Standards-based lesson plan for levels 6-10.
-  tutorial_chspixel_shortdescription: This offline lesson plan covers the basics of
-    computer graphics.
-  tutorial_hummingbird_shortdescription: Create your own game with a microcontroller,
-    a sensor, and lights!
+  tutorial_chspixel_shortdescription: Ez az offline óraterv a számítógépes grafika
+    alapjait foglalja magában.
+  tutorial_hummingbird_shortdescription: Készítsd el a saját játékod mikrokontrollerrel,
+    érzékelővel és fényekkel!
   tutorial_recoloring_shortdescription: 'Recoloring the Universe helps show just how
     integral coding is in the pursuit of learning about our Universe.  '
   tutorial_bbcchem_shortdescription: 'Standards-based lesson plan for levels K-5. '
@@ -1903,13 +1902,14 @@ hu:
     this educational hip-hop video and lesson plan.
   tutorial_floloops_shortdescription: Teach the coding concept of loops with this
     educational hip-hop video and lesson plan.
-  tutorial_pgts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  tutorial_ozo_shortdescription: Introduce students to coding by playing the Ozobot
-    Games with the programmable robot Ozobot.
+  tutorial_pgts_shortdescription: Próbáld ki a modellezést és a szimulációt a kő-papír-olló
+    segítségével
+  tutorial_ozo_shortdescription: Ismertesse meg a tanulókkal a kódolást Ozobot játékokat
+    játszva a programozható Ozobot robottal.
   tutorial_bbcla_shortdescription: 'Standards-based lesson plan for levels K-5. '
   tutorial_bbcsci_shortdescription: 'Standards-based lesson plan for levels K-5. '
-  tutorial_tlctour_shortdescription: Devise a tour that gets a tourist from their
-    hotel to all the city sights and back to their hotel.
+  tutorial_tlctour_shortdescription: Készíts egy túrát, amely eljuttat egy turistát
+    a szállodájukból a város összes nevezetességéhez, majd vissza a szállodába.
   tutorial_codesterstj_shortdescription: 'tanulj a digitális polgárságról! Tanítsd
     meg másoknak is, hogy hogyan lehetnek felelősségteljes digitális polgárok ők is! '
   tutorial_tlclocked_shortdescription: Explore the design of an algorithm to allow
@@ -3195,7 +3195,7 @@ hu:
     nyomon követni, hogy energia áramlik át egy ökoszisztéma! Ez a projekt jön lépésről-lépésre
     útmutatót, hogy végigvezeti önt létrehozása ökológiai piramis bármely ökoszisztéma
     állatok, növények, hogy suhan, hogy a megfelelő helyen, a piramis, amikor kattint.
-  tutorial_mitedarc_longdescription: Have your sprite collect coins and get points.
+  tutorial_mitedarc_longdescription: A koboldod gyűjtsön érméket és szerezzen pontokat.
   tutorial_khan_longdescription: Megtanulják, hogyan kell programot, rajzok használata
     a JavaScript tervezése a saját hóember. Próbáld ki a saját, vagy az osztály!
   tutorial_tynkerd_longdescription: Tervezzen egy egyedi hőst játszani, mint hogy
@@ -5627,15 +5627,15 @@ hu:
   tutorial_scigirlspixels_longdescription: 'Ebben az informatikai eszköz nélkül végezhető
     tevékenységben megtanulhatod, hogy mi az a pixel, és hogy hogyan küldj egy egyszerű
     fekete-fehér képet egy barátnak! '
-  tutorial_kcjheroines_longdescription: In this activity, you'll learn about different
-    Canadian women who have made history. Using Scratch, you'll learn how to code
-    a video game celebrating their lives and accomplishments. Choose a heroine, customize
-    their costume and backdrop, code movements and goals for your game, and keep score.
-    This project is simple enough for kids to complete by themselves or with support
-    from a grown up.
-  tutorial_ozobotvalue_longdescription: Students will use their Ozobot to randomly
-    select a place value, identify the same place value in a three-digit number, and
-    write out the number.
+  tutorial_kcjheroines_longdescription: Ebben a tevékenységben különféle kanadai nőket
+    ismerhetsz meg akik történelmet írtak. A Scratch használatával megtanulhatod hogyan
+    kódolj le egy videojátékot, amely az életüket és elért eredményeiket ünnepli.
+    Válassz hősnőt, szabd testre a jelmezét és hátterét, kódold le a játékhoz szükséges
+    mozgásokat és célokat, és rögzítsd a pontszámot. Ez a projekt elég egyszerű ahhoz,
+    hogy a gyerekek önmagukban vagy egy felnőtt támogatásával teljesítsék.
+  tutorial_ozobotvalue_longdescription: A diákok Ozobotjuk segítségével véletlenszerűen
+    kiválasztanak egy helyiértéket, azonosítják ugyanazt a helyiértéket egy háromjegyű
+    számban, és kiírják a számot.
   tutorial_icodebytes_longdescription: Learn computer science without tech! Fun unplugged
     computing activities for children aged 5-7 to do in class or at home with their
     families. The activities help develop computational thinking skills in a really
@@ -5651,12 +5651,12 @@ hu:
     AI including: how data becomes output in an AI model, how human biases enter datasets,
     and how AI can be used in diverse fields including art and creativity. Students
     learn these things by exploring drawing in Google Quick, Draw!'
-  tutorial_cldata_longdescription: 'Discover data science, one of the most valuable
-    skills, and see the world! Does data science sound dry and scary, like math? Fear
-    not. This introductory class will show you that you are already experts of data
-    and data science is full of fun and interesting insights related to topics such
-    as soccer, music, art, and your favorite books. Materials ready for in person
-    or remote learning settings. '
+  tutorial_cldata_longdescription: 'Fedezzétek fel az adattudományt, az egyik legértékesebb
+    területet, és lássatok világot! Az adattudomány száraznak és ijesztőnek tűnik,
+    mint a matematika? Ne aggódjatok! Ez a bevezető óra megmutatja, hogy már most
+    is az adatok szakértői vagytok, és az adattudomány tele van szórakoztató és érdekes
+    felismerésekkel olyan témák kapcsán, mint a foci, a zene, a művészet és kedvenc
+    könyveitek. Az anyagok készen állnak személyes és távoktatáshoz is. '
   tutorial_spheroinputs_longdescription: 'This activity will get you thinking about
     the common computer science coding concept of inputs and outputs and how this
     idea relates to using computer science for good. '

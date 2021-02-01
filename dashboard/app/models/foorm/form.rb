@@ -45,8 +45,10 @@ class Foorm::Form < ApplicationRecord
 
       # Let's load the JSON text.
       questions = File.read(path)
+
       # if published is not provided, default to true
-      published = questions['published'].nil? ? true : questions['published']
+      questions_parsed = JSON.parse(questions)
+      published = questions_parsed['published'].nil? ? true : questions_parsed['published']
 
       form = Foorm::Form.find_or_initialize_by(name: full_name, version: version)
       form.questions = questions
@@ -62,6 +64,7 @@ class Foorm::Form < ApplicationRecord
 
   def validate_published
     parsed_questions = JSON.parse(questions)
+
     unless parsed_questions['published'].nil?
       if published != parsed_questions['published']
         errors[:questions] << 'Mismatch between published state in questions and published state in model'

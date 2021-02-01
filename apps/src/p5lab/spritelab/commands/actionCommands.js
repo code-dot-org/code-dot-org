@@ -152,6 +152,14 @@ export const commands = {
     let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
       if (sprite && target) {
+        const distanceFromSpriteToTarget = Math.sqrt(
+          (sprite.x - target.x) ** 2 + (sprite.y - target.y) ** 2
+        );
+        if (distanceFromSpriteToTarget < distance) {
+          sprite.x = target.x;
+          sprite.y = target.y;
+          return;
+        }
         let angle = Math.atan2(target.y - sprite.y, target.x - sprite.x);
         if (!isNaN(angle)) {
           let dy = Math.sin(angle) * distance;

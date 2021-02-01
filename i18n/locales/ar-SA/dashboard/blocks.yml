@@ -1011,6 +1011,7 @@ ar:
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
             '"tint"': لون خفيف
+            '"speed"': السرعة
       gamelab_getThisSprite:
         text: "{CHOICE} العفريت"
         options:
@@ -1136,6 +1137,8 @@ ar:
             '"West"': غرب
       gamelab_moveToward:
         text: نقل {SPRITE} العنصورات {DISTANCE} نحو {TARGET}
+      gamelab_newSpritePointer:
+        text: النقر {SPRITE}
       gamelab_objectSpritePointer:
         text: النقر {SPRITE}
       gamelab_playSound:
@@ -1186,6 +1189,13 @@ ar:
             undefined: لا شيء
       gamelab_setBackgroundImageAs:
         text: تعيين الخلفية إلى {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': متوسط
+            '100': large
       gamelab_setProp:
         text: تعيين {SPRITE} {PROPERTY} ل {VAL}
         options:
@@ -1195,6 +1205,7 @@ ar:
             '"x"': الموضع س
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
+            '"speed"': السرعة
       gamelab_setSizes:
         text: عيّن {SPRITE} {PROPERTY} على {N}%
         options:

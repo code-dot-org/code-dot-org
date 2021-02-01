@@ -49,6 +49,7 @@ gl:
               name: 'Laboratorio de Xogo: Crea unha Historia'
             The Big Event:
               name: O Gran Evento
+          student_description: O Curso 1 esta deseñado para permitir aos lectores primeirizos crear programas de computador que lles axuden a aprender a colaborar con outros, desenvolver habilidades de solución de problemas, e persistir en tarefas difíciles. Para o final deste curso, os estudantes crean o seu propio xogo personalizado ou historia que poden compartir. Recomendado para primeiro grao de primaria.
         course2:
           title: Curso 2
           description: O Curso 2 está deseñado para estudantes que poden ler e non teñen experiencia previa en programación. Neste curso os estudantes crearán programas para resolver problemas e desenvolver xogos interactivos ou historias que poden compartir. Recoméndase para os cursos 2 a 5 de primaria.
@@ -93,6 +94,7 @@ gl:
               name: O Gran Evento
             Your Digital Footprint:
               name: A túa pegada dixital
+          student_description: O Curso 2 está deseñado para estudantes que poden ler e non teñen experiencia previa en programación. Neste curso os estudantes crearán programas para resolver problemas e desenvolver xogos interactivos ou historias que poden compartir. Recoméndase para os cursos 2 a 5 de primaria.
         course3:
           title: Curso 3
           description: O Curso 3 está deseñado para estudantes que fixeron o Curso 2. Profundarase en temas de programación xa presentados nos cursos anteriores, e que dan solucións flexíbeis a problemas máis complexos. Ao remate do curso, os estudantes son quen de crear historias e xogos interactivos que poden compartir con calquera. Recomendado para os cursos 4º a 5º de Primaria.
@@ -141,6 +143,7 @@ gl:
               name: 'Laboratorio de Xogos: Crear un Xogo'
             'Studio: Create a Story':
               name: 'Laboratorio de Xogo: Crea unha Historia'
+          student_description: O Curso 3 está deseñado para estudantes que fixeron o Curso 2. Profundarase en temas de programación xa presentados nos cursos anteriores, e que dan solucións flexíbeis a problemas máis complexos. Ao remate do curso, os estudantes son quen de crear historias e xogos interactivos que poden compartir con calquera. Recomendado para os cursos 4º a 5º de Primaria.
         playlab:
           title: Laboratorio de Xogos
           description: Crea unha historia ou fai un xogo con Laboratorio de Xogos!
@@ -148,6 +151,7 @@ gl:
           lessons:
             Play Lab:
               name: Laboratorio de Xogos
+          student_description: Crea unha historia ou fai un xogo con Laboratorio de Xogos!
         artist:
           title: Artista
           description: Debuxa imaxes estupendas e deseños co Artista!
@@ -155,6 +159,7 @@ gl:
           lessons:
             Artist:
               name: Artista
+          student_description: Debuxa imaxes estupendas e deseños co Artista!
         hourofcode:
           title: Labirinto clásico
           description: Proba os fundamentos da informática cos personaxes de Angry Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
@@ -162,6 +167,7 @@ gl:
           lessons:
             Maze:
               name: Labirinto
+          student_description: Proba os fundamentos da informática cos personaxes de Angry Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
         frozen:
           title: Programa con Ana e Elsa
           description: Imos usar código para unirnos a Ana e Elsa mentres exploran a maxia e a beleza do xeo. Crearás flocos de neve e padróns a medida que patinas sobre xeo e farás unha paisaxe invernal que logo podes compartir cos teus amigos!
@@ -169,6 +175,7 @@ gl:
           lessons:
             Artist:
               name: Artista
+          student_description: Imos usar código para unirnos a Ana e Elsa mentres exploran a maxia e a beleza do xeo. Crearás flocos de neve e padróns a medida que patinas sobre xeo e farás unha paisaxe invernal que logo podes compartir cos teus amigos!
         course4:
           title: Curso 4
           description: O Curso 4 está deseñado para estudantes que fixeron os cursos 2 e 3. O alumnado aprenderá a resolver problemas de maior complexidade segundo vaian aprendendo a combinar varios conceptos para cada desafío. Ao remate do curso, os estudantes serán quen de crear programas que amosen habilidades múltiples, incluídos bucles e funcións con parámetros. Recomendado dende 4º de Primaria a 2º de ESO.
@@ -219,6 +226,7 @@ gl:
               name: 'Desconectado: Composición de cancións con parámetros'
             'Unplugged: Tangrams':
               name: 'Desconectado: Tangrams'
+          student_description: O Curso 4 está deseñado para estudantes que fixeron os cursos 2 e 3. O alumnado aprenderá a resolver problemas de maior complexidade segundo vaian aprendendo a combinar varios conceptos para cada desafío. Ao remate do curso, os estudantes serán quen de crear programas que amosen habilidades múltiples, incluídos bucles e funcións con parámetros. Recomendado dende 4º de Primaria a 2º de ESO.
         Course4pre:
           title: Prerequisitos do Curso 4
           description: Un breve resumo de conceptos para os estudantes que non deron os cursos 2 e 3.
@@ -242,6 +250,7 @@ gl:
               name: 'Granxeira: Bucles "Mentres" (While)'
             'Maze: Sequence':
               name: 'Labirinto: Secuencia'
+          student_description: Un breve resumo de conceptos para os estudantes que non deron os cursos 2 e 3.
         usability:
           lessons:
             Binary:
@@ -273,6 +282,7 @@ gl:
           lessons:
             Infinity:
               name: Infinito
+          student_description: Utiliza o laboratorio de xogos para crear unha historia ou xogo protagonizada por personaxes de Disney Infinity.
         algebrademo:
           lessons:
             Defining Variables:
@@ -329,6 +339,7 @@ gl:
               name: O Labirinto
             Wrap-up:
               name: Sumario
+          student_description: Este curso de 20 horas introduce o núcleo da informática e os conceptos da programación. O curso está deseñado para o seu uso en clase para os cursos de primaria pero é divertido aprender con calquera idade!
         edit-code:
           title: Editar código
           description: Editar código
@@ -340,6 +351,7 @@ gl:
               name: O Artista
             The Maze:
               name: O Labirinto
+          student_description: Editar código
         events:
           title: Eventos
           description: Eventos
@@ -347,6 +359,7 @@ gl:
           lessons:
             Bounce:
               name: Rebote
+          student_description: Eventos
         flappy:
           title: Código do Flappy bird
           description: Queer crear o seu proprio xogo en menos de 10 minutos? Experimente o noso titorial sobre o Código do Flappy bird!
@@ -354,6 +367,7 @@ gl:
           lessons:
             Flappy Code:
               name: Código do Flappy bird
+          student_description: Queer crear o seu proprio xogo en menos de 10 minutos? Experimente o noso titorial sobre o Código do Flappy bird!
         jigsaw:
           title: Crebacabezas
           description: Proba o noso titorial de Jigsaw
@@ -361,6 +375,7 @@ gl:
           lessons:
             Jigsaw:
               name: Crebacabezas
+          student_description: Proba o noso titorial de Jigsaw
         step:
           title: Paso
           description: Titorial paso a paso
@@ -368,6 +383,7 @@ gl:
           lessons:
             Step:
               name: Paso
+          student_description: Titorial paso a paso
         Hour of Code:
           title: Hora de Código 2013
           description: Proba os fundamentos da informática con personaxes de Angry Birds e Plantas vs. Zombis!
@@ -375,6 +391,7 @@ gl:
           lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
+          student_description: Proba os fundamentos da informática con personaxes de Angry Birds e Plantas vs. Zombis!
         algebraPD:
           lessons:
             Evaluation Blocks:
@@ -417,6 +434,7 @@ gl:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         cspunit2:
           lessons:
             The Internet:
@@ -437,6 +455,7 @@ gl:
               name: Tiras de caracteres e imaxes
             The Design Recipe:
               name: A receita de deseño
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         allthethings:
           lessons:
             Artist:
@@ -469,6 +488,7 @@ gl:
               name: Bloques de avaliación
             Strings and Images:
               name: Tiras de caracteres e imaxes
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         cspfacilitator:
           lessons:
             App Lab:
@@ -495,6 +515,7 @@ gl:
               name: Benvido!
             Wrap-up:
               name: Sumario
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         algebraPD2:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
@@ -503,6 +524,7 @@ gl:
               name: A receita de deseño
             Welcome!:
               name: Benvido!
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         sciencePD2b:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
@@ -511,6 +533,7 @@ gl:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         science-PD2:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
@@ -519,6 +542,7 @@ gl:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         sciencePD2b-iZone:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
@@ -527,6 +551,7 @@ gl:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         ECSPD2-iZone:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
@@ -541,6 +566,7 @@ gl:
               name: Benvido!
             Wrap-up:
               name: Sumario
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         ECSPD2-NexTech:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
@@ -555,6 +581,7 @@ gl:
               name: Benvido!
             Wrap-up:
               name: Sumario
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -592,6 +619,7 @@ gl:
           lessons:
             Ice Age Play Lab:
               name: O xogo de laboratorio da Idade de xeo
+          student_description: Crea unha historia ou crea un xogo co laboratorio de xogo da Idade de Xeo!
         cspunit3temp:
           lessons:
             While Loops:
@@ -603,6 +631,7 @@ gl:
           lessons:
             Gumball Play Lab:
               name: Laboratorio de xogo de Gumball
+          student_description: Crea unha historia ou fai un xogo co laboratorio de xogo de Gumball!
         starwars:
           title: 'Star Wars: Contruíndo unha Galaxia con Código'
           description: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
@@ -610,6 +639,7 @@ gl:
           lessons:
             Hour of Code 2015:
               name: Hora do Código 2015
+          student_description: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
         starwarsblocks:
           title: 'Star Wars: Contruíndo unha Galaxia con Código'
           description: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
@@ -617,6 +647,7 @@ gl:
           lessons:
             Hour of Code 2015:
               name: Hora do Código 2015
+          student_description: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
         mc:
           title: Hora do Código Minecraft
           description: Usa bloques de código para acompañar a Steve ou a Alex nunha aventura polo mundo de Minecraft
@@ -624,6 +655,7 @@ gl:
           lessons:
             Hour of Code 2015:
               name: Hora do Código 2015
+          student_description: Usa bloques de código para acompañar a Steve ou a Alex nunha aventura polo mundo de Minecraft
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1849,6 +1881,9 @@ gl:
           lesson_groups:
             required:
               display_name: Visión xeral
+          lessons:
+            Focus Area 1:
+              name: Currículo
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2165,6 +2200,12 @@ gl:
               name: Condicionais
             Functions:
               name: Funcións
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Introdución
+            lessonGroup-3:
+              display_name: Variables
         csd3-2021:
           lessons:
             Variables:
@@ -2316,9 +2357,6 @@ gl:
             csf_events:
               display_name: Eventos
         csf-2021-pilot:
-          lessons:
-            lesson-1:
-              name: Variábeis de sobre
           lesson_groups:
             ramp_up:
               display_name: Introdución

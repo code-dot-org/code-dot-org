@@ -6071,6 +6071,7 @@ en:
               description_student: ''
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          name: coursea-2017
         courseb-2017:
           title: Course B
           assignment_family_title: Course B
@@ -6108,6 +6109,7 @@ en:
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          name: courseb-2017
         coursec-2017:
           title: Course C
           assignment_family_title: Course C
@@ -6149,6 +6151,7 @@ en:
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          name: coursec-2017
         coursed-2017:
           title: Course D
           assignment_family_title: Course D
@@ -6231,6 +6234,7 @@ en:
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
               description_teacher: In this online activity, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
           student_description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before creating your very own game or story that you can share.
+          name: coursed-2017
         coursee-2017:
           title: Course E
           assignment_family_title: Course E
@@ -6371,6 +6375,7 @@ en:
             Functions in Harvester:
               name: Functions in Harvester
           student_description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          name: coursee-2017
         coursef-2017:
           title: Course F
           assignment_family_title: Course F
@@ -6488,6 +6493,7 @@ en:
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
           student_description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          name: coursef-2017
         csdnovice:
           title: CS Discoveries TeacherCon Novice Facilitators
           description_audience: CSD Novice Facilitators
@@ -6910,6 +6916,7 @@ en:
             Until Loops in Maze:
               name: Until Loops in Maze
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          name: express-2017
         pre-express-2017:
           title: Pre-reader Express
           assignment_family_title: Pre-reader Express
@@ -6947,6 +6954,7 @@ en:
             Spelling Bee:
               name: Spelling Bee
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          name: pre-express-2017
         subgoal-labels-opt-in:
           title: Subgoal Labels Study Opt-in
           description_audience: ''
@@ -15804,6 +15812,7 @@ en:
             'Lesson 15: Assessment Day':
               name: 'Lesson 15: Assessment Day'
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
+          name: csp4-2020
         csp5-2020:
           title: CSP Unit 5 - Lists, Loops, and Traversals ('20-'21)
           description_audience: ''
@@ -15860,6 +15869,7 @@ en:
             Unit 5 TEACHER Survey:
               name: Unit 5 TEACHER Survey
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
+          name: csp5-2020
         csp7-2020:
           title: CSP Unit 7 - Parameters, Return, and Libraries ('20-'21)
           description_audience: ''
@@ -16695,7 +16705,7 @@ en:
               name: Safety in My Online Neighborhood
               description_student: Learn how to go places safely online.
               description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -16770,7 +16780,7 @@ en:
               name: Digital Trails
               description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
               description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -16991,7 +17001,7 @@ en:
               name: Be A Super Digital Citizen
               description_student: Learn how you can be an upstander when you see cyberbullying.
               description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -17050,7 +17060,7 @@ en:
               name: Private and Personal Information
               description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
               description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -17193,7 +17203,7 @@ en:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
               description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -17519,6 +17529,7 @@ en:
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
+          name: csp1-2020
         csp2-2020:
           title: CSP Unit 2 - The Internet ('20-'21)
           description_audience: ''
@@ -17549,6 +17560,7 @@ en:
             'Lesson 9: Assessment Day':
               name: 'Lesson 9: Assessment Day'
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
+          name: csp2-2020
         csp3-2020:
           title: CSP Unit 3 - Intro to App Design ('20-'21)
           description_audience: ''
@@ -17625,6 +17637,7 @@ en:
             Create PT - Complete the Task:
               name: Create PT - Complete the Task
           student_description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
+          name: csp8-2020
         csp9-2020:
           title: CSP Unit 9 - Data ('20-'21)
           description_audience: ''
@@ -17655,6 +17668,7 @@ en:
             'Lesson 9: Assessment Day':
               name: 'Lesson 9: Assessment Day'
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
+          name: csp9-2020
         csp10-2020:
           title: CSP Unit 10 - Cybersecurity and Global Impacts ('20-'21)
           description_audience: ''
@@ -17701,6 +17715,7 @@ en:
             'Lesson 14: Unit Assessment Day':
               name: 'Lesson 14: Unit Assessment Day'
           student_description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
+          name: csp10-2020
         csp-march-virtual:
           title: CS Principles 20-21 Curriculum Training for Facilitators
           description_audience: CS Principles Facilitators
@@ -18774,6 +18789,8 @@ en:
               name: Final project
             appendix:
               name: Appendix
+            intro-categorical:
+              name: Introduction to AI Lab
           lesson_groups: {}
           title: ML/AI Unit - CSD
           description_audience: ''
@@ -18813,7 +18830,7 @@ en:
             Learning Sprites with Sprite Lab:
               name: Programming with Sprite Lab
             lesson-1:
-              name: Envelope Variables
+              name: Blank Space Variables
             lesson-2:
               name: Storing and Retrieving Text
             lesson-3:
@@ -18830,6 +18847,8 @@ en:
               name: Making Sprites
             Sprites in Action:
               name: Sprites in Action
+            lesson-3-ci:
+              name: Create a Haiku Bot
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -20439,9 +20458,9 @@ en:
             Virus Simulation for Code Bytes:
               name: Coding a Simulation
             Course F Introduction:
-              name: Introduction to Course F
+              name: Introducing Sprite Lab
             lesson-1:
-              name: Envelope Variables
+              name: Blank Space Variables - coming soon!
             lesson-2:
               name: Storing and Retrieving Text
             lesson-3:
@@ -20452,6 +20471,14 @@ en:
               name: Groups of Sprites
             lesson-6:
               name: Create a Collector Game
+            Making Sprites:
+              name: Making Sprites
+            Sprites in Action:
+              name: Sprites in Action - coming soon!
+            variables-in-spritelab:
+              name: Storing and Retrieving Text - coming soon!
+            chatbot:
+              name: Create a Chat-Bot - coming soon!
           lesson_groups:
             ramp_up:
               display_name: Introduction
@@ -20463,6 +20490,9 @@ en:
             lessonGroup-3:
               display_name: Variables
               description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
+            Sprites:
+              display_name: Sprites
+              description: Learn the basics of coding with sprites!
           name: csf-2021-pilot
           title: CS Fundamentals 2021 Pilot
           description_audience: Upper Elementary
@@ -20565,6 +20595,28 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+            Designing With Empathy:
+              name: Designing With Empathy
+            User-Centered Design - Define and Prepare:
+              name: User-Centered Design - Define and Prepare
+            User-Centered Design - Try and Reflect:
+              name: User-Centered Design - Try and Reflect
+            Exploring UI Elements:
+              name: Exploring UI Elements
+            Build a Paper Prototype:
+              name: Build a Paper Prototype
+            Digital Mode in App Lab:
+              name: Design Mode in App Lab
+            Build a Digital Prototype:
+              name: Build a Digital Prototype
+            Events in App Lab:
+              name: Events in App Lab
+            Linking Prototype Screens:
+              name: Linking Prototype Screens
+            Bugs and Features:
+              name: Bugs and Features
+            Updating Your Prototype:
+              name: Updating Your Prototype
           lesson_groups:
             csd4_1:
               display_name: 'Chapter 1: User Centered Design'
@@ -20574,10 +20626,12 @@ en:
               display_name: 'Chapter 2: Solving Data Problems'
             cspSurvey:
               display_name: Survey
+            csdSurvey:
+              display_name: Survey
           name: csd4-preview-2021
           student_description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
         csd5-preview-2021:
-          title: CSD Unit 5 - Data and Society ('20-'21)
+          title: CSD Unit 5 - Data and Society ('21-'22 Beta Preview)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
           description_short: Learn how people use computers to solve data problems.
           description_audience: ''
@@ -20667,6 +20721,8 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+            Data and Machine Learning:
+              name: Data and Machine Learning
           lesson_groups:
             csd5_1:
               display_name: 'Chapter 1: Representing Information'
@@ -20679,3 +20735,96 @@ en:
         testtess:
           lessons: {}
           lesson_groups: {}
+        contagion-pilot:
+          lessons:
+            new lesson:
+              name: lesson display name
+            how things spread:
+              name: How Things Spread
+            contagion simulator setup:
+              name: Contagion Simulator Setup
+            sometimes but not always:
+              name: Sometimes, but Not Always
+            modifying your model:
+              name: Modifying Your model
+            telling a data story:
+              name: Telling a Data Story
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+            contagion:
+              display_name: Contagion
+          name: contagion-pilot
+          title: 'Contagion Simulator '
+          description_audience: Grade 5
+          description_short: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+          description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+          student_description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+        contagion-guided-practice:
+          lessons:
+            how things spread gp:
+              name: How Things Spread Guided Practice
+          lesson_groups:
+            lesson group:
+              display_name: Contagion-Guided-Practice
+          name: contagion-guided-practice
+          title: Contagion Guided Practice [Teacher only]
+          description_audience: 5th grade
+          description_short: These levels are for teachers to use when demonstrating CS and science concepts in the Contagion Simulator levels
+          description: These levels are for teachers to use when demonstrating CS and science concepts in the Contagion Simulator levels
+          student_description: ''
+        ai-unit-pilot:
+          lessons:
+            new lesson:
+              name: lesson display name
+            intro:
+              name: Lesson 1
+            lesson1:
+              name: Lesson 1
+            lesson2:
+              name: Lesson 2
+            lesson3:
+              name: Lesson 3
+            lesson4:
+              name: Lesson 4
+            lesson5:
+              name: Models and Data
+            lesson6:
+              name: Introduction to AI Lab
+            lesson7:
+              name: Lesson 7
+            lesson8:
+              name: Lesson 8
+            lesson9:
+              name: Lesson 9
+            lesson10:
+              name: Lesson 10
+            lesson11:
+              name: Lesson 11
+            lesson12:
+              name: Lesson 12
+            lesson13:
+              name: Lesson 13
+            lesson14:
+              name: Lesson 14
+            lesson15:
+              name: Lesson 15
+            lesson16:
+              name: Lesson 16
+            lesson17:
+              name: Lesson 17
+            lesson18:
+              name: Lesson 18
+            lesson19:
+              name: Lesson 19
+            lesson20:
+              name: Lesson 20
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+          name: ai-unit-pilot
+          title: AI Unit Pilot
+          description_audience: ''
+          description_short: Pilot for AI Unit in CSD
+          description: ''
+          student_description: ''

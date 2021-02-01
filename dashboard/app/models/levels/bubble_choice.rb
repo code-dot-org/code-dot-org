@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -77,7 +77,7 @@ class BubbleChoice < DSLDefined
   def summarize(script_level: nil, user: nil)
     user_id = user ? user.id : nil
     summary = {
-      id: id,
+      id: id.to_s,
       display_name: display_name,
       description: description,
       name: name,
@@ -116,7 +116,7 @@ class BubbleChoice < DSLDefined
 
       level_info.merge!(
         {
-          id: level.id,
+          id: level.id.to_s,
           description: level.try(:bubble_choice_description),
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,

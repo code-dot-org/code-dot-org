@@ -283,6 +283,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "တန်ဖိုးတစ်ခုဟာ အခြားတန်ဖိုးတစ်ခုနဲ့ တူညီလား(သို့မဟုတ်) သေးလားစမ်းစစ်ပါ. ညာဘက်ကဖော်ပြချက်ရဲ့တန်ဖိုးနဲ့ဘယ်ဘက်ကဖော်ပြချက်တန်ဖိုးဟာတူတယ်သို့မဟုတ်သေးတယ်ဆိုရင်trueကိုပြန်သွားပါ.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "ပို၍နည်း​သောသို့မဟုတ်တူညီ​သော​အော်ပ​ရေတာ",
   "dropletBlock_mathAbs_param0": "×",
+  "dropletBlock_mathIncrement_param0": "×",
+  "dropletBlock_mathDecrement_param0": "×",
   "dropletBlock_mathPow_param0": "×",
   "dropletBlock_mathRandom_description": "၀ (အပါအဝင်) မှ ၁အထိ(၁မပါ) ကျရာနံပါတ်တစ်ခုကိုပြန်သွားပါ",
   "dropletBlock_mathRandom_signatureOverride": "သချာ.ကျပန်း()",

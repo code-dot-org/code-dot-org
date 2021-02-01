@@ -41,9 +41,7 @@ describe('SaveBar', () => {
   });
 
   it('shows lastSaved when there is no error', () => {
-    const wrapper = mount(
-      <SaveBar {...defaultProps} lastSaved={'2020-11-06T21:33:32.000Z'} />
-    );
+    const wrapper = mount(<SaveBar {...defaultProps} lastSaved={Date.now()} />);
 
     expect(wrapper.find('.lastSavedMessage').text()).to.include(
       'Last saved at:'

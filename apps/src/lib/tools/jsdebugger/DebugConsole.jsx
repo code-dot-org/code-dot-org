@@ -77,6 +77,19 @@ const style = {
   }
 };
 
+// These colors come from the ace editor defaults
+const inspectorTheme = {
+  ...chromeLight,
+  OBJECT_VALUE_NULL_COLOR: 'rgb(88, 92, 246)',
+  OBJECT_VALUE_UNDEFINED_COLOR: 'rgb(88, 92, 246)',
+  OBJECT_VALUE_REGEXP_COLOR: '#1A1AA6',
+  OBJECT_VALUE_STRING_COLOR: '#1A1AA6',
+  OBJECT_VALUE_SYMBOL_COLOR: '#1A1AA6',
+  OBJECT_VALUE_NUMBER_COLOR: 'rgb(0, 0, 205)',
+  OBJECT_VALUE_BOOLEAN_COLOR: 'rgb(88, 92, 246)',
+  OBJECT_VALUE_FUNCTION_PREFIX_COLOR: 'rgb(85, 106, 242)'
+};
+
 const WATCH_COMMAND_PREFIX = '$watch ';
 const UNWATCH_COMMAND_PREFIX = '$unwatch ';
 
@@ -201,9 +214,19 @@ export default connect(
       this.props.appendLog(output);
     }
 
-    componentDidUpdate() {
-      this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
+    componentDidUpdate(prevProps) {
+      const prevOutputSize = prevProps.logOutput.size;
+      if (
+        typeof prevOutputSize === 'number' &&
+        prevOutputSize !== this.props.logOutput.size
+      ) {
+        this.jumpToBottom();
+      }
     }
+
+    jumpToBottom = () => {
+      this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
+    };
 
     clearDebugInput() {
       // TODO: this needs to get called on ATTACH action being dispatched
@@ -253,49 +276,39 @@ export default connect(
     }
 
     displayOutputToConsole() {
-      // These colors come from the ace editor defaults
-      const inspectorTheme = {
-        ...chromeLight,
-        OBJECT_VALUE_NULL_COLOR: 'rgb(88, 92, 246)',
-        OBJECT_VALUE_UNDEFINED_COLOR: 'rgb(88, 92, 246)',
-        OBJECT_VALUE_REGEXP_COLOR: '#1A1AA6',
-        OBJECT_VALUE_STRING_COLOR: '#1A1AA6',
-        OBJECT_VALUE_SYMBOL_COLOR: '#1A1AA6',
-        OBJECT_VALUE_NUMBER_COLOR: 'rgb(0, 0, 205)',
-        OBJECT_VALUE_BOOLEAN_COLOR: 'rgb(88, 92, 246)',
-        OBJECT_VALUE_FUNCTION_PREFIX_COLOR: 'rgb(85, 106, 242)'
-      };
-      if (this.props.logOutput.size > 0) {
-        return this.props.logOutput.map((rowValue, i) => {
-          if ('function' === typeof rowValue.toJS) {
-            rowValue = rowValue.toJS();
-          }
-          if (rowValue.input) {
-            return <div key={i}>&gt; {rowValue.input}</div>;
-          } else if (rowValue.skipInspector) {
-            return rowValue.output;
-          } else if (this.isValidOutput(rowValue)) {
-            if (rowValue.fromConsoleLog) {
-              return (
-                <Inspector
-                  theme={inspectorTheme}
-                  key={i}
-                  data={rowValue.output}
-                />
-              );
-            } else {
-              return (
-                <div key={i}>
-                  &lt;{' '}
-                  <div style={style.inspector}>
-                    <Inspector theme={inspectorTheme} data={rowValue.output} />
-                  </div>
-                </div>
-              );
-            }
-          }
-        });
+      if (this.props.logOutput.size <= 0) {
+        return;
       }
+
+      return this.props.logOutput.map((rowValue, i) => {
+        if ('function' === typeof rowValue.toJS) {
+          rowValue = rowValue.toJS();
+        }
+        if (rowValue.input) {
+          return <div key={i}>&gt; {rowValue.input}</div>;
+        } else if (rowValue.skipInspector) {
+          return rowValue.output;
+        } else if (this.isValidOutput(rowValue)) {
+          if (rowValue.fromConsoleLog) {
+            return (
+              <Inspector
+                theme={inspectorTheme}
+                key={i}
+                data={rowValue.output}
+              />
+            );
+          } else {
+            return (
+              <div key={i}>
+                &lt;{' '}
+                <div style={style.inspector}>
+                  <Inspector theme={inspectorTheme} data={rowValue.output} />
+                </div>
+              </div>
+            );
+          }
+        }
+      });
     }
 
     render() {
