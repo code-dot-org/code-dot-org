@@ -22,6 +22,7 @@ export const initHamburger = function() {
         e.target.className !== 'hamburger-expandable-item item'
       ) {
         $(this).toggleClass('active');
+        $('#hamburger-icon').toggleClass('active');
         $('#hamburger #hamburger-contents').slideToggle();
         e.preventDefault();
       }
