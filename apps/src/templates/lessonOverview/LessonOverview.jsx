@@ -130,12 +130,10 @@ class LessonOverview extends Component {
           />
         )}
         <h1>
-          {lesson.lockable
-            ? lesson.displayName
-            : i18n.lessonNumbered({
-                lessonNumber: lesson.position,
-                lessonName: lesson.displayName
-              })}
+          {i18n.lessonNumbered({
+            lessonNumber: lesson.position,
+            lessonName: lesson.displayName
+          })}
         </h1>
 
         <div style={styles.frontPage}>
@@ -205,6 +203,20 @@ class LessonOverview extends Component {
                     {this.compileResourceList('All')}
                   </div>
                 )}
+              </div>
+            )}
+            {lesson.vocabularies.length > 0 && (
+              <div>
+                <h2 style={styles.titleNoTopMargin}>{i18n.vocabulary()}</h2>
+                <ul>
+                  {lesson.vocabularies.map(vocab => (
+                    <li key={vocab.key}>
+                      <InlineMarkdown
+                        markdown={`**${vocab.word}** - ${vocab.definition}`}
+                      />
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
           </div>

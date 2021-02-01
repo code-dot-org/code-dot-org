@@ -62,7 +62,14 @@ describe('LessonOverview', () => {
             }
           ]
         },
-        objectives: [{id: 1, description: 'what students will learn'}]
+        objectives: [{id: 1, description: 'what students will learn'}],
+        vocabularies: [
+          {
+            key: 'Algorithm',
+            word: 'Algorithm',
+            definition: 'A list of steps to finish a task.'
+          }
+        ]
       },
       activities: [],
       announcements: [],
@@ -92,8 +99,14 @@ describe('LessonOverview', () => {
     expect(safeMarkdowns.at(3).props().markdown).to.contain('- One');
 
     const inlineMarkdowns = wrapper.find('InlineMarkdown');
+
+    // The first contains the objective
     expect(inlineMarkdowns.at(0).props().markdown).to.contain(
       'what students will learn'
+    );
+    // The second contains the vocabulary
+    expect(inlineMarkdowns.at(1).props().markdown).to.contain(
+      '**Algorithm** - A list of steps to finish a task.'
     );
 
     expect(wrapper.find('LessonAgenda').length).to.equal(1);

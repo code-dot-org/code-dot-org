@@ -8,6 +8,7 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {authorizeLockable} from './stageLockRedux';
 
@@ -67,7 +68,7 @@ const initialState = {
   // prior to having information about the user login state.
   // TODO: Use sign in state to determine where to source user progress from
   usingDbProgress: false,
-  currentPageNumber: 0
+  currentPageNumber: PUZZLE_PAGE_NONE
 };
 
 /**
@@ -297,21 +298,22 @@ export const getLevelResult = level => {
 };
 
 /**
- * Does some processing of our passed in stages, namely
+ * Does some processing of our passed in lesson, namely
  * - Removes 'hidden' field
- * - Adds 'stageNumber' field for non-lockable, non-PLC stages
+ * - Adds 'stageNumber' field for non-PLC lessons which
+ * are not lockable or have a lesson plan
  */
-export function processedStages(stages, isPlc) {
-  let numberOfNonLockableStages = 0;
+export function processedStages(lessons, isPlc) {
+  let numLessonsWithLessonPlan = 0;
 
-  return stages.map(stage => {
+  return lessons.map(lesson => {
     let stageNumber;
-    if (!isPlc && !stage.lockable) {
-      numberOfNonLockableStages++;
-      stageNumber = numberOfNonLockableStages;
+    if (!isPlc && lesson.numberedLesson) {
+      numLessonsWithLessonPlan++;
+      stageNumber = numLessonsWithLessonPlan;
     }
     return {
-      ..._.omit(stage, 'hidden'),
+      ..._.omit(lesson, 'hidden'),
       stageNumber
     };
   });
@@ -555,9 +557,7 @@ const peerReviewLevels = state =>
  */
 const isCurrentLevel = (currentLevelId, level) => {
   return (
-    !!currentLevelId &&
-    ((level.ids && level.ids.indexOf(currentLevelId) !== -1) ||
-      level.uid === currentLevelId)
+    !!currentLevelId && (level.id && level.id.indexOf(currentLevelId) !== -1)
   );
 };
 
@@ -578,10 +578,11 @@ const levelWithStatus = (
       );
     }
   }
+  const normalizedLevel = processedLevel(level);
   return {
-    ...processedLevel(level),
+    ...normalizedLevel,
     status: statusForLevel(level, levelProgress),
-    isCurrentLevel: isCurrentLevel(currentLevelId, level),
+    isCurrentLevel: isCurrentLevel(currentLevelId, normalizedLevel),
     paired: levelPairing[level.activeId],
     readonlyAnswers: level.readonly_answers
   };

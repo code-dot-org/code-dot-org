@@ -1,13 +1,9 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2021-01-05T01:27:46.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "embed": "false",
-    "long_instructions": "# Improving and Iterating\r\n\r\nYou've put your app in front of users, gathered feedback, and identified bugs and new features - time to do something about it.\r\n\r\n# Do This\r\n\r\nEach team member is going to implement select features and bug fixes on their own version of the team's app. Start by selecting a sticky note from the **To Do** column of your team's chart and moving it to the **Doing** column. For each sticky you tackle:\r\n\r\n* Add a comment to the top of your program describing the feature or bug fix you are implementing\r\n* Work on your iteration until it works. Try to stay focused on only the single feature or bug that you've selected.\r\n* When done, move your sticky to the **Done** column, pick a new one, and start the process over.",
+    "long_instructions": "# Updating Your Prototype\r\n\r\nYou've put your app in front of users, gathered feedback, and identified bugs and new features - time to do something about it.\r\n\r\n# Do This\r\n\r\nEach team member is going to implement select features and bug fixes on their own version of the team's app. Start by selecting a sticky note from the **To Do** column of your team's chart and moving it to the **Doing** column. For each sticky you tackle:\r\n\r\n* Add a comment to the top of your program describing the feature or bug fix you are implementing\r\n* Work on your iteration until it works. Try to stay focused on only the single feature or bug that you've selected.\r\n* When done, move your sticky to the **Done** column, pick a new one, and start the process over.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -42,7 +38,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
     "makerlab_enabled": "false",
-    "display_name": "App Project: Bugs and Features",
+    "display_name": "Updating Your Prototype",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
@@ -59,11 +55,21 @@
       "/docs/concepts/app-lab/design-mode/design-mode-elements/"
     ],
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2021-01-05T01:27:46.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-09-21 17:07:42 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-21 17:09:08 +0000\",\"changed\":[\"teacher_markdown\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-06 01:06:39 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-09-21 17:07:42 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-21 17:09:08 +0000\",\"changed\":[\"teacher_markdown\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-06 01:06:39 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2021-01-08 20:49:25 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2021-01-08 20:52:28 +0000\",\"changed\":[\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

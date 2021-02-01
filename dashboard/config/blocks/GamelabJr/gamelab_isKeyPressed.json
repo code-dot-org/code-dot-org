@@ -1,5 +1,5 @@
 {
-  "category": "Logic",
+  "category": "World",
   "config": {
     "func": "isKeyPressed",
     "blockText": "{KEY} is pressed",

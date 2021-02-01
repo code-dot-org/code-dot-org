@@ -1,5 +1,5 @@
 {
-  "category": "Actions",
+  "category": "Sprites",
   "config": {
     "func": "jumpTo",
     "blockText": "{SPRITE} jump to {LOCATION}",

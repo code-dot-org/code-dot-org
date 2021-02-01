@@ -20,13 +20,13 @@ describe('LightSensor', function() {
   it(`value attribute is readonly`, () => {
     let descriptor = Object.getOwnPropertyDescriptor(lightSensor, 'value');
     expect(descriptor.set).to.be.undefined;
-    expect(descriptor.get).to.be.defined;
+    expect(descriptor.get).to.not.be.undefined;
   });
 
   it(`threshold attribute can be read and set`, () => {
     let descriptor = Object.getOwnPropertyDescriptor(lightSensor, 'threshold');
-    expect(descriptor.set).to.be.defined;
-    expect(descriptor.get).to.be.defined;
+    expect(descriptor.set).to.not.be.undefined;
+    expect(descriptor.get).to.not.be.undefined;
 
     expect(lightSensor.state.threshold).to.equal(128);
     lightSensor.state.threshold = 199;
