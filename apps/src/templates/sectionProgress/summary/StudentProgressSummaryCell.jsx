@@ -7,6 +7,8 @@ import {
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
+// Deprecated in favor of ProgressTableSummaryCell
+// component will be removed as part of https://codedotorg.atlassian.net/browse/LP-1606
 class StudentProgressSummaryCell extends Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
