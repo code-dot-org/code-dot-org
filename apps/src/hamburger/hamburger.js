@@ -7,12 +7,19 @@ import {
 
 export const initHamburger = function() {
   $(function() {
-    $('#hamburger').on('keypress click', function(e) {
+    $('#hamburger-icon').click(function(e) {
+      $(this).toggleClass('active');
+      $('#hamburger #hamburger-contents').slideToggle();
+      e.preventDefault();
+    });
+
+    // allows users to toggle help menu by pressing return
+    // while tabbing through elements
+    $('#hamburger').on('keypress', function(e) {
       if (
-        (e.type === 'keypress' &&
-          e.which === 13 &&
-          e.target.className !== 'hamburger-expandable-item item') ||
-        e.type === 'click'
+        e.type === 'keypress' &&
+        e.which === 13 &&
+        e.target.className !== 'hamburger-expandable-item item'
       ) {
         $(this).toggleClass('active');
         $('#hamburger #hamburger-contents').slideToggle();
@@ -59,10 +66,16 @@ export const initHamburger = function() {
       });
     });
 
+    $('#help-icon').click(function(e) {
+      $(this).toggleClass('active');
+      $('#help-button #help-contents').slideToggle();
+      e.preventDefault();
+    });
+
     // allows users to toggle help menu by pressing return
     // while tabbing through elements
-    $('#help-button').on('keypress click', function(e) {
-      if ((e.type === 'keypress' && e.which === 13) || e.type === 'click') {
+    $('#help-button').on('keypress', function(e) {
+      if (e.type === 'keypress' && e.which === 13) {
         $(this).toggleClass('active');
         $('#help-button #help-contents').slideToggle();
         e.preventDefault();
