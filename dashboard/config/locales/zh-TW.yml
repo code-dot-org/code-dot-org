@@ -114,7 +114,7 @@ zh-TW:
     invalid_provider: " %{provider} 帳戶無法綁定 Code.org 的帳戶。"
     migration_required: 很抱歉，我們無法針對仍然使用老舊帳戶體驗頁面的帳戶進行連結或取消。請您更新並使用新的帳戶體驗頁面。
     unable_to_connect_provider: 無法將你的 Code.org 帳戶連接到 %{provider} ，麻煩再試一次。
-    disconnect_successful: 成功！已經移除你的Code.org帳號與外部帳號關聯
+    disconnect_successful: 成功！已經移除你的Code.org帳戶與外部帳戶的連結。
     already_in_use: 你的 %{provider} 已與 Code.org 的另一個帳戶綁定。
     already_linked: 你的 %{provider} 已與 Code.org 的另一個帳戶綁定。
     existing_account:
@@ -172,9 +172,9 @@ zh-TW:
     email_preference_yes: 是
     email_preference_no: 否
     email_preference_required: 你必須指定一個信箱地址。
-    parent_account_checkbox: 我是家長/監護人，代表我的孩子登入
-    parent_account_email_progress_permission: 我們是否可以偶爾透過電子郵件向你發送關於你孩子進度和專案的最新資訊，以及關於其課程和電腦科學的最新資訊？[(參見我們的隱私政策)](%{privacy_policy_url})
-    parent_account_email_label: 家長/監護人電子郵箱
+    parent_account_checkbox: 我是家長/監護人，協助我的孩子進行註冊
+    parent_account_email_progress_permission: 我們是否可以偶爾透過電子信箱向你發送關於你孩子進度和專案的最新資訊，以及關於其課程和電腦科學的最新資訊？[(參見我們的隱私政策)](%{privacy_policy_url})
+    parent_account_email_label: 家長/監護人電子信箱
   school_info:
     title: 學校資訊（非必填）
     school_country: 學校所屬國家
@@ -385,7 +385,7 @@ zh-TW:
       makerlab: 自造者工具包
       minecraft_adventurer: Minecraft 探險家
       minecraft_aquatic: Minecraft 水世界
-      minecraft_codebuilder: 'Minecraft: 代碼連接'
+      minecraft_codebuilder: 'Minecraft: 程式碼連結'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft 英雄們
       playlab: Play Lab
@@ -467,13 +467,13 @@ zh-TW:
     create_personal_login_email_note_markdown: 注意： 電子信箱的儲存形式並不允許我們聯繫學生。學生永遠不會收到來自
       Code.org 的電子郵件，除了密碼恢復。詳情請參閱我們的[隱私政策](%{privacy_policy_url})。
     enter_new_login_info: 輸入你新的登入資訊
-    confirm_secret_words: 為了確認是你本人請輸入目前的通關密語
+    confirm_secret_words: 請輸入你自己的密碼來確認是你本人
     parent_email_label: 監護人信箱（非必填）
     parent_email_hint: "（可用於恢復密碼）"
     enter_parent_email: 輸入你的家長或監護人的信箱（用於密碼恢復）
     update: 更新帳戶
     account_successfully_updated: 帳戶更新成功。
-    auth_option_saved: 你已成功連結至%{provider}的帳戶，電子郵件地址是 %{email}。
+    auth_option_saved: 你已成功連結至%{provider}的帳戶，電子信箱是 %{email}。
     auth_option_saved_no_email: 你已成功連結至%{provider}的帳戶。
     update_email: 更新
     for_parents_and_guardians: 各位家長及監護人
@@ -593,7 +593,7 @@ zh-TW:
     title: 需要幫忙？
     subtitle: 看看這些影片和提示
     teacher: 觀看解決方案
-    teacher_no_solution: 停止觀看解法
+    teacher_no_solution: 停止觀看解答
     auth_error: 您無權查看該解決方案。
     submit: 更新小藝術家的位置
     direction: 開始方向（單位：度）
@@ -796,7 +796,7 @@ zh-TW:
   age_interstitial:
     age: 你的年齡
     header: 帳戶資訊更新
-    warning: 為了加強保護私隱，我們持續更新和改善體驗。為此，我們需要現有的用戶在此處輸入年齡。
+    warning: 為了加強保護隱私，我們持續更新和改善體驗。為此，我們需要現有的用戶在此處輸入年齡。
     disclaimer: 一如既往，code.org 永不向第三方出租、出售或分享這資訊。
     sign_out_markdown: 如果你不想提供年齡，你可以選擇[登出](%{url})。
   terms_interstitial:
@@ -827,7 +827,7 @@ zh-TW:
       [大方捐獻](%{donors_url})!
     local_supporters: 在地支援
     global_supporters: 全球支援
-    support_codeorg_1: 捐贈給本網站的每一分金錢都可以為更多的學生帶來更多的機會。
+    support_codeorg_1: 捐贈給本網站的每一筆資金，都可以為更多的學生帶來更多的機會。
     support_codeorg_2: "[現在就捐贈](%{donate_url}) 來贊助、支援本網站（Code.org）"
     get_started: 開始使用 Code.org
   school_info_interstitial:
@@ -850,7 +850,7 @@ zh-TW:
     submit: 提交
     decline: 關閉
   zendesk_too_young_message: 抱歉，年紀較小的用戶不能登入到我們的站台，詳情請參見<a href="http://support.code.org">support.code.org</a>，你可以請你的家長或是老師幫忙。
-  zendesk_too_young_message_markdown: 抱歉，年紀較小的用戶不能登入到我們的站台，詳情請參見[support.code.org](http://support.code.org)，你可以請你的家長或是老師幫忙。
+  zendesk_too_young_message_markdown: 抱歉，年紀較小的用戶不能登入到我們的網站，詳情請參見[support.code.org](http://support.code.org)，你可以請你的家長或是老師幫忙。
   progress:
     not_started: 未開始
     in_progress: 正在進行
@@ -933,7 +933,7 @@ zh-TW:
   hoc_download:
     title: 一小時玩程式相關下載
     capsule_title: 你有網路嗎？
-    capsule_desc: 使用在線 Web 式的 [%{app_name}](%{url}).。
+    capsule_desc: 使用在線 Web 式的 <a href="%{url}">%{app_name}</a>。
     instructions_headline: 沒有網路？
     instructions: 給教師的指南： 如果你的網路很慢，這些課程都可以下載並離線安裝。選擇你的語言和平台，然後下載和安裝在教室的所有電腦上。你可以使用
       USB 隨身碟一次安裝所有電腦上。註：學生將不能登錄並在 Code Studio 上保存進度，也無法列印證書。你可以提前[在這裡列印證書](%{url})。
@@ -1117,12 +1117,12 @@ zh-TW:
       copy_code: 請複製此代碼並貼到 Maker App 上，以登入 Code.org。
       error_token_expired: 權杖已過期。請再次登入，取得新的權杖。
       error_wrong_provider: 提供者錯誤。請確保你以 Google 登入。
-      error_invalid_user: 使用者 ID 無效。請嘗試再次登入。
+      error_invalid_user: 無效的用戶ID。請嘗試再次登入。
       error_no_code: 請輸入你的登入代碼。
   parent_email_banner:
     text: "**您是否是一位家長或監護人？**將您的電子郵件地址關聯到此帳號，以瞭解孩子的進度和專案的最新資訊！"
     link_your_email: 關聯您的電子郵箱
-    not_now: 現在不想
+    not_now: 現在不要
   behaviors:
     this_sprite: 這個角色
   unit_prefix: "%{n} 個單位"

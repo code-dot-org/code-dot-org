@@ -33,6 +33,14 @@ experiments.TIME_SPENT = 'time-spent';
 experiments.APPLAB_ML = 'applab-ml';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPRITELAB_PAUSE = 'spritelabPause';
+experiments.SPECIAL_TOPIC = 'special-topic';
+
+/**
+ * This was a gamified version of the finish dialog, built in 2018,
+ * but never fully shipped.
+ * See github.com/code-dot-org/code-dot-org/pull/19557
+ */
+experiments.BUBBLE_DIALOG = 'bubbleDialog';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

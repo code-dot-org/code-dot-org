@@ -3327,3 +3327,9 @@ bs:
           lesson_groups:
             csd5_2:
               display_name: 'Poglavlje 2: Rješavanje problema podataka'
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Lekcija 14
+            lesson15:
+              name: Lekcija 15

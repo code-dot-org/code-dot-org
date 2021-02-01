@@ -3046,7 +3046,7 @@ nl-NL:
         markdown: |
           # Mijn Online Woonwijk
 
-          ## Hoe maak je veilig gebruik van internet?
+          ## Hoe beweeg je veilig online?
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel zal met dit programma vier schatten verzamelen.
@@ -3233,3 +3233,8 @@ nl-NL:
           aanbrengen aan uw project. U kunt ervoor kiezen dezelfde blokken te blijven
           gebruiken of te gaan werken met een uitgebreide gereedschapskist.
         display_name: Vrije Speelruimte
+      csf_digital_trails:
+        markdown: |-
+          # Volg het digitale pad
+
+          ## Welke informatie is OKE om in je digitale voetafdruk te hebben?

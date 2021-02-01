@@ -62,7 +62,7 @@
   "lengthFeedback": "Majdnem tökéletes, csak a mozgás hosszát gondold át újra.",
   "lengthParameter": "hossza",
   "loopVariable": "számláló",
-  "moveBackward": "menj visszafelé ennyivel",
+  "moveBackward": "menj visszafelé",
   "moveEastTooltip": "A művészt kelet felé mozgatja.",
   "moveDirectionByPixels": "menj %1 %2 képpontnyit",
   "moveForward": "menj előre",

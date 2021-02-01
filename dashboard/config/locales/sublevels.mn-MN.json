@@ -1,0 +1,182 @@
+{
+  "mn-MN": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Үйлдлүүд",
+              "Events": "Үйл явдлууд",
+              "Loops": "Гогцоонууд",
+              "Math": "Математик",
+              "Logic": "Логик",
+              "Games/Score": "Тоглоом/Оноо"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Ертөнц",
+              "Dancers": "Бүжигчид",
+              "Properties": "Шинж чанарууд",
+              "Events": "Үйл явдлууд",
+              "Numbers": "Дугаар",
+              "Logic": "Логик"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "од зурах",
+                "parameters": {
+                  "points": "цэгүүд",
+                  "length": "урт"
+                }
+              },
+              "draw a circle": {
+                "name": "тойрог зурах"
+              },
+              "draw a pinwheel": {
+                "name": "хавчаар зурах",
+                "parameters": {
+                  "length": "урт",
+                  "repeat": "давтах"
+                }
+              },
+              "draw a triangle": {
+                "name": "гурвалжин зурах",
+                "parameters": {
+                  "length": "урт"
+                }
+              },
+              "draw a shape": {
+                "name": "дүрс зурах",
+                "parameters": {
+                  "length": "урт"
+                }
+              },
+              "draw a house": {
+                "name": "байшин зурах",
+                "parameters": {
+                  "length": "урт"
+                }
+              },
+              "draw a square": {
+                "name": "квадрат зурах",
+                "parameters": {
+                  "length": "урт"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Ертөнц",
+              "Sprites": "Шидтэнгүүд",
+              "Actions": "Үйлдлүүд",
+              "Events": "Үйл явдлууд",
+              "Behaviors": "Зан чанар"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Ертөнц",
+              "Dancers": "Бүжигчид",
+              "Properties": "Шинж чанарууд",
+              "Events": "Үйл явдлууд",
+              "Numbers": "Дугаар",
+              "Logic": "Логик"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Үйлдлүүд",
+              "Brushes": "Багс",
+              "Loops": "Гогцоонууд",
+              "Math": "Математик",
+              "Logic": "Логик",
+              "Functions": "Функцүүд",
+              "Variables": "Хувьсагчууд"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Ертөнц",
+              "Sprites": "Шидтэнгүүд",
+              "Locations": "Байрлалууд",
+              "Actions": "Үйлдлүүд",
+              "Events": "Үйл явдлууд",
+              "Behaviors": "Зан чанар",
+              "Variables": "Хувьсагчууд",
+              "Math": "Математик",
+              "Logic": "Логик",
+              "Functions": "Функцүүд",
+              "Text": "Текст",
+              "Comments": "Тайлбарууд"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Ертөнц",
+              "Sprites": "Шидтэнгүүд",
+              "Locations": "Байрлалууд",
+              "Actions": "Үйлдлүүд",
+              "Events": "Үйл явдлууд",
+              "Behaviors": "Зан чанар",
+              "Variables": "Хувьсагчууд",
+              "Math": "Математик",
+              "Logic": "Логик",
+              "Functions": "Функцүүд",
+              "Text": "Текст",
+              "Comments": "Тайлбарууд"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Үйлдлүүд",
+              "Brushes": "Багс",
+              "Loops": "Гогцоонууд",
+              "Math": "Математик",
+              "Logic": "Логик",
+              "Functions": "Функцүүд",
+              "Variables": "Хувьсагчууд"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Ертөнц",
+              "Sprites": "Шидтэнгүүд",
+              "Actions": "Үйлдлүүд",
+              "Events": "Үйл явдлууд",
+              "Logic": "Логик",
+              "Math": "Математик"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Ертөнц",
+              "Sprites": "Шидтэнгүүд",
+              "Actions": "Үйлдлүүд",
+              "Behaviors": "Зан чанар",
+              "Events": "Үйл явдлууд",
+              "Locations": "Байрлалууд",
+              "Logic": "Логик",
+              "Loops": "Гогцоонууд",
+              "Math": "Математик",
+              "Variables": "Хувьсагчууд",
+              "Functions": "Функцүүд",
+              "Comments": "Тайлбарууд"
+            }
+          }
+        }
+      }
+    }
+  }
+}

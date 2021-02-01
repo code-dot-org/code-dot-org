@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -388,7 +388,7 @@ class Blockly < Level
       level_prop['editCode'] = uses_droplet?
 
       # Blockly requires these fields to be objects not strings
-      %w(map initialDirt serializedMaze goal softButtons inputOutputTable).
+      %w(map initialDirt serializedMaze goal softButtons inputOutputTable scale).
           concat(NetSim.json_object_attrs).
           concat(Craft.json_object_attrs).
           each do |x|

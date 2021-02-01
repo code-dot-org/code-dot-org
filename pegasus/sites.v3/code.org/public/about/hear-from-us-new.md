@@ -11,11 +11,14 @@ style_min: true
 
 Interested in learning more about the work we do? Take a peek under the hood and stay in touch with what's happening at Code.org and throughout the computer science community. When you sign-up for our emails, you'll hear the latest CS news, learn about special Code.org milestones, and discover heartwarming testimonials and stories from classrooms across the globe. 
 <br><br>
-<strong>Already a member of our mailing list?</strong> That's great! Check out the <a href="http://go.pardot.com/emailPreference/e/epc/153401/MDEPHaHUMDyQS3NZ_DalCg3VmHstpnj73SkzdhmIPuw/699">email preference center</a> to manage your subscriptions.
 
 ## Get started
 
 <iframe src="http://go.pardot.com/l/153401/2021-01-13/p1jgm7" width="100%" height="400" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+
+<hr>
+
+If you are <strong>already a member of our mailing list</strong> you can update your preferences through your <a href="http://go.pardot.com/emailPreference/e/epc/153401/MDEPHaHUMDyQS3NZ_DalCg3VmHstpnj73SkzdhmIPuw/699">email preference center</a>, which is also located at the bottom of every email from us. You must first submit the form above, or be on our mailing list in order to manage your subscriptions. 
 
 <hr>
 

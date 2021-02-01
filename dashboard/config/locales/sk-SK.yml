@@ -824,6 +824,7 @@ sk:
       title: Športy
       body: Vytvor basketbalový zápas alebo pospájaj a pomiešaj viaceré športy.
     text-compression:
+      title: Kompresia textu
       body: V tejto lekcii študenti použijú nástroj Kompresia textu na kompresiu textu
         pomocou nahradenia opakujúcich sa vzorov symbolmi.
     unplugged:
