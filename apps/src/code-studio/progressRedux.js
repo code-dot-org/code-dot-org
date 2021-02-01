@@ -7,7 +7,10 @@ import {mergeActivityResult, activityCssClass} from './activityUtils';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
-import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  processedLevel,
+  getLevelResult
+} from '@cdo/apps/templates/progress/progressHelpers';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {authorizeLockable} from './stageLockRedux';
@@ -277,25 +280,6 @@ function bestResultLevelId(levelIds, progressData) {
   });
   return bestId;
 }
-
-/**
- * Given a level that we get from the server using either /api/user_progress or
- * /dashboardapi/section_level_progress, extracts the result, appropriately
- * discerning a locked/submitted result for certain levels.
- */
-export const getLevelResult = level => {
-  if (level.status === LevelStatus.locked) {
-    return TestResults.LOCKED_RESULT;
-  }
-  if (level.readonly_answers) {
-    return TestResults.READONLY_SUBMISSION_RESULT;
-  }
-  if (level.submitted) {
-    return TestResults.SUBMITTED_RESULT;
-  }
-
-  return level.result;
-};
 
 /**
  * Does some processing of our passed in lesson, namely
