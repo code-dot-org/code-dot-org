@@ -11,7 +11,8 @@ export default class ModelManagerDialog extends React.Component {
   };
 
   state = {
-    models: []
+    models: [],
+    isImportPending: false
   };
 
   componentDidUpdate() {
@@ -31,9 +32,12 @@ export default class ModelManagerDialog extends React.Component {
     });
   };
 
-  importMLModel = () => {
+  importMLModel = async () => {
+    this.setState({isImportPending: true});
     const modelId = this.root.value;
-    Applab.autogenerateML(modelId);
+    await Applab.autogenerateML(modelId);
+    this.setState({isImportPending: false});
+    this.closeModelManager();
   };
 
   render() {
@@ -61,6 +65,8 @@ export default class ModelManagerDialog extends React.Component {
             color={Button.ButtonColor.orange}
             onClick={this.importMLModel}
             disabled={noModels}
+            pending={this.state.isImportPending}
+            pendingText={'Importing...'}
           />
           <h3>Model card details will go here.</h3>
         </BaseDialog>

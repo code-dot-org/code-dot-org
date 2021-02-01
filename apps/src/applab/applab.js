@@ -313,7 +313,9 @@ Applab.autogenerateML = function(modelId) {
     var predictButtonId = modelData.name + '_predict';
     designMode.updateProperty(predictButton, 'id', predictButtonId);
     var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
-      getPrediction("${modelData.name}", testValues, function(value) {
+      getPrediction("${
+        modelData.name
+      }", "${modelId}", testValues, function(value) {
         setText("${predictionId}", value);
       });
     });`;
