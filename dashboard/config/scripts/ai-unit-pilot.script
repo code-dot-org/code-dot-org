@@ -1,6 +1,5 @@
 login_required true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/ai-unit-pilot/ai-unit/"], ["vocabulary", "https://curriculum.code.org/ai-unit-pilot/ai-unit/vocab"], ["standardMappings", "https://curriculum.code.org/ai-unit-pilot/ai-unit/standards"]]
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}'
 
 lesson 'lesson1', display_name: 'Lesson 1A: AI for Oceans', has_lesson_plan: true

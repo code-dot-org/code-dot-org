@@ -1,5 +1,4 @@
 hidden false
-has_lesson_plan true
 tts true
 
 lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: true

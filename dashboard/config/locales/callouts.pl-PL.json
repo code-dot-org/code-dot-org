@@ -169,10 +169,10 @@
           "Course_4_Artist_Vars_8_a": "Potrzebujesz więcej miejsca?  Przeciągnij ten pasek, aby poszerzyć obszar roboczy."
         },
         "Course 4 Bee 1": {
-          "if_bee_nectar": "Użyj bloku \"if\", aby zdecydować, czy pszczółka powinna zrobić nektar"
+          "if_bee_nectar": "Użyj bloku `if`, aby zdecydować, czy pszczółka powinna zrobić nektar"
         },
         "Course 4 Bee 3": {
-          "if_else_bee": "Użyj bloków \"jeśli\"/ \"w przeciwnym razie\" aby pszczoła mogła zebrać nektar z kwiatu lub zrobić miód."
+          "if_else_bee": "Użyj bloków `jeśli/w przeciwnym razie`, aby pszczoła mogła zebrać nektar z kwiatu lub zrobić miód."
         },
         "Course 4 Bee Params 2": {
           "edit_get_nectar": "Użyj tego przycisku, aby edytować funkcję i zmienić kierunek, w którym pszczółka skręci, aby zebrać nektar."
@@ -1483,6 +1483,9 @@
         },
         "outbreak7": {
           "costumes_callout": "Kliknij, aby utworzyć nowy kostium"
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "Kliknij tutaj, aby zobaczyć jak działa kod!"
         }
       }
     }

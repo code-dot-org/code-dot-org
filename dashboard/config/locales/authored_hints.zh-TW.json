@@ -5782,7 +5782,7 @@
           "courseD_bee_conditionals_challenge1_b": "在這個關卡中，每個空格都可能有一朵花、一個蜂窩，或者是什麼都沒有。這意味著你可以在每個正方形上重複執行`如果/否則`條件判斷。"
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
           "courseD_bee_conditionals_challenge1_b": "就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
