@@ -20,7 +20,6 @@ import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
   setFormData,
   addAvilableForm,
-  setFormQuestions,
   setLastSaved,
   setSaveError,
   setLastSavedQuestions
@@ -113,7 +112,6 @@ class FoormSaveBar extends Component {
     saveError: PropTypes.string,
     setFormData: PropTypes.func,
     addAvilableForm: PropTypes.func,
-    setFormQuestions: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setLastSavedQuestions: PropTypes.func
@@ -423,8 +421,6 @@ export default connect(
   dispatch => ({
     setFormData: formData => dispatch(setFormData(formData)),
     addAvilableForm: formMetadata => dispatch(addAvilableForm(formMetadata)),
-    setFormQuestions: formQuestions =>
-      dispatch(setFormQuestions(formQuestions)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setLastSavedQuestions: formQuestions =>
