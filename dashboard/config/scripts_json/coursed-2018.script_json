@@ -6,7 +6,6 @@
     "login_required": false,
     "properties": {
       "version_year": "2018",
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/coursed/{LESSON}",
       "is_stable": true,
       "teacher_resources": [

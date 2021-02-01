@@ -180,10 +180,16 @@ class Lesson < ApplicationRecord
     !!has_lesson_plan || !lockable
   end
 
+  def has_lesson_pdf?
+    return false if ScriptConstants.script_in_category?(:csf, script.name) || ScriptConstants.script_in_category?(:csf_2018, script.name)
+
+    !!has_lesson_plan
+  end
+
   def localized_title
     # The standard case for localized_title is something like "Lesson 1: Maze".
-    # In the case of lockable lessons, we don't want to include the Lesson 1
-    return localized_name if lockable
+    # In the case of lockable lessons without lesson plans, we don't want to include the Lesson 1
+    return localized_name unless numbered_lesson?
 
     if script.lessons.to_a.many?
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
@@ -242,6 +248,7 @@ class Lesson < ApplicationRecord
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
         hasLessonPlan: has_lesson_plan,
+        numberedLesson: numbered_lesson?,
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
@@ -266,7 +273,7 @@ class Lesson < ApplicationRecord
       end
 
       # Don't want lesson plans for lockable levels
-      if !lockable && script.has_lesson_plan?
+      if has_lesson_plan
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
       end
@@ -356,8 +363,7 @@ class Lesson < ApplicationRecord
       key: key,
       displayName: localized_name,
       link: lesson_path(id: id),
-      position: relative_position,
-      lockable: lockable
+      position: relative_position
     }
   end
 

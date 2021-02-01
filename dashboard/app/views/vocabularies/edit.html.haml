@@ -1,0 +1,4 @@
+%script{src: webpack_asset_path('js/vocabularies/edit.js'),
+  data: {vocabularies: @vocabularies.to_json, courseVersionId: @course_version.id, courseName: params[:course_name].to_json}}
+
+#vocabularies-table

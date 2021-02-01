@@ -1409,7 +1409,11 @@
         "outbreak2": "Nastavte, aby se zdravé příšerky při dotyku změnily na nakažené.",
         "outbreak5": "Nastavte, aby se všechny nakažené příšerky začaly uzdravovat, když se nakažené příšerky dotkne zdravá příšerka.",
         "outbreak6": "Přidejte procentuální pravděpodobnost, kdy se příšerky nakazí, kdykoli se zdravá příšerka dotkne nakažené příšerky. Proveďte to pro všechny kombinace setkání příšerek s rouškou a bez roušky.",
-        "outbreak7": "Vytvořte nový kostým pro příšerky, které jsou na virus imunní, a použijte ho v simulaci."
+        "outbreak7": "Vytvořte nový kostým pro příšerky, které jsou na virus imunní, a použijte ho v simulaci.",
+        "courseB_collector_loops_challenge2a": "Pomoc Laurel získat alespoň **5** drahokamů aby dokončila tuto úlohu",
+        "courseB_collector_loops_challenge2a_2018": "Pomoc Laurel získat alespoň **5** drahokamů aby dokončila tuto úlohu",
+        "courseB_collector_loops_challenge2a_2019": "Pomoc Laurel získat alespoň **5** drahokamů aby dokončila tuto úlohu",
+        "courseB_collector_loops_challenge2a_2020": "Pomoc Laurel získat alespoň **5** drahokamů aby dokončila tuto úlohu"
       }
     }
   }

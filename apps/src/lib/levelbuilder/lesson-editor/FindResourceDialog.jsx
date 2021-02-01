@@ -1,19 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import Button from '@cdo/apps/templates/Button';
 import {connect} from 'react-redux';
+
+import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  }
-};
+import LessonEditorDialog from './LessonEditorDialog';
 
 class FindResourceDialog extends Component {
   static propTypes = {
@@ -45,11 +38,9 @@ class FindResourceDialog extends Component {
 
   render() {
     return (
-      <BaseDialog
+      <LessonEditorDialog
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
-        useUpdatedStyles
-        style={styles.dialog}
       >
         <h2>Add Resource</h2>
         <label>
@@ -75,7 +66,7 @@ class FindResourceDialog extends Component {
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>
-      </BaseDialog>
+      </LessonEditorDialog>
     );
   }
 }
