@@ -18691,6 +18691,8 @@ en:
               name: Course E/F
             CS Discoveries:
               name: CS Discoveries
+            contagions:
+              name: 'Content Integration: Contagions'
           lesson_groups:
             lesson group:
               display_name: display name
@@ -18699,6 +18701,7 @@ en:
           description_short: 'Levels that are linked directly in lesson plans but do not appear in other scripts. '
           description: ''
           student_description: ''
+          name: curriculum-sandbox-levels
         virustest:
           lessons:
             Virus Simulation for Code Bytes:
@@ -20763,7 +20766,15 @@ en:
         contagion-guided-practice:
           lessons:
             how things spread gp:
-              name: How Things Spread Guided Practice
+              name: How Things Spread  - Guided Practice
+            contagion simulator gp:
+              name: Contagion Simulator - Guided Practice
+            sometimes not always gp:
+              name: Sometimes, Not Always - Practice
+            modifying your simulator gp:
+              name: Modifying Your Simulator - Guided Practice
+            collecting data gp:
+              name: Collecting Data Guided Practice
           lesson_groups:
             lesson group:
               display_name: Contagion-Guided-Practice
