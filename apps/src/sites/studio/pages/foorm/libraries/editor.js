@@ -6,7 +6,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import FoormLibraryEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormLibraryEditorManager';
 import foorm, {
-  setFormQuestions,
+  setLibraryQuestion,
   setHasError
 } from '@cdo/apps/code-studio/pd/foorm/library_editor/foormLibraryEditorRedux';
 import _ from 'lodash';
@@ -46,13 +46,13 @@ function onCodeMirrorChange(editor) {
     updateFormQuestions(formQuestions);
   } catch (e) {
     // There is a JSON error.
-    getStore().dispatch(setFormQuestions({}));
+    getStore().dispatch(setLibraryQuestion({}));
     getStore().dispatch(setHasError(true));
   }
 }
 
 const updateFormQuestions = formQuestions => {
-  getStore().dispatch(setFormQuestions(formQuestions));
+  getStore().dispatch(setLibraryQuestion(formQuestions));
   getStore().dispatch(setHasError(false));
 };
 
