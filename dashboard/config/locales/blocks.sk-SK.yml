@@ -1194,9 +1194,9 @@ sk:
         options:
           SIZE:
             '25': extra small
-            '50': small
+            '50': Malé
             '75': stredný
-            '100': large
+            '100': Veľké
       gamelab_setProp:
         text: nastav {SPRITE} {PROPERTY} na {VAL}
         options:
@@ -1737,6 +1737,7 @@ sk:
             '"stoneBricks"': kamenné tehly
             '"mossyStoneBricks"': machové kamenné tehly
             '"crackedStoneBricks"': prasknuté kamenné tehly
+            '"chiseledStoneBricks"': dekoratívne kamenné tehly
             '"blueCoralBlock"': modrý koralový blok
             '"pinkCoralBlock"': ružový koralový blok
             '"magentaCoralBlock"': fialový koralový blok
