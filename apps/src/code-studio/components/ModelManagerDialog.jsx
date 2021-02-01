@@ -38,6 +38,7 @@ export default class ModelManagerDialog extends React.Component {
 
   render() {
     const {isOpen} = this.props;
+    const noModels = this.state.models.length === 0;
 
     return (
       <div>
@@ -54,10 +55,12 @@ export default class ModelManagerDialog extends React.Component {
               </option>
             ))}
           </select>
+          {noModels && <div>You have not trained any AI models yet.</div>}
           <Button
             text={'Import'}
             color={Button.ButtonColor.orange}
             onClick={this.importMLModel}
+            disabled={noModels}
           />
           <h3>Model card details will go here.</h3>
         </BaseDialog>
