@@ -4,6 +4,7 @@ import {TestResults} from '@cdo/apps/constants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
+import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
 import reducer, {
   initProgress,
   isPerfect,
@@ -24,7 +25,6 @@ import reducer, {
   setCurrentStageId,
   lessonExtrasUrl,
   setStageExtrasEnabled,
-  getLevelResult,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
