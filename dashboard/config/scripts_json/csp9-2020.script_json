@@ -8,7 +8,6 @@
       "curriculum_umbrella": "CSP",
       "student_detail_progress_view": true,
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit9/{LESSON}",
       "project_sharing": true,
       "hideable_lessons": true,
