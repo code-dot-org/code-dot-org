@@ -22,7 +22,6 @@
         ]
       ],
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "version_year": "2019",
       "project_sharing": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/csp-create/{LESSON}",

@@ -195,7 +195,6 @@ class ScriptsController < ApplicationController
       :project_widget_visible,
       :lesson_extras_available,
       :has_verified_resources,
-      :has_lesson_plan,
       :tts,
       :is_stable,
       :is_course,
