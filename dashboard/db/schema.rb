@@ -466,7 +466,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_021131) do
     t.index ["name", "version"], name: "index_foorm_forms_on_name_and_version", unique: true
   end
 
-  create_table "foorm_libraries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "foorm_libraries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.integer "version", null: false
     t.boolean "published", null: false
