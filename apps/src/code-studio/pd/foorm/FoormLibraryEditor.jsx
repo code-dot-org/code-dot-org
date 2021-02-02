@@ -43,7 +43,7 @@ class FoormLibraryEditor extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func.isRequired,
     resetCodeMirror: PropTypes.func.isRequired,
-    formCategories: PropTypes.array,
+    libraryCategories: PropTypes.array,
 
     // populated by redux
     libraryQuestion: PropTypes.object,
@@ -132,6 +132,7 @@ class FoormLibraryEditor extends React.Component {
   fillFormWithLibraryItems = _.debounce(
     function() {
       this.setState({
+        libraryQuestionPreviewQuestion: this.props.libraryQuestion,
         formKey: this.state.formKey + 1,
         libraryError: false,
         libraryErrorMessage: null
@@ -296,7 +297,7 @@ class FoormLibraryEditor extends React.Component {
         </div>
         {false && (
           <FoormLibrarySaveBar
-            formCategories={this.props.formCategories}
+            libraryCategories={this.props.libraryCategories}
             resetCodeMirror={this.props.resetCodeMirror}
           />
         )}

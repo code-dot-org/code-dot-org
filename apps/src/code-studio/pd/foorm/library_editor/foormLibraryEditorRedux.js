@@ -50,9 +50,9 @@ export const setSaveError = saveError => ({
   saveError
 });
 
-export const setLastSavedQuestion = formQuestions => ({
+export const setLastSavedQuestion = libraryQuestion => ({
   type: SET_LAST_SAVED_QUESTION,
-  formQuestions
+  libraryQuestion
 });
 
 const initialState = {
@@ -86,10 +86,9 @@ export default function foormLibraryEditorRedux(state = initialState, action) {
     return {
       ...state,
       libraryQuestion: action.libraryQuestionData['question'],
-      isFormPublished: action.libraryQuestionData['published']
-      //formName: action.formData['name'],
-      //formVersion: action.formData['version'],
-      //formId: action.formData['id']
+      isFormPublished: action.libraryQuestionData['published'],
+      libraryQuestionName: action.libraryQuestionData['name'],
+      libraryQuestionId: action.libraryQuestionData['id']
     };
   }
   if (action.type === RESET_AVAILABLE_LIBRARIES) {
