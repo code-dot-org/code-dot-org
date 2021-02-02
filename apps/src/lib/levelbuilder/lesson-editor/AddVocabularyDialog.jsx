@@ -88,8 +88,8 @@ export default class AddVocabularyDialog extends Component {
     this.props.handleClose();
   };
 
-  handleLessonSelectChange = lessons => {
-    this.setState({lessons});
+  handleLessonSelectChange = lessonSelections => {
+    this.setState({lessons: lessonSelections.map(l => l.value)});
   };
 
   saveVocabulary = e => {
@@ -107,7 +107,7 @@ export default class AddVocabularyDialog extends Component {
       data['key'] = this.props.editingVocabulary.key;
     }
     if (this.props.selectableLessons) {
-      data['lessonIds'] = JSON.stringify(this.state.lessons.map(l => l.value));
+      data['lessonIds'] = JSON.stringify(this.state.lessons);
     }
     $.ajax({
       url: url,

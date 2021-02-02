@@ -29,7 +29,7 @@ class VocabulariesController < ApplicationController
   # PUT/PATCH /vocabularies
   def update
     vocabulary = Vocabulary.find_by_id(vocabulary_params[:id])
-    unless vocabulary_params[:lesson_ids].blank?
+    unless vocabulary_params[:lesson_ids].nil?
       vocabulary.lessons = vocabulary_params[:lesson_ids].map {|id| Lesson.find(id)}
       vocabulary.lessons.each do |lesson|
         lesson.script.write_script_json
