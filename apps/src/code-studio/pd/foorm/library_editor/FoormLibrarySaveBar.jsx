@@ -18,12 +18,12 @@ import {SelectStyleProps} from '../../constants';
 import 'react-select/dist/react-select.css';
 import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
-  setFormData,
+  setLibraryQuestionData,
   addAvilableForm,
   setLastSaved,
   setSaveError,
-  setLastSavedQuestions
-} from './foormEditorRedux';
+  setLastSavedQuestion
+} from './foormLibraryEditorRedux';
 
 const styles = {
   saveButtonBackground: {
@@ -100,14 +100,14 @@ const confirmationDialogNames = {
 
 class FoormSaveBar extends Component {
   static propTypes = {
-    formCategories: PropTypes.array,
+    libraryCategories: PropTypes.array,
     resetCodeMirror: PropTypes.func,
 
     // Populated by Redux
-    formQuestions: PropTypes.object,
+    libraryQuestion: PropTypes.object,
     formHasError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
-    formId: PropTypes.number,
+    libraryQuestionId: PropTypes.number,
     lastSaved: PropTypes.number,
     saveError: PropTypes.string,
     setFormData: PropTypes.func,
@@ -130,9 +130,9 @@ class FoormSaveBar extends Component {
   }
 
   updateQuestionsUrl = () =>
-    `/foorm/forms/${this.props.formId}/update_questions`;
+    `/foorm/library_questions/${this.props.libraryQuestionId}/update`;
 
-  publishUrl = () => `/foorm/forms/${this.props.formId}/publish`;
+  publishUrl = () => `/foorm/forms/ID_here/publish`;
 
   handleSave = () => {
     this.setState({isSaving: true});
@@ -142,7 +142,10 @@ class FoormSaveBar extends Component {
       this.setState({
         confirmationDialogBeingShownName: confirmationDialogNames.save
       });
-    } else if (this.props.formId === null || this.props.formId === undefined) {
+    } else if (
+      this.props.libraryQuestionId === null ||
+      this.props.libraryQuestionId === undefined
+    ) {
       // if this is not an existing form, show new form save modal
       this.setState({showNewFormSave: true});
     } else {
@@ -173,7 +176,7 @@ class FoormSaveBar extends Component {
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        questions: this.props.formQuestions
+        questions: this.props.libraryQuestion
       })
     })
       .done(result => {
@@ -194,37 +197,37 @@ class FoormSaveBar extends Component {
     return this.state.formName && this.state.formName.match('^[a-z0-9_]+$');
   };
 
-  saveNewForm = () => {
-    const newFormName = `${this.state.formCategory}/${this.state.formName}`;
-    $.ajax({
-      url: `/foorm/forms`,
-      type: 'post',
-      contentType: 'application/json',
-      processData: false,
-      data: JSON.stringify({
-        name: newFormName,
-        questions: this.props.formQuestions
-      })
-    })
-      .done(result => {
-        this.handleSaveSuccess(result);
-        this.setState({
-          showNewFormSave: false
-        });
-        // adds new form to form dropdown
-        this.props.addAvilableForm({
-          name: result.name,
-          version: result.version,
-          id: result.id
-        });
-      })
-      .fail(result => {
-        this.handleSaveError(result);
-        this.setState({
-          showNewFormSave: false
-        });
-      });
-  };
+  saveNewForm = () => {};
+  //   const newFormName = `${this.state.formCategory}/${this.state.formName}`;
+  //   $.ajax({
+  //     url: `/foorm/forms`,
+  //     type: 'post',
+  //     contentType: 'application/json',
+  //     processData: false,
+  //     data: JSON.stringify({
+  //       name: newFormName,
+  //       questions: this.props.formQuestions
+  //     })
+  //   })
+  //     .done(result => {
+  //       this.handleSaveSuccess(result);
+  //       this.setState({
+  //         showNewFormSave: false
+  //       });
+  //       // adds new form to form dropdown
+  //       this.props.addAvilableForm({
+  //         name: result.name,
+  //         version: result.version,
+  //         id: result.id
+  //       });
+  //     })
+  //     .fail(result => {
+  //       this.handleSaveError(result);
+  //       this.setState({
+  //         showNewFormSave: false
+  //       });
+  //     });
+  // };
 
   handleSaveSuccess(result) {
     this.setState({
@@ -281,7 +284,7 @@ class FoormSaveBar extends Component {
               value={this.state.formCategory}
               onChange={e => this.setState({formCategory: e.value})}
               placeholder="-"
-              options={this.props.formCategories.map(v => ({
+              options={this.props.libraryCategories.map(v => ({
                 value: v,
                 label: v
               }))}
@@ -377,7 +380,7 @@ class FoormSaveBar extends Component {
             Save
           </button>
         </div>
-        {this.renderNewFormSaveModal()}
+        {false && this.renderNewFormSaveModal()}
         <ConfirmationDialog
           show={
             this.state.confirmationDialogBeingShownName ===
@@ -411,19 +414,20 @@ class FoormSaveBar extends Component {
 
 export default connect(
   state => ({
-    formQuestions: state.foorm.formQuestions || {},
+    libraryQuestion: state.foorm.formQuestions || {},
     isFormPublished: state.foorm.isFormPublished,
     formHasError: state.foorm.hasError,
-    formId: state.foorm.formId,
+    libraryQuestionId: state.foorm.libraryQuestionId,
     lastSaved: state.foorm.lastSaved,
     saveError: state.foorm.saveError
   }),
   dispatch => ({
-    setFormData: formData => dispatch(setFormData(formData)),
+    setLibraryQuestionData: libraryQuestionData =>
+      dispatch(setLibraryQuestionData(libraryQuestionData)),
     addAvilableForm: formMetadata => dispatch(addAvilableForm(formMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
-    setLastSavedQuestions: formQuestions =>
-      dispatch(setLastSavedQuestions(formQuestions))
+    setLastSavedQuestion: libraryQuestion =>
+      dispatch(setLastSavedQuestion(libraryQuestion))
   })
 )(FoormSaveBar);
