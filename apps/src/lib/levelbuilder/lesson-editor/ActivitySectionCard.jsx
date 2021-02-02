@@ -420,6 +420,10 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  handleUploadImage = url => {
+    this.appendMarkdownSyntax(`\n\n![](${url})`);
+  };
+
   render() {
     const {
       activitySection,
@@ -534,6 +538,7 @@ class ActivitySectionCard extends Component {
         <ActivitySectionCardButtons
           activitySection={this.props.activitySection}
           addLevel={this.handleAddLevel}
+          uploadImage={this.handleUploadImage}
           activityPosition={this.props.activityPosition}
           appendResourceLink={this.appendResourceLink}
           appendVocabularyLink={this.appendVocabularyLink}

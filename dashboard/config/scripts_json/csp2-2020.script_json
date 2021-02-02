@@ -11,7 +11,6 @@
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit2/{LESSON}",
       "project_sharing": true,
       "hideable_lessons": true,
-      "has_lesson_plan": true,
       "teacher_resources": [
         [
           "lessonPlans",
