@@ -2995,11 +2995,11 @@
       "key": "57fab675-41c9-44aa-ad7f-308dba387302",
       "position": 1,
       "properties": {
-        "description": "[slide] **Group:** Group students into groups of four.\n\n[slide] **Level 1:** Students read the entire code, and then students focuses their attention on a single function. Student should re-read the code for their function.\n\n* Student A - `average()` (lines 32-38)\n* Student B - `slow()` (lines 40-48)\n* Student C - `fast()` (lines 50-58)\n* Student D - `numberedListDisplay()` (lines 60-66)\n\n\n[slide] **Discuss:** Students discuss in their groups how each of their functions work, specifically referencing the list it uses and how it is traversed using a for loop. Then as a class address any confusion over how the app works. ",
+        "description": "[slide] **Group:** Group students into groups of four.\n\n[slide] **Level 1:** Students read the entire code, and then students focuses their attention on a single function. Student should re-read the code for their function.\n\n* Student A - `average()` (lines 32-38)\n* Student B - `slow()` (lines 40-48)\n* Student C - `fast()` (lines 50-58)\n* Student D - `numberedListDisplay()` (lines 60-66)\n\n\n[slide] **Discuss:** *How does the app work?*\n\nStudents discuss in their groups how each of their functions work, specifically referencing the list it uses and how it is traversed using a for loop. Then as a class address any confusion over how the app works. \n\n* **The goal:** The goal of this investigation is to give students the opportunity to see lists traversed for different reasons and with different outcomes.   Students should look at the code for their assigned function and make sense of what the function does overall and how it does it.  \n* **What to look for:** It may be helpful to re-watch the video in the U5L10 - Traversals Explore lesson starting at 3:07 to hear how the speaker describes a section of code that processes a list for a specific purpose.  Listening to that explanation will help give you an idea of what student explanations of their functions should sound like.  \n    \n    For example, when explaining the average function in this investigation, students should describe what the function does.  In this case, the function calculates the average of the values stored in the mileTimes list and stores that value in the avg variable. In addition to describing what the function does, students should describe how the function works.  This will involve more detail.  For example, students should be able to describe that the function contains a local variable of “total” which is initialized at 0.  Then the function uses a for loop to traverse through the mileTimes list.  In the loop, each value inside mileTimes list is accessed and added to the current value stored inside the total variable.  When the loop reaches the end of the list, the loop ends and the total variable contains the sum of all the mileTimes.  In the last line of the function, the value stored in avg is updated by dividing the value stored in total by the total number of elements in the mileTimes list.  \n    \n    When you bring the class together to talk about how the app works, you should talk both about what the functions do as well as how they work.  There likely is not time to go over all four functions, but discussing one or two of them will ensure the full class has an opportunity to hear how their peers describe code.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided on the bottom of the instructions area for verified teachers.\n\n**Display Code at the Front:** If your room allows it, display the code during the Code Investigation at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n**Save Modifications for the End:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\n\n"
+            "markdown": "**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app.  These questions are intended to help students read and make sense of the code.  It is not about getting the “right answer” as much as it is about building skills in your students to read, test, and make sense of code that they haven’t seen before.  Finally, you will notice that for the levels where the directions ask students to “Modify” the code, you will find “Example Solutions” in the “Teacher Panel” of that level. \n"
           }
         ],
         "name": "Mile Tracker Investigation",
@@ -3014,9 +3014,15 @@
       "key": "127a1baa-2374-416e-b6b2-30666e542983",
       "position": 2,
       "properties": {
-        "description": "[slide] **Level 2 (5 mins):** Students read the code, and then investigate the data tab.  \n\n* **Discuss:** Encourage students to share out what they found in the data tab, and how they can interact with it with code. \n\n* [slide] **Modify:** Students choose a new dataset to import to the project. Then students modify the code to print out a column of data from the chosen dataset. Point out to students that when they pull out a column, they are creating a list.",
+        "description": "[slide] **Level 2 (5 mins):** Students read the code, and then investigate the data tab.  \n\n**Discuss:** Encourage students to share out what they found in the data tab, and how they can interact with it with code.\n\n* **The goal:** The goal of this investigation is to get students comfortable with information inside the “Data” tab and to help them understand the “getColumn” command.  Students should be given some time to explore the Data tab themselves and even try the “Modify” task for a few minutes.  \n    \n* **What to look for:** When you bring the class together, students should be able to describe what information they see in the data tab and how they can use the data tab to help get access to data.  Key points to draw out are:\n    \n    * The “Data Library” on the left hand side has different categories of datasets that students can view.\n    * Students need to “import” a data set to be able to see the data inside it or to use the data in the code.\n    * Once imported, students will see the data set in the “Data Browser” area and can click on the name of the Data Set to see the data in table form.\n    * To use the `getColumn` command, you need the name of the table you want to use and the name of the column from that table.\n    * `getColumn` will return the column from your table as a list.  You can see it is a list because when it is printed to the console, it has square brackets `[]` around the items which are separated by commas.\n\n[slide] **Modify:** Students choose a new dataset to import to the project. Then students modify the code to print out a column of data from the chosen dataset. Point out to students that when they pull out a column, they are creating a list.",
         "name": "Data Tab Investigation",
-        "progression_name": "Data Tab Investigation"
+        "progression_name": "Data Tab Investigation",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Note that in the next investigation, students will combine their knowledge of traversals and the “Data” Tab to make more robust apps that don’t require students to type long lists in their code themselves."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "127a1baa-2374-416e-b6b2-30666e542983",
@@ -3027,11 +3033,11 @@
       "key": "e74ac992-2f41-4d45-978c-3af21c648b91",
       "position": 3,
       "properties": {
-        "description": "[slide] **Level 3:** Instruct students to run the app and then carefully read it. There is a lot of information in the comments in this app. Students work through all of the questions on the screen.",
+        "description": "[slide] **Level 3:** Instruct students to run the app and then carefully read it. There is a lot of information in the comments in this app. Students work through all of the questions on the screen.\n\n[slide] **Discuss:** Go through the questions one by one and answer as a class. Afterwards, go line by line with the class explaining how the app works. \n\n* **The goal:** The goal of this investigation is to give students an opportunity to make sense of how traversals and the datasets can be used together to create a working app.  It is important to note that the algorithms in this app have some of the same qualities as the algorithm students will need to develop for the Create PT.  \n    \n* **What to look for:** This project defines several different functions.  Help guide students particularly to how the lists are filled. Students should see a `listSetup` function.  This function calls the `filter` function.  `filter` is where the lists are being filled.  Use the questions listed in CodeStudio to help students make sense of this code. In particular, spend a little extra time discussing the question “How are these lists filled?”. This is an opportunity to go through the `filter` function line by line to understand how the function works.",
         "tips": [
           {
-            "type": "discussionGoal",
-            "markdown": "**Discussion Goal:** Make sure students arrive at the following answers.\n\n* *What are the names of the five lists in this program?*\n\t* `dogNames`, `dogHeight`, `dogImages`, `filteredDogNames`, `filteredDogImages`\n* *On what lines of code are the lists created?*\n\t* `dogNames`: 2\n\t* `dogHeight`: 3\n\t* `dogImages`: 4\n\t* `filteredDogNames`: 7\n\t* `filteredDogImages`: 8\n* *On what line's of code are the lists filled?\n\t* `dogNames`: 2\n\t* `dogHeight`: 3\n\t* `dogImages`: 4\n\t* `filteredDogNames`: 32-43\n\t* `filteredDogImages`: 32-43\n* *How are these lists filled?*\n\t* `dogNames`, `dogHeight`, and `dogImages` are filled by pulling a column of data from the dataset\n\t* For `filteredDogNames` and `filteredDogImages`, the `dogHeight` list is traversed. If `dogHeight` and `dogSize` meet the given conditions the names and images at the same index position in the `dogNames` and `dogImages` lists are added to the filtered lists. \n* *Open up the data tab and click to view the dogs table. What columns does this app use?*\n\t* \"Name\", \"Maximum Height\", \"Image\"\n* *Look at the filter function. On what lines are the filtered lists reset to blank lists?*\n\t* Lines 23 & 24\n* *What condition is being checked to determine if an element belongs in a filtered list?*\n\t* If a dog height is above or below a certain number\n\n"
+            "type": "teachingTip",
+            "markdown": "Traversals can be tricky! In this case, we are filtering a list by information that is in another list. \n\nThere are three lists to start: `dogNames`, `dogHeights`, and `dogImages`. We want to sort out the dogs so that when the user picks a size from the dropdown, only dogs of that size show up in the display. \n\nTo do this, we traverse using a filter pattern. Using a loop to go through each item in the `dogHeights` list, if a dog's height matches up to the requirements, we pull the dog's image and name from those original lists (all the indexes will match) and put those in the new filtered lists. \n\nOnce this is done, we have filtered lists that we can pull from to display a random dog's name and image.\n"
           }
         ],
         "name": "Random Dog Picker Investigation",
@@ -3043,26 +3049,10 @@
       }
     },
     {
-      "key": "7aa54a91-90b9-4a3d-96ba-3e6df1ece3c8",
+      "key": "36ecad32-1c00-4389-9699-85edce533063",
       "position": 4,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Traversals can be tricky! In this case, we are filtering a list by information that is in another list. \n\nThere are three lists to start: `dogNames`, `dogHeights`, and `dogImages`. We want to sort out the dogs so that when the user picks a size from the dropdown, only dogs of that size show up in the display. \n\nTo do this, we traverse using a filter pattern. Using a loop to go through each item in the `dogHeights` list, if a dog's height matches up to the requirements, we pull the dog's image and name from those original lists (all the indexes will match) and put those in the new filtered lists. \n\nOnce this is done, we have filtered lists that we can pull from to display a random dog's name and image.\n\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7aa54a91-90b9-4a3d-96ba-3e6df1ece3c8",
-        "lesson_activity.key": "ed41f7ef-2dee-487c-ad9b-9c53517bba57"
-      }
-    },
-    {
-      "key": "36ecad32-1c00-4389-9699-85edce533063",
-      "position": 5,
-      "properties": {
-        "description": "[slide] **Discuss:** Go through the questions one by one and answer as a class. Afterwards, go line by line with the class explaining how the app works. \n\n**Levels 4-5:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today.",
+        "description": "**Levels 4-5:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today.",
         "name": "Traversal Patterns",
         "progression_name": "Traversal Patterns"
       },
@@ -3985,10 +3975,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Introduction to Lists",
         "level_keys": [
           "U5 L01 Introduction to Lists_2021"
-        ],
-        "progression": "Introduction to Lists"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4011,10 +4001,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Introduction to Lists",
         "level_keys": [
           "Introduction to Lists - Part 2_2021"
-        ],
-        "progression": "Introduction to Lists"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4037,10 +4027,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "csp-20-21-u5-assess-lists_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4063,10 +4053,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Accessing Lists",
         "level_keys": [
           "Introduction to Lists - Part 4_2021"
-        ],
-        "progression": "Accessing Lists"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4089,10 +4079,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Accessing Lists",
         "level_keys": [
           "U5 Lists Investigate Outfitly Code_2021"
-        ],
-        "progression": "Accessing Lists"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4115,10 +4105,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Accessing Lists",
         "level_keys": [
           "U5 Lists Investigate Bandly Code_2021"
-        ],
-        "progression": "Accessing Lists"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4141,10 +4131,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Changing Lists",
         "level_keys": [
           "Introduction to Lists - Part 3_2021"
-        ],
-        "progression": "Changing Lists"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4167,10 +4157,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Changing Lists",
         "level_keys": [
           "U5 Lists Investigate Partnersly Code_2021"
-        ],
-        "progression": "Changing Lists"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4193,10 +4183,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "List Patterns",
         "level_keys": [
           "Random List Access Pattern_2021"
-        ],
-        "progression": "List Patterns"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4219,10 +4209,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "List Patterns",
         "level_keys": [
           "List Scrolling Pattern_2021"
-        ],
-        "progression": "List Patterns"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4245,10 +4235,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Setting up Lists",
         "level_keys": [
           "U5 L03 Lists Practice 1_2021"
-        ],
-        "progression": "Setting up Lists"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4271,10 +4261,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Setting up Lists",
         "level_keys": [
           "U5 L03 Lists Practice 2_2021"
-        ],
-        "progression": "Setting up Lists"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4297,10 +4287,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Accessing Elements in a List",
         "level_keys": [
           "U5 L03 Lists Practice 3.75_2021"
-        ],
-        "progression": "Accessing Elements in a List"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4323,10 +4313,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Accessing Elements in a List",
         "level_keys": [
           "U5 L03 Lists Practice 3.5_2021"
-        ],
-        "progression": "Accessing Elements in a List"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4349,10 +4339,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Accessing Elements in a List",
         "level_keys": [
           "U5 L03 Lists Practice 10_2021"
-        ],
-        "progression": "Accessing Elements in a List"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4375,10 +4365,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Strings and Indexes",
         "level_keys": [
           "U5 L03 Lists Practice Strings 2_2021"
-        ],
-        "progression": "Strings and Indexes"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4401,10 +4391,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Strings and Indexes",
         "level_keys": [
           "U5 L03 Lists Practice Strings 3_2021"
-        ],
-        "progression": "Strings and Indexes"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4427,10 +4417,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "List Operations",
         "level_keys": [
           "U5 L03 Lists Practice 4_2021"
-        ],
-        "progression": "List Operations"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4453,10 +4443,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "List Operations",
         "level_keys": [
           "U5 L03 Lists Practice 5_2021"
-        ],
-        "progression": "List Operations"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4479,10 +4469,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "List Operations",
         "level_keys": [
           "U5 L03 Lists Practice 9_2021"
-        ],
-        "progression": "List Operations"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4505,10 +4495,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "progression": "List Operations",
         "level_keys": [
           "U5 L03 Lists Practice 6_2021"
-        ],
-        "progression": "List Operations"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4531,10 +4521,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U5L3 CFU Lists Psuedocode_2021"
-        ],
-        "progression": "Check For Understanding: AP Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4557,10 +4547,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U5L3 CFU Lists Psuedocode 2_2021"
-        ],
-        "progression": "Check For Understanding: AP Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4583,10 +4573,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Try the Reminders App",
         "level_keys": [
           "U5 Lists Make Project Sample App 2020_2021"
-        ],
-        "progression": "Try the Reminders App"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4609,10 +4599,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Make the Reminders App",
         "level_keys": [
           "U5 Lists Make Project 2020_2021"
-        ],
-        "progression": "Make the Reminders App"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4635,10 +4625,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Introduction to Loops",
         "level_keys": [
           "csp_applab_loops_2021"
-        ],
-        "progression": "Introduction to Loops"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4661,10 +4651,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U3L5 CSP CFU Looping_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4687,10 +4677,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Coin Flipper App",
         "level_keys": [
           "U5 Loops Investigate Coin Flipper Predict_2021"
-        ],
-        "progression": "Coin Flipper App"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4713,10 +4703,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Coin Flipper App",
         "level_keys": [
           "U5 Loops Investigate Coin Flipper_2021"
-        ],
-        "progression": "Coin Flipper App"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4739,10 +4729,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Font Tester App",
         "level_keys": [
           "U5 Loops Investigate Font Tester_2021"
-        ],
-        "progression": "Font Tester App"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4765,10 +4755,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U3L6 CSP CFU Element Looping_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4791,10 +4781,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "While Loop Practice",
         "level_keys": [
           "U5 Loops Practice Part 1_2021"
-        ],
-        "progression": "While Loop Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4817,10 +4807,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "While Loop Practice",
         "level_keys": [
           "U5 Loops Practice Part 2_2021"
-        ],
-        "progression": "While Loop Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4843,10 +4833,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "While Loop Practice",
         "level_keys": [
           "U5 Loops Practice Part 3_2021"
-        ],
-        "progression": "While Loop Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4869,10 +4859,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "For Loop Practice",
         "level_keys": [
           "U5 Loops Practice Part 4_2021"
-        ],
-        "progression": "For Loop Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4895,10 +4885,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "For Loop Practice",
         "level_keys": [
           "U5 Loops Practice Part 5_2021"
-        ],
-        "progression": "For Loop Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4921,10 +4911,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "For Loop Practice",
         "level_keys": [
           "U5 Loops Practice Part 6_2021"
-        ],
-        "progression": "For Loop Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4947,10 +4937,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Loops and Screen Elements",
         "level_keys": [
           "U5 Loops Practice Sentence Randomizer_2021"
-        ],
-        "progression": "Loops and Screen Elements"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4973,10 +4963,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Loops and Screen Elements",
         "level_keys": [
           "U5 Loops Practice Dice Roller_2021"
-        ],
-        "progression": "Loops and Screen Elements"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4999,10 +4989,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U5L7 CFU Loops Psuedocode_2021"
-        ],
-        "progression": "Check For Understanding: AP Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5025,10 +5015,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U5L7 CFU Loops Psuedocode 2_2021"
-        ],
-        "progression": "Check For Understanding: AP Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5051,10 +5041,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Try the Lock Screen Maker",
         "level_keys": [
           "U5 Loops Make Wallpaper App Example 2020_2021"
-        ],
-        "progression": "Try the Lock Screen Maker"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5077,10 +5067,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Make the Lock Screen Maker",
         "level_keys": [
           "U5 Loops Make Wallpaper App 2020_2021"
-        ],
-        "progression": "Make the Lock Screen Maker"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5103,10 +5093,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Traversal",
         "level_keys": [
           "Processing Lists with Loops_2021"
-        ],
-        "progression": "Introduction to Traversal"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5129,10 +5119,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U5 L09 Traversals Exit Ticket_2021"
-        ],
-        "progression": "Assessment: Check For Understanding\r"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5155,10 +5145,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Mile Tracker Investigation",
         "level_keys": [
           "U5 Traversals Investigate Mile Tracker Modify_2021"
-        ],
-        "progression": "Mile Tracker Investigation"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5181,10 +5171,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Data Tab Investigation",
         "level_keys": [
           "CSP U5L10 Traversals Investigate_2021"
-        ],
-        "progression": "Data Tab Investigation"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5207,10 +5197,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Random Dog Picker Investigation",
         "level_keys": [
           "U5 Traversals Investigate Dog Finder Modify_2021"
-        ],
-        "progression": "Random Dog Picker Investigation"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5233,10 +5223,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Traversal Patterns",
         "level_keys": [
           "List Filter Pattern_2021"
-        ],
-        "progression": "Traversal Patterns"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5259,10 +5249,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Traversal Patterns",
         "level_keys": [
           "List Reduce Pattern_2021"
-        ],
-        "progression": "Traversal Patterns"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5285,10 +5275,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "CSP U5L10 CFU Traversals_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5311,10 +5301,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Traversal Practice",
         "level_keys": [
           "U5 Traversals Practice Part 3_2021"
-        ],
-        "progression": "Traversal Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5337,10 +5327,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Traversal Practice",
         "level_keys": [
           "U5 Traversals Practice Part 2_2021"
-        ],
-        "progression": "Traversal Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5363,10 +5353,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Traversal Practice",
         "level_keys": [
           "U5 Traversals Practice Part 1_2021"
-        ],
-        "progression": "Traversal Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5389,10 +5379,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Reduce and Filter Practice",
         "level_keys": [
           "U5 Traversals Practice Part 4_2021"
-        ],
-        "progression": "Reduce and Filter Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5415,10 +5405,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Reduce and Filter Practice",
         "level_keys": [
           "U5 Traversals Practice Part 5_2021"
-        ],
-        "progression": "Reduce and Filter Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5441,10 +5431,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Reduce and Filter Practice",
         "level_keys": [
           "U5 Traversals Practice Part 6_2021"
-        ],
-        "progression": "Reduce and Filter Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5467,10 +5457,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "App Practice",
         "level_keys": [
           "U5 Traversals Practice Part 7_2021"
-        ],
-        "progression": "App Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5493,10 +5483,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U5L11 CFU For Each Psuedocode_2021"
-        ],
-        "progression": "Check For Understanding: AP Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5519,10 +5509,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Try the Random Forecaster App",
         "level_keys": [
           "U5 Traversals Make Project Sample App 2020_2021"
-        ],
-        "progression": "Try the Random Forecaster App"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5545,10 +5535,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Make the Random Forecaster App",
         "level_keys": [
           "U5 Traversals Make Project 2020_2021"
-        ],
-        "progression": "Make the Random Forecaster App"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5571,10 +5561,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Hackathon Project",
         "level_keys": [
           "U5 Hackathon Project Day 2_2021"
-        ],
-        "progression": "Hackathon Project"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5597,10 +5587,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Hackathon Project",
         "level_keys": [
           "U5 Hackathon Project Day 3_2021"
-        ],
-        "progression": "Hackathon Project"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5623,10 +5613,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Hackathon Project",
         "level_keys": [
           "U5 Hackathon Project Day 4_2021"
-        ],
-        "progression": "Hackathon Project"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5649,10 +5639,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Hackathon Project",
         "level_keys": [
           "U5 Hackathon Project Day 5_2021"
-        ],
-        "progression": "Hackathon Project"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5675,10 +5665,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Unit 5 Exam",
         "level_keys": [
           "CSP Unit 5 AP-Style Assessment _2021"
-        ],
-        "progression": "Unit 5 Exam"
+        ]
       },
       "named_level": null,
       "bonus": null,

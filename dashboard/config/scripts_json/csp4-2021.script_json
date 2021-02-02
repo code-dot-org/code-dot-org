@@ -2341,14 +2341,16 @@
       "key": "3a3fe7fd-c0cf-4816-a366-0d3a729efa1c",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Level 2 - Video - Conditionals: If Statements** As a class watch the video on if-statements.",
+        "description": "[slide]  **Level 1 - Video - Conditionals: If Statements** As a class watch the video on if-statements.",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Show the Video at the Front:** In order to better keep the group together we recommend you show the videos at the front of the room.\r\n\r\n**Reinforce When vs. If:** As you make your way through these examples model using \"when\" and \"if\" as described in the warm up. For example, \"when\" the buttons are clicked the app is deciding \"if\" the temperature can change.\r\n\r\n"
           }
         ],
-        "name": "Investigation 1: If-Statements (Levels 2-3) - 15 mins\r"
+        "name": "Investigation 1: If-Statements",
+        "duration": "15",
+        "progression_name": "Condi"
       },
       "seeding_key": {
         "activity_section.key": "3a3fe7fd-c0cf-4816-a366-0d3a729efa1c",
@@ -2359,7 +2361,7 @@
       "key": "f2c55ec1-7adb-49b3-a878-e93045d8ed20",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Level 3 - Lemon Squeeze App Pt 1:** This code investigation includes a number of steps to help students get familiar with a new app.",
+        "description": "[slide]  **Level 2 - Lemon Squeeze App Pt 1:** This code investigation includes a number of steps to help students get familiar with a new app.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2376,7 +2378,7 @@
       "key": "8f5b07e2-c4d1-4a0d-9f85-3b9be3dcb5e3",
       "position": 4,
       "properties": {
-        "description": "* Form Pairs: Place students in pairs\r\n* Play the Game: Let students play the game for a couple minutes\r\n* Assign Code Sections: Count off pairs by three and assign them to one of the three code sections.\r\n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so.\r\n* Explain Your Section: Have groups find members of the other two sections and carefully explain how their section works. Give each group 1-2 minutes to do so.\r\n* Class Discussion: Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\r\n* Modify: Have groups return to their original seats. Give them a couple minutes to work on the modify the app so that the game ends once a user has 0 lives remaining."
+        "description": "* Form Pairs: Place students in pairs\n* Play the Game: Let students play the game for a couple minutes\n* Assign Code Sections: Count off pairs by three and assign them to one of the three code sections.\n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so.\n* Explain Your Section: Have groups find members of the other two sections and carefully explain how their section works. Give each group 1-2 minutes to do so.\n* **Discuss**: Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\n  * **The goal:** The goal of this investigation is to get practice carefully reading a program that uses the new concept of conditionals as well as build on their knowledge and understanding of variables.\n    \n    * **What to look for:** As students describe their section of code, push students to go beyond reading the comments in their section of code to describe what their code does.  For example, instead of saying “It increases the score by one”, students should explain HOW that happens.  They might say “The value stored in the score variable increases by 1 and then the setProperty is used to show the increased score on the screen”.\n\n* **Modify**: Have groups return to their original seats. Give them a couple minutes to work on the modify the app so that the game ends once a user has 0 lives remaining."
       },
       "seeding_key": {
         "activity_section.key": "8f5b07e2-c4d1-4a0d-9f85-3b9be3dcb5e3",
@@ -2384,11 +2386,39 @@
       }
     },
     {
-      "key": "e344df9b-29ac-4652-ad59-3729140048c0",
+      "key": "9683be4c-483d-4af5-b6c7-b7d7ed0895b7",
       "position": 5,
       "properties": {
+        "progression_name": "If-Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "9683be4c-483d-4af5-b6c7-b7d7ed0895b7",
+        "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61"
+      }
+    },
+    {
+      "key": "9415d212-f84e-4244-b3ff-040ec66aeaa1",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9415d212-f84e-4244-b3ff-040ec66aeaa1",
+        "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61"
+      }
+    },
+    {
+      "key": "e344df9b-29ac-4652-ad59-3729140048c0",
+      "position": 7,
+      "properties": {
         "description": "[slide] **Level 4 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements. \r\n\r\n\r\n[slide] **Level 5 - Video - Conditionals: If-Else-If Statements** As a class watch the video on if-else statements.",
-        "name": "Investigation 2: If-Else Statements (Levels 4-6) - 10 mins\r"
+        "name": "Investigation 2: If-Else Statements",
+        "duration": "10",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Running the Second Investigation:** This second investigation remains focused on reading code, but students are more responsible than last time for showing their work. Students will need to create a flowchart for the new if-else-if statement and make more significant modfications to the code. Continue to emphasize open discussion and collaboration between partners.\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e344df9b-29ac-4652-ad59-3729140048c0",
@@ -2397,15 +2427,9 @@
     },
     {
       "key": "ea54e054-1ffb-4a75-9528-5576e9bca121",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "[slide]  **Level 6 - Lemon Squeeze App Pt 2** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Running the Second Investigation:** This second investigation remains focused on reading code, but students are more responsible than last time for showing their work. Students will need to create a flowchart for the new if-else-if statement and make more significant modfications to the code. Continue to emphasize open discussion and collaboration between partners.\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Level 6 - Lemon Squeeze App Pt 2** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to"
       },
       "seeding_key": {
         "activity_section.key": "ea54e054-1ffb-4a75-9528-5576e9bca121",
@@ -2414,9 +2438,9 @@
     },
     {
       "key": "e83e4d07-ebb9-43c3-b3bf-015145b74669",
-      "position": 7,
+      "position": 9,
       "properties": {
-        "description": "* Play the Game: Have students play the game\r\n* Discuss Changes: Talk through how the game plays differently now\r\n* Find the `if-else-if` command: Have students find the command\r\n* Draw a flowchart: Students should draw a flow chart for the if-else-if command in their journals\r\n* Modify the code: Modify the program to make the lemon even smaller when the player has more than 15 points."
+        "description": "* Play the Game: Have students play the game\n* Discuss Changes: Talk through how the game plays differently now\n* Find the `if-else-if` command: Have students find the command\n* Draw a flowchart: Students should draw a flow chart for the if-else-if command in their journals\n* **Modify**: Modify the program to make the lemon even smaller when the player has more than 15 points."
       },
       "seeding_key": {
         "activity_section.key": "e83e4d07-ebb9-43c3-b3bf-015145b74669",
@@ -2424,11 +2448,23 @@
       }
     },
     {
-      "key": "084f73ba-22aa-4103-9788-a1b4f5b8dc21",
-      "position": 8,
+      "key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2",
+      "position": 10,
       "properties": {
-        "description": "[slide] **Level 7 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements.",
-        "name": "Investigation 3: Logical Operators AND OR (Levels 7-8) - 10 mins\r"
+        "progression_name": "If-Else Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2",
+        "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61"
+      }
+    },
+    {
+      "key": "084f73ba-22aa-4103-9788-a1b4f5b8dc21",
+      "position": 11,
+      "properties": {
+        "description": "[slide] **Level 6 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements.",
+        "name": "Investigation 3: Logical Operators AND OR",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "084f73ba-22aa-4103-9788-a1b4f5b8dc21",
@@ -2437,9 +2473,9 @@
     },
     {
       "key": "1ef6e1bb-0e0b-4bd5-ab5e-fab53c0531dc",
-      "position": 9,
+      "position": 12,
       "properties": {
-        "description": "[slide]  **Level 8 - Lemon Squeeze App Pt 3:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
+        "description": "[slide]  **Level 7 - Lemon Squeeze App Pt 3:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2454,12 +2490,23 @@
     },
     {
       "key": "a6736a90-d098-4845-8208-3e224564035b",
-      "position": 10,
+      "position": 13,
       "properties": {
-        "description": "* Play the Game: Have students play the game\r\n* Discuss Changes: Talk through how the game plays differently now\r\n* Find the `if-else-if` command: Have students find the if-else-if command that was added\r\n* Draw a Flowchart: Students should draw a flowchart of this new if-else-if command\r\n* Modify the code: Modify the program to add a new username and password. Students will have to modify the code as well as the user interface."
+        "description": "* Play the Game: Have students play the game\n* Discuss Changes: Talk through how the game plays differently now\n* Find the `if-else-if` command: Have students find the if-else-if command that was added\n* Draw a Flowchart: Students should draw a flowchart of this new if-else-if command\n* **Modify**: Modify the program to add a new username and password. Students will have to modify the code as well as the user interface."
       },
       "seeding_key": {
         "activity_section.key": "a6736a90-d098-4845-8208-3e224564035b",
+        "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61"
+      }
+    },
+    {
+      "key": "6305f30a-5de4-4e81-8aec-82bbb3cbe124",
+      "position": 14,
+      "properties": {
+        "progression_name": "Logical Operators: AND OR"
+      },
+      "seeding_key": {
+        "activity_section.key": "6305f30a-5de4-4e81-8aec-82bbb3cbe124",
         "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61"
       }
     },
@@ -2504,44 +2551,8 @@
       }
     },
     {
-      "key": "e3c5af38-129a-4730-bc0f-bde730e53aaf",
-      "position": 1,
-      "properties": {
-        "name": "If-Statements",
-        "progression_name": "If-Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "e3c5af38-129a-4730-bc0f-bde730e53aaf",
-        "lesson_activity.key": "3dc4ee80-049b-4737-94a6-216b1ccc4d59"
-      }
-    },
-    {
-      "key": "c38689e4-6723-452c-9220-dec39ab884fe",
-      "position": 2,
-      "properties": {
-        "name": "If-Else Statements",
-        "progression_name": "If-Else Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "c38689e4-6723-452c-9220-dec39ab884fe",
-        "lesson_activity.key": "3dc4ee80-049b-4737-94a6-216b1ccc4d59"
-      }
-    },
-    {
-      "key": "bb1fd554-ce4a-48d2-9d55-8f8fcf27abb8",
-      "position": 3,
-      "properties": {
-        "name": "Logical Operators: AND OR",
-        "progression_name": "Logical Operators: AND OR"
-      },
-      "seeding_key": {
-        "activity_section.key": "bb1fd554-ce4a-48d2-9d55-8f8fcf27abb8",
-        "lesson_activity.key": "3dc4ee80-049b-4737-94a6-216b1ccc4d59"
-      }
-    },
-    {
       "key": "fec92834-073e-40ab-bd98-8872eb33b605",
-      "position": 4,
+      "position": 1,
       "properties": {
         "name": "Patterns: If-else-if",
         "progression_name": "Patterns: If-else-if"
@@ -2553,7 +2564,7 @@
     },
     {
       "key": "339ad923-2469-4391-8745-daa5572ef898",
-      "position": 5,
+      "position": 2,
       "properties": {
         "name": "Check Your Understanding",
         "progression_name": "Check Your Understanding"
@@ -4583,24 +4594,21 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: if Statements_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4L06 Introduction to Conditionals: if Statements_2021"
+          "U4 L06 Lemon Hunter App v1 Code_2021"
         ],
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "e3c5af38-129a-4730-bc0f-bde730e53aaf"
+        "activity_section.key": "9683be4c-483d-4af5-b6c7-b7d7ed0895b7"
       },
       "level_keys": [
-        "U4L06 Introduction to Conditionals: if Statements_2021"
+        "U4 L06 Lemon Hunter App v1 Code_2021"
       ]
     },
     {
@@ -4609,24 +4617,21 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L06 Lemon Hunter App v1 Code_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L06 Lemon Hunter App v1 Code_2021"
+          "U4L06 Introduction to Conditionals: if Statements_2021"
         ],
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "e3c5af38-129a-4730-bc0f-bde730e53aaf"
+        "activity_section.key": "9683be4c-483d-4af5-b6c7-b7d7ed0895b7"
       },
       "level_keys": [
-        "U4 L06 Lemon Hunter App v1 Code_2021"
+        "U4L06 Introduction to Conditionals: if Statements_2021"
       ]
     },
     {
@@ -4635,10 +4640,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements",
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: if-else Statements_2021"
-        ]
+        "progression": "If-Else Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4649,7 +4651,7 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "c38689e4-6723-452c-9220-dec39ab884fe"
+        "activity_section.key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2"
       },
       "level_keys": [
         "U4L06 Introduction to Conditionals: if-else Statements_2021"
@@ -4661,10 +4663,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements",
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
-        ]
+        "progression": "If-Else Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4675,7 +4674,7 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "c38689e4-6723-452c-9220-dec39ab884fe"
+        "activity_section.key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2"
       },
       "level_keys": [
         "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
@@ -4687,10 +4686,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements",
-        "level_keys": [
-          "U4 L06 Lemon Hunter App v2 Code_2021"
-        ]
+        "progression": "If-Else Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4701,7 +4697,7 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "c38689e4-6723-452c-9220-dec39ab884fe"
+        "activity_section.key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2"
       },
       "level_keys": [
         "U4 L06 Lemon Hunter App v2 Code_2021"
@@ -4713,10 +4709,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators: AND OR",
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
-        ]
+        "progression": "Logical Operators: AND OR"
       },
       "named_level": null,
       "bonus": null,
@@ -4727,7 +4720,7 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "bb1fd554-ce4a-48d2-9d55-8f8fcf27abb8"
+        "activity_section.key": "6305f30a-5de4-4e81-8aec-82bbb3cbe124"
       },
       "level_keys": [
         "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
@@ -4739,10 +4732,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators: AND OR",
-        "level_keys": [
-          "U4 L06 Lemon Hunter App v3 Code_2021"
-        ]
+        "progression": "Logical Operators: AND OR"
       },
       "named_level": null,
       "bonus": null,
@@ -4753,7 +4743,7 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "bb1fd554-ce4a-48d2-9d55-8f8fcf27abb8"
+        "activity_section.key": "6305f30a-5de4-4e81-8aec-82bbb3cbe124"
       },
       "level_keys": [
         "U4 L06 Lemon Hunter App v3 Code_2021"
@@ -6193,18 +6183,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4L06 Introduction to Conditionals: if Statements_2021",
-        "script_level.level_keys": [
-          "U4L06 Introduction to Conditionals: if Statements_2021"
-        ],
-        "lesson.key": "Conditionals Investigate",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2021",
-        "activity_section.key": "e3c5af38-129a-4730-bc0f-bde730e53aaf"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "U4 L06 Lemon Hunter App v1 Code_2021",
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v1 Code_2021"
@@ -6212,7 +6190,19 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "e3c5af38-129a-4730-bc0f-bde730e53aaf"
+        "activity_section.key": "9683be4c-483d-4af5-b6c7-b7d7ed0895b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L06 Introduction to Conditionals: if Statements_2021",
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if Statements_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021",
+        "activity_section.key": "9683be4c-483d-4af5-b6c7-b7d7ed0895b7"
       }
     },
     {
@@ -6224,7 +6214,7 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "c38689e4-6723-452c-9220-dec39ab884fe"
+        "activity_section.key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2"
       }
     },
     {
@@ -6236,7 +6226,7 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "c38689e4-6723-452c-9220-dec39ab884fe"
+        "activity_section.key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2"
       }
     },
     {
@@ -6248,7 +6238,7 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "c38689e4-6723-452c-9220-dec39ab884fe"
+        "activity_section.key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2"
       }
     },
     {
@@ -6260,7 +6250,7 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "bb1fd554-ce4a-48d2-9d55-8f8fcf27abb8"
+        "activity_section.key": "6305f30a-5de4-4e81-8aec-82bbb3cbe124"
       }
     },
     {
@@ -6272,7 +6262,7 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "bb1fd554-ce4a-48d2-9d55-8f8fcf27abb8"
+        "activity_section.key": "6305f30a-5de4-4e81-8aec-82bbb3cbe124"
       }
     },
     {
