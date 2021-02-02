@@ -69,6 +69,18 @@
         "lesson_group.key": "Toolbox Levels",
         "script.name": "2021drafting"
       }
+    },
+    {
+      "key": "Loom Levels",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Loom Levels"
+      },
+      "seeding_key": {
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
     }
   ],
   "lessons": [
@@ -249,6 +261,21 @@
       "seeding_key": {
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "video",
+      "name": "Sprite Lab Videos",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
         "script.name": "2021drafting"
       }
     }
@@ -1261,6 +1288,56 @@
       "level_keys": [
         "courseF_2021_template"
       ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Events",
+        "level_keys": [
+          "courseF_events_loom_sandbox"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_loom_sandbox"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_loom_sandbox"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Variables",
+        "level_keys": [
+          "courseF_variables_loom_sandbox"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_loom_sandbox"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_variables_loom_sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1701,6 +1778,28 @@
         ],
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_loom_sandbox",
+        "script_level.level_keys": [
+          "courseF_events_loom_sandbox"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_loom_sandbox",
+        "script_level.level_keys": [
+          "courseF_variables_loom_sandbox"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
         "script.name": "2021drafting"
       }
     }
