@@ -326,6 +326,7 @@ Dashboard::Application.routes.draw do
   get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
 
   resources :vocabularies, only: [:create, :update]
+  get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
   get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')

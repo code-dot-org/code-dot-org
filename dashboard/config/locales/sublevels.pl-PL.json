@@ -11,7 +11,10 @@
               "Math": "Matematyka",
               "Logic": "Logika",
               "Games/Score": "Gry/Punkty"
-            }
+            },
+            "display_name": "Utwórz grę w klimacie Gwiezdnych Wojen",
+            "short_instructions": "Utwórz własną grę w klimacie Gwiezdnych Wojen!",
+            "long_instructions": "Utwórz własną grę w klimacie Gwiezdnych Wojen!"
           },
           "CourseD_EOC_dance": {
             "block_categories": {
@@ -80,6 +83,11 @@
             "display_name": "Twórz obraz",
             "short_instructions": "Twórz własną ilustrację!",
             "long_instructions": "Twórz własną ilustrację!"
+          },
+          "CourseD_EOC_bounce1": {
+            "display_name": "Utwórz grę w koszykówkę",
+            "short_instructions": "Utwórz swoją własną grę w koszykówkę!",
+            "long_instructions": "Utwórz swoją własną grę w koszykówkę!"
           }
         },
         "courseE_EOC_2020": {
@@ -104,7 +112,14 @@
               "jittering": "trzęsienie się",
               "moving west": "przechodzenie na zachód",
               "patrolling": "patrolowanie"
-            }
+            },
+            "display_name": "Utwórz projekt w Sprite Lab"
+          },
+          "Course E: Artist Project_2020": {
+            "display_name": "Utwórz projekt Artysty"
+          },
+          "Course E: Frozen Project_2020": {
+            "display_name": "Utwórz projekt z Krainy Lodu"
           }
         },
         "courseExpress_EOC_2020": {
@@ -130,7 +145,8 @@
               "Logic": "Logika",
               "Functions": "Funkcje",
               "Variables": "Zmienne"
-            }
+            },
+            "display_name": "Utwórz projekt Artysty"
           },
           "CourseF_Project_SpriteLab_2020": {
             "block_categories": {
@@ -160,7 +176,11 @@
               "moving west": "przechodzenie na zachód",
               "patrolling": "patrolowanie",
               "wandering": "wędrowanie"
-            }
+            },
+            "display_name": "Utwórz projekt w Sprite Lab"
+          },
+          "Course E: Frozen Project_2020": {
+            "display_name": "Utwórz projekt z Krainy Lodu"
           }
         },
         "courseF_EOC_2020": {
@@ -192,7 +212,8 @@
               "moving west": "przechodzenie na zachód",
               "patrolling": "patrolowanie",
               "wandering": "wędrowanie"
-            }
+            },
+            "display_name": "Utwórz projekt w Sprite Lab"
           },
           "Course F: Artist Project_2020": {
             "block_categories": {
@@ -203,7 +224,8 @@
               "Logic": "Logika",
               "Functions": "Funkcje",
               "Variables": "Zmienne"
-            }
+            },
+            "display_name": "Utwórz projekt Artysty"
           }
         },
         "outbreak_freeplay_choice": {
@@ -233,7 +255,8 @@
               "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek"
             },
             "display_name": "Standardowy przybornik",
-            "short_instructions": "Wprowadź dowolne zmiany lub ulepszenia w swoim projekcie, jakie tylko chcesz."
+            "short_instructions": "Wprowadź dowolne zmiany lub ulepszenia w swoim projekcie, jakie tylko chcesz.",
+            "long_instructions": "# Czas na zabawę\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\n\n*Świetna robota! Wszyscy mieszkańcy Miasta Potworów są ci niezwykle wdzięczni za pomoc. Mamy nadzieję, że podzielisz się tym, czego się nauczyłeś z innymi.*\n\n</div>\n\nUkończyłeś samouczek! Wprowadź dowolne zmiany i ulepszenia w swoim projekcie. Naciśnij przycisk „Udostępnij” u góry strony, aby wysłać swój projekt znajomym i rodzinie. "
           },
           "outbreak_freeplay": {
             "block_categories": {
@@ -267,7 +290,8 @@
               "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek"
             },
             "display_name": "Powiększony przybornik",
-            "short_instructions": "Wprowadź dowolne zmiany lub ulepszenia w swoim projekcie, jakie tylko chcesz."
+            "short_instructions": "Wprowadź dowolne zmiany lub ulepszenia w swoim projekcie, jakie tylko chcesz.",
+            "long_instructions": "# Czas na zabawę\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\n\n*Świetna robota! Wszyscy mieszkańcy Miasta Potworów są ci niezwykle wdzięczni za pomoc. Mamy nadzieję, że podzielisz się tym, czego się nauczyłeś z innymi.*\n\n</div>\n\nUkończyłeś samouczek! Wprowadź dowolne zmiany i ulepszenia w swoim projekcie. Naciśnij przycisk „Udostępnij” u góry strony, aby wysłać swój projekt znajomym i rodzinie. Możesz również skorzystać z rozszerzonego przybornika."
           }
         }
       }
