@@ -107,7 +107,7 @@ export default class AddVocabularyDialog extends Component {
       data['key'] = this.props.editingVocabulary.key;
     }
     if (this.props.selectableLessons) {
-      data['lessonKeys'] = JSON.stringify(this.state.lessons.map(l => l.value));
+      data['lessonIds'] = JSON.stringify(this.state.lessons.map(l => l.value));
     }
     $.ajax({
       url: url,
