@@ -15,7 +15,7 @@ const styles = {
   }
 };
 
-class FoormEditorPreview extends Component {
+class FoormLibraryEditorPreview extends Component {
   static propTypes = {
     libraryError: PropTypes.bool,
     libraryErrorMessage: PropTypes.string,
@@ -73,4 +73,4 @@ class FoormEditorPreview extends Component {
 
 export default connect(state => ({
   formHasError: state.foorm.hasError
-}))(FoormEditorPreview);
+}))(FoormLibraryEditorPreview);
