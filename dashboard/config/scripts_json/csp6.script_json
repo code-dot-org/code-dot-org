@@ -7,7 +7,6 @@
     "properties": {
       "student_detail_progress_view": true,
       "exclude_csf_column_in_legend": true,
-      "has_lesson_plan": true,
       "curriculum_umbrella": "CSP",
       "hideable_lessons": true
     },

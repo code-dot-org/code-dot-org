@@ -180,6 +180,12 @@ class Lesson < ApplicationRecord
     !!has_lesson_plan || !lockable
   end
 
+  def has_lesson_pdf?
+    return false if ScriptConstants.script_in_category?(:csf, script.name) || ScriptConstants.script_in_category?(:csf_2018, script.name)
+
+    !!has_lesson_plan
+  end
+
   def localized_title
     # The standard case for localized_title is something like "Lesson 1: Maze".
     # In the case of lockable lessons without lesson plans, we don't want to include the Lesson 1

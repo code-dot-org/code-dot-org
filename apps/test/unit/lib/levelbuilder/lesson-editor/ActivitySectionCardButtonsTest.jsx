@@ -10,6 +10,7 @@ describe('ActivitySectionCardButtons', () => {
     addTip,
     updateTip,
     addLevel,
+    uploadImage,
     removeTip,
     appendResourceLink,
     appendVocabularyLink,
@@ -18,6 +19,7 @@ describe('ActivitySectionCardButtons', () => {
     addTip = sinon.spy();
     updateTip = sinon.spy();
     addLevel = sinon.spy();
+    uploadImage = sinon.spy();
     removeTip = sinon.spy();
     appendResourceLink = sinon.spy();
     appendVocabularyLink = sinon.spy();
@@ -28,6 +30,7 @@ describe('ActivitySectionCardButtons', () => {
       addTip,
       updateTip,
       addLevel,
+      uploadImage,
       removeTip,
       appendResourceLink,
       appendVocabularyLink,
@@ -39,7 +42,7 @@ describe('ActivitySectionCardButtons', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(4);
+    expect(wrapper.find('button').length).to.equal(5);
     expect(wrapper.find('Connect(FindResourceDialog)').length).to.equal(1);
     expect(wrapper.find('AddLevelDialog').length).to.equal(1);
     expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(2);

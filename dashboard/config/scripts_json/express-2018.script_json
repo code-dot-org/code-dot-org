@@ -10,7 +10,6 @@
         "playlab",
         "artist"
       ],
-      "has_lesson_plan": true,
       "script_announcements": [
         {
           "notice": "New: Choose Which Lessons to Show or Hide for Your Section",
