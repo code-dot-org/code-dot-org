@@ -159,6 +159,18 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 'Lesson1', summary[:key]
   end
 
+  test 'can summarize lesson with and without lesson plan' do
+    script = create :script, name: 'test-script'
+    lesson_group = create :lesson_group, script: script
+    lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
+    lesson2 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false
+
+    lesson1_summary = lesson1.summarize
+    lesson2_summary = lesson2.summarize
+    assert_equal '//test.code.org/curriculum/test-script/1/Teacher', lesson1_summary[:lesson_plan_html_url]
+    assert_equal nil, lesson2_summary[:lesson_plan_html_url]
+  end
+
   test 'can summarize lesson for lesson plan' do
     script = create :script
     lesson_group = create :lesson_group, script: script

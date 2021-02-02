@@ -1,8 +1,7 @@
 /* banner */
 .banner-pt1, .banner-pt2 {
 padding: 0 20px; 
-flex-direction: column;
-justify-content: center;
+ 
 }
 
 banner-pt1 {width20%;} 
@@ -13,8 +12,8 @@ banner-pt2 {width80%;}
   margin: 20px 0;
 }
 
-.col-50:nth-child(2n+1) { padding: 0 10px 20px 0;}
-.col-33:nth-child(2n+0) { padding: 0 0 20px 10px;}
+.col-50:nth-child(2n+1) { padding: 0 10px 20px 0; }
+.col-50:nth-child(2n+0) { padding: 0 0 20px 10px; }
 
 .col-33:nth-child(3n+1) { padding: 0 14px 20px 0;}
 .col-33:nth-child(3n+2) { padding: 0 7px 20px 7px;}
@@ -34,6 +33,11 @@ banner-pt2 {width80%;}
 .bp1 {background-color:#a69bc1;}
 .bp2 {background-color:#cfc9de;}
 .bp3 {background-color:#ebe8f1;}
+
+.color-block
+{
+padding: 20px;;
+}
 
 .rounded-box
 {
@@ -77,35 +81,41 @@ h3.rounded-info-h {
 /* img styling */
 .bordered-circle {width:90%; border-radius:50%; border: 7px solid #a69bc1}
 .embedvid {padding-bottom: 40px}
+.embedvid .video_caption_link {padding-top:6px; font-weight:bold; font-size:1.1em}
 
 /*BHM campaign*/
 .bhm-banner {
-background-image: url('../images/bhm/black-voices.png'); 
-background-color:#685c91; 
-background-position: right bottom; 
-background-repeat:no-repeat; 
-padding:40px 0; 
-margin-bottom: 60px;
+  background-image: url('../images/bhm/bhm-banner-bg2.png'); 
+  background-position: bottom right -655px; 
+  background-color:#685c91; 
+  background-repeat:no-repeat; 
+  background-size: 100%
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px 60px; 
+  margin-bottom: 60px;
 }
-.bhm-banner h1, .bhm-banner h3 {color:#ffd200; /*color:#1d1731;*/}
-.bhm-banner h1 {text-shadow: .5px .5px #de2010;}
+
+.bhm-banner h1, .bhm-banner h2,  .bhm-banner h3 {color:#000000; }
+.bhm-banner h2 {font-size:26px;}
+
 hr.bhm-border {
   border:none;
-  height:9px;
-  background-image: url('../images/bhm/bhm-border9.png'); 
-  background-color:#685c91; 
+  height:5px;
+  background-image: url('../images/bhm/panafbars5.png'); 
   background-repeat: repeat-x;
 }
-.bhm-heading {
-color:#685c91;
-}
-.black-voices-videos .video_caption_link {padding-top:6px; color: #685c91; font-weight:bold; font-size:1.1em}
+
+.bhm-heading {color:#7665a0; }
+
+.blackstudentdata img {width:100%;}
+.blackstudentdata p {margin: 1em;}
+.blackstudentdata h3 {font-weight:bold; margin-bottom: .75em; text-align: center;}
 
 /* RESPONSIVE */
 @media screen and (max-width: 600px) and (min-width: 0px) {
-.container_responsive h1 {
-font-size: 26px;
-}
+.container_responsive h1 {font-size: 26px;}
+ .bhm-banner h2 {font-size:23px;}
 }
    
 @media only screen and (max-width: 960px) {
@@ -119,9 +129,11 @@ font-size: 26px;
   height: auto;
 }
 .bhm-banner {
-  padding-bottom:120px;
+  padding-bottom:135px;
   background-position: center bottom;
 }
+.bhm-banner h1, .bhm-banner h2{text-align: center; color:#000000}
+
 .banner-pt1, .banner-pt2 {
   text-align:center;
   padding: 15px;

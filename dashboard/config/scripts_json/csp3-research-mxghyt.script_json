@@ -40,7 +40,6 @@
           "type": "success"
         }
       ],
-      "has_lesson_plan": true,
       "curriculum_umbrella": "CSP",
       "hideable_lessons": true,
       "announcements": [

@@ -521,8 +521,7 @@
       "key": "d07bf4d7-6a25-4ff6-9d01-adea55e214a3",
       "position": 1,
       "properties": {
-        "name": "Tech Setup",
-        "duration": 0
+        "name": "Tech Setup"
       },
       "seeding_key": {
         "lesson_activity.key": "d07bf4d7-6a25-4ff6-9d01-adea55e214a3",
@@ -535,8 +534,7 @@
       "key": "6ba2d996-2523-4b0a-b7a6-a499ac4a11ec",
       "position": 2,
       "properties": {
-        "name": "CSD Pre-Course Survey",
-        "duration": 0
+        "name": "CSD Pre-Course Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "6ba2d996-2523-4b0a-b7a6-a499ac4a11ec",
@@ -637,19 +635,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "75941c07-de18-45db-b260-4cd48e0f1bf0",
-        "lesson.key": "The Problem Solving Process",
-        "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2021"
-      }
-    },
-    {
-      "key": "d650c29e-233d-4ad3-a3db-6a1d714cd5b4",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d650c29e-233d-4ad3-a3db-6a1d714cd5b4",
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-2021"
@@ -1368,28 +1353,17 @@
       }
     },
     {
-      "key": "60100660-5592-4d47-a95c-4302bc101f66",
+      "key": "1dca60be-eb7f-40ef-8b91-8ca231c1b14a",
       "position": 1,
       "properties": {
+        "description": "Students can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how-to-administer-a-locked-assessment] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \r\n\r\n**How much time does it take?**\r\n\r\nThe survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\r\n\r\nBecause it is a pre-course survey it is important that students take it as early in the course as possible, before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.\r\n\r\nThank you!\r\n\r\n-- The Code.org Team",
+        "name": "Important! Have your students take the CSD Pre-Course Survey!\r",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "* A major goal of CS Discoveries is to broaden participation in computer science.  \r\n* It is *crucial* therefore to have insight into students' attitudes and beliefs about computer science *before* the course so that we can measure the amount of change that occurred *after* the course is over.\r\n\r\n* Please note that this survey is **anonymous for students**\r\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\r\n\r\n**Please help by having your students contribute to this vital dataset.  Their voices make the difference!**\r\n\r\n"
+            "markdown": "* A major goal of CS Discoveries is to broaden participation in computer science.  \n* It is *crucial* therefore to have insight into students' attitudes and beliefs about computer science *before* the course so that we can measure the amount of change that occurred *after* the course is over."
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "60100660-5592-4d47-a95c-4302bc101f66",
-        "lesson_activity.key": "6ba2d996-2523-4b0a-b7a6-a499ac4a11ec"
-      }
-    },
-    {
-      "key": "1dca60be-eb7f-40ef-8b91-8ca231c1b14a",
-      "position": 2,
-      "properties": {
-        "description": "Students can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how-to-administer-a-locked-assessment] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \r\n\r\n**How much time does it take?**\r\n\r\nThe survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\r\n\r\nBecause it is a pre-course survey it is important that students take it as early in the course as possible, before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.\r\n\r\nThank you!\r\n\r\n-- The Code.org Team",
-        "name": "Important! Have your students take the CSD Pre-Course Survey!\r"
       },
       "seeding_key": {
         "activity_section.key": "1dca60be-eb7f-40ef-8b91-8ca231c1b14a",
@@ -1403,7 +1377,6 @@
         "description": "**Prompt:** What makes someone a good problem solver?  Be ready to share three ideas with your group.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Journaling:** Journaling is a key practice in CS Discoveries.  Students can journal on loose leaf paper, in notebooks, or digitally.\r\n\r\n**Slides:** Slides for this unit are available in the \"Teacher Resources\" section of the lesson plan. You will be prompted to make a copy, which you will only need to do once - after that, you may use the slides for each lesson in the curriculum.\r\n\r\n"
           }
@@ -1422,7 +1395,6 @@
         "description": "**Discuss:** Allow students to share answers at their table groups or with a partner, then have those who are comfortable share with the whole class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The goal of this warm up is to start students thinking about problem solving in preparation for the day's activity.  Highlight answers that reinforce key practices in the class, such as collaboration, persistence, and creativity.  This is also a chance to reinforce a positive culture that encourages students to share out and support each other in brainstorming ideas.\r\n"
           }
@@ -1487,7 +1459,6 @@
         "description": "**Distribute**: One copy of the activity guide to each group.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-08-17-at-11.51.32-AM.png\" style=\"float:right;height:150px\">\r\n\r\n**Getting Copies of Google Docs:** Activity Guides in this curriculum are available as Google Docs, Word Docs, and PDFs. If you'd like to edit or make your own copy of a Google Doc you may without requesting access. Simply log in with a Google account, click \"File\" and \"Make a copy\" from the menu. You may then share your own copy with your students.\r\n"
           }
@@ -1505,7 +1476,6 @@
         "description": "As a class, read through the Goal and Rules sections of the activity guide and answer questions.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "This activity can get your room wet! Ideally, each group should have its own bucket/container with water to conduct its own tests. If needed, you can have several groups share one container, but be mindful to set guidelines for sharing that container. Place towel/rag under each container. You may also want to consider teaching this activity in the hallway or some other space if your room is very restrictive, or add in additional rules as necessary.\r\n\r\n"
           }
@@ -1524,7 +1494,6 @@
         "description": "Give students a couple minutes to discuss in groups the approach they will be taking with this first boat. Once groups have recorded their ideas and some possible weaknesses they can come to you to get their aluminum foil and begin building their boats.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Hold onto the foil until students submit a plan for their boat. The goal isn't to slow them down too much, but just give them a moment to reflect briefly on the possible approaches they could take. This is one way this activity foreshadows the Planning step of the problem solving process students will see in subsequent lessons.\r\n"
           }
@@ -1568,7 +1537,6 @@
         "description": "**Share:** Have students share the results of their first run with neighboring groups. Ask groups to focus particularly on what the eventual failure of their boat was (e.g. it wasn't deep enough, it was unstable, etc.) and brainstorm ways to get around those problems.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "While some students will view this portion as a competition, emphasize that each group is looking to improve its own design, not competing against others. You are appealing for each student to challenge themselves first, not others.\r\n"
           }
@@ -1632,7 +1600,6 @@
         "description": "**Discuss**: Allow students time to share thoughts with the class.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Students may recognize that collaboration allowed them to think through their ideas more thoroughly or that they were able to split up the work that they needed to do.  As students list challenges, ensure that they are coming up with ways to overcome those challenges.  If you have noticed any issues in group dynamics during the activity, you may want to use this time to bring up these as potential problems in a non-confrontational way and help students to generate strategies for working together more effectively in future activities.  These can serve as classroom norms for group work moving forward.\r\n"
           }
@@ -1674,12 +1641,10 @@
         "description": "**Discuss:** Students should silently record their ideas in writing for a couple minutes. Afterwards invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list. Record all the different kinds of problems students think of on the board or somewhere else that they'll be clearly visible.",
         "tips": [
           {
-            "key": "2",
             "type": "teachingTip",
             "markdown": "**Make Categories:** You may want to group problems into larger categories during this conversation and invite students to help you do so. For example, if two suggestions are \"finding my keys\" and \"finding my homework\" suggest a larger category of \"finding lost things\".\r\n\r\n**Real World Problems:** Try to guide students away from too many homework or subject-area type problems (e.g. math problems, word problems, science problems, etc.) by saying you're more interested in real-life problems like solving disagreements, making big decisions, fixing or finding things, getting from one place to another, etc.\r\n"
           },
           {
-            "key": "tip-2",
             "type": "discussionGoal",
             "markdown": "**Goal:** This conversation aims to demonstrate that problems and problem solving are a part of everyday life. Use this brainstorm to list as many different kinds of problems on the board as you can. This will be useful when you later ask students to select one type of problem that you believe they're particularly good at solving.\n"
           }
@@ -1740,8 +1705,9 @@
       "key": "23f003b6-2c1b-4e88-a343-f77714a50d89",
       "position": 3,
       "properties": {
-        "description": "**Video:** Watch the Problem Solving Process Video on Code Studio\n\nIntroduce and as a class review the descriptions of the four steps in the process by reading them aloud. Answer or discuss any questions students have about the process but otherwise move on to completing the first section of the activity guide.",
-        "name": "The Problem Solving Process\r"
+        "description": "**Video:** Watch the Problem Solving Process Video on Code Studio",
+        "name": "The Problem Solving Process\r",
+        "progression_name": "Video: Problem Solving Process"
       },
       "seeding_key": {
         "activity_section.key": "23f003b6-2c1b-4e88-a343-f77714a50d89",
@@ -1749,8 +1715,19 @@
       }
     },
     {
-      "key": "aab191bf-3a2c-4f58-86d1-bfa34cf48052",
+      "key": "9541def4-ab55-4976-8e32-5c267d62e229",
       "position": 4,
+      "properties": {
+        "description": "Introduce and as a class review the descriptions of the four steps in the process by reading them aloud. Answer or discuss any questions students have about the process but otherwise move on to completing the first section of the activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "9541def4-ab55-4976-8e32-5c267d62e229",
+        "lesson_activity.key": "675f7979-4687-4193-bd1e-10332a1ac050"
+      }
+    },
+    {
+      "key": "aab191bf-3a2c-4f58-86d1-bfa34cf48052",
+      "position": 5,
       "properties": {
         "description": "Have students complete the first section of the activity guide by filling in the steps of the previous day's activity they think fall within each step of the problem solving process.",
         "name": "What it Looks Like\r"
@@ -1762,12 +1739,11 @@
     },
     {
       "key": "f3ad86f7-7c83-415c-aa5a-a276d6186faa",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Discuss:** Once students have completed the first section of the activity guide ask them to share with neighbors and then with the class as a whole.",
         "tips": [
           {
-            "key": "3",
             "type": "discussionGoal",
             "markdown": "**Goal:** For this first conversation in particular you're making sure students understand the meaning of the four different steps. While some steps might sometimes be categorized in two ways, use this chance to talk about that ambiguity. Your goal is to use the shared context of the aluminum boats problem to understand this process. Here's a possible set of steps students may come up with. \r\n\r\n**Define:** Understanding the problem when it was assigned, examining available resources, finding problems with their original design before deciding how to fix them, looking at problems with other groups' boats\r\n\r\n**Prepare:** Discussing with team members how to proceed, brainstorming approaches, anticipating possible flaws.\r\n\r\n**Try:** Actually building the boats, running the test\r\n\r\n**Reflect:** Examining the results of their test, comparing their results to their predictions, discussing with group members the reasons the boat sunk eventually.\r\n\r\n\r\n"
           }
@@ -1780,7 +1756,7 @@
     },
     {
       "key": "9071b1c1-0031-4e52-b8f6-a20e311f95c1",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "Ask students to select one type of problem that they think they're really good at solving. Use the list of problems already on the board to help students think of their type of problem. Again give them a couple of minutes to quietly record the steps of their process before sharing with a neighbor.",
         "name": "A Problem You Are Good at Solving\r"
@@ -1792,12 +1768,11 @@
     },
     {
       "key": "e3e59454-f8cc-47ef-a206-23e55cf74c89",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "**Discuss:** Have students share what they wrote with a neighbor and then once again lead a discussion of the conversations they had. Ask students to talk about the individual steps they're using to solve their chosen problem but also point out instances where the same types of strategies are appearing multiple times.",
         "tips": [
           {
-            "key": "4",
             "type": "discussionGoal",
             "markdown": "**Goal:** All three of these discussions aim to reinforce the meaning of the 4 steps in the problem solving process. In this discussion you might lean more heavily on other students to ensure that the strategies and steps being offered by students seem to fit the definitions of the 4 steps provided on the activity guide.\r\n"
           }
@@ -1810,7 +1785,7 @@
     },
     {
       "key": "7048cb12-62e3-4d97-a12a-7d75befc7d07",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Place students in pairs and ask them to complete the final section of the activity guide. They will need to choose a type of problem that both members of the group want to get better at solving and then write the steps they would use within the problem solving process to solve that problem.\r\n\r\n**Discuss:** Lead one final share out in which students present how they would use the problem solving process to approach a less familiar problem.",
         "name": "A Problem You and a Classmate Want to Get Better at Solving\r"
@@ -1822,12 +1797,11 @@
     },
     {
       "key": "971b5c08-a61d-400c-a1ff-8ac3139a3c7c",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Distribute:** Give each group a piece of poster paper.",
         "tips": [
           {
-            "key": "5",
             "type": "teachingTip",
             "markdown": "You may also choose to do this activity digitally.   Check out the [forum](https://forum.code.org/c/csd) to see how other teachers have modified this activity for their classrooms, or to share your own modifications. \r\n"
           }
@@ -1841,7 +1815,7 @@
     },
     {
       "key": "6c98d6b3-a1ef-45a7-afb1-4d6fa842e50d",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "**Prompt:** At your tables, choose one of the problems that you worked on today, and create a poster that shows how the problem solving process can be used to help solve it.\r\n\r\n\r\n\r\n**Circulate:** As students work on their posters, ask them questions about their different problems, and how the steps to solve it relate to the general steps of the problem solving process.\r\n\r\n**Share:** Allow students to share their posters with the rest of the class."
       },
@@ -1868,7 +1842,6 @@
         "description": "**Prompt:** You saw a lot of different types of problems today, but they all used our Problem Solving Process.  For each step of the process, think of one general tip that could be useful no matter what problem someone is trying to solve.",
         "tips": [
           {
-            "key": "6",
             "type": "assessmentOpportunity",
             "markdown": "Check that students are coming up with effective strategies for each step of the process. These should be general strategies, not specific to the particular problems that they chose to solve.\r\n"
           }
@@ -1901,18 +1874,6 @@
       "seeding_key": {
         "activity_section.key": "640e6f56-0797-4fde-a056-1b37b27d7e46",
         "lesson_activity.key": "75941c07-de18-45db-b260-4cd48e0f1bf0"
-      }
-    },
-    {
-      "key": "378c86a4-82cb-405a-82a6-c9d595c05763",
-      "position": 1,
-      "properties": {
-        "name": "Video: Problem Solving Process",
-        "progression_name": "Video: Problem Solving Process"
-      },
-      "seeding_key": {
-        "activity_section.key": "378c86a4-82cb-405a-82a6-c9d595c05763",
-        "lesson_activity.key": "d650c29e-233d-4ad3-a3db-6a1d714cd5b4"
       }
     },
     {
@@ -5125,11 +5086,8 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD Problem Solving Process Video_2021"
-        ],
         "progression": "Video: Problem Solving Process"
       },
       "named_level": null,
@@ -5141,7 +5099,7 @@
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-2021",
-        "activity_section.key": "378c86a4-82cb-405a-82a6-c9d595c05763"
+        "activity_section.key": "23f003b6-2c1b-4e88-a343-f77714a50d89"
       },
       "level_keys": [
         "CSD Problem Solving Process Video_2021"
@@ -5153,10 +5111,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Video: What Makes a Computer, a Computer?",
         "level_keys": [
           "CSD What Makes a Computer a Computer Video_2021"
-        ],
-        "progression": "Video: What Makes a Computer, a Computer?"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5179,10 +5137,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "App: Pet Chooser",
         "level_keys": [
           "CSD U1 IO Pet Chooser_2021"
-        ],
-        "progression": "App: Pet Chooser"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5205,10 +5163,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "App: Story Creator",
         "level_keys": [
           "CSD U1 IO Story_2021"
-        ],
-        "progression": "App: Story Creator"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5231,10 +5189,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "App: Improved Pet Chooser",
         "level_keys": [
           "CSD U1 IO Pet Chooser 2_2021"
-        ],
-        "progression": "App: Improved Pet Chooser"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5257,10 +5215,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "App: Is It Your Birthday?",
         "level_keys": [
           "CSD U1 processing bday_2021"
-        ],
-        "progression": "App: Is It Your Birthday?"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5283,10 +5241,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "App: National Park Quiz",
         "level_keys": [
           "CSD U1 processing npark_2021"
-        ],
-        "progression": "App: National Park Quiz"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5309,10 +5267,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "App: How Many Countries...",
         "level_keys": [
           "CSD U1 processing countries_2021"
-        ],
-        "progression": "App: How Many Countries..."
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5335,10 +5293,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "App: My Famous Birthday",
         "level_keys": [
           "CSD U1 processing writers_2021"
-        ],
-        "progression": "App: My Famous Birthday"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5361,10 +5319,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "App: Stamp Notebook",
         "level_keys": [
           "CSD U1 processing notebook_2021"
-        ],
-        "progression": "App: Stamp Notebook"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5387,10 +5345,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "App: The Fastest Finger",
         "level_keys": [
           "CSD U1 processing fastest_2021"
-        ],
-        "progression": "App: The Fastest Finger"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5413,10 +5371,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "App: Guess the Number",
         "level_keys": [
           "CSD U1 processing guess_2021"
-        ],
-        "progression": "App: Guess the Number"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5439,10 +5397,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "App: Where Should I Live?",
         "level_keys": [
           "CSD U1 processing live_2021"
-        ],
-        "progression": "App: Where Should I Live?"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5465,10 +5423,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "App: Outfit Picker",
         "level_keys": [
           "CSD U1 storage outfit_2021"
-        ],
-        "progression": "App: Outfit Picker"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5491,10 +5449,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "App: Friend Finder",
         "level_keys": [
           "CSD U1 storage friends_2021"
-        ],
-        "progression": "App: Friend Finder"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5517,10 +5475,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "App: Kids Movie Recommender",
         "level_keys": [
           "CSD U1 storage movies_2021"
-        ],
-        "progression": "App: Kids Movie Recommender"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5543,10 +5501,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Video: IOSP Model",
         "level_keys": [
           "CSD U1 storage video_2021"
-        ],
-        "progression": "Video: IOSP Model"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5569,10 +5527,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U1Ch2_2021"
-        ],
-        "progression": "Reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5637,7 +5595,7 @@
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
         "script.name": "csd1-2021",
-        "activity_section.key": "378c86a4-82cb-405a-82a6-c9d595c05763"
+        "activity_section.key": "23f003b6-2c1b-4e88-a343-f77714a50d89"
       }
     },
     {
