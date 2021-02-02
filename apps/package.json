@@ -167,7 +167,7 @@
     "react-dom": "^16.13.0",
     "react-google-charts": "2",
     "react-idle-timer": "^4.2.7",
-    "react-inspector": "2.3.1",
+    "react-inspector": "~5.1",
     "react-lazy-load": "~3.0.13",
     "react-motion": "^0.5.2",
     "react-onclickoutside": "~5.11.1",
