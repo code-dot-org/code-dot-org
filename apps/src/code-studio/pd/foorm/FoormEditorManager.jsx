@@ -132,10 +132,10 @@ class FoormEditorManager extends React.Component {
   render() {
     return (
       <div>
-        <h1>Foorm Library Editor</h1>
+        <h1>Foorm Editor</h1>
         <p>
-          Interface for creating and making updates to Foorm libraries. Check
-          out our{' '}
+          Interface for creating and making updates to Foorm forms. Check out
+          our{' '}
           <a
             href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor"
             target="_blank"
@@ -146,11 +146,7 @@ class FoormEditorManager extends React.Component {
           to get started.
         </p>
         <div>
-          <DropdownButton
-            id="load_config"
-            title="Load Library..."
-            className="btn"
-          >
+          <DropdownButton id="load_config" title="Load Form..." className="btn">
             {this.getFormattedConfigurationDropdownOptions()}
           </DropdownButton>
           <Button onClick={this.initializeEmptyCodeMirror} className="btn">
