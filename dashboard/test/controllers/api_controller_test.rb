@@ -344,7 +344,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       student_5_response['user_level_data']
     )
-    assert_equal true, student_5_response['locked']
+    assert_equal false, student_5_response['locked']
     assert_equal false, student_5_response['readonly_answers']
   end
 
@@ -422,7 +422,7 @@ class ApiControllerTest < ActionController::TestCase
       user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
       user_level = create :user_level, user_level_data
 
-      # update from editable to locked
+      # update from editable to locked - does not auto-submit
       user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
       expected_updated_at = user_level.updated_at
       Timecop.travel 1
@@ -436,7 +436,7 @@ class ApiControllerTest < ActionController::TestCase
 
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
-      assert_equal true, user_level.submitted?
+      assert_equal false, user_level.submitted?
       assert_equal false, user_level.readonly_answers?
       assert_nil user_level.unlocked_at
       # update_lockable_state does not modify updated_at
