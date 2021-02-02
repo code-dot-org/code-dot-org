@@ -144,19 +144,19 @@
       }
     }
     $(document).ready(function() {
-      $('.create_menu').click( function(e) {
-          if ($('.create_options').is(':hidden')) {
-            e.stopPropagation();
-            $('.create_options').slideDown();
-            $('.create_menu_arrow_down').hide();
-            $('.create_menu_arrow_up').show();
-            $(document).on('keypress click', (e) => hideCreateOptions(e));
-            hideUserOptions()
-            $("#hamburger-icon").removeClass('active');
-            $("#help-icon").removeClass('active');
-            $('#hamburger #hamburger-contents').slideUp();
-            $('#help-button #help-contents').slideUp();
-          }
+      $('.create_menu').click(function(e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('keypress click', (e) => hideCreateOptions(e));
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
       });
       $('.create_options').click(function (e) {
         e.stopPropagation(); // Clicks inside the popup shouldn't close it
