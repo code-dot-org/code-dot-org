@@ -41,6 +41,12 @@ class TeacherFeedback < ApplicationRecord
     end
   end
 
+  # Finds the script level associated with this object, using script id and
+  # level id.
+  def get_script_level
+    level.script_levels.find {|sl| sl.script_id == script_id}
+  end
+
   def self.get_student_level_feedback(student_id, level_id, teacher_id)
     where(
       student_id: student_id,

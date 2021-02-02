@@ -109,9 +109,6 @@ style_min: true
 
 In addition to supporting us, our donors also provide these CS learning opportunities.
 
-### [CS First](https://csfirst.withgoogle.com/)
-Free curriculum from Google that uses online, project-based tutorials for elementary and middle school students and offers free club plans and resources to create an easy computer science entry point for educators and students alike.
-
 ### [Grow Google](https://grow.google/)
 Access the best of Google’s training and tools to grow your skills and career. With resources that are accessible online and for free, you can explore industries and earn resume-boosting credentials and certificates.
 
