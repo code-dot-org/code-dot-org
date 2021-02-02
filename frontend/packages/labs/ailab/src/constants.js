@@ -78,6 +78,10 @@ export const styles = {
     border: "solid 1px white"
   },
 
+  scrollContents: {
+    overflow: "scroll"
+  },
+
   validationMessages: {
     position: "fixed",
     bottom: 80,
