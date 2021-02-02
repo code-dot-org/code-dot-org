@@ -65,7 +65,7 @@ export default class ModelManagerDialog extends React.Component {
             color={Button.ButtonColor.orange}
             onClick={this.importMLModel}
             disabled={noModels}
-            pending={this.state.isImportPending}
+            isPending={this.state.isImportPending}
             pendingText={'Importing...'}
           />
           <h3>Model card details will go here.</h3>
