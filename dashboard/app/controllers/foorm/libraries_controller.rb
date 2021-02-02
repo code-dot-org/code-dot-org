@@ -38,6 +38,7 @@ module Foorm
           type: JSON.parse(library_question.question)['type']
         }
       end
+      question_names.sort_by! {|library_question| [library_question[:type], library_question[:name]]}
 
       render json: question_names
     end
