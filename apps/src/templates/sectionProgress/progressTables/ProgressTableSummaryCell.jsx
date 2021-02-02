@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
+import {statusPercentsType} from '@cdo/apps/templates/progress/progressTypes';
 
 const styles = {
   container: {
@@ -15,7 +16,7 @@ const styles = {
 export default class ProgressTableSummaryCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
-    statusPercents: PropTypes.object,
+    statusPercents: statusPercentsType,
     assessmentStage: PropTypes.bool,
     onSelectDetailView: PropTypes.func
   };
