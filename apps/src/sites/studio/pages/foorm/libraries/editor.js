@@ -42,8 +42,8 @@ function populateCodeMirror() {
 // Functions for keeping the code mirror content in the redux store.
 function onCodeMirrorChange(editor) {
   try {
-    const formQuestions = JSON.parse(editor.getValue());
-    updateFormQuestions(formQuestions);
+    const libraryQuestion = JSON.parse(editor.getValue());
+    updateLibraryQuestion(libraryQuestion);
   } catch (e) {
     // There is a JSON error.
     getStore().dispatch(setLibraryQuestion({}));
@@ -51,8 +51,8 @@ function onCodeMirrorChange(editor) {
   }
 }
 
-const updateFormQuestions = formQuestions => {
-  getStore().dispatch(setLibraryQuestion(formQuestions));
+const updateLibraryQuestion = libraryQuestion => {
+  getStore().dispatch(setLibraryQuestion(libraryQuestion));
   getStore().dispatch(setHasError(false));
 };
 

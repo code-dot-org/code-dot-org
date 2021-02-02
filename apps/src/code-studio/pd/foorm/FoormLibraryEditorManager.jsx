@@ -198,7 +198,7 @@ class FoormLibraryEditorManager extends React.Component {
   render() {
     return (
       <div>
-        <h1>Foorm Editor</h1>
+        <h1>Foorm Library Editor</h1>
         <p>
           Interface for creating and making updates to Foorm libraries. Check
           out our{' '}
