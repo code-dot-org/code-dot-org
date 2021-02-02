@@ -18,7 +18,7 @@
   should_show_create_menu = !level || level.try(:is_project_level)
 
 - if should_show_create_menu
-  .header_button.create_menu{tabindex: 0}
+  %button.header_button.create_menu{tabindex: 0}
     %span.create_button
       = I18n.t("#{loc_prefix}create")
     &nbsp;
@@ -144,8 +144,7 @@
       }
     }
     $(document).ready(function() {
-      $('.create_menu').on("keypress click", function(e) {
-        if ((e.type === "keypress" && e.which === 13) || (e.type === "click")) {
+      $('.create_menu').click( function(e) {
           if ($('.create_options').is(':hidden')) {
             e.stopPropagation();
             $('.create_options').slideDown();
@@ -158,7 +157,6 @@
             $('#hamburger #hamburger-contents').slideUp();
             $('#help-button #help-contents').slideUp();
           }
-        }
       });
       $('.create_options').click(function (e) {
         e.stopPropagation(); // Clicks inside the popup shouldn't close it
