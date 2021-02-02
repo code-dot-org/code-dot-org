@@ -556,6 +556,30 @@ function isEmpty(object) {
   return Object.keys(object).length === 0;
 }
 
+export function getConvertedValue(state, rawValue, column) {
+  if (!isEmpty(state.featureNumberKey)) {
+    const convertedValue = getCategoricalColumns(state).includes(column)
+      ? getKeyByValue(state.featureNumberKey[column], rawValue)
+      : rawValue;
+    return convertedValue;
+  }
+}
+
+export function getConvertedAccuracyCheckExamples(state) {
+  const convertedAccuracyCheckExamples = [];
+  var example;
+  for (example of state.accuracyCheckExamples) {
+    let convertedAccuracyCheckExample = [];
+    for (var i = 0; i < state.selectedFeatures.length; i++) {
+      convertedAccuracyCheckExample.push(
+        getConvertedValue(state, example[i], state.selectedFeatures[i])
+      );
+    }
+    convertedAccuracyCheckExamples.push(convertedAccuracyCheckExample);
+  }
+  return convertedAccuracyCheckExamples;
+}
+
 export function getConvertedLabel(state, rawLabel) {
   if (state.labelColumn && !isEmpty(state.featureNumberKey)) {
     const convertedLabel = getCategoricalColumns(state).includes(

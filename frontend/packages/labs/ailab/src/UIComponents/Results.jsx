@@ -2,7 +2,11 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getConvertedLabels, getSummaryStat } from "../redux";
+import {
+  getConvertedAccuracyCheckExamples,
+  getConvertedLabels,
+  getSummaryStat
+} from "../redux";
 import { styles, MLTypes } from "../constants";
 
 class Results extends Component {
@@ -87,7 +91,7 @@ export default connect(state => ({
   selectedFeatures: state.selectedFeatures,
   labelColumn: state.labelColumn,
   summaryStat: getSummaryStat(state),
-  accuracyCheckExamples: state.accuracyCheckExamples,
+  accuracyCheckExamples: getConvertedAccuracyCheckExamples(state),
   accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
   accuracyCheckPredictedLabels: getConvertedLabels(
     state,
