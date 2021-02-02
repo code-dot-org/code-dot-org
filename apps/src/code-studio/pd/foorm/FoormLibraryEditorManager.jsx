@@ -187,12 +187,11 @@ class FoormLibraryEditorManager extends React.Component {
     this.props.resetCodeMirror(libraryQuestionData['question']);
   };
 
-  // toss this
-  updateFormData = formData => {
-    ///this.props.setFormData(formData);
-    this.props.setHasError(false);
-    //this.props.setLastSavedQuestions(formData['questions']);
-    this.props.resetCodeMirror(formData['questions']);
+  libraryQuestionOptionsAvailable = () => {
+    return !!(
+      this.state.selectedLibraryId &&
+      this.state.libraryQuestionsFromSelectedLibrary
+    );
   };
 
   // update library dropdown to be disabled instead of not shown when no library question selected
@@ -201,8 +200,8 @@ class FoormLibraryEditorManager extends React.Component {
       <div>
         <h1>Foorm Editor</h1>
         <p>
-          Interface for creating and making updates to Foorm forms. Check out
-          our{' '}
+          Interface for creating and making updates to Foorm libraries. Check
+          out our{' '}
           <a
             href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor"
             target="_blank"
@@ -213,23 +212,26 @@ class FoormLibraryEditorManager extends React.Component {
           to get started.
         </p>
         <div>
-          <DropdownButton id="load_config" title="Load Form..." className="btn">
+          <DropdownButton
+            id="load_config"
+            title="Load Library..."
+            className="btn"
+          >
             {this.getFormattedConfigurationDropdownOptions()}
           </DropdownButton>
           <Button onClick={this.initializeEmptyCodeMirror} className="btn">
             New Form
           </Button>
         </div>
-        {this.state.selectedLibraryId &&
-          this.state.libraryQuestionsFromSelectedLibrary && (
-            <DropdownButton
-              id="load_config"
-              title="Load Library Question..."
-              className="btn"
-            >
-              {this.getFormattedLibraryQuestionDropdownOptions()}
-            </DropdownButton>
-          )}
+        <DropdownButton
+          id="load_config"
+          title="Load Library Question..."
+          className="btn"
+          disabled={!this.libraryQuestionOptionsAvailable()}
+        >
+          {this.libraryQuestionOptionsAvailable() &&
+            this.getFormattedLibraryQuestionDropdownOptions()}
+        </DropdownButton>
         {this.state.hasLoadError && (
           <div style={styles.loadError}>Could not load the selected form.</div>
         )}
