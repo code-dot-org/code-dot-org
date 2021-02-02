@@ -47,6 +47,8 @@ class Experiment < ApplicationRecord
     platformization-partners
   )
 
+  # If allow_joining_via_url, the url to join will be located at:
+  # http://studio.code.org/experiments/set_single_user_experiment/<EXPERIMENT_NAME>
   PILOT_EXPERIMENTS = [
     {
       name: 'csd-piloters',
