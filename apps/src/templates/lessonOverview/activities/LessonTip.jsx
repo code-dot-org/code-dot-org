@@ -7,10 +7,13 @@ import i18n from '@cdo/locale';
 
 const styles = {
   tab: {
+    // borders everywhere except the bottom
+    borderStyle: 'solid solid none solid',
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
+    borderWidth: 1,
     color: color.white,
-    padding: '5px 10px',
+    padding: '4px 9px',
     width: 200
   },
   box: {
@@ -65,6 +68,7 @@ export default class LessonTip extends Component {
         <div
           style={{
             ...styles.tab,
+            ...{borderColor: tipTypes[this.props.tip.type].color},
             ...{backgroundColor: tipTypes[this.props.tip.type].color}
           }}
         >
