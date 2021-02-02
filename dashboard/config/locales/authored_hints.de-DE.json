@@ -741,17 +741,17 @@
           "MC_HOC_2017_06_Cole_b": "Hilf dem Agenten dabei, eine Brücke ganz über das Wasser zu bauen! "
         },
         "MC_HOC_2017_07_Cole": {
-          "MC_HOC_2017_07_Cole_c": "Der Agent muss für dich nur den Weg zum Minenwagen freimachen.",
+          "MC_HOC_2017_07_Cole_c": "Der Agent muss für dich nur den Weg zur Lore freimachen.",
           "MC_HOC_2017_07_Cole_a": "Um diese Aufgabe zu lösen, musst du herausfinden, was die \"Weg räumen\"-Funktion macht, und diese mit dem kleinen, grünen \"Weg räumen\"-Block aus der Werkzeugkiste so oft wie nötig aufrufen.",
           "MC_HOC_2017_07_Cole_b": "Versuche, Funktionsblöcke mit anderen Blöcken aus der Werkzeugkiste zu kombinieren. So löst du diese Aufgabe."
         },
         "MC_HOC_2017_07_Cole_2019": {
-          "MC_HOC_2017_07_Cole_c": "Der Agent muss für dich nur den Weg zum Minenwagen freimachen.",
+          "MC_HOC_2017_07_Cole_c": "Der Agent muss für dich nur den Weg zur Lore freimachen.",
           "MC_HOC_2017_07_Cole_a": "Um diese Aufgabe zu lösen, musst du herausfinden, was die \"Weg räumen\"-Funktion macht, und diese mit dem kleinen, grünen \"Weg räumen\"-Block aus der Werkzeugkiste so oft wie nötig aufrufen.",
           "MC_HOC_2017_07_Cole_b": "Versuche, Funktionsblöcke mit anderen Blöcken aus der Werkzeugkiste zu kombinieren. So löst du diese Aufgabe."
         },
         "MC_HOC_2017_07_Cole_2020": {
-          "MC_HOC_2017_07_Cole_c": "Der Agent muss für dich nur den Weg zum Minenwagen freimachen.",
+          "MC_HOC_2017_07_Cole_c": "Der Agent muss für dich nur den Weg zur Lore freimachen.",
           "MC_HOC_2017_07_Cole_a": "Um diese Aufgabe zu lösen, musst du herausfinden, was die \"Weg räumen\"-Funktion macht, und diese mit dem kleinen, grünen \"Weg räumen\"-Block aus der Werkzeugkiste so oft wie nötig aufrufen.",
           "MC_HOC_2017_07_Cole_b": "Versuche, Funktionsblöcke mit anderen Blöcken aus der Werkzeugkiste zu kombinieren. So löst du diese Aufgabe."
         },
@@ -2919,7 +2919,7 @@
         },
         "courseB_maze_seq5_2018": {
           "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier auf zu zeichnen.",
-          "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten um diese Aufgabe zu lösen!",
+          "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten, um dieses Rätsel zu lösen!",
           "courseB_maze_seq5_c": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg."
         },
         "courseB_maze_seq5_2019": {
@@ -2941,7 +2941,7 @@
         "courseB_maze_seq6_2018": {
           "courseB_maze_seq6_a": "Dein endgültiger Code sollte drei Bewegungsblöcke enthalten.",
           "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen: Einen Teil mit Seitwärtsbewegungen, den anderen mit Auf- und Abwärtsbewegungen.",
-          "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen.",
+          "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq5_d": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg!"
         },
         "courseB_maze_seq6_2019": {
@@ -3005,7 +3005,7 @@
         "courseB_maze_seq9_2018": {
           "courseB_maze_seq9_a": "Versuche zunächst, alle Schritte auf einem Blatt Papier aufzuschreiben.",
           "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während du es aufbaust.",
-          "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen.",
+          "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq9_d": "Du kommst nicht weiter? Probiere diesen Weg!"
         },
         "courseB_maze_seq9_2019": {
@@ -3603,12 +3603,12 @@
         "courseC_artist_loop1_2019": {
           "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Block darüber!",
           "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!",
-          "": "[empty string]"
+          "": " "
         },
         "courseC_artist_loop1_2020": {
           "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Block darüber!",
           "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!",
-          "": "[empty string]"
+          "": " "
         },
         "courseC_artist_loops1a": {
           "courseC_artist_loops1a_a": "Das ist der erste Block, den du dafür brauchst:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",

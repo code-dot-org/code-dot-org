@@ -265,6 +265,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Бир өзгөрмө экинчисинен кичине же ага барабар экенин текшерет. Туюнтманын сол тарабындагы маани оң тараптагысынан кичине же ага барабар болсо туураны кайтарат.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Оператордон кичине же ага барабар",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_description": "Xтин у даражасын кайтарат",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param0_description": "Негизги сан.",

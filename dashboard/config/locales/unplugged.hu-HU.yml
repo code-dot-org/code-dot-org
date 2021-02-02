@@ -95,7 +95,7 @@ hu:
           nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető
           szerepet.
       BuildingAFoundation:
-        title: Alapozás
+        title: Az alap megépítése
         desc: Diákok építenek egy szerkezet csak a megadott összetevők igénybevételével.
           A szerkezeteknek kell tudni látniuk valamilyen feladatot (érjenek el egy
           bizonyos magasságot vagy kibírjanak egy bizonyos terhet), és a diákok meg
@@ -297,7 +297,7 @@ hu:
         desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról
           online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
       courseC_unplugged_buildingAFoundation:
-        title: Alapozás
+        title: Az alap megépítése
         desc: Diákok építenek egy szerkezet csak a megadott összetevők igénybevételével.
           A szerkezeteknek kell tudni látniuk valamilyen feladatot (érjenek el egy
           bizonyos magasságot vagy kibírjanak egy bizonyos terhet), és a diákok meg

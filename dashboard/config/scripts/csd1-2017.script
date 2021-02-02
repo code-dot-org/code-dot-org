@@ -4,7 +4,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit1"], ["teacherForum", "https://forum.code.org/c/csd1"], ["vocabulary", "https://curriculum.code.org/csd/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit1/standards/"]]
 has_verified_resources true
-has_lesson_plan true
 announcements [{"notice"=>"Are you signed up for the AP exam?", "details"=>"Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Not sure you want to take the test? We've got SIX reasons why you should. Check them out!", "link"=>"", "type"=>"information"}]
 new_name 'csd1-2017'
 family_name 'csd1'
@@ -14,37 +13,37 @@ project_sharing true
 curriculum_umbrella 'CSD'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Pre-survey', display_name: 'CS Discoveries Pre-survey', lockable: true
+lesson 'CS Discoveries Pre-survey', display_name: 'CS Discoveries Pre-survey', lockable: true, has_lesson_plan: false
 level 'csd-pre-survey-2017-levelgroup', assessment: true
 
 lesson_group 'csd1_1', display_name: 'Chapter 1: The Problem Solving Process'
-lesson 'Intro to Problem Solving', display_name: 'Intro to Problem Solving'
+lesson 'Intro to Problem Solving', display_name: 'Intro to Problem Solving', has_lesson_plan: true
 level 'Unit 1 Lesson 1 Overview', named: true
 
-lesson 'The Problem Solving Process', display_name: 'The Problem Solving Process'
+lesson 'The Problem Solving Process', display_name: 'The Problem Solving Process', has_lesson_plan: true
 level 'Unit 1 Lesson 2 Overview', named: true
 
-lesson 'Exploring Problem Solving', display_name: 'Exploring Problem Solving'
+lesson 'Exploring Problem Solving', display_name: 'Exploring Problem Solving', has_lesson_plan: true
 level 'Unit 1 Lesson 3 Overview', named: true
 
 lesson_group 'csd1_2', display_name: 'Chapter 2: Computers and Problem Solving'
-lesson 'What is a Computer?', display_name: 'What is a Computer?'
+lesson 'What is a Computer?', display_name: 'What is a Computer?', has_lesson_plan: true
 level 'Unit 1 Lesson 4 Overview', named: true
 level 'CSD What Makes a Computer a Computer Video', named: true
 
-lesson 'Input and Output', display_name: 'Input and Output'
+lesson 'Input and Output', display_name: 'Input and Output', has_lesson_plan: true
 level 'CSD U1 Lesson 5 Overview', named: true
 
-lesson 'Processing', display_name: 'Processing'
+lesson 'Processing', display_name: 'Processing', has_lesson_plan: true
 level 'CSD U1 Lesson 6 Overview', named: true
 
-lesson 'Storage', display_name: 'Storage'
+lesson 'Storage', display_name: 'Storage', has_lesson_plan: true
 level 'CSD U1 Lesson 7 Overview', named: true
 
-lesson 'Apps and Problem Solving', display_name: 'Apps and Problem Solving'
+lesson 'Apps and Problem Solving', display_name: 'Apps and Problem Solving', has_lesson_plan: true
 level 'CSD U1 Lesson 8 Overview', named: true
 
-lesson 'Project - Propose an App', display_name: 'Project - Propose an App'
+lesson 'Project - Propose an App', display_name: 'Project - Propose an App', has_lesson_plan: true
 level 'CSD U1 Lesson 9 Overview', named: true
 level 'csd-pulse-check-survey-1-levelgroup U1Ch2', progression: 'Reflection', assessment: true
 

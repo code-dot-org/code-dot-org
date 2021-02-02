@@ -13,7 +13,6 @@
         "weblab"
       ],
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/csd-20/unit6/{LESSON}",
       "version_year": "2020",
       "project_sharing": true,

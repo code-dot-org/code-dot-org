@@ -24,11 +24,11 @@ describe('FoormEditor', () => {
     registerReducers({foorm});
 
     server = sinon.fakeServer.create();
-    server.respondWith('POST', '/api/v1/pd/foorm/form_with_library_items', [
-      200,
-      {'Content-Type': 'application/json'},
-      JSON.stringify({})
-    ]);
+    server.respondWith(
+      'POST',
+      '/api/v1/pd/foorm/forms/form_with_library_items',
+      [200, {'Content-Type': 'application/json'}, JSON.stringify({})]
+    );
 
     store = getStore();
 

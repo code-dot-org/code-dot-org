@@ -73,8 +73,12 @@ ro:
   heading_x_of_y: "%{heading} (pagina%{x} din %{y})"
   join_section:
     code:
+      title: Înscrie-te într-o clasă pe Code.ord
       placeholder: Secțiune Cod (ABCDEF)
+      instructions: 'Introdu codul din 6 litere pe care profesorul tău ți l-a distribuit
+        (exemplu: „ABCDEF”) pentru a te înscrie în clasa lui.'
       instructions_short: Introdu codul clasei tale din 6 litere
+      submit: Alătură-te
   add_hint_form:
     placeholder: Te rugăm să introduci indiciul tău aici
     submit: Adaugă sugestie
@@ -103,6 +107,9 @@ ro:
     continue_with: Continuă cu %{provider}
     sign_in_with: Loghează-te cu %{provider}
     signed_in: Înregistrat!
+    signed_out_markdown: "###Te-ai delogat din [Code.org](%{url}."
+    sign_out_of_markdown: "#### Ai folosit %{provider} pentru a te conecta. [Clic
+      aici](%{url}) ca să te deconectezi de la %{provider}."
     already_signedup: Te-ai înscris deja?
     notyet_signedup: Nu te-ai alăturat încă?
     google_oauth2: Google
@@ -122,10 +129,23 @@ ro:
       Va trebui să vă conectați introducând parola mai jos.
     use_clever: Ne pare rău, contul Code.org nu este conectat la furnizorul dvs. %{provider}.
       Vă rugăm să vă conectați prin Portalul dvs. Inteligent.
+    invalid_provider: Ne pare rău, conturile %{provider} nu pot fi legate de conturile
+      Code.org.
+    migration_required: Ne pare rău, nu putem să conectăm sau să deconectăm conturi
+      care folosesc încă experiența contului vechi. Te rugăm sp actualizezi la experiența
+      noului cont.
     unable_to_connect_provider: Nu s-a reușit efectuarea conectării contului dvs.
       Code.org la contul dvs. %{provider}. Vă rugăm să încercați din nou.
+    disconnect_successful: Suces! Am deconectat contul extern din contul tău Code.org.
     already_in_use: Contul dvs %{provider} este deja conectat la alt cont de Code.org.
     already_linked: Contul dvs %{provider} este deja folosit la alt cont de Code.org.
+    existing_account:
+      account_exists: Vești bune! Ai deja un cont Code.org, care folosește %{email}
+      sign_in: Autentifică-te în contul tău existent. Apoi vei putea să conectezi
+        profilul %{provider} tău de pagina Setărilor Contului tău.
+      sign_up: 'Nu este emailul tău? Vrei să creezi un nou ont cu un email diferit?
+        Vei pute, de asemenea, să conectezi profilul tău %{provider} de pagina Setărilor
+        Contului tău dacă alegi să creezi un nou cont. '
   signup_form:
     email_signup: Înregistrează-te cu adresa ta de e-mail
     student_count: "%{count} studenţi s-au înregistrat deja."
@@ -188,6 +208,10 @@ ro:
       mea.
     visit_privacy: Vizitează [Politica de Confidențialitate](%{privacy_url}) pe Code.org  pentru
       mai multe informații.
+    student_terms_markdown: Adresele de emai nu sunt depozitate într-o formă care
+      să ne permită să contactăm studenții. Studenții nu vor primi niciodată emailuri
+      din partea Code.org, decât pentru recuperarea parolelor. Pentru mai multe informații,
+      vezi [privacy policy](http://code.org/privacy).
     additional_information: Mai avem nevoie de câteva informaţii adiționale pentru
       a te putea înscrie.
     user_type_button: Actualizaţi tipul de contul
@@ -214,6 +238,7 @@ ro:
     title: Informații școală (opțional)
     school_country: Țara școlii
     select_school_type: Tipul Școlii
+    charter: Cartă
     private: Privat
     public: Public
     homeschool: Homeschool
@@ -249,6 +274,7 @@ ro:
     login: Loghează-te
     invalid_login: Logare invalidă, vă rugam să reîncercați
     pair_programming: Am un partener la calculatorul meu
+    student_privacy_markdown: Află de ce nu îți vezi numele întreg [here](%{student_privacy_blog}).
   password:
     reset_form:
       title: Ai uitat parola?
@@ -357,6 +383,7 @@ ro:
       professional_learning: Dezvoltare profesională
       documentation: Documentație
       tutorials: Tutoriale
+      web_lab_documentation: Documentația Laboratorului Web
       educate_overview: Prezentare profesor
       educate_elementary: Şcoala elementară
       educate_middle: Gimnaziu
@@ -415,8 +442,10 @@ ro:
       gumball: Minunata lume a lui Gumball
       iceage: Epoca de gheață
       infinity: Infinit
+      makerlab: Creare Kit Unelte
       minecraft_adventurer: Minecraft Adventurer
       minecraft_aquatic: Minecraft Aquatic
+      minecraft_codebuilder: 'Minecraft: Cod Conectare'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft Hero
       playlab: Laborator de Joacă
@@ -467,6 +496,8 @@ ro:
       worked_with: A lucrat cu
       update_lock_settings: Actualizează setările de blocare aici.
       clear_response: Răspuns clar
+    student_code_view_diabled: Codul studentului nu poate fi vizualizat pentru această
+      activitate.
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
     email_confirm_needed_required: 'Adresa ta de e-mail %{email} nu a fost confirmată:'
@@ -527,12 +558,15 @@ ro:
       dvs. (pentru recuperarea parolei)
     update: Actualizaţi contul
     account_successfully_updated: Contul a fost actualizat cu succes.
+    auth_option_saved: Ai reușit să conectezi contul tău %{provider} cu emailul%{email}.
+    auth_option_saved_no_email: Ai reușit să conectezi contul tău %{provider}.
     update_email: Actualizează
     for_parents_and_guardians: Pentru Părinți și Tutori
     link_a_parent_email: Corelați adresa de email a unui părinte/tutore cu acest cont
       pentru a primi actualizări despre progresul și proiectele copilului dv. De asemenea,
       veți putea utiliza această adresă de email pentru recuperarea parolei.
     parent_guardian_email_label: E-mail părinte/tutore
+    remove_parent_email_label: Elimină
     none: Nici unul
     only_one_parent_email_supported_warning: 'Notă: pentru moment, putem accepta doar
       o adresă de email a părintelui/tutorelui pentru un cont de elev'
@@ -581,6 +615,8 @@ ro:
     try_beta_courses: Nou! Încearcă cursurile noastre beta pentru elevi de clasele
       1-5
     use_as_teacher: Foloseşte acest site în calitate de profesor
+    heading_elementary_markdown: "##20 de ore de cursuri pentru # Cunoștințe Fundamentale
+      de Cibernetică (toate vârstele)"
     your_gallery: Galerie
     no_primary_course: Încearcă un curs cu Atelierul de programare
     choose_next_course: Încearcă un curs cu Atelierul de programare alegând unul de
@@ -645,6 +681,8 @@ ro:
     code_from_html: Code.org foloseşte p5.play, care este licenţiat sub <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Susținut de Amazon Web Services
+    google_copyright: "&copy; Google Inc. utilizat cu permisiune. Clasa Google (Google
+      Classrom) este o marcă a Google Inc."
     trademark: "&copy;Code.org, %{current_year}. Code.org&reg;, logo-ul CODE şi Hour
       of Code&reg; sunt mărci comerciale ale Code.org."
     copyright: Drept de autor
@@ -692,6 +730,9 @@ ro:
       gamelab_unsupported_tablet: Laboratorul de jocuri funcționează cel mai bine
         pe un calculator de birou sau laptop cu mouse și tastatură. Este posibil să
         întâmpinați probleme folosind acest instrument pe dispozitivul dvs. curent.
+      oceans_unsupported_browser: Acest browser nu este suportat pentru acest tutorial.
+        Te rugăm să vizitezi această pagină folosind Edgge, Chrome, Firefox sau alt
+        browser modern.
       weblab_unsupported_browser: Din păcate, în prezent, întâmpinăm probleme cu încărcarea
         Laboratorului de web în acest browser. Poate doriți să utilizați un browser
         diferit până când acest lucru este rezolvat. Ne cerem scuze pentru neplăcerile
@@ -831,6 +872,8 @@ ro:
       audience: Vârste 14+
       cta: Află cum
   landing:
+    prerelease_tutorial: Acest tutorial este în **beta**. Se referă la revizuire în
+      momentul primirii de feedback-uri și când se efectuează îmbunătățiri.
     report_bug: Raporteazã eroare
     support: Obţine ajutor
     support_url: "//support.code.org"
@@ -897,6 +940,8 @@ ro:
     open_response_body: Îți mulţumim pentru răspuns!
     correct_title: Corect
     correct_body: Acela este răspunsul corect.
+  lesson_extras:
+    bonus_level: Nivel Bonus
   dialog:
     ok: OK
     startover_title: Ești sigur că vrei să începi din nou?
@@ -911,6 +956,13 @@ ro:
   age_interstitial:
     age: Vârsta ta
     header: Actualizare Informaţii Cont
+    warning: Ne aflăm în proces de actualizare a experienței noastre pentru a-ți oferi
+      protecții de confidențialitate mai puternice. Pentru aceasta, avem nevoie ca
+      utilizatorii existenți să își introducă vârsta aici.
+    disclaimer: Ca de obicei, code.org nu va inchiria, vinde sau distribui niciodată
+      aceste informații cu niciun terț.
+    sign_out_markdown: Dacă nu dorești să dezvălui vârstata, poți [să te deconectezi]
+      (%{url}).
   terms_interstitial:
     title: Actualizeaza termenii de serviciu şi politica de confidenţialitate
     intro_desc: 'Am actualizat termenii şi politica de confidenţialitate, aşa cum
@@ -952,6 +1004,17 @@ ro:
       noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră
       înainte de a accepta în mod explicit actualizarea de termeni.
     review_terms: Revedeţi termenii actualizati
+  donor_interstitial:
+    title: Cursurile tale gratuite de Informatică au fost posibile de către...
+    subtitle: Dorim să mulțumim donatorilor generoși al căror suport a făcut posibil
+      succesul Code.org. Ne angajăm să menținem Code.org gratuit pentru școli și studenți,
+      în general, datorită generozității continue a [donors](%{donors_url}) noștri!
+    local_supporters: Suporteri Locali
+    global_supporters: Suporteri Globali
+    support_codeorg_1: Fiecare dolar donat la Code.org aduce oportunități mai multor
+      studenți.
+    support_codeorg_2: "[Donează acum](%{donate_url}) pentru a susține Code.org."
+    get_started: Începe pe Code.org.
   school_info_interstitial:
     title: Dorim să prezentăm Informatica fiecărui student - ajutați-ne pentru a ne
       putea urmări progresul!
@@ -1071,8 +1134,10 @@ ro:
   peer_review:
     accepted:
       name: Acceptat
+      description_markdown: "**Da**, această prezentare **nu îndeplinește** cerințele"
     rejected:
       name: Respins
+      description_markdown: "**Nu**, această prezentare **nu îndeplinește** cerințele"
     escalated:
       name: Escaladat
       description: Aş dori un instructor pentru a revizui această prezentare
@@ -1155,8 +1220,21 @@ ro:
     timpul să lucrezi la el sau de a revizui raspunsurile.
   hidden_stage: Profesorul tău nu se așteaptă sa fii aici. Te rugăm întreabă-l ce
     lecție ar trebui să urmezi.
+  hidden_script: Profesorl tău nu  se aștepta să fii aici. Te rugăm întreabă-ți profesorul
+    la ce curs trebuia sa fii.
+  no_course_access_student: Nu ai acces la acest curs. Te rugăm întreabă-ți profesorul
+    la ce curs trebuia sa fii.
+  no_course_access_teacher: Nu ai acces la acest curs. Dacă crezi că ar trebui să
+    ai acces la acest curs, te rugăm să scrii la support@code.org, pentru a putea
+    rezolva această situație.
+  no_script_access_student: Nu ai acces în această unitate. Întreabă-ți profesorul
+    în ce unitate ar trebui să fii.
+  no_script_access_teacher: Nu ai acces în ceastă unitate. Dacă crezi că ar trebui
+    să ai acces în această unitate, te rugăm să scrii la support@code.org ca să putem
+    rezolva situația.
   return_unit_overview: Mergi la unitatea de ansamblu
   return_course_overview: Mergi la unitatea de ansamblu
+  view_all_units: Vizualizează toate unitățile
   pd:
     form_labels:
       first_name: Prenume
@@ -1169,7 +1247,29 @@ ro:
       school_city: Orașul în care se află școala
       school_country: Țara școlii
       colombian_school_city: Orașul în care se află școala
+      colombian_school_department: Departament Școlar
+      colombian_school_municipality: Municipiul Școlar
       colombian_school_name: Numele școlii
+      ages: Care este/sunt vârsta/vârstele pentru care predai acest an?
+      subjects: Ce materii predai acest an?
+      resources: Care dintre următoarele resurse de educație cibernetică folosești?
+      robotics: Care dintre următoarele resurse de robotică folosești?
+      workshop_organizer: Organizator de Atelier
+      workshop_facilitator: Facilitator de Atelier
+      workshop_course: Curs Atelier
+      email_opt_in: Putem să îți trimitem email despre proramul internațional, actualizările
+        cursurilor noastre sau alte știri de cibernetică ale Code.org?
+      legal_opt_in: 'Prin depunerea acestui formular, ești de acord să permiți Code.org
+        să distribuie informațiile despre modul în care folosești Code.org și resursele
+        Profesionale de Învățare cu Partenerii Internaționali Code.org în țara ta,
+        districtul tău școlar și cu facilitatorii. Vom distribui informațiile tale
+        de contact, cursurile/unitățile pe care le folosești și datele globale despre
+        clasele cu acești parteneri. Aici intră și numărul de studenți din clasele
+        tale, defalcarea demografică a claselor tale și numele școlii și districtului
+        tău. Nu vom divulga informații despre studenții individuali cu partenerii
+        noști: toate informațiile studenților vor fi deidentificate și totalizate.
+        Partenerii noștri Internaționali și facilitatorii sunt obligați în mod contractual
+        să trateze aceste informații cu același grad de confidențialitate ca și Code.org.'
     form_entries:
       gender:
         male: De sex masculin
@@ -1180,38 +1280,58 @@ ro:
       school_country:
         canada: Canada
         chile: Chile
+        colombia: Columbia
         israel: Israel
         malaysia: Malaezia
         mexico: Mexic
         thailand: Tailanda
       ages:
         ages_under_6: "< 6 ani"
+        ages_7_8: 7-8 ani
+        ages_9_10: 9-10 ani
+        ages_11_12: 11-12 ani
+        ages_13_14: 13-14 ani
+        ages_15_16: 15-16 ani
+        ages_17_18: 17-18 ani
+        ages_19_over: 19+ ani
       subjects:
         cs: Tehnologia computerului si programare
+        ict: ICT
         math: Matematică
         science: Ştiinţă
         history: Istorie / Studii sociale
         la: Limbi
+        efl: Engleza ca Limbă Străină
         music: Muzică
         art: Artă
+        other: 'Altele:'
       resources:
+        bootstrap: |2-
+
+          Sistem cu Buclă(Bootstrap)
         codecademy: CodeCademy
+        csfirst: Google CS First
         khan: Khan Academy
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
+        other: 'Altele:'
       robotics:
         grok: Grok Learning
         kodable: Kodable
+        lego: Educația LEGO
+        microbit: Microbit
         ozobot: Ozobot
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Atelierul minune
+        other: 'Altele:'
       workshop_course:
         csf_af: Fundamentele informaticii (Cursuri A-F)
         csf_express: Fundamentele informaticii (pre-Express sau Express)
         csd: Descoperiri informatice
         csp: Principle Informaticii
+        not_applicable: Nu se aplică
       email_opt_in:
         opt_in_yes: Da
         opt_in_no: Nu
@@ -1226,12 +1346,33 @@ ro:
         internaționali Code.org și 2) sunteți de acord cu utilizarea informațiilor
         dvs. de către partenerul nostru internațional în țara dvs., pentru a ca acesta
         să vă poată ajuta și sprijini în călătoria dumneavoastră ca profesor de informatică.
+      thanks_markdown: 'Mulțumim că ai aplicat! Abia așteptăm să te susținem ca să
+        cunoșți programa și instrumentele Code.org. Te rugăm să continui să distribui
+        întrebările și opiniile tale cu noi, scriindu-ne la [support@code.org](%{support_email_url})
+        sau postând pe  [forumul profesorilor](%{teacher_forum_url})!
+
+'
+      facilitator_not_listed: Facilitatorul meu nu este listat
+      facilitator_not_applicable: Nu se aplică
+      organizer_not_listed: Organizatorul meu nu este listat
     logged_out:
       heading: Vă mulțumim pentru interesul acordat Programului profesional de învățare!
       body: Pentru a începe, trebuie mai întâi să vă conectați la contul Code.org.
         Dacă doriți mai multe informații despre program înainte de a vă începe aplicația,
         vă rugăm consultați <a href="%{url}">Prezentarea generală a programului de
         învățare profesională</a>.
+    not_teacher:
+      body_markdown: Îți mulțumim pentru interesul acordat Programului de învățare
+        Profesională Code.org! Momentan ești conectat(ă) la un cont de student. Te
+        rugăm să creezi un cont de profesor sau [mergi la setările tale de utilizator](%{user_settings})să-ți
+        actualizezi contul de la student la profesor.
+      more_markdown: Dacă ai nevoie de mai multe informații despre program înainte
+        de a începe aplicația ta, te rugăm să verifici [expunerea privind Programul
+        de Învățare Profesională](%{pl_overview}).
+    no_teacher_email:
+      body_markdown: Contul tău nu are o adresă de email. Te rugăm [să viziezi setările
+        contului tău](%{user_registration})să adaugi adresa ta de email înainte de
+        finalizarea acestui formular.
   courses_category: Toate cursurile
   cookie_banner:
     message: Dacă continuați să navigați site-ul nostru sau faceți clic pe " Sunt
@@ -1240,8 +1381,27 @@ ro:
     more_information: Consultaţi Politica de confidenţialitate a Code.org.
     accept: Sunt de acord
   copy: Copiază
+  confirm: Confirmă
+  maker:
+    google_oauth:
+      login_with_google: Autentifică-te la Maker App cu Google
+      enter_code: Introdu codul furnizat când te-ai autentificat prin Google la browserul
+        tău implicit.
+      copy_code: Copiază și lipește acest cod în Maker App pentru a te autentifica
+        la Code.org.
+      error_token_expired: Token-ul a expirat. Te rugăm să te autentifici din nou
+        cu un nou token.
+      error_wrong_provider: Furnizor greșit. Asigură-te că te autentifici cu Google.
+      error_invalid_user: ID utilizator nevalabil. Te rugăm să încerci să te autentifici
+        din nou.
+      error_no_code: Te rugăm să introduci codul tău de autentificare.
+      confirm_login: Selectează „Confirm” pentru a te autentifica cu contul tău de
+        Google.
   parent_email_banner:
     text: "**Sunteți un părinte sau un tutore?** Corelați emailul dv. cu acest cont
       pentru a primi actualizări despre progresul și proiectele copilului dv.!"
     link_your_email: Corelați emailul dv.
     not_now: Nu acum
+  behaviors:
+    this_sprite: acest spirit
+  unit_prefix: Unitate %{n}

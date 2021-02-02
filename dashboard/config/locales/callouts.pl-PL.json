@@ -18,7 +18,7 @@
           "applab_hoc_finish": "Czy ekran stał się zielony? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
         },
         "AppLab Intro 7 - thisOrThatAddButton": {
-          "AppLabHoCFinal11": "Teraz jesteś w Trybie Projektowania."
+          "AppLabHoCFinal11": "Teraz jesteś w trybie projektowania."
         },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "Zmień liczbę tutaj"
@@ -169,10 +169,10 @@
           "Course_4_Artist_Vars_8_a": "Potrzebujesz więcej miejsca?  Przeciągnij ten pasek, aby poszerzyć obszar roboczy."
         },
         "Course 4 Bee 1": {
-          "if_bee_nectar": "Użyj bloku \"if\", aby zdecydować, czy pszczółka powinna zrobić nektar"
+          "if_bee_nectar": "Użyj bloku `if`, aby zdecydować, czy pszczółka powinna zrobić nektar"
         },
         "Course 4 Bee 3": {
-          "if_else_bee": "Użyj bloków \"jeśli\"/ \"w przeciwnym razie\" aby pszczoła mogła zebrać nektar z kwiatu lub zrobić miód."
+          "if_else_bee": "Użyj bloków `jeśli/w przeciwnym razie`, aby pszczoła mogła zebrać nektar z kwiatu lub zrobić miód."
         },
         "Course 4 Bee Params 2": {
           "edit_get_nectar": "Użyj tego przycisku, aby edytować funkcję i zmienić kierunek, w którym pszczółka skręci, aby zebrać nektar."
@@ -698,7 +698,7 @@
           "courseB_maze_seq2_callout1": "Użyj przycisku Krok, by przejść przez program krok po kroku. Pomoże ci to znaleźć błąd!"
         },
         "courseB_maze_seq3": {
-          "courseB_maze_seq3_1": "Szare bloki są z kamienia i nie mogą być wyrzucane."
+          "courseB_maze_seq3_1": "Szare bloki są z kamienia i nie można ich wyrzucić."
         },
         "courseB_playlab_events6": {
           "courseB_playlab_events6_a": "Użyj zielonej strzałki w dół, by zmieniać kierunki."
@@ -997,11 +997,11 @@
         },
         "courseD_maze_ramp3_2019": {
           "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
-          "stone_block_2": "Szare bloki nie mogą być wyrzucane."
+          "stone_block_2": "Szare bloki nie mogą być usunięte."
         },
         "courseD_maze_ramp3_2020": {
           "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
-          "stone_block_2": "Szare bloki nie mogą być wyrzucane."
+          "stone_block_2": "Szare bloki nie mogą być usunięte."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
@@ -1483,6 +1483,9 @@
         },
         "outbreak7": {
           "costumes_callout": "Kliknij, aby utworzyć nowy kostium"
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "Kliknij tutaj, aby zobaczyć jak działa kod!"
         }
       }
     }

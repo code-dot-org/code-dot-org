@@ -333,6 +333,7 @@ describe('entry tests', () => {
             'build/package/css/code-studio.css',
             'style/code-studio/code-studio.scss'
           ],
+          ['build/package/css/lessons.css', 'style/lessons.scss'],
           [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
@@ -564,7 +565,8 @@ describe('entry tests', () => {
     'teacher_dashboard/parent_letter':
       './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
-      './src/sites/studio/pages/teacher_feedbacks/index.js'
+      './src/sites/studio/pages/teacher_feedbacks/index.js',
+    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js'
   };
 
   var internalEntries = {
@@ -711,7 +713,7 @@ describe('entry tests', () => {
 
     'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
     'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
-    'foorm/editor/index': './src/sites/studio/pages/foorm/editor/index.js',
+    'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
     'foorm/misc_survey/new': './src/sites/studio/pages/foorm/misc_survey/new.js'
   };
 

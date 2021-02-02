@@ -1,6 +1,6 @@
 hideable_lessons true
 
-lesson 'Algorithms with Hill Harper', display_name: 'Algorithms with Hill Harper'
+lesson 'Algorithms with Hill Harper', display_name: 'Algorithms with Hill Harper', has_lesson_plan: false
 level 'CodeBreak Episode Placeholder', progression: 'Code Break: Episode 1'
 level 'Episode 1 Instructions', progression: 'Practice'
 level 'CodeBreak E01 Practice', progression: 'Practice'
@@ -8,14 +8,14 @@ level 'Episode 1 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E01 Challenges', progression: 'Challenges'
 level 'Episode 1 Share', progression: 'Share Your Work!'
 
-lesson 'Prototypes with Mark Cuban & Lyndsey Scott', display_name: 'Prototypes with Mark Cuban & Lyndsey Scott'
+lesson 'Prototypes with Mark Cuban & Lyndsey Scott', display_name: 'Prototypes with Mark Cuban & Lyndsey Scott', has_lesson_plan: false
 level 'CodeBreak Episode 2 Placeholder', progression: 'Code Break: Episode 2'
 level 'Episode 2 Instructions', progression: 'Practice'
 level 'Episode 2 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E02 Challenges', progression: 'Challenges'
 level 'Episode 2 Share', progression: 'Share Your Work!'
 
-lesson 'Encryption with Ashton Kutcher & Mia Gil Epner', display_name: 'Encryption with Ashton Kutcher & Mia Gil Epner'
+lesson 'Encryption with Ashton Kutcher & Mia Gil Epner', display_name: 'Encryption with Ashton Kutcher & Mia Gil Epner', has_lesson_plan: false
 level 'CodeBreak Episode 3 Placeholder', progression: 'Code Break: Episode 3'
 level 'Episode 3 Instructions', progression: 'Practice'
 level 'CodeBreak E03 Practice', progression: 'Practice'
@@ -24,7 +24,7 @@ level 'Episode 3 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E03 Int Challenge', progression: 'Challenges'
 level 'Episode 3 Share', progression: 'Share Your Work!'
 
-lesson 'Digital Information with Mike Krieger & Alice Keeler', display_name: 'Digital Information with Mike Krieger & Alice Keeler'
+lesson 'Digital Information with Mike Krieger & Alice Keeler', display_name: 'Digital Information with Mike Krieger & Alice Keeler', has_lesson_plan: false
 level 'CodeBreak Episode 4 Placeholder', progression: 'Code Break: Episode 4'
 level 'Episode 4 Instructions', progression: 'Practice'
 level 'CodeBreak E04 Practice', progression: 'Practice'
@@ -32,7 +32,7 @@ level 'Episode 4 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E04 Challenges', progression: 'Challenges'
 level 'Episode 4 Share', progression: 'Share Your Work!'
 
-lesson 'Simulations & Data with Bill Gates', display_name: 'Simulations & Data with Bill Gates'
+lesson 'Simulations & Data with Bill Gates', display_name: 'Simulations & Data with Bill Gates', has_lesson_plan: false
 level 'CodeBreak Episode 5 Placeholder', progression: 'Code Break: Episode 5'
 level 'Episode 5 Instructions', progression: 'Practice'
 level 'CodeBreak E05 Practice', progression: 'Practice'
@@ -40,7 +40,7 @@ level 'Episode 5 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E05 Challenges', progression: 'Challenges'
 level 'Episode 5 Share', progression: 'Share Your Work!'
 
-lesson 'The Internet with Keegan-Michael Key & Vint Cerf', display_name: 'The Internet with Keegan-Michael Key & Vint Cerf'
+lesson 'The Internet with Keegan-Michael Key & Vint Cerf', display_name: 'The Internet with Keegan-Michael Key & Vint Cerf', has_lesson_plan: false
 level 'CodeBreak Episode 6 Placeholder', progression: 'Code Break: Episode 6'
 level 'Episode 6 Instructions', progression: 'Practice'
 level 'CodeBreak e05 Practice Web lab', progression: 'Practice'
@@ -48,7 +48,7 @@ level 'Episode 6 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E06 Challenges', progression: 'Challenges'
 level 'Episode 6 Share', progression: 'Share Your Work!'
 
-lesson 'Conditionals with Sal Khan & Flo Vaughn', display_name: 'Conditionals with Sal Khan & Flo Vaughn'
+lesson 'Conditionals with Sal Khan & Flo Vaughn', display_name: 'Conditionals with Sal Khan & Flo Vaughn', has_lesson_plan: false
 level 'CodeBreak Episode 7 Placeholder', progression: 'Code Break: Episode 7'
 level 'Episode 7 Instructions', progression: 'Practice'
 level 'courseD_bee_conditionalsVid1_2019', progression: 'If-Else with Bee Practice'
@@ -71,7 +71,7 @@ level 'Episode 7 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E07 Challenges', progression: 'Challenges'
 level 'Episode 7 Share', progression: 'Share Your Work!'
 
-lesson 'Variables with Yara Shahidi & Fuzzy Khosrowshahi', display_name: 'Variables with Yara Shahidi & Fuzzy Khosrowshahi'
+lesson 'Variables with Yara Shahidi & Fuzzy Khosrowshahi', display_name: 'Variables with Yara Shahidi & Fuzzy Khosrowshahi', has_lesson_plan: false
 level 'CodeBreak Episode 8 Placeholder', progression: 'Code Break: Episode 8'
 level 'Episode 8 Instructions', progression: 'Practice'
 level 'courseF_bee_variables_1_2019', progression: 'Variables with Bee'
@@ -86,7 +86,7 @@ level 'Episode 8 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E08 Challenges', progression: 'Challenges'
 level 'Episode 8 Share', progression: 'Share Your Work!'
 
-lesson 'Events with Macklemore & Scott Forstall', display_name: 'Events with Macklemore & Scott Forstall'
+lesson 'Events with Macklemore & Scott Forstall', display_name: 'Events with Macklemore & Scott Forstall', has_lesson_plan: false
 level 'CodeBreak Episode 9 Placeholder', progression: 'Code Break: Episode 9'
 level 'Episode 9 Instructions', progression: 'Practice'
 level 'CourseD_Dance_Party_01', progression: 'Practice'
@@ -105,7 +105,7 @@ level 'Episode 9 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E09 Challenges', progression: 'Challenges'
 level 'Episode 9 Share', progression: 'Share Your Work!'
 
-lesson 'AI with Kat Graham & Cody Simpson', display_name: 'AI with Kat Graham & Cody Simpson'
+lesson 'AI with Kat Graham & Cody Simpson', display_name: 'AI with Kat Graham & Cody Simpson', has_lesson_plan: false
 level 'CodeBreak Episode 10 Placeholder', progression: 'Code Break: Episode 10'
 level 'Episode 10 Instructions', progression: 'Practice'
 level 'CourseF_Oceans_Video_Machine_Learning', progression: 'Practice'
@@ -119,7 +119,7 @@ level 'CourseF_Oceans_Long', progression: 'Practice'
 level 'Episode 10 Challenge Instructions', progression: 'Challenges'
 level 'Episode 10 Share', progression: 'Share Your Work!'
 
-lesson 'Abstraction with Susan Wojcicki & China Anne McClain', display_name: 'Abstraction with Susan Wojcicki & China Anne McClain'
+lesson 'Abstraction with Susan Wojcicki & China Anne McClain', display_name: 'Abstraction with Susan Wojcicki & China Anne McClain', has_lesson_plan: false
 level 'CodeBreak Episode 11 Placeholder', progression: 'Code Break: Episode 11'
 level 'Episode 11 Instructions', progression: 'Practice'
 level 'MC_HOC_2017_01_RETRY_2019', progression: 'Practice'
@@ -138,7 +138,7 @@ level 'Episode 11 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E11 Challenges', progression: 'Challenges'
 level 'Episode 11 Share', progression: 'Share Your Work!'
 
-lesson 'Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya', display_name: 'Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya'
+lesson 'Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya', display_name: 'Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Mineya', has_lesson_plan: false
 level 'CodeBreak Episode 12 Placeholder', progression: 'Code Break: Episode 12'
 level 'Episode 12 Instructions', progression: 'Practice'
 level 'CodeBreak E12 Practice Mike2', progression: 'Practice'

@@ -2595,3 +2595,5 @@ pt-PT:
         content1: descrição
       outbreak_story2:
         content1: descrição
+      outbreak_freeplay_choice:
+        display_name: Atividade livre

@@ -624,8 +624,26 @@ it-IT:
           **Presenta**\n   * Presenta il tuo prodotto finale!\n"
       Begin planning your project_2018_2019:
         content1: descrizione qui
+        markdown: |-
+          # Esempi di progetti
+
+          Stai per iniziare la realizzazione del tuo progetto finale. Prima di partire, dedica un po' di tempo ad osservare alcuni progetti di esempio.
+
+          | Scoiattolo affamato | Storia aliena |
+          |---|---|
+          |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![Scoiattolo affamato (Laboratorio)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Scoiattolo affamato (Laboratorio)"</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![Storia aliena (Laboratorio)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Storia aliena (Laboratorio)"</a>|
+          | Prova ad aggiungere dei suoni a questo gioco! | Prova ad aggiungere un'altra scena a questa storia! |
       Begin planning your project_2018_2019_2020:
         content1: descrizione qui
+        markdown: |-
+          # Esempi di progetti
+
+          Stai per iniziare la realizzazione del tuo progetto finale. Prima di partire, dedica un po' di tempo ad osservare alcuni progetti di esempio.
+
+          | Scoiattolo affamato | Storia aliena |
+          |---|---|
+          |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![Scoiattolo affamato (Laboratorio)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Scoiattolo affamato (Laboratorio)"</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![Storia aliena (Laboratorio)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Storia aliena (Laboratorio)"</a>|
+          | Prova ad aggiungere dei suoni a questo gioco! | Prova ad aggiungere un'altra scena a questa storia! |
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -665,6 +683,12 @@ it-IT:
             AM.png
         content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
           Scegli da una delle opzioni a destra.
+        teacher_markdown: |-
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipi di livello:** Questa domanda a scelta multipla chiede agli studenti di scegliere come visualizzare le intestazioni HTML su una pagina web. Puoi vedere quali studenti hanno risposto correttamente alla domanda andando a quel livello e richiamando il riquadro Insegnante dal lato destro.  Gli studenti che hanno risposto correttamente alla domanda avranno una bolla verde.  Gli studenti hanno tutte le possibilità che vogliono per rispondere correttamente, quindi indovinare e controllare può anche portare ad una risposta corretta.
+
+          <div class="clear"></div>
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Panoramica
@@ -882,11 +906,16 @@ it-IT:
         content1: descrizione qui
       CSD U2 image debug match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
         content1: Abbina il codice HTML buggato con la descrizione del suo bug.
         questions:
         - text: L'attributo 'src' è scritto in modo scorretto.
@@ -894,6 +923,11 @@ it-IT:
         - text: L'estensione file (.jpg) è mancante dall'indirizzo immagine
         - text: L'indirizzo immagine non è dato come attributo 'src'
         - text: C'è uno spazio nel nome del file
+        teacher_markdown: Sebbene questa lezione possa essere utilizzata per valutare
+          la comprensione da parte degli studenti della sintassi del tag `<img>`,
+          il suo scopo principale è quello di rendere gli studenti consapevoli dei
+          tipi più comuni di bug che possono incontrare quando aggiungono immagini
+          alle pagine web.
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -1141,10 +1175,11 @@ it-IT:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+          correct: true
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
       CSD U3 combining rep:
@@ -4185,8 +4220,10 @@ it-IT:
 
       behaviors 1 predict:
         answers:
-        - feedback: Sbagliato.
-        - correct: true
+        - text: Lo sprite girerà
+          feedback: Sbagliato.
+        - text: 'Lo sprite si rimpicciolerà '
+          correct: true
           feedback: Corretto!
         - text: Lo sprite si muoverà.
           feedback: Sbagliato.
@@ -4197,8 +4234,10 @@ it-IT:
             misterioso'. Studia il codice all'interno, poi fai un pronostico.
       behaviors 1 predict_2020:
         answers:
-        - feedback: Sbagliato.
-        - correct: true
+        - text: Lo sprite girerà
+          feedback: Sbagliato.
+        - text: 'Lo sprite si rimpicciolerà '
+          correct: true
           feedback: Corretto!
         - text: Lo sprite si muoverà.
           feedback: Sbagliato.
@@ -5053,6 +5092,8 @@ it-IT:
           feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
             all'ape ad ogni fiore e fare il miele ad ogni nido..
         - text: Non lo so.
+          feedback: La casella "se presso il fiore" fa prendere all'ape il nettare
+            da ogni fiore e creare miele in ogni alveare.
         questions:
         - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
             Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
@@ -5069,6 +5110,8 @@ it-IT:
           feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
             all'ape ad ogni fiore e fare il miele ad ogni nido..
         - text: Non lo so.
+          feedback: La casella "se presso il fiore" fa prendere all'ape il nettare
+            da ogni fiore e creare miele in ogni alveare.
         questions:
         - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
             Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
@@ -6911,19 +6954,52 @@ it-IT:
           style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
           style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
           16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
-          Cosa succederà dopo?\n\nOggi scriverete il codice per creare ed eseguire
+          Cosa succederà dopo?\n\nOggi scriverai il codice per creare ed eseguire
           una **simulazione** dell'epidemia di virus a Monster Town. Una simulazione
           è un modello al computer di un processo o sistema. Impariamo a programmare
           e fare previsioni su ciò che accadrà ai vicini di Monster Town.\n\n<img
           src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
           style=\"float:right; width:15%\">\n\n* *Con che velocità si diffonderà il
           virus?*\n\n* *Si ammaleranno tutti?*\n\n* *In che modo le maschere per il
-          viso saranno d'aiuto?*\n\n\nUna volta terminato, condividete la vostra simulazione
-          con gli altri. Condividete il vostro messaggio su cosa pensate che possiamo
-          fare per aiutare a mantenere gli altri in buona salute quando un virus arriva
+          viso saranno d'aiuto?*\n\n\nUna volta terminato, condividi la tua simulazione
+          con gli altri. Condividi il tuo messaggio su cosa pensi che possiamo fare
+          per aiutare a mantenere gli altri in buona salute quando un virus arriva
           in città. "
       outbreak_story2:
         content1: descrizione qui
+        markdown: "# Epidemia: Pensare come uno scienziato\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nLe simulazioni sono un ottimo modo
+          per imparare cose che possono essere difficili da osservare nel mondo reale.
+          Aiutano gli scienziati a risolvere problemi e testare nuove idee in modo
+          sicuro ed efficiente. La tua simulazione è un modo per mostrare come potrebbe
+          apparire un'epidemia da virus a Monster Town.\n\n## Ripristina e riproduci!\nAnche
+          quando scrivi tu stesso il codice, è impossibile sapere esattamente cosa
+          succederà quando premi esegui. I mostri vagano in modo casuale, quindi non
+          sai se il virus si diffonderà velocemente o lentamente. Ogni volta che modifichi
+          il codice, assicurati di eseguire la simulazione più di una volta. Le cose
+          non succederanno due volte allo stesso modo!\n\n## Raccolta dati\nProva
+          a scrivere le tue osservazioni mentre esegui la simulazione. Puoi contare
+          il numero di mostri che si ammalano o utilizzare un timer per vedere quanto
+          velocemente accadono le cose. Ad esempio, quanto tempo ci vuole di solito
+          perché tutti i mostri si ammalino se nessuno ha la mascherina? \n\n## Fare
+          previsioni\nSe comprendi il tuo modello, puoi usarlo per fare previsioni.
+          Puoi persino modificare il modo in cui viene eseguita la simulazione e indovinare
+          cosa accadrà diversamente. Per esempio:\n* Cosa succederebbe se ci fossero
+          il doppio dei mostri?\n* Cosa succederebbe se i mostri si muovessero a metà
+          della velocità?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Monster Town è come il mondo reale?\nC'è un
+          limite al grado di realismo di qualsiasi modello. \n* Che cosa ha in comune
+          la simulazione dell'epidemia con le epidemie di virus nel mondo reale?\n*
+          Quali sono le differenze?\nDopo aver completato questa attività, discuti
+          queste domande con gli insegnanti o con la tua famiglia!\n\n## Cos'altro
+          possiamo rappresentare?\nHai già creato un modello funzionante dell'epidemia
+          a Monster Town. Quali cose non è possibile riprodurre o mostrare nella simulazione
+          che vorresti fosse possibile? Premi Continua per andare avanti e imparare
+          ancora di più a  rappresentare:\n* Aumentare il numero di mostri nella simulazione\n*
+          Aiutare i mostri a riprendersi dal virus\n* Probabilità, immunità, vaccini
+          e altro!\n\nPuoi anche condividere il tuo modello di simulazione con altri
+          o condividere un messaggio su ciò che pensi che possiamo fare per aiutare
+          a mantenere gli altri in buona salute quando un virus arriva in città. "
       BigEvent-Unplugged:
         markdown: |-
           # Il Grande Evento
@@ -7006,6 +7082,11 @@ it-IT:
           ### Campi Rilevanti
 
           * Tutti
+        markdown: "# Iniziare la tua ricerca\n\nPer scoprire di più su come l'informatica
+          e la programmazione giocano un ruolo nell'intrattenimento, dovrai fare qualche
+          ricerca. Prova a cercare \"Informatica e &#95;&#95;&#95;&#95;&#95;&#95;&#95;\"
+          e prova diversi tipi di intrattenimento come film, televisione, musica,
+          giochi, animazione, moda, ecc. "
       CSD U3 Lesson Overview 1:
         markdown: |-
           # Panoramica
@@ -7140,3 +7221,318 @@ it-IT:
         title: Test Post-Progetto sui Dati e la Società
       outbreak_freeplay_choice:
         display_name: Tempo di giocare
+        description: Hai completato l'esercitazione! Continua ad apportare modifiche
+          o miglioramenti al tuo progetto. Puoi scegliere di continuare a lavorare
+          con gli stessi blocchi o provare una casetta degli attrezzi ampliata.
+      CSD Interactive Animations and Games Post-Project Test:
+        title: Animazioni interattive e giochi Test Post-Project
+      CSD Physical Computing Post-Project Test:
+        title: Test post-progetto di informatica fisica
+      CSD U3 Entertainment_2018_2019:
+        markdown: "# Iniziare la tua ricerca\n\nPer scoprire di più su come l'informatica
+          e la programmazione giocano un ruolo nell'intrattenimento, dovrai fare qualche
+          ricerca. Prova a cercare \"Informatica e &#95;&#95;&#95;&#95;&#95;&#95;&#95;\"
+          e prova diversi tipi di intrattenimento come film, televisione, musica,
+          giochi, animazione, moda, ecc. "
+        teacher_markdown: |-
+          Qui ci sono alcuni siti per introdurre gli studenti al programma.  Questi siti sono generalmente appropriati per la scuola, ma il loro contenuto cambia frequentemente, quindi **suggeriamo fortemente di controllare ogni sito per contenuti inappropriati prima di condividerlo con gli studenti**.
+
+          [key]
+
+          ## Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ### Panoramica
+
+          Questo sito è focalizzato sulle notizie riguardanti la Disney, ma potreste essere sorpresi dal grande ruolo che il CS gioca in tutte le loro diverse forme di intrattenimento. Poiché questo non è un sito focalizzato sul CS, dovrai usare la funzione di ricerca per trovare articoli rilevanti.
+
+          ### Campi rilevanti
+
+          * Film/TV
+          * Animazione
+          * Robotica/Animatronica
+          * Giochi
+
+          ## Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### Panoramica
+
+          Video con una serie di persone che lavorano in diverse aree dell'industria dei giochi, che parlano di quello che fanno.
+
+          ### Campi rilevanti
+
+          * Giochi
+          * Animazione
+          * Arte
+
+          ## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)
+
+          ### Panoramica
+
+          Music Think Tank è un blog rivolto a persone che lavorano nell'industria musicale. Non è un sito specifico di CS, ma cercando "computer science" o "programming" si trovano alcuni articoli interessanti.
+
+          ### Campi rilevanti
+
+          * Musica
+
+          ## Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+          ### Panoramica
+
+          Mentre questo podcast non presenta molto in termini di programmazione professionale formale (come nel caso di persone che lo fanno per vivere), è una grande risorsa per vedere i vari modi in cui i dilettanti stanno creando intrattenimento con il codice.
+
+          ### Campi rilevanti
+
+          * Tutti
+
+          [/key]
+      CSD Web Development Post-Project Test:
+        title: Test post-progetto di sviluppo web
+      Crowdsourcing-Unplugged:
+        markdown: |-
+          # Crowdsourcing
+
+          Guarda come il crowdsourcing, una tecnica di problem-solving comune nell'informatica, può aiutarti a completare un compito insieme come classe in modo più efficiente che se dovessi farlo da solo.
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |-
+          # Progettare per l'accessibilità
+
+          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per persone con disabilità.
+          * Le disabilità includono disabilità fisiche, uditive, visive e molte altre.
+          * Le disabilità sono diverse e hanno un impatto sulle persone in modi diversi, compreso il modo in cui usano la tecnologia come le app per gli smartphone.
+          * Progettare app che siano accessibili alle persone con disabilità rende queste app migliori anche per tutti gli altri!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |-
+          # Progettare per l'accessibilità
+
+          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per persone con disabilità.
+          * Le disabilità includono disabilità fisiche, uditive, visive e molte altre.
+          * Le disabilità sono diverse e hanno un impatto sulle persone in modi diversi, compreso il modo in cui usano la tecnologia come le app per gli smartphone.
+          * Progettare app che siano accessibili alle persone con disabilità rende queste app migliori anche per tutti gli altri!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalFootprint-Unplugged:
+        markdown: |-
+          # La tua Impronta Digitale
+
+          Inserire informazioni su di te online crea un'impronta digitale.
+      DigitalSharing-Unplugged:
+        markdown: |-
+          # Condivisione digitale
+
+          In questa lezione considererai le sfide e i benefici del rispetto della proprietà e del copyright, in particolare negli ambienti digitali.
+      DigitalSharing-Unplugged_2020:
+        markdown: |-
+          # Condivisione digitale
+
+          In questa lezione considererai le sfide e i benefici del rispetto della proprietà e del copyright, in particolare negli ambienti digitali.
+      EnvelopeVariables-Unplugged:
+        markdown: "# Variabili involucro \n\nLe variabili permettono molta libertà
+          nell'informatica. Questa lezione aiuta a spiegare cosa sono le variabili
+          e come possiamo usarle in molti modi diversi."
+      EnvelopeVariables-Unplugged_2020:
+        markdown: "# Variabili involucro \n\nLe variabili permettono molta libertà
+          nell'informatica. Questa lezione aiuta a spiegare cosa sono le variabili
+          e come possiamo usarle in molti modi diversi."
+      ForLoopFun-Unplugged:
+        markdown: |-
+          # Per divertirsi con i loop
+
+          Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
+      ForLoopFun-Unplugged_2020:
+        markdown: |-
+          # Per divertirsi con i loop
+
+          Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
+      GettingLoopy-Unplugged:
+        markdown: |-
+          # Ripetizione
+
+          Questa lezione introduce, nella programmazione, il concetto della ripetizione a ciclo attraverso un'attività di ballo.
+      GettingLoopy-Unplugged_2020:
+        markdown: |-
+          # Ripetizione
+
+          Questa lezione introduce, nella programmazione, il concetto della ripetizione a ciclo attraverso un'attività di ballo.
+      Internet-Unplugged:
+        markdown: |-
+          # Internet.
+
+          Costruisci il tuo Internet in classe usando solo pezzi di carta.
+      Internet-Unplugged_2020:
+        markdown: |-
+          # Internet.
+
+          Costruisci il tuo Internet in classe usando solo pezzi di carta.
+      MoveItMoveIt-Unplugged:
+        markdown: |-
+          # Spostalo, Spostalo
+
+          Usa una mappa e dai comandi per raggiungere l'obiettivo.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |-
+          # Spostalo, Spostalo
+
+          Usa una mappa e dai comandi per raggiungere l'obiettivo.
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |-
+          # I miei amici robot ripetitivi
+
+          Rendete i vostri programmi più brevi usando i loop!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # I miei amici robot ripetitivi
+
+          Rendete i vostri programmi più brevi usando i loop!
+      PicturingData-Unplugged:
+        markdown: |-
+          # Raffigurare dati.
+
+          Usa un progetto Play Lab per raccogliere dati e fare previsioni.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |-
+          # Raffigurare dati.
+
+          Usa un progetto Play Lab per raccogliere dati e fare previsioni.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerOfWords-Unplugged:
+        markdown: |-
+          # Il potere delle parole
+
+          Oggi imparerete cosa fare se qualcuno è cattivo online.
+      PrivatePersonalInformation-Unplugged:
+        markdown: |-
+          # Informazioni private e personali
+
+          Sviluppata dalla Common Sense Education, questa lezione riguarda la differenza tra le informazioni che sono sicure da condividere online e quelle che non lo sono.
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      RelayProgramming-Unplugged:
+        markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
+          insieme per trascrivere dei programmi atti a disegnare immagini. "
+      RelayProgramming-Unplugged_2020:
+        markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
+          insieme per trascrivere dei programmi atti a disegnare immagini. "
+      Social Sleuth_2018_2019:
+        markdown: "# Social Sleuth\n\nAvrai bisogno del <a href=\"https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#\">
+          Foglio di lavoro Social Sleuth </a> per completare questa attività.\n\n##
+          Profili\n\nClicca sull'immagine di ogni profilo per aprirlo.\n\n### FaceSpace\n\n|
+          FaceSpace: Lizzie Dell | FaceSpace: John T | FaceSpace: Haley G. |\n| ---------
+          | ------ | ------ |\n| <a href=\"https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/\"
+          target=\"_blank\"> <img src=\"https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11
+          PM.png\" style=\"width:400px\"> </a> | <a "
+        teacher_markdown: |-
+          #### Social Sleuth
+
+          **Fase 1:** Gli studenti guardano tutte le pagine dei social media fornite su Code Studio. Le pagine rappresentano diversi individui unici, ognuno dei quali ha un account su tre piattaforme di social media. Sono distribuite come segue (non condividerle con gli studenti):
+
+          | FaceSpace | Chirpr | instantframe |
+          | ------------- | --------- | --------- | ------------ |
+          | John Thomas | John T | @johnsnow | johnsnow |
+          | Haley Gutierrez | Haley G | @flyinghail | desertrider |
+          | Lizzie Dell | Lizzie Dell| @lillizard | photolizzie |
+
+
+          **Suggerimento:**
+
+          Agli studenti viene chiesto di scegliere due utenti tra i profili disponibili, ma se hai poco tempo, puoi chiedere agli studenti di completare solo una delle tracce.
+
+          **Fase 2:** Una volta che hanno guardato le pagine, gli studenti cercheranno di capire chi sono i due utenti e di rispondere ad alcune domande dettagliate su di loro. Le domande sulle tracce sono progettate per spingere gli studenti a combinare i dettagli da più piattaforme sociali e a capire che insieme i profili rappresentano informazioni più dettagliate di quelle che gli utenti probabilmente intendono rivelare su se stessi. Alcune domande potrebbero non avere una risposta per tutti gli utenti, o potrebbero avere diversi livelli di dettagli (indirizzo completo per un utente, ma solo una città e uno stato per un altro).
+
+          **Condividete:** Fate condividere alla classe le tracce che hanno sviluppato attraverso l'attività.
+
+          **Discutere:**
+
+          * Quali informazioni sono state più difficili da trovare?
+          * Quali dettagli erano innocui da soli, ma rivelavano informazioni private quando venivano combinati con altri dettagli?
+          * In che modo questo vi fa pensare in modo diverso a ciò che scegliete di pubblicare online?
+      Songwriting-Unplugged:
+        markdown: |-
+          # Scrivereunacanzone.
+
+          Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
+      Songwriting-Unplugged_2020:
+        markdown: |-
+          # Scrivereunacanzone.
+
+          Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
+      TheRightAppMarkdownLevel_2019:
+        markdown: |-
+          # L'App Giusta
+
+          * Tutti usano i computer oggigiorno, specialmente gli smartphone.
+          * Le applicazioni per smartphone, o "app", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.
+          * È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: |-
+          # L'App Giusta
+
+          * Tutti usano i computer oggigiorno, specialmente gli smartphone.
+          * Le applicazioni per smartphone, o "app", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.
+          * È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      courseE_project_exemplars_2019:
+        markdown: |2-
+
+          # Esempi di progetti
+
+          Stai per iniziare il tuo progetto finale. Prima di iniziare, passa un po' di tempo a guardare i progetti di esempio.
+
+          ## Sprite Lab
+
+          | Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |
+          (https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Prova ad aggiungere un testo o un punteggio a questo gioco! | Prova ad aggiungere un testo o un punteggio a questo gioco! |
+
+          ## Artista
+
+          | Pattern (Artista) | Funzione Fiori (Artista) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Diventiamo creativi con i loop annidati! | Diventiamo creativi con le funzioni! |
+      courseF_project_exemplars_2019:
+        markdown: |-
+          # Esempi di progetti
+
+          Stai per iniziare il tuo progetto finale. Prima di iniziare, passa un po' di tempo a guardare i progetti di esempio.
+
+          ## Sprite Lab
+
+          | Gioco del pasticcino (Sprite Lab) | Gioco dell'elicottero (Sprite Lab) |
+          |---|---|
+          | [![#Gioco del pasticcino (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Gioco dell'elicottero (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | Prova ad aggiungere un testo o un punteggio a questo gioco! | Prova ad aggiungere un testo o un punteggio a questo gioco! |
+
+          ## Artista
+
+          | Fiori (Artista) | Spirale (Artista) |
+          |---|---|
+          | [![Fiori (Artista)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spirale (Artista)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Diventiamo creativi con le variabili! | Diventiamo creativi con i For Loop! |
+      csd-post-survey-intro-2019:
+        markdown: |-
+          # CS Discoveries Sondaggio post-corso
+
+          **I vostri input e feedback sono importanti per noi!
+
+          * comprendere la tua esperienza
+          * apportare miglioramenti al corso
+
+          Grazie per aver trovato il tempo di aiutare a rendere CS Discoveries ancora migliore!
+      csf_digital_trails:
+        markdown: |-
+          # Segui la Traccia Digitale
+
+          ## Quali informazioni sono OK da avere nella tua impronta digitale?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Il Mio Vicino Online
+
+          ## Come fai in sicurezza nei posti online?

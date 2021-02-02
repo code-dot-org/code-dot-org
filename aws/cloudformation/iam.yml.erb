@@ -118,13 +118,10 @@ Resources:
             Condition:
               StringNotEquals:
                 cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
-            # Read-only access to current secrets.
+          # Read-only access to secrets.
           - Effect: Allow
             Action: secretsmanager:GetSecretValue
             Resource: '*'
-            Condition:
-              StringEquals:
-                secretsmanager:VersionStage: AWSCURRENT
   # Permissions which grant the CurriculumBuilder project read-only acces to
   # the DCDO database, so select configuration variables can be shared between
   # the two projects.
