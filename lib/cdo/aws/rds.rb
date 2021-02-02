@@ -77,7 +77,8 @@ module Cdo
       CDO.log.info "Done creating database cluster - #{clone_cluster_id}"
     end
 
-    def self.delete_cluster(cluster_id, max_attempts = 20, delay = 60)
+    def self.delete_cluster(cluster_id: nil, max_attempts: 20, delay: 60)
+      raise StandardError.new("CLUSTER_ID environment variable is required.") unless cluster_id
       rds_client = Aws::RDS::Client.new
       begin
         existing_cluster = rds_client.describe_db_clusters({db_cluster_identifier: cluster_id}).db_clusters.first

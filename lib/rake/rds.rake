@@ -19,6 +19,9 @@ namespace :rds do
 
   desc 'Delete CLUSTER_ID'
   task :delete_cluster do
-    Cdo::RDS.delete_cluster(ENV['CLUSTER_ID'])
+    options = {
+      cluster_id: ENV['CLUSTER_ID']
+    }
+    Cdo::RDS.delete_cluster(options.compact)
   end
 end
