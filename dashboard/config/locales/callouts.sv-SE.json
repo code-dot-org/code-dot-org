@@ -390,6 +390,13 @@
         },
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Du kan ändra detta antal."
+        },
+        "outbreak2": {
+          "minitoolbox": "Klicka här för att utöka blocket.",
+          "pointerlocation": "Dra ett subject-block hit."
+        },
+        "outbreak7": {
+          "costumes_callout": "Klicka för att skapa en ny dräkt"
         }
       }
     }

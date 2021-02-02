@@ -17,10 +17,10 @@ lesson_group_description 'This unit begins with an activity that encourages stud
 lesson_group_big_questions '* How does software interact with hardware?
 * How can computers sense and respond to their environment?
 * What kind of information can be communicated with simple hardware outputs?'
-lesson 'Innovations in Computing', display_name: 'Innovations in Computing'
+lesson 'Innovations in Computing', display_name: 'Innovations in Computing', has_lesson_plan: true
 level 'CSDU6 Innovation_2021', progression: 'Innovation Research'
 
-lesson 'Designing Screens with Code', display_name: 'Designing Screens with Code'
+lesson 'Designing Screens with Code', display_name: 'Designing Screens with Code', has_lesson_plan: true
 level 'CSD U6 setProperty predict app_2021', progression: 'Setting Properties'
 level 'CSD U6 setProperty Text_2021', progression: 'Setting Properties'
 level 'CSD U6 setProperty xy_2021', progression: 'Setting Properties', assessment: true
@@ -34,7 +34,7 @@ level 'CSD U6 emotion machine 2_2021', progression: 'Building an App'
 level 'CSD U6 emotion machine 3_2021', progression: 'Building an App'
 level 'CSD U6 emotion machine 4_2021', progression: 'Building an App', assessment: true
 
-lesson 'The Circuit Playground', display_name: 'The Circuit Playground'
+lesson 'The Circuit Playground', display_name: 'The Circuit Playground', has_lesson_plan: true
 level 'CSD U6 hardware software video_2021', progression: 'Hardware and Software'
 level 'CSDU6 Circuit Playground Test_2021', progression: 'Using the LED'
 level 'CSD U6 test LED_2021', progression: 'Using the LED'
@@ -48,11 +48,11 @@ level 'CSD U6 Catch the Mouse_2021', progression: 'LED Apps'
 level 'CSD U6 create LED app_2021', progression: 'LED Apps'
 level 'CSD U6 create LED app 2_2021', progression: 'LED Apps', assessment: true
 
-lesson 'Input Unplugged', display_name: 'Input Unplugged'
+lesson 'Input Unplugged', display_name: 'Input Unplugged', has_lesson_plan: true
 level 'CSDU6 GameLab Input 1_2021', progression: 'Input Examples'
 level 'CSDU6 AppLab Input 1_2021', progression: 'Input Examples'
 
-lesson 'Board Events', display_name: 'Board Events'
+lesson 'Board Events', display_name: 'Board Events', has_lesson_plan: true
 level 'CSDU6 - button LED prediction_2021', progression: 'Board Events'
 level 'CSDU6 - LED buttonL_2021', progression: 'Board Events'
 level 'CSDU6 - LED toggle buttonL up_2021', progression: 'Board Events', assessment: true
@@ -64,7 +64,7 @@ level 'CSDU6 - buzzer duration_2021', progression: 'The Buzzer'
 level 'CSDU6 - buzzer duration buttons_2021', progression: 'The Buzzer'
 bonus 'CSDU6 - board event challenge_2021'
 
-lesson 'Getting Properties', display_name: 'Getting Properties'
+lesson 'Getting Properties', display_name: 'Getting Properties', has_lesson_plan: true
 level 'CSD U6 getProperty Demo_2021', progression: 'Getting Properties'
 level 'CSD U6 getProperty input_2021', progression: 'Getting Properties'
 level 'CSD U6 getProperty dropdown_2021', progression: 'Getting Properties'
@@ -80,7 +80,7 @@ level 'CSD U6 move motorcycle_2021', progression: 'Motorcycle'
 level 'CSD U6 design motorcycle_2021', progression: 'Motorcycle'
 bonus 'CSD U6 challenge motorcycle_2021'
 
-lesson 'Analog Input', display_name: 'Analog Input'
+lesson 'Analog Input', display_name: 'Analog Input', has_lesson_plan: true
 level 'CSD U6 sensor experiment embedded_2021', progression: 'Sensor Experiment'
 level 'CSD U6 analog sound_2021', progression: 'Reading Sensors'
 level 'CSD U6 analog light_2021', progression: 'Reading Sensors'
@@ -94,7 +94,7 @@ level 'CSD U6 analog rbg 2_2021', progression: 'Sensors to Colors'
 level 'CSD U6 analog rgb 3_2021', progression: 'Sensors to Colors', assessment: true
 bonus 'CSD U6 analog challenge_2021'
 
-lesson 'The Program Design Process', display_name: 'The Program Design Process'
+lesson 'The Program Design Process', display_name: 'The Program Design Process', has_lesson_plan: true
 level 'CSD U6 emoji race demo_2021', progression: 'Sample Program'
 level 'CSD U6 tugowar stop_2021', progression: 'Plan Your Project'
 level 'CSD U6 tugowar design 1_2021', progression: 'Screen Design'
@@ -109,7 +109,7 @@ level 'CSD U6 tugowar setProperty_2021', progression: 'Checking for a Winner'
 level 'CSD U6 tugowar buzzer_2021', progression: 'Checking for a Winner', assessment: true
 level 'CSD U6 tugowar final_2021', progression: 'Make it Your Own'
 
-lesson 'Project: Make a Game', display_name: 'Project - Make a Game'
+lesson 'Project: Make a Game', display_name: 'Project - Make a Game', has_lesson_plan: true
 level 'CSD U6 tugowar demo_2021', progression: 'Demo - Bug Grab'
 level 'CSD U6 game project stop_2021', progression: 'Plan Your Project'
 level 'CSD U6 game project screens_2021', progression: 'Screen Design'
@@ -125,7 +125,7 @@ lesson_group_description 'With an understanding of how to use hardware to take i
 lesson_group_big_questions '* How do programmers work with larger amounts of similar values?
 * How can complex real-world information be represented in code?
 * How can simple hardware be used to develop innovative new products?'
-lesson 'Arrays and Color LEDs', display_name: 'Arrays and Color LEDs'
+lesson 'Arrays and Color LEDs', display_name: 'Arrays and Color LEDs', has_lesson_plan: true
 level 'CSD U6 arrays video_2021', progression: 'Video: Introduction to Arrays'
 level 'CSD U6 arrays select predict_2021', progression: 'Introduction to Arrays'
 level 'CSDU6 arrays select rainbow_2021', progression: 'Introduction to Arrays'
@@ -142,7 +142,7 @@ level 'CSD U6 colorLeds light pattern_2021', progression: 'Light Show'
 level 'CSD U6 light pattern off_2021', progression: 'Light Show', assessment: true
 bonus 'CSD U6 light pattern challenge_2021', progression: 'Challenge Levels'
 
-lesson 'Making Music', display_name: 'Making Music'
+lesson 'Making Music', display_name: 'Making Music', has_lesson_plan: true
 level 'CSDU6 circuit playground piano_2021', progression: 'Playing Notes'
 level 'CSDU6 frequency modification_2021', progression: 'Playing Notes'
 level 'CSDU6 frequency creation_2021', progression: 'Playing Notes'
@@ -157,7 +157,7 @@ level 'CDU U6 Playground Sound Board_2021', progression: 'Making Songs', assessm
 bonus 'CSDU6 buzzer 2d arrays_2021'
 bonus 'CSDU6 buzzer.stop_2021'
 
-lesson 'Arrays and For Loops', display_name: 'Arrays and For Loops'
+lesson 'Arrays and For Loops', display_name: 'Arrays and For Loops', has_lesson_plan: true
 level 'CSD U6 for loop click predict_2021', progression: 'Programs that Repeat'
 level 'CSD U6 for loop click exit_2021', progression: 'Programs that Repeat'
 level 'CSD: For Loop_2021', progression: 'Video: For Loops'
@@ -171,7 +171,7 @@ level 'CSD U6 for loop led off_2021', progression: 'For Loops and Color LEDs'
 level 'CSD U6 for loop led color_2021', progression: 'For Loops and Color LEDs'
 level 'CSD U6 for loop led personalize_2021', progression: 'For Loops and Color LEDs', assessment: true
 
-lesson 'Accelerometer', display_name: 'Accelerometer'
+lesson 'Accelerometer', display_name: 'Accelerometer', has_lesson_plan: true
 level 'CSD U6 Airplane predict_2021', progression: 'Orientation'
 level 'CSD U6 investigate orientation_2021', progression: 'Orientation'
 level 'CSD U6 directional leds pitch_2021', progression: 'Orientation'
@@ -182,7 +182,7 @@ level 'CSD U6 goalie_2021', progression: 'Accelerometer Events', assessment: tru
 level 'CSD U6 Driver pt1_2021', progression: 'Accelerometer Events'
 level 'CSD U6 Driver pt 2_2021', progression: 'Accelerometer Events'
 
-lesson 'Functions with Parameters', display_name: 'Functions with Parameters'
+lesson 'Functions with Parameters', display_name: 'Functions with Parameters', has_lesson_plan: true
 level 'CSD U6 params predict_2021', progression: 'Functions with Parameters'
 level 'CSD U6 functions paramters video_2021', progression: 'Functions with Parameters'
 level 'CSD U6 params modify clouds_2021', progression: 'Functions with Parameters'
@@ -200,7 +200,7 @@ level 'CSD U6 params starchaser 5_2021', progression: 'Star Chaser', assessment:
 bonus 'CSD U6 params starchaser challenge 1_2021', progression: 'Star Chaser'
 bonus 'CSD U6 params starchaser challenge 2_2021', progression: 'Star Chaser'
 
-lesson 'Circuits and Physical Prototypes', display_name: 'Circuits and Physical Prototypes'
+lesson 'Circuits and Physical Prototypes', display_name: 'Circuits and Physical Prototypes', has_lesson_plan: true
 level 'CSD U6 circuit logic video_2021', progression: 'Circuits and Logic'
 level 'CSD U6 circuit predict_2021', progression: 'Simple Circuits'
 level 'CSD U6 circuit pinMode_2021', progression: 'Simple Circuits'
@@ -214,7 +214,7 @@ level 'CSD U6 circuit smart bike buzzer_2021', progression: 'Finish the Prototyp
 level 'CSD U6 circuit smart bike light_2021', progression: 'Finish the Prototype'
 level 'CSD U6 circuit smart bike final_2021', progression: 'Finish the Prototype', assessment: true
 
-lesson 'Project: Prototype an Innovation', display_name: 'Project - Prototype an Innovation'
+lesson 'Project: Prototype an Innovation', display_name: 'Project - Prototype an Innovation', has_lesson_plan: true
 level 'CSD U6 final intro_2021', progression: 'Design Your Prototype'
 level 'CSDU6 - final project 1_2021', progression: 'User Interface'
 level 'CSDU6 - final project 2_2021', progression: 'User Interface'
@@ -224,11 +224,11 @@ level 'CSDU6 - final project 4_2021', progression: 'Finishing Touches'
 level 'CSDU6 - final project 6_2021', progression: 'Finishing Touches'
 level 'csd-pulse-check-survey-1-levelgroup U6Ch2_2021', progression: 'Reflection', assessment: true
 
-lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD Physical Computing Post-Project Test_2021', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true, has_lesson_plan: false
 level 'csd-post-survey-intro-2019_2021'
 level 'csd-post-survey-levelgroup_2021', assessment: true
 

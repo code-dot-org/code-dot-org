@@ -8,7 +8,7 @@ describe('ProgressionDetails', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
-      progression: sampleActivities[0].activitySections[2]
+      section: sampleActivities[0].activitySections[2]
     };
   });
 

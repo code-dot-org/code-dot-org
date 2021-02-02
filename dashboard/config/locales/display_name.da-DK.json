@@ -95,7 +95,15 @@
         "Oceans_Video_Machine_Learning": "Video: Maskinlæring",
         "Oceans_Video_Societal_Implications": "Video: Samfundsmæssige implikationer",
         "Oceans_Video_Training_Data": "Video: Træningsdata",
-        "outbreak_freeplay": "Fri leg"
+        "outbreak_freeplay": "Fri leg",
+        "outbreak1": "Virussimulering",
+        "outbreak2": "Virussimulering",
+        "outbreak3": "Virussimulering",
+        "outbreak4": "Ændre din Simulering",
+        "outbreak5": "Kommer sig",
+        "outbreak6": "Tilfældig chance",
+        "outbreak7": "Immunitet og vacciner",
+        "outbreak8": "Del en besked"
       }
     }
   }

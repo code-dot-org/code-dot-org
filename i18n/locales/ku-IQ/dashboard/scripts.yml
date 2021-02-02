@@ -687,6 +687,10 @@ ku:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: گۆڕاوەکان
         csd3-2021:
           lessons:
             Variables:

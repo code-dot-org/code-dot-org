@@ -872,6 +872,7 @@
             '"y"': y-posisjon
             '"direction"': bevegelsesretning
             '"tint"': fargetone
+            '"speed"': fart
       gamelab_getThisSprite:
         options:
           CHOICE:
@@ -1014,6 +1015,13 @@
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnbue
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': undervanns
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': middels
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -1022,6 +1030,7 @@
             '"x"': x-posisjon
             '"y"': y-posisjon
             '"direction"': bevegelsesretning
+            '"speed"': fart
       gamelab_setSizes:
         options:
           PROPERTY:

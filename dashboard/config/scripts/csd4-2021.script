@@ -13,21 +13,21 @@ lesson_group_description 'This chapter introduces the design process as a specif
 lesson_group_big_questions '* How do designers identify the needs of their user?
 * How can we ensure that a user\'s needs are met by our designs?
 * What processes will best allow us to efficiently create, test, and iterate upon our designs?'
-lesson 'Analysis of Design', display_name: 'Analysis of Design'
+lesson 'Analysis of Design', display_name: 'Analysis of Design', has_lesson_plan: true
 
-lesson 'Understanding Your User', display_name: 'Understanding Your User'
+lesson 'Understanding Your User', display_name: 'Understanding Your User', has_lesson_plan: true
 
-lesson 'User-Centered Design 1', display_name: 'User Centered Design   Define and Prepare'
+lesson 'User-Centered Design 1', display_name: 'User Centered Design   Define and Prepare', has_lesson_plan: true
 
-lesson 'User-Centered Design 2', display_name: 'User Centered Design   Try and Reflect'
+lesson 'User-Centered Design 2', display_name: 'User Centered Design   Try and Reflect', has_lesson_plan: true
 
-lesson 'User Interfaces', display_name: 'User Interfaces'
+lesson 'User Interfaces', display_name: 'User Interfaces', has_lesson_plan: true
 
-lesson 'Feedback and Testing', display_name: 'Feedback and Testing'
+lesson 'Feedback and Testing', display_name: 'Feedback and Testing', has_lesson_plan: true
 
-lesson 'Identifying User Needs', display_name: 'Identifying User Needs'
+lesson 'Identifying User Needs', display_name: 'Identifying User Needs', has_lesson_plan: true
 
-lesson 'Project - Paper Prototype', display_name: 'Project - Paper Prototype'
+lesson 'Project - Paper Prototype', display_name: 'Project - Paper Prototype', has_lesson_plan: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch1_2021', progression: 'Reflection', assessment: true
 
 lesson_group 'csd4_2', display_name: 'Chapter 2: App Prototyping'
@@ -35,22 +35,22 @@ lesson_group_description 'This chapter is focused on a long running group projec
 lesson_group_big_questions '* How do teams effectively work together to develop software?
 * What roles beyond programming are necessary to design and develop software?
 * How do designers incorporate feedback into multiple iterations of a product?'
-lesson 'Designing Apps for Good', display_name: 'Designing Apps for Good'
+lesson 'Designing Apps for Good', display_name: 'Designing Apps for Good', has_lesson_plan: true
 
-lesson 'Market Research', display_name: 'Market Research'
+lesson 'Market Research', display_name: 'Market Research', has_lesson_plan: true
 
-lesson 'Exploring UI Elements', display_name: 'Exploring UI Elements'
+lesson 'Exploring UI Elements', display_name: 'Exploring UI Elements', has_lesson_plan: true
 
-lesson 'Paper Prototypes', display_name: 'Build a Paper Prototype'
+lesson 'Paper Prototypes', display_name: 'Build a Paper Prototype', has_lesson_plan: true
 level 'Example App Types_2021', progression: 'Demo Apps'
 level 'CSDU4 Quiz App Demo_2021', progression: 'Demo Apps'
 level 'CSDU4 Decision App Demo_2021', progression: 'Demo Apps'
 level 'CSDU4 List App Demo_2021', progression: 'Demo Apps'
 level 'CSDU4 Crowdsource App Demo_2021', progression: 'Demo Apps'
 
-lesson 'Prototype Testing', display_name: 'Prototype Testing'
+lesson 'Prototype Testing', display_name: 'Prototype Testing', has_lesson_plan: true
 
-lesson 'Digital Design', display_name: 'Design Mode in App Lab'
+lesson 'Digital Design', display_name: 'Design Mode in App Lab', has_lesson_plan: true
 level 'CSDU4 Design Mode Video_2021', progression: 'Build a Screen'
 level 'U4 Model Design 1_2021', progression: 'Build a Screen'
 level 'U4 Model Design 2_2021', progression: 'Build a Screen'
@@ -62,11 +62,11 @@ level 'U4 Model Design 7_2021', progression: 'Finish a Screen', assessment: true
 level 'Design a Screen for your App_2021', progression: 'App Project: Screen Design'
 level 'CSD U4 - Design Mode Project_2021', progression: 'App Project: Screen Design', assessment: true
 
-lesson 'Build a Digital Prototype', display_name: 'Build a Digital Prototype'
+lesson 'Build a Digital Prototype', display_name: 'Build a Digital Prototype', has_lesson_plan: true
 
-lesson 'Events In AppLab', display_name: 'Events in AppLab'
+lesson 'Events In AppLab', display_name: 'Events in AppLab', has_lesson_plan: true
 
-lesson 'Linking Screens', display_name: 'Linking Prototype Screens'
+lesson 'Linking Screens', display_name: 'Linking Prototype Screens', has_lesson_plan: true
 level 'U4 Model Program 1_2021', progression: 'Adding Screens'
 level 'U4 Model Program 1.5_2021', progression: 'Adding Screens'
 level 'U4 Model Program 2_2021', progression: 'Adding Screens'
@@ -77,22 +77,22 @@ level 'U4 Model Program 5_2021', progression: 'Events and Linking Screens', asse
 level 'CSDU4 Project Import_2021', progression: 'Combining Projects'
 level 'CSDU4 Project Events_2021', progression: 'Combining Projects', assessment: true
 
-lesson 'Testing the App', display_name: 'Testing the App'
+lesson 'Testing the App', display_name: 'Testing the App', has_lesson_plan: true
 
-lesson 'Bugs and Features', display_name: 'Bugs and Features'
+lesson 'Bugs and Features', display_name: 'Bugs and Features', has_lesson_plan: true
 level 'CSDU4 Project Bug Feature_2021'
 
-lesson 'Updating Your Prototype', display_name: 'Updating Your Prototype'
+lesson 'Updating Your Prototype', display_name: 'Updating Your Prototype', has_lesson_plan: true
 
-lesson 'Project - App Presentation', display_name: 'Project - App Presentation'
+lesson 'Project - App Presentation', display_name: 'Project - App Presentation', has_lesson_plan: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch2_2021', progression: 'Reflection', assessment: true
 
 lesson_group 'csd5_2', display_name: 'Chapter 2: Solving Data Problems'
-lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD User Centered Design Post-Project Test_2021', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true, has_lesson_plan: false
 level 'csd-post-survey-intro-2019_2021'
 level 'csd-post-survey-levelgroup_2021', assessment: true
 

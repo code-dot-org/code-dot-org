@@ -2033,3 +2033,5 @@ gl-ES:
         - {}
         questions:
         - {}
+      outbreak_freeplay_choice:
+        display_name: Xogo libre

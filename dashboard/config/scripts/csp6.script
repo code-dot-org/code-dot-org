@@ -1,30 +1,29 @@
 login_required true
 hideable_lessons true
 student_detail_progress_view true
-has_lesson_plan true
 curriculum_umbrella 'CSP'
 
-lesson 'Tech Setup - Your AP Digital Portfolio and Other Tools', display_name: 'Tech Setup - Your AP Digital Portfolio and Other Tools'
+lesson 'Tech Setup - Your AP Digital Portfolio and Other Tools', display_name: 'Tech Setup - Your AP Digital Portfolio and Other Tools', has_lesson_plan: true
 level 'U6 AP Performance Task Tech Setup - Student Links', progression: 'U6 AP Performance Task Tech Setup - Student Links'
 
-lesson 'Create PT Prep - Reviewing the Task', display_name: 'Create PT Prep - Reviewing the Task'
+lesson 'Create PT Prep - Reviewing the Task', display_name: 'Create PT Prep - Reviewing the Task', has_lesson_plan: true
 level 'U6 Create PT Review - Student Links', progression: 'U6 Create PT Review - Student Links'
 
-lesson 'Create PT Prep - Making a Plan', display_name: 'Create PT Prep - Making a Plan'
+lesson 'Create PT Prep - Making a Plan', display_name: 'Create PT Prep - Making a Plan', has_lesson_plan: true
 level 'U6 Create PT - Make a Plan - Student Links', progression: 'U6 Create PT - Make a Plan - Student Links'
 
-lesson 'Create PT - Complete the Task', display_name: 'Create PT - Complete the Task'
+lesson 'Create PT - Complete the Task', display_name: 'Create PT - Complete the Task', has_lesson_plan: true
 level 'U6 Create PT - Complete the Task - Student Links', progression: 'U6 Create PT - Complete the Task - Student Links'
 
-lesson 'Explore PT Prep - Reviewing the Task', display_name: 'Explore PT Prep - Reviewing the Task'
+lesson 'Explore PT Prep - Reviewing the Task', display_name: 'Explore PT Prep - Reviewing the Task', has_lesson_plan: true
 level 'U6 Explore PT Review - Student Links', progression: 'U6 Explore PT Review - Student Links'
 
-lesson 'Explore PT - Making a Plan', display_name: 'Explore PT - Making a Plan'
+lesson 'Explore PT - Making a Plan', display_name: 'Explore PT - Making a Plan', has_lesson_plan: true
 level 'U6 Explore PT - Make a Plan - Student Links', progression: 'U6 Explore PT - Make a Plan - Student Links'
 
-lesson 'Explore PT - Complete the Task', display_name: 'Explore PT - Complete the Task'
+lesson 'Explore PT - Complete the Task', display_name: 'Explore PT - Complete the Task', has_lesson_plan: true
 level 'U6 Explore PT - Complete the Task - Student Links', progression: 'U6 Explore PT - Complete the Task - Student Links'
 
-lesson 'Participate in a longitudinal study!', display_name: 'Participate in a longitudinal study!'
+lesson 'Participate in a longitudinal study!', display_name: 'Participate in a longitudinal study!', has_lesson_plan: true
 level 'Click Here!', progression: 'Click Here!'
 

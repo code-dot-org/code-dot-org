@@ -20,7 +20,7 @@ describe('ResourcesEditor', () => {
   });
 
   it('renders default props', () => {
-    const wrapper = shallow(<ResourcesEditor {...defaultProps} />);
+    const wrapper = mount(<ResourcesEditor {...defaultProps} />);
     expect(wrapper.find('tr').length).to.equal(resourceTestData.length + 1);
     expect(wrapper.find('SearchBox').length).to.equal(1);
   });

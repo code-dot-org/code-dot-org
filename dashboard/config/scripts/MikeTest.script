@@ -1,18 +1,18 @@
 professional_learning_course 'Other plc course'
 
-lesson 'Sample Stage', display_name: 'Sample Stage'
+lesson 'Sample Stage', display_name: 'Sample Stage', has_lesson_plan: false
 level 'MikeTest1'
 level 'MikeTest2'
 level 'MikeTest3'
 level 'MikeAssessment1', assessment: true
 level 'bounce_12'
 
-lesson 'Artist Functions', display_name: 'Artist Functions'
+lesson 'Artist Functions', display_name: 'Artist Functions', has_lesson_plan: false
 level '2-3 Artist Functions 12 Mike'
 level '2-3 Artist Free Play'
 level 'Mike Pair Programming'
 
-lesson 'You are a coding STAR', display_name: 'You are a coding STAR'
+lesson 'You are a coding STAR', display_name: 'You are a coding STAR', has_lesson_plan: false
 level 'MikeStarNested'
 level 'MikeStarHard'
 level 'MikeStar'

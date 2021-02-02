@@ -3,7 +3,6 @@ login_required true
 hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-18/post-ap/{LESSON}'
 announcements [{"notice"=>"No Lesson Plans for Chapter 2", "details"=>"Chapter 2 of this unit does not currently have lesson plans available. \"Lesson Plan\" links for that chapter will not work as expected.", "link"=>"", "type"=>"information"}, {"notice"=>"What's Next After High School?", "details"=>"Continue your journey with CS! Explore career and academic pathways, job and mentorship opportunities, and online courses available through our partners.", "link"=>"https://code.org/student/hsgrads", "type"=>"success", "visibility"=>"Student-only"}, {"notice"=>"Computer Science Beyond High School", "details"=>"It's the perfect time to help your students explore their next CS opportunities. These resources can help them explore pathways, internships, and online courses.", "link"=>"https://code.org/student/hsgrads", "type"=>"success", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Student-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csppostap'
@@ -13,17 +12,17 @@ project_sharing true
 tts true
 
 lesson_group 'csp_postap_1', display_name: 'Chapter 1: Manipulating and Visualizing Data'
-lesson 'Intro to Data', display_name: 'Intro to Data'
+lesson 'Intro to Data', display_name: 'Intro to Data', has_lesson_plan: true
 level 'CSP U2L07 SFLP', named: true
 level 'csp-pulse-check-survey-3-levelgroup-U2Ch2_2018', progression: 'Quick Check-In', assessment: true
 
-lesson 'Good and Bad Data Visualizations', display_name: 'Good and Bad Data Visualizations'
+lesson 'Good and Bad Data Visualizations', display_name: 'Good and Bad Data Visualizations', has_lesson_plan: true
 level 'CSP U2L10 SFLP', named: true
 level 'Collection A: Good and Bad Visualizations_2018', progression: 'Collection A: Good and Bad Visualizations', named: true
 level 'Collection B: Good and Bad Visualizations_2018', progression: 'Collection B: Good and Bad Visualizations', named: true
 level 'U2L10 FR why best worst viz_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Making Data Visualizations', display_name: 'Making Data Visualizations'
+lesson 'Making Data Visualizations', display_name: 'Making Data Visualizations', has_lesson_plan: true
 level 'CSP U2L11 SFLP', named: true
 level 'Downloading the Data Set_2018', progression: 'Downloading the Data Set', named: true
 level 'Making a Scatter Plot_2018', progression: 'Making a Scatter Plot', named: true
@@ -33,11 +32,11 @@ level 'Editing Chart Appearance_2018', progression: 'Editing Chart Appearance', 
 level 'U4 - Making Data Visualizations - Free Play_2018', progression: 'Making Data Visualizations - Free Play'
 level 'U2L10 FR describe what you made from lesson prompt_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Discover a Data Story', display_name: 'Discover a Data Story'
+lesson 'Discover a Data Story', display_name: 'Discover a Data Story', has_lesson_plan: true
 level 'CSP U2L12 SFLP', named: true
 level 'U2L12 FR reflection on collaboration_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Cleaning Data', display_name: 'Cleaning Data'
+lesson 'Cleaning Data', display_name: 'Cleaning Data', has_lesson_plan: true
 level 'CSP U2L13 SFLP', named: true
 level 'Getting to Know Your Data_2018', progression: 'Getting to Know Your Data', named: true
 level 'Cleaning Data_2018', progression: 'Cleaning Data', named: true
@@ -45,17 +44,17 @@ level 'Categorizing Data_2018', progression: 'Categorizing Data', named: true
 level 'U2L13 Cleaning Data MC_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L13 FR Reflection data analysis objective_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Creating Summary Tables', display_name: 'Creating Summary Tables'
+lesson 'Creating Summary Tables', display_name: 'Creating Summary Tables', has_lesson_plan: true
 level 'CSP U2L14 SFLP', named: true
 level 'Making Pivot Tables Part 1 - The Basics_2018', progression: 'Making Pivot Tables Part 1 - The Basics', named: true
 level 'Making Pivot Tables Part 2 - Manipulation and Visualization_2018', progression: 'Making Pivot Tables Part 2 - Manipulation and Visualizations', named: true
 level 'U4L08v2 Making Pivot Tables Part 3_2018', progression: 'Making Pivot Tables Part 3'
 level 'U2L14 Summary Tables MC_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Project - Tell a Data Story', display_name: 'Project - Tell a Data Story'
+lesson 'Project - Tell a Data Story', display_name: 'Project - Tell a Data Story', has_lesson_plan: true
 level 'CSP U2L15 SFLP', named: true
 
-lesson 'Chapter 1 Assessment', display_name: 'Chapter 1 Assessment', lockable: true
+lesson 'Chapter 1 Assessment', display_name: 'Chapter 1 Assessment', lockable: true, has_lesson_plan: false
 variants
   level 'csp_affirmation_control_2_2018', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_2_2018', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
@@ -63,7 +62,7 @@ endvariants
 level 'CSP Unit 2 Ch2 Cumulative Assessment MC_2018', assessment: true
 
 lesson_group 'csp_postap_2', display_name: 'Chapter 2: Apps and Databases'
-lesson 'Creating Javascript Objects', display_name: 'Creating Javascript Objects'
+lesson 'Creating Javascript Objects', display_name: 'Creating Javascript Objects', has_lesson_plan: true
 level 'U4L02 Student Lesson Introduction Video_2018'
 level 'U4 - Objects - eventParameter_2018'
 level 'U4 - Objects - dotNotation_2018'
@@ -81,7 +80,7 @@ level 'U4 - Objects - createContactObject_2018'
 level 'U4 - Objects - resetIndexAndShow_2018'
 level 'U4 - Objects - showSampleImage_2018'
 
-lesson 'Permanent Data Storage', display_name: 'Permanent Data Storage'
+lesson 'Permanent Data Storage', display_name: 'Permanent Data Storage', has_lesson_plan: true
 level 'U4L03 Student Lesson Introduction_2018'
 level 'U4 - CreateRecord - 1_2018'
 level 'U4 - CreateRecord - 2_2018'
@@ -96,7 +95,7 @@ level 'U4 - add createRecord to contacts App_2018'
 level 'U4 - fix contacts by hand in data table_2018'
 level 'U4 - last stage test adding contcts_2018'
 
-lesson 'Reading Records', display_name: 'Reading Records'
+lesson 'Reading Records', display_name: 'Reading Records', has_lesson_plan: true
 level 'U4L04 Student Lesson Introduction_2018'
 level 'U4 - Read Record - 1_2018'
 level 'U4 - Read Record - 1.2_2018'
@@ -110,7 +109,7 @@ level 'U4 - Read Record - Local vs Remote Data External_2018'
 level 'U4 - ReadRecords - Contacts App 2_2018'
 level 'U4 - ReadRecords - Contacts App 3_2018'
 
-lesson 'Deleting Records', display_name: 'Deleting Records'
+lesson 'Deleting Records', display_name: 'Deleting Records', has_lesson_plan: true
 level 'U6 - deleteRecord - Student Introduction_2018'
 level 'U4 - Unique Ids Explanation_2018'
 level 'U4 - deleteRecords 0_2018'
@@ -119,7 +118,7 @@ level 'U4 - deleteRecords 2 delete object_2018'
 level 'U4 - ReadRecords - Contacts App 4_2018'
 level 'U4 - ReadRecords - Contacts App 5 make delete work_2018'
 
-lesson 'Updating Records', display_name: 'Updating Records'
+lesson 'Updating Records', display_name: 'Updating Records', has_lesson_plan: true
 level 'U6 - updateRecord - Student Introduction_2018'
 level 'U6 - updateRecord - Default Block_2018'
 level 'U6 - updateRecord - Callback Success Parameter_2018'
@@ -128,14 +127,14 @@ level 'U6 - updateRecord - Contacts - Edit UI_2018'
 level 'U6 - updateRecord - Contacts - Edit event handler_2018'
 level 'U6 - updateRecord - Contacts - Save edited contact_2018'
 
-lesson 'Importing and Exporting Data', display_name: 'Importing and Exporting Data'
+lesson 'Importing and Exporting Data', display_name: 'Importing and Exporting Data', has_lesson_plan: true
 level 'U6 - ImportExport - Student Introduction_2018'
 level 'U4 - Charts - Import Data 1_2018'
 level 'U4 - Charts - Import Data 2_2018'
 level 'U4 - Charts - Remixing Apps with Data_2018'
 level 'U4 - Charts - Export Data_2018'
 
-lesson 'Visualizing Data', display_name: 'Visualizing Data'
+lesson 'Visualizing Data', display_name: 'Visualizing Data', has_lesson_plan: true
 level 'U6 - Charts - Student Introduction_2018'
 level 'U4 - Charts - drawChartFromRecords 1_2018'
 level 'U4 - Charts - Scatter Chart_2018'
@@ -144,18 +143,18 @@ level 'U4 - Charts - Line Chart 2_2018'
 level 'U4 - Charts - drawChartFromRecords Options 1_2018'
 level 'U4 - Charts - drawChartFromRecords Options 2_2018'
 
-lesson 'Sample Apps', display_name: 'Sample Apps'
+lesson 'Sample Apps', display_name: 'Sample Apps', has_lesson_plan: true
 level 'U6 - Sample Apps - Student Introduction_2018'
 level 'U6 - Sample Apps - User Login_2018'
 level 'U6 - Sample Apps - Class Survey_2018'
 level 'U6 - Sample Apps - Clicker Game_2018'
 level 'U6 - Sample Apps - Flashcards_2018'
 
-lesson 'Final Project', display_name: 'Final Project'
+lesson 'Final Project', display_name: 'Final Project', has_lesson_plan: true
 level 'U6 - Final Project - Student Introduction_2018'
 level 'U6 - Final Project - Project Level_2018'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: true
 level 'csp-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true
 

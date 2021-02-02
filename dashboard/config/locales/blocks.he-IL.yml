@@ -1007,6 +1007,7 @@ he:
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
             '"tint"': גוון
+            '"speed"': מהירות
       gamelab_getThisSprite:
         text: "{CHOICE} דמות"
         options:
@@ -1141,6 +1142,8 @@ he:
             '"West"': מערבה
       gamelab_moveToward:
         text: הזז {SPRITE} פיקסלים {DISTANCE} לכיוון {TARGET}
+      gamelab_newSpritePointer:
+        text: לחץ {SPRITE}
       gamelab_objectSpritePointer:
         text: לחץ {SPRITE}
       gamelab_playSound:
@@ -1193,6 +1196,13 @@ he:
             undefined: אף אחד
       gamelab_setBackgroundImageAs:
         text: להגדיר רקע ל {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': בינוני
+            '100': large
       gamelab_setProp:
         text: הגדיר {SPRITE} {PROPERTY} כדי {VAL}
         options:
@@ -1202,6 +1212,7 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
+            '"speed"': מהירות
       gamelab_setSizes:
         text: הגדר  {PROPERTY} של  {SPRITE}  ל {N}%
         options:
@@ -1299,6 +1310,8 @@ he:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": לא דגים
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": התווית שלי
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": לא התווית שלי
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

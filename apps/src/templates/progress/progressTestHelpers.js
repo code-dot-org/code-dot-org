@@ -28,6 +28,8 @@ export const fakeLevel = overrides => {
   return {
     id: levelNumber.toString(),
     status: LevelStatus.not_tried,
+    levelNumber: levelNumber,
+    bubbleText: levelNumber.toString(),
     url: `/level${levelNumber}`,
     name: `Level ${levelNumber}`,
     ...overrides

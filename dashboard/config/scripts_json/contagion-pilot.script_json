@@ -1,0 +1,565 @@
+{
+  "script": {
+    "name": "contagion-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"
+        ]
+      ],
+      "peer_reviews_to_complete": 0
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "contagion-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "contagion",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Contagion"
+      },
+      "seeding_key": {
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "how things spread",
+      "name": "How Things Spread",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "how things spread",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "key": "contagion simulator setup",
+      "name": "Contagion Simulator Setup",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "key": "sometimes but not always",
+      "name": "Sometimes, but Not Always",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "sometimes but not always",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "key": "modifying your model",
+      "name": "Modifying Your model",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "key": "telling a data story",
+      "name": "Telling a Data Story",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "telling a data story",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "How Things Spread",
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "how things spread",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_lesson1_markdown"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Welcome to Monster Town",
+        "level_keys": [
+          "contagion_story"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_story"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_story"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Creating a Simulation",
+        "level_keys": [
+          "contagion_setup"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_setup"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_setup"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Programming Our Rules",
+        "level_keys": [
+          "contagion_events"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_events"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_events"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Slowing the Contagion with Masks",
+        "level_keys": [
+          "contagion_masks"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_masks"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_masks"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Collecting Data",
+        "level_keys": [
+          "contagion_data"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_data"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_data"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Sometimes, but Not Always",
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "sometimes but not always",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_lesson1_markdown"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Thinking Like a Scientist",
+        "level_keys": [
+          "contagion_scientist"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_scientist"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_scientist"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Recovery",
+        "level_keys": [
+          "contagion_recovery"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_recovery"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_recovery"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Chance",
+        "level_keys": [
+          "contagion_chance"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_chance"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Vaccines",
+        "level_keys": [
+          "contagion_vaccine"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_vaccine"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_vaccine"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Telling a Data Story",
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "telling a data story",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_lesson1_markdown"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "contagion_lesson1_markdown",
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "how things spread",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_story",
+        "script_level.level_keys": [
+          "contagion_story"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_setup",
+        "script_level.level_keys": [
+          "contagion_setup"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_events",
+        "script_level.level_keys": [
+          "contagion_events"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_masks",
+        "script_level.level_keys": [
+          "contagion_masks"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_data",
+        "script_level.level_keys": [
+          "contagion_data"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_lesson1_markdown",
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "sometimes but not always",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_scientist",
+        "script_level.level_keys": [
+          "contagion_scientist"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_recovery",
+        "script_level.level_keys": [
+          "contagion_recovery"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_chance",
+        "script_level.level_keys": [
+          "contagion_chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_vaccine",
+        "script_level.level_keys": [
+          "contagion_vaccine"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_lesson1_markdown",
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "telling a data story",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
+  ]
+}

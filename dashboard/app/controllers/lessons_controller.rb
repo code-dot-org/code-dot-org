@@ -18,6 +18,7 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1
   def show
+    raise CanCan::AccessDenied.new("cannot view lesson #{@lesson.id} because it does not have a lesson plan") unless @lesson.has_lesson_plan
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
@@ -42,15 +43,28 @@ class LessonsController < ApplicationController
       end
     end
 
-    resources = (lesson_params['resources'] || []).map {|key| Resource.find_by_key(key)}
+    resources = []
+    vocabularies = []
+    course_version = @lesson.script.get_course_version
+    if course_version
+      resources = (lesson_params['resources'] || []).map {|key| Resource.find_by(course_version_id: course_version.id, key: key)}
+      vocabularies = (lesson_params['vocabularies'] || []).map {|key| Vocabulary.find_by(course_version_id: course_version.id, key: key)}
+    end
     ActiveRecord::Base.transaction do
       @lesson.resources = resources.compact
-      @lesson.update!(lesson_params.except(:resources, :objectives, :original_lesson_data))
+      @lesson.vocabularies = vocabularies.compact
+      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :original_lesson_data))
       @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
+
+      if @lesson.lockable
+        msg = "The last level in a lockable lesson must be a LevelGroup and an assessment."
+        raise msg unless @lesson.script_levels.last.assessment && @lesson.script_levels.last.level.type == 'LevelGroup'
+      end
     end
 
     if Rails.application.config.levelbuilder_mode
+      @lesson.script.fix_lesson_positions
       @lesson.script.reload
 
       # This endpoint will only be hit from the lesson edit page, which is only
@@ -87,14 +101,17 @@ class LessonsController < ApplicationController
       :unplugged,
       :creative_commons_license,
       :lockable,
+      :has_lesson_plan,
       :purpose,
       :preparation,
       :announcements,
       :resources,
+      :vocabularies,
       :objectives
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
+    lp[:vocabularies] = JSON.parse(lp[:vocabularies]) if lp[:vocabularies]
     lp
   end
 end

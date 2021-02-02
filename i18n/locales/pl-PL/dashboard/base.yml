@@ -554,7 +554,7 @@ pl:
     art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone.<br /> Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone.<br /> Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone.<br /> Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone.<br /> Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone.<br /> Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.<br /> The Amazing World of Gumball jest znakiem towarowym i &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. The Amazing World of Gumball jest znakiem towarowym &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org używa p5.play, który ma licencję <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
-    powered_by_aws: 'Zasilany przez Amazon Web Services'
+    powered_by_aws: "Amazon Web Services i logo “Powered by AWS” są znakami towarowymi Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych krajach.\n"
     built_on_github: 'Oparty na GitHub firmy Microsoft'
     google_copyright: '&Kopiuj; Google Inc. wykorzystane za zgodą. Google Classroom to znak towarowy firmy Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour of Code&reg; są znakami handlowymi Code.org.'
@@ -814,7 +814,7 @@ pl:
     save: "Zapisz"
   race_interstitial:
     title: "Opcjonalnie: Pomóż nam śledzić nasze postępy na drodze do poprawy różnorodności w informatyce"
-    message: "Określ swoja przynależność rasową (zaznacz wszystko, co dotyczy Ciebie)"
+    message: "Podaj nam swoją rasę lub pochodzenie etniczne (zaznacz wszystkie pasujące odpowiedzi) "
     races:
       white: "Biały"
       black: "Murzyn lub Afroamerykanin"
@@ -1093,6 +1093,7 @@ pl:
       copy_code: 'Prosimy o skopiowanie i wklejenie tego kodu do Maker App, aby zalogować się na Code.org.'
       error_token_expired: 'Token wygasł. Prosimy o ponowne zalogowanie, aby uzyskać nowy token.'
       error_wrong_provider: 'Niewłaściwy dostawca. Prosimy sprawdzić, czy logujesz się za pośrednictwem Google.'
+      error_no_linked_google: 'Wróć do aplikacji Maker App i użyj przycisku „Zaloguj się” w prawym górnym rogu, aby się zalogować, lub kliknij przycisk Wstecz, aby zalogować się z innym kontem Google '
       error_invalid_user: 'Nieważny identyfikator użytkownika. Prosimy spróbować zalogować się ponownie.'
       error_no_code: 'Prosimy wpisać swój kod logowania.'
       confirm_login: "Wybierz Potwierdź, aby zalogować się ze swoim kontem Google.\n"

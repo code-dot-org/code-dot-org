@@ -148,6 +148,7 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+            '"speed"': speed
       gamelab_getTime:
         options:
           UNIT:
@@ -194,10 +195,18 @@ ne:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': पनि
               मुनि
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': चिसो
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medium
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': size
+            '"speed"': speed
       gamelab_setSizes:
         options:
           PROPERTY:

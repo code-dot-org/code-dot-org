@@ -969,6 +969,7 @@ ms:
             '"rotation"': putaran
             '"direction"': arah pergerakan
             '"tint"': warna
+            '"speed"': kelajuan
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1091,6 +1092,8 @@ ms:
             '"West"': Barat
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} ke arah {TARGET}
+      gamelab_newSpritePointer:
+        text: mengklik {SPRITE}
       gamelab_objectSpritePointer:
         text: mengklik {SPRITE}
       gamelab_playSound:
@@ -1149,6 +1152,7 @@ ms:
             '"scale"': saiz
             '"rotation"': putaran
             '"direction"': arah pergerakan
+            '"speed"': kelajuan
       gamelab_setSizes:
         text: Set {SPRITE} {PROPERTY} Untuk {N}%
         options:
@@ -1244,6 +1248,8 @@ ms:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": bukan ikan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": saya-label
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": bukan saya-label
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

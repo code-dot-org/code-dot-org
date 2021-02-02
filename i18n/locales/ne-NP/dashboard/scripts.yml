@@ -53,6 +53,7 @@ ne:
               name: 'Play Lab: Create a Story'
             The Big Event:
               name: The Big Event
+          student_description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
         course2:
           title: Course 2
           description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
@@ -97,6 +98,7 @@ ne:
               name: The Big Event
             Your Digital Footprint:
               name: Your Digital Footprint
+          student_description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
         course3:
           title: Course 3
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
@@ -145,6 +147,7 @@ ne:
               name: 'Play Lab: Create a Game'
             'Studio: Create a Story':
               name: 'Play Lab: Create a Story'
+          student_description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
@@ -152,6 +155,7 @@ ne:
           lessons:
             Play Lab:
               name: Play Lab
+          student_description: Create a story or make a game with Play Lab!
         artist:
           title: Artist
           description: Draw cool pictures and designs with the Artist!
@@ -159,6 +163,7 @@ ne:
           lessons:
             Artist:
               name: Artist
+          student_description: Draw cool pictures and designs with the Artist!
         hourofcode:
           title: Classic Maze
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
@@ -166,6 +171,7 @@ ne:
           lessons:
             Maze:
               name: Maze
+          student_description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -173,6 +179,7 @@ ne:
           lessons:
             Artist:
               name: Artist
+          student_description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
         course4:
           title: Course 4
           description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
@@ -223,6 +230,7 @@ ne:
               name: 'Unplugged: Songwriting with Parameters'
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrams'
+          student_description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
         Course4pre:
           title: Course 4 Prerequisite
           description: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -246,6 +254,7 @@ ne:
               name: 'Farmer: While Loops'
             'Maze: Sequence':
               name: 'Maze: Sequence'
+          student_description: A brief rampup of concepts for students who have not taken Course 2 and 3.
         usability:
           lessons:
             Binary:
@@ -269,6 +278,7 @@ ne:
           lessons:
             Infinity:
               name: Infinity
+          student_description: Use Play Lab to create a story or game starring Disney Infinity characters.
         algebrademo:
           lessons:
             The Design Recipe:
@@ -325,6 +335,7 @@ ne:
               name: The Maze
             Wrap-up:
               name: Wrap-up
+          student_description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
         edit-code:
           lessons:
             Play Lab:
@@ -346,6 +357,7 @@ ne:
               name: Eval
             Studio:
               name: स्टुडियो
+          student_description: कार्य 
         flappy:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
@@ -353,6 +365,7 @@ ne:
           lessons:
             Flappy Code:
               name: Flappy Code
+          student_description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
         jigsaw:
           title: Jigsaw
           description: Try our Jigsaw tutorial
@@ -360,6 +373,7 @@ ne:
           lessons:
             Jigsaw:
               name: Jigsaw
+          student_description: Try our Jigsaw tutorial
         step:
           title: Step
           description: Step tutorial
@@ -367,6 +381,7 @@ ne:
           lessons:
             Step:
               name: Step
+          student_description: Step tutorial
         Hour of Code:
           title: Hour of Code 2013
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
@@ -374,6 +389,7 @@ ne:
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
+          student_description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -523,6 +539,7 @@ ne:
           lessons:
             Ice Age Play Lab:
               name: Ice Age Play Lab
+          student_description: Create a story or make a game with Ice Age Play Lab!
         cspunit3temp:
           lessons:
             While Loops:
@@ -534,6 +551,7 @@ ne:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+          student_description: Create a story or make a game with Gumball Play Lab!
         starwars:
           title: 'Star Wars: Building a Galaxy With Code'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -541,6 +559,7 @@ ne:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -548,6 +567,7 @@ ne:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         mc:
           title: Minecraft Hour of Code
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
@@ -555,6 +575,7 @@ ne:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
         ScienceP3OLPT3:
           lessons:
             Wrap-Up:
@@ -766,6 +787,7 @@ ne:
           lessons:
             Bounce:
               name: Bounce
+          student_description: Choose your team and make a basketball game
         csd2-2017:
           lessons:
             Peer Review:
@@ -787,6 +809,7 @@ ne:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code Designer
+          student_description: Program animals and other Minecraft creatures in your own version of Minecraft.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -873,6 +896,7 @@ ne:
           title: Code your own sports game
           description_short: Mix and match across sports
           description: Mix and match across sports
+          student_description: Mix and match across sports
         2016_sciencePD-phase2b:
           lessons:
             Wrap-Up:
@@ -1892,6 +1916,9 @@ ne:
               display_name: Overview
             content:
               display_name: Content
+          lessons:
+            Focus Area 1:
+              name: Curriculum
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2258,6 +2285,12 @@ ne:
           lesson_groups:
             lg_1:
               display_name: Content
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Introduction
+            lessonGroup-3:
+              display_name: Variables
         csd3-2021:
           lessons:
             Variables:
@@ -2413,9 +2446,6 @@ ne:
             csf_events:
               display_name: कार्य 
         csf-2021-pilot:
-          lessons:
-            lesson-1:
-              name: Envelope Variables
           lesson_groups:
             ramp_up:
               display_name: Introduction

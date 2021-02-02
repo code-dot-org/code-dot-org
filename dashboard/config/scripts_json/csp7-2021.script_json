@@ -12,7 +12,8 @@
       "has_verified_resources": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -52,6 +53,7 @@
       "name": "Parameters and Return Explore",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "Students work with envelopes and paper to model functions with parameters and return values. Students create their own physical function envelope for drawing a house that takes in different parameters, and then build another function to calculate and return the cost of building that house.  ",
@@ -80,6 +82,7 @@
       "name": "Parameters and Return Investigate",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "In this lesson students work with partners to investigate two different apps that use parameters and return values. Students are also introduced to the mod operator as part of one of the apps that they use. ",
@@ -108,6 +111,7 @@
       "name": "Parameters and Return Practice",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "Students practice writing programs with parameters and return values by creating and debugging functions that use them.",
@@ -136,6 +140,7 @@
       "name": "Parameters and Return Make",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
         "overview": "Students use the knowledge and skills they've developed working with parameters and return values to develop a Rock Paper Scissors App. Unlike typical Make projects, students are given a significant portion of the starter code but are given three functions with parameters and return values that they'll need to develop themselves. At the end students submit their apps which can be assessed using a provided rubric.",
@@ -164,6 +169,7 @@
       "name": "Libraries Explore",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
         "overview": "Students learn the basics of libraries while building upon the envelope model of a function with a folder to represent a library. ",
@@ -192,6 +198,7 @@
       "name": "Libraries Investigate",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "overview": "In this lesson students work with partners to investigate two apps that use libraries as well as the code used to make a library. Through a series of guided discussions they learn how libraries help programmers simplify and reuse their code.",
@@ -220,6 +227,7 @@
       "name": "Libraries Practice",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
         "overview": "Students practice important skills for working with libraries, including testing and debugging libraries, and using libraries to help develop apps. After a brief introduction to these practices by the teacher, students spend the majority of their time programming in a level progression.",
@@ -248,6 +256,7 @@
       "name": "Project   Make a Library Part 1",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "In this lesson students begin a multi-day project designing a library of functions. Students will brainstorm common problems they've encountered while programming this year and begin to design functions that address those common problems.",
@@ -276,6 +285,7 @@
       "name": "Project   Make a Library Part 2",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
         "overview": "Students continue to develop their library of functions. Students are encouraged to begin developing tests for their functions to make sure they return values as expected. Late in the lesson students exchange their library with a classmate for feedback.",
@@ -304,6 +314,7 @@
       "name": "Project   Make a Library Part 3",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "Students complete their library project, finalizing their code and writing written responses explaining the way one of the functions in their library works.",
@@ -332,7 +343,8 @@
       "name": "Assessment Day",
       "absolute_position": 11,
       "lockable": true,
-      "relative_position": 1,
+      "has_lesson_plan": true,
+      "relative_position": 11,
       "properties": {
         "overview": "Students complete a multiple choice assessment which covers the unit topics. ",
         "student_overview": "Students complete a multiple choice assessment which covers the unit topics. ",
@@ -984,7 +996,7 @@
       "key": "0a9e16b9-e27e-4ef3-a1a4-ecbaba11b800",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:** Use the activity slides for this lesson to guide the unplugged activity on Functions with Parameters and Return. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries19.svg){: style=\"border:1px solid black; width:200px\"} | **Distribute:** large and small sticky notes and envelopes. Hold off on distributing the Activity Guide until later in the activity. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries2.svg){: style=\"border:1px solid black; width:200px\"} | **Say:** Let's pretend that I want to make a cake. I need to decide how many tiers the cake will have, and what flavor the cake will be. I've decided to make a 3 tiered cake.<br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries3.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** If I flip over the envelope, and open it up there's a recipe inside. This recipe is going to tell me how to make the cake I've specified. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries4.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** To do this, I'm going to replace `tiers` with `3` and `flavor` with `lemon`, every time those words show up in the recipe. But notice - this recipe is pretty general. I could use it to make lots of different types and sizes of cake. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** Read through the recipe as a class. Make sure everyone understands how it works before moving on. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries5.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** Ok, let's make our cake. Remember, each time I come across `tiers` or `flavor`, I'm going to replace that word with the appropriate value. Once I'm done, I will have baked a 3 layer lemon cake! <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** There are several steps to click through here. Take it slow so students can see each part. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries6.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** This is a function! It should look familiar, but it has a few extra parts. This function has parameters. Parameters are used as plaeholders for values that will be passed through the function. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Those values passed to the parameter are called arguments. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries7.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** Let's think through how changing the arguments affects the output. Now I want a four layer chocolate cake. With a partner, discuss what my arguments will look like. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** I pass through the arguments `4` and `chocolate` to the parameters `tiers` and `flavor`. Then my function is ready. What will my cake look like? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries8.svg){: style=\"border:1px solid black; width:200px\"}|**Do This:** Distribute Activity Guides and direct students to Challenge #1. Students will create their own function envelopes and write a simple function that uses parameters which can be used to draw a house. When students are finished building their function envelopes, a partner tests out the code and draws the house on a spare sticky note. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries9.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** Here's another function. This function is used to calculate the total cost of making a cake. Take note again of the arguments and parameters. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**   |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries10.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** Let's open the envelope and check out how this function works. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries11.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** There are a few new things here. First, we've created two local variables. Remember, the local variables are contained within the function and can't be updated or accessed outside of the function. We learned about this when we discussed variable scope. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> In this function, a decision (in this case, how much to charge per flavor) is made based on the argument passed through the parameter. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> Finally, the total is returned, but returned where? What does that mean? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**  |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries12.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** Before we talk more about that return, let's calculate the total cost of our original cake. <br><br> **Do This:** With a partner, determine what `flavorCost` and `total` equal after the function is run. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries13.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** Now let's think about the return. If the program hits a return at any point in running a function, it will stop and a value will be \"returned\". Where is it returned? To the place in the program where the function was called.  |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries20.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** So to get back to our example, the value 12 is returned, but where is it returned to? Where is it stored? <br><br> **Do This:** Take a moment to brainstorm with a partner. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries15.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** Let's return to variable baggies! A function return value can be stored in a variable. Notice how the envelope is placed inside of a baggie. That means that the function would be evalued and whatever is returned would be stored in the variable `cakeCalculator`. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries16.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** Here's how this looks in JavaScript. It's ok if it's a little confusing. You'll get to play with this in Code Studio in the next lesson. For now, notice how the statement is set up. A variable is set up with the name `cakeCalculator`. This gets the value that is returned from the function `cakeCost` which has two arguments `3` and `lemon` passed through the parameters. After the function is evaluated, `cakeCalculator` now stores the value 12. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries17.svg){: style=\"border:1px solid black; width:200px\"}| **Say:** We can also print to the console like so. <br><br> **Do This: Read through as a class. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries18.svg){: style=\"border:1px solid black; width:200px\"}| **Do This:** Direct students to complete Challenge #2 in their Activity Guides. Students create a new envelope function which calculates the cost of the house from Challenge #1. After students are finished, they share the envelopes with a partner who tests the code. |",
+        "description": "[slide] **Display:** Use the activity slides for this lesson to guide the unplugged activity on Functions with Parameters and Return. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries19.svg) | **Distribute:** large and small sticky notes and envelopes. Hold off on distributing the Activity Guide until later in the activity. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries2.svg) | **Say:** Let's pretend that I want to make a cake. I need to decide how many tiers the cake will have, and what flavor the cake will be. I've decided to make a 3 tiered cake.<br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries3.svg)| **Say:** If I flip over the envelope, and open it up there's a recipe inside. This recipe is going to tell me how to make the cake I've specified. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries4.svg)| **Say:** To do this, I'm going to replace `tiers` with `3` and `flavor` with `lemon`, every time those words show up in the recipe. But notice - this recipe is pretty general. I could use it to make lots of different types and sizes of cake. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** Read through the recipe as a class. Make sure everyone understands how it works before moving on. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries5.svg)| **Say:** Ok, let's make our cake. Remember, each time I come across `tiers` or `flavor`, I'm going to replace that word with the appropriate value. Once I'm done, I will have baked a 3 layer lemon cake! <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** There are several steps to click through here. Take it slow so students can see each part. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries6.svg)| **Say:** This is a function! It should look familiar, but it has a few extra parts. This function has parameters. Parameters are used as plaeholders for values that will be passed through the function. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Those values passed to the parameter are called arguments. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries7.svg)| **Say:** Let's think through how changing the arguments affects the output. Now I want a four layer chocolate cake. With a partner, discuss what my arguments will look like. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** I pass through the arguments `4` and `chocolate` to the parameters `tiers` and `flavor`. Then my function is ready. What will my cake look like? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries8.svg)|**Do This:** Distribute Activity Guides and direct students to Challenge #1. Students will create their own function envelopes and write a simple function that uses parameters which can be used to draw a house. When students are finished building their function envelopes, a partner tests out the code and draws the house on a spare sticky note. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries9.svg)| **Say:** Here's another function. This function is used to calculate the total cost of making a cake. Take note again of the arguments and parameters. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**   |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries10.svg)| **Say:** Let's open the envelope and check out how this function works. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries11.svg)| **Say:** There are a few new things here. First, we've created two local variables. Remember, the local variables are contained within the function and can't be updated or accessed outside of the function. We learned about this when we discussed variable scope. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> In this function, a decision (in this case, how much to charge per flavor) is made based on the argument passed through the parameter. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> Finally, the total is returned, but returned where? What does that mean? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**  |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries12.svg)| **Say:** Before we talk more about that return, let's calculate the total cost of our original cake. <br><br> **Do This:** With a partner, determine what `flavorCost` and `total` equal after the function is run. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries13.svg)| **Say:** Now let's think about the return. If the program hits a return at any point in running a function, it will stop and a value will be \"returned\". Where is it returned? To the place in the program where the function was called.  |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries20.svg)| **Say:** So to get back to our example, the value 12 is returned, but where is it returned to? Where is it stored? <br><br> **Do This:** Take a moment to brainstorm with a partner. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries15.svg)| **Say:** Let's return to variable baggies! A function return value can be stored in a variable. Notice how the envelope is placed inside of a baggie. That means that the function would be evalued and whatever is returned would be stored in the variable `cakeCalculator`. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries16.svg)| **Say:** Here's how this looks in JavaScript. It's ok if it's a little confusing. You'll get to play with this in Code Studio in the next lesson. For now, notice how the statement is set up. A variable is set up with the name `cakeCalculator`. This gets the value that is returned from the function `cakeCost` which has two arguments `3` and `lemon` passed through the parameters. After the function is evaluated, `cakeCalculator` now stores the value 12. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries17.svg)| **Say:** We can also print to the console like so. <br><br> **Do This: Read through as a class. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries18.svg)| **Do This:** Direct students to complete Challenge #2 in their Activity Guides. Students create a new envelope function which calculates the cost of the house from Challenge #1. After students are finished, they share the envelopes with a partner who tests the code. |",
         "name": "Functions with Parameters and Return\r"
       },
       "seeding_key": {
@@ -1019,7 +1031,8 @@
       "key": "b1590232-9c6c-4281-a61d-f27176e0d798",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "b1590232-9c6c-4281-a61d-f27176e0d798",
@@ -1205,7 +1218,8 @@
       "key": "96e0ea29-dd28-4cfc-aca5-59fd98718323",
       "position": 1,
       "properties": {
-        "name": "App Investigation"
+        "name": "App Investigation",
+        "progression_name": "App Investigation"
       },
       "seeding_key": {
         "activity_section.key": "96e0ea29-dd28-4cfc-aca5-59fd98718323",
@@ -1216,7 +1230,8 @@
       "key": "fdc8cf7a-dde1-4afb-9b7e-d1da6d0925a4",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "fdc8cf7a-dde1-4afb-9b7e-d1da6d0925a4",
@@ -1374,7 +1389,7 @@
       "key": "1971a15a-cc08-4bb8-88aa-7b666f91145e",
       "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** The procedure below will be called twice with two numbers provided as arguments to the parameter `myNumber`. Which of the following pair of numbers will `mystery` return the same value?\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2019-12-05-at-1.15.01-PM.png){: style='height:200px'}",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** The procedure below will be called twice with two numbers provided as arguments to the parameter `myNumber`. Which of the following pair of numbers will `mystery` return the same value?\n\n![](https://images.code.org/df9da9dd9ffd9ad6ddedf239d66f77d1-image-1611869790276.15.01-PM.png)",
         "name": "Assessment: Check For Understanding\r"
       },
       "seeding_key": {
@@ -1386,7 +1401,8 @@
       "key": "18d4846a-851b-49ba-987c-0938b246ce15",
       "position": 1,
       "properties": {
-        "name": "console.log Practice"
+        "name": "console.log Practice",
+        "progression_name": "console.log Practice"
       },
       "seeding_key": {
         "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15",
@@ -1397,7 +1413,8 @@
       "key": "9a7bb7db-45f0-4e7b-a2f4-afe47d07e78f",
       "position": 2,
       "properties": {
-        "name": "App Practice"
+        "name": "App Practice",
+        "progression_name": "App Practice"
       },
       "seeding_key": {
         "activity_section.key": "9a7bb7db-45f0-4e7b-a2f4-afe47d07e78f",
@@ -1408,7 +1425,8 @@
       "key": "f0b189af-fd8d-40df-bb54-7e17afb6a1db",
       "position": 3,
       "properties": {
-        "name": "MOD Practice"
+        "name": "MOD Practice",
+        "progression_name": "MOD Practice"
       },
       "seeding_key": {
         "activity_section.key": "f0b189af-fd8d-40df-bb54-7e17afb6a1db",
@@ -1419,7 +1437,8 @@
       "key": "28deef60-4c89-411b-9e26-d9ec1ce7797d",
       "position": 4,
       "properties": {
-        "name": "Check For Understanding: AP Practice"
+        "name": "Check For Understanding: AP Practice",
+        "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
         "activity_section.key": "28deef60-4c89-411b-9e26-d9ec1ce7797d",
@@ -1563,7 +1582,8 @@
       "key": "0f09e960-a774-43a6-812e-5b8b3c3eb203",
       "position": 1,
       "properties": {
-        "name": "Try the Rock Paper Scissors App"
+        "name": "Try the Rock Paper Scissors App",
+        "progression_name": "Try the Rock Paper Scissors App"
       },
       "seeding_key": {
         "activity_section.key": "0f09e960-a774-43a6-812e-5b8b3c3eb203",
@@ -1574,7 +1594,8 @@
       "key": "f8bb6642-9926-444f-b88a-af5a1ac5e86c",
       "position": 2,
       "properties": {
-        "name": "Make the Rock Paper Scissors App"
+        "name": "Make the Rock Paper Scissors App",
+        "progression_name": "Make the Rock Paper Scissors App"
       },
       "seeding_key": {
         "activity_section.key": "f8bb6642-9926-444f-b88a-af5a1ac5e86c",
@@ -1616,7 +1637,7 @@
       "key": "b8355f85-da8f-488a-8ef8-5845b826d8d2",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:** Use the activity slides for this lesson to guide the unplugged activity on Libraries. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries21.svg){: style=\"border:1px solid black; width:200px\"} |**Say:** Have you ever wanted to share some of your code with a friend so they can use it to add a cool feature in their program? Or maybe you've got a collection of functions in one program that you want to use in another program. Today we are going to explore the answer to this question: How can we easily share functions between programs?|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries22.svg){: style=\"border:1px solid black; width:200px\"} |![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Stop once all three envelopes are on the screen. <br><br> **Say:** These are functions. We recently learned about functions with parameters and return values. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click until the library definition appears on the screen. <br><br> **Say:** The envelopes have been grouped together in a folder. This represents a library. A library is a collection of functions that can be used in many different programs.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries23.svg){: style=\"border:1px solid black; width:200px\"} |**Say:** Let's take a look at what's inside the library. If we open up the folder, we see the functions and some documentation. A library should have documentation for each of the included functions. The documentation should include: <ul><li>how each function works</li><li>a complete list of the parameters</li><li>what (if anything) will be returned</li></ul>|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries24.svg){: style=\"border:1px solid black; width:200px\"} |**Say:** This detailed type of documentation is also known as **Application Program Interface(API)**. APIs are specifications for how the functions in a library behave and can be used. <br><br> **Discuss:** With a partner, review the parts of the documentation. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries25.svg){: style=\"border:1px solid black; width:200px\"} |**Discuss:** What potential problems could come up if I tried to use a function without knowing what it does or how to interact with it? This would be similar to looking at the front of a function envelope and having to guess: <ul><li>what the function does</li><li>what data type the parameters need</li><li>what is returned</li></ul>**Note:** If students are struggling to come up with ideas, give a few hints: <ul><li>what if there's an error when you run the code which calls this function?</li><li>what happens to a return if you don't store it in a variable or print it to the console?</li></ul> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries26.svg){: style=\"border:1px solid black; width:200px\"} |**Discuss:** My friend wants to use my `findSmallest()` function in her program. Is this function ready to be shared in a library?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Say:** Watch out for global variables! If a function accesses or updates a variable elsewhere in your program, that function shouldn't be shared as is.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Do This:** With a partner, rewrite the function so it could be shared in a library.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Note:** The problem here, is that the function uses a global variable. Students should try to rewrite the function so only local variables and a return are used. The answer is shown later on in the slides.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries27.svg){: style=\"border:1px solid black; width:200px\"} |**Say:** These are the things you should consider before adding a function to a library: <ol><li>Check for any use of a global variable within the function. If there is, rework the function using local variables and a return. </li><li>Check if another function is called in this function. If so, both functions should be included in the library. </li><li>Write the documentation for the function.</li></ol> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries28.svg){: style=\"border:1px solid black; width:200px\"} |**Say:** Here's the same function, now written to be shared in a library. How does it look compared to yours? It may look a little different - and that's ok, as long as the function works as expected. Now my function is almost ready to be shared in a library. With a partner, write the API for this function: <ul><li>how the function works</li><li>all the parameters, their data types, and a short description of each</li><li>what (if anything) will be returned</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** When the class is ready, click through to see a possible answer. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries29.svg){: style=\"border:1px solid black; width:200px\"} |**Say:** A library needs a name. For our libraries in this class, we are going to follow the following rules: <ul><li>No spaces</li><li>Capitalize the first letter</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries30.svg){: style=\"border:1px solid black; width:200px\"} | **Say:** This library can now be shared with others. They can use the functions within their own programs as long as they follow the rules set forth in the documentation.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries31.svg){: style=\"border:1px solid black; width:200px\"} |**Say:** You've seen libraries in action before. The Math library is built into App Lab. Notice the name of the library first, then after a dot, the name of the function and finally the parameters. This is the same formatting you will use to call functions in libraries: Library name, followed by function name, and finally the parameter(s) |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries32.svg){: style=\"border:1px solid black; width:200px\"} |**Do This:** Brainstorm with a partner a few functions that might show up in the following libraries: Calculator, DisplayLists, FiterDatabase. <br><br>**Note:** Here are some ideas:<ul><li>**Calculator:** functions similar to what you would find in a common calculator</li><li>**DisplayLists:** functions that help you display a list on a screen in different ways, such as one list item per line or divided with bullet points</li><li>**FilterDatabase:** functions that allow you to filter a database for different things, like all the items that start with the letter \"a\"</li></ul> |"
+        "description": "[slide] **Display:** Use the activity slides for this lesson to guide the unplugged activity on Libraries. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries21.svg) |**Say:** Have you ever wanted to share some of your code with a friend so they can use it to add a cool feature in their program? Or maybe you've got a collection of functions in one program that you want to use in another program. Today we are going to explore the answer to this question: How can we easily share functions between programs?|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries22.svg) |![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Stop once all three envelopes are on the screen. <br><br> **Say:** These are functions. We recently learned about functions with parameters and return values. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click until the library definition appears on the screen. <br><br> **Say:** The envelopes have been grouped together in a folder. This represents a library. A library is a collection of functions that can be used in many different programs.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries23.svg) |**Say:** Let's take a look at what's inside the library. If we open up the folder, we see the functions and some documentation. A library should have documentation for each of the included functions. The documentation should include: <ul><li>how each function works</li><li>a complete list of the parameters</li><li>what (if anything) will be returned</li></ul>|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries24.svg) |**Say:** This detailed type of documentation is also known as **Application Program Interface(API)**. APIs are specifications for how the functions in a library behave and can be used. <br><br> **Discuss:** With a partner, review the parts of the documentation. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries25.svg) |**Discuss:** What potential problems could come up if I tried to use a function without knowing what it does or how to interact with it? This would be similar to looking at the front of a function envelope and having to guess: <ul><li>what the function does</li><li>what data type the parameters need</li><li>what is returned</li></ul>**Note:** If students are struggling to come up with ideas, give a few hints: <ul><li>what if there's an error when you run the code which calls this function?</li><li>what happens to a return if you don't store it in a variable or print it to the console?</li></ul> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries26.svg) |**Discuss:** My friend wants to use my `findSmallest()` function in her program. Is this function ready to be shared in a library?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Say:** Watch out for global variables! If a function accesses or updates a variable elsewhere in your program, that function shouldn't be shared as is.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Do This:** With a partner, rewrite the function so it could be shared in a library.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Note:** The problem here, is that the function uses a global variable. Students should try to rewrite the function so only local variables and a return are used. The answer is shown later on in the slides.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries27.svg) |**Say:** These are the things you should consider before adding a function to a library: <ol><li>Check for any use of a global variable within the function. If there is, rework the function using local variables and a return. </li><li>Check if another function is called in this function. If so, both functions should be included in the library. </li><li>Write the documentation for the function.</li></ol> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries28.svg) |**Say:** Here's the same function, now written to be shared in a library. How does it look compared to yours? It may look a little different - and that's ok, as long as the function works as expected. Now my function is almost ready to be shared in a library. With a partner, write the API for this function: <ul><li>how the function works</li><li>all the parameters, their data types, and a short description of each</li><li>what (if anything) will be returned</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** When the class is ready, click through to see a possible answer. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries29.svg) |**Say:** A library needs a name. For our libraries in this class, we are going to follow the following rules: <ul><li>No spaces</li><li>Capitalize the first letter</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries30.svg) | **Say:** This library can now be shared with others. They can use the functions within their own programs as long as they follow the rules set forth in the documentation.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries31.svg) |**Say:** You've seen libraries in action before. The Math library is built into App Lab. Notice the name of the library first, then after a dot, the name of the function and finally the parameters. This is the same formatting you will use to call functions in libraries: Library name, followed by function name, and finally the parameter(s) |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries32.svg) |**Do This:** Brainstorm with a partner a few functions that might show up in the following libraries: Calculator, DisplayLists, FiterDatabase. <br><br>**Note:** Here are some ideas:<ul><li>**Calculator:** functions similar to what you would find in a common calculator</li><li>**DisplayLists:** functions that help you display a list on a screen in different ways, such as one list item per line or divided with bullet points</li><li>**FilterDatabase:** functions that allow you to filter a database for different things, like all the items that start with the letter \"a\"</li></ul> |"
       },
       "seeding_key": {
         "activity_section.key": "b8355f85-da8f-488a-8ef8-5845b826d8d2",
@@ -1696,7 +1717,8 @@
       "key": "0ab87823-cfee-4964-b0ab-9fea88c9924e",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0ab87823-cfee-4964-b0ab-9fea88c9924e",
@@ -1981,7 +2003,8 @@
       "key": "0822fa4e-83d6-45a7-99ec-06369789e031",
       "position": 1,
       "properties": {
-        "name": "States App"
+        "name": "States App",
+        "progression_name": "States App"
       },
       "seeding_key": {
         "activity_section.key": "0822fa4e-83d6-45a7-99ec-06369789e031",
@@ -1992,7 +2015,8 @@
       "key": "ef138a0c-5fc1-4cf6-a149-20adf0075afc",
       "position": 2,
       "properties": {
-        "name": "Pigify App"
+        "name": "Pigify App",
+        "progression_name": "Pigify App"
       },
       "seeding_key": {
         "activity_section.key": "ef138a0c-5fc1-4cf6-a149-20adf0075afc",
@@ -2003,7 +2027,8 @@
       "key": "130a98f1-9bfa-4cd2-bce9-a54e12238e3e",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "130a98f1-9bfa-4cd2-bce9-a54e12238e3e",
@@ -2173,7 +2198,8 @@
       "key": "5ae99147-5c63-48ed-8d2c-9632b76dda88",
       "position": 1,
       "properties": {
-        "name": "Using Libraries"
+        "name": "Using Libraries",
+        "progression_name": "Using Libraries"
       },
       "seeding_key": {
         "activity_section.key": "5ae99147-5c63-48ed-8d2c-9632b76dda88",
@@ -2184,7 +2210,8 @@
       "key": "13892d1f-76d4-47fd-bbb1-038fb0802405",
       "position": 2,
       "properties": {
-        "name": "Testing Libraries"
+        "name": "Testing Libraries",
+        "progression_name": "Testing Libraries"
       },
       "seeding_key": {
         "activity_section.key": "13892d1f-76d4-47fd-bbb1-038fb0802405",
@@ -2195,7 +2222,8 @@
       "key": "dbcdba62-d1f4-49d9-8343-c193b0325833",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding"
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "dbcdba62-d1f4-49d9-8343-c193b0325833",
@@ -2310,7 +2338,8 @@
       "key": "41af2f38-481c-4259-a9fc-91c10d69c295",
       "position": 1,
       "properties": {
-        "name": "Build Your Library"
+        "name": "Build Your Library",
+        "progression_name": "Build Your Library"
       },
       "seeding_key": {
         "activity_section.key": "41af2f38-481c-4259-a9fc-91c10d69c295",
@@ -2374,7 +2403,8 @@
       "key": "acf90e01-8d29-40d8-b514-233a4cdc4ea8",
       "position": 1,
       "properties": {
-        "name": "Build Your Library"
+        "name": "Build Your Library",
+        "progression_name": "Build Your Library"
       },
       "seeding_key": {
         "activity_section.key": "acf90e01-8d29-40d8-b514-233a4cdc4ea8",
@@ -2385,7 +2415,8 @@
       "key": "807e8eb9-bd96-4daf-8604-684d82c82dd4",
       "position": 2,
       "properties": {
-        "name": "Test a Classmate's Library"
+        "name": "Test a Classmate's Library",
+        "progression_name": "Test a Classmate's Library"
       },
       "seeding_key": {
         "activity_section.key": "807e8eb9-bd96-4daf-8604-684d82c82dd4",
@@ -2460,7 +2491,8 @@
       "key": "528258b4-d29a-4c24-b722-f40517c4de2a",
       "position": 1,
       "properties": {
-        "name": "Build Your Library"
+        "name": "Build Your Library",
+        "progression_name": "Build Your Library"
       },
       "seeding_key": {
         "activity_section.key": "528258b4-d29a-4c24-b722-f40517c4de2a",
@@ -2500,7 +2532,8 @@
       "key": "b05bab05-ef0f-49cb-8638-91636655706e",
       "position": 1,
       "properties": {
-        "name": "Unit 7 Exam"
+        "name": "Unit 7 Exam",
+        "progression_name": "Unit 7 Exam"
       },
       "seeding_key": {
         "activity_section.key": "b05bab05-ef0f-49cb-8638-91636655706e",

@@ -158,6 +158,7 @@ hr:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': brzina
       gamelab_getTime:
         options:
           UNIT:
@@ -210,6 +211,7 @@ hr:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': brzina
       gamelab_setSizes:
         options:
           PROPERTY:
