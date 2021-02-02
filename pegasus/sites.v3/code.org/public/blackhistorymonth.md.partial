@@ -6,9 +6,9 @@ style_min: true
 social:
   "og:title": "Code.org celebrates Black History Month"
   "og:description": "Celebrating Black pioneers in computer science and lifting up Black voices for computer science"
-  "og:image": ""
-  "og:image:width": 485
-  "og:image:height": 235
+  "og:image": "https://code.org/images/bhm/bhm-og.png"
+  "og:image:width": 1200
+  "og:image:height": 630
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
@@ -37,8 +37,8 @@ social:
   <li>Check out the <a href="#bhm-blackstudentdata">data on Black student participation</a>  in CS below</li>
   <li>Learn about <a href="#bhm-blackpioneers">Black pioneers in CS</a> history</li>
   <li>Share some of our <a href="#black_voices_videos">other inspirational videos</a></li>
-  <li>Help us <a href="/https://code.org/yourschool">bring computer science to your school</a></li>
-  <li><a href="https://code.org/yourschool">Donate</a> to support our mission</li>
+  <li>Help us <a href="https://code.org/yourschool">bring computer science to your school</a></li>
+  <li>Support the <a href="https://donate.code.org/BlackVoicesFund">Black Voices Fund</a> </li>
  </ul>
 </div>
 <div class="clear"></div>
@@ -56,7 +56,7 @@ social:
     </div>
     <div class="col-33" style="padding: 0 15px;">
     <p style="color:#7665a0">Sign up to get information on how to tune in as we get closer to the event.</p>
-    <iframe src="http://go.pardot.com/l/153401/2021-02-02/p1svmj" width="100%" height="305" type="text/html" frameborder="0" allowTransparency="true" style="overflow:hidden"></iframe>
+    <iframe src="http://go.pardot.com/l/153401/2021-02-02/p1svmj" width="100%" height="220" type="text/html" frameborder="0" allowTransparency="true" style="overflow:hidden"></iframe>
     </div>
   </div>  
   <!--<p>Join us on <a href>zoom</a> or stream on <a href>YouTube</a>.</p>-->
@@ -69,7 +69,7 @@ social:
     </div>
     <div class="col-20" style="text-align:center">
       <img src="/images/fill-200x200/avatars/sabine_thomas.jpg" class="bordered-circle">
-      <p> <i>Moderator:</i><br><span style="font-weight:bold;">Sabine Thomas</span><br>Regional Manager for Outreach Team, Code.org
+      <p> <i>Moderator:</i><br><span style="font-weight:bold;">Dr. Sabine Thomas</span><br>Regional Manager for Outreach Team, Code.org
       </p>
     </div>
     <div class="col-20" style="text-align:center">
@@ -223,7 +223,7 @@ social:
 
 <hr class="bhm-border"/>
 <h2 class="bhm-heading" id="black_voices_videos">More black voices in computer science </h2>
-<p style="margin-bottom: 25px">Black students, techologists, and inspirational figures talk about how </p>
+<p style="margin-bottom: 25px">Black students, techologists, and inspirational figures talk about the importance of computer science.</p>
 <div class="column-container">
   <div class="col-50 embedvid" >{{ vid_whyicode }}
   </div>
