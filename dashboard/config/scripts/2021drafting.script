@@ -70,3 +70,8 @@ level '2020 new SL stuff', progression: 'New Sprite Animations'
 level 'symmetry', progression: 'Symmetry'
 level 'courseF_2021_template', progression: 'Full Toolbox and/or Template'
 
+lesson_group 'Loom Levels', display_name: 'Loom Levels'
+lesson 'video', display_name: 'Sprite Lab Videos', has_lesson_plan: false
+level 'courseF_events_loom_sandbox', progression: 'Events'
+level 'courseF_variables_loom_sandbox', progression: 'Variables'
+
