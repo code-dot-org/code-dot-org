@@ -16,50 +16,9 @@ import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import locales from '@cdo/apps/redux/localesRedux';
-import {
-  fakeLevels,
-  fakeLessonWithLevels,
-  fakeSection,
-  fakeScriptData,
-  fakeStudents,
-  fakeStudentLevelProgress,
-  fakeStudentLastUpdateByScript
-} from '@cdo/apps/templates/progress/progressTestHelpers';
+import {fakeProgressTableReduxInitialState} from '@cdo/apps/templates/progress/progressTestHelpers';
 
-const lesson1 = fakeLessonWithLevels({position: 1, levels: fakeLevels(1)});
-const lesson2 = fakeLessonWithLevels({position: 2, levels: fakeLevels(2)});
-const stages = [lesson1, lesson2];
-const students = fakeStudents(2);
-const scriptData = fakeScriptData({stages});
-const studentProgress = fakeStudentLevelProgress(
-  scriptData.stages[0].levels,
-  students
-);
-
-const initialState = {
-  progress: {
-    lessonGroups: [],
-    stages: stages,
-    focusAreaStageIds: [],
-    professionalLearningCourse: false
-  },
-  sectionData: {
-    section: fakeSection(students)
-  },
-  sectionProgress: {
-    scriptDataByScript: {[scriptData.id]: scriptData},
-    studentLevelProgressByScript: {
-      [scriptData.id]: studentProgress
-    },
-    studentLastUpdateByScript: fakeStudentLastUpdateByScript(
-      scriptData,
-      students
-    ),
-    lessonOfInterest: 1
-  },
-  scriptSelection: {scriptId: scriptData.id},
-  locales: {localeCode: 'en-US'}
-};
+const initialState = fakeProgressTableReduxInitialState();
 
 const setUp = () => {
   const store = createStore(
