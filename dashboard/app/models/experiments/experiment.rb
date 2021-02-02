@@ -102,6 +102,11 @@ class Experiment < ApplicationRecord
       name: 'csd-2021-preview',
       label: 'CSD 2021 Preview',
       allow_joining_via_url: true
+    },
+    {
+      name: 'contagion-pilot',
+      label: 'Contagion Simulator',
+      allow_joining_via_url: true
     }
   ]
 
