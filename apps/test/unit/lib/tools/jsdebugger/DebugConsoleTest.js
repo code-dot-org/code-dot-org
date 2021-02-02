@@ -192,7 +192,7 @@ describe('The DebugConsole component when the console is enabled', () => {
             fromConsoleLog: true
           })
         );
-        expect(debugOutput().text()).to.equal('▶["test"]');
+        expect(debugOutput().text()).to.equal('▶(1) ["test"]');
       });
 
       it('a logged string prints a string without an arrow', () => {
@@ -222,7 +222,7 @@ describe('The DebugConsole component when the console is enabled', () => {
             fromConsoleLog: true
           })
         );
-        expect(debugOutput().text()).to.equal('▶Object {foo: "bar"}');
+        expect(debugOutput().text()).to.equal('▶{foo: "bar"}');
       });
     });
 
@@ -238,7 +238,7 @@ describe('The DebugConsole component when the console is enabled', () => {
             output: ['test']
           })
         );
-        expect(debugOutput().text()).to.equal('> ["test"]< ▶["test"]');
+        expect(debugOutput().text()).to.equal('> ["test"]< ▶(1) ["test"]');
       });
 
       it('the original string is prepended with >, and the interpreted string is prepended with <', () => {
@@ -282,7 +282,7 @@ describe('The DebugConsole component when the console is enabled', () => {
           })
         );
         expect(debugOutput().text()).to.equal(
-          '> {foo: \'bar\'}< ▶Object {foo: "bar"}'
+          '> {foo: \'bar\'}< ▶{foo: "bar"}'
         );
       });
     });
