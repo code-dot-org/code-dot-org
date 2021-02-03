@@ -1271,14 +1271,8 @@
       "key": "43472832-fece-4b53-9b99-5eb11ac76a65",
       "position": 3,
       "properties": {
-        "description": "**NOTE: the following steps are only needed if you are not using Google Classroom** \n\n**Do This:**\n\n* Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\n\n[pull-right]\n\n![](https://images.code.org/13dc556bebe9bac66fdebbe3f0b05c36-image-1611867181623.png)\n\n[/pull-right]\n\n* [slide]  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\n\n* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join.",
-        "name": "Join Section\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The slide icon [slide] indicates that there is a slide in the unit slide deck that corresponds to this activity or prompt. \n"
-          }
-        ]
+        "description": "**NOTE: the following steps are only needed if you are not using Google Classroom** \n\n**Do This:**\n\n* Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\n\n[pull-right]\n\n![](https://images.code.org/13dc556bebe9bac66fdebbe3f0b05c36-image-1611867181623.png)\n\n[/pull-right]",
+        "name": "Join Section\r"
       },
       "seeding_key": {
         "activity_section.key": "43472832-fece-4b53-9b99-5eb11ac76a65",
@@ -1286,8 +1280,37 @@
       }
     },
     {
-      "key": "4e1a0172-7ddb-463a-bf74-4f92e02a0b75",
+      "key": "30bf7b7b-fdde-4af6-9571-2241b78e4fd7",
       "position": 4,
+      "properties": {
+        "description": "*"
+      },
+      "seeding_key": {
+        "activity_section.key": "30bf7b7b-fdde-4af6-9571-2241b78e4fd7",
+        "lesson_activity.key": "4f715f57-8664-46ac-aa62-26655d5db2d3"
+      }
+    },
+    {
+      "key": "3a77c2bf-68ca-48ae-851c-d0b8ea2e3bb5",
+      "position": 5,
+      "properties": {
+        "description": "[slide]  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\n\n* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join.",
+        "tips": [
+          {
+            "key": "29",
+            "type": "teachingTip",
+            "markdown": "The slide icon [slide] indicates that there is a slide in the unit slide deck that corresponds to this activity or prompt. \r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3a77c2bf-68ca-48ae-851c-d0b8ea2e3bb5",
+        "lesson_activity.key": "4f715f57-8664-46ac-aa62-26655d5db2d3"
+      }
+    },
+    {
+      "key": "4e1a0172-7ddb-463a-bf74-4f92e02a0b75",
+      "position": 6,
       "properties": {
         "description": "* Students should also see a small green bar at the top of their page that says 'You've successfully joined ...'\n* Have students navigate to the course on the home page.\n* From the *student's* homepage at [studio.code.org](https://studio.code.org) they should see a \"tile\" for Computer Science Principles. Click 'View course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to take the CSP Pre-Course survey"
       },
@@ -1302,13 +1325,7 @@
       "properties": {
         "description": "- Welcome to Computer Science Principles! This year we’re going to learn a lot about computer science, but before we begin, we want to learn a little bit about you and your thoughts on computer science in general. Let's take the CSP Pre-Course Survey.",
         "remarks": true,
-        "name": "Teacher Message\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "hi"
-          }
-        ]
+        "name": "Teacher Message\r"
       },
       "seeding_key": {
         "activity_section.key": "f867b9ef-0f8f-4ba5-9357-7b1878cc2394",
@@ -1357,8 +1374,9 @@
       "properties": {
         "tips": [
           {
+            "key": "30",
             "type": "teachingTip",
-            "markdown": "If students need help coming up with ideas, share these tips:\n\n* This doesn’t have to be a subject in school - it very well might not be.  \n* As a person, as an individual who is living and breathing in this world, there is something that you probably know a lot about - maybe you feel like you know more about than most people. What is that thing?\n\n"
+            "markdown": "If students need help coming up with ideas, share these tips:\r\n\r\n* This doesn’t have to be a subject in school - it very well might not be.  \r\n\r\n \t* As a person, as an individual who is living and breathing in this world, there is something that you probably know a lot about - maybe you feel like you know more about than most people. What is that thing?\r\n\r\n"
           }
         ]
       },
@@ -1374,6 +1392,7 @@
         "description": "[slide]  **Prompt:** What’s something that you know a lot about? Something that you could teach somebody?\"",
         "tips": [
           {
+            "key": "31",
             "type": "teachingTip",
             "markdown": "**\"Why do the pre-course survey?\"**\r\n\r\n* A major goal of CS Principles is to broaden participation in computer science.  \r\n* It is *crucial* therefore to have insight into students' attitidues and beliefs about computer science *before* the course so that we can measure the amount of change that occured *after* the course is over.\r\n\r\n* Please note that this survey is **anonymous for students**\r\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\r\n   \r\nPlease help by having your students contribute to this vital dataset.  Their voices make the difference!\r\n\r\n**How much time does it take?**\r\n\r\n* The survey is roughly 40 quick response items. We expect it to take 5-10 minutes to complete.   You might consider administering it on an admin day at school, or as an early homework.\r\n* Because it is a pre-course survey it is important that students take it as early in the course as possible, before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.\r\n\r\nThank you!\r\n\r\n-- The Code.org Team\r\n"
           }
@@ -1390,6 +1409,7 @@
       "properties": {
         "tips": [
           {
+            "key": "32",
             "type": "teachingTip",
             "markdown": "What you’re trying to do here is get students to state something that they are interested in, but also know a lot about - something they might have insights into.  \r\n\r\nA big part of students’ enthusiasm for sharing will come from your enthusiasm and genuine interest in getting to know them.  \r\n\r\nStudents might need prodding: there is something that makes them interesting and unique.  Something they like to do, have interest in, read about, have some expertise in, a hidden talent.\r\n"
           }
@@ -1464,6 +1484,7 @@
       "properties": {
         "tips": [
           {
+            "key": "33",
             "type": "teachingTip",
             "markdown": "Keep things quick.  If a group is worried about not being innovative enough, remind them that very small ideas can have big consequences.  People once thought it was ridiculous that you would want to send a short text message to another person over a phone.  \r\n\r\nAlternatively, a group may have a great idea that they want to spend more time on.  They can do that later.  For now, just remind them it’s a rapid prototype.\r\n"
           }
@@ -1516,6 +1537,7 @@
       "properties": {
         "tips": [
           {
+            "key": "34",
             "type": "teachingTip",
             "markdown": "Take this opportunity to explain the importance of bringing individual interests and perspectives to this course. From day one, students should be thinking about how to apply the principles they learn to their own lives, and hopefully they will be excited to do so.\r\n"
           }
@@ -1557,6 +1579,7 @@
         "description": "[slide]  **Prompt:** What are you excited to learn about in this course?",
         "tips": [
           {
+            "key": "35",
             "type": "discussionGoal",
             "markdown": "Students can discuss in small groups and then share out with the whole class. It's ok if at this point students don't have an answer to this prompt. \r\n\r\n"
           }
@@ -4677,12 +4700,12 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Computer Science is Changing Everything",
         "level_keys": [
           "Computer Science is Changing Everything_2021"
-        ],
-        "progression": "Computer Science is Changing Everything"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4705,10 +4728,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "csp_socialBelonging_control_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4731,10 +4754,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L3 CFU Sending Complex Messages_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4757,10 +4780,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "CSP U1L4 CYU3_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4783,10 +4806,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L5 CFU how many bits_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4809,10 +4832,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L5 CFU adding bits_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4835,10 +4858,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L5 CFU bin dec similarities_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4861,10 +4884,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Odometer Activity",
         "level_keys": [
           "Widget: Binary Odometer_2021"
-        ],
-        "progression": "Odometer Activity"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4887,10 +4910,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L6 CFU beyond odometer_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4913,10 +4936,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L6 CFU representing fractions_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4939,10 +4962,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L8 Reflection Multiple Representations CSP_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4965,10 +4988,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Video: Intro to Pixelation Encoding B&W",
         "level_keys": [
           "U1 L9 Introduction to Pixelation_2021"
-        ],
-        "progression": "Video: Intro to Pixelation Encoding B&W"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4991,10 +5014,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: B&W",
         "level_keys": [
           "U1L9 Pixelation - Make the Letter A_2021"
-        ],
-        "progression": "Pixelation Widget: B&W"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5017,10 +5040,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: B&W",
         "level_keys": [
           "U1L9 Pixelation Widget Fix bit offset_2021"
-        ],
-        "progression": "Pixelation Widget: B&W"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5043,10 +5066,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: B&W",
         "level_keys": [
           "U1L9 Pixelation Widget challenge a_2021"
-        ],
-        "progression": "Pixelation Widget: B&W"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5069,10 +5092,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: B&W",
         "level_keys": [
           "U1L9 Pixelation Widget challenge B_2021"
-        ],
-        "progression": "Pixelation Widget: B&W"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5095,10 +5118,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: B&W",
         "level_keys": [
           "U1L9 Pixelation Widget challenge C_2021"
-        ],
-        "progression": "Pixelation Widget: B&W"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5121,10 +5144,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L9 CFU pixel data_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5147,10 +5170,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L9 Multiple Choice Digital Analog_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5173,10 +5196,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L9 CFU Sampling_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5199,10 +5222,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "RGB Color",
         "level_keys": [
           "CSP U1L10 RGB_2021"
-        ],
-        "progression": "RGB Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5225,10 +5248,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 1_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5251,10 +5274,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "More Shades of Color",
         "level_keys": [
           "CSP U1L10 More Shades of Color_2021"
-        ],
-        "progression": "More Shades of Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5277,10 +5300,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 2_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5303,10 +5326,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 3_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5329,10 +5352,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Color Sampling",
         "level_keys": [
           "CSP U1L10 Color Sampling_2021"
-        ],
-        "progression": "Color Sampling"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5355,10 +5378,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 4_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5381,10 +5404,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U1L10 Multiple Choice analog vs digital_2021"
-        ],
-        "progression": "Assessment: Check For Understanding\r"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5407,10 +5430,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U1L10 CFU Sampling_2021"
-        ],
-        "progression": "Assessment: Check For Understanding\r"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5433,10 +5456,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Widget: Text Compression",
         "level_keys": [
           "U1L11 Widget: Text Compression_2021"
-        ],
-        "progression": "Widget: Text Compression"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5459,10 +5482,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Video: Text Compression Widget with Aloe Blacc",
         "level_keys": [
           "U1 L11 Text Compression Widget Aloe Blacc_2021"
-        ],
-        "progression": "Video: Text Compression Widget with Aloe Blacc"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5485,10 +5508,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L11 Multiple Choice lossless compression_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5511,10 +5534,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L11 CFU Compression for Email_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5537,10 +5560,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Lossy Compression Widget",
         "level_keys": [
           "U1 Lossy Compression Widget v1_2021"
-        ],
-        "progression": "Lossy Compression Widget"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5563,10 +5586,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Lossy Compression Widget",
         "level_keys": [
           "U1 Lossy Compression Widget v2_2021"
-        ],
-        "progression": "Lossy Compression Widget"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5589,10 +5612,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L11 CPS CFU Cell Phone_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5615,10 +5638,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L12 CFU Creative Commons_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5641,10 +5664,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L12 CFU Copyright_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5667,10 +5690,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L13 CFU Digital Representation_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5693,10 +5716,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L14 CSP CFU digital information_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5719,10 +5742,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Unit 1 Exam",
         "level_keys": [
           "CSP Unit 1 AP-Style Assessment _2021"
-        ],
-        "progression": "Unit 1 Exam"
+        ]
       },
       "named_level": null,
       "bonus": null,
