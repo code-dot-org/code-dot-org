@@ -6292,7 +6292,7 @@ ar:
   tutorial_meeempathy_language: الإنجليزية
   tutorial_dance2019_string_detail_grades: من الصف الثاني فما فوق
   tutorial_danceparty_string_detail_grades: من الصف الثاني فما فوق
-  tutorial_chibitronics_string_detail_grades: الصفوف 2-5
+  tutorial_chibitronics_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_athlete_string_detail_grades: من الصف الثاني فما فوق
   tutorial_moana_string_detail_grades: من الصف الثاني فما فوق
   tutorial_star-wars_string_detail_grades: من الصف الثاني فما فوق
@@ -6342,7 +6342,7 @@ ar:
   tutorial_tynkerpup_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_livecode_string_detail_grades: من الصف التاسع فما فوق
   tutorial_cocomgame_string_detail_grades: من الصف الثاني فما فوق
-  tutorial_tynkerspin_string_detail_grades: قبل تعلم القراءة - المستوى 8
+  tutorial_tynkerspin_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_code-avengers_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_tynkercq_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_cmgame_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -6427,7 +6427,7 @@ ar:
   tutorial_baubles_string_detail_grades: الصفوف 2-8
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: من الصف الثاني فما فوق
-  tutorial_fufafit_string_detail_grades: الصفوف 2-5
+  tutorial_fufafit_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_ozodance_string_detail_grades: جميع الأعمار
   tutorial_codingrobotics_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_box_string_detail_grades: do-not-show
@@ -6452,13 +6452,13 @@ ar:
   tutorial_besttech_string_detail_grades: من الصف التاسع فما فوق
   tutorial_tlcbrain_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_hopquiz_string_detail_grades: الصفوف 6-8
-  tutorial_unfortunate_string_detail_grades: الصفوف 2-5
+  tutorial_unfortunate_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_cha_string_detail_grades: الصفوف 6-8
   tutorial_elaseq_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: الصفوف 2-8
   tutorial_arduino_string_detail_grades: الصفوف 6-8
-  tutorial_introrobo_string_detail_grades: الصفوف 2-5
+  tutorial_introrobo_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_tlcinvis_string_detail_grades: من الصف الثاني فما فوق
   tutorial_tlcjflap_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_procolor_string_detail_grades: قبل تعلم القراءة - المستوى 8
@@ -6467,7 +6467,7 @@ ar:
   tutorial_ticklel_string_detail_grades: من الصف الثاني فما فوق
   tutorial_spiralsdash_string_detail_grades: الصفوف 2-8
   tutorial_ghdebug_string_detail_grades: الصفوف 2-8
-  tutorial_tlckk_string_detail_grades: الصفوف 2-5
+  tutorial_tlckk_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_firstcomp_string_detail_grades: قبل تعلم القراءة - المستوى 1
   tutorial_mazefinch_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_tlccc_string_detail_grades: الصفوف 2-8
@@ -6492,14 +6492,14 @@ ar:
   tutorial_grokflags_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_robomind_string_detail_grades: الصفوف 2-8
   tutorial_scratchanimwork_string_detail_grades: الصفوف 2-8
-  tutorial_adventureq_string_detail_grades: الصفوف 2-5
+  tutorial_adventureq_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_khan-es_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_kpt_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_kpl_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_khe_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_kfr_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_app-inventor_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_bits_string_detail_grades: الصفوف 2-5
+  tutorial_bits_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_blockly_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: جميع الأعمار
@@ -6508,13 +6508,13 @@ ar:
   tutorial_spellcraft_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_pirates_string_detail_grades: الصفوف 2-8
   tutorial_csfirst_string_detail_grades: من الصف الثاني فما فوق
-  tutorial_loopedy_string_detail_grades: الصفوف 2-5
+  tutorial_loopedy_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_dsw_string_detail_grades: do-not-show
   tutorial_dswb_string_detail_grades: do-not-show
   tutorial_ssw_string_detail_grades: do-not-show
   tutorial_sswb_string_detail_grades: do-not-show
   tutorial_kodable-unplugged_string_detail_grades: الصفوف 2-8
-  tutorial_scratch_string_detail_grades: الصفوف 2-5
+  tutorial_scratch_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_bayes_string_detail_grades: جميع الأعمار
   tutorial_gumball_string_detail_grades: do-not-show
   tutorial_hrm_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -6524,7 +6524,7 @@ ar:
   tutorial_rmc_string_detail_grades: do-not-show
   tutorial_smc_string_detail_grades: do-not-show
   tutorial_minecraft-2016_string_detail_grades: do-not-show
-  tutorial_thinkersmith-es_string_detail_grades: الصفوف 2-5
+  tutorial_thinkersmith-es_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_pixie_string_detail_grades: من الصف الثاني فما فوق
   tutorial_play_string_detail_grades: do-not-show
   tutorial_robomind-nl_string_detail_grades: الصفوف 2-8
@@ -6568,7 +6568,7 @@ ar:
   tutorial_computeit_string_detail_grades: من الصف الثاني فما فوق
   tutorial_codesterssj_string_detail_grades: الصفوف 2-8
   tutorial_cmchat_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_tynkerdb_string_detail_grades: الصفوف 2-5
+  tutorial_tynkerdb_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_cmbuild_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_robotrattle_string_detail_grades: الصفوف 2-8
   tutorial_codestersh_string_detail_grades: الصفوف 2-8
@@ -6580,7 +6580,7 @@ ar:
   tutorial_kodmaze_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_codestersa_string_detail_grades: الصفوف 2-8
   tutorial_cmdodo_string_detail_grades: الصفوف 2-5
-  tutorial_tynkerspace_string_detail_grades: الصفوف 2-5
+  tutorial_tynkerspace_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_gfbloons_string_detail_grades: من الصف التاسع فما فوق
   tutorial_raspipong_string_detail_grades: من الصف التاسع فما فوق
   tutorial_codehsvr_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -6595,7 +6595,7 @@ ar:
   tutorial_codehsjsgraph_string_detail_grades: من الصف التاسع فما فوق
   tutorial_thunkable_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_hopcrossyroad_string_detail_grades: الصفوف 2-8
-  tutorial_switchglitch_string_detail_grades: الصفوف 2-5
+  tutorial_switchglitch_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_codecar_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_codesterscp_string_detail_grades: الصفوف 6-8
   tutorial_grokpetblock_string_detail_grades: الصفوف 6-8
@@ -6604,7 +6604,7 @@ ar:
   tutorial_codesterscr_string_detail_grades: الصفوف 2-8
   tutorial_grokdisease_string_detail_grades: من الصف التاسع فما فوق
   tutorial_techec_string_detail_grades: الجامعة
-  tutorial_rgbegin_string_detail_grades: الصفوف 2-5
+  tutorial_rgbegin_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_myradream_string_detail_grades: الصفوف 2-8
   tutorial_thinkfun_string_detail_grades: الصفوف 2-8
   tutorial_hopfireworks_string_detail_grades: الصفوف 2-8
@@ -6612,7 +6612,7 @@ ar:
   tutorial_codehspython_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_codehsjava_string_detail_grades: من الصف التاسع فما فوق
   tutorial_techioda_string_detail_grades: الجامعة
-  tutorial_grokmonster_string_detail_grades: الصفوف 2-5
+  tutorial_grokmonster_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_techmjs_string_detail_grades: الجامعة
   tutorial_techga_string_detail_grades: الجامعة
   tutorial_techioan_string_detail_grades: الجامعة
@@ -6620,19 +6620,19 @@ ar:
   tutorial_groktunnel_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_stemcod_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_techikb_string_detail_grades: الجامعة
-  tutorial_kanostreet_string_detail_grades: الصفوف 2-5
-  tutorial_nyblebot_string_detail_grades: الصفوف 2-5
-  tutorial_codemojijs_string_detail_grades: الصفوف 2-5
+  tutorial_kanostreet_string_detail_grades: قبل تعلم القراءة - الصف 5
+  tutorial_nyblebot_string_detail_grades: قبل تعلم القراءة - الصف 5
+  tutorial_codemojijs_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_techapf_string_detail_grades: الجامعة
   tutorial_techfpjs_string_detail_grades: الجامعة
   tutorial_techlinq_string_detail_grades: الجامعة
   tutorial_gpbcatapult_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_quorumastro_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_alicewonder_string_detail_grades: الصفوف 2-5
+  tutorial_alicewonder_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_rginter_string_detail_grades: الصفوف 6-8
   tutorial_cssgrid_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_jshero_string_detail_grades: من الصف التاسع فما فوق
-  tutorial_codemojipy_string_detail_grades: الصفوف 2-5
+  tutorial_codemojipy_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_nclabdrone_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_gpbcircle_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_gpbpaint_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -6664,11 +6664,11 @@ ar:
   tutorial_isavesanta_string_detail_grades: الصفوف 2-8
   tutorial_iorder_string_detail_grades: الصفوف 2-8
   tutorial_ianimate_string_detail_grades: الصفوف 2-8
-  tutorial_iloveada_string_detail_grades: الصفوف 2-5
+  tutorial_iloveada_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_kodflash_string_detail_grades: قبل تعلم القراءة - الصف 5
-  tutorial_kodchoose_string_detail_grades: الصفوف 2-5
+  tutorial_kodchoose_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_kodpizzapre_string_detail_grades: قبل تعلم القراءة - المستوى 1
-  tutorial_kodpizza_string_detail_grades: الصفوف 2-5
+  tutorial_kodpizza_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_kodwomen_string_detail_grades: الصفوف 2-8
   tutorial_tfunplug_string_detail_grades: الصفوف 6-8
   tutorial_lbvariables_string_detail_grades: الصفوف 2-8
@@ -6680,9 +6680,9 @@ ar:
   tutorial_lbpotato_string_detail_grades: من الصف الثاني فما فوق
   tutorial_lbguitar_string_detail_grades: من الصف الثاني فما فوق
   tutorial_lbio_string_detail_grades: الصفوف 2-8
-  tutorial_wonpuppy_string_detail_grades: الصفوف 2-5
+  tutorial_wonpuppy_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_woncue_string_detail_grades: من الصف الثاني فما فوق
-  tutorial_wonzoo_string_detail_grades: الصفوف 2-5
+  tutorial_wonzoo_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_wontrip_string_detail_grades: الصفوف 2-8
   tutorial_woncollect_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_wonsecret_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -6723,10 +6723,10 @@ ar:
   tutorial_3dbearmars_string_detail_grades: الصفوف 2-8
   tutorial_alexaskill_string_detail_grades: الصفوف 2-8
   tutorial_bitsboxyak_string_detail_grades: الصفوف 2-8
-  tutorial_blockscadbargraphs_string_detail_grades: الصفوف 2-5
-  tutorial_blockscadbirdhouses_string_detail_grades: الصفوف 2-5
+  tutorial_blockscadbargraphs_string_detail_grades: قبل تعلم القراءة - الصف 5
+  tutorial_blockscadbirdhouses_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_blockscadclock_string_detail_grades: من الصف التاسع فما فوق
-  tutorial_blockscaddinner_string_detail_grades: الصفوف 2-5
+  tutorial_blockscaddinner_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_blockscadicecream_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_blockscadpizza_string_detail_grades: الصفوف 6-8
   tutorial_blockscadsugar_string_detail_grades: الصفوف 6-8
@@ -6737,20 +6737,20 @@ ar:
   tutorial_bpenglishvid_string_detail_grades: الصفوف 2-8
   tutorial_bphealthscratch_string_detail_grades: من الصف الثاني فما فوق
   tutorial_bphealthvid_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_bpmathscratch_string_detail_grades: الصفوف 2-5
+  tutorial_bpmathscratch_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_bpmathvid_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_bpmlkscratch_string_detail_grades: الصفوف 2-8
   tutorial_bpmlkvid_string_detail_grades: الصفوف 6-8
-  tutorial_bpsafetyscratch_string_detail_grades: الصفوف 2-5
+  tutorial_bpsafetyscratch_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_bpsafetyvid_string_detail_grades: الصفوف 6-8
-  tutorial_bpsciencescratch_string_detail_grades: الصفوف 2-5
+  tutorial_bpsciencescratch_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_bpsciencevid_string_detail_grades: الصفوف 6-8
   tutorial_bptechscratch_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_bptechvid_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_caflags_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_matariki_string_detail_grades: الصفوف 2-5
+  tutorial_matariki_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_carestaurant_string_detail_grades: من الصف الثاني فما فوق
-  tutorial_casea_string_detail_grades: الصفوف 2-5
+  tutorial_casea_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_cashield_string_detail_grades: الصفوف 2-8
   tutorial_ccwslimer_string_detail_grades: الصفوف 2-8
   tutorial_codinggalaxy_string_detail_grades: قبل تعلم القراءة - المستوى 8
@@ -6789,8 +6789,8 @@ ar:
   tutorial_groklearningpython_string_detail_grades: من الصف التاسع فما فوق
   tutorial_htmltimetravel_string_detail_grades: من الصف التاسع فما فوق
   tutorial_hp_flappy_string_detail_grades: من الصف التاسع فما فوق
-  tutorial_appytappin_string_detail_grades: الصفوف 2-5
-  tutorial_icipher_string_detail_grades: الصفوف 2-5
+  tutorial_appytappin_string_detail_grades: قبل تعلم القراءة - الصف 5
+  tutorial_icipher_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_iguess_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_imake_string_detail_grades: قبل تعلم القراءة - المستوى 1
   tutorial_imorse_string_detail_grades: الصفوف 2-8
@@ -6799,7 +6799,7 @@ ar:
   tutorial_kibobowl_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_kibodance_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_buildcharacters_string_detail_grades: قبل تعلم القراءة - الصف 5
-  tutorial_designgames_string_detail_grades: الصفوف 2-5
+  tutorial_designgames_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_makelevels_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_wizard_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_mbscratchcards_string_detail_grades: من الصف الثاني فما فوق
@@ -6815,19 +6815,19 @@ ar:
   tutorial_ozotroll_string_detail_grades: الصفوف 6-8
   tutorial_peblioart_string_detail_grades: من الصف التاسع فما فوق
   tutorial_astropi_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_rgart_string_detail_grades: الصفوف 2-5
-  tutorial_rgengineer_string_detail_grades: الصفوف 2-5
-  tutorial_rgmath_string_detail_grades: الصفوف 2-5
-  tutorial_rgscience_string_detail_grades: الصفوف 2-5
-  tutorial_rgtech_string_detail_grades: الصفوف 2-5
+  tutorial_rgart_string_detail_grades: قبل تعلم القراءة - الصف 5
+  tutorial_rgengineer_string_detail_grades: قبل تعلم القراءة - الصف 5
+  tutorial_rgmath_string_detail_grades: قبل تعلم القراءة - الصف 5
+  tutorial_rgscience_string_detail_grades: قبل تعلم القراءة - الصف 5
+  tutorial_rgtech_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_robotmagic3d_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_robotmagicflappy_string_detail_grades: من الصف التاسع فما فوق
   tutorial_scratchadventure_string_detail_grades: من الصف الثاني فما فوق
   tutorial_scratchtalk_string_detail_grades: من الصف الثاني فما فوق
-  tutorial_scratchjrstory_string_detail_grades: الصفوف 2-5
+  tutorial_scratchjrstory_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_scratchjrtwinkle_string_detail_grades: مرحلة ما قبل القراءة
   tutorial_spherocomm_string_detail_grades: الصفوف 2-8
-  tutorial_spherocommunity_string_detail_grades: الصفوف 2-5
+  tutorial_spherocommunity_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_spherofunctions_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_spheroinfrared_string_detail_grades: الصفوف 6-8
   tutorial_spherolightsensor_string_detail_grades: الصفوف 2-8
@@ -6852,15 +6852,15 @@ ar:
   tutorial_gcvariables_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_beanything_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_change_string_detail_grades: الصفوف 2-8
-  tutorial_cooking_string_detail_grades: الصفوف 2-5
+  tutorial_cooking_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_crystal_string_detail_grades: من الصف الثاني فما فوق
   tutorial_landscape_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_pets_string_detail_grades: الصفوف 2-5
+  tutorial_pets_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_petvet_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_superhero_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_vidcodeplastic_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_vidcodetypeface_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_washustorm_string_detail_grades: الصفوف 2-5
+  tutorial_washustorm_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_activitypackets_string_detail_grades: قبل تعلم القراءة - المستوى 8
   tutorial_googlerookie_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_tommyturtle_string_detail_grades: قبل تعلم القراءة - الصف 5
@@ -6952,7 +6952,7 @@ ar:
   tutorial_ozobotcolor1_string_detail_grades: من الصف الثاني فما فوق
   tutorial_scigirlspixels_string_detail_grades: من الصف الثاني فما فوق
   tutorial_kcjheroines_string_detail_grades: الصفوف 2-8
-  tutorial_ozobotvalue_string_detail_grades: الصفوف 2-5
+  tutorial_ozobotvalue_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_icodebytes_string_detail_grades: مرحلة ما قبل القراءة
   tutorial_clfashion2_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_ai4all_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -6963,7 +6963,7 @@ ar:
   tutorial_kiboprogram_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_hellorubycsin60_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_clfashion1_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_irobottraffic_string_detail_grades: الصفوف 2-5
+  tutorial_irobottraffic_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_edisonmystery_string_detail_grades: الصفوف 6-8
   tutorial_microbitseaturtles_string_detail_grades: الصفوف 6-8
   tutorial_ozobotknow_string_detail_grades: من الصف الثاني فما فوق
@@ -6972,7 +6972,7 @@ ar:
   tutorial_irobotkind_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_firiavirtual_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_irobotguesscode_string_detail_grades: الصفوف 2-8
-  tutorial_ozobotnouns_string_detail_grades: الصفوف 2-5
+  tutorial_ozobotnouns_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_nasa3d_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_blupants_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_legodance_string_detail_grades: الصفوف 6-8
@@ -10084,15 +10084,15 @@ ar:
   tutorial_codehstriangle_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_ttwhitehouse_string_detail_grades: من الصف الثاني فما فوق
   tutorial_modulo_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_codingtown_string_detail_grades: الصفوف 2-5
-  tutorial_kanoart_string_detail_grades: الصفوف 2-5
+  tutorial_codingtown_string_detail_grades: قبل تعلم القراءة - الصف 5
+  tutorial_kanoart_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_dragonscript_string_detail_grades: من الصف التاسع فما فوق
   tutorial_uwcloud_string_detail_grades: من الصف الثاني فما فوق
   tutorial_htmlmuffin_string_detail_grades: الصفوف 6-8
   tutorial_microsoftpizza_string_detail_grades: الصفوف 6-8
   tutorial_stemc_blckhole_string_detail_grades: من الصف التاسع فما فوق
   tutorial_careconfigure_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_rpiscratch_string_detail_grades: الصفوف 2-5
+  tutorial_rpiscratch_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_ozaria_string_detail_grades: من الصف الثاني فما فوق
   tutorial_ttovum_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_ttpassage_string_detail_grades: الصفوف 2-8
@@ -10140,7 +10140,7 @@ ar:
   tutorial_modvariables_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_codestersmicro_string_detail_grades: الصفوف 6-8
   tutorial_codestersdata_string_detail_grades: الصفوف 6-8
-  tutorial_ikodexmas_string_detail_grades: الصفوف 2-5
+  tutorial_ikodexmas_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_rpisensehat_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_modtraits_string_detail_grades: من الصف الثاني فما فوق
   tutorial_mee_string_detail_grades: من الصف الثاني فما فوق
