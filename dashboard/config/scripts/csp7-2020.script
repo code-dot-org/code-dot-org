@@ -71,7 +71,7 @@ lesson 'Project - Make a Library Part 3', display_name: 'Project - Make a Librar
 level 'CSP U7L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Libraries Project Part 3', progression: 'Build Your Library', assessment: true
 
-lesson 'Lesson 11: Assessment Day', display_name: 'Lesson 11: Assessment Day', lockable: true, has_lesson_plan: false
+lesson 'Lesson 11: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP U7L12 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 7 AP-Style Assessment _2020', progression: 'Unit 7 Exam', assessment: true
 

@@ -93,6 +93,6 @@ lesson 'Project - Digital Information Dilemmas Part 2', display_name: 'Project -
 level 'CSP U1L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L14 CSP CFU digital information', progression: 'Check For Understanding', assessment: true
 
-lesson 'Lesson 14: Assessment Day', display_name: 'Lesson 14: Assessment Day', lockable: true, has_lesson_plan: false
+lesson 'Lesson 14: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP Unit 1 AP-Style Assessment _2020', progression: 'Unit 1 Exam', assessment: true
 

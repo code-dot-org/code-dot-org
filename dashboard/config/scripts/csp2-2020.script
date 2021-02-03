@@ -50,6 +50,6 @@ level 'CSP U2L7 SFLP 20-21', progression: 'Lesson Overview'
 lesson 'Project - Internet Dilemmas Part 2', display_name: 'Project - Internet Dilemmas Part 2', has_lesson_plan: true
 level 'CSP U2L9 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Lesson 9: Assessment Day', display_name: 'Lesson 9: Assessment Day', lockable: true, has_lesson_plan: false
+lesson 'Lesson 9: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP Unit 2 MC Assessment _2020', progression: 'Unit 2 Exam', assessment: true
 

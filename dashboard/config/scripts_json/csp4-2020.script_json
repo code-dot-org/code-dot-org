@@ -5,12 +5,22 @@
     "hidden": false,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit4/{LESSON}",
-      "curriculum_umbrella": "CSP",
-      "project_sharing": true,
       "hideable_lessons": true,
+      "student_detail_progress_view": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit4/{LESSON}",
+      "script_announcements": [
+        {
+          "notice": "",
+          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
+          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
+      "is_stable": true,
+      "project_sharing": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -20,23 +30,6 @@
           "standardMappings",
           "https://curriculum.code.org/csp-20/unit4/standards/"
         ]
-      ],
-      "is_stable": true,
-      "script_announcements": [
-        {
-          "notice": "",
-          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
-          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        },
-        {
-          "notice": "EIPM Lessons",
-          "details": "In this unit, we beginning following our new programming model called EIPM. Check out this helpful video series to learn all about it! ",
-          "link": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
-          "type": "information",
-          "visibility": "Teacher-only"
-        }
       ],
       "announcements": [
         {
@@ -61,7 +54,7 @@
           "visibility": "Teacher-only"
         }
       ],
-      "peer_reviews_to_complete": 0
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,
@@ -332,11 +325,11 @@
     },
     {
       "key": "Lesson 15: Assessment Day",
-      "name": "Lesson 15: Assessment Day",
+      "name": "Assessment Day",
       "absolute_position": 15,
       "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 1,
+      "has_lesson_plan": true,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
