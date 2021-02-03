@@ -126,6 +126,10 @@ class Script < ApplicationRecord
     end
   end
 
+  def prevent_course_version_change?
+    lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
+  end
+
   def self.script_directory
     SCRIPT_DIRECTORY
   end

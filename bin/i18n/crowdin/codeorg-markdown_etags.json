@@ -1439,5 +1439,21 @@
     "/hourofcode/frozen.md": "\"24ea283426205c0c7ed57dc569ac508a\"",
     "/hourofcode/playlab.md": "\"24ea283426205c0c7ed57dc569ac508a\"",
     "/hourofcode/artist.md": "\"24ea283426205c0c7ed57dc569ac508a\""
+  },
+  "in": {
+    "/educate/curriculum/csf-transition-guide.md": "\"c01c899335ef96916034c5a4b4fff5e0\"",
+    "/international/about.md": "\"442a9887b43316e1ea94afc3ecd1be72\"",
+    "/csforgood.md": "\"ab49a0f582b6c03809c1adc5682574c9\"",
+    "/break.md": "\"ab49a0f582b6c03809c1adc5682574c9\"",
+    "/athome.md": "\"ab49a0f582b6c03809c1adc5682574c9\"",
+    "/hourofcode/infinity.md": "\"c01c899335ef96916034c5a4b4fff5e0\"",
+    "/hourofcode/mc.md": "\"c01c899335ef96916034c5a4b4fff5e0\"",
+    "/hourofcode/unplugged-conditionals-with-cards.md": "\"c01c899335ef96916034c5a4b4fff5e0\"",
+    "/hourofcode/hourofcode.md": "\"574942b6b3e4eeda875f92457bb2ee64\"",
+    "/hourofcode/flappy.md": "\"574942b6b3e4eeda875f92457bb2ee64\"",
+    "/hourofcode/starwars.md": "\"574942b6b3e4eeda875f92457bb2ee64\"",
+    "/hourofcode/frozen.md": "\"3651b7b91c631d2f043a4268f3011847\"",
+    "/hourofcode/playlab.md": "\"3651b7b91c631d2f043a4268f3011847\"",
+    "/hourofcode/artist.md": "\"3651b7b91c631d2f043a4268f3011847\""
   }
 }
