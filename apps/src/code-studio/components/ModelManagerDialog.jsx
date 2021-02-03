@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
-import Applab from '@cdo/apps/applab/applab';
+import autogenerateML from '@cdo/apps/applab/ai';
 
 export default class ModelManagerDialog extends React.Component {
   static propTypes = {
@@ -35,7 +35,7 @@ export default class ModelManagerDialog extends React.Component {
   importMLModel = async () => {
     this.setState({isImportPending: true});
     const modelId = this.root.value;
-    await Applab.autogenerateML(modelId);
+    await autogenerateML(modelId);
     this.setState({isImportPending: false});
     this.closeModelManager();
   };
