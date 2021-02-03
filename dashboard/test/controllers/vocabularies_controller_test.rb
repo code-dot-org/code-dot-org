@@ -31,7 +31,7 @@ class VocabulariesControllerTest < ActionController::TestCase
     assert(@response.body.include?('updated definition'))
   end
 
-  test "can update lessons from params" do
+  test "can update vocab from params" do
     sign_in @levelbuilder
     course_version = create :course_version
     lesson = create :lesson
