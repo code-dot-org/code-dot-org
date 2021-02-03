@@ -91,6 +91,7 @@ class LessonTip extends Component {
         <div
           style={this.getTabStyle()}
           onClick={() => this.setState({expanded: !expanded})}
+          className={'unit-test-tip-tab'}
         >
           <FontAwesome
             icon={tipTypes[this.props.tip.type].icon}
