@@ -109,7 +109,6 @@ describe('AddVocabularyDialog', () => {
       />
     );
     expect(wrapper.contains('Add Vocabulary')).to.be.true;
-    expect(wrapper.find('input').length).to.equal(2);
   });
 
   it('displays vocabulary lessons if lessons are selectable', () => {
