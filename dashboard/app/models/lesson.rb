@@ -252,8 +252,9 @@ class Lesson < ApplicationRecord
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
-        unplugged: display_as_unplugged, # TODO: Update to use unplugged property
-        lessonEditPath: edit_lesson_path(id: id)
+        unplugged: script.is_migrated ? unplugged : display_as_unplugged, # TODO: Update to use unplugged property
+        lessonEditPath: edit_lesson_path(id: id),
+        activities: lesson_activities.map(&:summarize)
       }
 
       # Use to_a here so that we get access to the cached script_levels.
