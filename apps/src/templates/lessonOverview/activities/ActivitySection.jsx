@@ -75,7 +75,8 @@ export default class ActivitySection extends Component {
               style={{
                 ...(section.remarks && {
                   borderLeft: '5px solid #CCC',
-                  paddingLeft: 5
+                  paddingLeft: 5,
+                  marginBottom: 5
                 })
               }}
             >
