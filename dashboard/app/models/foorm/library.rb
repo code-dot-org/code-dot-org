@@ -18,6 +18,8 @@ class Foorm::Library < ApplicationRecord
 
   has_many :library_questions, primary_key: [:name, :version], foreign_key: [:library_name, :library_version]
 
+  after_save :write_library_to_file
+
   def self.setup
     Dir.glob('config/foorm/library/**/*.json').each do |path|
       # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
@@ -60,5 +62,33 @@ class Foorm::Library < ApplicationRecord
         raise format('failed to parse %s', full_name)
       end
     end
+  end
+
+  def formatted_for_file
+    elements = library_questions.map {|library_question| JSON.parse(library_question.question)}
+
+    JSON.pretty_generate(
+      {
+        'published' => published,
+        'pages' => [
+          {'elements' => elements}
+        ]
+      }
+    )
+  end
+
+  def write_library_to_file
+    if write_to_file?
+      file_path = Rails.root.join("config/foorm/library/#{name}.#{version}.json")
+      file_directory = File.dirname(file_path)
+      unless Dir.exist?(file_directory)
+        FileUtils.mkdir_p(file_directory)
+      end
+      File.write(file_path, formatted_for_file)
+    end
+  end
+
+  def write_to_file?
+    Rails.application.config.levelbuilder_mode
   end
 end
