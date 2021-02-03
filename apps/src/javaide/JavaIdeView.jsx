@@ -44,7 +44,7 @@ const style = {
   }
 };
 
-class JavalabView extends React.Component {
+class JavaIdeView extends React.Component {
   run = () => {
     console.log('running!');
   };
@@ -84,4 +84,4 @@ class JavalabView extends React.Component {
   }
 }
 
-export default connect()(JavalabView);
+export default connect()(JavaIdeView);

@@ -10,7 +10,6 @@
         "playlab",
         "artist"
       ],
-      "has_lesson_plan": true,
       "version_year": "2018",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/coursec/{LESSON}",
       "is_stable": true,
