@@ -98,7 +98,7 @@ const confirmationDialogNames = {
   publish: 'publish'
 };
 
-class FoormSaveBar extends Component {
+class FoormLibrarySaveBar extends Component {
   static propTypes = {
     libraryCategories: PropTypes.array,
     resetCodeMirror: PropTypes.func,
@@ -110,11 +110,11 @@ class FoormSaveBar extends Component {
     libraryQuestionId: PropTypes.number,
     lastSaved: PropTypes.number,
     saveError: PropTypes.string,
-    setFormData: PropTypes.func,
+    setLibraryQuestionData: PropTypes.func,
     addAvilableForm: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
-    setLastSavedQuestions: PropTypes.func
+    setLastSavedQuestion: PropTypes.func
   };
 
   constructor(props) {
@@ -130,7 +130,7 @@ class FoormSaveBar extends Component {
   }
 
   updateQuestionsUrl = () =>
-    `/foorm/library_questions/${this.props.libraryQuestionId}/update`;
+    `/foorm/library_questions/${this.props.libraryQuestionId}`;
 
   publishUrl = () => `/foorm/forms/ID_here/publish`;
 
@@ -176,7 +176,7 @@ class FoormSaveBar extends Component {
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        questions: this.props.libraryQuestion
+        question: this.props.libraryQuestion
       })
     })
       .done(result => {
@@ -234,18 +234,17 @@ class FoormSaveBar extends Component {
       isSaving: false
     });
     this.props.setLastSaved(Date.now());
-    const updatedQuestions = JSON.parse(result.questions);
+    const updatedQuestion = JSON.parse(result.question);
     // reset code mirror with returned questions (may have added published state)
-    this.props.resetCodeMirror(updatedQuestions);
+    this.props.resetCodeMirror(updatedQuestion);
     // update store with form data.
-    this.props.setFormData({
+    this.props.setLibraryQuestionData({
       published: result.published,
       name: result.name,
-      version: result.version,
       id: result.id,
-      questions: updatedQuestions
+      question: updatedQuestion
     });
-    this.props.setLastSavedQuestions(updatedQuestions);
+    this.props.setLastSavedQuestion(updatedQuestion);
   }
 
   handleSaveError(result) {
@@ -414,7 +413,7 @@ class FoormSaveBar extends Component {
 
 export default connect(
   state => ({
-    libraryQuestion: state.foorm.formQuestions || {},
+    libraryQuestion: state.foorm.libraryQuestion || {},
     isFormPublished: state.foorm.isFormPublished,
     formHasError: state.foorm.hasError,
     libraryQuestionId: state.foorm.libraryQuestionId,
@@ -430,4 +429,4 @@ export default connect(
     setLastSavedQuestion: libraryQuestion =>
       dispatch(setLastSavedQuestion(libraryQuestion))
   })
-)(FoormSaveBar);
+)(FoormLibrarySaveBar);

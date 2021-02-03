@@ -63,6 +63,7 @@ class FoormLibraryEditorPreview extends Component {
                 submitApi={'/none'}
                 key={`form-${this.props.formKey}`}
                 surveyData={this.props.surveyData}
+                inEditorMode={true}
               />
             )}
         </div>
