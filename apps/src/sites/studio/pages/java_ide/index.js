@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import JavaIdeView from '../../../../javaide/JavaIdeView';
+import JavaIdeView from '../../../../javaIde/JavaIdeView';
 import {getStore} from '../../../../code-studio/redux';
-import javalab from '../../../../javalab/redux';
+import javaIde from '../../../../javaIde/redux';
 import {registerReducers} from '../../../../redux';
 
 $(document).ready(function() {
-  console.log('registering reducer?');
-  registerReducers({javalab});
+  registerReducers({javaIde});
   ReactDOM.render(
     <Provider store={getStore()}>
       <JavaIdeView />

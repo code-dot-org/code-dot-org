@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {appendLog} from './redux';
+import {appendInputLog} from './redux';
 import CommandHistory from '../lib/tools/jsdebugger/CommandHistory';
 import {KeyCodes} from '../constants';
 
@@ -72,8 +72,8 @@ function moveCaretToEndOfDiv(element) {
 class JavaConsole extends React.Component {
   static propTypes = {
     // populated by redux
-    consoleOutput: PropTypes.array,
-    appendLog: PropTypes.func
+    consoleLogs: PropTypes.array,
+    appendInputLog: PropTypes.func
   };
 
   constructor(props) {
@@ -85,24 +85,26 @@ class JavaConsole extends React.Component {
   }
 
   displayConsoleOutput() {
-    return this.props.consoleOutput.map(output => {
-      console.log(`output: ${output.type}, ${output.text}`);
-      if (output.type === 'user') {
-        return <p>&gt; {output.text}</p>;
-      } else {
-        return <p>&lt; {output.text}</p>;
+    return this.props.consoleLogs.map((log, i) => {
+      let prefix = '<';
+      if (log.type === 'input') {
+        prefix = '>';
       }
+      return (
+        <p key={`log_${i}`}>
+          {prefix} {log.text}
+        </p>
+      );
     });
   }
 
   onInputKeyDown = e => {
     const input = e.target.value;
-    console.log(input);
     if (e.keyCode === KeyCodes.ENTER) {
       e.preventDefault();
       e.target.value = '';
       this.state.commandHistory.push(input);
-      this.props.appendLog({type: 'user', text: input});
+      this.props.appendInputLog(input);
     } else if (e.keyCode === KeyCodes.UP) {
       e.target.value = this.state.commandHistory.goBack(input);
       moveCaretToEndOfDiv(e.target);
@@ -137,11 +139,10 @@ class JavaConsole extends React.Component {
 }
 
 export default connect(
-  state => {
-    console.log(state);
-    return {consoleOutput: state.javalab.consoleOutput};
-  },
+  state => ({
+    consoleLogs: state.javaIde.consoleLogs
+  }),
   dispatch => ({
-    appendLog: log => dispatch(appendLog(log))
+    appendInputLog: log => dispatch(appendInputLog(log))
   })
 )(JavaConsole);
