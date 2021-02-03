@@ -425,25 +425,6 @@ class ScriptEditor extends React.Component {
             </HelpTip>
           </label>
           <label>
-            Show Calendar
-            <input
-              type="checkbox"
-              checked={this.state.showCalendar}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({showCalendar: !this.state.showCalendar})
-              }
-            />
-            <HelpTip>
-              <p>
-                Check to enable the calendar view on the Unit Overview Page. The
-                calendar displays each lesson and generally how long it will
-                take as well how many weeks the unit is expected to take in
-                general. (Actual calendar UI coming soon!)
-              </p>
-            </HelpTip>
-          </label>
-          <label>
             Supported locales
             <HelpTip>
               <p>
@@ -783,6 +764,43 @@ class ScriptEditor extends React.Component {
               }
             />
           </div>
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Unit Calendar Settings">
+          <label>
+            Show Calendar
+            <input
+              type="checkbox"
+              checked={this.state.showCalendar}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({showCalendar: !this.state.showCalendar})
+              }
+            />
+            <HelpTip>
+              <p>
+                Check to enable the calendar view on the Unit Overview Page. The
+                calendar displays each lesson and generally how long it will
+                take as well how many weeks the unit is expected to take in
+                general. (Actual calendar UI coming soon!)
+              </p>
+            </HelpTip>
+          </label>
+          <label>
+            Instructional Minutes Per Week
+            <HelpTip>
+              <p>
+                Number of instructional minutes to allocate to each week in the
+                calendar. Lessons will be divided across the days/weeks in the
+                calendar based on their length of time.
+              </p>
+            </HelpTip>
+            <input
+              value={10}
+              style={styles.input}
+              onChange={e => console.log(e.target.value)}
+            />
+          </label>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Professional Learning Settings">
