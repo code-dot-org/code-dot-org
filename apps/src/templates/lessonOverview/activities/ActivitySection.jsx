@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import LessonTip, {
-  tipTypes
-} from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
+import LessonTip from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
 import {activitySectionShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import i18n from '@cdo/locale';
@@ -47,20 +45,10 @@ export default class ActivitySection extends Component {
   render() {
     const {section} = this.props;
 
-    const sectionHasTips = section.tips.length > 0;
-
     let tipsTotalLength = 0;
     section.tips.forEach(tip => {
       tipsTotalLength += tip.markdown.length;
     });
-    const totalLengthOfSectionText = section.text.length + tipsTotalLength;
-    // The width of the tip based on the length of the text of the tip and the activity section
-    // The minimum width the activity section can have is 20
-    const tipWidth = Math.min(
-      Math.round((tipsTotalLength / totalLengthOfSectionText) * 100),
-      80
-    );
-
     return (
       <div>
         <h3 id={`activity-section-${section.key}`}>
@@ -73,29 +61,10 @@ export default class ActivitySection extends Component {
             </span>
           )}
         </h3>
-        <div
-          style={{
-            ...styles.activitySection,
-            ...(sectionHasTips && {position: 'relative', left: -30})
-          }}
-        >
-          {sectionHasTips && (
-            <div style={styles.tipIcons}>
-              {section.tips.map((tip, index) => {
-                return (
-                  <FontAwesome
-                    key={`tipIcon-${index}`}
-                    icon={tipTypes[tip.type].icon}
-                    style={{color: tipTypes[tip.type].color}}
-                  />
-                );
-              })}
-            </div>
-          )}
+        <div>
           <div
             style={{
-              ...styles.textAndProgression,
-              ...(sectionHasTips && {width: `${100 - tipWidth}%`})
+              ...styles.textAndProgression
             }}
           >
             {section.remarks && (
@@ -120,12 +89,7 @@ export default class ActivitySection extends Component {
               />
             </div>
           </div>
-          <div
-            style={{
-              ...styles.tips,
-              ...(sectionHasTips && {width: `${tipWidth}%`, marginLeft: 5})
-            }}
-          >
+          <div>
             {section.tips.map((tip, index) => {
               return <LessonTip key={`tip-${index}`} tip={tip} />;
             })}
