@@ -1585,6 +1585,51 @@
     "dsls": {
       "description": "You have reached the end of Course F! Choose a project to create.",
       "display_name": "End of Course Project"
+    },
+    "sublevels": {
+      "CourseF_Project_SpriteLab_2020": {
+        "display_name": "Create a Sprite Lab project",
+        "block_categories": {
+          "World": "World",
+          "Sprites": "Sprites",
+          "Locations": "Locations",
+          "Actions": "Actions",
+          "Events": "Events",
+          "Behaviors": "Behaviors",
+          "Variables": "Variables",
+          "Math": "Math",
+          "Logic": "Logic",
+          "Functions": "Functions",
+          "Text": "Text",
+          "Comments": "Comments"
+        },
+        "behavior_names": {
+          "moving east": "moving east",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "growing": "growing",
+          "moving south": "moving south",
+          "swimming left and right": "swimming left and right",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "moving west": "moving west",
+          "patrolling": "patrolling",
+          "wandering": "wandering"
+        }
+      },
+      "Course F: Artist Project_2020": {
+        "display_name": "Create an Artist project",
+        "block_categories": {
+          "Actions": "Actions",
+          "Brushes": "Brushes",
+          "Loops": "Loops",
+          "Math": "Math",
+          "Logic": "Logic",
+          "Functions": "Functions",
+          "Variables": "Variables"
+        }
+      }
     }
   }
 }

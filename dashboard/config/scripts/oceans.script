@@ -1,5 +1,4 @@
 hidden false
-has_lesson_plan true
 background 'oceans-blue'
 
 lesson 'Oceans', display_name: 'Oceans', has_lesson_plan: true

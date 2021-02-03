@@ -1,5 +1,5 @@
 {
-  "category": "Text",
+  "category": "World",
   "config": {
     "func": "textVariableJoin",
     "blockText": "{VAR}{TEXT2}",

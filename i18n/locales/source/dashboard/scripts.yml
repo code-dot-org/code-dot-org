@@ -15812,6 +15812,7 @@ en:
             'Lesson 15: Assessment Day':
               name: 'Lesson 15: Assessment Day'
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
+          name: csp4-2020
         csp5-2020:
           title: CSP Unit 5 - Lists, Loops, and Traversals ('20-'21)
           description_audience: ''
@@ -15868,6 +15869,7 @@ en:
             Unit 5 TEACHER Survey:
               name: Unit 5 TEACHER Survey
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
+          name: csp5-2020
         csp7-2020:
           title: CSP Unit 7 - Parameters, Return, and Libraries ('20-'21)
           description_audience: ''
@@ -17527,6 +17529,7 @@ en:
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
+          name: csp1-2020
         csp2-2020:
           title: CSP Unit 2 - The Internet ('20-'21)
           description_audience: ''
@@ -17557,6 +17560,7 @@ en:
             'Lesson 9: Assessment Day':
               name: 'Lesson 9: Assessment Day'
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
+          name: csp2-2020
         csp3-2020:
           title: CSP Unit 3 - Intro to App Design ('20-'21)
           description_audience: ''
@@ -17633,6 +17637,7 @@ en:
             Create PT - Complete the Task:
               name: Create PT - Complete the Task
           student_description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
+          name: csp8-2020
         csp9-2020:
           title: CSP Unit 9 - Data ('20-'21)
           description_audience: ''
@@ -17663,6 +17668,7 @@ en:
             'Lesson 9: Assessment Day':
               name: 'Lesson 9: Assessment Day'
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
+          name: csp9-2020
         csp10-2020:
           title: CSP Unit 10 - Cybersecurity and Global Impacts ('20-'21)
           description_audience: ''
@@ -17709,6 +17715,7 @@ en:
             'Lesson 14: Unit Assessment Day':
               name: 'Lesson 14: Unit Assessment Day'
           student_description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
+          name: csp10-2020
         csp-march-virtual:
           title: CS Principles 20-21 Curriculum Training for Facilitators
           description_audience: CS Principles Facilitators
@@ -18838,6 +18845,8 @@ en:
               name: Making Sprites
             Sprites in Action:
               name: Sprites in Action
+            lesson-3-ci:
+              name: Create a Haiku Bot
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -20749,3 +20758,71 @@ en:
           description_short: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
           description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
           student_description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+        contagion-guided-practice:
+          lessons:
+            how things spread gp:
+              name: How Things Spread Guided Practice
+          lesson_groups:
+            lesson group:
+              display_name: Contagion-Guided-Practice
+          name: contagion-guided-practice
+          title: Contagion Guided Practice [Teacher only]
+          description_audience: 5th grade
+          description_short: These levels are for teachers to use when demonstrating CS and science concepts in the Contagion Simulator levels
+          description: These levels are for teachers to use when demonstrating CS and science concepts in the Contagion Simulator levels
+          student_description: ''
+        ai-unit-pilot:
+          lessons:
+            new lesson:
+              name: lesson display name
+            intro:
+              name: Lesson 1
+            lesson1:
+              name: Lesson 1
+            lesson2:
+              name: Lesson 2
+            lesson3:
+              name: Lesson 3
+            lesson4:
+              name: Lesson 4
+            lesson5:
+              name: Lesson 5
+            lesson6:
+              name: Lesson 6
+            lesson7:
+              name: Lesson 7
+            lesson8:
+              name: Lesson 8
+            lesson9:
+              name: Lesson 9
+            lesson10:
+              name: Lesson 10
+            lesson11:
+              name: Lesson 11
+            lesson12:
+              name: Lesson 12
+            lesson13:
+              name: Lesson 13
+            lesson14:
+              name: Lesson 14
+            lesson15:
+              name: Lesson 15
+            lesson16:
+              name: Lesson 16
+            lesson17:
+              name: Lesson 17
+            lesson18:
+              name: Lesson 18
+            lesson19:
+              name: Lesson 19
+            lesson20:
+              name: Lesson 20
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+          name: ai-unit-pilot
+          title: AI Unit Pilot
+          description_audience: ''
+          description_short: Pilot for AI Unit in CSD
+          description: ''
+          student_description: ''

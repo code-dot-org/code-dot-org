@@ -95,6 +95,9 @@
           },
           "draw left leg": {
             "name": "narysuj lewą nogę"
+          },
+          "draw head": {
+            "name": "narysuj głowę"
           }
         },
         "2-3 Artist Debugging 7": {
@@ -270,77 +273,121 @@
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "Course 4 Artist Binary 2": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "Course 4 Artist Binary 3": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "Course 4 Artist Binary 4": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "Course 4 Artist Binary 5": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "Course 4 Artist Binary 6": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "Course 4 Artist Binary 7": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "Course 4 Artist Binary pre1": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "Course 4 Bee Params 1": {
@@ -391,7 +438,9 @@
             "parameters": {
               "direction": "kierunek",
               "nectars": "nektary"
-            }
+            },
+            "name": "zbierz jak najwięcej nektaru",
+            "description": "Zbierz określoną liczbę nektarów poruszając się w dowolnym kierunku"
           }
         },
         "Course 4 Bee Params 8": {
@@ -401,24 +450,33 @@
               "direction": "kierunek",
               "nectars": "nektary",
               "honey": "miód"
-            }
+            },
+            "description": "Poruszaj się w dowolnym kierunku, by zbierać nektar lub robić miód."
           }
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "skocz"
+            "name": "skocz",
+            "description": "Spraw by główny bohater skoczył do góry o 100 pikseli."
           }
         },
         "Course 4 Play Lab Params 10": {
           "score_points": {
             "parameters": {
               "points": "punkty"
-            }
+            },
+            "name": "zdobyte_punkty",
+            "description": "Dodaj określoną liczbę punktów do zmiennej player_score (wynik gracza)."
+          },
+          "level_up": {
+            "name": "poziom_wyżej",
+            "description": "Zwiększ `level` (poziom) o 1, zresetuj punkty do zera, zwiększ szybkość przeciwnika i wybierz losowe tło."
           }
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "skocz"
+            "name": "skocz",
+            "description": "Spraw, by główny bohater skakał do góry o `height` (wysokość) pikseli."
           }
         },
         "Course 4 Play Lab Params 3": {
@@ -427,26 +485,35 @@
             "parameters": {
               "height": "wysokość",
               "actor": "postać"
-            }
+            },
+            "description": "Spraw, by dany aktor wykonywał skok o danej wysokości."
           }
         },
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "patrol": {
+            "name": "patroluj",
+            "description": "Przesuwaj postać do góry i w dół."
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
               "actor": "postać"
-            }
+            },
+            "name": "patroluj",
+            "description": "Przesuwaj postać do góry i w dół."
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
               "actor": "postać"
-            }
+            },
+            "name": "patroluj",
+            "description": "Przesuwaj duszka w górę i dół w danej prędkości."
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -454,7 +521,9 @@
             "parameters": {
               "actor": "postać",
               "speed": "prędkość"
-            }
+            },
+            "name": "patroluj",
+            "description": "Przesuwaj duszka w górę i dół w danej prędkości."
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -462,14 +531,18 @@
             "parameters": {
               "actor": "postać",
               "speed": "prędkość"
-            }
+            },
+            "name": "patroluj",
+            "description": "Przesuwaj duszka w górę i dół w danej prędkości."
           }
         },
         "Course 4 Play Lab Params 9": {
           "score_points": {
             "parameters": {
               "points": "punkty"
-            }
+            },
+            "name": "zdobyte_punkty",
+            "description": "Dodaj określoną liczbę punktów do zmiennej player_score (wynik gracza)."
           }
         },
         "Course 4 Play Lab Vars 1": {
@@ -485,6 +558,19 @@
         "Course 4 SCF 1": {
           "draw a hexagon": {
             "name": "narysuj sześciokąt"
+          },
+          "draw a line of hexagons": {
+            "name": "narysuj serię sześciokątów w llinii"
+          },
+          "shift down/forward": {
+            "name": "przejdź w dół/przed siebie"
+          },
+          "shift down/backward": {
+            "name": "przejdź w dół/do tyłu"
+          },
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20",
+            "description": "narysuj kwadrat o boku długości 20 pikseli"
           }
         },
         "Course 4 SCF 1a": {
@@ -500,7 +586,18 @@
           "draw octagons": {
             "parameters": {
               "numOctagons": "numOctagons"
-            }
+            },
+            "name": "rysuj ośmiokąty"
+          },
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20",
+            "description": "narysuj kwadrat o boku długości 20 pikseli"
+          },
+          "draw an octagon": {
+            "name": "narysuj ośmiokąt"
+          },
+          "shift down": {
+            "name": "przesuń w dół"
           }
         },
         "Course 4 SCF 3": {
@@ -510,7 +607,12 @@
           "draw an octagon": {
             "parameters": {
               "length": "długość"
-            }
+            },
+            "name": "narysuj ośmiokąt"
+          },
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20",
+            "description": "narysuj kwadrat o boku długości 20 pikseli"
           }
         },
         "Course E: Play Lab Project": {
@@ -530,7 +632,13 @@
           "score_points": {
             "parameters": {
               "points": "punkty"
-            }
+            },
+            "name": "zdobyte_punkty",
+            "description": "Dodaj określoną liczbę punktów do zmiennej player_score (wynik gracza)."
+          },
+          "level_up": {
+            "name": "poziom_wyżej",
+            "description": "Zwiększ `level` (poziom) o 1, zresetuj punkty do zera, zwiększ szybkość przeciwnika i wybierz losowe tło."
           }
         },
         "Function intro Ryan": {
@@ -736,7 +844,8 @@
         },
         "NEW Course 4 Artist Functions 4": {
           "draw a square": {
-            "name": "narysuj kwadrat"
+            "name": "narysuj kwadrat",
+            "description": "Narysuj kwadrat, który ma bok długości 100 pikseli."
           }
         },
         "NEW Course 4 Artist Functions 7": {
@@ -746,7 +855,8 @@
         },
         "NEW Course 4 Artist Functions 8": {
           "draw a triangle": {
-            "name": "narysuj trójkąt"
+            "name": "narysuj trójkąt",
+            "description": "narysuj trójkąt o bokach o długości 100 pikseli"
           }
         },
         "NEW Course 4 Artist Functions 9": {
@@ -760,6 +870,9 @@
         "NEW Course 4 Artist Params 1": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "Draw a triangle": {
+            "name": "Narysuj trójkąt"
           }
         },
         "NEW Course 4 Artist Params 10": {
@@ -770,7 +883,8 @@
             "name": "narysuj sześciokąt",
             "parameters": {
               "length": "długość"
-            }
+            },
+            "description": "narysuj sześciokąy o boku długości 100 pikseli wykorzystując parametr `length` (długość)"
           }
         },
         "NEW Course 4 Artist Params 11": {
@@ -778,7 +892,8 @@
             "parameters": {
               "sides": "boki",
               "length": "długość"
-            }
+            },
+            "name": "narysuj wielokąt"
           },
           "do something": {
             "name": "wykonaj coś",
@@ -793,7 +908,9 @@
             "parameters": {
               "length": "długość",
               "sides": "boki"
-            }
+            },
+            "name": "narysuj wielokąt",
+            "description": "narysuj wielokąt wykorzystując parametr boków i długości"
           }
         },
         "NEW Course 4 Artist Params 12a": {
@@ -801,7 +918,9 @@
             "parameters": {
               "length": "długość",
               "sides": "boki"
-            }
+            },
+            "name": "narysuj wielokąt",
+            "description": "narysuj wielokąt wykorzystując parametr boków i długości"
           }
         },
         "NEW Course 4 Artist Params 13": {
@@ -809,7 +928,8 @@
             "parameters": {
               "length": "długość",
               "sides": "boki"
-            }
+            },
+            "name": "narysuj wielokąt"
           }
         },
         "NEW Course 4 Artist Params 14": {
@@ -817,7 +937,8 @@
             "parameters": {
               "length": "długość",
               "sides": "boki"
-            }
+            },
+            "name": "rysuj spiralną krawędź"
           }
         },
         "NEW Course 4 Artist Params 15": {
@@ -826,20 +947,23 @@
             "parameters": {
               "points": "punkty",
               "length": "długość"
-            }
+            },
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości"
           },
           "draw a circle": {
             "name": "narysuj okrąg",
             "parameters": {
               "radius": "promień"
-            }
+            },
+            "description": "narysuj okrąg o danym promieniu"
           },
           "draw a pinwheel": {
             "parameters": {
               "sides": "boki",
               "length": "długość",
               "repeat": "powtarzaj"
-            }
+            },
+            "name": "narysuj rozetę"
           },
           "draw a triangle": {
             "name": "narysuj trójkąt",
@@ -851,7 +975,8 @@
             "parameters": {
               "sides": "boki",
               "length": "długość"
-            }
+            },
+            "name": "narysuj wielokąt foremny"
           },
           "draw a house": {
             "name": "narysuj dom",
@@ -878,21 +1003,25 @@
         },
         "NEW Course 4 Artist Params 3": {
           "draw a triangle": {
-            "name": "narysuj trójkąt"
+            "name": "narysuj trójkąt",
+            "description": "narysuj trójkąt o bokach o długości 50 pikseli"
           }
         },
         "NEW Course 4 Artist Params 4": {
           "draw a triangle with length": {
             "parameters": {
               "length": "długość"
-            }
+            },
+            "name": "narysuj trójkąt o boku długości"
           }
         },
         "NEW Course 4 Artist Params 5": {
           "draw a pentagon": {
             "parameters": {
               "length": "długość"
-            }
+            },
+            "name": "narysuj pięciokąt",
+            "description": "narysuj pięciokąt o boku długości 100 pikseli"
           }
         },
         "NEW Course 4 Artist Params 6": {
@@ -906,18 +1035,22 @@
             "name": "narysuj sześciokąt",
             "parameters": {
               "length": "długość"
-            }
+            },
+            "description": "narysuj sześciokąt o bokach o długości 100 pikseli"
           },
           "draw a square": {
             "name": "narysuj kwadrat",
             "parameters": {
               "length": "długość"
-            }
+            },
+            "description": "Narysuj kwadrat, który ma bok długości 100 pikseli."
           },
           "draw a sqaure": {
             "parameters": {
               "length": "długość"
-            }
+            },
+            "name": "narysuj kwadrat",
+            "description": "narysuj kwadrat, który ma bok długości 100 pikseli."
           }
         },
         "NEW Course 4 Artist Params 7": {
@@ -925,14 +1058,16 @@
             "name": "narysuj trójkąt",
             "parameters": {
               "length": "długość"
-            }
+            },
+            "description": "narysuj kwadrat przy pomocy parametru długości"
           }
         },
         "NEW Course 4 Artist Params 8": {
           "draw a triangle with length": {
             "parameters": {
               "length": "długość"
-            }
+            },
+            "name": "narysuj trójkąt o boku długości"
           }
         },
         "NEW Course 4 Artist Params 9": {
@@ -951,7 +1086,8 @@
             "parameters": {
               "length": "długość",
               "sides": "boki"
-            }
+            },
+            "name": "narysuj wielokąt"
           }
         },
         "NEW Course 4 Play Lab Params 11": {
@@ -960,13 +1096,16 @@
             "parameters": {
               "height": "wysokość",
               "actor": "postać"
-            }
+            },
+            "description": "blok funkcji skoku z parametrami wysokości i aktora"
           },
           "patrol": {
             "parameters": {
               "actor": "postać",
               "speed": "prędkość"
-            }
+            },
+            "name": "patroluj",
+            "description": "Przesuwaj duszka w górę i dół w danej prędkości."
           }
         },
         "New Artist Project": {
@@ -1044,11 +1183,17 @@
         "course3_artist_functions_challenge1": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "my design": {
+            "name": "mój projekt"
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "my design": {
+            "name": "mój projekt"
           }
         },
         "course3_bee_functions_challenge1": {
@@ -1084,48 +1229,67 @@
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "course4_artist_binary_challenge2": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "course4_artist_functions_challenge2": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "my design": {
+            "name": "mój projekt"
           }
         },
         "course4_artist_fwp_challenge1": {
           "draw background": {
             "parameters": {
               "color": "kolor"
-            }
+            },
+            "name": "narysuj tło"
           },
           "draw a polygon": {
             "parameters": {
               "sides": "boki"
-            }
+            },
+            "name": "narysuj wielokąt"
           },
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20",
+            "description": "narysuj kwadrat o boku długości 20 pikseli"
           }
         },
         "course4_bee_fwp_challenge1": {
           "pick row": {
             "parameters": {
               "length": "długość"
-            }
+            },
+            "name": "wybierz rząd"
           }
         },
         "course4_bee_fwp_challenge2": {
           "pick row": {
             "parameters": {
               "length": "długość"
-            }
+            },
+            "name": "wybierz rząd"
           }
         },
         "courseA_artist_loops_challenge1": {
@@ -1191,315 +1355,495 @@
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary1_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary1_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary1_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary2": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary2_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary2_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary2_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary3": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary3_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary3_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary3_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary4": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary4_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary4_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary4_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary5": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary5_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary5_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary5_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary6": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary6_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary6_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary6_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary7": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary7_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary7_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary7_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary8": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary8_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary8_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary8_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
             "parameters": {
               "binary": "binarny"
-            }
+            },
+            "name": "narysuj"
+          },
+          "draw bit": {
+            "name": "pokoloruj bit"
           }
         },
         "courseD_autorun_binary2_2019": {
@@ -1577,6 +1921,9 @@
           },
           "draw a plane of squares": {
             "name": "narysuj płaszczyznę kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_concept4_2018": {
@@ -1585,6 +1932,9 @@
           },
           "draw a plane of squares": {
             "name": "narysuj płaszczyznę kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -1746,6 +2096,9 @@
           },
           "draw square": {
             "name": "narysuj kwadrat"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functions8_2018": {
@@ -1757,6 +2110,9 @@
           },
           "staggered squares": {
             "name": "rząd kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -1768,6 +2124,9 @@
           },
           "staggered squares": {
             "name": "rząd kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -1779,6 +2138,9 @@
           },
           "staggered squares": {
             "name": "rząd kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -1811,6 +2173,9 @@
           },
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functions8b_2019": {
@@ -1819,6 +2184,9 @@
           },
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functions8b_2020": {
@@ -1827,6 +2195,9 @@
           },
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functions8c_2018": {
@@ -1838,6 +2209,9 @@
           },
           "staggered squares": {
             "name": "rząd kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -1849,6 +2223,9 @@
           },
           "staggered squares": {
             "name": "rząd kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -1860,6 +2237,9 @@
           },
           "staggered squares": {
             "name": "rząd kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functions9": {
@@ -1918,6 +2298,9 @@
           },
           "staggered squares": {
             "name": "rząd kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functionsProj_2019": {
@@ -1932,6 +2315,9 @@
           },
           "staggered squares": {
             "name": "rząd kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functionsProj_2020": {
@@ -1946,46 +2332,73 @@
           },
           "staggered squares": {
             "name": "rząd kwadratów"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
           }
         },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "my design": {
+            "name": "mój projekt"
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "my design": {
+            "name": "mój projekt"
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "my design": {
+            "name": "mój projekt"
           }
         },
         "courseE_artist_functions_challenge1_2020": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "my design": {
+            "name": "mój projekt"
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "my design": {
+            "name": "mój projekt"
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "my design": {
+            "name": "mój projekt"
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "my design": {
+            "name": "mój projekt"
           }
         },
         "courseE_artist_functions_challenge2_2020": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "my design": {
+            "name": "mój projekt"
           }
         },
         "courseE_artist_functions_predict1": {
@@ -2321,7 +2734,9 @@
             "parameters": {
               "length": "długość",
               "sides": "boki"
-            }
+            },
+            "name": "narysuj wielokąt",
+            "description": "narysuj wielokąt wykorzystując parametr boków i długości"
           }
         },
         "courseF_artist_fwp5": {
@@ -2329,7 +2744,8 @@
             "parameters": {
               "length": "długość",
               "sides": "boki"
-            }
+            },
+            "name": "narysuj wielokąt"
           }
         },
         "courseF_artist_fwp6": {
@@ -2337,7 +2753,8 @@
             "parameters": {
               "length": "długość",
               "sides": "boki"
-            }
+            },
+            "name": "rysuj spiralną krawędź"
           }
         },
         "courseF_artist_fwp7": {
@@ -2346,7 +2763,8 @@
               "length": "długość",
               "sides": "boki",
               "min": "min"
-            }
+            },
+            "name": "rysuj spiralną krawędź"
           }
         },
         "courseF_artist_fwp8": {
@@ -2355,7 +2773,8 @@
               "length": "długość",
               "sides": "boki",
               "min": "min"
-            }
+            },
+            "name": "rysuj spiralną krawędź"
           }
         },
         "courseF_artist_fwp9": {
@@ -2412,22 +2831,29 @@
               "length": "długość",
               "sides": "boki",
               "min": "min"
-            }
+            },
+            "name": "rysuj spiralną krawędź"
           }
         },
         "courseF_artist_fwp_challenge1": {
           "draw background": {
             "parameters": {
               "color": "kolor"
-            }
+            },
+            "name": "narysuj tło"
           },
           "draw a polygon": {
             "parameters": {
               "sides": "boki"
-            }
+            },
+            "name": "narysuj wielokąt"
           },
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20",
+            "description": "narysuj kwadrat o boku długości 20 pikseli"
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -2437,7 +2863,12 @@
           "draw an octagon": {
             "parameters": {
               "length": "długość"
-            }
+            },
+            "name": "narysuj ośmiokąt"
+          },
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20",
+            "description": "narysuj kwadrat o boku długości 20 pikseli"
           }
         },
         "courseF_bee_conditionals2": {
@@ -2564,14 +2995,16 @@
           "pick row": {
             "parameters": {
               "length": "długość"
-            }
+            },
+            "name": "wybierz rząd"
           }
         },
         "courseF_bee_fwp_challenge2": {
           "pick row": {
             "parameters": {
               "length": "długość"
-            }
+            },
+            "name": "wybierz rząd"
           }
         },
         "courseF_bee_variables_7_2018": {
@@ -2654,6 +3087,9 @@
           },
           "draw eye": {
             "name": "narysuj oko"
+          },
+          "draw head": {
+            "name": "narysuj głowę"
           }
         },
         "Robot Doodle_2018": {
@@ -2662,6 +3098,9 @@
           },
           "draw eye": {
             "name": "narysuj oko"
+          },
+          "draw head": {
+            "name": "narysuj głowę"
           }
         },
         "courseC_artist_prog4": {
@@ -2797,13 +3236,13 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           }
         },
         "courseE_farmer_functions10a1_2019": {
@@ -2811,13 +3250,13 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           }
         },
         "courseE_farmer_functions10a1_2020": {
@@ -2825,13 +3264,13 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           }
         },
         "courseE_farmer_functions11_predict_2018": {
@@ -2839,10 +3278,10 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get produce": {
             "name": "zbierz plon"
@@ -2856,10 +3295,10 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get produce": {
             "name": "zbierz plon"
@@ -2873,10 +3312,10 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "pumpkin square": {
-            "name": "pole z dynią"
+            "name": "kwadrat z dynią"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get produce": {
             "name": "zbierz plon"
@@ -2890,10 +3329,13 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę"
           },
           "corn rectangle": {
-            "name": "kukurydza"
+            "name": "trójkąt z kukurydzą"
+          },
+          "lettuce stairs": {
+            "name": "schody z sałaty"
           }
         },
         "courseE_farmer_functions13_2019": {
@@ -2901,10 +3343,13 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę"
           },
           "corn rectangle": {
-            "name": "kukurydza"
+            "name": "trójkąt z kukurydzą"
+          },
+          "lettuce stairs": {
+            "name": "schody z sałaty"
           }
         },
         "courseE_farmer_functions13_2020": {
@@ -2912,45 +3357,48 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę"
           },
           "corn rectangle": {
-            "name": "kukurydza"
+            "name": "trójkąt z kukurydzą"
+          },
+          "lettuce stairs": {
+            "name": "schody z sałaty"
           }
         },
         "courseE_farmer_functions1a_2018": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions1a_2019": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions1a_2020": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions2b_2018": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions2b_2019": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions2b_2020": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           }
         },
         "courseE_farmer_functions2ba_2018": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -2958,7 +3406,7 @@
         },
         "courseE_farmer_functions2ba_2019": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -2966,7 +3414,7 @@
         },
         "courseE_farmer_functions2ba_2020": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -2977,7 +3425,7 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -2988,7 +3436,7 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -2999,7 +3447,7 @@
             "name": "zbieraj wzdłuż ścieżki"
           },
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -3007,7 +3455,7 @@
         },
         "courseE_farmer_functions3c_2018": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -3015,7 +3463,7 @@
         },
         "courseE_farmer_functions3c_2019": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -3023,7 +3471,7 @@
         },
         "courseE_farmer_functions3c_2020": {
           "check square for corn": {
-            "name": "sprawdź kukurydze"
+            "name": "sprawdź kukurydzę w kwadracie"
           },
           "get all pumpkins": {
             "name": "zbierz wszystkie dynie"
@@ -3031,47 +3479,47 @@
         },
         "courseE_farmer_functions7a1_2018": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions7a1_2019": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions7a1_2020": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions8a1_2018": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions8a1_2019": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions8a1_2020": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions9a1_2018": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions9a1_2019": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "courseE_farmer_functions9a1_2020": {
           "garden square": {
-            "name": "pole ogrodu"
+            "name": "ogróod w kwadracie"
           }
         },
         "MC_HOC_2017_FP20x20_2019": {
@@ -3088,6 +3536,127 @@
           },
           "function 2": {
             "name": "funkcja 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "funkcja 1"
+          },
+          "function 2": {
+            "name": "funkcja 2"
+          }
+        },
+        "Standalone_Artist_8": {
+          "draw a shape": {
+            "name": "narysuj wielokąt foremny"
+          }
+        },
+        "Course 4 Artist Functions Inspiration": {
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20",
+            "description": "Narysuj kwadrat szeroki na 20px"
+          }
+        },
+        "Course 4 Artist Functions challenge": {
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów",
+            "description": "narysuj 6 kwadratów obok siebie o długości 6"
+          },
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20",
+            "description": "Narysuj kwadrat szeroki na 20px"
+          }
+        },
+        "Course 4 SCF 1b": {
+          "make honey up and over": {
+            "name": "zrób miód i zakończ"
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
+          "draw a line of  squares": {
+            "name": "Narysuj linię kwadratów",
+            "description": "narysuj 6 kwadratów obok siebie o długości 6"
+          },
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20",
+            "description": "Narysuj kwadrat o bokach długości 20 pikseli"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20",
+            "description": "narysuj kwadrat o boku długości 20 pikseli"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów"
+          }
+        },
+        "NEW Course 4 Artist Functions 14": {
+          "empty function": {
+            "name": "pusta funkcja"
+          },
+          "draw a line of squares": {
+            "name": "narysuj linię kwadratów",
+            "description": "narysuj linię kwadratów "
+          },
+          "draw a square 40": {
+            "name": "narysuj kwadrat 40",
+            "description": "Narysuj kwadrat o bokach długości 40."
+          },
+          "draw a square 20": {
+            "name": "narysuj kwadrat 20",
+            "description": "narysuj kwadrat o boku długości 20 pikseli"
+          }
+        },
+        "course4_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": "Narysuj rozetę."
+          }
+        },
+        "course4_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "Poruszaj się i zbieraj nektar wykorzystując licznik `counter`."
+          }
+        },
+        "courseE_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": "Narysuj rozetę."
+          }
+        },
+        "courseE_artist_concept_challenge2_2018": {
+          "draw pinwheel": {
+            "name": "Narysuj rozetę."
+          }
+        },
+        "courseF_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "Poruszaj się i zbieraj nektar wykorzystując licznik `counter`."
+          }
+        },
+        "courseF_bee_for_challenge1_2018": {
+          "move and get nectar with counter": {
+            "name": "Poruszaj się i zbieraj nektar wykorzystując licznik `counter`."
+          }
+        },
+        "courseF_bee_for_challenge1_2019": {
+          "move and get nectar with counter": {
+            "name": "Poruszaj się i zbieraj nektar wykorzystując licznik `counter`."
+          }
+        },
+        "courseF_bee_for_challenge1_2020": {
+          "move and get nectar with counter": {
+            "name": "Poruszaj się i zbieraj nektar wykorzystując licznik `counter`."
           }
         }
       }
