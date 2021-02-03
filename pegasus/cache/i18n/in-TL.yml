@@ -1473,6 +1473,8 @@ in-tl:
   header_legal_privacy: crwdns2426602:0crwdne2426602:0
   header_legal_tos: crwdns2426604:0crwdne2426604:0
   header_tutorials: crwdns84227:0crwdne84227:0
+  header_screen_reader_hamburger: crwdns2481320:0crwdne2481320:0
+  header_screen_reader_help: crwdns2481322:0crwdne2481322:0
   app_lab_documentation: crwdns774746:0crwdne774746:0
   app_lab_tutorials: crwdns774748:0crwdne774748:0
   game_lab_documentation: crwdns774750:0crwdne774750:0

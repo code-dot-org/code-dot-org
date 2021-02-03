@@ -312,7 +312,7 @@ if ('ontouchstart' in document.documentElement) {
 
 $.extend( $.simulate.prototype, {
   simulateDrag: function() {
-    if (window.Blockly && Blockly.version === 'Google') {
+    if (window.Blockly && Blockly.version === 'Google' && Blockly.utils.global['PointerEvent']) {
       touchMappings = {
         mousedown: 'pointerdown',
         mousemove: 'pointermove',

@@ -20,3 +20,8 @@ lesson 'CS Discoveries', display_name: 'CS Discoveries', has_lesson_plan: false
 level 'csd digital unplugged PSP word search big'
 level 'csd digital unplugged PSP seating big'
 
+lesson 'contagions', display_name: 'Content Integration: Contagions', has_lesson_plan: false
+level 'contagion_teachers', progression: 'Lesson 2: Bridging Activity'
+level '6sidedDie', progression: 'Lesson 3: Dice Roll'
+level 'contagion_teachers2', progression: 'Lesson 4: Collecting Data'
+
