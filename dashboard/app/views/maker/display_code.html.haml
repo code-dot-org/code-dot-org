@@ -1,16 +1,14 @@
 %h1= I18n.t('maker.google_oauth.login_with_google')
-- if @secret_code
-  %p= I18n.t('maker.google_oauth.copy_code')
 
-  = text_field_tag :maker_code, @secret_code, readonly: true
-  = button_tag I18n.t(:copy), id: "btn-copy"
+%p= I18n.t('maker.google_oauth.copy_code')
 
-  :javascript
-    $(document).ready(function() {
-      $('#btn-copy').click(function() {
-        $('#maker_code').select();
-        document.execCommand("copy");
-      });
+= text_field_tag :maker_code, @secret_code, readonly: true
+= button_tag I18n.t(:copy), id: "btn-copy"
+
+:javascript
+  $(document).ready(function() {
+    $('#btn-copy').click(function() {
+      $('#maker_code').select();
+      document.execCommand("copy");
     });
-- else
-  %p= I18n.t('maker.google_oauth.error_no_linked_google')
+  });

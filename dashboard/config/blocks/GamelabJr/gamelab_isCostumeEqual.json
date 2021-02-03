@@ -1,5 +1,5 @@
 {
-  "category": "Logic",
+  "category": "Sprites",
   "config": {
     "func": "isCostumeEqual",
     "blockText": "{SPRITE} costume is {COSTUME}",

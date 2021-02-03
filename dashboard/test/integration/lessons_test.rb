@@ -16,6 +16,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
       name: 'lesson display name',
       relative_position: 1,
       absolute_position: 1,
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -28,7 +29,8 @@ class LessonsTest < ActionDispatch::IntegrationTest
       lesson_group: lesson_group,
       name: 'second lesson',
       relative_position: 2,
-      absolute_position: 2
+      absolute_position: 2,
+      has_lesson_plan: true
     )
 
     @activity = create(

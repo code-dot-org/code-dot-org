@@ -1507,6 +1507,8 @@
   header_legal_privacy: "Privacy Policy"
   header_legal_tos: "Terms of Service"
   header_tutorials: "Tutorials"
+  header_screen_reader_hamburger: "Menu"
+  header_screen_reader_help: "Help Menu"
   app_lab_documentation: "App Lab Documentation"
   app_lab_tutorials: "App Lab Tutorials"
   game_lab_documentation: "Game Lab Documentation"
