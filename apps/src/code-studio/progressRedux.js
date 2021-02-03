@@ -358,8 +358,8 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
     }
 
     // Merge progress from server
-    if (data.levels) {
-      const levelProgress = _.mapValues(data.levels, getLevelResult);
+    if (data.progress) {
+      const levelProgress = _.mapValues(data.progress, getLevelResult);
       dispatch(mergeProgress(levelProgress));
 
       if (data.peerReviewsPerformed) {

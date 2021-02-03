@@ -258,7 +258,7 @@ export const processedLevel = level => {
   };
 };
 
-const getLevelResult = serverProgress => {
+export const getLevelResult = serverProgress => {
   if (serverProgress.status === LevelStatus.locked) {
     return TestResults.LOCKED_RESULT;
   }
