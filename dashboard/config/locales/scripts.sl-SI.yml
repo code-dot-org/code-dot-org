@@ -52,6 +52,12 @@ sl:
               name: 'Play Lab: ustvari zgodbo'
             The Big Event:
               name: Veliki dogodek
+          student_description: Začnite s Tečajom 1 za otroke, ki se še učijo brati.
+            Učenci bodo ustvarili programe, ki jim bodo pomagali se naučiti sodelovati
+            z drugimi, razvili bodo spretnost reševanja problemov ter vzstrajnosti
+            pri zahtevnih nalogah. Na koncu tega tečaja bo učenec naredil svojo lastno
+            igro ali zgodbo, ki jo bodo lahko delili z drugimi. Priporočljivo za otroke
+            prvega razreda osnovne šole.
         course2:
           title: Tečaj 2
           description: Učenci, ki znajo brati in nimajo nobenih predhodnjih izkušen
@@ -94,6 +100,11 @@ sl:
               name: 'Play Lab: ustvari zgodbo'
             The Big Event:
               name: Veliki dogodek
+          student_description: Učenci, ki znajo brati in nimajo nobenih predhodnjih
+            izkušen s programiranjem, začnite s Tečajem 2. V tem tečaju bodo učenci
+            naredili programe, ki bodo reševali probleme in razvijali interaktivne
+            igre ali zgodbe, ki jih bodo lahko delili z drugimi. Priporočljivo za
+            učence od 2. do 5. razreda osnovne šole.
         course3:
           title: Tečaj 3
           description: Tečaj 3 je namenjen učencem, ki so končali Tečaj 2. Učenci
@@ -145,6 +156,12 @@ sl:
               name: 'Play Lab: ustvari igrico'
             'Studio: Create a Story':
               name: 'Play Lab: ustvari zgodbo'
+          student_description: Tečaj 3 je namenjen učencem, ki so končali Tečaj 2.
+            Učenci se bodo poglobili v programerske teme, predstavljene v prejšnjih
+            tečajih, tako da bodo ustvarjali prilagodljive rešitve za bolj kompleksne
+            probleme. Ob koncu tega tečaja bodo učenci ustvarili interaktivne zgodbe
+            in igre, ki jih bodo lahko delili s komerkoli. Priporočljivo za učence
+            4. in 5. razreda osnovne šole.
         playlab:
           title: Play Lab
           lessons:
@@ -157,6 +174,7 @@ sl:
           lessons:
             Artist:
               name: Umetnik
+          student_description: Nariši kul slike in oblike z Umetnikom!
         hourofcode:
           title: Klasičen labirint
           lessons:
@@ -171,6 +189,8 @@ sl:
           lessons:
             Artist:
               name: Umetnik
+          student_description: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
+            čarabnosti in lepote ledu.
         course4:
           title: Tečaj 4
           description: Tečaj 4 je namenjen učencem, ki so končali Tečaj 2 in 3. Učenci
@@ -217,6 +237,12 @@ sl:
               name: 'Brez prijave: Pisanje pesmi s parametri'
             'Unplugged: Tangrams':
               name: 'Brez prijave: Tangrami'
+          student_description: Tečaj 4 je namenjen učencem, ki so končali Tečaj 2
+            in 3. Učenci se bodo naučili, kako se spopasti z ugankami, ki so bolj
+            kompleksne medtem ko se bodo naučili kako združiti več konceptov med reševanjem
+            vsakega iziva. Ob koncu tega tečaja bodo učenci ustvarili programe, ki
+            bodo pokazali več znanj, vključno z zankami in funkcijamki s parametri.
+            Priporočljivo za učence med 4. in 8. razredom osnovne šole.
         Course4pre:
           description: Kratek povzetek konceptov za študente, ki niso končali Tečaja
             2 in 3.
@@ -241,6 +267,8 @@ sl:
               name: 'Kmet: Zanka dokler velja'
             'Maze: Sequence':
               name: 'Labirint: zaporedje'
+          student_description: Kratek povzetek konceptov za študente, ki niso končali
+            Tečaja 2 in 3.
         usability:
           lessons:
             Binary:
@@ -307,6 +335,9 @@ sl:
               name: Labirint
             Wrap-up:
               name: Povzetek
+          student_description: Ta 20-urni tečaj predstavlja bistvo računalništva in
+            konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8,
+            vendar je zabaven za učenje v vseh starostih.
         edit-code:
           title: Uredi kodo
           description: Uredi kodo
@@ -318,6 +349,7 @@ sl:
               name: Umetnik
             The Maze:
               name: Labirint
+          student_description: Uredi kodo
         events:
           title: Dogodki
           description: Dogodki
@@ -325,6 +357,7 @@ sl:
           lessons:
             Bounce:
               name: Skokica
+          student_description: Dogodki
         flappy:
           title: Program za Plahutača (Flappyja)
           description: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah? Pomagaj
@@ -332,6 +365,8 @@ sl:
           lessons:
             Flappy Code:
               name: Program za Plahutača (Flappyja)
+          student_description: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah?
+            Pomagaj si z priročnikom za Plahutača (Flappy-ja)!
         jigsaw:
           title: Sestavljanka
           lessons:
@@ -454,6 +489,8 @@ sl:
           description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
             v svet Minecraft-a
           description_short: Razišči svet Minecraft-a s pomočjo kode
+          student_description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
+            v svet Minecraft-a
         ScienceP3OLPT3:
           lessons:
             Wrap-Up:
@@ -647,6 +684,8 @@ sl:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Ura za kodo Oblikovalec
+          student_description: Sprogramiraj živali in druga Minecraft bitja v svoji
+            lastni različici Minecrafta.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1673,6 +1712,9 @@ sl:
               display_name: Pregled
             content:
               display_name: Vsebina
+          lessons:
+            Focus Area 1:
+              name: kurikulum
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2023,7 +2065,156 @@ sl:
           lesson_groups:
             lg_1:
               display_name: Vsebina
-        ml-playground:
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Uvod
+            lessonGroup-3:
+              display_name: Spremenljivke
+        csd3-2021:
           lessons:
-            intro:
-              name: Uvod
+            Variables:
+              key: Spremenljivke
+              name: Spremenljivke
+            Text:
+              key: Besedilo
+              name: Besedilo
+            Conditionals:
+              key: Pogoji
+              name: Pogoji
+            Functions:
+              key: Funkcije
+              name: Funkcije
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funkcije s parametri
+              name: Funkcije s parametri
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Veseli zemljevidi
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Premakni se, premakni
+              name: Premakni se, premakni
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        coursec-2021:
+          lessons:
+            'Events: The Big Event':
+              name: Veliki dogodek
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_binary:
+              display_name: Binarno
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Obarvajmo kvadratke
+            Relay Programming:
+              key: Relejsko programiranje
+              name: Relejsko programiranje
+            Conditionals with Cards:
+              key: Pogojniki s kartami
+              name: Pogojniki s kartami
+            'Unplugged: Binary':
+              key: 'Brez prijave: Binarno'
+              name: Binarne slike
+            Artist Binary:
+              key: Umetnik Binarno
+              name: Umetnik Binarno
+          lesson_groups:
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Pogoji
+            'Functions: Songwriting':
+              name: Napiši pesem
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_nested_loops:
+              display_name: Gnezdenje zank
+            csf_functions:
+              display_name: Funkcije
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Spremeljivke v ovojnicah
+              name: Spremeljivke v ovojnicah
+            Internet:
+              key: Internet
+              name: Internet
+            For Loop Fun:
+              key: Zabava s "for" zankami
+              name: Zabava s "for" zankami
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_variables:
+              display_name: Spremenljivke
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Spremenljivke
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Uvod
+            lessonGroup-3:
+              display_name: Spremenljivke

@@ -184,6 +184,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "ทดสอบว่าค่านี้น้อยกว่าหรือเท่ากับอีกค่า ให้ค่าเป็นจริงถ้าค่าทางด้านซ้ายน้อยกว่าหรือเท่ากับค่าทางด้านขวา",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "เครื่องหมายน้อยกว่าหรือเท่ากับ",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param1": "y",
   "dropletBlock_mathRandom_description": "ส่งตัวเลขสุ่มที่อยู่ในช่วง 0 (รวมตัวเลขนี้ด้วย) ไปถึง 1 (ไม่นับรวม 1)",

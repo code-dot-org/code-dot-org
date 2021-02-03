@@ -1,5 +1,4 @@
 login_required true
-has_lesson_plan true
 
 lesson 'Personal Innovations', display_name: 'Personal Innovations', has_lesson_plan: true
 level 'U1L1 Student Lesson Introduction'

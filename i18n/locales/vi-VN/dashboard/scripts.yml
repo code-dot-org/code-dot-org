@@ -7313,3 +7313,13 @@ vi:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+        contagion-pilot:
+          description_short: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
+          description: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
+          student_description: 'Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng phát do vi rút.'
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Bài học 14
+            lesson15:
+              name: Bài học 15

@@ -1042,7 +1042,8 @@ pl:
   race_interstitial:
     title: 'Opcjonalnie: Pomóż nam śledzić nasze postępy na drodze do poprawy różnorodności
       w informatyce'
-    message: Określ swoja przynależność rasową (zaznacz wszystko, co dotyczy Ciebie)
+    message: 'Podaj nam swoją rasę lub pochodzenie etniczne (zaznacz wszystkie pasujące
+      odpowiedzi) '
     races:
       white: Biały
       black: Murzyn lub Afroamerykanin
@@ -1407,6 +1408,9 @@ pl:
         nowy token.
       error_wrong_provider: Niewłaściwy dostawca. Prosimy sprawdzić, czy logujesz
         się za pośrednictwem Google.
+      error_no_linked_google: 'Wróć do aplikacji Maker App i użyj przycisku „Zaloguj
+        się” w prawym górnym rogu, aby się zalogować, lub kliknij przycisk Wstecz,
+        aby zalogować się z innym kontem Google '
       error_invalid_user: Nieważny identyfikator użytkownika. Prosimy spróbować zalogować
         się ponownie.
       error_no_code: Prosimy wpisać swój kod logowania.

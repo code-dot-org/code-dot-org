@@ -8388,3 +8388,13 @@ sk:
               display_name: 'Kapitola 2: Riešenie problémov s dátami'
             cspSurvey:
               display_name: Dotazník
+        contagion-pilot:
+          description_short: 'Pomocou programu Sprite Lab naprogramujte simuláciu nákazy vírusom.'
+          description: 'Pomocou programu Sprite Lab naprogramujte simuláciu nákazy vírusom.'
+          student_description: 'Pomocou programu Sprite Lab naprogramujte simuláciu nákazy vírusom.'
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Hodina 14
+            lesson15:
+              name: Hodina 15

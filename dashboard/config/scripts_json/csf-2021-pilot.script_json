@@ -20,7 +20,8 @@
           "visibility": "Teacher-only"
         }
       ],
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "pilot_experiment": "csf-2021-pilot"
     },
     "new_name": null,
     "family_name": null,
@@ -62,6 +63,7 @@
       "name": "Introducing Sprite Lab",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -76,6 +78,7 @@
       "name": "Making Sprites",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -90,6 +93,7 @@
       "name": "Sprites in Action - coming soon!",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -104,6 +108,7 @@
       "name": "Blank Space Variables - coming soon!",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -118,6 +123,7 @@
       "name": "Storing and Retrieving Text - coming soon!",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -132,6 +138,7 @@
       "name": "Create a Chat-Bot - coming soon!",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },

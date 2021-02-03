@@ -2288,7 +2288,7 @@
       "key": "5de392e2-53c7-43ed-ac06-8db2bc17fb25",
       "position": 2,
       "properties": {
-        "description": "![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png){style=\"height:200px; float:right\"}\r\n\r\nAsk one or two volunteers to come to the front of the room and act as \"computers\" for the activity. They should sit with their backs to the board so that they cannot see what is being projected.  Give each volunteer a blank sheet of paper.\r\n\r\n**Display:** Project [r colored-shape-drawing] where it can be seen by the class."
+        "description": "[pull-right]\n\n![](https://images.code.org/53413b93e9f5aa4cd3c1779a1131d86d-image-1611864452394.13.21-PM.png)\n\n[/pull-right]\n\nAsk one or two volunteers to come to the front of the room and act as \"computers\" for the activity. They should sit with their backs to the board so that they cannot see what is being projected.  Give each volunteer a blank sheet of paper.\n\n**Display:** Project [r colored-shape-drawing] where it can be seen by the class."
       },
       "seeding_key": {
         "activity_section.key": "5de392e2-53c7-43ed-ac06-8db2bc17fb25",

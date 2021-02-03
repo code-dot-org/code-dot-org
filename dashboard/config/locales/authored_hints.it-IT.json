@@ -8745,6 +8745,33 @@
         "outbreak7": {
           "whenclicked": "## Vaccini\n\nPuoi simulare di somministrare un vaccino ai mostri quando fai clic su di essi. Per farlo, usa il blocco `cambia costume` con questo evento:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Ti senti bloccato? Puoi sempre reimpostare il codice facendo clic su `Cronologia delle versioni` in basso, quindi scegliendo \"Ricomincia\"."
+        },
+        "behaviors 7": {
+          "behaviors_hint1": "Puoi creare un nuovo comportamento che usa due azioni diverse o combinare due comportamenti esistenti.",
+          "sprites_idea1": "Per divertimento, potete usare un comportamento simile per far volare via una nave nello spazio o per far correre un personaggio in primo piano. Provate a cambiare lo sfondo e i costumi degli sprite nella vostra scena!\n\n![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)\n\n![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)"
+        },
+        "behaviors 7_2020": {
+          "behaviors_hint1": "Puoi creare un nuovo comportamento che usa due azioni diverse o combinare due comportamenti esistenti.",
+          "sprites_idea1": "Per divertimento, potete usare un comportamento simile per far volare via una nave nello spazio o per far correre un personaggio in primo piano. Provate a cambiare lo sfondo e i costumi degli sprite nella vostra scena!\n\n![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)\n\n![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)"
+        },
+        "courseA_collector_loops_challenge2": {
+          "courseA_collector_loops_challenge2_b": "Devi usare solo 1 blocco per risolverlo.",
+          "courseA_collector_loops_challenge2_a": "Puoi tornare indietro sul percorso una seconda volta prima di muoverti in già."
+        },
+        "courseA_collector_preLoops4": {
+          "courseA_collector_preLoops4_a": "Per raccogliere il tesoro, attacca due blocchi ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) ed un blocco ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) in fondo al programma e clicca \"Esegui\"!"
+        },
+        "courseA_collector_preLoops5": {
+          "courseA_collector_preLoops5_a": "Dovrai andare in due direzioni differenti per ottenere anche una gemma!"
+        },
+        "courseA_collector_preLoops6": {
+          "courseA_collector_preLoops6_a": "Dovrai usare due blocchi ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) per risolvere questo rompicapo."
+        },
+        "courseF_bee_variables_4_2019": {
+          "courseF_bee_variables_4_2019_1": "Invece di sottrarre 1 da `gather`, aggiungi invece 1 ogni volta. Quale valore dovrebbe avere la variabile all'inizio?"
+        },
+        "courseF_bee_variables_4_2020": {
+          "courseF_bee_variables_4_2019_1": "Invece di sottrarre 1 da `gather`, aggiungi invece 1 ogni volta. Quale valore dovrebbe avere la variabile all'inizio?"
         }
       }
     }

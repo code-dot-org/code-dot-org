@@ -1001,6 +1001,7 @@ es:
             '"y"': posición y
             '"direction"': dirección de movimiento
             '"tint"': tinte
+            '"speed"': velocidad
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1128,6 +1129,8 @@ es:
             '"West"': Oeste
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
+      gamelab_newSpritePointer:
+        text: clic en sprite {SPRITE}
       gamelab_objectSpritePointer:
         text: objeto {SPRITE}
       gamelab_patrollingUpDown:
@@ -1183,6 +1186,13 @@ es:
             undefined: ninguno
       gamelab_setBackgroundImageAs:
         text: establecer fondo a {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medio
+            '100': large
       gamelab_setProp:
         text: establecer {SPRITE} {PROPERTY} a {VAL}
         options:
@@ -1192,6 +1202,7 @@ es:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección de movimiento
+            '"speed"': velocidad
       gamelab_setSizes:
         text: definir {SPRITE} {PROPERTY} a {N}%
         options:
