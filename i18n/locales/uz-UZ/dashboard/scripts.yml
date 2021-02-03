@@ -14097,6 +14097,8 @@ uz:
               name: AI for Oceans
             visualizing:
               name: Visualizing Data
+            intro-categorical:
+              name: 6-dars
         2021drafting:
           lessons:
             Course F Introduction:
@@ -15456,7 +15458,7 @@ uz:
             intro:
               name: 1-dars
             lesson1:
-              name: 1-dars
+              name: '1-dars'
             lesson2:
               name: 2-dars
             lesson3:
