@@ -2215,6 +2215,8 @@ it-IT:
   header_legal_privacy: Informativa sulla privacy
   header_legal_tos: Termini di servizio
   header_tutorials: Corsi
+  header_screen_reader_hamburger: Menu
+  header_screen_reader_help: Menu Aiuto
   app_lab_documentation: Documentazione dell'App Lab
   app_lab_tutorials: Tutorial dell'App Lab
   game_lab_documentation: Documentazione del Game Lab
