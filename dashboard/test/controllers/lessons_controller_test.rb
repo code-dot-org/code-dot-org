@@ -19,6 +19,7 @@ class LessonsControllerTest < ActionController::TestCase
       absolute_position: 1,
       relative_position: 1,
       has_lesson_plan: true,
+      lockable: false,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -31,6 +32,7 @@ class LessonsControllerTest < ActionController::TestCase
       lesson_group: lesson_group,
       name: 'second lesson',
       has_lesson_plan: false,
+      lockable: false,
       absolute_position: 2,
       relative_position: 2
     )
@@ -131,7 +133,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert(@response.body.include?(@lesson.overview))
     assert(@response.body.include?(@script.link))
     assert(@response.body.include?(lesson_path(id: @lesson.id)))
-    assert(@response.body.include?(lesson_path(id: @lesson2.id)))
+    refute(@response.body.include?(lesson_path(id: @lesson2.id)))
   end
 
   test 'show lesson with activities' do
@@ -343,6 +345,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 2, @lesson2.absolute_position
 
     @update_params['lockable'] = true
+    @update_params['has_lesson_plan'] = false
 
     put :update, params: @update_params
 

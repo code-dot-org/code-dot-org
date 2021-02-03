@@ -1597,10 +1597,10 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.11.tgz#3cd09d05a71b42d0d485db15e0328d5308338854"
-  integrity sha512-5wcRpYOo2PyupP3+94kerSHdRCfWPPbMNIKO2hKv5T2nRji6gZc/IAp+bfzg1vHBS6zm9ySBPIRrGlHiT00J0g==
+"@code-dot-org/ml-playground@0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.12.tgz#4ddebd399445a78014dc03a9ee0218555c464720"
+  integrity sha512-mjGPkCASOGm/559vz2kz2JQJarx9+wP/LCXNwtg59SjocsHoukijQZ+sz8yhyXy8L+E5cyP+xWf0GR9k4JQVPQ==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-regular-svg-icons" "^5.11.2"
