@@ -5,7 +5,6 @@
     "hidden": false,
     "login_required": true,
     "properties": {
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/algebra/courseB/{LESSON}",
       "hideable_lessons": true
     },

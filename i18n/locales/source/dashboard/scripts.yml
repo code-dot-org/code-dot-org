@@ -18845,6 +18845,8 @@ en:
               name: Making Sprites
             Sprites in Action:
               name: Sprites in Action
+            lesson-3-ci:
+              name: Create a Haiku Bot
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels

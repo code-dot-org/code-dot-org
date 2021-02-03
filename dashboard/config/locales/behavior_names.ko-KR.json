@@ -489,7 +489,7 @@
         },
         "Virtual Pet 1_2020": {
           "wandering": "배회",
-          "mystery": "미스테리",
+          "mystery": "미스터리",
           "spinning right": "오른쪽으로 회전",
           "moving east": "동쪽으로 이동",
           "spinning left": "왼쪽으로 회전",
@@ -689,7 +689,7 @@
           "moving east": "동쪽으로 이동"
         },
         "behaviors 1_2020": {
-          "mystery behavior": "미스테리 행동",
+          "mystery behavior": "미스터리 행동",
           "wandering": "배회",
           "running east": "동쪽으로 달리기",
           "spinning left": "왼쪽으로 회전",
