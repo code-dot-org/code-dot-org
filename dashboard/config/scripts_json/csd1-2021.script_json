@@ -641,19 +641,6 @@
       }
     },
     {
-      "key": "d650c29e-233d-4ad3-a3db-6a1d714cd5b4",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d650c29e-233d-4ad3-a3db-6a1d714cd5b4",
-        "lesson.key": "The Problem Solving Process",
-        "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2021"
-      }
-    },
-    {
       "key": "a80e7362-2c08-40a7-9c59-b0d89cf1df88",
       "position": 1,
       "properties": {
@@ -1718,7 +1705,7 @@
       "key": "23f003b6-2c1b-4e88-a343-f77714a50d89",
       "position": 3,
       "properties": {
-        "description": "**Video:** Watch the Problem Solving Process Video on Code Studio\n\nIntroduce and as a class review the descriptions of the four steps in the process by reading them aloud. Answer or discuss any questions students have about the process but otherwise move on to completing the first section of the activity guide.",
+        "description": "**Video:** Watch the Problem Solving Process Video on Code Studio",
         "name": "The Problem Solving Process\r",
         "progression_name": "Video: Problem Solving Process"
       },
@@ -1728,8 +1715,19 @@
       }
     },
     {
-      "key": "aab191bf-3a2c-4f58-86d1-bfa34cf48052",
+      "key": "9541def4-ab55-4976-8e32-5c267d62e229",
       "position": 4,
+      "properties": {
+        "description": "Introduce and as a class review the descriptions of the four steps in the process by reading them aloud. Answer or discuss any questions students have about the process but otherwise move on to completing the first section of the activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "9541def4-ab55-4976-8e32-5c267d62e229",
+        "lesson_activity.key": "675f7979-4687-4193-bd1e-10332a1ac050"
+      }
+    },
+    {
+      "key": "aab191bf-3a2c-4f58-86d1-bfa34cf48052",
+      "position": 5,
       "properties": {
         "description": "Have students complete the first section of the activity guide by filling in the steps of the previous day's activity they think fall within each step of the problem solving process.",
         "name": "What it Looks Like\r"
@@ -1741,7 +1739,7 @@
     },
     {
       "key": "f3ad86f7-7c83-415c-aa5a-a276d6186faa",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Discuss:** Once students have completed the first section of the activity guide ask them to share with neighbors and then with the class as a whole.",
         "tips": [
@@ -1758,7 +1756,7 @@
     },
     {
       "key": "9071b1c1-0031-4e52-b8f6-a20e311f95c1",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "Ask students to select one type of problem that they think they're really good at solving. Use the list of problems already on the board to help students think of their type of problem. Again give them a couple of minutes to quietly record the steps of their process before sharing with a neighbor.",
         "name": "A Problem You Are Good at Solving\r"
@@ -1770,7 +1768,7 @@
     },
     {
       "key": "e3e59454-f8cc-47ef-a206-23e55cf74c89",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "**Discuss:** Have students share what they wrote with a neighbor and then once again lead a discussion of the conversations they had. Ask students to talk about the individual steps they're using to solve their chosen problem but also point out instances where the same types of strategies are appearing multiple times.",
         "tips": [
@@ -1787,7 +1785,7 @@
     },
     {
       "key": "7048cb12-62e3-4d97-a12a-7d75befc7d07",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Place students in pairs and ask them to complete the final section of the activity guide. They will need to choose a type of problem that both members of the group want to get better at solving and then write the steps they would use within the problem solving process to solve that problem.\r\n\r\n**Discuss:** Lead one final share out in which students present how they would use the problem solving process to approach a less familiar problem.",
         "name": "A Problem You and a Classmate Want to Get Better at Solving\r"
@@ -1799,7 +1797,7 @@
     },
     {
       "key": "971b5c08-a61d-400c-a1ff-8ac3139a3c7c",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Distribute:** Give each group a piece of poster paper.",
         "tips": [
@@ -1817,7 +1815,7 @@
     },
     {
       "key": "6c98d6b3-a1ef-45a7-afb1-4d6fa842e50d",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "**Prompt:** At your tables, choose one of the problems that you worked on today, and create a poster that shows how the problem solving process can be used to help solve it.\r\n\r\n\r\n\r\n**Circulate:** As students work on their posters, ask them questions about their different problems, and how the steps to solve it relate to the general steps of the problem solving process.\r\n\r\n**Share:** Allow students to share their posters with the rest of the class."
       },
@@ -1876,18 +1874,6 @@
       "seeding_key": {
         "activity_section.key": "640e6f56-0797-4fde-a056-1b37b27d7e46",
         "lesson_activity.key": "75941c07-de18-45db-b260-4cd48e0f1bf0"
-      }
-    },
-    {
-      "key": "378c86a4-82cb-405a-82a6-c9d595c05763",
-      "position": 1,
-      "properties": {
-        "name": "Video: Problem Solving Process",
-        "progression_name": "Video: Problem Solving Process"
-      },
-      "seeding_key": {
-        "activity_section.key": "378c86a4-82cb-405a-82a6-c9d595c05763",
-        "lesson_activity.key": "d650c29e-233d-4ad3-a3db-6a1d714cd5b4"
       }
     },
     {
