@@ -783,6 +783,7 @@ FactoryGirl.define do
   factory :lesson do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
     sequence(:key) {|n| "Bogus-Lesson-#{n}"}
+    has_lesson_plan false
     script
 
     absolute_position do |lesson|
