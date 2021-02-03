@@ -122,6 +122,53 @@ export function stageIsAllAssessment(levels) {
 }
 
 /**
+ * Computes progress status percentages for a set of levels.
+ * @param {{id:studentLevelProgressType}} studentLevelProgress An object keyed by
+ * level id containing objects representing the student's progress in that level
+ * @param {levelType[]} levels An array of levels
+ * @returns {studentLessonProgressType} An object representing student's progress
+ * in the lesson
+ *
+ * Note: this function will replace `summarizeProgressInStage` below once we
+ * refactor the legacy StudentProgressSummaryCell component
+ */
+export function progressForLesson(studentLevelProgress, levels) {
+  // Filter any bonus levels as they do not count toward progress.
+  const filteredLevels = levels.filter(level => !level.bonus);
+  const statuses = filteredLevels.map(level => {
+    const levelProgress = studentLevelProgress[level.id];
+    return (levelProgress && levelProgress.status) || LevelStatus.not_tried;
+  });
+
+  const completedStatuses = [
+    LevelStatus.perfect,
+    LevelStatus.submitted,
+    LevelStatus.free_play_complete,
+    LevelStatus.completed_assessment,
+    LevelStatus.readonly
+  ];
+
+  const attempted = statuses.filter(status => status === LevelStatus.attempted)
+    .length;
+  const imperfect = statuses.filter(status => status === LevelStatus.passed)
+    .length;
+  const completed = statuses.filter(status =>
+    completedStatuses.includes(status)
+  ).length;
+  const incomplete = statuses.length - completed - imperfect;
+  const isLessonStarted = attempted + imperfect + completed > 0;
+
+  const getPercent = count => (100 * count) / statuses.length;
+
+  return {
+    isStarted: isLessonStarted,
+    imperfectPercent: getPercent(imperfect),
+    completedPercent: getPercent(completed),
+    incompletePercent: getPercent(incomplete)
+  };
+}
+
+/**
  * Summarizes stage progress data.
  * @param {[]} levelsWithStatus An array of objects each representing
  * students progress in a level
