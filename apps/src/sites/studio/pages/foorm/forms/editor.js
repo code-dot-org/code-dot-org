@@ -36,7 +36,7 @@ $(document).ready(function() {
 function populateCodeMirror() {
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
   codeMirror = initializeCodeMirror(codeMirrorArea, 'application/json', {
-    callback: onCodeMirrorChange
+    callback: _.debounce(onCodeMirrorChange, 250)
   });
 }
 

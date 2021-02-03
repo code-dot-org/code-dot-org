@@ -1,7 +1,6 @@
 hidden false
 login_required true
 hideable_lessons true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/algebra/courseA/{LESSON}'
 
 lesson 'Calc: Evaluation Blocks', display_name: 'Calc: Evaluation Blocks', has_lesson_plan: true
