@@ -273,21 +273,22 @@ const getLevelResult = serverProgress => {
  * Parse a level progress object that we get from the server using either
  * /api/user_progress or /dashboardapi/section_level_progress into our
  * canonical studentLevelProgressType shape.
- * @param {object} serverObject A progress object from the server
+ * @param {object} serverProgress A progress object from the server
  * @returns {studentLevelProgressType} Our canonical progress shape
  */
-export const levelProgressFromServer = serverObject => {
+export const levelProgressFromServer = serverProgress => {
   return {
-    status: serverObject.status || LevelStatus.not_tried,
-    result: getLevelResult(serverObject),
-    paired: serverObject.paired || false,
-    timeSpent: serverObject.time_spent || 0,
+    status: serverProgress.status || LevelStatus.not_tried,
+    result: getLevelResult(serverProgress),
+    paired: serverProgress.paired || false,
+    timeSpent: serverProgress.time_spent || 0,
     pages:
-      serverObject.pages_completed && serverObject.pages_completed.length > 1
-        ? serverObject.pages_completed.map(
+      serverProgress.pages_completed &&
+      serverProgress.pages_completed.length > 1
+        ? serverProgress.pages_completed.map(
             pageResult =>
               (pageResult && levelProgressFromResult(pageResult)) ||
-              levelProgressWithStatus(LevelStatus.not_tried)
+              levelProgressFromStatus(LevelStatus.not_tried)
           )
         : null
   };
@@ -295,7 +296,7 @@ export const levelProgressFromServer = serverObject => {
 
 /**
  * Given an object from the server with student progress data keyed by level ID,
- * parse the progress data into our canonical studenLevelProgressType
+ * parse the progress data into our canonical studentLevelProgressType
  * @param {{levelId:serverProgress}} serverStudentProgress
  * @returns {{levelId:studentLevelProgressType}}
  */
@@ -308,15 +309,14 @@ export const processServerStudentProgress = serverStudentProgress => {
 /**
  * Given an object from the server with section progress data keyed by student
  * ID and level ID, parse the progress data into our canonical
- * studenLevelProgressType
+ * studentLevelProgressType
  * @param {{studenId:{levelId:serverProgress}}} serverSectionProgress
  * @returns {{studenId:{levelId:studentLevelProgressType}}}
  */
 export const processServerSectionProgress = serverSectionProgress => {
-  const studentProgress = _.mapValues(serverSectionProgress, student =>
+  return _.mapValues(serverSectionProgress, student =>
     processServerStudentProgress(student)
   );
-  return studentProgress;
 };
 
 /**
@@ -324,7 +324,7 @@ export const processServerSectionProgress = serverSectionProgress => {
  * @param {string} status
  * @returns {studentLevelProgressType}
  */
-export const levelProgressWithStatus = status => {
+export const levelProgressFromStatus = status => {
   return levelProgressFromServer({status: status});
 };
 
@@ -336,5 +336,5 @@ export const levelProgressWithStatus = status => {
  * @returns {studentLevelProgressType}
  */
 export const levelProgressFromResult = result => {
-  return levelProgressWithStatus(activityCssClass(result));
+  return levelProgressFromStatus(activityCssClass(result));
 };

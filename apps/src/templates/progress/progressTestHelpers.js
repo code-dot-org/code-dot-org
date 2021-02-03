@@ -7,7 +7,7 @@
 
 import _ from 'lodash';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
+import {levelProgressFromStatus} from '@cdo/apps/templates/progress/progressHelpers';
 import {createStore} from 'redux';
 import Immutable from 'immutable';
 
@@ -58,7 +58,7 @@ export const fakeProgressForLevels = (
 ) => {
   const progress = {};
   levels.forEach(level => {
-    progress[level.id] = levelProgressWithStatus(status);
+    progress[level.id] = levelProgressFromStatus(status);
   });
   return progress;
 };
