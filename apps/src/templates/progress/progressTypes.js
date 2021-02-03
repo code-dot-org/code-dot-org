@@ -33,7 +33,6 @@ const levelWithoutStatusShape = {
   isUnplugged: PropTypes.bool,
   isCurrentLevel: PropTypes.bool,
   isConceptLevel: PropTypes.bool,
-  kind: PropTypes.string,
   pageNumber: PropTypes.number
 };
 
@@ -104,6 +103,21 @@ export const lessonType = PropTypes.shape({
   isFocusArea: PropTypes.bool.isRequired,
   description_student: PropTypes.string,
   description_teacher: PropTypes.string
+});
+
+/**
+ * @typedef {Object} StudentLessonProgress
+ *
+ * @property {bool} isStarted
+ * @property {number} incompletePercent
+ * @property {number} imperfectPercent
+ * @property {number} completedPercent
+ */
+export const studentLessonProgressType = PropTypes.shape({
+  isStarted: PropTypes.bool.isRequired,
+  incompletePercent: PropTypes.number.isRequired,
+  imperfectPercent: PropTypes.number.isRequired,
+  completedPercent: PropTypes.number.isRequired
 });
 
 /**

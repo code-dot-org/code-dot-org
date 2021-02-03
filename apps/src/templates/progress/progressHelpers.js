@@ -123,20 +123,20 @@ export function stageIsAllAssessment(levels) {
 
 /**
  * Computes progress status percentages for a set of levels.
- * @param {{id:studentLevelProgressType}} studentProgress An object keyed by
+ * @param {{id:studentLevelProgressType}} studentLevelProgress An object keyed by
  * level id containing objects representing the student's progress in that level
  * @param {levelType[]} levels An array of levels
- * @returns {object} An object with a percentage of levels in each of the
- * following buckets: attempted, imperfect, completed, incomplete.
+ * @returns {studentLessonProgressType} An object representing student's progress
+ * in the lesson
  *
  * Note: this function will replace `summarizeProgressInStage` below once we
  * refactor the legacy StudentProgressSummaryCell component
  */
-export function statusPercentsForLevels(studentProgress, levels) {
+export function progressForLesson(studentLevelProgress, levels) {
   // Filter any bonus levels as they do not count toward progress.
   const filteredLevels = levels.filter(level => !level.bonus);
   const statuses = filteredLevels.map(level => {
-    const levelProgress = studentProgress[level.id];
+    const levelProgress = studentLevelProgress[level.id];
     return (levelProgress && levelProgress.status) || LevelStatus.not_tried;
   });
 
@@ -156,17 +156,16 @@ export function statusPercentsForLevels(studentProgress, levels) {
     completedStatuses.includes(status)
   ).length;
   const incomplete = statuses.length - completed - imperfect;
+  const isLessonStarted = attempted + imperfect + completed > 0;
 
   const getPercent = count => (100 * count) / statuses.length;
 
-  const statusPercents = {
-    attempted: getPercent(attempted),
-    imperfect: getPercent(imperfect),
-    completed: getPercent(completed),
-    incomplete: getPercent(incomplete)
+  return {
+    isStarted: isLessonStarted,
+    imperfectPercent: getPercent(imperfect),
+    completedPercent: getPercent(completed),
+    incompletePercent: getPercent(incomplete)
   };
-
-  return statusPercents;
 }
 
 /**
