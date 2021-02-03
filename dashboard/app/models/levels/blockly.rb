@@ -593,7 +593,10 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  # Localizing placeholder texts in certain block types
+  # Localizing placeholder texts in all possible block types.
+  # @param blocks [String]
+  # @return [String]
+  # @see unit test for an example of blocks that contain placeholder texts.
   def localized_blocks_with_placeholder_texts(blocks)
     return if blocks.nil?
     block_xml = Nokogiri::XML(blocks, &:noblanks)
@@ -605,6 +608,11 @@ class Blockly < Level
     block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
+  # Localizing placeholder texts in one block type.
+  # @param block_xml [Nokogiri::XML::Document]
+  # @param block_type [String]
+  # @param title_names [Array<String>]
+  # @return [Nokogiri::XML::Document]
   def localize_placeholder_texts(block_xml, block_type, title_names)
     block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
       title_names.each do |title_name|
