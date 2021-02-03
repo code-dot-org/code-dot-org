@@ -1001,6 +1001,8 @@ uk:
         text: будучи перетягуваним
       gamelab_edgesDisplace:
         text: краї блокують рух {SPRITE}
+      gamelab_followingTargets:
+        text: наступні цілі
       gamelab_getAllSprites:
         text: всі спрайти
       gamelab_getProp:
@@ -1210,12 +1212,13 @@ uk:
       gamelab_setBackgroundImageAs:
         text: встановити фон {IMG}
       gamelab_setDefaultSpriteSize:
+        text: встановити новий розмір спрайта за замовчуванням як [SIZE] [0]
         options:
           SIZE:
-            '25': extra small
-            '50': small
+            '25': дуже маленький
+            '50': маленький
             '75': середньо
-            '100': large
+            '100': великий
       gamelab_setPrompt:
         text: запитати користувача {QUESTION} значення змінної {VAR}
       gamelab_setPromptWithChoices:
@@ -1255,6 +1258,8 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_stopCollectingData:
+        text: припинити збір даних
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_tumbling:
@@ -1288,6 +1293,8 @@ uk:
         text: коли відповідь {VAR}
       gamelab_whenRightArrow:
         text: при натисканні стрілки праворуч
+      gamelab_whenSpriteCreated:
+        text: коли {SPRITE} створили
       gamelab_whenTouching:
         text: коли {SPRITE1} торкається {SPRITE2}
       gamelab_whenUpArrow:
