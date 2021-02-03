@@ -135,13 +135,11 @@
       });
     });
 
-    function hideCreateOptions(event) {
-      if ((event.type === "keypress" && event.which === 13) || (event.type === "click")) {
-        $('.create_options').slideUp();
-        $('.create_menu_arrow_down').show();
-        $('.create_menu_arrow_up').hide();
-        $(document).off('click', hideCreateOptions);
-      }
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
     }
     $(document).ready(function() {
       $('.create_menu').click(function(e) {
@@ -150,12 +148,14 @@
           $('.create_options').slideDown();
           $('.create_menu_arrow_down').hide();
           $('.create_menu_arrow_up').show();
-          $(document).on('keypress click', (e) => hideCreateOptions(e));
+          $(document).on('keypress click', hideCreateOptions);
           hideUserOptions()
           $("#hamburger-icon").removeClass('active');
           $("#help-icon").removeClass('active');
           $('#hamburger #hamburger-contents').slideUp();
           $('#help-button #help-contents').slideUp();
+        } else {
+          hideCreateOptions();
         }
       });
       $('.create_options').click(function (e) {
