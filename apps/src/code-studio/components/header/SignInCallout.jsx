@@ -1,6 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import i18n from '@cdo/locale';
+// import cookies from 'js-cookie';
 
 const CALLOUT_COLOR = '#454545';
 const TRIANGLE_BASE = 30;
