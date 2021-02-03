@@ -14,7 +14,10 @@ import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
 import experiments from '@cdo/apps/util/experiments';
-import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
+import loadable from '@cdo/apps/util/loadable';
+const ModelManagerDialog = loadable(() =>
+  import('@cdo/apps/code-studio/components/ModelManagerDialog')
+);
 
 const style = {
   iconContainer: {
