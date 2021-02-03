@@ -22,7 +22,7 @@ export default class Foorm extends React.Component {
     submitParams: PropTypes.object,
     customCssClasses: PropTypes.object,
     onComplete: PropTypes.func,
-    editorMode: PropTypes.bool
+    inEditorMode: PropTypes.bool
   };
 
   static defaultProps = {
@@ -76,7 +76,7 @@ export default class Foorm extends React.Component {
     // Prevents focus from moving from codemirror in Foorm Editor
     // (where survey editors can edit survey configuration and see changes live)
     // to the first question of the rendered SurveyJS Survey.
-    if (this.props.editorMode) {
+    if (this.props.inEditorMode) {
       this.surveyModel.focusFirstQuestionAutomatic = false;
     }
   }

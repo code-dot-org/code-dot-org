@@ -57,7 +57,7 @@ class FoormEditorPreview extends Component {
                 submitApi={'/none'}
                 key={`form-${this.props.formKey}`}
                 surveyData={this.props.surveyData}
-                editorMode={true}
+                inEditorMode={true}
               />
             )}
         </div>
