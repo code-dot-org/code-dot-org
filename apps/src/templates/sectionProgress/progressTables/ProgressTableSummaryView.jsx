@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {
-  statusPercentsForLevels,
+  progressForLesson,
   stageIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {scriptDataPropType} from '../sectionProgressConstants';
@@ -36,7 +36,7 @@ class ProgressTableSummaryView extends React.Component {
   }
 
   summaryCellFormatter(lesson, student, studentProgress) {
-    const statusPercents = statusPercentsForLevels(
+    const studentLessonProgress = progressForLesson(
       studentProgress,
       lesson.levels
     );
@@ -44,7 +44,7 @@ class ProgressTableSummaryView extends React.Component {
     return (
       <ProgressTableSummaryCell
         studentId={student.id}
-        statusPercents={statusPercents}
+        studentLessonProgress={studentLessonProgress}
         assessmentStage={assessmentStage}
         onSelectDetailView={() => this.props.onClickLesson(lesson.position)}
       />
