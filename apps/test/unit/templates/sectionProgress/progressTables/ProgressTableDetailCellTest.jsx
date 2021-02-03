@@ -77,7 +77,7 @@ describe('ProgressTableDetailCell', () => {
     expect(url).to.equal('/level1?section_id=123&user_id=1');
   });
 
-  it('calls firehouse putRecord when clicking a level', () => {
+  it('calls firehose putRecord when clicking a level', () => {
     const wrapper = setUp();
     const levelBubble1 = wrapper
       .findWhere(node => node.key() === '123_1')
@@ -86,7 +86,7 @@ describe('ProgressTableDetailCell', () => {
     expect(firehoseClient.putRecord).to.have.been.called;
   });
 
-  it('calls firehouse putRecord when clicking a sublevel', () => {
+  it('calls firehose putRecord when clicking a sublevel', () => {
     const wrapper = setUp();
     const sublevel = wrapper.findWhere(
       node => node.key() === `${sublevel_1.id}`
