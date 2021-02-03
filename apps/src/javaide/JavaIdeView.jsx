@@ -3,7 +3,7 @@ import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/mode-java';
 import 'ace-builds/src-noconflict/theme-dracula';
 
-export default class JavalabView extends React.Component {
+export default class JavaIdeView extends React.Component {
   onChange = newValue => {
     console.log('change', newValue);
   };
