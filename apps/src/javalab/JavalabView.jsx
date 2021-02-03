@@ -1,22 +1,53 @@
 import React from 'react';
-import AceEditor from 'react-ace';
-import 'ace-builds/src-noconflict/mode-java';
-import 'ace-builds/src-noconflict/theme-dracula';
+import JavaConsole from './JavaConsole';
+import {connect} from 'react-redux';
+import JavaEditor from './JavaEditor';
 
-export default class JavalabView extends React.Component {
-  onChange = newValue => {
-    console.log('change', newValue);
-  };
+const style = {
+  instructionsAndPreview: {
+    width: '40%',
+    display: 'block'
+  },
+  editorAndConsole: {
+    width: '60%',
+    display: 'block'
+  },
+  instructions: {
+    height: '25%',
+    margin: '15 15 15 0'
+  },
+  preview: {
+    margin: 15,
+    backgroundColor: 'gray',
+    color: 'white',
+    height: '200px'
+  },
+  javalab: {
+    display: 'flex'
+  }
+};
 
+class JavalabView extends React.Component {
   render() {
     return (
-      <AceEditor
-        mode="java"
-        theme="dracula"
-        onChange={this.onChange}
-        name="UNIQUE_ID_OF_DIV"
-        editorProps={{$blockScrolling: true}}
-      />
+      <div style={style.javalab}>
+        <div style={style.instructionsAndPreview}>
+          <div style={style.instructions}>
+            <h2>Instructions</h2>
+            <ul>
+              <li>Instruction 1</li>
+              <li>Another Instruction</li>
+            </ul>
+          </div>
+          <div style={style.preview}>A preview</div>
+        </div>
+        <div style={style.editorAndConsole}>
+          <JavaEditor style={style.editor} />
+          <JavaConsole />
+        </div>
+      </div>
     );
   }
 }
+
+export default connect()(JavalabView);
