@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Tabs, Tab} from 'react-bootstrap';
 import _ from 'lodash';
-import FoormLibrarySaveBar from './editor/FoormSaveBar';
+import FoormLibrarySaveBar from './library_editor/FoormLibrarySaveBar';
 import FoormLibraryEditorPreview from './library_editor/FoormLibraryEditorPreview';
 import FoormLibraryEditorHeader from './library_editor/FoormLibraryEditorHeader';
 
@@ -295,12 +295,10 @@ class FoormLibraryEditor extends React.Component {
             </Tab>
           </Tabs>
         </div>
-        {false && (
-          <FoormLibrarySaveBar
-            libraryCategories={this.props.libraryCategories}
-            resetCodeMirror={this.props.resetCodeMirror}
-          />
-        )}
+        <FoormLibrarySaveBar
+          libraryCategories={this.props.libraryCategories}
+          resetCodeMirror={this.props.resetCodeMirror}
+        />
       </div>
     );
   }
