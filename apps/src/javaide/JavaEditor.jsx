@@ -42,7 +42,7 @@ class JavaEditor extends React.Component {
 
 export default connect(
   state => ({
-    editorText: state.javalab.editorText
+    editorText: state.javaIde.editorText
   }),
   dispatch => ({
     setEditorText: editorText => dispatch(setEditorText(editorText))

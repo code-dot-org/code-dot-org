@@ -3,6 +3,8 @@ import JavaConsole from './JavaConsole';
 import {connect} from 'react-redux';
 import JavaEditor from './JavaEditor';
 import PaneHeader, {PaneSection} from '../templates/PaneHeader';
+import {appendOutputLog} from './redux';
+import PropTypes from 'prop-types';
 
 const style = {
   instructionsAndPreview: {
@@ -40,13 +42,24 @@ const style = {
     width: '25%'
   },
   runButton: {
-    padding: 'auto'
+    padding: 10,
+    textAlign: 'center',
+    display: 'inline-block'
   }
 };
 
 class JavaIdeView extends React.Component {
+  static propTypes = {
+    // populated by redux
+    editorText: PropTypes.string,
+    appendOutputLog: PropTypes.func
+  };
+
   run = () => {
-    console.log('running!');
+    this.props.appendOutputLog('Compiling program...');
+    this.props.appendOutputLog('Compiled!');
+    this.props.appendOutputLog('Running program...');
+    this.props.appendOutputLog('Hello world!');
   };
 
   render() {
@@ -72,8 +85,13 @@ class JavaIdeView extends React.Component {
               <JavaConsole />
             </div>
             <div style={style.buttons}>
-              <div style={style.runButton} onClick={this.run}>
+              <div
+                style={style.runButton}
+                onClick={this.run}
+                className="hover-pointer"
+              >
                 <i className="fa fa-play fa-2x" />
+                <br />
                 Run
               </div>
             </div>
@@ -84,4 +102,11 @@ class JavaIdeView extends React.Component {
   }
 }
 
-export default connect()(JavaIdeView);
+export default connect(
+  state => ({
+    editorText: state.javaIde.editorText
+  }),
+  dispatch => ({
+    appendOutputLog: log => dispatch(appendOutputLog(log))
+  })
+)(JavaIdeView);
