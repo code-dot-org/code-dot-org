@@ -985,6 +985,7 @@ uk-UA:
   dashboard_curriculum_csins: 'Інформатика в науці:'
   dashboard_curriculum_csp: 'AP® принципи інформатики:'
   dashboard_curriculum_ecs: 'Вивчення інформатики:'
+  dashboard_curriculum_csd: 'Відкриття інформатики: '
   dashboard_grade_k: Kлас
   dashboard_grade_other: Інше
   dashboard_login_word: Слово
@@ -1083,6 +1084,7 @@ uk-UA:
   carousel_heading_webpages: Навчіться створювати веб-сторінки
   carousel_heading_robots: Навчіться програмувати роботів
   carousel_heading_ide: Платформи, популярні серед вчителів
+  carousel_heading_desktop: 'Навчіться кодити на комп’ютері '
   carousel_heading_mobtabelem: Для телефонів і планшетів
   educator_notes: Інформація для вчителя
   teach_led_lesson_plans: Плани уроків для вчителів
@@ -1936,9 +1938,13 @@ uk-UA:
   header_teacher_community: Спільнота вчителів
   header_help_support: 'Допомога та підтримка '
   header_report_bug: Сповістити про проблему
+  header_report_abuse: Повідомити про порушення
+  header_legal: Конфіденційність та юридична інформація
   header_legal_privacy: Політика конфіденційності
   header_legal_tos: Умови надання послуг
   header_tutorials: Навчальні матеріали
+  header_screen_reader_hamburger: Меню
+  header_screen_reader_help: Допомога
   header_documentation: Документація
   user_header_label: Привіт %{username}
   user_header_team: Команда
@@ -1953,6 +1959,8 @@ uk-UA:
   user_header_minecraft: Майнкрафт
   user_header_flappy: Пурх
   sign_in_instruct_secret: Виберіть їх секрет %{secret}.
+  reset_student_password: Скинути паролів учнів
+  syncing_students: Синхронізація ваших учнів
   applab_tile_title: Вступ до App Lab (Вік13+)
   applab_tile_subtitle: Створіть власну аплікацію на JavaScript використовуючи блокове
     програмування. Або вдоскональте свої навики з текстовим програмуванням. (Лише
@@ -2045,6 +2053,7 @@ uk-UA:
   hoc2018_mc_video_title_anybody_can_learn: Навчитись може кожен
   hoc2018_mc_video_title_my_name_is_aracely: Мене звати Араклі
   hoc2018_mc_homepage_what_create: А що створите Ви?
+  hoc2018_mc_homepage_watch_video: Перегляньте наше відео
   hoc2018_mc_homepage_join_us: Приєднуйтесь
   hoc2018_mc_homepage_try_it: Спробувати
   hoc2018_mc_back_journey: Майнкрафт повернувся до Години коду з новеньким підручником!
@@ -2079,13 +2088,19 @@ uk-UA:
   hoc2018_dance_view_creativity_video_playlist: Що таке креативність? Перегляньте
     всі серії (5 хв)
   hoc2018_dance_amazon_about_future_engineer_button: Дізнайтеся більше
+  hoc2018_dance_amazon_try_coding_this_summer_title: Спробуйте кодити цього літа
   hoc2018_dance_amazon_try_coding_this_summer_button: Приєднатися до табору
+  hoc2018_dance_amazon_internships_button: Знайдіть стажування
   hoc2018_dance_measure: Крок
   hoc2018_dance_measure_colon: 'Крок:'
   hoc2018_aquatic_video1: 'Minecraft: Підводна подорож - Вступ'
   hoc2018_aquatic_video2: 'Minecraft: Підводна подорож - Цикли'
   hoc2018_aquatic_video3: 'Minecraft: Підводна подорож - Умови'
   hoc2018_aquatic_video4: 'Minecraft: Підводна подорож - Вітання'
+  hoc2018_dance_video1: Танцювальна вечірка - Вступ
+  hoc2018_dance_video2: Танцювальна вечірка - Події
+  hoc2018_dance_video3: Танцювальна вечірка - Властивості
+  hoc2018_dance_video4: Танцювальна вечірка - Вітання
   page_not_found_title: Сторінка не знайдена
   page_not_found_header: '404: Сторінка не знайдена'
   hoc2018_mc_thank_microsoft: Ми дякуємо Microsoft за підтримку нашого бачення та
@@ -2098,4 +2113,5 @@ uk-UA:
   homepage_slot_text_title_at_home: Навчайтеся вдома
   homepage_slot_text_blurb_at_home: З нашими ресурсами це легко
   homepage_slot_text_link_code_break: Зробіть перерву на код
+  page_not_available_title: Сторінка недоступна
   footer_powered_by_aws: На потужностях Amazon Web Services
