@@ -45,10 +45,6 @@ export default class ActivitySection extends Component {
   render() {
     const {section} = this.props;
 
-    let tipsTotalLength = 0;
-    section.tips.forEach(tip => {
-      tipsTotalLength += tip.markdown.length;
-    });
     return (
       <div>
         <h3 id={`activity-section-${section.key}`}>

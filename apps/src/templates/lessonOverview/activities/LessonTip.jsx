@@ -22,6 +22,9 @@ const styles = {
     marginLeft: 7,
     marginRight: 5
   },
+  caret: {
+    float: 'right'
+  },
   tip: {
     marginBottom: 5
   }
@@ -59,7 +62,13 @@ export default class LessonTip extends Component {
     tip: PropTypes.object
   };
 
+  state = {
+    expanded: true
+  };
+
   render() {
+    const {expanded} = this.state;
+    const caretIcon = expanded ? 'caret-up' : 'caret-down';
     return (
       <div style={styles.tip}>
         <div
@@ -67,22 +76,28 @@ export default class LessonTip extends Component {
             ...styles.tab,
             ...{backgroundColor: tipTypes[this.props.tip.type].color}
           }}
+          onClick={() => this.setState({expanded: !expanded})}
         >
           <FontAwesome
             icon={tipTypes[this.props.tip.type].icon}
             style={styles.icon}
           />
           <span>{tipTypes[this.props.tip.type].displayName}</span>
+          <FontAwesome icon={caretIcon} style={styles.caret} />
         </div>
-        <div
-          style={{
-            ...styles.box,
-            ...{borderColor: tipTypes[this.props.tip.type].color},
-            ...{backgroundColor: tipTypes[this.props.tip.type].backgroundColor}
-          }}
-        >
-          <SafeMarkdown markdown={this.props.tip.markdown} />
-        </div>
+        {expanded && (
+          <div
+            style={{
+              ...styles.box,
+              ...{borderColor: tipTypes[this.props.tip.type].color},
+              ...{
+                backgroundColor: tipTypes[this.props.tip.type].backgroundColor
+              }
+            }}
+          >
+            <SafeMarkdown markdown={this.props.tip.markdown} />
+          </div>
+        )}
       </div>
     );
   }
