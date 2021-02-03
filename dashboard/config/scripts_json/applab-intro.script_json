@@ -6,7 +6,6 @@
     "login_required": false,
     "properties": {
       "student_detail_progress_view": true,
-      "has_lesson_plan": true,
       "tts": true
     },
     "new_name": null,

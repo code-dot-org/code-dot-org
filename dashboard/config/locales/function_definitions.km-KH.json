@@ -1358,6 +1358,17 @@
           "navigate": {
             "name": "រុករក"
           }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+            "name": "ពិនិត្យនិងរើស"
+          },
+          "find pumpkin": {
+            "name": "ស្វែងរកផ្លែល្ពៅ"
+          },
+          "wander path": {
+            "name": "ទីតាំង​ថត"
+          }
         }
       }
     }
