@@ -29,10 +29,26 @@ const style = {
     display: 'flex',
     backgroundColor: '#272822',
     margin: 15
+  },
+  consoleAndButtons: {
+    display: 'flex'
+  },
+  consoleStyle: {
+    width: '75%'
+  },
+  buttons: {
+    width: '25%'
+  },
+  runButton: {
+    padding: 'auto'
   }
 };
 
 class JavalabView extends React.Component {
+  run = () => {
+    console.log('running!');
+  };
+
   render() {
     return (
       <div style={style.javalab}>
@@ -51,7 +67,17 @@ class JavalabView extends React.Component {
         <div style={style.editorAndConsole}>
           <PaneHeader hasFocus={true} />
           <JavaEditor style={style.editor} />
-          <JavaConsole />
+          <div style={style.consoleAndButtons}>
+            <div style={style.consoleStyle}>
+              <JavaConsole />
+            </div>
+            <div style={style.buttons}>
+              <div style={style.runButton} onClick={this.run}>
+                <i className="fa fa-play fa-2x" />
+                Run
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -9,7 +9,8 @@ const style = {
   consoleStyle: {
     backgroundColor: 'black',
     color: 'white',
-    minHeight: '200px'
+    height: '200px',
+    overflowY: 'auto'
   },
   debugOutput: {
     overflow: 'auto',
