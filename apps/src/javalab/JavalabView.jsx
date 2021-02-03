@@ -2,6 +2,7 @@ import React from 'react';
 import JavaConsole from './JavaConsole';
 import {connect} from 'react-redux';
 import JavaEditor from './JavaEditor';
+import PaneHeader, {PaneSection} from '../templates/PaneHeader';
 
 const style = {
   instructionsAndPreview: {
@@ -14,16 +15,20 @@ const style = {
   },
   instructions: {
     height: '25%',
-    margin: '15 15 15 0'
+    marginLeft: 15,
+    marginRight: 15,
+    backgroundColor: 'white',
+    color: 'black'
   },
   preview: {
     margin: 15,
     backgroundColor: 'gray',
-    color: 'white',
     height: '200px'
   },
   javalab: {
-    display: 'flex'
+    display: 'flex',
+    backgroundColor: '#272822',
+    margin: 15
   }
 };
 
@@ -33,7 +38,9 @@ class JavalabView extends React.Component {
       <div style={style.javalab}>
         <div style={style.instructionsAndPreview}>
           <div style={style.instructions}>
-            <h2>Instructions</h2>
+            <PaneHeader hasFocus={true}>
+              <PaneSection>Instructions</PaneSection>
+            </PaneHeader>
             <ul>
               <li>Instruction 1</li>
               <li>Another Instruction</li>
@@ -42,6 +49,7 @@ class JavalabView extends React.Component {
           <div style={style.preview}>A preview</div>
         </div>
         <div style={style.editorAndConsole}>
+          <PaneHeader hasFocus={true} />
           <JavaEditor style={style.editor} />
           <JavaConsole />
         </div>

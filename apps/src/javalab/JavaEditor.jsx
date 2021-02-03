@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {setEditorText} from './redux';
 import PropTypes from 'prop-types';
 import 'ace-builds/src-noconflict/mode-java';
-import 'ace-builds/src-noconflict/theme-dracula';
+import 'ace-builds/src-noconflict/theme-monokai';
 
 const style = {
   editor: {
@@ -30,7 +30,7 @@ class JavaEditor extends React.Component {
     return (
       <AceEditor
         mode="java"
-        theme="dracula"
+        theme="monokai"
         onChange={this.onChange}
         name="java-lab-editor"
         editorProps={{$blockScrolling: true}}
