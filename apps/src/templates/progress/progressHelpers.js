@@ -231,7 +231,7 @@ export const levelProgressFromServer = serverProgress => {
         ? serverProgress.pages_completed.map(
             pageResult =>
               (pageResult && levelProgressFromResult(pageResult)) ||
-              levelProgressWithStatus(LevelStatus.not_tried)
+              levelProgressFromStatus(LevelStatus.not_tried)
           )
         : null
   };
@@ -257,10 +257,9 @@ export const processServerStudentProgress = serverStudentProgress => {
  * @returns {{studenId:{levelId:studentLevelProgressType}}}
  */
 export const processServerSectionProgress = serverSectionProgress => {
-  const studentProgress = _.mapValues(serverSectionProgress, student =>
+  return _.mapValues(serverSectionProgress, student =>
     processServerStudentProgress(student)
   );
-  return studentProgress;
 };
 
 /**
@@ -268,7 +267,7 @@ export const processServerSectionProgress = serverSectionProgress => {
  * @param {string} status
  * @returns {studentLevelProgressType}
  */
-export const levelProgressWithStatus = status => {
+export const levelProgressFromStatus = status => {
   return levelProgressFromServer({status: status});
 };
 
@@ -280,5 +279,5 @@ export const levelProgressWithStatus = status => {
  * @returns {studentLevelProgressType}
  */
 export const levelProgressFromResult = result => {
-  return levelProgressWithStatus(activityCssClass(result));
+  return levelProgressFromStatus(activityCssClass(result));
 };
