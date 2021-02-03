@@ -148,22 +148,26 @@ export function progressForLesson(studentLevelProgress, levels) {
     LevelStatus.readonly
   ];
 
-  const attempted = statuses.filter(status => status === LevelStatus.attempted)
-    .length;
-  const imperfect = statuses.filter(status => status === LevelStatus.passed)
-    .length;
-  const completed = statuses.filter(status =>
-    completedStatuses.includes(status)
-  ).length;
-  const incomplete = statuses.length - completed - imperfect;
-  const isLessonStarted = attempted + imperfect + completed > 0;
+  const statusCounts = statuses.reduce(
+    (counts, status) => {
+      counts.attempted += status === LevelStatus.attempted;
+      counts.imperfect += status === LevelStatus.passed;
+      counts.completed += completedStatuses.includes(status);
+      return counts;
+    },
+    {attempted: 0, imperfect: 0, completed: 0}
+  );
+  const incomplete =
+    statuses.length - statusCounts.completed - statusCounts.imperfect;
+  const isLessonStarted =
+    statusCounts.attempted + statusCounts.imperfect + statusCounts.completed >
+    0;
 
   const getPercent = count => (100 * count) / statuses.length;
-
   return {
     isStarted: isLessonStarted,
-    imperfectPercent: getPercent(imperfect),
-    completedPercent: getPercent(completed),
+    imperfectPercent: getPercent(statusCounts.imperfect),
+    completedPercent: getPercent(statusCounts.completed),
     incompletePercent: getPercent(incomplete)
   };
 }
