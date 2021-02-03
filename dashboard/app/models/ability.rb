@@ -53,6 +53,7 @@ class Ability
       :foorm_editor,
       :pd_foorm,
       Foorm::Form,
+      Foorm::Library,
       Foorm::LibraryQuestion
     ]
     cannot :index, Level
@@ -240,6 +241,7 @@ class Ability
         Video,
         :foorm_editor,
         Foorm::Form,
+        Foorm::Library,
         Foorm::LibraryQuestion
       ]
 
@@ -290,6 +292,7 @@ class Ability
         UserScript,
         :pd_foorm,
         Foorm::Form,
+        Foorm::Library,
         Foorm::LibraryQuestion
       ]
     end
