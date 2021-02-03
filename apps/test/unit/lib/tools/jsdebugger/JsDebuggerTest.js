@@ -5,7 +5,10 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/deprecatedChai';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {createMouseEvent} from '../../../../util/testUtils.js';
+import {
+  allowConsoleWarnings,
+  createMouseEvent
+} from '../../../../util/testUtils.js';
 import {
   getStore,
   registerReducers,
@@ -18,6 +21,10 @@ import {sandboxDocumentBody} from '../../../../util/testUtils';
 import dom from '@cdo/apps/dom';
 
 describe('The JSDebugger component', () => {
+  // TODO: (madelynkasula) Silences componentWillUpdate deprecation warning due to React 16 upgrade.
+  // This warning should be addressed after we've upgraded React.
+  allowConsoleWarnings();
+
   let root, jsDebugger, addEventSpy, removeEventSpy, codeApp;
   const getBodyEventSpies = spyOnBodyEventMethods();
   sandboxDocumentBody();
