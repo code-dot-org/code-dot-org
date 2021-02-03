@@ -38,6 +38,11 @@ sublevels.forEach((sub, index) => {
 const levelWithSublevels = fakeLevels(1)[0];
 levelWithSublevels.sublevels = sublevels;
 
+/**
+ * This wrapper places the component in the same table structure that will be
+ * rendered by the component's parents, to ensure that the same layout styles
+ * are applied.
+ */
 function wrapped(component) {
   return (
     <div className="progress-table">
