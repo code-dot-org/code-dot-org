@@ -21,7 +21,8 @@ export default class Foorm extends React.Component {
     surveyData: PropTypes.object,
     submitParams: PropTypes.object,
     customCssClasses: PropTypes.object,
-    onComplete: PropTypes.func
+    onComplete: PropTypes.func,
+    inEditorMode: PropTypes.bool
   };
 
   static defaultProps = {
@@ -71,6 +72,13 @@ export default class Foorm extends React.Component {
     Survey.StylesManager.applyTheme('default');
 
     this.surveyModel = new Survey.Model(this.props.formQuestions);
+
+    // Prevents focus from moving from codemirror in Foorm Editor
+    // (where survey editors can edit survey configuration and see changes live)
+    // to the first question of the rendered SurveyJS Survey.
+    if (this.props.inEditorMode) {
+      this.surveyModel.focusFirstQuestionAutomatic = false;
+    }
   }
 
   onComplete = (survey, options) => {
