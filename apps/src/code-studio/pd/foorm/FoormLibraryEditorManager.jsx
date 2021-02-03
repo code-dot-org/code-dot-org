@@ -179,8 +179,6 @@ class FoormLibraryEditorManager extends React.Component {
   };
 
   updateLibraryQuestionData = libraryQuestionData => {
-    console.log(libraryQuestionData['question']);
-
     this.props.setLibraryQuestionData(libraryQuestionData);
     this.props.setHasError(false);
     this.props.setLastSavedQuestion(libraryQuestionData['question']);
