@@ -70,19 +70,19 @@ class LessonsTest < ActionDispatch::IntegrationTest
   end
 
   test 'lesson show page contains expected data' do
-    get lesson_path(id: @lesson.id)
+    get script_lesson_path(script_id: @lesson.script_id, id: @lesson.id, position: @lesson.relative_position)
     assert_response :success
     assert_select 'script[data-lesson]', 1
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
     assert_equal 'lesson overview', lesson_data['overview']
     assert_equal '/s/unit-1', lesson_data['unit']['link']
-    assert_equal lesson_path(id: @lesson.id), lesson_data['unit']['lessons'][0]['link']
-    assert_equal lesson_path(id: @lesson2.id), lesson_data['unit']['lessons'][1]['link']
+    assert_equal script_lesson_path(script_id: @lesson.script_id, id: @lesson.id, position: @lesson.relative_position), lesson_data['unit']['lessons'][0]['link']
+    assert_equal script_lesson_path(script_id: @lesson2.script_id, id: @lesson2.id, position: @lesson2.relative_position), lesson_data['unit']['lessons'][1]['link']
   end
 
   test 'lesson edit page contains expected data' do
     sign_in @levelbuilder
-    get edit_lesson_path(id: @lesson.id)
+    get edit_script_lesson_path(script_id: @lesson.script_id, id: @lesson.id, position: @lesson.relative_position)
     assert_response :success
     assert_select 'script[data-lesson]', 1
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
@@ -115,7 +115,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
 
   test 'update lesson using data from edit page' do
     sign_in @levelbuilder
-    get edit_lesson_path(id: @lesson.id)
+    get edit_script_lesson_path(script_id: @lesson.script_id, id: @lesson.id, position: @lesson.relative_position)
     assert_response :success
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
     lesson_data['name'] = 'new lesson name'
@@ -148,7 +148,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
 
     # Make sure the update api accepts the data in the same format as
     # the data in the edit response.
-    patch lesson_path(id: @lesson.id, as: :json, params: lesson_data)
+    patch script_lesson_path(script_id: @lesson.script_id, id: @lesson.id, position: @lesson.relative_position, as: :json, params: lesson_data)
     @lesson.reload
     assert_equal 'new lesson name', @lesson.name
     assert_equal 'lesson overview', @lesson.overview

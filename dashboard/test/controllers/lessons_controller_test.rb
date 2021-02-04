@@ -121,7 +121,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_response :ok
     assert(@response.body.include?(@script_title))
     assert(@response.body.include?(@solo_lesson_in_script.overview))
-    assert(@response.body.include?(lesson_path(id: @solo_lesson_in_script.id)))
+    assert(@response.body.include?(script_lesson_path(script_id: @solo_lesson_in_script.script_id, id: @solo_lesson_in_script.id, position: @solo_lesson_in_script.relative_position)))
   end
 
   test 'show lesson when script has multiple lessons' do
@@ -132,8 +132,8 @@ class LessonsControllerTest < ActionController::TestCase
     assert(@response.body.include?(@script_title))
     assert(@response.body.include?(@lesson.overview))
     assert(@response.body.include?(@script.link))
-    assert(@response.body.include?(lesson_path(id: @lesson.id)))
-    refute(@response.body.include?(lesson_path(id: @lesson2.id)))
+    assert(@response.body.include?(script_lesson_path(script_id: @lesson.script_id, id: @lesson.id, position: @lesson.relative_position)))
+    refute(@response.body.include?(script_lesson_path(script_id: @lesson2.script_id, id: @lesson2.id, position: @lesson2.relative_position)))
   end
 
   test 'show lesson with activities' do
