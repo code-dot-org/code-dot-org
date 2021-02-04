@@ -45,7 +45,8 @@ class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
-    showMakerToggle: PropTypes.bool
+    showMakerToggle: PropTypes.bool,
+    autogenerateML: PropTypes.func.isRequired
   };
 
   // This ugly two-flag state is a workaround for an event-handling bug in
@@ -164,6 +165,7 @@ class SettingsCog extends Component {
         <ModelManagerDialog
           isOpen={this.state.managingModels}
           onClose={this.closeModelManager}
+          autogenerateML={this.props.autogenerateML}
         />
         <ConfirmEnableMakerDialog
           isOpen={this.state.confirmingEnableMaker}
