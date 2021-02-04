@@ -85,5 +85,10 @@
   "eventsOneChange": "crwdns2480924:0crwdne2480924:0",
   "behaviorsIncreased": "crwdns2480926:0crwdne2480926:0",
   "eventsWrongBehaviors": "crwdns2480928:0crwdne2480928:0",
-  "spinBothWays": "crwdns2480930:0crwdne2480930:0"
+  "spinBothWays": "crwdns2480930:0crwdne2480930:0",
+  "didntMoveUp": "crwdns2481348:0crwdne2481348:0",
+  "didntMoveDown": "crwdns2481350:0crwdne2481350:0",
+  "didntMoveLeft": "crwdns2481352:0crwdne2481352:0",
+  "didntMoveRight": "crwdns2481354:0crwdne2481354:0",
+  "whenToWhile": "crwdns2481356:0crwdne2481356:0"
 }

@@ -18616,6 +18616,8 @@ in:
               name: crwdns2465574:0crwdne2465574:0
             CS Discoveries:
               name: crwdns2471168:0crwdne2471168:0
+            contagions:
+              name: 'crwdns2481328:0crwdne2481328:0'
           lesson_groups:
             lesson group:
               display_name: crwdns2465576:0crwdne2465576:0
@@ -18624,6 +18626,7 @@ in:
           description_short: 'crwdns2465582:0crwdne2465582:0'
           description: 'crwdns2465584:0crwdne2465584:0'
           student_description: 'crwdns2478378:0crwdne2478378:0'
+          name: crwdns2481330:0crwdne2481330:0
         virustest:
           lessons:
             Virus Simulation for Code Bytes:
@@ -18714,6 +18717,8 @@ in:
               name: crwdns2474788:0crwdne2474788:0
             appendix:
               name: crwdns2474790:0crwdne2474790:0
+            intro-categorical:
+              name: crwdns2481332:0crwdne2481332:0
           lesson_groups: { }
           title: crwdns2471290:0crwdne2471290:0
           description_audience: 'crwdns2471292:0crwdne2471292:0'
@@ -18772,6 +18777,8 @@ in:
               name: crwdns2478408:0crwdne2478408:0
             lesson-3-ci:
               name: crwdns2481324:0crwdne2481324:0
+            video:
+              name: crwdns2481334:0crwdne2481334:0
           lesson_groups:
             Toolbox Levels:
               display_name: crwdns2471978:0crwdne2471978:0
@@ -18783,6 +18790,8 @@ in:
               description: crwdns2478416:0crwdne2478416:0
             outbreak:
               display_name: crwdns2478418:0crwdne2478418:0
+            Loom Levels:
+              display_name: crwdns2481336:0crwdne2481336:0
           title: crwdns2471980:0crwdne2471980:0
           description_audience: crwdns2471982:0crwdne2471982:0
           description_short: crwdns2471984:0crwdne2471984:0
@@ -20661,6 +20670,14 @@ in:
           lessons:
             how things spread gp:
               name: crwdns2480838:0crwdne2480838:0
+            contagion simulator gp:
+              name: crwdns2481338:0crwdne2481338:0
+            sometimes not always gp:
+              name: crwdns2481340:0crwdne2481340:0
+            modifying your simulator gp:
+              name: crwdns2481342:0crwdne2481342:0
+            collecting data gp:
+              name: crwdns2481344:0crwdne2481344:0
           lesson_groups:
             lesson group:
               display_name: crwdns2480840:0crwdne2480840:0
@@ -20677,7 +20694,7 @@ in:
             intro:
               name: crwdns2480856:0crwdne2480856:0
             lesson1:
-              name: crwdns2480858:0crwdne2480858:0
+              name: 'crwdns2480858:0crwdne2480858:0'
             lesson2:
               name: crwdns2480860:0crwdne2480860:0
             lesson3:

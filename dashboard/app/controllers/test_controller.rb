@@ -78,7 +78,8 @@ class TestController < ApplicationController
       key: 'temp-lesson',
       name: 'Temp Lesson',
       relative_position: 1,
-      absolute_position: 1
+      absolute_position: 1,
+      has_lesson_plan: false
     )
     script_level = lesson.script_levels.create(
       script: script,

@@ -6,13 +6,13 @@ hu-HU:
   'no': Nem
   select_language: Válassz nyelvet
   upgrade_ie_message: Code.org hamarosan megszünteti az Internet Explorer 8, 9 és
-    10. támogatását. Kérjük, frissítsen egy modernebb böngészőre.
+    10. támogatását. Kérjük, frissíts egy modernebb böngészőre.
   upgrade_ie_message_csedweek: CSEdWeek.org hamarosan megszünteti az Internet Explorer
-    8, 9 és 10. támogatását. Kérjük, frissítsen egy modernebb böngészőre.
+    8, 9 és 10. támogatását. Kérjük, frissíts egy modernebb böngészőre.
   upgrade_ie_link: Tudj meg többet
   en: Számítógép-tudomány
   computer_science_edweek: Számítógép Tudomány Oktatási Hét
-  csedweek_dates: 2014. december 8-14
+  csedweek_dates: 2018. december 3-9
   csedweek_banner_hoc: 'Hamarosan itt a <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Kódolás Órája</a>. Kérünk
     minden tanárt és szervezőt, hogy tervezze meg a <a href="http://hourofcode.com"
@@ -29,11 +29,12 @@ hu-HU:
   learn_now: Tanulj most
   petition_message: Minden diáknak, minden iskolában meg kellene adni a lehetőséget,
     hogy számítástechnikát tanuljon
-  petition_sign_message: 'Ha elfogadod, írd be a nevedet. Csatlakozz # másokhoz.'
+  petition_sign_message: 'Ha elfogadod, írd be a nevedet és csatlakozz a levelező
+    listánkhoz # másik emberrel együtt.'
   petition_join_others: "# ember vár, hogy csatlakozz"
   name: Név
   email: Email
-  zipcode: Irányítószám vagy ország
+  zipcode: Irányítószám (USA) vagy ország
   submit: Elküldés
   twentyhours_heading: Próbáld ki a Bevezetés a számítástechnikába tanfolyamunkat
   twentyhours_text: Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról
