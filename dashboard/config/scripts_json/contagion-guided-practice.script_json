@@ -2,7 +2,7 @@
   "script": {
     "name": "contagion-guided-practice",
     "wrapup_video_id": null,
-    "hidden": false,
+    "hidden": true,
     "login_required": false,
     "properties": {
       "teacher_resources": [
