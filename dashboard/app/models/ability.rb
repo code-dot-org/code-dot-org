@@ -53,6 +53,7 @@ class Ability
       :foorm_editor,
       :pd_foorm,
       Foorm::Form,
+      Foorm::Library,
       Foorm::LibraryQuestion,
       :java_ide
     ]
@@ -241,6 +242,7 @@ class Ability
         Video,
         :foorm_editor,
         Foorm::Form,
+        Foorm::Library,
         Foorm::LibraryQuestion,
         :java_ide
       ]
@@ -292,6 +294,7 @@ class Ability
         UserScript,
         :pd_foorm,
         Foorm::Form,
+        Foorm::Library,
         Foorm::LibraryQuestion
       ]
     end
