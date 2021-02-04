@@ -71,8 +71,7 @@ class BubbleChoice < DSLDefined
   # Summarizes the level.
   # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels,
   # previous/next levels, and script will be included in the summary.
-  # @param [Integer] user_id. Optional. If provided, the "perfect" field will be calculated
-  # in the sublevel summary.
+  # @param [User] user
   # @param [Boolean] should_localize If true, translate the summary.
   # @return [Hash]
   def summarize(script_level: nil, user: nil, should_localize: false)
@@ -101,12 +100,10 @@ class BubbleChoice < DSLDefined
     end
 
     if should_localize
-      set_unless_nil summary,
-        :display_name,
-        I18n.t(:display_name, scope: [:data, :dsls, name], default: nil, smart: true)
-      set_unless_nil summary,
-        :description,
-        I18n.t(:description, scope: [:data, :dsls, name], default: nil, smart: true)
+      %i[display_name description].each do |property|
+        localized_value = I18n.t(property, scope: [:data, :dsls, name], default: nil, smart: true)
+        summary[property] = localized_value unless localized_value.nil?
+      end
     end
 
     summary
@@ -153,15 +150,10 @@ class BubbleChoice < DSLDefined
       end
 
       if should_localize
-        set_unless_nil level_info,
-          :display_name,
-          I18n.t(level.name, scope: [:data, :display_name], default: nil, smart: true)
-        set_unless_nil level_info,
-          :short_instructions,
-          I18n.t(level.name, scope: [:data, :short_instructions], default: nil, smart: true)
-        set_unless_nil level_info,
-          :long_instructions,
-          I18n.t(level.name, scope: [:data, :long_instructions], default: nil, smart: true)
+        %i[display_name short_instructions long_instructions].each do |property|
+          localized_value = I18n.t(level.name, scope: [:data, property], default: nil, smart: true)
+          level_info[property] = localized_value unless localized_value.nil?
+        end
       end
 
       summary << level_info
@@ -183,10 +175,6 @@ class BubbleChoice < DSLDefined
   # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
   def self.parent_levels(level_name)
     where("properties -> '$.sublevels' LIKE ?", "%\"#{level_name}\"%")
-  end
-
-  def set_unless_nil(hash, key, value)
-    hash[key] = value unless value.nil?
   end
 
   def supports_markdown?
