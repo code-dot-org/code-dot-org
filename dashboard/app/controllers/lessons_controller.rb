@@ -26,18 +26,6 @@ class LessonsController < ApplicationController
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
-  def self.get_lesson(script, params)
-    if params[:chapter]
-      script.get_script_level_by_chapter(params[:chapter])
-    elsif params[:stage_position]
-      script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
-    elsif params[:lockable_stage_position]
-      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
-    else
-      script.get_script_level_by_id(params[:id])
-    end
-  end
-
   # GET /lessons/1/edit
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit
