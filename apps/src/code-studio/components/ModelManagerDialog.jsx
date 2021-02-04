@@ -3,12 +3,12 @@ import React from 'react';
 import $ from 'jquery';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
-import autogenerateML from '@cdo/apps/applab/ai';
 
 export default class ModelManagerDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    onClose: PropTypes.func.isRequired
+    onClose: PropTypes.func.isRequired,
+    autogenerateML: PropTypes.func.isRequired
   };
 
   state = {
@@ -36,7 +36,7 @@ export default class ModelManagerDialog extends React.Component {
   importMLModel = async () => {
     this.setState({isImportPending: true});
     const modelId = this.root.value;
-    await autogenerateML(modelId);
+    await this.props.autogenerateML(modelId);
     this.setState({isImportPending: false});
     this.closeModelManager();
   };
