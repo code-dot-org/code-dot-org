@@ -29,7 +29,7 @@ import {
   setScriptId,
   validScriptPropType
 } from '@cdo/apps/redux/scriptSelectionRedux';
-import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
+import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
 import moment from 'moment';
@@ -141,7 +141,7 @@ class SectionProgress extends Component {
         wrapper="span"
         effect="solid"
       >
-        {stageIsAllAssessment(stage.levels) && (
+        {lessonIsAllAssessment(stage.levels) && (
           <FontAwesome icon="check-circle" style={styles.icon} />
         )}
         {stage.name}

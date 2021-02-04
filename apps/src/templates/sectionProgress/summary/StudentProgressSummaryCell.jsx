@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import {
   summarizeProgressInStage,
-  stageIsAllAssessment
+  lessonIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
+// Deprecated in favor of ProgressTableSummaryCell
+// component will be removed as part of https://codedotorg.atlassian.net/browse/LP-1606
 class StudentProgressSummaryCell extends Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
@@ -18,7 +20,7 @@ class StudentProgressSummaryCell extends Component {
   render() {
     const totalPixels = 20;
     const statusCounts = summarizeProgressInStage(this.props.levelsWithStatus);
-    const assessmentStage = stageIsAllAssessment(this.props.levelsWithStatus);
+    const assessmentStage = lessonIsAllAssessment(this.props.levelsWithStatus);
     const perfectPixels = Math.floor(
       (statusCounts.completed / statusCounts.total) * totalPixels
     );
@@ -41,7 +43,7 @@ class StudentProgressSummaryCell extends Component {
           incomplete={incompletePixels}
           imperfect={imperfectPixels}
           perfect={perfectPixels}
-          stageIsAllAssessment={assessmentStage}
+          lessonIsAllAssessment={assessmentStage}
         />
       </div>
     );

@@ -113,12 +113,63 @@ export function isLevelAssessment(level) {
 }
 
 /**
- * Checks if a whole stage is assessment levels
+ * Checks if a whole lesson is assessment levels
  * @param {[]} levels An array of levels
- * @returns {bool} If all the levels in a stage are assessment levels
+ * @returns {bool} If all the levels in a lesson are assessment levels
  */
-export function stageIsAllAssessment(levels) {
+export function lessonIsAllAssessment(levels) {
   return levels.every(level => level.kind === LevelKind.assessment);
+}
+
+/**
+ * Computes progress status percentages for a set of levels.
+ * @param {{id:studentLevelProgressType}} studentLevelProgress An object keyed by
+ * level id containing objects representing the student's progress in that level
+ * @param {levelType[]} levels An array of levels
+ * @returns {studentLessonProgressType} An object representing student's progress
+ * in the lesson
+ *
+ * Note: this function will replace `summarizeProgressInStage` below once we
+ * refactor the legacy StudentProgressSummaryCell component
+ */
+export function progressForLesson(studentLevelProgress, levels) {
+  // Filter any bonus levels as they do not count toward progress.
+  const filteredLevels = levels.filter(level => !level.bonus);
+  const statuses = filteredLevels.map(level => {
+    const levelProgress = studentLevelProgress[level.id];
+    return (levelProgress && levelProgress.status) || LevelStatus.not_tried;
+  });
+
+  const completedStatuses = [
+    LevelStatus.perfect,
+    LevelStatus.submitted,
+    LevelStatus.free_play_complete,
+    LevelStatus.completed_assessment,
+    LevelStatus.readonly
+  ];
+
+  const statusCounts = statuses.reduce(
+    (counts, status) => {
+      counts.attempted += status === LevelStatus.attempted;
+      counts.imperfect += status === LevelStatus.passed;
+      counts.completed += completedStatuses.includes(status);
+      return counts;
+    },
+    {attempted: 0, imperfect: 0, completed: 0}
+  );
+  const incomplete =
+    statuses.length - statusCounts.completed - statusCounts.imperfect;
+  const isLessonStarted =
+    statusCounts.attempted + statusCounts.imperfect + statusCounts.completed >
+    0;
+
+  const getPercent = count => (100 * count) / statuses.length;
+  return {
+    isStarted: isLessonStarted,
+    imperfectPercent: getPercent(statusCounts.imperfect),
+    completedPercent: getPercent(statusCounts.completed),
+    incompletePercent: getPercent(incomplete)
+  };
 }
 
 /**
