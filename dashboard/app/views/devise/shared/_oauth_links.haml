@@ -30,5 +30,5 @@
   // If the makerBridge is available, we are in the Maker App, which has its
   // own Google login button. Hiding this google-oauth button to avoid confusion.
   if (!!window.MakerBridge) {
-    $('.with-google_oauth2').hide();
+    $('.with-google_oauth2').prop('disabled', true);
   }
