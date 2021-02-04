@@ -15832,6 +15832,8 @@ pl:
               name: Projekt końcowy
             appendix:
               name: Appendix
+            intro-categorical:
+              name: Lekcja 6
           title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI dla CSD. W przypadku pytań na ten temat, należy zwrócić się do Dana Schneidera.
@@ -15878,6 +15880,8 @@ pl:
               name: Tworzenie duszków
             Sprites in Action:
               name: Duszki w akcji
+            lesson-3-ci:
+              name: Utwórz bot Haiku
           lesson_groups:
             Toolbox Levels:
               display_name: Poziomy przyborników
@@ -17701,7 +17705,17 @@ pl:
           description: 'Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.'
           student_description: 'Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.'
         contagion-guided-practice:
+          lessons:
+            how things spread gp:
+              name: Praktyka z przewodnikiem dotyczącym, jak rozpowszechnia się zarażanie
+          lesson_groups:
+            lesson group:
+              display_name: Praktyka z przewodnikiem dotyczącym zarażania
+          name: praktyka z przewodnikiem dotyczącym zarażania
+          title: Praktyka z przewodnikiem dotyczącym zarażania [tylko nauczyciela] 
           description_audience: 5. klasa
+          description_short: Te poziomy są przeznaczone dla nauczycieli demonstrujących pojęcia informatyki i nauk ścisłych na poziomach symulatora zarażeń 
+          description: Te poziomy są przeznaczone dla nauczycieli demonstrujących pojęcia informatyki i nauk ścisłych na poziomach symulatora zarażeń 
         ai-unit-pilot:
           lessons:
             new lesson:
@@ -17709,7 +17723,7 @@ pl:
             intro:
               name: Lekcja 1
             lesson1:
-              name: Lekcja 1
+              name: 'Lekcja 1'
             lesson2:
               name: Lekcja 2
             lesson3:
@@ -17751,3 +17765,6 @@ pl:
           lesson_groups:
             lesson group:
               display_name: wyświetlana nazwa grupy lekcji
+          name: Pilotaż jednostki AI
+          title: Pilotaż Jednostki AI
+          description_short: Pilotaż Jednostki AI w CSD
