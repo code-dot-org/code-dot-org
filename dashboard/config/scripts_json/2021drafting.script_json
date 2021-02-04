@@ -130,24 +130,9 @@
       }
     },
     {
-      "key": "lesson-1",
-      "name": "Blank Space Variables",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2021drafting"
-      }
-    },
-    {
       "key": "lesson-2",
       "name": "Storing and Retrieving Text",
-      "absolute_position": 5,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 5,
@@ -160,9 +145,24 @@
       }
     },
     {
+      "key": "blank space stories",
+      "name": "Blank Space Stories",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "blank space stories",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
       "key": "lesson-3",
       "name": "Create a Chat-Bot",
-      "absolute_position": 6,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 6,
@@ -177,7 +177,7 @@
     {
       "key": "lesson-3-ci",
       "name": "Create a Haiku Bot",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 7,
@@ -192,7 +192,7 @@
     {
       "key": "lesson-4",
       "name": "Counting with Variables",
-      "absolute_position": 8,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 8,
@@ -207,7 +207,7 @@
     {
       "key": "lesson-5",
       "name": "Groups of Sprites",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 9,
@@ -222,7 +222,7 @@
     {
       "key": "lesson-6",
       "name": "Create a Collector Game",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 10,
@@ -788,31 +788,6 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Blank Space Variables",
-        "level_keys": [
-          "EnvelopeVariables-Unplugged_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "EnvelopeVariables-Unplugged_2021"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2021drafting"
-      },
-      "level_keys": [
-        "EnvelopeVariables-Unplugged_2021"
-      ]
-    },
-    {
       "chapter": 22,
       "position": 1,
       "activity_section_position": null,
@@ -835,6 +810,31 @@
       },
       "level_keys": [
         "courseF_variables_predict"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Video: Variables in Envelopes",
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ],
+        "lesson.key": "blank space stories",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "EnvelopeVariables-Unplugged_2021"
       ]
     },
     {
@@ -1567,7 +1567,7 @@
         "script_level.level_keys": [
           "EnvelopeVariables-Unplugged_2021"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "blank space stories",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2021drafting"
       }
