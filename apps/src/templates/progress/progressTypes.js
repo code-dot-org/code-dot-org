@@ -120,3 +120,18 @@ studentLevelProgressShape.pages = PropTypes.arrayOf(
 export const studentLevelProgressType = PropTypes.shape(
   studentLevelProgressShape
 );
+
+/**
+ * @typedef {Object} StudentLessonProgress
+ *
+ * @property {bool} isStarted
+ * @property {number} incompletePercent
+ * @property {number} imperfectPercent
+ * @property {number} completedPercent
+ */
+export const studentLessonProgressType = PropTypes.shape({
+  isStarted: PropTypes.bool.isRequired,
+  incompletePercent: PropTypes.number.isRequired,
+  imperfectPercent: PropTypes.number.isRequired,
+  completedPercent: PropTypes.number.isRequired
+});
