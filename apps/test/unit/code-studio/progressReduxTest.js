@@ -1454,7 +1454,7 @@ describe('progressReduxTest', () => {
         focusAreaStageIds: [1, 2],
         lockableAuthorized: true,
         completed: true,
-        levels: {},
+        progress: {},
         peerReviewsPerformed: true,
         current_stage: 1
       };
