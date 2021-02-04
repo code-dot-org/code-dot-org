@@ -47,6 +47,16 @@ class Vocabulary < ApplicationRecord
     {id: id, key: key, word: word, definition: definition}
   end
 
+  def summarize_for_edit
+    {
+      id: id,
+      key: key,
+      word: word,
+      definition: definition,
+      lessons: lessons.map(&:id)
+    }
+  end
+
   def generate_key
     return if key
     self.key = word
