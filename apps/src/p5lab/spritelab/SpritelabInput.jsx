@@ -67,7 +67,7 @@ const styles = {
   choiceSpriteContainer: {
     padding: 0,
     background: 'transparent',
-    border: 'transparent'
+    border: '1px solid transparent'
   },
   choiceSpriteImage: {
     margin: 0,
