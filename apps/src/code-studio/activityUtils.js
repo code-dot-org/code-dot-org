@@ -11,7 +11,7 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
  * @return {string}
  */
 export const activityCssClass = result => {
-  if (!result) {
+  if (!result || result === TestResults.NO_TESTS_RUN) {
     return LevelStatus.not_tried;
   }
   if (result === TestResults.REVIEW_ACCEPTED_RESULT) {
