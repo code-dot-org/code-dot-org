@@ -27,7 +27,7 @@ const style = {
     backgroundColor: 'gray',
     height: '200px'
   },
-  javalab: {
+  javaIde: {
     display: 'flex',
     backgroundColor: '#272822',
     margin: 15
@@ -64,7 +64,7 @@ class JavaIdeView extends React.Component {
 
   render() {
     return (
-      <div style={style.javalab}>
+      <div style={style.javaIde}>
         <div style={style.instructionsAndPreview}>
           <div style={style.instructions}>
             <PaneHeader hasFocus={true}>
