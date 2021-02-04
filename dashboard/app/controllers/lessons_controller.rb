@@ -18,8 +18,24 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1
   def show
-    raise CanCan::AccessDenied.new("cannot view lesson #{@lesson.id} because it does not have a lesson plan") unless @lesson.has_lesson_plan
+    @script = Script.find_by(name: params[:script_id])
+    raise ActiveRecord::RecordNotFound unless @script
+    @lesson = Lesson.find_by(script: @script, has_lesson_plan: true, relative_position: params[:id])
+    raise ActiveRecord::RecordNotFound unless @lesson
+
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
+  end
+
+  def self.get_lesson(script, params)
+    if params[:chapter]
+      script.get_script_level_by_chapter(params[:chapter])
+    elsif params[:stage_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
+    elsif params[:lockable_stage_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
+    else
+      script.get_script_level_by_id(params[:id])
+    end
   end
 
   # GET /lessons/1/edit
