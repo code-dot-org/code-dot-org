@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import $ from 'jquery';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import autogenerateML from '@cdo/apps/applab/ai';
