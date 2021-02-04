@@ -207,6 +207,8 @@ class Lesson < ApplicationRecord
   end
 
   def localized_lesson_plan
+    return lesson_path(id: id) if script.is_migrated
+
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
 
