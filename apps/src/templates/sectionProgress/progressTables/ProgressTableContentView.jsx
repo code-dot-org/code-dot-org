@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {scriptDataPropType, scrollbarWidth} from '../sectionProgressConstants';
-import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
+import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import progressTableStyles from './progressTableStyles.scss';
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
 
@@ -80,7 +80,7 @@ export default class ProgressTableContentView extends React.Component {
           lockable={lesson.lockable}
           highlighted={lesson.position === this.props.lessonOfInterest}
           onClick={() => this.props.onClickLesson(lesson.position)}
-          isAssessment={stageIsAllAssessment(lesson.levels)}
+          isAssessment={lessonIsAllAssessment(lesson.levels)}
           includeArrow={includeArrow}
         />
       </div>

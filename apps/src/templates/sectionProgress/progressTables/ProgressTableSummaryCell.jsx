@@ -17,7 +17,7 @@ export default class ProgressTableSummaryCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     studentLessonProgress: studentLessonProgressType.isRequired,
-    assessmentStage: PropTypes.bool,
+    isAssessmentLesson: PropTypes.bool,
     onSelectDetailView: PropTypes.func
   };
 
@@ -26,12 +26,12 @@ export default class ProgressTableSummaryCell extends React.Component {
   }
 
   render() {
-    const {studentLessonProgress, assessmentStage} = this.props;
+    const {studentLessonProgress, isAssessmentLesson} = this.props;
 
     const boxStyle = {
       ...styles.container,
       borderColor: studentLessonProgress.isStarted
-        ? assessmentStage
+        ? isAssessmentLesson
           ? color.level_submitted
           : color.level_perfect
         : color.light_gray
@@ -48,7 +48,7 @@ export default class ProgressTableSummaryCell extends React.Component {
     };
 
     const completedStyle = {
-      backgroundColor: assessmentStage
+      backgroundColor: isAssessmentLesson
         ? color.level_submitted
         : color.level_perfect,
       height: this.heightForPercent(studentLessonProgress.completedPercent)
