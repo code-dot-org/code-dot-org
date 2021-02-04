@@ -6,15 +6,15 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
-import FoormEditor from './FoormEditor';
+import FoormLibraryEditor from './FoormLibraryEditor';
 import {
-  resetAvailableForms,
+  resetAvailableLibraries,
   setLastSaved,
   setSaveError,
-  setFormData,
+  setLibraryQuestionData,
   setHasError,
-  setLastSavedQuestions
-} from './editor/foormEditorRedux';
+  setLastSavedQuestion
+} from './library_editor/foormLibraryEditorRedux';
 
 const styles = {
   loadError: {
@@ -23,22 +23,22 @@ const styles = {
   }
 };
 
-class FoormEditorManager extends React.Component {
+class FoormLibraryEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
-    formNamesAndVersions: PropTypes.array,
-    formCategories: PropTypes.array,
+    libraryNamesAndVersions: PropTypes.array,
+    libraryCategories: PropTypes.array,
 
     // populated by redux
     formQuestions: PropTypes.object,
-    availableForms: PropTypes.array,
-    resetAvailableForms: PropTypes.func,
+    availableLibraries: PropTypes.array,
+    resetAvailableLibraries: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
-    setFormData: PropTypes.func,
+    setLibraryQuestionData: PropTypes.func,
     setHasError: PropTypes.func,
-    setLastSavedQuestions: PropTypes.func
+    setLastSavedQuestion: PropTypes.func
   };
 
   constructor(props) {
@@ -48,50 +48,102 @@ class FoormEditorManager extends React.Component {
       formKey: 0,
       formPreviewQuestions: null,
       showCodeMirror: false,
-      hasLoadError: false
+      hasLoadError: false,
+      selectedLibraryId: null,
+      libraryQuestionsFromSelectedLibrary: null,
+      selectedLibraryQuestionId: null
     };
 
-    this.props.resetAvailableForms(this.props.formNamesAndVersions);
+    this.props.resetAvailableLibraries(this.props.libraryNamesAndVersions);
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.formNamesAndVersions !== this.props.formNamesAndVersions) {
-      this.props.resetAvailableForms(this.props.formNamesAndVersions);
+    if (
+      prevProps.libraryNamesAndVersions !== this.props.libraryNamesAndVersions
+    ) {
+      this.props.resetAvailableLibraries(this.props.libraryNamesAndVersions);
     }
   }
 
+  // could probably dedupe this method
   getFormattedConfigurationDropdownOptions() {
-    return this.props.availableForms.map((formNameAndVersion, i) => {
-      const formName = formNameAndVersion['name'];
-      const formVersion = formNameAndVersion['version'];
-      const formId = formNameAndVersion['id'];
+    return this.props.availableLibraries.map((libraryNameAndVersion, i) => {
+      const libraryName = libraryNameAndVersion['name'];
+      const libraryVersion = libraryNameAndVersion['version'];
+      const libraryId = libraryNameAndVersion['id'];
       return (
         <MenuItem
           key={i}
           eventKey={i}
-          onClick={() => this.loadConfiguration(formId)}
+          onClick={() => this.loadLibraryQuestions(libraryId)}
         >
-          {`${formName}, version ${formVersion}`}
+          {`${libraryName}, version ${libraryVersion}`}
         </MenuItem>
       );
     });
   }
 
-  loadConfiguration(formId) {
+  getFormattedLibraryQuestionDropdownOptions() {
+    return this.state.libraryQuestionsFromSelectedLibrary.map(
+      (libraryQuestionAndType, i) => {
+        const libraryQuestionName = libraryQuestionAndType['name'];
+        const libraryQuestionType = libraryQuestionAndType['type'];
+        const libraryQuestionId = libraryQuestionAndType['id'];
+        return (
+          <MenuItem
+            key={i}
+            eventKey={i}
+            onClick={() => this.loadLibraryContents(libraryQuestionId)}
+          >
+            {`${libraryQuestionName} (${libraryQuestionType})`}
+          </MenuItem>
+        );
+      }
+    );
+  }
+
+  loadLibraryQuestions(formId) {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     $.ajax({
-      url: `/api/v1/pd/foorm/forms/${formId}`,
+      url: `/foorm/libraries/${formId}/question_names`,
       type: 'get'
     })
       .done(result => {
-        this.updateFormData(result);
+        this.props.setHasError(false);
         this.setState({
-          showCodeMirror: true,
-          hasLoadError: false
+          hasLoadError: false,
+          selectedLibraryId: formId,
+          libraryQuestionsFromSelectedLibrary: result
         });
       })
       .fail(() => {
+        // setHasError(true) wasn't in fail handler for loadconfiguration, look into why
+        this.props.setHasError(true);
+        this.setState({
+          hasLoadError: true
+        });
+      });
+  }
+
+  // Need better name here
+  loadLibraryContents(libraryQuestionId) {
+    this.props.setLastSaved(null);
+    this.props.setSaveError(null);
+    $.ajax({
+      url: `/foorm/library_questions/${libraryQuestionId}`,
+      type: 'get'
+    })
+      .done(result => {
+        this.updateLibraryQuestionData(result);
+        this.setState({
+          showCodeMirror: true,
+          hasLoadError: false,
+          selectedLibraryQuestionId: libraryQuestionId
+        });
+      })
+      .fail(() => {
+        // need to fix this
         this.updateFormData({
           questions: {},
           published: null,
@@ -101,11 +153,15 @@ class FoormEditorManager extends React.Component {
         });
         this.setState({
           showCodeMirror: true,
-          hasLoadError: true
+          hasLoadError: true,
+          selectedLibraryId: null
         });
       });
   }
 
+  // on select of library:
+  // load options of library questions
+  // show dropdown
   initializeEmptyCodeMirror = () => {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
@@ -122,20 +178,28 @@ class FoormEditorManager extends React.Component {
     });
   };
 
-  updateFormData = formData => {
-    this.props.setFormData(formData);
+  updateLibraryQuestionData = libraryQuestionData => {
+    this.props.setLibraryQuestionData(libraryQuestionData);
     this.props.setHasError(false);
-    this.props.setLastSavedQuestions(formData['questions']);
-    this.props.resetCodeMirror(formData['questions']);
+    this.props.setLastSavedQuestion(libraryQuestionData['question']);
+    this.props.resetCodeMirror(libraryQuestionData['question']);
   };
 
+  libraryQuestionOptionsAvailable = () => {
+    return !!(
+      this.state.selectedLibraryId &&
+      this.state.libraryQuestionsFromSelectedLibrary
+    );
+  };
+
+  // update library dropdown to be disabled instead of not shown when no library question selected
   render() {
     return (
       <div>
-        <h1>Foorm Editor</h1>
+        <h1>Foorm Library Editor</h1>
         <p>
-          Interface for creating and making updates to Foorm forms. Check out
-          our{' '}
+          Interface for creating and making updates to Foorm libraries. Check
+          out our{' '}
           <a
             href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor"
             target="_blank"
@@ -146,20 +210,33 @@ class FoormEditorManager extends React.Component {
           to get started.
         </p>
         <div>
-          <DropdownButton id="load_config" title="Load Form..." className="btn">
+          <DropdownButton
+            id="load_config"
+            title="Load Library..."
+            className="btn"
+          >
             {this.getFormattedConfigurationDropdownOptions()}
           </DropdownButton>
           <Button onClick={this.initializeEmptyCodeMirror} className="btn">
             New Form
           </Button>
         </div>
+        <DropdownButton
+          id="load_config"
+          title="Load Library Question..."
+          className="btn"
+          disabled={!this.libraryQuestionOptionsAvailable()}
+        >
+          {this.libraryQuestionOptionsAvailable() &&
+            this.getFormattedLibraryQuestionDropdownOptions()}
+        </DropdownButton>
         {this.state.hasLoadError && (
           <div style={styles.loadError}>Could not load the selected form.</div>
         )}
         {this.state.showCodeMirror && (
-          <FoormEditor
+          <FoormLibraryEditor
             populateCodeMirror={this.props.populateCodeMirror}
-            formCategories={this.props.formCategories}
+            libraryCategories={this.props.libraryCategories}
             resetCodeMirror={this.props.resetCodeMirror}
           />
         )}
@@ -170,17 +247,18 @@ class FoormEditorManager extends React.Component {
 
 export default connect(
   state => ({
-    formQuestions: state.foorm.formQuestions || {},
-    availableForms: state.foorm.availableForms || []
+    libraryQuestion: state.foorm.libraryQuestion || {},
+    availableLibraries: state.foorm.availableLibraries || []
   }),
   dispatch => ({
-    resetAvailableForms: formMetadata =>
-      dispatch(resetAvailableForms(formMetadata)),
+    resetAvailableLibraries: formMetadata =>
+      dispatch(resetAvailableLibraries(formMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
-    setFormData: formData => dispatch(setFormData(formData)),
+    setLibraryQuestionData: libraryQuestionData =>
+      dispatch(setLibraryQuestionData(libraryQuestionData)),
     setHasError: hasError => dispatch(setHasError(hasError)),
-    setLastSavedQuestions: formQuestions =>
-      dispatch(setLastSavedQuestions(formQuestions))
+    setLastSavedQuestion: libraryQuestion =>
+      dispatch(setLastSavedQuestion(libraryQuestion))
   })
-)(FoormEditorManager);
+)(FoormLibraryEditorManager);

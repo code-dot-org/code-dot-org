@@ -1,25 +1,28 @@
-const SET_FORM_QUESTIONS = 'foormEditor/SET_FORM_QUESTIONS';
-const SET_HAS_ERROR = 'foormEditor/SET_HAS_ERROR';
-const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
-const RESET_AVAILABLE_FORMS = 'foormEditor/RESET_AVAILABLE_FORMS';
+const SET_LIBRARY_QUESTION = 'foormLibraryEditor/SET_LIBRARY_QUESTION';
+const SET_HAS_ERROR = 'foormLibraryEditor/SET_HAS_ERROR';
+const SET_LIBRARY_QUESTION_DATA =
+  'foormLibraryEditor/SET_LIBRARY_QUESTION_DATA';
+const RESET_AVAILABLE_LIBRARIES =
+  'foormLibraryEditor/RESET_AVAILABLE_LIBRARIES';
 const ADD_AVAILABLE_FORM = 'foormEditor/ADD_AVAILABLE_FORMS';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
-const SET_LAST_SAVED_QUESTIONS = 'foormEditor/SET_LAST_SAVED_QUESTIONS';
+const SET_LAST_SAVED_QUESTION = 'foormLibraryEditor/SET_LAST_SAVED_QUESTION';
 
 // formQuestions is an object in surveyJS format that represents
 // a single survey
-export const setFormQuestions = formQuestions => ({
-  type: SET_FORM_QUESTIONS,
-  formQuestions
+export const setLibraryQuestion = libraryQuestion => ({
+  type: SET_LIBRARY_QUESTION,
+  libraryQuestion
 });
 
+// need to confirm shape of this object returned from controller
 // formData is an object in the format
 // {published: true/false, questions: {...questions...}}
 // where questions is a survey in surveyJS format.
-export const setFormData = formData => ({
-  type: SET_FORM_DATA,
-  formData
+export const setLibraryQuestionData = libraryQuestionData => ({
+  type: SET_LIBRARY_QUESTION_DATA,
+  libraryQuestionData
 });
 
 export const setHasError = hasError => ({
@@ -27,9 +30,9 @@ export const setHasError = hasError => ({
   hasError
 });
 
-export const resetAvailableForms = formsMetadata => ({
-  type: RESET_AVAILABLE_FORMS,
-  formsMetadata
+export const resetAvailableLibraries = librariesMetadata => ({
+  type: RESET_AVAILABLE_LIBRARIES,
+  librariesMetadata
 });
 
 export const addAvilableForm = formMetadata => ({
@@ -47,29 +50,29 @@ export const setSaveError = saveError => ({
   saveError
 });
 
-export const setLastSavedQuestions = formQuestions => ({
-  type: SET_LAST_SAVED_QUESTIONS,
-  formQuestions
+export const setLastSavedQuestion = libraryQuestion => ({
+  type: SET_LAST_SAVED_QUESTION,
+  libraryQuestion
 });
 
 const initialState = {
-  formQuestions: '',
+  libraryQuestion: '',
   isFormPublished: null,
   hasError: false,
   formName: null,
   formVersion: null,
   formId: null,
-  availableForms: [],
+  availableLibraries: [],
   saveError: null,
   lastSaved: null,
   lastSavedFormQuestions: ''
 };
 
-export default function foormEditorRedux(state = initialState, action) {
-  if (action.type === SET_FORM_QUESTIONS) {
+export default function foormLibraryEditorRedux(state = initialState, action) {
+  if (action.type === SET_LIBRARY_QUESTION) {
     return {
       ...state,
-      formQuestions: action.formQuestions
+      libraryQuestion: action.libraryQuestion
     };
   }
   if (action.type === SET_HAS_ERROR) {
@@ -78,20 +81,20 @@ export default function foormEditorRedux(state = initialState, action) {
       hasError: action.hasError
     };
   }
-  if (action.type === SET_FORM_DATA) {
+  if (action.type === SET_LIBRARY_QUESTION_DATA) {
+    // not sure if this works
     return {
       ...state,
-      formQuestions: action.formData['questions'],
-      isFormPublished: action.formData['published'],
-      formName: action.formData['name'],
-      formVersion: action.formData['version'],
-      formId: action.formData['id']
+      libraryQuestion: action.libraryQuestionData['question'],
+      isFormPublished: action.libraryQuestionData['published'],
+      libraryQuestionName: action.libraryQuestionData['name'],
+      libraryQuestionId: action.libraryQuestionData['id']
     };
   }
-  if (action.type === RESET_AVAILABLE_FORMS) {
+  if (action.type === RESET_AVAILABLE_LIBRARIES) {
     return {
       ...state,
-      availableForms: action.formsMetadata
+      availableLibraries: action.librariesMetadata
     };
   }
   if (action.type === ADD_AVAILABLE_FORM) {
@@ -114,10 +117,10 @@ export default function foormEditorRedux(state = initialState, action) {
       saveError: action.saveError
     };
   }
-  if (action.type === SET_LAST_SAVED_QUESTIONS) {
+  if (action.type === SET_LAST_SAVED_QUESTION) {
     return {
       ...state,
-      lastSavedFormQuestions: action.formQuestions
+      lastSavedLibraryQuestion: action.libraryQuestion
     };
   }
 

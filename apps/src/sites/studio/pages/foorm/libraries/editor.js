@@ -4,11 +4,11 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import FoormEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormEditorManager';
+import FoormLibraryEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormLibraryEditorManager';
 import foorm, {
-  setFormQuestions,
+  setLibraryQuestion,
   setHasError
-} from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
+} from '@cdo/apps/code-studio/pd/foorm/library_editor/foormLibraryEditorRedux';
 import _ from 'lodash';
 
 import 'survey-react/survey.css';
@@ -20,7 +20,7 @@ $(document).ready(function() {
   const store = getStore();
   ReactDOM.render(
     <Provider store={store}>
-      <FoormEditorManager
+      <FoormLibraryEditorManager
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
         {...getScriptData('props')}
@@ -35,24 +35,24 @@ $(document).ready(function() {
 function populateCodeMirror() {
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
   codeMirror = initializeCodeMirror(codeMirrorArea, 'application/json', {
-    callback: onCodeMirrorChange
+    callback: _.debounce(onCodeMirrorChange, 250)
   });
 }
 
 // Functions for keeping the code mirror content in the redux store.
 function onCodeMirrorChange(editor) {
   try {
-    const formQuestions = JSON.parse(editor.getValue());
-    updateFormQuestions(formQuestions);
+    const libraryQuestion = JSON.parse(editor.getValue());
+    updateLibraryQuestion(libraryQuestion);
   } catch (e) {
     // There is a JSON error.
-    getStore().dispatch(setFormQuestions({}));
+    getStore().dispatch(setLibraryQuestion({}));
     getStore().dispatch(setHasError(true));
   }
 }
 
-const updateFormQuestions = formQuestions => {
-  getStore().dispatch(setFormQuestions(formQuestions));
+const updateLibraryQuestion = libraryQuestion => {
+  getStore().dispatch(setLibraryQuestion(libraryQuestion));
   getStore().dispatch(setHasError(false));
 };
 
