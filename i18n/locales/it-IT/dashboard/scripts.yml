@@ -1744,7 +1744,7 @@ it:
           description_short: Programmazione
           lessons:
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Functions:
@@ -2072,7 +2072,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Variables:
@@ -2621,7 +2621,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd5-2017:
@@ -2639,7 +2639,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd1-old:
@@ -2671,7 +2671,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             'Chapter 1: Images and Animation':
@@ -3922,7 +3922,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd3-2018:
@@ -3946,7 +3946,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd2-2018:
@@ -5726,7 +5726,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -6299,15 +6299,15 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
               name: Test finale
             Shapes and Parameters:
-              name: Forme e Parametri
+              name: Shapes and Parameters
             Random Numbers:
-              name: Numeri Casuali
+              name: Random Numbers
         csp3-pilot:
           lesson_groups:
             content:
@@ -6805,17 +6805,17 @@ it:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              name: Forme e Parametri
+              name: Shapes and Parameters
             Variables:
               name: Variabili
             Random Numbers:
-              name: Numeri Casuali
+              name: Random Numbers
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -7423,7 +7423,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         code-break:
@@ -7502,11 +7502,11 @@ it:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              name: Forme e Parametri
+              name: Shapes and Parameters
             Variables:
               name: Variabili
             Random Numbers:
-              name: Numeri Casuali
+              name: Random Numbers
             Sprites:
               name: Personaggi
             Text:
@@ -7516,7 +7516,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -7571,6 +7571,8 @@ it:
           lessons:
             AI for Oceans:
               name: L'Intelligenza Artificiale per il mare
+            intro-categorical:
+              name: Lezione 6
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -7632,14 +7634,14 @@ it:
               key: Disegnare in Sviluppo Giochi
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              key: Forme e Parametri
-              name: Forme e Parametri
+              key: Shapes and Parameters
+              name: Shapes and Parameters
             Variables:
               key: Variabili
               name: Variabili
             Random Numbers:
-              key: Numeri Casuali
-              name: Numeri Casuali
+              key: Random Numbers
+              name: Random Numbers
             Sprites:
               key: Personaggi
               name: Personaggi
@@ -7653,8 +7655,8 @@ it:
               key: Velocità
               name: Velocità
             Collision Detection:
-              key: Rilevamento delle Collisioni
-              name: Rilevamento delle Collisioni
+              key: Collision Detection
+              name: Collision Detection
             Functions:
               key: Funzioni
               name: Funzioni
@@ -8312,7 +8314,7 @@ it:
             intro:
               name: Lezione 1
             lesson1:
-              name: Lezione 1
+              name: 'Lezione 1'
             lesson2:
               name: Lezione 2
             lesson3:

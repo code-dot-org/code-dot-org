@@ -18852,6 +18852,8 @@ en:
               name: Sprites in Action
             lesson-3-ci:
               name: Create a Haiku Bot
+            video:
+              name: Sprite Lab Videos
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -18863,6 +18865,8 @@ en:
               description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
             outbreak:
               display_name: Outbreak Simulation
+            Loom Levels:
+              display_name: Loom Levels
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
@@ -20839,3 +20843,6 @@ en:
           description_short: Pilot for AI Unit in CSD
           description: ''
           student_description: ''
+        teststandard:
+          lessons: {}
+          lesson_groups: {}
