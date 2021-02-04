@@ -6665,12 +6665,12 @@ ru:
   tutorial_tynkermult_string_detail_grades: Grades 2-8
   tutorial_monster_string_detail_grades: Pre-reader - Grade 8
   tutorial_tynkerapp_string_detail_grades: do-not-show
-  tutorial_tynkerpup_string_detail_grades: Pre-reader - Grade 5
+  tutorial_tynkerpup_string_detail_grades: Grades 2-5
   tutorial_livecode_string_detail_grades: 9 класс и старше
   tutorial_cocomgame_string_detail_grades: 2 класс и старше
-  tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
+  tutorial_tynkerspin_string_detail_grades: Grades 2-5
   tutorial_code-avengers_string_detail_grades: 6+ класс (11 и выше)
-  tutorial_tynkercq_string_detail_grades: Pre-reader - Grade 5
+  tutorial_tynkercq_string_detail_grades: Grades 2-5
   tutorial_cmgame_string_detail_grades: 6+ класс (11 и выше)
   tutorial_codesters_string_detail_grades: do-not-show
   tutorial_qrm_string_detail_grades: 6+ класс (11 и выше)
@@ -6865,8 +6865,8 @@ ru:
   tutorial_tap_string_detail_grades: 2 класс и старше
   tutorial_cintl_string_detail_grades: do-not-show
   tutorial_itchstop_string_detail_grades: Grades 2-8
-  tutorial_tynkerpn_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkerpd_string_detail_grades: Pre-reader - Grade 5
+  tutorial_tynkerpn_string_detail_grades: Grades 2-5
+  tutorial_tynkerpd_string_detail_grades: Grades 2-5
   tutorial_persistence_string_detail_grades: Для самых маленьких и старше
   tutorial_getloopy_string_detail_grades: Для самых маленьких и старше
   tutorial_createface_string_detail_grades: 2 класс и старше
@@ -7176,13 +7176,13 @@ ru:
   tutorial_gcevents_string_detail_grades: 6+ класс (11 и выше)
   tutorial_gcloops_string_detail_grades: 6+ класс (11 и выше)
   tutorial_gcvariables_string_detail_grades: 6+ класс (11 и выше)
-  tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
+  tutorial_beanything_string_detail_grades: Grades 2-5
   tutorial_change_string_detail_grades: Grades 2-8
   tutorial_cooking_string_detail_grades: Grades 2-5
   tutorial_crystal_string_detail_grades: 2 класс и старше
   tutorial_landscape_string_detail_grades: 6+ класс (11 и выше)
   tutorial_pets_string_detail_grades: Grades 2-5
-  tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
+  tutorial_petvet_string_detail_grades: Grades 2-5
   tutorial_superhero_string_detail_grades: 6+ класс (11 и выше)
   tutorial_vidcodeplastic_string_detail_grades: 6+ класс (11 и выше)
   tutorial_vidcodetypeface_string_detail_grades: 6+ класс (11 и выше)

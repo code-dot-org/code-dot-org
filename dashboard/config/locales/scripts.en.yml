@@ -18854,6 +18854,8 @@ en:
               name: Create a Haiku Bot
             video:
               name: Sprite Lab Videos
+            blank space stories:
+              name: Blank Space Stories
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -20843,3 +20845,6 @@ en:
           description_short: Pilot for AI Unit in CSD
           description: ''
           student_description: ''
+        teststandard:
+          lessons: {}
+          lesson_groups: {}

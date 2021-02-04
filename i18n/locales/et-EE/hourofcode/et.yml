@@ -6502,7 +6502,7 @@ et:
   tutorial_meeempathy_language: Inglise keel
   tutorial_dance2019_string_detail_grades: Grades 2+
   tutorial_danceparty_string_detail_grades: Grades 2+
-  tutorial_chibitronics_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_chibitronics_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_athlete_string_detail_grades: Grades 2+
   tutorial_moana_string_detail_grades: Grades 2+
   tutorial_star-wars_string_detail_grades: Grades 2+
@@ -6552,8 +6552,7 @@ et:
   tutorial_tynkerpup_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_livecode_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_cocomgame_string_detail_grades: Grades 2+
-  tutorial_tynkerspin_string_detail_grades: Lapsed, kes veel ei oska lugeda kuni 13
-    eluaastat
+  tutorial_tynkerspin_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_code-avengers_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_tynkercq_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_cmgame_string_detail_grades: Õpilastele vanuses 11+ eluaastat
@@ -6638,7 +6637,7 @@ et:
   tutorial_baubles_string_detail_grades: 7–13 eluaastat
   tutorial_bbcart_string_detail_grades: ära näita
   tutorial_tlcknight_string_detail_grades: Grades 2+
-  tutorial_fufafit_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_fufafit_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_ozodance_string_detail_grades: Kõigile vanustele
   tutorial_codingrobotics_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_box_string_detail_grades: ära näita
@@ -6663,13 +6662,13 @@ et:
   tutorial_besttech_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_tlcbrain_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_hopquiz_string_detail_grades: Grades 6-8
-  tutorial_unfortunate_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_unfortunate_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_cha_string_detail_grades: Grades 6-8
   tutorial_elaseq_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_bbcmathi_string_detail_grades: ära näita
   tutorial_tlcpixel_string_detail_grades: 7–13 eluaastat
   tutorial_arduino_string_detail_grades: Grades 6-8
-  tutorial_introrobo_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_introrobo_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_tlcinvis_string_detail_grades: Grades 2+
   tutorial_tlcjflap_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_procolor_string_detail_grades: Lapsed, kes veel ei oska lugeda kuni 13
@@ -6679,7 +6678,7 @@ et:
   tutorial_ticklel_string_detail_grades: Grades 2+
   tutorial_spiralsdash_string_detail_grades: 7–13 eluaastat
   tutorial_ghdebug_string_detail_grades: 7–13 eluaastat
-  tutorial_tlckk_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_tlckk_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_firstcomp_string_detail_grades: Lapsed, kes veel ei oska lugeda kuni 1.
     klass
   tutorial_mazefinch_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
@@ -6705,14 +6704,14 @@ et:
   tutorial_grokflags_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_robomind_string_detail_grades: 7–13 eluaastat
   tutorial_scratchanimwork_string_detail_grades: 7–13 eluaastat
-  tutorial_adventureq_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_adventureq_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_khan-es_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_kpt_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_kpl_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_khe_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_kfr_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_app-inventor_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_bits_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_bits_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_blockly_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_tynker_string_detail_grades: ära näita
   tutorial_baypt_string_detail_grades: Kõigile vanustele
@@ -6721,13 +6720,13 @@ et:
   tutorial_spellcraft_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_pirates_string_detail_grades: 7–13 eluaastat
   tutorial_csfirst_string_detail_grades: Grades 2+
-  tutorial_loopedy_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_loopedy_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_dsw_string_detail_grades: ära näita
   tutorial_dswb_string_detail_grades: ära näita
   tutorial_ssw_string_detail_grades: ära näita
   tutorial_sswb_string_detail_grades: ära näita
   tutorial_kodable-unplugged_string_detail_grades: 7–13 eluaastat
-  tutorial_scratch_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_scratch_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_bayes_string_detail_grades: Kõigile vanustele
   tutorial_gumball_string_detail_grades: ära näita
   tutorial_hrm_string_detail_grades: Õpilastele vanuses 11+ eluaastat
@@ -6738,7 +6737,7 @@ et:
   tutorial_rmc_string_detail_grades: ära näita
   tutorial_smc_string_detail_grades: ära näita
   tutorial_minecraft-2016_string_detail_grades: ära näita
-  tutorial_thinkersmith-es_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_thinkersmith-es_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_pixie_string_detail_grades: Grades 2+
   tutorial_play_string_detail_grades: ära näita
   tutorial_robomind-nl_string_detail_grades: 7–13 eluaastat
@@ -6782,7 +6781,7 @@ et:
   tutorial_computeit_string_detail_grades: Grades 2+
   tutorial_codesterssj_string_detail_grades: 7–13 eluaastat
   tutorial_cmchat_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_tynkerdb_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_tynkerdb_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_cmbuild_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_robotrattle_string_detail_grades: 7–13 eluaastat
   tutorial_codestersh_string_detail_grades: 7–13 eluaastat
@@ -6794,7 +6793,7 @@ et:
   tutorial_kodmaze_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_codestersa_string_detail_grades: 7–13 eluaastat
   tutorial_cmdodo_string_detail_grades: Lapsed vanuses 7–11 eluaastat
-  tutorial_tynkerspace_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_tynkerspace_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_gfbloons_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_raspipong_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_codehsvr_string_detail_grades: Õpilastele vanuses 11+ eluaastat
@@ -6809,7 +6808,7 @@ et:
   tutorial_codehsjsgraph_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_thunkable_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_hopcrossyroad_string_detail_grades: 7–13 eluaastat
-  tutorial_switchglitch_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_switchglitch_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_codecar_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_codesterscp_string_detail_grades: Grades 6-8
   tutorial_grokpetblock_string_detail_grades: Grades 6-8
@@ -6818,7 +6817,7 @@ et:
   tutorial_codesterscr_string_detail_grades: 7–13 eluaastat
   tutorial_grokdisease_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_techec_string_detail_grades: Ülikool
-  tutorial_rgbegin_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_rgbegin_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_myradream_string_detail_grades: 7–13 eluaastat
   tutorial_thinkfun_string_detail_grades: 7–13 eluaastat
   tutorial_hopfireworks_string_detail_grades: 7–13 eluaastat
@@ -6826,7 +6825,7 @@ et:
   tutorial_codehspython_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_codehsjava_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_techioda_string_detail_grades: Ülikool
-  tutorial_grokmonster_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_grokmonster_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_techmjs_string_detail_grades: Ülikool
   tutorial_techga_string_detail_grades: Ülikool
   tutorial_techioan_string_detail_grades: Ülikool
@@ -6834,19 +6833,19 @@ et:
   tutorial_groktunnel_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_stemcod_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_techikb_string_detail_grades: Ülikool
-  tutorial_kanostreet_string_detail_grades: Lapsed vanuses 7–11 eluaastat
-  tutorial_nyblebot_string_detail_grades: Lapsed vanuses 7–11 eluaastat
-  tutorial_codemojijs_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_kanostreet_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
+  tutorial_nyblebot_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
+  tutorial_codemojijs_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_techapf_string_detail_grades: Ülikool
   tutorial_techfpjs_string_detail_grades: Ülikool
   tutorial_techlinq_string_detail_grades: Ülikool
   tutorial_gpbcatapult_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_quorumastro_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_alicewonder_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_alicewonder_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_rginter_string_detail_grades: Grades 6-8
   tutorial_cssgrid_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_jshero_string_detail_grades: Lastele vanuses 14+ eluaastat
-  tutorial_codemojipy_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_codemojipy_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_nclabdrone_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_gpbcircle_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_gpbpaint_string_detail_grades: Õpilastele vanuses 11+ eluaastat
@@ -6878,12 +6877,12 @@ et:
   tutorial_isavesanta_string_detail_grades: 7–13 eluaastat
   tutorial_iorder_string_detail_grades: 7–13 eluaastat
   tutorial_ianimate_string_detail_grades: 7–13 eluaastat
-  tutorial_iloveada_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_iloveada_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_kodflash_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
-  tutorial_kodchoose_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_kodchoose_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_kodpizzapre_string_detail_grades: Lapsed, kes veel ei oska lugeda kuni
     1. klass
-  tutorial_kodpizza_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_kodpizza_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_kodwomen_string_detail_grades: 7–13 eluaastat
   tutorial_tfunplug_string_detail_grades: Grades 6-8
   tutorial_lbvariables_string_detail_grades: 7–13 eluaastat
@@ -6895,9 +6894,9 @@ et:
   tutorial_lbpotato_string_detail_grades: Grades 2+
   tutorial_lbguitar_string_detail_grades: Grades 2+
   tutorial_lbio_string_detail_grades: 7–13 eluaastat
-  tutorial_wonpuppy_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_wonpuppy_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_woncue_string_detail_grades: Grades 2+
-  tutorial_wonzoo_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_wonzoo_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_wontrip_string_detail_grades: 7–13 eluaastat
   tutorial_woncollect_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_wonsecret_string_detail_grades: Õpilastele vanuses 11+ eluaastat
@@ -6938,10 +6937,10 @@ et:
   tutorial_3dbearmars_string_detail_grades: 7–13 eluaastat
   tutorial_alexaskill_string_detail_grades: 7–13 eluaastat
   tutorial_bitsboxyak_string_detail_grades: 7–13 eluaastat
-  tutorial_blockscadbargraphs_string_detail_grades: Lapsed vanuses 7–11 eluaastat
-  tutorial_blockscadbirdhouses_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_blockscadbargraphs_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
+  tutorial_blockscadbirdhouses_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_blockscadclock_string_detail_grades: Lastele vanuses 14+ eluaastat
-  tutorial_blockscaddinner_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_blockscaddinner_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_blockscadicecream_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_blockscadpizza_string_detail_grades: Grades 6-8
   tutorial_blockscadsugar_string_detail_grades: Grades 6-8
@@ -6952,20 +6951,20 @@ et:
   tutorial_bpenglishvid_string_detail_grades: 7–13 eluaastat
   tutorial_bphealthscratch_string_detail_grades: Grades 2+
   tutorial_bphealthvid_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_bpmathscratch_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_bpmathscratch_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_bpmathvid_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_bpmlkscratch_string_detail_grades: 7–13 eluaastat
   tutorial_bpmlkvid_string_detail_grades: Grades 6-8
-  tutorial_bpsafetyscratch_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_bpsafetyscratch_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_bpsafetyvid_string_detail_grades: Grades 6-8
-  tutorial_bpsciencescratch_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_bpsciencescratch_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_bpsciencevid_string_detail_grades: Grades 6-8
   tutorial_bptechscratch_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_bptechvid_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_caflags_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_matariki_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_matariki_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_carestaurant_string_detail_grades: Grades 2+
-  tutorial_casea_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_casea_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_cashield_string_detail_grades: 7–13 eluaastat
   tutorial_ccwslimer_string_detail_grades: 7–13 eluaastat
   tutorial_codinggalaxy_string_detail_grades: Lapsed, kes veel ei oska lugeda kuni
@@ -7005,8 +7004,8 @@ et:
   tutorial_groklearningpython_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_htmltimetravel_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_hp_flappy_string_detail_grades: Lastele vanuses 14+ eluaastat
-  tutorial_appytappin_string_detail_grades: Lapsed vanuses 7–11 eluaastat
-  tutorial_icipher_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_appytappin_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
+  tutorial_icipher_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_iguess_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_imake_string_detail_grades: Lapsed, kes veel ei oska lugeda kuni 1. klass
   tutorial_imorse_string_detail_grades: 7–13 eluaastat
@@ -7015,7 +7014,7 @@ et:
   tutorial_kibobowl_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_kibodance_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_buildcharacters_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
-  tutorial_designgames_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_designgames_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_makelevels_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_wizard_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_mbscratchcards_string_detail_grades: Grades 2+
@@ -7031,19 +7030,19 @@ et:
   tutorial_ozotroll_string_detail_grades: Grades 6-8
   tutorial_peblioart_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_astropi_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_rgart_string_detail_grades: Lapsed vanuses 7–11 eluaastat
-  tutorial_rgengineer_string_detail_grades: Lapsed vanuses 7–11 eluaastat
-  tutorial_rgmath_string_detail_grades: Lapsed vanuses 7–11 eluaastat
-  tutorial_rgscience_string_detail_grades: Lapsed vanuses 7–11 eluaastat
-  tutorial_rgtech_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_rgart_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
+  tutorial_rgengineer_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
+  tutorial_rgmath_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
+  tutorial_rgscience_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
+  tutorial_rgtech_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_robotmagic3d_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_robotmagicflappy_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_scratchadventure_string_detail_grades: Grades 2+
   tutorial_scratchtalk_string_detail_grades: Grades 2+
-  tutorial_scratchjrstory_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_scratchjrstory_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_scratchjrtwinkle_string_detail_grades: Lapsed, kes veel ei oska lugeda
   tutorial_spherocomm_string_detail_grades: 7–13 eluaastat
-  tutorial_spherocommunity_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_spherocommunity_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_spherofunctions_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_spheroinfrared_string_detail_grades: Grades 6-8
   tutorial_spherolightsensor_string_detail_grades: 7–13 eluaastat
@@ -7068,15 +7067,15 @@ et:
   tutorial_gcvariables_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_beanything_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_change_string_detail_grades: 7–13 eluaastat
-  tutorial_cooking_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_cooking_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_crystal_string_detail_grades: Grades 2+
   tutorial_landscape_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_pets_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_pets_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_petvet_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_superhero_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_vidcodeplastic_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_vidcodetypeface_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_washustorm_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_washustorm_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_activitypackets_string_detail_grades: Lapsed, kes veel ei oska lugeda kuni
     13 eluaastat
   tutorial_googlerookie_string_detail_grades: Õpilastele vanuses 11+ eluaastat
@@ -7170,7 +7169,7 @@ et:
   tutorial_ozobotcolor1_string_detail_grades: Grades 2+
   tutorial_scigirlspixels_string_detail_grades: Grades 2+
   tutorial_kcjheroines_string_detail_grades: 7–13 eluaastat
-  tutorial_ozobotvalue_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_ozobotvalue_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_icodebytes_string_detail_grades: Lapsed, kes veel ei oska lugeda
   tutorial_clfashion2_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_ai4all_string_detail_grades: Õpilastele vanuses 11+ eluaastat
@@ -7181,7 +7180,7 @@ et:
   tutorial_kiboprogram_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_hellorubycsin60_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_clfashion1_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_irobottraffic_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_irobottraffic_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_edisonmystery_string_detail_grades: Grades 6-8
   tutorial_microbitseaturtles_string_detail_grades: Grades 6-8
   tutorial_ozobotknow_string_detail_grades: Grades 2+
@@ -7190,7 +7189,7 @@ et:
   tutorial_irobotkind_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_firiavirtual_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_irobotguesscode_string_detail_grades: 7–13 eluaastat
-  tutorial_ozobotnouns_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_ozobotnouns_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_nasa3d_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_blupants_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_legodance_string_detail_grades: Grades 6-8
@@ -10189,15 +10188,15 @@ et:
   tutorial_codehstriangle_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_ttwhitehouse_string_detail_grades: Grades 2+
   tutorial_modulo_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_codingtown_string_detail_grades: Lapsed vanuses 7–11 eluaastat
-  tutorial_kanoart_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_codingtown_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
+  tutorial_kanoart_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_dragonscript_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_uwcloud_string_detail_grades: Grades 2+
   tutorial_htmlmuffin_string_detail_grades: Grades 6-8
   tutorial_microsoftpizza_string_detail_grades: Grades 6-8
   tutorial_stemc_blckhole_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_careconfigure_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_rpiscratch_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_rpiscratch_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_ozaria_string_detail_grades: Grades 2+
   tutorial_ttovum_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_ttpassage_string_detail_grades: 7–13 eluaastat
@@ -10246,7 +10245,7 @@ et:
   tutorial_modvariables_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_codestersmicro_string_detail_grades: Grades 6-8
   tutorial_codestersdata_string_detail_grades: Grades 6-8
-  tutorial_ikodexmas_string_detail_grades: Lapsed vanuses 7–11 eluaastat
+  tutorial_ikodexmas_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_rpisensehat_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_modtraits_string_detail_grades: Grades 2+
   tutorial_mee_string_detail_grades: Grades 2+
