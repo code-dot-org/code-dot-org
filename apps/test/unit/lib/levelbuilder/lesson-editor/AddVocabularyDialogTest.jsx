@@ -21,6 +21,7 @@ describe('AddVocabularyDialog', () => {
     const wrapper = shallow(<AddVocabularyDialog {...defaultProps} />);
     expect(wrapper.contains('Add Vocabulary')).to.be.true;
     expect(wrapper.find('input').length).to.equal(2);
+    expect(wrapper.find('Select').length).to.equal(0);
   });
 
   it('closes if save is successful', () => {
@@ -32,8 +33,6 @@ describe('AddVocabularyDialog', () => {
     });
     instance.forceUpdate();
     wrapper.update();
-    /*const saveVocabularySpy = sinon.stub(instance, 'saveVocabulary');
-    expect(saveVocabularySpy.calledOnce).to.be.true;*/
     let returnData = {
       id: 1,
       key: 'my vocabulary word',
@@ -100,5 +99,37 @@ describe('AddVocabularyDialog', () => {
     server.respond();
     wrapper.update();
     expect(wrapper.find('h3').contains('There was an error'));
+  });
+
+  it('renders default props', () => {
+    const wrapper = shallow(
+      <AddVocabularyDialog
+        {...defaultProps}
+        selectableLessons={[{id: 1, name: 'lesson1'}, {id: 2, name: 'lesson2'}]}
+      />
+    );
+    expect(wrapper.contains('Add Vocabulary')).to.be.true;
+  });
+
+  it('displays vocabulary lessons if lessons are selectable', () => {
+    const existingVocabulary = {
+      id: 200,
+      key: 'key',
+      word: 'existing vocab',
+      definition: 'existing definition',
+      lessons: [{id: 1, name: 'lesson1'}]
+    };
+    const wrapper = mount(
+      <AddVocabularyDialog
+        {...defaultProps}
+        selectableLessons={[{id: 1, name: 'lesson1'}, {id: 2, name: 'lesson2'}]}
+        editingVocabulary={existingVocabulary}
+      />
+    );
+
+    expect(wrapper.find('Select').length).to.equal(1);
+    expect(wrapper.find('Select').props().value).to.deep.equal([
+      {id: 1, name: 'lesson1'}
+    ]);
   });
 });

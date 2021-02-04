@@ -5,6 +5,8 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 
 const styles = {
   dialog: {
@@ -43,7 +45,8 @@ const initialState = {
   word: '',
   definition: '',
   isSaving: false,
-  error: ''
+  error: '',
+  lessons: []
 };
 
 export default class AddVocabularyDialog extends Component {
@@ -51,7 +54,8 @@ export default class AddVocabularyDialog extends Component {
     afterSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     editingVocabulary: vocabularyShape,
-    courseVersionId: PropTypes.number.isRequired
+    courseVersionId: PropTypes.number.isRequired,
+    selectableLessons: PropTypes.arrayOf(PropTypes.object)
   };
 
   constructor(props) {
@@ -84,6 +88,10 @@ export default class AddVocabularyDialog extends Component {
     this.props.handleClose();
   };
 
+  handleLessonSelectChange = lessonSelections => {
+    this.setState({lessons: lessonSelections.map(l => l.value)});
+  };
+
   saveVocabulary = e => {
     this.setState({isSaving: true});
     const url = this.props.editingVocabulary
@@ -98,6 +106,9 @@ export default class AddVocabularyDialog extends Component {
     if (this.props.editingVocabulary) {
       data['key'] = this.props.editingVocabulary.key;
     }
+    if (this.props.selectableLessons) {
+      data['lessonIds'] = JSON.stringify(this.state.lessons);
+    }
     $.ajax({
       url: url,
       method: method,
@@ -110,7 +121,10 @@ export default class AddVocabularyDialog extends Component {
         this.onClose();
       })
       .fail(error => {
-        this.setState({isSaving: false, error: error.responseText});
+        this.setState({
+          isSaving: false,
+          error: error.responseText
+        });
       });
   };
 
@@ -119,6 +133,12 @@ export default class AddVocabularyDialog extends Component {
       !this.state.isSaving &&
       this.state.word !== '' &&
       this.state.definition !== '';
+    const selectableLessonOptions = this.props.selectableLessons
+      ? this.props.selectableLessons.map(l => ({
+          label: l.name,
+          value: l.id
+        }))
+      : null;
     return (
       <BaseDialog isOpen={true} handleClose={this.onClose}>
         <h2>
@@ -126,6 +146,7 @@ export default class AddVocabularyDialog extends Component {
         </h2>
 
         {this.state.error && <h3>{this.state.error}</h3>}
+
         <label style={styles.inputAndLabel}>
           Word
           <input
@@ -146,6 +167,20 @@ export default class AddVocabularyDialog extends Component {
             style={styles.textInput}
           />
         </label>
+        {this.props.selectableLessons && (
+          <label>
+            Lessons this vocabulary is in
+            <Select
+              closeMenuOnSelect={false}
+              options={selectableLessonOptions}
+              multi={true}
+              value={this.state.lessons}
+              onChange={this.handleLessonSelectChange}
+              className={'lessons-dropdown'}
+            />
+          </label>
+        )}
+
         <DialogFooter rightAlign>
           <button
             id="submit-button"
