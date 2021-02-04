@@ -134,6 +134,7 @@ export default class AddVocabularyDialog extends Component {
             value={this.state.word}
             onChange={this.handleWordChange}
             style={styles.textInput}
+            disabled={!!this.props.editingVocabulary}
           />
         </label>
         <label style={styles.inputAndLabel}>

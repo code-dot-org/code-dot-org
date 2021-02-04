@@ -20,7 +20,12 @@ describe('AddVocabularyDialog', () => {
   it('renders default props', () => {
     const wrapper = shallow(<AddVocabularyDialog {...defaultProps} />);
     expect(wrapper.contains('Add Vocabulary')).to.be.true;
-    expect(wrapper.find('input').length).to.equal(2);
+    expect(
+      wrapper
+        .find('input')
+        .first()
+        .props().disabled
+    ).to.be.false;
   });
 
   it('closes if save is successful', () => {
@@ -73,6 +78,7 @@ describe('AddVocabularyDialog', () => {
     expect(wrapper.find('[name="word"]').props().value).to.equal(
       'existing vocab'
     );
+    expect(wrapper.find('[name="word"]').props().disabled).to.be.true;
     expect(wrapper.find('[name="definition"]').props().value).to.equal(
       'existing definition'
     );
