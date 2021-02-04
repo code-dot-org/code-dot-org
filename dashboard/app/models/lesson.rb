@@ -207,7 +207,7 @@ class Lesson < ApplicationRecord
   end
 
   def localized_lesson_plan
-    return lesson_path(id: id) if script.is_migrated
+    return script_lesson_path(script_id: script_id, id: id, position: relative_position) if script.is_migrated
 
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
@@ -255,7 +255,7 @@ class Lesson < ApplicationRecord
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
         unplugged: display_as_unplugged, # TODO: Update to use unplugged property
-        lessonEditPath: edit_lesson_path(id: id)
+        lessonEditPath: edit_script_lesson_path(script_id: script_id, id: id, position: relative_position)
       }
 
       # Use to_a here so that we get access to the cached script_levels.
@@ -335,7 +335,7 @@ class Lesson < ApplicationRecord
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
-      lessonPath: lesson_path(id: id)
+      lessonPath: script_lesson_path(script_id: script_id, id: id, position: relative_position)
     }
   end
 
@@ -363,7 +363,7 @@ class Lesson < ApplicationRecord
     {
       key: key,
       displayName: localized_name,
-      link: lesson_path(id: id),
+      link: script_lesson_path(script_id: script_id, id: id, position: relative_position),
       position: relative_position
     }
   end
@@ -609,7 +609,7 @@ class Lesson < ApplicationRecord
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
         id: lesson.id,
-        editUrl: edit_lesson_path(id: lesson.id)
+        editUrl: edit_script_lesson_path(script_id: script_id, id: lesson.id, position: relative_position)
       }
     end
   end

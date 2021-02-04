@@ -271,6 +271,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :lessons, only: [:update]
+
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
@@ -279,6 +281,9 @@ Dashboard::Application.routes.draw do
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     get 'instructions', to: 'scripts#instructions'
+
+    ## TODO: Once we move levels over to /lesson as well combine the routing rules
+    resources :lessons, only: [:show, :edit], param: 'position'
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
@@ -313,8 +318,6 @@ Dashboard::Application.routes.draw do
 
   resources :courses, param: 'course_name'
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
-
-  resources :lessons, only: [:show, :edit, :update]
 
   resources :resources, only: [:create, :update]
   get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
