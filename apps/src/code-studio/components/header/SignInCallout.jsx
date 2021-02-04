@@ -1,11 +1,13 @@
 import React from 'react';
-// import cookies from 'js-cookie';
+import cookies from 'js-cookie';
 
 const CALLOUT_COLOR = '#454545';
 const TRIANGLE_BASE = 30;
 const TRIANGLE_HEIGHT = 15;
 const CALLOUT_Z_INDEX = 1040;
 const CALLOUT_TOP = 30;
+
+const HideSignInCalloutName = 'hide_signin_callout';
 
 const styles = {
   container: {
@@ -80,12 +82,14 @@ export default class SignInCallout extends React.Component {
     this.getContent = this.getContent.bind(this);
 
     this.state = {
-      showCallout: true
+      showCallout: true,
+      hasBeenDismissed: cookies.get(HideSignInCalloutName)
     };
   }
 
   closeCallout(event) {
-    this.setState({showCallout: false});
+    this.setState({showCallout: false, hasBeenDismissed: true});
+    cookies.set(HideSignInCalloutName, 'true', {expires: 1, path: '/'});
     event.preventDefault();
   }
 
@@ -108,7 +112,7 @@ export default class SignInCallout extends React.Component {
   }
 
   render() {
-    if (this.state.showCallout) {
+    if (this.state.showCallout && !this.state.hasBeenDismissed) {
       return (
         <div style={styles.container}>
           <div
