@@ -11,7 +11,8 @@
           "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"
         ]
       ],
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "pilot_experiment": "contagion-pilot"
     },
     "new_name": null,
     "family_name": null,
@@ -39,6 +40,7 @@
       "name": "How Things Spread",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -53,6 +55,7 @@
       "name": "Contagion Simulator Setup",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -67,6 +70,7 @@
       "name": "Sometimes, but Not Always",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -81,6 +85,7 @@
       "name": "Modifying Your model",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -95,6 +100,7 @@
       "name": "Telling a Data Story",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
