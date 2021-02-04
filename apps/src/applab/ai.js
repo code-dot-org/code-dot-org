@@ -2,7 +2,7 @@ import $ from 'jquery';
 import designMode from './designMode';
 
 export default function autogenerateML(modelId) {
-  return new Promise((resolve, reject) => {
+  return new Promise(function(resolve, reject) {
     $.ajax({
       url: `/api/v1/ml_models/${modelId}`,
       method: 'GET'
