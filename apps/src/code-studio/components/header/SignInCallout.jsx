@@ -7,7 +7,7 @@ const TRIANGLE_HEIGHT = 15;
 const CALLOUT_Z_INDEX = 1040;
 const CALLOUT_TOP = 30;
 
-const HideSignInCalloutName = 'hide_signin_callout';
+const HideSignInCallout = 'hide_signin_callout';
 
 const styles = {
   container: {
@@ -81,15 +81,20 @@ export default class SignInCallout extends React.Component {
     this.closeCallout = this.closeCallout.bind(this);
     this.getContent = this.getContent.bind(this);
 
+    sessionStorage.setItem(HideSignInCallout, false);
+
     this.state = {
       showCallout: true,
-      hasBeenDismissed: cookies.get(HideSignInCalloutName)
+      hasBeenDismissed:
+        cookies.get(HideSignInCallout) ||
+        sessionStorage.getItem(HideSignInCallout)
     };
   }
 
   closeCallout(event) {
     this.setState({showCallout: false, hasBeenDismissed: true});
-    cookies.set(HideSignInCalloutName, 'true', {expires: 1, path: '/'});
+    cookies.set(HideSignInCallout, 'true', {expires: 1, path: '/'});
+    sessionStorage.setItem(HideSignInCallout, true);
     event.preventDefault();
   }
 
