@@ -13,7 +13,7 @@ import {
   stageLocked,
   summarizeProgressInStage,
   isLevelAssessment,
-  stageIsAllAssessment
+  lessonIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
@@ -238,20 +238,20 @@ describe('progressHelpers', () => {
     });
   });
 
-  describe('stageIsAllAssessment', () => {
+  describe('lessonIsAllAssessment', () => {
     it('returns true if all the levels are of kind assessment', () => {
       const levels = fakeLevels(3);
       levels[0].kind = LevelKind.assessment;
       levels[1].kind = LevelKind.assessment;
       levels[2].kind = LevelKind.assessment;
-      assert.equal(stageIsAllAssessment(levels), true);
+      assert.equal(lessonIsAllAssessment(levels), true);
     });
     it('returns false if not all the levels are of kind assessment', () => {
       const levels = fakeLevels(3);
       levels[0].kind = LevelKind.unplugged;
       levels[1].kind = LevelKind.puzzle;
       levels[2].kind = LevelKind.assessment;
-      assert.equal(stageIsAllAssessment(levels), false);
+      assert.equal(lessonIsAllAssessment(levels), false);
     });
   });
 

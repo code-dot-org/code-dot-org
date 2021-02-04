@@ -117,7 +117,7 @@ export function isLevelAssessment(level) {
  * @param {[]} levels An array of levels
  * @returns {bool} If all the levels in a stage are assessment levels
  */
-export function stageIsAllAssessment(levels) {
+export function lessonIsAllAssessment(levels) {
   return levels.every(level => level.kind === LevelKind.assessment);
 }
 
