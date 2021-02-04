@@ -274,7 +274,6 @@ class Lesson < ApplicationRecord
         last_level_summary[:page_number] = 1
       end
 
-      # Don't want lesson plans for lockable levels
       if has_lesson_plan
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
