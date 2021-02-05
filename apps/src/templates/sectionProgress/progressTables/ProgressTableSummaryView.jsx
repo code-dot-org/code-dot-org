@@ -16,6 +16,12 @@ import progressTableStyles from './progressTableStyles.scss';
 import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/summary/SummaryViewLegend';
 
 const MIN_COLUMN_WIDTH = 40;
+
+// This component summarizes progress for all lessons in a script, for each student
+// in a section.  It combines summary-specific components such as
+// ProgressTableSummaryCell with shared progress view components
+// like ProgressTableContainer. An equivalent expanded
+// ProgressTableDetailView component also exists
 class ProgressTableSummaryView extends React.Component {
   static propTypes = {
     // redux
