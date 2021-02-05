@@ -25,6 +25,19 @@ class Foorm::LibraryQuestion < ApplicationRecord
 
   after_commit :write_to_file
 
+  def published_forms_appeared_in
+    forms_appeared_in = Set.new
+    Foorm::Form.all.each do |form|
+      JSON.parse(form.questions)['pages']&.each do |page|
+        page['elements']&.each do |element|
+          forms_appeared_in << form if element['type'] == 'library_item' && element['name'] == question_name
+        end
+      end
+    end
+
+    return forms_appeared_in.select {|form| form.published == true}
+  end
+
   def validate_library_question
     Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
   rescue StandardError => e
