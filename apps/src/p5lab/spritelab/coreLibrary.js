@@ -188,7 +188,12 @@ export function registerPrompt(promptText, variableName, setterCallback) {
   if (!variableName) {
     return;
   }
-  promptVars[variableName] = null;
+  if (promptVars[variableName] === undefined) {
+    // Set explicitly to null so that we can tell that there *is* a prompt
+    // for this variable name, it just hasn't been answered yet.
+    promptVars[variableName] = null;
+  }
+
   if (!userInputEventCallbacks[variableName]) {
     userInputEventCallbacks[variableName] = {
       setterCallbacks: [],
