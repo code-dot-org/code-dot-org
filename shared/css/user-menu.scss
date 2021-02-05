@@ -135,9 +135,6 @@
 }
 
 .create_menu {
-  &:focus {
-    outline: none;
-  }
   .create_options {
     width: max-content;
     z-index: 10000;
