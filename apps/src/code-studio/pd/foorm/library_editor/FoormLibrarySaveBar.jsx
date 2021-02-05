@@ -62,40 +62,8 @@ const styles = {
   }
 };
 
-const publishedSaveWarning = (
-  <div>
-    <span style={styles.warning}>Warning: </span>You are editing a published
-    survey. Please only make safe edits as described in the{' '}
-    <a
-      href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5d-Foorm-Editor:-Editing-a-Form#safe-edits-to-published-forms"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      How To
-    </a>
-    .
-    <br />
-    <br />
-    Are you sure you want to save your changes?
-  </div>
-);
-
-const aboutToPublishWarning = (
-  <div>
-    <span style={styles.warning}>Warning: </span>You are about to publish a new
-    survey. Once a survey is published, it may be put into active use.{' '}
-    <span style={styles.warning}>
-      A published survey cannot be returned to draft mode!
-    </span>
-    <br />
-    <br />
-    Are you sure you want to publish?
-  </div>
-);
-
 const confirmationDialogNames = {
-  save: 'save',
-  publish: 'publish'
+  save: 'save'
 };
 
 class FoormLibrarySaveBar extends Component {
@@ -105,7 +73,7 @@ class FoormLibrarySaveBar extends Component {
 
     // Populated by Redux
     libraryQuestion: PropTypes.object,
-    formHasError: PropTypes.bool,
+    libraryHasError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
     libraryQuestionId: PropTypes.number,
     lastSaved: PropTypes.number,
@@ -125,40 +93,63 @@ class FoormLibrarySaveBar extends Component {
       isSaving: false,
       showNewFormSave: false,
       formName: null,
-      formCategory: null
+      formCategory: null,
+      formsAppearedIn: []
     };
   }
 
-  updateQuestionsUrl = () =>
+  updateQuestionUrl = () =>
     `/foorm/library_questions/${this.props.libraryQuestionId}`;
-
-  publishUrl = () => `/foorm/forms/ID_here/publish`;
 
   handleSave = () => {
     this.setState({isSaving: true});
     this.props.setSaveError(null);
-    if (this.props.isFormPublished) {
-      // show a warning if in published mode
-      this.setState({
-        confirmationDialogBeingShownName: confirmationDialogNames.save
-      });
-    } else if (
-      this.props.libraryQuestionId === null ||
-      this.props.libraryQuestionId === undefined
-    ) {
-      // if this is not an existing form, show new form save modal
-      this.setState({showNewFormSave: true});
-    } else {
-      this.save(this.updateQuestionsUrl());
-    }
+
+    $.ajax({
+      url: `/foorm/library_questions/${
+        this.props.libraryQuestionId
+      }/published_forms_appeared_in`,
+      type: 'get'
+    }).done(result => {
+      if (result.length !== 0) {
+        this.setState({
+          confirmationDialogBeingShownName: confirmationDialogNames.save,
+          formsAppearedIn: result
+        });
+      } else if (
+        this.props.libraryQuestionId === null ||
+        this.props.libraryQuestionId === undefined
+      ) {
+        // if this is not an existing form, show new form save modal
+        this.setState({showNewFormSave: true});
+      } else {
+        this.save(this.updateQuestionUrl());
+      }
+    });
   };
 
-  handlePublish = () => {
-    this.setState({
-      isSaving: true,
-      confirmationDialogBeingShownName: confirmationDialogNames.publish
-    });
-    this.props.setSaveError(null);
+  publishedSaveWarning = forms => {
+    let formBullets = forms.map((form, i) => <li key={i}>{form}</li>);
+
+    return (
+      <div>
+        <span style={styles.warning}>Warning: </span>This question appears in
+        one or more published surveys, listed below:
+        <ul>{formBullets}</ul>
+        Please only make safe edits as described in the{' '}
+        <a
+          href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5d-Foorm-Editor:-Editing-a-Form#safe-edits-to-published-forms"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          How To
+        </a>
+        .
+        <br />
+        <br />
+        Are you sure you want to save your changes?
+      </div>
+    );
   };
 
   handleSaveCancel = () => {
@@ -198,6 +189,7 @@ class FoormLibrarySaveBar extends Component {
   };
 
   saveNewForm = () => {};
+  // {
   //   const newFormName = `${this.state.formCategory}/${this.state.formName}`;
   //   $.ajax({
   //     url: `/foorm/forms`,
@@ -335,19 +327,19 @@ class FoormLibrarySaveBar extends Component {
         <div style={styles.saveButtonBackground} className="saveBar">
           {this.props.lastSaved &&
             !this.props.saveError &&
-            !this.props.formHasError && (
+            !this.props.libraryHasError && (
               <div style={styles.lastSaved} className="lastSavedMessage">
                 {`Last saved at: ${new Date(
                   this.props.lastSaved
                 ).toLocaleString()}`}
               </div>
             )}
-          {this.props.formHasError && (
+          {this.props.libraryHasError && (
             <div style={styles.error}>
               {`Please fix parsing error before saving. See the errors noted on the left side of the editor.`}
             </div>
           )}
-          {this.props.saveError && !this.props.formHasError && (
+          {this.props.saveError && !this.props.libraryHasError && (
             <div
               style={styles.error}
               className="saveErrorMessage"
@@ -358,53 +350,29 @@ class FoormLibrarySaveBar extends Component {
               <FontAwesome icon="spinner" className="fa-spin" />
             </div>
           )}
-          {!this.props.isFormPublished && (
-            <button
-              className="btn btn-danger"
-              type="button"
-              style={styles.button}
-              onClick={this.handlePublish}
-              disabled={this.state.isSaving || this.props.formHasError}
-            >
-              Publish
-            </button>
-          )}
           <button
             className="btn btn-primary"
             type="button"
             style={styles.button}
             onClick={this.handleSave}
-            disabled={this.state.isSaving || this.props.formHasError}
+            disabled={this.state.isSaving || this.props.libraryHasError}
           >
             Save
           </button>
         </div>
-        {false && this.renderNewFormSaveModal()}
+        {false && this.renderNewFormSaveModal()}s
         <ConfirmationDialog
           show={
             this.state.confirmationDialogBeingShownName ===
             confirmationDialogNames.save
           }
           onOk={() => {
-            this.save(this.updateQuestionsUrl());
+            this.save(this.updateQuestionUrl());
           }}
-          okText={'Yes, save the form'}
+          okText={'Yes, save the library question'}
           onCancel={this.handleSaveCancel}
-          headerText="Save Form"
-          bodyText={publishedSaveWarning}
-        />
-        <ConfirmationDialog
-          show={
-            this.state.confirmationDialogBeingShownName ===
-            confirmationDialogNames.publish
-          }
-          onOk={() => {
-            this.save(this.publishUrl());
-          }}
-          okText={'Yes, publish the form'}
-          onCancel={this.handleSaveCancel}
-          headerText="Publish Form"
-          bodyText={aboutToPublishWarning}
+          headerText="Save Library Question"
+          bodyText={this.publishedSaveWarning(this.state.formsAppearedIn)}
         />
       </div>
     );
@@ -415,7 +383,7 @@ export default connect(
   state => ({
     libraryQuestion: state.foorm.libraryQuestion || {},
     isFormPublished: state.foorm.isFormPublished,
-    formHasError: state.foorm.hasError,
+    libraryHasError: state.foorm.hasError,
     libraryQuestionId: state.foorm.libraryQuestionId,
     lastSaved: state.foorm.lastSaved,
     saveError: state.foorm.saveError
