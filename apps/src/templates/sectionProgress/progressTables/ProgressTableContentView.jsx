@@ -21,6 +21,9 @@ const styles = {
   }
 };
 
+// This class contains contains code that is common between the summary view
+// and detail view of the progress table. Each view has different cell formatters
+// which are passed in through props.
 export default class ProgressTableContentView extends React.Component {
   static propTypes = {
     section: sectionDataPropType.isRequired,
@@ -42,6 +45,7 @@ export default class ProgressTableContentView extends React.Component {
     super(props);
     this.lessonNumberFormatter = this.lessonNumberFormatter.bind(this);
     this.contentCellFormatter = this.contentCellFormatter.bind(this);
+    this.columnWidthStyle = this.columnWidthStyle.bind(this);
   }
 
   header = null;
@@ -96,19 +100,30 @@ export default class ProgressTableContentView extends React.Component {
     );
   }
 
+  columnWidthStyle(index) {
+    const {columnWidths} = this.props;
+    return {
+      style: {minWidth: columnWidths[index], maxWidth: columnWidths[index]}
+    };
+  }
+
   render() {
-    const {columnWidths, extraHeaderFormatters} = this.props;
-    let headerFormatters = [
+    // Both summary and detail view have a top header row with lesson number
+    // rendered by lessonNumberFormatter. Detail view has a second
+    // header whose renderer is passed in through extraHeaderFormatters
+    // implemented by ProgressTableDetailView
+    const headerFormatters = [
       this.lessonNumberFormatter,
-      ...(extraHeaderFormatters || [])
+      ...(this.props.extraHeaderFormatters || [])
     ];
-    let headerRows = headerFormatters.map(_ => []);
+    const headerRows = headerFormatters.map(_ => []);
     const columns = [];
 
+    // Each iteration renders a lesson column in the table.
+    // For summary view, it's a single header and summary cell.
+    // For detail view, it's 2 headers and detail cell (bubbles for each level)
     this.props.scriptData.stages.forEach((_, index) => {
-      const widthProps = {
-        style: {minWidth: columnWidths[index], maxWidth: columnWidths[index]}
-      };
+      const widthProps = this.columnWidthStyle(index);
       columns.push({
         props: widthProps,
         cell: {formatters: [this.contentCellFormatter]}
