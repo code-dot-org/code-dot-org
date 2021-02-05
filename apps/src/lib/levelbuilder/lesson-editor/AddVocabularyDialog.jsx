@@ -148,9 +148,14 @@ export default class AddVocabularyDialog extends Component {
         {this.state.error && <h3>{this.state.error}</h3>}
 
         <label style={styles.inputAndLabel}>
-          Word{' '}
-          {this.props.editingVocabulary === null &&
-            ' (Note: this cannot be edited after creation!)'}
+          <span>
+            Word{' '}
+            {this.props.editingVocabulary === null && (
+              <span style={{color: color.red}}>
+                {' (Note: this cannot be edited after creation!)'}
+              </span>
+            )}
+          </span>
           <input
             type="text"
             name="word"
