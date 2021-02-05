@@ -2,7 +2,7 @@ import React from 'react';
 import JavaConsole from './JavaConsole';
 import {connect} from 'react-redux';
 import JavaEditor from './JavaEditor';
-import PaneHeader, {PaneSection} from '../templates/PaneHeader';
+import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 import {appendOutputLog} from './redux';
 import PropTypes from 'prop-types';
 
@@ -29,22 +29,27 @@ const style = {
   },
   javaIde: {
     display: 'flex',
-    backgroundColor: '#272822',
+    backgroundColor: '#1b1c17',
     margin: 15
   },
   consoleAndButtons: {
+    marginTop: 15,
     display: 'flex'
   },
   consoleStyle: {
-    width: '75%'
+    flexGrow: 1
   },
   buttons: {
-    width: '25%'
+    marginRight: 15,
+    height: 75,
+    backgroundColor: '#272822',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  runButton: {
-    padding: 10,
-    textAlign: 'center',
-    display: 'inline-block'
+  singleButton: {
+    margin: 15,
+    textAlign: 'center'
   }
 };
 
@@ -56,10 +61,13 @@ class JavaIdeView extends React.Component {
   };
 
   run = () => {
-    this.props.appendOutputLog('Compiling program...');
-    this.props.appendOutputLog('Compiled!');
     this.props.appendOutputLog('Running program...');
     this.props.appendOutputLog('Hello world!');
+  };
+
+  compile = () => {
+    this.props.appendOutputLog('Compiling program...');
+    this.props.appendOutputLog('Compiled!');
   };
 
   render() {
@@ -75,18 +83,27 @@ class JavaIdeView extends React.Component {
               <li>Another Instruction</li>
             </ul>
           </div>
-          <div style={style.preview}>A preview</div>
+          <div style={style.preview}>
+            <PaneHeader hasFocus={true}>
+              <PaneSection>Preview</PaneSection>
+            </PaneHeader>
+          </div>
         </div>
         <div style={style.editorAndConsole}>
-          <PaneHeader hasFocus={true} />
           <JavaEditor style={style.editor} />
           <div style={style.consoleAndButtons}>
-            <div style={style.consoleStyle}>
-              <JavaConsole />
-            </div>
             <div style={style.buttons}>
               <div
-                style={style.runButton}
+                style={style.singleButton}
+                onClick={this.compile}
+                className="hover-pointer"
+              >
+                <i className="fa fa-cubes fa-2x" />
+                <br />
+                Compile
+              </div>
+              <div
+                style={style.singleButton}
                 onClick={this.run}
                 className="hover-pointer"
               >
@@ -94,6 +111,9 @@ class JavaIdeView extends React.Component {
                 <br />
                 Run
               </div>
+            </div>
+            <div style={style.consoleStyle}>
+              <JavaConsole />
             </div>
           </div>
         </div>

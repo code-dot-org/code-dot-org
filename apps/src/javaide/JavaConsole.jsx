@@ -84,6 +84,20 @@ class JavaConsole extends React.Component {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    const prevLogsLength = prevProps.consoleLogs.length;
+    if (
+      typeof prevLogsLength === 'number' &&
+      prevLogsLength !== this.props.consoleLogs.length
+    ) {
+      this.jumpToBottom();
+    }
+  }
+
+  jumpToBottom = () => {
+    this._consoleLogs.scrollTop = this._consoleLogs.scrollHeight;
+  };
+
   displayConsoleOutput() {
     return this.props.consoleLogs.map((log, i) => {
       let prefix = '<';
@@ -118,7 +132,7 @@ class JavaConsole extends React.Component {
 
   render() {
     return (
-      <div style={style.consoleStyle}>
+      <div style={style.consoleStyle} ref={el => (this._consoleLogs = el)}>
         <div style={style.debugOutput}>{this.displayConsoleOutput()}</div>
         <div style={style.debugInputWrapper}>
           <span style={style.debugInputPrompt} onClick={this.focus}>
