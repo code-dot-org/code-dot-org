@@ -1,10 +1,10 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import TextConsole from '@cdo/apps/p5lab/spritelab/TextConsole';
+import TextConsole, {
+  AUTO_CLOSE_TIME
+} from '@cdo/apps/p5lab/spritelab/TextConsole';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
-
-const AUTO_CLOSE_TIME = 4000;
 
 describe('Sprite Lab Text Console', () => {
   let wrapper;

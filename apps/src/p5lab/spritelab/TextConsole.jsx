@@ -6,7 +6,7 @@ import {Transition} from 'react-transition-group';
 const lineHeight = 20;
 const margin = 3;
 const maxHeight = lineHeight * 6;
-const AUTO_CLOSE_TIME = 4000;
+export const AUTO_CLOSE_TIME = 4000;
 
 export const styles = {
   hide: {
@@ -77,10 +77,18 @@ export default class TextConsole extends React.Component {
 
   timeout = 0;
 
+  /**
+   *@param {number} autoCloseTime - optional. If specified, time at which to close
+   * the console. If not specified, console will remain open indefinitely.
+   */
   toggleConsole(autoCloseTime) {
     this.state.open ? this.closeConsole() : this.openConsole(autoCloseTime);
   }
 
+  /**
+   *@param {number} autoCloseTime - optional. If specified, time at which to close
+   * the console. If not specified, console will remain open indefinitely.
+   */
   openConsole(autoCloseTime) {
     clearTimeout(this.timeout);
     this.setState({open: true}, () => {
