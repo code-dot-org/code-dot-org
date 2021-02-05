@@ -530,6 +530,9 @@ Dashboard::Application.routes.draw do
           post :validate_form
           get ':id', action: :get_form_data
         end
+        namespace :library_questions do
+          post :validate_library_question
+        end
       end
     end
   end
