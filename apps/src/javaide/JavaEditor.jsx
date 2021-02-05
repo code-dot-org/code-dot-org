@@ -3,6 +3,7 @@ import AceEditor from 'react-ace';
 import {connect} from 'react-redux';
 import {setEditorText} from './redux';
 import PropTypes from 'prop-types';
+import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 import 'ace-builds/src-noconflict/mode-java';
 import 'ace-builds/src-noconflict/theme-monokai';
 
@@ -28,14 +29,19 @@ class JavaEditor extends React.Component {
 
   render() {
     return (
-      <AceEditor
-        mode="java"
-        theme="monokai"
-        onChange={this.onChange}
-        name="java-lab-editor"
-        editorProps={{$blockScrolling: true}}
-        style={style.editor}
-      />
+      <div>
+        <PaneHeader hasFocus={true}>
+          <PaneSection>Editor</PaneSection>
+        </PaneHeader>
+        <AceEditor
+          mode="java"
+          theme="monokai"
+          onChange={this.onChange}
+          name="java-lab-editor"
+          editorProps={{$blockScrolling: true}}
+          style={style.editor}
+        />
+      </div>
     );
   }
 }
