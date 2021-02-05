@@ -148,7 +148,9 @@ export default class AddVocabularyDialog extends Component {
         {this.state.error && <h3>{this.state.error}</h3>}
 
         <label style={styles.inputAndLabel}>
-          Word
+          Word{' '}
+          {this.props.editingVocabulary === null &&
+            ' (Note: this cannot be edited after creation!)'}
           <input
             type="text"
             name="word"
