@@ -85,7 +85,6 @@ export default class SignInCallout extends React.Component {
     cookies.setItem(HideSignInCallout, false);
 
     this.state = {
-      showCallout: true,
       hasBeenDismissed:
         cookies.getItem(HideSignInCallout) ||
         sessionStorage.getItem(HideSignInCallout)
@@ -93,8 +92,8 @@ export default class SignInCallout extends React.Component {
   }
 
   closeCallout(event) {
-    this.setState({showCallout: false, hasBeenDismissed: true});
-    cookies.setItem(HideSignInCallout, 'true', {expires: 1, path: '/'});
+    this.setState({hasBeenDismissed: true});
+    cookies.setItem(HideSignInCallout, true, {expires: 1, path: '/'});
     sessionStorage.setItem(HideSignInCallout, true);
     event.preventDefault();
   }
@@ -118,7 +117,7 @@ export default class SignInCallout extends React.Component {
   }
 
   render() {
-    if (this.state.showCallout && !this.state.hasBeenDismissed) {
+    if (!this.state.hasBeenDismissed) {
       return (
         <div style={styles.container}>
           <div
